@@ -1,0 +1,150 @@
+---
+title: 数据告诉你：高信誉的卖家应该收高价，还是收低价？
+date: '2016-05-31T23:03:14+00:00'
+author: COS编辑部
+categories:
+  - 数据分析
+  - 统计之都
+tags:
+  - 价值
+  - 信誉
+  - 数据
+  - 数据分析
+slug: value-of-the-reputation-from-the-data
+---
+
+刘跃文（西安交通大学管理学院）
+
+看到这个题目，各位看官不妨想一想，淘宝上的信誉高的卖家会收高价，还是会收低价呢？根据我多年的教学经验，这里有四种可能的答案：（A）收高价、（B）收低价、（C）不好说、（D）不知道。您选哪一种？为什么？
+
+且听我慢慢道来。
+
+**1 eBay****说：卖家信誉越高，最终成交价格越高**
+
+[<img class="aligncenter size-full wp-image-12317" src="http://cos.name/wp-content/uploads/2016/05/1.jpg" alt="1" width="421" height="220" srcset="http://cos.name/wp-content/uploads/2016/05/1.jpg 421w, http://cos.name/wp-content/uploads/2016/05/1-300x157.jpg 300w" sizes="(max-width: 421px) 100vw, 421px" />](http://cos.name/wp-content/uploads/2016/05/1.jpg)
+
+从2000年开始，以eBay为代表的电子商务发展势头迅猛，养活了一大票科研人员。eBay以网上拍卖为主要的营业方式，因此，当时科研人员的一个主要的研究题目，就是网上拍卖的卖家的信誉如何影响拍卖结果（如成交率、竞拍次数、最终成交价格等）。那么卖家的信誉和最终成交价格是什么关系呢？**答案是显著的正相关关系：**对于同质商品，**高信誉的卖家，其最终成交价格普遍更高。**
+
+<!--more-->
+
+**2** **淘宝说：卖家信誉越高，商品价格越低（这不可能！！！）**
+
+[<img class="aligncenter size-full wp-image-12318" src="http://cos.name/wp-content/uploads/2016/05/2.jpg" alt="2" width="739" height="473" srcset="http://cos.name/wp-content/uploads/2016/05/2.jpg 739w, http://cos.name/wp-content/uploads/2016/05/2-300x192.jpg 300w, http://cos.name/wp-content/uploads/2016/05/2-500x320.jpg 500w" sizes="(max-width: 739px) 100vw, 739px" />](http://cos.name/wp-content/uploads/2016/05/2.jpg)
+
+在2000~2010中的若干年里，科研人员们孜孜不倦地撰写和发表这类基于eBay数据的论文。那时候中国的淘宝逐渐兴起。既然大家都在灌，当时作为博士生的我，面临着写论文毕业的压力，也想拿淘宝的数据灌一篇。2007年，我开始写爬虫程序抓淘宝的数据，包括商品信息、卖家信息、买家信息、评论。拿着这些数据，照着葫芦画个瓢，**我想得到这么一个结论：平均而言，在淘宝上，高信誉的卖家收相对较高的价格。**是不是特别无聊？我还清楚地记得当时和一个比我还耿直的老师的对话：
+
+我：我想用淘宝数据证明高信誉的卖家收高价。
+
+老师：没意思。
+
+我：可是大家发表了那么多篇文章。
+
+老师：你也可以发，但是我仍然觉得没意思。
+
+然而，“天不遂人愿”。在数据分析过程中，我注意到这事儿和我想象的不一样：**对于同质商品，信誉和价格竟然是负相关的**！！！相关系数是负的，多元回归系数也是负的！！！鉴于文献中卖家信誉与最终成交价格都是正的关系，我当时就懵了……当时还没有懵逼这个词。
+
+**3****宁死不屈的数据：信誉和价格负相关**
+
+[<img class="aligncenter size-full wp-image-12319" src="http://cos.name/wp-content/uploads/2016/05/3.jpg" alt="3" width="466" height="309" srcset="http://cos.name/wp-content/uploads/2016/05/3.jpg 466w, http://cos.name/wp-content/uploads/2016/05/3-300x199.jpg 300w" sizes="(max-width: 466px) 100vw, 466px" />](http://cos.name/wp-content/uploads/2016/05/3.jpg)
+
+受到文献中结果的影响，我准备好好拷问一下这批数据，让它讲“真话”：信誉与价格正相关。当然，不能篡改数据，这是违背职业道德的，这种事情不能干。但是，如果这个结果是某些“离群点”造成的，删除这些“离群点”让分析结果变好，这是不违背职业道德的。当时我发展了一套黑科技，能准确地识别出某些“离群点”，你删了它们之后，接近显著的关系就能显著。在唯一追求p值的年代，用上这个黑科技，论文能相对好写一点。然而，不管我怎么拷打这批数据，它宁死不屈，信誉与价格始终是负相关的。我当时特别沮丧。有一天晚上在回住所的路上，和同学聊起这事。他说，也许，它们之间的关系真的是负的呢？
+
+真是一句话点醒梦中人。
+
+**4** **好吃的肉夹馍便宜，难吃的肉夹馍贵**
+
+[<img class="aligncenter size-full wp-image-12320" src="http://cos.name/wp-content/uploads/2016/05/4.jpg" alt="4" width="494" height="367" srcset="http://cos.name/wp-content/uploads/2016/05/4.jpg 494w, http://cos.name/wp-content/uploads/2016/05/4-300x223.jpg 300w" sizes="(max-width: 494px) 100vw, 494px" />](http://cos.name/wp-content/uploads/2016/05/4.jpg)
+
+我开始琢磨为什么它们的关系是负的。后来我想到一个故事，叫做“游客与本地居民”的故事。想想看，**来西安逛的游客们吃到的肉夹馍，和西安本地居民吃到的肉夹馍，哪个更贵，哪个更好吃？**
+
+来西安逛的游客们，没来西安之前一般是吃不到肉夹馍的。他们来西安逛，见到肉夹馍，就会认为是西安本地正宗肉夹馍，只要不是贵得太离谱，买来吃一个，拍个照片，发个朋友圈完事儿；所以，景区的肉夹馍不可能太便宜，反正游客也不会回头，赚一个是一个，这就使得景区的肉夹馍又贵又难吃。而西安本地的居民，平时肉夹馍吃太多了，嘴刁得不行，知道肉夹馍的分两大流派，哪个店是哪个流派的，价钱是多少，如果哪家的好吃又划算，就经常去吃；所以，西安本地居民吃的肉夹馍不可能太贵，肉夹馍店要靠高质量和低价格赢取回头客；也不可能太难吃，要不然肉夹馍店就倒闭了……那么，**均衡状态下，市场中就只有两种肉夹馍：便宜而好吃的肉夹馍（非景区的），贵而难吃的肉夹馍（景区的）。**
+
+** ****5** **消费者的搜索能力**
+
+[<img class="aligncenter size-full wp-image-12321" src="http://cos.name/wp-content/uploads/2016/05/5.jpg" alt="5" width="489" height="396" srcset="http://cos.name/wp-content/uploads/2016/05/5.jpg 489w, http://cos.name/wp-content/uploads/2016/05/5-300x243.jpg 300w" sizes="(max-width: 489px) 100vw, 489px" />](http://cos.name/wp-content/uploads/2016/05/5.jpg)
+
+肉夹馍的故事，看起来是景区与非景区的故事，本质上却是消费者的信息搜索能力的故事。搜索能力强的消费者，我们称之为“知情”的消费者，具有比较质量与价格的能力，可以找到质优价廉的商家；而搜索能力弱的消费者，我们称之为“不知情”的消费者，不具有质量与比较的能力，在市场上的购买行为几近于随机行为。范里安在他著名的论文“A model of sales”中，就使用了这样的模型设定。
+
+网上市场中的“知情”的消费者，寻找信誉水平较高且价格较低的卖家；如果信誉水平较高的卖家选择收取高价格，就会失去这批“知情”的消费者，因此不会收取高价。而网上市场中“不知情”的消费者，行为具有很高的随机性；信誉水平较低的卖家只能吸引到这部分“不知情”的消费者，因此没有动机选择低价格。[注1] 所以，信誉水平较高的卖家收取低价格，信誉水平较低的卖家收取高价格，对吗？
+
+**6** **美国BizRate****的数据：高信誉的商家，价格更低**
+
+[<img class="aligncenter size-full wp-image-12322" src="http://cos.name/wp-content/uploads/2016/05/6.jpg" alt="6" width="527" height="378" srcset="http://cos.name/wp-content/uploads/2016/05/6.jpg 527w, http://cos.name/wp-content/uploads/2016/05/6-300x215.jpg 300w, http://cos.name/wp-content/uploads/2016/05/6-500x359.jpg 500w" sizes="(max-width: 527px) 100vw, 527px" />](http://cos.name/wp-content/uploads/2016/05/6.jpg)
+
+很多人可能会有疑问：淘宝上卖家的信誉得分反映了是累计交易量。这些卖家是因为定价低而信誉（累计成交量）高呢；还是因为像我说的一样，因为信誉高而选择低定价？
+
+为了回答这个问题，得从理论出发。基于范里安的Sales model的设定，我写了一个博弈模型，证明在均衡状态下，信誉高的卖家选择混合策略，其平均的商品价格低于信誉低的卖家[注2]。为了进一步验证我的结论，我还从美国BizRate网上采集了数据。BizRate是一个第三方评估网站，给出的信誉评分不是按照交易量，而是按照顾客的满意度打分（10分制）的平均值作为商家的信誉得分。BizRate的结果也指出，对于同质商品，**信誉高的商家，商品价格平均更低一些。**2012年，这个研究终于在DSS（决策支持系统）上发表。这时离2007年我采集第一批数据，已经过了6年。尽管DSS是一个很普通的期刊，我还是很喜欢这篇论文，因为它讲了一个有趣的故事，而且经过了反复的求证。
+
+**7** **总结**
+
+[<img class="aligncenter size-full wp-image-12323" src="http://cos.name/wp-content/uploads/2016/05/7.jpg" alt="7" width="377" height="257" srcset="http://cos.name/wp-content/uploads/2016/05/7.jpg 377w, http://cos.name/wp-content/uploads/2016/05/7-300x205.jpg 300w" sizes="(max-width: 377px) 100vw, 377px" />](http://cos.name/wp-content/uploads/2016/05/7.jpg)
+
+**所以，数据告诉我们，信誉高的卖家的平均价格相对较低。**您猜对了吗？
+
+定价策略是一门很复杂和深入的学问，涉及到非常多的方面，远远超出这个段子能涵盖的内容，也远远超出我们的论文能涵盖的内容。感兴趣的看官可以搜索“Negative Price Premium”，阅读相关的论文，了解更多的内容。我们现在所了解的也非常有限，在定价策略这个问题上仍然在往前走，希望再过一段时间，我可以给大家讲讲这个故事的续集。
+
+我从这件事情上学到的有这么几点：
+
+**（1****）实践出真知，做一下试试。**很多大数据的问题，不是凭空想出来的，而是通过数据分析启发得来的。多玩玩数据，就算是看起来很无聊的事情，也可以做一下试试。说不定你就见证奇迹了呢？
+
+**（2****）不要过于迷信已有的理论/****结论，要尊重数据及结果。**如果不尊重数据，而是利用统计学的技巧来用数据说假话，是没有职业道德的行为，也会错失掉一些真正有趣的故事。
+
+**（3****）数据分析需要的是大胆假设，小心求证。**我们在数据分析过程中，会观察到一些出人意料的关联，这会使我们产生一些很大胆的假设。但是，这些大胆的假设，是需要去小心地求证的。仅仅停留在大胆的假设上，或者直接把一些大胆的假设作为事实或者规律，是不太恰当的。例如，阿里巴巴的同事曾经在数据分析中发现，胸围较大的女性购买能力较好。这是一个广为传播的并且很有趣的现象。如果能进一步探索其背后的原因，可能会产生一个更有趣的故事。
+
+**（4****）坚持。**
+
+**注1****：参考** &#8220;Pricing Strategy in Online Retailing Marketplaces of Homogeneous Goods: Should High Reputation Seller Charge More?,&#8221; _Lecture Notes in Business Information Processing_ (36:Value Creation in E-Business Management), pp 155-168.  http://link.springer.com/chapter/10.1007/978-3-642-03132-8_13
+
+**注2****：参考** &#8220;Negative price premium effect in online market-The impact of competition and buyer informativeness on the pricing strategies of sellers with different reputation levels,&#8221; _Decision Support Systems_ (54:1) Dec, pp 681-690.  http://www.sciencedirect.com/science/article/pii/S016792361200228X
+
+** ****后记**
+
+半个月以前，应王汉生老师的邀请，我答应在狗熊会这个平台上写一些系列小短文。我心里的算盘是这么打的：这多大点事儿，空闲的时候随便灌灌水就可以了。系列的名称就叫“用数据灌水”，或者就叫“基于数据瞎扯淡”。
+
+没等我开始写，水妈的“丑图百讲”系列就彻底打翻了我的如意算盘：这……这……这水准也忒高了！！！要是我写得太随意，岂不是会被笑话，丢我们西北段子手们的脸？于是乎，我开始为这个系列的选题犯愁，经常一坐下就想，一想就发呆。我家夫人叫我，我也听不见，也不回答，搞得她差点以为我不再爱她。事实证明，想太多会影响家庭和谐，还不如干脆别想了，就开始写吧。
+
+客观一点说，选题困难的原因，主要来自专业方向的不同。狗熊会是一个以统计学为主要背景的团体，而我是正统的商科背景，外加一些计算机背景。在我的专业领域，我的统计学功底算比较好的；但是和狗熊会的一比，纯粹就是狗和熊的差距。2012年夏天，我从腾讯离职，加入西安交大；那个时候，师从两位院士的“政委”常大神也刚从伯克利学成回到交大。在一个阳光灿烂的午后，我在主楼一个阳光明媚的房间，第一次见到了这位阳光帅气的大神。我跟他说，我有个科学问题想和你探讨，于是我就说了困扰我的问题。他听完之后，说了让我至今难忘的两句话：这不是科学。这也不是个问题。刹那之间，我突然觉得，好黑，阳光都去哪儿了？
+
+和狗熊会的人接触多了，慢慢地我开始理解大家分工的不同。统计学追求的是模型的严谨性，而我们追求的是故事的趣味性。严谨的模型是美的，有趣的故事也是美的。所以，大家的目的是一致的，都是尽力追求“美”的东西。高水平的统计论文，以严谨的模型为基础，追求尽可能高的实用价值；而高水平的商科论文，以故事的趣味性为基础，追求尽可能严谨的模型与推理过程（正所谓：大胆假设，小心求证；意料之外，情理之中）。
+
+所以，与其在这个系列论文里讲统计学相关的内容，以己之短，搏人之长；不如就安安静静地做个段子手，讲点尽可能严谨的有趣的故事。这么一想，这个系列的名称干脆就叫做“大数据段子们”吧。“大数据”是个大家都觉得自己明白，但是又谁也讲不清楚的东西；“段子们”也是个比较随性的词；俩凑一块儿，正好遂了我的如意算盘：瞎扯淡。
+
+未来的“大数据段子们”大概会分两拨：我自己的段子，我觉得有趣的别人的段子。我自己的段子是我们自己做的一些工作，包括我们做的一些科学研究、工程应用；别人的段子是我读书、读文献、网上乱翻读到的别人的工作，经过资料多方采集、查证、评估、整理，最后撰写成文。希望各位看官能觉得有趣，如果还能觉得有点道理，那这个系列的目的也就达到了。
+
+**个人简介**
+
+刘跃文
+
+香港城市大学及中国科学技术大学博士
+
+前鹅厂数据研究员
+
+商科小讲师一枚，努力写论文中
+
+玩数据分析、玩社交网络
+
+梦想着讲有趣的故事，做有价值的研究
+
+讲授信息技术管理、数据库与数据管理、数据挖掘与知识发现等课程
+
+段子手
+
+数据告诉你：高信誉的卖家应该收高价，还是收低价？<!-- [if lt IE 9]>
+ 	<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg/page_mp_article_improve_pc2c9cd6.css">
+<![endif]-->
+
+<div id="js_article" class="rich_media">
+  <div class="rich_media_inner">
+    <div id="page-content">
+      <div id="img-content" class="rich_media_area_primary">
+        <div id="js_content" class="rich_media_content ">
+          <section> <section data-id="85982"> <section>如果您对我们的内容感兴趣，请关注微信公众号“狗熊会”，或扫描下方二维码</section> </section> 
+          
+          <p>
+            <a href="http://cos.name/wp-content/uploads/2016/05/8.jpg"><img class="aligncenter size-full wp-image-12325" src="http://cos.name/wp-content/uploads/2016/05/8.jpg" alt="8" width="258" height="258" srcset="http://cos.name/wp-content/uploads/2016/05/8.jpg 258w, http://cos.name/wp-content/uploads/2016/05/8-150x150.jpg 150w" sizes="(max-width: 258px) 100vw, 258px" /></a>
+          </p></section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

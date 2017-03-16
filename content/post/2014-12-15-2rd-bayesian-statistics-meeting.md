@@ -1,0 +1,149 @@
+---
+title: 第二届中国贝叶斯统计学术论坛（天津，2014）日程安排
+date: '2014-12-15T17:30:22+00:00'
+author: 蔡 占锐
+categories:
+  - 新闻通知
+tags:
+  - 天津财经大学
+  - 论坛
+  - 贝叶斯
+slug: 2rd-bayesian-statistics-meeting
+---
+
+[<img class="aligncenter size-full wp-image-10457" src="http://cos.name/wp-content/uploads/2014/12/bayes-forum.png" alt="bayes-forum" width="500" height="150" srcset="http://cos.name/wp-content/uploads/2014/12/bayes-forum.png 500w, http://cos.name/wp-content/uploads/2014/12/bayes-forum-300x90.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2014/12/bayes-forum.png)
+
+第二届中国贝叶斯统计学术论坛（天津，2014）将于2014年12月21日（周日）在天津财经大学召开，本次会议由天津财经大学中国经济统计研究中心、贝叶斯之道研究室主办，统计之都协办，会议通知如下：
+
+## 一、论坛时间
+
+2014年12月21日（周日，9:00-16:00）。
+
+## 二、论坛地点
+
+天津财经大学B座205教室（统计湖畔）
+
+[<img class="aligncenter size-large wp-image-10459" src="http://cos.name/wp-content/uploads/2014/12/tjcd-500x157.png" alt="tjcd" width="500" height="157" srcset="http://cos.name/wp-content/uploads/2014/12/tjcd-500x157.png 500w, http://cos.name/wp-content/uploads/2014/12/tjcd-300x94.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2014/12/tjcd.png)
+
+## 三、论坛内容
+
+1763年12月23日，理查德·普莱斯在伦敦皇家学会会议上宣读了托马斯·贝叶斯的遗世之作——《An essay towards solving a problem in the doctrine of chances》(机遇理论中一个问题的解)，从此贝叶斯定理诞生于世。“虽然这个产生于18世纪的统计学学派在19世纪上半叶备受争议和冷落，但在20世纪，它却占据了数理统计学这块领地的半壁江山，撑起了统计学的半边天(陈希孺，2002)。
+
+2013年12月21日，“纪念贝叶斯定理250周年”暨首届中国贝叶斯统计学术论坛（天津，2013）在天津财经大学月牙报告厅成功举行（<a href="http://cos.name/2013/12/to-commemorate-the-250th-anniversary-of-bayes-theorem/" target="_blank">相关特邀报告及培训资料下载</a>）。
+
+<!--more-->
+
+随着贝叶斯理论与应用在中国的日益普及，以及大数据时代的到来，第二届中国贝叶斯统计论坛将以“大数据与贝叶斯分析”为主题，上午嘉宾做特邀报告，下午进行贝叶斯分析免费培训。
+
+### **（一） 论坛特邀报告（上午：****9:00-12:00****）**
+
+**报告题目：**Bayesian forecasting of demographic rates for small areas
+
+<p style="text-align: center;">
+  <a href="http://cos.name/wp-content/uploads/2014/12/zhangjunni.png"><img class="aligncenter size-full wp-image-10462" src="http://cos.name/wp-content/uploads/2014/12/zhangjunni.png" alt="zhangjunni" width="140" height="196" /></a>
+</p>
+
+<p style="text-align: center;">
+  张俊妮（北京大学）
+</p>
+
+北京大学光华管理学院统计学副教授。1998年毕业于中国科学技术大学，获计算机软件学士学位；2002年毕业于美国哈佛大学，获统计学博士学位。研究领域为因果推断、贝叶斯分析、小区估计、数据挖掘以及文本挖掘。
+
+**报告题目：****农村土地流转综合评估与大数据监测**
+
+[<img class="aligncenter wp-image-10461 size-thumbnail" src="http://cos.name/wp-content/uploads/2014/12/gubin-150x150.png" alt="gubin" width="150" height="150" />](http://cos.name/wp-content/uploads/2014/12/gubin.png)
+
+<p style="text-align: center;">
+  谷彬（国家统计局）
+</p>
+
+国家统计局统计科学研究所副研究员，北京大学光华管理学院博士后，获得全国统计科研优秀成果一等奖、二等奖，公开发表论文40余篇。主持研究国家自然科学基金、教育部社科基金、中国博士后基金、第六次全国人口普查项目，全国统计科研规划项目。研究方向为：微观建模与实证，劳动经济、农村经济、产业经济。
+
+**报告题目：****R-web : ****大型多人在线数据分析协作平台****(Massively Multi-analyst Online Data Analysis Platform)**
+
+<p style="text-align: center;">
+  <a href="http://cos.name/wp-content/uploads/2014/12/linzhenshun.png"><img class="aligncenter wp-image-10489 size-thumbnail" src="http://cos.name/wp-content/uploads/2014/12/linzhenshun-150x150.png" alt="linzhenshun" width="150" height="150" /></a>
+</p>
+
+<p style="text-align: center;">
+  林祯舜（CEO，辰智咨询/江苏先锋信息科技）
+</p>
+
+数据科学及营销科学专家，信息技术咨询公司的总经理，毕业于中国人民大学统计学院并获得博士学位，中山大学及兰州商学院兼职教授。研究方向包括数据挖掘，机器学习，统计计算，网站效果测量与点击流数据分析。主要研究是关于互联网点击流的模型应用，论文在2010年五月被美国网站分析协会(Web Analytics association)选为网站分析领域最需要阅读的14篇论文之一。
+
+**报告题目：****统计分析的第三范式：大数据与贝叶斯统计思维**
+
+<p style="text-align: center;">
+  <a href="http://cos.name/wp-content/uploads/2014/12/bayes-dao.png"><img class="aligncenter wp-image-10460 size-large" src="http://cos.name/wp-content/uploads/2014/12/bayes-dao-500x157.png" alt="bayes-dao" width="500" height="157" srcset="http://cos.name/wp-content/uploads/2014/12/bayes-dao-500x157.png 500w, http://cos.name/wp-content/uploads/2014/12/bayes-dao-300x94.png 300w, http://cos.name/wp-content/uploads/2014/12/bayes-dao.png 635w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+</p>
+
+<p style="text-align: center;">
+  <strong> <a href="https://bayes-stat.github.com" target="_blank">贝叶斯之道</a></strong>
+</p>
+
+<a href="https://bayes-stat.github.com" target="_blank">“贝叶斯之道”(The Tao of Bayesian: A Platform to Understanding with No Math)开放研究室</a>成立于2012年12月21日21点02分，以创建“一个中西合璧古今交融的贝叶斯学习平台”为宗旨，以“喜传贝叶斯之道，乐授贝叶斯之业，善解贝叶斯之惑”为目标，计划每年在12月21日举办一次中国贝叶斯统计学术论坛，纪念贝叶斯定理诞生，为国内外贝叶斯统计的爱好者提供一个学术交流和MCMC免费培训的机会，热烈欢迎感兴趣的同行加入我们的团队。
+
+### **（二）贝叶斯数据分析培训（下午：****2:00-4:00****）**
+
+  * **R****语言****30****分钟入门**(朱祁恒，天津财经大学13级硕士生)
+  * **贝叶斯统计推断与****MCMC****编程** (高磊，天津财经大学13级博士生)
+  * **Stan ****应用实例**(宋培培，天津财经大学13级硕士生)
+
+## 四、论坛费用
+
+参会人员不收取注册费，交通食宿费自理。
+
+会场工作人员和志愿者将会引导大家签到和入场，本次会议参会嘉宾请自主解决午餐。以下信息可供参考：
+
+  * _会场旁边__A__座有餐厅；逸夫楼图书馆内有咖啡厅；_
+  * _统计湖西侧的东院餐厅；座位较多但环境比较有限；_
+  * _心园餐厅环境较好；__但是座位比较有限。_
+
+## 五、交通和住宿提示
+
+[<img class="aligncenter wp-image-10490 size-large" src="http://cos.name/wp-content/uploads/2014/12/ditu-500x329.png" alt="ditu" width="500" height="329" srcset="http://cos.name/wp-content/uploads/2014/12/ditu-500x329.png 500w, http://cos.name/wp-content/uploads/2014/12/ditu-300x197.png 300w, http://cos.name/wp-content/uploads/2014/12/ditu.png 886w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2014/12/ditu.png)
+
+**（一）本市学友：**
+
+可乘坐地铁1号线或859、665、676、656、846、686路等公共汽车至我校。
+
+**（二）北京方向学友：（可当天早晨出发）**
+
+  * 北京南站——>天津站；(35分钟)
+  * 天津站——>天津财经大学(40分钟)：天津站不用出站，站内乘坐地铁3号线(高新区方向), 在营口道站下车；中转乘坐地铁1号线(双林方向), 在财经大学站下车(D口出)，从旁边的小门直接进入校园，5分钟可达会议现场。
+
+**（三）其他学友：**
+
+  * 天津滨海国际机场——天津财经大学：出租车 约50元左右；
+  * 天津西站——天津财经大学：乘坐地铁1号线(双林方向), 在财经大学站下车(D口出) ；（约35分钟）
+  * 天津南站——站内乘坐地铁3号线，在营口道站下车；中转乘坐地铁1号线(双林方向), 在财经大学站下车(D口出)。（约50分钟）
+
+**（四）校内住宿联系方式：**
+
+（1）天津财经大学干训中心：022-88186722，022-88186723
+  
+（2）天津财经大学国际交流中心：022-88186727，022-88186728
+
+## 六、报名方式
+
+热烈欢迎感兴趣者踊跃报名参加。将个人单位、姓名、手机号码、对贝叶斯统计的了解和培训需求等信息12月18日前发送至邮箱bayes_stat@163.com; 前30名将免费获得本次论坛的培训资料（以邮件通知为准）。
+
+## 七、联系方式
+
+论坛组委会： 高磊 朱祁恒 宋培培 刘乐平
+
+联系邮箱：bayes_stat@163.com
+
+主办：天津财经大学中国经济统计研究中心 贝叶斯之道研究室
+
+协办：统计之都
+
+## 八、会议资助
+
+本次会议得到了以下单位和基金的资助：
+
+  * 天津财经大学国家重点学科（统计学）；
+  * 天津财经大学中国经济统计研究中心；
+  * 天津市“十二五”综投；国家自然科学基金（71171139；71371138）。
+
+2014-12-15

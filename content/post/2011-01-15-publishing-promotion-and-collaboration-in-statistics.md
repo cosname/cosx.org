@@ -1,0 +1,105 @@
+---
+title: 统计学论文的发表流程、及统计学家的晋升和合作（内幕）
+date: '2011-01-15T00:32:45+00:00'
+author: 谢益辉
+categories:
+  - 职业事业
+tags:
+  - Joke
+  - 博士
+  - 发表论文
+  - 合作
+  - 晋升
+  - 统计学家
+slug: publishing-promotion-and-collaboration-in-statistics
+---
+
+[<img class="size-full wp-image-2949" style="margin-left: 10px; margin-right: 10px;" title="统计学论文的发表流程、及统计学家的晋升和合作（内幕）" src="http://cos.name/wp-content/uploads/2011/01/shapeimage_3.png" alt="统计学论文的发表流程、及统计学家的晋升和合作（内幕）" width="120" height="81" align="left" />](http://cos.name/?p=2831)这标题很吸引人，所有统计学相关领域的人可能都关心这几件事，但敬请降低对本文的期望。我不能再多说，否则要剧透了（看过的朋友也请不要剧透）。这段35分钟的视频讲述了统计学论文是如何发表的、统计学家在机构内如何得到晋升（影响晋升的指标），以及统计学家和生物学家如何交流和合作的种种“内幕”。新年伊始，我们也不想用大篇技术文章来“折磨”[统计之都](http://cos.name)的读者们，那么，开始欣赏这部小电影吧：
+
+<p style="text-align: center;">
+  <embed width="486" height="381" type="video/mp4" src="http://animation.r-forge.r-project.org/video/Getting-Ahead-in-Academia.mp4" />
+</p>
+
+（观看本视频可能需要安装QuickTime，视频为MP4格式）
+
+本视频<a href="http://web.me.com/goodmanfamily1/Behind_the_tan_door/index.html" target="_blank">来源于Johns Hopkins Schools of Medicine and Public Health的Steve Goodman教授</a>，已获得作者授权发布。欲转载者请自行联系原作者。Goodman教授在授权同时也表达了他对文化差异的担心，可能会有人看不懂这个片子的真正意思。如果你看完这个片子之后觉得气愤或不解（相信应该没有这样的人），请尽管联系我（谢益辉）给你解释。
+
+我想补充说明的是视频的第三部分，尽管我前面的“内幕”打了引号，但这里反映的其实也是一种现实：统计学家和其它专业的人打交道经常互不理解，鸡同鸭讲。这在[COS论坛](http://cos.name/cn/)上也经常出现——提问的人通常夹杂太多专业术语，让统计人摸不着头脑；实验设计、数据和问题被淹没在术语中，理不清头绪。反过来也一样，统计学一会儿一个纵向数据，一会儿一个随机效应，这种方差结构那种距离量度。从某种程度上来说，随着学科的深化发展，这种现象的出现是不可避免的。关于这个问题，用下面的图示来解释再清楚不过了。
+
+## 附：攻读博士的全流程
+
+以下文字和图片来源于“[The Illustrated Guide to a Ph.D.](http://matt.might.net/articles/phd-school-in-pictures/)”，遵循[CC许可证“署名-非商业”](http://creativecommons.org/licenses/by-nc/2.5/)，作者为[Matt Might](http://matt.might.net/)。
+
+Imagine a circle that contains all of human knowledge:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.001.jpg" alt="" width="440" />
+</p>
+
+By the time you finish elementary school, you know a little:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.002.jpg" alt="" width="440" />
+</p>
+
+By the time you finish high school, you know a bit more:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.003.jpg" alt="" width="440" />
+</p>
+
+With a bachelor&#8217;s degree, you gain a specialty:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.004.jpg" alt="" width="440" />
+</p>
+
+A master&#8217;s degree deepens that specialty:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.005.jpg" alt="" width="440" />
+</p>
+
+Reading research papers takes you to the edge of human knowledge:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.006.jpg" alt="" width="440" />
+</p>
+
+Once you&#8217;re at the boundary, you focus:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.007.jpg" alt="" width="440" />
+</p>
+
+You push at the boundary for a few years:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.008.jpg" alt="" width="440" />
+</p>
+
+Until one day, the boundary gives way:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.009.jpg" alt="" width="440" />
+</p>
+
+And, that dent you&#8217;ve made is called a Ph.D.:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.010.jpg" alt="" width="440" />
+</p>
+
+Of course, the world looks different to you now:
+
+<p style="text-align: center;">
+  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.011.jpg" alt="" width="440" />
+</p>
+
+So, don&#8217;t forget the bigger picture:
+
+<p style="text-align: center;">
+  <img src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.012.jpg" alt="" width="440" />
+</p>
+
+Keep pushing.

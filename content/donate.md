@@ -1,0 +1,65 @@
+---
+title: 捐赠
+date: '2009-03-15T23:48:26+00:00'
+author: COS管理员
+weight: 6
+menu: main
+---
+
+
+统计之都需要您的帮助！
+
+## 捐赠帐号
+
+“统计之都”网站是非营利型组织，为了本站更好地为大家服务，特设立如下两种捐赠方式：
+
+### 1、PayPal（贝宝）支付
+
+**美元帐户**：
+
+### 2、支付宝
+
+帐户：bank@cos.name
+
+## 当前捐赠目标
+
+待定。
+
+## 为什么捐赠
+
+“统计之都”一向本着助人的原则已为大家免费服务近八年时间，您所看到的所有[主站](http://cos.name)文章、[论坛](http://cos.name/bbs)回复以及[维基](http://cos.name/wiki)页面都没有任何酬劳，而我们的目标也并非营利，而是打造一个优秀的统计学服务平台，为需要统计学相关帮助的人提供服务与资源，为有能力的统计学工作者提供工作和项目机会。捐赠纯属自愿，若您从统计之都网站获取了有价值的帮助，您可以酌情考虑捐赠。
+
+## 捐赠的去向
+
+由于我们尚未注册成立正式的组织机构，因此目前的捐赠帐户仍为个人账户。我们得到的捐赠会用于：
+
+  1. 扩大网站空间、提高网站硬件和软件质量
+  2. 开展线下免费统计学培训和讨论活动，普及统计学知识
+
+## 历史捐赠
+
+### 2009-04-20捐赠<figure id="attachment_845" style="width: 480px" class="wp-caption aligncenter">
+
+[<img class="size-full wp-image-845" title="统计之都捐赠目标（截止至2009-04-20）" alt="统计之都捐赠目标（截止至2009-04-20）" src="http://cos.name/wp-content/uploads/2009/03/donate-2009-03-16.png" width="480" height="80" srcset="http://cos.name/wp-content/uploads/2009/03/donate-2009-03-16.png 480w, http://cos.name/wp-content/uploads/2009/03/donate-2009-03-16-300x50.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](http://cos.name/donate/)<figcaption class="wp-caption-text">统计之都捐赠目标（截止至2009-04-20）</figcaption></figure> 
+
+本次捐赠目标为￥1500，用于升级网站空间，本次升级之后将逐步开放[COS论坛](http://cos.name/bbs)上传权限；到2009年03月19日，我们一共收到捐赠￥1502.05，提前完成目标。本次捐赠来源如下：
+
+  * 安徽东至县某匿名用户
+  * 中南大学<a title="http://www.gossipcoder.com/" href="http://www.gossipcoder.com/" target="_blank">陈钢</a>博士（要求捐赠用于开办R语言相关活动）
+  * 中科院动物所杨鹏程
+  * 首都经贸大学闻博
+  * COS论坛会员lyxmoo
+
+### 2009-05-19捐赠
+
+本次为COS建站3周年，我们在筹划相应的活动。捐赠目标尚未确定，但已收到如下捐赠：
+
+  * COS论坛会员birdnick
+  * 中国人民大学王剑
+  * 中国人民大学张晓牟
+  * 杭州电子科技大学郑冰
+  * COS论坛会员yanlinlin82
+  * COS论坛会员helen
+  * COS论坛会员lfy1984
+  * COS论坛前版主xifan
+  * 浙江工商大学刘兵

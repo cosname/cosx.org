@@ -1,0 +1,68 @@
+---
+title: COS数据分析沙龙第十四期（北京）[附录音]
+date: '2013-10-16T23:37:56+00:00'
+author: COS编辑部
+categories:
+  - 新闻通知
+  - 统计之都
+  - 职业事业
+tags:
+  - COS沙龙
+slug: beijing-cos-salon-sep-2013
+---
+
+[<img class="aligncenter size-full wp-image-8705" alt="shalon1201" src="http://cos.name/wp-content/uploads/2013/10/shalon1201.jpg" width="640" height="480" srcset="http://cos.name/wp-content/uploads/2013/10/shalon1201.jpg 640w, http://cos.name/wp-content/uploads/2013/10/shalon1201-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/10/shalon1201-500x375.jpg 500w" sizes="(max-width: 640px) 100vw, 640px" />](http://cos.name/wp-content/uploads/2013/10/shalon1201.jpg)
+
+2013年9月14日，第十四期COS数据分析沙龙（北京站）在明德主楼1016如期举行。来自中科院数学与系统科学研究院的**刁瑞**先生（[@刁瑞_Dora](http://weibo.com/diaorui1987?topnav=1&wvr=5&topsug=1)）为大家呈现了主题为“**数据挖掘竞赛的那些人那些事儿**”的精彩讲座。
+
+**刁瑞**先生现为中国科学院数学与系统科学研究院博士研究生；
+
+**他**的研究方向是最优化计算方法。近期的研究内容包括优化方法在石油、电力等多个领域中的应用，部分研究成果即将投入使用；
+
+**他**因爱好而自学计算机相关知识，创建过一些小众网站；
+
+**他**参加过多项竞赛，曾获得**全国计算机多核程序设计大赛一等奖**，[**2011****年KDD Cup Track 2****第二名**](http://cos.name/salon/)，**2011****年首届全国大学生数据挖掘大赛研究生组第五名**，**2013****年秒针系统RTB****算法大赛第一名**。
+
+**他的追求是算法技术将比人心更懂人心！**
+  
+<!--more-->
+
+<p align="left">
+  COS沙龙的活动多以“分享、互动”为主题，刁瑞首先广泛争取了与会者对数据挖掘最关心的问题，然后逐一详细解答。本纪要以沙龙中主要的几个问题，简要的回顾下刁瑞嘉宾的精彩分享：
+</p>
+
+Q1、为何有数据挖掘这样的比赛？
+
+Dora解读：可以从主办方和参与者的角度解答。主办方通过举办这样的竞赛，获得了解决问题的方案（比如Netflix），尤其是对于新公司来说，既能传播名声也兼可发现人才。
+
+而对于数据挖掘参赛者，既可以通过竞赛了解到业界的需求，也可锻炼了自身解决实际问题的能力，同时也可以与志同道合的爱好者相互切磋，彼此交流经验。
+
+但也应该看到，竞赛提交的解决方案距离实际操作，有不小的鸿沟。
+
+Q2：参加比赛应该关注哪些点？
+
+Dora解读：本身自己会第一关注代码，任何参赛者的所有信息都隐藏在代码中，从代码中是可以真正的学习到每个人的处理问题的思想和解决方式，所以，从代码中学习，就是从第一手资料学习，并且代码的规范性也颇为重要。
+
+其次关注电脑的CPU，目前多数的数据挖掘竞赛的数据集都远不是单核、单机可以处理的，如何高效的处理数据，是每个参赛者首先考虑的问题，通过使用基层脚本语言的优化，再辅以多核CPU的并行计算，会事半功倍。
+
+Q3：参赛后，首先应该做什么？
+
+Dora解读：我本身会首先关注提供的数据有什么缺陷，以及主办方给出的假定是否可靠，数据的整体分布是怎样的，永远以怀疑的角度看待主办方的数据，只有真正认识了数据的面貌，才好对症下药。
+
+（编者注：请参考《[**数据真实性的探索**](http://diaorui.net/archives/419 "Permanent Link to 数据真实性的探索——对百度电影推荐系统算法大赛的质疑")》）****
+
+Q4：目前有哪些经常举办数据挖掘竞赛的平台？
+
+Dora解读：学术界的KDD，第三方网站[www.kaggle.com](http://www.kaggle.com/)、[www.**topcoder.com**](file:///C:/Users/DT-09/Downloads/www.topcoder.com)，业界的百度（[http://openresearch.baidu.com](http://openresearch.baidu.com/)）等。 每年会有很多不同的竞赛，但因为数据挖掘竞赛的时间跨度很大，同时也需要参赛者全身心的投入，所以，不宜报太多竞赛，从中挑选自己最感兴趣的1-2个参赛即可。
+
+刁瑞嘉宾还就目前参赛主要的算法研究，以及如何合理利用规则获取对手的结果从而知己知彼的战术进行了深入分享。
+
+一个半小时的分享时间，嘉宾分享了自己参赛的酸甜苦辣，给参会者留下了深刻的印象和启迪。
+
+本次沙龙吸引了众多数据挖掘爱好者的关注，沙龙的会议室第一次被完全的坐满，在其余的时间里，与会者彼此之间进行了深入交流。
+
+参与者分别来自百度、新浪、豆瓣、微软、天软科技、高德、博文视点、诺亚舟、阿里巴巴、中科院、中国铁道科学研究院、北京邮电大学、北京大学、清华大学、中国人民大学、北京理工大学的业界人士和高校学生以及创业者逾40余人报名参与了此次活动，席间与嘉宾积极互动，围绕主题展开了深入精彩的讨论。
+
+下载<a title="沙龙录音" href="http://pan.baidu.com/s/189njX" target="_blank">沙龙全程录音</a>
+
+[<img class="aligncenter size-full wp-image-8706" alt="shalon1202" src="http://cos.name/wp-content/uploads/2013/10/shalon1202.jpg" width="640" height="480" srcset="http://cos.name/wp-content/uploads/2013/10/shalon1202.jpg 640w, http://cos.name/wp-content/uploads/2013/10/shalon1202-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/10/shalon1202-500x375.jpg 500w" sizes="(max-width: 640px) 100vw, 640px" />](http://cos.name/wp-content/uploads/2013/10/shalon1202.jpg)

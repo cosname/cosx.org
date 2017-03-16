@@ -1,0 +1,220 @@
+---
+title: 降维攻击：目标，比率指标
+date: '2016-11-28T20:35:40+00:00'
+author: COS编辑部
+categories:
+  - 数据分析
+  - 统计之都
+  - 统计推断
+slug: discussion-about-ratio-metric
+---
+
+<p class="p1">
+  <strong><span class="s1"><i>作者简介：</i></span></strong><span class="s1"><i>陈丽云，在eBay从事 Experimentation Analytics Research。网络上素来自黑为“落园园主”。</i></span>
+</p>
+
+<p id="h.8w4kkanu9wst" class="c2 c11 title">
+  在这个互联网数据唾手可得的时代，但凡有数据的地方，就有战争。一场战役，有人登高摇旗呐喊，有人趁夜暗度陈仓。在以浩瀚数据为目标的战场上，大家费尽心思用尽招数，各种降维攻击，只是没有《三体》里面的体外文明那种强行把三维生物体打击到二维空间的那么残忍罢了。实践中，我们利用各种统计模型对数据进行一而再、再而三的降维，最终获得屈指可数的统计量来做进一步判断。园主一时起意，打算记录一下一场针对比率指标的降维攻击，以飨读者。
+</p>
+
+<p class="c2">
+  简单介绍一下实战的背景。互联网产业是一个快速更迭的产业，而大量的新产品上线和旧产品改良过程牵扯到一个重要的测试手段：A/B实验。A/B实验其实是最简单的随机对照实验（randomized control experiment），想法便是对不同的访客我们呈现不同的网站版本，然后比较一下版本之间的效果差异就好了。这是一种客观和简洁高效的判定方式，但也是陷阱无数。
+</p>
+
+<p class="c2">
+  园主常驻某电商网站的A/B实验咨询服务台，负责回答各种古灵精怪的问题。一日，有人跑过来问， “咦，我们最近想看一下实验对于网站上卖的东西的价格有没有影响，是不是有bug啊我没找到。” 等一下，你们难道不知道不能这么跟程序员讲话的么？
+</p>
+
+<p class="c2 c5">
+  <span class="c10">你不能对一个程序员说：你的代码有bug。他的第一反应是：1，你的环境有问题吧；2，傻逼你会用吗。如果你委婉地说：你这个程序和预期的有点不一致，你看看是不是我的使用方法有问题。他本能地会想：操，是不是出bug了！</span>
+</p>
+
+<p class="c2 c5">
+  <a href="http://cos.name/wp-content/uploads/2016/11/image01.jpg"><img class="aligncenter size-full wp-image-13285" src="http://cos.name/wp-content/uploads/2016/11/image01.jpg" alt="image01" width="1616" height="468" srcset="http://cos.name/wp-content/uploads/2016/11/image01.jpg 1616w, http://cos.name/wp-content/uploads/2016/11/image01-300x87.jpg 300w, http://cos.name/wp-content/uploads/2016/11/image01-768x222.jpg 768w, http://cos.name/wp-content/uploads/2016/11/image01-500x145.jpg 500w" sizes="(max-width: 1616px) 100vw, 1616px" /></a>
+</p>
+
+<p class="p1">
+  <span class="s1">园主表面故作淡定的说，打发走了咨询者之后，查了一下来龙去脉，还真是个历史遗留bug&#8230;说起来这个价格指标也不是很复杂，</span><span class="s2">其实就是在一个A/B实验期间，实验组和对照组用户购买的所有商品的平均价格的差异。听起来不就是算个平均数然后减一下嘛，这有什么难算的？在园主看来，有三个重要的问题需要注意，下面一一解释。</span>
+</p>
+
+#### <!--more-->问题一：选择偏差（selection bias)。 {.c2}
+
+<p class="c2">
+  随机实验最重要的意义就是利用随机分配来消除实验组和对照组之间的选择偏差，保证两者是一个公允的比较。在每个随机实验中，我们都会选择一个单位进行随机化。在此例中，我们随机分配的正是网站的访客，那么我们算平均的时候则应平均访客的观测值（注：即计量经济学里面的简约式，Reduced-form estimation）。如果仅仅对有购买行为的用户算平均的，那么则可能引入选择偏差（购买与否本身就会受到实验影响）。
+</p>
+
+#### 问题二：极端值的处理。 {.c2}
+
+<p class="c2">
+  因为用户的行为千奇百怪，为了减小方差提高估计效率，我们一般会对结果里面的极端值进行处理（要么直接移除出数据集，要么给其一个上下限，即 capping）。这样的处理亦可以保证中心极限定理收敛——互联网的用户行为数据多呈现重尾分布（<span class="c7"><a class="c1" href="https://en.wikipedia.org/wiki/Heavy-tailed_distribution">heavy-tail distribution</a></span>）， 即超越了指数分布的界限（此处沿用wiki上重尾分布的定义），此时中心极限定理及bootstrap都会可能失效。如果我们不去衡量尾部，那么人为的给一个上下界就是保证一二阶矩存在的简单处理办法。
+</p>
+
+#### 问题三：用户行为的时间自相关。 {.c2}
+
+<p class="c2">
+  t 检验的一个假设就是数据分布为独立同分布（i.i.d）。我们出于对用户行为的理解，一般假设用户之间的行为独立（随机化的时候我们尽量保证两组之间相互没有影响，也尽量保证每组内的单位之间没有太大溢出效应），而用户本身的行为并不独立（显然一个人上周买了个iphone，这周很可能就去买iphone壳子，要是假设用户对过去没有记忆的话、各种基于购买历史的推荐算法就不用做了..）。
+</p>
+
+<p class="c2">
+  听完这一堆问题，如果你还能耐心看下去，说明你和园主一样是一个坚强又好学的求知派。嗯，我们有困难要上，没困难创造困难也要上。随机化只是万里长征第一步。问题定义清楚了，我们就可以开始放大招、进行降维攻击了。我们期望找到一个近乎是无参（non-parametric）的办法来解，毕竟越简单越有效？
+</p>
+
+<p class="c2">
+  战术演习会上，大家纷纷发言，搜集了如下策略。
+</p>
+
+<p class="c2">
+  童鞋a：直接计算每个顾客的平均价格较为简便，即把所有销售数据加总到用户级别之后，直接计算每个人买的商品的平均价格就好了。对于没有买东西的人就直接赋值0，用户总量依旧是所有的访客。 然后我们就可以做t检验了。
+</p>
+
+<p class="c2">
+  童鞋b：我觉得a说的不对。没有买东西的人不能简单的赋值为0。想象我们网站上只有一种商品，定价为1000块的手机。实验组看到的是ps美化过的美图，对照组看到的是工信部登记的“证件照”。
+</p>
+
+<p class="c2">
+  <a href="http://cos.name/wp-content/uploads/2016/11/image02.png"><img class="wp-image-13284 alignnone" src="http://cos.name/wp-content/uploads/2016/11/image02.png" alt="image02" width="258" height="212" srcset="http://cos.name/wp-content/uploads/2016/11/image02.png 1498w, http://cos.name/wp-content/uploads/2016/11/image02-300x246.png 300w, http://cos.name/wp-content/uploads/2016/11/image02-768x630.png 768w, http://cos.name/wp-content/uploads/2016/11/image02-500x410.png 500w" sizes="(max-width: 258px) 100vw, 258px" /></a> <a href="http://cos.name/wp-content/uploads/2016/11/image03.png"><img class="wp-image-13283 alignnone" src="http://cos.name/wp-content/uploads/2016/11/image03.png" alt="image03" width="325" height="227" srcset="http://cos.name/wp-content/uploads/2016/11/image03.png 1554w, http://cos.name/wp-content/uploads/2016/11/image03-300x210.png 300w, http://cos.name/wp-content/uploads/2016/11/image03-768x537.png 768w, http://cos.name/wp-content/uploads/2016/11/image03-500x349.png 500w" sizes="(max-width: 325px) 100vw, 325px" /></a>
+</p>
+
+<p class="c2">
+  然后实验组和对照组的用户分别来了，结果实验组10%的人买了，对照组只有5%的人买了。那么显然我们知道实验本身不可能对商品价格有任何影响，它影响的只能是人们买不买的概率。如果你把没买东西的人赋值为0，那么最后你得出实验对商品价格有两倍影响的错误结论，从而误导开发团队或者决策者。所以，我觉得只能比较有购买行为的用户。
+</p>
+
+<p class="c2">
+  <span class="c3" style="color: #6aa84f;">总结：如何定义观测数据集。</span>
+</p>
+
+<p class="c2">
+  童鞋c：我觉得b说的有道理，但是每个顾客的平均购买价格这个指标的定义有些问题。这样的定义类似于“客单价”，反映的是实验对于用户的消费能力意愿的影响，而平均成交价则告诉我们是不是实验导致我们卖出的更多的是便宜货。如是的话，可能一时销量上去了、但总销售额并没有大的变化，且如果便宜货返修率高的话日后可以预期大量售后工作。
+</p>
+
+<p class="c2">
+  <span class="c3" style="color: #6aa84f;">总结：如何定义指标。</span>
+</p>
+
+<img class="aligncenter size-full wp-image-13338" src="http://cos.name/wp-content/uploads/2016/11/image00.jpg" alt="image00" width="800" height="450" srcset="http://cos.name/wp-content/uploads/2016/11/image00.jpg 800w, http://cos.name/wp-content/uploads/2016/11/image00-300x169.jpg 300w, http://cos.name/wp-content/uploads/2016/11/image00-768x432.jpg 768w, http://cos.name/wp-content/uploads/2016/11/image00-500x281.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />
+
+童鞋d：我基本同意c的观点，但是如果我们直接比较商品单价的话，极端值的处理会比较棘手。如果有人恰好买了100个1块钱的橡皮，那么他会极大的拉低平均价格。但是这种顾客无论在实验组和对照组都有可能买的，他的行为跟实验本身无关。所以我们做对比的时候应该想办法排除这样的极端个例带来的偏差。
+
+<p class="c2">
+  <span class="c3" style="color: #6aa84f;">总结：如何控制极端值。</span>
+</p>
+
+<p class="c2">
+  童鞋e：嗯，除了极端值，还有用户行为的时间自相关呢。我们可以考虑用加总数据的办法减小自相关的方差。
+</p>
+
+<p class="c2">
+  <span class="c3" style="color: #6aa84f;">总结：如何控制时间自相关。</span>
+</p>
+
+<p class="c2">
+  下面来看一下实战中我们的初步策略。
+</p>
+
+<p class="c2">
+  第一个问题其实在特定情况下是有（近似）解的，毕竟我们都没有时间去做一个结构化模型（structural model）来细致的推敲（其实还是怕麻烦，假设跟后宫里面的女人似的，越多越麻烦）。这个简单的近似就是，当一个实验可能影响多个步骤或者环节的时候，我们对各步骤进行分解（这里可加的条件是引入一个实验对各个步骤影响效果之间相互独立的假设）。
+</p>
+
+<p class="c2">
+  <a href="https://www.emaze.com/@AOZCFQQR/Chemistry-Project）"><img class="aligncenter wp-image-13282" src="http://cos.name/wp-content/uploads/2016/11/image04.jpg" alt="image04" width="481" height="361" srcset="http://cos.name/wp-content/uploads/2016/11/image04.jpg 1999w, http://cos.name/wp-content/uploads/2016/11/image04-300x225.jpg 300w, http://cos.name/wp-content/uploads/2016/11/image04-768x576.jpg 768w, http://cos.name/wp-content/uploads/2016/11/image04-500x375.jpg 500w" sizes="(max-width: 481px) 100vw, 481px" /></a>
+</p>
+
+<p class="c2">
+  分解完之后，我们对每一步可以分别做t 检验。这样，我们首先要做的就是重新定义一下平均价格这个指标：它并不是一个无条件的指标，相反，它只能定义在售出商品上。这里正是童鞋b的观点。如果这么定义完了之后，那就是我不管前面发生了什么，在给定前面发生的那些事实的基础之上，我关心实验对于商品价格这一步额外的影响。但是正如童鞋c指出的，我们终究还是想知道价格的变化而不是消费能力的变化，所以还是需要用销量来作为平均的底数。
+</p>
+
+<p class="c2">
+  显然，如童鞋e所言，这样的t检验难逃问题三提到的用户的自相关问题。由于自相关影响的主要是方差而不是均值，所以我们可以加总到用户级别再计算方差。如果一个用户买了多件商品，我们可以加总该用户的总花费、以及购买的商品的总数量这两个指标。从而，对于他而言，加权平均的商品价格实际上就是 总花费/总购买量。这样，商品价格就变成了其他两个指标的商，可以理解为一个广义的比率指标（ratio metrics，简单的如转化率等），亦可以重写为加权平均数。
+</p>
+
+<p class="c2">
+  对于比率指标，平均效应可以直接计算，而其方差的估计没有显式解，一般通过泰勒展开的到delta method的近似解&#8230;（参见：<span class="c7"><a class="c1" href="http://web.stanford.edu/class/cme308/OldWebsite/notes/TaylorAppDeltaMethod.pdf">TaylorAppDeltaMethod.pdf</a></span> ，第六页第二个公式）。
+</p>
+
+<p class="c2">
+  这样，我们就一箭双雕的解决了问题一和问题三。至于问题二，极端值的处理并没有什么通式，只要我们保证某个办法可以把分布约束在某个有限的空间内，那我们就可以放心的应用中心极限定理，且不用去关心这个比率指标本身是啥分布（否则就要祭出参数模型了）。
+</p>
+
+<p class="c2">
+  于是这里我们可以发挥想象的空间，然后就交给实际数据来决定那种更好。楼主抛砖引玉：
+</p>
+
+<ol class="c6 lst-kix_v1i00a8n76zk-0 start" start="1">
+  <li class="c4 c2">
+    什么都不做&#8230;（也算是一个基准值吧）。
+  </li>
+  <li class="c4 c2">
+    平均价格受单一商品极端价格的影响，所以我们应该对单一商品的价格设置上限（下限反正是0），然后加总到用户级别。
+  </li>
+  <li class="c4 c2">
+    极端值的来源是极端的用户，所以加总到用户级别之后，对于销量和销售额设置上限，然后直接算平均效应、用delta method来算方差。
+  </li>
+  <li class="c4 c2">
+    用户可能有些购买行为是不受实验影响的（比如他总要买那100块橡皮），但是他买其他东西可能就是受实验影响的（比如他还买了一个200块的计算器）。我们要担心的是对单一商品的大宗购买，而不是其他来源于同一用户的购买。所以可以在商品级别对销量设上限，然后再加总到用户级别。
+  </li>
+  <li class="c2 c4">
+    <p class="p1">
+      <span class="s1">我们可以把平均商品价格视为一个加权平均数（商品价格用销量来加权），所以对于某一用户如果他的平均价格很高的话，那么我们只需要对他进行降权就可以了。所以我们应该计算每个顾客的平均价格和购买量，然后对商品价格和购买量设上限，然后再计算平均效应和方差。</span>
+    </p>
+  </li>
+</ol>
+
+<p class="p1">
+  <span class="s1">对于各种极端值处理的微妙办法，园主只能说用数据说话了。取决于数据生成过程（data generating process），上面的各个方法其实可能相互等价。</span>
+</p>
+
+<p class="c2">
+  到这里，我们定义清楚了指标，然后也给出了一种数据加总和处理极端值的办法。但是，这一切的前提就是，我们关心的是平均实验效应。有没有可能，实验组和对照组的分布之间有了差距，但因为首尾相互抵消、均值上并看不出来差距呢？此外，极端值的处理是因为平均数受极端值的影响，那如果我们不计算平均数而采取其他的模型的话，就不用这么刻意的人为设置上下限了。
+</p>
+
+<p class="c2">
+  下一期，园主会介绍一个基于排序的统计检验——Wilcoxon rank-sum test。它可以和t-test相互补充，帮助我们查缺补漏。
+</p>
+
+#### 尾注： {.c2}
+
+<p class="c2">
+  还有我们实际工作中一般会考量问题，因为这些问题并不仅仅针对比率指标，所以单列于此。
+</p>
+
+<p class="c2">
+  <strong>问题四：利用用户本身的信息进行分组（或分层, stratification）。</strong>
+</p>
+
+<p class="c2">
+  对用户分组可以利用已知信息降低估计方差（简单如在回归方程里面引入控制变量，亦可以突破线性约束，或者利用贝叶斯框架）。分层相比于引入连续变量有很有优势，但细分过度会带来过拟合的问题。
+</p>
+
+<p class="c2">
+  <strong>问题五：多重比较问题 （multi-comparison）</strong>
+</p>
+
+<p class="c2">
+  当我们由多个衡量指标的时候，就会可能存在多重比较问题。但是各个指标之间可能并不相互独立。比如在此例中，如果我们同时做销量、销售额和均价价格的t检验，我们需要调整p-vaue吗？
+</p>
+
+<p class="c2">
+  <strong>问题六：相对效应与绝对效应 (relative effect，我们常称之为lift）</strong>
+</p>
+
+<p class="c2">
+  简单的来说，绝对效应就是实验组和对照组绝对的差值，而相对效应就是实验组相较于对照组提升的百分比。<span class="s1">这两者的估计并不尽然相同。</span>
+</p>
+
+<p class="p1">
+  <strong><span class="s1"><i>版权声明：本文参考作者首发于 </i><a href="http://www.ebaytechblog.com"><span class="s2"><i>eBay Techblog</i></span></a><i> 的 Significance Test for Ratio Metrics in Experiments 一文，并在翻译的过程中进行了适当内容扩展以易于阅读。英文版权属于eBay Techblog所有，中文版权归译者。</i></span></strong>
+</p>
+
+<p class="p3">
+  <strong><span class="s3"><i>在撰写本文的过程中，作者曾收到很多好友的审稿及修改意见，不胜感激，在此不再一一致谢。</i></span></strong>
+</p>
+
+<p class="c2" style="text-align: right;">
+  审稿：施涛
+</p>
+
+<p class="c2" style="text-align: right;">
+  编辑：王健桥
+</p>
+
+####

@@ -1,0 +1,86 @@
+---
+title: Python的七种武器
+date: '2016-10-06T19:30:41+00:00'
+author: 肖凯
+categories:
+  - 统计之都
+  - 统计软件
+tags:
+  - python
+  - 数据分析
+slug: python-seven-weapons
+---
+
+君子生非异也，善假于物也。
+
+“物”能够延展英雄的能力。它是吕布的赤兔马，杨过的玄铁重剑，CS中的沙漠之鹰，曹操传中的凤凰羽衣。“物”也可用以治愈英雄，例如张无忌的黑玉断续膏，李逍遥的天香续命露，还有深夜里TVB的一碗面。
+
+[<img class="aligncenter wp-image-13186 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/10/65-150x150.jpg" alt="赤兔" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/10/65.jpg)
+
+对于不同的位面，有着不同的宝物定义。对古时文人来讲，笔墨纸砚，是当时具有生产力输出的四大工具。对程序员来讲，当代的“文房四宝”不外乎是：笔记本，大屏幕，机械键盘，人体工学椅，Google，Github这几种。特别是机械键盘和人体工学椅，它们是极为重要的“人机接口”。前者可以用来延展英雄的输出能力，后者可以用来治愈英雄的腰椎。
+
+[<img class="aligncenter wp-image-13187 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/10/机械键盘-150x150.jpg" alt="机械键盘" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/10/机械键盘.jpg)
+
+在数据领域也有类似的情况。一个数据项目，最重要的是定义问题，其次是拿到好的数据，再次是找到合适的方法，最不重要的可能就是选择一个工具了。但是看起来最形而下的工具，却是最具体而真实的“人数接口”。用一种顺手的工具来玩数据，我们会觉得比较舒服，输出效率更高。
+
+市面上的分析工具大致分为两大类，菜单式的工具和命令行式的工具。前者适合于初学入门，类似于跟团旅游，提供了固定的路线。分析套路比较固定化，点几下鼠标就可以搞定也很省事。后者适合于老手玩家，类似于自由行，需要自己规划数据工作流，适用于自定义的灵活分析。大多数用户害怕命令行，然而使用命令行才能掌握真正的力量。命令行是Jedi的原力。
+
+在命令行工具类别中，最耀眼的是R和Python这对双星。他们有非常多的相似之处，第一个相似之处是“快”。这种快不是纯计算速度快，而是从想法到结果的快。因为不论是探索数据还是建模，都需要各种尝试各种试错各种踩坑，如果要花2小时写代码，跑1分钟，不如花1分钟写程序，跑1小时。因为人的时间总是更为宝贵。第二个相似之处是扩展丰富。即有大量现成的函数模块。从想法到结果的快速实现，不能等待重新造轮子，另一方面，试错也要做很多复杂的自定义任务，将各种模块进行组合，调用各种外部交互接口，这两种开源工具都非常擅长。
+
+二者的差异点在于Python是一种通用型编程工具，R专注于数据领域；R有更为丰富的专业统计函数，Python则长于机器学习；R有更好的可视化包，Python正在快速追赶；Python和R的核心语法非常简洁，一些R包的语法则兼收并蓄，错综复杂。当你有时间的时候，双修是最好的选择。因为这两种工具类似于筷子和勺子的区别，在不同场景下使用某种工具更为有效。
+
+R语言这个工具与其生态系统，在统计之都上已经介绍得非常多了。下文简单介绍一下python的七个最为重要的数据分析模块，或者称之为七种武器。<!--more-->
+
+### **长生剑：Numpy**
+
+[<img class="aligncenter wp-image-13181 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/09/长生剑-150x150.jpg" alt="长生剑" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/09/长生剑.jpg)
+
+Numpy是Python提供数值计算的基础模块，也是Python生态中历史最为悠久的模块，可称得上“长生”二字。如果没有这柄长生剑，就没有办法做快速高效的向量化计算。它还提供了线性代数等高级矩阵运算功能，另外还能集成C的代码，让你出剑更加的快。Python的许多扩展模块都是基于Numpy开发的，所以学好Numpy就算是奠定好了根基。
+
+### **碧玉刀：SciPy**
+
+[<img class="aligncenter wp-image-13175 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/09/碧玉刀-150x150.jpg" alt="碧玉刀" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/09/碧玉刀.jpg)
+
+SciPy是基于Numpy开发的高级模块，它用于解决科学计算中的一些标准问题。例如数值积分和微分方程求解，扩展的矩阵计算，最优化，概率分布和统计函数，甚至包括信号处理。练习好碧玉刀和长生剑，就足以解决常见的计算问题，并不需要自己哼哧哼哧造轮子写函数了。
+
+### **孔雀翎：Matplotlib**
+
+[<img class="aligncenter wp-image-13177 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/09/孔雀翎-150x150.jpg" alt="孔雀翎" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/09/孔雀翎.jpg)
+
+孔雀的尾羽聚合了世间所有的色彩，做数据研究同样需要漂亮的可视化工具。Matplotlib是python下最著名的绘图库，提供了一整套和Matlab相似的API，十分适合交互式绘图。也可将它作为绘图控件，嵌入各种应用程序中。在其基础之上，还有更为有趣的绘图工具Seaborn和Bokeh。
+
+### **多情环：Pandas**
+
+[<img class="aligncenter wp-image-13176 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/09/多情环-150x150.jpg" alt="多情环" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/09/多情环.jpg)
+
+在数据整理阶段，我们经常需要连接读定不同类型的数据源，处理不同格式的数据对象，如果只使用Numpy会很麻烦。Pandas使Python具备了类似R的数据框对象。这样方便用于真实江湖的数据处理和分析，它提供大量易用、高效的数据操作函数库，能执行join以及其他SQL类似的功能来重塑数据，支持各种格式的输入输出数据。它与Python生态中的其它模块也有很好的整合，多情环名不虚传。
+
+### **离别钩：Statsmodels**
+
+[<img class="aligncenter wp-image-13178 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/09/离别钩-150x150.jpg" alt="%e7%a6%bb%e5%88%ab%e9%92%a9" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/09/离别钩.jpg)
+
+Statsmodels是python中专门用于统计分析的模块，提供各种回归模型函数，包括广义回归和稳健回归，还提供大量时间序列分析函数，例如ARIMA/VAR，各种经典假设检验和非参数方法一个都不少。有了离别钩，你可以随时和R说离别。
+
+### **霸王枪：Scikit-learn**
+
+[<img class="aligncenter wp-image-13174 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/09/霸王枪-150x150.jpg" alt="霸王枪" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/09/霸王枪.jpg)
+
+Scikit-learn是非常著名的机器学习库，它提供一个统一的接口来使用不同模型，有助于迅速地在数据集上应用流行的算法。它包含了许多用于标准机器学习任务的工具，例如聚类、分类和回归等。不仅是各种算法，机器学习中重要的特征选择和模型评估均在模块中包含了。值得一提的另一个模块gensim：提供了词向量、主题模型等函数。有了这两种模块，天下就绝没有不能解决的事。
+
+### **一口箱子：TensorFlow**
+
+[<img class="aligncenter wp-image-13180 size-thumbnail" src="http://cos.name/wp-content/uploads/2016/09/箱子-150x150.jpg" alt="一口箱子" width="150" height="150" />](http://cos.name/wp-content/uploads/2016/09/箱子.jpg)
+
+古龙并未写完最后的第七种武器，通常会将《英雄无泪》中的一口箱子作为最为神秘最为强悍的终级武器。在Python生态中，一口箱子只能属于TensorFlow。它作为名门大派出品的深度学习框架，一出世就备受瞩目。TensorFlow提供了C++和python两种接口，让你能高效的设计各种机器学习算法，并且能运行在各类硬件架构之上。此外还有各种强力组件搭配，TensorBoard用于监控学习过程中的各项参数，TensorServer可用于生产环境的模型部署，甚至传说还有TPU这种专门用于深度学习的芯片。
+
+在数据江湖中，没有顺手的武器，英雄亦束手加班中。七种武器虽强，但器物总是死的，更重要的是从器物的把玩中，能领悟到运用之妙，数据之道。一件武器是否能令读者觉得神奇有价值，主要还是得看使用它的是什么人。有赤兔的吕布没有看到明天，没有玄铁重剑的杨过却有更进一步的修炼。
+
+江湖路远，少侠们一路走好。
+
+编者注：
+  
+了解RStudio为TensorFlow制作的接口，请点击网页<https://rstudio.github.io/tensorflow/>
+
+**作者简介****
+  
+** 一个喜欢折腾数据的人，与李舰合著了《数据科学中的R语言》，现就职于蚂蚁金服。

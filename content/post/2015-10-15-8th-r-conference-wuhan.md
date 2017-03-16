@@ -1,0 +1,304 @@
+---
+title: 第八届中国R语言会议（武汉会场）暨华中地区数据科学会通知
+date: '2015-10-15T23:50:36+00:00'
+author: COS编辑部
+categories:
+  - 中国R会议
+  - 新闻通知
+  - 统计之都
+tags:
+  - R语言会议
+  - R语言武汉会场
+  - 武汉会场通知
+slug: 8th-r-conference-wuhan
+---
+
+R语言作为一种用于数据分析和图形展示的语言，是受S语言和Scheme语言影响发展而来，具有免费、开源及统计模块齐全的特性。其应用范围涵盖了数据挖掘、机器学习、计量经济学、实证金融学、生物统计、气象学、电子商务等诸多领域。R语言的官方机构每年都会举办useR!会议，各个国家及地区也定期会有R的交流活动。中国的R语言会议从2008年开始已经成功举办到了第八届，之前在北京、上海、广州、杭州等地举办的会议都非常成功，大力推动了R语言在国内的蓬勃发展，促进了R语言乃至数据科学在中国的推广和发展。为了让更多的人认识和熟悉R，华中地区将首次迎来中国R语言会议。2015年11月7日在湖北经济学院和统计之都等的共同努力下，R语言会议将在江城武汉举办。本次会议旨在搭建各行各业R用户技术交流的平台，拓宽R语言与数据科学、金融学、统计学、机器学习等领域结合的新视角，吸引越来越多的华中地区人士关注R语言和数据科学。
+
+[<img class="aligncenter size-full wp-image-11430" src="http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png 450w, http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+
+一、会议时间<!--more-->
+
+2015年11月07日
+
+二、会议地点
+
+武汉市江夏区藏龙岛开发区杨桥湖大道8号，湖北经济学院大学生活动中心二号报告厅，届时校内会有指示牌
+
+三、会议主题
+
+本次会议的主题是：R Running the world 意指R的发展正在全球化，最初R会议只在欧美地区举行，从2008年中国第一届R会议在北京举行后，R会议已先后在北京、上海、广州、杭州等地举行，R正在不断地发展壮大。
+
+四、会议演讲
+
+  1. 谢军（上海雅捷信息技术股份有限公司）：当R真的遇到了大数据
+  2. 李舰（堡力山集团）：R与自动化报告
+  3. 肖凯（1号店）：基于OpenCPU的R模型部署
+  4. 何宇兵（辰智商务信息咨询有限公司）：商业大数据时代，GIS和R更配
+  5. 张兵（浙江省疾病预防控制中心）：基于R软件的传染病监测系统数据可视化及分析平台搭建
+  6. 苏建冲（中国移动研究院）：R在手机品牌分析中的应用
+  7. 谢佳标（创梦天地科技有限公司）：游戏行业大数据的处理与建模技术
+  8. 周翔（中山大学数学与计算科学学院）：怦然心动的数据整理&描述魔法
+
+五、演讲者报名
+
+大会除邀请嘉宾演讲之外，欢迎报名演讲。主题包括但不限于云计算、数据挖掘、金融与金融大数据等。欢迎有兴趣的演讲者将个人简介+演讲题目+演讲摘要（200以内）邮件发送至wuhanr2015@yeah.net。大会组委将会对报名的演讲择优录用。演讲报名时间截止为2015年10月30日。
+
+六、参会者报名
+
+本次会议的普通参会人员报名截止日期为2015年10月30日，名额报满即止。主办方不会对参会者收取任何费用，对会议感兴趣的R语言爱好者需要在报名系统里填写个人信息，完成报名后方可参加会议。报名系统：<a href="http://wuhanr2015.eventdove.com" target="_blank">http://wuhanr2015.eventdove.com</a>
+
+七、交通路线
+
+（1）武汉市内乘车路线：
+
+<table>
+  <tr>
+    <td width="128">
+      天河机场
+    </td>
+    
+    <td width="548">
+      天河机场→机场巴士→金家墩客运站→地铁2号线→光谷广场
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="128">
+      武昌火车站
+    </td>
+    
+    <td width="548">
+      武昌火车站→公交车903→珞瑜路光谷广场；</p> 
+      
+      <p>
+        或武昌火车站→轨道交通4号线→洪山广场站→站内换乘轨道交通2号线→光谷广场</td> </tr> 
+        
+        <tr>
+          <td width="128">
+            武汉火车站
+          </td>
+          
+          <td width="548">
+            武汉火车站→轨道交通4号线→洪山广场站→站内换乘轨道交通2号线→光谷广场
+          </td>
+        </tr>
+        
+        <tr>
+          <td width="128">
+            汉口火车站
+          </td>
+          
+          <td width="548">
+            汉口火车站→地铁2号线→光谷广场
+          </td>
+        </tr></tbody> </table> 
+        
+        <p>
+          到达光谷广场后乘车到会场路线：
+        </p>
+        
+        <ul>
+          <li>
+            步行至珞喻路光谷广场站乘坐718路公交到达杨桥湖大道程杨湾站下车，步行至湖北经济学院。
+          </li>
+          <li>
+            步行至民族大道光谷广场站乘坐758路公交到达杨桥湖大道程杨湾站下车，步行至湖北经济学院。
+          </li>
+          <li>
+            步行至民族大道光谷广场站乘坐732路公交车到杨桥湖大道口站下车，步行至湖北经济学院。
+          </li>
+        </ul>
+        
+        <p>
+          （2）自驾路线：
+        </p>
+        
+        <ul>
+          <li>
+            黄石、黄冈方向武黄高速武东出口沿光谷大道往京珠沪渝高速凤凰山收费站方向行驶5公里即到；
+          </li>
+          <li>
+            咸宁、宜昌、十堰方向转至沪渝高速（上海、黄石方向）在凤凰山、关山出口下高速，左转沿光谷大道行驶2公里即到。
+          </li>
+        </ul>
+        
+        <p>
+          （3）校内地图：
+        </p>
+        
+        <p>
+          到达湖北经济学院后，可由下图所示路线到达会议地点。
+        </p>
+        
+        <p>
+          <a href="http://cos.name/wp-content/uploads/2015/10/路线.jpg"><img class="aligncenter size-full wp-image-11495" src="http://cos.name/wp-content/uploads/2015/10/路线.jpg" alt="路线" width="981" height="671" srcset="http://cos.name/wp-content/uploads/2015/10/路线.jpg 981w, http://cos.name/wp-content/uploads/2015/10/路线-300x205.jpg 300w, http://cos.name/wp-content/uploads/2015/10/路线-500x342.jpg 500w" sizes="(max-width: 981px) 100vw, 981px" /></a>
+        </p>
+        
+        <p>
+          联系信息：
+        </p>
+        
+        <p>
+          邮箱：<a href="mailto:wuhanr2015@yeah.net">wuhanr2015@yeah.net</a>
+        </p>
+        
+        <p>
+          新浪微博：@统计之都
+        </p>
+        
+        <p>
+          微信公众号：统计之都
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          主办方：
+        </p>
+        
+        <p>
+          湖北经济学院统计学院
+        </p>
+        
+        <p>
+          <a href="http://cos.name/wp-content/uploads/2015/10/hubei.jpg"><img class="wp-image-11496 size-medium alignleft" src="http://cos.name/wp-content/uploads/2015/10/hubei-300x300.jpg" alt="hubei" width="300" height="300" srcset="http://cos.name/wp-content/uploads/2015/10/hubei-300x300.jpg 300w, http://cos.name/wp-content/uploads/2015/10/hubei-150x150.jpg 150w, http://cos.name/wp-content/uploads/2015/10/hubei-500x500.jpg 500w, http://cos.name/wp-content/uploads/2015/10/hubei.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          统计之都
+        </p>
+        
+        <p>
+          <a href="http://cos.name/wp-content/uploads/2015/10/统计.png"><img class="wp-image-11497 size-medium alignleft" src="http://cos.name/wp-content/uploads/2015/10/统计-300x69.png" alt="统计" width="300" height="69" srcset="http://cos.name/wp-content/uploads/2015/10/统计-300x69.png 300w, http://cos.name/wp-content/uploads/2015/10/统计-500x115.png 500w, http://cos.name/wp-content/uploads/2015/10/统计.png 521w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          协办方：
+        </p>
+        
+        <p>
+          湖北数据与分析中心
+        </p>
+        
+        <p>
+          赞助商：
+        </p>
+        
+        <p>
+          优酷土豆股份有限公司
+        </p>
+        
+        <p>
+          <a href="http://cos.name/wp-content/uploads/2015/10/0082.jpg"><img class="size-full wp-image-11543 alignleft" src="http://cos.name/wp-content/uploads/2015/10/0082.jpg" alt="008" width="302" height="269" srcset="http://cos.name/wp-content/uploads/2015/10/0082.jpg 302w, http://cos.name/wp-content/uploads/2015/10/0082-300x267.jpg 300w" sizes="(max-width: 302px) 100vw, 302px" /></a>
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
+        
+        <p>
+          辰智商务信息咨询有限公司
+        </p>
+        
+        <p>
+          <a href="http://cos.name/wp-content/uploads/2015/10/0092.jpg"><img class="size-full wp-image-11544 alignleft" src="http://cos.name/wp-content/uploads/2015/10/0092.jpg" alt="009" width="267" height="288" /></a>
+        </p>
+        
+        <p>
+          &nbsp;
+        </p>
