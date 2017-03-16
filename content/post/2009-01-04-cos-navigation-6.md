@@ -18,7 +18,7 @@ slug: cos-navigation-6
 
 本周一共发布了1篇日志。<!--more-->
 
-  * [分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC](http://cos.name/2008/12/measure-classification-model-performance-roc-auc//)
+  * [分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC](https://cos.name/2008/12/measure-classification-model-performance-roc-auc//)
 
 本周COS主站又有一位作者加入：
 
@@ -30,7 +30,7 @@ slug: cos-navigation-6
 
 # 三、论坛
 
-[关于邀请大家成为统计之都高校联系人](http://cos.name/bbs/read.php?tid=13026)
+[关于邀请大家成为统计之都高校联系人](https://cos.name/bbs/read.php?tid=13026)
   
 本周学校有两位同学加入高校联系人：温州大学的陈省田和中南大学的蒲红刚
 

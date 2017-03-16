@@ -248,6 +248,6 @@ SAS
 
 统计学、商务智能
 
-5. 统计之都（应用统计学、数据挖掘，群体博客），<http://cos.name/>
+5. 统计之都（应用统计学、数据挖掘，群体博客），<https://cos.name/>
 
 6. TTNN BI观点（商务智能电子邮件组，中文），<https://groups.google.com/group/ttnn>

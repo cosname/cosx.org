@@ -40,7 +40,7 @@ slug: we-never-know-randomness
 
 《缩水》一文发表了很多不可重复的试验案例，我们应该吃惊吗？我的回答是，未必。举两个简单的例子：
 
-第一个例子：很多数据分析人员都很在意所谓的“离群点”，<a href="http://cos.name/cn/" target="_blank">论坛</a>上也隔三差五有人问到这样的问题（如何判断和处理离群点），而且也有很多人的做法就是粗暴地删掉，我从来都反对这种做法。除了基于“数据是宝贵的”这样简单的想法之外，另一点原因是，离群点也许并非“异类”。离群点是否真的不容易出现？请打开R或其它统计软件，生成30个标准正态分布N(0, 1)随机数看看结果，比如R中输入`rnorm(30)`，这是我运行一次的结果：
+第一个例子：很多数据分析人员都很在意所谓的“离群点”，<a href="https://cos.name/cn/" target="_blank">论坛</a>上也隔三差五有人问到这样的问题（如何判断和处理离群点），而且也有很多人的做法就是粗暴地删掉，我从来都反对这种做法。除了基于“数据是宝贵的”这样简单的想法之外，另一点原因是，离群点也许并非“异类”。离群点是否真的不容易出现？请打开R或其它统计软件，生成30个标准正态分布N(0, 1)随机数看看结果，比如R中输入`rnorm(30)`，这是我运行一次的结果：
 
 <pre class="brush: r">&gt; rnorm(30)
  [1]  1.19062761 -0.85917341  2.90110515  0.59532402 -0.05081508 -0.06814796
@@ -53,7 +53,7 @@ slug: we-never-know-randomness
 
 另一个例子和统计学结合紧密一点，我们谈谈残差的QQ图。QQ图是用来检查数据正态性的一种统计图形，与腾讯无关，细节此处略去，大意是图中的点若呈直线状（大致分布在对角线上），那么可以说明数据的正态性比较好，因此QQ图经常被用在对回归模型残差的正态性诊断上。我的问题是，即使数据真的是正态分布，你是否真的会看见一些分布在直线上的点？若答案是否定的，那么我们就得重新审视我们对分布和随机的认识了。下图是一幅教科书式的QQ图（仍然基于30个正态分布随机数）：<figure id="attachment_3992" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-3992" title="“正常的”QQ图" alt="“正常的”QQ图" src="http://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png" width="480" height="480" srcset="http://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png 480w, http://cos.name/wp-content/uploads/2011/07/normal-qq-plot-150x150.png 150w, http://cos.name/wp-content/uploads/2011/07/normal-qq-plot-300x300.png 300w, http://cos.name/wp-content/uploads/2011/07/normal-qq-plot-218x218.png 218w, http://cos.name/wp-content/uploads/2011/07/normal-qq-plot-73x73.png 73w, http://cos.name/wp-content/uploads/2011/07/normal-qq-plot-40x40.png 40w" sizes="(max-width: 480px) 100vw, 480px" />](http://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png)<figcaption class="wp-caption-text">“正常的”QQ图（来自R语言qqnorm(rnorm(30))）</figcaption></figure> 
+[<img class="size-full wp-image-3992" title="“正常的”QQ图" alt="“正常的”QQ图" src="https://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png 480w, https://cos.name/wp-content/uploads/2011/07/normal-qq-plot-150x150.png 150w, https://cos.name/wp-content/uploads/2011/07/normal-qq-plot-300x300.png 300w, https://cos.name/wp-content/uploads/2011/07/normal-qq-plot-218x218.png 218w, https://cos.name/wp-content/uploads/2011/07/normal-qq-plot-73x73.png 73w, https://cos.name/wp-content/uploads/2011/07/normal-qq-plot-40x40.png 40w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png)<figcaption class="wp-caption-text">“正常的”QQ图（来自R语言qqnorm(rnorm(30))）</figcaption></figure> 
 
 随机性并没有这么美好，即使数据真的来自正态分布，你也有可能很容易观察到歪歪扭扭的QQ图，尤其是小样本的情况下。比如下图是50次重复抽样的正态数据QQ图，它和你想象的QQ图本来的样子差多远？
 
@@ -63,7 +63,7 @@ ani.options(interval = 0.1, nmax = 50)
 par(mar = c(3, 3, 2, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
 sim.qqnorm(n = 30, pch = 19, col = "red", last.plot = expression(abline(0, 1)))</pre><figure id="attachment_3996" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-3996" title="真实的正态分布QQ图" alt="真实的正态分布QQ图" src="http://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif" width="480" height="480" srcset="http://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif 480w, http://cos.name/wp-content/uploads/2011/07/true-qq-norm-150x150.gif 150w, http://cos.name/wp-content/uploads/2011/07/true-qq-norm-300x300.gif 300w, http://cos.name/wp-content/uploads/2011/07/true-qq-norm-218x218.gif 218w, http://cos.name/wp-content/uploads/2011/07/true-qq-norm-73x73.gif 73w, http://cos.name/wp-content/uploads/2011/07/true-qq-norm-40x40.gif 40w" sizes="(max-width: 480px) 100vw, 480px" />](http://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif)<figcaption class="wp-caption-text">真实的正态分布QQ图（图中直线为y = x）</figcaption></figure> 
+[<img class="size-full wp-image-3996" title="真实的正态分布QQ图" alt="真实的正态分布QQ图" src="https://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif 480w, https://cos.name/wp-content/uploads/2011/07/true-qq-norm-150x150.gif 150w, https://cos.name/wp-content/uploads/2011/07/true-qq-norm-300x300.gif 300w, https://cos.name/wp-content/uploads/2011/07/true-qq-norm-218x218.gif 218w, https://cos.name/wp-content/uploads/2011/07/true-qq-norm-73x73.gif 73w, https://cos.name/wp-content/uploads/2011/07/true-qq-norm-40x40.gif 40w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif)<figcaption class="wp-caption-text">真实的正态分布QQ图（图中直线为y = x）</figcaption></figure> 
 
 正态分布是统计学中比较“正常”的一类分布（台湾学者甚至译为“常态分布”），我们尚不能很好感知它的随机性，就不必说其它“怪异”的分布了。
 
@@ -71,7 +71,7 @@ sim.qqnorm(n = 30, pch = 19, col = "red", last.plot = expression(abline(0, 1)))<
 
 ## 二、统计推断
 
-《缩水》一文中提到的基本上都是统计推断方法带来的结果，为了理解这些结果，我们必须三思统计推断本身的过程。一般说来，统计推断有两种途径：随机试验和（概率）统计模型，或者说基于试验的推断和基于模型的推断。前者的代表性方法为置换检验（Permutation test），不过它似乎被大多数人遗忘了，更多的人拿到数据首先想的就是用哪个统计模型和分布；实际上，置换检验是一种极具代表性的统计推理方法，可以用典型的“三段论”来说明它（参见<a title="假设检验初步" href="http://cos.name/2010/11/hypotheses-testing/" target="_blank">去年江堂的文章</a>）：
+《缩水》一文中提到的基本上都是统计推断方法带来的结果，为了理解这些结果，我们必须三思统计推断本身的过程。一般说来，统计推断有两种途径：随机试验和（概率）统计模型，或者说基于试验的推断和基于模型的推断。前者的代表性方法为置换检验（Permutation test），不过它似乎被大多数人遗忘了，更多的人拿到数据首先想的就是用哪个统计模型和分布；实际上，置换检验是一种极具代表性的统计推理方法，可以用典型的“三段论”来说明它（参见<a title="假设检验初步" href="https://cos.name/2010/11/hypotheses-testing/" target="_blank">去年江堂的文章</a>）：
 
   1. 要么A，要么B
   2. 若有A，则有C
@@ -125,6 +125,6 @@ FDR是个期望，也就是你做很多次试验，平均来看，FDR在某个�
 
 ## 四、可重复的统计研究
 
-看到这里，你大概也脑子有点抽筋了（如果你把我提到的Lindsey和Efron的文章都看过了的话），我们换个轻松点的话题：可重复的统计研究。这不是我第一次提它，我们一直都在号召可重复的统计研究（如《<a title="Sweave：打造一个可重复的统计研究流程" href="http://cos.name/2010/11/reproducible-research-in-statistics/" target="_blank">Sweave：打造一个可重复的统计研究流程</a>》）。还是老话一句，不谈道德问题，因为这是不可控的因素，我们可控的只有制度和工具。源代码不会撒谎。
+看到这里，你大概也脑子有点抽筋了（如果你把我提到的Lindsey和Efron的文章都看过了的话），我们换个轻松点的话题：可重复的统计研究。这不是我第一次提它，我们一直都在号召可重复的统计研究（如《<a title="Sweave：打造一个可重复的统计研究流程" href="https://cos.name/2010/11/reproducible-research-in-statistics/" target="_blank">Sweave：打造一个可重复的统计研究流程</a>》）。还是老话一句，不谈道德问题，因为这是不可控的因素，我们可控的只有制度和工具。源代码不会撒谎。
 
 我们期待学术研究过程的透明化，至少统计之都在努力。

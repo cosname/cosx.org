@@ -9,7 +9,7 @@ tags:
 slug: 2nd-chinese-r-conference-summary
 ---
 
-<figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1821" title="第二届中国R语言会议北京会场合影" alt="第二届中国R语言会议北京会场合影" src="http://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-500x332.jpg" width="500" height="332" srcset="http://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-500x332.jpg 500w, http://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ.jpg)<figcaption class="wp-caption-text">第二届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> <figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1883" title="第二届中国R语言会议上海会场演讲者和工作人员合影" alt="第二届中国R语言会议上海会场演讲者和工作人员合影" src="http://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-500x332.jpg" width="500" height="332" srcset="http://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-500x332.jpg 500w, http://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH.jpg)<figcaption class="wp-caption-text">第二届中国R语言会议上海会场演讲者和工作人员合影（右键另存为看大图）</figcaption></figure> 
+<figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1821" title="第二届中国R语言会议北京会场合影" alt="第二届中国R语言会议北京会场合影" src="https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-500x332.jpg" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-500x332.jpg 500w, https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ.jpg)<figcaption class="wp-caption-text">第二届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> <figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1883" title="第二届中国R语言会议上海会场演讲者和工作人员合影" alt="第二届中国R语言会议上海会场演讲者和工作人员合影" src="https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-500x332.jpg" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-500x332.jpg 500w, https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH.jpg)<figcaption class="wp-caption-text">第二届中国R语言会议上海会场演讲者和工作人员合影（右键另存为看大图）</figcaption></figure> 
 
 2009年12月5~6日以及2009年12月12~13日，第二届中国R语言会议分别在北京和上海两个分会场成功召开。北京会场由中国人民大学应用统计科学研究中心和中国人民大学统计学院主办；上海会场由华东师范大学资源与环境科学学院、金融与统计学院主办，Mango Solutions咨询公司提供赞助。对R语言在中国的推广做出了杰出贡献的吴喜之教授和谢益辉博士远在美国为本次会议发来祝贺；中国R语言的领军人物、华东师范大学的汤银才老师也应邀参加会议并做了专题报告。两个会场的会议就R语言在众多领域中的应用展开了广泛的交流和讨论，为R语言在中国的进一步应用和推广开辟了更宽阔的道路。
 
@@ -17,7 +17,7 @@ slug: 2nd-chinese-r-conference-summary
 
 本次会议的主题是“无处不在的R”，也即印在参会胸牌上的“use R eveRywheRe”，意指R的应用领域之广；同时，“use R eveRywheRe”又可看成是“useR eveRywheRe”，意指R的使用者遍布四面八方。
 
-<img class="aligncenter size-full wp-image-1816" title="useR eveRywheRe" alt="useR eveRywheRe" src="http://cos.name/wp-content/uploads/2009/12/useR-eveRywheRe.png" width="291" height="133" />
+<img class="aligncenter size-full wp-image-1816" title="useR eveRywheRe" alt="useR eveRywheRe" src="https://cos.name/wp-content/uploads/2009/12/useR-eveRywheRe.png" width="291" height="133" />
 
 从会议的结果来看，演讲的内容和参会者所在的单位都很好地契合了这一主题。
 
@@ -64,43 +64,43 @@ slug: 2nd-chinese-r-conference-summary
 
 北京会场：
 
-  * 陈堰平：<a href="http://cos.name/wp-content/uploads/2009/12/R-introduction.pdf" target="_blank">会议开幕及R语言基础</a>
-  * 高涛、李程：<a href="http://cos.name/wp-content/uploads/2009/12/Statistical-graphics.pdf" target="_blank">统计图形概览与其在R下的实现</a>
-  * 关菁菁：<a href="http://cos.name/wp-content/uploads/2009/12/RExcel-and-data-mining.pdf" target="_blank">RExcel应用  数据挖掘方法现代发展趋势</a>
-  * 钟其顶：<a href="http://cos.name/wp-content/uploads/2009/12/R-application-in-food-industry.pdf" target="_blank">R在食品标准研制中的应用与展望</a>
-  * 肖楠：<a href="http://cos.name/wp-content/uploads/2009/12/Security-in-R-environment.pdf" target="_blank">R环境安全特性初探与前瞻</a>
-  * 宫雨：<a href="http://cos.name/wp-content/uploads/2009/12/Integrate-R-into-C.pdf" target="_blank">Integrate R into Your C/C++ Application using Visual C++ 2008</a>（CC2.5）
-  * 刘永生：<a href="http://cos.name/wp-content/uploads/2009/12/R-in-geological-research.pdf" target="_blank">地质环境调查监测研究中的R应用</a>
-  * 奚潭：<a href="http://cos.name/wp-content/uploads/2009/12/An-IntRoduction-to-gRey-methods-using-R.pdf" target="_blank">R在灰色系统理论方面的应用</a>
-  * 刘思喆：<a href="http://cos.name/wp-content/uploads/2009/12/R-in-large-dataset-and-Sweave.pdf" target="_blank">R在大规模数据整理及自动化报告方面的应用</a>
-  * 祝迎春：<a href="http://cos.name/wp-content/uploads/2009/12/R-in-marketing-research.pdf" target="_blank">R在市场研究中的应用</a>
-  * 孙晓燕、王婷：<a href="http://cos.name/wp-content/uploads/2009/12/Notes-on-psychology-with-R.pdf" target="_blank">R心理学笔记</a>
-  * 左辰：<a href="http://cos.name/wp-content/uploads/2009/12/Nonparametric-methods-and-robust-estimation.pdf" target="_blank">非参数方法与稳健性估计初探</a>（CC2.5）
-  * 魏太云：<a href="http://cos.name/wp-content/uploads/2009/12/An-Introduction-to-Matrix-Visualization-and-corrplot-Package.pdf" target="_blank">矩阵可视化及corrplot包的介绍</a>
-  * 陈丽云：<a href="http://cos.name/wp-content/uploads/2009/12/From-Economics-to-R.pdf" target="_blank">从经济学到R语言：在经济和计量中使用R</a>（CC2.5）
-  * 孙蝶：<a href="http://cos.name/wp-content/uploads/2009/12/R-application-in-agriculture.pdf" target="_blank">R在近红外光谱分析中的应用</a>
-  * 王化儒：<a href="http://cos.name/wp-content/uploads/2009/12/R-and-Spatial-Analysis.pdf" target="_blank">R在空间分析中的应用初探</a>
-  * 丁鹏：<a href="http://cos.name/wp-content/uploads/2009/12/R-and-WinBUGS-by-Ding-Peng.pdf" target="_blank">R and WinBugs</a>
-  * 马斌：<a href="http://cos.name/wp-content/uploads/2009/12/omd-and-QSAR.pdf" target="_blank">应用omd包对QSAR分析中分子结构参数矩阵的优化</a>
-  * 黄志一：<a href="http://cos.name/wp-content/uploads/2009/12/Web-R.pdf" target="_blank">WebR–R在线分析及在大气数据分析中的应用</a>
+  * 陈堰平：<a href="https://cos.name/wp-content/uploads/2009/12/R-introduction.pdf" target="_blank">会议开幕及R语言基础</a>
+  * 高涛、李程：<a href="https://cos.name/wp-content/uploads/2009/12/Statistical-graphics.pdf" target="_blank">统计图形概览与其在R下的实现</a>
+  * 关菁菁：<a href="https://cos.name/wp-content/uploads/2009/12/RExcel-and-data-mining.pdf" target="_blank">RExcel应用  数据挖掘方法现代发展趋势</a>
+  * 钟其顶：<a href="https://cos.name/wp-content/uploads/2009/12/R-application-in-food-industry.pdf" target="_blank">R在食品标准研制中的应用与展望</a>
+  * 肖楠：<a href="https://cos.name/wp-content/uploads/2009/12/Security-in-R-environment.pdf" target="_blank">R环境安全特性初探与前瞻</a>
+  * 宫雨：<a href="https://cos.name/wp-content/uploads/2009/12/Integrate-R-into-C.pdf" target="_blank">Integrate R into Your C/C++ Application using Visual C++ 2008</a>（CC2.5）
+  * 刘永生：<a href="https://cos.name/wp-content/uploads/2009/12/R-in-geological-research.pdf" target="_blank">地质环境调查监测研究中的R应用</a>
+  * 奚潭：<a href="https://cos.name/wp-content/uploads/2009/12/An-IntRoduction-to-gRey-methods-using-R.pdf" target="_blank">R在灰色系统理论方面的应用</a>
+  * 刘思喆：<a href="https://cos.name/wp-content/uploads/2009/12/R-in-large-dataset-and-Sweave.pdf" target="_blank">R在大规模数据整理及自动化报告方面的应用</a>
+  * 祝迎春：<a href="https://cos.name/wp-content/uploads/2009/12/R-in-marketing-research.pdf" target="_blank">R在市场研究中的应用</a>
+  * 孙晓燕、王婷：<a href="https://cos.name/wp-content/uploads/2009/12/Notes-on-psychology-with-R.pdf" target="_blank">R心理学笔记</a>
+  * 左辰：<a href="https://cos.name/wp-content/uploads/2009/12/Nonparametric-methods-and-robust-estimation.pdf" target="_blank">非参数方法与稳健性估计初探</a>（CC2.5）
+  * 魏太云：<a href="https://cos.name/wp-content/uploads/2009/12/An-Introduction-to-Matrix-Visualization-and-corrplot-Package.pdf" target="_blank">矩阵可视化及corrplot包的介绍</a>
+  * 陈丽云：<a href="https://cos.name/wp-content/uploads/2009/12/From-Economics-to-R.pdf" target="_blank">从经济学到R语言：在经济和计量中使用R</a>（CC2.5）
+  * 孙蝶：<a href="https://cos.name/wp-content/uploads/2009/12/R-application-in-agriculture.pdf" target="_blank">R在近红外光谱分析中的应用</a>
+  * 王化儒：<a href="https://cos.name/wp-content/uploads/2009/12/R-and-Spatial-Analysis.pdf" target="_blank">R在空间分析中的应用初探</a>
+  * 丁鹏：<a href="https://cos.name/wp-content/uploads/2009/12/R-and-WinBUGS-by-Ding-Peng.pdf" target="_blank">R and WinBugs</a>
+  * 马斌：<a href="https://cos.name/wp-content/uploads/2009/12/omd-and-QSAR.pdf" target="_blank">应用omd包对QSAR分析中分子结构参数矩阵的优化</a>
+  * 黄志一：<a href="https://cos.name/wp-content/uploads/2009/12/Web-R.pdf" target="_blank">WebR–R在线分析及在大气数据分析中的应用</a>
 
 上海会场：
 
-  * 汤银才老师：<a href="http://cos.name/wp-content/uploads/2009/12/R-and-WinBUGS.pdf" target="_blank">R与WinBUGS</a>
-  * 林光启：<a href="http://cos.name/wp-content/uploads/2009/12/R-application-in-semiconductor-manufacturing.pdf" target="_blank">R和统计在半导体界的应用</a>
+  * 汤银才老师：<a href="https://cos.name/wp-content/uploads/2009/12/R-and-WinBUGS.pdf" target="_blank">R与WinBUGS</a>
+  * 林光启：<a href="https://cos.name/wp-content/uploads/2009/12/R-application-in-semiconductor-manufacturing.pdf" target="_blank">R和统计在半导体界的应用</a>
   * 魏太云：矩阵可视化及corrplot包的介绍（见北京会场）
   * 高涛、李程：统计图形概览与其在R下的实现（见北京会场）
-  * 王卫杰：<a href="http://cos.name/wp-content/uploads/2009/12/Decision-tree.pdf" target="_blank">基于rpart包的决策树应用</a>
-  * 于怡：<a href="http://cos.name/wp-content/uploads/2009/12/Survival-Analysis-in-R.pdf" target="_blank">Survival Analysis in R</a>
+  * 王卫杰：<a href="https://cos.name/wp-content/uploads/2009/12/Decision-tree.pdf" target="_blank">基于rpart包的决策树应用</a>
+  * 于怡：<a href="https://cos.name/wp-content/uploads/2009/12/Survival-Analysis-in-R.pdf" target="_blank">Survival Analysis in R</a>
   * 马斌：应用omd包对QSAR分析中分子结构参数矩阵的优化（见北京会场）
   * 奚潭：R在灰色系统理论方面的应用（见北京会场）
   * 陈丽云：从经济学到R语言：在经济和计量中使用R（见北京会场）
   * 肖楠：R环境安全特性初探与前瞻（见北京会场）
-  * 刘思喆：<a href="http://cos.name/wp-content/uploads/2009/12/Learning-R-in-153-minutes.pdf" target="_blank">153分钟学会R</a>
+  * 刘思喆：<a href="https://cos.name/wp-content/uploads/2009/12/Learning-R-in-153-minutes.pdf" target="_blank">153分钟学会R</a>
   * 刘思喆：R在大规模数据整理及自动化报告方面的应用（见北京会场）
-  * 李舰：<a href="http://cos.name/wp-content/uploads/2009/12/JAVA-and-optimization.pdf" target="_blank">R在应用领域的扩展——JAVA开发和最优化</a>
-  * 谢益辉（刘思喆代讲）：<a href="http://cos.name/wp-content/uploads/2009/12/Writing-R-PKG.pdf" target="_blank">怎么写R包</a>
-  * 林帧舜：<a href="http://cos.name/wp-content/uploads/2009/12/Marketing-Analytical-Framework.pdf" target="_blank">Marketing Analytical Framework</a>
+  * 李舰：<a href="https://cos.name/wp-content/uploads/2009/12/JAVA-and-optimization.pdf" target="_blank">R在应用领域的扩展——JAVA开发和最优化</a>
+  * 谢益辉（刘思喆代讲）：<a href="https://cos.name/wp-content/uploads/2009/12/Writing-R-PKG.pdf" target="_blank">怎么写R包</a>
+  * 林帧舜：<a href="https://cos.name/wp-content/uploads/2009/12/Marketing-Analytical-Framework.pdf" target="_blank">Marketing Analytical Framework</a>
 
 # 会议展望
 
@@ -115,7 +115,7 @@ slug: 2nd-chinese-r-conference-summary
 
   * 胡江堂：[R乌乎在？](http://li-and-jiang.com/blog/2009/12/05/ruser2009/)
   * 谢益辉：[2009第一场雪和第二届中国R语言会议](http://yihui.name/cn/2009/12/snow-in-ames-and-2nd-chinese-r-conference/)
-  * 焦静：[第二届R语言大会上海分会顺利闭幕](http://cos.name/bbs/read.php?tid=17614)
+  * 焦静：[第二届R语言大会上海分会顺利闭幕](https://cos.name/bbs/read.php?tid=17614)
   * 焦静：[第二届R语言大会上海分会顺利闭幕](http://www.sciencenet.cn/m/user_content.aspx?id=278351)
   * 刘思喆：[第二届中国 R 语言会议（北京）随笔](http://www.bjt.name/2009/12/r-conference-beijing/)
   * 刘思喆：[中国 R 语言会议（上海）趣闻](http://www.bjt.name/2009/12/r-conference-shanghai/)
@@ -124,7 +124,7 @@ slug: 2nd-chinese-r-conference-summary
   * 陈丽云：[与R有关的那些趣事儿（上海篇）](http://www.loyhome.cn/857.html)
   * 陈丽云：[与R有关的那些趣事儿（北京篇）](http://www.loyhome.cn/852.html)
   * 山东大学新闻网：[经济学院本科生参加R语言大会并发言](http://www.view.sdu.edu.cn/news/news/ybdt/2009-12-16/1260928570.html)
-  * 关菁菁：[2nd R 会议纪事——2009年12月6日+5日](http://cos.name/bbs/read.php?tid=17549)
+  * 关菁菁：[2nd R 会议纪事——2009年12月6日+5日](https://cos.name/bbs/read.php?tid=17549)
   * 邱怡轩：[社区和火炬](http://yixuan.cos.name/cn/2009/12/community-and-torch/)
   * 肖楠：[第二届中国R语言会议 Dec 12-13, 2009 @ ECNU](http://www.road2stat.com/cn/statistics/r_language/2009_user_china_shanghai.html)
   * 肖楠：[第二届中国R语言会议 Dec 05-06, 2009 @ RUC](http://www.road2stat.com/cn/statistics/r_language/2009_user_china_beijing.html)
@@ -136,7 +136,7 @@ slug: 2nd-chinese-r-conference-summary
 
 # 附录：用R生成会议胸牌
 
-本次会议所用的胸牌完全是用R代码生成的，其中用到了rimage这个包（现在CRAN上不再提供rimage包的Windows版本，如果想要测试代码的话可以到[这里](http://cos.name/wp-content/uploads/2009/12/rimage.zip)下载一个较早版本的rimage包）：
+本次会议所用的胸牌完全是用R代码生成的，其中用到了rimage这个包（现在CRAN上不再提供rimage包的Windows版本，如果想要测试代码的话可以到[这里](https://cos.name/wp-content/uploads/2009/12/rimage.zip)下载一个较早版本的rimage包）：
 
 <pre class="brush: r">#字符画
 library(rimage)
@@ -182,7 +182,7 @@ draw.card = function(contact) {
             text(0.5 * lim[1], -1 * lim[2], contact[i, 2], cex = 1.5)
             text(-1.6 * lim[1], -1.3 * lim[2], paste("主办：中国人民大学应用统计科学研究中心 (www.applstats.org)",
                 "　　　中国人民大学统计学院 (stat.ruc.edu.cn)",
-                "协办：统计之都网站 (http://cos.name)", sep = "\n"),
+                "协办：统计之都网站 (https://cos.name)", sep = "\n"),
                 cex = 1, adj = c(0, 1))
             text(1.9 * lim[1], -1.8 * lim[2], paste("ID:", contact[i,
                 3]))

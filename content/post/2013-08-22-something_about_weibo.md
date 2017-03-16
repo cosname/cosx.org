@@ -122,7 +122,7 @@ weibo_doc2=unlist(weibo_doc1_sample,recursive=F)</pre>
 
 俗话说的好，物以类聚，人以群分。如果你是个数据分析发烧友，那么你可能经常将“统计”、“机器学习”、“R语言”这些词汇挂在嘴边儿；而同时你又有可能是一名体育爱好者、车迷甚至于伪文艺青年。
 
-那么，怎样探寻汉语词汇之间关联关系以及表征每个人的兴趣爱好特征呢？我不禁想起了rickjin老师的[LDA数学八卦系列](http://cos.name/2013/03/lda-math-lda-text-modeling/)，不妨用Blei大神的topicmodel来小试牛刀吧~
+那么，怎样探寻汉语词汇之间关联关系以及表征每个人的兴趣爱好特征呢？我不禁想起了rickjin老师的[LDA数学八卦系列](https://cos.name/2013/03/lda-math-lda-text-modeling/)，不妨用Blei大神的topicmodel来小试牛刀吧~
 
 为了进一步去除噪音，首先去除某些[tf-idf](http://en.wikipedia.org/wiki/Tf%E2%80%93idf)较低的词汇（这里去除的是quantile中小于0.01的词汇），并保存文档-词频矩阵（Doc-word Matrix）：
 

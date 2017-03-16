@@ -16,7 +16,7 @@ slug: data-sciencs-series-interview-of-scott-iverson
 
 <span style="color: #888888;"> 采访人：林荟，女，杜邦先锋总部市场部统计师，毕业于 Iowa State University 统计系，生年不详卒年尚无法预测。</span>
 
-<span style="color: #888888;">译者：<a href="http://www.fyears.org"><span style="color: #888888;">黄俊文</span></a>（主要），<a href="http://cos.name/author/lanfeng/"><span style="color: #888888;">潘岚锋</span></a>（勘误），<a href="http://www.gaotao.name/cn/"><span style="color: #888888;">高涛</span></a>（勘误）。</span>
+<span style="color: #888888;">译者：<a href="http://www.fyears.org"><span style="color: #888888;">黄俊文</span></a>（主要），<a href="https://cos.name/author/lanfeng/"><span style="color: #888888;">潘岚锋</span></a>（勘误），<a href="http://www.gaotao.name/cn/"><span style="color: #888888;">高涛</span></a>（勘误）。</span>
 
 <span style="color: #888888;">简介：Scott Iverson，Sr. Marketing manager, Marketing information, DuPont Pioneer (HQ), 在先锋从事数据分析工作 27 年，现任杜邦先锋全球总部市场信息高级经理。</span>
 

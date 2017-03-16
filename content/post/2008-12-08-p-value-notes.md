@@ -17,17 +17,17 @@ tags:
 slug: p-value-notes
 ---
 
-<a href="http://cos.name/2008/12/p-value/" target="_blank">郑冰刚提到P值</a>，说P值的定义（着重号是笔者加的，英文是从WikiPedia摘来的）：
+<a href="https://cos.name/2008/12/p-value/" target="_blank">郑冰刚提到P值</a>，说P值的定义（着重号是笔者加的，英文是从WikiPedia摘来的）：
 
 > P值就是当原假设为真时，**比**所得到的样本观察结果**更极端**的结果出现的概率。
 > 
 > <a href="http://en.wikipedia.org/wiki/P-value" target="_blank">The P-value is the probability of obtaining a result at least as extreme as the one that was actually observed, given that the null hypothesis is true.</a>
 
-以下延续<a href="http://cos.name/2008/12/decision-risk/" target="_blank">白话系列</a>，解释一下，“什么是P值，什么是极端”，算是郑文的一个长长的注脚。
+以下延续<a href="https://cos.name/2008/12/decision-risk/" target="_blank">白话系列</a>，解释一下，“什么是P值，什么是极端”，算是郑文的一个长长的注脚。
 
 <!--more-->
 
-回到<a href="http://cos.name/2008/12/decision-and-risk/" target="_blank">上次的硬币试验</a>，那是一次二项试验，每次试验投100次，记下出现正面的次数,比如，如果
+回到<a href="https://cos.name/2008/12/decision-and-risk/" target="_blank">上次的硬币试验</a>，那是一次二项试验，每次试验投100次，记下出现正面的次数,比如，如果
 
 > 每次出现的正面数都是50，你就有把握认为这是一枚均匀的硬币；
 > 

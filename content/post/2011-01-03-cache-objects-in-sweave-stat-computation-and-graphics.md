@@ -28,7 +28,7 @@ tags:
 slug: cache-objects-in-sweave-stat-computation-and-graphics
 ---
 
-学无止境。我曾以为我明白了如何在Sweave中使用缓存加快计算和图形，但后来发现我并没有真的理解，直到读了另外一些手册才明白，因此本文作为前文“<a href="http://cos.name/2010/11/reproducible-research-in-statistics/" target="_blank">Sweave：打造一个可重复的统计研究流程</a>”之续集，向大家介绍一下如何在Sweave的计算和图形中使用缓存，以节省不必要的重复计算和作图，让那些涉及到密集型计算的用户不再对Sweave感到难堪。
+学无止境。我曾以为我明白了如何在Sweave中使用缓存加快计算和图形，但后来发现我并没有真的理解，直到读了另外一些手册才明白，因此本文作为前文“<a href="https://cos.name/2010/11/reproducible-research-in-statistics/" target="_blank">Sweave：打造一个可重复的统计研究流程</a>”之续集，向大家介绍一下如何在Sweave的计算和图形中使用缓存，以节省不必要的重复计算和作图，让那些涉及到密集型计算的用户不再对Sweave感到难堪。
 
 如果你还没读前文，建议先从那里开始读，了解Sweave与“可重复的统计研究”的意义。简言之，Sweave是一种从代码（R代码和LaTeX）一步生成报告的工具，我们可以把整个统计分析流程融入这个工具，让我们的报告具有可重复性。然而，就普通的Sweave而言，这样做的一个明显问题就是，所有计算和作图都被融入一个文档之后，每次运行这个文档都要重复所有的计算和作图，这在很多情况下纯粹是浪费时间；比如，我只想对新添加的部分内容运行计算，而文档中的旧内容希望保持不变。这都是很合理的需求，我们需要的实际上就是一种缓存机制，将不想重复计算的对象缓存起来，需要它的时候再从缓存库中直接调出来用。
 
@@ -67,11 +67,11 @@ if (!exists('x')) {
         详细过程和结果参见下面这份PDF文档（点击下载）：
         
         <p style="text-align: center;">
-          <a href="http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf">A Simple Demo on Caching R Objects and Graphics with pgfSweave (PDF)</a>
+          <a href="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf">A Simple Demo on Caching R Objects and Graphics with pgfSweave (PDF)</a>
         </p>
         
         <p style="text-align: center;">
-          <figure id="attachment_2810" style="width: 480px" class="wp-caption aligncenter"><a href="http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf"><img class="size-full wp-image-2810 " title="二维正态分布随机数及其等高线图" src="http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png" alt="二维正态分布随机数及其等高线图" width="480" height="480" srcset="http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png 480w, http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-150x150.png 150w, http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-300x300.png 300w, http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-218x218.png 218w, http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-73x73.png 73w, http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-40x40.png 40w" sizes="(max-width: 480px) 100vw, 480px" /></a><figcaption class="wp-caption-text">二维正态分布随机数及其等高线图</figcaption></figure> 
+          <figure id="attachment_2810" style="width: 480px" class="wp-caption aligncenter"><a href="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf"><img class="size-full wp-image-2810 " title="二维正态分布随机数及其等高线图" src="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png" alt="二维正态分布随机数及其等高线图" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png 480w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-150x150.png 150w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-300x300.png 300w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-218x218.png 218w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-73x73.png 73w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-40x40.png 40w" sizes="(max-width: 480px) 100vw, 480px" /></a><figcaption class="wp-caption-text">二维正态分布随机数及其等高线图</figcaption></figure> 
           
           <p>
             我们生成了50万行随机数，并画了X与Y的散点图。由于我们设定了相关系数为0.7，所以图中自然而然显现出正相关；而等高线也体现出多维正态分布的“椭球形”特征。均值在(0, 1)附近，都和理论分布吻合。所以这个Gibbs抽样还不太糟糕。
@@ -82,11 +82,11 @@ if (!exists('x')) {
           </p>
           
           <p style="text-align: center;">
-            <a href="http://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.zip">A Simple Demo on Caching R Objects and Graphics with pgfSweave (LyX)</a>
+            <a href="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.zip">A Simple Demo on Caching R Objects and Graphics with pgfSweave (LyX)</a>
           </p>
           
           <p>
-            如果你已经按照我<a href="http://cos.name/2010/11/reproducible-research-in-statistics/" target="_blank">前面的文章</a>配置好你的工具（<strong>即使当时配置过，现在也需要重新配置</strong>，因为我最近作了重大修改），这个文档应该可以让你重新生成我的结果。文档中有两处关键选项：
+            如果你已经按照我<a href="https://cos.name/2010/11/reproducible-research-in-statistics/" target="_blank">前面的文章</a>配置好你的工具（<strong>即使当时配置过，现在也需要重新配置</strong>，因为我最近作了重大修改），这个文档应该可以让你重新生成我的结果。文档中有两处关键选项：
           </p>
           
           <ul>

@@ -45,7 +45,7 @@ menu: main
 
 ### 四、会议信息发布渠道
 
-会议信息将在<a href="http://cos.name" target="_blank">统计之都主站</a>、<a href="http://weibo.com/cosname" target="_blank">微博</a>、微信（CapStat）发布，也会在R语言会议官方网站（<a href="http://china-r.org/" target="_blank">http://china-r.org/</a>）公布
+会议信息将在<a href="https://cos.name" target="_blank">统计之都主站</a>、<a href="http://weibo.com/cosname" target="_blank">微博</a>、微信（CapStat）发布，也会在R语言会议官方网站（<a href="http://china-r.org/" target="_blank">http://china-r.org/</a>）公布
 
 # 附：历届R语言会议介绍
 
@@ -71,7 +71,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第七届中国R语言会议（杭州会场）通知](http://cos.name/2014/11/7th-r-conference-hangzhou/ "第七届中国R语言会议（杭州会场）通知")
+  * [第七届中国R语言会议（杭州会场）通知](https://cos.name/2014/11/7th-r-conference-hangzhou/ "第七届中国R语言会议（杭州会场）通知")
 
 主办：杭州师范大学
   
@@ -87,7 +87,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第七届中国R语言会议（广州会场）纪要（包括会议资料下载）](http://cos.name/2014/11/7th-china-r-guangzhou-summary/ "第七届中国R语言会议（广州）纪要【含演讲资料】")
+  * [第七届中国R语言会议（广州会场）纪要（包括会议资料下载）](https://cos.name/2014/11/7th-china-r-guangzhou-summary/ "第七届中国R语言会议（广州）纪要【含演讲资料】")
 
 主办：中山大学数学与计算科学学院、华南统计科学研究中心、统计之都
   
@@ -101,7 +101,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第七届中国R语言会议（北京会场）纪要（包括会议资料下载）](http://cos.name/2014/06/7th-china-r-beijing-summary/ "第七届中国R语言会议（北京）纪要【含演讲资料】")
+  * [第七届中国R语言会议（北京会场）纪要（包括会议资料下载）](https://cos.name/2014/06/7th-china-r-beijing-summary/ "第七届中国R语言会议（北京）纪要【含演讲资料】")
 
 赞助：<a title="北京数博思达信息科技有限公司" href="http://supstat.com/cn" target="_blank">数博思达</a>、<a href="https://www.rstudio.com" target="_blank">RStudio</a>、<a href="http://www.revolutionanalytics.com/" target="_blank">Revolution</a>、<a class="external" href="http://www.vsnc.com.cn/" target="_blank">VSNC</a>、<a title="1degreenorth" href="http://www.1degreenorth.com/" target="_blank">1degreenorth</a>、<a title="微量网" href="http://www.wquant.com/" target="_blank">微量网</a>、<a title="光大证券" href="http://www.ebscn.com/" target="_blank">光大证券</a>
 
@@ -143,7 +143,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第五届中国R语言会议（上海会场）纪要（包括会议资料下载）](http://cos.name/2012/11/5th-china-r-shanghai-summary/ "第五届中国R语言会议（上海会场）纪要")
+  * [第五届中国R语言会议（上海会场）纪要（包括会议资料下载）](https://cos.name/2012/11/5th-china-r-shanghai-summary/ "第五届中国R语言会议（上海会场）纪要")
 
 主办：上海财经大学统计与管理学院、统计之都
 
@@ -157,7 +157,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第五届中国R语言会议（北京会场）纪要（包括会议资料下载）](http://cos.name/2012/05/5th-china-r-beijing-summary/ "第五届中国R语言会议（北京会场）纪要")
+  * [第五届中国R语言会议（北京会场）纪要（包括会议资料下载）](https://cos.name/2012/05/5th-china-r-beijing-summary/ "第五届中国R语言会议（北京会场）纪要")
 
 主办：中国人民大学应用统计科学研究中心、中国人民大学统计学院、统计之都
 
@@ -171,7 +171,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第四届中国R语言会议（上海会场）纪要（包括会议资料下载）](http://cos.name/2011/11/4th-china-r-shanghai-summary/ "第四届中国R语言会议（上海会场）纪要")
+  * [第四届中国R语言会议（上海会场）纪要（包括会议资料下载）](https://cos.name/2011/11/4th-china-r-shanghai-summary/ "第四届中国R语言会议（上海会场）纪要")
 
 主办：华东师范大学金融与统计学院、统计之都
 
@@ -185,7 +185,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第四届中国R语言会议（北京会场）纪要（包括会议资料下载）](http://cos.name/2011/05/4th-china-r-beijing-summary/ "第四届中国R语言会议（北京会场）纪要")
+  * [第四届中国R语言会议（北京会场）纪要（包括会议资料下载）](https://cos.name/2011/05/4th-china-r-beijing-summary/ "第四届中国R语言会议（北京会场）纪要")
 
 主办：中国人民大学应用统计科学研究中心、中国人民大学统计学院、统计之都
 
@@ -199,7 +199,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第三届中国R语言会议（上海会场）纪要（包括会议资料下载）](http://cos.name/2010/11/3rd-china-r-shanghai-summary/ "第三届中国R语言会议（上海会场）纪要")
+  * [第三届中国R语言会议（上海会场）纪要（包括会议资料下载）](https://cos.name/2010/11/3rd-china-r-shanghai-summary/ "第三届中国R语言会议（上海会场）纪要")
 
 主办：上海财经大学统计与管理学院、统计之都
 
@@ -213,7 +213,7 @@ menu: main
 
 会议通知及纪要：
 
-  * [第三届中国R语言会议（北京会场）纪要（包括会议资料下载）](http://cos.name/2010/06/3rd-china-r-beijing-summary/ "第三届中国R语言会议（北京会场）纪要")
+  * [第三届中国R语言会议（北京会场）纪要（包括会议资料下载）](https://cos.name/2010/06/3rd-china-r-beijing-summary/ "第三届中国R语言会议（北京会场）纪要")
 
 主办：中国人民大学应用统计科学研究中心、中国人民大学统计学院、统计之都
 
@@ -225,7 +225,7 @@ menu: main
 
 会议纪要：
 
-  * [第二届中国R语言会议纪要（包括会议资料下载）](http://cos.name/2009/12/2nd-chinese-r-conference-summary/ "第二届中国R语言会议纪要")
+  * [第二届中国R语言会议纪要（包括会议资料下载）](https://cos.name/2009/12/2nd-chinese-r-conference-summary/ "第二届中国R语言会议纪要")
 
 主办：华东师范大学资源与环境科学学院、华东师范大学金融与统计学院
   
@@ -239,7 +239,7 @@ menu: main
 
 会议纪要：
 
-  * [第二届中国R语言会议纪要（包括会议资料下载）](http://cos.name/2009/12/2nd-chinese-r-conference-summary/ "第二届中国R语言会议纪要")
+  * [第二届中国R语言会议纪要（包括会议资料下载）](https://cos.name/2009/12/2nd-chinese-r-conference-summary/ "第二届中国R语言会议纪要")
 
 主办：中国人民大学应用统计科学研究中心、中国人民大学统计学院
   

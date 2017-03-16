@@ -213,4 +213,4 @@ data&lt;-ddply(train,.(user,item,pref),summarize,idx=index(item))</pre>
   
 
 
-更多沙龙信息请查看 <http://cos.name/salon>
+更多沙龙信息请查看 <https://cos.name/salon>

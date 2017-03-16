@@ -37,7 +37,7 @@ slug: statistics-courier-2
 
 **统计分布**
 
-还记得flickering 的两篇《<a href="http://cos.name/2014/07/gamma-function-1/" target="_blank">神奇的伽马函数</a>》么，那我们来看看最佳拟合伽马分布参数在埃博拉病毒检疫其间的<a href="http://currents.plos.org/outbreaks/article/on-the-quarantine-period-for-ebola-virus/" target="_blank">应用</a>，最初的思想是来自帝国理工的<a href="http://www.imperial.ac.uk/people/c.donnelly" target="_blank">Christl Donnelly</a>教授。
+还记得flickering 的两篇《<a href="https://cos.name/2014/07/gamma-function-1/" target="_blank">神奇的伽马函数</a>》么，那我们来看看最佳拟合伽马分布参数在埃博拉病毒检疫其间的<a href="http://currents.plos.org/outbreaks/article/on-the-quarantine-period-for-ebola-virus/" target="_blank">应用</a>，最初的思想是来自帝国理工的<a href="http://www.imperial.ac.uk/people/c.donnelly" target="_blank">Christl Donnelly</a>教授。
 
 **大数据应用**
 

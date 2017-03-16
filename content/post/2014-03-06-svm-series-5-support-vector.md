@@ -48,7 +48,7 @@ s.t., &0\leq \alpha_i\leq C, i=1,\ldots,n \\
 
 其中那个从 3 到 n 的作和由于都是常量，我们统一记作 $K$ ，然后由于 $y\in\{-1,+1\}$ ，所以 $y\_2$ 和 $1/y\_2$ 是完全一样的，所以可以拿到分子上来。将这个式子带入原来的目标函数中，可以消去 $\alpha\_2$ ，从而变成一个一元二次函数，具体展开的形式我就不写了，总之现在变成了一个非常简单的问题：带区间约束的一元二次函数极值问题——这个也是初中就学过求解方法的。唯一需要注意一点的就是这里的约束条件，一个就是 $\alpha\_1$ 本身需要满足 $0\leq\alpha\_1\leq C$ ，然后由于 $\alpha\_2$ 也要满足同样的约束，即：
   
-[<img class="size-full wp-image-9652 alignright" alt="NO" src="http://cos.name/wp-content/uploads/2014/03/NO.png" width="204" height="200" />](http://cos.name/wp-content/uploads/2014/03/NO.png)\[
+[<img class="size-full wp-image-9652 alignright" alt="NO" src="https://cos.name/wp-content/uploads/2014/03/NO.png" width="204" height="200" />](https://cos.name/wp-content/uploads/2014/03/NO.png)\[
   
 0\leq y\_2 (K-\alpha\_1y_1) \leq C
   

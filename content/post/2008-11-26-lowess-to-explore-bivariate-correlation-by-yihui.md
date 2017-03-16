@@ -19,18 +19,18 @@ tags:
 slug: lowess-to-explore-bivariate-correlation-by-yihui
 ---
 
-<figure id="attachment_71" style="width: 150px" class="wp-caption alignleft">[<img class="size-thumbnail wp-image-71" title="局部加权回归散点平滑法" src="http://cos.name/wp-content/uploads/2008/11/counts-150x150.png" alt="局部加权回归散点平滑法" width="150" height="150" srcset="http://cos.name/wp-content/uploads/2008/11/counts-150x150.png 150w, http://cos.name/wp-content/uploads/2008/11/counts-300x300.png 300w, http://cos.name/wp-content/uploads/2008/11/counts.png 480w" sizes="(max-width: 150px) 100vw, 150px" />](http://cos.name/wp-content/uploads/2008/11/counts.png)<figcaption class="wp-caption-text">局部加权回归散点平滑法</figcaption></figure> 
+<figure id="attachment_71" style="width: 150px" class="wp-caption alignleft">[<img class="size-thumbnail wp-image-71" title="局部加权回归散点平滑法" src="https://cos.name/wp-content/uploads/2008/11/counts-150x150.png" alt="局部加权回归散点平滑法" width="150" height="150" srcset="https://cos.name/wp-content/uploads/2008/11/counts-150x150.png 150w, https://cos.name/wp-content/uploads/2008/11/counts-300x300.png 300w, https://cos.name/wp-content/uploads/2008/11/counts.png 480w" sizes="(max-width: 150px) 100vw, 150px" />](https://cos.name/wp-content/uploads/2008/11/counts.png)<figcaption class="wp-caption-text">局部加权回归散点平滑法</figcaption></figure> 
 
 二维变量之间的关系研究是很多统计方法的基础，例如回归分析通常会从一元回归讲起，然后再扩展到多元情况。局部加权回归散点平滑法（locally weighted scatterplot smoothing，LOWESS或LOESS）是查看二维变量之间关系的一种有力工具。
 
 LOWESS主要思想是取一定比例的局部数据，在这部分子集中拟合多项式回归曲线，这样我们便可以观察到数据在局部展现出来的规律和趋势；而通常的回归分析往往是根据全体数据建模，这样可以描述整体趋势，但现实生活中规律不总是（或者很少是）教科书上告诉我们的一条直线。我们将局部范围从左往右依次推进，最终一条连续的曲线就被计算出来了。显然，曲线的光滑程度与我们选取数据比例有关：比例越少，拟合越不光滑（因为过于看重局部性质），反之越光滑。<!--more-->
 
-本文的数据文件：[物种数目与海拔高度](http://cos.name/wp-content/uploads/2008/11/counts.txt "物种数目与海拔高度数据")（感谢中科院植物所赖江山博士提供数据并授权使用）
+本文的数据文件：[物种数目与海拔高度](https://cos.name/wp-content/uploads/2008/11/counts.txt "物种数目与海拔高度数据")（感谢中科院植物所赖江山博士提供数据并授权使用）
 
 R程序代码：
 
 <pre class="brush: r"># 从本站counts.txt文件直接将数据读入R
-x = read.csv("http://cos.name/wp-content/uploads/2008/11/counts.txt")
+x = read.csv("https://cos.name/wp-content/uploads/2008/11/counts.txt")
 par(las = 1, mar = c(4, 4, 0.1, 0.1))
 plot(x, pch = 20, col = rgb(0, 0, 0, 0.5))
 # 取不同的f参数值
@@ -42,7 +42,7 @@ for (i in seq(0.01, 1, length = 100)) {
 
 以上_Sys.sleep()_语句只是为了让读者看清楚添加LOWESS曲线的过程，实际画图过程中可以去掉。以上代码生成的图形如下：<figure id="attachment_71" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-71" title="局部加权回归散点平滑法" src="http://cos.name/wp-content/uploads/2008/11/counts.png" alt="局部加权回归散点平滑法" width="480" height="480" srcset="http://cos.name/wp-content/uploads/2008/11/counts.png 480w, http://cos.name/wp-content/uploads/2008/11/counts-150x150.png 150w, http://cos.name/wp-content/uploads/2008/11/counts-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](http://cos.name/wp-content/uploads/2008/11/counts.png)<figcaption class="wp-caption-text">局部加权回归散点平滑法</figcaption></figure> 
+[<img class="size-full wp-image-71" title="局部加权回归散点平滑法" src="https://cos.name/wp-content/uploads/2008/11/counts.png" alt="局部加权回归散点平滑法" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2008/11/counts.png 480w, https://cos.name/wp-content/uploads/2008/11/counts-150x150.png 150w, https://cos.name/wp-content/uploads/2008/11/counts-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2008/11/counts.png)<figcaption class="wp-caption-text">局部加权回归散点平滑法</figcaption></figure> 
 
 上图中，曲线颜色越浅表示所取数据比例越大。不难看出白色的曲线几乎已呈直线状，而黑色的线则波动较大。总体看来，图中大致有四处海拔上的物种数目偏离回归直线较严重：450米、550米、650米和700米附近。若研究者的问题是，多高海拔处的物种数最多？那么答案应该是在650米附近。如果仅仅从回归直线来看，似乎是海拔越高，则物种数目越多。如此推断下去，恐怕月球或火星上该物种最多。以下是回归直线的图示：
 
@@ -51,7 +51,7 @@ for (i in seq(0.01, 1, length = 100)) {
 plot(x, pch = 20, col = rgb(0, 0, 0, 0.5))
 abline(lm(counts ~ altitude, x), lwd = 2, col = "red")</pre><figure id="attachment_74" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-74" title="物种数目与海拔高度的关系：回归直线" src="http://cos.name/wp-content/uploads/2008/11/counts-regression.png" alt="物种数目与海拔高度的关系：回归直线" width="480" height="480" srcset="http://cos.name/wp-content/uploads/2008/11/counts-regression.png 480w, http://cos.name/wp-content/uploads/2008/11/counts-regression-150x150.png 150w, http://cos.name/wp-content/uploads/2008/11/counts-regression-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](http://cos.name/wp-content/uploads/2008/11/counts-regression.png)<figcaption class="wp-caption-text">物种数目与海拔高度的关系：回归直线</figcaption></figure> 
+[<img class="size-full wp-image-74" title="物种数目与海拔高度的关系：回归直线" src="https://cos.name/wp-content/uploads/2008/11/counts-regression.png" alt="物种数目与海拔高度的关系：回归直线" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2008/11/counts-regression.png 480w, https://cos.name/wp-content/uploads/2008/11/counts-regression-150x150.png 150w, https://cos.name/wp-content/uploads/2008/11/counts-regression-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2008/11/counts-regression.png)<figcaption class="wp-caption-text">物种数目与海拔高度的关系：回归直线</figcaption></figure> 
 
 为了确保我们用LOWESS方法得到的趋势是稳定的，我们可以进一步用Bootstrap的方法验证。因为Bootstrap方法是对原样本进行重抽样，根据抽得的不同样本可以得到不同的LOWESS曲线，最后我们把所有的曲线添加到图中，看所取样本不同是否会使得LOWESS有显著变化；以下是R代码：
 
@@ -69,7 +69,7 @@ dev.off()</pre>
 
 生成图形如下：<figure id="attachment_75" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-75" title="物种数目与海拔高度的关系：Bootstrap结合LOWESS查看" src="http://cos.name/wp-content/uploads/2008/11/counts-bootstrap.png" alt="物种数目与海拔高度的关系：Bootstrap结合LOWESS查看" width="480" height="480" srcset="http://cos.name/wp-content/uploads/2008/11/counts-bootstrap.png 480w, http://cos.name/wp-content/uploads/2008/11/counts-bootstrap-150x150.png 150w, http://cos.name/wp-content/uploads/2008/11/counts-bootstrap-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](http://cos.name/wp-content/uploads/2008/11/counts-bootstrap.png)<figcaption class="wp-caption-text">物种数目与海拔高度的关系：Bootstrap结合LOWESS查看</figcaption></figure> 
+[<img class="size-full wp-image-75" title="物种数目与海拔高度的关系：Bootstrap结合LOWESS查看" src="https://cos.name/wp-content/uploads/2008/11/counts-bootstrap.png" alt="物种数目与海拔高度的关系：Bootstrap结合LOWESS查看" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2008/11/counts-bootstrap.png 480w, https://cos.name/wp-content/uploads/2008/11/counts-bootstrap-150x150.png 150w, https://cos.name/wp-content/uploads/2008/11/counts-bootstrap-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2008/11/counts-bootstrap.png)<figcaption class="wp-caption-text">物种数目与海拔高度的关系：Bootstrap结合LOWESS查看</figcaption></figure> 
 
 可以看出，经过400次重抽样并计算LOWESS曲线，刚才在第一幅图中观察到的趋势大致都还存在（因为默认取数据比例为2/3，因此拟合曲线都比较光滑），只是700米海拔附近物种数目减小的趋势并不明显了，这是因为这个海拔附近的观测样本量较少，在重抽样的时候不容易被抽到，因此在图中代表性不足，最后得到的拟合曲线分布稀疏。
 

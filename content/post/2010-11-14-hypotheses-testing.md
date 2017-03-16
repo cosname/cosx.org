@@ -26,7 +26,7 @@ tags:
 slug: hypotheses-testing
 ---
 
-准备[再](http://cos.name/2008/12/decision-and-risk/)尝试一下，用大白话叙述一遍统计推断中最基础的东西（假设检验、P值、……），算是把这段时间的阅读和思考做个梳理（东西不难，思考侧重在如何表述和展示）。这次打算用一种“迂回的”表达方式，比如，本文从我们的日常逻辑推理开始说起。
+准备[再](https://cos.name/2008/12/decision-and-risk/)尝试一下，用大白话叙述一遍统计推断中最基础的东西（假设检验、P值、……），算是把这段时间的阅读和思考做个梳理（东西不难，思考侧重在如何表述和展示）。这次打算用一种“迂回的”表达方式，比如，本文从我们的日常逻辑推理开始说起。
 
 # 0.普通逻辑
 
@@ -74,7 +74,7 @@ slug: hypotheses-testing
 > 
 > then _probably_ **NOT** <span style="color: #ff0000;">P         <span style="color: #000000;">（结论）</span></span>
 
-回到以前“万能”的[硬币实验](http://cos.name/2008/12/decision-and-risk/)，我们做实验来考察一枚硬币是不是均匀的。改写成现在我们熟悉的形式：
+回到以前“万能”的[硬币实验](https://cos.name/2008/12/decision-and-risk/)，我们做实验来考察一枚硬币是不是均匀的。改写成现在我们熟悉的形式：
 
 > <span style="color: #ff0000;">P</span>：硬币是均匀的。
 > 
@@ -92,11 +92,11 @@ slug: hypotheses-testing
 
 总结一下。**在搜集数据之前**，我们把想证明的结论写成备择假设，把想拒绝的结论写成原假设。之所以写成这个形式，因为从上面不厌其烦的讨论中得知，这是方便逻辑/统计推断的形式：当我们难以拒绝原假设时，只能得到结论，原假设也许是真的，现在还不能拒绝它；而当我们能够拒绝原假设时，结论是：它就很有把握是不真的。注意，在看到数据之前，我们不知道自己想证明的结论是否能够被证据所支持。
 
-在确定假设检验的形式的同时，我们对之前一直随意说的“把握”、“可能”也做一个限定，即指定一个显著性水平α(significance level)，也叫犯第一类错误的概率(type I error，在上面的[硬币实验](http://cos.name/2008/12/decision-and-risk/)中，就是否定一个均匀硬币的错误，也叫“弃真”错误)。
+在确定假设检验的形式的同时，我们对之前一直随意说的“把握”、“可能”也做一个限定，即指定一个显著性水平α(significance level)，也叫犯第一类错误的概率(type I error，在上面的[硬币实验](https://cos.name/2008/12/decision-and-risk/)中，就是否定一个均匀硬币的错误，也叫“弃真”错误)。
 
 根据某些保守或稳健的原则（比如，我们认为，把一个无辜的人判决为有罪，比放掉一个有罪的人，后果更为严重），我们要尽量把犯“弃真”错误的概率控制在一个很小的水平里。通常α=0.05，这时候就是说，如果拒绝了原假设，你就有95%的把握说原假设是不真的。这里，95%(=1-α)就是置信水平(confidence level)。
 
-又，放掉一个有罪的人，即把一个有罪的人判为无罪，这犯的是第二类错误β(type II error，在硬币实验中，就是把一个有偏的硬币当成均匀硬币的错误，也叫“取伪”错误)。关于第一类和第二类错误之间的权衡取舍(trade off)，详见《[决策与风险](http://cos.name/2008/12/decision-and-risk/)》。在我们的假设检验里，我们认为犯一类错误的后果比犯第二类错误的后果更为严重。
+又，放掉一个有罪的人，即把一个有罪的人判为无罪，这犯的是第二类错误β(type II error，在硬币实验中，就是把一个有偏的硬币当成均匀硬币的错误，也叫“取伪”错误)。关于第一类和第二类错误之间的权衡取舍(trade off)，详见《[决策与风险](https://cos.name/2008/12/decision-and-risk/)》。在我们的假设检验里，我们认为犯一类错误的后果比犯第二类错误的后果更为严重。
 
 需要注意的是，在这里，我强调的是**先提出需要检验的假设，然后再搜集收据**。这是统计推断的原则之一。如果看到了数据之后再提出假设，你几乎可以得到所有你想要的结果，这是不好的机会主义的倾向。强调这些，是因为在学校里，我们大多是看了别人搜集好的数据之后再做统计练习。
 
@@ -108,7 +108,7 @@ slug: hypotheses-testing
 
 但这个<span style="color: #ff0000;">Q</span>只是从一次实验中得出的。我们可以重复做这个实验，比如100次，每次都投掷100次，记录下的正面数X，它构成一个二项分布，X~B(n,p)，其中，n=100，p=0.5。根据某个中心极限定理，正态分布是二项分布的极限分布，上面的二项分布可以由均值为np=50，方差为np(1-p)=25的正态分布来近似。我们在这个近似的正态分布的两端来考察所谓“更极端”的事件，那就是正面数大于90或者小于10。
 
-[重复一遍](http://cos.name/2008/12/p-value-notes/)，“P值就是当原假设为真时，**比**所得到的样本观察结果**更极端**的结果出现的概率”。如果P值很小，就表明，在原假设为真的情况下出现的那个分布里面，只有很小的部分，比出现的这个事件（比如，<span style="color: #ff0000;">Q</span>）更为极端。没多少事件比<span style="color: #ff0000;">Q</span>更极端，那就很有把握说原假设不对了。
+[重复一遍](https://cos.name/2008/12/p-value-notes/)，“P值就是当原假设为真时，**比**所得到的样本观察结果**更极端**的结果出现的概率”。如果P值很小，就表明，在原假设为真的情况下出现的那个分布里面，只有很小的部分，比出现的这个事件（比如，<span style="color: #ff0000;">Q</span>）更为极端。没多少事件比<span style="color: #ff0000;">Q</span>更极端，那就很有把握说原假设不对了。
 
 在上述近似的正态分布中，P值就等于X>90 或 X<10的概率值（记做，P{X>90 or X<10}）。根据对称性，这个概率值等于2*P{X<10}=1.2442E-15。
 
@@ -155,7 +155,7 @@ slug: hypotheses-testing
   5. 样本均值$\bar{X}=25.03$，在这个自由度为24的t分布下，有一个对应的t值，t=25.03-24.3/0.27=2.704。现在我们可以在整个分布里考察这个t值。在这个自由度为24的t分布里，我们看 t=2.704是不是一个“极端”事件<span style="color: #ff0000;">Q</span>。根据对称性，比<span style="color: #ff0000;">Q</span>更极端的是那些大于2.704或者小于-2.704的点。
 
 <p style="text-align: center;">
-  <a href="http://cos.name/wp-content/uploads/2010/11/t.png"><img style="float: none; margin-left: auto; width: 374px; margin-right: auto; border-width: 0px;" src="http://cos.name/wp-content/uploads/2010/11/t_thumb.png" border="0" alt="t" width="374" height="351" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/11/t.png"><img style="float: none; margin-left: auto; width: 374px; margin-right: auto; border-width: 0px;" src="https://cos.name/wp-content/uploads/2010/11/t_thumb.png" border="0" alt="t" width="374" height="351" /></a>
 </p>
 
 从上图可以看到，在这个t分布里，比t=2.704更“极端”的点占整个分布的0.0124。这个0.0124就是我们要求的P值。这个P值小于我们事先选定的显著性水平α=0.05，因此我们可以拒绝原假设，认为这批螃蟹的平均体温不等于空气温度。
@@ -171,7 +171,7 @@ slug: hypotheses-testing
 以上是用P值作为判定条件。一个等价的做法是用临界值来判断。我们事先给定的显著性水平α=0.05，在这个自由度为24的t分布里，就对应着一个临界t值2.064。下图的阴影部分，也称作**拒绝区域**。上面求出的跟样本均值$\bar{X}=25.03$对应的t值=2.704，处在这个拒绝区域内（2.704>2.064），于是我们一样拒绝原假设。
 
 <p style="text-align: center;">
-  <a href="http://cos.name/wp-content/uploads/2010/11/t2.png"><img style="float: none; margin-left: auto; width: 340px; margin-right: auto; border-width: 0px;" src="http://cos.name/wp-content/uploads/2010/11/t2_thumb.png" border="0" alt="t2" width="340" height="320" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/11/t2.png"><img style="float: none; margin-left: auto; width: 340px; margin-right: auto; border-width: 0px;" src="https://cos.name/wp-content/uploads/2010/11/t2_thumb.png" border="0" alt="t2" width="340" height="320" /></a>
 </p>
 
 又，上述临界值可以手算（或查表）如下：

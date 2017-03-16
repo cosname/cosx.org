@@ -15,7 +15,7 @@ R是用于统计分析、绘图的语言和操作环境，是属于GNU系统的�
 
 **[第八届R语言会议（广州会场）演讲报名](http://chinar-8th-gz.eventdove.com/event/101311/page/30436%20)**和**<a href="http://chinar2015gz.vasee.com/" target="_blank">参会者报名</a>**现**已开放，****欢迎各位踊跃报名参加，在5月于康乐园一起享受一场R语言的盛会！**
 
-[<img class="aligncenter size-full wp-image-11430" src="http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png 450w, http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+[<img class="aligncenter size-full wp-image-11430" src="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png 450w, https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
 
 **会议的相关情况如下：**
 
@@ -29,7 +29,7 @@ R是用于统计分析、绘图的语言和操作环境，是属于GNU系统的�
 
 <!--more-->
 
-[<img class="aligncenter size-full wp-image-10815" src="http://cos.name/wp-content/uploads/2015/04/地图-广州.png" alt="地图-广州" width="1440" height="1059" srcset="http://cos.name/wp-content/uploads/2015/04/地图-广州.png 1440w, http://cos.name/wp-content/uploads/2015/04/地图-广州-300x221.png 300w, http://cos.name/wp-content/uploads/2015/04/地图-广州-500x368.png 500w" sizes="(max-width: 1440px) 100vw, 1440px" />](http://cos.name/wp-content/uploads/2015/04/地图-广州.png)
+[<img class="aligncenter size-full wp-image-10815" src="https://cos.name/wp-content/uploads/2015/04/地图-广州.png" alt="地图-广州" width="1440" height="1059" srcset="https://cos.name/wp-content/uploads/2015/04/地图-广州.png 1440w, https://cos.name/wp-content/uploads/2015/04/地图-广州-300x221.png 300w, https://cos.name/wp-content/uploads/2015/04/地图-广州-500x368.png 500w" sizes="(max-width: 1440px) 100vw, 1440px" />](https://cos.name/wp-content/uploads/2015/04/地图-广州.png)
 
 **三、会议情况**
 
@@ -77,7 +77,7 @@ R是用于统计分析、绘图的语言和操作环境，是属于GNU系统的�
 
 更多会议消息请关注：
 
-统计之都：<http://cos.name/>  以及微博@统计之都，微信@统计之都
+统计之都：<https://cos.name/>  以及微博@统计之都，微信@统计之都
 
 华南统计科学研究中心：<http://scrcss.sysu.edu.cn/>
 

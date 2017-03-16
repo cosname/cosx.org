@@ -123,6 +123,6 @@ slug: use-pipeline-operators-in-r
 
 附：
 
-  * [pipeR包在论坛上的讨论](http://cos.name/cn/topic/154846)，包括安装方法，新功能建议等
+  * [pipeR包在论坛上的讨论](https://cos.name/cn/topic/154846)，包括安装方法，新功能建议等
   * 项目主页：<http://renkun.me/pipeR/>
   * 作者其他项目：[learnR](https://github.com/renkun-ken/learnR)

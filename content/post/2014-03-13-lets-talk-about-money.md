@@ -15,7 +15,7 @@ slug: lets-talk-about-money
 &nbsp;
 
   * **谈钱不伤感情：**Revolutions 做了一项调查，发现掌握R语言的人的工资水平在11万美元左右（年薪），比Mapreduce, hadoop 都要高。。哎，别跟我谈钱，多俗啊！忍不住的快来看闪闪发光的标题《[R skills attract the highest salaries](http://blog.revolutionanalytics.com/2014/02/r-salary-surveys.html)》
-  * **生活中的选择：**三楼的正能量[励志贴](http://cos.name/cn/topic/152323#post-297024)，原来我统是这样被羡慕嫉妒恨啊。同时也要告诉自己，两者选其一叫选择，而干不了就换一不叫选择，而叫做**逃避**。
+  * **生活中的选择：**三楼的正能量[励志贴](https://cos.name/cn/topic/152323#post-297024)，原来我统是这样被羡慕嫉妒恨啊。同时也要告诉自己，两者选其一叫选择，而干不了就换一不叫选择，而叫做**逃避**。
   * **马尔科夫链：** 如果你对一些事物还不是很熟悉（例如，红酒，恋爱），但又想显得见多识广，驾轻就熟，那么让马尔科夫链告诉你应如何表达观点。有了[理论支持](http://www.onthelambda.com/2014/02/20/how-to-fake-a-sophisticated-knowledge-of-wine-with-markov-chains/) 是不是觉得底气十足？
   * **R大战Matlab：**一个小系列，比较R和Matlab各自的[优势](http://eranraviv.com/blog/r-vs-matlab-round-1/) 。第一轮Matlab胜。感兴趣的同学可以自己试一试。
   * **R语言:**[R3.0.3](https://stat.ethz.ch/pipermail/r-announce/2014/000569.html)已经发布。[先睹为快~](https://stat.ethz.ch/pipermail/r-announce/2014/000569.html)

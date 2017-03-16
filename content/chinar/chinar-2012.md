@@ -6,13 +6,13 @@ author: 潘岚锋
 
 R是一门用于统计计算和作图的语言，其官方机构每年都会举办useR!会议，但会议地点主要局限在欧美地区。自2008年以来，在谢益辉的倡导下，中国已经成功举办了四届自行组织的R语言会议，极大促进了R语言在中国的推广和发展。在前四届会议的成功经验下，为了进一步加强各领域R语言使用者之间的交流，我们于2012年5月（北京会场）和2012年11月（上海会场）举办了第五届中国R语言会议。
 
-**北京会场和上海会场均已顺利召开，详情请见<a href="http://cos.name/2012/05/5th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="http://cos.name/2012/11/5th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要</a>。**
+**北京会场和上海会场均已顺利召开，详情请见<a href="https://cos.name/2012/05/5th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="https://cos.name/2012/11/5th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要</a>。**
 
 &nbsp;
 
 ## **会议事宜（北京会场）**
 
-[<img class="aligncenter size-full wp-image-5477" title="第五届中国R语言会议（北京）手册封面" src="http://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png" alt="" width="200" height="561" />](http://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png)
+[<img class="aligncenter size-full wp-image-5477" title="第五届中国R语言会议（北京）手册封面" src="https://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png" alt="" width="200" height="561" />](https://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png)
 
 ### 一、会议时间
 
@@ -28,7 +28,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 人大校内地图（点击看大图）：
 
-<a href="http://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg" rel="nofollow"><img title="人大校内地图" src="http://cos.name/wp-content/uploads/2010/06/RUCmap1-500x342.jpg" alt="" width="500" height="342" /></a>
+<a href="https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg" rel="nofollow"><img title="人大校内地图" src="https://cos.name/wp-content/uploads/2010/06/RUCmap1-500x342.jpg" alt="" width="500" height="342" /></a>
 
 &nbsp;
 
@@ -41,7 +41,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
   * <a href="http://blog.sina.com.cn/mengshw" target="_blank">孟生旺</a>：R在精算中的应用
   * <a href="http://jliblog.com/" target="_blank">李舰</a>：基于R和pentaho的全套开源BI平台的实现
   * <a href="http://gaizoule.sinaapp.com/ http://gaizoule.sinaapp.com/ http://gaizoule.sinaapp.com/ http://gaizoule.sinaapp.com/ " target="_blank">黄金山</a>：Rcpp快速入门
-  * <a href="http://cos.name/author/bigknife/" target="_blank">郝智恒</a>：机器学习的试验设计初探
+  * <a href="https://cos.name/author/bigknife/" target="_blank">郝智恒</a>：机器学习的试验设计初探
   * <a href="http://luyinbo.github.com/" target="_blank">陆银波</a>：隐马尔科夫链模型
   * <a href="http://yixuan.cos.name/cn/" target="_blank">邱怡轩</a>：R中大规模数据的整理和分析
   * <a href="http://weibo.com/n/ymblake" target="_blank">叶明</a>：R在工业智能中的应用
@@ -118,7 +118,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 <a href="http://i1324.photobucket.com/albums/u608/lijian001/5th-R-Conference-Shanghai-map_zpsf8cf1f8c.png" rel="nofollow"><img title="上财交通地图" src="http://i1324.photobucket.com/albums/u608/lijian001/5th-R-Conference-Shanghai-map_zpsf8cf1f8c.png" alt="" width="586" height="441" /></a>
 
-## 会议手册下载：[ChinaR!2012SH\_Manual\_V6](http://cos.name/wp-content/uploads/2012/09/ChinaR2012SH_Manual_V6.pdf)
+## 会议手册下载：[ChinaR!2012SH\_Manual\_V6](https://cos.name/wp-content/uploads/2012/09/ChinaR2012SH_Manual_V6.pdf)
 
 ### 三、会议演讲
 

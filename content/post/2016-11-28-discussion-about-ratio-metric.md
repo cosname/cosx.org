@@ -30,7 +30,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2 c5">
-  <a href="http://cos.name/wp-content/uploads/2016/11/image01.jpg"><img class="aligncenter size-full wp-image-13285" src="http://cos.name/wp-content/uploads/2016/11/image01.jpg" alt="image01" width="1616" height="468" srcset="http://cos.name/wp-content/uploads/2016/11/image01.jpg 1616w, http://cos.name/wp-content/uploads/2016/11/image01-300x87.jpg 300w, http://cos.name/wp-content/uploads/2016/11/image01-768x222.jpg 768w, http://cos.name/wp-content/uploads/2016/11/image01-500x145.jpg 500w" sizes="(max-width: 1616px) 100vw, 1616px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2016/11/image01.jpg"><img class="aligncenter size-full wp-image-13285" src="https://cos.name/wp-content/uploads/2016/11/image01.jpg" alt="image01" width="1616" height="468" srcset="https://cos.name/wp-content/uploads/2016/11/image01.jpg 1616w, https://cos.name/wp-content/uploads/2016/11/image01-300x87.jpg 300w, https://cos.name/wp-content/uploads/2016/11/image01-768x222.jpg 768w, https://cos.name/wp-content/uploads/2016/11/image01-500x145.jpg 500w" sizes="(max-width: 1616px) 100vw, 1616px" /></a>
 </p>
 
 <p class="p1">
@@ -72,7 +72,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  <a href="http://cos.name/wp-content/uploads/2016/11/image02.png"><img class="wp-image-13284 alignnone" src="http://cos.name/wp-content/uploads/2016/11/image02.png" alt="image02" width="258" height="212" srcset="http://cos.name/wp-content/uploads/2016/11/image02.png 1498w, http://cos.name/wp-content/uploads/2016/11/image02-300x246.png 300w, http://cos.name/wp-content/uploads/2016/11/image02-768x630.png 768w, http://cos.name/wp-content/uploads/2016/11/image02-500x410.png 500w" sizes="(max-width: 258px) 100vw, 258px" /></a> <a href="http://cos.name/wp-content/uploads/2016/11/image03.png"><img class="wp-image-13283 alignnone" src="http://cos.name/wp-content/uploads/2016/11/image03.png" alt="image03" width="325" height="227" srcset="http://cos.name/wp-content/uploads/2016/11/image03.png 1554w, http://cos.name/wp-content/uploads/2016/11/image03-300x210.png 300w, http://cos.name/wp-content/uploads/2016/11/image03-768x537.png 768w, http://cos.name/wp-content/uploads/2016/11/image03-500x349.png 500w" sizes="(max-width: 325px) 100vw, 325px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2016/11/image02.png"><img class="wp-image-13284 alignnone" src="https://cos.name/wp-content/uploads/2016/11/image02.png" alt="image02" width="258" height="212" srcset="https://cos.name/wp-content/uploads/2016/11/image02.png 1498w, https://cos.name/wp-content/uploads/2016/11/image02-300x246.png 300w, https://cos.name/wp-content/uploads/2016/11/image02-768x630.png 768w, https://cos.name/wp-content/uploads/2016/11/image02-500x410.png 500w" sizes="(max-width: 258px) 100vw, 258px" /></a> <a href="https://cos.name/wp-content/uploads/2016/11/image03.png"><img class="wp-image-13283 alignnone" src="https://cos.name/wp-content/uploads/2016/11/image03.png" alt="image03" width="325" height="227" srcset="https://cos.name/wp-content/uploads/2016/11/image03.png 1554w, https://cos.name/wp-content/uploads/2016/11/image03-300x210.png 300w, https://cos.name/wp-content/uploads/2016/11/image03-768x537.png 768w, https://cos.name/wp-content/uploads/2016/11/image03-500x349.png 500w" sizes="(max-width: 325px) 100vw, 325px" /></a>
 </p>
 
 <p class="c2">
@@ -91,7 +91,7 @@ slug: discussion-about-ratio-metric
   <span class="c3" style="color: #6aa84f;">总结：如何定义指标。</span>
 </p>
 
-<img class="aligncenter size-full wp-image-13338" src="http://cos.name/wp-content/uploads/2016/11/image00.jpg" alt="image00" width="800" height="450" srcset="http://cos.name/wp-content/uploads/2016/11/image00.jpg 800w, http://cos.name/wp-content/uploads/2016/11/image00-300x169.jpg 300w, http://cos.name/wp-content/uploads/2016/11/image00-768x432.jpg 768w, http://cos.name/wp-content/uploads/2016/11/image00-500x281.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />
+<img class="aligncenter size-full wp-image-13338" src="https://cos.name/wp-content/uploads/2016/11/image00.jpg" alt="image00" width="800" height="450" srcset="https://cos.name/wp-content/uploads/2016/11/image00.jpg 800w, https://cos.name/wp-content/uploads/2016/11/image00-300x169.jpg 300w, https://cos.name/wp-content/uploads/2016/11/image00-768x432.jpg 768w, https://cos.name/wp-content/uploads/2016/11/image00-500x281.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />
 
 童鞋d：我基本同意c的观点，但是如果我们直接比较商品单价的话，极端值的处理会比较棘手。如果有人恰好买了100个1块钱的橡皮，那么他会极大的拉低平均价格。但是这种顾客无论在实验组和对照组都有可能买的，他的行为跟实验本身无关。所以我们做对比的时候应该想办法排除这样的极端个例带来的偏差。
 
@@ -116,7 +116,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  <a href="https://www.emaze.com/@AOZCFQQR/Chemistry-Project）"><img class="aligncenter wp-image-13282" src="http://cos.name/wp-content/uploads/2016/11/image04.jpg" alt="image04" width="481" height="361" srcset="http://cos.name/wp-content/uploads/2016/11/image04.jpg 1999w, http://cos.name/wp-content/uploads/2016/11/image04-300x225.jpg 300w, http://cos.name/wp-content/uploads/2016/11/image04-768x576.jpg 768w, http://cos.name/wp-content/uploads/2016/11/image04-500x375.jpg 500w" sizes="(max-width: 481px) 100vw, 481px" /></a>
+  <a href="https://www.emaze.com/@AOZCFQQR/Chemistry-Project）"><img class="aligncenter wp-image-13282" src="https://cos.name/wp-content/uploads/2016/11/image04.jpg" alt="image04" width="481" height="361" srcset="https://cos.name/wp-content/uploads/2016/11/image04.jpg 1999w, https://cos.name/wp-content/uploads/2016/11/image04-300x225.jpg 300w, https://cos.name/wp-content/uploads/2016/11/image04-768x576.jpg 768w, https://cos.name/wp-content/uploads/2016/11/image04-500x375.jpg 500w" sizes="(max-width: 481px) 100vw, 481px" /></a>
 </p>
 
 <p class="c2">

@@ -125,7 +125,7 @@ myfri$lat = b[&lt;span class="hljs-number">2&lt;/span>, ]</code></pre>
   
 可以看到我对微博名人的关注和对同学（粉丝较少的小点）的关注在时间上是有聚集效应的。为啥呢，这要感谢sina微博的推荐机制，它会把与你当前关注的同一“类别”的人群在你点击“关注”之后同时推送给你，于是你对这一类人的关注几乎就变成不分先后啦。
 
-> 注：本文来自COS论坛的PuddingNnn，原帖<a href="http://cos.name/cn/topic/110269" target="_blank">请见此处</a>。
+> 注：本文来自COS论坛的PuddingNnn，原帖<a href="https://cos.name/cn/topic/110269" target="_blank">请见此处</a>。
   
 > 作者：朱雪宁，中山大学数学与应用数学专业（2009级）
   

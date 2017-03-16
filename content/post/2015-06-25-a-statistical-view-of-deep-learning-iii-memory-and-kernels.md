@@ -16,7 +16,7 @@ slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
 
 作者：<a href="http://www.shakirm.com/" target="_blank">Shakir Mohamed</a>  翻译：丁维悦     审校：朱雪宁  何通  施涛   编辑：王小宁<figure id="attachment_11153" style="width: 300px" class="wp-caption alignright">
 
-[<img class="wp-image-11153 size-full" src="http://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png" alt="methodTriangle1-300x300" width="300" height="300" srcset="http://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png 300w, http://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />](http://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png)<figcaption class="wp-caption-text">连接机器学习的回归方法</figcaption></figure> 
+[<img class="wp-image-11153 size-full" src="https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png" alt="methodTriangle1-300x300" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png 300w, https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png)<figcaption class="wp-caption-text">连接机器学习的回归方法</figcaption></figure> 
 
 人们通过对以往的经验或者数据的回忆来推断未来的事物，这样的过程可以用一个经常出现在最近文献中的词语——记忆来概括。机器学习模型都是由这样的‘记忆’组成的，如何理解这些‘记忆’对于如何使用模型是极为重要的。根据机器学习模型的种类，可以分为两种主要的记忆机制，即参数型与非参数型（还包括了介于两者之间的模型）。深度网络作为参数记忆型模型的代表，它将统计特性从所观察到的数据中以模型参数或者权重的方式提炼出来。而非参数模型中的典范则是核机器（以及最近邻），它们的记忆机制是存储所有数据。我们可以自然地认为，深度网络与核机器是两种原理不同的由数据推导结论的方法，但是实际上，我们研究出这些方法的过程却表明它们之间有着更加深远的联系以及更基本的相似性。
 

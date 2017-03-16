@@ -18,7 +18,7 @@ slug: cos-navigation-5
 
 大家忙着准备期末复习，本周一共发布了1篇日志。
 
-  * [分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵](http://cos.name/2008/12/measure-classification-model-performance-confusion-matrix/)
+  * [分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵](https://cos.name/2008/12/measure-classification-model-performance-confusion-matrix/)
 
 期待胡江堂下期对传说中的ROC曲线的分解。
 
@@ -28,6 +28,6 @@ slug: cos-navigation-5
 
 # 三、论坛
 
-[关于邀请大家成为统计之都高校联系人](http://cos.name/bbs/read.php?tid=13026)
+[关于邀请大家成为统计之都高校联系人](https://cos.name/bbs/read.php?tid=13026)
   
 目前会员总数：72514，主题数:9535 ，帖子数:66661

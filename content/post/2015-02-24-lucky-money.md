@@ -16,11 +16,11 @@ slug: lucky-money
 
 如果你有一台智能手机，如果你装了一个名叫微信的软件，那么你今年的春节很可能是在下面这样的场景中度过的（图片来自微信群）：
 
-[<img class="aligncenter size-full wp-image-10669" src="http://cos.name/wp-content/uploads/2015/02/lucky_money_3.gif" alt="lucky_money_3" width="240" height="320" />](http://cos.name/wp-content/uploads/2015/02/lucky_money_3.gif) [<img class="aligncenter size-full wp-image-10668" src="http://cos.name/wp-content/uploads/2015/02/lucky_money_2.gif" alt="lucky_money_2" width="300" height="225" />](http://cos.name/wp-content/uploads/2015/02/lucky_money_2.gif) [<img class="aligncenter size-full wp-image-10667" src="http://cos.name/wp-content/uploads/2015/02/lucky_money_1.gif" alt="lucky_money_1" width="280" height="208" />](http://cos.name/wp-content/uploads/2015/02/lucky_money_1.gif)
+[<img class="aligncenter size-full wp-image-10669" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_3.gif" alt="lucky_money_3" width="240" height="320" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_3.gif) [<img class="aligncenter size-full wp-image-10668" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_2.gif" alt="lucky_money_2" width="300" height="225" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_2.gif) [<img class="aligncenter size-full wp-image-10667" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_1.gif" alt="lucky_money_1" width="280" height="208" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_1.gif)
 
 这也使得众多的网络大V发出了下面的感慨：
 
-[<img class="aligncenter wp-image-10671 size-full" src="http://cos.name/wp-content/uploads/2015/02/lucky_money_4.png" alt="lucky_money_4" width="824" height="207" srcset="http://cos.name/wp-content/uploads/2015/02/lucky_money_4.png 824w, http://cos.name/wp-content/uploads/2015/02/lucky_money_4-300x75.png 300w, http://cos.name/wp-content/uploads/2015/02/lucky_money_4-500x126.png 500w" sizes="(max-width: 824px) 100vw, 824px" />](http://cos.name/wp-content/uploads/2015/02/lucky_money_4.png)
+[<img class="aligncenter wp-image-10671 size-full" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_4.png" alt="lucky_money_4" width="824" height="207" srcset="https://cos.name/wp-content/uploads/2015/02/lucky_money_4.png 824w, https://cos.name/wp-content/uploads/2015/02/lucky_money_4-300x75.png 300w, https://cos.name/wp-content/uploads/2015/02/lucky_money_4-500x126.png 500w" sizes="(max-width: 824px) 100vw, 824px" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_4.png)
 
 而最近几天不少微信群里面又流行起来一种“红包接力”的玩法，大概的规则是：群里面先由一人发一个红包，然后大家开始抢，其中金额最大的那个人继续发新一轮的红包，之后不断往复循环。
 
@@ -30,7 +30,7 @@ slug: lucky-money
 
 ### 模拟红包发放
 
-要进行模拟实验，就需要设定一个红包金额的分配机制。但由于微信红包的算法并没有公开，所以在这里我们使用了一个简化的模型，即假设抢到红包的人分得的金额占总金额的比例（每个人对应一个比例，所以这是一个向量，且其总和为1）服从一个 Dirichlet 分布，参数为 $\vec{\alpha}=(\alpha, \alpha, \ldots, \alpha)$，即 $\vec{\alpha}$ 是一个各分量都相等的向量，由一个参数 $\alpha$ 决定。对于不熟悉 Dirichlet 分布的读者，可以参考 <a href="http://cos.name/2013/01/lda-math-beta-dirichlet/" target="_blank">rickjin 大侠的文章</a>以及 <a href="http://en.wikipedia.org/wiki/Dirichlet_distribution" target="_blank">Dirichlet 分布的维基页面</a>。
+要进行模拟实验，就需要设定一个红包金额的分配机制。但由于微信红包的算法并没有公开，所以在这里我们使用了一个简化的模型，即假设抢到红包的人分得的金额占总金额的比例（每个人对应一个比例，所以这是一个向量，且其总和为1）服从一个 Dirichlet 分布，参数为 $\vec{\alpha}=(\alpha, \alpha, \ldots, \alpha)$，即 $\vec{\alpha}$ 是一个各分量都相等的向量，由一个参数 $\alpha$ 决定。对于不熟悉 Dirichlet 分布的读者，可以参考 <a href="https://cos.name/2013/01/lda-math-beta-dirichlet/" target="_blank">rickjin 大侠的文章</a>以及 <a href="http://en.wikipedia.org/wiki/Dirichlet_distribution" target="_blank">Dirichlet 分布的维基页面</a>。
 
 在这个简化的模型里，$\alpha$ 决定了红包发放的“公平”程度。$\alpha$ 越大，每人分得的金额比例就越倾向于平均，反之则波动性越大。下面展示了两组 Dirichlet 分布的随机数，我们假定红包金额分成5份，分别考察 $\alpha=1$ 和 $\alpha=10$ 时的金额比例，其中每一行是一次模拟。本文的最后附上了在R中生成 Dirichlet 分布随机数的程序。
 
@@ -86,7 +86,7 @@ slug: lucky-money
 
 这个结果的绝对数值可能并没有太大的意义，因此我们在每一轮接力之后都计算出当时这个群的基尼系数，然后观察它的变化。结果如下：
 
-[<img class="aligncenter size-large wp-image-10677" src="http://cos.name/wp-content/uploads/2015/02/lucky_money_5-500x375.png" alt="lucky_money_5" width="500" height="375" srcset="http://cos.name/wp-content/uploads/2015/02/lucky_money_5-500x375.png 500w, http://cos.name/wp-content/uploads/2015/02/lucky_money_5-300x225.png 300w, http://cos.name/wp-content/uploads/2015/02/lucky_money_5.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2015/02/lucky_money_5.png)在这里我们将接力次数延长到了500次。可以看出，随着接力的进行，基尼系数的整体趋势是在不断变大的，意味着贫富差距会随着游戏的进行变得越来越大。这其实很好理解：总是会有人因为拿了太多头奖而破产，这样财富会在越来越少的人中间进行分配，所以相应地贫富差距就拉大了。
+[<img class="aligncenter size-large wp-image-10677" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_5-500x375.png" alt="lucky_money_5" width="500" height="375" srcset="https://cos.name/wp-content/uploads/2015/02/lucky_money_5-500x375.png 500w, https://cos.name/wp-content/uploads/2015/02/lucky_money_5-300x225.png 300w, https://cos.name/wp-content/uploads/2015/02/lucky_money_5.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_5.png)在这里我们将接力次数延长到了500次。可以看出，随着接力的进行，基尼系数的整体趋势是在不断变大的，意味着贫富差距会随着游戏的进行变得越来越大。这其实很好理解：总是会有人因为拿了太多头奖而破产，这样财富会在越来越少的人中间进行分配，所以相应地贫富差距就拉大了。
 
 为了更直观地展示50个玩家的余额变化，我们可以看一下下面的这个动画，其中每幅图代表一个玩家的资金余额。
 
@@ -96,7 +96,7 @@ slug: lucky-money
 
 前面提到，在我们的模型中有一个参数 $\alpha$ 用来控制红包金额分配的“公平”程度（或者更准确地说，是“平均”的程度，因为就机会而言，每个人分得金额的可能性都是相同的，但就每一次实际分得的金额而言，$\alpha$ 越大，这种分配越倾向于平均，即结果的波动性越小）。下图展示了一组随机模拟实验的结果，其中我们模拟了20次红包接力的游戏，10次取 $\alpha=2$， 另外10次取 $\alpha=20$。每次游戏中，红包都接力了500次。
 
-[<img class="aligncenter size-large wp-image-10679" src="http://cos.name/wp-content/uploads/2015/02/lucky_money_6-500x375.png" alt="lucky_money_6" width="500" height="375" srcset="http://cos.name/wp-content/uploads/2015/02/lucky_money_6-500x375.png 500w, http://cos.name/wp-content/uploads/2015/02/lucky_money_6-300x225.png 300w, http://cos.name/wp-content/uploads/2015/02/lucky_money_6.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2015/02/lucky_money_6.png)可以看出，红线和蓝线虽然有所重叠，但总体来看蓝线的取值要比红线更大，也就是说，**红包金额越“公平”，贫富差距反而会越大**。
+[<img class="aligncenter size-large wp-image-10679" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_6-500x375.png" alt="lucky_money_6" width="500" height="375" srcset="https://cos.name/wp-content/uploads/2015/02/lucky_money_6-500x375.png 500w, https://cos.name/wp-content/uploads/2015/02/lucky_money_6-300x225.png 300w, https://cos.name/wp-content/uploads/2015/02/lucky_money_6.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_6.png)可以看出，红线和蓝线虽然有所重叠，但总体来看蓝线的取值要比红线更大，也就是说，**红包金额越“公平”，贫富差距反而会越大**。
 
 这个结论看起来可能有些反直觉，但其实也合情合理：如果红包的分配是绝对公平的，那么第一名得到的金额就将是2元，而下一轮又必须送出20元，所以总共亏损18元；如果红包金额的波动性很大，就会有一部分人得到的金额小于2元，而第一名就会得到更多，也就更不容易破产。所以说，一个规则是否真的“公平”，不能只看其表面。
 
@@ -104,7 +104,7 @@ slug: lucky-money
 
 我们最后再看一个这样的规则：第一个红包金额为20元，下一个为21元，再下一个为22元……到了30元后，又逐渐递减至20元，以此反复。我们对代码稍作修改后，同样画出基尼系数的变化图，对比这两种规则产生的结果：
 
-[<img class="aligncenter size-large wp-image-10682" src="http://cos.name/wp-content/uploads/2015/02/lucky_money_7-500x375.png" alt="lucky_money_7" width="500" height="375" srcset="http://cos.name/wp-content/uploads/2015/02/lucky_money_7-500x375.png 500w, http://cos.name/wp-content/uploads/2015/02/lucky_money_7-300x225.png 300w, http://cos.name/wp-content/uploads/2015/02/lucky_money_7.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2015/02/lucky_money_7.png)很明显，当红包的金额发生这种变动后，贫富差距又进一步拉大了。
+[<img class="aligncenter size-large wp-image-10682" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_7-500x375.png" alt="lucky_money_7" width="500" height="375" srcset="https://cos.name/wp-content/uploads/2015/02/lucky_money_7-500x375.png 500w, https://cos.name/wp-content/uploads/2015/02/lucky_money_7-300x225.png 300w, https://cos.name/wp-content/uploads/2015/02/lucky_money_7.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_7.png)很明显，当红包的金额发生这种变动后，贫富差距又进一步拉大了。
 
 ### 更多
 

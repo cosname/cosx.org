@@ -13,7 +13,7 @@ slug: seamless-r-and-c-integration-with-rcpp
 ---
 
 <p style="text-align: center;">
-  <a href="http://cos.name/wp-content/uploads/2016/01/Rcpp.jpg" rel="attachment wp-att-11834"><img class="aligncenter size-full wp-image-11834" src="http://cos.name/wp-content/uploads/2016/01/Rcpp.jpg" alt="Rcpp" width="349" height="350" srcset="http://cos.name/wp-content/uploads/2016/01/Rcpp.jpg 349w, http://cos.name/wp-content/uploads/2016/01/Rcpp-150x150.jpg 150w, http://cos.name/wp-content/uploads/2016/01/Rcpp-300x300.jpg 300w" sizes="(max-width: 349px) 100vw, 349px" /></a>Seamless R and C++ Integration with Rcpp
+  <a href="https://cos.name/wp-content/uploads/2016/01/Rcpp.jpg" rel="attachment wp-att-11834"><img class="aligncenter size-full wp-image-11834" src="https://cos.name/wp-content/uploads/2016/01/Rcpp.jpg" alt="Rcpp" width="349" height="350" srcset="https://cos.name/wp-content/uploads/2016/01/Rcpp.jpg 349w, https://cos.name/wp-content/uploads/2016/01/Rcpp-150x150.jpg 150w, https://cos.name/wp-content/uploads/2016/01/Rcpp-300x300.jpg 300w" sizes="(max-width: 349px) 100vw, 349px" /></a>Seamless R and C++ Integration with Rcpp
 </p>
 
 <p style="text-align: center;">
@@ -46,7 +46,7 @@ R 语言是一门主要用于数据处理、统计分析和可视化作图的解
 
 事实上，在R 语言诞生的初期，其核心开发团队就给出了一个解决方案：将计算密集的算法用C/C++ 实现，然后在R 中调用这部分代码。R 语言提供了一系列的API （应用程序接口）来实现它与其他语言的交互，但在很长的一段时间里，积极使用这些接口的R 软件包开发者并不占多数，其中可能最重要的一个原因就是这些接口的使用相对繁琐，且文档资料也不够丰富，开发者空有屠龙之刀，却无屠龙之技。
 
-幸运的是，这一局面在**Rcpp** 横空出世后被彻底打破。我第一次听说**Rcpp**是在2009 年，当时在统计之都论坛的帖子上（<http://cos.name/cn/topic/17665/>）大家在讨论如何用R 调用C++ 程序，于是经过一些搜索后我从R 的软件仓库中找到了这个软件包。当时的**Rcpp** 核心只有两个文件，代码总量不到2000 行，但那时它已经可以极大地简化R 与C++ 之间的交互。现如今，**Rcpp** 的代码量已经接近10 万行，在R 的官方软件包仓库中有超过300 个软件包直接依赖于**Rcpp**，而它也成为了被依赖次数最多的R 语言扩展包（除去R 自身默认提供的扩展包），没有之一。
+幸运的是，这一局面在**Rcpp** 横空出世后被彻底打破。我第一次听说**Rcpp**是在2009 年，当时在统计之都论坛的帖子上（<https://cos.name/cn/topic/17665/>）大家在讨论如何用R 调用C++ 程序，于是经过一些搜索后我从R 的软件仓库中找到了这个软件包。当时的**Rcpp** 核心只有两个文件，代码总量不到2000 行，但那时它已经可以极大地简化R 与C++ 之间的交互。现如今，**Rcpp** 的代码量已经接近10 万行，在R 的官方软件包仓库中有超过300 个软件包直接依赖于**Rcpp**，而它也成为了被依赖次数最多的R 语言扩展包（除去R 自身默认提供的扩展包），没有之一。
 
 总的来说，**Rcpp** 定义了一系列的类、函数和接口来增强R 与C++ 之间的交互性。用户只需懂得基本的C++ 知识，就可以写出丰富的可供R 调用的C++ 程序。与R 中传统的C 语言API 相比，**Rcpp** 利用了更为现代的C++ 编程技术，故而其语法更为简洁，也更富表现力和可读性。此外，**Rcpp** 还特意针对R 软件包开发提供了一系列便捷的辅助程序，使得开发者
 

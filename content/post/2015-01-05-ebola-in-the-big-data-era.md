@@ -31,7 +31,7 @@ slug: ebola-in-the-big-data-era
 
 将全球各地的机场数据整合后，人们即可以得到各地点相对引入风险的估计值，下一步则是考虑如何将分析结果向公众展示。显然数据可视化往往是直观有效展示分析结果的最佳方式，有人提供了一种基于D3实现的交互式网络分析图表。（图一展示了一个交互式图表的截图。有兴趣的读者可翻阅原图。图表链接：<http://rocs.hu-berlin.de/D3/ebola/>)
 
-[<img class="aligncenter size-full wp-image-10529" src="http://cos.name/wp-content/uploads/2015/01/图一a.png" alt="图一a" width="992" height="634" srcset="http://cos.name/wp-content/uploads/2015/01/图一a.png 992w, http://cos.name/wp-content/uploads/2015/01/图一a-300x192.png 300w, http://cos.name/wp-content/uploads/2015/01/图一a-500x320.png 500w" sizes="(max-width: 992px) 100vw, 992px" />](http://cos.name/wp-content/uploads/2015/01/图一a.png)
+[<img class="aligncenter size-full wp-image-10529" src="https://cos.name/wp-content/uploads/2015/01/图一a.png" alt="图一a" width="992" height="634" srcset="https://cos.name/wp-content/uploads/2015/01/图一a.png 992w, https://cos.name/wp-content/uploads/2015/01/图一a-300x192.png 300w, https://cos.name/wp-content/uploads/2015/01/图一a-500x320.png 500w" sizes="(max-width: 992px) 100vw, 992px" />](https://cos.name/wp-content/uploads/2015/01/图一a.png)
 
 <p align="center">
   图1
@@ -47,7 +47,7 @@ slug: ebola-in-the-big-data-era
 
 在对于埃博拉病毒研究的实际操作中却更为复杂，一个最主要的原因在于西非大部分民众并没有手机或者其他通信设备。不过尽管如此，某种程度上它却依然优于基于陈旧数据的统计分析。事实上研究人员如果可以从一个传染病爆发的地域追踪到人口的流动，那么对于下一个最有可能爆发传染病的地点就会有一个比较有效的估计和预测，从而可以提前展开合理有效的资源配置。遗憾的是，尽管很多相关的机构都做了很大程度的努力，但出于隐私等问题的考虑，电信运营商依然不允许研究人员使用这部分数据。
 
-[<img class="aligncenter size-full wp-image-10530" src="http://cos.name/wp-content/uploads/2015/01/图2.png" alt="图2" width="923" height="475" srcset="http://cos.name/wp-content/uploads/2015/01/图2.png 923w, http://cos.name/wp-content/uploads/2015/01/图2-300x154.png 300w, http://cos.name/wp-content/uploads/2015/01/图2-500x257.png 500w" sizes="(max-width: 923px) 100vw, 923px" />](http://cos.name/wp-content/uploads/2015/01/图2.png)
+[<img class="aligncenter size-full wp-image-10530" src="https://cos.name/wp-content/uploads/2015/01/图2.png" alt="图2" width="923" height="475" srcset="https://cos.name/wp-content/uploads/2015/01/图2.png 923w, https://cos.name/wp-content/uploads/2015/01/图2-300x154.png 300w, https://cos.name/wp-content/uploads/2015/01/图2-500x257.png 500w" sizes="(max-width: 923px) 100vw, 923px" />](https://cos.name/wp-content/uploads/2015/01/图2.png)
 
 **3. 由社交媒体数据预测疫情** <a href="#_ftn4" name="_ftnref4">[4]</a>
 
@@ -95,7 +95,7 @@ Dye在一封邮件中写道：“我们并非不知道估计死亡率的种种�
 
 尽管埃博拉恶名昭彰，但并不是一感染上马上就死去。如果没有适当调整，目前的估算方式（也就是前文提到的最简单并正在被世界卫生组织采用的PFC）没有考虑到从患者被感染到死去的滞后时间——按照HealthMap采用的独创方差最优化方法，对本次爆发案例做出的估算，这个时间平均大约应该是16天。这意味着9月8号报告的2296名死亡案例实际上对应着8月23号报告的感染案例。根据这个滞后时间调整的PFC为我们提供了对真实致死率一个更好的近似。下图是他们根据世界卫生组织提供的数据计算和绘制的调整后死亡率图：
 
-[<img class="aligncenter size-full wp-image-10531" src="http://cos.name/wp-content/uploads/2015/01/图3.png" alt="图3" width="975" height="770" srcset="http://cos.name/wp-content/uploads/2015/01/图3.png 975w, http://cos.name/wp-content/uploads/2015/01/图3-300x237.png 300w, http://cos.name/wp-content/uploads/2015/01/图3-500x395.png 500w" sizes="(max-width: 975px) 100vw, 975px" />](http://cos.name/wp-content/uploads/2015/01/图3.png)
+[<img class="aligncenter size-full wp-image-10531" src="https://cos.name/wp-content/uploads/2015/01/图3.png" alt="图3" width="975" height="770" srcset="https://cos.name/wp-content/uploads/2015/01/图3.png 975w, https://cos.name/wp-content/uploads/2015/01/图3-300x237.png 300w, https://cos.name/wp-content/uploads/2015/01/图3-500x395.png 500w" sizes="(max-width: 975px) 100vw, 975px" />](https://cos.name/wp-content/uploads/2015/01/图3.png)
 
 根据上图，调整后的埃博拉死亡率——大约在80-85%之间——比实际报告的结果高多了。不过这个调整后死亡率和无国界医生组织提供的数据比较一致。从今年三月份开始无国界医生组织收治了2077名疑似感染者，其中1038名被确诊，确诊患者中241名康复出院，也就是说死亡率高达77%。
 
@@ -121,7 +121,7 @@ Dye在一封邮件中写道：“我们并非不知道估计死亡率的种种�
 
 第三个数据是关于谁出钱的问题的。这里有个表，是对应当时下六个月所需的987.8M美元的来源的。<http://data.163.com/14/1020/02/A8VGQE1600014MTN.html>在当时的这些捐款中，世界银行，美国，非洲发展银行占了大头。世界上大多数国家都多多少少有贡献。资金来源和用途的透明公布有助于让出力的国家，组织和个人对资金的合理运用有及时了解，这样也可以促进更多的力量来加入抗击疾病的战斗中。
 
-[<img class="aligncenter size-full wp-image-10532" src="http://cos.name/wp-content/uploads/2015/01/图4.png" alt="图4" width="900" height="849" srcset="http://cos.name/wp-content/uploads/2015/01/图4.png 900w, http://cos.name/wp-content/uploads/2015/01/图4-300x283.png 300w, http://cos.name/wp-content/uploads/2015/01/图4-500x472.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](http://cos.name/wp-content/uploads/2015/01/图4.png)
+[<img class="aligncenter size-full wp-image-10532" src="https://cos.name/wp-content/uploads/2015/01/图4.png" alt="图4" width="900" height="849" srcset="https://cos.name/wp-content/uploads/2015/01/图4.png 900w, https://cos.name/wp-content/uploads/2015/01/图4-300x283.png 300w, https://cos.name/wp-content/uploads/2015/01/图4-500x472.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](https://cos.name/wp-content/uploads/2015/01/图4.png)
 
 **小结**
 

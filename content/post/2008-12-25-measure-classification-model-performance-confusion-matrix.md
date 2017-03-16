@@ -102,7 +102,7 @@ keep good_bad p good_bad_predicted;
 
 <strong>run</strong>;</pre>
 
-从下面的局部的数据valid_p可以看到，一些实际上是good的客户，根据我们的模型（阈值p取0.5），却预测他为bad（套用我们假设检验的黑话，这就犯了“<a href="http://cos.name/2008/12/decision-and-risk/" target="_blank">弃真</a>”的错误），对一些原本是bad的客户，却预测他为good（“取伪”错误），当然，对更多的客户，good还预测成good，bad还预测成bad：
+从下面的局部的数据valid_p可以看到，一些实际上是good的客户，根据我们的模型（阈值p取0.5），却预测他为bad（套用我们假设检验的黑话，这就犯了“<a href="https://cos.name/2008/12/decision-and-risk/" target="_blank">弃真</a>”的错误），对一些原本是bad的客户，却预测他为good（“取伪”错误），当然，对更多的客户，good还预测成good，bad还预测成bad：
 
 <pre class="brush: r">good_bad       p       good_bad_predicted
 bad       0.61624       bad
@@ -205,7 +205,7 @@ tables good_bad*good_bad_predicted ;
 
 <strong>run</strong>;</pre>
 
-[ <img class="aligncenter" src="http://cos.name/wp-content/uploads/2008/12/pv-thumb.png" border="0" alt="PV" width="238" height="258" />](http://cos.name/wp-content/uploads/2008/12/pv.png)
+[ <img class="aligncenter" src="https://cos.name/wp-content/uploads/2008/12/pv-thumb.png" border="0" alt="PV" width="238" height="258" />](https://cos.name/wp-content/uploads/2008/12/pv.png)
 
 其中，准确率=12.00%+57.25%=69.25% ，覆盖率=32.88% ，命中率=65.75% ，Specificity=90.16%，PV-=70.03% 。
 

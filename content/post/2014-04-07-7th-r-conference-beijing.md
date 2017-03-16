@@ -14,7 +14,7 @@ slug: 7th-r-conference-beijing
 
 R是一门用于数据分析和图形展示的语言、平台和环境，其官方机构每年都会举办useR!会议，各个国家及地区也定期有R用户的交流活动。在国内，自2008年以来，中国已经在北京和上海成功举办了六届R语言会议，促进了R语言在中国的推广和发展。为了进一步加强各领域R语言使用者之间的交流和互动，我们准备在2014年5月24-25日在北京举行第七届中国R语言会议（北京会场）。除了统计之都主站，会务信息还会通会议主页(<a style="color: #bc360a;" href="http://china-r.org/" target="_blank">http://china-r.org/</a>)，微信<span style="color: #808080;">(扫描本页面右侧微信公众平台二维码即可关注)</span>、微博(<a href="http://weibo.com/cosname" target="_blank">@统计之都</a>)来发布，欢迎大家关注获取最新消息。
 
-<img class="aligncenter" src="http://cos.name/wp-content/uploads/2010/06/China-R-Logo.png" alt="" width="532" height="353" />
+<img class="aligncenter" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png" alt="" width="532" height="353" />
 
 会议的相关情况如下：
 
@@ -30,7 +30,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 ## 三、会议情况
 
-2013年北京、上海分会场会议规模都在400人以上，有来自近百家单位的人员参会，涵盖北京大学、清华大学、中国人民大学、中科院等各高校和研究所和百度、淘宝、豆瓣、当当网等企事业单位，会议现场气氛热烈，会后各界反映良好。历届会议纪要请参见 <a href=" http://cos.name/chinar/ " target="_blank">http://cos.name/chinar/ </a>。
+2013年北京、上海分会场会议规模都在400人以上，有来自近百家单位的人员参会，涵盖北京大学、清华大学、中国人民大学、中科院等各高校和研究所和百度、淘宝、豆瓣、当当网等企事业单位，会议现场气氛热烈，会后各界反映良好。历届会议纪要请参见 <a href=" https://cos.name/chinar/ " target="_blank">https://cos.name/chinar/ </a>。
 
 本届会议希望在第六届会议取得成果基础上进一步扩大数据科学及R语言的影响力，让更多的数据人参与其中，促进社区内部的交流和进步。本届会议的主题是数据科学，欢迎大家踊跃报名演讲!
 

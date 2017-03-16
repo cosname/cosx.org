@@ -39,7 +39,7 @@ slug: which-statistical-software-should-we-use
 
 ## R语言<figure id="attachment_151" style="width: 300px" class="wp-caption aligncenter">
 
-[<img class="size-medium wp-image-151" src="http://cos.name/wp-content/uploads/2008/11/rgui-300x237.png" alt="RGui：Windows下R的图形界面" width="300" height="237" srcset="http://cos.name/wp-content/uploads/2008/11/rgui-300x237.png 300w, http://cos.name/wp-content/uploads/2008/11/rgui.png 666w" sizes="(max-width: 300px) 100vw, 300px" />](http://cos.name/wp-content/uploads/2008/11/rgui.png)<figcaption class="wp-caption-text">RGui：Windows下R的图形界面</figcaption></figure> 
+[<img class="size-medium wp-image-151" src="https://cos.name/wp-content/uploads/2008/11/rgui-300x237.png" alt="RGui：Windows下R的图形界面" width="300" height="237" srcset="https://cos.name/wp-content/uploads/2008/11/rgui-300x237.png 300w, https://cos.name/wp-content/uploads/2008/11/rgui.png 666w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2008/11/rgui.png)<figcaption class="wp-caption-text">RGui：Windows下R的图形界面</figcaption></figure> 
 
 R是一门用于统计计算和作图的语言（<a title="R主页" href="http://www.r-project.org" target="_blank">http://www.r-project.org</a>），受S语言影响发展而来。R语言最初由新西兰奥克兰大学统计系的Robert Gentleman和Ross Ihaka合作编写。自1997年开始，R语言开始由一个核心团队开发，团队成员来自世界各地的大学和研究机构。迄今为止，R源代码已经经历了近70次主要更新，功能也在不断完善、增强中，主要统计功能包括线性模型/广义线性模型、非线性回归模型、时间序列分析、经典的参数/非参数检验、聚类和光滑方法等。R语言具有免费、开源及统计模块齐全的特征，已被国外大量学术和科研机构采用，其应用范围涵盖了数据挖掘、机器学习、计量经济学、实证金融学、统计遗传学、自然语言处理、心理计量学和空间统计学诸多领域。
 
@@ -94,7 +94,7 @@ Stata是各种商业统计软件中我最喜欢的一款（先声明我没有收
 
 SAS是英文Statistical Analysis System的缩写，即统计分析系统，最初由美国北卡罗来纳州立大学两名研究生开始研制，1976年创立SAS公司，2003年全球员工总数近万人，统计软件采用按年租用制。SAS系统具有十分完备的数据访问、数据管理、数据分析功能。SAS系统是一个模块组合式结构的软件系统，共有三十多个功能模块。网址：http://www.sas.com。
 
-我在COS论坛（http://cos.name/bbs）上对SAS的介绍是“庞大的统计分析系统”，并没有强调它在统计分析方面的所谓优势。论坛上有几位朋友认为SAS编写代码的方式已经非常“恐龙级”了，对此我基本认同，不过鉴于我对SAS了解并不深入，所以不敢大放厥词。总之，“大”未必好，甚至以小人之心去揣测一下，也许“大”意味着代码臃肿。总之我们也看不到源代码，不知道它的统计分析代码怎么能写到七张光盘那么大。R的Windows安装文件30M，源文件16M左右。
+我在COS论坛（https://cos.name/bbs）上对SAS的介绍是“庞大的统计分析系统”，并没有强调它在统计分析方面的所谓优势。论坛上有几位朋友认为SAS编写代码的方式已经非常“恐龙级”了，对此我基本认同，不过鉴于我对SAS了解并不深入，所以不敢大放厥词。总之，“大”未必好，甚至以小人之心去揣测一下，也许“大”意味着代码臃肿。总之我们也看不到源代码，不知道它的统计分析代码怎么能写到七张光盘那么大。R的Windows安装文件30M，源文件16M左右。
 
 别的不多说了，据我了解，我周围上下的同学在SAS上面花时间最多的是学习怎么把这个大家伙装进自己的电脑，然后道听途说一个proc名称，就开始把数据导进来写上几个变量名，然后提交run，直到有一天终于有了长达30页的报表了，就高兴了。大家不妨对照看看自己是不是这么做的。
 

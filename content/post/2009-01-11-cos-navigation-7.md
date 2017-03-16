@@ -18,8 +18,8 @@ slug: cos-navigation-7
 
 本周一共发布了2篇日志。<!--more-->
 
-  * [使用回归分析，样本过少时不妨好先作图看看](http://cos.name/2009/01/regression-with-graphics/)
-  * [开源的计量经济学软件gretl](http://cos.name/wp-admin/post-new.php//)
+  * [使用回归分析，样本过少时不妨好先作图看看](https://cos.name/2009/01/regression-with-graphics/)
+  * [开源的计量经济学软件gretl](https://cos.name/wp-admin/post-new.php//)
 
 # 二、维基
 
@@ -27,6 +27,6 @@ slug: cos-navigation-7
 
 # 三、论坛
 
-[关于邀请大家成为统计之都高校联系人](http://cos.name/bbs/read.php?tid=13026)
+[关于邀请大家成为统计之都高校联系人](https://cos.name/bbs/read.php?tid=13026)
 
 目前会员总数：74444，主题数:9694，帖子数:67720

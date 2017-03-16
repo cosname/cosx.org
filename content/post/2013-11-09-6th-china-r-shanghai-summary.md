@@ -12,11 +12,11 @@ tags:
 slug: 6th-china-r-shanghai-summary
 ---
 
-第六届中国 R 语言会议（上海会场）于 2013 年 11 月 2 日 ~ 3 日在华东师范大学中山北路校区的科学会堂成功召开。会议由华东师范大学金融与统计学院和统计之都（[cos.name](http://cos.name)）主办。在两天的会议时间里，参会者齐聚一堂，就 R 语言在电商、互联网、金融、可视化、机器学习、数据挖掘等行业和领域展开了深入的探讨。
+第六届中国 R 语言会议（上海会场）于 2013 年 11 月 2 日 ~ 3 日在华东师范大学中山北路校区的科学会堂成功召开。会议由华东师范大学金融与统计学院和统计之都（[cos.name](https://cos.name)）主办。在两天的会议时间里，参会者齐聚一堂，就 R 语言在电商、互联网、金融、可视化、机器学习、数据挖掘等行业和领域展开了深入的探讨。
 
-[<img class="alignnone size-large wp-image-9048" alt="6th-china-r-sh" src="http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-500x333.jpg" width="500" height="333" srcset="http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-500x333.jpg 500w, http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-300x200.jpg 300w, http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh.jpg 720w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh.jpg)
+[<img class="alignnone size-large wp-image-9048" alt="6th-china-r-sh" src="https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-500x333.jpg" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-500x333.jpg 500w, https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-300x200.jpg 300w, https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh.jpg 720w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh.jpg)
   
-[<img class="alignnone size-large wp-image-9050" alt="6th-china-r-sh2" src="http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-500x333.jpg" width="500" height="333" srcset="http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-500x333.jpg 500w, http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-300x200.jpg 300w, http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2.jpg 719w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2.jpg)
+[<img class="alignnone size-large wp-image-9050" alt="6th-china-r-sh2" src="https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-500x333.jpg" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-500x333.jpg 500w, https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-300x200.jpg 300w, https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2.jpg 719w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2.jpg)
 
 ## 会议概况
 
@@ -231,61 +231,61 @@ slug: 6th-china-r-shanghai-summary
   
   <ul>
     <li>
-      <strong>Chih-Jen Lin</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_01_LinCJ.pdf">Experiences and Lessons in Developing Machine Learning and Data Mining Software</a>
+      <strong>Chih-Jen Lin</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_01_LinCJ.pdf">Experiences and Lessons in Developing Machine Learning and Data Mining Software</a>
     </li>
     <li>
-      <strong>林祯舜</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_02_LinZS.pdf">R与大数据对统计教育的影响</a>
+      <strong>林祯舜</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_02_LinZS.pdf">R与大数据对统计教育的影响</a>
     </li>
     <li>
-      <strong>李忠</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_03_LiZhong.pdf">EBAY Multiscreen Insight</a>
+      <strong>李忠</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_03_LiZhong.pdf">EBAY Multiscreen Insight</a>
     </li>
     <li>
-      <strong>赵扬</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_04_ZhaoYang.pdf">Large Data Analysis using Rhipe/Rhadoop</a>
+      <strong>赵扬</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_04_ZhaoYang.pdf">Large Data Analysis using Rhipe/Rhadoop</a>
     </li>
     <li>
-      <strong>朱筠珺</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_05_ZhuJunjun.pdf">How R helps personalization analysis in marketing campaign</a>
+      <strong>朱筠珺</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_05_ZhuJunjun.pdf">How R helps personalization analysis in marketing campaign</a>
     </li>
     <li>
-      <strong>甘华来</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_06_GanHualai.pdf">R语言在旅游行业中的应用</a>
+      <strong>甘华来</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_06_GanHualai.pdf">R语言在旅游行业中的应用</a>
     </li>
     <li>
-      <strong>严紫丹</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_07_YanZidan.pdf">x13季节调整方法的R实现及应用</a>
+      <strong>严紫丹</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_07_YanZidan.pdf">x13季节调整方法的R实现及应用</a>
     </li>
     <li>
-      <strong>魏太云，周扬</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_08_WeiTYZhouY.pdf">通向高富帅图表的R包——recharts</a> [<a href="http://echarts.baidu.com/doc/slide/whyEcharts.html" target="_blank">echarts介绍</a>，<a href="https://github.com/taiyun/recharts" target="_blank">recharts工程</a>]
+      <strong>魏太云，周扬</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_08_WeiTYZhouY.pdf">通向高富帅图表的R包——recharts</a> [<a href="http://echarts.baidu.com/doc/slide/whyEcharts.html" target="_blank">echarts介绍</a>，<a href="https://github.com/taiyun/recharts" target="_blank">recharts工程</a>]
     </li>
     <li>
-      <strong>朱雪宁</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_09_ZhuXuening.zip">微博那些事儿</a>
+      <strong>朱雪宁</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_09_ZhuXuening.zip">微博那些事儿</a>
     </li>
     <li>
-      <strong>何通</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_10_HeTong.zip">豆瓣网标签的整理和分析</a>
+      <strong>何通</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_10_HeTong.zip">豆瓣网标签的整理和分析</a>
     </li>
     <li>
       <strong>刘思喆</strong>：R语言企业级应用
     </li>
     <li>
-      <strong>孙哲</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_02_SunZhe.pdf">小分队撬动大估值——关于零售金融服务行业的大数据应用模式探讨</a>
+      <strong>孙哲</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_02_SunZhe.pdf">小分队撬动大估值——关于零售金融服务行业的大数据应用模式探讨</a>
     </li>
     <li>
-      <strong>许亮</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_03_XuLiang.pdf">复杂交易网络中的白富美挖掘</a>
+      <strong>许亮</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_03_XuLiang.pdf">复杂交易网络中的白富美挖掘</a>
     </li>
     <li>
-      <strong>李洪成</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_04_LiHongcheng.pdf">用R进行高频金融数据分析简介</a>
+      <strong>李洪成</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_04_LiHongcheng.pdf">用R进行高频金融数据分析简介</a>
     </li>
     <li>
-      <strong>邓一硕</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_05_DengYishuo.pdf">quantstrat包与R中的量化投资之路</a>
+      <strong>邓一硕</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_05_DengYishuo.pdf">quantstrat包与R中的量化投资之路</a>
     </li>
     <li>
-      <strong>罗立辉</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_06_LuoLihui.pdf">R语言在陆面建模系统上的应用研究</a>
+      <strong>罗立辉</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_06_LuoLihui.pdf">R语言在陆面建模系统上的应用研究</a>
     </li>
     <li>
-      <strong>李舰</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_07_LiJian.pdf">中文文本挖掘和tmcn包</a>
+      <strong>李舰</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_07_LiJian.pdf">中文文本挖掘和tmcn包</a>
     </li>
     <li>
-      <strong>陈逸波</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_08_ChenYibo.zip">kaggle数据比赛的一些经验分享——以Amazon Employee Access Challenge为例</a>
+      <strong>陈逸波</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_08_ChenYibo.zip">kaggle数据比赛的一些经验分享——以Amazon Employee Access Challenge为例</a>
     </li>
     <li>
-      <strong>刘辰昂</strong>：<a href="http://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_09_LiuChenang.pdf">use R for fun</a>
+      <strong>刘辰昂</strong>：<a href="https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_09_LiuChenang.pdf">use R for fun</a>
     </li>
   </ul>
   
@@ -294,7 +294,7 @@ slug: 6th-china-r-shanghai-summary
   </h2>
   
   <p>
-    <a href="http://www.ebay.com/" target="_blank"><img src="http://cos.name/wp-content/uploads/2013/11/ebay.png" alt="ebay" width="142" height="60" class="alignnone size-full wp-image-9212" /></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mango-solutions.com.cn/" target="_blank"><img src="http://cos.name/wp-content/uploads/2013/11/mango.jpg" alt="mango" width="200" height="60" class="alignnone size-full wp-image-9213" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.contactsingapore.sg/cn" target="_blank"><img src="http://cos.name/wp-content/uploads/2013/11/Chinese_CS_logo_9-500x323.jpg" alt="Chinese_CS_logo_9" width="160" height="80" class="alignnone size-large wp-image-9214" /></a>
+    <a href="http://www.ebay.com/" target="_blank"><img src="https://cos.name/wp-content/uploads/2013/11/ebay.png" alt="ebay" width="142" height="60" class="alignnone size-full wp-image-9212" /></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mango-solutions.com.cn/" target="_blank"><img src="https://cos.name/wp-content/uploads/2013/11/mango.jpg" alt="mango" width="200" height="60" class="alignnone size-full wp-image-9213" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.contactsingapore.sg/cn" target="_blank"><img src="https://cos.name/wp-content/uploads/2013/11/Chinese_CS_logo_9-500x323.jpg" alt="Chinese_CS_logo_9" width="160" height="80" class="alignnone size-large wp-image-9214" /></a>
   </p>
   
   <p>

@@ -17,7 +17,7 @@ slug: 7th-r-conference-hangzhou
 
 除了统计之都主站，会务信息还会通过统计之都微信<span style="color: #808080;">(扫描本页面右侧微信公众平台二维码即可关注)</span>、微博(<a href="http://weibo.com/cosname" target="_blank">@统计之都</a>)来发布，欢迎大家关注获取最新消息。
 
-<img class="aligncenter" src="http://cos.name/wp-content/uploads/2010/06/China-R-Logo.png" alt="" width="532" height="353" />
+<img class="aligncenter" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png" alt="" width="532" height="353" />
 
 会议的相关情况如下：
 
@@ -29,13 +29,13 @@ slug: 7th-r-conference-hangzhou
 
 杭州市余杭区杭州师范大学仓前校区，恕园7号楼艺术大厅。
   
-[<img src="http://cos.name/wp-content/uploads/2014/11/仓前校区图片-500x251.jpg" alt="仓前校区图片" width="500" height="251" class="alignnone size-large wp-image-10353" srcset="http://cos.name/wp-content/uploads/2014/11/仓前校区图片-500x251.jpg 500w, http://cos.name/wp-content/uploads/2014/11/仓前校区图片-300x150.jpg 300w, http://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg 1095w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg)
+[<img src="https://cos.name/wp-content/uploads/2014/11/仓前校区图片-500x251.jpg" alt="仓前校区图片" width="500" height="251" class="alignnone size-large wp-image-10353" srcset="https://cos.name/wp-content/uploads/2014/11/仓前校区图片-500x251.jpg 500w, https://cos.name/wp-content/uploads/2014/11/仓前校区图片-300x150.jpg 300w, https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg 1095w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg)
   
 <!--more-->
 
 ## **三、会议情况**
 
-2013年以来，北京、上海分会场会议规模都在400人以上，有来自近百家单位的人员参会，会后各界反映良好。历届会议纪要请参见[ http://cos.name/chinar/ ](http://cos.name/chinar/)。
+2013年以来，北京、上海分会场会议规模都在400人以上，有来自近百家单位的人员参会，会后各界反映良好。历届会议纪要请参见[ https://cos.name/chinar/ ](https://cos.name/chinar/)。
 
 至今R已经是数据分析、数据挖掘、数据科学从业者首选的编程工具。R社区讨论的领域也已经不再局限于编程语言，也大量涉及到机器学习、推荐算法、高性能计算等工业界与学术界都关心的话题。为了促进R 社区中大量有实操经验的数据挖掘、机器学习高手在技术上和学术上的交流，促进工业界和R语言社区的相互支持，我们将在杭州也举办第七届中国R语言会议。
 
@@ -66,7 +66,7 @@ slug: 7th-r-conference-hangzhou
 
 请下载会议手册的电子版获取更详细的内容：
   
-[第七届中国R语言（杭州会场）会议手册](http://cos.name/wp-content/uploads/2014/11/ChinaR2014HZ_Manual_V4.pdf)
+[第七届中国R语言（杭州会场）会议手册](https://cos.name/wp-content/uploads/2014/11/ChinaR2014HZ_Manual_V4.pdf)
 
 ## **五、会议赞助**
 

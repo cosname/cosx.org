@@ -48,7 +48,7 @@ slug: lda_topic_model
 </p>
 
 <p align="left">
-  <img class="aligncenter size-full wp-image-6308" title="LDA" src="http://cos.name/wp-content/uploads/2010/10/LDA.png" alt="" width="271" height="228" /> 这个图模型表示法也称作“盘子表示法”（plate notation）。图中的阴影圆圈表示可观测变量（observed variable），非阴影圆圈表示潜在变量（latent variable），箭头表示两变量间的条件依赖性（conditional dependency），方框表示重复抽样，重复次数在方框的右下角。
+  <img class="aligncenter size-full wp-image-6308" title="LDA" src="https://cos.name/wp-content/uploads/2010/10/LDA.png" alt="" width="271" height="228" /> 这个图模型表示法也称作“盘子表示法”（plate notation）。图中的阴影圆圈表示可观测变量（observed variable），非阴影圆圈表示潜在变量（latent variable），箭头表示两变量间的条件依赖性（conditional dependency），方框表示重复抽样，重复次数在方框的右下角。
 </p>
 
 <p align="left">

@@ -21,4 +21,4 @@ slug: nobel-prizes-of-statistics
   *  计算机科学家眼中的数据科学基础，免费电子书一卷：[《Foundations of DataScience》](http://www.cs.cornell.edu/jeh/book112013.pdf)。作者[主页](http://www.cs.cornell.edu/jeh/)在此，方便大家追踪更新。
   *  我们都知道Lasso方法，李大人提出一种叫“李加索”（Leekasso）的变量选择方法：[有意思](http://simplystatistics.org/2014/01/04/repost-prediction-the-lasso-vs-just-using-the-top-10-predictors/)。这方法极其简单，就是回归时挑出P值最小的10个变量，用它们作回归，完事。
   * 狗狗在便便的时候会调整方向对准地磁场？专家们细心记录并分析了70只狗数千次大小便的数据，[论文](http://www.frontiersinzoology.com/content/pdf/1742-9994-10-80.pdf)的亮点在图5。到底是专家们在追逐随机数呢，还是确有其事？
-  * COS论坛上有人问R能否画某种图，结果触碰了某些码农的敏感神经，从此一发不可收拾，各种画小人儿、暴走君的[图](http://cos.name/cn/topic/147769)都来了。<span style="line-height: 1.5"> </span>
+  * COS论坛上有人问R能否画某种图，结果触碰了某些码农的敏感神经，从此一发不可收拾，各种画小人儿、暴走君的[图](https://cos.name/cn/topic/147769)都来了。<span style="line-height: 1.5"> </span>

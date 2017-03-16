@@ -42,7 +42,7 @@ slug: why-im-not-a-fan-of-r-squared
 
 基于这组数据，我们尝试利用单变量普通线性回归来学习 $f(x)$。我们先后拟合一个线性模型和一个二次模型。下面展示了两个模型的拟合结果：
 
-[<img class="aligncenter wp-image-13065 size-full" src="http://cos.name/wp-content/uploads/2016/08/model_comparison_1.png" alt="model_comparison_1" width="1024" height="597" srcset="http://cos.name/wp-content/uploads/2016/08/model_comparison_1.png 1024w, http://cos.name/wp-content/uploads/2016/08/model_comparison_1-300x175.png 300w, http://cos.name/wp-content/uploads/2016/08/model_comparison_1-768x448.png 768w, http://cos.name/wp-content/uploads/2016/08/model_comparison_1-500x292.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](http://cos.name/wp-content/uploads/2016/08/model_comparison_1.png)在图中，我们可以看到 $f(x)$ 可以被一条直线很好地近似，所以我们的线性和二次回归模型都可以很好地还原真实模型。这是因为 $x\_{min}$ 和 $x\_{max}$ 非常接近，因此真实的函数在这个区域中可以被直线很好地近似，特别是相对于我们观测的噪声水平而言。
+[<img class="aligncenter wp-image-13065 size-full" src="https://cos.name/wp-content/uploads/2016/08/model_comparison_1.png" alt="model_comparison_1" width="1024" height="597" srcset="https://cos.name/wp-content/uploads/2016/08/model_comparison_1.png 1024w, https://cos.name/wp-content/uploads/2016/08/model_comparison_1-300x175.png 300w, https://cos.name/wp-content/uploads/2016/08/model_comparison_1-768x448.png 768w, https://cos.name/wp-content/uploads/2016/08/model_comparison_1-500x292.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](https://cos.name/wp-content/uploads/2016/08/model_comparison_1.png)在图中，我们可以看到 $f(x)$ 可以被一条直线很好地近似，所以我们的线性和二次回归模型都可以很好地还原真实模型。这是因为 $x\_{min}$ 和 $x\_{max}$ 非常接近，因此真实的函数在这个区域中可以被直线很好地近似，特别是相对于我们观测的噪声水平而言。
 
 我们可以通过两组模型比较来对这些简单回归的效果进行评判：一组是我们的模型与常数模型的对比，另一组是我们的模型与真实的对数函数模型的对比。为了简化计算，我们采用不对回归变量数目进行调整的 $R^2$ 定义，因此模型 $m$（相对于常数模型 $c$）的 $R^2$ 计算方法是
 
@@ -60,7 +60,7 @@ $$E^2 = \frac{\text{MSE}\_m – \text{MSE}\_t}{\text{MSE}\_t} = \frac{\text{MSE}
 
 在考虑一般的情形之前，我们先看一个具体的例子，设定 $x\_{min}=1$，$x\_{max}=1000$：
 
-[<img class="aligncenter wp-image-13066 size-full" src="http://cos.name/wp-content/uploads/2016/08/model_comparison_2.png" alt="model_comparison_2" width="1024" height="597" srcset="http://cos.name/wp-content/uploads/2016/08/model_comparison_2.png 1024w, http://cos.name/wp-content/uploads/2016/08/model_comparison_2-300x175.png 300w, http://cos.name/wp-content/uploads/2016/08/model_comparison_2-768x448.png 768w, http://cos.name/wp-content/uploads/2016/08/model_comparison_2-500x292.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](http://cos.name/wp-content/uploads/2016/08/model_comparison_2.png)在这个例子中，可以通过上图看出线性模型和二次模型都有系统性的偏差，但它们的 $R^2$ 值都有显著的增长：线性模型是 $R^2=0.760$，真实模型是 $R^2=0.997$。相比较而言，线性模型的 $E^2=85.582$，这说明该数据集提供了有力的证据表明线性模型比真实模型要差。
+[<img class="aligncenter wp-image-13066 size-full" src="https://cos.name/wp-content/uploads/2016/08/model_comparison_2.png" alt="model_comparison_2" width="1024" height="597" srcset="https://cos.name/wp-content/uploads/2016/08/model_comparison_2.png 1024w, https://cos.name/wp-content/uploads/2016/08/model_comparison_2-300x175.png 300w, https://cos.name/wp-content/uploads/2016/08/model_comparison_2-768x448.png 768w, https://cos.name/wp-content/uploads/2016/08/model_comparison_2-500x292.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](https://cos.name/wp-content/uploads/2016/08/model_comparison_2.png)在这个例子中，可以通过上图看出线性模型和二次模型都有系统性的偏差，但它们的 $R^2$ 值都有显著的增长：线性模型是 $R^2=0.760$，真实模型是 $R^2=0.997$。相比较而言，线性模型的 $E^2=85.582$，这说明该数据集提供了有力的证据表明线性模型比真实模型要差。
 
 这个例子说明，尽管大多数人都会同意线性模型对真实模型的近似效果是越来越差的，但 $R^2$ 却有了显著的增长。从前一个例子到后一个的转换过程中，$R^2$ 看似得到了提升，$E^2$ 却表明由于 $x\_{min}=1$ 和 $x\_{max}$ 之间的间隔增加了，备选模型的拟合效果是大打折扣的。这表明 $R^2$ 并不能解释为 $E^2$ 的一个替代量（$E^2$ 依赖于真实模型，通常是不可测量的）。然而我们的两个极端例子还不是故事的全部：事实上，$R^2$ 从前一个例子到后一个的转换过程中，其变化并不是单调的。
 
@@ -68,9 +68,9 @@ $$E^2 = \frac{\text{MSE}\_m – \text{MSE}\_t}{\text{MSE}\_t} = \frac{\text{MSE}
 
 首先是 $R^2$ 的图像：
 
-[<img class="aligncenter wp-image-13067 size-full" src="http://cos.name/wp-content/uploads/2016/08/r2.png" alt="r2" width="1024" height="597" srcset="http://cos.name/wp-content/uploads/2016/08/r2.png 1024w, http://cos.name/wp-content/uploads/2016/08/r2-300x175.png 300w, http://cos.name/wp-content/uploads/2016/08/r2-768x448.png 768w, http://cos.name/wp-content/uploads/2016/08/r2-500x292.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](http://cos.name/wp-content/uploads/2016/08/r2.png)其次是 $E^2$ 的：
+[<img class="aligncenter wp-image-13067 size-full" src="https://cos.name/wp-content/uploads/2016/08/r2.png" alt="r2" width="1024" height="597" srcset="https://cos.name/wp-content/uploads/2016/08/r2.png 1024w, https://cos.name/wp-content/uploads/2016/08/r2-300x175.png 300w, https://cos.name/wp-content/uploads/2016/08/r2-768x448.png 768w, https://cos.name/wp-content/uploads/2016/08/r2-500x292.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](https://cos.name/wp-content/uploads/2016/08/r2.png)其次是 $E^2$ 的：
 
-[<img class="aligncenter wp-image-13068 size-full" src="http://cos.name/wp-content/uploads/2016/08/e2.png" alt="e2" width="1024" height="597" srcset="http://cos.name/wp-content/uploads/2016/08/e2.png 1024w, http://cos.name/wp-content/uploads/2016/08/e2-300x175.png 300w, http://cos.name/wp-content/uploads/2016/08/e2-768x448.png 768w, http://cos.name/wp-content/uploads/2016/08/e2-500x292.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](http://cos.name/wp-content/uploads/2016/08/e2.png)注意到 $R^2$ 的图像相对于 $E^2$ 而言是多么的奇特。$E^2$ 始终是递增的：随着间隔的增加我们拥有更多可以区分模型的数据时，我们同时也拥有越来越强的证据表明线性近似不是正确的模型。相反，$R^2$ 一开始非常低（也正是 $E^2$ 很低的时候，因为我们的线性模型略差于真实模型），之后以非单调的模式发生变化：它的峰值位于当数据有足够的变异来排除常数模型，但还不足以排除线性模型的时候。在这个临界点之后，$R^2$ 就开始下降。对于二次模型，$R^2$ 的取值具有类似的非单调性。只有真实的模型展现出单调递增的 $R^2$。
+[<img class="aligncenter wp-image-13068 size-full" src="https://cos.name/wp-content/uploads/2016/08/e2.png" alt="e2" width="1024" height="597" srcset="https://cos.name/wp-content/uploads/2016/08/e2.png 1024w, https://cos.name/wp-content/uploads/2016/08/e2-300x175.png 300w, https://cos.name/wp-content/uploads/2016/08/e2-768x448.png 768w, https://cos.name/wp-content/uploads/2016/08/e2-500x292.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](https://cos.name/wp-content/uploads/2016/08/e2.png)注意到 $R^2$ 的图像相对于 $E^2$ 而言是多么的奇特。$E^2$ 始终是递增的：随着间隔的增加我们拥有更多可以区分模型的数据时，我们同时也拥有越来越强的证据表明线性近似不是正确的模型。相反，$R^2$ 一开始非常低（也正是 $E^2$ 很低的时候，因为我们的线性模型略差于真实模型），之后以非单调的模式发生变化：它的峰值位于当数据有足够的变异来排除常数模型，但还不足以排除线性模型的时候。在这个临界点之后，$R^2$ 就开始下降。对于二次模型，$R^2$ 的取值具有类似的非单调性。只有真实的模型展现出单调递增的 $R^2$。
 
 ## 结论
 
@@ -98,7 +98,7 @@ $$E^2 = \frac{\text{MSE}\_m – \text{MSE}\_t}{\text{MSE}\_c – \text{MSE}\_t}$
 
 在我睡醒看到这篇博客被转发到 Hacker News 上后，我意识到或许应该加上一些图形化的表示，以帮助那些没有理论统计背景的读者理解本文的核心思想。下面这张图表明，给定三个进行比较的模型，我们总可以在最差的模型（即常数模型）到最好的模型（即真实模型）之间找到备选模型的位置。
 
-[<img class="aligncenter wp-image-13069 size-full" src="http://cos.name/wp-content/uploads/2016/08/spectrum.png" alt="spectrum" width="1024" height="448" srcset="http://cos.name/wp-content/uploads/2016/08/spectrum.png 1024w, http://cos.name/wp-content/uploads/2016/08/spectrum-300x131.png 300w, http://cos.name/wp-content/uploads/2016/08/spectrum-768x336.png 768w, http://cos.name/wp-content/uploads/2016/08/spectrum-500x219.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](http://cos.name/wp-content/uploads/2016/08/spectrum.png)在测量备选模型所处的位置时，$R^2$ 和 $E^2$ 是互补的关系。
+[<img class="aligncenter wp-image-13069 size-full" src="https://cos.name/wp-content/uploads/2016/08/spectrum.png" alt="spectrum" width="1024" height="448" srcset="https://cos.name/wp-content/uploads/2016/08/spectrum.png 1024w, https://cos.name/wp-content/uploads/2016/08/spectrum-300x131.png 300w, https://cos.name/wp-content/uploads/2016/08/spectrum-768x336.png 768w, https://cos.name/wp-content/uploads/2016/08/spectrum-500x219.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](https://cos.name/wp-content/uploads/2016/08/spectrum.png)在测量备选模型所处的位置时，$R^2$ 和 $E^2$ 是互补的关系。
 
 ## 补记三
 
@@ -134,6 +134,6 @@ John Myles White，Facebook 核心数据科学团队成员，加入 Facebook 之
 
 敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
 
-[<img class="aligncenter size-medium wp-image-13124" src="http://cos.name/wp-content/uploads/2016/08/QR-300x300.png" alt="QR" width="300" height="300" srcset="http://cos.name/wp-content/uploads/2016/08/QR-300x300.png 300w, http://cos.name/wp-content/uploads/2016/08/QR-150x150.png 150w, http://cos.name/wp-content/uploads/2016/08/QR-500x500.png 500w, http://cos.name/wp-content/uploads/2016/08/QR.png 640w" sizes="(max-width: 300px) 100vw, 300px" />](http://cos.name/wp-content/uploads/2016/08/QR.png)
+[<img class="aligncenter size-medium wp-image-13124" src="https://cos.name/wp-content/uploads/2016/08/QR-300x300.png" alt="QR" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2016/08/QR-300x300.png 300w, https://cos.name/wp-content/uploads/2016/08/QR-150x150.png 150w, https://cos.name/wp-content/uploads/2016/08/QR-500x500.png 500w, https://cos.name/wp-content/uploads/2016/08/QR.png 640w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2016/08/QR.png)
 
 &nbsp;</section> </section>

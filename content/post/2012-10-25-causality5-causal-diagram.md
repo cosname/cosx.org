@@ -113,7 +113,7 @@ $$
 下面介绍 Pearl (1995) 的主要工作：**后门准则和前门准则**。
 
 <p style="text-align: center">
-  <a href="http://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6361"><img alt="" src="http://i.imgur.com/nu3vB.png" width="393" height="500" /></a>
+  <a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6361"><img alt="" src="http://i.imgur.com/nu3vB.png" width="393" height="500" /></a>
 </p>
 
 **后门准则：**在 DAG 中，如果如下条件满足：
@@ -203,7 +203,7 @@ Pearl 在书中讲了一个非常有趣的例子，来说明前门准则的用�
 
 不过，仅仅从“相关”（association）的角度讨论这个问题，是没有答案的。从“因果”（causation）的角度来看，才能有确切的回答。解释 Yule-Simpson&#8217;s Paradox，算是因果图的第一个重要应用。
 
-<a href="http://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6364"><img class="alignnone size-large wp-image-6364 aligncenter" alt="" src="http://i.imgur.com/vpb8M.png" width="431" height="500" /></a>
+<a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6364"><img class="alignnone size-large wp-image-6364 aligncenter" alt="" src="http://i.imgur.com/vpb8M.png" width="431" height="500" /></a>
 
 下面，我将以上面的 Figure 4 中的四个图为例说明，三个变量之间的关系的复杂性。
 

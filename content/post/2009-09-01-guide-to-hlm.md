@@ -15,4 +15,4 @@ slug: guide-to-hlm
 
 下面是中国人民大学统计学院分层线性模型的课件，主要内容为HLM6.0的操作
 
-下载地址：http://cos.name/wp-content/uploads/2009/09/intro2HLM6.zip
+下载地址：https://cos.name/wp-content/uploads/2009/09/intro2HLM6.zip

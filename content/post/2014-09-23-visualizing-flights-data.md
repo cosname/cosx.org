@@ -19,7 +19,7 @@ slug: visualizing-flights-data
 
 绘制数据地图是一种有效展现空间数据的方法，美丽的数据展示更容易引起读者的共鸣。本地图设计的初衷是展示中国航线的分布规律，进而可以分析成本、客流量等问题。
 
-[<img class="aligncenter size-large wp-image-10267" src="http://cos.name/wp-content/uploads/2014/09/flight-night-scene-500x186.png" alt="flight-night-scene" width="500" height="186" srcset="http://cos.name/wp-content/uploads/2014/09/flight-night-scene-500x186.png 500w, http://cos.name/wp-content/uploads/2014/09/flight-night-scene-300x112.png 300w, http://cos.name/wp-content/uploads/2014/09/flight-night-scene.png 1049w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2014/09/flight-night-scene.png)本文参考了以下文献进行绘制：
+[<img class="aligncenter size-large wp-image-10267" src="https://cos.name/wp-content/uploads/2014/09/flight-night-scene-500x186.png" alt="flight-night-scene" width="500" height="186" srcset="https://cos.name/wp-content/uploads/2014/09/flight-night-scene-500x186.png 500w, https://cos.name/wp-content/uploads/2014/09/flight-night-scene-300x112.png 300w, https://cos.name/wp-content/uploads/2014/09/flight-night-scene.png 1049w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/09/flight-night-scene.png)本文参考了以下文献进行绘制：
   
 <http://spatialanalysis.co.uk/2012/06/mapping-worlds-biggest-airlines/>
 
@@ -320,4 +320,4 @@ ggplot() + wrld + urb + airline +
     ) + ylim(-65, 75) + coord_equal()
 dev.off()</pre>
 
-完整尺寸的超清航线夜景图可以在<a href="http://cos.name/wp-content/uploads/2014/09/flight-night-scene-HD.png" target="_blank">这里下载</a>得到（7.9M）。
+完整尺寸的超清航线夜景图可以在<a href="https://cos.name/wp-content/uploads/2014/09/flight-night-scene-HD.png" target="_blank">这里下载</a>得到（7.9M）。

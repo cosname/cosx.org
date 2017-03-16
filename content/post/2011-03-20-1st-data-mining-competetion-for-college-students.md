@@ -15,7 +15,7 @@ tags:
 slug: 1st-data-mining-competetion-for-college-students
 ---
 
-## [<img class="aligncenter size-full wp-image-3232" title="数据挖掘竞赛" src="http://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png" alt="" width="375" height="389" srcset="http://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png 375w, http://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion-289x300.png 289w, http://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion-40x40.png 40w" sizes="(max-width: 375px) 100vw, 375px" />](http://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png)竞赛背景
+## [<img class="aligncenter size-full wp-image-3232" title="数据挖掘竞赛" src="https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png" alt="" width="375" height="389" srcset="https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png 375w, https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion-289x300.png 289w, https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion-40x40.png 40w" sizes="(max-width: 375px) 100vw, 375px" />](https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png)竞赛背景
 
 <a href="http://www.yuanhuaibin.com/?p=727" target="_blank">Amazon</a>的数百万图书，<a href="http://en.wikipedia.org/wiki/Netflix_Prize" target="_blank">Netflix</a>的10万部电影，淘宝的8亿件在线商品，以及数以亿万计用户的资料和行为记录……互联网最近十年的迅猛发展伴随着海量数据的积累。然而，在线用户常常面对过多的选择而显得无所适从。心理学研究证实，这类情境下的用户有时会做出放弃交易的决定，从而造成大量潜在的用户流失。针对这一现象，统计技术的发展能够为在线服务商提供更有效的推荐算法，在帮助用户走出<a href="http://www.columbia.edu/%7Ess957/whenchoice.html" target="_blank">信息过载</a>困境、改善用户体验的同时，还能够挖掘商品<a href="http://en.wikipedia.org/wiki/Long_Tail" target="_blank">长尾</a>、提升企业价值。在今天，用户不再局限于通过搜索引擎来寻找感兴趣的信息，推荐系统无所不在地为我们发现自己的潜在需求。
 
@@ -45,7 +45,7 @@ slug: 1st-data-mining-competetion-for-college-students
 
 ## 竞赛相关问题咨询
 
-请先阅读<a title="常见问题解答" href="http://www.statmodelingcompetition.com/faq.html" target="_blank">常见问题解答</a>，如果疑问依然存在 ，请到统计之都论坛的<a href="http://cos.name/cn/topic/103779" target="_blank">竞赛答疑专帖</a>进行提问。允许的问题包括竞赛题目本身、数据、网站访问和比赛流程等，非此类问题（如算法细节）将不予答复并删除。
+请先阅读<a title="常见问题解答" href="http://www.statmodelingcompetition.com/faq.html" target="_blank">常见问题解答</a>，如果疑问依然存在 ，请到统计之都论坛的<a href="https://cos.name/cn/topic/103779" target="_blank">竞赛答疑专帖</a>进行提问。允许的问题包括竞赛题目本身、数据、网站访问和比赛流程等，非此类问题（如算法细节）将不予答复并删除。
 
 ## 奖项设置
 
@@ -69,7 +69,7 @@ slug: 1st-data-mining-competetion-for-college-students
 
   * <a href="http://stat.ustc.edu.cn/" target="_blank">中国科学技术大学管理学院</a>
   * <a href="http://stat.ruc.edu.cn/cn/" target="_blank">中国人民大学统计学院</a>
-  * <a href="http://cos.name/" target="_blank">统计之都</a>
+  * <a href="https://cos.name/" target="_blank">统计之都</a>
   * 上海花千树信息科技有限公司提供赞助
   * 竞赛委员会邮箱：<a href="mailto:dataminingcompetition@gmail.com" target="_blank">dataminingcompetition@gmail.com</a>
 

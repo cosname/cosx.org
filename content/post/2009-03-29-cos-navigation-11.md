@@ -18,18 +18,18 @@ slug: cos-navigation-11
 
 这周本站共发布了2篇日志：
 
-  * [中国人民大学统计学院研究生课程“统计模型”](http://cos.name/2009/03/ruc-stat-grad-stat-models/)
+  * [中国人民大学统计学院研究生课程“统计模型”](https://cos.name/2009/03/ruc-stat-grad-stat-models/)
   
     高校课堂：感谢程晓月的提供；
-  * [Hilbert空间视角下的时间序列模型](http://cos.name/2009/03/hilbert/)左辰作品：用两种Hilbert空间为时序模型提供了时域和频域两种不同的视角；
+  * [Hilbert空间视角下的时间序列模型](https://cos.name/2009/03/hilbert/)左辰作品：用两种Hilbert空间为时序模型提供了时域和频域两种不同的视角；
 
 ## 二、论坛
 
-[关于邀请大家成为统计之都高校联系人](http://cos.name/bbs/read.php?tid=13026)
+[关于邀请大家成为统计之都高校联系人](https://cos.name/bbs/read.php?tid=13026)
 
   * 沈阳工程学院政法系陈阳老师
 
-[捐赠](http://cos.name/donate/)
+[捐赠](https://cos.name/donate/)
 
   * 中国人民大学王剑
 

@@ -24,7 +24,7 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 
   
-[<img class="aligncenter size-full wp-image-9385" src="http://cos.name/wp-content/uploads/2013/12/B1.jpg" alt="B1" width="1022" height="460" srcset="http://cos.name/wp-content/uploads/2013/12/B1.jpg 1022w, http://cos.name/wp-content/uploads/2013/12/B1-300x135.jpg 300w, http://cos.name/wp-content/uploads/2013/12/B1-500x225.jpg 500w" sizes="(max-width: 1022px) 100vw, 1022px" />](http://cos.name/wp-content/uploads/2013/12/B1.jpg)
+[<img class="aligncenter size-full wp-image-9385" src="https://cos.name/wp-content/uploads/2013/12/B1.jpg" alt="B1" width="1022" height="460" srcset="https://cos.name/wp-content/uploads/2013/12/B1.jpg 1022w, https://cos.name/wp-content/uploads/2013/12/B1-300x135.jpg 300w, https://cos.name/wp-content/uploads/2013/12/B1-500x225.jpg 500w" sizes="(max-width: 1022px) 100vw, 1022px" />](https://cos.name/wp-content/uploads/2013/12/B1.jpg)
   
 <!--more-->
 
@@ -32,29 +32,29 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 本次会议讨论的主题涵盖了贝叶斯统计学在政治学、社会学习模型、金融学、经济计量等等众多方面的最新进展，共包含6 场精彩的特邀报告、4场贝叶斯入门培训报告和欢庆晚会，会场反响热烈。会议的流程和主要内容摘录如下。
 
-1.吴敬（天津财经大学）&#8211;[贝叶斯方法在政治学中的应用](http://cos.name/wp-content/uploads/2013/12/下载1-吴敬-贝叶斯方法在政治学中的应用.ppt)[
+1.吴敬（天津财经大学）&#8211;[贝叶斯方法在政治学中的应用](https://cos.name/wp-content/uploads/2013/12/下载1-吴敬-贝叶斯方法在政治学中的应用.ppt)[
   
-](http://cos.name/wp-content/uploads/2013/12/下载1-吴敬-贝叶斯方法在政治学中的应用.ppt) 
+](https://cos.name/wp-content/uploads/2013/12/下载1-吴敬-贝叶斯方法在政治学中的应用.ppt) 
 
 演讲者介绍了贝叶斯方法在政治学中的应用背景，说明了贝叶斯方法在政治学中应用的最新进展，系统梳理了贝叶斯方法在政治学应用中的相关文献，相信吴敬老师的分享对一些在这方面感兴趣的学友很有帮助。
 
-2. 陈丽云（eBay）&#8211;[基于贝叶斯的社会学习模型](http://cos.name/wp-content/uploads/2013/12/下载2-Liyun.Chen-slides_social_learning_part.pdf)<span style="text-decoration: underline;"><br /> </span>
+2. 陈丽云（eBay）&#8211;[基于贝叶斯的社会学习模型](https://cos.name/wp-content/uploads/2013/12/下载2-Liyun.Chen-slides_social_learning_part.pdf)<span style="text-decoration: underline;"><br /> </span>
 
 演讲者用生动的案例（豆瓣和美国高中生性知识教育项目）向大家说明什么是社会学习模型，然后以美国高中生性知识教育项目为依托，简约地介绍了贝叶斯方法在社会性学习模型中的应用，并用数值模拟的方法进行了展示。
 
-3. 邓一硕（首钢总公司）&#8211;[金融学中的贝叶斯应用](http://cos.name/wp-content/uploads/2013/12/下载4-邓一硕-贝叶斯在金融领域的应用概览.pdf)<span style="text-decoration: underline;"><br /> </span>
+3. 邓一硕（首钢总公司）&#8211;[金融学中的贝叶斯应用](https://cos.name/wp-content/uploads/2013/12/下载4-邓一硕-贝叶斯在金融领域的应用概览.pdf)<span style="text-decoration: underline;"><br /> </span>
 
 贝叶斯的触角已经伸向了各个领域，金融学也不例外。演讲者用两则生动的故事来道出贝叶斯定理的本质，然后介绍了，贝叶斯方法在信用评级、交易欺诈识别等与银行业相关的领域的应用，演讲者还讲授了在股票分类、市场趋势识别、波动率估计、投资组合风险等量化投资领域中贝叶斯方法的应用。
 
-4 李丰（中央财经大学）—[经济计量与贝叶斯模型](http://cos.name/wp-content/uploads/2013/12/下载3-Feng.Li-Bayesian1.pdf)<span style="text-decoration: underline;"><br /> </span>
+4 李丰（中央财经大学）—[经济计量与贝叶斯模型](https://cos.name/wp-content/uploads/2013/12/下载3-Feng.Li-Bayesian1.pdf)<span style="text-decoration: underline;"><br /> </span>
 
 李丰老师的开场白是，“如果我想做个纹身，那我就把贝叶斯公式纹在身上”，每一个贝叶斯迷也许都多少有点这样的“痴狂”。在经济计量领域，李丰老师应用贝叶斯方法得得心应手，他和我们分享了自己的几点思考与感想。这里引用李老师幻灯片里的一句话，“贝叶斯的美，不在于它的华丽，而在于它的简约。”更多精彩内容，请刨开上面的幻灯片链接。
 
-5. 林祯舜（江苏先锋科技）—[大数据与统计教育](http://cos.name/wp-content/uploads/2013/12/下载5-林祯舜-大数据与统计教育-业界的观点.pdf)<span style="text-decoration: underline;"><br /> </span>
+5. 林祯舜（江苏先锋科技）—[大数据与统计教育](https://cos.name/wp-content/uploads/2013/12/下载5-林祯舜-大数据与统计教育-业界的观点.pdf)<span style="text-decoration: underline;"><br /> </span>
 
 林老师这次是代表业界来参加这次会议的（不过他最后还是秀了一把“学术武功”）。林老师向国内统计教育学者振臂高呼“狼来了”，希望这些培育未来统计之花的园丁们赶快行动起来，在“大数据”的汹涌浪潮中，带领一代一代的学子们作勇敢的弄潮儿，在场的所有人几乎都被林老师的对统计的“拳拳之心”所感染。
 
-6. 刘乐平（天津财经大学）—[贝叶斯之道：道可道，非常道](http://cos.name/wp-content/uploads/2013/12/下载6-刘乐平-贝叶斯之道-道可道-非常道-2013-12-21.ppt)<span style="text-decoration: underline;"><br /> </span>
+6. 刘乐平（天津财经大学）—[贝叶斯之道：道可道，非常道](https://cos.name/wp-content/uploads/2013/12/下载6-刘乐平-贝叶斯之道-道可道-非常道-2013-12-21.ppt)<span style="text-decoration: underline;"><br /> </span>
 
 &nbsp;
 
@@ -62,33 +62,33 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 贝叶斯之道研究室的几名“年轻学者”（王中凯、盖亚男、朱祁恒、高磊），“斗胆”为大家奉献了四场贝叶斯入门培训报告。不足之处，请各位学友多多批评指正。
 
-[<img class="aligncenter size-full wp-image-9386" src="http://cos.name/wp-content/uploads/2013/12/b2.jpg" alt="b2" width="584" height="497" srcset="http://cos.name/wp-content/uploads/2013/12/b2.jpg 584w, http://cos.name/wp-content/uploads/2013/12/b2-300x255.jpg 300w, http://cos.name/wp-content/uploads/2013/12/b2-500x425.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" />](http://cos.name/wp-content/uploads/2013/12/b2.jpg)
+[<img class="aligncenter size-full wp-image-9386" src="https://cos.name/wp-content/uploads/2013/12/b2.jpg" alt="b2" width="584" height="497" srcset="https://cos.name/wp-content/uploads/2013/12/b2.jpg 584w, https://cos.name/wp-content/uploads/2013/12/b2-300x255.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b2-500x425.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" />](https://cos.name/wp-content/uploads/2013/12/b2.jpg)
 
 # 资料下载
 
 <p align="left">
-  <a href="http://cos.name/wp-content/uploads/2013/12/下载7-朱祁恒-R语言30分钟入门.rar">R语言30分钟入门</a>(朱祁恒，天津财经大学13级硕士生)<span style="text-decoration: underline;"><br /> </span>
+  <a href="https://cos.name/wp-content/uploads/2013/12/下载7-朱祁恒-R语言30分钟入门.rar">R语言30分钟入门</a>(朱祁恒，天津财经大学13级硕士生)<span style="text-decoration: underline;"><br /> </span>
 </p>
 
 <p align="left">
-  <a href="http://cos.name/wp-content/uploads/2013/12/下载8-盖亚男-初识贝叶斯1.pdf">初识贝叶斯</a>（盖亚男，天津财经大学10级本科生，中国人民大学14级推荐免试硕士生）<span style="text-decoration: underline;"><br /> </span>
+  <a href="https://cos.name/wp-content/uploads/2013/12/下载8-盖亚男-初识贝叶斯1.pdf">初识贝叶斯</a>（盖亚男，天津财经大学10级本科生，中国人民大学14级推荐免试硕士生）<span style="text-decoration: underline;"><br /> </span>
 </p>
 
 <p align="left">
-  <a href="http://cos.name/wp-content/uploads/2013/12/下载9-高磊-MCMC初步.rar">MCMC初步</a>(高磊，天津财经大学13级博士生)<span style="text-decoration: underline;"><br /> </span>
+  <a href="https://cos.name/wp-content/uploads/2013/12/下载9-高磊-MCMC初步.rar">MCMC初步</a>(高磊，天津财经大学13级博士生)<span style="text-decoration: underline;"><br /> </span>
 </p>
 
 <p align="left">
-  <a href="http://cos.name/wp-content/uploads/2013/12/下载10-王中恺-Learning-Bayesian-from-MOOC.pdf">Learning Bayesian from MOOC</a>（王中恺，天津财经大学10级本科生）<span style="text-decoration: underline;"><br /> </span>
+  <a href="https://cos.name/wp-content/uploads/2013/12/下载10-王中恺-Learning-Bayesian-from-MOOC.pdf">Learning Bayesian from MOOC</a>（王中恺，天津财经大学10级本科生）<span style="text-decoration: underline;"><br /> </span>
 </p>
 
 # 
 
 8. 庆祝贝叶斯定理250周年—文艺晚会
 
-纪念贝叶斯文艺晚会在冰镇骆驼乐队的“好想大声说爱你”拉开序幕，晚会除了天津财经大学的校舞蹈团、校民乐团和校合唱团倾情演出外，还特邀了南开大学、天津大学以及天津商业大学的相关社团进行助演。晚会形式新颖，采用现场微博互动的方式与同学们进行了实时动态交流。艺术系自己动手制作服装，进行的展演让观众们叹为观止，话剧[《穿越时空的贝叶斯》](http://cos.name/wp-content/uploads/2013/12/下载11-张园-贝叶斯话剧剧本.doc)惹得广大观众捧腹不止，演员们辛苦表演，观众们认真观看，掌声如潮，好评不断。贝叶斯知识问答和现场微博抽奖这两个环节更是将晚会推向了高潮。
+纪念贝叶斯文艺晚会在冰镇骆驼乐队的“好想大声说爱你”拉开序幕，晚会除了天津财经大学的校舞蹈团、校民乐团和校合唱团倾情演出外，还特邀了南开大学、天津大学以及天津商业大学的相关社团进行助演。晚会形式新颖，采用现场微博互动的方式与同学们进行了实时动态交流。艺术系自己动手制作服装，进行的展演让观众们叹为观止，话剧[《穿越时空的贝叶斯》](https://cos.name/wp-content/uploads/2013/12/下载11-张园-贝叶斯话剧剧本.doc)惹得广大观众捧腹不止，演员们辛苦表演，观众们认真观看，掌声如潮，好评不断。贝叶斯知识问答和现场微博抽奖这两个环节更是将晚会推向了高潮。
 
-[<img class="aligncenter size-full wp-image-9387" src="http://cos.name/wp-content/uploads/2013/12/b3.jpg" alt="b3" width="769" height="507" srcset="http://cos.name/wp-content/uploads/2013/12/b3.jpg 769w, http://cos.name/wp-content/uploads/2013/12/b3-300x197.jpg 300w, http://cos.name/wp-content/uploads/2013/12/b3-500x329.jpg 500w" sizes="(max-width: 769px) 100vw, 769px" />](http://cos.name/wp-content/uploads/2013/12/b3.jpg) [<img class="aligncenter size-full wp-image-9388" src="http://cos.name/wp-content/uploads/2013/12/b4.jpg" alt="b4" width="667" height="550" srcset="http://cos.name/wp-content/uploads/2013/12/b4.jpg 667w, http://cos.name/wp-content/uploads/2013/12/b4-300x247.jpg 300w, http://cos.name/wp-content/uploads/2013/12/b4-500x412.jpg 500w" sizes="(max-width: 667px) 100vw, 667px" />](http://cos.name/wp-content/uploads/2013/12/b4.jpg) [<img class="aligncenter size-full wp-image-9389" src="http://cos.name/wp-content/uploads/2013/12/b5.jpg" alt="b5" width="662" height="401" srcset="http://cos.name/wp-content/uploads/2013/12/b5.jpg 662w, http://cos.name/wp-content/uploads/2013/12/b5-300x181.jpg 300w, http://cos.name/wp-content/uploads/2013/12/b5-500x302.jpg 500w" sizes="(max-width: 662px) 100vw, 662px" />](http://cos.name/wp-content/uploads/2013/12/b5.jpg) [<img class="aligncenter size-full wp-image-9390" src="http://cos.name/wp-content/uploads/2013/12/b6.jpg" alt="b6" width="600" height="368" srcset="http://cos.name/wp-content/uploads/2013/12/b6.jpg 600w, http://cos.name/wp-content/uploads/2013/12/b6-300x184.jpg 300w, http://cos.name/wp-content/uploads/2013/12/b6-500x306.jpg 500w" sizes="(max-width: 600px) 100vw, 600px" />](http://cos.name/wp-content/uploads/2013/12/b6.jpg) [<img class="aligncenter size-full wp-image-9391" src="http://cos.name/wp-content/uploads/2013/12/b7.jpg" alt="b7" width="742" height="398" srcset="http://cos.name/wp-content/uploads/2013/12/b7.jpg 742w, http://cos.name/wp-content/uploads/2013/12/b7-300x160.jpg 300w, http://cos.name/wp-content/uploads/2013/12/b7-500x268.jpg 500w" sizes="(max-width: 742px) 100vw, 742px" />](http://cos.name/wp-content/uploads/2013/12/b7.jpg)
+[<img class="aligncenter size-full wp-image-9387" src="https://cos.name/wp-content/uploads/2013/12/b3.jpg" alt="b3" width="769" height="507" srcset="https://cos.name/wp-content/uploads/2013/12/b3.jpg 769w, https://cos.name/wp-content/uploads/2013/12/b3-300x197.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b3-500x329.jpg 500w" sizes="(max-width: 769px) 100vw, 769px" />](https://cos.name/wp-content/uploads/2013/12/b3.jpg) [<img class="aligncenter size-full wp-image-9388" src="https://cos.name/wp-content/uploads/2013/12/b4.jpg" alt="b4" width="667" height="550" srcset="https://cos.name/wp-content/uploads/2013/12/b4.jpg 667w, https://cos.name/wp-content/uploads/2013/12/b4-300x247.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b4-500x412.jpg 500w" sizes="(max-width: 667px) 100vw, 667px" />](https://cos.name/wp-content/uploads/2013/12/b4.jpg) [<img class="aligncenter size-full wp-image-9389" src="https://cos.name/wp-content/uploads/2013/12/b5.jpg" alt="b5" width="662" height="401" srcset="https://cos.name/wp-content/uploads/2013/12/b5.jpg 662w, https://cos.name/wp-content/uploads/2013/12/b5-300x181.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b5-500x302.jpg 500w" sizes="(max-width: 662px) 100vw, 662px" />](https://cos.name/wp-content/uploads/2013/12/b5.jpg) [<img class="aligncenter size-full wp-image-9390" src="https://cos.name/wp-content/uploads/2013/12/b6.jpg" alt="b6" width="600" height="368" srcset="https://cos.name/wp-content/uploads/2013/12/b6.jpg 600w, https://cos.name/wp-content/uploads/2013/12/b6-300x184.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b6-500x306.jpg 500w" sizes="(max-width: 600px) 100vw, 600px" />](https://cos.name/wp-content/uploads/2013/12/b6.jpg) [<img class="aligncenter size-full wp-image-9391" src="https://cos.name/wp-content/uploads/2013/12/b7.jpg" alt="b7" width="742" height="398" srcset="https://cos.name/wp-content/uploads/2013/12/b7.jpg 742w, https://cos.name/wp-content/uploads/2013/12/b7-300x160.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b7-500x268.jpg 500w" sizes="(max-width: 742px) 100vw, 742px" />](https://cos.name/wp-content/uploads/2013/12/b7.jpg)
 
 &nbsp;
 

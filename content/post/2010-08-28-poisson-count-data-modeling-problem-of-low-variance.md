@@ -16,7 +16,7 @@ tags:
 slug: poisson-count-data-modeling-problem-of-low-variance
 ---
 
-**本文作者为中国人民大学统计学院饶燕芳同学，由COS编辑部审核发表，略有修改。<a href="http://cos.name/wp-content/uploads/2010/08/poisson.pdf" target="_blank">点击此处下载/阅读本文PDF版本</a>**
+**本文作者为中国人民大学统计学院饶燕芳同学，由COS编辑部审核发表，略有修改。<a href="https://cos.name/wp-content/uploads/2010/08/poisson.pdf" target="_blank">点击此处下载/阅读本文PDF版本</a>**
 
 ## 一、问题的引出
 
@@ -54,7 +54,7 @@ Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数
 
 对于$\beta\_1,\beta\_2>0$，它的分布类似将概率密度图线向均值“挤压”(见图1)，分布更加集中，相对于标准的泊松分布就有更小的方差，称该分布为三参数指数加权泊松分布，记为 EWP3 。特殊地，当$\beta\_1=\beta\_2=\beta$时，称为两参数指数加权泊松分布，记为 EWP2 分布，当$\beta=0$时退化为标准泊松分布。对于EWP2 和 EWP3 ，它们拥有更高的峰值，标准化因子 W 可以由式 (a) 导出。尽管矩的表达没有显式，但可以确定分布的方差随着$\beta\_1,\beta\_2$或$\beta$的增大而降低。<figure id="attachment_2360" style="width: 299px" class="wp-caption aligncenter">
 
-[<img class="size-medium wp-image-2360" title="lambda=10,beta1=0.1,beta2=0.2的EWP分布" src="http://cos.name/wp-content/uploads/2010/08/photo1-299x299.png" alt="" width="299" height="299" srcset="http://cos.name/wp-content/uploads/2010/08/photo1-299x299.png 299w, http://cos.name/wp-content/uploads/2010/08/photo1-150x150.png 150w, http://cos.name/wp-content/uploads/2010/08/photo1-499x499.png 499w, http://cos.name/wp-content/uploads/2010/08/photo1.png 582w" sizes="(max-width: 299px) 100vw, 299px" />](http://cos.name/wp-content/uploads/2010/08/photo1.png)<figcaption class="wp-caption-text">图1 lambda=10,beta1=0.1,beta2=0.2的EWP分布</figcaption></figure> 
+[<img class="size-medium wp-image-2360" title="lambda=10,beta1=0.1,beta2=0.2的EWP分布" src="https://cos.name/wp-content/uploads/2010/08/photo1-299x299.png" alt="" width="299" height="299" srcset="https://cos.name/wp-content/uploads/2010/08/photo1-299x299.png 299w, https://cos.name/wp-content/uploads/2010/08/photo1-150x150.png 150w, https://cos.name/wp-content/uploads/2010/08/photo1-499x499.png 499w, https://cos.name/wp-content/uploads/2010/08/photo1.png 582w" sizes="(max-width: 299px) 100vw, 299px" />](https://cos.name/wp-content/uploads/2010/08/photo1.png)<figcaption class="wp-caption-text">图1 lambda=10,beta1=0.1,beta2=0.2的EWP分布</figcaption></figure> 
 
 对于加权泊松分布的探究使得权重还有一些别的形式，如 Castillo and Pe´rez-Casany (1998) 提出的幂加权泊松分布(PLWP)，Cameron 和 Johansson (1997) 使用的泊松多元加权分布 PPp 等。
 
@@ -120,7 +120,7 @@ Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数
 
 我们引用 Faddy（2001）的小鼠胚胎数据，作者已对该数据用 CBR 方法做了较好的分析。在产生该数据的实验中，对已经怀孕的小鼠用药（除草剂2,4,5-T），同时记录小鼠子宫上的胚胎着床数。数据给出了7种剂量水平下胚胎着床数的频率分布。在交配后的6-14天内，往怀孕的雌鼠体内注射某种剂量水平的2,4,5-T。在分娩之前，将雌鼠杀死，确定其体内的活胎数目。0剂量组的频数分布便具有泊松低方差特征。0剂量组数据的均值为11.55，方差为9.92，方差均值比为0.859。<figure id="attachment_2404" style="width: 300px" class="wp-caption aligncenter">
 
-[<img class="size-medium wp-image-2404" title="lambda=10,beta1=0.1,beta2=0.2的EWP分布" src="http://cos.name/wp-content/uploads/2010/08/photo21-300x300.png" alt="" width="300" height="300" srcset="http://cos.name/wp-content/uploads/2010/08/photo21-300x300.png 300w, http://cos.name/wp-content/uploads/2010/08/photo21-150x150.png 150w, http://cos.name/wp-content/uploads/2010/08/photo21-500x500.png 500w, http://cos.name/wp-content/uploads/2010/08/photo21.png 582w" sizes="(max-width: 300px) 100vw, 300px" />](http://cos.name/wp-content/uploads/2010/08/photo21.png)<figcaption class="wp-caption-text">图2</figcaption></figure> 
+[<img class="size-medium wp-image-2404" title="lambda=10,beta1=0.1,beta2=0.2的EWP分布" src="https://cos.name/wp-content/uploads/2010/08/photo21-300x300.png" alt="" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2010/08/photo21-300x300.png 300w, https://cos.name/wp-content/uploads/2010/08/photo21-150x150.png 150w, https://cos.name/wp-content/uploads/2010/08/photo21-500x500.png 500w, https://cos.name/wp-content/uploads/2010/08/photo21.png 582w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2010/08/photo21.png)<figcaption class="wp-caption-text">图2</figcaption></figure> 
 
 使用泊松分布对参数进行估计，参数 的最大似然估计为样本均值11.55，图2显示了估计的泊松分布和样本观测频率的差异。尽管拥有相同的均值，但由于数据具有泊松低方差特点，其经验分布的比泊松分布集中得多，可以说此时使用泊松分布模型的效果是差强人意的，显然不是一个合适的模型。
 
@@ -128,7 +128,7 @@ Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数
 
 分别使用 EWP2 和 EWP3 分布对0剂量组数据进行参数的最大似然估计。其中EWP2分布中，$\hat{\lambda}= 11.79$， $\hat{\beta}=0.11$，EWP3中，$\hat{\lambda}=14.56$，$\hat{\beta}\_1=-0.15$，$\hat{\beta}\_2=0.68$，估计的 EWP2 、EWP3 分布如图3。由于分布具有了泊松低方差特征，通过权重参数$\beta(\beta\_1,\beta\_2)$将分布向中部“挤压”，分布更加集中且峰值更高，估计的效果相比之下比泊松分布好很多。EWP2 由于在 $\lambda$ 的左右都赋予相等的权重，因此对称的“压缩”模式不如 EWP3 的非对称“压缩”有弹性，从观测数据经验分布的轻微左偏也暗示了允许$\beta\_1,\beta\_2$取不同值的 EWP3 分布在分布的拟合上更具优势。<figure id="attachment_2362" style="width: 299px" class="wp-caption aligncenter">
 
-[<img class="size-medium wp-image-2362" title="EWP2 、EWP3和CBR的分布拟合图" src="http://cos.name/wp-content/uploads/2010/08/photo3-299x299.png" alt="" width="299" height="299" srcset="http://cos.name/wp-content/uploads/2010/08/photo3-299x299.png 299w, http://cos.name/wp-content/uploads/2010/08/photo3-150x150.png 150w, http://cos.name/wp-content/uploads/2010/08/photo3-499x499.png 499w, http://cos.name/wp-content/uploads/2010/08/photo3.png 582w" sizes="(max-width: 299px) 100vw, 299px" />](http://cos.name/wp-content/uploads/2010/08/photo3.png)<figcaption class="wp-caption-text">图3 EWP2 、EWP3和CBR的分布拟合图</figcaption></figure> 
+[<img class="size-medium wp-image-2362" title="EWP2 、EWP3和CBR的分布拟合图" src="https://cos.name/wp-content/uploads/2010/08/photo3-299x299.png" alt="" width="299" height="299" srcset="https://cos.name/wp-content/uploads/2010/08/photo3-299x299.png 299w, https://cos.name/wp-content/uploads/2010/08/photo3-150x150.png 150w, https://cos.name/wp-content/uploads/2010/08/photo3-499x499.png 499w, https://cos.name/wp-content/uploads/2010/08/photo3.png 582w" sizes="(max-width: 299px) 100vw, 299px" />](https://cos.name/wp-content/uploads/2010/08/photo3.png)<figcaption class="wp-caption-text">图3 EWP2 、EWP3和CBR的分布拟合图</figcaption></figure> 
 
 ### 2. CBR分布
 
@@ -140,7 +140,7 @@ CBR参数的极大似然估计$\hat{\lambda}\_1,\hat{\lambda}\_2,\ldots,\hat{\la
 
 对于0剂量组数据，$\left(a,b,c,d\right)$的估计值为 {1.360, 3.507, 0.648, 2.953}，估计的分布与经验分布的对比如图4，尽管模型中减少了17个参数，但由于函数形式的合理，该分布仍旧保持较好的拟合效果，拟合优度$\chi^2(13)=6.755$，p值为0.914。<figure id="attachment_2363" style="width: 299px" class="wp-caption aligncenter">
 
-[<img class="size-medium wp-image-2363" title="图4" src="http://cos.name/wp-content/uploads/2010/08/photo4-299x299.png" alt="" width="299" height="299" srcset="http://cos.name/wp-content/uploads/2010/08/photo4-299x299.png 299w, http://cos.name/wp-content/uploads/2010/08/photo4-150x150.png 150w, http://cos.name/wp-content/uploads/2010/08/photo4-499x499.png 499w, http://cos.name/wp-content/uploads/2010/08/photo4.png 582w" sizes="(max-width: 299px) 100vw, 299px" />](http://cos.name/wp-content/uploads/2010/08/photo4.png)<figcaption class="wp-caption-text">图4</figcaption></figure> 
+[<img class="size-medium wp-image-2363" title="图4" src="https://cos.name/wp-content/uploads/2010/08/photo4-299x299.png" alt="" width="299" height="299" srcset="https://cos.name/wp-content/uploads/2010/08/photo4-299x299.png 299w, https://cos.name/wp-content/uploads/2010/08/photo4-150x150.png 150w, https://cos.name/wp-content/uploads/2010/08/photo4-499x499.png 499w, https://cos.name/wp-content/uploads/2010/08/photo4.png 582w" sizes="(max-width: 299px) 100vw, 299px" />](https://cos.name/wp-content/uploads/2010/08/photo4.png)<figcaption class="wp-caption-text">图4</figcaption></figure> 
 
 针对 2-4-5T 对小鼠胚胎着床影响的实验数据的泊松低方差特性，相对于标准泊松，加权泊松 EWP2、EWP3 和 CBR 在分布上的修正都使模型有许多改进，能够更好地表现出数据中蕴含的现实含义，其生物学意义的解释也更加清晰：在发育毒性的研究中，药物会影响早期的繁殖过程，阻止胚胎的形成。对于多胎的动物（如老鼠），参数起初的增长表示了受精胚胎着床过程可以进一步刺激排卵，之后的下降说明受精卵着床过程的减慢，这段平缓的过程也就使得方差有所降低。
 

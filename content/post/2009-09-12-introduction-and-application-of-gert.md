@@ -22,6 +22,6 @@ slug: introduction-and-application-of-gert
 
 文中第一部分详细介绍了GERT方法，可作为第二部分的参考内容；第二部分是利用GERT方法求解上述的两个抛硬币问题。由于文中图和公式较多，编辑比较麻烦，所以具体的文章见下面的链接。
 
-文章下载地址：[用GERT方法解决两个抛硬币问题](http://cos.name/wp-content/uploads/2009/09/application-of-gert-in-coin-problems.pdf)
+文章下载地址：[用GERT方法解决两个抛硬币问题](https://cos.name/wp-content/uploads/2009/09/application-of-gert-in-coin-problems.pdf)
 
-论坛帖子地址：<http://cos.name/bbs/read.php?tid=16360>
+论坛帖子地址：<https://cos.name/bbs/read.php?tid=16360>

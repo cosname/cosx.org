@@ -16,7 +16,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 除了统计之都主站，会务信息还会通过统计之都微信<span style="color: #808080;">(扫描本页面右侧微信公众平台二维码即可关注)</span>、微博(<a href="http://weibo.com/cosname" target="_blank">@统计之都</a>)来发布，欢迎大家关注获取最新消息。
 
-<img class="aligncenter" src="http://cos.name/wp-content/uploads/2010/06/China-R-Logo.png" alt="" width="532" height="353" />
+<img class="aligncenter" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png" alt="" width="532" height="353" />
 
 会议的相关情况如下：
 
@@ -26,13 +26,13 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 ## 二、会议地点
 
-广州市海珠区新港西路135号中山大学南校区网络中心报告厅。[<img class="size-large wp-image-10282 aligncenter" src="http://cos.name/wp-content/uploads/2014/10/中山大学-464x500.jpg" alt="中山大学" width="464" height="500" srcset="http://cos.name/wp-content/uploads/2014/10/中山大学-464x500.jpg 464w, http://cos.name/wp-content/uploads/2014/10/中山大学-278x300.jpg 278w, http://cos.name/wp-content/uploads/2014/10/中山大学.jpg 1000w" sizes="(max-width: 464px) 100vw, 464px" />](http://cos.name/wp-content/uploads/2014/10/中山大学.jpg)
+广州市海珠区新港西路135号中山大学南校区网络中心报告厅。[<img class="size-large wp-image-10282 aligncenter" src="https://cos.name/wp-content/uploads/2014/10/中山大学-464x500.jpg" alt="中山大学" width="464" height="500" srcset="https://cos.name/wp-content/uploads/2014/10/中山大学-464x500.jpg 464w, https://cos.name/wp-content/uploads/2014/10/中山大学-278x300.jpg 278w, https://cos.name/wp-content/uploads/2014/10/中山大学.jpg 1000w" sizes="(max-width: 464px) 100vw, 464px" />](https://cos.name/wp-content/uploads/2014/10/中山大学.jpg)
   
 <!--more-->
 
 ## **三、会议情况**
 
-2013年以来，北京、上海分会场会议规模都在400人以上，有来自近百家单位的人员参会，涵盖北京大学、清华大学、中国人民大学、中科院等各高校和研究所和百度、淘宝、豆瓣、当当网等企事业单位，会议现场气氛热烈，会后各界反映良好。历届会议纪要请参见[ http://cos.name/chinar/ ](http://cos.name/chinar/)。
+2013年以来，北京、上海分会场会议规模都在400人以上，有来自近百家单位的人员参会，涵盖北京大学、清华大学、中国人民大学、中科院等各高校和研究所和百度、淘宝、豆瓣、当当网等企事业单位，会议现场气氛热烈，会后各界反映良好。历届会议纪要请参见[ https://cos.name/chinar/ ](https://cos.name/chinar/)。
 
 近年来，随着华南地区数据科学领域的发展，R语言在电商、互联网、金融、医疗、生物医学等领域有着广泛的应用前景。来自各行各业的R用户亟需一个平台交流技术，碰撞思想。本次广州会议正是适应这种需求而举办。
 

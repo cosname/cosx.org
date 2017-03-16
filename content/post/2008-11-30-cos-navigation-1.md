@@ -22,21 +22,21 @@ slug: cos-navigation-1
 
 本周一共发布了15篇日志，以泛统计学为主，同时也包含了统计学其它方面的文章。（希望大家多多投稿）
 
-  1. [“统计之都”网站结构调整](http://cos.name/2008/11/cos-restructured/)
-  2. [第一届中国R语言会议将于12月中旬在中国人民大学召开](http://cos.name/2008/11/r-conference-notice/)
-  3. [如何学习统计学，或我的学习之路——初学者写给初学者](http://cos.name/2008/11/how-to-learn-statistics-by-jthu/)
-  4. [用户如何参加“统计之都”网站的各项工作](http://cos.name/2008/11/how-to-work-with-cos/)
-  5. [统计学的领域（写给在统计学院学习的学弟学妹之一）](http://cos.name/2008/11/domain-of-statistics-by-yihui/)
-  6. [用局部加权回归散点平滑法观察二维变量之间的关系](http://cos.name/2008/11/lowess-to-explore-bivariate-correlation-by-yihui/)
-  7. [统计学的历史与今天](http://cos.name/2008/11/statistics-history-and-today/)
-  8. [概率论的起源、发展、应用](http://cos.name/2008/11/probability-theory-origin-development-application/)
-  9. [次贷冲击下的统计学反思](http://cos.name/2008/11/subprimestat/)
- 10. [用Windows Live Writer发布博客到cos.name](http://cos.name/2008/11/windows-live-writer-blog-to-cos-name/)
- 11. [计量经济学概论](http://cos.name/2008/11/an-introduction-to-econometrics/)
- 12. [浅析试验设计](http://cos.name/2008/11/experiment-design/)
- 13. [关于搜索统计资源（写给在统计学院学习的学弟学妹之二）](http://cos.name/2008/11/how-to-search-for-statistics-resources/)
- 14. [我的一些统计方法观（写给在统计学院学习的学弟学妹之三）](http://cos.name/2008/11/outlook-on-statistical-methods/)
- 15. [统计学专业应该使用什么样的统计软件（写给在统计学院学习的学弟学妹之四）](http://cos.name/2008/11/which-statistical-software-should-we-use/)
+  1. [“统计之都”网站结构调整](https://cos.name/2008/11/cos-restructured/)
+  2. [第一届中国R语言会议将于12月中旬在中国人民大学召开](https://cos.name/2008/11/r-conference-notice/)
+  3. [如何学习统计学，或我的学习之路——初学者写给初学者](https://cos.name/2008/11/how-to-learn-statistics-by-jthu/)
+  4. [用户如何参加“统计之都”网站的各项工作](https://cos.name/2008/11/how-to-work-with-cos/)
+  5. [统计学的领域（写给在统计学院学习的学弟学妹之一）](https://cos.name/2008/11/domain-of-statistics-by-yihui/)
+  6. [用局部加权回归散点平滑法观察二维变量之间的关系](https://cos.name/2008/11/lowess-to-explore-bivariate-correlation-by-yihui/)
+  7. [统计学的历史与今天](https://cos.name/2008/11/statistics-history-and-today/)
+  8. [概率论的起源、发展、应用](https://cos.name/2008/11/probability-theory-origin-development-application/)
+  9. [次贷冲击下的统计学反思](https://cos.name/2008/11/subprimestat/)
+ 10. [用Windows Live Writer发布博客到cos.name](https://cos.name/2008/11/windows-live-writer-blog-to-cos-name/)
+ 11. [计量经济学概论](https://cos.name/2008/11/an-introduction-to-econometrics/)
+ 12. [浅析试验设计](https://cos.name/2008/11/experiment-design/)
+ 13. [关于搜索统计资源（写给在统计学院学习的学弟学妹之二）](https://cos.name/2008/11/how-to-search-for-statistics-resources/)
+ 14. [我的一些统计方法观（写给在统计学院学习的学弟学妹之三）](https://cos.name/2008/11/outlook-on-statistical-methods/)
+ 15. [统计学专业应该使用什么样的统计软件（写给在统计学院学习的学弟学妹之四）](https://cos.name/2008/11/which-statistical-software-should-we-use/)
 
 本周COS主站一共迎来七位作者加入：
 
@@ -54,10 +54,10 @@ slug: cos-navigation-1
 
 维基主要是用于统计词条的解释，本周主要对三个词条进行了解释。（欢迎大家对各个词条发表自己的见解）
 
-  1. [假设检验](http://cos.name/wiki/htest/start)
-  2. [试验设计](http://cos.name/wiki/doe/start)
-  3. [生物统计](http://cos.name/wiki/biostat/start)
-  4. [非参数检验](http://cos.name/wiki/nonparametric/start)
+  1. [假设检验](https://cos.name/wiki/htest/start)
+  2. [试验设计](https://cos.name/wiki/doe/start)
+  3. [生物统计](https://cos.name/wiki/biostat/start)
+  4. [非参数检验](https://cos.name/wiki/nonparametric/start)
 
 # 三、论坛
 

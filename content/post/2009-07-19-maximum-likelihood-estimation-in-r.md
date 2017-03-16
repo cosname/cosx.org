@@ -14,7 +14,7 @@ tags:
 slug: maximum-likelihood-estimation-in-r
 ---
 
-【注：本文的PDF格式版本可以从[这里](http://cos.name/wp-content/uploads/2009/07/ML.pdf "http://cos.name/wp-content/uploads/2009/07/ML.pdf")下载。】
+【注：本文的PDF格式版本可以从[这里](https://cos.name/wp-content/uploads/2009/07/ML.pdf "https://cos.name/wp-content/uploads/2009/07/ML.pdf")下载。】
 
 什么？你问我什么是**极大似然估计**么？这个嘛，看看你手边的概率或统计教材吧。没有么？那就到[维基百科](http://zh.wikipedia.org/w/index.php?title=%E6%9C%80%E5%A4%A7%E4%BC%BC%E7%84%B6%E4%BC%B0%E8%AE%A1&variant=zh-cn)上去看看。
 
@@ -43,7 +43,7 @@ slug: maximum-likelihood-estimation-in-r
 
 <pre class="brush: r">&gt; hist(waiting)</pre>
 
-[<img class="aligncenter size-full wp-image-1413" title="ml_hist" src="http://cos.name/wp-content/uploads/2009/08/ml_hist.png" alt="ml_hist" width="480" height="480" srcset="http://cos.name/wp-content/uploads/2009/08/ml_hist.png 480w, http://cos.name/wp-content/uploads/2009/08/ml_hist-150x150.png 150w, http://cos.name/wp-content/uploads/2009/08/ml_hist-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](http://cos.name/wp-content/uploads/2009/08/ml_hist.png)
+[<img class="aligncenter size-full wp-image-1413" title="ml_hist" src="https://cos.name/wp-content/uploads/2009/08/ml_hist.png" alt="ml_hist" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/08/ml_hist.png 480w, https://cos.name/wp-content/uploads/2009/08/ml_hist-150x150.png 150w, https://cos.name/wp-content/uploads/2009/08/ml_hist-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2009/08/ml_hist.png)
   
 从图中可以看出，其分布是两个正态分布的混合。可以用如下的分布函数来描述该数据
 
@@ -113,7 +113,7 @@ slug: maximum-likelihood-estimation-in-r
 &gt; #画出拟合的曲线
 &gt; lines(X,f)</pre>
 
-[<img class="aligncenter size-full wp-image-1404" title="clip_image004.jpg" src="http://cos.name/wp-content/uploads/2009/07/clip_image004.jpg" alt="clip_image004.jpg" width="481" height="480" srcset="http://cos.name/wp-content/uploads/2009/07/clip_image004.jpg 481w, http://cos.name/wp-content/uploads/2009/07/clip_image004-150x150.jpg 150w, http://cos.name/wp-content/uploads/2009/07/clip_image004-300x299.jpg 300w" sizes="(max-width: 481px) 100vw, 481px" />](http://cos.name/wp-content/uploads/2009/07/clip_image004.jpg)
+[<img class="aligncenter size-full wp-image-1404" title="clip_image004.jpg" src="https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg" alt="clip_image004.jpg" width="481" height="480" srcset="https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg 481w, https://cos.name/wp-content/uploads/2009/07/clip_image004-150x150.jpg 150w, https://cos.name/wp-content/uploads/2009/07/clip_image004-300x299.jpg 300w" sizes="(max-width: 481px) 100vw, 481px" />](https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg)
 
 <pre class="brush: r">&gt; detach()</pre>
 

@@ -15,7 +15,7 @@ slug: 8th-r-conference-wuhan
 
 R语言作为一种用于数据分析和图形展示的语言，是受S语言和Scheme语言影响发展而来，具有免费、开源及统计模块齐全的特性。其应用范围涵盖了数据挖掘、机器学习、计量经济学、实证金融学、生物统计、气象学、电子商务等诸多领域。R语言的官方机构每年都会举办useR!会议，各个国家及地区也定期会有R的交流活动。中国的R语言会议从2008年开始已经成功举办到了第八届，之前在北京、上海、广州、杭州等地举办的会议都非常成功，大力推动了R语言在国内的蓬勃发展，促进了R语言乃至数据科学在中国的推广和发展。为了让更多的人认识和熟悉R，华中地区将首次迎来中国R语言会议。2015年11月7日在湖北经济学院和统计之都等的共同努力下，R语言会议将在江城武汉举办。本次会议旨在搭建各行各业R用户技术交流的平台，拓宽R语言与数据科学、金融学、统计学、机器学习等领域结合的新视角，吸引越来越多的华中地区人士关注R语言和数据科学。
 
-[<img class="aligncenter size-full wp-image-11430" src="http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png 450w, http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](http://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+[<img class="aligncenter size-full wp-image-11430" src="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png 450w, https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
 
 一、会议时间<!--more-->
 
@@ -132,7 +132,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="http://cos.name/wp-content/uploads/2015/10/路线.jpg"><img class="aligncenter size-full wp-image-11495" src="http://cos.name/wp-content/uploads/2015/10/路线.jpg" alt="路线" width="981" height="671" srcset="http://cos.name/wp-content/uploads/2015/10/路线.jpg 981w, http://cos.name/wp-content/uploads/2015/10/路线-300x205.jpg 300w, http://cos.name/wp-content/uploads/2015/10/路线-500x342.jpg 500w" sizes="(max-width: 981px) 100vw, 981px" /></a>
+          <a href="https://cos.name/wp-content/uploads/2015/10/路线.jpg"><img class="aligncenter size-full wp-image-11495" src="https://cos.name/wp-content/uploads/2015/10/路线.jpg" alt="路线" width="981" height="671" srcset="https://cos.name/wp-content/uploads/2015/10/路线.jpg 981w, https://cos.name/wp-content/uploads/2015/10/路线-300x205.jpg 300w, https://cos.name/wp-content/uploads/2015/10/路线-500x342.jpg 500w" sizes="(max-width: 981px) 100vw, 981px" /></a>
         </p>
         
         <p>
@@ -164,7 +164,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="http://cos.name/wp-content/uploads/2015/10/hubei.jpg"><img class="wp-image-11496 size-medium alignleft" src="http://cos.name/wp-content/uploads/2015/10/hubei-300x300.jpg" alt="hubei" width="300" height="300" srcset="http://cos.name/wp-content/uploads/2015/10/hubei-300x300.jpg 300w, http://cos.name/wp-content/uploads/2015/10/hubei-150x150.jpg 150w, http://cos.name/wp-content/uploads/2015/10/hubei-500x500.jpg 500w, http://cos.name/wp-content/uploads/2015/10/hubei.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+          <a href="https://cos.name/wp-content/uploads/2015/10/hubei.jpg"><img class="wp-image-11496 size-medium alignleft" src="https://cos.name/wp-content/uploads/2015/10/hubei-300x300.jpg" alt="hubei" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/hubei-300x300.jpg 300w, https://cos.name/wp-content/uploads/2015/10/hubei-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/10/hubei-500x500.jpg 500w, https://cos.name/wp-content/uploads/2015/10/hubei.jpg 640w" sizes="(max-width: 300px) 100vw, 300px" /></a>
         </p>
         
         <p>
@@ -200,7 +200,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="http://cos.name/wp-content/uploads/2015/10/统计.png"><img class="wp-image-11497 size-medium alignleft" src="http://cos.name/wp-content/uploads/2015/10/统计-300x69.png" alt="统计" width="300" height="69" srcset="http://cos.name/wp-content/uploads/2015/10/统计-300x69.png 300w, http://cos.name/wp-content/uploads/2015/10/统计-500x115.png 500w, http://cos.name/wp-content/uploads/2015/10/统计.png 521w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+          <a href="https://cos.name/wp-content/uploads/2015/10/统计.png"><img class="wp-image-11497 size-medium alignleft" src="https://cos.name/wp-content/uploads/2015/10/统计-300x69.png" alt="统计" width="300" height="69" srcset="https://cos.name/wp-content/uploads/2015/10/统计-300x69.png 300w, https://cos.name/wp-content/uploads/2015/10/统计-500x115.png 500w, https://cos.name/wp-content/uploads/2015/10/统计.png 521w" sizes="(max-width: 300px) 100vw, 300px" /></a>
         </p>
         
         <p>
@@ -228,7 +228,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="http://cos.name/wp-content/uploads/2015/10/0082.jpg"><img class="size-full wp-image-11543 alignleft" src="http://cos.name/wp-content/uploads/2015/10/0082.jpg" alt="008" width="302" height="269" srcset="http://cos.name/wp-content/uploads/2015/10/0082.jpg 302w, http://cos.name/wp-content/uploads/2015/10/0082-300x267.jpg 300w" sizes="(max-width: 302px) 100vw, 302px" /></a>
+          <a href="https://cos.name/wp-content/uploads/2015/10/0082.jpg"><img class="size-full wp-image-11543 alignleft" src="https://cos.name/wp-content/uploads/2015/10/0082.jpg" alt="008" width="302" height="269" srcset="https://cos.name/wp-content/uploads/2015/10/0082.jpg 302w, https://cos.name/wp-content/uploads/2015/10/0082-300x267.jpg 300w" sizes="(max-width: 302px) 100vw, 302px" /></a>
         </p>
         
         <p>
@@ -296,7 +296,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="http://cos.name/wp-content/uploads/2015/10/0092.jpg"><img class="size-full wp-image-11544 alignleft" src="http://cos.name/wp-content/uploads/2015/10/0092.jpg" alt="009" width="267" height="288" /></a>
+          <a href="https://cos.name/wp-content/uploads/2015/10/0092.jpg"><img class="size-full wp-image-11544 alignleft" src="https://cos.name/wp-content/uploads/2015/10/0092.jpg" alt="009" width="267" height="288" /></a>
         </p>
         
         <p>

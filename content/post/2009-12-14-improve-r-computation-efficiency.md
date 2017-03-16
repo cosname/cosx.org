@@ -19,7 +19,7 @@ slug: improve-r-computation-efficiency
 
 用过底层语言做计算的人转入R语言的时候一般都会觉得R语言的运算太慢，这是一个常见的对R的误解或者对R的设计的不理解。在二三十年前Chambers等一群人在贝尔实验室设计S语言之前，统计计算主要是通过那些底层语言实现的，典型的如Fortran。当时有一个基于Fortran的统计分析库，用它的麻烦就在于无论做什么样的数据分析，都涉及到一大摞繁琐的底层代码，这让数据分析变得很没劲，统计学家有统计学家的事情，天天陷在计算机程序代码中也不是个办法，要摆脱底层语言，那就只能设计高层语言了。有所得必有所失，众所周知，高层语言一般来说比底层语言低效，但对用户来说更友好。举个简单的例子，用C语言计算均值时，我们得对一个向量（数组）从头循环到尾把每个值累加起来，得到总和，然后除以向量的长度，而均值在统计当中简直是再家常便饭不过了，要是每次都要来这么个循环，大家也都甭干活儿了，天天写循环好了。
 
-前两天COS论坛上有个帖子提到“<a title="http://cos.name/bbs/read.php?tid=17601" href="http://cos.name/bbs/read.php?tid=17601" target="_blank">R语言的执行效率问题</a>”，大意如下：
+前两天COS论坛上有个帖子提到“<a title="https://cos.name/bbs/read.php?tid=17601" href="https://cos.name/bbs/read.php?tid=17601" target="_blank">R语言的执行效率问题</a>”，大意如下：
 
 > 有120000行数据，用perl写成12万行R命令做t.test，然后执行，大概几分钟就算完了。如果只用R语言，把所有数据先读入，然后用循环，每一行做t.test，花了几个小时，到现在还没有算完。这说明一个问题，在R里执行单行命令要比用循环快，涉及到循环的问题，最好写成单行命令执行。
 
@@ -175,7 +175,7 @@ dyn.unload(sprintf("calc_pvalue%s", .Platform$dynlib.ext))</pre>
 
 头文件`Rmath.h`的引入使得我们可以调用很多基于C程序的R函数，详情参考手册Writing R Extensions。通过C计算出来的P值和前面用R算的略有差异，下面画出`p6 - p1` vs `p1`以及`p6 - p5` vs `p5`的图：<figure id="attachment_1802" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-1802" title="P值的差异" src="http://cos.name/wp-content/uploads/2009/12/p-values-error.png" alt="P值的差异" width="480" height="480" srcset="http://cos.name/wp-content/uploads/2009/12/p-values-error.png 480w, http://cos.name/wp-content/uploads/2009/12/p-values-error-150x150.png 150w, http://cos.name/wp-content/uploads/2009/12/p-values-error-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](http://cos.name/wp-content/uploads/2009/12/p-values-error.png)<figcaption class="wp-caption-text">P值的差异</figcaption></figure> 
+[<img class="size-full wp-image-1802" title="P值的差异" src="https://cos.name/wp-content/uploads/2009/12/p-values-error.png" alt="P值的差异" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/12/p-values-error.png 480w, https://cos.name/wp-content/uploads/2009/12/p-values-error-150x150.png 150w, https://cos.name/wp-content/uploads/2009/12/p-values-error-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2009/12/p-values-error.png)<figcaption class="wp-caption-text">P值的差异</figcaption></figure> 
 
 导致差异的原因此处不细究，感兴趣的读者可以帮忙检查一下。
 

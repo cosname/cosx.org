@@ -13,7 +13,7 @@ slug: guangzhou-cos-salon10
 
 2013年6月29日，广州COS沙龙第二期（总第十期）在中山大学数学楼104会议室如期举行。本期沙龙以“数据科学”为主题。很多对数据科学感兴趣的人参加了这次会议，宽敞的会议室几乎座无虚席。除了中山大学的在校学生之外，还有很多从业人员慕名而来。
 
-[<img class="size-full wp-image-8637" alt="观众基本坐满了会议室" src="http://cos.name/wp-content/uploads/2013/09/GZ.jpg" width="800" height="600" srcset="http://cos.name/wp-content/uploads/2013/09/GZ.jpg 800w, http://cos.name/wp-content/uploads/2013/09/GZ-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/09/GZ-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](http://cos.name/wp-content/uploads/2013/09/GZ.jpg)
+[<img class="size-full wp-image-8637" alt="观众基本坐满了会议室" src="https://cos.name/wp-content/uploads/2013/09/GZ.jpg" width="800" height="600" srcset="https://cos.name/wp-content/uploads/2013/09/GZ.jpg 800w, https://cos.name/wp-content/uploads/2013/09/GZ-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/09/GZ-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2013/09/GZ.jpg)
 
 <p align="center">
    观众基本坐满了会议室
@@ -21,7 +21,7 @@ slug: guangzhou-cos-salon10
 
 沙龙的第一场是由张晔带来的《R语言——历史与现状》，简要地说明了R语言发展的历史和R语言的现状。在当下的环境中，R已然成为数据科学领域的明星语言，越来越多的企业开始发掘R 在商业中的应用潜力，也有大量与R 相关职业出现。R的强大生命力和良好的发展势头离不开一个成熟而且积极进取的开源社区。希望通过这个展示，能有更多的人参与到R 的开源社区中。
 
-[<img class="aligncenter size-full wp-image-8643" alt="张晔同学在讲解R语言的历史" src="http://cos.name/wp-content/uploads/2013/09/ZY.jpg" width="800" height="600" srcset="http://cos.name/wp-content/uploads/2013/09/ZY.jpg 800w, http://cos.name/wp-content/uploads/2013/09/ZY-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/09/ZY-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](http://cos.name/wp-content/uploads/2013/09/ZY.jpg)
+[<img class="aligncenter size-full wp-image-8643" alt="张晔同学在讲解R语言的历史" src="https://cos.name/wp-content/uploads/2013/09/ZY.jpg" width="800" height="600" srcset="https://cos.name/wp-content/uploads/2013/09/ZY.jpg 800w, https://cos.name/wp-content/uploads/2013/09/ZY-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/09/ZY-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2013/09/ZY.jpg)
 
 <p align="center">
    张晔同学在讲解R语言的历史
@@ -29,7 +29,7 @@ slug: guangzhou-cos-salon10
 
 第二场做展示的是中山大学数计院的蔡敬衡副教授。演讲的主题是在R中调用C, C++语言。性能问题一直是R语言需要解决的重要问题。其中一种常用的方法就是在R语言底层调用C语言等。蔡老师用丰富的材料和科研项目中的经验详尽地说明了在R中调用C语言的接口和方法。
   
-[<img class="aligncenter size-full wp-image-8645" alt="蔡敬衡老师" src="http://cos.name/wp-content/uploads/2013/09/CJH.jpg" width="800" height="600" srcset="http://cos.name/wp-content/uploads/2013/09/CJH.jpg 800w, http://cos.name/wp-content/uploads/2013/09/CJH-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/09/CJH-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](http://cos.name/wp-content/uploads/2013/09/CJH.jpg)
+[<img class="aligncenter size-full wp-image-8645" alt="蔡敬衡老师" src="https://cos.name/wp-content/uploads/2013/09/CJH.jpg" width="800" height="600" srcset="https://cos.name/wp-content/uploads/2013/09/CJH.jpg 800w, https://cos.name/wp-content/uploads/2013/09/CJH-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/09/CJH-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2013/09/CJH.jpg)
 
 <p align="center">
   蔡敬衡老师
@@ -37,7 +37,7 @@ slug: guangzhou-cos-salon10
 
 《Excel 2010数据透视表大全》的作者林盘生老师带来了第三场的展示《浅谈数据挖掘的关联销售》。林老师作为一线的从业人员，他的展示与前面两位学院派的演讲者有着极为不同的视角，从实例出发，分析了在商业销售中数据挖掘的重要作用。林老师的精彩演讲获得了热烈的回应，在展示结束之后，有手持笔记本的同学起来与林老师就展示中的问题展开了热烈的讨论。
 
-[<img class="aligncenter size-full wp-image-8650" alt="林盘生老师" src="http://cos.name/wp-content/uploads/2013/09/LPS.jpg" width="800" height="600" srcset="http://cos.name/wp-content/uploads/2013/09/LPS.jpg 800w, http://cos.name/wp-content/uploads/2013/09/LPS-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/09/LPS-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](http://cos.name/wp-content/uploads/2013/09/LPS.jpg)
+[<img class="aligncenter size-full wp-image-8650" alt="林盘生老师" src="https://cos.name/wp-content/uploads/2013/09/LPS.jpg" width="800" height="600" srcset="https://cos.name/wp-content/uploads/2013/09/LPS.jpg 800w, https://cos.name/wp-content/uploads/2013/09/LPS-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/09/LPS-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2013/09/LPS.jpg)
 
 <p align="center">
   林盘生老师
@@ -45,7 +45,7 @@ slug: guangzhou-cos-salon10
 
 第四场展示是由中山大学数计院的黄金搭档何通和朱雪宁带来的关于集成学习(ensemble learning)的展示。他们的展示文档具有极强的视觉冲击力，生动形象，深入浅出地讲述了集成学习的思路。相比起传统的线性方法（如逻辑回归）和支持向量机，集成学习更为灵活高效。
   
-[<img class="aligncenter size-full wp-image-8646" alt="刚刚成为中大校友的何通同学（左）和朱雪宁同学" src="http://cos.name/wp-content/uploads/2013/09/HT.jpg" width="800" height="600" srcset="http://cos.name/wp-content/uploads/2013/09/HT.jpg 800w, http://cos.name/wp-content/uploads/2013/09/HT-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/09/HT-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](http://cos.name/wp-content/uploads/2013/09/HT.jpg)
+[<img class="aligncenter size-full wp-image-8646" alt="刚刚成为中大校友的何通同学（左）和朱雪宁同学" src="https://cos.name/wp-content/uploads/2013/09/HT.jpg" width="800" height="600" srcset="https://cos.name/wp-content/uploads/2013/09/HT.jpg 800w, https://cos.name/wp-content/uploads/2013/09/HT-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/09/HT-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2013/09/HT.jpg)
 
 <p align="center">
   刚刚成为中大校友的何通同学（左）和朱雪宁同学
@@ -53,7 +53,7 @@ slug: guangzhou-cos-salon10
 
 带来第五场展示的是中大校友江宇闻师兄，就职于中美大都会人寿的他演讲的主题是《直复营销中的客户价值管理》。 江师兄用详尽的数据和丰富的案例说明了数据挖掘在精准营销中的重要作用。值得注意的是，和林盘生老师一样，同样是一线从业者的江师兄运用得比较多的依然是一些古典的工具和模型（如逻辑回归）。在演讲中，江师兄也提到，在精准营销的领域，过拟合是更需避免的问题，不必过于追求精度。由此看来一些比较先进的统计工具要大规模进入实战领域，还有很长的一段路要走。
   
-[<img class="aligncenter size-full wp-image-8648" alt="江宇闻老师" src="http://cos.name/wp-content/uploads/2013/09/JYW.jpg" width="800" height="600" srcset="http://cos.name/wp-content/uploads/2013/09/JYW.jpg 800w, http://cos.name/wp-content/uploads/2013/09/JYW-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/09/JYW-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](http://cos.name/wp-content/uploads/2013/09/JYW.jpg)
+[<img class="aligncenter size-full wp-image-8648" alt="江宇闻老师" src="https://cos.name/wp-content/uploads/2013/09/JYW.jpg" width="800" height="600" srcset="https://cos.name/wp-content/uploads/2013/09/JYW.jpg 800w, https://cos.name/wp-content/uploads/2013/09/JYW-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/09/JYW-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2013/09/JYW.jpg)
 
 <p align="center">
   江宇闻老师
@@ -61,7 +61,7 @@ slug: guangzhou-cos-salon10
 
 最后一场展示由沙龙的组织者，勇猛精进的寇强同学（没故事的生科男）主讲，他简单讲述了R开源社区的生态，介绍了若干值得关注的方向（数据可视化等），并着重讲解了如何参与Google Summer of Code活动。已经有不少R项目加入这个活动当中了，如果各位觉得暑假漫长，不妨申请一下相关项目，当一个暑期码农。虽然夏日炎炎，但想到Google的5000美金，大概也能清凉一些吧。
   
-[<img class="aligncenter size-full wp-image-8649" alt="表情丰富的寇强同学" src="http://cos.name/wp-content/uploads/2013/09/KQ.jpg" width="800" height="600" srcset="http://cos.name/wp-content/uploads/2013/09/KQ.jpg 800w, http://cos.name/wp-content/uploads/2013/09/KQ-300x225.jpg 300w, http://cos.name/wp-content/uploads/2013/09/KQ-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](http://cos.name/wp-content/uploads/2013/09/KQ.jpg)
+[<img class="aligncenter size-full wp-image-8649" alt="表情丰富的寇强同学" src="https://cos.name/wp-content/uploads/2013/09/KQ.jpg" width="800" height="600" srcset="https://cos.name/wp-content/uploads/2013/09/KQ.jpg 800w, https://cos.name/wp-content/uploads/2013/09/KQ-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/09/KQ-500x375.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2013/09/KQ.jpg)
 
 <p align="center">
   表情丰富的寇强同学

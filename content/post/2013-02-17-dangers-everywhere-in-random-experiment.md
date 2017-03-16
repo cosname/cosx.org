@@ -11,7 +11,7 @@ tags:
 slug: dangers-everywhere-in-random-experiment
 ---
 
-By [陈丽云](http://cos.name/author/liyun/)
+By [陈丽云](https://cos.name/author/liyun/)
 
 自从Fisher大神种地种出心得来，搞出了随机对照试验，这样的简单有效方法就如春风一般席卷了五湖四海。很多时候，你不整出来个控制的分毫不差的随机试验，再好的契合直觉的结果也没人相信。人们对于因果关系的定义，好像一瞬间都集中在了统计分析的一致性上&#8230;显著吗？亲，几个星号？（注：Fisher的炫目人生和随机试验的来龙去脉，请参见书籍《女士品茶》(《The Lady Tasting Tea——How Statistics Revolutionized Science in the Twentieth Century)》）。
 

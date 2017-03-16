@@ -16,15 +16,15 @@ menu: main
 <table>
   <tr>
     <td style="text-align: center;" width="30%">
-      <img src="http://cos.name/wp-content/uploads/2013/03/r-in-action-small.jpg" alt="R-in-Action" /><br /> <a title="《R语言实战》" href="http://cos.name/2013/03/r-in-action/" target="_blank">《R语言实战》</a>
+      <img src="https://cos.name/wp-content/uploads/2013/03/r-in-action-small.jpg" alt="R-in-Action" /><br /> <a title="《R语言实战》" href="https://cos.name/2013/03/r-in-action/" target="_blank">《R语言实战》</a>
     </td>
     
     <td style="text-align: center;" width="30%">
-      <img src="http://cos.name/wp-content/uploads/2013/05/ggplot2-212x300.jpg" alt="ggplot2" width="150" height="188" /><br /> <a title="《ggplot2：数据分析与图形艺术》" href="http://cos.name/2013/05/ggplot2/" target="_blank">《ggplot2：数据分析与图形艺术》</a>
+      <img src="https://cos.name/wp-content/uploads/2013/05/ggplot2-212x300.jpg" alt="ggplot2" width="150" height="188" /><br /> <a title="《ggplot2：数据分析与图形艺术》" href="https://cos.name/2013/05/ggplot2/" target="_blank">《ggplot2：数据分析与图形艺术》</a>
     </td>
     
     <td style="text-align: center;" width="30%">
-      <img src="http://cos.name/wp-content/uploads/2013/05/art-of-r-small.jpg" alt="art-of-r-programming" height="188" /><br /> <a title="《R语言编程艺术》" href="http://cos.name/2013/05/the-art-r-programming/" target="_blank">《R语言编程艺术》</a>
+      <img src="https://cos.name/wp-content/uploads/2013/05/art-of-r-small.jpg" alt="art-of-r-programming" height="188" /><br /> <a title="《R语言编程艺术》" href="https://cos.name/2013/05/the-art-r-programming/" target="_blank">《R语言编程艺术》</a>
     </td>
   </tr>
   
@@ -34,21 +34,21 @@ menu: main
     </td>
     
     <td style="text-align: center;" width="30%">
-      <a href="http://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg"><img class="aligncenter wp-image-11206" src="http://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell-205x300.jpg" alt="R_in_a_nutshell" width="150" height="219" srcset="http://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell-205x300.jpg 205w, http://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell-342x500.jpg 342w, http://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg 516w" sizes="(max-width: 150px) 100vw, 150px" /></a><a href="http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-121-23786-7" target="_blank">《R语言核心技术手册》</a>
+      <a href="https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg"><img class="aligncenter wp-image-11206" src="https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell-205x300.jpg" alt="R_in_a_nutshell" width="150" height="219" srcset="https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell-205x300.jpg 205w, https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell-342x500.jpg 342w, https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg 516w" sizes="(max-width: 150px) 100vw, 150px" /></a><a href="http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-121-23786-7" target="_blank">《R语言核心技术手册》</a>
     </td>
     
     <td style="text-align: center;" width="30%">
-      <a href="http://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png"><img class="aligncenter wp-image-11207" src="http://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook-229x300.png" alt="R_graphics_cookbook" width="150" height="196" srcset="http://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook-229x300.png 229w, http://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook-382x500.png 382w, http://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png 500w" sizes="(max-width: 150px) 100vw, 150px" /></a> <a href="http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-115-34227-0" target="_blank">《R数据可视化手册》</a>
+      <a href="https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png"><img class="aligncenter wp-image-11207" src="https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook-229x300.png" alt="R_graphics_cookbook" width="150" height="196" srcset="https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook-229x300.png 229w, https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook-382x500.png 382w, https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png 500w" sizes="(max-width: 150px) 100vw, 150px" /></a> <a href="http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-115-34227-0" target="_blank">《R数据可视化手册》</a>
     </td>
   </tr>
   
   <tr>
     <td style="text-align: center;" width="30%">
-      <a href="http://cos.name/wp-content/uploads/2013/03/R_data_science.jpg"><img class="aligncenter wp-image-11209" src="http://cos.name/wp-content/uploads/2013/03/R_data_science-208x300.jpg" alt="R_data_science" width="150" height="217" srcset="http://cos.name/wp-content/uploads/2013/03/R_data_science-208x300.jpg 208w, http://cos.name/wp-content/uploads/2013/03/R_data_science.jpg 303w" sizes="(max-width: 150px) 100vw, 150px" /></a><br /> <a title="Dynamic Documents with R and knitr" href="http://cos.name/2015/07/years-as-a-data-scientist/" target="_blank">《数据科学中的R语言》</a>
+      <a href="https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg"><img class="aligncenter wp-image-11209" src="https://cos.name/wp-content/uploads/2013/03/R_data_science-208x300.jpg" alt="R_data_science" width="150" height="217" srcset="https://cos.name/wp-content/uploads/2013/03/R_data_science-208x300.jpg 208w, https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg 303w" sizes="(max-width: 150px) 100vw, 150px" /></a><br /> <a title="Dynamic Documents with R and knitr" href="https://cos.name/2015/07/years-as-a-data-scientist/" target="_blank">《数据科学中的R语言》</a>
     </td>
     
     <td style="text-align: center;" width="30%">
-      <a href="http://cos.name/wp-content/uploads/2013/03/rcpp0.jpg"><br /> <img class="aligncenter wp-image-11845" src="http://cos.name/wp-content/uploads/2013/03/rcpp0.jpg" alt="rcpp0" width=150 height=217 srcset="http://cos.name/wp-content/uploads/2013/03/rcpp0.jpg 278w, http://cos.name/wp-content/uploads/2013/03/rcpp0-242x300.jpg 242w" sizes="(max-width: 278px) 100vw, 278px" /></a><br /> <a href="http://cos.name/2016/01/seamless-r-and-c-integration-with-rcpp/" rel="bookmark">《Rcpp:R与C++的无缝整合》</a>
+      <a href="https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg"><br /> <img class="aligncenter wp-image-11845" src="https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg" alt="rcpp0" width=150 height=217 srcset="https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg 278w, https://cos.name/wp-content/uploads/2013/03/rcpp0-242x300.jpg 242w" sizes="(max-width: 278px) 100vw, 278px" /></a><br /> <a href="https://cos.name/2016/01/seamless-r-and-c-integration-with-rcpp/" rel="bookmark">《Rcpp:R与C++的无缝整合》</a>
     </td>
     
     <td style="text-align: center;" width="30%">

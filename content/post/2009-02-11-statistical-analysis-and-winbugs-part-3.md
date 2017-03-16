@@ -69,7 +69,7 @@ $b_i$反映的是与地域相关的潜在的患病风险因子。其他项不言
 
 ## <span style="color: #800000;">第二节 GeoBUGS的界面操作</span><figure id="attachment_1271" style="width: 438px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-1271" title="GeoBUGS的地图工具配置界面" src="http://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png" alt="GeoBUGS的地图工具配置界面" width="438" height="260" srcset="http://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png 438w, http://cos.name/wp-content/uploads/2009/02/geobugs-3-3-300x178.png 300w" sizes="(max-width: 438px) 100vw, 438px" />](http://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png)<figcaption class="wp-caption-text">GeoBUGS的地图工具配置界面</figcaption></figure> 
+[<img class="size-full wp-image-1271" title="GeoBUGS的地图工具配置界面" src="https://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png" alt="GeoBUGS的地图工具配置界面" width="438" height="260" srcset="https://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png 438w, https://cos.name/wp-content/uploads/2009/02/geobugs-3-3-300x178.png 300w" sizes="(max-width: 438px) 100vw, 438px" />](https://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png)<figcaption class="wp-caption-text">GeoBUGS的地图工具配置界面</figcaption></figure> 
 
 第一步，打开Map-> Map Tool菜单，选择Scotland这张地图
 
@@ -83,11 +83,11 @@ $b_i$反映的是与地域相关的潜在的患病风险因子。其他项不言
 
 很简单吧。<figure id="attachment_1272" style="width: 445px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-1272" title="GeoBUGS生成的地图" src="http://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png" alt="GeoBUGS生成的地图" width="445" height="518" srcset="http://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png 445w, http://cos.name/wp-content/uploads/2009/02/GeoBUGS-map-257x300.png 257w, http://cos.name/wp-content/uploads/2009/02/GeoBUGS-map-429x500.png 429w" sizes="(max-width: 445px) 100vw, 445px" />](http://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png)<figcaption class="wp-caption-text">GeoBUGS生成的地图</figcaption></figure> 
+[<img class="size-full wp-image-1272" title="GeoBUGS生成的地图" src="https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png" alt="GeoBUGS生成的地图" width="445" height="518" srcset="https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png 445w, https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map-257x300.png 257w, https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map-429x500.png 429w" sizes="(max-width: 445px) 100vw, 445px" />](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png)<figcaption class="wp-caption-text">GeoBUGS生成的地图</figcaption></figure> 
 
 GeoBUGS还提供了一些小工具，比如Adjacency Map来查看邻接图。<figure id="attachment_1273" style="width: 300px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-1273" title="用GeoBUGS显示邻接地图" src="http://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png" alt="用GeoBUGS显示邻接地图" width="300" height="523" srcset="http://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png 300w, http://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map-172x300.png 172w, http://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map-286x500.png 286w" sizes="(max-width: 300px) 100vw, 300px" />](http://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png)<figcaption class="wp-caption-text">用GeoBUGS显示邻接地图</figcaption></figure> 
+[<img class="size-full wp-image-1273" title="用GeoBUGS显示邻接地图" src="https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png" alt="用GeoBUGS显示邻接地图" width="300" height="523" srcset="https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png 300w, https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map-172x300.png 172w, https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map-286x500.png 286w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png)<figcaption class="wp-caption-text">用GeoBUGS显示邻接地图</figcaption></figure> 
 
 ## <span style="color: #800000;">附录</span>
 

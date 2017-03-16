@@ -54,7 +54,7 @@ r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n
  sigma &lt;- 1 / sqrt(tau)
 }</pre><figure id="attachment_1264" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-1264" title="WinBUGS doodle模型" src="http://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png" alt="WinBUGS doodle模型" width="500" height="309" srcset="http://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png 500w, http://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-300x185.png 300w, http://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png 536w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png)<figcaption class="wp-caption-text">WinBUGS doodle模型</figcaption></figure> 
+[<img class="size-large wp-image-1264" title="WinBUGS doodle模型" src="https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png" alt="WinBUGS doodle模型" width="500" height="309" srcset="https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png 500w, https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-300x185.png 300w, https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png 536w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png)<figcaption class="wp-caption-text">WinBUGS doodle模型</figcaption></figure> 
 
 数据
 
@@ -177,7 +177,7 @@ b12		-0.8104		0.3852		20	-2.1	0.0482		0.05	-1.6139	-0.007	0.00037
 
 当然了winBUGS的强大之处并不在于此，而是在处理诸如GLME（有些文献称GLMM），空间数据模型等计算复杂的模型，之后还会继续讨论。
   
-[<img class="size-full wp-image-548 alignright" src="http://cos.name/wp-content/uploads/2008/12/cover.jpg" alt="" width="133" height="204" />](http://cos.name/wp-content/uploads/2008/12/cover.jpg)
+[<img class="size-full wp-image-548 alignright" src="https://cos.name/wp-content/uploads/2008/12/cover.jpg" alt="" width="133" height="204" />](https://cos.name/wp-content/uploads/2008/12/cover.jpg)
   
 参考文献：
 
@@ -187,6 +187,6 @@ b12		-0.8104		0.3852		20	-2.1	0.0482		0.05	-1.6139	-0.007	0.00037
 
 最后再送出一本书，供大家研究参考
 
-[Disease Mapping with WINBUGS and MLWin](http://cos.name/wp-content/uploads/2008/12/lawson-ab-disease-mapping-with-winbugs-and-ml-win-wiley-2003-isbn-0470856041-600dpitc282s.djvu)（djvu格式）
+[Disease Mapping with WINBUGS and MLWin](https://cos.name/wp-content/uploads/2008/12/lawson-ab-disease-mapping-with-winbugs-and-ml-win-wiley-2003-isbn-0470856041-600dpitc282s.djvu)（djvu格式）
 
 WinBUGS在统计分析中的应用 第二部分完

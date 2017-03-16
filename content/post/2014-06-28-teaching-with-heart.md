@@ -49,13 +49,13 @@ slug: teaching-with-heart
 
 **作者简介**
 
-<a href="http://gsm.ucdavis.edu/faculty/chih-ling-tsai" target="_blank">蔡知令</a>，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。同时，他也是台湾国立大学管理学院的客座讲席教授。[<img class="aligncenter size-full wp-image-10052" src="http://cos.name/wp-content/uploads/2014/06/tsai_web.jpg" alt="tsai_web" width="172" height="224" />](http://cos.name/wp-content/uploads/2014/06/tsai_web.jpg)
+<a href="http://gsm.ucdavis.edu/faculty/chih-ling-tsai" target="_blank">蔡知令</a>，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。同时，他也是台湾国立大学管理学院的客座讲席教授。[<img class="aligncenter size-full wp-image-10052" src="https://cos.name/wp-content/uploads/2014/06/tsai_web.jpg" alt="tsai_web" width="172" height="224" />](https://cos.name/wp-content/uploads/2014/06/tsai_web.jpg)
 
 本文来自BizEd，翻译工作得到了蔡老师和的BizEd的许可和支持，特此感谢。
 
 This article is from the September/October 2013 issue of _BizEd_, published by AACSB International. The English version of the article and the complete _BizEd_ archives may be accessed at [www.BizEdmagazine.com](http://www.bizedmagazine.com/).
 
-翻译工作由[统计之都](http://cos.name/)(www.cos.name)团队的朋友们完成，感谢<a href="http://hansheng.gsm.pku.edu.cn/" target="_blank">王汉生</a>教授的支持和审阅。
+翻译工作由[统计之都](https://cos.name/)(www.cos.name)团队的朋友们完成，感谢<a href="http://hansheng.gsm.pku.edu.cn/" target="_blank">王汉生</a>教授的支持和审阅。
 
 翻译：罗兰、陈雅慧、蔡占锐
 

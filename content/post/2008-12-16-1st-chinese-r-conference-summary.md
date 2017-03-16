@@ -14,7 +14,7 @@ tags:
 slug: 1st-chinese-r-conference-summary
 ---
 
-<figure id="attachment_438" style="width: 478px" class="wp-caption aligncenter">[<img class="size-full wp-image-438" title="第一届中国R语言会议合影" src="http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb.jpg" alt="第一届中国R语言会议合影" width="478" height="177" srcset="http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb.jpg 478w, http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb-300x111.jpg 300w" sizes="(max-width: 478px) 100vw, 478px" />](http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo.tif)<figcaption class="wp-caption-text">第一届中国R语言会议合影（右键另存为看大图）</figcaption></figure> 
+<figure id="attachment_438" style="width: 478px" class="wp-caption aligncenter">[<img class="size-full wp-image-438" title="第一届中国R语言会议合影" src="https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb.jpg" alt="第一届中国R语言会议合影" width="478" height="177" srcset="https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb.jpg 478w, https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb-300x111.jpg 300w" sizes="(max-width: 478px) 100vw, 478px" />](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo.tif)<figcaption class="wp-caption-text">第一届中国R语言会议合影（右键另存为看大图）</figcaption></figure> 
 
 2008年12月13日~14日，由教育部重点研究基地中国人民大学[应用统计科学研究中心](http://www.applstats.org "应用统计科学研究中心")与中国人民大学[统计学院](http://stat.ruc.edu.cn "统计学院")主办的“第一届中国R语言会议”在中国人民大学明德商学楼0402教室成功召开。国内R语言的各位先锋如中国人民大学统计学院吴喜之教授、中国科学院上海生命科学研究院丁国徽博士等以及国外R语言专业人士如澳大利亚国立大学John Maindonald教授也通过网络连线会场参加了本次会议；会议围绕R语言的众多应用领域展开了广泛的交流和讨论，为R语言在中国的应用和推广开辟了一条崭新的道路。
 
@@ -33,7 +33,7 @@ slug: 1st-chinese-r-conference-summary
 
 ## 参会人员
 
-由于本次会议为国内首届R语言会议，参会者普遍热情较高，有数位作者甚至通宵达旦准备会议论文和演讲，其他与会者也带着明确的问题参加会议并在会议过程中积极提问、讨论。本次会议演讲者大多为COS论坛会员，如“[**153分钟学会R**](http://cos.name/bbs/read.php?tid=7673)”的作者等；参会者大多为硕博研究生，众多青年学者的热烈讨论将会议屡屡推向高潮；所有参会者的年龄分布如下：
+由于本次会议为国内首届R语言会议，参会者普遍热情较高，有数位作者甚至通宵达旦准备会议论文和演讲，其他与会者也带着明确的问题参加会议并在会议过程中积极提问、讨论。本次会议演讲者大多为COS论坛会员，如“[**153分钟学会R**](https://cos.name/bbs/read.php?tid=7673)”的作者等；参会者大多为硕博研究生，众多青年学者的热烈讨论将会议屡屡推向高潮；所有参会者的年龄分布如下：
 
 <pre class="brush: r">  20 | 00000000000
   22 | 000000000000000
@@ -63,7 +63,7 @@ slug: 1st-chinese-r-conference-summary
 
 两天时间里，会议一共举行正式演讲25场，以下是日程表：
 
-  * [第一届中国R语言会议日程](http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-program.pdf)
+  * [第一届中国R语言会议日程](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-program.pdf)
 
 # 论文和演讲
 
@@ -71,36 +71,36 @@ slug: 1st-chinese-r-conference-summary
 
 本次会议一共收到论文21篇；论文摘要可以从这里下载：
 
-  * [第一届中国R语言会议论文摘要](http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-abstract.zip)
+  * [第一届中国R语言会议论文摘要](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-abstract.zip)
 
 以下是会议演讲材料（幻灯片及R代码）：
 
-  * 谢益辉：[第一届中国R语言会议介绍](http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-intro.pdf)（[R代码](http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-intro.txt)）
+  * 谢益辉：[第一届中国R语言会议介绍](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-intro.pdf)（[R代码](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-intro.txt)）
   * 丁国徽：R的那些事儿
-  * 谢益辉：[R语言的历史背景、发展历程及现状](http://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt)
-  * 刘思喆：[153分钟学会R](http://cos.name/wp-content/uploads/2008/12/learning-r-in-153-minutes.pdf)
-  * 詹鹏：[R语言在南京市大学生幸福感统计分析上的应用](http://cos.name/wp-content/uploads/2008/12/the-application-of-r-on-statistical-analysis-of-undergraduates-self-well-beings-in-nanjing.ppt)（[R代码](http://cos.name/wp-content/uploads/2008/12/r-zhanpeng.zip)）
-  * 奚潭：[基于R软件的统计模拟](http://cos.name/wp-content/uploads/2008/12/statistical-simulation-based-on-r.ppt)（[R代码](http://cos.name/wp-content/uploads/2008/12/r-xitan.zip)）
-  * 陈钢：[Bioconductor项目简介及其在生物信息学中的应用](http://cos.name/wp-content/uploads/2008/12/introduction-to-bioconductor-and-its-application-in-bioinformatics.pdf)
-  * 侯丽平：[R在遗传统计学中的应用](http://cos.name/wp-content/uploads/2008/12/applied-genetic-statistics-using-r.ppt)
-  * 喻泓：[基于R的单木竞争指数的计算](http://cos.name/wp-content/uploads/2008/12/processing-competition-intensity-of-trees-based-on-r.ppt)
-  * John Maindonald：[Data Mining with R](http://cos.name/wp-content/uploads/2008/12/data-mining-with-r-by-john-maindonald.pdf)
-  * 刘思喆：[数据挖掘过程在R环境下的应用](http://cos.name/wp-content/uploads/2008/12/data-mining-with-r-by-sizhe-liu.pdf)
-  * 李舰：[R在BI中的应用和前景](http://cos.name/wp-content/uploads/2008/12/the-application-and-future-of-r-in-business-intelligence.ppt)
-  * 张翔：[复杂系统的可视化与分析手段](http://cos.name/wp-content/uploads/2008/12/visualization-and-analysis-of-complex-system.ppt)
-  * 左辰：[分位数回归模型在R环境下的实现](http://cos.name/wp-content/uploads/2008/12/the-application-of-quantile-regression-in-r.ppt)
-  * 丁鹏：[贝叶斯统计与R](http://cos.name/wp-content/uploads/2008/12/bayesian-statistics-and-r.pdf)
-  * 魏太云：[R软件与最优化](http://cos.name/wp-content/uploads/2008/12/using-r-to-solve-optimization-problems.pdf)
-  * 陈堰平：[随机微分方程入门——基于R语言的模拟与推断](http://cos.name/wp-content/uploads/2008/12/stochastic-differential-equation-with-r.pdf)（[R代码](http://cos.name/wp-content/uploads/2008/12/stochastic-differential-equation-with-r.zip)）
+  * 谢益辉：[R语言的历史背景、发展历程及现状](https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt)
+  * 刘思喆：[153分钟学会R](https://cos.name/wp-content/uploads/2008/12/learning-r-in-153-minutes.pdf)
+  * 詹鹏：[R语言在南京市大学生幸福感统计分析上的应用](https://cos.name/wp-content/uploads/2008/12/the-application-of-r-on-statistical-analysis-of-undergraduates-self-well-beings-in-nanjing.ppt)（[R代码](https://cos.name/wp-content/uploads/2008/12/r-zhanpeng.zip)）
+  * 奚潭：[基于R软件的统计模拟](https://cos.name/wp-content/uploads/2008/12/statistical-simulation-based-on-r.ppt)（[R代码](https://cos.name/wp-content/uploads/2008/12/r-xitan.zip)）
+  * 陈钢：[Bioconductor项目简介及其在生物信息学中的应用](https://cos.name/wp-content/uploads/2008/12/introduction-to-bioconductor-and-its-application-in-bioinformatics.pdf)
+  * 侯丽平：[R在遗传统计学中的应用](https://cos.name/wp-content/uploads/2008/12/applied-genetic-statistics-using-r.ppt)
+  * 喻泓：[基于R的单木竞争指数的计算](https://cos.name/wp-content/uploads/2008/12/processing-competition-intensity-of-trees-based-on-r.ppt)
+  * John Maindonald：[Data Mining with R](https://cos.name/wp-content/uploads/2008/12/data-mining-with-r-by-john-maindonald.pdf)
+  * 刘思喆：[数据挖掘过程在R环境下的应用](https://cos.name/wp-content/uploads/2008/12/data-mining-with-r-by-sizhe-liu.pdf)
+  * 李舰：[R在BI中的应用和前景](https://cos.name/wp-content/uploads/2008/12/the-application-and-future-of-r-in-business-intelligence.ppt)
+  * 张翔：[复杂系统的可视化与分析手段](https://cos.name/wp-content/uploads/2008/12/visualization-and-analysis-of-complex-system.ppt)
+  * 左辰：[分位数回归模型在R环境下的实现](https://cos.name/wp-content/uploads/2008/12/the-application-of-quantile-regression-in-r.ppt)
+  * 丁鹏：[贝叶斯统计与R](https://cos.name/wp-content/uploads/2008/12/bayesian-statistics-and-r.pdf)
+  * 魏太云：[R软件与最优化](https://cos.name/wp-content/uploads/2008/12/using-r-to-solve-optimization-problems.pdf)
+  * 陈堰平：[随机微分方程入门——基于R语言的模拟与推断](https://cos.name/wp-content/uploads/2008/12/stochastic-differential-equation-with-r.pdf)（[R代码](https://cos.name/wp-content/uploads/2008/12/stochastic-differential-equation-with-r.zip)）
   * 李崇亮：<a title="李晓煦博士的日志页面" href="http://lixiaoxu.lxxm.com/web-powered-by-r-or-r-powered-by-web/" target="_blank">基于R后台的网页应用，或基于网页可定制界面的R应用</a>（<a title="幻灯片的Google Docs页面" href="http://docs.google.com/Present?docid=dgf7j3jp_86d4x7r2gd" target="_blank">Google Docs页面</a>）
-  * 李舰：[利用R (D)COM Server实现R与MS Office的整合](http://cos.name/wp-content/uploads/2008/12/integrating-ms-office-with-r-using-r-d-com-server.ppt)
-  * 王化儒：[R在水文模拟中的应用初探](http://cos.name/wp-content/uploads/2008/12/application-of-r-on-hydrological-modeling.ppt)（[R代码](http://cos.name/wp-content/uploads/2008/12/wang-huaru-hydro.txt)）
-  * 谢益辉：[统计动画程序包animation介绍及其在教学和数据分析中的应用](http://cos.name/wp-content/uploads/2008/12/animation-an-r-package-for-statistical-animations-with-applications-in-teaching-and-data-analysis.ppt)
+  * 李舰：[利用R (D)COM Server实现R与MS Office的整合](https://cos.name/wp-content/uploads/2008/12/integrating-ms-office-with-r-using-r-d-com-server.ppt)
+  * 王化儒：[R在水文模拟中的应用初探](https://cos.name/wp-content/uploads/2008/12/application-of-r-on-hydrological-modeling.ppt)（[R代码](https://cos.name/wp-content/uploads/2008/12/wang-huaru-hydro.txt)）
+  * 谢益辉：[统计动画程序包animation介绍及其在教学和数据分析中的应用](https://cos.name/wp-content/uploads/2008/12/animation-an-r-package-for-statistical-animations-with-applications-in-teaching-and-data-analysis.ppt)
   * 翁云妹：Fitting and Projections of Mortality Stochastic Models &#8212; based on interface between R and Excel
-  * 刘明：[半导体界统计与R的应用](http://cos.name/wp-content/uploads/2008/12/statistics-and-r-in-semiconductor-industry.ppt)
-  * 王剑：[From SAS to R](http://cos.name/wp-content/uploads/2008/12/from-sas-to-r.ppt)
-  * 马斌：[应用R进行QSAR的尝试 &#8212; 以PAHs在根际消解效果的QSAR分析为例](http://cos.name/wp-content/uploads/2008/12/a-attempt-of-employing-r-in-qsar.ppt)
-  * 谢益辉：[无处不在的数据及R的探索方法](http://cos.name/wp-content/uploads/2008/12/explore-irregular-data-with-r.ppt)（[R代码](http://cos.name/wp-content/uploads/2008/12/explore-irregular-data-with-r.txt)）
+  * 刘明：[半导体界统计与R的应用](https://cos.name/wp-content/uploads/2008/12/statistics-and-r-in-semiconductor-industry.ppt)
+  * 王剑：[From SAS to R](https://cos.name/wp-content/uploads/2008/12/from-sas-to-r.ppt)
+  * 马斌：[应用R进行QSAR的尝试 &#8212; 以PAHs在根际消解效果的QSAR分析为例](https://cos.name/wp-content/uploads/2008/12/a-attempt-of-employing-r-in-qsar.ppt)
+  * 谢益辉：[无处不在的数据及R的探索方法](https://cos.name/wp-content/uploads/2008/12/explore-irregular-data-with-r.ppt)（[R代码](https://cos.name/wp-content/uploads/2008/12/explore-irregular-data-with-r.txt)）
   * 韩效杰：关于R语言相关书籍的出版讨论
 
 # 会议展望
@@ -124,7 +124,7 @@ slug: 1st-chinese-r-conference-summary
   7. 侯丽平、丁鹏和马斌本来没有准备演讲，后来看到会议演讲篇数较少，因此抓紧最后几天时间准备了演讲；
   8. 喻泓没有准备论文，看到演讲情况之后也积极贡献、分享自己的成果；
   9. 左辰和翁云妹是用英文发邮件的两位参会者；
- 10. 本次会议很多事务都是用R处理的，例如报名表的整理甚至是[第一届中国R语言会议胸牌](http://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-card.zip)也是用R的PDF图形设备生成，程序代码见附录。
+ 10. 本次会议很多事务都是用R处理的，例如报名表的整理甚至是[第一届中国R语言会议胸牌](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-card.zip)也是用R的PDF图形设备生成，程序代码见附录。
 
 # 会议照片
 
@@ -156,7 +156,7 @@ slug: 1st-chinese-r-conference-summary
             text(-1.6 * lim[1], -1.1 * lim[2],
                 paste("主办：中国人民大学应用统计科学研究中心 (www.applstats.org)",
                 "　　　中国人民大学统计学院 (stat.ruc.edu.cn)",
-                "协办：统计之都网站 (http://cos.name)", sep = "\n"),
+                "协办：统计之都网站 (https://cos.name)", sep = "\n"),
                 cex = 1, adj = c(0, 1))
         }
     }

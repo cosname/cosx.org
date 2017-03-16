@@ -23,7 +23,7 @@ slug: exploring-renren-social-network
 
 ## 一、读取数据
 
-之所以选择人人网作为分析的对象，很重要的一点原因在于其数据获取较为便利。本文读取数据的过程借助了一款命令行浏览器cURL，这个浏览器在R中可以用RCurl包实现，简要的中文介绍建议参考<a href="http://cos.name/cn/topic/17816" target="_blank">medo的《R不务正业之RCurl》</a>。通过RCurl的简单编程，我们可以在R中实现登录人人网、发布状态以及读取页面数据等功能。
+之所以选择人人网作为分析的对象，很重要的一点原因在于其数据获取较为便利。本文读取数据的过程借助了一款命令行浏览器cURL，这个浏览器在R中可以用RCurl包实现，简要的中文介绍建议参考<a href="https://cos.name/cn/topic/17816" target="_blank">medo的《R不务正业之RCurl》</a>。通过RCurl的简单编程，我们可以在R中实现登录人人网、发布状态以及读取页面数据等功能。
 
 人人网好友列表页面的url为`http://friend.renren.com/GetFriendList.do?curpage=0&id=****`，其中curpage为页码参数，id为相应的用户。通过对id与curpage做简单的循环，作者读取了自己（陈逸波）的所有好友以及好友的好友。（读取数据的R代码见文末附件。）
 
@@ -87,7 +87,7 @@ plot(gg, layout = layout.fruchterman.reingold, vertex.size = 5, vertex.label = N
 ## dev.off()</pre>
 
 <p style="text-align: center;">
-  <a href="http://cos.name/?attachment_id=" rel="attachment wp-att-3335"><img class="aligncenter size-full wp-image-3335" src="http://cos.name/wp-content/uploads/2011/04/net1.png" alt="" width="500" height="500" /></a>
+  <a href="https://cos.name/?attachment_id=" rel="attachment wp-att-3335"><img class="aligncenter size-full wp-image-3335" src="https://cos.name/wp-content/uploads/2011/04/net1.png" alt="" width="500" height="500" /></a>
 </p>
 
 从图中可以直观地看出，作者的好友网络存在一定的人群分割，可以尝试对这个网络进行一些分析以提取出其中相对独立的子群（或者称为社群）。
@@ -114,7 +114,7 @@ plot(gg, layout = layout.fruchterman.reingold, vertex.size = 5,
 ## dev.off()</pre>
 
 <p style="text-align: center;">
-  <a href="http://cos.name/?attachment_id=" rel="attachment wp-att-3336"><img class="aligncenter size-full wp-image-3336" src="http://cos.name/wp-content/uploads/2011/04/walktrap.community_11.png" alt="" width="500" height="500" /></a>
+  <a href="https://cos.name/?attachment_id=" rel="attachment wp-att-3336"><img class="aligncenter size-full wp-image-3336" src="https://cos.name/wp-content/uploads/2011/04/walktrap.community_11.png" alt="" width="500" height="500" /></a>
 </p>
 
 从图中可以直观地看出好友网络已经被划分为若干相对独立的子群。这也与我们对人人网（尤其是其前身校内网）的直观理解相符合——人人网的好友关系基本都是真实线下关系的反映，很自然地可以划分为初中同学、高中同学、大学同学，等等（例如网络的上半部分为小学及中学的同学，下半部分为大学同学，而左侧的五个节点，那是统计之都的同学们。）。
@@ -173,7 +173,7 @@ par(mar = c(0, 2, 0, 0))
 plot(V(gg)$bte)
 ## dev.off()</pre>
 
-<pre><a href="http://cos.name/?attachment_id=" rel="attachment wp-att-3339"><img class="aligncenter size-full wp-image-3339" src="http://cos.name/wp-content/uploads/2011/04/betweenness1.png" alt="" width="500" height="500" /></a></pre>
+<pre><a href="https://cos.name/?attachment_id=" rel="attachment wp-att-3339"><img class="aligncenter size-full wp-image-3339" src="https://cos.name/wp-content/uploads/2011/04/betweenness1.png" alt="" width="500" height="500" /></a></pre>
 
 根据得到的中间度散点图，我们人为地选择了3000作为分界点，选取中间度高于3000的节点并在图形中利用节点的大小展示出来。
 
@@ -194,7 +194,7 @@ plot(gg, layout = layout.fruchterman.reingold, vertex.size = V(gg)$size,
 ## dev.off()</pre>
 
 <p style="text-align: center;">
-  <a href="http://cos.name/?attachment_id=" rel="attachment wp-att-3340"><img class="aligncenter size-full wp-image-3340" src="http://cos.name/wp-content/uploads/2011/04/walktrap.community_21.png" alt="" width="500" height="500" /></a>
+  <a href="https://cos.name/?attachment_id=" rel="attachment wp-att-3340"><img class="aligncenter size-full wp-image-3340" src="https://cos.name/wp-content/uploads/2011/04/walktrap.community_21.png" alt="" width="500" height="500" /></a>
 </p>
 
 从图中也可以直观地看出，中间度最高的5个节点，确实位于中介的地位。
@@ -232,15 +232,15 @@ top20</pre>
 这个推荐的结果与人人网的推荐基本一致（因为逻辑相同嘛），以下是人人网的一些推荐截图：
 
 <p style="text-align: center;">
-  <a href="http://cos.name/?p=3324"><img class="size-full wp-image-3341 aligncenter" src="http://cos.name/wp-content/uploads/2011/04/2011-04-25_201552.jpg" alt="" width="247" height="196" /></a>
+  <a href="https://cos.name/?p=3324"><img class="size-full wp-image-3341 aligncenter" src="https://cos.name/wp-content/uploads/2011/04/2011-04-25_201552.jpg" alt="" width="247" height="196" /></a>
 </p>
 
 <p style="text-align: center;">
-  <a href="http://cos.name/2011/04/exploring-renren-social-network/2011-04-25_201619/" rel="attachment wp-att-3342"><img class="size-full wp-image-3342 aligncenter" src="http://cos.name/wp-content/uploads/2011/04/2011-04-25_201619.jpg" alt="" width="245" height="197" /></a>
+  <a href="https://cos.name/2011/04/exploring-renren-social-network/2011-04-25_201619/" rel="attachment wp-att-3342"><img class="size-full wp-image-3342 aligncenter" src="https://cos.name/wp-content/uploads/2011/04/2011-04-25_201619.jpg" alt="" width="245" height="197" /></a>
 </p>
 
 上述推荐的机制较为简单，但是在拥有大量真实关系的网络中，推荐的效率还是比较高的。当然，我们也可以开展对文本与行为的挖掘，以得到超越真实线下关系的推荐，但本文尚未做这方面的尝试。
 
 附件2的代码，最新做的图片，统计之都立功啦。
   
-[<img class="alignleft size-full wp-image-5284" title="renren_friend_community_betweenness_20120330" src="http://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330.png" alt="" width="900" height="900" srcset="http://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330.png 900w, http://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330-150x150.png 150w, http://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330-300x300.png 300w, http://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330-500x500.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](http://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330.png)
+[<img class="alignleft size-full wp-image-5284" title="renren_friend_community_betweenness_20120330" src="https://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330.png" alt="" width="900" height="900" srcset="https://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330.png 900w, https://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330-150x150.png 150w, https://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330-300x300.png 300w, https://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330-500x500.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](https://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330.png)

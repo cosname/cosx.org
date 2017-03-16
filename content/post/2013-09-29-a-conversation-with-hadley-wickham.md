@@ -71,7 +71,7 @@ slug: a-conversation-with-hadley-wickham
 
 **Hadley**：我现在是 RStudio 的忠实用户（笑）。我曾经在 Mac 上用 Sublime Text，但在过去几个月转而使用 RStudio 了，现在它在处理函数方面非常便捷。我的工作是分析数据，所以我把90%的时间投入在R中。此外，我也在试图回答一些其他的问题，例如“其他用户都在做什么”，“他们会在哪方面遇到困难”，“如何用R更简洁地表达这个想法”，以及“我如何能将代码变得更加高效”。所以尽管我主要用的是R，我依然会用C++来写一些能快速运行的代码。这其中最大的挑战在于，你可以（用C++）让代码变得非常快，但同时你需要耗费更多的时间来编写。如果我代码中有错误，它很有可能使得R崩溃，然后你就必须从头开始。当然，对现在的 RStudio，如果R崩溃了，它会自动重启R而不致强行退出。
 
-**Yixuan**：很多我们网站（[统计之都](http://cos.name/)）的访客都对动态图形很感兴趣。他们想知道你是否有在下一代的 `ggplot2` 中整合 R 和 [D3](http://d3js.org/) 的计划？
+**Yixuan**：很多我们网站（[统计之都](https://cos.name/)）的访客都对动态图形很感兴趣。他们想知道你是否有在下一代的 `ggplot2` 中整合 R 和 [D3](http://d3js.org/) 的计划？
 
 **Hadley**：`ggvis`（下一代的 `ggplot2`）的工作原理是生成 [Vega](http://trifacta.github.io/vega/) 代码，而 Vega 是一个基于 D3 的软件库。所以在这个意义上，可以说 `ggvis` 是基于D3的，它支持动态的、可交互的图形。我可以给你演示一段 `ggvis` 的示例。（示例演示中……）
 
@@ -89,7 +89,7 @@ slug: a-conversation-with-hadley-wickham
 
 **Yixuan**：我们的团队翻译了你的ggplot2书，而且 Winston 的 R Graphics Cookbook 也正在翻译中。你能否给我们介绍一下你的下一本著作，如果我没有说错的话，应该叫做《R高级编程》（[Advanced R Programming](http://adv-r.had.co.nz/)）？
 
-**Hadley**：《R高级编程》的目标是让人们成为更好的R程序员。目前绝大部分关于R的书籍都是教你如何用R来做统计分析的，而很少是介绍编程本身的。Matloff 的[《R语言编程艺术》](http://cos.name/2013/05/the-art-r-programming/)（[Art of R Programming](http://nostarch.com/artofr.htm)）是一本很好的入门和进阶水平的书，而我想要介绍的是那些我认为很酷很强大的R语言特性。为了了解如何使用这些特性，我需要阅读大量的文档，并且我自己也做了很多实验来弄清楚其中的机理。我感兴趣的是如何帮助人们理解并编写高效的、表达力强的R代码。
+**Hadley**：《R高级编程》的目标是让人们成为更好的R程序员。目前绝大部分关于R的书籍都是教你如何用R来做统计分析的，而很少是介绍编程本身的。Matloff 的[《R语言编程艺术》](https://cos.name/2013/05/the-art-r-programming/)（[Art of R Programming](http://nostarch.com/artofr.htm)）是一本很好的入门和进阶水平的书，而我想要介绍的是那些我认为很酷很强大的R语言特性。为了了解如何使用这些特性，我需要阅读大量的文档，并且我自己也做了很多实验来弄清楚其中的机理。我感兴趣的是如何帮助人们理解并编写高效的、表达力强的R代码。
 
 R作为一门编程语言似乎名声不太好，但我觉得那不是事实。我认为R的核心是一门优雅的编程语言，只是因为绝大部分的R用户都不是程序员，所以伴随着这个优雅的核心的，是大量冗长乏味的代码。R其实和 Javascript 很像，有一本书叫做《JavaScript语言精粹》（[JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)），它试图提炼出 Javascript 优雅的一面。而我的书与此类似，不仅是如何教会人们如何编写优雅的R代码，而且试图让问题解决的过程更加简单。当然，这需要介绍一些R背后的机制和理论。
 
@@ -101,6 +101,6 @@ R作为一门编程语言似乎名声不太好，但我觉得那不是事实。�
 
 <img class="aligncenter" alt="" src="http://i.imgur.com/ICvLmEQ.jpg" />
 
-（Hadley Wickham 和统计之都翻译的[《ggplot2：数据分析与图形艺术》](http://cos.name/2013/05/ggplot2/)）
+（Hadley Wickham 和统计之都翻译的[《ggplot2：数据分析与图形艺术》](https://cos.name/2013/05/ggplot2/)）
 
 [Click here to see the English version](http://statr.me/2013/09/a-conversation-with-hadley-wickham/)

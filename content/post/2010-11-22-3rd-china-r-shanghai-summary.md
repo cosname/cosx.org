@@ -16,13 +16,13 @@ slug: 3rd-china-r-shanghai-summary
 
 本文撰稿：第三届中国R语言会议（上海会场）主席张翔。<figure style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-2684" title="第三届中国R语言会议上海会场合影1" src="http://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-500x332.jpg" alt="第三届中国R语言会议上海会场合影1" width="500" height="332" srcset="http://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-500x332.jpg 500w, http://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure> 
+[<img class="size-large wp-image-2684" title="第三届中国R语言会议上海会场合影1" src="https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-500x332.jpg" alt="第三届中国R语言会议上海会场合影1" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-500x332.jpg 500w, https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure> 
 
 <p style="text-align: center;">
-  <a href="http://cos.name/wp-content/uploads/2010/06/China-R-Logo.png"><img class="aligncenter size-large wp-image-2276" title="中国R语言会议标识" src="http://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png" alt="" width="300" height="199" srcset="http://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, http://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, http://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png"><img class="aligncenter size-large wp-image-2276" title="中国R语言会议标识" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png" alt="" width="300" height="199" srcset="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
-第三届中国R语言会议（上海会场）于2010年11月13日~14日在上海财经大学行政楼成功召开。会议由上海财经大学统计与管理学院与统计之都网站(<a href="http://cos.name/" target="_blank">cos.name</a>)协办，由Mango Solutions提供赞助。在两天的会议时间里，来自各行各业的R用户齐聚上海，共同探讨和交流R软件的使用经验，取得了丰厚的成果。
+第三届中国R语言会议（上海会场）于2010年11月13日~14日在上海财经大学行政楼成功召开。会议由上海财经大学统计与管理学院与统计之都网站(<a href="https://cos.name/" target="_blank">cos.name</a>)协办，由Mango Solutions提供赞助。在两天的会议时间里，来自各行各业的R用户齐聚上海，共同探讨和交流R软件的使用经验，取得了丰厚的成果。
 
 # 会议概况
 
@@ -40,19 +40,19 @@ slug: 3rd-china-r-shanghai-summary
 
 会议培训：
 
-  * 张霞峰：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-R-basic.ppt" target="_blank">R语言基础培训讲座</a>
-  * 李舰：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-R-Training-Shanghai.zip" target="_blank">R语言应用讲座</a>
+  * 张霞峰：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-basic.ppt" target="_blank">R语言基础培训讲座</a>
+  * 李舰：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-Training-Shanghai.zip" target="_blank">R语言应用讲座</a>
 
 会议演讲：
 
   * 茆长暄：Marketing your research by R packages
-  * 牟官迅：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-libfann-R-Binding.ppt" target="_blank">快速神经网络在R上的绑定</a>
-  * 邵凡：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-R-in-Enterprise-Environment.ppt" target="_blank">R在欧美市场的商业化应用</a>
-  * 邹德强：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-Market-Segmentation-with-Latent-Class-Regression.pdf" target="_blank">Market Segmentation with Latent Class Regression</a>
-  * 陈钢：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-R-and-Cytoscape.pdf" target="_blank">R与Cytoscape配合在生物网络研究中的应用</a>
-  * 邵晨：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-Cointegrate.ppt" target="_blank">协整理论及其R语言的实现</a>
-  * 张翔：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-SNA.pdf" target="_blank">Social network analysis with R sna package</a>
-  * 刘思喆：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-R-and-Statistical-Graphics.pdf" target="_blank">R与统计图形</a>
-  * 李舰：<a href="http://cos.name/wp-content/uploads/2010/11/China-R-2010-High-Performance-Computing.pdf" target="_blank">R与高性能运算以及R在中国未来发展的讨论</a><figure style="width: 500px" class="wp-caption aligncenter">
+  * 牟官迅：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-libfann-R-Binding.ppt" target="_blank">快速神经网络在R上的绑定</a>
+  * 邵凡：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-in-Enterprise-Environment.ppt" target="_blank">R在欧美市场的商业化应用</a>
+  * 邹德强：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-Market-Segmentation-with-Latent-Class-Regression.pdf" target="_blank">Market Segmentation with Latent Class Regression</a>
+  * 陈钢：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-and-Cytoscape.pdf" target="_blank">R与Cytoscape配合在生物网络研究中的应用</a>
+  * 邵晨：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-Cointegrate.ppt" target="_blank">协整理论及其R语言的实现</a>
+  * 张翔：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-SNA.pdf" target="_blank">Social network analysis with R sna package</a>
+  * 刘思喆：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-and-Statistical-Graphics.pdf" target="_blank">R与统计图形</a>
+  * 李舰：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-High-Performance-Computing.pdf" target="_blank">R与高性能运算以及R在中国未来发展的讨论</a><figure style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-2683" title="第三届中国R语言会议上海会场合影2" src="http://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-500x332.jpg" alt="第三届中国R语言会议上海会场合影2" width="500" height="332" srcset="http://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-500x332.jpg 500w, http://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure>
+[<img class="size-large wp-image-2683" title="第三届中国R语言会议上海会场合影2" src="https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-500x332.jpg" alt="第三届中国R语言会议上海会场合影2" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-500x332.jpg 500w, https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure>

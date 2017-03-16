@@ -145,7 +145,7 @@ Line.1的均值等价于：
 &gt; hist(x,main='Histogram for unspecified x')</pre>
 
 <p align="left">
-  <img class="aligncenter size-full wp-image-1659" src="http://cos.name/wp-content/uploads/2009/11/image004.jpg" alt="image004" width="553" height="227" srcset="http://cos.name/wp-content/uploads/2009/11/image004.jpg 553w, http://cos.name/wp-content/uploads/2009/11/image004-300x123.jpg 300w, http://cos.name/wp-content/uploads/2009/11/image004-500x205.jpg 500w" sizes="(max-width: 553px) 100vw, 553px" />
+  <img class="aligncenter size-full wp-image-1659" src="https://cos.name/wp-content/uploads/2009/11/image004.jpg" alt="image004" width="553" height="227" srcset="https://cos.name/wp-content/uploads/2009/11/image004.jpg 553w, https://cos.name/wp-content/uploads/2009/11/image004-300x123.jpg 300w, https://cos.name/wp-content/uploads/2009/11/image004-500x205.jpg 500w" sizes="(max-width: 553px) 100vw, 553px" />
 </p>
 
 3）绘制累计频率图。如同对连续的随机变量可以绘制经验分布函数图一样，对于分组曲线也可以绘制“拱形图”（ogive），也就是累计频率曲线，它通过将分组边界值所对应的累计频率用直线连接起来得到。累计频率曲线的公式如下：
@@ -165,7 +165,7 @@ $\tilde{F}\_n(x)=\begin{cases}0 &, x\leq c\_0\\\frac{(c\_j-x)F\_n(c\_{j-1})+(x-c
 &gt; plot(Fnt)</pre>
   
   <p>
-    <img class="aligncenter size-full wp-image-1660" src="http://cos.name/wp-content/uploads/2009/11/image008.jpg" alt="image008" width="271" height="271" srcset="http://cos.name/wp-content/uploads/2009/11/image008.jpg 271w, http://cos.name/wp-content/uploads/2009/11/image008-150x150.jpg 150w" sizes="(max-width: 271px) 100vw, 271px" />
+    <img class="aligncenter size-full wp-image-1660" src="https://cos.name/wp-content/uploads/2009/11/image008.jpg" alt="image008" width="271" height="271" srcset="https://cos.name/wp-content/uploads/2009/11/image008.jpg 271w, https://cos.name/wp-content/uploads/2009/11/image008-150x150.jpg 150w" sizes="(max-width: 271px) 100vw, 271px" />
   </p>
   
   <h1>
@@ -251,7 +251,7 @@ $\tilde{F}\_n(x)=\begin{cases}0 &, x\leq c\_0\\\frac{(c\_j-x)F\_n(c\_{j-1})+(x-c
 &gt; plot(lev2,type='o',pch=19)</pre>
   
   <p>
-    <img class="aligncenter size-full wp-image-1661" src="http://cos.name/wp-content/uploads/2009/11/image018.jpg" alt="image018" width="554" height="306" srcset="http://cos.name/wp-content/uploads/2009/11/image018.jpg 554w, http://cos.name/wp-content/uploads/2009/11/image018-300x165.jpg 300w, http://cos.name/wp-content/uploads/2009/11/image018-499x276.jpg 499w" sizes="(max-width: 554px) 100vw, 554px" />
+    <img class="aligncenter size-full wp-image-1661" src="https://cos.name/wp-content/uploads/2009/11/image018.jpg" alt="image018" width="554" height="306" srcset="https://cos.name/wp-content/uploads/2009/11/image018.jpg 554w, https://cos.name/wp-content/uploads/2009/11/image018-300x165.jpg 300w, https://cos.name/wp-content/uploads/2009/11/image018-499x276.jpg 499w" sizes="(max-width: 554px) 100vw, 554px" />
   </p>
   
   <h1>
@@ -345,11 +345,11 @@ In optim(x = c(0, 25, 50, 100, 150, 250, 500, 1000, 1500, 2500,  :
 &gt; curve(theta*exp(1)^(-theta*x),from=0,to=4000,add=T,col='red')</pre>
   
   <p>
-    <img class="aligncenter size-full wp-image-1723" src="http://cos.name/wp-content/uploads/2009/11/clip_image0021.jpg" alt="clip_image002" width="271" height="271" srcset="http://cos.name/wp-content/uploads/2009/11/clip_image0021.jpg 271w, http://cos.name/wp-content/uploads/2009/11/clip_image0021-150x150.jpg 150w" sizes="(max-width: 271px) 100vw, 271px" /><br /> 在此，我们感兴趣的是将基于距离的分布拟合方法与极大似然估计的参数估计效果进行以下对比。因此不妨做一个实验：<br /> 简单起见，先从单参数拟合问题开始，这是一个一维优化问题。<br /> 首先生成50组来自于rate=1的指数分布随机数，每组的个数都为10。然后，对于每一组随机数，分别用基于距离的估计方法和极大似然估计进行参数估计，将50次模拟结果的均值和标准差记录下来。之后，将随机数的个数由10增加到20，30…200，重复之前的过程。最终得到的结果如下图：
+    <img class="aligncenter size-full wp-image-1723" src="https://cos.name/wp-content/uploads/2009/11/clip_image0021.jpg" alt="clip_image002" width="271" height="271" srcset="https://cos.name/wp-content/uploads/2009/11/clip_image0021.jpg 271w, https://cos.name/wp-content/uploads/2009/11/clip_image0021-150x150.jpg 150w" sizes="(max-width: 271px) 100vw, 271px" /><br /> 在此，我们感兴趣的是将基于距离的分布拟合方法与极大似然估计的参数估计效果进行以下对比。因此不妨做一个实验：<br /> 简单起见，先从单参数拟合问题开始，这是一个一维优化问题。<br /> 首先生成50组来自于rate=1的指数分布随机数，每组的个数都为10。然后，对于每一组随机数，分别用基于距离的估计方法和极大似然估计进行参数估计，将50次模拟结果的均值和标准差记录下来。之后，将随机数的个数由10增加到20，30…200，重复之前的过程。最终得到的结果如下图：
   </p>
   
   <p>
-    <img class="aligncenter size-full wp-image-1732" src="http://cos.name/wp-content/uploads/2009/11/clip_image0022.jpg" alt="clip_image002" width="553" height="319" srcset="http://cos.name/wp-content/uploads/2009/11/clip_image0022.jpg 553w, http://cos.name/wp-content/uploads/2009/11/clip_image0022-300x173.jpg 300w, http://cos.name/wp-content/uploads/2009/11/clip_image0022-500x288.jpg 500w" sizes="(max-width: 553px) 100vw, 553px" />
+    <img class="aligncenter size-full wp-image-1732" src="https://cos.name/wp-content/uploads/2009/11/clip_image0022.jpg" alt="clip_image002" width="553" height="319" srcset="https://cos.name/wp-content/uploads/2009/11/clip_image0022.jpg 553w, https://cos.name/wp-content/uploads/2009/11/clip_image0022-300x173.jpg 300w, https://cos.name/wp-content/uploads/2009/11/clip_image0022-500x288.jpg 500w" sizes="(max-width: 553px) 100vw, 553px" />
   </p>
   
   <p>
@@ -357,7 +357,7 @@ In optim(x = c(0, 25, 50, 100, 150, 250, 500, 1000, 1500, 2500,  :
   </p>
   
   <p>
-    <img class="aligncenter size-full wp-image-1662" src="http://cos.name/wp-content/uploads/2009/11/image052.jpg" alt="image052" width="553" height="324" srcset="http://cos.name/wp-content/uploads/2009/11/image052.jpg 553w, http://cos.name/wp-content/uploads/2009/11/image052-300x175.jpg 300w, http://cos.name/wp-content/uploads/2009/11/image052-500x292.jpg 500w" sizes="(max-width: 553px) 100vw, 553px" />
+    <img class="aligncenter size-full wp-image-1662" src="https://cos.name/wp-content/uploads/2009/11/image052.jpg" alt="image052" width="553" height="324" srcset="https://cos.name/wp-content/uploads/2009/11/image052.jpg 553w, https://cos.name/wp-content/uploads/2009/11/image052-300x175.jpg 300w, https://cos.name/wp-content/uploads/2009/11/image052-500x292.jpg 500w" sizes="(max-width: 553px) 100vw, 553px" />
   </p>
   
   <p>

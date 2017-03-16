@@ -24,9 +24,9 @@ slug: degrees-of-freedom
 
         上面我们是从背面看到的自由度，现在我们换一个面来看自由度。还是上面的那个总体，现在我从中抽取了一个样本｛x，6，4，7，9｝,我现在告诉你，抽出的样本的均值为5.8，那么x的值是多少？我们很容易就得到答案：3。为什么我们能知道它是3呢？是因为这个3它不是独立的。它是与样本均值相联系的。这时，失去了一个自由度，此时自由度应当是4。
 
-        再来看线性回归模型 [<img style="0px" src="http://cos.name/wp-content/uploads/2008/12/s1-thumb.gif" border="0" alt="s1" width="98" height="24" />](http://cos.name/wp-content/uploads/2008/12/s1.gif) 的残差 [<img src="http://cos.name/wp-content/uploads/2008/12/eqn1-thumb.gif" border="0" alt="Eqn1" width="112" height="26" />](http://cos.name/wp-content/uploads/2008/12/eqn1.gif) 它受到下面两个条件限制
+        再来看线性回归模型 [<img style="0px" src="https://cos.name/wp-content/uploads/2008/12/s1-thumb.gif" border="0" alt="s1" width="98" height="24" />](https://cos.name/wp-content/uploads/2008/12/s1.gif) 的残差 [<img src="https://cos.name/wp-content/uploads/2008/12/eqn1-thumb.gif" border="0" alt="Eqn1" width="112" height="26" />](https://cos.name/wp-content/uploads/2008/12/eqn1.gif) 它受到下面两个条件限制
 
-                    [<img src="http://cos.name/wp-content/uploads/2008/12/eqn2-thumb.gif" border="0" alt="Eqn2" width="120" height="48" />](http://cos.name/wp-content/uploads/2008/12/eqn2.gif)
+                    [<img src="https://cos.name/wp-content/uploads/2008/12/eqn2-thumb.gif" border="0" alt="Eqn2" width="120" height="48" />](https://cos.name/wp-content/uploads/2008/12/eqn2.gif)
 
 所以它失去了两个自由度，误差的自由度为n-2。
 
@@ -38,27 +38,27 @@ slug: degrees-of-freedom
 
         假设我们有一个样本，有n个观测，它们来自n个独立的正态总体。该样本可以看作是一个n维随机向量：
 
-                [<img src="http://cos.name/wp-content/uploads/2008/12/9c869628557ac869a3d291b461ec69b4-thumb.png" border="0" alt="9" width="59" height="85" />](http://cos.name/wp-content/uploads/2008/12/9c869628557ac869a3d291b461ec69b4.png)
+                [<img src="https://cos.name/wp-content/uploads/2008/12/9c869628557ac869a3d291b461ec69b4-thumb.png" border="0" alt="9" width="59" height="85" />](https://cos.name/wp-content/uploads/2008/12/9c869628557ac869a3d291b461ec69b4.png)
 
 它来自n维空间，所以它的自由度为n.
 
-设[<img src="http://cos.name/wp-content/uploads/2008/12/9081a3d8bf8f68d6756792ee7eea72c7-thumb.png" border="0" alt="9081a3d8bf8f68d6756792ee7eea72c7" width="17" height="17" />](http://cos.name/wp-content/uploads/2008/12/9081a3d8bf8f68d6756792ee7eea72c7.png) 为样本均值，我们可以对样本作如下分解：
+设[<img src="https://cos.name/wp-content/uploads/2008/12/9081a3d8bf8f68d6756792ee7eea72c7-thumb.png" border="0" alt="9081a3d8bf8f68d6756792ee7eea72c7" width="17" height="17" />](https://cos.name/wp-content/uploads/2008/12/9081a3d8bf8f68d6756792ee7eea72c7.png) 为样本均值，我们可以对样本作如下分解：
 
-<img class="alignnone size-full wp-image-1100" title="patch1" src="http://cos.name/wp-content/uploads/2009/05/patch1.jpg" alt="patch1" width="275" height="85" />
+<img class="alignnone size-full wp-image-1100" title="patch1" src="https://cos.name/wp-content/uploads/2009/05/patch1.jpg" alt="patch1" width="275" height="85" />
 
-[](http://cos.name/wp-content/uploads/2008/12/4562e3efac54d4e6d1080028fd91ef88.png)
+[](https://cos.name/wp-content/uploads/2008/12/4562e3efac54d4e6d1080028fd91ef88.png)
 
-等式右边第一个向量空间的自由度为1,第二个向量受条件[<img src="http://cos.name/wp-content/uploads/2008/12/bf655729b622b123f95ab96843796734-thumb.png" border="0" alt="bf655729b622b123f95ab96843796734" width="138" height="47" />](http://cos.name/wp-content/uploads/2008/12/bf655729b622b123f95ab96843796734.png) 限制，它的自由度为n-1。
+等式右边第一个向量空间的自由度为1,第二个向量受条件[<img src="https://cos.name/wp-content/uploads/2008/12/bf655729b622b123f95ab96843796734-thumb.png" border="0" alt="bf655729b622b123f95ab96843796734" width="138" height="47" />](https://cos.name/wp-content/uploads/2008/12/bf655729b622b123f95ab96843796734.png) 限制，它的自由度为n-1。
 
 从数学上看，等式右边的第一个向量可以看作是等号左边向量在由1‘张成的子空间上的最小二乘（或正交）投影，该子空间的维数为1，所以它的自由度也是1；等式右边第二个向量可以看作是等式左边向量在（n-1)维正交补空间上的最小二乘投影，所以自由度为n-1
 
 统计学上的样本离差平方和可以看作是上等式右边第二个向量的模：
 
-<img class="alignnone size-full wp-image-1101" title="patch2" src="http://cos.name/wp-content/uploads/2009/05/patch2.jpg" alt="patch2" width="243" height="87" />
+<img class="alignnone size-full wp-image-1101" title="patch2" src="https://cos.name/wp-content/uploads/2009/05/patch2.jpg" alt="patch2" width="243" height="87" />
 
-[](http://cos.name/wp-content/uploads/2008/12/88bc2120af88d264bfd5634ecc2bc8a6.png)
+[](https://cos.name/wp-content/uploads/2008/12/88bc2120af88d264bfd5634ecc2bc8a6.png)
 
-所以由它导出的统计量[<img src="http://cos.name/wp-content/uploads/2008/12/eqn3-thumb.gif" border="0" alt="Eqn3" width="32" height="44" />](http://cos.name/wp-content/uploads/2008/12/eqn3.gif) 服从自由度为n-1的卡方分布。
+所以由它导出的统计量[<img src="https://cos.name/wp-content/uploads/2008/12/eqn3-thumb.gif" border="0" alt="Eqn3" width="32" height="44" />](https://cos.name/wp-content/uploads/2008/12/eqn3.gif) 服从自由度为n-1的卡方分布。
 
 第四次解释
 

@@ -24,7 +24,7 @@ tags:
 slug: write-r-packages-like-a-ninja
 ---
 
-作为一个伪程序员，我在做与代码有关的事情时，总是抱以一个念头，即“简化手工劳动到极致”。在这篇文章里，我介绍一下目前我认为最简化的开发R包的流程。本站作者胡荣兴曾经在09年写过一篇开发R包的文章“<a title="在Windows中创建R的包的步骤" href="http://cos.name/2009/02/create-r-packages-under-windows/" target="_blank">在Windows中创建R的包的步骤</a>”，其中小部分内容随着R本身的更新已经过时，该文面向Windows，而且介绍的都是一些正统方法，这里我介绍一条“忍者”之路，希望对大家开发R程序包有所帮助。这篇文章本来是去年年底打算写的，时至今日<a title="第四届中国R语言会议通知" href="http://cos.name/2011/04/chinar-2011/" target="_blank">第四届中国R语言会议</a>正在人民大学轰轰隆隆召开，索性把它写完，算是一份不到场的报告吧。
+作为一个伪程序员，我在做与代码有关的事情时，总是抱以一个念头，即“简化手工劳动到极致”。在这篇文章里，我介绍一下目前我认为最简化的开发R包的流程。本站作者胡荣兴曾经在09年写过一篇开发R包的文章“<a title="在Windows中创建R的包的步骤" href="https://cos.name/2009/02/create-r-packages-under-windows/" target="_blank">在Windows中创建R的包的步骤</a>”，其中小部分内容随着R本身的更新已经过时，该文面向Windows，而且介绍的都是一些正统方法，这里我介绍一条“忍者”之路，希望对大家开发R程序包有所帮助。这篇文章本来是去年年底打算写的，时至今日<a title="第四届中国R语言会议通知" href="https://cos.name/2011/04/chinar-2011/" target="_blank">第四届中国R语言会议</a>正在人民大学轰轰隆隆召开，索性把它写完，算是一份不到场的报告吧。
 
 在我看来，R的扩展性主要体现在R包中，利用附加包的形式，我们可以把一些常规的、模式化的工作打包起来供日常使用，在R包中我们还可以为函数编写文档和说明，这样可以避免将来忘记一个函数是做什么的以及怎么用的（忘记了就查帮助，`?function.name`），文档是程序的重要组成部分，我个人常常认为写文档的难度不亚于写代码；此外，R包还体现了R的另一点扩展性，即它能融合其它底层语言，典型的就是C语言、C++和Fortran，但一般用户可能用不到这些功能，下文仅简要介绍一下。
 
@@ -95,12 +95,12 @@ R-exts手册<a href="http://cran.r-project.org/doc/manuals/R-exts.html#Rd-format
 <a href="http://cran.r-project.org/package=roxygen2" target="_blank">roxygen2</a>是一个R包（它的前任是<a href="http://cran.r-project.org/package=roxygen" target="_blank">roxygen</a>，但已经停止更新了），它实现了把特定注释“翻译”为R文档的工作，例如：
 
 <pre class="brush: r">##' @author Yihui Xie
-##' @source \url{http://cos.name}</pre>
+##' @source \url{https://cos.name}</pre>
 
 会被翻译为：
 
 <pre class="brush: plain">\author{Yihui Xie}
-\source{\url{http://cos.name}}</pre>
+\source{\url{https://cos.name}}</pre>
 
 你可能会说，嗨，介有嘛啊！！注意这些注释是直接写在函数定义上方的，当然，这么说你还是不信。所以下面必须介绍另一门暗器，也就是传说中的编辑器Emacs。
 

@@ -36,7 +36,7 @@ slug: driving-action-date-ubi-model
 
 随着道路交通行业的持续发展，我国民用汽车保有量呈现逐年快速增长的趋势，近10年年增长率均超过15%。截止至2015年底，我国民用汽车保有量已达到16273万辆，具体情况如图1所示$^1$。汽车行业的繁荣为车险行业提供了蓬勃发展的平台，从而使得车险产品具有广阔的发展空间。传统的车险已经成为我国财产保险业务的第一大险种，其主要产品由中国人保，太平洋保险和中国平安三家保险公司提供。传统车险产品主要通过从车因素、从人因素、从环境因素三个方面衡量被保险人的风险水平，从而确定其保费。其中从车因素指车辆种类、型号、用途、车龄、行驶区域以及生产厂商等因素；从人因素指驾驶人年龄、性别、驾龄、婚姻状况、职业以及肇事记录等因素；从环境因素指气候、地貌、路况等地理环境风险因素以及治安、法制情况等社会环境风险因素。尽管传统车险产品考虑因素众多，但在竞争日益激烈的市场环境下，仍存在产品单一、费率条款粗放以及准备金低估等问题[1]，这类问题反映出车险产品对风险把控的不足。因此仅根据上述三方面因素确定保费将低估风险，从而导致保费无法与风险合理匹配，造成车险行业经营效率低下。
 
-<pre><a href="http://cos.name/wp-content/uploads/2016/05/A4F6.tmp_.png"><img class="aligncenter size-full wp-image-12148" src="http://cos.name/wp-content/uploads/2016/05/A4F6.tmp_.png" alt="A4F6.tmp" width="524" height="332" srcset="http://cos.name/wp-content/uploads/2016/05/A4F6.tmp_.png 524w, http://cos.name/wp-content/uploads/2016/05/A4F6.tmp_-300x190.png 300w, http://cos.name/wp-content/uploads/2016/05/A4F6.tmp_-500x317.png 500w" sizes="(max-width: 524px) 100vw, 524px" />                  </a>图1中国民用汽车保有量与年增长率时间序列图</pre>
+<pre><a href="https://cos.name/wp-content/uploads/2016/05/A4F6.tmp_.png"><img class="aligncenter size-full wp-image-12148" src="https://cos.name/wp-content/uploads/2016/05/A4F6.tmp_.png" alt="A4F6.tmp" width="524" height="332" srcset="https://cos.name/wp-content/uploads/2016/05/A4F6.tmp_.png 524w, https://cos.name/wp-content/uploads/2016/05/A4F6.tmp_-300x190.png 300w, https://cos.name/wp-content/uploads/2016/05/A4F6.tmp_-500x317.png 500w" sizes="(max-width: 524px) 100vw, 524px" />                  </a>图1中国民用汽车保有量与年增长率时间序列图</pre>
 
 除了上述因素之外，司机的驾驶行为也是衡量风险的重要因素，对车险保费定价有指导作用。然而传统车险行业未通过司机驾驶行为进行保费定价，其主要原因有以下几方面：①缺乏驾驶行为的数据支持；②缺乏相应的数据处理技术；③缺乏相应的政策支持。目前，随着移动通讯行业的发展，车联网大数据已可实现实时采集，为基于司机驾驶行为的分析提供了数据支持；随着软硬件技术的发展，该类车联网数据可通过分布式集群、云计算等方法进行建模分析，并通过其与传统保险精算方法的结合实现保费的定价，从而解决了数据处理问题；同时，保险大数据公司的诞生与车险费率改革制度的出台也推动着新的车险定价模式的诞生。这种新型车险就是UBI（Usage Based Insurance），即基于驾驶人行为的车险。
 
@@ -72,7 +72,7 @@ UBI业务的相关群体主要为保险公司与投保人。对于保险公司�
 
 原始数据为两千余辆已识别是否出险的车辆于2014年7月至2015年6月共计12个月产生的数据。数据共包含8个变量，囊括四类信息，①标识信息，包括车架号（VIN），为车辆的唯一标识编号。②时间信息，包括数据上传时间，代表数据由车辆上传到数据库的时间。③位置信息，包括经度与纬度，可反映车辆实时所处位置，本文在目前的研究中尚未使用该数据。④行驶信息，包括累积里程，瞬时油耗，瞬时车速与瞬时发动机转速。各个变量的具体情况见表1。
 
-<pre><a href="http://cos.name/wp-content/uploads/2016/05/AB4F.tmp_.png"><img class="aligncenter size-full wp-image-12149" src="http://cos.name/wp-content/uploads/2016/05/AB4F.tmp_.png" alt="AB4F.tmp" width="684" height="335" srcset="http://cos.name/wp-content/uploads/2016/05/AB4F.tmp_.png 684w, http://cos.name/wp-content/uploads/2016/05/AB4F.tmp_-300x147.png 300w, http://cos.name/wp-content/uploads/2016/05/AB4F.tmp_-500x245.png 500w" sizes="(max-width: 684px) 100vw, 684px" /></a></pre>
+<pre><a href="https://cos.name/wp-content/uploads/2016/05/AB4F.tmp_.png"><img class="aligncenter size-full wp-image-12149" src="https://cos.name/wp-content/uploads/2016/05/AB4F.tmp_.png" alt="AB4F.tmp" width="684" height="335" srcset="https://cos.name/wp-content/uploads/2016/05/AB4F.tmp_.png 684w, https://cos.name/wp-content/uploads/2016/05/AB4F.tmp_-300x147.png 300w, https://cos.name/wp-content/uploads/2016/05/AB4F.tmp_-500x245.png 500w" sizes="(max-width: 684px) 100vw, 684px" /></a></pre>
 
 ##### ****（三）********建模********变量****
 
@@ -108,7 +108,7 @@ $P(Y=1|x)=1/(1+e^{-g(x)})$，
 
 Logistic回归通过AIC进行变量选择后的变量回归系数符号与显著性水平如表2所示，变量影响程度如图5所示$^3$。根据表2结果，在累计值类变量中，年化累积里程对出险情况有显著影响，其参数估计结果为正，说明随着里程数量的增加，车辆有更大可能出险，这与PAYD车险的规律相同。在UBI模型中，累计里程同样是衡量保费定价的重要标准，因此针对开车更多的司机，应相对多收取保费，而对行驶较少甚至不开车的司机，应给予其保费优惠。在均值类变量方面，日均行程数与平均时速变量皆显著。日均行程数变量回归系数为负，这说明，在给定相同的行驶里程的条件下，每天出行次数越多的司机，出险概率越低。平均时速变量同样回归系数为负，说明行车速度越快的司机越不易出险，其可能原因有两点，第一，驾驶技术较熟练的司机可能对路况把控更到位，因此能够以相对较快的速度行驶且保证行车安全。第二，在相对拥堵导致时速较慢的路段行车比在正常运行的路段更容易发生交通事故。根据图2所示结果，在变量影响程度方面，年化累积里程变量对车辆出险情况影响最大，其次为日均行程数，之后为平均时速。
 
-<pre><a href="http://cos.name/wp-content/uploads/2016/05/1089.tmp_.png"><img class="aligncenter size-full wp-image-12150" src="http://cos.name/wp-content/uploads/2016/05/1089.tmp_.png" alt="1089.tmp" width="482" height="484" srcset="http://cos.name/wp-content/uploads/2016/05/1089.tmp_.png 482w, http://cos.name/wp-content/uploads/2016/05/1089.tmp_-150x150.png 150w, http://cos.name/wp-content/uploads/2016/05/1089.tmp_-300x300.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a></pre>
+<pre><a href="https://cos.name/wp-content/uploads/2016/05/1089.tmp_.png"><img class="aligncenter size-full wp-image-12150" src="https://cos.name/wp-content/uploads/2016/05/1089.tmp_.png" alt="1089.tmp" width="482" height="484" srcset="https://cos.name/wp-content/uploads/2016/05/1089.tmp_.png 482w, https://cos.name/wp-content/uploads/2016/05/1089.tmp_-150x150.png 150w, https://cos.name/wp-content/uploads/2016/05/1089.tmp_-300x300.png 300w" sizes="(max-width: 482px) 100vw, 482px" /></a></pre>
 
 #### ****四、业务实施****
 

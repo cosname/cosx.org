@@ -14,7 +14,7 @@ slug: beijing-cos-salon-jul-2013
 &nbsp;
 
 <p style="text-align: center;">
-  <em><strong>by <a href="http://weibo.com/xzhman">肖展航</a></strong></em><a href="http://cos.name/wp-content/uploads/2013/08/cos101.jpg"><img class="aligncenter size-large wp-image-8088" alt="cos101" src="http://cos.name/wp-content/uploads/2013/08/cos101-500x362.jpg" width="500" height="362" srcset="http://cos.name/wp-content/uploads/2013/08/cos101-500x362.jpg 500w, http://cos.name/wp-content/uploads/2013/08/cos101-300x217.jpg 300w, http://cos.name/wp-content/uploads/2013/08/cos101-413x300.jpg 413w, http://cos.name/wp-content/uploads/2013/08/cos101.jpg 854w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <em><strong>by <a href="http://weibo.com/xzhman">肖展航</a></strong></em><a href="https://cos.name/wp-content/uploads/2013/08/cos101.jpg"><img class="aligncenter size-large wp-image-8088" alt="cos101" src="https://cos.name/wp-content/uploads/2013/08/cos101-500x362.jpg" width="500" height="362" srcset="https://cos.name/wp-content/uploads/2013/08/cos101-500x362.jpg 500w, https://cos.name/wp-content/uploads/2013/08/cos101-300x217.jpg 300w, https://cos.name/wp-content/uploads/2013/08/cos101-413x300.jpg 413w, https://cos.name/wp-content/uploads/2013/08/cos101.jpg 854w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 &nbsp;
@@ -56,16 +56,16 @@ slug: beijing-cos-salon-jul-2013
 
 嘉宾在分享了自己专业方面的收获后，向大家展示了课余娱乐时间开发的可视化项目。R中的时序图、日历图和栅格数据、矢量数据、时空数据可视化，D3、Rchart等十八般武艺信手拈来。其中，mvtsplot包下的mvtsplot()函数更是让大家感受到可视化对于提取时空数据信息的重要作用。Web下的可视化主要利用到了网络地图，利用谷歌地图和R展示了H7N9和雅安地震的热力图ggmap{heatmap()}，不禁让人想起了第六届R语言会议上萌主（@Yummy_zhou）为大家展示的动态交互图。
 
-[幻灯片下载](http://cos.name/wp-content/uploads/2013/08/时空统计与时空数据可视化_COS.pdf)
+[幻灯片下载](https://cos.name/wp-content/uploads/2013/08/时空统计与时空数据可视化_COS.pdf)
 
 来自百度、新浪、豆瓣、微软、中航工业集团、京东商城、新华网、6City、友盟、随视传媒、中国统计信息咨询中心、际恒集团、博识教育、中科院、北京邮电大学、北京大学、清华大学、中国人民大学、北京理工大学、华中科技大学的业界人士和高校学生以及创业者逾30余人报名参与了此次活动，席间与嘉宾积极互动，围绕主题展开了深入精彩的讨论。
 
 报名嘉宾中填写的报名理由如下图：
 
-[<img class="aligncenter size-full wp-image-8089" alt="cos102" src="http://cos.name/wp-content/uploads/2013/08/cos102.jpg" width="239" height="217" />](http://cos.name/wp-content/uploads/2013/08/cos102.jpg)
+[<img class="aligncenter size-full wp-image-8089" alt="cos102" src="https://cos.name/wp-content/uploads/2013/08/cos102.jpg" width="239" height="217" />](https://cos.name/wp-content/uploads/2013/08/cos102.jpg)
 
 &nbsp;
 
-[<img class="aligncenter size-large wp-image-8090" alt="cos103" src="http://cos.name/wp-content/uploads/2013/08/cos103-364x500.jpg" width="364" height="500" srcset="http://cos.name/wp-content/uploads/2013/08/cos103-364x500.jpg 364w, http://cos.name/wp-content/uploads/2013/08/cos103-218x300.jpg 218w, http://cos.name/wp-content/uploads/2013/08/cos103.jpg 687w" sizes="(max-width: 364px) 100vw, 364px" />](http://cos.name/wp-content/uploads/2013/08/cos103.jpg)
+[<img class="aligncenter size-large wp-image-8090" alt="cos103" src="https://cos.name/wp-content/uploads/2013/08/cos103-364x500.jpg" width="364" height="500" srcset="https://cos.name/wp-content/uploads/2013/08/cos103-364x500.jpg 364w, https://cos.name/wp-content/uploads/2013/08/cos103-218x300.jpg 218w, https://cos.name/wp-content/uploads/2013/08/cos103.jpg 687w" sizes="(max-width: 364px) 100vw, 364px" />](https://cos.name/wp-content/uploads/2013/08/cos103.jpg)
   
-[更多沙龙信息](http://cos.name/salon)
+[更多沙龙信息](https://cos.name/salon)

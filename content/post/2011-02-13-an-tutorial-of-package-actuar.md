@@ -27,8 +27,8 @@ slug: an-tutorial-of-package-actuar
 
 4.修改了前面文章中的一些错误。
 
-感兴趣的读者可以下载文章的pdf版本：[用R 也能做精算—actuar包学习笔记](http://cos.name/wp-content/uploads/2011/02/用R-也能做精算—actuar包学习笔记.pdf)
+感兴趣的读者可以下载文章的pdf版本：[用R 也能做精算—actuar包学习笔记](https://cos.name/wp-content/uploads/2011/02/用R-也能做精算—actuar包学习笔记.pdf)
 
-或者下载全部R代码：[actuar包学习笔记代码](http://cos.name/wp-content/uploads/2011/02/actuar包学习笔记代码.txt)
+或者下载全部R代码：[actuar包学习笔记代码](https://cos.name/wp-content/uploads/2011/02/actuar包学习笔记代码.txt)
 
 如果大家在阅读的过程中发现有任何错误，欢迎指正！

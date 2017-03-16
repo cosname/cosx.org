@@ -14,7 +14,7 @@ slug: generalization-to-buffons-needle
 
 蒲丰投针问题是一个非常经典的问题，两百多年来，一直受到学者们的广泛关注和研究，并衍生出了很多非常有意思的变种问题。本文利用坐标系变换、几何概率方法巧妙地求出了：往矩形网格上随机投椭圆，该椭圆恰好包含在某个矩形中间的概率，并将结果拓展到了平行四边形网格的情形下。
 
-具体内容，参见<a href="http://cos.name/wp-content/uploads/2010/01/generalization-to-buffons-needle.pdf" target="_blank">此pdf文档</a>。
+具体内容，参见<a href="https://cos.name/wp-content/uploads/2010/01/generalization-to-buffons-needle.pdf" target="_blank">此pdf文档</a>。
 
 注：
 

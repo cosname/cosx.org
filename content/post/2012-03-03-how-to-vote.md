@@ -24,12 +24,12 @@ slug: how-to-vote
 
 这个数据在近几年的图模型文章中常能见到，并且已有很多深入的讨论——包括图结构随时间变化、多图联合估计等情况。本文只涉及单个图结构的估计，此外笔者对政治不了解，因此文中摘录wiki的相关评论。
 
-从 http://www.senate.gov 可以看到senators每次投票的结果。那么，你关心的议员在每次投票中起到怎样的作用？有怎样的政治立场？本文数据选取美国第111届议会（2009年、2010年）roll-call vote数据，涉及110位参议员696个议案的投票结果（[点击此处](http://cos.name/wp-content/uploads/2012/03/senate.rar)下载数据）。利用图模型，我们可以对议员投票行为作图。下图中，每个点代表一个议员，每条边表示两个议员的投票行为“很相似”——他们常常同时投赞成票或反对票。
+从 http://www.senate.gov 可以看到senators每次投票的结果。那么，你关心的议员在每次投票中起到怎样的作用？有怎样的政治立场？本文数据选取美国第111届议会（2009年、2010年）roll-call vote数据，涉及110位参议员696个议案的投票结果（[点击此处](https://cos.name/wp-content/uploads/2012/03/senate.rar)下载数据）。利用图模型，我们可以对议员投票行为作图。下图中，每个点代表一个议员，每条边表示两个议员的投票行为“很相似”——他们常常同时投赞成票或反对票。
 
 图中，两派阵营的状态很明显。绿色的是Democrat，红色的是Republican，蓝色的是Independent。一般认为，民主党在政治上偏左，主张社会自由与进步；而共和党偏右，“reflects American Conservatism”。可以从图中获得很多信息，下面我们对此图做一点深究。
 
 <p style="text-align: center;">
-  <a href="http://cos.name/wp-content/uploads/2012/03/abc.png"><img class="aligncenter" title="点击看大图" alt="abc" src="http://cos.name/wp-content/uploads/2012/03/abc-300x152.png" width="700" height="350" /></a>
+  <a href="https://cos.name/wp-content/uploads/2012/03/abc.png"><img class="aligncenter" title="点击看大图" alt="abc" src="https://cos.name/wp-content/uploads/2012/03/abc-300x152.png" width="700" height="350" /></a>
 </p>
 
 首先，红绿交界处的Lincoln、Nelson、Collins等人是否代表了某种“中间力量”？以下从维基摘录的一段话（<http://en.wikipedia.org/wiki/Bill_Nelson>）或许回答这个问题。

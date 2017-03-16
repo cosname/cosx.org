@@ -13,11 +13,11 @@ tags:
 slug: why-do-we-do-research
 ---
 
-<span style="color: #808080;">【COS编辑部按】本文作者是2013年的总理科学奖得主 <a style="color: #808080;" href="http://www.stat.berkeley.edu/~terry/" target="_blank">Terence Terry Speed</a>。关      于他的详细介绍，可参考<a style="color: #808080;" href="http://cos.name/2013/11/terry-speed/" target="_blank">COS访谈第十二期</a>，Terry Speed教授的名言是“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”。</span>
+<span style="color: #808080;">【COS编辑部按】本文作者是2013年的总理科学奖得主 <a style="color: #808080;" href="http://www.stat.berkeley.edu/~terry/" target="_blank">Terence Terry Speed</a>。关      于他的详细介绍，可参考<a style="color: #808080;" href="https://cos.name/2013/11/terry-speed/" target="_blank">COS访谈第十二期</a>，Terry Speed教授的名言是“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”。</span>
 
 <span style="color: #808080;">原文发表在 IMS Bulletin 链接：<a style="color: #808080;" href="http://bulletin.imstat.org/2015/02/terences-stuff-why-do-we-do-research/" target="_blank">http://bulletin.imstat.org/</a><a style="color: #808080;" href="http://bulletin.imstat.org/2015/02/terences-stuff-why-do-we-do-research/" target="_blank">2015/02/terences-stuff-why-do-we-do-research/</a> 。2011年6月 以来的 IMS Bulletin 系列文章 &#8220;Terence&#8217;s Stuff&#8221; 都收录在 <a style="color: #808080;" href="http://bulletin.imstat.org/category/terences-stuff/" target="_blank">http://bulletin.imstat.org/category/terences-stuff/</a>。本文由王小宁翻译，冯凌秉、施涛审校。</span>
 
-[<img class="aligncenter size-large wp-image-11310" src="http://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-500x333.jpg" alt="Terry-Speed-1-2" width="500" height="333" srcset="http://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-500x333.jpg 500w, http://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-300x200.jpg 300w, http://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg 1024w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg)
+[<img class="aligncenter size-large wp-image-11310" src="https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-500x333.jpg" alt="Terry-Speed-1-2" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-500x333.jpg 500w, https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg 1024w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg)
 
 “我们为什么要做研究？” －－这个问题似乎由调查机构，比如说像_Vitae_ 这种立志于通过转化研究者专业和职业发展路径来激发他们潜能的国际项目，通过抽样调查来回答最为合适。这里我只是想用我的个人经验来探讨一下这个问题。
 

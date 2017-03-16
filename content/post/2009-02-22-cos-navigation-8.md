@@ -18,15 +18,15 @@ slug: cos-navigation-8
 
 从寒假到现在共发布了5篇日志。<!--more-->
 
-  * [R与SAS之争：一个导读](http://cos.name/2009/01/r-sas//)
-  * [WinBUGS在统计分析中的应用（第三部分）](http://cos.name/2009/02/statistical-analysis-and-winbugs-part-3//)
-  * [Google Visualization API 与在线数据分析](http://cos.name/2009/02/google-visualization-api-and-data-analysis-online//)
-  * [分类模型的性能评估——以SAS Logistic回归为例(3): Lift和Gain](http://cos.name/2009/02/measure-classification-model-performance-lift-gain//)
-  * [在Windows中创建R的包的步骤](http://cos.name/2009/02/create-r-packages-under-windows/)
+  * [R与SAS之争：一个导读](https://cos.name/2009/01/r-sas//)
+  * [WinBUGS在统计分析中的应用（第三部分）](https://cos.name/2009/02/statistical-analysis-and-winbugs-part-3//)
+  * [Google Visualization API 与在线数据分析](https://cos.name/2009/02/google-visualization-api-and-data-analysis-online//)
+  * [分类模型的性能评估——以SAS Logistic回归为例(3): Lift和Gain](https://cos.name/2009/02/measure-classification-model-performance-lift-gain//)
+  * [在Windows中创建R的包的步骤](https://cos.name/2009/02/create-r-packages-under-windows/)
 
 # 二、论坛
 
-[关于邀请大家成为统计之都高校联系人](http://cos.name/bbs/read.php?tid=13026)
+[关于邀请大家成为统计之都高校联系人](https://cos.name/bbs/read.php?tid=13026)
 
 目前为止已经有11个成为统计之都的高校联系人：周茂袁 尚红超 薛崇政 张亮亮 万洪深 沈炎峰 陈省田 吴见彬 陈希 蒲红刚 武瑞佳。
 

@@ -15,11 +15,11 @@ tags:
 slug: 3rd-china-r-beijing-summary
 ---
 
-<figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1821" title="第三届中国R语言会议北京会场合影" src="http://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-500x229.jpg" alt="第三届中国R语言会议北京会场合影" width="500" height="229" />](http://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> 
+<figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1821" title="第三届中国R语言会议北京会场合影" src="https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-500x229.jpg" alt="第三届中国R语言会议北京会场合影" width="500" height="229" />](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> 
 
-[<img class="aligncenter size-medium wp-image-2276" title="中国R语言会议标识" src="http://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png" alt="" width="300" height="199" srcset="http://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, http://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, http://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" />](http://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+[<img class="aligncenter size-medium wp-image-2276" title="中国R语言会议标识" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png" alt="" width="300" height="199" srcset="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
-第三届中国R语言会议（北京会场）于2010年6月14日~15日在中国人民大学明德法学楼0101成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都网站(<a href="http://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，来自各行各业的R用户齐聚北京，共同探讨和交流R软件的使用经验，取得了丰厚的成果。 
+第三届中国R语言会议（北京会场）于2010年6月14日~15日在中国人民大学明德法学楼0101成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都网站(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，来自各行各业的R用户齐聚北京，共同探讨和交流R软件的使用经验，取得了丰厚的成果。 
 
 # 会议概况
 
@@ -62,7 +62,7 @@ slug: 3rd-china-r-beijing-summary
 
 45 | 0                                          | 45</pre>
 
-可以看出，与<a href="http://cos.name/2009/12/2nd-chinese-r-conference-summary/" target="_blank">上届会议</a>相比，本届会议一个显著的变化是参会者的年龄结构更加丰富，这从一个侧面说明了R的用户范围正在逐步扩大，不同年龄层的人都开始对R软件产生了兴趣。
+可以看出，与<a href="https://cos.name/2009/12/2nd-chinese-r-conference-summary/" target="_blank">上届会议</a>相比，本届会议一个显著的变化是参会者的年龄结构更加丰富，这从一个侧面说明了R的用户范围正在逐步扩大，不同年龄层的人都开始对R软件产生了兴趣。
 
 与上届会议类似，本届会议的参会人员大都来自高校和科研机构，包括在校学生、高校老师、科研所研究员等；而本届会议同样得到了企业界和政府部门朋友的大力支持，其中有行业分析师、市场研究员、咨询师、政府服务人员、公务员、医药统计分析师、算法工程师、软件工程师等等。 
 
@@ -70,26 +70,26 @@ slug: 3rd-china-r-beijing-summary
 
 本次会议由两部分组成，其中第一天为R语言基础培训，第二天为演讲报告。
 
-6月14日上午，<a href="http://cos.name/cn/forum/15" target="_blank">统计之都论坛R版</a>版主、亚信科技有限公司研究员<a href="http://www.bjt.name/" target="_blank">刘思喆</a>为参会者讲解了R软件的历史及其基本的统计计算功能；下午，统计之都创始人、中国R语言会议发起人、美国爱荷华州立大学在读博士<a href="http://yihui.name/" target="_blank">谢益辉</a>讲解了R软件的作图功能。本次培训是三届会议以来北京会场举行的首次正式R语言基础培训，取得了良好的反响，同时为国内R软件的推广提供了新的动力。
+6月14日上午，<a href="https://cos.name/cn/forum/15" target="_blank">统计之都论坛R版</a>版主、亚信科技有限公司研究员<a href="http://www.bjt.name/" target="_blank">刘思喆</a>为参会者讲解了R软件的历史及其基本的统计计算功能；下午，统计之都创始人、中国R语言会议发起人、美国爱荷华州立大学在读博士<a href="http://yihui.name/" target="_blank">谢益辉</a>讲解了R软件的作图功能。本次培训是三届会议以来北京会场举行的首次正式R语言基础培训，取得了良好的反响，同时为国内R软件的推广提供了新的动力。
 
 培训讲稿下载：
 
-  * <a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-Rintro.pdf" target="_blank">R语言基础</a>
-  * <a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-Graphics.zip" target="_blank">R作图</a>
+  * <a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Rintro.pdf" target="_blank">R语言基础</a>
+  * <a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Graphics.zip" target="_blank">R作图</a>
 
 6月15日为会议的演讲报告部分，本次会议共进行了九场正式报告，在此要特别感谢各位演讲者热情的参与和支持。以下演讲资料都遵守<a href="http://creativecommons.org/licenses/by/3.0/deed.zh" target="_blank">CC协议</a>：
 
   * 谢益辉：傻瓜软件是怎样炼成的：<a href="http://yihui.name/cn/wp-content/uploads/2010/06/3rd-ChinaR-gWidgets-Yihui-Xie.pdf" target="_blank">用gWidgets包创建图形用户界面</a>（<a href="http://yihui.name/cn/wp-content/uploads/2010/06/3rd-ChinaR-gWidgets-Yihui-Xie.txt" target="_blank">相关程序代码</a>）
-  * 江麒：<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-Nlme-Package.pdf" target="_blank">Nlme包</a>及<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-MCM-with-R.pdf" target="_blank">数学建模中的R</a>
-  * 李舰：<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-Text-Mining.pdf" target="_blank">R与文本挖掘</a>
-  * 杨仁东：<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Python.pdf" target="_blank">R与Python在昼夜节律分析中的应用</a>
-  * 陈堰平：<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-Nonparametric-Regression-with-R.pdf" target="_blank">非参数回归的R语言实现</a>
-  * 稳国柱：<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-Vectorization.ppt" target="_blank">加速R，矢量化运算与并行运算</a>（更详细的介绍请参见<a href="http://www.wentrue.net/blog/?p=945" target="_blank">这里</a>）
-  * 祝迎春：<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-Factor-Analysis.pdf" target="_blank">R与因子分析的新发展</a>
-  * 甄一松：<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Bioconductor.pdf" target="_blank">R/BioConductor在斑马鱼心脏再生领域的应用</a>
-  * 胡一睿：<a href="http://cos.name/wp-content/uploads/2010/06/China-R-2010-Time-Series-TAR-Model.pdf" target="_blank">R在处理门限自回归模型中的应用</a><figure style="width: 500px" class="wp-caption aligncenter">
+  * 江麒：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Nlme-Package.pdf" target="_blank">Nlme包</a>及<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-MCM-with-R.pdf" target="_blank">数学建模中的R</a>
+  * 李舰：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Text-Mining.pdf" target="_blank">R与文本挖掘</a>
+  * 杨仁东：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Python.pdf" target="_blank">R与Python在昼夜节律分析中的应用</a>
+  * 陈堰平：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Nonparametric-Regression-with-R.pdf" target="_blank">非参数回归的R语言实现</a>
+  * 稳国柱：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Vectorization.ppt" target="_blank">加速R，矢量化运算与并行运算</a>（更详细的介绍请参见<a href="http://www.wentrue.net/blog/?p=945" target="_blank">这里</a>）
+  * 祝迎春：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Factor-Analysis.pdf" target="_blank">R与因子分析的新发展</a>
+  * 甄一松：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Bioconductor.pdf" target="_blank">R/BioConductor在斑马鱼心脏再生领域的应用</a>
+  * 胡一睿：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Time-Series-TAR-Model.pdf" target="_blank">R在处理门限自回归模型中的应用</a><figure style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="aligncenter size-large wp-image-1821" title="第三届中国R语言会议北京会场演讲者与组织人员合影" src="http://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2-500x281.jpg" alt="第三届中国R语言会议北京会场演讲者与组织人员合影" width="500" height="281" />](http://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议北京会场演讲者与组织人员合影（右键另存为看大图）</figcaption></figure> 
+[<img class="aligncenter size-large wp-image-1821" title="第三届中国R语言会议北京会场演讲者与组织人员合影" src="https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2-500x281.jpg" alt="第三届中国R语言会议北京会场演讲者与组织人员合影" width="500" height="281" />](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议北京会场演讲者与组织人员合影（右键另存为看大图）</figcaption></figure> 
 
 #  
 

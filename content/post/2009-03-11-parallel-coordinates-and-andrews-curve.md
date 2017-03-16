@@ -28,7 +28,7 @@ data(iris)
 parallel(~iris[1:4], iris, groups = Species,
     horizontal.axis = FALSE, scales = list(x = list(rot = 90)))</pre><figure id="attachment_705" style="width: 443px" class="wp-caption aligncenter">
 
-<img class="size-full wp-image-705" src="http://cos.name/wp-content/uploads/2009/03/parallel2.png" alt="Iris 数据的轮廓图(Parallel Coordinate Plots)" width="443" height="421" srcset="http://cos.name/wp-content/uploads/2009/03/parallel2.png 554w, http://cos.name/wp-content/uploads/2009/03/parallel2-300x284.png 300w" sizes="(max-width: 443px) 100vw, 443px" /><figcaption class="wp-caption-text">图1 Iris 数据的轮廓图(Parallel Coordinate Plots)</figcaption></figure> 
+<img class="size-full wp-image-705" src="https://cos.name/wp-content/uploads/2009/03/parallel2.png" alt="Iris 数据的轮廓图(Parallel Coordinate Plots)" width="443" height="421" srcset="https://cos.name/wp-content/uploads/2009/03/parallel2.png 554w, https://cos.name/wp-content/uploads/2009/03/parallel2-300x284.png 300w" sizes="(max-width: 443px) 100vw, 443px" /><figcaption class="wp-caption-text">图1 Iris 数据的轮廓图(Parallel Coordinate Plots)</figcaption></figure> 
 
 <p style="text-align: left;">
   观察图1，可以发现同一品种的鸢尾花的轮廓图粗略地聚集在一起。
@@ -82,7 +82,7 @@ for (i in 1:m) lines(t, f[i, ], col = c("red", "green3",
 legend(x = -3, y = 15, c("setosa", "versicolor", "virginica"),
     lty = 1, col = c("red", "green3", "blue"))</pre><figure id="attachment_706" style="width: 446px" class="wp-caption aligncenter">
 
-<img class="size-full wp-image-706" src="http://cos.name/wp-content/uploads/2009/03/unison.png" alt="Iris 数据的调和曲线图" width="446" height="446" srcset="http://cos.name/wp-content/uploads/2009/03/unison.png 558w, http://cos.name/wp-content/uploads/2009/03/unison-150x150.png 150w, http://cos.name/wp-content/uploads/2009/03/unison-300x299.png 300w" sizes="(max-width: 446px) 100vw, 446px" /><figcaption class="wp-caption-text">图2 Iris 数据的调和曲线图</figcaption></figure> 
+<img class="size-full wp-image-706" src="https://cos.name/wp-content/uploads/2009/03/unison.png" alt="Iris 数据的调和曲线图" width="446" height="446" srcset="https://cos.name/wp-content/uploads/2009/03/unison.png 558w, https://cos.name/wp-content/uploads/2009/03/unison-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/unison-300x299.png 300w" sizes="(max-width: 446px) 100vw, 446px" /><figcaption class="wp-caption-text">图2 Iris 数据的调和曲线图</figcaption></figure> 
 
 观察图2，同样可以发现同一品种鸢尾花数据的调和曲线图基本上扭在一起。同图1 比较后，发现图2 更加清楚明白，事实上Andrews证明了调和曲线图有许多良好性质。
 

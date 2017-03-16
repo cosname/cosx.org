@@ -18,11 +18,11 @@ slug: cos-navigation-4
 
 本周一共发布了2篇日志；《第一届中国R语言会议纪要》和《WinBUGS在统计分析中的应用（第二部分）》。
 
-  * [第一届中国R语言会议纪要](http://cos.name/2008/12/1st-chinese-r-conference-summary/)
+  * [第一届中国R语言会议纪要](https://cos.name/2008/12/1st-chinese-r-conference-summary/)
 
 介绍了第一届中国R语言会议的相关情况，可以下载会议相关资料。
 
-  * [WinBUGS在统计分析中的应用（第二部分）](http://cos.name/2008/12/statistical-analysis-and-winbugs-part-2/)
+  * [WinBUGS在统计分析中的应用（第二部分）](https://cos.name/2008/12/statistical-analysis-and-winbugs-part-2/)
 
 齐韬为我们讲述WinBUGS数据分析案例并结合SAS做比较分析。
 
@@ -32,6 +32,6 @@ slug: cos-navigation-4
 
 # 三、论坛
 
-[关于邀请大家成为统计之都高校联系人](http://cos.name/bbs/read.php?tid=13026)目前已经有六人发来他们的简历，分别是：东北财经大学的尚红超、哈尔滨师范大学的薛崇政、南京邮电大学的张亮亮、南京农业大学的万洪深、浙江大学的沈炎峰和厦门大学的吴见彬、陈希。
+[关于邀请大家成为统计之都高校联系人](https://cos.name/bbs/read.php?tid=13026)目前已经有六人发来他们的简历，分别是：东北财经大学的尚红超、哈尔滨师范大学的薛崇政、南京邮电大学的张亮亮、南京农业大学的万洪深、浙江大学的沈炎峰和厦门大学的吴见彬、陈希。
 
 目前会员总数：71818，主题数:9463 ，帖子数:66253

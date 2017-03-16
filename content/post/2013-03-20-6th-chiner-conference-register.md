@@ -10,7 +10,7 @@ tags:
 slug: 6th-chiner-conference-register
 ---
 
-由统计之都组织的2012年第六届ChinaR会议正式开始接受报名了。和往年一样，报名仍然是免费的，并欢迎投稿演讲。会议详情请见<a href="http://cos.name/2013/02/chinar-beijing-2013/" target="_blank">第六届中国R会议通知。</a>
+由统计之都组织的2012年第六届ChinaR会议正式开始接受报名了。和往年一样，报名仍然是免费的，并欢迎投稿演讲。会议详情请见<a href="https://cos.name/2013/02/chinar-beijing-2013/" target="_blank">第六届中国R会议通知。</a>
 
 ### 一、会议时间
 
@@ -22,4 +22,4 @@ slug: 6th-chiner-conference-register
 
 ### 三、报名方式
 
-报名页面请<a href="http://cos.name/2013/02/chinar-beijing-2013/" target="_blank">点击会议通知</a>下面更新的报名系统。
+报名页面请<a href="https://cos.name/2013/02/chinar-beijing-2013/" target="_blank">点击会议通知</a>下面更新的报名系统。

@@ -46,9 +46,9 @@ COS主站主要为群体博客形式，其团队由多位投稿者、作者和�
 
 ## 成为长期撰稿人
 
-对于长期撰稿人，经COS编辑部审核后，我们将为您建立COS主站[个人档案](http://cos.name/wp-admin/profile.php)。您可以通过后台向COS主站投稿，稿件需经过审稿流程，经编辑批准才能发布。本站后台为Wordpress，界面如下（点击看大图）：<figure id="attachment_841" style="width: 300px" class="wp-caption aligncenter">
+对于长期撰稿人，经COS编辑部审核后，我们将为您建立COS主站[个人档案](https://cos.name/wp-admin/profile.php)。您可以通过后台向COS主站投稿，稿件需经过审稿流程，经编辑批准才能发布。本站后台为Wordpress，界面如下（点击看大图）：<figure id="attachment_841" style="width: 300px" class="wp-caption aligncenter">
 
-[<img class="size-medium wp-image-841 " title="COS后台文章编辑器" src="http://cos.name/wp-content/uploads/2008/11/editor-for-authors-300x144.png" alt="COS后台文章编辑器" width="300" height="144" srcset="http://cos.name/wp-content/uploads/2008/11/editor-for-authors-300x144.png 300w, http://cos.name/wp-content/uploads/2008/11/editor-for-authors.png 765w" sizes="(max-width: 300px) 100vw, 300px" />](http://cos.name/wp-content/uploads/2008/11/editor-for-authors.png)<figcaption class="wp-caption-text">COS后台文章编辑器</figcaption></figure> 
+[<img class="size-medium wp-image-841 " title="COS后台文章编辑器" src="https://cos.name/wp-content/uploads/2008/11/editor-for-authors-300x144.png" alt="COS后台文章编辑器" width="300" height="144" srcset="https://cos.name/wp-content/uploads/2008/11/editor-for-authors-300x144.png 300w, https://cos.name/wp-content/uploads/2008/11/editor-for-authors.png 765w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2008/11/editor-for-authors.png)<figcaption class="wp-caption-text">COS后台文章编辑器</figcaption></figure> 
 
 ### **写作注意事项：**
 
@@ -75,4 +75,4 @@ x$mids  # 直方图横坐标中点</pre>
     
     # 捐赠计划
     
-    “统计之都”接收社会捐赠，详情参见：[http://cos.name/donate/](http://cos.name/donate/ "为统计之都捐赠")
+    “统计之都”接收社会捐赠，详情参见：[https://cos.name/donate/](https://cos.name/donate/ "为统计之都捐赠")

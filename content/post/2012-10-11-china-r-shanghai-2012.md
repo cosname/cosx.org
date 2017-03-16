@@ -7,6 +7,6 @@ categories:
 slug: china-r-shanghai-2012
 ---
 
-继五月份北京会场圆满举行之后，第五届中国R语言会议的上海会场也将揭开帷幕。报名已经开始，会议详情猛击： <http://cos.name/chinar/chinar-2012/>。
+继五月份北京会场圆满举行之后，第五届中国R语言会议的上海会场也将揭开帷幕。报名已经开始，会议详情猛击： <https://cos.name/chinar/chinar-2012/>。
 
-<a href="http://cos.name/chinar/chinar-2012/" rel="attachment wp-att-6417"><img class="aligncenter size-full wp-image-6417" title="China-R-2012_manual_cover" src="http://i.imgur.com/4019k.jpg" alt="" width="388" height="268" /></a>
+<a href="https://cos.name/chinar/chinar-2012/" rel="attachment wp-att-6417"><img class="aligncenter size-full wp-image-6417" title="China-R-2012_manual_cover" src="http://i.imgur.com/4019k.jpg" alt="" width="388" height="268" /></a>

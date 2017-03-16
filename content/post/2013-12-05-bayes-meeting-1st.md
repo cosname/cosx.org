@@ -21,14 +21,14 @@ slug: bayes-meeting-1st
 
 天津财经大学月牙报告厅（统计湖畔）
 
-[<img class="size-large wp-image-9368 aligncenter" src="http://cos.name/wp-content/uploads/2013/12/tianjinUniv0map-500x302.png" alt="tianjinUniv0map" width="500" height="302" srcset="http://cos.name/wp-content/uploads/2013/12/tianjinUniv0map-500x302.png 500w, http://cos.name/wp-content/uploads/2013/12/tianjinUniv0map-300x181.png 300w, http://cos.name/wp-content/uploads/2013/12/tianjinUniv0map.png 922w" sizes="(max-width: 500px) 100vw, 500px" />](http://cos.name/wp-content/uploads/2013/12/tianjinUniv0map.png)
+[<img class="size-large wp-image-9368 aligncenter" src="https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map-500x302.png" alt="tianjinUniv0map" width="500" height="302" srcset="https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map-500x302.png 500w, https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map-300x181.png 300w, https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map.png 922w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map.png)
 
 &nbsp;
 
 ## 三、论坛日程安排
 
 <p style="text-align: center;">
-  <a href="http://cos.name/wp-content/uploads/2013/12/cloud-bayes.png"><img class="size-large wp-image-9369" src="http://cos.name/wp-content/uploads/2013/12/cloud-bayes-500x150.png" alt="cloud-bayes" width="500" height="150" srcset="http://cos.name/wp-content/uploads/2013/12/cloud-bayes-500x150.png 500w, http://cos.name/wp-content/uploads/2013/12/cloud-bayes-300x90.png 300w, http://cos.name/wp-content/uploads/2013/12/cloud-bayes.png 876w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2013/12/cloud-bayes.png"><img class="size-large wp-image-9369" src="https://cos.name/wp-content/uploads/2013/12/cloud-bayes-500x150.png" alt="cloud-bayes" width="500" height="150" srcset="https://cos.name/wp-content/uploads/2013/12/cloud-bayes-500x150.png 500w, https://cos.name/wp-content/uploads/2013/12/cloud-bayes-300x90.png 300w, https://cos.name/wp-content/uploads/2013/12/cloud-bayes.png 876w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 <!--more-->

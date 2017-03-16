@@ -32,7 +32,7 @@ gretl（**G**nu **R**egression，**E**conometrics and **T**ime-series **L**ibrar
 
 **界面截图**<figure id="attachment_599" style="width: 446px" class="wp-caption aligncenter">
 
-<img class="size-full wp-image-599" src="http://cos.name/wp-content/uploads/2009/01/gretl_screenshot.jpg" alt="gretl界面截图" width="446" height="390" /><figcaption class="wp-caption-text">gretl界面截图</figcaption></figure> 
+<img class="size-full wp-image-599" src="https://cos.name/wp-content/uploads/2009/01/gretl_screenshot.jpg" alt="gretl界面截图" width="446" height="390" /><figcaption class="wp-caption-text">gretl界面截图</figcaption></figure> 
 
 **相关链接**
 

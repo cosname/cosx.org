@@ -49,7 +49,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="http://cos.name/wp-content/uploads/2013/12/p1.jpg"><img alt="p1" src="http://cos.name/wp-content/uploads/2013/12/p1.jpg" width="897" height="471" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/12/p1.jpg"><img alt="p1" src="https://cos.name/wp-content/uploads/2013/12/p1.jpg" width="897" height="471" /></a>
   </p>
   
   <p>
@@ -57,7 +57,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="http://cos.name/wp-content/uploads/2013/12/p2.jpg"><img alt="p2" src="http://cos.name/wp-content/uploads/2013/12/p2.jpg" width="898" height="484" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/12/p2.jpg"><img alt="p2" src="https://cos.name/wp-content/uploads/2013/12/p2.jpg" width="898" height="484" /></a>
   </p>
   
   <p>
@@ -73,7 +73,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="http://cos.name/wp-content/uploads/2013/12/p3.jpg"><img alt="p3" src="http://cos.name/wp-content/uploads/2013/12/p3.jpg" width="895" height="469" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/12/p3.jpg"><img alt="p3" src="https://cos.name/wp-content/uploads/2013/12/p3.jpg" width="895" height="469" /></a>
   </p>
   
   <p>
@@ -81,7 +81,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="http://cos.name/wp-content/uploads/2013/12/p4.jpg"><img alt="p4" src="http://cos.name/wp-content/uploads/2013/12/p4.jpg" width="1063" height="589" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/12/p4.jpg"><img alt="p4" src="https://cos.name/wp-content/uploads/2013/12/p4.jpg" width="1063" height="589" /></a>
   </p>
   
   <p>
