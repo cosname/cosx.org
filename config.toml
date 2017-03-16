@@ -1,0 +1,65 @@
+baseurl = "/"
+languageCode = "zh-CN"
+title = "统计之都"
+theme = "hugo-steam-cos"
+disqusShortname = ""
+googleAnalytics = ""
+paginate = 10
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+hasCJKLanguage = true
+enableEmoji = true
+preserveTaxonomyNames = true
+
+[blackfriday]
+  extensionsmask = ["noIntraEmphasis"]
+
+[permalinks]
+  post = "/:year/:month/:slug/"
+
+[[menu.main]]
+  name = "首页"
+  url = "/"
+  weight = 0
+
+[[menu.main]]
+  name = "论坛"
+  url = "https://d.cosx.org"
+  weight = 1
+
+[params]
+	logoFull = "![统计之都标志](/img/logo-full.png)"
+	subtitle = ""
+	copyright = "版权所有"
+
+	# You can choose between green, orange, red and blue.
+	themecolor = "red"
+
+	# Link custom assets relative to /static
+	favicon   = "favicon.ico"
+	customCSS = ["css/fonts.css"]
+	customJS  = []
+
+	# To provide some metadata for search engines and the about section in the footer
+	# feel free to add a few information about you and your website.
+	name = "统计之都"
+	bio = "专业、人本、正直的统计学网站"
+	description = "中国统计学门户网站，免费统计学服务平台"
+
+	# Link your social networks (optional)
+	location = "中国，北京"
+	twitter = "cos_name"
+	linkedin = "../groups/4564122"
+	googleplus = "110727350576315935180"
+	facebook = ""
+	instagram = ""
+	github = "cosname"
+	gitlab = ""
+	bitbucket = ""
+
+	# Customize or translate the strings
+	keepReadingStr = "阅读全文"
+	backtotopStr = "返回顶端"
+	shareStr = "分享"
+	pageNotFoundTitle = "404 - 页面不存在"
+
+	useSummaryIfNoDescription = true
