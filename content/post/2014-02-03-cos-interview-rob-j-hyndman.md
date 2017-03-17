@@ -63,4 +63,4 @@ _Rob J. Hyndman 是澳大利亚的 [Monash University](http://www.monash.edu/) �
 
 我的咨询工作在教育中也很有用，因为这给了我告诉给学生的故事，学生经常喜欢听到我做过的事情。每样事情 — 研究，咨询，教育 — 都结合在一起，我觉得很好。
 
-![Rob](https://dl.dropboxusercontent.com/u/7131169/earo.me/rob.JPG)
+
