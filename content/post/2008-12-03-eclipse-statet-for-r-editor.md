@@ -12,7 +12,7 @@ tags:
 slug: eclipse-statet-for-r-editor
 ---
 
-本文的目的是告诉你如何打造一个好的R的编程界面和环境，让你充分享受用R编程的乐趣。这不是一个关于R的教程，可以访问[这里](http://a-lucky-bird.spaces.live.com/blog/cns!9FE71C3A1FA0267F!662.entry "http://a-lucky-bird.spaces.live.com/blog/cns!9FE71C3A1FA0267F!662.entry")以获得更多关于R的资源。大家也可以加入QQ群42131822和R的邮件列表<http://groups.google.com/group/R-Forum?hl=zh-CN>(需要google账号)可以认识正在使用R的更多的朋友，也可以通过[Email](mailto:hurongxing@126.com)和我联系。本文论坛讨论帖参见<a title="Eclipse + StatET真的不错" href="https://cos.name/bbs/read.php?tid=12136" target="_blank">这里</a>。
+本文的目的是告诉你如何打造一个好的R的编程界面和环境，让你充分享受用R编程的乐趣。这不是一个关于R的教程，可以访问[这里](http://a-lucky-bird.spaces.live.com/blog/cns!9FE71C3A1FA0267F!662.entry "http://a-lucky-bird.spaces.live.com/blog/cns!9FE71C3A1FA0267F!662.entry")以获得更多关于R的资源。大家也可以加入QQ群42131822和R的邮件列表<http://groups.google.com/group/R-Forum?hl=zh-CN>(需要google账号)可以认识正在使用R的更多的朋友，也可以通过[Email](mailto:hurongxing@126.com)和我联系。本文论坛讨论帖参见<a title="Eclipse + StatET真的不错" href="https://cos.name/cn/topic/12136" target="_blank">这里</a>。
 
 <!--more-->
 
@@ -153,7 +153,7 @@ prime(1000)</pre>
 
 在退出Eclipse时，应先关闭R控制台（按钮[<img src="https://cos.name/wp-content/uploads/2008/12/image-thumb29.png" border="0" alt="image" width="40" height="29" />](https://cos.name/wp-content/uploads/2008/12/image29.png) ），再退出Eclipse.
 
-注：下面的内容来自COS论坛（[https://cos.name/bbs](https://cos.name/bbs "https://cos.name/bbs")）：
+注：下面的内容来自COS论坛（[https://cos.name/cn](https://cos.name/cn "https://cos.name/cn")）：
 
 **Ihavenothing：**请教一个问题，我想把base里面一些常用的函数导入到StatET的语法库中，从而实现高亮，但它提供的窗口好像只能一个一个添加，这样工程量似乎太大了，不知道有没有办法实现批量导入？
 

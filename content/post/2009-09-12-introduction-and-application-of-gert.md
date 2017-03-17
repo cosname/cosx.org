@@ -24,4 +24,4 @@ slug: introduction-and-application-of-gert
 
 文章下载地址：[用GERT方法解决两个抛硬币问题](https://cos.name/wp-content/uploads/2009/09/application-of-gert-in-coin-problems.pdf)
 
-论坛帖子地址：<https://cos.name/bbs/read.php?tid=16360>
+论坛帖子地址：<https://cos.name/cn/topic/16360>
