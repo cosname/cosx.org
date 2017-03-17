@@ -31,4 +31,4 @@ slug: cos-navigation-3
 
 # 论坛
 
-本周发现大量中国人民大学统计学院的同学涌现在[S-Plus & R版块](https://cos.name/bbs/thread.php?fid=15 "S-Plus & R版块")，看样子老师布置的作业颇有些难度。
+本周发现大量中国人民大学统计学院的同学涌现在[S-Plus & R版块](https://cos.name/cn "S-Plus & R版块")，看样子老师布置的作业颇有些难度。
