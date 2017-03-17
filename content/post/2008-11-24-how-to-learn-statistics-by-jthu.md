@@ -56,7 +56,7 @@ slug: how-to-learn-statistics-by-jthu
 > 
 > ——王勇：《两年后再读<与林老师对话>有感》
   
-> [http://time.dufe.edu.cn/experience/2007-11-25/264.html]( http://time.dufe.edu.cn/experience/2007-11-25/264.html)
+> [http://time.dufe.edu.cn/experience/2007-11-25/264.html](http://time.dufe.edu.cn/experience/2007-11-25/264.html)
 
 白话加逻辑，不用数学而对问题有洞见，说的大概就是“直觉”吧。当然，数学公式密布的场合，直觉也有用武之地，比如，满满一黑板你证明出了一个复杂的定理，然后你拿白话说明为什么会有这个结果，The intuition behind this equation is blablabla，那直觉就相当强了。
 
