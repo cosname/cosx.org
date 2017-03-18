@@ -71,4 +71,4 @@ slug: ruc-math-stat-course
 
 COS统计论坛
   
-<http://www.cos.name/bbs/>
+<http://cos.name/cn/>

@@ -30,7 +30,7 @@ slug: cos-navigation-6
 
 # 三、论坛
 
-[关于邀请大家成为统计之都高校联系人](https://cos.name/bbs/read.php?tid=13026)
+[关于邀请大家成为统计之都高校联系人](https://cos.name/cn/topic/13026)
   
 本周学校有两位同学加入高校联系人：温州大学的陈省田和中南大学的蒲红刚
 
