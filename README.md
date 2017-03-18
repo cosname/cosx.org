@@ -1,5 +1,7 @@
 本库存放着 COS 主站的所有文章 Markdown 或 R Markdown 源文件。欢迎各位作者投稿，等 COS 旧主站全部迁移完毕之后我们会给出具体的投稿操作步骤。
 
+文章的基础编辑方法与规范请参考[维基文档](https://github.com/cosname/cosx.org/wiki)。
+
 ## 编辑部注意事项
 
 审稿： 
