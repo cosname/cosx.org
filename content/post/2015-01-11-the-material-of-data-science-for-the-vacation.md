@@ -20,7 +20,7 @@ slug: the-material-of-data-science-for-the-vacation
 
 用rgl包绘制彗星的[3D图形](http://blog.revolutionanalytics.com/2014/12/explore-a-comet-with-rs-rgl-package.html)。
 
-Kimmel癌症研究中心发表论文称“患癌症主要是因为你运气不好（而不是因为抽烟喝酒烫头发）”，对此奥克兰大学教授Thomas Lumley（他被人熟知的身份是R核心开发成员）提出了[质疑](http://www.statschat.org.nz/2015/01/03/cancer-isnt-just-bad-luck/)，他将文中的一幅散点图在不同的坐标轴下重画了一下，发现原文宣称的“2/3的癌症可以被DNA复制过程中的随机错误解释”不可靠，若坐标轴不取对数，这个比例会大大下降。
+Kimmel癌症研究中心发表论文称“患癌症主要是因为你运气不好（而不是因为抽烟喝酒烫头发）”，对此奥克兰大学教授Thomas Lumley（他被人熟知的身份是R核心开发成员）提出了[质疑](http://www.statschat.org.nz/2015/01/03/cancer-isnt-just-bad-luck/)^[编者注：这个链接现在已经失效，抱歉。]，他将文中的一幅散点图在不同的坐标轴下重画了一下，发现原文宣称的“2/3的癌症可以被DNA复制过程中的随机错误解释”不可靠，若坐标轴不取对数，这个比例会大大下降。
 
 
 小编在前几期的每周精选中选择了不少数据可视化的文章，那么问题来了，数据可视化有哪些价值呢？他为什么受到这么多人的重视呢，小编今天为您[揭晓](http://www.36dsj.com/archives/20467)。
@@ -35,6 +35,6 @@ Max Welling教授在UCI讲授《机器学习》多年，他认为许多教材堆
 
 Google Scholar论文总引用数之和超过27万的斯坦福统计系传奇教授Trevor Hastie和LASSO作者Rob Tibshirani将于本月19日再次开设免费的斯坦福《统计学习》[入门公开课](http://t.cn/R7epAal)。想在假期提高自己的同学切勿错过！
 
-很多人一直在谈创新，什么样的条件可以促进创新，创新是教出来的么？王元院士说创新人才岂是教出来的？ 不是教出来的，是[怎样出来](http://t.cn/RZJJiDL)呢？
+很多人一直在谈创新，什么样的条件可以促进创新，创新是教出来的么？王元院士说创新人才岂是教出来的？ 不是教出来的，是[怎样出来](http://t.cn/RZJJiDL)^[编者注：这个链接现在已经失效，抱歉。]呢？
 
-65个新的外部资源和有关大数据和[数据科学的文章](http://www.datasciencecentral.com/profiles/blogs/77-new-external-resources-and-articles-about-data-science-big)。
+65个新的外部资源和有关大数据和[数据科学的文章](http://www.datasciencecentral.com/profiles/blogs/77-new-external-resources-and-articles-about-data-science-big)^[编者注：这个链接现在已经失效，抱歉。]。
