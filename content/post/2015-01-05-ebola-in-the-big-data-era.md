@@ -11,17 +11,17 @@ slug: ebola-in-the-big-data-era
 
 本文由统计之都创作小组 (code99) 撰写，参与本篇文稿的 code99 成员有：熊熹， 邓一硕，刘辰昂，关菁菁
 
-2014年继马航客机失联事件之后，始发于西非几内亚的埃博拉病毒疫情经由传统媒体和数字媒体走入全球公众视野。据世界卫生组织提供的资料<a href="#_ftn1" name="_ftnref1">[1]</a>显示，埃博拉病毒最早在1976年同时爆发的两起疫情中首次出现的，一起在苏丹，另一起在刚果民主共和国。后者发生在位于埃博拉河附近的一处村庄，该病由此得名。该次埃博拉疫情在刚果民主共和国爆发的是扎伊尔标准亚种，累计318人患病，280人死亡，致死率88%；在苏丹爆发的则是苏丹亚种，累计284人患病，151人死亡，致死率53%；另外还有雷斯顿、科特迪瓦、邦地布优等三个亚种，对动物和人类的危害相对温和。据悉，目前正在肆虐全球的埃博拉病毒，正是致死率最高的扎伊尔标准亚种。
+2014年继马航客机失联事件之后，始发于西非几内亚的埃博拉病毒疫情经由传统媒体和数字媒体走入全球公众视野。据世界卫生组织提供的资料[1]^[http://www.who.int/mediacentre/factsheets/fs103/en/] 显示，埃博拉病毒最早在1976年同时爆发的两起疫情中首次出现的，一起在苏丹，另一起在刚果民主共和国。后者发生在位于埃博拉河附近的一处村庄，该病由此得名。该次埃博拉疫情在刚果民主共和国爆发的是扎伊尔标准亚种，累计318人患病，280人死亡，致死率88%；在苏丹爆发的则是苏丹亚种，累计284人患病，151人死亡，致死率53%；另外还有雷斯顿、科特迪瓦、邦地布优等三个亚种，对动物和人类的危害相对温和。据悉，目前正在肆虐全球的埃博拉病毒，正是致死率最高的扎伊尔标准亚种。
 
 埃博拉病毒疫情时隔几年便爆发一次，不过之前每次疫情规模都比较小，主要集中在一个地区爆发，并且局限在中非。特别地，刚果民众共和国史上曾多次爆发埃博拉疫情。
 
-2014年3月开始爆发的埃博拉病毒疫情的爆发规模引起了国际社会的关注，并且被世界卫生组织列为“国际间关注的公共卫生紧急事件”（历史第三次）。首先，这次疫情涉及到了多个国家和地区。全境范围受影响的国家包括几内亚、利比里亚和塞拉利昂。部分领土受影响的地区包括马里的卡伊，西班牙的马德里，美国的达拉斯、德克萨斯州和纽约市，英国苏格兰地区的格拉斯哥市，尼日利亚的拉各斯哈科特港，以及塞内加尔的达喀尔。其次，这次埃博拉病毒疫情出现的病例和死亡数字超过了所有其它疫情的总和。截止2014年12月31号，累计20206人患病，7905人死亡<a href="#_ftn2" name="_ftnref2">[2]</a>。并且数字还在不断增加。而所有的埃博拉护理者，则被美国时代周刊选为2014年的年度人物。
+2014年3月开始爆发的埃博拉病毒疫情的爆发规模引起了国际社会的关注，并且被世界卫生组织列为“国际间关注的公共卫生紧急事件”（历史第三次）。首先，这次疫情涉及到了多个国家和地区。全境范围受影响的国家包括几内亚、利比里亚和塞拉利昂。部分领土受影响的地区包括马里的卡伊，西班牙的马德里，美国的达拉斯、德克萨斯州和纽约市，英国苏格兰地区的格拉斯哥市，尼日利亚的拉各斯哈科特港，以及塞内加尔的达喀尔。其次，这次埃博拉病毒疫情出现的病例和死亡数字超过了所有其它疫情的总和。截止2014年12月31号，累计20206人患病，7905人死亡[2]^[http://apps.who.int/ebolaweb/sitreps/20141231/20141231.pdf] 。并且数字还在不断增加。而所有的埃博拉护理者，则被美国时代周刊选为2014年的年度人物。
 
-回望过去几十年，人类无疑在信息、科技、生物、医疗等领域取得了今非昔比的成果。反观2014年埃博拉病毒疫情的爆发、传播、媒体报导、控制，我们不禁开始思考在这个大数据时代，数据、统计、理性思考、批判思维能为人类对疫情防控带来什么好处？这篇文章试图从三个角度去阐述大数据如何与疫情防控紧密相连。本文第一部分讨论了如何通过交通数据、移动通信数据与社交媒体数据等非传统公共卫生数据来测算乃至预测疫情风险；第二部分重点关注死亡率的不同估算方法带来的对于疫情风险的不同认知；第三部分聚焦在埃博拉病毒疫情的治疗和防控支出数据。<!--more-->
+回望过去几十年，人类无疑在信息、科技、生物、医疗等领域取得了今非昔比的成果。反观2014年埃博拉病毒疫情的爆发、传播、媒体报导、控制，我们不禁开始思考在这个大数据时代，数据、统计、理性思考、批判思维能为人类对疫情防控带来什么好处？这篇文章试图从三个角度去阐述大数据如何与疫情防控紧密相连。本文第一部分讨论了如何通过交通数据、移动通信数据与社交媒体数据等非传统公共卫生数据来测算乃至预测疫情风险；第二部分重点关注死亡率的不同估算方法带来的对于疫情风险的不同认知；第三部分聚焦在埃博拉病毒疫情的治疗和防控支出数据。
 
-**一、数据驱动的疫情预测**
+# 一、数据驱动的疫情预测
 
-**1. 由交通数据预测疫情**<a href="#_ftn3" name="_ftnref3">[3]</a>
+## 1. 由交通数据预测疫情[3]^[http://rocs.hu-berlin.de/publications/ebola/index.html]
 
 全球人口流动的日趋频繁使某区域爆发的疫情会给全球其他国家和地区带来潜在的疫情风险，于是如何对此类疫情风险进行有效的预测和评估自然就成了一个值得探究的课题。本次埃博拉爆发的一个重大特征即是，疫情通过交通运输突破国境，在源爆发地几内亚之外多国肆虐。对于国际间的人口流动，飞机显然是最主要的交通方式，因此对机场人口流动数据的统计分析也就成了重中之重。
 
@@ -29,15 +29,11 @@ slug: ebola-in-the-big-data-era
 
 对于引入风险的估计，最核心的问题便是如何通过动态模型或是统计模型将风险量化。这里介绍一种比较直观简介的估计方式，首先把引入风险分为相对引入风险(relative import risk)和绝对引入风险(absolute import risk)。不妨假设X为疫情爆发区域的某个机场，而Y则是世界上任意一块区域，那么我们可以通过条件概率的形式来定义相对引入风险，即P(Y|X)。而对于绝对引入风险我们则可以通过联合概率来定义，即P(X,Y)=P(Y|X)P(X)，这里需要注意的是P(X)往往远小于P(Y|X)，因此P(X,Y)也会远远小于P(Y|X)。在实际应用中，相对风险较绝对风险而言更有价值，其主要原因在于P(X)的估计在大部分时间都难以实现，事实上P(X)的估计需要依赖于大量的参数来描述X所在地区的各类因素，而绝对风险的估计却恰恰依赖于P(X)。与此相反，相对风险的计算则仅仅需要各机场人口流动的数据即可，即无需考虑地区本身的相关因素。
 
-将全球各地的机场数据整合后，人们即可以得到各地点相对引入风险的估计值，下一步则是考虑如何将分析结果向公众展示。显然数据可视化往往是直观有效展示分析结果的最佳方式，有人提供了一种基于D3实现的交互式网络分析图表。（图一展示了一个交互式图表的截图。有兴趣的读者可翻阅原图。图表链接：<http://rocs.hu-berlin.de/D3/ebola/>)
+将全球各地的机场数据整合后，人们即可以得到各地点相对引入风险的估计值，下一步则是考虑如何将分析结果向公众展示。显然数据可视化往往是直观有效展示分析结果的最佳方式，有人提供了一种基于D3实现的交互式网络分析图表。（图一展示了一个交互式图表的截图。有兴趣的读者可翻阅原图。图表链接：[http://rocs.hu-berlin.de/D3/ebola/](http://rocs.hu-berlin.de/D3/ebola/))
 
-[<img class="aligncenter size-full wp-image-10529" src="https://cos.name/wp-content/uploads/2015/01/图一a.png" alt="图一a" width="992" height="634" srcset="https://cos.name/wp-content/uploads/2015/01/图一a.png 992w, https://cos.name/wp-content/uploads/2015/01/图一a-300x192.png 300w, https://cos.name/wp-content/uploads/2015/01/图一a-500x320.png 500w" sizes="(max-width: 992px) 100vw, 992px" />](https://cos.name/wp-content/uploads/2015/01/图一a.png)
+![图一a](https://cos.name/wp-content/uploads/2015/01/图一a.png)
 
-<p align="center">
-  图1
-</p>
-
-**2. 由移动通信数据预测疫情**
+## 2. 由移动通信数据预测疫情
 
 埃博拉病毒在西非的爆发引起了全世界的关注，人们纷纷把注意力头像了机场等引起人口流动的公共场所，正如上一节所说，机场数据的确对于流行病学家等研究者们而言具有极高的分析价值，但除此之外，基于手机移动端产生的数据同样极具应用潜力。
 
@@ -47,9 +43,9 @@ slug: ebola-in-the-big-data-era
 
 在对于埃博拉病毒研究的实际操作中却更为复杂，一个最主要的原因在于西非大部分民众并没有手机或者其他通信设备。不过尽管如此，某种程度上它却依然优于基于陈旧数据的统计分析。事实上研究人员如果可以从一个传染病爆发的地域追踪到人口的流动，那么对于下一个最有可能爆发传染病的地点就会有一个比较有效的估计和预测，从而可以提前展开合理有效的资源配置。遗憾的是，尽管很多相关的机构都做了很大程度的努力，但出于隐私等问题的考虑，电信运营商依然不允许研究人员使用这部分数据。
 
-[<img class="aligncenter size-full wp-image-10530" src="https://cos.name/wp-content/uploads/2015/01/图2.png" alt="图2" width="923" height="475" srcset="https://cos.name/wp-content/uploads/2015/01/图2.png 923w, https://cos.name/wp-content/uploads/2015/01/图2-300x154.png 300w, https://cos.name/wp-content/uploads/2015/01/图2-500x257.png 500w" sizes="(max-width: 923px) 100vw, 923px" />](https://cos.name/wp-content/uploads/2015/01/图2.png)
+![图2](https://cos.name/wp-content/uploads/2015/01/图2.png)
 
-**3. 由社交媒体数据预测疫情** <a href="#_ftn4" name="_ftnref4">[4]</a>
+## 3. 由社交媒体数据预测疫情[4]^[http://www.dailymail.co.uk/sciencetech/article-2722164/Ebola-flagged-computer-software-nine-days-BEFORE-announced-HealthMap-used-social-media-spot-disease.html]
 
 网络和社交媒体数据，对埃博拉病毒的预警，发挥了重大作用。HealthMap是一个利用大数据反应疫情的网站/应用，它使用一定的算法来抓取来自社交媒体网站、本地新闻和政府网站、传染病医师的社交网络和其他渠道的数据，用于探测和跟踪的疾病暴发。2014年3月14号，HealthMap通过自己的系统，预警了几内亚境内爆发的“神秘出血热”。2014年3月19号，HealthMap确认其为埃博拉病毒并对世界卫生组织发出警告，还给出了其在几内亚东南部热带雨林地区传播的粗略地点和路径。2014年3月23号，世界卫生组织正式宣布埃博拉疫情爆发并报告了第一个确诊案例。在这时，HealthMap已经追踪了在几内亚的29例确诊和29人死亡 ——所有数据和报告都来源于社交媒体和当地政府网站等。
 
@@ -57,7 +53,7 @@ HealthMap利用复杂而算法，过滤不相关的数据，结合领域内专�
 
 这不是HealthMap第一次立功了。这个组织成立于2006年，由一组研究人员，流行病学家和软件开发人员组成的团队，利用网上各式各样的数据来源，监测和预测的疾病暴发，并实现对公共健康威胁的实时监控。他们汇集了各式不相干的数据源，包括网络新闻集中平台，目击者报告，专家策划讨论和官方验证的报告。除了实时和可交互的呈现数据，HealthMap也致力于预测疾病风险。曾经有报导称，该组织成功使用boosted regression tree等模型成功预测了SARS在中国境内爆发的死亡率。
 
-HealthMap的官网宣称，他们主要的数据来源是 ProMED（一个国际传染病协会，成员主要为一线医生和研究人员）邮件列表、世界卫生组织官网，GeoSentinel（来自国际旅行医学协会和美国疾病预防控制中心的临床医生以个人身份的检测）、世界动物健康组织官网、联合国粮农组织、EuroSurveillance（欧洲地区以同行评审为目的的传染病监测和交流的信息平台）、Wildlife Data Integration Network（一个全球野生动物基本新闻源）、谷歌新闻搜索，百度新闻和搜搜资讯。另一份公开发表的论文显示，大部分数据来自ProMED (61. 58%)，谷歌等其他搜索引擎新闻则贡献了25. 24%，除此之外比较重要的来源还包括 RSS 订阅(12. 11%), 推特等社交媒体(8. 7%)<a href="#_ftn5" name="_ftnref5">[5]</a>。这和新闻中极力鼓吹的完全通过社交媒体预测埃博拉疫情，似乎还是有一定的差距。这个社交媒体并不是大众所以为的普通公开社交媒体，而是全球一线医护人员建立的社交网络。事实上，谷歌以及其他一些社交媒体都试图通过抓取网络关键词来监控和预测疾病信息，但是并没有取得如此好的效果。谷歌曾经宣称自己的系统很好地预测了美国每一季的流感爆发，而实际数据显示，他们的系统常常高估了患病率。普通人对疾病的感知和在社交网络的分享，的确不如实际病情那么准确。另一方面，推特的数据显示，埃博拉引起了美国用户前所未有的恐慌，各州的讨论数字一片飘红，网络极端言论层出不穷。但实际上美国至今也只有4个确诊案例和一个死亡案例。
+HealthMap的官网宣称，他们主要的数据来源是 ProMED（一个国际传染病协会，成员主要为一线医生和研究人员）邮件列表、世界卫生组织官网，GeoSentinel（来自国际旅行医学协会和美国疾病预防控制中心的临床医生以个人身份的检测）、世界动物健康组织官网、联合国粮农组织、EuroSurveillance（欧洲地区以同行评审为目的的传染病监测和交流的信息平台）、Wildlife Data Integration Network（一个全球野生动物基本新闻源）、谷歌新闻搜索，百度新闻和搜搜资讯。另一份公开发表的论文显示，大部分数据来自ProMED (61. 58%)，谷歌等其他搜索引擎新闻则贡献了25. 24%，除此之外比较重要的来源还包括 RSS 订阅(12. 11%), 推特等社交媒体(8. 7%)[5]^[http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4198292/] 。这和新闻中极力鼓吹的完全通过社交媒体预测埃博拉疫情，似乎还是有一定的差距。这个社交媒体并不是大众所以为的普通公开社交媒体，而是全球一线医护人员建立的社交网络。事实上，谷歌以及其他一些社交媒体都试图通过抓取网络关键词来监控和预测疾病信息，但是并没有取得如此好的效果。谷歌曾经宣称自己的系统很好地预测了美国每一季的流感爆发，而实际数据显示，他们的系统常常高估了患病率。普通人对疾病的感知和在社交网络的分享，的确不如实际病情那么准确。另一方面，推特的数据显示，埃博拉引起了美国用户前所未有的恐慌，各州的讨论数字一片飘红，网络极端言论层出不穷。但实际上美国至今也只有4个确诊案例和一个死亡案例。
 
 来自以色列贝斯医疗中心的临床信息学专家Brad Crotty博士在接受采访时说，HealthMap事实上还有很多工作要做，以排除“背景噪音”。这位专家并不是这个组织的成员。
 
@@ -65,7 +61,7 @@ Crotty博士说：“你的确可以得到早期预警，但他们并不总是�
 
 而正在负责HealthMap运营的Sumiko Mekaru博士则称，他们的本意是作为传统和官方健康报告的辅助，而不是取代它们。
 
-**二、疫情死亡率的计算与估计<a href="#_ftn6" name="_ftnref6"><strong>[6]</strong></a>**
+# 二、疫情死亡率的计算与估计[6]^[http://news.sciencemag.org/africa/2014/09/how-deadly-ebola-statistical-challenges-may-be-inflating-survival-rate]
 
 死亡率的计算十分重要，特别是对于传染性疾病。病死率在流行病学中是一个非常重要的估计指标，因为它告诉我们感染特定疾病后死亡的概率。如果正在爆发中的估算准确，甚至可以帮助我们确定病毒是否在危害性方面发生变异，以及研究最合适的治疗方案。
 
@@ -95,11 +91,11 @@ Dye在一封邮件中写道：“我们并非不知道估计死亡率的种种�
 
 尽管埃博拉恶名昭彰，但并不是一感染上马上就死去。如果没有适当调整，目前的估算方式（也就是前文提到的最简单并正在被世界卫生组织采用的PFC）没有考虑到从患者被感染到死去的滞后时间——按照HealthMap采用的独创方差最优化方法，对本次爆发案例做出的估算，这个时间平均大约应该是16天。这意味着9月8号报告的2296名死亡案例实际上对应着8月23号报告的感染案例。根据这个滞后时间调整的PFC为我们提供了对真实致死率一个更好的近似。下图是他们根据世界卫生组织提供的数据计算和绘制的调整后死亡率图：
 
-[<img class="aligncenter size-full wp-image-10531" src="https://cos.name/wp-content/uploads/2015/01/图3.png" alt="图3" width="975" height="770" srcset="https://cos.name/wp-content/uploads/2015/01/图3.png 975w, https://cos.name/wp-content/uploads/2015/01/图3-300x237.png 300w, https://cos.name/wp-content/uploads/2015/01/图3-500x395.png 500w" sizes="(max-width: 975px) 100vw, 975px" />](https://cos.name/wp-content/uploads/2015/01/图3.png)
+![图3](https://cos.name/wp-content/uploads/2015/01/图3.png)
 
 根据上图，调整后的埃博拉死亡率——大约在80-85%之间——比实际报告的结果高多了。不过这个调整后死亡率和无国界医生组织提供的数据比较一致。从今年三月份开始无国界医生组织收治了2077名疑似感染者，其中1038名被确诊，确诊患者中241名康复出院，也就是说死亡率高达77%。
 
-**三、数读埃博拉：医疗支出**
+# 三、数读埃博拉：医疗支出
 
 对于全球防治埃博拉疫情所需的花费，目前有几个数据或许可以给我们提供一点大概范围。
 
@@ -113,28 +109,27 @@ Dye在一封邮件中写道：“我们并非不知道估计死亡率的种种�
   4. 维持稳定（PRESERVE stability）[42.6M+23.4M+45.8M+3.2M]
   5. 防治未受感染国家被感染 （PREVENT outbreaks in countries currently unaffected）[11.9M]
 
-&nbsp;
 
 这当然是9月份当时的估计，现在看来会不一定准确，但最少可以大家看清楚大概那些地方最需要花钱，大概要多少。同时也可以给有捐款的国家和个人一些需求的信息。
 
-第二个数据是关于治疗患者的费用的。美国商业媒体Bloomberg发布了一篇文章，标题是： [Bill for Ebola Adds Up as Care Costs $1,000 an Hour（治疗埃博拉的费用加起来有每小时一千美元）。](http://www.bloomberg.com/news/2014-10-07/bill-for-ebola-adds-up-as-care-costs-1-000-an-hour.html) 这个听起来有点耸人听闻。仔细一读文章，原来讲的是医院在治疗在美国德州去世的埃博拉病人Thomas Eric Duncan 时的花费情况。在对这位病人的医治过程中，每天的花费大概在$18,000到$24,000之间，报道时去上限，得到每小时一千美元的估计。我想花在给非洲的病人治病的花费肯定比这个数字要小太多。
+第二个数据是关于治疗患者的费用的。美国商业媒体Bloomberg发布了一篇文章，标题是： [Bill for Ebola Adds Up as Care Costs $1,000 an Hour（治疗埃博拉的费用加起来有每小时一千美元）](http://www.bloomberg.com/news/2014-10-07/bill-for-ebola-adds-up-as-care-costs-1-000-an-hour.html) 这个听起来有点耸人听闻。仔细一读文章，原来讲的是医院在治疗在美国德州去世的埃博拉病人Thomas Eric Duncan 时的花费情况。在对这位病人的医治过程中，每天的花费大概在$18,000到$24,000之间，报道时去上限，得到每小时一千美元的估计。我想花在给非洲的病人治病的花费肯定比这个数字要小太多。
 
-第三个数据是关于谁出钱的问题的。这里有个表，是对应当时下六个月所需的987.8M美元的来源的。<http://data.163.com/14/1020/02/A8VGQE1600014MTN.html>在当时的这些捐款中，世界银行，美国，非洲发展银行占了大头。世界上大多数国家都多多少少有贡献。资金来源和用途的透明公布有助于让出力的国家，组织和个人对资金的合理运用有及时了解，这样也可以促进更多的力量来加入抗击疾病的战斗中。
+第三个数据是关于谁出钱的问题的。这里有个表，是对应当时下六个月所需的987.8M美元的来源的。[http://data.163.com/14/1020/02/A8VGQE1600014MTN.html](http://data.163.com/14/1020/02/A8VGQE1600014MTN.html) 在当时的这些捐款中，世界银行，美国，非洲发展银行占了大头。世界上大多数国家都多多少少有贡献。资金来源和用途的透明公布有助于让出力的国家，组织和个人对资金的合理运用有及时了解，这样也可以促进更多的力量来加入抗击疾病的战斗中。
 
-[<img class="aligncenter size-full wp-image-10532" src="https://cos.name/wp-content/uploads/2015/01/图4.png" alt="图4" width="900" height="849" srcset="https://cos.name/wp-content/uploads/2015/01/图4.png 900w, https://cos.name/wp-content/uploads/2015/01/图4-300x283.png 300w, https://cos.name/wp-content/uploads/2015/01/图4-500x472.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](https://cos.name/wp-content/uploads/2015/01/图4.png)
+![图4](https://cos.name/wp-content/uploads/2015/01/图4.png)
 
-**小结**
+# 小结
 
 虽然最近关于埃博拉的报道不在像几个月前那么热闹，现在全球抵御埃博拉疫情的战役仍在紧张的进行中。在这个信息时代里，随着我们收集数据和运用数据的能力的爆发，世界各个角落都紧密地联系在这个信息网络中。数据和对其适当的分析已然成为人类征服自然界和适应自然界的重要力量。
 
-<a href="#_ftnref1" name="_ftn1">[1]</a>  <http://www.who.int/mediacentre/factsheets/fs103/en/> 
+[1] [http://www.who.int/mediacentre/factsheets/fs103/en/](http://www.who.int/mediacentre/factsheets/fs103/en/) 
 
-<a href="#_ftnref2" name="_ftn2">[2]</a> <http://apps.who.int/ebolaweb/sitreps/20141231/20141231.pdf>
+[2] [http://apps.who.int/ebolaweb/sitreps/20141231/20141231.pdf](http://apps.who.int/ebolaweb/sitreps/20141231/20141231.pdf)
 
-<a href="#_ftnref3" name="_ftn3">[3]</a>  <http://rocs.hu-berlin.de/publications/ebola/index.html> 
+[3] [http://rocs.hu-berlin.de/publications/ebola/index.html](http://rocs.hu-berlin.de/publications/ebola/index.html) 
 
-<a href="#_ftnref4" name="_ftn4">[4]</a>  <http://www.dailymail.co.uk/sciencetech/article-2722164/Ebola-flagged-computer-software-nine-days-BEFORE-announced-HealthMap-used-social-media-spot-disease.html> 
+[4] [http://www.dailymail.co.uk/sciencetech/article-2722164/Ebola-flagged-computer-software-nine-days-BEFORE-announced-HealthMap-used-social-media-spot-disease.html](http://www.dailymail.co.uk/sciencetech/article-2722164/Ebola-flagged-computer-software-nine-days-BEFORE-announced-HealthMap-used-social-media-spot-disease.html)
 
-<a href="#_ftnref5" name="_ftn5">[5]</a>  <http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4198292/> 
+[5] [http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4198292/](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4198292/)
 
-<a href="#_ftnref6" name="_ftn6">[6]</a> <http://news.sciencemag.org/africa/2014/09/how-deadly-ebola-statistical-challenges-may-be-inflating-survival-rate>
+[6] [http://news.sciencemag.org/africa/2014/09/how-deadly-ebola-statistical-challenges-may-be-inflating-survival-rate](http://news.sciencemag.org/africa/2014/09/how-deadly-ebola-statistical-challenges-may-be-inflating-survival-rate)
