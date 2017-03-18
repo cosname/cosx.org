@@ -14,7 +14,7 @@ slug: talking-about-data-scientist
 
 编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
-两位亚马逊员工Greg Duncan和Guy Lebanon谈职业选择：走学术路线还是进公司发展？大家看了[自己思考吧](https://www.linkedin.com/pulse/academic-vs-industry-careers-guy-lebanon)！
+两位亚马逊员工Greg Duncan和Guy Lebanon谈职业选择：走学术路线还是进公司发展？大家[看了](https://www.linkedin.com/pulse/academic-vs-industry-careers-guy-lebanon)自己思考吧！
 
 Hadley Wickham谈如何做能影响世界的[工作](http://bulletin.imstat.org/2014/12/hadley-wickham-impact-the-world-by-being-useful/),他自己走过的路线是写代码、开放工作（开源）、教学相长、以及适当的营销.
 
