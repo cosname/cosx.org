@@ -9,6 +9,7 @@ ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
 hasCJKLanguage = true
 enableEmoji = true
 preserveTaxonomyNames = true
+footnotereturnlinkcontents = "↩"
 
 [blackfriday]
   extensionsmask = ["noIntraEmphasis"]
