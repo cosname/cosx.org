@@ -32,7 +32,7 @@ slug: cos-navigation-10
 
 ## 二、论坛
 
-[关于邀请大家成为统计之都高校联系人](https://cos.name/bbs/read.php?tid=13026)
+[关于邀请大家成为统计之都高校联系人](https://cos.name/cn/topic/13026)
 
 [捐赠](https://cos.name/donate/)
   

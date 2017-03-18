@@ -115,7 +115,7 @@ slug: 2nd-chinese-r-conference-summary
 
   * 胡江堂：[R乌乎在？](http://li-and-jiang.com/blog/2009/12/05/ruser2009/)
   * 谢益辉：[2009第一场雪和第二届中国R语言会议](http://yihui.name/cn/2009/12/snow-in-ames-and-2nd-chinese-r-conference/)
-  * 焦静：[第二届R语言大会上海分会顺利闭幕](https://cos.name/bbs/read.php?tid=17614)
+  * 焦静：[第二届R语言大会上海分会顺利闭幕](https://cos.name/cn/topic/17614)
   * 焦静：[第二届R语言大会上海分会顺利闭幕](http://www.sciencenet.cn/m/user_content.aspx?id=278351)
   * 刘思喆：[第二届中国 R 语言会议（北京）随笔](http://www.bjt.name/2009/12/r-conference-beijing/)
   * 刘思喆：[中国 R 语言会议（上海）趣闻](http://www.bjt.name/2009/12/r-conference-shanghai/)
@@ -124,7 +124,7 @@ slug: 2nd-chinese-r-conference-summary
   * 陈丽云：[与R有关的那些趣事儿（上海篇）](http://www.loyhome.cn/857.html)
   * 陈丽云：[与R有关的那些趣事儿（北京篇）](http://www.loyhome.cn/852.html)
   * 山东大学新闻网：[经济学院本科生参加R语言大会并发言](http://www.view.sdu.edu.cn/news/news/ybdt/2009-12-16/1260928570.html)
-  * 关菁菁：[2nd R 会议纪事——2009年12月6日+5日](https://cos.name/bbs/read.php?tid=17549)
+  * 关菁菁：[2nd R 会议纪事——2009年12月6日+5日](https://cos.name/cn/topic/17549)
   * 邱怡轩：[社区和火炬](http://yixuan.cos.name/cn/2009/12/community-and-torch/)
   * 肖楠：[第二届中国R语言会议 Dec 12-13, 2009 @ ECNU](http://www.road2stat.com/cn/statistics/r_language/2009_user_china_shanghai.html)
   * 肖楠：[第二届中国R语言会议 Dec 05-06, 2009 @ RUC](http://www.road2stat.com/cn/statistics/r_language/2009_user_china_beijing.html)
