@@ -53,9 +53,9 @@ description:
 
 30在现实中是一个比较小的样本量，你看到了什么？2.901？它接近3倍标准差的位置了。还有2.089？……如果你不知道这批数据**真的**是从标准正态分布中生成出来的，现在你会有什么反应？把2.9删掉？标准正态分布是一个在我们眼中很“正常”的分布，而一个不太大的样本量一次试验足以生成几个“离群点”，那么要是成千上万的试验中**没能**产生几项震惊世界的结果，你会怎样想？（上帝的骰子坏掉了）
 
-另一个例子和统计学结合紧密一点，我们谈谈残差的QQ图。QQ图是用来检查数据正态性的一种统计图形，与腾讯无关，细节此处略去，大意是图中的点若呈直线状（大致分布在对角线上），那么可以说明数据的正态性比较好，因此QQ图经常被用在对回归模型残差的正态性诊断上。我的问题是，即使数据真的是正态分布，你是否真的会看见一些分布在直线上的点？若答案是否定的，那么我们就得重新审视我们对分布和随机的认识了。下图是一幅教科书式的QQ图（仍然基于30个正态分布随机数）：<figure id="attachment_3992" style="width: 480px" class="wp-caption aligncenter">
+另一个例子和统计学结合紧密一点，我们谈谈残差的QQ图。QQ图是用来检查数据正态性的一种统计图形，与腾讯无关，细节此处略去，大意是图中的点若呈直线状（大致分布在对角线上），那么可以说明数据的正态性比较好，因此QQ图经常被用在对回归模型残差的正态性诊断上。我的问题是，即使数据真的是正态分布，你是否真的会看见一些分布在直线上的点？若答案是否定的，那么我们就得重新审视我们对分布和随机的认识了。下图是一幅教科书式的QQ图（仍然基于30个正态分布随机数）：
 
-[![“正常的”QQ图](https://cos.name/wp-content/uploads/2011/07/normal-qq-plot-40x40.png)](https://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png)<figcaption class="wp-caption-text">“正常的”QQ图（来自R语言qqnorm(rnorm(30))）</figcaption></figure> 
+![img](https://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png)
 
 随机性并没有这么美好，即使数据真的来自正态分布，你也有可能很容易观察到歪歪扭扭的QQ图，尤其是小样本的情况下。比如下图是50次重复抽样的正态数据QQ图，它和你想象的QQ图本来的样子差多远？
 
@@ -63,9 +63,9 @@ description:
 set.seed(710)
 ani.options(interval = 0.1, nmax = 50)
 par(mar = c(3, 3, 2, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
-sim.qqnorm(n = 30, pch = 19, col = "red", last.plot = expression(abline(0, 1)))</pre><figure id="attachment_3996" style="width: 480px" class="wp-caption aligncenter">
+sim.qqnorm(n = 30, pch = 19, col = "red", last.plot = expression(abline(0, 1)))</pre>
 
-[![真实的正态分布QQ图](https://cos.name/wp-content/uploads/2011/07/true-qq-norm-40x40.gif)](https://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif)<figcaption class="wp-caption-text">真实的正态分布QQ图（图中直线为y = x）</figcaption></figure> 
+![img](https://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif)
 
 正态分布是统计学中比较“正常”的一类分布（台湾学者甚至译为“常态分布”），我们尚不能很好感知它的随机性，就不必说其它“怪异”的分布了。
 
@@ -101,9 +101,9 @@ sim.qqnorm(n = 30, pch = 19, col = "red", last.plot = expression(abline(0, 1)))<
 
 # 三、万能的P值？
 
-早些年当我还是个无知轻狂小子的时候，我曾戏称“统计软件就是为了放个P”，这里的P指的是P值，不是粗话。这话好像也不全然轻狂无知。使用统计方法的人，难道不是在追逐一个小于0.05的P值吗？如果你的结果不显著，那么肯定发表不了。换句话说，发表的结果很有可能是我们在自欺欺人。下面的漫画生动刻画了人们寻找P值的过程（来自xkcd）：<figure style="width: 540px" class="wp-caption aligncenter">
+早些年当我还是个无知轻狂小子的时候，我曾戏称“统计软件就是为了放个P”，这里的P指的是P值，不是粗话。这话好像也不全然轻狂无知。使用统计方法的人，难道不是在追逐一个小于0.05的P值吗？如果你的结果不显著，那么肯定发表不了。换句话说，发表的结果很有可能是我们在自欺欺人。下面的漫画生动刻画了人们寻找P值的过程（来自xkcd）：
 
-[![Significant](http://imgs.xkcd.com/comics/significant.png)](http://xkcd.com/882/)<figcaption class="wp-caption-text">Significant</figcaption></figure> 
+![Significant](http://imgs.xkcd.com/comics/significant.png)
 
 重大科学发现！吃绿色的软糖会让你长痘痘！95%置信度！
 
