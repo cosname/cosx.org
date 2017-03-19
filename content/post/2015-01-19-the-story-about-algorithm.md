@@ -9,6 +9,13 @@ categories:
   - 统计之都
   - 统计计算
 slug: the-story-about-algorithm
+description: 
+
+K-means是最常用的聚类算法之一：容易理解，实现不难，虽然会有local optimum，但通常结果也不差。但k-means也不是万金油，比如在一些比较复杂的问题和非线性数据分布上，k-means也会失败。普林斯顿博士David Robinson写了一篇不错的分析[文章](http://varianceexplained.org/r/kmeans-free-lunch/)，介绍了几种k-means会失效的情形。
+
+基于遗传算法的小车[模拟](http://rednuht.org/genetic_cars_2/)， 还有遗传算法的[行者](http://rednuht.org/genetic_walkers/)，看着有一大拨僵尸来袭的感觉、[遗传算法的猫](http://rednuht.org/geneticat/)。
+
+小编注： 性格捉急的人千万不要盯着看太久，十分闹心，会疯掉的，不过可以把这个转发给你的小伙伴们，小编保证这算法进化两个小时这只猫也跳不过去）
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)
@@ -16,14 +23,6 @@ slug: the-story-about-algorithm
 
 编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)
 
-# 算法
-
-K-means是最常用的聚类算法之一：容易理解，实现不难，虽然会有local optimum，但通常结果也不差。但k-means也不是万金油，比如在一些比较复杂的问题和非线性数据分布上，k-means也会失败。普林斯顿博士David Robinson写了一篇不错的分析[文章](http://varianceexplained.org/r/kmeans-free-lunch/)，介绍了几种k-means会失效的情形。
-
-基于遗传算法的小车[模拟](http://rednuht.org/genetic_cars_2/)， 还有遗传算法的[行者](http://rednuht.org/genetic_walkers/)，看着有一大拨僵尸来袭的感觉、[遗传算法的猫](http://rednuht.org/geneticat/)。
-
-
-小编注： 性格捉急的人千万不要盯着看太久，十分闹心，会疯掉的，不过可以把这个转发给你的小伙伴们，小编保证这算法进化两个小时这只猫也跳不过去）
 
 # 人工智能
 
