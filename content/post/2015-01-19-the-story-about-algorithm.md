@@ -9,7 +9,7 @@ categories:
   - 统计之都
   - 统计计算
 slug: the-story-about-algorithm
-description: "K-means是最常用的聚类算法之一：容易理解，实现不难，虽然会有local optimum，但通常结果也不差。"
+description: "K-means是最常用的聚类算法之一：容易理解，实现不难，虽然会有local optimum，但通常结果也不差。但k-means也不是万金油，比如在一些比较复杂的问题和非线性数据分布上，k-means也会失败。普林斯顿博士David Robinson写了一篇不错的分析[文章](http://varianceexplained.org/r/kmeans-free-lunch/)，介绍了几种k-means会失效的情形。"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)
