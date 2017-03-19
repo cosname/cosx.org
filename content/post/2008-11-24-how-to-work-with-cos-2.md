@@ -68,9 +68,9 @@ COS主站主要为群体博客形式，其团队由多位投稿者、作者和�
   x <- hist(rnorm(30))  # 直方图
   x$mids  # 直方图横坐标中点
   ```
-    这样的代码读者可以通过双击实现全选，然后自行复制。 
+    这样的代码读者可以通过双击实现全选，然后自行复制。
 
-      * 附件：允许的附件类型参见[WordPress附件说明](http://codex.wordpress.org/User:Lolrus/Using_Attachments#Appendix:_Allowed_attachment_file_types "允许的附件类型")，由于支持gz、zip等压缩文件，因此理论上任意文件都可以通过压缩的方式发布，但由于网站空间有限，如无必要，请各位作者不要上传大量附件（可以将文件上传至专门的文件共享网站或者打包压缩为gzip或zip格式）；</ol>
+      * 附件：允许的附件类型参见[WordPress附件说明](http://codex.wordpress.org/User:Lolrus/Using_Attachments#Appendix:_Allowed_attachment_file_types "允许的附件类型")，由于支持gz、zip等压缩文件，因此理论上任意文件都可以通过压缩的方式发布，但由于网站空间有限，如无必要，请各位作者不要上传大量附件（可以将文件上传至专门的文件共享网站或者打包压缩为gzip或zip格式）；
 
     # COS论坛
 
