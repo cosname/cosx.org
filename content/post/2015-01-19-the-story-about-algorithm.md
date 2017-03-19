@@ -32,4 +32,4 @@ Popsci写了一篇不错的文章批评媒体近期关于《人工智能将会�
 
 谷歌科学家、Hinton亲传弟子Ilya Sutskever的深度学习综述及实际建议及实际建议 ，比较喜欢其中关于tricks的[建议](http://weibo.com/p/1001603799166017998138)，包括data, preprocessing, minibatches, gradient normalization, learning rate, weight initialization, data augmentation, dropout和ensemble。
 
-<http://futureoflife.org/static/data/documents/research_priorities.pdf>《鲁棒及有益的人工智能优先研究计划：一封公开信》目前已经有Stuart Russell, Tom Dietterich, Eric Horvitz, Yann LeCun, Peter Norvig, Tom Mitchell, Geoffrey Hinton, Elon Musk等人[签署](http://futureoflife.org/misc/open_letter)。
+[《鲁棒及有益的人工智能优先研究计划：一封公开信》](http://futureoflife.org/static/data/documents/research_priorities.pdf)目前已经有Stuart Russell, Tom Dietterich, Eric Horvitz, Yann LeCun, Peter Norvig, Tom Mitchell, Geoffrey Hinton, Elon Musk等人[签署](http://futureoflife.org/misc/open_letter)。
