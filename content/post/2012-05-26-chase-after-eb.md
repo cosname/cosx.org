@@ -15,7 +15,7 @@ slug: chase-after-eb
 写了<a title="统计学习那些事" href="https://cos.name/2011/12/stories-about-statistical-learning/" target="_blank">《统计学习那些事》</a>，很多童鞋都表示喜欢，这让我越来越觉得冯导的一句话很有道理：“我的电影一向只伺候中国观众，还没想过拍给全世界人民看。这就跟献血一样，本身是好事，但如果血型不对，输进去的血也会产生排异现象。我的‘血型’就适合中国人，对不上世界观众，别到时伤了我的身子骨，还伤害了世界观众，所以我暂时不会‘献血’。”比如他的《天下无贼》，我就特别喜欢。然而天下可以无贼，却不可以没有英雄（不是张导的那个《英雄》）。今天我要写的是统计界的英雄以及英雄的故事。英雄的名字叫 EB，英雄的故事也叫 EB。
 
 <p style="text-align: center;">
-  <a href="http://statweb.stanford.edu/~ckirby/brad/images/efron.jpg"><img class="aligncenter" src="http://statweb.stanford.edu/~ckirby/brad/images/efron.jpg" alt="" width="376" height="565" /></a><!--more-->
+  <a href="http://statweb.stanford.edu/~ckirby/brad/images/efron.jpg">![](http://statweb.stanford.edu/~ckirby/brad/images/efron.jpg)</a><!--more-->
 </p>
 
 <h2 style="text-align: center;">
@@ -24,7 +24,7 @@ slug: chase-after-eb
 
 故事的主人公自然是 Efron Bradley(EB)。今年的 5 月 24 日，是他 74 岁生日。从他拿到 PhD 的那年算起，正好五十年。他对统计学的贡献是巨大的，必将永远载入人类史册。正如爱因斯坦所说：“方程对我而言更重要些，因为政治是为当前，而一个方程却是一种永恒的东西（Equations are more important to me, because politicsis for the present, but anequation is something for eternity）。”人生天地之间，如白驹过隙，忽然而已。然而，经典就永远是经典。若干年后，人们遥想 Efron 当年，LARS 初嫁了。雄姿英发，羽扇纶巾。谈笑间，LB[1] 灰飞烟灭&#8230;&#8230; 于是乎，江山如画，一时多少豪杰! 总之，LARS 的故事必然成为统计学史上的一段佳话。<figure id="attachment_6819" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-6819" src="https://cos.name/wp-content/uploads/2013/01/citation-500x269.png" alt="citations" width="500" height="269" srcset="https://cos.name/wp-content/uploads/2013/01/citation-500x269.png 500w, https://cos.name/wp-content/uploads/2013/01/citation-300x161.png 300w, https://cos.name/wp-content/uploads/2013/01/citation.png 643w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/citation.png)<figcaption class="wp-caption-text">图1：此图来源于Bulhmann教授的一篇文章。右边是Efron教授的成名绝技Bootstrap。左边四个中有两个都与Efron教授有很大的关系：1.Lasso。2.FDR。</figcaption></figure> 
+[![citations](https://cos.name/wp-content/uploads/2013/01/citation-500x269.png)](https://cos.name/wp-content/uploads/2013/01/citation.png)<figcaption class="wp-caption-text">图1：此图来源于Bulhmann教授的一篇文章。右边是Efron教授的成名绝技Bootstrap。左边四个中有两个都与Efron教授有很大的关系：1.Lasso。2.FDR。</figcaption></figure> 
 
 <p style="text-align: left;">
   或许，对 EB 而言，至今让他回味无穷的另有其事。那就是，五十多年前，他为 Stanford 的一本幽默杂志 Chapparal 做主编。那年，他们恶搞 (parody) 了著名杂志 Playboy。估计是恶搞得太给力了，还受到当时三藩的大主教的批评。幽默的力量使 Efron 在“错误”的道路上越走越远，差点就不回 Stanford 读 PhD 了[2]。借用前段时间冰岛外长的语录：“Efron 从事娱乐时尚界的工作，是科学界的一大损失！”在关键时刻，Efron 在周围朋友的关心和支持下，终于回到 Stanford，开始把他的犀利与机智用在 statistics 上。告别了娱乐时尚界的 EB，从此研究成果犹如滔滔江水，连绵不绝[3]，citation 又如黄河泛滥，一发不可收拾，如图1所示。
@@ -228,11 +228,11 @@ $\begin{equation}
   
 _总之，不能说一个模型越通用就越好，更不能说一个模型越简单就越不好。关键看什么情况下用以及怎么用！乔峰打出的少林长拳都是虎虎生威的！_<figure id="attachment_6823" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-6823" src="https://cos.name/wp-content/uploads/2013/01/JS-500x325.png" alt="James-Stein估计量" width="500" height="325" srcset="https://cos.name/wp-content/uploads/2013/01/JS-500x325.png 500w, https://cos.name/wp-content/uploads/2013/01/JS-300x195.png 300w, https://cos.name/wp-content/uploads/2013/01/JS-461x300.png 461w, https://cos.name/wp-content/uploads/2013/01/JS.png 563w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/JS.png)<figcaption class="wp-caption-text">图2：James-Stein Estimator结构图。</figcaption></figure> <figure id="attachment_6822" style="width: 500px" class="wp-caption aligncenter">[<img class="size-large wp-image-6822" src="https://cos.name/wp-content/uploads/2013/01/HMM-500x216.png" alt="HMM" width="500" height="216" srcset="https://cos.name/wp-content/uploads/2013/01/HMM-500x216.png 500w, https://cos.name/wp-content/uploads/2013/01/HMM-300x130.png 300w, https://cos.name/wp-content/uploads/2013/01/HMM.png 551w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/HMM.png)<figcaption class="wp-caption-text">图3：HMM或者Kalman filter结构图。</figcaption></figure> 
+[![James-Stein估计量](https://cos.name/wp-content/uploads/2013/01/JS-500x325.png)](https://cos.name/wp-content/uploads/2013/01/JS.png)<figcaption class="wp-caption-text">图2：James-Stein Estimator结构图。</figcaption></figure> <figure id="attachment_6822" style="width: 500px" class="wp-caption aligncenter">[![HMM](https://cos.name/wp-content/uploads/2013/01/HMM-500x216.png)](https://cos.name/wp-content/uploads/2013/01/HMM.png)<figcaption class="wp-caption-text">图3：HMM或者Kalman filter结构图。</figcaption></figure> 
 
 现在要问的是，除了图 2 这种结构，还有没有其它结构呢？答案还是肯定的，如图 3 所示。当 $\mu$ 的状态是离散的时候，这就是著名的 HMM(Hidden Markov Model，隐马尔科夫链)；当 $\mu$ 的状态是连续的时候，这就是著名的Kalman filter （卡尔曼滤波）。值得一提的是，多层次线性模型 (Hierarchical linear models) 也源自于此，LMM(linear mixed model，昵称“林妹妹”吧)也可以有经验贝叶斯的理解，此处略去 $n$ 个字。天下武功，若说邪的，那是各有各的邪法，若说正的，则都有一种“天下武功出少林”的感觉。不管你们有没有震惊，我当时意识到“这股浩然正气”的时候，是相当震惊的。_这里我还得再次表达《统计学习那些事》里面的一个观点，那就是，只有一个模型结构是不够的，还需要快速的算法去优化模型。HMM 和 Kalman filter 之所以听上去就这么如雷贯耳，还在于他们都有很好的算法。没有算法，也就没法执行，将神马都不是。掌握一个模型，除了掌握它和其它模型的联系之外，还需要掌握它的算法。如果老师只让学生学模型的大致结构，就如同赵志敬只教杨过背全真教的内功心法一样，到比武的时候，武学天才的杨过连鹿清笃都搞不定，由此可知后果是相当严重的。学算法，最好的办法就是自己亲自去试一下，试的时候就知道能不能和内功心法映证了。我记得小学时候的一篇课文《小马过河》，亲自实验的结果很可能是：“河水既没有老牛说的那么浅，也没有小松鼠说的那么深”。_<figure id="attachment_6821" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-6821" src="https://cos.name/wp-content/uploads/2013/01/EmpBayes-500x297.png" alt="经验贝叶斯" width="500" height="297" srcset="https://cos.name/wp-content/uploads/2013/01/EmpBayes-500x297.png 500w, https://cos.name/wp-content/uploads/2013/01/EmpBayes-300x178.png 300w, https://cos.name/wp-content/uploads/2013/01/EmpBayes.png 633w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/EmpBayes.png)<figcaption class="wp-caption-text">图4：经验贝叶斯（黑色实线）与shrunken centroids(绿色虚线)。红色虚线是经验贝叶斯估计的标准差。</figcaption></figure> 
+[![经验贝叶斯](https://cos.name/wp-content/uploads/2013/01/EmpBayes-500x297.png)](https://cos.name/wp-content/uploads/2013/01/EmpBayes.png)<figcaption class="wp-caption-text">图4：经验贝叶斯（黑色实线）与shrunken centroids(绿色虚线)。红色虚线是经验贝叶斯估计的标准差。</figcaption></figure> 
 
 <h2 style="text-align: center;">
   4 神龙摆尾
@@ -240,11 +240,11 @@ _总之，不能说一个模型越通用就越好，更不能说一个模型越�
 
 2000年到2008年，Efron 教授主要致力于研究 Large-scale Inference，他有关 False Discovery Rate(FDR) 的经验贝叶斯解释，给人拨云见日的感觉。2008 年的时候，Efron 教授突然神龙摆尾，用经验贝叶斯做预测[13]。他用到了 $\mu\sim g(\cdot),z|\mu \sim \mathcal{N}(\mu,1)$，根据 Tweedie&#8217;s formula(19) 得到 $\mathbb{E}(\mu|z)$。 他观察到一个很有意思的情况：他的结果与 Tibshirani 的shrunken centroids (SC) 给出的结果很相似，如图 4 所示。我们可以看到两点吧：第一，在大规模推理 (Large-scale-inference) 时，有很多 $\mu=0$。第二，就算$\mu\neq0$，$|\mu|$ 也比实际观察到的 $|z|$ 要小。比如，实际观察到的$z=4$，不能因此认为 $\mu=4$，经验贝叶斯（Tweedie&#8217;s formula）告诉我们，$\mathbb{E}{(\mu|z)}=2.74$。同样的，$z=-4$ 时，$\mathbb{E}{(\mu|z)}=-3.1$。这表明真实情况往往没有直接观察到的情况那么极端。_现实生活中，我们也会发现，网络上表扬谁或者批评谁的言论，大多都会因为偏激而失真。真实的情况往往没有歌颂的这么好，当然也不会到诋毁的那么差。一个比较理性的做法是shrink （收缩）一下，从而洞察真相。统计学为这种【中庸】的思考方式提供了强有力的支持。_<figure id="attachment_6824" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-6824" src="https://cos.name/wp-content/uploads/2013/01/shrinkage-500x291.png" alt="Shrinkage operators" width="500" height="291" srcset="https://cos.name/wp-content/uploads/2013/01/shrinkage-500x291.png 500w, https://cos.name/wp-content/uploads/2013/01/shrinkage-300x174.png 300w, https://cos.name/wp-content/uploads/2013/01/shrinkage.png 621w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/shrinkage.png)<figcaption class="wp-caption-text">图5：Shrinkage operators。</figcaption></figure> 
+[![Shrinkage operators](https://cos.name/wp-content/uploads/2013/01/shrinkage-500x291.png)](https://cos.name/wp-content/uploads/2013/01/shrinkage.png)<figcaption class="wp-caption-text">图5：Shrinkage operators。</figcaption></figure> 
 
 EB 与 SC 紧密相连，SC 又与 Lasso 紧密相连[14]。SC 有更多的假设，如 feature 之间是独立的，Lasso 更加宽松，但都用了soft-shrinkage operator(对应 $L\_1$ penalty)。 当然，shrinkage operator 有很多，比较出名的还有：Hard-shrinkage operator (对应$L\_0$ penalty)，Ridge-shrinkage operator(对应$L_2$ penalty)，如图 5 所示。于是我们可以看到一个五彩缤纷的 penalty 世界。近年来，各式各样的 penalty 如雨后春笋般的涌现，个人认为比较成功的有 Elastic net[15] 和 $MC+$ penalty[16]。好了，最后用 Efron 教授办公室的照片(图6)来总结一下吧：那些年，我们一起追的EB。<figure id="attachment_6820" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-6820" src="https://cos.name/wp-content/uploads/2013/01/office-500x281.jpg" alt="Efron办公室" width="500" height="281" srcset="https://cos.name/wp-content/uploads/2013/01/office-500x281.jpg 500w, https://cos.name/wp-content/uploads/2013/01/office-300x168.jpg 300w, https://cos.name/wp-content/uploads/2013/01/office.jpg 1037w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/office.jpg)<figcaption class="wp-caption-text">图6：Efron office at Sequoia hall of Stanford。图片由师弟在逛Stanford时拍下。能否认出照片中的人？</figcaption></figure> 
+[![Efron办公室](https://cos.name/wp-content/uploads/2013/01/office-500x281.jpg)](https://cos.name/wp-content/uploads/2013/01/office.jpg)<figcaption class="wp-caption-text">图6：Efron office at Sequoia hall of Stanford。图片由师弟在逛Stanford时拍下。能否认出照片中的人？</figcaption></figure> 
 
 <h2 style="text-align: center;">
   5 结束语

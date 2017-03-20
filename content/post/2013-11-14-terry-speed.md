@@ -24,7 +24,7 @@ slug: terry-speed
   <span style="color: #000000;"><strong><em>—Terry Speed</em></strong></span>
 </p>
 
-<img class="aligncenter" alt="alt" src="https://github.com/cosname/translation/raw/master/terryspeed/fig/Terry-Speed-1-300x200.jpg" />
+![alt](https://github.com/cosname/translation/raw/master/terryspeed/fig/Terry-Speed-1-300x200.jpg)
 
 <p style="text-align: center;">
   图1 Terry Speed

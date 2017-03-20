@@ -54,7 +54,7 @@ r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n
  sigma &lt;- 1 / sqrt(tau)
 }</pre><figure id="attachment_1264" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-1264" title="WinBUGS doodle模型" src="https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png" alt="WinBUGS doodle模型" width="500" height="309" srcset="https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png 500w, https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-300x185.png 300w, https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png 536w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png)<figcaption class="wp-caption-text">WinBUGS doodle模型</figcaption></figure> 
+[![WinBUGS doodle模型](https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png "WinBUGS doodle模型")](https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png)<figcaption class="wp-caption-text">WinBUGS doodle模型</figcaption></figure> 
 
 数据
 
@@ -177,7 +177,7 @@ b12		-0.8104		0.3852		20	-2.1	0.0482		0.05	-1.6139	-0.007	0.00037
 
 当然了winBUGS的强大之处并不在于此，而是在处理诸如GLME（有些文献称GLMM），空间数据模型等计算复杂的模型，之后还会继续讨论。
   
-[<img class="size-full wp-image-548 alignright" src="https://cos.name/wp-content/uploads/2008/12/cover.jpg" alt="" width="133" height="204" />](https://cos.name/wp-content/uploads/2008/12/cover.jpg)
+[![](https://cos.name/wp-content/uploads/2008/12/cover.jpg)](https://cos.name/wp-content/uploads/2008/12/cover.jpg)
   
 参考文献：
 

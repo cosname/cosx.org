@@ -7,7 +7,7 @@ categories:
 slug: the-art-r-programming
 ---
 
-<figure id="attachment_7831" style="width: 235px" class="wp-caption aligncenter">[<img src="https://cos.name/wp-content/uploads/2013/05/art-of-r-235x300.jpg" alt="R语言编程艺术" width="235" height="300" class="size-medium wp-image-7831" srcset="https://cos.name/wp-content/uploads/2013/05/art-of-r-235x300.jpg 235w, https://cos.name/wp-content/uploads/2013/05/art-of-r.jpg 314w" sizes="(max-width: 235px) 100vw, 235px" />](https://cos.name/wp-content/uploads/2013/05/art-of-r-big.jpg)<figcaption class="wp-caption-text">《R语言编程艺术》</figcaption></figure> 
+<figure id="attachment_7831" style="width: 235px" class="wp-caption aligncenter">[![R语言编程艺术](https://cos.name/wp-content/uploads/2013/05/art-of-r-235x300.jpg)](https://cos.name/wp-content/uploads/2013/05/art-of-r-big.jpg)<figcaption class="wp-caption-text">《R语言编程艺术》</figcaption></figure> 
 
 由统计之都的几位成员翻译的《R语言编程艺术》终于就要面市了。本书的译者有<a href="http://yanping.me/cn" target="_blank">陈堰平</a>、<a href="http://yixuan.cos.name/cn" target="_blank">邱怡轩</a>、<a href="http://panlanfeng.github.com" target="_blank">潘岚锋</a>、<a href="http://weibo.com/u/1572842322" target="_blank">熊熹</a>，负责校审的有<a href="http://http://weibo.com/mangoly" target="_blank">林宇</a>、严紫丹、程豪。<a href="http://yanping.me/cn/blog/2013/05/15/the-art-of-r-programming-published/" title="《R语言编程艺术》译者序" target="_blank">这里</a>有本书的译者序，读者可以在<a href="https://github.com/cosname/art-r-translation" target="_blank">本书的github页面</a>下载数据和代码。读者可以在本页留言提问，我们也会在这里公布本书的勘误。想查找更多好书，请看<a href="https://cos.name/books/" title="图书出版" target="_blank">图书出版</a>频道。
 

@@ -26,7 +26,7 @@ slug: causality7-lord-paradox
 
 
   
-[<img class="size-large wp-image-8486 aligncenter" src="https://cos.name/wp-content/uploads/2013/09/LordPlot2-500x500.png" alt="LordPlot" width="500" height="500" srcset="https://cos.name/wp-content/uploads/2013/09/LordPlot2-500x500.png 500w, https://cos.name/wp-content/uploads/2013/09/LordPlot2-150x150.png 150w, https://cos.name/wp-content/uploads/2013/09/LordPlot2-300x300.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/09/LordPlot2.png)
+[![LordPlot](https://cos.name/wp-content/uploads/2013/09/LordPlot2-500x500.png)](https://cos.name/wp-content/uploads/2013/09/LordPlot2.png)
   
 (_**图注**：横轴表示 1963 年 6 月入学前的体重 $X$，纵轴表示 1964 年 6 月前放假的体重 $Y$；虚线是对角线 $Y=X$；男女学生体重的散点图分别用绿色和红色标出。图中数据生成机制如下：男学生 $(X,Y)\sim $ 二元正态分布，均值 $(150,150)$，协方差矩阵 $\begin{pmatrix} 60 & 40 \\ 40 & 60 \end{pmatrix}$；女学生 $(X,Y)\sim$ 二元正态分布，均值 $(130,130)$，协方差矩阵 $\begin{pmatrix} 60 & 40 \\ 40 & 60 \end{pmatrix}$。生成这幅图的 R 代码可以在这里下载：[Rcode](https://cos.name/wp-content/uploads/2013/09/Rcode2.txt)。由于样本量 $3000$，样本均值非常接近理论均值，因此落在了对角线上。_)
 

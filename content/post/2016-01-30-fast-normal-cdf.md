@@ -36,7 +36,7 @@ system.time(y </code></pre>
 
 那么还有没有可能更快呢？答案是肯定的，而且你其实已经多次使用过这种方法了。怎么，不相信？看看下面这张图，你就明白了。
 
-<a href="https://cos.name/wp-content/uploads/2016/01/normal_table.png" rel="attachment wp-att-11878"><img class="aligncenter size-large wp-image-11878" src="https://cos.name/wp-content/uploads/2016/01/normal_table-500x354.png" alt="normal_table" width="500" height="354" srcset="https://cos.name/wp-content/uploads/2016/01/normal_table-500x354.png 500w, https://cos.name/wp-content/uploads/2016/01/normal_table-300x212.png 300w, https://cos.name/wp-content/uploads/2016/01/normal_table.png 669w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+<a href="https://cos.name/wp-content/uploads/2016/01/normal_table.png" rel="attachment wp-att-11878">![normal_table](https://cos.name/wp-content/uploads/2016/01/normal_table-500x354.png)</a>
 
 <!--more-->
 

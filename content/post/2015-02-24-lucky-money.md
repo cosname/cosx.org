@@ -16,11 +16,11 @@ slug: lucky-money
 
 如果你有一台智能手机，如果你装了一个名叫微信的软件，那么你今年的春节很可能是在下面这样的场景中度过的（图片来自微信群）：
 
-[<img class="aligncenter size-full wp-image-10669" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_3.gif" alt="lucky_money_3" width="240" height="320" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_3.gif) [<img class="aligncenter size-full wp-image-10668" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_2.gif" alt="lucky_money_2" width="300" height="225" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_2.gif) [<img class="aligncenter size-full wp-image-10667" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_1.gif" alt="lucky_money_1" width="280" height="208" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_1.gif)
+[![lucky_money_3](https://cos.name/wp-content/uploads/2015/02/lucky_money_3.gif)](https://cos.name/wp-content/uploads/2015/02/lucky_money_3.gif) [![lucky_money_2](https://cos.name/wp-content/uploads/2015/02/lucky_money_2.gif)](https://cos.name/wp-content/uploads/2015/02/lucky_money_2.gif) [![lucky_money_1](https://cos.name/wp-content/uploads/2015/02/lucky_money_1.gif)](https://cos.name/wp-content/uploads/2015/02/lucky_money_1.gif)
 
 这也使得众多的网络大V发出了下面的感慨：
 
-[<img class="aligncenter wp-image-10671 size-full" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_4.png" alt="lucky_money_4" width="824" height="207" srcset="https://cos.name/wp-content/uploads/2015/02/lucky_money_4.png 824w, https://cos.name/wp-content/uploads/2015/02/lucky_money_4-300x75.png 300w, https://cos.name/wp-content/uploads/2015/02/lucky_money_4-500x126.png 500w" sizes="(max-width: 824px) 100vw, 824px" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_4.png)
+[![lucky_money_4](https://cos.name/wp-content/uploads/2015/02/lucky_money_4.png)](https://cos.name/wp-content/uploads/2015/02/lucky_money_4.png)
 
 而最近几天不少微信群里面又流行起来一种“红包接力”的玩法，大概的规则是：群里面先由一人发一个红包，然后大家开始抢，其中金额最大的那个人继续发新一轮的红包，之后不断往复循环。
 
@@ -86,7 +86,7 @@ slug: lucky-money
 
 这个结果的绝对数值可能并没有太大的意义，因此我们在每一轮接力之后都计算出当时这个群的基尼系数，然后观察它的变化。结果如下：
 
-[<img class="aligncenter size-large wp-image-10677" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_5-500x375.png" alt="lucky_money_5" width="500" height="375" srcset="https://cos.name/wp-content/uploads/2015/02/lucky_money_5-500x375.png 500w, https://cos.name/wp-content/uploads/2015/02/lucky_money_5-300x225.png 300w, https://cos.name/wp-content/uploads/2015/02/lucky_money_5.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_5.png)在这里我们将接力次数延长到了500次。可以看出，随着接力的进行，基尼系数的整体趋势是在不断变大的，意味着贫富差距会随着游戏的进行变得越来越大。这其实很好理解：总是会有人因为拿了太多头奖而破产，这样财富会在越来越少的人中间进行分配，所以相应地贫富差距就拉大了。
+[![lucky_money_5](https://cos.name/wp-content/uploads/2015/02/lucky_money_5-500x375.png)](https://cos.name/wp-content/uploads/2015/02/lucky_money_5.png)在这里我们将接力次数延长到了500次。可以看出，随着接力的进行，基尼系数的整体趋势是在不断变大的，意味着贫富差距会随着游戏的进行变得越来越大。这其实很好理解：总是会有人因为拿了太多头奖而破产，这样财富会在越来越少的人中间进行分配，所以相应地贫富差距就拉大了。
 
 为了更直观地展示50个玩家的余额变化，我们可以看一下下面的这个动画，其中每幅图代表一个玩家的资金余额。
 
@@ -96,7 +96,7 @@ slug: lucky-money
 
 前面提到，在我们的模型中有一个参数 $\alpha$ 用来控制红包金额分配的“公平”程度（或者更准确地说，是“平均”的程度，因为就机会而言，每个人分得金额的可能性都是相同的，但就每一次实际分得的金额而言，$\alpha$ 越大，这种分配越倾向于平均，即结果的波动性越小）。下图展示了一组随机模拟实验的结果，其中我们模拟了20次红包接力的游戏，10次取 $\alpha=2$， 另外10次取 $\alpha=20$。每次游戏中，红包都接力了500次。
 
-[<img class="aligncenter size-large wp-image-10679" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_6-500x375.png" alt="lucky_money_6" width="500" height="375" srcset="https://cos.name/wp-content/uploads/2015/02/lucky_money_6-500x375.png 500w, https://cos.name/wp-content/uploads/2015/02/lucky_money_6-300x225.png 300w, https://cos.name/wp-content/uploads/2015/02/lucky_money_6.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_6.png)可以看出，红线和蓝线虽然有所重叠，但总体来看蓝线的取值要比红线更大，也就是说，**红包金额越“公平”，贫富差距反而会越大**。
+[![lucky_money_6](https://cos.name/wp-content/uploads/2015/02/lucky_money_6-500x375.png)](https://cos.name/wp-content/uploads/2015/02/lucky_money_6.png)可以看出，红线和蓝线虽然有所重叠，但总体来看蓝线的取值要比红线更大，也就是说，**红包金额越“公平”，贫富差距反而会越大**。
 
 这个结论看起来可能有些反直觉，但其实也合情合理：如果红包的分配是绝对公平的，那么第一名得到的金额就将是2元，而下一轮又必须送出20元，所以总共亏损18元；如果红包金额的波动性很大，就会有一部分人得到的金额小于2元，而第一名就会得到更多，也就更不容易破产。所以说，一个规则是否真的“公平”，不能只看其表面。
 
@@ -104,13 +104,13 @@ slug: lucky-money
 
 我们最后再看一个这样的规则：第一个红包金额为20元，下一个为21元，再下一个为22元……到了30元后，又逐渐递减至20元，以此反复。我们对代码稍作修改后，同样画出基尼系数的变化图，对比这两种规则产生的结果：
 
-[<img class="aligncenter size-large wp-image-10682" src="https://cos.name/wp-content/uploads/2015/02/lucky_money_7-500x375.png" alt="lucky_money_7" width="500" height="375" srcset="https://cos.name/wp-content/uploads/2015/02/lucky_money_7-500x375.png 500w, https://cos.name/wp-content/uploads/2015/02/lucky_money_7-300x225.png 300w, https://cos.name/wp-content/uploads/2015/02/lucky_money_7.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/02/lucky_money_7.png)很明显，当红包的金额发生这种变动后，贫富差距又进一步拉大了。
+[![lucky_money_7](https://cos.name/wp-content/uploads/2015/02/lucky_money_7-500x375.png)](https://cos.name/wp-content/uploads/2015/02/lucky_money_7.png)很明显，当红包的金额发生这种变动后，贫富差距又进一步拉大了。
 
 ### 更多
 
 除了本文考察的这些可能影响金额分配的因素之外，感兴趣的读者还可以利用文中的代码（可能需要稍作修改）继续考察其他因素对贫富差距的影响，比如红包人数，初始金额等等。最后提醒大家的是，红包主要还是在过年的时候图个喜庆，游戏有风险，抢包需谨慎。:D
 
-<img class="aligncenter" src="http://www.gpxz.com/uploads/allimg/140111/0155295X8_0.gif" alt="" width="197" height="213" />
+![](http://www.gpxz.com/uploads/allimg/140111/0155295X8_0.gif)
 
 **附：文本用到的R预言代码**
 

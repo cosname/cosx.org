@@ -52,7 +52,7 @@ $$\widehat{\beta}\_{OLS} =  \frac{ \sum\_{i=1}^n (Y\_i &#8211; \bar{Y}) (D\_i &
 
 以上的各个假定，可以用下面的一个图来形象的描述。
 
-[<img alt="iv" src="https://cos.name/wp-content/uploads/2013/08/iv.png" width="413" height="257" />](https://cos.name/wp-content/uploads/2013/08/iv.png)
+[![iv](https://cos.name/wp-content/uploads/2013/08/iv.png)](https://cos.name/wp-content/uploads/2013/08/iv.png)
 
 &nbsp;
 
@@ -132,7 +132,7 @@ $$ \frac{\widehat{ACE}(Z\rightarrow Y)  } {  \widehat{ACE}(Z\rightarrow D)  �
 
 原始数据总结如下：
 
-[<img src="https://cos.name/wp-content/uploads/2013/08/table1.png" alt="table" width="433" height="146" class="aligncenter size-full wp-image-8395" srcset="https://cos.name/wp-content/uploads/2013/08/table1.png 433w, https://cos.name/wp-content/uploads/2013/08/table1-300x101.png 300w" sizes="(max-width: 433px) 100vw, 433px" />](https://cos.name/wp-content/uploads/2013/08/table1.png)
+[![table](https://cos.name/wp-content/uploads/2013/08/table1.png)](https://cos.name/wp-content/uploads/2013/08/table1.png)
 
 根据下一个部分的函数，我们得到如下的结果：
 

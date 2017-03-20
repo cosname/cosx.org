@@ -26,7 +26,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 历届会议规模都在250人以上，有来自近百家单位的人员参会，涵盖北京大学、清华大学、中国人民大学、中科院等各高校和研究所和百度、豆瓣、当当网等企事业单位，会议现场气氛热烈，会后各界反映良好。历届会议纪要请参见https://cos.name/chinar/。<figure id="attachment_5725" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-5725" alt="会议现场（点击看大图）" src="https://cos.name/wp-content/uploads/2012/05/IMG_8116-500x333.jpg" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2012/05/IMG_8116-500x333.jpg 500w, https://cos.name/wp-content/uploads/2012/05/IMG_8116-300x200.jpg 300w, https://cos.name/wp-content/uploads/2012/05/IMG_8116-450x300.jpg 450w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2012/05/IMG_8116.jpg)<figcaption class="wp-caption-text">会议现场（点击看大图）</figcaption></figure> 
+[![会议现场（点击看大图）](https://cos.name/wp-content/uploads/2012/05/IMG_8116-500x333.jpg)](https://cos.name/wp-content/uploads/2012/05/IMG_8116.jpg)<figcaption class="wp-caption-text">会议现场（点击看大图）</figcaption></figure> 
 
 本届会议希望在第五届会议取得成果基础上进一步扩大R语言的影响力，让更多的R用户参与其中，促进社区内部的交流和进步。
 

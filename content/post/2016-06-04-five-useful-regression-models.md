@@ -34,19 +34,19 @@ slug: five-useful-regression-models
 
 普通线性回归的主要特征就是：它的因变量必须是连续型数据。什么是连续型数据呀？简单通俗的讲，就是得是连续的。例如：身高、体重、价格、温度都是典型的连续型数据。但是，在实际工作中，由于所有的计算机，实际上都只能存储有限位有效数字，因此，在真实的数据江湖里，不存在严格的连续数据，只有近似的。接下来，我们讨论一下，普通线性回归在数据江湖中，有哪些重要应用？太多了！随便说几个。
 
-[<img class="aligncenter size-full wp-image-12477" src="https://cos.name/wp-content/uploads/2016/06/股票.jpg" alt="股票" width="291" height="220" />](https://cos.name/wp-content/uploads/2016/06/股票.jpg)
+[![股票](https://cos.name/wp-content/uploads/2016/06/股票.jpg)](https://cos.name/wp-content/uploads/2016/06/股票.jpg)
 
 先说一个简单刺激的：股票投资。
 
 这里的因变量Y是某只股票或者资产组合的未来收益率。这是一个连续型的因变量。如果我们能够建立Y和一系列X的相关关系，例如X可以是该股票背后企业的财务特征，我们就可以通过X去预测Y，然后通过合理的交易策略，实现超额收益率，俗称：发大财！
 
-[<img class="aligncenter wp-image-12473" src="https://cos.name/wp-content/uploads/2016/06/客户价值.jpg" alt="客户价值" width="292" height="182" srcset="https://cos.name/wp-content/uploads/2016/06/客户价值.jpg 320w, https://cos.name/wp-content/uploads/2016/06/客户价值-300x188.jpg 300w" sizes="(max-width: 292px) 100vw, 292px" />](https://cos.name/wp-content/uploads/2016/06/客户价值.jpg)
+[![客户价值](https://cos.name/wp-content/uploads/2016/06/客户价值.jpg)](https://cos.name/wp-content/uploads/2016/06/客户价值.jpg)
 
 其次，再考虑一个关于消费者的案例：客户终身价值。
 
 这里的因变量Y是一个目标客户，从现在开始，到未来无限远时间，所能够给企业创造的收入，经过一定的利率折现到现在的价值。如果我们能够建立Y和一系列X的相关关系，例如X可以是这些消费者的人口统计特征以及过去的消费记录，我就可以通过X去预测Y。这样可以帮助我们识别潜在的高价值客户。
 
-[<img class="aligncenter wp-image-12468" src="https://cos.name/wp-content/uploads/2016/06/医疗健康.jpg" alt="医疗健康" width="281" height="304" srcset="https://cos.name/wp-content/uploads/2016/06/医疗健康.jpg 800w, https://cos.name/wp-content/uploads/2016/06/医疗健康-277x300.jpg 277w, https://cos.name/wp-content/uploads/2016/06/医疗健康-768x832.jpg 768w, https://cos.name/wp-content/uploads/2016/06/医疗健康-461x500.jpg 461w" sizes="(max-width: 281px) 100vw, 281px" />](https://cos.name/wp-content/uploads/2016/06/医疗健康.jpg)
+[![医疗健康](https://cos.name/wp-content/uploads/2016/06/医疗健康.jpg)](https://cos.name/wp-content/uploads/2016/06/医疗健康.jpg)
 
 最后，再说一个关乎医疗健康的案例
 
@@ -66,13 +66,13 @@ slug: five-useful-regression-models
 
 为什么这么说？因为相关的重要应用太多了，咱们说几个时髦有趣的。
 
-[<img class="aligncenter wp-image-12470" src="https://cos.name/wp-content/uploads/2016/06/互联网征信.jpg" alt="互联网征信" width="289" height="195" srcset="https://cos.name/wp-content/uploads/2016/06/互联网征信.jpg 449w, https://cos.name/wp-content/uploads/2016/06/互联网征信-300x203.jpg 300w" sizes="(max-width: 289px) 100vw, 289px" />](https://cos.name/wp-content/uploads/2016/06/互联网征信.jpg)
+[![互联网征信](https://cos.name/wp-content/uploads/2016/06/互联网征信.jpg)](https://cos.name/wp-content/uploads/2016/06/互联网征信.jpg)
 
 第一个例子。现在征信特别火，尤其是互联网征信。
 
 征信是啥？征信就是对某个体的信誉做评估。啥是信誉？就是如果我借钱给你，你按时还钱的概率有多大？所以，对于这个业务而言，因变量就是一个借款人是否会还钱。而0-1回归的主要使命，就是评价该借款人未来还钱的可能性。是一个介于0和1之间的概率。如果产品经理愿意，就可以把这个概率经过一定的单调变换，变成一个具体的征信得分。你看，0-1回归重要不？
 
-[<img class="aligncenter wp-image-12475" src="https://cos.name/wp-content/uploads/2016/06/网上购物.jpg" alt="网上购物" width="285" height="211" srcset="https://cos.name/wp-content/uploads/2016/06/网上购物.jpg 800w, https://cos.name/wp-content/uploads/2016/06/网上购物-300x223.jpg 300w, https://cos.name/wp-content/uploads/2016/06/网上购物-768x570.jpg 768w, https://cos.name/wp-content/uploads/2016/06/网上购物-500x371.jpg 500w" sizes="(max-width: 285px) 100vw, 285px" />](https://cos.name/wp-content/uploads/2016/06/网上购物.jpg)
+[![网上购物](https://cos.name/wp-content/uploads/2016/06/网上购物.jpg)](https://cos.name/wp-content/uploads/2016/06/网上购物.jpg)
 
 再跟大家看一个例子。大家都喜欢网上购物，什么淘宝、京东、天猫啥的。每一次登陆进自己的账户，我们看到了什么？是不是总能看到一些被推荐的商品，“猜你喜欢”，对不？这些商品是怎么被推荐出来的？这个背后啊，也是一个0-1回归的问题。
 
@@ -82,7 +82,7 @@ slug: five-useful-regression-models
 
 有人说了：“王老师，您说的不对，我们用的模型可不是逻辑回归那么简单，老复杂了。”这个木有问题，真正的工程实践，所用的模型，有可能更简单，也有可能更复杂。但是，都逃离不了0-1回归的本质所在。
 
-[<img class="aligncenter wp-image-12474" src="https://cos.name/wp-content/uploads/2016/06/社交网络.jpg" alt="社交网络" width="293" height="186" srcset="https://cos.name/wp-content/uploads/2016/06/社交网络.jpg 346w, https://cos.name/wp-content/uploads/2016/06/社交网络-300x191.jpg 300w" sizes="(max-width: 293px) 100vw, 293px" />](https://cos.name/wp-content/uploads/2016/06/社交网络.jpg)
+[![社交网络](https://cos.name/wp-content/uploads/2016/06/社交网络.jpg)](https://cos.name/wp-content/uploads/2016/06/社交网络.jpg)
 
 最后，再分享一个有趣的例子。现在啊，这社交网络特别火，什么Facebook、Twitter、QQ、微信、微博、陌陌等等。
 
@@ -96,7 +96,7 @@ slug: five-useful-regression-models
 
 什么是定序回归？就是**因变量是定序数据的回归分析**。那么，什么又是定序数据呢？**定序数据就是关乎顺序的数据，但是又没有具体的数值意义。**
 
-[<img class="aligncenter wp-image-12471" src="https://cos.name/wp-content/uploads/2016/06/定序回归.jpg" alt="定序回归" width="333" height="184" srcset="https://cos.name/wp-content/uploads/2016/06/定序回归.jpg 384w, https://cos.name/wp-content/uploads/2016/06/定序回归-300x166.jpg 300w" sizes="(max-width: 333px) 100vw, 333px" />](https://cos.name/wp-content/uploads/2016/06/定序回归.jpg)
+[![定序回归](https://cos.name/wp-content/uploads/2016/06/定序回归.jpg)](https://cos.name/wp-content/uploads/2016/06/定序回归.jpg)
 
 考虑一个特别常见的例子。例如，咱公司出一款新的矿泉水，叫做“狗熊山泉，有点不甜”。我想知道消费者对它的喜好程度。因此啊，我决定请人来品尝一下，然后呢，根据他的喜好程度，给出一个打分。1表示非常不喜欢，2表示有点不喜欢，3表示一般般，4表示有点喜欢，5表示非常喜欢。这就是我关心的因变量。
 
@@ -116,7 +116,7 @@ slug: five-useful-regression-models
 
 什么是计数回归？**就是因变量是计数数据的回归分析**。那么，什么又是计数数据呢？就是数数的数据。例如，谁家有几个孩子，养了几条狗。
 
-[<img class="aligncenter wp-image-12469" src="https://cos.name/wp-content/uploads/2016/06/计数回归.jpg" alt="计数回归" width="287" height="232" srcset="https://cos.name/wp-content/uploads/2016/06/计数回归.jpg 453w, https://cos.name/wp-content/uploads/2016/06/计数回归-300x242.jpg 300w" sizes="(max-width: 287px) 100vw, 287px" />](https://cos.name/wp-content/uploads/2016/06/计数回归.jpg)
+[![计数回归](https://cos.name/wp-content/uploads/2016/06/计数回归.jpg)](https://cos.name/wp-content/uploads/2016/06/计数回归.jpg)
 
 有什么特点？既然是数数，它就必须是**非负的整数**。**不能是负数**，说谁家有负3个孩子，没这事。**不能是小数**，例如说谁家养了1.25只狗，也没这说法。
 
@@ -132,7 +132,7 @@ slug: five-useful-regression-models
 
 **生存回归是生存数据回归的简称**。而生存数据回归就是因变量是生存数据的回归分析。什么是生存数据？生存数据就刻画的一个现象或个体，存续生存了多久，也就是我们常说的生存时间。
 
-[<img class="aligncenter wp-image-12472" src="https://cos.name/wp-content/uploads/2016/06/生存回归.jpg" alt="生存回归" width="319" height="319" srcset="https://cos.name/wp-content/uploads/2016/06/生存回归.jpg 650w, https://cos.name/wp-content/uploads/2016/06/生存回归-150x150.jpg 150w, https://cos.name/wp-content/uploads/2016/06/生存回归-300x300.jpg 300w, https://cos.name/wp-content/uploads/2016/06/生存回归-500x500.jpg 500w" sizes="(max-width: 319px) 100vw, 319px" />](https://cos.name/wp-content/uploads/2016/06/生存回归.jpg)
+[![生存回归](https://cos.name/wp-content/uploads/2016/06/生存回归.jpg)](https://cos.name/wp-content/uploads/2016/06/生存回归.jpg)
 
 因此，我们要清晰定义两个东西。一个是出生，一个是死亡。以人的自然出生为出生，以人的自然死亡为死亡，就定义了一个人的寿命，这就是一个典型的生存数据。该数据，对（例如）寿险精算非常重要。
 
@@ -152,7 +152,7 @@ slug: five-useful-regression-models
 
 咱以人的寿命为例，我们关心一个问题：一个人是否学习统计学（这个X），是否会影响得到他的寿命（Y）？看，这是一个典型的回归分析问题吧。为此，我们调查了很多数据，隔壁老王不幸被抽中，为此我们想知道老王到底能活多久。
 
-[<img class="wp-image-12476 aligncenter" src="https://cos.name/wp-content/uploads/2016/06/老王.jpg" alt="老王" width="314" height="286" srcset="https://cos.name/wp-content/uploads/2016/06/老王.jpg 650w, https://cos.name/wp-content/uploads/2016/06/老王-300x273.jpg 300w, https://cos.name/wp-content/uploads/2016/06/老王-500x455.jpg 500w" sizes="(max-width: 314px) 100vw, 314px" />](https://cos.name/wp-content/uploads/2016/06/老王.jpg)
+[![老王](https://cos.name/wp-content/uploads/2016/06/老王.jpg)](https://cos.name/wp-content/uploads/2016/06/老王.jpg)
 
 老王今年60，身体倍儿棒，吃饭倍儿香，核心问题是他还没挂呢，我们怎么知道他要活多久呢？咋办呢？要不再等个几十年，等老王挂了，知道他的精确寿命了，咱们再做分析？这怎么能行呢，万一，我先挂了怎么办！谁来做分析？所以，老王的寿命，这个Y到底应该怎么办呢？我们对它不是一无所知，因为他已经虚度春秋60载了，所以，我们知道老王的Y一定比60大。这是一个宝贵的信息。但是，大多少，我不知道。所以，在数据上我们是怎么记录这个事情呢？我们把Y记作60+，看到这个神奇的“+”没。只要一个数据后面跟着一个“+”，这表明真实的数据比这个大，但是，大多少不知道。
 
@@ -172,7 +172,7 @@ slug: five-useful-regression-models
 
 如果您对我们的内容感兴趣，请关注微信公众号“狗熊会”，或扫描下方二维码
 
-[<img class="aligncenter wp-image-12325" src="https://cos.name/wp-content/uploads/2016/05/8.jpg" alt="8" width="280" height="280" srcset="https://cos.name/wp-content/uploads/2016/05/8.jpg 258w, https://cos.name/wp-content/uploads/2016/05/8-150x150.jpg 150w" sizes="(max-width: 280px) 100vw, 280px" />](https://cos.name/wp-content/uploads/2016/05/8.jpg)
+[![8](https://cos.name/wp-content/uploads/2016/05/8.jpg)](https://cos.name/wp-content/uploads/2016/05/8.jpg)
 
 &nbsp;
 

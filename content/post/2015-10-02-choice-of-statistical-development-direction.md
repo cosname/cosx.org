@@ -17,7 +17,7 @@ slug: choice-of-statistical-development-direction
   看这题目，多吓唬人。又是方向，又是选择。一看就是知道作者是一个深受商学院教育毒害的砖家！但是，想跟大家说的是，我真心想把这个题目整小点，但是困难。为什么？因为接下来跟大家瞎聊的故事，确实关乎发展方向，确实关乎取舍。或者，至少关乎我自己的研究团队（小二十号兄弟姐妹）的方向和选择！
 </p>
 
-[<img class="aligncenter size-full wp-image-11418" src="https://cos.name/wp-content/uploads/2015/10/战略选择1.png" alt="战略选择1" width="1219" height="663" srcset="https://cos.name/wp-content/uploads/2015/10/战略选择1.png 1219w, https://cos.name/wp-content/uploads/2015/10/战略选择1-300x163.png 300w, https://cos.name/wp-content/uploads/2015/10/战略选择1-500x272.png 500w" sizes="(max-width: 1219px) 100vw, 1219px" />](https://cos.name/wp-content/uploads/2015/10/战略选择1.png)<!--more-->
+[![战略选择1](https://cos.name/wp-content/uploads/2015/10/战略选择1.png)](https://cos.name/wp-content/uploads/2015/10/战略选择1.png)<!--more-->
 
 首先给大家简单介绍一点背景知识，小小吐槽一下现在统计学正面临的挑战。先从方法论说起。统计学的方法论主要依赖数学，尤其是概率论。其中又以大数定理和中心极限定理被使用的最为广泛。值得一提的是，统计学用数学做工具，但不是数学。这就像物理学会用到很多数学工具，但物理学不是数学。这还可以从国外成熟大学的学科设置来看，统计学很少跟数学系待在一起。数学家追求的是数学逻辑上的优美，以及挑战性。从这个角度看，统计学实在不优美，也没啥挑战性。整来整去，不就是大数定理跟中心极限定理吗？所以，统计学家的工作，数学家会欣赏的可能性不大。我想，这是可以理解的，毕竟大家的关注点不一样。那统计学家关注什么呢？
 
@@ -29,7 +29,7 @@ slug: choice-of-statistical-development-direction
 
 第二，那么，统计学发展的方向应该是什么呢？我们不妨看看，在海外极其成功的生物统计学，它为什么发现的那么好？想来想去，就一个原因：生物统计学家懂生物医学知识！具体解释一下，国外的生物统计系一般设立在医学院，或者公共卫生学院下面。独立的生物统计系似乎没有听说过。这样的学科设置，保证了生物统计学者，会花很多时间去跟医生科学家等沟通。因此，他们学会了生物医学的专业语言，也就是我们常说的：业务知识。这使得生物统计学家，对生物医学研究的贡献独特，很难被替代。如果我们对生物统计学的理解是正确的，那么未来，统计学发展的正确方向应该是：学习并积累基于不同行业的业务知识。只有这样，我们才能同不同客户，根据他所处的行业，自由沟通。我们才可能了解需求，创造价值，并为统计学开疆拓土。沿着这样一个逻辑，大胆设想一下，类似于生物统计学，我们是否可以有互联网征信统计学？量化投资统计学？物联网（车联网）统计学？旅游交通统计学？我认为这才是统计学发展的前途所在！
 
-[<img class="aligncenter size-full wp-image-11419" src="https://cos.name/wp-content/uploads/2015/10/战略选择2.png" alt="战略选择2" width="1191" height="647" srcset="https://cos.name/wp-content/uploads/2015/10/战略选择2.png 1191w, https://cos.name/wp-content/uploads/2015/10/战略选择2-300x163.png 300w, https://cos.name/wp-content/uploads/2015/10/战略选择2-500x272.png 500w" sizes="(max-width: 1191px) 100vw, 1191px" />](https://cos.name/wp-content/uploads/2015/10/战略选择2.png)
+[![战略选择2](https://cos.name/wp-content/uploads/2015/10/战略选择2.png)](https://cos.name/wp-content/uploads/2015/10/战略选择2.png)
 
 &nbsp;
 

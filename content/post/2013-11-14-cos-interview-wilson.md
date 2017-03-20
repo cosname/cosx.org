@@ -26,7 +26,7 @@ slug: cos-interview-wilson
 
 <div>
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/11/wilson.jpg"><img class="alignleft size-medium wp-image-9092" alt="wilson" src="https://cos.name/wp-content/uploads/2013/11/wilson-199x300.jpg" width="199" height="300" srcset="https://cos.name/wp-content/uploads/2013/11/wilson-199x300.jpg 199w, https://cos.name/wp-content/uploads/2013/11/wilson-332x500.jpg 332w, https://cos.name/wp-content/uploads/2013/11/wilson.jpg 1288w" sizes="(max-width: 199px) 100vw, 199px" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/11/wilson.jpg">![wilson](https://cos.name/wp-content/uploads/2013/11/wilson-199x300.jpg)</a>
   </p>
   
   <p>

@@ -22,7 +22,7 @@ Persi Diaconis 做了几个很有意思的工作，如洗牌多少次能够洗�
 
 有一天，一个来自了解关押囚犯心理的心理医生，来到斯坦福统计系，给出了如下一个囚犯写的密码信息：
 
-[<img src="https://cos.name/wp-content/uploads/2012/08/MCMC_code-500x199.jpg" alt="" title="MCMC_code" width="500" height="199" class="aligncenter size-large wp-image-6233" srcset="https://cos.name/wp-content/uploads/2012/08/MCMC_code-500x199.jpg 500w, https://cos.name/wp-content/uploads/2012/08/MCMC_code-300x119.jpg 300w, https://cos.name/wp-content/uploads/2012/08/MCMC_code.jpg 554w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2012/08/MCMC_code.jpg)
+[![](https://cos.name/wp-content/uploads/2012/08/MCMC_code-500x199.jpg "MCMC_code")](https://cos.name/wp-content/uploads/2012/08/MCMC_code.jpg)
 
 上图是囚犯写的密码信息的一部分，你可以看到很多出现频繁的字符。
 

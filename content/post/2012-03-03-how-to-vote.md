@@ -29,7 +29,7 @@ slug: how-to-vote
 图中，两派阵营的状态很明显。绿色的是Democrat，红色的是Republican，蓝色的是Independent。一般认为，民主党在政治上偏左，主张社会自由与进步；而共和党偏右，“reflects American Conservatism”。可以从图中获得很多信息，下面我们对此图做一点深究。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2012/03/abc.png"><img class="aligncenter" title="点击看大图" alt="abc" src="https://cos.name/wp-content/uploads/2012/03/abc-300x152.png" width="700" height="350" /></a>
+  <a href="https://cos.name/wp-content/uploads/2012/03/abc.png">![abc](https://cos.name/wp-content/uploads/2012/03/abc-300x152.png "点击看大图")</a>
 </p>
 
 首先，红绿交界处的Lincoln、Nelson、Collins等人是否代表了某种“中间力量”？以下从维基摘录的一段话（<http://en.wikipedia.org/wiki/Bill_Nelson>）或许回答这个问题。

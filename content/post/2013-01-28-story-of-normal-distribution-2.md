@@ -42,7 +42,7 @@ $$ \displaystyle \frac{\sqrt{n}(\overline{X} &#8211; \mu)}{\sigma} \rightarrow N
 多么奇妙的性质，随意的一个概率分布中生成的随机变量，在序列和(或者等价的求算术平均)的操作之下，表现出如此一致的行为，统一的规约到正态分布。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/central_limit_theorem/" rel="attachment wp-att-7076"><img class="aligncenter size-full wp-image-7076" alt="central_limit_theorem" src="https://cos.name/wp-content/uploads/2013/01/central_limit_theorem.jpg" width="548" height="185" srcset="https://cos.name/wp-content/uploads/2013/01/central_limit_theorem.jpg 548w, https://cos.name/wp-content/uploads/2013/01/central_limit_theorem-300x101.jpg 300w, https://cos.name/wp-content/uploads/2013/01/central_limit_theorem-500x168.jpg 500w" sizes="(max-width: 548px) 100vw, 548px" /></a><strong>中心极限定理</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/central_limit_theorem/" rel="attachment wp-att-7076">![central_limit_theorem](https://cos.name/wp-content/uploads/2013/01/central_limit_theorem.jpg)</a><strong>中心极限定理</strong>
 </p>
 
 概率学家们进一步的研究结果更加令人惊讶，序列求和最终要导出正态分布的条件并不需要这么苛刻，即便 $X\_1,\cdots, X\_n$ 并不独立，也不具有相同的概率分布形式，很多时候他们求和的最终的归宿仍然是正态分布。一切的纷繁芜杂都在神秘的正态曲线下被消解，这不禁令人浮想联翩。中心极限定理恐怕是概率论中最具有宗教神秘色彩的定理，如果有一位牧师拿着一本圣经向我证明上帝的存在，我是丝毫不会买账；可是如果他向我展示中心极限定理并且声称那是神迹，我可能会有点犹豫，从而乐意倾听他的布道。如果我能坐着时光机穿越到一个原始部落中，我也一定带上中心极限定理，并劝说部落的酋长把正态分布作为他们的图腾。
@@ -52,7 +52,7 @@ $$ \displaystyle \frac{\sqrt{n}(\overline{X} &#8211; \mu)}{\sigma} \rightarrow N
 &nbsp;
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/clt_proof/" rel="attachment wp-att-7080"><img class="aligncenter size-full wp-image-7080" alt="clt_proof" src="https://cos.name/wp-content/uploads/2013/01/clt_proof.jpg" width="601" height="126" srcset="https://cos.name/wp-content/uploads/2013/01/clt_proof.jpg 601w, https://cos.name/wp-content/uploads/2013/01/clt_proof-300x62.jpg 300w, https://cos.name/wp-content/uploads/2013/01/clt_proof-500x104.jpg 500w" sizes="(max-width: 601px) 100vw, 601px" /></a><strong>华山论剑</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/clt_proof/" rel="attachment wp-att-7080">![clt_proof](https://cos.name/wp-content/uploads/2013/01/clt_proof.jpg)</a><strong>华山论剑</strong>
 </p>
 
 20世纪初期到中期，中心极限定理的研究几乎吸引了所有的概率学家，这个定理俨然成为了概率论的明珠，成为了各大概率论武林高手华山论剑的场所。不知道大家对中心极限定理中的“中心”一词如何理解，许多人都认为“中心”这个词描述的是这个定理的行为：以正态分布为中心。这个解释看起来确实合情合理，不过并不符合该定理被冠名的历史。事实上，20世纪初概率学家大都称呼该定理为极限定理(Limit Theorem)，由于该定理在概率论中处于如此重要的中心位置，如此之多的概率学武林高手为它魂牵梦绕，于是数学家波利亚于1920年在该定理前面冠以“中心”一词，由此后续人们都称之为中心极限定理。
@@ -79,7 +79,7 @@ X_i$ 的分布密度函数逼近正态分布，以下条件是充分必要的
 花开两朵，各表一枝。上面说了正态分布在概率论中的发展，现在来看看正态分布在数理统计学中发展的故事。这个故事的领衔主演是凯特勒(Adolphe Quetelet, 1796-1874)和高尔顿 (Francis Galton, 1822-1911)。
 
 <p style="text-align: center">
-  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/galton_quetelet/" rel="attachment wp-att-7048"><img class="aligncenter size-full wp-image-7048" alt="galton_quetelet" src="https://cos.name/wp-content/uploads/2013/01/galton_quetelet.jpg" width="364" height="207" srcset="https://cos.name/wp-content/uploads/2013/01/galton_quetelet.jpg 364w, https://cos.name/wp-content/uploads/2013/01/galton_quetelet-300x170.jpg 300w" sizes="(max-width: 364px) 100vw, 364px" /></a>凯特勒和高尔顿</strong>
+  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/galton_quetelet/" rel="attachment wp-att-7048">![galton_quetelet](https://cos.name/wp-content/uploads/2013/01/galton_quetelet.jpg)</a>凯特勒和高尔顿</strong>
 </p>
 
 由于高斯的工作，正态分布在误差分析中迅速确定了自己的地位。有了这么好的工具，我们可能拍脑袋就认为，正态分布很快就被人们用来分析其它的数据，然而事实却出乎我们的意料，正态分布进入社会领域和自然科学领域，可是经过一番周折的。
@@ -91,7 +91,7 @@ X_i$ 的分布密度函数逼近正态分布，以下条件是充分必要的
 1831年，凯特勒参与主持新建比利时统计总局的工作。他开始从事有关人口问题的统计学研究。在这种研究中，凯特勒发现,以往被人们认为杂乱无章的、偶然性占统治地位的社会现象，如同自然现象一样也具有一定的规律性。 凯特勒 搜集了大量关于人体生理测量的数据，如体重、身高与胸围等，并使用概率统计方法来对数据进行数据分析。但是当时的统计分析方法遭到了社会学家的质疑，社会学家们的反对意见主要在于：社会问题与科学实验不同，其数据一般由观察得到，无法控制且经常不了解其异质因素，这样数据的同质性连带其分析结果往往就有了问题，于是社会统计工作者就面临一个如何判断数据同质性的问题。凯特勒大胆地提出：
 
 <p style="text-align: center">
-  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/normal_fitness/" rel="attachment wp-att-7063"><img class="aligncenter  wp-image-7063" alt="normal_fitness" src="https://cos.name/wp-content/uploads/2013/01/normal_fitness.jpg" width="326" height="276" srcset="https://cos.name/wp-content/uploads/2013/01/normal_fitness.jpg 408w, https://cos.name/wp-content/uploads/2013/01/normal_fitness-300x253.jpg 300w, https://cos.name/wp-content/uploads/2013/01/normal_fitness-354x300.jpg 354w" sizes="(max-width: 326px) 100vw, 326px" /></a>把一批数据是否能很好地拟合正态分布，作为判断该批数据同质的标准。</strong>
+  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/normal_fitness/" rel="attachment wp-att-7063">![normal_fitness](https://cos.name/wp-content/uploads/2013/01/normal_fitness.jpg)</a>把一批数据是否能很好地拟合正态分布，作为判断该批数据同质的标准。</strong>
 </p>
 
 凯特勒提出了一个使用正态曲线拟合数据的方法，并广泛的使用正态分布去拟合各种类型的数据。由此， 凯特勒为正态分布的应用拓展了广阔的舞台。正态分布如同一把屠龙刀，在凯特勒 的带领下，学者们挥舞着这把宝刀在各个领域披荆斩棘，攻陷了人口、领土、政治、农业、工业、商业、道德等社会领域，并进一步攻占天文学、数学、物理学、生物学、社会统计学及气象学等自然科学领域。
@@ -103,13 +103,13 @@ X_i$ 的分布密度函数逼近正态分布，以下条件是充分必要的
 如下图中每一点表示钉在板上的一颗钉子，它们彼此的距离均相等。当小圆球向下降落过程中，碰到钉子后皆以 1/2 的概率向左或向右滚下。如果有n排钉子，则各槽内最终球的个数服从二项分布 $B(n,1/2)$, 当$n$ 较大的时候，接近正态分布。
 
 <p style="text-align: center">
-  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/galton_quincunx/" rel="attachment wp-att-7051"><img class="aligncenter size-full wp-image-7051" alt="galton_quincunx" src="https://cos.name/wp-content/uploads/2013/01/galton_quincunx.jpg" width="569" height="347" srcset="https://cos.name/wp-content/uploads/2013/01/galton_quincunx.jpg 569w, https://cos.name/wp-content/uploads/2013/01/galton_quincunx-300x182.jpg 300w, https://cos.name/wp-content/uploads/2013/01/galton_quincunx-500x304.jpg 500w, https://cos.name/wp-content/uploads/2013/01/galton_quincunx-491x300.jpg 491w" sizes="(max-width: 569px) 100vw, 569px" /></a>高尔顿钉板</strong>
+  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/galton_quincunx/" rel="attachment wp-att-7051">![galton_quincunx](https://cos.name/wp-content/uploads/2013/01/galton_quincunx.jpg)</a>高尔顿钉板</strong>
 </p>
 
 设想在此装置的中间某个地方 AB 设一个挡板把小球截住，小球将在AB处聚成正态曲线形状，如果挡板上有许多阀门，打开一些阀门，则在底部形成多个大小不一的正态分布，而最终的大正态分布正是这些小正态分布的混合。
 
 <p style="text-align: center">
-  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/galton_quincunx3/" rel="attachment wp-att-7050"><img class="aligncenter size-full wp-image-7050" alt="galton_quincunx3" src="https://cos.name/wp-content/uploads/2013/01/galton_quincunx3.jpg" width="555" height="227" srcset="https://cos.name/wp-content/uploads/2013/01/galton_quincunx3.jpg 555w, https://cos.name/wp-content/uploads/2013/01/galton_quincunx3-300x122.jpg 300w, https://cos.name/wp-content/uploads/2013/01/galton_quincunx3-500x204.jpg 500w" sizes="(max-width: 555px) 100vw, 555px" /></a>高尔顿钉板解释遗传现象</strong>
+  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/galton_quincunx3/" rel="attachment wp-att-7050">![galton_quincunx3](https://cos.name/wp-content/uploads/2013/01/galton_quincunx3.jpg)</a>高尔顿钉板解释遗传现象</strong>
 </p>
 
 高尔顿利用这个装置创造性的把正态分布的性质用于解释遗传现象。他解释说身高受到显著因素和其它较小因素的影响，每个因素的影响可以表达为一个正态分布。遗传作为一个显著因素，类似图中底部大小不一的正态分布中的比较大的正态分布，而多个大小不一正态分布累加之后其结果仍然得到一个正态分布。
@@ -127,7 +127,7 @@ X_i$ 的分布密度函数逼近正态分布，以下条件是充分必要的
 在这个背景之下，统计学三大分布$\chi^2$分布、$t$分布、$F$分布逐步登上历史舞台。这三大分布现在的理科本科生都很熟悉。在历史上，这三个分布和来自英国的现代数理统计学的三大剑客有着密切的关系。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/three-swords/" rel="attachment wp-att-7069"><img class="aligncenter size-full wp-image-7069" alt="three-swords" src="https://cos.name/wp-content/uploads/2013/01/three-swords.jpg" width="576" height="217" srcset="https://cos.name/wp-content/uploads/2013/01/three-swords.jpg 576w, https://cos.name/wp-content/uploads/2013/01/three-swords-300x113.jpg 300w, https://cos.name/wp-content/uploads/2013/01/three-swords-500x188.jpg 500w" sizes="(max-width: 576px) 100vw, 576px" /></a>数理统计三剑客
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/three-swords/" rel="attachment wp-att-7069">![three-swords](https://cos.name/wp-content/uploads/2013/01/three-swords.jpg)</a>数理统计三剑客
 </p>
 
 第一位剑客就是卡尔.皮尔逊，手中的宝剑就是$\chi^2$分布。 $\chi^2$ 分布这把宝剑最早的锻造者其实是物理学家麦克斯韦，他在推导空气分子的运动速度的分布的时候，发现分子速度在三个坐标轴上的分量是正态分布，而分子运动速度的平方$v^2$ 符合自由度为3 的$\chi^2$分布。麦克斯韦虽然造出了这把宝剑，但是真正把它挥舞得得心应手、游刃有余的是皮尔逊。在分布曲线和数据的拟合优度检验中，$\chi^2$分布可是一个利器，而皮尔逊的这个工作被认为是假设检验的开山之作。皮尔逊继承了高尔顿的衣钵，统计功力深厚，在19世纪末20世纪初很长的一段时间里，一直被数理统计武林人士尊为德高望重的第一大剑客。
@@ -202,7 +202,7 @@ $$\overline{X} = \frac{X\_1 + X\_2 + \cdots + X_n}{n} $$
 &nbsp;
 
 <p style="text-align: center">
-  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/youden-normal-curve/" rel="attachment wp-att-7070"><img class="aligncenter size-full wp-image-7070" alt="youden-normal-curve" src="https://cos.name/wp-content/uploads/2013/01/youden-normal-curve.jpg" width="819" height="304" srcset="https://cos.name/wp-content/uploads/2013/01/youden-normal-curve.jpg 819w, https://cos.name/wp-content/uploads/2013/01/youden-normal-curve-300x111.jpg 300w, https://cos.name/wp-content/uploads/2013/01/youden-normal-curve-500x185.jpg 500w" sizes="(max-width: 819px) 100vw, 819px" /></a>正态误差态分布律</strong>
+  <strong><a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/youden-normal-curve/" rel="attachment wp-att-7070">![youden-normal-curve](https://cos.name/wp-content/uploads/2013/01/youden-normal-curve.jpg)</a>正态误差态分布律</strong>
 </p>
 
 几乎所有的人都或多或少的接触数学，虽然各自的目的不同，对数学的感觉也不同。工程师、科学家们使用数学是因为他简洁而实用，数学家们研究数学是因为它的美丽动人。像正态分布这样，既吸引着无数的工程师、科学家，在实践中被如此广泛的应用，又令众多的数学家为之魂牵梦绕的数学存在，在数学的世界里也并不多见。我在读研究生的时候，经常逛北大未名BBS 的数学板，有一个叫 ukim 的著名 ID 在精华区里面留下了一个介绍数学家八卦的系列《Heroes in My Heart》，写得非常的精彩，这些故事在喜欢数学的人群中也流传广泛。最后一个八卦是关于菲尔兹奖得主法国数学家托姆(René Thom)的，它曾经令无数人感动，我也借用来作为我对正态分布的八卦的结语：
@@ -210,7 +210,7 @@ $$\overline{X} = \frac{X\_1 + X\_2 + \cdots + X_n}{n} $$
 _在一次采访当中，作为数学家的托姆同两位古人类学家讨论问题。谈到远古的人们为什么要保存火种时，一个人类学家说，因为保存火种可以取暖御寒；另外一个人类学家说，因为保存火种可以烧出鲜美的肉食。而托姆说，因为夜幕来临之际，火光摇曳妩媚，灿烂多姿，是最美最美的&#8230;&#8230;_
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/fire/" rel="attachment wp-att-7082"><img class="aligncenter  wp-image-7082" alt="fire" src="https://cos.name/wp-content/uploads/2013/01/fire.jpg" width="425" height="271" srcset="https://cos.name/wp-content/uploads/2013/01/fire.jpg 1025w, https://cos.name/wp-content/uploads/2013/01/fire-300x190.jpg 300w, https://cos.name/wp-content/uploads/2013/01/fire-472x300.jpg 472w" sizes="(max-width: 425px) 100vw, 425px" /></a>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/fire/" rel="attachment wp-att-7082">![fire](https://cos.name/wp-content/uploads/2013/01/fire.jpg)</a>
 </p>
 
 **9. 推荐阅读**

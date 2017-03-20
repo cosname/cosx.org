@@ -18,7 +18,7 @@ slug: statistical-analysis-and-winbugs-part-1
 
 ## <span style="#800000;">第一节 什么是WinBUGS?</span>
 
-[<img class="alignleft" src="http://www.mrc-bsu.cam.ac.uk/bugs/images/bugslogo.gif" alt="" width="70" height="70" />](http://www.mrc-bsu.cam.ac.uk/bugs/welcome.shtml)WinBUGS对于研究Bayesian统计分析的人来说，应该不会陌生。至少对于MCMC方法是不陌生的。WinBUGS (Bayesian inference Using Gibbs Sampling）就是一款通过MCMC方法来分析复杂统计模型的软件。其基本原理就是通过Gibbs sampling和Metropolis算法，从完全条件概率分布中抽样，从而生成马尔科夫链，通过迭代，最终估计出模型参数。引入Gibbs抽样与MCMC的好处是不言而喻的，就是想避免计算一个具有高维积分形式的完全联合后验概率公布，而代之以计算每个估计参数的单变量条件概率分布。具体的算法思想，在讲到具体问题的时候再加以叙述，在此不过多论述。就不拿公式出来吓人了（毕竟打公式也挺费劲啊）。<!--more-->
+[![](http://www.mrc-bsu.cam.ac.uk/bugs/images/bugslogo.gif)](http://www.mrc-bsu.cam.ac.uk/bugs/welcome.shtml)WinBUGS对于研究Bayesian统计分析的人来说，应该不会陌生。至少对于MCMC方法是不陌生的。WinBUGS (Bayesian inference Using Gibbs Sampling）就是一款通过MCMC方法来分析复杂统计模型的软件。其基本原理就是通过Gibbs sampling和Metropolis算法，从完全条件概率分布中抽样，从而生成马尔科夫链，通过迭代，最终估计出模型参数。引入Gibbs抽样与MCMC的好处是不言而喻的，就是想避免计算一个具有高维积分形式的完全联合后验概率公布，而代之以计算每个估计参数的单变量条件概率分布。具体的算法思想，在讲到具体问题的时候再加以叙述，在此不过多论述。就不拿公式出来吓人了（毕竟打公式也挺费劲啊）。<!--more-->
 
 ## 第二节 为什么要用WinBUGS?
 
@@ -36,7 +36,7 @@ WinBUGS目前是一款免费的软件，去<http://www.mrc-bsu.cam.ac.uk/bugs/>�
 
 ## 第四节 初试WinBUGS<figure id="attachment_408" style="width: 300px" class="wp-caption alignleft">
 
-[<img class="size-medium wp-image-408" src="https://cos.name/wp-content/uploads/2008/12/22221-300x289.jpg" alt="WinBUGS-GUI" width="300" height="289" srcset="https://cos.name/wp-content/uploads/2008/12/22221-300x289.jpg 300w, https://cos.name/wp-content/uploads/2008/12/22221.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2008/12/22221.jpg)<figcaption class="wp-caption-text">WinBUGS-GUI</figcaption></figure> 
+[![WinBUGS-GUI](https://cos.name/wp-content/uploads/2008/12/22221-300x289.jpg)](https://cos.name/wp-content/uploads/2008/12/22221.jpg)<figcaption class="wp-caption-text">WinBUGS-GUI</figcaption></figure> 
 
 我们先找一个例子来实际地运行一下WinBUGS，感受一下基本的操作流程，然后再考虑高级的操作。
 
@@ -76,7 +76,7 @@ WinBUGS目前是一款免费的软件，去<http://www.mrc-bsu.cam.ac.uk/bugs/>�
 
 第十八步，点history看所有迭代的时间序列图，点trace看最后一次迭代的时间序列图，点auto cor看correlogram时间序列图，点stat看参数估计的结果<figure id="attachment_1267" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-1267" title="Estimation results by WinBUGS 1.4" src="https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS-500x466.png" alt="Estimation results by WinBUGS 1.4" width="500" height="466" srcset="https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS-500x466.png 500w, https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS-300x280.png 300w, https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png 645w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png)<figcaption class="wp-caption-text">Estimation results by WinBUGS 1.4</figcaption></figure> 
+[![Estimation results by WinBUGS 1.4](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS-500x466.png "Estimation results by WinBUGS 1.4")](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png)<figcaption class="wp-caption-text">Estimation results by WinBUGS 1.4</figcaption></figure> 
 
 附第二步中的代码如下：
 

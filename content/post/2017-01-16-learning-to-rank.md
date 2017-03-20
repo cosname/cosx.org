@@ -11,7 +11,7 @@ slug: learning-to-rank
 
 <span style="color: #808080;">声明：本文与作者工作单位及工作内容无关，完全出于个人兴趣爱好。</span>
 
-<img class="aligncenter size-medium wp-image-13573" src="https://cos.name/wp-content/uploads/2017/01/17784079_1200x1000_0-300x168.jpg" alt="" width="300" height="168" srcset="https://cos.name/wp-content/uploads/2017/01/17784079_1200x1000_0-300x168.jpg 300w, https://cos.name/wp-content/uploads/2017/01/17784079_1200x1000_0-768x430.jpg 768w, https://cos.name/wp-content/uploads/2017/01/17784079_1200x1000_0-500x280.jpg 500w, https://cos.name/wp-content/uploads/2017/01/17784079_1200x1000_0.jpg 1200w" sizes="(max-width: 300px) 100vw, 300px" />
+![](https://cos.name/wp-content/uploads/2017/01/17784079_1200x1000_0-300x168.jpg)
 
 最近有条很火的新闻。美国大选刚刚落下帷幕，却余波不断。其中一条新闻就是，Google被指责利用搜索结果（假新闻）左右民意。可是事情到底是怎么回事呢？
 
@@ -21,7 +21,7 @@ slug: learning-to-rank
 
 原文不翻译了，大意是，在Google搜索大选相关信息的时候，“popularity vote”第一条结果是一个“洋葱新闻”网站70News。显然Google的算法认为这个网站是最相关的，结果无数的网民就天真地点击过去了，然后愤怒地发现这是一条假新闻（相似的例子可能还有百度医疗广告问题&#8230;）。可见人们潜意识里对搜索引擎有一种莫名的信任——排在前面的应该就是我想要的信息。可是，搜索引擎背后也只是一堆堆的机器学习模型，而模型也是需要不断改进的。要改进模型就要告诉模型什么时候判断错了，然后进行参数修正。
 
-<img class="aligncenter size-medium wp-image-13577" src="https://cos.name/wp-content/uploads/2017/01/Google-e1457156368841-300x132.jpg" alt="" width="300" height="132" srcset="https://cos.name/wp-content/uploads/2017/01/Google-e1457156368841-300x132.jpg 300w, https://cos.name/wp-content/uploads/2017/01/Google-e1457156368841.jpg 480w" sizes="(max-width: 300px) 100vw, 300px" />
+![](https://cos.name/wp-content/uploads/2017/01/Google-e1457156368841-300x132.jpg)
 
 最近看到Google research放出来的一篇论文：Learning to Rank with Selection Bias in Personal Search（http://research.google.com/pubs/pub45286.html）。这篇论文是跟排序算法相关的，虽然跟上面的“假新闻”事件没啥直接关系，但殊途同归之处不少。正巧园主前些时日涉足了一些相关的问题，加之标题中的选择偏差（selection bias），一下子引起园主的好奇心，遂通读此文。读完之后感觉有些想法很新颖，只是术语习惯等等和园主习惯的方式有所区别，所以打算以一个非算法的视角来解读一下这篇文章，谈谈园主的一些理解。
 
@@ -45,7 +45,7 @@ slug: learning-to-rank
 
 <span style="color: #808080;">（注：原文表述为一个learning-to-rank的机器学习模型；而从非算法的视角，园主觉得最核心的就是对关联度的定性评价，故此处称之为评价模型，在后文中会详细解释）</span>
 
-<img class="aligncenter size-medium wp-image-13576" src="https://cos.name/wp-content/uploads/2017/01/1-140Q4141610404-300x192.jpg" alt="" width="300" height="192" srcset="https://cos.name/wp-content/uploads/2017/01/1-140Q4141610404-300x192.jpg 300w, https://cos.name/wp-content/uploads/2017/01/1-140Q4141610404-500x320.jpg 500w, https://cos.name/wp-content/uploads/2017/01/1-140Q4141610404.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" />
+![](https://cos.name/wp-content/uploads/2017/01/1-140Q4141610404-300x192.jpg)
 
 原文亦列出了个人搜索相比于网页搜索的特殊性：
 
@@ -71,7 +71,7 @@ slug: learning-to-rank
 
 假设我们数据库里有如下的数据（暂时不管其他用户或者搜索相关变量）：
 
-<img class="aligncenter wp-image-13572" src="https://cos.name/wp-content/uploads/2017/01/捕获-1-300x80.png" alt="" width="458" height="122" srcset="https://cos.name/wp-content/uploads/2017/01/捕获-1-300x80.png 300w, https://cos.name/wp-content/uploads/2017/01/捕获-1-768x205.png 768w, https://cos.name/wp-content/uploads/2017/01/捕获-1-500x133.png 500w, https://cos.name/wp-content/uploads/2017/01/捕获-1.png 900w" sizes="(max-width: 458px) 100vw, 458px" /></section> </section> </section> <section class="Powered-by-XIUMI V5"> <section class=""> <section class="">
+![](https://cos.name/wp-content/uploads/2017/01/捕获-1-300x80.png)</section> </section> </section> <section class="Powered-by-XIUMI V5"> <section class=""> <section class="">
 
 ****某条结果的点击率 = 排序位置的影响*关联度 （对应原文4.1章）****</p> 
 
@@ -83,7 +83,7 @@ slug: learning-to-rank
 
 ### 排序位置系数的直接估计</section> </section> </section> <section class="Powered-by-XIUMI V5"> <section class=""> <section class="">排序位置系数其实很大程度上反映了用户的一些行为习惯，如他们潜意识里面对于搜索结果的信任，或者如园主一样就是没耐心、手快。可是换一个场景，比如园主前段时间突然对犹太教和穆斯林的历史感兴趣，然后逛书店的时候想买一本相关的书籍，园主只能一排排的从历史类的书架扫过去，然后通过标题和简介判断哪本书可能是最相关的。这个时候，园主知道书架的排序并不是按照我的嗜好来的，所以我只能一本本从左到右或者从右到左扫视。</p> </section> <section class="">
 
-<img class="aligncenter size-medium wp-image-13574" src="https://cos.name/wp-content/uploads/2017/01/tooopen_sy_173446127669-300x200.jpg" alt="" width="300" height="200" srcset="https://cos.name/wp-content/uploads/2017/01/tooopen_sy_173446127669-300x200.jpg 300w, https://cos.name/wp-content/uploads/2017/01/tooopen_sy_173446127669-768x511.jpg 768w, https://cos.name/wp-content/uploads/2017/01/tooopen_sy_173446127669-500x333.jpg 500w, https://cos.name/wp-content/uploads/2017/01/tooopen_sy_173446127669.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" />
+![](https://cos.name/wp-content/uploads/2017/01/tooopen_sy_173446127669-300x200.jpg)
   
 同理，如果为了估计用户的行为习惯的影响，最直接的办法就是做个“乱序”实验。想法很简单，我们只要固定一个因素来检测另一个因素的变化就好了嘛。乱序的情况下，返回的结果跟用户的搜索其实并没有什么关系（或者返回一些基本匹配的结果），所以无论结果本身跟索索语句的关联度如何，其出现在每个位置的概率都一样。这样，大量用户点击行为反映出来的就仅仅是排序位置的影响，从而我们得以排除关联度的干扰，直接估计排序位置系数。原文第5章即利用了这种想法来进行数据训练。</p> 
 
@@ -101,7 +101,7 @@ slug: learning-to-rank
 
 与大部分机器学习模型一样，Learning-to-rank的核心就是定义一个损失函数。这里想法大概就是，如果一个排序算法把洋葱新闻排到第一位，而火眼金睛的用户点击的是第二位的真新闻，则损失1分。可见，这里并不直接计算关联度本身，而是利用与关联度有关的数据计算损失函数。原文中的损失函数定义为：（加权）加总各种可能的搜索结果从一个打分模型里面得出的分数的损失。具体实践中大家会利用一个特定的损失函数模型，比如原文中3.1章给出的配对型的损失函数(2)，惩罚如果后面的结果比前面的更加关联，其函数大致形如：
 
-<img class="aligncenter wp-image-13575" src="https://cos.name/wp-content/uploads/2017/01/捕获-300x26.png" alt="" width="1742" height="151" srcset="https://cos.name/wp-content/uploads/2017/01/捕获-300x26.png 300w, https://cos.name/wp-content/uploads/2017/01/捕获-768x67.png 768w, https://cos.name/wp-content/uploads/2017/01/捕获-500x44.png 500w" sizes="(max-width: 1742px) 100vw, 1742px" />
+![](https://cos.name/wp-content/uploads/2017/01/捕获-300x26.png)
 
 <span style="color: #3366ff;">（园主问题2：用户不点击排名第一的结果和不点击排名第100位的结果，显然背后的考量是不同的。他可能看到了第一位的结果，心里嘀咕，八竿子打不着的结果你干嘛给我？而根本没看到第100位的结果。这种情况下，我们不应该惩罚排在第一位的结果吗？）</span>
 

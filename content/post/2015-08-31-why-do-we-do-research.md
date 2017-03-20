@@ -17,7 +17,7 @@ slug: why-do-we-do-research
 
 <span style="color: #808080;">原文发表在 IMS Bulletin 链接：<a style="color: #808080;" href="http://bulletin.imstat.org/2015/02/terences-stuff-why-do-we-do-research/" target="_blank">http://bulletin.imstat.org/</a><a style="color: #808080;" href="http://bulletin.imstat.org/2015/02/terences-stuff-why-do-we-do-research/" target="_blank">2015/02/terences-stuff-why-do-we-do-research/</a> 。2011年6月 以来的 IMS Bulletin 系列文章 &#8220;Terence&#8217;s Stuff&#8221; 都收录在 <a style="color: #808080;" href="http://bulletin.imstat.org/category/terences-stuff/" target="_blank">http://bulletin.imstat.org/category/terences-stuff/</a>。本文由王小宁翻译，冯凌秉、施涛审校。</span>
 
-[<img class="aligncenter size-large wp-image-11310" src="https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-500x333.jpg" alt="Terry-Speed-1-2" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-500x333.jpg 500w, https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg 1024w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg)
+[![Terry-Speed-1-2](https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2-500x333.jpg)](https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg)
 
 “我们为什么要做研究？” －－这个问题似乎由调查机构，比如说像_Vitae_ 这种立志于通过转化研究者专业和职业发展路径来激发他们潜能的国际项目，通过抽样调查来回答最为合适。这里我只是想用我的个人经验来探讨一下这个问题。
 
