@@ -26,7 +26,7 @@ slug: gamma-function-1
   
 由此可以推导出，对于任意的自然数$n$
   
-`$$\Gamma(n) = (n-1)! .$$`
+`$$\Gamma(n) = (n-1)! $$`
   
 由于伽玛函数在整个实数轴上都有定义，于是可以看做阶乘概念在实数集上的延拓。
 
@@ -47,7 +47,7 @@ slug: gamma-function-1
 
 1655年, 英国数学家沃利斯(John Wallis, 1616-1703)写下了一个神奇的数学公式
   
-\begin{equation}
+`\begin{equation}
   
 \label{wallis-formula}
   
@@ -57,7 +57,7 @@ slug: gamma-function-1
   
 \frac{\pi}{2} .
   
-\end{equation}
+\end{equation}`
   
 `\(\pi\)` 居然可以如此齐整地表示成奇数、偶数的比值，着实令人惊讶。 历史上数学家们为了寻求对`\(pi\)` 这个迷人的常数更加深刻的理解，前赴后继倾注了无数的精力。数学家们发现，`\(\pi\)`可以表达成许许多多奇妙的形式，而沃利斯公式是欧洲历史上发现的第二个把`\(\pi\)` 表达成式了无穷序列的形式， 由于它简洁的对称美，也成为了许多数学人经常提及的数学公式之一。为何沃利斯公式会和伽玛函数发生联系呢？实际上对沃利斯公式做一下变形整理就可以得到如下等价形式
   
@@ -77,7 +77,7 @@ slug: gamma-function-1
   
 于是欧拉大胆地猜测 `\(\sin x\)`也具有多项式的这种性质，即
   
-\begin{equation}
+`\begin{equation}
   
 \label{euler-sinx}
   
@@ -85,7 +85,7 @@ slug: gamma-function-1
   
 = x (1- \frac{x^2}{\pi^2}) (1- \frac{x^2}{4\pi^2}) (1- \frac{x^2}{9\pi^2}) \cdots .
   
-\end{equation}
+\end{equation}`
   
 理工科背景的学生大都学习过 `\(\sin x\)`的泰勒展开式， 通常只有数学背景的学生才会接触到这个 `\(\sin x\)` 的无穷乘积展开式。这个展开式在数学推导中有许多妙用。数学史上它发挥的第一个重要作用，就是帮助欧拉推导出了如下美丽的公式
   
@@ -131,7 +131,7 @@ $$`
 
 沃利斯对 `\(p,q = 1,2,\ldots,10\)` 做了计算， 发现`\(A\_{p,q}\)`这个表格不太好看，改为倒数之后容易分析。于是取 `\(B\_{p,q} = \frac{1}{A_{p,q}}\)`, 列出表格一看， 居然恰好是帕斯卡三角形！ 这个三角形中的组合数已经是数学家们熟悉知的， 于是沃利斯很容易地得到
 
-\begin{equation}
+`\begin{equation}
   
 \label{wallis-Bpq}
   
@@ -147,7 +147,7 @@ B_{p,q} = \frac{(p+q)!} {p! q!} = \frac{1}{p!} (q+1) (q+2) \ldots (q+p), q=0,1,2
   
 B\_{p,q} = \frac{p+q}{q} B\_{p,q-1}
   
-\end{equation}
+\end{equation}`
   
 原始的问题就转化为计算 `\(B_{\frac{1}{2},\frac{1}{2}}\)`。 由此开始， 沃利斯开始了他天才的推广：
 
@@ -258,7 +258,7 @@ $$`
   
 所以，我们有如下推导
   
-\begin{eqnarray*}
+`\begin{eqnarray*}
   
 \begin{array}{lll}
   
@@ -276,7 +276,7 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 \end{array}
   
-\end{eqnarray*}
+\end{eqnarray*}`
   
 由于`\(S_n\)` 符合参数`\(\lambda =n\)`的泊松分布，实际上有
   
@@ -314,13 +314,13 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 这个结果看起来平淡无奇，然而斯特林天才地指出实际上有
   
-\begin{equation}
+`\begin{equation}
   
 \label{half-factorial}
   
 \left(\frac{1}{2}\right)! = \frac{\sqrt\pi}{2} .
   
-\end{equation}
+\end{equation}`
   
 这真是一个令人惊诧的结果！
 
@@ -342,7 +342,7 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 利用斯特林公式推导可以得到
   
-\begin{align*}
+`\begin{align*}
   
 \left(\frac{1}{2}\right)! & = \frac {n! \sqrt{n+1}} {(n+\frac{1}{2})
   
@@ -362,7 +362,7 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 & \rightarrow \frac{\sqrt\pi}{2} \hspace{0.5cm} (n \rightarrow \infty) .
   
-\end{align*}
+\end{align*}`
 
 ![斯特林的墓](https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg)
 
@@ -388,7 +388,7 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
 
 接下来伽马函数的主角欧拉要登场了。欧拉和贝努利家族有紧密的联系，他是约翰·贝努利 (Johann Bernoulli, 1667-1748)的学生， 这位约翰也就是尼古拉斯和丹尼尔的父亲。我们应该感谢约翰·贝努利，因为正是他发现并培养了欧拉的数学才能。 在尼古拉斯和丹尼尔的推荐之下欧拉于1727年在圣彼得堡科学院获得了一个职位。欧拉当时正和丹尼尔·贝努利一块在圣彼得堡，他也因此得知了阶乘的插值问题。应该是受到丹尼尔·贝努利的思路的启发，欧拉也采用无穷乘积的方式给出了另外一个`\(n!\)` 的插值公式
   
-\begin{equation}
+`\begin{equation}
   
 \label{euler-series}
   
@@ -398,21 +398,21 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 \Bigl[\Bigl(\frac{4}{3}\Bigr)^n\frac{3}{n+3}\Bigr] \cdots = n! .
   
-\end{equation}
+\end{equation}`
   
 用极限形式，这个式子以写为
   
-\begin{equation}
+`\begin{equation}
   
 \label{euler-series2}
   
 \lim_{m \rightarrow \infty} \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} = n!
   
-\end{equation}
+\end{equation}`
   
 欧拉实际上在他的论文中描述了发现上述式子的思路，我们不在此赘述，不过上式成立却很容易证明。上式左边可以整理为
   
-\begin{align*}
+`\begin{align*}
   
 & \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} \\
   
@@ -430,13 +430,13 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 \rightarrow & n! \qquad (m\rightarrow \infty)
   
-\end{align*}
+\end{align*}`
   
 所以 \eqref{euler-series}、\eqref{euler-series2}式都成立。
 
 而由于\eqref{euler-series} 式对于$n$为分数的情形也适用，所以欧拉实际上也把`\(n!\)` 的计算推广到了分数的情形，只是这个计算是用无穷乘积的形式表示的，看起来不够直观。欧拉给的无穷乘积相比丹尼尔的无穷乘积有什么更出色的地方吗？实际上后人的验证指出，就收敛到`\(n!\)`的速度而言，丹尼尔的无穷乘积比欧拉的要快得多，然而欧拉的无穷乘积公式却是能够下金蛋的。 欧拉尝试从一些简单的例子开始做计算，看看是否有规律可循，欧拉极其擅长数学的观察与归纳。当 `\(n=\frac{1}{2}\)`的时候，带入\eqref{euler-series} 式，可以得到
   
-\begin{align*}
+`\begin{align*}
   
 \Bigl(\frac{1}{2}\Bigr)!
   
@@ -462,7 +462,7 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 \cdot \frac{6}{7} \cdot \frac{8}{7} \cdot \frac{8}{9} \cdot \frac{10}{9} \cdot \cdots }
   
-\end{align*}
+\end{align*}`
   
 对比一下根号内的式子和沃利斯公式\eqref{wallis-formula}，几乎是一模一样，只是最前面差了一个因子2。 欧拉自然非常熟悉沃利斯的工作，基于沃利斯公式，欧拉迅速得到了如下一个令他惊讶的结果
   
@@ -486,9 +486,9 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
   于是欧拉得到如下一个重要的式子
   
-  \begin{equation}
+  `\begin{equation}
   n! = (e+1)(e+2)\cdots(e+n+1)\int_0^1 x^e(1-x)^ndx
-  \end{equation}
+  \end{equation}`
   
   在这个公式里欧拉实际上已经成功地把`\(n!\)`表示成了积分的形式。然而这里的问题是 `\((e+1)(e+2)\cdots(e+n+1)\)`这个表达式限制了 `\(n\)`只能为整数，无法推广到分数的情形，欧拉继续研究能否简化这个积分表达式。此处`\(e\)`是一个任意实数，有没有办法让`\(e\)`从上面的积分式子中消失呢？要让一个量从一个数学等式中消失，数学家们惯用的手法之一就是让这个量取一个极端的值，譬如无穷。欧拉的老师约翰·贝努利说过“无穷是上帝的属性”，在通往无穷的路途中，造物主的秘密往往被数学家们窥视。欧拉开始追问：如果让$e$ 趋向于无穷取值，会发生什么样的情况呢？分析学的大师欧拉开始展现他的计算技巧，取`\(e=\frac{f}{g}\)`, 稍微整理一下可以得到
   
@@ -496,12 +496,12 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
   然后令 `\(f \rightarrow 1, g \rightarrow 0\)`，显然上式左边趋于`\(n!\)`, 右边会发生什么情况呢？为了简化计算，令 `\(x=t^h, h=\frac{g}{f+g}\)`， 整理之后上式可以变换为
   
-  \begin{align}
+  `\begin{align}
   \frac{n!}{(f+g)(f+2g)\cdots(f+ng)}
   & = \frac{f+(n+1)g}{g^{n+1}} \int_0^1 h(1-t^h)^n dt \notag \\
   & = \frac{f+(n+1)g}{(f+g)^{n+1}} \int_0^1 \Bigl(\frac{1-t^h}{h}\Bigr)^n dt
   \label{factorial-integral}
-  \end{align}
+  \end{align}`
   
   当`\(f \rightarrow 1, g \rightarrow 0\)`时显然有`\(h \rightarrow 0\)`，利用罗必塔法则，我们可以得到微积分中一个熟知的式子
   
@@ -509,16 +509,16 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
   于是对 \eqref{factorial-integral} 式两边取极限，奇迹出现了
   
-  \begin{equation}
+  `\begin{equation}
   \label{factorial-gamma-1}
   n! = \int_0^1 (-\log t)^ndt,
-  \end{equation}
+  \end{equation}`
   
   原来的积分式中的$e$消失了，欧拉成功地把`\(n!\)`表达为了一个非常简洁的积分形式！！！对上式再做一个变换 `\(t=e^{-\lambda}\)`,就可以得到我们常见的伽玛函数形式
-  \begin{equation}
+ `\begin{equation}
   \label{factorial-gamma-2}
   n! = \int_0^{\infty} \lambda^ne^{-\lambda}d\lambda .
-  \end{equation}
+  \end{equation}`
   
   把\eqref{factorial-gamma-1}和\eqref{factorial-gamma-2} 式从整数`\(n\)` 延拓到任意实数`\(x\)`(包括负数)，我们就得到伽玛函数的一般形式
   
