@@ -1,6 +1,7 @@
 ---
 title: RHadoop实践系列之一:Hadoop环境搭建
 date: '2013-03-24T21:55:36+00:00'
+description: "Hadoop环境搭建步骤"
 author: 张 丹
 categories:
   - 软件应用
@@ -12,8 +13,6 @@ tags:
   - 海量数据
 slug: rhadoop1-hadoop
 ---
-
-# 
 
 Author：张丹(Conan)
   
@@ -40,10 +39,8 @@ APPs:
 RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce 算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据1G, 10G, 100G, TB, PB。 由于大数据所带来的单机性能问题，可能会一去不复返了。
 
 RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221;，&#8221;RHadoop安装与使用&#8221;，&#8221;R实现MapReduce的算法案 例&#8221;，&#8221;HBase和rhbase的安装与使用&#8221;。对于单独的R语言爱好者，Java爱好者，或者Hadoop爱好者来说，同时具备三种语言知识并不容 易。此文虽为入门文章，但R,Java,Hadoop基础知识还是需要大家提前掌握。
-  
-<!--more-->
 
-## 第一篇 Hadoop环境搭建部分，分为3个章节。
+# 第一篇 Hadoop环境搭建部分，分为3个章节。
 
     Haddop环境准备
     Hadoop完全分步式集群搭建
@@ -52,9 +49,9 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
 
 每一章节，都会分为&#8221;文字说明部分&#8221;和&#8221;代码部分&#8221;，保持文字说明与代码的连贯性。
 
-## Haddop环境准备
+# Haddop环境准备
 
-#### 文字说明部分：
+### 文字说明部分：
 
 首先环境准备，这里我选择了Linux Ubuntu操作系统12.04的64位版本，大家可以根据自己的使用习惯选择顺手的Linux。
 
@@ -78,15 +75,15 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
 
 环境准备完成，参考下面代码部分，动手实现。
 
-#### 代码部分：
+### 代码部分：
 
-#### 1. 操作系统Ubuntu 12.04 x64
+### 1. 操作系统Ubuntu 12.04 x64
 
     ~ uname -a
     Linux domU-00-16-3e-00-00-85 3.2.0-23-generic #36-Ubuntu SMP Tue Apr 10 20:39:51 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
     
 
-#### 2. JAVA环境
+### 2. JAVA环境
 
     ~ java -version
     java version "1.6.0_29"
@@ -94,7 +91,7 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
     Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02, mixed mode)
     
 
-#### 3. Hadoop集群：５台机器,１个NameNode,４个DataNode,通过DNS指定域名
+### 3. Hadoop集群：５台机器,１个NameNode,４个DataNode,通过DNS指定域名
 
     虚拟机名字   域名     内存  硬盘
     namenode:  nn.qa.com   1G  2G+16G
@@ -104,7 +101,7 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
     datanode4: dn3.qa.com  1G  2G+16G
     
 
-#### 挂载硬盘16G
+### 挂载硬盘16G
 
     1. mkfs.ext4 -j /dev/xvdb
     2. mkdir /hadoop
@@ -114,7 +111,7 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
         /dev/xvdb /hadoop ext4 noatime 0 1
     
 
-#### 创建hadoop账号和组
+### 创建hadoop账号和组
 
     1. groupadd hadoop
     2. useradd hadoop -g hadoop;
@@ -123,13 +120,13 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
     5. chown -R hadoop:hadoop /home/hadoop
     
 
-#### 创建hadoop工作目录
+### 创建hadoop工作目录
 
     1. mkdir /hadoop/conan/data0
     2. chown -R hadoop:hadoop /hadoop/conan/data0
     
 
-## 配置ssh及密码
+# 配置ssh及密码
 
     nn.qa.com:
       1. su hadoop
@@ -175,9 +172,9 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
       6. scp authorized_keys dn3.qa.com:/home/hadoop/.ssh/
     
 
-## Hadoop完全分步式集群搭建
+# Hadoop完全分步式集群搭建
 
-#### 文字说明部分：
+### 文字说明部分：
 
 说明：本文以hadoop-0.20.2为例，与系列中其他几篇文章中的hadoop-1.0.3版本，安装和配置上是一样。
 
@@ -199,9 +196,9 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
 
 其他的节点的测试检查是一样的，在这里就不重复说明了。
 
-## 代码部分：
+# 代码部分：
 
-## 下载及配置hadoop
+# 下载及配置hadoop
 
 nn.qa.com:
 
@@ -254,7 +251,7 @@ nn.qa.com:
           dn3.qa.com
     
 
-## 同步hadoop配置到其他虚拟机
+# 同步hadoop配置到其他虚拟机
 
   1. cd /hadoop/conan
   2. scp -r ./hadoop-0.20.2 dn0.qa.com:/hadoop/conan
@@ -262,13 +259,13 @@ nn.qa.com:
   4. scp -r ./hadoop-0.20.2 dn2.qa.com:/hadoop/conan
   5. scp -r ./hadoop-0.20.2 dn3.qa.com:/hadoop/conan
 
-## 启动namenode节点
+# 启动namenode节点
 
   1. cd /hadoop/conan/hadoop-0.29.2
   2. bin/hadoop namenode -format
   3. bin/start-all.sh
 
-## 检查hadoop启动是否成功
+# 检查hadoop启动是否成功
 
   1. jps 
         9362 Jps
@@ -295,9 +292,9 @@ nn.qa.com:
         udp        0      0 239.2.11.71:8649        0.0.0.0:*  
         
 
-## HDFS测试
+# HDFS测试
 
-## 文字说明部分：
+# 文字说明部分：
 
 hadoop环境启动成功，我们进行一下hdfs的简单测试。
   
@@ -307,7 +304,7 @@ hadoop环境启动成功，我们进行一下hdfs的简单测试。
   
 通过命令查看刚刚上传的文件bin/hadoop fs -ls /test
 
-#### 代码部分：
+### 代码部分：
 
 nn.qa.com:
 
@@ -319,7 +316,7 @@ nn.qa.com:
         -rw-r--r--   2 hadoop supergroup       1366 2012-08-30 02:05 /test/README.txt
         
 
-## 最后，恭喜你完成了，hadoop的完成分步式安装，环境成功搭建。
+# 最后，恭喜你完成了，hadoop的完成分步式安装，环境成功搭建。
 
 继续学习，请看第二篇 RHadoop实践系列文章之RHadoop安装与使用。
 
