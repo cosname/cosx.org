@@ -19,4 +19,4 @@ slug: storytelling-with-data
   * 吴建福大神谈[对中国统计发展的一些浅见](http://v.youku.com/v_show/id_XNTI0MDE2NzQw.html)。
   * 华尔街日报撰文（[这里](http://blogs.wsj.com/numbersguy/the-upbeat-stats-on-statistics-1216/)）称企业对于统计学人才的需求正在上升，同时也表达了对学校训练和实际需求脱节的隐忧。肖楠读了上面的文章，不禁感叹：“[计算机系的都在学统计，<wbr />统计系的都在学数学，数学系的都在学编程。](https://twitter.com/cos_name/status/309466207835262976)” 看来现如今，跨界和混搭方能立于<span style="text-decoration: line-through;">东方</span>不败之地。
 
-<img class="alignnone" alt="" src="http://i.imgur.com/PPtXn.jpg" width="460" height="612" />
+![](http://i.imgur.com/PPtXn.jpg)

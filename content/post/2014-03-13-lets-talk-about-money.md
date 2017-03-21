@@ -25,5 +25,5 @@ slug: lets-talk-about-money
   *  <a style="line-height: 1.5" href="http://cn.tmagazine.com/education/20140224/t24women/">为什么女科学家这么少？</a>女孩子不够聪明？学数学的女孩不够酷？这是事实导致的差异还是文化引导的结果？来看看女科学家作何解。[英文版](http://cn.tmagazine.com/education/20140224/t24women/en-us/)
   * **图模型/温故而知新，可以为师矣：**Eric Xing老师的Probabilistic Graphical Model课程终于完结了，听过Daphne Koller老师PGM在线课程的同学可以再温习下哦，一天看一集，补脑又提神。注意：无字幕，有口音，听习惯就好:)。点击[链接](http://www.cs.cmu.edu/~epxing/Class/10708/lecture.html) 提神醒脑XD。
   *  Hamiltonian蒙特卡洛方法的JavaScript[实现](http://mimno.infosci.cornell.edu/hmc/)。小编不明觉厉，暂且不做评价。
-  * **贝叶斯 ：**尽信书不如无书，且看贝叶斯大家Xi&#8217;an对《贝叶斯数据分析》一书中的后验预测P值的[质疑](https://xianblog.wordpress.com/2014/02/04/posterior-predictive-p-values/)。
+  * **贝叶斯 ：**尽信书不如无书，且看贝叶斯大家Xi’an对《贝叶斯数据分析》一书中的后验预测P值的[质疑](https://xianblog.wordpress.com/2014/02/04/posterior-predictive-p-values/)。
   * **贝叶斯 ：** 一个“八个学校”的例子教会了我贝叶斯统计，PhillipPrice如是说：[点击这里](http://andrewgelman.com/2014/01/21/everything-need-know-bayesian-statistics-learned-eight-schools/)。这个例子展现了一个最基础的贝叶斯分层模型。

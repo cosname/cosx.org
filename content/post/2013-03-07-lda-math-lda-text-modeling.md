@@ -22,13 +22,13 @@ slug: lda-math-lda-text-modeling
 对于上述的 PLSA 模型，贝叶斯学派显然是有意见的，doc-topic 骰子$\overrightarrow{\theta}\_m$和 topic-word 骰子$\overrightarrow{\varphi}\_k$都是模型中的参数，参数都是随机变量，怎么能没有先验分布呢？于是，类似于对 Unigram Model 的贝叶斯改造， 我们也可以如下在两个骰子参数前加上先验分布从而把 PLSA 对应的游戏过程改造为一个贝叶斯的游戏过程。由于 $\overrightarrow{\varphi}\_k$和$\overrightarrow{\theta}\_m$都对应到多项分布，所以先验分布的一个好的选择就是Drichlet 分布，于是我们就得到了 LDA(Latent Dirichlet Allocation)模型。
 
 <p style="text-align: center">
-  <strong><a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-dice" rel="attachment wp-att-5311"><img class="aligncenter  wp-image-5311" alt="lda-dice" src="http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dice.jpg" width="401" height="245" /></a>LDA模型</strong>
+  <strong><a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-dice" rel="attachment wp-att-5311">![lda-dice](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dice.jpg)</a>LDA模型</strong>
 </p>
 
 在 LDA 模型中, 上帝是按照如下的规则玩文档生成的游戏的
 
 <p style="text-align: left">
-  <a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-lda-1" rel="attachment wp-att-5308"><img class="aligncenter size-full wp-image-5308" alt="game-lda-1" src="http://www.52nlp.cn/wp-content/uploads/2013/02/game-lda-1.jpg" width="764" height="504" /></a>
+  <a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-lda-1" rel="attachment wp-att-5308">![game-lda-1](http://www.52nlp.cn/wp-content/uploads/2013/02/game-lda-1.jpg)</a>
 </p>
 
 <!--more-->假设语料库中有 $M$ 篇文档，所有的的word和对应的 topic 如下表示
@@ -46,7 +46,7 @@ slug: lda-math-lda-text-modeling
 其中， $\overrightarrow{w}\_m$ 表示第$m$ 篇文档中的词， $\overrightarrow{z}\_m$ 表示这些词对应的 topic 编号。
 
 <p style="text-align: center">
-  <strong><a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/word-topic-vector" rel="attachment wp-att-5310"><img class="aligncenter  wp-image-5310" alt="word-topic-vector" src="http://www.52nlp.cn/wp-content/uploads/2013/02/word-topic-vector.jpg" width="215" height="185" /></a>语料生成过程中的 word 和 topic</strong>
+  <strong><a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/word-topic-vector" rel="attachment wp-att-5310">![word-topic-vector](http://www.52nlp.cn/wp-content/uploads/2013/02/word-topic-vector.jpg)</a>语料生成过程中的 word 和 topic</strong>
 </p>
 
 **5.2 物理过程分解**
@@ -54,7 +54,7 @@ slug: lda-math-lda-text-modeling
 使用概率图模型表示， LDA 模型的游戏过程如图所示。
 
 <p style="text-align: center">
-  <strong><a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-graph-model" rel="attachment wp-att-5312"><img class="aligncenter  wp-image-5312" alt="lda-graph-model" src="http://www.52nlp.cn/wp-content/uploads/2013/02/lda-graph-model.jpg" width="217" height="184" /></a>LDA概率图模型表示</strong>
+  <strong><a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-graph-model" rel="attachment wp-att-5312">![lda-graph-model](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-graph-model.jpg)</a>LDA概率图模型表示</strong>
 </p>
 
 这个概率图可以分解为两个主要的物理过程：
@@ -66,7 +66,7 @@ slug: lda-math-lda-text-modeling
 
 由第一个物理过程，我们知道 $\overrightarrow{\alpha}\rightarrow \overrightarrow{\theta}\_m \rightarrow \overrightarrow{z}\_{m}$ 表示生成第 $m$ 篇文档中的所有词对应的topics，显然 $\overrightarrow{\alpha}\rightarrow \overrightarrow{\theta}\_m $ 对应于 Dirichlet 分布， $\overrightarrow{\theta}\_m \rightarrow \overrightarrow{z}_{m}$ 对应于 Multinomial 分布， 所以整体是一个 Dirichlet-Multinomial 共轭结构；
 
-<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-dir-mult-conjugate-1" rel="attachment wp-att-5319"><img class="aligncenter size-full wp-image-5319" alt="lda-dir-mult-conjugate-1" src="http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dir-mult-conjugate-1.jpg" width="363" height="73" /></a>
+<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-dir-mult-conjugate-1" rel="attachment wp-att-5319">![lda-dir-mult-conjugate-1](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dir-mult-conjugate-1.jpg)</a>
   
 前文介绍 Bayesian Unigram Model 的小节中我们对 Dirichlet-Multinomial 共轭结构做了一些计算。借助于该小节中的结论，我们可以得到
   
@@ -90,15 +90,15 @@ p(\overrightarrow{\mathbf{z}} |\overrightarrow{\alpha}) & = \prod\_{m=1}^M p(\ov
 
 目前为止，我们由$M$篇文档得到了 $M$ 个 Dirichlet-Multinomial 共轭结构，还有额外$K$ 个 Dirichlet-Multinomial 共轭结构在哪儿呢？在上帝按照之前的规则玩 LDA 游戏的时候，上帝是先完全处理完成一篇文档，再处理下一篇文档。文档中每个词的生成都要抛两次骰子，第一次抛一个doc-topic骰子得到 topic, 第二次抛一个topic-word骰子得到 word，每次生成每篇文档中的一个词的时候这两次抛骰子的动作是紧邻轮换进行的。如果语料中一共有 $N$ 个词，则上帝一共要抛 $2N$次骰子，轮换的抛doc-topic骰子和 topic-word骰子。但实际上有一些抛骰子的顺序是可以交换的，我们可以等价的调整$2N$次抛骰子的次序：前$N$次只抛doc-topic骰子得到语料中所有词的 topics,然后基于得到的每个词的 topic 编号，后$N$次只抛topic-word骰子生成 $N$ 个word。于是上帝在玩 LDA 游戏的时候，可以等价的按照如下过程进行：
 
-<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-lda-2" rel="attachment wp-att-5309"><img class="aligncenter size-full wp-image-5309" alt="game-lda-2" src="http://www.52nlp.cn/wp-content/uploads/2013/02/game-lda-2.jpg" width="745" height="370" /></a>
+<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-lda-2" rel="attachment wp-att-5309">![game-lda-2](http://www.52nlp.cn/wp-content/uploads/2013/02/game-lda-2.jpg)</a>
 
 以上游戏是先生成了语料中所有词的 topic, 然后对每个词在给定 topic 的条件下生成 word。在语料中所有词的 topic 已经生成的条件下，任何两个 word 的生成动作都是可交换的。于是我们把语料中的词进行交换，把具有相同 topic 的词放在一起
 
 \begin{align*}
   
-\overrightarrow{\mathbf{w}}&#8217; &= (\overrightarrow{w}\_{(1)}, \cdots, \overrightarrow{w}\_{(K)}) \\
+\overrightarrow{\mathbf{w}}’ &= (\overrightarrow{w}\_{(1)}, \cdots, \overrightarrow{w}\_{(K)}) \\
   
-\overrightarrow{\mathbf{z}}&#8217; &= (\overrightarrow{z}\_{(1)}, \cdots, \overrightarrow{z}\_{(K)})
+\overrightarrow{\mathbf{z}}’ &= (\overrightarrow{z}\_{(1)}, \cdots, \overrightarrow{z}\_{(K)})
   
 \end{align*}
   
@@ -106,7 +106,7 @@ p(\overrightarrow{\mathbf{z}} |\overrightarrow{\alpha}) & = \prod\_{m=1}^M p(\ov
 
 对应于概率图中的第二个物理过程 $\overrightarrow{\beta} \rightarrow \overrightarrow{\varphi}\_k \rightarrow w\_{m,n} | k=z\_{m,n}$，在 $k=z\_{m,n}$ 的限制下，语料中任何两个由 topic $k$ 生成的词都是可交换的，即便他们不再同一个文档中，所以我们此处不再考虑文档的概念，转而考虑由同一个 topic 生成的词。考虑如下过程 $\overrightarrow{\beta} \rightarrow \overrightarrow{\varphi}\_k \rightarrow \overrightarrow{w}\_{(k)}$ ，容易看出， 此时 $\overrightarrow{\beta} \rightarrow \overrightarrow{\varphi}\_k $ 对应于 Dirichlet 分布， $ \overrightarrow{\varphi}\_k \rightarrow \overrightarrow{w}_{(k)}$ 对应于 Multinomial 分布， 所以整体也还是一个 Dirichlet-Multinomial 共轭结构；
 
-<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-dir-mult-conjugate-2" rel="attachment wp-att-5318"><img class="aligncenter size-full wp-image-5318" alt="lda-dir-mult-conjugate-2" src="http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dir-mult-conjugate-2.jpg" width="359" height="73" /></a>
+<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-dir-mult-conjugate-2" rel="attachment wp-att-5318">![lda-dir-mult-conjugate-2](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dir-mult-conjugate-2.jpg)</a>
   
 同样的，我们可以得到
   
@@ -122,7 +122,7 @@ $$Dir( \overrightarrow{\varphi}\_k| \overrightarrow{n}\_k + \overrightarrow{\bet
   
 \label{corpus-word-prob}
   
-p(\overrightarrow{\mathbf{w}} |\overrightarrow{\mathbf{z}},\overrightarrow{\beta}) &= p(\overrightarrow{\mathbf{w}}&#8217; |\overrightarrow{\mathbf{z}}&#8217;,\overrightarrow{\beta}) \notag \\
+p(\overrightarrow{\mathbf{w}} |\overrightarrow{\mathbf{z}},\overrightarrow{\beta}) &= p(\overrightarrow{\mathbf{w}}’ |\overrightarrow{\mathbf{z}}’,\overrightarrow{\beta}) \notag \\
   
 &= \prod\_{k=1}^K p(\overrightarrow{w}\_{(k)} | \overrightarrow{z}_{(k)}, \overrightarrow{\beta}) \notag \\
   
@@ -264,7 +264,7 @@ p(z\_i = k|\overrightarrow{\mathbf{z}}\_{\neg i}, \overrightarrow{\mathbf{w}}) \
 这个公式是很漂亮的， 右边其实就是 $p(topic|doc) \cdot p(word|topic)$，这个概率其实是 $doc \rightarrow topic \rightarrow word$ 的路径概率，由于topic 有$K$ 个，所以 Gibbs Sampling 公式的物理意义其实就是在这$K$ 条路径中进行采样。
 
 <p style="text-align: center">
-  <strong><a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/gibbs-path-search" rel="attachment wp-att-5313"><img class="aligncenter  wp-image-5313" alt="gibbs-path-search" src="http://www.52nlp.cn/wp-content/uploads/2013/02/gibbs-path-search.jpg" width="358" height="161" /></a>doc-topic-word 路径概率</strong>
+  <strong><a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/gibbs-path-search" rel="attachment wp-att-5313">![gibbs-path-search](http://www.52nlp.cn/wp-content/uploads/2013/02/gibbs-path-search.jpg)</a>doc-topic-word 路径概率</strong>
 </p>
 
 **5.4 Training and Inference**
@@ -276,7 +276,7 @@ p(z\_i = k|\overrightarrow{\mathbf{z}}\_{\neg i}, \overrightarrow{\mathbf{w}}) \
 
 有了 Gibbs Sampling 公式， 我们就可以基于语料训练 LDA 模型，并应用训练得到的模型对新的文档进行 topic 语义分析。训练的过程就是获取语料中的 $(z,w)$ 的样本，而模型中的所有的参数都可以基于最终采样得到的样本进行估计。训练的流程很简单:
 
-<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-training" rel="attachment wp-att-5314"><img class="aligncenter size-full wp-image-5314" alt="lda-training" src="http://www.52nlp.cn/wp-content/uploads/2013/02/lda-training.jpg" width="745" height="217" /></a>
+<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-training" rel="attachment wp-att-5314">![lda-training](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-training.jpg)</a>
 
 对于 Gibbs Sampling 算法实现的细节，请参考 Gregor Heinrich 的 _Parameter estimation for text analysis_ 中对算法的描述，以及 PLDA(http://code.google.com/p/plda) 的代码实现，此处不再赘述。
 
@@ -284,7 +284,7 @@ p(z\_i = k|\overrightarrow{\mathbf{z}}\_{\neg i}, \overrightarrow{\mathbf{w}}) \
 
 有了 LDA 的模型，对于新来的文档 $doc\_{new}$, 我们如何做该文档的 topic 语义分布的计算呢？基本上 inference 的过程和 training 的过程完全类似。对于新的文档， 我们只要认为 Gibbs Sampling 公式中的 $\hat{\varphi}\_{kt}$ 部分是稳定不变的，是由训练语料得到的模型提供的，所以采样过程中我们只要估计该文档的 topic 分布$\overrightarrow{\theta}_{new}$就好了。
 
-<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-inference" rel="attachment wp-att-5315"><img class="aligncenter size-full wp-image-5315" alt="lda-inference" src="http://www.52nlp.cn/wp-content/uploads/2013/02/lda-inference.jpg" width="745" height="217" /></a>
+<a href="http://www.52nlp.cn/lda-math-lda-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/lda-inference" rel="attachment wp-att-5315">![lda-inference](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-inference.jpg)</a>
   
 **6. 后记**
 
@@ -292,16 +292,16 @@ LDA 对于专业做机器学习的兄弟而言，只能算是一个简单的Topi
 
 这份LDA 科普是基于给组内兄弟做报告的 ppt 整理而成的，说是科普其实也不简单，涉及到的数学还是太多。在工业界也混了几年，经常感觉到工程师对于学术界的玩的模型有很强的学习和尝试的欲望，只是学习成本往往太高。所以我写 LDA 的初衷就是写给工业界的工程师们看的，希望把学术界玩的一些模型用相对通俗的方式介绍给工程师；如果这个科普对于读研究生的一些兄弟姐妹也有所启发，只能说那是一个 side effect :-)。
 
-我个人很喜欢LDA ，它是在文本建模中一个非常优雅的模型，相比于很多其它的贝叶斯模型， LDA 在数学推导上简洁优美。学术界自 2003 年以来也输出了很多基于LDA 的 Topic Model 的变体，要想理解这些更加高级的 Topic Model, 首先需要很好的理解标准的 LDA 模型。在工业界， Topic Model 在 Google、Baidu 等大公司的产品的语义分析中都有着重要的应用；所以Topic Model 对于工程师而言，这是一个很有应用价值、值得学习的模型。我接触 Topic Model 的时间不长，主要是由于2年前和 PLDA 的作者 Wangyi 一起合作的过程中，从他身上学到了很多 Topic Model 方面的知识。关于 LDA 的相关知识，其实可以写的还有很多：如何提高 LDA Gibbs Sampling 的速度、如何优化超参数、如何做大规模并行化、LDA 的应用、LDA 的各种变体&#8230;&#8230; 不过我的主要目标还是科普如何理解标准的LDA 模型。
+我个人很喜欢LDA ，它是在文本建模中一个非常优雅的模型，相比于很多其它的贝叶斯模型， LDA 在数学推导上简洁优美。学术界自 2003 年以来也输出了很多基于LDA 的 Topic Model 的变体，要想理解这些更加高级的 Topic Model, 首先需要很好的理解标准的 LDA 模型。在工业界， Topic Model 在 Google、Baidu 等大公司的产品的语义分析中都有着重要的应用；所以Topic Model 对于工程师而言，这是一个很有应用价值、值得学习的模型。我接触 Topic Model 的时间不长，主要是由于2年前和 PLDA 的作者 Wangyi 一起合作的过程中，从他身上学到了很多 Topic Model 方面的知识。关于 LDA 的相关知识，其实可以写的还有很多：如何提高 LDA Gibbs Sampling 的速度、如何优化超参数、如何做大规模并行化、LDA 的应用、LDA 的各种变体…… 不过我的主要目标还是科普如何理解标准的LDA 模型。
 
 学习一个模型的时候我喜欢追根溯源，常常希望把模型中的每一个数学推导的细节搞明白，把公式的物理意义想清楚，不过数学推导本身并不是我想要的，把数学推导还原为物理过程才是我乐意做的事。最后引用一下物理学家费曼的名言结束 LDA 的数学科普：
 
 <p style="text-align: center">
-  <em><strong>What I cannot create, I do not understand. </strong></em><br /> <em><strong>&#8212; Richard Feynman</strong></em>
+  <em><strong>What I cannot create, I do not understand. </strong></em><br /> <em><strong>— Richard Feynman</strong></em>
 </p>
 
 _**LDA数学八卦**_
 
-_LDA-math 的汇总， &#8220;LDA数学八卦.pdf&#8221; 我整理贴出来了， 希望对大家理解 LDA 有帮助。 文章标题挂上“八卦”两字， 因为八卦意味着形式自由、不拘束、可以天马行空，细节处理上也难免有不严谨的地方；当然我也希望八卦是相对容易理解的。_
+_LDA-math 的汇总， “LDA数学八卦.pdf” 我整理贴出来了， 希望对大家理解 LDA 有帮助。 文章标题挂上“八卦”两字， 因为八卦意味着形式自由、不拘束、可以天马行空，细节处理上也难免有不严谨的地方；当然我也希望八卦是相对容易理解的。_
 
  [LDA数学八卦.pdf 下载](http://vdisk.weibo.com/s/q0sGh/1360334108?utm_source=weibolife)

@@ -39,7 +39,7 @@ onMouseDown = NULL, onMouseMove = NULL,
 onMouseUp = NULL, onKeybd = NULL,
 consolePrompt = prompt)</pre>
 
-在这里最重要的参数非onKeybd莫属，对于它的解释帮助文件中的描述是a function to respond to key presses，也就是它对应的取值是一个函数，是响应键盘操作的函数。需要注意的是，函数的输入参数为key，也就是指定响应的按键，如方向键就分别是&#8221;Left&#8221;, &#8220;Up&#8221;, &#8220;Right&#8221;, &#8220;Down&#8221;，另外如果是大写字母的话，默认指的是shift+小写字母，所以在programming的时候务必要区分大小写。附上一个简单的例子，请看下面这段代码：
+在这里最重要的参数非onKeybd莫属，对于它的解释帮助文件中的描述是a function to respond to key presses，也就是它对应的取值是一个函数，是响应键盘操作的函数。需要注意的是，函数的输入参数为key，也就是指定响应的按键，如方向键就分别是”Left”, “Up”, “Right”, “Down”，另外如果是大写字母的话，默认指的是shift+小写字母，所以在programming的时候务必要区分大小写。附上一个简单的例子，请看下面这段代码：
 
 <pre>par(bty="n",xaxt="n", yaxt="n",mar=c(0,0,0,0),cex=4,font=4);
 plot(c(0,1),c(0,1),type="n",xlab="",ylab="");
@@ -65,7 +65,7 @@ getGraphicsEvent("run",onKeybd=random1);</pre>
 
 <pre>locator(n = 512, type = "n", ...)</pre>
 
-看到这么简洁的usage瞬间觉得神清气爽，意思非常简单，n指的是你取点的上限，缺省为512个点，type指的则是取点过程中描点的方式，取值的范围主要是四种，分别是&#8221;n&#8221;,&#8221;p&#8221;,&#8221;l&#8221;,&#8221;o&#8221;，这里缺省值是&#8221;n&#8221;，也就是只取值不画点，而&#8221;l&#8221;则是把点与点连成线了，&#8221;p&#8221;就是点，&#8221;o&#8221;的话你用了就知道了。既然用法这么简单那就先用为快，再次请看代码：
+看到这么简洁的usage瞬间觉得神清气爽，意思非常简单，n指的是你取点的上限，缺省为512个点，type指的则是取点过程中描点的方式，取值的范围主要是四种，分别是”n”,”p”,”l”,”o”，这里缺省值是”n”，也就是只取值不画点，而”l”则是把点与点连成线了，”p”就是点，”o”的话你用了就知道了。既然用法这么简单那就先用为快，再次请看代码：
 
 <pre>par(bty="n",xaxt="n", yaxt="n",mar=c(0,0,0,0),cex=5,font=4);
 plot(c(0,1),c(0,1),type="n",xlab="",ylab="");
@@ -112,7 +112,7 @@ getGraphicsEvent("",onMouseMove=move);</pre>
 
 <pre>par(bty="n",xaxt="n", yaxt="n",mar=c(0,0,0,0),cex=5,font=4);</pre>
 
-par是一个极其重要的设置图形参数(当然也可以获取)的函数，尤其是对于非常想追求作图效果的user而言(ggplt2脑残粉可暂时忽略这句话)。随便举个例子，总不可能在游戏界面中出现一个坐标系吧，那难免也太丧心病狂了，这也就是bty=&#8221;n&#8221;的意义之所在了。因此做界面的一个首要条件是要学会设置，也就是会运用par函数(很多设置在plot等绘图函数也能实现)，par函数参数众多，覆盖面很全，想详细了解的仔细阅读帮助文件即可。另外谢大在他未完成的在线著作《现代统计图形》中也有对par函数和plot函数详细解读，还包括介绍哪些参数是只能在par 中设置的，可以说是提取了帮助文件中的精华部分翻译后展现出来，很有学习价值。
+par是一个极其重要的设置图形参数(当然也可以获取)的函数，尤其是对于非常想追求作图效果的user而言(ggplt2脑残粉可暂时忽略这句话)。随便举个例子，总不可能在游戏界面中出现一个坐标系吧，那难免也太丧心病狂了，这也就是bty=”n”的意义之所在了。因此做界面的一个首要条件是要学会设置，也就是会运用par函数(很多设置在plot等绘图函数也能实现)，par函数参数众多，覆盖面很全，想详细了解的仔细阅读帮助文件即可。另外谢大在他未完成的在线著作《现代统计图形》中也有对par函数和plot函数详细解读，还包括介绍哪些参数是只能在par 中设置的，可以说是提取了帮助文件中的精华部分翻译后展现出来，很有学习价值。
 
 **2.2 低级绘图函数**
 
@@ -150,17 +150,17 @@ segments(x-0.1,y+0.3,x-0.1,y-0.2);
 
 其在fun包中的函数为gomoku，意为五子棋，唯一的一个tag是用于设置棋盘的大小，默认为19，即棋盘大小为19*19，也是标准围棋棋盘，关于该idea的原帖来自于[COS论坛](https://cos.name/cn/topic/104750#post-221212)。其实原理也非常简单，利用locator 函数的交互获取坐标信息，然后根据坐标信息寻找到离其最近的一个交叉点，再利用points函数在改点落子，从而实现了在R中下围棋或者五子棋。唯一欠缺的是里面似乎欠缺对胜负的评判，无论是对五子连珠的判断还是围棋中点目，并没有在其中添加相关的命令。有兴趣的读者也可自行去研究源代码(代码并不长)。看起来可有模有样啊！
 
-[<img class="aligncenter size-medium wp-image-8135" alt="weiqi" src="https://cos.name/wp-content/uploads/2013/08/weiqi-300x280.jpeg" width="300" height="280" srcset="https://cos.name/wp-content/uploads/2013/08/weiqi-300x280.jpeg 300w, https://cos.name/wp-content/uploads/2013/08/weiqi-500x468.jpeg 500w, https://cos.name/wp-content/uploads/2013/08/weiqi-320x300.jpeg 320w, https://cos.name/wp-content/uploads/2013/08/weiqi.jpeg 551w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2013/08/weiqi.jpeg)
+![weiqi](https://cos.name/wp-content/uploads/2013/08/weiqi.jpeg)
 
 **3.2 扫雷**
 
 还记得之前提到的画旗子么，这里就用上了，当然远远不止画旗子这么简单，如果说棋类的胜负可以由双方自行判断的话，那么扫雷这种人际交互的游戏就肯定做不到了，因此代码也比之前的要长很多。在这段代码中采用了getGraphicsEvent函数进行交互，分别针对左击和右击设置不同的相应。效果也非常棒，也是笔者熬夜必备游戏之一。忘了说了，对应的函数是mine_sweeper()，对应的参数分别可以设置大小，雷的个数等，相当调整游戏的难度，论坛原帖在[这里](https://cos.name/cn/topic/14477#post-14477)。
 
-[<img class="aligncenter size-medium wp-image-8144" alt="mine_sweeper" src="https://cos.name/wp-content/uploads/2013/08/mine_sweeper-300x300.png" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2013/08/mine_sweeper-300x300.png 300w, https://cos.name/wp-content/uploads/2013/08/mine_sweeper-150x150.png 150w, https://cos.name/wp-content/uploads/2013/08/mine_sweeper-500x500.png 500w, https://cos.name/wp-content/uploads/2013/08/mine_sweeper.png 672w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2013/08/mine_sweeper.png)**3.3 关灯游戏**
+![mine_sweeper](https://cos.name/wp-content/uploads/2013/08/mine_sweeper.png)**3.3 关灯游戏**
 
 ****关灯游戏貌似在手机上挺流行的，规则也无需多说，非常好玩的一个游戏，同样是我刷夜必备。同样是用到了getGraphicsEvent函数进行交互操作，代码非常简洁，可读性很强，不过可玩性更强。这里也就不再多说了。对应的函数是lights_out()，关于函数的参数width和height用于设置灯的个数，col.off和col.on分别用于表示等熄灭和点亮的颜色。比较有意思的参数是seed, 用来设置随机数种子，也就是能让你每次都处于同一个起点，比较方便作弊。
 
-[<img class="aligncenter size-medium wp-image-8138" alt="light" src="https://cos.name/wp-content/uploads/2013/08/light-296x300.jpg" width="296" height="300" srcset="https://cos.name/wp-content/uploads/2013/08/light-296x300.jpg 296w, https://cos.name/wp-content/uploads/2013/08/light-494x500.jpg 494w, https://cos.name/wp-content/uploads/2013/08/light.jpg 549w" sizes="(max-width: 296px) 100vw, 296px" />](https://cos.name/wp-content/uploads/2013/08/light.jpg)
+![light](https://cos.name/wp-content/uploads/2013/08/light.jpg)
 
 此外fun包中的游戏还有拼图游戏(sliding\_puzzle)和汉诺塔(tower\_of_hanoi)，论坛原帖的地址：[拼图](https://cos.name/cn/topic/14516)、[汉诺塔](https://cos.name/cn/topic/101199#post-201430)。
 
@@ -192,7 +192,7 @@ getGraphicsEvent("run",onKeybd=run);</pre>
 
 当然这只是对界面做了更改，还可以在功能上进行改进，简单一点的，可以增加一些文字素材，表明其用途，再进一步，将其与鼠标结合，从而扩大功能(如增加一些按钮等)，考虑到前面已经有这么多成功的案例，这里也就不再多加赘述了。
 
-[<img class="aligncenter size-medium wp-image-8139" alt="choujiang" src="https://cos.name/wp-content/uploads/2013/08/choujiang-300x300.jpeg" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2013/08/choujiang-300x300.jpeg 300w, https://cos.name/wp-content/uploads/2013/08/choujiang-150x150.jpeg 150w, https://cos.name/wp-content/uploads/2013/08/choujiang-500x500.jpeg 500w, https://cos.name/wp-content/uploads/2013/08/choujiang.jpeg 558w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2013/08/choujiang.jpeg)
+![choujiang](https://cos.name/wp-content/uploads/2013/08/choujiang.jpeg)
 
 &nbsp;
 
@@ -221,7 +221,7 @@ a -- show all (solve the puzzle)</pre>
 
 玩法是把鼠标拖至空格处，然后输入数字即可，如果受不了了那么可以按照上面的提示寻求相应的帮助。
   
-[<img class="aligncenter size-medium wp-image-8140" alt="shudu" src="https://cos.name/wp-content/uploads/2013/08/shudu-300x296.jpg" width="300" height="296" srcset="https://cos.name/wp-content/uploads/2013/08/shudu-300x296.jpg 300w, https://cos.name/wp-content/uploads/2013/08/shudu-500x494.jpg 500w, https://cos.name/wp-content/uploads/2013/08/shudu-303x300.jpg 303w, https://cos.name/wp-content/uploads/2013/08/shudu.jpg 560w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2013/08/shudu.jpg)
+![shudu](https://cos.name/wp-content/uploads/2013/08/shudu.jpg)
   
 关于小游戏就暂时写到这了(可能的话会再来一篇进阶篇)，如果有更好的示例或者idea欢迎和我或者COS的几位前辈联系，并及时更新，当然如果很棒的话目测就果断收录fun包了，下一篇将是小应用开发篇，里面将会给出更多的示例和demo，内容更精彩！
 

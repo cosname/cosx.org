@@ -35,7 +35,7 @@ APPs:
 
 RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce 算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据。1G, 10G, 100G, TB,PB 由于大数据所带来的单机性能问题，可能会一去联复返了。
 
-RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221;，&#8221;RHadoop安装与使用&#8221;，&#8221;R实现MapReduce的算法案 例&#8221;，&#8221;HBase和rhbase的安装与使用&#8221;。对于单独的R语言爱好者，Java爱好者，或者Hadoop爱好者来说，同时具备三种语言知识并不容 易。此文虽为入门文章，但R,Java,Hadoop基础知识还是需要大家提前掌握。
+RHadoop实践是一套系列文章，主要包括”Hadoop环境搭建”，”RHadoop安装与使用”，”R实现MapReduce的算法案 例”，”HBase和rhbase的安装与使用”。对于单独的R语言爱好者，Java爱好者，或者Hadoop爱好者来说，同时具备三种语言知识并不容 易。此文虽为入门文章，但R,Java,Hadoop基础知识还是需要大家提前掌握。
   
 <!--more-->
 
@@ -46,9 +46,9 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
     3. RHadoop程序用例
     
 
-每一章节，都会分为&#8221;文字说明部分&#8221;和&#8221;代码部分&#8221;，保持文字说明与代码的连贯性。
+每一章节，都会分为”文字说明部分”和”代码部分”，保持文字说明与代码的连贯性。
 
-注：Hadoop环境搭建的详细记录，请查看 同系列上一篇文章 “RHadoop实践系列文章之Hadoop环境搭建&#8221;。
+注：Hadoop环境搭建的详细记录，请查看 同系列上一篇文章 “RHadoop实践系列文章之Hadoop环境搭建”。
   
 由于两篇文章并非同一时间所写，hadoop版本及操作系统，分步式环境都略有不同。
   
@@ -64,7 +64,7 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
   
 <http://www.oracle.com/technetwork/java/javase/downloads/index.html>
 
-Hadoop的环境安装，请参考RHadoop实践系统&#8221;Hadoop环境搭建&#8221;的一文。
+Hadoop的环境安装，请参考RHadoop实践系统”Hadoop环境搭建”的一文。
 
 R语言请安装2.15以后的版本，2.14是不能够支持RHadoop的。
   
@@ -125,7 +125,7 @@ RHadoop是RevolutionAnalytics的工程的项目，开源实现代码在GitHub社
 
 安装rmr库，使用R CMD INSTALL也可以顺利完成了。
 
-安装rhbase库，后面&#8221;HBase和rhbase的安装与使用&#8221;文章中会继续介绍，这里暂时跳过。
+安装rhbase库，后面”HBase和rhbase的安装与使用”文章中会继续介绍，这里暂时跳过。
 
 最后，我们可以查看一下，RHADOOP都安装了哪些库。
   
@@ -220,7 +220,7 @@ R语言函数：hdfs.ls(”/user/“)
   
 hadoop的命令：hadoop fs -cat /user/hdfs/o\_same\_school/part-m-00000
   
-R语言函数：hdfs.cat(”/user/hdfs/o\_same\_school/part-m-00000&#8243;)
+R语言函数：hdfs.cat(”/user/hdfs/o\_same\_school/part-m-00000″)
 
 接下来，我们执行一个rmr算法的任务
 

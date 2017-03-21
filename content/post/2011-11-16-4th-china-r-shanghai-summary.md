@@ -14,7 +14,7 @@ tags:
 slug: 4th-china-r-shanghai-summary
 ---
 
-[<img class="aligncenter" title="中国R语言会议标识" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png" alt="" width="300" height="199" />](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)第四届中国R语言会议（上海会场）于2011年11月12日~13日在华东师范大学学术交流中心（逸夫楼）成功召开。会议由华东师范大学金融与统计学院主办、统计之都(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，胜友如云，高朋满座，大家就R语言在行业里的应用进行了深入的探讨。
+![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png "中国R语言会议标识")第四届中国R语言会议（上海会场）于2011年11月12日~13日在华东师范大学学术交流中心（逸夫楼）成功召开。会议由华东师范大学金融与统计学院主办、统计之都(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，胜友如云，高朋满座，大家就R语言在行业里的应用进行了深入的探讨。
 
 ## 会议概况
 
@@ -31,7 +31,7 @@ slug: 4th-china-r-shanghai-summary
 > &nbsp;
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2011/11/4th-SH-live.jpg" target="_blank"><img class="aligncenter" title="会议现场20111112" src="https://cos.name/wp-content/uploads/2011/11/4th-SH-live-500x333.jpg" alt="会议现场20111112" width="600" height="337" /></a>
+  <a href="https://cos.name/wp-content/uploads/2011/11/4th-SH-live.jpg" target="_blank">![会议现场20111112](https://cos.name/wp-content/uploads/2011/11/4th-SH-live-500x333.jpg "会议现场20111112")</a>
 </p>
 
 ## 会议内容

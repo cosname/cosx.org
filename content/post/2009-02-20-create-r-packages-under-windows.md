@@ -76,4 +76,4 @@ R CMD check test</pre>
   2. [Making R Packages Under Windows](http://www1.appstate.edu/~arnholta/Software/MakingPackagesUnderWindows.pdf)
   3. [Build R package for Win2000/XP](http://www.stat.nctu.edu.tw/MISG/SUmmer_Course/C_language/Ch14/BuildR/Build%20R%20package%20for%20Win2000_XP.htm)
   4. [Building R for Windows](http://www.murdoch-sutherland.com/Rtools/)
-  5. [Creating R Packages (the idiot&#8217;s guide)](http://www.maths.bris.ac.uk/~maman/computerstuff/Rhelp/Rpackages.html)
+  5. [Creating R Packages (the idiot’s guide)](http://www.maths.bris.ac.uk/~maman/computerstuff/Rhelp/Rpackages.html)

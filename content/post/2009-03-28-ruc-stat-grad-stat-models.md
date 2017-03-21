@@ -27,7 +27,7 @@ slug: ruc-stat-grad-stat-models
 
 ### Text Book:
 
-  * Part 1 &#8212;- Linear Models
+  * Part 1 —- Linear Models
 Searle, S. R. Linear Models
   
 Searle, S. R. Matrix Algebra Useful for Statistics
@@ -36,7 +36,7 @@ Seber G. A. F. Linear Regression Analysis
   
 Graybill, F. A. The Theory and Applications of the Linear Model</ul> 
 
-  * Part 2 &#8212;- Nonparametric & Semiparametric Models
+  * Part 2 —- Nonparametric & Semiparametric Models
 Wolfgang Hardle, et al.   Nonparametric and Semiparametric Models
   
 Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul> 
@@ -65,7 +65,7 @@ Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul>
       1. Nonparametric Regression
       2. Multivariate Kernel Density Estimation
       3. Local Polynomial Regression
-      4. _k_ &#8211; Nearest Neighbor Estimation
+      4. _k_ – Nearest Neighbor Estimation
 
   * May 15 
       1. Dimension Reduction (Variable Selection in Nonparametric Regression, Nonparametric Link Function, Semi- or Nonparametric Index)
@@ -93,10 +93,10 @@ Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul>
   * Mar. 27 
       1. ex1_05.pdf
   
-        &#8212;-**deadline:  Apr.10**
-      2. ex2\_05.pdf; ex3\_05.pdf; exercise in class($E(\epsilon&#8217; A \epsilon)=?$)
+        —-**deadline:  Apr.10**
+      2. ex2\_05.pdf; ex3\_05.pdf; exercise in class($E(\epsilon’ A \epsilon)=?$)
   
-        &#8212;-**deadline:  Apr.17**
+        —-**deadline:  Apr.17**
 
   * Apr. 3 
       1. Prove that $\hat{\beta}$ and SSE are independent.
@@ -106,9 +106,9 @@ Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul>
       1. Why does the logit model choose the link function $G(\cdot)=\frac{1}{\exp (-X^T\beta)}$ ?
 
   * Apr. 17 
-      1. Exercise 3.1, 3.9, 3.14,  Page 109 of &#8220;Nonparametric and Semiparametric__ Models-An introduction.pdf&#8221; ******
+      1. Exercise 3.1, 3.9, 3.14,  Page 109 of “Nonparametric and Semiparametric__ Models-An introduction.pdf” ******
   
-        &#8212;-deadline: May. 8**
+        —-deadline: May. 8**
 
 ### Final Exam:
 
