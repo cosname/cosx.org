@@ -18,12 +18,14 @@ description: "这一节介绍一个有趣的历史性例子：吸烟是否导致
 ---
 
 这一节介绍一个有趣的历史性例子：吸烟是否导致肺癌？主要涉及的人物是 R A Fisher 和 J Cornfield。前者估计上这个网站的人都听过，后者就显得比较陌生了。事实上，Cornfield 在统计、生物统计和流行病学都有着非常重要的贡献。来自 Wikipedia 的一句介绍：“He was the R. A. Fisher Lecturer in 1973 and President of the American Statistical Association in 1974.” 虽然 Cornfield 和 Fisher 学术观点不同（本节介绍），但是 Cornfield 还是在 1973 年给了 Fisher Lecture。
+
 下面我们先介绍 Fisher 和 Cornfield 关于观察性研究中因果推断的两种观点，再给出技术性的细节。
 
 # 一、Cornfield 条件或者 Cornfield 不等式
 
 
 ![fisher](https://cos.name/wp-content/uploads/2013/09/fisher.gif)
+
 <p style="text-align: center">
   （图注：R A Fisher）
 
