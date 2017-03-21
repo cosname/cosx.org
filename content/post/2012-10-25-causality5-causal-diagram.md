@@ -9,7 +9,7 @@ categories:
 slug: causality5-causal-diagram
 ---
 
-![](http://i.imgur.com/neP7X.jpg "J. Pearl")这部分介绍 <a href="http://bayes.cs.ucla.edu/jp_home.html" target="_blank">Judea Pearl</a> 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
+<img class="alignleft size-medium wp-image-6524" title="J. Pearl" alt="" src="http://i.imgur.com/neP7X.jpg" width="196" height="300" />这部分介绍 <a href="http://bayes.cs.ucla.edu/jp_home.html" target="_blank">Judea Pearl</a> 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
 
 **一 有向无环图和 do 算子**
 
@@ -19,7 +19,7 @@ $$P(x\_1,&#8230;,x\_n) = \prod\_{i=1}^{p} P(x\_i \mid pa_i ),$$
 
 其中 $pa\_i$ 表示 $X\_i $ 的“父亲”集合，即所有指向 $X_i $ 的节点集合。
 
-![](http://i.imgur.com/VtiVg.png)
+<img class="aligncenter" alt="" src="http://i.imgur.com/VtiVg.png" width="205" height="168" />
 
 <p style="text-align: center">
   Figure 1: An Example of Causal Diagram
@@ -51,7 +51,7 @@ $$
 
 **例子**：考虑如下的两个 DAG：
 
-![](http://i.imgur.com/Ji9fU.png)
+<img class="size-full wp-image-5929 aligncenter" alt="" src="http://i.imgur.com/Ji9fU.png" width="513" height="89" />
 
 在 Figure 2 (1) 中，有 $ P(X\_2 = x\_2\mid X\_1 = x\_1) = P(X\_2 = x\_2\mid do(X\_1) = x\_1) $。由于 $X\_1 $ 是 $ X\_2 $ 的“原因”，“条件”和“干预” $X\_1 $，对应的 $ X\_2 $ 的分布相同。但是在 Figure 2 (2) 中，有 $ P(X\_2 = x\_2\mid X\_1 = x\_1) \neq P(X\_2 = x\_2\mid do(X\_1) = x\_1) = P(X\_2 = x\_2) $. 由于 $X\_1 $ 是 $ X\_2 $ 的“结果”，“条件”（或者“给定”）“结果”，“原因”的分布不再等于他的边缘分布，但是人为的“干预”“结果”$X\_1 $，并不影响“原因” $ X\_2 $ 的分布。
 
@@ -113,7 +113,7 @@ $$
 下面介绍 Pearl (1995) 的主要工作：**后门准则和前门准则**。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6361">![](http://i.imgur.com/nu3vB.png)</a>
+  <a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6361"><img alt="" src="http://i.imgur.com/nu3vB.png" width="393" height="500" /></a>
 </p>
 
 **后门准则：**在 DAG 中，如果如下条件满足：
@@ -203,7 +203,7 @@ Pearl 在书中讲了一个非常有趣的例子，来说明前门准则的用�
 
 不过，仅仅从“相关”（association）的角度讨论这个问题，是没有答案的。从“因果”（causation）的角度来看，才能有确切的回答。解释 Yule-Simpson&#8217;s Paradox，算是因果图的第一个重要应用。
 
-<a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6364">![](http://i.imgur.com/vpb8M.png)</a>
+<a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6364"><img class="alignnone size-large wp-image-6364 aligncenter" alt="" src="http://i.imgur.com/vpb8M.png" width="431" height="500" /></a>
 
 下面，我将以上面的 Figure 4 中的四个图为例说明，三个变量之间的关系的复杂性。
 

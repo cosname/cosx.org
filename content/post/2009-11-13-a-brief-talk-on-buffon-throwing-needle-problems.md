@@ -14,7 +14,7 @@ slug: a-brief-talk-on-buffon-throwing-needle-problems
 
 公元1777年，法国科学家D·布丰(D.Buffon 1707～1788)设计了一个巧夺天工的实验：往间距为a的平行线族之间投掷长为L 的针，可以计算出针和平行线相交的概率为：
   
-![pi_2ltopia](http://taiyun.cos.name/wp-content/uploads/2009/11/pi_2ltopia.png "pi_2ltopia")
+<img class="aligncenter size-full wp-image-420" title="pi_2ltopia" src="http://taiyun.cos.name/wp-content/uploads/2009/11/pi_2ltopia.png" alt="pi_2ltopia" width="85" height="46" />
   
 根据此式，可以得到pi的近似估计值，这的确是一个伟大的、奇妙而划时代的实验，可算是蒙特卡罗模拟中的鼻祖和经典了。在大多数教材上，这个概率都是用积分或二重积分计算得来的，比较繁琐，在[matrix67的博客](http://www.matrix67.com/blog/archives/2494)中，我欣慰而惊奇地看到了一种非常简便、直观的解法，感慨了一番，也稍微思考了一番。
 
@@ -24,13 +24,13 @@ slug: a-brief-talk-on-buffon-throwing-needle-problems
 
 
   
-![pi_2stopia](http://taiyun.cos.name/wp-content/uploads/2009/11/pi_2stopia.png "pi_2stopia")
+<img class="aligncenter size-full wp-image-422" title="pi_2stopia" src="http://taiyun.cos.name/wp-content/uploads/2009/11/pi_2stopia.png" alt="pi_2stopia" width="117" height="49" />
 
 其中S是该曲线周长。
 
 如果要向平行线族之间投掷凸n边形（或者扩展到凸域，凸域就是过该图形任一点做切线，那么所有的点都在切线的同侧，也就是没有凹进去的部分），如果这个凸域的直径不大于平行线距离a的话，那么它和平行线族相交的概率为：
 
-![P_stopia](http://taiyun.cos.name/wp-content/uploads/2009/11/P_stopia.png "P_stopia")
+<img class="aligncenter size-full wp-image-423" title="P_stopia" src="http://taiyun.cos.name/wp-content/uploads/2009/11/P_stopia.png" alt="P_stopia" width="90" height="52" />
 
 其中，S为凸区域的周长。
   
@@ -44,13 +44,13 @@ slug: a-brief-talk-on-buffon-throwing-needle-problems
 
 如果投掷一般闭合区域的话，那么它和平行线族相交的概率依然为：
 
-![P_stopia](http://taiyun.cos.name/wp-content/uploads/2009/11/P_stopia.png "P_stopia")
+<img class="aligncenter size-full wp-image-423" title="P_stopia" src="http://taiyun.cos.name/wp-content/uploads/2009/11/P_stopia.png" alt="P_stopia" width="90" height="52" />
 
 不过，此时S为该闭区域所生成的最小凸区域的周长。
 
 因为尽管它们的周长不一样，和平行线交点的期望不一样，但是它们和平行线是否有交点的概率是一样的。下图中的类半圆图形就是月牙图形生成的最小凸区域，它们显然和平行线是否相交完全等价。
 
-[![](https://cos.name/wp-content/uploads/2009/11/semicircle2.gif)](https://cos.name/wp-content/uploads/2009/11/semicircle2.gif)
+[<img class="aligncenter size-full wp-image-1792" src="https://cos.name/wp-content/uploads/2009/11/semicircle2.gif" alt="" width="423" height="211" srcset="https://cos.name/wp-content/uploads/2009/11/semicircle2.gif 423w, https://cos.name/wp-content/uploads/2009/11/semicircle2-300x149.gif 300w" sizes="(max-width: 423px) 100vw, 423px" />](https://cos.name/wp-content/uploads/2009/11/semicircle2.gif)
 
 最后，要说的是直观思维的重要性，定理有千千万万，如果能用直观的形式将它们逐渐消化，那是最好不过的了，我在看书的时候经常能把一个定理啃下来，但是还是觉得对这个定理依然云里雾里的。对此，[matrix67](http://www.matrix67.com/blog/archives/2494)做了很精彩的评价：
 

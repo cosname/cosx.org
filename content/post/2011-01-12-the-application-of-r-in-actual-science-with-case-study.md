@@ -353,7 +353,7 @@ tab9303</pre>
 <pre class="brush: r">ax
 amat</pre>
 
-[![](https://cos.name/wp-content/uploads/2011/01/actual-fig-1-300x300.png "actual-fig-1")](https://cos.name/wp-content/uploads/2011/01/actual-fig-1.png)
+[<img class="aligncenter size-medium wp-image-2898" title="actual-fig-1" src="https://cos.name/wp-content/uploads/2011/01/actual-fig-1-300x300.png" alt="" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2011/01/actual-fig-1-300x300.png 300w, https://cos.name/wp-content/uploads/2011/01/actual-fig-1-150x150.png 150w, https://cos.name/wp-content/uploads/2011/01/actual-fig-1-218x218.png 218w, https://cos.name/wp-content/uploads/2011/01/actual-fig-1-73x73.png 73w, https://cos.name/wp-content/uploads/2011/01/actual-fig-1-40x40.png 40w, https://cos.name/wp-content/uploads/2011/01/actual-fig-1.png 480w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2011/01/actual-fig-1.png)
   
 各年龄的均值如上图所示。
 
@@ -386,7 +386,7 @@ sum(kt)</pre>
 
 在bmat矩阵中其中，如各列名称所示，第一列为年龄，第二列为bx，第三至六列分别为线性拟合bx时的t值、t临界值、F值、F临界值和拟合优度值，可以看出所有的bx都是显著的。
   
-[![](https://cos.name/wp-content/uploads/2011/01/actual-fig-2-300x300.png "actual-fig-2")](https://cos.name/wp-content/uploads/2011/01/actual-fig-2.png)
+[<img class="aligncenter size-medium wp-image-2899" title="actual-fig-2" src="https://cos.name/wp-content/uploads/2011/01/actual-fig-2-300x300.png" alt="" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2011/01/actual-fig-2-300x300.png 300w, https://cos.name/wp-content/uploads/2011/01/actual-fig-2-150x150.png 150w, https://cos.name/wp-content/uploads/2011/01/actual-fig-2-218x218.png 218w, https://cos.name/wp-content/uploads/2011/01/actual-fig-2-73x73.png 73w, https://cos.name/wp-content/uploads/2011/01/actual-fig-2-40x40.png 40w, https://cos.name/wp-content/uploads/2011/01/actual-fig-2.png 480w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2011/01/actual-fig-2.png)
 
 ##### 2.3 k值的调整
 
@@ -420,7 +420,7 @@ sum(kt)</pre>
 
 下图为向后预测39期得出的出生平均余命的预测值，在2050年左右，中国男性的平均出生余命达到90岁。这似乎有些过高，所以本模型只适合做15年以内的预测。
 
-[![](https://cos.name/wp-content/uploads/2011/01/actual-fig-3-300x300.png "actual-fig-3")](https://cos.name/wp-content/uploads/2011/01/actual-fig-3.png)
+[<img class="aligncenter size-medium wp-image-2900" title="actual-fig-3" src="https://cos.name/wp-content/uploads/2011/01/actual-fig-3-300x300.png" alt="" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2011/01/actual-fig-3-300x300.png 300w, https://cos.name/wp-content/uploads/2011/01/actual-fig-3-150x150.png 150w, https://cos.name/wp-content/uploads/2011/01/actual-fig-3-218x218.png 218w, https://cos.name/wp-content/uploads/2011/01/actual-fig-3-73x73.png 73w, https://cos.name/wp-content/uploads/2011/01/actual-fig-3-40x40.png 40w, https://cos.name/wp-content/uploads/2011/01/actual-fig-3.png 480w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2011/01/actual-fig-3.png)
 
 **代码：**附录三
 

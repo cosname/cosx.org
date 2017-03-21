@@ -39,7 +39,7 @@ Wellington受欢迎的<a href="http://iquantny.tumblr.com/" target="_blank">博�
 
 这是他的风格：自然而然。去年，他和妻子莱斯利从易趣网买了一辆1973年的大众巴士，在3个月里开着它走遍了美国（他们原打算卖掉的，但是爱上了它）。甚至在课堂上，学生把他的<a title="演讲" href="http://www.labazhou.net/speaking/" target="_blank">演讲</a>风格描述成狂热的、快人快语，他在学生之间跳跃，毫无疑问在找到了一个喜剧即兴表演小组之后，他在苦练，最近开始与另一个小组一起工作。
 
-[![数据分析师的博客正在改变着纽约人看待城市的方式](http://www.labazhou.net/wp-content/uploads/2014/12/wellington-i-quant-ny-vw.jpg)](http://www.labazhou.net/wp-content/uploads/2014/12/wellington-i-quant-ny-vw.jpg)
+[<img class="alignnone size-full wp-image-1408" src="http://www.labazhou.net/wp-content/uploads/2014/12/wellington-i-quant-ny-vw.jpg" alt="数据分析师的博客正在改变着纽约人看待城市的方式" width="600" height="337" />](http://www.labazhou.net/wp-content/uploads/2014/12/wellington-i-quant-ny-vw.jpg)
 
 根据这个博学者的调查，一些机构或许准备与其合作。他说，他正在和很多当地政府办公室进行“初步沟通”，纽约市发言人——Wellington数次挖掘该城市的合法要求、以找到预见性的、大数据提供者——说Wellington的工作是在帮助“形成对话、促进美国最大城市的数据驱动政策的发展。”
 

@@ -14,7 +14,7 @@ tags:
 slug: layer-graphics-device
 ---
 
-[![](https://cos.name/wp-content/uploads/2011/09/Festival2-500x214.png "Layer图形设备配图")](https://cos.name/wp-content/uploads/2011/09/Festival2.png)
+[<img src="https://cos.name/wp-content/uploads/2011/09/Festival2-500x214.png" alt="" title="Layer图形设备配图" width="500" height="214" class="aligncenter size-large wp-image-4187" srcset="https://cos.name/wp-content/uploads/2011/09/Festival2-500x214.png 500w, https://cos.name/wp-content/uploads/2011/09/Festival2-300x128.png 300w, https://cos.name/wp-content/uploads/2011/09/Festival2.png 586w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2011/09/Festival2.png)
   
 你在用R画图的时候，是否会遇到以下的麻烦：
 

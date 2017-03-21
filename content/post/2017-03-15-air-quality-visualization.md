@@ -33,7 +33,7 @@ _受朋友委托，大家帮个忙：北京人，女，26岁，未婚，1.68米�
   </p>
   
   <p>
-    ![](https://cos.name/wp-content/uploads/2017/02/web-500x345.png)
+    <img class="wp-image-13657 size-large aligncenter" src="https://cos.name/wp-content/uploads/2017/02/web-500x345.png" width="500" height="345" srcset="https://cos.name/wp-content/uploads/2017/02/web-500x345.png 500w, https://cos.name/wp-content/uploads/2017/02/web-300x207.png 300w, https://cos.name/wp-content/uploads/2017/02/web-768x530.png 768w, https://cos.name/wp-content/uploads/2017/02/web.png 1234w" sizes="(max-width: 500px) 100vw, 500px" />
   </p>
   
   <p>
@@ -74,7 +74,7 @@ geojsonMap(dat, <span class="hljs-string">"city"</span>,
            palette = <span class="hljs-string">"Reds"</span>, legendTitle = <span class="hljs-string">"AQI"</span>)</pre>
   
   <p>
-    猛击图片查看这个可交互的地图吧！<br /> <a href="http://langdawei.com/reveal_slidify/cos/ldw/aqi.html">![](https://cos.name/wp-content/uploads/2017/02/leaflet-500x280.png)</a>
+    猛击图片查看这个可交互的地图吧！<br /> <a href="http://langdawei.com/reveal_slidify/cos/ldw/aqi.html"><img class="aligncenter wp-image-13675 size-large" src="https://cos.name/wp-content/uploads/2017/02/leaflet-500x280.png" width="500" height="280" srcset="https://cos.name/wp-content/uploads/2017/02/leaflet-500x280.png 500w, https://cos.name/wp-content/uploads/2017/02/leaflet-300x168.png 300w, https://cos.name/wp-content/uploads/2017/02/leaflet-768x430.png 768w, https://cos.name/wp-content/uploads/2017/02/leaflet.png 1369w" sizes="(max-width: 500px) 100vw, 500px" /></a>
   </p>
   
   <p>
@@ -186,7 +186,7 @@ devtools::install_github("lchiffon/leafletCN")</pre>
   
   <div id="geojsonmap" class="section level4">
     <h6>
-      ![](https://cos.name/wp-content/uploads/2017/02/demo1-500x335.png)
+      <img class="aligncenter wp-image-13663 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo1-500x335.png" width="500" height="335" srcset="https://cos.name/wp-content/uploads/2017/02/demo1-500x335.png 500w, https://cos.name/wp-content/uploads/2017/02/demo1-300x201.png 300w, https://cos.name/wp-content/uploads/2017/02/demo1-768x514.png 768w, https://cos.name/wp-content/uploads/2017/02/demo1.png 1190w" sizes="(max-width: 500px) 100vw, 500px" />
     </h6>
     
     <h6>
@@ -206,7 +206,7 @@ devtools::install_github("lchiffon/leafletCN")</pre>
 geojsonMap(dat,"china")</pre>
     
     <div class="figure">
-      ![](https://cos.name/wp-content/uploads/2017/02/demo2-500x353.png)
+      <img class="aligncenter wp-image-13664 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo2-500x353.png" width="500" height="353" srcset="https://cos.name/wp-content/uploads/2017/02/demo2-500x353.png 500w, https://cos.name/wp-content/uploads/2017/02/demo2-300x212.png 300w, https://cos.name/wp-content/uploads/2017/02/demo2-768x543.png 768w, https://cos.name/wp-content/uploads/2017/02/demo2.png 852w" sizes="(max-width: 500px) 100vw, 500px" />
     </div>
   </div>
 </div>
@@ -227,7 +227,7 @@ geojsonMap(dat,"china")</pre>
        popup = "The birthplace of COS")</pre>
     
     <div class="figure">
-      ![](https://cos.name/wp-content/uploads/2017/02/demo3-500x353.png)
+      <img class="aligncenter wp-image-13665 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo3-500x353.png" width="500" height="353" srcset="https://cos.name/wp-content/uploads/2017/02/demo3-500x353.png 500w, https://cos.name/wp-content/uploads/2017/02/demo3-300x212.png 300w, https://cos.name/wp-content/uploads/2017/02/demo3-768x543.png 768w, https://cos.name/wp-content/uploads/2017/02/demo3.png 856w" sizes="(max-width: 500px) 100vw, 500px" />
     </div>
   </div>
   
@@ -247,7 +247,7 @@ geojsonMap(dat,"china")</pre>
 }</pre>
     
     <div class="figure">
-      ![](https://cos.name/wp-content/uploads/2017/02/demo4-500x365.png)
+      <img class="aligncenter wp-image-13666 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo4-500x365.png" width="500" height="365" srcset="https://cos.name/wp-content/uploads/2017/02/demo4-500x365.png 500w, https://cos.name/wp-content/uploads/2017/02/demo4-300x219.png 300w, https://cos.name/wp-content/uploads/2017/02/demo4.png 631w" sizes="(max-width: 500px) 100vw, 500px" />
     </div>
   </div>
   
@@ -284,7 +284,7 @@ geojsonMap(dat,"china")</pre>
 }</pre>
     
     <div class="figure">
-      ![](https://cos.name/wp-content/uploads/2017/02/demo5-500x354.png)
+      <img class="aligncenter wp-image-13667 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo5-500x354.png" width="500" height="354" srcset="https://cos.name/wp-content/uploads/2017/02/demo5-500x354.png 500w, https://cos.name/wp-content/uploads/2017/02/demo5-300x213.png 300w, https://cos.name/wp-content/uploads/2017/02/demo5-768x544.png 768w, https://cos.name/wp-content/uploads/2017/02/demo5.png 847w" sizes="(max-width: 500px) 100vw, 500px" />
     </div>
   </div>
   

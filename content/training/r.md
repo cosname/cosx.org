@@ -574,7 +574,7 @@ author: 陈堰平
   </ul>
   
   <p>
-    ![SupStat Data Science Training](http://supstat.com/wp-content/uploads/2014/10/customers.gif)
+    <img style="width:100%" src="http://supstat.com/wp-content/uploads/2014/10/customers.gif" alt="SupStat Data Science Training" />
   </p>
   
   <h4>

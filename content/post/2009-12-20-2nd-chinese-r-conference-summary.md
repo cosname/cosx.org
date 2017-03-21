@@ -9,7 +9,7 @@ tags:
 slug: 2nd-chinese-r-conference-summary
 ---
 
-<figure style="width: 500px" class="wp-caption aligncenter">[![第二届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-500x332.jpg "第二届中国R语言会议北京会场合影")](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ.jpg)<figcaption class="wp-caption-text">第二届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> <figure style="width: 500px" class="wp-caption aligncenter">[![第二届中国R语言会议上海会场演讲者和工作人员合影](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-500x332.jpg "第二届中国R语言会议上海会场演讲者和工作人员合影")](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH.jpg)<figcaption class="wp-caption-text">第二届中国R语言会议上海会场演讲者和工作人员合影（右键另存为看大图）</figcaption></figure> 
+<figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1821" title="第二届中国R语言会议北京会场合影" alt="第二届中国R语言会议北京会场合影" src="https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-500x332.jpg" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-500x332.jpg 500w, https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ.jpg)<figcaption class="wp-caption-text">第二届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> <figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1883" title="第二届中国R语言会议上海会场演讲者和工作人员合影" alt="第二届中国R语言会议上海会场演讲者和工作人员合影" src="https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-500x332.jpg" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-500x332.jpg 500w, https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH.jpg)<figcaption class="wp-caption-text">第二届中国R语言会议上海会场演讲者和工作人员合影（右键另存为看大图）</figcaption></figure> 
 
 2009年12月5~6日以及2009年12月12~13日，第二届中国R语言会议分别在北京和上海两个分会场成功召开。北京会场由中国人民大学应用统计科学研究中心和中国人民大学统计学院主办；上海会场由华东师范大学资源与环境科学学院、金融与统计学院主办，Mango Solutions咨询公司提供赞助。对R语言在中国的推广做出了杰出贡献的吴喜之教授和谢益辉博士远在美国为本次会议发来祝贺；中国R语言的领军人物、华东师范大学的汤银才老师也应邀参加会议并做了专题报告。两个会场的会议就R语言在众多领域中的应用展开了广泛的交流和讨论，为R语言在中国的进一步应用和推广开辟了更宽阔的道路。
 
@@ -17,7 +17,7 @@ slug: 2nd-chinese-r-conference-summary
 
 本次会议的主题是“无处不在的R”，也即印在参会胸牌上的“use R eveRywheRe”，意指R的应用领域之广；同时，“use R eveRywheRe”又可看成是“useR eveRywheRe”，意指R的使用者遍布四面八方。
 
-![useR eveRywheRe](https://cos.name/wp-content/uploads/2009/12/useR-eveRywheRe.png "useR eveRywheRe")
+<img class="aligncenter size-full wp-image-1816" title="useR eveRywheRe" alt="useR eveRywheRe" src="https://cos.name/wp-content/uploads/2009/12/useR-eveRywheRe.png" width="291" height="133" />
 
 从会议的结果来看，演讲的内容和参会者所在的单位都很好地契合了这一主题。
 

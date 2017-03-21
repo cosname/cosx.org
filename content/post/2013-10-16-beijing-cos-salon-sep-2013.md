@@ -11,7 +11,7 @@ tags:
 slug: beijing-cos-salon-sep-2013
 ---
 
-[![shalon1201](https://cos.name/wp-content/uploads/2013/10/shalon1201.jpg)](https://cos.name/wp-content/uploads/2013/10/shalon1201.jpg)
+[<img class="aligncenter size-full wp-image-8705" alt="shalon1201" src="https://cos.name/wp-content/uploads/2013/10/shalon1201.jpg" width="640" height="480" srcset="https://cos.name/wp-content/uploads/2013/10/shalon1201.jpg 640w, https://cos.name/wp-content/uploads/2013/10/shalon1201-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/10/shalon1201-500x375.jpg 500w" sizes="(max-width: 640px) 100vw, 640px" />](https://cos.name/wp-content/uploads/2013/10/shalon1201.jpg)
 
 2013年9月14日，第十四期COS数据分析沙龙（北京站）在明德主楼1016如期举行。来自中科院数学与系统科学研究院的**刁瑞**先生（[@刁瑞_Dora](http://weibo.com/diaorui1987?topnav=1&wvr=5&topsug=1)）为大家呈现了主题为“**数据挖掘竞赛的那些人那些事儿**”的精彩讲座。
 
@@ -65,4 +65,4 @@ Dora解读：学术界的KDD，第三方网站[www.kaggle.com](http://www.kaggle
 
 下载<a title="沙龙录音" href="http://pan.baidu.com/s/189njX" target="_blank">沙龙全程录音</a>
 
-[![shalon1202](https://cos.name/wp-content/uploads/2013/10/shalon1202.jpg)](https://cos.name/wp-content/uploads/2013/10/shalon1202.jpg)
+[<img class="aligncenter size-full wp-image-8706" alt="shalon1202" src="https://cos.name/wp-content/uploads/2013/10/shalon1202.jpg" width="640" height="480" srcset="https://cos.name/wp-content/uploads/2013/10/shalon1202.jpg 640w, https://cos.name/wp-content/uploads/2013/10/shalon1202-300x225.jpg 300w, https://cos.name/wp-content/uploads/2013/10/shalon1202-500x375.jpg 500w" sizes="(max-width: 640px) 100vw, 640px" />](https://cos.name/wp-content/uploads/2013/10/shalon1202.jpg)

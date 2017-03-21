@@ -52,11 +52,11 @@ menu: main
   * 2009年，中国科学院植物研究所，主题：常用数理统计原理与R语言入门
   * 2008年，国家发改委，主题：EViews软件入门培训及宏观经济统计分析应用示例
 
-<a href="http://supstat.com.cn/training/" target="_blank">![SupStat Data Science Training](http://supstat.com/wp-content/uploads/2014/10/customers.gif)</a>
+<a href="http://supstat.com.cn/training/" target="_blank"><img src="http://supstat.com/wp-content/uploads/2014/10/customers.gif" alt="SupStat Data Science Training" /></a>
 
 培训课程目录下载：
 
-<a href="https://cos.name/wp-content/uploads/2014/10/supstat-data-science-training-brochure.pdf" target="_blank" download="supstat-training-brochure.pdf">![](http://supstat.com/wp-content/uploads/2014/10/download_btn.png)</a>
+<a href="https://cos.name/wp-content/uploads/2014/10/supstat-data-science-training-brochure.pdf" target="_blank" download="supstat-training-brochure.pdf"><img src="http://supstat.com/wp-content/uploads/2014/10/download_btn.png" alt="" /></a>
 
 想要了解更多信息，请联系:
 

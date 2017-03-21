@@ -19,7 +19,7 @@ slug: lda-math-text-modeling
 我们日常生活中总是产生大量的文本，如果每一个文本存储为一篇文档，那每篇文档从人的观察来说就是有序的词的序列 $d=(w\_1, w\_2, \cdots, w_n)$。
 
 <p style="text-align: center;">
-  <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/corpus" rel="attachment wp-att-5284">![corpus](http://www.52nlp.cn/wp-content/uploads/2013/02/corpus.jpg)</a><br /> <strong>包含$M$ 篇文档的语料库</strong>
+  <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/corpus" rel="attachment wp-att-5284"><img class="aligncenter  wp-image-5284" alt="corpus" src="http://www.52nlp.cn/wp-content/uploads/2013/02/corpus.jpg" width="255" height="162" /></a><br /> <strong>包含$M$ 篇文档的语料库</strong>
 </p>
 
 统计文本建模的目的就是追问这些观察到语料库中的的词序列是如何生成的。统计学被人们描述为猜测上帝的游戏，人类产生的所有的语料文本我们都可以看成是一个伟大的上帝在天堂中抛掷骰子生成的，我们观察到的只是上帝玩这个游戏的结果 &#8212;&#8212; 词序列构成的语料，而上帝玩这个游戏的过程对我们是个黑盒子。所以在统计文本建模中，我们希望猜测出上帝是如何玩这个游戏的，具体一点，最核心的两个问题是
@@ -30,7 +30,7 @@ slug: lda-math-text-modeling
 第一个问题就是表示模型中都有哪些参数，骰子的每一个面的概率都对应于模型中的参数；第二个问题就表示游戏规则是什么，上帝可能有各种不同类型的骰子，上帝可以按照一定的规则抛掷这些骰子从而产生词序列。
 
 <p style="text-align: center;">
-  <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/dice-all" rel="attachment wp-att-5285">![dice-all](http://www.52nlp.cn/wp-content/uploads/2013/02/dice-all.jpg)</a> <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/god-throw-dice" rel="attachment wp-att-5280">![god-throw-dice](http://www.52nlp.cn/wp-content/uploads/2013/02/god-throw-dice.jpg)</a>
+  <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/dice-all" rel="attachment wp-att-5285"><img class="wp-image-5285 alignnone" alt="dice-all" src="http://www.52nlp.cn/wp-content/uploads/2013/02/dice-all.jpg" width="230" height="172" /></a> <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/god-throw-dice" rel="attachment wp-att-5280"><img class=" wp-image-5280 alignnone" alt="god-throw-dice" src="http://www.52nlp.cn/wp-content/uploads/2013/02/god-throw-dice.jpg" width="212" height="166" /></a>
 </p>
 
 <p style="text-align: center;">
@@ -41,12 +41,12 @@ slug: lda-math-text-modeling
 
 假设我们的词典中一共有 $V$ 个词 $v\_1, v\_2, \cdots v_V$，那么最简单的 Unigram Model 就是认为上帝是按照如下的游戏规则产生文本的。
 
-<a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-unigram-model" rel="attachment wp-att-5276">![game-unigram-model](http://www.52nlp.cn/wp-content/uploads/2013/02/game-unigram-model.jpg)</a>
+<a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-unigram-model" rel="attachment wp-att-5276"><img class="aligncenter size-full wp-image-5276" alt="game-unigram-model" src="http://www.52nlp.cn/wp-content/uploads/2013/02/game-unigram-model.jpg" width="610" height="156" /></a>
 
 上帝的这个唯一的骰子各个面的概率记为 $\overrightarrow{p} = (p\_1, p\_2, \cdots, p_V)$, 所以每次投掷骰子类似于一个抛钢镚时候的贝努利实验， 记为 $w\sim Mult(w|\overrightarrow{p}) $。
 
 <p style="text-align: center;">
-  <strong><a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/unigram-model" rel="attachment wp-att-5277">![unigram-model](http://www.52nlp.cn/wp-content/uploads/2013/02/unigram-model.jpg)</a>上帝投掷$V$ 个面的骰子</strong>
+  <strong><a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/unigram-model" rel="attachment wp-att-5277"><img class="aligncenter  wp-image-5277" alt="unigram-model" src="http://www.52nlp.cn/wp-content/uploads/2013/02/unigram-model.jpg" width="275" height="132" /></a>上帝投掷$V$ 个面的骰子</strong>
 </p>
 
 <!--more-->对于一篇文档$d=\overrightarrow{w}=(w\_1, w\_2, \cdots, w_n)$, 该文档被生成的概率就是
@@ -85,12 +85,12 @@ $$ \hat{p\_i} = \frac{n\_i}{N} .$$
 
 对于以上模型，贝叶斯统计学派的统计学家会有不同意见，他们会很挑剔的批评只假设上帝拥有唯一一个固定的骰子是不合理的。在贝叶斯学派看来，一切参数都是随机变量，以上模型中的骰子 $\overrightarrow{p}$不是唯一固定的，它也是一个随机变量。所以按照贝叶斯学派的观点，上帝是按照以下的过程在玩游戏的
 
-<a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-bayesian-unigram-model" rel="attachment wp-att-5274">![game-bayesian-unigram-model](http://www.52nlp.cn/wp-content/uploads/2013/02/game-bayesian-unigram-model.jpg)</a>
+<a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-bayesian-unigram-model" rel="attachment wp-att-5274"><img class="aligncenter size-full wp-image-5274" alt="game-bayesian-unigram-model" src="http://www.52nlp.cn/wp-content/uploads/2013/02/game-bayesian-unigram-model.jpg" width="618" height="156" /></a>
   
 上帝的这个坛子里面，骰子可以是无穷多个，有些类型的骰子数量多，有些类型的骰子少，所以从概率分布的角度看，坛子里面的骰子$\overrightarrow{p}$ 服从一个概率分布 $p(\overrightarrow{p})$，这个分布称为参数$\overrightarrow{p}$ 的先验分布。
 
 <p style="text-align: center;">
-  <strong><a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/bayesian-unigram-model" rel="attachment wp-att-5278">![bayesian-unigram-model](http://www.52nlp.cn/wp-content/uploads/2013/02/bayesian-unigram-model.jpg)</a>贝叶斯观点下的 Unigram Model</strong>
+  <strong><a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/bayesian-unigram-model" rel="attachment wp-att-5278"><img class="aligncenter  wp-image-5278" alt="bayesian-unigram-model" src="http://www.52nlp.cn/wp-content/uploads/2013/02/bayesian-unigram-model.jpg" width="354" height="172" /></a>贝叶斯观点下的 Unigram Model</strong>
 </p>
 
 以上贝叶斯学派的游戏规则的假设之下，语料$\mathcal{W}$产生的概率如何计算呢？由于我们并不知道上帝到底用了哪个骰子$\overrightarrow{p}$,所以每个骰子都是可能被使用的，只是使用的概率由先验分布$p(\overrightarrow{p})$来决定。对每一个具体的骰子$\overrightarrow{p}$,由该骰子产生数据的概率是 $p(\mathcal{W}|\overrightarrow{p})$, 所以最终数据产生的概率就是对每一个骰子$\overrightarrow{p}$上产生的数据概率进行积分累加求和
@@ -116,7 +116,7 @@ $$ \Delta(\overrightarrow{\alpha}) =
 \int \prod\_{k=1}^V p\_k^{\alpha_k -1} d\overrightarrow{p} . $$
 
 <p style="text-align: center;">
-  <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/dirichlet-multinomial-unigram" rel="attachment wp-att-5279">![dirichlet-multinomial-unigram](http://www.52nlp.cn/wp-content/uploads/2013/02/dirichlet-multinomial-unigram.jpg)</a>
+  <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/dirichlet-multinomial-unigram" rel="attachment wp-att-5279"><img class="wp-image-5279" alt="dirichlet-multinomial-unigram" src="http://www.52nlp.cn/wp-content/uploads/2013/02/dirichlet-multinomial-unigram.jpg" width="358" height="179" /></a>
 </p>
 
 <p style="text-align: center;">
@@ -124,7 +124,7 @@ $$ \Delta(\overrightarrow{\alpha}) =
 </p>
 
 <p style="text-align: center;">
-  <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/graph-model-unigram" rel="attachment wp-att-5281">![graph-model-unigram](http://www.52nlp.cn/wp-content/uploads/2013/02/graph-model-unigram.jpg)</a>
+  <a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/graph-model-unigram" rel="attachment wp-att-5281"><img class="aligncenter  wp-image-5281" alt="graph-model-unigram" src="http://www.52nlp.cn/wp-content/uploads/2013/02/graph-model-unigram.jpg" width="191" height="154" /></a>
 </p>
 
 <p style="text-align: center;">
@@ -220,17 +220,17 @@ p(\mathcal{W}|\overrightarrow{\alpha}) & = \int p(\mathcal{W}|\overrightarrow{p}
 </p>
 
 <p style="text-align: center;">
-  <strong><a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/topic-examples" rel="attachment wp-att-5283">![topic-examples](http://www.52nlp.cn/wp-content/uploads/2013/02/topic-examples.jpg)</a>Topic 就是Vocab 上的概率分布</strong>
+  <strong><a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/topic-examples" rel="attachment wp-att-5283"><img class="aligncenter size-full wp-image-5283" alt="topic-examples" src="http://www.52nlp.cn/wp-content/uploads/2013/02/topic-examples.jpg" width="614" height="168" /></a>Topic 就是Vocab 上的概率分布</strong>
 </p>
 
 所有人类思考和写文章的行为都可以认为是上帝的行为，我们继续回到上帝的假设中，那么在 PLSA 模型中，Hoffman 认为上帝是按照如下的游戏规则来生成文本的。
 
-<a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-plsa" rel="attachment wp-att-5275">![game-plsa](http://www.52nlp.cn/wp-content/uploads/2013/02/game-plsa.jpg)</a>
+<a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/game-plsa" rel="attachment wp-att-5275"><img class="aligncenter size-full wp-image-5275" alt="game-plsa" src="http://www.52nlp.cn/wp-content/uploads/2013/02/game-plsa.jpg" width="610" height="428" /></a>
 
 以上PLSA 模型的文档生成的过程可以图形化的表示为
 
 <p style="text-align: center;">
-  <strong><a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/plsa-doc-topic-word" rel="attachment wp-att-5282">![plsa-doc-topic-word](http://www.52nlp.cn/wp-content/uploads/2013/02/plsa-doc-topic-word.jpg)</a>PLSA 模型的文档生成过程</strong>
+  <strong><a href="http://www.52nlp.cn/lda-math-%e6%96%87%e6%9c%ac%e5%bb%ba%e6%a8%a1/plsa-doc-topic-word" rel="attachment wp-att-5282"><img class="aligncenter  wp-image-5282" alt="plsa-doc-topic-word" src="http://www.52nlp.cn/wp-content/uploads/2013/02/plsa-doc-topic-word.jpg" width="257" height="166" /></a>PLSA 模型的文档生成过程</strong>
 </p>
 
 我们可以发现在以上的游戏规则下，文档和文档之间是独立可交换的，同一个文档内的词也是独立可交换的，还是一个 bag-of-words 模型。游戏中的$K$ 个topic-word 骰子，我们可以记为 $\overrightarrow{\varphi}\_1, \cdots, \overrightarrow{\varphi}\_K$, 对于包含$M$篇文档的语料 $C=(d\_1, d\_2, \cdots, d\_M)$ 中的每篇文档$d\_m$，都会有一个特定的doc-topic骰子$\overrightarrow{\theta}\_m$，所有对应的骰子记为 $\overrightarrow{\theta}\_1, \cdots, \overrightarrow{\theta}\_M$。为了方便，我们假设每个词$w$ 都是一个编号，对应到topic-word 骰子的面。于是在 PLSA 这个模型中，第$m$篇文档 $d\_m$ 中的每个词的生成概率为

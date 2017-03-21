@@ -14,9 +14,9 @@ slug: 6th-china-r-shanghai-summary
 
 第六届中国 R 语言会议（上海会场）于 2013 年 11 月 2 日 ~ 3 日在华东师范大学中山北路校区的科学会堂成功召开。会议由华东师范大学金融与统计学院和统计之都（[cos.name](https://cos.name)）主办。在两天的会议时间里，参会者齐聚一堂，就 R 语言在电商、互联网、金融、可视化、机器学习、数据挖掘等行业和领域展开了深入的探讨。
 
-[![6th-china-r-sh](https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-500x333.jpg)](https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh.jpg)
+[<img class="alignnone size-large wp-image-9048" alt="6th-china-r-sh" src="https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-500x333.jpg" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-500x333.jpg 500w, https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh-300x200.jpg 300w, https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh.jpg 720w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh.jpg)
   
-[![6th-china-r-sh2](https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-500x333.jpg)](https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2.jpg)
+[<img class="alignnone size-large wp-image-9050" alt="6th-china-r-sh2" src="https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-500x333.jpg" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-500x333.jpg 500w, https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2-300x200.jpg 300w, https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2.jpg 719w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/11/6th-china-r-sh2.jpg)
 
 ## 会议概况
 
@@ -294,7 +294,7 @@ slug: 6th-china-r-shanghai-summary
   </h2>
   
   <p>
-    <a href="http://www.ebay.com/" target="_blank">![ebay](https://cos.name/wp-content/uploads/2013/11/ebay.png)</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mango-solutions.com.cn/" target="_blank">![mango](https://cos.name/wp-content/uploads/2013/11/mango.jpg)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.contactsingapore.sg/cn" target="_blank">![Chinese_CS_logo_9](https://cos.name/wp-content/uploads/2013/11/Chinese_CS_logo_9-500x323.jpg)</a>
+    <a href="http://www.ebay.com/" target="_blank"><img src="https://cos.name/wp-content/uploads/2013/11/ebay.png" alt="ebay" width="142" height="60" class="alignnone size-full wp-image-9212" /></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.mango-solutions.com.cn/" target="_blank"><img src="https://cos.name/wp-content/uploads/2013/11/mango.jpg" alt="mango" width="200" height="60" class="alignnone size-full wp-image-9213" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.contactsingapore.sg/cn" target="_blank"><img src="https://cos.name/wp-content/uploads/2013/11/Chinese_CS_logo_9-500x323.jpg" alt="Chinese_CS_logo_9" width="160" height="80" class="alignnone size-large wp-image-9214" /></a>
   </p>
   
   <p>

@@ -15,9 +15,9 @@ tags:
 slug: 4th-china-r-beijing-summary
 ---
 
-<figure style="width: 500px" class="wp-caption aligncenter">[![第四届中国R语言会议（北京会场）合影](https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ-500x269.jpg "第四届中国R语言会议（北京会场）合影")](https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ.jpg)<figcaption class="wp-caption-text">第四届中国R语言会议（北京会场）合影（右键另存为看大图）</figcaption></figure> 
+<figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1821" title="第四届中国R语言会议（北京会场）合影" src="https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ-500x269.jpg" alt="第四届中国R语言会议（北京会场）合影" width="500" height="269" />](https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ.jpg)<figcaption class="wp-caption-text">第四届中国R语言会议（北京会场）合影（右键另存为看大图）</figcaption></figure> 
 
-[![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png "中国R语言会议标识")](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 第四届中国R语言会议（北京会场）于2011年5月28日~29日在中国人民大学明德法学楼0201成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，参会者齐聚一堂，就R语言在生物、金融、网络、商业等诸多方面的应用进行了深入的探讨。
+[<img class="aligncenter size-medium wp-image-2276" title="中国R语言会议标识" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png" alt="" width="300" height="199" srcset="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 第四届中国R语言会议（北京会场）于2011年5月28日~29日在中国人民大学明德法学楼0201成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，参会者齐聚一堂，就R语言在生物、金融、网络、商业等诸多方面的应用进行了深入的探讨。
 
 ## 会议概况
 
@@ -39,7 +39,7 @@ slug: 4th-china-r-beijing-summary
 >       </dt>
 >       
 >       <dt>
->         <a href="https://cos.name/wp-content/uploads/2011/05/hot.jpg" target="_blank">![会议现场20110528](https://cos.name/wp-content/uploads/2011/05/hot-500x281.jpg "会议现场20110528")</a>
+>         <a href="https://cos.name/wp-content/uploads/2011/05/hot.jpg" target="_blank"><img title="会议现场20110528" src="https://cos.name/wp-content/uploads/2011/05/hot-500x281.jpg" alt="会议现场20110528" width="600" height="337" /></a>
 >       </dt>
 >       
 >       <dd>

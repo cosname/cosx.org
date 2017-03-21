@@ -16,7 +16,7 @@ slug: machine-learning-statistics-and-computation
 
 <span style="color: #808080;">编辑部按：本文是从张志华老师在<a href="http://china-r.org/bj2016/">第九届中国R语言会议</a>和上海交通大学的两次讲座中整理出来的，<a href="http://server.9yuntu.cn/services/document?token=CJ4FzuQC6GFA2syNhYZIsC&code=011M8o6J0cW3642ZdT3J0nIp6J0M8o6Q&state=bindingYuntu" target="_blank">点击此处观看幻灯片</a>。<a style="color: #808080;" href="http://bcmi.sjtu.edu.cn/~zhzhang/" target="_blank">张志华</a>老师是<span style="color: #808080;">上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。张老师主要从事人工智能、机器学习与应用统计学领域的教学与研究，迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文，是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委，其公开课《机器学习导论》和《统计机器学习》受到广泛关注。</span><a style="color: #808080;" href="https://cos.name/wp-content/uploads/2016/06/张志华.png"><br /> </a></span>
 
-[![张志华](https://cos.name/wp-content/uploads/2016/06/张志华.png)](https://cos.name/wp-content/uploads/2016/06/张志华.png)
+[<img class="aligncenter size-full wp-image-12688" src="https://cos.name/wp-content/uploads/2016/06/张志华.png" alt="张志华" width="1098" height="824" srcset="https://cos.name/wp-content/uploads/2016/06/张志华.png 1098w, https://cos.name/wp-content/uploads/2016/06/张志华-300x225.png 300w, https://cos.name/wp-content/uploads/2016/06/张志华-768x576.png 768w, https://cos.name/wp-content/uploads/2016/06/张志华-500x375.png 500w" sizes="(max-width: 1098px) 100vw, 1098px" />](https://cos.name/wp-content/uploads/2016/06/张志华.png)
 
 <p style="text-align: center;">
   张志华老师和他的学生们
@@ -26,7 +26,7 @@ slug: machine-learning-statistics-and-computation
 
 最近人工智能或者机器学习的强势崛起，特别是刚刚过去的AlphaGo和韩国棋手李世石九段的人机大战，再次让我们领略到了人工智能或机器学习技术的巨大潜力，同时也深深地触动了我。面对这一前所未有的技术大变革，作为10多年以来一直从事统计机器学习一线教学与研究的学者，希望借此机会和大家分享我个人的一些思考和反思。
 
-[![]( https://venturebeat.com/wp-content/uploads/2016/03/Google-Go-Lee-Sedol-Game-3.jpg)](https://venturebeat.com/wp-content/uploads/2016/03/Google-Go-Lee-Sedol-Game-3.jpg)
+[<img class="aligncenter" src=" https://venturebeat.com/wp-content/uploads/2016/03/Google-Go-Lee-Sedol-Game-3.jpg" width="1200" height="775" />](https://venturebeat.com/wp-content/uploads/2016/03/Google-Go-Lee-Sedol-Game-3.jpg)
 
 在这场人工智能发展的盛事里，我突然发现，对我们中国的学者来说，好像是一群看热闹的旁观者。不管你承认还是不承认，事实就是和我一代的或者更早的学者也只能作为旁观者了。我们能做的事情是帮助你们&#8212;中国年轻的一代，让你们在人工智能发展的大潮中有竞争力，做出标杆性的成就，创造人类文明价值，也让我有个加油欢呼的主队。
 
@@ -62,11 +62,11 @@ slug: machine-learning-statistics-and-computation
 
 首先，2010年2月，伯克利的Mike Jordan教授和CMU的Tom Mitchell教授同时被选为美国工程院院士，同年5月份，Mike Jordan和斯坦福的统计学家Jerome Friedman又被选为美国科学院院士。我们知道许多著名机器学习算法比如CART、MARS 和GBM等是 Friedman教授等提出。
 
-[![jordan-fredman-tom](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.23.22.png)](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.23.22.png)
+[<img class="aligncenter wp-image-12737 size-full" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.23.22.png" alt="jordan-fredman-tom" width="1180" height="544" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.23.22.png 1180w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.23.22-300x138.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.23.22-768x354.png 768w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.23.22-500x231.png 500w" sizes="(max-width: 1180px) 100vw, 1180px" />](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.23.22.png)
   
 随后几年一批在机器学习做出重要贡献的学者先后被选为美国科学院或工程院院士。比如，人工智能专家的Daphne Koller, Boosting的主要建立者Robert Schapire, Lasso的提出者Robert Tibshirani, 华裔著名统计学习专家郁彬老师，统计机器机器学习专家的Larry Wasserman, 著名的优化算法专家 Stephen Boyd等。同时，机器学习专家、深度学习的领袖Toronto大学Geoffrey Hinton 以及该校统计学习专家Nancy Reid 今年分别被选为美国工程院和科学院的外籍院士。
 
-[![屏幕快照 2016-06-22 下午8.24.09](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.24.09.png)](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.24.09.png)
+[<img class="aligncenter size-full wp-image-12738" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.24.09.png" alt="屏幕快照 2016-06-22 下午8.24.09" width="1208" height="552" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.24.09.png 1208w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.24.09-300x137.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.24.09-768x351.png 768w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.24.09-500x228.png 500w" sizes="(max-width: 1208px) 100vw, 1208px" />](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.24.09.png)
 
 &nbsp;
 
@@ -78,7 +78,7 @@ slug: machine-learning-statistics-and-computation
 
 这个遴选机制无疑是先进的，它可以促使学科良性发展，适应社会动态发展和需求。相反，如果某某通过某种方式被评选为本国院士，然后他们就掌握了该国学术话语权和资源分配权。这种机制可能会造成一些问题，比如一些过剩学科或者夕阳学科会得到过多的发展资源。而主流学科则被边缘化。
 
-[![屏幕快照 2016-06-22 下午8.21.35](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.21.35.png)](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.21.35.png)
+[<img class="aligncenter wp-image-12736" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.21.35.png" alt="屏幕快照 2016-06-22 下午8.21.35" width="261" height="313" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.21.35.png 538w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.21.35-251x300.png 251w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.21.35-418x500.png 418w" sizes="(max-width: 261px) 100vw, 261px" />](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.21.35.png)
 
 其次，2011年的图灵奖授予了UCLA的Judea Pearl教授，他主要的研究领域是概率图模型和因果推理，这是机器学习的基础问题。我们知道，图灵奖通常颁给做纯理论计算机科学的学者，或者早期建立计算机架构的学者。而把图灵奖授予Judea Pearl教授具有方向标的意义。
 
@@ -122,11 +122,11 @@ Boosting, SVM 和稀疏学习是机器学习界也是统计界，在近十年或
 
 斯坦福和伯克利的统计是公认世界最好的两个。我们看到，斯坦福统计系的主流方向就是统计学习，比如我们熟知的《Elements of statistical learning》一书就是统计系几位著名教授撰写的。Stanford计算机科学的人工智能方向一直在世界占主导地位，特别在不确定推理、概率图模型、概率机器人等领域成就斐然，他们的网络公开课 《机器学习》、《概率图模型》以及《人工智能》等让世界受益。
 
-[![屏幕快照 2016-06-22 下午8.25.12](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.25.12.png)](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.25.12.png)
+[<img class="aligncenter size-full wp-image-12739" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.25.12.png" alt="屏幕快照 2016-06-22 下午8.25.12" width="1196" height="580" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.25.12.png 1196w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.25.12-300x145.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.25.12-768x372.png 768w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.25.12-500x242.png 500w" sizes="(max-width: 1196px) 100vw, 1196px" />](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午8.25.12.png)
 
 &nbsp;
 
-[![屏幕快照 2016-06-22 下午7.13.05](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午7.13.05.png)](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午7.13.05.png)
+[<img class="aligncenter wp-image-12720" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午7.13.05.png" alt="屏幕快照 2016-06-22 下午7.13.05" width="345" height="512" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午7.13.05.png 764w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午7.13.05-202x300.png 202w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午7.13.05-336x500.png 336w" sizes="(max-width: 345px) 100vw, 345px" />](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-下午7.13.05.png)
 
 CMU是一个非常独特的学校，她并不是美国传统的常春藤大学。可以说，它是以计算机科学为立校之本，它是世界第一个建立机器学习系的学校。Tom Mitchell 教授是机器学习的早期建立者之一和守护者，他一直为该校本科生教《机器学习》课程。然而，这个学校统计学同样强，尤其，她是贝叶斯统计学的世界研究中心。
 
@@ -136,7 +136,7 @@ CMU是一个非常独特的学校，她并不是美国传统的常春藤大学�
   国际发展现状
 </p>
 
-![屏幕快照 2016-06-22 上午11.40.33](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.40.33.png)
+<img class="aligncenter size-full wp-image-12704" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.40.33.png" alt="屏幕快照 2016-06-22 上午11.40.33" width="1420" height="700" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.40.33.png 1420w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.40.33-300x148.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.40.33-768x379.png 768w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.40.33-500x246.png 500w" sizes="(max-width: 1420px) 100vw, 1420px" />
 
 那么我们来看看国内的现状。总的来说，统计和计算机科学这两个学科处于Larry所说的初期各自为战的阶段。面向大数据的统计学与计算机科学的交叉研究是机遇也是挑战。
 
@@ -160,7 +160,7 @@ CMU是一个非常独特的学校，她并不是美国传统的常春藤大学�
   第一个例子是隐含数据模型，它就是一种多级模型。作为概率图模型的一种延伸，隐含数据模型是一类重要的多元数据分析方法。隐含变量有三个重要的性质。第一，可以用比较弱的条件独立相关性代替较强的边界独立相关性。著名的de Finetti 表示定理支持这点。这个定理说，一组可以交换的随机变量当且仅当在某个参数给定条件下，它们可以表示成一组条件随机变量的混合体。这给出了一组可以交换的随机变量的一个多级表示。即先从某个分布抽一个参数，然后基于这个参数，独立地从某个分布抽出这组随机变量。第二，可以通过引入隐含变量的技术来方便计算，比如期望最大算法以及更广义的数据扩充技术就是基于这一思想。具体地，一些复杂分布，比如t-distribution, Laplace distribution 则可以通过表示成高斯尺度混合体来进行简化计算。第三，隐含变量本身可能具有某种有可解释的物理意思，这刚好符合应用的场景。比如，在隐含狄利克雷分配(LDA)模型，其中隐含变量具有某种主题的意思。
 </p>
 
-![屏幕快照 2016-06-22 上午11.13.50](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.13.50.png)
+<img class="aligncenter size-full wp-image-12695" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.13.50.png" alt="屏幕快照 2016-06-22 上午11.13.50" width="766" height="338" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.13.50.png 766w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.13.50-300x132.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.13.50-500x221.png 500w" sizes="(max-width: 766px) 100vw, 766px" />
 
 <p style="text-align: center;">
   <strong>Latent Dirichlet Allocation</strong>
@@ -170,7 +170,7 @@ CMU是一个非常独特的学校，她并不是美国传统的常春藤大学�
   第二例子，我们来看多级贝叶斯模型。在进行MCMC抽样后验估计时，最上层的超参数总是需要先人为给定的，自然地，MCMC算法收敛性能是依赖这些给定的超参数的，如果我们对这些参数的选取没有好的经验，那么一个可能做法我们再加一层，层数越多对超参数选取的依赖性会减弱。
 </p>
 
-![屏幕快照 2016-06-22 上午11.14.55](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.14.55.png)
+<img class="aligncenter wp-image-12696" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.14.55.png" alt="屏幕快照 2016-06-22 上午11.14.55" width="428" height="280" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.14.55.png 1164w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.14.55-300x196.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.14.55-768x503.png 768w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.14.55-500x327.png 500w" sizes="(max-width: 428px) 100vw, 428px" />
 
 <p style="text-align: center;">
   <strong>Hierarchical Bayesian Model</strong>
@@ -178,7 +178,7 @@ CMU是一个非常独特的学校，她并不是美国传统的常春藤大学�
 
 第三例子，深度学习蕴含的也是多级的思想。如果把所有的节点全部的放平，然后全连接，就是一个全连接图。而CNN深度网络则可以看成对全连接图的一个结构正则化。正则化理论是统计学习的一个非常核心的思想。CNN和RNN是两大深度神经网络模型，分别主要用于图像处理和自然语言处理中。研究表明多级结构具有更强的学习能力。
 
-![屏幕快照 2016-06-22 上午11.16.45](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.16.45.png)
+<img class="aligncenter wp-image-12697" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.16.45.png" alt="屏幕快照 2016-06-22 上午11.16.45" width="652" height="191" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.16.45.png 1128w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.16.45-300x88.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.16.45-768x225.png 768w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.16.45-500x146.png 500w" sizes="(max-width: 652px) 100vw, 652px" />
 
 <p style="text-align: center;">
   <strong>Deep Learning</strong>
@@ -200,7 +200,7 @@ CMU是一个非常独特的学校，她并不是美国传统的常春藤大学�
 
 其实，boosting 蕴含着平均思想，即我最后要谈的技术思路。简单地说，boosting是把一组弱分类器集成在一起，形成一个强的分类器。第一好处是可以降低拟合的风险。第二，可以降低陷入局部的风险。第三，可以扩展假设空间。Bagging同样是经典的集成学习算法，它把训练数据分成几组，然后分别在小数据集上训练模型，通过这些模型来组合强分类器。另外这是一个两层的集成学习方式。
 
-[![屏幕快照 2016-06-22 上午11.22.30](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.22.30.png)](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.22.30.png)
+[<img class="aligncenter size-full wp-image-12699" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.22.30.png" alt="屏幕快照 2016-06-22 上午11.22.30" width="1442" height="474" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.22.30.png 1442w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.22.30-300x99.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.22.30-768x252.png 768w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.22.30-500x164.png 500w" sizes="(max-width: 1442px) 100vw, 1442px" />](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.22.30.png)
 
 经典的Anderson 加速技术则是通过平均的思想来达到加速收敛过程。具体地，它是一个叠加的过程，这个叠加的过程通过求解一个残差最小得到一个加权组合。这个技术的好处，是没有增加太多的计算，往往还可以使数值迭代变得较为稳定。
 
@@ -212,7 +212,7 @@ CMU是一个非常独特的学校，她并不是美国传统的常春藤大学�
 
 位低不敢忘春秋大义，我认为我国人工智能发展的根本出路在于教育。先哲说：“磨刀不误砍柴夫”。只有培养出一批又一批的数理基础深厚、计算机动手执行力极强，有真正融合交叉能力和国际视野的人才时，我们才会有大作为。
 
-[![屏幕快照 2016-06-22 上午11.23.52](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.23.52.png)](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.23.52.png)
+[<img class="aligncenter size-full wp-image-12700" src="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.23.52.png" alt="屏幕快照 2016-06-22 上午11.23.52" width="1048" height="412" srcset="https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.23.52.png 1048w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.23.52-300x118.png 300w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.23.52-768x302.png 768w, https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.23.52-500x197.png 500w" sizes="(max-width: 1048px) 100vw, 1048px" />](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.23.52.png)
 
 ### **致谢**
 

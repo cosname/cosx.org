@@ -16,7 +16,7 @@ tags:
 slug: fire-weibo-with-r
 ---
 
-[![](https://cos.name/wp-content/uploads/2011/09/Rweibo-300x300.png "Rweibo配图")](https://cos.name/wp-content/uploads/2011/09/Rweibo.png)
+[<img class="aligncenter size-medium wp-image-4234" title="Rweibo配图" src="https://cos.name/wp-content/uploads/2011/09/Rweibo-300x300.png" alt="" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2011/09/Rweibo-300x300.png 300w, https://cos.name/wp-content/uploads/2011/09/Rweibo-150x150.png 150w, https://cos.name/wp-content/uploads/2011/09/Rweibo-218x218.png 218w, https://cos.name/wp-content/uploads/2011/09/Rweibo-73x73.png 73w, https://cos.name/wp-content/uploads/2011/09/Rweibo-40x40.png 40w, https://cos.name/wp-content/uploads/2011/09/Rweibo.png 500w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2011/09/Rweibo.png)
 
 近两年来微博这东西越来越火了，已经逐渐成了最主流的网络舆论平台。对于最近的网络热点问题大家一定是深有体会，作为统计门人，肯定很多人技痒不已，希望能进一步地探究很多事情背后的秘密……
 

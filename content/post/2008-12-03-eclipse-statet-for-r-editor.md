@@ -49,7 +49,7 @@ step 4: 安装StatET。StatET可以通过Eclipse安装：
 
  
 
-[![](https://cos.name/wp-content/uploads/2010/03/install.png "安装")](https://cos.name/wp-content/uploads/2010/03/install.png)然后按提示安装StatET。
+[<img class="aligncenter size-full wp-image-1946" title="安装" src="https://cos.name/wp-content/uploads/2010/03/install.png" alt="" width="500" height="362" srcset="https://cos.name/wp-content/uploads/2010/03/install.png 500w, https://cos.name/wp-content/uploads/2010/03/install-300x217.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/03/install.png)然后按提示安装StatET。
 
 # 2. Eclipse使用基础
 
@@ -61,9 +61,9 @@ step 4: 安装StatET。StatET可以通过Eclipse安装：
 
 Eclipse启动后如下图。
 
-[![](https://cos.name/wp-content/uploads/2010/03/startup.png "开始界面")](https://cos.name/wp-content/uploads/2010/03/startup.png)依次选择菜单栏中的“Wndows”，“Open perspective”，“Other”,在弹出的对话框中选中“StatET”并单击“确定”，我们就打开了StatET视界（perspective），如下图：
+[<img class="aligncenter size-full wp-image-1945" title="开始界面" src="https://cos.name/wp-content/uploads/2010/03/startup.png" alt="" width="500" height="390" srcset="https://cos.name/wp-content/uploads/2010/03/startup.png 500w, https://cos.name/wp-content/uploads/2010/03/startup-300x234.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/03/startup.png)依次选择菜单栏中的“Wndows”，“Open perspective”，“Other”,在弹出的对话框中选中“StatET”并单击“确定”，我们就打开了StatET视界（perspective），如下图：
 
-[![](https://cos.name/wp-content/uploads/2010/03/perspective.png "视界")](https://cos.name/wp-content/uploads/2010/03/perspective.png)这儿的概念视界（perspective）就是指的Eclipse提供的一个桌面开发环境，它包含不同的窗口，编辑器和视图，它们分别被归类到不同的标签（tab）中。这些组件可以随意拖动，放到不同的位置。
+[<img class="aligncenter size-full wp-image-1947" title="视界" src="https://cos.name/wp-content/uploads/2010/03/perspective.png" alt="" width="500" height="390" srcset="https://cos.name/wp-content/uploads/2010/03/perspective.png 500w, https://cos.name/wp-content/uploads/2010/03/perspective-300x234.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/03/perspective.png)这儿的概念视界（perspective）就是指的Eclipse提供的一个桌面开发环境，它包含不同的窗口，编辑器和视图，它们分别被归类到不同的标签（tab）中。这些组件可以随意拖动，放到不同的位置。
 
 ## 2.2  Eclipse中的工程
 
@@ -73,15 +73,15 @@ Eclipse启动后如下图。
 
 依次选择菜单栏中的&#8221;File&#8221;, &#8220;New&#8221;,&#8221;R-Project&#8221;，打开新建R的工程的对话框。如下图所示
 
-[![](https://cos.name/wp-content/uploads/2010/03/project.jpg "建立工程")](https://cos.name/wp-content/uploads/2010/03/project.jpg)在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
+[<img class="aligncenter size-full wp-image-1943" title="建立工程" src="https://cos.name/wp-content/uploads/2010/03/project.jpg" alt="" width="482" height="450" srcset="https://cos.name/wp-content/uploads/2010/03/project.jpg 482w, https://cos.name/wp-content/uploads/2010/03/project-300x280.jpg 300w" sizes="(max-width: 482px) 100vw, 482px" />](https://cos.name/wp-content/uploads/2010/03/project.jpg)在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
 
-[![](https://cos.name/wp-content/uploads/2010/03/myproject.jpg "myproject")](https://cos.name/wp-content/uploads/2010/03/myproject.jpg)一个工程就相当于一个容器，你可以在其中添加或新建各种各样的文件。建好一个工程后，在该工程的工作目录下就会多出一个“.project”文件，该文件用来保存整个工程的各种信息。
+[<img class="aligncenter size-full wp-image-1941" title="myproject" src="https://cos.name/wp-content/uploads/2010/03/myproject.jpg" alt="" width="424" height="450" srcset="https://cos.name/wp-content/uploads/2010/03/myproject.jpg 424w, https://cos.name/wp-content/uploads/2010/03/myproject-282x300.jpg 282w" sizes="(max-width: 424px) 100vw, 424px" />](https://cos.name/wp-content/uploads/2010/03/myproject.jpg)一个工程就相当于一个容器，你可以在其中添加或新建各种各样的文件。建好一个工程后，在该工程的工作目录下就会多出一个“.project”文件，该文件用来保存整个工程的各种信息。
 
 ### 2.2.2 向工程添加文件。
 
 右键单击&#8221;Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
 
-[![](https://cos.name/wp-content/uploads/2010/03/script.jpg "添加R脚本")](https://cos.name/wp-content/uploads/2010/03/script.jpg)在选择好文件夹，指定了文件名后，单击“Finish”，我们的R脚本文件就建好了。本例中，我建立了一个名为“prime.R”的文件，用来查找质数。
+[<img class="aligncenter size-full wp-image-1944" title="添加R脚本" src="https://cos.name/wp-content/uploads/2010/03/script.jpg" alt="" width="453" height="450" srcset="https://cos.name/wp-content/uploads/2010/03/script.jpg 453w, https://cos.name/wp-content/uploads/2010/03/script-150x150.jpg 150w, https://cos.name/wp-content/uploads/2010/03/script-300x298.jpg 300w" sizes="(max-width: 453px) 100vw, 453px" />](https://cos.name/wp-content/uploads/2010/03/script.jpg)在选择好文件夹，指定了文件名后，单击“Finish”，我们的R脚本文件就建好了。本例中，我建立了一个名为“prime.R”的文件，用来查找质数。
 
   * 你可以通在工程名上单击右键选择“Import”，导入其它文件。需要注意的是被导入的文件将被复制到当前工程的目录下，以后在工程中对文件的修改不会应用到原始文件。
   * 与导入不同，你可以通过在工程名上单击右键选择“File”，在弹出的对话框中选择“\`Advanced”，将外部文件链接到工程中来，这样该文件就不会复制到当前工程的工作目录中。
@@ -129,29 +129,29 @@ prime(1000)</pre>
 
 我们在前面编辑的R程序现在还不能运行。还要对StatET作一番配置才行。选择菜单栏中的“windows”，“Preferences”，打开配置窗口，展开StatET，如下图
 
-[![](https://cos.name/wp-content/uploads/2008/12/image12.png "配置交互环境")](https://cos.name/wp-content/uploads/2008/12/image12.png)定位到“R Environments”,点右侧的按钮“Add”,将你计算机上安装的R的添加进去，如下图。
+[<img class="aligncenter size-full wp-image-201" title="配置交互环境" src="https://cos.name/wp-content/uploads/2008/12/image12.png" alt="" width="627" height="542" srcset="https://cos.name/wp-content/uploads/2008/12/image12.png 627w, https://cos.name/wp-content/uploads/2008/12/image12-300x259.png 300w" sizes="(max-width: 627px) 100vw, 627px" />](https://cos.name/wp-content/uploads/2008/12/image12.png)定位到“R Environments”,点右侧的按钮“Add”,将你计算机上安装的R的添加进去，如下图。
 
 [](https://cos.name/wp-content/uploads/2008/12/image25.png)
 
-[![](https://cos.name/wp-content/uploads/2008/12/image13.png "设置路径")](https://cos.name/wp-content/uploads/2008/12/image13.png)关闭该对话框.
+[<img class="aligncenter size-full wp-image-203" title="设置路径" src="https://cos.name/wp-content/uploads/2008/12/image13.png" alt="" width="640" height="539" srcset="https://cos.name/wp-content/uploads/2008/12/image13.png 640w, https://cos.name/wp-content/uploads/2008/12/image13-300x252.png 300w" sizes="(max-width: 640px) 100vw, 640px" />](https://cos.name/wp-content/uploads/2008/12/image13.png)关闭该对话框.
 
 在Eclipse菜单栏中选择“Run”->“Run Configurations”, 在Main标签中按下图作出配置。
 
-[![](https://cos.name/wp-content/uploads/2010/03/runconf.png "运行配置")](https://cos.name/wp-content/uploads/2010/03/runconf.png)在工具栏中打开刚配置好的R控制台，如下图。
+[<img class="aligncenter size-full wp-image-1948" title="运行配置" src="https://cos.name/wp-content/uploads/2010/03/runconf.png" alt="" width="500" height="412" srcset="https://cos.name/wp-content/uploads/2010/03/runconf.png 500w, https://cos.name/wp-content/uploads/2010/03/runconf-300x247.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/03/runconf.png)在工具栏中打开刚配置好的R控制台，如下图。
 
-[![](https://cos.name/wp-content/uploads/2010/03/run.jpg "运行")](https://cos.name/wp-content/uploads/2010/03/run.jpg)R控制台被打开。点红色按钮就可以关闭R控制台。
+[<img class="aligncenter size-full wp-image-1951" title="运行" src="https://cos.name/wp-content/uploads/2010/03/run.jpg" alt="" width="238" height="126" />](https://cos.name/wp-content/uploads/2010/03/run.jpg)R控制台被打开。点红色按钮就可以关闭R控制台。
 
-[![](https://cos.name/wp-content/uploads/2010/03/console.png "控制台")](https://cos.name/wp-content/uploads/2010/03/console.png)在控制台的底部，你可以手动输入R的代码，提交给R执行。如下图。
+[<img class="aligncenter size-full wp-image-1950" title="控制台" src="https://cos.name/wp-content/uploads/2010/03/console.png" alt="" width="500" height="176" srcset="https://cos.name/wp-content/uploads/2010/03/console.png 500w, https://cos.name/wp-content/uploads/2010/03/console-300x105.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/03/console.png)在控制台的底部，你可以手动输入R的代码，提交给R执行。如下图。
 
-[![](https://cos.name/wp-content/uploads/2010/03/commandline.png "命令行")](https://cos.name/wp-content/uploads/2010/03/commandline.png)现在，我们就可以将前面在Eclipse中建立的文件prime.R提交给R运行。
+[<img class="aligncenter size-full wp-image-1949" title="命令行" src="https://cos.name/wp-content/uploads/2010/03/commandline.png" alt="" width="500" height="65" srcset="https://cos.name/wp-content/uploads/2010/03/commandline.png 500w, https://cos.name/wp-content/uploads/2010/03/commandline-300x39.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/03/commandline.png)现在，我们就可以将前面在Eclipse中建立的文件prime.R提交给R运行。
 
-将焦点设置到“prime.R”文件上，这时工具栏上就会出现R的运行命令，[![image](https://cos.name/wp-content/uploads/2008/12/image-thumb27.png)](https://cos.name/wp-content/uploads/2008/12/image27.png) ，我们可以选择我们想要的方式运行文件prime.R中的代码。
+将焦点设置到“prime.R”文件上，这时工具栏上就会出现R的运行命令，[<img src="https://cos.name/wp-content/uploads/2008/12/image-thumb27.png" border="0" alt="image" width="109" height="30" />](https://cos.name/wp-content/uploads/2008/12/image27.png) ，我们可以选择我们想要的方式运行文件prime.R中的代码。
 
 也可以在文件中单击右键，在上下文菜单中选择所要的运行方式。这里，我们通过快捷键先按Ctrl+R,再按Ctrl+D,将整个文件直接提交给R执行。在R控制台中就出输出执行结果。如下图。
 
-[![](https://cos.name/wp-content/uploads/2010/03/runcode-491x500.png "运行代码")](https://cos.name/wp-content/uploads/2010/03/runcode.png)这样我们就成功地在Eclipse中编辑并运行R代码了。
+[<img class="aligncenter size-large wp-image-1952" title="运行代码" src="https://cos.name/wp-content/uploads/2010/03/runcode-491x500.png" alt="" width="491" height="500" srcset="https://cos.name/wp-content/uploads/2010/03/runcode-491x500.png 491w, https://cos.name/wp-content/uploads/2010/03/runcode-294x300.png 294w, https://cos.name/wp-content/uploads/2010/03/runcode.png 500w" sizes="(max-width: 491px) 100vw, 491px" />](https://cos.name/wp-content/uploads/2010/03/runcode.png)这样我们就成功地在Eclipse中编辑并运行R代码了。
 
-在退出Eclipse时，应先关闭R控制台（按钮[![image](https://cos.name/wp-content/uploads/2008/12/image-thumb29.png)](https://cos.name/wp-content/uploads/2008/12/image29.png) ），再退出Eclipse.
+在退出Eclipse时，应先关闭R控制台（按钮[<img src="https://cos.name/wp-content/uploads/2008/12/image-thumb29.png" border="0" alt="image" width="40" height="29" />](https://cos.name/wp-content/uploads/2008/12/image29.png) ），再退出Eclipse.
 
 注：下面的内容来自COS论坛（[https://cos.name/cn](https://cos.name/cn "https://cos.name/cn")）：
 

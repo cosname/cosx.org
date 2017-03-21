@@ -78,4 +78,4 @@ invisible()
 
 在测试函数中通过用try命令，实现对异常的收集，而不直接跳出测试。
 
-[![batch mode](https://cos.name/wp-content/uploads/2009/03/batch.jpg)](https://cos.name/wp-content/uploads/2009/03/batch.jpg)
+[<img class="size-full wp-image-946 aligncenter" src="https://cos.name/wp-content/uploads/2009/03/batch.jpg" alt="batch mode" width="483" height="314" srcset="https://cos.name/wp-content/uploads/2009/03/batch.jpg 483w, https://cos.name/wp-content/uploads/2009/03/batch-300x195.jpg 300w" sizes="(max-width: 483px) 100vw, 483px" />](https://cos.name/wp-content/uploads/2009/03/batch.jpg)

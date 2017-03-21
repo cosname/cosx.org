@@ -43,7 +43,7 @@ slug: maximum-likelihood-estimation-in-r
 
 <pre class="brush: r">&gt; hist(waiting)</pre>
 
-[![ml_hist](https://cos.name/wp-content/uploads/2009/08/ml_hist.png "ml_hist")](https://cos.name/wp-content/uploads/2009/08/ml_hist.png)
+[<img class="aligncenter size-full wp-image-1413" title="ml_hist" src="https://cos.name/wp-content/uploads/2009/08/ml_hist.png" alt="ml_hist" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/08/ml_hist.png 480w, https://cos.name/wp-content/uploads/2009/08/ml_hist-150x150.png 150w, https://cos.name/wp-content/uploads/2009/08/ml_hist-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2009/08/ml_hist.png)
   
 从图中可以看出，其分布是两个正态分布的混合。可以用如下的分布函数来描述该数据
 
@@ -113,7 +113,7 @@ slug: maximum-likelihood-estimation-in-r
 &gt; #画出拟合的曲线
 &gt; lines(X,f)</pre>
 
-[![clip_image004.jpg](https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg "clip_image004.jpg")](https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg)
+[<img class="aligncenter size-full wp-image-1404" title="clip_image004.jpg" src="https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg" alt="clip_image004.jpg" width="481" height="480" srcset="https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg 481w, https://cos.name/wp-content/uploads/2009/07/clip_image004-150x150.jpg 150w, https://cos.name/wp-content/uploads/2009/07/clip_image004-300x299.jpg 300w" sizes="(max-width: 481px) 100vw, 481px" />](https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg)
 
 <pre class="brush: r">&gt; detach()</pre>
 

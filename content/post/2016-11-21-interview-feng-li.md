@@ -17,7 +17,7 @@ slug: interview-feng-li
 
 <span style="color: #808080;">          李丰,博士, 中央财经大学统计与数学学院，副院长，硕士研究生导师, 主要研究方向为大数据与复杂模型、贝叶斯推断与统计计算、计量经济与预测方法以及多元模型。现任北京大数据协会理事,中国统计教育学会高等教育分会副秘书长,曾任2014 年金融工程与风险管理国际研讨会执行秘书。李丰老师是多个国家项目的项目负责人及主要参加人，曾获得The 2014 Cramér Prize等重要奖项。著有《大数据分布式计算与案例》等书籍。</span><!--more-->
 
-![](https://cos.name/wp-content/uploads/2016/11/347144706568312924.jpg)
+<img class="aligncenter size-full wp-image-13316" src="https://cos.name/wp-content/uploads/2016/11/347144706568312924.jpg" alt="" width="1280" height="854" srcset="https://cos.name/wp-content/uploads/2016/11/347144706568312924.jpg 1280w, https://cos.name/wp-content/uploads/2016/11/347144706568312924-300x200.jpg 300w, https://cos.name/wp-content/uploads/2016/11/347144706568312924-768x512.jpg 768w, https://cos.name/wp-content/uploads/2016/11/347144706568312924-500x334.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />
 
 <span style="color: #333399;"><strong>小宁</strong>：请李老师谈一下自己的求学经历，以及当时为什么选统计学这个专业？</span>
 

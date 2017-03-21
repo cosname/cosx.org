@@ -62,7 +62,7 @@ run;</pre>
 hist(x, breaks = seq(min(x) - 0.5, max(x) + 0.5, 1), main = "")
 </pre><figure id="attachment_2187" style="width: 300px" class="wp-caption aligncenter">
 
-![两次掷骰子得到的结果之和的分布](https://cos.name/wp-content/uploads/2010/05/sim-dice-hist.png "两次掷骰子得到的结果之和的分布")<figcaption class="wp-caption-text">两次掷骰子得到的结果之和的分布</figcaption></figure> 
+<img class="size-full wp-image-2187" title="两次掷骰子得到的结果之和的分布" src="https://cos.name/wp-content/uploads/2010/05/sim-dice-hist.png" alt="两次掷骰子得到的结果之和的分布" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2010/05/sim-dice-hist.png 300w, https://cos.name/wp-content/uploads/2010/05/sim-dice-hist-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" /><figcaption class="wp-caption-text">两次掷骰子得到的结果之和的分布</figcaption></figure> 
 
 样本量为2的时候真的得到正态分布了么？CLT确实有它的神奇之处，但还没那么神奇。以上结果如我前文所说，仅仅是由于样本空间中的元素的对称性，所以得到了一副对称的图形，看起来像是正态分布，如果我们再用另外6个数字试验一下，马上就看穿这种迷惑了，我把最后一个数字换成15再看直方图：
 
@@ -71,7 +71,7 @@ x = rowSums(expand.grid(d, d))
 hist(x, breaks = seq(min(x) - 0.5, max(x) + 0.5, 1), main = "")
 </pre><figure id="attachment_2188" style="width: 300px" class="wp-caption aligncenter">
 
-![6个数字中2个样本之和的分布](https://cos.name/wp-content/uploads/2010/05/sim-6num-hist.png "6个数字中2个样本之和的分布")<figcaption class="wp-caption-text">6个数字中2个样本之和的分布</figcaption></figure> 
+<img class="size-full wp-image-2188" title="6个数字中2个样本之和的分布" src="https://cos.name/wp-content/uploads/2010/05/sim-6num-hist.png" alt="6个数字中2个样本之和的分布" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2010/05/sim-6num-hist.png 300w, https://cos.name/wp-content/uploads/2010/05/sim-6num-hist-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" /><figcaption class="wp-caption-text">6个数字中2个样本之和的分布</figcaption></figure> 
 
 如何？“正态分布”哪里去了？客官是否能看清骰子中的中心极限定理谎言了？
 
@@ -91,7 +91,7 @@ ani.options(interval = 0.1, nmax = 100)
 par(mar = c(4, 4, 1, 0.5))
 clt.ani()</pre><figure id="attachment_2189" style="width: 480px" class="wp-caption aligncenter">
 
-![中心极限定理模拟：从指数分布到正态分布](https://cos.name/wp-content/uploads/2010/05/clt-rexp-demo.gif "中心极限定理模拟：从指数分布到正态分布")<figcaption class="wp-caption-text">中心极限定理模拟：从指数分布到正态分布</figcaption></figure> 
+<img class="size-full wp-image-2189" title="中心极限定理模拟：从指数分布到正态分布" src="https://cos.name/wp-content/uploads/2010/05/clt-rexp-demo.gif" alt="中心极限定理模拟：从指数分布到正态分布" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2010/05/clt-rexp-demo.gif 480w, https://cos.name/wp-content/uploads/2010/05/clt-rexp-demo-150x150.gif 150w, https://cos.name/wp-content/uploads/2010/05/clt-rexp-demo-300x300.gif 300w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption class="wp-caption-text">中心极限定理模拟：从指数分布到正态分布</figcaption></figure> 
 
 这个CLT模拟的过程很简单：给一个总体分布（默认为右偏的指数分布），在给定样本量n时不断重复抽样分别计算样本均值，一直这样计算obs个均值，并画出它们的直方图和相应的核密度估计曲线；然后随着n增大，看相应的样本均值分布如何。此外，我使用了Shapiro正态性检验来检验这些均值的正态性，并把P值取出来画在下半幅图中。这样我们就很清楚地知道，对于每一种样本量（n = 1, &#8230;, 100），我们的样本均值究竟离正态分布多远。此处P值就充当了一个拟合好坏的指标。可以看出，上面的动画中，当样本量n超过20之后，P值会普遍偏大，也就是样本均值的分布和正态分布比较接近（严格来说，是“不能拒绝正态分布”），但也不能保证样本量大就一定意味着正态分布，譬如上图中n=40的时候P值就很小。
 

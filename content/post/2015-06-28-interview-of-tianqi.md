@@ -19,7 +19,7 @@ slug: interview-of-tianqi
 
 **_<span style="color: #808080;">简介：陈天奇，华盛顿大学计算机系博士生，研究方向为大规模机器学习。他曾获得KDD CUP 2012 Track 1第一名，并开发了SVDFeature，XGBoost，cxxnet等著名机器学习工具，是<a style="color: #808080;" href="https://github.com/dmlc/">Distributed (Deep) Machine Learning Common</a>的发起人之一。</span>_**
 
-[![3126784581353126432](https://cos.name/wp-content/uploads/2015/06/3126784581353126432.png)](https://cos.name/wp-content/uploads/2015/06/3126784581353126432.png)
+[<img class="aligncenter size-full wp-image-11173" src="https://cos.name/wp-content/uploads/2015/06/3126784581353126432.png" alt="3126784581353126432" width="686" height="515" srcset="https://cos.name/wp-content/uploads/2015/06/3126784581353126432.png 686w, https://cos.name/wp-content/uploads/2015/06/3126784581353126432-300x225.png 300w, https://cos.name/wp-content/uploads/2015/06/3126784581353126432-500x375.png 500w" sizes="(max-width: 686px) 100vw, 686px" />](https://cos.name/wp-content/uploads/2015/06/3126784581353126432.png)
 
 **何：你的本科在上海交大的ACM****班就读，是怎么开始做机器学习研究的呢？**
 

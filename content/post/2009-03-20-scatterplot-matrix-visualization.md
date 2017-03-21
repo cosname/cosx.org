@@ -32,7 +32,7 @@ R中，graphics包中的pairs()是画散点图矩阵的长老级函数，它不�
       pch = 21,
       bg = c("red", "green3", "blue")[unclass(iris$Species)])</pre>
 
-<figure id="attachment_936" style="width: 480px" class="wp-caption aligncenter">![pairs](https://cos.name/wp-content/uploads/2009/03/pairs.png)<figcaption class="wp-caption-text">图1 pairs</figcaption></figure>
+<figure id="attachment_936" style="width: 480px" class="wp-caption aligncenter"><img class="size-full wp-image-936" src="https://cos.name/wp-content/uploads/2009/03/pairs.png" alt="pairs" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/03/pairs.png 480w, https://cos.name/wp-content/uploads/2009/03/pairs-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/pairs-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption class="wp-caption-text">图1 pairs</figcaption></figure>
   
 实际上，图1已经可以给我们很多信息，包括各类鸢尾花的花瓣、花萼长宽的大体分布以及它们两两之间的关系。
 
@@ -46,7 +46,7 @@ car包中的scatterplot.matrix()函数（可以简写为spm()）可以直接指�
 spm(~Sepal.Length + Sepal.Width + Petal.Length + Petal.Width |
     Species, data = iris)</pre><figure id="attachment_937" style="width: 480px" class="wp-caption aligncenter">
 
-![spm](https://cos.name/wp-content/uploads/2009/03/spm.png)<figcaption class="wp-caption-text">图2 spm</figcaption></figure> 
+<img class="size-full wp-image-937" src="https://cos.name/wp-content/uploads/2009/03/spm.png" alt="spm" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/03/spm.png 480w, https://cos.name/wp-content/uploads/2009/03/spm-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/spm-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption class="wp-caption-text">图2 spm</figcaption></figure> 
 
   * ## gpairs(YaleToolkit)
 
@@ -58,7 +58,7 @@ gpairs(iris, upper.pars = list(scatter = 'stats'),
                              col = as.numeric(iris$Species)),
          stat.pars = list(verbose = FALSE))</pre><figure id="attachment_938" style="width: 480px" class="wp-caption aligncenter">
 
-![gpairs](https://cos.name/wp-content/uploads/2009/03/gpairs.png)<figcaption class="wp-caption-text">图3 gpairs</figcaption></figure> 
+<img class="size-full wp-image-938" src="https://cos.name/wp-content/uploads/2009/03/gpairs.png" alt="gpairs" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/03/gpairs.png 480w, https://cos.name/wp-content/uploads/2009/03/gpairs-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/gpairs-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption class="wp-caption-text">图3 gpairs</figcaption></figure> 
 
   * ## splom(lattice)
 
@@ -76,7 +76,7 @@ splom(~iris[1:4], groups = Species, data = iris,
                  col = super.sym$col[1:3]),
                  text = list(c("Setosa", "Versicolor", "Virginica"))))</pre><figure id="attachment_939" style="width: 480px" class="wp-caption aligncenter">
 
-![splom](https://cos.name/wp-content/uploads/2009/03/splom.png)<figcaption class="wp-caption-text">图4 splom</figcaption></figure> 
+<img class="size-full wp-image-939" src="https://cos.name/wp-content/uploads/2009/03/splom.png" alt="splom" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/03/splom.png 480w, https://cos.name/wp-content/uploads/2009/03/splom-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/splom-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" /><figcaption class="wp-caption-text">图4 splom</figcaption></figure> 
 
 ## 讨论
 

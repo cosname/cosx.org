@@ -24,7 +24,7 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 
   
-[![B1](https://cos.name/wp-content/uploads/2013/12/B1.jpg)](https://cos.name/wp-content/uploads/2013/12/B1.jpg)
+[<img class="aligncenter size-full wp-image-9385" src="https://cos.name/wp-content/uploads/2013/12/B1.jpg" alt="B1" width="1022" height="460" srcset="https://cos.name/wp-content/uploads/2013/12/B1.jpg 1022w, https://cos.name/wp-content/uploads/2013/12/B1-300x135.jpg 300w, https://cos.name/wp-content/uploads/2013/12/B1-500x225.jpg 500w" sizes="(max-width: 1022px) 100vw, 1022px" />](https://cos.name/wp-content/uploads/2013/12/B1.jpg)
   
 <!--more-->
 
@@ -62,7 +62,7 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 贝叶斯之道研究室的几名“年轻学者”（王中凯、盖亚男、朱祁恒、高磊），“斗胆”为大家奉献了四场贝叶斯入门培训报告。不足之处，请各位学友多多批评指正。
 
-[![b2](https://cos.name/wp-content/uploads/2013/12/b2.jpg)](https://cos.name/wp-content/uploads/2013/12/b2.jpg)
+[<img class="aligncenter size-full wp-image-9386" src="https://cos.name/wp-content/uploads/2013/12/b2.jpg" alt="b2" width="584" height="497" srcset="https://cos.name/wp-content/uploads/2013/12/b2.jpg 584w, https://cos.name/wp-content/uploads/2013/12/b2-300x255.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b2-500x425.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" />](https://cos.name/wp-content/uploads/2013/12/b2.jpg)
 
 # 资料下载
 
@@ -88,7 +88,7 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 纪念贝叶斯文艺晚会在冰镇骆驼乐队的“好想大声说爱你”拉开序幕，晚会除了天津财经大学的校舞蹈团、校民乐团和校合唱团倾情演出外，还特邀了南开大学、天津大学以及天津商业大学的相关社团进行助演。晚会形式新颖，采用现场微博互动的方式与同学们进行了实时动态交流。艺术系自己动手制作服装，进行的展演让观众们叹为观止，话剧[《穿越时空的贝叶斯》](https://cos.name/wp-content/uploads/2013/12/下载11-张园-贝叶斯话剧剧本.doc)惹得广大观众捧腹不止，演员们辛苦表演，观众们认真观看，掌声如潮，好评不断。贝叶斯知识问答和现场微博抽奖这两个环节更是将晚会推向了高潮。
 
-[![b3](https://cos.name/wp-content/uploads/2013/12/b3.jpg)](https://cos.name/wp-content/uploads/2013/12/b3.jpg) [![b4](https://cos.name/wp-content/uploads/2013/12/b4.jpg)](https://cos.name/wp-content/uploads/2013/12/b4.jpg) [![b5](https://cos.name/wp-content/uploads/2013/12/b5.jpg)](https://cos.name/wp-content/uploads/2013/12/b5.jpg) [![b6](https://cos.name/wp-content/uploads/2013/12/b6.jpg)](https://cos.name/wp-content/uploads/2013/12/b6.jpg) [![b7](https://cos.name/wp-content/uploads/2013/12/b7.jpg)](https://cos.name/wp-content/uploads/2013/12/b7.jpg)
+[<img class="aligncenter size-full wp-image-9387" src="https://cos.name/wp-content/uploads/2013/12/b3.jpg" alt="b3" width="769" height="507" srcset="https://cos.name/wp-content/uploads/2013/12/b3.jpg 769w, https://cos.name/wp-content/uploads/2013/12/b3-300x197.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b3-500x329.jpg 500w" sizes="(max-width: 769px) 100vw, 769px" />](https://cos.name/wp-content/uploads/2013/12/b3.jpg) [<img class="aligncenter size-full wp-image-9388" src="https://cos.name/wp-content/uploads/2013/12/b4.jpg" alt="b4" width="667" height="550" srcset="https://cos.name/wp-content/uploads/2013/12/b4.jpg 667w, https://cos.name/wp-content/uploads/2013/12/b4-300x247.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b4-500x412.jpg 500w" sizes="(max-width: 667px) 100vw, 667px" />](https://cos.name/wp-content/uploads/2013/12/b4.jpg) [<img class="aligncenter size-full wp-image-9389" src="https://cos.name/wp-content/uploads/2013/12/b5.jpg" alt="b5" width="662" height="401" srcset="https://cos.name/wp-content/uploads/2013/12/b5.jpg 662w, https://cos.name/wp-content/uploads/2013/12/b5-300x181.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b5-500x302.jpg 500w" sizes="(max-width: 662px) 100vw, 662px" />](https://cos.name/wp-content/uploads/2013/12/b5.jpg) [<img class="aligncenter size-full wp-image-9390" src="https://cos.name/wp-content/uploads/2013/12/b6.jpg" alt="b6" width="600" height="368" srcset="https://cos.name/wp-content/uploads/2013/12/b6.jpg 600w, https://cos.name/wp-content/uploads/2013/12/b6-300x184.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b6-500x306.jpg 500w" sizes="(max-width: 600px) 100vw, 600px" />](https://cos.name/wp-content/uploads/2013/12/b6.jpg) [<img class="aligncenter size-full wp-image-9391" src="https://cos.name/wp-content/uploads/2013/12/b7.jpg" alt="b7" width="742" height="398" srcset="https://cos.name/wp-content/uploads/2013/12/b7.jpg 742w, https://cos.name/wp-content/uploads/2013/12/b7-300x160.jpg 300w, https://cos.name/wp-content/uploads/2013/12/b7-500x268.jpg 500w" sizes="(max-width: 742px) 100vw, 742px" />](https://cos.name/wp-content/uploads/2013/12/b7.jpg)
 
 &nbsp;
 

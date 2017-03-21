@@ -20,7 +20,7 @@ Shiny是R中的一种Web开发框架，使得R的使用者不必太了解css、j
 
 Shiny应用包含连个基本的组成部分：一个是用户界面脚本（a user-interface script），另一个是服务器脚本(a server script)。
 
-[![`M_86@S224HF$W_AKSLVE{N](https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN.png)](https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN.png)
+[<img class="aligncenter size-full wp-image-12605" src="https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN.png" alt="&#96;M_86@S224HF$W_AKSLVE{N" width="535" height="391" srcset="https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN.png 535w, https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN-300x219.png 300w, https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN-500x365.png 500w" sizes="(max-width: 535px) 100vw, 535px" />](https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN.png)
 
 <!--more-->
 
@@ -51,7 +51,7 @@ hist(rnorm(input$n))
 }
 shinyApp(ui = ui, server = server)</pre>
 
-[![~M4UT2WID$7MR462EO9M~F6](https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6.png)](https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6.png)
+[<img class="aligncenter size-full wp-image-12606" src="https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6.png" alt="~M4UT2WID$7MR462EO9M~F6" width="553" height="287" srcset="https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6.png 553w, https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6-300x156.png 300w, https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6-500x259.png 500w" sizes="(max-width: 553px) 100vw, 553px" />](https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6.png)
 
 shinydashboard扩展包为shiny框架提供了BI框架，一个dashboard由三部分组成：标题栏、侧边栏、主面板。通过install.packages(“shinydashboard”)完成安装。执行以下脚本可以得到shinydashboard的基本框架。
 
@@ -67,7 +67,7 @@ dashboardBody()
 server &lt;- function(input, output) { }
 shinyApp(ui, server)</pre>
 
-[![LA_74B35XI8Q2GO7]1L_T)V](https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV.png)](https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV.png)
+[<img class="aligncenter size-full wp-image-12607" src="https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV.png" alt="LA_74B35XI8Q2GO7]1L_T)V" width="531" height="307" srcset="https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV.png 531w, https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV-300x173.png 300w, https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV-500x289.png 500w" sizes="(max-width: 531px) 100vw, 531px" />](https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV.png)
 
 到此，关于shiny和shinydashboard框架我们已经掌握了。接下来，我们将前面学到的动态交互绘图包与Shiny Web开发框架结合，一步步搭建数据可视化平台demo。先创建新文件夹myapp，并在myapp文件夹里面创建两个脚本ui.R和server.R，用来存放客户端和服务端的脚本。
 
@@ -106,7 +106,7 @@ plotOutput("<strong><b>wireframe</b></strong>")</pre>
 
 平台界面如下图所示：
 
-[![6VR$(8]7[SQ{B8W`65HT0$8](https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08.png)](https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08.png)
+[<img class="aligncenter size-full wp-image-12608" src="https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08.png" alt="6VR$(8]7[SQ{B8W&#96;65HT0$8" width="554" height="220" srcset="https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08.png 554w, https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08-300x119.png 300w, https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08-500x199.png 500w" sizes="(max-width: 554px) 100vw, 554px" />](https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08.png)
 
 对于rCharts包绘制的图形，我们在server.R中用renderChart( )函数将图形赋予输出对象mygraph，并在ui.R中用showOutput(“mygraph” )将图形输出到web中。形式如下（以hPlot函数为例）：
 
@@ -136,7 +136,7 @@ return(p1)
 <pre># ui.R #
 showOutput("mychart1","nvd3")</pre>
 
-[![ZG9[(Q9WYN0_71IKW8UVRXC](https://cos.name/wp-content/uploads/2016/06/ZG9Q9WYN0_71IKW8UVRXC.png)](https://cos.name/wp-content/uploads/2016/06/ZG9Q9WYN0_71IKW8UVRXC.png)
+[<img class="aligncenter size-full wp-image-12609" src="https://cos.name/wp-content/uploads/2016/06/ZG9Q9WYN0_71IKW8UVRXC.png" alt="ZG9[(Q9WYN0_71IKW8UVRXC" width="554" height="226" srcset="https://cos.name/wp-content/uploads/2016/06/ZG9Q9WYN0_71IKW8UVRXC.png 554w, https://cos.name/wp-content/uploads/2016/06/ZG9Q9WYN0_71IKW8UVRXC-300x122.png 300w, https://cos.name/wp-content/uploads/2016/06/ZG9Q9WYN0_71IKW8UVRXC-500x204.png 500w" sizes="(max-width: 554px) 100vw, 554px" />](https://cos.name/wp-content/uploads/2016/06/ZG9Q9WYN0_71IKW8UVRXC.png)
 
 如下图所示，我们在网页上输出了hPlot函数绘制的交互气泡图。
 
@@ -153,7 +153,7 @@ return(a)
 <pre># ui.R #
 showOutput("mychart2","highcharts")</pre>
 
-[![}NNW@9QYQ8XA6CV%SLCKQ5A](https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A.png)](https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A.png)
+[<img class="aligncenter size-full wp-image-12610" src="https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A.png" alt="}NNW@9QYQ8XA6CV%SLCKQ5A" width="552" height="244" srcset="https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A.png 552w, https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A-300x133.png 300w, https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A-500x221.png 500w" sizes="(max-width: 552px) 100vw, 552px" />](https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A.png)
 
 对于DT包制作的数据表格，我们在server.R中用renderDataTable ( )函数将表格赋予输出对象mytable，并在ui.R中用dataTableOutput (“mytable” )将图形输出到web中。形式如下：
 
@@ -165,7 +165,7 @@ datatable(data)
 <pre># ui.R #
 dataTableOutput(“mytable”)</pre>
 
-[![BC3E.tmp](https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_.png)](https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_.png)
+[<img class="aligncenter size-full wp-image-12611" src="https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_.png" alt="BC3E.tmp" width="554" height="250" srcset="https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_.png 554w, https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_-300x135.png 300w, https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_-500x226.png 500w" sizes="(max-width: 554px) 100vw, 554px" />](https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_.png)
 
 对于networkD3包制作的网络图，我们在server.R中用renderForceNetwork ( )函数将表格赋予输出对象mygraph，并在ui.R中用forceNetworkOutput (“mygraph” )将图形输出到web中。形式如下：
 
@@ -190,7 +190,7 @@ Group = "group", opacity = 0.8,zoom = T)
 <pre># ui.R #
 forceNetworkOutput("networkD3")</pre>
 
-[![4EDD.tmp](https://cos.name/wp-content/uploads/2016/06/4EDD.tmp_.png)](https://cos.name/wp-content/uploads/2016/06/4EDD.tmp_.png)
+[<img class="aligncenter size-full wp-image-12612" src="https://cos.name/wp-content/uploads/2016/06/4EDD.tmp_.png" alt="4EDD.tmp" width="554" height="271" srcset="https://cos.name/wp-content/uploads/2016/06/4EDD.tmp_.png 554w, https://cos.name/wp-content/uploads/2016/06/4EDD.tmp_-300x147.png 300w, https://cos.name/wp-content/uploads/2016/06/4EDD.tmp_-500x245.png 500w" sizes="(max-width: 554px) 100vw, 554px" />](https://cos.name/wp-content/uploads/2016/06/4EDD.tmp_.png)
 
 好了，以上就是关于如何将一些数据可视化包结合shiny，快速搭建一套可视化原型系统。由于篇幅有限，本文不能将页面设计及控件代码都一一罗列出。对shiny包感兴趣的读者可以自己上RStudio官网自行学习。
 
@@ -202,14 +202,14 @@ forceNetworkOutput("networkD3")</pre>
 
 最后，shiny除了能完美结合数据可视化包绘制出的精美动态图表，对于模型结果可视化，我们也可以使用这种方式把可视化结果在网页上输出。我们对关联规则和kmeans聚类结果进行了可视化，并增加了选择栏和数字输入选项来调整关联规则可视化的方法和聚类的K值。
 
-[![85E.tmp](https://cos.name/wp-content/uploads/2016/06/85E.tmp_.png)](https://cos.name/wp-content/uploads/2016/06/85E.tmp_.png)
+[<img class="aligncenter size-full wp-image-12613" src="https://cos.name/wp-content/uploads/2016/06/85E.tmp_.png" alt="85E.tmp" width="554" height="257" srcset="https://cos.name/wp-content/uploads/2016/06/85E.tmp_.png 554w, https://cos.name/wp-content/uploads/2016/06/85E.tmp_-300x139.png 300w, https://cos.name/wp-content/uploads/2016/06/85E.tmp_-500x232.png 500w" sizes="(max-width: 554px) 100vw, 554px" />](https://cos.name/wp-content/uploads/2016/06/85E.tmp_.png)
 
 可以通过控件去控制关联规则可视化中的method类型及K-Means聚类中的K值。
 
-[![FD59.tmp](https://cos.name/wp-content/uploads/2016/06/FD59.tmp_.png)](https://cos.name/wp-content/uploads/2016/06/FD59.tmp_.png)<section class="tn-Powered-by-XIUMI"></section> <section class="tn-Powered-by-XIUMI">
+[<img class="aligncenter size-full wp-image-12614" src="https://cos.name/wp-content/uploads/2016/06/FD59.tmp_.png" alt="FD59.tmp" width="555" height="241" srcset="https://cos.name/wp-content/uploads/2016/06/FD59.tmp_.png 555w, https://cos.name/wp-content/uploads/2016/06/FD59.tmp_-300x130.png 300w, https://cos.name/wp-content/uploads/2016/06/FD59.tmp_-500x217.png 500w" sizes="(max-width: 555px) 100vw, 555px" />](https://cos.name/wp-content/uploads/2016/06/FD59.tmp_.png)<section class="tn-Powered-by-XIUMI"></section> <section class="tn-Powered-by-XIUMI">
 
 <span style="color: #000000;"><strong>原创文章，版权所有。</strong></span></section> <section class="tn-Powered-by-XIUMI"></section> <section class="tn-Powered-by-XIUMI"></section> 
 
-<span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。<a href="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg">![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)</a></strong></span>
+<span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。<a href="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg"><img class="aligncenter size-full wp-image-12657" src="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg" alt="qrcode_for_gh_946beec24de4_258" width="258" height="258" srcset="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg 258w, https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258-150x150.jpg 150w" sizes="(max-width: 258px) 100vw, 258px" /></a></strong></span>
 
 **<span style="color: #000000;">未经许可的转载以及改编者，统计之都将依法追究其法律责任。</span>**

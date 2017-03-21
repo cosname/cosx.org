@@ -14,7 +14,7 @@ tags:
 slug: 1st-chinese-r-conference-summary
 ---
 
-<figure id="attachment_438" style="width: 478px" class="wp-caption aligncenter">[![第一届中国R语言会议合影](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb.jpg "第一届中国R语言会议合影")](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo.tif)<figcaption class="wp-caption-text">第一届中国R语言会议合影（右键另存为看大图）</figcaption></figure> 
+<figure id="attachment_438" style="width: 478px" class="wp-caption aligncenter">[<img class="size-full wp-image-438" title="第一届中国R语言会议合影" src="https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb.jpg" alt="第一届中国R语言会议合影" width="478" height="177" srcset="https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb.jpg 478w, https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb-300x111.jpg 300w" sizes="(max-width: 478px) 100vw, 478px" />](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo.tif)<figcaption class="wp-caption-text">第一届中国R语言会议合影（右键另存为看大图）</figcaption></figure> 
 
 2008年12月13日~14日，由教育部重点研究基地中国人民大学[应用统计科学研究中心](http://www.applstats.org "应用统计科学研究中心")与中国人民大学[统计学院](http://stat.ruc.edu.cn "统计学院")主办的“第一届中国R语言会议”在中国人民大学明德商学楼0402教室成功召开。国内R语言的各位先锋如中国人民大学统计学院吴喜之教授、中国科学院上海生命科学研究院丁国徽博士等以及国外R语言专业人士如澳大利亚国立大学John Maindonald教授也通过网络连线会场参加了本次会议；会议围绕R语言的众多应用领域展开了广泛的交流和讨论，为R语言在中国的应用和推广开辟了一条崭新的道路。
 

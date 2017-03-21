@@ -33,7 +33,7 @@ slug: r-maps-for-china
 mydat = readShapePoly("maps/bou1/bou1_4p.shp")
 plot(mydat)</pre>
 
-[![unnamed-chunk-1](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-1-e1408027878462.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-1.png)
+[<img class="aligncenter wp-image-10169 size-full" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-1-e1408027878462.png" alt="unnamed-chunk-1" width="473" height="322" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-1-e1408027878462.png 473w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-1-e1408027878462-300x204.png 300w" sizes="(max-width: 473px) 100vw, 473px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-1.png)
   
 但是，可以看出这样绘制的地图的形状有些扁平。这是因为，在绘图的过程中，默认把经度和纬度作为普通数据，均匀平等对待，绘制在笛卡尔坐标系上造成的。其实，地球的球面图形如何映射到平面图上，在地理学上是有一系列不同的专业算法的。地图不应该画在普通的笛卡尔坐标系上，而是要画在地理学专业的坐标系上。在这一点上，R的ggplot2包提供了专门的`coord_map()`函数。所以推荐R的ggplot2包来绘制地图。
 
@@ -44,7 +44,7 @@ mymap = ggplot(data = fortify(mydat)) +
     theme_grey()
 print(mymap + coord_map())</pre>
 
-[![unnamed-chunk-2](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2.png)
+[<img class="aligncenter size-full wp-image-10175" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2.png" alt="unnamed-chunk-2" width="504" height="504" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2.png 504w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2-150x150.png 150w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2-300x300.png 300w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2-500x500.png 500w" sizes="(max-width: 504px) 100vw, 504px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2.png)
   
 这次中国地图的形状与百度地图一样了。<!--more-->
 
@@ -52,7 +52,7 @@ ggplot2包的`coord_map`函数默认的映射类型是mercator。如果有其他
 
 <pre>mymap + coord_map(projection = "azequidistant")</pre>
 
-[![unnamed-chunk-3](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-3-e1408027824797.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-3.png)`coord_map`函数的映射类型及其含义可以通过下列代码查询帮助，一般我们用默认的就可以。
+[<img class="aligncenter wp-image-10173 size-full" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-3-e1408027824797.png" alt="unnamed-chunk-3" width="504" height="330" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-3-e1408027824797.png 504w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-3-e1408027824797-300x196.png 300w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-3-e1408027824797-500x327.png 500w" sizes="(max-width: 504px) 100vw, 504px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-3.png)`coord_map`函数的映射类型及其含义可以通过下列代码查询帮助，一般我们用默认的就可以。
 
 <pre>library(mapproj)
 ?mapproject</pre>
@@ -115,7 +115,7 @@ names(mydat)
 <pre>Shanghai = mydat[mydat$ADCODE99 == 310000,]
 plot(Shanghai)</pre>
 
-[![unnamed-chunk-8](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-8-e1408027792888.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-8.png)
+[<img class="aligncenter wp-image-10176 size-full" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-8-e1408027792888.png" alt="unnamed-chunk-8" width="504" height="372" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-8-e1408027792888.png 504w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-8-e1408027792888-300x221.png 300w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-8-e1408027792888-500x369.png 500w" sizes="(max-width: 504px) 100vw, 504px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-8.png)
 
 其中ADCODE99是国家基础地理信息中心定义的区域代码，共有6位数字，由省、地市、县各两位代码组成。
 
@@ -187,7 +187,7 @@ csmap = ggplot(myepidat) +
 print(csmap)
 </pre>
 
-[![unnamed-chunk-12](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-12-e1408027716212.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-12.png)接下来的工作就是添加地名，sp包提供了`coordinates`函数，来计算地图的中心坐标：
+[<img class="aligncenter wp-image-10168 size-full" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-12-e1408027716212.png" alt="unnamed-chunk-12" width="504" height="197" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-12-e1408027716212.png 504w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-12-e1408027716212-300x117.png 300w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-12-e1408027716212-500x195.png 500w" sizes="(max-width: 504px) 100vw, 504px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-12.png)接下来的工作就是添加地名，sp包提供了`coordinates`函数，来计算地图的中心坐标：
 
 <pre>tmp = coordinates(Changsha)
 print(tmp)
@@ -213,7 +213,7 @@ print(tmp)
 csmap + geom_text(aes(x = V1,y = V2,label = names), family = "GB1", data = tmp)
 </pre>
 
-[![unnamed-chunk-13](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-13-e1408027752719.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-13.png)如果需要支持更多字体，可以配合使用showtext包。
+[<img class="aligncenter wp-image-10172 size-full" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-13-e1408027752719.png" alt="unnamed-chunk-13" width="504" height="197" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-13-e1408027752719.png 504w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-13-e1408027752719-300x117.png 300w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-13-e1408027752719-500x195.png 500w" sizes="(max-width: 504px) 100vw, 504px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-13.png)如果需要支持更多字体，可以配合使用showtext包。
 
 #### 3.2 内地省份的地市级图的情况
 
@@ -274,7 +274,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), map = mysh) +
     expand_limits(mysh) + coord_map()
 </pre>
 
-[![unnamed-chunk-14](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14.png)
+[<img class="aligncenter size-full wp-image-10170" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14.png" alt="unnamed-chunk-14" width="504" height="504" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14.png 504w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14-150x150.png 150w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14-300x300.png 300w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14-500x500.png 500w" sizes="(max-width: 504px) 100vw, 504px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14.png)
 
 #### 3.4 其他问题
 
@@ -290,7 +290,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), map = mysh) +
 
 我们以起点中文网小说《江山美人志》开篇所附地图为例，绘制虚拟世界里面“中南郡”的GIS地图。为了和实际问题类似，我在地图中画上了参考坐标线。
 
-[![mymap](https://cos.name/wp-content/uploads/2014/08/mymap.png)](https://cos.name/wp-content/uploads/2014/08/mymap.png)
+[<img class="aligncenter size-full wp-image-10177" src="https://cos.name/wp-content/uploads/2014/08/mymap.png" alt="mymap" width="560" height="431" srcset="https://cos.name/wp-content/uploads/2014/08/mymap.png 560w, https://cos.name/wp-content/uploads/2014/08/mymap-300x230.png 300w, https://cos.name/wp-content/uploads/2014/08/mymap-500x384.png 500w" sizes="(max-width: 560px) 100vw, 560px" />](https://cos.name/wp-content/uploads/2014/08/mymap.png)
 
 利用ImageJ“点”工具，同时按住Shift键一次批量多点采样，再点击分析菜的测量，最后保存结果。
 
@@ -356,7 +356,7 @@ writePolyShape(x = myshpdata, fn = "data/myDIYmap_poly")
 <pre>mydat = readShapePoly("data/myDIYmap_poly.shp")
 plot(mydat)</pre>
 
-[![unnamed-chunk-17](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17.png)
+[<img class="aligncenter size-full wp-image-10171" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17.png" alt="unnamed-chunk-17" width="504" height="504" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17.png 504w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17-150x150.png 150w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17-300x300.png 300w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17-500x500.png 500w" sizes="(max-width: 504px) 100vw, 504px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17.png)
 
 可以发现，在区域相邻的边界，有咬合分离现象，这是由于我们采样的时候，每个区单独描边，产生了共享边的不一致。不过，我们绘制地图是为了展示流行病学数据，这个误差是可以接受的。
 
@@ -374,7 +374,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), color = "white", map 
     expand_limits(mysh) + coord_map()
 </pre>
 
-[![unnamed-chunk-18](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18.png)
+[<img class="aligncenter size-full wp-image-10174" src="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18.png" alt="unnamed-chunk-18" width="504" height="504" srcset="https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18.png 504w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18-150x150.png 150w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18-300x300.png 300w, https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18-500x500.png 500w" sizes="(max-width: 504px) 100vw, 504px" />](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18.png)
 
 如上，画成统计地图，还算美观。
 

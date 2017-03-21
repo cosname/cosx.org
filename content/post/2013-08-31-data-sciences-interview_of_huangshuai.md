@@ -12,7 +12,7 @@ tags:
 slug: data-sciences-interview_of_huangshuai
 ---
 
-[![ENG - Industrial & Management Systems Engineering - Shuai Huang](https://cos.name/wp-content/uploads/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang.jpg)](https://cos.name/wp-content/uploads/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang.jpg)
+[<img class="wp-image-8403 alignleft" alt="ENG - Industrial & Management Systems Engineering - Shuai Huang" src="https://cos.name/wp-content/uploads/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang.jpg" width="290" height="437" srcset="https://cos.name/wp-content/uploads/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang.jpg 2326w, https://cos.name/wp-content/uploads/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang-199x300.jpg 199w, https://cos.name/wp-content/uploads/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang-332x500.jpg 332w" sizes="(max-width: 290px) 100vw, 290px" />](https://cos.name/wp-content/uploads/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang.jpg)
 
 <span style="color: #888888;">【COS编辑部按】受访人：黄帅</span>
 
