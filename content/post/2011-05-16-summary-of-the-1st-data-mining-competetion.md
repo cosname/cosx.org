@@ -17,7 +17,7 @@ tags:
 slug: summary-of-the-1st-data-mining-competetion
 ---
 
-[![](https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed.jpg "建模答辩-021-fixed")](https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed.jpg)
+![](https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed.jpg "建模答辩-021-fixed")
 
 <p style="text-align: center;">
   &nbsp;

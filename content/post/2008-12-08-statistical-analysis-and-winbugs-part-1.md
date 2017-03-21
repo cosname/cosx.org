@@ -36,7 +36,7 @@ WinBUGS目前是一款免费的软件，去<http://www.mrc-bsu.cam.ac.uk/bugs/>�
 
 ## 第四节 初试WinBUGS<figure id="attachment_408" style="width: 300px" class="wp-caption alignleft">
 
-[![WinBUGS-GUI](https://cos.name/wp-content/uploads/2008/12/22221.jpg)](https://cos.name/wp-content/uploads/2008/12/22221.jpg)<figcaption class="wp-caption-text">WinBUGS-GUI</figcaption></figure> 
+![WinBUGS-GUI](https://cos.name/wp-content/uploads/2008/12/22221.jpg)<figcaption class="wp-caption-text">WinBUGS-GUI</figcaption></figure> 
 
 我们先找一个例子来实际地运行一下WinBUGS，感受一下基本的操作流程，然后再考虑高级的操作。
 
@@ -76,7 +76,7 @@ WinBUGS目前是一款免费的软件，去<http://www.mrc-bsu.cam.ac.uk/bugs/>�
 
 第十八步，点history看所有迭代的时间序列图，点trace看最后一次迭代的时间序列图，点auto cor看correlogram时间序列图，点stat看参数估计的结果<figure id="attachment_1267" style="width: 500px" class="wp-caption aligncenter">
 
-[![Estimation results by WinBUGS 1.4](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png "Estimation results by WinBUGS 1.4")](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png)<figcaption class="wp-caption-text">Estimation results by WinBUGS 1.4</figcaption></figure> 
+![Estimation results by WinBUGS 1.4](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png "Estimation results by WinBUGS 1.4")<figcaption class="wp-caption-text">Estimation results by WinBUGS 1.4</figcaption></figure> 
 
 附第二步中的代码如下：
 

@@ -14,7 +14,7 @@ tags:
 slug: interview_of_xie_liang
 ---
 
-[![xie-liang-pic](https://cos.name/wp-content/uploads/2013/08/xie-liang-pic.jpg)](https://cos.name/wp-content/uploads/2013/08/xie-liang-pic.jpg)
+![xie-liang-pic](https://cos.name/wp-content/uploads/2013/08/xie-liang-pic.jpg)
   
 <span style="color: #888888;">【COS编辑部按】受访人：谢梁</span>
 

@@ -57,7 +57,7 @@ Wickham出生在新西兰汉密尔顿的一个统计学世家。他父亲<a href
 
 从第一份工作开始，Wickham就开始反思存储和操纵数据是否存在一种更好的办法。“对于找到更好的解决之道，我一直颇为自信”，他解释说，“并且这个办法可以造福他人。”虽然彼时的他依然在懵懂中，但正在那时他“内化”了<a href="https://en.wikipedia.org/wiki/Third_normal_form" target="_blank">第三范式</a>（Third Normal Form）的概念，这将在他未来的工作中扮演重要的角色。第三范式的本质是一种降低数据冗余且保证数据一致性的数据构架方法。Wickham把这种数据叫做“干净”（tidy）数据，而他的工具推广了并依赖于这种数据结构。
 
-[![RLogo](https://cos.name/wp-content/uploads/2015/09/RLogo.png)](https://cos.name/wp-content/uploads/2015/09/RLogo.png)
+![RLogo](https://cos.name/wp-content/uploads/2015/09/RLogo.png)
 
 <p style="text-align: center;">
   <em>R的标志，该语言的革命性演化部分归功于Hadley Wickham</em>
@@ -83,7 +83,7 @@ Wickham显然被reshape的成功所鼓舞。他开发这个工具包正是因为
 
 在幻灭之旅上，Wickham开发了ggplot2这个工具包。迄今为止，该工具包已经被下载了几百万次，它不仅是Wickham最成功的作品，也改变了许多人对于数据可视化的观念。ggplot2的巨大成功也促使他离开学术界去<a href="https://www.rstudio.com/" target="_blank">Rstudio</a>担任首席科学家，从而专心致志地改进R。（Rstudio是R语言最受欢迎的集成开发环境的盈利开发机构。）
 
-[![HadleyObama2](https://cos.name/wp-content/uploads/2015/09/HadleyObama2.png)](https://cos.name/wp-content/uploads/2015/09/HadleyObama2.png)
+![HadleyObama2](https://cos.name/wp-content/uploads/2015/09/HadleyObama2.png)
 
 <p style="text-align: center;">
   <em>Hadley Wickham</em><em>放了一个用</em><em>ggplot2</em><em>画的图片。<a href="https://github.com/hadley/ggplot2/wiki/Crime-in-Downtown-Houston,-Texas-:-Combining-ggplot2-and-Google-Maps" target="_blank">图片</a>由</em><em>David Kahle</em><em>和</em><em>Garrett Grolemund</em><em>提供</em>
@@ -93,7 +93,7 @@ ggplot2 包是以统计学家Leland Wilkinson 的“图形语法”为基础，�
 
 在图形语法背后的概念是相当抽象的。最大的想法是图是由“几何对象”（我们在图表上看到的一个点或柱子的图形元素）和“图形属性”（关于其中几何形状被放置的方向）组成的。这听起来可能不是革命性的，但由Wickham实现的这个概念使得成千上万的人可以更加容易地画图。问答网站<a href="http://stackoverflow.com/tags/ggplot2/info" target="_blank">Stack Overflow</a>上已经有近9000个问题标记为ggplot2，甚至说 ggplot2 在R中让作图变得更“好玩”。用 ggplot2 画的图已经出现在了<a href="http://www.nature.com/" target="_blank">Nature</a>，[FiveThirtyEight](http://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/)和<a href="http://www.nytimes.com/interactive/sports/football/2013-fantasy-football-tier-charts-QB.html?ref=football&_r=1&" target="_blank">纽约时报</a>上。
 
-[![China](https://cos.name/wp-content/uploads/2015/09/China.png)](https://cos.name/wp-content/uploads/2015/09/China.png)
+![China](https://cos.name/wp-content/uploads/2015/09/China.png)
 
 <p style="text-align: center;">
   <em>Hadley Wickham</em><em>手里拿着一本关于他的可视化软件包</em><em>ggplot2 </em><em>的中文译本</em><em>;</em><em>图片来源于</em><em><a href="http://statr.me/2013/09/a-conversation-with-hadley-wickham/" target="_blank">statr</a></em>
@@ -105,7 +105,7 @@ ggplot2 包是以统计学家Leland Wilkinson 的“图形语法”为基础，�
 
 下面的图标展示了Hadley的超过2000次下载的17个包（有时候它们被戏称为“<a href="http://barryrowlingson.github.io/hadleyverse/#1" target="_blank">Hadley宇宙</a>”）的发布日期和下载的数量。这些下载数字少得可怜，因为它们只反映了从2012年年底其中一个流行的下载来源的数据。并且，是的，这个图是用Hadley的包（<a href="http://ggvis.rstudio.com/" target="_blank">ggvis</a>）绘制的。
 
-_                                          [![Chart](https://cos.name/wp-content/uploads/2015/09/Chart.png)](https://cos.name/wp-content/uploads/2015/09/Chart.png)_
+_                                          ![Chart](https://cos.name/wp-content/uploads/2015/09/Chart.png)_
 
 <p style="text-align: center;">
   <em>Dan Kopf, Priceonomics；</em><em>数据来源：</em><a href="https://github.com/metacran/cranlogs"><em>cranlogs</em></a>

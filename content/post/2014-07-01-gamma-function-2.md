@@ -165,7 +165,7 @@ $$ {\Gamma(x)} = \frac{1}{xe^{\gamma x}} \prod_{k=1}^\infty
 
 伽玛函数还有很多妙用，它能扩展一些重要的数学概念，譬如导数。我们可以定义一阶、二阶等整数阶导数，而数学家们却追问一个奇怪的问题：我们能定义分数阶的导数吗？ 这个问题早年莱布尼茨研究微积分的时候他就提出来过，然而没有获得实质性进展。而欧拉给出了伽玛函数之后，也研究过分数阶导数的问题。我们观察一下函数$f(x) = x^n$ 的各阶导数
 
-[![derivatives](https://cos.name/wp-content/uploads/2014/07/derivatives.png)](https://cos.name/wp-content/uploads/2014/07/derivatives.png)
+![derivatives](https://cos.name/wp-content/uploads/2014/07/derivatives.png)
 
 由于k阶导数可以用阶乘表达，于是我们用伽玛函数表达为
   
@@ -408,4 +408,4 @@ _Each generation has found something of interest to say about the gamma function
   * George E. Andrews et al., Special Functions, Cambridge University Press, 2001
   * Ian Tweddle, James Stirling&#8217;s Methodus Differentialis: An Annotated Translation of Stirling&#8217;s Text, Springer, 2003
 
-[![flickering-logo](https://cos.name/wp-content/uploads/2014/07/flickering-logo.png)](https://cos.name/wp-content/uploads/2014/07/flickering-logo.png)
+![flickering-logo](https://cos.name/wp-content/uploads/2014/07/flickering-logo.png)

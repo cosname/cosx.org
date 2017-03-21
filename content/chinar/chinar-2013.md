@@ -22,11 +22,11 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 交通路线（点击看大图）：
   
-[![人民大学](https://cos.name/wp-content/uploads/2013/04/人民大学.png)](https://cos.name/wp-content/uploads/2013/04/人民大学.png)
+![人民大学](https://cos.name/wp-content/uploads/2013/04/人民大学.png)
 
 人大校内地图（点击看大图），**注：国学馆离东门和北门都较近；标出的餐厅都可以付现金就餐** ：
   
-[![map](https://cos.name/wp-content/uploads/2013/04/map.png)](https://cos.name/wp-content/uploads/2013/04/map.png)
+![map](https://cos.name/wp-content/uploads/2013/04/map.png)
 
 ### 三、会议演讲安排
 

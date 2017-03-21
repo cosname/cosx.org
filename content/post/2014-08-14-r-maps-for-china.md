@@ -44,7 +44,7 @@ mymap = ggplot(data = fortify(mydat)) +
     theme_grey()
 print(mymap + coord_map())</pre>
 
-[![unnamed-chunk-2](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2.png)
+![unnamed-chunk-2](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-2.png)
   
 这次中国地图的形状与百度地图一样了。<!--more-->
 
@@ -274,7 +274,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), map = mysh) +
     expand_limits(mysh) + coord_map()
 </pre>
 
-[![unnamed-chunk-14](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14.png)
+![unnamed-chunk-14](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-14.png)
 
 #### 3.4 其他问题
 
@@ -290,7 +290,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), map = mysh) +
 
 我们以起点中文网小说《江山美人志》开篇所附地图为例，绘制虚拟世界里面“中南郡”的GIS地图。为了和实际问题类似，我在地图中画上了参考坐标线。
 
-[![mymap](https://cos.name/wp-content/uploads/2014/08/mymap.png)](https://cos.name/wp-content/uploads/2014/08/mymap.png)
+![mymap](https://cos.name/wp-content/uploads/2014/08/mymap.png)
 
 利用ImageJ“点”工具，同时按住Shift键一次批量多点采样，再点击分析菜的测量，最后保存结果。
 
@@ -356,7 +356,7 @@ writePolyShape(x = myshpdata, fn = "data/myDIYmap_poly")
 <pre>mydat = readShapePoly("data/myDIYmap_poly.shp")
 plot(mydat)</pre>
 
-[![unnamed-chunk-17](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17.png)
+![unnamed-chunk-17](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-17.png)
 
 可以发现，在区域相邻的边界，有咬合分离现象，这是由于我们采样的时候，每个区单独描边，产生了共享边的不一致。不过，我们绘制地图是为了展示流行病学数据，这个误差是可以接受的。
 
@@ -374,7 +374,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), color = "white", map 
     expand_limits(mysh) + coord_map()
 </pre>
 
-[![unnamed-chunk-18](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18.png)](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18.png)
+![unnamed-chunk-18](https://cos.name/wp-content/uploads/2014/08/unnamed-chunk-18.png)
 
 如上，画成统计地图，还算美观。
 

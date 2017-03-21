@@ -29,6 +29,6 @@ slug: time-series-and-spatial-distribution-with-r-dynamically
 
 结合开店数目的静态时序图，我们可以更直观的了解7-Eleven的扩张速度。
 
-[![7-11](https://cos.name/wp-content/uploads/2012/12/7-11.png)](https://cos.name/wp-content/uploads/2012/12/7-11.png)
+![7-11](https://cos.name/wp-content/uploads/2012/12/7-11.png)
 
 该动画采用了R里的animation 包，并得到了该包的作者谢益辉的指点。数据来自于现任美国7-Eleven市场规划部的总监，分析解读来自前任美国7-Eleven地产部副总裁。

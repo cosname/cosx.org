@@ -33,21 +33,21 @@ library(ggfortify)</code></pre>
 df &lt;- iris[c(1, 2, 3, 4)]
 autoplot(prcomp(df))</code></pre>
 
-[![ggfortify-unnamed-chunk-1-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-1-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-1-1.png)你还可以选择数据中的一列来给画出的点按类别自动分颜色。输入`help(autoplot.prcomp)` 可以了解到更多的其他选择。
+![ggfortify-unnamed-chunk-1-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-1-1.png)你还可以选择数据中的一列来给画出的点按类别自动分颜色。输入`help(autoplot.prcomp)` 可以了解到更多的其他选择。
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species')</code></pre>
 
-[![ggfortify-unnamed-chunk-2-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-2-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-2-1.png)比如说给定`label = TRUE` 可以给每个点加上标识（以`rownames`为标准），也可以调整标识的大小。
+![ggfortify-unnamed-chunk-2-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-2-1.png)比如说给定`label = TRUE` 可以给每个点加上标识（以`rownames`为标准），也可以调整标识的大小。
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species', label = TRUE,
          label.size = 3)</code></pre>
 
-[![ggfortify-unnamed-chunk-3-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-3-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-3-1.png)给定 `shape = FALSE` 可以让所有的点消失，只留下标识，这样可以让图更清晰，辨识度更大。
+![ggfortify-unnamed-chunk-3-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-3-1.png)给定 `shape = FALSE` 可以让所有的点消失，只留下标识，这样可以让图更清晰，辨识度更大。
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species', shape = FALSE,
          label.size = 3)</code></pre>
 
-[![ggfortify-unnamed-chunk-4-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-4-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-4-1.png)
+![ggfortify-unnamed-chunk-4-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-4-1.png)
 
 <!--more-->给定 
 
@@ -55,13 +55,13 @@ autoplot(prcomp(df))</code></pre>
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species', loadings = TRUE)</code></pre>
 
-[![ggfortify-unnamed-chunk-5-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-5-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-5-1.png)同样的，你也可以显示特征向量的标识以及调整他们的大小，更多选择请参考帮助文件。
+![ggfortify-unnamed-chunk-5-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-5-1.png)同样的，你也可以显示特征向量的标识以及调整他们的大小，更多选择请参考帮助文件。
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species',
          loadings = TRUE, loadings.colour = 'blue',
          loadings.label = TRUE, loadings.label.size = 3)</code></pre>
 
-[![ggfortify-unnamed-chunk-6-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-6-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-6-1.png)
+![ggfortify-unnamed-chunk-6-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-6-1.png)
 
 ## 因子分析
 
@@ -72,23 +72,23 @@ autoplot(prcomp(df))</code></pre>
 <pre><code class="r">d.factanal &lt;- factanal(state.x77, factors = 3, scores = 'regression')
 autoplot(d.factanal, data = state.x77, colour = 'Income')</code></pre>
 
-[![ggfortify-unnamed-chunk-7-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-7-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-7-1.png)
+![ggfortify-unnamed-chunk-7-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-7-1.png)
 
 <pre><code class="r">autoplot(d.factanal, label = TRUE, label.size = 3,
          loadings = TRUE, loadings.label = TRUE, loadings.label.size  = 3)</code></pre>
 
-[![ggfortify-unnamed-chunk-7-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-7-2.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-7-2.png)
+![ggfortify-unnamed-chunk-7-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-7-2.png)
 
 ## K-均值聚类
 
 <pre><code class="r">autoplot(kmeans(USArrests, 3), data = USArrests)</code></pre>
 
-[![ggfortify-unnamed-chunk-8-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-8-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-8-1.png)
+![ggfortify-unnamed-chunk-8-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-8-1.png)
 
 <pre><code class="r">autoplot(kmeans(USArrests, 3), data = USArrests, label = TRUE, 
          label.size = 3)</code></pre>
 
-[![ggfortify-unnamed-chunk-8-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-8-2.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-8-2.png)
+![ggfortify-unnamed-chunk-8-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-8-2.png)
 
 ## 其他聚类
 
@@ -97,15 +97,15 @@ autoplot(d.factanal, data = state.x77, colour = 'Income')</code></pre>
 <pre><code class="r">library(cluster)
 autoplot(clara(iris[-5], 3))</code></pre>
 
-[![ggfortify-unnamed-chunk-9-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-9-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-9-1.png)给定 `frame = TRUE`，可以把 `stats::kmeans` 和 `cluster::*` 中的每个类圈出来。
+![ggfortify-unnamed-chunk-9-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-9-1.png)给定 `frame = TRUE`，可以把 `stats::kmeans` 和 `cluster::*` 中的每个类圈出来。
 
 <pre><code class="r">autoplot(fanny(iris[-5], 3), frame = TRUE)</code></pre>
 
-[![ggfortify-unnamed-chunk-10-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-10-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-10-1.png)你也可以通过 `frame.type` 来选择圈的类型。更多选择请参照 [`ggplot2::stat_ellipse`](http://docs.ggplot2.org/dev/stat_ellipse.html) 里面的 `frame.type` 的 `type` 关键词。
+![ggfortify-unnamed-chunk-10-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-10-1.png)你也可以通过 `frame.type` 来选择圈的类型。更多选择请参照 [`ggplot2::stat_ellipse`](http://docs.ggplot2.org/dev/stat_ellipse.html) 里面的 `frame.type` 的 `type` 关键词。
 
 <pre><code class="r">autoplot(pam(iris[-5], 3), frame = TRUE, frame.type = 'norm')</code></pre>
 
-[![ggfortify-unnamed-chunk-11-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-11-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-11-1.png)更多关于聚类方面的可视化请参考 Github 上的 [Vignette](https://github.com/sinhrks/ggfortify/tree/master/vignettes) 或者 [Rpubs](http://rpubs.com/sinhrks/plot_pca) 上的例子。
+![ggfortify-unnamed-chunk-11-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-11-1.png)更多关于聚类方面的可视化请参考 Github 上的 [Vignette](https://github.com/sinhrks/ggfortify/tree/master/vignettes) 或者 [Rpubs](http://rpubs.com/sinhrks/plot_pca) 上的例子。
 
 ## lfda（Fisher局部判别分析）
 
@@ -116,19 +116,19 @@ autoplot(clara(iris[-5], 3))</code></pre>
 model &lt;- lfda(iris[-5], iris[, 5], 4, metric="plain")
 autoplot(model, data = iris, frame = TRUE, frame.colour = 'Species')</code></pre>
 
-[![ggfortify-unnamed-chunk-12-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-12-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-12-1.png)
+![ggfortify-unnamed-chunk-12-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-12-1.png)
 
 <pre><code class="r"># 非线性核Fisher局部判别分析 (KLFDA)
 model &lt;- klfda(kmatrixGauss(iris[-5]), iris[, 5], 4, metric="plain")
 autoplot(model, data = iris, frame = TRUE, frame.colour = 'Species')</code></pre>
 
-[![ggfortify-unnamed-chunk-12-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-12-2.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-12-2.png)**注意** 对 `iris` 数据来说，不同的类之间的关系很显然不是简单的线性，这种情况下非线性的klfda 影响可能太强大而影响了可视化的效果，在使用前请充分理解每个算法的意义以及效果。
+![ggfortify-unnamed-chunk-12-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-12-2.png)**注意** 对 `iris` 数据来说，不同的类之间的关系很显然不是简单的线性，这种情况下非线性的klfda 影响可能太强大而影响了可视化的效果，在使用前请充分理解每个算法的意义以及效果。
 
 <pre><code class="r"># 半监督Fisher局部判别分析 (SELF)
 model &lt;- self(iris[-5], iris[, 5], beta = 0.1, r = 3, metric="plain")
 autoplot(model, data = iris, frame = TRUE, frame.colour = 'Species')</code></pre>
 
-[![ggfortify-unnamed-chunk-13-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-13-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-13-1.png)
+![ggfortify-unnamed-chunk-13-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-13-1.png)
 
 ## 时间序列的可视化
 
@@ -139,11 +139,11 @@ autoplot(model, data = iris, frame = TRUE, frame.colour = 'Species')</code></pre
 <pre><code class="r">library(ggfortify)
 autoplot(AirPassengers)</code></pre>
 
-[![ggfortify-unnamed-chunk-14-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-14-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-14-1.png)可以使用 `ts.colour` 和 `ts.linetype` 来改变线的颜色和形状。更多的选择请参考 `help(autoplot.ts)`。
+![ggfortify-unnamed-chunk-14-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-14-1.png)可以使用 `ts.colour` 和 `ts.linetype` 来改变线的颜色和形状。更多的选择请参考 `help(autoplot.ts)`。
 
 <pre><code class="r">autoplot(AirPassengers, ts.colour = 'red', ts.linetype = 'dashed')</code></pre>
 
-[![ggfortify-unnamed-chunk-15-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-15-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-15-1.png)
+![ggfortify-unnamed-chunk-15-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-15-1.png)
 
 ## 多变量时间序列
 
@@ -151,11 +151,11 @@ autoplot(AirPassengers)</code></pre>
 data(Canada)
 autoplot(Canada)</code></pre>
 
-[![ggfortify-unnamed-chunk-16-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-16-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-16-1.png)使用 `facets = FALSE` 可以把所有变量画在一条轴上。
+![ggfortify-unnamed-chunk-16-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-16-1.png)使用 `facets = FALSE` 可以把所有变量画在一条轴上。
 
 <pre><code class="r">autoplot(Canada, facets = FALSE)</code></pre>
 
-[![ggfortify-unnamed-chunk-17-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-17-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-17-1.png)
+![ggfortify-unnamed-chunk-17-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-17-1.png)
 
 `autoplot` 也可以理解其他的时间序列类别。可支持的R包有：
 
@@ -169,20 +169,20 @@ autoplot(Canada)</code></pre>
 <pre><code class="r">library(xts)
 autoplot(as.xts(AirPassengers), ts.colour = 'green')</code></pre>
 
-[![ggfortify-unnamed-chunk-18-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-18-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-18-1.png)
+![ggfortify-unnamed-chunk-18-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-18-1.png)
 
 <pre><code class="r">library(timeSeries)
 autoplot(as.timeSeries(AirPassengers), ts.colour = ('dodgerblue3'))</code></pre>
 
-[![ggfortify-unnamed-chunk-18-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-18-2.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-18-2.png)你也可以通过 `ts.geom` 来改变几何形状，目前支持的有 `line`， `bar` 和 `point。`
+![ggfortify-unnamed-chunk-18-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-18-2.png)你也可以通过 `ts.geom` 来改变几何形状，目前支持的有 `line`， `bar` 和 `point。`
 
 <pre><code class="r">autoplot(AirPassengers, ts.geom = 'bar', fill = 'blue')</code></pre>
 
-[![ggfortify-unnamed-chunk-19-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-19-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-19-1.png)
+![ggfortify-unnamed-chunk-19-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-19-1.png)
 
 <pre><code class="r">autoplot(AirPassengers, ts.geom = 'point', shape = 3)</code></pre>
 
-[![ggfortify-unnamed-chunk-20-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-20-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-20-1.png)
+![ggfortify-unnamed-chunk-20-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-20-1.png)
 
 ## forecast包
 
@@ -191,12 +191,12 @@ d.arima &lt;- auto.arima(AirPassengers)
 d.forecast &lt;- forecast(d.arima, level = c(95), h = 50)
 autoplot(d.forecast)</code></pre>
 
-[![ggfortify-unnamed-chunk-21-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-21-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-21-1.png)有很多设置可供调整：
+![ggfortify-unnamed-chunk-21-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-21-1.png)有很多设置可供调整：
 
 <pre><code class="r">autoplot(d.forecast, ts.colour = 'firebrick1', predict.colour = 'red',
          predict.linetype = 'dashed', conf.int = FALSE)</code></pre>
 
-[![ggfortify-unnamed-chunk-22-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-22-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-22-1.png)
+![ggfortify-unnamed-chunk-22-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-22-1.png)
 
 ## vars包
 
@@ -207,18 +207,18 @@ d.var &lt;- VAR(Canada, p = d.vselect, type = 'const')
 autoplot(predict(d.var, n.ahead = 50), ts.colour = 'dodgerblue4',
          predict.colour = 'blue', predict.linetype = 'dashed')</code></pre>
 
-[![ggfortify-unnamed-chunk-24-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-24-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-24-1.png)
+![ggfortify-unnamed-chunk-24-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-24-1.png)
 
 ## changepoint包
 
 <pre><code class="r">library(changepoint)
 autoplot(cpt.meanvar(AirPassengers))</code></pre>
 
-[![ggfortify-unnamed-chunk-25-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-25-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-25-1.png)
+![ggfortify-unnamed-chunk-25-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-25-1.png)
 
 <pre><code class="r">autoplot(cpt.meanvar(AirPassengers), cpt.colour = 'blue', cpt.linetype = 'solid')</code></pre>
 
-[![ggfortify-unnamed-chunk-26-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-26-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-26-1.png)
+![ggfortify-unnamed-chunk-26-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-26-1.png)
 
 ## strucchange包
 
@@ -226,7 +226,7 @@ autoplot(cpt.meanvar(AirPassengers))</code></pre>
 autoplot(breakpoints(Nile ~ 1), ts.colour = 'blue', ts.linetype = 'dashed',
          cpt.colour = 'dodgerblue3', cpt.linetype = 'solid')</code></pre>
 
-[![ggfortify-unnamed-chunk-27-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-27-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-27-1.png)
+![ggfortify-unnamed-chunk-27-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-27-1.png)
 
 ## dlm包
 
@@ -240,21 +240,21 @@ filtered &lt;- dlmFilter(Nile, model)
 
 autoplot(filtered)</code></pre>
 
-[![ggfortify-unnamed-chunk-28-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-28-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-28-1.png)
+![ggfortify-unnamed-chunk-28-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-28-1.png)
 
 <pre><code class="r">autoplot(filtered, ts.linetype = 'dashed', fitted.colour = 'blue')</code></pre>
 
-[![ggfortify-unnamed-chunk-29-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-29-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-29-1.png)
+![ggfortify-unnamed-chunk-29-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-29-1.png)
 
 <pre><code class="r">smoothed &lt;- dlmSmooth(filtered)
 autoplot(smoothed)</code></pre>
 
-[![ggfortify-unnamed-chunk-30-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-30-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-30-1.png)
+![ggfortify-unnamed-chunk-30-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-30-1.png)
 
 <pre><code class="r">p &lt;- autoplot(filtered)
 autoplot(smoothed, ts.colour = 'blue', p = p)</code></pre>
 
-## [![ggfortify-unnamed-chunk-31-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-31-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-31-1.png)KFAS包
+## ![ggfortify-unnamed-chunk-31-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-31-1.png)KFAS包
 
 <pre><code class="r">library(KFAS)
 model &lt;- SSModel(
@@ -266,12 +266,12 @@ fit &lt;- fitSSM(model=model, inits=c(log(var(Nile)),log(var(Nile))),
 smoothed &lt;- KFS(fit$model)
 autoplot(smoothed)</code></pre>
 
-[![ggfortify-unnamed-chunk-32-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-32-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-32-1.png)使用 `smoothing='none'` 可以画出过滤后的结果。
+![ggfortify-unnamed-chunk-32-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-32-1.png)使用 `smoothing='none'` 可以画出过滤后的结果。
 
 <pre><code class="r">filtered &lt;- KFS(fit$model, filtering="mean", smoothing='none')
 autoplot(filtered)</code></pre>
 
-[![ggfortify-unnamed-chunk-33-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-33-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-33-1.png)
+![ggfortify-unnamed-chunk-33-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-33-1.png)
 
 <pre><code class="r">trend &lt;- signal(smoothed, states="trend")
 p &lt;- autoplot(filtered)
@@ -279,7 +279,7 @@ autoplot(trend, ts.colour = 'blue', p = p)</code></pre>
 
 &nbsp;
 
-[![ggfortify-unnamed-chunk-35-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-35-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-35-1.png)
+![ggfortify-unnamed-chunk-35-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-35-1.png)
 
 # stats包
 
@@ -293,42 +293,42 @@ autoplot(trend, ts.colour = 'blue', p = p)</code></pre>
 <pre><code class="r">autoplot(stl(AirPassengers, s.window = 'periodic'), ts.colour = 'blue')
 </code></pre>
 
-[![ggfortify-unnamed-chunk-36-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-36-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-36-1.png)
+![ggfortify-unnamed-chunk-36-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-36-1.png)
 
 <pre><code class="r">autoplot(acf(AirPassengers, plot = FALSE))
 </code></pre>
 
 &nbsp;
 
-[![ggfortify-unnamed-chunk-37-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-37-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-37-1.png)
+![ggfortify-unnamed-chunk-37-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-37-1.png)
 
 <pre><code class="r">autoplot(acf(AirPassengers, plot = FALSE), conf.int.fill = '#0000FF', 
          conf.int.value = 0.8, conf.int.type = 'ma')</code></pre>
 
 &nbsp;
 
-[![ggfortify-unnamed-chunk-38-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-38-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-38-1.png)
+![ggfortify-unnamed-chunk-38-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-38-1.png)
 
 <pre><code class="r">autoplot(spec.ar(AirPassengers, plot = FALSE))</code></pre>
 
 &nbsp;
 
-[![ggfortify-unnamed-chunk-39-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-39-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-39-1.png)
+![ggfortify-unnamed-chunk-39-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-39-1.png)
 
 <pre><code class="r">ggcpgram(arima.sim(list(ar = c(0.7, -0.5)), n = 50))</code></pre>
 
-[![ggfortify-unnamed-chunk-40-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-40-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-40-1.png)
+![ggfortify-unnamed-chunk-40-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-40-1.png)
 
 <pre><code class="r">library(forecast)
 ggtsdiag(auto.arima(AirPassengers))</code></pre>
 
-[![ggfortify-unnamed-chunk-41-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-41-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-41-1.png)
+![ggfortify-unnamed-chunk-41-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-41-1.png)
 
 <pre><code class="r">gglagplot(AirPassengers, lags = 4)</code></pre>
 
 &nbsp;
 
-[![ggfortify-unnamed-chunk-42-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-42-1.png)](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-42-1.png)
+![ggfortify-unnamed-chunk-42-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-42-1.png)
 
 更多关于时间序列的例子，请参考 [Rpubs](http://rpubs.com/sinhrks/plot_ts) 上的介绍。
 

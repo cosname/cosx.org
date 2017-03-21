@@ -64,7 +64,7 @@ name=name[aa]</pre>
 
 截取部分显示如下：
   
-[![](http://farm4.staticflickr.com/3722/9358128510_ea8bfe62b3.jpg)](http://farm4.staticflickr.com/3722/9358128510_ea8bfe62b3.jpg)
+![](http://farm4.staticflickr.com/3722/9358128510_ea8bfe62b3.jpg)
 
 **2、数据清洗**
 

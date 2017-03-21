@@ -24,7 +24,7 @@ y & = 13\text{cos}t &#8211; 5\text{cos}2t &#8211; 2\text{cos}3t &#8211; \text{co
   
 \end{split}$$
 
-[![](https://cos.name/wp-content/uploads/2012/02/heart.png)](https://cos.name/wp-content/uploads/2012/02/heart.png)
+![](https://cos.name/wp-content/uploads/2012/02/heart.png)
 
 为了得到嵌套心形图案，我使用了**grid**包创建了多个viewport。viewport是**grid**包的一个重要特色，此概念类似于photoshop的图层。
 
@@ -32,17 +32,17 @@ y & = 13\text{cos}t &#8211; 5\text{cos}2t &#8211; 2\text{cos}3t &#8211; \text{co
 
 创建一个viewport，我们需要设置它的位置、长度和宽度，下图虚线实际上并不出现在R的output里面，但这个矩形区域图层会成为接下来画图的区域。构建了新的viewport以后，我们可以用**pushViewport()**命令锁定该图层，使之成为目标区域。我们也可以构建多个viewport，几个viewport之间可以通过命令相互切换。
 
-[![](https://cos.name/wp-content/uploads/2012/02/region.png)](https://cos.name/wp-content/uploads/2012/02/region.png)
+![](https://cos.name/wp-content/uploads/2012/02/region.png)
 
 例如，在第一个图层的基础上在新建一个图层，调整新图层的长度与宽度使之稍微小于第一个图层， 用**pushViewport()**锁定新图层，再调用一次心形函数，以此类推，循环创建多个嵌套图层，并依次在各个图层上画心形函数，于是我们可以得到一系列嵌套的心形。
 
-[![](https://cos.name/wp-content/uploads/2012/02/manyHearts.png)](https://cos.name/wp-content/uploads/2012/02/manyHearts.png)
+![](https://cos.name/wp-content/uploads/2012/02/manyHearts.png)
 
 此外，**grid**包允许我们对图形进行复制、旋转、放缩等修改。要旋转心形函数，我们并不需要修改函数本身，而是可以通过旋转viewport的方式旋转我们所需要绘制的图形。设置新viewport，调整angle函数，那么在此图层下绘制的任何图形将会被旋转。
 
 利用viewport对图形进行修改，我们可以绘制各种有趣的图形pattern，本人只是**grid**包的初学者，如有偏颇之处望多多包涵。最后，祝愿大家情人节快乐！
 
-[![](https://cos.name/wp-content/uploads/2012/02/twoHearts.png)](https://cos.name/wp-content/uploads/2012/02/twoHearts.png)
+![](https://cos.name/wp-content/uploads/2012/02/twoHearts.png)
 
 以下是“情人节礼物”的代码：
 

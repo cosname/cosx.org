@@ -73,7 +73,7 @@ dev.off();</pre>
 
 上面的小程序会在图形中随机显示一些汉字，效果如下图：
 
-[![随机显示汉字](https://cos.name/wp-content/uploads/2014/01/chinese-char.png)](https://cos.name/wp-content/uploads/2014/01/chinese-char.png)
+![随机显示汉字](https://cos.name/wp-content/uploads/2014/01/chinese-char.png)
 
 <p style="text-align: center;">
   图1：随机显示汉字

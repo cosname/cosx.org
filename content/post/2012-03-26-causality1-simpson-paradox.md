@@ -17,7 +17,7 @@ tags:
 slug: causality1-simpson-paradox
 ---
 
-[![](https://cos.name/wp-content/uploads/2012/03/causality2-cover.jpg)](https://cos.name/wp-content/uploads/2012/03/causality2-cover.jpg)
+![](https://cos.name/wp-content/uploads/2012/03/causality2-cover.jpg)
 
 在国内的时候，向别人介绍自己是研究因果推断（causal inference）的，多半的反应是：什么？统计还能研究因果？这确实是一个问题：统计研究因果，能，还是不能？直接给出回答，比较冒险；如果有可能，我需要花一些篇幅来阐述这个问题。
 

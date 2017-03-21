@@ -43,7 +43,7 @@ slug: maximum-likelihood-estimation-in-r
 
 <pre class="brush: r">&gt; hist(waiting)</pre>
 
-[![ml_hist](https://cos.name/wp-content/uploads/2009/08/ml_hist.png "ml_hist")](https://cos.name/wp-content/uploads/2009/08/ml_hist.png)
+![ml_hist](https://cos.name/wp-content/uploads/2009/08/ml_hist.png "ml_hist")
   
 从图中可以看出，其分布是两个正态分布的混合。可以用如下的分布函数来描述该数据
 
@@ -113,7 +113,7 @@ slug: maximum-likelihood-estimation-in-r
 &gt; #画出拟合的曲线
 &gt; lines(X,f)</pre>
 
-[![clip_image004.jpg](https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg "clip_image004.jpg")](https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg)
+![clip_image004.jpg](https://cos.name/wp-content/uploads/2009/07/clip_image004.jpg "clip_image004.jpg")
 
 <pre class="brush: r">&gt; detach()</pre>
 

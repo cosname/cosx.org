@@ -15,7 +15,7 @@ slug: 8th-r-conference-wuhan
 
 R语言作为一种用于数据分析和图形展示的语言，是受S语言和Scheme语言影响发展而来，具有免费、开源及统计模块齐全的特性。其应用范围涵盖了数据挖掘、机器学习、计量经济学、实证金融学、生物统计、气象学、电子商务等诸多领域。R语言的官方机构每年都会举办useR!会议，各个国家及地区也定期会有R的交流活动。中国的R语言会议从2008年开始已经成功举办到了第八届，之前在北京、上海、广州、杭州等地举办的会议都非常成功，大力推动了R语言在国内的蓬勃发展，促进了R语言乃至数据科学在中国的推广和发展。为了让更多的人认识和熟悉R，华中地区将首次迎来中国R语言会议。2015年11月7日在湖北经济学院和统计之都等的共同努力下，R语言会议将在江城武汉举办。本次会议旨在搭建各行各业R用户技术交流的平台，拓宽R语言与数据科学、金融学、统计学、机器学习等领域结合的新视角，吸引越来越多的华中地区人士关注R语言和数据科学。
 
-[![China-R-Logo-trans](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+![China-R-Logo-trans](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
 
 一、会议时间<!--more-->
 

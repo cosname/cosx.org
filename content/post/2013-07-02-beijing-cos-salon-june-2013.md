@@ -185,7 +185,7 @@ data&lt;-ddply(train,.(user,item,pref),summarize,idx=index(item))</pre>
 
 **现场图片**
 
-[![rhadoop-cos4](http://blog.fens.me/wp-content/uploads/2013/06/rhadoop-cos4.jpg)](http://blog.fens.me/wp-content/uploads/2013/06/rhadoop-cos4.jpg)
+![rhadoop-cos4](http://blog.fens.me/wp-content/uploads/2013/06/rhadoop-cos4.jpg)
 
 **沙龙视频：**
 

@@ -69,7 +69,7 @@ $b_i$反映的是与地域相关的潜在的患病风险因子。其他项不言
 
 ## <span style="color: #800000;">第二节 GeoBUGS的界面操作</span><figure id="attachment_1271" style="width: 438px" class="wp-caption aligncenter">
 
-[![GeoBUGS的地图工具配置界面](https://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png "GeoBUGS的地图工具配置界面")](https://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png)<figcaption class="wp-caption-text">GeoBUGS的地图工具配置界面</figcaption></figure> 
+![GeoBUGS的地图工具配置界面](https://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png "GeoBUGS的地图工具配置界面")<figcaption class="wp-caption-text">GeoBUGS的地图工具配置界面</figcaption></figure> 
 
 第一步，打开Map-> Map Tool菜单，选择Scotland这张地图
 
@@ -83,11 +83,11 @@ $b_i$反映的是与地域相关的潜在的患病风险因子。其他项不言
 
 很简单吧。<figure id="attachment_1272" style="width: 445px" class="wp-caption aligncenter">
 
-[![GeoBUGS生成的地图](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png "GeoBUGS生成的地图")](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png)<figcaption class="wp-caption-text">GeoBUGS生成的地图</figcaption></figure> 
+![GeoBUGS生成的地图](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png "GeoBUGS生成的地图")<figcaption class="wp-caption-text">GeoBUGS生成的地图</figcaption></figure> 
 
 GeoBUGS还提供了一些小工具，比如Adjacency Map来查看邻接图。<figure id="attachment_1273" style="width: 300px" class="wp-caption aligncenter">
 
-[![用GeoBUGS显示邻接地图](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png "用GeoBUGS显示邻接地图")](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png)<figcaption class="wp-caption-text">用GeoBUGS显示邻接地图</figcaption></figure> 
+![用GeoBUGS显示邻接地图](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png "用GeoBUGS显示邻接地图")<figcaption class="wp-caption-text">用GeoBUGS显示邻接地图</figcaption></figure> 
 
 ## <span style="color: #800000;">附录</span>
 

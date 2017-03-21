@@ -353,7 +353,7 @@ tab9303</pre>
 <pre class="brush: r">ax
 amat</pre>
 
-[![](https://cos.name/wp-content/uploads/2011/01/actual-fig-1.png "actual-fig-1")](https://cos.name/wp-content/uploads/2011/01/actual-fig-1.png)
+![](https://cos.name/wp-content/uploads/2011/01/actual-fig-1.png "actual-fig-1")
   
 各年龄的均值如上图所示。
 
@@ -386,7 +386,7 @@ sum(kt)</pre>
 
 在bmat矩阵中其中，如各列名称所示，第一列为年龄，第二列为bx，第三至六列分别为线性拟合bx时的t值、t临界值、F值、F临界值和拟合优度值，可以看出所有的bx都是显著的。
   
-[![](https://cos.name/wp-content/uploads/2011/01/actual-fig-2.png "actual-fig-2")](https://cos.name/wp-content/uploads/2011/01/actual-fig-2.png)
+![](https://cos.name/wp-content/uploads/2011/01/actual-fig-2.png "actual-fig-2")
 
 ##### 2.3 k值的调整
 
@@ -420,7 +420,7 @@ sum(kt)</pre>
 
 下图为向后预测39期得出的出生平均余命的预测值，在2050年左右，中国男性的平均出生余命达到90岁。这似乎有些过高，所以本模型只适合做15年以内的预测。
 
-[![](https://cos.name/wp-content/uploads/2011/01/actual-fig-3.png "actual-fig-3")](https://cos.name/wp-content/uploads/2011/01/actual-fig-3.png)
+![](https://cos.name/wp-content/uploads/2011/01/actual-fig-3.png "actual-fig-3")
 
 **代码：**附录三
 

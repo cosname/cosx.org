@@ -16,7 +16,7 @@ tags:
 slug: statistics-in-chinese-song-poem-2
 ---
 
-[![](https://cos.name/wp-content/uploads/2012/03/galaxy.jpg "统计词话（二）配图")](https://cos.name/wp-content/uploads/2012/03/galaxy.jpg)
+![](https://cos.name/wp-content/uploads/2012/03/galaxy.jpg "统计词话（二）配图")
 
 > 抬头，他们看到了诗云。
   
@@ -715,9 +715,9 @@ corrRect(c(4, 2, 5));</pre>
 
 你有没有觉得之前那张黑夜与星星的图不够炫？那是因为词人和词牌这两个维度是在相互垂直的坐标轴上，所以给人一种太规整的感觉。接下来我们摆弄一个小的技巧，就是把它们放到极坐标中，每一个词牌代表一个角度（方向），每一位词人则对应于一个距离，于是之前的那张图就转变成了下面的样子：
 
-[![](https://cos.name/wp-content/uploads/2012/03/poem-cloud.png "统计词话（二）——极坐标")](https://cos.name/wp-content/uploads/2012/03/poem-cloud.png)最后，我们再用核密度平滑来模拟星光的效果（使用`smoothScatter()`绘制平滑散点图），就成了最后这片璀璨的群星：
+![](https://cos.name/wp-content/uploads/2012/03/poem-cloud.png "统计词话（二）——极坐标")最后，我们再用核密度平滑来模拟星光的效果（使用`smoothScatter()`绘制平滑散点图），就成了最后这片璀璨的群星：
 
-[![](https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth.png "统计词话（二）——诗云")](https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth.png)在这一片星海中，每一个同心圆（椭圆）都代表了一位词人，而从中心向外的每一个方向都是一个词牌。这是人类的群星闪耀时，而幸运的是，这一片星空，是属于这个古老的国度的。
+![](https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth.png "统计词话（二）——诗云")在这一片星海中，每一个同心圆（椭圆）都代表了一位词人，而从中心向外的每一个方向都是一个词牌。这是人类的群星闪耀时，而幸运的是，这一片星空，是属于这个古老的国度的。
 
 附：绘制图形的R语言代码
 

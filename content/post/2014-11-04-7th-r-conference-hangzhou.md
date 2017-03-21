@@ -29,7 +29,7 @@ slug: 7th-r-conference-hangzhou
 
 杭州市余杭区杭州师范大学仓前校区，恕园7号楼艺术大厅。
   
-[![仓前校区图片](https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg)](https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg)
+![仓前校区图片](https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg)
   
 <!--more-->
 

@@ -24,7 +24,7 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 
   
-[![B1](https://cos.name/wp-content/uploads/2013/12/B1.jpg)](https://cos.name/wp-content/uploads/2013/12/B1.jpg)
+![B1](https://cos.name/wp-content/uploads/2013/12/B1.jpg)
   
 <!--more-->
 
@@ -62,7 +62,7 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 贝叶斯之道研究室的几名“年轻学者”（王中凯、盖亚男、朱祁恒、高磊），“斗胆”为大家奉献了四场贝叶斯入门培训报告。不足之处，请各位学友多多批评指正。
 
-[![b2](https://cos.name/wp-content/uploads/2013/12/b2.jpg)](https://cos.name/wp-content/uploads/2013/12/b2.jpg)
+![b2](https://cos.name/wp-content/uploads/2013/12/b2.jpg)
 
 # 资料下载
 
@@ -88,7 +88,7 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 纪念贝叶斯文艺晚会在冰镇骆驼乐队的“好想大声说爱你”拉开序幕，晚会除了天津财经大学的校舞蹈团、校民乐团和校合唱团倾情演出外，还特邀了南开大学、天津大学以及天津商业大学的相关社团进行助演。晚会形式新颖，采用现场微博互动的方式与同学们进行了实时动态交流。艺术系自己动手制作服装，进行的展演让观众们叹为观止，话剧[《穿越时空的贝叶斯》](https://cos.name/wp-content/uploads/2013/12/下载11-张园-贝叶斯话剧剧本.doc)惹得广大观众捧腹不止，演员们辛苦表演，观众们认真观看，掌声如潮，好评不断。贝叶斯知识问答和现场微博抽奖这两个环节更是将晚会推向了高潮。
 
-[![b3](https://cos.name/wp-content/uploads/2013/12/b3.jpg)](https://cos.name/wp-content/uploads/2013/12/b3.jpg) [![b4](https://cos.name/wp-content/uploads/2013/12/b4.jpg)](https://cos.name/wp-content/uploads/2013/12/b4.jpg) [![b5](https://cos.name/wp-content/uploads/2013/12/b5.jpg)](https://cos.name/wp-content/uploads/2013/12/b5.jpg) [![b6](https://cos.name/wp-content/uploads/2013/12/b6.jpg)](https://cos.name/wp-content/uploads/2013/12/b6.jpg) [![b7](https://cos.name/wp-content/uploads/2013/12/b7.jpg)](https://cos.name/wp-content/uploads/2013/12/b7.jpg)
+![b3](https://cos.name/wp-content/uploads/2013/12/b3.jpg) ![b4](https://cos.name/wp-content/uploads/2013/12/b4.jpg) ![b5](https://cos.name/wp-content/uploads/2013/12/b5.jpg) ![b6](https://cos.name/wp-content/uploads/2013/12/b6.jpg) ![b7](https://cos.name/wp-content/uploads/2013/12/b7.jpg)
 
 &nbsp;
 

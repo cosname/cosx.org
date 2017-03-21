@@ -24,7 +24,7 @@ slug: casuality8-smoke-and-lung-cancer
 
 **一、Cornfield 条件或者 Cornfield 不等式**
 
-[![fisher](https://cos.name/wp-content/uploads/2013/09/fisher.gif)](https://cos.name/wp-content/uploads/2013/09/fisher.gif)
+![fisher](https://cos.name/wp-content/uploads/2013/09/fisher.gif)
 
 <p style="text-align: center">
   （图注：R A Fisher）
@@ -48,7 +48,7 @@ $$
 
 那么 Cornfield 是如何有力反驳Fisher的观点的呢？
 
-[![cornfield](https://cos.name/wp-content/uploads/2013/09/cornfield.jpeg)](https://cos.name/wp-content/uploads/2013/09/cornfield.jpeg)
+![cornfield](https://cos.name/wp-content/uploads/2013/09/cornfield.jpeg)
 
 &nbsp;
 

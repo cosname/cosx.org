@@ -17,7 +17,7 @@ slug: cos-salon-15th-guangzhou
 
 广州COS沙龙第三期（总十五期）于2013年10月19日在中山大学南校区数学楼415讲学厅举行，本期沙龙由中山大学统计科学系及统计之都主办，邀请了来自SAS公司JMP事业部华南区业务部业务拓展经理王子欣女士和来自Oracle公司的韩锷春先生作为嘉宾，分别就JMP可视化统计学习和微博营销数字化分析进行了专题介绍。本次沙龙共吸引了数十位对数据分析和数据挖掘有兴趣的高校学生和来自博汇数码、唯品会等公司的从业人员。
 
-[![王子欣](https://cos.name/wp-content/uploads/2013/11/王子欣.png)](https://cos.name/wp-content/uploads/2013/11/王子欣.png)
+![王子欣](https://cos.name/wp-content/uploads/2013/11/王子欣.png)
 
 <p align="center">
   王子欣女士自我介绍
@@ -35,7 +35,7 @@ slug: cos-salon-15th-guangzhou
 
 &nbsp;
 
-[![韩](https://cos.name/wp-content/uploads/2013/11/韩.png)](https://cos.name/wp-content/uploads/2013/11/韩.png)
+![韩](https://cos.name/wp-content/uploads/2013/11/韩.png)
 
 <p align="center">
   韩锷春先生的主题展示
@@ -45,7 +45,7 @@ slug: cos-salon-15th-guangzhou
 
 &nbsp;
 
-[![观众](https://cos.name/wp-content/uploads/2013/11/观众.png)](https://cos.name/wp-content/uploads/2013/11/观众.png)
+![观众](https://cos.name/wp-content/uploads/2013/11/观众.png)
 
 <p align="center">
   济济一堂的观众

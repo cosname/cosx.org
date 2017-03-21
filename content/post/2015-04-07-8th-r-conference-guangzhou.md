@@ -15,7 +15,7 @@ R是用于统计分析、绘图的语言和操作环境，是属于GNU系统的�
 
 **[第八届R语言会议（广州会场）演讲报名](http://chinar-8th-gz.eventdove.com/event/101311/page/30436%20)**和**<a href="http://chinar2015gz.vasee.com/" target="_blank">参会者报名</a>**现**已开放，****欢迎各位踊跃报名参加，在5月于康乐园一起享受一场R语言的盛会！**
 
-[![China-R-Logo-trans](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+![China-R-Logo-trans](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
 
 **会议的相关情况如下：**
 
@@ -29,7 +29,7 @@ R是用于统计分析、绘图的语言和操作环境，是属于GNU系统的�
 
 <!--more-->
 
-[![地图-广州](https://cos.name/wp-content/uploads/2015/04/地图-广州.png)](https://cos.name/wp-content/uploads/2015/04/地图-广州.png)
+![地图-广州](https://cos.name/wp-content/uploads/2015/04/地图-广州.png)
 
 **三、会议情况**
 

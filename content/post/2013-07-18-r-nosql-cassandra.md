@@ -26,7 +26,7 @@ slug: r-nosql-cassandra
   
 <a title="R利剑NoSQL系列文章 之 cassandra" href="https://cos.name/2013/07/r-nosql-cassandra/" target="_blank">https://cos.name/2013/07/r-nosql-cassandra/</a>
 
-[![rcassandra](http://blog.fens.me/wp-content/uploads/2013/07/rcassandra.png)](http://blog.fens.me/wp-content/uploads/2013/07/rcassandra.png)
+![rcassandra](http://blog.fens.me/wp-content/uploads/2013/07/rcassandra.png)
   
 <!--more-->
 

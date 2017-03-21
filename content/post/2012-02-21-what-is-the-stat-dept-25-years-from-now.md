@@ -19,7 +19,7 @@ slug: what-is-the-stat-dept-25-years-from-now
 > 
 > Leo Breiman简介：加州伯克利统计系教授，美国国家科学院院士，20世纪伟大的统计学家，囊括多项统计领域大奖。机器学习先驱者，分类回归树作者之一，Bagging方法发明者，对模式识别领域有巨大贡献。于2005年逝世。更多信息可参考<a href="http://oz.berkeley.edu/users/breiman/" target="_blank">此处</a>和<a href="ftp://ftp.stat.math.ethz.ch/Research-Reports/Other-Manuscripts/buhlmann/AOAS381.pdf" target="_blank">此处</a>。
 
-[![](https://cos.name/wp-content/uploads/2012/02/Leo_Breiman.jpg "Leo_Breiman")](https://cos.name/wp-content/uploads/2012/02/Leo_Breiman.jpg)很久以前，Peter Bickel 就请我来做一个毕业典礼致辞。Peter 是非常聪明的，他知道，如果提前请人在似乎很遥远的将来某天去发言，他们很可能会答应，而我就是如此。但随着时间的临近，要发言的现实紧迫感也逼近了。朋友说，“你可以说些很长的笑话”。但是一来我并不擅长讲笑话，二来我觉得讲笑话似乎也不恰当。因此，我还是决定谈谈我们都熟悉的东西——统计——我们都是他的一份子，一个古怪而有趣的领域。
+![](https://cos.name/wp-content/uploads/2012/02/Leo_Breiman.jpg "Leo_Breiman")很久以前，Peter Bickel 就请我来做一个毕业典礼致辞。Peter 是非常聪明的，他知道，如果提前请人在似乎很遥远的将来某天去发言，他们很可能会答应，而我就是如此。但随着时间的临近，要发言的现实紧迫感也逼近了。朋友说，“你可以说些很长的笑话”。但是一来我并不擅长讲笑话，二来我觉得讲笑话似乎也不恰当。因此，我还是决定谈谈我们都熟悉的东西——统计——我们都是他的一份子，一个古怪而有趣的领域。
 
 试想一下你已经离开且没有接触这个领域25年了。也许你至今一直在撒哈拉中部的石油勘探公司工作，或者在巴塔哥尼亚做调查，又或者在一个广阔的狩猎保留地中计算着珍稀鸟类数目。
 
@@ -63,7 +63,7 @@ slug: what-is-the-stat-dept-25-years-from-now
 
 所以，现在你来看看， 25年后在伯克利的校园散步，发生了什么事。第一件事，从欧几里得校门进来，你会发现到埃文斯大楼不复存在。你停下来问一个年轻的学生：“埃文斯大楼发生了什么事？”。他想了一会儿说：“这是我记得的， 在2000年初，有一些学生骚乱，他们认为埃文斯大楼有碍观瞻而要求拆除，当局妥协。”<figure id="attachment_4662" style="width: 350px" class="wp-caption aligncenter">
 
-[![](https://cos.name/wp-content/uploads/2012/02/Evans_Hall_UCB_From_Sather_Tower_2007.jpg "Evans_Hall_UCB_From_Sather_Tower_2007")](https://cos.name/wp-content/uploads/2012/02/Evans_Hall_UCB_From_Sather_Tower_2007.jpg)<figcaption class="wp-caption-text">埃文斯大楼</figcaption></figure> 
+![](https://cos.name/wp-content/uploads/2012/02/Evans_Hall_UCB_From_Sather_Tower_2007.jpg "Evans_Hall_UCB_From_Sather_Tower_2007")<figcaption class="wp-caption-text">埃文斯大楼</figcaption></figure> 
 
 “那么统计系呢？”“统计系吗？我不知道什么统计系，但那边好像在建设。”于是你进入一个可爱小建筑，外面覆盖着紫色的瓷砖，门上方写着“信息科学” 。当你在内闲逛，一切仿佛似曾相识——刚才不是Nolan教授刚经过吗？不过，虽然25年后一些面孔仍然熟悉，但他们从事的事情早已不同了。
 

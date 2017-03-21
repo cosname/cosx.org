@@ -21,7 +21,7 @@ slug: bayes-meeting-1st
 
 天津财经大学月牙报告厅（统计湖畔）
 
-[![tianjinUniv0map](https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map.png)](https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map.png)
+![tianjinUniv0map](https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map.png)
 
 &nbsp;
 

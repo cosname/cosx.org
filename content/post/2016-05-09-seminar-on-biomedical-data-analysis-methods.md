@@ -82,6 +82,6 @@ slug: seminar-on-biomedical-data-analysis-methods
 
 附图：
 
-[![ruc_bio](https://cos.name/wp-content/uploads/2016/05/ruc_bio.jpg)](https://cos.name/wp-content/uploads/2016/05/ruc_bio.jpg)
+![ruc_bio](https://cos.name/wp-content/uploads/2016/05/ruc_bio.jpg)
 
 &nbsp;

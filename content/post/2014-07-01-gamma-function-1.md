@@ -65,7 +65,7 @@ $$ \lim_{n\rightarrow\infty} \frac{(2^n \cdot n!)^4}{[(2n)!]^2(2n+1)} = \frac{\p
   
 我们看到了阶乘，所以沃利斯公式天然和阶乘有着紧密的联系。
 
-[![john-wallis](https://cos.name/wp-content/uploads/2014/07/john-wallis.jpg)](https://cos.name/wp-content/uploads/2014/07/john-wallis.jpg)
+![john-wallis](https://cos.name/wp-content/uploads/2014/07/john-wallis.jpg)
 
 <p style="text-align: center">
   沃利斯

@@ -62,10 +62,10 @@ slug: beijing-cos-salon-jul-2013
 
 报名嘉宾中填写的报名理由如下图：
 
-[![cos102](https://cos.name/wp-content/uploads/2013/08/cos102.jpg)](https://cos.name/wp-content/uploads/2013/08/cos102.jpg)
+![cos102](https://cos.name/wp-content/uploads/2013/08/cos102.jpg)
 
 &nbsp;
 
-[![cos103](https://cos.name/wp-content/uploads/2013/08/cos103.jpg)](https://cos.name/wp-content/uploads/2013/08/cos103.jpg)
+![cos103](https://cos.name/wp-content/uploads/2013/08/cos103.jpg)
   
 [更多沙龙信息](https://cos.name/salon)

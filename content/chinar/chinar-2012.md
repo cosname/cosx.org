@@ -12,7 +12,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 ## **会议事宜（北京会场）**
 
-[![](https://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png "第五届中国R语言会议（北京）手册封面")](https://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png)
+![](https://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png "第五届中国R语言会议（北京）手册封面")
 
 ### 一、会议时间
 

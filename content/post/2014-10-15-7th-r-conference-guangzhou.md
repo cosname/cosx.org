@@ -26,7 +26,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 ## 二、会议地点
 
-广州市海珠区新港西路135号中山大学南校区网络中心报告厅。[![中山大学](https://cos.name/wp-content/uploads/2014/10/中山大学.jpg)](https://cos.name/wp-content/uploads/2014/10/中山大学.jpg)
+广州市海珠区新港西路135号中山大学南校区网络中心报告厅。![中山大学](https://cos.name/wp-content/uploads/2014/10/中山大学.jpg)
   
 <!--more-->
 

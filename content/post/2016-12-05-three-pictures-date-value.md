@@ -68,4 +68,4 @@ The H-index of a network node and its relation to degree and coreness
 
 敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
 
-[![QR](https://cos.name/wp-content/uploads/2016/08/QR.png)](https://cos.name/wp-content/uploads/2016/08/QR.png)</section> </section>
+![QR](https://cos.name/wp-content/uploads/2016/08/QR.png)</section> </section>

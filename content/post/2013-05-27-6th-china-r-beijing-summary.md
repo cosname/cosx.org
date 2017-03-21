@@ -14,7 +14,7 @@ slug: 6th-china-r-beijing-summary
 
 第六届中国 R 语言会议（北京会场）于 2013 年 5 月 18 日 ~ 19 日在中国人民大学国学馆113、114教室成功召开。会议由中国人民大学应用统计科学研究中心、中国人民大学统计学院、北京大学商务智能研究中心、统计之都（[cos.name](https://cos.name)）主办。在两天的会议时间里，参会者齐聚一堂，就 R 语言在互联网、商业、统计、生物、制药、可视化等诸多方面的应用进行了深入的探讨。
 
-[![6th-china-r-bj](https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj-500x332.jpg)](https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj.jpg)
+![6th-china-r-bj](https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj.jpg)
 
 ## 会议概况
 

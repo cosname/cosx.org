@@ -49,7 +49,7 @@ slug: teaching-with-heart
 
 **作者简介**
 
-<a href="http://gsm.ucdavis.edu/faculty/chih-ling-tsai" target="_blank">蔡知令</a>，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。同时，他也是台湾国立大学管理学院的客座讲席教授。[![tsai_web](https://cos.name/wp-content/uploads/2014/06/tsai_web.jpg)](https://cos.name/wp-content/uploads/2014/06/tsai_web.jpg)
+<a href="http://gsm.ucdavis.edu/faculty/chih-ling-tsai" target="_blank">蔡知令</a>，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。同时，他也是台湾国立大学管理学院的客座讲席教授。![tsai_web](https://cos.name/wp-content/uploads/2014/06/tsai_web.jpg)
 
 本文来自BizEd，翻译工作得到了蔡老师和的BizEd的许可和支持，特此感谢。
 

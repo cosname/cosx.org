@@ -82,7 +82,7 @@ write.table(z, "reg.txt", sep = " ", row.names = FALSE, col.names = FALSE)</pre>
   
 下面就是一段用 Scala 实现的 Spark 算回归的程序，其中包括了读取数据，拟合回归，计算回归系数，进行模型预测以及计算 $R^2$ 的过程。将这段程序复制到 Spark 的终端里，就可以迅速查看输出结果，体验 Spark 的基本功能了。
 
-[![spark-regression](https://cos.name/wp-content/uploads/2015/04/spark-regression.png)](https://cos.name/wp-content/uploads/2015/04/spark-regression.png)（复制代码可以去[这里](http://yixuan.cos.name/cn/2015/04/spark-beginner-1/)）
+![spark-regression](https://cos.name/wp-content/uploads/2015/04/spark-regression.png)（复制代码可以去[这里](http://yixuan.cos.name/cn/2015/04/spark-beginner-1/)）
 
 下面来解释一下程序中每一部分的含义。开头1到4行的是一系列的 `import` 语句，目的是使用一些已经封装好的类，与 R 中的 `library()` 和 Python 的 `import` 语句类似。另外，相信不少读者立刻就能看出这是 Java 风格的导入语句。事实上，Scala 正是基于 Java 而开发的，因此其语法也大多脱胎于 Java。
 
