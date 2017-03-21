@@ -9,7 +9,7 @@ slug: 8th-china-r-shanghai-summary
 
 第八届中国R语言会议（上海会场）于2015年11月21日至22日在华东师范大学中山北路校区成功举办。会议分为第一天的主会场和第二天的四个分会场，第一天主会场位于大礼堂（思群堂），第二天分会场位于科学会堂报告厅和逸夫楼一楼报告厅。
 
-[![r](https://cos.name/wp-content/uploads/2015/12/r-300x192.png)](https://cos.name/wp-content/uploads/2015/12/r.png)
+[<img class="aligncenter size-full wp-image-11746" src="https://cos.name/wp-content/uploads/2015/12/r.png" alt="r" width="450" height="288" srcset="https://cos.name/wp-content/uploads/2015/12/r.png 450w, https://cos.name/wp-content/uploads/2015/12/r-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](https://cos.name/wp-content/uploads/2015/12/r.png)
 
 #### 一、会议概况
 
@@ -19,43 +19,43 @@ slug: 8th-china-r-shanghai-summary
 
 本次大会最年轻的报名者为17岁，最年长为53岁。报名者的中位数为26岁，年龄分布的直方图如下：
 
-[![年龄](https://cos.name/wp-content/uploads/2015/12/年龄-500x334.jpg)](https://cos.name/wp-content/uploads/2015/12/年龄.jpg)
+[<img class="aligncenter size-full wp-image-11749" src="https://cos.name/wp-content/uploads/2015/12/年龄.jpg" alt="年龄" width="877" height="586" srcset="https://cos.name/wp-content/uploads/2015/12/年龄.jpg 877w, https://cos.name/wp-content/uploads/2015/12/年龄-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/年龄-500x334.jpg 500w" sizes="(max-width: 877px) 100vw, 877px" />](https://cos.name/wp-content/uploads/2015/12/年龄.jpg)
 
 本次大会报名者的男女比例约为3:2。
 
-[![性别](https://cos.name/wp-content/uploads/2015/12/性别-500x312.jpg)](https://cos.name/wp-content/uploads/2015/12/性别.jpg)
+[<img class="aligncenter size-full wp-image-11750" src="https://cos.name/wp-content/uploads/2015/12/性别.jpg" alt="性别" width="963" height="601" srcset="https://cos.name/wp-content/uploads/2015/12/性别.jpg 963w, https://cos.name/wp-content/uploads/2015/12/性别-300x187.jpg 300w, https://cos.name/wp-content/uploads/2015/12/性别-500x312.jpg 500w" sizes="(max-width: 963px) 100vw, 963px" />](https://cos.name/wp-content/uploads/2015/12/性别.jpg)
 
 报名者最多来自上海，比例为89%。其次分别是杭州、北京、南京。
 
-[![城市](https://cos.name/wp-content/uploads/2015/12/城市-500x334.jpg)](https://cos.name/wp-content/uploads/2015/12/城市.jpg)
+[<img class="aligncenter size-full wp-image-11747" src="https://cos.name/wp-content/uploads/2015/12/城市.jpg" alt="城市" width="877" height="586" srcset="https://cos.name/wp-content/uploads/2015/12/城市.jpg 877w, https://cos.name/wp-content/uploads/2015/12/城市-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/城市-500x334.jpg 500w" sizes="(max-width: 877px) 100vw, 877px" />](https://cos.name/wp-content/uploads/2015/12/城市.jpg)
 
 本次大会的报名者来自600多家单位，参会单位的前6位均为高等院校，其中华东师范大学和上海财经大学分占一二位。上海外的院校中，浙江大学的报名人数最多。非院校机构单位中，携程旅行网的报名人数最多。
 
-[![单位](https://cos.name/wp-content/uploads/2015/12/单位-500x334.jpg)](https://cos.name/wp-content/uploads/2015/12/单位.jpg)
+[<img class="aligncenter size-full wp-image-11748" src="https://cos.name/wp-content/uploads/2015/12/单位.jpg" alt="单位" width="877" height="586" srcset="https://cos.name/wp-content/uploads/2015/12/单位.jpg 877w, https://cos.name/wp-content/uploads/2015/12/单位-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/单位-500x334.jpg 500w" sizes="(max-width: 877px) 100vw, 877px" />](https://cos.name/wp-content/uploads/2015/12/单位.jpg)
 
 本次大会参会者职务以数据分析师居多，其次是在校的研究生。
 
-[![云1](https://cos.name/wp-content/uploads/2015/12/云1-500x359.jpg)](https://cos.name/wp-content/uploads/2015/12/云1.jpg)
+[<img class="aligncenter size-full wp-image-11751" src="https://cos.name/wp-content/uploads/2015/12/云1.jpg" alt="云1" width="816" height="586" srcset="https://cos.name/wp-content/uploads/2015/12/云1.jpg 816w, https://cos.name/wp-content/uploads/2015/12/云1-300x215.jpg 300w, https://cos.name/wp-content/uploads/2015/12/云1-500x359.jpg 500w" sizes="(max-width: 816px) 100vw, 816px" />](https://cos.name/wp-content/uploads/2015/12/云1.jpg)
 
 本次大会大家感兴趣的内容首先是R语言，其次就是金融大数据、大数据、数据挖掘等。
 
-[![云2](https://cos.name/wp-content/uploads/2015/12/云2-500x359.jpg)](https://cos.name/wp-content/uploads/2015/12/云2.jpg)
+[<img class="aligncenter size-full wp-image-11752" src="https://cos.name/wp-content/uploads/2015/12/云2.jpg" alt="云2" width="816" height="586" srcset="https://cos.name/wp-content/uploads/2015/12/云2.jpg 816w, https://cos.name/wp-content/uploads/2015/12/云2-300x215.jpg 300w, https://cos.name/wp-content/uploads/2015/12/云2-500x359.jpg 500w" sizes="(max-width: 816px) 100vw, 816px" />](https://cos.name/wp-content/uploads/2015/12/云2.jpg)
 
 #### 二、会议内容
 
 本次会议分为第一天的主会场和第二天的四个分会场。主会场演讲嘉宾包括学界杰出代表、业界大咖等。分会场包括金融大数据专场、工具及可视化专场、互联网专场及统计与机器学习专场，涵盖了数据科学的各个领域，讨论了数据科学在诸多领域的最新进展。
 
-![1](https://cos.name/wp-content/uploads/2015/12/1-500x375.jpg)
+<img class="aligncenter size-full wp-image-11731" src="https://cos.name/wp-content/uploads/2015/12/1.jpg" alt="1" width="1269" height="952" srcset="https://cos.name/wp-content/uploads/2015/12/1.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/1-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/1-500x375.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />
 
 ##### 1、会议致辞
 
 会议在经济与管理学部统计学院副院长张日权教授的致辞中拉开帷幕。张日权教授对统计学院的现状与发展进行了概述，并对数据科学的重要意义进行了阐述，发人深省、引人思考。
 
-[![2](https://cos.name/wp-content/uploads/2015/12/2-375x500.jpg)](https://cos.name/wp-content/uploads/2015/12/2.jpg)
+[<img class="aligncenter size-full wp-image-11732" src="https://cos.name/wp-content/uploads/2015/12/2.jpg" alt="2" width="600" height="800" srcset="https://cos.name/wp-content/uploads/2015/12/2.jpg 600w, https://cos.name/wp-content/uploads/2015/12/2-225x300.jpg 225w, https://cos.name/wp-content/uploads/2015/12/2-375x500.jpg 375w" sizes="(max-width: 600px) 100vw, 600px" />](https://cos.name/wp-content/uploads/2015/12/2.jpg)
 
 随后，会议主席练勇强也对本次会议进行了致辞。他对自身学习R语言的经历做了简要介绍，回顾过去又不忘展望未来，并对辛勤工作的志愿者以及主办方表达了感谢。
 
-![3](https://cos.name/wp-content/uploads/2015/12/3-500x375.jpg)
+<img class="aligncenter size-full wp-image-11733" src="https://cos.name/wp-content/uploads/2015/12/3.jpg" alt="3" width="1280" height="960" srcset="https://cos.name/wp-content/uploads/2015/12/3.jpg 1280w, https://cos.name/wp-content/uploads/2015/12/3-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/3-500x375.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />
 
 ##### 2、宣晓华：数据科学家的机遇、成长和创新创业
 
@@ -63,61 +63,61 @@ slug: 8th-china-r-shanghai-summary
   
 ](https://cos.name/wp-content/uploads/2015/12/3.jpg) 
 
-[![4](https://cos.name/wp-content/uploads/2015/12/4-500x375.jpg)](https://cos.name/wp-content/uploads/2015/12/4.jpg)
+[<img class="aligncenter size-full wp-image-11734" src="https://cos.name/wp-content/uploads/2015/12/4.jpg" alt="4" width="1269" height="952" srcset="https://cos.name/wp-content/uploads/2015/12/4.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/4-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/4-500x375.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/12/4.jpg)
 
 ##### 3、熊杰超：Libra-an R package as Linearized BRegman Algorithm for High Dimensional Statistics
 
 熊杰超是北京大学姚远教授的博士生。作为R包Libra的创建者与维护者，熊杰超博士带我们了解了Libra的魅力与震撼。
 
-[![5](https://cos.name/wp-content/uploads/2015/12/5-500x375.jpg)](https://cos.name/wp-content/uploads/2015/12/5.jpg)
+[<img class="aligncenter size-full wp-image-11735" src="https://cos.name/wp-content/uploads/2015/12/5.jpg" alt="5" width="1269" height="952" srcset="https://cos.name/wp-content/uploads/2015/12/5.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/5-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/5-500x375.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/12/5.jpg)
 
 ##### 4、陈为：大数据时代的可视化机遇
 
 陈为是浙江大学计算机学院CAD&CG国家重点实验室教授。作为数据可视化和可视分析的专家，陈为教授向我们介绍数据可视化的基本概念以及新媒体时代下的可视分析的内涵，阐述可视化学术界的近期关注重点，并展示面向大规模数值计算模拟、智慧地球、商业智能、数据新闻等应用的可视分析案例。
 
-[![6](https://cos.name/wp-content/uploads/2015/12/6-500x500.jpg)](https://cos.name/wp-content/uploads/2015/12/6.jpg)
+[<img class="aligncenter size-full wp-image-11736" src="https://cos.name/wp-content/uploads/2015/12/6.jpg" alt="6" width="1280" height="1280" srcset="https://cos.name/wp-content/uploads/2015/12/6.jpg 1280w, https://cos.name/wp-content/uploads/2015/12/6-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/12/6-300x300.jpg 300w, https://cos.name/wp-content/uploads/2015/12/6-500x500.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/12/6.jpg)
 
 ##### 5、王桐：如何在一个BI平台上实现数据准备、探索式分析和深度分析
 
 王桐是北京永洪商智科技有限公司副总裁。王桐副总代表永洪分析了多年积累的数据化运营最佳实践，让企业里面的每一个人都能轻松发掘大数据的价值，获取深度洞察力。
 
-![7](https://cos.name/wp-content/uploads/2015/12/7-500x500.jpg)
+<img class="aligncenter size-full wp-image-11737" src="https://cos.name/wp-content/uploads/2015/12/7.jpg" alt="7" width="1269" height="1269" srcset="https://cos.name/wp-content/uploads/2015/12/7.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/7-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/12/7-300x300.jpg 300w, https://cos.name/wp-content/uploads/2015/12/7-500x500.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />
 
 ##### 6、刘鹏：互联网变现与计算广告
 
 刘鹏是互联网商业变现专家，《计算广告》作者，现任360高级总监，商业产品首席架构师。刘鹏专家讲述了大量的互联网免费产品在获得了流量与数据以后，是如何规模化地创造收入的？在后向变现的过程中，广告的地位和作用如何？用到了什么样的计算技术？深入浅出地介绍计算广告的行业背景、基本问题、常见产品与技术方向，为大家了解互联网的商业模式，更好地从事互联网行业提供有价值的指导。
 
-![8](https://cos.name/wp-content/uploads/2015/12/8-500x375.jpg)
+<img class="aligncenter size-full wp-image-11738" src="https://cos.name/wp-content/uploads/2015/12/8.jpg" alt="8" width="1269" height="952" srcset="https://cos.name/wp-content/uploads/2015/12/8.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/8-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/8-500x375.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />
 
 ##### 7、邹庆士：利害数据与关键分析技术
 
 邹庆士是国立台北商业大学(商业技术学院 2004~2014)信息与决策科学研究所教授，台湾数据科学与商业应用协会理事长，中华 R 软件学会理事长。Big Data是近年来热门的话题之一，邹教授从Big的新解谈起，以数据敏感度(data sensitive)与数据解析(data analytical)思维为根基，聚焦到关键的数据上，以解析出真正不同且重要的洞见。内容穿插各式数据分析实例，引出关键的解析技术，期能让数据发挥其利害的功用。
 
-[![9](https://cos.name/wp-content/uploads/2015/12/9-500x375.jpg)](https://cos.name/wp-content/uploads/2015/12/9.jpg)
+[<img class="aligncenter size-full wp-image-11739" src="https://cos.name/wp-content/uploads/2015/12/9.jpg" alt="9" width="1269" height="952" srcset="https://cos.name/wp-content/uploads/2015/12/9.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/9-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/9-500x375.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/12/9.jpg)
 
 ##### 8、谢军：当R真的遇到大数据：金融和学生学业质量溯因
 
 谢军是上海雅捷信息技术股份有限公司副总经理及首席数据科学家。谢总报告了上海闵行的大数据实践，指出银行拥有大数据，典型的省级银行拥有5000万客户，9000万账号，其分析基础往往是5000行1000列巨大矩阵的运算。传统技术遇到了巨大挑战。他以GPU为基础的大规模并行技术将数据库查询技术提速至少500倍。
 
-[![10](https://cos.name/wp-content/uploads/2015/12/10-500x375.jpg)](https://cos.name/wp-content/uploads/2015/12/10.jpg)
+[<img class="aligncenter size-full wp-image-11740" src="https://cos.name/wp-content/uploads/2015/12/10.jpg" alt="10" width="1269" height="952" srcset="https://cos.name/wp-content/uploads/2015/12/10.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/10-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/10-500x375.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/12/10.jpg)
 
 ##### 9、叶巍岭 ：秩序的作用：商品陈列整齐是否总是比凌乱好？
 
 叶巍岭是营销学博士，现任上海财经大学国际工商管理学院市场营销系副教授。上海财经大学“教书育人标兵”，及上海财经大学商学院杰出教学奖获得者。叶教授综合已经有的产品污染和消费者污染效应，结合本研究的“画面效应”，以及研究团队正在进行的研究，对商品陈列整齐是不是总是比凌乱要好，作出全面的回答。针对为什么整齐的陈列（相较于凌乱的陈列）会更有利于消费者对商品给出更高的质量预估这个问题他以及团队提出了“画面效应”，即当商品陈列整齐（相对于凌乱）时，消费者对陈列画面的态度更加积极正面，继而导致消费者对产品质量的预估评价也显著更高。其中，消费者对陈列画面的态度在画面效应中起到完全中介作用。他们进一步指出画面效应的调节变量：产品外观重要性。当消费者认为产品的外观不重要时，画面效应不发生，即凌乱与整齐的陈列不会引起消费者对陈列画面的态度差别，也不会引起消费者对产品质量预估评价的差异；而当产品的外观重要时，画面效应才会发生。
 
-[![11](https://cos.name/wp-content/uploads/2015/12/11-500x375.jpg)](https://cos.name/wp-content/uploads/2015/12/11.jpg)
+[<img class="aligncenter size-full wp-image-11741" src="https://cos.name/wp-content/uploads/2015/12/11.jpg" alt="11" width="1269" height="952" srcset="https://cos.name/wp-content/uploads/2015/12/11.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/11-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/11-500x375.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/12/11.jpg)
 
 ##### 10、孙锐： R+Spark=大数据时代的R：SparkR介绍
 
 孙锐是英特尔上海大数据团队架构师，HIVE/Shark/Spark贡献者，SparkR主力贡献者之一。孙锐专家概要地介绍SparkR的背景、历史、架构、API和状态，帮助R社区熟悉SparkR，并希望能吸引R社区参与到SparkR的讨论和开发中。Spark 1.4.0版本在Scala, Java和Python语言之外正式引入了R语言API（即SparkR）。SparkR为熟悉R语言的数据科学家提供了一种新工具，使得他们能够基于Spark大数据平台的分布式引擎在R中处理大数据。
 
-[![12](https://cos.name/wp-content/uploads/2015/12/12-500x323.jpg)](https://cos.name/wp-content/uploads/2015/12/12.jpg)
+[<img class="aligncenter size-full wp-image-11742" src="https://cos.name/wp-content/uploads/2015/12/12.jpg" alt="12" width="1269" height="821" srcset="https://cos.name/wp-content/uploads/2015/12/12.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/12-300x194.jpg 300w, https://cos.name/wp-content/uploads/2015/12/12-500x323.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/12/12.jpg)
 
 ##### 11、谢宗震：R在开放数据的应用
 
 谢宗震是清华统计博士，擅长与跨领域专家合作，开发的R包iNEXT被应用于生物、遗传、新闻、文学、电竞等领域。现职为DSP智库驱动知识长，辅导超过300位企业人士成为数据分析人才。谢博士讲述了开放数据为一个尚未被大量开发的巨大资源。政府、企业、非营利组织为了要完成他们的工作或是任务而收集了大量各式各样不同的数据。有越来越多的案例显示，成功的关键在于“善用数据、跨域合作”，从掌握现况、洞悉趋势、服务创新到政策研究，数据的价值和应用层面相当广泛。这场演讲跟各位分享了透过R语言在政府、企业、非营利组织等开放数据进行加值应用的真实案例。
 
-[![13](https://cos.name/wp-content/uploads/2015/12/13-500x375.jpg)](https://cos.name/wp-content/uploads/2015/12/13.jpg)
+[<img class="aligncenter size-full wp-image-11743" src="https://cos.name/wp-content/uploads/2015/12/13.jpg" alt="13" width="1269" height="952" srcset="https://cos.name/wp-content/uploads/2015/12/13.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/13-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/13-500x375.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/12/13.jpg)
 
 ##### 12、11月22日分会场
 
@@ -175,7 +175,7 @@ slug: 8th-china-r-shanghai-summary
 
 毛苏晗（淘在路上）：旅游数据中的情感分析
 
-[![14](https://cos.name/wp-content/uploads/2015/12/14-500x333.jpg)](https://cos.name/wp-content/uploads/2015/12/14.jpg)
+[<img class="aligncenter size-full wp-image-11744" src="https://cos.name/wp-content/uploads/2015/12/14.jpg" alt="14" width="1269" height="846" srcset="https://cos.name/wp-content/uploads/2015/12/14.jpg 1269w, https://cos.name/wp-content/uploads/2015/12/14-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/14-500x333.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/12/14.jpg)
 
 #### 三、演讲幻灯片
 
@@ -227,6 +227,6 @@ slug: 8th-china-r-shanghai-summary
 
 优酷土豆集团
 
-[![15](https://cos.name/wp-content/uploads/2015/12/15-500x375.jpg)](https://cos.name/wp-content/uploads/2015/12/15.jpg)
+[<img class="aligncenter size-full wp-image-11745" src="https://cos.name/wp-content/uploads/2015/12/15.jpg" alt="15" width="1280" height="960" srcset="https://cos.name/wp-content/uploads/2015/12/15.jpg 1280w, https://cos.name/wp-content/uploads/2015/12/15-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/12/15-500x375.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/12/15.jpg)
 
 &nbsp;

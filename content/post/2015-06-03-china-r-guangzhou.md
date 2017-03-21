@@ -20,7 +20,7 @@ slug: china-r-guangzhou
 
 ### 会议概况
 
-本次会议报名人数超过1400人，约有 500多名参会者前来参会（期间两天广州均为大暴雨天气）。报名者来自近两百家单位，包括七十多家高校与研究机构和一百二十多家企事业单位。[![企事业单位](https://cos.name/wp-content/uploads/2015/06/企事业单位-500x376.jpg)](https://cos.name/wp-content/uploads/2015/06/企事业单位.jpg)
+本次会议报名人数超过1400人，约有 500多名参会者前来参会（期间两天广州均为大暴雨天气）。报名者来自近两百家单位，包括七十多家高校与研究机构和一百二十多家企事业单位。[<img class="aligncenter size-full wp-image-11002" src="https://cos.name/wp-content/uploads/2015/06/企事业单位.jpg" alt="企事业单位" width="1035" height="778" srcset="https://cos.name/wp-content/uploads/2015/06/企事业单位.jpg 1035w, https://cos.name/wp-content/uploads/2015/06/企事业单位-300x226.jpg 300w, https://cos.name/wp-content/uploads/2015/06/企事业单位-500x376.jpg 500w" sizes="(max-width: 1035px) 100vw, 1035px" />](https://cos.name/wp-content/uploads/2015/06/企事业单位.jpg)
 
 ### 会议内容
 
@@ -32,7 +32,7 @@ slug: china-r-guangzhou
 
 #### 林祯舜博士会议致辞
 
-[![致辞](https://cos.name/wp-content/uploads/2015/06/致辞-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/致辞.jpg)
+[<img class="aligncenter size-full wp-image-11003" src="https://cos.name/wp-content/uploads/2015/06/致辞.jpg" alt="致辞" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/致辞.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/致辞-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/致辞-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/致辞.jpg)
 
 林祯舜先生是中国人民大学统计学博士，先锋信息科技有限公司CEO。
 
@@ -40,7 +40,7 @@ slug: china-r-guangzhou
 
 &nbsp;
 
-#### 陈钢：机器学习在面向消费者的个人基因组检测中的应用[![基因检测应用](https://cos.name/wp-content/uploads/2015/06/基因检测应用-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/基因检测应用.jpg)
+#### 陈钢：机器学习在面向消费者的个人基因组检测中的应用[<img class="aligncenter size-full wp-image-11015" src="https://cos.name/wp-content/uploads/2015/06/基因检测应用.jpg" alt="基因检测应用" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/基因检测应用.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/基因检测应用-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/基因检测应用-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/基因检测应用.jpg)
 
 陈钢先生是WeGene创始人，他这次的演讲主要是分享DTC个人基因组服务的概况，以组源分析、复杂疾病风险和研究等应用为例，跟大家分享以机器学习为代表的数据分析技术在DTC个人基因组领域的应用和所面临的挑战。技术方面设计SVVM、HMM、分布式计算、数据可视化等内容。
 
@@ -48,7 +48,7 @@ slug: china-r-guangzhou
 
 #### 黄鑫：从机器学习到推荐系统
 
-[![机器学习推荐系统](https://cos.name/wp-content/uploads/2015/06/机器学习推荐系统-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/机器学习推荐系统.jpg)
+[<img class="aligncenter size-full wp-image-11014" src="https://cos.name/wp-content/uploads/2015/06/机器学习推荐系统.jpg" alt="机器学习推荐系统" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/机器学习推荐系统.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/机器学习推荐系统-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/机器学习推荐系统-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/机器学习推荐系统.jpg)
 
 黄鑫先生是极光推送的首席科学家，他在这次的演讲中，他列举了一些曾经遇到的实际推荐系统走过的路，分别从学术角度和工程角度分析业务问题，最后会从构架角度来解析从推荐算法到推荐系统的演化。
 
@@ -56,7 +56,7 @@ slug: china-r-guangzhou
 
 #### 罗应琏：气象大数据
 
-[![气象大数据](https://cos.name/wp-content/uploads/2015/06/气象大数据-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/气象大数据.jpg)
+[<img class="aligncenter size-full wp-image-11018" src="https://cos.name/wp-content/uploads/2015/06/气象大数据.jpg" alt="气象大数据" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/气象大数据.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/气象大数据-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/气象大数据-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/气象大数据.jpg)
 
 罗应琏先生是北京维艾思气象信息科技公司的市场部总监，他这次会议主要介绍了中国与全球气象数据构成与实际行业应用案例：1.快速有效的庞大气象数据质检工具-统计与数学的应用；2.天气在全世界80%的经济活动中扮演者决定性的角色-介绍天气数据与淘宝/天猫实际电商案例；3.天气，是消费行为最有效的驱动之一-介绍指数型天气保险的跨界应用-美的空调高温补贴等实际透过气象与行业数据的应用。
 
@@ -64,7 +64,7 @@ slug: china-r-guangzhou
 
 #### 陆彤：Data Science powered by deployable R infrastructure
 
-[![Rinfrastructure](https://cos.name/wp-content/uploads/2015/06/Rinfrastructure-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/Rinfrastructure.jpg)
+[<img class="aligncenter size-full wp-image-11007" src="https://cos.name/wp-content/uploads/2015/06/Rinfrastructure.jpg" alt="Rinfrastructure" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/Rinfrastructure.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/Rinfrastructure-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/Rinfrastructure-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/Rinfrastructure.jpg)
 
 陆彤是Avant公司的主要数据科学家。在他的演讲中提到，长期以来，数据科学家的角色被限制在了静态数据分析、建模和可视化上。这是因为工具的限制，比如R的局限性，这些数据产品很难被用户使用。因此一个数据的核心产品需要通过工程师翻译成其它的语言，比如C++等。
 
@@ -72,7 +72,7 @@ slug: china-r-guangzhou
 
 #### 游皓麟：R 语言并行计算实战
 
-[![并行计算实战](https://cos.name/wp-content/uploads/2015/06/并行计算实战-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/并行计算实战.jpg)
+[<img class="aligncenter size-full wp-image-11011" src="https://cos.name/wp-content/uploads/2015/06/并行计算实战.jpg" alt="并行计算实战" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/并行计算实战.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/并行计算实战-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/并行计算实战-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/并行计算实战.jpg)
 
 游皓麟先生是深圳市数聚能源科技有限公司的数据分析师，他本次演讲从R语言的处理大数据的必要性出发，通过原理的讲解，实例的实战，解释R语言的另外一面。
 
@@ -80,7 +80,7 @@ slug: china-r-guangzhou
 
 #### 周扬：htmlwidgets  让  recharts 再起航
 
-[![再起航](https://cos.name/wp-content/uploads/2015/06/再起航-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/再起航.jpg)
+[<img class="aligncenter size-full wp-image-11025" src="https://cos.name/wp-content/uploads/2015/06/再起航.jpg" alt="再起航" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/再起航.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/再起航-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/再起航-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/再起航.jpg)
 
 周扬先生是JDPOWER的数据分析师，他本次演讲主要围绕R中recharts包的安装、使用以及代码架构，呈现一个全新的recharts。其中展现了各种精彩的数据可视化案例，带来耳目一新的感觉。
 
@@ -88,7 +88,7 @@ slug: china-r-guangzhou
 
 #### 刘斌：Adaptive Annealed Importance Sampling for Bayesian Multimodal Posterior Exploration
 
-[![exploration](https://cos.name/wp-content/uploads/2015/06/exploration-500x281.jpg)](https://cos.name/wp-content/uploads/2015/06/exploration.jpg)
+[<img class="aligncenter size-full wp-image-11028" src="https://cos.name/wp-content/uploads/2015/06/exploration.jpg" alt="exploration" width="1268" height="713" srcset="https://cos.name/wp-content/uploads/2015/06/exploration.jpg 1268w, https://cos.name/wp-content/uploads/2015/06/exploration-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/06/exploration-500x281.jpg 500w" sizes="(max-width: 1268px) 100vw, 1268px" />](https://cos.name/wp-content/uploads/2015/06/exploration.jpg)
 
 刘斌先生是南京邮电大学计算机学院副教授。在本次演讲中，他从“我们从哪里来”开始讨论，引人入胜。演讲主要描述了一种在贝叶斯推断的背景下，实现多通道后验分布（multimodal posterior distributions）的适应性识别的算法。
 
@@ -96,7 +96,7 @@ slug: china-r-guangzhou
 
 #### 王元奎：Alpha 量化对冲的实战策略
 
-[![实战策略](https://cos.name/wp-content/uploads/2015/06/实战策略-500x281.jpg)](https://cos.name/wp-content/uploads/2015/06/实战策略.jpg)
+[<img class="aligncenter size-full wp-image-11020" src="https://cos.name/wp-content/uploads/2015/06/实战策略.jpg" alt="实战策略" width="1268" height="713" srcset="https://cos.name/wp-content/uploads/2015/06/实战策略.jpg 1268w, https://cos.name/wp-content/uploads/2015/06/实战策略-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/06/实战策略-500x281.jpg 500w" sizes="(max-width: 1268px) 100vw, 1268px" />](https://cos.name/wp-content/uploads/2015/06/实战策略.jpg)
 
 王元奎先生是阿巴马资产管理公司的量化研究员。会议中，他们主讲了Alpha策略、套利策略和期权策略的一些实战经验。
 
@@ -104,7 +104,7 @@ slug: china-r-guangzhou
 
 #### 谢佳标：游戏行业大数据的处理与建模技术—基于 R 实现
 
-[![R实现](https://cos.name/wp-content/uploads/2015/06/R实现-500x281.jpg)](https://cos.name/wp-content/uploads/2015/06/R实现.jpg)
+[<img class="aligncenter size-full wp-image-11008" src="https://cos.name/wp-content/uploads/2015/06/R实现.jpg" alt="R实现" width="1268" height="713" srcset="https://cos.name/wp-content/uploads/2015/06/R实现.jpg 1268w, https://cos.name/wp-content/uploads/2015/06/R实现-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/06/R实现-500x281.jpg 500w" sizes="(max-width: 1268px) 100vw, 1268px" />](https://cos.name/wp-content/uploads/2015/06/R实现.jpg)
 
 谢佳标先生是深圳市创梦天地科技有限公司的高级数据分析师，他此次的演讲结合现成源码的解读与演示，令参会者们迅速理解R语言在大数据方面的数据读入、数据处理和建模预测，使得参会者能够更深刻地体会R在数据挖掘流程中的实际应用。
 
@@ -112,7 +112,7 @@ slug: china-r-guangzhou
 
 #### 胡湘红：基于极值理论的时间序列异常值检测的改进与实证分析
 
-[![实证分析](https://cos.name/wp-content/uploads/2015/06/实证分析-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/实证分析.jpg)
+[<img class="aligncenter size-full wp-image-11021" src="https://cos.name/wp-content/uploads/2015/06/实证分析.jpg" alt="实证分析" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/实证分析.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/实证分析-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/实证分析-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/实证分析.jpg)
 
 胡湘红女士是南方科技大学的研究助理，她本次的报告基于极值理论的极大似然比异常值检测算法，研究了平稳时间序列中IO，AO，LS型异常点的检测问题。
 
@@ -120,7 +120,7 @@ slug: china-r-guangzhou
 
 #### 何宇兵：GIS+R 加速地理信息的商业应用
 
-[![商业应用](https://cos.name/wp-content/uploads/2015/06/商业应用-500x281.jpg)](https://cos.name/wp-content/uploads/2015/06/商业应用.jpg)
+[<img class="aligncenter size-full wp-image-11019" src="https://cos.name/wp-content/uploads/2015/06/商业应用.jpg" alt="商业应用" width="1268" height="713" srcset="https://cos.name/wp-content/uploads/2015/06/商业应用.jpg 1268w, https://cos.name/wp-content/uploads/2015/06/商业应用-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/06/商业应用-500x281.jpg 500w" sizes="(max-width: 1268px) 100vw, 1268px" />](https://cos.name/wp-content/uploads/2015/06/商业应用.jpg)
 
 何宇兵先生是辰智咨询的GIS商业应用研究中心技术总监，他在此次会议中介绍了GIS+R的结合在地理信息方面的商业应用的前景。GIS+R的结合必将商业企业大数据分析平台的构建带来重要的影响。
 
@@ -128,7 +128,7 @@ slug: china-r-guangzhou
 
 #### 齐欣然  刘淑娜  伍丽历：利用 LDA 模型预测电视观众的浏览兴趣
 
-[![浏览兴趣](https://cos.name/wp-content/uploads/2015/06/浏览兴趣1-500x281.jpg)](https://cos.name/wp-content/uploads/2015/06/浏览兴趣1.jpg)
+[<img class="aligncenter size-full wp-image-11029" src="https://cos.name/wp-content/uploads/2015/06/浏览兴趣1.jpg" alt="浏览兴趣" width="1268" height="713" srcset="https://cos.name/wp-content/uploads/2015/06/浏览兴趣1.jpg 1268w, https://cos.name/wp-content/uploads/2015/06/浏览兴趣1-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/06/浏览兴趣1-500x281.jpg 500w" sizes="(max-width: 1268px) 100vw, 1268px" />](https://cos.name/wp-content/uploads/2015/06/浏览兴趣1.jpg)
 
 齐欣然女士、刘淑娜女士以及伍丽历女士是中山大学在读本科生，她们在本次会议中基于电视观众观看订阅节目的记录，介绍了利用LDA模型预测电视观众的具体节目爱好的办法。
 
@@ -136,7 +136,7 @@ slug: china-r-guangzhou
 
 #### 李舰：数据科学在业界的应用
 
-[![业界的应用](https://cos.name/wp-content/uploads/2015/06/业界的应用-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/业界的应用.jpg)
+[<img class="aligncenter size-full wp-image-11024" src="https://cos.name/wp-content/uploads/2015/06/业界的应用.jpg" alt="业界的应用" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/业界的应用.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/业界的应用-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/业界的应用-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/业界的应用.jpg)
 
 李舰先生本科毕业于中国人民大学统计学院，研究生就读于北京大学软件与微电子学院，现任堡力山集团副总。他在本次报告中以一个统计学出身的数据科学家的视角阐述了自己对业界数据应用的理解，并结合了一些行业里的项目经验，通过几个具体的案例进行说明。同时也对R语言等开源工具在行业中的应用情况和前景进行了讨论。
 
@@ -144,7 +144,7 @@ slug: china-r-guangzhou
 
 #### Robert Krzyzanowski：Building better credit models through deployable analytics in R
 
-[![in r](https://cos.name/wp-content/uploads/2015/06/in-r-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/in-r.jpg)
+[<img class="aligncenter size-full wp-image-11032" src="https://cos.name/wp-content/uploads/2015/06/in-r.jpg" alt="in r" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/in-r.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/in-r-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/in-r-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/in-r.jpg)
 
 Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲中，他介绍了如何通过R的来建立更好的信贷模式。其中Robert提到如何使用R进行批量数据清理，非常具有启发性。
 
@@ -152,7 +152,7 @@ Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲�
 
 #### 刘黎春：用户画像‐大数据时代下的用户洞察
 
-[![r 用户调查](https://cos.name/wp-content/uploads/2015/06/r-用户调查-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/r-用户调查.jpg)
+[<img class="aligncenter size-full wp-image-11006" src="https://cos.name/wp-content/uploads/2015/06/r-用户调查.jpg" alt="r 用户调查" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/r-用户调查.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/r-用户调查-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/r-用户调查-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/r-用户调查.jpg)
 
 刘黎春先生是腾讯科技有限公司的社交网络运营部数据挖掘组长，他在本次会议中介绍了QQ用户画像的底层数据构成，画像标签体系，数据挖掘解决方案，超大规模计算系统，画像应用场景等内容，从数据建设、算法研究、业务驱动等多个角度描述QQ用户画像是如何一步步建设起来并给业务提供数据服务的。
 
@@ -160,7 +160,7 @@ Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲�
 
 #### 梁淇俊：量化投资之个人工作坊
 
-[![个人工作坊](https://cos.name/wp-content/uploads/2015/06/个人工作坊-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/个人工作坊.jpg)
+[<img class="aligncenter size-full wp-image-11013" src="https://cos.name/wp-content/uploads/2015/06/个人工作坊.jpg" alt="个人工作坊" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/个人工作坊.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/个人工作坊-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/个人工作坊-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/个人工作坊.jpg)
 
 梁淇俊先生是暨南大学的在读研究生，他在本次会议中展示了自己这一年半研究工作中形成的个人系统，从数据分析，到策略回测，到策略分析，甚至程序化下单。
 
@@ -168,7 +168,7 @@ Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲�
 
 #### 林倩莹：电信行业用户稳定性与用户特征的双向分析
 
-[![双向分析](https://cos.name/wp-content/uploads/2015/06/双向分析1-500x374.jpg)](https://cos.name/wp-content/uploads/2015/06/双向分析1.jpg)
+[<img class="aligncenter size-full wp-image-11030" src="https://cos.name/wp-content/uploads/2015/06/双向分析1.jpg" alt="双向分析" width="1270" height="951" srcset="https://cos.name/wp-content/uploads/2015/06/双向分析1.jpg 1270w, https://cos.name/wp-content/uploads/2015/06/双向分析1-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/06/双向分析1-500x374.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/06/双向分析1.jpg)
 
 林倩莹女士是北京数博思达信息科技有限公司的数据科学家，她在本次报告中分析了电信行业用户稳定性与用户特征的双向分析。也使用一个800万样本的例子，提到如何使用R进行高效编程。
 
@@ -341,18 +341,18 @@ Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲�
   * **中山大学 华南统计科学研究中心** http://scrcss.sysu.edu.cn/
   *  华南统计科学研究中心QQ群：
 
-![qq2](https://cos.name/wp-content/uploads/2015/06/qq2.png)  ![qq](https://cos.name/wp-content/uploads/2015/06/qq.png)
+<img class=" wp-image-11005 size-thumbnail alignnone" src="https://cos.name/wp-content/uploads/2015/06/qq2-150x150.png" alt="qq2" width="150" height="150" srcset="https://cos.name/wp-content/uploads/2015/06/qq2-150x150.png 150w, https://cos.name/wp-content/uploads/2015/06/qq2-300x300.png 300w, https://cos.name/wp-content/uploads/2015/06/qq2.png 443w" sizes="(max-width: 150px) 100vw, 150px" />  <img class="alignnone wp-image-11004 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/06/qq-150x150.png" alt="qq" width="150" height="150" srcset="https://cos.name/wp-content/uploads/2015/06/qq-150x150.png 150w, https://cos.name/wp-content/uploads/2015/06/qq.png 211w" sizes="(max-width: 150px) 100vw, 150px" />
 
   * 华南统计科学研究中心微信公众号：
 
-[![wechat](https://cos.name/wp-content/uploads/2015/06/wechat-300x300.jpg)](https://cos.name/wp-content/uploads/2015/06/wechat.jpg)
+[<img class="aligncenter size-full wp-image-11010" src="https://cos.name/wp-content/uploads/2015/06/wechat.jpg" alt="wechat" width="481" height="481" srcset="https://cos.name/wp-content/uploads/2015/06/wechat.jpg 481w, https://cos.name/wp-content/uploads/2015/06/wechat-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/06/wechat-300x300.jpg 300w" sizes="(max-width: 481px) 100vw, 481px" />](https://cos.name/wp-content/uploads/2015/06/wechat.jpg)
 
   * **中山大学数学与计算科学学院** http://math.sysu.edu.cn/
   * **统计之都** https://cos.name/
 
 **赞助单位**
 
-[![赞助单位](https://cos.name/wp-content/uploads/2015/06/赞助单位.png)](https://cos.name/wp-content/uploads/2015/06/赞助单位.png)
+[<img class="aligncenter size-full wp-image-11026" src="https://cos.name/wp-content/uploads/2015/06/赞助单位.png" alt="赞助单位" width="85" height="36" />](https://cos.name/wp-content/uploads/2015/06/赞助单位.png)
 
 &nbsp;
 
@@ -362,17 +362,17 @@ Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲�
 
 ##### 性别
 
-[![性别](https://cos.name/wp-content/uploads/2015/06/性别-300x225.jpg)](https://cos.name/wp-content/uploads/2015/06/性别.jpg)
+[<img class="aligncenter size-full wp-image-11023" src="https://cos.name/wp-content/uploads/2015/06/性别.jpg" alt="性别" width="400" height="300" srcset="https://cos.name/wp-content/uploads/2015/06/性别.jpg 400w, https://cos.name/wp-content/uploads/2015/06/性别-300x225.jpg 300w" sizes="(max-width: 400px) 100vw, 400px" />](https://cos.name/wp-content/uploads/2015/06/性别.jpg)
 
 其中男性有348人，女性有209人。
 
 ##### 年龄
 
-[![年龄](https://cos.name/wp-content/uploads/2015/06/年龄-500x250.jpg)](https://cos.name/wp-content/uploads/2015/06/年龄.jpg)
+[<img class="aligncenter size-full wp-image-11017" src="https://cos.name/wp-content/uploads/2015/06/年龄.jpg" alt="年龄" width="600" height="300" srcset="https://cos.name/wp-content/uploads/2015/06/年龄.jpg 600w, https://cos.name/wp-content/uploads/2015/06/年龄-300x150.jpg 300w, https://cos.name/wp-content/uploads/2015/06/年龄-500x250.jpg 500w" sizes="(max-width: 600px) 100vw, 600px" />](https://cos.name/wp-content/uploads/2015/06/年龄.jpg)
 
 #### 感兴趣的主题
 
-[![感兴趣的主题](https://cos.name/wp-content/uploads/2015/06/感兴趣的主题-500x268.png)](https://cos.name/wp-content/uploads/2015/06/感兴趣的主题.png)
+[<img class="aligncenter size-full wp-image-11012" src="https://cos.name/wp-content/uploads/2015/06/感兴趣的主题.png" alt="感兴趣的主题" width="820" height="440" srcset="https://cos.name/wp-content/uploads/2015/06/感兴趣的主题.png 820w, https://cos.name/wp-content/uploads/2015/06/感兴趣的主题-300x161.png 300w, https://cos.name/wp-content/uploads/2015/06/感兴趣的主题-500x268.png 500w" sizes="(max-width: 820px) 100vw, 820px" />](https://cos.name/wp-content/uploads/2015/06/感兴趣的主题.png)
 
 ## 参会单位
 

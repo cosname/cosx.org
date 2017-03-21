@@ -15,7 +15,7 @@ slug: svm-series-maximum-margin-classifier
 
 _原文链接请点击[这里](http://blog.pluskid.org/?p=632)
   
-[![svm](https://cos.name/wp-content/uploads/2014/01/svm.png)](https://cos.name/wp-content/uploads/2014/01/svm.png)_
+[<img class=" wp-image-9484 alignright" alt="svm" src="https://cos.name/wp-content/uploads/2014/01/svm.png" width="286" height="282" />](https://cos.name/wp-content/uploads/2014/01/svm.png)_
 
 支持向量机即 [Support Vector Machine](http://en.wikipedia.org/wiki/Support_vector_machine)，简称 SVM 。我最开始听说这头机器的名号的时候，一种神秘感就油然而生，似乎把 Support 这么一个具体的动作和 Vector 这么一个抽象的概念拼到一起，然后再做成一个 Machine ，一听就很玄了！
 
@@ -31,13 +31,13 @@ w^Tx + b = 0
   
 \]
 
-一个超平面，在二维空间中的例子就是一条直线。我们希望的是，通过这个超平面可以把两类数据分隔开来，比如，在超平面一边的数据点所对应的 $y$ 全是 -1 ，而在另一边全是 1 。具体来说，我们令 $f(x)=w^Tx + b$ ，显然，如果 $f(x)=0$ ，那么 $x$ 是位于超平面上的点。我们不妨要求对于所有满足 $f(x)<0$ 的点，其对应的 $y$ 等于 -1 ，而 $f(x)>0$ 则对应 $y=1$ 的数据点。当然，有些时候（或者说大部分时候）数据并不是线性可分的，这个时候满足这样条件的超平面就根本不存在，不过关于如何处理这样的问题我们后面会讲，这里先从最简单的情形开始推导，就假设数据都是线性可分的，亦即这样的超平面是存在的。[![Hyper-Plane](https://cos.name/wp-content/uploads/2014/01/Hyper-Plane-300x294.png)](https://cos.name/wp-content/uploads/2014/01/Hyper-Plane.png)
+一个超平面，在二维空间中的例子就是一条直线。我们希望的是，通过这个超平面可以把两类数据分隔开来，比如，在超平面一边的数据点所对应的 $y$ 全是 -1 ，而在另一边全是 1 。具体来说，我们令 $f(x)=w^Tx + b$ ，显然，如果 $f(x)=0$ ，那么 $x$ 是位于超平面上的点。我们不妨要求对于所有满足 $f(x)<0$ 的点，其对应的 $y$ 等于 -1 ，而 $f(x)>0$ 则对应 $y=1$ 的数据点。当然，有些时候（或者说大部分时候）数据并不是线性可分的，这个时候满足这样条件的超平面就根本不存在，不过关于如何处理这样的问题我们后面会讲，这里先从最简单的情形开始推导，就假设数据都是线性可分的，亦即这样的超平面是存在的。[<img class="size-full wp-image-9485 alignright" alt="Hyper-Plane" src="https://cos.name/wp-content/uploads/2014/01/Hyper-Plane.png" width="391" height="384" srcset="https://cos.name/wp-content/uploads/2014/01/Hyper-Plane.png 391w, https://cos.name/wp-content/uploads/2014/01/Hyper-Plane-300x294.png 300w" sizes="(max-width: 391px) 100vw, 391px" />](https://cos.name/wp-content/uploads/2014/01/Hyper-Plane.png)
 
 如图所示，两种颜色的点分别代表两个类别，红颜色的线表示一个可行的超平面。在进行分类的时候，我们将数据点 $x$ 代入 $f(x)$ 中，如果得到的结果小于 0 ，则赋予其类别 -1 ，如果大于 0 则赋予类别 1 。如果 $f(x)=0$，则很难办了，分到哪一类都不是。事实上，对于 $f(x)$ 的绝对值很小的情况，我们都很难处理，因为细微的变动（比如超平面稍微转一个小角度）就有可能导致结果类别的改变。理想情况下，我们希望 $f(x)$ 的值都是很大的正数或者很小的负数，这样我们就能更加确信它是属于其中某一类别的。
 
 从几何直观上来说，由于超平面是用于分隔两类数据的，越接近超平面的点越“难”分隔，因为如果超平面稍微转动一下，它们就有可能跑到另一边去。反之，如果是距离超平面很远的点，例如图中的右上角或者左下角的点，则很容易分辩出其类别。
 
-[![geometric_margin](https://cos.name/wp-content/uploads/2014/01/geometric_margin.png)](https://cos.name/wp-content/uploads/2014/01/geometric_margin.png)实际上这两个 Criteria 是互通的，我们定义 functional margin 为 $\hat{\gamma}=y(w^Tx+b)=yf(x)$，注意前面乘上类别 $y$ 之后可以保证这个 margin 的非负性（因为 $f(x)<0$ 对应于 $y=-1$ 的那些点），而点到超平面的距离定义为 geometrical margin 。不妨来看看二者之间的关系。如图所示，对于一个点 $x$ ，令其垂直投影到超平面上的对应的为 $x_0$ ，由于 $w$ 是垂直于超平面的一个向量（请自行验证），我们有
+[<img class="size-full wp-image-9487 alignleft" alt="geometric_margin" src="https://cos.name/wp-content/uploads/2014/01/geometric_margin.png" width="150" height="150" />](https://cos.name/wp-content/uploads/2014/01/geometric_margin.png)实际上这两个 Criteria 是互通的，我们定义 functional margin 为 $\hat{\gamma}=y(w^Tx+b)=yf(x)$，注意前面乘上类别 $y$ 之后可以保证这个 margin 的非负性（因为 $f(x)<0$ 对应于 $y=-1$ 的那些点），而点到超平面的距离定义为 geometrical margin 。不妨来看看二者之间的关系。如图所示，对于一个点 $x$ ，令其垂直投影到超平面上的对应的为 $x_0$ ，由于 $w$ 是垂直于超平面的一个向量（请自行验证），我们有
 
 \[
   
@@ -89,7 +89,7 @@ y\_i(w^Tx\_i+b) = \hat{\gamma}_i \geq \hat{\gamma}, \quad i=1,\ldots,n
 
 通过求解这个问题，我们就可以找到一个 margin 最大的 classifier ，如下图所示，中间的红色线条是 Optimal Hyper Plane ，另外两条线到红线的距离都是等于 $\tilde{\gamma}$ 的：
 
-[![Optimal-Hyper-Plane](https://cos.name/wp-content/uploads/2014/01/Optimal-Hyper-Plane-300x294.png)](https://cos.name/wp-content/uploads/2014/01/Optimal-Hyper-Plane.png)
+[<img class="aligncenter size-full wp-image-9488" alt="Optimal-Hyper-Plane" src="https://cos.name/wp-content/uploads/2014/01/Optimal-Hyper-Plane.png" width="391" height="384" srcset="https://cos.name/wp-content/uploads/2014/01/Optimal-Hyper-Plane.png 391w, https://cos.name/wp-content/uploads/2014/01/Optimal-Hyper-Plane-300x294.png 300w" sizes="(max-width: 391px) 100vw, 391px" />](https://cos.name/wp-content/uploads/2014/01/Optimal-Hyper-Plane.png)
 
 到此为止，算是完成了 Maximum Margin Classifier 的介绍，通过最大化 margin ，我们使得该分类器对数据进行分类时具有了最大的 confidence （实际上，根据我们说给的一个数据集的 margin 的定义，准确的说，应该是“对最不 confidence 的数据具有了最大的 confidence”——虽然有点拗口）。不过，到现在似乎还没有一点点 Support Vector Machine 的影子。很遗憾的是，这个要等到下一次再说了，不过可以先小小地剧透一下，如上图所示，我们可以看到 hyper plane 两边的那个 gap 分别对应的两条平行的线（在高维空间中也应该是两个 hyper plane）上有一些点，显然两个 hyper plane 上都会有点存在，否则我们就可以进一步扩大 gap ，也就是增大 $\tilde{\gamma}$ 的值了。这些点呢，就叫做 support vector ，嗯，先说这么多了。
 

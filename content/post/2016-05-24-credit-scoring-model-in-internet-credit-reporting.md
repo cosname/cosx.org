@@ -26,7 +26,7 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 小微信贷，我们定义为金额较小，并且没有抵押担保，完全靠信用的借贷行为。小微信贷可以面向个人（2C），也可以面向小微企业（2B）。对于2C类业务而言，常常是小额短期信用贷款，这是贷款是为解决借款人临时性的消费需要而发放的期限在1年以内、金额在20万元及以下的、毋需提供担保的人民币信用贷款。对于2B类业务而言，由于小微企业的信贷需求特点是 “短、小、频、急”，这种小额、短期、分散的特征更类似于零售贷款，对资金流动性的要求更高。<!--more-->
 
-小微信贷的产生具有其深刻的市场原因。在2B层面，小微企业受到传统金融机构的歧视和排挤，资金供给严重不足最终导致了小微企业的营养不良。就其原因，主要是小微企业没有足够的抵押物。而传统银行贷款，往往需要企业提供足够的抵押品。小微企业处于发展初级阶段，有限的资金都必须用在刀口上，所以只有少量资金可以用来购买土地房产等固定资产。于是造成传统银行在小微业务方面的产品较少。这造成了小微企业的融资需求与银行产品不匹配。另一方面，很多小微企业的财务报表不完全，从而造成信息不对称，银行对它们没有足够了解的基础上，不敢轻易放贷。而事实上，对银行来说，相对于大企业业务，小微信贷业务成本更高，这也导致银行放贷动力不足。而恰恰相反，在互联网平台上，信息不对称在一定程度上得到降低，而资金的供需双方在降低了交易成本的情况下直接对接，有些电商平台也开始为自己平台上的中小企业提供融资信贷服务。[![huang_1](https://cos.name/wp-content/uploads/2016/05/huang_1-300x176.png)](https://cos.name/wp-content/uploads/2016/05/huang_1.png)
+小微信贷的产生具有其深刻的市场原因。在2B层面，小微企业受到传统金融机构的歧视和排挤，资金供给严重不足最终导致了小微企业的营养不良。就其原因，主要是小微企业没有足够的抵押物。而传统银行贷款，往往需要企业提供足够的抵押品。小微企业处于发展初级阶段，有限的资金都必须用在刀口上，所以只有少量资金可以用来购买土地房产等固定资产。于是造成传统银行在小微业务方面的产品较少。这造成了小微企业的融资需求与银行产品不匹配。另一方面，很多小微企业的财务报表不完全，从而造成信息不对称，银行对它们没有足够了解的基础上，不敢轻易放贷。而事实上，对银行来说，相对于大企业业务，小微信贷业务成本更高，这也导致银行放贷动力不足。而恰恰相反，在互联网平台上，信息不对称在一定程度上得到降低，而资金的供需双方在降低了交易成本的情况下直接对接，有些电商平台也开始为自己平台上的中小企业提供融资信贷服务。[<img class="aligncenter size-full wp-image-12250" src="https://cos.name/wp-content/uploads/2016/05/huang_1.png" alt="huang_1" width="398" height="234" srcset="https://cos.name/wp-content/uploads/2016/05/huang_1.png 398w, https://cos.name/wp-content/uploads/2016/05/huang_1-300x176.png 300w" sizes="(max-width: 398px) 100vw, 398px" />](https://cos.name/wp-content/uploads/2016/05/huang_1.png)
 
 <p style="text-align: center;">
   图1 银行的大企业贷款与小微企业贷款
@@ -36,7 +36,7 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 在2C方面，个人信用贷款主要为了购车、房屋装修、旅游等消费使用，但一般不能用于支付购房款。一般来说信用良好、有固定居所以及稳定收入、还贷能力充足的人能够申请信用贷款。传统的信贷审核仍然存在以下缺点：效率低、速度慢、准确性差。由于这些问题存在，使其很难适应互联网信贷的审核模式。另一方面，信用卡对普罗大众来说能够支配的信用额度有限。因此，仅依靠金融领域已有产品并不能满足用户对贷款金额以及时效性的细化需求。网络信贷的出现将更快地撮合这一过程，从而大量地减少了时间成本。
 
-自余额宝推出以来，互联网金融的产品如雨后春笋般出现。移动互联网正在逐渐渗透到传统金融的各个环节，目标是使金融能够以更低的成本、更多样化的方式、更优质的体验覆盖更多的人群。网络信贷平台将小额信用贷款用互联网的方式进行了改造，从而更多的小微企业和个人有了融资渠道，并且这一过程变得更加便捷。[![huang_2](https://cos.name/wp-content/uploads/2016/05/huang_2-500x298.png)](https://cos.name/wp-content/uploads/2016/05/huang_2.png)
+自余额宝推出以来，互联网金融的产品如雨后春笋般出现。移动互联网正在逐渐渗透到传统金融的各个环节，目标是使金融能够以更低的成本、更多样化的方式、更优质的体验覆盖更多的人群。网络信贷平台将小额信用贷款用互联网的方式进行了改造，从而更多的小微企业和个人有了融资渠道，并且这一过程变得更加便捷。[<img class="aligncenter size-full wp-image-12251" src="https://cos.name/wp-content/uploads/2016/05/huang_2.png" alt="huang_2" width="507" height="302" srcset="https://cos.name/wp-content/uploads/2016/05/huang_2.png 507w, https://cos.name/wp-content/uploads/2016/05/huang_2-300x179.png 300w, https://cos.name/wp-content/uploads/2016/05/huang_2-500x298.png 500w" sizes="(max-width: 507px) 100vw, 507px" />](https://cos.name/wp-content/uploads/2016/05/huang_2.png)
 
 <p style="text-align: center;">
   图2 个人信用贷款的用途
@@ -56,7 +56,7 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 如何能够在B2C或者P2P平台上也能够使用海量的互联网数据帮助完成征信的过程，是我们希望能够在互联网不断颠覆传统的今天看到的事。本项研究的目标就是通过收集到的用户历史行为数据建立预测用户信用评分的模型。本文的数据收集来自一家小贷公司，为了数据隐私考虑，本文将隐去一部分数据信息以及分析结果，但是不影响分析结果的客观性。
 
-具体而言，我们称提供数据的公司为熊小贷（为公司匿名），熊小贷公司的业务包括2B业务和2C业务。公司已经通过自己的综合数据分析得到了对于2B和2C业务的统一用户信用得分，称为熊得分。但是熊得分广泛针对于公司所有的产品以及所有用户，使得对于特定产品的信用评分对于用户的违约情况预测精度并不高。熊小贷公司希望通过某款产品用户特有信息的数据支持，建立针对该特定产品的用户信用评分模型，预期目标是，通过数据支持建立起的该产品用户信用评分模型对于用户是否违约的预测精确度要高于通用的熊得分。直观了解公司的2B和2C业务可以从图3得出，公司包括针对不同用户的不同产品。例如熊分期是针对熊得分400以上用户的定制产品。在手机客户端下载APP“熊小贷”点击进入即可开始信用生活。之后再点击“熊分期”即可进入产品页面，后续会要求用户进行注册以及填写个人信息等内容。[![huang_3](https://cos.name/wp-content/uploads/2016/05/huang_3-500x429.png)](https://cos.name/wp-content/uploads/2016/05/huang_3.png)
+具体而言，我们称提供数据的公司为熊小贷（为公司匿名），熊小贷公司的业务包括2B业务和2C业务。公司已经通过自己的综合数据分析得到了对于2B和2C业务的统一用户信用得分，称为熊得分。但是熊得分广泛针对于公司所有的产品以及所有用户，使得对于特定产品的信用评分对于用户的违约情况预测精度并不高。熊小贷公司希望通过某款产品用户特有信息的数据支持，建立针对该特定产品的用户信用评分模型，预期目标是，通过数据支持建立起的该产品用户信用评分模型对于用户是否违约的预测精确度要高于通用的熊得分。直观了解公司的2B和2C业务可以从图3得出，公司包括针对不同用户的不同产品。例如熊分期是针对熊得分400以上用户的定制产品。在手机客户端下载APP“熊小贷”点击进入即可开始信用生活。之后再点击“熊分期”即可进入产品页面，后续会要求用户进行注册以及填写个人信息等内容。[<img class="aligncenter size-full wp-image-12252" src="https://cos.name/wp-content/uploads/2016/05/huang_3.png" alt="huang_3" width="595" height="510" srcset="https://cos.name/wp-content/uploads/2016/05/huang_3.png 595w, https://cos.name/wp-content/uploads/2016/05/huang_3-300x257.png 300w, https://cos.name/wp-content/uploads/2016/05/huang_3-500x429.png 500w" sizes="(max-width: 595px) 100vw, 595px" />](https://cos.name/wp-content/uploads/2016/05/huang_3.png)
 
 <p style="text-align: center;">
   图3 熊小贷公司产品概况
@@ -84,7 +84,7 @@ slug: credit-scoring-model-in-internet-credit-reporting
 综上所述，上述四张表格可以通过不同的关键字分别进行匹配连接，从而能够对应到一个用户的多行交易信息在下一小节中，我们将详细阐述数据的变量提取过程。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2016/05/huang_4.png">![huang_4](https://cos.name/wp-content/uploads/2016/05/huang_4-300x253.png)</a>
+  <a href="https://cos.name/wp-content/uploads/2016/05/huang_4.png"><img class="aligncenter size-full wp-image-12253" src="https://cos.name/wp-content/uploads/2016/05/huang_4.png" alt="huang_4" width="441" height="372" srcset="https://cos.name/wp-content/uploads/2016/05/huang_4.png 441w, https://cos.name/wp-content/uploads/2016/05/huang_4-300x253.png 300w" sizes="(max-width: 441px) 100vw, 441px" /></a>
 </p>
 
 <p style="text-align: center;">
@@ -125,7 +125,7 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 在征信问题中，我们通常会面临一个典型的问题，在本案例中也是如此，当一个用户对应多条行为关系，如何按照一套既定的指标体系汇总到个人呢？在本案例中，每一个用户对应的交易记录小至几十条，大至一千条，通过交易事实对应到商户分类信息表格，我们可以将其归之为不同类型的交易，例如在超市购物，购买游戏点卡，交水电煤气费用等。对应每一种类别的行为，都需要通过一种标准化的方式计算对应每一个人的变量，来衡量对应一系列行为的人的特征。为此，我们引入营销学中经常采用的RFM模型（参见美国数据库营销研究所Arthur Hughes的研究）。
 
-[![huang_5](https://cos.name/wp-content/uploads/2016/05/huang_5-500x270.png)](https://cos.name/wp-content/uploads/2016/05/huang_5.png)
+[<img class="aligncenter size-full wp-image-12254" src="https://cos.name/wp-content/uploads/2016/05/huang_5.png" alt="huang_5" width="558" height="301" srcset="https://cos.name/wp-content/uploads/2016/05/huang_5.png 558w, https://cos.name/wp-content/uploads/2016/05/huang_5-300x162.png 300w, https://cos.name/wp-content/uploads/2016/05/huang_5-500x270.png 500w" sizes="(max-width: 558px) 100vw, 558px" />](https://cos.name/wp-content/uploads/2016/05/huang_5.png)
 
 <p style="text-align: center;">
   图5 RFM模型图示
@@ -249,7 +249,7 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 通过以上描述分析，我们已经能够观察到在所提取特征中违约用户与非违约用户的不同，通过回归分析，我们将进一步说明通过变量特征的设定带来的预测效果的提升。
 
-[![huang_6](https://cos.name/wp-content/uploads/2016/05/huang_6-500x311.png)](https://cos.name/wp-content/uploads/2016/05/huang_6.png)
+[<img class="aligncenter size-full wp-image-12255" src="https://cos.name/wp-content/uploads/2016/05/huang_6.png" alt="huang_6" width="558" height="347" srcset="https://cos.name/wp-content/uploads/2016/05/huang_6.png 558w, https://cos.name/wp-content/uploads/2016/05/huang_6-300x187.png 300w, https://cos.name/wp-content/uploads/2016/05/huang_6-500x311.png 500w" sizes="(max-width: 558px) 100vw, 558px" />](https://cos.name/wp-content/uploads/2016/05/huang_6.png)
 
 <p style="text-align: center;">
   图6 典型变量箱线图
@@ -688,7 +688,7 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
                   其他变量水平不变，银行卡数越多，越有可能是违约用户。
                 </li>
                 <li>
-                  保持其他变量不变，用户行为最大值越大，越可能是违约用户。这也验证了我们之前的结论，用户的极端行为越极端，越有可能是违约用户。<a href="https://cos.name/wp-content/uploads/2016/05/huang_7.png">![huang_7](https://cos.name/wp-content/uploads/2016/05/huang_7-500x231.png)</a>
+                  保持其他变量不变，用户行为最大值越大，越可能是违约用户。这也验证了我们之前的结论，用户的极端行为越极端，越有可能是违约用户。<a href="https://cos.name/wp-content/uploads/2016/05/huang_7.png"><img class="aligncenter size-full wp-image-12256" src="https://cos.name/wp-content/uploads/2016/05/huang_7.png" alt="huang_7" width="558" height="258" srcset="https://cos.name/wp-content/uploads/2016/05/huang_7.png 558w, https://cos.name/wp-content/uploads/2016/05/huang_7-300x139.png 300w, https://cos.name/wp-content/uploads/2016/05/huang_7-500x231.png 500w" sizes="(max-width: 558px) 100vw, 558px" /></a>
                 </li>
               </ol>
               
@@ -701,7 +701,7 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
               </p>
               
               <p>
-                <a href="https://cos.name/wp-content/uploads/2016/05/huang_8.png">![huang_8](https://cos.name/wp-content/uploads/2016/05/huang_8-500x203.png)</a>
+                <a href="https://cos.name/wp-content/uploads/2016/05/huang_8.png"><img class="aligncenter size-full wp-image-12257" src="https://cos.name/wp-content/uploads/2016/05/huang_8.png" alt="huang_8" width="558" height="227" srcset="https://cos.name/wp-content/uploads/2016/05/huang_8.png 558w, https://cos.name/wp-content/uploads/2016/05/huang_8-300x122.png 300w, https://cos.name/wp-content/uploads/2016/05/huang_8-500x203.png 500w" sizes="(max-width: 558px) 100vw, 558px" /></a>
               </p>
               
               <p style="text-align: center;">
@@ -719,7 +719,7 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
               </p>
               
               <p>
-                衡量模型的预测效果可以采用指标ROC（Receiver Operating Characteristic）曲线或者AUC（Area Under Curve）值。其中ROC曲线的横坐标为false positive rate（FPR），也称为Specificity，刻画的是模型预测错了，认为为1但真实为0的观测占所有真实为0的观测的比例。纵坐标为true positive rate（TPR），也称为Sensitivity，刻画的是模型预测所识别出的为1且真实为1的观测占所有真实为1的观测的比例。ROC曲线越贴近左上角，表明模型的预测效果越好。AUC是ROC曲线下的面积，这一指标取值越大表明模型预测的效果越好。通常在计算中也可以考虑如下公式：<a href="https://cos.name/wp-content/uploads/2016/05/huang_8_1.png">![huang_8_1](https://cos.name/wp-content/uploads/2016/05/huang_8_1-500x62.png)</a>
+                衡量模型的预测效果可以采用指标ROC（Receiver Operating Characteristic）曲线或者AUC（Area Under Curve）值。其中ROC曲线的横坐标为false positive rate（FPR），也称为Specificity，刻画的是模型预测错了，认为为1但真实为0的观测占所有真实为0的观测的比例。纵坐标为true positive rate（TPR），也称为Sensitivity，刻画的是模型预测所识别出的为1且真实为1的观测占所有真实为1的观测的比例。ROC曲线越贴近左上角，表明模型的预测效果越好。AUC是ROC曲线下的面积，这一指标取值越大表明模型预测的效果越好。通常在计算中也可以考虑如下公式：<a href="https://cos.name/wp-content/uploads/2016/05/huang_8_1.png"><img class="aligncenter size-full wp-image-12258" src="https://cos.name/wp-content/uploads/2016/05/huang_8_1.png" alt="huang_8_1" width="501" height="62" srcset="https://cos.name/wp-content/uploads/2016/05/huang_8_1.png 501w, https://cos.name/wp-content/uploads/2016/05/huang_8_1-300x37.png 300w, https://cos.name/wp-content/uploads/2016/05/huang_8_1-500x62.png 500w" sizes="(max-width: 501px) 100vw, 501px" /></a>
               </p>
               
               <p>
@@ -727,7 +727,7 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
               </p>
               
               <p>
-                为了模型对比，我们随机将所有数据划分为训练数据集（80%）和测试数据集（20%）， 在训练集上估计模型的回归系数，将所有系数带入测试数据中进行计算，预测非违约可能性。随机拆分被重复了100次。我们随机抽取其中一次绘制ROC曲线如图9所示。其中，Score表示模型a的预测结果，模型中只包含“熊得分”，Full model表示模型b对应的预测结果，BIC表示模型c对应的预测结果。从图中可以得出结论，在b模型与c模型的预测效果接近，二者都要远远好于a模型的预测效果。进一步地，我们将100次随机拆分计算得到的AUC值取平均。出于行业数据机密，我们此处不汇报AUC的绝对提升结果。但是相对于 a模型而言，b模型和c模型的预测效果将相对提升13.6%。这将直接使得我们能够在实际业务中更精准的判断出用户的信用状况。<a href="https://cos.name/wp-content/uploads/2016/05/huang_9.png">![huang_9](https://cos.name/wp-content/uploads/2016/05/huang_9-300x233.png)</a>
+                为了模型对比，我们随机将所有数据划分为训练数据集（80%）和测试数据集（20%）， 在训练集上估计模型的回归系数，将所有系数带入测试数据中进行计算，预测非违约可能性。随机拆分被重复了100次。我们随机抽取其中一次绘制ROC曲线如图9所示。其中，Score表示模型a的预测结果，模型中只包含“熊得分”，Full model表示模型b对应的预测结果，BIC表示模型c对应的预测结果。从图中可以得出结论，在b模型与c模型的预测效果接近，二者都要远远好于a模型的预测效果。进一步地，我们将100次随机拆分计算得到的AUC值取平均。出于行业数据机密，我们此处不汇报AUC的绝对提升结果。但是相对于 a模型而言，b模型和c模型的预测效果将相对提升13.6%。这将直接使得我们能够在实际业务中更精准的判断出用户的信用状况。<a href="https://cos.name/wp-content/uploads/2016/05/huang_9.png"><img class="aligncenter size-full wp-image-12259" src="https://cos.name/wp-content/uploads/2016/05/huang_9.png" alt="huang_9" width="466" height="362" srcset="https://cos.name/wp-content/uploads/2016/05/huang_9.png 466w, https://cos.name/wp-content/uploads/2016/05/huang_9-300x233.png 300w" sizes="(max-width: 466px) 100vw, 466px" /></a>
               </p>
               
               <p style="text-align: center;">

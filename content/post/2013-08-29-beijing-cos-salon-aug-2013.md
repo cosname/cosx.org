@@ -11,7 +11,7 @@ tags:
 slug: beijing-cos-salon-aug-2013
 ---
 
-[![salon_11_1](https://cos.name/wp-content/uploads/2013/08/salon_11_1.jpg)](https://cos.name/wp-content/uploads/2013/08/salon_11_1.jpg)2013年8月24日，COS数据分析沙龙（北京）第十三期如期在中国人民大学举行。本期嘉宾我们邀请了来自宏源证劵高级分析师赵国栋先生，赵国栋先生给大家分享了主题为“大数据时代的历史机遇”讲座。酷热的夏天即将离去，但大数据的热度才刚刚开始。
+[<img class="size-medium wp-image-8366 alignright" alt="salon_11_1" src="https://cos.name/wp-content/uploads/2013/08/salon_11_1-225x300.jpg" width="225" height="300" srcset="https://cos.name/wp-content/uploads/2013/08/salon_11_1-225x300.jpg 225w, https://cos.name/wp-content/uploads/2013/08/salon_11_1-375x500.jpg 375w, https://cos.name/wp-content/uploads/2013/08/salon_11_1.jpg 720w" sizes="(max-width: 225px) 100vw, 225px" />](https://cos.name/wp-content/uploads/2013/08/salon_11_1.jpg)2013年8月24日，COS数据分析沙龙（北京）第十三期如期在中国人民大学举行。本期嘉宾我们邀请了来自宏源证劵高级分析师赵国栋先生，赵国栋先生给大家分享了主题为“大数据时代的历史机遇”讲座。酷热的夏天即将离去，但大数据的热度才刚刚开始。
 
 **本期沙龙嘉宾赵国栋**，《大数据时代的历史机遇》作者，中国计算机学会会员、中国建投研究院特约研究员、广东省应急产业协会专家会员、宏源证券研究所高级分析师。
 
@@ -43,4 +43,4 @@ slug: beijing-cos-salon-aug-2013
 
 本次沙龙的30余名参与者主要来自政府单位、中航工业、百度、豆瓣、亚马逊中国、走秀网、去哪儿网、高德、旭日海昌、中盈优创、世纪民信、IMS、McGraw Hill Financial、Supstat以及中国人民大学、北京航空航天大学等单位。
 
-[![salon_11_2](https://cos.name/wp-content/uploads/2013/08/salon_11_2.jpg)](https://cos.name/wp-content/uploads/2013/08/salon_11_2.jpg)
+[<img class="aligncenter size-medium wp-image-8367" alt="salon_11_2" src="https://cos.name/wp-content/uploads/2013/08/salon_11_2-300x113.jpg" width="450" height="169.5" srcset="https://cos.name/wp-content/uploads/2013/08/salon_11_2-300x113.jpg 300w, https://cos.name/wp-content/uploads/2013/08/salon_11_2-500x189.jpg 500w, https://cos.name/wp-content/uploads/2013/08/salon_11_2.jpg 1264w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2013/08/salon_11_2.jpg)

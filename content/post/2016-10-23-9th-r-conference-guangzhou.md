@@ -18,7 +18,7 @@ R语言作为统计和数据挖掘界广泛应用的统计分析、绘图的语�
 
 R语言在电商、互联网、金融、医疗、生物医学等领域广泛的应用前景吸引着越来越多华南地区数据人开始关注R与数据科学，来自各行各业的R用户需要这样一个平台交流技术，碰撞思想，广州R语言会议正是适应这种需求而举办。2014年11月，在华南统计科学研究中心、中山大学数学学院以及统计之都的多方努力下， R语言会议首次在华南地区主办，随后，2015年5月，华南地区第二次R语言会议也在中山大学成功召开，报名情况火爆，约有1400多人报名参会。 2016年中国R语言会议（广州）将由华南统计科学研究中心、中山大学数学学院与统计之都联合主办，将在往届会议的基础上进一步扩大R语言和数据科学的影响力，诚邀学界和业界精英同台演讲交流，愿与更多的数据爱好者探讨数据科学，共同进步提高！第九届中国R语言会议（广州），欢迎各位的到来！
 
-[![China-R-Logo-trans](https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans-300x192.png)](https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans.png)
+[<img class="aligncenter size-full wp-image-12898" src="https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans.png 450w, https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans.png)
 
 <!--more-->
 
@@ -140,7 +140,7 @@ R语言在电商、互联网、金融、医疗、生物医学等领域广泛的�
 
 第九届中国R语言会议（广州）微信公众号二维码如图，公众号将第一时间发布相关消息，谢谢关注！
 
-[![2016%e5%b9%bf%e5%b7%9er](https://cos.name/wp-content/uploads/2016/10/2016广州R-150x150.jpg)](https://cos.name/wp-content/uploads/2016/10/2016广州R.jpg)
+[<img class="aligncenter size-full wp-image-13218" src="https://cos.name/wp-content/uploads/2016/10/2016广州R.jpg" alt="2016%e5%b9%bf%e5%b7%9er" width="258" height="258" srcset="https://cos.name/wp-content/uploads/2016/10/2016广州R.jpg 258w, https://cos.name/wp-content/uploads/2016/10/2016广州R-150x150.jpg 150w" sizes="(max-width: 258px) 100vw, 258px" />](https://cos.name/wp-content/uploads/2016/10/2016广州R.jpg)
 
 第九届中国R语言会议（广州）主办方：
 

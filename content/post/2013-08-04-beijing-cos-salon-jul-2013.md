@@ -14,7 +14,7 @@ slug: beijing-cos-salon-jul-2013
 &nbsp;
 
 <p style="text-align: center;">
-  <em><strong>by <a href="http://weibo.com/xzhman">肖展航</a></strong></em><a href="https://cos.name/wp-content/uploads/2013/08/cos101.jpg">![cos101](https://cos.name/wp-content/uploads/2013/08/cos101.jpg)</a>
+  <em><strong>by <a href="http://weibo.com/xzhman">肖展航</a></strong></em><a href="https://cos.name/wp-content/uploads/2013/08/cos101.jpg"><img class="aligncenter size-large wp-image-8088" alt="cos101" src="https://cos.name/wp-content/uploads/2013/08/cos101-500x362.jpg" width="500" height="362" srcset="https://cos.name/wp-content/uploads/2013/08/cos101-500x362.jpg 500w, https://cos.name/wp-content/uploads/2013/08/cos101-300x217.jpg 300w, https://cos.name/wp-content/uploads/2013/08/cos101-413x300.jpg 413w, https://cos.name/wp-content/uploads/2013/08/cos101.jpg 854w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 &nbsp;
@@ -62,10 +62,10 @@ slug: beijing-cos-salon-jul-2013
 
 报名嘉宾中填写的报名理由如下图：
 
-[![cos102](https://cos.name/wp-content/uploads/2013/08/cos102.jpg)](https://cos.name/wp-content/uploads/2013/08/cos102.jpg)
+[<img class="aligncenter size-full wp-image-8089" alt="cos102" src="https://cos.name/wp-content/uploads/2013/08/cos102.jpg" width="239" height="217" />](https://cos.name/wp-content/uploads/2013/08/cos102.jpg)
 
 &nbsp;
 
-[![cos103](https://cos.name/wp-content/uploads/2013/08/cos103.jpg)](https://cos.name/wp-content/uploads/2013/08/cos103.jpg)
+[<img class="aligncenter size-large wp-image-8090" alt="cos103" src="https://cos.name/wp-content/uploads/2013/08/cos103-364x500.jpg" width="364" height="500" srcset="https://cos.name/wp-content/uploads/2013/08/cos103-364x500.jpg 364w, https://cos.name/wp-content/uploads/2013/08/cos103-218x300.jpg 218w, https://cos.name/wp-content/uploads/2013/08/cos103.jpg 687w" sizes="(max-width: 364px) 100vw, 364px" />](https://cos.name/wp-content/uploads/2013/08/cos103.jpg)
   
 [更多沙龙信息](https://cos.name/salon)

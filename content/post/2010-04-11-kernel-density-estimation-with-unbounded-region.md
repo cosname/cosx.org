@@ -28,7 +28,7 @@ plot(density(x,kernel="epanechnikov"),ylim=c(0,1.2));
 lines(seq(0,8,by=0.02),dexp(seq(0,8,by=0.02),1),col="blue");
 abline(v=0,col="red");</pre>
 
-[![](https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n1000-300x300.png "原始核函数（样本量1000）")](https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n1000.png)
+[<img class="aligncenter size-full wp-image-2061" title="原始核函数（样本量1000）" src="https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n1000.png" alt="" width="500" height="500" srcset="https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n1000.png 500w, https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n1000-150x150.png 150w, https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n1000-300x300.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n1000.png)
 
 可以看出，理论上应该单调递减的密度函数在0附近有明显的“陡坡”，而且不应该有密度的小于零的区域也有着正的估计值。当样本量增大时，这种现象也不会得到明显好转，下图是将样本量改为10000时的情形。
 
@@ -38,7 +38,7 @@ plot(density(x,kernel="epanechnikov"),ylim=c(0,1.2));
 lines(seq(0,8,by=0.02),dexp(seq(0,8,by=0.02),1),col="blue");
 abline(v=0,col="red");</pre>
 
-[![](https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n10000-300x300.png "原始核函数（样本量10000）")](https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n10000.png)
+[<img class="aligncenter size-full wp-image-2062" title="原始核函数（样本量10000）" src="https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n10000.png" alt="" width="500" height="500" srcset="https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n10000.png 500w, https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n10000-150x150.png 150w, https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n10000-300x300.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/04/kde_original_kernel_n10000.png)
 
 我们也许从平时看的书中了解到，当样本量趋于无穷时，核密度估计值将是收敛到真实的密度函数的，但我们可能不会特意去研究那些结论成立的条件。以上这两个简单的例子似乎给了我们一个直观的感觉，那就是当真实密度函数的支撑集（函数f(x)的支撑集指的是使得f(x)≠0的x的集合）有边界时，核密度估计值可能会出现一些不理想的情况。下面就简单地给出一些理论的结果。
 
@@ -116,7 +116,7 @@ lines(x,dexp(x,1),col="red");</pre>
 
 [](https://cos.name/wp-content/uploads/2010/04/kde_corrected_kernel_n1000.png)
 
-[![](https://cos.name/wp-content/uploads/2010/04/kde_corrected_kernel_n1000-300x300.png "修正核函数（样本量1000）")](https://cos.name/wp-content/uploads/2010/04/kde_corrected_kernel_n1000.png)
+[<img class="aligncenter size-full wp-image-2081" title="修正核函数（样本量1000）" src="https://cos.name/wp-content/uploads/2010/04/kde_corrected_kernel_n1000.png" alt="" width="500" height="500" srcset="https://cos.name/wp-content/uploads/2010/04/kde_corrected_kernel_n1000.png 500w, https://cos.name/wp-content/uploads/2010/04/kde_corrected_kernel_n1000-150x150.png 150w, https://cos.name/wp-content/uploads/2010/04/kde_corrected_kernel_n1000-300x300.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/04/kde_corrected_kernel_n1000.png)
 
 从中可以看出，边界的偏差问题已经得到了很好的改进。
 

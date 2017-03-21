@@ -16,7 +16,7 @@ tags:
 slug: statistics-in-chinese-song-poem-2
 ---
 
-[![](https://cos.name/wp-content/uploads/2012/03/galaxy-421x300.jpg "统计词话（二）配图")](https://cos.name/wp-content/uploads/2012/03/galaxy.jpg)
+[<img class="aligncenter size-full wp-image-5117" title="统计词话（二）配图" alt="" src="https://cos.name/wp-content/uploads/2012/03/galaxy.jpg" width="450" height="320" srcset="https://cos.name/wp-content/uploads/2012/03/galaxy.jpg 450w, https://cos.name/wp-content/uploads/2012/03/galaxy-300x213.jpg 300w, https://cos.name/wp-content/uploads/2012/03/galaxy-421x300.jpg 421w" sizes="(max-width: 450px) 100vw, 450px" />](https://cos.name/wp-content/uploads/2012/03/galaxy.jpg)
 
 > 抬头，他们看到了诗云。
   
@@ -112,7 +112,7 @@ r2</pre>
 对于这个疑问，一个很直接的想法是做出词人与词牌的对应关系。在《全宋词》的数据中，共有1377位词人和876个词牌，那么我们就可以构造一个1377*876的0-1矩阵，取1的元素表示这一行所对应的词人使用了这一列对应的词牌。我们将这个矩阵变成一张图片，每一个像素点就是矩阵的一个元素，黑色的部分是0，白色的部分是1，结果就会是下面这样：
 
 <p style="text-align: left;">
-  <a href="https://cos.name/wp-content/uploads/2012/03/original.png">![](https://cos.name/wp-content/uploads/2012/03/original.png "统计词话（二）——词人与词牌对应关系")</a>从这张“夜空中的星星”我们可以发现，绝大部分的点都被黑色所占据，这其实很容易理解：一个词人不可能写过所有的词牌，一个词牌也不可能人人都会去写。然而我们会注意到一个问题——“星星”隔得太远了。在黑色的背景中，这些“星星”零散地分布在夜空中的各个角落，而出于一种“星星相惜”的心情，我们似乎希望能把那些最亮的“星”聚在一起。
+  <a href="https://cos.name/wp-content/uploads/2012/03/original.png"><img class="aligncenter size-large wp-image-5118" title="统计词话（二）——词人与词牌对应关系" alt="" src="https://cos.name/wp-content/uploads/2012/03/original-318x500.png" width="318" height="500" srcset="https://cos.name/wp-content/uploads/2012/03/original-318x500.png 318w, https://cos.name/wp-content/uploads/2012/03/original-190x300.png 190w, https://cos.name/wp-content/uploads/2012/03/original.png 876w" sizes="(max-width: 318px) 100vw, 318px" /></a>从这张“夜空中的星星”我们可以发现，绝大部分的点都被黑色所占据，这其实很容易理解：一个词人不可能写过所有的词牌，一个词牌也不可能人人都会去写。然而我们会注意到一个问题——“星星”隔得太远了。在黑色的背景中，这些“星星”零散地分布在夜空中的各个角落，而出于一种“星星相惜”的心情，我们似乎希望能把那些最亮的“星”聚在一起。
 </p>
 
 <p style="text-align: left;">
@@ -124,7 +124,7 @@ r2</pre>
 </p>
 
 <p style="text-align: left;">
-  <a href="https://cos.name/wp-content/uploads/2012/03/seriate.png">![](https://cos.name/wp-content/uploads/2012/03/seriate.png "统计词话（二）——矩阵排序")</a>很明显，这张图中“星星”变得更加集中，放眼望去，就好像是文字和名字交织成的两条银河。让我们把目光聚焦到“星星”最密集的地方，最后可以得到以下这几个“星团”（只选取了若干最有代表性的）：
+  <a href="https://cos.name/wp-content/uploads/2012/03/seriate.png"><img class="aligncenter size-large wp-image-5119" title="统计词话（二）——矩阵排序" alt="" src="https://cos.name/wp-content/uploads/2012/03/seriate-318x500.png" width="318" height="500" srcset="https://cos.name/wp-content/uploads/2012/03/seriate-318x500.png 318w, https://cos.name/wp-content/uploads/2012/03/seriate-190x300.png 190w, https://cos.name/wp-content/uploads/2012/03/seriate.png 876w" sizes="(max-width: 318px) 100vw, 318px" /></a>很明显，这张图中“星星”变得更加集中，放眼望去，就好像是文字和名字交织成的两条银河。让我们把目光聚焦到“星星”最密集的地方，最后可以得到以下这几个“星团”（只选取了若干最有代表性的）：
 </p>
 
 <table align="center">
@@ -706,7 +706,7 @@ corrplot(M.AOE);
 corrRect(c(4, 2, 5));</pre>
 
 <p style="text-align: left;">
-  <a href="https://cos.name/wp-content/uploads/2012/03/order.png">![](https://cos.name/wp-content/uploads/2012/03/order.png "统计词话（二）——相关系数矩阵排序")</a>关于双向聚类只是在这里做一个简单的介绍，如果对此感兴趣，还可以继续搜索相关的文献，例如这篇<a href="http://innar.com/Liiv_Seriation.pdf" target="_blank">综述文章</a>。
+  <a href="https://cos.name/wp-content/uploads/2012/03/order.png"><img class="aligncenter size-large wp-image-5123" title="统计词话（二）——相关系数矩阵排序" alt="" src="https://cos.name/wp-content/uploads/2012/03/order-500x230.png" width="500" height="230" srcset="https://cos.name/wp-content/uploads/2012/03/order-500x230.png 500w, https://cos.name/wp-content/uploads/2012/03/order-300x138.png 300w, https://cos.name/wp-content/uploads/2012/03/order.png 1033w" sizes="(max-width: 500px) 100vw, 500px" /></a>关于双向聚类只是在这里做一个简单的介绍，如果对此感兴趣，还可以继续搜索相关的文献，例如这篇<a href="http://innar.com/Liiv_Seriation.pdf" target="_blank">综述文章</a>。
 </p>
 
 <p style="text-align: center;">
@@ -715,9 +715,9 @@ corrRect(c(4, 2, 5));</pre>
 
 你有没有觉得之前那张黑夜与星星的图不够炫？那是因为词人和词牌这两个维度是在相互垂直的坐标轴上，所以给人一种太规整的感觉。接下来我们摆弄一个小的技巧，就是把它们放到极坐标中，每一个词牌代表一个角度（方向），每一位词人则对应于一个距离，于是之前的那张图就转变成了下面的样子：
 
-[![](https://cos.name/wp-content/uploads/2012/03/poem-cloud.png "统计词话（二）——极坐标")](https://cos.name/wp-content/uploads/2012/03/poem-cloud.png)最后，我们再用核密度平滑来模拟星光的效果（使用`smoothScatter()`绘制平滑散点图），就成了最后这片璀璨的群星：
+[<img class="aligncenter size-large wp-image-5124" title="统计词话（二）——极坐标" alt="" src="https://cos.name/wp-content/uploads/2012/03/poem-cloud-500x333.png" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2012/03/poem-cloud-500x333.png 500w, https://cos.name/wp-content/uploads/2012/03/poem-cloud-300x200.png 300w, https://cos.name/wp-content/uploads/2012/03/poem-cloud-450x300.png 450w, https://cos.name/wp-content/uploads/2012/03/poem-cloud.png 600w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2012/03/poem-cloud.png)最后，我们再用核密度平滑来模拟星光的效果（使用`smoothScatter()`绘制平滑散点图），就成了最后这片璀璨的群星：
 
-[![](https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth.png "统计词话（二）——诗云")](https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth.png)在这一片星海中，每一个同心圆（椭圆）都代表了一位词人，而从中心向外的每一个方向都是一个词牌。这是人类的群星闪耀时，而幸运的是，这一片星空，是属于这个古老的国度的。
+[<img class="aligncenter size-large wp-image-5125" title="统计词话（二）——诗云" alt="" src="https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth-500x333.png" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth-500x333.png 500w, https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth-300x200.png 300w, https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth-450x300.png 450w, https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth.png 600w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2012/03/poem-cloud-smooth.png)在这一片星海中，每一个同心圆（椭圆）都代表了一位词人，而从中心向外的每一个方向都是一个词牌。这是人类的群星闪耀时，而幸运的是，这一片星空，是属于这个古老的国度的。
 
 附：绘制图形的R语言代码
 

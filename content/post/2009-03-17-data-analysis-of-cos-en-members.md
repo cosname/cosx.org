@@ -116,6 +116,6 @@ par(mar = c(3, 3, 3, 1))
 plot(t(table(spam, email_ru)), cex.axis = 0.8, shade = TRUE,
      main = "Spam members and Russian email address")</pre><figure id="attachment_878" style="width: 480px" class="wp-caption aligncenter">
 
-[![COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图](https://cos.name/wp-content/uploads/2009/03/cos_en_spam_mosaicplot-300x300.png "COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图")](https://cos.name/2009/03/data-analysis-of-cos-en-members/)<figcaption class="wp-caption-text">COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图</figcaption></figure> 
+[<img class="size-full wp-image-878" title="COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图" src="https://cos.name/wp-content/uploads/2009/03/cos_en_spam_mosaicplot.png" alt="COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/03/cos_en_spam_mosaicplot.png 480w, https://cos.name/wp-content/uploads/2009/03/cos_en_spam_mosaicplot-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/cos_en_spam_mosaicplot-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/2009/03/data-analysis-of-cos-en-members/)<figcaption class="wp-caption-text">COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图</figcaption></figure> 
 
 以上马赛克图进一步说明了俄罗斯邮箱与会员类型的关系。

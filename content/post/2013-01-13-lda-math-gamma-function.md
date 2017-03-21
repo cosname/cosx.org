@@ -42,7 +42,7 @@ $$\Gamma(n) = (n-1)! $$
 
 1728年，哥德巴赫在考虑数列插值的问题，通俗的说就是把数列的通项公式定义从整数集合延拓到实数集合，例如数列 $1,4,9,16,\cdots$ 可以用通项公式 $n^2$ 自然的表达，即便 $n$ 为实数的时候，这个通项公式也是良好定义的。直观的说也就是可以找到一条平滑的曲线$y=x^2$通过所有的整数点$(n,n^2)$，从而可以把定义在整数集上的公式延拓到实数集合。一天哥德巴赫开始处理阶乘序列 $1,2,6,24,120,720,\cdots$,我们可以计算 $2!,3!$, 是否可以计算 $2.5!$呢？我们把最初的一些 $(n,n!)$的点画在坐标轴上，确实可以看到，容易画出一条通过这些点的平滑曲线。
 
-<a href="http://www.52nlp.cn/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b01/euler" rel="attachment wp-att-5086"><br /> </a><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/factorial/" rel="attachment wp-att-6930">![factorial](https://cos.name/wp-content/uploads/2013/01/factorial-500x99.png)</a> <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/factorial-curve/" rel="attachment wp-att-6931">![factorial-curve](https://cos.name/wp-content/uploads/2013/01/factorial-curve.png)</a>
+<a href="http://www.52nlp.cn/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b01/euler" rel="attachment wp-att-5086"><br /> </a><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/factorial/" rel="attachment wp-att-6930"><img class="aligncenter size-full wp-image-6930" alt="factorial" src="https://cos.name/wp-content/uploads/2013/01/factorial.png" width="774" height="154" srcset="https://cos.name/wp-content/uploads/2013/01/factorial.png 774w, https://cos.name/wp-content/uploads/2013/01/factorial-300x59.png 300w, https://cos.name/wp-content/uploads/2013/01/factorial-500x99.png 500w" sizes="(max-width: 774px) 100vw, 774px" /></a> <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/factorial-curve/" rel="attachment wp-att-6931"><img class="aligncenter size-full wp-image-6931" alt="factorial-curve" src="https://cos.name/wp-content/uploads/2013/01/factorial-curve.png" width="251" height="183" /></a>
 
 但是哥德巴赫无法解决阶乘往实数集上延拓的这个问题，于是写信请教尼古拉斯.贝努利和他的弟弟丹尼尔.贝努利，由于欧拉当时和丹尼尔.贝努利在一块，他也因此得知了这个问题。而欧拉于1729 年完美的解决了这个问题，由此导致了$\Gamma$ 函数的诞生，当时欧拉只有22岁。
 
@@ -115,7 +115,7 @@ $$ \frac{2\cdot4}{3\cdot3} \cdot \frac{4\cdot6}{5\cdot5}\cdot \frac{6\cdot8}{7\c
 $$ \Bigl(\frac{1}{2}\Bigr)! = \frac{\sqrt{\pi}}{2} $$
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/euler/" rel="attachment wp-att-6929">![euler](https://cos.name/wp-content/uploads/2013/01/euler.jpg)</a>大数学家欧拉
+  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/euler/" rel="attachment wp-att-6929"><img class="aligncenter size-full wp-image-6929" alt="euler" src="https://cos.name/wp-content/uploads/2013/01/euler.jpg" width="189" height="220" /></a>大数学家欧拉
 </p>
 
 欧拉和高斯都是具有超凡直觉的数学家，但是欧拉和高斯的风格迥异。高斯是个老狐狸，数学上非常严谨，发表结果的时候却都把思考的痕迹抹去，只留下漂亮的结果，这招致了一些数学家对高斯的批评；而欧拉的风格不同，经常通过经验直觉做大胆的猜测，而他的文章中往往留下他如何做数学猜想的痕迹，而文章有的时候论证不够严谨。 拉普拉斯曾说过：”读读欧拉,他是所有人的老师。”波利亚在他的名著《数学与猜想》中也对欧拉做数学归纳和猜想的方式推崇备至。
@@ -151,7 +151,7 @@ $$ n! = \int_0^{\infty} u^ne^{-u}du $$
 $$ \Gamma(x) = \int\_0^1 (-\log t)^{x-1}dt = \int\_0^{\infty} t^{x-1}e^{-t}dt $$
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/gamma-func/" rel="attachment wp-att-6935">![gamma-func](https://cos.name/wp-content/uploads/2013/01/gamma-func-426x300.png)</a>
+  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/gamma-func/" rel="attachment wp-att-6935"><img class="aligncenter  wp-image-6935" alt="gamma-func" src="https://cos.name/wp-content/uploads/2013/01/gamma-func.png" width="398" height="280" srcset="https://cos.name/wp-content/uploads/2013/01/gamma-func.png 497w, https://cos.name/wp-content/uploads/2013/01/gamma-func-300x211.png 300w, https://cos.name/wp-content/uploads/2013/01/gamma-func-426x300.png 426w" sizes="(max-width: 398px) 100vw, 398px" /></a>
 </p>
 
 Gamma 函数找到了，我们来看看第二个问题，为何 Gamma 函数被定义为 $\Gamma(n)=(n-1)!$, 这看起来挺别扭的。如果我们稍微修正一下，把Gamma 函数定义中的 $t^{x-1}$ 替换为$t^x$
@@ -195,12 +195,12 @@ $$ \Gamma(x) \sim \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}}$$
 另外， Gamma 函数不仅可以定义在实数集上，还可以延拓到整个复平面上。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/gamma-complex/" rel="attachment wp-att-6933">![gamma-complex](https://cos.name/wp-content/uploads/2013/01/gamma-complex-416x300.png)</a>复平面上的Gamma 函数
+  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/gamma-complex/" rel="attachment wp-att-6933"><img class="aligncenter  wp-image-6933" alt="gamma-complex" src="https://cos.name/wp-content/uploads/2013/01/gamma-complex.png" width="371" height="268" srcset="https://cos.name/wp-content/uploads/2013/01/gamma-complex.png 773w, https://cos.name/wp-content/uploads/2013/01/gamma-complex-300x216.png 300w, https://cos.name/wp-content/uploads/2013/01/gamma-complex-500x360.png 500w, https://cos.name/wp-content/uploads/2013/01/gamma-complex-416x300.png 416w" sizes="(max-width: 371px) 100vw, 371px" /></a>复平面上的Gamma 函数
 </p>
 
 Gamma 函数有很多妙用，它不但使得 (1/2)! 的计算有意义，还能扩展很多其他的数学概念。比如导数，我们原来只能定义一阶、二阶等整数阶导数，有了Gamma 函数我们可以把函数导数的定义延拓到实数集，从而可以计算 1/2 阶导数,同样的积分作为导数的逆运算也可以有分数阶。我们先考虑一下 $x^n$ 的各阶导数
 
-<a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/derivatives/" rel="attachment wp-att-6925">![derivatives](https://cos.name/wp-content/uploads/2013/01/derivatives-500x158.png)</a>
+<a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/derivatives/" rel="attachment wp-att-6925"><img class="aligncenter size-full wp-image-6925" alt="derivatives" src="https://cos.name/wp-content/uploads/2013/01/derivatives.png" width="932" height="295" srcset="https://cos.name/wp-content/uploads/2013/01/derivatives.png 932w, https://cos.name/wp-content/uploads/2013/01/derivatives-300x94.png 300w, https://cos.name/wp-content/uploads/2013/01/derivatives-500x158.png 500w" sizes="(max-width: 932px) 100vw, 932px" /></a>
 
 由于k阶导数可以用阶乘表达，于是我们用Gamma 函数表达为
   
@@ -223,7 +223,7 @@ $$ \zeta(s) = 1+\frac{1}{2^s} + \frac{1}{3^s} + \cdots $$
 而$\zeta$ 函数涉及了数学中著名的黎曼猜想和素数的分布定理。希尔伯特曾说，如果他在沉睡1000年后醒来,他将问的第一个问题便是:黎曼猜想得到证明了吗？
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/digamma-func/" rel="attachment wp-att-6926">![digamma-func](https://cos.name/wp-content/uploads/2013/01/digamma-func-384x300.png)</a>
+  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/digamma-func/" rel="attachment wp-att-6926"><img class="aligncenter  wp-image-6926" alt="digamma-func" src="https://cos.name/wp-content/uploads/2013/01/digamma-func.png" width="280" height="218" srcset="https://cos.name/wp-content/uploads/2013/01/digamma-func.png 467w, https://cos.name/wp-content/uploads/2013/01/digamma-func-300x233.png 300w, https://cos.name/wp-content/uploads/2013/01/digamma-func-384x300.png 384w" sizes="(max-width: 280px) 100vw, 280px" /></a>
 </p>
 
 <p style="text-align: center">
@@ -279,7 +279,7 @@ $$Gamma(t|\alpha, \beta) = \frac{\beta^\alpha t^{\alpha-1}e^{-\beta t}}{\Gamma(\
 其中 $\alpha$ 称为 shape parameter, 主要决定了分布曲线的形状;而$\beta$ 称为 rate parameter 或者inverse scale parameter ($\frac{1}{\beta}$ 称为scale parameter),主要决定曲线有多陡。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/gamma-distribution/" rel="attachment wp-att-6934">![gamma-distribution](https://cos.name/wp-content/uploads/2013/01/gamma-distribution-393x300.png)</a>$Gamma(t|\alpha,\beta)$分布图像
+  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/gamma-distribution/" rel="attachment wp-att-6934"><img class="aligncenter  wp-image-6934" alt="gamma-distribution" src="https://cos.name/wp-content/uploads/2013/01/gamma-distribution.png" width="373" height="284" srcset="https://cos.name/wp-content/uploads/2013/01/gamma-distribution.png 776w, https://cos.name/wp-content/uploads/2013/01/gamma-distribution-300x228.png 300w, https://cos.name/wp-content/uploads/2013/01/gamma-distribution-500x380.png 500w, https://cos.name/wp-content/uploads/2013/01/gamma-distribution-393x300.png 393w" sizes="(max-width: 373px) 100vw, 373px" /></a>$Gamma(t|\alpha,\beta)$分布图像
 </p>
 
 Gamma 分布在概率统计领域也是一个万人迷，众多统计分布和它有密切关系。指数分布和$\chi^2$ 分布都是特殊的Gamma 分布。另外Gamma 分布作为先验分布是很强大的，在贝叶斯统计分析中被广泛的用作其它分布的先验。如果把统计分布中的共轭关系类比为人类生活中的情侣关系的话，那指数分布、Poission分布、正态分布、对数正态分布都可以是 Gamma 分布的情人。接下来的内容中中我们主要关注$\beta = 1$的简单形式的 Gamma 分布。

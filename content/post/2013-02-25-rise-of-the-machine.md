@@ -15,7 +15,7 @@ _统计之都会定期为大家精选若干有猛料和干货的海外统计日�
 
   * Larry Wasserman提醒统计学家“[机器开始绝地反击了](http://www.stat.cmu.edu/~larry/Wasserman.pdf)”：如果你还认为UMVUE和完备统计量是你的原力，<wbr />那你马上就要被那些机器干掉了。<wbr />机器学习专业的学生的统计原力越来越强，<wbr />而统计专业还在整天绕着不知道收不收敛的EM和MCMC念经。<wbr />觉悟吧，天马的小宇宙！
 
-![](http://normaldeviate.files.wordpress.com/2013/02/terminator.png?w=251&h=201)
+<img class="aligncenter" style="text-align: center;" alt="" src="http://normaldeviate.files.wordpress.com/2013/02/terminator.png?w=251&h=201" width="251" height="201" />
 
   * 所有人一直在用“机器学习”这个莫名其妙的词，<wbr />看了这两个欢乐的机器之后捡起你的下巴你就知[道什么叫机器学习了](http://robohub.org/video-throwing-and-catching-an-inverted-pendulum-with-quadrocopters/)<wbr />（视频需穿墙术，墙内请点<a href="http://v.youku.com/v_show/id_XNTE4NDc0NzY0.html" target="_blank">这里</a>）。数学和机器学习要征服世界了！
   * [如果你是上帝，你将创造几维的世界？](http://www.stat.purdue.edu/~dasgupta/fourDspace.pdf)咦，<wbr />这跟概率统计有神马关系？好吧，<wbr />Purdue大学统计系的DasGupta教授将带你出来看上帝<wbr />。

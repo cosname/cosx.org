@@ -15,7 +15,7 @@ tags:
 slug: data-sciencs-series-interview-of-zhangjian
 ---
 
-[![zhangjian_photo](https://cos.name/wp-content/uploads/2013/08/zhangjian_photo.jpg)](https://cos.name/wp-content/uploads/2013/08/zhangjian_photo.jpg)<span style="color: #888888;">【COS编辑部按】：受访人：张健，微软公司担任data scientist。</span>
+[<img class="size-medium wp-image-8363 alignleft" alt="zhangjian_photo" src="https://cos.name/wp-content/uploads/2013/08/zhangjian_photo-225x300.jpg" width="225" height="300" srcset="https://cos.name/wp-content/uploads/2013/08/zhangjian_photo-225x300.jpg 225w, https://cos.name/wp-content/uploads/2013/08/zhangjian_photo.jpg 307w" sizes="(max-width: 225px) 100vw, 225px" />](https://cos.name/wp-content/uploads/2013/08/zhangjian_photo.jpg)<span style="color: #888888;">【COS编辑部按】：受访人：张健，微软公司担任data scientist。</span>
 
 <span style="color: #888888;">写在前面的话：前面小编采访了<a href="https://cos.name/2013/08/interview_of_xie_liang/"><span style="color: #888888;">微软的数据科学家谢梁</span></a>，当时同小编一同吃酒的还有微软的另一位数据科学家张健，巧在张健兄乃小编的师兄，毕业于Ames村办大学（又名爱荷华州立大学），当年我前脚到村，他后脚离村，所以之前也不认识。敝村可能名气不大，张健兄在统计界可能也不会有太多人知晓，但俗话说（好吧，我承认我瞎编的）“村长亦干部，凡夫即圣人”，小编很好奇一个物理博士在统计行当里捣鼓什么，于是发去这次采访，希望对外专业的同行们有所启示。</span>
   

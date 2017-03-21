@@ -65,7 +65,7 @@ $$ \lim_{n\rightarrow\infty} \frac{(2^n \cdot n!)^4}{[(2n)!]^2(2n+1)} = \frac{\p
   
 我们看到了阶乘，所以沃利斯公式天然和阶乘有着紧密的联系。
 
-[![john-wallis](https://cos.name/wp-content/uploads/2014/07/john-wallis.jpg)](https://cos.name/wp-content/uploads/2014/07/john-wallis.jpg)
+[<img class="aligncenter size-medium wp-image-10086" src="https://cos.name/wp-content/uploads/2014/07/john-wallis-248x300.jpg" alt="john-wallis" width="248" height="300" srcset="https://cos.name/wp-content/uploads/2014/07/john-wallis-248x300.jpg 248w, https://cos.name/wp-content/uploads/2014/07/john-wallis.jpg 400w" sizes="(max-width: 248px) 100vw, 248px" />](https://cos.name/wp-content/uploads/2014/07/john-wallis.jpg)
 
 <p style="text-align: center">
   沃利斯
@@ -118,7 +118,7 @@ $$
 $$ \int_0^1 x^n dx = \frac{1}{n+1}, n=0,1,2,\ldots .$$
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/circle-area.png">![circle-area](https://cos.name/wp-content/uploads/2014/07/circle-area.png)</a>
+  <a href="https://cos.name/wp-content/uploads/2014/07/circle-area.png"><img class="aligncenter size-medium wp-image-10087" src="https://cos.name/wp-content/uploads/2014/07/circle-area-295x300.png" alt="circle-area" width="295" height="300" srcset="https://cos.name/wp-content/uploads/2014/07/circle-area-295x300.png 295w, https://cos.name/wp-content/uploads/2014/07/circle-area-492x500.png 492w, https://cos.name/wp-content/uploads/2014/07/circle-area.png 810w" sizes="(max-width: 295px) 100vw, 295px" /></a>
 </p>
 
 <p style="text-align: center">
@@ -163,7 +163,7 @@ B\_{p,q} = \frac{p+q}{q} B\_{p,q-1}
   *  由于原始表格是对称的， 沃利斯相信推广到分数之后的表格依然保持对称性。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/Bpq-table.png">![Bpq-table](https://cos.name/wp-content/uploads/2014/07/Bpq-table.png)</a>
+  <a href="https://cos.name/wp-content/uploads/2014/07/Bpq-table.png"><img class="aligncenter size-large wp-image-10088" src="https://cos.name/wp-content/uploads/2014/07/Bpq-table-500x312.png" alt="Bpq-table" width="500" height="312" srcset="https://cos.name/wp-content/uploads/2014/07/Bpq-table-500x312.png 500w, https://cos.name/wp-content/uploads/2014/07/Bpq-table-300x187.png 300w, https://cos.name/wp-content/uploads/2014/07/Bpq-table.png 1048w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 基于对称性假设和计算式\eqref{wallis-Bpq}, 我们可以得到，
@@ -227,7 +227,7 @@ $$
 十七世纪中期，由于帕斯卡、费马、贝努利等数学家的推动，概率论以及与之相关的组合数学获得了很大的发展，阶乘的数值计算开始频繁的出现在数学家面前。 真正的开始对 $n!$ 进行细致地研究并取得突破的，是数学家棣莫弗(Abraham de Moivre, 1667-1754)和斯特林(James Stirling, 1692-1770)。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre.jpg">![abraham-de-moivre](https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre.jpg)</a>
+  <a href="https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre.jpg"><img class="aligncenter size-medium wp-image-10089" src="https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre-246x300.jpg" alt="abraham-de-moivre" width="246" height="300" srcset="https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre-246x300.jpg 246w, https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre.jpg 285w" sizes="(max-width: 246px) 100vw, 246px" /></a>
 </p>
 
 <p style="text-align: center">
@@ -307,7 +307,7 @@ $$ \frac{{{e^{ &#8211; n}}{n^n}}}{{n!}} \approx \frac{1}{\sqrt{2\pi n}}. $$
 斯特林公式非常有用，通过它可以得出$n!$ 非常精确的估计值。虽然$n$ 足够大时绝对误差可以超过任何数，但是相对误差却很小，并且下降得非常快，甚至当 $n$ 很小的时候，斯特林公式的逼近都相当精确。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/stirling-precision.png">![stirling-precision](https://cos.name/wp-content/uploads/2014/07/stirling-precision.png)</a>
+  <a href="https://cos.name/wp-content/uploads/2014/07/stirling-precision.png"><img class="aligncenter size-large wp-image-10090" src="https://cos.name/wp-content/uploads/2014/07/stirling-precision-500x140.png" alt="stirling-precision" width="500" height="140" srcset="https://cos.name/wp-content/uploads/2014/07/stirling-precision-500x140.png 500w, https://cos.name/wp-content/uploads/2014/07/stirling-precision-300x84.png 300w, https://cos.name/wp-content/uploads/2014/07/stirling-precision.png 1164w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 不过，斯特林对于 $n!$ 的研究实际上走得更远，而不是仅限于近似计算。追寻沃利斯和牛顿在插值方面的工作，斯特林一直研究各种数列的插值问题，通俗地说就是把数列的通项公式定义从整数集合延拓到实数集合。例如数列 $1,4,9,16,\cdots$ 可以用通项公式 $n^2$ 自然的表达，即便 $n$ 为实数，这个通项公式也是良定义的。直观地说就是可以找到一条通过所有整数点$(n,n^2)$的平滑曲线$y=x^2$，从而可以把定义在整数集上的公式延拓到实数集合。再比如求和序列 $1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4+5 \cdots$, 其通项公式可以写为 $n(n+1)/2$ ，这个公式也可以很容易地延拓到实数集合上。 斯特林很擅长于处理各种序列的插值问题，他在1730 年出版的一本书中描述了很多基于多阶差分处理序列插值的方法，这些方法主要源自牛顿。 斯特林处理插值的思路稍微有点复杂，我们不在此赘述，他的方法本质上类似于使用多项式曲线做插值。我们知道平面上两个点可以确定一条直线，三个点可以确定一条抛物线，&#8230;，$n$+1 个点可以确定一条$n$次多项式曲线。所以对于一个整数序列，如果我们无法直观地写出通项公式，为了计算某一个实数点对应的值，可以用该实数点周围的 $n+1$个整数点去确定一条 $n$ 次多项式曲线，从而可以基于拟合得到的多项式近似地计算实数点的值。
@@ -315,11 +315,11 @@ $$ \frac{{{e^{ &#8211; n}}{n^n}}}{{n!}} \approx \frac{1}{\sqrt{2\pi n}}. $$
 自然数的加法序列我们已经看到很容易做插值计算，对数学家们而言很自然的一个问题就是：自然数的乘法序列 $1,1\cdot2, 1\cdot2\cdot3, 1\cdot2\cdot3\cdot4, 1\cdot2\cdot3\cdot4\cdot5, \cdots$ 能否做插值计算？我们可以计算 $2!,3!$, 如何计算 $(\frac{1}{2})!$呢？斯特林在他的书中开始考虑阶乘序列$1!, 2!,3!,4!,5! \cdots$ 的插值问题。 如果我们把$(n,n!)$ 最初的一些点画在坐标轴上，确实可以看到，容易画出一条通过这些点的平滑曲线。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/factorial1.png">![factorial1](https://cos.name/wp-content/uploads/2014/07/factorial1.png)</a>
+  <a href="https://cos.name/wp-content/uploads/2014/07/factorial1.png"><img class="aligncenter size-large wp-image-10091" src="https://cos.name/wp-content/uploads/2014/07/factorial1-500x99.png" alt="factorial1" width="500" height="99" srcset="https://cos.name/wp-content/uploads/2014/07/factorial1-500x99.png 500w, https://cos.name/wp-content/uploads/2014/07/factorial1-300x59.png 300w, https://cos.name/wp-content/uploads/2014/07/factorial1.png 774w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/factorial-curve.png">![factorial-curve](https://cos.name/wp-content/uploads/2014/07/factorial-curve.png)</a>
+  <a href="https://cos.name/wp-content/uploads/2014/07/factorial-curve.png"><img class="aligncenter size-full wp-image-10092" src="https://cos.name/wp-content/uploads/2014/07/factorial-curve.png" alt="factorial-curve" width="251" height="183" /></a>
 </p>
 
 <p style="text-align: center">
@@ -391,7 +391,7 @@ $$ \left(n+\frac{1}{2}\right)!
 \end{align*}
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg">![stirling_grave](https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg)</a>
+  <a href="https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg"><img class="aligncenter size-large wp-image-10093" src="https://cos.name/wp-content/uploads/2014/07/stirling_grave-500x375.jpg" alt="stirling_grave" width="500" height="375" srcset="https://cos.name/wp-content/uploads/2014/07/stirling_grave-500x375.jpg 500w, https://cos.name/wp-content/uploads/2014/07/stirling_grave-300x225.jpg 300w, https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg 1024w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </p>
 
 <p style="text-align: center">
@@ -405,7 +405,7 @@ $$ \left(n+\frac{1}{2}\right)!
 和斯特林处在同一个时代的另外一位数学家几乎在同一个时间点也在考虑 $n!$ 的插值问题，这个人就是哥德巴赫。哥德巴赫的名字在中国真是家喻户晓。由于中国数学家在数论领域的杰出成就，和素数相关的哥德巴赫猜想作为数学皇冠上的明珠就一直吸引着无数中国人的目光。 哥德巴赫一生都对数列的插值问题保持浓厚的兴趣，他很早就开始考虑阶乘的插值问题。不过看起来哥德巴赫的思路不同于斯特林，他并不满足于仅仅做近似的数值计算，他希望能找到一个通项公式，既可以准确的描述$n!$, 又能够同时推广到分数情形。不过哥德巴赫无法解决这个问题，幸运的是哥德巴赫交友广泛，和当时许多著名的数学家都有联系，包括莱布尼茨以及数学史中出了最多位数学家的家族&#8212; 贝努利家族。1722 年他找尼古拉斯·贝努利请教这个阶乘插值问题，不过没有取得任何进展。即便如此，哥德巴赫却多年来一直不忘思考这个问题，1729年他又请教尼古拉斯·贝努利的弟弟丹尼尔·贝努利，而丹尼尔于当年10月给哥德巴赫的一封信中给出了漂亮的解答。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/goldbach2.jpg">![goldbach2](https://cos.name/wp-content/uploads/2014/07/goldbach2.jpg)</a><a href="https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth.jpg">![Daniel_Bernoulli_by_Grooth](https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth.jpg)</a>  哥德巴赫和丹尼尔·贝努利
+  <a href="https://cos.name/wp-content/uploads/2014/07/goldbach2.jpg"><img class="aligncenter size-full wp-image-10095" src="https://cos.name/wp-content/uploads/2014/07/goldbach2.jpg" alt="goldbach2" width="200" height="225" /></a><a href="https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth.jpg"><img class="aligncenter size-medium wp-image-10094" src="https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth-243x300.jpg" alt="Daniel_Bernoulli_by_Grooth" width="243" height="300" srcset="https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth-243x300.jpg 243w, https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth.jpg 351w" sizes="(max-width: 243px) 100vw, 243px" /></a>  哥德巴赫和丹尼尔·贝努利
 </p>
 
 丹尼尔解决阶乘插值问题的思路非常漂亮：突破有限，取道无穷！他不拘泥于有限的方式，而是直接跳跃到无穷乘积的形式做插值。丹尼尔发现，如果 $m,n$都是正整数，当 $m
@@ -501,7 +501,7 @@ $$ \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m-1+n)}(m+\frac{n}{2})^{n-1
 $$ \Bigl(\frac{1}{2}\Bigr)! = \frac{\sqrt{\pi}}{2} .$$
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote.jpg">![euler-swiss-banknote](https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote.jpg)</a><br /> 瑞士法郎上的欧拉
+  <a href="https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote.jpg"><img class="aligncenter size-large wp-image-10096" src="https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote-500x243.jpg" alt="euler-swiss-banknote" width="500" height="243" srcset="https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote-500x243.jpg 500w, https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote-300x145.jpg 300w, https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote.jpg 1024w" sizes="(max-width: 500px) 100vw, 500px" /></a><br /> 瑞士法郎上的欧拉
 </p>
 
 欧拉给的无穷乘积满足阶乘的递归式$T(z) = z T(z-1)$, 结合递归式和计算技巧欧拉还计算了其它几个分数，包括 $\frac{5}{2}, \frac{1}{4}, \frac{3}{4}, \frac{1}{8}, \frac{3}{8} $ 等分数的阶乘。在丹尼尔的鼓励之下，欧拉把自己的插值公式以及一些分数阶乘的计算结果写信告知了哥德巴赫，这开启了欧拉和哥德巴赫之间一生的通信交流。两人在接下来的 35 年里连续通信达到196封，这些信函成为了数学家们研究欧拉的重要资料，而著名的哥德巴赫猜想就是首次出现在哥德巴赫写给欧拉的一封信中，也正是哥德巴赫激发了欧拉对数论的兴趣。
@@ -511,7 +511,7 @@ $$ \Bigl(\frac{1}{2}\Bigr)! = \frac{\sqrt{\pi}}{2} .$$
 </p>
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/gamma-func.png">![gamma-func](https://cos.name/wp-content/uploads/2014/07/gamma-func.png)</a>
+  <a href="https://cos.name/wp-content/uploads/2014/07/gamma-func.png"><img class="aligncenter size-medium wp-image-10097" src="https://cos.name/wp-content/uploads/2014/07/gamma-func-300x211.png" alt="gamma-func" width="300" height="211" srcset="https://cos.name/wp-content/uploads/2014/07/gamma-func-300x211.png 300w, https://cos.name/wp-content/uploads/2014/07/gamma-func.png 497w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 </p>
 
 <p style="text-align: center">
@@ -521,11 +521,11 @@ $$ \Bigl(\frac{1}{2}\Bigr)! = \frac{\sqrt{\pi}}{2} .$$
 虽然会有一些争议，有不少数学人把数学家排名中的头两把交椅划给了欧拉和高斯。欧拉和高斯都是具有超凡直觉的一流数学家，但是欧拉和高斯的风格迥异。高斯是个老狐狸，数学上非常严谨，发表结果的时候却都把思考的痕迹抹去，只留下漂亮的结果，这招致了一些数学家对高斯的批评。而欧拉的风格不同，他的做法是把最基本的东西解释得尽量清楚，讲明引导他得出结论的思路，经常通过经验直觉做大胆的猜测，他的文章中往往留下了做数学猜想的痕迹。 拉普拉斯曾说过：“读读欧拉 ,他是我们所有人的老师。”高斯的评价是：“学习欧拉的著作，乃是认识数学的最好工具。”数学家波利亚在他的名著《数学与猜想》中列举了许多欧拉做数学研究的例子，对欧拉做数学归纳和猜想的方式推崇备至。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/euler_cup.jpg">![euler_cup](https://cos.name/wp-content/uploads/2014/07/euler_cup.jpg)</a>欧拉的数学发现
+  <a href="https://cos.name/wp-content/uploads/2014/07/euler_cup.jpg"><img class="aligncenter size-full wp-image-10098" src="https://cos.name/wp-content/uploads/2014/07/euler_cup.jpg" alt="euler_cup" width="282" height="275" /></a>欧拉的数学发现
 </p>
 
 欧拉被称为分析学的化身，在分析学中，无出其右者。欧拉的老师约翰·贝努利在给欧拉的信中这样评价欧拉的工作：“ 我介绍高等分析的时候，它还是个孩子，而你正在将它带大成人。” 希尔伯特说“分析学是无穷的交响曲”，欧拉显然是无穷分析中最出色的作曲家。欧拉二百多年前写的教科书《无穷分析引论》至今还在不断地印刷，最近也刚刚出版了中文翻译版本。布尔巴基学派的灵魂人物韦伊( Andr\'{e} Weil, 1906-1998) 1979 年在 Rochester大学的一次讲演中说：“今天的学生从欧拉的《无穷分析引论》中所能得到的益处，是现代的任何一本数学教科书都比不上的。”
 
 许多人把数学比作音乐，把欧拉称作数学界的贝多芬。因为贝多芬在两耳失聪之后继续谱写了大量著名的交响曲，而欧拉在60岁左右双目失明之后仍然以口述形式完成了几本书和 400 多篇论文，在数学上变得更加多产。 数学界从1911年开始出版《欧拉全集》，耗费了一个世纪的时间，已经出版了70余卷， 25000多页， 而这项庞大的出版任务还仍处于未完成状态。
 
-[![flickering-logo](https://cos.name/wp-content/uploads/2014/07/flickering-logo.png)](http://www.flickering.cn/)
+[<img class="aligncenter wp-image-10081 size-thumbnail" src="https://cos.name/wp-content/uploads/2014/07/flickering-logo-150x150.png" alt="flickering-logo" width="150" height="150" srcset="https://cos.name/wp-content/uploads/2014/07/flickering-logo-150x150.png 150w, https://cos.name/wp-content/uploads/2014/07/flickering-logo.png 814w" sizes="(max-width: 150px) 100vw, 150px" />](http://www.flickering.cn/)

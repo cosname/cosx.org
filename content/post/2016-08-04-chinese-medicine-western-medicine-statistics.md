@@ -23,7 +23,7 @@ slug: chinese-medicine-western-medicine-statistics
 </div>
 
 <div>
-  <a href="https://cos.name/wp-content/uploads/2016/08/1.pic_.jpg">![屠呦呦.pic](https://cos.name/wp-content/uploads/2016/08/1.pic_-300x219.jpg)</a>
+  <a href="https://cos.name/wp-content/uploads/2016/08/1.pic_.jpg"><img class="aligncenter size-full wp-image-13011" src="https://cos.name/wp-content/uploads/2016/08/1.pic_.jpg" alt="屠呦呦.pic" width="500" height="365" srcset="https://cos.name/wp-content/uploads/2016/08/1.pic_.jpg 500w, https://cos.name/wp-content/uploads/2016/08/1.pic_-300x219.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>
 </div>
 
 这篇文章本来是从屠呦呦得诺奖的时候开始写的，作为一个拖延症晚期患者，直到今天才修改好。当然，现在讨论这个话题可以避免很多信仰方面的争端，大家可以心平气和地讨论药的问题。

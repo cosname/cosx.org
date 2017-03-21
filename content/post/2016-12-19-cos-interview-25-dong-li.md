@@ -10,7 +10,7 @@ slug: cos-interview-25-dong-li
 ---
 
 <p class="p1">
-  ![](https://cos.name/wp-content/uploads/2016/12/2016-7-17-333x500.jpg)
+  <img class="aligncenter wp-image-13436" src="https://cos.name/wp-content/uploads/2016/12/2016-7-17.jpg" alt="" width="332" height="498" srcset="https://cos.name/wp-content/uploads/2016/12/2016-7-17.jpg 2835w, https://cos.name/wp-content/uploads/2016/12/2016-7-17-200x300.jpg 200w, https://cos.name/wp-content/uploads/2016/12/2016-7-17-768x1152.jpg 768w, https://cos.name/wp-content/uploads/2016/12/2016-7-17-333x500.jpg 333w" sizes="(max-width: 332px) 100vw, 332px" />
 </p>
 
 <p class="p1">

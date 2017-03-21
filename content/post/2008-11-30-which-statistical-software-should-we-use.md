@@ -39,7 +39,7 @@ slug: which-statistical-software-should-we-use
 
 ## R语言<figure id="attachment_151" style="width: 300px" class="wp-caption aligncenter">
 
-[![RGui：Windows下R的图形界面](https://cos.name/wp-content/uploads/2008/11/rgui.png)](https://cos.name/wp-content/uploads/2008/11/rgui.png)<figcaption class="wp-caption-text">RGui：Windows下R的图形界面</figcaption></figure> 
+[<img class="size-medium wp-image-151" src="https://cos.name/wp-content/uploads/2008/11/rgui-300x237.png" alt="RGui：Windows下R的图形界面" width="300" height="237" srcset="https://cos.name/wp-content/uploads/2008/11/rgui-300x237.png 300w, https://cos.name/wp-content/uploads/2008/11/rgui.png 666w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2008/11/rgui.png)<figcaption class="wp-caption-text">RGui：Windows下R的图形界面</figcaption></figure> 
 
 R是一门用于统计计算和作图的语言（<a title="R主页" href="http://www.r-project.org" target="_blank">http://www.r-project.org</a>），受S语言影响发展而来。R语言最初由新西兰奥克兰大学统计系的Robert Gentleman和Ross Ihaka合作编写。自1997年开始，R语言开始由一个核心团队开发，团队成员来自世界各地的大学和研究机构。迄今为止，R源代码已经经历了近70次主要更新，功能也在不断完善、增强中，主要统计功能包括线性模型/广义线性模型、非线性回归模型、时间序列分析、经典的参数/非参数检验、聚类和光滑方法等。R语言具有免费、开源及统计模块齐全的特征，已被国外大量学术和科研机构采用，其应用范围涵盖了数据挖掘、机器学习、计量经济学、实证金融学、统计遗传学、自然语言处理、心理计量学和空间统计学诸多领域。
 

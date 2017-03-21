@@ -13,7 +13,7 @@ tags:
 slug: google-visualization-api-and-data-analysis-online
 ---
 
-![Visualization API](https://cos.name/wp-content/uploads/2009/02/gviz1-300x237.jpg)近日Google推出了Google Visualization API为在线数据分析开拓了一条崭新的道路。这个项目的初衷就是希望提供一种灵活的在线数据分析的解决方案。之前的名声大噪的Google Map API已经应用到国内的许多诸如地图查询，导航信息，GIS等等诸多领域。也许你也曾是其中一员或将要成为其中一员呢。回过头来，Visualization API则将重点放在数据的探索性分析与结果的展现上。虽然现在没有提供丰富的分析类库，但是在不久的将来，功能强大的在线分析软件，甚至在线开发平台都将不再遥不可及。
+<img class="alignleft size-full wp-image-660" src="https://cos.name/wp-content/uploads/2009/02/gviz1.jpg" alt="Visualization API" width="400" height="316" srcset="https://cos.name/wp-content/uploads/2009/02/gviz1.jpg 400w, https://cos.name/wp-content/uploads/2009/02/gviz1-300x237.jpg 300w" sizes="(max-width: 400px) 100vw, 400px" />近日Google推出了Google Visualization API为在线数据分析开拓了一条崭新的道路。这个项目的初衷就是希望提供一种灵活的在线数据分析的解决方案。之前的名声大噪的Google Map API已经应用到国内的许多诸如地图查询，导航信息，GIS等等诸多领域。也许你也曾是其中一员或将要成为其中一员呢。回过头来，Visualization API则将重点放在数据的探索性分析与结果的展现上。虽然现在没有提供丰富的分析类库，但是在不久的将来，功能强大的在线分析软件，甚至在线开发平台都将不再遥不可及。
 
 <!--more-->
 
@@ -45,7 +45,7 @@ slug: google-visualization-api-and-data-analysis-online
 大功告成。很简单吧。
 
 <p style="text-align: center;">
-  ![Google Visualization API Sample](https://cos.name/wp-content/uploads/2009/02/google_sample.bmp)
+  <img class="size-full wp-image-657 aligncenter" src="https://cos.name/wp-content/uploads/2009/02/google_sample.bmp" alt="Google Visualization API Sample" width="503" height="291" />
 </p>
 
 动态图的优势一览无余。

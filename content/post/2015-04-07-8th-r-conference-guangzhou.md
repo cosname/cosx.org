@@ -15,7 +15,7 @@ R是用于统计分析、绘图的语言和操作环境，是属于GNU系统的�
 
 **[第八届R语言会议（广州会场）演讲报名](http://chinar-8th-gz.eventdove.com/event/101311/page/30436%20)**和**<a href="http://chinar2015gz.vasee.com/" target="_blank">参会者报名</a>**现**已开放，****欢迎各位踊跃报名参加，在5月于康乐园一起享受一场R语言的盛会！**
 
-[![China-R-Logo-trans](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png)](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+[<img class="aligncenter size-full wp-image-11430" src="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png 450w, https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
 
 **会议的相关情况如下：**
 
@@ -29,7 +29,7 @@ R是用于统计分析、绘图的语言和操作环境，是属于GNU系统的�
 
 <!--more-->
 
-[![地图-广州](https://cos.name/wp-content/uploads/2015/04/地图-广州-500x368.png)](https://cos.name/wp-content/uploads/2015/04/地图-广州.png)
+[<img class="aligncenter size-full wp-image-10815" src="https://cos.name/wp-content/uploads/2015/04/地图-广州.png" alt="地图-广州" width="1440" height="1059" srcset="https://cos.name/wp-content/uploads/2015/04/地图-广州.png 1440w, https://cos.name/wp-content/uploads/2015/04/地图-广州-300x221.png 300w, https://cos.name/wp-content/uploads/2015/04/地图-广州-500x368.png 500w" sizes="(max-width: 1440px) 100vw, 1440px" />](https://cos.name/wp-content/uploads/2015/04/地图-广州.png)
 
 **三、会议情况**
 
