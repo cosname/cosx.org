@@ -29,29 +29,27 @@ slug: outlook-on-statistical-methods
 
 纵向数据（Longitudinal Data）和空间统计学（Spatial Statistics）算是代表了统计学发展领域的两个前进**维度**；众所周知，统计的数据有截面数据（Cross-section）和时间序列数据（Time-series）之分，前者是在同一时点观测不同个体得到的数据，后者是在不同时点观测同一个个体（当然也可以不同）得到的，这两种数据都有比较成熟的分析方法，如回归、多元、ARMA等等，而纵向数据则可视作是它们的“综合”：对不同的个体在不同的时点上（重复）观测——这体现的是时间的维度；而空间统计学则是结合地理学的知识，运用统计分析方法去分析与地理相关的问题，这里我摘一段Wikipedia 中关于空间统计学的介绍：
 
-> &#8220;Applications within GIS; mathematical analysis on varied spatial datasets; Issues on human geography, particularly those involving the spread of disease (epidemiology), the practice of commerce and military planning (logistics), and the development of efficient spatial networks.&#8221; …
+> “Applications within GIS; mathematical analysis on varied spatial datasets; Issues on human geography, particularly those involving the spread of disease (epidemiology), the practice of commerce and military planning (logistics), and the development of efficient spatial networks.” …
 
 其中GIS是地理信息系统，也是现在研究应用比较火热的技术；空间统计学牵涉的领域有疾病的散布（流行病学）、商业和军事规划（后勤）以及开发有效的空间网络等等。听起来挺有意思。此外，一些传统的统计学概念、模型也被自然而然的转移到空间统计学中，比如空间回归（Spatial Regression）、空间滞后模型（Spatial Lagged）、空间自相关（Autocorrelation）、空间计量经济学（Spatial Econometrics）等。
 
-若对R有所了解，不妨看看相应的一些Package，对于纵向数据，一般使用nlme（<a title="John Fox关于混合模型的文档" href="http://socserv.mcmaster.ca/jfox/Books/Companion/appendix-mixed-models.pdf" target="_blank">John Fox 的文档</a>）；对于空间统计学，可以参见相应的<a title="空间统计妧??Task View" href="http://cran.r-project.org/src/contrib/Views/Spatial.html" target="_blank">Task View</a>。
+若对R有所了解，不妨看看相应的一些Package，对于纵向数据，一般使用nlme（[John Fox 的文档](http://socserv.mcmaster.ca/jfox/Books/Companion/appendix-mixed-models.pdf "John Fox关于混合模型的文档") ）；对于空间统计学，可以参见相应的[Task View](http://cran.r-project.org/src/contrib/Views/Spatial.html "空间统计学Task View")。
 
 # 二、分位数回归与均值回归
 
-众所周知，经典的最小二乘回归是针对因变量的**均值**（期望）的：模型反映了因变量的均值怎样受自变量的影响——$y=X\beta+\epsilon$，$E(y)=X\beta$；这个小小的式子说明了经典回归的本质，自变量（有时也称为协变量Covariates）影响着因变量的一个位置参数量，从这个意义上，可以把回归称之为一个位置移动模型（Location Shift Model）；用最小二乘方法容易推出，使$\sum\_{i}(y\_i-\xi)^2$最小的$\xi$正是$\xi=\bar{y}$。
+众所周知，经典的最小二乘回归是针对因变量的**均值**（期望）的：模型反映了因变量的均值怎样受自变量的影响——`\(y=X\beta+\epsilon\)`，`\(E(y)=X\beta\)`；这个小小的式子说明了经典回归的本质，自变量（有时也称为协变量Covariates）影响着因变量的一个位置参数量，从这个意义上，可以把回归称之为一个位置移动模型（Location Shift Model）；用最小二乘方法容易推出，使`\(\sum\_{i}(y\_i-\xi)^2\)`最小的`\(\xi\)`正是`\(\xi=\bar{y}\)`。
 
 分位数回归（Quantile Regression）的核心思想就是从这个Location的角度出发而产生的，把Location**从均值推广到分位数**，回归家族也就增添了分位数回归这位新成员。最小二乘回归的目标是最小化误差平方和，分位数回归也是最小化一个新的目标函数：
 
-<div style="text-align: center;">
-  $\min_{\xi \in \mathcal{R}} \sum \rho_{\tau}(y_i-\xi)$
-</div>
+`$$\min_{\xi \in \mathcal{R}} \sum \rho_{\tau}(y_i-\xi)$$`
 
-同样我们可以看看什么样的$\xi$使得上面的目标函数最小？通过对$\xi$简单的求导，不难发现满足条件的$\xi$正是$y$的$\tau$分位数 。<figure id="attachment_142" style="width: 317px" class="wp-caption aligncenter">
+同样我们可以看看什么样的`\(\xi\)`使得上面的目标函数最小？通过对`\(\xi\)`简单的求导，不难发现满足条件的`\(\xi\)`正是`\(y\)`的`\(\tau\)`分位数 。
 
-![分位回归目标函数示意图](https://cos.name/wp-content/uploads/2008/11/obj-function-for-qr.png)<figcaption class="wp-caption-text">图1 分位回归目标函数示意图</figcaption></figure> 
+![分位回归目标函数示意图](https://cos.name/wp-content/uploads/2008/11/obj-function-for-qr.png)
 
-在R中，与分位数回归对应的包是**quantreg**，这个包也有自带的一份Vignette，对于分位数回归的学习者来说绝对是好材料（位于/doc目录下，rq.pdf）。这份文档中举了一个关于恩格尔系数的例子（见图 2），图中虚线是最小二乘回归结果，黑线是中位数回归结果（实际上就是$\tau=0.5$），灰线从下至上分别是0.05、0.1、0.25、0.75、 0.90、0.95分位数；从图中可以看出，大趋势是随家庭收入增大，食品支出也增加（废话！），但是在给定家庭收入的情况下，食品支出的不同分位数的变化趋势（斜率）是有差别的，高分位变化更陡峭，而低分位相对平缓；说明的实际问题大约也就是恩格尔系数高的家庭更倾向于在食品上花钱。相比起来，最小二乘回归就不能说明这样的趋势，而只能说明前面那句“废话”。<figure id="attachment_143" style="width: 478px" class="wp-caption aligncenter">
+在R中，与分位数回归对应的包是**quantreg**，这个包也有自带的一份Vignette，对于分位数回归的学习者来说绝对是好材料（位于/doc目录下，rq.pdf）。这份文档中举了一个关于恩格尔系数的例子（见图 2），图中虚线是最小二乘回归结果，黑线是中位数回归结果（实际上就是`\(\tau=0.5\)`），灰线从下至上分别是0.05、0.1、0.25、0.75、 0.90、0.95分位数；从图中可以看出，大趋势是随家庭收入增大，食品支出也增加（废话！），但是在给定家庭收入的情况下，食品支出的不同分位数的变化趋势（斜率）是有差别的，高分位变化更陡峭，而低分位相对平缓；说明的实际问题大约也就是恩格尔系数高的家庭更倾向于在食品上花钱。相比起来，最小二乘回归就不能说明这样的趋势，而只能说明前面那句“废话”。
 
-![图2 收入与支出的分位回归](https://cos.name/wp-content/uploads/2008/11/quantile-regression-income-expenditure.png)<figcaption class="wp-caption-text">图2 家庭收入与食品支出：一个分位数回归的例子</figcaption></figure> 
+![图2 收入与支出的分位回归](https://cos.name/wp-content/uploads/2008/11/quantile-regression-income-expenditure.png)
 
 # 三、Bootstrap & Jackknife 与抽样
 
@@ -61,14 +59,14 @@ slug: outlook-on-statistical-methods
 
 John Fox的那一系列附录中有一篇叫“Bootstrapping Regression Models”，当我看到第二页用方框框标出那句话时，我才对Bootstrap的思想真正有了了解（之前迷茫了很长时间）。Bootstrap的一般的抽样方式都是“**有放回地**全抽”（其实样本量也要视情况而定，不一定非要与原样本量相等），意思就是抽取的Bootstrap样本量与原样本相同，只是在抽样方式上采取有放回地抽，这样的抽样可以进行B次，每次都可以求一个相应的统计量/估计量，最后看看这个统计量的稳定性如何（用方差表示）。Jackknife的抽样痕迹不明显，但主旨也是取样本的样本，在作估计推断时，每次先排除一个或者多个样本点，然后用剩下的样本点求一个相应的统计量，最后也可以看统计量的稳定性如何。
 
-在R中简单随机抽样的函数是_sample()_，其中有个参数replacement表示是否放回，经典的抽样基本都是不放回（replace = FALSE），而Bootstrap则是replace = TRUE；**从FALSE到TRUE**，小小的一个变化，孕育了Bootstrap的经典思想。
+在R中简单随机抽样的函数是`sample()`，其中有个参数`replacement`表示是否放回，经典的抽样基本都是不放回（`replace = FALSE`），而Bootstrap则是`replace = TRUE`；**从FALSE到TRUE**，小小的一个变化，孕育了Bootstrap的经典思想。
 
 结语：例子暂举这么三个，对于一些大思想，我（不知天高地厚地）尽力以一句话概括出来，看似简单，其实里面的工作还很多，Quantile Regression的老大Roger Koenker等、Bootstrap的老大Efron等都有相应的著作，闲着没事干的同学不妨翻翻，不过我个人并不推荐这种方式，原因是看英文著作太花时间，最好先找点介绍性的材料看看，心里有把握之后再去找详细的材料翻阅。
 
 平时学习中我比较注重研究统计模型和方法，但是对于理论性的东西我也有我的看法，到现在为止，我对模型的评判标准可以总结为：
 
   1. 其目的能用一句话概括，或者结果能用图形直观展示；（目标）
-  2. 数学公式能对应上某种成熟的生活观念。（手段）
+  1. 数学公式能对应上某种成熟的生活观念。（手段）
 
 如果模型不符合这两条标准，我是不愿花功夫研究学习的。虽然在一定程度上追求模型的“先进性”，但是骨子里仍然认为统计应该与实际有紧密联系，否则统计也没什么存在的价值。所以概括起来，我追求的目标仍然是一个映射（Mapping）：从理论到实践。
 
@@ -80,6 +78,4 @@ John Fox的那一系列附录中有一篇叫“Bootstrapping Regression Models�
 
 曾经有人问我认为什么统计方法最好，我不假思索地回答，“‘散点图’呗！”当然，这里面也有开玩笑的成份，但意思也是想表达统计方法的应用，应该能让人家容易理解你的意图。“文章合为时而著，歌诗合为事而作。”那么，统计为谁而做？大家不妨自行思考吧。
 
-谢益辉
-  
-2007-01-27
+> 本文写于2007-01-27
