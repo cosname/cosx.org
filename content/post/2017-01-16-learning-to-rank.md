@@ -19,7 +19,7 @@ slug: learning-to-rank
 
 <span style="color: #808080;">The incorrect results are shown in a two-day-old story posted on the pro-Trump “70 News” site. On Monday, a link to the site appeared at or near the top of Google’s influential rankings of relevant news stories for searches on the final election results.</span>
 
-原文不翻译了，大意是，在Google搜索大选相关信息的时候，“popularity vote”第一条结果是一个“洋葱新闻”网站70News。显然Google的算法认为这个网站是最相关的，结果无数的网民就天真地点击过去了，然后愤怒地发现这是一条假新闻（相似的例子可能还有百度医疗广告问题&#8230;）。可见人们潜意识里对搜索引擎有一种莫名的信任——排在前面的应该就是我想要的信息。可是，搜索引擎背后也只是一堆堆的机器学习模型，而模型也是需要不断改进的。要改进模型就要告诉模型什么时候判断错了，然后进行参数修正。
+原文不翻译了，大意是，在Google搜索大选相关信息的时候，“popularity vote”第一条结果是一个“洋葱新闻”网站70News。显然Google的算法认为这个网站是最相关的，结果无数的网民就天真地点击过去了，然后愤怒地发现这是一条假新闻（相似的例子可能还有百度医疗广告问题…）。可见人们潜意识里对搜索引擎有一种莫名的信任——排在前面的应该就是我想要的信息。可是，搜索引擎背后也只是一堆堆的机器学习模型，而模型也是需要不断改进的。要改进模型就要告诉模型什么时候判断错了，然后进行参数修正。
 
 ![](https://cos.name/wp-content/uploads/2017/01/Google-e1457156368841.jpg)
 

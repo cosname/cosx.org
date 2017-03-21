@@ -54,7 +54,7 @@ slug: hypotheses-testing
 > 
 > <span style="color: #ff0000;">Q </span><span style="color: #000000;">(前提)</span>
 > 
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+> ———————–
 > 
 > then **NOT** <span style="color: #ff0000;">P </span><span style="color: #000000;">（结论）</span>
 
@@ -70,7 +70,7 @@ slug: hypotheses-testing
 > 
 > <span style="color: #ff0000;">Q                                                     <span style="color: #000000;">(前提)</span></span>
 > 
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+> ———————–
 > 
 > then _probably_ **NOT** <span style="color: #ff0000;">P         <span style="color: #000000;">（结论）</span></span>
 
@@ -166,7 +166,7 @@ slug: hypotheses-testing
 > 
 > 在R里，     P=2*(1-<span style="color: #ff0000;">pt</span>(t,df))=2*(1-<span style="color: #ff0000;">pt</span>(2.704,24))=0.012392
 
-&#8212;&#8212;&#8212;-
+———-
 
 以上是用P值作为判定条件。一个等价的做法是用临界值来判断。我们事先给定的显著性水平α=0.05，在这个自由度为24的t分布里，就对应着一个临界t值2.064。下图的阴影部分，也称作**拒绝区域**。上面求出的跟样本均值$\bar{X}=25.03$对应的t值=2.704，处在这个拒绝区域内（2.704>2.064），于是我们一样拒绝原假设。
 
@@ -212,11 +212,11 @@ _[**Common Statistical Methods for Clinical Research with SAS Examples**](http:/
 
 > t Value    Pr > |t|
   
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+> ——————-
   
 > <span style="color: #ff0000;">2.71      0.0121</span>
   
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+> ——————-
 
 上面的t Value 就是计算出来的t值，Pr > |t| 就是P值（这里的|t|就是上面计算出来的t值2.704，**Pr > |t|求的是比t值更极端的概率，即P值**）。proc means没有提供临界t值（即通常说的查表得出的t值），下同。
 

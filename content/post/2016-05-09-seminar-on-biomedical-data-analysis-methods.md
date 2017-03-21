@@ -40,23 +40,23 @@ slug: seminar-on-biomedical-data-analysis-methods
 
 **  ** **郑光甫** 台北医学大学
 
-&#8211;  Mining for Disease-related Genetic Variants with Covariate adjustment
+–  Mining for Disease-related Genetic Variants with Covariate adjustment
 
 **郭秀花** 首都医科大学
 
-&#8211; Biomedical Big Data Analysis Strategy and Data Mining
+– Biomedical Big Data Analysis Strategy and Data Mining
 
 **颜佐榕** 台湾中央研究院
 
-&#8211; Solving Fused Group Lasso Problems via Block Splitting Algorithms
+– Solving Fused Group Lasso Problems via Block Splitting Algorithms
 
 **李子林** 清华大学
 
-&#8211; Detection of Signal Regions in Whole Genome Association Studies
+– Detection of Signal Regions in Whole Genome Association Studies
 
 **蔺顺锋** 中国人民大学
 
-&#8211; Hierarchical Mixed Effects Model for Spatially Correlated Multilevel Functional Data
+– Hierarchical Mixed Effects Model for Spatially Correlated Multilevel Functional Data
 
 **会议时间**
 

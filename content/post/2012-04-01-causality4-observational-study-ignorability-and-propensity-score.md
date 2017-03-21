@@ -21,7 +21,7 @@ tags:
 slug: causality4-observational-study-ignorability-and-propensity-score
 ---
 
-这节采用和前面相同的记号。$Z$ 表示处理变量（$1$ 是处理，$0$ 是对照），$Y$ 表示结果，$X$ 表示处理前的协变量。在完全随机化试验中，可忽略性 $Z \bot \{Y(1), Y(0)\} $ 成立，这保证了平均因果作用 $ACE(Z\rightarrow Y) = E\{Y(1) &#8211; Y(0)\} = E\{Y\mid Z=1\} &#8211; E\{Y\mid Z=0\}$ 可以表示成观测数据的函数，因此可以识别。在某些试验中，我们“先验的”知道某些变量与结果强相关，因此要在试验中控制他们，以减少试验的方差。在一般的有区组（blocking）的随机化试验中，更一般的可忽略性 $Z \bot \{Y(1), Y(0)\} | X$ 成立，因为只有在给定协变量 $ X $ 后，处理的分配机制才是完全随机化的。比如，男性和女性中，接受处理的比例不同，但是这个比例是事先给定的。
+这节采用和前面相同的记号。$Z$ 表示处理变量（$1$ 是处理，$0$ 是对照），$Y$ 表示结果，$X$ 表示处理前的协变量。在完全随机化试验中，可忽略性 $Z \bot \{Y(1), Y(0)\} $ 成立，这保证了平均因果作用 $ACE(Z\rightarrow Y) = E\{Y(1) – Y(0)\} = E\{Y\mid Z=1\} – E\{Y\mid Z=0\}$ 可以表示成观测数据的函数，因此可以识别。在某些试验中，我们“先验的”知道某些变量与结果强相关，因此要在试验中控制他们，以减少试验的方差。在一般的有区组（blocking）的随机化试验中，更一般的可忽略性 $Z \bot \{Y(1), Y(0)\} | X$ 成立，因为只有在给定协变量 $ X $ 后，处理的分配机制才是完全随机化的。比如，男性和女性中，接受处理的比例不同，但是这个比例是事先给定的。
 
 在传统的农业和工业试验中，由于随机化，可忽略性一般是能够得到保证的；因此在这些领域谈论因果推断是没有太大问题的。Jerzy Neyman 最早的博士论文，就研究的是农业试验。但是，这篇写于 1923 年的重要统计学文章，迟迟没有得到统计学界的重视，也没有人将相关方法用到社会科学的研究中。1970 年代，Donald Rubin 访问 UC Berkeley 统计系，已退休的 Jerzy Neyman 曾问起：为什么没有人将潜在结果的记号用到试验设计之外？正如 Jerzy Neyman 本人所说 “without randomization an experiment has little value irrespective of the subsequent treatment（没有随机化的试验价值很小）”，人们对于观察性研究中的因果推断总是抱着强烈的怀疑态度。我们经常听到这样的声音：统计就不是用来研究因果关系的！
 
@@ -35,7 +35,7 @@ slug: causality4-observational-study-ignorability-and-propensity-score
 
 \begin{eqnarray*}
   
-ACE&=& E(Y(1)) &#8211; E(Y(0))\nonumber\\&=& E[E(Y(1) \mid X)] &#8211; E[E(Y(0)\mid X)]\nonumber\\&=& E[E(Y(1)\mid X, Z=1)] &#8211; E[E(Y(0)\mid X, Z=0)]\nonumber\\&=& E[E(Y\mid X,Z=1)] &#8211; E[E(Y\mid X,Z=0)].
+ACE&=& E(Y(1)) – E(Y(0))\nonumber\\&=& E[E(Y(1) \mid X)] – E[E(Y(0)\mid X)]\nonumber\\&=& E[E(Y(1)\mid X, Z=1)] – E[E(Y(0)\mid X, Z=0)]\nonumber\\&=& E[E(Y\mid X,Z=1)] – E[E(Y\mid X,Z=0)].
   
 \end{eqnarray*}
 
@@ -45,17 +45,17 @@ ACE&=& E(Y(1)) &#8211; E(Y(0))\nonumber\\&=& E[E(Y(1) \mid X)] &#8211; E[E(Y(0)\
 
 上面的第二条，是线性回归最主要的缺陷。在 Donald Rubin 早期因果推断的文献中，推崇的方法是“匹配”（matching）。一般来说，我们有一些个体接受处理，另外更多的个体接受对照；简单的想法就是从对照组中找到和处理组中比较“接近”的个体进行匹配，这样得出的作用，可以近似平均因果作用。“接近”的标准是基于观测协变量的，比如，如果某项研究，性别是唯一重要的混杂因素，我们就将处理组中的男性和对照组中的男性进行匹配。但是，如果观测协变量的维数较高，匹配就很难实现了。现有的渐近理论表明，匹配方法的收敛速度随着协变量维数的增高而线性的衰减。
 
-后来 Paul Rosenbaum 到 Harvard 统计系读 Ph.D.，在 Donald Rubin 的课上问到了这个问题。这就促使两人合作写了一篇非常有名的文章，于 1983 年发表在 Biometrika 上：“The central role of the propensity score in observational studies for causal effects”。倾向得分定义为 $ e(X) = P(Z=1\mid X) ,$ 容易验证，在可忽略性下，它满足性质 $ Z\bot X|e(X) $ （在数据降维的文献中，称之为“充分降维”，sufficient dimension reduction） 和 $Z\bot \{Y(1), Y(0)\}|e(X)$（给定倾向得分下的可忽略性）。 根据前面的推导，显然有 $ ACE = E[E(Y\mid e(X),Z=1)] &#8211; E[E(Y\mid e(X),Z=0)] $。此时，倾向得分是一维的，我们可以根据它分层 （Rosenbaum 和 Rubin 建议分成 5 层），得到平均因果作用的估计。连续版本的分层，就是下面的加权估计：  $$ACE = E\{Y(1) \}- E\{ Y(0) \}  = E\left\{   \frac{ZY}{e(X)}  \right\}  &#8211; E\left\{   \frac{(1-Z)Y}{  1 &#8211; e(X)} \right\}.$$ 不过，不管是分层还是加权，第一步我们都需要对倾向得分进行估计，通常的建议是 Logistic 回归。甚至有文献证明的下面的“离奇”结论：使用估计的倾向得分得到平均因果作用的估计量的渐近方差比使用真实的倾向得分得到的小。
+后来 Paul Rosenbaum 到 Harvard 统计系读 Ph.D.，在 Donald Rubin 的课上问到了这个问题。这就促使两人合作写了一篇非常有名的文章，于 1983 年发表在 Biometrika 上：“The central role of the propensity score in observational studies for causal effects”。倾向得分定义为 $ e(X) = P(Z=1\mid X) ,$ 容易验证，在可忽略性下，它满足性质 $ Z\bot X|e(X) $ （在数据降维的文献中，称之为“充分降维”，sufficient dimension reduction） 和 $Z\bot \{Y(1), Y(0)\}|e(X)$（给定倾向得分下的可忽略性）。 根据前面的推导，显然有 $ ACE = E[E(Y\mid e(X),Z=1)] – E[E(Y\mid e(X),Z=0)] $。此时，倾向得分是一维的，我们可以根据它分层 （Rosenbaum 和 Rubin 建议分成 5 层），得到平均因果作用的估计。连续版本的分层，就是下面的加权估计：  $$ACE = E\{Y(1) \}- E\{ Y(0) \}  = E\left\{   \frac{ZY}{e(X)}  \right\}  – E\left\{   \frac{(1-Z)Y}{  1 – e(X)} \right\}.$$ 不过，不管是分层还是加权，第一步我们都需要对倾向得分进行估计，通常的建议是 Logistic 回归。甚至有文献证明的下面的“离奇”结论：使用估计的倾向得分得到平均因果作用的估计量的渐近方差比使用真实的倾向得分得到的小。
 
 熟悉传统回归分析的人会感到奇怪，直接将 $ Y $ 对 $  Z $ 和 $  X $ 做回归的方法简单直接，为何要推荐倾向得分的方法呢？确实，读过 Rosenbaum 和 Rubin 原始论文的人，一般会觉得，这篇文章很有意思，但是又觉得线性回归（或者 logistic 回归）足矣，何必这么复杂？在因果推断中，我们应该更加关心处理机制，也就是倾向得分。按照 Don Rubin 的说法，我们应该根据倾向得分来“设计”观察性研究；按照倾向得分将人群进行匹配，形成一个近似的“随机化试验”。而这个设计的过程，不能依赖于结果变量；甚至在设计的阶段，我们要假装没有观察到结果变量。否则，将会出现如下的怪现象：社会科学的研究者不断地尝试加入或者剔除某些回归变量，直到回归的结果符合自己的“故事”为止。这种现象在社会科学中实在太普遍了！结果的回归模型固然重要，但是如果在 $ Y $ 模型上做文章，很多具有“欺骗性”的有偏结果就会出现在文献中。这导致大多数的研究中，因果性并不可靠。
 
-讲到这里，我们有必要回到最开始的 Yule-Simpson&#8217;s Paradox。用 $Z$ 表示处理（$1$ 表示处理，$ 0 $ 表示对照），$ Y $ 表示存活与否（$ 1 $ 是表示存活，$ 0  $ 表示死亡），$ X $ 表示性别（$ 1 $ 表示男性，$ 0 $ 表示女性）。目前我们有处理“因果作用”的两个估计量：一个不用性别进行加权调整
+讲到这里，我们有必要回到最开始的 Yule-Simpson’s Paradox。用 $Z$ 表示处理（$1$ 表示处理，$ 0 $ 表示对照），$ Y $ 表示存活与否（$ 1 $ 是表示存活，$ 0  $ 表示死亡），$ X $ 表示性别（$ 1 $ 表示男性，$ 0 $ 表示女性）。目前我们有处理“因果作用”的两个估计量：一个不用性别进行加权调整
 
 \begin{eqnarray*}
   
-\widehat{ACE}_{unadj} &=& \widehat{P} (Y = 1\mid Z=1) &#8211; \widehat{P}(Y=1\mid Z=0) \\
+\widehat{ACE}_{unadj} &=& \widehat{P} (Y = 1\mid Z=1) – \widehat{P}(Y=1\mid Z=0) \\
   
-&=& 0.50 &#8211; 0.40 = 0.10 > 0 .
+&=& 0.50 – 0.40 = 0.10 > 0 .
   
 \end{eqnarray*}
 
@@ -65,11 +65,11 @@ ACE&=& E(Y(1)) &#8211; E(Y(0))\nonumber\\&=& E[E(Y(1) \mid X)] &#8211; E[E(Y(0)\
   
 &&\widehat{ACE}_{adj} \\
   
-&=& \{ \widehat{P}(Y = 1\mid Z=1, X=1 ) &#8211; \widehat{P}(Y = 1\mid Z=0, X=1 ) \} \widehat{P}(X=1) \\
+&=& \{ \widehat{P}(Y = 1\mid Z=1, X=1 ) – \widehat{P}(Y = 1\mid Z=0, X=1 ) \} \widehat{P}(X=1) \\
   
-&& +  \{ \widehat{P}(Y = 1\mid Z=1, X=0 ) &#8211; \widehat{P}(Y = 1\mid Z=0, X=0 ) \} \widehat{P}(X=0) \\
+&& +  \{ \widehat{P}(Y = 1\mid Z=1, X=0 ) – \widehat{P}(Y = 1\mid Z=0, X=0 ) \} \widehat{P}(X=0) \\
   
-&=& (0.60 &#8211; 0.70)\times 0.5 + (0.20 &#8211; 0.30)\times 0.5\\
+&=& (0.60 – 0.70)\times 0.5 + (0.20 – 0.30)\times 0.5\\
   
 &=& -0.10<0.
   
@@ -79,8 +79,8 @@ ACE&=& E(Y(1)) &#8211; E(Y(0))\nonumber\\&=& E[E(Y(1) \mid X)] &#8211; E[E(Y(0)\
 
 作为结束，留下如下的问题：
 
-  1. 如果 $X$ 是二值的变量（如性别），那么匹配或者倾向的分都导致如下的估计量：$  ACE = \sum\limits_{x=0,1}  \left[ E\{Y\mid Z=1, X=x\} &#8211; E\{ Y\mid Z=0, X=x\} \right] P(X=x) . $ 这个公式在流行病学中非常基本，即根据混杂变量进行分层调整。在后面的介绍中将讲到，这个公式被 Judea Pearl 称为“后门准则”（backdoor criterion）。
-  2. 倾向得分的加权形式，  $ACE = E\{Y(1) \}- E\{ Y(0) \}  = E\left\{   \frac{ZY}{e(X)}  \right\}  &#8211; E\left\{   \frac{(1-Z)Y}{  1 &#8211; e(X)} \right\},$ 本质上是抽样调查中的 Horvitz-Thompson 估计。在流行病学的文献中，这样的估计量常被称为“逆概加权估计量”（inverse probability weighting estimator; IPWE）。
+  1. 如果 $X$ 是二值的变量（如性别），那么匹配或者倾向的分都导致如下的估计量：$  ACE = \sum\limits_{x=0,1}  \left[ E\{Y\mid Z=1, X=x\} – E\{ Y\mid Z=0, X=x\} \right] P(X=x) . $ 这个公式在流行病学中非常基本，即根据混杂变量进行分层调整。在后面的介绍中将讲到，这个公式被 Judea Pearl 称为“后门准则”（backdoor criterion）。
+  2. 倾向得分的加权形式，  $ACE = E\{Y(1) \}- E\{ Y(0) \}  = E\left\{   \frac{ZY}{e(X)}  \right\}  – E\left\{   \frac{(1-Z)Y}{  1 – e(X)} \right\},$ 本质上是抽样调查中的 Horvitz-Thompson 估计。在流行病学的文献中，这样的估计量常被称为“逆概加权估计量”（inverse probability weighting estimator; IPWE）。
   3. 直观上，为什么估计的倾向得分会更好？想想偏差和方差的权衡（bias-variance tradeoff）。
 
 &nbsp;

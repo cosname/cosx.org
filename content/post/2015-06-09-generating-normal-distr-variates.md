@@ -92,7 +92,7 @@ $$P\left \{ \frac{X\_1+X\_2+\cdots+X\_n-n\mu}{\sigma \sqrt n} \leq x \right \} \
 
 ### 利用逆变换法生成正态分布
 
-假设$u=F(x)$是一个概率分布函数(CDF)，$F^{-1}$是它的反函数，若$U$是一个服从$(0,1)$均匀分布的随机变量，则$F^{-1}(U)$服从函数$F$给出的分布。例如要生成一个服从指数分布的随机变量，我们知道指数分布的概率分布函数(CDF)为$F(x)=1 &#8211; e^{ &#8211; \lambda x}$，其反函数为$F^{-1}(x) = -\frac{\ln (1-x)}{\lambda}$，所以只要不断生成服从$(0,1)$均匀分布的随机变量，代入到反函数中即可生成指数分布。
+假设$u=F(x)$是一个概率分布函数(CDF)，$F^{-1}$是它的反函数，若$U$是一个服从$(0,1)$均匀分布的随机变量，则$F^{-1}(U)$服从函数$F$给出的分布。例如要生成一个服从指数分布的随机变量，我们知道指数分布的概率分布函数(CDF)为$F(x)=1 – e^{ – \lambda x}$，其反函数为$F^{-1}(x) = -\frac{\ln (1-x)}{\lambda}$，所以只要不断生成服从$(0,1)$均匀分布的随机变量，代入到反函数中即可生成指数分布。
 
 正态分布的概率分布函数(CDF)如下图所示，
 
@@ -132,7 +132,7 @@ $$P\left \{ \frac{X\_1+X\_2+\cdots+X\_n-n\mu}{\sigma \sqrt n} \leq x \right \} \
 #
 # are two *independent* variables with normal distribution</pre>
 
-顿时感觉非常神奇，也就是说当$x$和$y$是两个独立且服从$(0,1)$均匀分布的随机变量时，$\cos (2\pi x) \cdot \sqrt { &#8211; 2\ln (1 &#8211; y)}$和$\sin (2\pi x) \cdot \sqrt { &#8211; 2\ln (1 &#8211; y)} $是两个独立且服从正态分布的随机变量！
+顿时感觉非常神奇，也就是说当$x$和$y$是两个独立且服从$(0,1)$均匀分布的随机变量时，$\cos (2\pi x) \cdot \sqrt { – 2\ln (1 – y)}$和$\sin (2\pi x) \cdot \sqrt { – 2\ln (1 – y)} $是两个独立且服从正态分布的随机变量！
 
 后来查了查这个公式，发现这个方法叫做Box–Muller，其实本质上也是应用了逆变换法，证明方法比较多，这里我们选取一种比较好理解的
 
@@ -158,7 +158,7 @@ $$\left\{\begin{matrix} Y\_1 = \sqrt {- 2\ln X\_1} \cos (2\pi X\_2) \\ Y\_2 = \s
 
 求反函数得
 
-$$\left\{\begin{matrix} X\_1 = e^{ &#8211; \frac{Y\_1^2 + Y\_2^2}{2}} \\ X\_2 = \frac{1}{2 \pi} \arctan \frac{Y\_2}{Y\_1} \end{matrix}\right.$$
+$$\left\{\begin{matrix} X\_1 = e^{ – \frac{Y\_1^2 + Y\_2^2}{2}} \\ X\_2 = \frac{1}{2 \pi} \arctan \frac{Y\_2}{Y\_1} \end{matrix}\right.$$
 
 计算Jacobian行列式
 

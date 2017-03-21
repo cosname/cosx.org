@@ -42,7 +42,7 @@ slug: relationships-among-variables-in-large-scale-systems
   </p>
   
   <p>
-    Fisher所说并非狡辩．这也是他一直所声称的，观察研究（observational study）并不能获得因果关系的信息，而倘若研究目的是因果关系的话，那只有实验设计可能还有点戏．本文支持这一观点．但是本文也需要指出，从观察研究里推演因果关系是有可能的－－感兴趣的可以点击<a href="http://bayes.cs.ucla.edu/home.htm" target="_blank">Pear的主页</a>，Pearl乃是因果推断的一代宗师．具体的指导思想是－－我们可以从观测数据中推导各个变量之间的相关关系，再假设这些相关关系都是正确的，根据图论的一些理论，并且结合奥柯姆原理(occam&#8217;s principle，简单模型优先)我们就可以推导出部分因果关系．
+    Fisher所说并非狡辩．这也是他一直所声称的，观察研究（observational study）并不能获得因果关系的信息，而倘若研究目的是因果关系的话，那只有实验设计可能还有点戏．本文支持这一观点．但是本文也需要指出，从观察研究里推演因果关系是有可能的－－感兴趣的可以点击<a href="http://bayes.cs.ucla.edu/home.htm" target="_blank">Pear的主页</a>，Pearl乃是因果推断的一代宗师．具体的指导思想是－－我们可以从观测数据中推导各个变量之间的相关关系，再假设这些相关关系都是正确的，根据图论的一些理论，并且结合奥柯姆原理(occam’s principle，简单模型优先)我们就可以推导出部分因果关系．
   </p>
   
   <h2>
@@ -54,7 +54,7 @@ slug: relationships-among-variables-in-large-scale-systems
   </p>
   
   <p>
-    用人工智能里面的话来说，一个完整的贝叶斯网络包含两个元素，１）结构，也就是那些带有箭头的边；２）系数，也就是每条边的系数．如果所有的变量都是连续型，那我们可以假设它是一个多元高斯分布，于是每个系数就相当于解释变量和被解释变量之间的回归系数．从这里我们可以粗略的得到结论，那就是：倘若知道了结构，得到系数不难．所以贝耶斯网络的训练分两步走，先训练结构，在训练系数．但是问题是如何得到结构？有兴趣的朋友可以google如下关键词&#8221;PC Algorithm&#8221;, &#8220;IC Algorithm&#8221;,&#8221;K2 Algorithm&#8221; 以及 &#8220;learning of gaussian network by heckmen&#8221;.
+    用人工智能里面的话来说，一个完整的贝叶斯网络包含两个元素，１）结构，也就是那些带有箭头的边；２）系数，也就是每条边的系数．如果所有的变量都是连续型，那我们可以假设它是一个多元高斯分布，于是每个系数就相当于解释变量和被解释变量之间的回归系数．从这里我们可以粗略的得到结论，那就是：倘若知道了结构，得到系数不难．所以贝耶斯网络的训练分两步走，先训练结构，在训练系数．但是问题是如何得到结构？有兴趣的朋友可以google如下关键词”PC Algorithm”, “IC Algorithm”,”K2 Algorithm” 以及 “learning of gaussian network by heckmen”.
   </p>
   
   <p>
@@ -70,7 +70,7 @@ slug: relationships-among-variables-in-large-scale-systems
   </h2>
   
   <p>
-    此文仅仅作为科普之用，欢迎拍砖．如果你感到无法满足，你可以点击<a href="http://people.cs.ubc.ca/~murphyk/Bayes/bnintro.html" target="_blank">这里</a>，作者Kevin Murphy是图模型方面的一个牛人．如果你仍然不能满足，那么我推荐你google一下 &#8220;micheal jordan&#8221;(Kevin的老板)，可以发现更多与他一样牛的他的师兄弟师姐妹，有做马尔科夫网络, 隐马尔科夫模型, 动态贝叶斯网络， 独立成分分析（independent component analysis）, 状态空间模型等等，这些都属于图模型，并且都很有意思．
+    此文仅仅作为科普之用，欢迎拍砖．如果你感到无法满足，你可以点击<a href="http://people.cs.ubc.ca/~murphyk/Bayes/bnintro.html" target="_blank">这里</a>，作者Kevin Murphy是图模型方面的一个牛人．如果你仍然不能满足，那么我推荐你google一下 “micheal jordan”(Kevin的老板)，可以发现更多与他一样牛的他的师兄弟师姐妹，有做马尔科夫网络, 隐马尔科夫模型, 动态贝叶斯网络， 独立成分分析（independent component analysis）, 状态空间模型等等，这些都属于图模型，并且都很有意思．
   </p>
   
   <p>

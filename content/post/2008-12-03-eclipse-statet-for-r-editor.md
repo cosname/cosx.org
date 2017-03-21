@@ -71,7 +71,7 @@ Eclipse启动后如下图。
 
 ### 2.2.1  新建一个工程
 
-依次选择菜单栏中的&#8221;File&#8221;, &#8220;New&#8221;,&#8221;R-Project&#8221;，打开新建R的工程的对话框。如下图所示
+依次选择菜单栏中的”File”, “New”,”R-Project”，打开新建R的工程的对话框。如下图所示
 
 ![](https://cos.name/wp-content/uploads/2010/03/project.jpg "建立工程")在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
 
@@ -79,7 +79,7 @@ Eclipse启动后如下图。
 
 ### 2.2.2 向工程添加文件。
 
-右键单击&#8221;Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
+右键单击”Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
 
 ![](https://cos.name/wp-content/uploads/2010/03/script.jpg "添加R脚本")在选择好文件夹，指定了文件名后，单击“Finish”，我们的R脚本文件就建好了。本例中，我建立了一个名为“prime.R”的文件，用来查找质数。
 
@@ -159,7 +159,7 @@ prime(1000)</pre>
 
 谢谢了。
 
-**Ihavenothing：**是这样的，先找到你设置的工作空间文件夹，然后依次打开\.metadata\.plugins\org.eclipse.core.runtime\.settings\，找到de.walware.statet.r.ui.prefs这个文件（如果没有这个文件，见最后），在里面找找看有没有以&#8221;text\_R\_rDefault.Custom2.items=&#8221;为开头的语句，如果有的话，只需把你准备实现高亮的词语加到等号后面就可以了。保存之后进入Eclipse，选择Winow菜单中的Preferences对话框，顺次展开StatET->Source Editors->R Identifier Groups，在右边的框中选中Custom 1（注意，配置文件中对应的是Custom2，可能是个bug），如果下面的列表框中出现了你刚才添加进去的词语，就说明配置成功了。接下来，只要在R Syntax Coloring对话框中找到Custom 1这一项，然后应用你自定义的高亮方式就可以了。
+**Ihavenothing：**是这样的，先找到你设置的工作空间文件夹，然后依次打开\.metadata\.plugins\org.eclipse.core.runtime\.settings\，找到de.walware.statet.r.ui.prefs这个文件（如果没有这个文件，见最后），在里面找找看有没有以”text\_R\_rDefault.Custom2.items=”为开头的语句，如果有的话，只需把你准备实现高亮的词语加到等号后面就可以了。保存之后进入Eclipse，选择Winow菜单中的Preferences对话框，顺次展开StatET->Source Editors->R Identifier Groups，在右边的框中选中Custom 1（注意，配置文件中对应的是Custom2，可能是个bug），如果下面的列表框中出现了你刚才添加进去的词语，就说明配置成功了。接下来，只要在R Syntax Coloring对话框中找到Custom 1这一项，然后应用你自定义的高亮方式就可以了。
 
 需要注意的是新加入的词语不能与StatET中已有的重复，否则可能会出错。
 

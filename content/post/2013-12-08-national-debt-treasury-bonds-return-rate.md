@@ -25,7 +25,7 @@ slug: national-debt-treasury-bonds-return-rate
   </p>
   
   <p>
-    <strong>狗熊会：</strong>有限的数据，一丁点发现，无穷多可能的解释，不知对错！但是，这不妨碍好奇与探索，以及数据分析的快乐&#8230;.
+    <strong>狗熊会：</strong>有限的数据，一丁点发现，无穷多可能的解释，不知对错！但是，这不妨碍好奇与探索，以及数据分析的快乐….
   </p>
 </div>
 

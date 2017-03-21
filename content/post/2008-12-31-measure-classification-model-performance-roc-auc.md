@@ -173,7 +173,7 @@ ROC曲线是根据与45度线的偏离来判断模型好坏。图示的好处是
 
 SAS的Logistic回归能够后直接生成AUC值。跑完上面的模型，你可以在结果报告的Association Statistics找到一个叫c的指标，它就是AUC（本例中，c=AUC=0.803，45度线的c=0.5）。
 
-/*注：以上提到的c不是AUC里面那个&#8217;C&#8217;。这个c是一个叫[Wilcoxon-Mann-Whitney](http://en.wikipedia.org/wiki/Mann-Whitney_U) 检验的统计量。这个说来话长，不过这个c却等价于ROC曲线下的面积（AUC）。*/
+/*注：以上提到的c不是AUC里面那个’C’。这个c是一个叫[Wilcoxon-Mann-Whitney](http://en.wikipedia.org/wiki/Mann-Whitney_U) 检验的统计量。这个说来话长，不过这个c却等价于ROC曲线下的面积（AUC）。*/
 
 **ROC、AUC：SAS9.2****一步到位******
 

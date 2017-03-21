@@ -77,7 +77,7 @@ slug: deep-mining-users-r
       </p>
       
       <p>
-        在R中，我们可以利用sunburstR包中的sunburst函数实现sunburst事件路径图，通过install.packages(&#8220;sunburstR&#8221;)命令完成安装。
+        在R中，我们可以利用sunburstR包中的sunburst函数实现sunburst事件路径图，通过install.packages(“sunburstR”)命令完成安装。
       </p>
       
       <p>

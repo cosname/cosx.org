@@ -20,7 +20,7 @@ $$\begin{split}
   
 x & = 16(\text{sin}t)^3 \\
   
-y & = 13\text{cos}t &#8211; 5\text{cos}2t &#8211; 2\text{cos}3t &#8211; \text{cos}4t
+y & = 13\text{cos}t – 5\text{cos}2t – 2\text{cos}3t – \text{cos}4t
   
 \end{split}$$
 

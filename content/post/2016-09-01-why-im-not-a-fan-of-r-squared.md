@@ -19,7 +19,7 @@ tags:
 slug: why-im-not-a-fan-of-r-squared
 ---
 
-> 本文翻译自 [John Myles White](http://www.johnmyleswhite.com/) 的博客 [Why I&#8217;m Not a Fan of R-Squared](http://www.johnmyleswhite.com/notebook/2016/07/23/why-im-not-a-fan-of-r-squared/)。翻译工作已经获得作者授权同意。
+> 本文翻译自 [John Myles White](http://www.johnmyleswhite.com/) 的博客 [Why I’m Not a Fan of R-Squared](http://www.johnmyleswhite.com/notebook/2016/07/23/why-im-not-a-fan-of-r-squared/)。翻译工作已经获得作者授权同意。
 
 ## 本文大意
 

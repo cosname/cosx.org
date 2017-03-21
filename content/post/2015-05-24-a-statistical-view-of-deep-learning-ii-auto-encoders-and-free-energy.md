@@ -18,14 +18,14 @@ slug: a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy
 
 ##### **广义的降噪自动编码器（****GDAEs****）**
 
-降噪自动编码器是无监督深度学习中的一个重大进步，它极大的提升了数据表示的可扩展性和稳健性。对每个数据点y，降噪自动编码器先利用一个已知的噪化过程$\mathcal{C}(\mathbf{y}&#8217;|\mathbf{y})$建立一个$\mathbf{y}$的含噪声版本$\mathbf{y}&#8217;$，其后我们以$\mathbf{y}&#8217;$为输入利用神经网络来重新恢复原始数据$\mathbf{y}$。整个学习网络可以被分为两个部分：编码器和解码器，其中编码器$\mathbf{z}$的输出可被认为是原始数据的一种表示或特征。该问题的目标函数如下[1]：
+降噪自动编码器是无监督深度学习中的一个重大进步，它极大的提升了数据表示的可扩展性和稳健性。对每个数据点y，降噪自动编码器先利用一个已知的噪化过程$\mathcal{C}(\mathbf{y}’|\mathbf{y})$建立一个$\mathbf{y}$的含噪声版本$\mathbf{y}’$，其后我们以$\mathbf{y}’$为输入利用神经网络来重新恢复原始数据$\mathbf{y}$。整个学习网络可以被分为两个部分：编码器和解码器，其中编码器$\mathbf{z}$的输出可被认为是原始数据的一种表示或特征。该问题的目标函数如下[1]：
 
 <p style="text-align: center;">
-  $ \textrm{Perturbation:}\quad \mathbf{y}&#8217; \sim\mathcal{C}(\mathbf{y}&#8217;|\mathbf{y})$
+  $ \textrm{Perturbation:}\quad \mathbf{y}’ \sim\mathcal{C}(\mathbf{y}’|\mathbf{y})$
 </p>
 
 <p style="text-align: center;">
-  $\textrm{Encoder:}\quad \mathbf{z(y&#8217;)} = f_\phi (\mathbf{y&#8217;})\qquad\textrm{Decoder:}\quad \mathbf{y} \approx g_\theta (\mathbf{z})$
+  $\textrm{Encoder:}\quad \mathbf{z(y’)} = f_\phi (\mathbf{y’})\qquad\textrm{Decoder:}\quad \mathbf{y} \approx g_\theta (\mathbf{z})$
 </p>
 
 <p style="text-align: center;">
@@ -39,7 +39,7 @@ slug: a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy
 其中$\log p(\cdot)$是一个依数据选择的对数似然函数，同时目标函数是所有观测点上对数似然函数的平均。广义降噪自编码器（GDAEs）考虑到这个目标函数受制于有限的训练数据，从而在原有公式的基础上引入了一个额外的惩罚项$\mathcal{R}(\cdot)$[2]：
 
 <p style="text-align: center;">
-  $\quad\mathcal{L}_{GDAE} = \log p(\mathbf{y} |\mathbf{z}) &#8211; \lambda \mathcal{R}(\mathbf{y, y&#8217;})$
+  $\quad\mathcal{L}_{GDAE} = \log p(\mathbf{y} |\mathbf{z}) – \lambda \mathcal{R}(\mathbf{y, y’})$
 </p>
 
 GDAEs方法的原理是观测空间上的扰动能增强编码器结果$\mathbf{z}$的稳健性和不敏感性。使用GDAEs时，我们需要注意两个关键的问题：1）如何选择一个符合实际的噪化过程；2）如何选择合适的调整函数$\mathcal{R}(\cdot)$。
@@ -54,12 +54,12 @@ GDAEs方法的原理是观测空间上的扰动能增强编码器结果$\mathbf{
 
 ![潜因子模型中的近似推理](https://cos.name/wp-content/uploads/2015/05/001.png)<figcaption class="wp-caption-text">图1 潜变量模型中编码器-解码器的推断过程</figcaption></figure> 
 
-另一个DAEs的难点在于它的稳健性建立在对考察原始数据的干扰上。这样一个噪化过程一般并不容易设计。此外，通过对概率分布的推导，我们可以发现通过对对数噪化数据的密度函数$\log p(\mathbf{y}&#8217;)$ 应用变分原理，我们可以得到DAE的目标函数$\mathcal{L}_{DAE}$的一个下界[1]，然而并不是我们所感兴趣的统计量。
+另一个DAEs的难点在于它的稳健性建立在对考察原始数据的干扰上。这样一个噪化过程一般并不容易设计。此外，通过对概率分布的推导，我们可以发现通过对对数噪化数据的密度函数$\log p(\mathbf{y}’)$ 应用变分原理，我们可以得到DAE的目标函数$\mathcal{L}_{DAE}$的一个下界[1]，然而并不是我们所感兴趣的统计量。
 
 一个可行的方法是将变分原理应用到我们感兴趣的统计量上来，即对数观测数据的边际概率分布$\log p(\mathbf{y})$\[3\]\[4\]。通过将变分原则应用到生成模型（概率解码器模型）中能够得到新的目标函数，我们称其为变分自由能：
 
 <p style="text-align: center;">
-  $\mathcal{L}_{VFE} = \mathbb{E}_{q(\mathbf{z})}[ \log p(\mathbf{y} | \mathbf{z})] &#8211; KL[q(\mathbf{z}) \|p(\mathbf{z})]$
+  $\mathcal{L}_{VFE} = \mathbb{E}_{q(\mathbf{z})}[ \log p(\mathbf{y} | \mathbf{z})] – KL[q(\mathbf{z}) \|p(\mathbf{z})]$
 </p>
 
 仔细观察公式，我们可以发现它和GDAE的目标函数相符合。不过这里仍然存在着以下几点显著的不同：

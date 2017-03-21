@@ -34,7 +34,7 @@ r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n
 > 
 > $b_i \sim Normal(0, \tau)$
 
-其中$x\_{1i}$是种子的类型，$x\_{2i}$是根提取物的类型，$\alpha\_{12} x\_{1i} x\_{2i}$是交互项, $\alpha\_0,~\alpha\_1,~\alpha\_2,~\alpha_{12},~\tau$是给定的独立的 &#8220;noninformative&#8221; 先验参数。在Bayesian分析中，通常我们会定义一个DAG图(即Directed Acyclic Graph有向无圈图) 。我们可以在WinBUGS中通过设计DAG图来定义模型。不过这一节中我们还是用WinBUGS中的BUGS语言来定义模型，如何在WinBUGS中通过设计DAG图来定义模型我将在下一节中详细介绍，但是必须要说明的是BUGS语言比DAG图灵活，不过直观性不如后者。
+其中$x\_{1i}$是种子的类型，$x\_{2i}$是根提取物的类型，$\alpha\_{12} x\_{1i} x\_{2i}$是交互项, $\alpha\_0,~\alpha\_1,~\alpha\_2,~\alpha_{12},~\tau$是给定的独立的 “noninformative” 先验参数。在Bayesian分析中，通常我们会定义一个DAG图(即Directed Acyclic Graph有向无圈图) 。我们可以在WinBUGS中通过设计DAG图来定义模型。不过这一节中我们还是用WinBUGS中的BUGS语言来定义模型，如何在WinBUGS中通过设计DAG图来定义模型我将在下一节中详细介绍，但是必须要说明的是BUGS语言比DAG图灵活，不过直观性不如后者。
 
 模型
 

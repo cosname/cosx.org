@@ -71,7 +71,7 @@ slug: voyager1-cross-hp
   
   <blockquote>
     <p>
-      &#8220;Details of a new model have just been published that lead the scientists who created the model to argue that NASA&#8217;s Voyager 1 spacecraft data can be consistent with entering interstellar space in 2012. In describing on a fine scale how magnetic field lines from the sun and magnetic field lines from interstellar space can connect to each other, they conclude Voyager 1 has been detecting the interstellar magnetic field since July 27, 2012. Their model would mean that the interstellar magnetic field direction is the same as that which originates from our sun.
+      “Details of a new model have just been published that lead the scientists who created the model to argue that NASA’s Voyager 1 spacecraft data can be consistent with entering interstellar space in 2012. In describing on a fine scale how magnetic field lines from the sun and magnetic field lines from interstellar space can connect to each other, they conclude Voyager 1 has been detecting the interstellar magnetic field since July 27, 2012. Their model would mean that the interstellar magnetic field direction is the same as that which originates from our sun.
     </p>
     
     <p>
@@ -83,7 +83,7 @@ slug: voyager1-cross-hp
     </p>
     
     <p>
-      The Voyager 1 spacecraft is exploring a region no spacecraft has ever been to before. We will continue to look for any further developments over the coming months and years as Voyager explores an uncharted frontier.&#8221;
+      The Voyager 1 spacecraft is exploring a region no spacecraft has ever been to before. We will continue to look for any further developments over the coming months and years as Voyager explores an uncharted frontier.”
     </p>
   </blockquote>
   
@@ -117,7 +117,7 @@ slug: voyager1-cross-hp
     </p>
     
     <p>
-      Experiments + Data —&#8211;(model)–&#8211;> results + uncertainty ==> understand the world!
+      Experiments + Data —–(model)––> results + uncertainty ==> understand the world!
     </p>
     
     <p>

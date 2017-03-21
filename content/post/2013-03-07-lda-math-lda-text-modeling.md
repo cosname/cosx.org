@@ -96,9 +96,9 @@ p(\overrightarrow{\mathbf{z}} |\overrightarrow{\alpha}) & = \prod\_{m=1}^M p(\ov
 
 \begin{align*}
   
-\overrightarrow{\mathbf{w}}&#8217; &= (\overrightarrow{w}\_{(1)}, \cdots, \overrightarrow{w}\_{(K)}) \\
+\overrightarrow{\mathbf{w}}’ &= (\overrightarrow{w}\_{(1)}, \cdots, \overrightarrow{w}\_{(K)}) \\
   
-\overrightarrow{\mathbf{z}}&#8217; &= (\overrightarrow{z}\_{(1)}, \cdots, \overrightarrow{z}\_{(K)})
+\overrightarrow{\mathbf{z}}’ &= (\overrightarrow{z}\_{(1)}, \cdots, \overrightarrow{z}\_{(K)})
   
 \end{align*}
   
@@ -122,7 +122,7 @@ $$Dir( \overrightarrow{\varphi}\_k| \overrightarrow{n}\_k + \overrightarrow{\bet
   
 \label{corpus-word-prob}
   
-p(\overrightarrow{\mathbf{w}} |\overrightarrow{\mathbf{z}},\overrightarrow{\beta}) &= p(\overrightarrow{\mathbf{w}}&#8217; |\overrightarrow{\mathbf{z}}&#8217;,\overrightarrow{\beta}) \notag \\
+p(\overrightarrow{\mathbf{w}} |\overrightarrow{\mathbf{z}},\overrightarrow{\beta}) &= p(\overrightarrow{\mathbf{w}}’ |\overrightarrow{\mathbf{z}}’,\overrightarrow{\beta}) \notag \\
   
 &= \prod\_{k=1}^K p(\overrightarrow{w}\_{(k)} | \overrightarrow{z}_{(k)}, \overrightarrow{\beta}) \notag \\
   
@@ -292,16 +292,16 @@ LDA 对于专业做机器学习的兄弟而言，只能算是一个简单的Topi
 
 这份LDA 科普是基于给组内兄弟做报告的 ppt 整理而成的，说是科普其实也不简单，涉及到的数学还是太多。在工业界也混了几年，经常感觉到工程师对于学术界的玩的模型有很强的学习和尝试的欲望，只是学习成本往往太高。所以我写 LDA 的初衷就是写给工业界的工程师们看的，希望把学术界玩的一些模型用相对通俗的方式介绍给工程师；如果这个科普对于读研究生的一些兄弟姐妹也有所启发，只能说那是一个 side effect :-)。
 
-我个人很喜欢LDA ，它是在文本建模中一个非常优雅的模型，相比于很多其它的贝叶斯模型， LDA 在数学推导上简洁优美。学术界自 2003 年以来也输出了很多基于LDA 的 Topic Model 的变体，要想理解这些更加高级的 Topic Model, 首先需要很好的理解标准的 LDA 模型。在工业界， Topic Model 在 Google、Baidu 等大公司的产品的语义分析中都有着重要的应用；所以Topic Model 对于工程师而言，这是一个很有应用价值、值得学习的模型。我接触 Topic Model 的时间不长，主要是由于2年前和 PLDA 的作者 Wangyi 一起合作的过程中，从他身上学到了很多 Topic Model 方面的知识。关于 LDA 的相关知识，其实可以写的还有很多：如何提高 LDA Gibbs Sampling 的速度、如何优化超参数、如何做大规模并行化、LDA 的应用、LDA 的各种变体&#8230;&#8230; 不过我的主要目标还是科普如何理解标准的LDA 模型。
+我个人很喜欢LDA ，它是在文本建模中一个非常优雅的模型，相比于很多其它的贝叶斯模型， LDA 在数学推导上简洁优美。学术界自 2003 年以来也输出了很多基于LDA 的 Topic Model 的变体，要想理解这些更加高级的 Topic Model, 首先需要很好的理解标准的 LDA 模型。在工业界， Topic Model 在 Google、Baidu 等大公司的产品的语义分析中都有着重要的应用；所以Topic Model 对于工程师而言，这是一个很有应用价值、值得学习的模型。我接触 Topic Model 的时间不长，主要是由于2年前和 PLDA 的作者 Wangyi 一起合作的过程中，从他身上学到了很多 Topic Model 方面的知识。关于 LDA 的相关知识，其实可以写的还有很多：如何提高 LDA Gibbs Sampling 的速度、如何优化超参数、如何做大规模并行化、LDA 的应用、LDA 的各种变体…… 不过我的主要目标还是科普如何理解标准的LDA 模型。
 
 学习一个模型的时候我喜欢追根溯源，常常希望把模型中的每一个数学推导的细节搞明白，把公式的物理意义想清楚，不过数学推导本身并不是我想要的，把数学推导还原为物理过程才是我乐意做的事。最后引用一下物理学家费曼的名言结束 LDA 的数学科普：
 
 <p style="text-align: center">
-  <em><strong>What I cannot create, I do not understand. </strong></em><br /> <em><strong>&#8212; Richard Feynman</strong></em>
+  <em><strong>What I cannot create, I do not understand. </strong></em><br /> <em><strong>— Richard Feynman</strong></em>
 </p>
 
 _**LDA数学八卦**_
 
-_LDA-math 的汇总， &#8220;LDA数学八卦.pdf&#8221; 我整理贴出来了， 希望对大家理解 LDA 有帮助。 文章标题挂上“八卦”两字， 因为八卦意味着形式自由、不拘束、可以天马行空，细节处理上也难免有不严谨的地方；当然我也希望八卦是相对容易理解的。_
+_LDA-math 的汇总， “LDA数学八卦.pdf” 我整理贴出来了， 希望对大家理解 LDA 有帮助。 文章标题挂上“八卦”两字， 因为八卦意味着形式自由、不拘束、可以天马行空，细节处理上也难免有不严谨的地方；当然我也希望八卦是相对容易理解的。_
 
  [LDA数学八卦.pdf 下载](http://vdisk.weibo.com/s/q0sGh/1360334108?utm_source=weibolife)

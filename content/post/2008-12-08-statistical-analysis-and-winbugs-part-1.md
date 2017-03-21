@@ -46,7 +46,7 @@ WinBUGS目前是一款免费的软件，去<http://www.mrc-bsu.cam.ac.uk/bugs/>�
 
 第三步，点击菜单Model -> Specification，弹出一个Specification Tool面板。
 
-第四步，在第二步中的提到的那个窗口中，将model这个关键字高亮起来，点击check model。你会看到WinBUGS的左下角状态栏上显示&#8221;model is syntactically correct.&#8221;
+第四步，在第二步中的提到的那个窗口中，将model这个关键字高亮起来，点击check model。你会看到WinBUGS的左下角状态栏上显示”model is syntactically correct.”
 
 第五步，把定义的data前的关键字list也高亮起来，点Specification Tool面板上的load data
 

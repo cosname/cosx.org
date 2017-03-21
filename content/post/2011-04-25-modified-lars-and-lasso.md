@@ -28,7 +28,7 @@ lasso estimate具有shrinkage和selection两种功能，shrinkage这个不用多
 为了继续进行下一步，我们先给出一个向量的表达式，然后再解释一下它
 
 <p style="text-align: center;">
-  $w_{A}=(1_{A}'(X_{A}&#8217;X_{A})^{-1}1_{A})^{-\frac{1}{2}}(X_{A}&#8217;X_{A})^{-1}1_{A}$.
+  $w_{A}=(1_{A}'(X_{A}’X_{A})^{-1}1_{A})^{-\frac{1}{2}}(X_{A}’X_{A})^{-1}1_{A}$.
 </p>
 
 $X\_{A}w\_{A}$就是LARS算法的在当前回归变量集下的solution path。那么我们可以把$w\_{A}$作为$\beta$的proceed的path。Efron定义了一个向量$\hat{d}$,这个向量的元素是$s\_jw\_j$,其中$s\_j$是入选变量$x\_j$与当前残差的相关系数的符号，也是$\hat{\beta\_j}$的符号。对于没有入选的变量，他们对应在$\hat{d}$中的元素为0。也就是对应着$\mu(r)=X\beta(r)$，我们有

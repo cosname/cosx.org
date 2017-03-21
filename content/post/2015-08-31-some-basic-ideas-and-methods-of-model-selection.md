@@ -104,11 +104,11 @@ y = f(x) + \epsilon, \quad E(\epsilon) = 0, Var(\epsilon) = \sigma_{\epsilon}^2
   
 \]
 
-如果用线性函数$f\_p(x) = x^T\beta$去近似$f(x)$，其中$p$表示特征个数，损失函数取平方损失，最小化$\frac{1}{N}\sum\_i(y\_i &#8211; x\_i^T\beta)^2$，则在训练集$\mathcal{T} = (\mathbf{X}, \mathbf{Y})$下得到参数估计为$\hat{\beta}$，同时记$\beta_{*}$是$f(x)$最佳线性近似的估计参数
+如果用线性函数$f\_p(x) = x^T\beta$去近似$f(x)$，其中$p$表示特征个数，损失函数取平方损失，最小化$\frac{1}{N}\sum\_i(y\_i – x\_i^T\beta)^2$，则在训练集$\mathcal{T} = (\mathbf{X}, \mathbf{Y})$下得到参数估计为$\hat{\beta}$，同时记$\beta_{*}$是$f(x)$最佳线性近似的估计参数
   
 \[
   
-\beta\_{*} = \arg\min\_{\beta}E_X(f(X) &#8211; X^T\beta)^2
+\beta\_{*} = \arg\min\_{\beta}E_X(f(X) – X^T\beta)^2
   
 \]
 
@@ -118,9 +118,9 @@ y = f(x) + \epsilon, \quad E(\epsilon) = 0, Var(\epsilon) = \sigma_{\epsilon}^2
   
 \begin{split}
   
-\text{Err}(x\_0) = & E[(y\_0 &#8211; \hat{f}\_p(x\_0))^2 | X = x_0] \\
+\text{Err}(x\_0) = & E[(y\_0 – \hat{f}\_p(x\_0))^2 | X = x_0] \\
   
-= & \underbrace{\sigma^2\_{\epsilon}}\_{Irreducible Error} + \underbrace{[f(x\_0) &#8211; E\hat{f}\_p(x\_0)]^2}\_{Bias^2} + \underbrace{E[E\hat{f}\_p(x\_0)- \hat{f}\_p(x\_0)]^2}_{Variance} \\
+= & \underbrace{\sigma^2\_{\epsilon}}\_{Irreducible Error} + \underbrace{[f(x\_0) – E\hat{f}\_p(x\_0)]^2}\_{Bias^2} + \underbrace{E[E\hat{f}\_p(x\_0)- \hat{f}\_p(x\_0)]^2}_{Variance} \\
   
 \end{split}
   
@@ -132,9 +132,9 @@ y = f(x) + \epsilon, \quad E(\epsilon) = 0, Var(\epsilon) = \sigma_{\epsilon}^2
   
 \begin{split}
   
-\frac{1}{N}\sum^N\_{i=1}\text{Err}(x\_i) = & \underbrace{\sigma^2\_{\epsilon}}\_{Irreducible Error} + \underbrace{\frac{1}{N}\sum^N\_{i=1}[f(x\_i) &#8211; E\hat{f}(x\_i)]^2}\_{Ave(Bias^2)} + \underbrace{\frac{p}{N}\sigma^2\_{\epsilon}}\_{Variance} \\
+\frac{1}{N}\sum^N\_{i=1}\text{Err}(x\_i) = & \underbrace{\sigma^2\_{\epsilon}}\_{Irreducible Error} + \underbrace{\frac{1}{N}\sum^N\_{i=1}[f(x\_i) – E\hat{f}(x\_i)]^2}\_{Ave(Bias^2)} + \underbrace{\frac{p}{N}\sigma^2\_{\epsilon}}\_{Variance} \\
   
-= & \underbrace{\sigma^2\_{\epsilon}}\_{Irreducible Error} + \underbrace{\frac{1}{N}\sum^N\_{i=1}[f(x\_i) &#8211; x\_i^T\beta\_{\*}]^2}\_{Ave[Model Bias]^2} + \underbrace{\frac{1}{N}\sum^N\_{i=1}[x\_i^T\beta\_{\*} &#8211; Ex\_i^T\hat{\beta}]}\_{Ave[Estimation Bias]^2} + \underbrace{\frac{p}{N}\sigma^2\_{\epsilon}}\_{Variance}
+= & \underbrace{\sigma^2\_{\epsilon}}\_{Irreducible Error} + \underbrace{\frac{1}{N}\sum^N\_{i=1}[f(x\_i) – x\_i^T\beta\_{\*}]^2}\_{Ave[Model Bias]^2} + \underbrace{\frac{1}{N}\sum^N\_{i=1}[x\_i^T\beta\_{\*} – Ex\_i^T\hat{\beta}]}\_{Ave[Estimation Bias]^2} + \underbrace{\frac{p}{N}\sigma^2\_{\epsilon}}\_{Variance}
   
 \end{split}
   
@@ -255,7 +255,7 @@ CV(\hat{f}, \alpha) = \frac{1}{N}\sum^N\_{i=1}L(y\_i, \hat{f}^{-\tau(i)}(x_i, \a
   
 \[
   
-\frac{1}{N}(y\_i &#8211; \hat{f}^{-i}(x\_i))^2 = \frac{1}{N}\sum^N\_{i=1}(\frac{y\_i &#8211; \hat{f}(x)}{1 &#8211; S_{ii}})
+\frac{1}{N}(y\_i – \hat{f}^{-i}(x\_i))^2 = \frac{1}{N}\sum^N\_{i=1}(\frac{y\_i – \hat{f}(x)}{1 – S_{ii}})
   
 \]
 
@@ -263,7 +263,7 @@ CV(\hat{f}, \alpha) = \frac{1}{N}\sum^N\_{i=1}L(y\_i, \hat{f}^{-\tau(i)}(x_i, \a
   
 \[
   
-GCV(\hat{f}) = \frac{1}{N}\sum^N\_{i=1}(\frac{y\_i &#8211; \hat{f}(x)}{1 &#8211; \text{trace}(\mathbf{S})/N})
+GCV(\hat{f}) = \frac{1}{N}\sum^N\_{i=1}(\frac{y\_i – \hat{f}(x)}{1 – \text{trace}(\mathbf{S})/N})
   
 \]
   
@@ -293,7 +293,7 @@ GCV(\hat{f}) = \frac{1}{N}\sum^N\_{i=1}(\frac{y\_i &#8211; \hat{f}(x)}{1 &#8211;
 
 \[
   
-P_{boot} = 1 &#8211; (1 &#8211; \frac{1}{N})^N \overset{N \rightarrow \infty}{\longrightarrow} 1 &#8211; 1/e \sim 0.632
+P_{boot} = 1 – (1 – \frac{1}{N})^N \overset{N \rightarrow \infty}{\longrightarrow} 1 – 1/e \sim 0.632
   
 \]
 
@@ -309,7 +309,7 @@ P_{boot} = 1 &#8211; (1 &#8211; \frac{1}{N})^N \overset{N \rightarrow \infty}{\l
 
 其中$C^{-i}$即不包含$i$观测的bootstrap样本集。你可能想万一有个观测所有bootstrap都出现了怎么办？直接去掉就好了嘛，不过你可以算算B个bootstrap样本都出现的概率有多小。实际而言，B大点便很容易保证观测$i$很难在所有bootstrap样本集中出现了。
 
-下面在思考下，这种估计是对平均预测误差估计是个好估计吗？虽然不会像第一个估计量那样低估平均预测误差，但是这种估计量也很容易高估平均预测误差，主要原因是每个bootstrap样本中仅有差不多63.2%的不同观测用来建模，这样使得$\hat{\text{Err}}^{(1)}\_{boot}(\alpha)$估计量表现得很像2折或3折交叉验证，分割太少导致可能偏差很大，特别是对于样本量不够多的训练集。如果改进，直观想法便是将训练误差$\text{Err}\_{train}$与该估计量$\hat{\text{Err}}^{(1)}\_{boot}(\alpha)$按照某种比例加权$(1 &#8211; w)\text{Err}\_{train} + w\hat{\text{Err}}^{(1)}_{boot}(\alpha)$来纠正这种偏移，具体细节可以看ESL的阐述，实际中由于bootstrap计算量过大，所以用来做模型选择不多，所以此处不再详述。
+下面在思考下，这种估计是对平均预测误差估计是个好估计吗？虽然不会像第一个估计量那样低估平均预测误差，但是这种估计量也很容易高估平均预测误差，主要原因是每个bootstrap样本中仅有差不多63.2%的不同观测用来建模，这样使得$\hat{\text{Err}}^{(1)}\_{boot}(\alpha)$估计量表现得很像2折或3折交叉验证，分割太少导致可能偏差很大，特别是对于样本量不够多的训练集。如果改进，直观想法便是将训练误差$\text{Err}\_{train}$与该估计量$\hat{\text{Err}}^{(1)}\_{boot}(\alpha)$按照某种比例加权$(1 – w)\text{Err}\_{train} + w\hat{\text{Err}}^{(1)}_{boot}(\alpha)$来纠正这种偏移，具体细节可以看ESL的阐述，实际中由于bootstrap计算量过大，所以用来做模型选择不多，所以此处不再详述。
 
 不过在大数据时代，分布式思维逐深入统计学家和计算机学家脑中，由于bootstrap具备良好的可并行性，以及良好的统计性质和估计稳定性，Jordan在2012便提出了基于bootstrap的\[BLB(Bag of Little Bootstraps)\](http://arxiv.org/pdf/1112.5016v2.pdf)，能够给出较稳定的估计量以及估计量的区间估计，这是其他方法不具备的特点。比如能告诉你预测误差大小，同时可以告诉你预测误差的偏误以及方差，那这是不是一件更令人安心的事情呢？在现在这种环境下，与其不停做实验等待结果，不妨考虑下bootstrap这类有可靠性估计的方法的好处。BLB的算法思路很清晰，简单来说：subsampling + bootstrap + average；先无放回抽样，然后bootstrap抽样，获取参数bootstrap估计量，以及其置信区间、偏移、预测误差等估计量，最后将这些估计量平均起来即可。细节可以<a href="http://arxiv.org/pdf/1112.5016v2.pdf" target="_blank">参考其论文</a>，只要有多机可并行环境便可很容易实施该方法。
 
@@ -339,7 +339,7 @@ bootstrap思想是一种非常重要思想，后来著名的random forest便充�
 
 \[
   
-\text{op} \equiv \text{Err}_{in} &#8211; \bar{err}
+\text{op} \equiv \text{Err}_{in} – \bar{err}
   
 \]
 
@@ -347,7 +347,7 @@ bootstrap思想是一种非常重要思想，后来著名的random forest便充�
 
 \[
   
-\text{op} \equiv \frac{1}{N} \sum^N\_{i=1}[E\_{Y^0\_i}(Y^0\_i &#8211; \hat{y}\_i)^2 &#8211; (y\_i &#8211; \hat{y}_i)^2)]
+\text{op} \equiv \frac{1}{N} \sum^N\_{i=1}[E\_{Y^0\_i}(Y^0\_i – \hat{y}\_i)^2 – (y\_i – \hat{y}_i)^2)]
   
 \]
   
@@ -357,9 +357,9 @@ bootstrap思想是一种非常重要思想，后来著名的random forest便充�
   
 \begin{split}
   
-\omega \equiv E\_{\mathbf{y}}(\text{op}) & \equiv \frac{1}{N}\sum^N\_{i=1}[E\_{y\_i}E\_{Y^0\_i}(Y^0\_i &#8211; \hat{y}\_i)^2 &#8211; E\_{y\_i}(y\_i &#8211; \hat{y}\_i)^2] \\
+\omega \equiv E\_{\mathbf{y}}(\text{op}) & \equiv \frac{1}{N}\sum^N\_{i=1}[E\_{y\_i}E\_{Y^0\_i}(Y^0\_i – \hat{y}\_i)^2 – E\_{y\_i}(y\_i – \hat{y}\_i)^2] \\
   
-& = \frac{1}{N}\sum^N\_{i=1}2(E\_{y\_i}(y\_i \hat{y}\_i) &#8211; E\_{y\_i}y\_iE\_{y\_i}\hat{y}_i) \\
+& = \frac{1}{N}\sum^N\_{i=1}2(E\_{y\_i}(y\_i \hat{y}\_i) – E\_{y\_i}y\_iE\_{y\_i}\hat{y}_i) \\
   
 & = \frac{2}{N}\sum^N\_{i=1} \text{Cov}(y\_i, \hat{y}_i)
   
@@ -469,7 +469,7 @@ P(\mathcal{M}\_m | \mathbf{X}) & = \frac{P(\mathcal{M}\_m) \cdot P(\mathbf{X}|\m
 
 \[
   
--\text{BIC} \approx \log(\mathbf{X} | \mathcal{M}\_m) = \log P(\mathbf{X}|\hat{\theta}\_m, \mathcal{M}\_m) &#8211; \frac{d\_m}{2}\cdot \log N + O(1)
+-\text{BIC} \approx \log(\mathbf{X} | \mathcal{M}\_m) = \log P(\mathbf{X}|\hat{\theta}\_m, \mathcal{M}\_m) – \frac{d\_m}{2}\cdot \log N + O(1)
   
 \]
 

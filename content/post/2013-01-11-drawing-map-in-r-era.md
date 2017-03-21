@@ -179,7 +179,7 @@ title(" 中国地图")</pre>
 
 这意思就是说从农大到人大距离6022米，如果您步行，需要4523秒……汗，我下次考虑下步行试试。不过，您说的是农大东校区还是农大西校区啊……
 
-另，ggmap包中不仅仅可以调取Google Map的数据，还可以调取OpenStreetMap (&#8216;osm&#8217;)、Stamen Maps (&#8216;stamen&#8217;)和CloudMade maps (&#8216;cloudmade&#8217;)。亲，这够用了吧。那地图的表现形式也是个性化的，有&#8217;terrain&#8217;（地势图）、&#8217;satellite&#8217;（卫星图）、&#8217;roadmap&#8217;（道路图）和 &#8216;hybrid&#8217;（混合）等。您自个儿选。
+另，ggmap包中不仅仅可以调取Google Map的数据，还可以调取OpenStreetMap (‘osm’)、Stamen Maps (‘stamen’)和CloudMade maps (‘cloudmade’)。亲，这够用了吧。那地图的表现形式也是个性化的，有’terrain’（地势图）、’satellite’（卫星图）、’roadmap’（道路图）和 ‘hybrid’（混合）等。您自个儿选。
 
 其他的不谈了，直接画地图：
 

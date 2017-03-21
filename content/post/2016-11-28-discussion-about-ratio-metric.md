@@ -34,7 +34,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="p1">
-  <span class="s1">园主表面故作淡定的说，打发走了咨询者之后，查了一下来龙去脉，还真是个历史遗留bug&#8230;说起来这个价格指标也不是很复杂，</span><span class="s2">其实就是在一个A/B实验期间，实验组和对照组用户购买的所有商品的平均价格的差异。听起来不就是算个平均数然后减一下嘛，这有什么难算的？在园主看来，有三个重要的问题需要注意，下面一一解释。</span>
+  <span class="s1">园主表面故作淡定的说，打发走了咨询者之后，查了一下来龙去脉，还真是个历史遗留bug…说起来这个价格指标也不是很复杂，</span><span class="s2">其实就是在一个A/B实验期间，实验组和对照组用户购买的所有商品的平均价格的差异。听起来不就是算个平均数然后减一下嘛，这有什么难算的？在园主看来，有三个重要的问题需要注意，下面一一解释。</span>
 </p>
 
 #### <!--more-->问题一：选择偏差（selection bias)。 {.c2}
@@ -128,7 +128,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  对于比率指标，平均效应可以直接计算，而其方差的估计没有显式解，一般通过泰勒展开的到delta method的近似解&#8230;（参见：<span class="c7"><a class="c1" href="http://web.stanford.edu/class/cme308/OldWebsite/notes/TaylorAppDeltaMethod.pdf">TaylorAppDeltaMethod.pdf</a></span> ，第六页第二个公式）。
+  对于比率指标，平均效应可以直接计算，而其方差的估计没有显式解，一般通过泰勒展开的到delta method的近似解…（参见：<span class="c7"><a class="c1" href="http://web.stanford.edu/class/cme308/OldWebsite/notes/TaylorAppDeltaMethod.pdf">TaylorAppDeltaMethod.pdf</a></span> ，第六页第二个公式）。
 </p>
 
 <p class="c2">
@@ -141,7 +141,7 @@ slug: discussion-about-ratio-metric
 
 <ol class="c6 lst-kix_v1i00a8n76zk-0 start" start="1">
   <li class="c4 c2">
-    什么都不做&#8230;（也算是一个基准值吧）。
+    什么都不做…（也算是一个基准值吧）。
   </li>
   <li class="c4 c2">
     平均价格受单一商品极端价格的影响，所以我们应该对单一商品的价格设置上限（下限反正是0），然后加总到用户级别。
