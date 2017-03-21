@@ -217,4 +217,4 @@ y = A + Bx + Cx<sup>2</sup> + Dx<sup>3</sup> , x[i] ≤ x ＜ x[i+1]
 ## 参考文献
 
   1. 维基百科, Francis Robbins Upton, [http://en.wikipedia.org/wiki/Francis\_Robbins\_Upton](http://en.wikipedia.org/wiki/Francis_Robbins_Upton)
-  2. J J O&#8217;Connor and E F Robertson, Francis Robbins Upton, <http://www-history.mcs.st-andrews.ac.uk/Biographies/Upton.html>
+  2. J J O’Connor and E F Robertson, Francis Robbins Upton, <http://www-history.mcs.st-andrews.ac.uk/Biographies/Upton.html>
