@@ -15,11 +15,11 @@ tags:
 slug: how-to-work-with-cos
 ---
 
-“统计之都”（COS）网站是一个协作平台，它是在群体合作的基础上而发展起来的。本文对参加COS网站工作的方式给予以下说明：<!--more-->
+“统计之都”（COS）网站是一个协作平台，它是在群体合作的基础上而发展起来的。本文对参加COS网站工作的方式给予以下说明<!--more-->：
 
 # 申请事宜
 
-统计之都除了论坛之外，一律需要申请注册（我们不提供开放注册）。有意成为COS主站文章作者或COS论坛版主的朋友，请发送您的简历或自我介绍至邮箱**editor@cos.name **；对于主站作者，请在邮件中注明您预期得到的用户名，<span style="color: #ff0000;">并附带您准备在COS主站上发表的首篇文章</span>。稿件被采纳后，请作者在文章发表之前提供一段个人简介，这个信息将显示在文章开头，便于读者更多了解作者并知道在有疑问或其它事宜时如何联系作者。
+统计之都除了论坛之外，一律需要申请注册（我们不提供开放注册）。有意成为COS主站文章作者或COS论坛版主的朋友，请发送您的简历或自我介绍至邮箱**editor@cos.name**；对于主站作者，请在邮件中注明您预期得到的用户名，**并附带您准备在COS主站上发表的首篇文章**。稿件被采纳后，请作者在文章发表之前提供一段个人简介，这个信息将显示在文章开头，便于读者更多了解作者并知道在有疑问或其它事宜时如何联系作者。
 
 ## 特别说明
 
@@ -45,95 +45,41 @@ COS主站主要为群体博客形式，其团队由多位投稿者、作者和�
 
 ## 成为长期撰稿人
 
-对于长期撰稿人，经COS编辑部审核后，我们将为您建立COS主站[个人档案](https://cos.name/wp-admin/profile.php)。您可以通过后台向COS主站投稿，稿件需经过审稿流程，经编辑批准才能发布。本站后台为Wordpress，界面如下（点击看大图）：<figure id="attachment_841" style="width: 300px" class="wp-caption aligncenter">
-
-[<img class="size-medium wp-image-841 " title="COS后台文章编辑器" src="https://cos.name/wp-content/uploads/2008/11/editor-for-authors-300x144.png" alt="COS后台文章编辑器" width="300" height="144" srcset="https://cos.name/wp-content/uploads/2008/11/editor-for-authors-300x144.png 300w, https://cos.name/wp-content/uploads/2008/11/editor-for-authors.png 765w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2008/11/editor-for-authors.png)<figcaption class="wp-caption-text">COS后台文章编辑器</figcaption></figure> 
+对于长期撰稿人，经COS编辑部审核后，我们将为您建立COS主站[个人档案](https://cos.name/wp-admin/profile.php)。您可以通过后台向COS主站投稿，稿件需经过审稿流程，经编辑批准才能发布。本站后台为Wordpress，界面如下：![COS后台文章编辑器](https://cos.name/wp-content/uploads/2008/11/editor-for-authors.png)
 
 ### **写作注意事项：**
 
   1. 链接：作者编写文章时注意设置合理的**永久链接**，本站所有页面的永久链接形式为“域名/年份/月份/**标题英文单词用减号连接**”，写文章时注意编辑、更改这个地址；
   2. 图形：对于**以图形为主题**的文章，正文中的图形一般设置**居中对齐**，图形宽度一般**不超过600像素**，若原图形非常大，那么可以插入其**合适大小的缩略图**；上传图形文件的文件名最好**用有意义的名称**如econometrics-intro.png，而不要采用1.png、2.png之类的文件名；每一幅图形请给出图形的**说明文字和标题**；不推荐在本站发布截图类文章（例如软件教程），原因是此类文章图片数量太多，而HTML页面本身不适合排版，建议作者给出文章摘要之后直接使用PDF文档上传；
-  3. 数学公式：LaTeX数学公式可以放在[**latex**][/**latex**]标签中，如[**latex**]\bar{x}=\frac{1}{n}\sum x_i[/**latex**]会被转化为$\bar{x}=\frac{1}{n}\sum x_i$；
+  3. 数学公式：LaTeX数学公式可以放在[**latex**][/**latex**]标签中，如[**latex**]\bar{x}=\frac{1}{n}\sum x_i[/**latex**]会被转化为`\(\bar{x}=\frac{1}{n}\sum x_i\)`；
   4. 关键词：编辑文章的时候“标签”即该文的关键词，请用**英文逗号**分开各个关键词；
-  5. HTML规范：为了文章的可读性，请在撰写文章时尽量使用整洁规范的HTML标签，例如每个段落都用<p></p>标签，而不用<br/ >强制空行；
-  6. 代码：程序代码放在“预格式化”环境中，即HTML的`<pre></pre>`标签内；很多统计分析输出都支持纯文本格式，因此统计表格可以使用预格式化环境发布，避免直接使用超宽的表格导致混乱的排版；使用预格式化环境之前，请<a href="http://www.functions-online.com/htmlspecialchars.html" target="_blank">先到这里将HTML特殊字符进行编码</a>（把文本粘贴到`$str`的文本框中，然后底下`$charset`选择UTF-8，最后点run按钮，复制生成的结果），在主站后台编辑器中切换到HTML代码视图（见上图），在合适位置粘贴编码过的文本，并在其前后分别加上`<pre>`和`</pre>`标签；主站支持若干程序语言的高亮：R、SQL、JavaScript和HTML/XML，若要使用代码高亮，请为pre标签加上class属性，例如`<pre class="brush: r">`，这里brush后面可以取的值有`r, sql, js, html, xml, plain`，其中`plain`为普通代码（可以是任意语言）；如 <pre class="brush: plain">&lt;pre class="brush: r"&gt;x &lt;- hist(rnorm(30))  # 直方图
-x$mids  # 直方图横坐标中点&lt;/pre&gt;</pre>
-    
-    将生成：
-    
-    <pre class="brush: r">x &lt;- hist(rnorm(30))  # 直方图
-x$mids  # 直方图横坐标中点</pre>
-    
-    这样的代码读者可以通过双击实现全选，然后自行复制。</li> 
-    
-      * 附件：允许的附件类型参见<a title="允许的附件类型" href="http://codex.wordpress.org/User:Lolrus/Using_Attachments#Appendix:_Allowed_attachment_file_types" target="_blank">WordPress附件说明</a>，由于支持gz、zip等压缩文件，因此理论上任意文件都可以通过压缩的方式发布，但由于网站空间有限，如无必要，请各位作者不要上传大量附件（可以将文件上传至专门的文件共享网站或者打包压缩为gzip或zip格式）；</ol> 
-    
-    <!--
+  5. HTML规范：为了文章的可读性，请在撰写文章时尽量使用整洁规范的HTML标签，例如每个段落都用`<p></p>`标签，而不用`<br/ >`强制空行；
+  6. 代码：程序代码放在“预格式化”环境中，即HTML的`<pre></pre>`标签内；很多统计分析输出都支持纯文本格式，因此统计表格可以使用预格式化环境发布，避免直接使用超宽的表格导致混乱的排版；使用预格式化环境之前，请[先到这里将HTML特殊字符进行编码](http://www.functions-online.com/htmlspecialchars.html)（把文本粘贴到`$str`的文本框中，然后底下`$charset`选择UTF-8，最后点run按钮，复制生成的结果），在主站后台编辑器中切换到HTML代码视图（见上图），在合适位置粘贴编码过的文本，并在其前后分别加上`<pre>`和`</pre>`标签；主站支持若干程序语言的高亮：R、SQL、JavaScript和HTML/XML，若要使用代码高亮，请为pre标签加上class属性，例如`<pre class="brush: r">`，这里brush后面可以取的值有`r, sql, js, html, xml, plain`，其中`plain`为普通代码（可以是任意语言）；如
+
+```html
+<pre class="brush: r">
+   x <- hist(rnorm(30))  # 直方图
+   x$mids # 直方图横坐标中点
+</pre>
+```
+将生成：
+```r
+x <- hist(rnorm(30))  # 直方图
+x$mids  # 直方图横坐标中点
+```
+
+这样的代码读者可以通过双击实现全选，然后自行复制。
+
+* 附件：允许的附件类型参见[WordPress附件说明](http://codex.wordpress.org/User:Lolrus/Using_Attachments#Appendix:_Allowed_attachment_file_types "允许的附件类型")，由于支持gz、zip等压缩文件，因此理论上任意文件都可以通过压缩的方式发布，但由于网站空间有限，如无必要，请各位作者不要上传大量附件（可以将文件上传至专门的文件共享网站或者打包压缩为gzip或zip格式）；
 
 
-<h2>作者个人须知</h2>
+
+# COS论坛
+
+COS论坛主要用于会员的讨论与交流，论坛涵盖学科分支广泛，因此我们需要一批对特定学科感兴趣并且有足够业余时间来关心论坛发展的朋友担任版主，协调版面工作。
 
 
-请所有作者注意登录后台修改个人信息：
 
+# 捐赠计划
 
-<ol>
- 	
-
-<li>在“个人说明”一栏中填写个人简介，这个信息将显示在文章开头，便于读者更多了解作者并知道在有疑问或其它事宜时如何联系作者；</li>
-
-
- 	
-
-<li>建议修改昵称为实名，然后将“公开显示名称”也修改为实名；</li>
-
-
-</ol>
-
-
--->
-    
-    # COS论坛
-    
-    COS论坛主要用于会员的讨论与交流，论坛涵盖学科分支广泛，因此我们需要一批对特定学科感兴趣并且有足够业余时间来关心论坛发展的朋友担任版主，协调版面工作。
-  
-    <!--
-
-
-<h1>高校用户计划</h1>
-
-
-“统计之都”对高校统计学的教学工作给予特别关注与支持，因此特设定“高校联系人”的职位，目的在于联合国内高校的统计教学力量，为广大统计学子以及统计应用者提供统计学教育。我们尤其欢迎高校教师在本站开设教学栏目，位置在“统计之都” -- “高校课堂”下，我们会尽全力辅助老师们建立每门课程的网页（包括课程描述、课件、课后作业、课程讨论等均可发布于此）。同时我们也鼓励并提倡在校学生为其他同学奉献自己的力量来维护本校课程页面。本计划视实施情况可能会有所调整。
-
-“统计之都”对高校课堂提供系列无偿支持，包括：
-
-
-<ol>
- 	
-
-<li>课程网页的建设支持：包括创建和维护课程网页，在教师允许的情况下提供课件上传服务；</li>
-
-
- 	
-
-<li>课程公共邮箱的支持（“学校+课程名称”@cos.name）；</li>
-
-
- 	
-
-<li>课程在线讨论的支持：包括主站的留言以及COS论坛的发帖讨论；</li>
-
-
- 	
-
-<li>更有广大COS会员参与课程讨论，辅助答疑以及提升课程质量；</li>
-
-
-</ol>
-
-
--->
-    
-    # 捐赠计划
-    
-    “统计之都”接收社会捐赠，详情参见：[https://cos.name/donate/](https://cos.name/donate/ "为统计之都捐赠")
+“统计之都”接收社会捐赠，详情参见：[https://cos.name/donate/](https://cos.name/donate/ "为统计之都捐赠")
