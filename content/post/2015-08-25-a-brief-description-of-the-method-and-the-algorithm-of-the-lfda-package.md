@@ -34,7 +34,7 @@ install.packages('lfda')
 devtools::install_github('terrytangyuan/lfda')
 ```
 
-局部Fisher判别分析 &#8211; Local Fisher Discriminant Analysis(LFDA)
+局部Fisher判别分析 – Local Fisher Discriminant Analysis(LFDA)
   
 假设我们想要将原数据降维到3个维度，我们可以运行以下代码：
 ```r 
@@ -43,13 +43,13 @@ y <- iris[,5] # 这是一个代表类标识(class labels)的向量
 r <- 3 # 将要降到的维度数
 ```
 
-运行\`lfda\`模型，注意\`metric\`这个参数可以选择&#8217;plain&#8217;, &#8216;weighted&#8217;, 和&#8217;orthonormalized&#8217;来分别代表转换矩阵的类型： 普通，加权，和正交
+运行\`lfda\`模型，注意\`metric\`这个参数可以选择’plain’, ‘weighted’, 和’orthonormalized’来分别代表转换矩阵的类型： 普通，加权，和正交
 ```r 
 model <- lfda(k, y, r, metric = "plain")
 plot(model, y) # 对转换之后的数据进行三维可视化
 predict(model, iris[,-5]) # predict的方法来用之前得到的lfda模型对新数据进行转换
 ```
-核局部Fisher判别分析 &#8211; Kernel Local Fisher Discriminant Analysis(KLFDA)
+核局部Fisher判别分析 – Kernel Local Fisher Discriminant Analysis(KLFDA)
   
 \`klfda\`的主要使用方法和\`lfda\`的使用方法基本一样，只是在使用lfda之前先要用\`kmatrixGauss\`对原数据进行核转换:
 

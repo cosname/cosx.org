@@ -22,11 +22,11 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 交通路线（点击看大图）：
   
-[<img class="aligncenter size-large wp-image-7773" alt="人民大学" src="https://cos.name/wp-content/uploads/2013/04/人民大学-500x371.png" width="500" height="371" srcset="https://cos.name/wp-content/uploads/2013/04/人民大学-500x371.png 500w, https://cos.name/wp-content/uploads/2013/04/人民大学-300x223.png 300w, https://cos.name/wp-content/uploads/2013/04/人民大学-403x300.png 403w, https://cos.name/wp-content/uploads/2013/04/人民大学.png 749w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/04/人民大学.png)
+![人民大学](https://cos.name/wp-content/uploads/2013/04/人民大学.png)
 
 人大校内地图（点击看大图），**注：国学馆离东门和北门都较近；标出的餐厅都可以付现金就餐** ：
   
-[<img class="aligncenter size-large wp-image-7772" alt="map" src="https://cos.name/wp-content/uploads/2013/04/map-500x353.png" width="500" height="353" srcset="https://cos.name/wp-content/uploads/2013/04/map-500x353.png 500w, https://cos.name/wp-content/uploads/2013/04/map-300x212.png 300w, https://cos.name/wp-content/uploads/2013/04/map-424x300.png 424w, https://cos.name/wp-content/uploads/2013/04/map.png 974w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/04/map.png)
+![map](https://cos.name/wp-content/uploads/2013/04/map.png)
 
 ### 三、会议演讲安排
 
@@ -76,7 +76,7 @@ Twitter：@cos_name
 
 ### 二、会议地点
 
-华东师范大学，中山北路校区，科学会堂二楼报告厅。地址：中山北路3663号（地铁3，4号线金沙江路站）。 步行方式：从地铁金沙江路站2号口出来，向左走，到前方的宁夏路路口右转，前行100米过中山北路路口，然后左转，步行200米，即可到达华师大的校门。 开车方式：内环金沙江路出口下来（以逆时针方向为例，顺时针方向下高架后需要在前方金沙江路口调头），靠右行驶两百米，留意路的右边有一个蓝色标牌，上书“进华师大车辆”，右转即可进入校门，一直向前，到先锋路（进校后第一个左转路口）左转，即可看到停车场的标志。科学会堂就在停车场旁边，靠近逸夫楼。 [<img title="ECNU" alt="" src="https://cos.name/wp-content/uploads/2011/09/ECNU_MAP.png" width="574" height="378" />](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
+华东师范大学，中山北路校区，科学会堂二楼报告厅。地址：中山北路3663号（地铁3，4号线金沙江路站）。 步行方式：从地铁金沙江路站2号口出来，向左走，到前方的宁夏路路口右转，前行100米过中山北路路口，然后左转，步行200米，即可到达华师大的校门。 开车方式：内环金沙江路出口下来（以逆时针方向为例，顺时针方向下高架后需要在前方金沙江路口调头），靠右行驶两百米，留意路的右边有一个蓝色标牌，上书“进华师大车辆”，右转即可进入校门，一直向前，到先锋路（进校后第一个左转路口）左转，即可看到停车场的标志。科学会堂就在停车场旁边，靠近逸夫楼。 [![](https://cos.name/wp-content/uploads/2011/09/ECNU_MAP.png "ECNU")](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
 
 ### 三、会议主题
 

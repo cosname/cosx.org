@@ -36,7 +36,7 @@ system.time(y </code></pre>
 
 那么还有没有可能更快呢？答案是肯定的，而且你其实已经多次使用过这种方法了。怎么，不相信？看看下面这张图，你就明白了。
 
-<a href="https://cos.name/wp-content/uploads/2016/01/normal_table.png" rel="attachment wp-att-11878"><img class="aligncenter size-large wp-image-11878" src="https://cos.name/wp-content/uploads/2016/01/normal_table-500x354.png" alt="normal_table" width="500" height="354" srcset="https://cos.name/wp-content/uploads/2016/01/normal_table-500x354.png 500w, https://cos.name/wp-content/uploads/2016/01/normal_table-300x212.png 300w, https://cos.name/wp-content/uploads/2016/01/normal_table.png 669w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+<a href="https://cos.name/wp-content/uploads/2016/01/normal_table.png" rel="attachment wp-att-11878">![normal_table](https://cos.name/wp-content/uploads/2016/01/normal_table.png)</a>
 
 <!--more-->
 
@@ -46,9 +46,9 @@ $$\Phi(x\_0)\approx \frac{x\_0-x\_k}{x\_{k+1}-x\_k}\Phi(x\_{i+1})+\frac{x\_{k+1}
 
 什么？觉得这个方法太简单了？先别急，这里面还有不少学问。之前我们说了，我们需要保证这种方法的误差不超过 $\epsilon=10^{-7}$，因此就需要合理地选择预先计算的点。由于 $\Phi(-x)=1-\Phi(x)$，我们暂且只需要考虑 $x$ 为正的情况。如果让 $x_i = ih,i=0,1,\ldots,N$，那么对函数 $f$ 进行线性插值的误差将不超过（<a href="http://pages.cs.wisc.edu/~amos/412/lecture-notes/lecture09.pdf" target="_blank">来源</a>）
 
-$$E(x)\le \frac{1}{8}\Vert f&#8221;\Vert_{\infty}h^2$$
+$$E(x)\le \frac{1}{8}\Vert f”\Vert_{\infty}h^2$$
 
-其中 $\Vert f&#8221; \Vert\_{\infty}$ 是函数二阶导绝对值的最大值。对于正态分布函数来说，它等于 $\phi(1)\approx 0.242$。于是令 $E(x)=10^{-7}$，我们就可以解出 $h\approx 0.001818$。最后，只要 $x\_N>5.199$，即 $N\ge 2860$ 并另所有 $x>x_N$ 的取值等于1，就可以保证整个实数域上 $\Phi(x)$ 的近似误差都不超过 $10^{-7}$。
+其中 $\Vert f” \Vert\_{\infty}$ 是函数二阶导绝对值的最大值。对于正态分布函数来说，它等于 $\phi(1)\approx 0.242$。于是令 $E(x)=10^{-7}$，我们就可以解出 $h\approx 0.001818$。最后，只要 $x\_N>5.199$，即 $N\ge 2860$ 并另所有 $x>x_N$ 的取值等于1，就可以保证整个实数域上 $\Phi(x)$ 的近似误差都不超过 $10^{-7}$。
 
 这种简单方法的实现我放在了 <a href="https://github.com/yixuan/fastncdf" target="_blank">Github 上</a>，源程序和测试代码也可以在文章最后找到。下面给出它的表现：
 

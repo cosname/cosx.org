@@ -27,7 +27,7 @@ slug: relationship-big-data-statistics
 
 我们可以用什么数据来做这个预测呢？最常用的就是民调数据了，通过有选择性的挑选一些可能选民来问他们的倾向。这好像是个传统统计干的事。<a href="http://blog.cos.name/taoshi/2012/07/26/john-and-david/" target="_blank">早在1962年John Tukey就已经开始做了</a>。
   
-[<img src="https://cos.name/wp-content/uploads/2013/05/4C6ec-500x333.jpg" alt="4C6ec" width="500" height="333" class="aligncenter size-large wp-image-7896" srcset="https://cos.name/wp-content/uploads/2013/05/4C6ec-500x333.jpg 500w, https://cos.name/wp-content/uploads/2013/05/4C6ec-300x199.jpg 300w, https://cos.name/wp-content/uploads/2013/05/4C6ec-450x300.jpg 450w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/05/4C6ec.jpg)
+![4C6ec](https://cos.name/wp-content/uploads/2013/05/4C6ec.jpg)
 
   * **问题2**: 奥巴马和罗姆尼各自赢得了哪些州？
 
@@ -37,13 +37,13 @@ slug: relationship-big-data-statistics
 
 
   
-[<img src="https://cos.name/wp-content/uploads/2013/05/OxBWOGJ-500x250.jpg" alt="OxBWOGJ" width="500" height="250" class="aligncenter size-large wp-image-7895" srcset="https://cos.name/wp-content/uploads/2013/05/OxBWOGJ-500x250.jpg 500w, https://cos.name/wp-content/uploads/2013/05/OxBWOGJ-300x150.jpg 300w, https://cos.name/wp-content/uploads/2013/05/OxBWOGJ.jpg 600w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/05/OxBWOGJ.jpg)
+![OxBWOGJ](https://cos.name/wp-content/uploads/2013/05/OxBWOGJ.jpg)
 
   * **问题3**: 奥巴马和罗姆尼各自赢得了县？
 
 再做更小范围，更详细的抽样调查也许可行，也就是在加上几十到几百的数据量和相应的花费吧，同时为了提高准确性我们或许还需要收集和用到更多的其他辅助数据，比如各地的人口构成，年龄构成。。。但这个问题如果回答的好的话就可以更有效的投放广告到地方市场了。
   
-[<img src="https://cos.name/wp-content/uploads/2013/05/vZH2Tkq-500x382.jpg" alt="vZH2Tkq" width="500" height="382" class="aligncenter size-large wp-image-7894" srcset="https://cos.name/wp-content/uploads/2013/05/vZH2Tkq-500x382.jpg 500w, https://cos.name/wp-content/uploads/2013/05/vZH2Tkq-300x229.jpg 300w, https://cos.name/wp-content/uploads/2013/05/vZH2Tkq-392x300.jpg 392w, https://cos.name/wp-content/uploads/2013/05/vZH2Tkq.jpg 956w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/05/vZH2Tkq.jpg)
+![vZH2Tkq](https://cos.name/wp-content/uploads/2013/05/vZH2Tkq.jpg)
 
 （这个数据可视化很灿，还有更酷的<a href="http://www.princeton.edu/~rvdb/JAVA/election2012/" target="_blank">在这里</a>，by <a href="http://www.princeton.edu/~rvdb/" target="_blank">Robert J. Vanderbei</a>, Professor of <a href="http://orfe.princeton.edu/" target="_blank">Operations Research and Financial Engineering</a> at Princeton。看，不是统计学家做的吧。）
 
@@ -59,7 +59,7 @@ slug: relationship-big-data-statistics
   
     我们这就看到 Google, Baidu等一拥而上，不计成本的计算了，而且所能应用的变量就可能是他们能拿到关于“某人”的所有的线上脚印和线下信息了。
 
-[<img src="https://cos.name/wp-content/uploads/2013/05/t7Kh6hH.png" alt="t7Kh6hH" width="497" height="304" class="aligncenter size-full wp-image-7893" srcset="https://cos.name/wp-content/uploads/2013/05/t7Kh6hH.png 497w, https://cos.name/wp-content/uploads/2013/05/t7Kh6hH-300x183.png 300w, https://cos.name/wp-content/uploads/2013/05/t7Kh6hH-490x300.png 490w" sizes="(max-width: 497px) 100vw, 497px" />](https://cos.name/wp-content/uploads/2013/05/t7Kh6hH.png)
+![t7Kh6hH](https://cos.name/wp-content/uploads/2013/05/t7Kh6hH.png)
   
 问题问了一圈，这些听起来都很是十足的统计分析啊。本应该是统计分析人士应该是施展才华的时代，那为何还会有要被时代淘汰的论调呢？记得Leo Brieman 在<a href="https://cos.name/2012/02/what-is-the-stat-dept-25-years-from-now/" target="_blank">1994年Berkeley 统计系毕业典礼上的讲话</a>中提到的：
 

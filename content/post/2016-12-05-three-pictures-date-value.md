@@ -16,7 +16,7 @@ slug: three-pictures-date-value
 
 一张简单的图表，可以决定一次投资的收益，号称最贵图表的，就是下面这张美国房价自1970年以来的走势图，蓝色的线是未剔除通胀，红色的线是剔除通胀，趋势非常明显。这张价值连城的图表，所需要的数据并不高深，相信在次贷之前，有一大批专业研究人员曾经画出并凝视过这张图。
 
-<img class="size-full wp-image-13404 aligncenter" src="https://cos.name/wp-content/uploads/2016/12/EF4E.tmp_.png" alt="ef4e-tmp" width="529" height="398" srcset="https://cos.name/wp-content/uploads/2016/12/EF4E.tmp_.png 529w, https://cos.name/wp-content/uploads/2016/12/EF4E.tmp_-300x226.png 300w, https://cos.name/wp-content/uploads/2016/12/EF4E.tmp_-500x376.png 500w" sizes="(max-width: 529px) 100vw, 529px" />
+![ef4e-tmp](https://cos.name/wp-content/uploads/2016/12/EF4E.tmp_.png)
 
 但价值的差别在是否选择相信，以及动手的时机。如果说200个点子中，有一个是好点子，那么当时配合CDS的做空操作，就是金融从业者一生追求的最好的交易。当然这都是马后炮的总结，单看2007年以前的趋势，到底预示着经济结构的转变，还是有巨大的泡沫？现实世界还在不断刷新我们的认知。在预测这件事上，不同经济学家经常得出相反的结论，而中国现在的智囊，正直面无历史模型可套用的局面。这些探险家实操过程中的数据，是单位价值最高的，在面对复杂的社会进程时，数据之上，人的认知和判断，更决定着国家的兴衰。
 
@@ -24,11 +24,11 @@ slug: three-pictures-date-value
 
 我历经旅游和汽车两次互联网浪潮，其中旅游行业失败的经验，在现在汽车领域尤其珍贵，只有精确到财务数据的运营分析，才能真正保证一个公司商业模式的确立。而这种经验教训都是非常昂贵的，和市面上公关稿件发出来的成功故事，核心差别就在，当我说出你不喜欢的结论时，你相信还是不相信？
 
-<img class="aligncenter size-full wp-image-13419" src="https://cos.name/wp-content/uploads/2016/12/F7FC8OQUDYTXJINLAVH.png" alt="f7fc8oqudytxjinlavh" width="558" height="742" srcset="https://cos.name/wp-content/uploads/2016/12/F7FC8OQUDYTXJINLAVH.png 558w, https://cos.name/wp-content/uploads/2016/12/F7FC8OQUDYTXJINLAVH-226x300.png 226w, https://cos.name/wp-content/uploads/2016/12/F7FC8OQUDYTXJINLAVH-376x500.png 376w" sizes="(max-width: 558px) 100vw, 558px" />
+![f7fc8oqudytxjinlavh](https://cos.name/wp-content/uploads/2016/12/F7FC8OQUDYTXJINLAVH.png)
 
 上图小结了常见的移动互联网商业模式：
 
-1、耐用消费品和长周期消费服务，移动app日活一般可以冲到50万上下，交易转化率0.2% &#8211; 1%，但下单用户获取成本高，订单佣金要超过千元这个商业模式才成立。因此二手车，房地产做大宗O2O都是成立的，其他领域如果是小宗低频的商品，单独做O2O都是不成立的。
+1、耐用消费品和长周期消费服务，移动app日活一般可以冲到50万上下，交易转化率0.2% – 1%，但下单用户获取成本高，订单佣金要超过千元这个商业模式才成立。因此二手车，房地产做大宗O2O都是成立的，其他领域如果是小宗低频的商品，单独做O2O都是不成立的。
 
 2、大型app日活在千万级别的，比较容易走广告流量变现，根据用户价值和商业化程度，单日活的收益在0.13元~0.40元
 
@@ -38,19 +38,19 @@ slug: three-pictures-date-value
 
 相信很多数据从业者也已经深入到各个行业里，可以说营销领域是数据进入最早最深的。保洁和联合利华因为市场数据的滞后时差，可以产生巨额的收入差异，这也是他们数据投资特别高的原因。另外汽车行业，产业纵深很深，如果选取最浓缩的一张图，就是下面这张汽车消费的生命周期
 
-<img class="aligncenter size-full wp-image-13406" src="https://cos.name/wp-content/uploads/2016/12/4E58.tmp_.png" alt="4e58-tmp" width="533" height="528" srcset="https://cos.name/wp-content/uploads/2016/12/4E58.tmp_.png 533w, https://cos.name/wp-content/uploads/2016/12/4E58.tmp_-150x150.png 150w, https://cos.name/wp-content/uploads/2016/12/4E58.tmp_-300x297.png 300w, https://cos.name/wp-content/uploads/2016/12/4E58.tmp_-500x495.png 500w" sizes="(max-width: 533px) 100vw, 533px" />
+![4e58-tmp](https://cos.name/wp-content/uploads/2016/12/4E58.tmp_.png)
 
 从左到右，是车型消费者对当前车辆满意并持续使用的程度，从下到上是价格从低到高。底部1、2象限的趋势很好理解，但价格再往上走，车型开始分化，车辆不只是满足日常的用途，而在中高端消费者心中更加体现个性化的需要。不论在拥挤的1、2象限，还是开阔的3、4象限，近两年都看到了新车型的成功卡位，比如保时捷Macan，凯迪拉克ATS-L，以及吉利博越。随着市场的成熟，也许真正的个性化造车，数字造车，终会实现。
 
 上面三个例子里的分析方法都不复杂，对商业的理解更加重要，也是人类智慧核心发挥作用的地方。现在大数据在扩展了极大的数据源以后，其实数据的价值密度极速下降，我们大部分情况下夸大了数据的作用。电信运营商现在开放到市场上的数据，一天超过1T，但是创造的社会价值很有限，从数据到价值这条路径有时候是走不通的，挖遍撒哈拉的沙漠，也不一定能发现一粒黄金。但是如果挖的深，说不定能挖到水？很多人又会这么安慰自己，而一口水井在沙漠中间，也是没什么用的，除非挖成规模化。这样的例子还真的有，就是自动驾驶。我们积累足够多的数据，做出足够好的模型，真正推广规模化，是很有价值的，但这个道路，是很漫长的。
 
-所以回到10年前，是没有大数据这个说法的，有的是经济统计，生物统计&#8230;&#8230;10年以后，也许不会有人再提大数据，数据只是我们描述事物的一种语言。有了新的语言就能无视事物本身的规律吗？大数据车险花了那么多功夫，可能发现最大的影响因子还是常识里的出险率，用车频率，以及用车场景。但我们仍然需要这种语言，也许数学太抽象，那大数据会更实用。如果我们把学习英语的时间，腾出来一点学习数据，社会会更快地进步吧。未来我们不需要太多的数据专才，而是需要所有的行业人员都掌握合适的数据知识，数据语言。现在的数据工具，在分析结构化数据，文本数据，甚至图像上都已经有了现成可用的模块，把这些工具和思维，传播到各个行业，是最高效的路径。
+所以回到10年前，是没有大数据这个说法的，有的是经济统计，生物统计……10年以后，也许不会有人再提大数据，数据只是我们描述事物的一种语言。有了新的语言就能无视事物本身的规律吗？大数据车险花了那么多功夫，可能发现最大的影响因子还是常识里的出险率，用车频率，以及用车场景。但我们仍然需要这种语言，也许数学太抽象，那大数据会更实用。如果我们把学习英语的时间，腾出来一点学习数据，社会会更快地进步吧。未来我们不需要太多的数据专才，而是需要所有的行业人员都掌握合适的数据知识，数据语言。现在的数据工具，在分析结构化数据，文本数据，甚至图像上都已经有了现成可用的模块，把这些工具和思维，传播到各个行业，是最高效的路径。
 
 有一天你们在各行各业找到了自己的价值，回过头看今天的数据科学，到底什么人可以称为数据科学家？我认为数据科学家是要发现新定理
   
 的，我们大部分人只是翻译他们的成果，在社会中应用而已。数据是一种语言，对比语言的境界，音乐语言是最抽象的，音乐家之间最为尊重，画家其次，文学家垫底，文人打过的笔仗都数不过来啦。反观数据科学家这个词，如果只是归纳一些局部有用的规律，模型，未来肯定要被人抓着骂的。所以我前面的3个例子，只能说是数据中医，绝不敢称科学。
 
-深度学习算科学吗？我觉得还差一点，因为它也是局部使用的工具，CNN, RNN 等网络结构还远没有稳定，虽然现在有很多有效的应用，但网络学习的记忆性，跨模型的共享能力都没有建立，只相当于3个月婴儿的水平吧。最终人工智能的网络，应该会有复杂系统的特性，而对于复杂网络结构的理解，近两年周涛团队才证明了两个基本指标收敛的一致性。<img class="aligncenter size-full wp-image-13407" src="https://cos.name/wp-content/uploads/2016/12/34E1.tmp_.png" alt="34e1-tmp" width="617" height="358" srcset="https://cos.name/wp-content/uploads/2016/12/34E1.tmp_.png 617w, https://cos.name/wp-content/uploads/2016/12/34E1.tmp_-300x174.png 300w, https://cos.name/wp-content/uploads/2016/12/34E1.tmp_-500x290.png 500w" sizes="(max-width: 617px) 100vw, 617px" />
+深度学习算科学吗？我觉得还差一点，因为它也是局部使用的工具，CNN, RNN 等网络结构还远没有稳定，虽然现在有很多有效的应用，但网络学习的记忆性，跨模型的共享能力都没有建立，只相当于3个月婴儿的水平吧。最终人工智能的网络，应该会有复杂系统的特性，而对于复杂网络结构的理解，近两年周涛团队才证明了两个基本指标收敛的一致性。![34e1-tmp](https://cos.name/wp-content/uploads/2016/12/34E1.tmp_.png)
 
 The H-index of a network node and its relation to degree and coreness
 
@@ -68,4 +68,4 @@ The H-index of a network node and its relation to degree and coreness
 
 敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
 
-[<img class="aligncenter size-medium wp-image-13124" src="https://cos.name/wp-content/uploads/2016/08/QR-300x300.png" alt="QR" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2016/08/QR-300x300.png 300w, https://cos.name/wp-content/uploads/2016/08/QR-150x150.png 150w, https://cos.name/wp-content/uploads/2016/08/QR-500x500.png 500w, https://cos.name/wp-content/uploads/2016/08/QR.png 640w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2016/08/QR.png)</section> </section>
+![QR](https://cos.name/wp-content/uploads/2016/08/QR.png)</section> </section>

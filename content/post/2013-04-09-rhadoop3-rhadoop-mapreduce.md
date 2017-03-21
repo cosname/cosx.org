@@ -37,7 +37,7 @@ APPs:
 
 RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce 算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据。1G, 10G, 100G, TB,PB 由于大数据所带来的单机性能问题，可能会一去联复返了。
 
-RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221;，&#8221;RHadoop安装与使用&#8221;，&#8221;R实现MapReduce的算法案 例&#8221;，&#8221;HBase和rhbase的安装与使用&#8221;。对于单独的R语言爱好者，Java爱好者，或者Hadoop爱好者来说，同时具备三种语言知识并不容 易。
+RHadoop实践是一套系列文章，主要包括”Hadoop环境搭建”，”RHadoop安装与使用”，”R实现MapReduce的算法案 例”，”HBase和rhbase的安装与使用”。对于单独的R语言爱好者，Java爱好者，或者Hadoop爱好者来说，同时具备三种语言知识并不容 易。
 
 由于rmr2的对hadoop操作有一些特殊性，代码实现有一定难度。需要深入学习的同学，请多尝试并思考key/value值的设计。
 
@@ -52,7 +52,7 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
     3.R基于Hadoop分步式程序实现
     
 
-每一章节，都会分为&#8221;文字说明部分&#8221;和&#8221;代码部分&#8221;，保持文字说明与代码的连贯性。
+每一章节，都会分为”文字说明部分”和”代码部分”，保持文字说明与代码的连贯性。
 
 注：Hadoop环境及RHadoop的环境，请查看同系列前二篇文章，此文将不再介绍。
 
@@ -60,7 +60,7 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
 
 #### 文字说明部分：
 
-越来越多的互联网应用，都开始使用推荐算法(协同过滤算法)。根据用户活跃度和物品流行度，可以分为&#8221;基于用户的协同过滤算法&#8221;和&#8221;基于物品的协同过滤算法&#8221;。
+越来越多的互联网应用，都开始使用推荐算法(协同过滤算法)。根据用户活跃度和物品流行度，可以分为”基于用户的协同过滤算法”和”基于物品的协同过滤算法”。
 
 基于用户的协同过滤算法，是给用户推荐和他兴趣相似的其他用户喜欢的物品。
   
@@ -74,11 +74,11 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
   
 2. 根据物品的相似度和用户的历史行为给用户生成推荐列表
 
-有关算法的细节请参考：&#8221;Mahout In Action&#8221;和&#8221;推荐系统实践&#8221;两本书。
+有关算法的细节请参考：”Mahout In Action”和”推荐系统实践”两本书。
 
 为开发方便，我们选择一组很小的测试数据集。
 
-测试数据，来自于&#8221;Mahout In Action&#8221; P49
+测试数据，来自于”Mahout In Action” P49
   
 原第8行，3,101,2.5 改为 3,101,2.0
   
@@ -123,7 +123,7 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
 
 ## 2. R本地程序实现
 
-首先，通过R语言实现基于物品的协同过滤算法，为和RHadoop实现进行对比。这里我使用&#8221;Mahout In Action&#8221;书里，第一章第六节介绍的分步式基于物品的协同过滤算法进行实现。Chapter 6: Distributing recommendation computations
+首先，通过R语言实现基于物品的协同过滤算法，为和RHadoop实现进行对比。这里我使用”Mahout In Action”书里，第一章第六节介绍的分步式基于物品的协同过滤算法进行实现。Chapter 6: Distributing recommendation computations
 
 算法的思想：
   
@@ -186,10 +186,10 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
 同现矩阵*评分矩阵=推荐结果
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2013/04/alogrithm_1.jpg"><img class=" wp-image-7622 aligncenter" alt="alogrithm_1" src="https://cos.name/wp-content/uploads/2013/04/alogrithm_1-300x103.jpg" width="500" height="250" /></a>
+  <a href="https://cos.name/wp-content/uploads/2013/04/alogrithm_1.jpg">![alogrithm_1](https://cos.name/wp-content/uploads/2013/04/alogrithm_1-300x103.jpg)</a>
 </p>
 
-图片摘自&#8221;Mahout In Action&#8221;
+图片摘自”Mahout In Action”
 
 推荐给用户ID为3的用户的结果是(103,24.5),(102,18.5),(106,16.5)
 
@@ -382,10 +382,10 @@ R语言实现的MapReduce算法，可以基于R的数据对象实现，不必如
 通过MapReduce实现时，所有操作都要使用Map和Reduce的任务完成，程序实现过程略有变化。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2013/04/aglorithm_2.jpg"><img class=" wp-image-7623 aligncenter" alt="aglorithm_2" src="https://cos.name/wp-content/uploads/2013/04/aglorithm_2-300x257.jpg" width="450" height="357" /></a>
+  <a href="https://cos.name/wp-content/uploads/2013/04/aglorithm_2.jpg">![aglorithm_2](https://cos.name/wp-content/uploads/2013/04/aglorithm_2-300x257.jpg)</a>
 </p>
 
-图片摘自&#8221;Mahout In Action”
+图片摘自”Mahout In Action”
 
 #### **文字说明部分：**
 
@@ -419,7 +419,7 @@ key:物品列表向量
   
 val:同现矩阵的数据框值(item,item,Freq)
   
-矩阵格式，要与&#8221;2. 建立用户对物品的评分矩阵&#8221;的格式一致，把异构的两种数据源，合并为同一种数据格式，为&#8221;3. 合并 同现矩阵 和 评分矩阵&#8221;做数据基础。
+矩阵格式，要与”2. 建立用户对物品的评分矩阵”的格式一致，把异构的两种数据源，合并为同一种数据格式，为”3. 合并 同现矩阵 和 评分矩阵”做数据基础。
 
     
     $key
@@ -480,7 +480,7 @@ key:物品列表
   
 val:用户对物品打分矩阵
   
-矩阵格式，要与&#8221;2) 对物品组合列表进行计数，建立物品的同现矩阵&#8221;的格式一致，把异构的两种数据源，合并为同一种数据格式，为&#8221;3. 合并 同现矩阵 和 评分矩阵&#8221;做数据基础
+矩阵格式，要与”2) 对物品组合列表进行计数，建立物品的同现矩阵”的格式一致，把异构的两种数据源，合并为同一种数据格式，为”3. 合并 同现矩阵 和 评分矩阵”做数据基础
 
     
     $key
@@ -639,11 +639,11 @@ val:推荐结果数据框
 
 **rmr2使用提示：**
 
-1) rmr.options(backend = &#8216;hadoop&#8217;)
+1) rmr.options(backend = ‘hadoop’)
 
 这里backend有两个值，hadoop,local。hadoop是默认值，使用hadoop环境运行程序。local是一个本地测试的设置，已经不建议再使用。我在开发时，试过local设置，运行速度非常快，模拟了hadoop的运行环境。但是，local模式下的代码，不能和hadoop模式下完全兼容，变动也比较大，因此不建议大家使用。
 
-2) equijoin(…,outer=c(&#8216;left&#8217;))
+2) equijoin(…,outer=c(‘left’))
 
 这里outer包括了4个值，c(“”, “left”, “right”, “full”)，非常像数据库中两个表的join操作
 
