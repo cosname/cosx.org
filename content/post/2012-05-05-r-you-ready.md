@@ -27,7 +27,7 @@ slug: r-you-ready
 
 R（R Development Core Team, 2011）语言由新西兰奥克兰大学的 Ross Ihaka 和 Robert Gentleman 两人共同发明，其词法和语法分别源自 Scheme 和 S 语言，R 语言一般认为是 S 语言（John Chambers, Bell Labs, 1972）的一种方言。R 是“GNU S”， 一个自由的、有效的、用于统计计算和绘图的语言和环境，它提供了广泛的统计分析和绘图技术：包括线性和非线性模型、统计检验、时间序列、分类、聚类等方法。我们更倾向于认为 R 是一个环境，在 R 环境里实现了很多经典的、现代的统计技术。<figure id="attachment_5534" style="width: 281px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-5534" alt="" src="https://cos.name/wp-content/uploads/2012/05/Ihaka-Gentleman.jpg" width="281" height="198" />](https://cos.name/wp-content/uploads/2012/05/Ihaka-Gentleman.jpg)<figcaption class="wp-caption-text">图1: 1992 年，Ross Ihaka 和Robert Gentleman 在奥克兰大学成为同事。后来为了方便教授初等统计课程，二人开发了一种语言；而他们名字的首字母都是R，于是R 便成为了这门语言的名称。</figcaption></figure> 
+[![](https://cos.name/wp-content/uploads/2012/05/Ihaka-Gentleman.jpg)](https://cos.name/wp-content/uploads/2012/05/Ihaka-Gentleman.jpg)<figcaption class="wp-caption-text">图1: 1992 年，Ross Ihaka 和Robert Gentleman 在奥克兰大学成为同事。后来为了方便教授初等统计课程，二人开发了一种语言；而他们名字的首字母都是R，于是R 便成为了这门语言的名称。</figcaption></figure> 
 
 作为 R 语言的前身——S 语言的代码几乎不需要进行任何修改即可在R 语言环境下运行，从这个角度讲两种语言几乎等价。S 语言诞生于上个世纪 70 年代的由 John M. Chambers 领导的贝尔实验室统计部，它的诞生过程几乎就是现代统计分析方式的演化历程的写照（<a href="https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt" target="_blank">谢益辉，郑冰, 2008</a>）：
 
@@ -106,7 +106,7 @@ KDnuggets 网站每年都会做一些数据分析、数据挖掘方面的专题�
 
 根据互联网搜索结果计算的TIOBE 编程社区指数（Programming Community Index）（TIOBE, 2011）可能更能代表编程语言的流行度。在 2011 年 12 月份排名中，R 语言依旧是在统计领域中最为流行的语言，位列第 24（Ratings 0.522%），而时常被放在一起比较的SAS 则排名第 31（0.417%）。<figure id="attachment_5537" style="width: 492px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-5537" alt="" src="https://cos.name/wp-content/uploads/2012/05/language-preference.jpg" width="492" height="305" srcset="https://cos.name/wp-content/uploads/2012/05/language-preference.jpg 492w, https://cos.name/wp-content/uploads/2012/05/language-preference-300x185.jpg 300w, https://cos.name/wp-content/uploads/2012/05/language-preference-483x300.jpg 483w" sizes="(max-width: 492px) 100vw, 492px" />](https://cos.name/wp-content/uploads/2012/05/language-preference.jpg)<figcaption class="wp-caption-text">图2: 虽然KDnuggets 网站的调查存在样本有偏的嫌疑，但毕竟代表了某一类人群的偏好。并 且排名前五位的语言在各自的领域确有代表性。数据来源http://www.kdnuggets.com/2011/08/poll-languages-for-data-mining-analytics.html</figcaption></figure> 
+[![](https://cos.name/wp-content/uploads/2012/05/language-preference-483x300.jpg)](https://cos.name/wp-content/uploads/2012/05/language-preference.jpg)<figcaption class="wp-caption-text">图2: 虽然KDnuggets 网站的调查存在样本有偏的嫌疑，但毕竟代表了某一类人群的偏好。并 且排名前五位的语言在各自的领域确有代表性。数据来源http://www.kdnuggets.com/2011/08/poll-languages-for-data-mining-analytics.html</figcaption></figure> 
 
 ## 3. 挑战和未来
 

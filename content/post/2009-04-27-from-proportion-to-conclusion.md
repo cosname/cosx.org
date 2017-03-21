@@ -29,7 +29,7 @@ slug: from-proportion-to-conclusion
 &gt; idx * 0.29166666
 [1]  7 14 21 28</pre><figure id="attachment_1082" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-1082" title="从比例数字还原分式" src="https://cos.name/wp-content/uploads/2009/04/digit-detection.png" alt="从比例数字还原分式" width="480" height="400" srcset="https://cos.name/wp-content/uploads/2009/04/digit-detection.png 480w, https://cos.name/wp-content/uploads/2009/04/digit-detection-300x250.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2009/04/digit-detection.png)<figcaption class="wp-caption-text">从比例数字还原分式</figcaption></figure> 
+[![从比例数字还原分式](https://cos.name/wp-content/uploads/2009/04/digit-detection-300x250.png "从比例数字还原分式")](https://cos.name/wp-content/uploads/2009/04/digit-detection.png)<figcaption class="wp-caption-text">从比例数字还原分式</figcaption></figure> 
 
 我们很容易发现分母（样本量）是24的倍数，因为上图中24的倍数乘以29.167%得到的结果很靠近整数；而具备某种特征的样本数量为7的倍数。根据具体的调查背景，我们可以自己猜测报告方究竟调查了多少人：24人？太少；960人？为什么不是1000人？……
 

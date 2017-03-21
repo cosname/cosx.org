@@ -103,7 +103,7 @@ $LR_{POF}=-2ln[P^N(1-P)^{T-N}]+2ln[(N/T)^N(1-N/T)^{T-N}]$
 本文以交易活跃且具有代表性和国际影响力的上海黄金期货的代号为au0901的黄金期货为例来探讨所选方法的优劣。所用数据为每个交易日的开盘价格连续数据，数据来源于上海期货交易所。考虑到数据的可得性和有效性，au0901的时间跨度定为2008年1月16日至2008年12月31日。在剔除没有交易的交易日后，期铜连续合约的数据个数为252个。为方便处理，本文将期货收益率定义为$r\_t=lnP\_t-lnP\_{t-1}$。其中，$P\_t$为连续期货合约第t日的开盘价格。这里，首先用R软件对样本数据进行基本描述，样本收益率的序列图和收益率的直方图如下：<a href="https://cos.name/?attachment_id=" rel="attachment wp-att-2091"><br /> </a>
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2010/04/yishuao-yield.png"><img class="aligncenter size-full wp-image-2122" src="https://cos.name/wp-content/uploads/2010/04/yishuao-yield.png" alt="" width="675" height="301" srcset="https://cos.name/wp-content/uploads/2010/04/yishuao-yield.png 675w, https://cos.name/wp-content/uploads/2010/04/yishuao-yield-300x133.png 300w, https://cos.name/wp-content/uploads/2010/04/yishuao-yield-500x222.png 500w" sizes="(max-width: 675px) 100vw, 675px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/04/yishuao-yield.png">![](https://cos.name/wp-content/uploads/2010/04/yishuao-yield-500x222.png)</a>
 </p>
 
 <p style="text-align: center">
@@ -199,7 +199,7 @@ $LR_{POF}=-2ln[P^N(1-P)^{T-N}]+2ln[(N/T)^N(1-N/T)^{T-N}]$
 在应用历史模拟法时，本文选取的历史数据模拟长度为25，置信水平为95%。根据2.2中所述方法计算au0901的时变VaR值，将其与实际收益率对比如下:
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2010/04/yishuo-vaR-yield.png"><img class="aligncenter size-full wp-image-2123" src="https://cos.name/wp-content/uploads/2010/04/yishuo-vaR-yield.png" alt="" width="653" height="415" srcset="https://cos.name/wp-content/uploads/2010/04/yishuo-vaR-yield.png 653w, https://cos.name/wp-content/uploads/2010/04/yishuo-vaR-yield-300x190.png 300w, https://cos.name/wp-content/uploads/2010/04/yishuo-vaR-yield-500x317.png 500w" sizes="(max-width: 653px) 100vw, 653px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/04/yishuo-vaR-yield.png">![](https://cos.name/wp-content/uploads/2010/04/yishuo-vaR-yield-500x317.png)</a>
 </p>
 
 <p style="text-align: center">

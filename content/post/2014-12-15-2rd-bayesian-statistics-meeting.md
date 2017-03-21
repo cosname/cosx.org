@@ -11,7 +11,7 @@ tags:
 slug: 2rd-bayesian-statistics-meeting
 ---
 
-[<img class="aligncenter size-full wp-image-10457" src="https://cos.name/wp-content/uploads/2014/12/bayes-forum.png" alt="bayes-forum" width="500" height="150" srcset="https://cos.name/wp-content/uploads/2014/12/bayes-forum.png 500w, https://cos.name/wp-content/uploads/2014/12/bayes-forum-300x90.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/12/bayes-forum.png)
+[![bayes-forum](https://cos.name/wp-content/uploads/2014/12/bayes-forum-300x90.png)](https://cos.name/wp-content/uploads/2014/12/bayes-forum.png)
 
 第二届中国贝叶斯统计学术论坛（天津，2014）将于2014年12月21日（周日）在天津财经大学召开，本次会议由天津财经大学中国经济统计研究中心、贝叶斯之道研究室主办，统计之都协办，会议通知如下：
 
@@ -23,7 +23,7 @@ slug: 2rd-bayesian-statistics-meeting
 
 天津财经大学B座205教室（统计湖畔）
 
-[<img class="aligncenter size-large wp-image-10459" src="https://cos.name/wp-content/uploads/2014/12/tjcd-500x157.png" alt="tjcd" width="500" height="157" srcset="https://cos.name/wp-content/uploads/2014/12/tjcd-500x157.png 500w, https://cos.name/wp-content/uploads/2014/12/tjcd-300x94.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/12/tjcd.png)
+[![tjcd](https://cos.name/wp-content/uploads/2014/12/tjcd-300x94.png)](https://cos.name/wp-content/uploads/2014/12/tjcd.png)
 
 ## 三、论坛内容
 
@@ -40,7 +40,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：**Bayesian forecasting of demographic rates for small areas
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/zhangjunni.png"><img class="aligncenter size-full wp-image-10462" src="https://cos.name/wp-content/uploads/2014/12/zhangjunni.png" alt="zhangjunni" width="140" height="196" /></a>
+  <a href="https://cos.name/wp-content/uploads/2014/12/zhangjunni.png">![zhangjunni](https://cos.name/wp-content/uploads/2014/12/zhangjunni.png)</a>
 </p>
 
 <p style="text-align: center;">
@@ -51,7 +51,7 @@ slug: 2rd-bayesian-statistics-meeting
 
 **报告题目：****农村土地流转综合评估与大数据监测**
 
-[<img class="aligncenter wp-image-10461 size-thumbnail" src="https://cos.name/wp-content/uploads/2014/12/gubin-150x150.png" alt="gubin" width="150" height="150" />](https://cos.name/wp-content/uploads/2014/12/gubin.png)
+[![gubin](https://cos.name/wp-content/uploads/2014/12/gubin-150x150.png)](https://cos.name/wp-content/uploads/2014/12/gubin.png)
 
 <p style="text-align: center;">
   谷彬（国家统计局）
@@ -62,7 +62,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：****R-web : ****大型多人在线数据分析协作平台****(Massively Multi-analyst Online Data Analysis Platform)**
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/linzhenshun.png"><img class="aligncenter wp-image-10489 size-thumbnail" src="https://cos.name/wp-content/uploads/2014/12/linzhenshun-150x150.png" alt="linzhenshun" width="150" height="150" /></a>
+  <a href="https://cos.name/wp-content/uploads/2014/12/linzhenshun.png">![linzhenshun](https://cos.name/wp-content/uploads/2014/12/linzhenshun-150x150.png)</a>
 </p>
 
 <p style="text-align: center;">
@@ -74,7 +74,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：****统计分析的第三范式：大数据与贝叶斯统计思维**
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/bayes-dao.png"><img class="aligncenter wp-image-10460 size-large" src="https://cos.name/wp-content/uploads/2014/12/bayes-dao-500x157.png" alt="bayes-dao" width="500" height="157" srcset="https://cos.name/wp-content/uploads/2014/12/bayes-dao-500x157.png 500w, https://cos.name/wp-content/uploads/2014/12/bayes-dao-300x94.png 300w, https://cos.name/wp-content/uploads/2014/12/bayes-dao.png 635w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2014/12/bayes-dao.png">![bayes-dao](https://cos.name/wp-content/uploads/2014/12/bayes-dao.png)</a>
 </p>
 
 <p style="text-align: center;">
@@ -101,7 +101,7 @@ slug: 2rd-bayesian-statistics-meeting
 
 ## 五、交通和住宿提示
 
-[<img class="aligncenter wp-image-10490 size-large" src="https://cos.name/wp-content/uploads/2014/12/ditu-500x329.png" alt="ditu" width="500" height="329" srcset="https://cos.name/wp-content/uploads/2014/12/ditu-500x329.png 500w, https://cos.name/wp-content/uploads/2014/12/ditu-300x197.png 300w, https://cos.name/wp-content/uploads/2014/12/ditu.png 886w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/12/ditu.png)
+[![ditu](https://cos.name/wp-content/uploads/2014/12/ditu.png)](https://cos.name/wp-content/uploads/2014/12/ditu.png)
 
 **（一）本市学友：**
 

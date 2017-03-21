@@ -15,7 +15,7 @@ tags:
 slug: 1st-data-mining-competetion-for-college-students
 ---
 
-## [<img class="aligncenter size-full wp-image-3232" title="数据挖掘竞赛" src="https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png" alt="" width="375" height="389" srcset="https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png 375w, https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion-289x300.png 289w, https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion-40x40.png 40w" sizes="(max-width: 375px) 100vw, 375px" />](https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png)竞赛背景
+## [![](https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion-40x40.png "数据挖掘竞赛")](https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png)竞赛背景
 
 <a href="http://www.yuanhuaibin.com/?p=727" target="_blank">Amazon</a>的数百万图书，<a href="http://en.wikipedia.org/wiki/Netflix_Prize" target="_blank">Netflix</a>的10万部电影，淘宝的8亿件在线商品，以及数以亿万计用户的资料和行为记录……互联网最近十年的迅猛发展伴随着海量数据的积累。然而，在线用户常常面对过多的选择而显得无所适从。心理学研究证实，这类情境下的用户有时会做出放弃交易的决定，从而造成大量潜在的用户流失。针对这一现象，统计技术的发展能够为在线服务商提供更有效的推荐算法，在帮助用户走出<a href="http://www.columbia.edu/%7Ess957/whenchoice.html" target="_blank">信息过载</a>困境、改善用户体验的同时，还能够挖掘商品<a href="http://en.wikipedia.org/wiki/Long_Tail" target="_blank">长尾</a>、提升企业价值。在今天，用户不再局限于通过搜索引擎来寻找感兴趣的信息，推荐系统无所不在地为我们发现自己的潜在需求。
 

@@ -27,7 +27,7 @@ _本文作者：姜晓东，博士毕业于上海交通大学，目前任教于�
 
 在有些版本的典故中有提到，爱迪生的那个助手名为阿普顿（Francis R. Upton）。在维基百科上也有这个人的词条。维基百科上的照片是这样子的，上面有他的签名。
 
-[<img class="aligncenter size-full wp-image-10723" src="https://cos.name/wp-content/uploads/2015/03/Francis_Upton_from_wiki.jpg" alt="Francis_Upton_from_wiki" width="640" height="908" srcset="https://cos.name/wp-content/uploads/2015/03/Francis_Upton_from_wiki.jpg 640w, https://cos.name/wp-content/uploads/2015/03/Francis_Upton_from_wiki-211x300.jpg 211w, https://cos.name/wp-content/uploads/2015/03/Francis_Upton_from_wiki-352x500.jpg 352w" sizes="(max-width: 640px) 100vw, 640px" />](https://cos.name/wp-content/uploads/2015/03/Francis_Upton_from_wiki.jpg)
+[![Francis_Upton_from_wiki](https://cos.name/wp-content/uploads/2015/03/Francis_Upton_from_wiki-352x500.jpg)](https://cos.name/wp-content/uploads/2015/03/Francis_Upton_from_wiki.jpg)
 
 阿普顿从小就受到良好的教育，从美国的重点高中Phillips Academy毕业后，进入Bowdoin College攻读本科学位。之后进入普林斯顿大学，拿到硕士学位。毕业后，游学欧洲，在柏林度过了自己的academic year（美国的很多大学生在毕业后一年并不直接找工作，而是进行旅游、访学等活动了解社会，之后再决定自己的下一步，这一年也称为gap year），并在当时的物理学大牛Hermann von Helmholtz手下工作，参与了数学角度分析电路动力学的课程。
 
@@ -53,7 +53,7 @@ _“I was once with Mr Upton calculating some tables he had put me on, when Mr E
 
 ## 阿普顿的计算方法
 
-爱迪生公司生产的灯泡，现在在网上仍有仿古版本售卖，eBay上的这张图展示了其中一些型号的碳丝灯：[<img class="aligncenter size-full wp-image-10725" src="https://cos.name/wp-content/uploads/2015/03/s-l1600.jpg" alt="s-l1600" width="800" height="800" srcset="https://cos.name/wp-content/uploads/2015/03/s-l1600.jpg 800w, https://cos.name/wp-content/uploads/2015/03/s-l1600-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/03/s-l1600-300x300.jpg 300w, https://cos.name/wp-content/uploads/2015/03/s-l1600-500x500.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2015/03/s-l1600.jpg)
+爱迪生公司生产的灯泡，现在在网上仍有仿古版本售卖，eBay上的这张图展示了其中一些型号的碳丝灯：[![s-l1600](https://cos.name/wp-content/uploads/2015/03/s-l1600-500x500.jpg)](https://cos.name/wp-content/uploads/2015/03/s-l1600.jpg)
 
 &nbsp;
 
@@ -111,7 +111,7 @@ _“I was once with Mr Upton calculating some tables he had put me on, when Mr E
 &lt;span class="identifier">print&lt;/span>&lt;span class="paren">(&lt;/span>&lt;span class="identifier">pic&lt;/span>&lt;span class="paren">)&lt;/span>
 </code></pre>
 
-[<img class="aligncenter size-full wp-image-10730" src="https://cos.name/wp-content/uploads/2015/03/setup.png" alt="setup" width="648" height="648" srcset="https://cos.name/wp-content/uploads/2015/03/setup.png 648w, https://cos.name/wp-content/uploads/2015/03/setup-150x150.png 150w, https://cos.name/wp-content/uploads/2015/03/setup-300x300.png 300w, https://cos.name/wp-content/uploads/2015/03/setup-500x500.png 500w" sizes="(max-width: 648px) 100vw, 648px" />](https://cos.name/wp-content/uploads/2015/03/setup.png)
+[![setup](https://cos.name/wp-content/uploads/2015/03/setup-500x500.png)](https://cos.name/wp-content/uploads/2015/03/setup.png)
 
 ### 
 
@@ -195,7 +195,7 @@ y = A + Bx + Cx<sup>2</sup> + Dx<sup>3</sup> , x[i] ≤ x ＜ x[i+1]
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-10721" src="https://cos.name/wp-content/uploads/2015/03/tu21.png" alt="tu2" width="648" height="648" srcset="https://cos.name/wp-content/uploads/2015/03/tu21.png 648w, https://cos.name/wp-content/uploads/2015/03/tu21-150x150.png 150w, https://cos.name/wp-content/uploads/2015/03/tu21-300x300.png 300w, https://cos.name/wp-content/uploads/2015/03/tu21-500x500.png 500w" sizes="(max-width: 648px) 100vw, 648px" />](https://cos.name/wp-content/uploads/2015/03/tu21.png)
+[![tu2](https://cos.name/wp-content/uploads/2015/03/tu21-500x500.png)](https://cos.name/wp-content/uploads/2015/03/tu21.png)
 
 可以看到，曲线完美拟合灯泡的轮廓。
 

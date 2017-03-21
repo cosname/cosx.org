@@ -17,7 +17,7 @@ tags:
 slug: summary-of-the-1st-data-mining-competetion
 ---
 
-[<img class="aligncenter size-full wp-image-3719" title="建模答辩-021-fixed" src="https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed.jpg" alt="" width="640" height="426" srcset="https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed.jpg 640w, https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed-300x199.jpg 300w, https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed-500x332.jpg 500w" sizes="(max-width: 640px) 100vw, 640px" />](https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed.jpg)
+[![](https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed-500x332.jpg "建模答辩-021-fixed")](https://cos.name/wp-content/uploads/2011/05/建模答辩-021-fixed.jpg)
 
 <p style="text-align: center;">
   &nbsp;
@@ -458,7 +458,7 @@ slug: summary-of-the-1st-data-mining-competetion
 每天注册的队伍数:
 
 <p style="text-align: center;">
-  <img class="size-full wp-image-3631 aligncenter" title="每日注册队伍数目" src="https://cos.name/wp-content/uploads/2011/05/bar.DM2_.png" alt="" width="600" height="360" srcset="https://cos.name/wp-content/uploads/2011/05/bar.DM2_.png 600w, https://cos.name/wp-content/uploads/2011/05/bar.DM2_-300x180.png 300w, https://cos.name/wp-content/uploads/2011/05/bar.DM2_-500x300.png 500w" sizes="(max-width: 600px) 100vw, 600px" />
+  ![](https://cos.name/wp-content/uploads/2011/05/bar.DM2_-500x300.png "每日注册队伍数目")
 </p>
 
 上图为3月16日~4月15日每天注册的队伍数（注：竞赛于3月19日全面公开注册，在此之前在对中科大学生提前公布了注册网站以测试系统）。
@@ -466,7 +466,7 @@ slug: summary-of-the-1st-data-mining-competetion
 每日有效提交次数：
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png"><img class="size-full wp-image-3629 aligncenter" title="每日有效提交次数" src="https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png" alt="" width="600" height="360" srcset="https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png 600w, https://cos.name/wp-content/uploads/2011/05/bar.DM_1-300x180.png 300w, https://cos.name/wp-content/uploads/2011/05/bar.DM_1-500x300.png 500w" sizes="(max-width: 600px) 100vw, 600px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png">![](https://cos.name/wp-content/uploads/2011/05/bar.DM_1-500x300.png "每日有效提交次数")</a>
 </p>
 
 <p style="text-align: left;">
@@ -474,7 +474,7 @@ slug: summary-of-the-1st-data-mining-competetion
 </p>
 
 <p style="text-align: left;">
-  提交次数频数：<br /> <a href="https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png"><img class="aligncenter" title="提交次数频数图" src="https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png" alt="" width="600" height="360" /></a>
+  提交次数频数：<br /> <a href="https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png">![](https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png "提交次数频数图")</a>
 </p>
 
 上图为提交次数的频数图，从上图可以看出，大部分队伍提交次数很少。提交次数超过10的队伍有217个，超过50的有70个，超过100的有29个。最终获奖的队伍的提交总次数都很高。

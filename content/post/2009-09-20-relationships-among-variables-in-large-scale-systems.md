@@ -23,7 +23,7 @@ slug: relationships-among-variables-in-large-scale-systems
 图模型里面大名鼎鼎的，来自人工智能的贝叶斯网络－－相信很多人都有所耳闻．如下是名为alarm network的一个贝叶斯网络的经典之作，被公认为是贝叶斯网络的实用性的一个证明：
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://www.bnlearn.com/documentation/networks/alarm.png" alt="" width="480" height="480" />
+  ![](http://www.bnlearn.com/documentation/networks/alarm.png)
 </p>
 
 <p style="text-align: left;">
@@ -33,7 +33,7 @@ slug: relationships-among-variables-in-large-scale-systems
 之所以在这里谈到贝叶斯网络，是为接下来的较为简单的模型或者数据分析树立一个远大的理想．现在我们的目标已经明确，那就是，在人类所能理解的范畴内，我们最好是能将系统内各个变量的关系用贝叶斯网络所表示出来，其中的箭头代表因果关系，或者至少也要代表一个先后关系，这是我们作数据分析，总结结论的一个终极目标．但是，所谓理想常常是与现实有所出入，在统计学界亦是如此－－从哲学角度来定义因果的话，那么有一条是因果关系所必须满足的，那就是原因是不可能出现在结果之后的．那么，如果我们想知道两者的因果关系，就需要我们知道一个重要的信息－－时序．而很可惜，这个信息并不是总能得到．而且，因果分析还需要一个更为严格的条件是：如果你需要推演一个系统内变量的因果关系的话，你必须保证这个系统内所有的变量都已经被测量(请参阅computation, cauality, and discovery)．这个还仅仅是一个必要条件．这就是为什么Fisher他老人家终生都反对吸烟导致肺癌的的原因了．下图是关于肺癌的研究的一个很经典的贝叶斯网络：
 
 <p style="text-align: center;">
-  <img class="size-full wp-image-1487 aligncenter" src="https://cos.name/wp-content/uploads/2009/09/smoker_bn.jpg" alt="smoker_bn" width="560" height="420" srcset="https://cos.name/wp-content/uploads/2009/09/smoker_bn.jpg 560w, https://cos.name/wp-content/uploads/2009/09/smoker_bn-300x225.jpg 300w, https://cos.name/wp-content/uploads/2009/09/smoker_bn-500x375.jpg 500w" sizes="(max-width: 560px) 100vw, 560px" />
+  ![smoker_bn](https://cos.name/wp-content/uploads/2009/09/smoker_bn-500x375.jpg)
 </p>
 
 <p style="text-align: center;">

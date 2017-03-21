@@ -24,7 +24,7 @@ slug: interview-of-zhangzhihua
 
 <span style="color: #6c6c6c;"><span style="color: #00006c;"><a style="color: #00006c;" href="http://bcmi.sjtu.edu.cn/~zhzhang/" target="_blank">张志华</a></span>，博士，上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。主要从事人工智能、机器学习与应用统计学领域的教学与研究。迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文。是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委。其公开课《机器学习导论》和《统计机器学习》受到广泛关注。</span>
 
-[<img class="size-full wp-image-11398" src="https://cos.name/wp-content/uploads/2015/09/张志华.jpg" alt="张志华教授和他的学生们" width="960" height="480" srcset="https://cos.name/wp-content/uploads/2015/09/张志华.jpg 960w, https://cos.name/wp-content/uploads/2015/09/张志华-300x150.jpg 300w, https://cos.name/wp-content/uploads/2015/09/张志华-500x250.jpg 500w" sizes="(max-width: 960px) 100vw, 960px" />](https://cos.name/wp-content/uploads/2015/09/张志华.jpg)
+[![张志华教授和他的学生们](https://cos.name/wp-content/uploads/2015/09/张志华-500x250.jpg)](https://cos.name/wp-content/uploads/2015/09/张志华.jpg)
 
 <p style="text-align: center;">
   <span style="color: #6c6c6c;">张志华教授和他的学生们</span>

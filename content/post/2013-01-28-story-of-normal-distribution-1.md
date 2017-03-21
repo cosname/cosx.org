@@ -29,13 +29,13 @@ $$ \displaystyle f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}} $$
 更加的简洁漂亮，两个最重要的数学常量 $\pi$、$e$ 都出现在这公式之中。在我个人的审美之中，它也属于 top-N 的最美丽的数学公式之一，如果有人问我数理统计领域哪个公式最能让人感觉到上帝的存在，那我一定投正态分布的票。因为这个分布戴着神秘的面纱，在自然界中无处不在，让你在纷繁芜杂的数据背后看到隐隐的秩序。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/normal_curve/" rel="attachment wp-att-7062"><img class="aligncenter size-full wp-image-7062" alt="normal_curve" src="https://cos.name/wp-content/uploads/2013/01/normal_curve.png" width="463" height="231" srcset="https://cos.name/wp-content/uploads/2013/01/normal_curve.png 463w, https://cos.name/wp-content/uploads/2013/01/normal_curve-300x149.png 300w" sizes="(max-width: 463px) 100vw, 463px" /></a><strong>正态分布曲线</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/normal_curve/" rel="attachment wp-att-7062">![normal_curve](https://cos.name/wp-content/uploads/2013/01/normal_curve-300x149.png)</a><strong>正态分布曲线</strong>
 </p>
 
 正态分布又通常被称为高斯分布，在科学领域，冠名权那是一个很高的荣誉。2002年以前去过德国的兄弟们还会发现，德国1991年至2001年间发行的的一款10马克的纸币上印着高斯(Carl Friedrich Gauss, 1777-1855)的头像和正态密度曲线，而1977年东德发行的20马克的可流通纪念钢镚上，也印着正态分布曲线和高斯的名字。正态分布被冠名高斯分布，我们也容易认为是高斯发现了正态分布，其实不然，不过高斯对于正态分布的历史地位的确立是起到了决定性的作用。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/10dm_with_gauss_curve/" rel="attachment wp-att-7071"><img class="aligncenter size-full wp-image-7071" alt="10dm_with_gauss_curve" src="https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve.jpg" width="353" height="168" srcset="https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve.jpg 353w, https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve-300x142.jpg 300w" sizes="(max-width: 353px) 100vw, 353px" /></a> <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/10dm_with_gauss_curve_detail/" rel="attachment wp-att-7072"><img class="wp-image-7072 alignnone" alt="10dm_with_gauss_curve_detail" src="https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve_detail.jpg" width="209" height="150" /></a>   <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/20-mark-gauss/" rel="attachment wp-att-7073"><img class="wp-image-7073 alignnone" alt="20-mark-gauss" src="https://cos.name/wp-content/uploads/2013/01/20-mark-gauss.jpg" width="240" height="122" /></a><br /> <strong>德国马克和纪念币上的高斯头像和正态分布曲线</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/10dm_with_gauss_curve/" rel="attachment wp-att-7071">![10dm_with_gauss_curve](https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve-300x142.jpg)</a> <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/10dm_with_gauss_curve_detail/" rel="attachment wp-att-7072">![10dm_with_gauss_curve_detail](https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve_detail.jpg)</a>   <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/20-mark-gauss/" rel="attachment wp-att-7073">![20-mark-gauss](https://cos.name/wp-content/uploads/2013/01/20-mark-gauss.jpg)</a><br /> <strong>德国马克和纪念币上的高斯头像和正态分布曲线</strong>
 </p>
 
 正态曲线虽然看上去很美，却不是一拍脑袋就能想到的。我们在本科学习数理统计的时候，课本一上来介绍正态分布就给出分布密度函数，却从来不说明这个密度函数是通过什么原理推导出来的。所以我一直搞不明白数学家当年是怎么找到这个概率分布曲线的，又是怎么发现随机误差服从这个奇妙的分布的。我们在实践中大量的使用正态分布，却对这个分布的来龙去脉知之甚少，正态分布真是让人感觉既熟悉又陌生。直到我读研究生的时候，我的导师给我介绍了陈希儒院士的《数理统计学简史》这本书，看了之后才了解了正态分布曲线从发现到被人们重视进而广泛应用，也是经过了几百年的历史。
@@ -49,7 +49,7 @@ $$ \displaystyle f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}} $$
 第一个故事和概率论的发展密切相关，主角是棣莫弗(Abraham de Moivre, 1667-1754) 和拉普拉斯 (Pierre-Simon Laplace 1749-1827)。拉普拉斯是个大科学家，被称为法国的牛顿；棣莫弗名气可能不算很大，不过大家应该都应该很熟悉这个名字，因为我们在高中数学学复数的时候都学过棣莫弗公式 $$(\cos\theta + i \sin\theta)^n = \cos(n\theta) + i \sin(n\theta).$$而棣莫弗所写的《机遇论》（The doctrine of chances）是概率论发展历史中很重要的一本书。牛顿对棣莫弗十分欣赏,遇到学生向他请教概率方面的问题时，他就说：“这样的问题应该去找棣莫弗，他对这些问题的研究比我深入得多。”
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/abraham-de-moivre/" rel="attachment wp-att-7074"><img class=" wp-image-7074 alignnone" alt="abraham-de-moivre" src="https://cos.name/wp-content/uploads/2013/01/abraham-de-moivre.jpg" width="171" height="208" srcset="https://cos.name/wp-content/uploads/2013/01/abraham-de-moivre.jpg 285w, https://cos.name/wp-content/uploads/2013/01/abraham-de-moivre-246x300.jpg 246w" sizes="(max-width: 171px) 100vw, 171px" /></a><img class="wp-image-7056 alignnone" alt="laplace" src="https://cos.name/wp-content/uploads/2013/01/laplace.jpg" width="171" /><br /> <strong>棣莫弗和拉普拉斯</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/abraham-de-moivre/" rel="attachment wp-att-7074">![abraham-de-moivre](https://cos.name/wp-content/uploads/2013/01/abraham-de-moivre-246x300.jpg)</a>![laplace](https://cos.name/wp-content/uploads/2013/01/laplace.jpg)<br /> <strong>棣莫弗和拉普拉斯</strong>
 </p>
 
 古典概率论发源于赌博，惠更斯(Christiaan Huygens, 1629-1695)、帕斯卡(Blaise Pascal, 1623-1662)、费马(Pierre de Fermat, 1601-1665)、雅可比·贝努利(Jacob Bernoulli, 1654-1705)都是古典概率的奠基人，他们那会研究的概率问题大都来自赌桌上，最早的概率论问题是赌徒梅累在1654年向帕斯卡提出的如何分赌金的问题。统计学中的总体均值之所以被称为期望 (Expectation), 就是源自惠更斯、帕斯卡这些人研究平均情况下一个赌徒在赌桌上可以期望自己赢得多少钱。
@@ -187,7 +187,7 @@ y\_n = \beta\_0 + \beta\_1x\_{1n} + \cdots + \beta\_px\_{pn} .
 \end{eqnarray}
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/legendre/" rel="attachment wp-att-7058"><img class="aligncenter  wp-image-7058" alt="legendre" src="https://cos.name/wp-content/uploads/2013/01/legendre.jpg" width="187" height="205" srcset="https://cos.name/wp-content/uploads/2013/01/legendre.jpg 312w, https://cos.name/wp-content/uploads/2013/01/legendre-273x300.jpg 273w" sizes="(max-width: 187px) 100vw, 187px" /></a><strong>勒让德</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/legendre/" rel="attachment wp-att-7058">![legendre](https://cos.name/wp-content/uploads/2013/01/legendre-273x300.jpg)</a><strong>勒让德</strong>
 </p>
 
 勒让德在论文中对最小二乘法的优良性做了几点说明：
@@ -225,7 +225,7 @@ $$ L(\theta) = \sum\_{i=1}^n e\_i^2 = \sum\_{i=1}^n (x\_i &#8211; \theta)^2 $$
 许多天文学家和数学家开始了寻找误差分布曲线的尝试。 天文学家辛普森(Thomas Simpson, 1710-1761) 先走出了有意义的一步。设真值为 $\theta$, $x\_1, \cdots, x\_n$ 为n次测量值, 每次测量的误差为$ e\_i = x\_i &#8211; \theta $，若用算术平均 $\overline{x} = \frac{\sum\_{i=1}^n x\_i}{n} $去估计$\theta$, 其误差为 $\overline{e} = \frac{\sum\_{i=1}^n e\_i}{n} $。 辛普森证明了, 对于如下的一个概率分布，
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/simpson-error-curve/" rel="attachment wp-att-7068"><img class="aligncenter  wp-image-7068" alt="simpson-error-curve" src="https://cos.name/wp-content/uploads/2013/01/simpson-error-curve.jpg" width="358" height="194" srcset="https://cos.name/wp-content/uploads/2013/01/simpson-error-curve.jpg 559w, https://cos.name/wp-content/uploads/2013/01/simpson-error-curve-300x163.jpg 300w, https://cos.name/wp-content/uploads/2013/01/simpson-error-curve-500x271.jpg 500w" sizes="(max-width: 358px) 100vw, 358px" /></a><strong>辛普森的误差分布曲线</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/simpson-error-curve/" rel="attachment wp-att-7068">![simpson-error-curve](https://cos.name/wp-content/uploads/2013/01/simpson-error-curve-500x271.jpg)</a><strong>辛普森的误差分布曲线</strong>
 </p>
 
 有如下结论
@@ -251,7 +251,7 @@ f(x) = \frac{m}{2} e^{-m|x|} .
 这个概率密度函数现在被称为拉普拉斯分布。
 
 <p style="text-align: center">
-  <a style="text-align: center" href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/laplace-error-curve/" rel="attachment wp-att-7057"><img class="aligncenter  wp-image-7057" alt="laplace-error-curve" src="https://cos.name/wp-content/uploads/2013/01/laplace-error-curve.jpg" width="448" height="262" srcset="https://cos.name/wp-content/uploads/2013/01/laplace-error-curve.jpg 560w, https://cos.name/wp-content/uploads/2013/01/laplace-error-curve-300x175.jpg 300w, https://cos.name/wp-content/uploads/2013/01/laplace-error-curve-500x291.jpg 500w" sizes="(max-width: 448px) 100vw, 448px" /></a>
+  <a style="text-align: center" href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/laplace-error-curve/" rel="attachment wp-att-7057">![laplace-error-curve](https://cos.name/wp-content/uploads/2013/01/laplace-error-curve-500x291.jpg)</a>
 </p>
 
 <p style="text-align: center">

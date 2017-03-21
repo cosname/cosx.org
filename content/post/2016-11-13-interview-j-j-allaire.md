@@ -18,7 +18,7 @@ slug: interview-j-j-allaire
 
 &nbsp;<figure id="attachment_13297" style="width: 158px" class="wp-caption aligncenter">
 
-<img class="size-full wp-image-13297" src="https://cos.name/wp-content/uploads/2016/11/图片-1.png" alt="J.J. Allaire" width="158" height="158" srcset="https://cos.name/wp-content/uploads/2016/11/图片-1.png 158w, https://cos.name/wp-content/uploads/2016/11/图片-1-150x150.png 150w" sizes="(max-width: 158px) 100vw, 158px" /><figcaption class="wp-caption-text">J.J. Allaire</figcaption></figure> 
+![J.J. Allaire](https://cos.name/wp-content/uploads/2016/11/图片-1-150x150.png)<figcaption class="wp-caption-text">J.J. Allaire</figcaption></figure> 
 
 <!--more-->
 

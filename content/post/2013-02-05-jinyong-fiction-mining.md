@@ -33,7 +33,7 @@ slug: jinyong-fiction-mining
 
 这些怎么看起来这么不靠谱&#8230;算了，还是自己动手丰衣足食吧。眼看太阳就要下山了，小编赶紧打开电脑。噼里啪啦一阵键盘声响起，金庸大侠的十四本小说就乖乖的躺在那里了。稍待片刻，等我做好了分析，嘿嘿，晚上就不怕师傅拷问了。都说群众的智慧是无穷的，听说[一博彩公司预测大选什么的比那些专门的学者们还要准](http://www.npr.org/2012/11/29/166177281/y)&#8230;我还是先看看那些大侠们都用什么吧！都说剑品即人品，那我们就来看看这些武器的PR值吧（此处纯属开玩笑 :P，PageRank还是一个比较好用的计算网络权重的指标）。<figure id="attachment_6696" style="width: 665px" class="wp-caption aligncenter">
 
-[<img class=" wp-image-6696 " title="金庸的武侠世界" alt="金庸的武侠世界" src="https://cos.name/wp-content/uploads/2012/11/the_world.png" width="665" height="595" srcset="https://cos.name/wp-content/uploads/2012/11/the_world.png 665w, https://cos.name/wp-content/uploads/2012/11/the_world-300x268.png 300w, https://cos.name/wp-content/uploads/2012/11/the_world-500x447.png 500w, https://cos.name/wp-content/uploads/2012/11/the_world-335x300.png 335w" sizes="(max-width: 665px) 100vw, 665px" />](https://cos.name/wp-content/uploads/2012/11/the_world.png)<figcaption class="wp-caption-text">金庸的武侠世界</figcaption></figure> 
+[![金庸的武侠世界](https://cos.name/wp-content/uploads/2012/11/the_world-335x300.png "金庸的武侠世界")](https://cos.name/wp-content/uploads/2012/11/the_world.png)<figcaption class="wp-caption-text">金庸的武侠世界</figcaption></figure> 
 
 然后看看排名，果然还是学剑最好哇！
 
@@ -59,15 +59,15 @@ slug: jinyong-fiction-mining
 
 嘻嘻，搞定了晚上梦会师傅的事情，就可以开始玩玩其他的了。顺便，好奇的心情发作&#8230;有没有发现，其实这朵花，真的是开了好多瓣呢？一瓣，怕就是一本书吧！<figure id="attachment_6697" style="width: 723px" class="wp-caption aligncenter">
 
-[<img class=" wp-image-6697 " title="金庸一枝花" alt="金庸一枝花" src="https://cos.name/wp-content/uploads/2012/11/jinyong_flower.png" width="723" height="696" srcset="https://cos.name/wp-content/uploads/2012/11/jinyong_flower.png 723w, https://cos.name/wp-content/uploads/2012/11/jinyong_flower-300x288.png 300w, https://cos.name/wp-content/uploads/2012/11/jinyong_flower-500x481.png 500w, https://cos.name/wp-content/uploads/2012/11/jinyong_flower-311x300.png 311w" sizes="(max-width: 723px) 100vw, 723px" />](https://cos.name/wp-content/uploads/2012/11/jinyong_flower.png)<figcaption class="wp-caption-text">金庸：一枝花</figcaption></figure> 
+[![金庸一枝花](https://cos.name/wp-content/uploads/2012/11/jinyong_flower-311x300.png "金庸一枝花")](https://cos.name/wp-content/uploads/2012/11/jinyong_flower.png)<figcaption class="wp-caption-text">金庸：一枝花</figcaption></figure> 
 
 好吧，继续过过瘾&#8230;既然都这样了，就开始八卦一下这些人物的关系吧！<figure id="attachment_6700" style="width: 690px" class="wp-caption aligncenter">
 
-[<img class=" wp-image-6700 " title="金庸人物关系网" alt="金庸人物关系网" src="https://cos.name/wp-content/uploads/2012/11/characters_main.png" width="690" height="755" srcset="https://cos.name/wp-content/uploads/2012/11/characters_main.png 690w, https://cos.name/wp-content/uploads/2012/11/characters_main-274x300.png 274w, https://cos.name/wp-content/uploads/2012/11/characters_main-456x500.png 456w" sizes="(max-width: 690px) 100vw, 690px" />](https://cos.name/wp-content/uploads/2012/11/characters_main.png)<figcaption class="wp-caption-text">金庸人物关系网</figcaption></figure> 
+[![金庸人物关系网](https://cos.name/wp-content/uploads/2012/11/characters_main-456x500.png "金庸人物关系网")](https://cos.name/wp-content/uploads/2012/11/characters_main.png)<figcaption class="wp-caption-text">金庸人物关系网</figcaption></figure> 
 
 等等，什么，射雕三部曲居然不在一块儿！这到底是什么个情况！！！<figure id="attachment_6702" style="width: 714px" class="wp-caption aligncenter">
 
-[<img class=" wp-image-6702 " title="射雕三部曲关系网" alt="射雕三部曲关系网" src="https://cos.name/wp-content/uploads/2012/11/fiction_three_small.png" width="714" height="551" srcset="https://cos.name/wp-content/uploads/2012/11/fiction_three_small.png 714w, https://cos.name/wp-content/uploads/2012/11/fiction_three_small-300x231.png 300w, https://cos.name/wp-content/uploads/2012/11/fiction_three_small-500x385.png 500w, https://cos.name/wp-content/uploads/2012/11/fiction_three_small-388x300.png 388w" sizes="(max-width: 714px) 100vw, 714px" />](https://cos.name/wp-content/uploads/2012/11/fiction_three_small.png)<figcaption class="wp-caption-text">射雕三部曲关系网</figcaption></figure> 
+[![射雕三部曲关系网](https://cos.name/wp-content/uploads/2012/11/fiction_three_small-388x300.png "射雕三部曲关系网")](https://cos.name/wp-content/uploads/2012/11/fiction_three_small.png)<figcaption class="wp-caption-text">射雕三部曲关系网</figcaption></figure> 
 
 哎，我的童年彻底毁掉了。什么黄衫姑娘啊，什么郭襄祖师爷啊，原来《倚天屠龙记》跟《神雕侠侣》和《射雕英雄传》根本没那么多血脉相亲&#8230;呜呜。
 

@@ -35,7 +35,7 @@ slug: discussion-of-sparse-coding-in-deep-learning
 
 深度学习（DL），或说深度神经网络（DNN）， 作为传统机器学习中神经网络（NN）、感知机（perceptron）模型的扩展延伸，正掀起铺天盖地的热潮。DNN火箭般的研究速度，在短短数年内带来了能“读懂”照片内容的图像识别系统，能和人对话到毫无PS痕迹的语音助手，能击败围棋世界冠军、引发滔滔议论的AlphaGo…… DNN在众多应用领域的成功无可置疑。然而，在众多（负责任的和不负责任的）媒体宣传推波助澜下，一部分人过于乐观，觉得攻克智能奇点堡垒近在眼前；另一部分则惶惶不可终日，觉得天网统治人类行将实现。作者君对此的态度如下图所示：
 
-[<img class="aligncenter size-full wp-image-12663" src="https://cos.name/wp-content/uploads/2016/06/1.png" alt="1" width="215" height="150" />](https://cos.name/wp-content/uploads/2016/06/1.png)
+[![1](https://cos.name/wp-content/uploads/2016/06/1.png)](https://cos.name/wp-content/uploads/2016/06/1.png)
 
   * 小品里，黑土老大爷对头脑发热的白云大妈说过：“什么名人，不就是个人名？”
   * 对于DNN，作者君也想说：“什么怪力乱神，不就是个计算模型？”
@@ -64,11 +64,11 @@ $$Y^{(k+1)}=N(L\_1(X)+L\_2(Y^{(k)})$$
 
 $Y^{(k)}$是k-iteration的输出，$L\_1$、$L\_2$、$N$是三个变换算子。这一迭代算法可以等价表示成下图中带反馈系统的形式（目标是求解系统不动点）：
 
-[<img class="aligncenter size-full wp-image-12664" src="https://cos.name/wp-content/uploads/2016/06/2.png" alt="2" width="492" height="179" srcset="https://cos.name/wp-content/uploads/2016/06/2.png 492w, https://cos.name/wp-content/uploads/2016/06/2-300x109.png 300w" sizes="(max-width: 492px) 100vw, 492px" />](https://cos.name/wp-content/uploads/2016/06/2.png)
+[![2](https://cos.name/wp-content/uploads/2016/06/2-300x109.png)](https://cos.name/wp-content/uploads/2016/06/2.png)
 
 对上图反馈循环形式，我们接着做前向展开（unfolding），获得一个有无限个前向传播单元的级联结构；然后再将这个结构截断（truncate），获得一个固定长度的前向结构：
 
-[<img class="aligncenter size-full wp-image-12665" src="https://cos.name/wp-content/uploads/2016/06/3.png" alt="3" width="908" height="180" srcset="https://cos.name/wp-content/uploads/2016/06/3.png 908w, https://cos.name/wp-content/uploads/2016/06/3-300x59.png 300w, https://cos.name/wp-content/uploads/2016/06/3-768x152.png 768w, https://cos.name/wp-content/uploads/2016/06/3-500x99.png 500w" sizes="(max-width: 908px) 100vw, 908px" />](https://cos.name/wp-content/uploads/2016/06/3.png)
+[![3](https://cos.name/wp-content/uploads/2016/06/3-500x99.png)](https://cos.name/wp-content/uploads/2016/06/3.png)
 
 上图即是一个“展开&截断”后的前向结构示意图（到$k=2$）。首先，这一结构避免了环形结构/反馈回路的出现，所有信息流都是前向的。其次，读者可以顺着信息前进方向，逐步写出关系式（例如每个N的输入），不难发现这一结构等价于将原有迭代算法做k步近似，获得一个有限固定迭代步数下“不精确”的回归解。更有趣的是，在很多例子中，$L\_1$、$L\_2$是带参数的线性变换，而$N$是不带参数的非线性变换。我们注意到，这和DNN的结构形成了精妙的巧合对应：如果将$L\_1$、$L\_2$看做是DNN中可以训练的“层”（layer），看做DNN中的非线性操作如神经元（neuron）或池化（pooling），那么以上“展开&截断”后的前向结构（到k=2）完全可以看做一个$k+1$层、有一定特殊结构的DNN。
 
@@ -90,7 +90,7 @@ $$Y^{(k+1)}=N(L\_1(X)+L\_2(Y^{(k)})),  L\_1(X)=D^TX,  L\_2(Y^{(k)})=(I-D^TD)Y^
 
 则是著名的软门限算子（soft-thresholding）, 形式如下图左所示。熟悉DNN的读者可能很容易从它的形状联想到DNN中最成功的ReLU（Rectified Linear Unit）神经元，其形式如下图右所示。既然ReLU很牛，那么我们能不能把它请进我们的框架里呢？
 
-[<img class="aligncenter size-full wp-image-12666" src="https://cos.name/wp-content/uploads/2016/06/4.png" alt="4" width="496" height="213" srcset="https://cos.name/wp-content/uploads/2016/06/4.png 496w, https://cos.name/wp-content/uploads/2016/06/4-300x129.png 300w" sizes="(max-width: 496px) 100vw, 496px" />](https://cos.name/wp-content/uploads/2016/06/4.png)
+[![4](https://cos.name/wp-content/uploads/2016/06/4-300x129.png)](https://cos.name/wp-content/uploads/2016/06/4.png)
 
 我们的策略是，加一个对$Y$的非负（non-negativity）约束到原稀疏表示问题中：
 
@@ -100,13 +100,13 @@ $$Y=\arg\min\parallel X-DY\parallel^2 + c\parallel Y \parallel_1,Y\ge0$$
 
 $$L\_1(X) = D^TX &#8211; c, L\_2(Y^{(k)}) = (I-D^TD)Y^{(k)},  N = ReLU$$
 
-[<img class="aligncenter size-full wp-image-12667" src="https://cos.name/wp-content/uploads/2016/06/5.png" alt="5" width="927" height="174" srcset="https://cos.name/wp-content/uploads/2016/06/5.png 927w, https://cos.name/wp-content/uploads/2016/06/5-300x56.png 300w, https://cos.name/wp-content/uploads/2016/06/5-768x144.png 768w, https://cos.name/wp-content/uploads/2016/06/5-500x94.png 500w" sizes="(max-width: 927px) 100vw, 927px" />](https://cos.name/wp-content/uploads/2016/06/5.png)
+[![5](https://cos.name/wp-content/uploads/2016/06/5-500x94.png)](https://cos.name/wp-content/uploads/2016/06/5.png)
 
 一个小问题：为什么可以“硬凑”一个非负约束到原稀疏表示问题中呢？首先“哲学”上，稀疏表达将“部分”线性组合为“整体”，如果这些“部分”还会相互抵消，总觉得不太自然  -– 当然此属怪力乱神，不听也罢。不过生物建模上，其实早将稀疏表达和神经元编码联系了起来：稀疏特征的值对应于神经元的“激发率”（firing rate,  i.e., the average number of spikes per unit time），自然而然需要非负。另外，图像处理和计算机视觉的研究者，很多都熟悉非负稀疏编码（nonnegative sparse coding, NSC）的大名；此前NSC 亦是学习视觉特征的最成功方法之一。如今风水轮流转，DNN大火，经过各种神经元的经验化设计尝试、大浪淘沙，ReLU脱颖而出 。而从前的非负性和稀疏性假设经过改头换面，又于无意识间悄悄潜伏进了ReLU中；这不能不说是个有趣的发现。
 
 再进一步，上面那个对应非负稀疏编码的“展开&截断”前向结构，如果我们想避免那些不“特别典型”的中间连接（事实上，这些“捷径”的设计正在成为DNN的新热点，参加ResNet等工作）和权重共享（被重复展开），一个选择是只保留最开始的一部分计算而删掉后面，即让迭代算法从初始值开始只跑一步近似：$Y = ReLU(D^TX &#8211; c)$：
 
-[<img class="aligncenter size-full wp-image-12668" src="https://cos.name/wp-content/uploads/2016/06/6.png" alt="6" width="346" height="100" srcset="https://cos.name/wp-content/uploads/2016/06/6.png 346w, https://cos.name/wp-content/uploads/2016/06/6-300x87.png 300w" sizes="(max-width: 346px) 100vw, 346px" />](https://cos.name/wp-content/uploads/2016/06/6.png)
+[![6](https://cos.name/wp-content/uploads/2016/06/6-300x87.png)](https://cos.name/wp-content/uploads/2016/06/6.png)
 
 如此便获得了DNN中最典型的构成单元：全连接层 + 偏置 + 神经元ReLU。偏置 来源于原本1范数正则项的加权；在原优化问题中，调整c即调整Y的稀疏度。不难想到，如果将非负稀疏编码换成非负稀疏卷积编码，那么同样可以得到由卷积层 + 偏置 +神经元ReLU组成的单元。这一角度对一般DNN结构的分析提供了很多意味深长的提示。这里限于篇幅，不再展开。
 
@@ -135,7 +135,7 @@ DNN和稀疏编码的关系深刻且本质；同样，它和其余众多传统�
 
 ## 作者简介
 
-[<img class="aligncenter size-full wp-image-12762" src="https://cos.name/wp-content/uploads/2016/06/tutu.jpeg" alt="tutu" width="227" height="258" />](https://cos.name/wp-content/uploads/2016/06/tutu.jpeg)
+[![tutu](https://cos.name/wp-content/uploads/2016/06/tutu.jpeg)](https://cos.name/wp-content/uploads/2016/06/tutu.jpeg)
 
 汪张扬，男，1991年出生；2012年中国科学技术大学电子通信工程本科毕业；2016年伊利诺伊大学香槟分校电子计算机工程博士毕业；2016年加入德州A&M大学计算机科学系任Assistant Professor。更多信息见主页：[www.atlaswang.com](http://www.atlaswang.com)
 

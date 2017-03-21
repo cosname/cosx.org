@@ -16,7 +16,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 除了统计之都主站，会务信息还会通过统计之都微信<span style="color: #808080;">(扫描本页面右侧微信公众平台二维码即可关注)</span>、微博(<a href="http://weibo.com/cosname" target="_blank">@统计之都</a>)来发布，欢迎大家关注获取最新消息。
 
-<img class="aligncenter" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png" alt="" width="532" height="353" />
+![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
 会议的相关情况如下：
 
@@ -26,7 +26,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 ## 二、会议地点
 
-广州市海珠区新港西路135号中山大学南校区网络中心报告厅。[<img class="size-large wp-image-10282 aligncenter" src="https://cos.name/wp-content/uploads/2014/10/中山大学-464x500.jpg" alt="中山大学" width="464" height="500" srcset="https://cos.name/wp-content/uploads/2014/10/中山大学-464x500.jpg 464w, https://cos.name/wp-content/uploads/2014/10/中山大学-278x300.jpg 278w, https://cos.name/wp-content/uploads/2014/10/中山大学.jpg 1000w" sizes="(max-width: 464px) 100vw, 464px" />](https://cos.name/wp-content/uploads/2014/10/中山大学.jpg)
+广州市海珠区新港西路135号中山大学南校区网络中心报告厅。[![中山大学](https://cos.name/wp-content/uploads/2014/10/中山大学.jpg)](https://cos.name/wp-content/uploads/2014/10/中山大学.jpg)
   
 <!--more-->
 

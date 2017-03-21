@@ -14,7 +14,7 @@ tags:
 slug: publishing-promotion-and-collaboration-in-statistics
 ---
 
-[<img class="size-full wp-image-2949" style="margin-left: 10px; margin-right: 10px;" title="统计学论文的发表流程、及统计学家的晋升和合作（内幕）" src="https://cos.name/wp-content/uploads/2011/01/shapeimage_3.png" alt="统计学论文的发表流程、及统计学家的晋升和合作（内幕）" width="120" height="81" align="left" />](https://cos.name/?p=2831)这标题很吸引人，所有统计学相关领域的人可能都关心这几件事，但敬请降低对本文的期望。我不能再多说，否则要剧透了（看过的朋友也请不要剧透）。这段35分钟的视频讲述了统计学论文是如何发表的、统计学家在机构内如何得到晋升（影响晋升的指标），以及统计学家和生物学家如何交流和合作的种种“内幕”。新年伊始，我们也不想用大篇技术文章来“折磨”[统计之都](https://cos.name)的读者们，那么，开始欣赏这部小电影吧：
+[![统计学论文的发表流程、及统计学家的晋升和合作（内幕）](https://cos.name/wp-content/uploads/2011/01/shapeimage_3.png "统计学论文的发表流程、及统计学家的晋升和合作（内幕）")](https://cos.name/?p=2831)这标题很吸引人，所有统计学相关领域的人可能都关心这几件事，但敬请降低对本文的期望。我不能再多说，否则要剧透了（看过的朋友也请不要剧透）。这段35分钟的视频讲述了统计学论文是如何发表的、统计学家在机构内如何得到晋升（影响晋升的指标），以及统计学家和生物学家如何交流和合作的种种“内幕”。新年伊始，我们也不想用大篇技术文章来“折磨”[统计之都](https://cos.name)的读者们，那么，开始欣赏这部小电影吧：
 
 <p style="text-align: center;">
   <embed width="486" height="381" type="video/mp4" src="http://animation.r-forge.r-project.org/video/Getting-Ahead-in-Academia.mp4" />
@@ -33,73 +33,73 @@ slug: publishing-promotion-and-collaboration-in-statistics
 Imagine a circle that contains all of human knowledge:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.001.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.001.jpg)
 </p>
 
 By the time you finish elementary school, you know a little:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.002.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.002.jpg)
 </p>
 
 By the time you finish high school, you know a bit more:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.003.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.003.jpg)
 </p>
 
 With a bachelor&#8217;s degree, you gain a specialty:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.004.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.004.jpg)
 </p>
 
 A master&#8217;s degree deepens that specialty:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.005.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.005.jpg)
 </p>
 
 Reading research papers takes you to the edge of human knowledge:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.006.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.006.jpg)
 </p>
 
 Once you&#8217;re at the boundary, you focus:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.007.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.007.jpg)
 </p>
 
 You push at the boundary for a few years:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.008.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.008.jpg)
 </p>
 
 Until one day, the boundary gives way:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.009.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.009.jpg)
 </p>
 
 And, that dent you&#8217;ve made is called a Ph.D.:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.010.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.010.jpg)
 </p>
 
 Of course, the world looks different to you now:
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.011.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.011.jpg)
 </p>
 
 So, don&#8217;t forget the bigger picture:
 
 <p style="text-align: center;">
-  <img src="http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.012.jpg" alt="" width="440" />
+  ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.012.jpg)
 </p>
 
 Keep pushing.

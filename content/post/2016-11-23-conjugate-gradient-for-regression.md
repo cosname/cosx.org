@@ -17,7 +17,7 @@ tags:
 slug: conjugate-gradient-for-regression
 ---
 
-<figure id="attachment_13330" style="width: 500px" class="wp-caption aligncenter">[<img class="size-large wp-image-13330" src="https://cos.name/wp-content/uploads/2016/11/CG-500x334.png" alt="共轭梯度示意图（图片来源：维基百科）" width="500" height="334" srcset="https://cos.name/wp-content/uploads/2016/11/CG-500x334.png 500w, https://cos.name/wp-content/uploads/2016/11/CG-300x200.png 300w, https://cos.name/wp-content/uploads/2016/11/CG-768x513.png 768w, https://cos.name/wp-content/uploads/2016/11/CG.png 878w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2016/11/CG.png)<figcaption class="wp-caption-text"><del>轮回眼</del> 共轭梯度示意图（图片来源：[维基百科](https://en.wikipedia.org/wiki/Conjugate_gradient_method)）</figcaption></figure> 
+<figure id="attachment_13330" style="width: 500px" class="wp-caption aligncenter">[![共轭梯度示意图（图片来源：维基百科）](https://cos.name/wp-content/uploads/2016/11/CG.png)](https://cos.name/wp-content/uploads/2016/11/CG.png)<figcaption class="wp-caption-text"><del>轮回眼</del> 共轭梯度示意图（图片来源：[维基百科](https://en.wikipedia.org/wiki/Conjugate_gradient_method)）</figcaption></figure> 
 
 ## 引子
 
@@ -63,7 +63,7 @@ $$x=\sum\_{i=1}^m \alpha\_i p_i.$$
 
 至于为什么应该用共轭梯度而不是梯度，我建议感兴趣的读者看一看文章最后的那篇参考文献，其中对共轭梯度的优势进行了非常详细的阐述。一个直观的理解就是，普通的梯度法往往会有重复移动的方向（如文首图片中的绿线），而共轭梯度保证了每次移动的方向是共轭的（即关于 $A$ 是正交的，如文首图片中的红线），因此不会有重复的劳动。关于 CG 的理论说来那个话就长了，因此本文不在这方面做过多的论述（其实是因为作者太懒），我在这里更想强调的其实是它的计算过程，参见图 1。<figure id="attachment_13350" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="wp-image-13350 size-large" src="https://cos.name/wp-content/uploads/2016/11/algorithm-1-500x404.png" width="500" height="404" srcset="https://cos.name/wp-content/uploads/2016/11/algorithm-1-500x404.png 500w, https://cos.name/wp-content/uploads/2016/11/algorithm-1-300x242.png 300w, https://cos.name/wp-content/uploads/2016/11/algorithm-1.png 757w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2016/11/algorithm-1.png)<figcaption class="wp-caption-text">图1：共轭梯度法算法流程</figcaption></figure> 
+[![](https://cos.name/wp-content/uploads/2016/11/algorithm-1.png)](https://cos.name/wp-content/uploads/2016/11/algorithm-1.png)<figcaption class="wp-caption-text">图1：共轭梯度法算法流程</figcaption></figure> 
 
 ## 神奇在哪里？
 

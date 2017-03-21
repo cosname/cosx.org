@@ -369,7 +369,7 @@ slug: analysis-of-a-smart-phone-application-listed-new-marketing-strategies
 
 行业微博影响力指数模型，主要基于分类下的企业蓝V微博影响力数据，包括原创博文数、转发博文数、点赞数、评论数、转发数等指标，测算综合指数。第一步，对原始数据进行清洗，并将原始数据进行标准化处理，原始数据转换成无量纲指标测评值，保证各指标值都处于同一个数量级别上，可以进行综合测评分析，并将数据结果转化为1-100之间。第二步，运用层次分析法确定权重。层次分析法（Analytic Hierarchy Process，AHP）是美国运筹学家T.L Saaty于20世纪70年代提出的一种实用的多准则决策方法。它是一种将决策者对复杂系统的决策思维过程模型化、数量化的过程。运用这种方法，决策者将复杂问题层次化，即分解为若干层次和若干因素，形成一个多层分析结构模型，并在各因素之间进行简单的比较和计算，就可以得出不同因素重要性程度的权重，为最佳方案的选择提供依据。第三步，运用综合递阶加权方法测算各行业微博影响力指数。即将各指标下分数与权重相乘，再将各个行业微博的所有指标分数求和得到行业微博影响力指数评分，最终获得影响力最强的15个蓝V行业微博。
 
-[<img class="aligncenter size-full wp-image-12080" src="https://cos.name/wp-content/uploads/2016/05/du_1.png" alt="du_1" width="472" height="191" srcset="https://cos.name/wp-content/uploads/2016/05/du_1.png 472w, https://cos.name/wp-content/uploads/2016/05/du_1-300x121.png 300w" sizes="(max-width: 472px) 100vw, 472px" />](https://cos.name/wp-content/uploads/2016/05/du_1.png)
+[![du_1](https://cos.name/wp-content/uploads/2016/05/du_1-300x121.png)](https://cos.name/wp-content/uploads/2016/05/du_1.png)
 
 <p style="text-align: center;">
   图1  行业微博影响力指数模型
@@ -377,7 +377,7 @@ slug: analysis-of-a-smart-phone-application-listed-new-marketing-strategies
 
         SNA社会网络分析模型，基于个人微博用户发帖和回帖数据，识别意见领袖和活跃分子。社会网络分析法是一种社会学研究方法，社会学理论认为社会不是由个人而是由网络构成的，网络中包含结点及结点之间的关系，社会网络分析法通过对于网络中关系的分析探讨网络的结构及属性特征，包括网络中的个体属性及网络整体属性，网络个体属性分析包括出度、入度、点的中间中心度等；网络的整体属性分析包括小世界效应，小团体研究，凝聚子群等。本文通过对入度、中间中心度等指标测算出意见领袖，并通过逻辑回归模型进行验证。
 
-** [<img class="aligncenter size-full wp-image-12081" src="https://cos.name/wp-content/uploads/2016/05/du_2.png" alt="du_2" width="465" height="194" srcset="https://cos.name/wp-content/uploads/2016/05/du_2.png 465w, https://cos.name/wp-content/uploads/2016/05/du_2-300x125.png 300w" sizes="(max-width: 465px) 100vw, 465px" />](https://cos.name/wp-content/uploads/2016/05/du_2.png)**
+** [![du_2](https://cos.name/wp-content/uploads/2016/05/du_2-300x125.png)](https://cos.name/wp-content/uploads/2016/05/du_2.png)**
 
 <p style="text-align: center;">
   图2  SNA社交网络模型分析流程
@@ -387,7 +387,7 @@ slug: analysis-of-a-smart-phone-application-listed-new-marketing-strategies
 
 微博文本分析方法，主要基于微博带小米、华为、酷派、努比亚、联想、vivo、一加、魅族、金立、TCL、OPPO等关键词内容的抓取数据。本文采用的基于支持向量机SVM（Support Vector Machine）机器学习的方法。基于机器学习方法，首先在已有手机行业语料库的基础上，人工标注微博文本倾向性。文本倾向性主要指利用自然语言处理和文本挖掘技术，对带有情感色彩的主观性文本进行分析、处理和抽取的过程。其次，将人工标识过的微博文本作为训练集，提取文本情感特征，通过机器学习的方法构造情感分类器。SVM是一种二类分类模型，其基本模型定义为特征空间上的间隔最大的线性分类器，其学习策略便是间隔最大化，最终可转化为一个凸二次规划问题的求解。本文运用SVM模型对是否想买手机进行分类。
 
-[<img class="aligncenter size-full wp-image-12082" src="https://cos.name/wp-content/uploads/2016/05/du_3.png" alt="du_3" width="632" height="325" srcset="https://cos.name/wp-content/uploads/2016/05/du_3.png 632w, https://cos.name/wp-content/uploads/2016/05/du_3-300x154.png 300w, https://cos.name/wp-content/uploads/2016/05/du_3-500x257.png 500w" sizes="(max-width: 632px) 100vw, 632px" />](https://cos.name/wp-content/uploads/2016/05/du_3.png)
+[![du_3](https://cos.name/wp-content/uploads/2016/05/du_3-500x257.png)](https://cos.name/wp-content/uploads/2016/05/du_3.png)
 
 <p style="text-align: center;">
   图3  微博文本分析模型分析流程
@@ -507,7 +507,7 @@ IR为1，表示A，B关联关系非常不平衡，即购买A的客户很可能�
 
 第三步，计算KULC系数、IR不平衡度等评价指标。
 
-[<img class="aligncenter size-full wp-image-12083" src="https://cos.name/wp-content/uploads/2016/05/du_4.jpg" alt="du_4" width="1218" height="661" srcset="https://cos.name/wp-content/uploads/2016/05/du_4.jpg 1218w, https://cos.name/wp-content/uploads/2016/05/du_4-300x163.jpg 300w, https://cos.name/wp-content/uploads/2016/05/du_4-768x417.jpg 768w, https://cos.name/wp-content/uploads/2016/05/du_4-500x271.jpg 500w" sizes="(max-width: 1218px) 100vw, 1218px" />](https://cos.name/wp-content/uploads/2016/05/du_4.jpg)
+[![du_4](https://cos.name/wp-content/uploads/2016/05/du_4-500x271.jpg)](https://cos.name/wp-content/uploads/2016/05/du_4.jpg)
 
 <p style="text-align: center;">
   图4  品类关联网络关系图
@@ -1702,7 +1702,7 @@ IR为1，表示A，B关联关系非常不平衡，即购买A的客户很可能�
         </p>
         
         <p>
-          <a href="https://cos.name/wp-content/uploads/2016/05/du_5.png"><img class="aligncenter size-full wp-image-12084" src="https://cos.name/wp-content/uploads/2016/05/du_5.png" alt="du_5" width="1086" height="597" srcset="https://cos.name/wp-content/uploads/2016/05/du_5.png 1086w, https://cos.name/wp-content/uploads/2016/05/du_5-300x165.png 300w, https://cos.name/wp-content/uploads/2016/05/du_5-768x422.png 768w, https://cos.name/wp-content/uploads/2016/05/du_5-500x275.png 500w" sizes="(max-width: 1086px) 100vw, 1086px" /></a>
+          <a href="https://cos.name/wp-content/uploads/2016/05/du_5.png">![du_5](https://cos.name/wp-content/uploads/2016/05/du_5-500x275.png)</a>
         </p>
         
         <p style="text-align: center;">
@@ -1778,7 +1778,7 @@ IR为1，表示A，B关联关系非常不平衡，即购买A的客户很可能�
         </p>
         
         <p>
-          <a href="https://cos.name/wp-content/uploads/2016/05/du_6.png"><img class="aligncenter size-full wp-image-12085" src="https://cos.name/wp-content/uploads/2016/05/du_6.png" alt="du_6" width="622" height="229" srcset="https://cos.name/wp-content/uploads/2016/05/du_6.png 622w, https://cos.name/wp-content/uploads/2016/05/du_6-300x110.png 300w, https://cos.name/wp-content/uploads/2016/05/du_6-500x184.png 500w" sizes="(max-width: 622px) 100vw, 622px" /></a>
+          <a href="https://cos.name/wp-content/uploads/2016/05/du_6.png">![du_6](https://cos.name/wp-content/uploads/2016/05/du_6-500x184.png)</a>
         </p>
         
         <p style="text-align: center;">
