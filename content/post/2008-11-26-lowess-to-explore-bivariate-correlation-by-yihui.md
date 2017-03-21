@@ -18,8 +18,8 @@ tags:
   - 重抽样
 slug: lowess-to-explore-bivariate-correlation-by-yihui
 ---
-![局部加权回归散点平滑法](https://cos.name/wp-content/uploads/2008/11/counts.png "局部加权回归散点平滑法")
 
+![局部加权回归散点平滑法](https://cos.name/wp-content/uploads/2008/11/counts.png "局部加权回归散点平滑法")
 
 二维变量之间的关系研究是很多统计方法的基础，例如回归分析通常会从一元回归讲起，然后再扩展到多元情况。局部加权回归散点平滑法（locally weighted scatterplot smoothing，LOWESS或LOESS）是查看二维变量之间关系的一种有力工具。
 
@@ -74,7 +74,6 @@ dev.off()
 生成图形如下：
 
 ![物种数目与海拔高度的关系：Bootstrap结合LOWESS查看](https://cos.name/wp-content/uploads/2008/11/counts-bootstrap.png "物种数目与海拔高度的关系：Bootstrap结合LOWESS查看")
-
 
 可以看出，经过400次重抽样并计算LOWESS曲线，刚才在第一幅图中观察到的趋势大致都还存在（因为默认取数据比例为2/3，因此拟合曲线都比较光滑），只是700米海拔附近物种数目减小的趋势并不明显了，这是因为这个海拔附近的观测样本量较少，在重抽样的时候不容易被抽到，因此在图中代表性不足，最后得到的拟合曲线分布稀疏。
 
