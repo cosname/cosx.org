@@ -150,34 +150,41 @@ scp authorized_keys dn1.qa.com:/home/hadoop/.ssh/
 ```    
 
 dn1.qa.com:
+```
 su hadoop
 ssh-keygen -t rsa
 cd /home/hadoop/.ssh/
 cat id_rsa.pub >> authorized_keys
 scp authorized_keys dn2.qa.com:/home/hadoop/.ssh/
-    
+```
+
 dn2.qa.com:
+```
 su hadoop
 ssh-keygen -t rsa
 cd /home/hadoop/.ssh/
 cat id_rsa.pub >> authorized_keys
 scp authorized_keys dn3.qa.com:/home/hadoop/.ssh/
+```
 
 dn3.qa.com:
+```
 su hadoop
 ssh-keygen -t rsa
 cd /home/hadoop/.ssh/
 cat id_rsa.pub >> authorized_keys
 scp authorized_keys nn.qa.com:/home/hadoop/.ssh/
-    
+```
+
 nn.qa.com:
+```
 su hadoop
 cd /home/hadoop/.ssh/
 scp authorized_keys dn0.qa.com:/home/hadoop/.ssh/
 scp authorized_keys dn1.qa.com:/home/hadoop/.ssh/
 scp authorized_keys dn2.qa.com:/home/hadoop/.ssh/
 scp authorized_keys dn3.qa.com:/home/hadoop/.ssh/
-
+```
 
 # Hadoop完全分步式集群搭建
 
@@ -208,55 +215,55 @@ scp authorized_keys dn3.qa.com:/home/hadoop/.ssh/
 # 下载及配置hadoop
 
 nn.qa.com:
+```
+cd /hadoop/conan
+wget http://mirror.bjtu.edu.cn/apache/hadoop/common/hadoop-0.20.2/hadoop-0.20.2.tar.gz
+tar zxvf hadoop-0.20.2.tar.gz
+cd /hadoop/conan/hadoop-0.20.2/conf
+vi hadoop-env.sh
+export JAVA_HOME=/etc/java-config-2/current-system-vm
+vi hdfs-site.xml  
+ 
+    <configuration>
+     <property>
+      <name>dfs.data.dir</name>
+      <value>/hadoop/conan/data0</value>
+     </property>
+     <property>
+      <name>dfs.replication</name>
+      <value>2</value>
+     </property>
+    </configuration>
+    
+vi core-site.xml 
+    
+    <configuration>
+     <property>
+      <name>fs.default.name</name>
+      <value>hdfs://nn.qa.com:9000</value>
+     </property>
+    </configuration>
 
-    1. cd /hadoop/conan
-    2. wget http://mirror.bjtu.edu.cn/apache/hadoop/common/hadoop-0.20.2/hadoop-0.20.2.tar.gz
-    3. tar zxvf hadoop-0.20.2.tar.gz
-    4. cd /hadoop/conan/hadoop-0.20.2/conf
-    5. vi hadoop-env.sh
-        export JAVA_HOME=/etc/java-config-2/current-system-vm
-    6. vi hdfs-site.xml
+vi mapred-site.xml
     
-          <configuration>
-            <property>
-              <name>dfs.data.dir</name>
-              <value>/hadoop/conan/data0</value>
-            </property>
-            <property>
-              <name>dfs.replication</name>
-              <value>2</value>
-            </property>
-          </configuration>
+    <configuration>
+    <property>
+      <name>mapred.job.tracker</name>
+      <value>nn.qa.com:9001</value>
+    </property>
+    </configuration>
     
-    7. vi core-site.xml 
+vi masters
     
-          <configuration>
-          <property>
-            <name>fs.default.name</name>
-            <value>hdfs://nn.qa.com:9000</value>
-          </property>
-          </configuration>
+    nn.qa.com
     
-    8. vi mapred-site.xml
+vi slaves
     
-          <configuration>
-          <property>
-            <name>mapred.job.tracker</name>
-            <value>nn.qa.com:9001</value>
-          </property>
-          </configuration>
-    
-    9. vi masters
-    
-          nn.qa.com
-    
-    10. vi slaves
-    
-          dn0.qa.com
-          dn1.qa.com
-          dn2.qa.com
-          dn3.qa.com
-    
+    dn0.qa.com
+    dn1.qa.com
+    dn2.qa.com
+    dn3.qa.com
+```
 
 # 同步hadoop配置到其他虚拟机
 
