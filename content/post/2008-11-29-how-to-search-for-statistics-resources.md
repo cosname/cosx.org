@@ -48,7 +48,7 @@ slug: how-to-search-for-statistics-resources
 
 中文论文库就不介绍太多了，是个中国人都能自己看懂，下面说说外文数据库资源。
 
-如果要查找5年前的期刊论文，那么[JSTOR](www.jstor.org)也许可以满足你们大部分需要了，JSTOR就是Journal Storage的缩写，网址为<www.jstor.org>，其中收录的论文基本上都是图片格式，可以在网站上一页一页翻着看，或者直接下载为PDF文件阅读（里面仍然是图片格式）。关于统计界的外文刊物，大家不能不知道这些：Journal of the American Statistical Association（JASA）、Annals of Statistics、Journal of the Royal Statistical Society，其实还有Biometrica等等，暂时还是别介绍太多了。
+如果要查找5年前的期刊论文，那么[JSTOR](http://www.jstor.org)也许可以满足你们大部分需要了，JSTOR就是Journal Storage的缩写，网址为<http://www.jstor.org>，其中收录的论文基本上都是图片格式，可以在网站上一页一页翻着看，或者直接下载为PDF文件阅读（里面仍然是图片格式）。关于统计界的外文刊物，大家不能不知道这些：Journal of the American Statistical Association（JASA）、Annals of Statistics、Journal of the Royal Statistical Society，其实还有Biometrica等等，暂时还是别介绍太多了。
 
 [Wiley InterScience](http://www.interscience.wiley.com)（图书馆网站上写的“John Wiley电子期刊”）这个网站中有不少统计学的宝贝，有空应该去淘一淘，比较难得的是里面有大量的Online Books，如“Introduction to Bayesian Statistics”，“Regression Models for Time Series Analysis”，“Statistical Analysis and Data Mining”，“Analysis of Financial Time Series (Second Edition)”等。
 
