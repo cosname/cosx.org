@@ -140,7 +140,7 @@ R会自动处理那些血腥细节：下载文件并解压缩、复制到正确�
   * 图形格式和大小设定：Sweave默认会生成PDF和postscript格式的图片（分别可用pdf = TRUE/FALSE和eps = TRUE/FALSE控制），通常矢量图当然比位图强百倍，美观、无损缩放，但R图形有个小问题（纯属挑剔）就是字体，默认情况下图形都是用无衬线字体（Windows底下如Arial字体），这和LaTeX文档的字体可能不一致（尽管<a href="http://yihui.name/en/2010/03/font-families-for-the-r-pdf-device/" target="_blank">这个不一致可以在一定程度上减轻</a>），而pgfSweave直接从根本上解决了这个问题，因为它是以tikz格式记录R图形，这种格式实际上就是LaTeX代码，因此编译文档的时候图形也会被重新编译，所以图中的文本的字体和正文就完全一致了（[例](http://yihui.name/cn/wp-content/uploads/2010/02/lyx-pgfsweave.pdf)）；另外，默认Sweave中图形大小的控制方式也很不直观，选项width和height是控制图形设备的宽和高的，而非实际LaTeX文档中图形的宽高，我们只能通过LaTeX命令`\setkeys{Gin}{width=?}`来设定（尽管这个也有办法绕过去），而pgfSweave则默认采取了直观的指定宽高方式，即：直接在选项中指定。
   * Sweave本身没有缓存功能，这对于大批量的计算来说是个灾难：所谓缓存就是计算结果被缓存在某个位置，下次运行Sweave文档的时候如果代码没有修改，这些结果则可以不必被重新计算一遍，直接从缓存里读出来就可以了，这是cacheSweave包的功能； pgfSweave在这个基础上更进一步，让图形也有缓存功能了。缓存可以让整篇文档在R层面上的编译速度加快（但事实上由于pgfSweave用tikz图形而这种图形需要LaTeX编译，所以整体速度未必真的加快了）；<figure id="attachment_2621" style="width: 512px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-2621" title="LyX和pgfSweave包生成的图形" src="https://cos.name/wp-content/uploads/2010/11/lyx-formula.png" alt="LyX和pgfSweave包生成的图形" width="512" height="375" srcset="https://cos.name/wp-content/uploads/2010/11/lyx-formula.png 512w, https://cos.name/wp-content/uploads/2010/11/lyx-formula-300x219.png 300w, https://cos.name/wp-content/uploads/2010/11/lyx-formula-500x366.png 500w" sizes="(max-width: 512px) 100vw, 512px" />](https://cos.name/wp-content/uploads/2010/11/lyx-formula.png)<figcaption class="wp-caption-text">LyX和pgfSweave包生成的图形</figcaption></figure> 
+![LyX和pgfSweave包生成的图形](https://cos.name/wp-content/uploads/2010/11/lyx-formula.png "LyX和pgfSweave包生成的图形")<figcaption class="wp-caption-text">LyX和pgfSweave包生成的图形</figcaption></figure> 
 
 ## 6. 演示和问题
 

@@ -29,7 +29,7 @@ $
 即定积分$J$的值 就是事件$A$出现的频率。同时，由伯努利大数定律，我们可以用重复试验中$A$出现的频率作为 $p$的估计值。即将$(X,Y)$看成是正方形$\{0\leq x \leq 1,0\leq y \leq 1\}$内的随机投点，用随机点落在区域${y\leq f(x)}$中的频率作为定积分的近似值。这种方法就叫随机投点法，具体做法如下：
 
 <p style="text-align: center;">
-  <a rel="attachment wp-att-2051" href="https://cos.name/2010/03/monte-carlo-method-to-compute-integration/m-6/"><img class="size-full wp-image-2051 aligncenter" src="https://cos.name/wp-content/uploads/2010/03/m5.png" alt="" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2010/03/m5.png 480w, https://cos.name/wp-content/uploads/2010/03/m5-150x150.png 150w, https://cos.name/wp-content/uploads/2010/03/m5-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" /></a>
+  <a rel="attachment wp-att-2051" href="https://cos.name/2010/03/monte-carlo-method-to-compute-integration/m-6/">![](https://cos.name/wp-content/uploads/2010/03/m5.png)</a>
 </p>
 
 <p style="text-align: center;">

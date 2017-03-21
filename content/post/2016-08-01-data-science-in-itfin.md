@@ -16,21 +16,21 @@ slug: data-science-in-itfin
 
 毕业于中科院，多年咨询公司和互联网公司从事数据算法、决策分析、风险管理和产品设计的工作，目前是融360风控总监，负责纯线上小额微贷信用贷款产品。
 
-[<img class="aligncenter wp-image-12982" src="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-上午9.40.22.png" alt="屏幕快照 2016-07-30 上午9.40.22" width="439" height="505" srcset="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-上午9.40.22.png 894w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-上午9.40.22-261x300.png 261w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-上午9.40.22-768x883.png 768w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-上午9.40.22-435x500.png 435w" sizes="(max-width: 439px) 100vw, 439px" />](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-上午9.40.22.png)
+![屏幕快照 2016-07-30 上午9.40.22](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-上午9.40.22.png)
 
 最近几年，这波在资本撬动的互联网金融的浪潮极大地提升了数据科学的行业应用价值，数据分析师不再是苦逼的跑数的，摇身一变成了风控模型专家、数据科学家。尤其是大数据风控、大数据征信领域一片火热的场景，数据挖掘、机器学习相关专业同学的数量也翻番上涨，越来越多的计算机和统计领域的同学加入互联网金融行业。
 
-[<img class="aligncenter wp-image-12969" src="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.54.50.png" alt="屏幕快照 2016-07-30 下午5.54.50" width="501" height="335" srcset="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.54.50.png 702w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.54.50-300x201.png 300w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.54.50-500x335.png 500w" sizes="(max-width: 501px) 100vw, 501px" />](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.54.50.png)
+![屏幕快照 2016-07-30 下午5.54.50](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.54.50.png)
 
 面试中发现很多同学的梦想工作都是我要做机器学习相关工作、我要做算法、我要做模型……但其实以一个互联网金融从业者角度看，我们大量的时间还是在做数据理解、数据处理、重复验证特征、不停的在做实验，我对模型师的定义基本就是半个蓝领，只不过很多学术和一些五花八门的算法和方法可以真正有机会应用到商业领域并且产生价值。
 
 本文分享一些互联网金融从业者日常工作中实际用到的与数据科学相关的内容，由于日常工作中涉及到的数据和策略非常敏感，本文中不会透露具体产品策略，只会对一些思考和方法进行介绍；同时，由于如今互联网金融产品的形态非常多，下文主要介绍目前很热的**在线授信贷款产品中数据科学的应用。**<!--more-->
 
-[<img class="aligncenter wp-image-12970" src="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.13.47.png" alt="屏幕快照 2016-07-30 下午4.13.47" width="492" height="323" srcset="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.13.47.png 664w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.13.47-300x197.png 300w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.13.47-500x328.png 500w" sizes="(max-width: 492px) 100vw, 492px" />](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.13.47.png)
+![屏幕快照 2016-07-30 下午4.13.47](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.13.47.png)
 
 在线授信贷款产品也是互联网金融产品中路径最长，最复杂的产品，类似产品形态为蚂蚁借呗、京东白条、各种手机上的贷款app。在线授信产品有别于传统个人信贷产品，用户不用提交一堆纸质材料，也不用上门面签，也不用等几天甚至十几天才能知道审批结果，用户只需要在手机app或微信上完成贷款申请，十几分钟甚至几分钟就能获得贷款额度，很快就能放款成功，极致的互联网贷款体验。用户完整申请流程如下，整个过程完全线上化，只要你有一台智能手机即可尽享便捷。
 
-[<img class="aligncenter wp-image-12972" src="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午6.31.40.png" alt="屏幕快照 2016-07-30 下午6.31.40" width="441" height="460" srcset="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午6.31.40.png 990w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午6.31.40-287x300.png 287w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午6.31.40-768x802.png 768w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午6.31.40-479x500.png 479w" sizes="(max-width: 441px) 100vw, 441px" />](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午6.31.40.png)
+![屏幕快照 2016-07-30 下午6.31.40](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午6.31.40.png)
 
 <p style="text-align: center;">
   <strong>用户申请贷款流程</strong>
@@ -38,7 +38,7 @@ slug: data-science-in-itfin
 
 ### **一、转化率**
 
-[<img class="aligncenter wp-image-12973" src="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.21.08.png" alt="屏幕快照 2016-07-30 下午4.21.08" width="485" height="225" srcset="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.21.08.png 1098w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.21.08-300x139.png 300w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.21.08-768x355.png 768w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.21.08-500x231.png 500w" sizes="(max-width: 485px) 100vw, 485px" />](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.21.08.png)
+![屏幕快照 2016-07-30 下午4.21.08](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.21.08.png)
 
 所有互联网产品基本都离不开转化率，互联网用户流量都是买来的，能形成转化有变现能力的产品才有竞争力。对于在线贷款行业，转化率是一系列growth hacking的黑科技中更有挑战的问题。因为贷款类产品的转化率不止和用户漏斗的页面转化有关，还和风控产品的政策有关。前面再高的转化率如果吸引来的都是高风险用户那也无法提高审批通过率。最终转化率优化的目标是为了整体流量购买带来的收益最高，即优化流量投放ROI。
 
@@ -46,7 +46,7 @@ slug: data-science-in-itfin
 
 ### 二、反欺诈
 
-[<img class="aligncenter wp-image-12974" src="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.17.02.png" alt="屏幕快照 2016-07-30 下午4.17.02" width="476" height="294" srcset="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.17.02.png 1102w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.17.02-300x186.png 300w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.17.02-768x475.png 768w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.17.02-500x309.png 500w" sizes="(max-width: 476px) 100vw, 476px" />](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.17.02.png)
+![屏幕快照 2016-07-30 下午4.17.02](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午4.17.02.png)
 
 在线贷款行业是一个大蛋糕，尤其对骗子来说，不管是线下的贷款中介代办包装还是线上的盗号刷单等黑产从业者，都盯上了在线贷款。反欺诈能否做好是在线贷款行业的一条生死线。简单普及下欺诈模式，可以分为一方欺诈和三方欺诈：一方欺诈通常指骗子来申请贷款后没有还款意愿造成违约，三方欺诈指欺诈分子借用冒用他人身份或协助他人伪造申请信息进行骗贷。下面重点介绍下数据科学在识别三方欺诈中的一个应用：**社交网络分析用于识别组团进件。**
 
@@ -54,7 +54,7 @@ slug: data-science-in-itfin
 
 我们定义用户和用户之间如果共用某些核心信息，那么他们之间就存在紧密联系，这些核心信息可以是手机设备、电话号码、身份证、银行卡号、邮箱等。以这些信息作为点，信息之间的关系作为边就可以构造出类似下面的图网络。
 
-[<img class="aligncenter size-full wp-image-12975" src="https://cos.name/wp-content/uploads/2016/07/社交网络.png" alt="社交网络" width="865" height="414" srcset="https://cos.name/wp-content/uploads/2016/07/社交网络.png 865w, https://cos.name/wp-content/uploads/2016/07/社交网络-300x144.png 300w, https://cos.name/wp-content/uploads/2016/07/社交网络-768x368.png 768w, https://cos.name/wp-content/uploads/2016/07/社交网络-500x239.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/07/社交网络.png)
+![社交网络](https://cos.name/wp-content/uploads/2016/07/社交网络.png)
 
 如上图，图中有两个用户通过手机申请贷款，一个放款成功，一个放款失败，通过用户申请中提供的信息，将其核心信息构建成一个网络图，可以看到两个用户一共关联到3个手机号，3部手机设备，两个用户是通过一个公用的手机设备联系起来的。上图的真实业务场景是尾号979的用户来申请时，发现与其强相关的用户已经成功放款，并且通过图上的关系已经申请调查出尾号979的用户是之前放款用户的配偶，若批准尾号979的贷款申请则将增加两人整体负债，所以最终审判拒绝掉了这笔贷款申请。
 
@@ -62,27 +62,27 @@ slug: data-science-in-itfin
 
 这种思路下同样是通过社交网络反欺诈，我们需要更全面的描述每个用户之间的关系，用户之间关系的定义也不止是上述这些强关系，还包括很多弱关系，比如用户间打过电话，用户间是同一单位，用户家庭住址在同一区域，用户之前是QQ好友等，这些更多的关系关系的叠加很容易出现下面类似的用户间非常复杂的关联网络。
 
-[<img class="aligncenter wp-image-12976" src="https://cos.name/wp-content/uploads/2016/07/社交网络2.png" alt="社交网络2" width="579" height="376" srcset="https://cos.name/wp-content/uploads/2016/07/社交网络2.png 685w, https://cos.name/wp-content/uploads/2016/07/社交网络2-300x195.png 300w, https://cos.name/wp-content/uploads/2016/07/社交网络2-500x325.png 500w" sizes="(max-width: 579px) 100vw, 579px" />](https://cos.name/wp-content/uploads/2016/07/社交网络2.png)
+![社交网络2](https://cos.name/wp-content/uploads/2016/07/社交网络2.png)
 
-[<img class="aligncenter wp-image-12977" src="https://cos.name/wp-content/uploads/2016/07/社交网络三.png" alt="社交网络三" width="553" height="463" srcset="https://cos.name/wp-content/uploads/2016/07/社交网络三.png 684w, https://cos.name/wp-content/uploads/2016/07/社交网络三-300x251.png 300w, https://cos.name/wp-content/uploads/2016/07/社交网络三-500x419.png 500w" sizes="(max-width: 553px) 100vw, 553px" />](https://cos.name/wp-content/uploads/2016/07/社交网络三.png)
+![社交网络三](https://cos.name/wp-content/uploads/2016/07/社交网络三.png)
 
 构建图的同时，对每个点还可以赋予不同的属性，这些属性可以用于后续的特征工程提取。举个例子，对图中用户身份证类型的顶点，可以设置多个属性，如是否黑名单、用户资产、是否有房。后续特征工程中就可以根据顶点属性衍生出具体的特征，如一度关联的身份证是黑名单的顶点个数。用户关系网络图构建的最终目的是提升欺诈团伙的识别准确度以及实现自动化的反欺诈决策，即提升欺诈识别的效果和效率。我们希望通过社交网络挖掘出用户更多的特征用于反欺诈模型和策略的训练，所以对于这种复杂的用户关系网络图，接下来我们要进行两件事，其一，用户图特征提取；其二，点属性标签的补全。
 
   * **用户特征提取**
 
-[<img class="aligncenter wp-image-12978" src="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.26.01.png" alt="屏幕快照 2016-07-30 下午5.26.01" width="310" height="358" srcset="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.26.01.png 958w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.26.01-260x300.png 260w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.26.01-768x887.png 768w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.26.01-433x500.png 433w" sizes="(max-width: 310px) 100vw, 310px" />](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.26.01.png)
+![屏幕快照 2016-07-30 下午5.26.01](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.26.01.png)
 
 每个用户都可以通过手机、身份证等关键信息点，获取单个用户网络的连通图（事实上对10亿级节点的图的查询效率已经非常低了，在实时决策的场景下需要通过算法优化来解决响应时间的问题，比如图入库的锁问题，异常点的查询超时）。对每个点计算其在图中常用的属性特征，比如度、接近中心度、page rank中心度、betweenness中心度。这个过程可以看作是对给定用户，通过图数据进行特征工程。大部分策略和模型的效果往往由特征工程的质量决定，甚至特征工程方法也成了各家公司不可泄露的核心内容，数据算法工程师的苦逼日子也由此开始……举几个例子，除了上面简单的点中心度相关的直接特征还能直接想到非常多的特征，比如用户n度关联点的关联手机号数、用户关联到的设备号占所有关联点的比例、用户关联的黑名单身份证号数等等。细心的同学可以看出上述举例的特征计算大部分可以实现标准化，通过开发单独特征工程模型实现上万特征的衍生计算。这样能极大提升模型开发的效率，后文单独介绍下我们的一些经验。
 
   * **点属性标签的补全**
 
-[<img class="aligncenter wp-image-12979" src="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.24.29.png" alt="屏幕快照 2016-07-30 下午5.24.29" width="456" height="254" srcset="https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.24.29.png 1132w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.24.29-300x167.png 300w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.24.29-768x427.png 768w, https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.24.29-500x278.png 500w" sizes="(max-width: 456px) 100vw, 456px" />](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.24.29.png)
+![屏幕快照 2016-07-30 下午5.24.29](https://cos.name/wp-content/uploads/2016/07/屏幕快照-2016-07-30-下午5.24.29.png)
 
 在策略分析和特征计算中，我们需要很多点的标签属性，比如对某一身份证是否是黑名单，身份证是否有房，身份证是否信用卡额度超过3万等等。但是实际上往往对于大部分用户标签属性是缺失的，比如用户申请到一半就流失了，用户最终放弃了，我们都没法准确收集这些标签。怎么办？我们通过图相关的社群发现算法进行标签补全，比如最常用标签传播算法LPA(Lable PropagationAlgorithm)，还有类似的算法，比如SLPA、HANP、DCLP等等。
 
 虽然通过尝试算法可以快速补全标签属性，但很快我们就发现补全后的效果不一定理想。其中有两个业务产生的数据问题。其一，噪音数据造成很多奇异点使非相关的用户关联到一起，造成数据失真。一个常用的场景就是很多用户都会拨打10086，很多人都会被同一400的骚扰电话骚扰，那么这些现实生活中本没有关联的用户被关联到一起；其二，由于用户的贷款是较独立的事情，所以每个用户的图规模较小，没有足够的已标记数据对其进行标签传播，造成最终标签传播的覆盖率降低，类似下图中的情况。
 
-[<img class="aligncenter wp-image-12981" src="https://cos.name/wp-content/uploads/2016/07/点标签.png" alt="点标签" width="432" height="348" srcset="https://cos.name/wp-content/uploads/2016/07/点标签.png 628w, https://cos.name/wp-content/uploads/2016/07/点标签-300x242.png 300w, https://cos.name/wp-content/uploads/2016/07/点标签-500x403.png 500w" sizes="(max-width: 432px) 100vw, 432px" />](https://cos.name/wp-content/uploads/2016/07/点标签.png)
+![点标签](https://cos.name/wp-content/uploads/2016/07/点标签.png)
 
 <p style="text-align: left;">
   对第一个问题可以通过数据清洗部分解决，但需要大量的人工标注，成本很高；对于第二个问题现在也没有非常好的方案，欢迎社交网络分析的高手给出建议。
@@ -92,7 +92,7 @@ slug: data-science-in-itfin
 
 在线贷款产品的核心竞争力就是数据化决策的效果和效率，整个业务中模型应用非常普遍，基本上在整个用户生命周期中都可以体现并发挥价值。如下图：
 
-[<img class="size-full wp-image-12983 aligncenter" src="https://cos.name/wp-content/uploads/2016/07/策略模型.png" alt="策略模型" width="487" height="341" srcset="https://cos.name/wp-content/uploads/2016/07/策略模型.png 487w, https://cos.name/wp-content/uploads/2016/07/策略模型-300x210.png 300w" sizes="(max-width: 487px) 100vw, 487px" />](https://cos.name/wp-content/uploads/2016/07/策略模型.png)
+![策略模型](https://cos.name/wp-content/uploads/2016/07/策略模型.png)
 
 由于近两年大数据和互联网金融非常火热，对于风控模型的普及和介绍随便搜一下就有足够多的科普和介绍。我还是从一个从业者角度分析下模型开发中最关心的几个问题，来看如何应对业务场景造成的模型挑战？
 
@@ -118,7 +118,7 @@ slug: data-science-in-itfin
 
 特征工程做的好坏是所有模型师保持饭碗的有效手段。在线授信领域对特征的挑剔更上一层，由于大部分预测模型都是用历史几个月前的数据去预测未来几个月或1年发生的违约事件，所以对特征的效果、特征稳定性、可解释性中需要不断平衡。每个模型都需要做大量的数据特征处理，为了提升效率最好把常用类型的数据的特征工程开发成包。举个特征工程的例子：
 
-[<img class="aligncenter size-full wp-image-12980" src="https://cos.name/wp-content/uploads/2016/07/特征工程.png" alt="特征工程" width="865" height="310" srcset="https://cos.name/wp-content/uploads/2016/07/特征工程.png 865w, https://cos.name/wp-content/uploads/2016/07/特征工程-300x108.png 300w, https://cos.name/wp-content/uploads/2016/07/特征工程-768x275.png 768w, https://cos.name/wp-content/uploads/2016/07/特征工程-500x179.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/07/特征工程.png)
+![特征工程](https://cos.name/wp-content/uploads/2016/07/特征工程.png)
 
 上图中是用户提供的信用卡消费账单数据，其中包括用户id、交易金额、交易时间、交易描述。上述只有4个字段的用户数据如何进行特征工程？可以从如下几方面入手考虑：
 

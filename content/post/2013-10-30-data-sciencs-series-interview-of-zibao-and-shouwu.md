@@ -15,11 +15,11 @@ slug: data-sciencs-series-interview-of-zibao-and-shouwu
 <span style="color: #888888;">【COS编辑部按】受访者：</span>
 
 <div style="float: left; clear: right;">
-  <a href="https://cos.name/wp-content/uploads/2013/10/ava.s.jpeg"><img class="size-full wp-image-8826 alignleft" alt="ava.s" src="https://cos.name/wp-content/uploads/2013/10/ava.s.jpeg" width="140" height="140" /></a><span style="color: #808080;">陈逸波（花名：子豹），江苏常州人士，2010年毕业于浙江大学数学系，目前在淘宝网的数据科学部门做一些电商相关的数据分析和数据挖掘工作。下称yb。</span>
+  <a href="https://cos.name/wp-content/uploads/2013/10/ava.s.jpeg">![ava.s](https://cos.name/wp-content/uploads/2013/10/ava.s.jpeg)</a><span style="color: #808080;">陈逸波（花名：子豹），江苏常州人士，2010年毕业于浙江大学数学系，目前在淘宝网的数据科学部门做一些电商相关的数据分析和数据挖掘工作。下称yb。</span>
 </div>
 
 <div style="float: left; clear: right;">
-  <a href="https://cos.name/wp-content/uploads/2013/10/QQ截图20131030135647.jpg"><img class=" wp-image-8830 alignleft" alt="QQ截图20131030135647" src="https://cos.name/wp-content/uploads/2013/10/QQ截图20131030135647.jpg" width="139" height="148" /></a><span style="color: #808080;"> 郝智恒（花名：授武，网名：大刀），甘肃兰州人士，2012年毕业于南开大学概率统计系，目前，在聚划算BI部门做数据挖掘工作，感兴趣的领域是电商数据挖掘和社交网络分析。在统计之都主站及豆瓣发表过多篇文章。下称bk。</span>
+  <a href="https://cos.name/wp-content/uploads/2013/10/QQ截图20131030135647.jpg">![QQ截图20131030135647](https://cos.name/wp-content/uploads/2013/10/QQ截图20131030135647.jpg)</a><span style="color: #808080;"> 郝智恒（花名：授武，网名：大刀），甘肃兰州人士，2012年毕业于南开大学概率统计系，目前，在聚划算BI部门做数据挖掘工作，感兴趣的领域是电商数据挖掘和社交网络分析。在统计之都主站及豆瓣发表过多篇文章。下称bk。</span>
 </div>
 
 ### 关于数据分析之路

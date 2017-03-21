@@ -37,15 +37,15 @@ By [陈丽云](https://cos.name/author/liyun/)
 
 有一次，微软上线了一个新的产品功能，然后在开始的几天，用户的体验（累计值）有了显著的下降，如下图所示。<figure style="width: 455px" class="wp-caption aligncenter">
 
-<img class="  " alt="" src="http://i.imgur.com/8AdCj0P.png" width="455" height="294" /><figcaption class="wp-caption-text">Effect appears to trend over time</figcaption></figure> 
+![](http://i.imgur.com/8AdCj0P.png)<figcaption class="wp-caption-text">Effect appears to trend over time</figcaption></figure> 
 
 于是产品经理说，看这个线性预测，马上就会变正的了。用户都是这样的，你看随着时间的增长这种下降不是在缓和么？结果事实证明，随着时间的延长，最后只是收敛到0了而已。<figure style="width: 461px" class="wp-caption aligncenter">
 
-<img class="   " alt="" src="http://i.imgur.com/K9jVPtM.png" width="461" height="261" /><figcaption class="wp-caption-text">95% confidence interval over time</figcaption></figure> 
+![](http://i.imgur.com/K9jVPtM.png)<figcaption class="wp-caption-text">95% confidence interval over time</figcaption></figure> 
 
 其实道理很简单，用户的点击行为并不是一个独立的分布，而明明是时间上自相关的。随着时间的延长，95%的置信区间会逐渐的减小。<figure style="width: 477px" class="wp-caption aligncenter">
 
-<img alt="" src="http://i.imgur.com/shESUUW.png" width="477" height="318" /><figcaption class="wp-caption-text">Effect stabilizes over time</figcaption></figure> 
+![](http://i.imgur.com/shESUUW.png)<figcaption class="wp-caption-text">Effect stabilizes over time</figcaption></figure> 
 
 所以当我们只看人均值的时候，他的趋势会是逐渐的上升，最终收敛于实际效果0。实践的教训就是，由于Primacy and Novelty Effects导致序列自相关，早期的随机试验结果可能是不可信的，如果贸然的做线性拟合和预测往往会与真实情形大相径庭。随着时间的延长，结果才会累积到真实情况。
 
@@ -57,7 +57,7 @@ By [陈丽云](https://cos.name/author/liyun/)
 
 但是世界美好的前提是分布函数随着时间不变啊。比如我们在关注session per user这个指标的时候，随着时间的变化虽然样本量增加，但均值、标准差也都在变化。<figure style="width: 467px" class="wp-caption aligncenter">
 
-<img alt="" src="http://i.imgur.com/fCHsyEo.png" width="467" height="287" /><figcaption class="wp-caption-text">Change in Mean, Standard Deviation and  
+![](http://i.imgur.com/fCHsyEo.png)<figcaption class="wp-caption-text">Change in Mean, Standard Deviation and  
 Sqrt(sample size) for Sessions/user over 31 day period</figcaption></figure> 
 
 在这个问题里，置信区间并不会收敛，反而会扩张。对于类似的计数数据，比较合适的方式则是考虑引入负二项分布（见原文参考文献26）。

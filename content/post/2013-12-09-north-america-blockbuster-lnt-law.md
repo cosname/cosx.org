@@ -17,7 +17,7 @@ slug: north-america-blockbuster-lnt-law
 
 联系方式：<a href="mailto:birc@gsm.pku.ed.cn" target="_blank">birc@gsm.pku.ed.cn</a>
 
-<img alt="" src="http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34yCzwIsgakR6utTcdQ5kknwfOtEUO4IecicnscIQu1UOWs9TBUamjVLFk3XGVY0agImic1bS8RI2y6w/0" data-src="http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34yCzwIsgakR6utTcdQ5kknwfOtEUO4IecicnscIQu1UOWs9TBUamjVLFk3XGVY0agImic1bS8RI2y6w/0" />
+![](http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34yCzwIsgakR6utTcdQ5kknwfOtEUO4IecicnscIQu1UOWs9TBUamjVLFk3XGVY0agImic1bS8RI2y6w/0)
 
 <div>
   <p>
@@ -49,7 +49,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p1.jpg"><img alt="p1" src="https://cos.name/wp-content/uploads/2013/12/p1.jpg" width="897" height="471" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/12/p1.jpg">![p1](https://cos.name/wp-content/uploads/2013/12/p1.jpg)</a>
   </p>
   
   <p>
@@ -57,7 +57,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p2.jpg"><img alt="p2" src="https://cos.name/wp-content/uploads/2013/12/p2.jpg" width="898" height="484" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/12/p2.jpg">![p2](https://cos.name/wp-content/uploads/2013/12/p2.jpg)</a>
   </p>
   
   <p>
@@ -73,7 +73,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p3.jpg"><img alt="p3" src="https://cos.name/wp-content/uploads/2013/12/p3.jpg" width="895" height="469" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/12/p3.jpg">![p3](https://cos.name/wp-content/uploads/2013/12/p3.jpg)</a>
   </p>
   
   <p>
@@ -81,7 +81,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p4.jpg"><img alt="p4" src="https://cos.name/wp-content/uploads/2013/12/p4.jpg" width="1063" height="589" /></a>
+    <a href="https://cos.name/wp-content/uploads/2013/12/p4.jpg">![p4](https://cos.name/wp-content/uploads/2013/12/p4.jpg)</a>
   </p>
   
   <p>

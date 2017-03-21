@@ -83,7 +83,7 @@ rainbowLevels = rainbow((dd$freq)/(max(dd$freq) - 10))
 wordcloud(dd$word, dd$freq, col = rainbow(length(d$freq)))
 par(op)</pre>
 
-[<img class="aligncenter size-full wp-image-6975" alt="Taijiong" src="https://cos.name/wp-content/uploads/2013/01/Taijiong.png" width="333" height="295" srcset="https://cos.name/wp-content/uploads/2013/01/Taijiong.png 333w, https://cos.name/wp-content/uploads/2013/01/Taijiong-300x265.png 300w" sizes="(max-width: 333px) 100vw, 333px" />](https://cos.name/wp-content/uploads/2013/01/Taijiong.png)
+![Taijiong](https://cos.name/wp-content/uploads/2013/01/Taijiong.png)
 
 下面做一些相对来说比较专业的文本挖掘的工作。主要目的是对这998条微博进行聚类。聚类里最核心的概念是距离。将距离比较靠近的数据聚为一类就是聚类。对于文本来说，如何定义距离呢？也就是说我如何来衡量微博与微博之间的距离。这涉及到了文本挖掘最基本的概念，通过建立语料库，词频-文档矩阵，来衡量文档之间的相关性，从而衡量文档之间的距离之类的。<a href="http://www.bjt.name/2012/03/text-mining-in-r/" target="_blank">详情请参看刘思喆大哥R语言环境下的文本挖掘</a>。下面使用PAM算法，对998条微博进行聚类。看看能不能得出一些什么有意思的结果。
 
@@ -135,7 +135,7 @@ layout(matrix(1))`
   
 结果我们将微博分成了两类：
 
-[<img class="aligncenter size-large wp-image-6974" alt="Taijiong-Clustering" src="https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering-500x117.png" width="500" height="117" srcset="https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering-500x117.png 500w, https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering-300x70.png 300w, https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering.png 1349w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering.png)
+![Taijiong-Clustering](https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering.png)
 
 当然了，从这个图，你很难看出点什么有益的信息，就是图个好看。我们不妨来看看被分成两类的微博都分别说了些什么。具体看到过程和解读因人而异，这里也没什么代码要列出来。我只说一些我看到的，不保证是对的。
 

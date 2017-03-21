@@ -52,7 +52,7 @@ GDAEs方法的原理是观测空间上的扰动能增强编码器结果$\mathbf{
 
 **潜因子模型中的近似推理**<figure id="attachment_10986" style="width: 193px" class="wp-caption alignright">
 
-[<img class="wp-image-10986 size-full" src="https://cos.name/wp-content/uploads/2015/05/001.png" alt="潜因子模型中的近似推理" width="193" height="293" />](https://cos.name/wp-content/uploads/2015/05/001.png)<figcaption class="wp-caption-text">图1 潜变量模型中编码器-解码器的推断过程</figcaption></figure> 
+![潜因子模型中的近似推理](https://cos.name/wp-content/uploads/2015/05/001.png)<figcaption class="wp-caption-text">图1 潜变量模型中编码器-解码器的推断过程</figcaption></figure> 
 
 另一个DAEs的难点在于它的稳健性建立在对考察原始数据的干扰上。这样一个噪化过程一般并不容易设计。此外，通过对概率分布的推导，我们可以发现通过对对数噪化数据的密度函数$\log p(\mathbf{y}&#8217;)$ 应用变分原理，我们可以得到DAE的目标函数$\mathcal{L}_{DAE}$的一个下界[1]，然而并不是我们所感兴趣的统计量。
 

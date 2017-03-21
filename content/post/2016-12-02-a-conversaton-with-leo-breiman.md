@@ -18,7 +18,7 @@ slug: a-conversaton-with-leo-breiman
 译者简介：张晔，毕业于华南统计科学研究中心，现严肃科技平台开发工程师，主要负责docker容器调度系统开发。成慧敏，就读于中央财经大学统计与数学学院，硕士研究生二年级，研究兴趣为复杂网络分析与深度学习。李宇轩,就读于中国人民大学统计学院,大二本科生,目测统计有关都可以是学习方向。</pre>
 
 <p style="padding-left: 30px;">
-  <img class="size-full alignleft" src="https://cos.name/wp-content/uploads/2012/02/Leo_Breiman.jpg" alt="" width="200" height="267" />
+  ![](https://cos.name/wp-content/uploads/2012/02/Leo_Breiman.jpg)
 </p>
 
 <p style="padding-left: 30px;">

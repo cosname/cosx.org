@@ -16,7 +16,7 @@ slug: 8th-china-r-nanchang-summary
 
 &nbsp;
 
-#### [<img class="aligncenter size-full wp-image-11430" src="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png 450w, https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+#### ![China-R-Logo-trans](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
 
 #### 一、会议概况
 
@@ -30,15 +30,15 @@ slug: 8th-china-r-nanchang-summary
 
 会议开幕式由江西财经大学金融管理国际研究院常务副院长、校务委员严武教授主持。[
   
-](https://cos.name/wp-content/uploads/2015/11/003成功.jpg) [<img class="aligncenter size-full wp-image-11678" src="https://cos.name/wp-content/uploads/2015/11/001主持4.jpg" alt="001主持" width="1270" height="953" srcset="https://cos.name/wp-content/uploads/2015/11/001主持4.jpg 1270w, https://cos.name/wp-content/uploads/2015/11/001主持4-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/11/001主持4-500x375.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/11/001主持4.jpg)
+](https://cos.name/wp-content/uploads/2015/11/003成功.jpg) ![001主持](https://cos.name/wp-content/uploads/2015/11/001主持4.jpg)
 
 江西财经大学校长助理李良智教授首先为大会致辞。李校助对本次会议及论坛的顺利召开表示祝贺，并欢迎来自全国各地的参会者，为各位演讲嘉宾牺牲周末休息的时间来到南昌演讲表示感谢。李校助介绍了江西财经大学的概况，回顾了中国R语言会议的发展和现状，并对江西财经大学第一次举办金融大数据论坛表达了祝贺和期望，希望以后可以继续举办，越办越好。
 
-[<img class="aligncenter size-full wp-image-11679" src="https://cos.name/wp-content/uploads/2015/11/002越好4.jpg" alt="002越好" width="1269" height="844" srcset="https://cos.name/wp-content/uploads/2015/11/002越好4.jpg 1269w, https://cos.name/wp-content/uploads/2015/11/002越好4-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/11/002越好4-500x333.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/11/002越好4.jpg)
+![002越好](https://cos.name/wp-content/uploads/2015/11/002越好4.jpg)
 
 江西财经大学金融管理国际研究院院长石劲教授随后发表了欢迎辞，对中国R会议首次来到华中地区、来到江西南昌表示欢迎。石院长对中国R语言会议的发展和影响力表示了充分肯定，并预祝本次大会取得圆满成功。
 
-[<img class="aligncenter size-full wp-image-11669" src="https://cos.name/wp-content/uploads/2015/11/003成功.jpg" alt="003成功" width="1269" height="844" />](https://cos.name/wp-content/uploads/2015/11/003成功.jpg)
+![003成功](https://cos.name/wp-content/uploads/2015/11/003成功.jpg)
 
 ##### 
 
@@ -52,7 +52,7 @@ slug: 8th-china-r-nanchang-summary
 
 澳大利亚邦德大学精算学院院长、金融大数据分析中心主任Terry O&#8217;Neill教授以数据科学领域的精算科学为主题，讨论了R语言在精算学领域的前沿所扮演的角色。他在演讲中提到，R语言的发展之初具有很强的学术性，它始于一个核心统计学家用户群，但是现在R语言的用户群已经分布在了数据科学的各个领域。R已经被很多顶尖的精算行业组织，研究和教学机构所接受。精算学只有拥抱R语言才能更好的融入这个时代。
 
-[<img class="aligncenter size-full wp-image-11668" src="https://cos.name/wp-content/uploads/2015/11/005时代.jpg" alt="005时代" width="1269" height="844" srcset="https://cos.name/wp-content/uploads/2015/11/005时代.jpg 1269w, https://cos.name/wp-content/uploads/2015/11/005时代-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/11/005时代-500x333.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/11/005时代.jpg)
+![005时代](https://cos.name/wp-content/uploads/2015/11/005时代.jpg)
 
 &nbsp;
 
@@ -60,7 +60,7 @@ slug: 8th-china-r-nanchang-summary
 
 澳大利亚莫纳什大学统计学教授、商务与经济预测中心主任Rob Hyndman教授讲述了R语言在大型时间序列数据预测方面的应用。他提出，对许多组织机构来说，定期对成千上万的时间序列进行预测越来越成为一种普遍的需求。例如，制造企业往往需要每周在数十个地点，对成千上万的产品需求进行预测以计划分配和维护适当的库存。他对当前进行大型时间序列数据预测技术进行了高屋建瓴的概括和效果展示。
 
-[<img class="aligncenter size-full wp-image-11667" src="https://cos.name/wp-content/uploads/2015/11/006展示.jpg" alt="006展示" width="1270" height="953" srcset="https://cos.name/wp-content/uploads/2015/11/006展示.jpg 1270w, https://cos.name/wp-content/uploads/2015/11/006展示-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/11/006展示-500x375.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/11/006展示.jpg)
+![006展示](https://cos.name/wp-content/uploads/2015/11/006展示.jpg)
 
 &nbsp;
 
@@ -68,7 +68,7 @@ slug: 8th-china-r-nanchang-summary
 
 北京大学“百人计划”研究员，数学科学学院博士生导师姚远教授的报告是基于ODE的变量选择方法，他提出的方法既可以保证变量选择过程中的一致性，也保证了无偏性，因此优于著名的LASSO方法。他的研究团队还开发出了相应的R语言包。
 
-[<img class="aligncenter size-full wp-image-11666" src="https://cos.name/wp-content/uploads/2015/11/007包.jpg" alt="007包" width="1293" height="970" srcset="https://cos.name/wp-content/uploads/2015/11/007包.jpg 1293w, https://cos.name/wp-content/uploads/2015/11/007包-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/11/007包-500x375.jpg 500w" sizes="(max-width: 1293px) 100vw, 1293px" />](https://cos.name/wp-content/uploads/2015/11/007包.jpg)
+![007包](https://cos.name/wp-content/uploads/2015/11/007包.jpg)
 
 &nbsp;
 
@@ -76,7 +76,7 @@ slug: 8th-china-r-nanchang-summary
 
 ** **澳大利亚精算理事会主席、Investors Mutual Ltd.分析师Michael O&#8217;Neill教授分析了R语言在高频波动率交易市场的应用及相关研究成果。他指出，这项研究利用高频数据确定了价格发现以及交易所交易价格波动之间领先/落后的关系是否随着时间的推移发生了变化。
 
-[<img class="aligncenter size-full wp-image-11665" src="https://cos.name/wp-content/uploads/2015/11/008变化.jpg" alt="008变化" width="1269" height="846" srcset="https://cos.name/wp-content/uploads/2015/11/008变化.jpg 1269w, https://cos.name/wp-content/uploads/2015/11/008变化-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/11/008变化-500x333.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/11/008变化.jpg)
+![008变化](https://cos.name/wp-content/uploads/2015/11/008变化.jpg)
 
 &nbsp;
 
@@ -84,7 +84,7 @@ slug: 8th-china-r-nanchang-summary
 
 澳大利亚邦德大学Garry Khemka教授分析了客观目标的设定对退休政策的影响，展示了如何通过动态优化结合蒙特卡洛模拟的方法达到个人选择最优化的目标。
 
-[<img class="aligncenter size-full wp-image-11664" src="https://cos.name/wp-content/uploads/2015/11/009目标.jpg" alt="009目标" width="1270" height="953" srcset="https://cos.name/wp-content/uploads/2015/11/009目标.jpg 1270w, https://cos.name/wp-content/uploads/2015/11/009目标-300x225.jpg 300w, https://cos.name/wp-content/uploads/2015/11/009目标-500x375.jpg 500w" sizes="(max-width: 1270px) 100vw, 1270px" />](https://cos.name/wp-content/uploads/2015/11/009目标.jpg)
+![009目标](https://cos.name/wp-content/uploads/2015/11/009目标.jpg)
 
 &nbsp;
 
@@ -92,7 +92,7 @@ slug: 8th-china-r-nanchang-summary
 
 ** **堡力山集团副总裁李舰先生讨论了R语言在社会网络分析方面的应用。社交网络分析（Social Network Analysis，SNA）是在传统的图与网络理论之上对社交网络数据进行分析的方法，如今已经成了大数据分析不可或缺的一部分。报告介绍了 SNA 的相关知识及其在R中的实现方式，并结合业界常用的Gephi软件进行图形化的讲解。此外，他还通过案例分享来说明社交网络分析的方法在业界的应用。
 
-[<img class="aligncenter size-full wp-image-11663" src="https://cos.name/wp-content/uploads/2015/11/009应用.jpg" alt="009应用" width="1269" height="846" srcset="https://cos.name/wp-content/uploads/2015/11/009应用.jpg 1269w, https://cos.name/wp-content/uploads/2015/11/009应用-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/11/009应用-500x333.jpg 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/11/009应用.jpg)
+![009应用](https://cos.name/wp-content/uploads/2015/11/009应用.jpg)
 
 &nbsp;
 
@@ -184,7 +184,7 @@ Wush Chi-Hsuan Wu (台湾大学)：Introduction to FeatureHashing
 
 志愿者：章文英，潘睿，邱雨帆，洪思渊，吴经纬，李涛，贺莎莎，黄顺钰，谢林利，蔡彬，熊洪钰，潘启娣，林海，熊志远，廖明亚，杨超，刘昌华，孔程诚，苏建冲，郭思澄，李子美，董梦皓，熊熹，魏太云，周扬
 
-[<img class="aligncenter size-full wp-image-11662" src="https://cos.name/wp-content/uploads/2015/11/010合影.jpg" alt="010合影" width="1268" height="846" srcset="https://cos.name/wp-content/uploads/2015/11/010合影.jpg 1268w, https://cos.name/wp-content/uploads/2015/11/010合影-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/11/010合影-500x334.jpg 500w" sizes="(max-width: 1268px) 100vw, 1268px" />](https://cos.name/wp-content/uploads/2015/11/010合影.jpg)
+![010合影](https://cos.name/wp-content/uploads/2015/11/010合影.jpg)
 
 <p style="text-align: center;">
   会议及论坛部分演讲者和组织人员合影

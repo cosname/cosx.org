@@ -16,7 +16,7 @@ _原文链接请点击<a href="http://blog.pluskid.org/?p=692" target="_blank">�
 
 在[最开始讨论支持向量机的时候](/?p=632)，我们就假定，数据是线性可分的，亦即我们可以找到一个可行的超平面将数据完全分开。后来为了处理非线性数据，[使用 Kernel 方法对原来的线性 SVM 进行了推广](/?p=685)，使得非线性的的情况也能处理。虽然通过映射 $\phi(\cdot)$ 将原始数据映射到高维空间之后，能够线性分隔的概率大大增加，但是对于某些情况还是很难处理。例如可能并不是因为数据本身是非线性结构的，而只是因为数据有噪音。对于这种偏离正常位置很远的数据点，我们称之为 outlier ，在我们原来的 SVM 模型里，outlier 的存在有可能造成很大的影响，因为超平面本身就是只有少数几个 support vector 组成的，如果这些 support vector 里又存在 outlier 的话，其影响就很大了。例如下图：
 
-[<img class="aligncenter size-full wp-image-9593" alt="Optimal-Hyper-Plane-2" src="https://cos.name/wp-content/uploads/2014/02/Optimal-Hyper-Plane-2.png" width="391" height="384" srcset="https://cos.name/wp-content/uploads/2014/02/Optimal-Hyper-Plane-2.png 391w, https://cos.name/wp-content/uploads/2014/02/Optimal-Hyper-Plane-2-300x294.png 300w" sizes="(max-width: 391px) 100vw, 391px" />](https://cos.name/wp-content/uploads/2014/02/Optimal-Hyper-Plane-2.png)
+![Optimal-Hyper-Plane-2](https://cos.name/wp-content/uploads/2014/02/Optimal-Hyper-Plane-2.png)
 
 用黑圈圈起来的那个蓝点是一个 outlier ，它偏离了自己原本所应该在的那个半空间，如果直接忽略掉它的话，原来的分隔超平面还是挺好的，但是由于这个 outlier 的出现，导致分隔超平面不得不被挤歪了，变成途中黑色虚线所示（这只是一个示意图，并没有严格计算精确坐标），同时 margin 也相应变小了。当然，更严重的情况是，如果这个 outlier 再往右上移动一些距离的话，我们将无法构造出能将数据分开的超平面来。
 

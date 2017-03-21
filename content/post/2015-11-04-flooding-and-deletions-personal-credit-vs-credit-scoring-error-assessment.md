@@ -20,21 +20,21 @@ slug: flooding-and-deletions-personal-credit-vs-credit-scoring-error-assessment
 
        最近被刺激了！有人被刺激后的反应是以头抢地尔，而教授被刺激的第一反应是：写Paper！故事的发生是这样的。一天组会，大家东拉西扯，也不知怎么就扯到个人征信上去了。于是突发奇想，我请大家把自己的手机掏出来，每个人查一下自己的“芝麻信用”分是多少。王老师的芝麻信用分高居630之多，心想：这么高的芝麻信用分，可以秒杀众多学生，然后可以得意地哈哈大笑。
 
-[<img class="aligncenter size-full wp-image-11535" src="https://cos.name/wp-content/uploads/2015/11/001.jpg" alt="001" width="1399" height="921" srcset="https://cos.name/wp-content/uploads/2015/11/001.jpg 1399w, https://cos.name/wp-content/uploads/2015/11/001-300x197.jpg 300w, https://cos.name/wp-content/uploads/2015/11/001-500x329.jpg 500w" sizes="(max-width: 1399px) 100vw, 1399px" />](https://cos.name/wp-content/uploads/2015/11/001.jpg)
+![001](https://cos.name/wp-content/uploads/2015/11/001.jpg)
 
 对，就是上面这个样子：哈，哈，哈，哈。额，噢？Hold on，怎么回事，你的得分居然更高？啊，你也更高？What，你们都这么高？天啊！你们每个人的芝麻信用分都比我高！同学们的芝麻信用分最高的有730，紧跟着一个700+，剩下的虽然不到700，但是无一例外，全部比我高。王老师是整个组里芝麻信用分最低的，木有之一，太丢人了！我这下子才醒悟过来，630不是高考得分，是芝麻信用分。630是一个不怎么乐观的得分。还亏的我自己研究个人征信呢，结果被芝麻信用秒成渣！瞬间，王老师的心情变成<!--more-->
 
-[<img class="aligncenter size-full wp-image-11536" src="https://cos.name/wp-content/uploads/2015/11/002.jpg" alt="002" width="1517" height="839" srcset="https://cos.name/wp-content/uploads/2015/11/002.jpg 1517w, https://cos.name/wp-content/uploads/2015/11/002-300x166.jpg 300w, https://cos.name/wp-content/uploads/2015/11/002-500x277.jpg 500w" sizes="(max-width: 1517px) 100vw, 1517px" />](https://cos.name/wp-content/uploads/2015/11/002.jpg)
+![002](https://cos.name/wp-content/uploads/2015/11/002.jpg)
 
 如前所述，教授被惹毛后的第一反应是：写Paper！而且必须遵循按照严格的学术规范，先从背景介绍开始。为此，我们首先需要科普一下“芝麻信用”是个啥子东东。
 
 假设你有一个手机APP，叫做“支付宝”。没有？赶紧安装，要不让你会比王老师还惨。打开支付宝APP的主界面，在左侧居中的地方，有一个按钮“芝麻信用分”。轻轻点开，你就会看到自己的芝麻信用分。
 
-[<img class="aligncenter size-full wp-image-11537" src="https://cos.name/wp-content/uploads/2015/11/003.jpg" alt="003" width="1268" height="751" srcset="https://cos.name/wp-content/uploads/2015/11/003.jpg 1268w, https://cos.name/wp-content/uploads/2015/11/003-300x178.jpg 300w, https://cos.name/wp-content/uploads/2015/11/003-500x296.jpg 500w" sizes="(max-width: 1268px) 100vw, 1268px" />](https://cos.name/wp-content/uploads/2015/11/003.jpg)
+![003](https://cos.name/wp-content/uploads/2015/11/003.jpg)
 
 而上图中间这个展示的就是王老师的芝麻信用分：630。不过，现在我已经知道了，这是一个很惨的得分，我希望提升信用，可以吗？答：可以。请Follow右下角的“信用提升”按钮。进入后发现芝麻给我安排了2个“芝麻任务”。啥子任务？它要我“录入车辆信息”还有“绑定Linkedin”。这个悲催，我木有Linkedin账号，难不成还得去申请注册一个？还有，我不想告诉你车辆信息可以不？更加逗的是这个“芝麻习惯”：<u>给家人买礼物或生活用品，做一个有家庭责任感的人</u>。这似乎在说：你，是一个木有家庭责任感的人，因为：你不给家人买礼物，甚至生活用品都不买。我勒个去，打开我的京东APP，
 
-[<img class="aligncenter size-full wp-image-11538" src="https://cos.name/wp-content/uploads/2015/11/004.jpg" alt="004" width="877" height="734" srcset="https://cos.name/wp-content/uploads/2015/11/004.jpg 877w, https://cos.name/wp-content/uploads/2015/11/004-300x251.jpg 300w, https://cos.name/wp-content/uploads/2015/11/004-500x418.jpg 500w" sizes="(max-width: 877px) 100vw, 877px" />](https://cos.name/wp-content/uploads/2015/11/004.jpg)
+![004](https://cos.name/wp-content/uploads/2015/11/004.jpg)
 
 这一堆给孩子买的书，乐器配件，这都不算给家人买礼物哇？如果我拿这几个问题去质问芝麻信用负责人，他会怎么答复我呢？我猜，他会理直气壮地说：你在京东买的东西，支付宝怎么知道呢？说的也是啊，我在京东买的东西，支付宝怎么可能知道呢？对不起，对不起，我错了。我应该在淘宝买东西，而不是京东。我应该使用支付宝，而不是微信支付。否则，你的芝麻信用就该是630分！
 
@@ -42,19 +42,19 @@ slug: flooding-and-deletions-personal-credit-vs-credit-scoring-error-assessment
 
 本文到此，吐槽结束，进入严肃点的话题。这里我并不想说“芝麻信用分”多么不好。恰恰相反，我个人认为“芝麻信用分”是互联网征信这个行业里，可圈可点做得很不错的一个产品。但就像一个普通人一样，再优秀的个体，都会有成长的困惑与烦恼，尤其是当他长得快的时候。“芝麻信用分”所表现出来的问题，是互联网征信整个行业普遍存在，而被忽视的一个普遍问题。那就是缺乏对征信误差（Credit Scoring Error）的深刻认识。造成的后果就是：征信泛滥。不分对象，不分场景，任何一个机构，都敢在大数据的幌子下，给人打分。那么，什么是征信误差？我不知道这个名词在过去的文献中是否存在过。如果没有，请原谅王老师自己瞎编了这个词。主要想说明下面这么一个道理。假设一个人的真实信用情况是Z，这是一个任何人都看不见的最真实信用情况。如果我们知道了Z，世界上就不再有“征信”这个问题。但是，信用评估机构（例如：芝麻）看到了一系列的，可能同Z相关的指标（例如：消费习惯、收入状况、教育程度等）。我们把这所有的相关性指标用一个向量X表示。这里，依赖于X中采集了多少可见的指标，它的维度有可能很高。那么，<u>征信的核心问题就是：要通过看得见的</u><u>X</u><u>，推测看不见的Z</u>。
 
-[<img class="aligncenter size-full wp-image-11540" src="https://cos.name/wp-content/uploads/2015/11/005.jpg" alt="005" width="1051" height="581" srcset="https://cos.name/wp-content/uploads/2015/11/005.jpg 1051w, https://cos.name/wp-content/uploads/2015/11/005-300x166.jpg 300w, https://cos.name/wp-content/uploads/2015/11/005-500x276.jpg 500w" sizes="(max-width: 1051px) 100vw, 1051px" />](https://cos.name/wp-content/uploads/2015/11/005.jpg)
+![005](https://cos.name/wp-content/uploads/2015/11/005.jpg)
 
 但是，给定X，就能精确地知道Z了吗？当然不可能。我自己都说不清楚我的Z是多少，你怎么知道？我借了隔壁老王100元，还？还是不还？可能懒得还，我俩老熟了，这点钱还要还。我要是借了100万呢？我要是借了100亿呢？这说明什么？这说明同一个人的Z，可能会随着场景的不同而不同。这又说明什么？这说明即使本人都说不清楚自己的Z是多少，更何况一个征信机构。但是，征信机构会通过X，以及大量用户真实的信用行为，学习出一个模型来。然后，通过这个模型去猜测真实的信用Z。数学上把这个猜测记作：Z\*=f(X)。没错，Z\*就是那个征信得分（例如：芝麻信用分），它就是X的一个函数。用统计学的语言讲，Z\*是对真实信用Z的一个估计量（Estimate）。既然Z\*是一个估计量，那么他就不会100%准确。他同真实的信用Z之间，会有一个偏差，而这个偏差就是我所定义的“征信误差”（Credit Scoring Error），即：CSE=|Z*-Z|。
 
 我们对征信误差的期待是什么？当然是越小越好。怎样才能让CSE变小呢？样本量会有帮助吗？有，但是帮助不大。例如：我告诉你全世界每一个人的性别（木有其他信息），这个样本量够大了把？但是，对征信而言，帮助极其有限。因为，对于征信而言，性别不是一个特别重要的指标，而且这还是唯一的指标。所以，真正的可以减少征信误差的方法是：增加X，让X的信息更加丰富，让X的维度变得更高。例如：以前X里面只有淘宝的数据，现在可以考虑增加京东的；以前X里面只有收入水平，现在可以考虑增加教育程度；以前X里面只有消费数据，现在可以考虑增加社交信息。只有增加高质量的X，才可以降低征信误差，从而降低信贷风险。这就难怪，几乎所有征信企业的高管，都忙于拓展数据源，丰富自己的X。对于什么样的行业、什么样的企业、通过什么样的方式，才可以达成数据分享的联盟，这是每一个征信企业都要思考的问题。
 
-[<img class="aligncenter size-full wp-image-11541" src="https://cos.name/wp-content/uploads/2015/11/006.jpg" alt="006" width="1042" height="744" srcset="https://cos.name/wp-content/uploads/2015/11/006.jpg 1042w, https://cos.name/wp-content/uploads/2015/11/006-300x214.jpg 300w, https://cos.name/wp-content/uploads/2015/11/006-500x357.jpg 500w" sizes="(max-width: 1042px) 100vw, 1042px" />](https://cos.name/wp-content/uploads/2015/11/006.jpg)
+![006](https://cos.name/wp-content/uploads/2015/11/006.jpg)
 
 &nbsp;
 
 现在我们介绍了征信误差这个概念。接下来的问题是：如何测量CSE？我们可以精确知道CSE是多少吗？当然不可能。因为在Z\*已知的前提下，如果还精确知道了CSE，那等价于精确知道了Z。而如前所述，Z是不可能精确知道的。那么如何评价Z\*的误差呢？这是统计学另外一个了不起的创意。它说：如果我们无法知道CSE的精确取值，那么就计算一下他的预期（Expectation）吧。其实细想一下，这不是一个值得特别开心的事情。因为，但凡我们可以知道CSE的精确取值，就没有必要计算他的预期了。之所以用预期的CSE（ECSE，Expected Credit Scoring Error），是因为没有更好的办法了。但是，不管怎样，ECSE应该是一个有用的工具，而且是可以通过模型和相关理论计算出来的。从理论上讲， ECSE可以有很多种不同的定义。例如：绝对误差和均方误差就是两个可能的不同选择。但是，无论如何定义，一个合理的ECSE必须具备一些简单的特征。例如：如果ECSE=0，那么就会有Z*=Z。又例如，只要X的信息越来越多，ECSE会单调下降，但是不会无限接近0。
 
-[<img class="aligncenter size-full wp-image-11542" src="https://cos.name/wp-content/uploads/2015/11/007.jpg" alt="007" width="1046" height="525" srcset="https://cos.name/wp-content/uploads/2015/11/007.jpg 1046w, https://cos.name/wp-content/uploads/2015/11/007-300x151.jpg 300w, https://cos.name/wp-content/uploads/2015/11/007-500x251.jpg 500w" sizes="(max-width: 1046px) 100vw, 1046px" />](https://cos.name/wp-content/uploads/2015/11/007.jpg)
+![007](https://cos.name/wp-content/uploads/2015/11/007.jpg)
 
 知道ECSE又怎样？为此，我们再检讨一下王老师芝麻信用分的问题。按照现在的这个理论框架，芝麻采集了一些关于王老师X的信息。因为王老师很少用支付宝，所以X非常有限。这个的后果是，征信估计量Z\*=630是一个很不准确的得分。如果我们可以计算他的ECSE，可能是一个很大的数字（例如：50）。这说明，其实630±2\*50都是王老师真实信用的合理取值范围。最小可以到530（糟糕透顶），最好可以到730（极其优秀）。王老师，以小人之心，做一个腹黑的推断：可能，为了增加更多更丰富的X，芝麻的信用得分里还会惩罚像王老师这样信息不完备的家伙，而鼓励完成“芝麻任务”，养成“芝麻习惯”的用户。然而，这些都是在增加X，降低ECSE，而无关乎真实的信用。
 

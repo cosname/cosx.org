@@ -16,7 +16,7 @@ slug: voyager1-cross-hp
 
 <a href="http://zh.wikipedia.org/zh-tw/旅行者1号" target="_blank">航海家1号</a>（<a href="http://voyager.jpl.nasa.gov" target="_blank">Voyager 1</a>）作为一艘无人太空探测船于1977年9月5日从佛罗里达洲的卡纳维尔角发射升空，先后位临木星，土星，正在向星际间的太空进发。
 
-<figure style="width: 600px" class="wp-caption aligncenter"><img title="航海家1号" alt="" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Voyager.jpg/766px-Voyager.jpg" width="600" height="469" /><figcaption class="wp-caption-text">航海家1号</figcaption></figure>
+<figure style="width: 600px" class="wp-caption aligncenter">![](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Voyager.jpg/766px-Voyager.jpg "航海家1号")<figcaption class="wp-caption-text">航海家1号</figcaption></figure>
   
 <!--more-->
 
@@ -25,7 +25,7 @@ slug: voyager1-cross-hp
 而且它还携带了一张<a href="http://voyager.jpl.nasa.gov/spacecraft/goldenrec.html" target="_blank">航海家金唱片</a>，其中包含了115张图片和世界上的各种自然声音及音乐。
 
 <p style="text-align: center;">
-  <a href="http://zh.wikipedia.org/wiki/旅行者金唱片"><img class="aligncenter" alt="" src="http://voyager.jpl.nasa.gov/images/features/features2.jpg" width="600" height="361" /></a>
+  <a href="http://zh.wikipedia.org/wiki/旅行者金唱片">![](http://voyager.jpl.nasa.gov/images/features/features2.jpg)</a>
 </p>
 
 从2003年起，大家就都在等航海家1号飞离太阳系的那一天，有兴趣的人也可以在美国<a href="http://voyager.jpl.nasa.gov/index.html" target="_blank">空气动力推进实验室</a>的网页上查到<a href="http://voyager.jpl.nasa.gov/where/" target="_blank">它的当前的估计位置</a>。可就在大家耐心（和不耐心）等待的时候，忽然在今年8月14号M. Swisdak, J. F. Drake, and M. Opher 在 The Astrophysical Journal Letters上发表了<a href="http://iopscience.iop.org/2041-8205/774/1/L8/pdf/2041-8205_774_1_L8.pdf" target="_blank">一篇文章</a>，说其实去年（2012年7月27号）它就已经离开太阳系了。问题这就来了，它到底离开了，还是没离开呢？
@@ -48,7 +48,7 @@ slug: voyager1-cross-hp
   </p>
   
   <p>
-    从我这地球人的角度来看，如果数据是靠谱的，那没有观测到这个磁场方向的变化至少有两种可能，一个是航海家1号还没有走出日球顶层，我们接着等；另一个就是我们认为“磁场方向有大的转向”的想法不太对头。<br /> <a href="http://voyager.jpl.nasa.gov/images/features/features1.jpg"><img class="aligncenter" alt="" src="http://voyager.jpl.nasa.gov/images/features/features1.jpg" width="600" /></a><br /> 文章接下来提出另一个可能的模型。这个模型指出在航海家1号附近的磁场方向变化应该很小，而且于它发回的数据相符。根据这个模型，航海家1号已经昂首阔步的走出了太阳系，并且是去年七月就已经出围了。
+    从我这地球人的角度来看，如果数据是靠谱的，那没有观测到这个磁场方向的变化至少有两种可能，一个是航海家1号还没有走出日球顶层，我们接着等；另一个就是我们认为“磁场方向有大的转向”的想法不太对头。<br /> <a href="http://voyager.jpl.nasa.gov/images/features/features1.jpg">![](http://voyager.jpl.nasa.gov/images/features/features1.jpg)</a><br /> 文章接下来提出另一个可能的模型。这个模型指出在航海家1号附近的磁场方向变化应该很小，而且于它发回的数据相符。根据这个模型，航海家1号已经昂首阔步的走出了太阳系，并且是去年七月就已经出围了。
   </p>
   
   <div title="Page 1">
@@ -96,7 +96,7 @@ slug: voyager1-cross-hp
   </p>
   
   <p>
-    <img class="aligncenter" alt="" src="http://abyss.uoregon.edu/~js/images/voy_traj.jpg" width="380" height="319" />
+    ![](http://abyss.uoregon.edu/~js/images/voy_traj.jpg)
   </p>
   
   <p>

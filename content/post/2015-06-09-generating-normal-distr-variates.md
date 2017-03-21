@@ -88,7 +88,7 @@ $$P\left \{ \frac{X\_1+X\_2+\cdots+X\_n-n\mu}{\sigma \sqrt n} \leq x \right \} \
 
 得到结果如下图所示
 
-[<img class="aligncenter size-full wp-image-11054" src="https://cos.name/wp-content/uploads/2015/06/generate-normal-1.png" alt="generate-normal-1" width="422" height="374" srcset="https://cos.name/wp-content/uploads/2015/06/generate-normal-1.png 422w, https://cos.name/wp-content/uploads/2015/06/generate-normal-1-300x266.png 300w" sizes="(max-width: 422px) 100vw, 422px" />](https://cos.name/wp-content/uploads/2015/06/generate-normal-1.png)可以看到，`n=1`时其实就是均匀分布，随着`n`逐渐增大，直方图轮廓越来越接近正态分布了~因此利用中心极限定理暴力生成服从正态分布的随机数是可行的。但是这样生成正态分布速度是非常慢的，因为要生成若干个同分布随机变量，然后求和、计算，效率是非常低的。
+![generate-normal-1](https://cos.name/wp-content/uploads/2015/06/generate-normal-1.png)可以看到，`n=1`时其实就是均匀分布，随着`n`逐渐增大，直方图轮廓越来越接近正态分布了~因此利用中心极限定理暴力生成服从正态分布的随机数是可行的。但是这样生成正态分布速度是非常慢的，因为要生成若干个同分布随机变量，然后求和、计算，效率是非常低的。
 
 ### 利用逆变换法生成正态分布
 
@@ -96,7 +96,7 @@ $$P\left \{ \frac{X\_1+X\_2+\cdots+X\_n-n\mu}{\sigma \sqrt n} \leq x \right \} \
 
 正态分布的概率分布函数(CDF)如下图所示，
 
-[<img class="aligncenter size-full wp-image-11055" src="https://cos.name/wp-content/uploads/2015/06/generate-normal-2.png" alt="generate-normal-2" width="350" height="224" srcset="https://cos.name/wp-content/uploads/2015/06/generate-normal-2.png 350w, https://cos.name/wp-content/uploads/2015/06/generate-normal-2-300x192.png 300w" sizes="(max-width: 350px) 100vw, 350px" />](https://cos.name/wp-content/uploads/2015/06/generate-normal-2.png)在`y`轴上产生服从(0,1)均匀分布的随机数，水平向右投影到曲线上，然后垂直向下投影到`x`轴，这样在`x`轴上就得到了正态分布。
+![generate-normal-2](https://cos.name/wp-content/uploads/2015/06/generate-normal-2.png)在`y`轴上产生服从(0,1)均匀分布的随机数，水平向右投影到曲线上，然后垂直向下投影到`x`轴，这样在`x`轴上就得到了正态分布。
 
 当然正态分布的概率分布函数不方便直接用数学形式写出，求反函数也无从说起，不过好在`scipy`中有相应的函数，我们直接使用即可。
 
@@ -118,7 +118,7 @@ $$P\left \{ \frac{X\_1+X\_2+\cdots+X\_n-n\mu}{\sigma \sqrt n} \leq x \right \} \
 
 结果如下图所示，
 
-[<img class="aligncenter size-large wp-image-11056" src="https://cos.name/wp-content/uploads/2015/06/generate-normal-3-500x377.png" alt="generate-normal-3" width="500" height="377" srcset="https://cos.name/wp-content/uploads/2015/06/generate-normal-3-500x377.png 500w, https://cos.name/wp-content/uploads/2015/06/generate-normal-3-300x226.png 300w, https://cos.name/wp-content/uploads/2015/06/generate-normal-3.png 815w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/06/generate-normal-3.png)以上两个方法虽然方便也容易理解，但是效率实在太低，并不实用，那么在实际中到底是如何生成正态分布的呢？
+![generate-normal-3](https://cos.name/wp-content/uploads/2015/06/generate-normal-3.png)以上两个方法虽然方便也容易理解，但是效率实在太低，并不实用，那么在实际中到底是如何生成正态分布的呢？
 
 ### Box–Muller算法
 
@@ -186,7 +186,7 @@ $$\begin{align} \left | J \right | =\begin{vmatrix} \frac{\partial X\_1}{\partia
 
 得到的结果如下图所示，
 
-[<img class="aligncenter size-full wp-image-11057" src="https://cos.name/wp-content/uploads/2015/06/generate-normal-4.png" alt="generate-normal-4" width="352" height="267" srcset="https://cos.name/wp-content/uploads/2015/06/generate-normal-4.png 352w, https://cos.name/wp-content/uploads/2015/06/generate-normal-4-300x228.png 300w" sizes="(max-width: 352px) 100vw, 352px" />](https://cos.name/wp-content/uploads/2015/06/generate-normal-4.png)这里抽样次数达到1千万次，1秒左右就完成了，速度非常快~
+![generate-normal-4](https://cos.name/wp-content/uploads/2015/06/generate-normal-4.png)这里抽样次数达到1千万次，1秒左右就完成了，速度非常快~
 
 ### Ziggurat算法
 
@@ -196,7 +196,7 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 拒绝采样（Rejection Sampling），有的时候也称接收-拒绝采样，使用场景是有些函数$p(x)$太复杂在程序中没法直接采样，那么可以设定一个程序可抽样的分布$q(x)$比如正态分布等等，然后按照一定的方法拒绝某些样本，达到接近$p(x)$分布的目的：
 
-[<img class="aligncenter size-large wp-image-11058" src="https://cos.name/wp-content/uploads/2015/06/generate-normal-5-500x257.png" alt="generate-normal-5" width="500" height="257" srcset="https://cos.name/wp-content/uploads/2015/06/generate-normal-5-500x257.png 500w, https://cos.name/wp-content/uploads/2015/06/generate-normal-5-300x154.png 300w, https://cos.name/wp-content/uploads/2015/06/generate-normal-5.png 566w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/06/generate-normal-5.png)具体操作如下，设定一个方便抽样的函数$q(x)$，以及一个常量$k$，使得$p(x)$总在$kq(x)$的下方。（参考上图）
+![generate-normal-5](https://cos.name/wp-content/uploads/2015/06/generate-normal-5.png)具体操作如下，设定一个方便抽样的函数$q(x)$，以及一个常量$k$，使得$p(x)$总在$kq(x)$的下方。（参考上图）
 
   * $x$轴方向：从$q(x)$分布抽样得到$a$
   * $y$轴方向：从均匀分布$(0, kq(a))$中抽样得到$u$
@@ -211,9 +211,9 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 采用拒绝采样来生成正态分布，最简单直观的方法莫过于用均匀分布作为$q(x)$，但是这样的话，矩形与正态分布曲线间的距离很大，就会出现刚才提到的问题，高效也就无从谈起了。
 
-[<img class="aligncenter size-full wp-image-11059" src="https://cos.name/wp-content/uploads/2015/06/generate-normal-6.png" alt="generate-normal-6" width="436" height="248" srcset="https://cos.name/wp-content/uploads/2015/06/generate-normal-6.png 436w, https://cos.name/wp-content/uploads/2015/06/generate-normal-6-300x171.png 300w" sizes="(max-width: 436px) 100vw, 436px" />](https://cos.name/wp-content/uploads/2015/06/generate-normal-6.png)而Ziggurat算法高效的秘密在于构造了一个非常精妙的$q(x)$，看下面这张图
+![generate-normal-6](https://cos.name/wp-content/uploads/2015/06/generate-normal-6.png)而Ziggurat算法高效的秘密在于构造了一个非常精妙的$q(x)$，看下面这张图
 
-[<img class="aligncenter size-large wp-image-11060" src="https://cos.name/wp-content/uploads/2015/06/generate-normal-7-461x500.png" alt="generate-normal-7" width="461" height="500" srcset="https://cos.name/wp-content/uploads/2015/06/generate-normal-7-461x500.png 461w, https://cos.name/wp-content/uploads/2015/06/generate-normal-7-277x300.png 277w, https://cos.name/wp-content/uploads/2015/06/generate-normal-7.png 737w" sizes="(max-width: 461px) 100vw, 461px" />](https://cos.name/wp-content/uploads/2015/06/generate-normal-7.png)我们用多个堆叠在一起的矩形，这样保证阴影部分（被拒绝部分）的始终较小，这样就非常高效了
+![generate-normal-7](https://cos.name/wp-content/uploads/2015/06/generate-normal-7.png)我们用多个堆叠在一起的矩形，这样保证阴影部分（被拒绝部分）的始终较小，这样就非常高效了
 
 简单对图作一个解释：
 
@@ -230,7 +230,7 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 最后对比一下Ziggurat算法与Box-muller算法的效率
 
-### [<img class="aligncenter size-large wp-image-11061" src="https://cos.name/wp-content/uploads/2015/06/generate-normal-8-500x376.png" alt="generate-normal-8" width="500" height="376" srcset="https://cos.name/wp-content/uploads/2015/06/generate-normal-8-500x376.png 500w, https://cos.name/wp-content/uploads/2015/06/generate-normal-8-300x226.png 300w, https://cos.name/wp-content/uploads/2015/06/generate-normal-8.png 512w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2015/06/generate-normal-8.png)总结
+### ![generate-normal-8](https://cos.name/wp-content/uploads/2015/06/generate-normal-8.png)总结
 
 本文介绍了多种生成正态分布的方法，其中Box-muller算法应对一般的需求足够了，但是要生成大量服从正态分布的随机数时，Ziggurat算法效率会更高一点~
 

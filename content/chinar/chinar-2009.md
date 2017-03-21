@@ -69,11 +69,11 @@ author: COS管理员
 # 会议事宜——上海会场
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR.jpg"><img class="aligncenter size-large wp-image-1922" title="第二届中国 R 语言会议 上海分会场 去logo" src="https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR-354x500.jpg" alt="" width="354" height="500" srcset="https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR-354x500.jpg 354w, https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR-212x300.jpg 212w, https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR.jpg 597w" sizes="(max-width: 354px) 100vw, 354px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR.jpg">![](https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR.jpg "第二届中国 R 语言会议 上海分会场 去logo")</a>
 </p>
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR.jpg"><img class="aligncenter size-large wp-image-1921" title="第二届中国 R 语言会议 上海分会场 去logo" src="https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR-353x500.jpg" alt="" width="353" height="500" srcset="https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR-353x500.jpg 353w, https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR-212x300.jpg 212w, https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR.jpg 1240w" sizes="(max-width: 353px) 100vw, 353px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR.jpg">![](https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR.jpg "第二届中国 R 语言会议 上海分会场 去logo")</a>
 </p>
 
 [](https://cos.name/wp-content/uploads/2009/10/2nd-Chinese-R-Conference-SH-poster1.jpg)

@@ -273,7 +273,7 @@ for (i in <strong>seq</strong>(0,.08,by=.001)){
 <em># </em><em>画出预测边值</em> 
 <strong>lines</strong>(sfit,muf,col="red")</pre>
 
-<img class="aligncenter wp-image-13427 size-full" src="https://cos.name/wp-content/uploads/2016/12/1.jpg" width="480" height="384" srcset="https://cos.name/wp-content/uploads/2016/12/1.jpg 480w, https://cos.name/wp-content/uploads/2016/12/1-300x240.jpg 300w" sizes="(max-width: 480px) 100vw, 480px" />
+![](https://cos.name/wp-content/uploads/2016/12/1.jpg)
 
 tseries包中的portfolio.optim比较而言更好用。只需要输入预期收益率,该函数会直接返回出来最优组合权重。在最低预期收益率(比如 100% 持有 SHY)到最高预期收益率(比如 100% 持有 TLT)之间修改输入的收益。注意,portfolio.optim会使用日收益率做计算,因此代码将不得不做一些处理并假设一年有255个交易日。
 
@@ -320,7 +320,7 @@ for (i in <strong>seq</strong>((rSHY+.001),(rTLT-.001),length.out=100)){    �
 
 如下图:
 
-<img class="aligncenter size-full wp-image-13428" src="https://cos.name/wp-content/uploads/2016/12/2.jpg" alt="2" width="480" height="384" srcset="https://cos.name/wp-content/uploads/2016/12/2.jpg 480w, https://cos.name/wp-content/uploads/2016/12/2-300x240.jpg 300w" sizes="(max-width: 480px) 100vw, 480px" />
+![2](https://cos.name/wp-content/uploads/2016/12/2.jpg)
 
 总资产组合中有效边界的蓝线表示其优于杠铃策略。对于每个风险水平,预期收益都更高。从图表上看,这表明添加 IEF 到组合将优化组合。进一步,看到杠铃策略收益的逼近最大值,用三个标的组合的组合策略比之前的风险少了一半。
 
@@ -360,4 +360,4 @@ for (i in <strong>seq</strong>((rSHY+.001),(rTLT-.001),length.out=100)){    �
 
 敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
 
-[<img class="aligncenter size-medium wp-image-13124" src="https://cos.name/wp-content/uploads/2016/08/QR-300x300.png" alt="QR" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2016/08/QR-300x300.png 300w, https://cos.name/wp-content/uploads/2016/08/QR-150x150.png 150w, https://cos.name/wp-content/uploads/2016/08/QR-500x500.png 500w, https://cos.name/wp-content/uploads/2016/08/QR.png 640w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2016/08/QR.png)</section> </section> <section class=""> <section class=""></section> </section>
+![QR](https://cos.name/wp-content/uploads/2016/08/QR.png)</section> </section> <section class=""> <section class=""></section> </section>
