@@ -1,5 +1,5 @@
 ---
-title: 因果推断简介之七：Lord&#8217;s Paradox
+title: 因果推断简介之七：Lord’s Paradox
 date: '2013-09-09T19:00:58+00:00'
 author: 丁鹏
 categories:
@@ -16,7 +16,7 @@ slug: causality7-lord-paradox
 
 在充满随机性的统计世界中，悖论无处不在。这一节介绍一个很有名，但是在中文统计教科书中几乎从未介绍过的悖论。这个悖论是 Educational Testing Service (ETS) 的统计学家 Frederic Lord 于 1967 年提出来的；最终由同在 ETS 工作的另外两位统计学家 Paul Holland 和 Donald Rubin 于 1982 年圆满地找出了这个悖论的根源。这部分先介绍这个悖论，再介绍 Holland 和 Rubin 的解释，最后是一些结论。
 
-**一 Lord&#8217;s Paradox**
+**一 Lord’s Paradox**
   
 考虑下面一个简单例子，具体的数字是伪造的。某个学校想研究食堂对于学生体重是否有差异性的影响，尤其关心食堂对于男女学生体重影响是否相同。于是统计学家们收集了如下的数据：学生的性别 $G$；学生在 1963 年 6 月入学时候的体重 $X$；学生在 1964 年 6 月放暑假时候的体重 $Y$。
 
@@ -52,7 +52,7 @@ $$
 
 $$
   
-\Delta_g = E\{ Y(1) &#8211; Y(0) \mid G = g \}, g=1, 0;
+\Delta_g = E\{ Y(1) – Y(0) \mid G = g \}, g=1, 0;
   
 $$
 
@@ -62,15 +62,15 @@ $$
   
 \begin{eqnarray}
   
-\Delta &=& \Delta\_1 &#8211; \Delta\_0\\
+\Delta &=& \Delta\_1 – \Delta\_0\\
   
-&=& E\{ Y(1) &#8211; Y(0) \mid G = 1 \} &#8211; E\{ Y(1) &#8211; Y(0) \mid G = 0 \}\\
+&=& E\{ Y(1) – Y(0) \mid G = 1 \} – E\{ Y(1) – Y(0) \mid G = 0 \}\\
   
-&=&\left[ E\{ Y(1) \mid G = 1 \} &#8211; E\{ Y(1) \mid G = 0 \} \right] \\
+&=&\left[ E\{ Y(1) \mid G = 1 \} – E\{ Y(1) \mid G = 0 \} \right] \\
   
-&& &#8211;
+&& –
   
-\left[ E\{ Y(0) \mid G = 1 \} &#8211; E\{ Y(0) \mid G = 0 \} \right].
+\left[ E\{ Y(0) \mid G = 1 \} – E\{ Y(0) \mid G = 0 \} \right].
   
 \end{eqnarray}
   
@@ -82,7 +82,7 @@ $$
   
 $$
   
-\Delta_g = E\{ Y(1) &#8211; X\mid G = g \} = E(Y-X\mid G=g).
+\Delta_g = E\{ Y(1) – X\mid G = g \} = E(Y-X\mid G=g).
   
 $$
   
@@ -98,21 +98,21 @@ E\{ Y(1)\mid X, G= g \} = a_g + bX,
   
 $$
   
-并且把 $\delta = a\_1 &#8211; a\_0$ 当成食堂对于男女体重差异作用的度量。$\delta$ 其实就是上面的线性回归模型 $(*)$ 的回归系数 $\beta_g$。如果我们假定 $Y(0) = \alpha + b X$，那么不去食堂进餐时的潜在体重 $Y(0)$ 是入学前体重 $X$ 的线性函数且截距是 $b$；这表明 $Y(1)$ 和 $Y(0)$ 关于 $X$ 的模型，仅仅截距不同，斜率相同。这个假定并非不可能。此时，
+并且把 $\delta = a\_1 – a\_0$ 当成食堂对于男女体重差异作用的度量。$\delta$ 其实就是上面的线性回归模型 $(*)$ 的回归系数 $\beta_g$。如果我们假定 $Y(0) = \alpha + b X$，那么不去食堂进餐时的潜在体重 $Y(0)$ 是入学前体重 $X$ 的线性函数且截距是 $b$；这表明 $Y(1)$ 和 $Y(0)$ 关于 $X$ 的模型，仅仅截距不同，斜率相同。这个假定并非不可能。此时，
   
 $$
   
 \begin{eqnarray}
   
-\Delta &=& E\{ Y(1) &#8211; Y(0) \mid G=1\} &#8211; E\{ Y(1) &#8211; Y(0)\mid G=0\} \\
+\Delta &=& E\{ Y(1) – Y(0) \mid G=1\} – E\{ Y(1) – Y(0)\mid G=0\} \\
   
-&=& E\{ Y(1) &#8211; \alpha &#8211; bX \mid G=1\} &#8211; E\{ Y(1) &#8211; \alpha &#8211; bX\mid G=0\} \\
+&=& E\{ Y(1) – \alpha – bX \mid G=1\} – E\{ Y(1) – \alpha – bX\mid G=0\} \\
   
-&=& \left[ E\{ Y(1) \mid G=1\} &#8211; b E(X\mid G=1) \right] \\
+&=& \left[ E\{ Y(1) \mid G=1\} – b E(X\mid G=1) \right] \\
   
-&&- \left[ E\{ Y(1)\mid G=0\} &#8211; b E(X\mid G=0) \right]\\
+&&- \left[ E\{ Y(1)\mid G=0\} – b E(X\mid G=0) \right]\\
   
-&=& a\_1 &#8211; a\_0 = \delta.
+&=& a\_1 – a\_0 = \delta.
   
 \end{eqnarray}
   
@@ -124,13 +124,13 @@ $$
   
 \begin{eqnarray}
   
-&& E\{ Y(1) \mid G=g\} &#8211; b E(X\mid G=g) \\
+&& E\{ Y(1) \mid G=g\} – b E(X\mid G=g) \\
   
 &=&
   
-E\left[ E\{ Y(1) \mid X, G=g\} \mid G=g\right] &#8211; b E(X\mid G=g) \\
+E\left[ E\{ Y(1) \mid X, G=g\} \mid G=g\right] – b E(X\mid G=g) \\
   
-&=& E\left[ a_g + bX \mid G=g\right] &#8211; b E(X\mid G=g) \\
+&=& E\left[ a_g + bX \mid G=g\right] – b E(X\mid G=g) \\
   
 &=& a_g.
   
@@ -142,9 +142,9 @@ $$
 
 **三 结论**
   
-根据上面的讨论，关于 Lord&#8217;s Paradox，我们有如下的结论：
+根据上面的讨论，关于 Lord’s Paradox，我们有如下的结论：
 
-（1）Lord&#8217;s Paradox 的根源在于，整个研究没有对照组；我们甚至不知道什么是对照组，不在食堂进餐，是在家里进餐，还是外面的参观进餐，还是其他？这其实导致 $Y(0)$ 并非完好定义。上面的讨论则是假定 $Y(0)$ 是良好定义的。
+（1）Lord’s Paradox 的根源在于，整个研究没有对照组；我们甚至不知道什么是对照组，不在食堂进餐，是在家里进餐，还是外面的参观进餐，还是其他？这其实导致 $Y(0)$ 并非完好定义。上面的讨论则是假定 $Y(0)$ 是良好定义的。
 
 （2）回归或者协方差分析等统计工具，并不能清楚的回答因果的问题。这个问题中，$\Delta$ 是一个我们关心的因果度量，离开潜在结果，是很难定义的。根据上面的讨论，两位统计学家不采用潜在结果模型，甚至没有意识到，这个研究根本的问题在于缺少对照。当然，如果我们能够做一个随机化的实验，有处理和对照组，那么回归分析也可能得到合理的答案。
 

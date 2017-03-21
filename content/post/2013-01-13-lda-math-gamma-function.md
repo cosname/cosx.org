@@ -178,7 +178,7 @@ $$ E(m,n) = \frac{\Gamma(m)\Gamma(n)}{\Gamma(m+n+1)} $$
 
 要了解更多的 Gamma 函数的历史，推荐阅读
 
-  * Philip J. Davis, Leonhard Euler&#8217;s Integral: A Historical Profile of the Gamma Function
+  * Philip J. Davis, Leonhard Euler’s Integral: A Historical Profile of the Gamma Function
   * Jacques Dutka, The Early History of the Factorial Function
   * Detlef Gronnau, Why is the gamma function so as it is?
 
@@ -186,7 +186,7 @@ $$ E(m,n) = \frac{\Gamma(m)\Gamma(n)}{\Gamma(m+n+1)} $$
 
 _Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also. _
   
-_&#8212;Philip J.Davis_
+_—Philip J.Davis_
 
 Gamma 函数从它诞生开始就被许多数学家进行研究，包括高斯、勒让德、威尔斯特拉斯、柳维尔等等。这个函数在现代数学分析中被深入研究，在概率论中也是无处不在，很多统计分布都和这个函数相关。Gamma 函数作为阶乘的推广，首先它也有和 Stirling 公式类似的一个结论
   
@@ -214,7 +214,7 @@ $$ \frac{\Gamma{(1+1)}}{\Gamma{(1-1/2+1)}} x^{1-1/2} = \frac{2\sqrt{x}}{\sqrt{\p
 
 Gamma 函数和欧拉常数$\gamma$ 有密切关系，可以发现
   
-$$ \gamma = -\frac{d\Gamma(x)}{dx}|\_{x=1} =\lim\_{n\rightarrow \infty}(1+\frac{1}{2} + \frac{1}{3}+\cdots+\frac{1}{n} &#8211; \log n) $$
+$$ \gamma = -\frac{d\Gamma(x)}{dx}|\_{x=1} =\lim\_{n\rightarrow \infty}(1+\frac{1}{2} + \frac{1}{3}+\cdots+\frac{1}{n} – \log n) $$
 
 进一步还可以发现 Gamma 函数和黎曼函数$\zeta(s)$有密切联系，
   
@@ -258,7 +258,7 @@ $$\Psi(1) = -\gamma, \Psi(2) = 1-\gamma$$
   
 $$\Psi\_1(1) = \zeta(2) = \frac{\pi^2}{6}, \Psi\_2(1) = -2\zeta(3)$$
 
-所以Gamma 函数在数学上是很有魅力的，它在数学上应用广泛，不仅能够被一个理科本科生很好的理解，本身又足够的深刻，具有很多漂亮的数学性质，历史上吸引了众多一流的数学家对它进行研究。美国数学家 Philip J.Davis 写了篇很有名的介绍 Gamma 函数的文章：“Leonhard Euler&#8217;s Integral:A Historical Profile of the Gamma Function”，文中对 Gamma 函数一些特性发现的历史进行了很详细的描述，这篇文章获得了 Chauvenet Prize(美国数学会颁发的数学科普最高奖)。<a href="http://www.52nlp.cn/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b02/digamma-func" rel="attachment wp-att-5101"><br /> </a>
+所以Gamma 函数在数学上是很有魅力的，它在数学上应用广泛，不仅能够被一个理科本科生很好的理解，本身又足够的深刻，具有很多漂亮的数学性质，历史上吸引了众多一流的数学家对它进行研究。美国数学家 Philip J.Davis 写了篇很有名的介绍 Gamma 函数的文章：“Leonhard Euler’s Integral:A Historical Profile of the Gamma Function”，文中对 Gamma 函数一些特性发现的历史进行了很详细的描述，这篇文章获得了 Chauvenet Prize(美国数学会颁发的数学科普最高奖)。<a href="http://www.52nlp.cn/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b02/digamma-func" rel="attachment wp-att-5101"><br /> </a>
 
 (本小节主要是数学欣赏，如果对某些概念不熟悉，就略过吧:-))
 

@@ -48,13 +48,13 @@ By the time you finish high school, you know a bit more:
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.003.jpg)
 </p>
 
-With a bachelor&#8217;s degree, you gain a specialty:
+With a bachelor’s degree, you gain a specialty:
 
 <p style="text-align: center;">
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.004.jpg)
 </p>
 
-A master&#8217;s degree deepens that specialty:
+A master’s degree deepens that specialty:
 
 <p style="text-align: center;">
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.005.jpg)
@@ -66,7 +66,7 @@ Reading research papers takes you to the edge of human knowledge:
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.006.jpg)
 </p>
 
-Once you&#8217;re at the boundary, you focus:
+Once you’re at the boundary, you focus:
 
 <p style="text-align: center;">
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.007.jpg)
@@ -84,7 +84,7 @@ Until one day, the boundary gives way:
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.009.jpg)
 </p>
 
-And, that dent you&#8217;ve made is called a Ph.D.:
+And, that dent you’ve made is called a Ph.D.:
 
 <p style="text-align: center;">
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.010.jpg)
@@ -96,7 +96,7 @@ Of course, the world looks different to you now:
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.011.jpg)
 </p>
 
-So, don&#8217;t forget the bigger picture:
+So, don’t forget the bigger picture:
 
 <p style="text-align: center;">
   ![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.012.jpg)

@@ -14,7 +14,7 @@ tags:
 slug: evaluation-of-classifiers
 ---
 
-[box type=&#8221;info&#8221;]<span style="color: black;">本文转载自阿稳的博客，原文链接请点击<a href="http://www.wentrue.net/blog/?p=1279" target="_blank">此处</a>。本文主要介绍了数据挖掘中分类器的评价指标，以及混淆矩阵、ROC曲线等内容。</span>
+[box type=”info”]<span style="color: black;">本文转载自阿稳的博客，原文链接请点击<a href="http://www.wentrue.net/blog/?p=1279" target="_blank">此处</a>。本文主要介绍了数据挖掘中分类器的评价指标，以及混淆矩阵、ROC曲线等内容。</span>
 
 <span style="color: black;">作者简介：阿稳，豆瓣，算法工程师。感兴趣的领域：推荐系统，数据挖掘，算法架构及实现的可扩展性，R环境编程。博客<a href="http://www.wentrue.net/blog/" target="_blank">http://www.wentrue.net/blog/</a>。</span>[/box]
 

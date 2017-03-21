@@ -30,7 +30,7 @@ Warren，你让我太震惊了！你只要不去理会股票市场的短期甚�
 “个人理财”板块上经常有人在讨论长期持仓（buy and hold）策略的资金安全问题，是选择长期持仓，还是选时操作捕捉市场（time the market）。在这个可视化项目中，我尝试做下面三件事情：
 
   * 客观地回顾标普 500 相关股票的各个切面的长期投资收益（过去和现在）。
-  * 验证和量化 &#8220;Invest Early and Invest Often&#8221; “早投资，勤投资” 这一格言。
+  * 验证和量化 “Invest Early and Invest Often” “早投资，勤投资” 这一格言。
   * 观察使用长期持仓策略会带来什么，以及这个策略的收益。
 
 **长期持仓收益**
@@ -155,7 +155,7 @@ Warren，你让我太震惊了！你只要不去理会股票市场的短期甚�
   * [个人理财板块的 Reddit Wiki 页面](https://www.reddit.com/r/personalfinance/wiki/investing)
   * [我有 X 元，我应该怎么样投资它？](https://www.reddit.com/r/personalfinance/wiki/commontopics)
   * [Bogleheads 关于 Three-fund Portfolios 的 Wiki 页面](https://www.bogleheads.org/wiki/Three-fund_portfolio)
-  * [cFIREsim &#8211; 一个开源的个人理财计算器](http://www.cfiresim.com/)
+  * [cFIREsim – 一个开源的个人理财计算器](http://www.cfiresim.com/)
 
 ## [](#%E6%BA%90%E4%BB%A3%E7%A0%81){#user-content-源代码.anchor}源代码
 

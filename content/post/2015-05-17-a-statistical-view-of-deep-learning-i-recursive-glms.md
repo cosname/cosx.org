@@ -99,7 +99,7 @@ slug: a-statistical-view-of-deep-learning-i-recursive-glms
     </td>
     
     <td>
-      逻辑斯蒂$ \log\frac{\mu}{1 &#8211; \mu}$
+      逻辑斯蒂$ \log\frac{\mu}{1 – \mu}$
     </td>
     
     <td>
@@ -336,7 +336,7 @@ slug: a-statistical-view-of-deep-learning-i-recursive-glms
 一个直接的方法是使用负对数概率作为损失函数从而进行极大似然估计[3]：
 
 <p style="text-align: center;">
-  $\mathcal{L} = &#8211; \log p(y | \mu_L)$
+  $\mathcal{L} = – \log p(y | \mu_L)$
 </p>
 
 如果使用高斯分布作为似然函数，我们就会得到平方误差损失函数；如果使用伯努利分布，我们得到的是交叉熵损失函数。深度神经网络中的估计或学习正是递归GLMs中的极大似然估计。现在，我们可以通过计算参数的梯度并使用梯度下降法来求解回归系数了。深度学习现在常用随机近似（随机梯度下降）等方法训练，通过链式法则计算整个模型的导数（即反向传播），并以强大的分布式集群和GPU执行计算。这样的模型能够在至少数百万条记录的数据上训练含有数百万个参数的超大模型 [4]。

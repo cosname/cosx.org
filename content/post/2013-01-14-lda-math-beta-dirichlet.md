@@ -15,7 +15,7 @@ slug: lda-math-beta-dirichlet
 
 **2. 认识Beta/Dirichlet分布**
   
-**2.1 魔鬼的游戏&#8212;认识Beta 分布**
+**2.1 魔鬼的游戏—认识Beta 分布**
 
 统计学就是猜测上帝的游戏,当然我们不总是有机会猜测上帝，运气不好的时候就得揣度魔鬼的心思。有一天你被魔鬼撒旦抓走了，撒旦说：“你们人类很聪明，而我是很仁慈的，和你玩一个游戏，赢了就可以走，否则把灵魂出卖给我。游戏的规则很简单，我有一个魔盒，上面有一个按钮，你每按一下按钮，就均匀的输出一个[0,1]之间的随机数，我现在按10下，我手上有10个数，你猜第7大的数是什么，偏离不超过0.01就算对。”你应该怎么猜呢？
 
@@ -71,7 +71,7 @@ $o(\Delta x)$表示$\Delta x $的高阶无穷小。显然，由于不同的排�
 
 \begin{align*}
   
-E&#8217; = \{ & X\_1,X\_2\in [x, x+\Delta x], \\
+E’ = \{ & X\_1,X\_2\in [x, x+\Delta x], \\
   
 & X_i \in [0,x) \quad (i=3,\cdots,k), \\
   
@@ -84,12 +84,12 @@ E&#8217; = \{ & X\_1,X\_2\in [x, x+\Delta x], \\
 </p>
 
 <p style="text-align: center;">
-  <strong>事件E&#8217;</strong>
+  <strong>事件E’</strong>
 </p>
 
 则有
   
-$$ P(E&#8217;) = x^{k-2}(1-x-\Delta x)^{n-k}(\Delta x)^2 = o(\Delta x)$$
+$$ P(E’) = x^{k-2}(1-x-\Delta x)^{n-k}(\Delta x)^2 = o(\Delta x)$$
   
 从以上分析我们很容易看出，只要落在$[x, x+\Delta x]$内的数字超过一个，则对应的事件的概率就是 $o(\Delta x)$。于是
   
@@ -354,7 +354,7 @@ $$ Dir(\overrightarrow{p}|\overrightarrow{1}) + MultCount(\overrightarrow{m}-\ov
   
 此处$\overrightarrow{1}=(1,1,\cdots,1)$。自然，上式我们也可以类似地用纯粹贝叶斯的观点进行推导和解释。
 
-以上的游戏我们还可以往更高的维度上继续推，譬如猜测 $X\_{(1)},X\_{(2)}，\cdots, X_{(n)}$ 中的4、5、&#8230;等更多个数，于是就得到更高纬度的 Dirichlet 分布和 Dirichlet-Multinomial 共轭。一般形式的 Dirichlet 分布定义如下
+以上的游戏我们还可以往更高的维度上继续推，譬如猜测 $X\_{(1)},X\_{(2)}，\cdots, X_{(n)}$ 中的4、5、…等更多个数，于是就得到更高纬度的 Dirichlet 分布和 Dirichlet-Multinomial 共轭。一般形式的 Dirichlet 分布定义如下
   
 \begin{equation}
   

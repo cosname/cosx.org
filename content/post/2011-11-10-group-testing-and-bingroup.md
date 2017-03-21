@@ -150,7 +150,7 @@ AIC: 115.4
 
 Number of iterations in optim(): 138</pre>
 
-拟合的结果存放在 fit1 中，我们定义它为&#8221;gt&#8221; class。得到的模型可以写成
+拟合的结果存放在 fit1 中，我们定义它为”gt” class。得到的模型可以写成
 
 <p style="text-align: center;">
   $logit(\widehat{p}_{ik})=-2.99-0.0516Age_{ik}+0.7362Educ_{ik}$

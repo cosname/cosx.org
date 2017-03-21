@@ -96,10 +96,10 @@ slug: 1st-chinese-r-conference-summary
   * 李舰：[利用R (D)COM Server实现R与MS Office的整合](https://cos.name/wp-content/uploads/2008/12/integrating-ms-office-with-r-using-r-d-com-server.ppt)
   * 王化儒：[R在水文模拟中的应用初探](https://cos.name/wp-content/uploads/2008/12/application-of-r-on-hydrological-modeling.ppt)（[R代码](https://cos.name/wp-content/uploads/2008/12/wang-huaru-hydro.txt)）
   * 谢益辉：[统计动画程序包animation介绍及其在教学和数据分析中的应用](https://cos.name/wp-content/uploads/2008/12/animation-an-r-package-for-statistical-animations-with-applications-in-teaching-and-data-analysis.ppt)
-  * 翁云妹：Fitting and Projections of Mortality Stochastic Models &#8212; based on interface between R and Excel
+  * 翁云妹：Fitting and Projections of Mortality Stochastic Models — based on interface between R and Excel
   * 刘明：[半导体界统计与R的应用](https://cos.name/wp-content/uploads/2008/12/statistics-and-r-in-semiconductor-industry.ppt)
   * 王剑：[From SAS to R](https://cos.name/wp-content/uploads/2008/12/from-sas-to-r.ppt)
-  * 马斌：[应用R进行QSAR的尝试 &#8212; 以PAHs在根际消解效果的QSAR分析为例](https://cos.name/wp-content/uploads/2008/12/a-attempt-of-employing-r-in-qsar.ppt)
+  * 马斌：[应用R进行QSAR的尝试 — 以PAHs在根际消解效果的QSAR分析为例](https://cos.name/wp-content/uploads/2008/12/a-attempt-of-employing-r-in-qsar.ppt)
   * 谢益辉：[无处不在的数据及R的探索方法](https://cos.name/wp-content/uploads/2008/12/explore-irregular-data-with-r.ppt)（[R代码](https://cos.name/wp-content/uploads/2008/12/explore-irregular-data-with-r.txt)）
   * 韩效杰：关于R语言相关书籍的出版讨论
 
@@ -117,7 +117,7 @@ slug: 1st-chinese-r-conference-summary
 
   1. S语言的作者之一Richard A. Becker听闻本次会议，向我们发来良好祝愿；
   2. R语言的核心成员之一Duncan Murdoch表示很想参加这次会议，不过限于时间安排不开，因此最终没能参加；
-  3. R语言的专家John Maindonald教授（澳大利亚国立大学，半退休）通过Skype连线会场进行数据挖掘与R的演讲，不过由于网络条件和会场设备问题最终没能成功，但与会者都看到了视频中的老爷爷；John是&#8221;Data Analysis and Graphics Using R: An Example-based Approach&#8221;一书的作者，对本次会议非常关心，是本次会议唯一的外国参会者；
+  3. R语言的专家John Maindonald教授（澳大利亚国立大学，半退休）通过Skype连线会场进行数据挖掘与R的演讲，不过由于网络条件和会场设备问题最终没能成功，但与会者都看到了视频中的老爷爷；John是”Data Analysis and Graphics Using R: An Example-based Approach”一书的作者，对本次会议非常关心，是本次会议唯一的外国参会者；
   4. 丁国徽博士于13日早上从首都机场直奔R语言会场，不顾困倦为大家演讲；
   5. 刘思喆放弃了周末陪伴家人的宝贵机会每天从南三环到北三环为大家贡献R语言知识；
   6. 詹鹏和奚潭为了保证质量，连续七天通宵准备论文和演讲；

@@ -328,7 +328,7 @@ $\tilde{F}\_n(x)=\begin{cases}0 &, x\leq c\_0\\\frac{(c\_j-x)F\_n(c\_{j-1})+(x-c
   </blockquote>
   
   <p>
-    3）    start指定参数初始值。形式必须以列表的形式，形式可以见例子，有几个参数就要指定几个初始值。<br /> 4）    measure是指定方法。weight指定权重，否则采用默认权重。<br /> 5）    &#8230;是其他参数，可以指定optim()函数中的参数，比如使用L-BFGS-B方法进行优化可以添加参数method=“L-BFGS-B”。<br /> 我们可以对上面的gdental数据进行分布拟合。
+    3）    start指定参数初始值。形式必须以列表的形式，形式可以见例子，有几个参数就要指定几个初始值。<br /> 4）    measure是指定方法。weight指定权重，否则采用默认权重。<br /> 5）    …是其他参数，可以指定optim()函数中的参数，比如使用L-BFGS-B方法进行优化可以添加参数method=“L-BFGS-B”。<br /> 我们可以对上面的gdental数据进行分布拟合。
   </p>
   
   <pre class="brush: r">&gt; mde(gdental,pexp,start=list(rate=1/200),measure="CvM")

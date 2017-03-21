@@ -70,7 +70,7 @@ R语言的发展日新月异，每一天的清晨都有新发现。作者信马�
 
 **5****、周明：计算机对联和诗词**
 
-周明是微软亚洲研究院自然语言计算组首席研究员，中国计算机学会通讯动态栏目主编。<span lang="ZH-CN" style="color: #222222;">他是中国第一个中</span><span style="color: #222222;">&#8211;</span><span lang="ZH-CN" style="color: #222222;">英机器翻译系统</span><span class="il" style="color: #222222;">CEMT</span><span style="color: #222222;">&#8211;</span><span class="il" style="color: #222222;">I</span><span lang="ZH-CN" style="color: #222222;">、<wbr />日本最富盛名的中</span><span style="color: #222222;">&#8211;</span><span lang="ZH-CN" style="color: #222222;">日机器翻译系统</span><span style="color: #222222;">J-</span><span lang="ZH-CN" style="color: #222222;">北京的发明人</span>。对自然语言计算的精深理解加上对诗词的巧妙认识，开发出一整套对联系统。演讲的内容贴近生活、简单易懂、妙趣横生，同时又能够将统计算法渗透在里面，让大家大开眼界。
+周明是微软亚洲研究院自然语言计算组首席研究员，中国计算机学会通讯动态栏目主编。<span lang="ZH-CN" style="color: #222222;">他是中国第一个中</span><span style="color: #222222;">–</span><span lang="ZH-CN" style="color: #222222;">英机器翻译系统</span><span class="il" style="color: #222222;">CEMT</span><span style="color: #222222;">–</span><span class="il" style="color: #222222;">I</span><span lang="ZH-CN" style="color: #222222;">、<wbr />日本最富盛名的中</span><span style="color: #222222;">–</span><span lang="ZH-CN" style="color: #222222;">日机器翻译系统</span><span style="color: #222222;">J-</span><span lang="ZH-CN" style="color: #222222;">北京的发明人</span>。对自然语言计算的精深理解加上对诗词的巧妙认识，开发出一整套对联系统。演讲的内容贴近生活、简单易懂、妙趣横生，同时又能够将统计算法渗透在里面，让大家大开眼界。
 
 ![周明](https://cos.name/wp-content/uploads/2014/06/DSC_8381.jpg)
 
@@ -136,7 +136,7 @@ R语言的发展日新月异，每一天的清晨都有新发现。作者信马�
 
 **资源下载**
 
-**演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循****CC 3.0****协议：署名****&#8211;****非商业性使用****&#8211;****相同方式共享，链接持续更新中）。**
+**演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循****CC 3.0****协议：署名****–****非商业性使用****–****相同方式共享，链接持续更新中）。**
 
   * [吴喜之：开幕词](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-WuXizhi.pdf)
   * [Hadley Wickham：R packages: principles and best practice](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-Hadley.pdf)

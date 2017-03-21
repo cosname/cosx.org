@@ -32,17 +32,17 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 本次会议讨论的主题涵盖了贝叶斯统计学在政治学、社会学习模型、金融学、经济计量等等众多方面的最新进展，共包含6 场精彩的特邀报告、4场贝叶斯入门培训报告和欢庆晚会，会场反响热烈。会议的流程和主要内容摘录如下。
 
-1.吴敬（天津财经大学）&#8211;[贝叶斯方法在政治学中的应用](https://cos.name/wp-content/uploads/2013/12/下载1-吴敬-贝叶斯方法在政治学中的应用.ppt)[
+1.吴敬（天津财经大学）–[贝叶斯方法在政治学中的应用](https://cos.name/wp-content/uploads/2013/12/下载1-吴敬-贝叶斯方法在政治学中的应用.ppt)[
   
 ](https://cos.name/wp-content/uploads/2013/12/下载1-吴敬-贝叶斯方法在政治学中的应用.ppt) 
 
 演讲者介绍了贝叶斯方法在政治学中的应用背景，说明了贝叶斯方法在政治学中应用的最新进展，系统梳理了贝叶斯方法在政治学应用中的相关文献，相信吴敬老师的分享对一些在这方面感兴趣的学友很有帮助。
 
-2. 陈丽云（eBay）&#8211;[基于贝叶斯的社会学习模型](https://cos.name/wp-content/uploads/2013/12/下载2-Liyun.Chen-slides_social_learning_part.pdf)<span style="text-decoration: underline;"><br /> </span>
+2. 陈丽云（eBay）–[基于贝叶斯的社会学习模型](https://cos.name/wp-content/uploads/2013/12/下载2-Liyun.Chen-slides_social_learning_part.pdf)<span style="text-decoration: underline;"><br /> </span>
 
 演讲者用生动的案例（豆瓣和美国高中生性知识教育项目）向大家说明什么是社会学习模型，然后以美国高中生性知识教育项目为依托，简约地介绍了贝叶斯方法在社会性学习模型中的应用，并用数值模拟的方法进行了展示。
 
-3. 邓一硕（首钢总公司）&#8211;[金融学中的贝叶斯应用](https://cos.name/wp-content/uploads/2013/12/下载4-邓一硕-贝叶斯在金融领域的应用概览.pdf)<span style="text-decoration: underline;"><br /> </span>
+3. 邓一硕（首钢总公司）–[金融学中的贝叶斯应用](https://cos.name/wp-content/uploads/2013/12/下载4-邓一硕-贝叶斯在金融领域的应用概览.pdf)<span style="text-decoration: underline;"><br /> </span>
 
 贝叶斯的触角已经伸向了各个领域，金融学也不例外。演讲者用两则生动的故事来道出贝叶斯定理的本质，然后介绍了，贝叶斯方法在信用评级、交易欺诈识别等与银行业相关的领域的应用，演讲者还讲授了在股票分类、市场趋势识别、波动率估计、投资组合风险等量化投资领域中贝叶斯方法的应用。
 

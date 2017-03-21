@@ -50,7 +50,7 @@ slug: 8th-china-r-nanchang-summary
 
   * **Terry O’Neill: Use of R at the Forefront of Actuarial Science**
 
-澳大利亚邦德大学精算学院院长、金融大数据分析中心主任Terry O&#8217;Neill教授以数据科学领域的精算科学为主题，讨论了R语言在精算学领域的前沿所扮演的角色。他在演讲中提到，R语言的发展之初具有很强的学术性，它始于一个核心统计学家用户群，但是现在R语言的用户群已经分布在了数据科学的各个领域。R已经被很多顶尖的精算行业组织，研究和教学机构所接受。精算学只有拥抱R语言才能更好的融入这个时代。
+澳大利亚邦德大学精算学院院长、金融大数据分析中心主任Terry O’Neill教授以数据科学领域的精算科学为主题，讨论了R语言在精算学领域的前沿所扮演的角色。他在演讲中提到，R语言的发展之初具有很强的学术性，它始于一个核心统计学家用户群，但是现在R语言的用户群已经分布在了数据科学的各个领域。R已经被很多顶尖的精算行业组织，研究和教学机构所接受。精算学只有拥抱R语言才能更好的融入这个时代。
 
 ![005时代](https://cos.name/wp-content/uploads/2015/11/005时代.jpg)
 
@@ -74,7 +74,7 @@ slug: 8th-china-r-nanchang-summary
 
   * **Michael O’Neill: High Frequency Analysis of Lead-Lag Relations in Exchange Traded Volatility Markets using R**
 
-** **澳大利亚精算理事会主席、Investors Mutual Ltd.分析师Michael O&#8217;Neill教授分析了R语言在高频波动率交易市场的应用及相关研究成果。他指出，这项研究利用高频数据确定了价格发现以及交易所交易价格波动之间领先/落后的关系是否随着时间的推移发生了变化。
+** **澳大利亚精算理事会主席、Investors Mutual Ltd.分析师Michael O’Neill教授分析了R语言在高频波动率交易市场的应用及相关研究成果。他指出，这项研究利用高频数据确定了价格发现以及交易所交易价格波动之间领先/落后的关系是否随着时间的推移发生了变化。
 
 ![008变化](https://cos.name/wp-content/uploads/2015/11/008变化.jpg)
 

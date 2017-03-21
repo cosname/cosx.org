@@ -15,15 +15,15 @@ slug: data-mining-1-lasso
 
 **目录：**
   
-&#8212; 模型简介
+— 模型简介
   
-&#8212; 线性回归
+— 线性回归
   
-&#8212; Logistic回归
+— Logistic回归
   
-&#8212; Elstic Net模型家族简介
+— Elstic Net模型家族简介
   
-&#8212; 学习资料
+— 学习资料
 
 <!--more-->
 
@@ -58,15 +58,15 @@ load("LinearExample.RData")</code></pre>
 
 参数<code style="background-color: whitesmoke;">family</code>规定了回归模型的类型:
   
-&#8212; <code style="background-color: whitesmoke;">family="gaussian"</code> 适用于一维连续因变量(univariate)
+— <code style="background-color: whitesmoke;">family="gaussian"</code> 适用于一维连续因变量(univariate)
   
-&#8212; <code style="background-color: whitesmoke;">family="mgaussian"</code> 适用于多维连续因变量(multivariate)
+— <code style="background-color: whitesmoke;">family="mgaussian"</code> 适用于多维连续因变量(multivariate)
   
-&#8212; <code style="background-color: whitesmoke;">family="poisson"</code> 适用于非负次数因变量(count)
+— <code style="background-color: whitesmoke;">family="poisson"</code> 适用于非负次数因变量(count)
   
-&#8212; <code style="background-color: whitesmoke;">family="binomial"</code> 适用于二元离散因变量(binary)
+— <code style="background-color: whitesmoke;">family="binomial"</code> 适用于二元离散因变量(binary)
   
-&#8212; <code style="background-color: whitesmoke;">family="multinomial"</code> 适用于多元离散因变量(category)
+— <code style="background-color: whitesmoke;">family="multinomial"</code> 适用于多元离散因变量(category)
 
 参数<code style="background-color: whitesmoke;">nlambda=50</code>让算法自动挑选50个不同的λ值，拟合出50个系数不同的模型。<code style="background-color: whitesmoke;">alpha=1</code>输入α值，1是它的默认值。 值得注意的是，**glmnet**只能接受数值矩阵作为模型输入，如果自变量中有离散变量的话，需要把这一列离散变量转化为几列只含有0和1的向量，这个过程叫做One Hot Encoding。通过下面这个小例子，你可以了解One Hot Encoding的原理以及方法:
 
@@ -227,15 +227,15 @@ plot(pfit, xvar="lambda", label = TRUE)</code></pre>
 
 这里的<code style="background-color: whitesmoke;">type.measure</code>是用来指定交叉验证选取模型时希望最小化的目标参量，对于Logistic回归有以下几种选择:
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=deviance</code> 使用deviance，即-2倍的Log-likelihood
+— <code style="background-color: whitesmoke;">type.measure=deviance</code> 使用deviance，即-2倍的Log-likelihood
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=mse</code> 使用拟合因变量与实际应变量的mean squred error
+— <code style="background-color: whitesmoke;">type.measure=mse</code> 使用拟合因变量与实际应变量的mean squred error
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=mae</code> 使用mean absolute error
+— <code style="background-color: whitesmoke;">type.measure=mae</code> 使用mean absolute error
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=class</code> 使用模型分类的错误率(missclassification error)
+— <code style="background-color: whitesmoke;">type.measure=class</code> 使用模型分类的错误率(missclassification error)
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=auc</code> 使用area under the ROC curve，是现在最流行的综合考量模型性能的一种参数
+— <code style="background-color: whitesmoke;">type.measure=auc</code> 使用area under the ROC curve，是现在最流行的综合考量模型性能的一种参数
 
 除此之外，在<code style="background-color: whitesmoke;">cv.glmnet()</code>里我们还可以用<code style="background-color: whitesmoke;">nfolds</code>指定fold数，或者用<code style="background-color: whitesmoke;">foldid</code>指定每个fold的内容。因为每个fold间的计算是独立的，我们还可以考虑运用并行计算来提高运算效率，使用<code style="background-color: whitesmoke;">parallel=TRUE</code>可以开启这个功能。但是我们需要先装载package **doParallel**。 下面我们给出在Windows操作系统和Linux操作系统下开启并行计算的示例:
 
@@ -275,15 +275,15 @@ stopImplicitCluster()</code></pre>
 
 这里的<code style="background-color: whitesmoke;">type</code>有以下几种选择:
   
-&#8212; <code style="background-color: whitesmoke;">type=link</code> 给出线性预测值，即进行Logit变换之前的值
+— <code style="background-color: whitesmoke;">type=link</code> 给出线性预测值，即进行Logit变换之前的值
   
-&#8212; <code style="background-color: whitesmoke;">type=response</code> 给出概率预测值，即进行Logit变换之后的值
+— <code style="background-color: whitesmoke;">type=response</code> 给出概率预测值，即进行Logit变换之后的值
   
-&#8212; <code style="background-color: whitesmoke;">type=class</code> 给出0/1预测值
+— <code style="background-color: whitesmoke;">type=class</code> 给出0/1预测值
   
-&#8212; <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时的模型系数
+— <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时的模型系数
   
-&#8212; <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时，不为零模型系数的下标
+— <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时，不为零模型系数的下标
 
 另外，当已有了一个模型之后，我们又得到了几个新的自变量，如果想知道这些新变量能否在第一个模型的基础上提高模型性能，可以把第一个模型的预测因变量作为一个向量放到函数选项<code style="background-color: whitesmoke;">offset</code>中，再用<code style="background-color: whitesmoke;">glmnet</code>或者<code style="background-color: whitesmoke;">cv.glmnet</code>进行拟合。
 

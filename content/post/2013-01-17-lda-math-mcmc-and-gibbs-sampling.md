@@ -88,7 +88,7 @@ $$P =
   
 $$
 
-假设当前这一代人处在下层、中层、上层的人的比例是概率分布向量 $\pi\_0=[\pi\_0(1), \pi\_0(2), \pi\_0(3)]$，那么他们的子女的分布比例将是 $\pi\_1=\pi\_0P$, 他们的孙子代的分布比例将是 $\pi\_2 = \pi\_1P=\pi\_0P^2$, &#8230;&#8230;, 第$n$代子孙的收入分布比例将是 $\pi\_n = \pi\_{n-1}P = \pi\_0P^n$。
+假设当前这一代人处在下层、中层、上层的人的比例是概率分布向量 $\pi\_0=[\pi\_0(1), \pi\_0(2), \pi\_0(3)]$，那么他们的子女的分布比例将是 $\pi\_1=\pi\_0P$, 他们的孙子代的分布比例将是 $\pi\_2 = \pi\_1P=\pi\_0P^2$, ……, 第$n$代子孙的收入分布比例将是 $\pi\_n = \pi\_{n-1}P = \pi\_0P^n$。
 
 假设初始概率分布为$\pi_0 = [0.21,0.68,0.11] $，则我们可以计算前$n$代人的分布状况如下
 
@@ -252,9 +252,9 @@ p(i) \underbrace{q(i,j)\alpha(i,j)}_{Q'(i,j)}
   
 \end{equation}
   
-于是我们把原来具有转移矩阵$Q$的一个很普通的马氏链，改造为了具有转移矩阵$Q&#8217;$的马氏链，而 $Q&#8217;$恰好满足细致平稳条件，由此马氏链$Q&#8217;$的平稳分布就是$p(x)$！
+于是我们把原来具有转移矩阵$Q$的一个很普通的马氏链，改造为了具有转移矩阵$Q’$的马氏链，而 $Q’$恰好满足细致平稳条件，由此马氏链$Q’$的平稳分布就是$p(x)$！
 
-在改造 $Q$ 的过程中引入的 $\alpha(i,j)$称为接受率，物理意义可以理解为在原来的马氏链上，从状态 $i$ 以$q(i,j)$ 的概率转跳转到状态$j$ 的时候，我们以$\alpha(i,j)$的概率接受这个转移，于是得到新的马氏链$Q&#8217;$的转移概率为$q(i,j)\alpha(i,j)$。
+在改造 $Q$ 的过程中引入的 $\alpha(i,j)$称为接受率，物理意义可以理解为在原来的马氏链上，从状态 $i$ 以$q(i,j)$ 的概率转跳转到状态$j$ 的时候，我们以$\alpha(i,j)$的概率接受这个转移，于是得到新的马氏链$Q’$的转移概率为$q(i,j)\alpha(i,j)$。
 
 <p style="text-align: center;">
   <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/mcmc-transition/" rel="attachment wp-att-6942">![mcmc-transition](https://cos.name/wp-content/uploads/2013/01/mcmc-transition.jpg)</a>马氏链转移和接受概率</strong>
@@ -284,7 +284,7 @@ $$ \alpha(i,j) = \min\left\{\frac{p(j)q(j,i)}{p(i)q(i,j)},1\right\} $$
 
 <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/mcmc-algo-2/" rel="attachment wp-att-6941">![mcmc-algo-2](https://cos.name/wp-content/uploads/2013/01/mcmc-algo-2.jpg)</a>
 
-对于分布 $p(x)$,我们构造转移矩阵 $Q&#8217;$ 使其满足细致平稳条件
+对于分布 $p(x)$,我们构造转移矩阵 $Q’$ 使其满足细致平稳条件
   
 $$ p(x) Q'(x\rightarrow y) = p(y) Q'(y\rightarrow x) $$
   

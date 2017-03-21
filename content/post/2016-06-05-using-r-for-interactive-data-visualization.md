@@ -212,14 +212,14 @@ dyRangeSelector(height = 20)</pre>
 
 ![rcharts-012](https://cos.name/wp-content/uploads/2016/06/rcharts-012.png)
 
-DT包实现R数据对象可以在HTML页面中实现过滤、分页、排序以及其他许多功能。通过install.packages(&#8220;DT&#8221;)安装。
+DT包实现R数据对象可以在HTML页面中实现过滤、分页、排序以及其他许多功能。通过install.packages(“DT”)安装。
 
 以鸢尾花数据集iris为例，执行以下代码：
 
 <pre>library(DT)
 datatable(iris)</pre>
 
-networkD3包可实现D3 JavaScript的网络图，通过install.packages(&#8220;networkD3&#8221;)安装。
+networkD3包可实现D3 JavaScript的网络图，通过install.packages(“networkD3”)安装。
 
 下面是绘制一个力导向的网络图的例子。
 

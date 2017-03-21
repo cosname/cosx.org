@@ -32,5 +32,5 @@ slug: shanghair-oct-2012-iresearch
 ![后庭花依旧？](http://i.imgur.com/Cztwd.jpg "后庭花依旧？")<figcaption class="wp-caption-text">后庭花依旧？</figcaption></figure> 
 
 <p style="text-align: left;">
-  随着夕阳落下，一下午的沙龙活动也落幕了。徐家汇自然不缺好吃的是不是？所谓，「暖风熏得游人醉，直把杭州作汴州」&#8230;美食，美女，美好的夜晚。这大概就是魔都最魔幻的一面吧。
+  随着夕阳落下，一下午的沙龙活动也落幕了。徐家汇自然不缺好吃的是不是？所谓，「暖风熏得游人醉，直把杭州作汴州」…美食，美女，美好的夜晚。这大概就是魔都最魔幻的一面吧。
 </p>

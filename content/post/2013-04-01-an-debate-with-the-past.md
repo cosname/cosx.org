@@ -17,7 +17,7 @@ slug: an-debate-with-the-past
 
 最近江湖上高等初等之间的跨界有点多，不妨纵浪到底，看看「[高观点下的初等统计学」续集之——线性回归](http://www.johnmyleswhite.com/notebook/2013/03/22/using-norms-to-understand-linear-regression/)。(小编曰：这博主不是统计专业，大家轻吐槽。)
 
-弱水三千，取一瓢……建模&#8230;&#8230;[用一千万条数据和用一万条数据建模有显著区别吗？](http://blog.revolutionanalytics.com/2013/03/lots-of-data-big-data.html)大数据时代，人人都赶着上Hadoop山下NoSQL海，在你苦等程序跑几个小时之前，不妨先取个子集探探路。（<a title="肖楠" href="http://road2stat.com/" target="_blank">肖楠</a>配图，旁白：一瓢足以撬动三千。）
+弱水三千，取一瓢……建模……[用一千万条数据和用一万条数据建模有显著区别吗？](http://blog.revolutionanalytics.com/2013/03/lots-of-data-big-data.html)大数据时代，人人都赶着上Hadoop山下NoSQL海，在你苦等程序跑几个小时之前，不妨先取个子集探探路。（<a title="肖楠" href="http://road2stat.com/" target="_blank">肖楠</a>配图，旁白：一瓢足以撬动三千。）
 
 ![旁白：一瓢足以撬动三千](http://i.imgur.com/KKywpqS.gif)
 

@@ -68,7 +68,7 @@ f(x) = \sum\_{i=1}^n\alpha\_i y\_i \langle \phi(x\_i), \phi(x)\rangle + b
   
 \begin{align}
   
-\max\_\alpha &\sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\langle \phi(x\_i),\phi(x\_j)\rangle \\
+\max\_\alpha &\sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\langle \phi(x\_i),\phi(x\_j)\rangle \\
   
 s.t., &\alpha_i\geq 0, i=1,\ldots,n \\
   
@@ -128,7 +128,7 @@ s.t., &\alpha_i\geq 0, i=1,\ldots,n \\
   
 \begin{align}
   
-\max\_\alpha &\sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j \color{red}{\kappa(x\_i, x\_j)} \\
+\max\_\alpha &\sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j \color{red}{\kappa(x\_i, x\_j)} \\
   
 s.t., &\alpha_i\geq 0, i=1,\ldots,n \\
   

@@ -117,7 +117,7 @@ slug: recommenderlab-packages
 
  5  3  4  3  3  5  4  1  5  3</pre>
 
-另外，recommenderlab 包中有提供用于归一化的函数 `normalize()`，默认是均值归一化 x &#8211; mean；建立推荐模型的函数，里面有归一化处理的，在此不必单独进行归一化。
+另外，recommenderlab 包中有提供用于归一化的函数 `normalize()`，默认是均值归一化 x – mean；建立推荐模型的函数，里面有归一化处理的，在此不必单独进行归一化。
 
 ### 4 recommender 简单介绍
 
@@ -195,7 +195,7 @@ Parameters:
 
   * method：相似度算法，默认采用余弦相似算法 cosine
 
-  * Normalize：采用何种归一化算法，默认均值归一化 x &#8211; mean
+  * Normalize：采用何种归一化算法，默认均值归一化 x – mean
 
   * normalize\_sim\_matrix：是否对相似矩阵归一化，默认为否
 

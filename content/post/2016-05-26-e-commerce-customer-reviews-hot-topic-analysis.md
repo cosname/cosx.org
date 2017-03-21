@@ -344,7 +344,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p>
-                                  $$ l_p(\Theta) =  \sum_{i=1}^M \sum_{k=1}^M \tau_{ik}(log\pi_{k} + logN_k(N_i; \mu_k,\Sigma)) &#8211; J(\Omega)  \quad \quad（8）$$
+                                  $$ l_p(\Theta) =  \sum_{i=1}^M \sum_{k=1}^M \tau_{ik}(log\pi_{k} + logN_k(N_i; \mu_k,\Sigma)) – J(\Omega)  \quad \quad（8）$$
                                 </p>
                                 
                                 <p>
@@ -545,10 +545,10 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                                                     F值</td> 
                                                                     
                                                                     <td width="142">
-                                                                      &#8211;</p> 
+                                                                      –</p> 
                                                                       
                                                                       <p>
-                                                                        &#8211;</td> 
+                                                                        –</td> 
                                                                         
                                                                         <td width="142">
                                                                           35.09%</p> 

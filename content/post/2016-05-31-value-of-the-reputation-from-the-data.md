@@ -93,9 +93,9 @@ slug: value-of-the-reputation-from-the-data
 
 **（4****）坚持。**
 
-**注1****：参考** &#8220;Pricing Strategy in Online Retailing Marketplaces of Homogeneous Goods: Should High Reputation Seller Charge More?,&#8221; _Lecture Notes in Business Information Processing_ (36:Value Creation in E-Business Management), pp 155-168.  http://link.springer.com/chapter/10.1007/978-3-642-03132-8_13
+**注1****：参考** “Pricing Strategy in Online Retailing Marketplaces of Homogeneous Goods: Should High Reputation Seller Charge More?,” _Lecture Notes in Business Information Processing_ (36:Value Creation in E-Business Management), pp 155-168.  http://link.springer.com/chapter/10.1007/978-3-642-03132-8_13
 
-**注2****：参考** &#8220;Negative price premium effect in online market-The impact of competition and buyer informativeness on the pricing strategies of sellers with different reputation levels,&#8221; _Decision Support Systems_ (54:1) Dec, pp 681-690.  http://www.sciencedirect.com/science/article/pii/S016792361200228X
+**注2****：参考** “Negative price premium effect in online market-The impact of competition and buyer informativeness on the pricing strategies of sellers with different reputation levels,” _Decision Support Systems_ (54:1) Dec, pp 681-690.  http://www.sciencedirect.com/science/article/pii/S016792361200228X
 
 ** ****后记**
 

@@ -30,7 +30,7 @@ slug: statistical-analysis-and-winbugs-part-4
 
 ## <span style="color: #800000;">第二节 用ArcInfo生成一个GeoBUGS格式的中国地图</span>
 
-第一步，打开ArcInfo，选中Layers（图层），点击右键，在打开的菜单中选择Add Data&#8230;（添加数据&#8230;），并定位到bou2_4p.shp，确定。![添加图层](https://cos.name/wp-content/uploads/2009/06/add_layers.png)
+第一步，打开ArcInfo，选中Layers（图层），点击右键，在打开的菜单中选择Add Data…（添加数据…），并定位到bou2_4p.shp，确定。![添加图层](https://cos.name/wp-content/uploads/2009/06/add_layers.png)
   
 第二步，打开位于图层工具箱上方的Editor按钮菜单，在其中选中Start Editing。
   

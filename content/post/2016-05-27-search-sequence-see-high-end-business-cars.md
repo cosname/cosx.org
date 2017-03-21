@@ -106,7 +106,7 @@ $$P\_{j\_1j\_2}=\{\sum\_{i=1}^N \sum\_{t=1}^{T\_i-1}I(Z\_{i,t}=j\_1)\}^{-1}\{\su
 
 通过对数据的初步结构化及筛选，我们可以形成对每个用户高端车搜索序列的完整记录。接下来，我们拟建模分析用户在搜索过程中表现出的“忠诚”及“叛变”行为，其中，“忠诚”的定义为用户在第$t$步搜索了某品牌后，在第$t+1$步仍然继续搜索该品牌，“叛变”则定义为用户在$t+1$步转向搜索其他品牌。本文拟构建逻辑回归模型，探索影响用户“忠诚”及“叛变”的关键因素。定义$Y\_{ij}^{(t)}=1$代表第i个用户于第t步搜索了第j个品牌，否则$Y\_{ij}^{(t)}=0$。则构建以下逻辑回归模型（忠诚模型）：
 
-$$P(Y\_{ij}^{(t+1)}=1|Y\_{ij}^{(t)}=1)=\frac{exp(\alpha\_j+X\_i^{(t)&#8217;}\beta)}{1+exp(\alpha\_j + X\_i^{(t)&#8217;}\beta)}$$
+$$P(Y\_{ij}^{(t+1)}=1|Y\_{ij}^{(t)}=1)=\frac{exp(\alpha\_j+X\_i^{(t)’}\beta)}{1+exp(\alpha\_j + X\_i^{(t)’}\beta)}$$
 
 其中，$X\_i^{(t)}$为与解释叛变行为相关的自变量，$\beta$为相应的估计系数，$\alpha\_j$表示与品牌j相关的截距项，可以认为是控制了自变量$X_i^{(t)}$后度量品牌j的忠诚度指标。具体考虑指标如下节所示。
 
@@ -212,28 +212,28 @@ $^5$资料来源：搜狐汽车网（auto.sohu.com）
 
 ****参考文献****
 
-【1】曹建海. 经济全球化与中国汽车产业发展[J]. 管理世界, 2003(4), 68&#8211;76.
+【1】曹建海. 经济全球化与中国汽车产业发展[J]. 管理世界, 2003(4), 68–76.
 
-【2】邓晓爱. 浅谈我国高端车企市场营销策略[J]. 经营管理者, 2013(23), 269&#8211;269.
+【2】邓晓爱. 浅谈我国高端车企市场营销策略[J]. 经营管理者, 2013(23), 269–269.
 
-【3】Ghose A, Yang S. An empirical analysis of search engine advertising: Sponsored search in electronic markets[J]. Management Science, 2009, 55(10), 1605&#8211;1622.
+【3】Ghose A, Yang S. An empirical analysis of search engine advertising: Sponsored search in electronic markets[J]. Management Science, 2009, 55(10), 1605–1622.
 
-【4】Häubl G, Trifts V. Consumer decision making in online shopping environments: The effects of interactive decision aids[J]. Marketing science, 2000, 19(1), 4&#8211;21.
+【4】Häubl G, Trifts V. Consumer decision making in online shopping environments: The effects of interactive decision aids[J]. Marketing science, 2000, 19(1), 4–21.
 
-【5】Huang P, Lurie N H, Mitra S. Searching for experience on the web: an empirical examination of consumer behavior for search and experience goods[J]. Journal of Marketing, 2009, 73(2), 55&#8211;69.
+【5】Huang P, Lurie N H, Mitra S. Searching for experience on the web: an empirical examination of consumer behavior for search and experience goods[J]. Journal of Marketing, 2009, 73(2), 55–69.
 
-【6】黄彪虎. 个性化营销[J]. 企业管理, 2001 (11), 58&#8211;59.
+【6】黄彪虎. 个性化营销[J]. 企业管理, 2001 (11), 58–59.
 
 【7】Montgomery A, Srinivasan K. Learning about customers without asking[J]. Tepper School of Business, 2002, 324.
 
-【8】Montgomery A L, Li S, Srinivasan K, et al. Modeling online browsing and path analysis using clickstream data[J]. Marketing Science, 2004, 23(4), 579&#8211;595.
+【8】Montgomery A L, Li S, Srinivasan K, et al. Modeling online browsing and path analysis using clickstream data[J]. Marketing Science, 2004, 23(4), 579–595.
 
 【9】Ramos A, Cota S. Search engine marketing[M]. McGraw-Hill, Inc., 2008.
 
-【10】宋泓, 柴瑜, 张泰. 市场开放, 企业学习及适应能力和产业成长模式转型——中国汽车产业案例研究[J]. 管理世界, 2004(8), 61&#8211;74.
+【10】宋泓, 柴瑜, 张泰. 市场开放, 企业学习及适应能力和产业成长模式转型——中国汽车产业案例研究[J]. 管理世界, 2004(8), 61–74.
 
-【11】Skiera B, Eckert J, Hinz O. An analysis of the importance of the long tail in search engine marketing[J]. Electronic Commerce Research and Applications, 2010, 9(6), 488&#8211;494.
+【11】Skiera B, Eckert J, Hinz O. An analysis of the importance of the long tail in search engine marketing[J]. Electronic Commerce Research and Applications, 2010, 9(6), 488–494.
 
-【12】Schmidt J B, Spreng R A. A proposed model of external consumer information search[J]. Journal of the academy of Marketing Science, 1996, 24(3), 246&#8211;256.
+【12】Schmidt J B, Spreng R A. A proposed model of external consumer information search[J]. Journal of the academy of Marketing Science, 1996, 24(3), 246–256.
 
 &nbsp;

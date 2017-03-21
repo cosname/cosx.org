@@ -27,9 +27,9 @@ slug: the-odyssey-of-stat-frequentist-or-bayesian
   
 Nate Silver is a Frequentist: Review of “the signal and the noise”
 
-> [&#8230;&#8230;]就如你可以看到的，我非常喜欢这本书，并强烈推荐它。
+> [……]就如你可以看到的，我非常喜欢这本书，并强烈推荐它。
   
-> 但是&#8230;&#8230;
+> 但是……
   
 > 我有一点要倾诉。Silver非常热衷于贝叶斯推断，这是很好的。不幸的是，他属于我<a href="http://normaldeviate.wordpress.com/2012/11/17/what-is-bayesianfrequentist-inference/" target="_blank">前几篇文章</a>所写的这一类人—— 混淆了“贝叶斯推理”与“使用贝叶斯定理”两个概念。他对于频率派统计推断的描述是比较糟的。他似乎把频率推断等同于了常用于正态分布的费歇尔显著性检验。也许他是从一本劣质的书中学习的统计学，抑或他天天跟一群激进的反频率学派的统计学家厮混，以至于持这样的观点。
   
@@ -41,7 +41,7 @@ Nate Silver is a Frequentist: Review of “the signal and the noise”
 > 
 > **“预测中最重要的检验之一，而我认为又是重中之重的，便是校准(calibration)。虽然每次你说有40%的概率会下雨，而实际上雨会多久下一次呢？如果在整个预测时程中（从长远来看），真的大约有40%的时间在下雨，那么这意味着你的预测充分校准（误差很小）。”**
 > 
-> 这绝对是一种频率派的观点。如果使用贝叶斯定理可以有助于实现长程频率校准，那没问题，也挺好。如果没有，我便毫不怀疑他用了别的东西。总之他的目标很明确，就是得到优良的**长期频率行为**。[&#8230;&#8230;]
+> 这绝对是一种频率派的观点。如果使用贝叶斯定理可以有助于实现长程频率校准，那没问题，也挺好。如果没有，我便毫不怀疑他用了别的东西。总之他的目标很明确，就是得到优良的**长期频率行为**。[……]
 
 一时间风雨突起，这个关于 Frequentist or Bayesian 的争议话题又现江湖。第一个杀出来的是？没错！正是大侠 <a href="http://andrewgelman.com/" target="_blank">Andrew Gelman</a> (Department of Statistics, Columbia University)，著名的 <a href="http://andrewgelman.com/" target="_blank">Statistical Modeling, Causal Inference, and Social Science</a> 的博主。
 

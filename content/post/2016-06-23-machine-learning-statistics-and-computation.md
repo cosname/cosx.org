@@ -28,7 +28,7 @@ slug: machine-learning-statistics-and-computation
 
 [![]( https://venturebeat.com/wp-content/uploads/2016/03/Google-Go-Lee-Sedol-Game-3.jpg)](https://venturebeat.com/wp-content/uploads/2016/03/Google-Go-Lee-Sedol-Game-3.jpg)
 
-在这场人工智能发展的盛事里，我突然发现，对我们中国的学者来说，好像是一群看热闹的旁观者。不管你承认还是不承认，事实就是和我一代的或者更早的学者也只能作为旁观者了。我们能做的事情是帮助你们&#8212;中国年轻的一代，让你们在人工智能发展的大潮中有竞争力，做出标杆性的成就，创造人类文明价值，也让我有个加油欢呼的主队。
+在这场人工智能发展的盛事里，我突然发现，对我们中国的学者来说，好像是一群看热闹的旁观者。不管你承认还是不承认，事实就是和我一代的或者更早的学者也只能作为旁观者了。我们能做的事情是帮助你们—中国年轻的一代，让你们在人工智能发展的大潮中有竞争力，做出标杆性的成就，创造人类文明价值，也让我有个加油欢呼的主队。
 
 <!--more-->
 
@@ -72,7 +72,7 @@ slug: machine-learning-statistics-and-computation
 
 这是当时Mike给我祝贺他当选为院士时的回信：
 
-> Thanks for your congratulations on my election to the National Academy. It&#8217;s nice to have machine learning recognized in this way.
+> Thanks for your congratulations on my election to the National Academy. It’s nice to have machine learning recognized in this way.
 
 因此，我理解在美国一个学科能否被接纳为主流学科的一个重要标志是其代表科学家能否被选为院士。我们知道Tom Mitchell 是机器学习早期建立者和守护者，而Mike Jordan是统计机器学习的奠基者和推动者。
 
@@ -152,7 +152,7 @@ CMU是一个非常独特的学校，她并不是美国传统的常春藤大学�
 
 ### 1. 多级 (Hierarchical)
 
-首先，让我们来关注&#8220;多级 这个技术思想。我们具体看三个例子。[
+首先，让我们来关注“多级 这个技术思想。我们具体看三个例子。[
   
 ](https://cos.name/wp-content/uploads/2016/06/屏幕快照-2016-06-22-上午11.12.57.png) 
 

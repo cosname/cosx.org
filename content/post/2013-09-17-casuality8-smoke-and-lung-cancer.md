@@ -54,7 +54,7 @@ $$`
 
 也就是说，如果 Fisher 的“共同原因”假说成立，那么 `\(E\)` 和 `\(U\)` 之间的 `\(RR\)` 必将大于 `\(E\)` 和 `\(D\)` 之间的 `\(RR\)`。在吸烟和肺癌的例子中，`\(RR\_{EU} \geq 9\)`。`\(RR\_{EU} \geq 9\)`，即 `\(P(U=1|E=1)/P(U=1|E=0) \geq 9\)`，直观解释就是“吸烟时有某个基因 `\(U\)` 存在”的概率是“不吸烟时有某个基因 `\(U\)` 存在”的概率的 `\(9\)` 倍多。根据 Cornfield 进一步的逻辑，由于吸烟更多的是一个社会性的行为，很难想象吸烟的行为能够对于某个基因的存在与否有着 `\(9\)` 倍的预测能力。我前段时间问身边一个生物的 PhD，你觉得 `\(RR\_{EU} \geq 9\)` 可能吗？他的回答是不太可能，理由也是说，吸烟更多的决定于社会经济地位、家庭背景等变量，和基因也许有关系，但是不会强到 `\(RR\_{EU} \geq 9\)` 的程度。Cornfield et al. (1959) 的原话是：
 
-> &#8230; if cigarette smokers have 9 times the risk of nonsmokers for developing lung cancer, and this is not because cigarette smoke is a causal agent, but only because cigarette smokers produce hormone X, then the proportion of hormone-X producers among cigarette smokers must be at least 9 times greater than nonsmokers. If the relative prevalence of hormone-X-producers is considerably less than ninefold, then hormone-X cannot account for the magnitude of the apparent effect.
+> … if cigarette smokers have 9 times the risk of nonsmokers for developing lung cancer, and this is not because cigarette smoke is a causal agent, but only because cigarette smokers produce hormone X, then the proportion of hormone-X producers among cigarette smokers must be at least 9 times greater than nonsmokers. If the relative prevalence of hormone-X-producers is considerably less than ninefold, then hormone-X cannot account for the magnitude of the apparent effect.
 
 如果我们相信 Cornfield 的逻辑，`\(RR_{EU} \geq 9\)` 在生物学意义上不太可能，那么 Fisher 的“共同原因”假说就不成立，吸烟对肺癌的确存在因果作用；反映到上面的 `\(DAG\)` 上，吸烟 `\(E\)` 到肺癌 `\(D\)` 有一条直接的边。
 

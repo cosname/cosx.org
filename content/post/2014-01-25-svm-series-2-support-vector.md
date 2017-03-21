@@ -99,9 +99,9 @@ _原文链接请点击[这里](http://blog.pluskid.org/?p=682)_
   
 \begin{align}
   
-\mathcal{L}(w,b,\alpha) &= \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_jx\_i^Tx\_j-\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_jx\_i^Tx\_j &#8211; b\sum\_{i=1}^n\alpha\_iy\_i + \sum\_{i=1}^n\alpha_i \\
+\mathcal{L}(w,b,\alpha) &= \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_jx\_i^Tx\_j-\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_jx\_i^Tx\_j – b\sum\_{i=1}^n\alpha\_iy\_i + \sum\_{i=1}^n\alpha_i \\
   
-&= \sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_jx\_i^Tx_j
+&= \sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_jx\_i^Tx_j
   
 \end{align}
   
@@ -113,7 +113,7 @@ _原文链接请点击[这里](http://blog.pluskid.org/?p=682)_
   
 \begin{align}
   
-\max\_\alpha &\sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_jx\_i^Tx\_j \\
+\max\_\alpha &\sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_jx\_i^Tx\_j \\
   
 s.t., &\alpha_i\geq 0, i=1,\ldots,n \\
   

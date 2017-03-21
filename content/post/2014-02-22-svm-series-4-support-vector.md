@@ -64,7 +64,7 @@ s.t., & y\_i(w^Tx\_i+b)\geq 1-\xi_i, i=1,\ldots,n \\
 
 \[
   
-\mathcal{L}(w,b,\xi,\alpha,r)=\frac{1}{2}\|w\|^2 + C\sum\_{i=1}^n\xi\_i &#8211; \sum\_{i=1}^n\alpha\_i \left(y\_i(w^Tx\_i+b)-1+\xi\_i\right) &#8211; \sum\_{i=1}^n r\_i\xi\_i
+\mathcal{L}(w,b,\xi,\alpha,r)=\frac{1}{2}\|w\|^2 + C\sum\_{i=1}^n\xi\_i – \sum\_{i=1}^n\alpha\_i \left(y\_i(w^Tx\_i+b)-1+\xi\_i\right) – \sum\_{i=1}^n r\_i\xi\_i
   
 \]
 
@@ -88,7 +88,7 @@ s.t., & y\_i(w^Tx\_i+b)\geq 1-\xi_i, i=1,\ldots,n \\
 
 \[
   
-\max\_\alpha \sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\langle x\_i,x\_j\rangle
+\max\_\alpha \sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\langle x\_i,x\_j\rangle
   
 \]
 
@@ -98,7 +98,7 @@ s.t., & y\_i(w^Tx\_i+b)\geq 1-\xi_i, i=1,\ldots,n \\
   
 \begin{align}
   
-\max\_\alpha &\sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\langle x\_i,x\_j\rangle \\
+\max\_\alpha &\sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\langle x\_i,x\_j\rangle \\
   
 s.t., &0\leq \alpha_i\leq C, i=1,\ldots,n \\
   

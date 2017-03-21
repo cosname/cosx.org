@@ -154,7 +154,7 @@ _作者：边蓓蕾      审校：郎大为      编辑：彭晨昱_
 
 该选项默认的图片是 Karl Broman 的大头照。如果 **<span style="color: #ff0000;"><code>yolo: 3</code> </span>**你的幻灯片中将随机出现 3 次他的大头照，如果 <span style="color: #ff0000;"><strong><code>yolo: 0.3</code></strong></span> 你的幻灯片中将有 30% 的片子是他的大头照。当然你也可以把默认图片换掉。
 
-  * &#8230;&#8230;
+  * ……
 
 欲知所有可能的选项，请在console中输入 <span style="color: #ff0000;"><strong><code>?xaringan::moon_reader</code></strong></span>
 

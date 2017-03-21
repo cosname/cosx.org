@@ -22,7 +22,7 @@ _原文链接请点击<a href="http://blog.pluskid.org/?p=696" target="_blank">�
   
 \begin{align}
   
-\max\_\alpha &\sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\kappa( x\_i,x\_j) \\
+\max\_\alpha &\sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\kappa( x\_i,x\_j) \\
   
 s.t., &0\leq \alpha_i\leq C, i=1,\ldots,n \\
   

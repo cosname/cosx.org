@@ -2033,7 +2033,7 @@ slug: weather-driven-industry-sales-big-data
                                                   </p>
                                                   
                                                   <p>
-                                                    [7] Breiman L. Random Forests[J]. Machine Learning, 2001, 45(1):5&#8211;32.
+                                                    [7] Breiman L. Random Forests[J]. Machine Learning, 2001, 45(1):5–32.
                                                   </p>
                                                   
                                                   <p>
