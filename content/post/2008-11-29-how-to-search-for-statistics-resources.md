@@ -58,6 +58,4 @@ slug: how-to-search-for-statistics-resources
 
 希望这些东西对大家有用。
 
-谢益辉
-
-2006-10-21夜
+> 本文写于2006-10-21
