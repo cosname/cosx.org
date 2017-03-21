@@ -34,7 +34,7 @@ APPs:
   
 ** 
 
-## RHadoop实践系列文章
+# RHadoop实践系列文章
 
 RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce 算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据1G, 10G, 100G, TB, PB。 由于大数据所带来的单机性能问题，可能会一去不复返了。
 
@@ -103,74 +103,81 @@ RHadoop实践是一套系列文章，主要包括&#8221;Hadoop环境搭建&#8221
 
 ### 挂载硬盘16G
 
-    1. mkfs.ext4 -j /dev/xvdb
-    2. mkdir /hadoop
-    3. mount /dev/xvdb /hadoop
-    4. vi /etc/fstab
+```
+mkfs.ext4 -j /dev/xvdb
+mkdir /hadoop
+mount /dev/xvdb /hadoop
+vi /etc/fstab
     
-        /dev/xvdb /hadoop ext4 noatime 0 1
-    
+#   /dev/xvdb /hadoop ext4 noatime 0 1
+```
 
 ### 创建hadoop账号和组
 
-    1. groupadd hadoop
-    2. useradd hadoop -g hadoop;
-    3. passwd hadoop
-    4. mkdir /home/hadoop
-    5. chown -R hadoop:hadoop /home/hadoop
-    
+```
+groupadd hadoop
+useradd hadoop -g hadoop;
+passwd hadoop
+mkdir /home/hadoop
+chown -R hadoop:hadoop /home/hadoop
+```    
 
 ### 创建hadoop工作目录
 
-    1. mkdir /hadoop/conan/data0
-    2. chown -R hadoop:hadoop /hadoop/conan/data0
-    
+```
+mkdir /hadoop/conan/data0
+chown -R hadoop:hadoop /hadoop/conan/data0
+```    
 
 # 配置ssh及密码
 
-    nn.qa.com:
-      1. su hadoop
-      2. ssh-keygen -t rsa
-      3. cd /home/hadoop/.ssh/
-      4. cat id_rsa.pub >> authorized_keys
-      5. scp authorized_keys dn0.qa.com:/home/hadoop/.ssh/
+nn.qa.com:
+```
+su hadoop
+ssh-keygen -t rsa
+cd /home/hadoop/.ssh/
+cat id_rsa.pub >> authorized_keys
+scp authorized_keys dn0.qa.com:/home/hadoop/.ssh/
+```
+
+dn0.qa.com:
+```
+su hadoop
+ssh-keygen -t rsa
+cd /home/hadoop/.ssh/
+cat id_rsa.pub >> authorized_keys
+scp authorized_keys dn1.qa.com:/home/hadoop/.ssh/
+```    
+
+dn1.qa.com:
+su hadoop
+ssh-keygen -t rsa
+cd /home/hadoop/.ssh/
+cat id_rsa.pub >> authorized_keys
+scp authorized_keys dn2.qa.com:/home/hadoop/.ssh/
     
-    dn0.qa.com:
-      1. su hadoop
-      2. ssh-keygen -t rsa
-      3. cd /home/hadoop/.ssh/
-      4. cat id_rsa.pub >> authorized_keys
-      5. scp authorized_keys dn1.qa.com:/home/hadoop/.ssh/
+dn2.qa.com:
+su hadoop
+ssh-keygen -t rsa
+cd /home/hadoop/.ssh/
+cat id_rsa.pub >> authorized_keys
+scp authorized_keys dn3.qa.com:/home/hadoop/.ssh/
+
+dn3.qa.com:
+su hadoop
+ssh-keygen -t rsa
+cd /home/hadoop/.ssh/
+cat id_rsa.pub >> authorized_keys
+scp authorized_keys nn.qa.com:/home/hadoop/.ssh/
     
-    dn1.qa.com:
-      1. su hadoop
-      2. ssh-keygen -t rsa
-      3. cd /home/hadoop/.ssh/
-      4. cat id_rsa.pub >> authorized_keys
-      5. scp authorized_keys dn2.qa.com:/home/hadoop/.ssh/
-    
-    dn2.qa.com:
-      1. su hadoop
-      2. ssh-keygen -t rsa
-      3. cd /home/hadoop/.ssh/
-      4. cat id_rsa.pub >> authorized_keys
-      5. scp authorized_keys dn3.qa.com:/home/hadoop/.ssh/
-    
-    dn3.qa.com:
-      1. su hadoop
-      2. ssh-keygen -t rsa
-      3. cd /home/hadoop/.ssh/
-      4. cat id_rsa.pub >> authorized_keys
-      5. scp authorized_keys nn.qa.com:/home/hadoop/.ssh/
-    
-    nn.qa.com:
-      1. su hadoop
-      2. cd /home/hadoop/.ssh/
-      3. scp authorized_keys dn0.qa.com:/home/hadoop/.ssh/
-      4. scp authorized_keys dn1.qa.com:/home/hadoop/.ssh/
-      5. scp authorized_keys dn2.qa.com:/home/hadoop/.ssh/
-      6. scp authorized_keys dn3.qa.com:/home/hadoop/.ssh/
-    
+nn.qa.com:
+su hadoop
+cd /home/hadoop/.ssh/
+scp authorized_keys dn0.qa.com:/home/hadoop/.ssh/
+scp authorized_keys dn1.qa.com:/home/hadoop/.ssh/
+scp authorized_keys dn2.qa.com:/home/hadoop/.ssh/
+scp authorized_keys dn3.qa.com:/home/hadoop/.ssh/
+
 
 # Hadoop完全分步式集群搭建
 
@@ -253,43 +260,42 @@ nn.qa.com:
 
 # 同步hadoop配置到其他虚拟机
 
-  1. cd /hadoop/conan
-  2. scp -r ./hadoop-0.20.2 dn0.qa.com:/hadoop/conan
-  3. scp -r ./hadoop-0.20.2 dn1.qa.com:/hadoop/conan
-  4. scp -r ./hadoop-0.20.2 dn2.qa.com:/hadoop/conan
-  5. scp -r ./hadoop-0.20.2 dn3.qa.com:/hadoop/conan
+```
+cd /hadoop/conan
+scp -r ./hadoop-0.20.2 dn0.qa.com:/hadoop/conan
+scp -r ./hadoop-0.20.2 dn1.qa.com:/hadoop/conan
+scp -r ./hadoop-0.20.2 dn2.qa.com:/hadoop/conan
+scp -r ./hadoop-0.20.2 dn3.qa.com:/hadoop/conan
+```
 
 # 启动namenode节点
 
-  1. cd /hadoop/conan/hadoop-0.29.2
-  2. bin/hadoop namenode -format
-  3. bin/start-all.sh
+```
+cd /hadoop/conan/hadoop-0.29.2
+bin/hadoop namenode -format
+bin/start-all.sh
+```
 
 # 检查hadoop启动是否成功
 
-  1. jps 
-        9362 Jps
-        7756 SecondaryNameNode
-        7531 JobTracker
-        7357 NameNode
-        
+```
+jps 9362 Jps 7756 SecondaryNameNode 7531 JobTracker 7357 NameNode
 
-  2. netstat -nl 
-        Active Internet connections (only servers)
-        Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-        tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN     
-        tcp        0      0 0.0.0.0:5666            0.0.0.0:*               LISTEN     
-        tcp        0      0 0.0.0.0:8649            0.0.0.0:*               LISTEN     
-        tcp6       0      0 :::50070                :::*                    LISTEN     
-        tcp6       0      0 :::22                   :::*                    LISTEN     
-        tcp6       0      0 :::39418                :::*                    LISTEN     
-        tcp6       0      0 :::32895                :::*                    LISTEN     
-        tcp6       0      0 192.168.1.238:9000      :::*                    LISTEN     
-        tcp6       0      0 192.168.1.238:9001      :::*                    LISTEN     
-        tcp6       0      0 :::50090                :::*                    LISTEN     
-        tcp6       0      0 :::51595                :::*                    LISTEN     
-        tcp6       0      0 :::50030                :::*                    LISTEN     
-        udp        0      0 239.2.11.71:8649        0.0.0.0:*  
+netstat -nl Active Internet connections (only servers) Proto Recv-Q Send-Q Local Address Foreign Address State
+tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN
+tcp 0 0 0.0.0.0:5666 0.0.0.0:* LISTEN
+tcp 0 0 0.0.0.0:8649 0.0.0.0:* LISTEN
+tcp6 0 0 :::50070 :::* LISTEN
+tcp6 0 0 :::22 :::* LISTEN
+tcp6 0 0 :::39418 :::* LISTEN
+tcp6 0 0 :::32895 :::* LISTEN
+tcp6 0 0 192.168.1.238:9000 :::* LISTEN
+tcp6 0 0 192.168.1.238:9001 :::* LISTEN
+tcp6 0 0 :::50090 :::* LISTEN
+tcp6 0 0 :::51595 :::* LISTEN
+tcp6 0 0 :::50030 :::* LISTEN
+udp 0 0 239.2.11.71:8649 0.0.0.0:*
+```
         
 
 # HDFS测试
@@ -307,13 +313,12 @@ hadoop环境启动成功，我们进行一下hdfs的简单测试。
 ### 代码部分：
 
 nn.qa.com:
-
-  1. cd /hadoop/conan/hadoop-0.29.2
-  2. bin/hadoop fs -mkdir /test
-  3. bin/hadoop fs -copyFormLocal README.txt /test
-  4. bin/hadoop fs -ls /test 
-        Found 1 items
-        -rw-r--r--   2 hadoop supergroup       1366 2012-08-30 02:05 /test/README.txt
+```
+cd /hadoop/conan/hadoop-0.29.2
+bin/hadoop fs -mkdir /test
+bin/hadoop fs -copyFormLocal README.txt /test
+bin/hadoop fs -ls /test Found 1 items -rw-r--r-- 2 hadoop supergroup 1366 2012-08-30 02:05 /test/README.txt
+```
         
 
 # 最后，恭喜你完成了，hadoop的完成分步式安装，环境成功搭建。
