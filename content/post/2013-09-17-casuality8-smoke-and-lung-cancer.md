@@ -18,14 +18,12 @@ description: "这一节介绍一个有趣的历史性例子：吸烟是否导致
 ---
 
 这一节介绍一个有趣的历史性例子：吸烟是否导致肺癌？主要涉及的人物是 R A Fisher 和 J Cornfield。前者估计上这个网站的人都听过，后者就显得比较陌生了。事实上，Cornfield 在统计、生物统计和流行病学都有着非常重要的贡献。来自 Wikipedia 的一句介绍：“He was the R. A. Fisher Lecturer in 1973 and President of the American Statistical Association in 1974.” 虽然 Cornfield 和 Fisher 学术观点不同（本节介绍），但是 Cornfield 还是在 1973 年给了 Fisher Lecture。
-
 下面我们先介绍 Fisher 和 Cornfield 关于观察性研究中因果推断的两种观点，再给出技术性的细节。
-
 
 # 一、Cornfield 条件或者 Cornfield 不等式
 
-![fisher](https://cos.name/wp-content/uploads/2013/09/fisher.gif)
 
+![fisher](https://cos.name/wp-content/uploads/2013/09/fisher.gif)
 <p style="text-align: center">
   （图注：R A Fisher）
 
@@ -37,9 +35,7 @@ description: "这一节介绍一个有趣的历史性例子：吸烟是否导致
 图中，吸烟到肺癌没有直接的边，因此吸烟对肺癌的因果作用是 `\(0\)`。但是由于它们之间存在一个共同原因 “hidden gene”，它们是相关的。我们用 `\(E\)` 表示是否吸烟 (`\(1=\)` 是，`\(0=\)` 否)；`\(D\)` 表示是否患肺癌 (`\(1=\)` 是，`\(0=\)` 否)；`\(U\)` 表示是否有某种基因 (`\(1=\)` 是，`\(0=\)` 否)。这个符号系统在流行病学比较常用，因为 `\(E\)` 表示暴露与否 （exposure），`\(D\)` 表示疾病 （disease），`\(U\)` 表示未观测的混杂因素 （unobservable confounder）。 在 Fisher 的时代，研究者通过收集的大量数据，得到吸烟对于肺癌的相对风险（relative risk；或称风险比，risk ratio；都简写成 `\(RR\)`）是
   
 `$$
-  
 RR_{ED}= \frac{ P(D=1\mid E=1) } { P(D=1\mid E=0) } = 9.
-  
 $$`
 
 流行病学家关心这个 `\(RR\_{ED}\)` 是否表明了吸烟和肺癌的因果关系。Fisher 表示否定。从一个悲观的角度来讲，我们确实不能从相关关系得到因果性；Fisher 如果表示怀疑，假定有一个未观测的基因，也是无可反驳的。Fisher 的这个说法有时也被称为“共同原因”假说。Cornfield 则采取了一个不太悲观的角度。他问：如果 Fisher 的“共同原因”假说是对的，那么 `\(E\)` 和 `\(U\)` 之间的相关关系需要多强，才能导致 `\(RR\_{ED} = 9\)`，即“吸烟患肺癌”是“不吸烟患肺癌”的风险的 `\(9\)` 倍呢？如果 `\(E\)` 和 `\(U\)` 之间的相关关系强到不具有生物学意义（`\(E\)` 与 `\(U\)` 的相对风险值大得在现实中不太可能），那么 Fisher 的“共同原因”假说就不成立，更大的可能性是吸烟 `\(E\)` 对肺癌 `\(D\)` 有因果作用。
@@ -47,17 +43,13 @@ $$`
 那么 Cornfield 是如何有力反驳Fisher的观点的呢？
 
 ![cornfield](https://cos.name/wp-content/uploads/2013/09/cornfield.jpeg)
-
-
 <p style="text-align: center">
   （图注：J Cornfield）
 
 Cornfield 通过简单的数学证明，得到了如下的不等式，文献中也称为 Cornfield 不等式：
   
 `$$
-  
 RR\_{EU} \geq RR\_{ED}.
-  
 $$`
 
 也就是说，如果 Fisher 的“共同原因”假说成立，那么 `\(E\)` 和 `\(U\)` 之间的 `\(RR\)` 必将大于 `\(E\)` 和 `\(D\)` 之间的 `\(RR\)`。在吸烟和肺癌的例子中，`\(RR\_{EU} \geq 9\)`。`\(RR\_{EU} \geq 9\)`，即 `\(P(U=1|E=1)/P(U=1|E=0) \geq 9\)`，直观解释就是“吸烟时有某个基因 `\(U\)` 存在”的概率是“不吸烟时有某个基因 `\(U\)` 存在”的概率的 `\(9\)` 倍多。根据 Cornfield 进一步的逻辑，由于吸烟更多的是一个社会性的行为，很难想象吸烟的行为能够对于某个基因的存在与否有着 `\(9\)` 倍的预测能力。我前段时间问身边一个生物的 PhD，你觉得 `\(RR\_{EU} \geq 9\)` 可能吗？他的回答是不太可能，理由也是说，吸烟更多的决定于社会经济地位、家庭背景等变量，和基因也许有关系，但是不会强到 `\(RR\_{EU} \geq 9\)` 的程度。Cornfield et al. (1959) 的原话是：
@@ -75,51 +67,32 @@ Cornfield 的这项简单研究，开始了流行病学和统计学中敏感性�
 为了简化证明，我们引进一些记号：
   
 `$$
-  
 \begin{eqnarray}
-  
 f_1 = P(U=1\mid E=1),
-  
 &&f_0 = P(U=1\mid E=0),\\
-  
 RR\_{EU} = \frac{ P(U=1\mid E=1) }{ P(U=1\mid E=0)} = \frac{f\_1} {f_0},
-  
 &&
-  
 RR_{UD} = \frac{ P(D=1\mid U=1) }{ P(D=1\mid U=0) }.
-  
 \end{eqnarray}
-  
 $$`
   
 不妨假设 `\(RR\_{ED}\geq 1\)` 并且 `\(RR\_{EU} \geq 1\)`；若不成立，我们总可以重新对这些二值变量的 `\(0\)` 和 `\(1\)` 类进行重新定义。首先，我们在条件独立性 `\(E\perp D|U\)` 下得到 `\(RR_{ED}\)` 的等价表示：
   
 `$$
-  
 \begin{eqnarray}
-  
 RR_{ED} &=& \frac{ P(D=1\mid E=1) } { P(D=1\mid E=0) }\\
-  
 &=& \frac{ \sum\_{u=0,1}P(D=1, U=u\mid E=1) } {\sum\_{u=0,1} P(D=1, U=u\mid E=0) }\\
-  
 &=& \frac{ \sum\_{u=0,1}P(D=1\mid U=u) P(U=u\mid E=1) } {\sum\_{u=0,1} P(D=1\mid U=u) P(U=u\mid E=0) }\\
-  
 &=& \frac{ P(D=1\mid U=1)P(U=1\mid E=1) + P(D=1\mid U=0)P(U=0\mid E=1) }
-  
 { P(D=1\mid U=1)P(U=1\mid E=0) + P(D=1\mid U=0)P(U=0\mid E=0) }\\
-  
 &=& \frac{ RR\_{UD} f\_1 + (1-f\_1)} { RR\_{UD} f\_0 + (1-f\_0) }.
-  
 \end{eqnarray}
-  
 $$`
 
 条件 `\(RR\_{EU}\geq 1\)` 等价于 `\(f\_1\geq f\_0\)`，因此，上面 `\(RR\_{ED}\)` 是关于 `\(RR_{UD}\)` 的单调递增函数。进一步，
   
 `$$
-  
 RR\_{ED} \leq \lim\_{RR\_{UD}\rightarrow +\infty} \frac{ RR\_{UD} f\_1 + (1-f\_1)} { RR\_{UD} f\_0 + (1-f\_0) } = \frac{f\_1}{f\_0} = RR\_{EU}.
-  
 $$`
 
 由此，Cornfield 不等式得证。
