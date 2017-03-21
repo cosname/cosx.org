@@ -8,7 +8,7 @@ categories:
 slug: r-in-action
 ---
 
-[<img class="alignnone size-medium wp-image-7482" alt="r-in-action" src="https://cos.name/wp-content/uploads/2013/03/r-in-action1-270x300.jpg" width="270" height="300" srcset="https://cos.name/wp-content/uploads/2013/03/r-in-action1-270x300.jpg 270w, https://cos.name/wp-content/uploads/2013/03/r-in-action1.jpg 316w" sizes="(max-width: 270px) 100vw, 270px" />](https://cos.name/wp-content/uploads/2013/03/r-in-action1.jpg)
+[![r-in-action](https://cos.name/wp-content/uploads/2013/03/r-in-action1.jpg)](https://cos.name/wp-content/uploads/2013/03/r-in-action1.jpg)
 
 由统计之都三位成员<a title="高涛" href="http://gaotao.name/" target="_blank">高涛</a>、<a title="肖楠" href="http://road2stat.com/" target="_blank">肖楠</a>、<a title="陈钢" href="http://gossipcoder.com/" target="_blank">陈钢</a>翻译的《R语言实战》现已正式出版。请点击<a title="代码下载" href="http://www.manning.com/kabacoff/RiASourceCode.zip" target="_blank">这里</a>下载随书代码。如果读书在阅读过程中遇到什么问题，可以[留言](https://cos.name/2013/03/r-in-action/#comments "留言")提问。您也可以访问本书在图灵社区的<a title="《R语言实战》在图灵社区的页面" href="http://www.ituring.com.cn/book/857" target="_blank">主页</a>，阅读部分试读章节。我们还会不定期地在这里发布本书的勘误，请读者留意<a title="统计之都的微博" href="http://www.weibo.com/cosname" target="_blank">@统计之都</a>的微博。近期统计之都还有其他图书出版，请关注本站[图书出版](https://cos.name/books/ "图书出版")栏目。
 

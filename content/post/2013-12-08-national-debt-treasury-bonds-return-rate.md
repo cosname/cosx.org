@@ -17,7 +17,7 @@ slug: national-debt-treasury-bonds-return-rate
 
 联系方式：<a href="mailto:birc@gsm.pku.ed.cn" target="_blank">birc@gsm.pku.ed.cn</a>
 
-**<img src="http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34xYTDTr8YI4eASicXdjzhFmYVV2X4NXQnxZEPIfrbVSOKVicBMa79lzsBic1q9cGL8l4TEMqO5gNbEnQ/0" alt="" data-src="http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34xYTDTr8YI4eASicXdjzhFmYVV2X4NXQnxZEPIfrbVSOKVicBMa79lzsBic1q9cGL8l4TEMqO5gNbEnQ/0" />**
+**![](http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34xYTDTr8YI4eASicXdjzhFmYVV2X4NXQnxZEPIfrbVSOKVicBMa79lzsBic1q9cGL8l4TEMqO5gNbEnQ/0)**
 
 <div>
   <p>
@@ -53,15 +53,15 @@ slug: national-debt-treasury-bonds-return-rate
 
 **1年期国债收益率**回归分析结果如下表所示。模型整体的F-检验高度显著（F值为115.34，P<0.001），拟合优度良好，判决系数为：R-Sq = 79.7%   R-Sq（调整） = 79.0%。从中可以看到：（1）在5%的显著性水平下，CPI增速和7天回购都是显著的，而固定资产投资增速的P值是0.246，不显著。（2）CPI增速的系数是0.177，说明在其他参数不变的情况下，CPI增速每上涨1个百分点，1年期收益率上涨0.177个百分点。（3）7天回购利率的系数是0.341，说明在其他参数不变的情况下，7天回购利率每上涨1个百分点，1年期收益率上涨0.341个百分点。（4）从系数上判断，1年期收益率受7天回购利率的影响更大，这说明货币市场的资金充沛度是影响1年期收益率的主要因素。
 
-[<img class="aligncenter size-full wp-image-9290" src="https://cos.name/wp-content/uploads/2013/12/t1.jpg" alt="t1" width="1134" height="461" srcset="https://cos.name/wp-content/uploads/2013/12/t1.jpg 1134w, https://cos.name/wp-content/uploads/2013/12/t1-300x121.jpg 300w, https://cos.name/wp-content/uploads/2013/12/t1-500x203.jpg 500w" sizes="(max-width: 1134px) 100vw, 1134px" />](https://cos.name/wp-content/uploads/2013/12/t1.jpg)
+[![t1](https://cos.name/wp-content/uploads/2013/12/t1.jpg)](https://cos.name/wp-content/uploads/2013/12/t1.jpg)
 
 **5年期国债收益率**回归分析结果见下表。模型整体的F-检验高度显著（F值为42.31，P<0.001），拟合优度良好，判决系数为：R-Sq = 59.1%   R-Sq（调整） = 57.7%。从中可以看到：（1）在5%的显著水平下，CPI增速和7天回购都是显著的，而固定资产投资增速的P值是0.133，不显著。（2）CPI增速的系数是0.15，说明在其他参数不变的情况下，CPI增速每上涨1个百分点，5年期收益率上涨0.15个百分点。（3）7天回购利率的系数是0.146，说明在其他参数不变的情况下，7天回购利率每上涨1个百分点，5年期收益率上涨0.146个百分点。（4）从系数上判断，5年期收益率受CPI增速的影响更大，这说明通货膨胀是影响5年期收益率的主要因素。
 
-[<img class="aligncenter size-full wp-image-9291" src="https://cos.name/wp-content/uploads/2013/12/t2.jpg" alt="t2" width="1171" height="428" srcset="https://cos.name/wp-content/uploads/2013/12/t2.jpg 1171w, https://cos.name/wp-content/uploads/2013/12/t2-300x109.jpg 300w, https://cos.name/wp-content/uploads/2013/12/t2-500x182.jpg 500w" sizes="(max-width: 1171px) 100vw, 1171px" />](https://cos.name/wp-content/uploads/2013/12/t2.jpg)
+[![t2](https://cos.name/wp-content/uploads/2013/12/t2.jpg)](https://cos.name/wp-content/uploads/2013/12/t2.jpg)
 
 **10年期国债收益率**回归分析结果如下表。模型整体的F-检验高度显著（F值为32.59，P<0.001），拟合优度良好，判决系数为：R-Sq = 52.6%   R-Sq（调整） = 51.0%。从中可以看到：（1）在5%的显著性水平下，CPI增速和固定资产投资增速都是显著的，而7天回购的P值是0.179，不显著。（2）CPI增速的系数是0.131，说明在其他参数不变的情况下，CPI增速每上涨1个百分点，10年期收益率上涨0.131个百分点。（3）固定资产投资的系数是0.025，说明在其他参数不变的情况下，固定资产投资每上涨1个百分点，10年期收益率上涨0.025个百分点。（4）从系数上判断，10年期收益率受固定资产投资增速的影响弱于CPI增速，从一个侧面反映了中国的固定资产投资更多的是政府主导，而非市场主导，因此固定资产投资增速并不能真正反映市场对长期投资的需求波动。
 
-[<img class="aligncenter size-full wp-image-9292" src="https://cos.name/wp-content/uploads/2013/12/t3.jpg" alt="t3" width="1196" height="425" srcset="https://cos.name/wp-content/uploads/2013/12/t3.jpg 1196w, https://cos.name/wp-content/uploads/2013/12/t3-300x106.jpg 300w, https://cos.name/wp-content/uploads/2013/12/t3-500x177.jpg 500w" sizes="(max-width: 1196px) 100vw, 1196px" />](https://cos.name/wp-content/uploads/2013/12/t3.jpg)
+[![t3](https://cos.name/wp-content/uploads/2013/12/t3.jpg)](https://cos.name/wp-content/uploads/2013/12/t3.jpg)
 
 **【总结讨论】**
 

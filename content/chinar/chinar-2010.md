@@ -22,7 +22,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 上海财经大学（国定路777号），行政楼一楼阶梯教室、报告厅（地图右上角）。
 
-[<img class="aligncenter size-large wp-image-2578" title="上海财经大学地图" src="https://cos.name/wp-content/uploads/2010/10/SHUFE_map-500x341.jpg" alt="" width="500" height="341" srcset="https://cos.name/wp-content/uploads/2010/10/SHUFE_map-500x341.jpg 500w, https://cos.name/wp-content/uploads/2010/10/SHUFE_map-300x204.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/10/SHUFE_map.jpg)
+[![](https://cos.name/wp-content/uploads/2010/10/SHUFE_map-500x341.jpg "上海财经大学地图")](https://cos.name/wp-content/uploads/2010/10/SHUFE_map.jpg)
 
 ### 三、会议组委
 
@@ -31,9 +31,9 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 ### 四、会议海报与传单
 
- [<img class="aligncenter size-large wp-image-2584" title="第三届中国R语言会议上海会场海报" src="https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster-395x500.jpg" alt="" width="395" height="500" srcset="https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster-395x500.jpg 395w, https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster-237x300.jpg 237w, https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster.jpg 632w" sizes="(max-width: 395px) 100vw, 395px" />](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster.jpg)
+ [![](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster.jpg "第三届中国R语言会议上海会场海报")](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster.jpg)
 
-[<img class="aligncenter size-large wp-image-2585" title="第三届中国R语言会议上海会场传单" src="https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet-395x500.jpg" alt="" width="395" height="500" srcset="https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet-395x500.jpg 395w, https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet-237x300.jpg 237w, https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet.jpg 632w" sizes="(max-width: 395px) 100vw, 395px" />](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet.jpg)
+[![](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet.jpg "第三届中国R语言会议上海会场传单")](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet.jpg)
 
 ## 会议事宜（北京会场）
 
@@ -52,12 +52,12 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 交通地图（点击看大图）：
 
 <p style="text-align: center;">
-  <a href="http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png"><img class="aligncenter" title="人大交通地图" src="http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png" alt="" width="586" height="441" /></a>
+  <a href="http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png">![](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png "人大交通地图")</a>
 </p>
 
 人大校内地图（点击看大图）：
 
-[<img class="aligncenter size-large wp-image-2245" title="人大校内地图" src="https://cos.name/wp-content/uploads/2010/06/RUCmap1-500x342.jpg" alt="" width="500" height="342" srcset="https://cos.name/wp-content/uploads/2010/06/RUCmap1-500x342.jpg 500w, https://cos.name/wp-content/uploads/2010/06/RUCmap1-300x205.jpg 300w, https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg 1024w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg)
+[![](https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg "人大校内地图")](https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg)
 
 ### 三、会议演讲
 

@@ -14,7 +14,7 @@ tags:
 slug: interview_of_xie_liang
 ---
 
-[<img class="size-medium wp-image-8281 alignleft" alt="xie-liang-pic" src="https://cos.name/wp-content/uploads/2013/08/xie-liang-pic-253x300.jpg" width="253" height="300" srcset="https://cos.name/wp-content/uploads/2013/08/xie-liang-pic-253x300.jpg 253w, https://cos.name/wp-content/uploads/2013/08/xie-liang-pic-421x500.jpg 421w, https://cos.name/wp-content/uploads/2013/08/xie-liang-pic.jpg 427w" sizes="(max-width: 253px) 100vw, 253px" />](https://cos.name/wp-content/uploads/2013/08/xie-liang-pic.jpg)
+[![xie-liang-pic](https://cos.name/wp-content/uploads/2013/08/xie-liang-pic.jpg)](https://cos.name/wp-content/uploads/2013/08/xie-liang-pic.jpg)
   
 <span style="color: #888888;">【COS编辑部按】受访人：谢梁</span>
 

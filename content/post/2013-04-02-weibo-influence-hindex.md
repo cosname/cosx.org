@@ -33,7 +33,7 @@ H-index其实更广泛的应用于学术论文评价，其定义为：
 
 不一会儿，数据抓完了。然后算算H-index，就有了下面这张图：
 
-<figure id="attachment_7583" style="width: 875px" class="wp-caption aligncenter">[<img class=" wp-image-7583 " alt="新浪微博用户影响力H-index指数(点击大图)" src="https://cos.name/wp-content/uploads/2013/03/h_index_result.png" width="875" height="509" srcset="https://cos.name/wp-content/uploads/2013/03/h_index_result.png 875w, https://cos.name/wp-content/uploads/2013/03/h_index_result-300x174.png 300w, https://cos.name/wp-content/uploads/2013/03/h_index_result-500x290.png 500w" sizes="(max-width: 875px) 100vw, 875px" />](https://cos.name/wp-content/uploads/2013/03/h_index_result.png)<figcaption class="wp-caption-text">新浪微博用户影响力H-index指数(点击大图)</figcaption></figure>
+<figure id="attachment_7583" style="width: 875px" class="wp-caption aligncenter">[![新浪微博用户影响力H-index指数(点击大图)](https://cos.name/wp-content/uploads/2013/03/h_index_result.png)](https://cos.name/wp-content/uploads/2013/03/h_index_result.png)<figcaption class="wp-caption-text">新浪微博用户影响力H-index指数(点击大图)</figcaption></figure>
   
 <!--more-->
 

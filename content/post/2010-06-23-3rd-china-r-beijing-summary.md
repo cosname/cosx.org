@@ -15,9 +15,9 @@ tags:
 slug: 3rd-china-r-beijing-summary
 ---
 
-<figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1821" title="第三届中国R语言会议北京会场合影" src="https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-500x229.jpg" alt="第三届中国R语言会议北京会场合影" width="500" height="229" />](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> 
+<figure style="width: 500px" class="wp-caption aligncenter">[![第三届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-500x229.jpg "第三届中国R语言会议北京会场合影")](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> 
 
-[<img class="aligncenter size-medium wp-image-2276" title="中国R语言会议标识" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png" alt="" width="300" height="199" srcset="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+[![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png "中国R语言会议标识")](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
 第三届中国R语言会议（北京会场）于2010年6月14日~15日在中国人民大学明德法学楼0101成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都网站(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，来自各行各业的R用户齐聚北京，共同探讨和交流R软件的使用经验，取得了丰厚的成果。 
 
@@ -89,7 +89,7 @@ slug: 3rd-china-r-beijing-summary
   * 甄一松：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Bioconductor.pdf" target="_blank">R/BioConductor在斑马鱼心脏再生领域的应用</a>
   * 胡一睿：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Time-Series-TAR-Model.pdf" target="_blank">R在处理门限自回归模型中的应用</a><figure style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="aligncenter size-large wp-image-1821" title="第三届中国R语言会议北京会场演讲者与组织人员合影" src="https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2-500x281.jpg" alt="第三届中国R语言会议北京会场演讲者与组织人员合影" width="500" height="281" />](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议北京会场演讲者与组织人员合影（右键另存为看大图）</figcaption></figure> 
+[![第三届中国R语言会议北京会场演讲者与组织人员合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2-500x281.jpg "第三届中国R语言会议北京会场演讲者与组织人员合影")](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议北京会场演讲者与组织人员合影（右键另存为看大图）</figcaption></figure> 
 
 #  
 

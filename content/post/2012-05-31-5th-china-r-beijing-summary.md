@@ -16,10 +16,10 @@ slug: 5th-china-r-beijing-summary
 ---
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2012/05/5th-China-R-BJ.jpg" target="_blank"><img class=" wp-image-5738 aligncenter" title="第五届中国R语言会议（北京会场）合影" alt="" src="https://cos.name/wp-content/uploads/2012/05/5th-China-R-BJ.jpg" width="600" height="209" srcset="https://cos.name/wp-content/uploads/2012/05/5th-China-R-BJ.jpg 4497w, https://cos.name/wp-content/uploads/2012/05/5th-China-R-BJ-300x104.jpg 300w, https://cos.name/wp-content/uploads/2012/05/5th-China-R-BJ-500x174.jpg 500w" sizes="(max-width: 600px) 100vw, 600px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2012/05/5th-China-R-BJ.jpg" target="_blank">![](https://cos.name/wp-content/uploads/2012/05/5th-China-R-BJ.jpg "第五届中国R语言会议（北京会场）合影")</a>
 </p>
 
-[<img class="aligncenter size-medium wp-image-2276" title="中国R语言会议标识" alt="" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png" width="300" height="199" srcset="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)第五届中国 R 语言会议（北京会场）于 2012 年 5 月 26 日 ~ 27 日在中国人民大学明德法学楼 0201 成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院、统计之都 (<a href="https://cos.name" target="_blank">cos.name</a>) 主办，<a href="http://www.mango-solutions.com.cn/" target="_blank">mango-solutions</a>赞助。在两天的会议时间里，参会者齐聚一堂，就 R 语言在互联网、商业、统计、生物等诸多方面的应用进行了深入的探讨。
+[![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png "中国R语言会议标识")](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)第五届中国 R 语言会议（北京会场）于 2012 年 5 月 26 日 ~ 27 日在中国人民大学明德法学楼 0201 成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院、统计之都 (<a href="https://cos.name" target="_blank">cos.name</a>) 主办，<a href="http://www.mango-solutions.com.cn/" target="_blank">mango-solutions</a>赞助。在两天的会议时间里，参会者齐聚一堂，就 R 语言在互联网、商业、统计、生物等诸多方面的应用进行了深入的探讨。
 
 ## 会议概况
 
@@ -34,7 +34,7 @@ slug: 5th-china-r-beijing-summary
 > Allianz Global Assistance、艾美仕咨询公司、埃森哲、艾亿新融资本管理公司、宝宝树信息技术有限公司、暴风影音、百济神州（北京）生物科技有限公司、北京安泰科信息开发有限公司、北京紫博蓝网络技术服务有限公司、北京贝瑞和康生物技术有限公司、北京德昂信息技术有限公司、北京果壳互动科技传媒有限公司、北京名影科漫有限公司、北京雀巢研发中心有限公司、北京瑞星信息技术有限公司、北京神州数码思特奇信息技术股份有限公司、北京网达信联科技发展有限公司、北京雪球财经信息科技有限公司、北京中彩在线科技有限责任公司、北京中软国际信息技术有限公司、北京质量协会、百度、北森、豆瓣、当当网、Doubleday Enterprises、敦煌网、凡客诚品、风行在线、广联达软件股份有限公司、华夏人寿、弘毅远道科技有限公司、IBM、IMS、ICON医药咨询有限公司、京东商城、精品购物指南、江苏百盛工程咨询有限公司、KPMG、乐视网、Mango Solutions、NCUK、Oracle、澳际PMP、奇虎360、去哪儿网、盘古文化传播有限公司、普华基础软件股份有限公司、品友互动、人人网、Springer Beijing Office、山东浪潮齐鲁软件、水利部发展研究中心、SAS R&D（Beijing）、搜浩捌捌（北京）企业管理有限公司、上海证券交易所、腾讯科技、完美世界、新华社中经社控股有限公司、新浪微博、新浪乐居、讯奇、银华基金、优酷网、亚信联创、用友软件股份有限公司、知本咨询、中华英才网、中国环境监测总站、中国建设银行北京市分行、中金公司、中粮我买网、中国气象局
 > 
 > <p style="text-align: center;">
->   </blockquote> <figure id="attachment_5725" style="width: 500px" class="wp-caption aligncenter"><a href="https://cos.name/wp-content/uploads/2012/05/IMG_8116.jpg"><img class="size-large wp-image-5725" title="IMG_8116" alt="" src="https://cos.name/wp-content/uploads/2012/05/IMG_8116-500x333.jpg" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2012/05/IMG_8116-500x333.jpg 500w, https://cos.name/wp-content/uploads/2012/05/IMG_8116-300x200.jpg 300w, https://cos.name/wp-content/uploads/2012/05/IMG_8116-450x300.jpg 450w" sizes="(max-width: 500px) 100vw, 500px" /></a><figcaption class="wp-caption-text">会议现场（点击看大图）</figcaption></figure> 
+>   </blockquote> <figure id="attachment_5725" style="width: 500px" class="wp-caption aligncenter"><a href="https://cos.name/wp-content/uploads/2012/05/IMG_8116.jpg">![](https://cos.name/wp-content/uploads/2012/05/IMG_8116-500x333.jpg "IMG_8116")</a><figcaption class="wp-caption-text">会议现场（点击看大图）</figcaption></figure> 
 >   
 >   <h2>
 >     会议内容

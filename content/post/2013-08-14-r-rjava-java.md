@@ -35,7 +35,7 @@ R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直�
   
 <a title="解惑rJava R与Java的高速通道" href="http://blog.fens.me/r-rjava-java" target="_blank">http://blog.fens.me/r-rjava-java</a>
   
-[<img class="alignnone size-full wp-image-1633" alt="rjava" src="http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png" width="600" height="400" />](http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png)
+[![rjava](http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png)](http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png)
 
 **前言**
   
@@ -207,7 +207,7 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 
 **启动Eclipse编写程序**
   
-[<img class="alignnone size-full wp-image-1627" alt="rjava2" src="http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png" width="371" height="240" />](http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png)
+[![rjava2](http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png)](http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png)
 
     
     package org.conan.r.rjava;
@@ -246,7 +246,7 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 
     -Djava.library.path="C:\Program Files\R\R-3.0.1\library\rJava\jri\x64"
 
-[<img class="alignnone size-full wp-image-1625" alt="rjava" src="http://blog.fens.me/wp-content/uploads/2013/08/rjava.png" width="613" height="553" />](http://blog.fens.me/wp-content/uploads/2013/08/rjava.png)
+[![rjava](http://blog.fens.me/wp-content/uploads/2013/08/rjava.png)](http://blog.fens.me/wp-content/uploads/2013/08/rjava.png)
 
 **运行结果：**
 

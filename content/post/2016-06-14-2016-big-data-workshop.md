@@ -44,7 +44,7 @@ slug: 2016-big-data-workshop
 
 **授课主题**
 
-[<img class="aligncenter size-full wp-image-12627" src="https://cos.name/wp-content/uploads/2016/06/shouke.png" alt="shouke" width="955" height="561" srcset="https://cos.name/wp-content/uploads/2016/06/shouke.png 955w, https://cos.name/wp-content/uploads/2016/06/shouke-300x176.png 300w, https://cos.name/wp-content/uploads/2016/06/shouke-768x451.png 768w, https://cos.name/wp-content/uploads/2016/06/shouke-500x294.png 500w" sizes="(max-width: 955px) 100vw, 955px" />](https://cos.name/wp-content/uploads/2016/06/shouke.png)
+[![shouke](https://cos.name/wp-content/uploads/2016/06/shouke.png)](https://cos.name/wp-content/uploads/2016/06/shouke.png)
 
 **嘉宾介绍**
 
@@ -84,7 +84,7 @@ slug: 2016-big-data-workshop
 
 标间380元/天，含双早
 
-[<img class="aligncenter size-full wp-image-12625" src="https://cos.name/wp-content/uploads/2016/06/jiudian_2.jpg" alt="jiudian_2" width="1000" height="750" srcset="https://cos.name/wp-content/uploads/2016/06/jiudian_2.jpg 1000w, https://cos.name/wp-content/uploads/2016/06/jiudian_2-300x225.jpg 300w, https://cos.name/wp-content/uploads/2016/06/jiudian_2-768x576.jpg 768w, https://cos.name/wp-content/uploads/2016/06/jiudian_2-500x375.jpg 500w" sizes="(max-width: 1000px) 100vw, 1000px" />](https://cos.name/wp-content/uploads/2016/06/jiudian_2.jpg) [<img class="aligncenter size-full wp-image-12626" src="https://cos.name/wp-content/uploads/2016/06/jiudian_1.jpg" alt="jiudian_1" width="750" height="1000" srcset="https://cos.name/wp-content/uploads/2016/06/jiudian_1.jpg 750w, https://cos.name/wp-content/uploads/2016/06/jiudian_1-225x300.jpg 225w, https://cos.name/wp-content/uploads/2016/06/jiudian_1-375x500.jpg 375w" sizes="(max-width: 750px) 100vw, 750px" />](https://cos.name/wp-content/uploads/2016/06/jiudian_1.jpg) [<img class="aligncenter size-full wp-image-12624" src="https://cos.name/wp-content/uploads/2016/06/jiudian_3.jpg" alt="jiudian_3" width="1000" height="750" srcset="https://cos.name/wp-content/uploads/2016/06/jiudian_3.jpg 1000w, https://cos.name/wp-content/uploads/2016/06/jiudian_3-300x225.jpg 300w, https://cos.name/wp-content/uploads/2016/06/jiudian_3-768x576.jpg 768w, https://cos.name/wp-content/uploads/2016/06/jiudian_3-500x375.jpg 500w" sizes="(max-width: 1000px) 100vw, 1000px" />](https://cos.name/wp-content/uploads/2016/06/jiudian_3.jpg)
+[![jiudian_2](https://cos.name/wp-content/uploads/2016/06/jiudian_2.jpg)](https://cos.name/wp-content/uploads/2016/06/jiudian_2.jpg) [![jiudian_1](https://cos.name/wp-content/uploads/2016/06/jiudian_1.jpg)](https://cos.name/wp-content/uploads/2016/06/jiudian_1.jpg) [![jiudian_3](https://cos.name/wp-content/uploads/2016/06/jiudian_3.jpg)](https://cos.name/wp-content/uploads/2016/06/jiudian_3.jpg)
 
 联系人：
 
@@ -94,7 +94,7 @@ slug: 2016-big-data-workshop
 
 报名二维码：
 
-[<img class="size-full wp-image-12623 alignleft" src="https://cos.name/wp-content/uploads/2016/06/erwei_jiudian.png" alt="erwei_jiudian" width="87" height="87" />](https://cos.name/wp-content/uploads/2016/06/erwei_jiudian.png)
+[![erwei_jiudian](https://cos.name/wp-content/uploads/2016/06/erwei_jiudian.png)](https://cos.name/wp-content/uploads/2016/06/erwei_jiudian.png)
 
 &nbsp;
 

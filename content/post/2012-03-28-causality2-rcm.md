@@ -16,7 +16,7 @@ tags:
 slug: causality2-rcm
 ---
 
-[<img class="alignleft  wp-image-5228" src="https://cos.name/wp-content/uploads/2012/03/Donald-Rubin.jpg" alt="" width="214" height="236" />](https://cos.name/wp-content/uploads/2012/03/Donald-Rubin.jpg)因果推断用的最多的模型是 Rubin Causal Model (RCM; Rubin 1978) 和 Causal Diagram (Pearl 1995)。Pearl (2000) 中介绍了这两个模型的等价性，但是就应用来看，RCM 更加精确，而 Causal Diagram 更加直观，后者深受计算机专家们的推崇。这部分主要讲 RCM。
+[![](https://cos.name/wp-content/uploads/2012/03/Donald-Rubin.jpg)](https://cos.name/wp-content/uploads/2012/03/Donald-Rubin.jpg)因果推断用的最多的模型是 Rubin Causal Model (RCM; Rubin 1978) 和 Causal Diagram (Pearl 1995)。Pearl (2000) 中介绍了这两个模型的等价性，但是就应用来看，RCM 更加精确，而 Causal Diagram 更加直观，后者深受计算机专家们的推崇。这部分主要讲 RCM。
 
 设  $Z\_i$ 表示个体 $i$ 接受处理与否，处理取 $1$，对照取$0$ (这部分的处理变量都讨论二值的，多值的可以做相应的推广)；$Y\_i$ 表示个体 $i$ 的结果变量。另外记 $ \{  Y\_i(1),Y\_i(0)\}  $ 表示个体 $i$ 接受处理或者对照的潜在结果 (potential outcome)，那么 $Y\_i(1) -Y\_i(0)$  表示个体 $i$  接受治疗的个体因果作用。不幸的是，每个个体要么接受处理，要么接受对照 $\{Y\_i(1),Y\_i(0)\} $ 中必然缺失一半，个体的因果作用是不可识别的。观测的结果是 $ Y\_i = Z\_i Y\_i(1) + (1 &#8211; Z\_i) Y_i(0)  $。 但是，在 $Z$ 做随机化的前提下，我们可以识别总体的平均因果作用 (Average Causal Effect; ACE):
 

@@ -21,7 +21,7 @@ slug: value-of-the-reputation-from-the-data
 
 **1 eBay****说：卖家信誉越高，最终成交价格越高**
 
-[<img class="aligncenter size-full wp-image-12317" src="https://cos.name/wp-content/uploads/2016/05/1.jpg" alt="1" width="421" height="220" srcset="https://cos.name/wp-content/uploads/2016/05/1.jpg 421w, https://cos.name/wp-content/uploads/2016/05/1-300x157.jpg 300w" sizes="(max-width: 421px) 100vw, 421px" />](https://cos.name/wp-content/uploads/2016/05/1.jpg)
+[![1](https://cos.name/wp-content/uploads/2016/05/1.jpg)](https://cos.name/wp-content/uploads/2016/05/1.jpg)
 
 从2000年开始，以eBay为代表的电子商务发展势头迅猛，养活了一大票科研人员。eBay以网上拍卖为主要的营业方式，因此，当时科研人员的一个主要的研究题目，就是网上拍卖的卖家的信誉如何影响拍卖结果（如成交率、竞拍次数、最终成交价格等）。那么卖家的信誉和最终成交价格是什么关系呢？**答案是显著的正相关关系：**对于同质商品，**高信誉的卖家，其最终成交价格普遍更高。**
 
@@ -29,7 +29,7 @@ slug: value-of-the-reputation-from-the-data
 
 **2** **淘宝说：卖家信誉越高，商品价格越低（这不可能！！！）**
 
-[<img class="aligncenter size-full wp-image-12318" src="https://cos.name/wp-content/uploads/2016/05/2.jpg" alt="2" width="739" height="473" srcset="https://cos.name/wp-content/uploads/2016/05/2.jpg 739w, https://cos.name/wp-content/uploads/2016/05/2-300x192.jpg 300w, https://cos.name/wp-content/uploads/2016/05/2-500x320.jpg 500w" sizes="(max-width: 739px) 100vw, 739px" />](https://cos.name/wp-content/uploads/2016/05/2.jpg)
+[![2](https://cos.name/wp-content/uploads/2016/05/2.jpg)](https://cos.name/wp-content/uploads/2016/05/2.jpg)
 
 在2000~2010中的若干年里，科研人员们孜孜不倦地撰写和发表这类基于eBay数据的论文。那时候中国的淘宝逐渐兴起。既然大家都在灌，当时作为博士生的我，面临着写论文毕业的压力，也想拿淘宝的数据灌一篇。2007年，我开始写爬虫程序抓淘宝的数据，包括商品信息、卖家信息、买家信息、评论。拿着这些数据，照着葫芦画个瓢，**我想得到这么一个结论：平均而言，在淘宝上，高信誉的卖家收相对较高的价格。**是不是特别无聊？我还清楚地记得当时和一个比我还耿直的老师的对话：
 
@@ -45,7 +45,7 @@ slug: value-of-the-reputation-from-the-data
 
 **3****宁死不屈的数据：信誉和价格负相关**
 
-[<img class="aligncenter size-full wp-image-12319" src="https://cos.name/wp-content/uploads/2016/05/3.jpg" alt="3" width="466" height="309" srcset="https://cos.name/wp-content/uploads/2016/05/3.jpg 466w, https://cos.name/wp-content/uploads/2016/05/3-300x199.jpg 300w" sizes="(max-width: 466px) 100vw, 466px" />](https://cos.name/wp-content/uploads/2016/05/3.jpg)
+[![3](https://cos.name/wp-content/uploads/2016/05/3.jpg)](https://cos.name/wp-content/uploads/2016/05/3.jpg)
 
 受到文献中结果的影响，我准备好好拷问一下这批数据，让它讲“真话”：信誉与价格正相关。当然，不能篡改数据，这是违背职业道德的，这种事情不能干。但是，如果这个结果是某些“离群点”造成的，删除这些“离群点”让分析结果变好，这是不违背职业道德的。当时我发展了一套黑科技，能准确地识别出某些“离群点”，你删了它们之后，接近显著的关系就能显著。在唯一追求p值的年代，用上这个黑科技，论文能相对好写一点。然而，不管我怎么拷打这批数据，它宁死不屈，信誉与价格始终是负相关的。我当时特别沮丧。有一天晚上在回住所的路上，和同学聊起这事。他说，也许，它们之间的关系真的是负的呢？
 
@@ -53,7 +53,7 @@ slug: value-of-the-reputation-from-the-data
 
 **4** **好吃的肉夹馍便宜，难吃的肉夹馍贵**
 
-[<img class="aligncenter size-full wp-image-12320" src="https://cos.name/wp-content/uploads/2016/05/4.jpg" alt="4" width="494" height="367" srcset="https://cos.name/wp-content/uploads/2016/05/4.jpg 494w, https://cos.name/wp-content/uploads/2016/05/4-300x223.jpg 300w" sizes="(max-width: 494px) 100vw, 494px" />](https://cos.name/wp-content/uploads/2016/05/4.jpg)
+[![4](https://cos.name/wp-content/uploads/2016/05/4.jpg)](https://cos.name/wp-content/uploads/2016/05/4.jpg)
 
 我开始琢磨为什么它们的关系是负的。后来我想到一个故事，叫做“游客与本地居民”的故事。想想看，**来西安逛的游客们吃到的肉夹馍，和西安本地居民吃到的肉夹馍，哪个更贵，哪个更好吃？**
 
@@ -61,7 +61,7 @@ slug: value-of-the-reputation-from-the-data
 
 ** ****5** **消费者的搜索能力**
 
-[<img class="aligncenter size-full wp-image-12321" src="https://cos.name/wp-content/uploads/2016/05/5.jpg" alt="5" width="489" height="396" srcset="https://cos.name/wp-content/uploads/2016/05/5.jpg 489w, https://cos.name/wp-content/uploads/2016/05/5-300x243.jpg 300w" sizes="(max-width: 489px) 100vw, 489px" />](https://cos.name/wp-content/uploads/2016/05/5.jpg)
+[![5](https://cos.name/wp-content/uploads/2016/05/5.jpg)](https://cos.name/wp-content/uploads/2016/05/5.jpg)
 
 肉夹馍的故事，看起来是景区与非景区的故事，本质上却是消费者的信息搜索能力的故事。搜索能力强的消费者，我们称之为“知情”的消费者，具有比较质量与价格的能力，可以找到质优价廉的商家；而搜索能力弱的消费者，我们称之为“不知情”的消费者，不具有质量与比较的能力，在市场上的购买行为几近于随机行为。范里安在他著名的论文“A model of sales”中，就使用了这样的模型设定。
 
@@ -69,7 +69,7 @@ slug: value-of-the-reputation-from-the-data
 
 **6** **美国BizRate****的数据：高信誉的商家，价格更低**
 
-[<img class="aligncenter size-full wp-image-12322" src="https://cos.name/wp-content/uploads/2016/05/6.jpg" alt="6" width="527" height="378" srcset="https://cos.name/wp-content/uploads/2016/05/6.jpg 527w, https://cos.name/wp-content/uploads/2016/05/6-300x215.jpg 300w, https://cos.name/wp-content/uploads/2016/05/6-500x359.jpg 500w" sizes="(max-width: 527px) 100vw, 527px" />](https://cos.name/wp-content/uploads/2016/05/6.jpg)
+[![6](https://cos.name/wp-content/uploads/2016/05/6.jpg)](https://cos.name/wp-content/uploads/2016/05/6.jpg)
 
 很多人可能会有疑问：淘宝上卖家的信誉得分反映了是累计交易量。这些卖家是因为定价低而信誉（累计成交量）高呢；还是因为像我说的一样，因为信誉高而选择低定价？
 
@@ -77,7 +77,7 @@ slug: value-of-the-reputation-from-the-data
 
 **7** **总结**
 
-[<img class="aligncenter size-full wp-image-12323" src="https://cos.name/wp-content/uploads/2016/05/7.jpg" alt="7" width="377" height="257" srcset="https://cos.name/wp-content/uploads/2016/05/7.jpg 377w, https://cos.name/wp-content/uploads/2016/05/7-300x205.jpg 300w" sizes="(max-width: 377px) 100vw, 377px" />](https://cos.name/wp-content/uploads/2016/05/7.jpg)
+[![7](https://cos.name/wp-content/uploads/2016/05/7.jpg)](https://cos.name/wp-content/uploads/2016/05/7.jpg)
 
 **所以，数据告诉我们，信誉高的卖家的平均价格相对较低。**您猜对了吗？
 
@@ -141,7 +141,7 @@ slug: value-of-the-reputation-from-the-data
           <section> <section data-id="85982"> <section>如果您对我们的内容感兴趣，请关注微信公众号“狗熊会”，或扫描下方二维码</section> </section> 
           
           <p>
-            <a href="https://cos.name/wp-content/uploads/2016/05/8.jpg"><img class="aligncenter size-full wp-image-12325" src="https://cos.name/wp-content/uploads/2016/05/8.jpg" alt="8" width="258" height="258" srcset="https://cos.name/wp-content/uploads/2016/05/8.jpg 258w, https://cos.name/wp-content/uploads/2016/05/8-150x150.jpg 150w" sizes="(max-width: 258px) 100vw, 258px" /></a>
+            <a href="https://cos.name/wp-content/uploads/2016/05/8.jpg">![8](https://cos.name/wp-content/uploads/2016/05/8.jpg)</a>
           </p></section>
         </div>
       </div>

@@ -26,13 +26,13 @@ slug: from-math-to-app-stat
 
 最难忘的经历是上<a href="http://www.stat.berkeley.edu/~census/" target="_blank">David Freedman</a>的应用统计的第一堂课。第一次上课前的几天，他给选课的学生发了封邮件，告诉大家在第一次上课之前要读三篇文章。大家都是好学生嘛，虽然文章加起来一百多页，大家也都在课前认真地读了（至少认为好好读了）。
 
-[<img class="aligncenter wp-image-9863 size-full" src="https://cos.name/wp-content/uploads/2014/05/photoNormal.jpeg" alt="photoNormal" width="400" height="265" srcset="https://cos.name/wp-content/uploads/2014/05/photoNormal.jpeg 400w, https://cos.name/wp-content/uploads/2014/05/photoNormal-300x198.jpeg 300w" sizes="(max-width: 400px) 100vw, 400px" />](https://cos.name/wp-content/uploads/2014/05/photoNormal.jpeg)
+[![photoNormal](https://cos.name/wp-content/uploads/2014/05/photoNormal.jpeg)](https://cos.name/wp-content/uploads/2014/05/photoNormal.jpeg)
 
 记得当时课程是在埃文斯大楼的十楼小会议厅里进行，这个小厅的窗外景色还真是让人心旷神怡。在 David 介绍了一下课程结构和一些相关安排后，我们就进入了正题：文章讨论。他平静地坐在椅子上问，“大家有什么的问题？ ” 然后，然后就没有然后了……
 
 沉默，沉默，然后更长的沉默。我们没想到，讨论是需要我们发起，而不只是参与讨论 。过了一会他又问， “对文章有什么问题？ ” 我们就坐在那里超过十分钟，不断地把论文翻来翻去试图找到一个有意义的问题来问。如果我们不问任何问题，好像我们就永远坐在那里。感觉这是我记忆中最长的十多分钟。这时谁也没有心情来欣赏窗外的美景了。
 
-[<img class="aligncenter wp-image-9865 size-large" src="https://cos.name/wp-content/uploads/2014/05/6815420787_350f31f3f8_z-500x332.jpg" alt="6815420787_350f31f3f8_z" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2014/05/6815420787_350f31f3f8_z-500x332.jpg 500w, https://cos.name/wp-content/uploads/2014/05/6815420787_350f31f3f8_z-300x199.jpg 300w, https://cos.name/wp-content/uploads/2014/05/6815420787_350f31f3f8_z.jpg 640w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/05/6815420787_350f31f3f8_z.jpg)
+[![6815420787_350f31f3f8_z](https://cos.name/wp-content/uploads/2014/05/6815420787_350f31f3f8_z.jpg)](https://cos.name/wp-content/uploads/2014/05/6815420787_350f31f3f8_z.jpg)
 
 <!--more-->课程就以这样的问答模式进行了整个学期。学生先阅读指定论文，然后在课上提问有关文章的各种问题。David耐心地回答每一个问题。问题的范围从“为什么作者选择了这个模型？ ”到“为什么作者不用那个模式？” ，从“模型是否适合要解决的问题？ ”到“数据靠谱吗，支持模型吗？ “ ，从“有没有证据支持这样的结论？ ”到“证据是否和结论有任何关系？ ” 最离谱的是花了半节课来给我们国际学生解释美国小学的PTO（Parent Teacher Organization）的组织形式和日常活动，以便我们了解一篇关于小学教育研究文章的背景。
 
@@ -48,7 +48,7 @@ slug: from-math-to-app-stat
 
 <a href="http://sites.williams.edu/rdeveaux/" target="_blank">Richard D. De Veaux</a> 写过一篇很有趣的文章 <a href="http://civilstat.com/wp-content/uploads/2011/08/Mathmusic.pdf" target="_blank">Math Is Music; Statistics Is Literature (Or, Why Are There No Six-Year-Old Novelists?)</a> （数学是音乐；统计是文学（或者说，为什么天下没有六岁的天才作家））。
 
-[<img class="aligncenter size-large wp-image-9867" src="https://cos.name/wp-content/uploads/2014/05/mathstat-500x382.jpg" alt="mathstat" width="500" height="382" srcset="https://cos.name/wp-content/uploads/2014/05/mathstat-500x382.jpg 500w, https://cos.name/wp-content/uploads/2014/05/mathstat-300x229.jpg 300w, https://cos.name/wp-content/uploads/2014/05/mathstat.jpg 981w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/05/mathstat.jpg)
+[![mathstat](https://cos.name/wp-content/uploads/2014/05/mathstat.jpg)](https://cos.name/wp-content/uploads/2014/05/mathstat.jpg)
 
 文中提到统计的一些特殊性，也引用P. F. Velleman 在2003年Beyond the Formula conference 的主题报告“<a href="http://math.illinoisstate.edu/events/BerkLecturePDF309.pdf" target="_blank">Thinking With Data: Seven Unnatural Acts and Ten 400-Year-Old Aphorisms</a>”中指出的统计教学中一些困难。
 

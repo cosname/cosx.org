@@ -14,7 +14,7 @@ slug: 9th-r-conference-hangzhou
 
 中国R语言会议是由统计之都发起，并同国内高校共同举办的R语言与数据科学会议。本次中国R语言会议（杭州）将由统计之都与浙江财经大学联合主办，浙江财经大学数据科学学院承办。中国R语言会议再次走进中国电子商务之都、长江三角洲中心城市、享有“人间天堂”美誉的魅力之都——杭州，愿与更多的数据爱好者与研究者探讨数据科学，共同进步提高！中国R语言会议，欢迎各位的到来！
 
-自2008年在中国人民大学举办第一届中国R语言会议起，到2016年中国R语言会议已经成功地走过了第九年，先后在全国七个城市举办，影响日渐扩大，前后报名参与人数已过万人。会议内容覆盖数据科学及R语言在各行各业的应用，包括天文、地理、医疗、生物、金融、能源、互联网等领域。十年磨一剑，破鞘天下惊。在R语言会议发展壮大的同时，统计之都也已走过十年风雨。十年间，统计之都服务着广大统计学爱好者，推动着R语言在中国的传播和发展，见证着数据科学时代的逐渐崛起。迄今为止，统计之都已先后出版八本R语言相关图书，举行五十余期海内外沙龙；未来，我们将再接再厉，继续为国内统计学和数据科学的发展贡献自己的力量。[<img class="aligncenter size-full wp-image-13055" src="https://cos.name/wp-content/uploads/2016/08/2.jpg" alt="2" width="750" height="563" srcset="https://cos.name/wp-content/uploads/2016/08/2.jpg 750w, https://cos.name/wp-content/uploads/2016/08/2-300x225.jpg 300w, https://cos.name/wp-content/uploads/2016/08/2-500x375.jpg 500w" sizes="(max-width: 750px) 100vw, 750px" />](https://cos.name/wp-content/uploads/2016/08/2.jpg)
+自2008年在中国人民大学举办第一届中国R语言会议起，到2016年中国R语言会议已经成功地走过了第九年，先后在全国七个城市举办，影响日渐扩大，前后报名参与人数已过万人。会议内容覆盖数据科学及R语言在各行各业的应用，包括天文、地理、医疗、生物、金融、能源、互联网等领域。十年磨一剑，破鞘天下惊。在R语言会议发展壮大的同时，统计之都也已走过十年风雨。十年间，统计之都服务着广大统计学爱好者，推动着R语言在中国的传播和发展，见证着数据科学时代的逐渐崛起。迄今为止，统计之都已先后出版八本R语言相关图书，举行五十余期海内外沙龙；未来，我们将再接再厉，继续为国内统计学和数据科学的发展贡献自己的力量。[![2](https://cos.name/wp-content/uploads/2016/08/2.jpg)](https://cos.name/wp-content/uploads/2016/08/2.jpg)
 
 <!--more-->
 
@@ -52,9 +52,9 @@ slug: 9th-r-conference-hangzhou
 
 主办方
 
-[<img class="aligncenter size-full wp-image-13056" src="https://cos.name/wp-content/uploads/2016/08/3.jpg" alt="3" width="523" height="92" srcset="https://cos.name/wp-content/uploads/2016/08/3.jpg 523w, https://cos.name/wp-content/uploads/2016/08/3-300x53.jpg 300w, https://cos.name/wp-content/uploads/2016/08/3-500x88.jpg 500w" sizes="(max-width: 523px) 100vw, 523px" />](https://cos.name/wp-content/uploads/2016/08/3.jpg)
+[![3](https://cos.name/wp-content/uploads/2016/08/3.jpg)](https://cos.name/wp-content/uploads/2016/08/3.jpg)
 
-[<img class="aligncenter size-full wp-image-13057" src="https://cos.name/wp-content/uploads/2016/08/4.png" alt="4" width="521" height="120" srcset="https://cos.name/wp-content/uploads/2016/08/4.png 521w, https://cos.name/wp-content/uploads/2016/08/4-300x69.png 300w, https://cos.name/wp-content/uploads/2016/08/4-500x115.png 500w" sizes="(max-width: 521px) 100vw, 521px" />](https://cos.name/wp-content/uploads/2016/08/4.png)
+[![4](https://cos.name/wp-content/uploads/2016/08/4.png)](https://cos.name/wp-content/uploads/2016/08/4.png)
 
 <div class="row">
 </div>
