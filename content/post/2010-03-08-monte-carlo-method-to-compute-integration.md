@@ -128,7 +128,7 @@ slug: monte-carlo-method-to-compute-integration
 譬如，计算 `\(J=\int_{0}^{1}e^{-x^2/2}/\sqrt{2\pi}dx \)`，R中的代码为
 
 ```r
- class="brush: r">n=10^4;
+ n=10^4;
  x=runif(n);
  f=function(x)
  {
