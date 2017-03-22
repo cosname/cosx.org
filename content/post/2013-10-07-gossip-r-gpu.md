@@ -16,13 +16,14 @@ tags:
   - 大数据
   - 高性能计算
 slug: gossip-r-gpu
+description: "GPGPU算是近几年兴起的一个领域，以CUDA为代表，在高性能计算方面成果相当多。作为一种相对廉价的高性能解决方案，越来越多的程序员开始加入GPGPU阵营。Andrew Ng（就是那个Machine Learning公开课的Andrew）去年在Google用造价大约一百万美的集群完成了猫脸识别，而这个月他刚刚宣布他的团队用造价两万美元的GPU集群，达到了同样的效果。从这里我们也可以大致看出GPU在Machine Learning方面的潜力。"
 ---
 
-> 注：本文来自寇强的博客，<a href="http://thirdwing.github.io/2013/09/27/rgpu/" target="_blank">原文请点击此处</a>。
+> 注：本文来自寇强的博客，[原文请点击此处](http://thirdwing.github.io/2013/09/27/rgpu/)。
   
 > 寇强：现为Indiana University PhD in Informatics。
   
-> 微博：<a href="http://weibo.com/thirdwing?topnav=1&wvr=5&topsug=1" target="_blank">@没故事的生科男</a>。
+> 微博：[@没故事的生科男](http://weibo.com/thirdwing?topnav=1&wvr=5&topsug=1)。
 
 这是一直想写几句的一个话题，既然今天有时间就聊一聊。
 
@@ -32,17 +33,16 @@ GPGPU算是近几年兴起的一个领域，以CUDA为代表，在高性能计�
 
 GPGPU的解决方案有不止一个，但由于英伟达集团的大力推广，CUDA可能是支持最好，也是使用最多的，后面提到的GPU也都默认是他家的，所以真正的题目应该是“R和CUDA”。我的测试和开发环境是ubuntu，后面提到的测试和配置也都是ubuntu下面的。
 
-<!--more-->
 
-## 一、GPU的优势 {#gpu}
+# 一、GPU的优势 {#gpu}
 
 我们不说latency之类的术语，只举个简单的例子。现在全班要去春游，你有一辆保时捷和一辆大巴：保时捷只有四个座位，但半个小时就到了；大巴有50个座位，但要一个多小时。为了让全班尽早过去，大巴一定是首选。从计算的角度看，各位的CPU就是保时捷，GPU就是大巴。GPU每个核心都很弱，但众多的核心还是让GPU在并行计算上拥有了相当的优势。另外一点，GPU有相当的价格优势。单纯从浮点数计算能力来看，300块左右的GT430（91.564G）已经接近于2000块左右的i7（107.6G）。
 
-## 二、GPU的弱势 {#gpu}
+# 二、GPU的弱势 {#gpu}
 
 简单地讲，不是所有运算都可以并行化，其实这也是并行计算的弱势。但几乎所有矩阵运算都有并行化的可能，所以Machine Learning的很多方法移植到GPU还是相当有搞头的。
 
-## 三、用GPU的几个R package {#gpur_package}
+# 三、用GPU的几个R package {#gpur_package}
 
 估计多数人都没有精力自己写CUDA的代码，我们先来看看和GPU有关的几个package，今天只聊我用过的三个，也就是前三个。
 
@@ -56,29 +56,28 @@ GPGPU的解决方案有不止一个，但由于英伟达集团的大力推广，
   * cudaBayesreg
   * permGPU
 
-## 四、安装和环境配置 {#id1}
+# 四、安装和环境配置 {#id1}
 
 现在CUDA的安装配置应该已经简单很多了，以ubuntu为例，基本只要下载对应的deb文件，用apt-get就可以完成了，具体请参考[CUDA zone](https://developer.nvidia.com/cuda-downloads)网站。
 
 安装之后就是配置工作，主要是`$PATH（/usr/local/cuda-5.5/bin）`、`$CUDA_HOME（/usr/local/cuda-5.5）`和`$LD_LIBRARY_PATH（/usr/local/cuda-5.5/lib64）`这几个环境变量的配置。我这里给出的都是默认位置，大家搞清楚自己的CUDA安装在哪里就OK了。
 
-### 1. gputools的安装和示例 {#gputools}
+## 1. gputools的安装和示例 {#gputools}
 
 [gputools](http://cran.r-project.org/web/packages/gputools/index.html)基本上是最具通用性的package，由[Michigan大学开发](http://brainarray.mbni.med.umich.edu/brainarray/rgpgpu/)。
 
 这个package已经在CRAN上了，但直接install.package还是可能出错，其实还是环境变量的问题。如果CUDA_HOME没有问题的话，检查一下src文件夹下的config.mk，看下面三个变量是不是和自己的一致。如果不一致，应该会报告找不到R.h之类的错误。检查过之后就可以R CMD INSTALL gputools了。
 
-<div>
-  <pre><code>R_HOME := $(shell R RHOME)
+```
+R_HOME := $(shell R RHOME)
 R_INC := $(R_HOME)/include
-R_LIB := $(R_HOME)/lib
-</code></pre>
-</div>
+R_LIB := $(R_HOME)/lib 
+```
 
 这里拿一个矩阵相乘做例子，测试函数如下：
 
-<div>
-  <pre><code>library(gputools)
+```
+library(gputools)
 gpu.matmult &lt;- function(n) {
     A &lt;- matrix(runif(n * n), n ,n)
     B &lt;- matrix(runif(n * n), n ,n)
@@ -93,69 +92,58 @@ gpu.matmult &lt;- function(n) {
     comp.time &lt;- toc - tic
     cat("GPU: ", comp.time, "\n")
 }
-</code></pre>
-</div>
+```
 
 可以明显地看到，在维度比较低的时候，GPU没有任何优势。
 
-<div>
-  <pre><code>gpu.matmult(5)
-</code></pre>
-</div>
+```
+gpu.matmult(5)
+```
 
-<div>
-  <pre><code>## CPU:  0.0001199245 
+```
+## CPU:  0.0001199245 
 ## GPU:  0.2105169 
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>gpu.matmult(50)
-</code></pre>
-</div>
+```
+gpu.matmult(50)
+```
 
-<div>
-  <pre><code>## CPU:  0.000446558 
+```
+## CPU:  0.000446558 
 ## GPU:  0.003529072 
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>gpu.matmult(500)
-</code></pre>
-</div>
+```
+gpu.matmult(500)
+```
 
-<div>
-  <pre><code>## CPU:  0.07863498 
+```
+## CPU:  0.07863498 
 ## GPU:  0.02003336 
-</code></pre>
-</div>
+```
 
 开始有优势了！
 
-<div>
-  <pre><code>gpu.matmult(1000)
-</code></pre>
-</div>
+```
+gpu.matmult(1000)
+```
 
-<div>
-  <pre><code>## CPU:  0.7417495 
+```
+## CPU:  0.7417495 
 ## GPU:  0.09884238 
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>gpu.matmult(2000)
-</code></pre>
-</div>
+```
+gpu.matmult(2000)
+```
 
-<div>
-  <pre><code>## CPU:  5.727753 
+```
+## CPU:  5.727753 
 ## GPU:  0.7211812 
-</code></pre>
-</div>
+```
 
-### 2. rpud的安装和示例 {#rpud}
+## 2. rpud的安装和示例 {#rpud}
 
 rpud是著名的R Tutorial网站开发的，[下载界面](http://www.r-tutor.com/content/download)提供了三个package，RPUD、RPUDPLUS和RPUSVM。其中只有rpud是开源的，后两个只提供了编译好的文件。
 
@@ -163,80 +151,70 @@ rpud的安装就容易多了，添加一个R\_LIBS\_USER环境变量，之后直
 
 拿Matrix Distance举个例子：
 
-<div>
-  <pre><code>test.data &lt;- function(dim, num, seed = 17) {
+```
+test.data &lt;- function(dim, num, seed = 17) {
     set.seed(seed)
     matrix(rnorm(dim * num), nrow = num)
 }
 m &lt;- test.data(120, 4500)
 system.time(dist(m))
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>##    user  system elapsed 
+```
+##    user  system elapsed 
 ##  13.944   0.016  13.977
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>library(rpud)
-</code></pre>
-</div>
+```
+library(rpud)
+```
 
-<div>
-  <pre><code>## Rpud 0.3.4
+```
+## Rpud 0.3.4
 ## http://www.r-tutor.com
 ## Copyright (C) 2010-2013 Chi Yau. All Rights Reserved.
 ## Rpud is licensed under GNU GPL v3. There is absolutely NO warranty.
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>system.time(rpuDist(m))
-</code></pre>
-</div>
+```
+system.time(rpuDist(m))
+```
 
-<div>
-  <pre><code>##    user  system elapsed 
+```
+##    user  system elapsed 
 ##   0.452   0.248   0.702
-</code></pre>
-</div>
+```
 
 加速效果还不错，但不开源就着实让人不爽了。
 
-### 3. HiPLAR的安装和示例 {#hiplar}
+## 3. HiPLAR的安装和示例 {#hiplar}
 
 HiPLAR是High Performance Linear Algebra in R的缩写，这个package的配置略复杂，因为调用的library略多。不过好在提供了installer，一般也不会出错。这里直接拿官方例子说话吧。
 
-<div>
-  <pre><code>library(Matrix);
+```
+library(Matrix);
 n &lt;- 8192;
 X &lt;- Hilbert(n);
 A &lt;- nearPD(X);
 system.time(B &lt;- chol(A$mat));
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>## user  system elapsed  
+```
+## user  system elapsed  
 ## 97.990   0.356  98.591
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>library(HiPLARM)
+```
+library(HiPLARM)
 system.time(B &lt;- chol(A$mat));
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>## user  system elapsed 
+```
+## user  system elapsed 
 ## 1.012   0.316   1.337
-</code></pre>
-</div>
+```
 
-## 五、调用CUDA {#rcuda}
+# 五、调用CUDA {#rcuda}
 
 用了各种package，但很多时候还是要自己写CUDA代码，这个也是我正在做的。
 
@@ -244,19 +222,18 @@ system.time(B &lt;- chol(A$mat));
 
 CUDA是基于C的，所以调用CUDA和调用C没有多少不同。调用C的时候，是把C文件用R CMD SHLIB编译成so，之后用R调用。稍微注意一下R CMD SHLIB的输出，其实就什么都明白了。
 
-<div>
-  <pre><code>$ R CMD SHLIB sd.c
+```
+$ R CMD SHLIB sd.c
 gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -fpic  -O3 -pipe  -g  -c sd.c -o sd.o
 gcc -std=gnu99 -shared -o sd.so sd.o -L/usr/lib/R/lib -lR
-</code></pre>
-</div>
+```
 
 R CMD SHLIB只是自动调用了下面那两行，对于CUDA，我们手动写就行了。
 
 CUDA代码如下：
 
-<div>
-  <pre><code>#include&lt;cuda.h&gt;
+```
+#include&lt;cuda.h&gt;
 #include&lt;stdio.h&gt;
 
 extern "C" void meanout(int *hm, int *nrc, double *meanmut);
@@ -308,29 +285,26 @@ void meanout(int *hm, int *nrc, double *meanmut)
     cudaFree(dm);
     cudaFree(dtot);
 }
-</code></pre>
-</div>
+```
 
 编译选项如下：
 
-<div>
-  <pre><code>$ nvcc -g -G -I/usr/local/cuda/include -Xcompiler "-I/usr/share/R/include -fpic" -c mutlinksforr.cu -o mutlink.o -arch=sm_11
+```
+$ nvcc -g -G -I/usr/local/cuda/include -Xcompiler "-I/usr/share/R/include -fpic" -c mutlinksforr.cu -o mutlink.o -arch=sm_11
 $ nvcc -shared -Xlinker "-L/usr/lib/R/lib -lR" -L/usr/local/cuda/lib mutlink.o -o meanlinks.so
-</code></pre>
-</div>
+```
 
 R里的调用和输出
 
-<div>
-  <pre><code>dyn.load("meanlinks.so")
+```
+dyn.load("meanlinks.so")
 m &lt;- rbind(c(0, 1, 1, 1), c(1, 0, 0, 1), c(1, 0, 0, 1), c(1, 1, 1, 0))
 ma &lt;- rbind(c(0, 1, 0), c(1, 0, 0), c(1, 0, 0))
 .C("meanout", as.integer(m), as.integer(4), mo = double(1))
-</code></pre>
-</div>
+```
 
-<div>
-  <pre><code>## [[1]]
+```
+## [[1]]
 ##  [1] 0 1 1 1 1 0 0 1 1 0 0 1 1 1 1 0
 ## 
 ## [[2]]
@@ -338,10 +312,9 @@ ma &lt;- rbind(c(0, 1, 0), c(1, 0, 0), c(1, 0, 0))
 ## 
 ## $mo
 ## [1] 1.333
-</code></pre>
-</div>
+```
 
-## 六、最后 {#id2}
+# 六、最后 {#id2}
 
 今晚有时间，所以就大致聊了聊R和GPU，准确地说是R和CUDA。利用GPU做machine learning是我现在除去实验室项目之外，最大的兴趣所在。现在先从Back-Propagation开始，也许明年会有一个基于GPU的machine learning的package出来，但不保证开发进度呀。（如果真的发布0.1版本，不知道中国R语言大会能不能混个演讲。）
 
