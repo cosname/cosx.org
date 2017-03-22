@@ -6,6 +6,7 @@ categories:
   - 新闻通知
   - 统计之都
 slug: 2013-china-r-conference-shanghai-notice
+description: "第六届中国R语言会议（上海会场）将于2013年11月2日上午9:00正式开幕，请注册报名了的参会者提前半小时进场，签到和领取资料（包括胸牌、会议手册、纸笔等）。"
 ---
 
 ### 一、会议时间
@@ -42,7 +43,6 @@ slug: 2013-china-r-conference-shanghai-notice
 
 下载[会议手册](https://cos.name/wp-content/uploads/2013/10/ChinaR2013SH_Manual_V2.pdf)
 
-<!--more-->
 
 此外，本次会议还会提供Lightning Talk（快速演讲）的环节，每人限时5分钟，作报告的公司和单位有：
 
@@ -63,11 +63,11 @@ slug: 2013-china-r-conference-shanghai-notice
   
 **联系新加坡 （Contact Singapore）**
   
-**檬果咨询 （Mango Solutions**）
+**檬果咨询 （Mango Solutions）**
 
 ### 六、报名方式
 
-会议报名方式为在线报名，只要对本届会议感兴趣的任何人都可以报名参加。<a title="在线报名页面" href="http://chinar2013sh.vasee.com" target="_blank">点击进入报名页面</a>。
+会议报名方式为在线报名，只要对本届会议感兴趣的任何人都可以报名参加。[点击进入报名页面](http://chinar2013sh.vasee.com "在线报名页面")。
 
 ### 七、会场服务
 
