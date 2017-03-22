@@ -31,7 +31,7 @@ description: "最近几天不少微信群里面又流行起来一种“红包接
 
 # 模拟红包发放
 
-要进行模拟实验，就需要设定一个红包金额的分配机制。但由于微信红包的算法并没有公开，所以在这里我们使用了一个简化的模型，即假设抢到红包的人分得的金额占总金额的比例（每个人对应一个比例，所以这是一个向量，且其总和为1）服从一个 Dirichlet 分布，参数为 `\(\vec{\alpha}=(\alpha, \alpha, \ldots, \alpha)\)`，即 `\(\vec{\alpha}\)` 是一个各分量都相等的向量，由一个参数 `\(\alpha\)` 决定。对于不熟悉 Dirichlet 分布的读者，可以参考[rickjin 大侠的文章](https://cos.name/2013/01/lda-math-beta-dirichlet/)以及 [Dirichlet 分布的维基页面](http://en.wikipedia.org/wiki/Dirichlet_distribution)。
+要进行模拟实验，就需要设定一个红包金额的分配机制。但由于微信红包的算法并没有公开，所以在这里我们使用了一个简化的模型，即假设抢到红包的人分得的金额占总金额的比例（每个人对应一个比例，所以这是一个向量，且其总和为1）服从一个 Dirichlet 分布，参数为 `\(\vec{\alpha}=(\alpha, \alpha, \ldots, \alpha)\)`，即 `\(\vec{\alpha}\)` 是一个各分量都相等的向量，由一个参数 `\(\alpha\)` 决定。对于不熟悉 Dirichlet 分布的读者，可以参考[rickjin 大侠的文章](/2013/01/lda-math-beta-dirichlet/)以及 [Dirichlet 分布的维基页面](http://en.wikipedia.org/wiki/Dirichlet_distribution)。
 
 在这个简化的模型里，`\(\alpha\)` 决定了红包发放的“公平”程度。`\(\alpha\)` 越大，每人分得的金额比例就越倾向于平均，反之则波动性越大。下面展示了两组 Dirichlet 分布的随机数，我们假定红包金额分成5份，分别考察 `\(\alpha=1\)` 和 `\(\alpha=10\)` 时的金额比例，其中每一行是一次模拟。本文的最后附上了在R中生成 Dirichlet 分布随机数的程序。
 

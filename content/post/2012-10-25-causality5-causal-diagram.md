@@ -9,11 +9,11 @@ categories:
 slug: causality5-causal-diagram
 ---
 
-![](http://i.imgur.com/neP7X.jpg "J. Pearl")这部分介绍 <a href="http://bayes.cs.ucla.edu/jp_home.html" target="_blank">Judea Pearl</a> 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
+![J. Pearl](http://i.imgur.com/neP7X.jpg)这部分介绍 <a href="http://bayes.cs.ucla.edu/jp_home.html" target="_blank">Judea Pearl</a> 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
 
 **一 有向无环图和 do 算子**
 
-为了避免过多图论的术语，这里仅仅需要知道有向图中“父亲”和“后代”的概念：有向箭头上游的变量是“父亲”，下游的变量是“后代”。在一个有向无环图（Directed Acyclic Graph；DAG）中，记所有的节点集合为 $\overrightarrow{X} = (X\_1,…,X\_p)$。这里用 $P(\cdot)$ 表示连续变量的密度函数和离散变量的概率函数。有两种观点看待一个 DAG：一是将其看成表示条件独立性的模型；二是将其看成一个数据生成机制。当然，本质上这两种观点是一样的。在第一种观点下，给定 DAG 中某个节点的“父亲”节点，它与其所有的非”后代”都独立。根据全概公式和条件独立性，DAG 中变量的联合分布可以有如下的递归分解：
+为了避免过多图论的术语，这里仅仅需要知道有向图中“父亲”和“后代”的概念：有向箭头上游的变量是“父亲”，下游的变量是“后代”。在一个有向无环图（Directed Acyclic Graph；DAG）中，记所有的节点集合为 $\overrightarrow{X} = (X\_1,…,X\_p)$。这里用 $P(\cdot)$ 表示连续变量的密度函数和离散变量的概率函数。有两种观点看待一个 DAG：一是将其看成表示条件独立性的模型；二是将其看成一个数据生成机制。当然，本质上这两种观点是一样的。在第一种观点下，给定 DAG 中某个节点的“父亲”节点，它与其所有的非“后代”都独立。根据全概公式和条件独立性，DAG 中变量的联合分布可以有如下的递归分解：
 
 $$P(x\_1,…,x\_n) = \prod\_{i=1}^{p} P(x\_i \mid pa_i ),$$
 
@@ -39,7 +39,7 @@ $$\begin{eqnarray\*}X\_i = f\_i (pa\_i, \varepsilon\_i), i = 1, \cdots, p.\end{e
 
 用一个 DAG 连表示变量之间的关系，并不是最近才有的。图模型也并不是 Judea Pearl 发明的。但是，早期将图模型作为因果推断的工具，成果并不深刻，大家也不太清楚仅仅凭一个图，怎么能讲清楚因果关系。教育、心理和社会学中常用的结构方程模型（structural equation model: SEM），就是早期的尝试；甚至可以说 SEM 是因果图的先驱。（注意，这里出现的两个 SEM 表示不同的模型！）
 
-DAG 中的箭头，似乎表示了某种“因果关系”。但是，要在 DAG 上引入”因果”的概念，则需要引进 **do 算子**，do 的意思可以理解成“干预” （intervention）。没有“干预”的概念，很多时候没有办法谈因果关系。在 DAG 中 $do(X\_i)=x\_i’$ (也可以记做 $\check{x\_i’}$)，表示如下的操作：将 $DAG$ 中指向 $X\_i$ 的有向边全部切断，且将 $X\_i$ 的取值固定为常数 $x\_i’$. 如此操作，得到的新 $DAG$ 的联合分布可以记做 $P(x\_1,…,x\_n\mid do(X\_i)=x\_i’)$ 可以证明，干预后的联合分布为
+DAG 中的箭头，似乎表示了某种“因果关系”。但是，要在 DAG 上引入“因果”的概念，则需要引进 **do 算子**，do 的意思可以理解成“干预” （intervention）。没有“干预”的概念，很多时候没有办法谈因果关系。在 DAG 中 $do(X\_i)=x\_i’$ (也可以记做 $\check{x\_i’}$)，表示如下的操作：将 $DAG$ 中指向 $X\_i$ 的有向边全部切断，且将 $X\_i$ 的取值固定为常数 $x\_i’$. 如此操作，得到的新 $DAG$ 的联合分布可以记做 $P(x\_1,…,x\_n\mid do(X\_i)=x\_i’)$ 可以证明，干预后的联合分布为
   
 $$
   
@@ -113,7 +113,7 @@ $$
 下面介绍 Pearl (1995) 的主要工作：**后门准则和前门准则**。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6361">![](http://i.imgur.com/nu3vB.png)</a>
+  <a href="/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6361">![](http://i.imgur.com/nu3vB.png)</a>
 </p>
 
 **后门准则：**在 DAG 中，如果如下条件满足：
@@ -203,7 +203,7 @@ Pearl 在书中讲了一个非常有趣的例子，来说明前门准则的用�
 
 不过，仅仅从“相关”（association）的角度讨论这个问题，是没有答案的。从“因果”（causation）的角度来看，才能有确切的回答。解释 Yule-Simpson’s Paradox，算是因果图的第一个重要应用。
 
-<a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6364">![](http://i.imgur.com/vpb8M.png)</a>
+<a href="/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6364">![](http://i.imgur.com/vpb8M.png)</a>
 
 下面，我将以上面的 Figure 4 中的四个图为例说明，三个变量之间的关系的复杂性。
 

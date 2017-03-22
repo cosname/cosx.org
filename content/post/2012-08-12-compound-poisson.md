@@ -69,11 +69,11 @@ $N\_{(t)}$表示$[0,t]$内的总理赔次数，$X\_i$表示$[0,t]$内第$i$次�
 
 本文用R语言模拟了10000次，用时1625秒，大概不到半个小时的时间，时间还能接受。最终结果10000次中破产5293次，破产率大概53%。输出各阶段破产时刻频数和频率结果如下：
   
-[![](https://cos.name/wp-content/uploads/2012/08/sim1-e1344696345207.png "sim1")](https://cos.name/wp-content/uploads/2012/08/sim1.png)
+[![sim1](https://cos.name/wp-content/uploads/2012/08/sim1-e1344696345207.png)](https://cos.name/wp-content/uploads/2012/08/sim1.png)
 
 直方图为：
   
-![](https://cos.name/wp-content/uploads/2012/08/hist1.png "hist1")
+![hist1](https://cos.name/wp-content/uploads/2012/08/hist1.png)
 
 由直方图可以非常明显地看出绝大部分破产时刻都在前100天，或者说从0开始的一小段时间内，在这之后的很长时间里，破产的频率急剧减少，可以认为破产的概率同样非常小。这对保险人来说，说明3000的初始盈余不够用，保险人需要准备更多准备金，才能抵抗初期的破产风险。
 
@@ -99,17 +99,17 @@ $$U(t) = u + \sum^{N(t)}\_{i = 1}c\_iM\_i(t) – (\sum^{N\_1(t)}\_{j = 1}X\_{1j}
   
 1000次模拟花时845秒，模拟结果破产概率27.7%，破产时刻的分布如下：
   
-![](https://cos.name/wp-content/uploads/2012/08/sim2.png "sim2")
+![sim2](https://cos.name/wp-content/uploads/2012/08/sim2.png)
 
 破产时刻分布的直方图如下：
   
-![](https://cos.name/wp-content/uploads/2012/08/hist2.png "hist2")
+![hist2](https://cos.name/wp-content/uploads/2012/08/hist2.png)
 
 直方图显示大部分破产时刻都在前200时刻，直方图大致形状酷似“钟形”的右半边。由此可联想到如果提高初始盈余，可能在一定程度上降低破产概率的同时，会使破产时刻的直方图整体右移，左半边也可能呈钟形分布，使整体服从类似正态分布的形状。
   
 这里选取了初始盈余万，把预期收益率降到45%，模拟100次结果破产概率26%，与之前的结果接近。再选取初始盈余万，把预期收益率降到40%，模拟100次结果破产概率54%，验证了初始盈余和保费收入参数对破产比例的共同影响。两次结果的直方图如下：
   
-![](https://cos.name/wp-content/uploads/2012/08/hist3.png "hist3")
+![hist3](https://cos.name/wp-content/uploads/2012/08/hist3.png)
 
 发现结果确实破产时刻整体右移，呈现钟形分布（第二幅图比较明显）。
 

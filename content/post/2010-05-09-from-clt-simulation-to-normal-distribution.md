@@ -107,7 +107,7 @@ clt.ani()</pre><figure id="attachment_2189" style="width: 480px" class="wp-capti
 
 **注2**：我很少见统计学家强调这种想法的重要性，仿佛大家都埋在公式堆里都推导得倍儿高兴。有两个例外：一个是Brian Ripley教授，我在看他的一份幻灯片[Selecting amongst large classes of models](http://www.stats.ox.ac.uk/%7Eripley/Nelder80.pdf)的时候发现他竟然回顾了AIC的假设条件——这是我见过的唯一一个讲模型选择时会回到数学根源的人；另一个是Ripley的老搭档，Bill Venables，他在他那著名的手稿[Exegeses on Linear Models](http://www.stats.ox.ac.uk/pub/MASS3/Exegeses.pdf)中竟然从泰勒展开来说线性模型的来历，这也是我在所有我读过的线性模型相关的文章和书中看到的唯一一份从泰勒展开角度谈线性模型的材料。我个人并不喜欢数学，但我喜欢看思路。
 
-**注3**：我的观点是，画直方图尽量加上核密度估计曲线，因为它能刻画数据在任意位置上的密度大小，而直方图的形状则完全受制于分组边界的位置。当然，核密度估计曲线也取决于核函数，但大多数情况下，核函数不会对曲线的形状有太大的影响。不过邱怡轩在前面“[有边界区间上的核密度估计](https://cos.name/2010/04/kernel-density-estimation-with-unbounded-region/ "Permanent Link to 有边界区间上的核密度估计")”一文中提到的问题很值得注意。
+**注3**：我的观点是，画直方图尽量加上核密度估计曲线，因为它能刻画数据在任意位置上的密度大小，而直方图的形状则完全受制于分组边界的位置。当然，核密度估计曲线也取决于核函数，但大多数情况下，核函数不会对曲线的形状有太大的影响。不过邱怡轩在前面“[有边界区间上的核密度估计](/2010/04/kernel-density-estimation-with-unbounded-region/ "Permanent Link to 有边界区间上的核密度估计")”一文中提到的问题很值得注意。
 
 **注4**：伯努利随机变量之和的分布。SAS代码：
 
