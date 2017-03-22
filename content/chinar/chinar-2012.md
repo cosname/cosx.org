@@ -12,7 +12,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 ## **会议事宜（北京会场）**
 
-![](https://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png "第五届中国R语言会议（北京）手册封面")
+![第五届中国R语言会议（北京）手册封面](https://cos.name/wp-content/uploads/2012/04/China-R-2012_manual_cover.png)
 
 ### 一、会议时间
 
@@ -24,11 +24,11 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 交通地图（点击看大图）：
 
-<a href="http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png" rel="nofollow">![](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png "人大交通地图")</a>
+<a href="http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png" rel="nofollow">![人大交通地图](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)</a>
 
 人大校内地图（点击看大图）：
 
-<a href="https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg" rel="nofollow">![](https://cos.name/wp-content/uploads/2010/06/RUCmap1-500x342.jpg "人大校内地图")</a>
+<a href="https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg" rel="nofollow">![人大校内地图](https://cos.name/wp-content/uploads/2010/06/RUCmap1-500x342.jpg)</a>
 
 &nbsp;
 
@@ -116,7 +116,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 交通地图（点击看大图）：
 
-<a href="http://i1324.photobucket.com/albums/u608/lijian001/5th-R-Conference-Shanghai-map_zpsf8cf1f8c.png" rel="nofollow">![](http://i1324.photobucket.com/albums/u608/lijian001/5th-R-Conference-Shanghai-map_zpsf8cf1f8c.png "上财交通地图")</a>
+<a href="http://i1324.photobucket.com/albums/u608/lijian001/5th-R-Conference-Shanghai-map_zpsf8cf1f8c.png" rel="nofollow">![上财交通地图](http://i1324.photobucket.com/albums/u608/lijian001/5th-R-Conference-Shanghai-map_zpsf8cf1f8c.png)</a>
 
 ## 会议手册下载：[ChinaR!2012SH\_Manual\_V6](https://cos.name/wp-content/uploads/2012/09/ChinaR2012SH_Manual_V6.pdf)
 

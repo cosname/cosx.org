@@ -9,7 +9,7 @@ categories:
 slug: causality5-causal-diagram
 ---
 
-![](http://i.imgur.com/neP7X.jpg "J. Pearl")这部分介绍 <a href="http://bayes.cs.ucla.edu/jp_home.html" target="_blank">Judea Pearl</a> 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
+![J. Pearl](http://i.imgur.com/neP7X.jpg)这部分介绍 <a href="http://bayes.cs.ucla.edu/jp_home.html" target="_blank">Judea Pearl</a> 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
 
 **一 有向无环图和 do 算子**
 

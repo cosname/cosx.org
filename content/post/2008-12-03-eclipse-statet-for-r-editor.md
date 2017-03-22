@@ -12,7 +12,7 @@ tags:
 slug: eclipse-statet-for-r-editor
 ---
 
-本文的目的是告诉你如何打造一个好的R的编程界面和环境，让你充分享受用R编程的乐趣。这不是一个关于R的教程，可以访问[这里](http://a-lucky-bird.spaces.live.com/blog/cns!9FE71C3A1FA0267F!662.entry "http://a-lucky-bird.spaces.live.com/blog/cns!9FE71C3A1FA0267F!662.entry")以获得更多关于R的资源。大家也可以加入QQ群42131822和[R的邮件列表](http://groups.google.com/group/R-Forum?hl=zh-CN)(需要google账号)可以认识正在使用R的更多的朋友，也可以通过<mailto:hurongxing[at]126.com>和我联系。本文论坛讨论帖参见[这里](https://cos.name/cn/topic/12136 "Eclipse + StatET真的不错")。
+本文的目的是告诉你如何打造一个好的R的编程界面和环境，让你充分享受用R编程的乐趣。这不是一个关于R的教程，可以访问[这里](http://a-lucky-bird.spaces.live.com/blog/cns!9FE71C3A1FA0267F!662.entry)以获得更多关于R的资源。大家也可以加入QQ群42131822和[R的邮件列表](http://groups.google.com/group/R-Forum?hl=zh-CN)(需要google账号)可以认识正在使用R的更多的朋友，也可以通过`hurongxing[at]126.com`和我联系。本文论坛讨论帖参见[这里](https://cos.name/cn/topic/12136 "Eclipse + StatET真的不错")。
 
 <!--more-->
 
@@ -82,7 +82,6 @@ Eclipse启动后如下图。
 
 在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
 
-
 ![myproject](https://cos.name/wp-content/uploads/2010/03/myproject.jpg)
 
 一个工程就相当于一个容器，你可以在其中添加或新建各种各样的文件。建好一个工程后，在该工程的工作目录下就会多出一个“.project”文件，该文件用来保存整个工程的各种信息。
@@ -141,8 +140,6 @@ prime(1000)
 ![配置交互环境](https://cos.name/wp-content/uploads/2008/12/image12.png)
 
 定位到“R Environments”,点右侧的按钮“Add”,将你计算机上安装的R的添加进去，如下图。
-
-![](https://cos.name/wp-content/uploads/2008/12/image25.png)
 
 ![设置路径](https://cos.name/wp-content/uploads/2008/12/image13.png)
 
