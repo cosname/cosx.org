@@ -30,11 +30,11 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2 c5">
-  <a href="https://cos.name/wp-content/uploads/2016/11/image01.jpg"><img class="aligncenter size-full wp-image-13285" src="https://cos.name/wp-content/uploads/2016/11/image01.jpg" alt="image01" width="1616" height="468" srcset="https://cos.name/wp-content/uploads/2016/11/image01.jpg 1616w, https://cos.name/wp-content/uploads/2016/11/image01-300x87.jpg 300w, https://cos.name/wp-content/uploads/2016/11/image01-768x222.jpg 768w, https://cos.name/wp-content/uploads/2016/11/image01-500x145.jpg 500w" sizes="(max-width: 1616px) 100vw, 1616px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2016/11/image01.jpg">![image01](https://cos.name/wp-content/uploads/2016/11/image01.jpg)</a>
 </p>
 
 <p class="p1">
-  <span class="s1">园主表面故作淡定的说，打发走了咨询者之后，查了一下来龙去脉，还真是个历史遗留bug&#8230;说起来这个价格指标也不是很复杂，</span><span class="s2">其实就是在一个A/B实验期间，实验组和对照组用户购买的所有商品的平均价格的差异。听起来不就是算个平均数然后减一下嘛，这有什么难算的？在园主看来，有三个重要的问题需要注意，下面一一解释。</span>
+  <span class="s1">园主表面故作淡定的说，打发走了咨询者之后，查了一下来龙去脉，还真是个历史遗留bug…说起来这个价格指标也不是很复杂，</span><span class="s2">其实就是在一个A/B实验期间，实验组和对照组用户购买的所有商品的平均价格的差异。听起来不就是算个平均数然后减一下嘛，这有什么难算的？在园主看来，有三个重要的问题需要注意，下面一一解释。</span>
 </p>
 
 #### <!--more-->问题一：选择偏差（selection bias)。 {.c2}
@@ -72,7 +72,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  <a href="https://cos.name/wp-content/uploads/2016/11/image02.png"><img class="wp-image-13284 alignnone" src="https://cos.name/wp-content/uploads/2016/11/image02.png" alt="image02" width="258" height="212" srcset="https://cos.name/wp-content/uploads/2016/11/image02.png 1498w, https://cos.name/wp-content/uploads/2016/11/image02-300x246.png 300w, https://cos.name/wp-content/uploads/2016/11/image02-768x630.png 768w, https://cos.name/wp-content/uploads/2016/11/image02-500x410.png 500w" sizes="(max-width: 258px) 100vw, 258px" /></a> <a href="https://cos.name/wp-content/uploads/2016/11/image03.png"><img class="wp-image-13283 alignnone" src="https://cos.name/wp-content/uploads/2016/11/image03.png" alt="image03" width="325" height="227" srcset="https://cos.name/wp-content/uploads/2016/11/image03.png 1554w, https://cos.name/wp-content/uploads/2016/11/image03-300x210.png 300w, https://cos.name/wp-content/uploads/2016/11/image03-768x537.png 768w, https://cos.name/wp-content/uploads/2016/11/image03-500x349.png 500w" sizes="(max-width: 325px) 100vw, 325px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2016/11/image02.png">![image02](https://cos.name/wp-content/uploads/2016/11/image02.png)</a> <a href="https://cos.name/wp-content/uploads/2016/11/image03.png">![image03](https://cos.name/wp-content/uploads/2016/11/image03.png)</a>
 </p>
 
 <p class="c2">
@@ -91,7 +91,7 @@ slug: discussion-about-ratio-metric
   <span class="c3" style="color: #6aa84f;">总结：如何定义指标。</span>
 </p>
 
-<img class="aligncenter size-full wp-image-13338" src="https://cos.name/wp-content/uploads/2016/11/image00.jpg" alt="image00" width="800" height="450" srcset="https://cos.name/wp-content/uploads/2016/11/image00.jpg 800w, https://cos.name/wp-content/uploads/2016/11/image00-300x169.jpg 300w, https://cos.name/wp-content/uploads/2016/11/image00-768x432.jpg 768w, https://cos.name/wp-content/uploads/2016/11/image00-500x281.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />
+![image00](https://cos.name/wp-content/uploads/2016/11/image00.jpg)
 
 童鞋d：我基本同意c的观点，但是如果我们直接比较商品单价的话，极端值的处理会比较棘手。如果有人恰好买了100个1块钱的橡皮，那么他会极大的拉低平均价格。但是这种顾客无论在实验组和对照组都有可能买的，他的行为跟实验本身无关。所以我们做对比的时候应该想办法排除这样的极端个例带来的偏差。
 
@@ -116,7 +116,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  <a href="https://www.emaze.com/@AOZCFQQR/Chemistry-Project）"><img class="aligncenter wp-image-13282" src="https://cos.name/wp-content/uploads/2016/11/image04.jpg" alt="image04" width="481" height="361" srcset="https://cos.name/wp-content/uploads/2016/11/image04.jpg 1999w, https://cos.name/wp-content/uploads/2016/11/image04-300x225.jpg 300w, https://cos.name/wp-content/uploads/2016/11/image04-768x576.jpg 768w, https://cos.name/wp-content/uploads/2016/11/image04-500x375.jpg 500w" sizes="(max-width: 481px) 100vw, 481px" /></a>
+  <a href="https://www.emaze.com/@AOZCFQQR/Chemistry-Project）">![image04](https://cos.name/wp-content/uploads/2016/11/image04.jpg)</a>
 </p>
 
 <p class="c2">
@@ -128,7 +128,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  对于比率指标，平均效应可以直接计算，而其方差的估计没有显式解，一般通过泰勒展开的到delta method的近似解&#8230;（参见：<span class="c7"><a class="c1" href="http://web.stanford.edu/class/cme308/OldWebsite/notes/TaylorAppDeltaMethod.pdf">TaylorAppDeltaMethod.pdf</a></span> ，第六页第二个公式）。
+  对于比率指标，平均效应可以直接计算，而其方差的估计没有显式解，一般通过泰勒展开的到delta method的近似解…（参见：<span class="c7"><a class="c1" href="http://web.stanford.edu/class/cme308/OldWebsite/notes/TaylorAppDeltaMethod.pdf">TaylorAppDeltaMethod.pdf</a></span> ，第六页第二个公式）。
 </p>
 
 <p class="c2">
@@ -141,7 +141,7 @@ slug: discussion-about-ratio-metric
 
 <ol class="c6 lst-kix_v1i00a8n76zk-0 start" start="1">
   <li class="c4 c2">
-    什么都不做&#8230;（也算是一个基准值吧）。
+    什么都不做…（也算是一个基准值吧）。
   </li>
   <li class="c4 c2">
     平均价格受单一商品极端价格的影响，所以我们应该对单一商品的价格设置上限（下限反正是0），然后加总到用户级别。

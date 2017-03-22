@@ -21,15 +21,15 @@ slug: the-odyssey-of-stat-frequentist-or-bayesian
 
 [前言：先向无法科学上网的客官作揖抱歉了，有些江湖野史可能被墙]
 
-[<img src="https://cos.name/wp-content/uploads/2012/12/Nate_Silver.png" alt="" title="Nate_Silver" width="320" height="237" class="aligncenter size-full wp-image-6716" srcset="https://cos.name/wp-content/uploads/2012/12/Nate_Silver.png 320w, https://cos.name/wp-content/uploads/2012/12/Nate_Silver-300x222.png 300w" sizes="(max-width: 320px) 100vw, 320px" />](https://cos.name/wp-content/uploads/2012/12/Nate_Silver.png)话说江湖风云人物，神算子 <a href="http://en.wikipedia.org/wiki/Nate_Silver" target="_blank">Nate Silver</a>， 在纽约时报<a href="http://fivethirtyeight.blogs.nytimes.com/" target="_blank">开博占卜</a>各项江湖话题，每每言中。并著书立传， <a href="http://www.us.penguingroup.com/static/pages/features/the_signal_and_the_noise.html" target="_blank">The Signal and the Noise</a>，一时引来<a href="https://cos.name/2012/11/the-rise-of-data-scientists/" target="_blank">各相追捧</a>。
+![](https://cos.name/wp-content/uploads/2012/12/Nate_Silver.png "Nate_Silver")话说江湖风云人物，神算子 <a href="http://en.wikipedia.org/wiki/Nate_Silver" target="_blank">Nate Silver</a>， 在纽约时报<a href="http://fivethirtyeight.blogs.nytimes.com/" target="_blank">开博占卜</a>各项江湖话题，每每言中。并著书立传， <a href="http://www.us.penguingroup.com/static/pages/features/the_signal_and_the_noise.html" target="_blank">The Signal and the Noise</a>，一时引来<a href="https://cos.name/2012/11/the-rise-of-data-scientists/" target="_blank">各相追捧</a>。
 
 这日，曾留下武林秘籍 <a href="http://www.amazon.com/All-Statistics-Statistical-Inference-Springer/dp/0387402721/" target="_blank">All of Statistics: A Concise Course in Statistical Inference</a> 的大侠 <a href="http://www.stat.cmu.edu/~larry/" target="_blank">Larry Wasserman</a> (Department of Statistics, Department of Machine Learning, Carnegie Mellon University) 突发感想，在自己博客 <a href="http://normaldeviate.wordpress.com/" target="_blank">Normal Deviate </a>中写下大号书评：
   
 Nate Silver is a Frequentist: Review of “the signal and the noise”
 
-> [&#8230;&#8230;]就如你可以看到的，我非常喜欢这本书，并强烈推荐它。
+> [……]就如你可以看到的，我非常喜欢这本书，并强烈推荐它。
   
-> 但是&#8230;&#8230;
+> 但是……
   
 > 我有一点要倾诉。Silver非常热衷于贝叶斯推断，这是很好的。不幸的是，他属于我<a href="http://normaldeviate.wordpress.com/2012/11/17/what-is-bayesianfrequentist-inference/" target="_blank">前几篇文章</a>所写的这一类人—— 混淆了“贝叶斯推理”与“使用贝叶斯定理”两个概念。他对于频率派统计推断的描述是比较糟的。他似乎把频率推断等同于了常用于正态分布的费歇尔显著性检验。也许他是从一本劣质的书中学习的统计学，抑或他天天跟一群激进的反频率学派的统计学家厮混，以至于持这样的观点。
   
@@ -41,7 +41,7 @@ Nate Silver is a Frequentist: Review of “the signal and the noise”
 > 
 > **“预测中最重要的检验之一，而我认为又是重中之重的，便是校准(calibration)。虽然每次你说有40%的概率会下雨，而实际上雨会多久下一次呢？如果在整个预测时程中（从长远来看），真的大约有40%的时间在下雨，那么这意味着你的预测充分校准（误差很小）。”**
 > 
-> 这绝对是一种频率派的观点。如果使用贝叶斯定理可以有助于实现长程频率校准，那没问题，也挺好。如果没有，我便毫不怀疑他用了别的东西。总之他的目标很明确，就是得到优良的**长期频率行为**。[&#8230;&#8230;]
+> 这绝对是一种频率派的观点。如果使用贝叶斯定理可以有助于实现长程频率校准，那没问题，也挺好。如果没有，我便毫不怀疑他用了别的东西。总之他的目标很明确，就是得到优良的**长期频率行为**。[……]
 
 一时间风雨突起，这个关于 Frequentist or Bayesian 的争议话题又现江湖。第一个杀出来的是？没错！正是大侠 <a href="http://andrewgelman.com/" target="_blank">Andrew Gelman</a> (Department of Statistics, Columbia University)，著名的 <a href="http://andrewgelman.com/" target="_blank">Statistical Modeling, Causal Inference, and Social Science</a> 的博主。
 

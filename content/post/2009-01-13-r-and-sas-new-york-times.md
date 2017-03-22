@@ -16,7 +16,7 @@ slug: r-and-sas-new-york-times
 
 现在R与SAS社区里，最热闹的大概是源于《纽约时报》的一篇文章而引发的R与SAS之争。
 
-2009年1月7号，《纽约时报》科技版登了一篇注定要引起四方瞩目的文章, _<a href="http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html" target="_blank">Data Analysts Captivated by R&#8217;s Power</a>_（1月6号就有网络版），作者是该报的记者<a href="http://topics.nytimes.com/top/reference/timestopics/people/v/ashlee_vance/index.html?inline=nyt-per" target="_blank">Ashlee Vance</a>。这大概是开源统计软件包R，自1996年诞生以来，第一次出现在公众视野，而且是出现在《纽约时报》这样的主流媒体。这篇文章里有一句，让R社区和SAS社区都颇为兴奋，而且有很多私人博客也积极跟进：
+2009年1月7号，《纽约时报》科技版登了一篇注定要引起四方瞩目的文章, _<a href="http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html" target="_blank">Data Analysts Captivated by R’s Power</a>_（1月6号就有网络版），作者是该报的记者<a href="http://topics.nytimes.com/top/reference/timestopics/people/v/ashlee_vance/index.html?inline=nyt-per" target="_blank">Ashlee Vance</a>。这大概是开源统计软件包R，自1996年诞生以来，第一次出现在公众视野，而且是出现在《纽约时报》这样的主流媒体。这篇文章里有一句，让R社区和SAS社区都颇为兴奋，而且有很多私人博客也积极跟进：
 
 > The popularity of R at universities could threaten SAS Institute.
 > 

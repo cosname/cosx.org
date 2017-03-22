@@ -9,17 +9,17 @@ categories:
 slug: causality5-causal-diagram
 ---
 
-<img class="alignleft size-medium wp-image-6524" title="J. Pearl" alt="" src="http://i.imgur.com/neP7X.jpg" width="196" height="300" />这部分介绍 <a href="http://bayes.cs.ucla.edu/jp_home.html" target="_blank">Judea Pearl</a> 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
+![](http://i.imgur.com/neP7X.jpg "J. Pearl")这部分介绍 <a href="http://bayes.cs.ucla.edu/jp_home.html" target="_blank">Judea Pearl</a> 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
 
 **一 有向无环图和 do 算子**
 
-为了避免过多图论的术语，这里仅仅需要知道有向图中“父亲”和“后代”的概念：有向箭头上游的变量是“父亲”，下游的变量是“后代”。在一个有向无环图（Directed Acyclic Graph；DAG）中，记所有的节点集合为 $\overrightarrow{X} = (X\_1,&#8230;,X\_p)$。这里用 $P(\cdot)$ 表示连续变量的密度函数和离散变量的概率函数。有两种观点看待一个 DAG：一是将其看成表示条件独立性的模型；二是将其看成一个数据生成机制。当然，本质上这两种观点是一样的。在第一种观点下，给定 DAG 中某个节点的“父亲”节点，它与其所有的非&#8221;后代&#8221;都独立。根据全概公式和条件独立性，DAG 中变量的联合分布可以有如下的递归分解：
+为了避免过多图论的术语，这里仅仅需要知道有向图中“父亲”和“后代”的概念：有向箭头上游的变量是“父亲”，下游的变量是“后代”。在一个有向无环图（Directed Acyclic Graph；DAG）中，记所有的节点集合为 $\overrightarrow{X} = (X\_1,…,X\_p)$。这里用 $P(\cdot)$ 表示连续变量的密度函数和离散变量的概率函数。有两种观点看待一个 DAG：一是将其看成表示条件独立性的模型；二是将其看成一个数据生成机制。当然，本质上这两种观点是一样的。在第一种观点下，给定 DAG 中某个节点的“父亲”节点，它与其所有的非“后代”都独立。根据全概公式和条件独立性，DAG 中变量的联合分布可以有如下的递归分解：
 
-$$P(x\_1,&#8230;,x\_n) = \prod\_{i=1}^{p} P(x\_i \mid pa_i ),$$
+$$P(x\_1,…,x\_n) = \prod\_{i=1}^{p} P(x\_i \mid pa_i ),$$
 
 其中 $pa\_i$ 表示 $X\_i $ 的“父亲”集合，即所有指向 $X_i $ 的节点集合。
 
-<img class="aligncenter" alt="" src="http://i.imgur.com/VtiVg.png" width="205" height="168" />
+![](http://i.imgur.com/VtiVg.png)
 
 <p style="text-align: center">
   Figure 1: An Example of Causal Diagram
@@ -39,19 +39,19 @@ $$\begin{eqnarray\*}X\_i = f\_i (pa\_i, \varepsilon\_i), i = 1, \cdots, p.\end{e
 
 用一个 DAG 连表示变量之间的关系，并不是最近才有的。图模型也并不是 Judea Pearl 发明的。但是，早期将图模型作为因果推断的工具，成果并不深刻，大家也不太清楚仅仅凭一个图，怎么能讲清楚因果关系。教育、心理和社会学中常用的结构方程模型（structural equation model: SEM），就是早期的尝试；甚至可以说 SEM 是因果图的先驱。（注意，这里出现的两个 SEM 表示不同的模型！）
 
-DAG 中的箭头，似乎表示了某种“因果关系”。但是，要在 DAG 上引入&#8221;因果&#8221;的概念，则需要引进 **do 算子**，do 的意思可以理解成“干预” （intervention）。没有“干预”的概念，很多时候没有办法谈因果关系。在 DAG 中 $do(X\_i)=x\_i&#8217;$ (也可以记做 $\check{x\_i&#8217;}$)，表示如下的操作：将 $DAG$ 中指向 $X\_i$ 的有向边全部切断，且将 $X\_i$ 的取值固定为常数 $x\_i&#8217;$. 如此操作，得到的新 $DAG$ 的联合分布可以记做 $P(x\_1,&#8230;,x\_n\mid do(X\_i)=x\_i&#8217;)$ 可以证明，干预后的联合分布为
+DAG 中的箭头，似乎表示了某种“因果关系”。但是，要在 DAG 上引入“因果”的概念，则需要引进 **do 算子**，do 的意思可以理解成“干预” （intervention）。没有“干预”的概念，很多时候没有办法谈因果关系。在 DAG 中 $do(X\_i)=x\_i’$ (也可以记做 $\check{x\_i’}$)，表示如下的操作：将 $DAG$ 中指向 $X\_i$ 的有向边全部切断，且将 $X\_i$ 的取值固定为常数 $x\_i’$. 如此操作，得到的新 $DAG$ 的联合分布可以记做 $P(x\_1,…,x\_n\mid do(X\_i)=x\_i’)$ 可以证明，干预后的联合分布为
   
 $$
   
-P(x\_1,&#8230;,x\_n\mid do(X\_i)=x\_i&#8217;) = \frac{P(x\_1,&#8230;,x\_n)}{P(x\_i\mid pa\_i)}I(x\_i = x\_i&#8217;).
+P(x\_1,…,x\_n\mid do(X\_i)=x\_i’) = \frac{P(x\_1,…,x\_n)}{P(x\_i\mid pa\_i)}I(x\_i = x\_i’).
   
 $$
 
-请注意，$ P( \cdot \mid do(X\_i)=x\_i&#8217; ) $ 和 $ P( \cdot \mid X\_i=x\_i&#8217; ) $ 在绝大多数情况下是不同的。
+请注意，$ P( \cdot \mid do(X\_i)=x\_i’ ) $ 和 $ P( \cdot \mid X\_i=x\_i’ ) $ 在绝大多数情况下是不同的。
 
 **例子**：考虑如下的两个 DAG：
 
-<img class="size-full wp-image-5929 aligncenter" alt="" src="http://i.imgur.com/Ji9fU.png" width="513" height="89" />
+![](http://i.imgur.com/Ji9fU.png)
 
 在 Figure 2 (1) 中，有 $ P(X\_2 = x\_2\mid X\_1 = x\_1) = P(X\_2 = x\_2\mid do(X\_1) = x\_1) $。由于 $X\_1 $ 是 $ X\_2 $ 的“原因”，“条件”和“干预” $X\_1 $，对应的 $ X\_2 $ 的分布相同。但是在 Figure 2 (2) 中，有 $ P(X\_2 = x\_2\mid X\_1 = x\_1) \neq P(X\_2 = x\_2\mid do(X\_1) = x\_1) = P(X\_2 = x\_2) $. 由于 $X\_1 $ 是 $ X\_2 $ 的“结果”，“条件”（或者“给定”）“结果”，“原因”的分布不再等于他的边缘分布，但是人为的“干预”“结果”$X\_1 $，并不影响“原因” $ X\_2 $ 的分布。
 
@@ -61,7 +61,7 @@ $$
   
 \begin{equation*}
   
-ACE(Z \rightarrow Y) = E\{ Y\mid do(Z)=1 \} &#8211; E\{ Y\mid do(Z)=0\} ,
+ACE(Z \rightarrow Y) = E\{ Y\mid do(Z)=1 \} – E\{ Y\mid do(Z)=0\} ,
   
 \end{equation*}
   
@@ -69,7 +69,7 @@ $$
 
 上面 do 算子下的期望，分别对应 do 算子下的分布。这样在 do 算子下定义的因果模型，被已故计量经济学家 Halbert White 称为 Pearl Causal Model (PCM; White and Chalak 2009)。Pearl 在其书中写到：
 
-> “I must take the opportunity to acknowledge four colleagues who saw clarity shining through the do(x) operator before it gained popularity: Steffen Lauritzen, David Freedman, James Robins and Philip David. Phil showed special courage in pringting my paper in Biometrika, the journal founded by causality&#8217;s worst adversary &#8211; Karl Pearson.” (Pearl, 2000)
+> “I must take the opportunity to acknowledge four colleagues who saw clarity shining through the do(x) operator before it gained popularity: Steffen Lauritzen, David Freedman, James Robins and Philip David. Phil showed special courage in pringting my paper in Biometrika, the journal founded by causality’s worst adversary – Karl Pearson.” (Pearl, 2000)
 
 在书中 Pearl 论述了 RCM 和 PCM 的等价性，即
 
@@ -113,7 +113,7 @@ $$
 下面介绍 Pearl (1995) 的主要工作：**后门准则和前门准则**。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6361"><img alt="" src="http://i.imgur.com/nu3vB.png" width="393" height="500" /></a>
+  <a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6361">![](http://i.imgur.com/nu3vB.png)</a>
 </p>
 
 **后门准则：**在 DAG 中，如果如下条件满足：
@@ -159,7 +159,7 @@ $$
 
 $$
   
-P(y\mid do(X)=x) = \sum\_{z} P(z\mid x) \sum\_{x&#8217;} P(y\mid x&#8217;,z)P(x&#8217;).
+P(y\mid do(X)=x) = \sum\_{z} P(z\mid x) \sum\_{x’} P(y\mid x’,z)P(x’).
   
 $$
 
@@ -181,7 +181,7 @@ $$
   
 &&\text{ (backdoor criterion of $U$ for $Z$ and $Y$)}  \\
   
-&=&\sum\_z P(z\mid x) \sum\_{x&#8217;} P(y\mid x&#8217;, z) P(x&#8217;) \\
+&=&\sum\_z P(z\mid x) \sum\_{x’} P(y\mid x’, z) P(x’) \\
   
 &&\text{ (backdoor criterion of $X$ for $Z$ and $Y$).} \#
   
@@ -189,7 +189,7 @@ $$
   
 $$
 
-这个前门路径看似很难理解，证明似乎很不直观，恰似变魔术。但是它其实是很显然的，在前门路径的 DAG 中，我们有：（1）$ X$  对 $ Z$  的因果作用可识别，因为 $ Y$  阻断了它们之间的后门路径；（2）$ Z$  对 $ Y$  的因果作用可识别，因为 $ X$  阻断了他们的后门路径；（3）$ X$  对 $ Y$  的作用，仅仅通过 $ Z$  而产生。这三点蕴含着 $ X$  对 $ Y$  的因果作用可识别&#8212;这样看来，这个结论就不奇怪了！
+这个前门路径看似很难理解，证明似乎很不直观，恰似变魔术。但是它其实是很显然的，在前门路径的 DAG 中，我们有：（1）$ X$  对 $ Z$  的因果作用可识别，因为 $ Y$  阻断了它们之间的后门路径；（2）$ Z$  对 $ Y$  的因果作用可识别，因为 $ X$  阻断了他们的后门路径；（3）$ X$  对 $ Y$  的作用，仅仅通过 $ Z$  而产生。这三点蕴含着 $ X$  对 $ Y$  的因果作用可识别—这样看来，这个结论就不奇怪了！
 
 Pearl 在书中讲了一个非常有趣的例子，来说明前门准则的用处。
 
@@ -197,13 +197,13 @@ Pearl 在书中讲了一个非常有趣的例子，来说明前门准则的用�
 
 **例子：**在 Figure 1 的 DAG 中，$(X\_i,X\_j)$ 之间的后门路径被 $\{X\_3,X\_4\}$ 或者 $\{X\_4,X\_5\}$ 阻断，而前门路径被 $X_6$ 阻断。上面的两个准则表明，**要识别从 $X\_i$ 到 $X\_j$ 的因果作用，我们不需要观测到所有的变量，只需要观测到切断后门路径或者前门路径的变量即可。**
 
-# 三 回到 Yule-Simpson&#8217;s Paradox
+# 三 回到 Yule-Simpson’s Paradox
 
-在第一节中，我们看到了经典的 Yule-Simpson&#8217;s Paradox。记 $T $ 为处理（吃药与否）； $Y $ 为结果（存活与否）， $X $ 是用于分层的变量（在最开始的例子中， $X $ 是性别；在这里我们先将  $X $ 简单地看成某个用于分层的变量）。悖论存在，是因为 $T $ 和 $Y $ 正相关；但是按照 $X $的值分层后， $T $ 和 $Y $ 负相关。分，还是不分？&#8212;&#8211;这是一个问题！这在实际应用是非常重要的问题。
+在第一节中，我们看到了经典的 Yule-Simpson’s Paradox。记 $T $ 为处理（吃药与否）； $Y $ 为结果（存活与否）， $X $ 是用于分层的变量（在最开始的例子中， $X $ 是性别；在这里我们先将  $X $ 简单地看成某个用于分层的变量）。悖论存在，是因为 $T $ 和 $Y $ 正相关；但是按照 $X $的值分层后， $T $ 和 $Y $ 负相关。分，还是不分？—–这是一个问题！这在实际应用是非常重要的问题。
 
-不过，仅仅从“相关”（association）的角度讨论这个问题，是没有答案的。从“因果”（causation）的角度来看，才能有确切的回答。解释 Yule-Simpson&#8217;s Paradox，算是因果图的第一个重要应用。
+不过，仅仅从“相关”（association）的角度讨论这个问题，是没有答案的。从“因果”（causation）的角度来看，才能有确切的回答。解释 Yule-Simpson’s Paradox，算是因果图的第一个重要应用。
 
-<a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6364"><img class="alignnone size-large wp-image-6364 aligncenter" alt="" src="http://i.imgur.com/vpb8M.png" width="431" height="500" /></a>
+<a href="https://cos.name/2012/10/causality5-causal-diagram/" rel="attachment wp-att-6364">![](http://i.imgur.com/vpb8M.png)</a>
 
 下面，我将以上面的 Figure 4 中的四个图为例说明，三个变量之间的关系的复杂性。
 
@@ -215,7 +215,7 @@ Pearl 在书中讲了一个非常有趣的例子，来说明前门准则的用�
 
 图（d）：这个图常常被 Judea Pearl 用来批评 Donald Rubin，因为它存在一个有趣的  $M $ 结构。在这个图中，由于 $V $ 结构的存在， $T $ 和 $Y $ 之间的后门路径被空集阻断，因此 $T $ 和 $Y $ 之间的相关性就是因果性。但是由于 $M $ 结构的存在，当我们用 $X $ 进行调整的时候， $U $ 和 $W $ 之间打开了一条“通路”（它们不再独立），因此 $T $ 和 $Y $ 之间的后门路径被打通，此时 $T $ 和 $Y $ 之间的相关性不再具有因果的含义。
 
-我个人认为，因果图是揭开 Yule-Simpson&#8217;s Paradox 神秘面纱的有力工具。正如 Judea Pearl 在他的书中写到，不用因果的语言来描述这个问题，我们是讲不清楚这个悖论的。当然，因果的语言不止因果图，Judea Pearl 的解释始终不能得到 Donald Rubin 的认可。
+我个人认为，因果图是揭开 Yule-Simpson’s Paradox 神秘面纱的有力工具。正如 Judea Pearl 在他的书中写到，不用因果的语言来描述这个问题，我们是讲不清楚这个悖论的。当然，因果的语言不止因果图，Judea Pearl 的解释始终不能得到 Donald Rubin 的认可。
 
 **五 讨论**
 
@@ -227,11 +227,11 @@ Pearl 在书中讲了一个非常有趣的例子，来说明前门准则的用�
   2. Pearl 引入的 do 算子，是他在因果推断领域最主要的贡献。所谓 “do”，就是“干预”，Pearl 认为干预就是从系统之外人为的控制某些变量。但是，这依赖于一个假定：干预某些变量并不会引起 DAG 中其他结构的变化。这个假定常常会受到质疑，但是质疑归质疑，Pearl 的这个假定虽然看似很强，但根据观测数据却不可检验。这种质疑并不是 Pearl 的理论独有的缺陷，这事实上是一切研究的缺陷。比如，我们用完全随机化试验来研究处理的作用，我们要想将实验推广到观察性的数据或者更大的人群中去，也必须用到一些不可验证的假定。
   3. 很多人看了 Pearl 的理论后就嘲笑他：难道我们可以在 DAG 中干预“性别”？确实，离开了实际的背景，干预性别似乎是不太合理的。那这个时候，根据 Pearl 的 do算子得到的因果作用意味着什么呢？可以从几个方面回答这个问题。 
       * 很多问题，我们不能谈论“干预性别”，也不能谈论“性别”的“因果作用”。“性别”的特性是“协变量”（covariate），对于这类变量（如身高、肤色等），谈论因果作用不合适，因为我们不能想象出一个可能的“实验”，干预这些变量。
-      * 上面的回答基于“实验学派”（experimentalists&#8217;）的观点，认为不可干预，就没有“因果”。但是，如果认为只要有数据的生成机制，就有因果关系，那么算出性别的因果作用也不奇怪。（计量经就学一直有争议，以 Joshua Angrist、Guido Imbens 等为首的“实验派”，和以 James Heckman 为首的“结构方程模型”派，有过很激烈的讨论。）
+      * 上面的回答基于“实验学派”（experimentalists’）的观点，认为不可干预，就没有“因果”。但是，如果认为只要有数据的生成机制，就有因果关系，那么算出性别的因果作用也不奇怪。（计量经就学一直有争议，以 Joshua Angrist、Guido Imbens 等为首的“实验派”，和以 James Heckman 为首的“结构方程模型”派，有过很激烈的讨论。）
       * 有些问题中性别的因果作用是良好定义的。比如，我们可以人工的修改应聘者简历上的名字（随机的使用男性和女性名字），便可以研究性别对于求职的影响，是否存在性别歧视等等（已有研究使用过这种实验设计）。
   4. 一个更为严重的问题是，实际工作中，我们很难得到一个完整的 DAG，用于阐述变量之间的因果关系或者数据生成机制，使得 DAG 的应用受到的巨大的阻碍。不过，从观测数据学习 DAG 的结构，确实是一个很有趣且重要的问题，这留待下回分解。
 
 在结束时，留些一些思考的问题：
 
   * 在何种意义下，后门准则的条件，等价于可忽略性，即 $ X\bot Y(x)|Z $？
-  * 在第一节的 Yule-Simpson&#8217;s Paradox 中，我们最终选择调整的估计量，还是不调整的估计量？
+  * 在第一节的 Yule-Simpson’s Paradox 中，我们最终选择调整的估计量，还是不调整的估计量？

@@ -42,7 +42,7 @@ slug: higgs-boson-and-5-sigma
 
 念玩后大家鼓掌拥抱，热泪盈眶。一番周折后，我才终于找到了CERN的 <a href="https://cdsweb.cern.ch/record/1459565" target="_blank">原版视频</a>（将近两小时，值得看看）。
 
-开始时只是想搞清楚这 5$\sigma $怎么回事（35：10,第84页），没想到听到一堆统计词汇“multivariate analysis technique”，“p-value”,”sensitivity”, 等等劈头盖脸的飞来。最给力的是 Rolf Heuer 讲了一些用<a href="http://en.wikipedia.org/wiki/Boosting" target="_blank">Boosted decision tree</a>来提高分类器准确性的过程（18：20,第33页）。不出所料，研究中用到了很前沿的数据分析方法。老祖师果然没错。看来欲知其中细节，得看数据分析啊！
+开始时只是想搞清楚这 5$\sigma $怎么回事（35：10,第84页），没想到听到一堆统计词汇“multivariate analysis technique”，“p-value”,“sensitivity”, 等等劈头盖脸的飞来。最给力的是 Rolf Heuer 讲了一些用<a href="http://en.wikipedia.org/wiki/Boosting" target="_blank">Boosted decision tree</a>来提高分类器准确性的过程（18：20,第33页）。不出所料，研究中用到了很前沿的数据分析方法。老祖师果然没错。看来欲知其中细节，得看数据分析啊！
 
 比较遗憾的是我比较看不懂的是<a href="http://www.huanqiukexue.com/html/newqqkj/newwl/2012/0704/22320.html" target="_blank">环球科学（科学美国人中文版）的文章 “希格斯粒子现身LHC</a>？”最后对 5$\sigma$ 的解释：
 

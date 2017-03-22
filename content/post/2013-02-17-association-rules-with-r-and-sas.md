@@ -92,7 +92,7 @@ R的代码主要来自《<a href="http://www.rdatamining.com/docs" target="_blan
 
 setInternet2(TRUE)
   
-con <- url(&#8220;<http://www.rdatamining.com/data/titanic.raw.rdata>&#8220;)
+con <- url(“<http://www.rdatamining.com/data/titanic.raw.rdata>“)
   
 load(con)
   
@@ -112,11 +112,11 @@ inspect(rules)
 
 3）只保留结果中包含生存变量的关联规则
 
-\# rules with rhs containing &#8220;Survived&#8221; only
+\# rules with rhs containing “Survived” only
   
-rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c(&#8220;Survived=No&#8221;, &#8220;Survived=Yes&#8221;), default=&#8221;lhs&#8221;),control = list(verbose=F))
+rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c(“Survived=No”, “Survived=Yes”), default=“lhs”),control = list(verbose=F))
   
-rules.sorted <- sort(rules, by=&#8221;lift&#8221;)
+rules.sorted <- sort(rules, by=“lift”)
   
 inspect(rules.sorted)
 
@@ -232,9 +232,9 @@ lhs       rhs      support      confidence      lift
 
 如果我们减小最小支持率和置信度的阈值，则能看到更多的真相。
 
-rules <- apriori(titanic.raw, parameter = list(minlen=3, supp=0.002, conf=0.2), appearance = list(rhs=c(&#8220;Survived=Yes&#8221;), lhs=c(&#8220;Class=1st&#8221;, &#8220;Class=2nd&#8221;, &#8220;Class=3rd&#8221;, &#8220;Age=Child&#8221;, &#8220;Age=Adult&#8221;), default=&#8221;none&#8221;), control = list(verbose=F))
+rules <- apriori(titanic.raw, parameter = list(minlen=3, supp=0.002, conf=0.2), appearance = list(rhs=c(“Survived=Yes”), lhs=c(“Class=1st”, “Class=2nd”, “Class=3rd”, “Age=Child”, “Age=Adult”), default=“none”), control = list(verbose=F))
   
-rules.sorted <- sort(rules, by=&#8221;confidence&#8221;)
+rules.sorted <- sort(rules, by=“confidence”)
   
 inspect(rules.sorted)
 
@@ -266,9 +266,9 @@ library(arulesViz)
   
 plot(rules)
   
-plot(rules, method=&#8221;graph&#8221;, control=list(type=&#8221;items&#8221;))
+plot(rules, method=“graph”, control=list(type=“items”))
   
-plot(rules, method=&#8221;paracoord&#8221;, control=list(reorder=TRUE))
+plot(rules, method=“paracoord”, control=list(reorder=TRUE))
 
 对于不熟悉R的SAS用户，可以阅读以下资料学习R以及ARULES包：
   
@@ -286,7 +286,7 @@ con <- url(<span style="font-family: Courier New;color: #800080;font-size: small
   
 endsubmit;
 
-<span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">call</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">ImportDataSetFromR(</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">&#8220;Work.titanic&#8221;</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">,</span></span> <span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">&#8220;titanic.raw&#8221;</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">);<br /> </span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">run</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">quit</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
+<span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">call</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">ImportDataSetFromR(</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">“Work.titanic”</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">,</span></span> <span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">“titanic.raw”</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">);<br /> </span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">run</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">quit</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
 
 2）将数据转换成SAS/EM要求的格式
 
@@ -316,7 +316,7 @@ item = class;
 
 4） 只保留结果中包含生存变量的关联规则
 
-**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">data</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">surviverules;<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">set</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">rules(</span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">where</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">=(set_size></span></span>**<span style="font-family: Courier New;color: #008080;font-size: small"><span style="font-family: Courier New;color: #008080;font-size: small"><span style="font-family: Courier New;color: #008080;font-size: small">1</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">and (_rhand=</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">&#8216;Yes&#8217;</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">or _rhand=</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">&#8216;No&#8217;</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">)));<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">run</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
+**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">data</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">surviverules;<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">set</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">rules(</span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">where</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">=(set_size></span></span>**<span style="font-family: Courier New;color: #008080;font-size: small"><span style="font-family: Courier New;color: #008080;font-size: small"><span style="font-family: Courier New;color: #008080;font-size: small">1</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">and (_rhand=</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">‘Yes’</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">or _rhand=</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">‘No’</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">)));<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">run</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
 
 **<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">proc</span></span></span>** **<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">print</span></span></span>** <span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">data</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">=surviverules;<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">var</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">conf support lift rule ;<br /> </span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">run</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
 

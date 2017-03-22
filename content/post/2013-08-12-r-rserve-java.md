@@ -32,7 +32,7 @@ R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直�
   
 <a title="Rserve与Java的跨平台通信" href="http://blog.fens.me/r-rserve-java/" target="_blank">http://blog.fens.me/r-rserve-java/</a>
 
-[<img class="alignnone size-full wp-image-1608" alt="rserve-java" src="http://blog.fens.me/wp-content/uploads/2013/08/rserve-java.png" width="600" height="400" />](http://blog.fens.me/wp-content/uploads/2013/08/rserve-java.png)
+![rserve-java](http://blog.fens.me/wp-content/uploads/2013/08/rserve-java.png)
 
 **前言**
 
@@ -135,7 +135,7 @@ R 3.0.1 64bit
 
 **1). 远程连接Rserve**
   
-刚刚启动时，使用的本地模式，如果想运程连接需要增加参数 &#8211;RS-enable-remote
+刚刚启动时，使用的本地模式，如果想运程连接需要增加参数 –RS-enable-remote
 
     
     #杀掉刚才的Rserve守护进程
@@ -162,7 +162,7 @@ R 3.0.1 64bit
   
 在Eclipse中新建Java工程，并加载JAR包环境中。
   
-[<img class="alignnone size-full wp-image-1599" alt="rserve1" src="http://blog.fens.me/wp-content/uploads/2013/08/rserve1.png" width="371" height="202" />](http://blog.fens.me/wp-content/uploads/2013/08/rserve1.png)
+![rserve1](http://blog.fens.me/wp-content/uploads/2013/08/rserve1.png)
 
 **4). Java编程实现**
 
@@ -205,7 +205,7 @@ R 3.0.1 64bit
   
 解决了通信的问题，我们就可以发挥想象，把R更广泛的用起来。
 
-接下来，会讲到如何设计Java和R互相调用的软件架构。敬请关注&#8230;.
+接下来，会讲到如何设计Java和R互相调用的软件架构。敬请关注….
 
 **转载请注明出处：**
   

@@ -71,7 +71,7 @@ if (!exists('x')) {
         </p>
         
         <p style="text-align: center;">
-          <figure id="attachment_2810" style="width: 480px" class="wp-caption aligncenter"><a href="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf"><img class="size-full wp-image-2810 " title="二维正态分布随机数及其等高线图" src="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png" alt="二维正态分布随机数及其等高线图" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png 480w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-150x150.png 150w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-300x300.png 300w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-218x218.png 218w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-73x73.png 73w, https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph-40x40.png 40w" sizes="(max-width: 480px) 100vw, 480px" /></a><figcaption class="wp-caption-text">二维正态分布随机数及其等高线图</figcaption></figure> 
+          <figure id="attachment_2810" style="width: 480px" class="wp-caption aligncenter"><a href="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf">![二维正态分布随机数及其等高线图](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png "二维正态分布随机数及其等高线图")</a><figcaption class="wp-caption-text">二维正态分布随机数及其等高线图</figcaption></figure> 
           
           <p>
             我们生成了50万行随机数，并画了X与Y的散点图。由于我们设定了相关系数为0.7，所以图中自然而然显现出正相关；而等高线也体现出多维正态分布的“椭球形”特征。均值在(0, 1)附近，都和理论分布吻合。所以这个Gibbs抽样还不太糟糕。
