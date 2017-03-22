@@ -14,9 +14,9 @@ slug: data-sciencs-series-interview-of-wanghansheng
 description: "简介：王汉生教授现任北京大学光华管理学院商务统计与经济计量系副系主任。1998年北京大学数学科学学院，概率统计系，统计学本科，2001年美国威斯康星大学麦迪逊分校，统计学博士。现为国际统计协会(International Statistical Institute)、美国统计学会(American Statistical Association)、美国数理统计协会(Institute of Mathematical Statistics)、英国皇家统计协会(Royal Statistical Society)，以及泛华统计学会(International Chinese Statistical Association)会员。"
 ---
 
-<span style="color: #888888;">【COS编辑部按】受访人：<span style="color: #888888;">[北大光华王汉生教授](http://hansheng.gsm.pku.edu.cn/ "主页")。采访人：[陈昱](http://weibo.com/u/2798096702?topnav=1&wvr=5&topsug=1)</span></span>
+>【COS编辑部按】受访人：[北大光华王汉生教授](http://hansheng.gsm.pku.edu.cn/ "主页")。采访人：[陈昱](http://weibo.com/u/2798096702?topnav=1&wvr=5&topsug=1)
 
-<span style="color: #888888;">简介：王汉生教授现任北京大学光华管理学院商务统计与经济计量系副系主任。1998年北京大学数学科学学院，概率统计系，统计学本科，2001年美国威斯康星大学麦迪逊分校，统计学博士。现为国际统计协会(International Statistical Institute)、美国统计学会(American Statistical Association)、美国数理统计协会(Institute of Mathematical Statistics)、英国皇家统计协会(Royal Statistical Society)，以及泛华统计学会(International Chinese Statistical Association)会员。</span>
+> 简介：王汉生教授现任北京大学光华管理学院商务统计与经济计量系副系主任。1998年北京大学数学科学学院，概率统计系，统计学本科，2001年美国威斯康星大学麦迪逊分校，统计学博士。现为国际统计协会(International Statistical Institute)、美国统计学会(American Statistical Association)、美国数理统计协会(Institute of Mathematical Statistics)、英国皇家统计协会(Royal Statistical Society)，以及泛华统计学会(International Chinese Statistical Association)会员。
 
 
 <span style="color: #888888;">2013年9月23日，在结束了“狗熊会”的每周一聚后，王汉生老师在他的办公室接受了统计之都的采访。</span>
