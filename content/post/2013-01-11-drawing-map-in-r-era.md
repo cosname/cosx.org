@@ -37,10 +37,6 @@ R语言中绘制地图的思路也是由于2的获取方式不一样而分开的
 
   第三种思路：既然R是自由的，那我能不能直接去调取专业的地图企业或者网站的数据呢，这样就不会受包中数据集所限，我只需要有一个途径去专业的地图供应商那取数据就可以了，比如Google Map，Baidu Map等，这可都是专业的地图网站，里面的地理数据应有尽有，想取啥取啥。自由的R只需要连接Google Map的API，一切就都有了，当然Google大爷不会让你无限制的取数据，目前的限制是2000次（应该是单天的限制），于是ggmap包诞生了，两位作者David Kahle和 Hadley Wickham真是太会解放全球人民了，并且该包中有几个让我无比激动的命令，下文见！！！
 
-<p align="left">
-  <!--more-->
-</p>
-
   好，我们先来按照第一种思路来画几个图：
 
 #  1、 画世界地图
@@ -56,8 +52,8 @@ map("world", fill = TRUE, col = rainbow(200),
 title("世界地图")
 ```
 
-
 输出为：
+
  ![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
 
   无比绚丽的世界，引无数骚客竞折腰啊……
@@ -119,15 +115,20 @@ title(" 中国地图")
 
 ## 1、geocode()
 
+
 比如：
 
-<pre>&gt; geocode("Beijing")
+```
+\&gt; geocode("Beijing")
        lon      lat
 1 116.4075 39.90403</pre>
+```
 
 这大哥可以返回一个地方的经纬度，那我再调戏之：
 
-<pre>&gt; #这意思就是大哥你多给点！！&gt; geocode("Renmin University of China", output = "more")
+```
+&gt; #这意思就是大哥你多给点！！
+&gt; geocode("Renmin University of China", output = "more")
        lon      lat              type     loctype
 1 116.3184 39.96998 point_of_interest approximate
                                                                                 address
@@ -136,21 +137,25 @@ title(" 中国地图")
 1 39.97853 39.96142 116.3345 116.3024      100086   china
   administrative_area_level_2 administrative_area_level_1 locality
 1                        &lt;NA&gt;                     beijing  beijing
-```               street streetNo          point_of_interest
+               street streetNo          point_of_interest
 1 zhongguancun street       NA renmin university of china                       query
-1 Renmin University of China</pre>
+1 Renmin University of China
+```
+
 信息给多了，我说几个点，不但有人民大学的经纬度，还有该大学的详细地址（中国人民大学，中关村大街59号，海淀，北京，中国），还有邮编好吧100086！！！！但是好像跟我们实际的100872有差距（倒是跟10086很接近啊），但是它确实是返回了邮政编码，还有zhongguancun street就不说了……这完全就是返回的Google地图存储的人民大学的信息啊……
 
 ## 2、mapdist()
 
 第二个颠颤颤的命令式mapdist()。比如：
 
-<pre>&gt; mapdist('China Agricultural University',
+```
+&gt; mapdist('China Agricultural University',
 +     'Renmin University of China', 'walking')
                            from                         to    m    km
 1 China Agricultural University Renmin University of China 6022 6.022
      miles seconds  minutes    hours
-1 3.742071    4523 75.38333 1.256389</pre>
+1 3.742071    4523 75.38333 1.256389
+```
 
 1 mile = 1609米。
 
@@ -179,7 +184,7 @@ ggmap(map)
 
 ```
 #Google啊Google给我Beijing的公路地图数据吧
-map &lt;- get_map(location = 'Beijing', zoom = 10, maptype = 'roadmap')
+map <- get_map(location = 'Beijing', zoom = 10, maptype = 'roadmap')
 ggmap(map)
 ```
 
@@ -191,7 +196,7 @@ ggmap(map)
 
 ```
 ## Google啊Google给我RUC的卫星地图数据吧
-map &lt;- get_map(location = 'Renmin University of China', zoom = 14,
+map <- get_map(location = 'Renmin University of China', zoom = 14,
     maptype = 'satellite')
 ggmap(map)
 ```
