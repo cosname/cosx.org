@@ -13,7 +13,7 @@ slug: seamless-r-and-c-integration-with-rcpp
 ---
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2016/01/Rcpp.jpg" rel="attachment wp-att-11834"><img class="aligncenter size-full wp-image-11834" src="https://cos.name/wp-content/uploads/2016/01/Rcpp.jpg" alt="Rcpp" width="349" height="350" srcset="https://cos.name/wp-content/uploads/2016/01/Rcpp.jpg 349w, https://cos.name/wp-content/uploads/2016/01/Rcpp-150x150.jpg 150w, https://cos.name/wp-content/uploads/2016/01/Rcpp-300x300.jpg 300w" sizes="(max-width: 349px) 100vw, 349px" /></a>Seamless R and C++ Integration with Rcpp
+  <a href="https://cos.name/wp-content/uploads/2016/01/Rcpp.jpg" rel="attachment wp-att-11834">![Rcpp](https://cos.name/wp-content/uploads/2016/01/Rcpp.jpg)</a>Seamless R and C++ Integration with Rcpp
 </p>
 
 <p style="text-align: center;">

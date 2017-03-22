@@ -116,7 +116,7 @@ Pollard J.H. (1982), The expectation of life and its relationship to mortality, 
 
 [1]THomas Pyzdek.孙静译 六西格玛手册.北京: 清华大学出版,2003
 
-[2]何晓群 六西格玛管理丛书 1&#8211;6册 北京: 中国人民大学出版社2003
+[2]何晓群 六西格玛管理丛书 1–6册 北京: 中国人民大学出版社2003
 
 ### 第十五、十六讲 易丹辉教授：待定
 

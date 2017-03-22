@@ -54,7 +54,7 @@ slug: hypotheses-testing
 > 
 > <span style="color: #ff0000;">Q </span><span style="color: #000000;">(前提)</span>
 > 
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+> ———————–
 > 
 > then **NOT** <span style="color: #ff0000;">P </span><span style="color: #000000;">（结论）</span>
 
@@ -70,7 +70,7 @@ slug: hypotheses-testing
 > 
 > <span style="color: #ff0000;">Q                                                     <span style="color: #000000;">(前提)</span></span>
 > 
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
+> ———————–
 > 
 > then _probably_ **NOT** <span style="color: #ff0000;">P         <span style="color: #000000;">（结论）</span></span>
 
@@ -155,7 +155,7 @@ slug: hypotheses-testing
   5. 样本均值$\bar{X}=25.03$，在这个自由度为24的t分布下，有一个对应的t值，t=25.03-24.3/0.27=2.704。现在我们可以在整个分布里考察这个t值。在这个自由度为24的t分布里，我们看 t=2.704是不是一个“极端”事件<span style="color: #ff0000;">Q</span>。根据对称性，比<span style="color: #ff0000;">Q</span>更极端的是那些大于2.704或者小于-2.704的点。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2010/11/t.png"><img style="float: none; margin-left: auto; width: 374px; margin-right: auto; border-width: 0px;" src="https://cos.name/wp-content/uploads/2010/11/t_thumb.png" border="0" alt="t" width="374" height="351" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/11/t.png">![t](https://cos.name/wp-content/uploads/2010/11/t_thumb.png)</a>
 </p>
 
 从上图可以看到，在这个t分布里，比t=2.704更“极端”的点占整个分布的0.0124。这个0.0124就是我们要求的P值。这个P值小于我们事先选定的显著性水平α=0.05，因此我们可以拒绝原假设，认为这批螃蟹的平均体温不等于空气温度。
@@ -166,12 +166,12 @@ slug: hypotheses-testing
 > 
 > 在R里，     P=2*(1-<span style="color: #ff0000;">pt</span>(t,df))=2*(1-<span style="color: #ff0000;">pt</span>(2.704,24))=0.012392
 
-&#8212;&#8212;&#8212;-
+———-
 
 以上是用P值作为判定条件。一个等价的做法是用临界值来判断。我们事先给定的显著性水平α=0.05，在这个自由度为24的t分布里，就对应着一个临界t值2.064。下图的阴影部分，也称作**拒绝区域**。上面求出的跟样本均值$\bar{X}=25.03$对应的t值=2.704，处在这个拒绝区域内（2.704>2.064），于是我们一样拒绝原假设。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2010/11/t2.png"><img style="float: none; margin-left: auto; width: 340px; margin-right: auto; border-width: 0px;" src="https://cos.name/wp-content/uploads/2010/11/t2_thumb.png" border="0" alt="t2" width="340" height="320" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/11/t2.png">![t2](https://cos.name/wp-content/uploads/2010/11/t2_thumb.png)</a>
 </p>
 
 又，上述临界值可以手算（或查表）如下：
@@ -212,11 +212,11 @@ _[**Common Statistical Methods for Clinical Research with SAS Examples**](http:/
 
 > t Value    Pr > |t|
   
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+> ——————-
   
 > <span style="color: #ff0000;">2.71      0.0121</span>
   
-> &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+> ——————-
 
 上面的t Value 就是计算出来的t值，Pr > |t| 就是P值（这里的|t|就是上面计算出来的t值2.704，**Pr > |t|求的是比t值更极端的概率，即P值**）。proc means没有提供临界t值（即通常说的查表得出的t值），下同。
 

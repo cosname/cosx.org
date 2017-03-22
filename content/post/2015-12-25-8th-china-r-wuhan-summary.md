@@ -15,7 +15,7 @@ slug: 8th-china-r-wuhan-summary
 
 第八届中国R语言会议（武汉会场）暨华中地区数据科学会议于2015年11月7日在湖北经济学院大学生活动中心二号报告厅顺利举行。会议由湖北经济学院统计学院和统计之都主办，湖北数据与分析中心协办，优酷土豆和辰智咨询提供了赞助。会议当天，众多R语言兴趣爱好者齐聚一堂，就R语言在行业中的应用进行了交流探讨。经过大家的努力，R语言的火种顺利传到了武汉，接下来还会一直传递下去。
 
-[<img class="aligncenter size-full wp-image-11767" src="https://cos.name/wp-content/uploads/2015/12/wh-001.jpg" alt="wh-001" width="1000" height="666" srcset="https://cos.name/wp-content/uploads/2015/12/wh-001.jpg 1000w, https://cos.name/wp-content/uploads/2015/12/wh-001-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-001-500x333.jpg 500w" sizes="(max-width: 1000px) 100vw, 1000px" />](https://cos.name/wp-content/uploads/2015/12/wh-001.jpg)
+![wh-001](https://cos.name/wp-content/uploads/2015/12/wh-001.jpg)
 
 **会议概况**<!--more-->
 
@@ -27,7 +27,7 @@ slug: 8th-china-r-wuhan-summary
 
 会议流程和主要内容摘录如下：
 
-  1. 开幕致辞[<img class="aligncenter size-full wp-image-11768" src="https://cos.name/wp-content/uploads/2015/12/wh-002.jpg" alt="wh-002" width="800" height="533" srcset="https://cos.name/wp-content/uploads/2015/12/wh-002.jpg 800w, https://cos.name/wp-content/uploads/2015/12/wh-002-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-002-500x333.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" />](https://cos.name/wp-content/uploads/2015/12/wh-002.jpg)
+  1. 开幕致辞![wh-002](https://cos.name/wp-content/uploads/2015/12/wh-002.jpg)
 
 会议筹备组主席李巧玲代表整个筹备组对各位来宾表示欢迎，同时也分享了在会议筹备过程中的一些经历、感受，令人忍俊不禁却又发人深省。
 
@@ -37,7 +37,7 @@ slug: 8th-china-r-wuhan-summary
 
 <ol start="2">
   <li>
-    谢军： 当R真的遇到了大数据<a href="https://cos.name/wp-content/uploads/2015/12/wh-003.jpg"><img class="aligncenter size-full wp-image-11769" src="https://cos.name/wp-content/uploads/2015/12/wh-003.jpg" alt="wh-003" width="800" height="533" srcset="https://cos.name/wp-content/uploads/2015/12/wh-003.jpg 800w, https://cos.name/wp-content/uploads/2015/12/wh-003-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-003-500x333.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+    谢军： 当R真的遇到了大数据<a href="https://cos.name/wp-content/uploads/2015/12/wh-003.jpg">![wh-003](https://cos.name/wp-content/uploads/2015/12/wh-003.jpg)</a>
   </li>
 </ol>
 
@@ -47,7 +47,7 @@ slug: 8th-china-r-wuhan-summary
 
 <ol start="3">
   <li>
-    李舰：R与自动化报告<a href="https://cos.name/wp-content/uploads/2015/12/wh-004.jpg"><img class="aligncenter size-full wp-image-11770" src="https://cos.name/wp-content/uploads/2015/12/wh-004.jpg" alt="wh-004" width="800" height="533" srcset="https://cos.name/wp-content/uploads/2015/12/wh-004.jpg 800w, https://cos.name/wp-content/uploads/2015/12/wh-004-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-004-500x333.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+    李舰：R与自动化报告<a href="https://cos.name/wp-content/uploads/2015/12/wh-004.jpg">![wh-004](https://cos.name/wp-content/uploads/2015/12/wh-004.jpg)</a>
   </li>
 </ol>
 
@@ -57,7 +57,7 @@ slug: 8th-china-r-wuhan-summary
 
 <ol start="4">
   <li>
-    肖凯：基于OpenCPU的R模型部署<a href="https://cos.name/wp-content/uploads/2015/12/wh-005.jpg"><img class="aligncenter size-full wp-image-11771" src="https://cos.name/wp-content/uploads/2015/12/wh-005.jpg" alt="wh-005" width="800" height="533" srcset="https://cos.name/wp-content/uploads/2015/12/wh-005.jpg 800w, https://cos.name/wp-content/uploads/2015/12/wh-005-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-005-500x333.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+    肖凯：基于OpenCPU的R模型部署<a href="https://cos.name/wp-content/uploads/2015/12/wh-005.jpg">![wh-005](https://cos.name/wp-content/uploads/2015/12/wh-005.jpg)</a>
   </li>
 </ol>
 
@@ -67,7 +67,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="5">
   <li>
-    何宇兵：商业大数据时代，GIS和R更配<a href="https://cos.name/wp-content/uploads/2015/12/wh-006.jpg"><img class="aligncenter size-full wp-image-11772" src="https://cos.name/wp-content/uploads/2015/12/wh-006.jpg" alt="wh-006" width="800" height="533" srcset="https://cos.name/wp-content/uploads/2015/12/wh-006.jpg 800w, https://cos.name/wp-content/uploads/2015/12/wh-006-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-006-500x333.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+    何宇兵：商业大数据时代，GIS和R更配<a href="https://cos.name/wp-content/uploads/2015/12/wh-006.jpg">![wh-006](https://cos.name/wp-content/uploads/2015/12/wh-006.jpg)</a>
   </li>
 </ol>
 
@@ -77,7 +77,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="6">
   <li>
-    张兵：基于R软件的传染病监测系统数据可视化及分析平台搭建<a href="https://cos.name/wp-content/uploads/2015/12/wh-007.jpg"><img class="aligncenter size-full wp-image-11773" src="https://cos.name/wp-content/uploads/2015/12/wh-007.jpg" alt="wh-007" width="599" height="426" srcset="https://cos.name/wp-content/uploads/2015/12/wh-007.jpg 599w, https://cos.name/wp-content/uploads/2015/12/wh-007-300x213.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-007-500x356.jpg 500w" sizes="(max-width: 599px) 100vw, 599px" /></a>
+    张兵：基于R软件的传染病监测系统数据可视化及分析平台搭建<a href="https://cos.name/wp-content/uploads/2015/12/wh-007.jpg">![wh-007](https://cos.name/wp-content/uploads/2015/12/wh-007.jpg)</a>
   </li>
 </ol>
 
@@ -87,7 +87,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="7">
   <li>
-    苏建冲：运营商数据应用场景的尝试和探讨<a href="https://cos.name/wp-content/uploads/2015/12/wh-008.jpg"><img class="aligncenter size-full wp-image-11774" src="https://cos.name/wp-content/uploads/2015/12/wh-008.jpg" alt="wh-008" width="566" height="563" srcset="https://cos.name/wp-content/uploads/2015/12/wh-008.jpg 566w, https://cos.name/wp-content/uploads/2015/12/wh-008-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/12/wh-008-300x298.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-008-500x497.jpg 500w" sizes="(max-width: 566px) 100vw, 566px" /></a>
+    苏建冲：运营商数据应用场景的尝试和探讨<a href="https://cos.name/wp-content/uploads/2015/12/wh-008.jpg">![wh-008](https://cos.name/wp-content/uploads/2015/12/wh-008.jpg)</a>
   </li>
 </ol>
 
@@ -97,7 +97,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="8">
   <li>
-    谢佳标：大数据的处理及建模技术——基于R语言实现<a href="https://cos.name/wp-content/uploads/2015/12/wh-009.jpg"><img class="aligncenter size-full wp-image-11775" src="https://cos.name/wp-content/uploads/2015/12/wh-009.jpg" alt="wh-009" width="713" height="717" srcset="https://cos.name/wp-content/uploads/2015/12/wh-009.jpg 713w, https://cos.name/wp-content/uploads/2015/12/wh-009-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/12/wh-009-298x300.jpg 298w, https://cos.name/wp-content/uploads/2015/12/wh-009-497x500.jpg 497w" sizes="(max-width: 713px) 100vw, 713px" /></a>
+    谢佳标：大数据的处理及建模技术——基于R语言实现<a href="https://cos.name/wp-content/uploads/2015/12/wh-009.jpg">![wh-009](https://cos.name/wp-content/uploads/2015/12/wh-009.jpg)</a>
   </li>
 </ol>
 
@@ -107,7 +107,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="9">
   <li>
-    周翔：怦然心动的数据整理&描述魔法<a href="https://cos.name/wp-content/uploads/2015/12/wh-010.jpg"><img class="aligncenter size-full wp-image-11776" src="https://cos.name/wp-content/uploads/2015/12/wh-010.jpg" alt="wh-010" width="800" height="533" srcset="https://cos.name/wp-content/uploads/2015/12/wh-010.jpg 800w, https://cos.name/wp-content/uploads/2015/12/wh-010-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-010-500x333.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+    周翔：怦然心动的数据整理&描述魔法<a href="https://cos.name/wp-content/uploads/2015/12/wh-010.jpg">![wh-010](https://cos.name/wp-content/uploads/2015/12/wh-010.jpg)</a>
   </li>
 </ol>
 
@@ -117,7 +117,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="10">
   <li>
-    闭幕致辞<a href="https://cos.name/wp-content/uploads/2015/12/wh-011.jpg"><img class="aligncenter size-full wp-image-11777" src="https://cos.name/wp-content/uploads/2015/12/wh-011.jpg" alt="wh-011" width="800" height="533" srcset="https://cos.name/wp-content/uploads/2015/12/wh-011.jpg 800w, https://cos.name/wp-content/uploads/2015/12/wh-011-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-011-500x333.jpg 500w" sizes="(max-width: 800px) 100vw, 800px" /></a>
+    闭幕致辞<a href="https://cos.name/wp-content/uploads/2015/12/wh-011.jpg">![wh-011](https://cos.name/wp-content/uploads/2015/12/wh-011.jpg)</a>
   </li>
 </ol>
 
@@ -181,7 +181,7 @@ R语言会议第一次在武汉举办，会议的顺利进行离不开很多人�
 
 魏太云  统计之都理事会主席
 
-张耀峰  湖北数据与分析中心主任[<img class="aligncenter size-full wp-image-11778" src="https://cos.name/wp-content/uploads/2015/12/wh-012.jpg" alt="wh-012" width="960" height="540" srcset="https://cos.name/wp-content/uploads/2015/12/wh-012.jpg 960w, https://cos.name/wp-content/uploads/2015/12/wh-012-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-012-500x281.jpg 500w" sizes="(max-width: 960px) 100vw, 960px" />](https://cos.name/wp-content/uploads/2015/12/wh-012.jpg)
+张耀峰  湖北数据与分析中心主任![wh-012](https://cos.name/wp-content/uploads/2015/12/wh-012.jpg)
 
 &nbsp;
 
@@ -191,9 +191,9 @@ R语言会议第一次在武汉举办，会议的顺利进行离不开很多人�
 
 **赞助单位**
 
-优酷土豆股份有限公司[<img class="aligncenter size-full wp-image-11779" src="https://cos.name/wp-content/uploads/2015/12/wh-013.jpg" alt="wh-013" width="302" height="269" srcset="https://cos.name/wp-content/uploads/2015/12/wh-013.jpg 302w, https://cos.name/wp-content/uploads/2015/12/wh-013-300x267.jpg 300w" sizes="(max-width: 302px) 100vw, 302px" />](https://cos.name/wp-content/uploads/2015/12/wh-013.jpg)
+优酷土豆股份有限公司![wh-013](https://cos.name/wp-content/uploads/2015/12/wh-013.jpg)
 
-辰智商务信息咨询有限公司[<img class="aligncenter size-full wp-image-11780" src="https://cos.name/wp-content/uploads/2015/12/wh-014.jpg" alt="wh-014" width="267" height="288" />](https://cos.name/wp-content/uploads/2015/12/wh-014.jpg)
+辰智商务信息咨询有限公司![wh-014](https://cos.name/wp-content/uploads/2015/12/wh-014.jpg)
 
 &nbsp;
 
@@ -207,19 +207,19 @@ R语言会议第一次在武汉举办，会议的顺利进行离不开很多人�
 
 ** **
 
-**参会人员性别比例[<img class="aligncenter size-full wp-image-11781" src="https://cos.name/wp-content/uploads/2015/12/wh-015.jpg" alt="wh-015" width="505" height="540" srcset="https://cos.name/wp-content/uploads/2015/12/wh-015.jpg 505w, https://cos.name/wp-content/uploads/2015/12/wh-015-281x300.jpg 281w, https://cos.name/wp-content/uploads/2015/12/wh-015-468x500.jpg 468w" sizes="(max-width: 505px) 100vw, 505px" />](https://cos.name/wp-content/uploads/2015/12/wh-015.jpg)**
+**参会人员性别比例![wh-015](https://cos.name/wp-content/uploads/2015/12/wh-015.jpg)**
 
-**参会人员年龄分布[<img class="aligncenter size-full wp-image-11782" src="https://cos.name/wp-content/uploads/2015/12/wh-016.jpg" alt="wh-016" width="505" height="540" srcset="https://cos.name/wp-content/uploads/2015/12/wh-016.jpg 505w, https://cos.name/wp-content/uploads/2015/12/wh-016-281x300.jpg 281w, https://cos.name/wp-content/uploads/2015/12/wh-016-468x500.jpg 468w" sizes="(max-width: 505px) 100vw, 505px" />](https://cos.name/wp-content/uploads/2015/12/wh-016.jpg)**
-
-&nbsp;
+**参会人员年龄分布![wh-016](https://cos.name/wp-content/uploads/2015/12/wh-016.jpg)**
 
 &nbsp;
 
 &nbsp;
 
-**参会人员学生与在职比例[<img class="aligncenter size-full wp-image-11783" src="https://cos.name/wp-content/uploads/2015/12/wh-017.jpg" alt="wh-017" width="608" height="483" srcset="https://cos.name/wp-content/uploads/2015/12/wh-017.jpg 608w, https://cos.name/wp-content/uploads/2015/12/wh-017-300x238.jpg 300w, https://cos.name/wp-content/uploads/2015/12/wh-017-500x397.jpg 500w" sizes="(max-width: 608px) 100vw, 608px" />](https://cos.name/wp-content/uploads/2015/12/wh-017.jpg)**
+&nbsp;
 
-**参会人员得知会议的方式[<img class="aligncenter size-full wp-image-11784" src="https://cos.name/wp-content/uploads/2015/12/wh-018.jpg" alt="wh-018" width="474" height="473" srcset="https://cos.name/wp-content/uploads/2015/12/wh-018.jpg 474w, https://cos.name/wp-content/uploads/2015/12/wh-018-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/12/wh-018-300x300.jpg 300w" sizes="(max-width: 474px) 100vw, 474px" />](https://cos.name/wp-content/uploads/2015/12/wh-018.jpg)**
+**参会人员学生与在职比例![wh-017](https://cos.name/wp-content/uploads/2015/12/wh-017.jpg)**
+
+**参会人员得知会议的方式![wh-018](https://cos.name/wp-content/uploads/2015/12/wh-018.jpg)**
 
 **参会单位**
 
