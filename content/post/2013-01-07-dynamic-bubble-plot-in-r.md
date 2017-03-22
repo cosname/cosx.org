@@ -19,7 +19,7 @@ slug: dynamic-bubble-plot-in-r
 
 于是今天我便将这个图尝试着用R中的ggplot2与animation包实现了出来，边实现边研究ggplot2的用法，花了一天的时间做成了下面的[这个视频](http://v.youku.com/v_show/id_XNDk4MjYyMTUy.html)。
 
-简单地说一下流程：首先是数据文件的获取。[数据](https://github.com/mbostock/bost.ocks.org/blob/gh-pages/mike/nations/nations.json)能够在github上找到，但是数据是JSON格式的，只有一行，因此我的大部分代码都在为让数据变成一个二维矩阵的形式而努力着……很多国家会出现某些年没有统计数据的情况，因此我用了线性插值填补。最后，有两个国家只有一年有数据，我只能将它们删掉了。
+简单地说一下流程：首先是数据文件的获取。[数据](https://github.com/mbostock/bost.ocks.org/blob/gh-pages/mike/nations/nations.json)^[编者注：这个链接现在已经失效，抱歉。]能够在github上找到，但是数据是JSON格式的，只有一行，因此我的大部分代码都在为让数据变成一个二维矩阵的形式而努力着……很多国家会出现某些年没有统计数据的情况，因此我用了线性插值填补。最后，有两个国家只有一年有数据，我只能将它们删掉了。
 
 弄好了数据就可以使用ggplot2画图了。为了让图像好看，我调整了图像的属性，比如圆圈的大小范围，学习加边框，学习图中加文字（annotate）等语法。但我现在感觉还是有一些地方能够微调改进。
 
