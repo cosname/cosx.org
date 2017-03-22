@@ -101,7 +101,7 @@ lines(1.1*r*sin(t)+x,1.1*r*cos(t)+y,col="blue",lwd=5);
 <pre>winDialog(type = c("ok", "okcancel", "yesno", "yesnocancel"),
 message)</pre>
 
-tag共有两个，type指的是窗口的类型。如果选择的是”ok”则弹出的窗口中会有”确定”按钮，同理”okcancel”则是”确定”和”取消”，”yes”和”no”为”是”和”否”，而message则是弹出的窗口需要表达的信息，例如”Hello World”。winDialog函数的效果可以参考下图：
+tag共有两个，type指的是窗口的类型。如果选择的是“ok”则弹出的窗口中会有“确定”按钮，同理“okcancel”则是“确定”和“取消”，“yes”和“no”为“是”和“否”，而message则是弹出的窗口需要表达的信息，例如“Hello World”。winDialog函数的效果可以参考下图：
 
 ![question](http://chenangliu.info/cn/wp-content/uploads/2013/08/question.jpg)
 

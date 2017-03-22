@@ -75,11 +75,13 @@ Eclipse启动后如下图。
 
 ### 2.2.1  新建一个工程
 
-依次选择菜单栏中的”File”, “New”,”R-Project”，打开新建R的工程的对话框。如下图所示
+依次选择菜单栏中的“File”, “New”,“R-Project”，打开新建R的工程的对话框。如下图所示
+
 
 ![建立工程](https://cos.name/wp-content/uploads/2010/03/project.jpg)
 
 在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
+
 
 ![myproject](https://cos.name/wp-content/uploads/2010/03/myproject.jpg)
 
@@ -87,7 +89,7 @@ Eclipse启动后如下图。
 
 ### 2.2.2 向工程添加文件。
 
-右键单击”Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
+右键单击“Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
 
 ![添加R脚本](https://cos.name/wp-content/uploads/2010/03/script.jpg)
 
