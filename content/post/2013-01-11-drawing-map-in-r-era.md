@@ -171,7 +171,7 @@ title(" 中国地图")
 library(ggmap)
 library(mapproj)
 ## Google啊Google给我China的地图数据吧
-map &lt;- get_map(location = 'China', zoom = 4)
+map <- get_map(location = 'China', zoom = 4)
 ggmap(map)
 ```
 于是：
