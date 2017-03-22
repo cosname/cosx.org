@@ -39,7 +39,9 @@ Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数
 
 `$$P(Y=k)=\frac{e^{-\lambda}\lambda^k\omega_k }{Wk!}, k=0,1, \ldots ; \lambda>0$$`
 
-`$$W=\sum^{\infty}_{k=1}\frac{e^{-\lambda}\lambda^k\omega_k }{k!}\label{a}$$`
+`\begin{equation}
+W=\sum^{\infty}_{k=1}\frac{e^{-\lambda}\lambda^k\omega_k }{k!}\label{a}
+\end{equation}`
 
 它是保证求和为1的标准化因子。
 
@@ -85,7 +87,9 @@ Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数
 
 上述两种分布的参数估计都可通过极大似然法求出。记`\(x\_i\)`为第i个样本的事件发生数，观测数据中中事件数k的频数`\(f\_k\)`(k=1,2,3,…)，则 EWP2 和 EWP3 分布的负对数似然方程为（已去除与参数无关的项`\(lnk!\)`）：
 
-`$$-LnL(\lambda,\beta_1,\beta_2)=n[\lambda-\bar{x}ln\lambda+lnW]+\beta_1\sum^{[\lambda]}_{k=x_{min}}(\lambda-k)f_k+<br /> \beta_2\sum^{x_{max}}_{k=[\lambda]+1}(k-\lambda)f_k \label{b}$$`
+`\begin{equation}
+-LnL(\lambda,\beta_1,\beta_2)=n[\lambda-\bar{x}ln\lambda+lnW]+\beta_1\sum^{[\lambda]}_{k=x_{min}}(\lambda-k)f_k+<br /> \beta_2\sum^{x_{max}}_{k=[\lambda]+1}(k-\lambda)f_k \label{b}
+\end{equation}`
 
 通过求使 \ref{b} 式达到最小值的`\(\hat{\lambda},\hat{\beta}\_1,\hat{\beta}\_2\)`得到估计参数。
 
