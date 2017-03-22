@@ -24,7 +24,7 @@ slug: kernel-density-estimation-with-unbounded-region
 核密度估计应该是大家常用的一种非参数密度估计方法，从某种程度上来说它的性质比直方图更好，可以替代直方图来展示数据的密度分布。但是相信大家会经常遇到一个问题，那就是有些数据是严格大于或等于零的，在这种情况下，零附近的密度估计往往会出现不理想的情况。下面以一个指数分布的模拟数据为例（样本量为1000），R程序代码为：
 
 ```r
-class="brush: r">set.seed(123);
+set.seed(123);
 x=rexp(1000,1);
 plot(density(x,kernel="epanechnikov"),ylim=c(0,1.2));
 lines(seq(0,8,by=0.02),dexp(seq(0,8,by=0.02),1),col="blue");
@@ -132,4 +132,4 @@ lines(x,dexp(x,1),col="red");
 
 Jeffrey S. Simonoff, 1998. _Smoothing Methods in Statistics_. Springer-Verlag
 
-相关链接：[http://pages.stern.nyu.edu/~jsimonof/SmoothMeth/](http://pages.stern.nyu.edu/~jsimonof/SmoothMeth/)
+相关链接：<http://pages.stern.nyu.edu/~jsimonof/SmoothMeth/>
