@@ -24,21 +24,21 @@ slug: coauthorship-network-of-china-stat
 
 下面将要分析的数据是从中国知网抓取的中文统计核心期刊《中国统计》（2000.1 – 2010.11）、《统计研究》（2003.1 – 2011.1）以及《数理统计与管理》（2000.2 – 2011.2）十年左右的数据。<a href="http://pan.baidu.com/s/1ntLpODj" target="_blank">原始数据</a>都存储在Excel表格中，其格式如下：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/mtWdVqG.png" alt="" />](http://imgur.com/mtWdVqG)
+[![](http://i.imgur.com/mtWdVqG.png "Hosted by imgur.com")](http://imgur.com/mtWdVqG)
 
 表1中从第二行开始，每一行是一篇文章的记录，上述三大期刊分别有729、1897、1371条记录，一共3997条记录。
 
 这里要研究的是合著关系网络，因此需要将表1中的第二列的作者数据提取出来。不难发现，表1中当一篇文章的作者多于一个的时候，是使用分号“;”隔开的。我 们可以借助这个分隔符进行中分分词，这样就能将所有作者提取出来。在搜索每篇文章以提取作者的时候，顺便去掉了没有作者的文章（这种文章一般不是论文）， 去掉了只有一个作者名但其字数大于4的文章（一般是以某个机构或小组署名的文章），以及去掉了英文名。于是得到了如下形式的每篇论文的作者列表（一共 3617篇文章，以前6篇文章为例）：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/JAHHoVb.png" alt="" />](http://imgur.com/JAHHoVb)
+[![](http://i.imgur.com/JAHHoVb.png "Hosted by imgur.com")](http://imgur.com/JAHHoVb)
 
 经过拼音排序后没有去重的作者列表（一共6568位，以前20位为例）：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/rNxhNTJ.png" alt="" />](http://imgur.com/rNxhNTJ)
+[![](http://i.imgur.com/rNxhNTJ.png "Hosted by imgur.com")](http://imgur.com/rNxhNTJ)
 
 不同作者发表论文的频次表（一共4293位不同的作者，以后50位为例）：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/HWwCiOV.png" alt="" />](http://imgur.com/HWwCiOV)
+[![](http://i.imgur.com/HWwCiOV.png "Hosted by imgur.com")](http://imgur.com/HWwCiOV)
 
 # 二、基本统计与网络分析
 
@@ -46,19 +46,19 @@ slug: coauthorship-network-of-china-stat
 
 表5是上述中文统计核心期刊的一些基本统计数据：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/RKpO0Da.png" alt="" />](http://imgur.com/RKpO0Da)
+[![](http://i.imgur.com/RKpO0Da.png "Hosted by imgur.com")](http://imgur.com/RKpO0Da)
 
 由表5可以看出，平均每位作者发表1～2篇论文，极个别人发表了33篇论文。而从图1中我们可以发现，在核心期刊发表1～3篇文章的人占了绝大多数，能发5篇以上的人就非常少了。
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/Hr4X6s7.png" alt="" />](http://imgur.com/Hr4X6s7)
+[![](http://i.imgur.com/Hr4X6s7.png "Hosted by imgur.com")](http://imgur.com/Hr4X6s7)
 
 由表5和图2可以看出，一个人发文章或者两到三个人合写文章的情况比较常见，一篇文章的作者数超过4人的情况极少。值的注意的是，有一篇文章的作者数达到了18人，通过查找原始数据，发现它是一篇国际统计论坛的综述，其作者是该论坛主办单位的许多老师。
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/fAirxpC.png" alt="" />](http://imgur.com/fAirxpC)
+[![](http://i.imgur.com/fAirxpC.png "Hosted by imgur.com")](http://imgur.com/fAirxpC)
 
 我们还能从表5和图3中发现，平均每位作者大约有1～2位合著者，“单干”的情况也较常见，为数不多的人会有10个以上的合著者。
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/g7BGgSw.png" alt="" />](http://imgur.com/g7BGgSw)
+[![](http://i.imgur.com/g7BGgSw.png "Hosted by imgur.com")](http://imgur.com/g7BGgSw)
 
 通过这些图、表的简单展示和分析，我们对中国统计学界近10年的情况有了一些粗浅的了解。
 
@@ -66,7 +66,7 @@ slug: coauthorship-network-of-china-stat
 
 下面我们来讨论中文统计核心期刊合著关系网络的构建问题。
 
-合著关系网中的顶点是全部论文的所有作者。如果两位作者的名字同时出现在某一篇论文的署名当中，那么就在两者之间连接一条边，表示他（她）俩有过合著关系。如果一篇论文有_n_个作者，那么就产生了_n_(_n_ – 1) / 2种两两合著关系。比如表1中的第2篇论文就可以建立3(3 – 1 ) / 2 = 3条边：周建章&#8211;余洁平，周建章&#8211;苏毓腾，余洁平&#8211;苏毓腾。注意，当两个特定的作者_v_和_w_同时出现在多篇文章当中时（这是俩人合著关系强弱的某种体现），我们对_v_和_w_不再重复连接，这样保证了网络是简单网络。
+合著关系网中的顶点是全部论文的所有作者。如果两位作者的名字同时出现在某一篇论文的署名当中，那么就在两者之间连接一条边，表示他（她）俩有过合著关系。如果一篇论文有_n_个作者，那么就产生了_n_(_n_ – 1) / 2种两两合著关系。比如表1中的第2篇论文就可以建立3(3 – 1 ) / 2 = 3条边：周建章–余洁平，周建章–苏毓腾，余洁平–苏毓腾。注意，当两个特定的作者_v_和_w_同时出现在多篇文章当中时（这是俩人合著关系强弱的某种体现），我们对_v_和_w_不再重复连接，这样保证了网络是简单网络。
 
 如果我们只关心作者两两间有没有合著过，而不关心合著关系的强弱，那么我们得到的网络就是一个无权网络。但是权重信息对于发现有效的社群结构可能是非常有用的。所以我们有必要将合著关系的强弱体现在边的权重上，从而构造一个加权图来更好地实施合著关系网的社群挖掘。
 
@@ -76,13 +76,13 @@ slug: coauthorship-network-of-china-stat
 
 我们综合考虑合著次数和单篇论文作者数目这两个因素来定义作者_v_和_w_之间权重：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/Pi1e2zh.png" alt="" />](http://imgur.com/Pi1e2zh)
+[![](http://i.imgur.com/Pi1e2zh.png "Hosted by imgur.com")](http://imgur.com/Pi1e2zh)
 
 其中__n<sub>k</sub>__表示论文_k_的作者数目，当作者_v_在论文_k_中出现时，$\delta_v^k$等于1；否则为0。 公式中的分母__n<sub>k</sub>__ – 1排除了只有1个作者的情况（即_v_不能等于_w_），因为这种情况对合著关系来说是没有意义的。
 
 图4是该定义的一个示例，图中的作者_v_和_w_一起发表过3篇论文，其中第一篇论文有4个作者，第二篇论文有2个作者，第三篇论文有3个作者，于是_v_和_w_在3篇论文中的合著关系强度分别是1 / 3、1、1 / 2，所以_v_和_w_总的合著关系强度是1 / 3 + 1 + 1 / 2 = 11 / 6。
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/la7fTCC.png" alt="" />](http://imgur.com/la7fTCC)
+[![](http://i.imgur.com/la7fTCC.png "Hosted by imgur.com")](http://imgur.com/la7fTCC)
 
 我们计算出最大权重是8，最小权重是0.06，可见合著关系最强与最弱相差悬殊。而平均权重是0.65。
 
@@ -110,23 +110,23 @@ slug: coauthorship-network-of-china-stat
 
 **顶点的度**在无权网络中是与该顶点连接的边的条数。在加权网络中对应的概念是顶点的强度，即与该顶点连接的边的权重之和。有意思的是，在合著关系网中，顶点的强度其实是作者合写文章的数目：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/gjmgXCy.png" alt="" />](http://imgur.com/gjmgXCy)
+[![](http://i.imgur.com/gjmgXCy.png "Hosted by imgur.com")](http://imgur.com/gjmgXCy)
 
 我们的合著关系网中，顶点强度最大值是20，最小值是0，平均数是1.2，中位数是1。顶点的强度排名前10的作者如下表所示：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/emTvDtp.png" alt="" />](http://imgur.com/emTvDtp)
+[![](http://i.imgur.com/emTvDtp.png "Hosted by imgur.com")](http://imgur.com/emTvDtp)
 
 **顶点的中间性**是经过该顶点的最短路径的条数（给定顶点对之间若有多条最短路径，则不重复计算）。顶点的中间性反映了顶点起“桥梁”作用的大小。不过我们现在将最短路径替换为加权最短路径。顶点的中间性排名前10的作者如下表所示：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/WG8skx5.png" alt="" />](http://imgur.com/WG8skx5)
+[![](http://i.imgur.com/WG8skx5.png "Hosted by imgur.com")](http://imgur.com/WG8skx5)
 
 **顶点的接近性**是某顶点到所有其他顶点的平均最短路径长度的倒数：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/gMt5Xz4.png" alt="" />](http://imgur.com/gMt5Xz4)
+[![](http://i.imgur.com/gMt5Xz4.png "Hosted by imgur.com")](http://imgur.com/gMt5Xz4)
 
 其中| _V_ |是网络中总的顶点数，_gd_(_v_, _w_)表示顶点_v_到_w_的最短路径的长度。_cn<sub>v</sub>_的值越大表示顶点_v_与 网络中的其他成员越接近。我们的加权合著关系网络中顶点的接近性的最大值为110.9，最小值为0（这是孤立点），平均数为7.4，中位数为1.5。平均 数比中位数大很多，意味着接近性呈偏态分布，大多数人的接近性较低，少数人的接近性很高。顶点的接近性排名前10的作者如下表所示：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/ovJsSlo.png" alt="" />](http://imgur.com/ovJsSlo)
+[![](http://i.imgur.com/ovJsSlo.png "Hosted by imgur.com")](http://imgur.com/ovJsSlo)
 
 比较表6、表7和表8，我们会发现，在3张表中都出现过的人只有谢邦昌（台湾辅仁大学统计信息学系教授）、朱建平（厦门大学计划统计系主任）和曾五一（厦门 大学经济学院副院长、中国统计学会副会长）；出现过两次的只有缪柏其（中国科学技术大学前任统计与金融系主任）、金勇进（中国人民大学统计学院前任院 长）。数据表明，这些学者不但中心性高，而且发文数也高，而实际上他们也确实是中国统计界很有影响力的人物。尤其引人注目的是，谢邦昌教授的3种中心性都排名第一，即他与别人合写的文章最多、“桥梁”作用最大、与同行最“接近”。需要说明的是，由于我们只选取了3个中文核心期刊10年左右的数据，还没有考 虑英文期刊，所以很可能会遗漏一些重要的学者以及与真实情形会有偏倚。
 
@@ -144,19 +144,19 @@ slug: coauthorship-network-of-china-stat
 
 我们的合著关系网络有4293个顶点，3872条边。经检验，该网络不是连通的网络。这是很正常的，这么大的社会网络中任意两个成员之间都连通几乎是不可能的。但是我们的网络中存在1773个连通成分，具体情况下表所示：
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/vwGo8SI.png" alt="" />](http://imgur.com/vwGo8SI)
+[![](http://i.imgur.com/vwGo8SI.png "Hosted by imgur.com")](http://imgur.com/vwGo8SI)
 
 从表9中我们可以看出，绝大多数连通成分包含的顶点数都只有区区的几个。唯有两个连通成分的规模明显大于其他连通成分：一个含有383个顶点，另一个含有156个顶点。
 
 我们的第一大连通成分包含383个顶点，750条边，如图5所示。下文我们将以最大连通成分为例进行社群挖掘。在进行社群挖掘之前，我们从这些网络中几乎是看不出什么社群结构的。
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/kjAxC4F.png" alt="" />](http://imgur.com/kjAxC4F)
+[![](http://i.imgur.com/kjAxC4F.png "Hosted by imgur.com")](http://imgur.com/kjAxC4F)
 
 ## 3.2 模块性与最佳社群数
 
 WCMN算法是一种直接对模块性_Q_值进行最优化以寻找最佳社群结构的凝聚算法，它朝着使_Q_值增大最快或减少最慢的方向将社群一步一步地融合。在这个过程当中会出现_Q_的峰值_Q_<sub>max</sub>，如图7所示。我们认为_Q_<sub>max</sub>对应的社群结构就是最佳社群结构， _Q_<sub>max</sub>越大表明我们的算法效果越好。
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/rluLie4.png" alt="" />](http://imgur.com/rluLie4)
+[![](http://i.imgur.com/rluLie4.png "Hosted by imgur.com")](http://imgur.com/rluLie4)
 
 上图是WCMN算法对最大连通成分进行社群挖掘的_Q_值变化图。因为有383个顶点，所以一共有382次融合。在第359次（即倒数第24次）融合的时候_Q_达到最大值0.87，所以最佳社群数目是24。这里的_Q_<sub>max</sub>高达0.87，所以这个最大连通成分中可能存在明显的社群结构，同时也可能是WCMN算法效果良好的一个表现。
 
@@ -176,7 +176,7 @@ WCMN算法是一种直接对模块性_Q_值进行最优化以寻找最佳社群�
 
 为了更直观地了解这24个社群，我们将383位作者构成的网络进行可视化展示，如图8所示。图中一共有24种渐变的颜色，每种颜色代表一个合著社群，圆圈的大小与顶点的强度正相关，线条的粗细与边的权重正相关。
 
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/HHHS5jN.jpg" alt="" />](http://imgur.com/HHHS5jN)
+[![](http://i.imgur.com/HHHS5jN.jpg "Hosted by imgur.com")](http://imgur.com/HHHS5jN)
 
 <p align="center">
   图8   WCMN算法社群挖掘效果可视化
@@ -192,6 +192,6 @@ WCMN算法是一种直接对模块性_Q_值进行最优化以寻找最佳社群�
 
 如果不考虑权重的话，那么WCMN算法就变成了CMN算法，这时候我们得到_Q_<sub>max</sub> = 0.79，最佳社群数是20，不出所料两个数值都比前者的小。效果其实也还不错（如图9所示），只是没有WCMN算法挖掘得那么精细，毕竟它利用的信息少 一些，比如人大统计学院的国际竞争力、抽样技术、风向管理与精算三个研究方向就没有区分开；还有将谢邦昌老师归于人大统计学院这一群体似有不妥，而 WCMN算法是将谢老师与人大、厦大的某些数据挖掘方向的老师与学生整合为一类。
   
-[<img class="aligncenter" title="Hosted by imgur.com" src="http://i.imgur.com/u2NANwJ.jpg" alt="" />](http://imgur.com/u2NANwJ)图9   CMN算法社群挖掘效果可视化
+[![](http://i.imgur.com/u2NANwJ.jpg "Hosted by imgur.com")](http://imgur.com/u2NANwJ)图9   CMN算法社群挖掘效果可视化
 
 **原始数据下载请点击**：<a href="http://pan.baidu.com/s/1ntLpODj" target="_blank">这里</a>。

@@ -110,11 +110,11 @@ R 支持很多数据库，其中 [SQLite](http://www.sqlite.org/) 是最轻量�
 
 我们有
 
-$$\hat{\beta}=(X&#8217;X)^{-1}X&#8217;y$$
+$$\hat{\beta}=(X’X)^{-1}X’y$$
 
-而且，无论 $n$ 有多大，$X&#8217;X$ 和 $X&#8217;y$ 的大小总是 $(p+1)*(p+1)$ 。如果变量不是很多，R 处理矩阵逆和矩阵乘法还是很轻松的，所以我们的主要目标是用 SQL 来计算 $X&#8217;X$ 和 $X&#8217;y$ 。
+而且，无论 $n$ 有多大，$X’X$ 和 $X’y$ 的大小总是 $(p+1)*(p+1)$ 。如果变量不是很多，R 处理矩阵逆和矩阵乘法还是很轻松的，所以我们的主要目标是用 SQL 来计算 $X’X$ 和 $X’y$ 。
 
-由于 $X=(x\_0,x\_1,&#8230;,x_p)$，所以 $X&#8217;X$ 可以表达为：
+由于 $X=(x\_0,x\_1,…,x_p)$，所以 $X’X$ 可以表达为：
 
 $$%  \left(\begin{array}{cccc}\mathbf{x\_{0}'x\_{0}} & \mathbf{x\_{0}'x\_{1}} & \ldots & \mathbf{x\_{0}'x\_{p}}\\\mathbf{x\_{1}'x\_{0}} & \mathbf{x\_{1}'x\_{1}} & \ldots & \mathbf{x\_{1}'x\_{p}}\\\vdots & \vdots & \ddots & \vdots\\\mathbf{x\_{p}'x\_{0}} & \mathbf{x\_{p}'x\_{1}} & \ldots & \mathbf{x\_{p}'x\_{p}}\end{array}\right) %$$
 

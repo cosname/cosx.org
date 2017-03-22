@@ -57,7 +57,7 @@ summary(out)
     x3             0.478      0.354    1.35   0.1766   
     x4             0.694      0.399    1.74   0.0817 . 
     ---
-    Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1 
+    Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1 
     
     (Dispersion parameter for binomial family taken to be 1)
     
@@ -269,11 +269,11 @@ $$g(u,v)=v-u^{2}$$
   
 $$\Delta g(u,v)=\Delta v-2u\Delta u $$
 
-也就是说，$ g(\overline u, \overline v)-g(u,v) $ 与 $ (\overline v &#8211; v)- 2u(\overline u &#8211; u) $具有相同的渐进正态分布。而 $ (\overline v &#8211; v)- 2u(\overline u &#8211; u) $的方差是$ (v\_{i} -v)-2u(u\_{i} -u) $方差的1/nbatch倍。这样MCSE可以这样计算：
+也就是说，$ g(\overline u, \overline v)-g(u,v) $ 与 $ (\overline v – v)- 2u(\overline u – u) $具有相同的渐进正态分布。而 $ (\overline v – v)- 2u(\overline u – u) $的方差是$ (v\_{i} -v)-2u(u\_{i} -u) $方差的1/nbatch倍。这样MCSE可以这样计算：
 
-$$\frac{1}{n\_{batch}} \displaystyle \sum\_{i=1}^{n\_{batch}}[(v\_{i} &#8211; \overline v)-2\overline u
+$$\frac{1}{n\_{batch}} \displaystyle \sum\_{i=1}^{n\_{batch}}[(v\_{i} – \overline v)-2\overline u
    
-(u_{i} &#8211; \overline u)]^2 $$
+(u_{i} – \overline u)]^2 $$
 
 我们将以上的计算过程用程序实现:
 

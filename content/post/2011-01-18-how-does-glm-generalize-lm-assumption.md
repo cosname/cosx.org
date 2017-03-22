@@ -14,17 +14,17 @@ tags:
 slug: how-does-glm-generalize-lm-assumption
 ---
 
-在统计学里，对特定变量之间的关系进行建模、分析最常用的手段之一就是回归分析。回归分析的输出变量通常记做$ Y$，也称为因变量(dependent)、响应变量(response)、被解释变量(explained)、被预测变量(predicted)、从属变量(regressand)；输入变量通常记做$ x\_1$,&#8230;,$x\_p$，也称为自变量(independent)、控制变量(control&controlled)、解释变量(explanatory)、预测变量(predictor)、回归量(regressor)。本文根据作者自己的一些学习心得和理解，简单且不严格地介绍在模型假设方面普通线性模型和广义线性模型的区别和联系/推广(generalization)。广义线性模型的拟合检验、推断、诊断等方面的方法和手段依赖于模型所采用的分布类型，难以一概而论，将在作者后续的学习心得文章里具体介绍。
+在统计学里，对特定变量之间的关系进行建模、分析最常用的手段之一就是回归分析。回归分析的输出变量通常记做$ Y$，也称为因变量(dependent)、响应变量(response)、被解释变量(explained)、被预测变量(predicted)、从属变量(regressand)；输入变量通常记做$ x\_1$,…,$x\_p$，也称为自变量(independent)、控制变量(control&controlled)、解释变量(explanatory)、预测变量(predictor)、回归量(regressor)。本文根据作者自己的一些学习心得和理解，简单且不严格地介绍在模型假设方面普通线性模型和广义线性模型的区别和联系/推广(generalization)。广义线性模型的拟合检验、推断、诊断等方面的方法和手段依赖于模型所采用的分布类型，难以一概而论，将在作者后续的学习心得文章里具体介绍。
 
 # 1.普通线性模型的简单回顾
 
 普通线性模型(ordinary linear model)可以用下式表示：
 
 <p style="text-align: center;">
-  $ Y={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+&#8230;+{\beta}_{p-1}x_{p-1}+\epsilon$                          (1.1)
+  $ Y={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1}+\epsilon$                          (1.1)
 </p>
 
-这里$ {\beta}\_i$，$ i=1$,&#8230;,$p-1$称为未知参数，$ {\beta}\_0$称为截矩项。
+这里$ {\beta}\_i$，$ i=1$,…,$p-1$称为未知参数，$ {\beta}\_0$称为截矩项。
 
 普通线性模型的假设主要有以下几点：
 
@@ -37,12 +37,12 @@ slug: how-does-glm-generalize-lm-assumption
 4.联接方式：在上面三点假设下，对(1.1)式两边取数学期望，可得
 
 <p style="text-align: center;">
-  $ E[Y]={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+&#8230;+{\beta}_{p-1}x_{p-1}$                                        (1.2)
+  $ E[Y]={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1}$                                        (1.2)
 </p>
 
-从 (1.2)式可见，在普通线性模型里，响应变量的均值$E[ Y]$与预测量的线性组合${\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+&#8230;+{\beta}\_{p-1}x_{p-1}$通过恒等式(identity)联接，当然也可认为通过形为$f(x)=x$的函数(link function)联接二者，即
+从 (1.2)式可见，在普通线性模型里，响应变量的均值$E[ Y]$与预测量的线性组合${\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+…+{\beta}\_{p-1}x_{p-1}$通过恒等式(identity)联接，当然也可认为通过形为$f(x)=x$的函数(link function)联接二者，即
 
-$ E[Y]=f({\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+&#8230;+{\beta}\_{p-1}x\_{p-1})={\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+&#8230;+{\beta}\_{p-1}x\_{p-1}$
+$ E[Y]=f({\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+…+{\beta}\_{p-1}x\_{p-1})={\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+…+{\beta}\_{p-1}x\_{p-1}$
 
 # 2.广义线性模型的简单介绍
 
@@ -65,7 +65,7 @@ $ E[Y]=f({\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+&#8230;+{\beta}\_{p-1}x\_{p-1}
 指数分布族(exponential dispersion family)实质上是对一类具有以下形式的概率密度函数或具有此类密度函数的分布的总括：
 
 <p style="text-align: center;">
-  $f_Y(y;\theta,\Psi)=exp[(y\theta &#8211; b(\theta))/{\Psi} + c(y;\Psi)]$
+  $f_Y(y;\theta,\Psi)=exp[(y\theta – b(\theta))/{\Psi} + c(y;\Psi)]$
 </p>
 
 这里$\Psi$和$\theta$是实参数，$b(.)$和$c(.;.)$是实函数，该密度函数的支集(support)$D_{\Psi}$是$R$的子集，且不依赖于$\theta$。满足$\theta=\eta=g(\mu)$的联接函数$g(\mu)$称为标准联接函数(standard or canonical link)。
