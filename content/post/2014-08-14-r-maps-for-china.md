@@ -393,10 +393,10 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), color = "white", map 
 ### 参考文献
 
   1. 谢益辉，2007，<http://yihui.name/cn/2007/09/china-map-at-province-level/>
-  2. 邱怡轩，2009，<https://cos.name/2009/07/drawing-china-map-using-r/>
+  2. 邱怡轩，2009，</2009/07/drawing-china-map-using-r/>
   3. 陈丽云，2011，<http://www.loyhome.com/用R画（中国）地图-2/>
   4. 写长城的诗，2012，<http://www.r-bloggers.com/lang/chinese/1010>
-  5. 杨灿，2011，<https://cos.name/2011/12/stories-about-statistical-learning>
+  5. 杨灿，2011，</2011/12/stories-about-statistical-learning>
 
 附：本文所用地图数据[下载](https://cos.name/wp-content/uploads/2014/08/maps_data.7z)
 

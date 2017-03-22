@@ -8,7 +8,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 ![China-R-Logo](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
-**北京会场和上海会场均已顺利召开，详情请见<a href="https://cos.name/2011/05/4th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="https://cos.name/2011/11/4th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要。</a>**
+**北京会场和上海会场均已顺利召开，详情请见<a href="/2011/05/4th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="/2011/11/4th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要。</a>**
 
 &nbsp;
 

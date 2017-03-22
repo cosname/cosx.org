@@ -6,7 +6,7 @@ author: 陈堰平
 
 R是一门用于数据分析和图形展示的语言、平台和环境，其官方机构每年都会举办useR!会议，各个国家及地区也定期有R用户的交流活动。在国内，自2008年以来，中国已经在北京和上海成功举办了五届R语言会议，促进了R语言在中国的推广和发展。为了进一步加强各领域R语言使用者之间的交流和互动，我们分别于2013年5月18-19日在北京、2013年11月2-3日在上海成功举办了第六届中国R语言会议。
 
-**北京会场和上海会场均已顺利召开，详情请见<a href="https://cos.name/2013/05/6th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="https://cos.name/2013/11/6th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要</a>。**
+**北京会场和上海会场均已顺利召开，详情请见<a href="/2013/05/6th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="/2013/11/6th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要</a>。**
 
 &nbsp;
 
