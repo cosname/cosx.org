@@ -17,7 +17,7 @@ tags:
 slug: poisson-count-data-modeling-problem-of-low-variance
 ---
 
-**本文作者为中国人民大学统计学院饶燕芳同学，由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://cos.name/wp-content/uploads/2010/08/poisson.pdf)**
+> 本文作者为中国人民大学统计学院饶燕芳同学，由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://cos.name/wp-content/uploads/2010/08/poisson.pdf)
 
 # 一、问题的引出
 
@@ -37,18 +37,17 @@ slug: poisson-count-data-modeling-problem-of-low-variance
 
 Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数为
 
-  `$$ P(Y=k)=\frac{e^{-\lambda}\lambda^k\omega_k }{Wk!}, k=0,1, \ldots ; \lambda>0<br /> $$`
+`$$P(Y=k)=\frac{e^{-\lambda}\lambda^k\omega_k }{Wk!}, k=0,1, \ldots ; \lambda>0$$`
 
-
-  `$$ W=\sum^{\infty}_{k=1}\frac{e^{-\lambda}\lambda^k\omega_k }{k!}<br /> $$`                                                    (a)
+`$$W=\sum^{\infty}_{k=1}\frac{e^{-\lambda}\lambda^k\omega_k }{k!}\label{a}$$`
 
 它是保证求和为1的标准化因子。
 
 本文讨论一种较为简单的权重（Martin S R and P Besbeas，2004），即
 
-  `$$\omega_k=\left( \begin{array}{ll} e^{\beta_1(\lambda-k)} & ,k\leq\lambda\\e^{\beta_2(\lambda-k)} & ,k>\lambda\\\end{array} \right)$$`
+`$$\omega_k=\left( \begin{array}{ll} e^{\beta_1(\lambda-k)} & ,k\leq\lambda\\e^{\beta_2(\lambda-k)} & ,k>\lambda\\\end{array} \right)$$`
 
-对于`\(\beta\_1,\beta\_2>0\)`，它的分布类似将概率密度图线向均值“挤压”(见图1)，分布更加集中，相对于标准的泊松分布就有更小的方差，称该分布为三参数指数加权泊松分布，记为 EWP3 。特殊地，当`\(\beta\_1=\beta\_2=\beta\)`时，称为两参数指数加权泊松分布，记为 EWP2 分布，当`\(\beta=0\)`时退化为标准泊松分布。对于EWP2 和 EWP3 ，它们拥有更高的峰值，标准化因子 W 可以由式 (a) 导出。尽管矩的表达没有显式，但可以确定分布的方差随着`\(\beta\_1,\beta\_2\)`或`\(\beta\)`的增大而降低。
+对于`\(\beta\_1,\beta\_2>0\)`，它的分布类似将概率密度图线向均值“挤压”(见图1)，分布更加集中，相对于标准的泊松分布就有更小的方差，称该分布为三参数指数加权泊松分布，记为 EWP3 。特殊地，当`\(\beta\_1=\beta\_2=\beta\)`时，称为两参数指数加权泊松分布，记为 EWP2 分布，当`\(\beta=0\)`时退化为标准泊松分布。对于EWP2 和 EWP3 ，它们拥有更高的峰值，标准化因子 W 可以由式 \ref{a} 导出。尽管矩的表达没有显式，但可以确定分布的方差随着`\(\beta\_1,\beta\_2\)`或`\(\beta\)`的增大而降低。
 
 ![lambda=10,beta1=0.1,beta2=0.2的EWP分布](https://cos.name/wp-content/uploads/2010/08/photo1.png)
 
@@ -60,25 +59,25 @@ Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数
 
 不得不提的是，在处理泊松低方差数据的问题中还有一类较为有效的方法。由Faddy(1997)在随机过程的基础上提出这种变出生概率(CBR)分布。这个分布是建立在广义泊松分布的基础上：Faddy 认为，任何关于 {0,1,2,…}的离散分布都有广义泊松特性，即纯生过程。考虑一个 Markov 计数过程，`\(X(t)\)`为`\((0,t)\)`内的事件发生数，在`\((t,t+\sigma t)\)`内有转移概率：
 
-  `$$ P\left(X(t+\sigma)=n+1|X(t)=n\right)=\lambda_n\sigma+o(\sigma)<br /> $$`
+`$$ P\left(X(t+\sigma)=n+1|X(t)=n\right)=\lambda_n\sigma+o(\sigma)$$`
 
 其中`\(\lambda_n\)`为事件数为n时的事件发生率，我们感兴趣的只是某一时刻`\(X(t)\)`的分布，这里t可以不失一般性地取1，在此模型中，时刻1时的事件数`\(X\)`的分布具有如下形式：
 
-  `$$(p_1(1),p_2(1),\ldots,p_n(1))=(1,0,0,\cdots,0)exp(Q)$$`
+`$$(p_1(1),p_2(1),\ldots,p_n(1))=(1,0,0,\cdots,0)exp(Q)$$`
 
 其中
 
-  `$$p_i(1)=P\left(X(1)=i\right)$$`
+`$$p_i(1)=P\left(X(1)=i\right)$$`
 
-  `$$exp(Q)=e^Q=E+\frac{Q}{1}+\frac{Q^2}{2!}+\frac{Q^3}{3!}+\cdots$$`
+`$$exp(Q)=e^Q=E+\frac{Q}{1}+\frac{Q^2}{2!}+\frac{Q^3}{3!}+\cdots$$`
 
-  `$$ Q=\left( \begin{array}{ccc} -\lambda_1 & \lambda_1 & 0 & \ldots & 0\\0 &-\lambda_2 & \lambda_2 & \ldots & 0\\0 & 0 & -\lambda_3 & \ldots & \vdots\\ \vdots & \vdots & \vdots & \ddots & \lambda_{n-1}\\ 0 & 0 & 0 & \ldots & -\lambda_n\\\end{array} \right)<br /> $$`
+`$$ Q=\left( \begin{array}{ccc} -\lambda_1 & \lambda_1 & 0 & \ldots & 0\\0 &-\lambda_2 & \lambda_2 & \ldots & 0\\0 & 0 & -\lambda_3 & \ldots & \vdots\\ \vdots & \vdots & \vdots & \ddots & \lambda_{n-1}\\ 0 & 0 & 0 & \ldots & -\lambda_n\\\end{array} \right)$$`
 
 而上式的成立可由 Kolmogorov 微分方程简单推导而来：
 
-  `$$p'(t)=Qp(t); p(t)=ce^{Qt}; p(1)=ce^Q;$$`
+`$$p'(t)=Qp(t); p(t)=ce^{Qt}; p(1)=ce^Q;$$`
 
-  `$$p(0)=c; p(1)=p_0e^Q; p(0)=(1,0,0,\ldots,0)$$`
+`$$p(0)=c; p(1)=p_0e^Q; p(0)=(1,0,0,\ldots,0)$$`
 
 这里认为初始时刻的事件数是从1开始的。因此，CBR 分布是由一系列不同的事件发生率参数`\(\left(\lambda\_1,\lambda\_2,\ldots,\lambda\_k,\ldots\right)\)`决定的。通常可以认为`\(\lambda\_k\)`是k的函数。Faddy 在1997年已经证明，对于递增的`\(\left(\lambda\_1<\lambda\_2<\cdots<\lambda\_n<\cdots\right)\)`,`\(X(t)\)`将表现出泊松高方差特征，而当`\(\lambda\_1>\lambda\_2>\cdots>\lambda\_n>\cdots\)`递减时，也就表现出泊松低方差特征。
 
@@ -86,13 +85,13 @@ Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数
 
 上述两种分布的参数估计都可通过极大似然法求出。记`\(x\_i\)`为第i个样本的事件发生数，观测数据中中事件数k的频数`\(f\_k\)`(k=1,2,3,…)，则 EWP2 和 EWP3 分布的负对数似然方程为（已去除与参数无关的项`\(lnk!\)`）：
 
-  `$$-LnL(\lambda,\beta_1,\beta_2)=n[\lambda-\bar{x}ln\lambda+lnW]+\beta_1\sum^{[\lambda]}_{k=x_{min}}(\lambda-k)f_k+<br /> \beta_2\sum^{x_{max}}_{k=[\lambda]+1}(k-\lambda)f_k$$` (b)
+`$$-LnL(\lambda,\beta_1,\beta_2)=n[\lambda-\bar{x}ln\lambda+lnW]+\beta_1\sum^{[\lambda]}_{k=x_{min}}(\lambda-k)f_k+<br /> \beta_2\sum^{x_{max}}_{k=[\lambda]+1}(k-\lambda)f_k \label{b}$$`
 
-通过求使（b）式达到最小值的`\(\hat{\lambda},\hat{\beta}\_1,\hat{\beta}\_2\)`得到估计参数。
+通过求使 \ref{b} 式达到最小值的`\(\hat{\lambda},\hat{\beta}\_1,\hat{\beta}\_2\)`得到估计参数。
 
 对于纯生过程模型，概率分布向量`\((p\_1(1),p\_2(1),\ldots,p\_N(1))\)`就是矩阵`\(exp(Q)\)`的第一行，若`\(N=x\_{max}\)`，其负对数似然函数为：
 
-  `$$-LnL(\lambda_1,\lambda_2,\ldots,\lambda_N)=\sum^N_{k=1}f_klnp_k(1)$$`
+`$$-LnL(\lambda_1,\lambda_2,\ldots,\lambda_N)=\sum^N_{k=1}f_klnp_k(1)$$`
 
 通过最小化上式即可得到`\((\lambda\_1,\lambda\_2,\ldots,\lambda_N)\)`的极大似然估计。而参数估计的方差可以通过数值计算时产生的 Hessian 矩阵得到。
 
@@ -118,7 +117,7 @@ Rao CR (1965)提出，若随机变量Y服从加权泊松分布，其密度函数
 
 CBR参数的极大似然估计`\(\hat{\lambda}\_1,\hat{\lambda}\_2,\ldots,\hat{\lambda}\_{21}\)`= {4.66, 7.90, 22.97, 15.02, 18.23, 19.18, 16.49, 14.40, 13.15, 10.01, 9.33, 6.90, 6.32, 6.26, 5.40, 6.28, 3.27, 0.00, 2.00, 2.00, 1.00}，图3中显示的 CBR 拟合效果非常好，几乎与经验分布重合。但模型中含有过多的参数使得估计精度大大降低，其中`\(\hat{\lambda}\_3\)`的估计标准误为12.59，置信区间宽近50。虽然对于拥有多个事件发生率`\(\hat{\lambda}_k\)`的 CBR 分布能够灵活地刻画事件发生数之间的任何概率变化，但参数时过多模型的过度拟合是没有太大意义的，也不易于控制和分析。如前所述，可以利用该模型的`\(\lambda\)`建立关于k的函数，从而减少模型中的参数个数，在该例子中事件数分类较多时这种做法就显得十分必要。Faddy(2001) 就从众多函数形式中找到了一种能很好地模拟事件数发生概率在最初增长较快而后缓慢下降特点的四参数模型：
 
-  `$$\lambda_k=a(k^be^{-ck}+d), k\geq1$$`
+`$$\lambda_k=a(k^be^{-ck}+d), k\geq1$$`
 
 对于0剂量组数据，`\(\left(a,b,c,d\right)\)`的估计值为 {1.360, 3.507, 0.648, 2.953}，估计的分布与经验分布的对比如图4，尽管模型中减少了17个参数，但由于函数形式的合理，该分布仍旧保持较好的拟合效果，拟合优度`\(\chi^2(13)=6.755\)`，p值为0.914。
 
@@ -134,7 +133,7 @@ CBR参数的极大似然估计`\(\hat{\lambda}\_1,\hat{\lambda}\_2,\ldots,\hat{\
 
 似然比检验在大样本时具有渐进性。似然比统计量为
 
-  `$$\Lambda(x)=\frac{sup{L(\theta|x):\theta\in\Theta_o}}{sup{L(\theta|x):\theta\in\Theta}}$$`
+`$$\Lambda(x)=\frac{sup{L(\theta|x):\theta\in\Theta_o}}{sup{L(\theta|x):\theta\in\Theta}}$$`
 
 当样本量n趋于无穷，`\(-2log(\Lambda)\)`将渐进服从`\(\chi^2(r)\)`分布，r为参数空间`\(\Theta\)` and `\(\Theta_o\)`的维数之差。
 
@@ -146,7 +145,6 @@ CBR参数的极大似然估计`\(\hat{\lambda}\_1,\hat{\lambda}\_2,\ldots,\hat{\
 |**EWP2**|4.789|2|0.0912|
 |**EWP3**|11.980|3|0.0075|
 |**CBR**|10.764|4|0.0294|
-
 
 标准泊松分布的0剂量组和75/90剂量组的极大对数似然函数值分别为-1837.763和-318.618 ，即负两倍似然比为2.691（自由度为1），p值为0.10（实际值大于0.1），即使在10%的显著性水平上都无法认为0剂量和75/90剂量对小鼠胚胎着床的影响是显著的。EWP2 的负两倍似然比为4.789，p值比标准泊松略小，为0.0912，在10%的显著性水平下可以认为0剂量组和75/90剂量组小鼠胚胎着床的显著差异，但如果显著性水平在5%则无法拒绝原假设。相比之下，CBR和EWP3的负两倍似然比统计量的p值都小得多，在通常5%的显著性水平下能够有力地表明0剂量组和75/90剂量组之间的差异是显著的，且其中 EWP3 的检验效率甚至明显高于 CBR，p值0.0075达到高度显著。
 

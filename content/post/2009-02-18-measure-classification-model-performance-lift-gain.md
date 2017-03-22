@@ -21,10 +21,10 @@ tags:
 slug: measure-classification-model-performance-lift-gain
 ---
 
-书接<a href="https://cos.name/2008/12/measure-classification-model-performance-roc-auc/" target="_blank">前文</a>。跟ROC类似，Lift（提升）和Gain（增益）也一样能简单地从[以前的Confusion Matrix](https://cos.name/2008/12/measure-classification-model-performance-confusion-matrix/)以及Sensitivity、Specificity等信息中推导而来，也有跟一个baseline model的比较，然后也是很容易画出来，很容易解释。以下先修知识，包括所需的数据集：
+书接<a href="/2008/12/measure-classification-model-performance-roc-auc/" target="_blank">前文</a>。跟ROC类似，Lift（提升）和Gain（增益）也一样能简单地从[以前的Confusion Matrix](/2008/12/measure-classification-model-performance-confusion-matrix/)以及Sensitivity、Specificity等信息中推导而来，也有跟一个baseline model的比较，然后也是很容易画出来，很容易解释。以下先修知识，包括所需的数据集：
 
-  1. [分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵](https://cos.name/2008/12/measure-classification-model-performance-confusion-matrix/)
-  2. [分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC](https://cos.name/2008/12/measure-classification-model-performance-roc-auc/)
+  1. [分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵](/2008/12/measure-classification-model-performance-confusion-matrix/)
+  2. [分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC](/2008/12/measure-classification-model-performance-roc-auc/)
 
 **一些准备**
 
@@ -246,4 +246,4 @@ Gains (增益) 与 Lift （提升）相当类似：Lift chart是不同阈值下L
 
 Gains chart是不同阈值下PV+和Depth的轨迹（Lift与之类似），而ROC是sensitivity和1-Specificity的对应，前面还提到，Sensitivity（覆盖率，True Positive Rate）在欺诈监控方面更有用（所以ROC更适合出现在这个场合），而PV+在数据库营销里面更有用（这里多用Gains/Lift）。
 
-混淆矩阵告一段落。接下来将是K-S(Kolmogorov-Smirnov)。参考资料同<a href="https://cos.name/2008/12/measure-classification-model-performance-roc-auc/" target="_blank">上一篇</a>。
+混淆矩阵告一段落。接下来将是K-S(Kolmogorov-Smirnov)。参考资料同<a href="/2008/12/measure-classification-model-performance-roc-auc/" target="_blank">上一篇</a>。

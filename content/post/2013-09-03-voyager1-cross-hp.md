@@ -16,7 +16,7 @@ slug: voyager1-cross-hp
 
 <a href="http://zh.wikipedia.org/zh-tw/旅行者1号" target="_blank">航海家1号</a>（<a href="http://voyager.jpl.nasa.gov" target="_blank">Voyager 1</a>）作为一艘无人太空探测船于1977年9月5日从佛罗里达洲的卡纳维尔角发射升空，先后位临木星，土星，正在向星际间的太空进发。
 
-<figure style="width: 600px" class="wp-caption aligncenter">![](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Voyager.jpg/766px-Voyager.jpg "航海家1号")<figcaption class="wp-caption-text">航海家1号</figcaption></figure>
+<figure style="width: 600px" class="wp-caption aligncenter">![航海家1号](http://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Voyager.jpg/766px-Voyager.jpg)<figcaption class="wp-caption-text">航海家1号</figcaption></figure>
   
 <!--more-->
 

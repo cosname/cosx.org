@@ -30,7 +30,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
   
 地址：中山北路3663号（地铁3，4号线金沙江路站）。
   
-[![](https://cos.name/wp-content/uploads/2011/09/ECNU_MAP.png "ECNU")](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
+[![ECNU](https://cos.name/wp-content/uploads/2011/09/ECNU_MAP.png)](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
 
 ## **三、会议主题**
 

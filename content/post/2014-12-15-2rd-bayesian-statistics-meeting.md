@@ -29,7 +29,7 @@ slug: 2rd-bayesian-statistics-meeting
 
 1763年12月23日，理查德·普莱斯在伦敦皇家学会会议上宣读了托马斯·贝叶斯的遗世之作——《An essay towards solving a problem in the doctrine of chances》(机遇理论中一个问题的解)，从此贝叶斯定理诞生于世。“虽然这个产生于18世纪的统计学学派在19世纪上半叶备受争议和冷落，但在20世纪，它却占据了数理统计学这块领地的半壁江山，撑起了统计学的半边天(陈希孺，2002)。
 
-2013年12月21日，“纪念贝叶斯定理250周年”暨首届中国贝叶斯统计学术论坛（天津，2013）在天津财经大学月牙报告厅成功举行（<a href="https://cos.name/2013/12/to-commemorate-the-250th-anniversary-of-bayes-theorem/" target="_blank">相关特邀报告及培训资料下载</a>）。
+2013年12月21日，“纪念贝叶斯定理250周年”暨首届中国贝叶斯统计学术论坛（天津，2013）在天津财经大学月牙报告厅成功举行（<a href="/2013/12/to-commemorate-the-250th-anniversary-of-bayes-theorem/" target="_blank">相关特邀报告及培训资料下载</a>）。
 
 <!--more-->
 

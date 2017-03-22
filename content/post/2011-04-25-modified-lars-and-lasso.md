@@ -62,7 +62,7 @@ $X\_{A}w\_{A}$就是LARS算法的在当前回归变量集下的solution path。�
 其中$x\_1$和$x\_2$是服从二维联合正态分布，均值为零向量，$cov(x\_1,x\_2)=0.5$，$var(x\_1)=var(x\_2)=1$，$e$服从$N(0,9)$。我取了50次观测，然后分别通过lasso，lars，以及forward stagewise三种算法进行了回归，其变量的回归路径如下图。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/2011/04/modified-lars-and-lasso/%e6%a8%a1%e6%8b%9flars/" rel="attachment wp-att-3737">![](https://cos.name/wp-content/uploads/2011/04/模拟lars.png)</a>
+  <a href="/2011/04/modified-lars-and-lasso/%e6%a8%a1%e6%8b%9flars/" rel="attachment wp-att-3737">![](https://cos.name/wp-content/uploads/2011/04/模拟lars.png)</a>
 </p>
 
 简单的代码我直接贴在本文的最后。从这三个算法的图中，我们并看不出有特别的区别，只能看出一些细小的差别。至于要判断哪种算法更好，则应该因问题而异。也不是本文能够论述的问题了。
@@ -73,6 +73,6 @@ $X\_{A}w\_{A}$就是LARS算法的在当前回归变量集下的solution path。�
 
 用lars算法做模拟的代码：
 
-<a href="https://cos.name/2011/04/modified-lars-and-lasso/%e5%88%a9%e7%94%a8lars%e6%a8%a1%e6%8b%9f/" rel="attachment wp-att-3738">利用lars模拟</a>
+<a href="/2011/04/modified-lars-and-lasso/%e5%88%a9%e7%94%a8lars%e6%a8%a1%e6%8b%9f/" rel="attachment wp-att-3738">利用lars模拟</a>
 
 &nbsp;

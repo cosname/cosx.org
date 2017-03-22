@@ -61,7 +61,7 @@ slug: relationship-big-data-statistics
 
 ![t7Kh6hH](https://cos.name/wp-content/uploads/2013/05/t7Kh6hH.png)
   
-问题问了一圈，这些听起来都很是十足的统计分析啊。本应该是统计分析人士应该是施展才华的时代，那为何还会有要被时代淘汰的论调呢？记得Leo Brieman 在<a href="https://cos.name/2012/02/what-is-the-stat-dept-25-years-from-now/" target="_blank">1994年Berkeley 统计系毕业典礼上的讲话</a>中提到的：
+问题问了一圈，这些听起来都很是十足的统计分析啊。本应该是统计分析人士应该是施展才华的时代，那为何还会有要被时代淘汰的论调呢？记得Leo Brieman 在<a href="/2012/02/what-is-the-stat-dept-25-years-from-now/" target="_blank">1994年Berkeley 统计系毕业典礼上的讲话</a>中提到的：
 
 > 要知道何去何从，我们必须清楚自己真正所擅长的是什么。统计的核心是什么？需要我们是一流的数学家吗？几乎不用。那是什么呢？**成为收集信息，分析信息，并得出结论的专家**！这才是我们真正所擅长的。所以我认为，这正是我们统计学家应有的定位，我们的身份危机才会到解决。
 
