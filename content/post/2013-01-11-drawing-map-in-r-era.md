@@ -35,63 +35,40 @@ R语言中绘制地图的思路也是由于2的获取方式不一样而分开的
 
 如您所看到的，第二种途径的步骤稍多，不利于大家上手。我知道，如果过程越长，越艰辛，最终绘制出地图的那一刻的快感就越强烈，但是“少折腾”的指示，还是提醒我们，尽量化繁为简。于是第三种的思路，就是既继承了第一种思路简洁的操作方式，又吸取了第二种思路的数据来源广泛的优势。
 
-<p align="left">
   第三种思路：既然R是自由的，那我能不能直接去调取专业的地图企业或者网站的数据呢，这样就不会受包中数据集所限，我只需要有一个途径去专业的地图供应商那取数据就可以了，比如Google Map，Baidu Map等，这可都是专业的地图网站，里面的地理数据应有尽有，想取啥取啥。自由的R只需要连接Google Map的API，一切就都有了，当然Google大爷不会让你无限制的取数据，目前的限制是2000次（应该是单天的限制），于是ggmap包诞生了，两位作者David Kahle和 Hadley Wickham真是太会解放全球人民了，并且该包中有几个让我无比激动的命令，下文见！！！
-</p>
 
 <p align="left">
   <!--more-->
 </p>
 
-<p align="left">
   好，我们先来按照第一种思路来画几个图：
-</p>
 
-<h2 align="left">
-  1、 画世界地图
-</h2>
+#  1、 画世界地图
 
-<p align="left">
   如果是首次使用，需要在R中装载maps包（<code>install.packages('maps')</code>），这个包中存有世界地图和美国地图的地图数据，所以，几行代码便可以画出世界地图。
-</p>
 
-<p align="left">
-  代码如下：
-</p>
+代码如下：
 
-<pre>library(maps)
+'''library(maps)
 map("world", fill = TRUE, col = rainbow(200),
     ylim = c(-60, 90), mar = c(0, 0, 0, 0))
-title("世界地图")</pre>
+title("世界地图")'''
 
-<p align="left">
   输出为：
-</p>
-
-<p align="left">
   <a href="https://cos.name/wp-content/uploads/2013/01/world_map.png">![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
-</p>
 
-<p align="left">
   无比绚丽的世界，引无数骚客竞折腰啊……
-</p>
 
-<h2 align="left">
-  2、 画美国地图
-</h2>
+# 2、 画美国地图
 
-<p align="left">
   同样在maps包中包含了美国地图和美国各州郡的详细地图数据，同样的，也可以用简单的代码画出美国地图，便于我们使用。
-</p>
 
-<p align="left">
   代码如下：
-</p>
 
-<pre>library(maps)
+'''library(maps)
 map("state", fill = TRUE, col = rainbow(209),
     mar = c(0, 0, 2, 0))
-title("美国地图")</pre>
+title("美国地图")'''
 
 <p align="left">
   输出为：
@@ -107,10 +84,10 @@ title("美国地图")</pre>
 
 代码如下：
 
-<pre>library(maps)
+'''library(maps)
 map('state', region = c('new york', 'new jersey', 'penn'),
     fill = TRUE, col = rainbow(3), mar = c(2, 3, 4, 3))
-title("美国三州地图")</pre>
+title("美国三州地图")'''
 
 输出结果为：
 
@@ -124,10 +101,10 @@ title("美国三州地图")</pre>
 
 代码如下：
 
-<pre>library(maps)
+'''library(maps)
 library(mapdata)
 map("china", col = "red4", ylim = c(18, 54), panel.first = grid())
-title(" 中国地图")</pre>
+title(" 中国地图")'''
 
 输出为：
 
@@ -185,11 +162,11 @@ title(" 中国地图")</pre>
 
 ## 1、中国地图
 
-<pre>library(ggmap)
+'''library(ggmap)
 library(mapproj)
 ## Google啊Google给我China的地图数据吧
 map &lt;- get_map(location = 'China', zoom = 4)
-ggmap(map)</pre>
+ggmap(map)'''
 
 于是：
 
@@ -198,10 +175,9 @@ ggmap(map)</pre>
 我天朝雄赳赳，气昂昂啊！！请注意左下角的Google logo！！
 
 再来北京道路地图：
-
-<pre>#Google啊Google给我Beijing的公路地图数据吧
+'''#Google啊Google给我Beijing的公路地图数据吧
 map &lt;- get_map(location = 'Beijing', zoom = 10, maptype = 'roadmap')
-ggmap(map)</pre>
+ggmap(map)'''
 
 于是：
 
@@ -209,10 +185,10 @@ ggmap(map)</pre>
 
 最后，我想看下大冬天的有没有人在人民大学的各个楼顶上晒太阳浴：
 
-<pre>## Google啊Google给我RUC的卫星地图数据吧
+'''## Google啊Google给我RUC的卫星地图数据吧
 map &lt;- get_map(location = 'Renmin University of China', zoom = 14,
     maptype = 'satellite')
-ggmap(map)</pre>
+ggmap(map)'''
 
 ![RUC_map](https://cos.name/wp-content/uploads/2013/01/RUC_map.png)
 
