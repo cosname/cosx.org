@@ -23,7 +23,7 @@ slug: r-nosql-hive
 
 **转载请注明：**
   
-<a title="R利剑NoSQL系列文章 之 hive" href="https://cos.name/2013/07/r-nosql-hive/" target="_blank">https://cos.name/2013/07/r-nosql-hive/</a>
+<a title="R利剑NoSQL系列文章 之 hive" href="/2013/07/r-nosql-hive/" target="_blank">/2013/07/r-nosql-hive/</a>
 
 ![rhive](http://blog.fens.me/wp-content/uploads/2013/07/rhive.png)
 
@@ -312,4 +312,4 @@ Hive操作HDFS
 
 **转载请注明：**
   
-<a title="R利剑NoSQL系列文章 之 hive" href="https://cos.name/2013/07/r-nosql-hive/" target="_blank">https://cos.name/2013/07/r-nosql-hive/</a>
+<a title="R利剑NoSQL系列文章 之 hive" href="/2013/07/r-nosql-hive/" target="_blank">/2013/07/r-nosql-hive/</a>

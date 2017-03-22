@@ -6,7 +6,7 @@ author: 潘岚锋
 
 R是一门用于统计计算和作图的语言，其官方机构每年都会举办useR!会议，但会议地点主要局限在欧美地区。自2008年以来，在谢益辉的倡导下，中国已经成功举办了四届自行组织的R语言会议，极大促进了R语言在中国的推广和发展。在前四届会议的成功经验下，为了进一步加强各领域R语言使用者之间的交流，我们于2012年5月（北京会场）和2012年11月（上海会场）举办了第五届中国R语言会议。
 
-**北京会场和上海会场均已顺利召开，详情请见<a href="https://cos.name/2012/05/5th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="https://cos.name/2012/11/5th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要</a>。**
+**北京会场和上海会场均已顺利召开，详情请见<a href="/2012/05/5th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="/2012/11/5th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要</a>。**
 
 &nbsp;
 

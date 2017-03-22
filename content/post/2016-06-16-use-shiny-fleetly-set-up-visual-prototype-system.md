@@ -14,7 +14,7 @@ slug: use-shiny-fleetly-set-up-visual-prototype-system
 
 **作者**：谢佳标（乐逗游戏，深圳）
 
-前几周给大家分享了一篇《利用R语言进行交互数据可视化》的文章[<u>https://cos.name/2016/06/using-r-for-interactive-data-visualization/</u>](https://cos.name/2016/06/using-r-for-interactive-data-visualization/)。文章末尾提到的在R的环境中，动态交互图形的优势在于能和knitr、shiny等框架整合在一起，能迅速建立一套可视化原型系统。今天接着给大家分享如何将动态交互图形与shiny框架整合在一起，迅速建立一套可视化原型系统。
+前几周给大家分享了一篇《利用R语言进行交互数据可视化》的文章[<u>/2016/06/using-r-for-interactive-data-visualization/</u>](/2016/06/using-r-for-interactive-data-visualization/)。文章末尾提到的在R的环境中，动态交互图形的优势在于能和knitr、shiny等框架整合在一起，能迅速建立一套可视化原型系统。今天接着给大家分享如何将动态交互图形与shiny框架整合在一起，迅速建立一套可视化原型系统。
 
 Shiny是R中的一种Web开发框架，使得R的使用者不必太了解css、js只需要了解一些html的知识就可以快速完成web开发，且shiny包集成了bootstrap、jquery、ajax等特性，极大解放了作为统计语言的R的生产力。
 

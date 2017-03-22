@@ -27,7 +27,7 @@ slug: statistics-in-chinese-song-poem-2
 > </p>
 
 <p style="text-align: left;">
-  时光荏苒，距离<a href="https://cos.name/2011/03/statistics-in-chinese-song-poem-1/" target="_blank">上次论词</a>已经过去了一年。今天我们接着这一话题，不过这回要看的是词牌和作者。
+  时光荏苒，距离<a href="/2011/03/statistics-in-chinese-song-poem-1/" target="_blank">上次论词</a>已经过去了一年。今天我们接着这一话题，不过这回要看的是词牌和作者。
 </p>
 
 既然数据库里面有词牌和作者的记录，那么一个很自然的疑问是，哪些词牌被使用的频率最高？又有哪些词人的词作最为丰盛？这两个问题并不困难，只需要对他们进行频率统计然后排序即可。以下是R语言的代码和结果（<a href="https://cos.name/wp-content/uploads/2011/03/SongPoem.tar.gz" target="_blank">数据下载地址</a>）：
