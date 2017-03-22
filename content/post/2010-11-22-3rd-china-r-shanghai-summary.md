@@ -16,10 +16,10 @@ slug: 3rd-china-r-shanghai-summary
 
 本文撰稿：第三届中国R语言会议（上海会场）主席张翔。<figure style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-2684" title="第三届中国R语言会议上海会场合影1" src="https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-500x332.jpg" alt="第三届中国R语言会议上海会场合影1" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-500x332.jpg 500w, https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure> 
+![第三届中国R语言会议上海会场合影1](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1.jpg "第三届中国R语言会议上海会场合影1")<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure> 
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png"><img class="aligncenter size-large wp-image-2276" title="中国R语言会议标识" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png" alt="" width="300" height="199" srcset="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png">![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png "中国R语言会议标识")</a>
 </p>
 
 第三届中国R语言会议（上海会场）于2010年11月13日~14日在上海财经大学行政楼成功召开。会议由上海财经大学统计与管理学院与统计之都网站(<a href="https://cos.name/" target="_blank">cos.name</a>)协办，由Mango Solutions提供赞助。在两天的会议时间里，来自各行各业的R用户齐聚上海，共同探讨和交流R软件的使用经验，取得了丰厚的成果。
@@ -55,4 +55,4 @@ slug: 3rd-china-r-shanghai-summary
   * 刘思喆：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-and-Statistical-Graphics.pdf" target="_blank">R与统计图形</a>
   * 李舰：<a href="https://cos.name/wp-content/uploads/2010/11/China-R-2010-High-Performance-Computing.pdf" target="_blank">R与高性能运算以及R在中国未来发展的讨论</a><figure style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-2683" title="第三届中国R语言会议上海会场合影2" src="https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-500x332.jpg" alt="第三届中国R语言会议上海会场合影2" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-500x332.jpg 500w, https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2-300x199.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2.jpg)<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure>
+![第三届中国R语言会议上海会场合影2](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2.jpg "第三届中国R语言会议上海会场合影2")<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure>

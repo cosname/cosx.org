@@ -15,7 +15,7 @@ slug: statistics-in-chinese-song-poem-1
 ---
 
 <p style="text-align: center;">
-  <img class="aligncenter size-large wp-image-3210" title="统计词话配图" src="https://cos.name/wp-content/uploads/2011/03/image-500x361.jpg" alt="" width="500" height="361" srcset="https://cos.name/wp-content/uploads/2011/03/image-500x361.jpg 500w, https://cos.name/wp-content/uploads/2011/03/image-300x216.jpg 300w, https://cos.name/wp-content/uploads/2011/03/image.jpg 590w" sizes="(max-width: 500px) 100vw, 500px" />
+  ![](https://cos.name/wp-content/uploads/2011/03/image.jpg "统计词话配图")
 </p>
 
 不知道这个标题是否有足够的吸引力把你骗进来。如果你认为统计是一个到处充满了期望方差分布回归随机多元和概率的东西，那么……你可能是对的，不过本文想要告诉你的是，你其实还可以用统计来做一些你关心的事情，比如现在，我们既谈风月，也谈统计。:D

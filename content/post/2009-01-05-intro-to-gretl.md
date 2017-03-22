@@ -12,7 +12,7 @@ tags:
 slug: intro-to-gretl
 ---
 
-gretl（**G**nu **R**egression，**E**conometrics and **T**ime-series **L**ibrary）是一款跨平台的计量分析软件。它是开源软件，用C语言写成，由 Allin Cottrell和Riccardo &#8220;Jack&#8221; Lucchettii 共同开发。<!--more-->
+gretl（**G**nu **R**egression，**E**conometrics and **T**ime-series **L**ibrary）是一款跨平台的计量分析软件。它是开源软件，用C语言写成，由 Allin Cottrell和Riccardo “Jack” Lucchettii 共同开发。<!--more-->
 
 **主要特性**
 
@@ -32,7 +32,7 @@ gretl（**G**nu **R**egression，**E**conometrics and **T**ime-series **L**ibrar
 
 **界面截图**<figure id="attachment_599" style="width: 446px" class="wp-caption aligncenter">
 
-<img class="size-full wp-image-599" src="https://cos.name/wp-content/uploads/2009/01/gretl_screenshot.jpg" alt="gretl界面截图" width="446" height="390" /><figcaption class="wp-caption-text">gretl界面截图</figcaption></figure> 
+![gretl界面截图](https://cos.name/wp-content/uploads/2009/01/gretl_screenshot.jpg)<figcaption class="wp-caption-text">gretl界面截图</figcaption></figure> 
 
 **相关链接**
 

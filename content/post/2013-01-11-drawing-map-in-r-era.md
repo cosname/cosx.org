@@ -69,7 +69,7 @@ title("世界地图")</pre>
 </p>
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/01/world_map.png"><img class="aligncenter size-large wp-image-6839" alt="world_map" src="https://cos.name/wp-content/uploads/2013/01/world_map-500x250.png" width="500" height="250" srcset="https://cos.name/wp-content/uploads/2013/01/world_map-500x250.png 500w, https://cos.name/wp-content/uploads/2013/01/world_map-300x150.png 300w, https://cos.name/wp-content/uploads/2013/01/world_map.png 800w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2013/01/world_map.png">![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
 </p>
 
 <p align="left">
@@ -98,7 +98,7 @@ title("美国地图")</pre>
 </p>
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/01/us_map.png"><img class="aligncenter size-large wp-image-6838" alt="us_map" src="https://cos.name/wp-content/uploads/2013/01/us_map-500x312.png" width="500" height="312" srcset="https://cos.name/wp-content/uploads/2013/01/us_map-500x312.png 500w, https://cos.name/wp-content/uploads/2013/01/us_map-300x187.png 300w, https://cos.name/wp-content/uploads/2013/01/us_map-480x300.png 480w, https://cos.name/wp-content/uploads/2013/01/us_map.png 800w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2013/01/us_map.png">![us_map](https://cos.name/wp-content/uploads/2013/01/us_map.png)</a>
 </p>
 
 整体形状这是像啥啊，山姆大叔……
@@ -114,7 +114,7 @@ title("美国三州地图")</pre>
 
 输出结果为：
 
-[<img class="aligncenter size-large wp-image-6837" alt="states_map" src="https://cos.name/wp-content/uploads/2013/01/states_map-500x500.png" width="500" height="500" srcset="https://cos.name/wp-content/uploads/2013/01/states_map-500x500.png 500w, https://cos.name/wp-content/uploads/2013/01/states_map-150x150.png 150w, https://cos.name/wp-content/uploads/2013/01/states_map-300x300.png 300w, https://cos.name/wp-content/uploads/2013/01/states_map.png 600w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/states_map.png)
+![states_map](https://cos.name/wp-content/uploads/2013/01/states_map.png)
 
 三州鼎力！！
 
@@ -131,7 +131,7 @@ title(" 中国地图")</pre>
 
 输出为：
 
-[<img class="aligncenter size-large wp-image-6836" alt="China_map" src="https://cos.name/wp-content/uploads/2013/01/China_map-500x375.png" width="500" height="375" srcset="https://cos.name/wp-content/uploads/2013/01/China_map-500x375.png 500w, https://cos.name/wp-content/uploads/2013/01/China_map-300x225.png 300w, https://cos.name/wp-content/uploads/2013/01/China_map-400x300.png 400w, https://cos.name/wp-content/uploads/2013/01/China_map.png 800w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/China_map.png)
+![China_map](https://cos.name/wp-content/uploads/2013/01/China_map.png)
 
 哭，重庆在哪里，重庆在哪里？？
 
@@ -179,7 +179,7 @@ title(" 中国地图")</pre>
 
 这意思就是说从农大到人大距离6022米，如果您步行，需要4523秒……汗，我下次考虑下步行试试。不过，您说的是农大东校区还是农大西校区啊……
 
-另，ggmap包中不仅仅可以调取Google Map的数据，还可以调取OpenStreetMap (&#8216;osm&#8217;)、Stamen Maps (&#8216;stamen&#8217;)和CloudMade maps (&#8216;cloudmade&#8217;)。亲，这够用了吧。那地图的表现形式也是个性化的，有&#8217;terrain&#8217;（地势图）、&#8217;satellite&#8217;（卫星图）、&#8217;roadmap&#8217;（道路图）和 &#8216;hybrid&#8217;（混合）等。您自个儿选。
+另，ggmap包中不仅仅可以调取Google Map的数据，还可以调取OpenStreetMap (‘osm’)、Stamen Maps (‘stamen’)和CloudMade maps (‘cloudmade’)。亲，这够用了吧。那地图的表现形式也是个性化的，有’terrain’（地势图）、’satellite’（卫星图）、’roadmap’（道路图）和 ‘hybrid’（混合）等。您自个儿选。
 
 其他的不谈了，直接画地图：
 
@@ -193,7 +193,7 @@ ggmap(map)</pre>
 
 于是：
 
-[<img class="aligncenter size-large wp-image-6846" alt="China_map_2" src="https://cos.name/wp-content/uploads/2013/01/China_map_2-500x500.png" width="500" height="500" srcset="https://cos.name/wp-content/uploads/2013/01/China_map_2-500x500.png 500w, https://cos.name/wp-content/uploads/2013/01/China_map_2-150x150.png 150w, https://cos.name/wp-content/uploads/2013/01/China_map_2-300x300.png 300w, https://cos.name/wp-content/uploads/2013/01/China_map_2.png 653w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/China_map_2.png)
+![China_map_2](https://cos.name/wp-content/uploads/2013/01/China_map_2.png)
 
 我天朝雄赳赳，气昂昂啊！！请注意左下角的Google logo！！
 
@@ -205,7 +205,7 @@ ggmap(map)</pre>
 
 于是：
 
-[<img class="aligncenter size-large wp-image-6847" alt="Beijing_map" src="https://cos.name/wp-content/uploads/2013/01/Beijing_map-500x500.png" width="500" height="500" srcset="https://cos.name/wp-content/uploads/2013/01/Beijing_map-500x500.png 500w, https://cos.name/wp-content/uploads/2013/01/Beijing_map-150x150.png 150w, https://cos.name/wp-content/uploads/2013/01/Beijing_map-300x300.png 300w, https://cos.name/wp-content/uploads/2013/01/Beijing_map.png 653w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/Beijing_map.png)
+![Beijing_map](https://cos.name/wp-content/uploads/2013/01/Beijing_map.png)
 
 最后，我想看下大冬天的有没有人在人民大学的各个楼顶上晒太阳浴：
 
@@ -214,13 +214,13 @@ map &lt;- get_map(location = 'Renmin University of China', zoom = 14,
     maptype = 'satellite')
 ggmap(map)</pre>
 
-[<img class="aligncenter size-large wp-image-6844" alt="RUC_map" src="https://cos.name/wp-content/uploads/2013/01/RUC_map-500x500.png" width="500" height="500" srcset="https://cos.name/wp-content/uploads/2013/01/RUC_map-500x500.png 500w, https://cos.name/wp-content/uploads/2013/01/RUC_map-150x150.png 150w, https://cos.name/wp-content/uploads/2013/01/RUC_map-300x300.png 300w, https://cos.name/wp-content/uploads/2013/01/RUC_map.png 653w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/RUC_map.png)
+![RUC_map](https://cos.name/wp-content/uploads/2013/01/RUC_map.png)
 
 太不清楚了，根本看不清楚哪跟哪啊。就这么着吧，我估计快够当天限制数了。
 
 最后来个正经的，借用[肖凯老师编好的代码](http://xccds1977.blogspot.com/2012/06/ggmap.html)（肖老师的原文后面还有用谢老大animation包做的动态图呢），从[中国地震数据中心](http://data.earthquake.cn/datashare/globeEarthquake_csn.html)下载 2013.1.5-2013.1.11 这一周发生在中国的小地震，呃，应该都是小地震，因为没有听到相关的大地震的新闻报道。
 
-[<img class="aligncenter size-large wp-image-6845" alt="earthquake_map" src="https://cos.name/wp-content/uploads/2013/01/earthquake_map-500x498.png" width="500" height="498" srcset="https://cos.name/wp-content/uploads/2013/01/earthquake_map-500x498.png 500w, https://cos.name/wp-content/uploads/2013/01/earthquake_map-150x150.png 150w, https://cos.name/wp-content/uploads/2013/01/earthquake_map-300x300.png 300w, https://cos.name/wp-content/uploads/2013/01/earthquake_map.png 655w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/earthquake_map.png)
+![earthquake_map](https://cos.name/wp-content/uploads/2013/01/earthquake_map.png)
 
 从这图上看，每周发生在我亲爱的祖国上的地震真心不少啊，我大台湾也饱受其苦啊。向天祈祷，让地震少震我中国吧……
 

@@ -14,7 +14,7 @@ _神说，要有正态分布，就有了正态分布。_
   
  _神看正态分布是好的，就让随机误差服从了正态分布。_
   
- _创世纪&#8212;数理统计_
+ _创世纪—数理统计_
 
 **1. 正态分布，熟悉的陌生人**
 
@@ -29,13 +29,13 @@ $$ \displaystyle f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}} $$
 更加的简洁漂亮，两个最重要的数学常量 $\pi$、$e$ 都出现在这公式之中。在我个人的审美之中，它也属于 top-N 的最美丽的数学公式之一，如果有人问我数理统计领域哪个公式最能让人感觉到上帝的存在，那我一定投正态分布的票。因为这个分布戴着神秘的面纱，在自然界中无处不在，让你在纷繁芜杂的数据背后看到隐隐的秩序。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/normal_curve/" rel="attachment wp-att-7062"><img class="aligncenter size-full wp-image-7062" alt="normal_curve" src="https://cos.name/wp-content/uploads/2013/01/normal_curve.png" width="463" height="231" srcset="https://cos.name/wp-content/uploads/2013/01/normal_curve.png 463w, https://cos.name/wp-content/uploads/2013/01/normal_curve-300x149.png 300w" sizes="(max-width: 463px) 100vw, 463px" /></a><strong>正态分布曲线</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/normal_curve/" rel="attachment wp-att-7062">![normal_curve](https://cos.name/wp-content/uploads/2013/01/normal_curve.png)</a><strong>正态分布曲线</strong>
 </p>
 
 正态分布又通常被称为高斯分布，在科学领域，冠名权那是一个很高的荣誉。2002年以前去过德国的兄弟们还会发现，德国1991年至2001年间发行的的一款10马克的纸币上印着高斯(Carl Friedrich Gauss, 1777-1855)的头像和正态密度曲线，而1977年东德发行的20马克的可流通纪念钢镚上，也印着正态分布曲线和高斯的名字。正态分布被冠名高斯分布，我们也容易认为是高斯发现了正态分布，其实不然，不过高斯对于正态分布的历史地位的确立是起到了决定性的作用。
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/10dm_with_gauss_curve/" rel="attachment wp-att-7071"><img class="aligncenter size-full wp-image-7071" alt="10dm_with_gauss_curve" src="https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve.jpg" width="353" height="168" srcset="https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve.jpg 353w, https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve-300x142.jpg 300w" sizes="(max-width: 353px) 100vw, 353px" /></a> <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/10dm_with_gauss_curve_detail/" rel="attachment wp-att-7072"><img class="wp-image-7072 alignnone" alt="10dm_with_gauss_curve_detail" src="https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve_detail.jpg" width="209" height="150" /></a>   <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/20-mark-gauss/" rel="attachment wp-att-7073"><img class="wp-image-7073 alignnone" alt="20-mark-gauss" src="https://cos.name/wp-content/uploads/2013/01/20-mark-gauss.jpg" width="240" height="122" /></a><br /> <strong>德国马克和纪念币上的高斯头像和正态分布曲线</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/10dm_with_gauss_curve/" rel="attachment wp-att-7071">![10dm_with_gauss_curve](https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve.jpg)</a> <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/10dm_with_gauss_curve_detail/" rel="attachment wp-att-7072">![10dm_with_gauss_curve_detail](https://cos.name/wp-content/uploads/2013/01/10dm_with_gauss_curve_detail.jpg)</a>   <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/20-mark-gauss/" rel="attachment wp-att-7073">![20-mark-gauss](https://cos.name/wp-content/uploads/2013/01/20-mark-gauss.jpg)</a><br /> <strong>德国马克和纪念币上的高斯头像和正态分布曲线</strong>
 </p>
 
 正态曲线虽然看上去很美，却不是一拍脑袋就能想到的。我们在本科学习数理统计的时候，课本一上来介绍正态分布就给出分布密度函数，却从来不说明这个密度函数是通过什么原理推导出来的。所以我一直搞不明白数学家当年是怎么找到这个概率分布曲线的，又是怎么发现随机误差服从这个奇妙的分布的。我们在实践中大量的使用正态分布，却对这个分布的来龙去脉知之甚少，正态分布真是让人感觉既熟悉又陌生。直到我读研究生的时候，我的导师给我介绍了陈希儒院士的《数理统计学简史》这本书，看了之后才了解了正态分布曲线从发现到被人们重视进而广泛应用，也是经过了几百年的历史。
@@ -49,7 +49,7 @@ $$ \displaystyle f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}} $$
 第一个故事和概率论的发展密切相关，主角是棣莫弗(Abraham de Moivre, 1667-1754) 和拉普拉斯 (Pierre-Simon Laplace 1749-1827)。拉普拉斯是个大科学家，被称为法国的牛顿；棣莫弗名气可能不算很大，不过大家应该都应该很熟悉这个名字，因为我们在高中数学学复数的时候都学过棣莫弗公式 $$(\cos\theta + i \sin\theta)^n = \cos(n\theta) + i \sin(n\theta).$$而棣莫弗所写的《机遇论》（The doctrine of chances）是概率论发展历史中很重要的一本书。牛顿对棣莫弗十分欣赏,遇到学生向他请教概率方面的问题时，他就说：“这样的问题应该去找棣莫弗，他对这些问题的研究比我深入得多。”
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/abraham-de-moivre/" rel="attachment wp-att-7074"><img class=" wp-image-7074 alignnone" alt="abraham-de-moivre" src="https://cos.name/wp-content/uploads/2013/01/abraham-de-moivre.jpg" width="171" height="208" srcset="https://cos.name/wp-content/uploads/2013/01/abraham-de-moivre.jpg 285w, https://cos.name/wp-content/uploads/2013/01/abraham-de-moivre-246x300.jpg 246w" sizes="(max-width: 171px) 100vw, 171px" /></a><img class="wp-image-7056 alignnone" alt="laplace" src="https://cos.name/wp-content/uploads/2013/01/laplace.jpg" width="171" /><br /> <strong>棣莫弗和拉普拉斯</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/abraham-de-moivre/" rel="attachment wp-att-7074">![abraham-de-moivre](https://cos.name/wp-content/uploads/2013/01/abraham-de-moivre.jpg)</a>![laplace](https://cos.name/wp-content/uploads/2013/01/laplace.jpg)<br /> <strong>棣莫弗和拉普拉斯</strong>
 </p>
 
 古典概率论发源于赌博，惠更斯(Christiaan Huygens, 1629-1695)、帕斯卡(Blaise Pascal, 1623-1662)、费马(Pierre de Fermat, 1601-1665)、雅可比·贝努利(Jacob Bernoulli, 1654-1705)都是古典概率的奠基人，他们那会研究的概率问题大都来自赌桌上，最早的概率论问题是赌徒梅累在1654年向帕斯卡提出的如何分赌金的问题。统计学中的总体均值之所以被称为期望 (Expectation), 就是源自惠更斯、帕斯卡这些人研究平均情况下一个赌徒在赌桌上可以期望自己赢得多少钱。
@@ -62,7 +62,7 @@ $$ 2npq b(n, p, np)$$
   
 其中 $ b(n,p,i) = \binom{n}{i}p^iq^{n-i}$ 是常见的二项概率。 但是对具体的 $n$, 因为其中的二项公式中有组合数，要把这个理论结果实际计算出数值结果可不是件容易的事， 这就驱动棣莫弗寻找近似计算的方法。
 
-与此相关联的另一个问题，是遵从二项分布的随机变量 $ X \sim B(n,p)$, 求X 落在二项分布中心点一定范围的概率 $ P_d = P(|X &#8211; np| \le d)$。
+与此相关联的另一个问题，是遵从二项分布的随机变量 $ X \sim B(n,p)$, 求X 落在二项分布中心点一定范围的概率 $ P_d = P(|X – np| \le d)$。
 
 对于 $p=1/2$ 的情形， 棣莫弗做了一些计算并得到了一些近似结果，但是还不够漂亮，幸运的是棣莫弗和斯特林(James Stirling, 1692-1770)处在同一个时代， 而且二人之间有联系，斯特林公式是在数学分析中必学的一个重要公式
   
@@ -88,7 +88,7 @@ $$ \displaystyle b\left(\frac{n}{2}+d\right) \approx \frac{2}{\sqrt{2 \pi n}}e^{
   
 \begin{array}{lll}
   
-\displaystyle P\left(\left|\frac{X}{n} &#8211; \frac{1}{2}\right| \le \frac{c}{\sqrt{n}}\right)
+\displaystyle P\left(\left|\frac{X}{n} – \frac{1}{2}\right| \le \frac{c}{\sqrt{n}}\right)
   
 & = & \displaystyle \sum_{-c\sqrt{n} \le i \le c\sqrt{n}}b\left(\frac{n}{2}+i\right) \\
   
@@ -110,7 +110,7 @@ $$ \displaystyle b\left(\frac{n}{2}+d\right) \approx \frac{2}{\sqrt{2 \pi n}}e^{
 
 **[棣莫弗-拉普拉斯中心极限定理]**设随机变量 $X_n (n=1,2,\cdots)$ 服从参数为 $n,p$ 的二项分布，则对任意的 $x$, 恒有
   
-$$ \lim\_{n\rightarrow\infty}P\left( \frac{X\_n &#8211; np}{\sqrt{np(1-p)}} \le x \right)
+$$ \lim\_{n\rightarrow\infty}P\left( \frac{X\_n – np}{\sqrt{np(1-p)}} \le x \right)
   
 = \int_{-\infty}^x \frac{1}{\sqrt{2\pi}} e^{\frac{-t^2}{2}}dt .
   
@@ -163,7 +163,7 @@ y\_n = \beta\_0 + \beta\_1x\_{1n} + \cdots + \beta\_px\_{pn} .
 以上求解线性矛盾方程的问题在现在的本科生看来都不困难，这就是统计学中的线性回归问题，直接用最小二乘法就解决了。可是即便如欧拉、拉普拉斯这些数学大牛，当时也未能对这些问题提出有效的解决方案。可见在科学研究中，要想在观念上有所突破并不容易。有效的最小二乘法是勒让德在 1805 年发表的，基本思想就是认为测量中有误差，所以所有方程的累积误差为
 
 <p style="text-align: center">
-  <strong>累积误差 = $\sum($ 观测值 &#8211; 理论值 $)^2$</strong>
+  <strong>累积误差 = $\sum($ 观测值 – 理论值 $)^2$</strong>
 </p>
 
 我们求解出导致累积误差最小的参数
@@ -178,7 +178,7 @@ y\_n = \beta\_0 + \beta\_1x\_{1n} + \cdots + \beta\_px\_{pn} .
   
 & = & \displaystyle
   
-\arg\min\_{\boldsymbol\beta} \sum\_{i=1}^n\Bigl[y\_i &#8211; (\beta\_0 + \beta\_1x\_{1i}
+\arg\min\_{\boldsymbol\beta} \sum\_{i=1}^n\Bigl[y\_i – (\beta\_0 + \beta\_1x\_{1i}
   
 + \cdots + \beta\_px\_{pi})\Bigr]^2 .
   
@@ -187,7 +187,7 @@ y\_n = \beta\_0 + \beta\_1x\_{1n} + \cdots + \beta\_px\_{pn} .
 \end{eqnarray}
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/legendre/" rel="attachment wp-att-7058"><img class="aligncenter  wp-image-7058" alt="legendre" src="https://cos.name/wp-content/uploads/2013/01/legendre.jpg" width="187" height="205" srcset="https://cos.name/wp-content/uploads/2013/01/legendre.jpg 312w, https://cos.name/wp-content/uploads/2013/01/legendre-273x300.jpg 273w" sizes="(max-width: 187px) 100vw, 187px" /></a><strong>勒让德</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/legendre/" rel="attachment wp-att-7058">![legendre](https://cos.name/wp-content/uploads/2013/01/legendre.jpg)</a><strong>勒让德</strong>
 </p>
 
 勒让德在论文中对最小二乘法的优良性做了几点说明：
@@ -196,9 +196,9 @@ y\_n = \beta\_0 + \beta\_1x\_{1n} + \cdots + \beta\_px\_{pn} .
   2. 计算中只要求偏导后求解线性方程组，计算过程明确便捷；
   3. 最小二乘法可以导出算术平均值作为估计值。
 
-对于最后一点，推理如下：假设真值为 $\theta$, $x\_1, \cdots, x\_n$为$n$次测量值, 每次测量的误差为$ e\_i = x\_i &#8211; \theta $，按最小二乘法，误差累积为
+对于最后一点，推理如下：假设真值为 $\theta$, $x\_1, \cdots, x\_n$为$n$次测量值, 每次测量的误差为$ e\_i = x\_i – \theta $，按最小二乘法，误差累积为
   
-$$ L(\theta) = \sum\_{i=1}^n e\_i^2 = \sum\_{i=1}^n (x\_i &#8211; \theta)^2 $$
+$$ L(\theta) = \sum\_{i=1}^n e\_i^2 = \sum\_{i=1}^n (x\_i – \theta)^2 $$
   
 求解$\theta$ 使得 $L(\theta)$达到最小，正好是算术平均 $\overline{x} = \frac{\sum\_{i=1}^n x\_i}{n} $。
 
@@ -222,10 +222,10 @@ $$ L(\theta) = \sum\_{i=1}^n e\_i^2 = \sum\_{i=1}^n (x\_i &#8211; \theta)^2 $$
 
 用数学的语言描述，也就是说误差分布的密度函数 $f(x)$ 关于0对称分布，概率密度随 $|x|$ 增加而减小，这两个定性的描述都很符合常识。
 
-许多天文学家和数学家开始了寻找误差分布曲线的尝试。 天文学家辛普森(Thomas Simpson, 1710-1761) 先走出了有意义的一步。设真值为 $\theta$, $x\_1, \cdots, x\_n$ 为n次测量值, 每次测量的误差为$ e\_i = x\_i &#8211; \theta $，若用算术平均 $\overline{x} = \frac{\sum\_{i=1}^n x\_i}{n} $去估计$\theta$, 其误差为 $\overline{e} = \frac{\sum\_{i=1}^n e\_i}{n} $。 辛普森证明了, 对于如下的一个概率分布，
+许多天文学家和数学家开始了寻找误差分布曲线的尝试。 天文学家辛普森(Thomas Simpson, 1710-1761) 先走出了有意义的一步。设真值为 $\theta$, $x\_1, \cdots, x\_n$ 为n次测量值, 每次测量的误差为$ e\_i = x\_i – \theta $，若用算术平均 $\overline{x} = \frac{\sum\_{i=1}^n x\_i}{n} $去估计$\theta$, 其误差为 $\overline{e} = \frac{\sum\_{i=1}^n e\_i}{n} $。 辛普森证明了, 对于如下的一个概率分布，
 
 <p style="text-align: center">
-  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/simpson-error-curve/" rel="attachment wp-att-7068"><img class="aligncenter  wp-image-7068" alt="simpson-error-curve" src="https://cos.name/wp-content/uploads/2013/01/simpson-error-curve.jpg" width="358" height="194" srcset="https://cos.name/wp-content/uploads/2013/01/simpson-error-curve.jpg 559w, https://cos.name/wp-content/uploads/2013/01/simpson-error-curve-300x163.jpg 300w, https://cos.name/wp-content/uploads/2013/01/simpson-error-curve-500x271.jpg 500w" sizes="(max-width: 358px) 100vw, 358px" /></a><strong>辛普森的误差分布曲线</strong>
+  <a href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/simpson-error-curve/" rel="attachment wp-att-7068">![simpson-error-curve](https://cos.name/wp-content/uploads/2013/01/simpson-error-curve.jpg)</a><strong>辛普森的误差分布曲线</strong>
 </p>
 
 有如下结论
@@ -251,7 +251,7 @@ f(x) = \frac{m}{2} e^{-m|x|} .
 这个概率密度函数现在被称为拉普拉斯分布。
 
 <p style="text-align: center">
-  <a style="text-align: center" href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/laplace-error-curve/" rel="attachment wp-att-7057"><img class="aligncenter  wp-image-7057" alt="laplace-error-curve" src="https://cos.name/wp-content/uploads/2013/01/laplace-error-curve.jpg" width="448" height="262" srcset="https://cos.name/wp-content/uploads/2013/01/laplace-error-curve.jpg 560w, https://cos.name/wp-content/uploads/2013/01/laplace-error-curve-300x175.jpg 300w, https://cos.name/wp-content/uploads/2013/01/laplace-error-curve-500x291.jpg 500w" sizes="(max-width: 448px) 100vw, 448px" /></a>
+  <a style="text-align: center" href="https://cos.name/2013/01/%e6%ad%a3%e6%80%81%e5%88%86%e5%b8%83%e7%9a%84%e5%89%8d%e4%b8%96%e4%bb%8a%e7%94%9f%e4%b8%8a/laplace-error-curve/" rel="attachment wp-att-7057">![laplace-error-curve](https://cos.name/wp-content/uploads/2013/01/laplace-error-curve.jpg)</a>
 </p>
 
 <p style="text-align: center">
@@ -268,7 +268,7 @@ f(x) = \frac{m}{2} e^{-m|x|} .
 
 高斯为此名声大震，但是高斯当时拒绝透露计算轨道的方法，原因可能是高斯认为自己的方法的理论基础还不够成熟，而高斯一向治学严谨、精益求精，不轻易发表没有思考成熟的理论。直到1809年高斯系统地完善了相关的数学理论后，才将他的方法公布于众，而其中使用的数据分析方法，就是以正态误差分布为基础的最小二乘法。那高斯是如何推导出误差分布为正态分布的？让我们看看高斯是如何猜测上帝的意图的。
 
-设真值为 $\theta$, $x\_1, \cdots, x\_n$为$n$次独立测量值, 每次测量的误差为$ e\_i = x\_i &#8211; \theta $，假设误差$e_i$的密度函数为 $f(e)$, 则测量值的联合概率为$n$个误差的联合概率，记为
+设真值为 $\theta$, $x\_1, \cdots, x\_n$为$n$次独立测量值, 每次测量的误差为$ e\_i = x\_i – \theta $，假设误差$e_i$的密度函数为 $f(e)$, 则测量值的联合概率为$n$个误差的联合概率，记为
   
 \begin{align*}
   
@@ -284,7 +284,7 @@ $$ \hat{\theta}= \arg\max_{\theta} L(\theta) .$$
   
 现在我们把$L(\theta)$ 称为样本的似然函数，而得到的估计值$ \hat{\theta}$ 称为极大似然估计。高斯首次给出了极大似然的思想，这个思想后来被统计学家费希尔系统的发展成为参数估计中的极大似然估计理论。
 
-数学家波利亚(George Pólya, 1887-1985)说过：“要成为一个好的数学家,……,你必须首先是一个好的猜想家(To be a good mathematician,&#8230;, you must be a good guesser)。”历史上一流的数学家都是伟大的猜想家。高斯接下来的想法特别牛，他开始揣度上帝的意图，而这充分体现了高斯的数学天才。高斯把整个问题的思考模式倒过来：既然千百年来大家都认为算术平均是一个好的估计，那我就认为极大似然估计导出的就应该是算术平均！所以高斯猜测上帝在创世纪中的旨意就是：
+数学家波利亚(George Pólya, 1887-1985)说过：“要成为一个好的数学家,……,你必须首先是一个好的猜想家(To be a good mathematician,…, you must be a good guesser)。”历史上一流的数学家都是伟大的猜想家。高斯接下来的想法特别牛，他开始揣度上帝的意图，而这充分体现了高斯的数学天才。高斯把整个问题的思考模式倒过来：既然千百年来大家都认为算术平均是一个好的估计，那我就认为极大似然估计导出的就应该是算术平均！所以高斯猜测上帝在创世纪中的旨意就是：
 
 <p style="text-align: center">
   <strong>误差分布导出的极大似然估计 = 算术平均值</strong>
@@ -310,9 +310,9 @@ f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{x^2}{2\sigma^2}} $$
 
 在整个正态分布被发现与应用的历史中，棣莫弗、拉普拉斯、高斯各有贡献，拉普拉斯从中心极限定理的角度解释它，高斯把它应用在误差分析中，殊途同归。正态分布被人们发现有这么好的性质，各国人民都争抢它的冠名权。因为拉普拉斯是法国人,所以当时在法国被称为拉普拉斯分布；而高斯是德国人, 所以在德国叫做高斯分布；第三中立国的人民称他为拉普拉斯-高斯分布。后来法国的大数学家庞加莱建议改用正态分布这一中立名称, 而随后统计学家卡尔·皮尔森使得这个名称被广泛接受：
 
-_Many years ago I called the Laplace-Gaussian curve the normal curve, which name, while it avoids an international question of priority, has the disadvantage of leading people to believe that all other distributions of frequency are in one sense or another &#8220;abnormal&#8221;._
+_Many years ago I called the Laplace-Gaussian curve the normal curve, which name, while it avoids an international question of priority, has the disadvantage of leading people to believe that all other distributions of frequency are in one sense or another “abnormal”._
 
-_ &#8212;Karl Pearson (1920) _
+_ —Karl Pearson (1920) _
 
 不过因为高斯在数学家中的名气实在是太大, 正态分布的桂冠还是更多地被戴在了高斯的脑门上，目前数学界通行的用语是正态分布、高斯分布, 两者并用。
 
@@ -336,7 +336,7 @@ _ &#8212;Karl Pearson (1920) _
   <strong>误差分布导出的极大似然估计 = 算术平均值</strong>
 </p>
 
-设真值为 $\theta$, $x\_1, \cdots, x\_n$为n次独立测量值, 每次测量的误差为$ e\_i = x\_i &#8211; \theta $，假设误差$e_i$的密度函数为 $f(e)$, 则测量值的联合概率为$n$个误差的联合概率，记为
+设真值为 $\theta$, $x\_1, \cdots, x\_n$为n次独立测量值, 每次测量的误差为$ e\_i = x\_i – \theta $，假设误差$e_i$的密度函数为 $f(e)$, 则测量值的联合概率为$n$个误差的联合概率，记为
   
 \begin{align*}
   
@@ -459,20 +459,20 @@ F(v) & = & \displaystyle \left(\frac{m}{2\pi kT}\right)^{3/2} e^{-\frac{mv^2}{2k
 
 **5.3 兰登(1941)的推导**
 
-第三条道是一位电气工程师兰登(Vernon D. Landon)给出的。1941 年， 兰登研究通信电路中的噪声电压，通过分析经验数据他发现噪声电压的分布模式很相似，不同的是分布的层级，而这个层级可以使用方差 $\sigma^2$ 来刻画。因此他推理认为噪声电压的分布密度函数形式是 $p(x;\sigma^2)$。假设原来的电压为X, 累加了一个相对其方差 $\sigma$而言很微小的误差扰动 $\epsilon$， $\epsilon$ 的概率密度是 $q(e)$, 那么新的噪声电压是 $X&#8217; = X + \epsilon$。 兰登提出了如下的准则
+第三条道是一位电气工程师兰登(Vernon D. Landon)给出的。1941 年， 兰登研究通信电路中的噪声电压，通过分析经验数据他发现噪声电压的分布模式很相似，不同的是分布的层级，而这个层级可以使用方差 $\sigma^2$ 来刻画。因此他推理认为噪声电压的分布密度函数形式是 $p(x;\sigma^2)$。假设原来的电压为X, 累加了一个相对其方差 $\sigma$而言很微小的误差扰动 $\epsilon$， $\epsilon$ 的概率密度是 $q(e)$, 那么新的噪声电压是 $X’ = X + \epsilon$。 兰登提出了如下的准则
 
   1. 随机噪声具有稳定的分布模式
   2. 累加一个微小的随机噪声，不改变其稳定的分布模式，只改变分布的层级(用方差度量)
 
-用数学的语言描述: 如果 $$X \sim p(x;\sigma^2), \epsilon \sim q(e), X&#8217;= X+\epsilon$$ 则有 $$X&#8217; \sim p(x;\sigma^2 + var(\epsilon))$$
+用数学的语言描述: 如果 $$X \sim p(x;\sigma^2), \epsilon \sim q(e), X’= X+\epsilon$$ 则有 $$X’ \sim p(x;\sigma^2 + var(\epsilon))$$
 
-现在我们来推导函数$p(x;\sigma^2)$ 应该长成啥样。按照两个随机变量和的分布的计算方式， $X&#8217;$ 的分布密度函数将是 $X$ 的分布密度函数和 $\epsilon$的分布密度函数的卷积，即有
+现在我们来推导函数$p(x;\sigma^2)$ 应该长成啥样。按照两个随机变量和的分布的计算方式， $X’$ 的分布密度函数将是 $X$ 的分布密度函数和 $\epsilon$的分布密度函数的卷积，即有
   
-$$ f(x&#8217;) = \int p(x&#8217;-e; \sigma^2)q(e)de $$
+$$ f(x’) = \int p(x’-e; \sigma^2)q(e)de $$
   
-把 $p(x&#8217;-e; \sigma^2)$ 在$x&#8217;$处做泰勒级数展开(为了方便，展开后把自变量由 $x&#8217;$ 替换为 $x$)， 上式可以展开为
+把 $p(x’-e; \sigma^2)$ 在$x’$处做泰勒级数展开(为了方便，展开后把自变量由 $x’$ 替换为 $x$)， 上式可以展开为
   
-$$ f(x) = p(x; \sigma^2) &#8211; \frac{\partial p(x; \sigma^2)}{\partial x} \int eq(e)de +
+$$ f(x) = p(x; \sigma^2) – \frac{\partial p(x; \sigma^2)}{\partial x} \int eq(e)de +
   
 \frac{1}{2} \frac{\partial^2 p(x; \sigma^2)}{\partial x^2} \int e^2q(e)de + \cdots
   
@@ -480,7 +480,7 @@ $$
   
 将$p(x; \sigma^2)$简记为$p$,则有
   
-$$ f(x) = p &#8211; \frac{\partial p}{\partial x} \overline{\epsilon} +
+$$ f(x) = p – \frac{\partial p}{\partial x} \overline{\epsilon} +
   
 \frac{1}{2} \frac{\partial^2 p}{\partial x^2}\overline{\epsilon^2} + o(\overline{\epsilon^2})
   
@@ -496,7 +496,7 @@ f(x) = p + \frac{1}{2} \frac{\partial^2 p}{\partial x^2}\overline{\epsilon^2} + 
   
 \end{equation}
 
-对于新的噪声电压 $X&#8217; = X + \epsilon$， 方差由$\sigma^2$ 增加为 $\sigma^2 + var(\epsilon) = \sigma^2 + \overline{\epsilon^2}$，所以按照兰登的分布密度函数模式不变的假设， 新的噪声电压的分布密度函数应该为 $f(x) = p(x; \sigma^2 + \overline{\epsilon^2})$。把$p(x; \sigma^2 + \overline{\epsilon^2})$ 在 $\sigma^2$ 处做泰勒级数展开，得到
+对于新的噪声电压 $X’ = X + \epsilon$， 方差由$\sigma^2$ 增加为 $\sigma^2 + var(\epsilon) = \sigma^2 + \overline{\epsilon^2}$，所以按照兰登的分布密度函数模式不变的假设， 新的噪声电压的分布密度函数应该为 $f(x) = p(x; \sigma^2 + \overline{\epsilon^2})$。把$p(x; \sigma^2 + \overline{\epsilon^2})$ 在 $\sigma^2$ 处做泰勒级数展开，得到
   
 \begin{equation}
   
@@ -534,9 +534,9 @@ $$H(p) = -\int p(x)\log p(x) dx$$
 
 考虑两个概率分布 $p(x)$和$q(x)$，使用不等式 $\log x \le (x-1) $, 得
   
-$$ \int p(x) \log \frac{q(x)}{p(x)} dx \le \int p(x) (\frac{q(x)}{p(x)} &#8211; 1) dx
+$$ \int p(x) \log \frac{q(x)}{p(x)} dx \le \int p(x) (\frac{q(x)}{p(x)} – 1) dx
   
-= \int q(x) dx &#8211; \int p(x) dx = 0 $$
+= \int q(x) dx – \int p(x) dx = 0 $$
   
 于是
   
@@ -560,7 +560,7 @@ H(p) \le -\int p(x) \log q(x) dx
   
 \begin{array}{lll}
   
-H(p) & \le &\displaystyle &#8211; \int p(x) \log \left\{ \frac{1}{\sqrt{2\pi}\sigma}
+H(p) & \le &\displaystyle – \int p(x) \log \left\{ \frac{1}{\sqrt{2\pi}\sigma}
   
 e^{-\frac{{(x-\mu})^2}{2\sigma^2}}\right\} dx \\
   
@@ -588,6 +588,6 @@ $$ H(p) \le \frac{1}{2\sigma^2}\sigma^2 + \log \sqrt{2\pi}\sigma = \frac{1}{2} +
 
  _Physicists believe that the Gaussian law has been proved in mathematics while mathematicians think that it was experimentally established in physics._ (_物理学家认为高斯分布已经在数学上得到证明，而数学家则认为高斯分布在物理试验中得__到确认_。)
 
-&#8212; Henri Poincaré
+— Henri Poincaré
 
 &nbsp;

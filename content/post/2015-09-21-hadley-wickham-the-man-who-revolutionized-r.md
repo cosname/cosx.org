@@ -20,7 +20,7 @@ slug: hadley-wickham-the-man-who-revolutionized-r
 <span style="color: #808080;"><a href="http://had.co.nz/">Hadley Wickham</a> 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 <code>ggplot2</code> 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 <code>plyr</code>、<code>reshape2</code> 等。本文取自<a href="http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/" target="_blank">PRICEONOMICS</a>.</span>
 
 <p style="text-align: right;">
-  <a href="https://cos.name/wp-content/uploads/2015/09/HadleyObama.png"><img class="aligncenter size-full wp-image-11357" src="https://cos.name/wp-content/uploads/2015/09/HadleyObama.png" alt="HadleyObama" width="795" height="598" srcset="https://cos.name/wp-content/uploads/2015/09/HadleyObama.png 795w, https://cos.name/wp-content/uploads/2015/09/HadleyObama-300x226.png 300w, https://cos.name/wp-content/uploads/2015/09/HadleyObama-500x376.png 500w" sizes="(max-width: 795px) 100vw, 795px" /></a>
+  <a href="https://cos.name/wp-content/uploads/2015/09/HadleyObama.png">![HadleyObama](https://cos.name/wp-content/uploads/2015/09/HadleyObama.png)</a>
 </p>
 
 <p style="text-align: center;">
@@ -57,7 +57,7 @@ Wickham出生在新西兰汉密尔顿的一个统计学世家。他父亲<a href
 
 从第一份工作开始，Wickham就开始反思存储和操纵数据是否存在一种更好的办法。“对于找到更好的解决之道，我一直颇为自信”，他解释说，“并且这个办法可以造福他人。”虽然彼时的他依然在懵懂中，但正在那时他“内化”了<a href="https://en.wikipedia.org/wiki/Third_normal_form" target="_blank">第三范式</a>（Third Normal Form）的概念，这将在他未来的工作中扮演重要的角色。第三范式的本质是一种降低数据冗余且保证数据一致性的数据构架方法。Wickham把这种数据叫做“干净”（tidy）数据，而他的工具推广了并依赖于这种数据结构。
 
-[<img class="aligncenter size-full wp-image-11358" src="https://cos.name/wp-content/uploads/2015/09/RLogo.png" alt="RLogo" width="200" height="152" />](https://cos.name/wp-content/uploads/2015/09/RLogo.png)
+![RLogo](https://cos.name/wp-content/uploads/2015/09/RLogo.png)
 
 <p style="text-align: center;">
   <em>R的标志，该语言的革命性演化部分归功于Hadley Wickham</em>
@@ -83,7 +83,7 @@ Wickham显然被reshape的成功所鼓舞。他开发这个工具包正是因为
 
 在幻灭之旅上，Wickham开发了ggplot2这个工具包。迄今为止，该工具包已经被下载了几百万次，它不仅是Wickham最成功的作品，也改变了许多人对于数据可视化的观念。ggplot2的巨大成功也促使他离开学术界去<a href="https://www.rstudio.com/" target="_blank">Rstudio</a>担任首席科学家，从而专心致志地改进R。（Rstudio是R语言最受欢迎的集成开发环境的盈利开发机构。）
 
-[<img class="aligncenter size-full wp-image-11359" src="https://cos.name/wp-content/uploads/2015/09/HadleyObama2.png" alt="HadleyObama2" width="410" height="602" srcset="https://cos.name/wp-content/uploads/2015/09/HadleyObama2.png 410w, https://cos.name/wp-content/uploads/2015/09/HadleyObama2-204x300.png 204w, https://cos.name/wp-content/uploads/2015/09/HadleyObama2-341x500.png 341w" sizes="(max-width: 410px) 100vw, 410px" />](https://cos.name/wp-content/uploads/2015/09/HadleyObama2.png)
+![HadleyObama2](https://cos.name/wp-content/uploads/2015/09/HadleyObama2.png)
 
 <p style="text-align: center;">
   <em>Hadley Wickham</em><em>放了一个用</em><em>ggplot2</em><em>画的图片。<a href="https://github.com/hadley/ggplot2/wiki/Crime-in-Downtown-Houston,-Texas-:-Combining-ggplot2-and-Google-Maps" target="_blank">图片</a>由</em><em>David Kahle</em><em>和</em><em>Garrett Grolemund</em><em>提供</em>
@@ -93,7 +93,7 @@ ggplot2 包是以统计学家Leland Wilkinson 的“图形语法”为基础，�
 
 在图形语法背后的概念是相当抽象的。最大的想法是图是由“几何对象”（我们在图表上看到的一个点或柱子的图形元素）和“图形属性”（关于其中几何形状被放置的方向）组成的。这听起来可能不是革命性的，但由Wickham实现的这个概念使得成千上万的人可以更加容易地画图。问答网站<a href="http://stackoverflow.com/tags/ggplot2/info" target="_blank">Stack Overflow</a>上已经有近9000个问题标记为ggplot2，甚至说 ggplot2 在R中让作图变得更“好玩”。用 ggplot2 画的图已经出现在了<a href="http://www.nature.com/" target="_blank">Nature</a>，[FiveThirtyEight](http://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/)和<a href="http://www.nytimes.com/interactive/sports/football/2013-fantasy-football-tier-charts-QB.html?ref=football&_r=1&" target="_blank">纽约时报</a>上。
 
-[<img class="aligncenter size-full wp-image-11360" src="https://cos.name/wp-content/uploads/2015/09/China.png" alt="China" width="1024" height="744" srcset="https://cos.name/wp-content/uploads/2015/09/China.png 1024w, https://cos.name/wp-content/uploads/2015/09/China-300x218.png 300w, https://cos.name/wp-content/uploads/2015/09/China-500x363.png 500w" sizes="(max-width: 1024px) 100vw, 1024px" />](https://cos.name/wp-content/uploads/2015/09/China.png)
+![China](https://cos.name/wp-content/uploads/2015/09/China.png)
 
 <p style="text-align: center;">
   <em>Hadley Wickham</em><em>手里拿着一本关于他的可视化软件包</em><em>ggplot2 </em><em>的中文译本</em><em>;</em><em>图片来源于</em><em><a href="http://statr.me/2013/09/a-conversation-with-hadley-wickham/" target="_blank">statr</a></em>
@@ -105,7 +105,7 @@ ggplot2 包是以统计学家Leland Wilkinson 的“图形语法”为基础，�
 
 下面的图标展示了Hadley的超过2000次下载的17个包（有时候它们被戏称为“<a href="http://barryrowlingson.github.io/hadleyverse/#1" target="_blank">Hadley宇宙</a>”）的发布日期和下载的数量。这些下载数字少得可怜，因为它们只反映了从2012年年底其中一个流行的下载来源的数据。并且，是的，这个图是用Hadley的包（<a href="http://ggvis.rstudio.com/" target="_blank">ggvis</a>）绘制的。
 
-_                                          [<img class="aligncenter size-full wp-image-11361" src="https://cos.name/wp-content/uploads/2015/09/Chart.png" alt="Chart" width="918" height="597" srcset="https://cos.name/wp-content/uploads/2015/09/Chart.png 918w, https://cos.name/wp-content/uploads/2015/09/Chart-300x195.png 300w, https://cos.name/wp-content/uploads/2015/09/Chart-500x325.png 500w" sizes="(max-width: 918px) 100vw, 918px" />](https://cos.name/wp-content/uploads/2015/09/Chart.png)_
+_                                          ![Chart](https://cos.name/wp-content/uploads/2015/09/Chart.png)_
 
 <p style="text-align: center;">
   <em>Dan Kopf, Priceonomics；</em><em>数据来源：</em><a href="https://github.com/metacran/cranlogs"><em>cranlogs</em></a>
