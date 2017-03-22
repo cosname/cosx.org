@@ -39,7 +39,7 @@ R语言中绘制地图的思路也是由于2的获取方式不一样而分开的
 
   好，我们先来按照第一种思路来画几个图：
 
-#  1、 画世界地图
+##  1、 画世界地图
 
   如果是首次使用，需要在R中装载maps包```install.packages('maps')```，这个包中存有世界地图和美国地图的地图数据，所以，几行代码便可以画出世界地图。
 
@@ -54,11 +54,11 @@ title("世界地图")
 
 输出为：
 
- ![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
+![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
 
   无比绚丽的世界，引无数骚客竞折腰啊……
 
-# 2、 画美国地图
+## 2、 画美国地图
 
   同样在maps包中包含了美国地图和美国各州郡的详细地图数据，同样的，也可以用简单的代码画出美国地图，便于我们使用。
 
@@ -93,7 +93,7 @@ title("美国三州地图")
 
 三州鼎力！！
 
-# 3、 画中国地图
+## 3、 画中国地图
 
 上述的maps包中并没有中国地图的数据 ，在另外一个包mapdata中有中国地图的数据（比较旧的数据）。
 
@@ -164,8 +164,6 @@ title(" 中国地图")
 另，ggmap包中不仅仅可以调取Google Map的数据，还可以调取OpenStreetMap (‘osm’)、Stamen Maps (‘stamen’)和CloudMade maps (‘cloudmade’)。亲，这够用了吧。那地图的表现形式也是个性化的，有’terrain’（地势图）、’satellite’（卫星图）、’roadmap’（道路图）和 ‘hybrid’（混合）等。您自个儿选。
 
 其他的不谈了，直接画地图：
-
-## 1、中国地图
 
 ```
 library(ggmap)
