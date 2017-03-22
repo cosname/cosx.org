@@ -12,12 +12,7 @@ tags:
   - 图层
   - 图形设备
 slug: layer-graphics-device
-description: "你在用R画图的时候，是否会遇到以下的麻烦：
-
-  * 加图例或文字时总是对不准坐标，要花很多精力调整元素的位置；
-  * 某个细节出错，整幅图得重新绘制；
-  * 想要更酷的平移、拉伸、旋转操作，就好像在Gimp或Photoshop里面一样；
-  * 想更方便地使用字体，特别是中文的显示。"
+description: "你在用R画图的时候，是否会遇到以下的麻烦：加图例或文字时总是对不准坐标，要花很多精力调整元素的位置；某个细节出错，整幅图得重新绘制；想要更酷的平移、拉伸、旋转操作，就好像在Gimp或Photoshop里面一样；想更方便地使用字体，特别是中文的显示。"
 ---
 
 ![Layer图形设备配图](https://cos.name/wp-content/uploads/2011/09/Festival2.png)
@@ -33,12 +28,7 @@ description: "你在用R画图的时候，是否会遇到以下的麻烦：
 
 Layer顾名思义，指的是图层，而这个绘图设备正是采用了图层的思想。在你用Layer画图时，你可以将不同的图形元素放在不同的层上，彼此之间互不影响。例如，你可以将图例单独建立一个图层，当图例移动时，下层的图形并不会发生变化，再加上一定的鼠标操作，就可以方便地绘制出美观的图形。
 
-为了让大家能直观地感受Layer的操作，下面给出了一段Layer的操作演示视频。
-
-<center>
-  <embed src="http://player.youku.com/player.php/sid/XMzAzNDkyNTU2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash">
-  </embed>
-</center>
+为了让大家能直观地感受Layer的操作，下面给出了一段[Layer的操作演示视频](http://v.youku.com/v_show/id_XMzAzNDkyNTU2)。
 
 此外，Layer有着更方便的字体支持。在打开Layer图形设备时，你可以指定一个ttf字体文件作为图形字体的来源，如果参数为`NULL`，则图形会使用软件包自带的[文泉驿](http://wenq.org)微米黑字体。
 
