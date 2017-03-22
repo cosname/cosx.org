@@ -36,7 +36,7 @@ abline(v=0,col="red");
 可以看出，理论上应该单调递减的密度函数在0附近有明显的“陡坡”，而且不应该有密度的小于零的区域也有着正的估计值。当样本量增大时，这种现象也不会得到明显好转，下图是将样本量改为10000时的情形。
 
 ```r
-class="brush: r">set.seed(123);
+set.seed(123);
 x=rexp(10000,1);
 plot(density(x,kernel="epanechnikov"),ylim=c(0,1.2));
 lines(seq(0,8,by=0.02),dexp(seq(0,8,by=0.02),1),col="blue");
