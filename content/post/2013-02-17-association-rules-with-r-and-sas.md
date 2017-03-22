@@ -114,9 +114,9 @@ inspect(rules)
 
 \# rules with rhs containing “Survived” only
   
-rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c(“Survived=No”, “Survived=Yes”), default=”lhs”),control = list(verbose=F))
+rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c(“Survived=No”, “Survived=Yes”), default=“lhs”),control = list(verbose=F))
   
-rules.sorted <- sort(rules, by=”lift”)
+rules.sorted <- sort(rules, by=“lift”)
   
 inspect(rules.sorted)
 
@@ -232,9 +232,9 @@ lhs       rhs      support      confidence      lift
 
 如果我们减小最小支持率和置信度的阈值，则能看到更多的真相。
 
-rules <- apriori(titanic.raw, parameter = list(minlen=3, supp=0.002, conf=0.2), appearance = list(rhs=c(“Survived=Yes”), lhs=c(“Class=1st”, “Class=2nd”, “Class=3rd”, “Age=Child”, “Age=Adult”), default=”none”), control = list(verbose=F))
+rules <- apriori(titanic.raw, parameter = list(minlen=3, supp=0.002, conf=0.2), appearance = list(rhs=c(“Survived=Yes”), lhs=c(“Class=1st”, “Class=2nd”, “Class=3rd”, “Age=Child”, “Age=Adult”), default=“none”), control = list(verbose=F))
   
-rules.sorted <- sort(rules, by=”confidence”)
+rules.sorted <- sort(rules, by=“confidence”)
   
 inspect(rules.sorted)
 
@@ -266,9 +266,9 @@ library(arulesViz)
   
 plot(rules)
   
-plot(rules, method=”graph”, control=list(type=”items”))
+plot(rules, method=“graph”, control=list(type=“items”))
   
-plot(rules, method=”paracoord”, control=list(reorder=TRUE))
+plot(rules, method=“paracoord”, control=list(reorder=TRUE))
 
 对于不熟悉R的SAS用户，可以阅读以下资料学习R以及ARULES包：
   

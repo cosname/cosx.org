@@ -18,7 +18,7 @@ tags:
 slug: reproducible-research-in-statistics
 ---
 
-[box type=”warning”]警告：本文提到的工具在更新中，请暂时不要按本文的配置去做，静候LyX 2.0.3的发布。[/box]
+[box type=“warning”]警告：本文提到的工具在更新中，请暂时不要按本文的配置去做，静候LyX 2.0.3的发布。[/box]
 
 我们都痛恨统计造假。我们都对重复性的工作感到厌倦。如果你同意这两句话或这两句话适用于你的现状，那么本文将介绍一套开源、免费的工具来克服这两个问题。当然，前提是你愿意改变，这里的工具可以让这两种现象没有藏身之地，但无法改变造假和重复劳动的现实。以下为吊胃口视频（墙外观众可以看<a href="http://vimeo.com/16374405" target="_blank">Vimeo</a>；墙内看不到视频的可以任选一个链接下载本视频的AVI文件：<a href="http://www.mediafire.com/?iyp62cmyi8vmwd3" target="_blank">链接1</a>、<a href="http://www.filefactory.com/file/b422e9f/n/31632916.avi" target="_blank">链接2</a>、<a href="http://www.filedropper.com/31632916" target="_blank">链接3</a>）：
 
