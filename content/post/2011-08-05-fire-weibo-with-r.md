@@ -23,7 +23,7 @@ description: "近两年来微博这东西越来越火了，已经逐渐成了最
 
 好在几个主流的微博平台都提供了API，各种语言的SDK应运而生，而真正的分析利器R的SDK一直没有，这里不卖关子了，直接发布一个R的SDK，参见：[Rweibo中文主页](http://jliblog.com/app/rweibo)。
 
-本项目在R-Forge上开发（<https://r-forge.r-project.org/projects/rweibo/>），最新的信息发布在Rweibo中文主页上。目前的版本全部基于新浪微博，毕竟是现在最火的微博，其实几个微博的API平台大同小异，和twitter的也类似，都来自于同样的开源平台，略作改动也能支持腾讯微博等。本文就只拿新浪微博举例。
+本项目在[R-Forge](https://r-forge.r-project.org/projects/rweibo/)上开发，最新的信息发布在Rweibo中文主页上。目前的版本全部基于新浪微博，毕竟是现在最火的微博，其实几个微博的API平台大同小异，和twitter的也类似，都来自于同样的开源平台，略作改动也能支持腾讯微博等。本文就只拿新浪微博举例。
 
 CRAN上有一个twitteR包，之前普通权限还可以用的时候有些接口可以和新浪的API通用，新浪废掉普通权限只留OAuth之后，我就放弃了twitteR，开始开发Rweibo（当前版本的twitteR已经可以支持OAuth，不过很多接口的细节和新浪微博还是不一样）。
 
@@ -39,7 +39,7 @@ OAuth看上去很玄乎，其实道理非常简单。拿微博开放平台来说
 
 ```r
 registerApp("GDdmIQH6jh", "MCD8BKwGdgPHv", app_name = "test")  # 在R中注册新的应用
-roauth &lt;- createOAuth("test", "lijian001")  # 创建OAuth对象
+roauth <- createOAuth("test", "lijian001")  # 创建OAuth对象
 timeline.Friends(roauth, list(count = 5))  # 获取好友及自己的前5条最新微博
 timeline.CommentsList(roauth, list(id = 14762313082))  # 获取某条微博的评论列表
 timeline.Comments(roauth, list(count = 5))  # 获取自己发送及收到的评论
