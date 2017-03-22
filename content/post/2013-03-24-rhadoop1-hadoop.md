@@ -286,9 +286,11 @@ bin/start-all.sh
 # 检查hadoop启动是否成功
 
 ```
-jps 9362 Jps 7756 SecondaryNameNode 7531 JobTracker 7357 NameNode
+jps 9362 
+Jps 7756 SecondaryNameNode 7531 JobTracker 7357 NameNode
 
-netstat -nl Active Internet connections (only servers) Proto Recv-Q Send-Q Local Address Foreign Address State
+netstat -nl 
+Active Internet connections (only servers) Proto Recv-Q Send-Q Local Address Foreign Address State
 tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN
 tcp 0 0 0.0.0.0:5666 0.0.0.0:* LISTEN
 tcp 0 0 0.0.0.0:8649 0.0.0.0:* LISTEN
@@ -323,7 +325,8 @@ nn.qa.com:
 cd /hadoop/conan/hadoop-0.29.2
 bin/hadoop fs -mkdir /test
 bin/hadoop fs -copyFormLocal README.txt /test
-bin/hadoop fs -ls /test Found 1 items -rw-r--r-- 2 hadoop supergroup 1366 2012-08-30 02:05 /test/README.txt
+bin/hadoop fs -ls /test 
+Found 1 items -rw-r--r-- 2 hadoop supergroup 1366 2012-08-30 02:05 /test/README.txt
 ```
         
 
