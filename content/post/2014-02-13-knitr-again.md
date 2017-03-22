@@ -20,5 +20,5 @@ slug: knitr-again
   * **新书速递**：结合自己发表的文章来写书中的课题，真枪实弹，看起来应该还是一本不错的书噢。生物信息领域的童鞋可以点击新书[《R语言与Bioconductor生物信息学应用》](http://bbs.sciencenet.cn/blog-907017-762545.html)。
   * <span style="line-height: 1.5;">除非你是处女座，否则你不应该显示小于2e-16的P值。欲知详情，请点击</span><a style="line-height: 1.5;" href="https://cos.name/cn/topic/141392">处女座</a><span style="line-height: 1.5;">（为何黑的如此露骨）。</span>
   * 这位老大觉得在线抓数据太麻烦，抄起键盘就写了个[抓数据的网站](http://www.datafiddle.net)。猛人不需要解释。COS论坛中的[讨论](https://cos.name/cn/topic/144377)。
-  *  Google Trends上显示人们对数据科学家的兴趣在本月首次超过了统计学家：不知道各位有何感想?&#8211;[详情](http://flowingdata.com/2013/12/18/data-scientist-surpasses-statistician-on-google-trends/)。
+  *  Google Trends上显示人们对数据科学家的兴趣在本月首次超过了统计学家：不知道各位有何感想?–[详情](http://flowingdata.com/2013/12/18/data-scientist-surpasses-statistician-on-google-trends/)。
   * 央视也玩[大数据](http://tech.163.com/14/0126/10/9JGPM6HJ00094MOK.html)？央视今年携手百度看春运，是否你也深有感触？数据新闻，引领未来新时尚。[百度迁徙](http://qianxi.baidu.com/)。

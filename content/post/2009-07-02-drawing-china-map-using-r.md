@@ -73,7 +73,7 @@ plot(x);</pre>
 provcol=c("red","green","yellow","purple");
 plot(x,fg=getColor(x,provname,provcol,"white"));</pre>
 
-<img class="aligncenter size-large wp-image-1366" title="map00" src="https://cos.name/wp-content/uploads/2009/07/map00-e1262748931991.png" alt="map00" width="470" height="497" />
+![map00](https://cos.name/wp-content/uploads/2009/07/map00-e1262748931991.png "map00")
 
 注意`provname`一定要写地区的全称，写法可以参照下面这条命令生成的向量：
 
@@ -99,7 +99,7 @@ provcol=rgb(red=1-pop/max(pop)/2,green=1-pop/max(pop)/2,blue=0);
 plot(x,fg=getColor(x,provname,provcol,"white"),xlab="",ylab="");</pre>
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2009/07/map01.png"><img class="aligncenter size-full wp-image-1343" title="map01" src="https://cos.name/wp-content/uploads/2009/07/map01-e1262748729327.png" alt="map01" width="500" height="500" /></a>
+  <a href="https://cos.name/wp-content/uploads/2009/07/map01.png">![map01](https://cos.name/wp-content/uploads/2009/07/map01-e1262748729327.png "map01")</a>
 </p>
 
 其中颜色越深的地方代表人口数越多，反之为人口数越少。
@@ -116,7 +116,7 @@ midchina=c("河南省","山西省","湖北省","安徽省","湖南省","江西�
 plot(x,recs=getID(x,midchina),fg="green",ol="white",xlab="",
 		ylab="");</pre>
 
-<img class="aligncenter size-large wp-image-1353" title="map02" src="https://cos.name/wp-content/uploads/2009/07/map02-e1262748890424.png" alt="map02" width="500" height="500" />
+![map02](https://cos.name/wp-content/uploads/2009/07/map02-e1262748890424.png "map02")
   
 上面的`getID()`是我编写的一个功能与`getColor()`类似的函数，用来返回指定省份的ID。
 

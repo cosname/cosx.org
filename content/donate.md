@@ -40,7 +40,7 @@ menu: main
 
 ### 2009-04-20捐赠<figure id="attachment_845" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-845" title="统计之都捐赠目标（截止至2009-04-20）" alt="统计之都捐赠目标（截止至2009-04-20）" src="https://cos.name/wp-content/uploads/2009/03/donate-2009-03-16.png" width="480" height="80" srcset="https://cos.name/wp-content/uploads/2009/03/donate-2009-03-16.png 480w, https://cos.name/wp-content/uploads/2009/03/donate-2009-03-16-300x50.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/donate/)<figcaption class="wp-caption-text">统计之都捐赠目标（截止至2009-04-20）</figcaption></figure> 
+[![统计之都捐赠目标（截止至2009-04-20）](https://cos.name/wp-content/uploads/2009/03/donate-2009-03-16.png "统计之都捐赠目标（截止至2009-04-20）")](https://cos.name/donate/)<figcaption class="wp-caption-text">统计之都捐赠目标（截止至2009-04-20）</figcaption></figure> 
 
 本次捐赠目标为￥1500，用于升级网站空间，本次升级之后将逐步开放[COS论坛](https://cos.name/bbs)上传权限；到2009年03月19日，我们一共收到捐赠￥1502.05，提前完成目标。本次捐赠来源如下：
 

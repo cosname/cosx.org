@@ -21,7 +21,7 @@ slug: how-does-glm-generalize-lm-fit-and-test
 如前文如述，指数分布族的概率密度函数可以统一地写为：
 
 <p style="text-align: center;">
-  $f_Y(y;\theta,\Psi)=exp[(y\theta &#8211; b(\theta))/{\Psi} + c(y;\Psi)]$
+  $f_Y(y;\theta,\Psi)=exp[(y\theta – b(\theta))/{\Psi} + c(y;\Psi)]$
 </p>
 
 这里为了在模型中体现散布参数(dispersion parameter)$\phi$，把上述密度函数中的$\Psi$记做
@@ -71,15 +71,15 @@ $\Psi=a\_i(\phi)={\phi}/w\_i$
 如果把全模型的对数似然函数记为$l(y,\phi|y)$，把目标模型的对数似然函数记为$l({\hat {\mu}},\phi|y)$，那么目标模型与全模型在拟合优度上的偏离的定义可写成$2(l(y,\phi|y)-l({\hat {\mu}},\phi|y))$。再结合观测值的独立性假设和指数散布族的假设，那么上述偏离的定义可以简化为：
 
 <p style="text-align: center;">
-  $\sum_i 2w_i(y_i({\hat {\theta}_i} &#8211; {\tilde {\theta}_i}) &#8211; b({\tilde {\theta}_i}) + b({\hat {\theta}_i})) /{\phi}$
+  $\sum_i 2w_i(y_i({\hat {\theta}_i} – {\tilde {\theta}_i}) – b({\tilde {\theta}_i}) + b({\hat {\theta}_i})) /{\phi}$
 </p>
 
 其中$a\_i(\phi)={\phi}/w\_i$，$\tilde {\theta}$是全模型下的参数估计值，$\hat {\theta}$是目标模型下的参数估计值。如果把上式写成$D(y,\hat {\mu})/{\phi}$，那么$D(y,\hat {\mu})$称为偏差(Deviance)，$D(y,\hat {\mu})/{\phi}$则称为标准化偏差(scaled deviace)。
   
-此外，皮尔逊卡方统计量(Pearson&#8217;s chi-square statistics)：
+此外，皮尔逊卡方统计量(Pearson’s chi-square statistics)：
 
 <p style="text-align: center;">
-  $X^2={\sum_i (y_i &#8211; {{\hat \mu}_i})^2 \over Var({\hat {\mu}}_i)}$
+  $X^2={\sum_i (y_i – {{\hat \mu}_i})^2 \over Var({\hat {\mu}}_i)}$
 </p>
 
 也是衡量模型偏离程度(discrepancy)的统计量之一，在一些场合可以做为偏差的替代选择。
@@ -88,7 +88,7 @@ $\Psi=a\_i(\phi)={\phi}/w\_i$
 
 广义线性模型的假设检验可以分为两种：一是检验目标模型相对于数据或预测值的拟合有效性的检验(goodness of fit test)；另外一种则是对“大”模型以及对“大”模型的参数施加一定的线性约束(linear restrictions)之后得到的“小”模型之间的拟合优度比较检验。直观上的理解就是，“大”模型具有更多的参数，即从参数的线性约束总可把一个或多个参数用其他参数的线性组合来表示，然后代入“大”模型，从而参数的个数减少，派生出所谓的“小”模型，也就是说“大”和“小”并非任意的，而是具有一种派生关系(nested models)。如果把全模型认为是“大”模型，而目标模型是“小”模型，那么上述两种检验的本质是相同的。因而假设检验的零假设(null hypothsis)可以统一且直观地设定为：“小”模型(目标模型)是正确的模型。
 
-如果把大模型记做$\Omega$，把小模型记做$\omega$，其标准化偏差之差记做$D\_{\omega} &#8211; D\_{\Omega}$，其自由度之差记做$df\_{\omega}-df\_{\Omega}$，则构造如下的统计量：${(D\_{\omega} &#8211; D\_{\Omega})/(df\_{\omega}-df\_{\Omega})} \over {\phi}$。
+如果把大模型记做$\Omega$，把小模型记做$\omega$，其标准化偏差之差记做$D\_{\omega} – D\_{\Omega}$，其自由度之差记做$df\_{\omega}-df\_{\Omega}$，则构造如下的统计量：${(D\_{\omega} – D\_{\Omega})/(df\_{\omega}-df\_{\Omega})} \over {\phi}$。
 
 当$\phi$是已知常数时，比如泊松和二项分布的情况下$\phi=1$，上述统计量在零假设下渐近地(asymptotically)服从卡方分布(正态分布时正好是卡方分布)。当$\phi$未知时，通常需要用估计值代替。最常用的估计值是$\hat {\phi}=X^2/(n-p)$这里n是数据中观测值的数量，p是目标模型的参数个数。此时上述的统计量在零假设下近似地(approximately)服从F分布(正态分布时严格服从F分布)。注意上述两种情况下，渐近和近似的区别。
 

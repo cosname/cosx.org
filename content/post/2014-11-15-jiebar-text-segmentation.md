@@ -127,4 +127,4 @@ GitHub：<https://github.com/qinwf/jiebaR>
   
 Cppjieba：<https://github.com/aszxqw/cppjieba>
   
-&#8220;结巴&#8221;中文分词：<https://github.com/fxsjy/jieba>
+“结巴”中文分词：<https://github.com/fxsjy/jieba>
