@@ -17,7 +17,7 @@ slug: cos-salon-15th-guangzhou
 
 广州COS沙龙第三期（总十五期）于2013年10月19日在中山大学南校区数学楼415讲学厅举行，本期沙龙由中山大学统计科学系及统计之都主办，邀请了来自SAS公司JMP事业部华南区业务部业务拓展经理王子欣女士和来自Oracle公司的韩锷春先生作为嘉宾，分别就JMP可视化统计学习和微博营销数字化分析进行了专题介绍。本次沙龙共吸引了数十位对数据分析和数据挖掘有兴趣的高校学生和来自博汇数码、唯品会等公司的从业人员。
 
-[<img class="aligncenter size-full wp-image-9063" alt="王子欣" src="https://cos.name/wp-content/uploads/2013/11/王子欣.png" width="369" height="277" srcset="https://cos.name/wp-content/uploads/2013/11/王子欣.png 369w, https://cos.name/wp-content/uploads/2013/11/王子欣-300x225.png 300w" sizes="(max-width: 369px) 100vw, 369px" />](https://cos.name/wp-content/uploads/2013/11/王子欣.png)
+![王子欣](https://cos.name/wp-content/uploads/2013/11/王子欣.png)
 
 <p align="center">
   王子欣女士自我介绍
@@ -28,14 +28,14 @@ slug: cos-salon-15th-guangzhou
 &nbsp;
 
 <p align="center">
-  <a href="https://cos.name/wp-content/uploads/2013/11/王子欣女士的讲座.png"><a href="https://cos.name/wp-content/uploads/2013/11/王子欣女士的讲座.png"><img class="aligncenter size-full wp-image-9064" alt="王子欣女士的讲座" src="https://cos.name/wp-content/uploads/2013/11/王子欣女士的讲座.png" width="353" height="265" srcset="https://cos.name/wp-content/uploads/2013/11/王子欣女士的讲座.png 353w, https://cos.name/wp-content/uploads/2013/11/王子欣女士的讲座-300x225.png 300w" sizes="(max-width: 353px) 100vw, 353px" /></a></a>王子欣女士的主题展示
+  <a href="https://cos.name/wp-content/uploads/2013/11/王子欣女士的讲座.png"><a href="https://cos.name/wp-content/uploads/2013/11/王子欣女士的讲座.png">![王子欣女士的讲座](https://cos.name/wp-content/uploads/2013/11/王子欣女士的讲座.png)</a></a>王子欣女士的主题展示
 </p>
 
 随后，韩锷春先生向大家介绍了微博营销数字化的初步分析。韩先生是Oracle的高级经理，华南理工大学硕士、香港科技大学MBA，有超过10年软件开发、项目管理、产品管理及技术推广经验。他的主题演讲以个人的研究实践为主体，基于R语言展现了文本分析和数据挖掘技术在微博数据分析中的初步应用，其主要内容涉及企业品牌、市场活动的口碑监测及粉丝特征分析等。韩先生坦言目前研究结果并不理想，在判断微博情感倾向方面的准确率不高，其难点在于词典的完善及中文文本分析算法的研究。 韩先生演讲的PPT可以在此[下载](http://www.dataapple.net/wp-content/uploads/2013/10/WeiboBasicAnalysisWithR.pdf)，或者访问他的博客 <http://www.DataApple.Net>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-9062" alt="韩" src="https://cos.name/wp-content/uploads/2013/11/韩.png" width="370" height="278" srcset="https://cos.name/wp-content/uploads/2013/11/韩.png 370w, https://cos.name/wp-content/uploads/2013/11/韩-300x225.png 300w" sizes="(max-width: 370px) 100vw, 370px" />](https://cos.name/wp-content/uploads/2013/11/韩.png)
+![韩](https://cos.name/wp-content/uploads/2013/11/韩.png)
 
 <p align="center">
   韩锷春先生的主题展示
@@ -45,7 +45,7 @@ slug: cos-salon-15th-guangzhou
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-9060" alt="观众" src="https://cos.name/wp-content/uploads/2013/11/观众.png" width="336" height="251" srcset="https://cos.name/wp-content/uploads/2013/11/观众.png 336w, https://cos.name/wp-content/uploads/2013/11/观众-300x224.png 300w" sizes="(max-width: 336px) 100vw, 336px" />](https://cos.name/wp-content/uploads/2013/11/观众.png)
+![观众](https://cos.name/wp-content/uploads/2013/11/观众.png)
 
 <p align="center">
   济济一堂的观众

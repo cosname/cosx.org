@@ -15,15 +15,15 @@ slug: data-mining-1-lasso
 
 **目录：**
   
-&#8212; 模型简介
+— 模型简介
   
-&#8212; 线性回归
+— 线性回归
   
-&#8212; Logistic回归
+— Logistic回归
   
-&#8212; Elstic Net模型家族简介
+— Elstic Net模型家族简介
   
-&#8212; 学习资料
+— 学习资料
 
 <!--more-->
 
@@ -58,15 +58,15 @@ load("LinearExample.RData")</code></pre>
 
 参数<code style="background-color: whitesmoke;">family</code>规定了回归模型的类型:
   
-&#8212; <code style="background-color: whitesmoke;">family="gaussian"</code> 适用于一维连续因变量(univariate)
+— <code style="background-color: whitesmoke;">family="gaussian"</code> 适用于一维连续因变量(univariate)
   
-&#8212; <code style="background-color: whitesmoke;">family="mgaussian"</code> 适用于多维连续因变量(multivariate)
+— <code style="background-color: whitesmoke;">family="mgaussian"</code> 适用于多维连续因变量(multivariate)
   
-&#8212; <code style="background-color: whitesmoke;">family="poisson"</code> 适用于非负次数因变量(count)
+— <code style="background-color: whitesmoke;">family="poisson"</code> 适用于非负次数因变量(count)
   
-&#8212; <code style="background-color: whitesmoke;">family="binomial"</code> 适用于二元离散因变量(binary)
+— <code style="background-color: whitesmoke;">family="binomial"</code> 适用于二元离散因变量(binary)
   
-&#8212; <code style="background-color: whitesmoke;">family="multinomial"</code> 适用于多元离散因变量(category)
+— <code style="background-color: whitesmoke;">family="multinomial"</code> 适用于多元离散因变量(category)
 
 参数<code style="background-color: whitesmoke;">nlambda=50</code>让算法自动挑选50个不同的λ值，拟合出50个系数不同的模型。<code style="background-color: whitesmoke;">alpha=1</code>输入α值，1是它的默认值。 值得注意的是，**glmnet**只能接受数值矩阵作为模型输入，如果自变量中有离散变量的话，需要把这一列离散变量转化为几列只含有0和1的向量，这个过程叫做One Hot Encoding。通过下面这个小例子，你可以了解One Hot Encoding的原理以及方法:
 
@@ -179,7 +179,7 @@ model.matrix(~., df)</code></pre>
 
 <pre><code class="r">plot(fit, xvar="lambda", label=TRUE)</code></pre>
 
-[<img class="aligncenter size-full wp-image-13194" src="https://cos.name/wp-content/uploads/2016/10/1.png" alt="1" width="667" height="448" srcset="https://cos.name/wp-content/uploads/2016/10/1.png 667w, https://cos.name/wp-content/uploads/2016/10/1-300x201.png 300w, https://cos.name/wp-content/uploads/2016/10/1-500x336.png 500w" sizes="(max-width: 667px) 100vw, 667px" />](https://cos.name/wp-content/uploads/2016/10/1.png)
+![1](https://cos.name/wp-content/uploads/2016/10/1.png)
   
 图中的每一条曲线代表了每一个自变量系数的变化轨迹，纵坐标是系数的值，下横坐标是log⁡(λ)，上横坐标是此时模型中非零系数的个数。我们可以看到，黑线代表的自变量1在λ值很大时就有非零的系数，然后随着λ值变小不断变大。我们还可以尝试用<code style="background-color: whitesmoke;">xvar=“norm”</code>和<code style="background-color: whitesmoke;">xvar=“dev”</code>切换下横坐标。
 
@@ -200,7 +200,7 @@ predict(fit, newx=nx, s=c(fit$lambda[16],0.1))</code></pre>
 <pre><code class="r">lfit=glmnet(x, y, lower=-.7, upper=.5)
 plot(lfit, xvar="lambda", label=TRUE)</code></pre>
 
-[<img class="aligncenter size-full wp-image-13195" src="https://cos.name/wp-content/uploads/2016/10/2.png" alt="2" width="673" height="455" srcset="https://cos.name/wp-content/uploads/2016/10/2.png 673w, https://cos.name/wp-content/uploads/2016/10/2-300x203.png 300w, https://cos.name/wp-content/uploads/2016/10/2-500x338.png 500w" sizes="(max-width: 673px) 100vw, 673px" />](https://cos.name/wp-content/uploads/2016/10/2.png)
+![2](https://cos.name/wp-content/uploads/2016/10/2.png)
   
 上限与下限可以是一个值，也可以是一个向量，向量的每一个值作为对应自变量的参数上下限。有时，在建模之前我们就想凸显某几个自变量的作用，此时我们可以调整惩罚参数。每个自变量的默认惩罚参数是1，把其中的某几个量设为0将使得相应的自变量不遭受任何惩罚:
 
@@ -209,7 +209,7 @@ p.fac[c(5, 10, 15)] = 0
 pfit = glmnet(x, y, penalty.factor=p.fac)
 plot(pfit, xvar="lambda", label = TRUE)</code></pre>
 
-[<img class="aligncenter size-full wp-image-13196" src="https://cos.name/wp-content/uploads/2016/10/3.png" alt="3" width="666" height="456" srcset="https://cos.name/wp-content/uploads/2016/10/3.png 666w, https://cos.name/wp-content/uploads/2016/10/3-300x205.png 300w, https://cos.name/wp-content/uploads/2016/10/3-500x342.png 500w" sizes="(max-width: 666px) 100vw, 666px" />](https://cos.name/wp-content/uploads/2016/10/3.png)
+![3](https://cos.name/wp-content/uploads/2016/10/3.png)
   
 我们可以看到，自变量5/10/15的系数一直不为0，而其他的参数系数绝对值随着λ值变小而变大。
 
@@ -227,15 +227,15 @@ plot(pfit, xvar="lambda", label = TRUE)</code></pre>
 
 这里的<code style="background-color: whitesmoke;">type.measure</code>是用来指定交叉验证选取模型时希望最小化的目标参量，对于Logistic回归有以下几种选择:
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=deviance</code> 使用deviance，即-2倍的Log-likelihood
+— <code style="background-color: whitesmoke;">type.measure=deviance</code> 使用deviance，即-2倍的Log-likelihood
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=mse</code> 使用拟合因变量与实际应变量的mean squred error
+— <code style="background-color: whitesmoke;">type.measure=mse</code> 使用拟合因变量与实际应变量的mean squred error
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=mae</code> 使用mean absolute error
+— <code style="background-color: whitesmoke;">type.measure=mae</code> 使用mean absolute error
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=class</code> 使用模型分类的错误率(missclassification error)
+— <code style="background-color: whitesmoke;">type.measure=class</code> 使用模型分类的错误率(missclassification error)
   
-&#8212; <code style="background-color: whitesmoke;">type.measure=auc</code> 使用area under the ROC curve，是现在最流行的综合考量模型性能的一种参数
+— <code style="background-color: whitesmoke;">type.measure=auc</code> 使用area under the ROC curve，是现在最流行的综合考量模型性能的一种参数
 
 除此之外，在<code style="background-color: whitesmoke;">cv.glmnet()</code>里我们还可以用<code style="background-color: whitesmoke;">nfolds</code>指定fold数，或者用<code style="background-color: whitesmoke;">foldid</code>指定每个fold的内容。因为每个fold间的计算是独立的，我们还可以考虑运用并行计算来提高运算效率，使用<code style="background-color: whitesmoke;">parallel=TRUE</code>可以开启这个功能。但是我们需要先装载package **doParallel**。 下面我们给出在Windows操作系统和Linux操作系统下开启并行计算的示例:
 
@@ -254,7 +254,7 @@ stopImplicitCluster()</code></pre>
 
 <pre><code class="r">plot(cvfit)</code></pre>
 
-[<img class="aligncenter size-full wp-image-13197" src="https://cos.name/wp-content/uploads/2016/10/4.png" alt="4" width="657" height="441" srcset="https://cos.name/wp-content/uploads/2016/10/4.png 657w, https://cos.name/wp-content/uploads/2016/10/4-300x201.png 300w, https://cos.name/wp-content/uploads/2016/10/4-500x336.png 500w" sizes="(max-width: 657px) 100vw, 657px" />](https://cos.name/wp-content/uploads/2016/10/4.png)
+![4](https://cos.name/wp-content/uploads/2016/10/4.png)
   
 因为交叉验证，对于每一个λ值，在红点所示目标参量的均值左右，我们可以得到一个目标参量的置信区间。两条虚线分别指示了两个特殊的λ值:
 
@@ -275,15 +275,15 @@ stopImplicitCluster()</code></pre>
 
 这里的<code style="background-color: whitesmoke;">type</code>有以下几种选择:
   
-&#8212; <code style="background-color: whitesmoke;">type=link</code> 给出线性预测值，即进行Logit变换之前的值
+— <code style="background-color: whitesmoke;">type=link</code> 给出线性预测值，即进行Logit变换之前的值
   
-&#8212; <code style="background-color: whitesmoke;">type=response</code> 给出概率预测值，即进行Logit变换之后的值
+— <code style="background-color: whitesmoke;">type=response</code> 给出概率预测值，即进行Logit变换之后的值
   
-&#8212; <code style="background-color: whitesmoke;">type=class</code> 给出0/1预测值
+— <code style="background-color: whitesmoke;">type=class</code> 给出0/1预测值
   
-&#8212; <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时的模型系数
+— <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时的模型系数
   
-&#8212; <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时，不为零模型系数的下标
+— <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时，不为零模型系数的下标
 
 另外，当已有了一个模型之后，我们又得到了几个新的自变量，如果想知道这些新变量能否在第一个模型的基础上提高模型性能，可以把第一个模型的预测因变量作为一个向量放到函数选项<code style="background-color: whitesmoke;">offset</code>中，再用<code style="background-color: whitesmoke;">glmnet</code>或者<code style="background-color: whitesmoke;">cv.glmnet</code>进行拟合。
 
@@ -291,11 +291,11 @@ stopImplicitCluster()</code></pre>
 
 在这一节我们会了解一些关于Elastic Net模型家族的理论。首先我们先来看看一般线性Elastic Net模型的目标函数:
 
-[<img class="aligncenter size-full wp-image-13200" src="https://cos.name/wp-content/uploads/2016/10/公式.png" alt="%e5%85%ac%e5%bc%8f" width="332" height="110" srcset="https://cos.name/wp-content/uploads/2016/10/公式.png 332w, https://cos.name/wp-content/uploads/2016/10/公式-300x99.png 300w" sizes="(max-width: 332px) 100vw, 332px" />](https://cos.name/wp-content/uploads/2016/10/公式.png)
+![%e5%85%ac%e5%bc%8f](https://cos.name/wp-content/uploads/2016/10/公式.png)
   
 目标函数的第一行与传统线性回归模型完全相同，即我们希望得到相应的自变量系数β，以此最小化实际因变量y与预测应变量βx之间的误差平方和。而线性Elastic Net与线性回归的不同之处就在于有无第二行的这个约束，线性Elastic Net希望得到的自变量系数是在由t控制的一个范围内。这一约束也是Elastic Net模型能进行复杂度调整，LASSO回归能进行变量筛选和复杂度调整的原因。我们可以通过下面的这张图来解释这个道理:
 
-[<img class="aligncenter size-full wp-image-13198" src="https://cos.name/wp-content/uploads/2016/10/5.png" alt="5" width="495" height="239" srcset="https://cos.name/wp-content/uploads/2016/10/5.png 495w, https://cos.name/wp-content/uploads/2016/10/5-300x145.png 300w" sizes="(max-width: 495px) 100vw, 495px" />](https://cos.name/wp-content/uploads/2016/10/5.png)
+![5](https://cos.name/wp-content/uploads/2016/10/5.png)
   
 先看左图，假设一个二维模型对应的系数是$\beta\_1$和$\beta\_2$，然后$\hat{\beta}$是最小化误差平方和的点，即用传统线性回归得到的自变量系数。但我们想让这个系数点必须落在蓝色的正方形内，所以就有了一系列围绕$\hat{\beta}$的同心椭圆，其中最先与蓝色正方形接触的点，就是符合约束同时最小化误差平方和的点。这个点就是同一个问题LASSO回归得到的自变量系数。因为约束是一个正方形，所以除非相切，正方形与同心椭圆的接触点往往在正方形顶点上。而顶点又落在坐标轴上，这就意味着符合约束的自变量系数有一个值是0。所以这里传统线性回归得到的是$\beta\_1$和$\beta\_2$都起作用的模型，而LASSO回归得到的是只有$\beta_2$有作用的模型，这就是LASSO回归能筛选变量的原因。
 
@@ -316,7 +316,7 @@ plot(cvfit10, main="LASSO")
 plot(cvfit0, main="Ridge")
 plot(cvfit5, main="Elastic Net")</code></pre>
 
-[<img class="aligncenter size-full wp-image-13199" src="https://cos.name/wp-content/uploads/2016/10/6.png" alt="6" width="674" height="484" srcset="https://cos.name/wp-content/uploads/2016/10/6.png 674w, https://cos.name/wp-content/uploads/2016/10/6-300x215.png 300w, https://cos.name/wp-content/uploads/2016/10/6-500x359.png 500w" sizes="(max-width: 674px) 100vw, 674px" />](https://cos.name/wp-content/uploads/2016/10/6.png)
+![6](https://cos.name/wp-content/uploads/2016/10/6.png)
   
 通过比较可以看出，Ridge回归得到的模型一直都有30个自变量，而α=0.5时的Elastic Net与LASSO回归有相似的性能。
 

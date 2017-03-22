@@ -22,7 +22,7 @@ slug: causality6-instrumental-variable
 
 $$Y\_i = \alpha + \beta D\_i + \varepsilon_i, i=1, \cdots, n. \quad \quad (1)$$
   
-一般情形下，我们假定个体间是独立的。模型虽简单，我们还是有必要做一些解释。首先，我们这里的讨论都假定 $D\_i$ 是随机变量，对应统计学中的随机设计 （random design）的情形；这和传统统计学中偏好的固定设计（fixed design）有点不同&#8212;那里假定 $D\_i$ 总是固定的。（统计学源于实验设计，那里的解释变量都是可以控制的，因此统计学教科书有假定固定设计的传统。）假定 $D\_i$ 是随机的，既符合很多社会科学和流行病学的背景，又会简化后面的讨论。另外一个问题是 $\varepsilon\_i$，它到底是什么含义？Rubin 曾经嘲笑计量经济学家的 $\varepsilon\_i$ 道：为了使得线性模型的等式成立，计量经济学家必须加的一项，就叫 $\varepsilon\_i$。批评的存在并不影响这个线性模型的应用；关键的问题在于，我们在这个 $\varepsilon_i$ 上加了什么假定呢？最根本的假定是：
+一般情形下，我们假定个体间是独立的。模型虽简单，我们还是有必要做一些解释。首先，我们这里的讨论都假定 $D\_i$ 是随机变量，对应统计学中的随机设计 （random design）的情形；这和传统统计学中偏好的固定设计（fixed design）有点不同—那里假定 $D\_i$ 总是固定的。（统计学源于实验设计，那里的解释变量都是可以控制的，因此统计学教科书有假定固定设计的传统。）假定 $D\_i$ 是随机的，既符合很多社会科学和流行病学的背景，又会简化后面的讨论。另外一个问题是 $\varepsilon\_i$，它到底是什么含义？Rubin 曾经嘲笑计量经济学家的 $\varepsilon\_i$ 道：为了使得线性模型的等式成立，计量经济学家必须加的一项，就叫 $\varepsilon\_i$。批评的存在并不影响这个线性模型的应用；关键的问题在于，我们在这个 $\varepsilon_i$ 上加了什么假定呢？最根本的假定是：
 
 $$
   
@@ -34,25 +34,25 @@ $$
 
 
   
-不同的教科书稍有不同，比如 Wooldridge 的书上假定 $E(\varepsilon\_i\mid D\_i ) =0$，很显然，这蕴含着上面两个假定。零均值的假定并不强，因为 $\alpha$ “吸收”了 $\varepsilon\_i$ 的均值；关键在第二个协方差为零的假定&#8212;它通常被称为“外生性”（exogeneity）假定。在这个假定下，我们在 (1) 的两边关于 $D\_i$ 取协方差，便可以得到：
+不同的教科书稍有不同，比如 Wooldridge 的书上假定 $E(\varepsilon\_i\mid D\_i ) =0$，很显然，这蕴含着上面两个假定。零均值的假定并不强，因为 $\alpha$ “吸收”了 $\varepsilon\_i$ 的均值；关键在第二个协方差为零的假定—它通常被称为“外生性”（exogeneity）假定。在这个假定下，我们在 (1) 的两边关于 $D\_i$ 取协方差，便可以得到：
 
 $$\text{cov}(Y\_i, D\_i )= \beta \text{var}(D_i),$$
 
 因此，$\beta = \text{cov}(Y\_i, D\_i) / \text{var}(D_i)$，我们立刻得到了矩估计：
 
-$$\widehat{\beta}\_{OLS} =  \frac{ \sum\_{i=1}^n (Y\_i &#8211; \bar{Y}) (D\_i &#8211; \bar{D}) } {  \sum\_{i=1}^n (D\_i &#8211; \bar{D})^2  }.$$
+$$\widehat{\beta}\_{OLS} =  \frac{ \sum\_{i=1}^n (Y\_i – \bar{Y}) (D\_i – \bar{D}) } {  \sum\_{i=1}^n (D\_i – \bar{D})^2  }.$$
 
 上面的估计式也是通常的最小二乘解，这里只是换了一个推导方式。如果将 (1) 看成一个数据生成的机制，在假定 (2) 下我们的确可以估计出因果作用 $\beta$.
 
 ## 二 内生性和工具变量
 
-问题的关键是假定 (2) 很多时候并不成立（$\text{cov}(D\_i, \varepsilon\_i)\neq 0$），比如，吸烟的人群和不吸烟的人群本身很不相同，参加工作培训的人可能比不参加工作培训的人有更强的找工作动机，等等。因此，包含个体 $i$ 其他所有隐藏信息的变量 $\varepsilon\_i$ 不再与 $D\_i$ 不相关了&#8212;这被称为“内生性”（endogeneity）。这个时候，最小二乘估计收敛到 $\beta + \text{cov}(D,\varepsilon)/\text{var}(D)$, 因而在 $\text{cov}(D,\varepsilon)\neq 0$ 时不再是 $\beta$ 的相合估计。
+问题的关键是假定 (2) 很多时候并不成立（$\text{cov}(D\_i, \varepsilon\_i)\neq 0$），比如，吸烟的人群和不吸烟的人群本身很不相同，参加工作培训的人可能比不参加工作培训的人有更强的找工作动机，等等。因此，包含个体 $i$ 其他所有隐藏信息的变量 $\varepsilon\_i$ 不再与 $D\_i$ 不相关了—这被称为“内生性”（endogeneity）。这个时候，最小二乘估计收敛到 $\beta + \text{cov}(D,\varepsilon)/\text{var}(D)$, 因而在 $\text{cov}(D,\varepsilon)\neq 0$ 时不再是 $\beta$ 的相合估计。
 
 前面几次因果推断的介绍中提到，完全的随机化实验，可以给我们有效的因果推断。但是很多问题中，强制性的随机化实验是不现实或者不符合伦理的。比如，我们不能强制某些人吸烟，或者不吸烟。但是，“鼓励性实验”依然可行。我们可以随机地给吸烟的人以某种金钱的奖励，如果他们放弃吸烟，则获得某种经济上的优惠。将这个“鼓励性”的变量记为 $Z\_i$，它定义为是否被鼓励的示性变量，取值 0-1。由于我们的鼓励是完全随机的，有理由假定 $\text{cov}(Z\_i, \varepsilon_i)=0$。
 
 以上的各个假定，可以用下面的一个图来形象的描述。
 
-[<img alt="iv" src="https://cos.name/wp-content/uploads/2013/08/iv.png" width="413" height="257" />](https://cos.name/wp-content/uploads/2013/08/iv.png)
+![iv](https://cos.name/wp-content/uploads/2013/08/iv.png)
 
 &nbsp;
 
@@ -64,11 +64,11 @@ $$\text{cov}(Z\_i, Y\_i) = \beta \text{cov} (Z\_i, D\_i),$$
 
 因此，$\beta = \frac{  \text{cov}(Z\_i, Y\_i)} {\text{cov} (Z\_i, D\_i) } $，我们立刻得到如下的矩估计：
 
-$$\widehat{\beta}\_{IV} = \frac{ \sum\_{i=1}^n (Y\_i &#8211; \bar{Y}) (Z\_i &#8211; \bar{Z})}{ \sum\_{i=1}^n (D\_i &#8211; \bar{D}) (Z_i &#8211; \bar{Z}) } .\quad \quad (3)$$
+$$\widehat{\beta}\_{IV} = \frac{ \sum\_{i=1}^n (Y\_i – \bar{Y}) (Z\_i – \bar{Z})}{ \sum\_{i=1}^n (D\_i – \bar{D}) (Z_i – \bar{Z}) } .\quad \quad (3)$$
 
 根据大数定律，这个“工具变量估计”是 $\beta$ 的相合估计量。上面的式子对一般的 $Z\_i$ 都是成立的；当 $Z\_i$ 是 0-1 变量时，上面的式子可化简成：
 
-$$\widehat{\beta}\_{IV} = \frac{  \bar{Y}\_1 &#8211; \bar{Y}\_0 } { \bar{D}\_1 &#8211; \bar{D}_0 },$$
+$$\widehat{\beta}\_{IV} = \frac{  \bar{Y}\_1 – \bar{Y}\_0 } { \bar{D}\_1 – \bar{D}_0 },$$
 
 其中 $\bar{Y}\_1$ 表示 $Z\_i=1$ 组的平均结果，$\bar{Y}\_0$ 表示 $Z\_i=0$ 组的平均结果，关于 $D$ 的定义类似。 上面的估计量，很多时候被称为 Wald 估计量（它的直观含义是什么呢？） 需要注意的是，(3) 要求 $\text{cov}(Z\_i,D\_i)\neq 0$，即“鼓励”对于改变人的吸烟行为是有效的；否则上面的工具变量估计量在大样本下趋于无穷大。
 
@@ -118,7 +118,7 @@ $$
 
 上面的式子被定义为 $CACE$ 是有理由的。它表示的是子总体 $(D\_i(1)=1, D\_i(0)=0)$ 中，随机化对于结果的因果作用；由于这类人中随机化和接受的处理是相同的，它也表示处理对结果的因果作用。这类人接受处理与否完全由于是否接受鼓励而定，他们被成为“依从者”（complier），因为这类人群中的平均因果作用又被成为“依从者平均因果作用”（CACE：complier average causal effect）;计量经济学家称它为“局部处理作用”（LATE：local average treatment effect）。
 
-由于 $Z$ 是随机化的，它对于 $D$ 和 $Y$ 的平均因果作用都是显而易见可以得到的。因为 $\widehat{ACE}(Z\rightarrow D) = \bar{D}\_1 &#8211; \bar{D}\_0, \widehat{ACE}(Z\rightarrow Y) = \bar{Y}\_1 &#8211; \bar{Y}\_0$，CACE 的一个矩估计便是
+由于 $Z$ 是随机化的，它对于 $D$ 和 $Y$ 的平均因果作用都是显而易见可以得到的。因为 $\widehat{ACE}(Z\rightarrow D) = \bar{D}\_1 – \bar{D}\_0, \widehat{ACE}(Z\rightarrow Y) = \bar{Y}\_1 – \bar{Y}\_0$，CACE 的一个矩估计便是
 
 $$ \frac{\widehat{ACE}(Z\rightarrow Y)  } {  \widehat{ACE}(Z\rightarrow D)   } = \widehat{\beta}_{IV}.$$
 
@@ -126,13 +126,13 @@ $$ \frac{\widehat{ACE}(Z\rightarrow Y)  } {  \widehat{ACE}(Z\rightarrow D)  �
 
 ## 四 实例
 
-这部分给出具体的例子来说明上理论的应用，具体计算用到了第五部分的一个函数（其中包括用delta方法算的抽样方差）。这里用到的数据来自一篇政治学的文章 Green et al. (2003) &#8220;Getting Out the Vote in Local Elections: Results from Six Door-to-Door Canvassing Experiments&#8221;，<a href="http://dvn.iq.harvard.edu/dvn/faces/study/StudyPage.xhtml?globalId=hdl:1902.1/21729&studyListingIndex=5_c49f1060ddaa41a23e5759168940" target="_blank">数据点击此处可以在此下载</a>。
+这部分给出具体的例子来说明上理论的应用，具体计算用到了第五部分的一个函数（其中包括用delta方法算的抽样方差）。这里用到的数据来自一篇政治学的文章 Green et al. (2003) “Getting Out the Vote in Local Elections: Results from Six Door-to-Door Canvassing Experiments”，<a href="http://dvn.iq.harvard.edu/dvn/faces/study/StudyPage.xhtml?globalId=hdl:1902.1/21729&studyListingIndex=5_c49f1060ddaa41a23e5759168940" target="_blank">数据点击此处可以在此下载</a>。
 
 文章目的是研究某个社会实验是否能够提到投票率，实验是随机化的，但是并非所有的实验组的人都依从。因此这里的变量 $Z$ 表示随机化的实验，$D$ 表示依从与否，$Y$ 是投票与否的示性变量。具体的数据描述，可参加前面提到的文章。
 
 原始数据总结如下：
 
-[<img src="https://cos.name/wp-content/uploads/2013/08/table1.png" alt="table" width="433" height="146" class="aligncenter size-full wp-image-8395" srcset="https://cos.name/wp-content/uploads/2013/08/table1.png 433w, https://cos.name/wp-content/uploads/2013/08/table1-300x101.png 300w" sizes="(max-width: 433px) 100vw, 433px" />](https://cos.name/wp-content/uploads/2013/08/table1.png)
+![table](https://cos.name/wp-content/uploads/2013/08/table1.png)
 
 根据下一个部分的函数，我们得到如下的结果：
 

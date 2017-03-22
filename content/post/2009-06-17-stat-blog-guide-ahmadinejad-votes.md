@@ -26,11 +26,11 @@ slug: stat-blog-guide-ahmadinejad-votes
 
 ## 一、用数字作弊要小心：关于内贾德的选票
 
-<img title="内贾德" src="http://i3.sinaimg.cn/dy/w/2009-06-13/1244852110_fSEzgk.jpg" alt="内贾德" width="200" height="165" align="right" />日前伊朗的大选可谓轰轰隆隆，颇引人注目，内贾德在胜出之后却引来一片质疑，今日又有传闻说穆萨维才是真正的胜出者。总之疑云重重，那么让政治家玩政治家的游戏吧，我们从另一个视角来关注一下这次选举。密歇根大学的教授<a href="http://www-personal.umich.edu/" target="_blank">Walter R. Mebane, Jr.</a>这几天一直在分析选票数据，今天的文章参见：[Note on the presidential election in Iran, June 2009](http://www-personal.umich.edu/~wmebane/note17jun2009.pdf)（注意论文和数据以及R代码都在更新中，如果不能访问，请到他的主页上找）
+![内贾德](http://i3.sinaimg.cn/dy/w/2009-06-13/1244852110_fSEzgk.jpg "内贾德")日前伊朗的大选可谓轰轰隆隆，颇引人注目，内贾德在胜出之后却引来一片质疑，今日又有传闻说穆萨维才是真正的胜出者。总之疑云重重，那么让政治家玩政治家的游戏吧，我们从另一个视角来关注一下这次选举。密歇根大学的教授<a href="http://www-personal.umich.edu/" target="_blank">Walter R. Mebane, Jr.</a>这几天一直在分析选票数据，今天的文章参见：[Note on the presidential election in Iran, June 2009](http://www-personal.umich.edu/~wmebane/note17jun2009.pdf)（注意论文和数据以及R代码都在更新中，如果不能访问，请到他的主页上找）
 
 文章主要基于两点理论去检验选票数据：
 
-  1. 本福特定律（<a title="Wikipedia" href="http://en.wikipedia.org/wiki/Benford%27s_law" target="_blank">Benford&#8217;s Law</a>）：生活中的数据里，1~9这9个数字在**首位**的出现并非均匀分布，例如1出现在一个数字的首位的概率约为1/3，而不是想象中的1/9，越往后的数字出现概率越低。不过，作者得到的选票数据是按地区汇总的，而对于汇总数据，我们往往难以发现它作弊的嫌疑，因为汇总数据倾向于符合本福特定律，从这一点上，作者没有找到足够的证据证明选票数据作弊；
+  1. 本福特定律（<a title="Wikipedia" href="http://en.wikipedia.org/wiki/Benford%27s_law" target="_blank">Benford’s Law</a>）：生活中的数据里，1~9这9个数字在**首位**的出现并非均匀分布，例如1出现在一个数字的首位的概率约为1/3，而不是想象中的1/9，越往后的数字出现概率越低。不过，作者得到的选票数据是按地区汇总的，而对于汇总数据，我们往往难以发现它作弊的嫌疑，因为汇总数据倾向于符合本福特定律，从这一点上，作者没有找到足够的证据证明选票数据作弊；
   2. 检验离群点：手头的数据只有选票数，没有其它变量，这种情况下统计建模的局限性很大，似乎各种工具都施展不开，不过作者还是在“艰苦”的条件下建立了过度散布的二项回归模型（overdispersed binomial regression），因变量是二分变量（内贾德 vs 穆萨维），自变量是选票数，看看哪些地区的选票数有离群点出现，熟悉伊朗政局情况的人从这些离群点可能发现违背常理的现象（选票过高？过低？）
 
 看来统计学家总是有办法拷问数据，不知咱国内是否有这样的统计学家呢？

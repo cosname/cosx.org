@@ -34,7 +34,7 @@ r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n
 > 
 > $b_i \sim Normal(0, \tau)$
 
-其中$x\_{1i}$是种子的类型，$x\_{2i}$是根提取物的类型，$\alpha\_{12} x\_{1i} x\_{2i}$是交互项, $\alpha\_0,~\alpha\_1,~\alpha\_2,~\alpha_{12},~\tau$是给定的独立的 &#8220;noninformative&#8221; 先验参数。在Bayesian分析中，通常我们会定义一个DAG图(即Directed Acyclic Graph有向无圈图) 。我们可以在WinBUGS中通过设计DAG图来定义模型。不过这一节中我们还是用WinBUGS中的BUGS语言来定义模型，如何在WinBUGS中通过设计DAG图来定义模型我将在下一节中详细介绍，但是必须要说明的是BUGS语言比DAG图灵活，不过直观性不如后者。
+其中$x\_{1i}$是种子的类型，$x\_{2i}$是根提取物的类型，$\alpha\_{12} x\_{1i} x\_{2i}$是交互项, $\alpha\_0,~\alpha\_1,~\alpha\_2,~\alpha_{12},~\tau$是给定的独立的 “noninformative” 先验参数。在Bayesian分析中，通常我们会定义一个DAG图(即Directed Acyclic Graph有向无圈图) 。我们可以在WinBUGS中通过设计DAG图来定义模型。不过这一节中我们还是用WinBUGS中的BUGS语言来定义模型，如何在WinBUGS中通过设计DAG图来定义模型我将在下一节中详细介绍，但是必须要说明的是BUGS语言比DAG图灵活，不过直观性不如后者。
 
 模型
 
@@ -54,7 +54,7 @@ r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n 	r 	n 	r/n
  sigma &lt;- 1 / sqrt(tau)
 }</pre><figure id="attachment_1264" style="width: 500px" class="wp-caption aligncenter">
 
-[<img class="size-large wp-image-1264" title="WinBUGS doodle模型" src="https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png" alt="WinBUGS doodle模型" width="500" height="309" srcset="https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-500x309.png 500w, https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle-300x185.png 300w, https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png 536w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png)<figcaption class="wp-caption-text">WinBUGS doodle模型</figcaption></figure> 
+![WinBUGS doodle模型](https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png "WinBUGS doodle模型")<figcaption class="wp-caption-text">WinBUGS doodle模型</figcaption></figure> 
 
 数据
 
@@ -177,7 +177,7 @@ b12		-0.8104		0.3852		20	-2.1	0.0482		0.05	-1.6139	-0.007	0.00037
 
 当然了winBUGS的强大之处并不在于此，而是在处理诸如GLME（有些文献称GLMM），空间数据模型等计算复杂的模型，之后还会继续讨论。
   
-[<img class="size-full wp-image-548 alignright" src="https://cos.name/wp-content/uploads/2008/12/cover.jpg" alt="" width="133" height="204" />](https://cos.name/wp-content/uploads/2008/12/cover.jpg)
+![](https://cos.name/wp-content/uploads/2008/12/cover.jpg)
   
 参考文献：
 

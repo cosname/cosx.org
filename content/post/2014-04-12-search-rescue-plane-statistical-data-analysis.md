@@ -33,19 +33,19 @@ slug: search-rescue-plane-statistical-data-analysis
 
 我们或许很难用三言两语把马航事件的来龙去脉描述清楚，如果把马航事件用文字表述出来亦须耗费不少篇章。单纯的描述有时候并不利于公众了解事件。相反地，信息可视化则可直观地刻画马航事件。图1-1为马来西亚最初发布的关于马航MH370航班失联的消息。图1-2为马来西亚其后发布的马航MH370航班被侦察到的地理坐标。图1-3为最终被搜救队伍估计的马航MH370航班最后一次向卫星传出信号的可能位置。三幅图通过把相关地理位置刻画在二维平面，并且把关键的时间、地点、区域在二维平面标明，使得公众可以很直观地了解马航事件，非常有效地、避免误导地传递了关键信息。公众甚至无需阅读图中注释即可了解马航事件梗概。
 
-[<img class="aligncenter size-full wp-image-9729" alt="clues1-clues1-0副本" src="https://cos.name/wp-content/uploads/2014/04/clues1-clues1-0副本.png" width="900" height="305" srcset="https://cos.name/wp-content/uploads/2014/04/clues1-clues1-0副本.png 900w, https://cos.name/wp-content/uploads/2014/04/clues1-clues1-0副本-300x101.png 300w, https://cos.name/wp-content/uploads/2014/04/clues1-clues1-0副本-500x169.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](https://cos.name/wp-content/uploads/2014/04/clues1-clues1-0副本.png)
+![clues1-clues1-0副本](https://cos.name/wp-content/uploads/2014/04/clues1-clues1-0副本.png)
 
 <p align="center">
   <strong>图1-1 马航MH370客机首次宣告失联</strong>
 </p>
 
-[<img class="aligncenter size-full wp-image-9730" alt="clues2-clues2-0副本" src="https://cos.name/wp-content/uploads/2014/04/clues2-clues2-0副本.png" width="900" height="305" srcset="https://cos.name/wp-content/uploads/2014/04/clues2-clues2-0副本.png 900w, https://cos.name/wp-content/uploads/2014/04/clues2-clues2-0副本-300x101.png 300w, https://cos.name/wp-content/uploads/2014/04/clues2-clues2-0副本-500x169.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](https://cos.name/wp-content/uploads/2014/04/clues2-clues2-0副本.png)
+![clues2-clues2-0副本](https://cos.name/wp-content/uploads/2014/04/clues2-clues2-0副本.png)
 
 <p align="center">
   <strong>图1-2 马航MH370客机关键坐标</strong>
 </p>
 
-[<img class="aligncenter size-full wp-image-9757" alt="clues3-clues3-0副本" src="https://cos.name/wp-content/uploads/2014/04/clues3-clues3-0副本1.png" width="900" height="644" srcset="https://cos.name/wp-content/uploads/2014/04/clues3-clues3-0副本1.png 900w, https://cos.name/wp-content/uploads/2014/04/clues3-clues3-0副本1-300x214.png 300w, https://cos.name/wp-content/uploads/2014/04/clues3-clues3-0副本1-500x357.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](https://cos.name/wp-content/uploads/2014/04/clues3-clues3-0副本1.png)
+![clues3-clues3-0副本](https://cos.name/wp-content/uploads/2014/04/clues3-clues3-0副本1.png)
 
 <p align="center">
   <strong>图1-3 马航MH370客机最后一次向卫星传出信号的可能位置</strong>
@@ -55,13 +55,13 @@ slug: search-rescue-plane-statistical-data-analysis
 
 ****目前，越来越多证据表明失联客机可能在印度洋中，因此，一个非常自然的疑问就是飞机残骸到底在哪里？卫星数据成为回答这个问题最受重视的信息来源。由于非专业人士很难读懂原始卫星数据，数据可视化可以帮助公众迅速了解搜救区域。图1-4展示了有关马航MH30航班的搜救区域。在图1-4中，圆点标记出疑似残骸所在的区域，圆点的颜色代表不同的发现日期。将有关疑似残骸的信息可视化到图表并配上适当的解释，可以帮助公众在短时间内了解正在被搜寻和将要被搜寻的区域以及已经搜寻到的疑似残骸。可视化方法显然比冗长的文字描述有效很多。此外，根据卫星对南印度洋上浮标的追踪数据，图1-5刻画了在3月8日至3月24日期间残骸的移动轨迹。由图1-5我们可以得到一些或能有助搜救的推测，譬如，不同区域疑似残骸的移动趋势截然不同，相比北端疑似残骸而言，南端疑似残骸向东运动的趋势更为明显等。
 
-[<img class="aligncenter size-full wp-image-9732" alt="newdata-720-0副本" src="https://cos.name/wp-content/uploads/2014/04/newdata-720-0副本.png" width="900" height="594" srcset="https://cos.name/wp-content/uploads/2014/04/newdata-720-0副本.png 900w, https://cos.name/wp-content/uploads/2014/04/newdata-720-0副本-300x198.png 300w, https://cos.name/wp-content/uploads/2014/04/newdata-720-0副本-500x330.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](https://cos.name/wp-content/uploads/2014/04/newdata-720-0副本.png)
+![newdata-720-0副本](https://cos.name/wp-content/uploads/2014/04/newdata-720-0副本.png)
 
 <p align="center">
   <strong>图1-4 马航MH370客机搜救区域</strong>
 </p>
 
-[<img class="aligncenter size-full wp-image-9731" alt="buoys-720-0副本" src="https://cos.name/wp-content/uploads/2014/04/buoys-720-0副本.png" width="900" height="663" srcset="https://cos.name/wp-content/uploads/2014/04/buoys-720-0副本.png 900w, https://cos.name/wp-content/uploads/2014/04/buoys-720-0副本-300x221.png 300w, https://cos.name/wp-content/uploads/2014/04/buoys-720-0副本-500x368.png 500w" sizes="(max-width: 900px) 100vw, 900px" />](https://cos.name/wp-content/uploads/2014/04/buoys-720-0副本.png)
+![buoys-720-0副本](https://cos.name/wp-content/uploads/2014/04/buoys-720-0副本.png)
 
 <p align="center">
   <strong>图1-5 疑似残骸标记物在三月八日至三月二十四日的移动轨迹</strong>
@@ -71,7 +71,7 @@ slug: search-rescue-plane-statistical-data-analysis
 
 搜救条件，意为搜索救援行动的基础，包括搜救设备，搜救区域的气象情况等等。由于媒体报道较少，公众对搜救条件的了解相对少。事实上，大洋气象复杂，海洋的搜救条件往往比陆地的搜救条件要恶劣，因而此番搜救是一个巨大考验。图1-6的图（a）和图（b）分别描述了3月16日南印度洋的风速和浪高。在两幅图中，颜色越深的区域，风浪越小，颜色越接近白色的区域，风浪越大。综合图（a）和图（b），搜救海域位于南印度洋风浪最大区域的西北角，并且在图中部分搜救海域泛白，可见搜救条件恶劣。
 
-[<img class="aligncenter size-full wp-image-9733" alt="sea-condition" src="https://cos.name/wp-content/uploads/2014/04/sea-condition.jpg" width="667" height="324" srcset="https://cos.name/wp-content/uploads/2014/04/sea-condition.jpg 667w, https://cos.name/wp-content/uploads/2014/04/sea-condition-300x145.jpg 300w, https://cos.name/wp-content/uploads/2014/04/sea-condition-500x242.jpg 500w" sizes="(max-width: 667px) 100vw, 667px" />](https://cos.name/wp-content/uploads/2014/04/sea-condition.jpg)
+![sea-condition](https://cos.name/wp-content/uploads/2014/04/sea-condition.jpg)
 
 <p align="center">
   <strong>图1-6 三月十六日（a）相关搜救海域的风速；（b）相关搜救海域的浪高</strong>
@@ -89,7 +89,7 @@ DigitalGlobe公司卫星群中的5颗卫星，每天环绕地球75圈。这些�
 
 在DigitalGlobe公司发布至Tomnod众包页面的卫星照片中，一个像素覆盖50厘米的土地空间或水域空间。 在NASA陆地卫星提供的卫星照片中，一个像素却要覆盖大约30米的土地空间或水域空间，即一架喷气机可能在图像中只占用一个像素。
 
-[<img class="aligncenter size-full wp-image-9735" alt="zhongbao" src="https://cos.name/wp-content/uploads/2014/04/zhongbao.jpg" width="1432" height="955" srcset="https://cos.name/wp-content/uploads/2014/04/zhongbao.jpg 1432w, https://cos.name/wp-content/uploads/2014/04/zhongbao-300x200.jpg 300w, https://cos.name/wp-content/uploads/2014/04/zhongbao-500x333.jpg 500w" sizes="(max-width: 1432px) 100vw, 1432px" />](https://cos.name/wp-content/uploads/2014/04/zhongbao.jpg)
+![zhongbao](https://cos.name/wp-content/uploads/2014/04/zhongbao.jpg)
 
 <p align="center">
   <strong>图2-1 苏丹国，苏丹港，2011年10月8号, <i>DigitalGlobe, satellite GeoEye-1</i></strong>
@@ -107,7 +107,7 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 
 在寻找失事飞机、海底沉船、或珍珠宝藏过程中，当可用数据极其缺乏时，群体智慧（[The Wisdom of Crowds](http://wisdomofcrowds.blogspot.com/)）也可以派上用场。
 
-1968年5月，美国潜艇蝎子号（Scorpion）在完成北大西洋参观后，在返回纽波特纽斯（Newport News）途中消失了。虽然海军知道蝎子号最后一次报告的位置，但是海军对蝎子号发生的事故一无所知，只能模糊得知在最后无线电联系后蝎子号前进的距离。为了寻找蝎子号，海军划定了一个半径32千米，数千英尺深的圆形海域。这几乎是一个不可能完成的任务。当时，人们想到的最可行方案是聘用三四个潜艇和海洋环流顶级专家来推断蝎子号的位置。但是，在雪莉·桑塔格（Sherry Sontag）和克里斯托弗·德鲁（Christopher Drew）的书《_Blind Man&#8217;s Bluff: The Untold Story of American Submarine Espionage_》中记载，一个叫约翰·克雷文（John Craven）的海军军官提出了一个不同的计划。
+1968年5月，美国潜艇蝎子号（Scorpion）在完成北大西洋参观后，在返回纽波特纽斯（Newport News）途中消失了。虽然海军知道蝎子号最后一次报告的位置，但是海军对蝎子号发生的事故一无所知，只能模糊得知在最后无线电联系后蝎子号前进的距离。为了寻找蝎子号，海军划定了一个半径32千米，数千英尺深的圆形海域。这几乎是一个不可能完成的任务。当时，人们想到的最可行方案是聘用三四个潜艇和海洋环流顶级专家来推断蝎子号的位置。但是，在雪莉·桑塔格（Sherry Sontag）和克里斯托弗·德鲁（Christopher Drew）的书《_Blind Man’s Bluff: The Untold Story of American Submarine Espionage_》中记载，一个叫约翰·克雷文（John Craven）的海军军官提出了一个不同的计划。
 
 首先，克雷文列出一系列能够解释蝎子号事故的场景。接着，他组建了一个囊括各方面专家的团队。团队成员包括数学家、潜艇专家和救助人员等。有趣的是，他非但不是要求团队成员互相协商寻求一个答案，反而请每个成员提供自己对每个可能场景的发生概率的猜测。为了让事情变得更有趣，他把一瓶芝华士作为猜中的奖品。于是团队成员开始对潜艇可能遇到的麻烦、潜艇的下沉速度、下沉角度等因素下注。
 
@@ -135,7 +135,7 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 
 现在我们已经对贝叶斯方法有了一定了解，下面我们谈谈如何利用贝叶斯方法帮助寻找失事马航MH370客机呢？对于失事飞机，我们不仅需要找到它的三维坐标，同样需要找到它的失事原因。新线索的出现，帮助我们积累了经验，从而改变飞机是由于自然事故还是遭遇劫机等人为事故造成的概率。两者的概率大小分别由Pr（自然事故|找到的线索）和Pr（遭遇劫机等人为事故|找到的线索）描述。当然，我们还可以利用一些其他的线索帮助我们改变判断，比如飞机的原计划航线，风速，洋流，以及扫描过的海域的情况。法航事件的飞机残骸搜寻工作给我们提供了一个参考案例。
 
-[<img class="aligncenter size-full wp-image-9736" alt="bayesian_plane" src="https://cos.name/wp-content/uploads/2014/04/bayesian_plane.jpg" width="576" height="484" srcset="https://cos.name/wp-content/uploads/2014/04/bayesian_plane.jpg 576w, https://cos.name/wp-content/uploads/2014/04/bayesian_plane-300x252.jpg 300w, https://cos.name/wp-content/uploads/2014/04/bayesian_plane-500x420.jpg 500w" sizes="(max-width: 576px) 100vw, 576px" />](https://cos.name/wp-content/uploads/2014/04/bayesian_plane.jpg)
+![bayesian_plane](https://cos.name/wp-content/uploads/2014/04/bayesian_plane.jpg)
 
 <p align="center">
   <strong>图4-1 残骸可能地点后验概率分布图（概率由大到小顺序：红、橙、黄、绿、蓝）</strong>
@@ -145,7 +145,7 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 
 基于贝叶斯方法对整体概率进行计算所利用的信息来自四个阶段的搜寻工作。阶段一：利用被动声学技术搜寻水下定位信号器。法航447装备的飞行数据记录器和驾驶舱语音记录器可以帮助分析事故发生时的状况。同时，在飞机沉入水中时，飞机装配的水下定位信号器发出信号协助通讯。水下定位信号器的电池可以工作至少30天，平均可以工作40天。搜寻持续了31天并于2009年7月10日停止。两台搜救船——费尔蒙特冰川号和探险号，均装备了美国海军提供的声波定位装置——参与了搜救。阶段二：旁侧声呐搜寻。在声波搜寻结束后，BEA决定使用Pourquoi Pas 提供的IFREMER旁侧声呐技术继续搜寻。在本阶段，一些由于时间关系未能在第一阶段搜寻的海域也被搜寻。阶段三：旁侧扫描声呐搜寻。 阶段四：即我们在上一段提及的利用贝叶斯方法进行搜救，并最终找到了飞机残骸。图4-2展示了搜救过程。
 
-[<img class="aligncenter size-full wp-image-9737" alt="bayesian_cal" src="https://cos.name/wp-content/uploads/2014/04/bayesian_cal.jpg" width="582" height="447" srcset="https://cos.name/wp-content/uploads/2014/04/bayesian_cal.jpg 582w, https://cos.name/wp-content/uploads/2014/04/bayesian_cal-300x230.jpg 300w, https://cos.name/wp-content/uploads/2014/04/bayesian_cal-500x384.jpg 500w" sizes="(max-width: 582px) 100vw, 582px" />](https://cos.name/wp-content/uploads/2014/04/bayesian_cal.jpg)
+![bayesian_cal](https://cos.name/wp-content/uploads/2014/04/bayesian_cal.jpg)
 
 <p align="center">
   <strong>图4-2 飞机残骸地点的后验概率分布计算过程</strong>
