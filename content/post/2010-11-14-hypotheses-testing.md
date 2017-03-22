@@ -105,7 +105,7 @@ slug: hypotheses-testing
 
 # 2.P值（P Value）
 
-上面提到“极端”事件，比如，在100次硬币投掷实验中，观察到出现90次正面，10次反面（Q>）。怎么样的事件才是“极端的”？简单地说，一个事件很极端，那么少比它本身“更极端”的事件就非常少（比如，只有“91次正面，9次反面”、“91次反面，9次正面”等情况才比它更极端）。
+上面提到“极端”事件，比如，在100次硬币投掷实验中，观察到出现90次正面，10次反面（Q）。怎么样的事件才是“极端的”？简单地说，一个事件很极端，那么少比它本身“更极端”的事件就非常少（比如，只有“91次正面，9次反面”、“91次反面，9次正面”等情况才比它更极端）。
 
 但这个Q只是从一次实验中得出的。我们可以重复做这个实验，比如100次，每次都投掷100次，记录下的正面数X，它构成一个二项分布，X~B(n,p)，其中，n=100，p=0.5。根据某个中心极限定理，正态分布是二项分布的极限分布，上面的二项分布可以由均值为np=50，方差为np(1-p)=25的正态分布来近似。我们在这个近似的正态分布的两端来考察所谓“更极端”的事件，那就是正面数大于90或者小于10。
 
@@ -186,7 +186,7 @@ slug: hypotheses-testing
 
 本文是对近期阅读做的一个笔记。作为一个非统计科班出身的程序员，我一直在思考，如何来理解统计概念，以及如何把自己的理解向同行传达。关于用日常逻辑推理来理解假设检验的思路，来自
 
->[**Common Statistical Methods for Clinical Research with SAS Examples**](https://www.amazon.com/Statistical-Methods-Clinical-Research-Examples/dp/1590470400/ref=sr_1_2?s=books&ie=UTF8&qid=1281254785&sr=1-2)**(2nd edition, SAS Inc., 2002, by Glenn A. Walker)**
+[**Common Statistical Methods for Clinical Research with SAS Examples**](https://www.amazon.com/Statistical-Methods-Clinical-Research-Examples/dp/1590470400/ref=sr_1_2?s=books&ie=UTF8&qid=1281254785&sr=1-2)**(2nd edition, SAS Inc., 2002, by Glenn A. Walker)**
 
 关于决策与风险的讨论，参考了
 
@@ -248,7 +248,7 @@ proc ttest的结果更为丰富：
 > 
 > **Mean     95% CL     Mean       Std Dev     95% CL    Std Dev**
 > 
-> 25.0280   24.4741    25.5819     1.3418       1.0477    1.8667
+> 25.0280    24.4741    25.5819     1.3418       1.0477    1.8667
 > 
 > **DF    t Value    Pr > |t|**
 > 
