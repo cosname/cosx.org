@@ -25,7 +25,7 @@ VaR(Value at Risk)是上世纪90年代由JP·Morgan公司在风险矩阵中提�
 
 其中，`\(\Delta v\)`为金融资产组合的价值损失。VaR的严格的数学定义则由Altzner(1999)给出，即
 
-`$$VaR_{\alpha}=-inf\{x|Prob(\Delta v\leq x)>1-\alpha\}$$`
+`$$VaR_{\alpha}=\inf\{x|Prob(\Delta v\leq x)>1-\alpha\}$$`
 
 其中，`\(inf{\{x|A}\}\)`表示使A成立的所有所组成的集合的下确界，其余符号同上。
 
