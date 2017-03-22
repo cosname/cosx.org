@@ -71,7 +71,7 @@ Eclipse启动后如下图。
 
 ### 2.2.1  新建一个工程
 
-依次选择菜单栏中的“File”, “New”,”R-Project”，打开新建R的工程的对话框。如下图所示
+依次选择菜单栏中的“File”, “New”,“R-Project”，打开新建R的工程的对话框。如下图所示
 
 ![](https://cos.name/wp-content/uploads/2010/03/project.jpg "建立工程")在上图所示的对话框填好工程名和工作路径后，单击“Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
 
