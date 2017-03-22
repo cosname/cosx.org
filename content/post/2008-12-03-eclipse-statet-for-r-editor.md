@@ -71,15 +71,15 @@ Eclipse启动后如下图。
 
 ### 2.2.1  新建一个工程
 
-依次选择菜单栏中的”File”, “New”,”R-Project”，打开新建R的工程的对话框。如下图所示
+依次选择菜单栏中的“File”, “New”,“R-Project”，打开新建R的工程的对话框。如下图所示
 
-![](https://cos.name/wp-content/uploads/2010/03/project.jpg "建立工程")在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
+![](https://cos.name/wp-content/uploads/2010/03/project.jpg "建立工程")在上图所示的对话框填好工程名和工作路径后，单击“Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
 
 ![](https://cos.name/wp-content/uploads/2010/03/myproject.jpg "myproject")一个工程就相当于一个容器，你可以在其中添加或新建各种各样的文件。建好一个工程后，在该工程的工作目录下就会多出一个“.project”文件，该文件用来保存整个工程的各种信息。
 
 ### 2.2.2 向工程添加文件。
 
-右键单击”Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
+右键单击“Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
 
 ![](https://cos.name/wp-content/uploads/2010/03/script.jpg "添加R脚本")在选择好文件夹，指定了文件名后，单击“Finish”，我们的R脚本文件就建好了。本例中，我建立了一个名为“prime.R”的文件，用来查找质数。
 

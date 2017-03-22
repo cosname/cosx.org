@@ -40,7 +40,7 @@ slug: r-nosql-cassandra
   6. RCassandra使用案例
   7. Cassandra的没落
 
-<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px;">每一章节，都会分为”文字说明部分”和”代码部分”，保持文字说明与代码的连贯性。</span>
+<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px;">每一章节，都会分为“文字说明部分”和“代码部分”，保持文字说明与代码的连贯性。</span>
 
 ## 1. Cassandra介绍
 

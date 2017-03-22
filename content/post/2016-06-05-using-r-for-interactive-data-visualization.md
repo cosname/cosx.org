@@ -30,7 +30,7 @@ install_github('rCharts', 'ramnathv')</pre>
 
 rCharts函数就像lattice函数一样，通过formula、data指定数据源和绘图方式，并通过type指定图表类型。
 
-下面通过例子来了解下其工作原理。我们以鸢尾花数据集为例，首先通过name函数对列名进行重新赋值（去掉单词间的点），然后利用rPlot函数绘制散点图(type=”point”)，并利用颜色进行分组（color=”Species”）。<!--more-->
+下面通过例子来了解下其工作原理。我们以鸢尾花数据集为例，首先通过name函数对列名进行重新赋值（去掉单词间的点），然后利用rPlot函数绘制散点图(type=“point”)，并利用颜色进行分组（color=“Species”）。<!--more-->
 
 <pre><strong>library</strong>(rCharts)
 names(iris) = gsub("\\.", "", names(iris))
@@ -43,7 +43,7 @@ rCharts支持多个javascript图表库,每个都有自己的长处。每一个�
 
 NVD3 是一个旨在建立可复用的图表和组件的 d3.js 项目——它提供了同样强大的功能，但更容易使用。它可以让我们处理复杂的数据集来创建更高级的可视化。在rCharts包中提供了nPlot函数来实现。
 
-下面以眼睛和头发颜色的数据(HairEyeColor)为例说明nPlot绘图的基本原理。我们按照眼睛的颜色进行分组(group=”eye”),对头发颜色人数绘制柱状图，并将类型设置为柱状图组合方式(type=”multiBarChart”)，这样可以实现分组和叠加效果。
+下面以眼睛和头发颜色的数据(HairEyeColor)为例说明nPlot绘图的基本原理。我们按照眼睛的颜色进行分组(group=“eye”),对头发颜色人数绘制柱状图，并将类型设置为柱状图组合方式(type=“multiBarChart”)，这样可以实现分组和叠加效果。
 
 <pre><strong>library</strong>(rCharts)
 hair_eye_male &lt;- subset(as.data.frame(HairEyeColor), Sex == "Male")
@@ -166,7 +166,7 @@ title='Lahm vs Alves', subtitle= '(by @mixedknuts)')</pre>
 
 plotly包利用函数plot_ly函数绘制交互图。
 
-如果相对鸢尾花数据集绘制散点图，需要将mode参数设置为”markers”。
+如果相对鸢尾花数据集绘制散点图，需要将mode参数设置为“markers”。
 
 <pre><strong>library</strong>(plotly)
 p &lt;- plot_ly(iris, x = Petal.Length, y = Petal.Width,

@@ -73,7 +73,7 @@ slug: relationship-big-data-statistics
 
 从另一个角度看，我想在拥有与计算机专业的同事相差不算远的计算机技能的基础上，统计专科在数据收集方法（试验设计，抽样方法等），模型选择以及模型对outlier和模型假设的敏感度，在数据支持下对可能结论的批判型思维，以及对结论的不确定型描述等方面还是很大优势的。不过这些方面的技能好像还都不是简单的靠读理论统计课本能直接学习到或证明数学定理能解决的，它们都是在解决实际问题和数据分析的过程中通过不断犯错误来提高的。
 
-当然了，“拥有与计算机专业的同事相差不算远的计算机技能的基础上” 是一个很大很大的需要检验的假设，要拥有这样的基础需要从课程选择，课外导向，个人学习规划等方面出发主动的学习。就像 Michael Jordan，在<a href="http://huati.weibo.com/k/21%E4%B8%96%E7%BA%AA%E7%9A%84%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BC%9A?from=510" target="_blank">#21世纪的计算大会#</a>上做”大数据的分治和统计推断”的<a href="http://blog.cos.name/taoshi/2012/12/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%BB%9F%E8%AE%A1%E7%B2%BE%E5%BA%A6%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E5%BA%A6/" target="_blank">主题演讲</a>中提到的：
+当然了，“拥有与计算机专业的同事相差不算远的计算机技能的基础上” 是一个很大很大的需要检验的假设，要拥有这样的基础需要从课程选择，课外导向，个人学习规划等方面出发主动的学习。就像 Michael Jordan，在<a href="http://huati.weibo.com/k/21%E4%B8%96%E7%BA%AA%E7%9A%84%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BC%9A?from=510" target="_blank">#21世纪的计算大会#</a>上做“大数据的分治和统计推断”的<a href="http://blog.cos.name/taoshi/2012/12/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%BB%9F%E8%AE%A1%E7%B2%BE%E5%BA%A6%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E5%BA%A6/" target="_blank">主题演讲</a>中提到的：
 
 > If you didn’t understand a lot of the talk, it is a bit technical, maybe you should go take some statistics class if you are a computer scientist. If you are a statistician, I don’t know if any of you are here, you probably should take some computer science classes.
 > 

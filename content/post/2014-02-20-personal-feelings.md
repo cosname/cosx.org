@@ -12,7 +12,7 @@ slug: personal-feelings
 
 本期投稿： [谢益辉](http://yihui.name/) [邱怡轩](http://yixuan.cos.name/cn/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB#place) [施涛](http://blog.cos.name/taoshi) 熊熹
 
-  * **有感而发：** 陈大岳老师的新作《[统计学科：大有用武之地](http://epaper.gmw.cn/gmrb/html/2014-02/18/nw.D110000gmrb_20140218_1-13.htm?div=-1)》新鲜出炉。虽说一定对自己的”孩子”偏爱有加，但也不失客观。信息丰富，结构明晰，算是一篇不错的文章。
+  * **有感而发：** 陈大岳老师的新作《[统计学科：大有用武之地](http://epaper.gmw.cn/gmrb/html/2014-02/18/nw.D110000gmrb_20140218_1-13.htm?div=-1)》新鲜出炉。虽说一定对自己的“孩子”偏爱有加，但也不失客观。信息丰富，结构明晰，算是一篇不错的文章。
   * **出来唠唠**：美国人口调查局的一位统计学家在工作了几年之后重返校园读博士的一些[感想](http://civilstat.com/?p=1433)。世殊时异，感慨万千，且听徐徐道来。
   * **P-Value：**Nature上发表了一篇关于P值的[文章](http://www.nature.com/news/scientific-method-statistical-errors-1.14700)——P值一直为大家所诟病，但你永远杀不死它。
   * **[SVD图片压缩](https://cos.name/2014/02/svd-and-image-compression/)(后续）**：[楠神](https://github.com/road2stat)写了一个非常gelivable的[Shiny应用](https://github.com/road2stat/imgsvd)，用来动态展示图片压缩的效果随k的变化情况。[谢大大](http://yihui.name/)把这个应用放到了[RStudio的服务器](https://yihui.shinyapps.io/imgsvd/)上，大家可以点进去玩玩看了。
