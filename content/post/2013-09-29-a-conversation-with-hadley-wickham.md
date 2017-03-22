@@ -25,7 +25,7 @@ description: "简介：Hadley Wickham 是 RStudio 的首席科学家以及 Rice 
 
 写在前面的话： 2013年9月13日小编（Yixuan）对他（Hadley）进行了一次简短的采访，谈及了他在图形可视化、数据整理和R编程等诸多方面的工作。
 
-![](http://i.imgur.com/EPgIMLi.jpg)
+![](https://i.imgur.com/EPgIMLi.jpg)
 
 
 
