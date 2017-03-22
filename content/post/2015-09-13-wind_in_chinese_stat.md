@@ -15,7 +15,7 @@ slug: wind_in_chinese_stat
   王汉生@北大光华
 </p>
 
-作为一个在商学院工作了十多年的统计学教员，一天到晚为自己，为学生，或者年轻合作伙伴多写俩Statistical Paper绞尽脑汁，也是无聊透顶，不知道多少脑细胞因此牺牲。难得空闲的时候，就瞎琢磨几个深刻的问题。当然，我也不知道这么深刻的问题，该不该我来琢磨。但是既然琢磨了，就不如写下来跟大家分享探讨。这几个问题就是：中国统计学未来发展的大方向是什么？背后的逻辑是什么？套用一句时髦的互联网语言就是：中国统计学的风口在哪里？[<img class="aligncenter size-full wp-image-11345" src="https://cos.name/wp-content/uploads/2015/09/fengkou.png" alt="fengkou" width="1003" height="609" srcset="https://cos.name/wp-content/uploads/2015/09/fengkou.png 1003w, https://cos.name/wp-content/uploads/2015/09/fengkou-300x182.png 300w, https://cos.name/wp-content/uploads/2015/09/fengkou-500x304.png 500w" sizes="(max-width: 1003px) 100vw, 1003px" />](https://cos.name/wp-content/uploads/2015/09/fengkou.png)
+作为一个在商学院工作了十多年的统计学教员，一天到晚为自己，为学生，或者年轻合作伙伴多写俩Statistical Paper绞尽脑汁，也是无聊透顶，不知道多少脑细胞因此牺牲。难得空闲的时候，就瞎琢磨几个深刻的问题。当然，我也不知道这么深刻的问题，该不该我来琢磨。但是既然琢磨了，就不如写下来跟大家分享探讨。这几个问题就是：中国统计学未来发展的大方向是什么？背后的逻辑是什么？套用一句时髦的互联网语言就是：中国统计学的风口在哪里？![fengkou](https://cos.name/wp-content/uploads/2015/09/fengkou.png)
 
 <!--more-->
 
@@ -29,16 +29,16 @@ slug: wind_in_chinese_stat
 
 所以我们不妨下一个结论：“统计学的大势所趋，从不以任何个人的兴趣爱好为转移。而是由产业变革（例如工业化进程），技术进步（例如DNA Microarray），还有制度环境（例如FDA政策）所决定”。这一点，我认为一定要看清楚！雷军说：站在风口，猪都能飞！这说的是，重大选择要顺势而为。背后隐含的另外一个结论是，如果逆风而动，鹰也飞不起来。这是我个人看待中国统计学发展方向的基本逻辑。那么，在中国这片土地上，面对当下的产业基础，政策环境，我们的大势在哪里？统计学的风口在哪里？要当飞起来的猪？还是被打趴下的鹰？或者更好：顺势而为的鹰？
 
-[<img class="aligncenter size-full wp-image-11346" src="https://cos.name/wp-content/uploads/2015/09/jinbu.png" alt="jinbu" width="1269" height="734" srcset="https://cos.name/wp-content/uploads/2015/09/jinbu.png 1269w, https://cos.name/wp-content/uploads/2015/09/jinbu-300x174.png 300w, https://cos.name/wp-content/uploads/2015/09/jinbu-500x289.png 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/09/jinbu.png)
+![jinbu](https://cos.name/wp-content/uploads/2015/09/jinbu.png)
 
 要回答这个问题，需要检讨一下中国的现状。中国有强大的制药产业吗？我相信未来会有。但不是今天，不是明天，不是我们可见的未来5到10年。为什么？因为我们缺乏强有力的制度环境。更加具体地说，我们缺乏类似FDA的强力监管机构。现在的国家药品监督局（即：中国的FDA）已经做了很多有意义的工作，但是显然还远远不够。为什么？君不见大家对食品安全的焦虑吗？这还不足以表明我们的制度环境需要long way to go吗？如果上面讨论的是对的，那么请允许我做一个悲催的预测：在中国，未来可见的相当长时间内，生物统计学，将会是一个重要的存在，但是不可能大放异彩。为什么？因为：没有相应的制度环境。对，就这么简单！
 
-那么中国有哪些产业在全球范围内是有竞争力的呢？第一、互联网；第二、制造业。这很好理解。互联网方面，我们有以BAT为代表的一大批有竞争力的企业。而制造业方面，中国是世界的中心，孕育了像华为这样伟大而优秀的企业。这两个行业，有可能形成风口，或者正在形成。这两个行业就是统计学研究的大势所趋，风口所在！[<img class="aligncenter size-full wp-image-11347" src="https://cos.name/wp-content/uploads/2015/09/lianwang.png" alt="lianwang" width="1269" height="847" srcset="https://cos.name/wp-content/uploads/2015/09/lianwang.png 1269w, https://cos.name/wp-content/uploads/2015/09/lianwang-300x200.png 300w, https://cos.name/wp-content/uploads/2015/09/lianwang-500x334.png 500w" sizes="(max-width: 1269px) 100vw, 1269px" />](https://cos.name/wp-content/uploads/2015/09/lianwang.png)
+那么中国有哪些产业在全球范围内是有竞争力的呢？第一、互联网；第二、制造业。这很好理解。互联网方面，我们有以BAT为代表的一大批有竞争力的企业。而制造业方面，中国是世界的中心，孕育了像华为这样伟大而优秀的企业。这两个行业，有可能形成风口，或者正在形成。这两个行业就是统计学研究的大势所趋，风口所在！![lianwang](https://cos.name/wp-content/uploads/2015/09/lianwang.png)
 
 更进一步地，这两个大势对统计学研究的具体影响会是什么呢？我们先讨论一下互联网，尤其是移动互联网，因为大家都很熟悉。请问：移动互联网产生了什么独特数据？它们的价值何在，应该如何研究？要回答这个问题，看看自己最常用的APP就知道答案了。我们最常用什么？微信。国外呢？Facebook and Twitter。它们是什么？全部都是基于社交的软件或者服务。它们产生了什么样的数据？首先是网络结构数据，用于刻画了用户之间的社交关系。对于统计分析，这会带来什么样的变化？最根本的变化就是让信息沿着网络结构开始流通。通俗地讲，以前，我们判断一个人是好人还是坏人（因变量），主要参考他自己的特征（解释性变量）。但是，有了网络结构，与之相连个体的所有信息（即包括因变量、也包括解释性变量），都可以被利用起来，以提高预测精度。但是，能够符合该理念、满足该需求的统计学模型却少之又少。这就是网络数据赋予统计学发展的重大机会，这就是风口所在！
 
 再看看制造业。制造业有几个特点。第一、中国是全世界的制造中心，但是亟待产业升级，进入工业4.0时代。第二、与世界制造中心相对应的是，对中国制造业的数据，我们却极其无知，远远落后于互联网。产生这个现象，可能有两个原因：首先可能是是传统制造业的数据采集困难，不如互联网方便；其次可能是互联网的故事太抢眼，让我们忘记了传统产业。但是，我个人感受到的传统行业，尤其是制造业，却蓄势待发！为什么？两个基本事实：（1）物联网技术越来越成熟，相应的数据采集越来越方便。一个典型的案例就是车联网。毋庸置疑，未来的汽车一定被成百上千个、各种各样的探测器所包围。这些探测器会准确记录汽车行驶的方方面面。例如：胎压、发动机温度、地理位置、行驶方向、行驶速度、加速度、角速度等。这就构成了统计分析的数据基础。（2）由于传统制造业体量巨大。动则一个汽车厂商年产汽车百万台，或者一个家电企业年产电视机千万台。因此，如果数据分析能够产生任何有益的改进方案，带来的价值都是极其巨大的，很可能远远大于数据分析（例如：精准营销）之于互联网的价值。由此可见，对于传统制造业，数据分析，很可能不以消费者为第一核心。而是以流程再造、产品改进、成本节省为第一核心。这点跟互联网行业很不一样。而这一切，都是以物联网的大规模、低成本的实施为前提。因此，物联网将是另外一个风口所在！
 
-[<img class="aligncenter size-full wp-image-11348" src="https://cos.name/wp-content/uploads/2015/09/chemoxing.png" alt="chemoxing" width="977" height="524" srcset="https://cos.name/wp-content/uploads/2015/09/chemoxing.png 977w, https://cos.name/wp-content/uploads/2015/09/chemoxing-300x161.png 300w, https://cos.name/wp-content/uploads/2015/09/chemoxing-500x268.png 500w" sizes="(max-width: 977px) 100vw, 977px" />](https://cos.name/wp-content/uploads/2015/09/chemoxing.png)
+![chemoxing](https://cos.name/wp-content/uploads/2015/09/chemoxing.png)
 
 基于以上讨论，作为统计学工作者的我们应该如何应对？我认为需要以一种非常谦卑开放的心态，去学习业务知识，了解应用场景，实践统计学理论。这方面，可供我们实践的沃土太丰富了。它们包括但不局限于：游戏、电商、社交、广告、投资、金融、征信、可穿戴设备、车联网、设备监控、政府、医疗等。过去的历史已经很清楚地说明：统计学的发展，一定要顺势而为。要顺应产业变革，技术进步，以及制度环境。在中国，互联网和物联网就是大势所趋，这就是风口所在。统计学从这里出发，想不飞都难！

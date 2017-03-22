@@ -13,7 +13,7 @@ slug: cos-interview-24-shaojun-guo
 
 <span style="color: #808080;"><b>郭绍俊</b>     2003年毕业于山东师范大学，2008年获得中国科学院数学与系统科学研究院理学博士学位。博士毕业后留中国科学院数学与系统科学研究院工作，助理研究员，任期至2016年。工作期间，于2009年-2010年赴美国普林斯顿大学运筹与金融工程系博士后研究，做高维数据分析方面的研究工作，并于2014-2016年在英国伦敦经济学院统计系做博士后研究，做大维时间序列建模方面的研究。 现为中国人民大学统计与大数据研究院副教授。目前主要研究方向有：高维统计学习；非参数及半参数统计建模；大维统计计算；生存分析及函数型数据分析等。</span><!--more-->
 
-<img class="aligncenter size-full wp-image-13454" src="https://cos.name/wp-content/uploads/2016/12/707776274661270760.jpg" alt="" width="1280" height="854" srcset="https://cos.name/wp-content/uploads/2016/12/707776274661270760.jpg 1280w, https://cos.name/wp-content/uploads/2016/12/707776274661270760-300x200.jpg 300w, https://cos.name/wp-content/uploads/2016/12/707776274661270760-768x512.jpg 768w, https://cos.name/wp-content/uploads/2016/12/707776274661270760-500x334.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />
+![](https://cos.name/wp-content/uploads/2016/12/707776274661270760.jpg)
 
 <span style="color: #000080;"><strong>冯璟烁：</strong>郭老师您大学时修的是数学系？我们看即便现在统计学科这么热，学数学的人也不是很多，所以您当时是出于什么样的考虑选择应用数学呢？</span>
 

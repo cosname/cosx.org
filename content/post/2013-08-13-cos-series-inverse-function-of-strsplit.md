@@ -35,7 +35,7 @@ str_splited
 str_new
 # [1] "the quick brown fox jumps over a lazy dog"</code></pre>
 
-## 如果不用 `collapse` 参数&#8230; {#-collapse-}
+## 如果不用 `collapse` 参数… {#-collapse-}
 
 很多人知道 `paste` 函数，但是很多人没有留意到其中有 `collapse` 这个参数。如果不用这个参数的话，有没有办法？当然是有的。这里就实现了一个简单的函数来做这件事。
 
@@ -54,7 +54,7 @@ str_new_2 &lt;- p(str_splited)
 str_new_2
 # [1] "the quick brown fox jumps over a lazy dog"</code></pre>
 
-## 如果不用 `paste` 函数&#8230; {#-paste-}
+## 如果不用 `paste` 函数… {#-paste-}
 
 如果有人有着一股折(dan4)腾(teng2)的心态，也许会问，不要 `paste` 函数怎么办？可以，还有不只一个方法。
 

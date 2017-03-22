@@ -15,7 +15,7 @@ slug: lda-math-beta-dirichlet
 
 **2. 认识Beta/Dirichlet分布**
   
-**2.1 魔鬼的游戏&#8212;认识Beta 分布**
+**2.1 魔鬼的游戏—认识Beta 分布**
 
 统计学就是猜测上帝的游戏,当然我们不总是有机会猜测上帝，运气不好的时候就得揣度魔鬼的心思。有一天你被魔鬼撒旦抓走了，撒旦说：“你们人类很聪明，而我是很仁慈的，和你玩一个游戏，赢了就可以走，否则把灵魂出卖给我。游戏的规则很简单，我有一个魔盒，上面有一个按钮，你每按一下按钮，就均匀的输出一个[0,1]之间的随机数，我现在按10下，我手上有10个数，你猜第7大的数是什么，偏离不超过0.01就算对。”你应该怎么猜呢？
 
@@ -24,7 +24,7 @@ slug: lda-math-beta-dirichlet
 对于不喜欢数学的同学而言，估计每个概率分布都是一个恶魔，那在概率统计学中，均匀分布应该算得上是潘多拉魔盒，几乎所有重要的概率分布都可以从均匀分布$Uniform(0,1)$中生成出来;尤其是在统计模拟中，所有统计分布的随机样本都是通过均匀分布产生的。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/pandora/" rel="attachment wp-att-6944"><img class="aligncenter wp-image-6944" src="https://cos.name/wp-content/uploads/2013/01/pandora.jpg" alt="pandora" width="300" height="248" srcset="https://cos.name/wp-content/uploads/2013/01/pandora.jpg 500w, https://cos.name/wp-content/uploads/2013/01/pandora-300x247.jpg 300w, https://cos.name/wp-content/uploads/2013/01/pandora-363x300.jpg 363w" sizes="(max-width: 300px) 100vw, 300px" /></a>潘多拉魔盒Uniform(0,1)
+  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/pandora/" rel="attachment wp-att-6944">![pandora](https://cos.name/wp-content/uploads/2013/01/pandora.jpg)</a>潘多拉魔盒Uniform(0,1)
 </p>
 
 <!--more-->对于上面的游戏而言 $n=10,k=7$, 如果我们能求出 $X\_{(7)}$ 的分布的概率密度，那么用概率密度的极值点去做猜测就是最好的策略。对于一般的情形，$X\_{(k)}$ 的分布是什么呢？那我们尝试计算一下$X_{(k)}$ 落在一个区间 $[x, x+\Delta x]$ 的概率，也就是求如下概率值
@@ -46,7 +46,7 @@ E = \{ & X_1 \in [x, x+\Delta x], \\
 \end{align*}
 
 <p style="text-align: center;">
-  <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/beta-game-1/" rel="attachment wp-att-6922"><img class="aligncenter size-full wp-image-6922" src="https://cos.name/wp-content/uploads/2013/01/beta-game-1.png" alt="beta-game-1" width="891" height="314" srcset="https://cos.name/wp-content/uploads/2013/01/beta-game-1.png 891w, https://cos.name/wp-content/uploads/2013/01/beta-game-1-300x105.png 300w, https://cos.name/wp-content/uploads/2013/01/beta-game-1-500x176.png 500w" sizes="(max-width: 891px) 100vw, 891px" /></a></strong>
+  <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/beta-game-1/" rel="attachment wp-att-6922">![beta-game-1](https://cos.name/wp-content/uploads/2013/01/beta-game-1.png)</a></strong>
 </p>
 
 <p style="text-align: center;">
@@ -71,7 +71,7 @@ $o(\Delta x)$表示$\Delta x $的高阶无穷小。显然，由于不同的排�
 
 \begin{align*}
   
-E&#8217; = \{ & X\_1,X\_2\in [x, x+\Delta x], \\
+E’ = \{ & X\_1,X\_2\in [x, x+\Delta x], \\
   
 & X_i \in [0,x) \quad (i=3,\cdots,k), \\
   
@@ -80,16 +80,16 @@ E&#8217; = \{ & X\_1,X\_2\in [x, x+\Delta x], \\
 \end{align*}
 
 <p style="text-align: center;">
-  <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/beta-game-2/" rel="attachment wp-att-6923"><img class="aligncenter size-full wp-image-6923" src="https://cos.name/wp-content/uploads/2013/01/beta-game-2.png" alt="beta-game-2" width="900" height="303" srcset="https://cos.name/wp-content/uploads/2013/01/beta-game-2.png 900w, https://cos.name/wp-content/uploads/2013/01/beta-game-2-300x101.png 300w, https://cos.name/wp-content/uploads/2013/01/beta-game-2-500x168.png 500w" sizes="(max-width: 900px) 100vw, 900px" /></a></strong>
+  <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/beta-game-2/" rel="attachment wp-att-6923">![beta-game-2](https://cos.name/wp-content/uploads/2013/01/beta-game-2.png)</a></strong>
 </p>
 
 <p style="text-align: center;">
-  <strong>事件E&#8217;</strong>
+  <strong>事件E’</strong>
 </p>
 
 则有
   
-$$ P(E&#8217;) = x^{k-2}(1-x-\Delta x)^{n-k}(\Delta x)^2 = o(\Delta x)$$
+$$ P(E’) = x^{k-2}(1-x-\Delta x)^{n-k}(\Delta x)^2 = o(\Delta x)$$
   
 从以上分析我们很容易看出，只要落在$[x, x+\Delta x]$内的数字超过一个，则对应的事件的概率就是 $o(\Delta x)$。于是
   
@@ -150,7 +150,7 @@ $$ f(x) = \frac{10!}{(6)!(3)!}x^{6}(1-x)^{3} \quad x \in [0,1] $$
   3. 在给定了来自数据提供的$(m\_1,m\_2)$的知识后，$p$ 的后验分布变为 $f(p|m\_1,m\_2)=Beta(p|k+m\_1,n-k+1+m\_2)$
 
 <p style="text-align: center;">
-  <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/coin-toss/" rel="attachment wp-att-6924"><img class="aligncenter wp-image-6924" src="https://cos.name/wp-content/uploads/2013/01/coin-toss.jpg" alt="coin-toss" width="166" height="193" srcset="https://cos.name/wp-content/uploads/2013/01/coin-toss.jpg 434w, https://cos.name/wp-content/uploads/2013/01/coin-toss-259x300.jpg 259w, https://cos.name/wp-content/uploads/2013/01/coin-toss-432x500.jpg 432w" sizes="(max-width: 166px) 100vw, 166px" /></a>贝努利实验</strong>
+  <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/coin-toss/" rel="attachment wp-att-6924">![coin-toss](https://cos.name/wp-content/uploads/2013/01/coin-toss.jpg)</a>贝努利实验</strong>
 </p>
 
 我们知道贝叶斯参数估计的基本过程是
@@ -196,7 +196,7 @@ P(p|m\_1,m\_2) & = \frac{P(p)\cdot P(m\_1,m\_2|p)}{P(m\_1,m\_2)} \\
 计算得到的后验分布正好是 $Beta(p|m\_1+1,m\_2+1)$。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/beta-distribution/" rel="attachment wp-att-6921"><img class="aligncenter wp-image-6921" src="https://cos.name/wp-content/uploads/2013/01/beta-distribution.png" alt="beta-distribution" width="438" height="357" srcset="https://cos.name/wp-content/uploads/2013/01/beta-distribution.png 911w, https://cos.name/wp-content/uploads/2013/01/beta-distribution-300x245.png 300w, https://cos.name/wp-content/uploads/2013/01/beta-distribution-500x408.png 500w, https://cos.name/wp-content/uploads/2013/01/beta-distribution-367x300.png 367w" sizes="(max-width: 438px) 100vw, 438px" /></a>
+  <a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/beta-distribution/" rel="attachment wp-att-6921">![beta-distribution](https://cos.name/wp-content/uploads/2013/01/beta-distribution.png)</a>
 </p>
 
 <p style="text-align: center;">
@@ -219,7 +219,7 @@ P(C \le k) = \frac{n!}{k!(n-k-1)!} \int_p^1 t^k(1-t)^{n-k-1} dt, \quad C\sim B(n
 
 我们可以如下构造二项分布，取随机变量 $X\_1, X\_2, \cdots, X\_n {\stackrel{\mathrm{iid}}{\sim}}Uniform(0,1)$,一个成功的贝努利实验就是 $X\_i<p$,否则表示失败,于是成功的概率为$p$。$C$用于计数成功的次数，于是$C\sim B(n,p)$。
 
-<strong style="text-align: center;"><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/beta-binomial/" rel="attachment wp-att-6920"><img class="aligncenter size-full wp-image-6920" src="https://cos.name/wp-content/uploads/2013/01/beta-binomial.png" alt="beta-binomial" width="904" height="224" srcset="https://cos.name/wp-content/uploads/2013/01/beta-binomial.png 904w, https://cos.name/wp-content/uploads/2013/01/beta-binomial-300x74.png 300w, https://cos.name/wp-content/uploads/2013/01/beta-binomial-500x123.png 500w" sizes="(max-width: 904px) 100vw, 904px" /></a></strong>
+<strong style="text-align: center;"><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/beta-binomial/" rel="attachment wp-att-6920">![beta-binomial](https://cos.name/wp-content/uploads/2013/01/beta-binomial.png)</a></strong>
 
 <p style="text-align: center;">
   <strong>贝努利实验最多成功$k$次</strong>
@@ -263,7 +263,7 @@ $$ Beta(x|9,7) = \frac{15!}{(8)!(6)!}x^{8}(1-x)^{6} \quad x \in [0,1] $$
 
 完全类似于第一个游戏的推导过程，我们可以进行如下的概率计算(为了数学公式的简洁对称，我们取$x\_3$满足$x\_1+x\_2+x\_3 = 1$,但只有$x\_1,x\_2$是变量)
 
-<a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/dirichlet-game/" rel="attachment wp-att-6928"><img class="size-full wp-image-6928 alignnone" src="https://cos.name/wp-content/uploads/2013/01/dirichlet-game.png" alt="dirichlet-game" width="917" height="171" srcset="https://cos.name/wp-content/uploads/2013/01/dirichlet-game.png 917w, https://cos.name/wp-content/uploads/2013/01/dirichlet-game-300x55.png 300w, https://cos.name/wp-content/uploads/2013/01/dirichlet-game-500x93.png 500w" sizes="(max-width: 917px) 100vw, 917px" /></a>
+<a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/dirichlet-game/" rel="attachment wp-att-6928">![dirichlet-game](https://cos.name/wp-content/uploads/2013/01/dirichlet-game.png)</a>
 
 <p style="text-align: center;">
   $(X_{(k_1)}, X_{(k_1+k_2)})$<strong>的联合分布推导</strong>
@@ -304,7 +304,7 @@ f(x\_1,x\_2,x\_3) & = \frac{n!}{(k\_1-1)!(k\_2-1)!(n-k\_1-k\_2)!}x\_1^{k\_1-1}x\
 从形式上我们也能看出，Dirichlet 分布是Beta 分布在高维度上的推广，他和Beta 分布一样也是一个百变星君，密度函数可以展现出多种形态。
 
 <p style="text-align: center;">
-  <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/dirichlet-distribution/" rel="attachment wp-att-6927"><img class="aligncenter size-full wp-image-6927" src="https://cos.name/wp-content/uploads/2013/01/dirichlet-distribution.png" alt="dirichlet-distribution" width="670" height="303" srcset="https://cos.name/wp-content/uploads/2013/01/dirichlet-distribution.png 670w, https://cos.name/wp-content/uploads/2013/01/dirichlet-distribution-300x135.png 300w, https://cos.name/wp-content/uploads/2013/01/dirichlet-distribution-500x226.png 500w" sizes="(max-width: 670px) 100vw, 670px" /></a>不同 $\alpha$ 下的Dirichlet 分布</strong>
+  <strong><a href="https://cos.name/2013/01/lda-math-%e7%a5%9e%e5%a5%87%e7%9a%84gamma%e5%87%bd%e6%95%b0/dirichlet-distribution/" rel="attachment wp-att-6927">![dirichlet-distribution](https://cos.name/wp-content/uploads/2013/01/dirichlet-distribution.png)</a>不同 $\alpha$ 下的Dirichlet 分布</strong>
 </p>
 
 类似于魔鬼的游戏2，我们也可以调整一下游戏3，从魔盒中生成$m$个随机数$Y\_1,Y\_2,\cdots,Y\_m {\stackrel{\mathrm{iid}}{\sim}}Uniform(0,1)$ 并让魔鬼告诉我们$Y\_i$和$(X\_{(k\_1)}, X\_{(k\_1+k_2)})$相比谁大谁小。于是有如下游戏4
@@ -354,7 +354,7 @@ $$ Dir(\overrightarrow{p}|\overrightarrow{1}) + MultCount(\overrightarrow{m}-\ov
   
 此处$\overrightarrow{1}=(1,1,\cdots,1)$。自然，上式我们也可以类似地用纯粹贝叶斯的观点进行推导和解释。
 
-以上的游戏我们还可以往更高的维度上继续推，譬如猜测 $X\_{(1)},X\_{(2)}，\cdots, X_{(n)}$ 中的4、5、&#8230;等更多个数，于是就得到更高纬度的 Dirichlet 分布和 Dirichlet-Multinomial 共轭。一般形式的 Dirichlet 分布定义如下
+以上的游戏我们还可以往更高的维度上继续推，譬如猜测 $X\_{(1)},X\_{(2)}，\cdots, X_{(n)}$ 中的4、5、…等更多个数，于是就得到更高纬度的 Dirichlet 分布和 Dirichlet-Multinomial 共轭。一般形式的 Dirichlet 分布定义如下
   
 \begin{equation}
   

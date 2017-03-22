@@ -16,7 +16,7 @@ slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
 
 作者：<a href="http://www.shakirm.com/" target="_blank">Shakir Mohamed</a>  翻译：丁维悦     审校：朱雪宁  何通  施涛   编辑：王小宁<figure id="attachment_11153" style="width: 300px" class="wp-caption alignright">
 
-[<img class="wp-image-11153 size-full" src="https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png" alt="methodTriangle1-300x300" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png 300w, https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png)<figcaption class="wp-caption-text">连接机器学习的回归方法</figcaption></figure> 
+![methodTriangle1-300x300](https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png)<figcaption class="wp-caption-text">连接机器学习的回归方法</figcaption></figure> 
 
 人们通过对以往的经验或者数据的回忆来推断未来的事物，这样的过程可以用一个经常出现在最近文献中的词语——记忆来概括。机器学习模型都是由这样的‘记忆’组成的，如何理解这些‘记忆’对于如何使用模型是极为重要的。根据机器学习模型的种类，可以分为两种主要的记忆机制，即参数型与非参数型（还包括了介于两者之间的模型）。深度网络作为参数记忆型模型的代表，它将统计特性从所观察到的数据中以模型参数或者权重的方式提炼出来。而非参数模型中的典范则是核机器（以及最近邻），它们的记忆机制是存储所有数据。我们可以自然地认为，深度网络与核机器是两种原理不同的由数据推导结论的方法，但是实际上，我们研究出这些方法的过程却表明它们之间有着更加深远的联系以及更基本的相似性。
 
@@ -34,15 +34,15 @@ $$\textrm{随机性部分: } \quad y = f(\mathbf{x}) + \epsilon \qquad \epsilon 
 
 <em style="line-height: 1.5;"> </em>有了明确的概率模型，就意味着我们有了一个可以进行参数优化的目标函数，而这个目标函数是通过对该模型的联合概率分布函数取负对数而得到的。我们现在可以在神经网络中采用最大后验估计，并通过反向传播算法获得所有的模型参数。“记忆”会通过这个模型的参数建模框架而被保留下来。因此我们并不存储数据，而是简洁的用模型的参数去概括它。这种形式有着很好的性质：我们可以将数据的特性都嵌入到函数f中，例如对2D图像采用卷积运算进行特征的提取，同时我们也可以利用其可扩展性做一个随机近似，不仅如此，我们在采用梯度下降算法时还可以只选取一小批数据而不是所有数据。可以看出，损失函数可以让我们将神经网络很好的扩展到其他类型的回归中，因此它对于输出权重的准确度而言是举足轻重的。
 
-$$J(\mathbf{w}) = \frac{1}{2} \sum\_{n=1}^{N} (y\_n &#8211; \mathbf{w}^\top \phi(\mathbf{x}_n; \theta))^2 + \frac{\lambda}{2 }\mathbf{w}^\top\mathbf{w}.$$
+$$J(\mathbf{w}) = \frac{1}{2} \sum\_{n=1}^{N} (y\_n – \mathbf{w}^\top \phi(\mathbf{x}_n; \theta))^2 + \frac{\lambda}{2 }\mathbf{w}^\top\mathbf{w}.$$
 
 **核方法**
 
 如果我们多瞄一眼最后的那个目标函数，尤其是代表最后线性层的式子，就会很快的写出它的对偶函数。就让我们通过令该目标函数对w求导后的式子为0并求解的方式来找到其对偶形式吧。
 
-$$\nabla J(\mathbf{w}) = 0 \implies \mathbf{w} = \frac{1}{\lambda} \sum\_n (y\_n &#8211; \mathbf{w}^\top \phi(\mathbf{x}\_n))\phi(\mathbf{x}\_n)$$
+$$\nabla J(\mathbf{w}) = 0 \implies \mathbf{w} = \frac{1}{\lambda} \sum\_n (y\_n – \mathbf{w}^\top \phi(\mathbf{x}\_n))\phi(\mathbf{x}\_n)$$
 
-$$\mathbf{w} =\sum\_n \alpha\_n\phi(\mathbf{x}\_n) = \boldsymbol{\Phi}^\top \boldsymbol{\alpha} \qquad \alpha\_n = -\frac{1}{\lambda}(\mathbf{w}^\top \phi(\mathbf{x}\_n) &#8211; y\_n)$$
+$$\mathbf{w} =\sum\_n \alpha\_n\phi(\mathbf{x}\_n) = \boldsymbol{\Phi}^\top \boldsymbol{\alpha} \qquad \alpha\_n = -\frac{1}{\lambda}(\mathbf{w}^\top \phi(\mathbf{x}\_n) – y\_n)$$
 
 我们将所有的关于观测值的基函数（特征）整合到了矩阵$\Phi(x)$中。将最后一层参数的解代入到损失函数中，我们就得到了由新参数$\alpha$构成的对偶损失函数，以及涉及矩阵相乘的格拉姆矩阵（Gram Matrix）$K=\Phi\Phi^{\top}$。我们可以重复之前求导的过程并解得使对偶损失函数最小的优化参数$\alpha$如下:
 
@@ -56,7 +56,7 @@ $$f =\mathbf{w}\_{MAP}^\top \phi(\mathbf{x}^\*) = \boldsymbol{\alpha}^\top \bold
   
 最后一个等式是由表示定理（[Representer theorem](http://en.wikipedia.org/wiki/Representer_theorem)）得出的解。这让我们从另一个视角定义这个问题，即直接对我们想要估计的函数加惩罚项，并限定该函数属于希尔伯特空间中（一个直接的非参数视角）：
 
-$$J(f) =\frac{1}{2} \sum\_{n=1}^{N} (y\_n &#8211; f(\mathbf{x}\_n))^2 + \frac{\lambda}{2 }\| f\|^2\_{\mathcal{H}}.$$
+$$J(f) =\frac{1}{2} \sum\_{n=1}^{N} (y\_n – f(\mathbf{x}\_n))^2 + \frac{\lambda}{2 }\| f\|^2\_{\mathcal{H}}.$$
   
 **高斯过程**
 

@@ -21,5 +21,5 @@ slug: the-most-poisoned-baby-name
   * 独乐乐不如众乐乐，在社交合作编程的新时代，这<a href="http://www.noamross.net/blog/2013/1/7/collaborating-with-r.html" target="_blank">几款未来感超强的工具</a>让R编程变得又酷又炫！
   * <a href="http://www.rstudio.com/shiny/" target="_blank">Shiny</a>来了，麻麻说再也不用担心复杂的服务器配置就可以把R放进浏览器了。
   * “你大爷的，生物信息学，吃屎去死吧”，<a href="http://madhadron.com/a-farewell-to-bioinformatics" target="_blank">Fred Ross解释为什么离开生物信息学</a>（所有人都指望程序猿和数学来拯救世界？滚一边去！）。
-  * Bioconductor的巨头之一Rafael Irizarry看见paste0()函数老泪纵横，称之为<a title="Simply Statistics" href="http://simplystatistics.org/2013/01/31/paste0-is-statistical-computings-most-influential-contribution-of-the-21st-century/" target="_blank">“21世纪统计计算中最有影响的贡献”</a>. Irizarry吐槽称，终于不用再手动设置sep=&#8221;&#8221;了，这得节省多少人力啊！
+  * Bioconductor的巨头之一Rafael Irizarry看见paste0()函数老泪纵横，称之为<a title="Simply Statistics" href="http://simplystatistics.org/2013/01/31/paste0-is-statistical-computings-most-influential-contribution-of-the-21st-century/" target="_blank">“21世纪统计计算中最有影响的贡献”</a>. Irizarry吐槽称，终于不用再手动设置sep=“”了，这得节省多少人力啊！
   * （纯属狗仔队娱乐）贝叶斯名家Christian Robert也看《画皮2》并发表<a href="http://xianblog.wordpress.com/2013/02/02/painted-skin-the-resurrection/" target="_blank">影评</a>。

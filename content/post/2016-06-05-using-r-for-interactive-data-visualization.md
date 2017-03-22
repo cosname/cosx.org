@@ -30,20 +30,20 @@ install_github('rCharts', 'ramnathv')</pre>
 
 rCharts函数就像lattice函数一样，通过formula、data指定数据源和绘图方式，并通过type指定图表类型。
 
-下面通过例子来了解下其工作原理。我们以鸢尾花数据集为例，首先通过name函数对列名进行重新赋值（去掉单词间的点），然后利用rPlot函数绘制散点图(type=”point”)，并利用颜色进行分组（color=”Species”）。<!--more-->
+下面通过例子来了解下其工作原理。我们以鸢尾花数据集为例，首先通过name函数对列名进行重新赋值（去掉单词间的点），然后利用rPlot函数绘制散点图(type=“point”)，并利用颜色进行分组（color=“Species”）。<!--more-->
 
 <pre><strong>library</strong>(rCharts)
 names(iris) = gsub("\\.", "", names(iris))
 p1 &lt;- rPlot(SepalLength ~ SepalWidth | Species, data = iris, color = 'Species', type = 'point')
 p1</pre>
 
-[<img class="aligncenter size-full wp-image-12484" src="https://cos.name/wp-content/uploads/2016/06/001.png" alt="001" width="786" height="379" srcset="https://cos.name/wp-content/uploads/2016/06/001.png 786w, https://cos.name/wp-content/uploads/2016/06/001-300x145.png 300w, https://cos.name/wp-content/uploads/2016/06/001-768x370.png 768w, https://cos.name/wp-content/uploads/2016/06/001-500x241.png 500w" sizes="(max-width: 786px) 100vw, 786px" />](https://cos.name/wp-content/uploads/2016/06/001.png)
+![001](https://cos.name/wp-content/uploads/2016/06/001.png)
 
 rCharts支持多个javascript图表库,每个都有自己的长处。每一个图表库有多个定制选项,其中大部分rCharts都支持。
 
 NVD3 是一个旨在建立可复用的图表和组件的 d3.js 项目——它提供了同样强大的功能，但更容易使用。它可以让我们处理复杂的数据集来创建更高级的可视化。在rCharts包中提供了nPlot函数来实现。
 
-下面以眼睛和头发颜色的数据(HairEyeColor)为例说明nPlot绘图的基本原理。我们按照眼睛的颜色进行分组(group=”eye”),对头发颜色人数绘制柱状图，并将类型设置为柱状图组合方式(type=”multiBarChart”)，这样可以实现分组和叠加效果。
+下面以眼睛和头发颜色的数据(HairEyeColor)为例说明nPlot绘图的基本原理。我们按照眼睛的颜色进行分组(group=“eye”),对头发颜色人数绘制柱状图，并将类型设置为柱状图组合方式(type=“multiBarChart”)，这样可以实现分组和叠加效果。
 
 <pre><strong>library</strong>(rCharts)
 hair_eye_male &lt;- subset(as.data.frame(HairEyeColor), Sex == "Male")
@@ -55,11 +55,11 @@ n1</pre>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12485" src="https://cos.name/wp-content/uploads/2016/06/002.png" alt="002" width="769" height="366" srcset="https://cos.name/wp-content/uploads/2016/06/002.png 769w, https://cos.name/wp-content/uploads/2016/06/002-300x143.png 300w, https://cos.name/wp-content/uploads/2016/06/002-768x366.png 768w, https://cos.name/wp-content/uploads/2016/06/002-500x238.png 500w" sizes="(max-width: 769px) 100vw, 769px" />](https://cos.name/wp-content/uploads/2016/06/002.png)可以通过图形右上角选择需要查看或隐藏的类别（默认是全部类别显示的），也能通过左上角选择柱子是按照分组还是叠加的方式进行摆放（默认是分组方式）。如果选择Stacked，就会绘制叠加柱状图。
+![002](https://cos.name/wp-content/uploads/2016/06/002.png)可以通过图形右上角选择需要查看或隐藏的类别（默认是全部类别显示的），也能通过左上角选择柱子是按照分组还是叠加的方式进行摆放（默认是分组方式）。如果选择Stacked，就会绘制叠加柱状图。
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12486" src="https://cos.name/wp-content/uploads/2016/06/rcharts-003.png" alt="rcharts-003" width="761" height="370" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-003.png 761w, https://cos.name/wp-content/uploads/2016/06/rcharts-003-300x146.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-003-500x243.png 500w" sizes="(max-width: 761px) 100vw, 761px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-003.png)
+![rcharts-003](https://cos.name/wp-content/uploads/2016/06/rcharts-003.png)
 
 Highcharts是一个制作图表的纯Javascript类库，支持大部分的图表类型：直线图，曲线图、区域图、区域曲线图、柱状图、饼状图、散布图等。在rCharts包中提供了hPlot函数来实现。
 
@@ -77,7 +77,7 @@ a</pre>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12487" src="https://cos.name/wp-content/uploads/2016/06/rcharts-004.png" alt="rcharts-004" width="793" height="383" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-004.png 793w, https://cos.name/wp-content/uploads/2016/06/rcharts-004-300x145.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-004-768x371.png 768w, https://cos.name/wp-content/uploads/2016/06/rcharts-004-500x241.png 500w" sizes="(max-width: 793px) 100vw, 793px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-004.png)
+![rcharts-004](https://cos.name/wp-content/uploads/2016/06/rcharts-004.png)
 
 rCharts包可以画出更多漂亮的交互图， <http://ramnathv.github.io/rCharts/>和<https://github.com/ramnathv/rCharts/tree/master/demo>有更多的例子可供大家学习。
 
@@ -103,7 +103,7 @@ type = 'scatter')</pre>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12488" src="https://cos.name/wp-content/uploads/2016/06/rcharts-005.png" alt="rcharts-005" width="696" height="454" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-005.png 696w, https://cos.name/wp-content/uploads/2016/06/rcharts-005-300x196.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-005-500x326.png 500w" sizes="(max-width: 696px) 100vw, 696px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-005.png)
+![rcharts-005](https://cos.name/wp-content/uploads/2016/06/rcharts-005.png)
 
 绘制柱状图：
 
@@ -116,7 +116,7 @@ xlab = 'Hair', ylab = 'Freq')</pre>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12489" src="https://cos.name/wp-content/uploads/2016/06/rcharts-006.png" alt="rcharts-006" width="686" height="457" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-006.png 686w, https://cos.name/wp-content/uploads/2016/06/rcharts-006-300x200.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-006-500x333.png 500w" sizes="(max-width: 686px) 100vw, 686px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-006.png)[
+![rcharts-006](https://cos.name/wp-content/uploads/2016/06/rcharts-006.png)[
   
 ](https://cos.name/wp-content/uploads/2016/06/rcharts-007.png) 
 
@@ -134,7 +134,7 @@ subtitle = '(source: mtcars)')</pre>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12490" src="https://cos.name/wp-content/uploads/2016/06/rcharts-007.png" alt="rcharts-007" width="672" height="476" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-007.png 672w, https://cos.name/wp-content/uploads/2016/06/rcharts-007-300x213.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-007-500x354.png 500w" sizes="(max-width: 672px) 100vw, 672px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-007.png)
+![rcharts-007](https://cos.name/wp-content/uploads/2016/06/rcharts-007.png)
 
 雷达图：
 
@@ -150,7 +150,7 @@ title='Lahm vs Alves', subtitle= '(by @mixedknuts)')</pre>
 
 &nbsp;
 
-**[<img class="aligncenter size-full wp-image-12491" src="https://cos.name/wp-content/uploads/2016/06/rcharts-008.png" alt="rcharts-008" width="691" height="488" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-008.png 691w, https://cos.name/wp-content/uploads/2016/06/rcharts-008-300x212.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-008-500x353.png 500w" sizes="(max-width: 691px) 100vw, 691px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-008.png)**
+**![rcharts-008](https://cos.name/wp-content/uploads/2016/06/rcharts-008.png)**
 
 **plotly****包**
 
@@ -166,7 +166,7 @@ title='Lahm vs Alves', subtitle= '(by @mixedknuts)')</pre>
 
 plotly包利用函数plot_ly函数绘制交互图。
 
-如果相对鸢尾花数据集绘制散点图，需要将mode参数设置为”markers”。
+如果相对鸢尾花数据集绘制散点图，需要将mode参数设置为“markers”。
 
 <pre><strong>library</strong>(plotly)
 p &lt;- plot_ly(iris, x = Petal.Length, y = Petal.Width,
@@ -175,14 +175,14 @@ p</pre>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12492" src="https://cos.name/wp-content/uploads/2016/06/rcharts-009.png" alt="rcharts-009" width="697" height="472" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-009.png 697w, https://cos.name/wp-content/uploads/2016/06/rcharts-009-300x203.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-009-500x339.png 500w" sizes="(max-width: 697px) 100vw, 697px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-009.png)
+![rcharts-009](https://cos.name/wp-content/uploads/2016/06/rcharts-009.png)
 
 如果想绘制交互箱线图，需要将type参数设置为box。
 
 <pre>library(plotly)
 plot_ly(midwest, x = percollege, color = state, type = "box")</pre>
 
-[<img class="aligncenter size-full wp-image-12493" src="https://cos.name/wp-content/uploads/2016/06/rcharts-010.png" alt="rcharts-010" width="677" height="496" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-010.png 677w, https://cos.name/wp-content/uploads/2016/06/rcharts-010-300x220.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-010-500x366.png 500w" sizes="(max-width: 677px) 100vw, 677px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-010.png)
+![rcharts-010](https://cos.name/wp-content/uploads/2016/06/rcharts-010.png)
 
 如果你已熟悉ggplot2的绘图系统，也可以针对ggplot2绘制的对象p，利用ggplotly函数实现交互效果。例如我们想对ggplot绘制的密度图实现交互效果，执行以下代码即可。
 
@@ -194,7 +194,7 @@ facet_grid(voice.part~.)
 
 &nbsp;
 
-**[<img class="aligncenter size-full wp-image-12494" src="https://cos.name/wp-content/uploads/2016/06/rcharts-011.png" alt="rcharts-011" width="675" height="491" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-011.png 675w, https://cos.name/wp-content/uploads/2016/06/rcharts-011-300x218.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-011-500x364.png 500w" sizes="(max-width: 675px) 100vw, 675px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-011.png)**
+**![rcharts-011](https://cos.name/wp-content/uploads/2016/06/rcharts-011.png)**
 
 **其他**
 
@@ -210,16 +210,16 @@ dyRangeSelector(height = 20)</pre>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12495" src="https://cos.name/wp-content/uploads/2016/06/rcharts-012.png" alt="rcharts-012" width="1165" height="657" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-012.png 1165w, https://cos.name/wp-content/uploads/2016/06/rcharts-012-300x169.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-012-768x433.png 768w, https://cos.name/wp-content/uploads/2016/06/rcharts-012-500x282.png 500w" sizes="(max-width: 1165px) 100vw, 1165px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-012.png)
+![rcharts-012](https://cos.name/wp-content/uploads/2016/06/rcharts-012.png)
 
-DT包实现R数据对象可以在HTML页面中实现过滤、分页、排序以及其他许多功能。通过install.packages(&#8220;DT&#8221;)安装。
+DT包实现R数据对象可以在HTML页面中实现过滤、分页、排序以及其他许多功能。通过install.packages(“DT”)安装。
 
 以鸢尾花数据集iris为例，执行以下代码：
 
 <pre>library(DT)
 datatable(iris)</pre>
 
-networkD3包可实现D3 JavaScript的网络图，通过install.packages(&#8220;networkD3&#8221;)安装。
+networkD3包可实现D3 JavaScript的网络图，通过install.packages(“networkD3”)安装。
 
 下面是绘制一个力导向的网络图的例子。
 
@@ -233,7 +233,7 @@ Source = "source", Target = "target",
 Value = "value", NodeID = "name",
 Group = "group", opacity = 0.8)</pre>
 
-[<img class="aligncenter size-full wp-image-12497" src="https://cos.name/wp-content/uploads/2016/06/rcharts-014.png" alt="rcharts-014" width="419" height="402" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-014.png 419w, https://cos.name/wp-content/uploads/2016/06/rcharts-014-300x288.png 300w" sizes="(max-width: 419px) 100vw, 419px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-014.png)我们可以通过d3treeR包绘制交互treemap图，利用
+![rcharts-014](https://cos.name/wp-content/uploads/2016/06/rcharts-014.png)我们可以通过d3treeR包绘制交互treemap图，利用
 
 <pre>devtools::install_github("timelyportfolio/d3treeR")</pre>
 
@@ -253,6 +253,6 @@ d3tree( tm,rootname = "World" )</pre>
 
 &nbsp;
 
-[<img class="aligncenter size-full wp-image-12498" src="https://cos.name/wp-content/uploads/2016/06/rcharts-015.png" alt="rcharts-015" width="1174" height="643" srcset="https://cos.name/wp-content/uploads/2016/06/rcharts-015.png 1174w, https://cos.name/wp-content/uploads/2016/06/rcharts-015-300x164.png 300w, https://cos.name/wp-content/uploads/2016/06/rcharts-015-768x421.png 768w, https://cos.name/wp-content/uploads/2016/06/rcharts-015-500x274.png 500w" sizes="(max-width: 1174px) 100vw, 1174px" />](https://cos.name/wp-content/uploads/2016/06/rcharts-015.png)
+![rcharts-015](https://cos.name/wp-content/uploads/2016/06/rcharts-015.png)
 
 今天主要是介绍了几个R常用的交互包。在R的环境中，动态交互图形的优势在于能和knitr、shiny等框架整合在一起，能迅速建立一套可视化原型系统。希望以后再跟各位分享这部分的内容。

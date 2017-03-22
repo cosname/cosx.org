@@ -106,7 +106,7 @@ sim.qqnorm(n = 30, pch = 19, col = "red", last.plot = expression(abline(0, 1)))
 
 早些年当我还是个无知轻狂小子的时候，我曾戏称“统计软件就是为了放个P”，这里的P指的是P值，不是粗话。这话好像也不全然轻狂无知。使用统计方法的人，难道不是在追逐一个小于0.05的P值吗？如果你的结果不显著，那么肯定发表不了。换句话说，发表的结果很有可能是我们在自欺欺人。下面的漫画生动刻画了人们寻找P值的过程（来自xkcd）：
 
-![Significant](http://imgs.xkcd.com/comics/significant.png)
+![Significant](https://imgs.xkcd.com/comics/significant.png)
 
 重大科学发现！吃绿色的软糖会让你长痘痘！95%置信度！
 
