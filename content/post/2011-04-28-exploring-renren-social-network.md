@@ -243,4 +243,4 @@ top20</pre>
 
 附件2的代码，最新做的图片，统计之都立功啦。
   
-![](https://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330.png "renren_friend_community_betweenness_20120330")
+![renren_friend_community_betweenness_20120330](https://cos.name/wp-content/uploads/2011/04/renren_friend_community_betweenness_20120330.png)

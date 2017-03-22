@@ -19,7 +19,7 @@ slug: cos-5th-salon
   
 > 主要从事可视化和图形学的研究，主要研究方向包括：高动态范围视频、图像和可视化；大规模数据的高性能绘制和可视化；非真实性绘制及插图式可视化；新颖可视化界面与人机交互研究；高维数据可视化。 http://vis.pku.edu.cn/yuanxiaoru/
 
-![](http://i.imgur.com/nRCsu.jpg "袁老师可视化讲座")
+![袁老师可视化讲座](http://i.imgur.com/nRCsu.jpg)
 
 &nbsp;
 

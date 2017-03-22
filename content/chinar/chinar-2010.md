@@ -22,7 +22,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 上海财经大学（国定路777号），行政楼一楼阶梯教室、报告厅（地图右上角）。
 
-![](https://cos.name/wp-content/uploads/2010/10/SHUFE_map.jpg "上海财经大学地图")
+![上海财经大学地图](https://cos.name/wp-content/uploads/2010/10/SHUFE_map.jpg)
 
 ### 三、会议组委
 
@@ -31,9 +31,9 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 ### 四、会议海报与传单
 
- ![](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster.jpg "第三届中国R语言会议上海会场海报")
+ ![第三届中国R语言会议上海会场海报](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster.jpg)
 
-![](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet.jpg "第三届中国R语言会议上海会场传单")
+![第三届中国R语言会议上海会场传单](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet.jpg)
 
 ## 会议事宜（北京会场）
 
@@ -52,12 +52,12 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 交通地图（点击看大图）：
 
 <p style="text-align: center;">
-  <a href="http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png">![](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png "人大交通地图")</a>
+  <a href="http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png">![人大交通地图](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)</a>
 </p>
 
 人大校内地图（点击看大图）：
 
-![](https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg "人大校内地图")
+![人大校内地图](https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg)
 
 ### 三、会议演讲
 

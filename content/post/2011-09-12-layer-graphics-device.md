@@ -14,7 +14,7 @@ tags:
 slug: layer-graphics-device
 ---
 
-![](https://cos.name/wp-content/uploads/2011/09/Festival2.png "Layer图形设备配图")
+![Layer图形设备配图](https://cos.name/wp-content/uploads/2011/09/Festival2.png)
   
 你在用R画图的时候，是否会遇到以下的麻烦：
 
