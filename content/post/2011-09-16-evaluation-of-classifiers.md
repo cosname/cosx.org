@@ -25,7 +25,7 @@ description: "本文转载自阿稳的博客，原文链接请点击[此处](htt
 
 以上两段文字摘自我和陈钢同学翻译、即将出版的[《智能web算法》](http://book.douban.com/subject/6545083/)中讲述分类器的一章。
 
-作者试图说明一个问题：分类器的评估与分类器本身同样重要。评估分类器可信度的一个基本工具是混淆矩阵（confusion matrix）。以一个二分类问题作为研究对象，图1的混淆矩阵显示了一个分类器可能会遭遇的所有情况，其中列（positive/negative）对应于实例实际所属的类别，行（true/false）表示分类的正确与否（注，这里的混淆矩阵的结构跟^[1]中的定义并不一样，但实际说明的问题是一致的）。
+作者试图说明一个问题：分类器的评估与分类器本身同样重要。评估分类器可信度的一个基本工具是混淆矩阵（confusion matrix）。以一个二分类问题作为研究对象，图1的混淆矩阵显示了一个分类器可能会遭遇的所有情况，其中列（positive/negative）对应于实例实际所属的类别，行（true/false）表示分类的正确与否（注，这里的混淆矩阵的结构跟[维基百科](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)中的定义并不一样，但实际说明的问题是一致的）。
 
 ![图1 混淆矩阵](https://cos.name/wp-content/uploads/2011/09/confusion_matrix.png)
 
