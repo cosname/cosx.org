@@ -47,9 +47,9 @@ step 4: 安装StatET。StatET可以通过Eclipse安装：
   * 依次选择“Help”－＞“Software Updates”，在弹出的对话框中选择“Available Software”标签。
   * 点击“Add Site”按扭，在弹出的对话框中将“`http://download.walware.de/eclipse-3.4`”加入到更新源中（如果是3.3版本的Eclipse则添加`http://download.walware.de/eclipse-3.3`），确定后，出现下图
 
- 
+![安装](https://cos.name/wp-content/uploads/2010/03/install.png)
 
-![安装](https://cos.name/wp-content/uploads/2010/03/install.png)然后按提示安装StatET。
+然后按提示安装StatET。
 
 # 2. Eclipse使用基础
 
@@ -61,9 +61,13 @@ step 4: 安装StatET。StatET可以通过Eclipse安装：
 
 Eclipse启动后如下图。
 
-![开始界面](https://cos.name/wp-content/uploads/2010/03/startup.png)依次选择菜单栏中的“Wndows”，“Open perspective”，“Other”,在弹出的对话框中选中“StatET”并单击“确定”，我们就打开了StatET视界（perspective），如下图：
+![开始界面](https://cos.name/wp-content/uploads/2010/03/startup.png)
 
-![视界](https://cos.name/wp-content/uploads/2010/03/perspective.png)这儿的概念视界（perspective）就是指的Eclipse提供的一个桌面开发环境，它包含不同的窗口，编辑器和视图，它们分别被归类到不同的标签（tab）中。这些组件可以随意拖动，放到不同的位置。
+依次选择菜单栏中的“Wndows”，“Open perspective”，“Other”,在弹出的对话框中选中“StatET”并单击“确定”，我们就打开了StatET视界（perspective），如下图：
+
+![视界](https://cos.name/wp-content/uploads/2010/03/perspective.png)
+
+这儿的概念视界（perspective）就是指的Eclipse提供的一个桌面开发环境，它包含不同的窗口，编辑器和视图，它们分别被归类到不同的标签（tab）中。这些组件可以随意拖动，放到不同的位置。
 
 ## 2.2  Eclipse中的工程
 
@@ -73,15 +77,21 @@ Eclipse启动后如下图。
 
 依次选择菜单栏中的”File”, “New”,”R-Project”，打开新建R的工程的对话框。如下图所示
 
-![建立工程](https://cos.name/wp-content/uploads/2010/03/project.jpg)在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
+![建立工程](https://cos.name/wp-content/uploads/2010/03/project.jpg)
 
-![myproject](https://cos.name/wp-content/uploads/2010/03/myproject.jpg)一个工程就相当于一个容器，你可以在其中添加或新建各种各样的文件。建好一个工程后，在该工程的工作目录下就会多出一个“.project”文件，该文件用来保存整个工程的各种信息。
+在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
+
+![myproject](https://cos.name/wp-content/uploads/2010/03/myproject.jpg)
+
+一个工程就相当于一个容器，你可以在其中添加或新建各种各样的文件。建好一个工程后，在该工程的工作目录下就会多出一个“.project”文件，该文件用来保存整个工程的各种信息。
 
 ### 2.2.2 向工程添加文件。
 
 右键单击”Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
 
-![添加R脚本](https://cos.name/wp-content/uploads/2010/03/script.jpg)在选择好文件夹，指定了文件名后，单击“Finish”，我们的R脚本文件就建好了。本例中，我建立了一个名为“prime.R”的文件，用来查找质数。
+![添加R脚本](https://cos.name/wp-content/uploads/2010/03/script.jpg)
+
+在选择好文件夹，指定了文件名后，单击“Finish”，我们的R脚本文件就建好了。本例中，我建立了一个名为“prime.R”的文件，用来查找质数。
 
   * 你可以通在工程名上单击右键选择“Import”，导入其它文件。需要注意的是被导入的文件将被复制到当前工程的目录下，以后在工程中对文件的修改不会应用到原始文件。
   * 与导入不同，你可以通过在工程名上单击右键选择“File”，在弹出的对话框中选择“`Advanced`”，将外部文件链接到工程中来，这样该文件就不会复制到当前工程的工作目录中。
@@ -91,23 +101,19 @@ Eclipse启动后如下图。
 
 现在我们来体验下Eclipse，选择我们刚刚建立的prime.R文件，在其中输入
 ```r
-prime<-function(n)
-{
-    prime1<-function(x)
-    {
-        y<-TRUE
-        for(i in (x%/%2):2)
-        {
-            if(x%%i==0) y=FALSE
-            if(x==2 | x==3) y=TRUE
+prime = function(n){
+    prime1 = function(x){
+        y = TRUE
+        for(i in (x %/% 2):2){
+            if(x %% i == 0) y = FALSE
+            if(x == 2 | x == 3) y = TRUE
         }
         y
     }
-    x<-c()
-    for (i in 2:n)
-    {
-        if(prime1(i)) x<-c(x,i)
-        if(i==n) return(x)
+    x = c()
+    for (i in 2:n){
+        if(prime1(i)) x = c(x,i)
+        if(i == n) return(x)
     }
 }
 prime(100)
@@ -130,27 +136,45 @@ prime(1000)
 
 我们在前面编辑的R程序现在还不能运行。还要对StatET作一番配置才行。选择菜单栏中的“windows”，“Preferences”，打开配置窗口，展开StatET，如下图
 
-![配置交互环境](https://cos.name/wp-content/uploads/2008/12/image12.png)定位到“R Environments”,点右侧的按钮“Add”,将你计算机上安装的R的添加进去，如下图。
+![配置交互环境](https://cos.name/wp-content/uploads/2008/12/image12.png)
+
+定位到“R Environments”,点右侧的按钮“Add”,将你计算机上安装的R的添加进去，如下图。
 
 ![](https://cos.name/wp-content/uploads/2008/12/image25.png)
 
-![设置路径](https://cos.name/wp-content/uploads/2008/12/image13.png)关闭该对话框.
+![设置路径](https://cos.name/wp-content/uploads/2008/12/image13.png)
+
+关闭该对话框.
 
 在Eclipse菜单栏中选择“Run”->“Run Configurations”, 在Main标签中按下图作出配置。
 
-![运行配置](https://cos.name/wp-content/uploads/2010/03/runconf.png)在工具栏中打开刚配置好的R控制台，如下图。
+![运行配置](https://cos.name/wp-content/uploads/2010/03/runconf.png)
 
-![运行](https://cos.name/wp-content/uploads/2010/03/run.jpg)R控制台被打开。点红色按钮就可以关闭R控制台。
+在工具栏中打开刚配置好的R控制台，如下图。
 
-![控制台](https://cos.name/wp-content/uploads/2010/03/console.png)在控制台的底部，你可以手动输入R的代码，提交给R执行。如下图。
+![运行](https://cos.name/wp-content/uploads/2010/03/run.jpg)
 
-![命令行](https://cos.name/wp-content/uploads/2010/03/commandline.png)现在，我们就可以将前面在Eclipse中建立的文件prime.R提交给R运行。
+R控制台被打开。点红色按钮就可以关闭R控制台。
 
-将焦点设置到“prime.R”文件上，这时工具栏上就会出现R的运行命令，![image](https://cos.name/wp-content/uploads/2008/12/image-thumb27.png) ，我们可以选择我们想要的方式运行文件prime.R中的代码。
+![控制台](https://cos.name/wp-content/uploads/2010/03/console.png)
+
+在控制台的底部，你可以手动输入R的代码，提交给R执行。如下图。
+
+![命令行](https://cos.name/wp-content/uploads/2010/03/commandline.png)
+
+现在，我们就可以将前面在Eclipse中建立的文件prime.R提交给R运行。
+
+将焦点设置到“prime.R”文件上，这时工具栏上就会出现R的运行命令，
+
+![image](https://cos.name/wp-content/uploads/2008/12/image-thumb27.png)
+
+，我们可以选择我们想要的方式运行文件prime.R中的代码。
 
 也可以在文件中单击右键，在上下文菜单中选择所要的运行方式。这里，我们通过快捷键先按Ctrl+R,再按Ctrl+D,将整个文件直接提交给R执行。在R控制台中就出输出执行结果。如下图。
 
-![运行代码](https://cos.name/wp-content/uploads/2010/03/runcode.png)这样我们就成功地在Eclipse中编辑并运行R代码了。
+![运行代码](https://cos.name/wp-content/uploads/2010/03/runcode.png)
+
+这样我们就成功地在Eclipse中编辑并运行R代码了。
 
 在退出Eclipse时，应先关闭R控制台（按钮![image](https://cos.name/wp-content/uploads/2008/12/image-thumb29.png) ），再退出Eclipse.
 
@@ -177,8 +201,8 @@ prime(1000)
 **CODE:**
 
 ```r
-findfuns <- function(x) {
-    if (require(x, character.only = TRUE)) {
+findfuns = function(x){
+    if (require(x, character.only = TRUE)){
         env <- paste("package", x, sep = ":")
         nm <- ls(env, all = TRUE)
         nm[unlist(lapply(nm, function(n) exists(n, where = env,
@@ -187,7 +211,7 @@ findfuns <- function(x) {
     else character(0)
 }
 
-z <- lapply(.packages(all.available = FALSE), findfuns)
+z = lapply(.packages(all.available = FALSE), findfuns)
 z = unique(sort(unlist(z)))
 cat(z, file = "out.txt", sep = ",")
 ```
