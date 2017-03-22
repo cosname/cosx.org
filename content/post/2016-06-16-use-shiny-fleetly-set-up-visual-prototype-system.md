@@ -113,12 +113,12 @@ plotOutput("<strong><b>wireframe</b></strong>")</pre>
 <pre># server.R #
 output$mygraph &lt;- renderChart({
 p1 &lt;- hPlot(formula,data,type,…)
-p1$addParams(dom=”mygraph”)
+p1$addParams(dom=“mygraph”)
 return(p1)
 })</pre>
 
 <pre># ui.R #
-showOutput(“mygraph”,”highcharts”)</pre>
+showOutput(“mygraph”,“highcharts”)</pre>
 
 如下图所示，我们在网页上输出了nPlot函数绘制的交互柱状图。
 
