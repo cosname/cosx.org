@@ -45,7 +45,7 @@ R语言中绘制地图的思路也是由于2的获取方式不一样而分开的
 
 #  1、 画世界地图
 
-  如果是首次使用，需要在R中装载maps包```install.packages('maps')</code>```，这个包中存有世界地图和美国地图的地图数据，所以，几行代码便可以画出世界地图。
+  如果是首次使用，需要在R中装载maps包```install.packages('maps')```，这个包中存有世界地图和美国地图的地图数据，所以，几行代码便可以画出世界地图。
 
 代码如下：
 
@@ -56,8 +56,9 @@ map("world", fill = TRUE, col = rainbow(200),
 title("世界地图")
 ```
 
-  输出为：
-  <a href="https://cos.name/wp-content/uploads/2013/01/world_map.png">![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
+
+输出为：
+ ![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
 
   无比绚丽的世界，引无数骚客竞折腰啊……
 
@@ -67,18 +68,16 @@ title("世界地图")
 
   代码如下：
 
-'''library(maps)
+```
+library(maps)
 map("state", fill = TRUE, col = rainbow(209),
     mar = c(0, 0, 2, 0))
-title("美国地图")'''
+title("美国地图")
+```
 
-<p align="left">
-  输出为：
-</p>
+输出为：
 
-<p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/01/us_map.png">![us_map](https://cos.name/wp-content/uploads/2013/01/us_map.png)</a>
-</p>
+![us_map](https://cos.name/wp-content/uploads/2013/01/us_map.png)
 
 整体形状这是像啥啊，山姆大叔……
 
@@ -86,28 +85,30 @@ title("美国地图")'''
 
 代码如下：
 
-'''library(maps)
+```
+library(maps)
 map('state', region = c('new york', 'new jersey', 'penn'),
     fill = TRUE, col = rainbow(3), mar = c(2, 3, 4, 3))
-title("美国三州地图")'''
-
+title("美国三州地图")
+```
 输出结果为：
 
 ![states_map](https://cos.name/wp-content/uploads/2013/01/states_map.png)
 
 三州鼎力！！
 
-## 3、 画中国地图
+# 3、 画中国地图
 
 上述的maps包中并没有中国地图的数据 ，在另外一个包mapdata中有中国地图的数据（比较旧的数据）。
 
 代码如下：
 
-'''library(maps)
+```
+library(maps)
 library(mapdata)
 map("china", col = "red4", ylim = c(18, 54), panel.first = grid())
-title(" 中国地图")'''
-
+title(" 中国地图")
+```
 输出为：
 
 ![China_map](https://cos.name/wp-content/uploads/2013/01/China_map.png)
@@ -126,8 +127,7 @@ title(" 中国地图")'''
 
 这大哥可以返回一个地方的经纬度，那我再调戏之：
 
-<pre>&gt; #这意思就是大哥你多给点！！
-&gt; geocode("Renmin University of China", output = "more")
+<pre>&gt; #这意思就是大哥你多给点！！&gt; geocode("Renmin University of China", output = "more")
        lon      lat              type     loctype
 1 116.3184 39.96998 point_of_interest approximate
                                                                                 address
@@ -136,11 +136,9 @@ title(" 中国地图")'''
 1 39.97853 39.96142 116.3345 116.3024      100086   china
   administrative_area_level_2 administrative_area_level_1 locality
 1                        &lt;NA&gt;                     beijing  beijing
-               street streetNo          point_of_interest
-1 zhongguancun street       NA renmin university of china
-                       query
+```               street streetNo          point_of_interest
+1 zhongguancun street       NA renmin university of china                       query
 1 Renmin University of China</pre>
-
 信息给多了，我说几个点，不但有人民大学的经纬度，还有该大学的详细地址（中国人民大学，中关村大街59号，海淀，北京，中国），还有邮编好吧100086！！！！但是好像跟我们实际的100872有差距（倒是跟10086很接近啊），但是它确实是返回了邮政编码，还有zhongguancun street就不说了……这完全就是返回的Google地图存储的人民大学的信息啊……
 
 ## 2、mapdist()
@@ -164,12 +162,13 @@ title(" 中国地图")'''
 
 ## 1、中国地图
 
-'''library(ggmap)
+```
+library(ggmap)
 library(mapproj)
 ## Google啊Google给我China的地图数据吧
 map &lt;- get_map(location = 'China', zoom = 4)
-ggmap(map)'''
-
+ggmap(map)
+```
 于是：
 
 ![China_map_2](https://cos.name/wp-content/uploads/2013/01/China_map_2.png)
@@ -177,9 +176,12 @@ ggmap(map)'''
 我天朝雄赳赳，气昂昂啊！！请注意左下角的Google logo！！
 
 再来北京道路地图：
-'''#Google啊Google给我Beijing的公路地图数据吧
+
+```
+#Google啊Google给我Beijing的公路地图数据吧
 map &lt;- get_map(location = 'Beijing', zoom = 10, maptype = 'roadmap')
-ggmap(map)'''
+ggmap(map)
+```
 
 于是：
 
@@ -187,11 +189,12 @@ ggmap(map)'''
 
 最后，我想看下大冬天的有没有人在人民大学的各个楼顶上晒太阳浴：
 
-'''## Google啊Google给我RUC的卫星地图数据吧
+```
+## Google啊Google给我RUC的卫星地图数据吧
 map &lt;- get_map(location = 'Renmin University of China', zoom = 14,
     maptype = 'satellite')
-ggmap(map)'''
-
+ggmap(map)
+```
 ![RUC_map](https://cos.name/wp-content/uploads/2013/01/RUC_map.png)
 
 太不清楚了，根本看不清楚哪跟哪啊。就这么着吧，我估计快够当天限制数了。
