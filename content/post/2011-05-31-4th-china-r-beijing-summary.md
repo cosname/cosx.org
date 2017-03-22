@@ -17,7 +17,7 @@ slug: 4th-china-r-beijing-summary
 
 <figure style="width: 500px" class="wp-caption aligncenter">![第四届中国R语言会议（北京会场）合影](https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ.jpg "第四届中国R语言会议（北京会场）合影")<figcaption class="wp-caption-text">第四届中国R语言会议（北京会场）合影（右键另存为看大图）</figcaption></figure> 
 
-![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png "中国R语言会议标识") 第四届中国R语言会议（北京会场）于2011年5月28日~29日在中国人民大学明德法学楼0201成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，参会者齐聚一堂，就R语言在生物、金融、网络、商业等诸多方面的应用进行了深入的探讨。
+![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 第四届中国R语言会议（北京会场）于2011年5月28日~29日在中国人民大学明德法学楼0201成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，参会者齐聚一堂，就R语言在生物、金融、网络、商业等诸多方面的应用进行了深入的探讨。
 
 ## 会议概况
 

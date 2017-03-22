@@ -17,7 +17,7 @@ slug: 3rd-china-r-beijing-summary
 
 <figure style="width: 500px" class="wp-caption aligncenter">![第三届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg "第三届中国R语言会议北京会场合影")<figcaption class="wp-caption-text">第三届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> 
 
-![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png "中国R语言会议标识")
+![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
 第三届中国R语言会议（北京会场）于2010年6月14日~15日在中国人民大学明德法学楼0101成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都网站(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，来自各行各业的R用户齐聚北京，共同探讨和交流R软件的使用经验，取得了丰厚的成果。 
 
@@ -62,7 +62,7 @@ slug: 3rd-china-r-beijing-summary
 
 45 | 0                                          | 45</pre>
 
-可以看出，与<a href="https://cos.name/2009/12/2nd-chinese-r-conference-summary/" target="_blank">上届会议</a>相比，本届会议一个显著的变化是参会者的年龄结构更加丰富，这从一个侧面说明了R的用户范围正在逐步扩大，不同年龄层的人都开始对R软件产生了兴趣。
+可以看出，与<a href="/2009/12/2nd-chinese-r-conference-summary/" target="_blank">上届会议</a>相比，本届会议一个显著的变化是参会者的年龄结构更加丰富，这从一个侧面说明了R的用户范围正在逐步扩大，不同年龄层的人都开始对R软件产生了兴趣。
 
 与上届会议类似，本届会议的参会人员大都来自高校和科研机构，包括在校学生、高校老师、科研所研究员等；而本届会议同样得到了企业界和政府部门朋友的大力支持，其中有行业分析师、市场研究员、咨询师、政府服务人员、公务员、医药统计分析师、算法工程师、软件工程师等等。 
 

@@ -16,15 +16,15 @@ menu: main
 <table>
   <tr>
     <td style="text-align: center;" width="30%">
-      ![R-in-Action](https://cos.name/wp-content/uploads/2013/03/r-in-action-small.jpg)<br /> <a title="《R语言实战》" href="https://cos.name/2013/03/r-in-action/" target="_blank">《R语言实战》</a>
+      ![R-in-Action](https://cos.name/wp-content/uploads/2013/03/r-in-action-small.jpg)<br /> <a title="《R语言实战》" href="/2013/03/r-in-action/" target="_blank">《R语言实战》</a>
     </td>
     
     <td style="text-align: center;" width="30%">
-      ![ggplot2](https://cos.name/wp-content/uploads/2013/05/ggplot2-212x300.jpg)<br /> <a title="《ggplot2：数据分析与图形艺术》" href="https://cos.name/2013/05/ggplot2/" target="_blank">《ggplot2：数据分析与图形艺术》</a>
+      ![ggplot2](https://cos.name/wp-content/uploads/2013/05/ggplot2-212x300.jpg)<br /> <a title="《ggplot2：数据分析与图形艺术》" href="/2013/05/ggplot2/" target="_blank">《ggplot2：数据分析与图形艺术》</a>
     </td>
     
     <td style="text-align: center;" width="30%">
-      ![art-of-r-programming](https://cos.name/wp-content/uploads/2013/05/art-of-r-small.jpg)<br /> <a title="《R语言编程艺术》" href="https://cos.name/2013/05/the-art-r-programming/" target="_blank">《R语言编程艺术》</a>
+      ![art-of-r-programming](https://cos.name/wp-content/uploads/2013/05/art-of-r-small.jpg)<br /> <a title="《R语言编程艺术》" href="/2013/05/the-art-r-programming/" target="_blank">《R语言编程艺术》</a>
     </td>
   </tr>
   
@@ -44,11 +44,11 @@ menu: main
   
   <tr>
     <td style="text-align: center;" width="30%">
-      <a href="https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg">![R_data_science](https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg)</a><br /> <a title="Dynamic Documents with R and knitr" href="https://cos.name/2015/07/years-as-a-data-scientist/" target="_blank">《数据科学中的R语言》</a>
+      <a href="https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg">![R_data_science](https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg)</a><br /> <a title="Dynamic Documents with R and knitr" href="/2015/07/years-as-a-data-scientist/" target="_blank">《数据科学中的R语言》</a>
     </td>
     
     <td style="text-align: center;" width="30%">
-      <a href="https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg"><br /> ![rcpp0](https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg)</a><br /> <a href="https://cos.name/2016/01/seamless-r-and-c-integration-with-rcpp/" rel="bookmark">《Rcpp:R与C++的无缝整合》</a>
+      <a href="https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg"><br /> ![rcpp0](https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg)</a><br /> <a href="/2016/01/seamless-r-and-c-integration-with-rcpp/" rel="bookmark">《Rcpp:R与C++的无缝整合》</a>
     </td>
     
     <td style="text-align: center;" width="30%">

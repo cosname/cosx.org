@@ -18,7 +18,7 @@ slug: cos-navigation-6
 
 本周一共发布了1篇日志。<!--more-->
 
-  * [分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC](https://cos.name/2008/12/measure-classification-model-performance-roc-auc//)
+  * [分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC](/2008/12/measure-classification-model-performance-roc-auc//)
 
 本周COS主站又有一位作者加入：
 

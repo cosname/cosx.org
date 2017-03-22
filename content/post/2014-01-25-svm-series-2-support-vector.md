@@ -15,7 +15,7 @@ slug: svm-series-2-support-vector
 
 _原文链接请点击[这里](http://blog.pluskid.org/?p=682)_
 
-[上一次](https://cos.name/2014/01/svm-series-maximum-margin-classifier/)介绍支持向量机，结果说到 Maximum Margin Classifier ，到最后都没有说“支持向量”到底是什么东西。不妨回忆一下上次最后一张图：
+[上一次](/2014/01/svm-series-maximum-margin-classifier/)介绍支持向量机，结果说到 Maximum Margin Classifier ，到最后都没有说“支持向量”到底是什么东西。不妨回忆一下上次最后一张图：
 
 ![Optimal-Hyper-Plane](https://cos.name/wp-content/uploads/2014/01/Optimal-Hyper-Plane.png)
 

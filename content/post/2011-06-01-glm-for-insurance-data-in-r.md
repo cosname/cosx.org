@@ -20,4 +20,4 @@ slug: glm-for-insurance-data-in-r
 
 &nbsp;
 
-**PDF全文如下：** [box type=”download”]下载：[[在R中对保险数据建立广义线性模型](https://cos.name/wp-content/uploads/2011/06/glm-for-insurance-data-in-r.pdf)](https://cos.name/wp-content/uploads/2011/06/glm-for-insurance-data-in-r.pdf)[](https://cos.name/wp-content/uploads/2011/06/GLM-for-insurance-data-in-R.pdf)[/box]
+**PDF全文如下：** [box type=“download”]下载：[[在R中对保险数据建立广义线性模型](https://cos.name/wp-content/uploads/2011/06/glm-for-insurance-data-in-r.pdf)](https://cos.name/wp-content/uploads/2011/06/glm-for-insurance-data-in-r.pdf)[](https://cos.name/wp-content/uploads/2011/06/GLM-for-insurance-data-in-R.pdf)[/box]

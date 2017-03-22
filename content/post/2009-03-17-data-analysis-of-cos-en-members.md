@@ -36,7 +36,7 @@ write.csv(x, "cos_en_spam.csv", row.names = FALSE)</pre>
 
 ## 数据下载
 
-整理之后的数据下载：<a rel="attachment wp-att-866" href="https://cos.name/2009/03/data-analysis-of-cos-en-members/cos_en_spamcsv/"></a>[统计之都英文网站会员数据](https://cos.name/wp-content/uploads/2009/03/cos_en_spamcsv.gz)；
+整理之后的数据下载：<a rel="attachment wp-att-866" href="/2009/03/data-analysis-of-cos-en-members/cos_en_spamcsv/"></a>[统计之都英文网站会员数据](https://cos.name/wp-content/uploads/2009/03/cos_en_spamcsv.gz)；
 
 所有变量名的解释参见：<a title="http://www.phpbbdoctor.com/doc_columns.php?id=24" href="http://www.phpbbdoctor.com/doc_columns.php?id=24" target="_blank">phpbb_users的数据表结构说明</a>；注意其中所有时间数据都是Unix时间戳格式，起点为1970-01-01 00:00:00，可以用R函数`as.POSIXlt(, origin = "1970-01-01 00:00:00")`转化为日期。
 
@@ -58,7 +58,7 @@ write.csv(x, "cos_en_spam.csv", row.names = FALSE)</pre>
   2. user\_lastvisit：变量取值不稳定，建议不使用，user\_session_time可能更适合于作为用户最后的访问时间；
   3. 由于非激活用户不能发帖，因此他们的user_posts必然都是0；而我们的分析目标是在用户注册之后马上就能从注册信息获知是否机器人注册，所以建议建模时不要使用这个变量；
   4. user_style取值只能为1，是个常数，因此不必使用该变量；
-  5. 建议着重分析用户注册信息中的签名档、邮箱、网站链接，可以从这些文本数据生成新的变量，如邮箱域名是否以”.ru”（俄罗斯）结尾，签名档是否含有”free”等具有垃圾特征的词汇，等等；
+  5. 建议着重分析用户注册信息中的签名档、邮箱、网站链接，可以从这些文本数据生成新的变量，如邮箱域名是否以”.ru”（俄罗斯）结尾，签名档是否含有“free”等具有垃圾特征的词汇，等等；
 
 ## 参加方式
 
@@ -116,6 +116,6 @@ par(mar = c(3, 3, 3, 1))
 plot(t(table(spam, email_ru)), cex.axis = 0.8, shade = TRUE,
      main = "Spam members and Russian email address")</pre><figure id="attachment_878" style="width: 480px" class="wp-caption aligncenter">
 
-[![COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图](https://cos.name/wp-content/uploads/2009/03/cos_en_spam_mosaicplot.png "COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图")](https://cos.name/2009/03/data-analysis-of-cos-en-members/)<figcaption class="wp-caption-text">COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图</figcaption></figure> 
+[![COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图](https://cos.name/wp-content/uploads/2009/03/cos_en_spam_mosaicplot.png "COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图")](/2009/03/data-analysis-of-cos-en-members/)<figcaption class="wp-caption-text">COS英文网站会员类别与俄罗斯后缀邮箱的马赛克图</figcaption></figure> 
 
 以上马赛克图进一步说明了俄罗斯邮箱与会员类型的关系。

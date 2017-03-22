@@ -43,7 +43,7 @@ slug: stories-about-statistical-learning
 
 有一个关于Gradient Boosting细节不得不提。Friedman在做实验的时候发现，把一棵新生成的决策树，记为f\_m，加到当前模型之前，在这棵决策树前乘以一个小的数，即v×f\_m（比如v=0.01），再加入到当前模型中，往往大大提高模型的准确度。他把这个叫做“Shrinkage”。接下来，Hastie，Tibshirani和Friedman进一步发现（我发现大师们都是亲自动手写程序做实验的），如果把具有Shrinkage的Gradient Boosting应用到线性回归中时，得到的Solution Path与Lasso的Solution Path惊人地相似(如图所示)！他们把这一结果写在了ESL的第一版里，并推测这二者存在着某种紧密的联系，但精确的数学关系他们当时也不清楚。Tibshirani说他们还请教了斯坦福的优化大师（我估计是Stephen Boyd），但还是没有找到答案。
 
-![](https://cos.name/wp-content/uploads/2011/12/identical.png "identical")
+![identical](https://cos.name/wp-content/uploads/2011/12/identical.png)
 
 后来Tibshirani找到自己的恩师Efron。Tibshirani在“The Science of Bradley Efron”这本书的序言里写道，“**He sat down and pretty much single-handedly solved the problem. Along the way, he developed a new algorithm, ‘least angle regression,’ which is interesting in its own right, and sheds great statistical insight on the Lasso.**”我就不逐字逐句翻译了，大意是：Efron独自摆平了这个问题，与此同时发明了“Least angle regression (LAR)”。Efron结论是Lasso和Boosting的确有很紧密的数学联系，它们都可以通过修改LAR得到。更令人惊叹的是LAR具有非常明确的几何意义。于是，Tibshirani在序言中还有一句，“**In this work, Brad shows his great mathematical power–not the twentieth century, abstract kind of math, but the old-fashioned kind: geometric insight and analysis.**”读Prof Efron的文章，可以感受到古典几何学与现代统计学的结合之美（推荐大家读读Efron教授2010年的一本新书**Large-Scale Inference**，希望以后有机会再写写这方面的体会）！总之，Efron的这篇文章是现代统计学的里程碑，它结束了一个时代，开启了另一个时代。
 
@@ -59,7 +59,7 @@ LAR把Lasso （L1-norm regularization）和Boosting真正的联系起来，如�
 
 下面我谈谈自己的看法，第一，通用逼近性能当然是一个好的性质，它表明模糊系统是很flexible的，但flexible的结构太多了，比如神经网络。问题往往不在flexible，而在太flexible导致overfitting。就如同SVM一样，没有L2-norm regularization，实践中的性能就会变得很差。第二，快速算法，这是好的方法必备的，SVM，Boosting，Random Forest的算法都很快，而且可以直接用到高维，这一点上，我没有看到模糊系统的优势。第三，可解释性：模糊系统对低维数据（比如2-4维）的确具有好的解释性（因为IF-THEN规则的前提和结论都很简洁），但这个时候其它工具也可以做得到，比如Gradient Boosting和Random Forests（很多例子可以在ESL这本书里看到）。第四，充分的利用各种信息。立新老师指的是IF-THEN规则可以比较自由灵活的加入先验知识，并在他的书里面详细给出实例。遗憾的是，这些例子都在处理低维空间的问题。如何用IF-THEN规则解构高维空间呢？我个人看不到它们特殊的优势。然而，在统计学习里，利用不同的先验知识处理高维空间的例子比比皆是，比如Sparsity，group-structure，smoothness等等。现在举一个Gradient Boosting machine（GBM，也叫MART）的例子来说明我的观点。根据Lasso和Boosting的关系，可以知道GBM已经用到了Sparsity的性质（L1-norm regularization）。GBM有两个参数可以反映我们的先验知识。第一个参数是深度（depth），控制每棵决策树的深度 。如果深度为1，即树桩结构（Stump），表明GBM将采用加法模型（Generalized Additive model），即不考虑变量之间的交互式作用（Interaction）；如果深度大于1，则考虑交互式作用。因为交互式作用在非线性建模中比较重要，如异或（XOR）问题，没有考虑交互式作用将失败得很惨，所以这个参数设置反映了对非线性建模的先验。第二个参数是Shrinkage的大小。假设深度选取是合理的，在噪声比较小的时候，没有Shrinkage会比较好；噪声比较大的时候，有Shrinkage会好一些。实践中，使用GBM对高维数据分析，试错法（Trial and error）很容易使用，因为就这两个参数（通常depth=3～4；实际数据的噪声往往比较大，推荐设置Shrinkage=0.01）。模型构建好之后，GBM会告诉你哪些变量是重要的，变量之间的交互式作用如何等等，这样模型的结果也是比较容易理解。Random Forests也有相似的功能。好了，最后借Hastie教授的一幅图来总结一下，无疑，GBM（MART）是他们的最爱，也是我的最爱。
 
-![](https://cos.name/wp-content/uploads/2011/12/compare.png "compare")
+![compare](https://cos.name/wp-content/uploads/2011/12/compare.png)
 
 ## 尾音
 
