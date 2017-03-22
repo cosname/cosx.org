@@ -23,4 +23,4 @@ _统计之都会定期为大家精选若干有猛料和干货的海外统计日�
   * 众所周知，JP摩根去年因为“伦敦鲸事件”带来巨额亏损，<wbr />前不久康涅狄格大学的James Kwak教授描述了[微软的Excel在这次事件中的作用](http://baselinescenario.com/2013/02/09/the-importance-of-excel/)，随后 Revolution Analytics 官方博客[总结了这些分析](http://blog.revolutionanalytics.com/2013/02/did-an-excel-error-bring-down-the-london-whale.html)，Hacker News上也[进行了热烈讨论](http://news.ycombinator.com/item?id=5198187)。统计学家/<wbr />程序员吐槽Excel已经不是两三天了（[这里](http://www.burns-stat.com/documents/tutorials/spreadsheet-addiction/)和[那里](http://pages.stern.nyu.edu/~jsimonof/classes/1305/pdf/excelreg.pdf)），<wbr />可是偏偏世上就有那么多迷恋Excel的哥，<wbr />你总以为在Excel里写公式是件很牛的事情，<wbr />以为打开表格就可以看见所有数字是件很爽的事情，<wbr />以为微软把所有“高深”的东西藏在软件背后是件明智的事情，<wbr />可是再聪明的人也得牢记：无代码无真相！你不要“以为”“觉得”<wbr />“估计”这里的计算是怎样，等你把一堆表格复制粘贴几次之后，<wbr />鬼还知道这里到底在算什么。代码出错可以查，<wbr />粘贴出错上哪儿查去？
   * 这家伙在那儿黑理论数学。
 
-<img class="aligncenter" style="text-align: center;" alt="" src="http://i.imgur.com/HIutBxP.png" width="529" height="397" />
+![](http://i.imgur.com/HIutBxP.png)

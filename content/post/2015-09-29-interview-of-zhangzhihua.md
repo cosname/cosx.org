@@ -24,7 +24,7 @@ slug: interview-of-zhangzhihua
 
 <span style="color: #6c6c6c;"><span style="color: #00006c;"><a style="color: #00006c;" href="http://bcmi.sjtu.edu.cn/~zhzhang/" target="_blank">张志华</a></span>，博士，上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。主要从事人工智能、机器学习与应用统计学领域的教学与研究。迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文。是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委。其公开课《机器学习导论》和《统计机器学习》受到广泛关注。</span>
 
-[<img class="size-full wp-image-11398" src="https://cos.name/wp-content/uploads/2015/09/张志华.jpg" alt="张志华教授和他的学生们" width="960" height="480" srcset="https://cos.name/wp-content/uploads/2015/09/张志华.jpg 960w, https://cos.name/wp-content/uploads/2015/09/张志华-300x150.jpg 300w, https://cos.name/wp-content/uploads/2015/09/张志华-500x250.jpg 500w" sizes="(max-width: 960px) 100vw, 960px" />](https://cos.name/wp-content/uploads/2015/09/张志华.jpg)
+![张志华教授和他的学生们](https://cos.name/wp-content/uploads/2015/09/张志华.jpg)
 
 <p style="text-align: center;">
   <span style="color: #6c6c6c;">张志华教授和他的学生们</span>
@@ -80,7 +80,7 @@ slug: interview-of-zhangzhihua
 
 <span style="color: #000080;">常象宇：John Wiley出版社向您约稿了一本机器学习的书籍，您能讲讲这个事情吗？</span>
 
-张志华：John Wiley公司联系我是2014年初，当时他们统计部Debbie Jupe女士问我是否参加AI&STAT，她想和我谈谈，写一本统计机器学习书的可能性。但是不巧的是我没有计划参会。后来Jupe女士给我寄了一份他们的打算和目的，并且告诉我John Wiley 的统计书籍是业界翘楚，能在此出版一本书是很值得期待的，建议我认真考虑。我统计学的启蒙教材就是John Wiley出版的”An Introduction to Multivariate Statistical Analysis”(T. W. Anderson) 和“Aspects of Multivariate Statistical Theory”(R. J. Muirhead), 这两本书我一直带在身边。因此知道这个出版社在统计界的地位，所以觉得如果自己能够在上面出版一本书，那是相当有成就感的一件事。
+张志华：John Wiley公司联系我是2014年初，当时他们统计部Debbie Jupe女士问我是否参加AI&STAT，她想和我谈谈，写一本统计机器学习书的可能性。但是不巧的是我没有计划参会。后来Jupe女士给我寄了一份他们的打算和目的，并且告诉我John Wiley 的统计书籍是业界翘楚，能在此出版一本书是很值得期待的，建议我认真考虑。我统计学的启蒙教材就是John Wiley出版的“An Introduction to Multivariate Statistical Analysis”(T. W. Anderson) 和“Aspects of Multivariate Statistical Theory”(R. J. Muirhead), 这两本书我一直带在身边。因此知道这个出版社在统计界的地位，所以觉得如果自己能够在上面出版一本书，那是相当有成就感的一件事。
 
 另外，Springer已经出版了ESL(The Elements of Statistical Learning)与PRML(Pattern Recognition And Machine Learning)，MIT出版社出版了MLAPP(Machine Learning: A Probabilistic Perspective)和Foundations of Machine Learning。但是目前John Wiley 还没有类似的统计机器学习的书籍，应该是一个机遇。但是当然这也是大风险的，因为有这么多经典，如果没有任何超越，那就是科研自杀。之前，偶然也想过写一本书，但是规划是等50岁以后，觉得自己目前还在研究高峰期，还想在一线继续做几年。但是连续几年经费申请诸多不顺，一无所获。难以维持实验室的支出。有点心灰意冷。最后我决定接受他们的邀请，写这本书，也算是对自己的一个总结吧。于是我给出版社写了一个目录和proposal. 出版社拿出去审了一个多月。一个多月之后，收到了出版社的回复，其中有统计专业的教授评审意见说这个人没有统计的背景，但是他又发表过一些统计的论文，所以对这个书籍能不能写出统计的味道还是有些顾虑。但是出版公司主编还是最终决定了出版计划，给我发来合同。我记得清楚，我是去年教师节那天签了合同，寄给他们的。
 

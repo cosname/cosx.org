@@ -117,7 +117,7 @@ slug: recommenderlab-packages
 
  5  3  4  3  3  5  4  1  5  3</pre>
 
-另外，recommenderlab 包中有提供用于归一化的函数 `normalize()`，默认是均值归一化 x &#8211; mean；建立推荐模型的函数，里面有归一化处理的，在此不必单独进行归一化。
+另外，recommenderlab 包中有提供用于归一化的函数 `normalize()`，默认是均值归一化 x – mean；建立推荐模型的函数，里面有归一化处理的，在此不必单独进行归一化。
 
 ### 4 recommender 简单介绍
 
@@ -195,7 +195,7 @@ Parameters:
 
   * method：相似度算法，默认采用余弦相似算法 cosine
 
-  * Normalize：采用何种归一化算法，默认均值归一化 x &#8211; mean
+  * Normalize：采用何种归一化算法，默认均值归一化 x – mean
 
   * normalize\_sim\_matrix：是否对相似矩阵归一化，默认为否
 
@@ -323,7 +323,7 @@ Data set: 943 x 1682 rating matrix of class ‘realRatingMatrix’ with 100000 r
 
 这里简单介绍，数据集是如何划分的。其实很简单，对于用户没有评分过的项目，是没法进行模型评估的，因为预测值没有参照对象。`getData` 的参数 `given` 便是来设置用于预测的项目数量。
 
-[<img class="aligncenter size-large wp-image-9628" alt="捕获.1JPG" src="https://cos.name/wp-content/uploads/2014/02/捕获.1JPG-500x216.jpg" width="500" height="216" srcset="https://cos.name/wp-content/uploads/2014/02/捕获.1JPG-500x216.jpg 500w, https://cos.name/wp-content/uploads/2014/02/捕获.1JPG-300x129.jpg 300w, https://cos.name/wp-content/uploads/2014/02/捕获.1JPG.jpg 769w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/02/捕获.1JPG.jpg)接下来计算 RMSE，对比三个模型的评估参数，`calcPredictionError()` 函数可以计算出MAE（绝对值均方误差）、MSE 和 RMSE。
+![捕获.1JPG](https://cos.name/wp-content/uploads/2014/02/捕获.1JPG.jpg)接下来计算 RMSE，对比三个模型的评估参数，`calcPredictionError()` 函数可以计算出MAE（绝对值均方误差）、MSE 和 RMSE。
 
 <pre>&gt; error &lt;- rbind(
 
@@ -347,7 +347,7 @@ IBCF   0.8444152 1.333968 1.154976</pre>
 
 为了更好地说明 RMSE 与训练/测试比、`given` 等参数的关系，我们可以进行多组的比较。
 
-[<img class="aligncenter  wp-image-9627" alt="捕获" src="https://cos.name/wp-content/uploads/2014/02/捕获-500x243.jpg" width="500" height="243" srcset="https://cos.name/wp-content/uploads/2014/02/捕获-500x243.jpg 500w, https://cos.name/wp-content/uploads/2014/02/捕获-300x146.jpg 300w, https://cos.name/wp-content/uploads/2014/02/捕获.jpg 679w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/02/捕获.jpg)从上面的两张图可以得出如下结论：
+![捕获](https://cos.name/wp-content/uploads/2014/02/捕获.jpg)从上面的两张图可以得出如下结论：
 
   1. 训练/测试比对 RMSE 没什么影响，并不是训练集比重越大 RMSE 越小，因此在实际过程中可适当降低训练集的比例，减少建立模型所需时间；
   2. `given` 值对协同过滤的推荐系统影响很大，`given` 越大（用于预测项目数量）RMSE越小，当然这里最大的 `given` 值为20，在[1, 20]范围内，显然 `given = 20` 是最优的；

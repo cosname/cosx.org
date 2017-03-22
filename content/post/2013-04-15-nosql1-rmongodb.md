@@ -38,7 +38,7 @@ R利剑NoSQL系列文章，主要介绍通过R语言连接使用nosql数据库�
     rmongodb测试案例
     
 
-每一章节，都会分为&#8221;文字说明部分&#8221;和&#8221;代码部分&#8221;，保持文字说明与代码的连贯性。
+每一章节，都会分为“文字说明部分”和“代码部分”，保持文字说明与代码的连贯性。
 
 ### **1. MongoDB环境准备**
 
@@ -565,7 +565,7 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
     print(mongo.find.one(mongo, ns, query))
     
 
-使用$push修改器，给comments数组追加&#8221;Orange&#8221;数据
+使用$push修改器，给comments数组追加“Orange”数据
 
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.start.object(buf, "$push")

@@ -17,7 +17,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 为了完美的实现从数据到价值的转化，促进各领域R语言的使用者之间的交流，西安欧亚学院、统计之都、北京大学商务智能研究中心将于2015年4月18日在古城西安举办2015数据与价值欧亚论坛暨R会议西安分论坛。这将是R会议首次在西北地区举办。
 
-[<img class="aligncenter size-full wp-image-11430" src="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png" alt="China-R-Logo-trans" width="450" height="288" srcset="https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png 450w, https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans-300x192.png 300w" sizes="(max-width: 450px) 100vw, 450px" />](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+![China-R-Logo-trans](https://cos.name/wp-content/uploads/2015/09/China-R-Logo-trans.png)
 
 会议的相关情况如下：
 
@@ -163,7 +163,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 扫描下方二维码，即可获得更多关于R会议（西安会场）的更多资讯。
 
-[<img class="aligncenter size-full wp-image-10850" src="https://cos.name/wp-content/uploads/2015/04/erweima.jpg" alt="erweima" width="258" height="258" srcset="https://cos.name/wp-content/uploads/2015/04/erweima.jpg 258w, https://cos.name/wp-content/uploads/2015/04/erweima-150x150.jpg 150w" sizes="(max-width: 258px) 100vw, 258px" />](https://cos.name/wp-content/uploads/2015/04/erweima.jpg)
+![erweima](https://cos.name/wp-content/uploads/2015/04/erweima.jpg)
 
 <p style="text-align: right;">
   主办方：

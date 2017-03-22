@@ -23,7 +23,7 @@ slug: to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggt
 
 层次聚类的输入是距离，比如euclidean或manhattan距离。把距离近的聚在一起。而进化树推断是从生物序列（DNA或氨基酸）的比对开始。最简单的方法是计算一下序列中不匹配的数目，称之为hamming distance（通常用序列长度做归一化），使用距离当然也可以应用层次聚类的方法。进化树的构建最简单的方法是非加权配对平均法（Unweighted Pair Group Method with Arithmetic Mean, UPGMA），这其实是使用average linkage的层次聚类。这种方法在进化树推断上现在基本没人用。更为常用的是邻接法（neighbor joining），两个节点距离其它节点都比较远，而这两个节点又比较近，它们就是neighbor，可以看出neighbor不一定是距离最近的两个节点。真正做进化的人，这个方法也基本不用。现在主流的方法是最大似然法(Maximum likelihood, ML)，通过进化模型（evolutionary model)估计拓朴结构和分支长度，估计的结果具有最高的概率能够产生观测数据（多序列比对）。另外还有最大简约法和贝叶斯推断等方法用于构建进化树。
 
-[<img class="aligncenter size-full wp-image-11657" src="https://cos.name/wp-content/uploads/2015/11/newicktree.gif" alt="newicktree" width="200" height="200" />](https://cos.name/wp-content/uploads/2015/11/newicktree.gif)是最常用的存储进化树的文件格式，如上面这个树，拓朴结构用<a href="http://evolution.genetics.washington.edu/phylip/newicktree.html" target="_blank">newick</a>格式可以表示为：
+![newicktree](https://cos.name/wp-content/uploads/2015/11/newicktree.gif)是最常用的存储进化树的文件格式，如上面这个树，拓朴结构用<a href="http://evolution.genetics.washington.edu/phylip/newicktree.html" target="_blank">newick</a>格式可以表示为：
 
 <pre>(B,(A,C,E),D);</pre>
 
@@ -87,15 +87,15 @@ ggtree是真正扩展ggplot2，支持图形语法的包。我们首先扩展ggpl
  tree &lt;- rtree(30)
  ggplot(tree, aes(x, y)) + geom_tree()</pre>
 
-[<img class="aligncenter size-full wp-image-11707" src="https://cos.name/wp-content/uploads/2015/11/0011.jpg" alt="001" width="657" height="438" srcset="https://cos.name/wp-content/uploads/2015/11/0011.jpg 657w, https://cos.name/wp-content/uploads/2015/11/0011-300x200.jpg 300w, https://cos.name/wp-content/uploads/2015/11/0011-500x333.jpg 500w" sizes="(max-width: 657px) 100vw, 657px" />](https://cos.name/wp-content/uploads/2015/11/0011.jpg)ggtree函数是 ggplot() + geom\_tree() + xlab(NA) + ylab(NA) + theme\_tree() 的简单组合。
+![001](https://cos.name/wp-content/uploads/2015/11/0011.jpg)ggtree函数是 ggplot() + geom\_tree() + xlab(NA) + ylab(NA) + theme\_tree() 的简单组合。
 
 <pre>ggtree(tree)</pre>
 
-[<img class="aligncenter size-full wp-image-11706" src="https://cos.name/wp-content/uploads/2015/11/0021.jpg" alt="002" width="684" height="393" srcset="https://cos.name/wp-content/uploads/2015/11/0021.jpg 684w, https://cos.name/wp-content/uploads/2015/11/0021-300x172.jpg 300w, https://cos.name/wp-content/uploads/2015/11/0021-500x287.jpg 500w" sizes="(max-width: 684px) 100vw, 684px" />](https://cos.name/wp-content/uploads/2015/11/0021.jpg)想要加 tip.label，用 geom_tiplab 图层，并且ggplot2的图层都可以直接应用 ggtree。
+![002](https://cos.name/wp-content/uploads/2015/11/0021.jpg)想要加 tip.label，用 geom_tiplab 图层，并且ggplot2的图层都可以直接应用 ggtree。
 
 <pre>ggtree(tree) + geom_tiplab() + geom_point(color='firebrick')</pre>
 
-## [<img class="aligncenter size-full wp-image-11705" src="https://cos.name/wp-content/uploads/2015/11/0041.jpg" alt="004" width="677" height="415" srcset="https://cos.name/wp-content/uploads/2015/11/0041.jpg 677w, https://cos.name/wp-content/uploads/2015/11/0041-300x184.jpg 300w, https://cos.name/wp-content/uploads/2015/11/0041-500x306.jpg 500w" sizes="(max-width: 677px) 100vw, 677px" />](https://cos.name/wp-content/uploads/2015/11/0041.jpg) 树的操作与注释
+## ![004](https://cos.name/wp-content/uploads/2015/11/0041.jpg) 树的操作与注释
 
 ggtree提供了多个函数可以把clade放大缩小(scaleClade)，折叠(collapse)和展开(expand)，位置调换和旋转，以及分类(groupOTU, groupClade)。
 
@@ -109,9 +109,9 @@ ggtree提供了多个函数可以把clade放大缩小(scaleClade)，折叠(colla
  library(gridExtra)
  grid.arrange(cp, ep, hp, rp, ncol=2)</pre>
 
-[<img class="aligncenter size-full wp-image-11704" src="https://cos.name/wp-content/uploads/2015/11/0051.jpg" alt="005" width="847" height="386" srcset="https://cos.name/wp-content/uploads/2015/11/0051.jpg 847w, https://cos.name/wp-content/uploads/2015/11/0051-300x137.jpg 300w, https://cos.name/wp-content/uploads/2015/11/0051-500x228.jpg 500w" sizes="(max-width: 847px) 100vw, 847px" />](https://cos.name/wp-content/uploads/2015/11/0051.jpg)
+![005](https://cos.name/wp-content/uploads/2015/11/0051.jpg)
 
-[<img class="aligncenter size-full wp-image-11703" src="https://cos.name/wp-content/uploads/2015/11/0061.jpg" alt="006" width="803" height="404" srcset="https://cos.name/wp-content/uploads/2015/11/0061.jpg 803w, https://cos.name/wp-content/uploads/2015/11/0061-300x151.jpg 300w, https://cos.name/wp-content/uploads/2015/11/0061-500x252.jpg 500w" sizes="(max-width: 803px) 100vw, 803px" />](https://cos.name/wp-content/uploads/2015/11/0061.jpg)
+![006](https://cos.name/wp-content/uploads/2015/11/0061.jpg)
 
 ## 支持多种文件格式
 
@@ -126,7 +126,7 @@ ggtree支持的文件格式包括Newick, Nexus, NHX和jplace。
  geom_text(aes(label=branch.length, x=branch), vjust=-.5) +
  xlim(NA, 0.3)</pre>
 
-## [<img class="aligncenter size-full wp-image-11702" src="https://cos.name/wp-content/uploads/2015/11/0071.jpg" alt="007" width="815" height="416" srcset="https://cos.name/wp-content/uploads/2015/11/0071.jpg 815w, https://cos.name/wp-content/uploads/2015/11/0071-300x153.jpg 300w, https://cos.name/wp-content/uploads/2015/11/0071-500x255.jpg 500w" sizes="(max-width: 815px) 100vw, 815px" />](https://cos.name/wp-content/uploads/2015/11/0071.jpg)支持解析多种软件的输出文件
+## ![007](https://cos.name/wp-content/uploads/2015/11/0071.jpg)支持解析多种软件的输出文件
 
 我们知道FigTree是针对<a href="http://ygc.name/2015/04/01/an-example-of-drawing-beast-tree-using-ggtree/" target="_blank">BEAST</a>的输出设计的，可以把BEAST的统计推断拿来给树做注释，但很多的进化分析软件并没有相应的画树软件支持，用户很难把信息展示出来。
 
@@ -140,13 +140,13 @@ ggtree支持ape, phangorn, r8s, RAxML, PAML, HYPHY, EPA, pplacer和BEAST的输�
  scale_color_gradient(high='red', low='darkgreen') +
  theme(legend.position='right')</pre>
 
-[<img class="aligncenter size-full wp-image-11701" src="https://cos.name/wp-content/uploads/2015/11/008.jpg" alt="008" width="735" height="644" srcset="https://cos.name/wp-content/uploads/2015/11/008.jpg 735w, https://cos.name/wp-content/uploads/2015/11/008-300x263.jpg 300w, https://cos.name/wp-content/uploads/2015/11/008-500x438.jpg 500w" sizes="(max-width: 735px) 100vw, 735px" />](https://cos.name/wp-content/uploads/2015/11/008.jpg)multiPhylo也是支持的，所以100颗bootstrap树可以同时用一行代码展示出来。
+![008](https://cos.name/wp-content/uploads/2015/11/008.jpg)multiPhylo也是支持的，所以100颗bootstrap树可以同时用一行代码展示出来。
 
 <pre>btree_file &lt;- system.file("extdata/RAxML", "RAxML_bootstrap.H3", package="ggtree")
  btree = read.tree(btree_file)
  ggtree(btree) + facet_wrap(~.id, ncol=10)</pre>
 
-[<img class="aligncenter size-full wp-image-11700" src="https://cos.name/wp-content/uploads/2015/11/010.jpg" alt="010" width="625" height="601" srcset="https://cos.name/wp-content/uploads/2015/11/010.jpg 625w, https://cos.name/wp-content/uploads/2015/11/010-300x288.jpg 300w, https://cos.name/wp-content/uploads/2015/11/010-500x481.jpg 500w" sizes="(max-width: 625px) 100vw, 625px" />](https://cos.name/wp-content/uploads/2015/11/010.jpg)
+![010](https://cos.name/wp-content/uploads/2015/11/010.jpg)
 
 如果不分面，这100颗树会重叠画在一起，这也能很好地展示bootstrap分析的结果，bootstrap值低的clade，线条会比较乱，而bootstrap值高的地方，线条一致性比较好。
 
@@ -159,13 +159,13 @@ ggtree支持ape, phangorn, r8s, RAxML, PAML, HYPHY, EPA, pplacer和BEAST的输�
  p &lt;- ggtree(rst) + geom_text(aes(label=marginal_AA_subs, x=branch), vjust=-.5)
  print(p)</pre>
 
-[<img class="aligncenter size-full wp-image-11699" src="https://cos.name/wp-content/uploads/2015/11/011.png" alt="011" width="605" height="477" srcset="https://cos.name/wp-content/uploads/2015/11/011.png 605w, https://cos.name/wp-content/uploads/2015/11/011-300x237.png 300w, https://cos.name/wp-content/uploads/2015/11/011-500x394.png 500w" sizes="(max-width: 605px) 100vw, 605px" />](https://cos.name/wp-content/uploads/2015/11/011.png)不同于BaseML以碱基为单位，CodeML预测祖先序列，以密码子为单位。\`ggtree\`定义了一个操作符<a href="http://ygc.name/2015/02/10/ggtree-updating-a-tree-view/" target="_blank">%<%</a>，如果有相同的注释信息要展示，可以用tree object来更新tree view。
+![011](https://cos.name/wp-content/uploads/2015/11/011.png)不同于BaseML以碱基为单位，CodeML预测祖先序列，以密码子为单位。\`ggtree\`定义了一个操作符<a href="http://ygc.name/2015/02/10/ggtree-updating-a-tree-view/" target="_blank">%<%</a>，如果有相同的注释信息要展示，可以用tree object来更新tree view。
 
 <pre>rstfile &lt;- system.file("extdata/PAML_Codeml", "rst", package="ggtree")
  crst &lt;- read.paml_rst(rstfile)
  p %&lt;% crst</pre>
 
-[<img class="aligncenter size-full wp-image-11698" src="https://cos.name/wp-content/uploads/2015/11/012.jpg" alt="012" width="602" height="488" srcset="https://cos.name/wp-content/uploads/2015/11/012.jpg 602w, https://cos.name/wp-content/uploads/2015/11/012-300x243.jpg 300w, https://cos.name/wp-content/uploads/2015/11/012-500x405.jpg 500w" sizes="(max-width: 602px) 100vw, 602px" />](https://cos.name/wp-content/uploads/2015/11/012.jpg)[
+![012](https://cos.name/wp-content/uploads/2015/11/012.jpg)[
   
 ](https://cos.name/wp-content/uploads/2015/11/012.jpg) 像上面的例子，用crst来更新p，就是用crst画出来的树+注释。对比两图，可以发现BaseML和CodeML推测的祖先序列是稍有不同的。
 
@@ -177,7 +177,7 @@ CodeML的dN/dS分析，我们可以直接把数据拿来给树上色。同样道
  scale_color_continuous(limits=c(0, 1.5), high='red', low='green', oob=scales::squish, name='dN/dS') +
  theme(legend.position='right')</pre>
 
-### [<img class="aligncenter size-full wp-image-11696" src="https://cos.name/wp-content/uploads/2015/11/013.jpg" alt="013" width="597" height="483" srcset="https://cos.name/wp-content/uploads/2015/11/013.jpg 597w, https://cos.name/wp-content/uploads/2015/11/013-300x243.jpg 300w, https://cos.name/wp-content/uploads/2015/11/013-500x405.jpg 500w" sizes="(max-width: 597px) 100vw, 597px" />](https://cos.name/wp-content/uploads/2015/11/013.jpg) 使用用户定义数据
+### ![013](https://cos.name/wp-content/uploads/2015/11/013.jpg) 使用用户定义数据
 
 进化树已经被广泛应用于各种跨学科的研究中，随着实验技术的发展，各种数据也更易于获得，使用用户数据注释进化树，也是ggtree所支持的。
 
@@ -194,7 +194,7 @@ CodeML的dN/dS分析，我们可以直接把数据拿来给树上色。同样道
  row.names(dd) &lt;- NULL
  print(dd)</pre>
 
-[<img class="aligncenter size-full wp-image-11695" src="https://cos.name/wp-content/uploads/2015/11/014.jpg" alt="014" width="617" height="260" srcset="https://cos.name/wp-content/uploads/2015/11/014.jpg 617w, https://cos.name/wp-content/uploads/2015/11/014-300x126.jpg 300w, https://cos.name/wp-content/uploads/2015/11/014-500x211.jpg 500w" sizes="(max-width: 617px) 100vw, 617px" />](https://cos.name/wp-content/uploads/2015/11/014.jpg)
+![014](https://cos.name/wp-content/uploads/2015/11/014.jpg)
 
 在上面的例子中，使用一个分类数据和一个连续型数据，输入的唯一要求是第一列是taxon label。ggtree中定义了操作符%<+%，来添加数据。添加之后，用户的数据对ggplot是可见的。可以用于树的注释。
 
@@ -202,7 +202,7 @@ CodeML的dN/dS分析，我们可以直接把数据拿来给树上色。同样道
  geom_tippoint(aes(size=value, shape=place, color=place), alpha=0.25)
  p+theme(legend.position="right")</pre>
 
-[<img class="aligncenter size-full wp-image-11694" src="https://cos.name/wp-content/uploads/2015/11/016.jpg" alt="016" width="615" height="312" srcset="https://cos.name/wp-content/uploads/2015/11/016.jpg 615w, https://cos.name/wp-content/uploads/2015/11/016-300x152.jpg 300w, https://cos.name/wp-content/uploads/2015/11/016-500x254.jpg 500w" sizes="(max-width: 615px) 100vw, 615px" />](https://cos.name/wp-content/uploads/2015/11/016.jpg)
+![016](https://cos.name/wp-content/uploads/2015/11/016.jpg)
 
 ggtree还支持用户把自己的数据和树保存为jplace格式。
 
@@ -219,6 +219,6 @@ ggtree允许把不同软件的分析结果整合在一起，同时在树上展�
 <pre>pp &lt;- ggtree(tree) %&gt;% phylopic("79ad5f09-cf21-4c89-8e7d-0c82a00ce728", color="steelblue", alpha = .3)
  pp + geom_tiplab(align=T, linetype='dashed', linesize=.5) + geom_tippoint(color='firebrick', size=2)</pre>
 
-[<img class="aligncenter size-full wp-image-11693" src="https://cos.name/wp-content/uploads/2015/11/017.jpg" alt="017" width="600" height="506" srcset="https://cos.name/wp-content/uploads/2015/11/017.jpg 600w, https://cos.name/wp-content/uploads/2015/11/017-300x253.jpg 300w, https://cos.name/wp-content/uploads/2015/11/017-500x422.jpg 500w" sizes="(max-width: 600px) 100vw, 600px" />](https://cos.name/wp-content/uploads/2015/11/017.jpg)另一个好玩又为我们展现各种可能性的是<a href="http://ygc.name/2015/08/31/subview/" target="_blank">subview</a>函数，它使得图上加小图变得特别容易。并且已经被应用于<a href="http://stackoverflow.com/questions/10368180/plotting-pie-graphs-on-map-in-ggplot/32380396#32380396" target="_blank">地图上加饼图</a>。解决这个问题的初衷在于，想要给节点加饼图注释。有了subview函数之后，这会变得很容易，当然我还没有写出给节点加饼图的函数，因为我还没有这个需求，得有一些实际的数据做参考，这样才能够设计出更易用的函数呈现给用户。
+![017](https://cos.name/wp-content/uploads/2015/11/017.jpg)另一个好玩又为我们展现各种可能性的是<a href="http://ygc.name/2015/08/31/subview/" target="_blank">subview</a>函数，它使得图上加小图变得特别容易。并且已经被应用于<a href="http://stackoverflow.com/questions/10368180/plotting-pie-graphs-on-map-in-ggplot/32380396#32380396" target="_blank">地图上加饼图</a>。解决这个问题的初衷在于，想要给节点加饼图注释。有了subview函数之后，这会变得很容易，当然我还没有写出给节点加饼图的函数，因为我还没有这个需求，得有一些实际的数据做参考，这样才能够设计出更易用的函数呈现给用户。
 
 很多的功能还在开发之中，有问题/建议请及时在<a href="https://github.com/GuangchuangYu/ggtree/issues" target="_blank">Github</a>上报告(中英文都可以)。
