@@ -19,10 +19,10 @@ slug: how-to-search-for-statistics-resources
 记得古时候有一个词叫作“獭祭”，语出《礼记·月令》：“獭祭鱼”。印象中李商隐和这个词似乎有某种联系，可惜古文修养太差，也弄不清了：
 
 > “商隐工诗，为文瑰迈奇古，辞隐事难。及从楚学，俪偶长短，而繁缛过之。每属缀，多检阅书册，左右鳞次，号‘獭祭鱼’”。
-> 
+>
 > 元·辛文房·《唐才子传》
 
-大意也就是说的找资料的事情，可见，写点东西（无论文人与否），都是要资料的。古人把书册一排排鳞次，今人恐怕不会那样做了，很可能就是在遨游（Maxthon）浏览器中一口气点开好多个窗口，然后把网页挨个来看，也算是某种形式的“獭祭”吧。
+大意也就是说的找资料的事情，可见，写点东西（无论文人与否），都是要资料的。古人把书册一排排鳞次，今人恐怕不会那样做了，很可能就是在遨游（Maxthon）浏览器^[编者注：Maxthon， 在21世纪初依靠口口相传风靡大江南北的一款优秀国产浏览器，后被功能强大的Chorme以及有强大推广的360，搜狗慢慢替换掉。] 中一口气点开好多个窗口，然后把网页挨个来看，也算是某种形式的“獭祭”吧。
 
 这篇小文，依旧是写给统计学院的学弟学妹们的，因此，仍然围绕着“统计”的话题展开。大约也就谈两方面吧：
 
@@ -30,27 +30,27 @@ slug: how-to-search-for-statistics-resources
 
 数据是统计的生命之源，其重要性就不在罗嗦。在上一篇文章“统计学的领域”中，我所说的数据来源其实主要是一手数据（调查和试验），做研究当然也可以使用二手数据，也就是别人已经通过调查或试验取得的数据，我们拿过来借用一下。
 
-提到统计数据，可能人们首先想到的就是统计局，不错，这是我们的选择之一，比如中华人民共和国国家统计局：<a href="http://www.stats.gov.cn/" target="_blank">http://www.stats.gov.cn/</a>，在这个官方网站中，包含了大量的统计数据，其中有年度数据、进度数据、专题数据、部门数据等等。比较方便的是，大多都是文本形式的数据，可以复制出来供分析使用。
+提到统计数据，可能人们首先想到的就是统计局，不错，这是我们的选择之一，比如[中华人民共和国国家统计局](http://www.stats.gov.cn/)，在这个官方网站中，包含了大量的统计数据，其中有年度数据、进度数据、专题数据、部门数据等等。比较方便的是，大多都是文本形式的数据，可以复制出来供分析使用。
 
 很多地方统计局也都有自己的网站，如果需要某地的数据，可以登录相应的网站查看。
 
-除了统计局，也别忘了学校的图书馆，人大的图书馆购买了一些统计数据库，从首页<a href="http://www.lib.ruc.edu.cn/" target="_blank">http://www.lib.ruc.edu.cn/</a>登录就会看到“参考工具”一栏中有“年鉴资源库”，点击进入就会看到大量的年鉴资料，不过不幸的是，里面很多资料都是图片格式，不能直接复制出来供分析。
+除了统计局，也别忘了学校的图书馆，人大的图书馆购买了一些统计数据库，从[首页]( http://www.lib.ruc.edu.cn)登录就会看到“参考工具”一栏中有“年鉴资源库”，点击进入就会看到大量的年鉴资料，不过不幸的是，里面很多资料都是图片格式，不能直接复制出来供分析。
 
-上面说的是中文数据，若要找国际数据，其实Unitied States也是个可以考虑的地方，在那里有专门的Statistics Division，<a href="http://unstats.un.org" target="_blank">http://unstats.un.org</a>，里面的数据有Excel格式的，也提供了相应的PDF格式文件。事实上，国外的数据比国内要丰富得多，大家平时浏览网站的时候多多注意，一定会有很多积累的。比如OECD的网站，<a href="http://www.oecd.org" target="_blank">http://www.oecd.org</a>；U.S. Census Bureau：<a href="http://www.census.gov" target="_blank">http://www.census.gov</a>；等等。
+上面说的是中文数据，若要找国际数据，其实Unitied States也是个可以考虑的地方，在那里有专门的Statistics Division，<http://unstats.un.org>里面的数据有Excel格式的，也提供了相应的PDF格式文件。事实上，国外的数据比国内要丰富得多，大家平时浏览网站的时候多多注意，一定会有很多积累的。比如[OECD的网站](http://www.oecd.org)；[U.S. Census Bureau](http://www.census.gov)等等。
 
 # 二、怎样找参考文献
 
 对于写论文来说，大多数情况下恐怕找参考文献比找数据更重要。
 
-这里首先仍然是介绍我们图书馆的资料，一般说来，中文方面的论文库当然要数“中国期刊全文数据库”比较全面（<a href="http://www.edu.cnki.net/" target="_blank">http://www.edu.cnki.net/</a>），其中收录了大量的期刊全文，图书馆网站上给出了登录用户名和密码，大家可以尝试进去看看。统计类的期刊有《统计研究》、《统计与决策》、《数理统计与管理》、《数理统计与应用概率》等等，这些期刊都可以通过右上角的“期刊导航”找到。当然，也可以按照关键字搜索论文，网站左侧有检索的文本框，诸多选项大家自己去看吧。
+这里首先仍然是介绍我们图书馆的资料，一般说来，中文方面的论文库当然要数“[中国期刊全文数据库](http://www.edu.cnki.net/)”比较全面，其中收录了大量的期刊全文，图书馆网站上给出了登录用户名和密码，大家可以尝试进去看看。统计类的期刊有《统计研究》、《统计与决策》、《数理统计与管理》、《数理统计与应用概率》等等，这些期刊都可以通过右上角的“期刊导航”找到。当然，也可以按照关键字搜索论文，网站左侧有检索的文本框，诸多选项大家自己去看吧。
 
 其他的数据库诸如“万方数据资源系统”等都是比较好的资源中心，大家可以去尝试尝试；最后要说的是除了文本形式的数据库，其实图书馆的资源中也有视频/音频数据库，一些名家的讲座都可以从中直接看到。
 
 中文论文库就不介绍太多了，是个中国人都能自己看懂，下面说说外文数据库资源。
 
-如果要查找5年前的期刊论文，那么JSTOR也许可以满足你们大部分需要了，JSTOR就是Journal Storage的缩写，网址为www.jstor.org，其中收录的论文基本上都是图片格式，可以在网站上一页一页翻着看，或者直接Download为PDF文件阅读（里面仍然是图片格式）。关于统计界的外文刊物，大家不能不知道这些：Journal of the American Statistical Association（JASA）、Annals of Statistics、Journal of the Royal Statistical Society，其实还有Biometrica等等，暂时还是别介绍太多了。
+如果要查找5年前的期刊论文，那么[JSTOR](http://www.jstor.org)也许可以满足你们大部分需要了，JSTOR就是Journal Storage的缩写，网址为<http://www.jstor.org>，其中收录的论文基本上都是图片格式，可以在网站上一页一页翻着看，或者直接下载为PDF文件阅读（里面仍然是图片格式）。关于统计界的外文刊物，大家不能不知道这些：Journal of the American Statistical Association（JASA）、Annals of Statistics、Journal of the Royal Statistical Society，其实还有Biometrica等等，暂时还是别介绍太多了。
 
-Wiley InterScience（图书馆网站上写的“John Wiley电子期刊”，<a href="http://www.interscience.wiley.com" target="_blank">网址</a>）这个网站中有不少统计学的宝贝，有空应该去淘一淘，比较难得的是里面有大量的Online Books，如&#8221;Introduction to Bayesian Statistics&#8221;，&#8221;Regression Models for Time Series Analysis&#8221;，&#8221;Statistical Analysis and Data Mining&#8221;，&#8221;Analysis of Financial Time Series (Second Edition)&#8221;等。
+[Wiley InterScience](http://www.interscience.wiley.com)（图书馆网站上写的“John Wiley电子期刊”）这个网站中有不少统计学的宝贝，有空应该去淘一淘，比较难得的是里面有大量的Online Books，如“Introduction to Bayesian Statistics”，“Regression Models for Time Series Analysis”，“Statistical Analysis and Data Mining”，“Analysis of Financial Time Series (Second Edition)”等。
 
 其它数据库我平时较少用，不过也是比较好的资源，如“ProQuest学位论文全文数据库”等，在此不多加介绍了。前面提到的JSTOR只能看好几年前的期刊论文，如果要看最新的文章的话，也可以试试EBSCO或者ProQuest数据库，不过至少我似乎没发现JASA的文章，可能跟学校购买的数据库限制有关。如果有比较重要的外文文献需要下载全文阅读而学校图书馆又没有购买相应的数据库，那么也可以找你们在国外的同学或朋友，国外大学图书馆购买的英文数据库肯定比我们要全。
 
@@ -58,6 +58,4 @@ Wiley InterScience（图书馆网站上写的“John Wiley电子期刊”，<a h
 
 希望这些东西对大家有用。
 
-谢益辉
-  
-2006-10-21夜
+> 本文写于2006-10-21

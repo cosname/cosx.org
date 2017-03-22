@@ -205,7 +205,7 @@ tables good_bad*good_bad_predicted ;
 
 <strong>run</strong>;</pre>
 
-[ <img class="aligncenter" src="https://cos.name/wp-content/uploads/2008/12/pv-thumb.png" border="0" alt="PV" width="238" height="258" />](https://cos.name/wp-content/uploads/2008/12/pv.png)
+[ ![PV](https://cos.name/wp-content/uploads/2008/12/pv-thumb.png)](https://cos.name/wp-content/uploads/2008/12/pv.png)
 
 其中，准确率=12.00%+57.25%=69.25% ，覆盖率=32.88% ，命中率=65.75% ，Specificity=90.16%，PV-=70.03% 。
 

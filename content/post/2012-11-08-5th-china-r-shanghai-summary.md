@@ -7,7 +7,7 @@ categories:
 slug: 5th-china-r-shanghai-summary
 ---
 
-[<img class="aligncenter" title="中国R语言会议标识" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png" alt="" width="300" height="199" />](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)第五届中国R语言会议（上海会场）于2012年11月3日~4日在上海财经大学行政楼一楼报告厅成功召开。会议由上海财经大学统计与管理学院主办、统计之都（<a href="https://cos.name" target="_blank">cos.name</a>）协办，艾瑞咨询（<a href="http://www.iresearch.cn/" target="_blank">iresearch</a>）、Mango Solutions（<a href="http://www.mango-solutions.com.cn/" target="_blank">mango-solutions</a>）、上海财经大学数理经济学教育部重点实验室以及上海财经大学上海市一流学科（B类， 统计学）提供了赞助。在两天的会议时间里，群贤毕集，盛况空前。
+![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png "中国R语言会议标识")第五届中国R语言会议（上海会场）于2012年11月3日~4日在上海财经大学行政楼一楼报告厅成功召开。会议由上海财经大学统计与管理学院主办、统计之都（<a href="https://cos.name" target="_blank">cos.name</a>）协办，艾瑞咨询（<a href="http://www.iresearch.cn/" target="_blank">iresearch</a>）、Mango Solutions（<a href="http://www.mango-solutions.com.cn/" target="_blank">mango-solutions</a>）、上海财经大学数理经济学教育部重点实验室以及上海财经大学上海市一流学科（B类， 统计学）提供了赞助。在两天的会议时间里，群贤毕集，盛况空前。
 
 ## 会议概况
 
@@ -24,7 +24,7 @@ slug: 5th-china-r-shanghai-summary
 > &nbsp;
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2012/11/5th-SH-live.jpg" target="_blank"><img class="aligncenter" title="会议现场20121103" src="https://cos.name/wp-content/uploads/2012/11/5th-SH-live-500x333.jpg" alt="会议现场20121103" width="600" height="337" /></a>
+  <a href="https://cos.name/wp-content/uploads/2012/11/5th-SH-live.jpg" target="_blank">![会议现场20121103](https://cos.name/wp-content/uploads/2012/11/5th-SH-live-500x333.jpg "会议现场20121103")</a>
 </p>
 
 ## 会议内容

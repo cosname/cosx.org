@@ -175,7 +175,7 @@ dyn.unload(sprintf("calc_pvalue%s", .Platform$dynlib.ext))</pre>
 
 头文件`Rmath.h`的引入使得我们可以调用很多基于C程序的R函数，详情参考手册Writing R Extensions。通过C计算出来的P值和前面用R算的略有差异，下面画出`p6 - p1` vs `p1`以及`p6 - p5` vs `p5`的图：<figure id="attachment_1802" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-1802" title="P值的差异" src="https://cos.name/wp-content/uploads/2009/12/p-values-error.png" alt="P值的差异" width="480" height="480" srcset="https://cos.name/wp-content/uploads/2009/12/p-values-error.png 480w, https://cos.name/wp-content/uploads/2009/12/p-values-error-150x150.png 150w, https://cos.name/wp-content/uploads/2009/12/p-values-error-300x300.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2009/12/p-values-error.png)<figcaption class="wp-caption-text">P值的差异</figcaption></figure> 
+![P值的差异](https://cos.name/wp-content/uploads/2009/12/p-values-error.png "P值的差异")<figcaption class="wp-caption-text">P值的差异</figcaption></figure> 
 
 导致差异的原因此处不细究，感兴趣的读者可以帮忙检查一下。
 

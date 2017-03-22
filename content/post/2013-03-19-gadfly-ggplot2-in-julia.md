@@ -26,4 +26,4 @@ slug: gadfly-ggplot2-in-julia
 
 纽约时报犯错了？统计学家是不会放过你的！[这里](http://andrewgelman.com/2013/03/12/misunderstanding-the-p-value/)以及[这里](http://normaldeviate.wordpress.com/2013/03/14/double-misunderstandings-about-p-values/)。（肖楠配图：如果说隐藏在幕后的统计学家还能为大众福祉主动发声，那些「只为自己带盐」的经济学家似乎就没这么走运了……）
 
-<img class="alignnone" alt="" src="http://i.imgur.com/cvaUKhy.gif" width="560" height="2520" />
+![](http://i.imgur.com/cvaUKhy.gif)

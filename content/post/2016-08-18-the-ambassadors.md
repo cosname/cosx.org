@@ -23,7 +23,7 @@ slug: the-ambassadors
 
 1533年一个叫（小）霍尔拜因的德国画家画了一幅油画，名为《大使们》（The Ambassadors）。这幅画的主角是二脸懵圈的大使，长这样：<figure id="attachment_13089" style="width: 608px" class="wp-caption aligncenter">
 
-[<img class="wp-image-13089 size-full" src="https://cos.name/wp-content/uploads/2016/08/825197412.jpg" alt="大使们（小霍尔拜因）" width="608" height="599" srcset="https://cos.name/wp-content/uploads/2016/08/825197412.jpg 608w, https://cos.name/wp-content/uploads/2016/08/825197412-300x296.jpg 300w, https://cos.name/wp-content/uploads/2016/08/825197412-500x493.jpg 500w" sizes="(max-width: 608px) 100vw, 608px" />](https://cos.name/wp-content/uploads/2016/08/825197412.jpg)<figcaption class="wp-caption-text">图1：大使们（小汉斯·霍尔拜因）</figcaption></figure> 
+![大使们（小霍尔拜因）](https://cos.name/wp-content/uploads/2016/08/825197412.jpg)<figcaption class="wp-caption-text">图1：大使们（小汉斯·霍尔拜因）</figcaption></figure> 
 
 这位画家的一个显著特点就是画工极其精良，上面这幅画中的细节之清晰简直让人惊愕，感兴趣的可以去搜了[原图](https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors)来放大了仔细看：大使衣服上的一根根毛发、地球仪上的国界线、展开的乐谱、那个不知道是什么葫芦瓢乐器上断了的一根弦，等等。这特么是人画出来的么。
 
@@ -47,13 +47,13 @@ Cook 大人接下了 Tukey 大人传下来的接力棒，捣鼓了二十来年�
 
 说来惭愧，我博士期间开发的工具基本上成了一个烂尾工程，那个包安装起来太麻烦，我就不用它来演示了，而是派现在的新秀 Shiny 上场。整个[应用](https://yihui.shinyapps.io/ambassadors)的源代码在我的 Github 库里可以找到：<https://github.com/yihui/shiny-apps/>{.uri} 首先我们把这幅油画加载进来：<figure id="attachment_13090" style="width: 945px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-13090" src="https://cos.name/wp-content/uploads/2016/08/1400655015.jpg" alt="图2：初始应用" width="945" height="452" srcset="https://cos.name/wp-content/uploads/2016/08/1400655015.jpg 945w, https://cos.name/wp-content/uploads/2016/08/1400655015-300x143.jpg 300w, https://cos.name/wp-content/uploads/2016/08/1400655015-768x367.jpg 768w, https://cos.name/wp-content/uploads/2016/08/1400655015-500x239.jpg 500w" sizes="(max-width: 945px) 100vw, 945px" />](https://cos.name/wp-content/uploads/2016/08/1400655015.jpg)<figcaption class="wp-caption-text">图2：初始应用</figcaption></figure> 
+![图2：初始应用](https://cos.name/wp-content/uploads/2016/08/1400655015.jpg)<figcaption class="wp-caption-text">图2：初始应用</figcaption></figure> 
 
 <p class="caption">
   我们内心大概又一次开始抗拒了。这，这又是什么？莫方，这纯属为了讲故事而强行加入的插曲。故事就是应该在反复的悬念和啊哈中前进。这不，我把样本量加大一些，你就知道它是什么了：
 </p><figure id="attachment_13091" style="width: 946px" class="wp-caption aligncenter">
 
-[<img class="wp-image-13091 size-full" src="https://cos.name/wp-content/uploads/2016/08/888776897.jpg" alt="加大样本量，显示油画轮廓" width="946" height="456" srcset="https://cos.name/wp-content/uploads/2016/08/888776897.jpg 946w, https://cos.name/wp-content/uploads/2016/08/888776897-300x145.jpg 300w, https://cos.name/wp-content/uploads/2016/08/888776897-768x370.jpg 768w, https://cos.name/wp-content/uploads/2016/08/888776897-500x241.jpg 500w" sizes="(max-width: 946px) 100vw, 946px" />](https://cos.name/wp-content/uploads/2016/08/888776897.jpg)<figcaption class="wp-caption-text">图3：加大样本量，显示油画轮廓</figcaption></figure> 
+![加大样本量，显示油画轮廓](https://cos.name/wp-content/uploads/2016/08/888776897.jpg)<figcaption class="wp-caption-text">图3：加大样本量，显示油画轮廓</figcaption></figure> 
 
 当时论文答辩我最得意的大概是这幅萌得让人不忍戳的艺术再创作了。霍尔拜因大侠请饶命，小的只是随便一玩，想让答辩在一片欢乐祥和的气氛中进行下去而已。这个 Shiny 应用可以用来刷图、旋转、缩放，主要通过操作界面左边的滑动条完成，具体的实现参考源代码，基本都是高中数学知识。
 
@@ -61,19 +61,19 @@ Cook 大人接下了 Tukey 大人传下来的接力棒，捣鼓了二十来年�
 
 原图是否清晰已经无所谓了，我们现在需要原图的关键信息只是那个局部区域，所以我们在那萌萌圈圈的图上戳着鼠标抬手一刷，选取子区域，在下面放大重绘出原图即可：<figure id="attachment_13092" style="width: 945px" class="wp-caption aligncenter">
 
-[<img class="wp-image-13092 size-full" src="https://cos.name/wp-content/uploads/2016/08/1156769480.jpg" alt="放大重绘子区域" width="945" height="1017" srcset="https://cos.name/wp-content/uploads/2016/08/1156769480.jpg 945w, https://cos.name/wp-content/uploads/2016/08/1156769480-279x300.jpg 279w, https://cos.name/wp-content/uploads/2016/08/1156769480-768x827.jpg 768w, https://cos.name/wp-content/uploads/2016/08/1156769480-465x500.jpg 465w" sizes="(max-width: 945px) 100vw, 945px" />](https://cos.name/wp-content/uploads/2016/08/1156769480.jpg)<figcaption class="wp-caption-text">图4：放大重绘子区域</figcaption></figure> 
+![放大重绘子区域](https://cos.name/wp-content/uploads/2016/08/1156769480.jpg)<figcaption class="wp-caption-text">图4：放大重绘子区域</figcaption></figure> 
 
 ## 转转转 {.caption}
 
 好嘛，现在成了个斜长条，如果你开始歪着脑袋看它就对了。何必歪脑袋呢？我们把它转一下不就好了。于是转转转，不转不是中国人。拖一下第二个滑动条旋转大概60度：<figure id="attachment_13093" style="width: 610px" class="wp-caption aligncenter">
 
-[<img class="wp-image-13093 size-full" src="https://cos.name/wp-content/uploads/2016/08/99008968.jpg" alt="旋转后的子图" width="610" height="600" srcset="https://cos.name/wp-content/uploads/2016/08/99008968.jpg 610w, https://cos.name/wp-content/uploads/2016/08/99008968-300x295.jpg 300w, https://cos.name/wp-content/uploads/2016/08/99008968-500x492.jpg 500w" sizes="(max-width: 610px) 100vw, 610px" />](https://cos.name/wp-content/uploads/2016/08/99008968.jpg)<figcaption class="wp-caption-text">图5：旋转后的子图</figcaption></figure> 
+![旋转后的子图](https://cos.name/wp-content/uploads/2016/08/99008968.jpg)<figcaption class="wp-caption-text">图5：旋转后的子图</figcaption></figure> 
 
 ## 压压压
 
 哎你说你咋儿就这么长条呢？让洒家来对你实施一下二向箔打击。统计图形中有一个重要概念是纵横比（aspect ratio），这个比率是一单位的纵轴物理长度与一单位的横轴物理长度的比率，比如0.5的意思就是纵轴上0到10的距离是横轴0到10的距离一半。我们把这个比率调低一点就可以实现图形在纵向上的压缩了，下面是纵横比约为0.15时的情形：<figure id="attachment_13094" style="width: 610px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-13094" src="https://cos.name/wp-content/uploads/2016/08/999832794.jpg" alt="图6：纵向压缩后的子图" width="610" height="600" srcset="https://cos.name/wp-content/uploads/2016/08/999832794.jpg 610w, https://cos.name/wp-content/uploads/2016/08/999832794-300x295.jpg 300w, https://cos.name/wp-content/uploads/2016/08/999832794-500x492.jpg 500w" sizes="(max-width: 610px) 100vw, 610px" />](https://cos.name/wp-content/uploads/2016/08/999832794.jpg)<figcaption class="wp-caption-text">图6：纵向压缩后的子图</figcaption></figure> 
+![图6：纵向压缩后的子图](https://cos.name/wp-content/uploads/2016/08/999832794.jpg)<figcaption class="wp-caption-text">图6：纵向压缩后的子图</figcaption></figure> 
 
 <p class="caption">
   相信多数人已经看出来这是什么鬼了。这特么还真的是个鬼啊！如果你还没看清，我再拖一下最后那个滑动条，放大一下，死给你看。
@@ -83,13 +83,13 @@ Cook 大人接下了 Tukey 大人传下来的接力棒，捣鼓了二十来年�
 
 对吧？啊哈！用郭德纲的话来翻译，就是哟~~西。图穷骷髅见。<figure id="attachment_13095" style="width: 610px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-13095" src="https://cos.name/wp-content/uploads/2016/08/262604117.jpg" alt="图7：放大后的子图" width="610" height="600" srcset="https://cos.name/wp-content/uploads/2016/08/262604117.jpg 610w, https://cos.name/wp-content/uploads/2016/08/262604117-300x295.jpg 300w, https://cos.name/wp-content/uploads/2016/08/262604117-500x492.jpg 500w" sizes="(max-width: 610px) 100vw, 610px" />](https://cos.name/wp-content/uploads/2016/08/262604117.jpg)<figcaption class="wp-caption-text">图7：放大后的子图</figcaption></figure> 
+![图7：放大后的子图](https://cos.name/wp-content/uploads/2016/08/262604117.jpg)<figcaption class="wp-caption-text">图7：放大后的子图</figcaption></figure> 
 
 ## 回放
 
 最后我们回放一下所有镜头：<figure id="attachment_13100" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="wp-image-13100 size-full" src="https://cos.name/wp-content/uploads/2016/08/app.gif" alt="镜头回放" width="480" height="520" />](https://cos.name/wp-content/uploads/2016/08/app.gif)<figcaption class="wp-caption-text">图8：镜头回放</figcaption></figure> 
+![镜头回放](https://cos.name/wp-content/uploads/2016/08/app.gif)<figcaption class="wp-caption-text">图8：镜头回放</figcaption></figure> 
 
 ## 结语
 
