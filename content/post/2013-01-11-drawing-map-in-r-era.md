@@ -21,7 +21,7 @@ slug: drawing-map-in-r-era
 
   1. 你得需要绘制地图；（约等于废话）
   1. 你得有要绘制地图的地理信息，经纬度啊，边界啊等等；
-  1. 你得利用2的数据在R中画出来。
+  1. 你得利用2的数据在R中画出来。
 
 以上步骤中，目前最关键的是2，一旦2的数据有了，在R中不就是把它们连起来嘛，这个对于R来说就是调戏它，就跟全民调戏小黄鸡一样。
 
@@ -45,14 +45,14 @@ R语言中绘制地图的思路也是由于2的获取方式不一样而分开的
 
 #  1、 画世界地图
 
-  如果是首次使用，需要在R中装载maps包（<code>install.packages('maps')</code>），这个包中存有世界地图和美国地图的地图数据，所以，几行代码便可以画出世界地图。
+  如果是首次使用，需要在R中装载maps包```install.packages('maps')</code>```，这个包中存有世界地图和美国地图的地图数据，所以，几行代码便可以画出世界地图。
 
 代码如下：
 
-'''library(maps)
+```library(maps)
 map("world", fill = TRUE, col = rainbow(200),
     ylim = c(-60, 90), mar = c(0, 0, 0, 0))
-title("世界地图")'''
+title("世界地图")``` 
 
   输出为：
   <a href="https://cos.name/wp-content/uploads/2013/01/world_map.png">![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
