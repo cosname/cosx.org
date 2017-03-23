@@ -19,7 +19,7 @@ tags:
 slug: reproducible-research-in-statistics
 ---
 
-*警告：本文提到的工具在更新中，请暂时不要按本文的配置去做，静候LyX 2.0.3的发布。*
+**警告**：本文提到的工具在更新中，请暂时不要按本文的配置去做，静候LyX 2.0.3的发布。
 
 我们都痛恨统计造假。我们都对重复性的工作感到厌倦。如果你同意这两句话或这两句话适用于你的现状，那么本文将介绍一套开源、免费的工具来克服这两个问题。当然，前提是你愿意改变，这里的工具可以让这两种现象没有藏身之地，但无法改变造假和重复劳动的现实。以下为吊胃口视频（墙外观众可以看[Vimeo](https://vimeo.com/16374405)；墙内看不到视频的可以任选一个链接下载本视频的AVI文件：[链接1](https://www.mediafire.com/?iyp62cmyi8vmwd3)、[链接2](https://www.filefactory.com/file/b422e9f/n/31632916.avi)、[链接3](https://www.filedropper.com/31632916))：
 
@@ -130,7 +130,7 @@ LyX给文学编程留下的后路基本上在一个叫`literate-scrap.inc`的文
 
 如果你已经装好了LyX（及其配套LaTeX程序如[MikTeX](https://www.miktex.org)、[TeXLive](https://tug.org/texlive/)或[MacTeX](https://tug.org/mactex/)和[R](https://www.r-project.org)（版本 >= 2.12.0），整个配置过程只需要在R中执行一句话：
 
-```tex
+```r
 source('http://gitorious.org/yihui/lyx-sweave/blobs/raw/master/lyx-sweave-config.R')
 ```
 
