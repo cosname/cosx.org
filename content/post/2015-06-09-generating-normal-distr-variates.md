@@ -38,7 +38,7 @@ slug: generating-normal-distr-variates
 
 感谢<a href="http://yixuan.cos.name/cn/" target="_blank">怡轩</a>同学的悉心指导~
 
-之前拜读了靳志辉（<a href="http://www.weibo.com/rickjin" target="_blank">@rickjin</a>）老师写的<a href="https://cos.name/2013/01/story-of-normal-distribution-1/" target="_blank">《正态分布的前世今生》</a>，一直对正态分布怀着一颗敬畏之心，刚好最近偶然看到`python`标准库中如何生成服从正态分布随机数的源码，觉得非常有趣，于是又去查找其他一些生成正态分布的方法，与大家分享一下。
+之前拜读了靳志辉（<a href="http://www.weibo.com/rickjin" target="_blank">@rickjin</a>）老师写的<a href="/2013/01/story-of-normal-distribution-1/" target="_blank">《正态分布的前世今生》</a>，一直对正态分布怀着一颗敬畏之心，刚好最近偶然看到`python`标准库中如何生成服从正态分布随机数的源码，觉得非常有趣，于是又去查找其他一些生成正态分布的方法，与大家分享一下。
 
 ### 利用中心极限定理生成正态分布
 

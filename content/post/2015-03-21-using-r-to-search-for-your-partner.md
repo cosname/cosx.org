@@ -15,7 +15,7 @@ slug: using-r-to-search-for-your-partner
 
 编辑：<a href="http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo" target="_blank">王小宁</a>
 
-还记得小编的每周精选“<a href="https://cos.name/2015/02/the-application-of-statistics-in-love/" target="_blank">统计学在爱情中的那些应用</a>”么，正值春暖花开之时，是不是想约个妹子一起去春游啊。小编又苦心找了几篇文章，以统计学的思维助你一臂之力。
+还记得小编的每周精选“<a href="/2015/02/the-application-of-statistics-in-love/" target="_blank">统计学在爱情中的那些应用</a>”么，正值春暖花开之时，是不是想约个妹子一起去春游啊。小编又苦心找了几篇文章，以统计学的思维助你一臂之力。
 
 **R****的独门秘籍：找对象**
 

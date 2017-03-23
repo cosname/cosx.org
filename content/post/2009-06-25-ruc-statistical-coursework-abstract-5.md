@@ -160,7 +160,7 @@ Keywords: ****rare event detection, SMOTE, random forest
 
 ## 五、首届中国R语言会议摘要汇编
 
-详见 <https://cos.name/2008/12/1st-chinese-r-conference-summary/>
+详见 </2008/12/1st-chinese-r-conference-summary/>
 
 ## 六、2008——2009学年统计学院主要学术活动
 

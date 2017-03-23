@@ -19,7 +19,7 @@ slug: 3rd-china-r-shanghai-summary
 ![第三届中国R语言会议上海会场合影1](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1.jpg "第三届中国R语言会议上海会场合影1")<figcaption class="wp-caption-text">第三届中国R语言会议上海会场合影（右键另存为看大图）</figcaption></figure> 
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png">![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png "中国R语言会议标识")</a>
+  <a href="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png">![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)</a>
 </p>
 
 第三届中国R语言会议（上海会场）于2010年11月13日~14日在上海财经大学行政楼成功召开。会议由上海财经大学统计与管理学院与统计之都网站(<a href="https://cos.name/" target="_blank">cos.name</a>)协办，由Mango Solutions提供赞助。在两天的会议时间里，来自各行各业的R用户齐聚上海，共同探讨和交流R软件的使用经验，取得了丰厚的成果。
