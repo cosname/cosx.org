@@ -68,7 +68,7 @@ GPGPU的解决方案有不止一个，但由于英伟达集团的大力推广，
 
 这个package已经在CRAN上了，但直接install.package还是可能出错，其实还是环境变量的问题。如果CUDA_HOME没有问题的话，检查一下src文件夹下的config.mk，看下面三个变量是不是和自己的一致。如果不一致，应该会报告找不到R.h之类的错误。检查过之后就可以R CMD INSTALL gputools了。
 
-```
+```bash
 R_HOME := $(shell R RHOME)
 R_INC := $(R_HOME)/include
 R_LIB := $(R_HOME)/lib 
@@ -76,27 +76,27 @@ R_LIB := $(R_HOME)/lib
 
 这里拿一个矩阵相乘做例子，测试函数如下：
 
-```
+```r
 library(gputools)
-gpu.matmult &lt;- function(n) {
-    A &lt;- matrix(runif(n * n), n ,n)
-    B &lt;- matrix(runif(n * n), n ,n)
-    tic &lt;- Sys.time()
-    C &lt;- A %*% B
-    toc &lt;- Sys.time()
-    comp.time &lt;- toc - tic
+gpu.matmult <- function(n) {
+    A <- matrix(runif(n * n), n ,n)
+    B <- matrix(runif(n * n), n ,n)
+    tic <- Sys.time()
+    C <- A %*% B
+    toc <- Sys.time()
+    comp.time <- toc - tic
     cat("CPU: ", comp.time, "\n")
-    tic &lt;- Sys.time()
-    C &lt;- gpuMatMult(A, B)
-    toc &lt;- Sys.time()
-    comp.time &lt;- toc - tic
+    tic <- Sys.time()
+    C <- gpuMatMult(A, B)
+    toc <- Sys.time()
+    comp.time <- toc - tic
     cat("GPU: ", comp.time, "\n")
 }
 ```
 
 可以明显地看到，在维度比较低的时候，GPU没有任何优势。
 
-```
+```r
 gpu.matmult(5)
 ```
 
@@ -105,7 +105,7 @@ gpu.matmult(5)
 ## GPU:  0.2105169 
 ```
 
-```
+```r
 gpu.matmult(50)
 ```
 
@@ -114,7 +114,7 @@ gpu.matmult(50)
 ## GPU:  0.003529072 
 ```
 
-```
+```r
 gpu.matmult(500)
 ```
 
@@ -125,7 +125,7 @@ gpu.matmult(500)
 
 开始有优势了！
 
-```
+```r
 gpu.matmult(1000)
 ```
 
@@ -134,7 +134,7 @@ gpu.matmult(1000)
 ## GPU:  0.09884238 
 ```
 
-```
+```r
 gpu.matmult(2000)
 ```
 
@@ -151,12 +151,12 @@ rpud的安装就容易多了，添加一个R\_LIBS\_USER环境变量，之后直
 
 拿Matrix Distance举个例子：
 
-```
-test.data &lt;- function(dim, num, seed = 17) {
+```r
+test.data <- function(dim, num, seed = 17) {
     set.seed(seed)
     matrix(rnorm(dim * num), nrow = num)
 }
-m &lt;- test.data(120, 4500)
+m <- test.data(120, 4500)
 system.time(dist(m))
 ```
 
@@ -165,7 +165,7 @@ system.time(dist(m))
 ##  13.944   0.016  13.977
 ```
 
-```
+```r
 library(rpud)
 ```
 
@@ -176,7 +176,7 @@ library(rpud)
 ## Rpud is licensed under GNU GPL v3. There is absolutely NO warranty.
 ```
 
-```
+```r
 system.time(rpuDist(m))
 ```
 
@@ -191,12 +191,12 @@ system.time(rpuDist(m))
 
 HiPLAR是High Performance Linear Algebra in R的缩写，这个package的配置略复杂，因为调用的library略多。不过好在提供了installer，一般也不会出错。这里直接拿官方例子说话吧。
 
-```
+```r
 library(Matrix);
-n &lt;- 8192;
-X &lt;- Hilbert(n);
-A &lt;- nearPD(X);
-system.time(B &lt;- chol(A$mat));
+n <- 8192;
+X <- Hilbert(n);
+A <- nearPD(X);
+system.time(B <- chol(A$mat));
 ```
 
 ```
@@ -204,9 +204,9 @@ system.time(B &lt;- chol(A$mat));
 ## 97.990   0.356  98.591
 ```
 
-```
+```r
 library(HiPLARM)
-system.time(B &lt;- chol(A$mat));
+system.time(B <- chol(A$mat));
 ```
 
 ```
@@ -222,7 +222,7 @@ system.time(B &lt;- chol(A$mat));
 
 CUDA是基于C的，所以调用CUDA和调用C没有多少不同。调用C的时候，是把C文件用R CMD SHLIB编译成so，之后用R调用。稍微注意一下R CMD SHLIB的输出，其实就什么都明白了。
 
-```
+```bash
 $ R CMD SHLIB sd.c
 gcc -std=gnu99 -I/usr/share/R/include -DNDEBUG -fpic  -O3 -pipe  -g  -c sd.c -o sd.o
 gcc -std=gnu99 -shared -o sd.so sd.o -L/usr/lib/R/lib -lR
@@ -232,9 +232,9 @@ R CMD SHLIB只是自动调用了下面那两行，对于CUDA，我们手动写�
 
 CUDA代码如下：
 
-```
-#include&lt;cuda.h&gt;
-#include&lt;stdio.h&gt;
+```cpp
+#include<cuda.h>;
+#include<stdio.h>;
 
 extern "C" void meanout(int *hm, int *nrc, double *meanmut);
 
@@ -243,7 +243,7 @@ __device__ void findpair(int tn, int n, int *pair)
     int sum = 0, oldsum = 0, i;
     for(i = 0; ; i++){
         sum += n - i - 1;
-        if(tn &lt;= sum - 1){
+        if(tn <= sum - 1){
 	pair[0] = i;
 	pair[1] = tn - oldsum + i + 1;
 	return;
@@ -260,7 +260,7 @@ __global__ void proc1pair(int *m, int *tot, int n)
     findpair(threadIdx.x, n, pair);
     int sum = 0;
     int startrowa = pair[0], startrowb = pair[1];
-    for (int k = 0 ; k &lt; n ; k++)
+    for (int k = 0 ; k < n ; k++)
         sum += m[startrowa + n*k]*m[startrowb + n*k];
     atomicAdd(tot, sum);
 }
@@ -289,17 +289,17 @@ void meanout(int *hm, int *nrc, double *meanmut)
 
 编译选项如下：
 
-```
+```bash
 $ nvcc -g -G -I/usr/local/cuda/include -Xcompiler "-I/usr/share/R/include -fpic" -c mutlinksforr.cu -o mutlink.o -arch=sm_11
 $ nvcc -shared -Xlinker "-L/usr/lib/R/lib -lR" -L/usr/local/cuda/lib mutlink.o -o meanlinks.so
 ```
 
 R里的调用和输出
 
-```
+```r
 dyn.load("meanlinks.so")
-m &lt;- rbind(c(0, 1, 1, 1), c(1, 0, 0, 1), c(1, 0, 0, 1), c(1, 1, 1, 0))
-ma &lt;- rbind(c(0, 1, 0), c(1, 0, 0), c(1, 0, 0))
+m <- rbind(c(0, 1, 1, 1), c(1, 0, 0, 1), c(1, 0, 0, 1), c(1, 1, 1, 0))
+ma <- rbind(c(0, 1, 0), c(1, 0, 0), c(1, 0, 0))
 .C("meanout", as.integer(m), as.integer(4), mo = double(1))
 ```
 
