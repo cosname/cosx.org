@@ -110,7 +110,7 @@ ods graphics off;
 # 参考资料
 
   1. Mithat Gonen. 2007. _Analyzing Receiver Operating Characteristic Curves with SAS_. Cary, NC: SAS Institute Inc.
-  2. Mike Patetta. 2008. _Categorical Data Analysis Using Logistic Regression Course Notes._ Cary, NC: SAS Institute Inc.
-  3. Dan Kelly, etc. 2007. _Predictive Modeling Using Logistic Regression Course Notes_. Cary, NC: SAS Institute Inc.
-  4. _Receiver operating characteristic_, **see** [http://en.wikipedia.org/wiki/Receiver\_operating\_characteristic](http://en.wikipedia.org/wiki/Receiver_operating_characteristic)
-  5. _The magnificent ROC_, **see** <http://www.anaesthetist.com/mnm/stats/roc/Findex.htm>
+  1. Mike Patetta. 2008. _Categorical Data Analysis Using Logistic Regression Course Notes._ Cary, NC: SAS Institute Inc.
+  1. Dan Kelly, etc. 2007. _Predictive Modeling Using Logistic Regression Course Notes_. Cary, NC: SAS Institute Inc.
+  1. _Receiver operating characteristic_, **see** [http://en.wikipedia.org/wiki/Receiver\_operating\_characteristic](http://en.wikipedia.org/wiki/Receiver_operating_characteristic)
+  1. _The magnificent ROC_, **see** <http://www.anaesthetist.com/mnm/stats/roc/Findex.htm>
