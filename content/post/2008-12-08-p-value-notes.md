@@ -53,6 +53,6 @@ The P-value is the probability of obtaining a result at least as extreme as the 
 
 参考资料:
 
-[1] 维恩堡《数理统计初级教程》（常学将等译，太原：山西人民出版社，1986，Statistics: An Intuitive Approach By George H. Weinberg and John Abraham Schumaker）
+1. 维恩堡《数理统计初级教程》（常学将等译，太原：山西人民出版社，1986，Statistics: An Intuitive Approach By George H. Weinberg and John Abraham Schumaker）
 
-[2] Statistics I: Course Notes, 2008 SAS Institute Inc. Cary, NC, USA
+1. Statistics I: Course Notes, 2008 SAS Institute Inc. Cary, NC, USA
