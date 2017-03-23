@@ -180,7 +180,7 @@ LyX和pgfSweave包生成的图形
   * LaTeX学习材料：A Not So Short Introduction to LaTeX （[英文](https://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf)、[中文1](http://zelmanov.ptep-online.com/ctan/lshort_chineese.pdf)、[中文2](http://ctan.math.utah.edu/ctan/tex-archive/info/lshort/chinese/lshort-zh-cn.pdf)）；这是几年前我的LaTeX入门材料
   * [Sweave手册及相关信息](http://www.statistik.lmu.de/~leisch/Sweave/)^[编者注：这个链接现在已经失效，抱歉。]
   * [pgfSweave包开发网站](https://github.com/cameronbracken/pgfSweave)
-  * [LaTeX and Sweave without Tears](http://yihui.name/en/wp-content/uploads/2010/10/LaTeX-and-Sweave-without-Tears.pdf)^[编者注：这个链接现在已经失效，抱歉。]（个人报告）
+  * [LaTeX and Sweave without Tears](https://cloud.github.com/downloads/yihui/yihui.github.com/LaTeX-Sweave-2011-Yihui-Xie.pdf)（个人报告）
 
 # 致谢
 
