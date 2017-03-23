@@ -19,7 +19,7 @@ tags:
 slug: reproducible-research-in-statistics
 ---
 
-[box type=“warning”]警告：本文提到的工具在更新中，请暂时不要按本文的配置去做，静候LyX 2.0.3的发布。[/box]
+*警告：本文提到的工具在更新中，请暂时不要按本文的配置去做，静候LyX 2.0.3的发布。*
 
 我们都痛恨统计造假。我们都对重复性的工作感到厌倦。如果你同意这两句话或这两句话适用于你的现状，那么本文将介绍一套开源、免费的工具来克服这两个问题。当然，前提是你愿意改变，这里的工具可以让这两种现象没有藏身之地，但无法改变造假和重复劳动的现实。以下为吊胃口视频（墙外观众可以看[Vimeo](https://vimeo.com/16374405)；墙内看不到视频的可以任选一个链接下载本视频的AVI文件：[链接1](https://www.mediafire.com/?iyp62cmyi8vmwd3)、[链接2](https://www.filefactory.com/file/b422e9f/n/31632916.avi)、[链接3](https://www.filedropper.com/31632916))：
 
@@ -43,7 +43,7 @@ slug: reproducible-research-in-statistics
 
 从形式上来看，Sweave也没太多新奇之处：它无非就是将LaTeX文档和R代码混合起来，先调用R执行一遍这个文档中有特定标记的代码，并输出相应的结果到这个文档中（源代码都被相应的计算结果代替），然后再调用LaTeX编译文档为PDF。了解动态网页的人可能觉得这完全是动态网页的概念——输出是动态的，而非写死的结果。举个例子，Sweave文档看起来是这样的：
 
-```r
+```tex
 \documentclass{article}
 \title{A Test Sweave Document}
 \author{Yihui Xie}
@@ -72,7 +72,7 @@ plot(iris[, 1:2])
 
 表面看来这就是一篇LaTeX文档，只不过其中插入了一些用`<<>>=`标记开头、用`@`结尾的R代码段（PHP程序员可以想象`<?php ?>`）。R自带一个`Sweave()`函数，可以用来预处理这些代码段以及其中的`\Sexpr{}`宏。我们可以将以上代码保存为一个`.Rnw`文件如`myfile.Rnw`，然后在R中`Sweave('myfile.Rnw')`，这样`myfile.Rnw`就被替换为`myfile.tex`（即LaTeX文档），而其中的内容则被替换为了相应的输出：
 
-```r
+```tex
 \documentclass{article}
 \title{A Test Sweave Document}
 \author{Yihui Xie}
@@ -118,7 +118,7 @@ Draw a plot for the iris data:
 
 LyX给文学编程留下的后路基本上在一个叫`literate-scrap.inc`的文件中（安装目录的`Resources/layouts/`或者用户目录的`layouts`文件夹下），它定义了文学编程文档的输出类型（`literate`），而另外在LyX的选项文件`preferences`中，我们又可以定义从`literate`到LaTeX的转换器，也就是Sweave()函数或等价的Sweave处理方式——将Rnw文件用R运行得到tex文件。比如我们可以这样定义：
 
-```r
+```tex
 \converter "literate" "pdflatex" "R -e Sweave($$i)" ""
 ```
 
@@ -130,7 +130,7 @@ LyX给文学编程留下的后路基本上在一个叫`literate-scrap.inc`的文
 
 如果你已经装好了LyX（及其配套LaTeX程序如[MikTeX](https://www.miktex.org)、[TeXLive](https://tug.org/texlive/)或[MacTeX](https://tug.org/mactex/)和[R](https://www.r-project.org)（版本 >= 2.12.0），整个配置过程只需要在R中执行一句话：
 
-```r
+```tex
 source('http://gitorious.org/yihui/lyx-sweave/blobs/raw/master/lyx-sweave-config.R')
 ```
 
