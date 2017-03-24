@@ -179,7 +179,7 @@ author: 陈堰平
 </table>
 
 <div class="alert alert-info">
-  本课程曾于2014年10月21～29日在台北开课，查看<a class="external" target="_blank" href="http://www.iiiedu.org.tw/ites/OD.htm">详情</a>
+  本课程曾于2014年10月21～29日在台北开课，查看[详情](http://www.iiiedu.org.tw/ites/OD.htm)
 </div>
 
 #### 联系我们
@@ -191,11 +191,11 @@ author: 陈堰平
     </p>
     
     <p style="text-indent: 0;">
-      <a class="external" target="_blank" href="javascript:void(0);"><span class="glyphicon glyphicon-phone-alt"></span>电话：&nbsp;&nbsp;186-0002-1946</a>
+      [<span class="glyphicon glyphicon-phone-alt"></span>电话：  186-0002-1946](javascript:void(0);)
     </p>
     
     <p style="text-indent: 0;">
-      <a href="mailto:contact@supstat.com.cn"><span class="glyphicon glyphicon-envelope"></span>Email：&nbsp;&nbsp;contact@supstat.com.cn</a>
+      [<span class="glyphicon glyphicon-envelope"></span>Email：  contact@supstat.com.cn](mailto:contact@supstat.com.cn)
     </p></p>
   </div>
   

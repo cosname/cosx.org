@@ -18,7 +18,7 @@ slug: recommenderlab-packages
 ---
 
 <p style="text-align: left;" align="center">
-  <a href="http://cran.r-project.org/web/packages/recommenderlab/index.html">recommenderlab </a>是R语言非常强大的包，能帮助使用者针对评分数据或者0-1(不喜欢/喜欢)二分数据开发和测试推荐算法，本文就是利用该包对于 <a href="http://grouplens.org/datasets/movielens/">movielens </a>的电影评分数据进行预测和推荐，会对比基于用户的协同过滤和基于项的协同过滤在推荐效果上的差别。
+  [recommenderlab ](http://cran.r-project.org/web/packages/recommenderlab/index.html)是R语言非常强大的包，能帮助使用者针对评分数据或者0-1(不喜欢/喜欢)二分数据开发和测试推荐算法，本文就是利用该包对于 [movielens ](http://grouplens.org/datasets/movielens/)的电影评分数据进行预测和推荐，会对比基于用户的协同过滤和基于项的协同过滤在推荐效果上的差别。
 </p>
 
 <h3 style="text-align: left;" align="center">

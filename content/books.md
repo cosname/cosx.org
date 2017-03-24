@@ -16,39 +16,39 @@ menu: main
 <table>
   <tr>
     <td style="text-align: center;" width="30%">
-      ![R-in-Action](https://cos.name/wp-content/uploads/2013/03/r-in-action-small.jpg)<br /> <a title="《R语言实战》" href="/2013/03/r-in-action/" target="_blank">《R语言实战》</a>
+      ![R-in-Action](https://cos.name/wp-content/uploads/2013/03/r-in-action-small.jpg)<br /> [《R语言实战》](/2013/03/r-in-action/ "《R语言实战》")
     </td>
     
     <td style="text-align: center;" width="30%">
-      ![ggplot2](https://cos.name/wp-content/uploads/2013/05/ggplot2-212x300.jpg)<br /> <a title="《ggplot2：数据分析与图形艺术》" href="/2013/05/ggplot2/" target="_blank">《ggplot2：数据分析与图形艺术》</a>
+      ![ggplot2](https://cos.name/wp-content/uploads/2013/05/ggplot2-212x300.jpg)<br /> [《ggplot2：数据分析与图形艺术》](/2013/05/ggplot2/ "《ggplot2：数据分析与图形艺术》")
     </td>
     
     <td style="text-align: center;" width="30%">
-      ![art-of-r-programming](https://cos.name/wp-content/uploads/2013/05/art-of-r-small.jpg)<br /> <a title="《R语言编程艺术》" href="/2013/05/the-art-r-programming/" target="_blank">《R语言编程艺术》</a>
+      ![art-of-r-programming](https://cos.name/wp-content/uploads/2013/05/art-of-r-small.jpg)<br /> [《R语言编程艺术》](/2013/05/the-art-r-programming/ "《R语言编程艺术》")
     </td>
   </tr>
   
   <tr>
     <td style="text-align: center;" width="30%">
-      ![Dynamic-Documents-with-R-and-knitr](http://images.tandf.co.uk/common/jackets/crclarge/978148220/9781482203530.jpg)<br /> <a title="Dynamic Documents with R and knitr" href="http://www.crcpress.com/product/isbn/9781482203530" target="_blank">Dynamic Documents with R and knitr</a>
+      ![Dynamic-Documents-with-R-and-knitr](http://images.tandf.co.uk/common/jackets/crclarge/978148220/9781482203530.jpg)<br /> [Dynamic Documents with R and knitr](http://www.crcpress.com/product/isbn/9781482203530 "Dynamic Documents with R and knitr")
     </td>
     
     <td style="text-align: center;" width="30%">
-      <a href="https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg">![R_in_a_nutshell](https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg)</a><a href="http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-121-23786-7" target="_blank">《R语言核心技术手册》</a>
+      ![R_in_a_nutshell](https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg)[《R语言核心技术手册》](http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-121-23786-7)
     </td>
     
     <td style="text-align: center;" width="30%">
-      <a href="https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png">![R_graphics_cookbook](https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png)</a> <a href="http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-115-34227-0" target="_blank">《R数据可视化手册》</a>
+      ![R_graphics_cookbook](https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png) [《R数据可视化手册》](http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-115-34227-0)
     </td>
   </tr>
   
   <tr>
     <td style="text-align: center;" width="30%">
-      <a href="https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg">![R_data_science](https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg)</a><br /> <a title="Dynamic Documents with R and knitr" href="/2015/07/years-as-a-data-scientist/" target="_blank">《数据科学中的R语言》</a>
+      ![R_data_science](https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg)<br /> [《数据科学中的R语言》](/2015/07/years-as-a-data-scientist/ "Dynamic Documents with R and knitr")
     </td>
     
     <td style="text-align: center;" width="30%">
-      <a href="https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg"><br /> ![rcpp0](https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg)</a><br /> <a href="/2016/01/seamless-r-and-c-integration-with-rcpp/" rel="bookmark">《Rcpp:R与C++的无缝整合》</a>
+      [<br/> ![rcpp0](https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg)](https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg)<br /> [《Rcpp:R与C++的无缝整合》](/2016/01/seamless-r-and-c-integration-with-rcpp/)
     </td>
     
     <td style="text-align: center;" width="30%">
@@ -58,15 +58,15 @@ menu: main
 
 ## 免费电子书
 
-  * 陈堰平：<a href="http://yanping.me/shiny-tutorial/" target="_blank">shiny官方教程中文版</a>，该文档的<a href="https://github.com/yanping/shiny-tutorial" target="_blank">源代码</a>
-  * 邱怡轩：<a href="https://github.com/yixuan/parallel-translation/blob/master/parallel_zh_CN.pdf?raw=true" target="_blank">parallel包中文文档</a>，该文档的<a href="https://github.com/yixuan/parallel-translation" target="_blank">源代码</a>
-  * 陈钢：<a title="R入门25招" href="http://gossipcoder.com/?tag=r%E5%85%A5%E9%97%A825%E6%8B%9B" target="_blank">《R入门25招》</a>
-  * 邓一硕：<a href="https://github.com/dengyishuo/dengyishuo.github.com/tree/master/RFinance" target="_blank">quantmod学习笔记</a>
-  * 刘思喆：<a href="http://www.bjt.name/upload/pdf/Text%20Mining%20in%20R.pdf" target="_blank">R语言环境下的文本挖掘</a>
-  * 刘思喆：<a title="153 分钟学会 R" href="http://cran.r-project.org/doc/contrib/Liu-FAQ.pdf" target="_blank">《153 分钟学会 R》</a>
-  * 刘思喆：<a title="R参考卡片" href="http://cran.r-project.org/doc/contrib/Liu-R-refcard.pdf" target="_blank">《R参考卡片》</a>
-  * 谢益辉：<a title="R语言忍者秘笈" href="https://github.com/yihui/r-ninja" target="_blank">《R语言忍者秘笈》</a>（正在编写）
-  * 陈丽云：<a title="在R中玩转计量" href="https://github.com/cloudly/Play-Econometrics-with-R" target="_blank">《在R中玩转计量》</a>（正在编写）
+  * 陈堰平：[shiny官方教程中文版](http://yanping.me/shiny-tutorial/)，该文档的[源代码](https://github.com/yanping/shiny-tutorial)
+  * 邱怡轩：[parallel包中文文档](https://github.com/yixuan/parallel-translation/blob/master/parallel_zh_CN.pdf?raw=true)，该文档的[源代码](https://github.com/yixuan/parallel-translation)
+  * 陈钢：[《R入门25招》](http://gossipcoder.com/?tag=r%E5%85%A5%E9%97%A825%E6%8B%9B "R入门25招")
+  * 邓一硕：[quantmod学习笔记](https://github.com/dengyishuo/dengyishuo.github.com/tree/master/RFinance)
+  * 刘思喆：[R语言环境下的文本挖掘](http://www.bjt.name/upload/pdf/Text%20Mining%20in%20R.pdf)
+  * 刘思喆：[《153 分钟学会 R》](http://cran.r-project.org/doc/contrib/Liu-FAQ.pdf "153 分钟学会 R")
+  * 刘思喆：[《R参考卡片》](http://cran.r-project.org/doc/contrib/Liu-R-refcard.pdf "R参考卡片")
+  * 谢益辉：[《R语言忍者秘笈》](https://github.com/yihui/r-ninja "R语言忍者秘笈")（正在编写）
+  * 陈丽云：[《在R中玩转计量》](https://github.com/cloudly/Play-Econometrics-with-R "在R中玩转计量")（正在编写）
 
 ## 即将出版
 

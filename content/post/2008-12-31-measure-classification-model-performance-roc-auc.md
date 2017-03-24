@@ -35,7 +35,7 @@ slug: measure-classification-model-performance-roc-auc
 
 <!--more-->
 
-二话不说，先把它画出来（以下脚本的主体是标红部分，数据集valid_roc，还是出自上面提到的<a href="/2008/12/measure-classification-model-performance-confusion-matrix/" target="_blank">那篇</a>）：
+二话不说，先把它画出来（以下脚本的主体是标红部分，数据集valid_roc，还是出自上面提到的[那篇](/2008/12/measure-classification-model-performance-confusion-matrix/)）：
 
 > axis order=(**** to **1** by **.1**) label=none length=**4**in;
 > 
@@ -193,9 +193,9 @@ SAS9.2有个非常好的新功能，叫ODS Statistical Graphics，有兴趣可�
 
 这个ROC图貌似还漂亮些，眼神好能看见标出来的AUC是0.8029。 最后提一句，ROC全称是Receiver Operating Characteristic Curve，中文叫“接受者操作特性曲线”，江湖黑话了（有朋友能不能出来解释一下，谁是Receiver，为什么Operating，何谓Characteristic——这个看着好像是Sensitivity和Specificity），不过并不妨碍我们使用ROC作为模型评估的工具。
 
-<a name="_Toc218314980"><strong> </strong></a>**下期预告：****Lift和Gain**
+[<strong> </strong>]()**下期预告：****Lift和Gain**
 
-不多说，只提一句，跟ROC类似，Lift（提升）和Gain（增益）也一样能简单地从<a href="/2008/12/measure-classification-model-performance-confusion-matrix/" target="_blank">以前的Confusion Matrix</a>以及Sensitivity、Specificity等信息中推导而来，也有跟一个baseline model的比较，然后也是很容易画出来，很容易解释。
+不多说，只提一句，跟ROC类似，Lift（提升）和Gain（增益）也一样能简单地从[以前的Confusion Matrix](/2008/12/measure-classification-model-performance-confusion-matrix/)以及Sensitivity、Specificity等信息中推导而来，也有跟一个baseline model的比较，然后也是很容易画出来，很容易解释。
 
 **参考资料******
 
@@ -206,5 +206,5 @@ SAS9.2有个非常好的新功能，叫ODS Statistical Graphics，有兴趣可�
   5. _The magnificent ROC_, **see** <http://www.anaesthetist.com/mnm/stats/roc/Findex.htm>
 
 <div class="wlWriterSmartContent" style="padding-right: 0px; display: inline; padding-left: 0px; float: none; padding-bottom: 0px; margin: 0px; padding-top: 0px">
-  del.icio.us Tags: <a rel="tag" href="http://del.icio.us/popular/Wilcoxon-Mann-Whitney">Wilcoxon-Mann-Whitney</a>,<a rel="tag" href="http://del.icio.us/popular/Confusion%20Matrix">Confusion Matrix</a>,<a rel="tag" href="http://del.icio.us/popular/%e8%a6%86%e7%9b%96%e7%8e%87">覆盖率</a>,<a rel="tag" href="http://del.icio.us/popular/Logistic%e5%9b%9e%e5%bd%92">Logistic回归</a>,<a rel="tag" href="http://del.icio.us/popular/SAS">SAS</a>,<a rel="tag" href="http://del.icio.us/popular/Sensitiveity">Sensitiveity</a>,<a rel="tag" href="http://del.icio.us/popular/Specificity">Specificity</a>,<a rel="tag" href="http://del.icio.us/popular/%e5%88%86%e7%b1%bb%e6%a8%a1%e5%9e%8b">分类模型</a>,<a rel="tag" href="http://del.icio.us/popular/%e5%91%bd%e4%b8%ad%e7%8e%87">命中率</a>,<a rel="tag" href="http://del.icio.us/popular/%e6%95%b0%e6%8d%ae%e6%8c%96%e6%8e%98">数据挖掘</a>,<a rel="tag" href="http://del.icio.us/popular/%e6%b7%b7%e6%b7%86%e7%9f%a9%e9%98%b5">混淆矩阵</a>,<a rel="tag" href="http://del.icio.us/popular/ROC">ROC</a>,<a rel="tag" href="http://del.icio.us/popular/AUC">AUC</a>,<a rel="tag" href="http://del.icio.us/popular/Receiver%20Operating%20Characteristic%20Curve">Receiver Operating Characteristic Curve</a>,<a rel="tag" href="http://del.icio.us/popular/%e6%8e%a5%e5%8f%97%e8%80%85%e6%93%8d%e4%bd%9c%e7%89%b9%e6%80%a7%e6%9b%b2%e7%ba%bf">接受者操作特性曲线</a>
+  del.icio.us Tags: [Wilcoxon-Mann-Whitney](http://del.icio.us/popular/Wilcoxon-Mann-Whitney),[Confusion Matrix](http://del.icio.us/popular/Confusion%20Matrix),[覆盖率](http://del.icio.us/popular/%e8%a6%86%e7%9b%96%e7%8e%87),[Logistic回归](http://del.icio.us/popular/Logistic%e5%9b%9e%e5%bd%92),[SAS](http://del.icio.us/popular/SAS),[Sensitiveity](http://del.icio.us/popular/Sensitiveity),[Specificity](http://del.icio.us/popular/Specificity),[分类模型](http://del.icio.us/popular/%e5%88%86%e7%b1%bb%e6%a8%a1%e5%9e%8b),[命中率](http://del.icio.us/popular/%e5%91%bd%e4%b8%ad%e7%8e%87),[数据挖掘](http://del.icio.us/popular/%e6%95%b0%e6%8d%ae%e6%8c%96%e6%8e%98),[混淆矩阵](http://del.icio.us/popular/%e6%b7%b7%e6%b7%86%e7%9f%a9%e9%98%b5),[ROC](http://del.icio.us/popular/ROC),[AUC](http://del.icio.us/popular/AUC),[Receiver Operating Characteristic Curve](http://del.icio.us/popular/Receiver%20Operating%20Characteristic%20Curve),[接受者操作特性曲线](http://del.icio.us/popular/%e6%8e%a5%e5%8f%97%e8%80%85%e6%93%8d%e4%bd%9c%e7%89%b9%e6%80%a7%e6%9b%b2%e7%ba%bf)
 </div>

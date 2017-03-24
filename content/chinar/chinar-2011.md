@@ -8,7 +8,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 ![China-R-Logo](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
-**北京会场和上海会场均已顺利召开，详情请见<a href="/2011/05/4th-china-r-beijing-summary/" target="_blank">北京会场会议纪要</a>及<a href="/2011/11/4th-china-r-shanghai-summary/" target="_blank">上海会场会议纪要。</a>**
+**北京会场和上海会场均已顺利召开，详情请见[北京会场会议纪要](/2011/05/4th-china-r-beijing-summary/)及[上海会场会议纪要。](/2011/11/4th-china-r-shanghai-summary/)**
 
 &nbsp;
 
@@ -24,11 +24,11 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 交通地图（点击看大图）：
 
-<a href="http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png" rel="nofollow">![人大交通地图](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)</a>
+![人大交通地图](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)
 
 人大校内地图（点击看大图）：
 
-<a href="https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg" rel="nofollow">![人大校内地图](https://cos.name/wp-content/uploads/2010/06/RUCmap1-500x342.jpg)</a>
+![人大校内地图](https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg)
 
 &nbsp;
 
@@ -50,7 +50,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 会议演讲日程、摘要等信息参见会议手册：
 
-[box type=&#8221;download&#8221;]<a href="https://cos.name/wp-content/uploads/2011/04/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C.pdf" target="_blank">会议手册下载</a>[/box]
+[box type=&#8221;download&#8221;][会议手册下载](https://cos.name/wp-content/uploads/2011/04/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C.pdf)[/box]
 
 ### 四、会议费用
 
@@ -161,9 +161,9 @@ Mango Solutions是一家总部位于英国的私人企业。成立于2002年，�
 
 主席：李舰（lijian.pku@gmail.com），陈丽云（cloudlychen@gmail.com）
   
-会议联系邮箱：<a href="chinar-2011-sh@cos.name" target="_blank">chinar-2011-sh@cos.name</a>
+会议联系邮箱：[chinar-2011-sh@cos.name](chinar-2011-sh@cos.name)
 
-官方微博：<a title="COS微博" href="http://weibo.com/cosname" target="_blank">http://weibo.com/cosname</a>
+官方微博：[http://weibo.com/cosname](http://weibo.com/cosname "COS微博")
 
 主办方：华东师范大学金融与统计学院
   

@@ -26,9 +26,9 @@ slug: measure-classification-model-performance-confusion-matrix
   2. 它们是可以手算出来的，看到各种软件包输出结果，并不是一个无法探究的“黑箱”；
   3. 它们是相关的。你了解一个，就很容易了解另外一个。
 
-本文从混淆矩阵(Confusion Matrix,或分类矩阵,Classification Matrix)开始，它最简单，而且是大多数指标的基础。
+本文从混淆矩阵(Confusion Matrix，或分类矩阵，Classification Matrix)开始，它最简单，而且是大多数指标的基础。<!--more-->
 
-# <!--more-->数据
+# 数据
 
 本文使用一个在信用评分领域非常有名的免费数据集，German Credit Dataset，你可以在[UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/)找到（[下载](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data-numeric)；[数据描述](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.doc)）。另外，你还可以在SAS系统的Enterprise Miner的演示数据集中找到该数据的一个版本（dmagecr.sas7bdat）。以下把这个数据分为两部分，训练数据train和验证数据valid，所有的评估指标都是在valid数据中计算（纯粹为了演示评估指标，在train数据里计算也未尝不可），我们感兴趣的二分变量是good_bad，取值为{good, bad}：
 
