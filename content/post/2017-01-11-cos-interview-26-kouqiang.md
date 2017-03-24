@@ -9,7 +9,7 @@ slug: cos-interview-26-kouqiang
 
 <span style="color: #808080;">【COS编辑者按】受访者：寇强      采访者：王小宁     审稿：成慧敏    </span>
 
-<span style="color: #808080;">寇强    （微博：<a href="http://weibo.com/thirdwing?is_all=1" target="_blank">http://weibo.com/thirdwing</a>），Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。</span><!--more-->
+<span style="color: #808080;">寇强    （微博：[http://weibo.com/thirdwing](http://weibo.com/thirdwing?is_all=1)），Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。</span><!--more-->
 
 <span style="color: #000080;"><strong>小宁：</strong>师兄，请先做一个简单的自我介绍<strong>。</strong></span>
 

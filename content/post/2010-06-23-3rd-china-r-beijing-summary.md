@@ -1,5 +1,6 @@
 ---
-title: 第三届中国R语言会议（北京会场）纪要
+title: "第三届中国R语言会议（北京会场）纪要"
+description: "第三届中国R语言会议（北京会场）于2010年6月14日~15日在中国人民大学明德法学楼0101成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都协办。在两天的会议时间里，来自各行各业的R用户齐聚北京，共同探讨和交流R软件的使用经验，取得了丰厚的成果。"
 date: '2010-06-23T13:32:26+00:00'
 author: 邱怡轩
 categories:
@@ -15,11 +16,11 @@ tags:
 slug: 3rd-china-r-beijing-summary
 ---
 
-<figure style="width: 500px" class="wp-caption aligncenter">![第三届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg "第三届中国R语言会议北京会场合影")<figcaption class="wp-caption-text">第三届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> 
+![第三届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg "第三届中国R语言会议北京会场合影")第三届中国R语言会议北京会场合影（右键另存为看大图）
 
 ![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
-第三届中国R语言会议（北京会场）于2010年6月14日~15日在中国人民大学明德法学楼0101成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都网站(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，来自各行各业的R用户齐聚北京，共同探讨和交流R软件的使用经验，取得了丰厚的成果。 
+第三届中国R语言会议（北京会场）于2010年6月14日~15日在中国人民大学明德法学楼0101成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都网站([cos.name](https://cos.name))协办。在两天的会议时间里，来自各行各业的R用户齐聚北京，共同探讨和交流R软件的使用经验，取得了丰厚的成果。 
 
 # 会议概况
 
@@ -29,14 +30,15 @@ slug: 3rd-china-r-beijing-summary
 
   * 大学：爱荷华州立大学、北京大学、北京大学医学部、北京工商大学、北京工业大学、北京航空航天大学、北京化工大学、北京交通大学、北京理工大学、北京联合大学、北京林业大学、北京师范大学、东北农业大学、复旦大学、桂林理工大学、南开大学、山东大学、首都经济贸易大学、首都师范大学、天津大学、武汉大学、西北师范大学、西藏民族学院财经学院、厦门大学、云南师范大学、浙江大学、浙江嘉兴学院、芝加哥大学、中国地质大学（北京）、中国科学院研究生院、中国矿业大学（北京）、中国农业大学、中国人民大学、中国石油大学、中央财经大学、中央民族大学等；
   * 科研所：北京荣昌药物研究院、南京地理与湖泊研究所、天津市第一中心医院、中国科学院北京基因组研究所、中国科学院大气物理研究所、中国科学院地理科学与资源研究所、中国科学院计算机网络信息中心、中国科学院青藏所、中国科学院生物物理所、中国科学院微生物研究所、中国科学院心理所、中国科学院遗传与发育生物学研究所、中国科学院植物研究所、中国农业科学院农业资源与农业区划研究所、中国社会科学院、中国水产科学研究院、中国医学科学院阜外心血管病医院、中国有色金属工业信息中心；
-  * 企业：Gfk、IMS Health、Mango Solutions、北京迪美斯科技发展有限公司、<span>北京国政通<em>、</em></span>北京首航财务管理顾问有限公司、博奥生物有限公司、博纳集团、定谊科技、豆瓣、汇言群知计算机有限公司、其明信息、上海源略数据、同方知网、完美时空、文思创新、现代国际市场研究有限公司、新华信国际信息咨询(北京)有限公司、亚信科技等；
+  * 企业：Gfk、IMS Health、Mango Solutions、北京迪美斯科技发展有限公司、北京国政通、北京首航财务管理顾问有限公司、博奥生物有限公司、博纳集团、定谊科技、豆瓣、汇言群知计算机有限公司、其明信息、上海源略数据、同方知网、完美时空、文思创新、现代国际市场研究有限公司、新华信国际信息咨询(北京)有限公司、亚信科技等；
   * 政府部门及事业单位：北京市统计局、北京质量协会、国家减灾中心、国家知识产权局专利局等。
 
 ## 参会人员
 
 用R对收集到的参会者年龄信息进行汇总，得到年龄分布的茎叶图如下： 
 
-<pre class="brush: r">2nd China-R Beijing              3rd China-R Beijing
+```r
+2nd China-R Beijing              3rd China-R Beijing
 
 18 | 0                                        0 | 18
 19 | 0                                    00000 | 19
@@ -60,9 +62,10 @@ slug: 3rd-china-r-beijing-summary
 37 |                                          0 | 37
 38 | 0                                          | 38
 
-45 | 0                                          | 45</pre>
+45 | 0                                          | 45
+```
 
-可以看出，与<a href="/2009/12/2nd-chinese-r-conference-summary/" target="_blank">上届会议</a>相比，本届会议一个显著的变化是参会者的年龄结构更加丰富，这从一个侧面说明了R的用户范围正在逐步扩大，不同年龄层的人都开始对R软件产生了兴趣。
+可以看出，与[上届会议](https://cos.name/2009/12/2nd-chinese-r-conference-summary/)相比，本届会议一个显著的变化是参会者的年龄结构更加丰富，这从一个侧面说明了R的用户范围正在逐步扩大，不同年龄层的人都开始对R软件产生了兴趣。
 
 与上届会议类似，本届会议的参会人员大都来自高校和科研机构，包括在校学生、高校老师、科研所研究员等；而本届会议同样得到了企业界和政府部门朋友的大力支持，其中有行业分析师、市场研究员、咨询师、政府服务人员、公务员、医药统计分析师、算法工程师、软件工程师等等。 
 
@@ -70,28 +73,30 @@ slug: 3rd-china-r-beijing-summary
 
 本次会议由两部分组成，其中第一天为R语言基础培训，第二天为演讲报告。
 
-6月14日上午，<a href="https://cos.name/cn/forum/15" target="_blank">统计之都论坛R版</a>版主、亚信科技有限公司研究员<a href="http://www.bjt.name/" target="_blank">刘思喆</a>为参会者讲解了R软件的历史及其基本的统计计算功能；下午，统计之都创始人、中国R语言会议发起人、美国爱荷华州立大学在读博士<a href="http://yihui.name/" target="_blank">谢益辉</a>讲解了R软件的作图功能。本次培训是三届会议以来北京会场举行的首次正式R语言基础培训，取得了良好的反响，同时为国内R软件的推广提供了新的动力。
+6月14日上午，[统计之都论坛R版](https://cos.name/cn/forum/15)版主、亚信科技有限公司研究员[刘思喆](http://www.bjt.name/)为参会者讲解了R软件的历史及其基本的统计计算功能；下午，统计之都创始人、中国R语言会议发起人、美国爱荷华州立大学在读博士[谢益辉](http://yihui.name/)讲解了R软件的作图功能。本次培训是三届会议以来北京会场举行的首次正式R语言基础培训，取得了良好的反响，同时为国内R软件的推广提供了新的动力。
 
 培训讲稿下载：
 
-  * <a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Rintro.pdf" target="_blank">R语言基础</a>
-  * <a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Graphics.zip" target="_blank">R作图</a>
+  * [R语言基础](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Rintro.pdf)
+  
+  * [R作图](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Graphics.zip)
 
-6月15日为会议的演讲报告部分，本次会议共进行了九场正式报告，在此要特别感谢各位演讲者热情的参与和支持。以下演讲资料都遵守<a href="http://creativecommons.org/licenses/by/3.0/deed.zh" target="_blank">CC协议</a>：
+6月15日为会议的演讲报告部分，本次会议共进行了九场正式报告，在此要特别感谢各位演讲者热情的参与和支持。以下演讲资料都遵守[CC协议](http://creativecommons.org/licenses/by/3.0/deed.zh)：
 
-  * 谢益辉：傻瓜软件是怎样炼成的：<a href="http://yihui.name/cn/wp-content/uploads/2010/06/3rd-ChinaR-gWidgets-Yihui-Xie.pdf" target="_blank">用gWidgets包创建图形用户界面</a>（<a href="http://yihui.name/cn/wp-content/uploads/2010/06/3rd-ChinaR-gWidgets-Yihui-Xie.txt" target="_blank">相关程序代码</a>）
-  * 江麒：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Nlme-Package.pdf" target="_blank">Nlme包</a>及<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-MCM-with-R.pdf" target="_blank">数学建模中的R</a>
-  * 李舰：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Text-Mining.pdf" target="_blank">R与文本挖掘</a>
-  * 杨仁东：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Python.pdf" target="_blank">R与Python在昼夜节律分析中的应用</a>
-  * 陈堰平：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Nonparametric-Regression-with-R.pdf" target="_blank">非参数回归的R语言实现</a>
-  * 稳国柱：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Vectorization.ppt" target="_blank">加速R，矢量化运算与并行运算</a>（更详细的介绍请参见<a href="http://www.wentrue.net/blog/?p=945" target="_blank">这里</a>）
-  * 祝迎春：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Factor-Analysis.pdf" target="_blank">R与因子分析的新发展</a>
-  * 甄一松：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Bioconductor.pdf" target="_blank">R/BioConductor在斑马鱼心脏再生领域的应用</a>
-  * 胡一睿：<a href="https://cos.name/wp-content/uploads/2010/06/China-R-2010-Time-Series-TAR-Model.pdf" target="_blank">R在处理门限自回归模型中的应用</a><figure style="width: 500px" class="wp-caption aligncenter">
+  * 谢益辉：傻瓜软件是怎样炼成的：[用gWidgets包创建图形用户界面](http://yihui.name/cn/wp-content/uploads/2010/06/3rd-ChinaR-gWidgets-Yihui-Xie.pdf)（[相关程序代码](http://yihui.name/cn/wp-content/uploads/2010/06/3rd-ChinaR-gWidgets-Yihui-Xie.txt)）
+  * 江麒：[Nlme包](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Nlme-Package.pdf)及[数学建模中的R](https://cos.name/wp-content/uploads/2010/06/China-R-2010-MCM-with-R.pdf)
+  * 李舰：[R与文本挖掘](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Text-Mining.pdf)
+  * 杨仁东：[R与Python在昼夜节律分析中的应用](https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Python.pdf)
+  * 陈堰平：[非参数回归的R语言实现](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Nonparametric-Regression-with-R.pdf)
+  * 稳国柱：[加速R，矢量化运算与并行运算](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Vectorization.ppt)（更详细的介绍请参见[这里](http://www.wentrue.net/blog/?p=945)）
+  * 祝迎春：[R与因子分析的新发展](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Factor-Analysis.pdf)
+  * 甄一松：[R/BioConductor在斑马鱼心脏再生领域的应用](https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Bioconductor.pdf)
+  * 胡一睿：[R在处理门限自回归模型中的应用](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Time-Series-TAR-Model.pdf)
 
-![第三届中国R语言会议北京会场演讲者与组织人员合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2.jpg "第三届中国R语言会议北京会场演讲者与组织人员合影")<figcaption class="wp-caption-text">第三届中国R语言会议北京会场演讲者与组织人员合影（右键另存为看大图）</figcaption></figure> 
+![第三届中国R语言会议北京会场演讲者与组织人员合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2.jpg "第三届中国R语言会议北京会场演讲者与组织人员合影")
 
-#  
+第三届中国R语言会议北京会场演讲者与组织人员合影（右键另存为看大图）
+  
 
 # 会议展望
 

@@ -176,7 +176,7 @@ Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲�
 
 #### 资料下载
 
-第一批已经通过嘉宾授权，允许公开幻灯片的列表。<a href="http://pan.baidu.com/s/1bncyp7h" target="_blank">幻灯片见附件</a>。
+第一批已经通过嘉宾授权，允许公开幻灯片的列表。[幻灯片见附件](http://pan.baidu.com/s/1bncyp7h)。
 
 <table width="443">
   <tr>

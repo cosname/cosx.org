@@ -16,11 +16,10 @@ description: "2008年12月13日~14日，由教育部重点研究基地中国人�
 ---
 
 [![第一届中国R语言会议合影](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo-thumb.jpg "第一届中国R语言会议合影")](https://cos.name/wp-content/uploads/2008/12/1st-chinese-r-conference-photo.tif)
-第一届中国R语言会议合影（右键另存为看大图）
+
+第一届中国R语言会议合影
 
 2008年12月13日~14日，由教育部重点研究基地中国人民大学[应用统计科学研究中心](http://www.applstats.org "应用统计科学研究中心")与中国人民大学[统计学院](http://stat.ruc.edu.cn "统计学院")主办的“第一届中国R语言会议”在中国人民大学明德商学楼0402教室成功召开。国内R语言的各位先锋如中国人民大学统计学院吴喜之教授、中国科学院上海生命科学研究院丁国徽博士等以及国外R语言专业人士如澳大利亚国立大学John Maindonald教授也通过网络连线会场参加了本次会议；会议围绕R语言的众多应用领域展开了广泛的交流和讨论，为R语言在中国的应用和推广开辟了一条崭新的道路。
-
-
 
 # 会议概况
 
@@ -96,7 +95,7 @@ description: "2008年12月13日~14日，由教育部重点研究基地中国人�
   * 丁鹏：[贝叶斯统计与R](https://cos.name/wp-content/uploads/2008/12/bayesian-statistics-and-r.pdf)
   * 魏太云：[R软件与最优化](https://cos.name/wp-content/uploads/2008/12/using-r-to-solve-optimization-problems.pdf)
   * 陈堰平：[随机微分方程入门——基于R语言的模拟与推断](https://cos.name/wp-content/uploads/2008/12/stochastic-differential-equation-with-r.pdf)（[R代码](https://cos.name/wp-content/uploads/2008/12/stochastic-differential-equation-with-r.zip)）
-  * 李崇亮：[Google Docs页面](http://docs.google.com/Present?docid=dgf7j3jp_86d4x7r2gd "幻灯片的Google Docs页面")）
+  * 李崇亮：[基于R后台的网页应用，或基于网页可定制界面的R应用](http://lixiaoxu.lxxm.com/web-powered-by-r-or-r-powered-by-web/ "李晓煦博士的日志页面")（[Google Docs页面](http://docs.google.com/Present?docid=dgf7j3jp_86d4x7r2gd "幻灯片的Google Docs页面")）
   * 李舰：[利用R (D)COM Server实现R与MS Office的整合](https://cos.name/wp-content/uploads/2008/12/integrating-ms-office-with-r-using-r-d-com-server.ppt)
   * 王化儒：[R在水文模拟中的应用初探](https://cos.name/wp-content/uploads/2008/12/application-of-r-on-hydrological-modeling.ppt)（[R代码](https://cos.name/wp-content/uploads/2008/12/wang-huaru-hydro.txt)）
   * 谢益辉：[统计动画程序包animation介绍及其在教学和数据分析中的应用](https://cos.name/wp-content/uploads/2008/12/animation-an-r-package-for-statistical-animations-with-applications-in-teaching-and-data-analysis.ppt)
@@ -180,6 +179,5 @@ draw.card(contact)
 dev.off()
 ```
 
-中国人民大学应用统计科学研究中心
-
+中国人民大学应用统计科学研究中心  
 2008-12-16

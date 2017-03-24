@@ -14,7 +14,7 @@ slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
 
 原文链接：<http://blog.shakirm.com/2015/04/a-statistical-view-of-deep-learning-iii-memory-and-kernels/>
 
-作者：<a href="http://www.shakirm.com/" target="_blank">Shakir Mohamed</a>  翻译：丁维悦     审校：朱雪宁  何通  施涛   编辑：王小宁<figure id="attachment_11153" style="width: 300px" class="wp-caption alignright">
+作者：[Shakir Mohamed](http://www.shakirm.com/)  翻译：丁维悦     审校：朱雪宁  何通  施涛   编辑：王小宁<figure id="attachment_11153" style="width: 300px" class="wp-caption alignright">
 
 ![methodTriangle1-300x300](https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png)<figcaption class="wp-caption-text">连接机器学习的回归方法</figcaption></figure> 
 

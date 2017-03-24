@@ -45,7 +45,7 @@ menu: main
 本次捐赠目标为￥1500，用于升级网站空间，本次升级之后将逐步开放[COS论坛](https://cos.name/bbs)上传权限；到2009年03月19日，我们一共收到捐赠￥1502.05，提前完成目标。本次捐赠来源如下：
 
   * 安徽东至县某匿名用户
-  * 中南大学<a title="http://www.gossipcoder.com/" href="http://www.gossipcoder.com/" target="_blank">陈钢</a>博士（要求捐赠用于开办R语言相关活动）
+  * 中南大学[陈钢](http://www.gossipcoder.com/ "http://www.gossipcoder.com/")博士（要求捐赠用于开办R语言相关活动）
   * 中科院动物所杨鹏程
   * 首都经贸大学闻博
   * COS论坛会员lyxmoo

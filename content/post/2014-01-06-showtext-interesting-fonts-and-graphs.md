@@ -86,7 +86,7 @@ dev.off();</pre>
 有了上面介绍的`showtext`包，你基本上可以使用任何一种字体来显示文字了。这时候我们可以做一些有意思的事情：有些字体中包含的并不是字母和数字，而是一些符号或图标。例如这个[WM People 1](http://www.dafont.com/wm-people-1.font)字体，其中字母p和字母u分别是男人和女人的图案，利用这一点我们可以绘制出下面这幅图：
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/01/edu-stat.png">![教育程度统计](https://cos.name/wp-content/uploads/2014/01/edu-stat.png)</a>图2：用特殊字体绘图
+  ![教育程度统计](https://cos.name/wp-content/uploads/2014/01/edu-stat.png)图2：用特殊字体绘图
 </p>
 
 其实这幅图本质上就是一个堆叠的条形图，但这样画出来之后，可以很直观地体现出各个类别的人数和性别比例，而且图形本身就已经有解释性，不需要再额外添加图例等元素。
@@ -150,7 +150,7 @@ dev.off();</pre>
 ![](https://raw.github.com/JiangXD/cos_post/master/showtext/edu.png)
 
 <p style="text-align: center;">
-  图3：暴漫版图形（图片来源：<a href="https://cos.name/cn/topic/147769">https://cos.name/cn/topic/147769</a> @doctorjxd）
+  图3：暴漫版图形（图片来源：[https://cos.name/cn/topic/147769](https://cos.name/cn/topic/147769) @doctorjxd）
 </p>
 
 不过真的很贴切有木有！！小学的时候各种玩具枪！初中的时候哈哈哈笑个不停！高中的时候多么正经的好少年！去念大学之后就成了那副熊样了不是吗！！（请无视此刻暴走的作者）
@@ -158,7 +158,7 @@ dev.off();</pre>
 不过这种思路确实很赞，试想一下，如果我们把一些枯燥的坐标轴说明文字变成了更形象的图案，那么整幅图的表现力是不是就更强了呢？像是下面这样：
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/01/douban.png">![豆瓣评分](https://cos.name/wp-content/uploads/2014/01/douban.png)</a>图4：坐标轴上放置表情
+  ![豆瓣评分](https://cos.name/wp-content/uploads/2014/01/douban.png)图4：坐标轴上放置表情
 </p>
 
 附上相应的R代码：

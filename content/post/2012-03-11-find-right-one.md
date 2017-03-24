@@ -25,15 +25,15 @@ slug: find-right-one
 
 口说无凭，我们用R来检测一下上面的结论。先构造一个用于选择的函数，输入参数n是数据的分割点，输出即为选取得到的结果，如果得到100表明选取得到最优秀的对象，如果得到0则表明一无所获。然后设置n取值范围从1到100，对每个n的值模拟10000次选取行为，计算出给定n条件下得到最大值的频次。从下图可以看到最大值的确取在37附近，符合理论结果。<figure id="attachment_4898" style="width: 600px" class="wp-caption aligncenter">
 
-<a href="/2012/03/find-right-one/result01/" rel="attachment wp-att-4898">![](https://cos.name/wp-content/uploads/2012/03/result01.jpeg)</a><figcaption class="wp-caption-text">横轴表示了不同的划分参数n，纵轴表示给定n条件下，能得到最优值的频数</figcaption></figure> 
+[![](https://cos.name/wp-content/uploads/2012/03/result01.jpeg)](/2012/03/find-right-one/result01/)<figcaption class="wp-caption-text">横轴表示了不同的划分参数n，纵轴表示给定n条件下，能得到最优值的频数</figcaption></figure> 
 
 这里还有一个问题，最优解不一定是令人满意的。根据最优解来行动，会有36%的可能得到最佳的对象，但也有接近38%的可能会一无所获。实际上，有时候我们宁可得到一个次优的结果（例如99）也不希望孤独的生活。所以在选择n这个参数的时候，目标应该着重于结果的期望值大小。重新编程运行后，从下图可以观察到最优值取在7附近。也就是说，如果你确定在生命中会遇到100个对象，那么前7个就略过，判定其中最优秀的那位M，然后再去寻找比M更优秀的，这样有最大的可能得到靠谱的对象。<figure id="attachment_4899" style="width: 600px" class="wp-caption aligncenter">
 
-<a href="/2012/03/find-right-one/result02/" rel="attachment wp-att-4899">![](https://cos.name/wp-content/uploads/2012/03/result02.jpeg)</a><figcaption class="wp-caption-text">横轴为不同的划分参数n，纵轴表示10000次模拟的期望值</figcaption></figure> 
+[![](https://cos.name/wp-content/uploads/2012/03/result02.jpeg)](/2012/03/find-right-one/result02/)<figcaption class="wp-caption-text">横轴为不同的划分参数n，纵轴表示10000次模拟的期望值</figcaption></figure> 
 
 好了，我们知道了应该在观察7个对象后就开始行动，那么回到本文的题目上来，也就是需要多少次相亲才能碰上Mr. Right呢？我们先构造一个函数来记录在第二组中进行尝试的次数。然后模拟10000次后绘制直方图如下，可以看到仍然有7%左右的人未能找到合适的对象，而50%的人在10次尝试之内即能选取到合适的对象（未加上第一组的7次观察活动），80%的人在30次尝试之内即能找到合适的对象。所以说，只要你人品不是太差，在37次相亲尝试之内，应该就可以找到靠谱的对象。但愿你不会掉入离群点中去。<figure id="attachment_4900" style="width: 600px" class="wp-caption aligncenter">
 
-<a href="/2012/03/find-right-one/result03/" rel="attachment wp-att-4900">![](https://cos.name/wp-content/uploads/2012/03/result03.jpeg)</a><figcaption class="wp-caption-text">进行对象选取的一万次模拟，每次模拟返回选取对象所需要的尝试次数，0表示未能得到任何对象，1表示在观察七个对象后，只需要一次尝试就得到较优的对象。</figcaption></figure> 
+[![](https://cos.name/wp-content/uploads/2012/03/result03.jpeg)](/2012/03/find-right-one/result03/)<figcaption class="wp-caption-text">进行对象选取的一万次模拟，每次模拟返回选取对象所需要的尝试次数，0表示未能得到任何对象，1表示在观察七个对象后，只需要一次尝试就得到较优的对象。</figcaption></figure> 
 
 注：本文结论有很多隐藏前提，其推理亦可能有失误之处，仅供娱乐。若读者完全以本文为指导进行相亲活动，其后果概不负责 ^_^
 

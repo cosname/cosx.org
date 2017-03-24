@@ -149,13 +149,13 @@ R语言的发展日新月异，每一天的清晨都有新发现。作者信马�
   * 刘道明：R与金融大数据挖掘
   * [郑义：基金评选平台之建立](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-ZhengYi.pdf)
   * 廖逸竹：玩转三亿视频—数据分析在视频产业的应用
-  * <a href="http://nbviewer.ipython.org/github/c3h3/c3h3talks/blob/master/COSRconf2014Summer/HackingModelsWithR_v4.ipynb" target="_blank">张家齐：Hacking Models with R</a>
+  * [张家齐：Hacking Models with R](http://nbviewer.ipython.org/github/c3h3/c3h3talks/blob/master/COSRconf2014Summer/HackingModelsWithR_v4.ipynb)
   * [James Wicker：New Methods of Mixture Model Cluster Analysis](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-JamesWicker.pdf)
   * [景亮：程序化交易系统与R](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-JingLiang.pptx)
   * [牟官讯：开发的血和泪，交易的冰与火](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-MuGuanxun.pdf)
   * [张丹：R语言与金融大数据应用](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-ZhangDan.pdf)
   * [王亮博：Interactive Visualization with R](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-WangLiangbo.pdf)
-  * <a href="https://github.com/taiyun/recharts" target="_blank">周扬：它山之石可以攻玉：recharts 图形包</a>
+  * [周扬：它山之石可以攻玉：recharts 图形包](https://github.com/taiyun/recharts)
   * [Hadley Wickham：ggvis sneak peek](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-Hadley-ggvis.pdf)
   * 陈堰平： 
       * [SupStat的Lightning Talk](https://cos.name/wp-content/uploads/2014/06/China-R-2014-BJ-SupStat-lightningTalk.pdf)
@@ -193,13 +193,13 @@ R语言的发展日新月异，每一天的清晨都有新发现。作者信马�
 
 可爱可敬的会议志愿者：王梦珏、叶晓萌、罗兰、张翼飞、郑晔、曹志强、高腾、敬冯时、黄俊文、何通、陈昊田、菜笑炜、王昱雯、朱弘昊、刘辰昂、陈雅慧、何通、朱雪宁、王雪琪、李博、项海波。
 
-R语言会议官方网站：<a href="http://china-r.org/" target="_blank">http://china-r.org</a>
+R语言会议官方网站：[http://china-r.org](http://china-r.org/)
 
 **赞助单位**
 
-<a title="微量网" href="http://www.wquant.com/" target="_blank">![微量网](http://china-r.org/img/logo-wquant.png)</a>
+[![微量网](http://china-r.org/img/logo-wquant.png)](http://www.wquant.com/ "微量网")
   
-<a title="光大证券" href="http://www.ebscn.com/" target="_blank">![光大证券](http://china-r.org/img/logo-everbright.png)</a> <a title="SupStat Inc." href="http://supstat.com/cn" target="_blank">![SupStat Inc.](http://china-r.org/img/logo-supstat.png)</a> <a title="Revolution Analytics" href="http://www.revolutionanalytics.com/" target="_blank">![Revolution Analytics](http://china-r.org/img/logo-revo.png)</a> <a title="RStudio" href="http://rstudio.com" target="_blank">![RStudio](http://china-r.org/img/logo-rstudio.png)</a> <a title="VSNC" href="http://www.vsnc.com.cn/" target="_blank">![VSNC](http://china-r.org/img/logo-vscn.jpg)</a> <a title="1degreenorth" href="http://www.1degreenorth.com/" target="_blank">![1degreenorth](http://china-r.org/img/logo-1degreenorth.png)</a>
+[![光大证券](http://china-r.org/img/logo-everbright.png)](http://www.ebscn.com/ "光大证券") [![SupStat Inc.](http://china-r.org/img/logo-supstat.png)](http://supstat.com/cn "SupStat Inc.") [![Revolution Analytics](http://china-r.org/img/logo-revo.png)](http://www.revolutionanalytics.com/ "Revolution Analytics") [![RStudio](http://china-r.org/img/logo-rstudio.png)](http://rstudio.com "RStudio") [![VSNC](http://china-r.org/img/logo-vscn.jpg)](http://www.vsnc.com.cn/ "VSNC") [![1degreenorth](http://china-r.org/img/logo-1degreenorth.png)](http://www.1degreenorth.com/ "1degreenorth")
 
 **参会单位**
 

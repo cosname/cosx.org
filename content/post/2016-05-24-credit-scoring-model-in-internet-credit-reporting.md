@@ -84,7 +84,7 @@ slug: credit-scoring-model-in-internet-credit-reporting
 综上所述，上述四张表格可以通过不同的关键字分别进行匹配连接，从而能够对应到一个用户的多行交易信息在下一小节中，我们将详细阐述数据的变量提取过程。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2016/05/huang_4.png">![huang_4](https://cos.name/wp-content/uploads/2016/05/huang_4.png)</a>
+  ![huang_4](https://cos.name/wp-content/uploads/2016/05/huang_4.png)
 </p>
 
 <p style="text-align: center;">
@@ -688,7 +688,7 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
                   其他变量水平不变，银行卡数越多，越有可能是违约用户。
                 </li>
                 <li>
-                  保持其他变量不变，用户行为最大值越大，越可能是违约用户。这也验证了我们之前的结论，用户的极端行为越极端，越有可能是违约用户。<a href="https://cos.name/wp-content/uploads/2016/05/huang_7.png">![huang_7](https://cos.name/wp-content/uploads/2016/05/huang_7.png)</a>
+                  保持其他变量不变，用户行为最大值越大，越可能是违约用户。这也验证了我们之前的结论，用户的极端行为越极端，越有可能是违约用户。![huang_7](https://cos.name/wp-content/uploads/2016/05/huang_7.png)
                 </li>
               </ol>
               
@@ -701,7 +701,7 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
               </p>
               
               <p>
-                <a href="https://cos.name/wp-content/uploads/2016/05/huang_8.png">![huang_8](https://cos.name/wp-content/uploads/2016/05/huang_8.png)</a>
+                ![huang_8](https://cos.name/wp-content/uploads/2016/05/huang_8.png)
               </p>
               
               <p style="text-align: center;">
@@ -719,7 +719,7 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
               </p>
               
               <p>
-                衡量模型的预测效果可以采用指标ROC（Receiver Operating Characteristic）曲线或者AUC（Area Under Curve）值。其中ROC曲线的横坐标为false positive rate（FPR），也称为Specificity，刻画的是模型预测错了，认为为1但真实为0的观测占所有真实为0的观测的比例。纵坐标为true positive rate（TPR），也称为Sensitivity，刻画的是模型预测所识别出的为1且真实为1的观测占所有真实为1的观测的比例。ROC曲线越贴近左上角，表明模型的预测效果越好。AUC是ROC曲线下的面积，这一指标取值越大表明模型预测的效果越好。通常在计算中也可以考虑如下公式：<a href="https://cos.name/wp-content/uploads/2016/05/huang_8_1.png">![huang_8_1](https://cos.name/wp-content/uploads/2016/05/huang_8_1.png)</a>
+                衡量模型的预测效果可以采用指标ROC（Receiver Operating Characteristic）曲线或者AUC（Area Under Curve）值。其中ROC曲线的横坐标为false positive rate（FPR），也称为Specificity，刻画的是模型预测错了，认为为1但真实为0的观测占所有真实为0的观测的比例。纵坐标为true positive rate（TPR），也称为Sensitivity，刻画的是模型预测所识别出的为1且真实为1的观测占所有真实为1的观测的比例。ROC曲线越贴近左上角，表明模型的预测效果越好。AUC是ROC曲线下的面积，这一指标取值越大表明模型预测的效果越好。通常在计算中也可以考虑如下公式：![huang_8_1](https://cos.name/wp-content/uploads/2016/05/huang_8_1.png)
               </p>
               
               <p>
@@ -727,7 +727,7 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
               </p>
               
               <p>
-                为了模型对比，我们随机将所有数据划分为训练数据集（80%）和测试数据集（20%）， 在训练集上估计模型的回归系数，将所有系数带入测试数据中进行计算，预测非违约可能性。随机拆分被重复了100次。我们随机抽取其中一次绘制ROC曲线如图9所示。其中，Score表示模型a的预测结果，模型中只包含“熊得分”，Full model表示模型b对应的预测结果，BIC表示模型c对应的预测结果。从图中可以得出结论，在b模型与c模型的预测效果接近，二者都要远远好于a模型的预测效果。进一步地，我们将100次随机拆分计算得到的AUC值取平均。出于行业数据机密，我们此处不汇报AUC的绝对提升结果。但是相对于 a模型而言，b模型和c模型的预测效果将相对提升13.6%。这将直接使得我们能够在实际业务中更精准的判断出用户的信用状况。<a href="https://cos.name/wp-content/uploads/2016/05/huang_9.png">![huang_9](https://cos.name/wp-content/uploads/2016/05/huang_9.png)</a>
+                为了模型对比，我们随机将所有数据划分为训练数据集（80%）和测试数据集（20%）， 在训练集上估计模型的回归系数，将所有系数带入测试数据中进行计算，预测非违约可能性。随机拆分被重复了100次。我们随机抽取其中一次绘制ROC曲线如图9所示。其中，Score表示模型a的预测结果，模型中只包含“熊得分”，Full model表示模型b对应的预测结果，BIC表示模型c对应的预测结果。从图中可以得出结论，在b模型与c模型的预测效果接近，二者都要远远好于a模型的预测效果。进一步地，我们将100次随机拆分计算得到的AUC值取平均。出于行业数据机密，我们此处不汇报AUC的绝对提升结果。但是相对于 a模型而言，b模型和c模型的预测效果将相对提升13.6%。这将直接使得我们能够在实际业务中更精准的判断出用户的信用状况。![huang_9](https://cos.name/wp-content/uploads/2016/05/huang_9.png)
               </p>
               
               <p style="text-align: center;">
