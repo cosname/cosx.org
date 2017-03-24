@@ -247,7 +247,7 @@ Tetrachoric(2,3)
 ## -(x * exp(-(x^2/2))/sqrt(2 * pi))</pre>
                                                                                 
                                                                                 <p>
-                                                                                  作为本节的最后，献上函数图像，这个函数的作用主要是计算多元正态分布的概率，详细内容参看 [2]。<br /> [![Tetrachoric](https://cos.name/wp-content/uploads/2016/07/Tetrachoric.jpg)](https://cos.name/wp-content/uploads/2016/07/Tetrachoric.jpg)
+                                                                                  作为本节的最后，献上函数图像，这个函数的作用主要是计算多元正态分布的概率，详细内容参看 [2]。<br /> ![Tetrachoric](https://cos.name/wp-content/uploads/2016/07/Tetrachoric.jpg)
                                                                                 </p>
                                                                               </div>
                                                                             </div>
@@ -297,7 +297,7 @@ Tetrachoric(2,3)
                                                                                 </p>
                                                                                 
                                                                                 <p>
-                                                                                  [![Rosenbrock2](https://cos.name/wp-content/uploads/2016/07/Rosenbrock2.png)](https://cos.name/wp-content/uploads/2016/07/Rosenbrock2.png)
+                                                                                  ![Rosenbrock2](https://cos.name/wp-content/uploads/2016/07/Rosenbrock2.png)
                                                                                 </p>
                                                                                 
                                                                                 <p>
@@ -500,7 +500,7 @@ grr2 &lt;- function(x) {
                                                                                       <span style="color: #000000;"><strong>原创文章，版权所有。</strong></span></section> <section class="tn-Powered-by-XIUMI"></section> <section class="tn-Powered-by-XIUMI"></section> 
                                                                                       
                                                                                       <p>
-                                                                                        <span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。[![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)</strong></span>
+                                                                                        <span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)</strong></span>
                                                                                       </p>
                                                                                       
                                                                                       <p>

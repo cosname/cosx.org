@@ -34,17 +34,17 @@ menu: main
     </td>
     
     <td style="text-align: center;" width="30%">
-      [![R_in_a_nutshell](https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg)](https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg)[《R语言核心技术手册》](http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-121-23786-7)
+      ![R_in_a_nutshell](https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg)[《R语言核心技术手册》](http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-121-23786-7)
     </td>
     
     <td style="text-align: center;" width="30%">
-      [![R_graphics_cookbook](https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png)](https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png) [《R数据可视化手册》](http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-115-34227-0)
+      ![R_graphics_cookbook](https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png) [《R数据可视化手册》](http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-115-34227-0)
     </td>
   </tr>
   
   <tr>
     <td style="text-align: center;" width="30%">
-      [![R_data_science](https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg)](https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg)<br /> [《数据科学中的R语言》](/2015/07/years-as-a-data-scientist/ "Dynamic Documents with R and knitr")
+      ![R_data_science](https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg)<br /> [《数据科学中的R语言》](/2015/07/years-as-a-data-scientist/ "Dynamic Documents with R and knitr")
     </td>
     
     <td style="text-align: center;" width="30%">

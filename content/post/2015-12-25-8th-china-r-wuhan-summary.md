@@ -37,7 +37,7 @@ slug: 8th-china-r-wuhan-summary
 
 <ol start="2">
   <li>
-    谢军： 当R真的遇到了大数据[![wh-003](https://cos.name/wp-content/uploads/2015/12/wh-003.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-003.jpg)
+    谢军： 当R真的遇到了大数据![wh-003](https://cos.name/wp-content/uploads/2015/12/wh-003.jpg)
   </li>
 </ol>
 
@@ -47,7 +47,7 @@ slug: 8th-china-r-wuhan-summary
 
 <ol start="3">
   <li>
-    李舰：R与自动化报告[![wh-004](https://cos.name/wp-content/uploads/2015/12/wh-004.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-004.jpg)
+    李舰：R与自动化报告![wh-004](https://cos.name/wp-content/uploads/2015/12/wh-004.jpg)
   </li>
 </ol>
 
@@ -57,7 +57,7 @@ slug: 8th-china-r-wuhan-summary
 
 <ol start="4">
   <li>
-    肖凯：基于OpenCPU的R模型部署[![wh-005](https://cos.name/wp-content/uploads/2015/12/wh-005.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-005.jpg)
+    肖凯：基于OpenCPU的R模型部署![wh-005](https://cos.name/wp-content/uploads/2015/12/wh-005.jpg)
   </li>
 </ol>
 
@@ -67,7 +67,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="5">
   <li>
-    何宇兵：商业大数据时代，GIS和R更配[![wh-006](https://cos.name/wp-content/uploads/2015/12/wh-006.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-006.jpg)
+    何宇兵：商业大数据时代，GIS和R更配![wh-006](https://cos.name/wp-content/uploads/2015/12/wh-006.jpg)
   </li>
 </ol>
 
@@ -77,7 +77,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="6">
   <li>
-    张兵：基于R软件的传染病监测系统数据可视化及分析平台搭建[![wh-007](https://cos.name/wp-content/uploads/2015/12/wh-007.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-007.jpg)
+    张兵：基于R软件的传染病监测系统数据可视化及分析平台搭建![wh-007](https://cos.name/wp-content/uploads/2015/12/wh-007.jpg)
   </li>
 </ol>
 
@@ -87,7 +87,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="7">
   <li>
-    苏建冲：运营商数据应用场景的尝试和探讨[![wh-008](https://cos.name/wp-content/uploads/2015/12/wh-008.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-008.jpg)
+    苏建冲：运营商数据应用场景的尝试和探讨![wh-008](https://cos.name/wp-content/uploads/2015/12/wh-008.jpg)
   </li>
 </ol>
 
@@ -97,7 +97,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="8">
   <li>
-    谢佳标：大数据的处理及建模技术——基于R语言实现[![wh-009](https://cos.name/wp-content/uploads/2015/12/wh-009.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-009.jpg)
+    谢佳标：大数据的处理及建模技术——基于R语言实现![wh-009](https://cos.name/wp-content/uploads/2015/12/wh-009.jpg)
   </li>
 </ol>
 
@@ -107,7 +107,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="9">
   <li>
-    周翔：怦然心动的数据整理&描述魔法[![wh-010](https://cos.name/wp-content/uploads/2015/12/wh-010.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-010.jpg)
+    周翔：怦然心动的数据整理&描述魔法![wh-010](https://cos.name/wp-content/uploads/2015/12/wh-010.jpg)
   </li>
 </ol>
 
@@ -117,7 +117,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 <ol start="10">
   <li>
-    闭幕致辞[![wh-011](https://cos.name/wp-content/uploads/2015/12/wh-011.jpg)](https://cos.name/wp-content/uploads/2015/12/wh-011.jpg)
+    闭幕致辞![wh-011](https://cos.name/wp-content/uploads/2015/12/wh-011.jpg)
   </li>
 </ol>
 

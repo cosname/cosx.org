@@ -15,7 +15,7 @@ slug: chase-after-eb
 写了[《统计学习那些事》](/2011/12/stories-about-statistical-learning/ "统计学习那些事")，很多童鞋都表示喜欢，这让我越来越觉得冯导的一句话很有道理：“我的电影一向只伺候中国观众，还没想过拍给全世界人民看。这就跟献血一样，本身是好事，但如果血型不对，输进去的血也会产生排异现象。我的‘血型’就适合中国人，对不上世界观众，别到时伤了我的身子骨，还伤害了世界观众，所以我暂时不会‘献血’。”比如他的《天下无贼》，我就特别喜欢。然而天下可以无贼，却不可以没有英雄（不是张导的那个《英雄》）。今天我要写的是统计界的英雄以及英雄的故事。英雄的名字叫 EB，英雄的故事也叫 EB。
 
 <p style="text-align: center;">
-  [![](http://statweb.stanford.edu/~ckirby/brad/images/efron.jpg)](http://statweb.stanford.edu/~ckirby/brad/images/efron.jpg)<!--more-->
+  ![](http://statweb.stanford.edu/~ckirby/brad/images/efron.jpg)<!--more-->
 </p>
 
 <h2 style="text-align: center;">

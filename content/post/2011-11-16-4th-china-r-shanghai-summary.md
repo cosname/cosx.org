@@ -31,7 +31,7 @@ slug: 4th-china-r-shanghai-summary
 > &nbsp;
 
 <p style="text-align: center;">
-  [![会议现场20111112](https://cos.name/wp-content/uploads/2011/11/4th-SH-live-500x333.jpg "会议现场20111112")](https://cos.name/wp-content/uploads/2011/11/4th-SH-live.jpg)
+  ![会议现场20111112](https://cos.name/wp-content/uploads/2011/11/4th-SH-live.jpg "会议现场20111112")
 </p>
 
 ## 会议内容

@@ -17,7 +17,7 @@ slug: different-ways-to-solve-a-tossing-problem
 ---
 
 <p style="text-align: center;">
-  [![](https://cos.name/wp-content/uploads/2011/01/coin.jpg)](https://cos.name/wp-content/uploads/2011/01/coin.jpg)
+  ![](https://cos.name/wp-content/uploads/2011/01/coin.jpg)
 </p>
 
 <p style="text-align: center;">

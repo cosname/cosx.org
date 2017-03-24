@@ -19,7 +19,7 @@ tags:
 slug: tips-for-presenting-your-work
 ---
 
-<span style="color: #808080;">【COS编辑部按】本文作者是美国统计协会（ASA）的会员、莫纳什大学教授<span style="color: #000000;">[Dianne Cook ](http://dicook.github.io/)</span>。她的研究方向包括数据可视化，探索性数据分析，多元方法，数据挖掘和统计计算。曾参与制作软件XGobi，ggobi，cranvas和几个R包。</span><span style="color: #808080;">原文发表在<span style="color: #000000;"> [The R journal](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Cook.pdf) </span>，本文由陈妍翻译，<span style="color: #000000;">[高涛](http://joegaotao.github.io/)</span>、肖楠和<span id=":vm" class="" tabindex="0" title="谢益辉"><span style="color: #000000;">[谢益辉](http://yihui.name/)</span>审校，王小宁编辑。[![dicook-2014](https://cos.name/wp-content/uploads/2015/09/dicook-2014.jpg)](https://cos.name/wp-content/uploads/2015/09/dicook-2014.jpg)</span></span>
+<span style="color: #808080;">【COS编辑部按】本文作者是美国统计协会（ASA）的会员、莫纳什大学教授<span style="color: #000000;">[Dianne Cook ](http://dicook.github.io/)</span>。她的研究方向包括数据可视化，探索性数据分析，多元方法，数据挖掘和统计计算。曾参与制作软件XGobi，ggobi，cranvas和几个R包。</span><span style="color: #808080;">原文发表在<span style="color: #000000;"> [The R journal](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Cook.pdf) </span>，本文由陈妍翻译，<span style="color: #000000;">[高涛](http://joegaotao.github.io/)</span>、肖楠和<span id=":vm" class="" tabindex="0" title="谢益辉"><span style="color: #000000;">[谢益辉](http://yihui.name/)</span>审校，王小宁编辑。![dicook-2014](https://cos.name/wp-content/uploads/2015/09/dicook-2014.jpg)</span></span>
 
 **摘要**** ** 
 

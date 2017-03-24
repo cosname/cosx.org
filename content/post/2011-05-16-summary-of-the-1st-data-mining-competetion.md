@@ -466,7 +466,7 @@ slug: summary-of-the-1st-data-mining-competetion
 每日有效提交次数：
 
 <p style="text-align: center;">
-  [![每日有效提交次数](https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png)](https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png)
+  ![每日有效提交次数](https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png)
 </p>
 
 <p style="text-align: left;">
@@ -474,7 +474,7 @@ slug: summary-of-the-1st-data-mining-competetion
 </p>
 
 <p style="text-align: left;">
-  提交次数频数：<br /> [![提交次数频数图](https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png)](https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png)
+  提交次数频数：<br /> ![提交次数频数图](https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png)
 </p>
 
 上图为提交次数的频数图，从上图可以看出，大部分队伍提交次数很少。提交次数超过10的队伍有217个，超过50的有70个，超过100的有29个。最终获奖的队伍的提交总次数都很高。

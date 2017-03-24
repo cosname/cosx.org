@@ -320,7 +320,7 @@ slug: a-statistical-view-of-deep-learning-i-recursive-glms
 </p>
 
 <p style="text-align: left;">
-  [![无标题](https://cos.name/wp-content/uploads/2015/05/无标题.png)](https://cos.name/wp-content/uploads/2015/05/无标题.png)
+  ![无标题](https://cos.name/wp-content/uploads/2015/05/无标题.png)
 </p>
 
 <p style="text-align: center;">

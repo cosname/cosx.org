@@ -132,7 +132,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          [![路线](https://cos.name/wp-content/uploads/2015/10/路线.jpg)](https://cos.name/wp-content/uploads/2015/10/路线.jpg)
+          ![路线](https://cos.name/wp-content/uploads/2015/10/路线.jpg)
         </p>
         
         <p>
@@ -164,7 +164,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          [![hubei](https://cos.name/wp-content/uploads/2015/10/hubei.jpg)](https://cos.name/wp-content/uploads/2015/10/hubei.jpg)
+          ![hubei](https://cos.name/wp-content/uploads/2015/10/hubei.jpg)
         </p>
         
         <p>
@@ -200,7 +200,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          [![统计](https://cos.name/wp-content/uploads/2015/10/统计.png)](https://cos.name/wp-content/uploads/2015/10/统计.png)
+          ![统计](https://cos.name/wp-content/uploads/2015/10/统计.png)
         </p>
         
         <p>
@@ -228,7 +228,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          [![008](https://cos.name/wp-content/uploads/2015/10/0082.jpg)](https://cos.name/wp-content/uploads/2015/10/0082.jpg)
+          ![008](https://cos.name/wp-content/uploads/2015/10/0082.jpg)
         </p>
         
         <p>
@@ -296,7 +296,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          [![009](https://cos.name/wp-content/uploads/2015/10/0092.jpg)](https://cos.name/wp-content/uploads/2015/10/0092.jpg)
+          ![009](https://cos.name/wp-content/uploads/2015/10/0092.jpg)
         </p>
         
         <p>

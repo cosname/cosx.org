@@ -112,7 +112,7 @@ r2</pre>
 对于这个疑问，一个很直接的想法是做出词人与词牌的对应关系。在《全宋词》的数据中，共有1377位词人和876个词牌，那么我们就可以构造一个1377*876的0-1矩阵，取1的元素表示这一行所对应的词人使用了这一列对应的词牌。我们将这个矩阵变成一张图片，每一个像素点就是矩阵的一个元素，黑色的部分是0，白色的部分是1，结果就会是下面这样：
 
 <p style="text-align: left;">
-  [![统计词话（二）——词人与词牌对应关系](https://cos.name/wp-content/uploads/2012/03/original.png)](https://cos.name/wp-content/uploads/2012/03/original.png)从这张“夜空中的星星”我们可以发现，绝大部分的点都被黑色所占据，这其实很容易理解：一个词人不可能写过所有的词牌，一个词牌也不可能人人都会去写。然而我们会注意到一个问题——“星星”隔得太远了。在黑色的背景中，这些“星星”零散地分布在夜空中的各个角落，而出于一种“星星相惜”的心情，我们似乎希望能把那些最亮的“星”聚在一起。
+  ![统计词话（二）——词人与词牌对应关系](https://cos.name/wp-content/uploads/2012/03/original.png)从这张“夜空中的星星”我们可以发现，绝大部分的点都被黑色所占据，这其实很容易理解：一个词人不可能写过所有的词牌，一个词牌也不可能人人都会去写。然而我们会注意到一个问题——“星星”隔得太远了。在黑色的背景中，这些“星星”零散地分布在夜空中的各个角落，而出于一种“星星相惜”的心情，我们似乎希望能把那些最亮的“星”聚在一起。
 </p>
 
 <p style="text-align: left;">
@@ -124,7 +124,7 @@ r2</pre>
 </p>
 
 <p style="text-align: left;">
-  [![统计词话（二）——矩阵排序](https://cos.name/wp-content/uploads/2012/03/seriate.png)](https://cos.name/wp-content/uploads/2012/03/seriate.png)很明显，这张图中“星星”变得更加集中，放眼望去，就好像是文字和名字交织成的两条银河。让我们把目光聚焦到“星星”最密集的地方，最后可以得到以下这几个“星团”（只选取了若干最有代表性的）：
+  ![统计词话（二）——矩阵排序](https://cos.name/wp-content/uploads/2012/03/seriate.png)很明显，这张图中“星星”变得更加集中，放眼望去，就好像是文字和名字交织成的两条银河。让我们把目光聚焦到“星星”最密集的地方，最后可以得到以下这几个“星团”（只选取了若干最有代表性的）：
 </p>
 
 <table align="center">
@@ -706,7 +706,7 @@ corrplot(M.AOE);
 corrRect(c(4, 2, 5));</pre>
 
 <p style="text-align: left;">
-  [![统计词话（二）——相关系数矩阵排序](https://cos.name/wp-content/uploads/2012/03/order.png)](https://cos.name/wp-content/uploads/2012/03/order.png)关于双向聚类只是在这里做一个简单的介绍，如果对此感兴趣，还可以继续搜索相关的文献，例如这篇[综述文章](http://innar.com/Liiv_Seriation.pdf)。
+  ![统计词话（二）——相关系数矩阵排序](https://cos.name/wp-content/uploads/2012/03/order.png)关于双向聚类只是在这里做一个简单的介绍，如果对此感兴趣，还可以继续搜索相关的文献，例如这篇[综述文章](http://innar.com/Liiv_Seriation.pdf)。
 </p>
 
 <p style="text-align: center;">

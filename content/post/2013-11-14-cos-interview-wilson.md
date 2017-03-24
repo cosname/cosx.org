@@ -26,7 +26,7 @@ slug: cos-interview-wilson
 
 <div>
   <p>
-    [![wilson](https://cos.name/wp-content/uploads/2013/11/wilson.jpg)](https://cos.name/wp-content/uploads/2013/11/wilson.jpg)
+    ![wilson](https://cos.name/wp-content/uploads/2013/11/wilson.jpg)
   </p>
   
   <p>

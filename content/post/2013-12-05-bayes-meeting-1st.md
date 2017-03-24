@@ -28,7 +28,7 @@ slug: bayes-meeting-1st
 ## 三、论坛日程安排
 
 <p style="text-align: center;">
-  [![cloud-bayes](https://cos.name/wp-content/uploads/2013/12/cloud-bayes.png)](https://cos.name/wp-content/uploads/2013/12/cloud-bayes.png)
+  ![cloud-bayes](https://cos.name/wp-content/uploads/2013/12/cloud-bayes.png)
 </p>
 
 <!--more-->

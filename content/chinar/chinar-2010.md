@@ -52,7 +52,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 交通地图（点击看大图）：
 
 <p style="text-align: center;">
-  [![人大交通地图](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)
+  ![人大交通地图](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)
 </p>
 
 人大校内地图（点击看大图）：

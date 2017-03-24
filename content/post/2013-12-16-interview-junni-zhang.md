@@ -26,7 +26,7 @@ slug: interview-junni-zhang
 <!--more-->
 
 <p align="left">
-  [![0267_PHOTO](https://cos.name/wp-content/uploads/2013/12/0267_PHOTO1.jpg)](https://cos.name/wp-content/uploads/2013/12/0267_PHOTO1.jpg)Xuening: 听说您本科专业是软件与计算机，后来是怎么想到转到统计的呢？
+  ![0267_PHOTO](https://cos.name/wp-content/uploads/2013/12/0267_PHOTO1.jpg)Xuening: 听说您本科专业是软件与计算机，后来是怎么想到转到统计的呢？
 </p>
 
 <p align="left">

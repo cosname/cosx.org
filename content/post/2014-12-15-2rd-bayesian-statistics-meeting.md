@@ -40,7 +40,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：**Bayesian forecasting of demographic rates for small areas
 
 <p style="text-align: center;">
-  [![zhangjunni](https://cos.name/wp-content/uploads/2014/12/zhangjunni.png)](https://cos.name/wp-content/uploads/2014/12/zhangjunni.png)
+  ![zhangjunni](https://cos.name/wp-content/uploads/2014/12/zhangjunni.png)
 </p>
 
 <p style="text-align: center;">
@@ -62,7 +62,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：****R-web : ****大型多人在线数据分析协作平台****(Massively Multi-analyst Online Data Analysis Platform)**
 
 <p style="text-align: center;">
-  [![linzhenshun](https://cos.name/wp-content/uploads/2014/12/linzhenshun-150x150.png)](https://cos.name/wp-content/uploads/2014/12/linzhenshun.png)
+  ![linzhenshun](https://cos.name/wp-content/uploads/2014/12/linzhenshun.png)
 </p>
 
 <p style="text-align: center;">
@@ -74,7 +74,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：****统计分析的第三范式：大数据与贝叶斯统计思维**
 
 <p style="text-align: center;">
-  [![bayes-dao](https://cos.name/wp-content/uploads/2014/12/bayes-dao.png)](https://cos.name/wp-content/uploads/2014/12/bayes-dao.png)
+  ![bayes-dao](https://cos.name/wp-content/uploads/2014/12/bayes-dao.png)
 </p>
 
 <p style="text-align: center;">

@@ -30,7 +30,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2 c5">
-  [![image01](https://cos.name/wp-content/uploads/2016/11/image01.jpg)](https://cos.name/wp-content/uploads/2016/11/image01.jpg)
+  ![image01](https://cos.name/wp-content/uploads/2016/11/image01.jpg)
 </p>
 
 <p class="p1">
@@ -72,7 +72,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  [![image02](https://cos.name/wp-content/uploads/2016/11/image02.png)](https://cos.name/wp-content/uploads/2016/11/image02.png) [![image03](https://cos.name/wp-content/uploads/2016/11/image03.png)](https://cos.name/wp-content/uploads/2016/11/image03.png)
+  ![image02](https://cos.name/wp-content/uploads/2016/11/image02.png) ![image03](https://cos.name/wp-content/uploads/2016/11/image03.png)
 </p>
 
 <p class="c2">

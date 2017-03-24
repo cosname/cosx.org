@@ -49,7 +49,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    [![p1](https://cos.name/wp-content/uploads/2013/12/p1.jpg)](https://cos.name/wp-content/uploads/2013/12/p1.jpg)
+    ![p1](https://cos.name/wp-content/uploads/2013/12/p1.jpg)
   </p>
   
   <p>
@@ -57,7 +57,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    [![p2](https://cos.name/wp-content/uploads/2013/12/p2.jpg)](https://cos.name/wp-content/uploads/2013/12/p2.jpg)
+    ![p2](https://cos.name/wp-content/uploads/2013/12/p2.jpg)
   </p>
   
   <p>
@@ -73,7 +73,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    [![p3](https://cos.name/wp-content/uploads/2013/12/p3.jpg)](https://cos.name/wp-content/uploads/2013/12/p3.jpg)
+    ![p3](https://cos.name/wp-content/uploads/2013/12/p3.jpg)
   </p>
   
   <p>
@@ -81,7 +81,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    [![p4](https://cos.name/wp-content/uploads/2013/12/p4.jpg)](https://cos.name/wp-content/uploads/2013/12/p4.jpg)
+    ![p4](https://cos.name/wp-content/uploads/2013/12/p4.jpg)
   </p>
   
   <p>

@@ -28,7 +28,7 @@ $$ \Pi(x)=\int_{0}^\infty t^x e^{-t}\,dt ,$$
 然而这个定义在历史上并没有流传开来。
 
 <p style="text-align: center;">
-  [![legendre](https://cos.name/wp-content/uploads/2014/07/legendre.jpg)](https://cos.name/wp-content/uploads/2014/07/legendre.jpg)
+  ![legendre](https://cos.name/wp-content/uploads/2014/07/legendre.jpg)
 </p>
 
 <p style="text-align: center;">
@@ -144,7 +144,7 @@ $$ \Gamma(x) \approx \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}} .$$
 那么 $f(x) = \Gamma(x)$, 也就是 $\Gamma(x)$是唯一满足以上条件的函数。
 
 <p style="text-align: center;">
-  [![digamma-func](https://cos.name/wp-content/uploads/2014/07/digamma-func.png)](https://cos.name/wp-content/uploads/2014/07/digamma-func.png)<br /> \$\log \Gamma(x)$ 是一个凸函数
+  ![digamma-func](https://cos.name/wp-content/uploads/2014/07/digamma-func.png)<br /> \$\log \Gamma(x)$ 是一个凸函数
 </p>
 
 伽玛函数有不少等价的表示形式和神奇的结果。高斯给出的伽玛函数的形式是
@@ -182,7 +182,7 @@ $$ f(x)^{(\frac{1}{2})} = \frac{\Gamma{(1+1)}}{\Gamma{(1-1/2+1)}} x^{1-1/2}
 很容易想到对于一般的函数 $f(x)$ 通过泰勒级数展开可以表达为幂级数，于是借用 $x^n$ 的分数阶导数，我们可以尝试定义出任意函数的分数阶导数。不过有点遗憾的是这种简单的基于泰勒级数的定义方法不是良定义的，并非对所有函数都适用，但是这个思想却给后来的数学家提供了重要的线索，并由此发展了数学分析中的一个研究课题： Fractional Calculus。 在这种微积分中，分数阶的导数是具有良定义的，而积分作为导数的逆运算，也可以有分数阶。 这听起来真是很神奇，而这一切都要归功于伽玛函数。
 
 <p style="text-align: center;">
-  [![n-dim-ball](https://cos.name/wp-content/uploads/2014/07/n-dim-ball.jpg)](https://cos.name/wp-content/uploads/2014/07/n-dim-ball.jpg)<br /> n 维球的体积
+  ![n-dim-ball](https://cos.name/wp-content/uploads/2014/07/n-dim-ball.jpg)<br /> n 维球的体积
 </p>
 
 伽马函数还有一个奇妙的运用是求高维空间中球的体积。我们知道 二维球是圆；其面积为 $\pi r^2$，三维球的体积为 $\frac{4}{3} \pi r^3$，那$n$维空间中半径为$r$的球的体积如何计算呢？ 数学上这个体积应该是如下多重积分
@@ -258,7 +258,7 @@ $$Gamma(x|\alpha) = \frac{x^{\alpha-1}e^{-x}}{\Gamma(\alpha)} .$$
 $$Gamma(t|\alpha, \beta) = \frac{\beta^\alpha t^{\alpha-1}e^{-\beta t}}{\Gamma(\alpha)} .$$
 
 <p style="text-align: center;">
-  [![gamma-distribution](https://cos.name/wp-content/uploads/2014/07/gamma-distribution.png)](https://cos.name/wp-content/uploads/2014/07/gamma-distribution.png)<br /> $Gamma(t|\alpha,\beta)$分布图像
+  ![gamma-distribution](https://cos.name/wp-content/uploads/2014/07/gamma-distribution.png)<br /> $Gamma(t|\alpha,\beta)$分布图像
 </p>
 
 伽玛分布在概率统计领域也是一个万人迷，众多统计分布和它有密切关系。指数分布和 $\chi^2$ 分布都是特殊的伽玛分布。另外伽玛分布是一个很强大的先验分布，在贝叶斯统计分析中被广泛的用作其它分布的先验。如果把统计分布中的共轭关系类比为人类生活中的情侣关系的话，那指数分布、泊松分布、正态分布、对数正态分布都可以是伽玛分布的情人。

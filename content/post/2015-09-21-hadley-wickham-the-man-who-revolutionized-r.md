@@ -20,7 +20,7 @@ slug: hadley-wickham-the-man-who-revolutionized-r
 <span style="color: #808080;">[Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 <code>ggplot2</code> 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 <code>plyr</code>、<code>reshape2</code> 等。本文取自[PRICEONOMICS](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/).</span>
 
 <p style="text-align: right;">
-  [![HadleyObama](https://cos.name/wp-content/uploads/2015/09/HadleyObama.png)](https://cos.name/wp-content/uploads/2015/09/HadleyObama.png)
+  ![HadleyObama](https://cos.name/wp-content/uploads/2015/09/HadleyObama.png)
 </p>
 
 <p style="text-align: center;">

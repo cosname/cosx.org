@@ -160,7 +160,7 @@ slug: 6th-china-r-beijing-summary
   </p>
   
   <p>
-    [![Learning_R](https://cos.name/wp-content/uploads/2013/05/Learning_R.png)](https://cos.name/wp-content/uploads/2013/05/Learning_R.png)之后分别有阿里巴巴的郝智恒先生、eBay潘佳鸣先生、京东商城赵灿女士、百度侯俊琦先生、豆瓣稳国柱先生、Springer 出版社的 Niels P. Thomas 先生以及Supstat邓一硕先生依次讲述各自单位对不同层次人才的需求，会议现场更有参会者向心仪单位投递了简历，会下的交流更是火热。
+    ![Learning_R](https://cos.name/wp-content/uploads/2013/05/Learning_R.png)之后分别有阿里巴巴的郝智恒先生、eBay潘佳鸣先生、京东商城赵灿女士、百度侯俊琦先生、豆瓣稳国柱先生、Springer 出版社的 Niels P. Thomas 先生以及Supstat邓一硕先生依次讲述各自单位对不同层次人才的需求，会议现场更有参会者向心仪单位投递了简历，会下的交流更是火热。
   </p>
   
   <h3>

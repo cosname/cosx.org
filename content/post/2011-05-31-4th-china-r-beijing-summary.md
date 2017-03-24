@@ -39,7 +39,7 @@ slug: 4th-china-r-beijing-summary
 >       </dt>
 >       
 >       <dt>
->         [![会议现场20110528](https://cos.name/wp-content/uploads/2011/05/hot-500x281.jpg "会议现场20110528")](https://cos.name/wp-content/uploads/2011/05/hot.jpg)
+>         ![会议现场20110528](https://cos.name/wp-content/uploads/2011/05/hot.jpg "会议现场20110528")
 >       </dt>
 >       
 >       <dd>

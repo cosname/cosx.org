@@ -69,7 +69,7 @@ title("世界地图")</pre>
 </p>
 
 <p align="left">
-  [![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)](https://cos.name/wp-content/uploads/2013/01/world_map.png)
+  ![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)
 </p>
 
 <p align="left">
@@ -98,7 +98,7 @@ title("美国地图")</pre>
 </p>
 
 <p align="left">
-  [![us_map](https://cos.name/wp-content/uploads/2013/01/us_map.png)](https://cos.name/wp-content/uploads/2013/01/us_map.png)
+  ![us_map](https://cos.name/wp-content/uploads/2013/01/us_map.png)
 </p>
 
 整体形状这是像啥啊，山姆大叔……

@@ -1702,7 +1702,7 @@ IR为1，表示A，B关联关系非常不平衡，即购买A的客户很可能�
         </p>
         
         <p>
-          [![du_5](https://cos.name/wp-content/uploads/2016/05/du_5.png)](https://cos.name/wp-content/uploads/2016/05/du_5.png)
+          ![du_5](https://cos.name/wp-content/uploads/2016/05/du_5.png)
         </p>
         
         <p style="text-align: center;">
@@ -1778,7 +1778,7 @@ IR为1，表示A，B关联关系非常不平衡，即购买A的客户很可能�
         </p>
         
         <p>
-          [![du_6](https://cos.name/wp-content/uploads/2016/05/du_6.png)](https://cos.name/wp-content/uploads/2016/05/du_6.png)
+          ![du_6](https://cos.name/wp-content/uploads/2016/05/du_6.png)
         </p>
         
         <p style="text-align: center;">

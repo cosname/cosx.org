@@ -78,7 +78,7 @@ slug: google-trend-stock-market
   </p>
   
   <p>
-    [![ts1](https://cos.name/wp-content/uploads/2013/12/line2.jpg)](https://cos.name/wp-content/uploads/2013/12/line2.jpg)
+    ![ts1](https://cos.name/wp-content/uploads/2013/12/line2.jpg)
   </p>
   
   <p>
