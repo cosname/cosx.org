@@ -31,17 +31,17 @@ slug: cos-5th-salon
 
 
 
-以及<a href="http://vis.pku.edu.cn/weibova/" target="_blank">基于微博的一系列分析工具</a>，小编强烈推荐大家去玩玩。以及更多的好东东:
+以及[基于微博的一系列分析工具](http://vis.pku.edu.cn/weibova/)，小编强烈推荐大家去玩玩。以及更多的好东东:
 
-北京大学科学可视化系统 <a title="http://vis.pku.edu.cn/scivis/" href="http://vis.pku.edu.cn/scivis/" rel="nofollow">PKU SciVis</a>
+北京大学科学可视化系统 [PKU SciVis](http://vis.pku.edu.cn/scivis/ "http://vis.pku.edu.cn/scivis/")
   
-北京大学微博可视分析系列 <a title="http://vis.pku.edu.cn/weibova/" href="http://vis.pku.edu.cn/weibova/" rel="nofollow">PKU WeiboVA</a>
+北京大学微博可视分析系列 [PKU WeiboVA](http://vis.pku.edu.cn/weibova/ "http://vis.pku.edu.cn/weibova/")
   
-北京大学图可视化分析系列 <a title="http://vis.pku.edu.cn/graphvis/" href="http://vis.pku.edu.cn/graphvis/" rel="nofollow">PKU GraphVis</a>
+北京大学图可视化分析系列 [PKU GraphVis](http://vis.pku.edu.cn/graphvis/ "http://vis.pku.edu.cn/graphvis/")
   
-Multidimensional Data Visualization Jigsaw <a title="http://vis.pku.edu.cn/mddv/jigsaw/" href="http://vis.pku.edu.cn/mddv/jigsaw/" rel="nofollow">PKU MDVis Jigsaw</a>
+Multidimensional Data Visualization Jigsaw [PKU MDVis Jigsaw](http://vis.pku.edu.cn/mddv/jigsaw/ "http://vis.pku.edu.cn/mddv/jigsaw/")
   
-Visualization Software Download <a title="http://vis.pku.edu.cn/software/" href="http://vis.pku.edu.cn/software/" rel="nofollow">http://vis.pku.edu.cn/software/</a>
+Visualization Software Download [http://vis.pku.edu.cn/software/](http://vis.pku.edu.cn/software/ "http://vis.pku.edu.cn/software/")
 
 来自北京大学、中国人民大学、中国科学院、北京航天航空大学、北京林业大学、京东、百度、网易、搜狐、豆瓣、凡客诚品、工业和信息化部等高校、公司、政府单位的可视化爱好者积极与嘉宾互动，围绕主题展开了深入讨论。
 

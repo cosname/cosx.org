@@ -74,7 +74,7 @@ geojsonMap(dat, <span class="hljs-string">"city"</span>,
            palette = <span class="hljs-string">"Reds"</span>, legendTitle = <span class="hljs-string">"AQI"</span>)</pre>
   
   <p>
-    猛击图片查看这个可交互的地图吧！<br /> <a href="http://langdawei.com/reveal_slidify/cos/ldw/aqi.html">![](https://cos.name/wp-content/uploads/2017/02/leaflet.png)</a>
+    猛击图片查看这个可交互的地图吧！<br /> [![](https://cos.name/wp-content/uploads/2017/02/leaflet.png)](http://langdawei.com/reveal_slidify/cos/ldw/aqi.html)
   </p>
   
   <p>
@@ -90,7 +90,7 @@ geojsonMap(dat, <span class="hljs-string">"city"</span>,
   </p>
   
   <p>
-    leafletCN是一个基于<a href="https://github.com/rstudio/leaflet">leaflet</a>的中国扩展包, 里面保存了一些适用于中国的区域划分数据以及一些有帮助的函数, 地理区划数据来源于github的<a href="https://github.com/longwosion/geojson-map-china">geojson-map-china</a>项目. 数据细分到县级市.
+    leafletCN是一个基于[leaflet](https://github.com/rstudio/leaflet)的中国扩展包, 里面保存了一些适用于中国的区域划分数据以及一些有帮助的函数, 地理区划数据来源于github的[geojson-map-china](https://github.com/longwosion/geojson-map-china)项目. 数据细分到县级市.
   </p>
 </div>
 
@@ -297,11 +297,11 @@ geojsonMap(dat,"china")</pre>
   </p>
   
   <p>
-    如果你看到这里还没有走, 说明你还是有心找彩蛋的, 或者你什么都没看, 但是本文没啥彩蛋, 只有我的<a href="http://github.com/lchiffon/leafletCN">github求赞</a>.
+    如果你看到这里还没有走, 说明你还是有心找彩蛋的, 或者你什么都没看, 但是本文没啥彩蛋, 只有我的[github求赞](http://github.com/lchiffon/leafletCN).
   </p>
   
   <p>
-    然后, 如果想了解leafletCN背后强大的leaflet家族, 可以查看它的<a href="http://rstudio.github.com/leaflet">官方文档</a>, 或者我写的这个<a href="http://langdawei.com/leafletIntro/leafletSlides.html">小分享</a>.
+    然后, 如果想了解leafletCN背后强大的leaflet家族, 可以查看它的[官方文档](http://rstudio.github.com/leaflet), 或者我写的这个[小分享](http://langdawei.com/leafletIntro/leafletSlides.html).
   </p>
   
   <p>

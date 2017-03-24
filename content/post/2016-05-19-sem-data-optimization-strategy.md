@@ -31,7 +31,7 @@ slug: sem-data-optimization-strategy
 
 广告以图1中右侧方框框出的“推广链接”为标识。广告语(左侧中间方框)被称为“创意”，由广告主根据关键词内容撰写，第一行为“标题”、余下为“描述”；创意中与搜索词匹配度最高的部分以红色显示，称为“飘红”；“显示URL”(左侧下方方框)可用来识别购买广告的广告主。创意和显示url合并在一起，组成一条完整的关键词广告。广告主为每一个关键词设定一个“出价”，当多个广告主同时购买一个关键词，出价是决定各广告主广告排名的关键性因素。广告被点击时，广告主向搜索引擎支付一定费用。上述说明对SEM广告的业务逻辑进行了适度简化，有兴趣的读者请查阅相关文档。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/H92YQSI75A9XBAIU7VPH.png">![H92YQSI75}A9X[BA{IU7VPH](https://cos.name/wp-content/uploads/2016/05/H92YQSI75A9XBAIU7VPH.png)</a>                        图1百度搜索结果页SEM广告示意图</pre>
+<pre>![H92YQSI75}A9X[BA{IU7VPH](https://cos.name/wp-content/uploads/2016/05/H92YQSI75A9XBAIU7VPH.png)                        图1百度搜索结果页SEM广告示意图</pre>
 
 “行业关键词样本”，是自图1左侧上方方框中客户输入的搜索词中选取出来的一个样本。之后通过爬虫或搜索引擎提供的API接口，轮循抓取并记录搜索每个关键词时结果页上呈现的广告，即为“样本关键词激发的SEM广告”数据。具体的数据获取方式如下：
 
@@ -39,11 +39,11 @@ slug: sem-data-optimization-strategy
 
 品牌观察模型采取分层抽样的方式选取样本。分层标准是行业词库中的分类及子类。表1提供部分关键词示例。分类中的“通用词”指可以标识行业的关键词，“产品词”是能够标示某一种产品/服务的关键词，“品牌词”包含行业中某一公司的品牌名称。对每一分类都可进一步细分，通常至少会将品牌词按照关键词对应的品牌细分。一个成熟的SEM账户通常会涵盖各个类别的关键词，以便全面接触具有各种搜索习惯、处于购买决策各个阶段的潜在客户；这是品牌观察模型在对关键词进行抽样时选择分层抽样方法的主要原因。“搜索量”表示搜索此关键词的用户数量大小，此处有模糊化处理。搜索量由搜索引擎通过API接口提供，按照一定时间周期更新。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/5652.tmp_.png">![5652.tmp](https://cos.name/wp-content/uploads/2016/05/5652.tmp_.png)</a></pre>
+<pre>![5652.tmp](https://cos.name/wp-content/uploads/2016/05/5652.tmp_.png)</pre>
 
 本案例共选择了3,300个关键词样本。在从百度抓取样本关键词激发的广告时，可供选择的方式有爬虫和百度提供的搜索实况API两种。前者适用于任何搜索引擎；但需自行开发部署抓取程序，其稳定性面临搜索引擎封禁等问题的挑战。以外，过于频繁的抓取频率会降低关键词的点击率，进而影响关键词的排名位置。因此抓取页面的频率不可过于频繁。后者在开发成本和稳定性方面表现相对较好，不会影响关键词点击率；但不能移植到其他搜索引擎，且获取配额有一定门槛，需求量过大还需向百度支付费用。本案例使用公司现有的免费搜索实况API，所得数据如被表2所示：
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/BF15.tmp_.png">![BF15.tmp](https://cos.name/wp-content/uploads/2016/05/BF15.tmp_.png)</a></pre>
+<pre>![BF15.tmp](https://cos.name/wp-content/uploads/2016/05/BF15.tmp_.png)</pre>
 
 <table style="height: 5px;" width="586">
   <tr>
@@ -54,11 +54,11 @@ slug: sem-data-optimization-strategy
 
 本案例在抓取广告时，将一天分为4个等长时段，每个时段对全部样本关键词抓取一遍其在北京(不同地区的广告展示结果可能不同)的广告展现结果，并令一个关键词在某一时段内的抓取时间服从均匀分布。以2016年3月28日至4月3日一周为例，共回收67.9万条广告，共有2,713个广告主至少有一次广告展现，平均每次搜索展现14.1条广告。表3是抓取数据中回收到的每个广告主的广告数量、每个广告主购买的关键词个数这两个变量的四分位数。两个变量的分布都严重右偏，少数广告主占领了绝大多数广告展现资源，大量中小广告主仅进行非常小规模的投放。中位数之下的广告主绝大部分并不从事职业教育培训，只是偶然购买了关键词样本中的一个关键词。例如代理会计服务行业广告主也会购买关键词样本中的关键词“会计”。删除这些非本行业的数据，留下1,677个广告主。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/290F.tmp_.png">![290F.tmp](https://cos.name/wp-content/uploads/2016/05/290F.tmp_.png)</a></pre>
+<pre>![290F.tmp](https://cos.name/wp-content/uploads/2016/05/290F.tmp_.png)</pre>
 
 通常行业领先的广告主更关注与其规模相当或接近的竞争者，表4选择了包括客户A在内的、占有广告资源最多的5个广告主，展示它们占用广告资源的基本情况。A是5个广告主中广告展现最多的一个，同时其关键词平均排名也远低于竞争对手。这通常意味着，广告主A为了维持更好的关键词展现位置，采用了普遍的高出价策略以维持大量关键词在更好的排名位置展现；它正是造成之前提到的、推广成本快速增加的主要原因。其他四个竞争对手在关键词数量上与A相差不多，出价策略相对保守，因此其展现位置明显偏低(平均排名数值更大)、同时会有更多广告不能展现的情况(每个关键词平均展现广告数较A明显偏低)。综上，A以高额的广告费用维持了更充分地曝光，竞争者B、C、D、E的出价策略远不如A激进，有利于控制成本，但牺牲了部分曝光量和更好的展现位置。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/A69E.tmp_.png">![A69E.tmp](https://cos.name/wp-content/uploads/2016/05/A69E.tmp_.png)</a>
+<pre>![A69E.tmp](https://cos.name/wp-content/uploads/2016/05/A69E.tmp_.png)
 </pre>
 
 #### ****三、********分析方法与实施****
@@ -77,7 +77,7 @@ slug: sem-data-optimization-strategy
 
 <!--StartFragment -->
 
-<pre>![](file:///C:\Users\Administrator\AppData\Roaming\Tencent\Users\2838398402\QQ\WinTemp\RichOle\86}QAT_B4ORVNK4E}3B~ZG1.png)<a href="https://cos.name/wp-content/uploads/2016/05/86QAT_B4ORVNK4E3BZG1.png">![86}QAT_B4ORVNK4E}3B~ZG1](https://cos.name/wp-content/uploads/2016/05/86QAT_B4ORVNK4E3BZG1.png)</a>                             图2行业层面-截面-示意图
+<pre>![](file:///C:\Users\Administrator\AppData\Roaming\Tencent\Users\2838398402\QQ\WinTemp\RichOle\86}QAT_B4ORVNK4E}3B~ZG1.png)![86}QAT_B4ORVNK4E}3B~ZG1](https://cos.name/wp-content/uploads/2016/05/86QAT_B4ORVNK4E3BZG1.png)                             图2行业层面-截面-示意图
 
 </pre>
 
@@ -115,7 +115,7 @@ SEM投放涉及很多具体工作，例如应选取哪些关键词、如何设�
 
 3、在进行品牌攻防时，广告主既会购买包含自己品牌名称的关键词，也会购买包含竞品品牌的关键词以抢夺对方市场份额。广告主与品牌实际上是一一对应的同一批实体，在涉及购买关键词行为时，以“广告主”来称呼这一实体，而在同一实体作为被同行攻击的对象时，则称其为“品牌”
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/9820.tmp_.png">![9820.tmp](https://cos.name/wp-content/uploads/2016/05/9820.tmp_.png)</a></pre>
+<pre>![9820.tmp](https://cos.name/wp-content/uploads/2016/05/9820.tmp_.png)</pre>
 
 <table>
   <tr>
@@ -132,7 +132,7 @@ SEM投放涉及很多具体工作，例如应选取哪些关键词、如何设�
 
 在分析时，可以将直接以来表示广告主之间的竞争强度，也可以对加权，构造综合指数。综合了更多因素，可以更为全面地反映一个品牌的推广力度，但是这个指标的业务意义相对不如直接清晰；在实际应用中，通常会将它们结合在一起使用。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/YV9NLQCCFG31A9YJ1FM.png">![YV9$`NLQC]CFG31A[9YJ1FM](https://cos.name/wp-content/uploads/2016/05/YV9NLQCCFG31A9YJ1FM.png)</a></pre>
+<pre>[![YV9$`NLQC]CFG31A[9YJ1FM](https://cos.name/wp-content/uploads/2016/05/YV9NLQCCFG31A9YJ1FM.png)](https://cos.name/wp-content/uploads/2016/05/YV9NLQCCFG31A9YJ1FM.png)</pre>
 
 表6可从三个方向解读：
 
@@ -158,20 +158,20 @@ SEM投放涉及很多具体工作，例如应选取哪些关键词、如何设�
 
 <!--StartFragment -->
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/5IXBDTQ0DYNS0RLO5OQA8H.png">![5IXBDTQ0DYNS0RLO5OQ]A8H](https://cos.name/wp-content/uploads/2016/05/5IXBDTQ0DYNS0RLO5OQA8H.png)</a>
+<pre>[![5IXBDTQ0DYNS0RLO5OQ]A8H](https://cos.name/wp-content/uploads/2016/05/5IXBDTQ0DYNS0RLO5OQA8H.png)](https://cos.name/wp-content/uploads/2016/05/5IXBDTQ0DYNS0RLO5OQA8H.png)
 
                   图3策略层面-截面-关键词购买结构-示意图</pre>
 
 第二个方向主要考察广告主整体排名策略的激进程度，可用于推断竞争者的成本规模，并提供调整重点关键词排名的建议。首先，在整体投放的层面上，对各主要竞争对手的出价策略做出定位，具体参考图4。图中每一条线代表一个广告主；横轴数字代表广告排名，多条广告从左侧最上方开始、从左至右从上至下统一编号；纵轴表示抓取到的某个广告主的全部广告在各个排名上的分布比例。沿用行业层面分析部分的符号，表示抓取到第i个广告主关于第j个关键词的广告条数，表示抓取到的各条广告的排名。对广告主i，统计的频数分布，生成序列分别表示抓取到的广告主i所有广告中展现时排在第1位、第2位、……的广告条数，易知；图4中各排名对应的纵轴指标计算方式为。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/E_6L682BN_YAIARDV.png">![E_6L68[2BN_Y{AIA]]R${DV](https://cos.name/wp-content/uploads/2016/05/E_6L682BN_YAIARDV.png)</a>
+<pre>[![E_6L68[2BN_Y{AIA]]R${DV](https://cos.name/wp-content/uploads/2016/05/E_6L682BN_YAIARDV.png)](https://cos.name/wp-content/uploads/2016/05/E_6L682BN_YAIARDV.png)
                  图4策略层面-截面-关键词整体出价策略-示意图</pre>
 
 如前所述，广告排名越靠前，广告主需要支付的成本通常越高。图4中曲线左侧位置越高，表明该广告主为所购买的关键词设定的出价策略越激进，从而其推广成本越高。当然，推广成本还受到购买关键词规模等因素的影响，但是进入本部分分析的通常都是购买关键词规模相当的竞争者，因此在图4的分析中并未这一因素。
 
 图4帮助广告主对竞品的总体出价策略做出判断。当广告主需要针对竞品出价情况来调整自身的出价策略时，可参考图5。图中最上方的条形代表使用品牌观察模型的客户A，其下的每一条形代表它关注的一个主要竞品，条形的长度代表广告主购买的关键词个数。每一个竞品的条形由蓝色、红色和黄色三个色块组成：蓝色部分代表该竞争对手购买、而客户A没有购买的关键词个数；与之相对应，竞品条形左侧的空白区域代表客户A购买、而该竞争对手没有购买的关键词个数。红色与黄色的部分合并在一起，表示客户A和该竞争对手同时购买的关键词个数，红色部分表示竞争对手的广告排位在客户A之上，黄色部分表示竞争对手的广告排位在客户A之下。每个色块均能对应到具体的关键词及其排名情况。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/DGOG2ZX2_VIGJH@7.png">![DG`OG2])ZX2_V`IGJ$%H@(7](https://cos.name/wp-content/uploads/2016/05/DGOG2ZX2_VIGJH@7.png)</a>
+<pre>[![DG`OG2])ZX2_V`IGJ$%H@(7](https://cos.name/wp-content/uploads/2016/05/DGOG2ZX2_VIGJH@7.png)](https://cos.name/wp-content/uploads/2016/05/DGOG2ZX2_VIGJH@7.png)
 
                   图5策略层面-截面-关键词排名占优情况-示意图</pre>
 
@@ -183,17 +183,17 @@ SEM投放涉及很多具体工作，例如应选取哪些关键词、如何设�
 
 1、将抓取的广告数据，抽取掉时间及排名，将展现url替换为对应的广告主名称，按照“广告主+关键词+创意标题+创意描述+标题飘红+描述飘红”去重，并生成计数；再按照关键词，将关键词抽样中的关键词检索量补充到结果中。得到如表7所示的数据。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/B7D2.tmp_.png">![B7D2.tmp](https://cos.name/wp-content/uploads/2016/05/B7D2.tmp_.png)</a></pre>
+<pre>![B7D2.tmp](https://cos.name/wp-content/uploads/2016/05/B7D2.tmp_.png)</pre>
 
 表7的数据可供使用者按照在市场上的展现机会多少来筛选创意，但是对于需要掌握整个市场和主要竞争对手创意热点的使用者来说，它的数据量仍然过于庞大。以本例所使用的抽样词表和抓取规则为例，即使只考虑少量主要竞争对手，完整的表7也有数万行记录。同时，这种以整条创意为单位的统计结果，也不利于阅读者总结提炼。以表7中的创意为例，其中“专注IT教育”主打消费者对“专业”培训机构的诉求；“50万学员的共同选择”、“金牌讲师”则从用户规模和师资力量角度打消消费者对于“教学质量”的疑虑。也就是说，每一条创意都有可能糅合了多个诉求点，从创意中拆解出的诉求点及其对应的具体表达方式比完整的创意文本更适合阅读。接下来讨论如何对创意文本进行拆分、归类和汇总。
 
 2、拆分文本的关键问题之一是决定拆分的粒度。以字或单词为单位的拆分通常不能完整表达一个意思。以上例子中“专注IT教育”如果被拆分成了“专注”、“IT”和“教育”，阅读者将难以解读出“专业”的诉求点。因此字或单词不是合适的拆分维度。但如前讨论，拆分也不可过粗，因为过粗的拆分不利于归类汇总、总结规律。品牌观察模型采取的方式是：将创意文本(标题+描述)中的飘红部分替换为分隔符，将创意文本中与关键词一致的部分替换为分隔符，将创意文本中的所有标点符号替换为分隔符。将创意文本按照分隔符拆分开，与飘红及关键词合并。合并后的每一条文本，按照分隔符拆开，计算素材的频数，再以广告记录数和搜索量加权得到素材的曝光指数。最后，去掉广告主，按照素材对曝光指数进行加总。数据加工过程如表8所示：
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/9BA9.tmp_.png">![9BA9.tmp](https://cos.name/wp-content/uploads/2016/05/9BA9.tmp_.png)</a></pre>
+<pre>![9BA9.tmp](https://cos.name/wp-content/uploads/2016/05/9BA9.tmp_.png)</pre>
 
 将素材分类补充到表8第4步的数据中，按照“广告主+创意点”对曝光指数进行加总，得到如图6所示的图形。图6中每一个柱体的高度代表某一个广告主在创意中使用某一类创意点的力度大小。每一列表示一个广告主如何塑造自己的品牌形象，每一行表示某一创意点是否是市场上的宣传热点或盲区。3、对表8中第5步数据按照曝光指数降序排列，即可截取到那些最多地被展现在消费者面前的素材；将第4步数据按广告主分开，对每个广告主素材按照曝光指数倒叙排列，截取每个广告主最集中使用的素材。将两部分素材合并后去重。在初次使用品牌观察模型时，需要对这些素材按照诉求进行归类，每一类诉求称为一个“创意点”；此后每次使用时，只需将新增的高频素材加入到分类中。新增高频素材本身代表了市场的异常变化，如有此类情况发生，应随同产生明细报表。
 
-<pre><a href="https://cos.name/wp-content/uploads/2016/05/@@A@6PT8PRWCPH0D__M.png">![@{@`A@6PT8PRW(CPH0D_`_M](https://cos.name/wp-content/uploads/2016/05/@@A@6PT8PRWCPH0D__M.png)</a>
+<pre>![@{@`A@6PT8PRW(CPH0D_`_M](https://cos.name/wp-content/uploads/2016/05/@@A@6PT8PRWCPH0D__M.png)
 
                          图6：策略层面-截面-创意-示意图</pre>
 

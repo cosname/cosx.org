@@ -23,14 +23,14 @@ slug: statistics-in-chinese-song-poem-2
 > 诗云处于已消失的太阳系所在的位置，是一片直径为一百个天文单位的旋涡状星云，形状很像银河系。空心地球处于诗云边缘，与原来太阳在银河系中的位置也很相似，不同的是地球的轨道与诗云不在同一平面，这就使得从地球上可以看到诗云的一面，而不是像银河系那样只能看到截面。
 > 
 > <p style="text-align: right;">
->   ——刘慈欣《<a title="诗云" href="http://tieba.baidu.com/f?kz=81340576" target="_blank">诗云</a>》
+>   ——刘慈欣《[诗云](http://tieba.baidu.com/f?kz=81340576 "诗云")》
 > </p>
 
 <p style="text-align: left;">
-  时光荏苒，距离<a href="/2011/03/statistics-in-chinese-song-poem-1/" target="_blank">上次论词</a>已经过去了一年。今天我们接着这一话题，不过这回要看的是词牌和作者。
+  时光荏苒，距离[上次论词](/2011/03/statistics-in-chinese-song-poem-1/)已经过去了一年。今天我们接着这一话题，不过这回要看的是词牌和作者。
 </p>
 
-既然数据库里面有词牌和作者的记录，那么一个很自然的疑问是，哪些词牌被使用的频率最高？又有哪些词人的词作最为丰盛？这两个问题并不困难，只需要对他们进行频率统计然后排序即可。以下是R语言的代码和结果（<a href="https://cos.name/wp-content/uploads/2011/03/SongPoem.tar.gz" target="_blank">数据下载地址</a>）：
+既然数据库里面有词牌和作者的记录，那么一个很自然的疑问是，哪些词牌被使用的频率最高？又有哪些词人的词作最为丰盛？这两个问题并不困难，只需要对他们进行频率统计然后排序即可。以下是R语言的代码和结果（[数据下载地址](https://cos.name/wp-content/uploads/2011/03/SongPoem.tar.gz)）：
 
 <!--more-->
 
@@ -112,7 +112,7 @@ r2</pre>
 对于这个疑问，一个很直接的想法是做出词人与词牌的对应关系。在《全宋词》的数据中，共有1377位词人和876个词牌，那么我们就可以构造一个1377*876的0-1矩阵，取1的元素表示这一行所对应的词人使用了这一列对应的词牌。我们将这个矩阵变成一张图片，每一个像素点就是矩阵的一个元素，黑色的部分是0，白色的部分是1，结果就会是下面这样：
 
 <p style="text-align: left;">
-  <a href="https://cos.name/wp-content/uploads/2012/03/original.png">![统计词话（二）——词人与词牌对应关系](https://cos.name/wp-content/uploads/2012/03/original.png)</a>从这张“夜空中的星星”我们可以发现，绝大部分的点都被黑色所占据，这其实很容易理解：一个词人不可能写过所有的词牌，一个词牌也不可能人人都会去写。然而我们会注意到一个问题——“星星”隔得太远了。在黑色的背景中，这些“星星”零散地分布在夜空中的各个角落，而出于一种“星星相惜”的心情，我们似乎希望能把那些最亮的“星”聚在一起。
+  ![统计词话（二）——词人与词牌对应关系](https://cos.name/wp-content/uploads/2012/03/original.png)从这张“夜空中的星星”我们可以发现，绝大部分的点都被黑色所占据，这其实很容易理解：一个词人不可能写过所有的词牌，一个词牌也不可能人人都会去写。然而我们会注意到一个问题——“星星”隔得太远了。在黑色的背景中，这些“星星”零散地分布在夜空中的各个角落，而出于一种“星星相惜”的心情，我们似乎希望能把那些最亮的“星”聚在一起。
 </p>
 
 <p style="text-align: left;">
@@ -124,7 +124,7 @@ r2</pre>
 </p>
 
 <p style="text-align: left;">
-  <a href="https://cos.name/wp-content/uploads/2012/03/seriate.png">![统计词话（二）——矩阵排序](https://cos.name/wp-content/uploads/2012/03/seriate.png)</a>很明显，这张图中“星星”变得更加集中，放眼望去，就好像是文字和名字交织成的两条银河。让我们把目光聚焦到“星星”最密集的地方，最后可以得到以下这几个“星团”（只选取了若干最有代表性的）：
+  ![统计词话（二）——矩阵排序](https://cos.name/wp-content/uploads/2012/03/seriate.png)很明显，这张图中“星星”变得更加集中，放眼望去，就好像是文字和名字交织成的两条银河。让我们把目光聚焦到“星星”最密集的地方，最后可以得到以下这几个“星团”（只选取了若干最有代表性的）：
 </p>
 
 <table align="center">
@@ -706,7 +706,7 @@ corrplot(M.AOE);
 corrRect(c(4, 2, 5));</pre>
 
 <p style="text-align: left;">
-  <a href="https://cos.name/wp-content/uploads/2012/03/order.png">![统计词话（二）——相关系数矩阵排序](https://cos.name/wp-content/uploads/2012/03/order.png)</a>关于双向聚类只是在这里做一个简单的介绍，如果对此感兴趣，还可以继续搜索相关的文献，例如这篇<a href="http://innar.com/Liiv_Seriation.pdf" target="_blank">综述文章</a>。
+  ![统计词话（二）——相关系数矩阵排序](https://cos.name/wp-content/uploads/2012/03/order.png)关于双向聚类只是在这里做一个简单的介绍，如果对此感兴趣，还可以继续搜索相关的文献，例如这篇[综述文章](http://innar.com/Liiv_Seriation.pdf)。
 </p>
 
 <p style="text-align: center;">

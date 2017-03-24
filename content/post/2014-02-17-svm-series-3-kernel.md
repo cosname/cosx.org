@@ -12,7 +12,7 @@ tags:
 slug: svm-series-3-kernel
 ---
 
-_![two_circles](https://cos.name/wp-content/uploads/2014/02/two_circles.png)_原文链接请点击_<a href="http://blog.pluskid.org/?p=685" target="_blank">这里</a>_
+_![two_circles](https://cos.name/wp-content/uploads/2014/02/two_circles.png)_原文链接请点击_[这里](http://blog.pluskid.org/?p=685)_
 
 前面我们介绍了线性情况下的支持向量机，它通过寻找一个线性的超平面来达到对数据进行分类的目的。不过，由于是线性方法，所以对非线性的数据就没有办法处理了。例如图中的两类数据，分别分布为两个圆圈的形状，不论是任何高级的分类器，只要它是线性的，就没法处理，SVM 也不行。因为这样的数据本身就是线性不可分的。
 

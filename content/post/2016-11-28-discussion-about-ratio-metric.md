@@ -30,7 +30,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2 c5">
-  <a href="https://cos.name/wp-content/uploads/2016/11/image01.jpg">![image01](https://cos.name/wp-content/uploads/2016/11/image01.jpg)</a>
+  ![image01](https://cos.name/wp-content/uploads/2016/11/image01.jpg)
 </p>
 
 <p class="p1">
@@ -46,7 +46,7 @@ slug: discussion-about-ratio-metric
 #### 问题二：极端值的处理。 {.c2}
 
 <p class="c2">
-  因为用户的行为千奇百怪，为了减小方差提高估计效率，我们一般会对结果里面的极端值进行处理（要么直接移除出数据集，要么给其一个上下限，即 capping）。这样的处理亦可以保证中心极限定理收敛——互联网的用户行为数据多呈现重尾分布（<span class="c7"><a class="c1" href="https://en.wikipedia.org/wiki/Heavy-tailed_distribution">heavy-tail distribution</a></span>）， 即超越了指数分布的界限（此处沿用wiki上重尾分布的定义），此时中心极限定理及bootstrap都会可能失效。如果我们不去衡量尾部，那么人为的给一个上下界就是保证一二阶矩存在的简单处理办法。
+  因为用户的行为千奇百怪，为了减小方差提高估计效率，我们一般会对结果里面的极端值进行处理（要么直接移除出数据集，要么给其一个上下限，即 capping）。这样的处理亦可以保证中心极限定理收敛——互联网的用户行为数据多呈现重尾分布（<span class="c7">[heavy-tail distribution](https://en.wikipedia.org/wiki/Heavy-tailed_distribution)</span>）， 即超越了指数分布的界限（此处沿用wiki上重尾分布的定义），此时中心极限定理及bootstrap都会可能失效。如果我们不去衡量尾部，那么人为的给一个上下界就是保证一二阶矩存在的简单处理办法。
 </p>
 
 #### 问题三：用户行为的时间自相关。 {.c2}
@@ -72,7 +72,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  <a href="https://cos.name/wp-content/uploads/2016/11/image02.png">![image02](https://cos.name/wp-content/uploads/2016/11/image02.png)</a> <a href="https://cos.name/wp-content/uploads/2016/11/image03.png">![image03](https://cos.name/wp-content/uploads/2016/11/image03.png)</a>
+  ![image02](https://cos.name/wp-content/uploads/2016/11/image02.png) ![image03](https://cos.name/wp-content/uploads/2016/11/image03.png)
 </p>
 
 <p class="c2">
@@ -116,7 +116,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  <a href="https://www.emaze.com/@AOZCFQQR/Chemistry-Project）">![image04](https://cos.name/wp-content/uploads/2016/11/image04.jpg)</a>
+  [![image04](https://cos.name/wp-content/uploads/2016/11/image04.jpg)](https://www.emaze.com/@AOZCFQQR/Chemistry-Project）)
 </p>
 
 <p class="c2">
@@ -128,7 +128,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="c2">
-  对于比率指标，平均效应可以直接计算，而其方差的估计没有显式解，一般通过泰勒展开的到delta method的近似解…（参见：<span class="c7"><a class="c1" href="http://web.stanford.edu/class/cme308/OldWebsite/notes/TaylorAppDeltaMethod.pdf">TaylorAppDeltaMethod.pdf</a></span> ，第六页第二个公式）。
+  对于比率指标，平均效应可以直接计算，而其方差的估计没有显式解，一般通过泰勒展开的到delta method的近似解…（参见：<span class="c7">[TaylorAppDeltaMethod.pdf](http://web.stanford.edu/class/cme308/OldWebsite/notes/TaylorAppDeltaMethod.pdf)</span> ，第六页第二个公式）。
 </p>
 
 <p class="c2">
@@ -202,7 +202,7 @@ slug: discussion-about-ratio-metric
 </p>
 
 <p class="p1">
-  <strong><span class="s1"><i>版权声明：本文参考作者首发于 </i><a href="http://www.ebaytechblog.com"><span class="s2"><i>eBay Techblog</i></span></a><i> 的 Significance Test for Ratio Metrics in Experiments 一文，并在翻译的过程中进行了适当内容扩展以易于阅读。英文版权属于eBay Techblog所有，中文版权归译者。</i></span></strong>
+  <strong><span class="s1"><i>版权声明：本文参考作者首发于 </i>[<span class="s2"><i>eBay Techblog</i></span>](http://www.ebaytechblog.com)<i> 的 Significance Test for Ratio Metrics in Experiments 一文，并在翻译的过程中进行了适当内容扩展以易于阅读。英文版权属于eBay Techblog所有，中文版权归译者。</i></span></strong>
 </p>
 
 <p class="p3">
