@@ -119,7 +119,7 @@ title(" 中国地图")
 比如：
 
 ```
-\&gt; geocode("Beijing")
+> geocode("Beijing")
        lon      lat
 1 116.4075 39.90403</pre>
 ```
