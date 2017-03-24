@@ -15,11 +15,11 @@ tags:
 slug: 1st-data-mining-competetion-for-college-students
 ---
 
-## ![](https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png "数据挖掘竞赛")竞赛背景
+## ![数据挖掘竞赛](https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png)竞赛背景
 
-<a href="http://www.yuanhuaibin.com/?p=727" target="_blank">Amazon</a>的数百万图书，<a href="http://en.wikipedia.org/wiki/Netflix_Prize" target="_blank">Netflix</a>的10万部电影，淘宝的8亿件在线商品，以及数以亿万计用户的资料和行为记录……互联网最近十年的迅猛发展伴随着海量数据的积累。然而，在线用户常常面对过多的选择而显得无所适从。心理学研究证实，这类情境下的用户有时会做出放弃交易的决定，从而造成大量潜在的用户流失。针对这一现象，统计技术的发展能够为在线服务商提供更有效的推荐算法，在帮助用户走出<a href="http://www.columbia.edu/%7Ess957/whenchoice.html" target="_blank">信息过载</a>困境、改善用户体验的同时，还能够挖掘商品<a href="http://en.wikipedia.org/wiki/Long_Tail" target="_blank">长尾</a>、提升企业价值。在今天，用户不再局限于通过搜索引擎来寻找感兴趣的信息，推荐系统无所不在地为我们发现自己的潜在需求。
+[Amazon](http://www.yuanhuaibin.com/?p=727)的数百万图书，[Netflix](http://en.wikipedia.org/wiki/Netflix_Prize)的10万部电影，淘宝的8亿件在线商品，以及数以亿万计用户的资料和行为记录……互联网最近十年的迅猛发展伴随着海量数据的积累。然而，在线用户常常面对过多的选择而显得无所适从。心理学研究证实，这类情境下的用户有时会做出放弃交易的决定，从而造成大量潜在的用户流失。针对这一现象，统计技术的发展能够为在线服务商提供更有效的推荐算法，在帮助用户走出[信息过载](http://www.columbia.edu/%7Ess957/whenchoice.html)困境、改善用户体验的同时，还能够挖掘商品[长尾](http://en.wikipedia.org/wiki/Long_Tail)、提升企业价值。在今天，用户不再局限于通过搜索引擎来寻找感兴趣的信息，推荐系统无所不在地为我们发现自己的潜在需求。
 
-推荐系统在社交网络中的应用同样受到业界重视。本届统计建模竞赛由上海花千树信息科技有限公司赞助，由<a href="http://stat.ustc.edu.cn/" target="_blank">中国科学技术大学管理学院</a>、<a href="http://stat.ruc.edu.cn/cn/" target="_blank">中国人民大学统计学院</a>和<a href="../" target="_blank">统计之都</a>（COS）网站联合举办，目标是为某个以婚恋为目的的大型交友网站提供会员推荐的智能算法，改善会员推荐的精度，增加网站黏度。
+推荐系统在社交网络中的应用同样受到业界重视。本届统计建模竞赛由上海花千树信息科技有限公司赞助，由[中国科学技术大学管理学院](http://stat.ustc.edu.cn/)、[中国人民大学统计学院](http://stat.ruc.edu.cn/cn/)和[统计之都](../)（COS）网站联合举办，目标是为某个以婚恋为目的的大型交友网站提供会员推荐的智能算法，改善会员推荐的精度，增加网站黏度。
 
 ## 参赛资格
 
@@ -37,7 +37,7 @@ slug: 1st-data-mining-competetion-for-college-students
 
 ## 参与方式
 
-本次竞赛的主页为<a href="http://www.statmodelingcompetition.com/" target="_blank">http://www.statmodelingcompetition.com/</a>。数据的下载及说明，参赛队伍的注册，结果的提交等都在竞赛主页进行。
+本次竞赛的主页为[http://www.statmodelingcompetition.com/](http://www.statmodelingcompetition.com/)。数据的下载及说明，参赛队伍的注册，结果的提交等都在竞赛主页进行。
 
 ## 在线排名
 
@@ -45,7 +45,7 @@ slug: 1st-data-mining-competetion-for-college-students
 
 ## 竞赛相关问题咨询
 
-请先阅读<a title="常见问题解答" href="http://www.statmodelingcompetition.com/faq.html" target="_blank">常见问题解答</a>，如果疑问依然存在 ，请到统计之都论坛的<a href="https://cos.name/cn/topic/103779" target="_blank">竞赛答疑专帖</a>进行提问。允许的问题包括竞赛题目本身、数据、网站访问和比赛流程等，非此类问题（如算法细节）将不予答复并删除。
+请先阅读[常见问题解答](http://www.statmodelingcompetition.com/faq.html "常见问题解答")，如果疑问依然存在 ，请到统计之都论坛的[竞赛答疑专帖](https://cos.name/cn/topic/103779)进行提问。允许的问题包括竞赛题目本身、数据、网站访问和比赛流程等，非此类问题（如算法细节）将不予答复并删除。
 
 ## 奖项设置
 
@@ -67,10 +67,10 @@ slug: 1st-data-mining-competetion-for-college-students
 
 ## 主办单位
 
-  * <a href="http://stat.ustc.edu.cn/" target="_blank">中国科学技术大学管理学院</a>
-  * <a href="http://stat.ruc.edu.cn/cn/" target="_blank">中国人民大学统计学院</a>
-  * <a href="https://cos.name/" target="_blank">统计之都</a>
+  * [中国科学技术大学管理学院](http://stat.ustc.edu.cn/)
+  * [中国人民大学统计学院](http://stat.ruc.edu.cn/cn/)
+  * [统计之都](https://cos.name/)
   * 上海花千树信息科技有限公司提供赞助
-  * 竞赛委员会邮箱：<a href="mailto:dataminingcompetition@gmail.com" target="_blank">dataminingcompetition@gmail.com</a>
+  * 竞赛委员会邮箱：[dataminingcompetition@gmail.com](mailto:dataminingcompetition@gmail.com)
 
 **进一步的信息将在竞赛页面及本通知页面进行更新，请及时查看。**

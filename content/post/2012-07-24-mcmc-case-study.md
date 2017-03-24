@@ -18,7 +18,7 @@ tags:
 slug: mcmc-case-study
 ---
 
-> 本文是R中mcmc包的一篇<a href="http://www.stat.umn.edu/geyer/mcmc/library/mcmc/doc/demo.pdf" target="_blank">帮助文档</a>，作者为Charles J.Geyer。经过<a href="https://cos.name/2012/06/reproducible-research-with-knitr/" target="_blank">knitr</a>编译后的pdf文档<a href='http://cloud.github.com/downloads/cosname/editor/mcmc.pdf' target="_blank">可见此处</a>，提供中文译稿的作者：
+> 本文是R中mcmc包的一篇[帮助文档](http://www.stat.umn.edu/geyer/mcmc/library/mcmc/doc/demo.pdf)，作者为Charles J.Geyer。经过[knitr](/2012/06/reproducible-research-with-knitr/)编译后的pdf文档[可见此处](http://cloud.github.com/downloads/cosname/editor/mcmc.pdf)，提供中文译稿的作者：
   
 > 闫超，天津财经大学统计系2011级研究生，方向：非寿险准备金评估。
   

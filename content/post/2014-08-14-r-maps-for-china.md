@@ -23,7 +23,7 @@ slug: r-maps-for-china
 
 ### 1 地图GIS数据的来源与R绘制软件包
 
-中国地图GIS数据的官方数据可以在国家基础地理信息中心的网站（<a href="http://nfgis.nsdi.gov.cn" target="_blank">http://nfgis.nsdi.gov.cn</a>）里面可以免费下载。官方公开的数据包括：地图数据，及居住地、交通、河流等辅助数据。今年6月开始，官方正组织开始制作新版数据。老数据暂时无法下载，读者要自行百度搜索，本文以旧版数据为例。旧版地图数据中部分地名和地市区划已经过时，使用时需注意。
+中国地图GIS数据的官方数据可以在国家基础地理信息中心的网站（[http://nfgis.nsdi.gov.cn](http://nfgis.nsdi.gov.cn)）里面可以免费下载。官方公开的数据包括：地图数据，及居住地、交通、河流等辅助数据。今年6月开始，官方正组织开始制作新版数据。老数据暂时无法下载，读者要自行百度搜索，本文以旧版数据为例。旧版地图数据中部分地名和地市区划已经过时，使用时需注意。
 
 地图数据有4个压缩文件：bou1\_4m.zip、bou2\_4m.zip、bou3\_4m.zip和bou4\_4m.zip。bou代表边界的意思，数字1~4代表国家、省、市、县的4级行政划分；4m代表比例是400万分之一，这个比例的图形是公开的。每个文件解压缩后含有两类文件：以字母p结尾的表示多边形数据，用来绘制区域；以字母l结尾的文件是线形数据，用来绘制边界。但是老版数据中，市级数据中缺少绘制区域的多边形数据，让市级分布图的绘制稍麻烦一些，新版中也许会有改进。
 
@@ -393,10 +393,10 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), color = "white", map 
 ### 参考文献
 
   1. 谢益辉，2007，<http://yihui.name/cn/2007/09/china-map-at-province-level/>
-  2. 邱怡轩，2009，<https://cos.name/2009/07/drawing-china-map-using-r/>
+  2. 邱怡轩，2009，</2009/07/drawing-china-map-using-r/>
   3. 陈丽云，2011，<http://www.loyhome.com/用R画（中国）地图-2/>
   4. 写长城的诗，2012，<http://www.r-bloggers.com/lang/chinese/1010>
-  5. 杨灿，2011，<https://cos.name/2011/12/stories-about-statistical-learning>
+  5. 杨灿，2011，</2011/12/stories-about-statistical-learning>
 
 附：本文所用地图数据[下载](https://cos.name/wp-content/uploads/2014/08/maps_data.7z)
 

@@ -19,15 +19,15 @@ slug: cos-navigation-9
 
 这三周本站共发布了3篇日志：
 
-  * [调和曲线图和轮廓图的比较](https://cos.name/2009/03/parallel-coordinates-and-andrews-curve/)
+  * [调和曲线图和轮廓图的比较](/2009/03/parallel-coordinates-and-andrews-curve/)
   
     魏太云作品：用调和曲线图和轮廓图展示多元数据，并附有详细R代码；
   * [相关矩阵的可视化及其新方法探究
   
-](https://cos.name/2009/03/correlation-matrix-visualization/) 魏太云作品：用圆圈的大小表示相关系数的大小，黑白色填充分别表示正负相关系数，整个相关系数阵一目了然；
+](/2009/03/correlation-matrix-visualization/) 魏太云作品：用圆圈的大小表示相关系数的大小，黑白色填充分别表示正负相关系数，整个相关系数阵一目了然；
   * [统计学博文导读：火箭队比赛与分类树、神经网络与降维
   
-](https://cos.name/2009/03/stat-blog-guide-rocket-cart-nnet/) 统计之都网站文章的新形式：以导读介绍有趣、实用的统计相关博文；本文主要介绍了刘思喆的分类树研究火箭队比赛数据一文以及左辰关于神经网络与降维的思考；
+](/2009/03/stat-blog-guide-rocket-cart-nnet/) 统计之都网站文章的新形式：以导读介绍有趣、实用的统计相关博文；本文主要介绍了刘思喆的分类树研究火箭队比赛数据一文以及左辰关于神经网络与降维的思考；
 
 到现在为止，COS主站已经有15位作者，新学期加入的成员有：
 
@@ -39,7 +39,7 @@ slug: cos-navigation-9
 
 2、左辰
   
-自我介绍：中国人民大学统计学院06本，统计学、应用数学专业.学术兴趣：实分析、数理统计、时间序列分析；BLOG: <a href="http://blog.sina.com.cn/annihiland" target="_blank">http://blog.sina.com.cn/annihiland</a>
+自我介绍：中国人民大学统计学院06本，统计学、应用数学专业.学术兴趣：实分析、数理统计、时间序列分析；BLOG: [http://blog.sina.com.cn/annihiland](http://blog.sina.com.cn/annihiland)
 
 ## 二、论坛
 

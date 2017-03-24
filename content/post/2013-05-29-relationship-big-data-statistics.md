@@ -17,15 +17,15 @@ tags:
 slug: relationship-big-data-statistics
 ---
 
-> 本文转载自施涛的博客，原文链接请<a href="http://blog.cos.name/taoshi/2013/05/29/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%97%B6%E4%BB%A3%E5%92%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E9%9C%80%E6%B1%82%EF%BC%8C%E7%BB%9F%E8%AE%A1%E8%BF%98%E6%B2%BE%E8%BE%B9%E5%90%97%EF%BC%9F/" target="_blank">点击此处</a>。
+> 本文转载自施涛的博客，原文链接请[点击此处](http://blog.cos.name/taoshi/2013/05/29/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%97%B6%E4%BB%A3%E5%92%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E9%9C%80%E6%B1%82%EF%BC%8C%E7%BB%9F%E8%AE%A1%E8%BF%98%E6%B2%BE%E8%BE%B9%E5%90%97%EF%BC%9F/)。
 
-大数据时代的悄然到来和计算能力爆炸式增长，让做统计分析的各类人士不禁要重新打量一下自己的技能包，看看是不是很快要被时代浪潮<a href="http://normaldeviate.wordpress.com/2013/04/13/data-science-the-end-of-statistics/" target="_blank">以大浪淘沙的方式清洗掉了。</a>
+大数据时代的悄然到来和计算能力爆炸式增长，让做统计分析的各类人士不禁要重新打量一下自己的技能包，看看是不是很快要被时代浪潮[以大浪淘沙的方式清洗掉了。](http://normaldeviate.wordpress.com/2013/04/13/data-science-the-end-of-statistics/)
 
 到底大数据是怎么来的呢？可以用来干什么呢？我们就先拿2012美国总统大选来举个例子看看。比如说我们想预测在2012年11月6日，
 
   * **问题1**: 奥巴马和罗姆尼谁当选美国总统？
 
-我们可以用什么数据来做这个预测呢？最常用的就是民调数据了，通过有选择性的挑选一些可能选民来问他们的倾向。这好像是个传统统计干的事。<a href="http://blog.cos.name/taoshi/2012/07/26/john-and-david/" target="_blank">早在1962年John Tukey就已经开始做了</a>。
+我们可以用什么数据来做这个预测呢？最常用的就是民调数据了，通过有选择性的挑选一些可能选民来问他们的倾向。这好像是个传统统计干的事。[早在1962年John Tukey就已经开始做了](http://blog.cos.name/taoshi/2012/07/26/john-and-david/)。
   
 ![4C6ec](https://cos.name/wp-content/uploads/2013/05/4C6ec.jpg)
 
@@ -45,7 +45,7 @@ slug: relationship-big-data-statistics
   
 ![vZH2Tkq](https://cos.name/wp-content/uploads/2013/05/vZH2Tkq.jpg)
 
-（这个数据可视化很灿，还有更酷的<a href="http://www.princeton.edu/~rvdb/JAVA/election2012/" target="_blank">在这里</a>，by <a href="http://www.princeton.edu/~rvdb/" target="_blank">Robert J. Vanderbei</a>, Professor of <a href="http://orfe.princeton.edu/" target="_blank">Operations Research and Financial Engineering</a> at Princeton。看，不是统计学家做的吧。）
+（这个数据可视化很灿，还有更酷的[在这里](http://www.princeton.edu/~rvdb/JAVA/election2012/)，by [Robert J. Vanderbei](http://www.princeton.edu/~rvdb/), Professor of [Operations Research and Financial Engineering](http://orfe.princeton.edu/) at Princeton。看，不是统计学家做的吧。）
 
   * **问题4**: 奥巴马或罗姆尼赢得某个人的选票的机会？
 
@@ -61,7 +61,7 @@ slug: relationship-big-data-statistics
 
 ![t7Kh6hH](https://cos.name/wp-content/uploads/2013/05/t7Kh6hH.png)
   
-问题问了一圈，这些听起来都很是十足的统计分析啊。本应该是统计分析人士应该是施展才华的时代，那为何还会有要被时代淘汰的论调呢？记得Leo Brieman 在<a href="https://cos.name/2012/02/what-is-the-stat-dept-25-years-from-now/" target="_blank">1994年Berkeley 统计系毕业典礼上的讲话</a>中提到的：
+问题问了一圈，这些听起来都很是十足的统计分析啊。本应该是统计分析人士应该是施展才华的时代，那为何还会有要被时代淘汰的论调呢？记得Leo Brieman 在[1994年Berkeley 统计系毕业典礼上的讲话](/2012/02/what-is-the-stat-dept-25-years-from-now/)中提到的：
 
 > 要知道何去何从，我们必须清楚自己真正所擅长的是什么。统计的核心是什么？需要我们是一流的数学家吗？几乎不用。那是什么呢？**成为收集信息，分析信息，并得出结论的专家**！这才是我们真正所擅长的。所以我认为，这正是我们统计学家应有的定位，我们的身份危机才会到解决。
 
@@ -73,7 +73,7 @@ slug: relationship-big-data-statistics
 
 从另一个角度看，我想在拥有与计算机专业的同事相差不算远的计算机技能的基础上，统计专科在数据收集方法（试验设计，抽样方法等），模型选择以及模型对outlier和模型假设的敏感度，在数据支持下对可能结论的批判型思维，以及对结论的不确定型描述等方面还是很大优势的。不过这些方面的技能好像还都不是简单的靠读理论统计课本能直接学习到或证明数学定理能解决的，它们都是在解决实际问题和数据分析的过程中通过不断犯错误来提高的。
 
-当然了，“拥有与计算机专业的同事相差不算远的计算机技能的基础上” 是一个很大很大的需要检验的假设，要拥有这样的基础需要从课程选择，课外导向，个人学习规划等方面出发主动的学习。就像 Michael Jordan，在<a href="http://huati.weibo.com/k/21%E4%B8%96%E7%BA%AA%E7%9A%84%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BC%9A?from=510" target="_blank">#21世纪的计算大会#</a>上做”大数据的分治和统计推断”的<a href="http://blog.cos.name/taoshi/2012/12/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%BB%9F%E8%AE%A1%E7%B2%BE%E5%BA%A6%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E5%BA%A6/" target="_blank">主题演讲</a>中提到的：
+当然了，“拥有与计算机专业的同事相差不算远的计算机技能的基础上” 是一个很大很大的需要检验的假设，要拥有这样的基础需要从课程选择，课外导向，个人学习规划等方面出发主动的学习。就像 Michael Jordan，在[#21世纪的计算大会#](http://huati.weibo.com/k/21%E4%B8%96%E7%BA%AA%E7%9A%84%E8%AE%A1%E7%AE%97%E5%A4%A7%E4%BC%9A?from=510)上做“大数据的分治和统计推断”的[主题演讲](http://blog.cos.name/taoshi/2012/12/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%BB%9F%E8%AE%A1%E7%B2%BE%E5%BA%A6%E4%B8%8E%E8%AE%A1%E7%AE%97%E5%A4%8D%E6%9D%82%E5%BA%A6/)中提到的：
 
 > If you didn’t understand a lot of the talk, it is a bit technical, maybe you should go take some statistics class if you are a computer scientist. If you are a statistician, I don’t know if any of you are here, you probably should take some computer science classes.
 > 

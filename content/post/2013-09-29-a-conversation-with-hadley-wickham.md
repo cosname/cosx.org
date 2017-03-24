@@ -19,7 +19,7 @@ slug: a-conversation-with-hadley-wickham
 
 &nbsp;
 
-<span style="color: #808080;">【COS编辑部按】受访者： <a href="http://had.co.nz/"><span style="color: #808080;">Hadley Wickham</span></a>             采访人：YiXuan</span>
+<span style="color: #808080;">【COS编辑部按】受访者： [<span style="color: #808080;">Hadley Wickham</span>](http://had.co.nz/)             采访人：YiXuan</span>
 
 <span style="color: #808080;">简介：Hadley Wickham 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 <code>ggplot2</code> 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 <code>plyr</code>、<code>reshape2</code> 等。</span>
 
@@ -89,7 +89,7 @@ slug: a-conversation-with-hadley-wickham
 
 **Yixuan**：我们的团队翻译了你的ggplot2书，而且 Winston 的 R Graphics Cookbook 也正在翻译中。你能否给我们介绍一下你的下一本著作，如果我没有说错的话，应该叫做《R高级编程》（[Advanced R Programming](http://adv-r.had.co.nz/)）？
 
-**Hadley**：《R高级编程》的目标是让人们成为更好的R程序员。目前绝大部分关于R的书籍都是教你如何用R来做统计分析的，而很少是介绍编程本身的。Matloff 的[《R语言编程艺术》](https://cos.name/2013/05/the-art-r-programming/)（[Art of R Programming](http://nostarch.com/artofr.htm)）是一本很好的入门和进阶水平的书，而我想要介绍的是那些我认为很酷很强大的R语言特性。为了了解如何使用这些特性，我需要阅读大量的文档，并且我自己也做了很多实验来弄清楚其中的机理。我感兴趣的是如何帮助人们理解并编写高效的、表达力强的R代码。
+**Hadley**：《R高级编程》的目标是让人们成为更好的R程序员。目前绝大部分关于R的书籍都是教你如何用R来做统计分析的，而很少是介绍编程本身的。Matloff 的[《R语言编程艺术》](/2013/05/the-art-r-programming/)（[Art of R Programming](http://nostarch.com/artofr.htm)）是一本很好的入门和进阶水平的书，而我想要介绍的是那些我认为很酷很强大的R语言特性。为了了解如何使用这些特性，我需要阅读大量的文档，并且我自己也做了很多实验来弄清楚其中的机理。我感兴趣的是如何帮助人们理解并编写高效的、表达力强的R代码。
 
 R作为一门编程语言似乎名声不太好，但我觉得那不是事实。我认为R的核心是一门优雅的编程语言，只是因为绝大部分的R用户都不是程序员，所以伴随着这个优雅的核心的，是大量冗长乏味的代码。R其实和 Javascript 很像，有一本书叫做《JavaScript语言精粹》（[JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)），它试图提炼出 Javascript 优雅的一面。而我的书与此类似，不仅是如何教会人们如何编写优雅的R代码，而且试图让问题解决的过程更加简单。当然，这需要介绍一些R背后的机制和理论。
 
@@ -101,6 +101,6 @@ R作为一门编程语言似乎名声不太好，但我觉得那不是事实。�
 
 ![](http://i.imgur.com/ICvLmEQ.jpg)
 
-（Hadley Wickham 和统计之都翻译的[《ggplot2：数据分析与图形艺术》](https://cos.name/2013/05/ggplot2/)）
+（Hadley Wickham 和统计之都翻译的[《ggplot2：数据分析与图形艺术》](/2013/05/ggplot2/)）
 
 [Click here to see the English version](http://statr.me/2013/09/a-conversation-with-hadley-wickham/)

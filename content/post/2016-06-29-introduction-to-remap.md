@@ -166,6 +166,6 @@ plot(out)</code></pre>
 
 ### 参考资料
 
-  * <a href="https://github.com/lchiffon/REmap" target="_blank">Github链接</a>
-  * <a href="http://chiffon.ninja" target="_blank">我的博客：七风阁</a>
-  * <a href="http://lchiffon.github.io/REmap/REmapExamples/Nanchang/?theme=sky#/slide-1" target="_blank">REmap，重新定义你的地图slides</a>
+  * [Github链接](https://github.com/lchiffon/REmap)
+  * [我的博客：七风阁](http://chiffon.ninja)
+  * [REmap，重新定义你的地图slides](http://lchiffon.github.io/REmap/REmapExamples/Nanchang/?theme=sky#/slide-1)

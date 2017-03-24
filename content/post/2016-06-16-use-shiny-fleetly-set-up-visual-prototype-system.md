@@ -14,7 +14,7 @@ slug: use-shiny-fleetly-set-up-visual-prototype-system
 
 **作者**：谢佳标（乐逗游戏，深圳）
 
-前几周给大家分享了一篇《利用R语言进行交互数据可视化》的文章[<u>https://cos.name/2016/06/using-r-for-interactive-data-visualization/</u>](https://cos.name/2016/06/using-r-for-interactive-data-visualization/)。文章末尾提到的在R的环境中，动态交互图形的优势在于能和knitr、shiny等框架整合在一起，能迅速建立一套可视化原型系统。今天接着给大家分享如何将动态交互图形与shiny框架整合在一起，迅速建立一套可视化原型系统。
+前几周给大家分享了一篇《利用R语言进行交互数据可视化》的文章[<u>/2016/06/using-r-for-interactive-data-visualization/</u>](/2016/06/using-r-for-interactive-data-visualization/)。文章末尾提到的在R的环境中，动态交互图形的优势在于能和knitr、shiny等框架整合在一起，能迅速建立一套可视化原型系统。今天接着给大家分享如何将动态交互图形与shiny框架整合在一起，迅速建立一套可视化原型系统。
 
 Shiny是R中的一种Web开发框架，使得R的使用者不必太了解css、js只需要了解一些html的知识就可以快速完成web开发，且shiny包集成了bootstrap、jquery、ajax等特性，极大解放了作为统计语言的R的生产力。
 
@@ -113,12 +113,12 @@ plotOutput("<strong><b>wireframe</b></strong>")</pre>
 <pre># server.R #
 output$mygraph &lt;- renderChart({
 p1 &lt;- hPlot(formula,data,type,…)
-p1$addParams(dom=”mygraph”)
+p1$addParams(dom=“mygraph”)
 return(p1)
 })</pre>
 
 <pre># ui.R #
-showOutput(“mygraph”,”highcharts”)</pre>
+showOutput(“mygraph”,“highcharts”)</pre>
 
 如下图所示，我们在网页上输出了nPlot函数绘制的交互柱状图。
 
@@ -210,6 +210,6 @@ forceNetworkOutput("networkD3")</pre>
 
 <span style="color: #000000;"><strong>原创文章，版权所有。</strong></span></section> <section class="tn-Powered-by-XIUMI"></section> <section class="tn-Powered-by-XIUMI"></section> 
 
-<span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。<a href="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg">![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)</a></strong></span>
+<span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)</strong></span>
 
 **<span style="color: #000000;">未经许可的转载以及改编者，统计之都将依法追究其法律责任。</span>**
