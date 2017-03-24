@@ -7,11 +7,11 @@ categories:
 slug: a-statistical-view-of-deep-learning-i-recursive-glms
 ---
 
-原文链接：<a href="http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/" target="_blank">http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/</a>
+原文链接：[http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/](http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/)
 
-作者：<a href="http://www.shakirm.com/" target="_blank">Shakir Mohamed</a>        翻译：王小宁      审校：冯凌秉  朱雪宁   编辑：王小宁
+作者：[Shakir Mohamed](http://www.shakirm.com/)        翻译：王小宁      审校：冯凌秉  朱雪宁   编辑：王小宁
 
-**本文得到了原英文作者<a href="http://www.shakirm.com/" target="_blank">Shakir Mohamed</a>的授权同意，由王小宁翻译、冯凌秉和朱雪宁审校。感谢他们的支持和帮助。**
+**本文得到了原英文作者[Shakir Mohamed](http://www.shakirm.com/)的授权同意，由王小宁翻译、冯凌秉和朱雪宁审校。感谢他们的支持和帮助。**
 
 深度学习及其应用已经成为实用机器学习的一个关键工具。神经网络和许多现有的统计学、机器学习方法有同等重要的地位，我将在这篇文章中探索其中的一个观点。
 
@@ -143,7 +143,7 @@ slug: a-statistical-view-of-deep-learning-i-recursive-glms
     </td>
     
     <td>
-      <a href="http://data.princeton.edu/wws509/notes/c3s7.html"><strong>Compl. log-log</strong></a>$ log(-log(\mu))$
+      [<strong>Compl. log-log</strong>](http://data.princeton.edu/wws509/notes/c3s7.html)$ log(-log(\mu))$
     </td>
     
     <td>
@@ -320,7 +320,7 @@ slug: a-statistical-view-of-deep-learning-i-recursive-glms
 </p>
 
 <p style="text-align: left;">
-  <a href="https://cos.name/wp-content/uploads/2015/05/无标题.png">![无标题](https://cos.name/wp-content/uploads/2015/05/无标题.png)</a>
+  ![无标题](https://cos.name/wp-content/uploads/2015/05/无标题.png)
 </p>
 
 <p style="text-align: center;">

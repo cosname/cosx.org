@@ -118,11 +118,11 @@ $$
 $$ \int_0^1 x^n dx = \frac{1}{n+1}, n=0,1,2,\ldots .$$
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/circle-area.png">![circle-area](https://cos.name/wp-content/uploads/2014/07/circle-area.png)</a>
+  ![circle-area](https://cos.name/wp-content/uploads/2014/07/circle-area.png)
 </p>
 
 <p style="text-align: center">
-  <a href="http://www.flickering.cn/wp-content/uploads/2014/06/circle-area.png">求圆弧下的面积</a>
+  [求圆弧下的面积](http://www.flickering.cn/wp-content/uploads/2014/06/circle-area.png)
 </p>
 
 圆的面积一直是千百年来数学家们深入关心和研究的问题，很自然地沃利斯也想到了可以使用同样的思路来处理圆的面积。 不过数学家们早已经证明道圆的面积是 $\pi r^2$，用积分的方法去计算圆的面积能带来什么好处呢？ 沃利斯在此做了一个逆向思维，他的真实目标并不是要计算圆的面积，而是冲着$\pi$ 去的。 沃利斯的一个漂亮的思路是：我们已经知道四分之一的单位圆圆弧 $y=\sqrt{1-x^2} (0 \le x \le 1)$ 和坐标轴围成的面积是 $\frac{\pi}{4}$, 如果这个面积能通过无穷分割的方法表达成一个解析表达式，那我们其实就可以得到计算 $\pi$ 的一个解析表达式。
@@ -163,7 +163,7 @@ B\_{p,q} = \frac{p+q}{q} B\_{p,q-1}
   *  由于原始表格是对称的， 沃利斯相信推广到分数之后的表格依然保持对称性。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/Bpq-table.png">![Bpq-table](https://cos.name/wp-content/uploads/2014/07/Bpq-table.png)</a>
+  ![Bpq-table](https://cos.name/wp-content/uploads/2014/07/Bpq-table.png)
 </p>
 
 基于对称性假设和计算式\eqref{wallis-Bpq}, 我们可以得到，
@@ -227,7 +227,7 @@ $$
 十七世纪中期，由于帕斯卡、费马、贝努利等数学家的推动，概率论以及与之相关的组合数学获得了很大的发展，阶乘的数值计算开始频繁的出现在数学家面前。 真正的开始对 $n!$ 进行细致地研究并取得突破的，是数学家棣莫弗(Abraham de Moivre, 1667-1754)和斯特林(James Stirling, 1692-1770)。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre.jpg">![abraham-de-moivre](https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre.jpg)</a>
+  ![abraham-de-moivre](https://cos.name/wp-content/uploads/2014/07/abraham-de-moivre.jpg)
 </p>
 
 <p style="text-align: center">
@@ -307,7 +307,7 @@ $$ \frac{{{e^{ – n}}{n^n}}}{{n!}} \approx \frac{1}{\sqrt{2\pi n}}. $$
 斯特林公式非常有用，通过它可以得出$n!$ 非常精确的估计值。虽然$n$ 足够大时绝对误差可以超过任何数，但是相对误差却很小，并且下降得非常快，甚至当 $n$ 很小的时候，斯特林公式的逼近都相当精确。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/stirling-precision.png">![stirling-precision](https://cos.name/wp-content/uploads/2014/07/stirling-precision.png)</a>
+  ![stirling-precision](https://cos.name/wp-content/uploads/2014/07/stirling-precision.png)
 </p>
 
 不过，斯特林对于 $n!$ 的研究实际上走得更远，而不是仅限于近似计算。追寻沃利斯和牛顿在插值方面的工作，斯特林一直研究各种数列的插值问题，通俗地说就是把数列的通项公式定义从整数集合延拓到实数集合。例如数列 $1,4,9,16,\cdots$ 可以用通项公式 $n^2$ 自然的表达，即便 $n$ 为实数，这个通项公式也是良定义的。直观地说就是可以找到一条通过所有整数点$(n,n^2)$的平滑曲线$y=x^2$，从而可以把定义在整数集上的公式延拓到实数集合。再比如求和序列 $1, 1+2, 1+2+3, 1+2+3+4, 1+2+3+4+5 \cdots$, 其通项公式可以写为 $n(n+1)/2$ ，这个公式也可以很容易地延拓到实数集合上。 斯特林很擅长于处理各种序列的插值问题，他在1730 年出版的一本书中描述了很多基于多阶差分处理序列插值的方法，这些方法主要源自牛顿。 斯特林处理插值的思路稍微有点复杂，我们不在此赘述，他的方法本质上类似于使用多项式曲线做插值。我们知道平面上两个点可以确定一条直线，三个点可以确定一条抛物线，…，$n$+1 个点可以确定一条$n$次多项式曲线。所以对于一个整数序列，如果我们无法直观地写出通项公式，为了计算某一个实数点对应的值，可以用该实数点周围的 $n+1$个整数点去确定一条 $n$ 次多项式曲线，从而可以基于拟合得到的多项式近似地计算实数点的值。
@@ -315,15 +315,15 @@ $$ \frac{{{e^{ – n}}{n^n}}}{{n!}} \approx \frac{1}{\sqrt{2\pi n}}. $$
 自然数的加法序列我们已经看到很容易做插值计算，对数学家们而言很自然的一个问题就是：自然数的乘法序列 $1,1\cdot2, 1\cdot2\cdot3, 1\cdot2\cdot3\cdot4, 1\cdot2\cdot3\cdot4\cdot5, \cdots$ 能否做插值计算？我们可以计算 $2!,3!$, 如何计算 $(\frac{1}{2})!$呢？斯特林在他的书中开始考虑阶乘序列$1!, 2!,3!,4!,5! \cdots$ 的插值问题。 如果我们把$(n,n!)$ 最初的一些点画在坐标轴上，确实可以看到，容易画出一条通过这些点的平滑曲线。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/factorial1.png">![factorial1](https://cos.name/wp-content/uploads/2014/07/factorial1.png)</a>
+  ![factorial1](https://cos.name/wp-content/uploads/2014/07/factorial1.png)
 </p>
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/factorial-curve.png">![factorial-curve](https://cos.name/wp-content/uploads/2014/07/factorial-curve.png)</a>
+  ![factorial-curve](https://cos.name/wp-content/uploads/2014/07/factorial-curve.png)
 </p>
 
 <p style="text-align: center">
-  <a href="http://www.flickering.cn/wp-content/uploads/2014/06/factorial-curve.png">通过$(n,n!)$的曲线</a>
+  [通过$(n,n!)$的曲线](http://www.flickering.cn/wp-content/uploads/2014/06/factorial-curve.png)
 </p>
 
 但是$n!$这个数列增长的速度过快，数值计算非常困难，要做这个序列的插值计算可不容易。幸运的是当时对数已经被纳皮尔(John Napier, 1550-1617) 发明出来，并且在数值计算上显示了其神通，被科学家们广泛接受。斯特林和棣莫弗在他们的研究中大量的使用对数做计算，所以很自然地斯特林转而考虑对序列 $\log_{10} n!$ 做插值计算。
@@ -391,7 +391,7 @@ $$ \left(n+\frac{1}{2}\right)!
 \end{align*}
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg">![stirling_grave](https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg)</a>
+  ![stirling_grave](https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg)
 </p>
 
 <p style="text-align: center">
@@ -405,7 +405,7 @@ $$ \left(n+\frac{1}{2}\right)!
 和斯特林处在同一个时代的另外一位数学家几乎在同一个时间点也在考虑 $n!$ 的插值问题，这个人就是哥德巴赫。哥德巴赫的名字在中国真是家喻户晓。由于中国数学家在数论领域的杰出成就，和素数相关的哥德巴赫猜想作为数学皇冠上的明珠就一直吸引着无数中国人的目光。 哥德巴赫一生都对数列的插值问题保持浓厚的兴趣，他很早就开始考虑阶乘的插值问题。不过看起来哥德巴赫的思路不同于斯特林，他并不满足于仅仅做近似的数值计算，他希望能找到一个通项公式，既可以准确的描述$n!$, 又能够同时推广到分数情形。不过哥德巴赫无法解决这个问题，幸运的是哥德巴赫交友广泛，和当时许多著名的数学家都有联系，包括莱布尼茨以及数学史中出了最多位数学家的家族— 贝努利家族。1722 年他找尼古拉斯·贝努利请教这个阶乘插值问题，不过没有取得任何进展。即便如此，哥德巴赫却多年来一直不忘思考这个问题，1729年他又请教尼古拉斯·贝努利的弟弟丹尼尔·贝努利，而丹尼尔于当年10月给哥德巴赫的一封信中给出了漂亮的解答。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/goldbach2.jpg">![goldbach2](https://cos.name/wp-content/uploads/2014/07/goldbach2.jpg)</a><a href="https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth.jpg">![Daniel_Bernoulli_by_Grooth](https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth.jpg)</a>  哥德巴赫和丹尼尔·贝努利
+  ![goldbach2](https://cos.name/wp-content/uploads/2014/07/goldbach2.jpg)![Daniel_Bernoulli_by_Grooth](https://cos.name/wp-content/uploads/2014/07/Daniel_Bernoulli_by_Grooth.jpg)  哥德巴赫和丹尼尔·贝努利
 </p>
 
 丹尼尔解决阶乘插值问题的思路非常漂亮：突破有限，取道无穷！他不拘泥于有限的方式，而是直接跳跃到无穷乘积的形式做插值。丹尼尔发现，如果 $m,n$都是正整数，当 $m
@@ -501,7 +501,7 @@ $$ \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m-1+n)}(m+\frac{n}{2})^{n-1
 $$ \Bigl(\frac{1}{2}\Bigr)! = \frac{\sqrt{\pi}}{2} .$$
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote.jpg">![euler-swiss-banknote](https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote.jpg)</a><br /> 瑞士法郎上的欧拉
+  ![euler-swiss-banknote](https://cos.name/wp-content/uploads/2014/07/euler-swiss-banknote.jpg)<br /> 瑞士法郎上的欧拉
 </p>
 
 欧拉给的无穷乘积满足阶乘的递归式$T(z) = z T(z-1)$, 结合递归式和计算技巧欧拉还计算了其它几个分数，包括 $\frac{5}{2}, \frac{1}{4}, \frac{3}{4}, \frac{1}{8}, \frac{3}{8} $ 等分数的阶乘。在丹尼尔的鼓励之下，欧拉把自己的插值公式以及一些分数阶乘的计算结果写信告知了哥德巴赫，这开启了欧拉和哥德巴赫之间一生的通信交流。两人在接下来的 35 年里连续通信达到196封，这些信函成为了数学家们研究欧拉的重要资料，而著名的哥德巴赫猜想就是首次出现在哥德巴赫写给欧拉的一封信中，也正是哥德巴赫激发了欧拉对数论的兴趣。
@@ -511,7 +511,7 @@ $$ \Bigl(\frac{1}{2}\Bigr)! = \frac{\sqrt{\pi}}{2} .$$
 </p>
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/gamma-func.png">![gamma-func](https://cos.name/wp-content/uploads/2014/07/gamma-func.png)</a>
+  ![gamma-func](https://cos.name/wp-content/uploads/2014/07/gamma-func.png)
 </p>
 
 <p style="text-align: center">
@@ -521,7 +521,7 @@ $$ \Bigl(\frac{1}{2}\Bigr)! = \frac{\sqrt{\pi}}{2} .$$
 虽然会有一些争议，有不少数学人把数学家排名中的头两把交椅划给了欧拉和高斯。欧拉和高斯都是具有超凡直觉的一流数学家，但是欧拉和高斯的风格迥异。高斯是个老狐狸，数学上非常严谨，发表结果的时候却都把思考的痕迹抹去，只留下漂亮的结果，这招致了一些数学家对高斯的批评。而欧拉的风格不同，他的做法是把最基本的东西解释得尽量清楚，讲明引导他得出结论的思路，经常通过经验直觉做大胆的猜测，他的文章中往往留下了做数学猜想的痕迹。 拉普拉斯曾说过：“读读欧拉 ,他是我们所有人的老师。”高斯的评价是：“学习欧拉的著作，乃是认识数学的最好工具。”数学家波利亚在他的名著《数学与猜想》中列举了许多欧拉做数学研究的例子，对欧拉做数学归纳和猜想的方式推崇备至。
 
 <p style="text-align: center">
-  <a href="https://cos.name/wp-content/uploads/2014/07/euler_cup.jpg">![euler_cup](https://cos.name/wp-content/uploads/2014/07/euler_cup.jpg)</a>欧拉的数学发现
+  ![euler_cup](https://cos.name/wp-content/uploads/2014/07/euler_cup.jpg)欧拉的数学发现
 </p>
 
 欧拉被称为分析学的化身，在分析学中，无出其右者。欧拉的老师约翰·贝努利在给欧拉的信中这样评价欧拉的工作：“ 我介绍高等分析的时候，它还是个孩子，而你正在将它带大成人。” 希尔伯特说“分析学是无穷的交响曲”，欧拉显然是无穷分析中最出色的作曲家。欧拉二百多年前写的教科书《无穷分析引论》至今还在不断地印刷，最近也刚刚出版了中文翻译版本。布尔巴基学派的灵魂人物韦伊( Andr\'{e} Weil, 1906-1998) 1979 年在 Rochester大学的一次讲演中说：“今天的学生从欧拉的《无穷分析引论》中所能得到的益处，是现代的任何一本数学教科书都比不上的。”

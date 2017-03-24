@@ -13,11 +13,11 @@ tags:
 slug: what-is-the-stat-dept-25-years-from-now
 ---
 
-> 本文是统计学家Leo Breiman1994年在加州伯克利统计系毕业典礼上的讲话，原文请参考<a href="http://www.stat.berkeley.edu/~dpurdy/Breiman-1994-commencement.html" target="_blank">此处</a>，
+> 本文是统计学家Leo Breiman1994年在加州伯克利统计系毕业典礼上的讲话，原文请参考[此处](http://www.stat.berkeley.edu/~dpurdy/Breiman-1994-commencement.html)，
   
-> 中文译稿可参见<a href="http://blog.cos.name/taoshi/2012/02/18/leo-breiman-speech-in-chinese/" target="_blank">施涛博客</a>，本文对其进行了修改和润色。
+> 中文译稿可参见[施涛博客](http://blog.cos.name/taoshi/2012/02/18/leo-breiman-speech-in-chinese/)，本文对其进行了修改和润色。
 > 
-> Leo Breiman简介：加州伯克利统计系教授，美国国家科学院院士，20世纪伟大的统计学家，囊括多项统计领域大奖。机器学习先驱者，分类回归树作者之一，Bagging方法发明者，对模式识别领域有巨大贡献。于2005年逝世。更多信息可参考<a href="http://oz.berkeley.edu/users/breiman/" target="_blank">此处</a>和<a href="ftp://ftp.stat.math.ethz.ch/Research-Reports/Other-Manuscripts/buhlmann/AOAS381.pdf" target="_blank">此处</a>。
+> Leo Breiman简介：加州伯克利统计系教授，美国国家科学院院士，20世纪伟大的统计学家，囊括多项统计领域大奖。机器学习先驱者，分类回归树作者之一，Bagging方法发明者，对模式识别领域有巨大贡献。于2005年逝世。更多信息可参考[此处](http://oz.berkeley.edu/users/breiman/)和[此处](ftp://ftp.stat.math.ethz.ch/Research-Reports/Other-Manuscripts/buhlmann/AOAS381.pdf)。
 
 ![Leo_Breiman](https://cos.name/wp-content/uploads/2012/02/Leo_Breiman.jpg)很久以前，Peter Bickel 就请我来做一个毕业典礼致辞。Peter 是非常聪明的，他知道，如果提前请人在似乎很遥远的将来某天去发言，他们很可能会答应，而我就是如此。但随着时间的临近，要发言的现实紧迫感也逼近了。朋友说，“你可以说些很长的笑话”。但是一来我并不擅长讲笑话，二来我觉得讲笑话似乎也不恰当。因此，我还是决定谈谈我们都熟悉的东西——统计——我们都是他的一份子，一个古怪而有趣的领域。
 

@@ -11,7 +11,7 @@ tags:
 slug: the-application-of-r-in-actual-science-with-case-study
 ---
 
-**本文作者为张缔香，文章由COS编辑部审核发表，略有修改。<a href="https://cos.name/wp-content/uploads/2011/01/R软件在精算教学中的应用案例.pdf" target="_blank">点击此处下载/阅读本文PDF版本</a>**
+**本文作者为张缔香，文章由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://cos.name/wp-content/uploads/2011/01/R软件在精算教学中的应用案例.pdf)**
 
 * * *R软件做为一种统计软件，因其开源、免费、灵活的诸多优点得到越来越多的关注，无论网络上还是实体书店，关于R的教程铺天盖地，不甚枚举。因此，本文的目标不是做R的教程，而是将R和保险、精算教学结合起来，通过几个案例来说明R在保险、精算专业日常的教学和研究中可用之处。</p> 
 

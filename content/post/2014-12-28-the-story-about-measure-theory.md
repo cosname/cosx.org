@@ -13,13 +13,13 @@ slug: the-story-about-measure-theory
 
 编辑：王小宁
 
-统计学博士应该学什么<a href="http://andrewgelman.com/2008/01/14/what_to_learn_i/" target="_blank">课程</a>，作者倾向认为学测度论是“无害的”，但不是必要的。概率论与数理统计这个大学科有太多分支，一个统计人穷尽一生也很难涉猎全部。文后用了个简明扼要的比喻，你不可能因为奥尼尔（NBA球星）不会罚球就就不把他当个篮球明星。文末大神们的评论很值得阅读。
+统计学博士应该学什么[课程](http://andrewgelman.com/2008/01/14/what_to_learn_i/)，作者倾向认为学测度论是“无害的”，但不是必要的。概率论与数理统计这个大学科有太多分支，一个统计人穷尽一生也很难涉猎全部。文后用了个简明扼要的比喻，你不可能因为奥尼尔（NBA球星）不会罚球就就不把他当个篮球明星。文末大神们的评论很值得阅读。
 
-测度论有利于<a href="http://simplystatistics.org/2012/08/06/in-which-brian-debates-abstraction-with-t-bone/" target="_blank">抽象思维</a>，这是一个剑走偏锋的论点，认为统计学者的“两大要务”是抽象与推广，即把现有的统计方法抽象为理论，且推广到未使用的领域。而学习测度论有利于帮助统计人建立抽象化思维，并将理论推广。文末作者吊轨地来了句：除了测度论，用编程实现统计方法也是一种抽象化的过程。这无疑是紧跟时代潮流的政治正确啊！
+测度论有利于[抽象思维](http://simplystatistics.org/2012/08/06/in-which-brian-debates-abstraction-with-t-bone/)，这是一个剑走偏锋的论点，认为统计学者的“两大要务”是抽象与推广，即把现有的统计方法抽象为理论，且推广到未使用的领域。而学习测度论有利于帮助统计人建立抽象化思维，并将理论推广。文末作者吊轨地来了句：除了测度论，用编程实现统计方法也是一种抽象化的过程。这无疑是紧跟时代潮流的政治正确啊！
 
 <!--more-->
 
-数学抽象在统计学<a href="http://simplystatistics.org/2012/08/08/on-the-relative-importance-of-mathematical-abstraction/" target="_blank">研究生阶段的重要性</a>，作者直接拿上一篇的“两大要务”开火，釜底抽薪，观点如下，
+数学抽象在统计学[研究生阶段的重要性](http://simplystatistics.org/2012/08/08/on-the-relative-importance-of-mathematical-abstraction/)，作者直接拿上一篇的“两大要务”开火，釜底抽薪，观点如下，
 
   1. 抽象至以推广没错，但不能只强调数学证明在抽象化思维中的重要性；
   2. 即便不推广，专注于问题的特殊性也能做出卓著贡献；
