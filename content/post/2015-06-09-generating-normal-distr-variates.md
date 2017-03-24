@@ -26,19 +26,19 @@ slug: generating-normal-distr-variates
 > </div>
 > 
 > <div>
->   个人博客地址：<a href="http://bindog.github.io/blog/" target="_blank">http://bindog.github.<wbr />io/blog/</a>
+>   个人博客地址：[http://bindog.github.<wbr></wbr>io/blog/](http://bindog.github.io/blog/)
 > </div>
 > 
 > <div>
->   邮箱：<a href="mailto:bindog@outlook.com" target="_blank">bindog@outlook.com</a>
+>   邮箱：[bindog@outlook.com](mailto:bindog@outlook.com)
 > </div>
 
 <div>
 </div>
 
-感谢<a href="http://yixuan.cos.name/cn/" target="_blank">怡轩</a>同学的悉心指导~
+感谢[怡轩](http://yixuan.cos.name/cn/)同学的悉心指导~
 
-之前拜读了靳志辉（<a href="http://www.weibo.com/rickjin" target="_blank">@rickjin</a>）老师写的<a href="/2013/01/story-of-normal-distribution-1/" target="_blank">《正态分布的前世今生》</a>，一直对正态分布怀着一颗敬畏之心，刚好最近偶然看到`python`标准库中如何生成服从正态分布随机数的源码，觉得非常有趣，于是又去查找其他一些生成正态分布的方法，与大家分享一下。
+之前拜读了靳志辉（[@rickjin](http://www.weibo.com/rickjin)）老师写的[《正态分布的前世今生》](/2013/01/story-of-normal-distribution-1/)，一直对正态分布怀着一颗敬畏之心，刚好最近偶然看到`python`标准库中如何生成服从正态分布随机数的源码，觉得非常有趣，于是又去查找其他一些生成正态分布的方法，与大家分享一下。
 
 ### 利用中心极限定理生成正态分布
 
@@ -205,7 +205,7 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 证明过程就不细说了，知道怎么用就行了，感兴趣的可以看看这个文档
 
-  * <a href="http://ac-cf2bfs1v.clouddn.com/eS5xc2TSUPdjJwn3phQV7h6knPXXAQ0oRr4aSlLQ.pdf" target="_blank">Acceptance-Rejection Method</a>
+  * [Acceptance-Rejection Method](http://ac-cf2bfs1v.clouddn.com/eS5xc2TSUPdjJwn3phQV7h6knPXXAQ0oRr4aSlLQ.pdf)
 
 不过在高维的情况下，拒绝采样会出现两个问题，第一是合适的$q$分布比较难以找到，第二是很难确定一个合理的$k$值。这两个问题会造成图中灰色区域的面积变大，从而**导致拒绝率很高，无用计算增加**。
 
@@ -224,9 +224,9 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 可以看出，为了提高效率，Ziggurat算法中使用了许多技巧性的东西，这在其`C`代码实现中更加明显，使用了与运算和字节等各种小技巧，代码就不在这里贴了，感兴趣可以看看下面几个版本，`C`版本的追求的是极致的速度，每个矩形的边界已经提前计算好了。`C#`版本中的注释非常详细，`Java`版的基本与`C#`一致，但是效率一般。
 
-  * <a href="http://ac-cf2bfs1v.clouddn.com/SJBmCG5khBNH0sRRi2EJB6WPp3xRlqEcyY2M7GJD.c" target="_blank">C</a>
-  * <a href="http://ac-cf2bfs1v.clouddn.com/PtpTppkFFe7lNDG0yuMcY0d2mDyX03BdkECB28E0.cs" target="_blank">C#</a>
-  * <a href="http://ac-cf2bfs1v.clouddn.com/M9ryG8dCNft3VBvUisrQ9ysa3f3XEb1rX0rj545r.java" target="_blank">Java</a>
+  * [C](http://ac-cf2bfs1v.clouddn.com/SJBmCG5khBNH0sRRi2EJB6WPp3xRlqEcyY2M7GJD.c)
+  * [C#](http://ac-cf2bfs1v.clouddn.com/PtpTppkFFe7lNDG0yuMcY0d2mDyX03BdkECB28E0.cs)
+  * [Java](http://ac-cf2bfs1v.clouddn.com/M9ryG8dCNft3VBvUisrQ9ysa3f3XEb1rX0rj545r.java)
 
 最后对比一下Ziggurat算法与Box-muller算法的效率
 
@@ -238,9 +238,9 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 ### 参考资料
 
-  * <a href="http://www.mathematik.uni-ulm.de/numerik/teaching/ss09/NumFin/Script/chap2_4-2_5.pdf" target="_blank">Transformed Random Variables</a>
-  * <a href="http://math.stackexchange.com/questions/1005236/box-muller-transform-normality" target="_blank">Box-Muller Transform Normality</a>
-  * <a href="http://www.cnblogs.com/daniel-D/p/3388724.html" target="_blank">从随机过程到马尔科夫链蒙特卡洛方法</a>
-  * <a href="http://ac-cf2bfs1v.clouddn.com/uPcW0ce2E0FIDIt53mLwHGJ5s6xTadE4mqVCpsWd.ppt" target="_blank">随机数产生原理</a>
-  * <a href="http://ac-cf2bfs1v.clouddn.com/nNPPeDafleeRW3U073UA4mPbYiAxhgb0soziU5Uo.pdf" target="_blank">The Ziggurat Method for Generating Random Variables</a>
-  * <a href="http://heliosphan.org/zigguratalgorithm/zigguratalgorithm.html" target="_blank">The Ziggurat Algorithm for Random Gaussian Sampling</a>
+  * [Transformed Random Variables](http://www.mathematik.uni-ulm.de/numerik/teaching/ss09/NumFin/Script/chap2_4-2_5.pdf)
+  * [Box-Muller Transform Normality](http://math.stackexchange.com/questions/1005236/box-muller-transform-normality)
+  * [从随机过程到马尔科夫链蒙特卡洛方法](http://www.cnblogs.com/daniel-D/p/3388724.html)
+  * [随机数产生原理](http://ac-cf2bfs1v.clouddn.com/uPcW0ce2E0FIDIt53mLwHGJ5s6xTadE4mqVCpsWd.ppt)
+  * [The Ziggurat Method for Generating Random Variables](http://ac-cf2bfs1v.clouddn.com/nNPPeDafleeRW3U073UA4mPbYiAxhgb0soziU5Uo.pdf)
+  * [The Ziggurat Algorithm for Random Gaussian Sampling](http://heliosphan.org/zigguratalgorithm/zigguratalgorithm.html)
