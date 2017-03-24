@@ -54,16 +54,16 @@ run; quit;
 
 ![roc](https://cos.name/wp-content/uploads/2008/12/roc.png)
 
-上图那条曲线就是ROC曲线，横轴是1-Specificity，纵轴是Sensitivity。[以前](/2008/12/measure-classification-model-performance-confusion-matrix/)提到过，随着阈值的减小（更多的客户就会被归为正例），Sensitivity和1-Specificity也相应增加（也即Specificity相应减少），所以ROC呈递增态势（_至于**ROC**曲线凹向原点而非凸向原点，不知道有无直观的解释，不提_）。那条45度线是作为参照（baseline model）出现的，就是说，ROC的好坏，乃是跟45度线相比的，怎么讲？
+上图那条曲线就是ROC曲线，横轴是1-Specificity，纵轴是Sensitivity。[以前](/2008/12/measure-classification-model-performance-confusion-matrix/)提到过，随着阈值的减小（更多的客户就会被归为正例），Sensitivity和1-Specificity也相应增加（也即Specificity相应减少），所以ROC呈递增态势（至于**ROC**曲线凹向原点而非凸向原点，不知道有无直观的解释，不提）。那条45度线是作为参照（baseline model）出现的，就是说，ROC的好坏，乃是跟45度线相比的，怎么讲？
 
 回到以前，我们分析valid数据，知道有36.5%的bad客户（Actual Positive ）和63.5%的good客户(Actual Negative)。这两个概率是根据以往的数据计算出来的，可以叫做“先验概率”( prior probability)。后来，我们用logistic回归模型，再给每个客户算了一个bad的概率，这个概率是用模型加以修正的概率，叫做“后验概率”（Posterior Probability）。
 
-|      |   | 预测                   |                  |                     |
-|:-----|:--|:-----------------------|:-----------------|:--------------------|
-|      |   |1                       |                  |                     |
-|实    |1  |d, True Positive        |c, False Negative |c+d, Actual Positive |
-|际    |   |b, False Positive       |a, True Negative  |a+b, Actual Negative |
-|      |   |b+d, Predicted Positive |a+c, Predicted Negative |               |
+|      |     | 预测                   |                  |                     |
+|:----:|:---:|:----------------------:|:----------------:|:-------------------:|
+|      |     |1                       |                  |                     |
+|实    |1    |d, True Positive        |c, False Negative |c+d, Actual Positive |
+|际    |0    |b, False Positive       |a, True Negative  |a+b, Actual Negative |
+|      |     |b+d, Predicted Positive |a+c, Predicted Negative |               |
 
 如果不用模型，我们就根据原始数据的分布来指派，随机地把客户归为某个类别，那么，你得到的True Positive对False Positive之比，应该等于Actual Positive对Actual Negative之比（你做得跟样本分布一样好）——即，`\(d/b=(c+d)/(a+b)\)`，可以有`\((d/c+d)/(b/a+b)=1\)`，而这正好是Sensitivity/(1-Specificity)。在不使用模型的情况下，Sensitivity和1-Specificity之比恒等于1，这就是45度线的来历。一个模型要有所提升，首先就应该比这个baseline表现要好。ROC曲线就是来评估模型比baseline好坏的一个著名图例。这个可能不够直观，但可以想想线性回归的baseline model：
 
