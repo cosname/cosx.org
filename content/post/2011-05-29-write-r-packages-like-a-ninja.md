@@ -24,13 +24,13 @@ tags:
 slug: write-r-packages-like-a-ninja
 ---
 
-作为一个伪程序员，我在做与代码有关的事情时，总是抱以一个念头，即“简化手工劳动到极致”。在这篇文章里，我介绍一下目前我认为最简化的开发R包的流程。本站作者胡荣兴曾经在09年写过一篇开发R包的文章“<a title="在Windows中创建R的包的步骤" href="/2009/02/create-r-packages-under-windows/" target="_blank">在Windows中创建R的包的步骤</a>”，其中小部分内容随着R本身的更新已经过时，该文面向Windows，而且介绍的都是一些正统方法，这里我介绍一条“忍者”之路，希望对大家开发R程序包有所帮助。这篇文章本来是去年年底打算写的，时至今日<a title="第四届中国R语言会议通知" href="/2011/04/chinar-2011/" target="_blank">第四届中国R语言会议</a>正在人民大学轰轰隆隆召开，索性把它写完，算是一份不到场的报告吧。
+作为一个伪程序员，我在做与代码有关的事情时，总是抱以一个念头，即“简化手工劳动到极致”。在这篇文章里，我介绍一下目前我认为最简化的开发R包的流程。本站作者胡荣兴曾经在09年写过一篇开发R包的文章“[在Windows中创建R的包的步骤](/2009/02/create-r-packages-under-windows/ "在Windows中创建R的包的步骤")”，其中小部分内容随着R本身的更新已经过时，该文面向Windows，而且介绍的都是一些正统方法，这里我介绍一条“忍者”之路，希望对大家开发R程序包有所帮助。这篇文章本来是去年年底打算写的，时至今日[第四届中国R语言会议](/2011/04/chinar-2011/ "第四届中国R语言会议通知")正在人民大学轰轰隆隆召开，索性把它写完，算是一份不到场的报告吧。
 
 在我看来，R的扩展性主要体现在R包中，利用附加包的形式，我们可以把一些常规的、模式化的工作打包起来供日常使用，在R包中我们还可以为函数编写文档和说明，这样可以避免将来忘记一个函数是做什么的以及怎么用的（忘记了就查帮助，`?function.name`），文档是程序的重要组成部分，我个人常常认为写文档的难度不亚于写代码；此外，R包还体现了R的另一点扩展性，即它能融合其它底层语言，典型的就是C语言、C++和Fortran，但一般用户可能用不到这些功能，下文仅简要介绍一下。
 
 ## 一、工具
 
-对Linux和Mac用户来说，只要装好了R，开发R包的工具就已经具备，可跳过本节。Windows用户除了安装R之外，还需要<a href="http://www.murdoch-sutherland.com/Rtools/" target="_blank">Rtools</a>和一套LaTeX程序，典型的如<a href="http://www.miktex.org" target="_blank">MikTeX</a>。安装Rtools的过程中有一步需要注意，就是修改环境变量PATH，这个选项是需要选上的。对于R本身，还需要把它的bin路径放到环境变量PATH中去。说了半天，什么是PATH？这是个让明白的人抓狂、不明白的人迷茫的问题，不过找它比找拉登可能还是稍微容易一点：
+对Linux和Mac用户来说，只要装好了R，开发R包的工具就已经具备，可跳过本节。Windows用户除了安装R之外，还需要[Rtools](http://www.murdoch-sutherland.com/Rtools/)和一套LaTeX程序，典型的如[MikTeX](http://www.miktex.org)。安装Rtools的过程中有一步需要注意，就是修改环境变量PATH，这个选项是需要选上的。对于R本身，还需要把它的bin路径放到环境变量PATH中去。说了半天，什么是PATH？这是个让明白的人抓狂、不明白的人迷茫的问题，不过找它比找拉登可能还是稍微容易一点：
 
 <p style="text-align: center;">
   “我的电脑”（右键）–>“属性”–>“高级”–>“环境变量”–>“系统变量”–>PATH
@@ -50,7 +50,7 @@ gcc --version</pre>
 
 ## 二、R包结构
 
-写R包最好的参考莫过于R自身的手册“<a href="http://cran.r-project.org/doc/manuals/R-exts.html" target="_blank">Writing R Extensions</a>”（下文简称R-exts）。在R中打开HTML帮助（`help.start()`），就可以看见这本手册，内容很长，不过大部分都是普通用户不必关心的。我的建议如下：对新手而言，必须要了解R包的结构，所以<a href="http://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file" target="_blank">1.1.1节</a>和<a href="http://cran.r-project.org/doc/manuals/R-exts.html#Package-subdirectories" target="_blank">1.1.3节</a>必读，而整个<a href="http://cran.r-project.org/doc/manuals/R-exts.html#Writing-R-documentation-files" target="_blank">第2节</a>可能是将来需要反复参考的（除非你记性很好）；已经上路的用户可以接着看一些高级话题，如命名空间（<a href="http://cran.r-project.org/doc/manuals/R-exts.html#Package-name-spaces" target="_blank">1.6节</a>）和底层语言的使用（<a href="http://cran.r-project.org/doc/manuals/R-exts.html#System-and-foreign-language-interfaces" target="_blank">第5节</a>）等。
+写R包最好的参考莫过于R自身的手册“[Writing R Extensions](http://cran.r-project.org/doc/manuals/R-exts.html)”（下文简称R-exts）。在R中打开HTML帮助（`help.start()`），就可以看见这本手册，内容很长，不过大部分都是普通用户不必关心的。我的建议如下：对新手而言，必须要了解R包的结构，所以[1.1.1节](http://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)和[1.1.3节](http://cran.r-project.org/doc/manuals/R-exts.html#Package-subdirectories)必读，而整个[第2节](http://cran.r-project.org/doc/manuals/R-exts.html#Writing-R-documentation-files)可能是将来需要反复参考的（除非你记性很好）；已经上路的用户可以接着看一些高级话题，如命名空间（[1.6节](http://cran.r-project.org/doc/manuals/R-exts.html#Package-name-spaces)）和底层语言的使用（[第5节](http://cran.r-project.org/doc/manuals/R-exts.html#System-and-foreign-language-interfaces)）等。
 
 一个最简单的包结构如下（括号中为相应解释）：
 
@@ -88,11 +88,11 @@ R CMD INSTALL pkg</pre>
 
 ### 4.1 R文档与roxygen2
 
-R-exts手册<a href="http://cran.r-project.org/doc/manuals/R-exts.html#Rd-format" target="_blank">第2.1节</a>给了一个简单的文档示例，我们可以看到R文档的语法和LaTeX很像，都是一些宏命令，如`\title{我是标题}`或者`\description{我是描述}`。当然，这些玩意儿你都可以手写，如果要稍微偷懒一下，也可以用`package.skeleton()`或者`prompt()`等函数来辅助生成Rd文件，这些函数都可以为你生成一些空模板，你自己往里面填充内容。若你的包只有一两个函数，倒也无妨，轻松写写完事，要是你想维护30个函数，那你就会觉得这种做法完全是坑爹。坑爹之处不仅在于你要么手敲这些命令要么绕道用函数生成文档模板自己填充，更在于你得在man文件夹下维护R文件夹下的函数的文档！你每次更新R函数，都得战战兢兢记住了：还有man文件夹下的某个*.Rd文件也许需要更新。
+R-exts手册[第2.1节](http://cran.r-project.org/doc/manuals/R-exts.html#Rd-format)给了一个简单的文档示例，我们可以看到R文档的语法和LaTeX很像，都是一些宏命令，如`\title{我是标题}`或者`\description{我是描述}`。当然，这些玩意儿你都可以手写，如果要稍微偷懒一下，也可以用`package.skeleton()`或者`prompt()`等函数来辅助生成Rd文件，这些函数都可以为你生成一些空模板，你自己往里面填充内容。若你的包只有一两个函数，倒也无妨，轻松写写完事，要是你想维护30个函数，那你就会觉得这种做法完全是坑爹。坑爹之处不仅在于你要么手敲这些命令要么绕道用函数生成文档模板自己填充，更在于你得在man文件夹下维护R文件夹下的函数的文档！你每次更新R函数，都得战战兢兢记住了：还有man文件夹下的某个*.Rd文件也许需要更新。
 
 这并不是什么新鲜问题，所有的程序开发都面临这样的问题，于是有人发明了Doxygen，大意是把文档融入到源文件中，通常采取的方式就是把文档写成一种特殊的注释，这样不会影响源文件的执行（因为注释会被忽略），同时也可以从注释中动态抽取文本生成文档（如HTML或LaTeX/PDF等），这个主意相当妙。开发程序的时候只需要在同一个文件内操作即可：举头望文档，低头思函数。
 
-<a href="http://cran.r-project.org/package=roxygen2" target="_blank">roxygen2</a>是一个R包（它的前任是<a href="http://cran.r-project.org/package=roxygen" target="_blank">roxygen</a>，但已经停止更新了），它实现了把特定注释“翻译”为R文档的工作，例如：
+[roxygen2](http://cran.r-project.org/package=roxygen2)是一个R包（它的前任是[roxygen](http://cran.r-project.org/package=roxygen)，但已经停止更新了），它实现了把特定注释“翻译”为R文档的工作，例如：
 
 <pre class="brush: r">##' @author Yihui Xie
 ##' @source \url{https://cos.name}</pre>
@@ -106,11 +106,11 @@ R-exts手册<a href="http://cran.r-project.org/doc/manuals/R-exts.html#Rd-format
 
 ### 4.2 roxygen与Emacs
 
-如果你得手敲那些`##'` 注释，那我当然不会写这篇文章。曾经有两个软件我觉得我永远都学不会，一个是Emacs，另一个是Photoshop；如今只剩下一个（我也不打算学了）。Emacs是我装了卸、卸了装超过10次的软件，终于在第11次搞明白了六指琴魔是怎么个练法。如果你也是新手，那么建议安装<a href="http://vgoulet.act.ulaval.ca/en/emacs/" target="_blank">Vincent Goulet维护的修改过的Emacs</a>。修改之一就在于直接加入了<a href="http://ess.r-project.org/" target="_blank">ESS</a>（Emacs Speaks Statistics），ESS是Emacs的一个插件，它提供了编辑器与其它统计软件（如SAS、S-Plus、R）的交互，例如可以通过快捷键把R代码发送到R里执行。
+如果你得手敲那些`##'` 注释，那我当然不会写这篇文章。曾经有两个软件我觉得我永远都学不会，一个是Emacs，另一个是Photoshop；如今只剩下一个（我也不打算学了）。Emacs是我装了卸、卸了装超过10次的软件，终于在第11次搞明白了六指琴魔是怎么个练法。如果你也是新手，那么建议安装[Vincent Goulet维护的修改过的Emacs](http://vgoulet.act.ulaval.ca/en/emacs/)。修改之一就在于直接加入了[ESS](http://ess.r-project.org/)（Emacs Speaks Statistics），ESS是Emacs的一个插件，它提供了编辑器与其它统计软件（如SAS、S-Plus、R）的交互，例如可以通过快捷键把R代码发送到R里执行。
 
-ESS本身我觉得也没啥，但ESS加上了roxygen的支持之后我就觉得这是个忍者工具了。在Emacs中，光标放在R函数上，快捷键C-c C-o一按，就如同发出一把暗器，一个roxygen注释模板立刻生成了。这一点让开发R包不知道快了多少倍。也许有读者知道我在维护一个叫<a href="http://cran.r-project.org/package=animation" target="_blank">animation</a>的R包，说实话，曾经有一段时间我实在不想维护了，因为写函数写文档太麻烦，直到打通了Emacs和roxygen关。
+ESS本身我觉得也没啥，但ESS加上了roxygen的支持之后我就觉得这是个忍者工具了。在Emacs中，光标放在R函数上，快捷键C-c C-o一按，就如同发出一把暗器，一个roxygen注释模板立刻生成了。这一点让开发R包不知道快了多少倍。也许有读者知道我在维护一个叫[animation](http://cran.r-project.org/package=animation)的R包，说实话，曾经有一段时间我实在不想维护了，因为写函数写文档太麻烦，直到打通了Emacs和roxygen关。
 
-好嘛！听起来好像不错，咋用？装好Emacs之后，先去找个<a href="http://home.uchicago.edu/~gan/file/emacs.pdf" target="_blank">参考卡片</a>，练习两天一些基本操作（打开文件、保存文件之类的），熟悉一些基本概念（有些相当坑爹，例如剪切不叫剪切，叫杀，粘贴不叫粘贴，叫拉），当然首先得知道C代表Ctrl键、M代表Alt键。再找个<a href="http://ess.r-project.org/refcard.pdf" target="_blank">ESS参考卡片</a>，看看基本的代码发送操作。总而言之，常用的快捷键不多，不需要真的变成六指琴魔。要是陷入了快捷键连锁陷阱（自己不知道按到哪里去了），就以万能的C-g退出再来。
+好嘛！听起来好像不错，咋用？装好Emacs之后，先去找个[参考卡片](http://home.uchicago.edu/~gan/file/emacs.pdf)，练习两天一些基本操作（打开文件、保存文件之类的），熟悉一些基本概念（有些相当坑爹，例如剪切不叫剪切，叫杀，粘贴不叫粘贴，叫拉），当然首先得知道C代表Ctrl键、M代表Alt键。再找个[ESS参考卡片](http://ess.r-project.org/refcard.pdf)，看看基本的代码发送操作。总而言之，常用的快捷键不多，不需要真的变成六指琴魔。要是陷入了快捷键连锁陷阱（自己不知道按到哪里去了），就以万能的C-g退出再来。
 
 假设你已经装好了Emacs，现在可以任意打开一个R文件：C-x C-f，输入文件名，回车，如果存在则会打开它，如果不存在，则会新建一个文件，注意作为一个（伪）程序员，你必须永远牢记：不要老老实实打字！能用Tab键的时候尽量用，它在很多情况下都能自动补全（如路径、对象名称等）。这里的文件名应该以.R或.r为后缀，这样Emacs才知道应该用ESS来处理它，例如abc.R。现在在编辑器界面内输入一个任意函数，如
 
@@ -166,7 +166,7 @@ rab('pkg')
 
 前面我们也提到DESCRIPTION文件中有Imports一栏，这里设置的包通常是你只需要其部分功能的包，例如我只想在我的包中使用foo包中的`bar()`函数，那么Imports中就需要填foo，而NAMESPACE中则需要写`importFrom(foo, bar)`，在自己的包的源代码中则可以直接调用`bar()`函数，R会从NAMESPACE看出这个`bar()`对象是从哪里来的。
 
-roxygen注释对这一类命名空间有一系列标签，如一个函数的文档中若标记了`##' @export`，那么这个函数将来就会出现在命名空间文件中（被导出），若写了`##' @importFrom foo bar`，那么foo包的`bar`对象也会被写在命名空间中。这些内容参见R-exts的<a href="http://cran.r-project.org/doc/manuals/R-exts.html#Package-name-spaces" target="_blank">1.6节</a>和roxygen2的`?export`帮助。
+roxygen注释对这一类命名空间有一系列标签，如一个函数的文档中若标记了`##' @export`，那么这个函数将来就会出现在命名空间文件中（被导出），若写了`##' @importFrom foo bar`，那么foo包的`bar`对象也会被写在命名空间中。这些内容参见R-exts的[1.6节](http://cran.r-project.org/doc/manuals/R-exts.html#Package-name-spaces)和roxygen2的`?export`帮助。
 
 ### 5.2 介绍文档（Vignette）
 
@@ -197,7 +197,7 @@ R就会开始检查这个包是否有语法错误以及是否符合规范。或�
 <pre class="brush: r">library(Rd2roxgyen)
 rab('pkg', check = TRUE)  # 确保pkg文件夹在当前工作目录下：getwd()</pre>
 
-检查过程会告诉你详细的日志信息，如果有错，你立刻就能知道。这里每个函数的例子（如果有的话）都会被运行，如果例子代码有错，这里也会报错，所以这个过程也是一个很好的检查自己的示例代码能否正确运行的测试。如果没有任何错误，那么就可以向CRAN提交了。提交的内容是一个压缩包，名为pkg_x.x-x.tar.gz，它是通过`R CMD build pkg`生成的。提交方式是通过FTP，参见<a href="http://cran.r-project.org" target="_blank">CRAN首页说明</a>。注意上传完之后需要向CRAN管理员发一封邮件，通知他们你提交了一个包，以后每次更新时的流程也一样：FTP上传+邮件通知。目前Kurt Hornik管理Linux包的编译，Uwe Ligges负责Windows包的编译，都是人工管理，要是碰上Kurt度假去了，你就得等着了（概率很小，不过我碰到过）。
+检查过程会告诉你详细的日志信息，如果有错，你立刻就能知道。这里每个函数的例子（如果有的话）都会被运行，如果例子代码有错，这里也会报错，所以这个过程也是一个很好的检查自己的示例代码能否正确运行的测试。如果没有任何错误，那么就可以向CRAN提交了。提交的内容是一个压缩包，名为pkg_x.x-x.tar.gz，它是通过`R CMD build pkg`生成的。提交方式是通过FTP，参见[CRAN首页说明](http://cran.r-project.org)。注意上传完之后需要向CRAN管理员发一封邮件，通知他们你提交了一个包，以后每次更新时的流程也一样：FTP上传+邮件通知。目前Kurt Hornik管理Linux包的编译，Uwe Ligges负责Windows包的编译，都是人工管理，要是碰上Kurt度假去了，你就得等着了（概率很小，不过我碰到过）。
 
 ## 七、后话
 
@@ -213,7 +213,7 @@ rab('pkg', check = TRUE)  # 确保pkg文件夹在当前工作目录下：getwd()
 
 扯远了。
 
-写了这么些包，有些感受。首先，写代码有两样一般人不能理解的困难，一样前面已说，就是写文档，你得解释清楚参数的含义、得给出有用的示例代码、写演示写介绍文档等等，工作量其实很大；另外一样就是对象命名，我认为从对象的命名可以看出一个程序员的成熟程度，好的程序员，给的函数名既精炼又直观，这一点上必须佩服R core团队，要是我写几千个函数，光是想名字都能把脑袋想爆了，这里顺便提一下我推荐的命名方式，要么用驼峰（`someFunction`），要么用下划线（`some_function`），尽量不要用点（`some.function`），因为点在R语言中有一层特殊含义（S3方法的类匹配），这也是我对animation包比较后悔的一点。其次，你最好学会一样版本控制工具，如SVN或者GIT，不仅是管理包，它在管理任何文本文件时都非常有用，也利于多人合作，我现在倾向于GIT，主要是因为一个好网站的存在（GitHub），我的所有R包都已经从原来以SVN为基础的R-Forge上<a href="https://github.com/yihui" target="_blank">搬家到了GitHub</a>，可以在那里参考我的包是怎么写的；不会版本控制工具的人的一个典型特征就是，电脑里存在一系列这样的文件：领导汇报20100101.doc、领导汇报20100102.doc……，版本控制工具可以让你很方便回到文件的历史状态，也方便多人合作（例如将A的更新和B的更新自动合并）。最后，写包不仅是对自己工作的一个不断总结，不至于做完一件事就永远尘封之，而且也是很好的自我宣传途径，你在简历上写得天花乱坠，可能不如以一件作品更能深入人心。
+写了这么些包，有些感受。首先，写代码有两样一般人不能理解的困难，一样前面已说，就是写文档，你得解释清楚参数的含义、得给出有用的示例代码、写演示写介绍文档等等，工作量其实很大；另外一样就是对象命名，我认为从对象的命名可以看出一个程序员的成熟程度，好的程序员，给的函数名既精炼又直观，这一点上必须佩服R core团队，要是我写几千个函数，光是想名字都能把脑袋想爆了，这里顺便提一下我推荐的命名方式，要么用驼峰（`someFunction`），要么用下划线（`some_function`），尽量不要用点（`some.function`），因为点在R语言中有一层特殊含义（S3方法的类匹配），这也是我对animation包比较后悔的一点。其次，你最好学会一样版本控制工具，如SVN或者GIT，不仅是管理包，它在管理任何文本文件时都非常有用，也利于多人合作，我现在倾向于GIT，主要是因为一个好网站的存在（GitHub），我的所有R包都已经从原来以SVN为基础的R-Forge上[搬家到了GitHub](https://github.com/yihui)，可以在那里参考我的包是怎么写的；不会版本控制工具的人的一个典型特征就是，电脑里存在一系列这样的文件：领导汇报20100101.doc、领导汇报20100102.doc……，版本控制工具可以让你很方便回到文件的历史状态，也方便多人合作（例如将A的更新和B的更新自动合并）。最后，写包不仅是对自己工作的一个不断总结，不至于做完一件事就永远尘封之，而且也是很好的自我宣传途径，你在简历上写得天花乱坠，可能不如以一件作品更能深入人心。
 
 又及，写完一个包之后，你可能就不会再对别人的包问：这是哪个狗日的写的文档？
 

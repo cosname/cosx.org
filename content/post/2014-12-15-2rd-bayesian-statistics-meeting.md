@@ -29,7 +29,7 @@ slug: 2rd-bayesian-statistics-meeting
 
 1763年12月23日，理查德·普莱斯在伦敦皇家学会会议上宣读了托马斯·贝叶斯的遗世之作——《An essay towards solving a problem in the doctrine of chances》(机遇理论中一个问题的解)，从此贝叶斯定理诞生于世。“虽然这个产生于18世纪的统计学学派在19世纪上半叶备受争议和冷落，但在20世纪，它却占据了数理统计学这块领地的半壁江山，撑起了统计学的半边天(陈希孺，2002)。
 
-2013年12月21日，“纪念贝叶斯定理250周年”暨首届中国贝叶斯统计学术论坛（天津，2013）在天津财经大学月牙报告厅成功举行（<a href="/2013/12/to-commemorate-the-250th-anniversary-of-bayes-theorem/" target="_blank">相关特邀报告及培训资料下载</a>）。
+2013年12月21日，“纪念贝叶斯定理250周年”暨首届中国贝叶斯统计学术论坛（天津，2013）在天津财经大学月牙报告厅成功举行（[相关特邀报告及培训资料下载](/2013/12/to-commemorate-the-250th-anniversary-of-bayes-theorem/)）。
 
 <!--more-->
 
@@ -40,7 +40,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：**Bayesian forecasting of demographic rates for small areas
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/zhangjunni.png">![zhangjunni](https://cos.name/wp-content/uploads/2014/12/zhangjunni.png)</a>
+  ![zhangjunni](https://cos.name/wp-content/uploads/2014/12/zhangjunni.png)
 </p>
 
 <p style="text-align: center;">
@@ -62,7 +62,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：****R-web : ****大型多人在线数据分析协作平台****(Massively Multi-analyst Online Data Analysis Platform)**
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/linzhenshun.png">![linzhenshun](https://cos.name/wp-content/uploads/2014/12/linzhenshun-150x150.png)</a>
+  ![linzhenshun](https://cos.name/wp-content/uploads/2014/12/linzhenshun.png)
 </p>
 
 <p style="text-align: center;">
@@ -74,14 +74,14 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：****统计分析的第三范式：大数据与贝叶斯统计思维**
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/bayes-dao.png">![bayes-dao](https://cos.name/wp-content/uploads/2014/12/bayes-dao.png)</a>
+  ![bayes-dao](https://cos.name/wp-content/uploads/2014/12/bayes-dao.png)
 </p>
 
 <p style="text-align: center;">
-  <strong> <a href="https://bayes-stat.github.com" target="_blank">贝叶斯之道</a></strong>
+  <strong> [贝叶斯之道](https://bayes-stat.github.com)</strong>
 </p>
 
-<a href="https://bayes-stat.github.com" target="_blank">“贝叶斯之道”(The Tao of Bayesian: A Platform to Understanding with No Math)开放研究室</a>成立于2012年12月21日21点02分，以创建“一个中西合璧古今交融的贝叶斯学习平台”为宗旨，以“喜传贝叶斯之道，乐授贝叶斯之业，善解贝叶斯之惑”为目标，计划每年在12月21日举办一次中国贝叶斯统计学术论坛，纪念贝叶斯定理诞生，为国内外贝叶斯统计的爱好者提供一个学术交流和MCMC免费培训的机会，热烈欢迎感兴趣的同行加入我们的团队。
+[“贝叶斯之道”(The Tao of Bayesian: A Platform to Understanding with No Math)开放研究室](https://bayes-stat.github.com)成立于2012年12月21日21点02分，以创建“一个中西合璧古今交融的贝叶斯学习平台”为宗旨，以“喜传贝叶斯之道，乐授贝叶斯之业，善解贝叶斯之惑”为目标，计划每年在12月21日举办一次中国贝叶斯统计学术论坛，纪念贝叶斯定理诞生，为国内外贝叶斯统计的爱好者提供一个学术交流和MCMC免费培训的机会，热烈欢迎感兴趣的同行加入我们的团队。
 
 ### **（二）贝叶斯数据分析培训（下午：****2:00-4:00****）**
 

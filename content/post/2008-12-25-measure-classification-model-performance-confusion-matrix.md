@@ -102,7 +102,7 @@ keep good_bad p good_bad_predicted;
 
 <strong>run</strong>;</pre>
 
-从下面的局部的数据valid_p可以看到，一些实际上是good的客户，根据我们的模型（阈值p取0.5），却预测他为bad（套用我们假设检验的黑话，这就犯了“<a href="/2008/12/decision-and-risk/" target="_blank">弃真</a>”的错误），对一些原本是bad的客户，却预测他为good（“取伪”错误），当然，对更多的客户，good还预测成good，bad还预测成bad：
+从下面的局部的数据valid_p可以看到，一些实际上是good的客户，根据我们的模型（阈值p取0.5），却预测他为bad（套用我们假设检验的黑话，这就犯了“[弃真](/2008/12/decision-and-risk/)”的错误），对一些原本是bad的客户，却预测他为good（“取伪”错误），当然，对更多的客户，good还预测成good，bad还预测成bad：
 
 <pre class="brush: r">good_bad       p       good_bad_predicted
 bad       0.61624       bad
@@ -258,5 +258,5 @@ score data=valid <strong>outroc=valid_roc</strong>;
   Dan Kelly, etc. 2007. <em>Predictive Modeling Using Logistic Regression Course Notes</em>. Cary, NC: SAS Institute Inc.
 </li>
 <li class="MsoNormal">
-  <em>Confusion Matrix</em>, <strong>see</strong> <a href="http://www2.cs.uregina.ca/~dbd/cs831/notes/confusion_matrix/confusion_matrix.html">http://www2.cs.uregina.ca/~dbd/cs831/notes/confusion_matrix/confusion_matrix.html</a>
+  <em>Confusion Matrix</em>, <strong>see</strong> [http://www2.cs.uregina.ca/~dbd/cs831/notes/confusion_matrix/confusion_matrix.html](http://www2.cs.uregina.ca/~dbd/cs831/notes/confusion_matrix/confusion_matrix.html)
 </li>

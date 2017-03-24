@@ -320,4 +320,4 @@ ggplot() + wrld + urb + airline +
     ) + ylim(-65, 75) + coord_equal()
 dev.off()</pre>
 
-完整尺寸的超清航线夜景图可以在<a href="https://cos.name/wp-content/uploads/2014/09/flight-night-scene-HD.png" target="_blank">这里下载</a>得到（7.9M）。
+完整尺寸的超清航线夜景图可以在[这里下载](https://cos.name/wp-content/uploads/2014/09/flight-night-scene-HD.png)得到（7.9M）。

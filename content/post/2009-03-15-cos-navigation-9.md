@@ -39,7 +39,7 @@ slug: cos-navigation-9
 
 2、左辰
   
-自我介绍：中国人民大学统计学院06本，统计学、应用数学专业.学术兴趣：实分析、数理统计、时间序列分析；BLOG: <a href="http://blog.sina.com.cn/annihiland" target="_blank">http://blog.sina.com.cn/annihiland</a>
+自我介绍：中国人民大学统计学院06本，统计学、应用数学专业.学术兴趣：实分析、数理统计、时间序列分析；BLOG: [http://blog.sina.com.cn/annihiland](http://blog.sina.com.cn/annihiland)
 
 ## 二、论坛
 

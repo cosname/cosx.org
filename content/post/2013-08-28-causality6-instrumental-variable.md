@@ -126,7 +126,7 @@ $$ \frac{\widehat{ACE}(Z\rightarrow Y)  } {  \widehat{ACE}(Z\rightarrow D)  �
 
 ## 四 实例
 
-这部分给出具体的例子来说明上理论的应用，具体计算用到了第五部分的一个函数（其中包括用delta方法算的抽样方差）。这里用到的数据来自一篇政治学的文章 Green et al. (2003) “Getting Out the Vote in Local Elections: Results from Six Door-to-Door Canvassing Experiments”，<a href="http://dvn.iq.harvard.edu/dvn/faces/study/StudyPage.xhtml?globalId=hdl:1902.1/21729&studyListingIndex=5_c49f1060ddaa41a23e5759168940" target="_blank">数据点击此处可以在此下载</a>。
+这部分给出具体的例子来说明上理论的应用，具体计算用到了第五部分的一个函数（其中包括用delta方法算的抽样方差）。这里用到的数据来自一篇政治学的文章 Green et al. (2003) “Getting Out the Vote in Local Elections: Results from Six Door-to-Door Canvassing Experiments”，[数据点击此处可以在此下载](http://dvn.iq.harvard.edu/dvn/faces/study/StudyPage.xhtml?globalId=hdl:1902.1/21729&studyListingIndex=5_c49f1060ddaa41a23e5759168940)。
 
 文章目的是研究某个社会实验是否能够提到投票率，实验是随机化的，但是并非所有的实验组的人都依从。因此这里的变量 $Z$ 表示随机化的实验，$D$ 表示依从与否，$Y$ 是投票与否的示性变量。具体的数据描述，可参加前面提到的文章。
 
