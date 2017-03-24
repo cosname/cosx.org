@@ -60,7 +60,7 @@ run; quit;
 
 |      |     | 预测                   |                  |                     |
 |:----:|:---:|:----------------------:|:----------------:|:-------------------:|
-|      |     |1                       |                  |                     |
+|      |     |1                       |0                 |                     |
 |实    |1    |d, True Positive        |c, False Negative |c+d, Actual Positive |
 |际    |0    |b, False Positive       |a, True Negative  |a+b, Actual Negative |
 |      |     |b+d, Predicted Positive |a+c, Predicted Negative |               |
