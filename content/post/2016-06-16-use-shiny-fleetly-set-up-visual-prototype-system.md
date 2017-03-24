@@ -210,6 +210,6 @@ forceNetworkOutput("networkD3")</pre>
 
 <span style="color: #000000;"><strong>原创文章，版权所有。</strong></span></section> <section class="tn-Powered-by-XIUMI"></section> <section class="tn-Powered-by-XIUMI"></section> 
 
-<span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。<a href="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg">![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)</a></strong></span>
+<span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)</strong></span>
 
 **<span style="color: #000000;">未经许可的转载以及改编者，统计之都将依法追究其法律责任。</span>**

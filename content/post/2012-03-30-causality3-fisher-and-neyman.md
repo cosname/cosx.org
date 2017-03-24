@@ -81,7 +81,7 @@ $\hat{\text{Var}}(\hat{\tau})  =  \sum\limits\_{Z\_i=1} (Y\_i – \bar{y}\_1)^
   
   <ul>
     <li>
-      <b style="color: #141414">Ding, P.</b><span style="color: #141414"> (2014). </span>A Paradox from Randomization-Based Causal Inference<span style="color: #141414">. <a href="http://arxiv.org/abs/1402.0142" target="_blank">On Arxiv.</a></span>
+      <b style="color: #141414">Ding, P.</b><span style="color: #141414"> (2014). </span>A Paradox from Randomization-Based Causal Inference<span style="color: #141414">. [On Arxiv.](http://arxiv.org/abs/1402.0142)</span>
     </li>
   </ul>
 </div>

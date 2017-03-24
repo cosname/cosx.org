@@ -67,7 +67,7 @@ slug: 1st-chinese-r-conference-summary
 
 # 论文和演讲
 
-注意以下所有材料遵守[CC](http://creativecommons.org/licenses/by/3.0/ "CC协议")协议，其中张翔的幻灯片遵守<a href="http://creativecommons.org/licenses/by-nc-sa/2.5/cn/" target="_blank">CC2.5</a>协议。
+注意以下所有材料遵守[CC](http://creativecommons.org/licenses/by/3.0/ "CC协议")协议，其中张翔的幻灯片遵守[CC2.5](http://creativecommons.org/licenses/by-nc-sa/2.5/cn/)协议。
 
 本次会议一共收到论文21篇；论文摘要可以从这里下载：
 
@@ -92,7 +92,7 @@ slug: 1st-chinese-r-conference-summary
   * 丁鹏：[贝叶斯统计与R](https://cos.name/wp-content/uploads/2008/12/bayesian-statistics-and-r.pdf)
   * 魏太云：[R软件与最优化](https://cos.name/wp-content/uploads/2008/12/using-r-to-solve-optimization-problems.pdf)
   * 陈堰平：[随机微分方程入门——基于R语言的模拟与推断](https://cos.name/wp-content/uploads/2008/12/stochastic-differential-equation-with-r.pdf)（[R代码](https://cos.name/wp-content/uploads/2008/12/stochastic-differential-equation-with-r.zip)）
-  * 李崇亮：<a title="李晓煦博士的日志页面" href="http://lixiaoxu.lxxm.com/web-powered-by-r-or-r-powered-by-web/" target="_blank">基于R后台的网页应用，或基于网页可定制界面的R应用</a>（<a title="幻灯片的Google Docs页面" href="http://docs.google.com/Present?docid=dgf7j3jp_86d4x7r2gd" target="_blank">Google Docs页面</a>）
+  * 李崇亮：[基于R后台的网页应用，或基于网页可定制界面的R应用](http://lixiaoxu.lxxm.com/web-powered-by-r-or-r-powered-by-web/ "李晓煦博士的日志页面")（[Google Docs页面](http://docs.google.com/Present?docid=dgf7j3jp_86d4x7r2gd "幻灯片的Google Docs页面")）
   * 李舰：[利用R (D)COM Server实现R与MS Office的整合](https://cos.name/wp-content/uploads/2008/12/integrating-ms-office-with-r-using-r-d-com-server.ppt)
   * 王化儒：[R在水文模拟中的应用初探](https://cos.name/wp-content/uploads/2008/12/application-of-r-on-hydrological-modeling.ppt)（[R代码](https://cos.name/wp-content/uploads/2008/12/wang-huaru-hydro.txt)）
   * 谢益辉：[统计动画程序包animation介绍及其在教学和数据分析中的应用](https://cos.name/wp-content/uploads/2008/12/animation-an-r-package-for-statistical-animations-with-applications-in-teaching-and-data-analysis.ppt)

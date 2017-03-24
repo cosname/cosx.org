@@ -11,7 +11,7 @@ tags:
 slug: shanghair-salon-jan-2013
 ---
 
-冬日的阴霾还没有完全散去，而温度却也在悄然的回升。周末的下午，相聚在极富小资情调的沙龙，也不失为一种打磨时光的优雅方式嘛。（感谢<a title="http://www.people-squared.com/ " href="http://www.people-squared.com/ " target="_blank">联合创业办公社</a>）<figure id="attachment_7036" style="width: 1200px" class="wp-caption aligncenter">
+冬日的阴霾还没有完全散去，而温度却也在悄然的回升。周末的下午，相聚在极富小资情调的沙龙，也不失为一种打磨时光的优雅方式嘛。（感谢[联合创业办公社](http://www.people-squared.com/  "http://www.people-squared.com/ ")）<figure id="attachment_7036" style="width: 1200px" class="wp-caption aligncenter">
 
 ![兴致所至，偶得意的笑~](https://cos.name/wp-content/uploads/2013/01/DSC07181-Copy.jpg)<figcaption class="wp-caption-text">兴致所至，偶得意的笑~</figcaption></figure> 
 
