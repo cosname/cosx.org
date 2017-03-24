@@ -101,5 +101,5 @@ slug: 2016-big-data-workshop
 &nbsp;
 
 <p style="text-align: left;">
-  报名链接：<a href="http://form.mikecrm.com/0GNgZ8">http://form.mikecrm.com/0GNgZ8</a>
+  报名链接：[http://form.mikecrm.com/0GNgZ8](http://form.mikecrm.com/0GNgZ8)
 </p>

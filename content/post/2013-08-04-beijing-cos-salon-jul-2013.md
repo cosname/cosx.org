@@ -14,7 +14,7 @@ slug: beijing-cos-salon-jul-2013
 &nbsp;
 
 <p style="text-align: center;">
-  <em><strong>by <a href="http://weibo.com/xzhman">肖展航</a></strong></em><a href="https://cos.name/wp-content/uploads/2013/08/cos101.jpg">![cos101](https://cos.name/wp-content/uploads/2013/08/cos101.jpg)</a>
+  <em><strong>by [肖展航](http://weibo.com/xzhman)</strong></em>[![cos101](https://cos.name/wp-content/uploads/2013/08/cos101.jpg)](https://cos.name/wp-content/uploads/2013/08/cos101.jpg)
 </p>
 
 &nbsp;

@@ -63,6 +63,6 @@ Dora解读：学术界的KDD，第三方网站[www.kaggle.com](http://www.kaggle
 
 参与者分别来自百度、新浪、豆瓣、微软、天软科技、高德、博文视点、诺亚舟、阿里巴巴、中科院、中国铁道科学研究院、北京邮电大学、北京大学、清华大学、中国人民大学、北京理工大学的业界人士和高校学生以及创业者逾40余人报名参与了此次活动，席间与嘉宾积极互动，围绕主题展开了深入精彩的讨论。
 
-下载<a title="沙龙录音" href="http://pan.baidu.com/s/189njX" target="_blank">沙龙全程录音</a>
+下载[沙龙全程录音](http://pan.baidu.com/s/189njX "沙龙录音")
 
 ![shalon1202](https://cos.name/wp-content/uploads/2013/10/shalon1202.jpg)

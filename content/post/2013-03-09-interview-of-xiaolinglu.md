@@ -17,7 +17,7 @@ _统计之都今后会为大家贡献名师访谈系列文章，我们的野心�
 
 <span style="color: #888888;">【COS编辑部按】受访人：吕晓玲</span>
 
-<span style="color: #888888;">简介：<a href="http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/128.html"><span style="color: #888888;">吕晓玲</span></a>老师是中国人民大学统计学院经济与社会统计教研室副教授，也是小编的硕士研究生导师。吕老师在学术上高度自我驱动，效率极高，能够同时把多件事情做好，让小编至今只能遥望。</span>
+<span style="color: #888888;">简介：[<span style="color: #888888;">吕晓玲</span>](http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/128.html)老师是中国人民大学统计学院经济与社会统计教研室副教授，也是小编的硕士研究生导师。吕老师在学术上高度自我驱动，效率极高，能够同时把多件事情做好，让小编至今只能遥望。</span>
 
 ![](http://stat.ruc.edu.cn/uploads/teacher/lvxiaoling.jpg)
 

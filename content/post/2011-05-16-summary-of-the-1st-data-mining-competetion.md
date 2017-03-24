@@ -23,7 +23,7 @@ slug: summary-of-the-1st-data-mining-competetion
   &nbsp;
 </p>
 
-2011年5月8日，来自浙江大学、厦门大学、复旦大学、浙江大学、北京大学、东南大学、中山大学、北京航空航天大学大学等多所高校的获奖队伍聚集于中国科学技术大学进行比赛的最终答辩环节，确定了最终的名次和奖项，标志着经过一个多月的群雄逐鹿，<a href="http://www.statmodelingcompetition.com/" target="_blank">首届全国大学生数据挖掘邀请赛</a>终于圆满结束。首届全国大学生数据挖掘邀请赛是由中国科技大学管理学院、中国人民大学统计学院和统计之都发起并主办，由上海花千树信息科技有限公司提供资金赞助和服务器支持。在一个多月的比赛时间中，共有来自大陆、香港及海外多所高校的1115支队伍注册参赛，期间有303支队伍成功提交预测结果，最终有240只队伍全程参与比赛。
+2011年5月8日，来自浙江大学、厦门大学、复旦大学、浙江大学、北京大学、东南大学、中山大学、北京航空航天大学大学等多所高校的获奖队伍聚集于中国科学技术大学进行比赛的最终答辩环节，确定了最终的名次和奖项，标志着经过一个多月的群雄逐鹿，[首届全国大学生数据挖掘邀请赛](http://www.statmodelingcompetition.com/)终于圆满结束。首届全国大学生数据挖掘邀请赛是由中国科技大学管理学院、中国人民大学统计学院和统计之都发起并主办，由上海花千树信息科技有限公司提供资金赞助和服务器支持。在一个多月的比赛时间中，共有来自大陆、香港及海外多所高校的1115支队伍注册参赛，期间有303支队伍成功提交预测结果，最终有240只队伍全程参与比赛。
 
 # 赛题背景
 
@@ -466,7 +466,7 @@ slug: summary-of-the-1st-data-mining-competetion
 每日有效提交次数：
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png">![每日有效提交次数](https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png)</a>
+  [![每日有效提交次数](https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png)](https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png)
 </p>
 
 <p style="text-align: left;">
@@ -474,21 +474,21 @@ slug: summary-of-the-1st-data-mining-competetion
 </p>
 
 <p style="text-align: left;">
-  提交次数频数：<br /> <a href="https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png">![提交次数频数图](https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png)</a>
+  提交次数频数：<br /> [![提交次数频数图](https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png)](https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png)
 </p>
 
 上图为提交次数的频数图，从上图可以看出，大部分队伍提交次数很少。提交次数超过10的队伍有217个，超过50的有70个，超过100的有29个。最终获奖的队伍的提交总次数都很高。
 
 # 赛后相关博文及帖子
 
-旁门左道：<a title="第一届全国大学生数据挖掘邀请赛-数据集分析篇 " rel="bookmark" href="http://log.medcl.net/item/2011/04/%e7%ac%ac%e4%b8%80%e5%b1%8a%e5%a4%a7%e5%ad%a6%e7%94%9f%e6%95%b0%e6%8d%ae%e6%8c%96%e6%8e%98%e9%82%80%e8%af%b7%e8%b5%9b-%e6%95%b0%e6%8d%ae%e9%9b%86%e5%88%86%e6%9e%90/" target="_blank">第一届全国大学生数据挖掘邀请赛-数据集分析篇</a>
+旁门左道：[第一届全国大学生数据挖掘邀请赛-数据集分析篇](http://log.medcl.net/item/2011/04/%e7%ac%ac%e4%b8%80%e5%b1%8a%e5%a4%a7%e5%ad%a6%e7%94%9f%e6%95%b0%e6%8d%ae%e6%8c%96%e6%8e%98%e9%82%80%e8%af%b7%e8%b5%9b-%e6%95%b0%e6%8d%ae%e9%9b%86%e5%88%86%e6%9e%90/ "第一届全国大学生数据挖掘邀请赛-数据集分析篇 ")
 
-JiangFeng：<a rel="bookmark" href="http://www.jiangfeng.me/blog/149">第一届数据挖掘邀请赛 – 缘来如此</a>
+JiangFeng：[第一届数据挖掘邀请赛 – 缘来如此](http://www.jiangfeng.me/blog/149)
 
-ruikoeln：<a href="https://cos.name/cn/topic/104156" target="_blank">数据挖掘邀请赛－一个酱油党的感言</a>
+ruikoeln：[数据挖掘邀请赛－一个酱油党的感言](https://cos.name/cn/topic/104156)
 
-rainywh269：<a href="https://cos.name/cn/topic/104222" target="_blank">数据挖掘邀请赛 赛后感</a>
+rainywh269：[数据挖掘邀请赛 赛后感](https://cos.name/cn/topic/104222)
 
-cloud_wei：<a title="中科大之行及数据挖掘竞赛小总结" rel="bookmark" href="http://taiyun.cos.name/2011/05/summary-of-first-data-mining-competition/" target="_blank">中科大之行及数据挖掘竞赛小总结</a>
+cloud_wei：[中科大之行及数据挖掘竞赛小总结](http://taiyun.cos.name/2011/05/summary-of-first-data-mining-competition/ "中科大之行及数据挖掘竞赛小总结")
 
-Mantous: <a href="http://www.mantouse.com/archives/366.html" target="_blank">第一届全国大学生数据挖掘邀请赛-总结</a>
+Mantous: [第一届全国大学生数据挖掘邀请赛-总结](http://www.mantouse.com/archives/366.html)

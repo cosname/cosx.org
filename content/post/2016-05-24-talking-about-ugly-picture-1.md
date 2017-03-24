@@ -43,17 +43,17 @@ slug: talking-about-ugly-picture-1
 <table>
   <tr>
     <td width="234">
-       <a href="https://cos.name/wp-content/uploads/2016/05/pan_4.png">![pan_4](https://cos.name/wp-content/uploads/2016/05/pan_4.png)</a>
+       [![pan_4](https://cos.name/wp-content/uploads/2016/05/pan_4.png)](https://cos.name/wp-content/uploads/2016/05/pan_4.png)
     </td>
     
     <td width="334">
-       <a href="https://cos.name/wp-content/uploads/2016/05/pan_5.png">![pan_5](https://cos.name/wp-content/uploads/2016/05/pan_5.png)</a>
+       [![pan_5](https://cos.name/wp-content/uploads/2016/05/pan_5.png)](https://cos.name/wp-content/uploads/2016/05/pan_5.png)
     </td>
   </tr>
   
   <tr>
     <td colspan="2" width="568">
-      <a href="https://cos.name/wp-content/uploads/2016/05/pan_6.png">![pan_6](https://cos.name/wp-content/uploads/2016/05/pan_6.png)</a>
+      [![pan_6](https://cos.name/wp-content/uploads/2016/05/pan_6.png)](https://cos.name/wp-content/uploads/2016/05/pan_6.png)
     </td>
   </tr>
 </table>

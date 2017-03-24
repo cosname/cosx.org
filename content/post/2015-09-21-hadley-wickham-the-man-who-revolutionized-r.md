@@ -15,12 +15,12 @@ tags:
 slug: hadley-wickham-the-man-who-revolutionized-r
 ---
 
-<span style="color: #808080;">【COS编辑部按】本译文得到了原英文作者的授权同意，翻译：<a href="http://www.fengjunchen.com" target="_blank">冯俊晨</a>、王小宁， 审校：邱怡轩、朱雪宁、蔡寒蕴，编辑：王小宁。</span>
+<span style="color: #808080;">【COS编辑部按】本译文得到了原英文作者的授权同意，翻译：[冯俊晨](http://www.fengjunchen.com)、王小宁， 审校：邱怡轩、朱雪宁、蔡寒蕴，编辑：王小宁。</span>
 
-<span style="color: #808080;"><a href="http://had.co.nz/">Hadley Wickham</a> 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 <code>ggplot2</code> 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 <code>plyr</code>、<code>reshape2</code> 等。本文取自<a href="http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/" target="_blank">PRICEONOMICS</a>.</span>
+<span style="color: #808080;">[Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 <code>ggplot2</code> 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 <code>plyr</code>、<code>reshape2</code> 等。本文取自[PRICEONOMICS](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/).</span>
 
 <p style="text-align: right;">
-  <a href="https://cos.name/wp-content/uploads/2015/09/HadleyObama.png">![HadleyObama](https://cos.name/wp-content/uploads/2015/09/HadleyObama.png)</a>
+  [![HadleyObama](https://cos.name/wp-content/uploads/2015/09/HadleyObama.png)](https://cos.name/wp-content/uploads/2015/09/HadleyObama.png)
 </p>
 
 <p style="text-align: center;">
@@ -41,7 +41,7 @@ slug: hadley-wickham-the-man-who-revolutionized-r
 
 如果你不花很多时间在开源统计编程语言R中写代码的话，他的名字你可能并不熟悉——但统计学家Hadley Wickham用他自己的话说是那种“以书呆子出名”的人。他是那种在统计会议上人们排队要和他拍照，问他要签名的人，并且人们对他充满了尊敬。他也承认“这种现象实在太奇特了。因为写R程序而出名？这太疯狂了。”
 
-R 是一种为数据分析而设计的编程语言，Wickham正是因为成为了卓越的R包开发者而赢得了他的名声。R包是用于简化诸如整合和绘制数据等常见任务代码的编程工具。Wickham已经帮助了数以万计的人，使他们的工作变得更有效率，这使得大家都<a href="http://blog.revolutionanalytics.com/2010/09/competition-data-visualization-with-ggplot2.html" target="_blank">很感激他</a>，甚至为之而<a href="http://rebeccmeister.livejournal.com/695823.html" target="_blank">欣喜若狂</a>。他开发的R包的用户包括众科技巨头，例如Google，Facebook和Twitter，新闻巨擘诸如<a href="http://www.nytimes.com/interactive/sports/football/2013-fantasy-football-tier-charts-QB.html?ref=football&_r=1&" target="_blank">纽约时报</a>和 [FiveThirtyEight](http://fivethirtyeight.com/datalab/girls-are-rare-at-the-international-math-olympiad/)，政府机构诸如食品与药品管理局（FDA）以及美国禁毒署（DEA）等。
+R 是一种为数据分析而设计的编程语言，Wickham正是因为成为了卓越的R包开发者而赢得了他的名声。R包是用于简化诸如整合和绘制数据等常见任务代码的编程工具。Wickham已经帮助了数以万计的人，使他们的工作变得更有效率，这使得大家都[很感激他](http://blog.revolutionanalytics.com/2010/09/competition-data-visualization-with-ggplot2.html)，甚至为之而[欣喜若狂](http://rebeccmeister.livejournal.com/695823.html)。他开发的R包的用户包括众科技巨头，例如Google，Facebook和Twitter，新闻巨擘诸如[纽约时报](http://www.nytimes.com/interactive/sports/football/2013-fantasy-football-tier-charts-QB.html?ref=football&_r=1&)和 [FiveThirtyEight](http://fivethirtyeight.com/datalab/girls-are-rare-at-the-international-math-olympiad/)，政府机构诸如食品与药品管理局（FDA）以及美国禁毒署（DEA）等。
 
 诚然，他是书呆子中的巨人。
 
@@ -49,13 +49,13 @@ R 是一种为数据分析而设计的编程语言，Wickham正是因为成为�
   ***
 </p>
 
-Wickham出生在新西兰汉密尔顿的一个统计学世家。他父亲<a href="https://www.linkedin.com/pub/brian-wickham/4/3b8/193" target="_blank">Brian Wickham</a>在康奈尔大学获得动物繁殖专业的博士，该学科大量使用统计学；而他<a href="http://cwick.co.nz/" target="_blank">姐姐</a>则拥有加州大学伯克利分校的统计学博士学位。
+Wickham出生在新西兰汉密尔顿的一个统计学世家。他父亲[Brian Wickham](https://www.linkedin.com/pub/brian-wickham/4/3b8/193)在康奈尔大学获得动物繁殖专业的博士，该学科大量使用统计学；而他[姐姐](http://cwick.co.nz/)则拥有加州大学伯克利分校的统计学博士学位。
 
 如果这个世界上真有数据结构神童，那么Wickham可能就是其中之一。谈起他早年的经历，他颇为自豪：
 
 “_我的第一份工作，那时我才__15__岁，就是开发一个微软__Access__数据库。我觉得这事儿挺有意思的。我为数据库编写了文档，他们至今都在用这个数据库。_”
 
-从第一份工作开始，Wickham就开始反思存储和操纵数据是否存在一种更好的办法。“对于找到更好的解决之道，我一直颇为自信”，他解释说，“并且这个办法可以造福他人。”虽然彼时的他依然在懵懂中，但正在那时他“内化”了<a href="https://en.wikipedia.org/wiki/Third_normal_form" target="_blank">第三范式</a>（Third Normal Form）的概念，这将在他未来的工作中扮演重要的角色。第三范式的本质是一种降低数据冗余且保证数据一致性的数据构架方法。Wickham把这种数据叫做“干净”（tidy）数据，而他的工具推广了并依赖于这种数据结构。
+从第一份工作开始，Wickham就开始反思存储和操纵数据是否存在一种更好的办法。“对于找到更好的解决之道，我一直颇为自信”，他解释说，“并且这个办法可以造福他人。”虽然彼时的他依然在懵懂中，但正在那时他“内化”了[第三范式](https://en.wikipedia.org/wiki/Third_normal_form)（Third Normal Form）的概念，这将在他未来的工作中扮演重要的角色。第三范式的本质是一种降低数据冗余且保证数据一致性的数据构架方法。Wickham把这种数据叫做“干净”（tidy）数据，而他的工具推广了并依赖于这种数据结构。
 
 ![RLogo](https://cos.name/wp-content/uploads/2015/09/RLogo.png)
 
@@ -81,34 +81,34 @@ Wickham显然被reshape的成功所鼓舞。他开发这个工具包正是因为
 
 “肯定会有象牙塔的统计学家否认我所做的工作是统计学，但是我认为他们错了。我所做的工作正是回归到统计学的根源。存在数据科学这一学科这件事本身就说明正统统计学存在巨大缺陷。对我而言，这涉及到什么是统计：统计即是通过建模和可视化从数据中获得洞见。数据清洗和操纵是个脏活累活，而正统统计学拍拍屁股说这不归我们管。”
 
-在幻灭之旅上，Wickham开发了ggplot2这个工具包。迄今为止，该工具包已经被下载了几百万次，它不仅是Wickham最成功的作品，也改变了许多人对于数据可视化的观念。ggplot2的巨大成功也促使他离开学术界去<a href="https://www.rstudio.com/" target="_blank">Rstudio</a>担任首席科学家，从而专心致志地改进R。（Rstudio是R语言最受欢迎的集成开发环境的盈利开发机构。）
+在幻灭之旅上，Wickham开发了ggplot2这个工具包。迄今为止，该工具包已经被下载了几百万次，它不仅是Wickham最成功的作品，也改变了许多人对于数据可视化的观念。ggplot2的巨大成功也促使他离开学术界去[Rstudio](https://www.rstudio.com/)担任首席科学家，从而专心致志地改进R。（Rstudio是R语言最受欢迎的集成开发环境的盈利开发机构。）
 
 ![HadleyObama2](https://cos.name/wp-content/uploads/2015/09/HadleyObama2.png)
 
 <p style="text-align: center;">
-  <em>Hadley Wickham</em><em>放了一个用</em><em>ggplot2</em><em>画的图片。<a href="https://github.com/hadley/ggplot2/wiki/Crime-in-Downtown-Houston,-Texas-:-Combining-ggplot2-and-Google-Maps" target="_blank">图片</a>由</em><em>David Kahle</em><em>和</em><em>Garrett Grolemund</em><em>提供</em>
+  <em>Hadley Wickham</em><em>放了一个用</em><em>ggplot2</em><em>画的图片。[图片](https://github.com/hadley/ggplot2/wiki/Crime-in-Downtown-Houston,-Texas-:-Combining-ggplot2-and-Google-Maps)由</em><em>David Kahle</em><em>和</em><em>Garrett Grolemund</em><em>提供</em>
 </p>
 
 ggplot2 包是以统计学家Leland Wilkinson 的“图形语法”为基础，以一种数据可视化的形式开发的。Wickham把 ggplot2 和图形语法看成是“不作为一系列机械操作的可视化思维方式（如从这里到那里画一条线，在这里画一点，把长方形涂上颜色）而是以可视化的思维将数据映射到你能看到的事物上。”
 
-在图形语法背后的概念是相当抽象的。最大的想法是图是由“几何对象”（我们在图表上看到的一个点或柱子的图形元素）和“图形属性”（关于其中几何形状被放置的方向）组成的。这听起来可能不是革命性的，但由Wickham实现的这个概念使得成千上万的人可以更加容易地画图。问答网站<a href="http://stackoverflow.com/tags/ggplot2/info" target="_blank">Stack Overflow</a>上已经有近9000个问题标记为ggplot2，甚至说 ggplot2 在R中让作图变得更“好玩”。用 ggplot2 画的图已经出现在了<a href="http://www.nature.com/" target="_blank">Nature</a>，[FiveThirtyEight](http://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/)和<a href="http://www.nytimes.com/interactive/sports/football/2013-fantasy-football-tier-charts-QB.html?ref=football&_r=1&" target="_blank">纽约时报</a>上。
+在图形语法背后的概念是相当抽象的。最大的想法是图是由“几何对象”（我们在图表上看到的一个点或柱子的图形元素）和“图形属性”（关于其中几何形状被放置的方向）组成的。这听起来可能不是革命性的，但由Wickham实现的这个概念使得成千上万的人可以更加容易地画图。问答网站[Stack Overflow](http://stackoverflow.com/tags/ggplot2/info)上已经有近9000个问题标记为ggplot2，甚至说 ggplot2 在R中让作图变得更“好玩”。用 ggplot2 画的图已经出现在了[Nature](http://www.nature.com/)，[FiveThirtyEight](http://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/)和[纽约时报](http://www.nytimes.com/interactive/sports/football/2013-fantasy-football-tier-charts-QB.html?ref=football&_r=1&)上。
 
 ![China](https://cos.name/wp-content/uploads/2015/09/China.png)
 
 <p style="text-align: center;">
-  <em>Hadley Wickham</em><em>手里拿着一本关于他的可视化软件包</em><em>ggplot2 </em><em>的中文译本</em><em>;</em><em>图片来源于</em><em><a href="http://statr.me/2013/09/a-conversation-with-hadley-wickham/" target="_blank">statr</a></em>
+  <em>Hadley Wickham</em><em>手里拿着一本关于他的可视化软件包</em><em>ggplot2 </em><em>的中文译本</em><em>;</em><em>图片来源于</em><em>[statr](http://statr.me/2013/09/a-conversation-with-hadley-wickham/)</em>
 </p>
 
 除了开发ggplot2和reshape包外，Wickham也设计了一些其他广受欢迎的包来为数据科学家解决其他的重要问题。想用字（字符串）的形式很容易地操纵数据么？想从网上爬取数据么？需要轻松地编写自己的包么？Wickham已经帮你解决了。
 
-在<a href="http://www.quora.com/How-is-Hadley-Wickham-able-to-contribute-so-much-to-R-particularly-in-the-form-of-packages" target="_blank">Quora</a>（一个问答SNS网站，译者注）上，一个R 用户问道：“Hadley Wickham为什么能对R做出这么大的贡献，尤其是在R包上？我依然不能详细地算出Hadley到底做出了多少。他做出这么多东西看起来是不可能的……”R 社区的活跃会员Eduardo Arino de la Rubia说所有成功的编程语言需要像Hadley这样的“<a href="http://www.r-bloggers.com/a-conversation-with-hadley-wickham-the-user-2014-interview/" target="_blank">名人</a>”。他把Hadley与David Heinemeier Hansson（Web应用程序框架的Ruby on Rails的创建者）和Tatsuhiko Miyagawa（编程语言Perl 的重要开发者）进行了比较。
+在[Quora](http://www.quora.com/How-is-Hadley-Wickham-able-to-contribute-so-much-to-R-particularly-in-the-form-of-packages)（一个问答SNS网站，译者注）上，一个R 用户问道：“Hadley Wickham为什么能对R做出这么大的贡献，尤其是在R包上？我依然不能详细地算出Hadley到底做出了多少。他做出这么多东西看起来是不可能的……”R 社区的活跃会员Eduardo Arino de la Rubia说所有成功的编程语言需要像Hadley这样的“[名人](http://www.r-bloggers.com/a-conversation-with-hadley-wickham-the-user-2014-interview/)”。他把Hadley与David Heinemeier Hansson（Web应用程序框架的Ruby on Rails的创建者）和Tatsuhiko Miyagawa（编程语言Perl 的重要开发者）进行了比较。
 
-下面的图标展示了Hadley的超过2000次下载的17个包（有时候它们被戏称为“<a href="http://barryrowlingson.github.io/hadleyverse/#1" target="_blank">Hadley宇宙</a>”）的发布日期和下载的数量。这些下载数字少得可怜，因为它们只反映了从2012年年底其中一个流行的下载来源的数据。并且，是的，这个图是用Hadley的包（<a href="http://ggvis.rstudio.com/" target="_blank">ggvis</a>）绘制的。
+下面的图标展示了Hadley的超过2000次下载的17个包（有时候它们被戏称为“[Hadley宇宙](http://barryrowlingson.github.io/hadleyverse/#1)”）的发布日期和下载的数量。这些下载数字少得可怜，因为它们只反映了从2012年年底其中一个流行的下载来源的数据。并且，是的，这个图是用Hadley的包（[ggvis](http://ggvis.rstudio.com/)）绘制的。
 
 _                                          ![Chart](https://cos.name/wp-content/uploads/2015/09/Chart.png)_
 
 <p style="text-align: center;">
-  <em>Dan Kopf, Priceonomics；</em><em>数据来源：</em><a href="https://github.com/metacran/cranlogs"><em>cranlogs</em></a>
+  <em>Dan Kopf, Priceonomics；</em><em>数据来源：</em>[<em>cranlogs</em>](https://github.com/metacran/cranlogs)
 </p>
 
 那么为什么Hadley创造了这一切？R是免费下载的，所有的包也是免费的，所以金钱的激励是次要的。简单地说，当一个问题比它应有的状态更难以解决时，Wickham就会耿耿于怀。虽然“其他大多数人都可以接受生活多艰这一事实”，但是Wickham却做不到。

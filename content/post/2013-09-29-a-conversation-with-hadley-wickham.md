@@ -19,7 +19,7 @@ slug: a-conversation-with-hadley-wickham
 
 &nbsp;
 
-<span style="color: #808080;">【COS编辑部按】受访者： <a href="http://had.co.nz/"><span style="color: #808080;">Hadley Wickham</span></a>             采访人：YiXuan</span>
+<span style="color: #808080;">【COS编辑部按】受访者： [<span style="color: #808080;">Hadley Wickham</span>](http://had.co.nz/)             采访人：YiXuan</span>
 
 <span style="color: #808080;">简介：Hadley Wickham 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 <code>ggplot2</code> 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 <code>plyr</code>、<code>reshape2</code> 等。</span>
 

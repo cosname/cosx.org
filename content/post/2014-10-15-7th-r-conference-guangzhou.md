@@ -14,7 +14,7 @@ slug: 7th-r-conference-guangzhou
 
 R是一门用于数据分析和图形展示的语言、平台和环境，其官方机构每年都会举办useR!会议，各个国家及地区也定期有R用户的交流活动。在国内，自2008年以来，中国已经在北京和上海成功举办了六届R语言会议，促进了R语言乃至数据科学在中国的推广和发展。为了进一步加强各领域R语言使用者之间的交流和互动，中山大学数学与计算科学学院、华南统计科学研究中心和统计之都将于2014年11月15日在中山大学南校区举办第七届中国R语言会议（广州会场）。这将是R语言会议首次在华南地区举办。
 
-除了统计之都主站，会务信息还会通过统计之都微信<span style="color: #808080;">(扫描本页面右侧微信公众平台二维码即可关注)</span>、微博(<a href="http://weibo.com/cosname" target="_blank">@统计之都</a>)来发布，欢迎大家关注获取最新消息。
+除了统计之都主站，会务信息还会通过统计之都微信<span style="color: #808080;">(扫描本页面右侧微信公众平台二维码即可关注)</span>、微博([@统计之都](http://weibo.com/cosname))来发布，欢迎大家关注获取最新消息。
 
 ![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
@@ -75,7 +75,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 敬请关注后续报名开放时间。
 
-请登录会议活动主页报名<a href="http://chinar2014gd.vasee.com/" target="_blank"> http://chinar2014gd.vasee.com/</a>
+请登录会议活动主页报名[ http://chinar2014gd.vasee.com/](http://chinar2014gd.vasee.com/)
 
 ## **八、联系方式**
 

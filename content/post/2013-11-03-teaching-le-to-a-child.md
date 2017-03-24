@@ -22,4 +22,4 @@ slug: teaching-le-to-a-child
   * DATA ===> DATE? 上期数据科学家访谈中波波头用数据玩浪漫的故事想必大家都印象深刻，不过和大龄女极客Amy Webb相比就小巫见大巫了，这位犹太女作家、企业家、工程师黑进了相亲网站，用数据挖掘解决了自己的终身大事，现在女儿已经……或许你会觉得筛选相亲对象是小菜一碟，但她评价自己的竞争力的方法一定让你大吃一惊,拍手叫绝。Amy 的[TED视频](http://www.ted.com/talks/amy_webb_how_i_hacked_online_dating.html)放出一个月，在TED和YouTube上总共已播放90万次
   * 另外，插播一则要闻，第六届R语言会议正如火如荼的展开，各路高手云集，各种知识涌来。小编身在北京，心在上海，恨不得分身前往，实难耐琐事缠身。欲了解详情，请紧跟[最新动态](http://weibo.com/cosname)。个人最为喜欢的是: 
       * 林祯舜：R与大数据对统计教育的影响（我作为学生对此篇是虽身不能至，然心向往之，坐等slide放出）
-      * <span style="line-height: 1.5;">魏太云，周扬：通向高富帅图表的R包——recharts（R终于能与高富帅Echarts做朋友了）。小编个人非常喜欢。喜欢ECharts但是又一直苦于不敢面对其学习成本的同学，现在终于有前人的肩膀可以踩了（猛踩）！。<a href="https://github.com/taiyun/recharts">传送门</a>在此（感谢cloud_wei和萌主）</span>
+      * <span style="line-height: 1.5;">魏太云，周扬：通向高富帅图表的R包——recharts（R终于能与高富帅Echarts做朋友了）。小编个人非常喜欢。喜欢ECharts但是又一直苦于不敢面对其学习成本的同学，现在终于有前人的肩膀可以踩了（猛踩）！。[传送门](https://github.com/taiyun/recharts)在此（感谢cloud_wei和萌主）</span>

@@ -13,7 +13,7 @@ tags:
 slug: a-conversaton-with-leo-breiman
 ---
 
-> <pre>COS编辑部按：本文是一篇Richard Olshen对Leo Breiman的采访稿（<a href="http://projecteuclid.org/download/pdf_1/euclid.ss/1009213290">原文发表在Statistical Science</a>）。翻译工作已经得到作者授权。翻译: 张晔、成慧敏、李宇轩。审校：高涛、侯澄钧、丁鹏、魏太云。此外，郑重感谢施涛、丁鹏、郁彬老师为文章的翻译指导和版权沟通提供的帮助。
+> <pre>COS编辑部按：本文是一篇Richard Olshen对Leo Breiman的采访稿（[原文发表在Statistical Science](http://projecteuclid.org/download/pdf_1/euclid.ss/1009213290)）。翻译工作已经得到作者授权。翻译: 张晔、成慧敏、李宇轩。审校：高涛、侯澄钧、丁鹏、魏太云。此外，郑重感谢施涛、丁鹏、郁彬老师为文章的翻译指导和版权沟通提供的帮助。
 
 译者简介：张晔，毕业于华南统计科学研究中心，现严肃科技平台开发工程师，主要负责docker容器调度系统开发。成慧敏，就读于中央财经大学统计与数学学院，硕士研究生二年级，研究兴趣为复杂网络分析与深度学习。李宇轩,就读于中国人民大学统计学院,大二本科生,目测统计有关都可以是学习方向。</pre>
 

@@ -12,7 +12,7 @@ tags:
 slug: svm-series-add-1-duality
 ---
 
-_原文链接请点击<a href="http://blog.pluskid.org/?p=702" target="_blank">这里</a>_
+_原文链接请点击[这里](http://blog.pluskid.org/?p=702)_
 
 在[之前关于 support vector 的推导](/?p=682)中，我们提到了 dual ，这里再来补充一点相关的知识。这套理论不仅适用于 SVM 的优化问题，而是对于所有带约束的优化问题都适用的，是优化理论中的一个重要部分。简单来说，对于任意一个带约束的优化都可以写成这样的形式：
 

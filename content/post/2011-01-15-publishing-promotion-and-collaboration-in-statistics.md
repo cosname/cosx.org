@@ -22,7 +22,7 @@ slug: publishing-promotion-and-collaboration-in-statistics
 
 （观看本视频可能需要安装QuickTime，视频为MP4格式）
 
-本视频<a href="http://web.me.com/goodmanfamily1/Behind_the_tan_door/index.html" target="_blank">来源于Johns Hopkins Schools of Medicine and Public Health的Steve Goodman教授</a>，已获得作者授权发布。欲转载者请自行联系原作者。Goodman教授在授权同时也表达了他对文化差异的担心，可能会有人看不懂这个片子的真正意思。如果你看完这个片子之后觉得气愤或不解（相信应该没有这样的人），请尽管联系我（谢益辉）给你解释。
+本视频[来源于Johns Hopkins Schools of Medicine and Public Health的Steve Goodman教授](http://web.me.com/goodmanfamily1/Behind_the_tan_door/index.html)，已获得作者授权发布。欲转载者请自行联系原作者。Goodman教授在授权同时也表达了他对文化差异的担心，可能会有人看不懂这个片子的真正意思。如果你看完这个片子之后觉得气愤或不解（相信应该没有这样的人），请尽管联系我（谢益辉）给你解释。
 
 我想补充说明的是视频的第三部分，尽管我前面的“内幕”打了引号，但这里反映的其实也是一种现实：统计学家和其它专业的人打交道经常互不理解，鸡同鸭讲。这在[COS论坛](https://cos.name/cn/)上也经常出现——提问的人通常夹杂太多专业术语，让统计人摸不着头脑；实验设计、数据和问题被淹没在术语中，理不清头绪。反过来也一样，统计学一会儿一个纵向数据，一会儿一个随机效应，这种方差结构那种距离量度。从某种程度上来说，随着学科的深化发展，这种现象的出现是不可避免的。关于这个问题，用下面的图示来解释再清楚不过了。
 

@@ -107,10 +107,10 @@ PROC_R 于2012年发表在 Journal of Statistical Software 上，是一位华人
 
 以上四种方式我在下面的文章中有详细的介绍，有兴趣的同学可以阅读。
 
-<a href="http://blog.sina.com.cn/s/blog_8db50cf70101dmo4.html" target="_blank">R与SAS的集成（一）</a>
+[R与SAS的集成（一）](http://blog.sina.com.cn/s/blog_8db50cf70101dmo4.html)
 
-<a href="http://blog.sina.com.cn/s/blog_8db50cf70101dmoa.html" target="_blank">R与SAS的集成（二）</a>
+[R与SAS的集成（二）](http://blog.sina.com.cn/s/blog_8db50cf70101dmoa.html)
 
-<a href="http://blog.sina.com.cn/s/blog_8db50cf70101dn4z.html" target="_blank">R与SAS的集成（三）</a>
+[R与SAS的集成（三）](http://blog.sina.com.cn/s/blog_8db50cf70101dn4z.html)
 
-<a href="http://blog.sina.com.cn/s/blog_8db50cf70101dlp6.html" target="_blank">R与SAS的集成（四）</a>
+[R与SAS的集成（四）](http://blog.sina.com.cn/s/blog_8db50cf70101dlp6.html)

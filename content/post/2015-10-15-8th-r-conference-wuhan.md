@@ -46,7 +46,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
 
 六、参会者报名
 
-本次会议的普通参会人员报名截止日期为2015年10月30日，名额报满即止。主办方不会对参会者收取任何费用，对会议感兴趣的R语言爱好者需要在报名系统里填写个人信息，完成报名后方可参加会议。报名系统：<a href="http://wuhanr2015.eventdove.com" target="_blank">http://wuhanr2015.eventdove.com</a>
+本次会议的普通参会人员报名截止日期为2015年10月30日，名额报满即止。主办方不会对参会者收取任何费用，对会议感兴趣的R语言爱好者需要在报名系统里填写个人信息，完成报名后方可参加会议。报名系统：[http://wuhanr2015.eventdove.com](http://wuhanr2015.eventdove.com)
 
 七、交通路线
 
@@ -132,7 +132,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="https://cos.name/wp-content/uploads/2015/10/路线.jpg">![路线](https://cos.name/wp-content/uploads/2015/10/路线.jpg)</a>
+          [![路线](https://cos.name/wp-content/uploads/2015/10/路线.jpg)](https://cos.name/wp-content/uploads/2015/10/路线.jpg)
         </p>
         
         <p>
@@ -140,7 +140,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          邮箱：<a href="mailto:wuhanr2015@yeah.net">wuhanr2015@yeah.net</a>
+          邮箱：[wuhanr2015@yeah.net](mailto:wuhanr2015@yeah.net)
         </p>
         
         <p>
@@ -164,7 +164,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="https://cos.name/wp-content/uploads/2015/10/hubei.jpg">![hubei](https://cos.name/wp-content/uploads/2015/10/hubei.jpg)</a>
+          [![hubei](https://cos.name/wp-content/uploads/2015/10/hubei.jpg)](https://cos.name/wp-content/uploads/2015/10/hubei.jpg)
         </p>
         
         <p>
@@ -200,7 +200,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="https://cos.name/wp-content/uploads/2015/10/统计.png">![统计](https://cos.name/wp-content/uploads/2015/10/统计.png)</a>
+          [![统计](https://cos.name/wp-content/uploads/2015/10/统计.png)](https://cos.name/wp-content/uploads/2015/10/统计.png)
         </p>
         
         <p>
@@ -228,7 +228,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="https://cos.name/wp-content/uploads/2015/10/0082.jpg">![008](https://cos.name/wp-content/uploads/2015/10/0082.jpg)</a>
+          [![008](https://cos.name/wp-content/uploads/2015/10/0082.jpg)](https://cos.name/wp-content/uploads/2015/10/0082.jpg)
         </p>
         
         <p>
@@ -296,7 +296,7 @@ R语言作为一种用于数据分析和图形展示的语言，是受S语言和
         </p>
         
         <p>
-          <a href="https://cos.name/wp-content/uploads/2015/10/0092.jpg">![009](https://cos.name/wp-content/uploads/2015/10/0092.jpg)</a>
+          [![009](https://cos.name/wp-content/uploads/2015/10/0092.jpg)](https://cos.name/wp-content/uploads/2015/10/0092.jpg)
         </p>
         
         <p>
