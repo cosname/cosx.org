@@ -36,14 +36,14 @@ slug: measure-classification-model-performance-confusion-matrix
 Train data
 good_bad    Frequency     Percent
 -------------------------------------------
-bad               154              25.67
-good             446              74.33
+bad         154           25.67
+good        446           74.33
 
 Valid data
 good_bad    Frequency     Percent
 --------------------------------------------
-bad               146              36.50
-good             254              63.50
+bad         146           36.50
+good        254           63.50
 ```
 
 信用评分指帮助贷款机构发放消费信贷的一整套决策模型及其支持技术。一般地，信用评分技术将客户分为好客户与坏客户两类，比如说，好客户(good)能够按期还本付息（履约），违约的就是坏客户(bad)。具体做法是根据历史上每个类别（履约、违约）的若干样本，从已知的数据中考察借款人的哪些特征对其拖欠或违约行为有影响，从而测量借款人的违约风险，为信贷决策提供依据。Logistic回归是信用评分领域运用最成熟最广泛的统计技术。
@@ -61,7 +61,7 @@ proc logistic data=train;
 
 model good_bad=checking history duration savings property;
 
-run
+run;
 ```
 
 这个数据很整齐，能做出很漂亮的模型，以下就直接贴出参数估计的结果：
@@ -90,7 +90,7 @@ logit[p(bad)]=log(p/1-p)
 用下面的公式就可以求出正例的概率（bad的概率）：
 
 `$$
-p=\frac{exp{logit}}{(exp{logit}+1)}
+p=\frac{exp(logit)}{(exp(logit)+1)}
 $$`
 
 上式求出的是概率值，如何根据概率值把各个客户归类，还需要一个阈值，比如，这里我们简单地规定，违约概率超过0.5的就归为bad，其余为good。把上述公式代入valid数据中，
@@ -135,23 +135,23 @@ good      0.15306      good
 
 一个完美的分类模型就是，如果一个客户实际上(Actual)属于类别good，也预测成(Predicted)good，处于类别bad，也就预测成bad。但从上面我们看到，一些实际上是good的客户，根据我们的模型，却预测他为bad，对一些原本是bad的客户，却预测他为good。我们需要知道，这个模型到底预测对了多少，预测错了多少，混淆矩阵就把所有这些信息，都归到一个表里：
 
-|      |   | 预测                   |                  |                     |
-|:-----|:--|:-----------------------|:-----------------|:--------------------|
-|      |   |1                       |                  |                     |
-|实    |1  |d, True Positive        |c, False Negative |c+d, Actual Positive |
-|际    |   |b, False Positive       |a, True Negative  |a+b, Actual Negative |
-|      |   |b+d, Predicted Positive |a+c, Predicted Negative |               |
+|      |    | 预测                   |                  |                     |
+|:----:|:--:|:----------------------:|:----------------:|:-------------------:|
+|      |    |1                       |                  |                     |
+|实    |1   |d, True Positive        |c, False Negative |c+d, Actual Positive |
+|际    |0   |b, False Positive       |a, True Negative  |a+b, Actual Negative |
+|      |    |b+d, Predicted Positive |a+c, Predicted Negative |               |
 
 其中，
 
   1. a是正确预测到的负例的数量, True Negative(TN,0->0)
-  2. b是把负例预测成正例的数量, False Positive(FP, 0->1)
-  3. c是把正例预测成负例的数量, False Negative(FN, 1->0)
-  4. d是正确预测到的正例的数量, True Positive(TP, 1->1)
-  5. a+b是实际上负例的数量，Actual Negative
-  6. c+d是实际上正例的个数，Actual Positive
-  7. a+c是预测的负例个数，Predicted Negative
-  8. b+d是预测的正例个数，Predicted Positive
+  1. b是把负例预测成正例的数量, False Positive(FP, 0->1)
+  1. c是把正例预测成负例的数量, False Negative(FN, 1->0)
+  1. d是正确预测到的正例的数量, True Positive(TP, 1->1)
+  1. a+b是实际上负例的数量，Actual Negative
+  1. c+d是实际上正例的个数，Actual Positive
+  1. a+c是预测的负例个数，Predicted Negative
+  1. b+d是预测的正例个数，Predicted Positive
 
 以上似乎一下子引入了许多概念，其实不必像咋一看那么复杂，有必要过一下这里的概念。实际的数据中，客户有两种可能{good, bad}，模型预测同样这两种可能，可能匹配可能不匹配。匹配的好说，0->0（读作，实际是Negative，**预测成** Negative），或者 1->1（读作，实际是Positive，**预测成** Positive），这就是True Negative（其中Negative是指 **预测成** Negative）和True Positive（其中Positive是指 **预测成** Positive）的情况。
 
@@ -225,7 +225,7 @@ tables good_bad*good_bad_predicted;
 run;
 ```
 
-[ ![PV](https://cos.name/wp-content/uploads/2008/12/pv-thumb.png)](https://cos.name/wp-content/uploads/2008/12/pv.png)
+![PV](https://cos.name/wp-content/uploads/2008/12/pv.png)
 
 其中，准确率=12.00%+57.25%=69.25% ，覆盖率=32.88% ，命中率=65.75% ，Specificity=90.16%，PV-=70.03% 。
 
