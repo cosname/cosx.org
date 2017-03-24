@@ -10,30 +10,19 @@ tags:
   - COS访谈
   - 数据科学
 slug: cos-interview-wilson
+description: "前阵子统计之都发布了一系列数据分析领域专家的采访，从学界到业界，从新人到鼻祖。而后统计之都的主编向我约稿，我第一个想起来采访的人就是Wilson。虽然在eBay不同的部门工作，但同属数据科学的大圈子有交集也有不同的见解。我一直很好奇CS或者EE出身、从事系统开发背景的人会在工作中感受到什么样的数据分析，而Wilson正是回答这个问题最好的人选."
 ---
 
-<p style="padding-left: 60px;">
-  <span style="color: #808080;">【COS编辑部按】受访人：逄伟 (读音：páng wěi，英文名：Wilson)  ,</span>
-</p>
+【COS编辑部按】受访人：逄伟 (读音：páng wěi，英文名：Wilson),
 
-<p style="padding-left: 60px;">
-  <span style="color: #808080;">简介：逄伟，Director of Engineering, behavioral insights and science, eBay Inc.采访人：Liyun, Marketing Analyst, eBay Inc.</span>
-</p>
+简介：逄伟，Director of Engineering, behavioral insights and science, eBay Inc.采访人：Liyun, Marketing Analyst, eBay Inc.
 
-<p style="padding-left: 60px;">
-  <span style="color: #808080;">写在前面的话：前阵子统计之都发布了一系列数据分析领域专家的采访，从学界到业界，从新人到鼻祖。而后统计之都的主编向我约稿，我第一个想起来采访的人就是Wilson。虽然在eBay不同的部门工作，但同属数据科学的大圈子有交集也有不同的见解。我一直很好奇CS或者EE出身、从事系统开发背景的人会在工作中感受到什么样的数据分析，而Wilson正是回答这个问题最好的人选</span>。
-</p>
+写在前面的话：前阵子统计之都发布了一系列数据分析领域专家的采访，从学界到业界，从新人到鼻祖。而后统计之都的主编向我约稿，我第一个想起来采访的人就是Wilson。虽然在eBay不同的部门工作，但同属数据科学的大圈子有交集也有不同的见解。我一直很好奇CS或者EE出身、从事系统开发背景的人会在工作中感受到什么样的数据分析，而Wilson正是回答这个问题最好的人选。
 
-<div>
-  <p>
-    <a href="https://cos.name/wp-content/uploads/2013/11/wilson.jpg">![wilson](https://cos.name/wp-content/uploads/2013/11/wilson.jpg)</a>
-  </p>
+![wilson](https://cos.name/wp-content/uploads/2013/11/wilson.jpg)
   
-  <p>
-    Wilson是eBay美国Engineering, behavioral insights and science总监。他于2006年加入eBay，先后参与过eBay支付系统、搜索产品、行为数据产品的开发。在加入eBay之前他在IBM从事了5年多的架构师和资深顾问工作。从浙大读书时期的创业经历，到咨询公司、再到电子商务公司，我们希望他对于学术知识、职业发展、数据科学的理解和心路历程可以启发后来者，以期在这个领域做出更大的成就。
-  </p>
-</div>
-
+Wilson是eBay美国Engineering, behavioral insights and science总监。他于2006年加入eBay，先后参与过eBay支付系统、搜索产品、行为数据产品的开发。在加入eBay之前他在IBM从事了5年多的架构师和资深顾问工作。从浙大读书时期的创业经历，到咨询公司、再到电子商务公司，我们希望他对于学术知识、职业发展、数据科学的理解和心路历程可以启发后来者，以期在这个领域做出更大的成就。
+  
 Liyun: 我注意到你大学期间的专业是EE，那当时你应该主要专注在工程方面吧？除此之外，那时候你们学很多统计吗？
 
 Wilson: 当时和大多数本科生差不多吧，接触过一两门课吧。
@@ -44,7 +33,6 @@ Wilson: 那时候是94年，我们刚进大学的时候做的还是DOS下的编�
 
 Liyun: 那现在回想一下，当时学的什么东西最好玩？假设你现在回到学校，会再学点什么东西呢？
 
-<!--more-->
 
 Wilson: 我的专业是EE嘛。从那时到现在，我们接触了无数的编程语言无数的编程工具，有些你可能现在都没听说过（Liyun：你刚刚说的那些我好像就听说过VB），这是基本的编程的方面。此外还有网络相关和Unix下的编程、多线程的编程等等。从开发的角度，接触了很多很多，从没有可视化到有可视化，从DOS（字符界面）到单片机编程、再到C++等可以一个个画表，再到VB、FoxPro，把一个数据库可以很快的展现出去。我们自己做一些可视化的工具，用那么一点小小的内存和硬盘处理图形是比较困难的，有很多好玩的技术挑战；另一方面从数据库到企业信息管理系统，我们做过好多，比如杭州环保局的系统软件。（Liyun: 这是你上学的时候还是后面到了IBM之后？）这都是在读书的时候。那时候你可以很快的把别人文章里面的东西搬到电脑上去，可以赚很多钱（当时一个月三四千！）。这个过程其实也很好玩，虽然技术挑战不多，但是很快你能看到技术带来的生产力。而且你能看到，很多人从很原始工作方式（比如打电话、写一些表格然后相互传来传去），到后面有个系统可以电子办公了，这也会让你觉得比较好玩。
 
