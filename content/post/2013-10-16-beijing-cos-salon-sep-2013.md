@@ -51,7 +51,7 @@ Dora解读：我本身会首先关注提供的数据有什么缺陷，以及主�
 
 Q4：目前有哪些经常举办数据挖掘竞赛的平台？
 
-Dora解读：学术界的KDD，第三方网站[www.kaggle.com](http://www.kaggle.com/)、(www.topcoder.com)，业界的百度（[http://openresearch.baidu.com](http://openresearch.baidu.com/)）等。 每年会有很多不同的竞赛，但因为数据挖掘竞赛的时间跨度很大，同时也需要参赛者全身心的投入，所以，不宜报太多竞赛，从中挑选自己最感兴趣的1-2个参赛即可。
+Dora解读：学术界的KDD，第三方网站[www.kaggle.com](http://www.kaggle.com/)、[www.topcoder.com](www.topcoder.com)，业界的百度（[http://openresearch.baidu.com](http://openresearch.baidu.com/))等。 每年会有很多不同的竞赛，但因为数据挖掘竞赛的时间跨度很大，同时也需要参赛者全身心的投入，所以，不宜报太多竞赛，从中挑选自己最感兴趣的1-2个参赛即可。
 
 刁瑞嘉宾还就目前参赛主要的算法研究，以及如何合理利用规则获取对手的结果从而知己知彼的战术进行了深入分享。
 
