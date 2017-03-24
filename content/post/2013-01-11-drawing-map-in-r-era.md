@@ -127,8 +127,8 @@ title(" 中国地图")
 这大哥可以返回一个地方的经纬度，那我再调戏之：
 
 ```
-&gt; #这意思就是大哥你多给点！！
-&gt; geocode("Renmin University of China", output = "more")
+>#这意思就是大哥你多给点！！
+>geocode("Renmin University of China", output = "more")
        lon      lat              type     loctype
 1 116.3184 39.96998 point_of_interest approximate
                                                                                 address
@@ -149,7 +149,7 @@ title(" 中国地图")
 第二个颠颤颤的命令式mapdist()。比如：
 
 ```
-&gt; mapdist('China Agricultural University',
+> mapdist('China Agricultural University',
 +     'Renmin University of China', 'walking')
                            from                         to    m    km
 1 China Agricultural University Renmin University of China 6022 6.022
