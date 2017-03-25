@@ -45,7 +45,7 @@ R语言中绘制地图的思路也是由于2的获取方式不一样而分开的
 
 代码如下：
 
-```
+```r
 library(maps)
 map("world", fill = TRUE, col = rainbow(200),
     ylim = c(-60, 90), mar = c(0, 0, 0, 0))
@@ -64,7 +64,7 @@ title("世界地图")
 
   代码如下：
 
-```
+```r
 library(maps)
 map("state", fill = TRUE, col = rainbow(209),
     mar = c(0, 0, 2, 0))
@@ -81,7 +81,7 @@ title("美国地图")
 
 代码如下：
 
-```
+```r
 library(maps)
 map('state', region = c('new york', 'new jersey', 'penn'),
     fill = TRUE, col = rainbow(3), mar = c(2, 3, 4, 3))
@@ -99,7 +99,7 @@ title("美国三州地图")
 
 代码如下：
 
-```
+```r
 library(maps)
 library(mapdata)
 map("china", col = "red4", ylim = c(18, 54), panel.first = grid())
@@ -118,7 +118,7 @@ title(" 中国地图")
 
 比如：
 
-```
+```r
 > geocode("Beijing")
        lon      lat
 1 116.4075 39.90403</pre>
@@ -126,7 +126,7 @@ title(" 中国地图")
 
 这大哥可以返回一个地方的经纬度，那我再调戏之：
 
-```
+```r
 >#这意思就是大哥你多给点！！
 >geocode("Renmin University of China", output = "more")
        lon      lat              type     loctype
@@ -148,7 +148,7 @@ title(" 中国地图")
 
 第二个颠颤颤的命令式mapdist()。比如：
 
-```
+```r
 > mapdist('China Agricultural University',
 +     'Renmin University of China', 'walking')
                            from                         to    m    km
@@ -165,7 +165,7 @@ title(" 中国地图")
 
 其他的不谈了，直接画地图：
 
-```
+```r
 library(ggmap)
 library(mapproj)
 ## Google啊Google给我China的地图数据吧
@@ -180,7 +180,7 @@ ggmap(map)
 
 再来北京道路地图：
 
-```
+```r
 #Google啊Google给我Beijing的公路地图数据吧
 map <- get_map(location = 'Beijing', zoom = 10, maptype = 'roadmap')
 ggmap(map)
@@ -192,7 +192,7 @@ ggmap(map)
 
 最后，我想看下大冬天的有没有人在人民大学的各个楼顶上晒太阳浴：
 
-```
+```r
 ## Google啊Google给我RUC的卫星地图数据吧
 map <- get_map(location = 'Renmin University of China', zoom = 14,
     maptype = 'satellite')
