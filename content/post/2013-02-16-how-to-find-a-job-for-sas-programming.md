@@ -10,9 +10,9 @@ tags:
 slug: how-to-find-a-job-for-sas-programming
 ---
 
-在LinkedIn上看到一个帖子问“金融和会计背景且有SAS知识的学生是否很难找到SAS程序员的工作？”，第一位回复的是SAS公司资的深培训师 [Cynthia Zender](http://control.blog.sina.com.cn/groups?viewMemberFeed=&gid=70702&memberID=7987482 "See this member's activity")，回复内容非常专业具体，值得一看。
+在LinkedIn上看到一个帖子问“金融和会计背景且有SAS知识的学生是否很难找到SAS程序员的工作？”，第一位回复的是SAS公司资的深培训师 [Cynthia Zender](http://blogs.sas.com/content/sastraining/author/cynthiazender/)，回复内容非常专业具体，值得一看。
 
-[Cynthia Zender](http://control.blog.sina.com.cn/groups?viewMemberFeed=&gid=70702&memberID=7987482 "See this member's activity") 说每当她的学生提出类似问题时， 她的答复是：上招聘网站 Monster.com 或者 Icrunchdata.com 看看即将投身的领域在所在地区都需要什么样的SAS技能和经验。
+[Cynthia Zender](http://blogs.sas.com/content/sastraining/author/cynthiazender/) 说每当她的学生提出类似问题时， 她的答复是：上招聘网站 Monster.com 或者 Icrunchdata.com 看看即将投身的领域在所在地区都需要什么样的SAS技能和经验。
 
 假如你只知道 PROC PRINT, PROC FREQ 和 PROC MEANS，其他的SAS产品或者技术都没用过，那么你只能找到一份入门级的工作。
 
@@ -30,9 +30,9 @@ SAS知识和SAS经验完全是两码事。如果你看到招聘网站上要求�
 
 另外一个途径就是访问 [http://www.sas.com/success/](http://www.sas.com/success/)，上面有一些SAS客户的成功案例，可以从技术、行业、解决方案等多个角度了解SAS产品在不同公司的各种应用。
 
-最后，[Cynthia Zender](http://control.blog.sina.com.cn/groups?viewMemberFeed=&gid=70702&memberID=7987482 "See this member's activity") 引用了 [T. H. White](http://en.wikipedia.org/wiki/T._H._White) 的一句名言： Education is experience, and the essence of experience is self-reliance。教育就是传授经验，而经验的本质是自立。一个人要想进入某个行业的高端，必须通过大量的自学和实践，而不是通过培训的方式。个人认为兴趣、学习和实践是最好的老师，只要你真心想要进入这行，通过坚持不懈的努力早晚都能成为行业专家。 <!--more-->
+最后，[Cynthia Zender](http://blogs.sas.com/content/sastraining/author/cynthiazender/) 引用了 [T. H. White](http://en.wikipedia.org/wiki/T._H._White) 的一句名言： Education is experience, and the essence of experience is self-reliance。教育就是传授经验，而经验的本质是自立。一个人要想进入某个行业的高端，必须通过大量的自学和实践，而不是通过培训的方式。个人认为兴趣、学习和实践是最好的老师，只要你真心想要进入这行，通过坚持不懈的努力早晚都能成为行业专家。 <!--more-->
 
-[Cynthia Zender](http://control.blog.sina.com.cn/groups?viewMemberFeed=&gid=70702&memberID=7987482 "See this member's activity") 还向这位提问者介绍了SAS在金融行业的应用领域：投资组合管理、银行、保险、信用卡和风险管理、欺诈监测、预算、预报、平衡计分卡、时间序列分析（例如股票趋势分析）等，此外，她还推荐了一篇SAS全球用户大会上的文章《[Financial Analysis Using SAS ® PROCS](http://support.sas.com/resources/papers/proceedings10/261-2010.pdf)》和一本书《[Using SAS in Financial Research](https://support.sas.com/pubscat/bookdetails.jsp?catid=1&pc=57601)》。
+[Cynthia Zender](http://blogs.sas.com/content/sastraining/author/cynthiazender/) 还向这位提问者介绍了SAS在金融行业的应用领域：投资组合管理、银行、保险、信用卡和风险管理、欺诈监测、预算、预报、平衡计分卡、时间序列分析（例如股票趋势分析）等，此外，她还推荐了一篇SAS全球用户大会上的文章《[Financial Analysis Using SAS ® PROCS](http://support.sas.com/resources/papers/proceedings10/261-2010.pdf)》和一本书《[Using SAS in Financial Research](https://support.sas.com/pubscat/bookdetails.jsp?catid=1&pc=57601)》。
 
 还有一位叫 [Paul Higgins](http://control.blog.sina.com.cn/groups?viewMemberFeed=&gid=70702&memberID=51443200 "See this member's activity") 的回复说： The key qualities are a logical, organized mindset and a love of problem-solving. （身为SAS程序员的我非常认同Paul的观点，尤其是爱好解决问题这句。）
 
