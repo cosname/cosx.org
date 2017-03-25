@@ -15,7 +15,7 @@ slug: svm-series-maximum-margin-classifier
 
 _原文链接请点击[这里](http://blog.pluskid.org/?p=632)
   
-![svm](https://cos.name/wp-content/uploads/2014/01/svm.png)_
+![svm](https://cos.name/wp-content/uploads/2014/01/svm.png) _
 
 支持向量机即 [Support Vector Machine](http://en.wikipedia.org/wiki/Support_vector_machine)，简称 SVM 。我最开始听说这头机器的名号的时候，一种神秘感就油然而生，似乎把 Support 这么一个具体的动作和 Vector 这么一个抽象的概念拼到一起，然后再做成一个 Machine ，一听就很玄了！
 
@@ -37,7 +37,7 @@ w^Tx + b = 0
 
 从几何直观上来说，由于超平面是用于分隔两类数据的，越接近超平面的点越“难”分隔，因为如果超平面稍微转动一下，它们就有可能跑到另一边去。反之，如果是距离超平面很远的点，例如图中的右上角或者左下角的点，则很容易分辩出其类别。
 
-![geometric_margin](https://cos.name/wp-content/uploads/2014/01/geometric_margin.png)实际上这两个 Criteria 是互通的，我们定义 functional margin 为 $\hat{\gamma}=y(w^Tx+b)=yf(x)$，注意前面乘上类别 $y$ 之后可以保证这个 margin 的非负性（因为 $f(x)<0$ 对应于 $y=-1$ 的那些点），而点到超平面的距离定义为 geometrical margin 。不妨来看看二者之间的关系。如图所示，对于一个点 $x$ ，令其垂直投影到超平面上的对应的为 $x_0$ ，由于 $w$ 是垂直于超平面的一个向量（请自行验证），我们有
+![geometric_margin](https://cos.name/wp-content/uploads/2014/01/geometric_margin.png) 实际上这两个 Criteria 是互通的，我们定义 functional margin 为 $\hat{\gamma}=y(w^Tx+b)=yf(x)$，注意前面乘上类别 $y$ 之后可以保证这个 margin 的非负性（因为 $f(x)<0$ 对应于 $y=-1$ 的那些点），而点到超平面的距离定义为 geometrical margin 。不妨来看看二者之间的关系。如图所示，对于一个点 $x$ ，令其垂直投影到超平面上的对应的为 $x_0$ ，由于 $w$ 是垂直于超平面的一个向量（请自行验证），我们有
 
 \[
   

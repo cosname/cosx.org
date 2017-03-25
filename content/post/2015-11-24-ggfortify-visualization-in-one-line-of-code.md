@@ -33,16 +33,16 @@ library(ggfortify)</code></pre>
 df &lt;- iris[c(1, 2, 3, 4)]
 autoplot(prcomp(df))</code></pre>
 
-![ggfortify-unnamed-chunk-1-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-1-1.png)你还可以选择数据中的一列来给画出的点按类别自动分颜色。输入`help(autoplot.prcomp)` 可以了解到更多的其他选择。
+![ggfortify-unnamed-chunk-1-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-1-1.png) 你还可以选择数据中的一列来给画出的点按类别自动分颜色。输入`help(autoplot.prcomp)` 可以了解到更多的其他选择。
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species')</code></pre>
 
-![ggfortify-unnamed-chunk-2-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-2-1.png)比如说给定`label = TRUE` 可以给每个点加上标识（以`rownames`为标准），也可以调整标识的大小。
+![ggfortify-unnamed-chunk-2-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-2-1.png) 比如说给定`label = TRUE` 可以给每个点加上标识（以`rownames`为标准），也可以调整标识的大小。
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species', label = TRUE,
          label.size = 3)</code></pre>
 
-![ggfortify-unnamed-chunk-3-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-3-1.png)给定 `shape = FALSE` 可以让所有的点消失，只留下标识，这样可以让图更清晰，辨识度更大。
+![ggfortify-unnamed-chunk-3-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-3-1.png) 给定 `shape = FALSE` 可以让所有的点消失，只留下标识，这样可以让图更清晰，辨识度更大。
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species', shape = FALSE,
          label.size = 3)</code></pre>
@@ -55,7 +55,7 @@ autoplot(prcomp(df))</code></pre>
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species', loadings = TRUE)</code></pre>
 
-![ggfortify-unnamed-chunk-5-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-5-1.png)同样的，你也可以显示特征向量的标识以及调整他们的大小，更多选择请参考帮助文件。
+![ggfortify-unnamed-chunk-5-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-5-1.png) 同样的，你也可以显示特征向量的标识以及调整他们的大小，更多选择请参考帮助文件。
 
 <pre><code class="r">autoplot(prcomp(df), data = iris, colour = 'Species',
          loadings = TRUE, loadings.colour = 'blue',
@@ -97,15 +97,15 @@ autoplot(d.factanal, data = state.x77, colour = 'Income')</code></pre>
 <pre><code class="r">library(cluster)
 autoplot(clara(iris[-5], 3))</code></pre>
 
-![ggfortify-unnamed-chunk-9-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-9-1.png)给定 `frame = TRUE`，可以把 `stats::kmeans` 和 `cluster::*` 中的每个类圈出来。
+![ggfortify-unnamed-chunk-9-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-9-1.png) 给定 `frame = TRUE`，可以把 `stats::kmeans` 和 `cluster::*` 中的每个类圈出来。
 
 <pre><code class="r">autoplot(fanny(iris[-5], 3), frame = TRUE)</code></pre>
 
-![ggfortify-unnamed-chunk-10-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-10-1.png)你也可以通过 `frame.type` 来选择圈的类型。更多选择请参照 [`ggplot2::stat_ellipse`](http://docs.ggplot2.org/dev/stat_ellipse.html) 里面的 `frame.type` 的 `type` 关键词。
+![ggfortify-unnamed-chunk-10-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-10-1.png) 你也可以通过 `frame.type` 来选择圈的类型。更多选择请参照 [`ggplot2::stat_ellipse`](http://docs.ggplot2.org/dev/stat_ellipse.html) 里面的 `frame.type` 的 `type` 关键词。
 
 <pre><code class="r">autoplot(pam(iris[-5], 3), frame = TRUE, frame.type = 'norm')</code></pre>
 
-![ggfortify-unnamed-chunk-11-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-11-1.png)更多关于聚类方面的可视化请参考 Github 上的 [Vignette](https://github.com/sinhrks/ggfortify/tree/master/vignettes) 或者 [Rpubs](http://rpubs.com/sinhrks/plot_pca) 上的例子。
+![ggfortify-unnamed-chunk-11-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-11-1.png) 更多关于聚类方面的可视化请参考 Github 上的 [Vignette](https://github.com/sinhrks/ggfortify/tree/master/vignettes) 或者 [Rpubs](http://rpubs.com/sinhrks/plot_pca) 上的例子。
 
 ## lfda（Fisher局部判别分析）
 
@@ -139,7 +139,7 @@ autoplot(model, data = iris, frame = TRUE, frame.colour = 'Species')</code></pre
 <pre><code class="r">library(ggfortify)
 autoplot(AirPassengers)</code></pre>
 
-![ggfortify-unnamed-chunk-14-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-14-1.png)可以使用 `ts.colour` 和 `ts.linetype` 来改变线的颜色和形状。更多的选择请参考 `help(autoplot.ts)`。
+![ggfortify-unnamed-chunk-14-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-14-1.png) 可以使用 `ts.colour` 和 `ts.linetype` 来改变线的颜色和形状。更多的选择请参考 `help(autoplot.ts)`。
 
 <pre><code class="r">autoplot(AirPassengers, ts.colour = 'red', ts.linetype = 'dashed')</code></pre>
 
@@ -151,7 +151,7 @@ autoplot(AirPassengers)</code></pre>
 data(Canada)
 autoplot(Canada)</code></pre>
 
-![ggfortify-unnamed-chunk-16-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-16-1.png)使用 `facets = FALSE` 可以把所有变量画在一条轴上。
+![ggfortify-unnamed-chunk-16-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-16-1.png) 使用 `facets = FALSE` 可以把所有变量画在一条轴上。
 
 <pre><code class="r">autoplot(Canada, facets = FALSE)</code></pre>
 
@@ -174,7 +174,7 @@ autoplot(as.xts(AirPassengers), ts.colour = 'green')</code></pre>
 <pre><code class="r">library(timeSeries)
 autoplot(as.timeSeries(AirPassengers), ts.colour = ('dodgerblue3'))</code></pre>
 
-![ggfortify-unnamed-chunk-18-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-18-2.png)你也可以通过 `ts.geom` 来改变几何形状，目前支持的有 `line`， `bar` 和 `point。`
+![ggfortify-unnamed-chunk-18-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-18-2.png) 你也可以通过 `ts.geom` 来改变几何形状，目前支持的有 `line`， `bar` 和 `point。`
 
 <pre><code class="r">autoplot(AirPassengers, ts.geom = 'bar', fill = 'blue')</code></pre>
 
@@ -191,7 +191,7 @@ d.arima &lt;- auto.arima(AirPassengers)
 d.forecast &lt;- forecast(d.arima, level = c(95), h = 50)
 autoplot(d.forecast)</code></pre>
 
-![ggfortify-unnamed-chunk-21-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-21-1.png)有很多设置可供调整：
+![ggfortify-unnamed-chunk-21-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-21-1.png) 有很多设置可供调整：
 
 <pre><code class="r">autoplot(d.forecast, ts.colour = 'firebrick1', predict.colour = 'red',
          predict.linetype = 'dashed', conf.int = FALSE)</code></pre>
@@ -254,7 +254,7 @@ autoplot(smoothed)</code></pre>
 <pre><code class="r">p &lt;- autoplot(filtered)
 autoplot(smoothed, ts.colour = 'blue', p = p)</code></pre>
 
-## ![ggfortify-unnamed-chunk-31-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-31-1.png)KFAS包
+## ![ggfortify-unnamed-chunk-31-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-31-1.png) KFAS包
 
 <pre><code class="r">library(KFAS)
 model &lt;- SSModel(
@@ -266,7 +266,7 @@ fit &lt;- fitSSM(model=model, inits=c(log(var(Nile)),log(var(Nile))),
 smoothed &lt;- KFS(fit$model)
 autoplot(smoothed)</code></pre>
 
-![ggfortify-unnamed-chunk-32-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-32-1.png)使用 `smoothing='none'` 可以画出过滤后的结果。
+![ggfortify-unnamed-chunk-32-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-32-1.png) 使用 `smoothing='none'` 可以画出过滤后的结果。
 
 <pre><code class="r">filtered &lt;- KFS(fit$model, filtering="mean", smoothing='none')
 autoplot(filtered)</code></pre>

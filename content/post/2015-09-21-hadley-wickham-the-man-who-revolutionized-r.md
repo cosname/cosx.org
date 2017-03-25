@@ -105,7 +105,7 @@ ggplot2 包是以统计学家Leland Wilkinson 的“图形语法”为基础，�
 
 下面的图标展示了Hadley的超过2000次下载的17个包（有时候它们被戏称为“[Hadley宇宙](http://barryrowlingson.github.io/hadleyverse/#1)”）的发布日期和下载的数量。这些下载数字少得可怜，因为它们只反映了从2012年年底其中一个流行的下载来源的数据。并且，是的，这个图是用Hadley的包（[ggvis](http://ggvis.rstudio.com/)）绘制的。
 
-_                                          ![Chart](https://cos.name/wp-content/uploads/2015/09/Chart.png)_
+_                                          ![Chart](https://cos.name/wp-content/uploads/2015/09/Chart.png) _
 
 <p style="text-align: center;">
   <em>Dan Kopf, Priceonomics；</em><em>数据来源：</em>[<em>cranlogs</em>](https://github.com/metacran/cranlogs)

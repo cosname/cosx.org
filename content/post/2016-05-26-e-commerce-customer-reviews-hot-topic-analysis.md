@@ -196,7 +196,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p style="text-align: center;">
-                                  图4 Paperwhite语料词云![cai_5](https://cos.name/wp-content/uploads/2016/05/cai_5.jpg)
+                                  图4 Paperwhite语料词云 ![cai_5](https://cos.name/wp-content/uploads/2016/05/cai_5.jpg)
                                 </p>
                                 
                                 <p style="text-align: center;">
@@ -456,7 +456,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                                             </p>
                                                             
                                                             <p style="text-align: center;">
-                                                              表3聚类结果匹配表![cai_9](https://cos.name/wp-content/uploads/2016/05/cai_9.png)
+                                                              表3聚类结果匹配表 ![cai_9](https://cos.name/wp-content/uploads/2016/05/cai_9.png)
                                                             </p>
                                                             
                                                             <p style="text-align: left;">
@@ -871,7 +871,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                                                                                     </p>
                                                                                                     
                                                                                                     <p style="text-align: center;">
-                                                                                                      图10 话题“翻页闪屏”词云图![cai_11](https://cos.name/wp-content/uploads/2016/05/cai_11.png)
+                                                                                                      图10 话题“翻页闪屏”词云图 ![cai_11](https://cos.name/wp-content/uploads/2016/05/cai_11.png)
                                                                                                     </p>
                                                                                                     
                                                                                                     <p style="text-align: center;">
