@@ -17,7 +17,7 @@ slug: something_about_weibo
 
 **1、信息采集**
 
-信息采集，说白了就是数据爬取。还好，这些名人们可是早就<a href="http://data.weibo.com/top/influence/famous?class=29&type=day" target="_blank">榜上有名</a>了，可以用XML包的readHTMLTable函数爬下来风云榜上来自体育、财经、传媒、科技 and so on的风云人物的微博信息，存为数据集。
+信息采集，说白了就是数据爬取。还好，这些名人们可是早就[榜上有名](http://data.weibo.com/top/influence/famous?class=29&type=day)了，可以用XML包的readHTMLTable函数爬下来风云榜上来自体育、财经、传媒、科技 and so on的风云人物的微博信息，存为数据集。
 
 以sports数据集为例，代码如下：
 
@@ -122,7 +122,7 @@ weibo_doc2=unlist(weibo_doc1_sample,recursive=F)</pre>
 
 俗话说的好，物以类聚，人以群分。如果你是个数据分析发烧友，那么你可能经常将“统计”、“机器学习”、“R语言”这些词汇挂在嘴边儿；而同时你又有可能是一名体育爱好者、车迷甚至于伪文艺青年。
 
-那么，怎样探寻汉语词汇之间关联关系以及表征每个人的兴趣爱好特征呢？我不禁想起了rickjin老师的[LDA数学八卦系列](https://cos.name/2013/03/lda-math-lda-text-modeling/)，不妨用Blei大神的topicmodel来小试牛刀吧~
+那么，怎样探寻汉语词汇之间关联关系以及表征每个人的兴趣爱好特征呢？我不禁想起了rickjin老师的[LDA数学八卦系列](/2013/03/lda-math-lda-text-modeling/)，不妨用Blei大神的topicmodel来小试牛刀吧~
 
 为了进一步去除噪音，首先去除某些[tf-idf](http://en.wikipedia.org/wiki/Tf%E2%80%93idf)较低的词汇（这里去除的是quantile中小于0.01的词汇），并保存文档-词频矩阵（Doc-word Matrix）：
 
@@ -167,7 +167,7 @@ ll=term_tfidf&gt;=quantile(term_tfidf,0.01)
 dtm &lt;- dtm[,ll]
 dtm &lt;- dtm[row_sums(dtm) &gt; 0,]</pre>
 
-如何选一个合适的topic数目呢？可以分别选用<a href="http://en.wikipedia.org/wiki/Perplexity#Perplexity_of_a_probability_model" target="_blank">perplexity</a>以及loglikelihood指标分别求取最佳的topic数目，代码如下：
+如何选一个合适的topic数目呢？可以分别选用[perplexity](http://en.wikipedia.org/wiki/Perplexity#Perplexity_of_a_probability_model)以及loglikelihood指标分别求取最佳的topic数目，代码如下：
 
 <pre>smp&lt;-function(cross=5,n,seed)
 {
@@ -319,9 +319,9 @@ hc_name=lapply(hc_res,function(x) {return(name[x])})</pre>
 **关于作者**
 
   * 朱雪宁
-  * 博客：**<a href="http://www.puddingnnn.com/" target="_blank">他山</a>**<a href="http://hi.baidu.com/healthstat" target="_blank"><br /> </a>
+  * 博客：**[他山](http://www.puddingnnn.com/)**[<br/> ](http://hi.baidu.com/healthstat)
   * 微博：[**@布丁Nnn**](http://weibo.com/puddingnnn529)
 
-注：原文链接：<a href="http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/" target="_blank">微博名人那些事儿</a> ，转载请注明出处。
+注：原文链接：[微博名人那些事儿](http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/) ，转载请注明出处。
 
 &nbsp;

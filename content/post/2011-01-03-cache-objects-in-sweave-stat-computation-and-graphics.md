@@ -28,7 +28,7 @@ tags:
 slug: cache-objects-in-sweave-stat-computation-and-graphics
 ---
 
-学无止境。我曾以为我明白了如何在Sweave中使用缓存加快计算和图形，但后来发现我并没有真的理解，直到读了另外一些手册才明白，因此本文作为前文“<a href="https://cos.name/2010/11/reproducible-research-in-statistics/" target="_blank">Sweave：打造一个可重复的统计研究流程</a>”之续集，向大家介绍一下如何在Sweave的计算和图形中使用缓存，以节省不必要的重复计算和作图，让那些涉及到密集型计算的用户不再对Sweave感到难堪。
+学无止境。我曾以为我明白了如何在Sweave中使用缓存加快计算和图形，但后来发现我并没有真的理解，直到读了另外一些手册才明白，因此本文作为前文“[Sweave：打造一个可重复的统计研究流程](/2010/11/reproducible-research-in-statistics/)”之续集，向大家介绍一下如何在Sweave的计算和图形中使用缓存，以节省不必要的重复计算和作图，让那些涉及到密集型计算的用户不再对Sweave感到难堪。
 
 如果你还没读前文，建议先从那里开始读，了解Sweave与“可重复的统计研究”的意义。简言之，Sweave是一种从代码（R代码和LaTeX）一步生成报告的工具，我们可以把整个统计分析流程融入这个工具，让我们的报告具有可重复性。然而，就普通的Sweave而言，这样做的一个明显问题就是，所有计算和作图都被融入一个文档之后，每次运行这个文档都要重复所有的计算和作图，这在很多情况下纯粹是浪费时间；比如，我只想对新添加的部分内容运行计算，而文档中的旧内容希望保持不变。这都是很合理的需求，我们需要的实际上就是一种缓存机制，将不想重复计算的对象缓存起来，需要它的时候再从缓存库中直接调出来用。
 
@@ -43,9 +43,9 @@ if (!exists('x')) {
     x = rnorm(100000)
 }</pre>
     
-    R对象的缓存可以通过<a href="http://cran.r-project.org/package=cacheSweave" target="_blank">cacheSweave包</a>（作者<a href="http://www.biostat.jhsph.edu/~rpeng/" target="_blank">Roger D. Peng</a>）实现，它真正采用的方法比上面的伪代码当然要高级（比如用代码的MD5值作数据库名等），不过用户可以不必关心这其中的细节。这种“当需要时才加载”的方式在术语上叫“延迟加载”，即Lazy Load，这在R里面也很常见，比如很多R包的数据都是采用延迟加载的方式（加载包的时候并不立刻加载数据，而是用`data(name)`在需要的时候加载）。</li> 
+    R对象的缓存可以通过[cacheSweave包](http://cran.r-project.org/package=cacheSweave)（作者[Roger D. Peng](http://www.biostat.jhsph.edu/~rpeng/)）实现，它真正采用的方法比上面的伪代码当然要高级（比如用代码的MD5值作数据库名等），不过用户可以不必关心这其中的细节。这种“当需要时才加载”的方式在术语上叫“延迟加载”，即Lazy Load，这在R里面也很常见，比如很多R包的数据都是采用延迟加载的方式（加载包的时候并不立刻加载数据，而是用`data(name)`在需要的时候加载）。</li> 
     
-      * 另一种是图形的缓存，这是一个不可思议的魔法。cacheSweave的帮助文档和vignette中特别提到了它只能缓存R对象，无法缓存图形和其它附属输出，而开源世界的魅力就是你总能找到一些奇妙的解决方案。R包pgfSweave借力于pgf实现了图形的缓存。pgfSweave包的两位作者Cameron Bracken和Charlie Sharpsteen都是水文学相关专业出身，却在R的世界里做了这些奇妙的工作，让我觉得有点意外，这是题外话。pgf是LaTeX世界的又一项重大发明，它提供了一套全新的绘图方式（语言），而且它的图形可以通过LaTeX直接生成PDF输出（这是pgfSweave能实现缓存的关键）。关于pgf，我们可以<a title="pgf手册" href="http://www.ctan.org/tex-archive/graphics/pgf/base/doc/generic/pgf/pgfmanual.pdf" target="_self">翻一翻它726页的手册</a>，如果你能坚持看上10分钟，感叹超过50次，那么你一定是一位超级排版爱好者。它的图形质量之高、输出之漂亮，真的是让人（至少让我）叹为观止。同样，这里我也不详细介绍细节。pgf图形的“缓存”是通过“外置化”（externalization）来实现的，简言之，pgf图形有一种输出形式如下： <pre class="brush: r">\beginpgfgraphicnamed{graph-output-1}
+      * 另一种是图形的缓存，这是一个不可思议的魔法。cacheSweave的帮助文档和vignette中特别提到了它只能缓存R对象，无法缓存图形和其它附属输出，而开源世界的魅力就是你总能找到一些奇妙的解决方案。R包pgfSweave借力于pgf实现了图形的缓存。pgfSweave包的两位作者Cameron Bracken和Charlie Sharpsteen都是水文学相关专业出身，却在R的世界里做了这些奇妙的工作，让我觉得有点意外，这是题外话。pgf是LaTeX世界的又一项重大发明，它提供了一套全新的绘图方式（语言），而且它的图形可以通过LaTeX直接生成PDF输出（这是pgfSweave能实现缓存的关键）。关于pgf，我们可以[翻一翻它726页的手册](http://www.ctan.org/tex-archive/graphics/pgf/base/doc/generic/pgf/pgfmanual.pdf "pgf手册")，如果你能坚持看上10分钟，感叹超过50次，那么你一定是一位超级排版爱好者。它的图形质量之高、输出之漂亮，真的是让人（至少让我）叹为观止。同样，这里我也不详细介绍细节。pgf图形的“缓存”是通过“外置化”（externalization）来实现的，简言之，pgf图形有一种输出形式如下： <pre class="brush: r">\beginpgfgraphicnamed{graph-output-1}
 \input{graph-output-1.tikz}
 \endpgfgraphicnamed
 </pre>
@@ -67,11 +67,11 @@ if (!exists('x')) {
         详细过程和结果参见下面这份PDF文档（点击下载）：
         
         <p style="text-align: center;">
-          <a href="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf">A Simple Demo on Caching R Objects and Graphics with pgfSweave (PDF)</a>
+          [A Simple Demo on Caching R Objects and Graphics with pgfSweave (PDF)](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf)
         </p>
         
         <p style="text-align: center;">
-          <figure id="attachment_2810" style="width: 480px" class="wp-caption aligncenter"><a href="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf">![二维正态分布随机数及其等高线图](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png "二维正态分布随机数及其等高线图")</a><figcaption class="wp-caption-text">二维正态分布随机数及其等高线图</figcaption></figure> 
+          <figure id="attachment_2810" style="width: 480px" class="wp-caption aligncenter">[![二维正态分布随机数及其等高线图](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png "二维正态分布随机数及其等高线图")](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf)<figcaption class="wp-caption-text">二维正态分布随机数及其等高线图</figcaption></figure> 
           
           <p>
             我们生成了50万行随机数，并画了X与Y的散点图。由于我们设定了相关系数为0.7，所以图中自然而然显现出正相关；而等高线也体现出多维正态分布的“椭球形”特征。均值在(0, 1)附近，都和理论分布吻合。所以这个Gibbs抽样还不太糟糕。
@@ -82,11 +82,11 @@ if (!exists('x')) {
           </p>
           
           <p style="text-align: center;">
-            <a href="https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.zip">A Simple Demo on Caching R Objects and Graphics with pgfSweave (LyX)</a>
+            [A Simple Demo on Caching R Objects and Graphics with pgfSweave (LyX)](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.zip)
           </p>
           
           <p>
-            如果你已经按照我<a href="https://cos.name/2010/11/reproducible-research-in-statistics/" target="_blank">前面的文章</a>配置好你的工具（<strong>即使当时配置过，现在也需要重新配置</strong>，因为我最近作了重大修改），这个文档应该可以让你重新生成我的结果。文档中有两处关键选项：
+            如果你已经按照我[前面的文章](/2010/11/reproducible-research-in-statistics/)配置好你的工具（<strong>即使当时配置过，现在也需要重新配置</strong>，因为我最近作了重大修改），这个文档应该可以让你重新生成我的结果。文档中有两处关键选项：
           </p>
           
           <ul>

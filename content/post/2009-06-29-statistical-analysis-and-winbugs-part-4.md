@@ -20,7 +20,7 @@ slug: statistical-analysis-and-winbugs-part-4
 
 ## <span style="color: #800000;">第一节 导言</span>
 
-![R, WinBUGS and ArcInfo](https://cos.name/wp-content/uploads/2009/06/r_bugs_esri.png)之前有些对GeoBUGS感兴趣的同学发邮件询问我有没有GeoBUGS的中国地图，以用于分析中国国内的一些空间数据。我想有必要将如何生成GeoBUGS格式的地图的方法分享给大家。这样的话， GeoBUGS就可以真正为我们所用，从而对于其他GeoBUGS没有自带的地图，我们也可以轻松生成了。本节不涉及统计分析，仅为GeoBUGS的研究使用者提供一个软件使用的技术参考。关于GeoBUGS的统计的书，国外实在是很多了，但关于这块地图定制的参考资料较少，故提出来供大家参阅。
+![R, WinBUGS and ArcInfo](https://cos.name/wp-content/uploads/2009/06/r_bugs_esri.png) 之前有些对GeoBUGS感兴趣的同学发邮件询问我有没有GeoBUGS的中国地图，以用于分析中国国内的一些空间数据。我想有必要将如何生成GeoBUGS格式的地图的方法分享给大家。这样的话， GeoBUGS就可以真正为我们所用，从而对于其他GeoBUGS没有自带的地图，我们也可以轻松生成了。本节不涉及统计分析，仅为GeoBUGS的研究使用者提供一个软件使用的技术参考。关于GeoBUGS的统计的书，国外实在是很多了，但关于这块地图定制的参考资料较少，故提出来供大家参阅。
   
 <!--more-->
 

@@ -69,7 +69,7 @@ title("世界地图")</pre>
 </p>
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/01/world_map.png">![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)</a>
+  ![world_map](https://cos.name/wp-content/uploads/2013/01/world_map.png)
 </p>
 
 <p align="left">
@@ -98,7 +98,7 @@ title("美国地图")</pre>
 </p>
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/01/us_map.png">![us_map](https://cos.name/wp-content/uploads/2013/01/us_map.png)</a>
+  ![us_map](https://cos.name/wp-content/uploads/2013/01/us_map.png)
 </p>
 
 整体形状这是像啥啊，山姆大叔……
@@ -226,7 +226,7 @@ ggmap(map)</pre>
 
 参考文献：
 
-  * 邱怡轩：[用R软件绘制中国分省市地图](https://cos.name/2009/07/drawing-china-map-using-r/)
+  * 邱怡轩：[用R软件绘制中国分省市地图](/2009/07/drawing-china-map-using-r/)
   * 谢益辉：[用R画中国地图并标注城市位置](http://yihui.name/cn/2008/10/china-map-and-city-locations-with-r/)
   * 谢益辉：[终于搞定了中国分省市地图](http://yihui.name/cn/2007/09/china-map-at-province-level/)
   * 肖凯：[用ggmap包进行地震数据的可视化](http://xccds1977.blogspot.com/2012/06/ggmap.html)

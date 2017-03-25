@@ -16,19 +16,19 @@ slug: cos-navigation-10
 
 这周本站共发布了5篇日志：
 
-  * [不拒绝零假设意味着什么](https://cos.name/2009/03/meaning-of-failure-to-reject-h0/)
+  * [不拒绝零假设意味着什么](/2009/03/meaning-of-failure-to-reject-h0/)
   
     郑冰作品：P-value大于a为什么不能说接受原假设；
   * [中国人民大学统计学院《主文献研读》博士生课程（2009年春）
   
-](https://cos.name/2009/03/ruc-stat-literature-research-course/) 高校课堂：2009年春季中国人民大学统计学院《主文献研读》博士生课程网页；
+](/2009/03/ruc-stat-literature-research-course/) 高校课堂：2009年春季中国人民大学统计学院《主文献研读》博士生课程网页；
   * [不同版本的散点图矩阵
   
-](https://cos.name/2009/03/scatterplot-matrix-visualization/) 魏太云作品：介绍了四个绘制散点图矩阵的函数及详细的R代码；
+](/2009/03/scatterplot-matrix-visualization/) 魏太云作品：介绍了四个绘制散点图矩阵的函数及详细的R代码；
   * [在Batch Mode下完成无人值守的R项目测试
   
-](https://cos.name/2009/03/running-r-in-batch-mode/) 齐韬作品：介绍了R测试，调用Rterm；
-  * [COS竞赛：英文站点会员类型的识别](https://cos.name/2009/03/data-analysis-of-cos-en-members/)COS竞赛：“COS竞赛”系列活动之一，分析统计之都英文网站的会员数据，从中找出识别正规会员和机器人（垃圾、广告、自动注册）会员的规律；
+](/2009/03/running-r-in-batch-mode/) 齐韬作品：介绍了R测试，调用Rterm；
+  * [COS竞赛：英文站点会员类型的识别](/2009/03/data-analysis-of-cos-en-members/)COS竞赛：“COS竞赛”系列活动之一，分析统计之都英文网站的会员数据，从中找出识别正规会员和机器人（垃圾、广告、自动注册）会员的规律；
 
 ## 二、论坛
 

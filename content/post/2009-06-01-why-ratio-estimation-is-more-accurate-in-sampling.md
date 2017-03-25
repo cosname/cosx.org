@@ -57,7 +57,7 @@ $\overline{x} \approx \overline{X}$
 
 我们可以比较三种方法估计的理论方差：简单估计，以耕地面积作辅助变量的比率估计，以村数量作辅助变量的比率估计。因为总体数据未知，我首先以有放回的抽样模拟一个样本量为33的数据；然后枚举所有可能抽样组合，计算三种估计量。另一方面，对于每种抽样结果，我也采用方差估计式求方差估计值。最后可以将不同方差进行比较。考虑到计算量的问题，仅模拟了样本量为5的情形.
 
-考虑到数据量大，在生成全组合时，采用了字典排序的算法，(可参见<a href="http://www.blogjava.net/stme/archive/2007/10/23/94361.html" target="_blank">http://www.blogjava.net/stme/archive/2007/10/23/94361.html</a>)
+考虑到数据量大，在生成全组合时，采用了字典排序的算法，(可参见[http://www.blogjava.net/stme/archive/2007/10/23/94361.html](http://www.blogjava.net/stme/archive/2007/10/23/94361.html))
 
 <pre class="brush: r">#放回抽样，生成总体数据
 INDEX = sample(1:10, 33, rep = T)
