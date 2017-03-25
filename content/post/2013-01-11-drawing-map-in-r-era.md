@@ -121,7 +121,7 @@ title(" 中国地图")
 ```r
 > geocode("Beijing")
        lon      lat
-1 116.4075 39.90403</pre>
+1 116.4075 39.90403
 ```
 
 这大哥可以返回一个地方的经纬度，那我再调戏之：
@@ -136,9 +136,10 @@ title(" 中国地图")
      north    south     east     west postal_code country
 1 39.97853 39.96142 116.3345 116.3024      100086   china
   administrative_area_level_2 administrative_area_level_1 locality
-1                        &lt;NA&gt;                     beijing  beijing
+1                        <NA>                     beijing  beijing
                street streetNo          point_of_interest
-1 zhongguancun street       NA renmin university of china                       query
+1 zhongguancun street       NA renmin university of china                       
+                       query
 1 Renmin University of China
 ```
 
