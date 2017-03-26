@@ -12,7 +12,7 @@ tags:
 slug: apply-for-study-abroad-from-another-perspective
 ---
 
-> <span style="color: black;">本文转载自施涛的博客，稍有修改，原文链接请点击<a href="http://blog.cos.name/taoshi/2011/11/02/application/" target="_blank">此处</a>。本文主要介绍了出国留学中申请统计博士会遇到的一些问题。文章从一个老师以及申请成功的PhD学生的角度来看待看似复杂的留学申请问题，特别适合现在正在准备申请统计学方向的中国学生，或者有志于在统计学界进一步深造的中国人。作者希望能以从“墙外”了解的信息与自己的理解，对正在准备出国的“墙内人士”有所帮助，COS编辑部也希望把这些宝贵的信息尽可能传播到有需要的人。</span>
+> <span style="color: black;">本文转载自施涛的博客，稍有修改，原文链接请点击[此处](http://blog.cos.name/taoshi/2011/11/02/application/)。本文主要介绍了出国留学中申请统计博士会遇到的一些问题。文章从一个老师以及申请成功的PhD学生的角度来看待看似复杂的留学申请问题，特别适合现在正在准备申请统计学方向的中国学生，或者有志于在统计学界进一步深造的中国人。作者希望能以从“墙外”了解的信息与自己的理解，对正在准备出国的“墙内人士”有所帮助，COS编辑部也希望把这些宝贵的信息尽可能传播到有需要的人。</span>
 > 
 > <span style="color: black;">作者简介：Ohio State University，施涛（统计学教授）、陈甜（统计学PhD在读）</span> 
 

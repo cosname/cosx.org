@@ -55,7 +55,7 @@ n1</pre>
 
 &nbsp;
 
-![002](https://cos.name/wp-content/uploads/2016/06/002.png)可以通过图形右上角选择需要查看或隐藏的类别（默认是全部类别显示的），也能通过左上角选择柱子是按照分组还是叠加的方式进行摆放（默认是分组方式）。如果选择Stacked，就会绘制叠加柱状图。
+![002](https://cos.name/wp-content/uploads/2016/06/002.png) 可以通过图形右上角选择需要查看或隐藏的类别（默认是全部类别显示的），也能通过左上角选择柱子是按照分组还是叠加的方式进行摆放（默认是分组方式）。如果选择Stacked，就会绘制叠加柱状图。
 
 &nbsp;
 
@@ -233,7 +233,7 @@ Source = "source", Target = "target",
 Value = "value", NodeID = "name",
 Group = "group", opacity = 0.8)</pre>
 
-![rcharts-014](https://cos.name/wp-content/uploads/2016/06/rcharts-014.png)我们可以通过d3treeR包绘制交互treemap图，利用
+![rcharts-014](https://cos.name/wp-content/uploads/2016/06/rcharts-014.png) 我们可以通过d3treeR包绘制交互treemap图，利用
 
 <pre>devtools::install_github("timelyportfolio/d3treeR")</pre>
 

@@ -41,7 +41,7 @@ Warren，你让我太震惊了！你只要不去理会股票市场的短期甚�
 
 **长期持仓收益与平均收益**
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/returns-average.png" target="_blank">![长期持仓收益与平均收益](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/returns-average.png)</a>
+![长期持仓收益与平均收益](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/returns-average.png)
 
 上图由标普 500 的历史收益数据生成。在第一年，我们把标普 500 的每一支股票一年内的收益，加上股息减掉通货膨胀，把计算得到的数值作为第一年的相对收益，并以点的形状绘制到图形中。然后，我们使用同样的方法处理第二年，第三年的数据，依次类推。具体代码见于文末，过程挺无聊的。这个程序可能会花很长一段时间来运行。
 
@@ -51,7 +51,7 @@ Warren，你让我太震惊了！你只要不去理会股票市场的短期甚�
 
 我考虑到了，因此让我们来分析一个更为实际的问题，如果你在 20 岁的时候进行投资，在 60 岁的时候退休，也就是投资 40 年的时间，结果会是怎么样的呢？下图就是对应的结果。
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/returns-40yr.png" target="_blank">![40 年投资](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/returns-40yr.png)</a>
+![40 年投资](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/returns-40yr.png)
 
 等一下！ 让我们放大来看一下那些亏损的年份。
 
@@ -59,7 +59,7 @@ Warren，你让我太震惊了！你只要不去理会股票市场的短期甚�
 
 那每一个投资时长对应亏损的概率是多少呢？代码在[这里](https://github.com/zonination/investing/blob/master/snippets/snip1.R)，运行代码可以生成下图。
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/snippets/short-probability.png" target="_blank">![每一个投资时长对应亏损的概率](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/snippets/short-probability.png)</a>
+![每一个投资时长对应亏损的概率](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/snippets/short-probability.png)
 
 这些结果已经考虑了美国历史上历次最严重的股票崩盘，如大萧条、上世纪 70 年代的衰退、黑色星期一、互联网泡沫、2008 年金融危机等。同时，我们注意到，股票市场都能够在这些危机的一段时间后得到完全的恢复。
 
@@ -82,7 +82,7 @@ Warren，你让我太震惊了！你只要不去理会股票市场的短期甚�
 
 让我们重新绘制之前一个图形， 把 Y 轴的范围设置为 0% 到 100%，可以得到下图。
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/snippets/short-probability-2.png" target="_blank">![每一个投资时长对应亏损的概率0-100%](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/snippets/short-probability-2.png)</a>
+![每一个投资时长对应亏损的概率0-100%](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/snippets/short-probability-2.png)
 
 用一句话总结之前的结果，那就是：长期持仓，长期投资，而不是短期，不要选时操作捕捉市场，同时，即使你在市场高位开始投资，在长期里你仍然能够获得不错的收益。
 
@@ -133,17 +133,17 @@ Warren，你让我太震惊了！你只要不去理会股票市场的短期甚�
 
 这个图形是一个动画，它展示了投资时长为某一特定年限，随着投资时长的增长，每一年的收益分布的具体变化情况。
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/growth.gif" target="_blank">![动图](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/growth.gif)</a>
+![动图](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/growth.gif)
 
 让我们逐帧地来看这个图形：
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real10.png" target="_blank">![10](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real10.png)</a>
+![10](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real10.png)
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real20.png" target="_blank">![20](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real20.png)</a>
+![20](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real20.png)
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real30.png" target="_blank">![30](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real30.png)</a>
+![30](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real30.png)
 
-<a href="https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real40.png" target="_blank">![40](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real40.png)</a>
+![40](https://cdn.rawgit.com/zonination/investing/47d3dbc90f9b5df488bb3cdfadf697327085f899/altplots/geom_real40.png)
 
 ## 数据来源
 

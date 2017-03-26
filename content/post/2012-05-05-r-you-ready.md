@@ -29,7 +29,7 @@ R（R Development Core Team, 2011）语言由新西兰奥克兰大学的 Ross Ih
 
 ![](https://cos.name/wp-content/uploads/2012/05/Ihaka-Gentleman.jpg)<figcaption class="wp-caption-text">图1: 1992 年，Ross Ihaka 和Robert Gentleman 在奥克兰大学成为同事。后来为了方便教授初等统计课程，二人开发了一种语言；而他们名字的首字母都是R，于是R 便成为了这门语言的名称。</figcaption></figure> 
 
-作为 R 语言的前身——S 语言的代码几乎不需要进行任何修改即可在R 语言环境下运行，从这个角度讲两种语言几乎等价。S 语言诞生于上个世纪 70 年代的由 John M. Chambers 领导的贝尔实验室统计部，它的诞生过程几乎就是现代统计分析方式的演化历程的写照（<a href="https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt" target="_blank">谢益辉，郑冰, 2008</a>）：
+作为 R 语言的前身——S 语言的代码几乎不需要进行任何修改即可在R 语言环境下运行，从这个角度讲两种语言几乎等价。S 语言诞生于上个世纪 70 年代的由 John M. Chambers 领导的贝尔实验室统计部，它的诞生过程几乎就是现代统计分析方式的演化历程的写照（[谢益辉，郑冰, 2008](https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt)）：
 
   * 1975-1976 年，贝尔实验室统计研究部使用一套文档齐全的 Fortran 库做统计研究，简称为 SCS ( Statistical Computing Subroutines )；
   * 当时的商业统计软件采用的是批处理的方式，一次性输出问题的所有相关的信息，在那个时代，这个过程需要几个小时，并且商业软件不能对程序做任何修改。而贝尔实验室的统计学家们需要灵活的交互式数据分析方式，因此 SCS 在贝尔实验室非常受欢迎；
@@ -67,7 +67,7 @@ R 语言在国际和国内的发展差异非常大，国际上 R 语言已然是
       * 同 Python、Java、C、C++ 等语言进行互调
       * 提供 API 接口均可以调用，比如 Google、Twitter、Weibo
       * 其他统计软件大部分均可调用 R，比如 SAS、SPSS、Statistica等
-      * 甚至一些比较直接的商业应用，比如 Oracle R Enterprise, IBM Netezza, R add-on for Teradata, SAP HANA, Sybase RAP（<a href="http://www.bjt.name/2012/04/ r-language-enterprise/" target="_blank">刘思喆，2012</a>）
+      * 甚至一些比较直接的商业应用，比如 Oracle R Enterprise, IBM Netezza, R add-on for Teradata, SAP HANA, Sybase RAP（[刘思喆，2012](http://www.bjt.name/2012/04/ r-language-enterprise/)）
 
 <!--more-->
 
@@ -151,10 +151,10 @@ R 语言虽然诞生于统计社区，服务于数据，但现在随着数据渗
 
 ## 参考目录
 
-  * 谢益辉，郑冰(2008). <a href="https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt" target="_blank">R 语言的历史背景、发展历程和现状</a>. 1st China R Conference.
-  * 刘思喆(2012). 商业数据库对 r 语言的支持. <a href="http://www.bjt.name/2012/04/r-language-enterprise/" target="_blank">http://www.bjt.name/2012/04/r-language-enterprise/</a>.
+  * 谢益辉，郑冰(2008). [R 语言的历史背景、发展历程和现状](https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt). 1st China R Conference.
+  * 刘思喆(2012). 商业数据库对 r 语言的支持. [http://www.bjt.name/2012/04/r-language-enterprise/](http://www.bjt.name/2012/04/r-language-enterprise/).
   * R Development Core Team (2011). R: A Language and Environment for Statistical Computing.R Foundation for Statistical Computing, Vienna, Austria. ISBN 3-900051-07-0.
   * Ripley, B. (2011). The r development process. Technical report, Department of Statistics,
   * University of Oxford.
-  * TIOBE (2011). <a href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html" target="_blank">http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html</a>.
+  * TIOBE (2011). [http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html).
   * UCLA (2006). R relative to statistical packages. Technical report, UCLA.

@@ -15,7 +15,7 @@ slug: terry-speed
 ---
 
 <p style="padding-left: 60px;">
-  <span style="color: #808080;">【COS编辑部按】本译文原文来自澳大利亚<span style="text-decoration: underline;"><a href="http://www.scienceinpublic.com.au/"><span style="color: #808080; text-decoration: underline;">Science in Public</span></a></span>，讲 述Terry Speed，一位著作等身的统计学者，对学术和社会生活的热情；<span style="text-decoration: underline;"><a href="http://www.scienceinpublic.com.au/prime-ministers-prize/2013-science"><span style="color: #808080; text-decoration: underline;">原文</span></a></span>版权归 Science in Public所有。</span><span style="color: #808080;">本文译者：尤晓斌(新加坡国立大学)；审校：李妙竹(上海生科院)、施涛(The Ohio State University)。</span>
+  <span style="color: #808080;">【COS编辑部按】本译文原文来自澳大利亚<span style="text-decoration: underline;">[<span style="color: #808080; text-decoration: underline;">Science in Public</span>](http://www.scienceinpublic.com.au/)</span>，讲 述Terry Speed，一位著作等身的统计学者，对学术和社会生活的热情；<span style="text-decoration: underline;">[<span style="color: #808080; text-decoration: underline;">原文</span>](http://www.scienceinpublic.com.au/prime-ministers-prize/2013-science)</span>版权归 Science in Public所有。</span><span style="color: #808080;">本文译者：尤晓斌(新加坡国立大学)；审校：李妙竹(上海生科院)、施涛(The Ohio State University)。</span>
 </p>
 
 <span style="color: #000000;"><strong><em>“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”</em></strong></span>
