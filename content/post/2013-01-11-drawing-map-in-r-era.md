@@ -22,6 +22,7 @@ slug: drawing-map-in-r-era
   1. 你得需要绘制地图；（约等于废话）
   1. 你得有要绘制地图的地理信息，经纬度啊，边界啊等等；  
   1. 你得利用2的数据在R中画出来。
+  
 以上步骤中，目前最关键的是2，一旦2的数据有了，在R中不就是把它们连起来嘛，这个对于R来说就是调戏它，就跟全民调戏小黄鸡一样。
 
 R语言中绘制地图的思路也是由于2的获取方式不一样而分开的。
@@ -41,9 +42,11 @@ R语言中绘制地图的思路也是由于2的获取方式不一样而分开的
 ##  1、 画世界地图
 
   如果是首次使用，需要在R中装载maps包
+  
   ```r
   install.packages('maps')
   ```
+  
   这个包中存有世界地图和美国地图的地图数据，所以，几行代码便可以画出世界地图。
 
 代码如下：
@@ -90,6 +93,7 @@ map('state', region = c('new york', 'new jersey', 'penn'),
     fill = TRUE, col = rainbow(3), mar = c(2, 3, 4, 3))
 title("美国三州地图")
 ```
+
 输出结果为：
 
 ![states_map](https://cos.name/wp-content/uploads/2013/01/states_map.png)
@@ -108,6 +112,7 @@ library(mapdata)
 map("china", col = "red4", ylim = c(18, 54), panel.first = grid())
 title(" 中国地图")
 ```
+
 输出为：
 
 ![China_map](https://cos.name/wp-content/uploads/2013/01/China_map.png)
@@ -116,7 +121,7 @@ title(" 中国地图")
 
 好，我们来强力介绍ggmap包，先来说下该包让我惊讶的几个命令：
 
-## 1、geocode()
+# 1、geocode()
 
 
 比如：
@@ -130,8 +135,8 @@ title(" 中国地图")
 这大哥可以返回一个地方的经纬度，那我再调戏之：
 
 ```r
->#这意思就是大哥你多给点！！
->geocode("Renmin University of China", output = "more")
+> #这意思就是大哥你多给点！！
+> geocode("Renmin University of China", output = "more")
        lon      lat              type     loctype
 1 116.3184 39.96998 point_of_interest approximate
                                                                                 address
@@ -148,7 +153,7 @@ title(" 中国地图")
 
 信息给多了，我说几个点，不但有人民大学的经纬度，还有该大学的详细地址（中国人民大学，中关村大街59号，海淀，北京，中国），还有邮编好吧100086！！！！但是好像跟我们实际的100872有差距（倒是跟10086很接近啊），但是它确实是返回了邮政编码，还有zhongguancun street就不说了……这完全就是返回的Google地图存储的人民大学的信息啊……
 
-## 2、mapdist()
+# 2、mapdist()
 
 第二个颠颤颤的命令式mapdist()。比如：
 
@@ -176,6 +181,7 @@ library(mapproj)
 map <- get_map(location = 'China', zoom = 4)
 ggmap(map)
 ```
+
 于是：
 
 ![China_map_2](https://cos.name/wp-content/uploads/2013/01/China_map_2.png)
@@ -202,6 +208,7 @@ map <- get_map(location = 'Renmin University of China', zoom = 14,
     maptype = 'satellite')
 ggmap(map)
 ```
+
 ![RUC_map](https://cos.name/wp-content/uploads/2013/01/RUC_map.png)
 
 太不清楚了，根本看不清楚哪跟哪啊。就这么着吧，我估计快够当天限制数了。
