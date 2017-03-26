@@ -156,7 +156,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p>
-                                  <a href="https://cos.name/wp-content/uploads/2016/05/cai_1.png">![cai_1](https://cos.name/wp-content/uploads/2016/05/cai_1.png)</a>
+                                  ![cai_1](https://cos.name/wp-content/uploads/2016/05/cai_1.png)
                                 </p>
                                 
                                 <p style="text-align: center;">
@@ -164,7 +164,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p>
-                                  <a href="https://cos.name/wp-content/uploads/2016/05/cai_2.png">![cai_2](https://cos.name/wp-content/uploads/2016/05/cai_2.png)</a>
+                                  ![cai_2](https://cos.name/wp-content/uploads/2016/05/cai_2.png)
                                 </p>
                                 
                                 <p style="text-align: center;">
@@ -184,7 +184,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p>
-                                  <a href="https://cos.name/wp-content/uploads/2016/05/cai_3.jpg">![cai_3](https://cos.name/wp-content/uploads/2016/05/cai_3.jpg)</a>
+                                  ![cai_3](https://cos.name/wp-content/uploads/2016/05/cai_3.jpg)
                                 </p>
                                 
                                 <p style="text-align: center;">
@@ -192,11 +192,11 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p style="text-align: center;">
-                                  <a href="https://cos.name/wp-content/uploads/2016/05/cai_4.jpg">![cai_4](https://cos.name/wp-content/uploads/2016/05/cai_4.jpg)</a>
+                                  ![cai_4](https://cos.name/wp-content/uploads/2016/05/cai_4.jpg)
                                 </p>
                                 
                                 <p style="text-align: center;">
-                                  图4 Paperwhite语料词云<a href="https://cos.name/wp-content/uploads/2016/05/cai_5.jpg">![cai_5](https://cos.name/wp-content/uploads/2016/05/cai_5.jpg)</a>
+                                  图4 Paperwhite语料词云 ![cai_5](https://cos.name/wp-content/uploads/2016/05/cai_5.jpg)
                                 </p>
                                 
                                 <p style="text-align: center;">
@@ -204,7 +204,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p style="text-align: center;">
-                                  <a href="https://cos.name/wp-content/uploads/2016/05/cai_6.jpg">![cai_6](https://cos.name/wp-content/uploads/2016/05/cai_6.jpg)</a>
+                                  ![cai_6](https://cos.name/wp-content/uploads/2016/05/cai_6.jpg)
                                 </p>
                                 
                                 <p style="text-align: center;">
@@ -220,7 +220,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p>
-                                  <a href="https://cos.name/wp-content/uploads/2016/05/cai_7.png">![cai_7](https://cos.name/wp-content/uploads/2016/05/cai_7.png)</a>
+                                  ![cai_7](https://cos.name/wp-content/uploads/2016/05/cai_7.png)
                                 </p>
                                 
                                 <p style="text-align: center;">
@@ -228,7 +228,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p>
-                                  <a href="https://cos.name/wp-content/uploads/2016/05/cai_8.png">![cai_8](https://cos.name/wp-content/uploads/2016/05/cai_8.png)</a>
+                                  ![cai_8](https://cos.name/wp-content/uploads/2016/05/cai_8.png)
                                 </p>
                                 
                                 <p>
@@ -260,7 +260,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                 </p>
                                 
                                 <p>
-                                  <a href="https://cos.name/wp-content/uploads/2016/05/cai_0-1.png">![cai_0](https://cos.name/wp-content/uploads/2016/05/cai_0-1.png)</a>
+                                  ![cai_0](https://cos.name/wp-content/uploads/2016/05/cai_0-1.png)
                                 </p>
                                 
                                 <p>
@@ -456,7 +456,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                                             </p>
                                                             
                                                             <p style="text-align: center;">
-                                                              表3聚类结果匹配表<a href="https://cos.name/wp-content/uploads/2016/05/cai_9.png">![cai_9](https://cos.name/wp-content/uploads/2016/05/cai_9.png)</a>
+                                                              表3聚类结果匹配表 ![cai_9](https://cos.name/wp-content/uploads/2016/05/cai_9.png)
                                                             </p>
                                                             
                                                             <p style="text-align: left;">
@@ -823,7 +823,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                                                                                     </table>
                                                                                                     
                                                                                                     <p style="text-align: center;">
-                                                                                                      <strong><a href="https://cos.name/wp-content/uploads/2016/05/cai_9_1.png">![cai_9_1](https://cos.name/wp-content/uploads/2016/05/cai_9_1.png)</a></strong>
+                                                                                                      <strong>![cai_9_1](https://cos.name/wp-content/uploads/2016/05/cai_9_1.png)</strong>
                                                                                                     </p>
                                                                                                     
                                                                                                     <p style="text-align: center;">
@@ -831,7 +831,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                                                                                     </p>
                                                                                                     
                                                                                                     <p>
-                                                                                                      <strong> <a href="https://cos.name/wp-content/uploads/2016/05/cai_10.png">![cai_10](https://cos.name/wp-content/uploads/2016/05/cai_10.png)</a></strong>
+                                                                                                      <strong> ![cai_10](https://cos.name/wp-content/uploads/2016/05/cai_10.png)</strong>
                                                                                                     </p>
                                                                                                     
                                                                                                     <p>
@@ -871,7 +871,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                                                                                     </p>
                                                                                                     
                                                                                                     <p style="text-align: center;">
-                                                                                                      图10 话题“翻页闪屏”词云图<a href="https://cos.name/wp-content/uploads/2016/05/cai_11.png">![cai_11](https://cos.name/wp-content/uploads/2016/05/cai_11.png)</a>
+                                                                                                      图10 话题“翻页闪屏”词云图 ![cai_11](https://cos.name/wp-content/uploads/2016/05/cai_11.png)
                                                                                                     </p>
                                                                                                     
                                                                                                     <p style="text-align: center;">
@@ -879,7 +879,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
                                                                                                     </p>
                                                                                                     
                                                                                                     <p>
-                                                                                                      <a href="https://cos.name/wp-content/uploads/2016/05/cai_12.png">![cai_12](https://cos.name/wp-content/uploads/2016/05/cai_12.png)</a>
+                                                                                                      ![cai_12](https://cos.name/wp-content/uploads/2016/05/cai_12.png)
                                                                                                     </p>
                                                                                                     
                                                                                                     <p style="text-align: center;">

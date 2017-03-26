@@ -13,9 +13,9 @@ slug: north-america-blockbuster-lnt-law
 
 **【COS编辑部按】**本文选自狗熊会分析报告，作者为刘钰、毛铮、谯谦、吕俊杰、祁自帅、刘哲
 
-**狗熊会简介：**<a href="http://birc.gsm.pku.edu.cn/" target="_blank">北京大学商务智能研究中心</a>下的的数据分析人才联盟，每周一熊出没，举报研讨会议。其依托北京大学光华管理学院，关注基于互联网的大数据研究与应用。尤其关注中文文本、网络结构、以及位置数据相关的科研课题。中心为学者提供相关数据资源，为企业提供相关分析方法，为学者和企业合作搭建一个有效的平台。
+**狗熊会简介：**[北京大学商务智能研究中心](http://birc.gsm.pku.edu.cn/)下的的数据分析人才联盟，每周一熊出没，举报研讨会议。其依托北京大学光华管理学院，关注基于互联网的大数据研究与应用。尤其关注中文文本、网络结构、以及位置数据相关的科研课题。中心为学者提供相关数据资源，为企业提供相关分析方法，为学者和企业合作搭建一个有效的平台。
 
-联系方式：<a href="mailto:birc@gsm.pku.ed.cn" target="_blank">birc@gsm.pku.ed.cn</a>
+联系方式：[birc@gsm.pku.ed.cn](mailto:birc@gsm.pku.ed.cn)
 
 ![](http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34yCzwIsgakR6utTcdQ5kknwfOtEUO4IecicnscIQu1UOWs9TBUamjVLFk3XGVY0agImic1bS8RI2y6w/0)
 
@@ -49,7 +49,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p1.jpg">![p1](https://cos.name/wp-content/uploads/2013/12/p1.jpg)</a>
+    ![p1](https://cos.name/wp-content/uploads/2013/12/p1.jpg)
   </p>
   
   <p>
@@ -57,7 +57,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p2.jpg">![p2](https://cos.name/wp-content/uploads/2013/12/p2.jpg)</a>
+    ![p2](https://cos.name/wp-content/uploads/2013/12/p2.jpg)
   </p>
   
   <p>
@@ -73,7 +73,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p3.jpg">![p3](https://cos.name/wp-content/uploads/2013/12/p3.jpg)</a>
+    ![p3](https://cos.name/wp-content/uploads/2013/12/p3.jpg)
   </p>
   
   <p>
@@ -81,7 +81,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p4.jpg">![p4](https://cos.name/wp-content/uploads/2013/12/p4.jpg)</a>
+    ![p4](https://cos.name/wp-content/uploads/2013/12/p4.jpg)
   </p>
   
   <p>

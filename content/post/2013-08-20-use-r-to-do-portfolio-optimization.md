@@ -264,7 +264,7 @@ Make a plot selection (or 0 to exit):
 
 ![pic8](http://i1.tietuku.com/2013/0817/3/13767107845933.png)
 
-注：本文转载自邓一硕博客，原文请<a href="http://yishuo.org/r/2013/08/09/use-r-to-do-portfolio-optimization.html" target="_blank">点击此处</a>。转载请注明出处。
+注：本文转载自邓一硕博客，原文请[点击此处](http://yishuo.org/r/2013/08/09/use-r-to-do-portfolio-optimization.html)。转载请注明出处。
 
 关于作者：邓一硕，毕业于中央财经大学，感兴趣领域是数据挖掘技术（R语言）在金融投资分析和计量经济学中的应用。
 

@@ -18,7 +18,7 @@ tags:
 slug: intro-to-chinese-nlp
 ---
 
-本文作者李绳，博客地址 <a href="http://acepor.github.io/" target="_blank">http://acepor.github.io/</a>。作者自述：
+本文作者李绳，博客地址 [http://acepor.github.io/](http://acepor.github.io/)。作者自述：
 
 > 一位文科生曾励志成为语言学家
   

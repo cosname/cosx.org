@@ -100,7 +100,7 @@ Rcpp自带了一个函数`SHLIB`这个函数可以帮你将使用了Rcpp.h的cpp
 
 <pre>Rscript -e "Rcpp:::SHLIB('test.cpp')"</pre>
 
-来编译（这个技巧来自(<a title="Rcpp的前世今生" href="http://thirdwing.github.io/2013/10/25/rcpp/" target="_blank">http://thirdwing.github.io/2013/10/25/rcpp/</a> ).
+来编译（这个技巧来自([http://thirdwing.github.io/2013/10/25/rcpp/](http://thirdwing.github.io/2013/10/25/rcpp/ "Rcpp的前世今生") ).
 
 如果我们进去看看这个函数的源代码，我们会发现，其实它做的事情就是为编译器指明库的位置（通过添加环境变量）。
 
@@ -155,7 +155,7 @@ RcppExport SEXP dftest(SEXP df, SEXP vname)
 
 第一行指明需要用到Rcpp.h。第二行指明命名空间是Rcpp。
 
-第三行中的RcppExport的作用是，当你把这个cpp文件编译成动态链接库之后，RcppExport后面的函数可以被.Call调用。而实际上这个RcppExport是一个宏。根据<a href="http://lists.r-forge.r-project.org/pipermail/rcpp-devel/2011-October/003043.html" target="_blank">"[Rcpp-devel] What are RcppExport, BEGIN_RCPP and END_RCPP?"</a> 的说法：
+第三行中的RcppExport的作用是，当你把这个cpp文件编译成动态链接库之后，RcppExport后面的函数可以被.Call调用。而实际上这个RcppExport是一个宏。根据["[Rcpp-devel] What are RcppExport, BEGIN_RCPP and END_RCPP?"](http://lists.r-forge.r-project.org/pipermail/rcpp-devel/2011-October/003043.html) 的说法：
 
 <pre>#define RcppExport extern "C"</pre>
 
