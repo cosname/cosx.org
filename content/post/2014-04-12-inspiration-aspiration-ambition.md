@@ -12,7 +12,7 @@ slug: inspiration-aspiration-ambition
 
 本周投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB#place) [施涛](http://blog.cos.name/taoshi) [肖楠](http://www.road2stat.com/) 
 
-  * **News:Dr. Yihui Xie at RStudio Inc. has been selected as ICSA Bulletin’s editor-in-chief 2015-2018.**
+  * **News: Dr. Yihui Xie at RStudio Inc. has been selected as ICSA Bulletin’s editor-in-chief 2015-2018.**
   * 从历史上看, 一个国家要变成大国, 变成真正受人尊敬的大国, 或者一个科学界, 要衡量它的成熟以及它本身的品质, 其中一个很重要的衡量标准是它怎么对待学术成就和学术风范。吴建福教授所谈论的三重境界可以看做我们自我认识的一座标杆。[传送门](http://icsa.org/bulletin/issues/ICSA%20Bulletin11Jul.pdf)。以及吴建福教授在北大的[讲座](http://v.youku.com/v_show/id_XNTI0MDE2NzQw.html)。
   * **R与网络：** 与普通的扩散研究不同，网络扩散开始考虑网络结构对于扩散过程的影响。在各式各样的网络中扩散过程都是何种形式？用R出手，[一目了然](http://chengjun.github.io/cn/2014/02/simulate-network-diffusion-with-r/)。
   * **R Application in Stock：** 看来经济学诺贝尔奖的余温未平，虽然长期的股票价格表现出一些规律，但短期内却显得繁芜丛杂，不看长线看短线，股票价格是[可预测](http://fastml.com/are-stocks-predictable/)的嘛？
