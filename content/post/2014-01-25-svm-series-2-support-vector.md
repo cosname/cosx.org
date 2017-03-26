@@ -32,7 +32,7 @@ description: "[上一次](/2014/01/svm-series-maximum-margin-classifier/)介绍�
   
 `$$\min \frac{1}{2}\|w\|^{2} \quad s.t., y_{i}(w^{T}x_{i} + b) \geq 1, i=1, \dots, n$$`
 
-到这个形式以后，就可以很明显地看出来，它是一个凸优化问题，或者更具体地说，它是一个二次优化问题——目标函数是二次的，约束条件是线性的。这个问题可以用任何现成的 [QP (Quadratic Programming)](http://en.wikipedia.org/wiki/Quadratic_programming) 的优化包进行求解。所以，我们的问题到此为止就算全部解决了，于是我睡午觉去了~ :slight_smile:
+到这个形式以后，就可以很明显地看出来，它是一个凸优化问题，或者更具体地说，它是一个二次优化问题——目标函数是二次的，约束条件是线性的。这个问题可以用任何现成的 [QP (Quadratic Programming)](http://en.wikipedia.org/wiki/Quadratic_programming) 的优化包进行求解。所以，我们的问题到此为止就算全部解决了，于是我睡午觉去了~ :smile:
 
 啊？呃，有人说我偷懒不负责任了？好吧，嗯，其实呢，虽然这个问题确实是一个标准的 QP 问题，但是它也有它的特殊结构，通过 [Lagrange Duality](http://en.wikipedia.org/wiki/Lagrange_duality#The_strong_Lagrangian_principle:_Lagrange_duality) 变换到对偶变量 (dual variable) 的优化问题之后，可以找到一种更加有效的方法来进行求解——这也是 SVM 盛行的一大原因，通常情况下这种方法比直接使用通用的 QP 优化包进行优化要高效得多。此外，在推导过程中，许多有趣的特征也会被揭露出来，包括刚才提到的 supporting vector 的问题。
 
@@ -101,4 +101,4 @@ $$`
 
 注意到如果`\(x_{i}\)`是支持向量的话，上式中红颜色的部分是等于 0 的（因为支持向量的 functional margin 等于 1 ），而对于非支持向量来说，functional margin 会大于 1 ，因此红颜色部分是大于零的，而`\(\alpha_{i}\)`又是非负的，为了满足最大化，`\(\alpha_{i}\)`必须等于 0 。这也就是这些非 Supporting Vector 的点的悲惨命运了。 :p
 
-嗯，于是呢，把所有的这些东西整合起来，得到的一个 maximum margin hyper plane classifier 就是支持向量机（Support Vector Machine），经过直观的感觉和数学上的推导，为什么叫“支持向量”，应该也就明了了吧？当然，到目前为止，我们的 SVM 还比较弱，只能处理线性的情况，不过，在得到了 dual 形式之后，通过 Kernel 推广到非线性的情况就变成了一件非常容易的事情了。不过，具体细节，还要留到下一次再细说了。 :slight_simle:
+嗯，于是呢，把所有的这些东西整合起来，得到的一个 maximum margin hyper plane classifier 就是支持向量机（Support Vector Machine），经过直观的感觉和数学上的推导，为什么叫“支持向量”，应该也就明了了吧？当然，到目前为止，我们的 SVM 还比较弱，只能处理线性的情况，不过，在得到了 dual 形式之后，通过 Kernel 推广到非线性的情况就变成了一件非常容易的事情了。不过，具体细节，还要留到下一次再细说了。 :simle:
