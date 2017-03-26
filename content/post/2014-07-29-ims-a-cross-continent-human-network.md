@@ -15,16 +15,9 @@ tags:
   - 职业
 slug: ims-a-cross-continent-human-network
 ---
+译者注：[原文](http://bulletin.imstat.org/2014/07/ims-a-cross-continent-human-network-with-free-student-membership/)刊登于 [IMS Bulletin](http://bulletin.imstat.org/)，作者为国际数理统计学会（Institute of Mathematical Statistics）现任主席郁彬教授。郁彬是加州大学伯克利分校统计系和电子工程与计算机科学系的讲席教授，是美国国家科学院、美国艺术与科学院双院士。她曾在威斯康星麦迪逊和耶鲁大学都任过教，并且曾经是贝尔实验室的技术研究成员。她在2009年到2012年间担任加州大学伯克利分校统计系系主任，还是北大微软统计和信息技术实验室的创办者和主任之一。
 
-<div dir="ltr">
-  <p style="padding-left: 30px;">
-    <span style="color: #808080;">译者注：[原文](http://bulletin.imstat.org/2014/07/ims-a-cross-continent-human-network-with-free-student-membership/)刊登于 [IMS Bulletin](http://bulletin.imstat.org/)，作者为国际数理统计学会（Institute of Mathematical Statistics）现任主席郁彬教授。郁彬是加州大学伯克利分校统计系和电子工程与计算机科学系的讲席教授，是美国国家科学院、美国艺术与科学院双院士。她曾在威斯康星麦迪逊和耶鲁大学都任过教，并且曾经是贝尔实验室的技术研究成员。她在2009年到2012年间担任加州大学伯克利分校统计系系主任，还是北大微软统计和信息技术实验室的创办者和主任之一。</span>
-  </p>
-  
-  <p style="padding-left: 30px;">
-    <span style="color: #808080;">本文由肖楠、尤晓斌和蔡占锐翻译，邱怡轩、郁彬老师校对。<br /> </span>
-  </p>
-</div>
+本文由肖楠、尤晓斌和蔡占锐翻译，邱怡轩、郁彬老师校对。
 
 ![](http://bulletin.imstat.org/wp-content/uploads/Bin-Yu-2013.jpg) 随着我在IMS（国际数理统计学会）的主席任期行将结束，继而成为“前任主席”之际， 我想为吸纳新成员作出努力而回顾 IMS 的作用。正如 IMS 网站所述：“ IMS 的宗旨在于促进统计和概率的理论与应用的发展和传播”。伴随着数据科学的出现，统计和概率思维在数据科学中扮演着越来越出众的角色，而 IMS 能否吸引更多的成员也变得至关重要。尤其是在诸如统计，概率，应用数学，计算机科学，电子工程和其他数据科学相关学科行将获得学历的人才，都将成为IMS的关注对象。对于这些年轻人而言，他们有一大部分职业生涯会在本职工作岗位，而另一部分将会是在诸如 IMS 等专业学会中。
 
