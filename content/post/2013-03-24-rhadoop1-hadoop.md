@@ -2,7 +2,7 @@
 title: RHadoop实践系列之一:Hadoop环境搭建
 date: '2013-03-24T21:55:36+00:00'
 description: "Hadoop环境搭建步骤"
-author: 张 丹
+author: 张丹
 categories:
   - 软件应用
 tags:
@@ -286,8 +286,11 @@ bin/start-all.sh
 # 检查hadoop启动是否成功
 
 ```
-jps 9362 
-Jps 7756 SecondaryNameNode 7531 JobTracker 7357 NameNode
+jps 
+9362 Jps 
+7756 SecondaryNameNode 
+7531 JobTracker 
+7357 NameNode
 
 netstat -nl 
 Active Internet connections (only servers) Proto Recv-Q Send-Q Local Address Foreign Address State
@@ -326,7 +329,10 @@ cd /hadoop/conan/hadoop-0.29.2
 bin/hadoop fs -mkdir /test
 bin/hadoop fs -copyFormLocal README.txt /test
 bin/hadoop fs -ls /test 
-Found 1 items -rw-r--r-- 2 hadoop supergroup 1366 2012-08-30 02:05 /test/README.txt
+
+Found 1 items 
+-rw-r--r--      2 hadoop supergroup     1366 2012-08-30 02:05 
+/test/README.txt
 ```
         
 
