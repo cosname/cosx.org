@@ -333,7 +333,7 @@ $$ \frac{{{e^{ – n}}{n^n}}}{{n!}} \approx \frac{1}{\sqrt{2\pi n}}. $$
 $$ \left(10\frac{1}{2}\right)! = 10\frac{1}{2} \cdot
   
 9\frac{1}{2} \cdot \cdots \cdot 1\frac{1}{2} \cdot \left(\frac{1}{2}\right)! $$
-  
+  ;;
 上式中代入$(10\frac{1}{2})!$的值，很容易计算得到
   
 $$\left(\frac{1}{2}\right)! = 0.8862269251 .$$
