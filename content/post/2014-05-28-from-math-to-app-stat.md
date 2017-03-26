@@ -24,7 +24,7 @@ slug: from-math-to-app-stat
 
 回头看自己大学从概率统计专业毕业时，也觉得自己对书本中学到的各种概率模型、参数估计、回归分析掌握得还不错。直到在伯克利博士学习的第二年，才发现我以前是多天真烂漫，对统计应用是多么不明觉厉了。
 
-最难忘的经历是上<a href="http://www.stat.berkeley.edu/~census/" target="_blank">David Freedman</a>的应用统计的第一堂课。第一次上课前的几天，他给选课的学生发了封邮件，告诉大家在第一次上课之前要读三篇文章。大家都是好学生嘛，虽然文章加起来一百多页，大家也都在课前认真地读了（至少认为好好读了）。
+最难忘的经历是上[David Freedman](http://www.stat.berkeley.edu/~census/)的应用统计的第一堂课。第一次上课前的几天，他给选课的学生发了封邮件，告诉大家在第一次上课之前要读三篇文章。大家都是好学生嘛，虽然文章加起来一百多页，大家也都在课前认真地读了（至少认为好好读了）。
 
 ![photoNormal](https://cos.name/wp-content/uploads/2014/05/photoNormal.jpeg)
 
@@ -46,11 +46,11 @@ slug: from-math-to-app-stat
 
 统计和数据分析之所以有趣，就是在于它接地气的特点。它虽然没有数学物理那么简洁明快、高大上，但它有自己的精彩。
 
-<a href="http://sites.williams.edu/rdeveaux/" target="_blank">Richard D. De Veaux</a> 写过一篇很有趣的文章 <a href="http://civilstat.com/wp-content/uploads/2011/08/Mathmusic.pdf" target="_blank">Math Is Music; Statistics Is Literature (Or, Why Are There No Six-Year-Old Novelists?)</a> （数学是音乐；统计是文学（或者说，为什么天下没有六岁的天才作家））。
+[Richard D. De Veaux](http://sites.williams.edu/rdeveaux/) 写过一篇很有趣的文章 [Math Is Music; Statistics Is Literature (Or, Why Are There No Six-Year-Old Novelists?)](http://civilstat.com/wp-content/uploads/2011/08/Mathmusic.pdf) （数学是音乐；统计是文学（或者说，为什么天下没有六岁的天才作家））。
 
 ![mathstat](https://cos.name/wp-content/uploads/2014/05/mathstat.jpg)
 
-文中提到统计的一些特殊性，也引用P. F. Velleman 在2003年Beyond the Formula conference 的主题报告“<a href="http://math.illinoisstate.edu/events/BerkLecturePDF309.pdf" target="_blank">Thinking With Data: Seven Unnatural Acts and Ten 400-Year-Old Aphorisms</a>”中指出的统计教学中一些困难。
+文中提到统计的一些特殊性，也引用P. F. Velleman 在2003年Beyond the Formula conference 的主题报告“[Thinking With Data: Seven Unnatural Acts and Ten 400-Year-Old Aphorisms](http://math.illinoisstate.edu/events/BerkLecturePDF309.pdf)”中指出的统计教学中一些困难。
 
 > It is not merely that we hope to teach judgment to sophomores; we are actually asking our students to change the way they reason about the real world. P. F. Velleman in his 2003 keynote address to the Beyond the Formula conference called the skills they must acquire the seven unnatural acts of statistical thinking: （统计不只是要教给高年级本科生如何做判断，我们其实是在要求学生改变他们探索世界的思路，这需要建立七种非常规的统计思维。）
 
@@ -68,4 +68,4 @@ slug: from-math-to-app-stat
 
 大家且玩且长进！
 
-另外，谢谢吴喜之老师翻译了David Freedman所著的<a href="http://www.amazon.cn/统计模型-理论和实践-弗里曼/dp/B003XKNKZG" target="_blank">《统计模型：理论和实践》</a>。绝对的好书，有空时翻翻一定会收获多多。
+另外，谢谢吴喜之老师翻译了David Freedman所著的[《统计模型：理论和实践》](http://www.amazon.cn/统计模型-理论和实践-弗里曼/dp/B003XKNKZG)。绝对的好书，有空时翻翻一定会收获多多。

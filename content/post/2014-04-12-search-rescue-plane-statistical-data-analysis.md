@@ -168,7 +168,7 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 </p>
 
 <p align="left">
-  <span style="text-decoration: underline;"><a href="http://www.nytimes.com/interactive/2014/03/17/world/asia/search-for-flight-370.html">http://www.nytimes.com/interactive/2014/03/17/world/asia/search-for-flight-370.html</a></span>
+  <span style="text-decoration: underline;">[http://www.nytimes.com/interactive/2014/03/17/world/asia/search-for-flight-370.html](http://www.nytimes.com/interactive/2014/03/17/world/asia/search-for-flight-370.html)</span>
 </p>
 
 <p align="left">
@@ -176,7 +176,7 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 </p>
 
 <p align="left">
-  <span style="text-decoration: underline;"><a href="http://www.wired.co.uk/news/archive/2014-03/11/digital-globe-hunts-for-malaysia-plane">http://www.wired.co.uk/news/archive/2014-03/11/digital-globe-hunts-for-malaysia-plane</a></span>
+  <span style="text-decoration: underline;">[http://www.wired.co.uk/news/archive/2014-03/11/digital-globe-hunts-for-malaysia-plane](http://www.wired.co.uk/news/archive/2014-03/11/digital-globe-hunts-for-malaysia-plane)</span>
 </p>
 
 <p align="left">
@@ -184,7 +184,7 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 </p>
 
 <p align="left">
-  <span style="text-decoration: underline;"><a href="http://leightonvw.com/2014/03/13/can-prediction-markets-help-find-a-missing-aircraft/">http://leightonvw.com/2014/03/13/can-prediction-markets-help-find-a-missing-aircraft/</a></span>
+  <span style="text-decoration: underline;">[http://leightonvw.com/2014/03/13/can-prediction-markets-help-find-a-missing-aircraft/](http://leightonvw.com/2014/03/13/can-prediction-markets-help-find-a-missing-aircraft/)</span>
 </p>
 
 <p align="left">
@@ -192,11 +192,11 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 </p>
 
 <p align="left">
-  <span style="text-decoration: underline;"><a href="http://fivethirtyeight.com/features/how-statisticians-could-help-find-flight-370/">http://fivethirtyeight.com/features/how-statisticians-could-help-find-flight-370/</a></span>
+  <span style="text-decoration: underline;">[http://fivethirtyeight.com/features/how-statisticians-could-help-find-flight-370/](http://fivethirtyeight.com/features/how-statisticians-could-help-find-flight-370/)</span>
 </p>
 
 <p align="left">
-  <span style="text-decoration: underline;"><a href="https://www.informs.org/ORMS-Today/Public-Articles/August-Volume-38-Number-4/In-Search-of-Air-France-Flight-447">https://www.informs.org/ORMS-Today/Public-Articles/August-Volume-38-Number-4/In-Search-of-Air-France-Flight-447</a></span>
+  <span style="text-decoration: underline;">[https://www.informs.org/ORMS-Today/Public-Articles/August-Volume-38-Number-4/In-Search-of-Air-France-Flight-447](https://www.informs.org/ORMS-Today/Public-Articles/August-Volume-38-Number-4/In-Search-of-Air-France-Flight-447)</span>
 </p>
 
 <p align="left">
@@ -204,11 +204,11 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 </p>
 
 <p align="left">
-  <a href="http://news.qq.com/zt2014/MH370/index.htm" target="_blank"><span style="text-decoration: underline;">http://news.qq.com/zt2014/MH370/index.htm</span></a>
+  [<span style="text-decoration: underline;">http://news.qq.com/zt2014/MH370/index.htm</span>](http://news.qq.com/zt2014/MH370/index.htm)
 </p>
 
 &nbsp;
 
-本文作者：统计之都创作小组（<a href="http://yishuo.org/" target="_blank">邓一硕</a>，<a href="http://blog.sina.com.cn/cattyguan" target="_blank">关菁菁</a>，<a href="http://chenangliu.info/" target="_blank">刘辰昂</a>，<a href="http://yixuan.cos.name/cn/" target="_blank">邱怡轩</a>，<a href="http://blog.cos.name/taoshi/" target="_blank">施涛</a>，<a href="http://weibo.com/u/1572842322" target="_blank">熊熹</a>，<a href="http://weibo.com/u/2296442893" target="_blank">周祺</a>）
+本文作者：统计之都创作小组（[邓一硕](http://yishuo.org/)，[关菁菁](http://blog.sina.com.cn/cattyguan)，[刘辰昂](http://chenangliu.info/)，[邱怡轩](http://yixuan.cos.name/cn/)，[施涛](http://blog.cos.name/taoshi/)，[熊熹](http://weibo.com/u/1572842322)，[周祺](http://weibo.com/u/2296442893)）
 
 感谢统计之都资深顾问谢益辉和香港浸会大学数学讲座教授汤涛在写作工程中提出的宝贵建议。

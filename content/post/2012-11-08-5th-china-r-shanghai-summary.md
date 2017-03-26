@@ -7,7 +7,7 @@ categories:
 slug: 5th-china-r-shanghai-summary
 ---
 
-![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)第五届中国R语言会议（上海会场）于2012年11月3日~4日在上海财经大学行政楼一楼报告厅成功召开。会议由上海财经大学统计与管理学院主办、统计之都（<a href="https://cos.name" target="_blank">cos.name</a>）协办，艾瑞咨询（<a href="http://www.iresearch.cn/" target="_blank">iresearch</a>）、Mango Solutions（<a href="http://www.mango-solutions.com.cn/" target="_blank">mango-solutions</a>）、上海财经大学数理经济学教育部重点实验室以及上海财经大学上海市一流学科（B类， 统计学）提供了赞助。在两天的会议时间里，群贤毕集，盛况空前。
+![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 第五届中国R语言会议（上海会场）于2012年11月3日~4日在上海财经大学行政楼一楼报告厅成功召开。会议由上海财经大学统计与管理学院主办、统计之都（[cos.name](https://cos.name)）协办，艾瑞咨询（[iresearch](http://www.iresearch.cn/)）、Mango Solutions（[mango-solutions](http://www.mango-solutions.com.cn/)）、上海财经大学数理经济学教育部重点实验室以及上海财经大学上海市一流学科（B类， 统计学）提供了赞助。在两天的会议时间里，群贤毕集，盛况空前。
 
 ## 会议概况
 
@@ -24,7 +24,7 @@ slug: 5th-china-r-shanghai-summary
 > &nbsp;
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2012/11/5th-SH-live.jpg" target="_blank">![会议现场20121103](https://cos.name/wp-content/uploads/2012/11/5th-SH-live-500x333.jpg "会议现场20121103")</a>
+  ![会议现场20121103](https://cos.name/wp-content/uploads/2012/11/5th-SH-live.jpg "会议现场20121103")
 </p>
 
 ## 会议内容
@@ -61,7 +61,7 @@ slug: 5th-china-r-shanghai-summary
 
 ### 8、陈钢：系统生物学和转换医学中的R语言
 
-来自华大基因的陈钢从第一届中国R语言会议开始就是大家的老朋友了，这次和大家分享了自己工作和研究中的心得。现场的微博中，关于陈钢介绍的华大拥有一千多位数据分析师并且几乎每位分析师都在用R的事实是被转发次数最多的。陈钢的<a href="http://gossipcoder.com/?p=1287" target="_blank">主页</a>上有更详细的会议记录。
+来自华大基因的陈钢从第一届中国R语言会议开始就是大家的老朋友了，这次和大家分享了自己工作和研究中的心得。现场的微博中，关于陈钢介绍的华大拥有一千多位数据分析师并且几乎每位分析师都在用R的事实是被转发次数最多的。陈钢的[主页](http://gossipcoder.com/?p=1287)上有更详细的会议记录。
 
 ### 9、杭兴宜：R / Bioconductor在生物多维组学数据整合中的应用
 
@@ -109,29 +109,29 @@ slug: 5th-china-r-shanghai-summary
 
 ## 资源下载
 
-经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">CC 3.0协议</a>：署名-非商业性使用-相同方式共享）。
+经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循[CC 3.0协议](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)：署名-非商业性使用-相同方式共享）。
 
-  * 冯兴东：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_01_FXD.pdf" target="_blank">R语言和其他计算机语言的混合编程</a>
-  * 刘思喆：<a href="https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_02_LSZ.pdf" target="_blank">R语言环境下的文本挖掘</a>
-  * 张翔：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_03_ZX.pdf" target="_blank">短文本分类器与电商品类数据挖掘</a>
+  * 冯兴东：[R语言和其他计算机语言的混合编程](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_01_FXD.pdf)
+  * 刘思喆：[R语言环境下的文本挖掘](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_02_LSZ.pdf)
+  * 张翔：[短文本分类器与电商品类数据挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_03_ZX.pdf)
   * ebay：R语言在eBay搜索引擎反馈与测试中的应用 
-      * 周春英：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_ZCY.pdf" target="_blank">ebay试验分析、评估与R</a>
-      * 沈羽：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_SY.pdf" target="_blank">用户反馈挖掘</a>
-  * 周扬：<a href="https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_05_ZY.zip" target="_blank">基于R的地理信息系统</a>（HTML5格式）
-  * 肖凯：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_06_XK.pdf" target="_blank">twitteR包入门和应用</a>
-  * 陈钢：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_07_CG.pdf" target="_blank">系统生物学和转换医学中的R语言</a>
-  * 杭兴宜：<a href="https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_08_HXY.pdf" target="_blank">R / Bioconductor在生物多维组学数据整合中的应用</a>
-  * 肖嘉敏：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_01_XJM.pdf" target="_blank">网络用户浏览路径分析</a>
-  * 李忠：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_02_LZ.pdf" target="_blank">R Case Study from ebay APD</a>
-  * 洪健飞：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_03_HJF.pdf" target="_blank">啤酒与尿布的当代版——商品分析在电子商务中的应用</a>
-  * 廖明：<a href="https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_04_LM.pdf" target="_blank">营销分析模型及其在广告界的应用</a>
-  * 陈逸波：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_05_CYB.pdf" target="_blank">基于RHadoop的关联规则挖掘</a>
-  * 刘成昊：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_06_LCH.pdf" target="_blank">模型预测的利器——随机森林</a>
-  * 王雨晨：<a href="https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_07_WYC.pdf" target="_blank">R与面向对象统计分析</a>
-  * 魏太云：<a href="https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_08_WTY.pdf" target="_blank">R基础作图与可重复研究</a>
+      * 周春英：[ebay试验分析、评估与R](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_ZCY.pdf)
+      * 沈羽：[用户反馈挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_SY.pdf)
+  * 周扬：[基于R的地理信息系统](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_05_ZY.zip)（HTML5格式）
+  * 肖凯：[twitteR包入门和应用](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_06_XK.pdf)
+  * 陈钢：[系统生物学和转换医学中的R语言](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_07_CG.pdf)
+  * 杭兴宜：[R / Bioconductor在生物多维组学数据整合中的应用](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_08_HXY.pdf)
+  * 肖嘉敏：[网络用户浏览路径分析](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_01_XJM.pdf)
+  * 李忠：[R Case Study from ebay APD](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_02_LZ.pdf)
+  * 洪健飞：[啤酒与尿布的当代版——商品分析在电子商务中的应用](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_03_HJF.pdf)
+  * 廖明：[营销分析模型及其在广告界的应用](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_04_LM.pdf)
+  * 陈逸波：[基于RHadoop的关联规则挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_05_CYB.pdf)
+  * 刘成昊：[模型预测的利器——随机森林](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_06_LCH.pdf)
+  * 王雨晨：[R与面向对象统计分析](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_07_WYC.pdf)
+  * 魏太云：[R基础作图与可重复研究](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_08_WTY.pdf)
   * 专题讨论： 
-      * 林祯舜：<a href="https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_Panel_LZS.pdf" target="_blank">大数据时代下电子商务及营销的机遇与挑战</a>
+      * 林祯舜：[大数据时代下电子商务及营销的机遇与挑战](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_Panel_LZS.pdf)
 
 ## 感想和建议
 
-如果您对于中国R语言会议还有任何感想、意见或建议，欢迎您在本页面、<a href="http://renren.com/cosname" target="_blank">统计之都人人网页面</a>或<a href="http://weibo.com/cosname" target="_blank">统计之都新浪微博</a>留言，我们会尽力在今后对会议质量进行进一步的改善。
+如果您对于中国R语言会议还有任何感想、意见或建议，欢迎您在本页面、[统计之都人人网页面](http://renren.com/cosname)或[统计之都新浪微博](http://weibo.com/cosname)留言，我们会尽力在今后对会议质量进行进一步的改善。

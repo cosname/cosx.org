@@ -42,7 +42,7 @@ slug: relationships-among-variables-in-large-scale-systems
   </p>
   
   <p>
-    Fisher所说并非狡辩．这也是他一直所声称的，观察研究（observational study）并不能获得因果关系的信息，而倘若研究目的是因果关系的话，那只有实验设计可能还有点戏．本文支持这一观点．但是本文也需要指出，从观察研究里推演因果关系是有可能的－－感兴趣的可以点击<a href="http://bayes.cs.ucla.edu/home.htm" target="_blank">Pear的主页</a>，Pearl乃是因果推断的一代宗师．具体的指导思想是－－我们可以从观测数据中推导各个变量之间的相关关系，再假设这些相关关系都是正确的，根据图论的一些理论，并且结合奥柯姆原理(occam’s principle，简单模型优先)我们就可以推导出部分因果关系．
+    Fisher所说并非狡辩．这也是他一直所声称的，观察研究（observational study）并不能获得因果关系的信息，而倘若研究目的是因果关系的话，那只有实验设计可能还有点戏．本文支持这一观点．但是本文也需要指出，从观察研究里推演因果关系是有可能的－－感兴趣的可以点击[Pear的主页](http://bayes.cs.ucla.edu/home.htm)，Pearl乃是因果推断的一代宗师．具体的指导思想是－－我们可以从观测数据中推导各个变量之间的相关关系，再假设这些相关关系都是正确的，根据图论的一些理论，并且结合奥柯姆原理(occam’s principle，简单模型优先)我们就可以推导出部分因果关系．
   </p>
   
   <h2>
@@ -58,11 +58,11 @@ slug: relationships-among-variables-in-large-scale-systems
   </p>
   
   <p>
-    另外，从实用角度出发，推荐两个工具箱．前者是贝叶斯网络以及隐马尔科夫模型的一个经典的MATLAB工具箱：<a href="http://people.cs.ubc.ca/~murphyk/Software/BNT/bnt.html" target="_blank">Bayes Net Toolbox for Matlab</a>.
+    另外，从实用角度出发，推荐两个工具箱．前者是贝叶斯网络以及隐马尔科夫模型的一个经典的MATLAB工具箱：[Bayes Net Toolbox for Matlab](http://people.cs.ubc.ca/~murphyk/Software/BNT/bnt.html).
   </p>
   
   <p>
-    另外还发现一个Ｒ的包：<a href="http://www.bnlearn.com/documentation/" target="_blank">bnlearn</a>，但我目前还没有用过．
+    另外还发现一个Ｒ的包：[bnlearn](http://www.bnlearn.com/documentation/)，但我目前还没有用过．
   </p>
   
   <h2>
@@ -70,7 +70,7 @@ slug: relationships-among-variables-in-large-scale-systems
   </h2>
   
   <p>
-    此文仅仅作为科普之用，欢迎拍砖．如果你感到无法满足，你可以点击<a href="http://people.cs.ubc.ca/~murphyk/Bayes/bnintro.html" target="_blank">这里</a>，作者Kevin Murphy是图模型方面的一个牛人．如果你仍然不能满足，那么我推荐你google一下 “micheal jordan”(Kevin的老板)，可以发现更多与他一样牛的他的师兄弟师姐妹，有做马尔科夫网络, 隐马尔科夫模型, 动态贝叶斯网络， 独立成分分析（independent component analysis）, 状态空间模型等等，这些都属于图模型，并且都很有意思．
+    此文仅仅作为科普之用，欢迎拍砖．如果你感到无法满足，你可以点击[这里](http://people.cs.ubc.ca/~murphyk/Bayes/bnintro.html)，作者Kevin Murphy是图模型方面的一个牛人．如果你仍然不能满足，那么我推荐你google一下 “micheal jordan”(Kevin的老板)，可以发现更多与他一样牛的他的师兄弟师姐妹，有做马尔科夫网络, 隐马尔科夫模型, 动态贝叶斯网络， 独立成分分析（independent component analysis）, 状态空间模型等等，这些都属于图模型，并且都很有意思．
   </p>
   
   <p>

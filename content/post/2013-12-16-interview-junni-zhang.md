@@ -13,7 +13,7 @@ slug: interview-junni-zhang
 
 [
   
-](https://cos.name/wp-content/uploads/2013/12/0267_PHOTO1.jpg) <span style="color: #808080;">【COS编辑部按】：受访人：<span style="color: #993300;"><a href="http://www.gsm.pku.edu.cn/faculty/zjn.html" target="_blank"><span style="color: #993300;">北大光华张俊妮副教授</span></a></span>，采访人：<span style="color: #993300;"><a href="http://weibo.com/puddingnnn529" target="_blank"><span style="color: #993300;">朱雪宁</span></a></span></span>
+](https://cos.name/wp-content/uploads/2013/12/0267_PHOTO1.jpg) <span style="color: #808080;">【COS编辑部按】：受访人：<span style="color: #993300;">[<span style="color: #993300;">北大光华张俊妮副教授</span>](http://www.gsm.pku.edu.cn/faculty/zjn.html)</span>，采访人：<span style="color: #993300;">[<span style="color: #993300;">朱雪宁</span>](http://weibo.com/puddingnnn529)</span></span>
 
 <p align="left">
   <span style="color: #808080;">简介：张俊妮博士现任北京大学光华管理学院统计学副教授。她1998年毕业于中国科学技术大学，获计算机软件学士学位；2002年毕业于美国哈佛大学，获统计学博士学位。她的研究领域为因果推断、贝叶斯分析、小区估计、数据挖掘和文本挖掘。</span>
@@ -26,7 +26,7 @@ slug: interview-junni-zhang
 <!--more-->
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/12/0267_PHOTO1.jpg">![0267_PHOTO](https://cos.name/wp-content/uploads/2013/12/0267_PHOTO1.jpg)</a>Xuening: 听说您本科专业是软件与计算机，后来是怎么想到转到统计的呢？
+  ![0267_PHOTO](https://cos.name/wp-content/uploads/2013/12/0267_PHOTO1.jpg) Xuening: 听说您本科专业是软件与计算机，后来是怎么想到转到统计的呢？
 </p>
 
 <p align="left">
