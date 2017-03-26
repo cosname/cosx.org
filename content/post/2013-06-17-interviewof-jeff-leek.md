@@ -14,7 +14,7 @@ slug: interviewof-jeff-leek
 
 <span style="color: #888888;">【COS编辑部按】</span><span style="color: #888888;">受访人：Jeff Leek</span>
 
-<span style="color: #888888;">简介：Jeff Leek是约翰·霍普金斯大学布隆博格公共卫生学院（Johns Hopkins Bloomberg School of Public Health）助理教授。他与另外两位教授共同打理的<a href="http://simplystatistics.org/"><span style="color: #888888;">Simply Statistics</span></a>是最受欢迎的统计学博客之一。本文是小编对Jeff Leek采访的录音稿。</span>
+<span style="color: #888888;">简介：Jeff Leek是约翰·霍普金斯大学布隆博格公共卫生学院（Johns Hopkins Bloomberg School of Public Health）助理教授。他与另外两位教授共同打理的[<span style="color: #888888;">Simply Statistics</span>](http://simplystatistics.org/)是最受欢迎的统计学博客之一。本文是小编对Jeff Leek采访的录音稿。</span>
 
 **1. 教育背景**
 

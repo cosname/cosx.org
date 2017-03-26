@@ -20,7 +20,7 @@ slug: interview-of-binyu
   </p>
   
   <p style="padding-left: 30px;">
-    <span style="color: #808080;"><span style="color: #3366ff;"><a href="http://www.icsa.org/bulletin/issues/ICSABulletin13Jul.pdf"><span style="color: #3366ff;">原文</span></a></span>刊登于ICSA。本文由<span style="color: #3366ff;"><a href="https://github.com/cosname/translation" target="_blank"><span style="color: #3366ff;">COS翻译组</span></a></span>策划翻译。译者是密西根大学的<a href="https://github.com/angelleng" target="_blank"><span style="color: #808080;">冷静</span></a>、新加坡国立大学的<a href="https://github.com/AlexXXXX1988" target="_blank"><span style="color: #808080;">尤晓斌</span></a>和中国人民大学的<a href="https://github.com/huozhiji" target="_blank"><span style="color: #808080;">霍志骥</span></a>，全文最终由采访者施涛和被访者郁彬审核、修改、定稿，个别地方对英文原文作了补充。本翻译征得了ICSA、郁彬和施涛的同意和支持，在此表示诚挚的谢意。此外，陈丽云、高涛、肖楠、牟官迅、邓一硕、姜晓东、邱怡轩、魏太云对译文也提出了一些修正建议，在此一并表示感谢。</span>
+    <span style="color: #808080;"><span style="color: #3366ff;">[<span style="color: #3366ff;">原文</span>](http://www.icsa.org/bulletin/issues/ICSABulletin13Jul.pdf)</span>刊登于ICSA。本文由<span style="color: #3366ff;">[<span style="color: #3366ff;">COS翻译组</span>](https://github.com/cosname/translation)</span>策划翻译。译者是密西根大学的[<span style="color: #808080;">冷静</span>](https://github.com/angelleng)、新加坡国立大学的[<span style="color: #808080;">尤晓斌</span>](https://github.com/AlexXXXX1988)和中国人民大学的[<span style="color: #808080;">霍志骥</span>](https://github.com/huozhiji)，全文最终由采访者施涛和被访者郁彬审核、修改、定稿，个别地方对英文原文作了补充。本翻译征得了ICSA、郁彬和施涛的同意和支持，在此表示诚挚的谢意。此外，陈丽云、高涛、肖楠、牟官迅、邓一硕、姜晓东、邱怡轩、魏太云对译文也提出了一些修正建议，在此一并表示感谢。</span>
   </p>
 </div>
 

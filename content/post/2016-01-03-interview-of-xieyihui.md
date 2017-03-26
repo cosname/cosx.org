@@ -14,7 +14,7 @@ tags:
 slug: interview-of-xieyihui
 ---
 
-【COS编辑部按】 受访者：<a href="http://yihui.name/" target="_blank">谢益辉 </a>  采访者：<a href="http://www.fengjunchen.com/" target="_blank">冯俊晨</a>   编辑：王小宁
+【COS编辑部按】 受访者：[谢益辉 ](http://yihui.name/)  采访者：[冯俊晨](http://www.fengjunchen.com/)   编辑：王小宁
 
 <h5 style="text-align: center;">
   他站在技术与艺术的交界点。

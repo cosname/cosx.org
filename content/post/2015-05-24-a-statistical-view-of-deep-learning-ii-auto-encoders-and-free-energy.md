@@ -8,11 +8,11 @@ categories:
 slug: a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy
 ---
 
-原文链接：<a href="http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/" target="_blank">http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/</a>
+原文链接：[http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/](http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/)
 
-作者：<a href="http://www.shakirm.com/" target="_blank">Shakir Mohamed</a>  翻译：钟琰    审校：何通    编辑：王小宁
+作者：[Shakir Mohamed](http://www.shakirm.com/)  翻译：钟琰    审校：何通    编辑：王小宁
 
-**本文得到了原英文作者<a href="http://www.shakirm.com/" target="_blank">Shakir Mohamed</a>的授权同意，由钟琰翻译、何通审校。感谢他们的支持和帮助。**
+**本文得到了原英文作者[Shakir Mohamed](http://www.shakirm.com/)的授权同意，由钟琰翻译、何通审校。感谢他们的支持和帮助。**
 
 基于前馈深度神经网络的判别模型已经在许多工业应用中获得了成功，引发了探寻如何利用无监督学习方法带来相似结果的热潮。降噪自动编码器是深度学习中一种主要的无监督学习方法。本文将探索降噪自编码器和统计学中密度估计之间的联系，我们将从统计学的视角去考察降噪自动编码器学习方法，并将之视为一种潜在因子模型的推断问题。我们的机器学习应用能从这样的联系中获得启发并受益。
 

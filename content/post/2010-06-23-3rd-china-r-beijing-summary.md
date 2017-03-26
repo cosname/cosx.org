@@ -16,7 +16,7 @@ tags:
 slug: 3rd-china-r-beijing-summary
 ---
 
-![第三届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg "第三届中国R语言会议北京会场合影")第三届中国R语言会议北京会场合影（右键另存为看大图）
+![第三届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg "第三届中国R语言会议北京会场合影") 第三届中国R语言会议北京会场合影（右键另存为看大图）
 
 ![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 

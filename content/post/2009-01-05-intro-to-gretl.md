@@ -36,7 +36,7 @@ gretl（**G**nu **R**egression，**E**conometrics and **T**ime-series **L**ibrar
 
 **相关链接**
 
-  * <a href="http://gretl.sourceforge.net/" target="_blank">gretl主页</a>
+  * [gretl主页](http://gretl.sourceforge.net/)
   * Lee Adkins的[Using gretl for Principles of Econometrics, 3rd edition](http://www.learneconometrics.com/gretl.html)
   * 杨亦农的[gretl使用指南](http://yaya.it.cycu.edu.tw/gretl/)
   * [wiki for gretl](http://en.wikipedia.org/wiki/Gretl)
