@@ -20,9 +20,9 @@ tags:
 slug: interview-of-zhangzhihua
 ---
 
-<span style="color: #6c6c6c;">【COS编辑部按】 受访者：<a style="color: #6c6c6c;" href="http://bcmi.sjtu.edu.cn/~zhzhang/" target="_blank">张志华</a>   采访者：常象宇   文字整理：王莉晶 朱雪宁</span>
+<span style="color: #6c6c6c;">【COS编辑部按】 受访者：[张志华](http://bcmi.sjtu.edu.cn/~zhzhang/)   采访者：常象宇   文字整理：王莉晶 朱雪宁</span>
 
-<span style="color: #6c6c6c;"><span style="color: #00006c;"><a style="color: #00006c;" href="http://bcmi.sjtu.edu.cn/~zhzhang/" target="_blank">张志华</a></span>，博士，上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。主要从事人工智能、机器学习与应用统计学领域的教学与研究。迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文。是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委。其公开课《机器学习导论》和《统计机器学习》受到广泛关注。</span>
+<span style="color: #6c6c6c;"><span style="color: #00006c;">[张志华](http://bcmi.sjtu.edu.cn/~zhzhang/)</span>，博士，上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。主要从事人工智能、机器学习与应用统计学领域的教学与研究。迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文。是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委。其公开课《机器学习导论》和《统计机器学习》受到广泛关注。</span>
 
 ![张志华教授和他的学生们](https://cos.name/wp-content/uploads/2015/09/张志华.jpg)
 
@@ -66,13 +66,13 @@ slug: interview-of-zhangzhihua
 
 <span style="color: #808080;">编者注，公开课地址：</span>
 
-<span style="color: #808080;">机器学习导论：<a style="color: #808080;" href="http://ocw.sjtu.edu.cn/G2S/OCW/cn/CourseDetails.htm?Id=397">http://ocw.sjtu.edu.cn/G2S/OCW/cn/CourseDetails.htm?Id=397</a></span>
+<span style="color: #808080;">机器学习导论：[http://ocw.sjtu.edu.cn/G2S/OCW/cn/CourseDetails.htm?Id=397](http://ocw.sjtu.edu.cn/G2S/OCW/cn/CourseDetails.htm?Id=397)</span>
 
-<span style="color: #808080;">统计机器学习：<a style="color: #808080;" href="http://ocw.sjtu.edu.cn/G2S/OCW/cn/CourseDetails.htm?Id=398">http://ocw.sjtu.edu.cn/G2S/OCW/cn/CourseDetails.htm?Id=398</a></span>
+<span style="color: #808080;">统计机器学习：[http://ocw.sjtu.edu.cn/G2S/OCW/cn/CourseDetails.htm?Id=398](http://ocw.sjtu.edu.cn/G2S/OCW/cn/CourseDetails.htm?Id=398)</span>
 
-<span style="color: #000080;">常象宇： 回到国内之后，您培养出了很多优秀的年轻人。例如：获得百度奖学金的<a style="color: #000080;" href="https://sites.google.com/site/zjuwss/" target="_blank">王树森</a>和<a style="color: #000080;" href="http://www.cs.berkeley.edu/~yuczhang/">张雨辰</a>，微软学者王树森、石建萍，谷歌奖学金的王乃岩，他们直接或者间接都是您的学生。您在平时是怎么教导您的学生的呢？我想很多想和您一起做研究的学生都很有兴趣知道。</span>
+<span style="color: #000080;">常象宇： 回到国内之后，您培养出了很多优秀的年轻人。例如：获得百度奖学金的[王树森](https://sites.google.com/site/zjuwss/)和[张雨辰](http://www.cs.berkeley.edu/~yuczhang/)，微软学者王树森、石建萍，谷歌奖学金的王乃岩，他们直接或者间接都是您的学生。您在平时是怎么教导您的学生的呢？我想很多想和您一起做研究的学生都很有兴趣知道。</span>
 
-张志华：<a href="https://sites.google.com/site/zjuwss/" target="_blank">树森</a>、<a href="http://shijianping.me/" target="_blank">建萍</a>和<a href="http://winsty.net/" target="_blank">乃岩</a>是我在浙大工作时带的第一批本科生，他们是竺可桢学院，学校对他们有进入实验室的培养机制。树森后来选择继续跟我读博士，建萍和乃岩则去香港读博士。现阶段他们的确在中国博士生里是比较优秀的。<a href="http://www.cs.berkeley.edu/~yuczhang/" target="_blank">雨辰</a>是我在MSRA访问时认识的，当时他的两位mentors陈伟柱和王刚是我的host, 他们对雨辰赞不绝口。雨辰的确非常优秀，他的数学直觉非常好，我就跟我两位朋友说:“你们就把他当你学生，不要让他做公司项目。”他后来拿到很多美国一流学校的offer, 选择有点纠结，征询我的意见。我强烈建议他去Berkeley, 去跟Mike Jordan。 我在Google访问期间，也带过几位姚班学生做实习生。其中1位后来来交大我这里继续呆了半年。目前我在上海交大实验室有6位ACM班本科生，在浙大时曾经就有1位ACM班来学习半年。能有机会和国内计算机最优秀这批学生结缘是我人生最得意的一件事情。
+张志华：[树森](https://sites.google.com/site/zjuwss/)、[建萍](http://shijianping.me/)和[乃岩](http://winsty.net/)是我在浙大工作时带的第一批本科生，他们是竺可桢学院，学校对他们有进入实验室的培养机制。树森后来选择继续跟我读博士，建萍和乃岩则去香港读博士。现阶段他们的确在中国博士生里是比较优秀的。[雨辰](http://www.cs.berkeley.edu/~yuczhang/)是我在MSRA访问时认识的，当时他的两位mentors陈伟柱和王刚是我的host, 他们对雨辰赞不绝口。雨辰的确非常优秀，他的数学直觉非常好，我就跟我两位朋友说:“你们就把他当你学生，不要让他做公司项目。”他后来拿到很多美国一流学校的offer, 选择有点纠结，征询我的意见。我强烈建议他去Berkeley, 去跟Mike Jordan。 我在Google访问期间，也带过几位姚班学生做实习生。其中1位后来来交大我这里继续呆了半年。目前我在上海交大实验室有6位ACM班本科生，在浙大时曾经就有1位ACM班来学习半年。能有机会和国内计算机最优秀这批学生结缘是我人生最得意的一件事情。
 
 我的原则就是“就把他们当学生！！！”。即使在谷歌，我也不让这帮学生做具体项目。我主要根据他们兴趣，推荐一些数学书给他们，再找点合适文章让他们读。他们做出了很多优秀的工作，你说我能有多大的贡献，最后都是他们自己做出来的。
 

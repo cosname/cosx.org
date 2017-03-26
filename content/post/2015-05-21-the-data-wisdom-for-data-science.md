@@ -8,11 +8,11 @@ categories:
 slug: the-data-wisdom-for-data-science
 ---
 
-原文链接：<a href="http://www.odbms.org/2015/04/data-wisdom-for-data-science/" target="_blank">http://www.odbms.org/2015/04/data-wisdom-for-data-science/</a>
+原文链接：[http://www.odbms.org/2015/04/data-wisdom-for-data-science/](http://www.odbms.org/2015/04/data-wisdom-for-data-science/)
 
-作者：<a href="http://www.stat.berkeley.edu/~binyu/Site/Welcome.html" target="_blank">Bin Yu</a>   翻译：吕翔  张心雨    审校：<a href="http://blog.cos.name/taoshi/" target="_blank">施涛</a> 高涛   编辑：王小宁
+作者：[Bin Yu](http://www.stat.berkeley.edu/~binyu/Site/Welcome.html)   翻译：吕翔  张心雨    审校：[施涛](http://blog.cos.name/taoshi/) 高涛   编辑：王小宁
 
-**本文得到了原英文作者<a href="http://www.stat.berkeley.edu/~binyu/Site/Welcome.html" target="_blank">郁彬</a>的授权同意，由吕翔和张心雨翻译、<a href="http://blog.cos.name/taoshi/" target="_blank">施涛</a>和高涛审校。感谢他们的支持和帮助。**
+**本文得到了原英文作者[郁彬](http://www.stat.berkeley.edu/~binyu/Site/Welcome.html)的授权同意，由吕翔和张心雨翻译、[施涛](http://blog.cos.name/taoshi/)和高涛审校。感谢他们的支持和帮助。**
 
 在大数据时代，学术界和业界的大量研究都是关于如何以一种可扩展和高效率的方式来对数据进行储存，交换和计算（通过统计方法和算法）。这些研究领域无疑非常重要，然而，只有当我们对数据智慧（Data Wisdom）也给予同等程度的重视时，大数据（或者小型数据）才能被转换为真正的知识和有用的，可被采纳的信息。换而言之，我们要认识到必须拥有足够数量的数据才有可能对复杂度较高的问题给出较可靠的答案。“数据智慧”对于我们从数据中提取有效信息和确保没有误用或夸大原始数据是至关重要的。
 
@@ -21,11 +21,11 @@ slug: the-data-wisdom-for-data-science
 <!--more-->
 
 <p style="text-align: left;">
-   <a href="http://projecteuclid.org/euclid.aoms/1177704711" target="_blank">http://projecteuclid.org/euclid.aoms/1177704711</a>
+   [http://projecteuclid.org/euclid.aoms/1177704711](http://projecteuclid.org/euclid.aoms/1177704711)
 </p>
 
 <p style="text-align: left;">
-        <a href="http://www.tandfonline.com/doi/abs/10.1080/01621459.1976.10480949#.VR2_eWYhByU" target="_blank">http://www.tandfonline.com/doi/abs/10.1080/01621459.1976.10480949#.VR2_eWYhByU</a>
+        [http://www.tandfonline.com/doi/abs/10.1080/01621459.1976.10480949#.VR2_eWYhByU](http://www.tandfonline.com/doi/abs/10.1080/01621459.1976.10480949#.VR2_eWYhByU)
 </p>
 
  要让统计圈以外的人了解，“数据智慧”是非常必要的重命名，因为它比“应用统计学”这个术语能更好概括其核心成分。 这样一个有信息量的名称可以使人们意识到应用统计作为数据科学一部分的重要性。
@@ -82,9 +82,9 @@ slug: the-data-wisdom-for-data-science
 
 **9.稳定性**
 
-你会使用哪些现有的方法？不同的方法会得出同一个定性的结论吗？对数据进行随机扰动，例如，可以通过添加噪声或二次抽样实现（一般来说，应确定二层样本有原样本的结构，如相关性，聚类特性和异质性，这样二层样本能较好地代表原始数据）。结论依然成立吗？我们应该只相信那些能通过稳定性检验的方法，稳定性检验简单易行，能够抗过度拟合和过多假阳性发现，具有可重复性（要了解关于稳定性重要程度的更多信息，请参看<a href="http://projecteuclid.org/euclid.bj/1377612862" target="_blank">文章</a>）。
+你会使用哪些现有的方法？不同的方法会得出同一个定性的结论吗？对数据进行随机扰动，例如，可以通过添加噪声或二次抽样实现（一般来说，应确定二层样本有原样本的结构，如相关性，聚类特性和异质性，这样二层样本能较好地代表原始数据）。结论依然成立吗？我们应该只相信那些能通过稳定性检验的方法，稳定性检验简单易行，能够抗过度拟合和过多假阳性发现，具有可重复性（要了解关于稳定性重要程度的更多信息，请参看[文章](http://projecteuclid.org/euclid.bj/1377612862)）。
 
-可重复性研究最近在科学界中吸引了很多注意，请参照<a href="http://www.nature.com/nature/focus/reproducibility/" target="_blank">《Nature》特刊</a>。《Science》的主编 Marcia McNutt 指出“实验再现是科学家用以增加结论信度的一种重要方法”。同样，商业和政府实体也应该要求从数据分析中得出的结论，当用新的同质数据检验时是可再重复的。
+可重复性研究最近在科学界中吸引了很多注意，请参照[《Nature》特刊](http://www.nature.com/nature/focus/reproducibility/)。《Science》的主编 Marcia McNutt 指出“实验再现是科学家用以增加结论信度的一种重要方法”。同样，商业和政府实体也应该要求从数据分析中得出的结论，当用新的同质数据检验时是可再重复的。
 
 **10.结果验证**
 

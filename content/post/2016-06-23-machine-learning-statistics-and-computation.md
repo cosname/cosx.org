@@ -14,7 +14,7 @@ tags:
 slug: machine-learning-statistics-and-computation
 ---
 
-<span style="color: #808080;">编辑部按：本文是从张志华老师在<a href="http://china-r.org/bj2016/">第九届中国R语言会议</a>和上海交通大学的两次讲座中整理出来的，<a href="http://server.9yuntu.cn/services/document?token=CJ4FzuQC6GFA2syNhYZIsC&code=011M8o6J0cW3642ZdT3J0nIp6J0M8o6Q&state=bindingYuntu" target="_blank">点击此处观看幻灯片</a>。<a style="color: #808080;" href="http://bcmi.sjtu.edu.cn/~zhzhang/" target="_blank">张志华</a>老师是<span style="color: #808080;">上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。张老师主要从事人工智能、机器学习与应用统计学领域的教学与研究，迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文，是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委，其公开课《机器学习导论》和《统计机器学习》受到广泛关注。</span><a style="color: #808080;" href="https://cos.name/wp-content/uploads/2016/06/张志华.png"><br /> </a></span>
+<span style="color: #808080;">编辑部按：本文是从张志华老师在[第九届中国R语言会议](http://china-r.org/bj2016/)和上海交通大学的两次讲座中整理出来的，[点击此处观看幻灯片](http://server.9yuntu.cn/services/document?token=CJ4FzuQC6GFA2syNhYZIsC&code=011M8o6J0cW3642ZdT3J0nIp6J0M8o6Q&state=bindingYuntu)。[张志华](http://bcmi.sjtu.edu.cn/~zhzhang/)老师是<span style="color: #808080;">上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。张老师主要从事人工智能、机器学习与应用统计学领域的教学与研究，迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文，是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委，其公开课《机器学习导论》和《统计机器学习》受到广泛关注。</span>[<br/> ](https://cos.name/wp-content/uploads/2016/06/张志华.png)</span>
 
 ![张志华](https://cos.name/wp-content/uploads/2016/06/张志华.png)
 
@@ -22,7 +22,7 @@ slug: machine-learning-statistics-and-computation
   张志华老师和他的学生们
 </p>
 
-大家好，今天我演讲的主题是 “<a href="http://server.9yuntu.cn/services/document?token=CJ4FzuQC6GFA2syNhYZIsC&code=011M8o6J0cW3642ZdT3J0nIp6J0M8o6Q&state=bindingYuntu" target="_blank"><strong>机器学习：统计与计算之恋</strong>”</a>。我用了一个很浪漫的名字，但是我的心情是诚惶诚恐的。一则我担心自己没有能力驾驭这么大的主题，二则我其实是一个不解风情之人，我的观点有些可能不符合国内学术界的主流声音。
+大家好，今天我演讲的主题是 “[<strong>机器学习：统计与计算之恋</strong>”](http://server.9yuntu.cn/services/document?token=CJ4FzuQC6GFA2syNhYZIsC&code=011M8o6J0cW3642ZdT3J0nIp6J0M8o6Q&state=bindingYuntu)。我用了一个很浪漫的名字，但是我的心情是诚惶诚恐的。一则我担心自己没有能力驾驭这么大的主题，二则我其实是一个不解风情之人，我的观点有些可能不符合国内学术界的主流声音。
 
 最近人工智能或者机器学习的强势崛起，特别是刚刚过去的AlphaGo和韩国棋手李世石九段的人机大战，再次让我们领略到了人工智能或机器学习技术的巨大潜力，同时也深深地触动了我。面对这一前所未有的技术大变革，作为10多年以来一直从事统计机器学习一线教学与研究的学者，希望借此机会和大家分享我个人的一些思考和反思。
 

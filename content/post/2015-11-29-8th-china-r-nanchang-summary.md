@@ -128,7 +128,7 @@ slug: 8th-china-r-nanchang-summary
 
 任万凤（诸葛IO）：APP用户行为路径挖掘助力产品优化
 
-<a href="http://chiffon.gitcafe.io/" target="_blank">郎大为</a>（SupStat）：重新定义你的地图：<a href="https://github.com/lchiffon/REmap" target="_blank">Remap</a>
+[郎大为](http://chiffon.gitcafe.io/)（SupStat）：重新定义你的地图：[Remap](https://github.com/lchiffon/REmap)
 
 周扬（J. D. Power）：数据可视化爱好者的工具箱
 
@@ -160,11 +160,11 @@ Wush Chi-Hsuan Wu (台湾大学)：Introduction to FeatureHashing
 
 邱怡轩（Purdue University）: （统计模型 + 最优化）×（ADMM算法 + 并行计算）= ？
 
-谢益辉（<a href="http://www.rstudio.com/" target="_blank">Rstudio</a>）: 论R码农的自我修养
+谢益辉（[Rstudio](http://www.rstudio.com/)）: 论R码农的自我修养
 
 #### 三、演讲幻灯片
 
-可下载的幻灯片链接：<a href="http://pan.baidu.com/s/1kT8ivYn" target="_blank">http://pan.baidu.com/s/1kT8ivYn</a>，部分演讲视频发布在<a href="http://www.xueqing.cc/" target="_blank">雪晴数据网</a>
+可下载的幻灯片链接：[http://pan.baidu.com/s/1kT8ivYn](http://pan.baidu.com/s/1kT8ivYn)，部分演讲视频发布在[雪晴数据网](http://www.xueqing.cc/)
 
 #### 四、会议组织
 
