@@ -15,21 +15,21 @@ tags:
   - 数据整理
   - 数据科学
 slug: a-conversation-with-hadley-wickham
+description: "简介：Hadley Wickham 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 ```ggplot2``` 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 ```plyr```、```reshape2``` 等。"
 ---
 
-&nbsp;
 
-<span style="color: #808080;">【COS编辑部按】受访者： [<span style="color: #808080;">Hadley Wickham</span>](http://had.co.nz/)             采访人：YiXuan</span>
 
-<span style="color: #808080;">简介：Hadley Wickham 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 <code>ggplot2</code> 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 <code>plyr</code>、<code>reshape2</code> 等。</span>
+> **COS编辑部按**受访者： [Hadley Wickham](http://had.co.nz/)            采访人：YiXuan
 
-<span style="color: #808080;">写在前面的话： 20</span><span style="color: #808080;">13年9月13日小编（Yixuan）对他（Hadley）进行了一次简短的采访，谈及了他在图形可视化、数据整理和R编程等诸多方面的工作。</span>
 
-![](http://i.imgur.com/EPgIMLi.jpg)
+> 简介：Hadley Wickham 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 ```ggplot2``` 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 ```plyr```、```reshape2``` 等。
 
-&nbsp;
+写在前面的话： 2013年9月13日小编（Yixuan）对他（Hadley）进行了一次简短的采访，谈及了他在图形可视化、数据整理和R编程等诸多方面的工作。
 
-<!--more-->
+![](https://i.imgur.com/EPgIMLi.jpg)
+
+
 
 **Yixuan**：是否可以给我们介绍一下，你是如何进入统计学，或者说数据科学这一领域的？
 
