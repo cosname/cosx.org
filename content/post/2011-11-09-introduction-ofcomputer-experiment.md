@@ -15,7 +15,7 @@ description: "很早就想为COS写一篇关于计算机试验的东西。可是
 
 在这篇文章中，我想大致介绍一下计算机试验的设计以及建模，另外会有一些R中专门做计算机试验的包的相关介绍。
 
-目前，比较流行的计算机试验设计与建模的教材有两本(似乎也只有这两本)。一本是Thomas J. Santner， Brian J.Williams以及William I.Notz合著的，Springer2003年出版的《The Design and Analysis of Computer Experiment》。另外一本是Kai-Tai Fang ,Runze Li以及Agus Sudjianto合著的，2005年由Chapman&Hall出版的《Design and Modeling for Computer Experiment》。所谓的计算机试验（computer experiment），是相对于传统的实体试验（physical experiment）而言的。我们都知道，实体试验的数据（比如农业试验，生物试验等得到的数据）总是会受到随机误差的影响，因此在实体试验设计中，引入了“重复”的原则，目的就是要通过重复的试验，减小随机误差对于分析的影响。（关于实体试验的设计以及建模，国内外已经有很多教材讨论这些，我相信大多数统计专业的同学所学习的试验设计入门课程都是在学习实体试验的设计以及数据分析。）与此相对的，计算机试验得到的数据并不受到随机误差的干扰。因为一段固定的代码，在计算机上无论运行多少次，得到的结果都是一样的。
+目前，比较流行的计算机试验设计与建模的教材有两本（似乎也只有这两本）。一本是Thomas J. Santner， Brian J.Williams以及William I.Notz合著的，Springer2003年出版的《The Design and Analysis of Computer Experiment》。另外一本是Kai-Tai Fang ,Runze Li以及Agus Sudjianto合著的，2005年由Chapman&Hall出版的《Design and Modeling for Computer Experiment》。所谓的计算机试验（computer experiment），是相对于传统的实体试验（physical experiment）而言的。我们都知道，实体试验的数据（比如农业试验，生物试验等得到的数据）总是会受到随机误差的影响，因此在实体试验设计中，引入了“重复”的原则，目的就是要通过重复的试验，减小随机误差对于分析的影响。（关于实体试验的设计以及建模，国内外已经有很多教材讨论这些，我相信大多数统计专业的同学所学习的试验设计入门课程都是在学习实体试验的设计以及数据分析。）与此相对的，计算机试验得到的数据并不受到随机误差的干扰。因为一段固定的代码，在计算机上无论运行多少次，得到的结果都是一样的。
 
 计算机试验，通常比实体试验包含了更多的变量，用于研究特别复杂的系统，比如航天探测器。对于这些特别复杂的系统，往往需要用一个更加简单的拟模型（meta model）来逼近。计算机试验的目的之一，就是要通过在计算机上，利用代码模拟某个复杂的设备或者某个过程，得到了试验的数据之后，通过分析建模，从而得到一个相对更简单的模型，被称为拟模型，拟模型是非常有用的。
 
