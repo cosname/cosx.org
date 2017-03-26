@@ -54,19 +54,23 @@ slug: svm-series-2-support-vector
 当然，交换以后的问题不再等价于原问题，这个新问题的最优值用 `\(d^{*}\)` 来表示。并，我们有`\(d^{*} \leq p^{*}\)`，这在直观上也不难理解，最大值中最小的一个总也比最小值中最大的一个要大吧！ 🙂 总之，第二个问题的最优值`\(d^{*}\)`在这里提供了一个第一个问题的最优值`\(p^{*}\)`的一个下界，在满足某些条件的情况下，这两者相等，这个时候我们就可以通过求解第二个问题来间接地求解第一个问题。具体来说，就是要满足 [KKT 条件](http://en.wikipedia.org/wiki/Karush%E2%80%93Kuhn%E2%80%93Tucker_conditions)，这里暂且先略过不说，直接给结论：我们这里的问题是满足 KKT 条件的，因此现在我们便转化为求解第二个问题。
 
 首先要让`\(\mathcal{L}\)`关于`\(w\)`和`\(b\)`最小化，我们分别令`\(\partial \mathcal{L} / \partial w\)`和`\(\partial \mathcal{L} / \partial b\)`等于零：
+
 `$$
 \begin{align}
 \frac{\partial \mathcal{L}}{\partial w} = 0 &\Rightarrow w=\sum_{i=1}^{n} \alpha_{i} y_{i} x_{i} \\
 \frac{\partial \mathcal{L}}{\partial b} = 0 &\Rightarrow \sum_{i=1}^{n} \alpha_{i} y_{i} = 0
 \end{align}
 $$`
+
 带回 `\(\mathcal{L}\)`得到：
+
 `$$
 \begin{align}
 \mathcal{L}(w,b,\alpha) &= \frac{1}{2}\sum_{i,j=1}^{n} \alpha_{i}\alpha_{j}y_{i}y_{j}x_{i}^{T}x_{j}-\sum_{i,j=1}^{n}\alpha_{i}\alpha_{j}y_{i}y_{j}x_{i}^{T}x_{j} – b\sum_{i=1}^{n}\alpha_{i}y_{i} + \sum_{i=1}^{n}\alpha_{i} \\ 
 &= \sum\{i=1}^{n}\alpha_{i} – \frac{1}{2}\sum_{i,j=1}^{n}\alpha_{i}\alpha_{j}y_{i}y_{j}x_{i}^{T}x_{j}
 \end{align}
 $$`
+
 此时我们得到关于 dual variable`\(\alpha\)`的优化问题：
 
 `$$
@@ -76,7 +80,9 @@ s.t., &\alpha_{i} \geq 0, i=1,\dots,n \\
 &\sum_{i=1}^{n}\alpha_{i}y_{i} = 0
 \end{align}
 $$`
+
 如前面所说，这个问题有更加高效的优化算法，不过具体方法在这里先不介绍，让我们先来看看推导过程中得到的一些有趣的形式。首先就是关于我们的 hyper plane ，对于一个数据点 `\(x\)` 进行分类，实际上是通过把`\(x\)`带入到`\(f(x) = w^{T}x+b\)`算出结果然后根据其正负号来进行类别划分的。而前面的推导中我们得到`\(w = \sum_{i=1}^{n} \alpha_{i} y_{i} x_{i}\)`，因此
+
 `$$
 \begin{align}  
 f(x) &= \left(\sum_{i=1}^{n} \alpha_{i} y_{i} x_{i} \right)^{T}x+b \\  
@@ -87,9 +93,11 @@ $$`
 这里的形式的有趣之处在于，对于新点`\(x\)`的预测，只需要计算它与训练数据点的内积即可（这里`\(\langle \cdot, \cdot\rangle\)`表示向量内积），这一点至关重要，是之后使用 Kernel 进行非线性推广的基本前提。此外，所谓 Supporting Vector 也在这里显示出来——事实上，所有非 Supporting Vector 所对应的系数`\(\alpha\)`都是等于零的，因此对于新点的内积计算实际上只要针对少量的“支持向量”而不是所有的训练数据即可。
 
 为什么非支持向量对应的`\(\alpha\)`等于零呢？直观上来理解的话，就是这些“后方”的点——正如我们之前分析过的一样，对超平面是没有影响的，由于分类完全有超平面决定，所以这些无关的点并不会参与分类问题的计算，因而也就不会产生任何影响了。这个结论也可由刚才的推导中得出，回忆一下我们刚才通过 Lagrange multiplier 得到的目标函数：
+
 `$$
 \[ \max_{\alpha_{i} \geq 0} \] \; \mathcal{L}(w,b,\alpha) = \[ \max_{\alpha_{i} \geq 0} \] \; \frac{1}{2}\|w\|^2-\sum_{i=1}^{n} \alpha_{i} \color{red}{\left(y_{i}(w^{T}x_{i}+b)-1\right)}
 $$`
+
 注意到如果`\(x_{i}\)`是支持向量的话，上式中红颜色的部分是等于 0 的（因为支持向量的 functional margin 等于 1 ），而对于非支持向量来说，functional margin 会大于 1 ，因此红颜色部分是大于零的，而`\(\alpha_{i}\)`又是非负的，为了满足最大化，`\(\alpha_{i}\)`必须等于 0 。这也就是这些非 Supporting Vector 的点的悲惨命运了。 :p
 
 嗯，于是呢，把所有的这些东西整合起来，得到的一个 maximum margin hyper plane classifier 就是支持向量机（Support Vector Machine），经过直观的感觉和数学上的推导，为什么叫“支持向量”，应该也就明了了吧？当然，到目前为止，我们的 SVM 还比较弱，只能处理线性的情况，不过，在得到了 dual 形式之后，通过 Kernel 推广到非线性的情况就变成了一件非常容易的事情了。不过，具体细节，还要留到下一次再细说了。 🙂
