@@ -16,7 +16,7 @@ description: "郁彬是加州大学伯克利分校统计系和电子工程与计
 ---
 
 
-【COS编辑部按】：受访者：郁彬             采访者：施涛
+**COS编辑部按**：受访者：郁彬             采访者：施涛
  
   
 [原文](http://www.icsa.org/bulletin/issues/ICSABulletin13Jul.pdf)刊登于ICSA。本文由[COS翻译组](https://github.com/cosname/translation)策划翻译。译者是密西根大学的[冷静](https://github.com/angelleng)、新加坡国立大学的[尤晓斌](https://github.com/AlexXXXX1988)和中国人民大学的[霍志骥](https://github.com/huozhiji)，全文最终由采访者施涛和被访者郁彬审核、修改、定稿，个别地方对英文原文作了补充。本翻译征得了ICSA、郁彬和施涛的同意和支持，在此表示诚挚的谢意。此外，陈丽云、高涛、肖楠、牟官迅、邓一硕、姜晓东、邱怡轩、魏太云对译文也提出了一些修正建议，在此一并表示感谢。
@@ -174,11 +174,11 @@ Leo Breiman对我的影响是引领我走向机器学习的重要因素。他是
 
 施： 当你从贝尔实验室回来的时候，你已经涉及了不少应用领域。那时候可能你已经能对这些项目应付自如了吧？
 
-郁： 没错。我觉得贝尔实验室给我自由发展的空间，但不得不说在伯克利的经历也相当重要，因为伯克利迫使我自己找到自我。当时我是在系主任John Rice鼓励下返回伯克利的。我在贝尔实验室时Michael Jordan加入了伯克利统计系和计算机系。他也写信鼓励我回来。回来之后，我仍然继续坚持我在贝尔实验室的工作内容——跨学科研究和统计机器学习。 ![alt](http://www.stat.berkeley.edu/~yugroup/fig/yugroup_2003.jpg "Dave Graham-Squire, Gang Liang, Peng Zhao, Bin Yu, Tao Shi.")
+郁： 没错。我觉得贝尔实验室给我自由发展的空间，但不得不说在伯克利的经历也相当重要，因为伯克利迫使我自己找到自我。当时我是在系主任John Rice鼓励下返回伯克利的。我在贝尔实验室时Michael Jordan加入了伯克利统计系和计算机系。他也写信鼓励我回来。回来之后，我仍然继续坚持我在贝尔实验室的工作内容——跨学科研究和统计机器学习。 ![Dave Graham-Squire, Gang Liang, Peng Zhao, Bin Yu, Tao Shi.](http://www.stat.berkeley.edu/~yugroup/fig/yugroup_2003.jpg)
 
 图2 郁彬及学生2003：Dave Graham-Square, Gang Liang, Peng Zhao, Bin Yu, Tao Shi。
 
-![alt](http://www.stat.berkeley.edu/~yugroup/fig/yugroup_2006.jpg "Back: David Purdy, Jing Lei, Ethan Anderes, Guilherme Rocha.<br /><br /><br /> Front: Kei Kobayashi, Nicolai Meinshausen, Bin Yu, Vincent Vu, Nate Coehlo, Xing Wang.")
+![Back: David Purdy, Jing Lei, Ethan Anderes, Guilherme Rocha.  Front: Kei Kobayashi, Nicolai Meinshausen, Bin Yu, Vincent Vu, Nate Coehlo, Xing Wang.](http://www.stat.berkeley.edu/~yugroup/fig/yugroup_2006.jpg)
 
 图3 郁彬及学生 2006。 后排：David Purdy, Jing Lei, Ethan Anderes, Guiherme Rocha；前排：Kei Kobayashi, Nicolai Meinshausen, Bin Yu, Vincent Vu, Nate Coehlo, Xing Wang。
 
