@@ -11,6 +11,7 @@ tags:
   - 机器学习
   - 监督学习
 slug: svm-series-2-support-vector
+description: "[上一次](/2014/01/svm-series-maximum-margin-classifier/)介绍支持向量机，结果说到 Maximum Margin Classifier ，到最后都没有说“支持向量”到底是什么东西。"
 ---
 
 原文链接请点击[这里](http://blog.pluskid.org/?p=682)
@@ -19,7 +20,7 @@ slug: svm-series-2-support-vector
 
 ![Optimal-Hyper-Plane](https://cos.name/wp-content/uploads/2014/01/Optimal-Hyper-Plane.png)
 
-可以看到两个支撑着中间的 gap 的超平面，它们到中间的 separating hyper plane 的距离相等（想想看：为什么一定是相等的？），即我们所能得到的最大的 geometrical margin `\(\tilde{\gamma}\)` 。而“支撑”这两个超平面的必定会有一些点，试想，如果某超平面没有碰到任意一个点的话，那么我就可以进一步地扩充中间的 gap ，于是这个就不是最大的 margin 了。由于在 `\(n\)` 维向量空间里一个点实际上是和以原点为起点，该点为终点的一个向量是等价的，所以这些“支撑”的点便叫做支持向量。<!--more-->
+可以看到两个支撑着中间的 gap 的超平面，它们到中间的 separating hyper plane 的距离相等（想想看：为什么一定是相等的？），即我们所能得到的最大的 geometrical margin `\(\tilde{\gamma}\)` 。而“支撑”这两个超平面的必定会有一些点，试想，如果某超平面没有碰到任意一个点的话，那么我就可以进一步地扩充中间的 gap ，于是这个就不是最大的 margin 了。由于在 `\(n\)` 维向量空间里一个点实际上是和以原点为起点，该点为终点的一个向量是等价的，所以这些“支撑”的点便叫做支持向量。
 
 很显然，由于这些 supporting vector 刚好在边界上，所以它们是满足 `\(y(w^{T}x + b) = 1\)`（还记得我们把 functional margin 定为1了吗？），而对于所有不是支持向量的点，也就是在“阵地后方”的点，则显然有`\(y(w^{T}x + b) > 1\)`。事实上，当最优的超平面确定下来之后，这些后方的点就完全成了路人甲了，它们可以在自己的边界后方随便飘来飘去都不会对超平面产生任何影响。这样的特性在实际中有一个最直接的好处就在于存储和计算上的优越性，例如，如果使用 100 万个点求出一个最优的超平面，其中是 supporting vector 的有 100 个，那么我只需要记住这 100 个点的信息即可，对于后续分类也只需要利用这 100 个点而不是全部 100 万个点来做计算。（当然，通常除了 K-Nearest Neighbor 之类的 [Memory-based Learning](http://en.wikipedia.org/wiki/Instance-based_learning) 算法，通常算法也都不会直接把所有的点记忆下来，并全部用来做后续 inference 中的计算。不过，如果算法使用了 Kernel 方法进行非线性化推广的话，就会遇到这个问题了。Kernel 方法在下一次会介绍。）
 
