@@ -48,15 +48,10 @@ slug: gamma-function-1
 1655年, 英国数学家沃利斯(John Wallis, 1616-1703)写下了一个神奇的数学公式
   
 `\begin{equation}
-  
 \label{wallis-formula}
-  
 \frac{2}{1} \cdot \frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5} \cdot
-  
 \frac{6}{5} \cdot \frac{6}{7} \cdot \frac{8}{7} \cdot \frac{8}{9} \cdot \cdots =
-  
 \frac{\pi}{2} .
-  
 \end{equation}`
   
 `\(\pi\)` 居然可以如此齐整地表示成奇数、偶数的比值，着实令人惊讶。 历史上数学家们为了寻求对`\(pi\)` 这个迷人的常数更加深刻的理解，前赴后继倾注了无数的精力。数学家们发现，`\(\pi\)`可以表达成许许多多奇妙的形式，而沃利斯公式是欧洲历史上发现的第二个把`\(\pi\)` 表达成式了无穷序列的形式， 由于它简洁的对称美，也成为了许多数学人经常提及的数学公式之一。为何沃利斯公式会和伽玛函数发生联系呢？实际上对沃利斯公式做一下变形整理就可以得到如下等价形式
@@ -78,13 +73,9 @@ slug: gamma-function-1
 于是欧拉大胆地猜测 `\(\sin x\)`也具有多项式的这种性质，即
   
 `\begin{equation}
-  
 \label{euler-sinx}
-  
-\sin x = x \prod_{n=1}^\infty\left(1 &#8211; \frac{x^2}{n^2\pi^2}\right)
-  
+\sin x = x \prod_{n=1}^\infty\left(1-\frac{x^2}{n^2\pi^2}\right)  
 = x (1- \frac{x^2}{\pi^2}) (1- \frac{x^2}{4\pi^2}) (1- \frac{x^2}{9\pi^2}) \cdots .
-  
 \end{equation}`
   
 理工科背景的学生大都学习过 `\(\sin x\)`的泰勒展开式， 通常只有数学背景的学生才会接触到这个 `\(\sin x\)` 的无穷乘积展开式。这个展开式在数学推导中有许多妙用。数学史上它发挥的第一个重要作用，就是帮助欧拉推导出了如下美丽的公式
@@ -93,17 +84,12 @@ slug: gamma-function-1
   
 这个展开式子的另一个妙处就是可以用于证明沃利斯公式， 不过这个思路并非欧拉本人给出，而是后来的数学家发现的。 在`\(\eqref{euler-sinx} \)`式中取 `\(x=\frac{\pi}{2}\)`, 可以得到
   
-`$$ 1 = \frac{\pi}{2} \prod_{n=1}^\infty\left(1 &#8211; \frac{1}{4n^2}\right)
-  
-= \frac{\pi}{2} \prod_{n=1}^\infty\left(\frac{2n-1}{2n} \cdot \frac{2n+1}{2n}\right)
-
-$$`
+`$$ 1 = \frac{\pi}{2} \prod_{n=1}^\infty\left(1-\frac{1}{4n^2}\right) 
+= \frac{\pi}{2} \prod_{n=1}^\infty\left(\frac{2n-1}{2n} \cdot \frac{2n+1}{2n}\right) $$`
   
 所以
   
-`$$ \frac{\pi}{2} = \prod_{n=1}^\infty\left(\frac{2n}{2n-1} \cdot \frac{2n}{2n+1}\right)
-  
-$$`
+`$$ \frac{\pi}{2} = \prod_{n=1}^\infty\left(\frac{2n}{2n-1} \cdot \frac{2n}{2n+1}\right) $$`
   
 上式就是沃利斯公式。之所以说以上的证明思路不够严格，是由于欧拉给的`\(\sin x\)` 无穷乘积展开式的严格证明并不简单，依赖于现代数学分析理论。
 
@@ -132,21 +118,15 @@ $$`
 沃利斯对 `\(p,q = 1,2,\ldots,10\)` 做了计算， 发现`\(A\_{p,q}\)`这个表格不太好看，改为倒数之后容易分析。于是取 `\(B\_{p,q} = \frac{1}{A_{p,q}}\)`, 列出表格一看， 居然恰好是帕斯卡三角形！ 这个三角形中的组合数已经是数学家们熟悉知的， 于是沃利斯很容易地得到
 
 `\begin{equation}
-  
 \label{wallis-Bpq}
-  
 B_{p,q} = \frac{(p+q)!} {p! q!} = \frac{1}{p!} (q+1) (q+2) \ldots (q+p), q=0,1,2 \ldots
-  
 \end{equation}
   
 由上式进一步可以得到如下的递推公式
   
 \begin{equation}
-  
 \label{wallis-Bpq-recursion}
-  
 B\_{p,q} = \frac{p+q}{q} B\_{p,q-1}
-  
 \end{equation}`
   
 原始的问题就转化为计算 `\(B_{\frac{1}{2},\frac{1}{2}}\)`。 由此开始， 沃利斯开始了他天才的推广：
@@ -165,7 +145,6 @@ B\_{p,q} = \frac{p+q}{q} B\_{p,q-1}
 `$$ B_{\frac{1}{2}, m} = \frac{2m+1}{2m}\cdot \frac{2m-1}{2m-2} \ldots \frac{5}{4} \cdot\frac{3}{2} $$`
   
 `$$ B_{\frac{1}{2}, m+\frac{1}{2}} = \frac{2m+2}{2m+1} \cdot\frac{2m}{2m-1} \ldots \frac{4}{3}
-  
 \cdot B_{\frac{1}{2}, \frac{1}{2}} $$`
   
 由于 `\(B_{\frac{1}{2}, q}\)` 是基于`\(q$\)`递增的，所以有
@@ -174,12 +153,9 @@ B\_{p,q} = \frac{p+q}{q} B\_{p,q-1}
   
 利用\eqref{wallis-Bpq-recursion} 式这个递推公式，马上可以得出上式两端有相同的极限
   
-`$$ \lim\_{m \rightarrow \infty} B\_{\frac{1}{2}, m+\frac{1}{2}}
-  
-= \lim\_{m \rightarrow \infty} \frac{2m+2}{2m+1} B\_{\frac{1}{2}, m-\frac{1}{2}}
-  
+`$$ \lim\_{m \rightarrow \infty} B\_{\frac{1}{2}, m+\frac{1}{2}} 
+= \lim\_{m \rightarrow \infty} \frac{2m+2}{2m+1} B\_{\frac{1}{2}, m-\frac{1}{2}} 
 = \lim\_{m \rightarrow \infty} B\_{\frac{1}{2}, m-\frac{1}{2}} .
-  
 $$`
   
 于是，利用两侧极限的夹逼，可以得到
@@ -188,22 +164,17 @@ $$`
   
 即有
   
-`$$
-  
-\frac{3}{2} \cdot \frac{5}{4} \cdot \cdots \cdot \frac{2m-1}{2m-2} \cdot \frac{2m+1}{2m} \cdots
-  
-= B_{\frac{1}{2}, \frac{1}{2}} \cdot \frac{4}{3} \cdot \cdots \cdot \frac{2m}{2m-1} \cdot \frac{2m+2}{2m+1} \cdot \cdots
-  
+`$$ 
+\frac{3}{2} \cdot \frac{5}{4} \cdot \cdots \cdot \frac{2m-1}{2m-2} \cdot \frac{2m+1}{2m} \cdots  
+= B_{\frac{1}{2}, \frac{1}{2}} \cdot \frac{4}{3} \cdot \cdots \cdot \frac{2m}{2m-1} \cdot \frac{2m+2}{2m+1} \cdot \cdots 
 $$`
   
 所以
   
 `$$
   
-\frac{2}{B_{\frac{1}{2}, \frac{1}{2}}} = \frac{2}{1} \cdot\frac{2}{3} \cdot\frac{4}{3}\cdot \frac{4}{5}\cdot
-  
-\cdots \cdot \frac{2m-2}{2m-1}\cdot \frac{2m}{2m-1} \cdot \frac{2m}{2m+1} \cdot \frac{2m+2}{2m+1} \cdot\cdots
-  
+\frac{2}{B_{\frac{1}{2}, \frac{1}{2}}} = \frac{2}{1} \cdot\frac{2}{3} \cdot\frac{4}{3}\cdot \frac{4}{5}\cdot 
+\cdots \cdot \frac{2m-2}{2m-1}\cdot \frac{2m}{2m-1} \cdot \frac{2m}{2m+1} \cdot \frac{2m+2}{2m+1} \cdot\cdots 
 $$`
   
 由于 `\(\displaystyle \frac{2}{B\_{\frac{1}{2}, \frac{1}{2}}} = 2A\_{\frac{1}{2}, \frac{1}{2}} = \frac{\pi}{2} \)`,代入上式就得到了沃利斯公式 \eqref{wallis-formula}。
@@ -221,15 +192,12 @@ $$`
 棣莫弗从1721年开始考虑二项分布的概率计算问题，其中一个问题是：当`\(n \rightarrow \infty \)`时，如何计算对称二项分布的中间项的概率
   
 `$$ b\left(n, {1\over2}, {n \over 2}\right) = \binom{n}{{n \over 2}}
-  
 \left(\frac{1}{2}\right)^n
-  
 = \frac{n!}{({n\over 2})! \cdot ({n \over 2})!} \left(\frac{1}{2}\right)^n .$$`
   
 上式中假设了`\(n\)`为偶数。棣莫弗经过一番复杂的推导计算，得到了如下的结果
   
-`$$ b\left(n, {1\over2}, {n\over2}\right) \approx 2.168 \frac{(1 &#8211; {1\over n})^n} {\sqrt{n-1}}
-  
+`$$ b\left(n, {1\over2}, {n\over2}\right) \approx 2.168 \frac{(1-{1\over n})^n} {\sqrt{n-1}} 
 \approx \frac{2.168 e^{-1}}{\sqrt{n}}.$$`
   
 1725年，斯特林得知了棣莫弗的研究问题和结果，这激起了他浓厚的兴趣。斯特林经过更细致的推导，得到了如下更加漂亮的结果
@@ -250,7 +218,7 @@ $$`
 
 假设 `\(X\_1, X\_2,\ldots, X\_n\)`独立同分布， 都是服从参数 `\(\lambda=1\)` 的泊松分布的随机变量，取 `\(S\_n=\sum\_{i=1}^n X\_i\)`, 则由泊松分布的可叠加性， 容易知道 `\(S\_n \sim Poisson(n)\)`, 于是由泊松分布的性质可知`\(S\_n\)` 的均值和方差都是 `\(n\)`, 利用中心极限定理可以得到
   
-`$$ Z\_n = \frac{S\_n &#8211; E(S\_n)}{\sqrt{ Var(S\_n) }} = \frac{S_n &#8211; n}{{\sqrt n }} \rightarrow Z,  \quad Z \sim N(0,1) $$`
+`$$ Z\_n = \frac{S\_n-E(S\_n)}{\sqrt{ Var(S\_n) }} = \frac{S_n-n}{{\sqrt n }} \rightarrow Z,  \quad Z \sim N(0,1) $$`
   
 `\(Z\)`为正态分布随机变量，密度函数为
   
@@ -258,33 +226,24 @@ $$`
   
 所以，我们有如下推导
   
-`\begin{eqnarray*}
-  
-\begin{array}{lll}
-  
-P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
-  
-& = & \displaystyle P\{ -\frac{1}{{\sqrt n }} < \frac{{{S_n} &#8211; n}}{{\sqrt n }} \le 0\} \\
-  
-& \approx & \displaystyle P\{ -\frac{1}{{\sqrt n }} < Z \le 0\} \\
-  
-& = & \displaystyle \int_{ &#8211; \frac{1}{{\sqrt n }}}^0 f(z) dz \\
-  
-& \approx & f(0) [0 &#8211; ( &#8211; \frac{1}{{\sqrt n }})] \\
-  
-& = & \displaystyle \frac{1}{\sqrt{2\pi n}} .\\
-  
-\end{array}
-  
+`\begin{eqnarray*}  
+\begin{array}{lll}  
+P\{{S\_n} = n\} & = & \displaystyle P\{ n -1 < {S\_n} \le n\} \\  
+& = & \displaystyle P\{ -\frac{1}{{\sqrt n }} < \frac{{{S_n} -n}}{{\sqrt n }} \le 0\} \\  
+& \approx & \displaystyle P\{ -\frac{1}{{\sqrt n }} < Z \le 0\} \\  
+& = & \displaystyle \int_{ -\frac{1}{{\sqrt n }}}^0 f(z) dz \\  
+& \approx & f(0) [0 -( -\frac{1}{{\sqrt n }})] \\  
+& = & \displaystyle \frac{1}{\sqrt{2\pi n}} .\\  
+\end{array}  
 \end{eqnarray*}`
   
 由于`\(S_n\)` 符合参数`\(\lambda =n\)`的泊松分布，实际上有
   
-`$$ P\{ {S_n} = n\} = \frac{{{e^{ &#8211; n}}{n^n}}}{{n!}} .$$`
+`$$ P\{ {S_n} = n\} = \frac{{{e^{ -n}}{n^n}}}{{n!}} .$$`
   
 综合以上推导可以得到
   
-`$$ \frac{{{e^{ &#8211; n}}{n^n}}}{{n!}} \approx \frac{1}{\sqrt{2\pi n}}. $$`
+`$$ \frac{{{e^{ -n}}{n^n}}}{{n!}} \approx \frac{1}{\sqrt{2\pi n}}. $$`
   
 上式稍微整理一下就得到斯特林公式。这个推导的思路看起来非常初等，但是由于中心极限定理的严格证明非常困难，所以不能被认为是一个严格的初等证明。不过该推导让我们从概率角度来理解斯特林公式，同时也解释了斯特林公式中的`\(\pi\)`，是由于正态分布的引入导致的。
 
@@ -304,8 +263,7 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
 
 通过插值方法并结合对数运算的技巧，斯特林计算出了 `\(\log_{10} (10\frac{1}{2})!=7.0755259056\)`, 由此可以得到 `\((10\frac{1}{2})! = 11899423.08\)`。斯特林接下来的处理非常有意思，由于原始的数列满足递归式 `\(T(z) = z \cdot T(z-1)\)`，所以斯特林基于插值的原则进行推理，认为被插值的中间项 `\((\frac{1}{2})!, (1\frac{1}{2})!, (2\frac{1}{2})! \cdots\)`,`\((9\frac{1}{2})!, (10\frac{1}{2})!\)`也应该满足这个递归式, 于是有
   
-`$$ \left(10\frac{1}{2}\right)! = 10\frac{1}{2} \cdot
-  
+`$$ \left(10\frac{1}{2}\right)! = 10\frac{1}{2} \cdot  
 9\frac{1}{2} \cdot \cdots \cdot 1\frac{1}{2} \cdot \left(\frac{1}{2}\right)! $$`
   
 上式中代入`\((10\frac{1}{2})!\)`的值，很容易计算得到
@@ -314,12 +272,9 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 这个结果看起来平淡无奇，然而斯特林天才地指出实际上有
   
-`\begin{equation}
-  
-\label{half-factorial}
-  
-\left(\frac{1}{2}\right)! = \frac{\sqrt\pi}{2} .
-  
+`\begin{equation} 
+\label{half-factorial} 
+\left(\frac{1}{2}\right)! = \frac{\sqrt\pi}{2} . 
 \end{equation}`
   
 这真是一个令人惊诧的结果！
@@ -336,32 +291,21 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 把递归式 `\(T(z) = z \cdot T(z-1)$ 应用于 $(n+\frac{1}{2})!\)` 可以得到
   
-`$$ \left(n+\frac{1}{2}\right)!
-  
+`$$ \left(n+\frac{1}{2}\right)!  
 = (n+\frac{1}{2}) \cdot (n-\frac{1}{2}) \cdots \frac{3}{2} \cdot \left(\frac{1}{2}\right)! .$$`
   
 利用斯特林公式推导可以得到
   
-`\begin{align*}
-  
-\left(\frac{1}{2}\right)! & = \frac {n! \sqrt{n+1}} {(n+\frac{1}{2})
-  
-\cdot (n-\frac{1}{2}) \cdots \frac{3}{2}} \\
-  
-& = \frac {\sqrt{n+1} \cdot 2^{2n} \cdot n! \cdot n!} {(2n+1)!} \\
-  
-& \displaystyle \approx \displaystyle \frac {\sqrt{n+1} \cdot 2^{2n}
-  
-\cdot \sqrt{2\pi n} (\frac{n}{e})^n \cdot \sqrt{2\pi n} (\frac{n}{e})^n}
-  
-{\sqrt{2\pi(2n+1)} (\frac{2n+1}{e})^{2n+1}} \\
-  
-& = \displaystyle \frac{\sqrt\pi}{2} \cdot \frac{e}{(1+\frac{1}{2n})^{2n}}
-  
-\cdot \frac{\sqrt{2n+2}\cdot 2n}{\sqrt{2n+1}\cdot (2n+1)} \\
-  
-& \rightarrow \frac{\sqrt\pi}{2} \hspace{0.5cm} (n \rightarrow \infty) .
-  
+`\begin{align*} 
+\left(\frac{1}{2}\right)! & = \frac {n! \sqrt{n+1}} {(n+\frac{1}{2})  
+\cdot (n-\frac{1}{2}) \cdots \frac{3}{2}} \\  
+& = \frac {\sqrt{n+1} \cdot 2^{2n} \cdot n! \cdot n!} {(2n+1)!} \\  
+& \displaystyle \approx \displaystyle \frac {\sqrt{n+1} \cdot 2^{2n}  
+\cdot \sqrt{2\pi n} (\frac{n}{e})^n \cdot \sqrt{2\pi n} (\frac{n}{e})^n}  
+{\sqrt{2\pi(2n+1)} (\frac{2n+1}{e})^{2n+1}} \\  
+& = \displaystyle \frac{\sqrt\pi}{2} \cdot \frac{e}{(1+\frac{1}{2n})^{2n}}  
+\cdot \frac{\sqrt{2n+2}\cdot 2n}{\sqrt{2n+1}\cdot (2n+1)} \\  
+& \rightarrow \frac{\sqrt\pi}{2} \hspace{0.5cm} (n \rightarrow \infty) .  
 \end{align*}`
 
 ![斯特林的墓](https://cos.name/wp-content/uploads/2014/07/stirling_grave.jpg)
@@ -380,88 +324,57 @@ P\{{S\_n} = n\} & = & \displaystyle P\{ n &#8211; 1 < {S\_n} \le n\} \\
   
 \rightarrow \infty\)`时，有
   
-`$$ \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m-1+n)}(m+\frac{n}{2})^{n-1}
-  
+`$$ \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m-1+n)}(m+\frac{n}{2})^{n-1}  
 \rightarrow n! .$$`
   
 于是利用这个无穷乘积的方式可以把`\(n!\)`的定义自然地延拓到实数集。例如，取 `\(n=2.5\)`, `\(m$\)`足够大，基于上式就可以近似计算出 `\(2.5!\)`。我们并不知道丹尼尔是如何想到用无穷乘积的思路去解决这个问题的，然而他能从有限插值跳跃到无穷，足以显示他优秀的数学才能。无穷在整个数学发展中发挥着巨大的作用，二十世纪之后的数学笔者不敢妄加评论，然而如果说“无穷是数学发展的发动机”，在二十世纪之前，这句评论应该不会过分。历次数学危机是因为无穷而产生，几次数学的重大进展和飞跃也是由于数学家们更加深刻地认识了无穷。
 
 接下来伽马函数的主角欧拉要登场了。欧拉和贝努利家族有紧密的联系，他是约翰·贝努利 (Johann Bernoulli, 1667-1748)的学生， 这位约翰也就是尼古拉斯和丹尼尔的父亲。我们应该感谢约翰·贝努利，因为正是他发现并培养了欧拉的数学才能。 在尼古拉斯和丹尼尔的推荐之下欧拉于1727年在圣彼得堡科学院获得了一个职位。欧拉当时正和丹尼尔·贝努利一块在圣彼得堡，他也因此得知了阶乘的插值问题。应该是受到丹尼尔·贝努利的思路的启发，欧拉也采用无穷乘积的方式给出了另外一个`\(n!\)` 的插值公式
   
-`\begin{equation}
-  
-\label{euler-series}
-  
-\Bigl[\Bigl(\frac{2}{1}\Bigr)^n\frac{1}{n+1}\Bigr]
-  
-\Bigl[\Bigl(\frac{3}{2}\Bigr)^n\frac{2}{n+2}\Bigr]
-  
-\Bigl[\Bigl(\frac{4}{3}\Bigr)^n\frac{3}{n+3}\Bigr] \cdots = n! .
-  
+`\begin{equation} 
+\label{euler-series} 
+\Bigl[\Bigl(\frac{2}{1}\Bigr)^n\frac{1}{n+1}\Bigr]  
+\Bigl[\Bigl(\frac{3}{2}\Bigr)^n\frac{2}{n+2}\Bigr]  
+\Bigl[\Bigl(\frac{4}{3}\Bigr)^n\frac{3}{n+3}\Bigr] \cdots = n! .  
 \end{equation}`
   
 用极限形式，这个式子以写为
   
-`\begin{equation}
-  
-\label{euler-series2}
-  
-\lim_{m \rightarrow \infty} \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} = n!
-  
+`\begin{equation}  
+\label{euler-series2}  
+\lim_{m \rightarrow \infty} \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} = n! 
 \end{equation}`
   
 欧拉实际上在他的论文中描述了发现上述式子的思路，我们不在此赘述，不过上式成立却很容易证明。上式左边可以整理为
   
-`\begin{align*}
-  
-& \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} \\
-  
-= & \frac{1\cdot 2\cdot 3 \cdots n \cdot (n+1)(n+2) \cdots m}{(1+n)(2+n)\cdots m (m+1)(m+2)\cdots (m+n)}
-  
-(m+1)^{n} \\
-  
-= & 1\cdot 2\cdot 3 \cdots n \cdot \frac{(n+1)(n+2) \cdots m}{(1+n)(2+n)\cdots m }
-  
-\cdot \frac{(m+1)^{n}}{(m+1)(m+2)\cdots (m+n)} \\
-  
-= & n! \cdot \frac{(m+1)^{n}}{(m+1)(m+2)\cdots (m+n)} \\
-  
-= & n! \cdot \prod_{k=1}^{n} \frac{m+1}{m+k} \\
-  
-\rightarrow & n! \qquad (m\rightarrow \infty)
-  
+`\begin{align*}  
+& \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} \\  
+= & \frac{1\cdot 2\cdot 3 \cdots n \cdot (n+1)(n+2) \cdots m}{(1+n)(2+n)\cdots m (m+1)(m+2)\cdots (m+n)} 
+(m+1)^{n} \\  
+= & 1\cdot 2\cdot 3 \cdots n \cdot \frac{(n+1)(n+2) \cdots m}{(1+n)(2+n)\cdots m }  
+\cdot \frac{(m+1)^{n}}{(m+1)(m+2)\cdots (m+n)} \\  
+= & n! \cdot \frac{(m+1)^{n}}{(m+1)(m+2)\cdots (m+n)} \\  
+= & n! \cdot \prod_{k=1}^{n} \frac{m+1}{m+k} \\  
+\rightarrow & n! \qquad (m\rightarrow \infty)  
 \end{align*}`
   
 所以 \eqref{euler-series}、\eqref{euler-series2}式都成立。
 
 而由于\eqref{euler-series} 式对于$n$为分数的情形也适用，所以欧拉实际上也把`\(n!\)` 的计算推广到了分数的情形，只是这个计算是用无穷乘积的形式表示的，看起来不够直观。欧拉给的无穷乘积相比丹尼尔的无穷乘积有什么更出色的地方吗？实际上后人的验证指出，就收敛到`\(n!\)`的速度而言，丹尼尔的无穷乘积比欧拉的要快得多，然而欧拉的无穷乘积公式却是能够下金蛋的。 欧拉尝试从一些简单的例子开始做计算，看看是否有规律可循，欧拉极其擅长数学的观察与归纳。当 `\(n=\frac{1}{2}\)`的时候，带入\eqref{euler-series} 式，可以得到
   
-`\begin{align*}
-  
-\Bigl(\frac{1}{2}\Bigr)!
-  
-= & \sqrt{\frac{2}{1}} \cdot \frac{2}{3} \cdot \sqrt{\frac{3}{2}} \cdot \frac{4}{5}
-  
-\cdot \sqrt{\frac{4}{3}} \cdot \frac{6}{7} \cdot \sqrt{\frac{5}{4}} \cdot \frac{8}{9}
-  
-\cdot \cdots \\
-  
-= & \sqrt{\frac{4}{2}} \cdot \frac{2}{3} \cdot \sqrt{\frac{6}{4}} \cdot \frac{4}{5}
-  
-\cdot \sqrt{\frac{8}{6}} \cdot \frac{6}{7} \cdot \sqrt{\frac{10}{8}} \cdot \frac{8}{9}
-  
-\cdot \cdots \\
-  
-= & \sqrt{\frac{4}{3} \cdot \frac{2}{3}} \cdot \sqrt{\frac{6}{5} \cdot \frac{4}{5}}
-  
-\cdot \sqrt{\frac{8}{7} \cdot \frac{6}{7}} \cdot \sqrt{\frac{10}{9} \cdot \frac{8}{9}}
-  
-\cdot \cdots \\
-  
-= & \sqrt{\frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5} \cdot \frac{6}{5}
-  
+`\begin{align*}  
+\Bigl(\frac{1}{2}\Bigr)!  
+= & \sqrt{\frac{2}{1}} \cdot \frac{2}{3} \cdot \sqrt{\frac{3}{2}} \cdot \frac{4}{5}  
+\cdot \sqrt{\frac{4}{3}} \cdot \frac{6}{7} \cdot \sqrt{\frac{5}{4}} \cdot \frac{8}{9}  
+\cdot \cdots \\  
+= & \sqrt{\frac{4}{2}} \cdot \frac{2}{3} \cdot \sqrt{\frac{6}{4}} \cdot \frac{4}{5} 
+\cdot \sqrt{\frac{8}{6}} \cdot \frac{6}{7} \cdot \sqrt{\frac{10}{8}} \cdot \frac{8}{9} 
+\cdot \cdots \\  
+= & \sqrt{\frac{4}{3} \cdot \frac{2}{3}} \cdot \sqrt{\frac{6}{5} \cdot \frac{4}{5}} 
+\cdot \sqrt{\frac{8}{7} \cdot \frac{6}{7}} \cdot \sqrt{\frac{10}{9} \cdot \frac{8}{9}} 
+\cdot \cdots \\ 
+= & \sqrt{\frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5} \cdot \frac{6}{  
 \cdot \frac{6}{7} \cdot \frac{8}{7} \cdot \frac{8}{9} \cdot \frac{10}{9} \cdot \cdots }
-  
 \end{align*}`
   
 对比一下根号内的式子和沃利斯公式\eqref{wallis-formula}，几乎是一模一样，只是最前面差了一个因子2。 欧拉自然非常熟悉沃利斯的工作，基于沃利斯公式，欧拉迅速得到了如下一个令他惊讶的结果
