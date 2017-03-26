@@ -40,7 +40,7 @@ slug: china-r-guangzhou
 
 &nbsp;
 
-#### 陈钢：机器学习在面向消费者的个人基因组检测中的应用![基因检测应用](https://cos.name/wp-content/uploads/2015/06/基因检测应用.jpg)
+#### 陈钢：机器学习在面向消费者的个人基因组检测中的应用 ![基因检测应用](https://cos.name/wp-content/uploads/2015/06/基因检测应用.jpg)
 
 陈钢先生是WeGene创始人，他这次的演讲主要是分享DTC个人基因组服务的概况，以组源分析、复杂疾病风险和研究等应用为例，跟大家分享以机器学习为代表的数据分析技术在DTC个人基因组领域的应用和所面临的挑战。技术方面设计SVVM、HMM、分布式计算、数据可视化等内容。
 
@@ -176,7 +176,7 @@ Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲�
 
 #### 资料下载
 
-第一批已经通过嘉宾授权，允许公开幻灯片的列表。<a href="http://pan.baidu.com/s/1bncyp7h" target="_blank">幻灯片见附件</a>。
+第一批已经通过嘉宾授权，允许公开幻灯片的列表。[幻灯片见附件](http://pan.baidu.com/s/1bncyp7h)。
 
 <table width="443">
   <tr>

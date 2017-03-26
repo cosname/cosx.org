@@ -176,7 +176,7 @@ slug: 8th-china-r-beijing-summary
   * 商务数据分析
   * 自然语言处理
   * 软件工具Julia&Python&R
-  * 互联网金融&统计理论![002](https://cos.name/wp-content/uploads/2015/06/002.jpg) ![003](https://cos.name/wp-content/uploads/2015/06/003.jpg) ![004](https://cos.name/wp-content/uploads/2015/06/004.jpg) ![006](https://cos.name/wp-content/uploads/2015/06/006.jpg)
+  * 互联网金融&统计理论 ![002](https://cos.name/wp-content/uploads/2015/06/002.jpg) ![003](https://cos.name/wp-content/uploads/2015/06/003.jpg) ![004](https://cos.name/wp-content/uploads/2015/06/004.jpg) ![006](https://cos.name/wp-content/uploads/2015/06/006.jpg)
 
 &nbsp;
 

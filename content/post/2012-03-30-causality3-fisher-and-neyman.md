@@ -34,7 +34,7 @@ $$P(  \overrightarrow{Z} |   \overrightarrow{Y}  ) = \binom{n}{m}^{-1}, \fo
 
 其中， $m = \sum\limits\_{i=1}^n Z\_i $ 为处理组中的总数。这里的“条件期望”并不是说  $ \overrightarrow{Y}  $ 是随机变量，而是强调处理的分配机制不依赖于潜在结果。比如，我们选择统计量 $$T = T(\overrightarrow{Z}, \overrightarrow{Y}) = \frac{1}{m} \sum\limits\_{i=1}^n Z\_i Y\_i –  \frac{1}{n-m }\sum\limits\_{i=1}^n (1 – Z\_i) Y\_i $$
   
-![J. Neyman](https://cos.name/wp-content/uploads/2012/03/J.-Neyman.jpg)来检验零假设，问题在于这个统计量的分布不易求出。但是，我们又知道，这个统计量的分布完全来自随机化。因此，我们可以用如下的“随机化”方法 （Monte Carlo 方法模拟统计量的分布）：将处理分配机制的向量 $ \overrightarrow{Z}  $ 进行随机置换得到$ \overrightarrow{Z}^1 = (Z\_1^1, \cdots, Z\_n^1) $，计算此时的检验统计量 $ T^1 = T(\overrightarrow{Z}^1, \overrightarrow{Y}) $；如此重复多次（$n$ 不大时，可以穷尽所有的置换），便可以模拟出统计量在零假设下的分布，计算出 p 值。
+![J. Neyman](https://cos.name/wp-content/uploads/2012/03/J.-Neyman.jpg) 来检验零假设，问题在于这个统计量的分布不易求出。但是，我们又知道，这个统计量的分布完全来自随机化。因此，我们可以用如下的“随机化”方法 （Monte Carlo 方法模拟统计量的分布）：将处理分配机制的向量 $ \overrightarrow{Z}  $ 进行随机置换得到$ \overrightarrow{Z}^1 = (Z\_1^1, \cdots, Z\_n^1) $，计算此时的检验统计量 $ T^1 = T(\overrightarrow{Z}^1, \overrightarrow{Y}) $；如此重复多次（$n$ 不大时，可以穷尽所有的置换），便可以模拟出统计量在零假设下的分布，计算出 p 值。
 
 有人说，Fisher randomization test 已经蕴含了 bootstrap 的思想，似乎也有一定的道理。不过，这里随机化的方法是针对一个特例提出来的。
 
@@ -81,7 +81,7 @@ $\hat{\text{Var}}(\hat{\tau})  =  \sum\limits\_{Z\_i=1} (Y\_i – \bar{y}\_1)^
   
   <ul>
     <li>
-      <b style="color: #141414">Ding, P.</b><span style="color: #141414"> (2014). </span>A Paradox from Randomization-Based Causal Inference<span style="color: #141414">. <a href="http://arxiv.org/abs/1402.0142" target="_blank">On Arxiv.</a></span>
+      <b style="color: #141414">Ding, P.</b><span style="color: #141414"> (2014). </span>A Paradox from Randomization-Based Causal Inference<span style="color: #141414">. [On Arxiv.](http://arxiv.org/abs/1402.0142)</span>
     </li>
   </ul>
 </div>

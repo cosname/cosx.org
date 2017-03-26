@@ -17,7 +17,7 @@ slug: 3rd-china-r-shanghai-summary
 
 本文撰稿：第三届中国R语言会议（上海会场）主席张翔。
 
-![第三届中国R语言会议上海会场合影1](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1.jpg "第三届中国R语言会议上海会场合影1")第三届中国R语言会议上海会场合影（右键另存为看大图） 
+![第三届中国R语言会议上海会场合影1](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1.jpg "第三届中国R语言会议上海会场合影1") 第三届中国R语言会议上海会场合影（右键另存为看大图） 
 
 ![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
@@ -54,4 +54,4 @@ slug: 3rd-china-r-shanghai-summary
   * 刘思喆：[R与统计图形](https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-and-Statistical-Graphics.pdf)
   * 李舰：[R与高性能运算以及R在中国未来发展的讨论](https://cos.name/wp-content/uploads/2010/11/China-R-2010-High-Performance-Computing.pdf)
   
-![第三届中国R语言会议上海会场合影2](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2.jpg "第三届中国R语言会议上海会场合影2")第三届中国R语言会议上海会场合影（右键另存为看大图）
+![第三届中国R语言会议上海会场合影2](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2.jpg "第三届中国R语言会议上海会场合影2") 第三届中国R语言会议上海会场合影（右键另存为看大图）

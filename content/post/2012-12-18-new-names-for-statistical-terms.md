@@ -7,7 +7,7 @@ categories:
 slug: new-names-for-statistical-terms
 ---
 
-原文载于卡耐基梅隆大学统计系教授Larry Wasserman的博客：<a href="http://normaldeviate.wordpress.com/2012/12/16/new-names-for-statistical-methods/" target="_blank">Normal Deviate</a>
+原文载于卡耐基梅隆大学统计系教授Larry Wasserman的博客：[Normal Deviate](http://normaldeviate.wordpress.com/2012/12/16/new-names-for-statistical-methods/)
 
 有没有觉得很多统计学家实在是想象力有限——是时候把那些迂腐无趣的名字踢出历史了！看看这些如何？
 
@@ -61,7 +61,7 @@ slug: new-names-for-statistical-terms
   
 新名字： **泰瑟枪（Taser，Tibshirani’s Awesome Sparse Estimator for regression）**
 
-**斯蒂格勒的得名由来定律（Stigler’s law of eponymy）**：如果你觉得不知所云…还是<a href="http://en.wikipedia.org/wiki/Stigler%27s_law_of_eponymy" target="_blank">去维基百科查查吧</a>。它会告诉你，其实这东西应该叫：
+**斯蒂格勒的得名由来定律（Stigler’s law of eponymy）**：如果你觉得不知所云…还是[去维基百科查查吧](http://en.wikipedia.org/wiki/Stigler%27s_law_of_eponymy)。它会告诉你，其实这东西应该叫：
   
 新名字：**斯蒂格勒的得名由来定律**（小编表示看完wiki后已无力吐槽-_-||）
 

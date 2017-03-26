@@ -67,19 +67,19 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 # 资料下载
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/12/下载7-朱祁恒-R语言30分钟入门.rar">R语言30分钟入门</a>(朱祁恒，天津财经大学13级硕士生)<span style="text-decoration: underline;"><br /> </span>
+  [R语言30分钟入门](https://cos.name/wp-content/uploads/2013/12/下载7-朱祁恒-R语言30分钟入门.rar)(朱祁恒，天津财经大学13级硕士生)<span style="text-decoration: underline;"><br /> </span>
 </p>
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/12/下载8-盖亚男-初识贝叶斯1.pdf">初识贝叶斯</a>（盖亚男，天津财经大学10级本科生，中国人民大学14级推荐免试硕士生）<span style="text-decoration: underline;"><br /> </span>
+  [初识贝叶斯](https://cos.name/wp-content/uploads/2013/12/下载8-盖亚男-初识贝叶斯1.pdf)（盖亚男，天津财经大学10级本科生，中国人民大学14级推荐免试硕士生）<span style="text-decoration: underline;"><br /> </span>
 </p>
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/12/下载9-高磊-MCMC初步.rar">MCMC初步</a>(高磊，天津财经大学13级博士生)<span style="text-decoration: underline;"><br /> </span>
+  [MCMC初步](https://cos.name/wp-content/uploads/2013/12/下载9-高磊-MCMC初步.rar)(高磊，天津财经大学13级博士生)<span style="text-decoration: underline;"><br /> </span>
 </p>
 
 <p align="left">
-  <a href="https://cos.name/wp-content/uploads/2013/12/下载10-王中恺-Learning-Bayesian-from-MOOC.pdf">Learning Bayesian from MOOC</a>（王中恺，天津财经大学10级本科生）<span style="text-decoration: underline;"><br /> </span>
+  [Learning Bayesian from MOOC](https://cos.name/wp-content/uploads/2013/12/下载10-王中恺-Learning-Bayesian-from-MOOC.pdf)（王中恺，天津财经大学10级本科生）<span style="text-decoration: underline;"><br /> </span>
 </p>
 
 # 
@@ -98,7 +98,7 @@ _北京大学、北京工业大学、北京工商大学、北京语言大学、�
 
 天津毗邻北京，但是天津却没有北京那么浓厚的统计氛围。在天津，其实也有很多统计迷，也许我们差的就是一个平台。我们借此机会认识到了不少天津本土的统计人，希望我们搭建的平台可以把天津的统计爱好者都团结起来，在天津也营造一个统计的氛围。
 
-如果您对贝叶斯统计感兴趣，或我们的论坛有什么建议，欢迎您在本页面、贝叶斯之道页面（<a href="https://bayes-stat.github.com" target="_blank">https://bayes-stat.github.com</a>）留言，或直接Email至 bayes_stat@163.com，我们会尽力在今后的贝叶斯学术论坛中加以改善。
+如果您对贝叶斯统计感兴趣，或我们的论坛有什么建议，欢迎您在本页面、贝叶斯之道页面（[https://bayes-stat.github.com](https://bayes-stat.github.com)）留言，或直接Email至 bayes_stat@163.com，我们会尽力在今后的贝叶斯学术论坛中加以改善。
 
 &nbsp;
 

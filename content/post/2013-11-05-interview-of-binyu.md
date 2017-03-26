@@ -19,8 +19,8 @@ description: "郁彬是加州大学伯克利分校统计系和电子工程与计
 **COS编辑部按**：受访者：郁彬             采访者：施涛
  
   
+
 [原文](http://www.icsa.org/bulletin/issues/ICSABulletin13Jul.pdf)刊登于ICSA。本文由[COS翻译组](https://github.com/cosname/translation)策划翻译。译者是密西根大学的[冷静](https://github.com/angelleng)、新加坡国立大学的[尤晓斌](https://github.com/AlexXXXX1988)和中国人民大学的[霍志骥](https://github.com/huozhiji)，全文最终由采访者施涛和被访者郁彬审核、修改、定稿，个别地方对英文原文作了补充。本翻译征得了ICSA、郁彬和施涛的同意和支持，在此表示诚挚的谢意。此外，陈丽云、高涛、肖楠、牟官迅、邓一硕、姜晓东、邱怡轩、魏太云对译文也提出了一些修正建议，在此一并表示感谢。
- 
 
 郁彬是加州大学伯克利分校统计系和电子工程与计算机科学系的Chancellor’s Professor。她曾在威斯康星麦迪逊和耶鲁大学都任过教，并且曾经是贝尔实验室的技术研究成员。她在2009年到2012年间担任加州大学伯克利分校统计系系主任，还是北大微软统计和信息技术实验室的创办者和主任之一。
 

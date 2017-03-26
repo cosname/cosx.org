@@ -18,7 +18,7 @@ slug: correlation-matrix-visualization
 
 相关系数阵对于分析多元数据时非常有用，然而当变量较多时，我们很难从一堆庞大的数字中快速获取信息。正因为如此，相关阵的可视化应运而生。的确，活泼生动的图形对我们的眼球更有诱惑力。已有的相关阵可视化技巧有颜色图、椭圆图、钟表图(参见Deepayan Sarkar所著的《Multivariate Data Visualization with R》中的Fig13.6)等，其思想都非常直观。本文在阐述了颜色图和椭圆图的机理后，又提出了一种新的相关阵的可视化技术——圆圈图，并与颜色图、椭圆图进行了比较。
 
-<span style="color: #008000;">##2010-4-11更新:本文及扩展工作对应的包corrplot可从<a href="http://cran.r-project.org/web/packages/corrplot/index.html" target="_blank">CRAN</a>下载。</span>
+<span style="color: #008000;">##2010-4-11更新:本文及扩展工作对应的包corrplot可从[CRAN](http://cran.r-project.org/web/packages/corrplot/index.html)下载。</span>
 
 <!--more-->
 
