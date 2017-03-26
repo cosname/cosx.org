@@ -23,15 +23,15 @@ slug: use-pipeline-operators-in-r
 比如我们逐步完成下面这个例子：
 
   1. 从正态分布生成10000个随机数，其均值为10，标准差为1；
-  2. 从这些随机数中无放回地抽样，获取一个样本量为100的样本；
-  3. 对样本取对数；
-  4. 对取对数后的数据做差分；
-  5. 用红色线段画出对数差分后值的图像。
+  1. 从这些随机数中无放回地抽样，获取一个样本量为100的样本；
+  1. 对样本取对数；
+  1. 对取对数后的数据做差分；
+  1. 用红色线段画出对数差分后值的图像。
 
 上述步骤用几个基本的函数即可完成。一般来说，如果我们不想引入太多中间变量，那么我们可能会有如下代码：
 
 ```r
-plot(diff(log(sample(rnorm(10000,mean=10,sd=1),size=100,replace=FALSE))),col="red",type="l")
+plot(diff(log(sample(rnorm(10000, mean=10, sd=1), size=100, replace=FALSE))), col="red", type="l")
 ```
 
 这行代码便向我们暴露了写一组深层嵌套的函数的缺点：
@@ -56,12 +56,12 @@ let data =
 由于语言设计机制的相似性，这类“黑魔法”在R中也很容易实现。我在[GitHub](https://github.com/renkun-ken/pipeR)上创建了一个叫做[pipeR](http://renkun.me/pipeR/)的软件包，它与已有的[magrittr](http://cran.r-project.org/web/packages/magrittr/index.html)非常相似。两个包都使用`%>%`操作符来将上一步产生的对象管道输出为下一步调用的函数的第一个参数。比如如下代码很容易实现文章刚开始的小例子：
 
 ```r
-rnorm(10000,mean=10,sd=1) %>%
-  sample(size=100,replace=FALSE) %>%
+rnorm(10000, mean = 10, sd = 1) %>%
+  sample(size = 100, replace = FALSE) %>%
     abs %>%
       log %>%
         diff %>%
-          plot(col="red",type="l")
+          plot(col = "red", type = "l")
 ```
     
     
@@ -81,11 +81,11 @@ rnorm(10000,mean=10,sd=1) %>%
 注意到在该链式命令中，有些函数需要调用不止一个管道输出的对象。此时 `pipeR` 提供了一个更为强大的管道操作符 `%>>%`，它可以在下一步的函数调用来表示之前的结果。我们可以用上面这个问题小试牛刀：
 
 ```r
-rnorm(10000,mean=10,sd=1) %>>%
-  sample(.,size=length(.)*0.2,replace=FALSE) %>>%
+rnorm(10000, mean = 10, sd = 1) %>>%
+  sample(., size = length(.) * 0.2, replace = FALSE) %>>%
     log %>>%
       diff %>>%
-        plot(.,col="red",type="l",main=sprintf("length: %d",length(.)))
+        plot(., col = "red", type = "l", main = sprintf("length: %d", length(.)))
 ```
 与之前的代码不同之处还是非常明显的：链式的函数调用过程中，定义了变量 `.` 来表示上一步所得的对象。如果直接调用函数，`.` 则自动作为函数的第一个参数输入。
 
@@ -96,26 +96,26 @@ rnorm(10000,mean=10,sd=1) %>>%
 在这个例子中，我们将要执行一长串命令：
 
   1. 对数据 `hflights` 做些变更，增加飞机速度这一列；
-  2. 按照航空公司代码对数据进行分组；
-  3. 对数据的每一组做些统计：计算观测数目，求取速度的平均值、中位数、标准差；
-  4. 对上一步的数据摘要信息做些变更，增加均值标准化了的速度这一列；
-  5. 对数据按均值标准化了的速度进行降序排列；
-  6. 将现在获得的数据框在全局环境中赋予变量 `hflights.speed`；
-  7. 对均值标准化了的速度画一个柱状图，用航空公司代码作为柱状图的横轴标签，同时标题打印出航空公司的个数。
+  1. 按照航空公司代码对数据进行分组；
+  1. 对数据的每一组做些统计：计算观测数目，求取速度的平均值、中位数、标准差；
+  1. 对上一步的数据摘要信息做些变更，增加均值标准化了的速度这一列；
+  1. 对数据按均值标准化了的速度进行降序排列；
+  1. 将现在获得的数据框在全局环境中赋予变量 `hflights.speed`；
+  1. 对均值标准化了的速度画一个柱状图，用航空公司代码作为柱状图的横轴标签，同时标题打印出航空公司的个数。
 
 ```r
 library(dplyr)
 library(hflights)
 data(hflights)
 hflights %>%
-  mutate(Speed=Distance/ActualElapsedTime) %>%
+  mutate(Speed = Distance / ActualElapsedTime) %>%
     group_by(UniqueCarrier) %>%
-      summarize(n=length(Speed),speed.mean=mean(Speed,na.rm = T),
-                speed.median=median(Speed,na.rm=T),
-                speed.sd=sd(Speed,na.rm=T)) %>%
-        mutate(speed.ssd=speed.mean/speed.sd) %>%
+      summarize(n = length(Speed), speed.mean = mean(Speed, na.rm = T),
+                speed.median = median(Speed, na.rm=T),
+                speed.sd = sd(Speed, na.rm = T)) %>%
+        mutate(speed.ssd = speed.mean / speed.sd) %>%
           arrange(desc(speed.ssd)) %>>%
-            assign("hflights.speed",.,.GlobalEnv) %>>%
+            assign("hflights.speed", ., .GlobalEnv) %>>%
               barplot(.$speed.ssd, names.arg = .$UniqueCarrier,
                       main=sprintf("Standardized mean of %d carriers", nrow(.)))
 ```
