@@ -16,13 +16,13 @@ tags:
 slug: embracing-statistical-challenges-in-the-information-technology-age
 ---
 
-_本文略有修改，原文请点击<a href="http://blog.cos.name/taoshi/2014/05/12/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE%EF%BC%9A%E8%BF%8E%E6%8E%A5%E4%BF%A1%E6%81%AF%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BB%9F%E8%AE%A1%E6%8C%91%E6%88%98/" target="_blank">此处</a>_
+_本文略有修改，原文请点击[此处](http://blog.cos.name/taoshi/2014/05/12/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE%EF%BC%9A%E8%BF%8E%E6%8E%A5%E4%BF%A1%E6%81%AF%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BB%9F%E8%AE%A1%E6%8C%91%E6%88%98/)_
 
 本文作者为俄亥俄州立大学的施涛。他把自己读郁彬老师的综述性文章：Embracing Statistical Challenges in the Information Technology Age的读后感和大家分享。
 
-世事变迁，最近居然忽然有时间坐下来读些东西，重新审视一下这几年统计领域的发展了。粗略回想了一下，惭愧地发现我好像连<a href="http://www.stat.berkeley.edu/~binyu" target="_blank">博士导师</a>的文章也没有系统地读过几篇，只是和自己研究有关的才详细夜读过。于是把她的一些老文章翻出来认真读读，了解一下她对统计研究和学科发展的观点。
+世事变迁，最近居然忽然有时间坐下来读些东西，重新审视一下这几年统计领域的发展了。粗略回想了一下，惭愧地发现我好像连[博士导师](http://www.stat.berkeley.edu/~binyu)的文章也没有系统地读过几篇，只是和自己研究有关的才详细夜读过。于是把她的一些老文章翻出来认真读读，了解一下她对统计研究和学科发展的观点。
 
-木然回首，那文已在灯火阑珊处。2007年时她写过一篇综述性文章：<a href="http://www.stat.berkeley.edu/~binyu/ps/embracing.pdf" target="_blank">Embracing Statistical Challenges in the Information Technology Age</a>, Bin Yu (2007) _Technometrics_, 49(3), 237-248。摘要如下：<!--more-->
+木然回首，那文已在灯火阑珊处。2007年时她写过一篇综述性文章：[Embracing Statistical Challenges in the Information Technology Age](http://www.stat.berkeley.edu/~binyu/ps/embracing.pdf), Bin Yu (2007) _Technometrics_, 49(3), 237-248。摘要如下：<!--more-->
 
 > This article examines the role of statistics in the age of information technology (IT). It begins by examining the current state of IT and of the cyber infrastructure initiative aimed at integrating the technologies into science, engineering, and education to convert massive amounts of data into useful information. Selected applications from science and text processing are introduced to provide concrete examples of massive data sets and the statistical challenges that they pose. The thriving field of machine learning is reviewed as an example of current achievements driven by computations and IT. Ongoing challenges that we face in the IT revolution are also highlighted. The paper concludes that for the healthy future of our field, computer technologies have to be integrated into statistics, and statistical thinking in turn must be integrated into computer technologies.
 
@@ -76,7 +76,7 @@ _本文略有修改，原文请点击<a href="http://blog.cos.name/taoshi/2014/0
   </p>
   
   <p>
-    <a href="http://www.stat.berkeley.edu/~binyu/ps/embracing.pdf" target="_blank">文章</a>从跨学科统计研究开始，用她的各种研究经历论述计算与机器学习和它们带来的新机遇，还有当时看大数据（massive data，那时big data 这词还没现在如此时尚）对未来统计发展将带来的改变和展望。文章结尾部分对掌握统计技能之外的其他能力（社交沟通技能）的重要性也有提及，不仅能帮助我们更好地与人合作，也能有利于自身的长远发展：
+    [文章](http://www.stat.berkeley.edu/~binyu/ps/embracing.pdf)从跨学科统计研究开始，用她的各种研究经历论述计算与机器学习和它们带来的新机遇，还有当时看大数据（massive data，那时big data 这词还没现在如此时尚）对未来统计发展将带来的改变和展望。文章结尾部分对掌握统计技能之外的其他能力（社交沟通技能）的重要性也有提及，不仅能帮助我们更好地与人合作，也能有利于自身的长远发展：
   </p>
   
   <div title="Page 10">
@@ -98,7 +98,7 @@ _本文略有修改，原文请点击<a href="http://blog.cos.name/taoshi/2014/0
       </blockquote>
       
       <p>
-        不管你读，或者不读，<a href="http://www.stat.berkeley.edu/~binyu/ps/embracing.pdf" target="_blank">文章都在那里</a>；不管你信，或者不信，时间都会揭晓答案。读后马上感觉有希望哦。
+        不管你读，或者不读，[文章都在那里](http://www.stat.berkeley.edu/~binyu/ps/embracing.pdf)；不管你信，或者不信，时间都会揭晓答案。读后马上感觉有希望哦。
       </p>
     </div>
   </div>

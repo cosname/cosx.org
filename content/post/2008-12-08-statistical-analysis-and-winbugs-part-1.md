@@ -12,15 +12,17 @@ tags:
 slug: statistical-analysis-and-winbugs-part-1
 ---
 
-## 开篇词
+# 开篇词
 
 首先非常感谢COS论坛提供了这样一个良好的平台，敝人心存感激之余，也打算把一些学习心得拿出来供大家分享，文中纰漏之处还请各位老师指正。下面我将以WinBUGS的统计应用为题，分几次来谈一谈WinBUGS这个软件。其中会涉及到空间数据的分析、GeoBUGS的使用、面向R及SPLUS的接口包R2WinBUGS的使用、GIS与统计分析等等衍生出的话题。如有问题，请大家留下评论，我会调整内容，择机给予回答。
 
-## <span style="#800000;">第一节 什么是WinBUGS?</span>
+# 第一节 什么是WinBUGS?
 
-[![](http://www.mrc-bsu.cam.ac.uk/bugs/images/bugslogo.gif)](http://www.mrc-bsu.cam.ac.uk/bugs/welcome.shtml)WinBUGS对于研究Bayesian统计分析的人来说，应该不会陌生。至少对于MCMC方法是不陌生的。WinBUGS (Bayesian inference Using Gibbs Sampling）就是一款通过MCMC方法来分析复杂统计模型的软件。其基本原理就是通过Gibbs sampling和Metropolis算法，从完全条件概率分布中抽样，从而生成马尔科夫链，通过迭代，最终估计出模型参数。引入Gibbs抽样与MCMC的好处是不言而喻的，就是想避免计算一个具有高维积分形式的完全联合后验概率公布，而代之以计算每个估计参数的单变量条件概率分布。具体的算法思想，在讲到具体问题的时候再加以叙述，在此不过多论述。就不拿公式出来吓人了（毕竟打公式也挺费劲啊）。<!--more-->
+[![](http://www.ejwagenmakers.com/misc/WinBUGSlogo.jpg)](https://www.mrc-bsu.cam.ac.uk/software/bugs/)
 
-## 第二节 为什么要用WinBUGS?
+WinBUGS对于研究Bayesian统计分析的人来说，应该不会陌生。至少对于MCMC方法是不陌生的。WinBUGS (Bayesian inference Using Gibbs Sampling）就是一款通过MCMC方法来分析复杂统计模型的软件。其基本原理就是通过Gibbs sampling和Metropolis算法，从完全条件概率分布中抽样，从而生成马尔科夫链，通过迭代，最终估计出模型参数。引入Gibbs抽样与MCMC的好处是不言而喻的，就是想避免计算一个具有高维积分形式的完全联合后验概率公布，而代之以计算每个估计参数的单变量条件概率分布。具体的算法思想，在讲到具体问题的时候再加以叙述，在此不过多论述。就不拿公式出来吓人了（毕竟打公式也挺费劲啊）。<!--more-->
+
+# 第二节 为什么要用WinBUGS?
 
 第一、因为同类分析软件中它做得最好。同类的软件：OpenBUGS、JAGS等在成熟度、灵活性以及兼容性方面和它相比还有一定距离。在处理spatial data的方面，它采用了Gibbs抽样和MCMC的方法，在模型支持方面又具有极大的灵活性，较之名声大噪的GeoR包，虽然也实现了bayesian的手法，但是灵活性还是不及WinBUGS。
 
@@ -30,13 +32,13 @@ slug: statistical-analysis-and-winbugs-part-1
 
 第四、详细的文档、帮助、指导、范例。当然没有中文版的，小小一点遗憾。
 
-## 第三节 如何得到WinBUGS?
+# 第三节 如何得到WinBUGS?
 
-WinBUGS目前是一款免费的软件，去<http://www.mrc-bsu.cam.ac.uk/bugs/>下载就好了。不过要用高级功能（如GeoBUGS）的话，还是去<http://www.mrc-bsu.cam.ac.uk/bugs/winbugs/contents.shtml>注册一下好了，挺方便的。系统会立即把注册码发到你邮箱（真是好人啊）。不过只可以用一个月。这倒无妨，到时在注册一下就好了。
+WinBUGS目前是一款免费的软件，去<https://www.mrc-bsu.cam.ac.uk/software/bugs/>下载就好了。不过要用高级功能（如GeoBUGS）的话，还是去<http://www.mrc-bsu.cam.ac.uk/bugs/winbugs/contents.shtml>注册一下好了^[编者注：该链接已失效，GeoBUGS1.2目前被打包到了WinBUGS1.4.1中，不需要额外注册]，挺方便的。系统会立即把注册码发到你邮箱（真是好人啊）。不过只可以用一个月。这倒无妨，到时在注册一下就好了。
 
-## 第四节 初试WinBUGS<figure id="attachment_408" style="width: 300px" class="wp-caption alignleft">
+# 第四节 初试WinBUGS
 
-![WinBUGS-GUI](https://cos.name/wp-content/uploads/2008/12/22221.jpg)<figcaption class="wp-caption-text">WinBUGS-GUI</figcaption></figure> 
+![WinBUGS-GUI](https://cos.name/wp-content/uploads/2008/12/22221.jpg)
 
 我们先找一个例子来实际地运行一下WinBUGS，感受一下基本的操作流程，然后再考虑高级的操作。
 
@@ -74,33 +76,33 @@ WinBUGS目前是一款免费的软件，去<http://www.mrc-bsu.cam.ac.uk/bugs/>�
 
 第十七步，在弹出的Sample Monitor Tool面板上选一个node
 
-第十八步，点history看所有迭代的时间序列图，点trace看最后一次迭代的时间序列图，点auto cor看correlogram时间序列图，点stat看参数估计的结果<figure id="attachment_1267" style="width: 500px" class="wp-caption aligncenter">
+第十八步，点history看所有迭代的时间序列图，点trace看最后一次迭代的时间序列图，点auto cor看correlogram时间序列图，点stat看参数估计的结果
 
-![Estimation results by WinBUGS 1.4](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png "Estimation results by WinBUGS 1.4")<figcaption class="wp-caption-text">Estimation results by WinBUGS 1.4</figcaption></figure> 
+![Estimation results by WinBUGS 1.4](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png "Estimation results by WinBUGS 1.4")
 
 附第二步中的代码如下：
-
-<pre class="brush: r">#MODEL
+```winbugs
+#MODEL
 model
 {
     for (i in 1:N) {
         O[i] ~ dpois(mu[i])
-        log(mu[i]) &lt;- log(E[i]) + alpha0 + alpha1 * X[i]/10 +
+        log(mu[i]) <- log(E[i]) + alpha0 + alpha1 * X[i]/10 +
             b[i]
         # Area-specific relative risk (for maps)
-        RR[i] &lt;- exp(alpha0 + alpha1 * X[i]/10 + b[i])
+        RR[i] <- exp(alpha0 + alpha1 * X[i]/10 + b[i])
     }
     # CAR prior distribution for random effects:
     b[1:N] ~ car.normal(adj[], weights[], num[], tau)
     for (k in 1:sumNumNeigh) {
-        weights[k] &lt;- 1
+        weights[k] <- 1
     }
     # Other priors:
     alpha0 ~ dflat()
     alpha1 ~ dnorm(0, 1e-05)
     tau ~ dgamma(0.5, 5e-04)
     # prior on precision
-    sigma &lt;- sqrt(1/tau)
+    sigma <- sqrt(1/tau)
     # standard deviation
 }
 #DATA
@@ -140,6 +142,7 @@ list(N = 56, O = c(9, 39, 11, 9, 15, 8, 26, 7, 6,
 list(tau = 1, alpha0 = 0, alpha1 = 0, b = c(0, 0,
     0, 0, 0, NA, 0, NA, 0, 0, NA, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))</pre>
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+```
 
 WinBUGS在统计分析中的应用 第一部分完

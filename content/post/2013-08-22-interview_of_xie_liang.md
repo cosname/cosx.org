@@ -18,7 +18,7 @@ slug: interview_of_xie_liang
   
 <span style="color: #888888;">【COS编辑部按】受访人：谢梁</span>
 
-<span style="color: #888888;">简介：谢梁，现微软（西雅图）高级数据科学家，<wbr />在各大SAS论坛混迹的朋友也许不知道他的真名，<wbr />但oloolo这个id可能大家都非常熟悉。<wbr />本站小编<a href="http://weibo.com/yihuixie?topnav=1&wvr=5&topsug=1"><span style="color: #888888;">谢益辉</span></a>有幸在西雅图得遇谢梁真身：本家相逢，又是同行；<wbr />把酒言欢，各自买单；幸甚至哉，采访即来。谢梁的个人<a href="http://www.sas-programming.com"><span style="color: #888888;">技术博客</span></a>。（因为现在不用SAS了，目前更新速度比较慢），更多信息，<wbr />参见<a href="http://www.linkedin.com/in/liangxie/"><span style="color: #888888;">LinkedIn页面</span></a>。</span>
+<span style="color: #888888;">简介：谢梁，现微软（西雅图）高级数据科学家，<wbr />在各大SAS论坛混迹的朋友也许不知道他的真名，<wbr />但oloolo这个id可能大家都非常熟悉。<wbr />本站小编[<span style="color: #888888;">谢益辉</span>](http://weibo.com/yihuixie?topnav=1&wvr=5&topsug=1)有幸在西雅图得遇谢梁真身：本家相逢，又是同行；<wbr />把酒言欢，各自买单；幸甚至哉，采访即来。谢梁的个人[<span style="color: #888888;">技术博客</span>](http://www.sas-programming.com)。（因为现在不用SAS了，目前更新速度比较慢），更多信息，<wbr />参见[<span style="color: #888888;">LinkedIn页面</span>](http://www.linkedin.com/in/liangxie/)。</span>
 
 ## 1. 请介绍一下你自己
 

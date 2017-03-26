@@ -17,7 +17,7 @@ slug: interview-of-yidanhui
 </p>
 
 <p style="text-align: left;">
-  <span style="color: #888888;">简介：易丹辉教授是中国人民大学统计学院的教授，博士生导师，主要从事统计方法在经济、金融、保险、医疗、管理等领域应用的研究。具体介绍参见<a href="http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/129.html" target="_blank"><span style="color: #888888;">学院网站</span></a>。本文根据易老师的邮件回复和采访录音整理而成，如有不当之处，责任都由编辑承担。</span>
+  <span style="color: #888888;">简介：易丹辉教授是中国人民大学统计学院的教授，博士生导师，主要从事统计方法在经济、金融、保险、医疗、管理等领域应用的研究。具体介绍参见[<span style="color: #888888;">学院网站</span>](http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/129.html)。本文根据易老师的邮件回复和采访录音整理而成，如有不当之处，责任都由编辑承担。</span>
 </p>
 
 **我的学业之路**

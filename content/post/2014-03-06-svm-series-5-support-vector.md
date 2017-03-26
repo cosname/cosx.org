@@ -12,7 +12,7 @@ tags:
 slug: svm-series-5-support-vector
 ---
 
-_原文链接请点击<a href="http://blog.pluskid.org/?p=696" target="_blank">这里</a>_
+_原文链接请点击[这里](http://blog.pluskid.org/?p=696)_
 
 作为支持向量机系列的基本篇的最后一篇文章，我在这里打算简单地介绍一下用于优化 dual 问题的 Sequential Minimal Optimization (SMO) 方法。确确实实只是简单介绍一下，原因主要有两个：第一这类优化算法，特别是牵涉到实现细节的时候，干巴巴地讲算法不太好玩，有时候讲出来每个人实现得结果还不一样，提一下方法，再结合实际的实现代码的话，应该会更加明了，而且也能看出理论和实践之间的差别；另外（其实这个是主要原因）我自己对这一块也确实不太懂。 :p
 

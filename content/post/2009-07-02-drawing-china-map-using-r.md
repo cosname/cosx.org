@@ -99,7 +99,7 @@ provcol=rgb(red=1-pop/max(pop)/2,green=1-pop/max(pop)/2,blue=0);
 plot(x,fg=getColor(x,provname,provcol,"white"),xlab="",ylab="");</pre>
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2009/07/map01.png">![map01](https://cos.name/wp-content/uploads/2009/07/map01-e1262748729327.png "map01")</a>
+  [![map01](https://cos.name/wp-content/uploads/2009/07/map01-e1262748729327.png "map01")](https://cos.name/wp-content/uploads/2009/07/map01.png)
 </p>
 
 其中颜色越深的地方代表人口数越多，反之为人口数越少。

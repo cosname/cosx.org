@@ -12,13 +12,13 @@ tags:
 slug: association-rules-with-r-and-sas
 ---
 
-啤酒和尿布的故事是关联分析方法最经典的案例，而用于关联分析的Apriori算法更是十大数据挖掘算法之一（<http://www.cs.uvm.edu/~icdm/algorithms/index.shtml>，这个排名虽然是几年前的调查结果，但是其重要性仍可见一斑）。本文以《<a href="http://www.rdatamining.com/docs" target="_blank">R and Data Mining</a>》书中使用的泰坦尼克号人员的生存数据为例，介绍如何使用R和SAS的Apriori算法进行关联分析，比较两者的建模结果并对结果中存在的差异进行解释分析。
+啤酒和尿布的故事是关联分析方法最经典的案例，而用于关联分析的Apriori算法更是十大数据挖掘算法之一（<http://www.cs.uvm.edu/~icdm/algorithms/index.shtml>，这个排名虽然是几年前的调查结果，但是其重要性仍可见一斑）。本文以《[R and Data Mining](http://www.rdatamining.com/docs)》书中使用的泰坦尼克号人员的生存数据为例，介绍如何使用R和SAS的Apriori算法进行关联分析，比较两者的建模结果并对结果中存在的差异进行解释分析。
 
 **一、关联分析**
 
-网上有很多资料介绍关联分析算法，本文就不再赘述。我自己看的是《Introduction to Data Mining》(有对应的中文版，人民邮电出版社的《<a href="http://book.douban.com/subject/1786120/" target="_blank">数据挖掘导论</a>》)，愿意看英文的同学可以访问：[http://www-users.cs.umn.edu/~kumar/dmbook/ch6.](http://www-users.cs.umn.edu/~kumar/dmbook/ch6.pdf)[pdf](http://www-users.cs.umn.edu/~kumar/dmbook/ch6.pdf)。网上其他的资料我也大致翻过，对比之后感觉这本书是一本相当不错的教材，算法方面介绍地比较全面且有一定深度。我本人不建议大家去看那些非专业人士总结的关联分析算法介绍，虽然浅显易懂，但是内容片面，容易误导初学者，错把树木当成了森林。
+网上有很多资料介绍关联分析算法，本文就不再赘述。我自己看的是《Introduction to Data Mining》(有对应的中文版，人民邮电出版社的《[数据挖掘导论](http://book.douban.com/subject/1786120/)》)，愿意看英文的同学可以访问：[http://www-users.cs.umn.edu/~kumar/dmbook/ch6.](http://www-users.cs.umn.edu/~kumar/dmbook/ch6.pdf)[pdf](http://www-users.cs.umn.edu/~kumar/dmbook/ch6.pdf)。网上其他的资料我也大致翻过，对比之后感觉这本书是一本相当不错的教材，算法方面介绍地比较全面且有一定深度。我本人不建议大家去看那些非专业人士总结的关联分析算法介绍，虽然浅显易懂，但是内容片面，容易误导初学者，错把树木当成了森林。
 
-对于关联分析在行业应用中的经验分享、初学者的误区和最佳实践方面的资料很少，唯一能找到的一本好书是清华大学出版社的《<a href="http://book.douban.com/subject/3283973/" target="_blank">啤酒与尿布</a>》，主要介绍购物篮分析在零售行业的应用。我始终认为分析师除了算法和软件，还需要了解行业背景，不然挖出的只是模式，而不是切实可行并且能带来商业价值的模式，甚至还有可能是错误的模式。 <!--more-->
+对于关联分析在行业应用中的经验分享、初学者的误区和最佳实践方面的资料很少，唯一能找到的一本好书是清华大学出版社的《[啤酒与尿布](http://book.douban.com/subject/3283973/)》，主要介绍购物篮分析在零售行业的应用。我始终认为分析师除了算法和软件，还需要了解行业背景，不然挖出的只是模式，而不是切实可行并且能带来商业价值的模式，甚至还有可能是错误的模式。 <!--more-->
 
 **二、软件**
 
@@ -86,7 +86,7 @@ slug: association-rules-with-r-and-sas
 
 **三、R的代码和结果**
 
-R的代码主要来自《<a href="http://www.rdatamining.com/docs" target="_blank">R and Data Mining</a>》，我只加了下载数据的代码和对代码的中文说明。
+R的代码主要来自《[R and Data Mining](http://www.rdatamining.com/docs)》，我只加了下载数据的代码和对代码的中文说明。
 
 1）下载泰坦尼克数据
 
@@ -282,7 +282,7 @@ plot(rules, method=“paracoord”, control=list(reorder=TRUE))
 
 **<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">proc</span></span></span>** **<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">iml</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;<br /> </span></span><span style="font-family: Courier New;color: #ff0000;font-size: small"><span style="font-family: Courier New;color: #ff0000;font-size: small"><span style="font-family: Courier New;color: #ff0000;font-size: small">submit</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">/R;<br /> </span></span>setInternet2(TRUE)
   
-con <- url(<span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><a href="http://www.rdatamining.com/data/titanic.raw.rdata">http://www.rdatamining.com/data/titanic.raw.rdata</a></span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">)<br /> </span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">load(con)<br /> </span></span>close(con) # url() always opens the connection
+con <- url(<span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">[http://www.rdatamining.com/data/titanic.raw.rdata](http://www.rdatamining.com/data/titanic.raw.rdata)</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">)<br /> </span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">load(con)<br /> </span></span>close(con) # url() always opens the connection
   
 endsubmit;
 
@@ -796,9 +796,9 @@ mbscore(购物篮数据的预测，是EM 6.1/SAS 9.2 时新引入的过程步，
 
 有兴趣的同学，可以看看下面的资料：
   
-1）<a href="http://r-forge.r-project.org/forum/forum.php?set=custom&forum_id=84&style=nested&max_rows=50&submit=Change+View" target="_blank">如何将PMML文件导入R生成Rule对象</a>？
+1）[如何将PMML文件导入R生成Rule对象](http://r-forge.r-project.org/forum/forum.php?set=custom&forum_id=84&style=nested&max_rows=50&submit=Change+View)？
   
-2）<a href="http:///groups/Using-PMML-SAS-Enterprise-Miner-2328634.S.199575798" target="_blank">如何在SAS EMM 中使用PMML？</a>
+2）[如何在SAS EMM 中使用PMML？](http:///groups/Using-PMML-SAS-Enterprise-Miner-2328634.S.199575798)
 
 附：PMML技术的未来
 
@@ -806,8 +806,8 @@ mbscore(购物篮数据的预测，是EM 6.1/SAS 9.2 时新引入的过程步，
 
 Zementis：
   
-<a href="http://www.revolutionanalytics.com/news-events/free-webinars/2011/deploying-predictive-analytics/Deploying-Predictive-Analytics-with-PMML.pdf" target="_blank">Deploying Predictive Analytics with PMML, R evolution R, and ADAPA</a>
+[Deploying Predictive Analytics with PMML, R evolution R, and ADAPA](http://www.revolutionanalytics.com/news-events/free-webinars/2011/deploying-predictive-analytics/Deploying-Predictive-Analytics-with-PMML.pdf)
   
 [<span style="color: #1e5faa">PMML: Accelerating the Time to Value for Predictive Analytics in the Big Data Era</span>](http://www.sybase.com/files/White_Papers/Sybase_AcceleratingTimeToValue_wp.pdf)
 
-IBM：<a href="ftp://ftp.software.ibm.com/software/analytics/spss/documentation/modeler/14.2/en/DatabaseMiningGuide.pdf" target="_blank">Database Mining Guide</a>
+IBM：[Database Mining Guide](ftp://ftp.software.ibm.com/software/analytics/spss/documentation/modeler/14.2/en/DatabaseMiningGuide.pdf)
