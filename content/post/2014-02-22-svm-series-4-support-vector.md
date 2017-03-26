@@ -72,4 +72,4 @@ s.t., &0 \leq \alpha_i\leq C, i=1,\ldots,n \\
 \end{align}
 $$`
 
-和之前的结果对比一下，可以看到唯一的区别就是现在 dual variable`\(\alpha\)`多了一个上限`\(C\)`。而 Kernel 化的非线性形式也是一样的，只要把 `\(\langle x_i,x_j \rangle\)`换成`\(\kappa(x_i,x_j)\)`即可。这样一来，一个完整的，可以处理线性和非线性并能容忍噪音和 outliers 的支持向量机才终于介绍完毕了。 🙂
+和之前的结果对比一下，可以看到唯一的区别就是现在 dual variable`\(\alpha\)`多了一个上限`\(C\)`。而 Kernel 化的非线性形式也是一样的，只要把 `\(\langle x_i,x_j \rangle\)`换成`\(\kappa(x_i,x_j)\)`即可。这样一来，一个完整的，可以处理线性和非线性并能容忍噪音和 outliers 的支持向量机才终于介绍完毕了。 :slight_smile:
