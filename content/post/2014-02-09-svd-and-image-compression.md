@@ -88,7 +88,7 @@ slug: svd-and-image-compression
 
 这意味着，如果我们以 Frobenius 范数作为衡量的准则，那么在给定矩阵秩的情况下，SVD 能够给出最佳的近似效果。万万没想到啊。
 
-在R中，可以使用 `svd()` 函数来对矩阵进行 SVD 分解，但考虑到 SVD 是一项计算量较大的工作，我们使用了 [rARPACK](http://cran.r-project.org/web/packages/rARPACK/index.html) 包中的 `svds()` 函数，它可以只计算前 $k$ 项的分解结果。完整的 R 代码如下：
+在R中，可以使用 `svd()` 函数来对矩阵进行 SVD 分解，但考虑到 SVD 是一项计算量较大的工作，我们使用了 [rARPACK](http://cran.r-project.org/web/packages/rARPACK/index.html) 包中的 `svds()` 函数，它可以只计算前`\(k\)`项的分解结果。完整的 R 代码如下：
 
 ```r
 library(rARPACK);
