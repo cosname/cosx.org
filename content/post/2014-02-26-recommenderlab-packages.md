@@ -17,23 +17,19 @@ tags:
 slug: recommenderlab-packages
 ---
 
-<p style="text-align: left;" align="center">
-  [recommenderlab ](http://cran.r-project.org/web/packages/recommenderlab/index.html)是R语言非常强大的包，能帮助使用者针对评分数据或者0-1(不喜欢/喜欢)二分数据开发和测试推荐算法，本文就是利用该包对于 [movielens ](http://grouplens.org/datasets/movielens/)的电影评分数据进行预测和推荐，会对比基于用户的协同过滤和基于项的协同过滤在推荐效果上的差别。
-</p>
+[recommenderlab](http://cran.r-project.org/web/packages/recommenderlab/index.html)是R语言非常强大的包，能帮助使用者针对评分数据或者0-1(不喜欢/喜欢)二分数据开发和测试推荐算法，本文就是利用该包对于 [movielens](http://grouplens.org/datasets/movielens/)的电影评分数据进行预测和推荐，会对比基于用户的协同过滤和基于项的协同过滤在推荐效果上的差别。<!--more-->
 
-<h3 style="text-align: left;" align="center">
-  1 获取电影数据
-</h3>
+# 1 获取电影数据
 
 电影数据来源于<http://grouplens.org/datasets/movielens/>网站，本文分析的数据是MovieLens 100k，总共有100,000个评分，来自1000位用户对1700部电影的评价。
 
-### 2 数据准备和清理
+# 2 数据准备和清理
 
 设置好工程路径后，可用读入数据，注意数据的格式，第一列是 user id，第二列是 item id，第三列是 rating，第四列是时间戳，时间戳这里用不到，可去掉。
 
-<pre>&gt; ml100k &lt;- read.table("u.data", header = F, stringsAsFactors = T)
-
-&gt; head(ml100k)
+```r
+ml100k <- read.table("u.data", header = F, stringsAsFactors = T)
+head(ml100k)
 
    V1  V2 V3        V4
 
@@ -43,31 +39,30 @@ slug: recommenderlab-packages
 
 3  22 377  1 878887116
 
-&gt; ml100k &lt;- ml100k[, -4]</pre>
+ml100k <- ml100k[, -4]
+```
+可以简单看下 rating 的分布情况
 
-<p style="padding-left: 30px;">
-  可以简单看下 rating 的分布情况
-</p>
-
-<pre style="padding-left: 30px;">&gt; prop.table(table(ml100k[, 3]))
+```r
+prop.table(table(ml100k[, 3]))
 
          1          2          3          4          5
 
 0.06106870 0.12977099 0.41984733 0.32061069 0.06870229
 
-&gt; summary(ml100k[, 3])
+summary(ml100k[, 3])
 
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's
 
-  1.000   3.000   3.000   3.206   4.000   5.000     812</pre>
+1.000   3.000   3.000   3.206   4.000   5.000     812
+  ```
 
 可以看出，3 星和 4 星的数量最多，接近总数的75%，1 星和 5 星的数量最少，和预期的一致。数据格式和我们想要的行为用户，列为项目的 ratingMatrix 还有很大的差距，对此可以使用 [reshape](http://cran.r-project.org/web/packages/reshape/index.html) 包的 `cast()` 进行转换，注意转换后的缺失值默认为NA。
 
-<pre>&gt; library(reshape)
-
-&gt; ml100k &lt;- cast(ml100k, V1 ~ V2, value = "V3")
-
-&gt; ml.useritem[1:3, 1:6]
+```r
+library(reshape)
+ml100k <- cast(ml100k, V1 ~ V2, value = "V3")
+ml.useritem[1:3, 1:6]
 
    1  2  3  4  5  6
 
@@ -75,33 +70,35 @@ slug: recommenderlab-packages
 
 2  4 NA NA NA NA NA
 
-3 NA NA NA NA NA NA</pre>
+3 NA NA NA NA NA NA
+```
 
 到此，把数据整理成 ratingMatrix，接下来利用 recommenderlab 处理数据。
-  
-<!--more-->
 
-### 3 recommenderlab 处理数据
+# 3 recommenderlab 处理数据
 
 在用 recommenderlab 处理数据之前，需将数据转换为 `realRatingMatrix` 类型，这是 recommenderlab 包中专门针对 1-5 star 的一个新类，需要从 `matrix` 转换得到。上文获得的 `ml.useritem` 有两个类属性，其中 `cast_df` 是不能直接转换为 `matrix` 的，因此需要去掉这个类属性，只保留 `data.frame`
 
-<pre>&gt; class(ml.useritem)
+```r
+class(ml.useritem)
 
 [1] "cast_df"    "data.frame"
 
-&gt; class(ml.useritem) &lt;- "data.frame"    ##只保留data.frame的类属性
+class(ml.useritem) <- "data.frame"    ##只保留data.frame的类属性
 
-&gt; ml.useritem &lt;- as.matrix(ml.useritem)
+ml.useritem <- as.matrix(ml.useritem)
 
-&gt; ml.ratingMatrix &lt;- as(ml.useritem, "realRatingMatrix")  ##转换为realRatingMatrix
+ml.ratingMatrix <- as(ml.useritem, "realRatingMatrix")  ##转换为realRatingMatrix
 
-&gt; ml.ratingMatrix
+ml.ratingMatrix
 
-943 x 1682 rating matrix of class ‘realRatingMatrix’ with 100000 ratings.</pre>
+943 x 1682 rating matrix of class ‘realRatingMatrix’ with 100000 ratings.
+```
 
 `ml.ratingMatrix` 是可以用 recommenderlab 进行处理的 `realRatingMatrix`，943是 user 数，1682 指的是 item 数, `realRatingMatrix` 可以很方便地转换为 `matrix` 和 `list`
 
-<pre>&gt; as(ml.ratingMatrix , "matrix")[1:3, 1:10]
+```r
+as(ml.ratingMatrix , "matrix")[1:3, 1:10]
 
    1  2  3  4  5  6  7  8  9 10
 
@@ -111,19 +108,21 @@ slug: recommenderlab-packages
 
 3 NA NA NA NA NA NA NA NA NA NA
 
-&gt; as(ml.ratingMatrix , "list")[[1]][1:10]
+as(ml.ratingMatrix , "list")[[1]][1:10]
 
  1  2  3  4  5  6  7  8  9 10
 
- 5  3  4  3  3  5  4  1  5  3</pre>
+ 5  3  4  3  3  5  4  1  5  3
+ ```
 
 另外，recommenderlab 包中有提供用于归一化的函数 `normalize()`，默认是均值归一化 x – mean；建立推荐模型的函数，里面有归一化处理的，在此不必单独进行归一化。
 
-### 4 recommender 简单介绍
+# 4 recommender 简单介绍
 
 在建模之前可以先看下针对 `realRatingMatrix`，recommederlab 提供了哪些推荐技术——一共有6种，我们会用到其中的三种：random（随机推荐），ubcf（基于用户协同过滤），ibcf（基于项目协同过滤）
 
-<pre>&gt; recommenderRegistry$get_entries(dataType = "realRatingMatrix")
+```r
+recommenderRegistry$get_entries(dataType = "realRatingMatrix")
 
 $IBCF_realRatingMatrix
 
@@ -187,7 +186,8 @@ Parameters:
 
   method nn sample normalize minRating
 
-1 cosine 25  FALSE    center        NA</pre>
+1 cosine 25  FALSE    center        NA
+```
 
 以IBCF为例简单介绍参数的含义
 
@@ -197,23 +197,24 @@ Parameters:
 
   * Normalize：采用何种归一化算法，默认均值归一化 x – mean
 
-  * normalize\_sim\_matrix：是否对相似矩阵归一化，默认为否
+  * normalize_sim_matrix：是否对相似矩阵归一化，默认为否
 
   * alpha：alpha参数值，默认为0.5
 
-  * na\_as\_zero：是否将 NA 作为 0，默认为否
+  * na_as_zero：是否将 NA 作为 0，默认为否
 
   * minRating：最小评分，默认不设置
 
 这些参数均可在建立模型时设置，本文全部采用默认参数。
 
-### 5 建立推荐模型
+# 5 建立推荐模型
 
 `recommender()` 是 recommenderlab 包中用于建立模型的函数，用法也相当简单，注意在调用 `recommender()` 之前需给矩阵的所有列按照 `itemlabels` 进行列命名。
 
-<pre>&gt; colnames(ml.ratingMatrix) &lt;- paste("M", 1:1682, sep = "")
+```r
+colnames(ml.ratingMatrix) <- paste("M", 1:1682, sep = "")
 
-&gt; as(ml.ratingMatrix[1,1:10], "list")
+as(ml.ratingMatrix[1,1:10], "list")
 
 $`1`
 
@@ -227,25 +228,27 @@ $`1`
 
 ##  invalid class “topNList” object: invalid object for slot "itemLabels" in class "topNList": got class "NULL", should be or extend class "character"
 
-&gt; ml.recommModel &lt;- Recommender(ml.ratingMatrix[1:800], method = "IBCF")
+ml.recommModel <- Recommender(ml.ratingMatrix[1:800], method = "IBCF")
 
-&gt; ml.recommModel
+ml.recommModel
 
 Recommender of type ‘POPULAR’ for ‘realRatingMatrix’
 
-learned using 800 users.</pre>
+learned using 800 users.
+```
 
 模型建立以后，就可以用来进行预测和推荐了。与其他很多模型类似，我们将使用 `predict()` 函数，这里分别给801-803三个用户进行推荐。`predict()` 函数有一个 `type` 参数，可用来设置是 Top-N 推荐还是评分预测，默认是 Top-N 推荐。
 
-<pre>##TopN推荐，n = 5 表示Top5推荐
+```r
+##TopN推荐，n = 5 表示Top5推荐
 
-&gt; ml.predict1 &lt;- predict(ml.recommModel, ml.ratingMatrix[801:803], n = 5)
+ml.predict1 <- predict(ml.recommModel, ml.ratingMatrix[801:803], n = 5)
 
-&gt; ml.predict1
+ml.predict1
 
 Recommendations as ‘topNList’ with n = 5 for 3 users.
 
-&gt; as( ml.predict1, "list")  ##显示三个用户的Top3推荐列表
+as( ml.predict1, "list")  ##显示三个用户的Top3推荐列表
 
 [[1]]
 
@@ -261,14 +264,14 @@ Recommendations as ‘topNList’ with n = 5 for 3 users.
 
 ##用户对item的评分预测
 
-&gt; ml.predict2 &lt;- predict(ml.recommModel, ml.ratingMatrix[801:803], type = "ratings")
+ml.predict2 <- predict(ml.recommModel, ml.ratingMatrix[801:803], type = "ratings")
 
-&gt; ml.predict2
+ml.predict2
 
 ## 查看三个用于对M1-6的预测评分
 ## 注意：实际的预测评分还要在此基础上加上用户的平均评分
 
-&gt; as(ml.predict2, "matrix")[1:3, 1:6]
+as(ml.predict2, "matrix")[1:3, 1:6]
 
            M1         M2        M3          M4         M5        M6
 
@@ -276,24 +279,25 @@ Recommendations as ‘topNList’ with n = 5 for 3 users.
 
 802 0.2909692 -0.2749699 -0.350463 -0.02231146 -0.2300878 0.2049403
 
-803 0.2909692 -0.2749699 -0.350463 -0.02231146 -0.2300878 0.2049403</pre>
+803 0.2909692 -0.2749699 -0.350463 -0.02231146 -0.2300878 0.2049403
+```
 
-### 6 模型的评估
+# 6 模型的评估
 
 本文只考虑评分预测模型的评估，对于 Top-N 推荐模型请查看后面的参考资料，对于评分预测模型的评估，最经典的参数是 RMSE（均平方根误差）
 
-<pre>rmse &lt;- function(actuals, predicts)
-{
+```r
+rmse <- function(actuals, predicts) {
     sqrt(mean((actuals - predicts)^2, na.rm = T))
-}</pre>
+}
+```
 
 幸运的是，recommenderlab 包提供了专门的评估方案，对应的函数是 `evaluationScheme()`，能够设置采用 n 折交叉验证还是简单的训练集/测试集分开验证。本文采用后一种方法，即将数据集简单分为训练集和测试集，在训练集训练模型，然后在测试集上评估。
 
-<pre>&gt; model.eval &lt;- evaluationScheme(ml.ratingMatrix[1:943], method = "split",
+```r
+model.eval <- evaluationScheme(ml.ratingMatrix[1:943], method = "split", train = 0.9, given = 15, goodRating = 5)
 
-+ train = 0.9, given = 15, goodRating = 5)
-
-&gt; model.eval
+model.eval
 
 Evaluation scheme with 15 items given
 
@@ -301,41 +305,39 @@ Method: ‘split’ with 1 run(s).
 
 Training set proportion: 0.900
 
-Good ratings: &gt;=5.000000
+Good ratings: >=5.000000
 
 Data set: 943 x 1682 rating matrix of class ‘realRatingMatrix’ with 100000 ratings.
 
 ##分别用RANDOM、UBCF、IBCF建立预测模型
 
-&gt; model.random &lt;- Recommender(getData(model.eval, "train"), method = "RANDOM")
+model.random <- Recommender(getData(model.eval, "train"), method = "RANDOM")
 
-&gt; model.ubcf &lt;- Recommender(getData(model.eval, "train"), method = "UBCF")
+model.ubcf <- Recommender(getData(model.eval, "train"), method = "UBCF")
 
-&gt; model.ibcf &lt;- Recommender(getData(model.eval, "train"), method = "IBCF")
+model.ibcf <- Recommender(getData(model.eval, "train"), method = "IBCF")
 
 ##分别根据每个模型预测评分
 
-&gt; predict.random &lt;- predict(model.random, getData(model.eval, "known"), type = "ratings")
+predict.random <- predict(model.random, getData(model.eval, "known"), type = "ratings")
 
-&gt; predict.ubcf &lt;- predict(model.ubcf, getData(model.eval, "known"), type = "ratings")
+predict.ubcf <- predict(model.ubcf, getData(model.eval, "known"), type = "ratings")
 
-&gt; predict.ibcf &lt;- predict(model.ibcf, getData(model.eval, "known"), type = "ratings")</pre>
+predict.ibcf <- predict(model.ibcf, getData(model.eval, "known"), type = "ratings")
+```
 
 这里简单介绍，数据集是如何划分的。其实很简单，对于用户没有评分过的项目，是没法进行模型评估的，因为预测值没有参照对象。`getData` 的参数 `given` 便是来设置用于预测的项目数量。
 
 ![捕获.1JPG](https://cos.name/wp-content/uploads/2014/02/捕获.1JPG.jpg) 接下来计算 RMSE，对比三个模型的评估参数，`calcPredictionError()` 函数可以计算出MAE（绝对值均方误差）、MSE 和 RMSE。
 
-<pre>&gt; error &lt;- rbind(
+```r
+error <- rbind(
+calcPredictionError(predict.random, getData(model.eval, "unknown")),
+calcPredictionError(predict.ubcf, getData(model.eval, "unknown")),
+calcPredictionError(predict.ibcf, getData(model.eval, "unknown")))
+rownames(error) <- c("RANDOM", "UBCF", "IBCF")
 
-+ calcPredictionError(predict.random, getData(model.eval, "unknown")),
-
-+ calcPredictionError(predict.ubcf, getData(model.eval, "unknown")),
-
-+ calcPredictionError(predict.ibcf, getData(model.eval, "unknown")))
-
-&gt; rownames(error) &lt;- c("RANDOM", "UBCF", "IBCF")
-
-&gt; error
+error
 
              MAE      MSE     RMSE
 
@@ -343,7 +345,8 @@ RANDOM 1.7267304 4.486820 2.118211
 
 UBCF   0.8254453 1.062409 1.030732
 
-IBCF   0.8444152 1.333968 1.154976</pre>
+IBCF   0.8444152 1.333968 1.154976
+```
 
 为了更好地说明 RMSE 与训练/测试比、`given` 等参数的关系，我们可以进行多组的比较。
 
@@ -355,7 +358,7 @@ IBCF   0.8444152 1.333968 1.154976</pre>
 
 在《Recommender system handbook》的4.2.5节，很详细对比了 IBCF 和 UBCF，再结合以上的数据，可以很好地理解为什么在这个案例中UBCF要明显优于IBCF。
 
-### 7 参考资料
+# 7 参考资料
 
 [1] Recommender system handbook
 
