@@ -12,7 +12,7 @@ slug: knitr-again
 
 本期投稿： [谢益辉](http://yihui.name/)  [肖楠](http://www.road2stat.com/)
 
-  * **knitr**： 小编的好哥（ji）们（you）KarlBroman大人写了一份[《knitr in a knutshell》](http://kbroman.github.io/knitr_knutshell/)。买不起书或看长篇文档伤不起的同学们不妨看他的简明教程，外加一门[《可重复性研究》](http://kbroman.github.io/Tools4RR/)的课程。
+  * **knitr**： 小编的好哥（ji）们（you）KarlBroman大人写了一份[《knitr in a knutshell》](http://kbroman.github.io/knitr_knutshell/)。买不起书或看长篇文档伤不起的同学们不妨看他的简明教程，外加一门[《可重复性研究》](http://kbroman.github.io/Tools4RR/)的课程。<!--more-->
   * **Simply Statistics**：2013年度[大盘点](http://simplystatistics.org/2013/12/20/a-non-comprehensive-list-of-awesome-things-other-people-did-this-year/)。
   * **统计学**：William H. Press教授的“奇葩”统计学[视频](http://opinionatedlessons.org)，内容偏向概率论和数理统计。（其实挺正统的）
   * **机器学习**：Yaser Abu-Mostafa教授的[机器学习导论程](http://work.caltech.edu/telecourse)。有视频有讲义有作业，想要掌握机器学习基础，什么都有，就缺你的时间了（为什么一股冷汗）
