@@ -58,29 +58,29 @@ R对象的缓存可以通过[cacheSweave包](http://cran.r-project.org/package=c
 \input{graph-output-1.tikz}
 \endpgfgraphicnamed
 ```
-        
+
 如果LaTeX在运行过程中遇到这样的代码段，那么它会把tikz图形（tikz是高层实现，pgf是基础设施）先编译为PDF图形，等下次重复运行LaTeX的时候，这段代码就不必重新运行了，LaTeX会跳过它直接引入PDF图形。这样就省去了编译tikz图形的时间，同时也能得到高质量的图形输出。
-        
+
 pgfSweave从R的层面上可以输出这样的代码段，并生成一个shell脚本来编译图形为PDF；而pgfSweave也会尝试根据R代码的MD5来判断一段画图的代码是否需要重复运行——如果R代码没有变化，那么图形就不必重制。这是自然而然的“缓存”。对了，pgfSweave对Sweave的图形输出作了扩展，新增了tikz输出，这是通过另一个R包tikzDevice实现的（同样两个作者），这个包可以将R图形录制为tikz绘图代码。pgfSweave依赖于cacheSweave包，把它缓存R对象的机制也引入进来，所以我们可以不必管cacheSweave，把精力放在pgfSweave上就可以了。
-        
+
 介绍完血腥的细节之后，我们就可以坐享高科技的便利了。下面我以一个统计计算中的经典算法“Gibbs抽样”为例来展示pgfSweave在密集型计算中的缓存功能。
-        
-Gibbs抽样的最终目的是从一个多维分布`\(f(X\_1,X\_2,\ldots,X\_n)\)`中生成随机数，而已知的是所有的条件分布`\(f(X\_1|X\_2,\ldots,X\_n)\)`、`\(f(X\_2|X\_1,\ldots,X\_n)\)`、……、`\(f(X\_n|X\_1,\ldots,X\_{n-1})\)`，并且假设我们可以很方便从这些条件分布中抽样。剩下的事情就很简单了：任意给定初始值`\(x\_1^{(0)},x\_2^{(0)},\ldots,x\_n^{(0)}\)`，括号中的数字表示迭代次数，接下来依次迭代，随机生成`\(x\_1^{(k)} \sim f(X\_1|x\_2^{(k-1)},\ldots,X\_n^{(k-1)})\)`、`\(x\_2^{(k)} \sim f(X\_2|x\_1^{(k)},\ldots,x\_n^{(k-1)})\)`、……、`\(x\_n^{(k)} \sim f(X\_n|x\_1^{(k)},\ldots,x_{n-1}^{(k)})\)`（迭代次数`\(k=1,\cdots,N\)`），也就是，根据上一次的迭代结果并已知条件分布的情况下，从条件分布中生成下一次的随机数（这个算法很简单，你什么时候看明白上标下标了就明白了）。这是个串行的过程，所以无法避免循环。
-        
+
+Gibbs抽样的最终目的是从一个多维分布`\(f(X_1,X_2,\ldots,X_n)\)`中生成随机数，而已知的是所有的条件分布`\(f(X_1|X_2,\ldots,X_n)\)`、`\(f(X_2|X_1,\ldots,X_n)\)`、……、`\(f(X_n|X_1,\ldots,X_{n-1})\)`，并且假设我们可以很方便从这些条件分布中抽样。剩下的事情就很简单了：任意给定初始值`\(x_1^{(0)},x_2^{(0)},\ldots,x_n^{(0)}\)`，括号中的数字表示迭代次数，接下来依次迭代，随机生成`\(x_1^{(k)} \sim f(X_1|x_2^{(k-1)},\ldots,X_n^{(k-1)})\)`、`\(x_2^{(k)} \sim f(X_2|x_1^{(k)},\ldots,x_n^{(k-1)})\)`、……、`\(x_n^{(k)} \sim f(X_n|x_1^{(k)},\ldots,x_{n-1}^{(k)})\)`（迭代次数`\(k=1,\cdots,N\)`），也就是，根据上一次的迭代结果并已知条件分布的情况下，从条件分布中生成下一次的随机数（这个算法很简单，你什么时候看明白上标下标了就明白了）。这是个串行的过程，所以无法避免循环。
+
 接下来的计算没有那么复杂，我们仅仅用一个二维正态分布为例。当我们知道一个二维正态分布的分布函数时，我们也知道它的两个边际分布都是一维正态分布，而且分布的表达式也很明确，后文我会详细提到，读者也可以参考维基百科页面。生成一维正态分布的随机数对我们来说当然是小菜一碟——直接用`rnorm()`就可以了。这样，我们只需要交替从`\(f(X|Y)\)`和`\(f(Y|X)\)`生成随机数，最终我们就能得到服从二维联合分布的随机数（对）。假设我们要从下面的二维正态分布生成随机数：
-        
+
 `$$
-          \left[\begin{array}{c}X\\ Y\end{array}\right]\sim\mathcal{N}\left(\left[\begin{array}{c}0\\ 1\end{array}\right],\left[\begin{array}{cc} 4 & 4.2\\ 4.2 & 9\end{array}\right]\right)
+\left[\begin{array}{c}X\\ Y\end{array}\right]\sim\mathcal{N}\left(\left[\begin{array}{c}0\\ 1\end{array}\right],\left[\begin{array}{cc} 4 & 4.2\\ 4.2 & 9\end{array}\right]\right)
 $$`
-        
+
 详细过程和结果参见下面这份PDF文档（点击下载）：[A Simple Demo on Caching R Objects and Graphics with pgfSweave (PDF)](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf)
-        
+
 ![二维正态分布随机数及其等高线图](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png)
 
 我们生成了50万行随机数，并画了X与Y的散点图。由于我们设定了相关系数为0.7，所以图中自然而然显现出正相关；而等高线也体现出多维正态分布的“椭球形”特征。均值在(0, 1)附近，都和理论分布吻合。所以这个Gibbs抽样还不太糟糕。
 
 生成上面的PDF文档和图形的LyX/Sweave源文档在这里 ：[A Simple Demo on Caching R Objects and Graphics with pgfSweave (LyX)](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.zip)
-          
+  
 如果你已经按照我[前面的文章](/2010/11/reproducible-research-in-statistics/)配置好你的工具（**即使当时配置过，现在也需要重新配置**，因为我最近作了重大修改），这个文档应该可以让你重新生成我的结果。文档中有两处关键选项：
 
 * `cache=TRUE` 使得文档中的R对象可以被缓存；
@@ -101,4 +101,3 @@ $$`
 这两篇文章都有点长，但最终的操作都极其简单。如果能理解这套工具，我想无论是写作业还是写报告，都将事半功倍（比如我就一直用它写作业）。
 
 祝大家在新的一年能写出漂亮、利索的统计文档，告别复制粘贴的体力劳动。
-
