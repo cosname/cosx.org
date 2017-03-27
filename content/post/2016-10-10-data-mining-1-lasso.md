@@ -15,7 +15,7 @@ slug: data-mining-1-lasso
 目前在美国从事财产事故险(Property & Casualty)领域的保险产品开发，涉及数据分析，统计建模，产品算法优化等方面的工作。
 
 **目录：**
-- [模型简介](#intro)
+- [模型简介](#模型简介)
 - [线性回归](#linear)
 - [Logistic回归](#logis)
 - [Elstic Net模型家族简介](#elnet)
@@ -23,7 +23,7 @@ slug: data-mining-1-lasso
 <!--more-->
 
 
-# 模型简介 {#intro}
+# 模型简介
 
 Kaggle网站（<https://www.kaggle.com/>）成立于2010年，是当下最流行的进行数据发掘和预测模型竞赛的在线平台。
 与Kaggle合作的公司可以在网站上提出一个问题或者目标，同时提供相关数据，来自世界各地的计算机科学家、统计学家和建模爱好者，
