@@ -1,5 +1,6 @@
 ---
 title: 第二届中国R语言会议
+description: 第二届中国R语言会议
 date: '2009-10-29T05:00:27+00:00'
 author: COS管理员
 ---
@@ -10,26 +11,26 @@ author: COS管理员
 
 本次会议拟定两处会场：
 
-  * 北京 
+  * 北京
       * 主席：陈堰平（yanping.chen@cos.name）；执行秘书：范建宁（jianning.fan@cos.name）
       * 会议联系邮箱：useR-2009-BJ@cos.name（咨询、赞助等）
-  * 上海 
+  * 上海
       * 主席：张翔（<birdzhangxiang@gmail.com>）、焦静（<jing.jiao@cos.name>）
       * 会议联系邮箱：useR-2009-SH@cos.name（咨询、赞助等）
 
-<span style="color: #ff0000;"><strong>报名已经截止，但仍然欢迎参会，只是不能保证有座位。</strong></span>
+**报名已经截止，但仍然欢迎参会，只是不能保证有座位。**
 
 # 会议事宜——北京会场
 
-### 一、会议时间
+## 一、会议时间
 
 2009年12月5日~6日，上午9:00开始，下午17:00结束。
 
-### 二、会议地点
+## 二、会议地点
 
-北京市海淀区中关村大街59号，中国人民大学明德法学楼<span style="color: #ff0000;">0102</span>教室（12.5上午）及明德法学楼<span style="color: #ff0000;">0101</span>教室（12.5下午及以后）。
+北京市海淀区中关村大街59号，中国人民大学明德法学楼0102教室（12.5上午）及明德法学楼0101教室（12.5下午及以后）。
 
-### 三、会议主题
+## 三、会议主题
 
 本次会议的主题是R语言在各领域中的应用，目前的演讲题目有：
 
@@ -54,11 +55,11 @@ author: COS管理员
 
 请各位演讲者于12月1日前将演讲的幻灯片发至北京会场会议组的邮箱，论文的提交时间另行通知。
 
-### 四、会议费用
+## 四、会议费用
 
 不收取注册费，交通费自理。参加会议演讲并投稿的在校学生可以向会议组申请资助。北京会场为所有报名参会者提供免费午餐。
 
-### 五、联系方式
+## 五、联系方式
 
 北京会场会议组：<useR-2009-BJ@cos.name>
 
@@ -68,25 +69,21 @@ author: COS管理员
 
 # 会议事宜——上海会场
 
-<p style="text-align: center;">
   ![第二届中国 R 语言会议 上海分会场 去logo](https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR.jpg)
-</p>
 
-<p style="text-align: center;">
   ![第二届中国 R 语言会议 上海分会场 去logo](https://cos.name/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR.jpg)
-</p>
 
 [](https://cos.name/wp-content/uploads/2009/10/2nd-Chinese-R-Conference-SH-poster1.jpg)
 
-### 一、会议时间
+## 一、会议时间
 
 2009年12月12~13日
 
-### 二、会议地点
+## 二、会议地点
 
 华东师范大学 中山北路校区 自然地理楼一楼报告厅（地铁3，4号线金沙江路站）
 
-### 三、会议主题
+## 三、会议主题
 
 以R在学术的应用、在企业的应用和统计理论为主。暂定的演讲题目有：
 
@@ -107,11 +104,11 @@ author: COS管理员
   * SNA初探（张翔）
   * 怎么写R包（谢益辉，刘思喆代讲）
 
-### 四、会议费用
+## 四、会议费用
 
 视会场支出和赞助情况而定，尽量压缩。
 
-### 五、联系方式
+## 五、联系方式
 
 上海会场会议组：<useR-2009-SH@cos.name>
 
