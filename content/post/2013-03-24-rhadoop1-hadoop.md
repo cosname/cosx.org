@@ -315,12 +315,11 @@ udp 0 0 239.2.11.71:8649 0.0.0.0:*
 
 hadoop环境启动成功，我们进行一下hdfs的简单测试。
   
-通过命令在hdfs上面，创建一个目录bin/hadoop fs -mkdir /test
-  
-通过命令复制一个本地文件到hdfs文件系统中，bin/hadoop fs -copyFormLocal README.txt /test
-  
-通过命令查看刚刚上传的文件bin/hadoop fs -ls /test
-
+通过命令在hdfs上面，创建一个目录`bin/hadoop fs -mkdir /test`
+  
+通过命令复制一个本地文件到hdfs文件系统中，`bin/hadoop fs -copyFormLocal README.txt /test`
+  
+通过命令查看刚刚上传的文件`bin/hadoop fs -ls /test`
 ### 代码部分：
 
 nn.qa.com:
