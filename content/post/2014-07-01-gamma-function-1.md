@@ -360,7 +360,7 @@ P\{{S_n} = n\} & = & \displaystyle P\{ n -1 < {S_n} \le n\} \\
 
 而由于\eqref{euler-series} 式对于`\(n\)`为分数的情形也适用，所以欧拉实际上也把`\(n!\)` 的计算推广到了分数的情形，只是这个计算是用无穷乘积的形式表示的，看起来不够直观。欧拉给的无穷乘积相比丹尼尔的无穷乘积有什么更出色的地方吗？实际上后人的验证指出，就收敛到`\(n!\)`的速度而言，丹尼尔的无穷乘积比欧拉的要快得多，然而欧拉的无穷乘积公式却是能够下金蛋的。 欧拉尝试从一些简单的例子开始做计算，看看是否有规律可循，欧拉极其擅长数学的观察与归纳。当 `\(n=\frac{1}{2}\)`的时候，带入\eqref{euler-series} 式，可以得到
   
-`\begin{equation*}\begin{align*}  
+`\begin{align*}  
 \Bigl(\frac{1}{2}\Bigr)!  
 = & \sqrt{\frac{2}{1}} \cdot \frac{2}{3} \cdot \sqrt{\frac{3}{2}} \cdot \frac{4}{5}  
 \cdot \sqrt{\frac{4}{3}} \cdot \frac{6}{7} \cdot \sqrt{\frac{5}{4}} \cdot \frac{8}{9}  
@@ -373,7 +373,7 @@ P\{{S_n} = n\} & = & \displaystyle P\{ n -1 < {S_n} \le n\} \\
 \cdot \cdots \\ 
 = & \sqrt{\frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5} \cdot \frac{6}{  
 \cdot \frac{6}{7} \cdot \frac{8}{7} \cdot \frac{8}{9} \cdot \frac{10}{9} \cdot \cdots }
-\end{align*}\end{equation*}`
+\end{align*}`
   
 对比一下根号内的式子和沃利斯公式\eqref{wallis-formula}，几乎是一模一样，只是最前面差了一个因子2。 欧拉自然非常熟悉沃利斯的工作，基于沃利斯公式，欧拉迅速得到了如下一个令他惊讶的结果
   
