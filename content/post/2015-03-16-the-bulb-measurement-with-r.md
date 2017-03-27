@@ -79,8 +79,8 @@ _“I was once with Mr Upton calculating some tables he had put me on, when Mr E
 根据灯泡是实际长度，与像素进行换算，将灯泡顶点作为原点，在R中写好换算代码如下：
 
 ```r
-realx=function(x){(x-68)*140/(442-68)}
-realy=function(y){(y-283)*140/(442-68)}
+realx = function(x){(x-68)*140/(442-68)}
+realy = function(y){(y-283)*140/(442-68)}
 ```
 
 至此，第一步工作就完成了。
@@ -91,17 +91,17 @@ realy=function(y){(y-283)*140/(442-68)}
 library(png)
 library(ggplot2)
 
-mypic=readPNG("pics/A19.png")
-myaddr=data.frame(x=rep(1:500,500),y=rep(1:500,each=500))
-myaddr$cols=apply(myaddr,1,function(x){
+mypic = readPNG("pics/A19.png")
+myaddr = data.frame(x=rep(1:500,500), y=rep(1:500,each=500))
+myaddr$cols = apply(myaddr, 1, function(x){
                             rgb(mypic[x[1],x[2],1],
                                 mypic[x[1],x[2],2],
                                 mypic[x[1],x[2],3])})
 
-myaddr$x=realx(myaddr$x)
-myaddr$y=realy(myaddr$y)
+myaddr$x = realx(myaddr$x)
+myaddr$y = realy(myaddr$y)
 
-pic=ggplot(myaddr) + geom_raster(aes(x,y,fill=cols)) +
+pic = ggplot(myaddr) + geom_raster(aes(x,y,fill=cols)) +
                  geom_hline(aes(yintercept=tk), colour="grey",alpha=0.5,
                                data=data.frame(tk=c(-100,-50,0,50))) +
                  geom_vline(aes(xintercept=tk), colour="grey",alpha=0.5,
@@ -123,11 +123,11 @@ print(pic)
 我们首先用gimp对原始照片中灯泡的边缘选取一些点采样坐标，并转化为真实坐标。
 
 ```r
-mypoints=data.frame(y=c(283,304,320,337,354,374,388,385,368,344,341,339,329),
-                    x=c( 68, 70, 74, 82, 95,120,168,202,240,289,311,334,352))
+mypoints = data.frame(y = c(283, 304, 320, 337, 354, 374, 388, 385, 368, 344, 341, 339, 329),
+                    x = c( 68, 70, 74, 82, 95, 120, 168, 202, 240, 289, 311, 334, 352))
 
-mypoints$x=realx(mypoints$x)
-mypoints$y=realy(mypoints$y)
+mypoints$x = realx(mypoints$x)
+mypoints$y = realy(mypoints$y)
 
 mypoints
 ```
@@ -152,7 +152,7 @@ mypoints
 
 ```r
 library(splines)
-myfx=interpSpline(mypoints$x,mypoints$y)
+myfx = interpSpline(mypoints$x,mypoints$y)
 ```
 
 整个第二部分的工作，曲线拟合已经做完了，整个第二部分就只需要一行语句负责计算！
@@ -166,8 +166,8 @@ y = A + Bx + Cx<sup>2</sup> + Dx<sup>3</sup> , x[i] ≤ x ＜ x[i+1]
 后续的编程中，不必具体知道这些系数究竟是多少。非要查看的话，在自定义变量myfx中，可以查看，这些方程的系数分别是：
 
 ```r
-tmpdf=as.data.frame(myfx$coefficients); tmpdf$V5=(myfx$knots);
-names(tmpdf)<-c("A","B","C","D","x[i]"); kable(tmpdf,"html");
+tmpdf = as.data.frame(myfx$coefficients); tmpdf$V5=(myfx$knots);
+names(tmpdf) <- c("A", "B", "C", "D", "x[i]"); kable(tmpdf, "html");
 ```
 
 |      A |       B |       C |       D |     x[i] |
@@ -189,9 +189,9 @@ names(tmpdf)<-c("A","B","C","D","x[i]"); kable(tmpdf,"html");
 也可以把这些点，和拟合好的曲线画在图上，看看效果：
 
 ```r
-mysmooth=as.data.frame(predict(myfx, x=seq(0, max(mypoints$x), length.out=100)))
+mysmooth = as.data.frame(predict(myfx, x=seq(0, max(mypoints$x), length.out=100)))
 
-pic=pic + geom_line(aes(x,y), size=1.3, colour="yellow", data=mysmooth) +
+pic = pic + geom_line(aes(x,y), size=1.3, colour="yellow", data=mysmooth) +
           geom_point(aes(x,y), shape=13,size=5,colour="white",data=mypoints) + 
           annotate("text",x=20,y=-60,label="V==integral(pi*f(x)^2*dx,a,b)",
                            size=8, colour="white", parse=TRUE, hjust=0) +
@@ -209,7 +209,7 @@ print(pic)
 ## 3. 根据曲线方程，进行积分，求体积。
 
 ```r
-V=integrate(function(x){pi*(predict(myfx,x)$y)^2}, 0, max(mypoints$x))
+V = integrate(function(x){pi*(predict(myfx,x)$y)^2}, 0, max(mypoints$x))
 print(V)
 ```
 
@@ -224,5 +224,5 @@ print(V)
 
 # 参考文献
 
-  1. 维基百科, Francis Robbins Upton, [http://en.wikipedia.org/wiki/Francis\_Robbins\_Upton](http://en.wikipedia.org/wiki/Francis_Robbins_Upton)
-  2. J J O’Connor and E F Robertson, Francis Robbins Upton, <http://www-history.mcs.st-andrews.ac.uk/Biographies/Upton.html>
+  1.维基百科, Francis Robbins Upton, [http://en.wikipedia.org/wiki/Francis\_Robbins\_Upton](http://en.wikipedia.org/wiki/Francis_Robbins_Upton)
+  2.J J O’Connor and E F Robertson, Francis Robbins Upton, <http://www-history.mcs.st-andrews.ac.uk/Biographies/Upton.html>
