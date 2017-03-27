@@ -16,7 +16,7 @@ slug: data-mining-1-lasso
 
 **目录：**
 - [模型简介](#模型简介)
-- [线性回归](#linear)
+- [线性回归](#线性回归)
 - [Logistic回归](#logis)
 - [Elstic Net模型家族简介](#elnet)
 - [学习资料](#refer)
@@ -56,7 +56,7 @@ LASSO回归`\(\alpha=1\)`，Ridge回归`\(\alpha=0\)`，一般Elastic Net模型`
 包括如何选取和预处理数据，如何直观得分析自变量与因变量之间的关系，如何避免过度拟合，如何衡量和选取最终模型。
 
 
-#### **线性回归**
+# 线性回归
 
 我们从最简单的线性回归(Linear Regression)开始了解如何使用**glmnet**拟合LASSO回归模型，所以此时的连接函数(link function)就是恒等，或者说没有连接函数，而误差的函数分布是正态分布。
 
