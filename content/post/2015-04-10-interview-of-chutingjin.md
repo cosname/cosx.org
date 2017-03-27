@@ -12,7 +12,7 @@ slug: interview-of-chutingjin
 
 &nbsp;
 
-<span style="color: #2e1f1f;"><a href="https://cos.name/wp-content/uploads/2015/04/-e1429669031759.jpg">![SAMSUNG CAMERA PICTURES](https://cos.name/wp-content/uploads/2015/04/褚老师-300x225.jpg)</a></span>
+<span style="color: #2e1f1f;">[![SAMSUNG CAMERA PICTURES](https://cos.name/wp-content/uploads/2015/04/褚老师-300x225.jpg)](https://cos.name/wp-content/uploads/2015/04/-e1429669031759.jpg)</span>
 
 <span style="color: #888888;">【COS编辑部按】</span>
 

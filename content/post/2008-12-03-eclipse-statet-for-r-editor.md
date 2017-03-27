@@ -175,7 +175,7 @@ R控制台被打开。点红色按钮就可以关闭R控制台。
 
 这样我们就成功地在Eclipse中编辑并运行R代码了。
 
-在退出Eclipse时，应先关闭R控制台（按钮![image](https://cos.name/wp-content/uploads/2008/12/image-thumb29.png) ），再退出Eclipse.
+在退出Eclipse时，应先关闭R控制台（按钮 ![image](https://cos.name/wp-content/uploads/2008/12/image-thumb29.png) ），再退出Eclipse.
 
 注：下面的内容来自COS论坛（[https://cos.name/cn](https://cos.name/cn "https://cos.name/cn")）：
 

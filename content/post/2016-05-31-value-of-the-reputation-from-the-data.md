@@ -141,7 +141,7 @@ slug: value-of-the-reputation-from-the-data
           <section> <section data-id="85982"> <section>如果您对我们的内容感兴趣，请关注微信公众号“狗熊会”，或扫描下方二维码</section> </section> 
           
           <p>
-            <a href="https://cos.name/wp-content/uploads/2016/05/8.jpg">![8](https://cos.name/wp-content/uploads/2016/05/8.jpg)</a>
+            ![8](https://cos.name/wp-content/uploads/2016/05/8.jpg)
           </p></section>
         </div>
       </div>
