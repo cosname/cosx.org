@@ -1,6 +1,7 @@
 ---
 title: R利剑NoSQL系列文章 之Cassandra
 date: '2013-07-18T18:05:14+00:00'
+description: "R利剑NoSQL系列文章，主要介绍通过R语言连接使用nosql数据库。涉及的NoSQL产品，包括Redis, MongoDB, HBase, Hive, Cassandra, Neo4j。希望通过我的介绍让广大的R语言爱好者，有更多的开发选择，做出更多地激动人心的应用。"
 author: COS编辑部
 categories:
   - 统计软件
@@ -28,7 +29,7 @@ slug: r-nosql-cassandra
 
 ![rcassandra](http://blog.fens.me/wp-content/uploads/2013/07/rcassandra.png)
   
-<!--more-->
+
 
 ### **第三篇 R利剑Cassandra，分为7个章节。**
 
@@ -40,7 +41,7 @@ slug: r-nosql-cassandra
   6. RCassandra使用案例
   7. Cassandra的没落
 
-<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px;">每一章节，都会分为“文字说明部分”和“代码部分”，保持文字说明与代码的连贯性。</span>
+每一章节，都会分为“文字说明部分”和“代码部分”，保持文字说明与代码的连贯性。
 
 ## 1. Cassandra介绍
 
