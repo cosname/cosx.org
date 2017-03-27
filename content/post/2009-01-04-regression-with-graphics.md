@@ -59,7 +59,7 @@ x4          0.4999091  0.1178189 4.243028 0.002164602</pre>
 紧接着我就给他们做出一幅图：
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2009/01/anscombe.png"><img class="aligncenter" src="https://cos.name/wp-content/uploads/2009/01/anscombe-thumb.png" border="0" alt="anscombe" width="244" height="244" /></a>
+  [![anscombe](https://cos.name/wp-content/uploads/2009/01/anscombe-thumb.png)](https://cos.name/wp-content/uploads/2009/01/anscombe.png)
 </p>
 
 这时候他们有点明白，能回答说左上是我们“常见”的回归；右上完全就是二次曲线嘛；左下存在一个“异常点”；而右下，完全就属于“诡异”情形。

@@ -11,7 +11,7 @@ tags:
 slug: r-rserve-java
 ---
 
-<a title="R的极客理想系列文章" href="http://blog.fens.me/series-r/" target="_blank">R的极客理想系列文章</a>，涵盖了R的思想，使用，工具，创新等的一系列要点，以我个人的学习和体验去诠释R的强大。
+[R的极客理想系列文章](http://blog.fens.me/series-r/ "R的极客理想系列文章")，涵盖了R的思想，使用，工具，创新等的一系列要点，以我个人的学习和体验去诠释R的强大。
 
 R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直到大数据的爆发，R语言变成了一门炙手可热的数据分析的利器。随着越来越多的工程背景的人的加入，R语言的社区在迅速扩大成长。现在已不仅仅是统计领域，教育，银行，电商，互联网….都在使用R语言。
 
@@ -25,18 +25,18 @@ R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直�
 
   * 张丹(Conan), 程序员Java,R,PHP,Javascript
   * weibo：@Conan_Z
-  * blog: <a title="粉丝日志|跨界的IT博客" href="http://blog.fens.me/" target="_blank">http://blog.fens.me</a>
+  * blog: [http://blog.fens.me](http://blog.fens.me/ "粉丝日志|跨界的IT博客")
   * email: bsspirit@gmail.com
 
 **转载请注明出处：**
   
-<a title="Rserve与Java的跨平台通信" href="http://blog.fens.me/r-rserve-java/" target="_blank">http://blog.fens.me/r-rserve-java/</a>
+[http://blog.fens.me/r-rserve-java/](http://blog.fens.me/r-rserve-java/ "Rserve与Java的跨平台通信")
 
-[<img class="alignnone size-full wp-image-1608" alt="rserve-java" src="http://blog.fens.me/wp-content/uploads/2013/08/rserve-java.png" width="600" height="400" />](http://blog.fens.me/wp-content/uploads/2013/08/rserve-java.png)
+![rserve-java](http://blog.fens.me/wp-content/uploads/2013/08/rserve-java.png)
 
 **前言**
 
-现在主流的异构跨平台通信组件<a href="http://thrift.apache.org/" target="_blank">Apache Thrift</a>已经火遍大江南北，支持15种编程语言，但是到目前为止还没有加入R语言。要让R实现跨平台的通信，就只能从R的社区中找方案，像rJava,RCpp,rpy都是2种语言结合的方案，这些方案类似地会把R引擎加载到其他的语言内存环境。优点是高效，缺点是紧耦合，扩展受限，接口程序无法重用。
+现在主流的异构跨平台通信组件[Apache Thrift](http://thrift.apache.org/)已经火遍大江南北，支持15种编程语言，但是到目前为止还没有加入R语言。要让R实现跨平台的通信，就只能从R的社区中找方案，像rJava,RCpp,rpy都是2种语言结合的方案，这些方案类似地会把R引擎加载到其他的语言内存环境。优点是高效，缺点是紧耦合，扩展受限，接口程序无法重用。
 
 Rserve给了我们一种新的选择，抽象R语言网络接口，基于TCP/IP协议实现与多语言之间的通信。让我们体验一下Rserve与Java的跨平台通信。
 
@@ -135,7 +135,7 @@ R 3.0.1 64bit
 
 **1). 远程连接Rserve**
   
-刚刚启动时，使用的本地模式，如果想运程连接需要增加参数 &#8211;RS-enable-remote
+刚刚启动时，使用的本地模式，如果想运程连接需要增加参数 –RS-enable-remote
 
     
     #杀掉刚才的Rserve守护进程
@@ -162,7 +162,7 @@ R 3.0.1 64bit
   
 在Eclipse中新建Java工程，并加载JAR包环境中。
   
-[<img class="alignnone size-full wp-image-1599" alt="rserve1" src="http://blog.fens.me/wp-content/uploads/2013/08/rserve1.png" width="371" height="202" />](http://blog.fens.me/wp-content/uploads/2013/08/rserve1.png)
+![rserve1](http://blog.fens.me/wp-content/uploads/2013/08/rserve1.png)
 
 **4). Java编程实现**
 
@@ -205,8 +205,8 @@ R 3.0.1 64bit
   
 解决了通信的问题，我们就可以发挥想象，把R更广泛的用起来。
 
-接下来，会讲到如何设计Java和R互相调用的软件架构。敬请关注&#8230;.
+接下来，会讲到如何设计Java和R互相调用的软件架构。敬请关注….
 
 **转载请注明出处：**
   
-<a title="Rserve与Java的跨平台通信" href="http://blog.fens.me/r-rserve-java/" target="_blank">http://blog.fens.me/r-rserve-java/</a>
+[http://blog.fens.me/r-rserve-java/](http://blog.fens.me/r-rserve-java/ "Rserve与Java的跨平台通信")

@@ -18,9 +18,9 @@ slug: analysis-of-weibo
 
 v0.1版本说明：本文发在主站上之后，站友们经常评论代码跑着有问题。经过和lijian大哥等人进行咨询，自己也摸索了一些之后，发现了之前代码非常多的漏洞。因此，给广大站友带来了困扰。在这里我表示万分的抱歉。最近邮箱中收到让我整理代码的需求越来越多。我也非常想整理下，但是由于工作也非常繁忙，所以很难抽出时间。前两天说5.1期间会整理一下代码发出来。但是事实上因为5.1小长假期间我可能无法上网，导致无力更新代码。所以今晚抽时间对代码进行了简单的修改。对本文也进行了一些调整。目前的状况是，基本上到生成待分析的语料库已经没有问题了。聚类分析的模型可以跑出来，但是最终的图画不出来。我暂时也没能找到原因。所以进一步的调整可能要等到5.1过完以后再抽时间来做了。这篇文章我会负责到底的哈。（20130429）
 
-完整代码如下：<a href="https://cos.name/2013/01/analysis-of-weibo/weibo_analysis/" rel="attachment wp-att-7753">weibo_analysis</a>
+完整代码如下：[weibo_analysis](/2013/01/analysis-of-weibo/weibo_analysis/)
 
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;分割线&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+—————————–分割线————————————————-
 
 自从lijian大哥的Rweibo包问世以来，便成了R爱好者们获取新浪微博数据的最为重要的工具。在该包的中文主页上，作者对如何连接新浪微博的API，获取授权，并以此为基础开发应用的原理讲解的非常清楚。对于我这种连基本的网页开发神马原理都一点也不清楚的菜鸟来说，Rweibo是一种非常趁手的获取微博数据的工具。
 
@@ -83,9 +83,9 @@ rainbowLevels = rainbow((dd$freq)/(max(dd$freq) - 10))
 wordcloud(dd$word, dd$freq, col = rainbow(length(d$freq)))
 par(op)</pre>
 
-[<img class="aligncenter size-full wp-image-6975" alt="Taijiong" src="https://cos.name/wp-content/uploads/2013/01/Taijiong.png" width="333" height="295" srcset="https://cos.name/wp-content/uploads/2013/01/Taijiong.png 333w, https://cos.name/wp-content/uploads/2013/01/Taijiong-300x265.png 300w" sizes="(max-width: 333px) 100vw, 333px" />](https://cos.name/wp-content/uploads/2013/01/Taijiong.png)
+![Taijiong](https://cos.name/wp-content/uploads/2013/01/Taijiong.png)
 
-下面做一些相对来说比较专业的文本挖掘的工作。主要目的是对这998条微博进行聚类。聚类里最核心的概念是距离。将距离比较靠近的数据聚为一类就是聚类。对于文本来说，如何定义距离呢？也就是说我如何来衡量微博与微博之间的距离。这涉及到了文本挖掘最基本的概念，通过建立语料库，词频-文档矩阵，来衡量文档之间的相关性，从而衡量文档之间的距离之类的。<a href="http://www.bjt.name/2012/03/text-mining-in-r/" target="_blank">详情请参看刘思喆大哥R语言环境下的文本挖掘</a>。下面使用PAM算法，对998条微博进行聚类。看看能不能得出一些什么有意思的结果。
+下面做一些相对来说比较专业的文本挖掘的工作。主要目的是对这998条微博进行聚类。聚类里最核心的概念是距离。将距离比较靠近的数据聚为一类就是聚类。对于文本来说，如何定义距离呢？也就是说我如何来衡量微博与微博之间的距离。这涉及到了文本挖掘最基本的概念，通过建立语料库，词频-文档矩阵，来衡量文档之间的相关性，从而衡量文档之间的距离之类的。[详情请参看刘思喆大哥R语言环境下的文本挖掘](http://www.bjt.name/2012/03/text-mining-in-r/)。下面使用PAM算法，对998条微博进行聚类。看看能不能得出一些什么有意思的结果。
 
 PAM算法全称是Partitioning Around Medoids算法。中文翻译为围绕中心点的划分算法。该算法是基于相异矩阵的（dissimilarity matrix）。也就是说，这个算法对于样本的距离度量是基于相异矩阵的。而不是基于通常使用的距离。因此，这个算法相对来说比较稳健（比起kmeans）。该算法首先计算出k个medoid，medoid的定义有点绕口。基本上的想法就是它和同一聚类中的其他对象的相异性是最小的。也就是说，同一个聚类的对象都是围绕着medoid的。和它的平均相异程度最小。找到这些medoid之后，再将其他样本点按照与medoid的相似性进行分配。从而完成聚类。R语言中的fpc包实现了这种算法，并且给出了非常有意思的聚类图。
 
@@ -135,7 +135,7 @@ layout(matrix(1))`
   
 结果我们将微博分成了两类：
 
-[<img class="aligncenter size-large wp-image-6974" alt="Taijiong-Clustering" src="https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering-500x117.png" width="500" height="117" srcset="https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering-500x117.png 500w, https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering-300x70.png 300w, https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering.png 1349w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering.png)
+![Taijiong-Clustering](https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering.png)
 
 当然了，从这个图，你很难看出点什么有益的信息，就是图个好看。我们不妨来看看被分成两类的微博都分别说了些什么。具体看到过程和解读因人而异，这里也没什么代码要列出来。我只说一些我看到的，不保证是对的。
 

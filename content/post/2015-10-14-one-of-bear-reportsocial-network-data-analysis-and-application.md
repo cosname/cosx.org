@@ -35,7 +35,7 @@ slug: one-of-bear-reportsocial-network-data-analysis-and-application
 
 根据国内知名研究机构CNIT-Research 8月份发布的《2014年第二季度中国手机音乐APP市场报告》的数据显示，排名前三的手机音乐App为酷狗音乐、QQ音乐、天天动听。他们所占的市场份额分别为：20.1%，17.0%以及15.8%。
 
-[<img class="alignleft wp-image-11438" src="https://cos.name/wp-content/uploads/2015/10/001.jpg" alt="001" width="112" height="112" srcset="https://cos.name/wp-content/uploads/2015/10/001.jpg 453w, https://cos.name/wp-content/uploads/2015/10/001-150x150.jpg 150w, https://cos.name/wp-content/uploads/2015/10/001-300x300.jpg 300w" sizes="(max-width: 112px) 100vw, 112px" />](https://cos.name/wp-content/uploads/2015/10/001.jpg)[<img class="wp-image-11439 alignleft" src="https://cos.name/wp-content/uploads/2015/10/002.jpg" alt="002" width="112" height="112" srcset="https://cos.name/wp-content/uploads/2015/10/002.jpg 175w, https://cos.name/wp-content/uploads/2015/10/002-150x150.jpg 150w" sizes="(max-width: 112px) 100vw, 112px" />](https://cos.name/wp-content/uploads/2015/10/002.jpg)[<img class="wp-image-11440 alignleft" src="https://cos.name/wp-content/uploads/2015/10/003.png" alt="003" width="112" height="112" srcset="https://cos.name/wp-content/uploads/2015/10/003.png 256w, https://cos.name/wp-content/uploads/2015/10/003-150x150.png 150w" sizes="(max-width: 112px) 100vw, 112px" />](https://cos.name/wp-content/uploads/2015/10/003.png)[
+![001](https://cos.name/wp-content/uploads/2015/10/001.jpg)![002](https://cos.name/wp-content/uploads/2015/10/002.jpg)![003](https://cos.name/wp-content/uploads/2015/10/003.png)[
   
 ](https://cos.name/wp-content/uploads/2015/10/002.jpg) 
 
@@ -49,7 +49,7 @@ slug: one-of-bear-reportsocial-network-data-analysis-and-application
 
 根据速途研究院对手机音乐用户愿景的调查显示，有58%的用户希望增强个性化音乐推荐的功能，这说明有很多用户在收听音乐时其实并不清楚自己喜欢什么类型的歌曲，如果音乐电台能根据用户的个人喜好“猜出”用户喜欢什么歌曲并为其进行推荐，那将会给用户带来意想不到的完美体验。目前的很多音乐软件都支持推荐这一功能。以下是音乐App市场中常见的音乐产品的个性化推荐以及定制方式：
 
-[<img class="alignleft wp-image-11476 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/004-150x150.jpg" alt="004" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/004.jpg) [<img class="alignleft wp-image-11477 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/0051-150x150.jpg" alt="005" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/0051.jpg) [<img class="alignleft wp-image-11478 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/006-150x150.jpg" alt="006" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/006.jpg)
+![004](https://cos.name/wp-content/uploads/2015/10/004.jpg) ![005](https://cos.name/wp-content/uploads/2015/10/0051.jpg) ![006](https://cos.name/wp-content/uploads/2015/10/006.jpg)
 
 &nbsp;
 
@@ -63,11 +63,11 @@ slug: one-of-bear-reportsocial-network-data-analysis-and-application
 
 根据研究，推荐模式主要分为以下几种：（1） 热点推荐，可以根据大众的搜索记录，通过排行榜的形式得到，也可以根据近期发生的音乐娱乐事件推荐，如中国好声音、我是歌手等；（2）根据用户的听歌记录推荐，包括用户对每首歌的喜恶记录；（3）根据地理位置信息结合用户兴趣进行推荐；（4）根据用户喜欢的歌手信息进行推荐。但是，以上这些推荐模式都没有能够充分利用社交网络的信息。在社交网络风靡全球的时代，有越来越多的音乐服务商发现，社交网络可以帮助商家留住更多的用户，同时，充分利用社交网络信息将带来更加卓越完美的用户体验。可以看到，酷狗音乐和天天动听都允许用户使用第三方账户（微博、QQ）进行绑定登录，并提供分享到微博、微信等选项；QQ音乐特设了“动态”专栏，用于显示好友分享的音乐。另外，酷狗和QQ音乐都可以通过定位的方式推荐附近的志趣相投的好友。
 
-[<img class="alignleft wp-image-11442 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/007-150x150.jpg" alt="007" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/007.jpg)
+![007](https://cos.name/wp-content/uploads/2015/10/007.jpg)
 
-[<img class="alignleft wp-image-11443 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/008-150x150.jpg" alt="008" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/008.jpg)
+![008](https://cos.name/wp-content/uploads/2015/10/008.jpg)
 
-[<img class="alignleft wp-image-11444 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/009-150x150.jpg" alt="009" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/009.jpg)
+![009](https://cos.name/wp-content/uploads/2015/10/009.jpg)
 
 &nbsp;
 
@@ -81,7 +81,7 @@ slug: one-of-bear-reportsocial-network-data-analysis-and-application
 
 上述事实说明，社交音乐存在巨大的潜力和价值。那么，这一方面有无突出的企业呢？其中英国的Last.fm和中国的QQ音乐可以算得上是这方面的一个代表。
 
-[<img class="wp-image-11445 size-medium alignleft" src="https://cos.name/wp-content/uploads/2015/10/010-169x300.jpg" alt="010" width="169" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/010-169x300.jpg 169w, https://cos.name/wp-content/uploads/2015/10/010-281x500.jpg 281w, https://cos.name/wp-content/uploads/2015/10/010.jpg 450w" sizes="(max-width: 169px) 100vw, 169px" />](https://cos.name/wp-content/uploads/2015/10/010.jpg)[<img class="aligncenter wp-image-11446 size-medium" src="https://cos.name/wp-content/uploads/2015/10/011-180x300.jpg" alt="011" width="180" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/011-180x300.jpg 180w, https://cos.name/wp-content/uploads/2015/10/011-300x500.jpg 300w, https://cos.name/wp-content/uploads/2015/10/011.jpg 480w" sizes="(max-width: 180px) 100vw, 180px" />](https://cos.name/wp-content/uploads/2015/10/011.jpg)
+![010](https://cos.name/wp-content/uploads/2015/10/010.jpg)![011](https://cos.name/wp-content/uploads/2015/10/011.jpg)
 
 Last.fm                                                                    QQ音乐
 
@@ -89,15 +89,15 @@ Last.fm是 Audioscrobbler 音乐引擎设计团队的旗舰产品，有遍布232
 
 以QQ音乐为例，我们详细分析它在利用社交网络信息进行个性化推荐的优势与可能存在的不足。QQ音乐依附强大的社交工具QQ而生，长期以来受到广大用户的喜爱，这与QQ背后的亿万级用户是无法割离的，可以说，QQ音乐是有先天的社交优势的。用户登录QQ音乐后，可以看到动态栏中显示的好友音乐动态，同时，它还允许用户绑定自己的微博账号，把音乐分享给微博好友。不仅如此，QQ音乐允许用户自己编辑生成歌单，并分享给好友，这起到了一定的自媒体的作用。在“明星部落”这一功能中，QQ音乐允许粉丝之间交流互动，并形成一定的社交规模。从上述总结中，我们已经可以看到，QQ音乐已经有意识的把社交信息融合到产品设计和运营中，以增加客户粘性。但是从数据分析的基础和推荐算法的构建上，是否真正做到有效利用社交网络信息了呢？为此，使用QQ音乐于2012年全面更新升级的“猜你喜欢”功能，并发现了如下问题：当笔者没有任何听歌记录时，这一模块并不能为笔者推荐歌曲。根据提示内容，目前该功能可能主要依靠用户的历史听歌记录进行推荐。同样的问题出现在QQ音乐馆的推荐栏中：大部分初始推荐音乐来源于当下热门音乐歌曲，缺少个性化成分。
 
-[<img class="alignleft wp-image-11447 size-medium" src="https://cos.name/wp-content/uploads/2015/10/012-200x300.jpg" alt="012" width="200" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/012-200x300.jpg 200w, https://cos.name/wp-content/uploads/2015/10/012-333x500.jpg 333w, https://cos.name/wp-content/uploads/2015/10/012.jpg 640w" sizes="(max-width: 200px) 100vw, 200px" />](https://cos.name/wp-content/uploads/2015/10/012.jpg)
+![012](https://cos.name/wp-content/uploads/2015/10/012.jpg)
 
-[<img class="aligncenter wp-image-11448 size-medium" src="https://cos.name/wp-content/uploads/2015/10/013-200x300.jpg" alt="013" width="200" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/013-200x300.jpg 200w, https://cos.name/wp-content/uploads/2015/10/013-333x500.jpg 333w, https://cos.name/wp-content/uploads/2015/10/013.jpg 640w" sizes="(max-width: 200px) 100vw, 200px" />](https://cos.name/wp-content/uploads/2015/10/013.jpg)
+![013](https://cos.name/wp-content/uploads/2015/10/013.jpg)
 
 QQ音乐：猜你喜欢                                              QQ音乐馆
 
 **以上事实说明音乐服务商在推荐算法上没有充分利用社交网络的信息。**事实上，在获得用户个人绑定社交网络账号的基础上，可以得到用户的朋友关系，进一步可以获得用户好友的听歌记录，这些歌曲可以成为初始推荐曲目的备选项，将这些备选项通过一定规则（热度、好友相似度）排序，可以用于音乐推荐；另外，众所周知，社交网络（如微博）是明星与粉丝互动的一个重要渠道，因此，可以重点提取用户对于社交网络中歌手以及音乐人的关注关系，以获得对用户偏好的推测。以上这些过程可以用下图表示。
 
-**[<img class="aligncenter size-full wp-image-11449" src="https://cos.name/wp-content/uploads/2015/10/014.jpg" alt="014" width="1280" height="720" srcset="https://cos.name/wp-content/uploads/2015/10/014.jpg 1280w, https://cos.name/wp-content/uploads/2015/10/014-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/10/014-500x281.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/10/014.jpg)**
+**![014](https://cos.name/wp-content/uploads/2015/10/014.jpg)**
 
 可以看到，在以社交网络绑定的音乐社区中，每个人并不是孤立的个体，而是通过好友关系，以及粉丝与明星的关注关系联系起来。音乐活动的多元化为QQ音乐的推荐场景带来了新的挑战。我们认为存在以下几个需要处理的问题：（1）如何高效利用好友的音乐信息对用户进行推荐？用户的好友众多，每个好友会留下很多音乐记录，这些信息综合起来的话数量极其庞大，如何迅速整合朋友及其收听记录并按照优先程度排序对用户进行推荐是提高用户体验的前提条件。（2）如何整合多种信息渠道进行推荐？随着时间的推进，一个音乐账户留下的信息是多元化的。例如，用户主动搜索的音乐记录、用户对历史收听音乐记录的反馈，用户选择的电台种类、用户自己总结生成的歌单、用户对朋友分享音乐的反馈信息等。因此，如何对这些异质的信息来源进行有效整合，或者，在资源有限的情况下，如何判断和筛选出对于提高推荐精度最有效的指标是提高音乐推荐效果的关键法宝。（3）如何整合当前音乐潮流趋势与用户个人兴趣基因？音乐是充满了潮流和娱乐性的产业，因此，用户的音乐兴趣不仅受其自身兴趣基因驱使，也受到当前音乐流驱使的影响。因此，如何结合用户个人兴趣以及音乐潮流趋势对用户进行有效推荐，是对于音乐这一特殊娱乐行业的特别要求。综上我们认为QQ音乐虽然是利用社交关系进行音乐推荐的先驱者，但是在利用网络数据的层面上仍有很大的改进和提升空间。
 
@@ -119,9 +119,9 @@ QQ音乐：猜你喜欢                                      
 
 歌曲的重要组成部分就是歌词，由于歌词属于文本，我们不可能直接对其打标签，所以首先要进行的是语义分析，通过语义分析我们可以大概知道歌词的内容，比如我们可以把歌词切分成短语，然后对每一个短语进行归纳总结，可以判断短语的情感极性（如积极还是消极），对短语进行主题分类，由于歌词数目庞大，可以利用自然语言处理的方式，如主题模型等预先提取主题，再通过人工加以校正。这样就可以对歌词进行标签化处理了。下面我们以歌曲为例，简要的说明具体标签化过程。
 
-通过标签的形式我们可以对每个歌曲的主题予以分类和描述。用于描述一支单曲的标签数目越多，对于音乐主题的描述就更加清晰、明朗；但同时，冗余和重复的信息也可能越多，处理的难度就越大。因此，我们要对标签进行排序和筛选，一个比较简单高效的办法是选择最热门的N个标签作为我们的目标词库，并且对该词库定期进行更新。具体来说，我们将所有标签按照重要程度由高到低进行排序，选择前p个标签作为我们的标签集合。给定一首歌曲t，我们用一个超高维向量$X\_t=(X\_{t1},&#8230;,X\_{tp}) \in \mathbb{R}^p$表示它的标签信息，其中$X\_{tj}  = 1$表示该歌曲含有第j个标签，否则，该歌曲不含有第j个标签。例如对于一首钢琴曲演奏的纯音乐，对其打的标签可能是：钢琴曲、安静、咖啡馆等。设钢琴曲、安静、咖啡馆分别对应于标号为1、3、5的标签，那么向量$X\_t$可以表示为$X\_t=(1,0,1,0,1,0,&#8230;0)$ 。通过以上步骤，我们就可以把看似杂乱的音乐风格通过打标签的形式进行结构化，用一个只含0、1元素的超高维向量对每首歌曲进行分类。
+通过标签的形式我们可以对每个歌曲的主题予以分类和描述。用于描述一支单曲的标签数目越多，对于音乐主题的描述就更加清晰、明朗；但同时，冗余和重复的信息也可能越多，处理的难度就越大。因此，我们要对标签进行排序和筛选，一个比较简单高效的办法是选择最热门的N个标签作为我们的目标词库，并且对该词库定期进行更新。具体来说，我们将所有标签按照重要程度由高到低进行排序，选择前p个标签作为我们的标签集合。给定一首歌曲t，我们用一个超高维向量$X\_t=(X\_{t1},…,X\_{tp}) \in \mathbb{R}^p$表示它的标签信息，其中$X\_{tj}  = 1$表示该歌曲含有第j个标签，否则，该歌曲不含有第j个标签。例如对于一首钢琴曲演奏的纯音乐，对其打的标签可能是：钢琴曲、安静、咖啡馆等。设钢琴曲、安静、咖啡馆分别对应于标号为1、3、5的标签，那么向量$X\_t$可以表示为$X\_t=(1,0,1,0,1,0,…0)$ 。通过以上步骤，我们就可以把看似杂乱的音乐风格通过打标签的形式进行结构化，用一个只含0、1元素的超高维向量对每首歌曲进行分类。
 
-对于歌单、电台这些由歌曲集合而成的实体，我们也可以通过标签的方式对其进行刻画。例如，对于给定的一个歌单m，我们同样用一个超高维向量$Z\_m=(Z\_{m1},&#8230;,Z\_{mp}) \in \mathcal{R}^p$表示它的标签信息，假设歌单m包含第t首和第q首歌曲，那么计算$Z\_m$一个简单的方法就是将$X\_t$与$X\_q$以某种方式进行组合（取平均等方式）。通过这种形式，我们将不同的音乐实体形式都归一化到标签的形式组织，并结构化成标签向量，用于建模和推荐。为了统一起见，将上述步骤处理过的歌曲、歌单、电台等音乐实体统称为“音乐”。所以本步骤的核心思想是：建立关键词词库，将音乐标签化，将形式归一化。
+对于歌单、电台这些由歌曲集合而成的实体，我们也可以通过标签的方式对其进行刻画。例如，对于给定的一个歌单m，我们同样用一个超高维向量$Z\_m=(Z\_{m1},…,Z\_{mp}) \in \mathcal{R}^p$表示它的标签信息，假设歌单m包含第t首和第q首歌曲，那么计算$Z\_m$一个简单的方法就是将$X\_t$与$X\_q$以某种方式进行组合（取平均等方式）。通过这种形式，我们将不同的音乐实体形式都归一化到标签的形式组织，并结构化成标签向量，用于建模和推荐。为了统一起见，将上述步骤处理过的歌曲、歌单、电台等音乐实体统称为“音乐”。所以本步骤的核心思想是：建立关键词词库，将音乐标签化，将形式归一化。
 
 **用户信息整合**
 
@@ -161,7 +161,7 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},Y\_{jk},Z\_{qk}),  \quad j \in \mathcal{N
 
 根据App Store新闻类免费排行榜显示，移动端排名最靠前的三大新闻类App是腾讯新闻，网易新闻，新浪新闻。
 
-[<img class="size-full wp-image-11450 alignleft" src="https://cos.name/wp-content/uploads/2015/10/015.jpg" alt="015" width="106" height="108" />](https://cos.name/wp-content/uploads/2015/10/015.jpg)[<img class="size-full wp-image-11451 alignleft" src="https://cos.name/wp-content/uploads/2015/10/016.jpg" alt="016" width="105" height="106" />](https://cos.name/wp-content/uploads/2015/10/016.jpg)[<img class="size-full wp-image-11452 alignleft" src="https://cos.name/wp-content/uploads/2015/10/017.jpg" alt="017" width="105" height="106" />](https://cos.name/wp-content/uploads/2015/10/017.jpg)
+![015](https://cos.name/wp-content/uploads/2015/10/015.jpg)![016](https://cos.name/wp-content/uploads/2015/10/016.jpg)![017](https://cos.name/wp-content/uploads/2015/10/017.jpg)
 
 &nbsp;
 
@@ -175,7 +175,7 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},Y\_{jk},Z\_{qk}),  \quad j \in \mathcal{N
 
 &nbsp;
 
-[<img class="alignleft wp-image-11453 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/018-150x150.jpg" alt="018" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/018.jpg) [<img class="alignleft wp-image-11454 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/019-150x150.jpg" alt="019" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/019.jpg) [<img class="alignleft wp-image-11455 size-thumbnail" src="https://cos.name/wp-content/uploads/2015/10/020-150x150.jpg" alt="020" width="150" height="150" />](https://cos.name/wp-content/uploads/2015/10/020.jpg)
+![018](https://cos.name/wp-content/uploads/2015/10/018.jpg) ![019](https://cos.name/wp-content/uploads/2015/10/019.jpg) ![020](https://cos.name/wp-content/uploads/2015/10/020.jpg)
 
 &nbsp;
 
@@ -189,7 +189,7 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},Y\_{jk},Z\_{qk}),  \quad j \in \mathcal{N
 
 根据我们的研究经验，我们认为其推荐的机制有：（1）大众热点推荐；（2）根据用户以前看过的内容（或点赞、收藏的内容）进行推荐；（3）根据看过类似新闻的人还看过什么来对用户进行推荐。可以感受到的是目前的推荐机制仍有很大的提升空间，对于绝大多数用户来说，他们并不会在这些新闻类App上提供自己的社交信息，因此这些推荐都没有利用到来自好友的信息，假设我们可以了解到用户的社交网络，那么可以有以下重要的好处：当用户使用微博账号或QQ账号登录App时，就可以获取该用户的好友关系，通过分析你的好友最近在关注的内容，可以预测你感兴趣的内容，这样就可以解决个性化推荐中一个非常重要的问题：冷启动。在这方面有无可以关注的重要企业呢？其中美国的Flipboard和中国的今日头条可以算得上是这方面的一个代表。
 
-[<img class="alignleft wp-image-11456 size-medium" src="https://cos.name/wp-content/uploads/2015/10/021-169x300.jpg" alt="021" width="169" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/021-169x300.jpg 169w, https://cos.name/wp-content/uploads/2015/10/021-282x500.jpg 282w, https://cos.name/wp-content/uploads/2015/10/021.jpg 320w" sizes="(max-width: 169px) 100vw, 169px" />](https://cos.name/wp-content/uploads/2015/10/021.jpg) [<img class="alignleft wp-image-11457 size-medium" src="https://cos.name/wp-content/uploads/2015/10/022-200x300.jpg" alt="022" width="200" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/022-200x300.jpg 200w, https://cos.name/wp-content/uploads/2015/10/022.jpg 320w" sizes="(max-width: 200px) 100vw, 200px" />](https://cos.name/wp-content/uploads/2015/10/022.jpg)
+![021](https://cos.name/wp-content/uploads/2015/10/021.jpg) ![022](https://cos.name/wp-content/uploads/2015/10/022.jpg)
 
 &nbsp;
 
@@ -207,9 +207,9 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},Y\_{jk},Z\_{qk}),  \quad j \in \mathcal{N
 
 特别值得关注的是，这两个App目前做的都非常成功，例如，作为一直以将社交网络等社会化媒体整合著称的Flipboard于2013年底宣告用户总数突破1亿大关，并获得5000万美元的C轮融资，估值约为8亿美元；于2012年创立的后起之秀今日头条目前也拥有1.2亿激活用户，2014年，今日头条一举拿下1亿美元融资，增势迅猛，不可小觑。这两个App的一个共同之处是他们允许用户使用他们当前的社交网络账号绑定（如Facebook、微博等），如下图所示。
 
-[<img class="alignleft wp-image-11458 size-medium" src="https://cos.name/wp-content/uploads/2015/10/023-207x300.jpg" alt="023" width="207" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/023-207x300.jpg 207w, https://cos.name/wp-content/uploads/2015/10/023-345x500.jpg 345w, https://cos.name/wp-content/uploads/2015/10/023.jpg 346w" sizes="(max-width: 207px) 100vw, 207px" />](https://cos.name/wp-content/uploads/2015/10/023.jpg)
+![023](https://cos.name/wp-content/uploads/2015/10/023.jpg)
 
-[<img class="alignleft wp-image-11460 size-medium" src="https://cos.name/wp-content/uploads/2015/10/024-200x300.jpg" alt="024" width="200" height="300" srcset="https://cos.name/wp-content/uploads/2015/10/024-200x300.jpg 200w, https://cos.name/wp-content/uploads/2015/10/024-333x500.jpg 333w, https://cos.name/wp-content/uploads/2015/10/024.jpg 640w" sizes="(max-width: 200px) 100vw, 200px" />](https://cos.name/wp-content/uploads/2015/10/024.jpg)
+![024](https://cos.name/wp-content/uploads/2015/10/024.jpg)
 
 &nbsp;
 
@@ -227,7 +227,7 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},Y\_{jk},Z\_{qk}),  \quad j \in \mathcal{N
 
 以今日头条为例，我们详细分析他们在数据层面的优势，例如，当用户为今日头条绑定了微博账号时，他们就可以轻松获取用户在微博上的个人信息及好友情况，可以知道用户的好友在微博上都了些什么，由此一来，看似独立的今日头条个体用户，通过微博账号的绑定，就变成了有网络结构的群体，下图就生动形象的展现了这一数据层面的转变。
 
-[<img class="aligncenter size-full wp-image-11461" src="https://cos.name/wp-content/uploads/2015/10/025.jpg" alt="025" width="1280" height="720" srcset="https://cos.name/wp-content/uploads/2015/10/025.jpg 1280w, https://cos.name/wp-content/uploads/2015/10/025-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/10/025-500x281.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/10/025.jpg)
+![025](https://cos.name/wp-content/uploads/2015/10/025.jpg)
 
 可以看到在传统的登录方式中，用户被当成了独立的个体，他们每一个人只是今日头条的一个独立用户而已，如果绑定了微博账号之后，我们就可以获得好友关系（例如上图右侧小人之间的连线表明二者是好友关系）和好友的动态（如云状对话框里展示了好友最近的关注动态），中国有句古话叫“物以类聚，人以群分”，我们会发现通常情况下越是相似的人，他们关注的话题也就越相似，如此一来，我们就可以根据用户的好友关注情况为该用户进行新闻推荐，这在一定程度上能够解决许多此类应用的冷启动问题。
 
@@ -239,7 +239,7 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},Y\_{jk},Z\_{qk}),  \quad j \in \mathcal{N
 
 **新闻结构化**
 
-首先，我们要对系统中存在的海量文章进行分类，使看似纷繁复杂的文本信息结构化。为此我们需要对每篇文章的主题进行总结并分类。分类的方法多种多样，比如我们可以先将主题分为几个大类，大类下面增设小类，每个小类包含不同关键词集合。例如，“体育”是一个大类，在“体育”大类下可分为“足球”、“篮球”、“游泳”等小类，在标为“足球”的小类下又可包括“罗纳尔多”、“国安”等这样的关键词信息。根据关键词信息，我们可以对每一篇文章打上标签。但是，由于主题和关键词数目众多，我们不可能把所有的关键词拿来作为目标词库，一个比较简单高效的办法是选择最热门的N个关键词作为我们的目标词库，并且对该词库定期进行更新。具体来说，我们将所有关键词按照重要程度由高到低进行排序，选择前p个关键词作为我们的关键词集合。给定一篇文章t，我们用一个超高维向量 $X\_t=(X\_{t1},&#8230;,X\_{tp}) \in \mathbb{R}^p$表示它的标签信息，其中$ X\_tj = 1$表示该文章含有第j个关键词，否则，该文章不含有第j个关键词。例如一篇描述旅游攻略的文章，对其打的标签可能是：旅游、美食、驴友等。设旅游、美食、驴友分别对应于标号为1、3、5的关键词，那么向量 $X_t=(1,0,1,0,1,0,&#8230;,0)$可以表示为 。通过以上步骤，我们就可以把看似杂乱无章的文本信息通过打标签的形式进行结构化，用一个只含0、1元素的超高维向量对每篇文章进行分类。所以本步骤的核心思想是：建立关键词词库，将文章标签化。
+首先，我们要对系统中存在的海量文章进行分类，使看似纷繁复杂的文本信息结构化。为此我们需要对每篇文章的主题进行总结并分类。分类的方法多种多样，比如我们可以先将主题分为几个大类，大类下面增设小类，每个小类包含不同关键词集合。例如，“体育”是一个大类，在“体育”大类下可分为“足球”、“篮球”、“游泳”等小类，在标为“足球”的小类下又可包括“罗纳尔多”、“国安”等这样的关键词信息。根据关键词信息，我们可以对每一篇文章打上标签。但是，由于主题和关键词数目众多，我们不可能把所有的关键词拿来作为目标词库，一个比较简单高效的办法是选择最热门的N个关键词作为我们的目标词库，并且对该词库定期进行更新。具体来说，我们将所有关键词按照重要程度由高到低进行排序，选择前p个关键词作为我们的关键词集合。给定一篇文章t，我们用一个超高维向量 $X\_t=(X\_{t1},…,X\_{tp}) \in \mathbb{R}^p$表示它的标签信息，其中$ X\_tj = 1$表示该文章含有第j个关键词，否则，该文章不含有第j个关键词。例如一篇描述旅游攻略的文章，对其打的标签可能是：旅游、美食、驴友等。设旅游、美食、驴友分别对应于标号为1、3、5的关键词，那么向量 $X_t=(1,0,1,0,1,0,…,0)$可以表示为 。通过以上步骤，我们就可以把看似杂乱无章的文本信息通过打标签的形式进行结构化，用一个只含0、1元素的超高维向量对每篇文章进行分类。所以本步骤的核心思想是：建立关键词词库，将文章标签化。
 
 **用户信息整合**
 
@@ -277,7 +277,7 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},X\_{jk}) \quad j \in \mathcal{N}\_i$$
 
 **3.1.1** **社交网络中的个性化标签**
 
-[<img class="aligncenter size-full wp-image-11462" src="https://cos.name/wp-content/uploads/2015/10/026.jpg" alt="026" width="873" height="326" srcset="https://cos.name/wp-content/uploads/2015/10/026.jpg 873w, https://cos.name/wp-content/uploads/2015/10/026-300x112.jpg 300w, https://cos.name/wp-content/uploads/2015/10/026-500x187.jpg 500w" sizes="(max-width: 873px) 100vw, 873px" />](https://cos.name/wp-content/uploads/2015/10/026.jpg)
+![026](https://cos.name/wp-content/uploads/2015/10/026.jpg)
 
 那么，什么是社交网络中的个性化标签呢？个性化标签是社交网络用户对于自身兴趣、爱好、特征进行的短语描述。例如，上图中的“社会关系网络”、“教授”、“商务统计学”等短语就是用户Jack的个性化标签，从标签中我们可以推测出用户的职业、兴趣、生活方式等。
 
@@ -287,23 +287,23 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},X\_{jk}) \quad j \in \mathcal{N}\_i$$
 
 但是，尽管个性化标签存在着巨大的商业价值，对于个性化标签信息的直接利用仍然存在着一些问题。首先，用户的个性化标签可能是缺失的，例如，一个带有“旅行”标签的用户可能同时也喜欢“美食”，但是“美食”这一标签并没有出现在用户自注标签的行列之中；其次，标签信息可能是不准确的，例如，一个贴有“炒股专家”标签的用户并实际上不一定股市牛人，那么，如何鉴定用户标签的真实性呢？
 
-[<img class="aligncenter size-full wp-image-11463" src="https://cos.name/wp-content/uploads/2015/10/027.jpg" alt="027" width="847" height="567" srcset="https://cos.name/wp-content/uploads/2015/10/027.jpg 847w, https://cos.name/wp-content/uploads/2015/10/027-300x201.jpg 300w, https://cos.name/wp-content/uploads/2015/10/027-500x335.jpg 500w" sizes="(max-width: 847px) 100vw, 847px" />](https://cos.name/wp-content/uploads/2015/10/027.jpg)
+![027](https://cos.name/wp-content/uploads/2015/10/027.jpg)
 
 社交网络的信息可以帮助我们有效的解决这两点问题。其特有的朋友关注信息是对标签信息的有效补充，这一点可以用上图中在相互关注的好友之间进行标签补充看到。例如，一个喜欢“美食”的用户虽然没有把“美食”标签纳入自己的标签集中，但是，从她的关注关系我们可以看到她关注了许多美食营销账号，如“下厨房”、“舌尖上的中国”等。通过这一信息我们可以推断，该用户对“美食”也有着浓厚的兴趣。同时，利用社交网络信息还可以帮助我们有效的鉴别用户标签信息真伪。例如，如果从关注关系看到一个贴有“炒股专家”标签的用户没有关注任何炒股公众微博号，他的粉丝中也没有炒股发烧友，那么，从一定程度上，我们可以推断该用户的“炒股专家”的标签可能存在一定的谬误。
 
 然而，微博中有着上亿的用户，我们不可能用肉眼鉴别和推断每一个用户的标签。有没有一种高效并且易于计算的统计模型表征这一过程呢？在一篇最近研究社交网络个性化标签的文章中，采用了两种估计方法（极大似然估计与条件极大似然估计），其主要思想是，假设社交网络中的用户之间的行为是成对独立的，社交网络中的对称关系（互相关注和互不关注）与这一对用户在标签上表现的相似程度有关，例如，一对用户都具有“美食”这一标签，那么在此条件下他们有更高的概率成为朋友。具体地，可以把给定标签下对称关系的条件概率用标签回归的形式表达出来，通过估计回归系数我们可以得知对应的标签在推断朋友关系中的重要程度；另一方面，改进上述估计方法，可以提高模型的计算复杂度。利用网络稀疏性的特质，该文章提出了条件极大似然估计方法。社交网络的稀疏性质可以用下图表示，可以看到大部分的用户之间都是不存在相互关注关系的（Null Pair）。在给定网络中的一对存在连接的用户（也就是说，一对用户之间存在双向关注或者单向关注关系）的条件下，计算极大似然函数并估计参数，可以大大降低了计算复杂度。
 
-[<img class="aligncenter size-full wp-image-11464" src="https://cos.name/wp-content/uploads/2015/10/028.jpg" alt="028" width="973" height="676" srcset="https://cos.name/wp-content/uploads/2015/10/028.jpg 973w, https://cos.name/wp-content/uploads/2015/10/028-300x208.jpg 300w, https://cos.name/wp-content/uploads/2015/10/028-500x347.jpg 500w" sizes="(max-width: 973px) 100vw, 973px" />](https://cos.name/wp-content/uploads/2015/10/028.jpg)
+![028](https://cos.name/wp-content/uploads/2015/10/028.jpg)
 
 **3.1.3** **实际案例**
 
 为了阐述上述模型的建模效果，我们用一个实际案例加以说明。数据集由北大光华MBA的4554的微博账户信息组成，同时记录了他们的关注关系。选择标签数目排名前10名的标签作为我们的标签集。 我们关心的问题是：哪些标签对于推断用户好友关系的影响最大？
 
-[<img class="aligncenter size-full wp-image-11465" src="https://cos.name/wp-content/uploads/2015/10/029.jpg" alt="029" width="1025" height="394" srcset="https://cos.name/wp-content/uploads/2015/10/029.jpg 1025w, https://cos.name/wp-content/uploads/2015/10/029-300x115.jpg 300w, https://cos.name/wp-content/uploads/2015/10/029-500x192.jpg 500w" sizes="(max-width: 1025px) 100vw, 1025px" />](https://cos.name/wp-content/uploads/2015/10/029.jpg)
+![029](https://cos.name/wp-content/uploads/2015/10/029.jpg)
 
 通过数据分析，得知邻接矩阵的密度为0.41%，互相关注的密度约为0.22%。可以看出这是一个高度稀疏的社交网络关系。通过运用条件极大似然估计模型，我们得到如下的估计结果。
 
-[<img class="aligncenter size-full wp-image-11466" src="https://cos.name/wp-content/uploads/2015/10/030.jpg" alt="030" width="744" height="453" srcset="https://cos.name/wp-content/uploads/2015/10/030.jpg 744w, https://cos.name/wp-content/uploads/2015/10/030-300x183.jpg 300w, https://cos.name/wp-content/uploads/2015/10/030-500x304.jpg 500w" sizes="(max-width: 744px) 100vw, 744px" />](https://cos.name/wp-content/uploads/2015/10/030.jpg)
+![030](https://cos.name/wp-content/uploads/2015/10/030.jpg)
 
 可以看到，其中，回归系数（用条件似然方法估计）的估计值最高的几个分别是：管理、MBA、营销。这表明这几个标签在推断用户的朋友关系中起着重要作用。从这几个标签的字面意义上我们可以看到，人们通过兴趣爱好、职业发展的一致性可以形成朋友关系，反过来说，这种朋友关系对于推断用户的兴趣爱好也至关重要。数据分析结果从一定程度上也印证了该数据集的性质：MBA学生群。
 
@@ -317,13 +317,13 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},X\_{jk}) \quad j \in \mathcal{N}\_i$$
 
 社交网络中的信息纷繁杂乱，网络中的个体也表现出异质性的特征。少数公众人物的微博动态时时都受到关注，其一举一动甚至可能影响整个舆论的走向。各大社交网络平台也纷纷推出热力榜单等应用来对公众人物的影响力进行排名，下图是微博“明星势力榜”排名结果：
 
-[<img class="aligncenter size-full wp-image-11467" src="https://cos.name/wp-content/uploads/2015/10/031.jpg" alt="031" width="978" height="532" srcset="https://cos.name/wp-content/uploads/2015/10/031.jpg 978w, https://cos.name/wp-content/uploads/2015/10/031-300x163.jpg 300w, https://cos.name/wp-content/uploads/2015/10/031-500x272.jpg 500w" sizes="(max-width: 978px) 100vw, 978px" />](https://cos.name/wp-content/uploads/2015/10/031.jpg)
+![031](https://cos.name/wp-content/uploads/2015/10/031.jpg)
 
 我们不禁要问，评估人物影响力，有何价值呢？正因为少数用户具有巨大的影响力，我们才更应该合理利用其影响力，而避免其巨大的影响力阐释负面影响。例如，可以利用明星影响力推广公益活动，那么将会在公众中收到更好的宣传效果；另一方面，又要防止有影响力的明星肆意传播虚假、负面信息，造成不良影响。因此，关注具有影响力个体对于提升营销效果、控制舆论信息等有巨大的作用。
 
 关注高网络影响力的个体不仅在社交网络平台中有着巨大应用，在其他的网络关系中也有着举足轻重的地位。例如，在移动通讯网络中，某些个体通话量的提升能够带动整个通信网络中总体电话量的提升，那么这些个体就应被锁定为具有网络影响力的个体。通讯公司应对其采取特别的营销策略，以期留住这些核心用户，从某种程度上说，这正也是利用了这些核心用户的影响力，来防止更多的客户流失。如下图所示，可以看到核心用户的流失对于移动通信服务商可能造成巨大损失，因为与核心用户联系紧密的用户也可能随之流失转为其他服务。
 
-[<img class="aligncenter size-full wp-image-11468" src="https://cos.name/wp-content/uploads/2015/10/032.jpg" alt="032" width="857" height="491" srcset="https://cos.name/wp-content/uploads/2015/10/032.jpg 857w, https://cos.name/wp-content/uploads/2015/10/032-300x172.jpg 300w, https://cos.name/wp-content/uploads/2015/10/032-500x286.jpg 500w" sizes="(max-width: 857px) 100vw, 857px" />](https://cos.name/wp-content/uploads/2015/10/032.jpg)
+![032](https://cos.name/wp-content/uploads/2015/10/032.jpg)
 
 核心用户流失前                                                           核心用户流失后
 
@@ -331,7 +331,7 @@ $$p(Y\_{ik}=1)=f\_{\theta\_i}(X\_{ik},X\_{jk}) \quad j \in \mathcal{N}\_i$$
 
 以通讯网络中的个体影响力评估为例，计算在个体通话量中最有影响力的用户。从直觉上说，移动通讯网络中最有影响力的个体，应该与网络中的大多数个体都有较大的相似性。这个现象用统计语言描述，就是最有影响力的个体与网络中其他个体具有较大的协方差。假设网络中共有p个个体，则协方差矩阵如下图所示
 
-[<img class="aligncenter size-full wp-image-11469" src="https://cos.name/wp-content/uploads/2015/10/034.jpg" alt="034" width="364" height="293" srcset="https://cos.name/wp-content/uploads/2015/10/034.jpg 364w, https://cos.name/wp-content/uploads/2015/10/034-300x241.jpg 300w" sizes="(max-width: 364px) 100vw, 364px" />](https://cos.name/wp-content/uploads/2015/10/034.jpg)
+![034](https://cos.name/wp-content/uploads/2015/10/034.jpg)
 
 估计协方差的方法多种多样，最常用的是通过样本协方差矩阵进行估计。但是这种经验方法在个体众多的移动通信网络中却不适用，通常来说，移动通信网络中个体个数都是数以万计的，而对每个个体的观测个数（如使用月数）却是有限的，因此经典的协方差估计方法并不适用。
 
@@ -345,7 +345,7 @@ $$\Sigma(A)=\beta\_0I\_p+\beta\_1A+\cdots +\beta\_dA^d$$
 
 **3.2.3** **实际案例**
 
-[<img class="aligncenter size-full wp-image-11470" src="https://cos.name/wp-content/uploads/2015/10/035.jpg" alt="035" width="417" height="400" srcset="https://cos.name/wp-content/uploads/2015/10/035.jpg 417w, https://cos.name/wp-content/uploads/2015/10/035-300x288.jpg 300w" sizes="(max-width: 417px) 100vw, 417px" />](https://cos.name/wp-content/uploads/2015/10/035.jpg)
+![035](https://cos.name/wp-content/uploads/2015/10/035.jpg)
 
 在此，我们结合实际案例，说明如何通过网络信息寻找最有影响力个体。数据来源是四川大学大一学生的校园网络，共包含6856个学生。记录他们每人在2012年1月份的通话量，并且获取他们相互之间的通话关系。
 
@@ -361,7 +361,7 @@ $$\Sigma(A)=1.17I_p +0.12A+0.07A^2$$
 
 我们选取了国内某大型通讯公司5万左右的VIP用户近3个月的基础通话信息数据并对其离网率进行分析。我们关心的问题是什么样的客户更容易离网？对此我们有以下发现，首先对于一些比较传统的指标我们发现：年龄越大的用户越不容易离网，入网时间越长的人越不容易离网，延迟缴费的人越容易离网。在这些指标上，我们又引入了网络信息的变量，具体的我们定义了测量一个用户网络结构的三个指标：**网络中心度、网络紧密度和网络平衡度**。其中网络中心度用与该用户有过通话的人数进行测量，我们发现一个用户的网络中心度越高，越不容易流失，因为他的好友很多，如果一旦离网，会给他带来很高的转换成本。网络紧密度我们用人均通话时长进行测量，分析结果表明人均通话时长越长，越不容易流失，这说明用户的网络紧密度越高，他在网络中的粘性越大，也就越不容易离开。最后的网络平衡度测量的是和一个人通话的所有人中通话时长的分布，简单来说我们想看看一个人所有通话中他的通话时长是如何分布，是不是都集中在某几个人身上，还是和每个人的通话时长都差不多，如果这个值越大，说明和他通话的人越集中（也就是说这个人只和那么有限的几个人通话），如果这个值越小，说明和他通话的人越分散。我们发现该指标越大的人越容易流失，说明和他通话的人越集中，那么他要离网的话，成本并不高，因为只需通知几个人即可。在具体的预测中我们也发现加入了这些网络信息变量的模型要比传统模型的预测精度有所提高。
 
-[<img class="aligncenter size-full wp-image-11471" src="https://cos.name/wp-content/uploads/2015/10/036.jpg" alt="036" width="1280" height="720" srcset="https://cos.name/wp-content/uploads/2015/10/036.jpg 1280w, https://cos.name/wp-content/uploads/2015/10/036-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/10/036-500x281.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/10/036.jpg)
+![036](https://cos.name/wp-content/uploads/2015/10/036.jpg)
 
 在这个研究中我们比较感兴趣的就是网络平衡度这个概念,为此我们看上图这个简单的例子,假设左右两边的目标客户他们的基本通话数据都一致,以往我们很少去关注一个人的通话分布,现在我们会发现左边的客户明显有一个经常联系的对象(其中连线越粗表示二者联系越紧密),而右边的客户基本和所有通话好友处于一个比较平均的状态.所以我们可以推断左边的目标客户比右边的目标客户更容易离网.
 
@@ -373,19 +373,19 @@ $$\Sigma(A)=1.17I_p +0.12A+0.07A^2$$
 
 网络结构信息可以帮助我们对用户的行为进行推断，推断的基础来源于我们认为“物以类聚、人以群分”，相似的个体之间会受到影响，例如，如果你的周围都是信用记录良好的人，那么你的信用应该也不会差，相反，如果你的周围都是一些经常欠账不还的人，那么你有很大的可能信用也不会好。正如下图所示,如果有了网络结构信息,那么我们就可以基于好友的行为对图中两个问号的个体的一些偏好进行推断.
 
-[<img class="aligncenter size-full wp-image-11472" src="https://cos.name/wp-content/uploads/2015/10/037.jpg" alt="037" width="1280" height="720" srcset="https://cos.name/wp-content/uploads/2015/10/037.jpg 1280w, https://cos.name/wp-content/uploads/2015/10/037-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/10/037-500x281.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/10/037.jpg)
+![037](https://cos.name/wp-content/uploads/2015/10/037.jpg)
 
 在此之前我们需要对一个群体中人与人之间的相互影响程度做一个判断，将其定义为人与人之间的相互依赖度，这是我们关心的参数，记为 。根据我们所获得网络结构信息，利用空间自回归模型对 进行估计，这里我们用一个网络模型来简单描述个体的偏好是如何形成的,如下图,左侧是一个高度简化的网络结构,其中红线代表互相关注,蓝线代表单向关注,如果有关注关系则在右侧的的单元格里记为“1”，否则记为“0”。其中Y代表个体的偏好，我们认为好友的影响是有限的，所以如果我有四个好友，那么我受到的影响将是他们的平均影响， 则是我们关心的参数：人与人之间的依赖程度。
 
-[<img class="aligncenter size-full wp-image-11473" src="https://cos.name/wp-content/uploads/2015/10/038.jpg" alt="038" width="1280" height="720" srcset="https://cos.name/wp-content/uploads/2015/10/038.jpg 1280w, https://cos.name/wp-content/uploads/2015/10/038-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/10/038-500x281.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/10/038.jpg)
+![038](https://cos.name/wp-content/uploads/2015/10/038.jpg)
 
 我们将以上的描述用数学模型的形式展现出来，这就应用到了空间自回归模型，如下图所示，其中$\mathbb{Y}$ 是一组列向量，表示一组个体的偏好测量，W是标准化的邻接矩阵，刻画了网络结构。这是基于全网数据的模型。
 
-[<img class="aligncenter size-full wp-image-11474" src="https://cos.name/wp-content/uploads/2015/10/039.jpg" alt="039" width="1280" height="720" srcset="https://cos.name/wp-content/uploads/2015/10/039.jpg 1280w, https://cos.name/wp-content/uploads/2015/10/039-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/10/039-500x281.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/10/039.jpg)
+![039](https://cos.name/wp-content/uploads/2015/10/039.jpg)
 
 在估计的过程中我们需要解决的一个问题是我们不可能获得全网的数据，只能利用抽样的数据对 $\rho$进行估计，这就意味着某些用户的好友信息是不全的，因为抽样的原因我们只能获取他的一部分好友，但是我们发现只要能知道用户在全网中的好友数（例如在微博中这个数字是可以轻易获得的），那么就可以对参数进行无偏估计。
 
-[<img class="aligncenter size-full wp-image-11475" src="https://cos.name/wp-content/uploads/2015/10/040.jpg" alt="040" width="1280" height="720" srcset="https://cos.name/wp-content/uploads/2015/10/040.jpg 1280w, https://cos.name/wp-content/uploads/2015/10/040-300x169.jpg 300w, https://cos.name/wp-content/uploads/2015/10/040-500x281.jpg 500w" sizes="(max-width: 1280px) 100vw, 1280px" />](https://cos.name/wp-content/uploads/2015/10/040.jpg)
+![040](https://cos.name/wp-content/uploads/2015/10/040.jpg)
 
 在研究中我们还发现，给定相同的样本量情况下，如果想要使得估计精度提高，那么需要采取滚雪球的抽样方法，因为这样可以保证尽可能多的抽到是好友关系的个体。另外有关网络结构数据的计算问题，我们也提出了“成对似然理论”的思想，简单的说在具体的计算过程中我们考虑成对的个体，只有那些有关系的个体才会对计算有贡献。通过这样小小的改进我们大大提高了处理网络数据运算的速度。
 

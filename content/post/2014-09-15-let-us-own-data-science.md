@@ -22,7 +22,7 @@ slug: let-us-own-data-science
 
 讲座摘要：This talk is a repeat of my IMS Presidential Address in Sydney at the joint conference of Statistical Society of Australia and IMS in July, 2014. It is about the history of the statistics discipline, the intimate connections between statistics and computing, and the need for Statistics to embrace data science.
 
-幻灯片：<a href="http://www.stat.berkeley.edu/~binyu/ps/papers2014/IMS-pres-address14-yu.pdf" target="_blank">http://www.stat.berkeley.edu/~<wbr />binyu/ps/papers2014/IMS-pres-<wbr />address14-yu.pdf</a>
+幻灯片：[http://www.stat.berkeley.edu/~<wbr></wbr>binyu/ps/papers2014/IMS-pres-<wbr></wbr>address14-yu.pdf](http://www.stat.berkeley.edu/~binyu/ps/papers2014/IMS-pres-address14-yu.pdf)
 
 <p style="color: #333333;">
   中文演讲视频：
@@ -31,4 +31,4 @@ slug: let-us-own-data-science
 <embed src="http://player.youku.com/player.php/sid/XNzY1MTk2OTY0/v.swf" type="application/x-shockwave-flash" width="480" height="400" align="middle">
 </embed>
 
-在悉尼的英文演讲视频(略有不同)：<a href="http://www.youtube.com/watch?v=92OjsYQJC1U" target="_blank">http://www.youtube.com/watch?v=92OjsYQJC1U</a>
+在悉尼的英文演讲视频(略有不同)：[http://www.youtube.com/watch?v=92OjsYQJC1U](http://www.youtube.com/watch?v=92OjsYQJC1U)

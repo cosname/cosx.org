@@ -15,7 +15,7 @@ slug: cos-interview-rob-j-hyndman
 
 【COS编辑部按】：受访者：[Rob J. Hyndman](http://robjhyndman.com/)，采访者：[Earo Wang](http://earo.me/)，译者：[黄俊文](http://www.fyears.org/)。原文[在这](http://earo.me/2014/01/interview-with-rob/)。
 
-_Rob J. Hyndman 是澳大利亚的 [Monash University](http://www.monash.edu/) 的统计学教授以及 International Journal of Forecasting 的主编。他也是 `forecast` 和 `hts` 等广泛被使用的 R 包的作者。_
+Rob J. Hyndman 是澳大利亚的 [Monash University](http://www.monash.edu/) 的统计学教授以及 International Journal of Forecasting 的主编。他也是 `forecast` 和 `hts` 等广泛被使用的 R 包的作者。
 
 **Earo**: 你曾经获得的是理学荣誉学士学位。那么你为什么选择统计学作为你的专业，以及统计学有什么吸引到你的呢？
 
@@ -25,7 +25,7 @@ _Rob J. Hyndman 是澳大利亚的 [Monash University](http://www.monash.edu/) �
 
 **Earo**: 既然你已经做了二十多年的学者，那么你觉得现在的统计学的课程结构等和你本科时代的还是不是一样？
 
-**Rob**: 本科课程很相似。也许它应该改变更加多。（_但是怎样变化呢？_）我觉得统计学相关训练应该加入更加多的计算，特别是当数据集变得更加大和复杂的时候。当然课程是会变化的，但是大学在本科教育中的变化很慢，特别是开始的几年。另一方面，在任何好的大学，高等的课程都应该不断的更新。
+**Rob**: 本科课程很相似。也许它应该改变更加多。（但是怎样变化呢？）我觉得统计学相关训练应该加入更加多的计算，特别是当数据集变得更加大和复杂的时候。当然课程是会变化的，但是大学在本科教育中的变化很慢，特别是开始的几年。另一方面，在任何好的大学，高等的课程都应该不断的更新。
 
 **Earo**: 你提到了在大数据时代我们应该加入更加多的计算的训练。那么你是怎样定义大数据的？以及你认为数据科学和统计学之间的关系是怎样的？
 
@@ -61,6 +61,6 @@ _Rob J. Hyndman 是澳大利亚的 [Monash University](http://www.monash.edu/) �
 
 有时，我会做一些免费的咨询工作，那些是对国家有利的，不过没有什么研究成分。有二十年，我参与到 Victoria 的 12 年级学生成绩换算工作（the scaling of all year 12 marks in Victoria）中。算法根据学生的成绩换算成一个能够各个学科之间比较的方式。这些标准化的成绩可以用于选择学生进入大学中。我免费地做这项工作，因为我认为这很重要。我也是澳大利亚统计局的一个顾问。我告诉他们为政府收集和分析数据的方法。
 
-我的咨询工作在教育中也很有用，因为这给了我告诉给学生的故事，学生经常喜欢听到我做过的事情。每样事情 &#8212; 研究，咨询，教育 &#8212; 都结合在一起，我觉得很好。
+我的咨询工作在教育中也很有用，因为这给了我告诉给学生的故事，学生经常喜欢听到我做过的事情。每样事情 — 研究，咨询，教育 — 都结合在一起，我觉得很好。
 
-![Rob](https://dl.dropboxusercontent.com/u/7131169/earo.me/rob.JPG)
+![rob](https://cloud.githubusercontent.com/assets/18478302/24318161/e8619f18-113b-11e7-8895-9c5d5ff49034.JPG)

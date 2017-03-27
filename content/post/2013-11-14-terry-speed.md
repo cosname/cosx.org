@@ -15,16 +15,16 @@ slug: terry-speed
 ---
 
 <p style="padding-left: 60px;">
-  <span style="color: #808080;">【COS编辑部按】本译文原文来自澳大利亚<span style="text-decoration: underline;"><a href="http://www.scienceinpublic.com.au/"><span style="color: #808080; text-decoration: underline;">Science in Public</span></a></span>，讲 述Terry Speed，一位著作等身的统计学者，对学术和社会生活的热情；<span style="text-decoration: underline;"><a href="http://www.scienceinpublic.com.au/prime-ministers-prize/2013-science"><span style="color: #808080; text-decoration: underline;">原文</span></a></span>版权归 Science in Public所有。</span><span style="color: #808080;">本文译者：尤晓斌(新加坡国立大学)；审校：李妙竹(上海生科院)、施涛(The Ohio State University)。</span>
+  <span style="color: #808080;">【COS编辑部按】本译文原文来自澳大利亚<span style="text-decoration: underline;">[<span style="color: #808080; text-decoration: underline;">Science in Public</span>](http://www.scienceinpublic.com.au/)</span>，讲 述Terry Speed，一位著作等身的统计学者，对学术和社会生活的热情；<span style="text-decoration: underline;">[<span style="color: #808080; text-decoration: underline;">原文</span>](http://www.scienceinpublic.com.au/prime-ministers-prize/2013-science)</span>版权归 Science in Public所有。</span><span style="color: #808080;">本文译者：尤晓斌(新加坡国立大学)；审校：李妙竹(上海生科院)、施涛(The Ohio State University)。</span>
 </p>
 
-<span style="color: #000000;"><strong><em>&#8220;统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍&#8221;</em></strong></span>
+<span style="color: #000000;"><strong><em>“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”</em></strong></span>
 
 <p style="text-align: right;">
   <span style="color: #000000;"><strong><em>—Terry Speed</em></strong></span>
 </p>
 
-<img class="aligncenter" alt="alt" src="https://github.com/cosname/translation/raw/master/terryspeed/fig/Terry-Speed-1-300x200.jpg" />
+![alt](https://github.com/cosname/translation/raw/master/terryspeed/fig/Terry-Speed-1-300x200.jpg)
 
 <p style="text-align: center;">
   图1 Terry Speed
@@ -56,7 +56,7 @@ Terry在本科学习行将结束的时候结婚了，几个月后他便在Monash
 
 Terry在UWA的时候广泛地做对外咨询工作。他经常同一些CSIRO的研究学者紧密合作。他所关注的问题遍及诸如原住民的刑拘比率，Perth的淡水使用到菱形钻石的大小分布等等，涉猎颇广，这也为他赢得了应用统计学家的美誉。最终，他也因自己的成就担任了CSIRO数学和统计学的系主任。
 
-其实Terry的真实想法是要通过实际应用来促进理论的发展。大家通常都认为统计学处于其他学科服务的地位，但他对此一点也不介意。“我倒是很同意这种说法，我觉得统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙让我们能溜进任何学科的后院里随便玩耍(译者按：此说法为Terry Speed引述自John Tukey，原文为：&#8221;The best thing about being a statistician is that you get to play in everyone&#8217;s backyard.&#8221;)，” 当问及他现在的研究方向时，他会回答，“我把统计运用到遗传学和分子生物的研究当中，癌症是一个专攻的方向。”
+其实Terry的真实想法是要通过实际应用来促进理论的发展。大家通常都认为统计学处于其他学科服务的地位，但他对此一点也不介意。“我倒是很同意这种说法，我觉得统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙让我们能溜进任何学科的后院里随便玩耍(译者按：此说法为Terry Speed引述自John Tukey，原文为：”The best thing about being a statistician is that you get to play in everyone’s backyard.”)，” 当问及他现在的研究方向时，他会回答，“我把统计运用到遗传学和分子生物的研究当中，癌症是一个专攻的方向。”
 
 在堪培拉CSIRO工作四年半之后，Terry于1987年获得了UC伯克利统计学系的教职，这可是在世界一流的统计学府供职！从CSIRO的实践环境中离开，他进入非常学术得世界，成为其中少数得几个同时具有行政管理和顾问经验的科研人员。没多久，他就接管了系里的咨询顾问事务，然后又担任了系主任。
 

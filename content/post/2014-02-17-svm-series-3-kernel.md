@@ -12,7 +12,7 @@ tags:
 slug: svm-series-3-kernel
 ---
 
-_[<img class="size-full wp-image-9529 alignright" alt="two_circles" src="https://cos.name/wp-content/uploads/2014/02/two_circles.png" width="280" height="224" />](https://cos.name/wp-content/uploads/2014/02/two_circles.png)_原文链接请点击_<a href="http://blog.pluskid.org/?p=685" target="_blank">这里</a>_
+_ ![two_circles](https://cos.name/wp-content/uploads/2014/02/two_circles.png) _原文链接请点击_[这里](http://blog.pluskid.org/?p=685)_
 
 前面我们介绍了线性情况下的支持向量机，它通过寻找一个线性的超平面来达到对数据进行分类的目的。不过，由于是线性方法，所以对非线性的数据就没有办法处理了。例如图中的两类数据，分别分布为两个圆圈的形状，不论是任何高级的分类器，只要它是线性的，就没法处理，SVM 也不行。因为这样的数据本身就是线性不可分的。
 
@@ -44,7 +44,7 @@ a\_1X\_1^2 + a\_2(X\_2-c)^2 + a_3 = 0
 
 因此我只需要把它映射到 $Z\_1 = X\_1^2$, $Z\_2=X\_2^2$, $Z\_3=X\_2$ 这样一个三维空间中即可，下图（这是一个 gif 动画）即是映射之后的结果，将坐标轴经过适当的旋转，就可以很明显地看出，数据是可以通过一个平面来分开的：
 
-[<img class="aligncenter size-full wp-image-9530" alt="rotate" src="https://cos.name/wp-content/uploads/2014/02/rotate.gif" width="444" height="356" />](https://cos.name/wp-content/uploads/2014/02/rotate.gif)
+![rotate](https://cos.name/wp-content/uploads/2014/02/rotate.gif)
 
 现在让我们再回到 SVM 的情形，假设原始的数据时非线性的，我们通过一个映射 $\phi(\cdot)$ 将其映射到一个高维空间中，数据变得线性可分了，这个时候，我们就可以使用原来的推导来进行计算，只是所有的推导现在是在新的空间，而不是原始空间中进行。当然，推导过程也并不是可以简单地直接类比的，例如，原本我们要求超平面的法向量 $w$ ，但是如果映射之后得到的新空间的维度是无穷维的（确实会出现这样的情况，比如后面会提到的 Gaussian Kernel ），要表示一个无穷维的向量描述起来就比较麻烦。于是我们不妨先忽略过这些细节，直接从最终的结论来分析，回忆一下，我们上一次得到的最终的分类函数是这样的：
 
@@ -68,7 +68,7 @@ f(x) = \sum\_{i=1}^n\alpha\_i y\_i \langle \phi(x\_i), \phi(x)\rangle + b
   
 \begin{align}
   
-\max\_\alpha &\sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\langle \phi(x\_i),\phi(x\_j)\rangle \\
+\max\_\alpha &\sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\langle \phi(x\_i),\phi(x\_j)\rangle \\
   
 s.t., &\alpha_i\geq 0, i=1,\ldots,n \\
   
@@ -128,7 +128,7 @@ s.t., &\alpha_i\geq 0, i=1,\ldots,n \\
   
 \begin{align}
   
-\max\_\alpha &\sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j \color{red}{\kappa(x\_i, x\_j)} \\
+\max\_\alpha &\sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j \color{red}{\kappa(x\_i, x\_j)} \\
   
 s.t., &\alpha_i\geq 0, i=1,\ldots,n \\
   

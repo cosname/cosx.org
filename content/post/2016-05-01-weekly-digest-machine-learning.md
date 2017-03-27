@@ -13,11 +13,11 @@ tags:
 slug: weekly-digest-machine-learning
 ---
 
-本期投稿：冯凌秉  <a href="http://weibo.com/u/1657470871?from=feed&loc=avatar" target="_blank">王威廉 </a>  王小宁   视觉机器人            编辑：王小宁
+本期投稿：冯凌秉  [王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)  王小宁   视觉机器人            编辑：王小宁
 
 #### <span style="line-height: 1.5;">机器学习</span>
 
-<span style="line-height: 1.5;">非平衡样本的分类问题是机器学习的经典问题之一，困扰着不少童鞋。这篇博文提供在R中解决该问题的<a href="http://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/">实用指南</a>。</span>
+<span style="line-height: 1.5;">非平衡样本的分类问题是机器学习的经典问题之一，困扰着不少童鞋。这篇博文提供在R中解决该问题的[实用指南](http://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/)。</span>
 
 Github上比较受欢迎的深度学习项目（Top Deep Learning Projects），按照获得星星个数的排名，包括一些教程项目等。 学习完这个，基本上就可以闯荡天涯啦！
 

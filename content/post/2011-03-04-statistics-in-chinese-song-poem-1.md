@@ -15,7 +15,7 @@ slug: statistics-in-chinese-song-poem-1
 ---
 
 <p style="text-align: center;">
-  <img class="aligncenter size-large wp-image-3210" title="统计词话配图" src="https://cos.name/wp-content/uploads/2011/03/image-500x361.jpg" alt="" width="500" height="361" srcset="https://cos.name/wp-content/uploads/2011/03/image-500x361.jpg 500w, https://cos.name/wp-content/uploads/2011/03/image-300x216.jpg 300w, https://cos.name/wp-content/uploads/2011/03/image.jpg 590w" sizes="(max-width: 500px) 100vw, 500px" />
+  ![统计词话配图](https://cos.name/wp-content/uploads/2011/03/image.jpg)
 </p>
 
 不知道这个标题是否有足够的吸引力把你骗进来。如果你认为统计是一个到处充满了期望方差分布回归随机多元和概率的东西，那么……你可能是对的，不过本文想要告诉你的是，你其实还可以用统计来做一些你关心的事情，比如现在，我们既谈风月，也谈统计。:D
@@ -36,7 +36,7 @@ slug: statistics-in-chinese-song-poem-1
 
 如果不考虑其它的可能，那么总共就有11个词语。当然，这其中会有很多无意义的组合，但是我们可以预想的是，这些无意义的组合将不太可能大规模地重复出现，因此在排序的过程中它们自动地就被排在高频词语之后了。通过这种做法，宋词中的每句话大体都能分成10个左右的词语单位，然后对所有的这些词语单位进行频数统计，就可以得到最终的高频词语列表了。
 
-下面就通过一段R程序来进行一次实际的分析，用到的数据是从网络上整理的《全宋词》电子资料，其中可能有部分字词不正确。完整的程序和数据可以从<a href="https://cos.name/wp-content/uploads/2011/03/SongPoem.tar.gz" target="_blank">这里下载</a>。
+下面就通过一段R程序来进行一次实际的分析，用到的数据是从网络上整理的《全宋词》电子资料，其中可能有部分字词不正确。完整的程序和数据可以从[这里下载](https://cos.name/wp-content/uploads/2011/03/SongPoem.tar.gz)。
 
 首先，当然是读取数据。
 

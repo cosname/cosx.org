@@ -12,7 +12,7 @@ tags:
 slug: svm-series-5-support-vector
 ---
 
-_原文链接请点击<a href="http://blog.pluskid.org/?p=696" target="_blank">这里</a>_
+_原文链接请点击[这里](http://blog.pluskid.org/?p=696)_
 
 作为支持向量机系列的基本篇的最后一篇文章，我在这里打算简单地介绍一下用于优化 dual 问题的 Sequential Minimal Optimization (SMO) 方法。确确实实只是简单介绍一下，原因主要有两个：第一这类优化算法，特别是牵涉到实现细节的时候，干巴巴地讲算法不太好玩，有时候讲出来每个人实现得结果还不一样，提一下方法，再结合实际的实现代码的话，应该会更加明了，而且也能看出理论和实践之间的差别；另外（其实这个是主要原因）我自己对这一块也确实不太懂。 :p
 
@@ -22,7 +22,7 @@ _原文链接请点击<a href="http://blog.pluskid.org/?p=696" target="_blank">�
   
 \begin{align}
   
-\max\_\alpha &\sum\_{i=1}^n\alpha\_i &#8211; \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\kappa( x\_i,x\_j) \\
+\max\_\alpha &\sum\_{i=1}^n\alpha\_i – \frac{1}{2}\sum\_{i,j=1}^n\alpha\_i\alpha\_jy\_iy\_j\kappa( x\_i,x\_j) \\
   
 s.t., &0\leq \alpha_i\leq C, i=1,\ldots,n \\
   
@@ -48,7 +48,7 @@ s.t., &0\leq \alpha_i\leq C, i=1,\ldots,n \\
 
 其中那个从 3 到 n 的作和由于都是常量，我们统一记作 $K$ ，然后由于 $y\in\{-1,+1\}$ ，所以 $y\_2$ 和 $1/y\_2$ 是完全一样的，所以可以拿到分子上来。将这个式子带入原来的目标函数中，可以消去 $\alpha\_2$ ，从而变成一个一元二次函数，具体展开的形式我就不写了，总之现在变成了一个非常简单的问题：带区间约束的一元二次函数极值问题——这个也是初中就学过求解方法的。唯一需要注意一点的就是这里的约束条件，一个就是 $\alpha\_1$ 本身需要满足 $0\leq\alpha\_1\leq C$ ，然后由于 $\alpha\_2$ 也要满足同样的约束，即：
   
-[<img class="size-full wp-image-9652 alignright" alt="NO" src="https://cos.name/wp-content/uploads/2014/03/NO.png" width="204" height="200" />](https://cos.name/wp-content/uploads/2014/03/NO.png)\[
+![NO](https://cos.name/wp-content/uploads/2014/03/NO.png)\[
   
 0\leq y\_2 (K-\alpha\_1y_1) \leq C
   

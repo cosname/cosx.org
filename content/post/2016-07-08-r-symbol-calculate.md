@@ -229,7 +229,7 @@ Normfun(2)
                                                                                 </div>
                                                                                 
                                                                                 <p>
-                                                                                  至此我们可以将表达式转化为函数，也许又有读者耐不住了，既然可以用eval函数直接计算，干嘛还要转化为函数？这个主要是写成函数比较方便，你可能需要重复计算不同的函数值，甚至放在你的算法的中间过程中&#8230;&#8230;(此处省略500字，请读者自己理解)<br /> 终于又回到开篇处Tetrachoric函数，里面要计算任意阶导数，反正现在是没问题了，管他几阶，算完后化简转函数，请看：
+                                                                                  至此我们可以将表达式转化为函数，也许又有读者耐不住了，既然可以用eval函数直接计算，干嘛还要转化为函数？这个主要是写成函数比较方便，你可能需要重复计算不同的函数值，甚至放在你的算法的中间过程中……(此处省略500字，请读者自己理解)<br /> 终于又回到开篇处Tetrachoric函数，里面要计算任意阶导数，反正现在是没问题了，管他几阶，算完后化简转函数，请看：
                                                                                 </p>
                                                                                 
                                                                                 <pre>Tetrachoric&lt;-function(x,j){
@@ -247,7 +247,7 @@ Tetrachoric(2,3)
 ## -(x * exp(-(x^2/2))/sqrt(2 * pi))</pre>
                                                                                 
                                                                                 <p>
-                                                                                  作为本节的最后，献上函数图像，这个函数的作用主要是计算多元正态分布的概率，详细内容参看 [2]。<br /> <a href="https://cos.name/wp-content/uploads/2016/07/Tetrachoric.jpg"><img class="aligncenter size-full wp-image-12827" src="https://cos.name/wp-content/uploads/2016/07/Tetrachoric.jpg" alt="Tetrachoric" width="1386" height="821" srcset="https://cos.name/wp-content/uploads/2016/07/Tetrachoric.jpg 1386w, https://cos.name/wp-content/uploads/2016/07/Tetrachoric-300x178.jpg 300w, https://cos.name/wp-content/uploads/2016/07/Tetrachoric-768x455.jpg 768w, https://cos.name/wp-content/uploads/2016/07/Tetrachoric-500x296.jpg 500w" sizes="(max-width: 1386px) 100vw, 1386px" /></a>
+                                                                                  作为本节的最后，献上函数图像，这个函数的作用主要是计算多元正态分布的概率，详细内容参看 [2]。<br /> ![Tetrachoric](https://cos.name/wp-content/uploads/2016/07/Tetrachoric.jpg)
                                                                                 </p>
                                                                               </div>
                                                                             </div>
@@ -297,7 +297,7 @@ Tetrachoric(2,3)
                                                                                 </p>
                                                                                 
                                                                                 <p>
-                                                                                  <a href="https://cos.name/wp-content/uploads/2016/07/Rosenbrock2.png"><img class="aligncenter size-full wp-image-12830" src="https://cos.name/wp-content/uploads/2016/07/Rosenbrock2.png" alt="Rosenbrock2" width="888" height="849" srcset="https://cos.name/wp-content/uploads/2016/07/Rosenbrock2.png 888w, https://cos.name/wp-content/uploads/2016/07/Rosenbrock2-300x287.png 300w, https://cos.name/wp-content/uploads/2016/07/Rosenbrock2-768x734.png 768w, https://cos.name/wp-content/uploads/2016/07/Rosenbrock2-500x478.png 500w" sizes="(max-width: 888px) 100vw, 888px" /></a>
+                                                                                  ![Rosenbrock2](https://cos.name/wp-content/uploads/2016/07/Rosenbrock2.png)
                                                                                 </p>
                                                                                 
                                                                                 <p>
@@ -500,7 +500,7 @@ grr2 &lt;- function(x) {
                                                                                       <span style="color: #000000;"><strong>原创文章，版权所有。</strong></span></section> <section class="tn-Powered-by-XIUMI"></section> <section class="tn-Powered-by-XIUMI"></section> 
                                                                                       
                                                                                       <p>
-                                                                                        <span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。<a href="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg"><img class="aligncenter size-full wp-image-12657" src="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg" alt="qrcode_for_gh_946beec24de4_258" width="258" height="258" srcset="https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg 258w, https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258-150x150.jpg 150w" sizes="(max-width: 258px) 100vw, 258px" /></a></strong></span>
+                                                                                        <span style="color: #000000;"><strong>敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)</strong></span>
                                                                                       </p>
                                                                                       
                                                                                       <p>

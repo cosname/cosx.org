@@ -23,9 +23,11 @@ slug: an-introduction-to-econometrics
 
 后来美国著名计量经济学家克莱因也认为：计量经济学是数学、统计技术和经济分析的综合。也可以说，计量经济学不仅是指对经济现象加以测量，而且表明是根据一定的经济理论进行计量的意思。计量经济学的基本内容和用途可由下图1表示：
 
-计量经济学的基础是一整套建立在数理统计理论上的计量方法，属于计量经济学的“硬件”，其主要内容如下：<figure id="attachment_119" style="width: 300px" class="wp-caption aligncenter">
+计量经济学的基础是一整套建立在数理统计理论上的计量方法，属于计量经济学的“硬件”，其主要内容如下：
 
-[<img class="size-medium wp-image-119" title="计量经济学方法" src="https://cos.name/wp-content/uploads/2008/11/1-300x137.jpg" alt="" width="300" height="137" srcset="https://cos.name/wp-content/uploads/2008/11/1-300x137.jpg 300w, https://cos.name/wp-content/uploads/2008/11/1.jpg 576w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2008/11/1.jpg)<figcaption class="wp-caption-text">计量经济学方法</figcaption></figure> <figure id="attachment_120" style="width: 300px" class="wp-caption aligncenter">[<img class="size-medium wp-image-120" title="计量经济学方法" src="https://cos.name/wp-content/uploads/2008/11/2-300x283.jpg" alt="" width="300" height="283" srcset="https://cos.name/wp-content/uploads/2008/11/2-300x283.jpg 300w, https://cos.name/wp-content/uploads/2008/11/2.jpg 586w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2008/11/2.jpg)<figcaption class="wp-caption-text">计量经济学方法</figcaption></figure> 
+![计量经济学方法-图1](https://cos.name/wp-content/uploads/2008/11/1.jpg "计量经济学方法-图1")
+
+![计量经济学方法-图2](https://cos.name/wp-content/uploads/2008/11/2.jpg "计量经济学方法-图2")
 
 从上面的介绍可看出，计量经济学的主要用途或目的主要有两个方面：
 

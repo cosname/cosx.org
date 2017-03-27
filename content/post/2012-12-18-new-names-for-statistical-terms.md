@@ -7,15 +7,15 @@ categories:
 slug: new-names-for-statistical-terms
 ---
 
-原文载于卡耐基梅隆大学统计系教授Larry Wasserman的博客：<a href="http://normaldeviate.wordpress.com/2012/12/16/new-names-for-statistical-methods/" target="_blank">Normal Deviate</a>
+原文载于卡耐基梅隆大学统计系教授Larry Wasserman的博客：[Normal Deviate](http://normaldeviate.wordpress.com/2012/12/16/new-names-for-statistical-methods/)
 
 有没有觉得很多统计学家实在是想象力有限——是时候把那些迂腐无趣的名字踢出历史了！看看这些如何？
 
-**贝叶斯推断**：虽然贝叶斯当年确实用他那个著名的定理来做了一些计算&#8230;但明明是拉普拉斯搞出来的系统推断好不好！
+**贝叶斯推断**：虽然贝叶斯当年确实用他那个著名的定理来做了一些计算…但明明是拉普拉斯搞出来的系统推断好不好！
   
 新名字：**拉普拉斯推断**
 
-**贝叶斯网络**：一个有向无环图加上了一些概率分布就可以跟贝叶斯推断扯上亲戚了？或者应该叫拉普拉斯推断？维基百科明明告诉你，这只是Judea Pearl无聊时候臆想出来的名字&#8230;
+**贝叶斯网络**：一个有向无环图加上了一些概率分布就可以跟贝叶斯推断扯上亲戚了？或者应该叫拉普拉斯推断？维基百科明明告诉你，这只是Judea Pearl无聊时候臆想出来的名字…
   
 新名字：**珀尔图**
 
@@ -23,7 +23,7 @@ slug: new-names-for-statistical-terms
   
 新名字：**黄金律**
 
-**无偏估计量**：总是听起来很厉害的感觉&#8230;
+**无偏估计量**：总是听起来很厉害的感觉…
   
 新名字：**均值中心化的估计量**
 
@@ -31,7 +31,7 @@ slug: new-names-for-statistical-terms
   
 新名字：**不可思议集**（原文为Incredible Set，大家自行体悟英文意思吧）
 
-**置信区间**：本来想说“均一频率覆盖集”，不过听起来有点拗口&#8230;那么短一点，就叫：
+**置信区间**：本来想说“均一频率覆盖集”，不过听起来有点拗口…那么短一点，就叫：
   
 新名字：**覆盖集**
 
@@ -61,11 +61,11 @@ slug: new-names-for-statistical-terms
   
 新名字： **泰瑟枪（Taser，Tibshirani’s Awesome Sparse Estimator for regression）**
 
-**斯蒂格勒的得名由来定律（Stigler’s law of eponymy）**：如果你觉得不知所云&#8230;还是<a href="http://en.wikipedia.org/wiki/Stigler%27s_law_of_eponymy" target="_blank">去维基百科查查吧</a>。它会告诉你，其实这东西应该叫：
+**斯蒂格勒的得名由来定律（Stigler’s law of eponymy）**：如果你觉得不知所云…还是[去维基百科查查吧](http://en.wikipedia.org/wiki/Stigler%27s_law_of_eponymy)。它会告诉你，其实这东西应该叫：
   
 新名字：**斯蒂格勒的得名由来定律**（小编表示看完wiki后已无力吐槽-_-||）
 
-**神经网络**：还是名副其实一点吧&#8230;
+**神经网络**：还是名副其实一点吧…
   
 新名字：**非线性回归**
 
@@ -79,17 +79,17 @@ slug: new-names-for-statistical-terms
 
 **U-统计量**：显然它就是：
   
-新名字：**i统计量**（小编表示基本不解&#8230;）
+新名字：**i统计量**（小编表示基本不解…）
 
-**核**：统计学中，这东西指的是局部平滑的方法，比如核密度估计和Nadaraya-Watson核回归。有些人也用“Parzen Window&#8221;——你家在重新装修么？机器学习中，它指的是Mercer核（再生核希尔伯特空间中的一部分）。我们还是稍稍区分一下吧：
+**核**：统计学中，这东西指的是局部平滑的方法，比如核密度估计和Nadaraya-Watson核回归。有些人也用“Parzen Window”——你家在重新装修么？机器学习中，它指的是Mercer核（再生核希尔伯特空间中的一部分）。我们还是稍稍区分一下吧：
   
 新名字：**分别叫做平滑核、Mercer核**
 
-**再生核希尔伯特空间（Reproducing Kernel Hilbert Space）**：念完了瞬间觉得喘不上气来了&#8230;而缩写为RKHS也不怎么优雅。叫它Aronszajn-Bergman空间吧也不怎么顺口。这个怎么样？
+**再生核希尔伯特空间（Reproducing Kernel Hilbert Space）**：念完了瞬间觉得喘不上气来了…而缩写为RKHS也不怎么优雅。叫它Aronszajn-Bergman空间吧也不怎么顺口。这个怎么样？
   
 新名字：**Mercer空间**
 
-. 没有比0更常用的常量了&#8230;鉴于这东西还没有人命名过，我决定把自己载入史册：
+. 没有比0更常用的常量了…鉴于这东西还没有人命名过，我决定把自己载入史册：
   
 新名字：**Wasserman 常量.**
 

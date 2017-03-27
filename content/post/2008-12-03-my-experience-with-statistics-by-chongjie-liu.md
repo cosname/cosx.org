@@ -15,7 +15,7 @@ tags:
 slug: my-experience-with-statistics-by-chongjie-liu
 ---
 
-首次遇到益辉应该是在一个论坛上，讨论了各类专业统计软件的使用情况，就聊到了<a href="http://www.r-project.org" target="_blank">R</a>。接着就开始到cos灌水，慢慢就认识了这个领域里面的很多朋友。而益辉等兄弟姐妹为在统计这个领域的推广“正确”方面实在是做出了极其有益处，乃至可以称为辉煌的工作。
+首次遇到益辉应该是在一个论坛上，讨论了各类专业统计软件的使用情况，就聊到了[R](http://www.r-project.org)。接着就开始到cos灌水，慢慢就认识了这个领域里面的很多朋友。而益辉等兄弟姐妹为在统计这个领域的推广“正确”方面实在是做出了极其有益处，乃至可以称为辉煌的工作。
 
 我对统计学所知实在是业余水平。首先，我没系统正式的学过统计专业的课程；最多算一个自学者。其次，所从事的正式工作和职业中，和统计直接相关的几乎没有；最多只是擦边球式的“应用”了下统计技术和相应的软件。所以受邀而来，实在是汗颜。不过接触统计学倒是比较多，也足见这门学科的普遍和重要性。<!--more-->
 
@@ -28,10 +28,6 @@ slug: my-experience-with-statistics-by-chongjie-liu
 现在换工作回到学校来教书，在新闻传播专业，也和统计不是直接的关系。传播学中使用统计的情形，倒是和社会学相似。不过我们国内传播学做定量的实在是罕见，也占主流的话语权吧；甚至连严肃的研究设计都比较少见，以至于祝建华教授制定计划，给我们大陆内地传播学的青年教师和博士们开设专门的培训讲习班，可谓是用心良苦。在中国传媒大学，也有柯惠新老师等组建的统计研究所等；前段时间遇到港大的陈院长，也请教了下传播学研究实证导向的问题。似乎大家都觉得应该加强这方面的教学科研，但是实际局面似乎寥落了些。
 
 我自己做过的和统计相关的题目比较杂，比如社会调查、生物医学统计、金融统计模拟和建模都涉及过一些。有的是领导安排，有的是帮同学朋友来做的，有的是完全的自娱自乐。希望能和诸位兄弟姐妹多多交流，学到更多新的东西。
-
-<div class="wlWriterSmartContent">
-  Technorati 标签: <a href="http://technorati.com/tags/R" rel="tag">R</a>,<a href="http://technorati.com/tags/SPSS" rel="tag">SPSS</a>,<a href="http://technorati.com/tags/SAS" rel="tag">SAS</a>,<a href="http://technorati.com/tags/Statistics" rel="tag">Statistics</a>,<a href="http://technorati.com/tags/Autobiography" rel="tag">Autobiography</a>
-</div>
 
 不知道这算不算得上是一个自我介绍。
 

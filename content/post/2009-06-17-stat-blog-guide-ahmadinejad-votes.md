@@ -26,11 +26,11 @@ slug: stat-blog-guide-ahmadinejad-votes
 
 ## 一、用数字作弊要小心：关于内贾德的选票
 
-<img title="内贾德" src="http://i3.sinaimg.cn/dy/w/2009-06-13/1244852110_fSEzgk.jpg" alt="内贾德" width="200" height="165" align="right" />日前伊朗的大选可谓轰轰隆隆，颇引人注目，内贾德在胜出之后却引来一片质疑，今日又有传闻说穆萨维才是真正的胜出者。总之疑云重重，那么让政治家玩政治家的游戏吧，我们从另一个视角来关注一下这次选举。密歇根大学的教授<a href="http://www-personal.umich.edu/" target="_blank">Walter R. Mebane, Jr.</a>这几天一直在分析选票数据，今天的文章参见：[Note on the presidential election in Iran, June 2009](http://www-personal.umich.edu/~wmebane/note17jun2009.pdf)（注意论文和数据以及R代码都在更新中，如果不能访问，请到他的主页上找）
+![内贾德](http://i3.sinaimg.cn/dy/w/2009-06-13/1244852110_fSEzgk.jpg "内贾德") 日前伊朗的大选可谓轰轰隆隆，颇引人注目，内贾德在胜出之后却引来一片质疑，今日又有传闻说穆萨维才是真正的胜出者。总之疑云重重，那么让政治家玩政治家的游戏吧，我们从另一个视角来关注一下这次选举。密歇根大学的教授[Walter R. Mebane, Jr.](http://www-personal.umich.edu/)这几天一直在分析选票数据，今天的文章参见：[Note on the presidential election in Iran, June 2009](http://www-personal.umich.edu/~wmebane/note17jun2009.pdf)（注意论文和数据以及R代码都在更新中，如果不能访问，请到他的主页上找）
 
 文章主要基于两点理论去检验选票数据：
 
-  1. 本福特定律（<a title="Wikipedia" href="http://en.wikipedia.org/wiki/Benford%27s_law" target="_blank">Benford&#8217;s Law</a>）：生活中的数据里，1~9这9个数字在**首位**的出现并非均匀分布，例如1出现在一个数字的首位的概率约为1/3，而不是想象中的1/9，越往后的数字出现概率越低。不过，作者得到的选票数据是按地区汇总的，而对于汇总数据，我们往往难以发现它作弊的嫌疑，因为汇总数据倾向于符合本福特定律，从这一点上，作者没有找到足够的证据证明选票数据作弊；
+  1. 本福特定律（[Benford’s Law](http://en.wikipedia.org/wiki/Benford%27s_law "Wikipedia")）：生活中的数据里，1~9这9个数字在**首位**的出现并非均匀分布，例如1出现在一个数字的首位的概率约为1/3，而不是想象中的1/9，越往后的数字出现概率越低。不过，作者得到的选票数据是按地区汇总的，而对于汇总数据，我们往往难以发现它作弊的嫌疑，因为汇总数据倾向于符合本福特定律，从这一点上，作者没有找到足够的证据证明选票数据作弊；
   2. 检验离群点：手头的数据只有选票数，没有其它变量，这种情况下统计建模的局限性很大，似乎各种工具都施展不开，不过作者还是在“艰苦”的条件下建立了过度散布的二项回归模型（overdispersed binomial regression），因变量是二分变量（内贾德 vs 穆萨维），自变量是选票数，看看哪些地区的选票数有离群点出现，熟悉伊朗政局情况的人从这些离群点可能发现违背常理的现象（选票过高？过低？）
 
 看来统计学家总是有办法拷问数据，不知咱国内是否有这样的统计学家呢？
@@ -39,7 +39,7 @@ slug: stat-blog-guide-ahmadinejad-votes
 
 ## 二、飞机被流星撞到的概率多大：法航失事之后的计算
 
-前几天，本站作者、COS论坛元老刘思喆用R计算了一下<a href="http://www.bjt.name/2009/06/france-flight-poisson/" target="_blank">飞机被流星击中而失事的概率</a>，发现一架飞机在11小时飞行过程中被流星击中的概率是双色球中一等奖概率的1/100，看样子可以舒口气，不过坏消息是，20年中被击中的概率就陡然上升到5%了。看来还是双腿走路可靠……
+前几天，本站作者、COS论坛元老刘思喆用R计算了一下[飞机被流星击中而失事的概率](http://www.bjt.name/2009/06/france-flight-poisson/)，发现一架飞机在11小时飞行过程中被流星击中的概率是双色球中一等奖概率的1/100，看样子可以舒口气，不过坏消息是，20年中被击中的概率就陡然上升到5%了。看来还是双腿走路可靠……
 
 然而我想知道的是：
 
@@ -48,16 +48,16 @@ slug: stat-blog-guide-ahmadinejad-votes
 
 ## 三、让R帮你查看是否中了500万大奖：“懒惰”的彩民
 
-这一篇依旧是把统计和R融入生活的刘思喆：<a href="http://www.bjt.name/2009/05/500%e4%b8%87%ef%bc%9f%e5%8e%bb%e4%b9%b0%e5%8f%8c%e8%89%b2%e7%90%83%ef%bc%81/" target="_blank">500万？去买双色球！</a>（被评论为标题党）彩民们每天眼巴巴对着彩票网以及自己的彩票的若干位数字看，实在是很辛苦，因此思喆老大体谅大家，挑灯夜战写了一段R代码，按照该文的描述，彩民们每天只要打开R，就知道自己有没有中奖。我提议，要是哪位读者因此中奖了一定要给思喆老大提成以及给统计之都[捐赠](https://cos.name/donate/ "统计之都捐赠")！
+这一篇依旧是把统计和R融入生活的刘思喆：[500万？去买双色球！](http://www.bjt.name/2009/05/500%e4%b8%87%ef%bc%9f%e5%8e%bb%e4%b9%b0%e5%8f%8c%e8%89%b2%e7%90%83%ef%bc%81/)（被评论为标题党）彩民们每天眼巴巴对着彩票网以及自己的彩票的若干位数字看，实在是很辛苦，因此思喆老大体谅大家，挑灯夜战写了一段R代码，按照该文的描述，彩民们每天只要打开R，就知道自己有没有中奖。我提议，要是哪位读者因此中奖了一定要给思喆老大提成以及给统计之都[捐赠](https://cos.name/donate/ "统计之都捐赠")！
 
 我后来的想法是，干脆写个批处理文件（`R CMD BATCH`），开机自动运行好了，连R都不用打开。懒惰是创新之源，这话没错。
 
-R还有很多“奇怪”的应用，在作者的主页<a title="贝吉塔行星" href="http://www.bjt.name" target="_blank">贝吉塔行星</a>中能找到更多。
+R还有很多“奇怪”的应用，在作者的主页[贝吉塔行星](http://www.bjt.name "贝吉塔行星")中能找到更多。
 
 ## 四、其它文章
 
   * 画函数曲线本来是一件简单的事情，为什么我们总是忘记初中的“描点法”呢：[画曲线的通用办法：描点法画图](http://yihui.name/cn/2009/06/from-points-to-curves/ "Permanent Link to 画曲线的通用办法：描点法画图")（谢益辉）
-  * 标签云将词语文本的大小与其某种属性（例如重要性、出现频率）关联起来，因此标签云图可以直观展示一些词语的属性。例如文本越大表示出现频率越高，那么一眼看去，最大的词就是最热频词了，这里介绍了一种用R生成标签云的方法：<a title="Permanent Link to Creating Tag Cloud Using R and Flash / JavaScript (SWFObject)" rel="bookmark" href="http://yihui.name/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/">Creating Tag Cloud Using R and Flash / JavaScript (SWFObject)</a>（谢益辉）
+  * 标签云将词语文本的大小与其某种属性（例如重要性、出现频率）关联起来，因此标签云图可以直观展示一些词语的属性。例如文本越大表示出现频率越高，那么一眼看去，最大的词就是最热频词了，这里介绍了一种用R生成标签云的方法：[Creating Tag Cloud Using R and Flash / JavaScript (SWFObject)](http://yihui.name/en/2009/06/creating-tag-cloud-using-r-and-flash-javascript-swfobject/ "Permanent Link to Creating Tag Cloud Using R and Flash / JavaScript (SWFObject)")（谢益辉）
   * 最后强烈建议对统计软件感兴趣（尤其是对R）的同志们订阅Journal of Statistical Software的RSS，你会经常发现一些稀奇古怪的论文：http://www.jstatsoft.org/rss（啥？你到现在还不知道RSS是神马东西？快来人把这个火星观众撵出去）
 
 若您平时看到觉得写得好的文章，请勿忘推荐给我们，联系邮箱：contact@cos.name。谢谢！

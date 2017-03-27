@@ -17,7 +17,7 @@ _作者：边蓓蕾      审校：郎大为      编辑：彭晨昱_
 
 今天小编给大家介绍一款新的幻灯片神器：xaringan（中文名：幻灯忍者）。它基于大家都熟悉的 R Markdown 语法，幻灯片中能嵌入 R 代码动态生成输出结果，最后生成的是 HTML5 幻灯片，可以在网页浏览器里打开阅览，我们一起来探个究竟吧。对了，官方教程在这里：<https://slides.yihui.name/xaringan/zh-CN.html>{.uri}
 
-在此声明一下本文适宜读者群：R码农，熟悉markdown语法，懂点前端的你们。当然如果以上你都不太熟悉但又有着求知欲，希望本文将是你成为幻灯忍者的起点。<img class="aligncenter size-medium wp-image-13624" src="https://cos.name/wp-content/uploads/2017/02/fig4-300x256.png" alt="" width="300" height="256" srcset="https://cos.name/wp-content/uploads/2017/02/fig4-300x256.png 300w, https://cos.name/wp-content/uploads/2017/02/fig4-768x656.png 768w, https://cos.name/wp-content/uploads/2017/02/fig4-500x427.png 500w, https://cos.name/wp-content/uploads/2017/02/fig4.png 1154w" sizes="(max-width: 300px) 100vw, 300px" />
+在此声明一下本文适宜读者群：R码农，熟悉markdown语法，懂点前端的你们。当然如果以上你都不太熟悉但又有着求知欲，希望本文将是你成为幻灯忍者的起点。![](https://cos.name/wp-content/uploads/2017/02/fig4.png)
 
 &nbsp;
 
@@ -35,10 +35,10 @@ _作者：边蓓蕾      审校：郎大为      编辑：彭晨昱_
 
 请进行如下操作：
 
-  * 点击菜单 **<span style="color: #ff0000;"><code>File -&gt; New File -&gt; R Markdown -&gt; From Template -&gt; Ninja Presentation (Simplified Chinese)</code> </span>**创建一个新文档。<img class="aligncenter size-medium wp-image-13629" src="https://cos.name/wp-content/uploads/2017/02/fig1-300x188.png" alt="" width="300" height="188" srcset="https://cos.name/wp-content/uploads/2017/02/fig1-300x188.png 300w, https://cos.name/wp-content/uploads/2017/02/fig1-768x480.png 768w, https://cos.name/wp-content/uploads/2017/02/fig1-500x313.png 500w" sizes="(max-width: 300px) 100vw, 300px" />
+  * 点击菜单 **<span style="color: #ff0000;"><code>File -&gt; New File -&gt; R Markdown -&gt; From Template -&gt; Ninja Presentation (Simplified Chinese)</code> </span>**创建一个新文档。![](https://cos.name/wp-content/uploads/2017/02/fig1-300x188.png)
   * 点击 Knit 进行编译
 
-<img class="aligncenter size-medium wp-image-13630" src="https://cos.name/wp-content/uploads/2017/02/fig2-300x188.png" alt="" width="300" height="188" srcset="https://cos.name/wp-content/uploads/2017/02/fig2-300x188.png 300w, https://cos.name/wp-content/uploads/2017/02/fig2-768x480.png 768w, https://cos.name/wp-content/uploads/2017/02/fig2-500x313.png 500w" sizes="(max-width: 300px) 100vw, 300px" />
+![](https://cos.name/wp-content/uploads/2017/02/fig2-300x188.png)
 
 此时你会看见一个默认模版，改改就可以开张了！在此之前，你需要了解一些基本魔法：
 
@@ -114,7 +114,7 @@ _作者：边蓓蕾      审校：郎大为      编辑：彭晨昱_
 
     $$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
 
-<img class="aligncenter size-full wp-image-13635" src="https://cos.name/wp-content/uploads/2017/02/屏幕快照-2017-02-12-下午10.52.33.png" alt="" width="298" height="138" />
+![](https://cos.name/wp-content/uploads/2017/02/屏幕快照-2017-02-12-下午10.52.33.png)
 
 &nbsp;
 
@@ -154,7 +154,7 @@ _作者：边蓓蕾      审校：郎大为      编辑：彭晨昱_
 
 该选项默认的图片是 Karl Broman 的大头照。如果 **<span style="color: #ff0000;"><code>yolo: 3</code> </span>**你的幻灯片中将随机出现 3 次他的大头照，如果 <span style="color: #ff0000;"><strong><code>yolo: 0.3</code></strong></span> 你的幻灯片中将有 30% 的片子是他的大头照。当然你也可以把默认图片换掉。
 
-  * &#8230;&#8230;
+  * ……
 
 欲知所有可能的选项，请在console中输入 <span style="color: #ff0000;"><strong><code>?xaringan::moon_reader</code></strong></span>
 
@@ -210,7 +210,7 @@ class: center, middle
 
 好，就把这些复制上吧，在浏览器里打开该文件，你就看到了3张片子。
 
-<img class="aligncenter size-medium wp-image-13631" src="https://cos.name/wp-content/uploads/2017/02/fig3-300x188.png" alt="" width="300" height="188" srcset="https://cos.name/wp-content/uploads/2017/02/fig3-300x188.png 300w, https://cos.name/wp-content/uploads/2017/02/fig3-768x480.png 768w, https://cos.name/wp-content/uploads/2017/02/fig3-500x313.png 500w" sizes="(max-width: 300px) 100vw, 300px" />
+![](https://cos.name/wp-content/uploads/2017/02/fig3-300x188.png)
 
 不熟悉 HTML 和 CSS 基本语法的可能需要补补（这里用到的不难～）你会看到 **<span style="color: #ff0000;"><code>&lt;head&gt;</code></span>** 标签里裹了个 <span style="color: #ff0000;"><strong><code>&lt;style&gt;</code></strong></span> 标签，它规定了你的 HTML 元素在浏览器里呈现的样式（比如字体，边距，颜色…），其实也就是 CSS 样式表，这里还是帮大家写了几个例子，比如用类的方式定义颜色，字体粗细等等。在片子里使用的时候，直接用 **<span style="color: #ff0000;"><code>.red[我红得像龙虾]</code></span>**。当然 CSS 可以以外部文件的形式引入。 好，下面来到关键的主体部分了。在这里，你需要用 Markdown 语法开始写你的片子，你的片子需要裹到一个文本区域里面：
 
@@ -251,4 +251,4 @@ devtools::&lt;span class="kw">install_github&lt;/span>(&lt;span class="st">"ramn
 
 敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
 
-<img class="size-medium wp-image-13650 alignleft" src="https://cos.name/wp-content/uploads/2017/02/qrcode_for_gh_946beec24de4_1280-300x300.jpg" alt="" width="300" height="300" srcset="https://cos.name/wp-content/uploads/2017/02/qrcode_for_gh_946beec24de4_1280-300x300.jpg 300w, https://cos.name/wp-content/uploads/2017/02/qrcode_for_gh_946beec24de4_1280-150x150.jpg 150w, https://cos.name/wp-content/uploads/2017/02/qrcode_for_gh_946beec24de4_1280-768x768.jpg 768w, https://cos.name/wp-content/uploads/2017/02/qrcode_for_gh_946beec24de4_1280-500x500.jpg 500w, https://cos.name/wp-content/uploads/2017/02/qrcode_for_gh_946beec24de4_1280.jpg 1280w" sizes="(max-width: 300px) 100vw, 300px" />
+![](https://cos.name/wp-content/uploads/2017/02/qrcode_for_gh_946beec24de4_1280.jpg)

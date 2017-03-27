@@ -29,12 +29,12 @@ slug: how-to-vote
 图中，两派阵营的状态很明显。绿色的是Democrat，红色的是Republican，蓝色的是Independent。一般认为，民主党在政治上偏左，主张社会自由与进步；而共和党偏右，“reflects American Conservatism”。可以从图中获得很多信息，下面我们对此图做一点深究。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2012/03/abc.png"><img class="aligncenter" title="点击看大图" alt="abc" src="https://cos.name/wp-content/uploads/2012/03/abc-300x152.png" width="700" height="350" /></a>
+  ![abc](https://cos.name/wp-content/uploads/2012/03/abc.png "点击看大图")
 </p>
 
 首先，红绿交界处的Lincoln、Nelson、Collins等人是否代表了某种“中间力量”？以下从维基摘录的一段话（<http://en.wikipedia.org/wiki/Bill_Nelson>）或许回答这个问题。
 
-> **Nelson&#8217;s** votes have tended to be more liberal than conservative. He has received high ratings from left-of-center groups such as Americans for Democratic Action, and low ones from right-of-center groups such as the Eagle Forum and the Club for Growth. According to ratings by the National Journal, Nelson&#8217;s votes have been liberal on economic matters, moderate on social issues, and liberal but close to the center on foreign policy.
+> **Nelson’s** votes have tended to be more liberal than conservative. He has received high ratings from left-of-center groups such as Americans for Democratic Action, and low ones from right-of-center groups such as the Eagle Forum and the Club for Growth. According to ratings by the National Journal, Nelson’s votes have been liberal on economic matters, moderate on social issues, and liberal but close to the center on foreign policy.
 
 其次，我们再来看另一个极端。选取图中远离红点的一个绿点（图中左下角）——Cantwell；以及远离绿色区域的红点（图中右下角）——Enzi。同样是摘自wiki的两段话，验证了他们的“极左”和“极右”。
 
@@ -42,7 +42,7 @@ slug: how-to-vote
 > 
 > **Enzi** was ranked by National Journal as the sixth-most conservative U.S. Senator in its March 2007 conservative/liberal rankings.[7] Despite his strong support of the War in Iraq, he was one of 14 U.S. Senators to vote against the Iraq War funding bill in May 2007 because he opposes the clauses of the bill which increase domestic spending.
 
-此外，被绿点包围的蓝点Lieberman——“A former member of the Democratic Party, he was the party&#8217;s nominee for Vice President in the 2000 election. Currently an independent, he remains closely affiliated with the party.”
+此外，被绿点包围的蓝点Lieberman——“A former member of the Democratic Party, he was the party’s nominee for Vice President in the 2000 election. Currently an independent, he remains closely affiliated with the party.”
 
 除了以上分析，还可以获得很多信息。比如可以分析图中的重要节点、用局部估计的方法了解投票关联是如何随时间变化的，等等。
 
@@ -154,7 +154,7 @@ plot(g,layout=layout.fruchterman.reingold, edge.color=grey(0.5),vertex.size=10)<
 相关文章补充：
 
   1. Yuan, M., and Lin, Y. (2007) Model selection and estimation in the Gaussian graphical model. _Biometrika_ , 94, 1, pp. 19–35
-  2. Friedman, J. H., Hastie T, Tibshirani R. &#8220;Sparse inverse covariance estimation with the graphical lasso.&#8221; _Biostat_ (2008) 9 (3): 432-441.
-  3. Banerjee, O., Ghaoui, L. E. and d&#8217;Aspremont, A. (2007), Model selection through sparse maximum likelihood Estimation, _J. Machine Learning Research_ 101.
-  4. Wang, H. <a href="http://apps.olin.wustl.edu/conf/SBIES/Files/pdf/2011/27.pdf" target="_blank">The Bayesian Graphical Lasso</a>
+  2. Friedman, J. H., Hastie T, Tibshirani R. “Sparse inverse covariance estimation with the graphical lasso.” _Biostat_ (2008) 9 (3): 432-441.
+  3. Banerjee, O., Ghaoui, L. E. and d’Aspremont, A. (2007), Model selection through sparse maximum likelihood Estimation, _J. Machine Learning Research_ 101.
+  4. Wang, H. [The Bayesian Graphical Lasso](http://apps.olin.wustl.edu/conf/SBIES/Files/pdf/2011/27.pdf)
   5. Mladen Kolar, Le Song, Amr Ahmed, Eric P. Xing. Estimating time-varying networks. Annals of Applied Stat. [arXiv:0812.5087v2](http://arxiv.org/abs/0812.5087v2)

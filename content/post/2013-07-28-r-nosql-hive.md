@@ -12,7 +12,7 @@ tags:
 slug: r-nosql-hive
 ---
 
-<a title="R利剑NoSQL系列文章" href="http://blog.fens.me/series-r-nosql/" target="_blank">R利剑NoSQL系列文章</a>，主要介绍通过R语言连接使用nosql数据库。涉及的NoSQL产品，包括<a title="R利剑NoSQL系列文章 之 Redis" href="http://blog.fens.me/nosql-r-redis/" target="_blank">Redis</a>,<a title="R利剑NoSQL系列文章 之 MongoDB" href="http://blog.fens.me/nosql-r-mongodb/" target="_blank">MongoDB</a>, <a title="R利剑NoSQL系列文章 之 HBase" href="http://blog.fens.me/nosql-r-hbase" target="_blank">HBase</a>, <a title="R利剑NoSQL系列文章 之 Hive" href="http://blog.fens.me/nosql-r-hive/" target="_blank">Hive</a>, <a title="R利剑NoSQL系列文章 之 Cassandra" href="http://blog.fens.me/nosql-r-cassandra/" target="_blank">Cassandra</a>, <a title="R利剑NoSQL系列文章 之 Neo4j" href="http://blog.fens.me/nosql-r-neo4j/" target="_blank">Neo4j</a>。希望通过我的介绍让广大的R语言爱好者，有更多的开发选择，做出更多地激动人心的应用。
+[R利剑NoSQL系列文章](http://blog.fens.me/series-r-nosql/ "R利剑NoSQL系列文章")，主要介绍通过R语言连接使用nosql数据库。涉及的NoSQL产品，包括[Redis](http://blog.fens.me/nosql-r-redis/ "R利剑NoSQL系列文章 之 Redis"),[MongoDB](http://blog.fens.me/nosql-r-mongodb/ "R利剑NoSQL系列文章 之 MongoDB"), [HBase](http://blog.fens.me/nosql-r-hbase "R利剑NoSQL系列文章 之 HBase"), [Hive](http://blog.fens.me/nosql-r-hive/ "R利剑NoSQL系列文章 之 Hive"), [Cassandra](http://blog.fens.me/nosql-r-cassandra/ "R利剑NoSQL系列文章 之 Cassandra"), [Neo4j](http://blog.fens.me/nosql-r-neo4j/ "R利剑NoSQL系列文章 之 Neo4j")。希望通过我的介绍让广大的R语言爱好者，有更多的开发选择，做出更多地激动人心的应用。
 
 **关于作者：**
 
@@ -23,9 +23,9 @@ slug: r-nosql-hive
 
 **转载请注明：**
   
-<a title="R利剑NoSQL系列文章 之 hive" href="https://cos.name/2013/07/r-nosql-hive/" target="_blank">https://cos.name/2013/07/r-nosql-hive/</a>
+[/2013/07/r-nosql-hive/](/2013/07/r-nosql-hive/ "R利剑NoSQL系列文章 之 hive")
 
-[<img class="alignnone size-full wp-image-1457" alt="rhive" src="http://blog.fens.me/wp-content/uploads/2013/07/rhive.png" width="600" height="400" />](http://blog.fens.me/wp-content/uploads/2013/07/rhive.png)
+![rhive](http://blog.fens.me/wp-content/uploads/2013/07/rhive.png)
 
 **第四篇 R利剑Hive，分为5个章节。**
 
@@ -58,11 +58,11 @@ hive与关系数据库的区别：
 
 Hive是基于Hadoop开发的数据仓库产品，所以首先我们要先有Hadoop的环境。
 
-[<img class="alignnone size-full wp-image-1436" alt="rhive" src="http://blog.fens.me/wp-content/uploads/2013/07/rhive.jpg" width="500" height="382" />](http://blog.fens.me/wp-content/uploads/2013/07/rhive.jpg)
+![rhive](http://blog.fens.me/wp-content/uploads/2013/07/rhive.jpg)
 
-**Hadoop安装**，请参考：<a title="RHadoop实践系列之一:Hadoop环境搭建" href="http://blog.fens.me/rhadoop-hadoop/" target="_blank">Hadoop环境搭建</a>, <a title="让Hadoop跑在云端系列文章 之 创建Hadoop母体虚拟机" href="http://blog.fens.me/hadoop-base-kvm/" target="_blank">创建Hadoop母体虚拟机</a>
+**Hadoop安装**，请参考：[Hadoop环境搭建](http://blog.fens.me/rhadoop-hadoop/ "RHadoop实践系列之一:Hadoop环境搭建"), [创建Hadoop母体虚拟机](http://blog.fens.me/hadoop-base-kvm/ "让Hadoop跑在云端系列文章 之 创建Hadoop母体虚拟机")
 
-**Hive的安装**，请参考：<a title="Hive安装及使用攻略" href="http://blog.fens.me/hadoop-hive-intro/" target="_blank">Hive安装及使用攻略</a>
+**Hive的安装**，请参考：[Hive安装及使用攻略](http://blog.fens.me/hadoop-hive-intro/ "Hive安装及使用攻略")
 
 Hadoop-1.0.3的下载地址
   
@@ -312,4 +312,4 @@ Hive操作HDFS
 
 **转载请注明：**
   
-<a title="R利剑NoSQL系列文章 之 hive" href="https://cos.name/2013/07/r-nosql-hive/" target="_blank">https://cos.name/2013/07/r-nosql-hive/</a>
+[/2013/07/r-nosql-hive/](/2013/07/r-nosql-hive/ "R利剑NoSQL系列文章 之 hive")
