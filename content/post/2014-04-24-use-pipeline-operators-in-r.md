@@ -31,7 +31,7 @@ slug: use-pipeline-operators-in-r
 上述步骤用几个基本的函数即可完成。一般来说，如果我们不想引入太多中间变量，那么我们可能会有如下代码：
 
 ```r
-plot(diff(log(sample(rnorm(10000, mean=10, sd=1), size=100, replace=FALSE))), col="red", type="l")
+plot(diff(log(sample(rnorm(10000, mean = 10, sd = 1), size = 100, replace = FALSE))), col = "red", type = "l")
 ```
 
 这行代码便向我们暴露了写一组深层嵌套的函数的缺点：
@@ -111,13 +111,13 @@ hflights %>%
   mutate(Speed = Distance / ActualElapsedTime) %>%
     group_by(UniqueCarrier) %>%
       summarize(n = length(Speed), speed.mean = mean(Speed, na.rm = T),
-                speed.median = median(Speed, na.rm=T),
+                speed.median = median(Speed, na.rm = T),
                 speed.sd = sd(Speed, na.rm = T)) %>%
         mutate(speed.ssd = speed.mean / speed.sd) %>%
           arrange(desc(speed.ssd)) %>>%
             assign("hflights.speed", ., .GlobalEnv) %>>%
               barplot(.$speed.ssd, names.arg = .$UniqueCarrier,
-                      main=sprintf("Standardized mean of %d carriers", nrow(.)))
+                      main = sprintf("Standardized mean of %d carriers", nrow(.)))
 ```
     
 
