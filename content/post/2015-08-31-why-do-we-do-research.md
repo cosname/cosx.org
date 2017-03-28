@@ -12,14 +12,16 @@ tags:
   - 统计学习
 slug: why-do-we-do-research
 ---
-
-<font color=#808080 >【COS编辑部按】本文作者是2013年的总理科学奖得主 
+>
+【COS编辑部按】本文作者是2013年的总理科学奖得主 
 [Terence Terry Speed](http://www.stat.berkeley.edu/~terry/)。关于他的详细介绍，可参考
-[COS访谈第十二期](https://cos.name/2013/11/terry-speed/)，Terry Speed教授的名言是“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”。</font>
+[COS访谈第十二期](https://cos.name/2013/11/terry-speed/)，Terry Speed教授的名言是“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”。
+>
 
-<font color=#808080 >原文发表在 IMS Bulletin 链接：<http://bulletin.imstat.org/2015/02/terences-stuff-why-do-we-do-research/>
+>原文发表在 IMS Bulletin 链接：<http://bulletin.imstat.org/2015/02/terences-stuff-why-do-we-do-research/>
 。2011年6月以来的 IMS Bulletin 系列文章"Terence's Stuff"; 都收录在<http://bulletin.imstat.org/category/terences-stuff/>。
-本文由王小宁翻译，冯凌秉、施涛审校。</font>
+本文由王小宁翻译，冯凌秉、施涛审校。
+>
 
 ![](https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg)
 
