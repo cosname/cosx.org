@@ -22,8 +22,6 @@ description: "谈起测量灯泡体积，大家一定记得那个耳熟能详的
 
 最近研究R语言的数学计算时，发现R中有非常方便的数值积分函数，可以很快进行求体积等计算。于是上面的那个典故及疑问便涌上心头，索性查清楚文献，做一个了断。
 
-
-
 # 阿普顿其人
 
 在有些版本的典故中有提到，爱迪生的那个助手名为阿普顿（Francis R. Upton）。在维基百科上也有这个人的词条。维基百科上的照片是这样子的，上面有他的签名。
@@ -44,9 +42,9 @@ description: "谈起测量灯泡体积，大家一定记得那个耳熟能详的
 
 爱迪生让阿普顿量灯泡的故事有很多版本，是非难辨。但是当时在场的第三人，爱迪人的另外一个助手Francis Jehl，在其回忆录中真实描述了这个故事。
 
-_“I was once with Mr Upton calculating some tables he had put me on, when Mr Edison appeared with a glass bulb having a pear-shaped appearance in his hand. It was the kind we were going to use for our lamp experiments; and Mr Edison asked Mr Upton to please calculate its cubical content in centimetres. Now Mr Upton was a very able mathematician, who after he finished his studies at Princeton went to Germany and got his final gloss under the great master Helmholtz. Whatever he did and worked on was executed in a purely mathematical manner and any Wrangler at Cambridge would have been delighted to see him juggle with integral and differential equations with a dexterity that was surprising. He drew the shape of the bulb exactly on paper, and got the equation of its lines with which he was going to calculate its contents, when Mr Edison again appeared and asked him what it was. He showed Mr Edison the work he had already done on the subject and told him he would very soon finish calculating it. “Why,” said Edison, “I would simply take that bulb and fill it with mercury and weigh it; and from the weight of the mercury and its specific gravity, I’ll get it in five minutes, and use a lot less mental energy than is necessary in such a fatiguing operation.”_
+> “I was once with Mr Upton calculating some tables he had put me on, when Mr Edison appeared with a glass bulb having a pear-shaped appearance in his hand. It was the kind we were going to use for our lamp experiments; and Mr Edison asked Mr Upton to please calculate its cubical content in centimetres. Now Mr Upton was a very able mathematician, who after he finished his studies at Princeton went to Germany and got his final gloss under the great master Helmholtz. Whatever he did and worked on was executed in a purely mathematical manner and any Wrangler at Cambridge would have been delighted to see him juggle with integral and differential equations with a dexterity that was surprising. He drew the shape of the bulb exactly on paper, and got the equation of its lines with which he was going to calculate its contents, when Mr Edison again appeared and asked him what it was. He showed Mr Edison the work he had already done on the subject and told him he would very soon finish calculating it. “Why,” said Edison, “I would simply take that bulb and fill it with mercury and weigh it; and from the weight of the mercury and its specific gravity, I’ll get it in five minutes, and use a lot less mental energy than is necessary in such a fatiguing operation.”
 
-“我有一次正和阿普顿先生计算一些他拿过来的数据表。这时，爱迪生先生出现了。他手里拿着一个梨子形状的灯泡，这正是我们准备进行电灯实验的那种型号。爱迪生先生请求阿普顿先生计算一下灯泡的容积是多少立方厘米。阿普顿先生现在已经是一名非常出色的数学家了，他曾在普林斯顿大学完成学业，又去过德国，在大牛 Helmholtz 那里更近层楼，数学方面已经很厉害了。他在以纯数学的方式解决问题的时候，灵活熟练地在微积分方程间闪辗腾挪，哪怕是任何一名剑桥大学毕业的牛仔都会羡慕惊艳。阿普顿先生首先在纸上准确第勾勒出灯泡的形状。然后他用方程拟合好了轮廓曲线，正要根据这些结果计算体积的时候,爱迪生先生就回来询问结果了。阿普顿先生展示了已经做的，并告诉他将很快完成计算。’为什么？’爱迪生说，‘我会简单地在灯泡中注入汞并称重，根据汞的重量及其密度，5分钟就会得到灯泡的体积。比起这项累人的计算，要省下不少的脑力。’”
+> “我有一次正和阿普顿先生计算一些他拿过来的数据表。这时，爱迪生先生出现了。他手里拿着一个梨子形状的灯泡，这正是我们准备进行电灯实验的那种型号。爱迪生先生请求阿普顿先生计算一下灯泡的容积是多少立方厘米。阿普顿先生现在已经是一名非常出色的数学家了，他曾在普林斯顿大学完成学业，又去过德国，在大牛 Helmholtz 那里更近层楼，数学方面已经很厉害了。他在以纯数学的方式解决问题的时候，灵活熟练地在微积分方程间闪辗腾挪，哪怕是任何一名剑桥大学毕业的牛仔都会羡慕惊艳。阿普顿先生首先在纸上准确第勾勒出灯泡的形状。然后他用方程拟合好了轮廓曲线，正要根据这些结果计算体积的时候,爱迪生先生就回来询问结果了。阿普顿先生展示了已经做的，并告诉他将很快完成计算。’为什么？’爱迪生说，‘我会简单地在灯泡中注入汞并称重，根据汞的重量及其密度，5分钟就会得到灯泡的体积。比起这项累人的计算，要省下不少的脑力。’”
 
 从这份亲历者的描述中，我们了解到爱迪分并非有意刁难阿普顿，而仅仅是工作上常规的讨论，之后也没有发表人生哲理感言。爱迪生的方法是向灯泡中注入汞，而不是流传版本中所说的水。这样由于汞的高表面张力，及与玻璃的不浸润。再倒走后没有残留，也就不影响后续实验了。从另一个方面来说，爱迪生实验室非常有钱。
 
@@ -54,9 +52,9 @@ _“I was once with Mr Upton calculating some tables he had put me on, when Mr E
 
 # 阿普顿的计算方法
 
-爱迪生公司生产的灯泡，现在在网上仍有仿古版本售卖，eBay上的这张图展示了其中一些型号的碳丝灯：![s-l1600](https://cos.name/wp-content/uploads/2015/03/s-l1600.jpg)
+爱迪生公司生产的灯泡，现在在网上仍有仿古版本售卖，eBay上的这张图展示了其中一些型号的碳丝灯：
 
-
+![s-l1600](https://cos.name/wp-content/uploads/2015/03/s-l1600.jpg)
 
 阿普顿之所以进行复杂计算，做是由于灯泡形状不规则造成的，没有现成通用的公式。从上文中，我们知道阿普顿的计算方法由3步组成：
 
@@ -115,8 +113,6 @@ print(pic)
 ```
 
 ![setup](https://cos.name/wp-content/uploads/2015/03/setup.png)
-
- 
 
 ## 2. 对曲线进行方程拟合
 
@@ -200,8 +196,6 @@ pic = pic + geom_line(aes(x,y), size=1.3, colour="yellow", data=mysmooth) +
 print(pic)
 ```
 
-
-
 ![tu2](https://cos.name/wp-content/uploads/2015/03/tu21.png)
 
 可以看到，曲线完美拟合灯泡的轮廓。
@@ -215,7 +209,6 @@ print(V)
 
     ## 311680 with absolute error < 34
     
-
 我们得到结果，灯泡的体积是 3.1168 × 10<sup>5</sup> mm<sup>3</sup> ，按照爱迪生的厘米单位要求，是311.68 cm<sup>3</sup> 。上述代码中，真正用于计算的代码只有寥寥几行，阿普顿先生勾勒完曲线后，只要花费几分钟输入R代码，马上就可以在爱迪生先生回来前得到结果了。
 
 # 结尾
@@ -224,5 +217,5 @@ print(V)
 
 # 参考文献
 
-  1.维基百科, Francis Robbins Upton, [http://en.wikipedia.org/wiki/Francis\_Robbins\_Upton](http://en.wikipedia.org/wiki/Francis_Robbins_Upton)
-  2.J J O’Connor and E F Robertson, Francis Robbins Upton, <http://www-history.mcs.st-andrews.ac.uk/Biographies/Upton.html>
+  1. 维基百科, Francis Robbins Upton, <http://en.wikipedia.org/wiki/Francis_Robbins_Upton>
+  2. J J O’Connor and E F Robertson, Francis Robbins Upton, <http://www-history.mcs.st-andrews.ac.uk/Biographies/Upton.html>
