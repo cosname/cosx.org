@@ -1087,7 +1087,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td colspan="2" width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_1.png"><img class="aligncenter size-full wp-image-12201" src="https://cos.name/wp-content/uploads/2016/05/luo_1.png" alt="luo_1" width="533" height="325" srcset="https://cos.name/wp-content/uploads/2016/05/luo_1.png 533w, https://cos.name/wp-content/uploads/2016/05/luo_1-300x183.png 300w, https://cos.name/wp-content/uploads/2016/05/luo_1-500x305.png 500w" sizes="(max-width: 533px) 100vw, 533px" /></a>
+                                                         ![luo_1](https://cos.name/wp-content/uploads/2016/05/luo_1.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1103,11 +1103,11 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_2.png"><img class="aligncenter size-full wp-image-12202" src="https://cos.name/wp-content/uploads/2016/05/luo_2.png" alt="luo_2" width="269" height="189" /></a>
+                                                         ![luo_2](https://cos.name/wp-content/uploads/2016/05/luo_2.png)
                                                       </td>
                                                       
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_3.png"><img class="aligncenter size-full wp-image-12203" src="https://cos.name/wp-content/uploads/2016/05/luo_3.png" alt="luo_3" width="269" height="192" /></a>
+                                                         ![luo_3](https://cos.name/wp-content/uploads/2016/05/luo_3.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1123,11 +1123,11 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_4.png"><img class="aligncenter size-full wp-image-12204" src="https://cos.name/wp-content/uploads/2016/05/luo_4.png" alt="luo_4" width="269" height="191" /></a>
+                                                         ![luo_4](https://cos.name/wp-content/uploads/2016/05/luo_4.png)
                                                       </td>
                                                       
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_5.png"><img class="aligncenter size-full wp-image-12205" src="https://cos.name/wp-content/uploads/2016/05/luo_5.png" alt="luo_5" width="269" height="191" /></a>
+                                                         ![luo_5](https://cos.name/wp-content/uploads/2016/05/luo_5.png)
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -1145,7 +1145,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td colspan="2" width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_6.png"><img class="aligncenter size-full wp-image-12206" src="https://cos.name/wp-content/uploads/2016/05/luo_6.png" alt="luo_6" width="533" height="327" srcset="https://cos.name/wp-content/uploads/2016/05/luo_6.png 533w, https://cos.name/wp-content/uploads/2016/05/luo_6-300x184.png 300w, https://cos.name/wp-content/uploads/2016/05/luo_6-500x307.png 500w" sizes="(max-width: 533px) 100vw, 533px" /></a>
+                                                         ![luo_6](https://cos.name/wp-content/uploads/2016/05/luo_6.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1161,11 +1161,11 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_7.png"><img class="aligncenter size-full wp-image-12207" src="https://cos.name/wp-content/uploads/2016/05/luo_7.png" alt="luo_7" width="269" height="192" /></a>
+                                                         ![luo_7](https://cos.name/wp-content/uploads/2016/05/luo_7.png)
                                                       </td>
                                                       
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_8.png"><img class="aligncenter size-full wp-image-12208" src="https://cos.name/wp-content/uploads/2016/05/luo_8.png" alt="luo_8" width="269" height="191" /></a>
+                                                         ![luo_8](https://cos.name/wp-content/uploads/2016/05/luo_8.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1181,11 +1181,11 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_9.png"><img class="aligncenter size-full wp-image-12209" src="https://cos.name/wp-content/uploads/2016/05/luo_9.png" alt="luo_9" width="269" height="191" /></a>
+                                                         ![luo_9](https://cos.name/wp-content/uploads/2016/05/luo_9.png)
                                                       </td>
                                                       
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_10.png"><img class="aligncenter size-full wp-image-12210" src="https://cos.name/wp-content/uploads/2016/05/luo_10.png" alt="luo_10" width="269" height="190" /></a>
+                                                         ![luo_10](https://cos.name/wp-content/uploads/2016/05/luo_10.png)
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -1203,7 +1203,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td colspan="2" width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_11.png"><img class="aligncenter size-full wp-image-12211" src="https://cos.name/wp-content/uploads/2016/05/luo_11.png" alt="luo_11" width="519" height="360" srcset="https://cos.name/wp-content/uploads/2016/05/luo_11.png 519w, https://cos.name/wp-content/uploads/2016/05/luo_11-300x208.png 300w, https://cos.name/wp-content/uploads/2016/05/luo_11-500x347.png 500w" sizes="(max-width: 519px) 100vw, 519px" /></a>
+                                                         ![luo_11](https://cos.name/wp-content/uploads/2016/05/luo_11.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1219,11 +1219,11 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_12.png"><img class="aligncenter size-full wp-image-12215" src="https://cos.name/wp-content/uploads/2016/05/luo_12.png" alt="luo_12" width="269" height="195" /></a>
+                                                         ![luo_12](https://cos.name/wp-content/uploads/2016/05/luo_12.png)
                                                       </td>
                                                       
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_13.png"><img class="aligncenter size-full wp-image-12214" src="https://cos.name/wp-content/uploads/2016/05/luo_13.png" alt="luo_&#96;13" width="269" height="196" /></a>
+                                                         ![luo_`13](https://cos.name/wp-content/uploads/2016/05/luo_13.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1239,11 +1239,11 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_14.png"><img class="aligncenter size-full wp-image-12216" src="https://cos.name/wp-content/uploads/2016/05/luo_14.png" alt="luo_14" width="269" height="197" /></a>
+                                                         ![luo_14](https://cos.name/wp-content/uploads/2016/05/luo_14.png)
                                                       </td>
                                                       
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_15.png"><img class="aligncenter size-full wp-image-12217" src="https://cos.name/wp-content/uploads/2016/05/luo_15.png" alt="luo_15" width="269" height="197" /></a>
+                                                         ![luo_15](https://cos.name/wp-content/uploads/2016/05/luo_15.png)
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -1265,7 +1265,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td colspan="2" width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_16.png"><img class="aligncenter size-full wp-image-12218" src="https://cos.name/wp-content/uploads/2016/05/luo_16.png" alt="luo_16" width="461" height="323" srcset="https://cos.name/wp-content/uploads/2016/05/luo_16.png 461w, https://cos.name/wp-content/uploads/2016/05/luo_16-300x210.png 300w" sizes="(max-width: 461px) 100vw, 461px" /></a>
+                                                         ![luo_16](https://cos.name/wp-content/uploads/2016/05/luo_16.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1281,11 +1281,11 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_17.png"><img class="aligncenter wp-image-12219 size-full" src="https://cos.name/wp-content/uploads/2016/05/luo_17.png" alt="luo_17" width="269" height="197" /></a>
+                                                         ![luo_17](https://cos.name/wp-content/uploads/2016/05/luo_17.png)
                                                       </td>
                                                       
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_18.png"><img class="aligncenter size-full wp-image-12220" src="https://cos.name/wp-content/uploads/2016/05/luo_18.png" alt="luo_18" width="269" height="198" /></a>
+                                                         ![luo_18](https://cos.name/wp-content/uploads/2016/05/luo_18.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1301,11 +1301,11 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_19.png"><img class="aligncenter size-full wp-image-12221" src="https://cos.name/wp-content/uploads/2016/05/luo_19.png" alt="luo_19" width="269" height="197" /></a>
+                                                         ![luo_19](https://cos.name/wp-content/uploads/2016/05/luo_19.png)
                                                       </td>
                                                       
                                                       <td width="277">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_20-1.png"><img class="aligncenter size-full wp-image-12222" src="https://cos.name/wp-content/uploads/2016/05/luo_20-1.png" alt="luo_20" width="269" height="197" /></a>
+                                                         ![luo_20](https://cos.name/wp-content/uploads/2016/05/luo_20-1.png)
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -1455,7 +1455,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_21.png"><img class="aligncenter size-full wp-image-12223" src="https://cos.name/wp-content/uploads/2016/05/luo_21.png" alt="luo_21" width="458" height="431" srcset="https://cos.name/wp-content/uploads/2016/05/luo_21.png 458w, https://cos.name/wp-content/uploads/2016/05/luo_21-300x282.png 300w" sizes="(max-width: 458px) 100vw, 458px" /></a>
+                                                         ![luo_21](https://cos.name/wp-content/uploads/2016/05/luo_21.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1467,7 +1467,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_22.png"><img class="aligncenter size-full wp-image-12224" src="https://cos.name/wp-content/uploads/2016/05/luo_22.png" alt="luo_22" width="453" height="425" srcset="https://cos.name/wp-content/uploads/2016/05/luo_22.png 453w, https://cos.name/wp-content/uploads/2016/05/luo_22-300x281.png 300w" sizes="(max-width: 453px) 100vw, 453px" /></a>
+                                                         ![luo_22](https://cos.name/wp-content/uploads/2016/05/luo_22.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1479,7 +1479,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_23.png"><img class="aligncenter size-full wp-image-12225" src="https://cos.name/wp-content/uploads/2016/05/luo_23.png" alt="luo_23" width="403" height="378" srcset="https://cos.name/wp-content/uploads/2016/05/luo_23.png 403w, https://cos.name/wp-content/uploads/2016/05/luo_23-300x281.png 300w" sizes="(max-width: 403px) 100vw, 403px" /></a>
+                                                         ![luo_23](https://cos.name/wp-content/uploads/2016/05/luo_23.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1491,7 +1491,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_24.png"><img class="aligncenter size-full wp-image-12226" src="https://cos.name/wp-content/uploads/2016/05/luo_24.png" alt="luo_24" width="437" height="413" srcset="https://cos.name/wp-content/uploads/2016/05/luo_24.png 437w, https://cos.name/wp-content/uploads/2016/05/luo_24-300x284.png 300w" sizes="(max-width: 437px) 100vw, 437px" /></a>
+                                                         ![luo_24](https://cos.name/wp-content/uploads/2016/05/luo_24.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1503,7 +1503,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_25.png"><img class="aligncenter size-full wp-image-12227" src="https://cos.name/wp-content/uploads/2016/05/luo_25.png" alt="luo_25" width="438" height="411" srcset="https://cos.name/wp-content/uploads/2016/05/luo_25.png 438w, https://cos.name/wp-content/uploads/2016/05/luo_25-300x282.png 300w" sizes="(max-width: 438px) 100vw, 438px" /></a>
+                                                         ![luo_25](https://cos.name/wp-content/uploads/2016/05/luo_25.png)
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -1649,7 +1649,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_26.png"><img class="aligncenter size-full wp-image-12228" src="https://cos.name/wp-content/uploads/2016/05/luo_26.png" alt="luo_26" width="338" height="235" srcset="https://cos.name/wp-content/uploads/2016/05/luo_26.png 338w, https://cos.name/wp-content/uploads/2016/05/luo_26-300x209.png 300w" sizes="(max-width: 338px) 100vw, 338px" /></a>
+                                                         ![luo_26](https://cos.name/wp-content/uploads/2016/05/luo_26.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1661,7 +1661,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_27.png"><img class="aligncenter size-full wp-image-12229" src="https://cos.name/wp-content/uploads/2016/05/luo_27.png" alt="luo_27" width="333" height="231" srcset="https://cos.name/wp-content/uploads/2016/05/luo_27.png 333w, https://cos.name/wp-content/uploads/2016/05/luo_27-300x208.png 300w" sizes="(max-width: 333px) 100vw, 333px" /></a>
+                                                         ![luo_27](https://cos.name/wp-content/uploads/2016/05/luo_27.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1673,7 +1673,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_28.png"><img class="aligncenter size-full wp-image-12230" src="https://cos.name/wp-content/uploads/2016/05/luo_28.png" alt="luo_28" width="392" height="272" srcset="https://cos.name/wp-content/uploads/2016/05/luo_28.png 392w, https://cos.name/wp-content/uploads/2016/05/luo_28-300x208.png 300w" sizes="(max-width: 392px) 100vw, 392px" /></a>
+                                                         ![luo_28](https://cos.name/wp-content/uploads/2016/05/luo_28.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1685,7 +1685,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_29.png"><img class="aligncenter size-full wp-image-12231" src="https://cos.name/wp-content/uploads/2016/05/luo_29.png" alt="luo_29" width="401" height="276" srcset="https://cos.name/wp-content/uploads/2016/05/luo_29.png 401w, https://cos.name/wp-content/uploads/2016/05/luo_29-300x206.png 300w" sizes="(max-width: 401px) 100vw, 401px" /></a>
+                                                         ![luo_29](https://cos.name/wp-content/uploads/2016/05/luo_29.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1697,7 +1697,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_30.png"><img class="aligncenter size-full wp-image-12232" src="https://cos.name/wp-content/uploads/2016/05/luo_30.png" alt="luo_30" width="407" height="281" srcset="https://cos.name/wp-content/uploads/2016/05/luo_30.png 407w, https://cos.name/wp-content/uploads/2016/05/luo_30-300x207.png 300w" sizes="(max-width: 407px) 100vw, 407px" /></a>
+                                                         ![luo_30](https://cos.name/wp-content/uploads/2016/05/luo_30.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1709,7 +1709,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="568">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_31.png"><img class="aligncenter size-full wp-image-12233" src="https://cos.name/wp-content/uploads/2016/05/luo_31.png" alt="luo_31" width="379" height="261" srcset="https://cos.name/wp-content/uploads/2016/05/luo_31.png 379w, https://cos.name/wp-content/uploads/2016/05/luo_31-300x207.png 300w" sizes="(max-width: 379px) 100vw, 379px" /></a>
+                                                         ![luo_31](https://cos.name/wp-content/uploads/2016/05/luo_31.png)
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -1727,7 +1727,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_32.png"><img class="aligncenter size-full wp-image-12234" src="https://cos.name/wp-content/uploads/2016/05/luo_32.png" alt="luo_32" width="362" height="250" srcset="https://cos.name/wp-content/uploads/2016/05/luo_32.png 362w, https://cos.name/wp-content/uploads/2016/05/luo_32-300x207.png 300w" sizes="(max-width: 362px) 100vw, 362px" /></a>
+                                                         ![luo_32](https://cos.name/wp-content/uploads/2016/05/luo_32.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1739,7 +1739,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_33.png"><img class="aligncenter size-full wp-image-12235" src="https://cos.name/wp-content/uploads/2016/05/luo_33.png" alt="luo_33" width="388" height="270" srcset="https://cos.name/wp-content/uploads/2016/05/luo_33.png 388w, https://cos.name/wp-content/uploads/2016/05/luo_33-300x209.png 300w" sizes="(max-width: 388px) 100vw, 388px" /></a>
+                                                         ![luo_33](https://cos.name/wp-content/uploads/2016/05/luo_33.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1751,7 +1751,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_34.png"><img class="aligncenter size-full wp-image-12236" src="https://cos.name/wp-content/uploads/2016/05/luo_34.png" alt="luo_34" width="399" height="276" srcset="https://cos.name/wp-content/uploads/2016/05/luo_34.png 399w, https://cos.name/wp-content/uploads/2016/05/luo_34-300x208.png 300w" sizes="(max-width: 399px) 100vw, 399px" /></a>
+                                                         ![luo_34](https://cos.name/wp-content/uploads/2016/05/luo_34.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1763,7 +1763,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_35.png"><img class="aligncenter size-full wp-image-12237" src="https://cos.name/wp-content/uploads/2016/05/luo_35.png" alt="luo_35" width="390" height="271" srcset="https://cos.name/wp-content/uploads/2016/05/luo_35.png 390w, https://cos.name/wp-content/uploads/2016/05/luo_35-300x208.png 300w" sizes="(max-width: 390px) 100vw, 390px" /></a>
+                                                         ![luo_35](https://cos.name/wp-content/uploads/2016/05/luo_35.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1775,7 +1775,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_36.png"><img class="aligncenter size-full wp-image-12238" src="https://cos.name/wp-content/uploads/2016/05/luo_36.png" alt="luo_36" width="420" height="291" srcset="https://cos.name/wp-content/uploads/2016/05/luo_36.png 420w, https://cos.name/wp-content/uploads/2016/05/luo_36-300x208.png 300w" sizes="(max-width: 420px) 100vw, 420px" /></a>
+                                                         ![luo_36](https://cos.name/wp-content/uploads/2016/05/luo_36.png)
                                                       </td>
                                                     </tr>
                                                     
@@ -1787,7 +1787,7 @@ slug: weather-driven-industry-sales-big-data
                                                     
                                                     <tr>
                                                       <td width="553">
-                                                         <a href="https://cos.name/wp-content/uploads/2016/05/luo_37.png"><img class="aligncenter size-full wp-image-12239" src="https://cos.name/wp-content/uploads/2016/05/luo_37.png" alt="luo_37" width="404" height="281" srcset="https://cos.name/wp-content/uploads/2016/05/luo_37.png 404w, https://cos.name/wp-content/uploads/2016/05/luo_37-300x209.png 300w" sizes="(max-width: 404px) 100vw, 404px" /></a>
+                                                         ![luo_37](https://cos.name/wp-content/uploads/2016/05/luo_37.png)
                                                       </td>
                                                     </tr>
                                                   </table>
@@ -1935,7 +1935,7 @@ slug: weather-driven-industry-sales-big-data
                                                   </p>
                                                   
                                                   <p>
-                                                    我们与企业合作在设定商业问题过程中，发现企业对于开始数据分析业务的商业问题更多集中在可快速简单量化成绩的销售业务（商品或服务的销售成果）与营销业务（促销活动、广告投放等），实施全程采取了天气驱动业务分析框架（Weather Driven Analysis Framework）如图8。<a href="https://cos.name/wp-content/uploads/2016/05/luo_38-副本.png"><img class="aligncenter size-full wp-image-12244" src="https://cos.name/wp-content/uploads/2016/05/luo_38-副本.png" alt="luo_38 - 副本" width="586" height="274" srcset="https://cos.name/wp-content/uploads/2016/05/luo_38-副本.png 586w, https://cos.name/wp-content/uploads/2016/05/luo_38-副本-300x140.png 300w, https://cos.name/wp-content/uploads/2016/05/luo_38-副本-500x234.png 500w" sizes="(max-width: 586px) 100vw, 586px" /></a>
+                                                    我们与企业合作在设定商业问题过程中，发现企业对于开始数据分析业务的商业问题更多集中在可快速简单量化成绩的销售业务（商品或服务的销售成果）与营销业务（促销活动、广告投放等），实施全程采取了天气驱动业务分析框架（Weather Driven Analysis Framework）如图8。![luo_38 - 副本](https://cos.name/wp-content/uploads/2016/05/luo_38-副本.png)
                                                   </p>
                                                   
                                                   <p style="text-align: center;">
@@ -1943,7 +1943,7 @@ slug: weather-driven-industry-sales-big-data
                                                   </p>
                                                   
                                                   <p>
-                                                    本文探讨的酒精性饮料以及羽绒服的商业问题：销售预测以及支持精准营销。天气驱动项目交付的是（1）可以实时运行可视化销售预测模型与（2）持续的精细化天气预测数据支持，示意画面如图9（因商业秘密，仅提供系统示意画面）；我们也称此为天气驱动销售仪表板（Dashboard）。客户接入天气预测数据后、同时将假日、价格、促销等因子由ERP同步接入，天气驱动销售仪表板实时显示最新的销售预测数字，输出内容包括：城市、总销售预测量、各品牌销售预测量、各渠道销售预测量以及相关的天气数据与预警信息。<a href="https://cos.name/wp-content/uploads/2016/05/luo_39-副本.png"><img class="aligncenter size-full wp-image-12243" src="https://cos.name/wp-content/uploads/2016/05/luo_39-副本.png" alt="luo_39 - 副本" width="558" height="263" srcset="https://cos.name/wp-content/uploads/2016/05/luo_39-副本.png 558w, https://cos.name/wp-content/uploads/2016/05/luo_39-副本-300x141.png 300w, https://cos.name/wp-content/uploads/2016/05/luo_39-副本-500x236.png 500w" sizes="(max-width: 558px) 100vw, 558px" /></a>
+                                                    本文探讨的酒精性饮料以及羽绒服的商业问题：销售预测以及支持精准营销。天气驱动项目交付的是（1）可以实时运行可视化销售预测模型与（2）持续的精细化天气预测数据支持，示意画面如图9（因商业秘密，仅提供系统示意画面）；我们也称此为天气驱动销售仪表板（Dashboard）。客户接入天气预测数据后、同时将假日、价格、促销等因子由ERP同步接入，天气驱动销售仪表板实时显示最新的销售预测数字，输出内容包括：城市、总销售预测量、各品牌销售预测量、各渠道销售预测量以及相关的天气数据与预警信息。![luo_39 - 副本](https://cos.name/wp-content/uploads/2016/05/luo_39-副本.png)
                                                   </p>
                                                   
                                                   <p style="text-align: center;">
@@ -2033,7 +2033,7 @@ slug: weather-driven-industry-sales-big-data
                                                   </p>
                                                   
                                                   <p>
-                                                    [7] Breiman L. Random Forests[J]. Machine Learning, 2001, 45(1):5&#8211;32.
+                                                    [7] Breiman L. Random Forests[J]. Machine Learning, 2001, 45(1):5–32.
                                                   </p>
                                                   
                                                   <p>

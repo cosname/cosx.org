@@ -15,9 +15,9 @@ slug: 7th-r-conference-hangzhou
 
 中国R语言会议从2008年开始已经成功举办到第七届了，之前每年在北京和上海举办的会议都非常成功，大力推动了R语言在国内的蓬勃发展。从2014年起，广州将中国R语言会议的火种带到了华南。作为华东重镇、数据科学家的大本营之一，杭州也开始举办中国R语言会议，在阿里巴巴集团和统计之都的努力下、在杭州师范大学的大力支持下，终于将于2014年11月29日在杭州召开第七届中国R语言会议（杭州会场）的会议。
 
-除了统计之都主站，会务信息还会通过统计之都微信<span style="color: #808080;">(扫描本页面右侧微信公众平台二维码即可关注)</span>、微博(<a href="http://weibo.com/cosname" target="_blank">@统计之都</a>)来发布，欢迎大家关注获取最新消息。
+除了统计之都主站，会务信息还会通过统计之都微信<span style="color: #808080;">(扫描本页面右侧微信公众平台二维码即可关注)</span>、微博([@统计之都](http://weibo.com/cosname))来发布，欢迎大家关注获取最新消息。
 
-<img class="aligncenter" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png" alt="" width="532" height="353" />
+![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
 
 会议的相关情况如下：
 
@@ -29,7 +29,7 @@ slug: 7th-r-conference-hangzhou
 
 杭州市余杭区杭州师范大学仓前校区，恕园7号楼艺术大厅。
   
-[<img src="https://cos.name/wp-content/uploads/2014/11/仓前校区图片-500x251.jpg" alt="仓前校区图片" width="500" height="251" class="alignnone size-large wp-image-10353" srcset="https://cos.name/wp-content/uploads/2014/11/仓前校区图片-500x251.jpg 500w, https://cos.name/wp-content/uploads/2014/11/仓前校区图片-300x150.jpg 300w, https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg 1095w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg)
+![仓前校区图片](https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg)
   
 <!--more-->
 
@@ -82,7 +82,7 @@ slug: 7th-r-conference-hangzhou
 
 ## **七、报名方式**
 
-请登录会议活动主页报名<a href="http://chinar2014hz.vasee.com/" target="_blank"> http://chinar2014hz.vasee.com/</a>
+请登录会议活动主页报名[ http://chinar2014hz.vasee.com/](http://chinar2014hz.vasee.com/)
 
 ## 八、会场服务
 

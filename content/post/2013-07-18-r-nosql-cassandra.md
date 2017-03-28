@@ -13,7 +13,7 @@ tags:
 slug: r-nosql-cassandra
 ---
 
-<a title="R利剑NoSQL系列文章" href="http://blog.fens.me/series-r-nosql/" target="_blank">R利剑NoSQL系列文章</a>，主要介绍通过R语言连接使用nosql数据库。涉及的NoSQL产品，包括<a title="R利剑NoSQL系列文章 之 Redis" href="http://blog.fens.me/nosql-r-redis/" target="_blank">Redis</a>, <a title="R利剑NoSQL系列文章 之 MongoDB" href="http://blog.fens.me/nosql-r-mongodb/" target="_blank">MongoDB</a>, <a title="R利剑NoSQL系列文章 之 HBase" href="http://blog.fens.me/nosql-r-hbase" target="_blank">HBase</a>, <a title="R利剑NoSQL系列文章 之 Hive" href="http://blog.fens.me/nosql-r-hive/" target="_blank">Hive</a>, <a title="R利剑NoSQL系列文章 之 Cassandra" href="http://blog.fens.me/nosql-r-cassandra/" target="_blank">Cassandra</a>, <a title="R利剑NoSQL系列文章 之 Neo4j" href="http://blog.fens.me/nosql-r-neo4j/" target="_blank">Neo4j</a>。希望通过我的介绍让广大的R语言爱好者，有更多的开发选择，做出更多地激动人心的应用。
+[R利剑NoSQL系列文章](http://blog.fens.me/series-r-nosql/ "R利剑NoSQL系列文章")，主要介绍通过R语言连接使用nosql数据库。涉及的NoSQL产品，包括[Redis](http://blog.fens.me/nosql-r-redis/ "R利剑NoSQL系列文章 之 Redis"), [MongoDB](http://blog.fens.me/nosql-r-mongodb/ "R利剑NoSQL系列文章 之 MongoDB"), [HBase](http://blog.fens.me/nosql-r-hbase "R利剑NoSQL系列文章 之 HBase"), [Hive](http://blog.fens.me/nosql-r-hive/ "R利剑NoSQL系列文章 之 Hive"), [Cassandra](http://blog.fens.me/nosql-r-cassandra/ "R利剑NoSQL系列文章 之 Cassandra"), [Neo4j](http://blog.fens.me/nosql-r-neo4j/ "R利剑NoSQL系列文章 之 Neo4j")。希望通过我的介绍让广大的R语言爱好者，有更多的开发选择，做出更多地激动人心的应用。
 
 **关于作者：**
 
@@ -24,9 +24,9 @@ slug: r-nosql-cassandra
 
 **转载请注明：**
   
-<a title="R利剑NoSQL系列文章 之 cassandra" href="https://cos.name/2013/07/r-nosql-cassandra/" target="_blank">https://cos.name/2013/07/r-nosql-cassandra/</a>
+[/2013/07/r-nosql-cassandra/](/2013/07/r-nosql-cassandra/ "R利剑NoSQL系列文章 之 cassandra")
 
-[<img src="http://blog.fens.me/wp-content/uploads/2013/07/rcassandra.png" alt="rcassandra" width="600" height="400" class="alignnone size-full wp-image-1304" />](http://blog.fens.me/wp-content/uploads/2013/07/rcassandra.png)
+![rcassandra](http://blog.fens.me/wp-content/uploads/2013/07/rcassandra.png)
   
 <!--more-->
 
@@ -40,7 +40,7 @@ slug: r-nosql-cassandra
   6. RCassandra使用案例
   7. Cassandra的没落
 
-<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px;">每一章节，都会分为”文字说明部分”和”代码部分”，保持文字说明与代码的连贯性。</span>
+<span style="font-family: Georgia, 'Times New Roman', 'Bitstream Charter', Times, serif; font-size: 13px; line-height: 19px;">每一章节，都会分为“文字说明部分”和“代码部分”，保持文字说明与代码的连贯性。</span>
 
 ## 1. Cassandra介绍
 
@@ -68,7 +68,7 @@ Cassandra配置，需要提前初始化几个目录。
   * commitlog_directory：为日志文件目录
   * saved\_caches\_directory：为缓存文件目录
 
-下面将介绍单节点的安装，集群安装请参考：<a title="Cassandra单集群实验2个节点" href="http://blog.fens.me/cassandra-clustor/" target="_blank">Cassandra单集群实验2个节点</a>
+下面将介绍单节点的安装，集群安装请参考：[Cassandra单集群实验2个节点](http://blog.fens.me/cassandra-clustor/ "Cassandra单集群实验2个节点")
 
 **代码部分：**
   
@@ -193,7 +193,7 @@ saved\_caches\_directory：为缓存文件目录
 
 单节的cassandra，我们已经成功能安装好了。
 
-Cassandra的集群安装请参考：<a title="Cassandra单集群实验2个节点" href="http://blog.fens.me/cassandra-clustor/" target="_blank">Cassandra单集群实验2个节点</a>
+Cassandra的集群安装请参考：[Cassandra单集群实验2个节点](http://blog.fens.me/cassandra-clustor/ "Cassandra单集群实验2个节点")
 
 ## 3. RCassandra安装
 
@@ -548,4 +548,4 @@ Cassandra的没落，在技术上可能存在的一些原因：
 
 **转载请注明：**
   
-<a title="R利剑NoSQL系列文章 之 cassandra" href="https://cos.name/2013/07/r-nosql-cassandra/" target="_blank">https://cos.name/2013/07/r-nosql-cassandra/</a>
+[/2013/07/r-nosql-cassandra/](/2013/07/r-nosql-cassandra/ "R利剑NoSQL系列文章 之 cassandra")

@@ -17,9 +17,9 @@ tags:
 slug: asa-statement-on-p-value
 ---
 
-<figure id="attachment_11913" style="width: 302px" class="wp-caption aligncenter"><a href="https://cos.name/wp-content/uploads/2016/03/p_values-1.png" rel="attachment wp-att-11911"><img class="wp-image-11913 size-full" src="https://cos.name/wp-content/uploads/2016/03/p_values-1.png" alt="" width="302" height="365" srcset="https://cos.name/wp-content/uploads/2016/03/p_values-1.png 302w, https://cos.name/wp-content/uploads/2016/03/p_values-1-248x300.png 248w" sizes="(max-width: 302px) 100vw, 302px" /></a><figcaption class="wp-caption-text">（图片来源：<a href="https://xkcd.com/1478" target="_blank">https://xkcd.com/1478</a>，一幅讽刺滥用P值的漫画）</figcaption></figure> 
+<figure id="attachment_11913" style="width: 302px" class="wp-caption aligncenter">![](https://cos.name/wp-content/uploads/2016/03/p_values-1.png)<figcaption class="wp-caption-text">（图片来源：[https://xkcd.com/1478](https://xkcd.com/1478)，一幅讽刺滥用P值的漫画）</figcaption></figure> 
 
-今天美国统计协会（ASA）正式发布了一条关于P值的声（吐）明（槽），算起来可以说是近期统计学界的一件大事了。为什么这么说呢？首先，P值的应用太广，所以对P值进行一些解释和声明非常有必要。其次，对P值的吐槽历来有之，但今天是第一次被一个大型的专业协会以非常正式的形式进行澄清，多少带有一些官方的意思。声明的全文可以在<a href="http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108" target="_blank">这个页面</a>中下载。
+今天美国统计协会（ASA）正式发布了一条关于P值的声（吐）明（槽），算起来可以说是近期统计学界的一件大事了。为什么这么说呢？首先，P值的应用太广，所以对P值进行一些解释和声明非常有必要。其次，对P值的吐槽历来有之，但今天是第一次被一个大型的专业协会以非常正式的形式进行澄清，多少带有一些官方的意思。声明的全文可以在[这个页面](http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108)中下载。
 
 那么这则声明里面都说了什么呢？小编整体读了一遍，把我认为重要的信息概括在这篇文章之中。
 
@@ -77,4 +77,4 @@ slug: asa-statement-on-p-value
 
 声明最后给出了对统计实践者的一些建议：好的科学实践包括方方面面，如好的设计和实施，数值上和图形上对数据进行汇总，对研究中现象的理解，对结果的解释，完整的报告等等——科学的世界里，不存在哪个单一的指标能替代科学的思维方式。
 
-参考文献：<a href="http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108" target="_blank">ASA Statement on Statistical Significance and P-values</a>
+参考文献：[ASA Statement on Statistical Significance and P-values](http://amstat.tandfonline.com/doi/abs/10.1080/00031305.2016.1154108)

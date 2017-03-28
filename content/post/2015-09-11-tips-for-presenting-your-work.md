@@ -19,16 +19,11 @@ tags:
 slug: tips-for-presenting-your-work
 ---
 
->
-【COS编辑部按】本文作者是美国统计协会（ASA）的会员、莫纳什大学教授
-[Dianne Cook](http://dicook.github.io/)。她的研究方向包括数据可视化，探索性数据分析，多元方法，数据挖掘和统计计算。曾参与制作软件XGobi，ggobi，cranvas和几个R包。
->
+>【COS编辑部按】本文作者是美国统计协会（ASA）的会员、莫纳什大学教授
+>[Dianne Cook](http://dicook.github.io/)。她的研究方向包括数据可视化，探索性数据分析，多元方法，数据挖掘和统计计算。曾参与制作软件XGobi，ggobi，cranvas和几个R包。
 
->
-原文发表在[The R journal](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Cook.pdf)，本文由陈妍翻译，
-[高涛](http://joegaotao.github.io/)、肖楠和[谢益辉](http://yihui.name/)审校，王小宁编辑。
->
-
+>原文发表在[The R journal](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Cook.pdf)，本文由陈妍翻译，
+>[高涛](http://joegaotao.github.io/)、肖楠和[谢益辉](http://yihui.name/)审校，王小宁编辑。
 
 ![](https://cos.name/wp-content/uploads/2015/09/dicook-2014-500x314.jpg)
 

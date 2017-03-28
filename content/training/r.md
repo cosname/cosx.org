@@ -10,15 +10,15 @@ author: 陈堰平
   </p>
   
   <p>
-    培训范围有：<a href="http://supstat.com.cn/training/r/">R语言</a>、<a href="http://supstat.com.cn/training/tableau/">Tableau培训</a>、<a href="http://supstat.com.cn/training/open-data/">开放数据培训</a>等
+    培训范围有：[R语言](http://supstat.com.cn/training/r/)、[Tableau培训](http://supstat.com.cn/training/tableau/)、[开放数据培训](http://supstat.com.cn/training/open-data/)等
   </p>
   
   <p>
-    培训方式：<a href="#public">公开培训</a>、<a href="#customized">企业定制化培训</a>
+    培训方式：[公开培训](#public)、[企业定制化培训](#customized)
   </p>
   
   <p>
-    近期公开培训：<a href="http://www.xueqing.cc/r-training/" target="_blank">北京2015年12月5日～7日</a>、<a href="http://supstat.com.cn/training/register/shanghai20150424/">上海2015年4月24～26日</a>、<a href="http://supstat.com.cn/training/register/beijing20150509/">北京2015年5月9日～11日</a>
+    近期公开培训：[北京2015年12月5日～7日](http://www.xueqing.cc/r-training/)、[上海2015年4月24～26日](http://supstat.com.cn/training/register/shanghai20150424/)、[北京2015年5月9日～11日](http://supstat.com.cn/training/register/beijing20150509/)
   </p>
   
   <h4 class="text-danger">
@@ -42,7 +42,7 @@ author: 陈堰平
   </h4>
   
   <p>
-    近期公开培训：<a href="http://www.xueqing.cc/r-training/" target="_blank">北京2015年12月5日～7日</a>、<a href="http://supstat.com.cn/training/register/shanghai20150424/">上海2015年4月24～26日</a>、<a href="http://supstat.com.cn/training/register/beijing20150509/">北京2015年5月9日～11日</a>
+    近期公开培训：[北京2015年12月5日～7日](http://www.xueqing.cc/r-training/)、[上海2015年4月24～26日](http://supstat.com.cn/training/register/shanghai20150424/)、[北京2015年5月9日～11日](http://supstat.com.cn/training/register/beijing20150509/)
   </p>
   
   <h5 class="text-danger">
@@ -526,13 +526,13 @@ author: 陈堰平
     
     <div class="col-sm-6">
       <p class="text-align:center;text-indent:0">
-        <a class="btn btn-lg btn-primary" href="http://supstat.com.cn/training/register/shanghai20150424" role="button">上海2015年4月24～26日 »</a>
+        [上海2015年4月24～26日 »](http://supstat.com.cn/training/register/shanghai20150424)
       </p></p>
     </div>
     
     <div class="col-sm-6">
       <p class="text-align:center;text-indent:0">
-        <a class="btn btn-lg btn-primary" href="http://supstat.com.cn/training/register/beijing20150509" role="button">北京2015年5月9日～11日 »</a>
+        [北京2015年5月9日～11日 »](http://supstat.com.cn/training/register/beijing20150509)
       </p>
     </div>
   </div>
@@ -574,7 +574,7 @@ author: 陈堰平
   </ul>
   
   <p>
-    <img style="width:100%" src="http://supstat.com/wp-content/uploads/2014/10/customers.gif" alt="SupStat Data Science Training" />
+    ![SupStat Data Science Training](http://supstat.com/wp-content/uploads/2014/10/customers.gif)
   </p>
   
   <h4>
@@ -588,11 +588,11 @@ author: 陈堰平
       </p>
       
       <p style="text-indent: 0;">
-        <a class="external" target="_blank" href="javascript:void(0);"><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;&nbsp;&nbsp;&nbsp;186-0002-1946</a>
+        [<span class="glyphicon glyphicon-phone-alt"></span>    186-0002-1946](javascript:void(0);)
       </p>
       
       <p style="text-indent: 0;">
-        <a href="mailto:contact@supstat.com.cn"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;&nbsp;&nbsp;contact@supstat.com.cn</a>
+        [<span class="glyphicon glyphicon-envelope"></span>    contact@supstat.com.cn](mailto:contact@supstat.com.cn)
       </p></p>
     </div>
     

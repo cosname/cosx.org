@@ -7,7 +7,7 @@ menu: main
 ---
 
 
-为了让数据分析专业技术人员得到技术上的帮助，使个人的技术能力在短期内得到大的提高，在事业上更好地提升自我价值，统计之都联合<a title="雪晴数据网" href="http://www.xueqing.tv" target="_blank">雪晴数据网</a>开展培训业务。
+为了让数据分析专业技术人员得到技术上的帮助，使个人的技术能力在短期内得到大的提高，在事业上更好地提升自我价值，统计之都联合[雪晴数据网](http://www.xueqing.tv "雪晴数据网")开展培训业务。
 
 培训范围有：[R语言](https://cos.name/training/r/ "R语言培训")、[Tableau培训](https://cos.name/training/tableau/ "tableau培训")、[开放数据培训](https://cos.name/training/open-data/ "R语言与开放数据")等
 
@@ -17,12 +17,12 @@ menu: main
 
   * 2013年5月，北京，[《漫谈统计分析》](http://yanping.me/talk-in-google/)，谷歌中国
   * 2012年12月，北京，《互联网时代的数据分析》，中国人民大学数据挖掘中心
-  * 2012年12月，上海，《<a title="TMT青年沙龙演讲" href="http://www.loyhome.com/ebay%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%EF%BC%88tmt%E9%9D%92%E5%B9%B4%E6%B2%99%E9%BE%99%E6%BC%94%E8%AE%B2%E5%B9%BB%E7%81%AF%E7%89%87%E5%85%B1%E4%BA%AB%EF%BC%89/" target="_blank">TMT沙龙第28期沙龙活动&#8211;大数据时代：行业关键数据分析及应用》</a>
+  * 2012年12月，上海，《[TMT沙龙第28期沙龙活动–大数据时代：行业关键数据分析及应用》](http://www.loyhome.com/ebay%E4%B8%8E%E5%A4%A7%E6%95%B0%E6%8D%AE%EF%BC%88tmt%E9%9D%92%E5%B9%B4%E6%B2%99%E9%BE%99%E6%BC%94%E8%AE%B2%E5%B9%BB%E7%81%AF%E7%89%87%E5%85%B1%E4%BA%AB%EF%BC%89/ "TMT青年沙龙演讲")
   * 2012年9月，深圳，R语言在生物信息、金融及信息安全等方面的应用，统计之都深圳沙龙
-  * 2012年9月，上海，<a href="http://topgeek.org/?p=546" target="_blank">《七周七语言系列活动之三 “R语言”》</a>，由GDG Shanghai和统计之都联合主办
-  * 2012年5月，上海，科学松鼠会《第8期科学报道工作坊：别让数字吓到你2.0（<a title="第8期科学报道工作坊：别让数字吓到你2.0（上）" href="http://s-camp.songshuhui.net/2012/05/s-workshop008_part1/" target="_blank">上</a>、<a title="第8期科学报道工作坊：别让数字吓到你2.0（下）" href="http://s-camp.songshuhui.net/2012/05/s-workshop008_part2/" target="_blank">下</a>）》
-  * 2012年3月，北京，科学松鼠会《<a title="第5期科学报道工作坊：别让数字吓到你" href="http://s-camp.songshuhui.net/2012/03/s-workshop005/" target="_blank">第5期科学报道工作坊：别让数字吓到你</a>》
-  * 2011年5月，北京，《统计之都五周年系列活动——漫谈统计分析与 R 语言》，首都经贸大学邀请演讲（<a title="统计之都五周年系列活动——漫谈统计分析与R语言" href="https://cos.name/wp-content/uploads/2013/04/statistics-and-r-programming-at-cueb.pptx" target="_blank">幻灯片</a>）
+  * 2012年9月，上海，[《七周七语言系列活动之三 “R语言”》](http://topgeek.org/?p=546)，由GDG Shanghai和统计之都联合主办
+  * 2012年5月，上海，科学松鼠会《第8期科学报道工作坊：别让数字吓到你2.0（[上](http://s-camp.songshuhui.net/2012/05/s-workshop008_part1/ "第8期科学报道工作坊：别让数字吓到你2.0（上）")、[下](http://s-camp.songshuhui.net/2012/05/s-workshop008_part2/ "第8期科学报道工作坊：别让数字吓到你2.0（下）")）》
+  * 2012年3月，北京，科学松鼠会《[第5期科学报道工作坊：别让数字吓到你](http://s-camp.songshuhui.net/2012/03/s-workshop005/ "第5期科学报道工作坊：别让数字吓到你")》
+  * 2011年5月，北京，《统计之都五周年系列活动——漫谈统计分析与 R 语言》，首都经贸大学邀请演讲（[幻灯片](https://cos.name/wp-content/uploads/2013/04/statistics-and-r-programming-at-cueb.pptx "统计之都五周年系列活动——漫谈统计分析与R语言")）
   * 2010年6月，北京，《中国第三届R语言会议基础培训》
   * 2007年，北京，_Jokes in Statistics_，首都经贸大学统计学院邀请讲座（[幻灯片](https://github.com/downloads/yihui/yihui.github.com/Jokes-2007-Yihui-Xie.pdf)）
   * 2007年，北京，《略谈统计的工具》，首都经贸大学统计学院邀请讲座（[幻灯片](https://github.com/downloads/yihui/yihui.github.com/Stat-tools-2007-Yihui-Xie.pdf)；[R代码](https://gist.github.com/1756901)）
@@ -34,8 +34,8 @@ menu: main
 我们的公开培训包括一般性的数据分析的初级到中级、高级再到针对某业界领域的课程。参与者会获得所有的书面培训文档、代码以及课后一段时间的免费辅导。
 
   * [【2017年1月6日～9日】R语言数据分析与挖掘案例实战](http://www.xueqing.tv/r-training/)
-  * <a title="2013年R语言基础春令营" href="https://cos.name/cn/topic/109541" target="_blank">2013年R语言基础春令营</a>
-  * <a title="第一届R语言夏令营" href="http://supstat.com.cn/blog/2012/07/16/summer-of-supstat" target="_blank">2012年R语言夏令营</a>
+  * [2013年R语言基础春令营](https://cos.name/cn/topic/109541 "2013年R语言基础春令营")
+  * [2012年R语言夏令营](http://supstat.com.cn/blog/2012/07/16/summer-of-supstat "第一届R语言夏令营")
 
 ## 企业定制化培训 {#customized-training}
 
@@ -52,11 +52,11 @@ menu: main
   * 2009年，中国科学院植物研究所，主题：常用数理统计原理与R语言入门
   * 2008年，国家发改委，主题：EViews软件入门培训及宏观经济统计分析应用示例
 
-<a href="http://supstat.com.cn/training/" target="_blank"><img src="http://supstat.com/wp-content/uploads/2014/10/customers.gif" alt="SupStat Data Science Training" /></a>
+[![SupStat Data Science Training](http://supstat.com/wp-content/uploads/2014/10/customers.gif)](http://supstat.com.cn/training/)
 
 培训课程目录下载：
 
-<a href="https://cos.name/wp-content/uploads/2014/10/supstat-data-science-training-brochure.pdf" target="_blank" download="supstat-training-brochure.pdf"><img src="http://supstat.com/wp-content/uploads/2014/10/download_btn.png" alt="" /></a>
+[![](http://supstat.com/wp-content/uploads/2014/10/download_btn.png)](https://cos.name/wp-content/uploads/2014/10/supstat-data-science-training-brochure.pdf)
 
 想要了解更多信息，请联系:
 

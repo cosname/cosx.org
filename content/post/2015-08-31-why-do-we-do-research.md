@@ -12,20 +12,21 @@ tags:
   - 统计学习
 slug: why-do-we-do-research
 ---
->
-【COS编辑部按】本文作者是2013年的总理科学奖得主 
-[Terence Terry Speed](http://www.stat.berkeley.edu/~terry/)。关于他的详细介绍，可参考
-[COS访谈第十二期](https://cos.name/2013/11/terry-speed/)，Terry Speed教授的名言是“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”。
->
+
+>【COS编辑部按】本文作者是2013年的总理科学奖得主 
+>[Terence Terry Speed](http://www.stat.berkeley.edu/~terry/)。关于他的详细介绍，可参考
+>[COS访谈第十二期](https://cos.name/2013/11/terry-speed/)，Terry Speed教授的名言是“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”。
+
 
 >原文发表在 IMS Bulletin 链接：<http://bulletin.imstat.org/2015/02/terences-stuff-why-do-we-do-research/>
-。2011年6月以来的 IMS Bulletin 系列文章"Terence's Stuff"; 都收录在<http://bulletin.imstat.org/category/terences-stuff/>。
-本文由王小宁翻译，冯凌秉、施涛审校。
->
+>。2011年6月以来的 IMS Bulletin 系列文章"Terence's Stuff"; 都收录在<http://bulletin.imstat.org/category/terences-stuff/>。
+>本文由王小宁翻译，冯凌秉、施涛审校。
+
 
 ![](https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg)
 
 “我们为什么要做研究？” －－这个问题似乎由调查机构，比如说像_Vitae_这种立志于通过转化研究者专业和职业发展路径来激发他们潜能的国际项目，通过抽样调查来回答最为合适。这里我只是想用我的个人经验来探讨一下这个问题。
+
 
 如果有人向我询问关于读博士或博士毕业以后的研究生涯的话，我会说从事学术研究的动机是极其重要的。只有在经过深思熟虑之后还认定真的想做研究的人才应该开始读博士。在做这个决定的过程中，听取别人的意见尤其重要的，特别是和那些之前有做过研究的过来人。这些人具体会想些什么，或者具体会谈到哪些不可能一样，但是基本上都会聊到诸如个性、价值观、技能和经验、学习方式、所擅长的东西和喜欢做的事情等等。<!--more-->
 

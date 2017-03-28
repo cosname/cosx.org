@@ -12,17 +12,21 @@ tags:
   - 维基
   - 论坛
 slug: cos-navigation-4
+description: "本周一共发布了2篇日志；《第一届中国R语言会议纪要》和《WinBUGS在统计分析中的应用（第二部分）》。第一届中国R语言会议纪要：
+介绍了第一届中国R语言会议的相关情况，可以下载会议相关资料；
+WinBUGS在统计分析中的应用（第二部分）：
+齐韬为我们讲述WinBUGS数据分析案例并结合SAS做比较分析。"
 ---
 
 # 一、主站
 
 本周一共发布了2篇日志；《第一届中国R语言会议纪要》和《WinBUGS在统计分析中的应用（第二部分）》。
 
-  * [第一届中国R语言会议纪要](https://cos.name/2008/12/1st-chinese-r-conference-summary/)
+  * [第一届中国R语言会议纪要](/2008/12/1st-chinese-r-conference-summary/)
 
 介绍了第一届中国R语言会议的相关情况，可以下载会议相关资料。
 
-  * [WinBUGS在统计分析中的应用（第二部分）](https://cos.name/2008/12/statistical-analysis-and-winbugs-part-2/)
+  * [WinBUGS在统计分析中的应用（第二部分）](/2008/12/statistical-analysis-and-winbugs-part-2/)
 
 齐韬为我们讲述WinBUGS数据分析案例并结合SAS做比较分析。
 

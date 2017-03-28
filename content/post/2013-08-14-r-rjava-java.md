@@ -14,7 +14,7 @@ tags:
 slug: r-rjava-java
 ---
 
-<a title="R的极客理想系列文章" href="http://blog.fens.me/series-r/" target="_blank">R的极客理想系列文章</a>，涵盖了R的思想，使用，工具，创新等的一系列要点，以我个人的学习和体验去诠释R的强大。
+[R的极客理想系列文章](http://blog.fens.me/series-r/ "R的极客理想系列文章")，涵盖了R的思想，使用，工具，创新等的一系列要点，以我个人的学习和体验去诠释R的强大。
 
 R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直到大数据的爆发，R语言变成了一门炙手可热的数据分析的利器。随着越来越多的工程背景的人的加入，R语言的社区在迅速扩大成长。现在已不仅仅是统计领域，教育，银行，电商，互联网….都在使用R语言。
 
@@ -28,14 +28,14 @@ R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直�
 
   * 张丹(Conan), 程序员Java,R,PHP,Javascript
   * weibo：@Conan_Z
-  * blog: <a title="粉丝日志|跨界的IT博客" href="http://blog.fens.me/" target="_blank">http://blog.fens.me</a>
+  * blog: [http://blog.fens.me](http://blog.fens.me/ "粉丝日志|跨界的IT博客")
   * email: bsspirit@gmail.com
 
 **转载请注明出处：**
   
-<a title="解惑rJava R与Java的高速通道" href="http://blog.fens.me/r-rjava-java" target="_blank">http://blog.fens.me/r-rjava-java</a>
+[http://blog.fens.me/r-rjava-java](http://blog.fens.me/r-rjava-java "解惑rJava R与Java的高速通道")
   
-[<img class="alignnone size-full wp-image-1633" alt="rjava" src="http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png" width="600" height="400" />](http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png)
+![rjava](http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png)
 
 **前言**
   
@@ -43,7 +43,7 @@ Java语言在工业界长期处于霸主地位，Java语法、JVM、JDK、Java�
 
 R一直是统计圈内处于佼佼者的语言，语法简单，学习曲线不太长也不太陡。如果能结合Java的通用性和R的专业性，碰撞出的火花，将会缤纷绚烂。
 
-本文将介绍R与Java连接的高速通道，rJava通信方案。另外一篇文章介绍的Rserve通信方案，请参考： <a title="Rserve与Java的跨平台通信" href="http://blog.fens.me/r-rserve-java/" target="_blank">Rserve与Java的跨平台通信</a>
+本文将介绍R与Java连接的高速通道，rJava通信方案。另外一篇文章介绍的Rserve通信方案，请参考： [Rserve与Java的跨平台通信](http://blog.fens.me/r-rserve-java/ "Rserve与Java的跨平台通信")
 
 **目录**
 
@@ -207,7 +207,7 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 
 **启动Eclipse编写程序**
   
-[<img class="alignnone size-full wp-image-1627" alt="rjava2" src="http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png" width="371" height="240" />](http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png)
+![rjava2](http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png)
 
     
     package org.conan.r.rjava;
@@ -246,7 +246,7 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 
     -Djava.library.path="C:\Program Files\R\R-3.0.1\library\rJava\jri\x64"
 
-[<img class="alignnone size-full wp-image-1625" alt="rjava" src="http://blog.fens.me/wp-content/uploads/2013/08/rjava.png" width="613" height="553" />](http://blog.fens.me/wp-content/uploads/2013/08/rjava.png)
+![rjava](http://blog.fens.me/wp-content/uploads/2013/08/rjava.png)
 
 **运行结果：**
 
@@ -288,4 +288,4 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 
 **转载请注明出处：**
   
-<a title="解惑rJava R与Java的高速通道" href="http://blog.fens.me/r-rjava-java" target="_blank">http://blog.fens.me/r-rjava-java</a>
+[http://blog.fens.me/r-rjava-java](http://blog.fens.me/r-rjava-java "解惑rJava R与Java的高速通道")

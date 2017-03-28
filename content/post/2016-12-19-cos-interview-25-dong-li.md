@@ -10,7 +10,7 @@ slug: cos-interview-25-dong-li
 ---
 
 <p class="p1">
-  <img class="aligncenter wp-image-13436" src="https://cos.name/wp-content/uploads/2016/12/2016-7-17.jpg" alt="" width="332" height="498" srcset="https://cos.name/wp-content/uploads/2016/12/2016-7-17.jpg 2835w, https://cos.name/wp-content/uploads/2016/12/2016-7-17-200x300.jpg 200w, https://cos.name/wp-content/uploads/2016/12/2016-7-17-768x1152.jpg 768w, https://cos.name/wp-content/uploads/2016/12/2016-7-17-333x500.jpg 333w" sizes="(max-width: 332px) 100vw, 332px" />
+  ![](https://cos.name/wp-content/uploads/2016/12/2016-7-17.jpg)
 </p>
 
 <p class="p1">
@@ -30,7 +30,7 @@ slug: cos-interview-25-dong-li
 </p>
 
 <p class="p1">
-  <span class="s1">李东，清华大学统计学研究中心助理教授。2005年在中科院数学与系统科学研究院获得硕士学位，2010年在香港科技大学获得博士学位。在香港科技大学和美国爱荷华大学做过博士后研究。研究兴趣主要集中在金融计量经济学、非线性时间序列分析、网络与大数据等方向。个人主页：</span><a href="http://www.stat.tsinghua.edu.cn/teambuilder/faculty/李东/"><span class="s2">http://www.stat.tsinghua.edu.cn/teambuilder/faculty/李东/</span></a>
+  <span class="s1">李东，清华大学统计学研究中心助理教授。2005年在中科院数学与系统科学研究院获得硕士学位，2010年在香港科技大学获得博士学位。在香港科技大学和美国爱荷华大学做过博士后研究。研究兴趣主要集中在金融计量经济学、非线性时间序列分析、网络与大数据等方向。个人主页：</span>[<span class="s2">http://www.stat.tsinghua.edu.cn/teambuilder/faculty/李东/</span>](http://www.stat.tsinghua.edu.cn/teambuilder/faculty/李东/)
 </p>
 
 <p class="p2">

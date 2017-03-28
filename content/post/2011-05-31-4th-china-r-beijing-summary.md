@@ -15,9 +15,9 @@ tags:
 slug: 4th-china-r-beijing-summary
 ---
 
-<figure style="width: 500px" class="wp-caption aligncenter">[<img class="aligncenter size-large wp-image-1821" title="第四届中国R语言会议（北京会场）合影" src="https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ-500x269.jpg" alt="第四届中国R语言会议（北京会场）合影" width="500" height="269" />](https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ.jpg)<figcaption class="wp-caption-text">第四届中国R语言会议（北京会场）合影（右键另存为看大图）</figcaption></figure> 
+<figure style="width: 500px" class="wp-caption aligncenter">![第四届中国R语言会议（北京会场）合影](https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ.jpg "第四届中国R语言会议（北京会场）合影")<figcaption class="wp-caption-text">第四届中国R语言会议（北京会场）合影（右键另存为看大图）</figcaption></figure> 
 
-[<img class="aligncenter size-medium wp-image-2276" title="中国R语言会议标识" src="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png" alt="" width="300" height="199" srcset="https://cos.name/wp-content/uploads/2010/06/China-R-Logo-300x199.png 300w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo-500x331.png 500w, https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png 532w" sizes="(max-width: 300px) 100vw, 300px" />](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 第四届中国R语言会议（北京会场）于2011年5月28日~29日在中国人民大学明德法学楼0201成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都(<a href="https://cos.name" target="_blank">cos.name</a>)协办。在两天的会议时间里，参会者齐聚一堂，就R语言在生物、金融、网络、商业等诸多方面的应用进行了深入的探讨。
+![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 第四届中国R语言会议（北京会场）于2011年5月28日~29日在中国人民大学明德法学楼0201成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都([cos.name](https://cos.name))协办。在两天的会议时间里，参会者齐聚一堂，就R语言在生物、金融、网络、商业等诸多方面的应用进行了深入的探讨。
 
 ## 会议概况
 
@@ -39,7 +39,7 @@ slug: 4th-china-r-beijing-summary
 >       </dt>
 >       
 >       <dt>
->         <a href="https://cos.name/wp-content/uploads/2011/05/hot.jpg" target="_blank"><img title="会议现场20110528" src="https://cos.name/wp-content/uploads/2011/05/hot-500x281.jpg" alt="会议现场20110528" width="600" height="337" /></a>
+>         ![会议现场20110528](https://cos.name/wp-content/uploads/2011/05/hot.jpg "会议现场20110528")
 >       </dt>
 >       
 >       <dd>
@@ -205,60 +205,60 @@ slug: 4th-china-r-beijing-summary
 >   </h2>
 >   
 >   <p>
->     经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习。演讲视频请<a href="http://t.cn/aKWeMl">点击这里</a>。
+>     经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习。演讲视频请[点击这里](http://t.cn/aKWeMl)。
 >   </p>
 >   
 >   <ul>
 >     <li>
->       李舰：<a href="https://cos.name/wp-content/uploads/2011/05/01-Li-Jian-HPC.pdf" target="_blank">R与高性能运算</a>（<a href="https://cos.name/wp-content/uploads/2011/05/01-Li-Jian-HPC.txt" target="_blank">代码</a>）
+>       李舰：[R与高性能运算](https://cos.name/wp-content/uploads/2011/05/01-Li-Jian-HPC.pdf)（[代码](https://cos.name/wp-content/uploads/2011/05/01-Li-Jian-HPC.txt)）
 >     </li>
 >     <li>
->       李欣海：<a href="https://cos.name/wp-content/uploads/2011/06/2.-%E6%9D%8E%E6%AC%A3%E6%B5%B7-%E5%B9%BF%E4%B9%89%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B.pdf" target="_blank">广义线性模型的基本原理及其应用</a>
+>       李欣海：[广义线性模型的基本原理及其应用](https://cos.name/wp-content/uploads/2011/06/2.-%E6%9D%8E%E6%AC%A3%E6%B5%B7-%E5%B9%BF%E4%B9%89%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B.pdf)
 >     </li>
 >     <li>
->       肖嘉敏：<a href="https://cos.name/wp-content/uploads/2011/06/3.-%E8%82%96%E5%98%89%E6%95%8F-%E5%9F%BA%E4%BA%8ER%E7%9A%84%E7%BD%91%E7%BB%9C%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E7%A0%94%E7%A9%B6.pdf" target="_blank">基于R的网络用户行为研究</a>
+>       肖嘉敏：[基于R的网络用户行为研究](https://cos.name/wp-content/uploads/2011/06/3.-%E8%82%96%E5%98%89%E6%95%8F-%E5%9F%BA%E4%BA%8ER%E7%9A%84%E7%BD%91%E7%BB%9C%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E7%A0%94%E7%A9%B6.pdf)
 >     </li>
 >     <li>
->       张金龙：<a href="https://cos.name/wp-content/uploads/2011/06/4.-%E5%BC%A0%E9%87%91%E9%BE%99-R%E4%B8%8E%E8%BF%9B%E5%8C%96%E7%94%9F%E6%80%81%E5%AD%A6_%E7%B3%BB%E7%BB%9F%E5%8F%91%E8%82%B2%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0.ppt" target="_blank">R 与进化生态学</a>
+>       张金龙：[R 与进化生态学](https://cos.name/wp-content/uploads/2011/06/4.-%E5%BC%A0%E9%87%91%E9%BE%99-R%E4%B8%8E%E8%BF%9B%E5%8C%96%E7%94%9F%E6%80%81%E5%AD%A6_%E7%B3%BB%E7%BB%9F%E5%8F%91%E8%82%B2%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0.ppt)
 >     </li>
 >     <li>
->       李青龙：<a href="https://cos.name/wp-content/uploads/2011/05/05-Li-Qinglong-R-Matlab-VBA.pdf" target="_blank">R与EXCEL VBA及MATLAB混合编程</a>
+>       李青龙：[R与EXCEL VBA及MATLAB混合编程](https://cos.name/wp-content/uploads/2011/05/05-Li-Qinglong-R-Matlab-VBA.pdf)
 >     </li>
 >     <li>
->       王洪月：<a href="https://cos.name/wp-content/uploads/2011/05/6.-王洪月-SAS-Interation-with-R.ppt" target="_blank">SAS Interaction with R</a>
+>       王洪月：[SAS Interaction with R](https://cos.name/wp-content/uploads/2011/05/6.-王洪月-SAS-Interation-with-R.ppt)
 >     </li>
 >     <li>
->       颜林林：<a href="https://cos.name/wp-content/uploads/2011/06/7.-%E9%A2%9C%E6%9E%97%E6%9E%97-R%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7%E5%8F%8ARcpp%E7%9A%84%E4%BB%8B%E7%BB%8D.ppt" target="_blank">R高级编程技巧及Rcpp的介绍</a>
+>       颜林林：[R高级编程技巧及Rcpp的介绍](https://cos.name/wp-content/uploads/2011/06/7.-%E9%A2%9C%E6%9E%97%E6%9E%97-R%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7%E5%8F%8ARcpp%E7%9A%84%E4%BB%8B%E7%BB%8D.ppt)
 >     </li>
 >     <li>
->       曹宗富：<a href="https://cos.name/wp-content/uploads/2011/06/8.-%E6%9B%B9%E5%AE%97%E5%AF%8C-%E5%9F%BA%E4%BA%8ER_Bioconductor%E8%BF%9B%E8%A1%8C%E7%94%9F%E7%89%A9%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.ppt" target="_blank">基于R/Bioconductor进行生物芯片数据分析</a>
+>       曹宗富：[基于R/Bioconductor进行生物芯片数据分析](https://cos.name/wp-content/uploads/2011/06/8.-%E6%9B%B9%E5%AE%97%E5%AF%8C-%E5%9F%BA%E4%BA%8ER_Bioconductor%E8%BF%9B%E8%A1%8C%E7%94%9F%E7%89%A9%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.ppt)
 >     </li>
 >     <li>
->       李颖：<a href="https://cos.name/wp-content/uploads/2011/06/9.-%E6%9D%8E%E9%A2%96-%E6%8E%A8%E8%BF%9BR%E8%AF%AD%E8%A8%80%E5%9B%BE%E4%B9%A6%E7%9A%84%E5%8F%91%E5%B1%95.ppt" target="_blank">推进R语言图书的发展</a>
+>       李颖：[推进R语言图书的发展](https://cos.name/wp-content/uploads/2011/06/9.-%E6%9D%8E%E9%A2%96-%E6%8E%A8%E8%BF%9BR%E8%AF%AD%E8%A8%80%E5%9B%BE%E4%B9%A6%E7%9A%84%E5%8F%91%E5%B1%95.ppt)
 >     </li>
 >     <li>
->       邓一硕：<a href="https://cos.name/wp-content/uploads/2011/05/10-Deng-Yishuo-Finance.pdf" target="_blank">R与现代金融分析</a>
+>       邓一硕：[R与现代金融分析](https://cos.name/wp-content/uploads/2011/05/10-Deng-Yishuo-Finance.pdf)
 >     </li>
 >     <li>
->       林伟林：<a href="https://cos.name/wp-content/uploads/2011/06/11.-%E6%9E%97%E4%BC%9F%E6%9E%97-R%E5%9C%A8%E9%87%8F%E5%8C%96%E6%8A%95%E8%B5%84%E7%9A%84%E5%BA%94%E7%94%A8.ppt" target="_blank">R在量化投资的应用</a>
+>       林伟林：[R在量化投资的应用](https://cos.name/wp-content/uploads/2011/06/11.-%E6%9E%97%E4%BC%9F%E6%9E%97-R%E5%9C%A8%E9%87%8F%E5%8C%96%E6%8A%95%E8%B5%84%E7%9A%84%E5%BA%94%E7%94%A8.ppt)
 >     </li>
 >     <li>
->       胡江堂：<a href="https://cos.name/wp-content/uploads/2011/06/12.-%E8%83%A1%E6%B1%9F%E5%A0%82-R-versus-SAS.ppt" target="_blank">关于R和SAS的7个广为流传的误解</a>
+>       胡江堂：[关于R和SAS的7个广为流传的误解](https://cos.name/wp-content/uploads/2011/06/12.-%E8%83%A1%E6%B1%9F%E5%A0%82-R-versus-SAS.ppt)
 >     </li>
 >     <li>
->       李舰：<a href="https://cos.name/wp-content/uploads/2011/05/13-Li-Jian-R-in-Commerce.pdf" target="_blank">R的商用情况简介</a>
+>       李舰：[R的商用情况简介](https://cos.name/wp-content/uploads/2011/05/13-Li-Jian-R-in-Commerce.pdf)
 >     </li>
 >     <li>
->       朱剑锋：<a href="https://cos.name/wp-content/uploads/2011/06/14.-%E6%9C%B1%E5%89%91%E9%94%8B-R%E5%9C%A8%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%A0%94%E7%A9%B6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf" target="_blank">R在宏基因组研究中的应用</a>
+>       朱剑锋：[R在宏基因组研究中的应用](https://cos.name/wp-content/uploads/2011/06/14.-%E6%9C%B1%E5%89%91%E9%94%8B-R%E5%9C%A8%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%A0%94%E7%A9%B6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf)
 >     </li>
 >     <li>
->       赵毅：<a href="https://cos.name/wp-content/uploads/2011/06/15.-%E8%B5%B5%E6%AF%85-R%E4%B8%8E.NET%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%8C%96%E5%AD%A6%E8%AE%A1%E9%87%8F%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf" target="_blank">R与.NET混合编程及其在化学计量学中的应用</a>
+>       赵毅：[R与.NET混合编程及其在化学计量学中的应用](https://cos.name/wp-content/uploads/2011/06/15.-%E8%B5%B5%E6%AF%85-R%E4%B8%8E.NET%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%8C%96%E5%AD%A6%E8%AE%A1%E9%87%8F%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf)
 >     </li>
 >     <li>
->       卢一鸣：<a href="https://cos.name/wp-content/uploads/2011/06/16.-%E5%8D%A2%E4%B8%80%E9%B8%A3-R%C2%8A%E5%9C%A8%E5%9F%BA%E5%9B%A0%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf" target="_blank">R在基因芯片数据处理中的应用</a>
+>       卢一鸣：[R在基因芯片数据处理中的应用](https://cos.name/wp-content/uploads/2011/06/16.-%E5%8D%A2%E4%B8%80%E9%B8%A3-R%C2%8A%E5%9C%A8%E5%9F%BA%E5%9B%A0%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf)
 >     </li>
 >     <li>
->       张雯：<a href="https://cos.name/wp-content/uploads/2011/06/17.-%E5%BC%A0%E9%9B%AF-R%E8%AF%AD%E8%A8%80%E5%9C%A8%E7%89%A9%E7%A7%8D%E8%BF%9B%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.ppt" target="_blank">R语言在物种进化分析中的应用</a>
+>       张雯：[R语言在物种进化分析中的应用](https://cos.name/wp-content/uploads/2011/06/17.-%E5%BC%A0%E9%9B%AF-R%E8%AF%AD%E8%A8%80%E5%9C%A8%E7%89%A9%E7%A7%8D%E8%BF%9B%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.ppt)
 >     </li>
 >   </ul>
 >   
@@ -267,5 +267,5 @@ slug: 4th-china-r-beijing-summary
 >   </h2>
 >   
 >   <p>
->     如果您对于中国R语言会议还有任何感想、意见或建议，欢迎您在本页面、<a href="http://renren.com/cosname" target="_blank">统计之都人人网页面</a>或<a href="http://weibo.com/cosname" target="_blank">统计之都新浪微博</a>留言，我们会尽力在今后对会议质量进行进一步的改善。
+>     如果您对于中国R语言会议还有任何感想、意见或建议，欢迎您在本页面、[统计之都人人网页面](http://renren.com/cosname)或[统计之都新浪微博](http://weibo.com/cosname)留言，我们会尽力在今后对会议质量进行进一步的改善。
 >   </p>

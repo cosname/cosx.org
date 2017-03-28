@@ -28,7 +28,7 @@ $$ \Pi(x)=\int_{0}^\infty t^x e^{-t}\,dt ,$$
 然而这个定义在历史上并没有流传开来。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/07/legendre.jpg"><img class="aligncenter size-full wp-image-10076" src="https://cos.name/wp-content/uploads/2014/07/legendre.jpg" alt="legendre" width="160" height="200" /></a>
+  ![legendre](https://cos.name/wp-content/uploads/2014/07/legendre.jpg)
 </p>
 
 <p style="text-align: center;">
@@ -144,7 +144,7 @@ $$ \Gamma(x) \approx \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}} .$$
 那么 $f(x) = \Gamma(x)$, 也就是 $\Gamma(x)$是唯一满足以上条件的函数。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/07/digamma-func.png"><img class="aligncenter size-full wp-image-10073" src="https://cos.name/wp-content/uploads/2014/07/digamma-func.png" alt="digamma-func" width="467" height="364" srcset="https://cos.name/wp-content/uploads/2014/07/digamma-func.png 467w, https://cos.name/wp-content/uploads/2014/07/digamma-func-300x233.png 300w" sizes="(max-width: 467px) 100vw, 467px" /></a><br /> \$\log \Gamma(x)$ 是一个凸函数
+  ![digamma-func](https://cos.name/wp-content/uploads/2014/07/digamma-func.png)<br /> \$\log \Gamma(x)$ 是一个凸函数
 </p>
 
 伽玛函数有不少等价的表示形式和神奇的结果。高斯给出的伽玛函数的形式是
@@ -165,7 +165,7 @@ $$ {\Gamma(x)} = \frac{1}{xe^{\gamma x}} \prod_{k=1}^\infty
 
 伽玛函数还有很多妙用，它能扩展一些重要的数学概念，譬如导数。我们可以定义一阶、二阶等整数阶导数，而数学家们却追问一个奇怪的问题：我们能定义分数阶的导数吗？ 这个问题早年莱布尼茨研究微积分的时候他就提出来过，然而没有获得实质性进展。而欧拉给出了伽玛函数之后，也研究过分数阶导数的问题。我们观察一下函数$f(x) = x^n$ 的各阶导数
 
-[<img class="aligncenter size-large wp-image-10079" src="https://cos.name/wp-content/uploads/2014/07/derivatives-500x214.png" alt="derivatives" width="500" height="214" srcset="https://cos.name/wp-content/uploads/2014/07/derivatives-500x214.png 500w, https://cos.name/wp-content/uploads/2014/07/derivatives-300x128.png 300w, https://cos.name/wp-content/uploads/2014/07/derivatives.png 1094w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/07/derivatives.png)
+![derivatives](https://cos.name/wp-content/uploads/2014/07/derivatives.png)
 
 由于k阶导数可以用阶乘表达，于是我们用伽玛函数表达为
   
@@ -182,7 +182,7 @@ $$ f(x)^{(\frac{1}{2})} = \frac{\Gamma{(1+1)}}{\Gamma{(1-1/2+1)}} x^{1-1/2}
 很容易想到对于一般的函数 $f(x)$ 通过泰勒级数展开可以表达为幂级数，于是借用 $x^n$ 的分数阶导数，我们可以尝试定义出任意函数的分数阶导数。不过有点遗憾的是这种简单的基于泰勒级数的定义方法不是良定义的，并非对所有函数都适用，但是这个思想却给后来的数学家提供了重要的线索，并由此发展了数学分析中的一个研究课题： Fractional Calculus。 在这种微积分中，分数阶的导数是具有良定义的，而积分作为导数的逆运算，也可以有分数阶。 这听起来真是很神奇，而这一切都要归功于伽玛函数。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/07/n-dim-ball.jpg"><img class="aligncenter size-large wp-image-10077" src="https://cos.name/wp-content/uploads/2014/07/n-dim-ball-500x333.jpg" alt="n-dim-ball" width="500" height="333" srcset="https://cos.name/wp-content/uploads/2014/07/n-dim-ball-500x333.jpg 500w, https://cos.name/wp-content/uploads/2014/07/n-dim-ball-300x200.jpg 300w, https://cos.name/wp-content/uploads/2014/07/n-dim-ball.jpg 660w" sizes="(max-width: 500px) 100vw, 500px" /></a><br /> n 维球的体积
+  ![n-dim-ball](https://cos.name/wp-content/uploads/2014/07/n-dim-ball.jpg)<br /> n 维球的体积
 </p>
 
 伽马函数还有一个奇妙的运用是求高维空间中球的体积。我们知道 二维球是圆；其面积为 $\pi r^2$，三维球的体积为 $\frac{4}{3} \pi r^3$，那$n$维空间中半径为$r$的球的体积如何计算呢？ 数学上这个体积应该是如下多重积分
@@ -197,7 +197,7 @@ $$ V_n(r) = \frac{\pi^{\frac{n}{2}} r^n}{\Gamma(\frac{n}{2} + 1)} .$$
   
 $$ \gamma = -\frac{d\Gamma(x)}{dx}|_{x=1} =
   
-\lim_{n\rightarrow \infty}(1+\frac{1}{2} + \frac{1}{3}+\cdots+\frac{1}{n} &#8211; \log n) $$
+\lim_{n\rightarrow \infty}(1+\frac{1}{2} + \frac{1}{3}+\cdots+\frac{1}{n} – \log n) $$
   
 欧拉常数$\gamma$ 是一个神奇的常数，数学家们至今也没搞清楚它是一个有理数还是一个无理数。进一步还可以发现伽玛函数和黎曼$\zeta(s)$函数
   
@@ -205,7 +205,7 @@ $$ \zeta(s) = 1+\frac{1}{2^s} + \frac{1}{3^s} + \cdots $$
   
 有密切联系，黎曼发现了如下式子
   
-$$ \zeta(x) \Gamma(x) = \int_0^\infty \frac{u^{x-1}}{e^u &#8211; 1} du ,$$
+$$ \zeta(x) \Gamma(x) = \int_0^\infty \frac{u^{x-1}}{e^u – 1} du ,$$
   
 $$ \zeta(x) = \zeta(1-x) \Gamma(1-x) 2^s \pi^{s-1} \sin\left(\frac{\pi x}{2}\right) .$$
   
@@ -217,7 +217,7 @@ $$ \Psi(x) = \frac{d\log\Gamma(x)}{dx} $$
   
 被称为 Digamma 函数，可以证明
   
-$$\Psi(x) = -\gamma + (x-1) &#8211; \frac{(x-1)(x-2)}{2\cdot 2!}
+$$\Psi(x) = -\gamma + (x-1) – \frac{(x-1)(x-2)}{2\cdot 2!}
   
 + \frac{(x-1)(x-2)(x-3)}{3\cdot 3!} \cdots $$
   
@@ -258,7 +258,7 @@ $$Gamma(x|\alpha) = \frac{x^{\alpha-1}e^{-x}}{\Gamma(\alpha)} .$$
 $$Gamma(t|\alpha, \beta) = \frac{\beta^\alpha t^{\alpha-1}e^{-\beta t}}{\Gamma(\alpha)} .$$
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/07/gamma-distribution.png"><img class="aligncenter size-large wp-image-10075" src="https://cos.name/wp-content/uploads/2014/07/gamma-distribution-500x380.png" alt="gamma-distribution" width="500" height="380" srcset="https://cos.name/wp-content/uploads/2014/07/gamma-distribution-500x380.png 500w, https://cos.name/wp-content/uploads/2014/07/gamma-distribution-300x228.png 300w, https://cos.name/wp-content/uploads/2014/07/gamma-distribution.png 776w" sizes="(max-width: 500px) 100vw, 500px" /></a><br /> $Gamma(t|\alpha,\beta)$分布图像
+  ![gamma-distribution](https://cos.name/wp-content/uploads/2014/07/gamma-distribution.png)<br /> $Gamma(t|\alpha,\beta)$分布图像
 </p>
 
 伽玛分布在概率统计领域也是一个万人迷，众多统计分布和它有密切关系。指数分布和 $\chi^2$ 分布都是特殊的伽玛分布。另外伽玛分布是一个很强大的先验分布，在贝叶斯统计分析中被广泛的用作其它分布的先验。如果把统计分布中的共轭关系类比为人类生活中的情侣关系的话，那指数分布、泊松分布、正态分布、对数正态分布都可以是伽玛分布的情人。
@@ -386,13 +386,13 @@ $$ e^{-\lambda} = \lim_{n\rightarrow \infty} (1- \frac{\lambda}{n}) ^n $$
 
 作家海明威说：“冰山运动之雄伟壮观，是因为它只有八分之一在水面上。”阶乘，这么一个简单的基于整数的数学概念，俨然是一座冰山，我们日常看到的只是它浮在水面上的一角。而数学家们眼光犀利，看出这座山并非只有整数的一角，他们逐步地深入挖掘探索，挖出了神奇的伽马函数，把深藏在冰山下的实数域、复数域、甚至有限域都给挖了出来。而挖掘出来的伽玛函数真是一个魔术师，它跨越了人们的直觉想象，使得许多数学概念能够神奇地从整数延拓到分数；而伽玛函数同时又在现代数学的各个分支中表演着自己的神奇技艺。有许多人认为数学的概念是静态的：这些数学概念产生于历史上某一个时刻，某一位数学大家之手，之后就几乎一成不变了。对于大多数非数学专业的人而言，这种感觉貌似很自然，毕竟普通读者所接触的几何、代数、微积分这些数学知识都已经体系成熟，存在了几百甚至上千年。 然而数学的发展其实是先有探索的阶段，然后才有逻辑与体系，只是我们的数学课本历来偏重后者而忽视前者。而如果我们对数学知识的探索过程有所了解的话，会发现这些探索也犹如冰山掩藏在水面之下的部分，甚至比露出的尖角还更具魅力。
 
-台湾的数学教授蔡聪明先生在数学的科普传播方面写过大量的文章，他在《数学的发现趣谈》一书中对于数学的创造、发现与发展有一段精彩的论述：“如果你不知道一个定理（或公式）是怎样发现的，那么你对它并没有真正的了解，因为真正的了解必须从逻辑因果掌握到创造的心理因果。一个定理的诞生，基本上跟一粒种子在适当的土壤、风雨、阳光、气候 &#8230; 之下，发芽成一颗树，再开花结果，并没有两样。”本文尝试尽可能的呈现伽玛函数这颗数学之树的生长历程，可以说伽玛函数的种子最早是沃利斯播下的，欧拉给予了最好的施肥、灌溉使得种子发芽，而后来众多数学家们的努力使得这颗嫩芽茁壮成长，最终几乎成长为一颗参天大树。
+台湾的数学教授蔡聪明先生在数学的科普传播方面写过大量的文章，他在《数学的发现趣谈》一书中对于数学的创造、发现与发展有一段精彩的论述：“如果你不知道一个定理（或公式）是怎样发现的，那么你对它并没有真正的了解，因为真正的了解必须从逻辑因果掌握到创造的心理因果。一个定理的诞生，基本上跟一粒种子在适当的土壤、风雨、阳光、气候 … 之下，发芽成一颗树，再开花结果，并没有两样。”本文尝试尽可能的呈现伽玛函数这颗数学之树的生长历程，可以说伽玛函数的种子最早是沃利斯播下的，欧拉给予了最好的施肥、灌溉使得种子发芽，而后来众多数学家们的努力使得这颗嫩芽茁壮成长，最终几乎成长为一颗参天大树。
 
 伽玛函数这颗大树在现代数学中如此繁茂，笔者知识有限仅能描绘它很有限的一部分。这个函数在数学上魅力独特，不仅能够被一个理科本科生很好的理解，它本身又足够的深刻，具有很多漂亮的数学性质，历史上吸引了众多一流的数学家对它进行探索研究。美国数学家 Philip J.Davis 在1959年在《美国数学月刊》上发表了一篇很有名的介绍伽玛函数的文章，文中对伽玛函数一些特性发现的历史进行了详细的描述，这篇文章获得了 Chauvenet Prize (美国数学会颁发的数学科普奖)。 他在文中最后总结道：
 
 _Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also. (每一代人都发现了一些伽马函数的有趣性质，也许下一代人也会有所发现。)_
   
-&#8212;Philip J.Davis
+—Philip J.Davis
 
 **九、推荐阅读**
   
@@ -401,11 +401,11 @@ _Each generation has found something of interest to say about the gamma function
   * 蔡聰明, 瓦里斯尋$\pi$ 的發現理路,科学月刊, 27(4) 1996
   * 蔡聰明, 瓦里斯公式及其相關的結果,科学月刊, 27(5), 1996
   * 蔡聰明, 談 Stirling 公式, 数学传播 , 17(2), 1993
-  * Philip J. Davis, Leonhard Euler&#8217;s Integral: A Historical Profile of the Gamma Function, The American Mathematical Monthly, vol. 66, pp. 849-869, 1959
+  * Philip J. Davis, Leonhard Euler’s Integral: A Historical Profile of the Gamma Function, The American Mathematical Monthly, vol. 66, pp. 849-869, 1959
   * Jacques Dutka, The Early History of the Factorial Function, Archive for History of Exact Sciences, 43 (3), pp. 225-249, 1991
   * Detlef Gronnau, Why is the gamma function so as it is?, Teaching Mathematics and Computer Science, 2003
   * Emil Artin, The Gamma function(English Traslation), Holt, Rinehart and Winston, Inc., 1964
   * George E. Andrews et al., Special Functions, Cambridge University Press, 2001
-  * Ian Tweddle, James Stirling&#8217;s Methodus Differentialis: An Annotated Translation of Stirling&#8217;s Text, Springer, 2003
+  * Ian Tweddle, James Stirling’s Methodus Differentialis: An Annotated Translation of Stirling’s Text, Springer, 2003
 
-[<img class="aligncenter wp-image-10081 size-thumbnail" src="https://cos.name/wp-content/uploads/2014/07/flickering-logo-150x150.png" alt="flickering-logo" width="150" height="150" srcset="https://cos.name/wp-content/uploads/2014/07/flickering-logo-150x150.png 150w, https://cos.name/wp-content/uploads/2014/07/flickering-logo.png 814w" sizes="(max-width: 150px) 100vw, 150px" />](https://cos.name/wp-content/uploads/2014/07/flickering-logo.png)
+![flickering-logo](https://cos.name/wp-content/uploads/2014/07/flickering-logo.png)

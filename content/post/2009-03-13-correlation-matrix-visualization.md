@@ -18,7 +18,7 @@ slug: correlation-matrix-visualization
 
 相关系数阵对于分析多元数据时非常有用，然而当变量较多时，我们很难从一堆庞大的数字中快速获取信息。正因为如此，相关阵的可视化应运而生。的确，活泼生动的图形对我们的眼球更有诱惑力。已有的相关阵可视化技巧有颜色图、椭圆图、钟表图(参见Deepayan Sarkar所著的《Multivariate Data Visualization with R》中的Fig13.6)等，其思想都非常直观。本文在阐述了颜色图和椭圆图的机理后，又提出了一种新的相关阵的可视化技术——圆圈图，并与颜色图、椭圆图进行了比较。
 
-<span style="color: #008000;">##2010-4-11更新:本文及扩展工作对应的包corrplot可从<a href="http://cran.r-project.org/web/packages/corrplot/index.html" target="_blank">CRAN</a>下载。</span>
+<span style="color: #008000;">##2010-4-11更新:本文及扩展工作对应的包corrplot可从[CRAN](http://cran.r-project.org/web/packages/corrplot/index.html)下载。</span>
 
 <!--more-->
 
@@ -39,7 +39,7 @@ colors = c("#A50F15", "#DE2D26", "#FB6A4A", "#FCAE91", "#FEE5D9",
 image(1:11, 1:11, cor2, axes = FALSE, ann = F, col = colors)
 text(rep(1:11, 11), rep(1:11, each = 11), round(100 * cor2))</pre><figure id="attachment_803" style="width: 402px" class="wp-caption aligncenter">
 
-<img class="size-full wp-image-803" src="https://cos.name/wp-content/uploads/2009/03/corimage2.png" alt="图1 相关阵的颜色图" width="402" height="401" srcset="https://cos.name/wp-content/uploads/2009/03/corimage2.png 558w, https://cos.name/wp-content/uploads/2009/03/corimage2-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/corimage2-300x299.png 300w" sizes="(max-width: 402px) 100vw, 402px" /><figcaption class="wp-caption-text">图1 相关阵的颜色图</figcaption></figure> 
+![图1 相关阵的颜色图](https://cos.name/wp-content/uploads/2009/03/corimage2.png)<figcaption class="wp-caption-text">图1 相关阵的颜色图</figcaption></figure> 
 
 观察图1，通过颜色的比较，可以直观看出相关系数的符号和大小：深色区域表示较强相关性，浅色区域表示较弱的相关性。
 
@@ -53,7 +53,7 @@ R 中，ellipse包中的plotcorr() 可以实现这一功能，同样利用 mcars
 col = colors[as.vector(apply(corr, 2, rank))]
 plotcorr(cor, col = col, mar = rep(0, 4))</pre><figure id="attachment_801" style="width: 432px" class="wp-caption aligncenter">
 
-<img class="size-full wp-image-801" src="https://cos.name/wp-content/uploads/2009/03/corr-ellipse3.png" alt="图2. 相关阵的椭圆图" width="432" height="432" srcset="https://cos.name/wp-content/uploads/2009/03/corr-ellipse3.png 480w, https://cos.name/wp-content/uploads/2009/03/corr-ellipse3-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/corr-ellipse3-300x300.png 300w" sizes="(max-width: 432px) 100vw, 432px" /><figcaption class="wp-caption-text">图2. 相关阵的椭圆图</figcaption></figure> 
+![图2. 相关阵的椭圆图](https://cos.name/wp-content/uploads/2009/03/corr-ellipse3.png)<figcaption class="wp-caption-text">图2. 相关阵的椭圆图</figcaption></figure> 
 
 观察图2，可以发现尽管所有椭圆披红挂蓝，但该图并不是非常形象生动（本文前一个版本中所有椭圆皆为灰色，表现力更差）。
 
@@ -88,7 +88,7 @@ plotcorr(cor, col = col, mar = rep(0, 4))</pre><figure id="attachment_801" style
 }
 circle.cor(cor)</pre><figure id="attachment_746" style="width: 446px" class="wp-caption aligncenter">
 
-<img class="size-full wp-image-746" src="https://cos.name/wp-content/uploads/2009/03/taiyuncorcircles.png" alt="相关阵的圆圈图" width="446" height="446" srcset="https://cos.name/wp-content/uploads/2009/03/taiyuncorcircles.png 558w, https://cos.name/wp-content/uploads/2009/03/taiyuncorcircles-150x150.png 150w, https://cos.name/wp-content/uploads/2009/03/taiyuncorcircles-300x299.png 300w" sizes="(max-width: 446px) 100vw, 446px" /><figcaption class="wp-caption-text">图3. 相关阵的圆圈图</figcaption></figure> 
+![相关阵的圆圈图](https://cos.name/wp-content/uploads/2009/03/taiyuncorcircles.png)<figcaption class="wp-caption-text">图3. 相关阵的圆圈图</figcaption></figure> 
 
 图3 中，黑色实心圆表示正相关系数，空心圆表示负相关系数。观察图3 ，不难看出相关系数的大小、正负都空前清楚明了。
 
