@@ -2,6 +2,7 @@
 title: COS每周精选:群众智慧vs机器学习？
 date: '2013-04-08T10:49:21+00:00'
 author: 潘岚锋
+description: "每周精选--网站导读"
 categories:
   - 网站导读
 tags:
