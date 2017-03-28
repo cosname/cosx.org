@@ -2,6 +2,7 @@
 title: COS每周精选:R的概率分布花园
 date: '2013-03-25T12:47:50+00:00'
 author: 潘岚锋
+description: "每周精选--网站导读"
 categories:
   - 网站导读
 tags:
