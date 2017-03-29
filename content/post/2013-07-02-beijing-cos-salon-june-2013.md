@@ -29,19 +29,19 @@ slug: beijing-cos-salon-june-2013
 `RHadoop`的命令与原生`Hadoop`命令相仿，只是为了调用方便做了一些封装。以`rhdfs`包为例。查看`hdfs`文件目录的`Hadoop`原生语句是：
 
 ```hadoop
-hadoopfs-ls/user
+hadoop fs-ls/user
 ```
 
 其对应的`RHadoop`的命令语句是：
 
 ```r
-hdfs.ls(”/user/“)
+hdfs.ls("/user/")
 ```
 
 查看`hadoop`数据文件的`hadoop`语句是：
 
 ```hadoop
-hadoopfs-cat /user/hdfs/o_same_school/part-m-00000
+hadoop fs-cat /user/hdfs/o_same_school/part-m-00000
 ```
 
 其对应的`RHadoop`的命令是：
@@ -72,7 +72,7 @@ from.dfs("/tmp/RtmpWnzxl4/file5deb791fcbd5")
 下面可以借助`rmr2`包对某个`*.txt`文件中出现的英文单词进行计数，相应的代码为：
 
 ```r
-input&lt;-'/user/hdfs/o_same_school/part-m-00000'
+input<-'/user/hdfs/o_same_school/part-m-00000'
 wordcount= function(input, output = NULL, pattern = " "){
 wc.map = function(., lines) {
 keyval(unlist( strsplit( x = lines,split= pattern)),1)
@@ -112,26 +112,28 @@ wordcount(input)
   * 建立用户对物品的评分矩阵
   * 矩阵计算推荐结果
 
+# RHbase
+
 对应的原生`R`代码和`RHadoop`代码分别是：
 
-# 加载plyr包
+## 加载plyr包
 
 ```r
 library(plyr)
 ```
 
-# 读取数据集
+## 读取数据集
 
 ```r
-train&lt;-read.csv(file="small.csv",header=FALSE)
-names(train)&lt;-c("user","item","pref")
+train<-read.csv(file="small.csv",header=FALSE)
+names(train)<-c("user","item","pref")
 ```
 
-# 计算用户列表
+## 计算用户列表
 
 ```r
-usersUnique&lt;-function(){
-   users&lt;-unique(train$user) 
+usersUnique<-function(){
+   users<-unique(train$user) 
    users[order(users)] 
 }
 ```
@@ -139,8 +141,8 @@ usersUnique&lt;-function(){
 # 计算商品列表方法
 
 ```r
-itemsUnique&lt;-function(){ 
-   items&lt;-unique(train$item) 
+itemsUnique<-function(){ 
+   items<-unique(train$item) 
    items[order(items)] 
 }
 ```
@@ -148,57 +150,59 @@ itemsUnique&lt;-function(){
 # 用户列表
 
 ```r
-users&lt;-usersUnique()
+users<-usersUnique()
 users
 ```
 
 # 商品列表
 
 ```r
-items&lt;-itemsUnique()
+items<-itemsUnique()
 items
 ```
 
-# 建立商品列表索引
+## 建立商品列表索引
 
 ```r
-index&lt;-function(x) which(items %in% x)
-data&lt;-ddply(train,.(user,item,pref),summarize,idx=index(item))
+index<-function(x) which(items %in% x)
+data<-ddply(train,.(user,item,pref),summarize,idx=index(item))
 ```
 
-# 同现矩阵
+## 同现矩阵
 
-<pre>cooccurrence&lt;-function(data){
-   n&lt;-length(items)
-   co&lt;-matrix(rep(0,n*n),nrow=n)
+```r
+cooccurrence<-function(data){
+   n<-length(items)
+   co<-matrix(rep(0,n*n),nrow=n)
    for(u in users){
-     idx&lt;-index(data$item[which(data$user==u)])
-     m&lt;-merge(idx,idx)
+     idx<-index(data$item[which(data$user==u)])
+     m<-merge(idx,idx)
        for(iin 1:nrow(m)){
           co[m$x[i],m$y[i]]=co[m$x[i],m$y[i]]+1
        }
    }
    return(co)
-}</pre>
+}
+```
 
-# 推荐算法
+## 推荐算法
 
 ```r
-recommend&lt;-function(udata=udata,co=coMatrix,num=0){
-   n&lt;-length(items) # all of pref
-   pref&lt;-rep(0,n)
-   pref[udata$idx]&lt;-udata$pref
+recommend<-function(udata=udata,co=coMatrix,num=0){
+   n<-length(items) # all of pref
+   pref<-rep(0,n)
+   pref[udata$idx]<-udata$pref
    ## 用户评分矩阵
-   userx&lt;-matrix(pref,nrow=n)
+   userx<-matrix(pref,nrow=n)
    ## 同现矩阵 * 评分矩阵
-   r&lt;-co %*% userx
+   r<-co %*% userx
    ## 推荐结果排序
-   r[udata$idx]&lt;-0
-   idx&lt;-order(r,decreasing=TRUE)
-   topn&lt;-data.frame(user=rep(udata$user[1],length(idx)),
+   r[udata$idx]<-0
+   idx<-order(r,decreasing=TRUE)
+   topn<-data.frame(user=rep(udata$user[1],length(idx)),
                        item=items[idx], val=r[idx])
    ## 推荐结果取前num个
-   if(num&gt;0) topn&lt;-head(topn,num) 
+   if(num>0) topn<-head(topn,num) 
    ## 返回结果
    return(topn)
 }
