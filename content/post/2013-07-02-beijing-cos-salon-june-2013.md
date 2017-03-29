@@ -125,7 +125,7 @@ library(plyr)
 ## 读取数据集
 
 ```r
-train <- read.csv(file = "small.csv",header = FALSE)
+train <- read.csv(file = "small.csv", header = FALSE)
 names(train) <- c("user", "item", "pref")
 ```
 
@@ -178,7 +178,7 @@ cooccurrence <- function(data){
      idx <- index(data$item[which(data$user == u)])
      m <- merge(idx,idx)
        for(i in 1:nrow(m)){
-          co[m$x[i],m$y[i]] = co[m$x[i],m$y[i]]+1
+          co[m$x[i], m$y[i]] = co[m$x[i], m$y[i]] + 1
        }
    }
    return(co)
@@ -188,17 +188,17 @@ cooccurrence <- function(data){
 ## 推荐算法
 
 ```r
-recommend <- function(udata=udata,co=coMatrix,num=0){
+recommend <- function(udata = udata, co = coMatrix, num = 0){
    n <- length(items) # all of pref
    pref <- rep(0,n)
    pref[udata$idx] <- udata$pref
    ## 用户评分矩阵
-   userx <- matrix(pref,nrow=n)
+   userx <- matrix(pref, nrow = n)
    ## 同现矩阵 * 评分矩阵
    r <- co %*% userx
    ## 推荐结果排序
    r[udata$idx] <- 0
-   idx <- order(r,decreasing = TRUE)
+   idx <- order(r, decreasing = TRUE)
    topn <- data.frame(user = rep(udata$user[1], length(idx)),
                        item = items[idx], val = r[idx])
    ## 推荐结果取前num个
