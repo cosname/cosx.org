@@ -1,6 +1,7 @@
 ---
 title: COS数据分析沙龙第十二期（北京）
 date: '2013-08-04T21:58:23+00:00'
+description: "2013年7月28日，第十二期COS数据分析沙龙（北京站）在明德主楼1016如期举行。顶着这个夏天第二个高温橙色预警，本次嘉宾，来自中科院地理资源所的王江浩先生（@沐洲）为大家呈现了主题为“时空统计和时空数据可视化”的精彩讲座。"
 author: COS编辑部
 categories:
   - 新闻通知
@@ -11,19 +12,20 @@ tags:
 slug: beijing-cos-salon-jul-2013
 ---
 
-&nbsp;
 
-<p style="text-align: center;">
-  <em><strong>by [肖展航](http://weibo.com/xzhman)</strong></em>![cos101](https://cos.name/wp-content/uploads/2013/08/cos101.jpg)
-</p>
+by [肖展航](http://weibo.com/xzhman)
 
-&nbsp;
+
+![cos101](https://cos.name/wp-content/uploads/2013/08/cos101.jpg)
+
+
+
 
 2013年7月28日，第十二期COS数据分析沙龙（北京站）在明德主楼1016如期举行。顶着这个夏天第二个高温橙色预警，本次嘉宾，来自中科院地理资源所的王江浩先生（@沐洲）为大家呈现了主题为“时空统计和时空数据可视化”的精彩讲座。
 
 **王江浩先生**现为中国科学院地理科学与资源资源研究所，资源与环境信息系统国家重点实验室在读博士生；他的专业为遥感与地理信息系统，博士期间主要从事时空地统计学（Spatio-temporal Geostatistics）的相关研究工作；他现已发表学术论文10余篇，其中SCI收录6篇（第一作者2篇），EI检索2篇。他是GIS开源社区（OSGeo）的爱好者和推动者，熟练掌握R、Python、Javascript、IDL等开发语言；他长期关注遥感与地理空间大数据分析与可视化，乐于交流推崇开源与共享；雅安地震时，他第一时间制作了 四川雅安地震信息的可视化，方便关心雅安的网民及时了解[雅安地震信息](http://jianghao.github.io/earthquake/index.htm)。
   
-<!--more-->
+
 
 
   
@@ -31,24 +33,24 @@ slug: beijing-cos-salon-jul-2013
 
 在与会者了解了基本的时空统计特征之后，嘉宾着重介绍了R中的时空数据分析。按照类型上讲，有三类：第一类是R中的时间序列分析，R中的基础包涉及到关于许多时间序列的函数，例如：stat包里定义了时间和日期的数据结构，forecast和tseries包里包含了预测和单变量建模等等。自动安装所有的时序相关的包的指令如下：
 
-    
+```r    
     install.packages("ctv") 
     library("ctv")
     install.views(”TimeSeries") 
     update.views("TimeSeries")
-    
+```   
 
 第二类是R中的空间数据分析，安装环境的指令如下：
 
-    
+```r    
     install.views(“Spatial”)
-    
+```    
 
 在R中，空间统计核心包可以分成三类：输入输出数据（rgdal，maptools，maps等）；空间数据清理和操作（sp，maptools，raster）以及空间统计分析（Spatstat，gstat，geoR等）。
 
 值得注意的是，空间数据结构在sp基础包下定义为点、线、面、栅格。读入和写出空间数据，以rgdal为例，需要调用readGDAL() / writeGDAL() ，readOGR() / writeOGR() 函数。很多地理信息系统（GIS）软件可以跟R交互，例如：spgrass6包则为R和 GRASS GIS提供了接口，RPyGeo包则在R中通过Python和ArcGIS提供了借口。
 
-&nbsp;
+
 
 第三类是R中的空间统计分析。嘉宾向大家讲述了地统计分析、点模式分析、格数据分析和轨迹数据分析这四类以及对应的R语言中的包的操作。
 
