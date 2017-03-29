@@ -138,7 +138,7 @@ usersUnique<-function(){
 }
 ```
 
-# 计算商品列表方法
+## 计算商品列表方法
 
 ```r
 itemsUnique<-function(){ 
@@ -147,14 +147,14 @@ itemsUnique<-function(){
 }
 ```
 
-# 用户列表
+## 用户列表
 
 ```r
 users<-usersUnique()
 users
 ```
 
-# 商品列表
+## 商品列表
 
 ```r
 items<-itemsUnique()
