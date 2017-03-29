@@ -2,7 +2,6 @@
 title: 微博用户影响力评价的H-Index指数
 date: '2013-04-02T20:06:46+00:00'
 author: Liyun
-description: "浅谈微博用户的H-index指数"
 categories:
   - 数据挖掘与机器学习
   - 统计图形
@@ -26,7 +25,7 @@ H-index其实更广泛的应用于学术论文评价，其定义为：
 
 怎奈后来抓数据奇慢无比，遂放弃。
 
-转过年来，春天都到了，Rweibo这个包也出来好久了，不动手试试多少有点痒痒。新浪微博的API对于测试帐号限制较多，一小时只有150次请求机会。唉，只能无耻的多帐号多API一个个抓。就算这样，到最后在有限的时间之内小编也只成功的抓取了一百多个用户的信息，勉强绘就了一张微博的H-index指数与粉丝数的关系图。
+转过年来，春天都到了，Rweibo这个包也出来好久了，不动手试试多少有点痒痒。新浪微博的API对于测试帐号限制较多，一小时只有150次请求机会。唉，只能无耻的多帐号多API一个个抓。就算这样，到最后在有限的时间之内小编也只成功的抓取了一百多个用户的信息，勉强绘就了一张微博的H-index指数与粉丝数的关系图。<!--more-->
 
 当然，一切的第一步自然是以小编自己的帐号为测试中心。前段时间涨了不少粉丝，貌似却不怎么互动。所以小编有理由认为自己的H-index可能偏低。结果证明，在小编的近1100粉丝之中，只有287人的粉丝数超过了287。这样，小编的H-index就华丽丽的定格在287了。
 
@@ -34,9 +33,8 @@ H-index其实更广泛的应用于学术论文评价，其定义为：
 
 不一会儿，数据抓完了。然后算算H-index，就有了下面这张图：
 
-![](https://cloud.githubusercontent.com/assets/26109492/24403377/2ae10bf2-13ef-11e7-8847-605313f071ca.png)
-[新浪微博用户影响力H-index指数(点击大图)](https://cloud.githubusercontent.com/assets/26109492/24403377/2ae10bf2-13ef-11e7-8847-605313f071ca.png)
-
+![新浪微博用户影响力H-index指数](https://cloud.githubusercontent.com/assets/26109492/24403377/2ae10bf2-13ef-11e7-8847-605313f071ca.png)
+<p style="text-align:center;">新浪微博用户影响力H-index指数</p>
   
 巧的或者不巧的，小编我正好在线性回归线上面。标准用户呀！然后一橫一竖，就可以分出来跟我相比的四群人：
 
@@ -49,15 +47,15 @@ H-index其实更广泛的应用于学术论文评价，其定义为：
   
 1. 新浪微博的API如果只是自己玩玩，还是比较好用的，至少比爬虫要快一点点…而且权限稍微大一点点（比如粉丝可以抓全而不用受限于显示页面）。
   
-2. 如果希望抓全粉丝，就不能用[friendships/followers](http://open.weibo.com/wiki/2/friendships/followers "2/friendships/followers") 而是要用直接抓ID的[friendships/followers/ids](http://open.weibo.com/wiki/2/friendships/followers/ids "2/friendships/followers/ids").
+1. 如果希望抓全粉丝，就不能用[friendships/followers](http://open.weibo.com/wiki/2/friendships/followers "2/friendships/followers") 而是要用直接抓ID的[friendships/followers/ids](http://open.weibo.com/wiki/2/friendships/followers/ids "2/friendships/followers/ids").
   
-3. 其实可以递归的继续定义高阶H-index，比如二阶，定义为有h2个粉丝的（一阶）h-index大于h2…对于粉丝动辄过万的大V来说，递归几次可能更有意思。吾等小玩意儿就不用了。
+1. 其实可以递归的继续定义高阶H-index，比如二阶，定义为有h2个粉丝的（一阶）h-index大于h2…对于粉丝动辄过万的大V来说，递归几次可能更有意思。吾等小玩意儿就不用了。
   
-4.然后附上这张图的原始数据…大家的微博ID我就不隐藏了，都可以直接搜到…按h-index指数排序哦。
+1. 然后附上这张图的原始数据…大家的微博ID我就不隐藏了，都可以直接搜到…按h-index指数排序哦。
 
 
 |	weibo_name	|	followers_count	|	h-index	|
-|	-	|	-	|	-	|
+|:---------:	|:-------------:	|:------:	|
 |	崔婧Janet	|	1534	|	634	|
 |	Gideon_Ge	|	1682	|	515	|
 |	数据逻辑	|	1663	|	508	|
