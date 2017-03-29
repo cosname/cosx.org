@@ -45,10 +45,10 @@ fib_r <- function(n){
 这两个函数运行的时间对比如下：
 
 ```r
-< system.time(fib_r(30))
+> system.time(fib_r(30))
    user  system elapsed
-  3.080   0.000   3.083
-< system.time(fib_cpp_0(30))
+  3.080   0.000   3.083
+> system.time(fib_cpp_0(30))
    user  system elapsed
   0.004   0.000   0.004
 ```
