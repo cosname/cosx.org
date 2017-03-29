@@ -78,35 +78,35 @@ Robbins（2006）是绘图的一个基本指导。R中的ggplot2包（Wickham，
 
 # 参考书目
 
-[1]    American Statistical Association. (2011) Data Expo Posters URL  http://stat-computing.org/dataexpo/
+[1] American Statistical Association. (2011) Data Expo Posters URL  http://stat-computing.org/dataexpo/
 
-[2]    Beamer Developers. (2011) Beamer—A LaTeX class for producing presentations. URL https://bitbucket.org/rivanvx/beamer/wiki/Home.
+[2] Beamer Developers. (2011) Beamer—A LaTeX class for producing presentations. URL https://bitbucket.org/rivanvx/beamer/wiki/Home.
 
-[3]    Radford M Neal, Bayesian Learning for Neural Networks, , 1994
+[3] Radford M Neal, Bayesian Learning for Neural Networks, , 1994
 
-[4]    Cape Higher Education Consortium. (2011) Information Literacy URL  http://www.lib.uct.ac.za/infolit/poster.htm.
+[4] Cape Higher Education Consortium. (2011) Information Literacy URL  http://www.lib.uct.ac.za/infolit/poster.htm.
 
-[5]    D.Cook. (2007) Improving Statistical Posters. URLhttp://www.amstat.org/meetings/jsm/2008/pdfs/ImprovingStatisticalPosters.pdf.
+[5] D.Cook. (2007) Improving Statistical Posters. URLhttp://www.amstat.org/meetings/jsm/2008/pdfs/ImprovingStatisticalPosters.pdf.
 
-[6]    B.Dougherty and A.Wade. (2011) URL http://www.vischeck.com/vischeck/.
+[6] B.Dougherty and A.Wade. (2011) URL http://www.vischeck.com/vischeck/.
 
-[7]    Etre Limited. (2011) URL http://www.etre.com/tools/colourblindsimulator/.
+[7] Etre Limited. (2011) URL http://www.etre.com/tools/colourblindsimulator/.
 
-[8]    R.Ihaka, P. Murrell, K. Hornik, A. Zeleis. (2011) colorspace:Color Space Manipulation. URL http://cran.r-project.org
+[8] R.Ihaka, P. Murrell, K. Hornik, A. Zeleis. (2011) colorspace:Color Space Manipulation. URL http://cran.r-project.org
 
-[9]    E.Neuwirth. (2011) RColorBrewer: ColorBrewer palettes. URL http://cran.r-project.org.
+[9] E.Neuwirth. (2011) RColorBrewer: ColorBrewer palettes. URL http://cran.r-project.org.
 
-[10]     C.Purrington. (2011) Advice on Designing Scientific Posters. URL http://www.swarthmore.edu/NatSci/cpurrin1/posteradvice.htm.
+[10] C.Purrington. (2011) Advice on Designing Scientific Posters. URL http://www.swarthmore.edu/NatSci/cpurrin1/posteradvice.htm.
 
-[11]     N.Robbins. (2006) Creating More Effective Graphs. URL http://www.wiley.com.
+[11] N.Robbins. (2006) Creating More Effective Graphs. URL http://www.wiley.com.
 
-[12]     M.Schoeberl and B. Toon. (2011) Ten Secrets to Giving a Good Scientific Talk. URL http://www.cgd.ucar.edu/cms/agu/scientific_talk.html.
+[12] M.Schoeberl and B. Toon. (2011) Ten Secrets to Giving a Good Scientific Talk. URL http://www.cgd.ucar.edu/cms/agu/scientific_talk.html.
 
-[13]     E.Tufte. (1990) The Visual Display of QuantitativeInformation. Graphics Press. Cheshire, CT.
+[13] E.Tufte. (1990) The Visual Display of QuantitativeInformation. Graphics Press. Cheshire, CT.
 
-[14]     A.J. van Marle. (2007) The Art of Scientific Presentations. URL https://www.cfa.harvard.edu/~scranmer/vanmarle\_talks.html#Technical\_preparation.
+[14] A.J. van Marle. (2007) The Art of Scientific Presentations. URL https://www.cfa.harvard.edu/~scranmer/vanmarle\_talks.html#Technical\_preparation.
 
-[15]    H.Wickham. (2009) ggplot2: Elegant graphics for data analysis. useR. Springer.
+[15] H.Wickham. (2009) ggplot2: Elegant graphics for data analysis. useR. Springer.
 
-[16]    C.Wild. (2009) Early Statistical Inferences: The Eyes Have It.  URL http://www.stat.auckland.ac.nz/~wild/09.wild.USCOTS.html.
+[16] C.Wild. (2009) Early Statistical Inferences: The Eyes Have It.  URL http://www.stat.auckland.ac.nz/~wild/09.wild.USCOTS.html.
 
