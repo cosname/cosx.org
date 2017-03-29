@@ -75,27 +75,27 @@ Cassandra配置，需要提前初始化几个目录。
   
 单节点安装：系统环境 Linux Ubuntu 12.04 LTS 64bit server
 
-
+```bash
     ~ uname -a
     Linux u1 3.5.0-23-generic #35~precise1-Ubuntu SMP Fri Jan 25 17:13:26 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
     
     ~ cat /etc/issue
     Ubuntu 12.04.2 LTS \n \l
-    
+```    
 
 JDK环境：SUN官方JDK 1.6.0_29
 
-    
+ ```bash   
     ~ java -version
     
     java version "1.6.0_29"
     Java(TM) SE Runtime Environment (build 1.6.0_29-b11)
     Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02, mixed mode)
-    
+```    
 
 下载Cassandra并解压
 
-```linux    
+```bash    
     ~ wget http://mirrors.tuna.tsinghua.edu.cn/apache/cassandra/1.2.5/apache-cassandra-1.2.5-bin.tar.gz
     
     ~ tar xvf apache-cassandra-1.2.5-bin.tar.gz
@@ -112,7 +112,7 @@ JDK环境：SUN官方JDK 1.6.0_29
 
 初始化cassandra
 
-```linux    
+```bash    
     ~ cd /home/conan/toolkit/cassandra125
     
     #配置Cassandra数据文件目录
@@ -136,7 +136,7 @@ saved\_caches\_directory：为缓存文件目录
   
 同时确认/var/log/cassandra/目录，对于cassandra是可写的。
 
-```linux    
+```bash   
     ~ sudo mkdir -p /var/lib/cassandra/data
     ~ sudo mkdir -p /var/lib/cassandra/saved_caches
     ~ sudo mkdir -p /var/lib/cassandra/commitlog
@@ -153,7 +153,7 @@ saved\_caches\_directory：为缓存文件目录
 
 设置环境变量
 
-```linux    
+```bash    
     ~ sudo vi /etc/environment
     CASSANDRA_HOME=/home/conan/toolkit/cassandra125
     
@@ -169,7 +169,7 @@ saved\_caches\_directory：为缓存文件目录
 
 启动cassandra
 
-```linux    
+```bash    
     ~ bin/cassandra -f
     #注：-f参数是绑定到console，不加-f则是后台启动。
     
@@ -180,7 +180,7 @@ saved\_caches\_directory：为缓存文件目录
 
 打开客户端
 
-```linux    
+```bash    
     ~ bin/cassandra-cli
     
     Connected to: "Test Cluster" on 127.0.0.1/9160
@@ -214,7 +214,7 @@ R语言的版本请使用2.15.3，下面介绍如何安装R。
 
 安装R语言
 
-```linux    
+```bash    
     ~  sudo vi /etc/apt/sources.list
     deb http://mirrors.163.com/ubuntu/ precise main universe restricted multiverse
     deb-src http://mirrors.163.com/ubuntu/ precise main universe restricted multiverse
@@ -231,7 +231,7 @@ R语言的版本请使用2.15.3，下面介绍如何安装R。
 
 更新apt-get源
 
-```linux    
+```bash    
     ~ sudo apt-get update
     
     #声明安装2.15.3的版本
