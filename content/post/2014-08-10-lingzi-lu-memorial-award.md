@@ -55,7 +55,7 @@ Alexandria, VA 22314-1943
   
     A not-for-profit organization based in Boston Massachusetts formed by the family of Lu Lingzi, who perished during the Boston Marathon bombing attack, to preserve and perpetuate Lingzi’s life example.
   
-  2. 吕令子奖学金（THE LU LINGZI SCHOLARSHIP FUND）：<http://www.bu.edu/alumni-forms/forms/lu-lingzi-fund/>
+  1. 吕令子奖学金（THE LU LINGZI SCHOLARSHIP FUND）：<http://www.bu.edu/alumni-forms/forms/lu-lingzi-fund/>
   
     波士顿大学校董以投票决定设立吕令子奖学金。校董事会成员已向该基金集体捐赠了56万多美元。
 
