@@ -75,7 +75,7 @@ Cassandra配置，需要提前初始化几个目录。
   
 单节点安装：系统环境 Linux Ubuntu 12.04 LTS 64bit server
 
-    
+
     ~ uname -a
     Linux u1 3.5.0-23-generic #35~precise1-Ubuntu SMP Fri Jan 25 17:13:26 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
     
@@ -95,7 +95,7 @@ JDK环境：SUN官方JDK 1.6.0_29
 
 下载Cassandra并解压
 
-    
+```linux    
     ~ wget http://mirrors.tuna.tsinghua.edu.cn/apache/cassandra/1.2.5/apache-cassandra-1.2.5-bin.tar.gz
     
     ~ tar xvf apache-cassandra-1.2.5-bin.tar.gz
@@ -108,11 +108,11 @@ JDK环境：SUN官方JDK 1.6.0_29
     ~ ls -l
     drwxrwxr-x  9 conan conan 4096 Jun  1 06:10 cassandra125/
     drwxr-xr-x 10 conan conan  4096 Apr 23 14:36 jdk16
-    
+```    
 
 初始化cassandra
 
-    
+```linux    
     ~ cd /home/conan/toolkit/cassandra125
     
     #配置Cassandra数据文件目录
@@ -122,7 +122,7 @@ JDK环境：SUN官方JDK 1.6.0_29
         - /var/lib/cassandra/data
     commitlog_directory: /var/lib/cassandra/commitlog
     saved_caches_directory: /var/lib/cassandra/saved_caches
-    
+```    
 
 目录的介绍：
   
@@ -136,7 +136,7 @@ saved\_caches\_directory：为缓存文件目录
   
 同时确认/var/log/cassandra/目录，对于cassandra是可写的。
 
-    
+```linux    
     ~ sudo mkdir -p /var/lib/cassandra/data
     ~ sudo mkdir -p /var/lib/cassandra/saved_caches
     ~ sudo mkdir -p /var/lib/cassandra/commitlog
@@ -149,11 +149,11 @@ saved\_caches\_directory：为缓存文件目录
     drwxr-xr-x  2 conan conan 4096 Jun  1 06:21 commitlog/
     drwxr-xr-x  2 conan conan 4096 Jun  1 06:21 data/
     drwxr-xr-x  2 conan conan 4096 Jun  1 06:21 saved_caches/
-    
+```    
 
 设置环境变量
 
-    
+```linux    
     ~ sudo vi /etc/environment
     CASSANDRA_HOME=/home/conan/toolkit/cassandra125
     
@@ -165,22 +165,22 @@ saved\_caches\_directory：为缓存文件目录
     declare -x CASSANDRA_HOME="/home/conan/toolkit/cassandra125"
     declare -x OLDPWD="/home/conan/toolkit/cassandra125"
     declare -x PWD="/home/conan/toolkit/cassandra125/bin"
-    
+```    
 
 启动cassandra
 
-    
+```linux    
     ~ bin/cassandra -f
     #注：-f参数是绑定到console，不加-f则是后台启动。
     
     ~ jps
     19971 CassandraDaemon
     20440 Jps
-    
+ ```   
 
 打开客户端
 
-    
+```linux    
     ~ bin/cassandra-cli
     
     Connected to: "Test Cluster" on 127.0.0.1/9160
@@ -190,7 +190,7 @@ saved\_caches\_directory：为缓存文件目录
     Type 'quit;' or 'exit;' to quit.
     
     [default@unknown]
-    
+ ```   
 
 单节的cassandra，我们已经成功能安装好了。
 
@@ -214,7 +214,7 @@ R语言的版本请使用2.15.3，下面介绍如何安装R。
 
 安装R语言
 
-    
+```linux    
     ~  sudo vi /etc/apt/sources.list
     deb http://mirrors.163.com/ubuntu/ precise main universe restricted multiverse
     deb-src http://mirrors.163.com/ubuntu/ precise main universe restricted multiverse
@@ -227,11 +227,11 @@ R语言的版本请使用2.15.3，下面介绍如何安装R。
     deb-src http://mirrors.163.com/ubuntu/ precise-backports universe main multiverse restricted
     deb-src http://mirrors.163.com/ubuntu/ precise-updates universe main multiverse restricted
     deb http://mirror.bjtu.edu.cn/cran/bin/linux/ubuntu precise/
-    
+```    
 
 更新apt-get源
 
-    
+```linux    
     ~ sudo apt-get update
     
     #声明安装2.15.3的版本
@@ -257,14 +257,14 @@ R语言的版本请使用2.15.3，下面介绍如何安装R。
     Type 'demo()' for some demos, 'help()' for on-line help, or
     'help.start()' for an HTML browser interface to help.
     Type 'q()' to quit R.
-    
+```    
 
 安装RCassandra
 
-    
-    > install.packages('RCassandra')
-    > library(RCassandra)
-    
+```r    
+     install.packages('RCassandra')
+     library(RCassandra)
+```    
 
 ## 4. RCassandra函数库
 
@@ -350,7 +350,7 @@ Cassandra和RCassandra的基本操作对比：
     RCassandra: RC.close(conn)
     
 
-&nbsp;
+
 
 ## 5. RCassandra基本使用操作
 
@@ -360,7 +360,7 @@ Cassandra和RCassandra的基本操作对比：
 
 **代码部分**
 
-    
+```r 
     #安装RCassandra
     install.packages('RCassandra')
     
@@ -444,7 +444,7 @@ Cassandra和RCassandra的基本操作对比：
     4          1.5         0.2          4.6         3.1  setosa
     5          1.4         0.2          5.0         3.6  setosa
     6         
-    
+```   
     
 
 **不支持的常用操作**
@@ -470,18 +470,18 @@ Cassandra和RCassandra的基本操作对比：
   
 在Cassandra命令行，创建列族Users
 
-    
+```Cassandra    
     [default@DEMO] create column family Users
     ...     with key_validation_class = 'UTF8Type'
     ...     and comparator = 'UTF8Type'
     ...     and default_validation_class = 'UTF8Type';
     
     89a2fb75-f7d0-399e-b017-30a974b19f4a
-    
+```    
 
 RCassandra插入数据，包含name,password两列
 
-    
+```r    
     > df<-data.frame(name=c('a1','a2'),password=c('a1','a2')) > print(df)
       name password
     1   a1       a1
@@ -520,7 +520,7 @@ RCassandra插入数据，包含name,password两列
     1234  20 scott    tiger
     2     NA    a2       a2
     1     12   a11       a1
-    
+```    
     
 
 ## 7. Cassandra的没落
