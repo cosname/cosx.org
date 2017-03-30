@@ -36,14 +36,14 @@ by [肖展航](http://weibo.com/xzhman)
 ```r    
 install.packages("ctv") 
 library("ctv")
-install.views(”TimeSeries") 
+install.views("TimeSeries") 
 update.views("TimeSeries")
 ```   
 
 第二类是R中的空间数据分析，安装环境的指令如下：
 
 ```r    
-install.views(“Spatial”)
+install.views("Spatial")
 ```    
 
 在R中，空间统计核心包可以分成三类：输入输出数据（rgdal，maptools，maps等）；空间数据清理和操作（sp，maptools，raster）以及空间统计分析（Spatstat，gstat，geoR等）。
