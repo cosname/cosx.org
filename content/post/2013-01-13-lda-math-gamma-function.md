@@ -17,7 +17,7 @@ tags:
 slug: lda-math-gamma-function
 ---
 
-**1. 神奇的Gamma函数**
+# 1. 神奇的Gamma函数**
   
 **1.1 Gamma 函数诞生记**
   
