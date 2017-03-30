@@ -64,7 +64,7 @@ _神说，要有正态分布，就有了正态分布。_
   
 其中 `\( b(n,p,i) = \binom{n}{i}p^iq^{n-i}\)` 是常见的二项概率。 但是对具体的 `\(n\)`, 因为其中的二项公式中有组合数，要把这个理论结果实际计算出数值结果可不是件容易的事， 这就驱动棣莫弗寻找近似计算的方法。
 
-与此相关联的另一个问题，是遵从二项分布的随机变量 `\( X \sim B(n,p)\)`, 求X 落在二项分布中心点一定范围的概率 $ P_d = P(|X – np|\le d)\)`。
+与此相关联的另一个问题，是遵从二项分布的随机变量 `\( X \sim B(n,p)\)`, 求X落在二项分布中心点一定范围的概率 `\(P_d = P(|X – np|\le d)\)`。
 
 对于 `\(p=1/2\)` 的情形， 棣莫弗做了一些计算并得到了一些近似结果，但是还不够漂亮，幸运的是棣莫弗和斯特林(James Stirling, 1692-1770)处在同一个时代， 而且二人之间有联系，斯特林公式是在数学分析中必学的一个重要公式
   
@@ -154,8 +154,7 @@ y\_n = \beta\_0 + \beta\_1x\_{1n} + \cdots + \beta\_px\_{pn} .
 \begin{array}{lll}
 \hat{\boldsymbol\beta}& = & \displaystyle \arg\min\_{\boldsymbol {\beta}} \sum\_{i=1}^n e_i^2 \\
 & = & \displaystyle
-\arg\min\_{\boldsymbol\beta} \sum\_{i=1}^n\Bigl[y\_i – (\beta\_0 + \beta\_1x\_{1i}
-+ \cdots + \beta\_px\_{pi})\Bigr]^2 .
+\arg\min\_{\boldsymbol\beta} \sum\_{i=1}^n\Bigl[y\_i – (\beta\_0 + \beta\_1x\_{1i} + \cdots + \beta\_px\_{pi})\Bigr]^2 .
 \end{array}
 \end{eqnarray}`
 
@@ -271,7 +270,7 @@ L(\theta) & = L(\theta;x\_1,\cdots,x\_n)=f(e\_1)\cdots f(e\_n) \\
 
 _Many years ago I called the Laplace-Gaussian curve the normal curve, which name, while it avoids an international question of priority, has the disadvantage of leading people to believe that all other distributions of frequency are in one sense or another “abnormal”._
 
-_ —Karl Pearson (1920) _
+_—Karl Pearson (1920)_
 
 不过因为高斯在数学家中的名气实在是太大, 正态分布的桂冠还是更多地被戴在了高斯的脑门上，目前数学界通行的用语是正态分布、高斯分布, 两者并用。
 
@@ -460,7 +459,7 @@ f(x) = p + \frac{\partial p}{\partial \sigma^2}\overline{\epsilon^2} + o(\overli
   
 `$$H(p) = -\int p(x)\log p(x) dx$$`
 
-如果给定一个分布密度函数 `\(p(x)\)` 的均值 `\(\mu\)` 和方差 `\(\sigma^2$(给定均值和方差这个条件，也可以描述为给定一阶原点矩和二阶原点矩，这两个条件是等价的)， 则在所有满足这两个限制的概率分布中，熵最大的概率分布 `\(p(x|\mu, \sigma^2)\)` 就是正态分布 `\(N(\mu, \sigma^2)\)`。
+如果给定一个分布密度函数 `\(p(x)\)` 的均值 `\(\mu\)` 和方差 `\(\sigma^2\)`(给定均值和方差这个条件，也可以描述为给定一阶原点矩和二阶原点矩，这两个条件是等价的)， 则在所有满足这两个限制的概率分布中，熵最大的概率分布 `\(p(x|\mu, \sigma^2)\)` 就是正态分布 `\(N(\mu, \sigma^2)\)`。
 
 这个结论的推导数学上稍微有点复杂，不过如果已经猜到了给定限制条件下最大熵的分布是正态分布，要证明这个猜测却是很简单的，证明的思路如下。
 
@@ -509,5 +508,5 @@ e^{-\frac{{(x-\mu})^2}{2\sigma^2}}\right\} dx \\
 
  _Physicists believe that the Gaussian law has been proved in mathematics while mathematicians think that it was experimentally established in physics._ (_物理学家认为高斯分布已经在数学上得到证明，而数学家则认为高斯分布在物理试验中得到确认_。)
 
-— Henri Poincaré
+_—— Henri Poincaré_
 
