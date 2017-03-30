@@ -11,7 +11,7 @@ slug: remove-significance-stars
 
 本期材料由[谢益辉](http://yihui.name/)、[肖楠](http://www.road2stat.com/)整理提供。
 
-_统计之都将会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor /at/ cos.name)。如果有人愿意把或已经把这些博客翻译成中文，请与我们联系(editor /at/ cos.name)。我们将会收录在主站的博客翻译模块，供更多读者阅读。_ 
+_统计之都将会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor@cos.name)。如果有人愿意把或已经把这些博客翻译成中文，请与我们联系(editor@cos.name)。我们将会收录在主站的博客翻译模块，供更多读者阅读。_ 
 
   * [让祸害人间的显著性星号消失吧！](https://stat.ethz.ch/pipermail/r-devel/2013-February/subject.html#65770)！Vanderbilt大学生统系主任Frank Harrell如此请愿。楼下有重磅人物John Fox、Terry Therneau、Norm Matloff顶帖。丰富的统计分析中，为什么人们就只看重一个P值呢？软件的默认设置应该体现出一种态度，例如我们不应该用三个星号去“误导”大众。R不仅仅只有丰富的代码库和漂亮的作图系统，更要有最正确的统计！
   * [为啥样本方差的分母是n-1？](http://bulletin.imstat.org/2012/12/terences-stuff-n-vs-n-1/)这个看似简单的问题，你确定你能解释得清楚吗？伯克利大神Terry Speed说自己从来没有想到过一个能让所有学生都明白的答案。所以大神要有奖征集最早讨论这个问题的统计文献！
