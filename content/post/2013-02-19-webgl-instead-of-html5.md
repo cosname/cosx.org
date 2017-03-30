@@ -11,7 +11,7 @@ slug: webgl-instead-of-html5
 
 本期投稿：[谢益辉](http://yihui.name/) [陈堰平](http://yanping.me/cn/) [吕晓玲](http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/128.html)
 
-_统计之都会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor /at/ cos.name)。如果有人愿意把或已经把这些博客翻译成中文，请与我们联系(editor /at/ cos.name)。我们将会收录在主站的博客翻译模块，供更多读者阅读。_
+_统计之都会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor@cos.name)。如果有人愿意把或已经把这些博客翻译成中文，请与我们联系(editor@cos.name)。我们将会收录在主站的博客翻译模块，供更多读者阅读。_
 
   * 还在研究HTML5么，[看看WebGL如何](http://stackoverflow.com/a/14888870/559676)（参见rgl包中的writeWebGL()函数）。浏览器内3D图形可以任意拖拉缩放了（[示例](https://dl.dropbox.com/u/15335397/misc/webgl-rmd.html)）。
   * [一个超酷的数据可视化平台](http://datavlab.org)，不看看[datav.js库](http://datavlab.org/2012/08/23/3385)你会后悔的。
