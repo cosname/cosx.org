@@ -27,9 +27,11 @@ slug: lingzi-lu-memorial-award
 
 吕令子同学生前也是统计之都微博的一位粉丝。作为一个推广统计学与数据科学的社区，我们统计之都也为失去吕令子这位成员而感到悲痛。我们希望以统计之都的微薄力量，让更多和吕令子有类似梦想的年轻学生在统计学这个社区中感受到相互支持和关爱！
 
+ <!--more-->
+
 附：
 
-### 申请吕令子纪念基金奖学金的流程：
+# 申请吕令子纪念基金奖学金的流程：
 
 写邮件给 pamela@amstat.org 获取申请表，然后将申请信，三封推荐信，简历，和个人短文以邮件或邮寄的方式递交给Pam Craven at pamela@amstat.org：
   
@@ -43,24 +45,25 @@ Alexandria, VA 22314-1943
   
 申请截止日期：十月十五日
 
-### 如何捐款给吕令子纪念基金：
+# 如何捐款给吕令子纪念基金：
 
 有兴趣为吕令子纪念基金慷慨解囊的人士，请移步这里 <http://www.amstat.org/awards/lingzilumemorialaward.cfm>
 
-### 吕令子有关的其他基金：
+# 吕令子有关的其他基金：
 
   1. Lingzi Foundation：<http://lingzifoundation.org>
   
     A not-for-profit organization based in Boston Massachusetts formed by the family of Lu Lingzi, who perished during the Boston Marathon bombing attack, to preserve and perpetuate Lingzi’s life example.
-  2. 吕令子奖学金（THE LU LINGZI SCHOLARSHIP FUND）：<http://www.bu.edu/alumni-forms/forms/lu-lingzi-fund/>
+  
+  1. 吕令子奖学金（THE LU LINGZI SCHOLARSHIP FUND）：<http://www.bu.edu/alumni-forms/forms/lu-lingzi-fund/>
   
     波士顿大学校董以投票决定设立吕令子奖学金。校董事会成员已向该基金集体捐赠了56万多美元。
 
-### 关于美国统计学会（American Statistical Association）：<http://www.amstat.org>
+# 关于美国统计学会（American Statistical Association）：<http://www.amstat.org>
 
 美国统计学会（ASA）是世界上规模最大的统计学协会，是“统计学的大本营”。美国统计学会通过会议、出版物、会员服务、教育、认证和宣讲来支持统计学科的发展、应用和传播。它的会员遍布全球90余个国家，服务于工业界、政府和学术界，通过推进统计研究和提升统计实践水平来告知公共政策，提升人类福祉。
 
-### 关于泛华统计协会（International Chinese Statistical Association）：<http://www.icsa.org>
+# 关于泛华统计协会（International Chinese Statistical Association）：<http://www.icsa.org>
 
 泛华统计协会（ICSA）正式发起于1987年的联合统计会议（简称 JSM，该年于旧金山召开），之后于1988年8月8日在 Delaware 成立实体组织，并在美国正式注册成为一个非营利组织。协会的会员资格向所有与统计学相关的个人和组织开放。
 

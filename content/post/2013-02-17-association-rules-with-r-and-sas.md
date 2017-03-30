@@ -12,13 +12,13 @@ tags:
 slug: association-rules-with-r-and-sas
 ---
 
-啤酒和尿布的故事是关联分析方法最经典的案例，而用于关联分析的Apriori算法更是十大数据挖掘算法之一（<http://www.cs.uvm.edu/~icdm/algorithms/index.shtml>，这个排名虽然是几年前的调查结果，但是其重要性仍可见一斑）。本文以《<a href="http://www.rdatamining.com/docs" target="_blank">R and Data Mining</a>》书中使用的泰坦尼克号人员的生存数据为例，介绍如何使用R和SAS的Apriori算法进行关联分析，比较两者的建模结果并对结果中存在的差异进行解释分析。
+啤酒和尿布的故事是关联分析方法最经典的案例，而用于关联分析的Apriori算法更是十大数据挖掘算法之一（<http://www.cs.uvm.edu/~icdm/algorithms/index.shtml>，这个排名虽然是几年前的调查结果，但是其重要性仍可见一斑）。本文以《[R and Data Mining](http://www.rdatamining.com/docs)》书中使用的泰坦尼克号人员的生存数据为例，介绍如何使用R和SAS的Apriori算法进行关联分析，比较两者的建模结果并对结果中存在的差异进行解释分析。
 
 **一、关联分析**
 
-网上有很多资料介绍关联分析算法，本文就不再赘述。我自己看的是《Introduction to Data Mining》(有对应的中文版，人民邮电出版社的《<a href="http://book.douban.com/subject/1786120/" target="_blank">数据挖掘导论</a>》)，愿意看英文的同学可以访问：[http://www-users.cs.umn.edu/~kumar/dmbook/ch6.](http://www-users.cs.umn.edu/~kumar/dmbook/ch6.pdf)[pdf](http://www-users.cs.umn.edu/~kumar/dmbook/ch6.pdf)。网上其他的资料我也大致翻过，对比之后感觉这本书是一本相当不错的教材，算法方面介绍地比较全面且有一定深度。我本人不建议大家去看那些非专业人士总结的关联分析算法介绍，虽然浅显易懂，但是内容片面，容易误导初学者，错把树木当成了森林。
+网上有很多资料介绍关联分析算法，本文就不再赘述。我自己看的是《Introduction to Data Mining》(有对应的中文版，人民邮电出版社的《[数据挖掘导论](http://book.douban.com/subject/1786120/)》)，愿意看英文的同学可以访问：[http://www-users.cs.umn.edu/~kumar/dmbook/ch6.](http://www-users.cs.umn.edu/~kumar/dmbook/ch6.pdf)[pdf](http://www-users.cs.umn.edu/~kumar/dmbook/ch6.pdf)。网上其他的资料我也大致翻过，对比之后感觉这本书是一本相当不错的教材，算法方面介绍地比较全面且有一定深度。我本人不建议大家去看那些非专业人士总结的关联分析算法介绍，虽然浅显易懂，但是内容片面，容易误导初学者，错把树木当成了森林。
 
-对于关联分析在行业应用中的经验分享、初学者的误区和最佳实践方面的资料很少，唯一能找到的一本好书是清华大学出版社的《<a href="http://book.douban.com/subject/3283973/" target="_blank">啤酒与尿布</a>》，主要介绍购物篮分析在零售行业的应用。我始终认为分析师除了算法和软件，还需要了解行业背景，不然挖出的只是模式，而不是切实可行并且能带来商业价值的模式，甚至还有可能是错误的模式。 <!--more-->
+对于关联分析在行业应用中的经验分享、初学者的误区和最佳实践方面的资料很少，唯一能找到的一本好书是清华大学出版社的《[啤酒与尿布](http://book.douban.com/subject/3283973/)》，主要介绍购物篮分析在零售行业的应用。我始终认为分析师除了算法和软件，还需要了解行业背景，不然挖出的只是模式，而不是切实可行并且能带来商业价值的模式，甚至还有可能是错误的模式。 <!--more-->
 
 **二、软件**
 
@@ -86,13 +86,13 @@ slug: association-rules-with-r-and-sas
 
 **三、R的代码和结果**
 
-R的代码主要来自《<a href="http://www.rdatamining.com/docs" target="_blank">R and Data Mining</a>》，我只加了下载数据的代码和对代码的中文说明。
+R的代码主要来自《[R and Data Mining](http://www.rdatamining.com/docs)》，我只加了下载数据的代码和对代码的中文说明。
 
 1）下载泰坦尼克数据
 
 setInternet2(TRUE)
   
-con <- url(&#8220;<http://www.rdatamining.com/data/titanic.raw.rdata>&#8220;)
+con <- url(“<http://www.rdatamining.com/data/titanic.raw.rdata>“)
   
 load(con)
   
@@ -112,11 +112,11 @@ inspect(rules)
 
 3）只保留结果中包含生存变量的关联规则
 
-\# rules with rhs containing &#8220;Survived&#8221; only
+\# rules with rhs containing “Survived” only
   
-rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c(&#8220;Survived=No&#8221;, &#8220;Survived=Yes&#8221;), default=&#8221;lhs&#8221;),control = list(verbose=F))
+rules <- apriori(titanic.raw, parameter = list(minlen=2, supp=0.005, conf=0.8), appearance = list(rhs=c(“Survived=No”, “Survived=Yes”), default=“lhs”),control = list(verbose=F))
   
-rules.sorted <- sort(rules, by=&#8221;lift&#8221;)
+rules.sorted <- sort(rules, by=“lift”)
   
 inspect(rules.sorted)
 
@@ -232,9 +232,9 @@ lhs       rhs      support      confidence      lift
 
 如果我们减小最小支持率和置信度的阈值，则能看到更多的真相。
 
-rules <- apriori(titanic.raw, parameter = list(minlen=3, supp=0.002, conf=0.2), appearance = list(rhs=c(&#8220;Survived=Yes&#8221;), lhs=c(&#8220;Class=1st&#8221;, &#8220;Class=2nd&#8221;, &#8220;Class=3rd&#8221;, &#8220;Age=Child&#8221;, &#8220;Age=Adult&#8221;), default=&#8221;none&#8221;), control = list(verbose=F))
+rules <- apriori(titanic.raw, parameter = list(minlen=3, supp=0.002, conf=0.2), appearance = list(rhs=c(“Survived=Yes”), lhs=c(“Class=1st”, “Class=2nd”, “Class=3rd”, “Age=Child”, “Age=Adult”), default=“none”), control = list(verbose=F))
   
-rules.sorted <- sort(rules, by=&#8221;confidence&#8221;)
+rules.sorted <- sort(rules, by=“confidence”)
   
 inspect(rules.sorted)
 
@@ -266,9 +266,9 @@ library(arulesViz)
   
 plot(rules)
   
-plot(rules, method=&#8221;graph&#8221;, control=list(type=&#8221;items&#8221;))
+plot(rules, method=“graph”, control=list(type=“items”))
   
-plot(rules, method=&#8221;paracoord&#8221;, control=list(reorder=TRUE))
+plot(rules, method=“paracoord”, control=list(reorder=TRUE))
 
 对于不熟悉R的SAS用户，可以阅读以下资料学习R以及ARULES包：
   
@@ -282,11 +282,11 @@ plot(rules, method=&#8221;paracoord&#8221;, control=list(reorder=TRUE))
 
 **<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">proc</span></span></span>** **<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">iml</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;<br /> </span></span><span style="font-family: Courier New;color: #ff0000;font-size: small"><span style="font-family: Courier New;color: #ff0000;font-size: small"><span style="font-family: Courier New;color: #ff0000;font-size: small">submit</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">/R;<br /> </span></span>setInternet2(TRUE)
   
-con <- url(<span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><a href="http://www.rdatamining.com/data/titanic.raw.rdata">http://www.rdatamining.com/data/titanic.raw.rdata</a></span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">)<br /> </span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">load(con)<br /> </span></span>close(con) # url() always opens the connection
+con <- url(<span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">[http://www.rdatamining.com/data/titanic.raw.rdata](http://www.rdatamining.com/data/titanic.raw.rdata)</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">)<br /> </span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">load(con)<br /> </span></span>close(con) # url() always opens the connection
   
 endsubmit;
 
-<span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">call</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">ImportDataSetFromR(</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">&#8220;Work.titanic&#8221;</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">,</span></span> <span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">&#8220;titanic.raw&#8221;</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">);<br /> </span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">run</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">quit</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
+<span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">call</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">ImportDataSetFromR(</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">“Work.titanic”</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">,</span></span> <span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">“titanic.raw”</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">);<br /> </span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">run</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">quit</span></span></span>**<span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
 
 2）将数据转换成SAS/EM要求的格式
 
@@ -316,7 +316,7 @@ item = class;
 
 4） 只保留结果中包含生存变量的关联规则
 
-**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">data</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">surviverules;<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">set</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">rules(</span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">where</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">=(set_size></span></span>**<span style="font-family: Courier New;color: #008080;font-size: small"><span style="font-family: Courier New;color: #008080;font-size: small"><span style="font-family: Courier New;color: #008080;font-size: small">1</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">and (_rhand=</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">&#8216;Yes&#8217;</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">or _rhand=</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">&#8216;No&#8217;</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">)));<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">run</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
+**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">data</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">surviverules;<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">set</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">rules(</span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">where</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">=(set_size></span></span>**<span style="font-family: Courier New;color: #008080;font-size: small"><span style="font-family: Courier New;color: #008080;font-size: small"><span style="font-family: Courier New;color: #008080;font-size: small">1</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">and (_rhand=</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">‘Yes’</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">or _rhand=</span></span><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small"><span style="font-family: Courier New;color: #800080;font-size: small">‘No’</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">)));<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">run</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
 
 **<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">proc</span></span></span>** **<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">print</span></span></span>** <span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">data</span></span></span><span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">=surviverules;<br /> </span></span><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small"><span style="font-family: Courier New;color: #0000ff;font-size: small">var</span></span></span> <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">conf support lift rule ;<br /> </span></span>**<span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small"><span style="font-family: Courier New;color: #000080;font-size: small">run</span></span></span>** <span style="font-family: Courier New;font-size: small"><span style="font-family: Courier New;font-size: small">;</span></span>
 
@@ -796,9 +796,9 @@ mbscore(购物篮数据的预测，是EM 6.1/SAS 9.2 时新引入的过程步，
 
 有兴趣的同学，可以看看下面的资料：
   
-1）<a href="http://r-forge.r-project.org/forum/forum.php?set=custom&forum_id=84&style=nested&max_rows=50&submit=Change+View" target="_blank">如何将PMML文件导入R生成Rule对象</a>？
+1）[如何将PMML文件导入R生成Rule对象](http://r-forge.r-project.org/forum/forum.php?set=custom&forum_id=84&style=nested&max_rows=50&submit=Change+View)？
   
-2）<a href="http:///groups/Using-PMML-SAS-Enterprise-Miner-2328634.S.199575798" target="_blank">如何在SAS EMM 中使用PMML？</a>
+2）[如何在SAS EMM 中使用PMML？](http:///groups/Using-PMML-SAS-Enterprise-Miner-2328634.S.199575798)
 
 附：PMML技术的未来
 
@@ -806,8 +806,8 @@ mbscore(购物篮数据的预测，是EM 6.1/SAS 9.2 时新引入的过程步，
 
 Zementis：
   
-<a href="http://www.revolutionanalytics.com/news-events/free-webinars/2011/deploying-predictive-analytics/Deploying-Predictive-Analytics-with-PMML.pdf" target="_blank">Deploying Predictive Analytics with PMML, R evolution R, and ADAPA</a>
+[Deploying Predictive Analytics with PMML, R evolution R, and ADAPA](http://www.revolutionanalytics.com/news-events/free-webinars/2011/deploying-predictive-analytics/Deploying-Predictive-Analytics-with-PMML.pdf)
   
 [<span style="color: #1e5faa">PMML: Accelerating the Time to Value for Predictive Analytics in the Big Data Era</span>](http://www.sybase.com/files/White_Papers/Sybase_AcceleratingTimeToValue_wp.pdf)
 
-IBM：<a href="ftp://ftp.software.ibm.com/software/analytics/spss/documentation/modeler/14.2/en/DatabaseMiningGuide.pdf" target="_blank">Database Mining Guide</a>
+IBM：[Database Mining Guide](ftp://ftp.software.ibm.com/software/analytics/spss/documentation/modeler/14.2/en/DatabaseMiningGuide.pdf)

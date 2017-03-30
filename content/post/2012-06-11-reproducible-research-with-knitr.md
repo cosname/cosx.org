@@ -13,12 +13,12 @@ tags:
 slug: reproducible-research-with-knitr
 ---
 
-2010年年底我写了[两](https://cos.name/2010/11/reproducible-research-in-statistics/)篇[文](https://cos.name/2011/01/cache-objects-in-sweave-stat-computation-and-graphics/)章，关于Sweave/LyX/pgfSweave，顺便引出可重复研究（Reproducible Research）的概念。一年过后，我逐渐意识到这一系列基于Sweave的工具都有致命的设计缺陷，束缚感越来越强，屡屡冒出要重复造轮子的[想法](https://cos.name/cn/topic/104960#post-222213)。于是就在“造乎？不造乎？”的犹豫中最终痛下决心全盘重造，[knitr包](http://yihui.name/knitr/)就诞生了。在第五届中国R语言会议上魏太云已经对它作了初步介绍，我会在统计之都以系列文章全面介绍它，本篇先以各种花絮开头。过去几天里我和RStudio的作者先后在我们Ames村办大学、明尼苏达R用户组和纽约R用户组分别做了knitr与RStudio的报告，下周R官方会议useR! 2012在田纳西州举办，我们也有幸得到了在会上做邀请报告的机会。在这个报告里，我要谈的就是一些开发中的思考，本文先给出这些思考的一个预览。如果你之前不熟悉Sweave，下面的内容可能不太容易理解，但没关系，一来很多东西你已经没有理解的必要了（旧世界的糟粕），二来今后我还会详细介绍knitr的功能。
+2010年年底我写了[两](/2010/11/reproducible-research-in-statistics/)篇[文](/2011/01/cache-objects-in-sweave-stat-computation-and-graphics/)章，关于Sweave/LyX/pgfSweave，顺便引出可重复研究（Reproducible Research）的概念。一年过后，我逐渐意识到这一系列基于Sweave的工具都有致命的设计缺陷，束缚感越来越强，屡屡冒出要重复造轮子的[想法](https://cos.name/cn/topic/104960#post-222213)。于是就在“造乎？不造乎？”的犹豫中最终痛下决心全盘重造，[knitr包](http://yihui.name/knitr/)就诞生了。在第五届中国R语言会议上魏太云已经对它作了初步介绍，我会在统计之都以系列文章全面介绍它，本篇先以各种花絮开头。过去几天里我和RStudio的作者先后在我们Ames村办大学、明尼苏达R用户组和纽约R用户组分别做了knitr与RStudio的报告，下周R官方会议useR! 2012在田纳西州举办，我们也有幸得到了在会上做邀请报告的机会。在这个报告里，我要谈的就是一些开发中的思考，本文先给出这些思考的一个预览。如果你之前不熟悉Sweave，下面的内容可能不太容易理解，但没关系，一来很多东西你已经没有理解的必要了（旧世界的糟粕），二来今后我还会详细介绍knitr的功能。
 
 我自从09年来美帝开始，所有的作业和报告都是用Sweave写的（纯数学的除外），因此Sweave里面的边边角角我都比较熟悉，源代码也是看了一遍又一遍，包括后来基于Sweave扩展的pgfSweave包，我也是翻了很多遍源代码。最终结论是，Sweave继承了一个伟大的想法，但在具体实现上走入了一个死角，默认功能不强，扩展性又太差。随后在我给一门R课程做助教的时候，每次看学生用Word文档交来的作业都觉得丑陋不堪（少数人会精心调整排版，但你懂的），要重跑他们的代码实在太麻烦了。没有可重复的作业，何谈可重复的科学研究？在knitr的各种反馈中，我看到一条推特消息最令我欣慰：
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://i.imgur.com/ce1BT.png" alt="学knitr吧！" width="506" height="88" />
+  ![学knitr吧！](http://i.imgur.com/ce1BT.png)
 </p>
 
 他描述的是一个普遍事实：大多人都还在复制粘贴时代。然而，表面上看起来最直接的办法往往深藏隐患。复制粘贴不仅麻烦，而且将结果置于难以重复的境地。要是别人想重复你的分析，你得详细交待每一个操作步骤。万一一个步骤出错，可能会导致后面的全都错掉，并且修改起来也麻烦。代码能很好避免这些问题，一处代码改动，可以让后续结果全都自动更新。
@@ -30,7 +30,7 @@ slug: reproducible-research-with-knitr
 软件默认设定非常重要，它决定了用户的第一印象。knitr默认代码高亮（无论什么输出格式）以及代码重整理，这都是为了增强代码和结果的可读性，面对一堆毫无生气的代码，谁都觉得累。为了设计默认的高亮主题，我专门请教了我们颜林林大站长和李龑大设计师；如果对默认主题不满意，knitr自带上百个高亮[颜色主题](https://github.com/downloads/yihui/knitr/knitr-themes.pdf)，很方便切换。代码重整理的意思是，无论你的源代码多乱，我都给你自动重新整理整齐，熟悉我的工作的人可能能猜出来这是formatR包的功能。当初我向Sweave作者进谏重整理代码的功能被谢绝了，后来pgfSweave作者采纳了我的建议，现在这功能回到我自己的包中了。
 
 <p style="text-align: center;">
-  <img class="aligncenter" src="http://i.imgur.com/Tk0OF.png" alt="knitr代码高亮" width="644" height="411" />
+  ![knitr代码高亮](http://i.imgur.com/Tk0OF.png)
 </p>
 
 ## 2、自然输出

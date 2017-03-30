@@ -14,7 +14,7 @@ tags:
 slug: from-proportion-to-conclusion
 ---
 
-新华网刚发布了一个<a title="http://news.xinhuanet.com/society/2009-04/22/content_11230487.htm" href="http://news.xinhuanet.com/society/2009-04/22/content_11230487.htm" target="_blank">关于学生冬季长跑的调查结果</a>（于2009年4月27日13:52访问），一共调查了100人，结果中却出现了92.79%这样的比例数字，有常识的读者都知道，世上不存在0.79个人，因此这里面必然有某个地方是错的（姑且不妄言造假）。这则消息让我马上想起《统计陷阱》这本书，我们生活中有多少陷阱呢？
+新华网刚发布了一个[关于学生冬季长跑的调查结果](http://news.xinhuanet.com/society/2009-04/22/content_11230487.htm "http://news.xinhuanet.com/society/2009-04/22/content_11230487.htm")（于2009年4月27日13:52访问），一共调查了100人，结果中却出现了92.79%这样的比例数字，有常识的读者都知道，世上不存在0.79个人，因此这里面必然有某个地方是错的（姑且不妄言造假）。这则消息让我马上想起《统计陷阱》这本书，我们生活中有多少陷阱呢？
 
 从消息编辑人员的角度来说，他们可能觉得保留两位小数显得“精确”，而这种“精确精神”从数学的角度来说显得既可爱又可笑，如果小数位能表示精确，那何不保留100位小数呢？
 
@@ -29,7 +29,7 @@ slug: from-proportion-to-conclusion
 &gt; idx * 0.29166666
 [1]  7 14 21 28</pre><figure id="attachment_1082" style="width: 480px" class="wp-caption aligncenter">
 
-[<img class="size-full wp-image-1082" title="从比例数字还原分式" src="https://cos.name/wp-content/uploads/2009/04/digit-detection.png" alt="从比例数字还原分式" width="480" height="400" srcset="https://cos.name/wp-content/uploads/2009/04/digit-detection.png 480w, https://cos.name/wp-content/uploads/2009/04/digit-detection-300x250.png 300w" sizes="(max-width: 480px) 100vw, 480px" />](https://cos.name/wp-content/uploads/2009/04/digit-detection.png)<figcaption class="wp-caption-text">从比例数字还原分式</figcaption></figure> 
+![从比例数字还原分式](https://cos.name/wp-content/uploads/2009/04/digit-detection.png "从比例数字还原分式")<figcaption class="wp-caption-text">从比例数字还原分式</figcaption></figure> 
 
 我们很容易发现分母（样本量）是24的倍数，因为上图中24的倍数乘以29.167%得到的结果很靠近整数；而具备某种特征的样本数量为7的倍数。根据具体的调查背景，我们可以自己猜测报告方究竟调查了多少人：24人？太少；960人？为什么不是1000人？……
 

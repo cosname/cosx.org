@@ -13,15 +13,15 @@ slug: north-america-blockbuster-lnt-law
 
 **【COS编辑部按】**本文选自狗熊会分析报告，作者为刘钰、毛铮、谯谦、吕俊杰、祁自帅、刘哲
 
-**狗熊会简介：**<a href="http://birc.gsm.pku.edu.cn/" target="_blank">北京大学商务智能研究中心</a>下的的数据分析人才联盟，每周一熊出没，举报研讨会议。其依托北京大学光华管理学院，关注基于互联网的大数据研究与应用。尤其关注中文文本、网络结构、以及位置数据相关的科研课题。中心为学者提供相关数据资源，为企业提供相关分析方法，为学者和企业合作搭建一个有效的平台。
+**狗熊会简介：**[北京大学商务智能研究中心](http://birc.gsm.pku.edu.cn/)下的的数据分析人才联盟，每周一熊出没，举报研讨会议。其依托北京大学光华管理学院，关注基于互联网的大数据研究与应用。尤其关注中文文本、网络结构、以及位置数据相关的科研课题。中心为学者提供相关数据资源，为企业提供相关分析方法，为学者和企业合作搭建一个有效的平台。
 
-联系方式：<a href="mailto:birc@gsm.pku.ed.cn" target="_blank">birc@gsm.pku.ed.cn</a>
+联系方式：[birc@gsm.pku.ed.cn](mailto:birc@gsm.pku.ed.cn)
 
-<img alt="" src="http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34yCzwIsgakR6utTcdQ5kknwfOtEUO4IecicnscIQu1UOWs9TBUamjVLFk3XGVY0agImic1bS8RI2y6w/0" data-src="http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34yCzwIsgakR6utTcdQ5kknwfOtEUO4IecicnscIQu1UOWs9TBUamjVLFk3XGVY0agImic1bS8RI2y6w/0" />
+![](http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34yCzwIsgakR6utTcdQ5kknwfOtEUO4IecicnscIQu1UOWs9TBUamjVLFk3XGVY0agImic1bS8RI2y6w/0)
 
 <div>
   <p>
-    <strong>狗熊会</strong>：有限的数据，一丁点发现，无穷多可能的解释，不知对错！但是，这不妨碍好奇与探索，以及数据分析的快乐&#8230;&#8230;
+    <strong>狗熊会</strong>：有限的数据，一丁点发现，无穷多可能的解释，不知对错！但是，这不妨碍好奇与探索，以及数据分析的快乐……
   </p>
   
   <p>
@@ -49,7 +49,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p1.jpg"><img alt="p1" src="https://cos.name/wp-content/uploads/2013/12/p1.jpg" width="897" height="471" /></a>
+    ![p1](https://cos.name/wp-content/uploads/2013/12/p1.jpg)
   </p>
   
   <p>
@@ -57,7 +57,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p2.jpg"><img alt="p2" src="https://cos.name/wp-content/uploads/2013/12/p2.jpg" width="898" height="484" /></a>
+    ![p2](https://cos.name/wp-content/uploads/2013/12/p2.jpg)
   </p>
   
   <p>
@@ -73,7 +73,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p3.jpg"><img alt="p3" src="https://cos.name/wp-content/uploads/2013/12/p3.jpg" width="895" height="469" /></a>
+    ![p3](https://cos.name/wp-content/uploads/2013/12/p3.jpg)
   </p>
   
   <p>
@@ -81,7 +81,7 @@ slug: north-america-blockbuster-lnt-law
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/12/p4.jpg"><img alt="p4" src="https://cos.name/wp-content/uploads/2013/12/p4.jpg" width="1063" height="589" /></a>
+    ![p4](https://cos.name/wp-content/uploads/2013/12/p4.jpg)
   </p>
   
   <p>

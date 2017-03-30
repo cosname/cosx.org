@@ -12,27 +12,24 @@ tags:
   - 生物信息
   - 统计之都
 slug: terry-speed
+description: "Terry Speed从不觉得能很快在媒体的头条上看到类似“统计学家治愈癌症”的标题，不过他坚信数学和统计学可以有效地帮助研究者认识癌症背后的诱因，从而减少手术的需要。身兼数学家和统计学家，Terry笔下诞生了不少鲜有人读得懂的精美学术著作，但除此之外，他还有学术成就以外的另一面，他曾出席法庭作证，帮助农户和采钻矿工，还为生物学家提供统计工具以解决基因的进化问题。"
 ---
 
-<p style="padding-left: 60px;">
-  <span style="color: #808080;">【COS编辑部按】本译文原文来自澳大利亚<span style="text-decoration: underline;"><a href="http://www.scienceinpublic.com.au/"><span style="color: #808080; text-decoration: underline;">Science in Public</span></a></span>，讲 述Terry Speed，一位著作等身的统计学者，对学术和社会生活的热情；<span style="text-decoration: underline;"><a href="http://www.scienceinpublic.com.au/prime-ministers-prize/2013-science"><span style="color: #808080; text-decoration: underline;">原文</span></a></span>版权归 Science in Public所有。</span><span style="color: #808080;">本文译者：尤晓斌(新加坡国立大学)；审校：李妙竹(上海生科院)、施涛(The Ohio State University)。</span>
-</p>
+【COS编辑部按】本译文原文来自澳大利亚[Science in Public](http://www.scienceinpublic.com.au/)，讲 述Terry Speed，一位著作等身的统计学者，对学术和社会生活的热情；[原文](http://www.scienceinpublic.com.au/prime-ministers-prize/2013-science)版权归 Science in Public所有。本文译者：尤晓斌(新加坡国立大学)；审校：李妙竹(上海生科院)、施涛(The Ohio State University)。
 
-<span style="color: #000000;"><strong><em>&#8220;统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍&#8221;</em></strong></span>
 
-<p style="text-align: right;">
-  <span style="color: #000000;"><strong><em>—Terry Speed</em></strong></span>
-</p>
 
-<img class="aligncenter" alt="alt" src="https://github.com/cosname/translation/raw/master/terryspeed/fig/Terry-Speed-1-300x200.jpg" />
+> “统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”
+
+> —Terry Speed
+
+![alt](https://github.com/cosname/translation/raw/master/terryspeed/fig/Terry-Speed-1-300x200.jpg)
 
 <p style="text-align: center;">
   图1 Terry Speed
-</p>
 
-&nbsp;
 
-## <a href="https://github.com/cosname/translation/blob/master/terryspeed/terry-speed-prize.md#%E7%94%A8%E6%95%B0%E5%AD%97%E5%90%8C%E7%99%8C%E7%97%87%E6%8A%97%E4%BA%89" name="%E7%94%A8%E6%95%B0%E5%AD%97%E5%90%8C%E7%99%8C%E7%97%87%E6%8A%97%E4%BA%89"></a>用数字同癌症抗争
+# 用数字同癌症抗争
 
 [Terry Speed](http://en.wikipedia.org/wiki/Terry_Speed)从不觉得能很快在媒体的头条上看到类似“统计学家治愈癌症”的标题，不过他坚信数学和统计学可以有效地帮助研究者认识癌症背后的诱因，从而减少手术的需要。身兼数学家和统计学家，Terry笔下诞生了不少鲜有人读得懂的精美学术著作，但除此之外，他还有学术成就以外的另一面，他曾出席法庭作证，帮助农户和采钻矿工，还为生物学家提供统计工具以解决基因的进化问题。
 
@@ -42,7 +39,7 @@ slug: terry-speed
 
 因其在解释基因组的解释以及相关技术的研发做出的杰出贡献，这位[WEHI医学研究所](http://en.wikipedia.org/wiki/WEHI)生物信息学领头人荣获2013年[总理科学奖(Prime Minister’s Prizes for Science)](http://en.wikipedia.org/wiki/Prime_Minister%27s_Prizes_for_Science)。<!--more-->
 
-## <a href="https://github.com/cosname/translation/blob/master/terryspeed/terry-speed-prize.md#terry-speed-%E7%9A%84%E9%87%87%E8%AE%BF%E7%A8%BF%E5%8E%9F%E6%96%87" name="terry-speed-%E7%9A%84%E9%87%87%E8%AE%BF%E7%A8%BF%E5%8E%9F%E6%96%87"></a>Terry Speed 的采访稿原文
+# Terry Speed 的采访稿原文
 
 Terry现在供职的WEHI医学研究所在墨尔本市中心，离他以前就读过的高中[University High School](http://en.wikipedia.org/wiki/University_High_School,_Melbourne)和大学[Melbourne University](http://en.wikipedia.org/wiki/Melbourne_University)都不远。虽说他的办公室可以俯瞰他以前读过的高中，也能把那条通往昔日大学的公路尽收眼底，但他一路走来获得如此成就绝不是所见的那么容易。算上在[U.C. Berkeley](http://en.wikipedia.org/wiki/U.C._Berkeley)担任[荣誉退休教授(emeritus professor)](http://en.wikipedia.org/wiki/Emeritus_professor#Retired_faculty)的20年，以及在[Monash University](http://en.wikipedia.org/wiki/Monash_University)，[University of Sheffield](http://en.wikipedia.org/wiki/University_of_Sheffield)，[University of Western Australia](http://en.wikipedia.org/wiki/University_of_Western_Australia)和[CSIRO](http://en.wikipedia.org/wiki/CSIRO)等学校辛勤工作的经历，他一路走来可谓经历了漫长的旅途。
 
@@ -56,7 +53,7 @@ Terry在本科学习行将结束的时候结婚了，几个月后他便在Monash
 
 Terry在UWA的时候广泛地做对外咨询工作。他经常同一些CSIRO的研究学者紧密合作。他所关注的问题遍及诸如原住民的刑拘比率，Perth的淡水使用到菱形钻石的大小分布等等，涉猎颇广，这也为他赢得了应用统计学家的美誉。最终，他也因自己的成就担任了CSIRO数学和统计学的系主任。
 
-其实Terry的真实想法是要通过实际应用来促进理论的发展。大家通常都认为统计学处于其他学科服务的地位，但他对此一点也不介意。“我倒是很同意这种说法，我觉得统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙让我们能溜进任何学科的后院里随便玩耍(译者按：此说法为Terry Speed引述自John Tukey，原文为：&#8221;The best thing about being a statistician is that you get to play in everyone&#8217;s backyard.&#8221;)，” 当问及他现在的研究方向时，他会回答，“我把统计运用到遗传学和分子生物的研究当中，癌症是一个专攻的方向。”
+其实Terry的真实想法是要通过实际应用来促进理论的发展。大家通常都认为统计学处于其他学科服务的地位，但他对此一点也不介意。“我倒是很同意这种说法，我觉得统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙让我们能溜进任何学科的后院里随便玩耍(译者按：此说法为Terry Speed引述自John Tukey，原文为：”The best thing about being a statistician is that you get to play in everyone’s backyard.”)，” 当问及他现在的研究方向时，他会回答，“我把统计运用到遗传学和分子生物的研究当中，癌症是一个专攻的方向。”
 
 在堪培拉CSIRO工作四年半之后，Terry于1987年获得了UC伯克利统计学系的教职，这可是在世界一流的统计学府供职！从CSIRO的实践环境中离开，他进入非常学术得世界，成为其中少数得几个同时具有行政管理和顾问经验的科研人员。没多久，他就接管了系里的咨询顾问事务，然后又担任了系主任。
 
@@ -74,13 +71,13 @@ Terry总是和澳洲保持着联系。有次他回到澳洲WEHI拜访昔日的�
 
 追述Terry以往的成就,无论是对整个社会，对理论和应用统计，特别对自己带领的学生，都是贡献卓著的。在2011年出版的学术论文集Selected Works of Terry Speed一书的引言中，身为他学生的伯克利教授Sandrine Dudoit写道：“本书除了能阐明Terry取得的学术成果以外，随文评论更加有趣地展现了他性格中讨人喜爱的一面，比如他蕴含着智慧的好奇心，活力，幽默感和宽广的胸怀……Terry是一个不知疲倦的学者……他对于知识的渴望和追求步伐的永不停息。”
 
-## <a href="https://github.com/cosname/translation/blob/master/terryspeed/terry-speed-prize.md#%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB" name="%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB"></a>扩展阅读
+# 扩展阅读
 
 [WEHI Terry Speed主页](http://www.wehi.edu.au/faculty_members/professor_terry_speed)
 
 [UC Berkeley Terry Speed主页](http://vcresearch.berkeley.edu/terry-speed)
 
-### <a href="https://github.com/cosname/translation/blob/master/terryspeed/terry-speed-prize.md#%E5%AD%A6%E5%8E%86" name="%E5%AD%A6%E5%8E%86"></a>学历
+## 学历
 
 2005年 University of Western Australia荣誉硕士
 
@@ -90,7 +87,7 @@ Terry总是和澳洲保持着联系。有次他回到澳洲WEHI拜访昔日的�
 
 1965年 University of Melbourne理学学士（荣誉学位）
 
-### <a href="https://github.com/cosname/translation/blob/master/terryspeed/terry-speed-prize.md#%E5%B1%A5%E5%8E%86" name="%E5%B1%A5%E5%8E%86"></a>履历
+## 履历
 
 2013年 [伦敦皇家学会会员](http://zh.wikipedia.org/wiki/%E7%9A%87%E5%AE%B6%E5%AD%A6%E4%BC%9A)
 

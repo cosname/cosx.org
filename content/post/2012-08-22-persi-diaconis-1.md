@@ -14,7 +14,7 @@ slug: persi-diaconis-1
 
 你能想象，一个人在14岁离家出走，学习魔术，浪迹江湖，24岁后潜心学术，之后成为斯坦福大学的教授？
 
-Persi Diaconis（<a href="http://en.wikipedia.org/wiki/Persi_Diaconis" target="_blank">维基</a>）确实如此，他在搞魔术的时候，为了想研究如何防止被其他魔术师骗，买了本 William Feller 的 **An Introduction to Probability Theory and Its Applications**，但是里面涉及到了微积分等知识，看不懂，那年他18岁。他发誓要回学校学习，以此能够看得懂这本书。24岁重返校园（<a href="http://en.wikipedia.org/wiki/City_College_of_New_York" title="City College of New York" target="_blank">City College of New York</a>）。他向《科学美国人》投稿介绍他两个有意思的洗牌方法。这样被一个马丁·葛登能的人看重，给他写了推荐信去哈佛大学，当时哈佛的统计学家 Fred Mosteller 正在研究魔术，于是就要了他（<a href="http://blog.sciencenet.cn/home.php?mod=space&amp;uid=1557&amp;do=blog&amp;id=418859" target="_blank">http://blog.sciencenet.cn/home.php?mod=space&uid=1557&do=blog&id=418859</a>）。
+Persi Diaconis（[维基](http://en.wikipedia.org/wiki/Persi_Diaconis)）确实如此，他在搞魔术的时候，为了想研究如何防止被其他魔术师骗，买了本 William Feller 的 **An Introduction to Probability Theory and Its Applications**，但是里面涉及到了微积分等知识，看不懂，那年他18岁。他发誓要回学校学习，以此能够看得懂这本书。24岁重返校园（[City College of New York](http://en.wikipedia.org/wiki/City_College_of_New_York "City College of New York")）。他向《科学美国人》投稿介绍他两个有意思的洗牌方法。这样被一个马丁·葛登能的人看重，给他写了推荐信去哈佛大学，当时哈佛的统计学家 Fred Mosteller 正在研究魔术，于是就要了他（[http://blog.sciencenet.cn/home.php?mod=space&uid;=1557&do;=blog&id;=418859](http://blog.sciencenet.cn/home.php?mod=space&uid=1557&do=blog&id=418859)）。
 
 Persi Diaconis 做了几个很有意思的工作，如洗牌多少次能够洗得比较彻底（我希望在统计之美里面，能够有一篇来单独介绍洗牌问题）等。他还有个绝活，据刘军老师说，他总可以抛硬币时，抛出他想要的那一面。而他每次的学术报告之前，都会表演一番，很多人实际上不是去听他的报告的，而是看看他的绝活。
 
@@ -22,7 +22,7 @@ Persi Diaconis 做了几个很有意思的工作，如洗牌多少次能够洗�
 
 有一天，一个来自了解关押囚犯心理的心理医生，来到斯坦福统计系，给出了如下一个囚犯写的密码信息：
 
-[<img src="https://cos.name/wp-content/uploads/2012/08/MCMC_code-500x199.jpg" alt="" title="MCMC_code" width="500" height="199" class="aligncenter size-large wp-image-6233" srcset="https://cos.name/wp-content/uploads/2012/08/MCMC_code-500x199.jpg 500w, https://cos.name/wp-content/uploads/2012/08/MCMC_code-300x119.jpg 300w, https://cos.name/wp-content/uploads/2012/08/MCMC_code.jpg 554w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2012/08/MCMC_code.jpg)
+![MCMC_code](https://cos.name/wp-content/uploads/2012/08/MCMC_code.jpg)
 
 上图是囚犯写的密码信息的一部分，你可以看到很多出现频繁的字符。
 
@@ -33,5 +33,5 @@ Persi Diaconis 做了几个很有意思的工作，如洗牌多少次能够洗�
 在下一篇我给出他的想法，从而写完MCMC算法的引子。
 
 <div style="display: none">
-  win your ex girlfriend backfree advice on how to make her want you back <a href="http://blog.dotsub.com/">How To Get Your Ex Girlfriend Back</a> how to get back with your ex girlfriendhow to get your girlfriend back
+  win your ex girlfriend backfree advice on how to make her want you back [How To Get Your Ex Girlfriend Back](http://blog.dotsub.com/) how to get back with your ex girlfriendhow to get your girlfriend back
 </div>

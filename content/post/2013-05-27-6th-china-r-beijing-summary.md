@@ -14,7 +14,7 @@ slug: 6th-china-r-beijing-summary
 
 第六届中国 R 语言会议（北京会场）于 2013 年 5 月 18 日 ~ 19 日在中国人民大学国学馆113、114教室成功召开。会议由中国人民大学应用统计科学研究中心、中国人民大学统计学院、北京大学商务智能研究中心、统计之都（[cos.name](https://cos.name)）主办。在两天的会议时间里，参会者齐聚一堂，就 R 语言在互联网、商业、统计、生物、制药、可视化等诸多方面的应用进行了深入的探讨。
 
-[<img class="aligncenter size-large wp-image-7851" alt="6th-china-r-bj" src="https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj-500x332.jpg" width="500" height="332" srcset="https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj-500x332.jpg 500w, https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj-300x199.jpg 300w, https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj-451x300.jpg 451w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj.jpg)
+![6th-china-r-bj](https://cos.name/wp-content/uploads/2013/05/6th-china-r-bj.jpg)
 
 ## 会议概况
 
@@ -160,7 +160,7 @@ slug: 6th-china-r-beijing-summary
   </p>
   
   <p>
-    <a href="https://cos.name/wp-content/uploads/2013/05/Learning_R.png"><img class="aligncenter size-large wp-image-7849" alt="Learning_R" src="https://cos.name/wp-content/uploads/2013/05/Learning_R-500x305.png" width="500" height="305" srcset="https://cos.name/wp-content/uploads/2013/05/Learning_R-500x305.png 500w, https://cos.name/wp-content/uploads/2013/05/Learning_R-300x183.png 300w, https://cos.name/wp-content/uploads/2013/05/Learning_R-490x300.png 490w, https://cos.name/wp-content/uploads/2013/05/Learning_R.png 618w" sizes="(max-width: 500px) 100vw, 500px" /></a>之后分别有阿里巴巴的郝智恒先生、eBay潘佳鸣先生、京东商城赵灿女士、百度侯俊琦先生、豆瓣稳国柱先生、Springer 出版社的 Niels P. Thomas 先生以及Supstat邓一硕先生依次讲述各自单位对不同层次人才的需求，会议现场更有参会者向心仪单位投递了简历，会下的交流更是火热。
+    ![Learning_R](https://cos.name/wp-content/uploads/2013/05/Learning_R.png) 之后分别有阿里巴巴的郝智恒先生、eBay潘佳鸣先生、京东商城赵灿女士、百度侯俊琦先生、豆瓣稳国柱先生、Springer 出版社的 Niels P. Thomas 先生以及Supstat邓一硕先生依次讲述各自单位对不同层次人才的需求，会议现场更有参会者向心仪单位投递了简历，会下的交流更是火热。
   </p>
   
   <h3>
@@ -224,54 +224,54 @@ slug: 6th-china-r-beijing-summary
   </h2>
   
   <p>
-    经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh" target="_blank">CC 3.0协议</a>：署名-非商业性使用-相同方式共享）。
+    经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循[CC 3.0协议](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)：署名-非商业性使用-相同方式共享）。
   </p>
   
   <ul>
     <li>
-      <a href="http://dl.dropboxusercontent.com/u/15335397/slides/ChinaR-2013-Yihui-Xie.html">谢益辉：R包那些事儿</a>
+      [谢益辉：R包那些事儿](http://dl.dropboxusercontent.com/u/15335397/slides/ChinaR-2013-Yihui-Xie.html)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/130518_graham_china_r_conference_beijing.pdf">GRAHAM WILLIAMS：DATA MINING WITH RATTLE AND R</a>
+      [GRAHAM WILLIAMS：DATA MINING WITH RATTLE AND R](https://cos.name/wp-content/uploads/2013/05/130518_graham_china_r_conference_beijing.pdf)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/DATA-MINING雲端決策平台CDMS-Smart-Score-II-以-R-為基礎-REVISED.pptx">DATA MINING雲端決策平台CDMS Smart Score II——以 R 為基礎</a>
+      [DATA MINING雲端決策平台CDMS Smart Score II——以 R 為基礎](https://cos.name/wp-content/uploads/2013/05/DATA-MINING雲端決策平台CDMS-Smart-Score-II-以-R-為基礎-REVISED.pptx)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/John-Maindonald.pdf">John Maindonald：Rethinking Data Analysis and Data Analysis Tools</a>
+      [John Maindonald：Rethinking Data Analysis and Data Analysis Tools](https://cos.name/wp-content/uploads/2013/05/John-Maindonald.pdf)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/lijian_ChinaR20130518.ppt">李舰、周扬：禽流感分析中的R——MSToolkit, Rweibo, html5vis的介绍</a>（<a href="https://cos.name/wp-content/uploads/2013/05/lijian_ChinaR20130518.7z">代码</a>）
+      [李舰、周扬：禽流感分析中的R——MSToolkit, Rweibo, html5vis的介绍](https://cos.name/wp-content/uploads/2013/05/lijian_ChinaR20130518.ppt)（[代码](https://cos.name/wp-content/uploads/2013/05/lijian_ChinaR20130518.7z)）
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/Rconference.Zhang_.Xiaohua.pptx">张晓华：DISPLAYHTS: A R PACKAGE FOR DISPLAYING DATA AND RESULTS FROM HIGH-THROUGHPUT SCREENING EXPERIMENTS</a>
+      [张晓华：DISPLAYHTS: A R PACKAGE FOR DISPLAYING DATA AND RESULTS FROM HIGH-THROUGHPUT SCREENING EXPERIMENTS](https://cos.name/wp-content/uploads/2013/05/Rconference.Zhang_.Xiaohua.pptx)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/changyou-Julia-20130518.pdf">张常有、张先轶：JULIA语言介绍</a>
+      [张常有、张先轶：JULIA语言介绍](https://cos.name/wp-content/uploads/2013/05/changyou-Julia-20130518.pdf)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/Web-Scraping-with-R-XiaoNan.pdf">肖楠：WEB SCRAPING WITH R</a>
+      [肖楠：WEB SCRAPING WITH R](https://cos.name/wp-content/uploads/2013/05/Web-Scraping-with-R-XiaoNan.pdf)
     </li>
     <li>
       庄宝童：机器学习在互联网广告中的应用
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/R-Case-Study-from-EBAY-DDI.pptx">李忠、潘佳鸣：R在EBAY大数据分析中的应用</a>
+      [李忠、潘佳鸣：R在EBAY大数据分析中的应用](https://cos.name/wp-content/uploads/2013/05/R-Case-Study-from-EBAY-DDI.pptx)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/第六届R会议-阿稳.pdf">稳国柱：R的工程实践和DATA SCIENTIST</a>
+      [稳国柱：R的工程实践和DATA SCIENTIST](https://cos.name/wp-content/uploads/2013/05/第六届R会议-阿稳.pdf)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/quality-evaluation-and-ordering-of-user-generated-content-wanghao.pdf">王浩：用户产生内容的质量评价与智能排序</a>
+      [王浩：用户产生内容的质量评价与智能排序](https://cos.name/wp-content/uploads/2013/05/quality-evaluation-and-ordering-of-user-generated-content-wanghao.pdf)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/Wang.pdf">王汉生：ON THE ULTRAHIGH DIMENSIONAL LINEAR DISCRIMINANT ANALYSIS PROBLEM WITH A DIVERGING NUMBER OF CLASSES</a>
+      [王汉生：ON THE ULTRAHIGH DIMENSIONAL LINEAR DISCRIMINANT ANALYSIS PROBLEM WITH A DIVERGING NUMBER OF CLASSES](https://cos.name/wp-content/uploads/2013/05/Wang.pdf)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/Hierarchical-modeling-with-R.pdf">李欣海：用R和WinBUGS实现贝叶斯分级模型</a>
+      [李欣海：用R和WinBUGS实现贝叶斯分级模型](https://cos.name/wp-content/uploads/2013/05/Hierarchical-modeling-with-R.pdf)
     </li>
     <li>
-      <a href="https://cos.name/wp-content/uploads/2013/05/网络舆情监测_王贺_201305.rar">王贺：网络舆情监测：基于R语言的网络文本挖掘与数据可视化</a>
+      [王贺：网络舆情监测：基于R语言的网络文本挖掘与数据可视化](https://cos.name/wp-content/uploads/2013/05/网络舆情监测_王贺_201305.rar)
     </li>
   </ul>
   
@@ -318,6 +318,6 @@ slug: 6th-china-r-beijing-summary
   </blockquote>
   
   <p>
-    如果您对于中国R语言会议还有任何感想、意见或建议，欢迎您在本页面、<a href="http://renren.com/cosname" target="_blank">统计之都人人网页面</a>或<a href="http://weibo.com/cosname" target="_blank">统计之都新浪微博</a>留言，我们会尽力在今后对会议质量进行进一步的改善。
+    如果您对于中国R语言会议还有任何感想、意见或建议，欢迎您在本页面、[统计之都人人网页面](http://renren.com/cosname)或[统计之都新浪微博](http://weibo.com/cosname)留言，我们会尽力在今后对会议质量进行进一步的改善。
   </p>
 </div>

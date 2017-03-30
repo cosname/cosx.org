@@ -33,7 +33,7 @@ _受朋友委托，大家帮个忙：北京人，女，26岁，未婚，1.68米�
   </p>
   
   <p>
-    <img class="wp-image-13657 size-large aligncenter" src="https://cos.name/wp-content/uploads/2017/02/web-500x345.png" width="500" height="345" srcset="https://cos.name/wp-content/uploads/2017/02/web-500x345.png 500w, https://cos.name/wp-content/uploads/2017/02/web-300x207.png 300w, https://cos.name/wp-content/uploads/2017/02/web-768x530.png 768w, https://cos.name/wp-content/uploads/2017/02/web.png 1234w" sizes="(max-width: 500px) 100vw, 500px" />
+    ![](https://cos.name/wp-content/uploads/2017/02/web.png)
   </p>
   
   <p>
@@ -74,7 +74,7 @@ geojsonMap(dat, <span class="hljs-string">"city"</span>,
            palette = <span class="hljs-string">"Reds"</span>, legendTitle = <span class="hljs-string">"AQI"</span>)</pre>
   
   <p>
-    猛击图片查看这个可交互的地图吧！<br /> <a href="http://langdawei.com/reveal_slidify/cos/ldw/aqi.html"><img class="aligncenter wp-image-13675 size-large" src="https://cos.name/wp-content/uploads/2017/02/leaflet-500x280.png" width="500" height="280" srcset="https://cos.name/wp-content/uploads/2017/02/leaflet-500x280.png 500w, https://cos.name/wp-content/uploads/2017/02/leaflet-300x168.png 300w, https://cos.name/wp-content/uploads/2017/02/leaflet-768x430.png 768w, https://cos.name/wp-content/uploads/2017/02/leaflet.png 1369w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+    猛击图片查看这个可交互的地图吧！<br /> [![](https://cos.name/wp-content/uploads/2017/02/leaflet.png)](http://langdawei.com/reveal_slidify/cos/ldw/aqi.html)
   </p>
   
   <p>
@@ -90,7 +90,7 @@ geojsonMap(dat, <span class="hljs-string">"city"</span>,
   </p>
   
   <p>
-    leafletCN是一个基于<a href="https://github.com/rstudio/leaflet">leaflet</a>的中国扩展包, 里面保存了一些适用于中国的区域划分数据以及一些有帮助的函数, 地理区划数据来源于github的<a href="https://github.com/longwosion/geojson-map-china">geojson-map-china</a>项目. 数据细分到县级市.
+    leafletCN是一个基于[leaflet](https://github.com/rstudio/leaflet)的中国扩展包, 里面保存了一些适用于中国的区域划分数据以及一些有帮助的函数, 地理区划数据来源于github的[geojson-map-china](https://github.com/longwosion/geojson-map-china)项目. 数据细分到县级市.
   </p>
 </div>
 
@@ -186,7 +186,7 @@ devtools::install_github("lchiffon/leafletCN")</pre>
   
   <div id="geojsonmap" class="section level4">
     <h6>
-      <img class="aligncenter wp-image-13663 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo1-500x335.png" width="500" height="335" srcset="https://cos.name/wp-content/uploads/2017/02/demo1-500x335.png 500w, https://cos.name/wp-content/uploads/2017/02/demo1-300x201.png 300w, https://cos.name/wp-content/uploads/2017/02/demo1-768x514.png 768w, https://cos.name/wp-content/uploads/2017/02/demo1.png 1190w" sizes="(max-width: 500px) 100vw, 500px" />
+      ![](https://cos.name/wp-content/uploads/2017/02/demo1.png)
     </h6>
     
     <h6>
@@ -206,7 +206,7 @@ devtools::install_github("lchiffon/leafletCN")</pre>
 geojsonMap(dat,"china")</pre>
     
     <div class="figure">
-      <img class="aligncenter wp-image-13664 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo2-500x353.png" width="500" height="353" srcset="https://cos.name/wp-content/uploads/2017/02/demo2-500x353.png 500w, https://cos.name/wp-content/uploads/2017/02/demo2-300x212.png 300w, https://cos.name/wp-content/uploads/2017/02/demo2-768x543.png 768w, https://cos.name/wp-content/uploads/2017/02/demo2.png 852w" sizes="(max-width: 500px) 100vw, 500px" />
+      ![](https://cos.name/wp-content/uploads/2017/02/demo2.png)
     </div>
   </div>
 </div>
@@ -227,7 +227,7 @@ geojsonMap(dat,"china")</pre>
        popup = "The birthplace of COS")</pre>
     
     <div class="figure">
-      <img class="aligncenter wp-image-13665 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo3-500x353.png" width="500" height="353" srcset="https://cos.name/wp-content/uploads/2017/02/demo3-500x353.png 500w, https://cos.name/wp-content/uploads/2017/02/demo3-300x212.png 300w, https://cos.name/wp-content/uploads/2017/02/demo3-768x543.png 768w, https://cos.name/wp-content/uploads/2017/02/demo3.png 856w" sizes="(max-width: 500px) 100vw, 500px" />
+      ![](https://cos.name/wp-content/uploads/2017/02/demo3.png)
     </div>
   </div>
   
@@ -247,7 +247,7 @@ geojsonMap(dat,"china")</pre>
 }</pre>
     
     <div class="figure">
-      <img class="aligncenter wp-image-13666 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo4-500x365.png" width="500" height="365" srcset="https://cos.name/wp-content/uploads/2017/02/demo4-500x365.png 500w, https://cos.name/wp-content/uploads/2017/02/demo4-300x219.png 300w, https://cos.name/wp-content/uploads/2017/02/demo4.png 631w" sizes="(max-width: 500px) 100vw, 500px" />
+      ![](https://cos.name/wp-content/uploads/2017/02/demo4.png)
     </div>
   </div>
   
@@ -284,7 +284,7 @@ geojsonMap(dat,"china")</pre>
 }</pre>
     
     <div class="figure">
-      <img class="aligncenter wp-image-13667 size-large" src="https://cos.name/wp-content/uploads/2017/02/demo5-500x354.png" width="500" height="354" srcset="https://cos.name/wp-content/uploads/2017/02/demo5-500x354.png 500w, https://cos.name/wp-content/uploads/2017/02/demo5-300x213.png 300w, https://cos.name/wp-content/uploads/2017/02/demo5-768x544.png 768w, https://cos.name/wp-content/uploads/2017/02/demo5.png 847w" sizes="(max-width: 500px) 100vw, 500px" />
+      ![](https://cos.name/wp-content/uploads/2017/02/demo5.png)
     </div>
   </div>
   
@@ -297,11 +297,11 @@ geojsonMap(dat,"china")</pre>
   </p>
   
   <p>
-    如果你看到这里还没有走, 说明你还是有心找彩蛋的, 或者你什么都没看, 但是本文没啥彩蛋, 只有我的<a href="http://github.com/lchiffon/leafletCN">github求赞</a>.
+    如果你看到这里还没有走, 说明你还是有心找彩蛋的, 或者你什么都没看, 但是本文没啥彩蛋, 只有我的[github求赞](http://github.com/lchiffon/leafletCN).
   </p>
   
   <p>
-    然后, 如果想了解leafletCN背后强大的leaflet家族, 可以查看它的<a href="http://rstudio.github.com/leaflet">官方文档</a>, 或者我写的这个<a href="http://langdawei.com/leafletIntro/leafletSlides.html">小分享</a>.
+    然后, 如果想了解leafletCN背后强大的leaflet家族, 可以查看它的[官方文档](http://rstudio.github.com/leaflet), 或者我写的这个[小分享](http://langdawei.com/leafletIntro/leafletSlides.html).
   </p>
   
   <p>

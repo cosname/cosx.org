@@ -28,7 +28,7 @@ lasso estimate具有shrinkage和selection两种功能，shrinkage这个不用多
 为了继续进行下一步，我们先给出一个向量的表达式，然后再解释一下它
 
 <p style="text-align: center;">
-  $w_{A}=(1_{A}'(X_{A}&#8217;X_{A})^{-1}1_{A})^{-\frac{1}{2}}(X_{A}&#8217;X_{A})^{-1}1_{A}$.
+  $w_{A}=(1_{A}'(X_{A}’X_{A})^{-1}1_{A})^{-\frac{1}{2}}(X_{A}’X_{A})^{-1}1_{A}$.
 </p>
 
 $X\_{A}w\_{A}$就是LARS算法的在当前回归变量集下的solution path。那么我们可以把$w\_{A}$作为$\beta$的proceed的path。Efron定义了一个向量$\hat{d}$,这个向量的元素是$s\_jw\_j$,其中$s\_j$是入选变量$x\_j$与当前残差的相关系数的符号，也是$\hat{\beta\_j}$的符号。对于没有入选的变量，他们对应在$\hat{d}$中的元素为0。也就是对应着$\mu(r)=X\beta(r)$，我们有
@@ -46,7 +46,7 @@ $X\_{A}w\_{A}$就是LARS算法的在当前回归变量集下的solution path。�
 这个对于LARS的lasso修正算法，被Efron称作“one at a time”条件，也就是每一步都要增加或删掉一个变量。下图显示了用修正了的LARS算法求lasso estimate的过程。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2011/04/LARS.png"><img class="aligncenter size-large wp-image-3316" src="https://cos.name/wp-content/uploads/2011/04/LARS-454x500.png" alt="" width="272" height="300" srcset="https://cos.name/wp-content/uploads/2011/04/LARS-454x500.png 454w, https://cos.name/wp-content/uploads/2011/04/LARS-272x300.png 272w, https://cos.name/wp-content/uploads/2011/04/LARS.png 507w" sizes="(max-width: 272px) 100vw, 272px" /></a>
+  ![](https://cos.name/wp-content/uploads/2011/04/LARS.png)
 </p>
 
 这个图是Efron等人的文章中，对于一个实际数据进行回归得到的。该数据一共有10个变量。图的横轴，是所有回归系数估值的绝对值之和，这个值从$0$增加。左侧的纵轴，是回归系数的估值，右侧纵轴是这些回归系数对应的变量的下标。这个图中，我们可以看到每一个回归系数的path。可以看到第七个变量对应的回归系数在横轴快到3000的时候变为了0，说明到这一步时，该变量被删除掉，之后又被重新添加到了回归变量集中。
@@ -62,7 +62,7 @@ $X\_{A}w\_{A}$就是LARS算法的在当前回归变量集下的solution path。�
 其中$x\_1$和$x\_2$是服从二维联合正态分布，均值为零向量，$cov(x\_1,x\_2)=0.5$，$var(x\_1)=var(x\_2)=1$，$e$服从$N(0,9)$。我取了50次观测，然后分别通过lasso，lars，以及forward stagewise三种算法进行了回归，其变量的回归路径如下图。
 
 <p style="text-align: center;">
-  <a href="https://cos.name/2011/04/modified-lars-and-lasso/%e6%a8%a1%e6%8b%9flars/" rel="attachment wp-att-3737"><img class="aligncenter size-medium wp-image-3737" src="https://cos.name/wp-content/uploads/2011/04/模拟lars-300x160.png" alt="" width="300" height="160" srcset="https://cos.name/wp-content/uploads/2011/04/模拟lars-300x160.png 300w, https://cos.name/wp-content/uploads/2011/04/模拟lars-500x267.png 500w, https://cos.name/wp-content/uploads/2011/04/模拟lars.png 1279w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+  [![](https://cos.name/wp-content/uploads/2011/04/模拟lars.png)](/2011/04/modified-lars-and-lasso/%e6%a8%a1%e6%8b%9flars/)
 </p>
 
 简单的代码我直接贴在本文的最后。从这三个算法的图中，我们并看不出有特别的区别，只能看出一些细小的差别。至于要判断哪种算法更好，则应该因问题而异。也不是本文能够论述的问题了。
@@ -73,6 +73,6 @@ $X\_{A}w\_{A}$就是LARS算法的在当前回归变量集下的solution path。�
 
 用lars算法做模拟的代码：
 
-<a href="https://cos.name/2011/04/modified-lars-and-lasso/%e5%88%a9%e7%94%a8lars%e6%a8%a1%e6%8b%9f/" rel="attachment wp-att-3738">利用lars模拟</a>
+[利用lars模拟](/2011/04/modified-lars-and-lasso/%e5%88%a9%e7%94%a8lars%e6%a8%a1%e6%8b%9f/)
 
 &nbsp;

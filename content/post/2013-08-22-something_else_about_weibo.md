@@ -47,9 +47,9 @@ retweet_weight=lapply(retweet,function(x) return(x$freq))</pre>
 
 变量名称不用细究，wei存放的就是用Rweibo中web.user\_timeline()函数得到的结果，name1是对应于这些结果的名人昵称。此处保存的结果为转发者对应的被转发者姓名（retweet\_name）以及对应的转发次数（retweet_weight）。
 
-有了单纯的转发关系还不够。如何利用这种关系来表征一个人的消息传播力呢？一个比较自然的想法就是Google著名的<a href="http://en.wikipedia.org/wiki/PageRank" target="_blank">pagerank算法</a>。根据<a href="http://en.wikipedia.org/wiki/Perron%E2%80%93Frobenius_theorem" target="_blank">Perron-Frobenius定理</a>，有限状态马氏链的状态转移矩阵的特征值的模是小于等于1的。（简单的proof：马氏链的转移矩阵行之和为1，可以构造每个分量均为1的向量作为其特征向量，它对应的特征值正是实数值1；套用P-F定理既得结果）这个结果下面会用到。
+有了单纯的转发关系还不够。如何利用这种关系来表征一个人的消息传播力呢？一个比较自然的想法就是Google著名的[pagerank算法](http://en.wikipedia.org/wiki/PageRank)。根据[Perron-Frobenius定理](http://en.wikipedia.org/wiki/Perron%E2%80%93Frobenius_theorem)，有限状态马氏链的状态转移矩阵的特征值的模是小于等于1的。（简单的proof：马氏链的转移矩阵行之和为1，可以构造每个分量均为1的向量作为其特征向量，它对应的特征值正是实数值1；套用P-F定理既得结果）这个结果下面会用到。
 
-正如我们所知，一条微博不会无限长的转发下去。也就是说，一条消息在每一次转发之后都可能面临着“停止传播”的命运。设这种传播停止的概率参数为d。就得到了pagerank算法的<a href="http://en.wikipedia.org/wiki/PageRank#Damping_factor" target="_blank">表达形式</a>以及<a href="http://en.wikipedia.org/wiki/PageRank#Algebraic" target="_blank">解析解</a>。实际上，在这个过程中，0<d<1的约束保证了dM特征值的模小于1，因此I-dM的逆存在。这意味着存在唯一的平稳分布（也就是我们要求的PR值）使之成立。
+正如我们所知，一条微博不会无限长的转发下去。也就是说，一条消息在每一次转发之后都可能面临着“停止传播”的命运。设这种传播停止的概率参数为d。就得到了pagerank算法的[表达形式](http://en.wikipedia.org/wiki/PageRank#Damping_factor)以及[解析解](http://en.wikipedia.org/wiki/PageRank#Algebraic)。实际上，在这个过程中，0<d<1的约束保证了dM特征值的模小于1，因此I-dM的逆存在。这意味着存在唯一的平稳分布（也就是我们要求的PR值）使之成立。
 
 还有一个问题是，如果一个节点的出度是0，那么对应矩阵的列元素不就全部是0了嘛？这显然不符合PR算法中列元素之和为1的要求呀。一个简单的处理方法是对这列元素都赋1/N，即认为他以相同的概率转发该网络图中所有人的微博。取d=0.85（wiki），转发关系采用稀疏矩阵方式存储，PR值计算过程如下：
 
@@ -85,13 +85,13 @@ sort(PR,decreasing=T)[1:10]</pre>
 
 结果如下：
 
-[<img alt="" src="http://farm4.staticflickr.com/3802/9513512901_cd93357e03.jpg" width="500" height="85" />](http://farm4.staticflickr.com/3802/9513512901_cd93357e03.jpg)
+![](http://farm4.staticflickr.com/3802/9513512901_cd93357e03.jpg)
 
 除了网络的结构（structure），是否微博的文本信息也能被我们利用呢？例如，\***和###都是体育爱好者，那么他们之间是否存在关联路径呢？如果存在，如何表示这种关系？
 
 鉴于上一篇的结果，我们可以将人与人之间的关系用topic联系起来。在一种更广泛的定义上，除了以人作为节点（structure vertice）表征的图模型，我们还可以加入以topic作为节点的关系表示（attribute vertice）。由于增加了图的表示信息，我们将它称为“增强图”（augmented graph）【此处翻译仅为本人理解而已，这种做法在paper中比较常见】。从另一种意义上说，信息通过他与其他人的文本信息关联传播了出去。将augmented graph用矩阵形式表示出来得到：
 
-[<img alt="" src="http://farm4.staticflickr.com/3676/9513807523_7d53e24d75.jpg" width="191" height="134" />](http://farm4.staticflickr.com/3676/9513807523_7d53e24d75.jpg)
+![](http://farm4.staticflickr.com/3676/9513807523_7d53e24d75.jpg)
 
 设structure vertice与attribute vertice组合的权重分别为\(\alpha\)和\(\beta\)，满足\(\alpha+\beta=1\)，即将pagerank算法中的M矩阵乘以\(\alpha\)，将topicmodel得到的topic在doc上的后验分布乘以\(\beta\)得到上述矩阵中的\(P_s\)矩阵和A矩阵。O分块矩阵为零矩阵，代表topic之间不可相互转移（实际上这个假设略强）。同时，设topic在doc上的后验分布为C（doc-topic矩阵），其每一行和为1，对其列做归一化处理可得到B矩阵。
 
@@ -99,7 +99,7 @@ sort(PR,decreasing=T)[1:10]</pre>
 
 其数学表达式如下：
 
-[<img alt="" src="http://farm4.staticflickr.com/3671/9514064743_8babf1d185.jpg" width="500" height="410" />](http://farm4.staticflickr.com/3671/9514064743_8babf1d185.jpg)
+![](http://farm4.staticflickr.com/3671/9514064743_8babf1d185.jpg)
 
 这部分代码如下：
 
@@ -124,7 +124,7 @@ sort(PR,decreasing=T)[1:10]</pre>
 
 结果如下：
 
-<img alt="" src="http://farm4.staticflickr.com/3763/9513983533_16c5fc61a0.jpg" width="500" height="75" />
+![](http://farm4.staticflickr.com/3763/9513983533_16c5fc61a0.jpg)
 
 来单独看看topic的排名以及对应的高频词吧：
 
@@ -132,18 +132,18 @@ sort(PR,decreasing=T)[1:10]</pre>
 ind=as.numeric(names(sort(PR[length(PR):(length(PR)-50+1)],decreasing=T)))
 term[,ind]</pre>
 
-<img alt="" src="http://farm6.staticflickr.com/5471/9516785250_8b14b04da8.jpg" width="500" height="257" />
+![](http://farm6.staticflickr.com/5471/9516785250_8b14b04da8.jpg)
 
 **参考文献：**
 
-****<a href="http://www1.se.cuhk.edu.hk/~hcheng/summer2010/paper/vldb09-175.pdf" target="_blank">Graph Clustering Based on Structural/Attribute Similarities</a>
+****[Graph Clustering Based on Structural/Attribute Similarities](http://www1.se.cuhk.edu.hk/~hcheng/summer2010/paper/vldb09-175.pdf)
 
-<a href="http://home.ie.cuhk.edu.hk/~wkshum/papers/pagerank.pdf" target="_blank">Notes on PageRank Algorithm</a>
+[Notes on PageRank Algorithm](http://home.ie.cuhk.edu.hk/~wkshum/papers/pagerank.pdf)
 
 **关于作者**
 
   * 朱雪宁
-  * 博客：**<a href="http://www.puddingnnn.com/" target="_blank">他山</a>**<a href="http://hi.baidu.com/healthstat" target="_blank"><br /> </a>
+  * 博客：**[他山](http://www.puddingnnn.com/)**[<br/> ](http://hi.baidu.com/healthstat)
   * 微博：[**@布丁Nnn**](http://weibo.com/puddingnnn529)
 
-注：原文链接：<a href="http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%EF%BC%88%E4%BA%8C%EF%BC%89/" target="_blank">微博名人那些事儿（二）</a> ，转载请注明出处。
+注：原文链接：[微博名人那些事儿（二）](http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%EF%BC%88%E4%BA%8C%EF%BC%89/) ，转载请注明出处。

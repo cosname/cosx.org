@@ -11,7 +11,7 @@ tags:
 slug: 2rd-bayesian-statistics-meeting
 ---
 
-[<img class="aligncenter size-full wp-image-10457" src="https://cos.name/wp-content/uploads/2014/12/bayes-forum.png" alt="bayes-forum" width="500" height="150" srcset="https://cos.name/wp-content/uploads/2014/12/bayes-forum.png 500w, https://cos.name/wp-content/uploads/2014/12/bayes-forum-300x90.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/12/bayes-forum.png)
+![bayes-forum](https://cos.name/wp-content/uploads/2014/12/bayes-forum.png)
 
 第二届中国贝叶斯统计学术论坛（天津，2014）将于2014年12月21日（周日）在天津财经大学召开，本次会议由天津财经大学中国经济统计研究中心、贝叶斯之道研究室主办，统计之都协办，会议通知如下：
 
@@ -23,13 +23,13 @@ slug: 2rd-bayesian-statistics-meeting
 
 天津财经大学B座205教室（统计湖畔）
 
-[<img class="aligncenter size-large wp-image-10459" src="https://cos.name/wp-content/uploads/2014/12/tjcd-500x157.png" alt="tjcd" width="500" height="157" srcset="https://cos.name/wp-content/uploads/2014/12/tjcd-500x157.png 500w, https://cos.name/wp-content/uploads/2014/12/tjcd-300x94.png 300w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/12/tjcd.png)
+![tjcd](https://cos.name/wp-content/uploads/2014/12/tjcd.png)
 
 ## 三、论坛内容
 
 1763年12月23日，理查德·普莱斯在伦敦皇家学会会议上宣读了托马斯·贝叶斯的遗世之作——《An essay towards solving a problem in the doctrine of chances》(机遇理论中一个问题的解)，从此贝叶斯定理诞生于世。“虽然这个产生于18世纪的统计学学派在19世纪上半叶备受争议和冷落，但在20世纪，它却占据了数理统计学这块领地的半壁江山，撑起了统计学的半边天(陈希孺，2002)。
 
-2013年12月21日，“纪念贝叶斯定理250周年”暨首届中国贝叶斯统计学术论坛（天津，2013）在天津财经大学月牙报告厅成功举行（<a href="https://cos.name/2013/12/to-commemorate-the-250th-anniversary-of-bayes-theorem/" target="_blank">相关特邀报告及培训资料下载</a>）。
+2013年12月21日，“纪念贝叶斯定理250周年”暨首届中国贝叶斯统计学术论坛（天津，2013）在天津财经大学月牙报告厅成功举行（[相关特邀报告及培训资料下载](/2013/12/to-commemorate-the-250th-anniversary-of-bayes-theorem/)）。
 
 <!--more-->
 
@@ -40,7 +40,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：**Bayesian forecasting of demographic rates for small areas
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/zhangjunni.png"><img class="aligncenter size-full wp-image-10462" src="https://cos.name/wp-content/uploads/2014/12/zhangjunni.png" alt="zhangjunni" width="140" height="196" /></a>
+  ![zhangjunni](https://cos.name/wp-content/uploads/2014/12/zhangjunni.png)
 </p>
 
 <p style="text-align: center;">
@@ -51,7 +51,7 @@ slug: 2rd-bayesian-statistics-meeting
 
 **报告题目：****农村土地流转综合评估与大数据监测**
 
-[<img class="aligncenter wp-image-10461 size-thumbnail" src="https://cos.name/wp-content/uploads/2014/12/gubin-150x150.png" alt="gubin" width="150" height="150" />](https://cos.name/wp-content/uploads/2014/12/gubin.png)
+![gubin](https://cos.name/wp-content/uploads/2014/12/gubin.png)
 
 <p style="text-align: center;">
   谷彬（国家统计局）
@@ -62,7 +62,7 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：****R-web : ****大型多人在线数据分析协作平台****(Massively Multi-analyst Online Data Analysis Platform)**
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/linzhenshun.png"><img class="aligncenter wp-image-10489 size-thumbnail" src="https://cos.name/wp-content/uploads/2014/12/linzhenshun-150x150.png" alt="linzhenshun" width="150" height="150" /></a>
+  ![linzhenshun](https://cos.name/wp-content/uploads/2014/12/linzhenshun.png)
 </p>
 
 <p style="text-align: center;">
@@ -74,14 +74,14 @@ slug: 2rd-bayesian-statistics-meeting
 **报告题目：****统计分析的第三范式：大数据与贝叶斯统计思维**
 
 <p style="text-align: center;">
-  <a href="https://cos.name/wp-content/uploads/2014/12/bayes-dao.png"><img class="aligncenter wp-image-10460 size-large" src="https://cos.name/wp-content/uploads/2014/12/bayes-dao-500x157.png" alt="bayes-dao" width="500" height="157" srcset="https://cos.name/wp-content/uploads/2014/12/bayes-dao-500x157.png 500w, https://cos.name/wp-content/uploads/2014/12/bayes-dao-300x94.png 300w, https://cos.name/wp-content/uploads/2014/12/bayes-dao.png 635w" sizes="(max-width: 500px) 100vw, 500px" /></a>
+  ![bayes-dao](https://cos.name/wp-content/uploads/2014/12/bayes-dao.png)
 </p>
 
 <p style="text-align: center;">
-  <strong> <a href="https://bayes-stat.github.com" target="_blank">贝叶斯之道</a></strong>
+  <strong> [贝叶斯之道](https://bayes-stat.github.com)</strong>
 </p>
 
-<a href="https://bayes-stat.github.com" target="_blank">“贝叶斯之道”(The Tao of Bayesian: A Platform to Understanding with No Math)开放研究室</a>成立于2012年12月21日21点02分，以创建“一个中西合璧古今交融的贝叶斯学习平台”为宗旨，以“喜传贝叶斯之道，乐授贝叶斯之业，善解贝叶斯之惑”为目标，计划每年在12月21日举办一次中国贝叶斯统计学术论坛，纪念贝叶斯定理诞生，为国内外贝叶斯统计的爱好者提供一个学术交流和MCMC免费培训的机会，热烈欢迎感兴趣的同行加入我们的团队。
+[“贝叶斯之道”(The Tao of Bayesian: A Platform to Understanding with No Math)开放研究室](https://bayes-stat.github.com)成立于2012年12月21日21点02分，以创建“一个中西合璧古今交融的贝叶斯学习平台”为宗旨，以“喜传贝叶斯之道，乐授贝叶斯之业，善解贝叶斯之惑”为目标，计划每年在12月21日举办一次中国贝叶斯统计学术论坛，纪念贝叶斯定理诞生，为国内外贝叶斯统计的爱好者提供一个学术交流和MCMC免费培训的机会，热烈欢迎感兴趣的同行加入我们的团队。
 
 ### **（二）贝叶斯数据分析培训（下午：****2:00-4:00****）**
 
@@ -101,7 +101,7 @@ slug: 2rd-bayesian-statistics-meeting
 
 ## 五、交通和住宿提示
 
-[<img class="aligncenter wp-image-10490 size-large" src="https://cos.name/wp-content/uploads/2014/12/ditu-500x329.png" alt="ditu" width="500" height="329" srcset="https://cos.name/wp-content/uploads/2014/12/ditu-500x329.png 500w, https://cos.name/wp-content/uploads/2014/12/ditu-300x197.png 300w, https://cos.name/wp-content/uploads/2014/12/ditu.png 886w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2014/12/ditu.png)
+![ditu](https://cos.name/wp-content/uploads/2014/12/ditu.png)
 
 **（一）本市学友：**
 

@@ -13,13 +13,13 @@ slug: zhang-wuji
 
 **作者**：朱雪宁
 
-[<img class="aligncenter size-full wp-image-12638" src="https://cos.name/wp-content/uploads/2016/06/图片-1.png" alt="图片 1" width="865" height="648" srcset="https://cos.name/wp-content/uploads/2016/06/图片-1.png 865w, https://cos.name/wp-content/uploads/2016/06/图片-1-300x225.png 300w, https://cos.name/wp-content/uploads/2016/06/图片-1-768x575.png 768w, https://cos.name/wp-content/uploads/2016/06/图片-1-500x375.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/图片-1.png)金庸的射雕三部曲，我最爱的是收官作《倚天屠龙记》。金老爷子在后记里曾说，三部曲中郭靖诚朴质实，杨过深情狂放，张无忌的个性却比较复杂，也是比较软弱。就我看来，这种软弱的一方面体现在他对爱情的选择困难症上。
+![图片 1](https://cos.name/wp-content/uploads/2016/06/图片-1.png) 金庸的射雕三部曲，我最爱的是收官作《倚天屠龙记》。金老爷子在后记里曾说，三部曲中郭靖诚朴质实，杨过深情狂放，张无忌的个性却比较复杂，也是比较软弱。就我看来，这种软弱的一方面体现在他对爱情的选择困难症上。
 
 幼时蝴蝶谷初遇殷离，便被一见钟情，后有婚诺之约；年少汉水舟中邂逅周芷若，后来互生情愫，几成良缘；光明顶遇小昭，意存怜惜，却终天人永隔；绿柳山庄遇赵敏，针锋相对，但也一生羁绊。张无忌本人态度比较暧昧，可以说是经过朱九真爱情滑铁卢之后一路上运势基本开挂，但他性格里却是拖泥带水，见异思迁，放到现在基本称得上是渣男中的战斗渣。张无忌究竟爱谁？这是一个被争得沸沸扬扬的问题，说实话，有一千个读者，就有一千个最爱。连金老爷子最后也只得承认：恐怕作者也难以说清。但是，真的说不清吗？我心血来潮，拿倚天屠龙记小说做了一把文本分析。
 
 <!--more-->
 
-[<img class="aligncenter size-full wp-image-12639" src="https://cos.name/wp-content/uploads/2016/06/图片-2.png" alt="图片 2" width="865" height="500" srcset="https://cos.name/wp-content/uploads/2016/06/图片-2.png 865w, https://cos.name/wp-content/uploads/2016/06/图片-2-300x173.png 300w, https://cos.name/wp-content/uploads/2016/06/图片-2-768x444.png 768w, https://cos.name/wp-content/uploads/2016/06/图片-2-500x289.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/图片-2.png)
+![图片 2](https://cos.name/wp-content/uploads/2016/06/图片-2.png)
 
   1. 数据预处理
 
@@ -70,7 +70,7 @@ roles[1:5]
 
 划分自然段之后，我们可以算算每个角色出现的自然段的数目。这里，我们需要把不同称谓都对应于同一人物（用grep函数进行匹配）。毋庸置疑，正牌男主角张无忌出现的次数最多，后面依次是赵敏、周芷若、殷离、小昭。其中，对于赵敏和周芷若的着墨可以说是难分伯仲。金老爷子对两者的性格塑造也各有不同，一个泼辣浓郁，一个气若仙姝，两者都是绝色美人，都有一定的政治才能，实难抉择。
 
-[<img class="aligncenter size-full wp-image-12640" src="https://cos.name/wp-content/uploads/2016/06/7.png" alt="7" width="745" height="488" srcset="https://cos.name/wp-content/uploads/2016/06/7.png 745w, https://cos.name/wp-content/uploads/2016/06/7-300x197.png 300w, https://cos.name/wp-content/uploads/2016/06/7-500x328.png 500w" sizes="(max-width: 745px) 100vw, 745px" />](https://cos.name/wp-content/uploads/2016/06/7.png)
+![7](https://cos.name/wp-content/uploads/2016/06/7.png)
 
 <pre>roles1 = paste0("(", gsub(" ", ")|(", roles), ")")
 main_roles = c("殷离","周芷若","赵敏","小昭", "张无忌")
@@ -79,11 +79,11 @@ colnames(role_para) = main_roles
 
 role_count = data.frame(role = factor(colnames(role_para), levels = c("张无忌", "赵敏","周芷若", "殷离","小昭")), count = colSums(role_para))</pre>
 
-[<img class="aligncenter size-full wp-image-12641" src="https://cos.name/wp-content/uploads/2016/06/8.png" alt="8" width="865" height="600" srcset="https://cos.name/wp-content/uploads/2016/06/8.png 865w, https://cos.name/wp-content/uploads/2016/06/8-300x208.png 300w, https://cos.name/wp-content/uploads/2016/06/8-768x533.png 768w, https://cos.name/wp-content/uploads/2016/06/8-500x347.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/8.png)
+![8](https://cos.name/wp-content/uploads/2016/06/8.png)
 
 我们再来看看出场密度统计。如果我们把每个人物出场的自然段按照顺序排列，那就不难给出每个人物的出场密度估计，为了简单起见，我们这里只给出前面戏份最重的三个主角：张无忌、赵敏、周芷若。可以看出，作者对男主张无忌的着墨算是比较均匀，而对周芷若、赵敏的安排却差别迥异。汉水初遇周芷若，那时他们还是不谙世事的年纪。后来芷若被张三丰送入峨眉门下，多年之后光明顶重逢张无忌，此时她是峨眉名门正徒，他是武当名门之后。可以说，无论从出身、还是从往日旧情、旧义上讲，都是郎才女貌、门当户对的一对儿。而对于赵敏来说，她的出场几乎出在全文的中后期，此时一没有旧情好讲，二没有出身好论，不巧的还是各大门派同仇敌忾的阶级敌人。可以说，她手上的牌不能再糟糕了。
 
-[<img class="aligncenter size-full wp-image-12642" src="https://cos.name/wp-content/uploads/2016/06/9.png" alt="9" width="865" height="587" srcset="https://cos.name/wp-content/uploads/2016/06/9.png 865w, https://cos.name/wp-content/uploads/2016/06/9-300x204.png 300w, https://cos.name/wp-content/uploads/2016/06/9-768x521.png 768w, https://cos.name/wp-content/uploads/2016/06/9-500x339.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/9.png)[<img class="aligncenter size-full wp-image-12643" src="https://cos.name/wp-content/uploads/2016/06/10.png" alt="10" width="865" height="524" srcset="https://cos.name/wp-content/uploads/2016/06/10.png 865w, https://cos.name/wp-content/uploads/2016/06/10-300x182.png 300w, https://cos.name/wp-content/uploads/2016/06/10-768x465.png 768w, https://cos.name/wp-content/uploads/2016/06/10-500x303.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/10.png)
+![9](https://cos.name/wp-content/uploads/2016/06/9.png)![10](https://cos.name/wp-content/uploads/2016/06/10.png)
 
 不过，尽管如此，wuli敏敏郡主的实力却不容小觑。事实上，上述四位佳人都与男主有过情感纠葛，但程度却难以界定，能不能通过她们与张教主同时出场的次数来刻画亲密程度呢？刚才提到，自然段是表意基本单元，同一自然段意义相近，中心一致。因此，可以定义她们与教主的亲密值：与张教主出现在同一自然段的次数。这个计算非常简单，只需要基本的矩阵运算。结果表明，虽然敏敏郡主出场不利，但是还是制造了更多跟教主亲密接触的机会，可以说是战斗力爆表。
 
@@ -91,7 +91,7 @@ role_count = data.frame(role = factor(colnames(role_para), levels = c("张无忌
 role_count1 = data.frame(role = factor(colnames(role_para)[1:4]), 
  count = colSums(role_para[,5]*role_para[,1:4]))</pre>
 
-[<img class="aligncenter size-full wp-image-12644" src="https://cos.name/wp-content/uploads/2016/06/11.png" alt="11" width="798" height="586" srcset="https://cos.name/wp-content/uploads/2016/06/11.png 798w, https://cos.name/wp-content/uploads/2016/06/11-300x220.png 300w, https://cos.name/wp-content/uploads/2016/06/11-768x564.png 768w, https://cos.name/wp-content/uploads/2016/06/11-500x367.png 500w" sizes="(max-width: 798px) 100vw, 798px" />](https://cos.name/wp-content/uploads/2016/06/11.png)
+![11](https://cos.name/wp-content/uploads/2016/06/11.png)
 
 <ol start="3">
   <li>
@@ -101,19 +101,19 @@ role_count1 = data.frame(role = factor(colnames(role_para)[1:4]),
 
 从上面的称谓信息上来看，除了小昭的称谓比较单调之外，其他角色都有着不同称谓变化。以殷离为例，我们可以看到她在全书中称谓的变化。殷离刚出场时，金庸对其描述是“面容黝黑，脸上肌肤浮肿，凹凹凸凸，生得极是丑陋”，因此在初期时“丑八怪”是对她的刻画。而后来她的真实身份曝光，才知道她其实是殷野王之女，与张无忌是表妹之亲。因此这也就不难猜到为何在后期“殷离”和“表妹”占主要比例。
 
-[<img class="aligncenter size-full wp-image-12645" src="https://cos.name/wp-content/uploads/2016/06/14.png" alt="14" width="865" height="515" srcset="https://cos.name/wp-content/uploads/2016/06/14.png 865w, https://cos.name/wp-content/uploads/2016/06/14-300x179.png 300w, https://cos.name/wp-content/uploads/2016/06/14-768x457.png 768w, https://cos.name/wp-content/uploads/2016/06/14-500x298.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/14.png)
+![14](https://cos.name/wp-content/uploads/2016/06/14.png)
 
 我们再来看看周芷若和赵敏的称谓变化。为了体现她们与张无忌关系中的称谓变化，这里只保留曾出现张无忌的自然段（这并不是一个完美的解决方案，但是是一个凑合的解决方案）。其中，周芷若的称谓变化如下图所示。可以看出，开始 “周姑娘” 和“芷若”前期出现较多，可以说是比较尊敬和亲昵的称谓。而后期随着周芷若为完成师父遗命做出种种（偷倚天剑、屠龙刀，试图杀害殷离并嫁祸赵敏），人设逐步转黑。我们也逐渐看到，更有距离感的称谓，例如周掌门、宋夫人后期频出。这也象征着她与张无忌在后期的人生道路上渐行渐远。
 
-[<img class="aligncenter size-full wp-image-12646" src="https://cos.name/wp-content/uploads/2016/06/13.png" alt="13" width="807" height="549" srcset="https://cos.name/wp-content/uploads/2016/06/13.png 807w, https://cos.name/wp-content/uploads/2016/06/13-300x204.png 300w, https://cos.name/wp-content/uploads/2016/06/13-768x522.png 768w, https://cos.name/wp-content/uploads/2016/06/13-500x340.png 500w" sizes="(max-width: 807px) 100vw, 807px" />](https://cos.name/wp-content/uploads/2016/06/13.png)
+![13](https://cos.name/wp-content/uploads/2016/06/13.png)
 
-[<img class="aligncenter size-full wp-image-12647" src="https://cos.name/wp-content/uploads/2016/06/15.png" alt="15" width="865" height="609" srcset="https://cos.name/wp-content/uploads/2016/06/15.png 865w, https://cos.name/wp-content/uploads/2016/06/15-300x211.png 300w, https://cos.name/wp-content/uploads/2016/06/15-768x541.png 768w, https://cos.name/wp-content/uploads/2016/06/15-500x352.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/15.png)
+![15](https://cos.name/wp-content/uploads/2016/06/15.png)
 
 我们再来看看赵敏的各个称谓在各自然段分布结果（注意，这里横轴显示的是从赵敏出场开始到结束的分析结果）。可以看到，前期诸如 “赵姑娘”、“赵敏”等尊称占主要部分（注意到，这些称谓是存在心理上的距离感的），而后期来说，比较亲昵的称呼，例如“敏妹”、“敏敏”开始出场较为频繁，其主要原因是两人关系逐渐缓和。赵敏是一个有强烈自我意识的姑娘，为了追求爱情，她可以抛下所有，包括政治立场，家国天下，基本可以总结为疯狂爱爱爱。但是她又不是一个疯狂到冲昏了头脑的人，整个过程中她曾经被诬陷、被误解，但她最过人之处在于，在最糟的情况下仍然保持准确的判断和清醒的决策，这一点从她被周芷若嫁祸后再遇张无忌直至抢亲的一系列表现中可以看出。
 
-[<img class="aligncenter size-full wp-image-12648" src="https://cos.name/wp-content/uploads/2016/06/16.png" alt="16" width="687" height="593" srcset="https://cos.name/wp-content/uploads/2016/06/16.png 687w, https://cos.name/wp-content/uploads/2016/06/16-300x259.png 300w, https://cos.name/wp-content/uploads/2016/06/16-500x432.png 500w" sizes="(max-width: 687px) 100vw, 687px" />](https://cos.name/wp-content/uploads/2016/06/16.png)
+![16](https://cos.name/wp-content/uploads/2016/06/16.png)
 
-[<img class="aligncenter size-full wp-image-12649" src="https://cos.name/wp-content/uploads/2016/06/17.png" alt="17" width="865" height="631" srcset="https://cos.name/wp-content/uploads/2016/06/17.png 865w, https://cos.name/wp-content/uploads/2016/06/17-300x219.png 300w, https://cos.name/wp-content/uploads/2016/06/17-768x560.png 768w, https://cos.name/wp-content/uploads/2016/06/17-500x365.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/17.png)
+![17](https://cos.name/wp-content/uploads/2016/06/17.png)
 
 <ol start="4">
   <li>
@@ -144,7 +144,7 @@ nearest_to(model,model[["张无忌"]])
 nearest_to(model,model[["赵敏"]])
 nearest_to(model,model[["周芷若"]])</pre>
 
-[<img class="aligncenter size-full wp-image-12673" src="https://cos.name/wp-content/uploads/2016/06/001_zhu.png" alt="001_zhu" width="1053" height="159" srcset="https://cos.name/wp-content/uploads/2016/06/001_zhu.png 1053w, https://cos.name/wp-content/uploads/2016/06/001_zhu-300x45.png 300w, https://cos.name/wp-content/uploads/2016/06/001_zhu-768x116.png 768w, https://cos.name/wp-content/uploads/2016/06/001_zhu-500x75.png 500w" sizes="(max-width: 1053px) 100vw, 1053px" />](https://cos.name/wp-content/uploads/2016/06/001_zhu.png)进一步我们可以利用词向量结果来进行聚类（此处选择层次聚类），聚类结果有点意思，可以说表征了小说中主要的人物关系。比如说，张翠山夫妇与谢逊曾一同共处冰火岛；左边的张三丰一支为武当派主要人物；金花婆婆的女儿为小昭，徒儿是殷离；灭绝师太一支主要是峨眉派代表；中间殷天正一支为明教核心首领；而最右边为郡主府的主要随从。从这幅图上来看，虽然张无忌、赵敏、周芷若同属一支，但是张无忌与赵敏的关系却更为亲密，这也印证了他在全文终时对芷若妹子说的话：
+![001_zhu](https://cos.name/wp-content/uploads/2016/06/001_zhu.png) 进一步我们可以利用词向量结果来进行聚类（此处选择层次聚类），聚类结果有点意思，可以说表征了小说中主要的人物关系。比如说，张翠山夫妇与谢逊曾一同共处冰火岛；左边的张三丰一支为武当派主要人物；金花婆婆的女儿为小昭，徒儿是殷离；灭绝师太一支主要是峨眉派代表；中间殷天正一支为明教核心首领；而最右边为郡主府的主要随从。从这幅图上来看，虽然张无忌、赵敏、周芷若同属一支，但是张无忌与赵敏的关系却更为亲密，这也印证了他在全文终时对芷若妹子说的话：
 
 “芷若，我对你一向敬重，我对殷家表妹心生感激，对小昭是意存怜惜，可是我对赵敏却是刻骨铭心的相爱！”
 
@@ -153,9 +153,9 @@ cos_dist = cosineDist(vec[rr],vec[rr])
 hc = hclust(as.dist(cos_dist), method = "average")
 plot(hc)</pre>
 
-[<img class="aligncenter size-full wp-image-12650" src="https://cos.name/wp-content/uploads/2016/06/18.png" alt="18" width="865" height="449" srcset="https://cos.name/wp-content/uploads/2016/06/18.png 865w, https://cos.name/wp-content/uploads/2016/06/18-300x156.png 300w, https://cos.name/wp-content/uploads/2016/06/18-768x399.png 768w, https://cos.name/wp-content/uploads/2016/06/18-500x260.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/18.png)
+![18](https://cos.name/wp-content/uploads/2016/06/18.png)
 
-[<img class="aligncenter size-full wp-image-12651" src="https://cos.name/wp-content/uploads/2016/06/19.png" alt="19" width="865" height="620" srcset="https://cos.name/wp-content/uploads/2016/06/19.png 865w, https://cos.name/wp-content/uploads/2016/06/19-300x215.png 300w, https://cos.name/wp-content/uploads/2016/06/19-768x550.png 768w, https://cos.name/wp-content/uploads/2016/06/19-500x358.png 500w" sizes="(max-width: 865px) 100vw, 865px" />](https://cos.name/wp-content/uploads/2016/06/19.png)
+![19](https://cos.name/wp-content/uploads/2016/06/19.png)
 
   * <http://vdisk.weibo.com/s/BDfQaBrpWWbtV>
   * <http://licstar.net/archives/328>
@@ -190,4 +190,4 @@ Code链接：<https://github.com/BearAcademy/R-Tutorial/tree/master/Lecture3>
 
 如果您对我们的内容感兴趣，请关注微信公众号“狗熊会”，或扫描下方二维码
 
-[<img class="aligncenter wp-image-12325" src="https://cos.name/wp-content/uploads/2016/05/8.jpg" alt="8" width="280" height="280" srcset="https://cos.name/wp-content/uploads/2016/05/8.jpg 258w, https://cos.name/wp-content/uploads/2016/05/8-150x150.jpg 150w" sizes="(max-width: 280px) 100vw, 280px" />](https://cos.name/wp-content/uploads/2016/05/8.jpg)
+![8](https://cos.name/wp-content/uploads/2016/05/8.jpg)

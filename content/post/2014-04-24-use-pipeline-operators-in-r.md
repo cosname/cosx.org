@@ -18,37 +18,36 @@ slug: use-pipeline-operators-in-r
   * 原文地址：<http://renkun.me/blog/r/2014/04/08/use-pipeline-operators-in-r.html>
   * 翻译：[高涛](http://joegaotao.github.io/cn/)
 
-在数据驱动的统计计算和数据分析过程中，逐步使用一串命令来完成任务是很常见的情况。但是，由于后调用的函数需要先写出来，所以写一组深层嵌套的函数既不直观又缺乏灵活性。
+在数据驱动的统计计算和数据分析过程中，逐步使用一串命令来完成任务是很常见的情况。但是，由于后调用的函数需要先写出来，所以写一组深层嵌套的函数既不直观又缺乏灵活性。<!--more-->
 
 比如我们逐步完成下面这个例子：
 
   1. 从正态分布生成10000个随机数，其均值为10，标准差为1；
-  2. 从这些随机数中无放回地抽样，获取一个样本量为100的样本；
-  3. 对样本取对数；
-  4. 对取对数后的数据做差分；
-  5. 用红色线段画出对数差分后值的图像。
+  1. 从这些随机数中无放回地抽样，获取一个样本量为100的样本；
+  1. 对样本取对数；
+  1. 对取对数后的数据做差分；
+  1. 用红色线段画出对数差分后值的图像。
 
 上述步骤用几个基本的函数即可完成。一般来说，如果我们不想引入太多中间变量，那么我们可能会有如下代码：
 
-    plot(diff(log(sample(rnorm(10000,mean=10,sd=1),size=100,replace=FALSE))),col="red",type="l")
-    
-
-<!--more-->
+```r
+plot(diff(log(sample(rnorm(10000, mean = 10, sd = 1), size = 100, replace = FALSE))), col = "red", type = "l")
+```
 
 这行代码便向我们暴露了写一组深层嵌套的函数的缺点：
 
-  1. 缺乏直观性，无法让人迅速抓住作者的思路；
-  2. 缺乏灵活性，写代码很容易掉括号，出差错时定位也比较困难。
+1. 缺乏直观性，无法让人迅速抓住作者的思路；
+2. 缺乏灵活性，写代码很容易掉括号，出差错时定位也比较困难。
 
 当然，这个问题已经有了一些比较好的解决方案，其中一种我比较喜欢的方案是管道操作。F#语言是使用管道操作思想的杰出代表，即使你不懂这门语言，你也可以迅速明白如下这行代码想要做什么：
 
-    let data =
-        [|1..100|]
-        |> Array.filter (fun i -> i*i <= 50)
-        |> Array.map (fun i -> i+i*i)
-        |> Array.sum
-    
-    
+```F#
+let data =
+    [|1..100|]
+    |> Array.filter (fun i -> i*i <= 50)
+    |> Array.map (fun i -> i+i*i)
+    |> Array.sum
+```
 
 简而言之，上述F#代码先扫描数组的第1到第100个元素，筛选出满足 `i*i<=50`的 `i` 个元素，然后将选出来的元素变换为一个新的整数 `i + i*i`，最后对新元素求和。
 
@@ -56,12 +55,14 @@ slug: use-pipeline-operators-in-r
 
 由于语言设计机制的相似性，这类“黑魔法”在R中也很容易实现。我在[GitHub](https://github.com/renkun-ken/pipeR)上创建了一个叫做[pipeR](http://renkun.me/pipeR/)的软件包，它与已有的[magrittr](http://cran.r-project.org/web/packages/magrittr/index.html)非常相似。两个包都使用`%>%`操作符来将上一步产生的对象管道输出为下一步调用的函数的第一个参数。比如如下代码很容易实现文章刚开始的小例子：
 
-    rnorm(10000,mean=10,sd=1) %>%
-      sample(size=100,replace=FALSE) %>%
-      abs %>%
+```r
+rnorm(10000, mean = 10, sd = 1) %>%
+  sample(size = 100, replace = FALSE) %>%
+    abs %>%
       log %>%
-      diff %>%
-      plot(col="red",type="l")
+        diff %>%
+          plot(col = "red", type = "l")
+```
     
     
 
@@ -77,15 +78,15 @@ slug: use-pipeline-operators-in-r
   4. 取对数后做差分；
   5. 最后，用一条红色的线画出对数差分后的值，同时标题包含观测的数目。
 
-注意到在该链式命令中，有些函数需要调用不止一个管道输出的对象。此时 `pipeR` 提供了一个更为强大的管道操作符 `%>>%`，它可以在下一步的函数调用使用 <code. </code> 来表示之前的结果。我们可以用上面这个问题小试牛刀：
+注意到在该链式命令中，有些函数需要调用不止一个管道输出的对象。此时 `pipeR` 提供了一个更为强大的管道操作符 `%>>%`，它可以在下一步的函数调用来表示之前的结果。我们可以用上面这个问题小试牛刀：
 
-    rnorm(10000,mean=10,sd=1) %>>%
-      sample(.,size=length(.)*0.2,replace=FALSE) %>>%
-      log %>>%
+```r
+rnorm(10000, mean = 10, sd = 1) %>>%
+  sample(., size = length(.) * 0.2, replace = FALSE) %>>%
+    log %>>%
       diff %>>%
-      plot(.,col="red",type="l",main=sprintf("length: %d",length(.)))
-    
-
+        plot(., col = "red", type = "l", main = sprintf("length: %d", length(.)))
+```
 与之前的代码不同之处还是非常明显的：链式的函数调用过程中，定义了变量 `.` 来表示上一步所得的对象。如果直接调用函数，`.` 则自动作为函数的第一个参数输入。
 
 当前存在的软件包的作者都试图定义一个统一的管道操作符去同时涵盖第一参数管道操作`%>%`和自由管道`%>>%`的功能，但是都遇到了困难。一个原因是`.`在`formula`对象中有特别的含义。为了避免模糊性和降低错误猜测的风险，我个人还是决定将两种管道操作符分开，让读者去根据实际情况选择合适的管道操作。
@@ -95,28 +96,29 @@ slug: use-pipeline-operators-in-r
 在这个例子中，我们将要执行一长串命令：
 
   1. 对数据 `hflights` 做些变更，增加飞机速度这一列；
-  2. 按照航空公司代码对数据进行分组；
-  3. 对数据的每一组做些统计：计算观测数目，求取速度的平均值、中位数、标准差；
-  4. 对上一步的数据摘要信息做些变更，增加均值标准化了的速度这一列；
-  5. 对数据按均值标准化了的速度进行降序排列；
-  6. 将现在获得的数据框在全局环境中赋予变量 `hflights.speed`；
-  7. 对均值标准化了的速度画一个柱状图，用航空公司代码作为柱状图的横轴标签，同时标题打印出航空公司的个数。
+  1. 按照航空公司代码对数据进行分组；
+  1. 对数据的每一组做些统计：计算观测数目，求取速度的平均值、中位数、标准差；
+  1. 对上一步的数据摘要信息做些变更，增加均值标准化了的速度这一列；
+  1. 对数据按均值标准化了的速度进行降序排列；
+  1. 将现在获得的数据框在全局环境中赋予变量 `hflights.speed`；
+  1. 对均值标准化了的速度画一个柱状图，用航空公司代码作为柱状图的横轴标签，同时标题打印出航空公司的个数。
 
-    library(dplyr)
-    library(hflights)
-    data(hflights)
-    
-    hflights %>%
-      mutate(Speed=Distance/ActualElapsedTime) %>%
-      group_by(UniqueCarrier) %>%
-      summarize(n=length(Speed),speed.mean=mean(Speed,na.rm = T),
-        speed.median=median(Speed,na.rm=T),
-        speed.sd=sd(Speed,na.rm=T)) %>%
-      mutate(speed.ssd=speed.mean/speed.sd) %>%
-      arrange(desc(speed.ssd)) %>>%
-      assign("hflights.speed",.,.GlobalEnv) %>>%
-      barplot(.$speed.ssd, names.arg = .$UniqueCarrier,
-        main=sprintf("Standardized mean of %d carriers", nrow(.)))
+```r
+library(dplyr)
+library(hflights)
+data(hflights)
+hflights %>%
+  mutate(Speed = Distance / ActualElapsedTime) %>%
+    group_by(UniqueCarrier) %>%
+      summarize(n = length(Speed), speed.mean = mean(Speed, na.rm = T),
+                speed.median = median(Speed, na.rm = T),
+                speed.sd = sd(Speed, na.rm = T)) %>%
+        mutate(speed.ssd = speed.mean / speed.sd) %>%
+          arrange(desc(speed.ssd)) %>>%
+            assign("hflights.speed", ., .GlobalEnv) %>>%
+              barplot(.$speed.ssd, names.arg = .$UniqueCarrier,
+                      main = sprintf("Standardized mean of %d carriers", nrow(.)))
+```
     
 
 你可以想象，如果不用任何管道操作符，你将会定义多少个中间变量，代码将会变得多长。为了增加代码的可读性、灵活性，以及数据操作的可维护性，使用管道操作将是一个不错的选择。

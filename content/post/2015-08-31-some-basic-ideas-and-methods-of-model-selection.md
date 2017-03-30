@@ -28,8 +28,10 @@ slug: some-basic-ideas-and-methods-of-model-selection
   
 2. 而机器学习基本不会从概率分布的角度着手，虽然可能也会涉及`\(X, Y\)`的分布假设，但目的就是学习到一个能够较好描述数据生成机制的函数`\(f\)`，对误差的假设基本忽略，也不会涉及参数和误差的检验，模型好坏基本由预测效果来判断，同时也会提供一些比较一般的误差上界，所以机器学习中不会出现参数估计渐进性、一致性等结果的讨论，而多半最终结果的评判。比如SVM、神经网络、KNN等模型。
 
+
 不过即使有上述区别，关于高维统计推断（Lasso类带正则项的线性模型）的理论也逐渐完善，但相对于传统的生物制药、生物实验、社会调查、经济分析等领域，当前图像、文本、推荐系统等应用领域中，人们更关心模型的预测能力，而不是解释能力甚至是模型的可靠性，主要原因即这些领域模型预测能力相比于模型的假设检验要重要得多，因此如何根据模型预测能力来选择最优模型变得越来越重要。本文下面就逐步介绍模型选择的思路和方法，主要参考
 [ELS这本书](http://statweb.stanford.edu/~tibs/ElemStatLearn/)。
+
 
 # 1. 偏移、方差、复杂度和模型选择
 
@@ -37,7 +39,9 @@ slug: some-basic-ideas-and-methods-of-model-selection
 
 ![var_bias_small](https://cos.name/wp-content/uploads/2015/08/var_bias_small.png)
 
+
 图上横轴表示模型的复杂度大小（比如线性模型中特征维度大小），纵轴表示预测误差，衡量预测值与真实值间的平均损失大小`\(E(L(Y,\hat{f}(X)))\)`，损失函数根据分类、回归问题做合适的选择，比如0-1损失、负似然函数、平方损失、对数损失、指数损失、交叉熵损失、Hinge损失等。平均损失大小在训练集上预测误差称作训练误差，在测试集上称作测试误差。图中每一条线都表示同一个训练集（浅蓝色）和测试集（浅红色）上的预测误差表现，从图上可以看到两个现象
+
 
   * 训练误差（浅蓝色）和测试误差（浅红色）都有波动，并不是一个稳定的值，并且随着模型复杂度的增加，训练误差（浅蓝色）波动越来越小，而测试误差（浅红色）波动则越来越大；
   * 随着模型复杂度增加，训练误差（浅蓝色）和平均训练误差（粗蓝线）越来越小，但测试误差（浅红色）和平均测试误差（粗红线）先降低后减小，在相对中间的位置有一个最小值。
@@ -84,6 +88,7 @@ slug: some-basic-ideas-and-methods-of-model-selection
 那究竟是什么原因导致了随着模型复杂度增加，训练误差与测试误差不呈现良好的正比关系呢？为何同样都是预测误差，训练误差很小的模型反而预测能力很差呢？下面我们以线性模型为例来阐释原因，假设
 `$$y = f(x) + \epsilon, \quad E(\epsilon) = 0, Var(\epsilon) = \sigma_{\epsilon}^2$$`
 
+
 如果用线性函数`\(f_p(x) = x^T\beta\)去近似\(f(x)\)`，其中`\(p\)`表示特征个数，损失函数取平方损失，最小化
 `\(\frac{1}{N}\sum_i(y_i; x_i^T\beta)^2\)`，则在训练集`\(\mathcal{T} = (\mathbf{X}, \mathbf{Y})\)`下得到参数估计为`\(\hat{\beta}\)`，同时记`\(\beta_{*}\)`是`\(f(x)\)`最佳线性近似的估计参数
 `$$\\beta_{*} = \arg\min_{\beta}E_X(f(X); X^T\beta)^2$$`
@@ -96,12 +101,15 @@ slug: some-basic-ideas-and-methods-of-model-selection
   \underbrace{E[E\hat{f}_p(x_0)- \hat{f}_p(x_0)]^2}_{Variance} \\
 \end{split}$$`
 
+
 如果`\(x_0\)`此时取所有训练集中的`\(x_i\)`，则其平均预测误差（该误差也被称作样本内(in-sample)误差，因为`\(x_0\)`都是来自与训练样本内。不过`\(y_0\)`都是新的观测，且真实的`\(f(x_i)\)`仍未知，因此该预测误差不是训练误差，后续会AIC等准则中会详细讲解）：
+
 
 `$$\begin{split}
 \frac{1}{N}\sum^N_{i=1}\text{Err}(x_i) = & \underbrace{\sigma^2_{\epsilon}}_{Irreducible Error} + \underbrace{\frac{1}{N}\sum^N_{i=1}[f(x_i); E\hat{f}(x_i)]^2}_{Ave(Bias^2)} + \underbrace{\frac{p}{N}\sigma^2_{\epsilon}}_{Variance} \\
 = & \underbrace{\sigma^2_{\epsilon}}_{Irreducible Error} + \underbrace{\frac{1}{N}\sum^N_{i=1}[f(x_i) ; x_i^T\beta_{*}]^2}_{Ave[Model Bias]^2} + \underbrace{\frac{1}{N}\sum^N_{i=1}[x_i^T\beta_{*} ; Ex_i^T\hat{\beta}]}_{Ave[Estimation Bias]^2} + \underbrace{\frac{p}{N}\sigma^2_{\epsilon}}_{Variance}
 \end{split}$$`
+
 
 对于普通线性模型易知其“估计偏移（Estimation Bias）”为0（最小二乘估计也是线性估计类中的最佳估计），易知随着特征个数`\(p\)`增加，方差（注：第一个等式根据线性回归很容易推导方差（Variance）为`\(\frac{p}{N}\sigma^2_{\epsilon}\)`）逐步增大，而对于真实`\(f(X)\)`却近似越好，模型偏误（Model Bias）越小，但预测误差是这两者的综合，则整体变化趋势如下图
 
@@ -163,7 +171,6 @@ slug: some-basic-ideas-and-methods-of-model-selection
 
 交叉验证法（CV法）是最自然的重复抽样法，过程如下图所示
 
-
 ![cv](https://cos.name/wp-content/uploads/2015/08/cv.png)
 
 将一个训练集随机分成K份（图中所示为5份），然后选择第K份作为验证集（图中为第3份），然后剩余的K-1份作为训练集训练模型，这样便可以得到K个“预测误差”，求其平均值即为所谓的“CV值”，所以常说的CV值实际上是预测误差期望`\(\text{Err}\)`的一个估计值。数学语言叙述如下：记`\(\tau:\{1, \ldots, N\} \rightarrow \{1, \ldots, K\}\)`是一个划分函数，表示随机地将第`\(i\)`个观测分配`\(\{1, \ldots, K\}\)`中某个指标；记`\(\hat{f}^{-k}(x)\)`表示去除第`\(k\)`部分数据训练所得的模型，则预测误差的交叉验证估计（CV值）为
@@ -202,12 +209,14 @@ slug: some-basic-ideas-and-methods-of-model-selection
 由于计算CV是一个密集计算的模型选择法，即使可以利用并行计算来提高模型选择的效率，但是如果能够找到无需重复计算的替代方法，那么实际应用中，人们可能更倾向于使用这种模型选择方法。对于线性模型，如果使用平方损失，广义交叉验证（GCV）是LOO法解析形式的近似估计，可以避免计算N个模型来快速做模型选择。对于线性模型，对于目标变量的估计可以写成如下投影形式
 `$$\hat{\mathbf{y}} = \mathbf{Sy}$$`
   
+
 其中`\(\mathbf{S}\)`是投影阵，仅与`\(\mathbf{X}\)`有关，与`\(\mathbf{y}\)`无关，则线性模型的LOO值为
 `$$\frac{1}{N}(y_i ; \hat{f}^{-i}(x_i))^2 = \frac{1}{N}\sum^N_{i=1}(\frac{y_i ; \hat{f}(x)}{1 ; S_{ii}})$$`
 
 其中`\(S_{ii}\)是\(\mathbf{S}\)`的对角元素，则GCV近似为
 `$$GCV(\hat{f}) = \frac{1}{N}\sum^N_{i=1}(\frac{y_i ; \hat{f}(x)}{1 ; \text{trace}(\mathbf{S})/N})$$`
   
+
 此时不需要重复计算，只需要计算线性模型的投影阵`\(\mathbf{S}\)`的迹（后面也称作\*\*自由度\*\*）即可，极大降低了交叉验证的计算量，并且使得平均预测误差偏误更小，关于线性模型的GCV详细推导可参考此处。不过GCV仅适用于线性模型，包含带正则项的普通线性模型、非参线性模型，比如LASSO、岭回归、样条回归、多项式回归等模型，其余比如树模型、神经网络模型都不适合。
 
 关于CV的衍生方法比较新的时ES-CV，由Yu Bin在2013年提出，不过实际上这种方法对于核心是估计稳定性的定义，CV法只是来改进估计稳定性的一种方式而已，感兴趣的同学可以参
@@ -225,6 +234,7 @@ slug: some-basic-ideas-and-methods-of-model-selection
 `$$\hat{\text{Err}}_{boot}(\alpha) = \frac{1}{B}\frac{1}{N}\sum^B_{b=1}\sum^N_{i=1}L(y_i, \hat{y}^{*b}(x_i, \alpha))$$`
 
 看起来似乎可行，但仔细一思考就可以发现这并不是一个好的平均预测误差的估计，主要原因是bootstrap样本即被训练又被评价，与CV不同训练集被重复分割为独立的训练集与验证集相比，数据评价存在重合，所以`\(\text{Err}_{boot}(\alpha)\)`肯定与训练误差可能比较接近，而与平均预测误差有较大偏差，那么用该估计来调模型复杂度参数`\(\alpha\)`显然更不是个好选择。那如何利用bootstrap法来更好的近似平均预测误差呢？我们可以借助于CV的分割思想。
+
 
 我们知道，bootstrap样本的获取其实就是重复有放回的N次抽样，那么对于观测`\(i\)`属于该bootstrap样本，至少被抽中一次的概率即
 `$$P_{boot} = 1 ; (1 ; \frac{1}{N})^N \overset{N \rightarrow \infty}{\longrightarrow} 1 ; 1/e \sim 0.632$$`
@@ -261,13 +271,15 @@ bootstrap思想是一种非常重要思想，后来著名的random forest便充�
 
 由于`\(\text{Err}_{in}\)`与`\(\bar{err}\)`都拥有相同的`\(X\)`，两者唯一的区别便是`\(\text{Err}_{in}\)`是对`\(Y\)`求了期望，而`\(\bar{err}\)`则直接使用了某个`\(Y\)`值（训练样本），两者的差便是
 
+
 `$$\text{op} \equiv \text{Err}_{in} ; \bar{err}$$`
 
 为更便于理解，以平方损失和线性模型为，且预测值`\(\hat{\mathbf{y}}\)`是原始值`\(\mathbf{y}\)`的线性变换`\(\hat{\mathbf{y}} = \mathbf{Sy}\)`，则
 
 `$$\text{op} \equiv \frac{1}{N} \sum^N_{i=1}[E_{Y^0_i}(Y^0_i ; \hat{y}_i)^2 ; (y_i ; \hat{y}_i)^2)]$$`
-  
+
 与预测误差类似，这其实是关于训练样本点`\(y_i\)`的条件期望，这种条件期望不好估计和分析，因此消除训练样本中`\(y_i\)`变异带来的影响，我们再次对所有`\(\mathbf{y} = \{y_i\}^N_{i=1}\)`求期望（注意这其中样本点与随机变量间概念的转化，此处将`\(y_i\)`看做是样本点还是随机变量并不做严格区分，所以`\(E_{y_i}y_i = E_{Y_i}Y^0_i\)`）
+
 
 `$$\begin{split}
 \omega \equiv E_{\mathbf{y}}(\text{op}) & \equiv \frac{1}{N}\sum^N_{i=1}[E_{y_i}E_{Y^0_i}(Y^0_i ; \hat{y}_i)^2 ; E_{y_i}(y_i ; \hat{y}_i)^2] \\
@@ -317,6 +329,7 @@ AIC准则与之略有差异，训练误差选用似然函数的负数来代替�
 另外AIC准则还与KL距离有紧密联系，可以从KL距离来推出AIC准则，感兴趣的同学可以[参考这篇文档中关于AIC的介绍](http://pan.baidu.com/s/1g6KXK)。而关于AIC的校正版AICc准则，实际中也有使用，关于其介绍可直接
 [参考wiki](https://en.wikipedia.org/wiki/Akaike_information_criterion)。
 
+
 ### 2.2.3 BIC与贝叶斯
 
 BIC准则形式项与AIC很像，同样还是似然负数作为损失，然后加上一个关于自由度与样本相关的项。
@@ -343,11 +356,11 @@ P(\mathcal{M}_m | \mathbf{X}) & = \frac{P(\mathcal{M}_m) \cdot P(\mathbf{X}|\mat
 $$`
 
 对于模型选择而言，我们并不需要作上述复杂的积分，只需要比较模型后验概率的相对大小即可，这样的好处是忽略常数项是的计算简便了很多
-  
+
 `$$
 \frac{P(\mathcal{M}_m | \mathbf{X})}{P(\mathcal{M}_l | \mathbf{X})} = \frac{P(\mathcal{M}_m)}{P(\mathcal{M}_l)} \cdot \frac{P(\mathbf{X}|\mathcal{M}_m)}{P(\mathbf{X}|\mathcal{M}_l)}
 $$`
-  
+
 具备最大后验概率的模型将与其他所有模型的后验概率比值都大于1。进一步，如果我们事先对模型情况一无所知，模型先验`\(P(\mathcal{M}_m)\)`服从均匀分布均相等，那么寻找最大后验概率的模型就演变成了寻找最大概率密度`\(P(\mathbf{X}|\mathcal{M}_m)\)`的模型即可，实际上取对数即求最大似然`\(\log P(\mathbf{X}|\mathcal{M}_m)\)`。由于`\(\theta_m\)`被积分掉，求解`\(P(\mathbf{X}|\mathcal{M}_m)\)`很困难，所以实际中我们可以采用
 [Laplace近似](https://stat.duke.edu/~st118/sta250/laplace.pdf)
 即可，只要样本量足够大，该近似效果便很好，通过Laplace近似，似然`\(\log P(\mathbf{X}|\mathcal{M}_m)\)`变成了

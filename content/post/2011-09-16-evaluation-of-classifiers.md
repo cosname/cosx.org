@@ -12,34 +12,31 @@ tags:
   - 混淆矩阵
   - 评价
 slug: evaluation-of-classifiers
+description: "本文转载自阿稳的博客，原文链接请点击[此处](http://www.wentrue.net/blog/?p=1279)。本文主要介绍了数据挖掘中分类器的评价指标，以及混淆矩阵、ROC曲线等内容。"
 ---
 
-[box type=&#8221;info&#8221;]<span style="color: black;">本文转载自阿稳的博客，原文链接请点击<a href="http://www.wentrue.net/blog/?p=1279" target="_blank">此处</a>。本文主要介绍了数据挖掘中分类器的评价指标，以及混淆矩阵、ROC曲线等内容。</span>
+本文转载自阿稳的博客，原文链接请点击[此处](http://www.wentrue.net/blog/?p=1279)。本文主要介绍了数据挖掘中分类器的评价指标，以及混淆矩阵、ROC曲线等内容。
 
-<span style="color: black;">作者简介：阿稳，豆瓣，算法工程师。感兴趣的领域：推荐系统，数据挖掘，算法架构及实现的可扩展性，R环境编程。博客<a href="http://www.wentrue.net/blog/" target="_blank">http://www.wentrue.net/blog/</a>。</span>[/box]
+作者简介：阿稳，豆瓣，算法工程师。感兴趣的领域：推荐系统，数据挖掘，算法架构及实现的可扩展性，R环境编程。博客<http://www.wentrue.net/blog/>。
 
-假定你基于贝叶斯理论、神经网络或其他技术建立了自己的分类器。你如何得知自己是否干了一项漂亮的工作呢？你如何得知是否可以把自己的智能模块应用 于生产环境中，并获得同行的景仰以及老板的赞赏呢？评估分类器和创建它同样重要，如同在销售会议上，你会听到大量的夸大之词，但没有评估这就是一堆废话。 本节的目的在于帮助你评估自己的分类器，如果你是一个开发者或产品经理，这会帮助你理解第三方产品的合理与否。
+假定你基于贝叶斯理论、神经网络或其他技术建立了自己的分类器。你如何得知自己是否干了一项漂亮的工作呢？你如何得知是否可以把自己的智能模块应用于生产环境中，并获得同行的景仰以及老板的赞赏呢？评估分类器和创建它同样重要，如同在销售会议上，你会听到大量的夸大之词，但没有评估这就是一堆废话。本节的目的在于帮助你评估自己的分类器，如果你是一个开发者或产品经理，这会帮助你理解第三方产品的合理与否。
 
 “没有人知道所有的事情”、“人都会犯错”。这些箴言在计算机领域也有其对应的版本：没有一个分类器可以解决所有的问题，也没有一个分类器在所有的 数据集中都能良好地工作。在分类范畴中的学习技术属于有监督学习，“有监督”意味着分类器会利用已知的分类结果历经一个训练的过程，通过这种监督,它会尝 试着学习蕴含在训练数据集中的信息。你可以想象得到，训练数据集与你部署环境中实际数据的相关性会是分类是否成功的关键。
 
-以上两段文字摘自我和陈钢同学翻译、即将出版的<a href="http://book.douban.com/subject/6545083/" target="_blank">《智能web算法》</a>中讲述分类器的一章。
+以上两段文字摘自我和陈钢同学翻译、即将出版的[《智能web算法》](http://book.douban.com/subject/6545083/)中讲述分类器的一章。
 
-作者试图说明一个问题：分类器的评估与分类器本身同样重要。评估分类器可信度的一个基本工具是混淆矩阵（confusion matrix）。以一个二分类问题作为研究对象，图1的混淆矩阵显示了一个分类器可能会遭遇的所有情况，其中列（positive/negative）对应于实例实际所属的类别，行（true/false）表示分类的正确与否（注，这里的混淆矩阵的结构跟[2]中的定义并不一样，但实际说明的问题是一致的）。<figure id="attachment_4212" style="width: 592px" class="wp-caption aligncenter">
+作者试图说明一个问题：分类器的评估与分类器本身同样重要。评估分类器可信度的一个基本工具是混淆矩阵（confusion matrix）。以一个二分类问题作为研究对象，图1的混淆矩阵显示了一个分类器可能会遭遇的所有情况，其中列（positive/negative）对应于实例实际所属的类别，行（true/false）表示分类的正确与否（注，这里的混淆矩阵的结构跟[维基百科](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)中的定义并不一样，但实际说明的问题是一致的）。
 
-<a href="https://cos.name/wp-content/uploads/2011/09/confusion_matrix.png" target="_blank"><img class="size-full wp-image-4212 " title="混淆矩阵" src="https://cos.name/wp-content/uploads/2011/09/confusion_matrix.png" alt="" width="592" height="76" srcset="https://cos.name/wp-content/uploads/2011/09/confusion_matrix.png 592w, https://cos.name/wp-content/uploads/2011/09/confusion_matrix-300x38.png 300w, https://cos.name/wp-content/uploads/2011/09/confusion_matrix-500x64.png 500w" sizes="(max-width: 592px) 100vw, 592px" /></a><figcaption class="wp-caption-text">图1 混淆矩阵</figcaption></figure> 
+![图1 混淆矩阵](https://cos.name/wp-content/uploads/2011/09/confusion_matrix.png)
 
-其中FP和FN就是我们常说的第一类错误与第二类错误，以这四个基本指标可以衍生出多个分类器评价指标，如图2。还有下文将会用到的TPR=TP/P=TP/(TP+FN)。<figure id="attachment_4213" style="width: 368px" class="wp-caption aligncenter">
+其中FP和FN就是我们常说的第一类错误与第二类错误，以这四个基本指标可以衍生出多个分类器评价指标，如图2。还有下文将会用到的TPR=TP/P=TP/(TP+FN)。
 
-[<img class="size-full wp-image-4213" title="分类器评价指标" src="https://cos.name/wp-content/uploads/2011/09/indicator.png" alt="" width="368" height="158" srcset="https://cos.name/wp-content/uploads/2011/09/indicator.png 368w, https://cos.name/wp-content/uploads/2011/09/indicator-300x128.png 300w" sizes="(max-width: 368px) 100vw, 368px" />](https://cos.name/wp-content/uploads/2011/09/indicator.png)<figcaption class="wp-caption-text">图2 指标定义</figcaption></figure> 
+![图2 指标定义](https://cos.name/wp-content/uploads/2011/09/indicator.png)
 
 我们常用的就是分类器的精确度（accuracy），在某些如推荐或信息获取领域还会组合使用precision-recall作为评价指标。因为你用于训练分类器的样本本身就是总体的一个抽样，所以这些指标的数值也仅仅是一种统计上的反映，如果你做多次抽样训练，跟别的随机变量一样，它一样会有期望、方差、置信区间这些概念。理论上说，训练样本量越大，你得到的这些指标的可信度就越高（即它们以某个概率落在的置信区间越窄）。不幸的是，实际中你未必会有那么多的样本，所以机器学习工作者设计出很多种方法来应对数据量不足情况下分类器的训练与评估，如k步交叉检验、留1法、boostrap等等。
 
 以上这些都属于静态的指标，当正负样本不平衡时它会存在着严重的问题。极端情况下比如正负样本比例为1:99（这在有些领域并不少见），那么一个基准分类器只要把所有样本都判为负，它就拥有了99%的精确度，但这时的评价指标是不具有参考价值的。另外就是，现代分类器很多都不是简单地给出一个0或1的分类判定，而是给出一个分类的倾向程度，比如贝叶斯分类器输出的分类概率。对于这些分类器，当你取不同阈值，就可以得到不同的分类结果及分类器评价指标，依此人们又发明出来ROC曲线以及AUC（曲线包围面积）指标来衡量分类器的总体可信度。
 
-ROC曲线最初源于20世纪70年代的信号检测理论，描述的是分类混淆矩阵中FPR-TPR两个量之间的相对变化情况。如果二元分类器输出的是对正样本的一个分类概率值，当取不同阈值时会得到不同的混淆矩阵，对应于ROC曲线上的一个点。那么ROC曲线就反映了FPR与TPR之间权衡的情况，通俗地来说，即在TPR随着FPR递增的情况下，谁增长得更快，快多少的问题。TPR增长得越快，曲线越往上屈，AUC就越大，反映了模型的分类性能就越好。当正负样本不平衡时，这种模型评价方式比起一般的精确度评价方式的好处尤其显著。一个典型的ROC曲线如图3所示（来自[2]）。<figure id="attachment_4214" style="width: 500px" class="wp-caption aligncenter">
+ROC曲线最初源于20世纪70年代的信号检测理论，描述的是分类混淆矩阵中FPR-TPR两个量之间的相对变化情况。如果二元分类器输出的是对正样本的一个分类概率值，当取不同阈值时会得到不同的混淆矩阵，对应于ROC曲线上的一个点。那么ROC曲线就反映了FPR与TPR之间权衡的情况，通俗地来说，即在TPR随着FPR递增的情况下，谁增长得更快，快多少的问题。TPR增长得越快，曲线越往上屈，AUC就越大，反映了模型的分类性能就越好。当正负样本不平衡时，这种模型评价方式比起一般的精确度评价方式的好处尤其显著。一个典型的ROC曲线如图3所示（[来自维基百科](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)）。
 
-[<img class="size-full wp-image-4214" title="ROC曲线" src="https://cos.name/wp-content/uploads/2011/09/ROC_curves.png" alt="" width="500" height="485" srcset="https://cos.name/wp-content/uploads/2011/09/ROC_curves.png 500w, https://cos.name/wp-content/uploads/2011/09/ROC_curves-300x291.png 300w, https://cos.name/wp-content/uploads/2011/09/ROC_curves-40x40.png 40w" sizes="(max-width: 500px) 100vw, 500px" />](https://cos.name/wp-content/uploads/2011/09/ROC_curves.png)<figcaption class="wp-caption-text">图3 ROC曲线</figcaption></figure> 
-
-[1] <a href="http://book.douban.com/subject/6545083/" target="_blank">《智能web算法》</a>
-  
-[2] <a href="http://en.wikipedia.org/wiki/Receiver_operating_characteristic" target="_blank">http://en.wikipedia.org/wiki/Receiver_operating_characteristic</a>
+![图3 ROC曲线](https://cos.name/wp-content/uploads/2011/09/ROC_curves.png) 
