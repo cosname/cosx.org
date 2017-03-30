@@ -11,16 +11,14 @@ slug: remove-significance-stars
 
 本期材料由[谢益辉](http://yihui.name/)、[肖楠](http://www.road2stat.com/)整理提供。
 
-_统计之都将会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor /at/ cos.name)。如果有人愿意把或已经把这些博客翻译成中文，请与我们联系(editor /at/ cos.name)。我们将会收录在主站的博客翻译模块，供更多读者阅读。
-  
-_ 
+_统计之都将会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor /at/ cos.name)。如果有人愿意把或已经把这些博客翻译成中文，请与我们联系(editor /at/ cos.name)。我们将会收录在主站的博客翻译模块，供更多读者阅读。_ 
 
   * [让祸害人间的显著性星号消失吧！](https://stat.ethz.ch/pipermail/r-devel/2013-February/subject.html#65770)！Vanderbilt大学生统系主任Frank Harrell如此请愿。楼下有重磅人物John Fox、Terry Therneau、Norm Matloff顶帖。丰富的统计分析中，为什么人们就只看重一个P值呢？软件的默认设置应该体现出一种态度，例如我们不应该用三个星号去“误导”大众。R不仅仅只有丰富的代码库和漂亮的作图系统，更要有最正确的统计！
   * [为啥样本方差的分母是n-1？](http://bulletin.imstat.org/2012/12/terences-stuff-n-vs-n-1/)这个看似简单的问题，你确定你能解释得清楚吗？伯克利大神Terry Speed说自己从来没有想到过一个能让所有学生都明白的答案。所以大神要有奖征集最早讨论这个问题的统计文献！
   * 著名的标题党Larry Wasserman（卡耐基梅隆统计学和机器学习教授）发表了一篇日志名为“[统计学向机器学习宣战](http://normaldeviate.wordpress.com/2013/02/09/statistics-declares-war-on-machine-learning/)”。其实也就是解释“为毛这些该死的统计学家总是用正态近似去求区间估计”。
   * 据ISI Web of Knowledge的最新报告，统计与概率学科下的刊物当前影响因子排名最高的是……是……竟然是[Journal of Statistical Software](http://www.jstatsoft.org/)！一份软件刊物、R语言的后花园竟然超越了英国皇家统计协会的招牌刊物JRSSB以及Annals of Statistics和JASA等大家心中的神话，苦逼推几十页公式还不如写个R包，这世道还有没有王法！
   
-    ![](http://i.imgur.com/xC0MI6P.png)
+    ![](http://i.imgur.com/xC0MI6P.png)   
   * Huffington邮报发表了一篇关于可重复性研究的文章，它是去年年底在布朗大学召开的[可重复性研究研讨会](http://icerm.brown.edu/tw12-5-rcem)的一份总结（[这里](http://www.huffingtonpost.com/david-h-bailey/set-the-default-to-open-r_b_2635850.html)）。
   
     **谢益辉点评**：参加了这个研讨会，深感码农仍然是次等公民，码农光靠剑宗很难翻身，要有一定的气宗功夫，无论如何，借助一定的工具，可重复性研究其实可以比手工操作点鼠标更简单。另外我们需要从软件工程中借鉴一些研究方法，例如测试、版本控制等。可是，我给你提供所有的代码和数据，你能给我什么奖励呢？现在的答案是，没有任何奖励。因为科学研究的文化缺失了激励机制，作者何必浪费时间去整理代码和数据给别人用？
