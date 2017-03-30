@@ -34,16 +34,16 @@ by [肖展航](http://weibo.com/xzhman)
 在与会者了解了基本的时空统计特征之后，嘉宾着重介绍了R中的时空数据分析。按照类型上讲，有三类：第一类是R中的时间序列分析，R中的基础包涉及到关于许多时间序列的函数，例如：stat包里定义了时间和日期的数据结构，forecast和tseries包里包含了预测和单变量建模等等。自动安装所有的时序相关的包的指令如下：
 
 ```r    
-    install.packages("ctv") 
-    library("ctv")
-    install.views(”TimeSeries") 
-    update.views("TimeSeries")
+install.packages("ctv") 
+library("ctv")
+install.views(”TimeSeries") 
+update.views("TimeSeries")
 ```   
 
 第二类是R中的空间数据分析，安装环境的指令如下：
 
 ```r    
-    install.views(“Spatial”)
+install.views(“Spatial”)
 ```    
 
 在R中，空间统计核心包可以分成三类：输入输出数据（rgdal，maptools，maps等）；空间数据清理和操作（sp，maptools，raster）以及空间统计分析（Spatstat，gstat，geoR等）。
@@ -66,7 +66,6 @@ by [肖展航](http://weibo.com/xzhman)
 
 ![cos102](https://cos.name/wp-content/uploads/2013/08/cos102.jpg)
 
-&nbsp;
 
 ![cos103](https://cos.name/wp-content/uploads/2013/08/cos103.jpg)
   
