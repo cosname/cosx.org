@@ -26,18 +26,20 @@ v0.1版本说明：本文发在主站上之后，站友们经常评论代码跑�
 
 有了获取数据的工具，对于中文文本分析来说，最重要的是分词。这里使用的分词算法来自中科院 ictclas算法。依然是沾了lijian大哥Rwordseg的光，直接拿来用了。
 
-有了这两样利器，我们便可以来分析一下新浪微博的数据了。我选取的话题是最近热映的国产喜剧电影《泰囧》，在微博上拿到了998条和“泰囧”有关的微博文本。代码如下（<del>以下代码不能直接执行，请首先阅读链接中Rweibo的关于授权帮助文档</del>）：
+有了这两样利器，我们便可以来分析一下新浪微博的数据了。我选取的话题是最近热映的国产喜剧电影《泰囧》，在微博上拿到了998条和“泰囧”有关的微博文本。代码如下（~~以下代码不能直接执行，请首先阅读链接中Rweibo的关于授权帮助文档~~）：
 
-<pre>#关键词搜索并不需要注册API
+```r
+#关键词搜索并不需要注册API
 require(Rweibo)
 #registerApp(app_name = "SNA3", "********", "****************")
-#roauth &lt;- createOAuth(app_name = "SNA3", access_name = "rweibo")
-res &lt;- web.search.content("泰囧", page = 10, sleepmean = 10,
-           sleepsd = 1)$Weibo</pre>
+#roauth <- createOAuth(app_name = "SNA3", access_name = "rweibo")
+res <- web.search.content("泰囧", page = 10, sleepmean = 10,sleepsd = 1)$Weibo
+```
 
 获取了数据之后，首先迫不及待对微博文本进行分词。代码如下（Rwordseg包可以在语料库中自助加入新词，比如下面的insertWords语句）：
 
-<pre>require(Rwordseg)
+```r
+require(Rwordseg)
 insertWords("泰囧")
 n = length(res[, 1])
 res = res[res!=" "]
@@ -47,9 +49,10 @@ v = table(unlist(word))
 v = sort(v, decreasing = T)
 v[1:100]
 head(v)
-d = data.frame(word = names(v), freq = v)</pre>
+d = data.frame(word = names(v), freq = v)
+```
 
-<!--more-->完成分词之后，我们最先想到的，便是对词频进行统计。词频排名前53的词列表如下（这个词频是我人工清理过的，但是只删除了一些符号）：
+完成分词之后，我们最先想到的，便是对词频进行统计。词频排名前53的词列表如下（这个词频是我人工清理过的，但是只删除了一些符号）：
 
 泰囧 1174         一代宗师 87         时候 53          生活 44          娱乐 35          成功 30
   
@@ -73,7 +76,8 @@ d = data.frame(word = names(v), freq = v)</pre>
   
 从中我们可以看出一些东西。比如说这部电影的口碑似乎还不错，此外某教授对其的炮轰也引发了不少得讨论。另外，同档期的另外两部电影（一代宗师，十二生肖）也经常和它同时被提及（这是否会对某些搞传播和营销的人带来一些启发，联动效应之类的，纯数个人瞎说）。 词云展示是不可少的，展示频率最高的150个词（这里我实现把分词的结果存放在了txt文件中，主要目的是为了节省内存）：
 
-<pre>require(wordcloud)
+```r
+require(wordcloud)
 d = read.table("wordseg.txt")
 dd = tail(d, 150)
 op = par(bg = "lightyellow")
@@ -81,7 +85,8 @@ op = par(bg = "lightyellow")
 # wordcloud(dd$word, dd$freq, colors = grayLevels)
 rainbowLevels = rainbow((dd$freq)/(max(dd$freq) - 10))
 wordcloud(dd$word, dd$freq, col = rainbow(length(d$freq)))
-par(op)</pre>
+par(op)
+```
 
 ![Taijiong](https://cos.name/wp-content/uploads/2013/01/Taijiong.png)
 
@@ -91,48 +96,50 @@ PAM算法全称是Partitioning Around Medoids算法。中文翻译为围绕中�
 
 首先，载入tm包，建立语料库，建立词频矩阵:
 
-<pre>#4.建立语料库
+```r
+#4.建立语料库
 require(tm)
 #先生成一个语料库，来清理一下微博的文本
-weiboCorpus&lt;-Corpus(VectorSource(res))
+weiboCorpus<-Corpus(VectorSource(res))
 #删除标点符号
-weiboCorpus&lt;-tm_map(weiboCorpus,removePunctuation)
+weiboCorpus<-tm_map(weiboCorpus,removePunctuation)
 #删除数字
-weiboCorpus&lt;-tm_map(weiboCorpus,removeNumbers)
+weiboCorpus<-tm_map(weiboCorpus,removeNumbers)
 #删除URL,使用了一点正则表达式
-removeURL&lt;-function(x) gsub("http[[:alnum:]]*","",x)
-weiboCorpus&lt;-tm_map(weiboCorpus,removeURL)
+removeURL<-function(x) gsub("http[[:alnum:]]*","",x)
+weiboCorpus<-tm_map(weiboCorpus,removeURL)
 #再次分词
-weiboData&lt;-as.data.frame(weiboCorpus)
-weiboData&lt;-t(weiboData)
-weiboData&lt;-as.data.frame(weiboData)
+weiboData<-as.data.frame(weiboCorpus)
+weiboData<-t(weiboData)
+weiboData<-as.data.frame(weiboData)
 #head(weiboData) #再次加入一些词
 insertWords(c("泰囧","十二生肖","一代宗师","黄渤","人在囧途","人再囧途","三俗"))
 weiboData$segWord&lt;-segmentCN(as.matrix(weiboData)[,1])
 #head(weiboData)
 #形成了一个data.frame--weiboData，第一个变量为微博内容本身，第二个变量为分词的结果
 #再次形成一个语料库，用来做更进一步的分析
-weiboCorpusForAnys &lt;- Corpus(DataframeSource(weiboData))
+weiboCorpusForAnys <- Corpus(DataframeSource(weiboData))
 #其实这个时候再画一个词云，可能效果会更好些
 #目前代码运行到这一步都是没有问题的。我反复试了几次了。
-#下面的fpc做聚类，最终图形无法展示出来。回头我5.1放假回来会扣一下的。</pre>
+#下面的fpc做聚类，最终图形无法展示出来。回头我5.1放假回来会扣一下的。
+```
 
-`<br />
-#5.pam算法对微博进行聚类分析<br />
-require(fpc)<br />
-weiboTDMatrix control = list(wordLengths = c(1, Inf)))<br />
-TDMforCluster<-removeSparseTerms(weiboTDMatrix,sparse=0.9)<br />
-MatrixForCluster<-as.matrix(TDMforCluster)<br />
-MatrixWeiboForCluster<-t(MatrixForCluster)<br />
-pamRes<-pamk(MatrixWeiboForCluster,metric="manhattan")<br />
-k<-pamRes$nc<br />
-k<br />
-pamResult<-pamRes$pamobject<br />
-pamResult$clustering<br />
-layout(matrix(c(1,2),2,1))<br />
-plot(pamResult,color=F,labels=4,lines=0,cex=0.8,col.clus=1,col.p=pamResult$clustering)<br />
-layout(matrix(1))` 
-  
+```r
+#5.pam算法对微博进行聚类分析
+require(fpc)
+weiboTDMatrix control = list(wordLengths = c(1, Inf)))
+TDMforCluster<-removeSparseTerms(weiboTDMatrix,sparse=0.9)
+MatrixForCluster<-as.matrix(TDMforCluster)
+MatrixWeiboForCluster<-t(MatrixForCluster)
+pamRes<-pamk(MatrixWeiboForCluster,metric="manhattan")
+k<-pamRes$nc
+k
+pamResult<-pamRes$pamobject
+pamResult$clustering
+layout(matrix(c(1,2),2,1))
+plot(pamResult,color=F,labels=4,lines=0,cex=0.8,col.clus=1,col.p=pamResult$clustering)
+layout(matrix(1)) 
+```  
 结果我们将微博分成了两类：
 
 ![Taijiong-Clustering](https://cos.name/wp-content/uploads/2013/01/Taijiong-Clustering.png)
