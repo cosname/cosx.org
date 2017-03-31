@@ -37,19 +37,19 @@ By [陈丽云](https://cos.name/author/liyun/)
 
 有一次，微软上线了一个新的产品功能，然后在开始的几天，用户的体验（累计值）有了显著的下降，如下图所示。
 
-![Effect appears to trend over time](http://i.imgur.com/8AdCj0P.png)
+![Effect appears to trend over time](https://i.imgur.com/8AdCj0P.png)
 
 Effect appears to trend over time
 
 于是产品经理说，看这个线性预测，马上就会变正的了。用户都是这样的，你看随着时间的增长这种下降不是在缓和么？结果事实证明，随着时间的延长，最后只是收敛到0了而已。
 
-![95% confidence interval over time](http://i.imgur.com/K9jVPtM.png)
+![95% confidence interval over time](https://i.imgur.com/K9jVPtM.png)
 
 95% confidence interval over time
 
 其实道理很简单，用户的点击行为并不是一个独立的分布，而明明是时间上自相关的。随着时间的延长，95%的置信区间会逐渐的减小。
 
-![Effect stabilizes over time](http://i.imgur.com/shESUUW.png)
+![Effect stabilizes over time](https://i.imgur.com/shESUUW.png)
 
 Effect stabilizes over time
 
@@ -63,8 +63,7 @@ Effect stabilizes over time
 
 但是世界美好的前提是分布函数随着时间不变啊。比如我们在关注session per user这个指标的时候，随着时间的变化虽然样本量增加，但均值、标准差也都在变化。
 
-![Change in Mean, Standard Deviation and  
-Sqrt(sample size) for Sessions/user over 31 day period](http://i.imgur.com/fCHsyEo.png)
+![Change in Mean, Standard Deviation and Sqrt(sample size) for Sessions/user over 31 day period](https://i.imgur.com/fCHsyEo.png)
 
 Change in Mean, Standard Deviation and  
 Sqrt(sample size) for Sessions/user over 31 day period
