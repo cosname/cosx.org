@@ -83,8 +83,7 @@ slug: lda-math-gamma-function
 = & n! \frac{(m+1)^{n}}{(m+1)(m+2)\cdots (m+n)} \\
 = & n!\prod_{k=1}^{n} \frac{m+1}{m+k} \rightarrow n! \qquad (m\rightarrow \infty)
 \end{align*}`
-  
-所以 (\*)、(\**)式都成立。
+  所以 (\*)、(\**)式都成立。
 
 欧拉开始尝试从一些简单的例子开始做一些计算，看看是否有规律可循，欧拉极其擅长数学的观察与归纳。当`\(n=1/2\)`的时候，带入(*)式计算，整理后可以得到
   
@@ -132,7 +131,7 @@ slug: lda-math-gamma-function
   
 于是，利用上式把阶乘延拓到实数集上，我们就得到Gamma函数的一般形式
   
-`$$ \Gamma(x) = \int\_0^1 (-\log t)^{x-1}dt = \int\_0^{\infty} t^{x-1}e^{-t}dt $$`
+`$$ \Gamma(x) = \int_0^1 (-\log t)^{x-1}dt = \int_0^{\infty} t^{x-1}e^{-t}dt $$`
 
 ![gamma-func](https://cos.name/wp-content/uploads/2013/01/gamma-func.png)
 
@@ -163,7 +162,6 @@ Gamma函数找到了，我们来看看第二个问题，为何Gamma函数被定�
   * Philip J. Davis，Leonhard Euler&#8217;s Integral: A Historical Profile of the Gamma Function
   * Jacques Dutka，The Early History of the Factorial Function
   * Detlef Gronnau，Why is the gamma function so as it is?
-
 ## 1.2 Gamma函数欣赏
 
 _Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also._
@@ -196,7 +194,7 @@ Gamma函数有很多妙用，它不但使得(1/2)!的计算有意义，还能扩
 
 Gamma函数和欧拉常数`\(\gamma\)`有密切关系，可以发现
   
-`$$ \gamma = -\frac{d\Gamma(x)}{dx}|\_{x=1} =\lim\_{n\rightarrow \infty}(1+\frac{1}{2} + \frac{1}{3}+\cdots+\frac{1}{n} &#8211; \log n) $$`
+`$$ \gamma = -\frac{d\Gamma(x)}{dx}|\_{x=1} =\lim_{n\rightarrow \infty}(1+\frac{1}{2} + \frac{1}{3}+\cdots+\frac{1}{n} - \log n)$$`
 
 进一步还可以发现 Gamma 函数和黎曼函数`\(\zeta(s)\)`有密切联系，
   
@@ -234,7 +232,7 @@ Gamma函数和欧拉常数`\(\gamma\)`有密切关系，可以发现
   
 `$$\Psi(1) = -\gamma， \Psi(2) = 1-\gamma$$`
   
-`$$\Psi\_1(1) = \zeta(2) = \frac{\pi^2}{6}， \Psi\_2(1) = -2\zeta(3)$$`
+`$$\Psi_1(1) = \zeta(2) = \frac{\pi^2}{6}， \Psi_2(1) = -2\zeta(3)$$`
 
 所以Gamma函数在数学上是很有魅力的，它在数学上应用广泛，不仅能够被一个理科本科生很好的理解，本身又足够的深刻，具有很多漂亮的数学性质，历史上吸引了众多一流的数学家对它进行研究。美国数学家Philip J.Davis写了篇很有名的介绍Gamma函数的文章：“Leonhard Euler&#8217;s Integral:A Historical Profile of the Gamma Function”，文中对Gamma函数一些特性发现的历史进行了很详细的描述，这篇文章获得了 Chauvenet Prize(美国数学会颁发的数学科普最高奖)。
 
@@ -271,7 +269,6 @@ Gamma分布首先和Poisson分布、Poisson过程发生密切的联系。我们�
 `$$Gamma(x|\alpha=k+1) = \frac{x^ke^{-x}}{\Gamma(k+1)}= \frac{x^k e^{-x}}{k!} $$`
   
 所以这两个分布数学形式上是一致的，只是Poisson分布是离散的，Gamma分布是连续的，可以直观的认为Gamma分布是 Poisson 分布在正实数集上的连续化版本。
-
 这种数学上的一致性是偶然的吗？这个问题我个人曾经思考了很久，终于想明白了从二项分布出发能把Gamma分布和Poisson分布紧密联系起来。我们在概率统计中都学过`\(Poisson(\lambda)\)`分布可以看成是二项分布`\(B(n,p)\)`在`\(np=\lambda, n \rightarrow \infty\)`条件下的极限分布。如果你对二项分布关注的足够多，可能会知道二项分布的随机变量`\(X\sim B(n,p)\)`满足如下一个很奇妙的恒等式
   
 `\begin{equation}
@@ -304,7 +301,7 @@ Poisson(X \le k|\lambda) = \int_\lambda^\infty Poisson(Y=k|x)dx
   
 把上式右边的Possion分布展开，于是得到
   
-`$$ Poisson(X \le k|\lambda) = \int\_\lambda^\infty Poisson(Y=k|x)dx = \int\_\lambda^\infty \frac{x^k e^{-x}}{k!} dx $$`
+`$$ Poisson(X \le k|\lambda) = \int_\lambda^\infty Poisson(Y=k|x)dx = \int_\lambda^\infty \frac{x^k e^{-x}}{k!} dx $$`
   
 所以对于们得到如下一个重要而有趣的等式
   
@@ -315,7 +312,7 @@ Poisson(X \le k|\lambda) = \int_\lambda^\infty \frac{x^k e^{-x}}{k!} dx  \quad 
 
 接下来我们继续玩点好玩的，对上边的等式两边在`\(\lambda \rightarrow 0\)`下取极限，左侧Poisson分布是要至少发生k个事件的概率，`\(\lambda \rightarrow 0\)`的时候就不可能有事件发生了，所以`\(P(X \le k)\rightarrow 1\)`，于是我们得到
   
-`$$ 1 = \lim\_{\lambda \rightarrow 0} \int\_\lambda^\infty \frac{x^k e^{-x}}{k!} dx
+`$$ 1 = \lim_{\lambda \rightarrow 0} \int_\lambda^\infty \frac{x^k e^{-x}}{k!} dx
 = \int_0^\infty \frac{x^k e^{-x}}{k!} dx $$`
   
 在这个积分式子说明`\(f(x) = \frac{x^k e^{-x}}{k!}\)`在正实数集上是一个概率分布函数，而这个函数恰好就是Gamma分布。我们继续把上式右边中的`\(k!\)`移到左边，于是得到
