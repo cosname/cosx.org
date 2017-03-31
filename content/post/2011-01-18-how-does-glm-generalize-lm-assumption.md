@@ -2,6 +2,7 @@
 title: 从线性模型到广义线性模型（1）——模型假设篇
 date: '2011-01-18T00:39:53+00:00'
 author: 张缔香
+description: '在统计学里，对特定变量之间的关系进行建模、分析最常用的手段之一就是回归分析。回归分析的输出变量通常记做Y，也称为因变量(dependent)、响应变量(response)、被解释变量(explained)、被预测变量(predicted)、从属变量(regressand)；输入变量也称为自变量(independent)、控制变量(control&controlled)、解释变量(explanatory)、预测变量(predictor)、回归量(regressor)。本文根据作者自己的一些学习心得和理解，简单且不严格地介绍在模型假设方面普通线性模型和广义线性模型的区别和联系/推广(generalization)。广义线性模型的拟合检验、推断、诊断等方面的方法和手段依赖于模型所采用的分布类型，难以一概而论，将在作者后续的学习心得文章里具体介绍。'
 categories:
   - 回归分析
   - 模型专题
@@ -14,35 +15,39 @@ tags:
 slug: how-does-glm-generalize-lm-assumption
 ---
 
-在统计学里，对特定变量之间的关系进行建模、分析最常用的手段之一就是回归分析。回归分析的输出变量通常记做$ Y$，也称为因变量(dependent)、响应变量(response)、被解释变量(explained)、被预测变量(predicted)、从属变量(regressand)；输入变量通常记做$ x\_1$,…,$x\_p$，也称为自变量(independent)、控制变量(control&controlled)、解释变量(explanatory)、预测变量(predictor)、回归量(regressor)。本文根据作者自己的一些学习心得和理解，简单且不严格地介绍在模型假设方面普通线性模型和广义线性模型的区别和联系/推广(generalization)。广义线性模型的拟合检验、推断、诊断等方面的方法和手段依赖于模型所采用的分布类型，难以一概而论，将在作者后续的学习心得文章里具体介绍。
+在统计学里，对特定变量之间的关系进行建模、分析最常用的手段之一就是回归分析。回归分析的输出变量通常记做`\( Y\)`，也称为因变量(dependent)、响应变量(response)、被解释变量(explained)、被预测变量(predicted)、从属变量(regressand)；输入变量通常记做`\( x_1\)`,…,`\(x_p\)`，也称为自变量(independent)、控制变量(control&controlled)、解释变量(explanatory)、预测变量(predictor)、回归量(regressor)。本文根据作者自己的一些学习心得和理解，简单且不严格地介绍在模型假设方面普通线性模型和广义线性模型的区别和联系/推广(generalization)。广义线性模型的拟合检验、推断、诊断等方面的方法和手段依赖于模型所采用的分布类型，难以一概而论，将在作者后续的学习心得文章里具体介绍。
+
+<!--more-->
 
 # 1.普通线性模型的简单回顾
 
 普通线性模型(ordinary linear model)可以用下式表示：
 
-<p style="text-align: center;">
-  $ Y={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1}+\epsilon$                          (1.1)
-</p>
+`$$
+   Y={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1}+\epsilon      \tag{1.1}                   
+$$`
 
-这里$ {\beta}\_i$，$ i=1$,…,$p-1$称为未知参数，$ {\beta}\_0$称为截矩项。
+这里`\({\beta}_i\)`，`\( i=1\)`,…,`\(p-1\)`称为未知参数，`\( {\beta}_0\)`称为截矩项。
 
 普通线性模型的假设主要有以下几点：
 
-1.响应变量$ Y$和误差项$\epsilon$正态性：响应变量$ Y$和误差项$\epsilon$服从正态分布，且$\epsilon$是一个白噪声过程，因而具有零均值，同方差的特性。
+1. 响应变量`\( Y\)`和误差项`\(\epsilon\)`正态性：响应变量`\( Y\)`和误差项`\(\epsilon\)`服从正态分布，且`\(\epsilon\)`是一个白噪声过程，因而具有零均值，同方差的特性。
 
-2.预测量$x\_i$和未知参数${\beta}\_i$的非随机性：预测量$x\_i$具有非随机性、可测且不存在测量误差；未知参数${\beta}\_i$认为是未知但不具随机性的常数，值得注意的是运用最小二乘法或极大似然法解出的未知参数的估计值$\hat{\beta}_i$则具有正态性。
+2. 预测量`\(x_i\)`和未知参数`\({\beta}_i\)`的非随机性：预测量`\(x_i\)`具有非随机性、可测且不存在测量误差；未知参数`\({\beta}_i\)`认为是未知但不具随机性的常数，值得注意的是运用最小二乘法或极大似然法解出的未知参数的估计值`\(\hat{\beta}_i\)`则具有正态性。
 
-3.研究对象：如前所述普通线性模型的输出项是随机变量$ Y$。在随机变量众多的特点或属性里，比如分布、各种矩、分位数等等，普通线性模型主要研究响应变量的均值$E[ Y]$。
+3. 研究对象：如前所述普通线性模型的输出项是随机变量`\( Y\)`。在随机变量众多的特点或属性里，比如分布、各种矩、分位数等等，普通线性模型主要研究响应变量的均值`\(E[ Y]\)`。
 
-4.联接方式：在上面三点假设下，对(1.1)式两边取数学期望，可得
+4. 联接方式：在上面三点假设下，对(1.1)式两边取数学期望，可得
 
-<p style="text-align: center;">
-  $ E[Y]={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1}$                                        (1.2)
-</p>
+`$$
+E[Y]={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1}                                       \tag{1.2}
+$$`
 
-从 (1.2)式可见，在普通线性模型里，响应变量的均值$E[ Y]$与预测量的线性组合${\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+…+{\beta}\_{p-1}x_{p-1}$通过恒等式(identity)联接，当然也可认为通过形为$f(x)=x$的函数(link function)联接二者，即
+从 (1.2)式可见，在普通线性模型里，响应变量的均值`\(E[ Y]\)`与预测量的线性组合`\({\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1}\)`通过恒等式(identity)联接，当然也可认为通过形为`\(f(x)=x\)`的函数(link function)联接二者，即
 
-$ E[Y]=f({\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+…+{\beta}\_{p-1}x\_{p-1})={\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+…+{\beta}\_{p-1}x\_{p-1}$
+`$$
+E[Y]=f({\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1})={\beta}_0+{\beta}_1x_1+{\beta}_2x_2+…+{\beta}_{p-1}x_{p-1}
+$$`
 
 # 2.广义线性模型的简单介绍
 
@@ -50,11 +55,11 @@ $ E[Y]=f({\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+…+{\beta}\_{p-1}x\_{p-1})={\
 
 1.响应变量的分布推广至指数分散族(exponential dispersion family)：比如正态分布、泊松分布、二项分布、负二项分布、伽玛分布、逆高斯分布。exponential dispersion family的详细定义限于篇幅这里不做详细介绍。
 
-2.预测量$x\_i$和未知参数${\beta}\_i$的非随机性：仍然假设预测量$x\_i$具有非随机性、可测且不存在测量误差；未知参数${\beta}\_i$认为是未知且不具有随机性的常数。
+2.预测量`\(x_i\)`和未知参数`\({\beta}_i\)`的非随机性：仍然假设预测量`\(x_i\)`具有非随机性、可测且不存在测量误差；未知参数`\({\beta}_i\)`认为是未知且不具有随机性的常数。
 
-3.研究对象：广义线性模型的主要研究对象仍然是响应变量的均值$E[ Y]$。
+3.研究对象：广义线性模型的主要研究对象仍然是响应变量的均值`\(E[ Y]\)`。
 
-4.联接方式：广义线性模型里采用的联连函数(link function)理论上可以是任意的，而不再局限于$f(x)=x$。当然了联接函数的选取必然地必须适应于具体的研究案例。同时存在着与假设2.1里提及的分布一一对应的联接函数称为标准联接函数(canonical link or standard link)，如正态分布对应于恒等式，泊松分布对应于自然对数函数等。标准联接函数的推导及其应用上的优点涉及到指数分散族的标准化定义，这里不做详述。
+4.联接方式：广义线性模型里采用的联连函数(link function)理论上可以是任意的，而不再局限于`\(f(x)=x\)`。当然了联接函数的选取必然地必须适应于具体的研究案例。同时存在着与假设2.1里提及的分布一一对应的联接函数称为标准联接函数(canonical link or standard link)，如正态分布对应于恒等式，泊松分布对应于自然对数函数等。标准联接函数的推导及其应用上的优点涉及到指数分散族的标准化定义，这里不做详述。
 
 # 3.简单的例子
 
@@ -64,20 +69,20 @@ $ E[Y]=f({\beta}\_0+{\beta}\_1x\_1+{\beta}\_2x\_2+…+{\beta}\_{p-1}x\_{p-1})={\
 
 指数分布族(exponential dispersion family)实质上是对一类具有以下形式的概率密度函数或具有此类密度函数的分布的总括：
 
-<p style="text-align: center;">
-  $f_Y(y;\theta,\Psi)=exp[(y\theta – b(\theta))/{\Psi} + c(y;\Psi)]$
-</p>
+`$$
+  f_Y(y;\theta,\Psi)=exp[(y\theta – b(\theta))/{\Psi} + c(y;\Psi)]
+$$`
 
-这里$\Psi$和$\theta$是实参数，$b(.)$和$c(.;.)$是实函数，该密度函数的支集(support)$D_{\Psi}$是$R$的子集，且不依赖于$\theta$。满足$\theta=\eta=g(\mu)$的联接函数$g(\mu)$称为标准联接函数(standard or canonical link)。
+这里`\(\Psi\)`和`\(\theta\)`是实参数，`\(b(.)\)`和`\(c(.;.)\)`是实函数，该密度函数的支集(support)`\(D_{\Psi}\)`是`\(R\)`的子集，且不依赖于`\(\theta\)`。满足`\(\theta=\eta=g(\mu)\)`的联接函数`\(g(\mu)\)`称为标准联接函数(standard or canonical link)。
 
-一般情况下参数$\Psi$的值是未知常数(fixed and unknown)，因此在许多GLM文献里指数分布族又被称为单参数指数族(one-parameter exponential family)。对于比较常用的分布，$\Psi$和$\theta$的取值具有特殊的形式：
+一般情况下参数`\(\Psi\)`的值是未知常数(fixed and unknown)，因此在许多GLM文献里指数分布族又被称为单参数指数族(one-parameter exponential family)。对于比较常用的分布，`\(\Psi\)`和`\(\theta\)`的取值具有特殊的形式：
 
-正态分布$N(\mu,{\sigma}^2)$：$\Psi={\sigma}^2$和$\theta=\mu$
+正态分布`\(N(\mu,{\sigma}^2)\)`：`\(\Psi={\sigma}^2\)`和`\(\theta=\mu\)`
 
-泊松分布$Poisson(\lambda)$：$\Psi=1$和$\theta=log\lambda$
+泊松分布`\(Poisson(\lambda)\)`：`\(\Psi=1\)`和`\(\theta=log\lambda\)`
 
-二项分布$Binomial(m,p)$：$\Psi=1$和$\theta=log(p/(p-1))$
+二项分布`\(Binomial(m,p)\)`：`\(\Psi=1\)`和`\(\theta=log(p/(p-1))\)`
 
-负二项分布$Negative Binomial(r,p)$：$\Psi=1$和$\theta=log(1-p)$
+负二项分布`\(Negative Binomial(r,p)\)`：`\(\Psi=1\)`和`\(\theta=log(1-p)\)`
 
-伽玛分布$Gamma(\alpha,\beta)$：$\Psi=1/{\alpha}$和$\theta=-{\beta}/{\alpha}$
+伽玛分布`\(Gamma(\alpha,\beta)\)`：`\(\Psi=1/{\alpha}\)`和`\(\theta=-{\beta}/{\alpha}\)`
