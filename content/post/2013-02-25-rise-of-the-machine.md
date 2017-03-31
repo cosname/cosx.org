@@ -11,9 +11,10 @@ slug: rise-of-the-machine
 
 本期投稿：[谢益辉](http://yihui.name/) [邱怡轩](http://statr.me/) [吕晓玲](http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/128.html) [@–子墨–](http://weibo.com/weizhangzimo)
 
-_统计之都会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor@cos.name)或者在微博上[@统计之都](http://weibo.com/cosname?topnav=1&wvr=5&topsug=1)。_
+>统计之都会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor@cos.name)或者在微博上[@统计之都](http://weibo.com/cosname?topnav=1&wvr=5&topsug=1)。
 
   * Larry Wasserman提醒统计学家“[机器开始绝地反击了](http://www.stat.cmu.edu/~larry/Wasserman.pdf)”：如果你还认为UMVUE和完备统计量是你的原力，那你马上就要被那些机器干掉了。机器学习专业的学生的统计原力越来越强，而统计专业还在整天绕着不知道收不收敛的EM和MCMC念经。觉悟吧，天马的小宇宙！
+<!--more-->
 
 ![](http://normaldeviate.files.wordpress.com/2013/02/terminator.png?w=251&h=201)
 
