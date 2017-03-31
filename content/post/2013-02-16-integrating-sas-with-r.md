@@ -1,7 +1,7 @@
 ---
 title: R与SAS的集成
 date: '2013-02-16T15:01:54+00:00'
-author: 高 燕
+author: 高燕
 categories:
   - 统计软件
   - 软件应用
@@ -12,41 +12,41 @@ tags:
 slug: integrating-sas-with-r
 ---
 
-******一、为什么R与SAS要集成？**
+# 一、为什么R与SAS要集成？
 
 一位优秀的分析师不仅要有深厚的理论功底、丰富的实战经验，还要熟悉几款常用的分析软件，并有一款自己精通的软件。就像武林高手既有独门秘器，又要熟悉各门各派，这样才能博采众长，兼收并蓄，为己所用。
 
 竞争促进创新，合作带来双赢。R与SAS各有优势，也各有问题，国内外网上骂战得多，思考如何将两者集成并能拿出可行方案的人则少之又少，即便有也基本都是老外或者外籍华人想出来的。这里不想贬低国人，只想建议大家多一些独创和研究精神。
 
 有人会问，为何要集成？这里引用网上一位作者给出的观点，虽是一面之词，但不妨参考，有些观点还是比较中肯的。
+ <!--more-->
+> I work in an environment dominated by SAS, and I am looking to integrate R into our environment.
+> 
+> Why would I want to do such a thing? First, I do not want to get rid of SAS. That would not only take away most of our investment in SAS training and hiring good quality SAS programmers, but it would also remove the advantages of SAS from our environment. These advantages include the following:
+> 
+> •Many years of collective experience in pharmaceutical data management, analysis, and reporting
+>   
+> •Workflow that is second to none (with the exception of reproducible research, where R excels)
+>  
+> •Reporting tools based on ODS that are second to none
+>   
+> •SAS has much better validation tools than R, unless you get a commercial version of R (which makes IT folks happy)
+>   
+> •SAS automatically does parallel processing for several common functions
+> 
+> So, if SAS is so great, why do I want R?
+> 
+> •SAS’s pricing model makes it so that if I get a package that does everything I want, I pay thousands of dollars per year more than the basic package and end up with a system that does way more than I need. For example, if I want to do a CART analysis, I have to buy Enterprise Miner, which does way more than I would need.
+>   
+> •R is more agile and flexible than SAS
+>   
+> •R more easily integrates with Fortran and C++ than SAS (I’ve tried the SAS integration with DLLs, and it’s doable, but hard)
+>   
+> •R is better at custom algorithms than SAS, unless you delve into the world of IML (which is sometimes a good solution).
 
-I work in an environment dominated by SAS, and I am looking to integrate R into our environment.
+原文地址：<http://www.r-bloggers.com/integrating-r-into-a-sas-shop/>
 
-Why would I want to do such a thing? First, I do not want to get rid of SAS. That would not only take away most of our investment in SAS training and hiring good quality SAS programmers, but it would also remove the advantages of SAS from our environment. These advantages include the following:
-
-•Many years of collective experience in pharmaceutical data management, analysis, and reporting
-  
-•Workflow that is second to none (with the exception of reproducible research, where R excels)
-  
-•Reporting tools based on ODS that are second to none
-  
-•SAS has much better validation tools than R, unless you get a commercial version of R (which makes IT folks happy)
-  
-•SAS automatically does parallel processing for several common functions
-
-So, if SAS is so great, why do I want R?
-
-•SAS’s pricing model makes it so that if I get a package that does everything I want, I pay thousands of dollars per year more than the basic package and end up with a system that does way more than I need. For example, if I want to do a CART analysis, I have to buy Enterprise Miner, which does way more than I would need.
-  
-•R is more agile and flexible than SAS
-  
-•R more easily integrates with Fortran and C++ than SAS (I’ve tried the SAS integration with DLLs, and it’s doable, but hard)
-  
-•R is better at custom algorithms than SAS, unless you delve into the world of IML (which is sometimes a good solution).
-
-原文地址：<http://www.r-bloggers.com/integrating-r-into-a-sas-shop/> <!--more-->
-
-**二、集成的方式有哪些？**
+# 二、集成的方式有哪些？
 
 R与SAS的集成方式主要有以下几种：
 
@@ -103,7 +103,7 @@ PROC_R 于2012年发表在 Journal of Statistical Software 上，是一位华人
   * 目前只支持神经网络和决策树模型
   * 没有处理自变量取值缺失的情况
 
-**三、集成方式的详细介绍**
+# 三、集成方式的详细介绍
 
 以上四种方式我在下面的文章中有详细的介绍，有兴趣的同学可以阅读。
 
