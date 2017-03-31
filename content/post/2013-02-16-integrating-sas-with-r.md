@@ -1,7 +1,7 @@
 ---
 title: R与SAS的集成
 date: '2013-02-16T15:01:54+00:00'
-author: 高 燕
+author: 高燕
 categories:
   - 统计软件
   - 软件应用
@@ -19,7 +19,7 @@ slug: integrating-sas-with-r
 竞争促进创新，合作带来双赢。R与SAS各有优势，也各有问题，国内外网上骂战得多，思考如何将两者集成并能拿出可行方案的人则少之又少，即便有也基本都是老外或者外籍华人想出来的。这里不想贬低国人，只想建议大家多一些独创和研究精神。
 
 有人会问，为何要集成？这里引用网上一位作者给出的观点，虽是一面之词，但不妨参考，有些观点还是比较中肯的。
-
+ <!--more-->
 > I work in an environment dominated by SAS, and I am looking to integrate R into our environment.
 > 
 > Why would I want to do such a thing? First, I do not want to get rid of SAS. That would not only take away most of our investment in SAS training and hiring good quality SAS programmers, but it would also remove the advantages of SAS from our environment. These advantages include the following:
@@ -44,7 +44,7 @@ slug: integrating-sas-with-r
 >   
 > •R is better at custom algorithms than SAS, unless you delve into the world of IML (which is sometimes a good solution).
 
-原文地址：<http://www.r-bloggers.com/integrating-r-into-a-sas-shop/> <!--more-->
+原文地址：<http://www.r-bloggers.com/integrating-r-into-a-sas-shop/>
 
 # 二、集成的方式有哪些？
 
