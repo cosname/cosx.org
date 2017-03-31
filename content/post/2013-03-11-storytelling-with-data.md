@@ -17,6 +17,6 @@ slug: storytelling-with-data
   * 大数据不是万能的，Roger Peng谈“[大数据不能脱离了具体环境](http://simplystatistics.org/2013/03/04/big-data-context-bad/)”。数据之所以大往往是因为收集起来很方便，因为方便，所以人们迫切想挖掘出一些结论，因为结论容易获得，所以急于给它们安上一些解释。只可惜学生不坐电梯并非因为晚上有精神，而仅仅是因为晚上电梯坏了。
   * [Carlos Scheidegger谈数据可视化工具的未来](http://blog.visual.ly/the-future-of-data-visualization-tools/)。
   * 吴建福大神谈[对中国统计发展的一些浅见](http://v.youku.com/v_show/id_XNTI0MDE2NzQw.html)。
-  * 华尔街日报撰文（[这里](http://blogs.wsj.com/numbersguy/the-upbeat-stats-on-statistics-1216/)）称企业对于统计学人才的需求正在上升，同时也表达了对学校训练和实际需求脱节的隐忧。肖楠读了上面的文章，不禁感叹：“[计算机系的都在学统计，<wbr />统计系的都在学数学，数学系的都在学编程。](https://twitter.com/cos_name/status/309466207835262976)” 看来现如今，跨界和混搭方能立于<span style="text-decoration: line-through;">东方</span>不败之地。
+  * 华尔街日报撰文（[这里](http://blogs.wsj.com/numbersguy/the-upbeat-stats-on-statistics-1216/)）称企业对于统计学人才的需求正在上升，同时也表达了对学校训练和实际需求脱节的隐忧。肖楠读了上面的文章，不禁感叹：“[计算机系的都在学统计，统计系的都在学数学，数学系的都在学编程。](https://twitter.com/cos_name/status/309466207835262976)” 看来现如今，跨界和混搭方能立于~~东方~~不败之地。
 
 ![](http://i.imgur.com/PPtXn.jpg)
