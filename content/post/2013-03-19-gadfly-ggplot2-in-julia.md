@@ -18,6 +18,7 @@ slug: gadfly-ggplot2-in-julia
 [一条跑了200年的MCMC模拟](http://inference.quora.com/The-longest-running-Markov-Chain-Monte-Carlo-simulation-in-the-world-Bumps-races-since-1815)。两百年来牛津、剑桥与周边三十多所院校每两年都会进行一次赛艇比赛，特殊的比赛规则与MCMC模拟暗合。小编曰：这算“人列计算机”的雏形了吧。
 
 [Metropolis-Hastings (MH) sampler和Hamiltonian Monte Carlo (HMC) sampler 有什么不同？](http://v.youku.com/v_show/id_XNTI4NTkyNzc2.html)看动画告诉你！
+<!--more-->
 
 客官可用过 caret 包做实验？客官也喜欢模型集成却深感编程繁琐？那客官一定会喜欢横空出世的 [caretEnsemble](https://github.com/zachmayer/caretEnsemble) 包。回归和分类[示例一](http://moderntoolmaking.blogspot.com/2013/03/new-package-for-ensembling-r-models.html)和[示例二](http://moderntoolmaking.blogspot.com/2013/03/caretensemble-classification-example.html)。(肖楠：梦幻般的机器学习实验框架！)
 
