@@ -93,7 +93,7 @@ fit = glmnet(x, y, family="gaussian", nlambda=50, alpha=1)
 - `family="binomial"` 适用于二元离散因变量（binary）
 - `family="multinomial"` 适用于多元离散因变量（category）
 
-参数 `nlambda=50` 让算法自动挑选50个不同的λ值，拟合出50个系数不同的模型。`alpha=1`输入 α 值，1是它的默认值。
+参数 `nlambda=50` 让算法自动挑选50个不同的 λ 值，拟合出50个系数不同的模型。`alpha=1`输入 α 值，1是它的默认值。
 值得注意的是，**glmnet** 只能接受数值矩阵作为模型输入，如果自变量中有离散变量的话，需要把这一列离散变量转化为几列只含有0和1的向量，
 这个过程叫做One Hot Encoding。通过下面这个小例子，我们可以了解One Hot Encoding的原理以及方法：
 
@@ -363,13 +363,14 @@ predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")
 
 # Elstic Net模型家族简介
 
-在这一节我们会了解一些关于Elastic Net模型家族的理论。首先我们先来看看一般线性Elastic Net模型的目标函数:
+在这一节我们会了解一些关于Elastic Net模型家族的理论。首先我们先来看看一般线性Elastic Net模型的目标函数：
 
 ![6](https://cos.name/wp-content/uploads/2016/10/公式.png)
   
-目标函数的第一行与传统线性回归模型完全相同，即我们希望得到相应的自变量系数 `\(\beta\)`，以此最小化实际因变量y与预测应变量 `\(\beta x\)` 之间的误差平方和。
+目标函数的第一行与传统线性回归模型完全相同，即我们希望得到相应的自变量系数 `\(\beta\)`，
+以此最小化实际因变量y与预测应变量 `\(\beta x\)` 之间的误差平方和。
 而线性Elastic Net与线性回归的不同之处就在于有无第二行的这个约束，线性Elastic Net希望得到的自变量系数是在由 `\(t\)` 控制的一个范围内。
-这一约束也是Elastic Net模型能进行复杂度调整，LASSO回归能进行变量筛选和复杂度调整的原因。我们可以通过下面的这张图来解释这个道理:
+这一约束也是Elastic Net模型能进行复杂度调整，LASSO回归能进行变量筛选和复杂度调整的原因。我们可以通过下面的这张图来解释这个道理：
 
 ![5](https://cos.name/wp-content/uploads/2016/10/5.png)
   
@@ -392,7 +393,7 @@ predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")
 相应的，当几个自变量高度相关时，LASSO回归会倾向于选出其中的任意一个加入到筛选后的模型中，而Ridge回归则会把这一组自变量都挑选出来。
 至于一般的Elastic Net模型（0<α<1），其约束的形状介于正方形与圆形之间，所以其特点就是在任意选出一个自变量或者一组自变量之间权衡。
 
-下面我们就通过Logistic回归一节的例子，来看看这几种模型会得到怎样不同的结果:
+下面我们就通过Logistic回归一节的例子，来看看这几种模型会得到怎样不同的结果：
 
 ```r
 # CV for 11 alpha value
