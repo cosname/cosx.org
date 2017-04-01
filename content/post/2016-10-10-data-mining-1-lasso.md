@@ -74,7 +74,7 @@ load("LinearExample.RData")
 
 之后在workspace里我们会得到一个100×20的矩阵 x 作为输入自变量，100×1的矩阵 y 作为目标因变量。
 矩阵 x 代表了我们有100个数据点，每个数据点有20个统计量（feature）。
-现在我们就可以用函数<code style="background-color: whitesmoke;">glmnet()</code>建模了:
+现在我们就可以用函数<code style="background-color: whitesmoke;">glmnet()</code>建模 `glmnet()` 了:
 
 <pre><code class="r">fit = glmnet(x, y, family="gaussian", nlambda=50, alpha=1)</code></pre>
 
