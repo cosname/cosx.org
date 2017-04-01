@@ -397,8 +397,8 @@ predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")
 ```r
 # CV for 11 alpha value
 for (i in 0:10) {
-assign(paste("cvfit", i, sep=""),
-cv.glmnet(x, y, family="binomial", type.measure="class", alpha=i/10))
+  assign(paste("cvfit", i, sep=""),
+  cv.glmnet(x, y, family="binomial", type.measure="class", alpha=i/10))
 }
 # Plot Solution Paths
 par(mfrow=c(3,1))
