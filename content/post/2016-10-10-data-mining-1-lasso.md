@@ -9,18 +9,20 @@ categories:
 slug: data-mining-1-lasso
 ---
 
-
 **作者简介：**
+
 侯澄钧，俄亥俄州立大学运筹学博士，
 目前在美国从事财产事故险(Property & Casualty)领域的保险产品开发，涉及数据分析，统计建模，产品算法优化等方面的工作。
 
 **目录：**
+
 - [模型简介](#模型简介)
 - [线性回归](#线性回归)
-- [Logistic回归](#logis)
-- [Elstic Net模型家族简介](#elnet)
-- [学习资料](#refer)
+- [Logistic回归](#logistic回归)
+- [Elstic Net模型家族简介](#elstic-net模型家族简介)
+- [学习资料](#学习资料)
 <!--more-->
+
 
 
 # 模型简介
@@ -28,44 +30,51 @@ slug: data-mining-1-lasso
 Kaggle网站（<https://www.kaggle.com/>）成立于2010年，是当下最流行的进行数据发掘和预测模型竞赛的在线平台。
 与Kaggle合作的公司可以在网站上提出一个问题或者目标，同时提供相关数据，来自世界各地的计算机科学家、统计学家和建模爱好者，
 将受领任务，通过比较模型的某些性能参数，角逐出优胜者。
-通过大量的比赛，一系列优秀的数据挖掘模型脱颖而出，受到广大建模者的认同，被普遍应用在各个领域。 
+通过大量的比赛，一系列优秀的数据挖掘模型脱颖而出，受到广大建模者的认同，被普遍应用在各个领域。
 在保险行业中用于拟合广义线性模型的LASSO回归就是其中之一。
 
-LASSO回归的特点是在拟合广义线性模型的同时进行变量筛选（Variable Selection）和复杂度调整（Regularization）。
-因此，不论目标因变量（dependent/response varaible）是连续的（continuous），还是二元或者多元离散的（discrete）， 都可以用LASSO回归建模然后预测。
+LASSO回归的特点是在拟合广义线性模型的同时进行变量筛选（variable selection）和复杂度调整（regularization）。
+因此，不论目标因变量（dependent/response varaible）是连续的（continuous），还是二元或者多元离散的（discrete），都可以用LASSO回归建模然后预测。
 这里的变量筛选是指不把所有的变量都放入模型中进行拟合，而是有选择的把变量放入模型从而得到更好的性能参数。
 复杂度调整是指通过一系列参数控制模型的复杂度，从而避免过度拟合（overfitting）。
 对于线性模型来说，复杂度与模型的变量数有直接关系，变量数越多，模型复杂度就越高。
 更多的变量在拟合时往往可以给出一个看似更好的模型，但是同时也面临过度拟合的危险。此时如果用全新的数据去验证模型（validation），通常效果很差。
 一般来说，变量数大于数据点数量很多，或者某一个离散变量有太多独特值时，都有可能过度拟合。
 
-LASSO回归复杂度调整的程度由参数`\(\lambda\)`来控制，λ越大对变量较多的线性模型的惩罚力度就越大，从而最终获得一个变量较少的模型。
+LASSO回归复杂度调整的程度由参数 λ 来控制，λ 越大对变量较多的线性模型的惩罚力度就越大，从而最终获得一个变量较少的模型。
 LASSO回归与Ridge回归同属于一个被称为Elastic Net的广义线性模型家族。
-这一家族的模型除了相同作用的参数λ之外，还有另一个参数α来控制应对高相关性（highly correlated）数据时模型的性状。
-LASSO回归`\(\alpha=1\)`，Ridge回归`\(\alpha=0\)`，一般Elastic Net模型`\(0<\alpha<1\)`。
-这篇文章主要介绍LASSO回归，所以我们集中关注`\(\alpha=1\)`的情况，对于另外两种模型的特点和如何选取最优`\(\alpha\)`值，
+这一家族的模型除了相同作用的参数 λ 之外，还有另一个参数 α 来控制应对高相关性（highly correlated）数据时模型的性状。
+LASSO回归 α=1，Ridge回归 α=0，一般Elastic Net模型 0<α<1。
+这篇文章主要介绍LASSO回归，所以我们集中关注 α=1 的情况，对于另外两种模型的特点和如何选取最优 α 值，
 我会在章节“Elstic Net模型家族简介”做一些简单阐述。
 
-目前最好用的拟合广义线性模型的R package是**glmnet**，由LASSO回归的发明人，斯坦福统计学家Trevor Hastie领衔开发。
-它的特点是对一系列不同λ值进行拟合，每次拟合都用到上一个λ值拟合的结果，从而大大提高了运算效率。
+目前最好用的拟合广义线性模型的R package是 **glmnet**，由LASSO回归的发明人，斯坦福统计学家Trevor Hastie领衔开发。
+它的特点是对一系列不同 λ 值进行拟合，每次拟合都用到上一个 λ 值拟合的结果，从而大大提高了运算效率。
 此外它还包括了并行计算的功能，这样就能调动一台计算机的多个核或者多个计算机的运算网络，进一步缩短运算时间。
 
-下面我们就通过一个线性回归和一个Logistic回归的例子，了解如何使用**glmnet**拟合LASSO回归。
+下面我们就通过一个线性回归和一个Logistic回归的例子，了解如何使用 **glmnet** 拟合LASSO回归。
 另外，之后的系列文章我打算重点介绍非参数模型（nonparametric model）中的一种，Gradient Boosting Machine。
 然后通过一个保险行业的实例，分享一些实际建模过程中的经验，
 包括如何选取和预处理数据，如何直观得分析自变量与因变量之间的关系，如何避免过度拟合，如何衡量和选取最终模型。
 
 
+
 # 线性回归
 
-我们从最简单的线性回归(Linear Regression)开始了解如何使用**glmnet**拟合LASSO回归模型，所以此时的连接函数(link function)就是恒等，或者说没有连接函数，而误差的函数分布是正态分布。
+我们从最简单的线性回归（Linear Regression）开始了解如何使用 **glmnet** 拟合LASSO回归模型，
+所以此时的连接函数（link function）就是恒等，或者说没有连接函数，而误差的函数分布是正态分布。
 
-首先我们装载**glmnet** package，然后读入试验用数据“LinearExample.RData”([下载链接](https://github.com/chengjunhou/Tutorial/blob/master/LASSO/LinearExample.RData)):
+首先我们装载 **glmnet** package，然后读入试验用数据“LinearExample.RData”，
+[下载链接](https://github.com/chengjunhou/Tutorial/blob/master/LASSO/LinearExample.RData)：
 
-<pre><code class="r">library(glmnet)
-load("LinearExample.RData")</code></pre>
+```r
+library(glmnet)
+load("LinearExample.RData")
+```
 
-之后在workspace里我们会得到一个100×20的矩阵x作为输入自变量，100×1的矩阵y作为目标因变量。矩阵x代表了我们有100个数据点，每个数据点有20个统计量(feature)。现在我们就可以用函数<code style="background-color: whitesmoke;">glmnet()</code>建模了:
+之后在workspace里我们会得到一个100×20的矩阵 x 作为输入自变量，100×1的矩阵 y 作为目标因变量。
+矩阵 x 代表了我们有100个数据点，每个数据点有20个统计量（feature）。
+现在我们就可以用函数<code style="background-color: whitesmoke;">glmnet()</code>建模了:
 
 <pre><code class="r">fit = glmnet(x, y, family="gaussian", nlambda=50, alpha=1)</code></pre>
 
