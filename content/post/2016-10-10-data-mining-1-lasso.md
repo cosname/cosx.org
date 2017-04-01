@@ -419,7 +419,7 @@ plot(cvfit5, main="Elastic Net")
 
 更全面关于glmnet的应用，可以参考 <https://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html>，本文的两个例子也出自这篇vignette。
 
-关于Elastic Net模型家族的特点和优劣，可以参考 <http://www4.stat.ncsu.edu/~post/josh/LASSO\_Ridge\_Elastic\_Net\_-_Examples.html>。
+关于Elastic Net模型家族的特点和优劣，可以参考 <http://www4.stat.ncsu.edu/~post/josh/LASSO_Ridge_Elastic_Net_-_Examples.html>。
 
 最后，感谢COS编辑部的指正，也感谢大家的阅读。
 
