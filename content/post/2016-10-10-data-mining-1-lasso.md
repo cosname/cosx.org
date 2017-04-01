@@ -9,7 +9,6 @@ categories:
 slug: data-mining-1-lasso
 ---
 
----------------
 **作者简介：**
 
 侯澄钧，俄亥俄州立大学运筹学博士，
@@ -23,8 +22,6 @@ slug: data-mining-1-lasso
 - [Elstic Net模型家族简介](#elstic-net模型家族简介)
 - [学习资料](#学习资料)
 <!--more-->
-
----------------
 
 
 
@@ -88,6 +85,7 @@ fit = glmnet(x, y, family="gaussian", nlambda=50, alpha=1)
 觉得意犹未尽的朋友可以接着看下面的内容。
 
 参数 `family` 规定了回归模型的类型：
+
 - `family="gaussian"` 适用于一维连续因变量（univariate）
 - `family="mgaussian"` 适用于多维连续因变量（multivariate）
 - `family="poisson"` 适用于非负次数因变量（count）
@@ -295,6 +293,7 @@ cvfit = cv.glmnet(x, y, family = "binomial", type.measure = "class")
 ```
 
 这里的 `type.measure` 是用来指定交叉验证选取模型时希望最小化的目标参量，对于Logistic回归有以下几种选择：
+
 - `type.measure="deviance"` 使用deviance，即-2倍的log-likelihood
 - `type.measure="mse"` 使用拟合因变量与实际应变量的mean squred error
 - `type.measure="mae"` 使用mean absolute error
@@ -351,6 +350,7 @@ predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")
 ```
 
 这里的 `type` 有以下几种选择：
+
 - `type="link"` 给出线性预测值，即进行Logit变换之前的值
 - `type="response"` 给出概率预测值，即进行Logit变换之后的值
 - `type="class"` 给出0/1预测值
