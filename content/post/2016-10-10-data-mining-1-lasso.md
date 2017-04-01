@@ -271,31 +271,38 @@ plot(pfit, xvar="lambda", label = TRUE)
 
 # Logistic回归
 
-当面对离散因变量时，特别是面对二元因变量(Yes/No)这样的问题时，Logistic回归被广泛使用。此时我们用<code style="background-color: whitesmoke;">family="binomial"</code>来应对这种目标因变量是二项分布(binomial)的情况。
+当面对离散因变量时，特别是面对二元因变量（Yes/No）这样的问题时，Logistic回归被广泛使用。
+此时我们用 `family="binomial"` 来应对这种目标因变量是二项分布（binomial）的情况。
 
-试验用数据“LogisticExample.RData”里储存了100×30的矩阵x，和元素是0/1长度是100的向量y([下载链接](https://github.com/chengjunhou/Tutorial/blob/master/LASSO/LogisticExample.RData)):
+试验用数据“LogisticExample.RData”里储存了100×30的矩阵 x，和元素是0/1长度是100的向量 y，
+[下载链接](https://github.com/chengjunhou/Tutorial/blob/master/LASSO/LogisticExample.RData)：
 
-<pre><code class="r">load("LogisticExample.RData")</code></pre>
+```r
+load("LogisticExample.RData")
+```
 
-我们可以用上一节介绍的<code style="background-color: whitesmoke;">glmnet()</code>函数来拟合模型，然后选取最优的λ值。但是在这种方法下，所有数据都被用来做了一次拟合，这很有可能会造成过拟合的。在这种情况下，当我们把得到的模型用来预测全新收集到的数据时，结果很可能会不尽如人意。所以只要条件允许，我们都会用交叉验证(Cross Validation)拟合进而选取模型，同时对模型的性能有一个更准确的估计。
+我们可以用上一节介绍的 `glmnet()` 函数来拟合模型，然后选取最优的 λ 值。
+但是在这种方法下，所有数据都被用来做了一次拟合，这很有可能会造成过拟合的。
+此时，当我们把得到的模型用来预测全新收集到的数据时，结果很可能会不尽如人意。
+所以只要条件允许，我们都会用交叉验证（cross validation）拟合进而选取模型，同时对模型的性能有一个更准确的估计。
 
-<pre><code class="r">cvfit = cv.glmnet(x, y, family = "binomial", type.measure = "class")</code></pre>
+```r
+cvfit = cv.glmnet(x, y, family = "binomial", type.measure = "class")
+```
 
-这里的<code style="background-color: whitesmoke;">type.measure</code>是用来指定交叉验证选取模型时希望最小化的目标参量，对于Logistic回归有以下几种选择:
-  
-— <code style="background-color: whitesmoke;">type.measure=deviance</code> 使用deviance，即-2倍的Log-likelihood
-  
-— <code style="background-color: whitesmoke;">type.measure=mse</code> 使用拟合因变量与实际应变量的mean squred error
-  
-— <code style="background-color: whitesmoke;">type.measure=mae</code> 使用mean absolute error
-  
-— <code style="background-color: whitesmoke;">type.measure=class</code> 使用模型分类的错误率(missclassification error)
-  
-— <code style="background-color: whitesmoke;">type.measure=auc</code> 使用area under the ROC curve，是现在最流行的综合考量模型性能的一种参数
+这里的 `type.measure` 是用来指定交叉验证选取模型时希望最小化的目标参量，对于Logistic回归有以下几种选择：
+- `type.measure="deviance"` 使用deviance，即-2倍的log-likelihood
+- `type.measure="mse"` 使用拟合因变量与实际应变量的mean squred error
+- `type.measure="mae"` 使用mean absolute error
+- `type.measure="class"` 使用模型分类的错误率（missclassification error）
+- `type.measure="auc"` 使用area under ROC curve，是现在最流行的综合考量模型性能的一种参数
 
-除此之外，在<code style="background-color: whitesmoke;">cv.glmnet()</code>里我们还可以用<code style="background-color: whitesmoke;">nfolds</code>指定fold数，或者用<code style="background-color: whitesmoke;">foldid</code>指定每个fold的内容。因为每个fold间的计算是独立的，我们还可以考虑运用并行计算来提高运算效率，使用<code style="background-color: whitesmoke;">parallel=TRUE</code>可以开启这个功能。但是我们需要先装载package **doParallel**。 下面我们给出在Windows操作系统和Linux操作系统下开启并行计算的示例:
+除此之外，在 `cv.glmnet()` 里我们还可以用 `nfolds` 指定fold数，或者用 `foldid` 指定每个fold的内容。
+因为每个fold间的计算是独立的，我们还可以考虑运用并行计算来提高运算效率，使用 `parallel=TRUE` 可以开启这个功能。
+但是我们需要先装载package **doParallel**。下面我们给出在Windows操作系统和Linux操作系统下开启并行
 
-<pre><code class="r">library(doParallel)
+```r
+library(doParallel)
 # Windows System
 cl &lt;- makeCluster(6)
 registerDoParallel(cl)
@@ -304,46 +311,54 @@ stopCluster(cl)
 # Linux System
 registerDoParallel(cores=8)
 cvfit = cv.glmnet(x, y, family = "binomial", type.measure = "class", parallel=TRUE)
-stopImplicitCluster()</code></pre>
+stopImplicitCluster()
+```
 
-同样的，我们可以绘制<code style="background-color: whitesmoke;">cvfit</code>对象:
+同样的，我们可以绘制 `cvfit` 对象：
 
-<pre><code class="r">plot(cvfit)</code></pre>
-
+```r
+plot(cvfit)
+```
 ![4](https://cos.name/wp-content/uploads/2016/10/4.png)
   
-因为交叉验证，对于每一个λ值，在红点所示目标参量的均值左右，我们可以得到一个目标参量的置信区间。两条虚线分别指示了两个特殊的λ值:
+因为交叉验证，对于每一个 λ 值，在红点所示目标参量的均值左右，我们可以得到一个目标参量的置信区间。两条虚线分别指示了两个特殊的 λ 值：
+```r
+c(cvfit$lambda.min, cvfit$lambda.1se)
+```
+```
+## [1] 0.02578548 0.04945423
+```
 
-<pre><code class="r">c(cvfit$lambda.min, cvfit$lambda.1se)</code></pre>
+`lambda.min` 是指在所有的 λ 值中，得到最小目标参量均值的那一个。
+而 `lambda.1se` 是指在 `lambda.min` 一个方差范围内得到最简单模型的那一个 λ 值。
+因为 λ 值到达一定大小之后，继续增加模型自变量个数即缩小 λ 值，并不能很显著的提高模型性能，
+`lambda.1se` 给出的就是一个具备优良性能但是自变量个数最少的模型。同样的，我们可以指定 λ 值然后进行预测：
 
-<pre>## [1] 0.02578548 0.04945423</pre>
-
-<code style="background-color: whitesmoke;">lambda.min</code>是指在所有的λ值中，得到最小目标参量均值的那一个。而<code style="background-color: whitesmoke;">lambda.1se</code>是指在<code style="background-color: whitesmoke;">lambda.min</code>一个方差范围内得到最简单模型的那一个λ值。因为λ值到达一定大小之后，继续增加模型自变量个数即缩小λ值，并不能很显著的提高模型性能，<code style="background-color: whitesmoke;">lambda.1se</code>给出的就是一个具备优良性能但是自变量个数最少的模型。同样的，我们可以指定λ值然后进行预测:
-
-<pre><code class="r">predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")</code></pre>
-
-<pre>##              1
+```r
+predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")
+```
+```
+##              1
 ## [1,] 0.2455665
 ## [2,] 0.8929028
 ## [3,] 0.6371995
 ## [4,] 0.1566261
-## [5,] 0.6495484</pre>
+## [5,] 0.6495484
+```
 
-这里的<code style="background-color: whitesmoke;">type</code>有以下几种选择:
-  
-— <code style="background-color: whitesmoke;">type=link</code> 给出线性预测值，即进行Logit变换之前的值
-  
-— <code style="background-color: whitesmoke;">type=response</code> 给出概率预测值，即进行Logit变换之后的值
-  
-— <code style="background-color: whitesmoke;">type=class</code> 给出0/1预测值
-  
-— <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时的模型系数
-  
-— <code style="background-color: whitesmoke;">type=coefficients</code> 罗列出给定λ值时，不为零模型系数的下标
+这里的 `type` 有以下几种选择：
+- `type="link"` 给出线性预测值，即进行Logit变换之前的值
+- `type="response"` 给出概率预测值，即进行Logit变换之后的值
+- `type="class"` 给出0/1预测值
+- `type="coefficients"` 罗列出给定 λ 值时的模型系数
+- `type="nonzero"` 罗列出给定 λ 值时，不为零模型系数的下标
 
-另外，当已有了一个模型之后，我们又得到了几个新的自变量，如果想知道这些新变量能否在第一个模型的基础上提高模型性能，可以把第一个模型的预测因变量作为一个向量放到函数选项<code style="background-color: whitesmoke;">offset</code>中，再用<code style="background-color: whitesmoke;">glmnet</code>或者<code style="background-color: whitesmoke;">cv.glmnet</code>进行拟合。
+另外，当已有了一个模型之后，我们又得到了几个新的自变量，如果想知道这些新变量能否在第一个模型的基础上提高模型性能，
+可以把第一个模型的预测因变量作为一个向量放到函数选项 `offset` 中，再用 `glmnet` 或者 `cv.glmnet` 进行拟合。
 
-#### **Elstic Net模型家族简介**
+
+
+# Elstic Net模型家族简介
 
 在这一节我们会了解一些关于Elastic Net模型家族的理论。首先我们先来看看一般线性Elastic Net模型的目标函数:
 
