@@ -14,12 +14,11 @@ slug: data-mining-1-lasso
 目前在美国从事财产事故险(Property & Casualty)领域的保险产品开发，涉及数据分析，统计建模，产品算法优化等方面的工作。
 
 **目录：**
-
-- [模型简介](#模型简介)
-- [线性回归](#线性回归)
-- [Logistic回归](#logistic回归)
-- [Elstic Net理论简介](#elstic-net模型家族理论简介)
-- [学习资料](#学习资料)
+• [模型简介](#模型简介)
+• [线性回归](#线性回归)
+• [Logistic回归](#logistic回归)
+• [Elstic Net理论简介](#elstic-net模型家族理论简介)
+• [学习资料](#学习资料)
 <!--more-->
 
 
