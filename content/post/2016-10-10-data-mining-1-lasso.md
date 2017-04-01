@@ -1,7 +1,7 @@
 ---
 title: '热门数据挖掘模型应用入门（一）: LASSO回归'
 date: '2016-10-10T20:01:59+00:00'
-author: COS编辑部
+author: 侯澄钧
 categories:
   - 数据分析
   - 数据挖掘与机器学习
@@ -9,6 +9,7 @@ categories:
 slug: data-mining-1-lasso
 ---
 
+---------------
 **作者简介：**
 
 侯澄钧，俄亥俄州立大学运筹学博士，
@@ -22,6 +23,7 @@ slug: data-mining-1-lasso
 - [Elstic Net模型家族简介](#elstic-net模型家族简介)
 - [学习资料](#学习资料)
 <!--more-->
+---------------
 
 
 
@@ -287,6 +289,7 @@ load("LogisticExample.RData")
 所以只要条件允许，我们都会用交叉验证（cross validation）拟合进而选取模型，同时对模型的性能有一个更准确的估计。
 
 ```r
+set.seed(91)
 cvfit = cv.glmnet(x, y, family = "binomial", type.measure = "class")
 ```
 
@@ -326,7 +329,7 @@ plot(cvfit)
 c(cvfit$lambda.min, cvfit$lambda.1se)
 ```
 ```
-## [1] 0.02578548 0.04945423
+## [1] 0.03741031 0.05956780
 ```
 
 `lambda.min` 是指在所有的 λ 值中，得到最小目标参量均值的那一个。
@@ -339,11 +342,11 @@ predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")
 ```
 ```
 ##              1
-## [1,] 0.2455665
-## [2,] 0.8929028
-## [3,] 0.6371995
-## [4,] 0.1566261
-## [5,] 0.6495484
+## [1,] 0.2992175
+## [2,] 0.8319748
+## [3,] 0.6160852
+## [4,] 0.2180918
+## [5,] 0.6416046
 ```
 
 这里的 `type` 有以下几种选择：
@@ -362,21 +365,37 @@ predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")
 
 在这一节我们会了解一些关于Elastic Net模型家族的理论。首先我们先来看看一般线性Elastic Net模型的目标函数:
 
-![%e5%85%ac%e5%bc%8f](https://cos.name/wp-content/uploads/2016/10/公式.png)
+![6](https://cos.name/wp-content/uploads/2016/10/公式.png)
   
-目标函数的第一行与传统线性回归模型完全相同，即我们希望得到相应的自变量系数β，以此最小化实际因变量y与预测应变量βx之间的误差平方和。而线性Elastic Net与线性回归的不同之处就在于有无第二行的这个约束，线性Elastic Net希望得到的自变量系数是在由t控制的一个范围内。这一约束也是Elastic Net模型能进行复杂度调整，LASSO回归能进行变量筛选和复杂度调整的原因。我们可以通过下面的这张图来解释这个道理:
+目标函数的第一行与传统线性回归模型完全相同，即我们希望得到相应的自变量系数 `\(\beta\)`，以此最小化实际因变量y与预测应变量 `\(\beta x\)` 之间的误差平方和。
+而线性Elastic Net与线性回归的不同之处就在于有无第二行的这个约束，线性Elastic Net希望得到的自变量系数是在由 `\(t\)` 控制的一个范围内。
+这一约束也是Elastic Net模型能进行复杂度调整，LASSO回归能进行变量筛选和复杂度调整的原因。我们可以通过下面的这张图来解释这个道理:
 
 ![5](https://cos.name/wp-content/uploads/2016/10/5.png)
   
-先看左图，假设一个二维模型对应的系数是$\beta\_1$和$\beta\_2$，然后$\hat{\beta}$是最小化误差平方和的点，即用传统线性回归得到的自变量系数。但我们想让这个系数点必须落在蓝色的正方形内，所以就有了一系列围绕$\hat{\beta}$的同心椭圆，其中最先与蓝色正方形接触的点，就是符合约束同时最小化误差平方和的点。这个点就是同一个问题LASSO回归得到的自变量系数。因为约束是一个正方形，所以除非相切，正方形与同心椭圆的接触点往往在正方形顶点上。而顶点又落在坐标轴上，这就意味着符合约束的自变量系数有一个值是0。所以这里传统线性回归得到的是$\beta\_1$和$\beta\_2$都起作用的模型，而LASSO回归得到的是只有$\beta_2$有作用的模型，这就是LASSO回归能筛选变量的原因。
+先看左图，假设一个二维模型对应的系数是 `\(\beta\_1\)` 和 `\(\beta\_2\)`，然后 `\(\hat{\beta}\)` 是最小化误差平方和的点，
+即用传统线性回归得到的自变量系数。
+但我们想让这个系数点必须落在蓝色的正方形内，所以就有了一系列围绕 `\(\hat{\beta}\)` 的同心椭圆，
+其中最先与蓝色正方形接触的点，就是符合约束同时最小化误差平方和的点。这个点就是同一个问题LASSO回归得到的自变量系数。
+因为约束是一个正方形，所以除非相切，正方形与同心椭圆的接触点往往在正方形顶点上。而顶点又落在坐标轴上，这就意味着符合约束的自变量系数有一个值是0。
+所以这里传统线性回归得到的是 `\(\beta\_1\)` 和 `\(\beta\_2\)` 都起作用的模型，
+而LASSO回归得到的是只有 `\(\beta_2\)` 有作用的模型，这就是LASSO回归能筛选变量的原因。
 
-而正方形的大小就决定了复杂度调整的程度。假设这个正方形极小，近似于一个点，那么LASSO回归得到的就是一个只有常量(intercept)而其他自变量系数都为0的模型，这是模型简化的极端情况。由此我们可以明白，控制复杂度调整程度的λ值与约束大小t是呈反比的，即λ值越大对参数较多的线性模型的惩罚力度就越大，越容易得到一个简单的模型。
+而正方形的大小就决定了复杂度调整的程度。假设这个正方形极小，近似于一个点，
+那么LASSO回归得到的就是一个只有常量（intercept）而其他自变量系数都为0的模型，这是模型简化的极端情况。
+由此我们可以明白，控制复杂度调整程度的 λ 值与约束大小 `\(t\)` 是呈反比的，
+即 λ 值越大对参数较多的线性模型的惩罚力度就越大，越容易得到一个简单的模型。
 
-另外，我们之前提到的参数α就决定了这个约束的形状。刚才提到LASSO回归(α=1)的约束是一个正方形，所以更容易让约束后的系数点落在顶点上，从而起到变量筛选或者说降维的目的。而Ridge回归(α=0)的约束是一个圆，与同心椭圆的相切点会在圆上的任何位置，所以Ridge回归并没有变量筛选的功能。相应的，当几个自变量高度相关时，LASSO回归会倾向于选出其中的任意一个加入到筛选后的模型中，而Ridge回归则会把这一组自变量都挑选出来。至于一般的Elastic Net模型(0<α<1)，其约束的形状介于正方形与圆形之间，所以其特点就是在任意选出一个自变量或者一组自变量之间权衡。
+另外，我们之前提到的参数 α 就决定了这个约束的形状。刚才提到LASSO回归（α=1）的约束是一个正方形，
+所以更容易让约束后的系数点落在顶点上，从而起到变量筛选或者说降维的目的。
+而Ridge回归（α=0）的约束是一个圆，与同心椭圆的相切点会在圆上的任何位置，所以Ridge回归并没有变量筛选的功能。
+相应的，当几个自变量高度相关时，LASSO回归会倾向于选出其中的任意一个加入到筛选后的模型中，而Ridge回归则会把这一组自变量都挑选出来。
+至于一般的Elastic Net模型（0<α<1），其约束的形状介于正方形与圆形之间，所以其特点就是在任意选出一个自变量或者一组自变量之间权衡。
 
 下面我们就通过Logistic回归一节的例子，来看看这几种模型会得到怎样不同的结果:
 
-<pre><code class="r"># CV for 11 alpha value
+```r
+# CV for 11 alpha value
 for (i in 0:10) {
 assign(paste("cvfit", i, sep=""),
 cv.glmnet(x, y, family="binomial", type.measure="class", alpha=i/10))
@@ -385,18 +404,25 @@ cv.glmnet(x, y, family="binomial", type.measure="class", alpha=i/10))
 par(mfrow=c(3,1))
 plot(cvfit10, main="LASSO")
 plot(cvfit0, main="Ridge")
-plot(cvfit5, main="Elastic Net")</code></pre>
-
+plot(cvfit5, main="Elastic Net")
+```
 ![6](https://cos.name/wp-content/uploads/2016/10/6.png)
   
-通过比较可以看出，Ridge回归得到的模型一直都有30个自变量，而α=0.5时的Elastic Net与LASSO回归有相似的性能。
+通过比较可以看出，Ridge回归得到的模型一直都有30个自变量，而 α=0.5 时的Elastic Net与LASSO回归有相似的性能。
 
-#### **学习资料**
 
-本文的图片来自Trevor Hastie教授的著作“The Elements of Statistical Learning”，我觉得这本书在parametric model这一方向的阐述尤其精彩，对于其他数据挖掘方向也有十分全面的介绍。
+
+# 学习资料
+
+本文的图片来自Trevor Hastie教授的著作“The Elements of Statistical Learning”，
+我觉得这本书在parametric model这一方向的阐述尤其精彩，对于其他数据挖掘方向也有十分全面的介绍。
 
 更全面关于glmnet的应用，可以参考 <https://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html>，本文的两个例子也出自这篇vignette。
 
-关于Elastic Net模型家族的特点和优劣，可以参考 [http://www4.stat.ncsu.edu/~post/josh/LASSO\_Ridge\_Elastic\_Net\_-_Examples.html](http://www4.stat.ncsu.edu/~post/josh/LASSO_Ridge_Elastic_Net_-_Examples.html) 。
+关于Elastic Net模型家族的特点和优劣，可以参考 <http://www4.stat.ncsu.edu/~post/josh/LASSO\_Ridge\_Elastic\_Net\_-_Examples.html>。
 
 最后，感谢COS编辑部的指正，也感谢大家的阅读。
+
+
+
+---------------
