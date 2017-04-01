@@ -74,33 +74,34 @@ load("LinearExample.RData")
 
 之后在workspace里我们会得到一个100×20的矩阵 x 作为输入自变量，100×1的矩阵 y 作为目标因变量。
 矩阵 x 代表了我们有100个数据点，每个数据点有20个统计量（feature）。
-现在我们就可以用函数<code style="background-color: whitesmoke;">glmnet()</code>建模 `glmnet()` 了:
+现在我们就可以用函数 `glmnet()` 建模了:
 
-<pre><code class="r">fit = glmnet(x, y, family="gaussian", nlambda=50, alpha=1)</code></pre>
+```r
+fit = glmnet(x, y, family="gaussian", nlambda=50, alpha=1)
+```
 
 好，建模完毕，至此结束本教程 🙂
 
 觉得意犹未尽的朋友可以接着看下面的内容。
 
-参数<code style="background-color: whitesmoke;">family</code>规定了回归模型的类型:
-  
-— <code style="background-color: whitesmoke;">family="gaussian"</code> 适用于一维连续因变量(univariate)
-  
-— <code style="background-color: whitesmoke;">family="mgaussian"</code> 适用于多维连续因变量(multivariate)
-  
-— <code style="background-color: whitesmoke;">family="poisson"</code> 适用于非负次数因变量(count)
-  
-— <code style="background-color: whitesmoke;">family="binomial"</code> 适用于二元离散因变量(binary)
-  
-— <code style="background-color: whitesmoke;">family="multinomial"</code> 适用于多元离散因变量(category)
+参数 `family` 规定了回归模型的类型：
+- `family="gaussian"` 适用于一维连续因变量（univariate）
+- `family="mgaussian"` 适用于多维连续因变量（multivariate）
+- `family="poisson"` 适用于非负次数因变量（count）
+- `family="binomial"` 适用于二元离散因变量（binary）
+- `family="multinomial"` 适用于多元离散因变量（category）
 
-参数<code style="background-color: whitesmoke;">nlambda=50</code>让算法自动挑选50个不同的λ值，拟合出50个系数不同的模型。<code style="background-color: whitesmoke;">alpha=1</code>输入α值，1是它的默认值。 值得注意的是，**glmnet**只能接受数值矩阵作为模型输入，如果自变量中有离散变量的话，需要把这一列离散变量转化为几列只含有0和1的向量，这个过程叫做One Hot Encoding。通过下面这个小例子，你可以了解One Hot Encoding的原理以及方法:
+参数 `nlambda=50` 让算法自动挑选50个不同的λ值，拟合出50个系数不同的模型。`alpha=1`输入 α 值，1是它的默认值。
+值得注意的是，**glmnet** 只能接受数值矩阵作为模型输入，如果自变量中有离散变量的话，需要把这一列离散变量转化为几列只含有0和1的向量，
+这个过程叫做One Hot Encoding。通过下面这个小例子，你可以了解One Hot Encoding的原理以及方法：
 
-<pre><code class="r">df=data.frame(Factor=factor(1:5), Character=c("a","a","b","b","c"),
+```r
+df=data.frame(Factor=factor(1:5), Character=c("a","a","b","b","c"),
               Logical=c(T,F,T,T,T), Numeric=c(2.1,2.3,2.5,4.1,1.1))
-model.matrix(~., df)</code></pre>
-
-<pre>##   (Intercept) Factor2 Factor3 Factor4 Factor5 Characterb Characterc
+model.matrix(~., df)
+```
+```
+##   (Intercept) Factor2 Factor3 Factor4 Factor5 Characterb Characterc
 ## 1           1       0       0       0       0          0          0
 ## 2           1       1       0       0       0          0          0
 ## 3           1       0       1       0       0          1          0
@@ -122,15 +123,18 @@ model.matrix(~., df)</code></pre>
 ## [1] "contr.treatment"
 ## 
 ## attr(,"contrasts")$Logical
-## [1] "contr.treatment"</pre>
+## [1] "contr.treatment"
+```
 
-除此之外，如果我们想让模型的变量系数都在同一个数量级上，就需要在拟合前对数据的每一列进行标准化(standardize)，即对每个列元素减去这一列的均值然后除以这一列的标准差。这一过程可以通过在<code style="background-color: whitesmoke;">glmnet()</code>函数中添加参数<code style="background-color: whitesmoke;">standardize=TRUE</code>来实现。
+除此之外，如果我们想让模型的变量系数都在同一个数量级上，就需要在拟合前对数据的每一列进行标准化(standardize)，
+即对每个列元素减去这一列的均值然后除以这一列的标准差。这一过程可以通过在 `glmnet()` 函数中添加参数 `standardize=TRUE` 来实现。
 
-回到我们的拟合结果<code style="background-color: whitesmoke;">fit</code>。作为一个R对象，我们可以把它当作很多函数的输入。比如说，我们可以查看详细的拟合结果:
+回到我们的拟合结果 `fit`。作为一个R对象，我们可以把它当作很多函数的输入。比如说，我们可以查看详细的拟合结果：
 
-<pre><code class="r">print(fit)</code></pre>
-
-<pre>##
+```r
+print(fit)
+```
+```
 ## Call:  glmnet(x = x, y = y, family = "gaussian", alpha = 1, nlambda = 50) 
 ## 
 ##       Df   %Dev   Lambda
@@ -169,15 +173,25 @@ model.matrix(~., df)</code></pre>
 ## [33,] 20 0.9132 0.003982
 ## [34,] 20 0.9132 0.003300
 ## [35,] 20 0.9132 0.002735
-## [36,] 20 0.9132 0.002266</pre>
+## [36,] 20 0.9132 0.002266
+```
 
-每一行代表了一个模型。列<code style="background-color: whitesmoke;">Df</code>是自由度，代表了非零的线性模型拟合系数的个数。列<code style="background-color: whitesmoke;">%Dev</code>代表了由模型解释的残差的比例，对于线性模型来说就是模型拟合的R^2(R-squred)。它在0和1之间，越接近1说明模型的表现越好，如果是0，说明模型的预测结果还不如直接把因变量的均值作为预测值来的有效。列<code style="background-color: whitesmoke;">Lambda</code>当然就是每个模型对应的λ值。我们可以看到，随着λ的变小，越来越多的自变量被模型接纳进来，<code style="background-color: whitesmoke;">%Dev</code>也越来越大。第31行时，模型包含了所有20个自变量，<code style="background-color: whitesmoke;">%Dev</code>也在0.91以上。其实我们本应该得到50个不同的模型，但是连续几个<code style="background-color: whitesmoke;">%Dev</code>变化很小时<code style="background-color: whitesmoke;">glmnet()</code>会自动停止。分析模型输出我们可以看到当<code style="background-color: whitesmoke;">Df</code>大于9的时候，<code style="background-color: whitesmoke;">%Dev</code>就达到了0.9，而且继续缩小λ，即增加更多的自变量到模型中，也不能显著提高<code style="background-color: whitesmoke;">%Dev</code>。所以我们可以认为当λ接近0.1时，得到的包含9个自变量的模型，可以相当不错的描述这组数据。
+每一行代表了一个模型。列 `Df` 是自由度，代表了非零的线性模型拟合系数的个数。
+列 `%Dev` 代表了由模型解释的残差的比例，对于线性模型来说就是模型拟合的R^2(R-squred)。
+它在0和1之间，越接近1说明模型的表现越好，如果是0，说明模型的预测结果还不如直接把因变量的均值作为预测值来的有效。
+列 `Lambda` 当然就是每个模型对应的 λ 值。
+我们可以看到，随着 λ 的变小，越来越多的自变量被模型接纳进来，`%Dev` 也越来越大。第31行时，模型包含了所有20个自变量，`%Dev` 也在0.91以上。
+其实我们本应该得到50个不同的模型，但是连续几个 `%Dev` 变化很小时 `glmnet()` 会自动停止。
+分析模型输出我们可以看到当 `Df` 大于9的时候，`%Dev` 就达到了0.9，而且继续缩小 λ，即增加更多的自变量到模型中，也不能显著提高 `%Dev`。
+所以我们可以认为当 λ 接近0.1时，得到的包含9个自变量的模型，可以相当不错的描述这组数据。
 
-我们也可以通过指定λ值，抓取出某一个模型的系数:
+我们也可以通过指定 λ 值，抓取出某一个模型的系数：
 
-<pre><code class="r">coef(fit, s=c(fit$lambda[16],0.1))</code></pre>
-
-<pre>## 21 x 2 sparse Matrix of class "dgCMatrix"
+```r
+coef(fit, s=c(fit$lambda[16],0.1))
+```
+```
+## 21 x 2 sparse Matrix of class "dgCMatrix"
 ##                        1            2
 ## (Intercept)  0.150672014  0.150910983
 ## V1           1.322088892  1.320532088
@@ -199,47 +213,63 @@ model.matrix(~., df)</code></pre>
 ## V17          .            .          
 ## V18          .            .          
 ## V19          .            .          
-## V20         -1.025371209 -1.021771038</pre>
+## V20         -1.025371209 -1.021771038
+```
 
-需要注意的是，我们把指定的λ值放在<code style="background-color: whitesmoke;">s=</code>里，因为在后面Logistic回归的部分我们还用到了<code style="background-color: whitesmoke;">s="lambda.min"</code>的方法指定λ的值。当指定的λ值不在<code style="background-color: whitesmoke;">fit$lambda</code>中时，对应的模型系数由Linear Interpolation近似得到。我们还可以做图观察这50个模型的系数是如何变化的:
+需要注意的是，我们把指定的 λ 值放在 `s=` 里，因为在后面Logistic回归的部分我们还用到了 `s="lambda.min"` 的方法指定 λ 的值。
+当指定的 λ 值不在 `fit$lambda` 中时，对应的模型系数由linear interpolation近似得到。
+我们还可以做图观察这50个模型的系数是如何变化的：
 
-<pre><code class="r">plot(fit, xvar="lambda", label=TRUE)</code></pre>
-
+```r
+plot(fit, xvar="lambda", label=TRUE)
+```
 ![1](https://cos.name/wp-content/uploads/2016/10/1.png)
-  
-图中的每一条曲线代表了每一个自变量系数的变化轨迹，纵坐标是系数的值，下横坐标是log⁡(λ)，上横坐标是此时模型中非零系数的个数。我们可以看到，黑线代表的自变量1在λ值很大时就有非零的系数，然后随着λ值变小不断变大。我们还可以尝试用<code style="background-color: whitesmoke;">xvar=“norm”</code>和<code style="background-color: whitesmoke;">xvar=“dev”</code>切换下横坐标。
 
-接下来当然就是指定λ值，然后对新数据进行预测了:
+图中的每一条曲线代表了每一个自变量系数的变化轨迹，纵坐标是系数的值，下横坐标是 log⁡(λ)，上横坐标是此时模型中非零系数的个数。
+我们可以看到，黑线代表的自变量1在 λ 值很大时就有非零的系数，然后随着 λ 值变小不断变大。
+我们还可以尝试用 `xvar="norm"` 和 `xvar="dev"` 切换下横坐标。
 
-<pre><code class="r">nx = matrix(rnorm(5*20),5,20)
-predict(fit, newx=nx, s=c(fit$lambda[16],0.1))</code></pre>
+接下来当然就是指定 λ 值，然后对新数据进行预测了：
 
-<pre>##               1          2
+```r
+set.seed(91)
+nx = matrix(rnorm(5*20),5,20)
+predict(fit, newx=nx, s=c(fit$lambda[16],0.1))
+```
+```
+##               1          2
 ## [1,]  2.0309573  2.0273151
 ## [2,] -1.9362780 -1.9328610
 ## [3,]  1.1048789  1.1047725
 ## [4,]  0.5156294  0.5154747
-## [5,]  1.4621024  1.4618535</pre>
+## [5,]  1.4621024  1.4618535
+```
 
-下面我们再来看几个<code style="background-color: whitesmoke;">glmnet()</code>函数的其他功能。使用<code style="background-color: whitesmoke;">upper.limits</code>和<code style="background-color: whitesmoke;">lower.limits</code>，我们可以指定模型系数的上限与下限:
+下面我们再来看几个 `glmnet()` 函数的其他功能。使用 `upper.limits` 和 `lower.limits`，我们可以指定模型系数的上限与下限：
 
-<pre><code class="r">lfit=glmnet(x, y, lower=-.7, upper=.5)
-plot(lfit, xvar="lambda", label=TRUE)</code></pre>
-
+```r
+lfit=glmnet(x, y, lower=-.7, upper=.5)
+plot(lfit, xvar="lambda", label=TRUE)
+```
 ![2](https://cos.name/wp-content/uploads/2016/10/2.png)
-  
-上限与下限可以是一个值，也可以是一个向量，向量的每一个值作为对应自变量的参数上下限。有时，在建模之前我们就想凸显某几个自变量的作用，此时我们可以调整惩罚参数。每个自变量的默认惩罚参数是1，把其中的某几个量设为0将使得相应的自变量不遭受任何惩罚:
 
-<pre><code class="r">p.fac = rep(1, 20)
+上限与下限可以是一个值，也可以是一个向量，向量的每一个值作为对应自变量的参数上下限。
+有时，在建模之前我们就想凸显某几个自变量的作用，此时我们可以调整惩罚参数。
+每个自变量的默认惩罚参数是1，把其中的某几个量设为0将使得相应的自变量不遭受任何惩罚：
+
+```r
+p.fac = rep(1, 20)
 p.fac[c(5, 10, 15)] = 0
 pfit = glmnet(x, y, penalty.factor=p.fac)
-plot(pfit, xvar="lambda", label = TRUE)</code></pre>
-
+plot(pfit, xvar="lambda", label = TRUE)
+```
 ![3](https://cos.name/wp-content/uploads/2016/10/3.png)
-  
-我们可以看到，自变量5/10/15的系数一直不为0，而其他的参数系数绝对值随着λ值变小而变大。
 
-#### **Logistic回归**
+我们可以看到，自变量5/10/15的系数一直不为0，而其他的参数系数绝对值随着 λ 值变小而变大。
+
+
+
+# Logistic回归
 
 当面对离散因变量时，特别是面对二元因变量(Yes/No)这样的问题时，Logistic回归被广泛使用。此时我们用<code style="background-color: whitesmoke;">family="binomial"</code>来应对这种目标因变量是二项分布(binomial)的情况。
 
