@@ -13,7 +13,7 @@ tags:
 slug: lda-math-beta-dirichlet
 ---
 
-**2. 认识Beta/Dirichlet分布**
+# 2. 认识Beta/Dirichlet分布**
   
 **2.1 魔鬼的游戏—认识Beta 分布**
 
