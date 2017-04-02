@@ -21,9 +21,7 @@ slug: publishing-promotion-and-collaboration-in-statistics
 
 <!--more-->
 
-<video controls="" autoplay="" name="media"><source src="http://animation.r-forge.r-project.org/video/Getting-Ahead-in-Academia.mp4" type="video/mp4"></video>
-
-（观看本视频可能需要安装QuickTime，视频为MP4格式）
+<video controls="" name="media"><source src="http://animation.r-forge.r-project.org/video/Getting-Ahead-in-Academia.mp4" type="video/mp4"></video>
 
 本视频[来源于Johns Hopkins Schools of Medicine and Public Health的Steve Goodman教授](http://web.me.com/goodmanfamily1/Behind_the_tan_door/index.html)，已获得作者授权发布。欲转载者请自行联系原作者。Goodman教授在授权同时也表达了他对文化差异的担心，可能会有人看不懂这个片子的真正意思。如果你看完这个片子之后觉得气愤或不解（相信应该没有这样的人），请尽管联系我（谢益辉）给你解释。
 
