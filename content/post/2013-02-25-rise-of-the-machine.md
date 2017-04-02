@@ -18,7 +18,7 @@ slug: rise-of-the-machine
 
 ![](http://normaldeviate.files.wordpress.com/2013/02/terminator.png?w=251&h=201)
 
-  * 所有人一直在用“机器学习”这个莫名其妙的词，看了这两个欢乐的机器之后捡起你的下巴你就知道什么叫[机器学习](http://robohub.org/video-throwing-and-catching-an-inverted-pendulum-with-quadrocopters/)了（视频需穿墙术，墙内请点[这里](http://v.youku.com/v_show/id_XNTE4NDc0NzY0.html)）。数学和机器学习要征服世界了！
+  * 所有人一直在用“机器学习”这个莫名其妙的词，看了这两个欢乐的机器之后捡起你的下巴你就知道什么叫[机器学习](http://robohub.org/video-throwing-and-catching-an-inverted-pendulum-with-quadrocopters/)了（视频需穿墙术，墙内请点[这里](http://v.youku.com/v_show/id_XNTE4NDc0NzY0.html)）。数学和机器学习要征服世界了！
   * [如果你是上帝，你将创造几维的世界？](http://www.stat.purdue.edu/~dasgupta/fourDspace.pdf)咦，这跟概率统计有神马关系？好吧，Purdue大学统计系的DasGupta教授将带你出来看上帝。
   * 机器人和上帝都在用统计，现如今连领导都开始[谈“大数据”](http://2012.chinajx.com.cn/html/report/72796-1.htm?reportpos=2)了。BBC去年老视频：[统计统计亚克西](http://www.gapminder.org/videos/the-joy-of-stats/)！
   * 华盛顿大学应用数学系教授Randall J. LeVeque谈“[10个你不应该分享你的代码的理由，但你还是应该分享](http://faculty.washington.edu/rjl/pubs/topten/topten.pdf)” 。源代码之于论文，如同定理证明的细节一样，应该被公布出来（回想你学数学时遇到那些号称“显然”却一点都不显然的证明是多么抓狂）。
