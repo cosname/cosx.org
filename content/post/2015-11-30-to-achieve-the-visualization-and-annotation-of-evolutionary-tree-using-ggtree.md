@@ -30,7 +30,7 @@ slug: to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggt
 
 层次聚类的输入是距离，比如euclidean或manhattan距离。把距离近的聚在一起。而进化树推断是从生物序列（DNA或氨基酸）的比对开始。最简单的方法是计算一下序列中不匹配的数目，称之为hamming distance（通常用序列长度做归一化），使用距离当然也可以应用层次聚类的方法。进化树的构建最简单的方法是非加权配对平均法（Unweighted Pair Group Method with Arithmetic Mean, UPGMA），这其实是使用average linkage的层次聚类。这种方法在进化树推断上现在基本没人用。更为常用的是邻接法（neighbor joining），两个节点距离其它节点都比较远，而这两个节点又比较近，它们就是neighbor，可以看出neighbor不一定是距离最近的两个节点。真正做进化的人，这个方法也基本不用。现在主流的方法是最大似然法(Maximum likelihood, ML)，通过进化模型（evolutionary model)估计拓朴结构和分支长度，估计的结果具有最高的概率能够产生观测数据（多序列比对）。另外还有最大简约法和贝叶斯推断等方法用于构建进化树。
 
-![](https://cos.name/wp-content/uploads/2015/11/newicktree.gif)
+![newicktree](https://cos.name/wp-content/uploads/2015/11/newicktree.gif)
 
 是最常用的存储进化树的文件格式，如上面这个树，拓朴结构用[newick](http://evolution.genetics.washington.edu/phylip/newicktree.html)格式可以表示为：
 
@@ -50,9 +50,9 @@ slug: to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggt
 
 内部节点也可以有label，写在相应的括号外面，如下所示：
 
-```r
+
 (B:6.0,(A:5.0,C:3.0,E:4.0)Ancestor1:5.0,D:11.0);
-```
+
 
 这是最为广泛支持的文件格式，很多进化树可视软件只支持newick格式。
   
@@ -98,7 +98,7 @@ if (show.tip.label) {
 
 如果show.tip.label=FALSE，当函数返回p 时 df.tip 就被扔掉，用户想要再加 tip.label 就不可能了。 ggphylo 和 phyloseq 都是类似的实现，这些包把树解析为线条，所以节点相关的信息需要额外的 data.frame 来存储，并且只有极少数的预设参数，比如上面例子中的tip.label。在上面的例子中，用户连更改 tip.label 的颜色都不可能，更别说使用额外的注释信息了。
 
-这几个包所实现的画图函数，都可以很容易地用ggtree实现，并用经过测试，ggtree运行速度比这几个包都要快。更多信息请参考[ggtree的wiki页面]("https://github.com/GuangchuangYu/ggtree/wiki/Why-ggtree-is-special%3F)。
+这几个包所实现的画图函数，都可以很容易地用ggtree实现，并用经过测试，ggtree运行速度比这几个包都要快。更多信息请参考[ggtree的wiki页面](https://github.com/GuangchuangYu/ggtree/wiki/Why-ggtree-is-special%3F)。
   
 ggtree是真正扩展ggplot2，支持图形语法的包。我们首先扩展ggplot支持tree object做为输入，并实现geom_tree图层来画线条。
 
@@ -110,7 +110,7 @@ library(ggplot2)
  ggplot(tree, aes(x, y)) + geom_tree() 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/0011.jpg)
+![001](https://cos.name/wp-content/uploads/2015/11/0011.jpg)
 
 ggtree函数是 ggplot() + geom\_tree() + xlab(NA) + ylab(NA) + theme\_tree() 的简单组合。
 
@@ -118,7 +118,7 @@ ggtree函数是 ggplot() + geom\_tree() + xlab(NA) + ylab(NA) + theme\_tree() �
 ggtree(tree) 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/0021.jpg)
+![002](https://cos.name/wp-content/uploads/2015/11/0021.jpg)
 
 想要加 tip.label，用 geom_tiplab 图层，并且ggplot2的图层都可以直接应用 ggtree。
 
@@ -126,7 +126,7 @@ ggtree(tree)
 ggtree(tree) + geom_tiplab() + geom_point(color='firebrick')
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/0041.jpg) 树的操作与注释
+![004](https://cos.name/wp-content/uploads/2015/11/0041.jpg) 树的操作与注释
 
 ggtree提供了多个函数可以把clade放大缩小(scaleClade)，折叠(collapse)和展开(expand)，位置调换和旋转，以及分类(groupOTU, groupClade)。
 
@@ -142,9 +142,9 @@ nwk <-system.file("extdata", "sample.nwk", package="ggtree")
  grid.arrange(cp, ep, hp, rp, ncol=2) 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/0051.jpg)
+![005](https://cos.name/wp-content/uploads/2015/11/0051.jpg)
 
-![](https://cos.name/wp-content/uploads/2015/11/0061.jpg)
+![006](https://cos.name/wp-content/uploads/2015/11/0061.jpg)
 
 ## 支持多种文件格式
 
@@ -161,7 +161,7 @@ nhxfile = system.file("extdata", "ADH.nhx", package="ggtree")
  xlim(NA, 0.3) 
 ```  
 
- ![](https://cos.name/wp-content/uploads/2015/11/0071.jpg)支持解析多种软件的输出文件
+ ![007](https://cos.name/wp-content/uploads/2015/11/0071.jpg)支持解析多种软件的输出文件
 
 我们知道FigTree是针对[BEAST](http://ygc.name/2015/04/01/an-example-of-drawing-beast-tree-using-ggtree/)的输出设计的，可以把BEAST的统计推断拿来给树做注释，但很多的进化分析软件并没有相应的画树软件支持，用户很难把信息展示出来。
 
@@ -177,7 +177,9 @@ raxml_file <-system.file("extdata/RAxML", "RAxML_bipartitionsBranchLabels.H3", p
  theme(legend.position='right') 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/008.jpg)multiPhylo也是支持的，所以100颗bootstrap树可以同时用一行代码展示出来。
+![008](https://cos.name/wp-content/uploads/2015/11/008.jpg)
+
+multiPhylo也是支持的，所以100颗bootstrap树可以同时用一行代码展示出来。
 
 ```r
 btree_file <-system.file("extdata/RAxML", "RAxML_bootstrap.H3", package="ggtree")
@@ -185,7 +187,7 @@ btree_file <-system.file("extdata/RAxML", "RAxML_bootstrap.H3", package="ggtree"
  ggtree(btree) + facet_wrap(~.id, ncol=10) 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/010.jpg)
+![010](https://cos.name/wp-content/uploads/2015/11/010.jpg)
 
 如果不分面，这100颗树会重叠画在一起，这也能很好地展示bootstrap分析的结果，bootstrap值低的clade，线条会比较乱，而bootstrap值高的地方，线条一致性比较好。
 
@@ -200,7 +202,9 @@ rstfile <-system.file("extdata/PAML_Baseml", "rst", package="ggtree")
  print(p) 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/011.png)不同于BaseML以碱基为单位，CodeML预测祖先序列，以密码子为单位。\`ggtree\`定义了一个操作符[%<%](http://ygc.name/2015/02/10/ggtree-updating-a-tree-view/)，如果有相同的注释信息要展示，可以用tree object来更新tree view。
+![011](https://cos.name/wp-content/uploads/2015/11/011.png)
+
+不同于BaseML以碱基为单位，CodeML预测祖先序列，以密码子为单位。\`ggtree\`定义了一个操作符[%<%](http://ygc.name/2015/02/10/ggtree-updating-a-tree-view/)，如果有相同的注释信息要展示，可以用tree object来更新tree view。
 
 ```r
 rstfile <-system.file("extdata/PAML_Codeml", "rst", package="ggtree")
@@ -208,10 +212,9 @@ rstfile <-system.file("extdata/PAML_Codeml", "rst", package="ggtree")
  p %<% crst 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/012.jpg)
+![012](https://cos.name/wp-content/uploads/2015/11/012.jpg)
 
 
-![](https://cos.name/wp-content/uploads/2015/11/012.jpg)
 
 像上面的例子，用crst来更新p，就是用crst画出来的树+注释。对比两图，可以发现BaseML和CodeML推测的祖先序列是稍有不同的。
 
@@ -225,7 +228,7 @@ mlc_file <-system.file("examples/mlc", package="ggtree")
  theme(legend.position='right') 
 ```  
 
- ![](https://cos.name/wp-content/uploads/2015/11/013.jpg) 使用用户定义数据
+ ![013](https://cos.name/wp-content/uploads/2015/11/013.jpg) 使用用户定义数据
 
 进化树已经被广泛应用于各种跨学科的研究中，随着实验技术的发展，各种数据也更易于获得，使用用户数据注释进化树，也是ggtree所支持的。
 
@@ -244,7 +247,7 @@ nwk <-system.file("extdata", "sample.nwk", package="ggtree")
  print(dd) 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/014.jpg)
+![014](https://cos.name/wp-content/uploads/2015/11/014.jpg)
 
 在上面的例子中，使用一个分类数据和一个连续型数据，输入的唯一要求是第一列是taxon label。ggtree中定义了操作符%<+%，来添加数据。添加之后，用户的数据对ggplot是可见的。可以用于树的注释。
 
@@ -254,7 +257,7 @@ p <- p %<+% dd + geom_text(aes(color=place, label=label), hjust=-0.5) +
 p+theme(legend.position="right") 
 ```  
 
-![](https://cos.name/wp-content/uploads/2015/11/016.jpg)
+![016](https://cos.name/wp-content/uploads/2015/11/016.jpg)
 
 ggtree还支持用户把自己的数据和树保存为jplace格式。
 
