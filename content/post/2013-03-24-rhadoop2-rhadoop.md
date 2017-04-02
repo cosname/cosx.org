@@ -2,6 +2,7 @@
 title: RHadoop实践系列之二：RHadoop安装与使用
 date: '2013-03-24T21:59:56+00:00'
 author: 张 丹
+description: "RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce 算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据。1G, 10G, 100G, TB,PB 由于大数据所带来的单机性能问题，可能会一去联复返了。RHadoop实践是一套系列文章，本篇主要讲述”RHadoop安装与使用。"
 categories:
   - 软件应用
 tags:
@@ -31,15 +32,13 @@ APPs:
   
 @每日中国天气 <http://apps.weibo.com/chinaweatherapp>
 
-## RHadoop实践系列文章
+# RHadoop实践系列文章
 
 RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce 算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据。1G, 10G, 100G, TB,PB 由于大数据所带来的单机性能问题，可能会一去联复返了。
 
 RHadoop实践是一套系列文章，主要包括“Hadoop环境搭建”，“RHadoop安装与使用”，“R实现MapReduce的算法案 例”，“HBase和rhbase的安装与使用”。对于单独的R语言爱好者，Java爱好者，或者Hadoop爱好者来说，同时具备三种语言知识并不容 易。此文虽为入门文章，但R,Java,Hadoop基础知识还是需要大家提前掌握。
-  
-<!--more-->
 
-## 第二篇 RHadoop安装与使用部分，分为3个章节。
+# 第二篇 RHadoop安装与使用部分，分为3个章节。
 
     1. 环境准备
     2. RHadoop安装
@@ -54,9 +53,9 @@ RHadoop实践是一套系列文章，主要包括“Hadoop环境搭建”，“R
   
 两篇文章相互独立，请大家在理解的基础上动手实验，不要完成依赖两篇文章中的运行命令。
 
-## 环境准备
+# 环境准备
 
-#### 文字说明部分：
+### 文字说明部分：
 
 首先环境准备，这里我选择了Linux Ubuntu操作系统12.04的64位版本，大家可以根据自己的使用习惯选择顺手的Linux。
 
@@ -70,46 +69,51 @@ R语言请安装2.15以后的版本，2.14是不能够支持RHadoop的。
   
 如果你也使用Linux Ubuntu操作系统12.04，请先更新软件包源，否则只能下载到2.14版本的R。
 
-#### 代码部分：
+### 代码部分：
 
-## 1. 操作系统Ubuntu 12.04 x64
+# 1. 操作系统Ubuntu 12.04 x64·
 
-    ~ uname -a
-    Linux domU-00-16-3e-00-00-85 3.2.0-23-generic #36-Ubuntu SMP Tue Apr 10 20:39:51 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
-    
+```
+~ uname -a
+Linux domU-00-16-3e-00-00-85 3.2.0-23-generic #36-Ubuntu SMP Tue Apr 10 20:39:51 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+```    
 
-## 2 JAVA环境
+# 2 JAVA环境
 
+```
     ~ java -version
     
     java version "1.6.0_29"
     Java(TM) SE Runtime Environment (build 1.6.0_29-b11)
     Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02, mixed mode)
-    
+```    
 
-## 3 HADOOP环境(这里只需要hadoop)
+# 3 HADOOP环境(这里只需要hadoop)
 
+```
     hadoop-1.0.3  hbase-0.94.2  hive-0.9.0  pig-0.10.0  sqoop-1.4.2  thrift-0.8.0  zookeeper-3.4.4
-    
+```    
 
-## 4 R的环境
+# 4 R的环境
 
+```
     R version 2.15.3 (2013-03-01) -- "Security Blanket"
     Copyright (C) 2013 The R Foundation for Statistical Computing
     ISBN 3-900051-07-0
     Platform: x86_64-pc-linux-gnu (64-bit)
-    
+```    
 
-#### 4.1 如果是Ubuntu 12.04，请更新源再下载R2.15.3版本
+### 4.1 如果是Ubuntu 12.04，请更新源再下载R2.15.3版本
 
+``` 
     sh -c "echo deb http://mirror.bjtu.edu.cn/cran/bin/linux/ubuntu precise/ >>/etc/apt/sources.list"
     apt-get update
     apt-get install r-base
-    
+```    
 
-## RHadoop安装
+# RHadoop安装
 
-#### 文字说明部分：
+### 文字说明部分：
 
 RHadoop是RevolutionAnalytics的工程的项目，开源实现代码在GitHub社区可以找到。RHadoop包含三个R包 (rmr，rhdfs，rhbase)，分别是对应Hadoop系统架构中的，MapReduce, HDFS, HBase 三个部分。由于这三个库不能在CRAN中找到，所以需要自己下载。
   
@@ -135,28 +139,31 @@ RHadoop是RevolutionAnalytics的工程的项目，开源实现代码在GitHub社
   
 一般R的类库目录是/usr/lib/R/site-library或者/usr/local/lib/R/site-library，用户也可以使用whereis R的命令查询，自己电脑上R类库的安装位置
 
-#### 代码部分：
+### 代码部分：
 
-## 1. 下载RHadoop相关的3个程序包
+# 1. 下载RHadoop相关的3个程序包
 
 <https://github.com/RevolutionAnalytics/RHadoop/wiki/Downloads>
 
+```
     rmr-2.1.0
     rhdfs-1.0.5
     rhbase-1.1
-    
+```
 
-## 2. 复制到/root/R目录
+# 2. 复制到/root/R目录
 
+```
     ~/R# pwd
     /root/R
     
     ~/R# ls
     rhbase_1.1.tar.gz  rhdfs_1.0.5.tar.gz  rmr2_2.1.0.tar.gz
-    
+```    
 
-## 3. 安装依赖库
+# 3. 安装依赖库
 
+```
     命令行执行
     ~ R CMD javareconf 
     ~ R
@@ -170,41 +177,45 @@ RHadoop是RevolutionAnalytics的工程的项目，开源实现代码在GitHub社
     install.packages("digest")
     install.packages("RJSONIO")
     install.packages("functional")
-    
+```    
 
-## 4. 安装rhdfs库
+# 4. 安装rhdfs库
 
+```
     ~ export HADOOP_CMD=/root/hadoop/hadoop-1.0.3/bin/hadoop
     ~ export HADOOP_STREAMING=/root/hadoop/hadoop-1.0.3/contrib/streaming/hadoop-streaming-1.0.3.jar (rmr2会用到)
     ~ R CMD INSTALL /root/R/rhdfs_1.0.5.tar.gz 
-    
+```    
 
-#### 4.1 最好把HADOOP_CMD设置到环境变量
+### 4.1 最好把HADOOP_CMD设置到环境变量
 
+```
     ~ vi /etc/environment
     
         HADOOP_CMD=/root/hadoop/hadoop-1.0.3/bin/hadoop
         HADOOP_STREAMING=/root/hadoop/hadoop-1.0.3/contrib/streaming/hadoop-streaming-1.0.3.jar
     
     . /etc/environment
-    
+```    
 
-## 5. 安装rmr库
+# 5. 安装rmr库
 
+```
     ~  R CMD INSTALL rmr2_2.1.0.tar.gz 
-    
+```    
 
-## 6. 安装rhbase库 (暂时跳过)
+# 6. 安装rhbase库 (暂时跳过)
 
-## 7. 所有的安装包
+# 7. 所有的安装包
 
+```
     ~ ls /disk1/system/usr/local/lib/R/site-library/
     digest  functional  iterators  itertools  plyr  Rcpp  reshape2  rhdfs  rJava  RJSONIO  rmr2  stringr
-    
+```    
 
-## RHadoop程序用例
+# RHadoop程序用例
 
-#### 文字说明部分：
+### 文字说明部分：
 
 安装好rhdfs和rmr两个包后，我们就可以使用R尝试一些hadoop的操作了。
 
@@ -226,21 +237,24 @@ R语言函数：hdfs.cat(”/user/hdfs/o\_same\_school/part-m-00000″)
 
 普通的R语言程序：
 
+```
     > small.ints = 1:10
     > sapply(small.ints, function(x) x^2)
-    
+```    
 
 MapReduce的R语言程序：
 
+```
     > small.ints = to.dfs(1:10)
     > mapreduce(input = small.ints, map = function(k, v) cbind(v, v^2))
     > from.dfs("/tmp/RtmpWnzxl4/file5deb791fcbd5")
-    
+```    
 
 因为MapReduce只能访问HDFS文件系统，先要用to.dfs把数据存储到HDFS文件系统里。MapReduce的运算结果再用from.dfs函数从HDFS文件系统中取出。
 
 第二个，rmr的例子是wordcount，对文件中的单词计数
 
+```
     > input<- '/user/hdfs/o_same_school/part-m-00000'
     > wordcount = function(input, output = NULL, pattern = " "){
     
@@ -258,14 +272,15 @@ MapReduce的R语言程序：
     
     > wordcount(input)
     > from.dfs("/tmp/RtmpfZUFEa/file6cac626aa4a7")
-    
+```    
 
 我在HDFS上提前放置了数据文件/user/hdfs/o\_same\_school/part-m-00000。写wordcount的MapReduce函数，执行wordcount函数，最后用from.dfs从HDFS中取得结果。
 
-#### 代码部分：
+### 代码部分：
 
-## 1. rhdfs包的使用
+# 1. rhdfs包的使用
 
+```
     启动R程序
     > library(rhdfs)
     
@@ -274,10 +289,11 @@ MapReduce的R语言程序：
     Be sure to run hdfs.init()
     
     > hdfs.init()
-    
+```    
 
-## 1.1 命令查看hadoop目录
+# 1.1 命令查看hadoop目录
 
+```
     ~ hadoop fs -ls /user
     
     Found 4 items
@@ -285,10 +301,11 @@ MapReduce的R语言程序：
     drwxr-xr-x   - root supergroup          0 2013-03-06 17:24 /user/hdfs
     drwxr-xr-x   - root supergroup          0 2013-02-26 16:51 /user/hive
     drwxr-xr-x   - root supergroup          0 2013-03-06 17:21 /user/root
-    
+```    
 
-## 1.2 rhdfs查看hadoop目录
+# 1.2 rhdfs查看hadoop目录
 
+```
     > hdfs.ls("/user/")
     
       permission owner      group size          modtime        file
@@ -296,10 +313,11 @@ MapReduce的R语言程序：
     2 drwxr-xr-x  root supergroup    0 2013-03-06 17:24  /user/hdfs
     3 drwxr-xr-x  root supergroup    0 2013-02-26 16:51  /user/hive
     4 drwxr-xr-x  root supergroup    0 2013-03-06 17:21  /user/root
-    
+```    
 
-## 1.3 命令查看hadoop数据文件
+# 1.3 命令查看hadoop数据文件
 
+```
     ~ hadoop fs -cat /user/hdfs/o_same_school/part-m-00000
     
     10,3,tsinghua university,2004-05-26 15:21:00.0
@@ -326,10 +344,11 @@ MapReduce的R语言程序：
     262,4068,香港中文大学,2004-06-12 17:34:02.0
     310,4070,首都师范大学初等教育学院,2004-06-14 15:35:52.0
     312,4070,北京师范大学经济学院,2004-06-14 15:35:52.0
-    
+```    
 
-## 1.4 rhdfs查看hadoop数据文件
+# 1.4 rhdfs查看hadoop数据文件
 
+```
     >  hdfs.cat("/user/hdfs/o_same_school/part-m-00000")
     
      [1] "10,3,tsinghua university,2004-05-26 15:21:00.0"
@@ -356,10 +375,11 @@ MapReduce的R语言程序：
     [22] "262,4068,香港中文大学,2004-06-12 17:34:02.0"
     [23] "310,4070,首都师范大学初等教育学院,2004-06-14 15:35:52.0"
     [24] "312,4070,北京师范大学经济学院,2004-06-14 15:35:52.0"
-    
+```    
 
-## 2. rmr2包的使用
+# 2. rmr2包的使用
 
+```
     启动R程序
     > library(rmr2)
     
@@ -370,18 +390,20 @@ MapReduce的R语言程序：
     Loading required package: stringr
     Loading required package: plyr
     Loading required package: reshape2
-    
+```    
 
-## 2.1 执行r任务
+# 2.1 执行r任务
 
+```
     > small.ints = 1:10
     > sapply(small.ints, function(x) x^2)
     
     [1]   1   4   9  16  25  36  49  64  81 100
-    
+```    
 
-## 2.2 执行rmr2任务
+# 2.2 执行rmr2任务
 
+```
     > small.ints = to.dfs(1:10)
     
     13/03/07 12:12:55 INFO util.NativeCodeLoader: Loaded the native-hadoop library
@@ -420,10 +442,11 @@ MapReduce的R语言程序：
      [8,]  8  64
      [9,]  9  81
     [10,] 10 100
-    
+```    
 
-## 2.3 wordcount执行rmr2任务
+# 2.3 wordcount执行rmr2任务
 
+```
     > input<- '/user/hdfs/o_same_school/part-m-00000'
     > wordcount = function(input, output = NULL, pattern = " "){
     
@@ -519,3 +542,4 @@ MapReduce的R语言程序：
     $val
      [1] 1 2 1 2 1 1 1 4 1 1 2 1 1 1 1 2 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
     [39] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+```
