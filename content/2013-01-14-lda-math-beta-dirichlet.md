@@ -154,7 +154,7 @@ P(p|m_1,m_2) & = \frac{P(p)\cdot P(m_1,m_2|p)}{P(m_1,m_2)} \\
   
 计算得到的后验分布正好是 `\(Beta(p|m_1+1,m_2+1)\)`。
 
-  [![beta-distribution](https://cos.name/wp-content/uploads/2013/01/beta-distribution.png)]
+  ![beta-distribution](https://cos.name/wp-content/uploads/2013/01/beta-distribution.png)
   
   **百变星君Beta分布**
 
@@ -171,7 +171,7 @@ P(C \le k) = \frac{n!}{k!(n-k-1)!} \int_p^1 t^k(1-t)^{n-k-1} dt, \quad C\sim B(n
 
 我们可以如下构造二项分布，取随机变量 `\(X_1, X_2, \cdots, X_n {\stackrel{\mathrm{iid}}{\sim}}Uniform(0,1)\)`,一个成功的贝努利实验就是 `\(X_i<p\)`,否则表示失败,于是成功的概率为`\(p\)`。`\(C\)`用于计数成功的次数，于是`\(C\sim B(n,p)\)`。
 
-[![beta-binomial](https://cos.name/wp-content/uploads/2013/01/beta-binomial.png)]
+![beta-binomial](https://cos.name/wp-content/uploads/2013/01/beta-binomial.png)
 
 **贝努利实验最多成功`\(k\)`次**
 
