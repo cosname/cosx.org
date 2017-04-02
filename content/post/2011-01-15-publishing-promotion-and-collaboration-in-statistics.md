@@ -37,50 +37,50 @@ slug: publishing-promotion-and-collaboration-in-statistics
 
 Imagine a circle that contains all of human knowledge:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.001.jpg)
+![PhDKnowledge.001](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.001.jpg)
 
 By the time you finish elementary school, you know a little:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.002.jpg)
+![PhDKnowledge.002](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.002.jpg)
 
 By the time you finish high school, you know a bit more:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.003.jpg)
+![PhDKnowledge.003](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.003.jpg)
 
 With a bachelor’s degree, you gain a specialty:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.004.jpg)
+![PhDKnowledge.004](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.004.jpg)
 
 A master’s degree deepens that specialty:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.005.jpg)
+![PhDKnowledge.005](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.005.jpg)
 
 Reading research papers takes you to the edge of human knowledge:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.006.jpg)
+![PhDKnowledge.006](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.006.jpg)
 
 Once you’re at the boundary, you focus:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.007.jpg)
+![PhDKnowledge.007](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.007.jpg)
 
 You push at the boundary for a few years:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.008.jpg)
+![PhDKnowledge.008](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.008.jpg)
 
 Until one day, the boundary gives way:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.009.jpg)
+![PhDKnowledge.009](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.009.jpg)
 
 And, that dent you’ve made is called a Ph.D.:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.010.jpg)
+![PhDKnowledge.010](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.010.jpg)
 
 Of course, the world looks different to you now:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.011.jpg)
+![PhDKnowledge.011](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.011.jpg)
 
 So, don’t forget the bigger picture:
 
-![](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.012.jpg)
+![PhDKnowledge.012](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.012.jpg)
 
 Keep pushing.
