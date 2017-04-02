@@ -21,9 +21,7 @@ slug: publishing-promotion-and-collaboration-in-statistics
 
 <!--more-->
 
-<p style="text-align: center;">
-  <embed width="486" height="381" type="video/mp4" src="http://animation.r-forge.r-project.org/video/Getting-Ahead-in-Academia.mp4" />
-</p>
+<video controls="" autoplay="" name="media"><source src="http://animation.r-forge.r-project.org/video/Getting-Ahead-in-Academia.mp4" type="video/mp4"></video>
 
 （观看本视频可能需要安装QuickTime，视频为MP4格式）
 
