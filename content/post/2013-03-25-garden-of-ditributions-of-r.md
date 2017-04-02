@@ -12,6 +12,7 @@ slug: garden-of-ditributions-of-r
 本期投稿：[谢益辉](http://yihui.name/) [肖楠](http://www.road2stat.com/)
 
 R为什么这样红？统计学家的汗水捧红了它！[R的概率分布花园](http://blog.revolutionanalytics.com/2013/03/rs-garden-of-probability-distributions.html) 有近两百种不同的分布函数，每一种都清晰的归类并配上详细的文档，不信请点击 [Probability Distributions Task View](http://cran.r-project.org/web/views/Distributions.html)。（注：[John D Cook的概率分布关系图](http://www.johndcook.com/distribution_chart.html)也很意思，还有与之配套的twitter账号 [@ProbFact](http://www.twitter.com/ProbFact)。）
+<!--more-->
 
 两个人分别从两站地铁出发（或三个人从三站地铁出发），最优的见面地点是哪一站？[网络图告诉你答案](http://blog.revolutionanalytics.com/2013/03/find-the-fairest-place-to-meet-on-the-paris-m%C3%A9tro.html)。
 
