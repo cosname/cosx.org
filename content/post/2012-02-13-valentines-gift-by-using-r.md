@@ -47,6 +47,7 @@ y & = 13\text{cos}t – 5\text{cos}2t – 2\text{cos}3t – \text{cos}4t
 
 以下是“情人节礼物”的代码：
 
+```r
 library(grid)
 
 #heart function
@@ -99,3 +100,4 @@ grid.text("Happy valentine's day!",
 vp3 &lt;- viewport(-0.65, 1.2, w=.3, h=.3,angle=-30)
 pushViewport(vp3)
 rose()
+```
