@@ -7,10 +7,13 @@ categories:
   - 数据挖掘与机器学习
   - 软件应用
 tags:
-  - lasso回归
-  - 文本分析
-  - 论文标题
-  - 词频
+  - lasso
+  - 分词
+  - 回归
+  - 文本
+  - 标题
+  - 论文
+  - 词频
 slug: statistics-on-article-titles
 ---
 
