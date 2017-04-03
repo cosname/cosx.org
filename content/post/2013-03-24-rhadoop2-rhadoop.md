@@ -38,6 +38,8 @@ RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分
 
 RHadoop实践是一套系列文章，主要包括“Hadoop环境搭建”，“RHadoop安装与使用”，“R实现MapReduce的算法案 例”，“HBase和rhbase的安装与使用”。对于单独的R语言爱好者，Java爱好者，或者Hadoop爱好者来说，同时具备三种语言知识并不容 易。此文虽为入门文章，但R,Java,Hadoop基础知识还是需要大家提前掌握。
 
+<!--more-->
+
 # 第二篇 RHadoop安装与使用部分，分为3个章节。
 
     1. 环境准备
