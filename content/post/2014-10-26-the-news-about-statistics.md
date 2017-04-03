@@ -18,11 +18,11 @@ description: "本期给大家带来很多统计界的新鲜事：世界上最高
 
 # 学界VS业界：
 
-“如果我像科学对待我一样对待我老婆，她恐怕早就跑了”，从学术界跳槽到业界当数据科学家的John Stanton-Geddes [如是说](http://johnstantongeddes.org/personal/2014/10/16/leaving-academia.html).小编认为学术界并非不再重要，而是已经开始供大于求，学界追求方法创新，业界更偏重实用，现今创新的速度也许超过了实用的需求。
+“如果我像科学对待我一样对待我老婆，她恐怕早就跑了”，从学术界跳槽到业界当数据科学家的John Stanton-Geddes [如是说](http://johnstantongeddes.org/personal/2014/10/16/leaving-academia.html)。小编认为学术界并非不再重要，而是已经开始供大于求，学界追求方法创新，业界更偏重实用，现今创新的速度也许超过了实用的需求。
 
 # 贝叶斯统计：
 
-Karl Broman洗完衣服从烘干机里清理出11只不重样的袜子，他猜测自己应该还有更多袜子，那到底他有多少只袜子呢？好基友Rasmus Bååth对这个“小数据”问题用近似贝叶斯计算方法（Approximate Bayesian Computation）做了一个估计，最后结果和真实袜子数目惊人地[接近](http://www.sumsar.net/blog/2014/10/tiny-data-and-the-socks-of-karl-broman/).小编看完后感叹现在计算资源这么发达（文中的计算方法除了先验分布的选取之外可谓纯暴力计算），还读统计博士作甚啊。
+Karl Broman洗完衣服从烘干机里清理出11只不重样的袜子，他猜测自己应该还有更多袜子，那到底他有多少只袜子呢？好基友Rasmus Bååth对这个“小数据”问题用近似贝叶斯计算方法（Approximate Bayesian Computation）做了一个估计，最后结果和真实袜子数目惊人地[接近](http://www.sumsar.net/blog/2014/10/tiny-data-and-the-socks-of-karl-broman/)。小编看完后感叹现在计算资源这么发达（文中的计算方法除了先验分布的选取之外可谓纯暴力计算），还读统计博士作甚啊。
 
 # 描述统计：
 
