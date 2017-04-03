@@ -2,6 +2,7 @@
 title: RHadoop实践系列之四 rhbase安装与使用
 date: '2013-04-12T12:22:55+00:00'
 author: 张 丹
+description: "RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据。1G, 10G, 100G, TB,PB 由于大数据所带来的单机性能问题，可能会一去不复返了。RHadoop实践是一套系列文章，本篇主要介绍“HBase和rhbase的安装与使用”。"
 categories:
   - 软件应用
 tags:
@@ -37,7 +38,7 @@ RHadoop实践是一套系列文章，主要包括“Hadoop环境搭建”，“R
   
 <!--more-->
 
-### **第四篇 HBase和rhbase的安装与使用，分为3个章节。**
+# **第四篇 HBase和rhbase的安装与使用，分为3个章节。**
 
     
     1. 环境准备及HBase安装
@@ -49,9 +50,9 @@ RHadoop实践是一套系列文章，主要包括“Hadoop环境搭建”，“R
 
 注：Hadoop环境及RHadoop的环境，请查看同系列前二篇文章，此文将不再介绍。
 
-### **1. 环境准备及HBase安装**
+# **1. 环境准备及HBase安装**
 
-#### 文字说明部分：
+### 文字说明部分：
 
 首先环境准备，这里我选择了Linux Ubuntu操作系统12.04的64位版本，大家可以根据自己的使用习惯选择顺手的Linux。
 
@@ -73,18 +74,20 @@ export HBASE\_MANAGES\_ZK=true
 
 配置完成，启动HBase服务。
 
-#### **代码部分：**
+### **代码部分：**
 
 hbase安装
 
 1) 下载安装hbase
 
-    ~ http://www.fayea.com/apache-mirror/hbase/hbase-0.94.2/hbase-0.94.2.tar.gz
+```
+    ~ http://www.fayea.com/apache-mirror/hbase/hbase-0.94.2/hbase-0.94.2.tar.gz
     ~ tar xvf hbase-0.94.2.tar.gz
-    
+```    
 
 2) 修改配置文件
 
+```
     ~ cd hbase-0.94.2/
     ~ vi conf/hbase-env.sh 
     
@@ -127,24 +130,27 @@ hbase安装
             <value>/root/hadoop/hdata</value>
           </property>
         </configuration>
-    
+```    
 
 3) 复制hadoop环境的配置文件和类库
 
+```
       ~ cp ~/hadoop-1.0.3/conf/hdfs-site.xml ~/hbase-0.94.2/conf
       ~ cp ~/hadoop-1.0.3/hadoop-core-1.0.3.jar ~/hbase-0.94.2/lib
       ~ cp ~/hadoop-1.0.3/lib/commons-configuration-1.6.jar ~/hbase-0.94.2/lib
       ~ cp ~/hadoop-1.0.3/lib/commons-collections-3.2.1.jar ~/hbase-0.94.2/lib
-    
+```    
 
 4) 启动hadoop和hbase
 
+```
       ~/hadoop-1.0.3/bin/start-all.sh
       ~/hbase-0.94.2/bin/start-hbase.sh 
-    
+```    
 
 5) 查看hbase进行
 
+```
     ~ jps
     
         12041 HMaster
@@ -156,10 +162,11 @@ hbase安装
         31596 JobTracker
         11916 HQuorumPeer
         31216 NameNode
-    
+```    
 
 6) 打开hbase命令行客户端
 
+```
     ~/hbase-0.94.2/bin/hbase shell
     
     HBase Shell; enter 'help<RETURN>' for list of supported commands.
@@ -170,13 +177,13 @@ hbase安装
     
         TABLE
         0 row(s) in 0.0150 seconds
-    
+```    
 
 HBase安装完成。
 
-### **2. rhbase安装**
+# **2. rhbase安装**
 
-#### 文字说明部分：
+### 文字说明部分：
 
 安装完成HBase后，我们还需要安装Thrift，因为rhbase是通过Thrift调用HBase的。
 
@@ -190,23 +197,31 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 
 最后，安装rhbase。
 
-#### **代码部分：**
+### **代码部分：**
 
   1. 下载thrift 
+
+```
         ~ wget http://archive.apache.org/dist/thrift/0.8.0/thrift-0.8.0.tar.gz
         ~ tar xvf thrift-0.8.0.tar.gz
         ~ cd thrift-0.8.0/
-        
+```        
 
-  2. 下载PHP支持类库(可选) 
-        ~ sudo apt-get install php-cli
-        
+  2. 下载PHP支持类库(可选) 
+
+```
+     ~ sudo apt-get install php-cli
+```        
 
   3. 下载C++支持类库(可选) 
+
+```
         ~ sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev
-        
+```        
 
   4. 生成编译的配置参数 
+
+```
         ~ ./configure
         
           thrift 0.8.0
@@ -231,21 +246,27 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
           Using Python ................. : /usr/bin/python
         
           Using php-config ............. : /usr/bin/php-config
-        
+```        
 
   5. 编译和安装 
+
+```
         ~ make
         ~ make install
-        
+```        
 
   6. 查看thrift版本 
+  
+```
         ~ thrift -version
         
           Thrift version 0.8.0
-        
+```        
 
   7. 启动HBase的Thrift Server 
-          ~ /hbase-0.94.2/bin/hbase-daemon.sh start thrift
+  
+```    
+         ~ /hbase-0.94.2/bin/hbase-daemon.sh start thrift
         
           ~ jps 
         
@@ -259,28 +280,32 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
               31596 JobTracker
               11916 HQuorumPeer
               31216 NameNode
-        
+```        
 
   8. 安装rhbase 
-          ~ R CMD INSTALL rhbase_1.1.1.tar.gz
-        
+   
+```       
+       ~ R CMD INSTALL rhbase_1.1.1.tar.gz
+```        
 
 很顺利的安装完成。
 
-### **3. rhbase程序用例**
+# **3. rhbase程序用例**
 
-#### 文字说明部分：
+### 文字说明部分：
 
-### rhbase的相关函数：
+# rhbase的相关函数：
 
+```
     hb.compact.table      hb.describe.table     hb.insert             hb.regions.table
     hb.defaults           hb.get                hb.insert.data.frame  hb.scan
     hb.delete             hb.get.data.frame     hb.list.tables        hb.scan.ex
     hb.delete.table       hb.init               hb.new.table          hb.set.table.mode
-    
+```    
 
-### hbase和rhbase的基本操作对比：
+# hbase和rhbase的基本操作对比：
 
+```
     建表
     HBASE:     create 'student_shell','info'
     RHBASE:    hb.new.table("student_rhbase","info")
@@ -305,12 +330,13 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
     HBASE:     disable 'student_shell'
     HBASE:     drop 'student_shell'
     RHBASE:    hb.delete.table('student_rhbase')
-    
+```    
 
-#### **代码部分：**
+### **代码部分：**
 
 Hbase Shell
 
+```
     > create 'student_shell','info'
     > list
     
@@ -335,10 +361,11 @@ Hbase Shell
     
     > disable 'student_shell'
     > drop 'student_shell'
-    
+```    
 
 rhbase script
 
+```
     ~ R
     > library(rhbase)
     > hb.init()
@@ -386,12 +413,10 @@ rhbase script
     > hb.delete.table('student_rhbase')
     
         [1] TRUE
-    
+```    
 
 RHadoop实践系列文章的第四篇完成！希望这个四篇文章对大家有所帮助。
   
 稍后我可能还会写一些，关于rmr算法实践，rhadoop架构方面和hive的使用的相关文章。
   
 欢迎大家多提问题，多交流。
-
-&nbsp;
