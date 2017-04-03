@@ -38,7 +38,6 @@ slug: r-symbol-calculate
 
 ```
 NormDensity <- expression(1/sqrt(2 * pi) * exp(-x^2/2))
-
 class(NormDensity)
 ## [1] "expression"
 ```
@@ -382,24 +381,35 @@ optim(c(-1.2, 1), fr, grr2, method = "BFGS")
 
 
 ## 参考文献
+
 [1] Andrew Clausen and Serguei Sokol. Deriv: Symbolic Differentiation, 2016. R package version 3.7.0.
+
 [2] Bernard Harris and Andrew P. Soms. The use of the tetrachoric series for evaluating multivariate normal probabilities. Journal of Multivariate Analysis, 10(2):252–267, 1980.
+
 [3] Ryacas: R interface to the yacas computer algebra system, 2014. R package version 0.2-12.1.
+
 [4] Paul Gilbert and Ravi Varadhan. numDeriv: Accurate Numerical Derivatives, 2015. R package version 2014.2-1.
+
 [5] R Core Team. R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing, Vienna, Austria, 2015.
+
 [6] Ravi Varadhan and Paul Gilbert. BB: An R package for solving a large system of nonlinear equations and for optimizing a high-dimensional nonlinear objective function. Journal of Statistical Software, 32(4):1–26, 2009.
+
 [7] Luca Scrucca. GA: Genetic Algorithms, 2016. R package version 3.0.1.
+
 [8] Telford Tendys. gafit: Genetic Algorithm for Curve Fitting, 2012. R package version 0.4.1.
+
 [9] Mehmet Hakan Satman. galts: Genetic algorithms and C-steps based LTS (Least Trimmed Squares) estimation, 2013. R package version 1.3.
+
 [10] Mehmet Hakan Satman. Machine coded genetic algorithms for real parameter optimization problems. Gazi University Journal of Science, 26(1):85–95, 2013.
+
 [11] Walter R. Mebane, Jr. and Jasjeet S. Sekhon. Genetic optimization using derivatives: The rgenoud package for R. Journal of Statistical Software, 42(11):1–26, 2011.
+
 [12] Fernando Tenorio. gaoptim: Genetic Algorithm optimization for real-based and permutation-based problems, 2013. R package version 1.1.
+
 [13] Egon Willighagen and Michel Ballings. genalg: R Based Genetic Algorithm, 2015. R package version 0.2.0.
+
 [14] L. Scrucca. On some extensions to GA package: hybrid optimisation, parallelisation and islands evolution. ArXiv e-prints, May 2016.
+
 [15] Yihui Xie. knitr: A General-Purpose Package for Dynamic Report Generation in R, 2016. R package version 1.13.
 
 
----------------------------------------------------------------------------------
-
- 
- 
