@@ -1,5 +1,6 @@
 ---
 title: RHadoop视频教程
+description: RHadoop视频教程
 date: '2014-02-25T19:13:05+00:00'
 author: 陈堰平
 ---
