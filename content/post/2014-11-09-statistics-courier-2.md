@@ -11,7 +11,7 @@ tags:
   - 数据科学家
   - 统计分布
 slug: statistics-courier-2
-description:本期精选为大家分享：今年的ACM推荐系统大会有何新进展？你知道单身狗的产生也与概率有关吗？热闹了好久的大数据，如何看1000字就了解它的含义?更多精彩内容，尽在本期分享。
+description: 本期精选为大家分享：今年的ACM推荐系统大会有何新进展？你知道单身狗的产生也与概率有关吗？热闹了好久的大数据，如何看1000字就了解它的含义?更多精彩内容，尽在本期分享。
 ---
 
 本期投稿：[施涛](http://blog.cos.name/taoshi/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
