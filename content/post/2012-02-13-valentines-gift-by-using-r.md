@@ -99,5 +99,5 @@ grid.text("Happy valentine's day!",
           gp = gpar(fontsize=20), vp = vp)
 vp3 &lt;- viewport(-0.65, 1.2, w=.3, h=.3,angle=-30)
 pushViewport(vp3)
-rose()</pre>
+rose()
 ```
