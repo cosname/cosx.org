@@ -2,6 +2,7 @@
 title: R利剑NoSQL系列文章 之 MongoDB
 date: '2013-04-15T12:00:34+00:00'
 author: 张 丹
+description: "R利剑NoSQL系列文章，主要介绍通过R语言连接使用nosql数据库。涉及的NoSQL产品，包括Redis, MongoDB, HBase, Hive, Cassandra, Neo4j。希望通过我的介绍让广大的R语言爱好者，有更多的开发选择，做出更多地激动人心的应用。"
 categories:
   - 软件应用
 tags:
@@ -48,7 +49,6 @@ R利剑NoSQL系列文章，主要介绍通过R语言连接使用nosql数据库�
   
 <!--more-->
 
-
   
 MongoDB安装过程跳过。
 
@@ -56,12 +56,13 @@ MongoDB安装过程跳过。
   
 使用mongod命令，启动MongoDB。
 
+```
     进程号：pid=2924 
     端口：port=27017 
     数据文件目录：dbpath=/data/db/ 
     软件版本：32-bit 
     主机名：host=conan
-    
+```    
 
 使用mongo命令，打开mongo shell。
 
@@ -75,6 +76,7 @@ R语言环境2.15.0，WinXP通过远程连接，访问Mongodb Server。
 
 查看操作系统
 
+```
     ~ uname -a
     
         Linux conan 3.2.0-38-generic-pae #61-Ubuntu SMP Tue Feb 19 12:39:51 UTC 2013 i686 i686 i386 GNU/Linux
@@ -82,10 +84,11 @@ R语言环境2.15.0，WinXP通过远程连接，访问Mongodb Server。
     ~ cat /etc/issue
     
         Ubuntu 12.04.2 LTS \n \l
-    
+```    
 
 启动mongodb
 
+```
     ~ mongod
     
         mongod --help for help and startup options
@@ -104,49 +107,54 @@ R语言环境2.15.0，WinXP通过远程连接，访问Mongodb Server。
         Thu Apr 11 11:02:26 [initandlisten] options: {}
         Thu Apr 11 11:02:26 [websvr] admin web console waiting for connections on port 28017
         Thu Apr 11 11:02:26 [initandlisten] waiting for connections on port 27017
-    
+```    
 
 打开mongo shell
 
+```
     ~ mongo
     
         MongoDB shell version: 2.0.6
         connecting to: test
-    
+```    
 
 进入mongo shell, 列表显示数据库
 
+```
     > show dbs
     
         db      0.0625GB
         feed    0.0625GB
         foobar  0.0625GB
         local   (empty)
-    
+```    
 
 切换数据库
 
+```
     > use foobar
     
        switched to db foobar
-    
+```    
 
 列表显示数据集
 
+```
     > show collections
     
         blog
         system.indexes
-    
+```    
 
 R语言开发环境2.15.0，WinXP
 
+```
     ~ R
     R version 2.15.0 (2012-03-30)
     Copyright (C) 2012 The R Foundation for Statistical Computing
     ISBN 3-900051-07-0
     Platform: i386-pc-mingw32/i386 (32-bit)
-    
+```    
 
 ### **2. rmongodb函数库**
 
@@ -158,134 +166,154 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
 
 建立mongo连接
 
+```
     mongo<-mongo.create()
-    
+```    
 
 查看接连是否正常
 
+```
     mongo.is.connected(mongo)
-    
+```    
 
 创建一个BSON对象缓存
 
+```
     buf <- mongo.bson.buffer.create()
-    
+```    
 
 给对象buf增加element
 
+```
     mongo.bson.buffer.append(buf, "name", "Echo")
-    
+```    
 
 增加对象类型的element
 
+```
     score <- c(5, 3.5, 4)
     names(score) <- c("Mike", "Jimmy", "Ann")
     mongo.bson.buffer.append(buf, "score", score)
-    
+```    
 
 增加数组类型的element
 
+```
     mongo.bson.buffer.start.array(buf, "comments")
     mongo.bson.buffer.append(buf, "0", "a1")
     mongo.bson.buffer.append(buf, "1", "a2")
     mongo.bson.buffer.append(buf, "2", "a3")
-    
+```    
 
 关闭数组类型的element
 
+```
     mongo.bson.buffer.finish.object(buf)
-    
+```    
 
 取出缓存数据
 
+```
     b <- mongo.bson.from.buffer(buf)
-    
+```    
 
 数据库.数据集
 
+```
     ns="db.blog"
-    
+```    
 
 插入一条记录
 
+```
     mongo.insert(mongo,ns,b)
     
     #mongo shell:(Not Run)
     db.blog.insert(b)
-    
+```    
 
 创建查询对象query
 
+```
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.append(buf, "name", "Echo")
     query <- mongo.bson.from.buffer(buf)
-    
+```    
 
 创建查询返回值对象
 
+```
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.append(buf, "name", 1)
     fields <- mongo.bson.from.buffer(buf)
-    
+```    
 
 执行单条记录查询
 
+```
     mongo.find.one(mongo, ns, query, fields)
     
     #mongo shell:(Not Run)
     db.blog.findOne({query},{fields})
-    
+```    
 
 执行列表记录查询
 
+```
     mongo.find(mongo, ns, query, fields)
     
     #mongo shell:(Not Run)
     db.blog.find({query},{fields})
-    
+```    
 
 创建修改器对象objNew
 
+```
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.start.object(buf, "$inc")
     mongo.bson.buffer.append(buf, "age", 1L)
     mongo.bson.buffer.finish.object(buf)
     objNew <- mongo.bson.from.buffer(buf)
-    
+```    
 
 执行修改操作
 
+```
     mongo.update(mongo, ns, query, objNew)
     
     #mongo shell:(Not Run)
     db.blog.update({query},{objNew})
-    
+```    
 
 单行代码修改操作
 
+```
     mongo.update(mongo, ns, query, list(name="Echo", age=25))
     
     #mongo shell:(Not Run)
     db.blog.update({query},{objNew})
-    
+```    
 
 删除所选对象
 
+```
     mongo.remove(mongo, ns, query)
     
     #mongo shell:(Not Run)
     db.blog.remove({query},{objNew})
-    
+```    
 
 销毁mongo连接
 
+```
     mongo.destroy(mongo)
-    
+```    
 
 #### **代码部分：**
 
 共有153个函数
 
+```
     mongo.add.user
     mongo.authenticate
     mongo.binary.binary
@@ -439,7 +467,7 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
     mongo.update.basic
     mongo.update.multi
     mongo.update.upsert
-    
+```    
 
 ### **3. rmongodb基本使用操作**
 
@@ -455,6 +483,7 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
 
 下面我们创建一个Mongo对象。
 
+```
     {
             "_id" : ObjectId("51663e14da2c51b1e8bc62eb"),
             "name" : "Echo",
@@ -471,7 +500,7 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
                     "a3"
             ]
     }
-    
+```    
 
 然后，分别使用修改器$inc,$set,$push进行操作。
 
@@ -481,36 +510,43 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
 
 安装rmongodb
 
+```
     install.packages(rmongodb)
-    
+```    
 
 加载类库
 
+```
     library(rmongodb)
-    
+```    
 
 远程连接mongodb server
 
+```
     mongo<-mongo.create(host="192.168.1.11")
-    
+```    
 
 查看是否连接正常
 
+```
     print(mongo.is.connected(mongo))
-    
+```    
 
 定义db
 
+```
     db<-"foobar"
-    
+```    
 
 定义db.collection
 
+```
     ns<-"foobar.blog"
-    
+```    
 
 组织bson类型数据
 
+```
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.append(buf, "name", "Echo")
     mongo.bson.buffer.append(buf, "age", 22L)
@@ -528,23 +564,26 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
     mongo.bson.buffer.append(buf, "2", "a3")
     mongo.bson.buffer.finish.object(buf)
     b <- mongo.bson.from.buffer(buf)
-    
+```    
 
 插入mongodb
 
+```
     mongo.insert(mongo,ns,b)
-    
+```    
 
 单条显示插入的数据
 
+```
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.append(buf, "name", "Echo")
     query <- mongo.bson.from.buffer(buf)
     print(mongo.find.one(mongo, ns, query))
-    
+```    
 
 使用$inc修改器，修改给age加1
 
+```
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.start.object(buf, "$inc")
     mongo.bson.buffer.append(buf, "age", 1L)
@@ -552,21 +591,23 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
     objNew <- mongo.bson.from.buffer(buf)
     mongo.update(mongo, ns, query, objNew)
     print(mongo.find.one(mongo, ns, query))
-    
+```    
 
 使用$set修改器，修改age=1
 
+```
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.start.object(buf, "$set")
     mongo.bson.buffer.append(buf, "age", 1L)
     mongo.bson.buffer.finish.object(buf)
     objNew <- mongo.bson.from.buffer(buf)
     mongo.update(mongo, ns, query, objNew)
-    print(mongo.find.one(mongo, ns, query))
-    
+    print(mongo.find.one(mongo, ns, query))
+```
 
 使用$push修改器，给comments数组追加“Orange”数据
 
+```
     buf <- mongo.bson.buffer.create()
     mongo.bson.buffer.start.object(buf, "$push")
     mongo.bson.buffer.append(buf, "comments", "Orange")
@@ -574,23 +615,26 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
     objNew <- mongo.bson.from.buffer(buf)
     mongo.update(mongo, ns, query, objNew)
     print(mongo.find.one(mongo, ns, query))
-    
+```    
 
 使用简化修改语句，给对象重新赋值
 
+```
     mongo.update(mongo, ns, query, list(name="Echo", age=25))
     print(mongo.find.one(mongo, ns, query))
-    
+```    
 
 删除对象
 
+```
     mongo.remove(mongo, ns, query)
-    
+```    
 
 销毁mongo连接
 
+```
     mongo.destroy(mongo)
-    
+```    
 
 ### **4. rmongodb测试案例**
 
@@ -608,6 +652,7 @@ $push > $set > $inc
 
 批量插入数据函数
 
+```
       batch_insert<-function(arr=1:10,ns){
         library(stringr)
         mongo_insert<-function(x){
@@ -623,10 +668,11 @@ $push > $set > $inc
         }
         mongo.insert.batch(mongo, ns, lapply(arr,mongo_insert))
       }
-    
+```    
 
 批量修改，$inc修改器函数
 
+```
       batch_inc<-function(data,ns){
         for(i in data){
           buf <- mongo.bson.buffer.create()
@@ -640,10 +686,11 @@ $push > $set > $inc
           mongo.update(mongo, ns, criteria, objNew)
         }
       }
-    
+```    
 
 批量修改，$set修改器函数
 
+```
       batch_set<-function(data,ns){
         for(i in data){
           buf <- mongo.bson.buffer.create()
@@ -657,10 +704,11 @@ $push > $set > $inc
           mongo.update(mongo, ns, criteria, objNew)
         }
       }
-    
+```    
 
 批量修改，$push修改器函数
 
+```
       batch_push<-function(data,ns){
         for(i in data){
           buf <- mongo.bson.buffer.create()
@@ -674,10 +722,11 @@ $push > $set > $inc
           mongo.update(mongo, ns, criteria, objNew)
         }
       }
-    
+```    
 
 执行程序，3种修改速度比较,$push最慢
 
+```
       ns="foobar.blog"
       data=1:1000
     
@@ -699,3 +748,4 @@ $push > $set > $inc
       system.time(batch_push(data, ns))
       ##    user  system elapsed 
       ##    0.81    0.41    4.23
+```
