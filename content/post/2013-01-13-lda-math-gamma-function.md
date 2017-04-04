@@ -14,7 +14,7 @@ tags:
   - 插值
   - 欧拉
   - 阶乘
-slug: lda-math-gamma-function
+slug: lda-math-gamma-function 
 ---
 
 # 1. 神奇的Gamma函数
