@@ -308,7 +308,7 @@ Poisson(X \le k|\lambda) = \int_\lambda^\infty Poisson(Y=k|x)dx
   
 `\begin{equation}
 \label{poisson-gamma}
-Poisson(X \le k|\lambda) = \int_\lambda^\infty \frac{x^k e^{-x}}{k!} dx  \quad   (**)
+Poisson(X \le k|\lambda) = \int_\lambda^\infty \frac{x^k e^{-x}}{k!} dx \quad (**)
 \end{equation}`
 
 接下来我们继续玩点好玩的，对上边的等式两边在`\(\lambda \rightarrow 0\)`下取极限，左侧Poisson分布是要至少发生k个事件的概率，`\(\lambda \rightarrow 0\)`的时候就不可能有事件发生了，所以`\(P(X \le k)\rightarrow 1\)`，于是我们得到
@@ -331,4 +331,3 @@ Poisson(X \le k|\lambda) = \int_\lambda^\infty \frac{x^k e^{-x}}{k!} dx  \quad 
 我们可以看到，Poisson分布的概率累积函数和Gamma分布的概率累积函数有互补的关系。
 
 其实(\*)和(\**)这两个式子都是陈希儒院士的《概率论与数理统计》这本书第二章的课后习题，不过陈老师习题答案中给的证明思路是纯粹数学分析的证明方法，虽然能证明等式成立，但是看完证明后无法明白这两个等式是如何被发现的。上诉的论述过程说明，从二项分布出发，这两个等式都有可以很好的从概率角度进行理解。希望以上的推导过程能给大家带来一些对Gamma函数和Gamma分布的新的理解，让Gamma分布不再神秘。
-
