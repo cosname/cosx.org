@@ -11,39 +11,28 @@ tags:
   - 统计学
   - 统计计算
 slug: a-conversaton-with-leo-breiman
+description: "1928年1月28日，Leo Breiman生于纽约。5年后，他们家搬到了旧金山，然后Leo开始了他的学业。在他读初中的时候，他们家又搬去了洛杉矶。1945年，Leo从Roosevelt高中毕业后考进了加州理工学院，在那里他花了4年时间主修物理。1950年，Leo拿到了哥伦比亚大学的数学硕士学位，1954年，他又拿到了加州大学伯克利分校的数学博士学位。"
 ---
 
-> <pre>COS编辑部按：本文是一篇Richard Olshen对Leo Breiman的采访稿（[原文发表在Statistical Science](http://projecteuclid.org/download/pdf_1/euclid.ss/1009213290)）。翻译工作已经得到作者授权。翻译: 张晔、成慧敏、李宇轩。审校：高涛、侯澄钧、丁鹏、魏太云。此外，郑重感谢施涛、丁鹏、郁彬老师为文章的翻译指导和版权沟通提供的帮助。
+> COS编辑部按：本文是一篇Richard Olshen对Leo Breiman的采访稿（[原文发表在Statistical Science](http://projecteuclid.org/download/pdf_1/euclid.ss/1009213290)）。翻译工作已经得到作者授权。翻译: 张晔、成慧敏、李宇轩。审校：高涛、侯澄钧、丁鹏、魏太云。此外，郑重感谢施涛、丁鹏、郁彬老师为文章的翻译指导和版权沟通提供的帮助。
 
-译者简介：张晔，毕业于华南统计科学研究中心，现严肃科技平台开发工程师，主要负责docker容器调度系统开发。成慧敏，就读于中央财经大学统计与数学学院，硕士研究生二年级，研究兴趣为复杂网络分析与深度学习。李宇轩,就读于中国人民大学统计学院,大二本科生,目测统计有关都可以是学习方向。</pre>
+译者简介：张晔，毕业于华南统计科学研究中心，现严肃科技平台开发工程师，主要负责docker容器调度系统开发。成慧敏，就读于中央财经大学统计与数学学院，硕士研究生二年级，研究兴趣为复杂网络分析与深度学习。李宇轩,就读于中国人民大学统计学院,大二本科生,目测统计有关都可以是学习方向。
 
-<p style="padding-left: 30px;">
   ![](https://cos.name/wp-content/uploads/2012/02/Leo_Breiman.jpg)
-</p>
 
-<p style="padding-left: 30px;">
-  <span style="color: #808080;">1928年1月28日，Leo Breiman生于纽约。5年后，他们家搬到了旧金山，然后Leo开始了他的学业。在他读初中的时候，他们家又搬去了洛杉矶。1945年，Leo从Roosevelt高中毕业后考进了加州理工学院，在那里他花了4年时间主修物理。1950年，Leo拿到了哥伦比亚大学的数学硕士学位，1954年，他又拿到了加州大学伯克利分校的数学博士学位。</span>
-</p>
+1928年1月28日，Leo Breiman生于纽约。5年后，他们家搬到了旧金山，然后Leo开始了他的学业。在他读初中的时候，他们家又搬去了洛杉矶。1945年，Leo从Roosevelt高中毕业后考进了加州理工学院，在那里他花了4年时间主修物理。1950年，Leo拿到了哥伦比亚大学的数学硕士学位，1954年，他又拿到了加州大学伯克利分校的数学博士学位。
 
-<p style="padding-left: 30px;">
-  <span style="color: #808080;">Leo对科学和数学有着广泛的兴趣，包括信息论和博弈论。他曾参与汽车交通、空气质量和有毒物质识别等方向的研究。 他写过一篇著名的关于概率论的毕业论文，他是分类回归树（CART, Classification and Regression Trees）及其配套软件$CART^R$的四位作者之一，另外他还写了两本专著。Leo和Jerome Friedman一起开创了ACE（alternating conditional expectations）算法，该算法描述了因变量和自变量之间的非线性回归关系。 他开创性地提出将“bagging”和“arcing”这两种需要大量计算的方法用于分类，目前很多学者对此十分感兴趣。</span>
-</p>
+Leo对科学和数学有着广泛的兴趣，包括信息论和博弈论。他曾参与汽车交通、空气质量和有毒物质识别等方向的研究。 他写过一篇著名的关于概率论的毕业论文，他是分类回归树（CART, Classification and Regression Trees）及其配套软件$CART^R$的四位作者之一，另外他还写了两本专著。Leo和Jerome Friedman一起开创了ACE（alternating conditional expectations）算法，该算法描述了因变量和自变量之间的非线性回归关系。 他开创性地提出将“bagging”和“arcing”这两种需要大量计算的方法用于分类，目前很多学者对此十分感兴趣。
 
-<p style="padding-left: 30px;">
-  <span style="color: #808080;">Leo的职业履历包括，加州大学洛杉矶分校（UCLA）数学系教职，13年的独立咨询顾问，加州大学伯克利分校（UC Berkeley）统计系教授，同时也是该校统计计算实验室的创始人兼主任。 另外，他还是斯坦福大学和耶鲁大学的客座教授。 由于他的诸多贡献，Leo被授予数理统计研究所（Institute of Mathematical Statistics）和美国统计协会（American Statistical Association）的荣誉基金。 同时，他还是美国艺术与科学学院（American Academy of Arts and Sciences）的选举成员，并被加州大学授予Berkeley Citation荣誉奖项。</span>
-</p>
+Leo的职业履历包括，加州大学洛杉矶分校（UCLA）数学系教职，13年的独立咨询顾问，加州大学伯克利分校（UC Berkeley）统计系教授，同时也是该校统计计算实验室的创始人兼主任。 另外，他还是斯坦福大学和耶鲁大学的客座教授。 由于他的诸多贡献，Leo被授予数理统计研究所（Institute of Mathematical Statistics）和美国统计协会（American Statistical Association）的荣誉基金。 同时，他还是美国艺术与科学学院（American Academy of Arts and Sciences）的选举成员，并被加州大学授予Berkeley Citation荣誉奖项。
 
-<p style="padding-left: 30px;">
-  <span style="color: #808080;">Leo Breiman是一个兴趣广泛的人，他不仅是专业的统计学家和概率学家，还在其他方面也取得了很多成就。他在Catskills当过服务员，在Merchant Marine当过洗碗工，同时他是一名探寻过热带雨林核心地带的背包客，是一群来自墨西哥农村孩子的慈爱父亲，是Santa Monica学校董事会的主席，是他美丽小屋的建筑师，还是一个技艺高超的雕刻家。Leo和他的妻子Mary Lou，居住在加州伯克利，他们育有两个女儿，Rebecca和Jessica。</span>
-</p>
+Leo Breiman是一个兴趣广泛的人，他不仅是专业的统计学家和概率学家，还在其他方面也取得了很多成就。他在Catskills当过服务员，在Merchant Marine当过洗碗工，同时他是一名探寻过热带雨林核心地带的背包客，是一群来自墨西哥农村孩子的慈爱父亲，是Santa Monica学校董事会的主席，是他美丽小屋的建筑师，还是一个技艺高超的雕刻家。Leo和他的妻子Mary Lou，居住在加州伯克利，他们育有两个女儿，Rebecca和Jessica。
 
-<p style="padding-left: 30px;">
-  <span style="color: #808080;">采访者简介：Richard Olshen，斯坦福大学生物统计教授，生物统计方向（Division of Biostatistic）首席科学家，卫生研究和政策系（Department of Health Research and Policy）的副主任，斯坦福大学电气工程系和统计系兼职教授。</span><span style="color: #808080;">该访谈于1999年2月19日在Leo和他的妻子Mary Lou的家中进行。</span><!--more-->
-</p>
+采访者简介：Richard Olshen，斯坦福大学生物统计教授，生物统计方向（Division of Biostatistic）首席科学家，卫生研究和政策系（Department of Health Research and Policy）的副主任，斯坦福大学电气工程系和统计系兼职教授。该访谈于1999年2月19日在Leo和他的妻子Mary Lou的家中进行。
 
 **Olshen**： Leo，今天能来到这里，我感到非常荣幸。我是你的粉丝，在跟你合作之前（事实上，是我认识你之前）我从你的著作中学习到了很多。我了解到你是在洛杉矶的Boyle Heights长大的，Boyle Heights在那个时候是什么样的？
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#boyle-heights){#user-content-boyle-heights.anchor}BOYLE HEIGHTS
+# BOYLE HEIGHTS
 
 **Breiman**： Boyle Heights那时候还是个贫穷犹太人和工薪犹太人聚居的贫民区，与墨西哥贫民区相邻。基本上，它是第一代移民的贫民区。我的父母，同龄小伙伴的父母都是移民。
 
@@ -71,7 +60,7 @@ slug: a-conversaton-with-leo-breiman
 
 **Breiman**：没错。
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#加州理工学院){#user-content-加州理工学院.anchor}加州理工学院
+# 加州理工学院
 
 **Olshen**：能跟我讲一下你还在加州理工学院的时候，那儿是什么样的吗？
 
@@ -83,7 +72,7 @@ slug: a-conversaton-with-leo-breiman
 
 **Olshen**：这是促使你去加州大学伯克利分校研究生院的原因吗？
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#哥伦比亚大学研究生院){#user-content-哥伦比亚大学研究生院.anchor}哥伦比亚大学研究生院
+# 哥伦比亚大学研究生院
 
 **Breiman**：不是，实际上是虽然我毕业时的物理成绩太差了，但是我还是对数学很感兴趣。虽然我在数学方面成绩很好，并且到处申请，最终只有纽约的哥伦比亚大学接收了我。我的父母还是挺贫穷的，所以没法承担我在哥大的学费。
 
@@ -99,7 +88,7 @@ slug: a-conversaton-with-leo-breiman
 
 **Olshen**：美国商船学院（Merchant Marine）听起来挺棒的。
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#伯克利研究生院){#user-content-伯克利研究生院.anchor}伯克利研究生院
+# 伯克利研究生院
 
 **Breiman**：是的，在我20岁之前，我这样打工挣了很多钱。我在船上当洗碗工，一下船就得去监考，监考是所有伯克利助教必须干的事。从码头叫了一辆出租车，我迅速地奔向大一新生考试的地方Dwinelle，所以——
 
@@ -137,7 +126,7 @@ slug: a-conversaton-with-leo-breiman
 
 这是我研究博弈论的动机，完全是因为机缘巧合。David没有参与进来，而且我觉得他应该对博弈论并不感兴趣。
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#在墨西哥卖冰){#user-content-在墨西哥卖冰.anchor}在墨西哥卖冰
+# 在墨西哥卖冰
 
 **Olshen**：大家都知道你涉猎广泛，其中你在墨西哥卖冰那件事非常吸引我，但是我到现在也不是很了解，你能跟我讲讲这事儿吗？
 
@@ -151,7 +140,7 @@ slug: a-conversaton-with-leo-breiman
 
 **Breiman**：嗯，是的。
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#在ucla的几年){#user-content-在ucla的几年.anchor}在UCLA的几年
+# 在UCLA的几年
 
 **Olshen**：现在我要继续和你谈谈你在UCLA的职业生涯了，其实我是想问一些我一直非常想知道的事。 就是你怎么想到写Probability(Breiman,1968)这本杰作呢？
 
@@ -187,7 +176,7 @@ slug: a-conversaton-with-leo-breiman
 
 **Olshen**：跟我讲讲你与Bill Meisel的合作，以及你是如何去TSC公司（Technology Services Corpoeration）工作的。
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#作为独立顾问){#user-content-作为独立顾问.anchor}作为独立顾问
+# 作为独立顾问
 
 **Breiman**：从UCLA辞职之后，我花光了我的退休金，很显然我需要干一些别的事儿来养活我自己。 所以我四处询问，得知当时Rand旗下的SDC公司（Systems Development Corpoeration），有一大笔联邦科研经费用于高速公路交通研究。
 
@@ -211,7 +200,7 @@ Bill非常有助于我思考分类和回归的问题。对于EPA和周围很多�
 
 因此，从这一大堆不同的工作中我对统计学有了更加深刻的认识，我也学会了在尝试解决问题时，如何使用统计学和处理数据。这些回答了你的问题吗？
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#在santa-monica参加校董事会和教数学){#user-content-在santa-monica参加校董事会和教数学.anchor}在SANTA MONICA参加校董事会和教数学
+# 在SANTA MONICA参加校董事会和教数学
 
 **Olshen**：当然了。现在看来，这些工作全部或者说很大一部分都是在Santa Monica进行的。我对你在Santa Monica进行的其他工作很好奇，比如说，Santa Monica校董会，你是怎么参与其中的工作，还成为它的领导者的？
 
@@ -271,7 +260,7 @@ Bill非常有助于我思考分类和回归的问题。对于EPA和周围很多�
 
 我觉得那些数学很好的人就是那些可以将真实世界和数学世界对应起来，将我们说的话翻译成数学语言的人。我认为这贯穿了我所有级别的教学。我们从一个明确的问题开始，在进一步抽象之前我发觉我会先构思好解决整个问题的流程。在把问题变抽象之前，你要尝试把问题具体化。
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#回到伯克利以及统计计算实验室scf){#user-content-回到伯克利以及统计计算实验室scf.anchor}回到伯克利以及统计计算实验室(SCF)
+# 回到伯克利以及统计计算实验室(SCF)
 
 **Olshen**：谢谢，接下来，你是怎样来到伯克利的？还有，为什么会来？
 
@@ -341,7 +330,7 @@ PDP-11当时运行着UNIX，而数学系的家伙有问题却需要在RISTUS操�
 
 **Breiman**：是的：）
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#cart-ace-pimple-the-little-bootstrap-bagging-boosting-和-arcing){#user-content-cart-ace-pimple-the-little-bootstrap-bagging-boosting-和-arcing.anchor}CART, ACE, PIMPLE, THE LITTLE BOOTSTRAP, BAGGING, BOOSTING 和 ARCING
+# CART, ACE, PIMPLE, THE LITTLE BOOTSTRAP, BAGGING, BOOSTING 和 ARCING
 
 **Olshen**：现在，让我们继续下个问题。我想听听你近年来的研究工作。不分顺序，我能想到的是 ACE (Breiman and Friedman, 1985), PIMPLE (Breiman, 1991), the little bootstrap (Breiman, 1992), bagging (Breiman, 1996a, 1996b), boosting (Freund and Schapire, 1996, 1997), arcing (Breiman, 1998), 和 $CART^R$。不管以后会怎样，但它们现在很流行，已经不是统计学的私房话了。
 
@@ -415,7 +404,7 @@ Jerry和我花了一段时间来仔细推敲这个问题，忽然发现可以使
 
 所以你看，整个事情变得越来越有趣了。
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#人口普查){#user-content-人口普查.anchor}人口普查
+# 人口普查
 
 **Olshen**：好的，继续进行对大数据集研究的讨论，不过会与之前我们讨论内容大不相同，你可以谈谈你在人口普查调整这块的工作吗？
 
@@ -461,7 +450,7 @@ Ken做的很好。在1989年末开始准备1990年的普查时，Dave给我打�
 
 然而，Richard，接下来的事却让我大跌眼镜。普查委员会承认，它内部的出版物中至少有57%的内容是有关1990年调整，确实是不良数据造成的。你可能会认为在被1990年的数据和评估打击如此之狠之后，他们应该不会再这么做了。因为如果有些环节失败了,你就不能再去重复了。好吧，他们在2000年所做的事情更有意思。他们竟然又做了一遍，但是却不评估了!
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#建议){#user-content-建议.anchor}建议
+# 建议
 
 **Olshen**：Leo，你在统计学、统计计算、概率和教学这些方面有广泛的兴趣和贡献，你想对那些现如今想从事这个方向工作的年轻人提什么建议呢？他们应该学些什么以及为什么?
 
@@ -475,7 +464,7 @@ Ken做的很好。在1989年末开始准备1990年的普查时，Dave给我打�
 
 所以我认为如果我现在要给年轻人提建议的话，学统计学，我持保留意见。但最后，我可能还是会说：“去学统计吧，但一定记住，统计的精髓之处是在收集和利用数据，来解决现实世界中有趣而又重要的问题。”
 
-### [](https://github.com/ZhangYet/translation/blob/master/all.Rmd#艺术家){#user-content-艺术家.anchor}艺术家
+# 艺术家
 
 **Olshen**：谢谢！从我们今天谈话的房间，甚至是整个房子的风格可以看出，你的兴趣爱好涉猎颇广。你能谈谈作为艺术家的你是什么样子的吗？
 
@@ -497,8 +486,9 @@ Ken做的很好。在1989年末开始准备1990年的普查时，Dave给我打�
 
 **Breiman**：那将是我的荣幸，Richard。
 
-<p style="text-align: right;">
-  翻译：张晔、成慧敏、李宇轩<br /> 审校：高涛、魏太云、侯澄钧<br /> 编辑：王佳、杨舒仪
-</p><section class=""> <section class="">版权公告</section> </section> <section class=""> <section class=""> <section class="">原创文章，版权所有。</section> <section class=""></section> <section class=""></section> 
+翻译：张晔、成慧敏、李宇轩 
+审校：高涛、魏太云、侯澄钧
+编辑：王佳、杨舒仪
 
-敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。</section> </section>
+版权公告 原创文章，版权所有。
+敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
