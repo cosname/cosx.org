@@ -162,15 +162,17 @@ Gamma函数找到了，我们来看看第二个问题，为何Gamma函数被定�
   * Philip J. Davis，Leonhard Euler&#8217;s Integral: A Historical Profile of the Gamma Function
   * Jacques Dutka，The Early History of the Factorial Function
   * Detlef Gronnau，Why is the gamma function so as it is?
+
 ## 1.2 Gamma函数欣赏
 
-_Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also._
-  
-_--Philip J.Davis_
+> Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also.
+
+> -- Philip J.Davis
 
 Gamma函数从它诞生开始就被许多数学家进行研究，包括高斯、勒让德、威尔斯特拉斯、柳维尔等等。这个函数在现代数学分析中被深入研究，在概率论中也是无处不在，很多统计分布都和这个函数相关。Gamma函数作为阶乘的推广，首先它也有和Stirling公式类似的一个结论
   
-`$$ \Gamma(x) \sim \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}}$$`  
+`$$ \Gamma(x) \sim \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}}$$`
+
 另外，Gamma函数不仅可以定义在实数集上，还可以延拓到整个复平面上。
 
 ![gamma-complex](https://cos.name/wp-content/uploads/2013/01/gamma-complex.png)
@@ -233,7 +235,7 @@ Gamma函数和欧拉常数`\(\gamma\)`有密切关系，可以发现
   
 `$$\Psi_1(1) = \zeta(2) = \frac{\pi^2}{6}， \Psi_2(1) = -2\zeta(3)$$`
 
-所以Gamma函数在数学上是很有魅力的，它在数学上应用广泛，不仅能够被一个理科本科生很好的理解，本身又足够的深刻，具有很多漂亮的数学性质，历史上吸引了众多一流的数学家对它进行研究。美国数学家Philip J.Davis写了篇很有名的介绍Gamma函数的文章：“Leonhard Euler&#8217;s Integral:A Historical Profile of the Gamma Function”，文中对Gamma函数一些特性发现的历史进行了很详细的描述，这篇文章获得了 Chauvenet Prize(美国数学会颁发的数学科普最高奖)。
+所以Gamma函数在数学上是很有魅力的，它在数学上应用广泛，不仅能够被一个理科本科生很好的理解，本身又足够的深刻，具有很多漂亮的数学性质，历史上吸引了众多一流的数学家对它进行研究。美国数学家Philip J.Davis写了篇很有名的介绍Gamma函数的文章：“Leonhard Euler's Integral: A Historical Profile of the Gamma Function”，文中对Gamma函数一些特性发现的历史进行了很详细的描述，这篇文章获得了 Chauvenet Prize(美国数学会颁发的数学科普最高奖)。
 
 (本小节主要是数学欣赏，如果对某些概念不熟悉，就略过吧:-))
 
