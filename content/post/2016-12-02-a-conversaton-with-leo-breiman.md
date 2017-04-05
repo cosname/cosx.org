@@ -22,7 +22,7 @@ description: "1928年1月28日，Leo Breiman生于纽约。5年后，他们家�
 
 1928年1月28日，Leo Breiman生于纽约。5年后，他们家搬到了旧金山，然后Leo开始了他的学业。在他读初中的时候，他们家又搬去了洛杉矶。1945年，Leo从Roosevelt高中毕业后考进了加州理工学院，在那里他花了4年时间主修物理。1950年，Leo拿到了哥伦比亚大学的数学硕士学位，1954年，他又拿到了加州大学伯克利分校的数学博士学位。
 
-Leo对科学和数学有着广泛的兴趣，包括信息论和博弈论。他曾参与汽车交通、空气质量和有毒物质识别等方向的研究。 他写过一篇著名的关于概率论的毕业论文，他是分类回归树（CART, Classification and Regression Trees）及其配套软件$CART^R$的四位作者之一，另外他还写了两本专著。Leo和Jerome Friedman一起开创了ACE（alternating conditional expectations）算法，该算法描述了因变量和自变量之间的非线性回归关系。 他开创性地提出将“bagging”和“arcing”这两种需要大量计算的方法用于分类，目前很多学者对此十分感兴趣。
+Leo对科学和数学有着广泛的兴趣，包括信息论和博弈论。他曾参与汽车交通、空气质量和有毒物质识别等方向的研究。 他写过一篇著名的关于概率论的毕业论文，他是分类回归树（CART, Classification and Regression Trees）及其配套软件_CART_<sup><i>R</i></sup>的四位作者之一，另外他还写了两本专著。Leo和Jerome Friedman一起开创了ACE（alternating conditional expectations）算法，该算法描述了因变量和自变量之间的非线性回归关系。 他开创性地提出将“bagging”和“arcing”这两种需要大量计算的方法用于分类，目前很多学者对此十分感兴趣。
 
 Leo的职业履历包括，加州大学洛杉矶分校（UCLA）数学系教职，13年的独立咨询顾问，加州大学伯克利分校（UC Berkeley）统计系教授，同时也是该校统计计算实验室的创始人兼主任。 另外，他还是斯坦福大学和耶鲁大学的客座教授。 由于他的诸多贡献，Leo被授予数理统计研究所（Institute of Mathematical Statistics）和美国统计协会（American Statistical Association）的荣誉基金。 同时，他还是美国艺术与科学学院（American Academy of Arts and Sciences）的选举成员，并被加州大学授予Berkeley Citation荣誉奖项。
 
