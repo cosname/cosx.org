@@ -5,7 +5,7 @@ author: COS编辑部
 categories:
   - 推荐文章
 slug: a-data-scientist-is-changing-peoples-vision-to-city
-description: Ben Wellington因为一个消防栓而被鉴定为纽约“开放数据”运动之王，他开了一个博客“I Quant NY”，旨在使用开放数据改变政府的政策。随着他公开了城市机构正在做的所有错事，他正成为一支被重视的力量。
+description: "Ben Wellington因为一个消防栓而被鉴定为纽约“开放数据”运动之王，他开了一个博客“I Quant NY”，旨在使用开放数据改变政府的政策。随着他公开了城市机构正在做的所有错事，他正成为一支被重视的力量。"
 ---
 
 **本文摘自：腊八粥**
@@ -54,6 +54,8 @@ Wellington尽量避免可能导致被控诉倾向左或者右的政治派别的�
 
 “我正在以快速循环的方式做数据科学”，他说。“或许我做一项研究花费的时间是4个小时而非4个月，这就带来了很多问题——但是，更重要的是，它引起了人们的讨论。”
 
-注1：大都会运输署（Metropolitan Transportation Authority，一般简称 MTA），亦称为大都会捷运局，是管理纽约市公共交通的管理机构，成立于1967年，管辖著范围达4000平方英里、总人口1800万的大纽约地区（包含纽约市五大区、纽约州12个县、新泽西州及康乃狄克州部分地区）内的交通运输，该机构拥有并管理纽约地铁、公共汽车及渡轮。其辖下单位包括纽约市公共运输局、大都会北方铁路、长岛铁路、长岛公车公司、桥梁暨隧道管理局、以及大都会运输署公车公司。<http://zh.wikipedia.org/wiki/%E7%B4%90%E7%B4%84%E5%A4%A7%E9%83%BD%E6%9C%83%E9%81%8B%E8%BC%B8%E7%BD%B2>
+注1：大都会运输署（Metropolitan Transportation Authority，一般简称 MTA），亦称为大都会捷运局，是管理纽约市公共交通的管理机构，成立于1967年，管辖著范围达4000平方英里、总人口1800万的大纽约地区（包含纽约市五大区、纽约州12个县、新泽西州及康乃狄克州部分地区）内的交通运输，该机构拥有并管理纽约地铁、公共汽车及渡轮。其辖下单位包括纽约市公共运输局、大都会北方铁路、长岛铁路、长岛公车公司、桥梁暨隧道管理局、以及大都会运输署公车公司。
+
+[大都会运输署](http://zh.wikipedia.org/wiki/%E7%B4%90%E7%B4%84%E5%A4%A7%E9%83%BD%E6%9C%83%E9%81%8B%E8%BC%B8%E7%BD%B2)
 
 英文原文链接：<http://www.npr.org/blogs/alltechconsidered/2014/11/28/367046864/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city>
