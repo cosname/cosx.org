@@ -2,7 +2,7 @@
 title: 视频
 date: '2013-08-09T14:20:50+00:00'
 author: 陈堰平
-weight: 4
+weight: 6
 menu: main
 ---
 

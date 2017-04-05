@@ -20,12 +20,12 @@ footnotereturnlinkcontents = "↩"
 [[menu.main]]
   name = "首页"
   url = "/"
-  weight = 0
+  weight = 1
 
 [[menu.main]]
   name = "论坛"
   url = "https://d.cosx.org"
-  weight = 1
+  weight = 3
 
 [params]
 	logoFull = "![统计之都标志](/img/logo-full.png)"

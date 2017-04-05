@@ -2,7 +2,7 @@
 title: 培训
 date: '2013-04-09T10:50:47+00:00'
 author: COS管理员
-weight: 5
+weight: 7
 menu: main
 ---
 
