@@ -1,7 +1,7 @@
 ---
 title: R语言做符号计算
 date: '2016-07-08T19:48:37+00:00'
-author: 黄 湘云
+author: 黄湘云
 categories:
   - 统计软件
   - 软件应用
@@ -36,15 +36,15 @@ slug: r-symbol-calculate
   
 在R里，声明表达式对象使用expression函数
 
-```
-NormDensity <- expression(1/sqrt(2 * pi) * exp(-x^2/2))
+```r
+NormDensity <- expression(1 / sqrt(2 * pi) * exp(-x^2 / 2))
 class(NormDensity)
 ## [1] "expression"
 ```
 
 计算一阶导数
 
-```
+```r
 D(NormDensity, "x")
 ## -(1/sqrt(2 * pi) * (exp(-x^2/2) * (2 * x/2)))
 
@@ -80,7 +80,7 @@ deriv3(NormDensity, "x")
 
 计算 n 阶导数
 
-```
+```r
 DD <- function(expr, name, order = 1) {
  if (order < 1)
      stop("'order' must be >= 1")
@@ -98,7 +98,7 @@ DD(NormDensity, "x", 3)
 
 很多时候我们使用R目的是计算，符号计算后希望可以直接代入计算，那么只需要在deriv中指定function.arg参数为TRUE。
 
-```
+```r
 DFun <- deriv(NormDensity, "x", function.arg = TRUE)
 DFun(1)
 ## [1] 0.2419707
@@ -115,7 +115,7 @@ DFun(0)
 
 从计算结果可以看出，deriv不仅计算了导数值还计算了原函数在该处的函数值。我们可以作如下简单验证：
 
-```
+```r
 Normfun <- function(x) 1/sqrt(2 * pi) * exp(-x^2/2)
 Normfun(1)
 ## [1] 0.2419707
@@ -127,7 +127,7 @@ Normfun(0)
 在讲另外一个将表达式转化为函数的方法之前，先来一个小插曲,有没有觉得之前计算 3 阶导数的结果太复杂了，
 说不定看到这的人，早就要吐槽了！其实这个问题已经有高人写了 Deriv 包 [1] 来解决，请看：
 
-```
+```r
 DD(NormDensity, "x", 3)
 ## 1/sqrt(2 * pi) * (exp(-x^2/2) * (2 * x/2) * (2/2) + ((exp(-x^2/2) * 
 ## (2/2)-exp(-x^2/2)*(2*x/2)*(2*x/2))*(2*x/2)+
@@ -141,7 +141,7 @@ Simplify(DD(NormDensity, "x", 3))
 三阶导数根本不在话下，如果想体验更高阶导数，不妨请读者动动手！
 表达式转函数的关键是理解函数其实是由参数列表 (args) 和函数体 (body) 两部分构成，以前面自编的Normfun函数为例：
 
-```
+```r
 body(Normfun)
 ## 1/sqrt(2 * pi) * exp(-x^2/2)
 
@@ -152,7 +152,7 @@ args(Normfun)
 
 而函数体被一对花括号括住的就是表达式，查看eval函数帮助，我们可以知道eval计算的对象就是表达式。下面来个小示例以说明此问题：
 
-```
+```r
 eval({x<-2;x^2})
 eval(body(Normfun))
 Normfun(2)
@@ -170,17 +170,17 @@ Normfun(2)
 终于又回到开篇处Tetrachoric函数，里面要计算任意阶导数，反正现在是没问题了，管他几阶，算完后化简转函数，请看：
 
 ```
-Tetrachoric <- function(x,j) {
+Tetrachoric <- function(x, j) {
  (-1)^(j-1)/sqrt(factorial(j))*eval(Simplify(DD(NormDensity,"x",j)))
 }
-Tetrachoric(2,3)
+Tetrachoric(2, 3)
 ## [1] -0.04408344
 ```
 
 有时候我们有的就是函数，这怎么计算导数呢？按道理，看完上面的过程，这已经不是什么问题啦！
 
-```
-Simplify(D(body(Normfun),"x"))
+```r
+Simplify(D(body(Normfun), "x"))
 ## -(x * exp(-(x^2/2))/sqrt(2 * pi))
 ```
 
@@ -193,19 +193,19 @@ Simplify(D(body(Normfun),"x"))
 
 想要做更多的符号计算内容，如解方程，泰勒展开等，可以借助第三方R扩展包Ryacas [3]。
 
-```
+```r
 suppressPackageStartupMessages(library(Ryacas))
 yacas("Solve(x/(1+x) == a, x)")
 ## [1] "Starting Yacas!"
 ## expression(list(x == a/(1 - a)))
 
-yacas(expression(Expand((1+x)^3)))
+yacas(expression(Expand((1 + x)^3)))
 ## expression(x^3 + 3 * x^2 + 3 * x + 1)
 
-yacas("OdeSolve(y''==4*y)")
+yacas("OdeSolve(y''== 4 * y)")
 ## expression(C95 * exp(2 * x) + C99 * exp(-2 * x))
 
-yacas("Taylor(x,a,3) Exp(x)")
+yacas("Taylor(x, a, 3) Exp(x)")
 ## expression(exp(a) + exp(a) * (x - a) + (x - a)^2 * exp(a)/2 + 
 ## (x - a)^3 * exp(a)/6)
 ```
@@ -220,18 +220,18 @@ yacas("Taylor(x,a,3) Exp(x)")
 
 符号微分
 
-```
-fun<-expression(100*(x2-x1^2)^2+(1-x1)^2)
-D(fun,"x1")
+```r
+fun <- expression(100 * (x2 - x1^2)^2 + (1 - x1)^2)
+D(fun, "x1")
 ## -(2 * (1 - x1) + 100 * (2 * (2 * x1 * (x2 - x1^2))))
 
-D(fun,"x2")
+D(fun, "x2")
 ## 100 * (2 * (x2 - x1^2))
 ```
 
 调用拟牛顿法求极值
 
-```
+```r
 fr <- function(x) {
  x1 <- x[1]
  x2 <- x[2]
@@ -263,11 +263,11 @@ optim(c(-1.2,1), fr, grr1, method = "BFGS")
 
 仿照Tetrachoric函数的写法，可以简写grr函数（这个写法可以稍微避免一点复制粘贴）：
 
-```
+```r
 grr2<-function(x){
  x1 <- x[1]
  x2 <- x[2]
- c(eval(D(fun,"x1")),eval(D(fun,"x2"))) # 表达式微分
+ c(eval(D(fun, "x1")), eval(D(fun, "x2"))) # 表达式微分
  }
 optim(c(-1.2,1), fr, grr2, method = "BFGS")
 ## $par
@@ -289,10 +289,10 @@ optim(c(-1.2,1), fr, grr2, method = "BFGS")
 
 如果调用numDeriv包 [4]，可以再少写点代码：
 
-```
+```r
 library(numDeriv)
 grr3 <- function(x) {
- grad(fr,c(x[1],x[2])) # 函数微分
+ grad(fr, c(x[1], x[2])) # 函数微分
  }
 optim(c(-1.2, 1), fr, grr3, method = "BFGS")
 ## $par
@@ -314,13 +314,13 @@ optim(c(-1.2, 1), fr, grr3, method = "BFGS")
 
 如果一定要体现符号微分的过程，就调用Deriv包：
 
-```
+```r
 library(Deriv)
-fr1 <- function(x1,x2) { # 函数形式与上面不同
+fr1 <- function(x1, x2) { # 函数形式与上面不同
  100 * (x2 - x1 * x1)^2 + (1 - x1)^2
  }
 grr2 <- function(x) {
- Deriv(fr1,cache.exp = FALSE)(x[1],x[2]) # 符号微分
+ Deriv(fr1, cache.exp = FALSE)(x[1], x[2]) # 符号微分
  }
 optim(c(-1.2, 1), fr, grr2, method = "BFGS")
 ## $par
@@ -345,17 +345,18 @@ optim(c(-1.2, 1), fr, grr2, method = "BFGS")
 
 注：
 1. 求极值和求解方程（组）往往有联系的，如统计中求参数的最大似然估计，有不少可以转化为求方程（组），如 stat4 包 [5] 的 mle 函数。
-2. 目标函数可以求导，使用拟牛顿算法效果比较好，如上例中 methods 参数设置成 CG，结果就会不一样。
-3. nlm、optim 和 nlminb 等函数都实现了带梯度的优化算法。
-4. 不过话又说回来，真实的场景大多是目标函数不能求导，一阶导数都不能求,更多细节请读者参见 optim 函数帮助。
-5. 还有一些做数值优化的 R 包，如 BB 包 [6] 求解大规模非线性系统，numDeriv 包是数值微分的通用求解器，更多的内容可参见 <https://cran.rstudio.com/web/views/Optimization.html>。
-6. 除了数值优化还有做概率优化的 R 包，如仅遗传算法就有 GA [7]，gafit [8]，galts [9]，mcga [10]，rgenoud [11]，gaoptim [12]，genalg [13] 等 R 包，这方面的最新成果参考文献 [14]。
+1. 目标函数可以求导，使用拟牛顿算法效果比较好，如上例中 methods 参数设置成 CG，结果就会不一样。
+1. nlm、optim 和 nlminb 等函数都实现了带梯度的优化算法。
+1. 不过话又说回来，真实的场景大多是目标函数不能求导，一阶导数都不能求,更多细节请读者参见 optim 函数帮助。
+1. 还有一些做数值优化的 R 包，如 BB 包 [6] 求解大规模非线性系统，numDeriv 包是数值微分的通用求解器，更多的内容可参见 <https://cran.rstudio.com/web/views/Optimization.html>。
+1. 除了数值优化还有做概率优化的 R 包，如仅遗传算法就有 GA [7]，gafit [8]，galts [9]，mcga [10]，rgenoud [11]，gaoptim [12]，genalg [13] 等 R 包，这方面的最新成果参考文献 [14]。
 
 
 
 ## R软件信息
 
-```
+```r
+sessionInfo()
 ## R version 3.1.3 (2015-03-09)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
 ## Running under: Windows 8 x64 (build 9200)
