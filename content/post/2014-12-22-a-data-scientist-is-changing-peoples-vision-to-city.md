@@ -5,25 +5,20 @@ author: COS编辑部
 categories:
   - 推荐文章
 slug: a-data-scientist-is-changing-peoples-vision-to-city
+description: "Ben Wellington因为一个消防栓而被鉴定为纽约“开放数据”运动之王，他开了一个博客“I Quant NY”，旨在使用开放数据改变政府的政策。随着他公开了城市机构正在做的所有错事，他正成为一支被重视的力量。"
 ---
-
-&nbsp;
 
 **本文摘自：腊八粥**
 
-**原文：http://www.labazhou.net/2014/12/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city/**
+**原文：<http://www.labazhou.net/2014/12/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city/>**
 
 编辑：王小宁
-
-&nbsp;
 
 ![数据分析师的博客正在改变着纽约人看待城市的方式](http://www.labazhou.net/wp-content/uploads/2014/12/ben-wellington-i-quant-ny-1.jpg)
 
 Ben Wellington因为这个消防栓而被鉴定为纽约“开放数据”运动之王。今年早些时候，Wellington钻研了纽约市的违章停车罚单的数据，识别出连续街区的两个消防栓一年产生了$55,000的罚单进项，它们[都来自于貌似合法停车的车主](http://iquantny.tumblr.com/post/87573867759/success-how-nyc-open-data-and-reddit-saved-new)。Wellington的在线报告病毒式地扩散不久，热衷数据的市民调查者发现，交通部门已经调整了道路标志，还重新粉刷了停车位，以便司机不会被处罚。（交通部门没有就此询问给出回应）
 
 Wellington受欢迎的[博客“I Quant NY”](http://iquantny.tumblr.com/)，与前市长布隆伯格在2012年签署的重要法律有关，该法律强制要求城市机构把他们得到的所有数据公开到线上且可搜索。然而，很少有人像Wellington一样，能够深挖隐藏在日常问题背后的、真正使纽约市民激怒、开心以及感到好奇的秘密，他写过关于[城市最肮脏的快餐连锁店](http://iquantny.tumblr.com/post/98869218219/youll-never-guess-the-cleanest-fast-food-joint-in)的文章、研究过[半数曼哈顿人怎样呆在4个街区的星巴克里](http://iquantny.tumblr.com/post/82964955696/half-of-manhattan-is-within-4-blocks-of-a)，以及[哪个街区以树木多感到自豪](http://iquantny.tumblr.com/post/78823307914/are-you-in-one-of-nycs-treeiest-neighborhoods)。
-
-<!--more-->
 
 这个33岁的年轻人住在布鲁克林公寓里，靠一个笔记本支撑着博客的运作——那时候他还不在普瑞特艺术学院研究生中心做规划与环境的工作，也不是帮助预测了数十亿美元基金拨款给Two Sigma投资公司的数字达人。
 
@@ -59,18 +54,8 @@ Wellington尽量避免可能导致被控诉倾向左或者右的政治派别的�
 
 “我正在以快速循环的方式做数据科学”，他说。“或许我做一项研究花费的时间是4个小时而非4个月，这就带来了很多问题——但是，更重要的是，它引起了人们的讨论。”
 
-  * 注1：大都会运输署（Metropolitan Transportation Authority，一般简称 MTA），亦称为大都会捷运局，是管理纽约市公共交通的管理机构，成立于1967年，管辖著范围达4000平方英里、总人口1800万的大纽约地区（包含纽约市五大区、纽约州12个县、新泽西州及康乃狄克州部分地区）内的交通运输，该机构拥有并管理纽约地铁、公共汽车及渡轮。其辖下单位包括纽约市公共运输局、大都会北方铁路、长岛铁路、长岛公车公司、桥梁暨隧道管理局、以及大都会运输署公车公司。[http://zh.wikipedia.org/wiki/%E7%B4%90%E7%B4%84%E5%A4%A7%E9%83%BD%E6%9C%83%E9%81%8B%E8%BC%B8%E7%BD%B2](http://zh.wikipedia.org/wiki/%E7%B4%90%E7%B4%84%E5%A4%A7%E9%83%BD%E6%9C%83%E9%81%8B%E8%BC%B8%E7%BD%B2)
+注1：大都会运输署（Metropolitan Transportation Authority，一般简称 MTA），亦称为大都会捷运局，是管理纽约市公共交通的管理机构，成立于1967年，管辖著范围达4000平方英里、总人口1800万的大纽约地区（包含纽约市五大区、纽约州12个县、新泽西州及康乃狄克州部分地区）内的交通运输，该机构拥有并管理纽约地铁、公共汽车及渡轮。其辖下单位包括纽约市公共运输局、大都会北方铁路、长岛铁路、长岛公车公司、桥梁暨隧道管理局、以及大都会运输署公车公司。
 
-<div>
-  <p>
-    &nbsp;
-  </p>
-  
-  <p>
-    英文原文链接：[http://www.npr.org/blogs/alltechconsidered/2014/11/28/367046864/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city](http://www.npr.org/blogs/alltechconsidered/2014/11/28/367046864/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city)
-  </p>
-  
-  <p>
-    — END —
-  </p>
-</div>
+[大都会运输署](http://zh.wikipedia.org/wiki/%E7%B4%90%E7%B4%84%E5%A4%A7%E9%83%BD%E6%9C%83%E9%81%8B%E8%BC%B8%E7%BD%B2)
+
+英文原文链接：<http://www.npr.org/blogs/alltechconsidered/2014/11/28/367046864/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city>
