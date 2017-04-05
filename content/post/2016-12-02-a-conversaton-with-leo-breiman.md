@@ -192,7 +192,7 @@ Leo Breiman是一个兴趣广泛的人，他不仅是专业的统计学家和概
 
 Bill非常有助于我思考分类和回归的问题。对于EPA和周围很多其他提供研究经费的地方来说，大多数的问题都是预测和分类，这是一个热门领域。 Bill对于这个领域还是挺熟悉的，是他推动我进入了这个领域。
 
-**Olshen**：听起来这是$CART^R$(Breiman et al., 1984)的开始。
+**Olshen**：听起来这是_CART_<sup><i>R</i></sup>(Breiman et al., 1984)的开始。
 
 **Breiman**：是的，说的没错。我们在研究预测问题，诸如第二天洛杉矶盆地的臭氧浓度， 高速公路上的一氧化碳浓度，还有一些其他的研究，比如是否能识别出摩尔斯电码是从哪个手机上发送的（这是我们为间谍机构做的事）？或者我们能否通过声呐返回技术识别出潜水艇是俄罗斯的还是美国的？或者我们能否通过雷达回波技术识别出战舰是俄罗斯的还是美国的？很多这些问题都是迷人的分类问题。同时，对于几乎一切能看到的有趣的统计需求，Bill他都会提交经费申请。
 
@@ -332,7 +332,7 @@ PDP-11当时运行着UNIX，而数学系的家伙有问题却需要在RISTUS操�
 
 # CART, ACE, PIMPLE, THE LITTLE BOOTSTRAP, BAGGING, BOOSTING 和 ARCING
 
-**Olshen**：现在，让我们继续下个问题。我想听听你近年来的研究工作。不分顺序，我能想到的是 ACE (Breiman and Friedman, 1985), PIMPLE (Breiman, 1991), the little bootstrap (Breiman, 1992), bagging (Breiman, 1996a, 1996b), boosting (Freund and Schapire, 1996, 1997), arcing (Breiman, 1998), 和 $CART^R$。不管以后会怎样，但它们现在很流行，已经不是统计学的私房话了。
+**Olshen**：现在，让我们继续下个问题。我想听听你近年来的研究工作。不分顺序，我能想到的是 ACE (Breiman and Friedman, 1985), PIMPLE (Breiman, 1991), the little bootstrap (Breiman, 1992), bagging (Breiman, 1996a, 1996b), boosting (Freund and Schapire, 1996, 1997), arcing (Breiman, 1998), 和 _CART_<sup><i>R</i></sup>。不管以后会怎样，但它们现在很流行，已经不是统计学的私房话了。
 
 **Breiman**：大概可以从 UCLA 辞职之后开始吧。我认为最重要的工作就是你也参与了的CART，那真是一段激动人心的时期，所有的创意想法在你、我还有Jerry Friedman和Chuck Stone之间来回碰撞。
 
