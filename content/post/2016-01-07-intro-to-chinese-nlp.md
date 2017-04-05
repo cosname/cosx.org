@@ -118,4 +118,4 @@ java -cp "./*" edu.stanford.nlp.parser.nndep.DependencyParser -props nndep.props
 
 预处理中文文本并非易事，Stanford NLP 小组对此作出了极大的贡献。我们的工作因而受益良多，所以我们非常感谢他们的努力。当然我们也期待 Stanford NLP software 能更上一层楼。
 
-本文原载于 <https://acepor.github.io/2015/12/17/General-Pipelines/>{.uri}。
+本文原载于 <https://acepor.github.io/2015/12/17/General-Pipelines/>。
