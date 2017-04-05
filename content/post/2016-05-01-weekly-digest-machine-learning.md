@@ -14,7 +14,9 @@ slug: weekly-digest-machine-learning
 description: "非平衡样本的分类问题是机器学习的经典问题之一，困扰着不少童鞋。这篇博文提供在R中解决该问题的[实用指南](http://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/)"
 ---
 
-本期投稿：冯凌秉  [王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)  王小宁   视觉机器人            编辑：王小宁
+本期投稿：冯凌秉 [王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar) 王小宁
+
+编辑：王小宁
 
 # 机器学习
 
