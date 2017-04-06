@@ -8,15 +8,16 @@ categories:
   - 每周精选
   - 统计之都
 slug: various-data-visualization
+description: 你知道统计概念也能可视化嘛？如何用Shiny实现语音识别？硅谷大数据哪家强？它们又对哪些人才情有独钟？本期精选为你揭晓。
 ---
 
 本期投稿： [谢益辉](http://yihui.name/)  [邱怡轩](http://yixuan.cos.name/cn/) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
-**数据可视化**
+# 数据可视化 
 
-用可视化的方式解释一些[数学和统计概念](http://setosa.io/ev/)，<span style="line-height: 1.5;">看起来很酷，不过小编窃以为只有那个马尔可夫链做得还有点意思，其它的概念用可视化的方式来解释可能有点多此一举了。</span>
+用可视化的方式解释一些[数学和统计概念](http://setosa.io/ev/)，看起来很酷，不过小编窃以为只有那个马尔可夫链做得还有点意思，其它的概念用可视化的方式来解释可能有点多此一举了。
 
 谢师兄的[新Shiny应用实现语音识别](https://yihui.shinyapps.io/voice/)，要把图中的点放大只需大喊如意金箍棒bigger than bigger，妈妈再也不用担心我不会写R代码画图了！请使用Chrome浏览器并开启麦克风，同时避免在公共场合长时间对着屏幕大喊，以免被当作R的重度痴迷症患者。注意，这不是玩笑，重申一遍，这不是玩笑！
 
@@ -26,7 +27,7 @@ slug: various-data-visualization
 
 可视化是科学、艺术和设计的结合，当枯燥隐晦的数据被数据科学家们以优雅、简明、直观的视觉方式呈现时，带给人们的不仅仅是一种全新的观察世界的方法，而且往往具备艺术作品般的强大冲击力和说服力。现在越来越多的组织开始做数据可视化工具的开发，让我们看看能实现实时可视化的十个[最新的项目](http://www.ctocio.com/bigdata/16907.html)。英文请点[这里](http://www.pcworld.com/article/2450480/10-amazing-data-driven-websites-that-will-change-the-way-you-see-the-world.html)。
 
-**大数据应用**
+# 大数据应用
 
 硅谷大数据哪家强？那些大数据公司又在做些什么，缺血什么样的人才，小编搜罗了一下，为众客官[呈上](http://www.36kr.com/p/217302.html)。盘点一下本周最受欢迎的[两家数据挖掘公司](http://www.ctocio.com/ccnews/17523.html)。
 
