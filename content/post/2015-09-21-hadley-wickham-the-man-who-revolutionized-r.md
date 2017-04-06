@@ -8,7 +8,7 @@ categories:
   - 统计软件
 tags:
   - ggplot2
-  - Hardly Wickham
+  - Hadley Wickham
   - R软件
   - 数据可视化
   - 统计图形
@@ -17,30 +17,19 @@ slug: hadley-wickham-the-man-who-revolutionized-r
 
 【COS编辑部按】本译文得到了原英文作者的授权同意，翻译：[冯俊晨](http://www.fengjunchen.com)、王小宁， 审校：邱怡轩、朱雪宁、蔡寒蕴，编辑：王小宁。
 
-[Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 `ggplot2` 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 `plyr`、`reshape2` 等。本文取自[PRICEONOMICS](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/).
-
+[Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包`ggplot2`的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如`plyr`、`reshape2`等。本文取自[PRICEONOMICS](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/).<!--more-->
 
 ![HadleyObama](https://cos.name/wp-content/uploads/2015/09/HadleyObama.png)
 
+**通过数据从根本上了解世界真的是一件非常，非常酷的事情。**
 
-<!--more-->
-
-
-
-  **通过数据从根本上了解世界真的是一件非常，非常酷的事情。**
-
-
-
-  **~多产的R开发者Hadley Wickham**
-
-
+**多产的R开发者Hadley Wickham**
 
 如果你不花很多时间在开源统计编程语言R中写代码的话，他的名字你可能并不熟悉——但统计学家Hadley Wickham用他自己的话说是那种“以书呆子出名”的人。他是那种在统计会议上人们排队要和他拍照，问他要签名的人，并且人们对他充满了尊敬。他也承认“这种现象实在太奇特了。因为写R程序而出名？这太疯狂了。”
 
 R 是一种为数据分析而设计的编程语言，Wickham正是因为成为了卓越的R包开发者而赢得了他的名声。R包是用于简化诸如整合和绘制数据等常见任务代码的编程工具。Wickham已经帮助了数以万计的人，使他们的工作变得更有效率，这使得大家都[很感激他](http://blog.revolutionanalytics.com/2010/09/competition-data-visualization-with-ggplot2.html)，甚至为之而[欣喜若狂](http://rebeccmeister.livejournal.com/695823.html)。他开发的R包的用户包括众科技巨头，例如Google，Facebook和Twitter，新闻巨擘诸如[纽约时报](http://www.nytimes.com/interactive/sports/football/2013-fantasy-football-tier-charts-QB.html?ref=football&_r=1&)和 [FiveThirtyEight](http://fivethirtyeight.com/datalab/girls-are-rare-at-the-international-math-olympiad/)，政府机构诸如食品与药品管理局（FDA）以及美国禁毒署（DEA）等。
 
 诚然，他是书呆子中的巨人。
-
 
 Wickham出生在新西兰汉密尔顿的一个统计学世家。他父亲[Brian Wickham](https://www.linkedin.com/pub/brian-wickham/4/3b8/193)在康奈尔大学获得动物繁殖专业的博士，该学科大量使用统计学；而他[姐姐](http://cwick.co.nz/)则拥有加州大学伯克利分校的统计学博士学位。
 
@@ -52,9 +41,7 @@ Wickham出生在新西兰汉密尔顿的一个统计学世家。他父亲[Brian 
 
 ![RLogo](https://cos.name/wp-content/uploads/2015/09/RLogo.png)
 
-
-  _R的标志，该语言的革命性演化部分归功于Hadley Wickham_
-
+R的标志，该语言的革命性演化部分归功于Hadley Wickham
 
 Wickham第一次接触R语言是在新西兰奥克兰大学攻读统计学本科学位时。他将其描述为“一种理解数据的程序语言”。比肩SQL和Python，R是最受数据科学家欢迎的语言之一。
 
