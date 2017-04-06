@@ -43,4 +43,5 @@ slug: 7th-chinar-hangzhou-openning-remarks-alibaba
 
 最后祝大家在今天的会议上有很好的收获，谢谢大家！
 
-> 本文由[北京数博思达信息科技有限公司](http://supstat.com.cn "北京数博思达信息科技有限公司")整理，原贴地址[http://supstat.com.cn/blog/2014/12/04/minwanli-at-7th-chinar-conference-hangzhou](http://supstat.com.cn/blog/2014/12/04/minwanli-at-7th-chinar-conference-hangzhou)。
+本文由[北京数博思达信息科技有限公司](http://supstat.com.cn "北京数博思达信息科技有限公司")整理
+原贴地址 <http://supstat.com.cn/blog/2014/12/04/minwanli-at-7th-chinar-conference-hangzhou>
