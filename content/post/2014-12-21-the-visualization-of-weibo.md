@@ -25,7 +25,7 @@ NBA投篮数据[可视化](http://peterbeshai.com/buckets/app/).
 
 # 技术篇
 
-2014年转眼就要结束了，从Hadoop 2005年加入Apache开始，这头小象也转眼就要十岁了。在2014年整个一年里，Hadoop技术有什么重要发展?商用Hadoop供应商都干了啥?Hadoop市场又有哪些大事发生?让我们来[盘点一下](http://t.cn/Rz1fEOF)吧!
+2014年转眼就要结束了，从Hadoop 2005年加入Apache开始，这头小象也转眼就要十岁了。在2014年整个一年里，Hadoop技术有什么重要发展？商用Hadoop供应商都干了啥？Hadoop市场又有哪些大事发生？让我们来[盘点一下](http://t.cn/Rz1fEOF)吧!
 
 Hadoop 正火的同时，一个新的开源软件正在崛起，是否会是下一个hadoop呢？它将何去何从？它的发展历史是怎样的，今天让我们一起来[见证一下](http://www.thebigdata.cn/JieJueFangAn/12877.html)。与 Hadoop 对比，如何看待 [Spark 技术](http://www.zhihu.com/question/26568496)？
 
