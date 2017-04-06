@@ -12,6 +12,7 @@ tags:
   - 社交网络
 slug: one-of-bear-reportsocial-network-data-analysis-and-application
 ---
+<!DOCTYPE html>
 <html>
 <head>
 <style>
