@@ -1,16 +1,14 @@
 ---
 title: 第六届中国R语言会议
-description: 第六届中国R语言会议
 date: '2013-04-01T15:37:43+00:00'
 author: 陈堰平
 ---
 
 R是一门用于数据分析和图形展示的语言、平台和环境，其官方机构每年都会举办useR!会议，各个国家及地区也定期有R用户的交流活动。在国内，自2008年以来，中国已经在北京和上海成功举办了五届R语言会议，促进了R语言在中国的推广和发展。为了进一步加强各领域R语言使用者之间的交流和互动，我们分别于2013年5月18-19日在北京、2013年11月2-3日在上海成功举办了第六届中国R语言会议。
 
-**北京会场和上海会场均已顺利召开，详情请见[北京会场会议纪要](/2013/05/6th-china-r-beijing-summary/)及[上海会场会议纪要](/2013/11/6th-china-r-shanghai-summary/)。**
+北京会场和上海会场均已顺利召开，详情请见[北京会场会议纪要](/2013/05/6th-china-r-beijing-summary/)及[上海会场会议纪要](/2013/11/6th-china-r-shanghai-summary/)。<!--more-->
 
-
-# **会议事宜（北京会场）**
+# 会议事宜（北京会场）
 
 ## 一、会议时间
 
@@ -75,31 +73,33 @@ Twitter：@cos_name
 
 ## 二、会议地点
 
-华东师范大学，中山北路校区，科学会堂二楼报告厅。地址：中山北路3663号（地铁3，4号线金沙江路站）。 步行方式：从地铁金沙江路站2号口出来，向左走，到前方的宁夏路路口右转，前行100米过中山北路路口，然后左转，步行200米，即可到达华师大的校门。 开车方式：内环金沙江路出口下来（以逆时针方向为例，顺时针方向下高架后需要在前方金沙江路口调头），靠右行驶两百米，留意路的右边有一个蓝色标牌，上书“进华师大车辆”，右转即可进入校门，一直向前，到先锋路（进校后第一个左转路口）左转，即可看到停车场的标志。科学会堂就在停车场旁边，靠近逸夫楼。 [![ECNU](https://cos.name/wp-content/uploads/2011/09/ECNU_MAP.png)](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
+华东师范大学，中山北路校区，科学会堂二楼报告厅。地址：中山北路3663号（地铁3，4号线金沙江路站）。 步行方式：从地铁金沙江路站2号口出来，向左走，到前方的宁夏路路口右转，前行100米过中山北路路口，然后左转，步行200米，即可到达华师大的校门。 开车方式：内环金沙江路出口下来（以逆时针方向为例，顺时针方向下高架后需要在前方金沙江路口调头），靠右行驶两百米，留意路的右边有一个蓝色标牌，上书“进华师大车辆”，右转即可进入校门，一直向前，到先锋路（进校后第一个左转路口）左转，即可看到停车场的标志。科学会堂就在停车场旁边，靠近逸夫楼。 
+
+[![ECNU](https://cos.name/wp-content/uploads/2011/09/ECNU_MAP.png)](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
 
 ## 三、会议主题
 
 本次会议的演讲主题有：
 
->   * Chih-Jen Lin：Experiences and Lessons in Developing Machine Learning and Data Mining Software
->   * 林祯舜：R与大数据对统计教育的影响
->   * 李忠：EBAY Multiscreen Insight
->   * 赵扬：Large Data Analysis using Rhipe/Rhadoop
->   * 朱筠珺：How R helps personalization analysis in marketing campaign
->   * 甘华来：R语言在旅游行业中的应用
->   * 严紫丹：x13季节调整方法的R实现及应用
->   * 魏太云，周扬：通向高富帅图表的R包——recharts
->   * 朱雪宁：微博那些事儿
->   * 何通：豆瓣网标签的整理和分析
->   * 刘思喆：R语言企业级应用
->   * 孙哲：小分队撬动大估值——关于零售金融服务行业的大数据应用模式探讨
->   * 许亮：复杂交易网络中的白富美挖掘
->   * 李洪成：用R进行高频金融数据分析简介
->   * 邓一硕：quantstrat包与R中的量化投资之路
->   * 罗立辉：R语言在陆面建模系统上的应用研究
->   * 李舰：中文文本挖掘和tmcn包
->   * 陈逸波：kaggle数据比赛的一些经验分享——以Amazon Employee Access Challenge为例
->   * 刘辰昂：use R for fun
+* Chih-Jen Lin：Experiences and Lessons in Developing Machine Learning and Data Mining Software
+* 林祯舜：R与大数据对统计教育的影响
+* 李忠：EBAY Multiscreen Insight
+* 赵扬：Large Data Analysis using Rhipe/Rhadoop
+* 朱筠珺：How R helps personalization analysis in marketing campaign
+* 甘华来：R语言在旅游行业中的应用
+* 严紫丹：x13季节调整方法的R实现及应用
+* 魏太云，周扬：通向高富帅图表的R包——recharts
+* 朱雪宁：微博那些事儿
+* 何通：豆瓣网标签的整理和分析
+* 刘思喆：R语言企业级应用
+* 孙哲：小分队撬动大估值——关于零售金融服务行业的大数据应用模式探讨
+* 许亮：复杂交易网络中的白富美挖掘
+* 李洪成：用R进行高频金融数据分析简介
+* 邓一硕：quantstrat包与R中的量化投资之路
+* 罗立辉：R语言在陆面建模系统上的应用研究
+* 李舰：中文文本挖掘和tmcn包
+* 陈逸波：kaggle数据比赛的一些经验分享——以Amazon Employee Access Challenge为例
+* 刘辰昂：use R for fun
 
 下载[会议手册](https://cos.name/wp-content/uploads/2013/10/ChinaR2013SH_Manual_V2.pdf)
 
@@ -120,11 +120,11 @@ Twitter：@cos_name
 
 本次会议得到了以下公司的赞助：
 
-**亿贝软件工程（上海）有限公司**
+- 亿贝软件工程（上海）有限公司
 
-**联系新加坡 （Contact Singapore）**
+- 联系新加坡 （Contact Singapore）
 
-**檬果咨询 （Mango Solutions）**
+- 檬果咨询 （Mango Solutions）
 
 ## 六、报名方式
 
