@@ -43,6 +43,21 @@ slug: one-of-bear-reportsocial-network-data-analysis-and-application
 
 根据速途研究院对手机音乐用户愿景的调查显示，有58%的用户希望增强个性化音乐推荐的功能，这说明有很多用户在收听音乐时其实并不清楚自己喜欢什么类型的歌曲，如果音乐电台能根据用户的个人喜好“猜出”用户喜欢什么歌曲并为其进行推荐，那将会给用户带来意想不到的完美体验。目前的很多音乐软件都支持推荐这一功能。以下是音乐App市场中常见的音乐产品的个性化推荐以及定制方式：
 
+<div>
+  <figure>
+    <img src="https://cos.name/wp-content/uploads/2015/10/004-150x150.jpg" alt="kugou" width="150" height="150">
+      <figcaption>酷狗音乐</figcaption>
+   </figure>
+    <figure>
+       <img src="https://cos.name/wp-content/uploads/2015/10/0051-150x150.jpg" alt="QQ" width="150" height="150">
+                <figcaption>QQ音乐</figcaption>
+     </figure>
+            <figure>
+                <img src="https://cos.name/wp-content/uploads/2015/10/006-150x150.jpg" alt="tiantian" width="150" height="150">
+                <figcaption>天天动听</figcaption>
+            </figure>
+            </div>  
+
 ![004](https://cos.name/wp-content/uploads/2015/10/004-150x150.jpg)
 ![005](https://cos.name/wp-content/uploads/2015/10/0051-150x150.jpg)
 ![006](https://cos.name/wp-content/uploads/2015/10/006-150x150.jpg)
