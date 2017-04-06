@@ -422,7 +422,3 @@ plot(cvfit5, main="Elastic Net")
 关于Elastic Net模型家族的特点和优劣，可以参考 <http://www4.stat.ncsu.edu/~post/josh/LASSO_Ridge_Elastic_Net_-_Examples.html>。
 
 最后，感谢COS编辑部的指正，也感谢大家的阅读。
-
-
-
----------------
