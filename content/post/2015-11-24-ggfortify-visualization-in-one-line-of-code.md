@@ -13,20 +13,17 @@ tags:
 slug: ggfortify-visualization-in-one-line-of-code
 ---
 
-本文作者： 唐源，目前就职于芝加哥一家创业公司，曾参与和创作过多个被广泛使用的 R 和 Python 开源项目，是 ggfortify，lfda，metric-learn 等包的作者，也是 xgboost，caret，pandas 等包的贡献者。（喜欢爬山和烧烤
-![](http://img.t.sinajs.cn/t4/appstyle/expression/ext/normal/0b/tootha_thumb.gif)）
+本文作者：唐源，目前就职于芝加哥一家创业公司，曾参与和创作过多个被广泛使用的R和Python开源项目，是ggfortify，lfda，metric-learn等包的作者，也是 xgboost，caret，pandas等包的贡献者。（喜欢爬山和烧烤）
 
-[ggfortify](https://github.com/sinhrks/ggfortify) 是一个简单易用的R软件包，它可以仅仅使用**一行代码**来对许多受欢迎的R软件包结果进行二维可视化，这让统计学家以及数据科学家省去了许多繁琐和重复的过程，不用对结果进行任何处理就能以 `ggplot` 的风格画出好看的图，大大地提高了工作的效率。
+[ggfortify](https://github.com/sinhrks/ggfortify) 是一个简单易用的R软件包，它可以仅仅使用**一行代码**来对许多受欢迎的R软件包结果进行二维可视化，这让统计学家以及数据科学家省去了许多繁琐和重复的过程，不用对结果进行任何处理就能以 `ggplot` 的风格画出好看的图，大大地提高了工作的效率。<!--more-->
 
 ggfortify 已经可以在 [CRAN](https://cran.fhcrc.org/web/packages/ggfortify/index.html) 上下载得到，但是由于最近很多的功能都还在快速增加，因此还是推荐大家从 [Github](https://github.com/sinhrks/ggfortify) 上下载和安装。
-
 
 ```r
 library(devtools)
 install_github('sinhrks/ggfortify')
 library(ggfortify)
 ```
-
 
 接下来我将简单介绍一下怎么用 `ggplot2` 和 `ggfortify` 来很快地对PCA、聚类以及LFDA的结果进行可视化，然后将简单介绍用 `ggfortify` 来对时间序列进行快速可视化的方法。
 
@@ -39,7 +36,6 @@ library(ggfortify)
 df <- iris[c(1, 2, 3, 4)]
 autoplot(prcomp(df))
 ```
-
 
 ![](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-1-1.png)你还可以选择数据中的一列来给画出的点按类别自动分颜色。输入`help(autoplot.prcomp)` 可以了解到更多的其他选择。
 
@@ -65,15 +61,13 @@ autoplot(prcomp(df), data = iris, colour = 'Species', shape = FALSE,label.size =
 
 ![ggfortify-unnamed-chunk-4-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-4-1.png)
 
-<!--more-->
-
 给定 `loadings = TRUE` 可以很快地画出特征向量。
 
 ```r
 autoplot(prcomp(df), data = iris, colour = 'Species', loadings = TRUE)
 ```
 
-[](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-5-1.png)同样的，你也可以显示特征向量的标识以及调整他们的大小，更多选择请参考帮助文件。
+![](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-5-1.png)同样的，你也可以显示特征向量的标识以及调整他们的大小，更多选择请参考帮助文件。
 
 ```r
 autoplot(prcomp(df), data = iris, colour = 'Species',
@@ -101,7 +95,7 @@ autoplot(d.factanal, label = TRUE, label.size = 3,
          loadings = TRUE, loadings.label = TRUE, loadings.label.size  = 3)
 ```
 
-[](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-7-2.png)
+![](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-7-2.png)
 
 # K-均值聚类
 
@@ -116,7 +110,7 @@ autoplot(kmeans(USArrests, 3), data = USArrests, label = TRUE,
          label.size = 3)
 ```
 
-[ggfortify-unnamed-chunk-8-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-8-2.png)
+![ggfortify-unnamed-chunk-8-2](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-8-2.png)
 
 # 其他聚类
 
@@ -135,7 +129,7 @@ autoplot(clara(iris[-5], 3))
 autoplot(fanny(iris[-5], 3), frame = TRUE)
 ```
 
-[ggfortify-unnamed-chunk-10-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-10-1.png)
+![ggfortify-unnamed-chunk-10-1](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-10-1.png)
 
 你也可以通过 `frame.type` 来选择圈的类型。更多选择请参照 [`ggplot2::stat_ellipse`](http://docs.ggplot2.org/dev/stat_ellipse.html) 里面的 `frame.type` 的 `type` 关键词。
 
@@ -143,7 +137,9 @@ autoplot(fanny(iris[-5], 3), frame = TRUE)
 autoplot(pam(iris[-5], 3), frame = TRUE, frame.type = 'norm')
 ```
 
-[](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-11-1.png)更多关于聚类方面的可视化请参考 Github 上的 [Vignette](https://github.com/sinhrks/ggfortify/tree/master/vignettes) 或者 [Rpubs](http://rpubs.com/sinhrks/plot_pca) 上的例子。
+![](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-11-1.png)
+
+更多关于聚类方面的可视化请参考 Github 上的 [Vignette](https://github.com/sinhrks/ggfortify/tree/master/vignettes) 或者 [Rpubs](http://rpubs.com/sinhrks/plot_pca) 上的例子。
 
 ## lfda（Fisher局部判别分析）
 
@@ -164,7 +160,7 @@ model <- klfda(kmatrixGauss(iris[-5]), iris[, 5], 4, metric="plain")
 autoplot(model, data = iris, frame = TRUE, frame.colour = 'Species')
 ```
 
-![](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-12-2.png)**注意** 对 `iris` 数据来说，不同的类之间的关系很显然不是简单的线性，这种情况下非线性的klfda 影响可能太强大而影响了可视化的效果，在使用前请充分理解每个算法的意义以及效果。
+![](https://cos.name/wp-content/uploads/2015/11/ggfortify-unnamed-chunk-12-2.png)**注意** 对`iris`数据来说，不同的类之间的关系很显然不是简单的线性，这种情况下非线性的klfda 影响可能太强大而影响了可视化的效果，在使用前请充分理解每个算法的意义以及效果。
 
 ```r
 # 半监督Fisher局部判别分析 (SELF)
@@ -213,10 +209,10 @@ autoplot(Canada, facets = FALSE)
 
 `autoplot` 也可以理解其他的时间序列类别。可支持的R包有：
 
-  * `zoo::zooreg`
-  * `xts::xts`
-  * `timeSeries::timSeries`
-  * `tseries::irts`
+* `zoo::zooreg`
+* `xts::xts`
+* `timeSeries::timSeries`
+* `tseries::irts`
 
 一些例子：
 
