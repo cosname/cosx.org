@@ -212,7 +212,6 @@ R语言会议官方网站：<http://china-r.org>
   * 华南统计科学研究中心QQ群
   
   ![16](https://cos.name/wp-content/uploads/2014/11/16.jpg)
-  
   * 华南统计科学研究中心微信群
   
   ![17](https://cos.name/wp-content/uploads/2014/11/17.jpg)
