@@ -38,25 +38,23 @@ slug: 8th-china-r-nanchang-summary
 
 江西财经大学金融管理国际研究院院长石劲教授随后发表了欢迎辞，对中国R会议首次来到华中地区、来到江西南昌表示欢迎。石院长对中国R语言会议的发展和影响力表示了充分肯定，并预祝本次大会取得圆满成功。
 
-## 2． 10月24日主会场演讲
+## 2. 10月24日主会场演讲
 
 开幕式结束后便开始了第一天主会场嘉宾的演讲，主要简介如下：
 
-  * **Terry O’Neill: Use of R at the Forefront of Actuarial Science**
+* **Terry O’Neill: Use of R at the Forefront of Actuarial Science**
 
     澳大利亚邦德大学精算学院院长、金融大数据分析中心主任Terry ;Neill教授以数据科学领域的精算科学为主题，讨论了R语言在精算学领域的前沿所扮演的角色。他在演讲中提到，R语言的发展之初具有很强的学术性，它始于一个核心统计学家用户群，但是现在R语言的用户群已经分布在了数据科学的各个领域。R已经被很多顶尖的精算行业组织，研究和教学机构所接受。精算学只有拥抱R语言才能更好的融入这个时代。
 
 ![005时代](https://cos.name/wp-content/uploads/2015/11/005时代.jpg)
 
-  * **Rob Hyndman: Forecasting Big Time Series Data using R**
+* **Rob Hyndman: Forecasting Big Time Series Data using R**
 
     澳大利亚莫纳什大学统计学教授、商务与经济预测中心主任Rob Hyndman教授讲述了R语言在大型时间序列数据预测方面的应用。他提出，对许多组织机构来说，定期对成千上万的时间序列进行预测越来越成为一种普遍的需求。例如，制造企业往往需要每周在数十个地点，对成千上万的产品需求进行预测以计划分配和维护适当的库存。他对当前进行大型时间序列数据预测技术进行了高屋建瓴的概括和效果展示。
 
 ![006展示](https://cos.name/wp-content/uploads/2015/11/006展示.jpg)
 
-
-
-  * **姚远：A Dynamic Approach to Sparse Recovery**
+* **姚远：A Dynamic Approach to Sparse Recovery**
 
     北京大学“百人计划”研究员，数学科学学院博士生导师姚远教授的报告是基于ODE的变量选择方法，他提出的方法既可以保证变量选择过程中的一致性，也保证了无偏性，因此优于著名的LASSO方法。他的研究团队还开发出了相应的R语言包。
 
@@ -64,19 +62,19 @@ slug: 8th-china-r-nanchang-summary
 
 
 
-  * **Michael O’Neill: High Frequency Analysis of Lead-Lag Relations in Exchange Traded Volatility Markets using R**
+* **Michael O’Neill: High Frequency Analysis of Lead-Lag Relations in Exchange Traded Volatility Markets using R**
 
     澳大利亚精算理事会主席、Investors Mutual Ltd.分析师Michael ;Neill教授分析了R语言在高频波动率交易市场的应用及相关研究成果。他指出，这项研究利用高频数据确定了价格发现以及交易所交易价格波动之间领先/落后的关系是否随着时间的推移发生了变化。
 
 ![008变化](https://cos.name/wp-content/uploads/2015/11/008变化.jpg)
 
-  * **Garry Khemka: The Effect of Objective Formulation on Retirement Decision Making**
+* **Garry Khemka: The Effect of Objective Formulation on Retirement Decision Making**
 
     澳大利亚邦德大学Garry Khemka教授分析了客观目标的设定对退休政策的影响，展示了如何通过动态优化结合蒙特卡洛模拟的方法达到个人选择最优化的目标。
 
 ![009目标](https://cos.name/wp-content/uploads/2015/11/009目标.jpg)
 
-  * **李舰：R与社会网络分析**
+* **李舰：R与社会网络分析**
 
     堡力山集团副总裁李舰先生讨论了R语言在社会网络分析方面的应用。社交网络分析（Social Network Analysis，SNA）是在传统的图与网络理论之上对社交网络数据进行分析的方法，如今已经成了大数据分析不可或缺的一部分。报告介绍了 SNA 的相关知识及其在R中的实现方式，并结合业界常用的Gephi软件进行图形化的讲解。此外，他还通过案例分享来说明社交网络分析的方法在业界的应用。
 
