@@ -245,7 +245,7 @@ ggplot(subset(stocks, year <= 40&inv.year >= 1957), aes(x = year, y = multip, gr
                 labels = as.character(2^c(-3:15))) +
   scale_x_continuous(breaks = seq(0,200,5)) +
   geom_smooth() +
-z_theme()
+  z_theme()
 ```
 
 
