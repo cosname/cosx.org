@@ -209,9 +209,9 @@ R语言会议官方网站：<http://china-r.org>
 
 * 中山大学 华南统计科学研究中心  <http://scrcss.sysu.edu.cn/> 
   * 华南统计科学研究中心QQ群
-![16](https://cos.name/wp-content/uploads/2014/11/16.jpg)
+  <img style="float: left;" src="https://cos.name/wp-content/uploads/2014/11/16.jpg"></img>
   * 华南统计科学研究中心微信群
-![17](https://cos.name/wp-content/uploads/2014/11/17.jpg)
+  <img style="float: left;" src="https://cos.name/wp-content/uploads/2014/11/17.jpg"></img>
 * 中山大学数学与计算科学学院 <http://math.sysu.edu.cn/>
 * 统计之都 <https://cos.name/>
 
