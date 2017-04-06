@@ -41,7 +41,7 @@ description: "猎聘每天有数万新用户注册。但是，其中有的用户
 
 ## （一）数据采集
 
-用于建模的训练数据主要来自三张表——user_c、user_register和res_user。表user_c主要存储用户的名片信息；user_register存储用户的注册信息；res_user存储用户的简历信息。从这三个表中我们抽取用户的名片信息及评级信息。（字段及对应含义见表-1）
+用于建模的训练数据主要来自三张表——user\_c、user\_register和res\_user。表user\_c主要存储用户的名片信息；user\_register存储用户的注册信息；res\_user存储用户的简历信息。从这三个表中我们抽取用户的名片信息及评级信息。（字段及对应含义见表-1）
 
 ![训练数据来源](https://cos.name/wp-content/uploads/2016/05/5ZZ@4BCMCDXL2U4_RZ0.png)
 
