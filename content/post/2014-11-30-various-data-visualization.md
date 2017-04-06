@@ -11,7 +11,7 @@ slug: various-data-visualization
 description: 你知道统计概念也能可视化嘛？如何用Shiny实现语音识别？硅谷大数据哪家强？它们又对哪些人才情有独钟？本期精选为你揭晓。
 ---
 
-本期投稿： [谢益辉](http://yihui.name/)  [邱怡轩](http://yixuan.cos.name/cn/) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
+本期投稿：[谢益辉](http://yihui.name/) [邱怡轩](http://yixuan.cos.name/cn/) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
