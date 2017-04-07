@@ -13,9 +13,10 @@ tags:
   - 空间数据
   - 航线
 slug: visualizing-flights-data
+description: 绘制数据地图是一种有效展现空间数据的方法，美丽的数据展示更容易引起读者的共鸣。本地图设计的初衷是展示中国航线的分布规律，进而可以分析成本、客流量等问题。
 ---
 
-> 本文作者：李根，资深数据分析师，数学爱好者。
+本文作者：李根，资深数据分析师，数学爱好者。
 
 绘制数据地图是一种有效展现空间数据的方法，美丽的数据展示更容易引起读者的共鸣。本地图设计的初衷是展示中国航线的分布规律，进而可以分析成本、客流量等问题。
 
@@ -23,7 +24,7 @@ slug: visualizing-flights-data
   
 <http://spatialanalysis.co.uk/2012/06/mapping-worlds-biggest-airlines/>
 
-## 一、地图数据来源
+# 一、地图数据来源
 
 地图所使用的数据均可以从网上下免费下载。
   
@@ -39,13 +40,12 @@ slug: visualizing-flights-data
 
 （注：都市地图是用来绘制灯光效果的。）
 
-<!--more-->
-
-## 二、地图绘制所需的包
+# 二、地图绘制所需的包
 
 以下软件包均是绘制地图相关的，其中有一些可能没有被直接使用。
 
-<pre>library(maptools)
+```r
+library(maptools)
 library(ggplot2)
 library(ggmap)
 library(maps)
@@ -53,7 +53,8 @@ library(rgeos)
 library(shapefiles)
 library(geosphere)
 library(plyr)
-library(sp)</pre>
+library(sp)
+```
 
 在Linux下，R语言中与地理相关的包可能需要安装如下工具：
 
@@ -62,9 +63,11 @@ library(sp)</pre>
 
 这两个软件互相依赖，需要同时安装、更新。例如对于Linux CentOS 5.5，可以运行如下命令:
 
-<pre>yum install geos-devel-3.2.2*.rpm geos-3.2.2*.rpm</pre>
+```bash
+yum install geos-devel-3.2.2*.rpm geos-3.2.2*.rpm
+```
 
-## 三、数据处理
+# 三、数据处理
 
 这一部分的主要工作是将shapefile文件转化为R可以识别的格式，然后建立数据与地图坐标间的关联。本文使用了航线频数来计算地图航线绘制的亮度。读者根据需要可以自行关联所需数据，例如成本，平均成本，旅客人次等，以达到不同的研究目的。
 
@@ -76,7 +79,8 @@ library(sp)</pre>
 
 代码如下：
 
-<pre># 读取都市地图文件 读取版图地图文件
+```r
+# 读取都市地图文件 读取版图地图文件
 urbanareasin &lt;- readShapePoly("ne_10m_urban_areas.shp")
 worldmapsin &lt;- readShapePoly("ne_10m_admin_0_countries.shp")
 # 以下为格式转化
@@ -124,19 +128,23 @@ rts.ff &lt;- fortify(rts)
 # 航线信息与航线坐标信息关联
 flights.ll$id &lt;- as.character(c(1:nrow(flights.ll)))
 table(gcircles$freq)
-gcircles &lt;- merge(rts.ff, flights.ll, all.x = T, by = "id")</pre>
+gcircles &lt;- merge(rts.ff, flights.ll, all.x = T, by = "id")
+```
 
 如代码中的注释所述，data3.redu2s这个变量可以从routes.dat读取得到，过程如下：
 
-<pre>data3.redu2s &lt;- read.table("routes.dat", sep = ",", header = FALSE)
+```r
+data3.redu2s &lt;- read.table("routes.dat", sep = ",", header = FALSE)
 colnames(data3.redu2s)[c(3, 5)] &lt;- c("AIRPORT_FROM_&lt;wbr />CODE",
-                                     "AIRPORT_TO_CODE")</pre>
+                                     "AIRPORT_TO_CODE")
+```
 
-## 四、地图旋转
+# 四、地图旋转
 
 这一步是对地图进行坐标变换，设置中国为世界中心，这里做了简单的坐标加减运算。代码如下：
 
-<pre>center &lt;- 115
+```r
+center &lt;- 115
 # 航线坐标计算中心距离
 gcircles$long.recenter &lt;- ifelse(gcircles$long &lt; center - 
     180, gcircles$long + 360, gcircles$long)
@@ -145,18 +153,20 @@ gcircles$long.recenter &lt;- ifelse(gcircles$long &lt; center -
 worldmap$long.recenter &lt;- ifelse(worldmap$long &lt; center - 
     180, worldmap$long + 360, worldmap$long)
 urbanareas$long.recenter &lt;- ifelse(urbanareas$long &lt; 
-    center - 180, urbanareas$long + 360, urbanareas$long</pre>
+    center - 180, urbanareas$long + 360, urbanareas$long
+ ```
 
 由于地图是图形数据，若是简单移动，地图会被切割，绘制时会出现图形变形等错误，故需要对地图数据进行再处理。该过程分为两步：
 
   * 处理1：图形切割后，切割图形重分组。
   * 处理2：重分组后，非闭合图形，闭合处理。
 
-### 1. 切割图形重分组
+## 1. 切割图形重分组
 
 在参考文献中提到的方法如下：
 
-<pre>RegroupElements &lt;- function(df, longcol, idcol) {
+```r
+RegroupElements &lt;- function(df, longcol, idcol) {
     g &lt;- rep(1, length(df[, longcol]))
     if (diff(range(df[, longcol])) &gt; 300) {
         # check if longitude within group differs more than
@@ -173,13 +183,15 @@ urbanareas$long.recenter &lt;- ifelse(urbanareas$long &lt;
     df$group.regroup &lt;- g
     df
 }
-gcircles.rg &lt;- ddply(gcircles, .(id), RegroupElements, "long.recenter", "id")</pre>
+gcircles.rg &lt;- ddply(gcircles, .(id), RegroupElements, "long.recenter", "id")
+```
 
 以上方法，计算少量图形数据时（如gcircles）效果尚可。但一旦数据量级提高，其计算效率将极低。笔者电脑（10G内存）运行 urbanareas 数据，内存占用一度爆表，而且40多分钟未出结果。所以笔者重写了该算法，重写后占用内存可忽略，10秒内计算完成。
 
 改进算法如下：
 
-<pre># 开始写原始算法替换函数 世界地图重分组
+```r
+# 开始写原始算法替换函数 世界地图重分组
 worldmap.mean &lt;- aggregate(x = worldmap[, c("long.recenter")], 
     by = list(worldmap$group), FUN = mean)
 worldmap.min &lt;- aggregate(x = worldmap[, c("long.recenter")], 
@@ -214,13 +226,15 @@ urbanareast[(urbanareast$max &gt; 180) & (urbanareast$min &lt;
     180) & (urbanareast$long.recenter &gt; 180), c("group.regroup")] &lt;- 2
 urbanareast$group.regroup &lt;- paste(urbanareast$group, 
     urbanareast$group.regroup, sep = ".")
-urbanareas.rg &lt;- urbanareast</pre>
+urbanareas.rg &lt;- urbanareast
+```
 
-### 2. 闭合曲线
+## 2. 闭合曲线
 
 闭合曲线原文也存在算法效率低缺陷，直接上重写的算法：
 
-<pre># 闭合曲线
+```r
+# 闭合曲线
 worldmap.rg &lt;- worldmap.rg[order(worldmap.rg$group.regroup, 
     worldmap.rg$order), ]
 worldmap.begin &lt;- worldmap.rg[!duplicated(worldmap.rg$group.regroup), 
@@ -250,28 +264,32 @@ urbanareas.end[!urbanareas.flag, ]
 urbanareas.plus$order &lt;- urbanareas.end$order[!urbanareas.flag] + 1
 urbanareas.cp &lt;- rbind(urbanareas.rg, urbanareas.plus)
 urbanareas.cp &lt;- urbanareas.cp[order(urbanareas.cp$group.regroup, 
-    urbanareas.cp$order), ]</pre>
+    urbanareas.cp$order), ]
+```
 
-## 五、绘制图像
+# 五、绘制图像
 
 数据齐全了，该绘制图像了。本文绘制图像使用了ggplot函数，由于ggplot2的参考书籍较多，因此相关函数就不一一介绍。地图的设计是可通过调节放大系数以输出不同品质的图像，主要分两步：
 
-### 1. 绘制背景
+## 1. 绘制背景
 
 背景是点线地图，而且精度较高，夜景图边界线意义不大，因此处理起来较简单。代码如下：
 
-<pre>wrld &lt;- geom_polygon(aes(long.recenter, lat, group = group.regroup), 
+```r
+wrld &lt;- geom_polygon(aes(long.recenter, lat, group = group.regroup), 
     size = 0.1, colour = "#090D2A", fill = "#090D2A", 
     alpha = 1, data = worldmap.cp)
 urb &lt;- geom_polygon(aes(long.recenter, lat, group = group.regroup), 
     size = 0.3, color = "#FDF5E6", fill = "#FDF5E6", 
-    alpha = 1, data = urbanareas.cp)</pre>
+    alpha = 1, data = urbanareas.cp)
+```
 
-### 2. 绘制航线
+## 2. 绘制航线
 
 航线是由线组成的，放大时线的宽度、光晕宽度变化比例与图形变化比例不一致，需要分开调节。根据图形知识，该变化应是函数关系。这里给出一种较美观的函数关系，有兴趣的同学可以继续优化该函数。另外本文与原地图的一个不同之处是增加了光晕效果，图片十分绚丽。其原理是使用高透明度的辅助线。线的光晕亮度和航线频率相关，相关的代码如下：
 
-<pre># 放大系数
+```r
+# 放大系数
 bigmap &lt;- 1
 airline &lt;- geom_line(aes(long.recenter, lat, group = group.regroup, 
     alpha = max(freq)^0.6 * freq^0.4, color = 0.9 * 
@@ -318,6 +336,7 @@ ggplot() + wrld + urb + airline +
         axis.text = element_blank(),
         legend.position = "none")
     ) + ylim(-65, 75) + coord_equal()
-dev.off()</pre>
+dev.off()
+```
 
 完整尺寸的超清航线夜景图可以在[这里下载](https://cos.name/wp-content/uploads/2014/09/flight-night-scene-HD.png)得到（7.9M）。
