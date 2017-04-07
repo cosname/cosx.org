@@ -10,6 +10,7 @@ tags:
   - 深度学习
   - 统计学习
 slug: statistics-courier
+description: 你听说过维数灾难嘛？你知道维数灾难还能可视化嘛？当你提出一种新的统计方法时，有一个竞争平台可以帮你客观的把自己的方法与其他方法比较，你知道是什么嘛？更多有趣知识尽在本期COS精选。
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
@@ -18,15 +19,11 @@ slug: statistics-courier
 
 **数据可视化**
 
-<p style="text-align: justify;">
   基于Shiny的维数灾难的[可视化](http://simplystatistics.org/2014/10/24/an-interactive-visualization-to-teach-about-the-curse-of-dimensionality/)（随着维数增加，给定边长的立方体容纳的点会越来越稀疏）。
-</p>
 
 **统计方法**
 
 每一种新的统计方法被发表时，作者不免要和已有的方法进行比较，但这里面存在一些问题，例如作者可能并不完全了解其它方法，在比较的时候可能会有所偏颇，或者软件实现不正确或效率低下，等等。对这些问题Matthew Stephens提出了他的设想，何不搭建一个[竞争平台](http://randomdeviation.blogspot.com/2014/10/data-driven-discovery.html)？如果你的方法被别的作者认为不如他们的方法，你可以到这个平台上来看他们是如何进行比较的，以及考虑改进你的方法和软件实现。
-
-<!--more-->
 
 **Quora 问题**
 
@@ -34,7 +31,7 @@ slug: statistics-courier
 
 观众吐槽：神经网络换个马甲而已瞎，激动个什么呀。
 
-[<strong>Simply statstics</strong>](http://simplystatistics.org/)
+[Simply statstics](http://simplystatistics.org/)
 
 神不知鬼不觉地改版了。最新博客：做一个明媚的统计学家，不倾国，不倾城，以优雅的姿态摸爬滚打，[耐得住寂寞，守得住繁华](http://simplystatistics.org/2014/10/28/why-i-support-statisticians-and-their-resistance-to-hype/)。
 
