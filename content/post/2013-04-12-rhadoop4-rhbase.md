@@ -80,14 +80,11 @@ hbase安装
 
 1) 下载安装hbase
 
-```
     ~ http://www.fayea.com/apache-mirror/hbase/hbase-0.94.2/hbase-0.94.2.tar.gz
-    ~ tar xvf hbase-0.94.2.tar.gz
-```    
+    ~ tar xvf hbase-0.94.2.tar.gz    
 
 2) 修改配置文件
 
-```
     ~ cd hbase-0.94.2/
     ~ vi conf/hbase-env.sh 
     
@@ -129,28 +126,22 @@ hbase安装
             <name>hbase.zookeeper.property.dataDir</name>
             <value>/root/hadoop/hdata</value>
           </property>
-        </configuration>
-```    
+        </configuration>    
 
 3) 复制hadoop环境的配置文件和类库
 
-```
       ~ cp ~/hadoop-1.0.3/conf/hdfs-site.xml ~/hbase-0.94.2/conf
       ~ cp ~/hadoop-1.0.3/hadoop-core-1.0.3.jar ~/hbase-0.94.2/lib
       ~ cp ~/hadoop-1.0.3/lib/commons-configuration-1.6.jar ~/hbase-0.94.2/lib
-      ~ cp ~/hadoop-1.0.3/lib/commons-collections-3.2.1.jar ~/hbase-0.94.2/lib
-```    
+      ~ cp ~/hadoop-1.0.3/lib/commons-collections-3.2.1.jar ~/hbase-0.94.2/lib    
 
 4) 启动hadoop和hbase
 
-```
       ~/hadoop-1.0.3/bin/start-all.sh
       ~/hbase-0.94.2/bin/start-hbase.sh 
-```    
 
 5) 查看hbase进行
 
-```
     ~ jps
     
         12041 HMaster
@@ -161,12 +152,10 @@ hbase安装
         13328 Jps
         31596 JobTracker
         11916 HQuorumPeer
-        31216 NameNode
-```    
+        31216 NameNode    
 
 6) 打开hbase命令行客户端
 
-```
     ~/hbase-0.94.2/bin/hbase shell
     
     HBase Shell; enter 'help<RETURN>' for list of supported commands.
@@ -176,8 +165,7 @@ hbase安装
     hbase(main):001:0> list
     
         TABLE
-        0 row(s) in 0.0150 seconds
-```    
+        0 row(s) in 0.0150 seconds   
 
 HBase安装完成。
 
@@ -201,27 +189,20 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 
   1. 下载thrift 
 
-```
         ~ wget http://archive.apache.org/dist/thrift/0.8.0/thrift-0.8.0.tar.gz
         ~ tar xvf thrift-0.8.0.tar.gz
-        ~ cd thrift-0.8.0/
-```        
+        ~ cd thrift-0.8.0/        
 
   2. 下载PHP支持类库(可选) 
 
-```
-     ~ sudo apt-get install php-cli
-```        
+        ~ sudo apt-get install php-cli        
 
   3. 下载C++支持类库(可选) 
 
-```
-        ~ sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev
-```        
+        ~ sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev        
 
   4. 生成编译的配置参数 
 
-```
         ~ ./configure
         
           thrift 0.8.0
@@ -245,27 +226,21 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
         
           Using Python ................. : /usr/bin/python
         
-          Using php-config ............. : /usr/bin/php-config
-```        
+          Using php-config ............. : /usr/bin/php-config        
 
   5. 编译和安装 
 
-```
         ~ make
-        ~ make install
-```        
+        ~ make install        
 
   6. 查看thrift版本 
   
-```
         ~ thrift -version
         
-          Thrift version 0.8.0
-```        
+          Thrift version 0.8.0        
 
   7. 启动HBase的Thrift Server 
-  
-```    
+      
          ~ /hbase-0.94.2/bin/hbase-daemon.sh start thrift
         
           ~ jps 
@@ -279,14 +254,11 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
               13328 Jps
               31596 JobTracker
               11916 HQuorumPeer
-              31216 NameNode
-```        
+              31216 NameNode        
 
   8. 安装rhbase 
-   
-```       
-       ~ R CMD INSTALL rhbase_1.1.1.tar.gz
-```        
+          
+       ~ R CMD INSTALL rhbase_1.1.1.tar.gz        
 
 很顺利的安装完成。
 
@@ -296,16 +268,13 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 
 # rhbase的相关函数：
 
-```
     hb.compact.table      hb.describe.table     hb.insert             hb.regions.table
     hb.defaults           hb.get                hb.insert.data.frame  hb.scan
     hb.delete             hb.get.data.frame     hb.list.tables        hb.scan.ex
-    hb.delete.table       hb.init               hb.new.table          hb.set.table.mode
-```    
+    hb.delete.table       hb.init               hb.new.table          hb.set.table.mode    
 
 # hbase和rhbase的基本操作对比：
 
-```
     建表
     HBASE:     create 'student_shell','info'
     RHBASE:    hb.new.table("student_rhbase","info")
@@ -329,14 +298,12 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
     删除表(HBASE需要两条命令，rhbase仅是一个操作)
     HBASE:     disable 'student_shell'
     HBASE:     drop 'student_shell'
-    RHBASE:    hb.delete.table('student_rhbase')
-```    
+    RHBASE:    hb.delete.table('student_rhbase')    
 
 ### **代码部分：**
 
 Hbase Shell
 
-```
     > create 'student_shell','info'
     > list
     
@@ -360,12 +327,10 @@ Hbase Shell
       info:age                   timestamp=1365414964962, value=19
     
     > disable 'student_shell'
-    > drop 'student_shell'
-```    
+    > drop 'student_shell'    
 
 rhbase script
 
-```
     ~ R
     > library(rhbase)
     > hb.init()
@@ -412,8 +377,7 @@ rhbase script
     
     > hb.delete.table('student_rhbase')
     
-        [1] TRUE
-```    
+        [1] TRUE    
 
 RHadoop实践系列文章的第四篇完成！希望这个四篇文章对大家有所帮助。
   
