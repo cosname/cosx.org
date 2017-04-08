@@ -17,7 +17,7 @@ slug: valentines-gift-by-using-r
 首先，我利用**grid.lines()**把转化为直角坐标系的(x, y)两两相连围成心形，构建了一个heart function作为基本图形。
 
 `$$x & = 16(\text{sin}t)^3 \\
-y & = 13\text{cos}t – 5\text{cos}2t – 2\text{cos}3t – \text{cos}4t$$`
+  y & = 13\text{cos}t – 5\text{cos}2t – 2\text{cos}3t – \text{cos}4t$$`
 
 ![](https://cos.name/wp-content/uploads/2012/02/heart.png)
 
