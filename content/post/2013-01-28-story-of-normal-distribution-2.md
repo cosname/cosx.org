@@ -143,9 +143,9 @@ slug: story-of-normal-distribution-2
 
 # 7. 正态魅影
 
-_Everyone believes in it: experimentalists believing that it is a mathematical theorem, mathematicians believing that it is an empirical fact._
-  
-_— Henri Poincaré_
+>Everyone believes in it: experimentalists believing that it is a mathematical theorem, mathematicians believing that it is an empirical fact._
+>
+>— Henri Poincaré
 
 如果说，充斥着偶然性的世界是一个纷乱的世界，那么，正态分布为这个纷乱的世界建立了一定的秩序，使得偶然性现象在数量上被计算和预测成为可能。杰恩斯在《概率论沉思录》中提出了两个问题
 
@@ -180,10 +180,13 @@ _— Henri Poincaré_
 
 # 8. 大道至简,大美天成
 
-_To see a world in a grain of sand_
-_And a heaven in a wild flower,_
-_Hold infinity in the palm of your hand_
-_And eternity in an hour._
+>To see a world in a grain of sand
+>
+>And a heaven in a wild flower,
+>
+>Hold infinity in the palm of your hand
+>
+>And eternity in an hour.
 
 `$$\overline{X} = \frac{X_1 + X_2 + \cdots + X_n}{n} $$`
   
@@ -199,25 +202,25 @@ _And eternity in an hour._
 
 几乎所有的人都或多或少的接触数学，虽然各自的目的不同，对数学的感觉也不同。工程师、科学家们使用数学是因为他简洁而实用，数学家们研究数学是因为它的美丽动人。像正态分布这样，既吸引着无数的工程师、科学家，在实践中被如此广泛的应用，又令众多的数学家为之魂牵梦绕的数学存在，在数学的世界里也并不多见。我在读研究生的时候，经常逛北大未名BBS 的数学板，有一个叫 ukim 的著名 ID 在精华区里面留下了一个介绍数学家八卦的系列《Heroes in My Heart》，写得非常的精彩，这些故事在喜欢数学的人群中也流传广泛。最后一个八卦是关于菲尔兹奖得主法国数学家托姆(René Thom)的，它曾经令无数人感动，我也借用来作为我对正态分布的八卦的结语：
 
-_在一次采访当中，作为数学家的托姆同两位古人类学家讨论问题。谈到远古的人们为什么要保存火种时，一个人类学家说，因为保存火种可以取暖御寒；另外一个人类学家说，因为保存火种可以烧出鲜美的肉食。而托姆说，因为夜幕来临之际，火光摇曳妩媚，灿烂多姿，是最美最美的……_
+在一次采访当中，作为数学家的托姆同两位古人类学家讨论问题。谈到远古的人们为什么要保存火种时，一个人类学家说，因为保存火种可以取暖御寒；另外一个人类学家说，因为保存火种可以烧出鲜美的肉食。而托姆说，因为夜幕来临之际，火光摇曳妩媚，灿烂多姿，是最美最美的……
 
 ![fire](https://cos.name/wp-content/uploads/2013/01/fire.jpg)
 
 # 9. 推荐阅读
 
-_All knowledge is, in the final analysis, history._
-  
-_All sciences are, in the abstract, mathematics._
-  
-_All methods of acquiring knowledge are, essentially, through statistics._
-
-在终极的分析中，一切知识都是历史；
-  
-在抽象的意义下，一切科学都是数学；
-  
-在理性的基础上，所有的判断都是统计学。
-
-_— C. R. Rao_
+>All knowledge is, in the final analysis, history.
+>
+>All sciences are, in the abstract, mathematics.
+>
+>All methods of acquiring knowledge are, essentially, through statistics.
+>
+>在终极的分析中，一切知识都是历史；
+>
+>在抽象的意义下，一切科学都是数学；
+> 
+>在理性的基础上，所有的判断都是统计学。
+>
+>— C. R. Rao
   
 
 本人并非统计学专业人士，只是凭个人兴趣做一点知识的传播。对统计学历史知识的介绍，专业性和系统性都不是我的目的，我更在乎的是趣味性，因为没有趣味就不会有传播。如果读完这段历史会让你觉得正态分布更加亲切，不再那么遥不可及，那我的目的达到了。如果正态分布是一滴水，我愿大家都能看到它折射出的七彩虹。
