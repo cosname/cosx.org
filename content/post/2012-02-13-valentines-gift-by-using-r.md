@@ -1,6 +1,5 @@
 ---
 title: 用R绘制情人节的礼物
-description: 情人节将至，作者用R语言的**grid**包画了几幅图片赠与相恋五年的男友，也希望与各位统计爱好者分享快乐。
 date: '2012-02-13T20:00:05+00:00'
 author: 林宇
 categories:
@@ -13,16 +12,16 @@ slug: valentines-gift-by-using-r
 
 > 作者简介：林宇，加拿大西安大略大学精算专业在读硕士。
 
-据说笛卡尔死前寄出的最后一封信，里面只有短短的一行：`\(r = a(1- \text{sin}\theta)\)`，这就是有名的心形函数。情人节将至，我用R语言的**grid**包画了几幅图片，希望借此平台赠与我相恋五年的男友，也希望与各位统计爱好者分享快乐。
+据说笛卡尔死前寄出的最后一封信，里面只有短短的一行：$r = a(1- \text{sin}\theta) $，这就是有名的心形函数。情人节将至，我用R语言的**grid**包画了几幅图片，希望借此平台赠与我相恋五年的男友，也希望与各位统计爱好者分享快乐。
 
 首先，我利用**grid.lines()**把转化为直角坐标系的(x, y)两两相连围成心形，构建了一个heart function作为基本图形。
 
 $$\begin{split}
-  
+
 x & = 16(\text{sin}t)^3 \\
-  
+
 y & = 13\text{cos}t – 5\text{cos}2t – 2\text{cos}3t – \text{cos}4t
-  
+
 \end{split}$$
 
 ![](https://cos.name/wp-content/uploads/2012/02/heart.png)
@@ -47,8 +46,7 @@ y & = 13\text{cos}t – 5\text{cos}2t – 2\text{cos}3t – \text{cos}4t
 
 以下是“情人节礼物”的代码：
 
-```r
-library(grid)
+<pre>library(grid)
 
 #heart function
 heart &lt;- function(lcolor){
