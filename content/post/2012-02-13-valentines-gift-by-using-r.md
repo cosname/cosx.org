@@ -17,8 +17,11 @@ slug: valentines-gift-by-using-r
 首先，我利用**grid.lines()**把转化为直角坐标系的(x, y)两两相连围成心形，构建了一个heart function作为基本图形。
 
 $$\begin{split}
+
 x & = 16(\text{sin}t)^3 \\
+
 y & = 13\text{cos}t – 5\text{cos}2t – 2\text{cos}3t – \text{cos}4t
+
 \end{split}$$
 
 ![](https://cos.name/wp-content/uploads/2012/02/heart.png)
@@ -95,4 +98,3 @@ grid.text("Happy valentine's day!",
 vp3 &lt;- viewport(-0.65, 1.2, w=.3, h=.3,angle=-30)
 pushViewport(vp3)
 rose()</pre>
-```
