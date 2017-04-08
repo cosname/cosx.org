@@ -1,5 +1,6 @@
 ---
 title: 25年后的统计系会是什么样？
+description: 本文是统计学家Leo Breiman1994年在加州伯克利统计系毕业典礼上的讲话。
 date: '2012-02-21T14:21:11+00:00'
 author: COS编辑部
 categories:
