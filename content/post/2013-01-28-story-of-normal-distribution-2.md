@@ -143,7 +143,7 @@ slug: story-of-normal-distribution-2
 
 # 7. 正态魅影
 
->Everyone believes in it: experimentalists believing that it is a mathematical theorem, mathematicians believing that it is an empirical fact._
+>Everyone believes in it: experimentalists believing that it is a mathematical theorem, mathematicians believing that it is an empirical fact.
 >
 >— Henri Poincaré
 
