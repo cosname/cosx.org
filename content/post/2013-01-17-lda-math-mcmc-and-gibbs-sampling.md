@@ -109,7 +109,7 @@ $$`
     \end{bmatrix} $$`
 
   1.  `$ \displaystyle \pi(j) = \sum_{i=0}^{\infty}\pi(i)P_{ij} $`
-  2.  `$\pi$` 是方程 `$\pi P = \pi$` 的唯一非负解
+  1.  `$\pi$` 是方程 `$\pi P = \pi$` 的唯一非负解
 
 其中,
   
@@ -129,7 +129,7 @@ P(X_{n+1}=j) & = \sum_{i=0}^\infty P(X_n=i) P(X_{n+1}=j|X_n=i) \\
 & = \sum_{i=0}^\infty P(X_n=i) P_{ij}
 \end{align*}`
   
-    上式两边取极限就得到 `$ \displaystyle \pi(j) = \sum_{i=0}^{\infty}\pi(i)P_{ij}$`
+上式两边取极限就得到 `$ \displaystyle \pi(j) = \sum_{i=0}^{\infty}\pi(i)P_{ij}$`
 
 从初始概率分布`$\pi_0$`出发，我们在马氏链上做状态转移，记`$X_i$`的概率分布为`$\pi_i$`，则有
   
@@ -251,7 +251,7 @@ p(x_1,y_2)p(y_1|x_1) = p(x_1)p(y_2|x_1)p(y_1|x_1)
   
 `\begin{equation}
 \label{gibbs-detailed-balance}
-p(x_1,y_1)p(y_2|x_1) = p(x_1,y_2)p(y_1|x_1)  \quad (\***)
+p(x_1,y_1)p(y_2|x_1) = p(x_1,y_2)p(y_1|x_1)  \quad (***)
 \end{equation}`
   
 即
