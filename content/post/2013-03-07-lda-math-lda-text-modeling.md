@@ -205,7 +205,7 @@ p(z_i = k|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}) \pr
 
 ![lda-training](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-training.jpg)
 
-对于 Gibbs Sampling 算法实现的细节，请参考 Gregor Heinrich 的 _Parameter estimation for text analysis_ 中对算法的描述，以及 PLDA(http://code.google.com/p/plda) 的代码实现，此处不再赘述。
+对于 Gibbs Sampling 算法实现的细节，请参考 Gregor Heinrich 的 _Parameter estimation for text analysis_ 中对算法的描述，以及 [PLDA](http://code.google.com/p/plda) 的代码实现，此处不再赘述。
 
 由这个topic-word 频率矩阵我们可以计算每一个`$p(word|topic)$`概率，从而算出模型参数`$\overrightarrow{\varphi}_1, \cdots, \overrightarrow{\varphi}_K$`，这就是上帝用的`$K$`个 topic-word 骰子。当然，语料中的文档对应的骰子参数 `$\overrightarrow{\theta}_1, \cdots, \overrightarrow{\theta}_M$`在以上训练过程中也是可以计算出来的，只要在 Gibbs Sampling 收敛之后，统计每篇文档中的 topic 的频率分布，我们就可以计算每一个`$p(topic|doc)$`概率，于是就可以计算出每一个`$\overrightarrow{\theta}_m$`。由于参数`$\overrightarrow{\theta}_m$`是和训练语料中的每篇文档相关的，对于我们理解新的文档并无用处，所以工程上最终存储 LDA 模型时候一般没有必要保留。通常，在 LDA 模型训练的过程中，我们是取 Gibbs Sampling 收敛之后的`$n$`个迭代的结果进行平均来做参数估计，这样模型质量更高。
 
