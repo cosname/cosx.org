@@ -118,7 +118,7 @@ p(\overrightarrow{\mathbf{w}} |\overrightarrow{\mathbf{z}},\overrightarrow{\beta
 p(\overrightarrow{\mathbf{w}},\overrightarrow{\mathbf{z}} |\overrightarrow{\alpha}, \overrightarrow{\beta}) &=
 p(\overrightarrow{\mathbf{w}} |\overrightarrow{\mathbf{z}}, \overrightarrow{\beta}) p(\overrightarrow{\mathbf{z}} |\overrightarrow{\alpha}) \notag \\
 &= \prod_{k=1}^K \frac{\Delta(\overrightarrow{n}_k+\overrightarrow{\beta})}{\Delta(\overrightarrow{\beta})}
-\prod_{m=1}^M \frac{\Delta(\overrightarrow{n}_m+\overrightarrow{\alpha})}{\Delta(\overrightarrow{\alpha})}  \quad\quad (***)
+\prod_{m=1}^M \frac{\Delta(\overrightarrow{n}_m+\overrightarrow{\alpha})}{\Delta(\overrightarrow{\alpha})}   (***)
 \end{align}`
 
 此处的符号表示稍微不够严谨, 向量`$\overrightarrow{n}_k$`，`$\overrightarrow{n}_m$`都用`$n$`表示，主要通过下标进行区分， `$k$`下标为 topic 编号, `$m$`下标为文档编号。
@@ -143,7 +143,7 @@ p(z_i = k, w_i = t |\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathb
 
 由于在语料去掉第`$i$`个词对应的`$(z_i, w_i)$`，并不改变我们之前讨论的`$M+K$`个 Dirichlet-Multinomial 共轭结构，只是某些地方的计数会减少。所以`$\overrightarrow{\theta}_m, \overrightarrow{\varphi}_k$`的后验分布都是 Dirichlet:
 
-`begin{align*}
+`\begin{align*}
 p(\overrightarrow{\theta}_m|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}_{\neg i})
 &= Dir(\overrightarrow{\theta}_m| \overrightarrow{n}_{m,\neg i} + \overrightarrow{\alpha}) \\
 p(\overrightarrow{\varphi}_k|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}_{\neg i})
