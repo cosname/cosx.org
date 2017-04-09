@@ -23,7 +23,7 @@ slug: lda-math-lda-text-modeling
 
 ![lda-dice](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dice.jpg)
 
-** LDA模型 **
+**LDA模型**
 
 在 LDA 模型中, 上帝是按照如下的规则玩文档生成的游戏的
 
@@ -40,7 +40,7 @@ slug: lda-math-lda-text-modeling
 
 ![word-topic-vector](http://www.52nlp.cn/wp-content/uploads/2013/02/word-topic-vector.jpg)
 
-** 语料生成过程中的 word 和 topic **
+**语料生成过程中的 word 和 topic**
 
 ## 5.2 物理过程分解
 
@@ -48,7 +48,7 @@ slug: lda-math-lda-text-modeling
 
 ![lda-graph-model](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-graph-model.jpg)
 
-** LDA概率图模型表示 **
+**LDA概率图模型表示**
 
 这个概率图可以分解为两个主要的物理过程：
 
@@ -152,20 +152,6 @@ p(\overrightarrow{\varphi}_k|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarr
 
 使用上面两个式子，把以上想法综合一下，我们就得到了如下的 Gibbs Sampling 公式的推导
 
-=
-  
-=
-  
-=
-  
-=
-  
-=
-  
-=
-  
-=
-
 `\begin{align*}
 p(z_i = k|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}) & \propto
 p(z_i = k, w_i = t |\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}_{\neg i}) \\
@@ -206,7 +192,7 @@ p(z_i = k|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}) \pr
 
 ![gibbs-path-search](http://www.52nlp.cn/wp-content/uploads/2013/02/gibbs-path-search.jpg)
 
-** doc-topic-word 路径概率 **
+**doc-topic-word 路径概率**
 
 ## 5.4 Training and Inference
 
