@@ -81,61 +81,61 @@ yum install geos-devel-3.2.2*.rpm geos-3.2.2*.rpm
 
 ```r
 # 读取都市地图文件 读取版图地图文件
-urbanareasin &lt;- readShapePoly("ne_10m_urban_areas.shp")
-worldmapsin &lt;- readShapePoly("ne_10m_admin_0_countries.shp")
+urbanareasin <- readShapePoly("ne_10m_urban_areas.shp")
+worldmapsin <- readShapePoly("ne_10m_admin_0_countries.shp")
 # 以下为格式转化
-worldmap &lt;- fortify(worldmapsin)
-urbanareas &lt;- fortify(urbanareasin)
+worldmap <- fortify(worldmapsin)
+urbanareas <- fortify(urbanareasin)
 gpclibPermit()
 # 开始抽取机场数据
-airports &lt;- read.table("airports.dat", sep = ",", header = FALSE)
-worldport &lt;- airports[airports$V5 != "", c("V3", "V5", 
+airports <- read.table("airports.dat", sep = ",", header = FALSE)
+worldport <- airports[airports$V5 != "", c("V3", "V5", 
     "V7", "V8", "V9")]
-names(worldport) &lt;- c("city", "code", "lan", "lon", "att")
-worldport$lan &lt;- as.numeric(as.character(worldport$lan))
-worldport$lon &lt;- as.numeric(as.character(worldport$lon))
+names(worldport) <- c("city", "code", "lan", "lon", "att")
+worldport$lan <- as.numeric(as.character(worldport$lan))
+worldport$lon <- as.numeric(as.character(worldport$lon))
 # 找出所有航线有标识的机场（这里的data3.redu2s是我个人的航线数据
 # 读者可以用上文提到的航线数据routes.dat代替）
-lineinworld &lt;- (data3.redu2s$AIRPORT_FROM_CODE %in% 
+lineinworld <- (data3.redu2s$AIRPORT_FROM_CODE %in% 
     worldport$code) & (data3.redu2s$AIRPORT_TO_CODE %in% 
     worldport$code)
 # 有243条航线无标识
 table(lineinworld)
 # colnames(data3.upro1)
-worldline &lt;- data3.redu2s[lineinworld, c("AIRPORT_FROM_CODE", 
+worldline <- data3.redu2s[lineinworld, c("AIRPORT_FROM_CODE", 
     "AIRPORT_TO_CODE")]
-flights.ag &lt;- ddply(worldline, c("AIRPORT_FROM_CODE", 
+flights.ag <- ddply(worldline, c("AIRPORT_FROM_CODE", 
     "AIRPORT_TO_CODE"), function(x) count(x$AIRPORT_TO_CODE))
 # 计算三字码映射到机场
-flights.ll &lt;- merge(flights.ag, worldport, by.x = "AIRPORT_TO_CODE", 
+flights.ll <- merge(flights.ag, worldport, by.x = "AIRPORT_TO_CODE", 
     by.y = "code", all.x = T)
-flights.ll &lt;- flights.ll[order(flights.ll$AIRPORT_FROM_CODE, 
+flights.ll <- flights.ll[order(flights.ll$AIRPORT_FROM_CODE, 
     flights.ll$AIRPORT_TO_CODE), ]
-flights.lf &lt;- merge(flights.ag, worldport, by.x = "AIRPORT_FROM_CODE", 
+flights.lf <- merge(flights.ag, worldport, by.x = "AIRPORT_FROM_CODE", 
     by.y = "code", all.x = T)
-flights.lf &lt;- flights.lf[order(flights.lf$AIRPORT_FROM_CODE, 
+flights.lf <- flights.lf[order(flights.lf$AIRPORT_FROM_CODE, 
     flights.lf$AIRPORT_TO_CODE), ]
-# beijing.ll &lt;-
+# beijing.ll <-
 # c(worldport$lon[worldport$code=='PEK'], worldport$lan[worldport$code=='PEK'])
-rts &lt;- gcIntermediate(flights.lf[, c("lon", "lan")], 
+rts <- gcIntermediate(flights.lf[, c("lon", "lan")], 
     flights.ll[, c("lon", "lan")], 100, breakAtDateLine = FALSE, 
     addStartEnd = TRUE, sp = TRUE)
-# rts.ff &lt;-
+# rts.ff <-
 # fortify.SpatialLinesDataFrame(rts)flights.lf[,c('lon', 'lan')]
-rts &lt;- as(rts, "SpatialLinesDataFrame")
+rts <- as(rts, "SpatialLinesDataFrame")
 # 航线坐标数据
-rts.ff &lt;- fortify(rts)
+rts.ff <- fortify(rts)
 # 航线信息与航线坐标信息关联
-flights.ll$id &lt;- as.character(c(1:nrow(flights.ll)))
+flights.ll$id <- as.character(c(1:nrow(flights.ll)))
 table(gcircles$freq)
-gcircles &lt;- merge(rts.ff, flights.ll, all.x = T, by = "id")
+gcircles <- merge(rts.ff, flights.ll, all.x = T, by = "id")
 ```
 
 如代码中的注释所述，data3.redu2s这个变量可以从routes.dat读取得到，过程如下：
 
 ```r
-data3.redu2s &lt;- read.table("routes.dat", sep = ",", header = FALSE)
-colnames(data3.redu2s)[c(3, 5)] &lt;- c("AIRPORT_FROM_&lt;wbr />CODE",
+data3.redu2s <- read.table("routes.dat", sep = ",", header = FALSE)
+colnames(data3.redu2s)[c(3, 5)] <- c("AIRPORT_FROM_CODE",
                                      "AIRPORT_TO_CODE")
 ```
 
@@ -144,15 +144,15 @@ colnames(data3.redu2s)[c(3, 5)] &lt;- c("AIRPORT_FROM_&lt;wbr />CODE",
 这一步是对地图进行坐标变换，设置中国为世界中心，这里做了简单的坐标加减运算。代码如下：
 
 ```r
-center &lt;- 115
+center <- 115
 # 航线坐标计算中心距离
-gcircles$long.recenter &lt;- ifelse(gcircles$long &lt; center - 
+gcircles$long.recenter <- ifelse(gcircles$long < center - 
     180, gcircles$long + 360, gcircles$long)
 # shift coordinates to recenter worldmap worldmap
-# &lt;- map_data ('world') 地图坐标偏移
-worldmap$long.recenter &lt;- ifelse(worldmap$long &lt; center - 
+# <- map_data ('world') 地图坐标偏移
+worldmap$long.recenter <- ifelse(worldmap$long < center - 
     180, worldmap$long + 360, worldmap$long)
-urbanareas$long.recenter &lt;- ifelse(urbanareas$long &lt; 
+urbanareas$long.recenter <- ifelse(urbanareas$long < 
     center - 180, urbanareas$long + 360, urbanareas$long
  ```
 
@@ -166,24 +166,24 @@ urbanareas$long.recenter &lt;- ifelse(urbanareas$long &lt;
 在参考文献中提到的方法如下：
 
 ```r
-RegroupElements &lt;- function(df, longcol, idcol) {
-    g &lt;- rep(1, length(df[, longcol]))
-    if (diff(range(df[, longcol])) &gt; 300) {
+RegroupElements <- function(df, longcol, idcol) {
+    g <- rep(1, length(df[, longcol]))
+    if (diff(range(df[, longcol])) > 300) {
         # check if longitude within group differs more than
         # 300 deg, ie if element was split
         # we use the mean to help us separate the extreme values
-        d &lt;- df[, longcol] &gt; mean(range(df[, longcol]))
+        d <- df[, longcol] > mean(range(df[, longcol]))
         # some marker for parts that stay in place
         # (we cheat here a little, as we do not take into account concave polygons)
-        g[!d] &lt;- 1
-        g[d] &lt;- 2  # parts that are moved
+        g[!d] <- 1
+        g[d] <- 2  # parts that are moved
     }
     # attach to id to create unique group variable for the dataset
-    g &lt;- paste(df[, idcol], g, sep = ".")
-    df$group.regroup &lt;- g
+    g <- paste(df[, idcol], g, sep = ".")
+    df$group.regroup <- g
     df
 }
-gcircles.rg &lt;- ddply(gcircles, .(id), RegroupElements, "long.recenter", "id")
+gcircles.rg <- ddply(gcircles, .(id), RegroupElements, "long.recenter", "id")
 ```
 
 以上方法，计算少量图形数据时（如gcircles）效果尚可。但一旦数据量级提高，其计算效率将极低。笔者电脑（10G内存）运行 urbanareas 数据，内存占用一度爆表，而且40多分钟未出结果。所以笔者重写了该算法，重写后占用内存可忽略，10秒内计算完成。
@@ -192,41 +192,41 @@ gcircles.rg &lt;- ddply(gcircles, .(id), RegroupElements, "long.recenter", "id")
 
 ```r
 # 开始写原始算法替换函数 世界地图重分组
-worldmap.mean &lt;- aggregate(x = worldmap[, c("long.recenter")], 
+worldmap.mean <- aggregate(x = worldmap[, c("long.recenter")], 
     by = list(worldmap$group), FUN = mean)
-worldmap.min &lt;- aggregate(x = worldmap[, c("long.recenter")], 
+worldmap.min <- aggregate(x = worldmap[, c("long.recenter")], 
     by = list(worldmap$group), FUN = min)
-worldmap.max &lt;- aggregate(x = worldmap[, c("long.recenter")], 
+worldmap.max <- aggregate(x = worldmap[, c("long.recenter")], 
     by = list(worldmap$group), FUN = max)
-worldmap.md &lt;- cbind(worldmap.mean, worldmap.min[, 
+worldmap.md <- cbind(worldmap.mean, worldmap.min[, 
     2], worldmap.max[, 2])
-colnames(worldmap.md) &lt;- c("group", "mean", "min", "max")
-worldmapt &lt;- join(x = worldmap, y = worldmap.md, by = c("group"))
-worldmapt$group.regroup &lt;- 1
-worldmapt[(worldmapt$max &gt; 180) & (worldmapt$min &lt; 
-    180) & (worldmapt$long.recenter &gt; 180), c("group.regroup")] &lt;- 2
-worldmapt$group.regroup &lt;- paste(worldmapt$group, worldmapt$group.regroup, 
+colnames(worldmap.md) <- c("group", "mean", "min", "max")
+worldmapt <- join(x = worldmap, y = worldmap.md, by = c("group"))
+worldmapt$group.regroup <- 1
+worldmapt[(worldmapt$max > 180) & (worldmapt$min < 
+    180) & (worldmapt$long.recenter > 180), c("group.regroup")] <- 2
+worldmapt$group.regroup <- paste(worldmapt$group, worldmapt$group.regroup, 
     sep = ".")
-worldmap.rg &lt;- worldmapt
+worldmap.rg <- worldmapt
 
 # 都市地图重分组
-urbanareas.mean &lt;- aggregate(x = urbanareas[, c("long.recenter")], 
+urbanareas.mean <- aggregate(x = urbanareas[, c("long.recenter")], 
     by = list(urbanareas$group), FUN = mean)
-urbanareas.min &lt;- aggregate(x = urbanareas[, c("long.recenter")], 
+urbanareas.min <- aggregate(x = urbanareas[, c("long.recenter")], 
     by = list(urbanareas$group), FUN = min)
-urbanareas.max &lt;- aggregate(x = urbanareas[, c("long.recenter")], 
+urbanareas.max <- aggregate(x = urbanareas[, c("long.recenter")], 
     by = list(urbanareas$group), FUN = max)
-urbanareas.md &lt;- cbind(urbanareas.mean, urbanareas.min[, 
+urbanareas.md <- cbind(urbanareas.mean, urbanareas.min[, 
     2], urbanareas.max[, 2])
-colnames(urbanareas.md) &lt;- c("group", "mean", "min", "max")
-urbanareast &lt;- join(x = urbanareas, y = urbanareas.md, 
+colnames(urbanareas.md) <- c("group", "mean", "min", "max")
+urbanareast <- join(x = urbanareas, y = urbanareas.md, 
     by = c("group"))
-urbanareast$group.regroup &lt;- 1
-urbanareast[(urbanareast$max &gt; 180) & (urbanareast$min &lt; 
-    180) & (urbanareast$long.recenter &gt; 180), c("group.regroup")] &lt;- 2
-urbanareast$group.regroup &lt;- paste(urbanareast$group, 
+urbanareast$group.regroup <- 1
+urbanareast[(urbanareast$max > 180) & (urbanareast$min < 
+    180) & (urbanareast$long.recenter > 180), c("group.regroup")] <- 2
+urbanareast$group.regroup <- paste(urbanareast$group, 
     urbanareast$group.regroup, sep = ".")
-urbanareas.rg &lt;- urbanareast
+urbanareas.rg <- urbanareast
 ```
 
 ## 2. 闭合曲线
@@ -235,35 +235,35 @@ urbanareas.rg &lt;- urbanareast
 
 ```r
 # 闭合曲线
-worldmap.rg &lt;- worldmap.rg[order(worldmap.rg$group.regroup, 
+worldmap.rg <- worldmap.rg[order(worldmap.rg$group.regroup, 
     worldmap.rg$order), ]
-worldmap.begin &lt;- worldmap.rg[!duplicated(worldmap.rg$group.regroup), 
+worldmap.begin <- worldmap.rg[!duplicated(worldmap.rg$group.regroup), 
     ]
-worldmap.end &lt;- worldmap.rg[c(!duplicated(worldmap.rg$group.regroup)[-1], 
+worldmap.end <- worldmap.rg[c(!duplicated(worldmap.rg$group.regroup)[-1], 
     TRUE), ]
-worldmap.flag &lt;- (worldmap.begin$long.recenter == worldmap.end$long.recenter) & 
+worldmap.flag <- (worldmap.begin$long.recenter == worldmap.end$long.recenter) & 
     (worldmap.begin$lat == worldmap.end$lat)
 table(worldmap.flag)
-worldmap.plus &lt;- worldmap.begin[!worldmap.flag, ]
+worldmap.plus <- worldmap.begin[!worldmap.flag, ]
 worldmap.end[!worldmap.flag, ]
-worldmap.plus$order &lt;- worldmap.end$order[!worldmap.flag] + 1
-worldmap.cp &lt;- rbind(worldmap.rg, worldmap.plus)
-worldmap.cp &lt;- worldmap.cp[order(worldmap.cp$group.regroup, 
+worldmap.plus$order <- worldmap.end$order[!worldmap.flag] + 1
+worldmap.cp <- rbind(worldmap.rg, worldmap.plus)
+worldmap.cp <- worldmap.cp[order(worldmap.cp$group.regroup, 
     worldmap.cp$order), ]
-urbanareas.rg &lt;- urbanareas.rg[order(urbanareas.rg$group.regroup, 
+urbanareas.rg <- urbanareas.rg[order(urbanareas.rg$group.regroup, 
     urbanareas.rg$order), ]
-urbanareas.begin &lt;- urbanareas.rg[!duplicated(urbanareas.rg$group.regroup), ]
-urbanareas.end &lt;- urbanareas.rg[c(!duplicated(urbanareas.rg$group.regroup)[-1], 
+urbanareas.begin <- urbanareas.rg[!duplicated(urbanareas.rg$group.regroup), ]
+urbanareas.end <- urbanareas.rg[c(!duplicated(urbanareas.rg$group.regroup)[-1], 
     TRUE), ]
-urbanareas.flag &lt;- (urbanareas.begin$long.recenter == 
+urbanareas.flag <- (urbanareas.begin$long.recenter == 
     urbanareas.end$long.recenter) & (urbanareas.begin$lat == 
     urbanareas.end$lat)
 table(urbanareas.flag)
-urbanareas.plus &lt;- urbanareas.begin[!urbanareas.flag, ]
+urbanareas.plus <- urbanareas.begin[!urbanareas.flag, ]
 urbanareas.end[!urbanareas.flag, ]
-urbanareas.plus$order &lt;- urbanareas.end$order[!urbanareas.flag] + 1
-urbanareas.cp &lt;- rbind(urbanareas.rg, urbanareas.plus)
-urbanareas.cp &lt;- urbanareas.cp[order(urbanareas.cp$group.regroup, 
+urbanareas.plus$order <- urbanareas.end$order[!urbanareas.flag] + 1
+urbanareas.cp <- rbind(urbanareas.rg, urbanareas.plus)
+urbanareas.cp <- urbanareas.cp[order(urbanareas.cp$group.regroup, 
     urbanareas.cp$order), ]
 ```
 
@@ -276,10 +276,10 @@ urbanareas.cp &lt;- urbanareas.cp[order(urbanareas.cp$group.regroup,
 背景是点线地图，而且精度较高，夜景图边界线意义不大，因此处理起来较简单。代码如下：
 
 ```r
-wrld &lt;- geom_polygon(aes(long.recenter, lat, group = group.regroup), 
+wrld <- geom_polygon(aes(long.recenter, lat, group = group.regroup), 
     size = 0.1, colour = "#090D2A", fill = "#090D2A", 
     alpha = 1, data = worldmap.cp)
-urb &lt;- geom_polygon(aes(long.recenter, lat, group = group.regroup), 
+urb <- geom_polygon(aes(long.recenter, lat, group = group.regroup), 
     size = 0.3, color = "#FDF5E6", fill = "#FDF5E6", 
     alpha = 1, data = urbanareas.cp)
 ```
@@ -290,22 +290,22 @@ urb &lt;- geom_polygon(aes(long.recenter, lat, group = group.regroup),
 
 ```r
 # 放大系数
-bigmap &lt;- 1
-airline &lt;- geom_line(aes(long.recenter, lat, group = group.regroup, 
+bigmap <- 1
+airline <- geom_line(aes(long.recenter, lat, group = group.regroup, 
     alpha = max(freq)^0.6 * freq^0.4, color = 0.9 * 
         max(freq)^0.6 * freq^0.4), size = 0.2 * bigmap, 
     data = gcircles.rg)
-airlinep &lt;- geom_line(aes(long.recenter, lat, group = group.regroup, 
+airlinep <- geom_line(aes(long.recenter, lat, group = group.regroup, 
     alpha = 0.04 * max(freq)^0.6 * freq^0.4), color = "#FFFFFF", 
     size = 2 * bigmap, data = gcircles.rg)
 # table(gcircles.rg$freq)
-airlinepp &lt;- geom_line(aes(long.recenter, lat, group = group.regroup, 
+airlinepp <- geom_line(aes(long.recenter, lat, group = group.regroup, 
     alpha = 0.02 * max(freq)^0.6 * freq^0.4), color = "#ECFFFF", 
     size = 4 * bigmap, data = gcircles.rg)
-airlineppp &lt;- geom_line(aes(long.recenter, lat, group = group.regroup, 
+airlineppp <- geom_line(aes(long.recenter, lat, group = group.regroup, 
     alpha = 0.01 * max(freq)^0.6 * freq^0.4), color = "#ECFFFF", 
     size = 8 * bigmap, data = gcircles.rg)
-airlinepppp &lt;- geom_line(aes(long.recenter, lat,
+airlinepppp <- geom_line(aes(long.recenter, lat,
     group = group.regroup, 
     alpha = 0.005 * max(freq)^0.6 * freq^0.4), color = "#BBFFFF", 
     size = 16 * bigmap, data = gcircles.rg)
