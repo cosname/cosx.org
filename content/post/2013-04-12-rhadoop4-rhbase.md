@@ -212,43 +212,43 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 1. 下载C++支持类库(可选) 
 
 ```bash
-     ~ sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev        
+    ~ sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev        
 ```
 
 1. 生成编译的配置参数 
 
 ```bash
-     ~ ./configure
+    ~ ./configure
         
-      thrift 0.8.0
+     thrift 0.8.0
         
-      Building code generators ..... :
+     Building code generators ..... :
         
-      Building C++ Library ......... : yes
-      Building C (GLib) Library .... : no
-      Building Java Library ........ : no
-      Building C# Library .......... : no
-      Building Python Library ...... : yes
-      Building Ruby Library ........ : no
-      Building Haskell Library ..... : no
-      Building Perl Library ........ : n
-      Building PHP Library ......... : yes
-      Building Erlang Library ...... : no
-      Building Go Library .......... : no
+     Building C++ Library ......... : yes
+     Building C (GLib) Library .... : no
+     Building Java Library ........ : no
+     Building C# Library .......... : no
+     Building Python Library ...... : yes
+     Building Ruby Library ........ : no
+     Building Haskell Library ..... : no
+     Building Perl Library ........ : n
+     Building PHP Library ......... : yes
+     Building Erlang Library ...... : no
+     Building Go Library .......... : no
         
-      Building TZlibTransport ...... : yes
-      Building TNonblockingServer .. : yes
+     Building TZlibTransport ...... : yes
+     Building TNonblockingServer .. : yes
        
-      Using Python ................. : /usr/bin/python
+     Using Python ................. : /usr/bin/python
         
-      Using php-config ............. : /usr/bin/php-config        
+     Using php-config ............. : /usr/bin/php-config        
 ```
 
 1. 编译和安装 
 
 ```bash
-      ~ make
-      ~ make install        
+    ~ make
+    ~ make install        
 ```
 
 1. 查看thrift版本 
@@ -262,9 +262,9 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 1. 启动HBase的Thrift Server 
       
 ```bash
-      ~ /hbase-0.94.2/bin/hbase-daemon.sh start thrift
+    ~ /hbase-0.94.2/bin/hbase-daemon.sh start thrift
         
-       ~ jps 
+    ~ jps 
         
           12041 HMaster
           12209 HRegionServer
@@ -282,7 +282,7 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 1. 安装rhbase 
 
 ```bash          
-   ~ R CMD INSTALL rhbase_1.1.1.tar.gz        
+    ~ R CMD INSTALL rhbase_1.1.1.tar.gz        
 ```
 
 很顺利的安装完成。
@@ -294,10 +294,10 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 # rhbase的相关函数：
 
 ```
-hb.compact.table      hb.describe.table     hb.insert             hb.regions.table
-hb.defaults           hb.get                hb.insert.data.frame  hb.scan
-hb.delete             hb.get.data.frame     hb.list.tables        hb.scan.ex
-hb.delete.table       hb.init               hb.new.table          hb.set.table.mode    
+  hb.compact.table      hb.describe.table     hb.insert             hb.regions.table  
+  hb.defaults           hb.get                hb.insert.data.frame  hb.scan
+  hb.delete             hb.get.data.frame     hb.list.tables        hb.scan.ex
+  hb.delete.table       hb.init               hb.new.table          hb.set.table.mode    
 ```
 
 # hbase和rhbase的基本操作对比：
@@ -306,7 +306,7 @@ hb.delete.table       hb.init               hb.new.table          hb.set.table.m
 建表
 HBASE:     create 'student_shell','info'
 RHBASE:    hb.new.table("student_rhbase","info")
-    
+   
 列出所有表
 HBASE:     list
 RHBASE:    hb.list.tables()
@@ -314,11 +314,11 @@ RHBASE:    hb.list.tables()
 显示表结构
 HBASE:     describe 'student_shell'
 RHBASE:    hb.describe.table("student_rhbase")
-    
+  
 插入一条数据
 HBASE:     put 'student_shell','mary','info:age','19'
 RHBASE:    hb.insert("student_rhbase",list(list("mary","info:age", "24")))
-    
+         
 读取数据
 HBASE:     get 'student_shell','mary'
 RHBASE:    hb.get('student_rhbase','mary')
