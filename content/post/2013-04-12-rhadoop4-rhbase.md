@@ -1,7 +1,7 @@
 ---
 title: RHadoop实践系列之四 rhbase安装与使用
 date: '2013-04-12T12:22:55+00:00'
-author: 张 丹
+author: 张丹
 description: "RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据。1G, 10G, 100G, TB,PB 由于大数据所带来的单机性能问题，可能会一去不复返了。RHadoop实践是一套系列文章，本篇主要介绍“HBase和rhbase的安装与使用”。"
 categories:
   - 软件应用
@@ -30,20 +30,18 @@ APPs:
   
 @每日中国天气 <http://apps.weibo.com/chinaweatherapp>
 
-### **RHadoop实践系列文章**
+### RHadoop实践系列文章
 
 RHadoop实践系列文章，包含了R语言与Hadoop结合进行海量数据分析。Hadoop主要用来存储海量数据，R语言完成MapReduce算法，用来替代Java的MapReduce实现。有了RHadoop可以让广大的R语言爱好者，有更强大的工具处理大数据。1G, 10G, 100G, TB,PB 由于大数据所带来的单机性能问题，可能会一去联复返了。
 
 RHadoop实践是一套系列文章，主要包括“Hadoop环境搭建”，“RHadoop安装与使用”，“R实现MapReduce的算法案例”，“HBase和rhbase的安装与使用”。对于单独的R语言爱好者，Java爱好者，或者Hadoop爱好者来说，同时具备三种语言知识并不容易。此文虽为入门文章，但R,Java,Hadoop基础知识还是需要大家提前掌握。
-  
-<!--more-->
 
-# **第四篇 HBase和rhbase的安装与使用，分为3个章节。**
+# 第四篇 HBase和rhbase的安装与使用，分为3个章节。
 
     
     1. 环境准备及HBase安装
-    2. rhbase安装
-    3. rhbase程序用例
+    1. rhbase安装
+    1. rhbase程序用例
     
 
 每一章节，都会分为“文字说明部分”和“代码部分”，保持文字说明与代码的连贯性。
