@@ -13,152 +13,113 @@ slug: ruc-statistical-coursework-abstract-3
 ---
 
 **期刊简介**：本刊是中国人民大学统计学院研究生会的学术类期刊，一年出版一期。其目的是为统计学院各专业的硕士博士生提供一个学术交流和展示的平台，同时也为本科生提供一个学习的机会。本刊收录的文章全部是由统计学院各级研究生自主撰写，其中也包括一些专业课的作业。现应允发表其摘要于统计之都，以供广大统计人士学习、指点与探讨。
+<!--more-->
 
 ## 一、首届首都高校统计学研究生论坛论文选登
 
-<h3 style="text-align: center;">
-  北京居民幸福指数及基于结构方程的幸福指数因素分析
-</h3>
+### 北京居民幸福指数及基于结构方程的幸福指数因素分析
 
-<p style="TEXT-ALIGN: center">
-  首都经济贸易大学    杨作毅  玛丽平
-</p>
+**首都经济贸易大学 杨作毅  玛丽平**
 
 摘要：幸福是一个充满困惑，充满神秘的千古难题，每个人都知道其含义，但无人能够精确定义。虽然对幸福定义有着不同的诠释，对幸福原因各不相同，但人们都把对幸福的追求视为最珍贵的生活目标之一，为反映北京居民幸福水平，本文在对北京1700多常住居民调查的基础上，编制了幸福指数，并引入隐变量结构方程模型，利用ML方法找出影响北京居民幸福感的主要因素。
 
-关键词：居民幸福指数，结构方程，最大似然估计法(ML)，因素分析
+关键词：**居民幸福指数，结构方程，最大似然估计法(ML)，因素分析**
 
-<h3 style="text-align: center;">
-  农村人身保险需求与农民收入的实证研究
-</h3>
+### 农村人身保险需求与农民收入的实证研究
 
-<p style="TEXT-ALIGN: center">
-  中央财经大学统计学院博士生    张桂香
-</p>
+**中央财经大学统计学院博士生 张桂香**
 
 摘要：国内外学者从理论和实证角度做了诸多人身保险需求与收入关系的研究。限于数据的可得性，目前关于我国农村人身保险需求与农民收入的实证研究还不多见。本文采用已有的列联表数据，利用对应分析和最优尺度分析方法，分析了人身保险需求与收入以及保险意识等因素的关联程度，根据分析结论提出广大农村人身保险的对策。
 
-关键词：人身保险需求，收入，对应分析，最优尺度分析
+关键词：**人身保险需求，收入，对应分析，最优尺度分析**
 
-<h3 style="text-align: center;">
-  探寻分层抽样样本容量最优分配问题
-</h3>
+### 探寻分层抽样样本容量最优分配问题
 
-<p style="TEXT-ALIGN: center">
-  中央财经大学经济学硕士    米荷芳
-</p>
+**中央财经大学经济学硕士 米荷芳**
 
 摘要：分层抽样是统计调查中较为成熟的技术，分层抽样之所以得到广泛应用，是因为可依据我国各级行政隶属关系分层，各层可分别进行抽样。其次是每层可独立进行抽样与判断，这就可满足各地区、各部门的需要。第三十通过适当的分层，可提高样本对总体的代表性，降低抽样误差与样本容量，减少调查费用。本文着重讨论在抽样的总费用一定的情况下，样本容量在各层的最优配置问题。
 
-关键词：分层抽样，抽样误差，样本容量
+关键词：**分层抽样，抽样误差，样本容量**
 
 ## 二、挑战杯论文选登
 
-<h3 style="text-align: center;">
-  Analysis of Chinese Motor Insurance Comparative Study of Third Party Liability Insurance Systems
-</h3>
+### Analysis of Chinese Motor Insurance Comparative Study of Third Party Liability Insurance Systems
 
-<p style="TEXT-ALIGN: center">
-  First year Master student  School of Statistics  Renmin University of China Yao Rui, Tao Qian
-</p>
+**First year Master student  School of Statistics  Renmin University of China Yao Rui, Tao Qian**
 
-**Abstract**: This paper provides an introduction to Chinese third party liability insurance. The paper appraises the rating criteria and rating factors applied by various insurers to calculate third party motor insurance tariffs, including bonus malus systems. The study also compares the Chinese compulsory auto liability market, and the economic environment in which it operates, with those in United States and Japan, where the regulatory supervision on the insurance industry appears to be stricter.
+Abstract: This paper provides an introduction to Chinese third party liability insurance. The paper appraises the rating criteria and rating factors applied by various insurers to calculate third party motor insurance tariffs, including bonus malus systems. The study also compares the Chinese compulsory auto liability market, and the economic environment in which it operates, with those in United States and Japan, where the regulatory supervision on the insurance industry appears to be stricter.
 
-**Key words**: Motor Insurance; Third Party Liability Insurance
+Key words: **Motor Insurance; Third Party Liability Insurance**
 
-<h3 style="text-align: center;">
-  内含价值评估方法与模型探析
-</h3>
+### 内含价值评估方法与模型探析
 
-<p style="TEXT-ALIGN: center">
-  中国人民大学统计学院风险管理与精算专业    王珺
-</p>
+**中国人民大学统计学院风险管理与精算专业 王珺**
 
 摘要：内含价值包括三个部分：分配给适用业务的自由盈余，要求资本扣除持有要求资本的成本，有效业务现值。有关有效业务现值的计算有两种方法：随机准备金方法和年度利润折现方法，都涉及到折现现金流模型的使用。我国目前使用的是最简单的确定性折现模型，这种模型不能准确的评估金融选择权和保证的价值，难以产生与市场一致的评估结果。本文将对欧洲寿险公司评估内含价值的随机方法和模型进行研究，对保证的内在价值和时间价值进行探讨，并通过对比确定型方法和随机方法的评估结果，对风险折现率中包含的风险额度进行分解。
 
-关键词：内含价值，有效业务现值，折现现金流模型，随机方法，风险中性，风险额度
+关键词：**内含价值，有效业务现值，折现现金流模型，随机方法，风险中性，风险额度**
 
-<h3 style="text-align: center;">
-  北京市能源消耗与经济发展关系分析
-</h3>
+### 北京市能源消耗与经济发展关系分析
 
-<p style="TEXT-ALIGN: center">
-  中国人民大学统计学院06级硕士研究生    陈谢晟
-</p>
+**中国人民大学统计学院06级硕士研究生 陈谢晟**
 
 摘要：本文以：“十五”期间北京市经济增长以及能源消耗数据为基础，对2000年-2005年的时间序列数据以及细分行业的截面数据相结合进行分析。通过总体分析和影响因素分解的方法，来考察“十五”期间北京市能源消耗与经济发展的关系，探讨北京市万元GDP能耗下降的原因，据此提出北京调整产业结构，改善资源条件的政策建议。
 
-关键词：万元GDP能耗，影响因素分析，能耗水平变化，产业结构调整，循环经济
+关键词：**万元GDP能耗，影响因素分析，能耗水平变化，产业结构调整，循环经济**
 
 ## 三、我们的功课
 
-<h3 style="text-align: center;">
-  Random Forest方法在多元回归选元中的应用
-</h3>
+### Random Forest方法在多元回归选元中的应用
 
-<p style="TEXT-ALIGN: center">
-  中国人民大学统计学院统计学硕士一年级    孙兆楠
-</p>
+**中国人民大学统计学院统计学硕士一年级 孙兆楠**
 
 摘要：当数据量N远远大于变量个数K是，传统的回归方法在进行变量选元时可能出现偏差，而利用数据挖掘方法中针对此类数据的Random Forest方法则可以更好的进行变量选元。然而，该方法仅仅考虑预测效果而不考虑变量之间的关系，因此，在该方法输出变量重要性的基础上，在进行适当的调整和剔除，我们可以构建更加合理的回归模型。
 
-<h3 style="text-align: center;">
-  GARCH模型和神经网络对股票预测的比较
-</h3>
+### GARCH模型和神经网络对股票预测的比较
 
-<p style="TEXT-ALIGN: center">
-  中国人民大学统计学院统计学硕士一年级    刘智聪
-</p>
+**中国人民大学统计学院统计学硕士一年级 刘智聪**
 
 摘要：股票市场在06年又重新恢复了火爆，大量老百姓都热火朝天地投入了这个在中国来说比较年轻的资本市场。所以，运用一些方法来帮助我们对股票市场的预测是很有必要的。本文通过我所学的知识对上海综合指数进行了预测。整篇文章包含三个部分。首先介绍了中国证券市场，然后利用时间序列中的GARCH模型对指数进行预测，最后由利用神经网络的方法来预测指数走势，并对两者预测效果进行了比较。
 
-关键词：上海综合指数，GARCH模型，神经网络模型
+关键词：**上海综合指数，GARCH模型，神经网络模型**
 
-<h3 style="text-align: center;">
-  基于ICA方法的汇率的时间序列分析
-</h3>
+### 基于ICA方法的汇率的时间序列分析
 
-<p style="text-align: center;">
-  中国人民大学统计学院硕士二年级    王美玲
-</p>
+**中国人民大学统计学院硕士二年级 王美玲**
 
 摘要：汇率波动对国内的经济增长还是对外贸易都有重要的影响。适当的汇率水平有利于国内经济的发展。中国于2005年7月建立起有管理的浮动汇率制度，成功地由紧钉住美元过渡到钉住一揽子货币。在这种新的汇率制度下，汇率水平受市场因素的影响比以往时期更为强烈，如果能够成功识别出汇率波动背后的决定因素，对于我国汇率管理和经济决策必然具有重要的现实意义。为研究汇率决定因素，本文尝试采用一种新的分析方法——ICA方法。ICA是一种基于信息理论（主要是熵及其他与熵有关的概念）的分析潜变量的方法，其目的是把混合信号分解为相互独立的潜变量成分，它能够抑制高斯噪声，并能分解出相互独立的非高斯噪声信号，因而在潜变量研究方面具有与其他统计分析方法所不可比拟的优点。通过对人民币对美元等五个币种的汇率的中间价时间序列数据的分析，得到对五种汇率共同起作用的三个独立潜变量：市场预期、汇率政策、季节因素。
 
-关键词：汇率，ICA，信息理论，潜变量
+关键词：**汇率，ICA，信息理论，潜变量**
 
-<h3 style="text-align: center;">
-  χ2 型混合分布的鞍点近似
-</h3>
+### `$\chi^2$` 型混合分布的鞍点近似
 
-<p style="text-align: center;">
-  中国人民大学统计学院    罗玉波
-</p>
+**中国人民大学统计学院 罗玉波**
 
-摘要：本文用鞍点技术近似χ<sup>2</sup> 型混合分布的密度，并且用正态近似χ<sup>2</sup> 近似方法进行了对比，通过模拟表明鞍点近似优于其余两种方法，特别是统计检验中所关注的密度函数尾部区域。
+摘要：本文用鞍点技术近似`$\chi^2$` 型混合分布的密度，并且用正态近似`$\chi^2$`近似方法进行了对比，通过模拟表明鞍点近似优于其余两种方法，特别是统计检验中所关注的密度函数尾部区域。
 
-关键词：鞍点逼近似，χ<sup>2</sup> 近似，混合型χ<sup>2</sup> 变量
+关键词：**鞍点逼近似，`$\chi^2$`近似，混合型`$\chi^2$`变量**
 
 ## 四、近期学院主要学术活动
 
 ### 交流和访问
 
-  1. 2006年12月6日，美国统计协会主席Mary Ellen Bock女士访问人大。
-  2. 高敏雪教授所在的“绿色GDP小组”获2006绿色中国年度人物特别奖。
-  3. 2006年12月9日至17日，王晓军教授带领16名研究生赴台进行学术交流。
-  4. 2007年3月7日，意大利佛罗伦萨大学经济统计学教授Guido Ferrari访问中国人民大学应用统计研究中心和统计学院。
-  5. 2007年4月25日，国家统计局长谢伏瞻莅临统计学院。
-  6. 2007年5月4日，温家宝总理专程来访人大，来到统计学院111寝室同学亲切交谈，获赠统计学院礼物《统计功课》和《校庆趣味调查问卷》。
+1. 2006年12月6日，美国统计协会主席Mary Ellen Bock女士访问人大。
+1. 高敏雪教授所在的“绿色GDP小组”获2006绿色中国年度人物特别奖。
+1. 2006年12月9日至17日，王晓军教授带领16名研究生赴台进行学术交流。
+1. 2007年3月7日，意大利佛罗伦萨大学经济统计学教授Guido Ferrari访问中国人民大学应用统计研究中心和统计学院。
+1. 2007年4月25日，国家统计局长谢伏瞻莅临统计学院。
+1. 2007年5月4日，温家宝总理专程来访人大，来到统计学院111寝室同学亲切交谈，获赠统计学院礼物《统计功课》和《校庆趣味调查问卷》。
 
 ### 会议与讲座
 
-  1. 2007年4月27日，第四届中国数据挖掘与商业智能研讨会在人大逸夫会议中心举行。
-  2. 从2006年10月起，统计学院每月定期推出系列研究报告。
-  3. 2006年12月13日，中科院数学与系统科学研究院下建明研究院作了题为“Investment in Financial Market”讲座。
-  4. 2007年3月28日，中科院研究生院许建副教授作了题为“计量经济模型在实证研究中的应用”学术报告。
-  5. 2007年4月2日，统计学院讲堂举行了STATISTICA软件捐赠仪式。
+1. 2007年4月27日，第四届中国数据挖掘与商业智能研讨会在人大逸夫会议中心举行。
+1. 从2006年10月起，统计学院每月定期推出系列研究报告。
+1. 2006年12月13日，中科院数学与系统科学研究院下建明研究院作了题为“Investment in Financial Market”讲座。
+1. 2007年3月28日，中科院研究生院许建副教授作了题为“计量经济模型在实证研究中的应用”学术报告。
+1. 2007年4月2日，统计学院讲堂举行了STATISTICA软件捐赠仪式。
 
 ### 学生活动
 
-  1. 我院张林、房磊、莫亚茹或第三届全国研究生数学建模竞赛三等奖。
-  2. 2006年12月16日，我院首次举办“统计学院青年校友会联谊会”。
-  3. 2006年12月20日，首届首都高校统计学研究生论坛在统计学院会议室举行。
+1. 我院张林、房磊、莫亚茹或第三届全国研究生数学建模竞赛三等奖。
+1. 2006年12月16日，我院首次举办“统计学院青年校友会联谊会”。
+1. 2006年12月20日，首届首都高校统计学研究生论坛在统计学院会议室举行。
