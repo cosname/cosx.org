@@ -8,7 +8,7 @@ categories:
   - 统计之都
   - 统计计算
 slug: visualization-of-pm2-5
-description: 你知道如何实时展现世界各地的PM2.5吗？你知道R也可以帮你做作业嘛？数据科学家越来越热，但哪种数据分析语言最受欢迎呢？欢迎关注本期COS精选。
+description: "你知道如何实时展现世界各地的PM2.5吗？你知道R也可以帮你做作业嘛？数据科学家越来越热，但哪种数据分析语言最受欢迎呢？欢迎关注本期COS精选。"
 ---
 
 本期投稿：[王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [冷静 ](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
