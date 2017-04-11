@@ -197,7 +197,8 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 
    
 1. 下载thrift
-    ```
+    
+    ```
     ~ wget http://archive.apache.org/dist/thrift/0.8.0/thrift-0.8.0.tar.gz
     ~ tar xvf thrift-0.8.0.tar.gz
     ~ cd thrift-0.8.0/
