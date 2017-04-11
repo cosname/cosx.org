@@ -25,25 +25,26 @@ Weibo: @Conan_Z
   
 Date: 2013-4-11
 
-### **R利剑NoSQL系列文章**
+# R利剑NoSQL系列文章
 
 R利剑NoSQL系列文章，主要介绍通过R语言连接使用nosql数据库。涉及的NoSQL产品，包括Redis, MongoDB, HBase, Hive, Cassandra, Neo4j。希望通过我的介绍让广大的R语言爱好者，有更多的开发选择，做出更多地激动人心的应用。
 
 由于文章篇幅有限，均跳过NoSQL的安装过程，请自行参考文档安装。
 
-### **第一篇 R利剑MongeDB，分为4个章节。**
+# 第一篇 R利剑MongeDB，分为4个章节。
 
-    MongoDB环境准备
+```
+    rmongoDB环境准备
     rmongodb函数库
     rmongodb基本使用操作
     rmongodb测试案例
-    
+```    
 
 每一章节，都会分为“文字说明部分”和“代码部分”，保持文字说明与代码的连贯性。
 
-### **1. MongoDB环境准备**
+# 1. MongoDB环境准备
 
-#### 文字说明部分：
+### 文字说明部分：
 
 首先环境准备，这里我选择了Linux Ubuntu操作系统12.04的32位桌面版本，大家可以根据自己的使用习惯选择顺手的Linux。
   
