@@ -306,7 +306,7 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
 
 ### 代码部分：
 
-共有153个函数
+- 共有153个函数
 
     ```
     mongo.add.user
@@ -478,24 +478,24 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
 
 下面我们创建一个Mongo对象。
 
-    ```
-    {
-            "_id" : ObjectId("51663e14da2c51b1e8bc62eb"),
-            "name" : "Echo",
-            "age" : 22,
-            "gender" : "Male",
-            "score" : {
-                    "Mike" : 5,
-                    "Jimmy" : 3.5,
-                    "Ann" : 4
-            },
-            "comments" : [
-                    "a1",
-                    "a2",
-                    "a3"
-            ]
-    }    
-    ```
+ ```
+{
+        "_id" : ObjectId("51663e14da2c51b1e8bc62eb"),
+        "name" : "Echo",
+        "age" : 22,
+        "gender" : "Male",
+        "score" : {
+                "Mike" : 5,
+                "Jimmy" : 3.5,
+                "Ann" : 4
+        },
+        "comments" : [
+                "a1",
+                "a2",
+                "a3"
+        }
+}    
+```
 
 然后，分别使用修改器$inc,$set,$push进行操作。
 
