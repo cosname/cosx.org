@@ -15,9 +15,9 @@ slug: ruc-statistical-coursework-abstract-3
 **期刊简介**：本刊是中国人民大学统计学院研究生会的学术类期刊，一年出版一期。其目的是为统计学院各专业的硕士博士生提供一个学术交流和展示的平台，同时也为本科生提供一个学习的机会。本刊收录的文章全部是由统计学院各级研究生自主撰写，其中也包括一些专业课的作业。现应允发表其摘要于统计之都，以供广大统计人士学习、指点与探讨。
 <!--more-->
 
-## 一、首届首都高校统计学研究生论坛论文选登
+# 一、首届首都高校统计学研究生论坛论文选登
 
-### 北京居民幸福指数及基于结构方程的幸福指数因素分析
+## 北京居民幸福指数及基于结构方程的幸福指数因素分析
 
 **首都经济贸易大学 杨作毅  玛丽平**
 
@@ -25,7 +25,7 @@ slug: ruc-statistical-coursework-abstract-3
 
 关键词：**居民幸福指数，结构方程，最大似然估计法(ML)，因素分析**
 
-### 农村人身保险需求与农民收入的实证研究
+## 农村人身保险需求与农民收入的实证研究
 
 **中央财经大学统计学院博士生 张桂香**
 
@@ -33,7 +33,7 @@ slug: ruc-statistical-coursework-abstract-3
 
 关键词：**人身保险需求，收入，对应分析，最优尺度分析**
 
-### 探寻分层抽样样本容量最优分配问题
+## 探寻分层抽样样本容量最优分配问题
 
 **中央财经大学经济学硕士 米荷芳**
 
@@ -41,9 +41,9 @@ slug: ruc-statistical-coursework-abstract-3
 
 关键词：**分层抽样，抽样误差，样本容量**
 
-## 二、挑战杯论文选登
+# 二、挑战杯论文选登
 
-### Analysis of Chinese Motor Insurance Comparative Study of Third Party Liability Insurance Systems
+## Analysis of Chinese Motor Insurance Comparative Study of Third Party Liability Insurance Systems
 
 **First year Master student  School of Statistics  Renmin University of China Yao Rui, Tao Qian**
 
@@ -51,7 +51,7 @@ Abstract: This paper provides an introduction to Chinese third party liability i
 
 Key words: **Motor Insurance; Third Party Liability Insurance**
 
-### 内含价值评估方法与模型探析
+## 内含价值评估方法与模型探析
 
 **中国人民大学统计学院风险管理与精算专业 王珺**
 
@@ -59,7 +59,7 @@ Key words: **Motor Insurance; Third Party Liability Insurance**
 
 关键词：**内含价值，有效业务现值，折现现金流模型，随机方法，风险中性，风险额度**
 
-### 北京市能源消耗与经济发展关系分析
+## 北京市能源消耗与经济发展关系分析
 
 **中国人民大学统计学院06级硕士研究生 陈谢晟**
 
@@ -67,15 +67,15 @@ Key words: **Motor Insurance; Third Party Liability Insurance**
 
 关键词：**万元GDP能耗，影响因素分析，能耗水平变化，产业结构调整，循环经济**
 
-## 三、我们的功课
+# 三、我们的功课
 
-### Random Forest方法在多元回归选元中的应用
+## Random Forest方法在多元回归选元中的应用
 
 **中国人民大学统计学院统计学硕士一年级 孙兆楠**
 
 摘要：当数据量N远远大于变量个数K是，传统的回归方法在进行变量选元时可能出现偏差，而利用数据挖掘方法中针对此类数据的Random Forest方法则可以更好的进行变量选元。然而，该方法仅仅考虑预测效果而不考虑变量之间的关系，因此，在该方法输出变量重要性的基础上，在进行适当的调整和剔除，我们可以构建更加合理的回归模型。
 
-### GARCH模型和神经网络对股票预测的比较
+## GARCH模型和神经网络对股票预测的比较
 
 **中国人民大学统计学院统计学硕士一年级 刘智聪**
 
@@ -83,7 +83,7 @@ Key words: **Motor Insurance; Third Party Liability Insurance**
 
 关键词：**上海综合指数，GARCH模型，神经网络模型**
 
-### 基于ICA方法的汇率的时间序列分析
+## 基于ICA方法的汇率的时间序列分析
 
 **中国人民大学统计学院硕士二年级 王美玲**
 
@@ -91,7 +91,7 @@ Key words: **Motor Insurance; Third Party Liability Insurance**
 
 关键词：**汇率，ICA，信息理论，潜变量**
 
-### `$\chi^2$` 型混合分布的鞍点近似
+## `$\chi^2$` 型混合分布的鞍点近似
 
 **中国人民大学统计学院 罗玉波**
 
@@ -99,9 +99,9 @@ Key words: **Motor Insurance; Third Party Liability Insurance**
 
 关键词：**鞍点逼近似，`$\chi^2$`近似，混合型`$\chi^2$`变量**
 
-## 四、近期学院主要学术活动
+# 四、近期学院主要学术活动
 
-### 交流和访问
+## 交流和访问
 
 1. 2006年12月6日，美国统计协会主席Mary Ellen Bock女士访问人大。
 1. 高敏雪教授所在的“绿色GDP小组”获2006绿色中国年度人物特别奖。
@@ -110,7 +110,7 @@ Key words: **Motor Insurance; Third Party Liability Insurance**
 1. 2007年4月25日，国家统计局长谢伏瞻莅临统计学院。
 1. 2007年5月4日，温家宝总理专程来访人大，来到统计学院111寝室同学亲切交谈，获赠统计学院礼物《统计功课》和《校庆趣味调查问卷》。
 
-### 会议与讲座
+## 会议与讲座
 
 1. 2007年4月27日，第四届中国数据挖掘与商业智能研讨会在人大逸夫会议中心举行。
 1. 从2006年10月起，统计学院每月定期推出系列研究报告。
@@ -118,7 +118,7 @@ Key words: **Motor Insurance; Third Party Liability Insurance**
 1. 2007年3月28日，中科院研究生院许建副教授作了题为“计量经济模型在实证研究中的应用”学术报告。
 1. 2007年4月2日，统计学院讲堂举行了STATISTICA软件捐赠仪式。
 
-### 学生活动
+## 学生活动
 
 1. 我院张林、房磊、莫亚茹或第三届全国研究生数学建模竞赛三等奖。
 1. 2006年12月16日，我院首次举办“统计学院青年校友会联谊会”。
