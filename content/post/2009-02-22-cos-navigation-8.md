@@ -16,13 +16,14 @@ slug: cos-navigation-8
 
 # 一、主站
 
-从寒假到现在共发布了5篇日志。<!--more-->
+从寒假到现在共发布了5篇日志。
 
-  * [R与SAS之争：一个导读](/2009/01/r-sas//)
-  * [WinBUGS在统计分析中的应用（第三部分）](/2009/02/statistical-analysis-and-winbugs-part-3//)
-  * [Google Visualization API 与在线数据分析](/2009/02/google-visualization-api-and-data-analysis-online//)
-  * [分类模型的性能评估——以SAS Logistic回归为例(3): Lift和Gain](/2009/02/measure-classification-model-performance-lift-gain//)
-  * [在Windows中创建R的包的步骤](/2009/02/create-r-packages-under-windows/)
+* [R与SAS之争：一个导读](/2009/01/r-sas//)
+* [WinBUGS在统计分析中的应用（第三部分）](/2009/02/statistical-analysis-and-winbugs-part-3//)
+* [Google Visualization API 与在线数据分析](/2009/02/google-visualization-api-and-data-analysis-online//)
+* [分类模型的性能评估——以SAS Logistic回归为例(3): Lift和Gain](/2009/02/measure-classification-model-performance-lift-gain//)
+* [在Windows中创建R的包的步骤](/2009/02/create-r-packages-under-windows/)
+<!--more-->
 
 # 二、论坛
 
