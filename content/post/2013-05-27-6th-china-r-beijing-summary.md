@@ -40,15 +40,15 @@ slug: 6th-china-r-beijing-summary
  
 ### 3、谢益辉——R包那些事儿
   
-    演讲介绍了演讲者开发8个R包的感想。演讲分享了如下几个感想：1、“好玩”是最强生产力。演讲者因为动态图的有趣，开发了animation包；2、需求源于小处。 演讲者由于做助教改学生作业的苦恼，开发了规范R代码的formatR。又为了实现文字、图形和计算的一体化，开发了自动化报告的knitr。演讲者还结合自己的经历，向大家分享了“善易者不卜”和“暗推销”的威力。
+   演讲介绍了演讲者开发8个R包的感想。演讲分享了如下几个感想：1、“好玩”是最强生产力。演讲者因为动态图的有趣，开发了animation包；2、需求源于小处。 演讲者由于做助教改学生作业的苦恼，开发了规范R代码的formatR。又为了实现文字、图形和计算的一体化，开发了自动化报告的knitr。演讲者还结合自己的经历，向大家分享了“善易者不卜”和“暗推销”的威力。
 
 ### 4、Graham Williams——Data Mining with Rattle and R
  
-    演讲者是Rattle的作者，Rattle 是一个非常优秀的数据挖掘方法集合体。演讲介绍了Rattle在R中的应用。目前，Rattle 在R语言上有了更多的数据挖掘的二次开发以及封装，在实际的挖掘项目中能够有效的提高项目的速度。
+   演讲者是Rattle的作者，Rattle 是一个非常优秀的数据挖掘方法集合体。演讲介绍了Rattle在R中的应用。目前，Rattle 在R语言上有了更多的数据挖掘的二次开发以及封装，在实际的挖掘项目中能够有效的提高项目的速度。
  
 ### 5、谢邦昌、刘思喆——DataMing云端决策平台CDMS Smart Score II——以R为基础
  
-    演讲介绍了云端计算的背景和广阔的发展潜力，以及目前各大企业在应对云端计算上的方式以及不足。演讲着重介绍了云端决策平台CDMS Smart Score II，并与其他类似平台进行对比，显示了CDMS Smart Score II广阔的应用前景。
+   演讲介绍了云端计算的背景和广阔的发展潜力，以及目前各大企业在应对云端计算上的方式以及不足。演讲着重介绍了云端决策平台CDMS Smart Score II，并与其他类似平台进行对比，显示了CDMS Smart Score II广阔的应用前景。
   
 ### 6、John Maindonald——Rethinking Data Analysis and Data Analysis Tools
  
@@ -90,7 +90,8 @@ slug: 6th-china-r-beijing-summary
   
    该环节的主持人依旧由动感的林祯舜博士主持，林博士继第一天“致青春”后，今天果断转向“那些年-我们一起追的R版本”。标题进化者林博士今天确定的标题是：“学R不思则罔，思R不学则殆”，给人以深思。只知道学习却不思考，就会因为迷惑而无所适从；只知道思考却不去学习，就会对所有事情一知半解、不懂装懂。对于R学习，更是如此。
  
-   ![Learning_R](https://cos.name/wp-content/uploads/2013/05/Learning_R.png) 之后分别有阿里巴巴的郝智恒先生、eBay潘佳鸣先生、京东商城赵灿女士、百度侯俊琦先生、豆瓣稳国柱先生、Springer 出版社的 Niels P. Thomas 先生以及Supstat邓一硕先生依次讲述各自单位对不同层次人才的需求，会议现场更有参会者向心仪单位投递了简历，会下的交流更是火热。
+   ![Learning_R](https://cos.name/wp-content/uploads/2013/05/Learning_R.png) 
+   之后分别有阿里巴巴的郝智恒先生、eBay潘佳鸣先生、京东商城赵灿女士、百度侯俊琦先生、豆瓣稳国柱先生、Springer 出版社的 Niels P. Thomas 先生以及Supstat邓一硕先生依次讲述各自单位对不同层次人才的需求，会议现场更有参会者向心仪单位投递了简历，会下的交流更是火热。
  
 ### 16、稳国柱——R的工程实践和Data Scientist
  
@@ -125,7 +126,7 @@ slug: 6th-china-r-beijing-summary
 
   经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循[CC 3.0协议](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)：署名-非商业性使用-相同方式共享）。
   
-- [益辉：R包那些事儿](http://dl.dropboxusercontent.com/u/15335397/slides/ChinaR-2013-Yihui-Xie.html)
+- [谢益辉：R包那些事儿](http://dl.dropboxusercontent.com/u/15335397/slides/ChinaR-2013-Yihui-Xie.html)
     
 - [AHAM WILLIAMS：DATA MINING WITH RATTLE AND R](https://cos.name/wp-content/uploads/2013/05/130518_graham_china_r_conference_beijing.pdf)
     
