@@ -21,6 +21,7 @@ slug: shanghai-r-salon-may-2013
 <!--more-->
 
 ![高朋满座](https://cos.name/wp-content/uploads/2013/05/salon4.jpg)
+<p style="text-align:center;">高朋满座
 
 沙龙的第一场是由eBay Data and Data Infrastructure 团队的李忠、潘佳鸣带来的《Ebay 与大数据分析》。从移动互联网的用户购物潮流趋势到聚类方法在错误日志分析中的应用，辅以炫目的可视化效果——不仅仅是在场观众享受的酣畅淋漓，随着微博的直播场外观众也是垂涎欲滴。“亲，给个slides呗？” 哎呀呀，这个可不能提前剧透。沙龙只是小众的“审片会”哦，天机概不可外泄。小编在这里就不多写细节了，给大家留一些悬念待到本周末的R大会揭晓。
 
