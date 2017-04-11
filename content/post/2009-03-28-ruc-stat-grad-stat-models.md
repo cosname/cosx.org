@@ -24,8 +24,9 @@ slug: ruc-stat-grad-stat-models
 **Lectures:** Friday, 2:00-5:00 p.m.,   0308 Mingde Main Building
 
 **Teaching  Assistant:** 程晓月  (Email: chengxy(at)ruc.edu.cn)
+<!--more-->
 
-# Text Book:
+## Text Book:
 
   * Part 1 —- Linear Models
 Searle, S. R. Linear Models
@@ -41,7 +42,7 @@ Wolfgang Hardle, et al.   Nonparametric and Semiparametric Models
 
 Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul>
 
-# Outline:
+## Outline:
 
   * Mar. 27
       1. Matrix Algebra
@@ -88,7 +89,7 @@ Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul>
       1. Additive Models
       2. Generalized Additive Models
 
-# Homework:
+## Homework:
 
   * Mar. 27
       1. ex1_05.pdf
@@ -110,16 +111,16 @@ Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul>
 
         —-deadline: May. 8**
 
-# Final Exam:
+## Final Exam:
 
 June 26
 
-# Grading Policy:
+## Grading Policy:
 
   * 20% homework
   * 50% final exam
   * 30% paperwork
 
-# Note:
+## Note:
 
   * Late homework has influence on the grade. The reduced points are in direct proportion to the time delayed.
