@@ -15,21 +15,24 @@ slug: from-proportion-to-conclusion
 ---
 
 新华网刚发布了一个[关于学生冬季长跑的调查结果](http://news.xinhuanet.com/society/2009-04/22/content_11230487.htm "http://news.xinhuanet.com/society/2009-04/22/content_11230487.htm")（于2009年4月27日13:52访问），一共调查了100人，结果中却出现了92.79%这样的比例数字，有常识的读者都知道，世上不存在0.79个人，因此这里面必然有某个地方是错的（姑且不妄言造假）。这则消息让我马上想起《统计陷阱》这本书，我们生活中有多少陷阱呢？
+<!--more-->
 
 从消息编辑人员的角度来说，他们可能觉得保留两位小数显得“精确”，而这种“精确精神”从数学的角度来说显得既可爱又可笑，如果小数位能表示精确，那何不保留100位小数呢？
 
 从统计人的角度来看，对这种调查报告中的比例数字应该有足够的警觉。很多调查报告并不会告诉我们究竟样本量多大（在这一点上新华网的调查网还比较诚实），这种情况下，我们应该弄清究竟调查了多少对象，当样本量很小的时候我们会怀疑这个调查的代表性。当我们看到比例66%的时候也许能想起来这是2/3（猜测样本量是3的倍数），但对29.1667%这个比例我们未必能很快反应出来分子和分母是多少，若报告公布方没有说明样本量，我们只能自己猜测；对于667这样的数字，我们很容易猜测这是6循环的四舍五入。最终大概思路就是拿比例去挨个乘以一系列整数，看看哪个结果接近整数，从而“还原”原来的分式n/N。以下是简单的R代码：
 
-<pre class="brush: r">&gt; digit = ((1:100) * 0.29166666)%%1 # 整除1之后的“余数”
-&gt; plot(digit, ylim = c(0, 1))
-&gt; idx = which((1 - digit) &lt; 1e-05 | (digit - 0) &lt; 1e-05) # 与0或1很靠近时
-&gt; points(idx, digit[idx], pch = 20)
-&gt; abline(v = idx, lty = 2)
-&gt; axis(3, idx)
-&gt; idx * 0.29166666
-[1]  7 14 21 28</pre><figure id="attachment_1082" style="width: 480px" class="wp-caption aligncenter">
+```r
+> digit = ((1:100) * 0.29166666)%%1 # 整除1之后的“余数”
+> plot(digit, ylim = c(0, 1))
+> idx = which((1 - digit) &lt; 1e-05 | (digit - 0) &lt; 1e-05) # 与0或1很靠近时
+> points(idx, digit[idx], pch = 20)
+> abline(v = idx, lty = 2)
+> axis(3, idx)
+> idx * 0.29166666
+[1]  7 14 21 28
+```
 
-![从比例数字还原分式](https://cos.name/wp-content/uploads/2009/04/digit-detection.png "从比例数字还原分式")<figcaption class="wp-caption-text">从比例数字还原分式</figcaption></figure> 
+![从比例数字还原分式](https://cos.name/wp-content/uploads/2009/04/digit-detection.png "从比例数字还原分式")
 
 我们很容易发现分母（样本量）是24的倍数，因为上图中24的倍数乘以29.167%得到的结果很靠近整数；而具备某种特征的样本数量为7的倍数。根据具体的调查背景，我们可以自己猜测报告方究竟调查了多少人：24人？太少；960人？为什么不是1000人？……
 
