@@ -71,7 +71,7 @@ R语言环境2.15.0，WinXP通过远程连接，访问Mongodb Server。
 
 - 查看操作系统
 
-```
+    ```
     ~ uname -a
     
         Linux conan 3.2.0-38-generic-pae #61-Ubuntu SMP Tue Feb 19 12:39:51 UTC 2013 i686 i686 i386 GNU/Linux
@@ -79,11 +79,11 @@ R语言环境2.15.0，WinXP通过远程连接，访问Mongodb Server。
     ~ cat /etc/issue
     
         Ubuntu 12.04.2 LTS \n \l    
-```
+    ```
 
 - 启动mongodb
 
-```
+    ```
     ~ mongod
     
         mongod --help for help and startup options
@@ -102,7 +102,7 @@ R语言环境2.15.0，WinXP通过远程连接，访问Mongodb Server。
         Thu Apr 11 11:02:26 [initandlisten] options: {}
         Thu Apr 11 11:02:26 [websvr] admin web console waiting for connections on port 28017
         Thu Apr 11 11:02:26 [initandlisten] waiting for connections on port 27017    
-```
+    ```
 
 打开mongo shell
 
