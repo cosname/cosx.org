@@ -36,7 +36,7 @@ pairs(iris[1:4], main = "Anderson's Iris Data -- 3 species",
 
 ![pairs](https://cos.name/wp-content/uploads/2009/03/pairs.png)
 
-图1 pairs
+<p style="text-align: center;">图1 pairs</p>
 
 实际上，图1已经可以给我们很多信息，包括各类鸢尾花的花瓣、花萼长宽的大体分布以及它们两两之间的关系。
 
@@ -54,7 +54,7 @@ spm(~Sepal.Length + Sepal.Width + Petal.Length + Petal.Width |
 
 ![spm](https://cos.name/wp-content/uploads/2009/03/spm.png)
 
-图2 spm
+<p style="text-align: center;">图2 spm</p>
 
 # gpairs(YaleToolkit)
 
@@ -69,7 +69,7 @@ gpairs(iris, upper.pars = list(scatter = 'stats'),
 ```
 
 ![gpairs](https://cos.name/wp-content/uploads/2009/03/gpairs.png)
-图3 gpairs
+<p style="text-align: center;">图3 gpairs</p>
 
 # splom(lattice)
 
@@ -90,7 +90,7 @@ splom(~iris[1:4], groups = Species, data = iris,
 ```
 
 ![splom](https://cos.name/wp-content/uploads/2009/03/splom.png)
-图4 splom
+<p style="text-align: center;">图4 splom</p>
 
 # 讨论
 
