@@ -94,79 +94,18 @@ _# 计算年化收益率_ (t = **table.AnnualizedReturns_(merged[,vars],    �
 
 结果如下：
 
-<table class="table table-bordered table-striped table-condensed">
-  <tr>
-    <td>
-      标的
-    </td>
-    
-    <td>
-      年化收益率
-    </td>
-    
-    <td>
-      年化波动率
-    </td>
-    
-    <td>
-      年化夏普率 (Rf=2.81%)
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      tlt.Return
-    </td>
-    
-    <td>
-      0.0772
-    </td>
-    
-    <td>
-      0.0283
-    </td>
-    
-    <td>
-      0.0645
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      shy.Return
-    </td>
-    
-    <td>
-      0.1404
-    </td>
-    
-    <td>
-      0.0173
-    </td>
-    
-    <td>
-      0.0740
-    </td>
-  </tr>
-  
-  <tr>
-    <td>
-      ief.Return
-    </td>
-    
-    <td>
-      0.3378
-    </td>
-    
-    <td>
-      -0.0086
-    </td>
-    
-    <td>
-      0.4729
-    </td>
-  </tr>
-</table>
+     
+| 标的                  | tlt.Return        | shy.Return         | ief.Return   |
+    
+| ----------：          | ----------：      | ----------：       | ：----------：|
+     
+| 年化收益率             | 0.0772            | 0.1404             | 0.3378       |
+   
+| 年化波动率             | 0.0283            | 0.0173             | -0.0086      |
+    
+| 年化夏普率 (Rf=2.81%)  | 0.0645            | 0.0740             | 0.4729       |
+   
+ 
 
 ## 杠铃策略
 
