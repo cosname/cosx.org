@@ -34,8 +34,6 @@ slug: relationship-big-data-statistics
 这也不难回答，我们还是可以用民调数据了，只不过要在每个州都进行抽样调查，在仔细的分析汇总一下。数据量也就比预测全国的结果时用的多几十倍而已。而且如果知道了那些州两人相差太大，一方就没有必要再大肆花钱做广告了 ：）
   
 <!--more-->
-
-
   
 ![OxBWOGJ](https://cos.name/wp-content/uploads/2013/05/OxBWOGJ.jpg)
 
