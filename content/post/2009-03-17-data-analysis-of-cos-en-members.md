@@ -86,7 +86,7 @@ write.csv(x, "cos_en_spam.csv", row.names = FALSE)
 
 此处举一例说明分析的目标：例如我们想研究会员类型与邮箱后缀的关系，那么可以将后缀用正则表达式提取出来，然后做列联表看它们有何联系：
 
-```
+```r
 > table(x$user_active, sub("^.*\.", "", x$user_email))
 
      asia    at    au    az   biz    br    bs    by    ca    cc
