@@ -54,7 +54,7 @@ slug: statistical-analysis-and-winbugs-part-4
 
 第七步，编辑GeoBUGS支持的格式，在bou2\_4p\_feat1.txt中添加一段头，如下
 
-```r
+```
 map: 33
 1 Heilongjiang
 2 NeiMonggol
