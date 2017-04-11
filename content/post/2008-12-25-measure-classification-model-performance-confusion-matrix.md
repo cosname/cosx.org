@@ -23,16 +23,16 @@ slug: measure-classification-model-performance-confusion-matrix
 跑完分类模型（Logistic回归、决策树、神经网络等），我们经常面对一大堆模型评估的报表和指标，如Confusion Matrix、ROC、Lift、Gini、K-S之类（这个单子可以列很长），往往让很多在业务中需要解释它们的朋友头大：“这个模型的Lift是4，表明模型运作良好。——啊，怎么还要解释ROC，ROC如何如何，表明模型表现良好……”如果不明白这些评估指标的背后的直觉，就很可能陷入这样的机械解释中，不敢多说一句，就怕哪里说错。本文就试图用一个统一的例子（SAS Logistic回归），从实际应用而不是理论研究的角度，对以上提到的各个评估指标逐一点评，并力图表明：
 
   1. 这些评估指标，都是可以用白话（plain English, 普通话）解释清楚的；
-  2. 它们是可以手算出来的，看到各种软件包输出结果，并不是一个无法探究的“黑箱”；
-  3. 它们是相关的。你了解一个，就很容易了解另外一个。
+  1. 它们是可以手算出来的，看到各种软件包输出结果，并不是一个无法探究的“黑箱”；
+  1. 它们是相关的。你了解一个，就很容易了解另外一个。
 
 本文从混淆矩阵(Confusion Matrix，或分类矩阵，Classification Matrix)开始，它最简单，而且是大多数指标的基础。<!--more-->
 
 # 数据
 
-本文使用一个在信用评分领域非常有名的免费数据集，German Credit Dataset，你可以在[UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/)找到（[下载](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data-numeric)；[数据描述](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.doc)）。另外，你还可以在SAS系统的Enterprise Miner的演示数据集中找到该数据的一个版本（dmagecr.sas7bdat）。以下把这个数据分为两部分，训练数据train和验证数据valid，所有的评估指标都是在valid数据中计算（纯粹为了演示评估指标，在train数据里计算也未尝不可），我们感兴趣的二分变量是good_bad，取值为{good, bad}：
+本文使用一个在信用评分领域非常有名的免费数据集，German Credit Dataset，你可以在[UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/)找到（[下载](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data-numeric)；[数据描述](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.doc)。另外，你还可以在SAS系统的Enterprise Miner的演示数据集中找到该数据的一个版本（dmagecr.sas7bdat）。以下把这个数据分为两部分，训练数据train和验证数据valid，所有的评估指标都是在valid数据中计算（纯粹为了演示评估指标，在train数据里计算也未尝不可），我们感兴趣的二分变量是good_bad，取值为{good, bad}：
 
-```r
+```sas
 Train data
 good_bad    Frequency     Percent
 -------------------------------------------
