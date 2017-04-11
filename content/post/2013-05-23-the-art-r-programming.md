@@ -7,26 +7,28 @@ categories:
 slug: the-art-r-programming
 ---
 
-<figure id="attachment_7831" style="width: 235px" class="wp-caption aligncenter">[![R语言编程艺术](https://cos.name/wp-content/uploads/2013/05/art-of-r.jpg)](https://cos.name/wp-content/uploads/2013/05/art-of-r-big.jpg)<figcaption class="wp-caption-text">《R语言编程艺术》</figcaption></figure> 
+![R语言编程艺术](https://cos.name/wp-content/uploads/2013/05/art-of-r.jpg)
 
-由统计之都的几位成员翻译的《R语言编程艺术》终于就要面市了。本书的译者有[陈堰平](http://yanping.me/cn)、[邱怡轩](http://yixuan.cos.name/cn)、[潘岚锋](http://panlanfeng.github.com)、[熊熹](http://weibo.com/u/1572842322)，负责校审的有[林宇](http://http://weibo.com/mangoly)、严紫丹、程豪。[这里](http://yanping.me/cn/blog/2013/05/15/the-art-of-r-programming-published/ "《R语言编程艺术》译者序")有本书的译者序，读者可以在[本书的github页面](https://github.com/cosname/art-r-translation)下载数据和代码。读者可以在本页留言提问，我们也会在这里公布本书的勘误。想查找更多好书，请看[图书出版](https://cos.name/books/ "图书出版")频道。
+《R语言编程艺术》
 
-## 内容推荐
+由统计之都的几位成员翻译的《R语言编程艺术》终于就要面市了。本书的译者有[陈堰平](http://yanping.me/cn)、[邱怡轩](http://yixuan.cos.name/cn)、[潘岚锋](http://panlanfeng.github.com)、[熊熹](http://weibo.com/u/1572842322)，负责校审的有[林宇](http://http://weibo.com/mangoly)、严紫丹、程豪。[这里](http://yanping.me/cn/blog/2013/05/15/the-art-of-r-programming-published/)有本书的译者序，读者可以在[本书的github页面](https://github.com/cosname/art-r-translation)下载数据和代码。读者可以在本页留言提问，我们也会在这里公布本书的勘误。想查找更多好书，请看[图书出版](https://cos.name/books/)频道。
+
+# 内容推荐
 
 本书是R语言领域公认的经典著作，著名计算机科学家兼统计学家撰写，Amazon五星级畅销书。它是一本面向R语言开发者的纯编程类书籍，不需要读者具备统计学基础，从编程角度而非统计学角度系统讲解了R语言的数据结构、编程结构、语法、TCP/IP网络编程、并行计算、代码调试、程序性能优化、编程技巧以及R语言与其他语言的接口等所有与R编程相关的知识，几乎面面俱到。本书的实用性也非常强，44个精选的扩展案例，充分展示了R语言在数据处理和统计分析方面的强大能力。
 
 全书一共16章：第1章介绍了学习R语言需要掌握的预备知识以及它的一些重要数据结构；第2~6章详细讲解了R语言的主要数据结构，包括向量、矩阵、数组、列表、数据框和因子；第7～13章全面讲解了R语言的语法，包括编程结构、面向对象特性、数学运算与模拟、输入与输出、字符串处理、绘图，以及R语言的调试方法。第14～16章讲解了R语言编程的高级内容，如执行速度和性能的提升、R语言与C/C++或Python的混合编程，以及R语言的并行计算等。
 
-**本书核心内容：**
+## 本书核心内容：
 
-  * R语言的完整语法以及R语言的编程技巧。
-  * 创建精美图形来展示复杂数据和函数。
-  * 使用并行计算和向量化的方法编写更高效的代码。
-  * 使用R对C/C++和Python的接口来提高计算速度或增加功能。
-  * 文本分析、图像处理等领域新的R包。
-  * 使用高级调试技巧清除代码里恼人的错误。
-  * 包含许多“扩展案例”，展示完整的、特定用途的函数，并针对同一个问题讨论了不同的设计方案，以便分析高效准确的做法。
-  * 在恰当的时候介绍R语言与其他语言的差异，给那些了解其他语言的开发人员提供参考。
+- R语言的完整语法以及R语言的编程技巧。
+- 创建精美图形来展示复杂数据和函数。
+- 使用并行计算和向量化的方法编写更高效的代码。
+- 使用R对C/C++和Python的接口来提高计算速度或增加功能。
+- 文本分析、图像处理等领域新的R包。
+- 使用高级调试技巧清除代码里恼人的错误。
+- 包含许多“扩展案例”，展示完整的、特定用途的函数，并针对同一个问题讨论了不同的设计方案，以便分析高效准确的做法。
+- 在恰当的时候介绍R语言与其他语言的差异，给那些了解其他语言的开发人员提供参考。
 
 <!--more-->
 
