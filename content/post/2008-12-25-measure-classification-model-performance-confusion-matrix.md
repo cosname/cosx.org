@@ -30,9 +30,9 @@ slug: measure-classification-model-performance-confusion-matrix
 
 # 数据
 
-本文使用一个在信用评分领域非常有名的免费数据集，German Credit Dataset，你可以在[UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/)找到（[下载](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data-numeric)；[数据描述](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.doc)）。另外，你还可以在SAS系统的Enterprise Miner的演示数据集中找到该数据的一个版本（dmagecr.sas7bdat）。以下把这个数据分为两部分，训练数据train和验证数据valid，所有的评估指标都是在valid数据中计算（纯粹为了演示评估指标，在train数据里计算也未尝不可），我们感兴趣的二分变量是good_bad，取值为{good, bad}：
+本文使用一个在信用评分领域非常有名的免费数据集，German Credit Dataset，你可以在[UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/)找到（[下载](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.data-numeric)；[数据描述](http://archive.ics.uci.edu/ml/machine-learning-databases/statlog/german/german.doc)。另外，你还可以在SAS系统的Enterprise Miner的演示数据集中找到该数据的一个版本（dmagecr.sas7bdat）。以下把这个数据分为两部分，训练数据train和验证数据valid，所有的评估指标都是在valid数据中计算（纯粹为了演示评估指标，在train数据里计算也未尝不可），我们感兴趣的二分变量是good_bad，取值为{good, bad}：
 
-```r
+```sas
 Train data
 good_bad    Frequency     Percent
 -------------------------------------------
