@@ -198,71 +198,71 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
    
 1. 下载thrift
     ```
-~ wget http://archive.apache.org/dist/thrift/0.8.0/thrift-0.8.0.tar.gz
-~ tar xvf thrift-0.8.0.tar.gz
-~ cd thrift-0.8.0/
+    ~ wget http://archive.apache.org/dist/thrift/0.8.0/thrift-0.8.0.tar.gz
+    ~ tar xvf thrift-0.8.0.tar.gz
+    ~ cd thrift-0.8.0/
     ```
 
 1. 下载PHP支持类库(可选)
     ```
-~ sudo apt-get install php-cli
+    ~ sudo apt-get install php-cli
     ```
     
 1. 下载C++支持类库(可选)
 
     ```
-~ sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev
+    ~ sudo apt-get install libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev
     ```
 
 1. 生成编译的配置参数
 
     ```
-~ ./configure
+    ~ ./configure
 
-  thrift 0.8.0
+      thrift 0.8.0
 
-  Building code generators ..... :
+      Building code generators ..... :
 
-  Building C++ Library ......... : yes
-  Building C (GLib) Library .... : no
-  Building Java Library ........ : no
-  Building C# Library .......... : no
-  Building Python Library ...... : yes
-  Building Ruby Library ........ : no
-  Building Haskell Library ..... : no
-  Building Perl Library ........ : no
-  Building PHP Library ......... : yes
-  Building Erlang Library ...... : no
-  Building Go Library .......... : no
+      Building C++ Library ......... : yes
+      Building C (GLib) Library .... : no
+      Building Java Library ........ : no
+      Building C# Library .......... : no
+      Building Python Library ...... : yes
+      Building Ruby Library ........ : no
+      Building Haskell Library ..... : no
+      Building Perl Library ........ : no
+      Building PHP Library ......... : yes
+      Building Erlang Library ...... : no
+      Building Go Library .......... : no
 
-  Building TZlibTransport ...... : yes
-  Building TNonblockingServer .. : yes
+      Building TZlibTransport ...... : yes
+      Building TNonblockingServer .. : yes
 
-  Using Python ................. : /usr/bin/python
+      Using Python ................. : /usr/bin/python
 
-  Using php-config ............. : /usr/bin/php-config
+      Using php-config ............. : /usr/bin/php-config
     ```
 
 1. 编译和安装
 
     ```
-~ make
-~ make install
+    ~ make
+    ~ make install
     ```
    
 1. 查看thrift版本
 
     ```
-~ thrift -version
-  Thrift version 0.8.0
+    ~ thrift -version
+      Thrift version 0.8.0
     ```
  
 1. 启动HBase的Thrift Server
   
     ```  
-  ~ /hbase-0.94.2/bin/hbase-daemon.sh start thrift
+    ~ /hbase-0.94.2/bin/hbase-daemon.sh start thrift
 
-  ~ jps 
+    ~ jps 
 
       12041 HMaster
       12209 HRegionServer
@@ -279,7 +279,7 @@ Thrift是需要本地编译的，官方没有提供二进制安装包，首先�
 1. 安装rhbase
   
     ```
-  ~ R CMD INSTALL rhbase_1.1.1.tar.gz
+     ~ R CMD INSTALL rhbase_1.1.1.tar.gz
     ```
 
 很顺利的安装完成。
