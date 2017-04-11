@@ -12,25 +12,21 @@ tags:
 slug: interviewof-jeff-leek
 ---
 
-<span style="color: #888888;">【COS编辑部按】</span><span style="color: #888888;">受访人：Jeff Leek</span>
+【COS编辑部按】 受访人：Jeff Leek
 
-<span style="color: #888888;">简介：Jeff Leek是约翰·霍普金斯大学布隆博格公共卫生学院（Johns Hopkins Bloomberg School of Public Health）助理教授。他与另外两位教授共同打理的[<span style="color: #888888;">Simply Statistics</span>](http://simplystatistics.org/)是最受欢迎的统计学博客之一。本文是小编对Jeff Leek采访的录音稿。</span>
+简介：Jeff Leek是约翰·霍普金斯大学布隆博格公共卫生学院（Johns Hopkins Bloomberg School of Public Health）助理教授。他与另外两位教授共同打理的[Simply Statistics](http://simplystatistics.org/)是最受欢迎的统计学博客之一。本文是小编对Jeff Leek采访的录音稿。
 
 **1. 教育背景**
 
 我叫Jeff Leek， 我是美国约翰·霍普金斯大学的一名助理教授，方向是生物统计。我在犹他州立大学念的本科，方向是应用数学。然后是在西雅图华盛顿大学读的生物统计博士学位。之后我又在Mount Sinai School of Medicine做了博士后，然后又去约翰·霍普金斯大学做了博士后，方向是计算生物学。我的研究方向主要是基因组相关问题和下一代序列分析。我正在维护一个叫Simply Statistics的博客，里面有很多有趣的统计问题。
 
-**2.为什么选择统计专业？
-  
-** 
+**2.为什么选择统计专业？** 
   
 当我还是一个本科生的时候，我和一个教授做一个关于甲壳虫的研究。我收集数据，然后用微分方程模型研究甲壳虫灾害的爆发。那时候在分析数据的过程，我觉得需要学习更多的统计学知识。所以当我申请研究生项目的时候，申了一半的数学，申了一半的统计。但是当我去各个学校访问的时候，觉得还是统计系的人们更有意思点。最后我就去了生物统计专业了。在读研究生的时候，我的博士导师，同是也是我的研究助理导师引导我进入了基因学，而我自己也觉得基因学很酷很令人兴奋。总之，就是我的导师让我觉得基因学很有意思，然后我就进入了这个领域。
 
 <!--more-->
 
-**3. 你最常用的模型或软件。
-  
-** 
+**3. 你最常用的模型或软件。** 
   
 R, Python, C.
 
