@@ -1,7 +1,7 @@
 ---
 title: 利用shiny包快速搭建可视化原型系统
 date: '2016-06-16T12:07:03+00:00'
-author: 谢佳标（乐逗游戏，深圳）
+author: 谢佳标
 categories:
   - 统计图形
   - 统计软件
@@ -12,13 +12,13 @@ tags:
 slug: use-shiny-fleetly-set-up-visual-prototype-system
 ---
 
-前几周给大家分享了一篇《利用R语言进行交互数据可视化》的文章[<u>/2016/06/using-r-for-interactive-data-visualization/</u>](/2016/06/using-r-for-interactive-data-visualization/)。文章末尾提到的在R的环境中，动态交互图形的优势在于能和knitr、shiny等框架整合在一起，能迅速建立一套可视化原型系统。今天接着给大家分享如何将动态交互图形与shiny框架整合在一起，迅速建立一套可视化原型系统。
+前几周给大家分享了一篇[《利用R语言进行交互数据可视化》](/2016/06/using-r-for-interactive-data-visualization/)的文章。文章末尾提到的在R的环境中，动态交互图形的优势在于能和knitr、shiny等框架整合在一起，能迅速建立一套可视化原型系统。今天接着给大家分享如何将动态交互图形与shiny框架整合在一起，迅速建立一套可视化原型系统。
 
 Shiny是R中的一种Web开发框架，使得R的使用者不必太了解css、js只需要了解一些html的知识就可以快速完成web开发，且shiny包集成了bootstrap、jquery、ajax等特性，极大解放了作为统计语言的R的生产力。
 
 Shiny应用包含连个基本的组成部分：一个是用户界面脚本（a user-interface script），另一个是服务器脚本(a server script)。
 
-![`M_86@S224HF$W_AKSLVE{N](https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN.png)
+![Shiny应用包含连个基本的组成部分](https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN.png)
 
 <!--more-->
 
@@ -55,7 +55,7 @@ shinyApp(ui = ui, server = server)
 
 ![~M4UT2WID$7MR462EO9M~F6](https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6.png)
 
-shinydashboard扩展包为shiny框架提供了BI框架，一个dashboard由三部分组成：标题栏、侧边栏、主面板。通过install.packages(“shinydashboard”)完成安装。执行以下脚本可以得到shinydashboard的基本框架。
+shinydashboard扩展包为shiny框架提供了BI框架，一个dashboard由三部分组成：标题栏、侧边栏、主面板。通过install.packages("shinydashboard")完成安装。执行以下脚本可以得到shinydashboard的基本框架。
 
 ```r
 # app.R #
@@ -82,7 +82,7 @@ graph_function(formula,data=,…)
 })
 
 # ui.R #
-plotOutput(“mygraph”)
+plotOutput("mygraph")
 ```
 
 例如，我们想在网页上输出了lattice函数绘制的散点图矩阵和三维曲面图，server.R及ui.R的核心代码如下：
@@ -90,7 +90,7 @@ plotOutput(“mygraph”)
 ```r
 # server.R #
 # 利用lattice包中的绘图函数
-output$<strong><b>splom</b></strong> <- renderPlot({
+output$splom <- renderPlot({
 splom(mtcars[c(1, 3:7)], groups = mtcars$cyl,
 pscales = 0,pch=1:3,col=1:3,
 varnames = c("Miles\nper\ngallon", "Displacement\n(cu. in.)",
@@ -101,34 +101,37 @@ text=list(levels(factor(mtcars$cyl))),
 points=list(pch=1:3,col=1:3)))
 })
 
-output$<strong><b>wireframe </b></strong><- renderPlot({
-wi
+output$wireframe <- renderPlot({
+wireframe(volcano, shade = TRUE,
+aspect = c(61/87, 0.4),
+light.source = c(10,0,10))
+})
 ```
 
 ```r
 # ui.R #
-plotOutput("<strong><b>splom</b></strong>"),
-plotOutput("<strong><b>wireframe</b></strong>")
+plotOutput("splom"),
+plotOutput("wireframe")
 ```
 
 平台界面如下图所示：
 
 ![6VR87SQB8W65HT08](https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08.png)
 
-对于rCharts包绘制的图形，我们在server.R中用renderChart( )函数将图形赋予输出对象mygraph，并在ui.R中用showOutput(“mygraph” )将图形输出到web中。形式如下（以hPlot函数为例）：
+对于rCharts包绘制的图形，我们在server.R中用renderChart( )函数将图形赋予输出对象mygraph，并在ui.R中用showOutput("mygraph" )将图形输出到web中。形式如下（以hPlot函数为例）：
 
 ```r
 # server.R #
 output$mygraph <- renderChart({
-p1 <- hPlot(formula,data,type,…)
-p1$addParams(dom=“mygraph”)
+p1 <- hPlot(formula,data,type, ...)
+p1$addParams(dom="mygraph")
 return(p1)
 })
 ```
 
 ```r
 # ui.R #
-showOutput(“mygraph”,“highcharts”)
+showOutput("mygraph","highcharts")
 ```
 
 如下图所示，我们在网页上输出了nPlot函数绘制的交互柱状图。
@@ -174,7 +177,7 @@ showOutput("mychart2","highcharts")
 
 ![NNW9QYQ8XA6CV%SLCKQ5A](https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A.png)
 
-对于DT包制作的数据表格，我们在server.R中用renderDataTable ( )函数将表格赋予输出对象mytable，并在ui.R中用dataTableOutput (“mytable” )将图形输出到web中。形式如下：
+对于DT包制作的数据表格，我们在server.R中用renderDataTable ( )函数将表格赋予输出对象mytable，并在ui.R中用dataTableOutput ("mytable" )将图形输出到web中。形式如下：
 
 ```r
 # server.R #
@@ -185,12 +188,12 @@ datatable(data)
 
 ```r
 # ui.R #
-dataTableOutput(“mytable”)
+dataTableOutput("mytable")
 ```
 
 ![BC3E.tmp](https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_.png)
 
-对于networkD3包制作的网络图，我们在server.R中用renderForceNetwork ( )函数将表格赋予输出对象mygraph，并在ui.R中用forceNetworkOutput (“mygraph” )将图形输出到web中。形式如下：
+对于networkD3包制作的网络图，我们在server.R中用renderForceNetwork ( )函数将表格赋予输出对象mygraph，并在ui.R中用forceNetworkOutput ("mygraph" )将图形输出到web中。形式如下：
 
 ```r
 # server.R #
@@ -201,7 +204,7 @@ forceNetwork (…)
 
 ```r
 # ui.R #
-forceNetworkOutput (“mygraph”)
+forceNetworkOutput ("mygraph")
 ```
 
 如下图所示，我们在网页上展示力导向网络图。
@@ -236,11 +239,3 @@ forceNetworkOutput("networkD3")
 可以通过控件去控制关联规则可视化中的method类型及K-Means聚类中的K值。
 
 ![FD59.tmp](https://cos.name/wp-content/uploads/2016/06/FD59.tmp_.png)
-
-**原创文章，版权所有。**
-
-敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
-
-![qrcode_for_gh_946beec24de4_258](https://cos.name/wp-content/uploads/2016/06/qrcode_for_gh_946beec24de4_258.jpg)
-
-**未经许可的转载以及改编者，统计之都将依法追究其法律责任。**
