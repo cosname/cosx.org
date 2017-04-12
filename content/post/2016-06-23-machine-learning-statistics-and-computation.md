@@ -24,7 +24,7 @@ slug: machine-learning-statistics-and-computation
 
 最近人工智能或者机器学习的强势崛起，特别是刚刚过去的AlphaGo和韩国棋手李世石九段的人机大战，再次让我们领略到了人工智能或机器学习技术的巨大潜力，同时也深深地触动了我。面对这一前所未有的技术大变革，作为10多年以来一直从事统计机器学习一线教学与研究的学者，希望借此机会和大家分享我个人的一些思考和反思。
 
-![Google-Go-Lee-Sedol-Game-3]( https://venturebeat.com/wp-content/uploads/2016/03/Google-Go-Lee-Sedol-Game-3.jpg)
+![Google-Go-Lee-Sedol-Game-3](https://venturebeat.com/wp-content/uploads/2016/03/Google-Go-Lee-Sedol-Game-3.jpg)
 
 在这场人工智能发展的盛事里，我突然发现，对我们中国的学者来说，好像是一群看热闹的旁观者。不管你承认还是不承认，事实就是和我一代的或者更早的学者也只能作为旁观者了。我们能做的事情是帮助你们—中国年轻的一代，让你们在人工智能发展的大潮中有竞争力，做出标杆性的成就，创造人类文明价值，也让我有个加油欢呼的主队。
 
