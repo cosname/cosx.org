@@ -71,7 +71,7 @@ server <- function(input, output) { }
 shinyApp(ui, server)
 ```
 
-![LA_74B35XI8Q2GO7]1L_T)V](https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV.png)
+![LA_74B35XI8Q2GO71L_T)V](https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV.png)
 
 到此，关于shiny和shinydashboard框架我们已经掌握了。接下来，我们将前面学到的动态交互绘图包与Shiny Web开发框架结合，一步步搭建数据可视化平台demo。先创建新文件夹myapp，并在myapp文件夹里面创建两个脚本ui.R和server.R，用来存放客户端和服务端的脚本。
 
