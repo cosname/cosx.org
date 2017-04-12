@@ -1,7 +1,7 @@
 ---
 title: 利用R语言进行交互数据可视化
 date: '2016-06-05T14:18:51+00:00'
-author: COS编辑部
+author: 谢佳标
 categories:
   - 统计之都
   - 统计图形
@@ -15,27 +15,29 @@ tags:
 slug: using-r-for-interactive-data-visualization
 ---
 
-**作者：**谢佳标（乐逗游戏，深圳）
-
 上周在中国R语言大会北京会场上，给大家分享了如何利用R语言交互数据可视化。现场同学对这块内容颇有兴趣，故今天把一些常用的交互可视化的R包搬出来与大家分享。
 
-**rCharts****包**
+# rCharts包
 
 说起R语言的交互包，第一个想到的应该就是rCharts包。该包直接在R中生成基于D3的Web界面。
 
 rCharts包的安装
 
-<pre>require(devtools)
-install_github('rCharts', 'ramnathv')</pre>
+```r
+require(devtools)
+install_github('rCharts', 'ramnathv')
+```
 
 rCharts函数就像lattice函数一样，通过formula、data指定数据源和绘图方式，并通过type指定图表类型。
 
 下面通过例子来了解下其工作原理。我们以鸢尾花数据集为例，首先通过name函数对列名进行重新赋值（去掉单词间的点），然后利用rPlot函数绘制散点图(type=“point”)，并利用颜色进行分组（color=“Species”）。<!--more-->
 
-<pre><strong>library</strong>(rCharts)
+```r
+library(rCharts)
 names(iris) = gsub("\\.", "", names(iris))
-p1 &lt;- rPlot(SepalLength ~ SepalWidth | Species, data = iris, color = 'Species', type = 'point')
-p1</pre>
+p1 <- rPlot(SepalLength ~ SepalWidth | Species, data = iris, color = 'Species', type = 'point')
+p1
+```
 
 ![001](https://cos.name/wp-content/uploads/2016/06/001.png)
 
@@ -45,19 +47,21 @@ NVD3 是一个旨在建立可复用的图表和组件的 d3.js 项目——它�
 
 下面以眼睛和头发颜色的数据(HairEyeColor)为例说明nPlot绘图的基本原理。我们按照眼睛的颜色进行分组(group=“eye”),对头发颜色人数绘制柱状图，并将类型设置为柱状图组合方式(type=“multiBarChart”)，这样可以实现分组和叠加效果。
 
-<pre><strong>library</strong>(rCharts)
-hair_eye_male &lt;- subset(as.data.frame(HairEyeColor), Sex == "Male")
-hair_eye_male[,1] &lt;- paste0("Hair",hair_eye_male[,1])
-hair_eye_male[,2] &lt;- paste0("Eye",hair_eye_male[,2])
-n1 &lt;- nPlot(Freq ~ Hair, group = "Eye", data = hair_eye_male,
+```r
+library(rCharts)
+hair_eye_male <- subset(as.data.frame(HairEyeColor), Sex == "Male")
+hair_eye_male[,1] <- paste0("Hair",hair_eye_male[,1])
+hair_eye_male[,2] <- paste0("Eye",hair_eye_male[,2])
+n1 <- nPlot(Freq ~ Hair, group = "Eye", data = hair_eye_male,
 type = "multiBarChart")
-n1</pre>
+n1
+```
 
-&nbsp;
+![002](https://cos.name/wp-content/uploads/2016/06/002.png) 
 
-![002](https://cos.name/wp-content/uploads/2016/06/002.png) 可以通过图形右上角选择需要查看或隐藏的类别（默认是全部类别显示的），也能通过左上角选择柱子是按照分组还是叠加的方式进行摆放（默认是分组方式）。如果选择Stacked，就会绘制叠加柱状图。
+可以通过图形右上角选择需要查看或隐藏的类别（默认是全部类别显示的），也能通过左上角选择柱子是按照分组还是叠加的方式进行摆放（默认是分组方式）。如果选择Stacked，就会绘制叠加柱状图。
 
-&nbsp;
+
 
 ![rcharts-003](https://cos.name/wp-content/uploads/2016/06/rcharts-003.png)
 
@@ -65,23 +69,23 @@ Highcharts是一个制作图表的纯Javascript类库，支持大部分的图表
 
 以MASS包中的学生调查数据集survery为例，说明hPlot绘图的基本原理。我们绘制学生身高和每分钟脉搏跳动次数的气泡图，以年龄变量作为调整气泡大小的变量。
 
-<pre><strong>library</strong>(rCharts)
-a &lt;- hPlot(Pulse ~ Height, data = MASS::survey, type = "bubble",
+```r
+library(rCharts)
+a <- hPlot(Pulse ~ Height, data = MASS::survey, type = "bubble",
 title = "Zoom demo", subtitle = "bubble chart",
 size = "Age", group = "Exer")
 a$colors('rgba(223, 83, 83, .5)', 'rgba(119, 152, 191, .5)',
 'rgba(60, 179, 113, .5)')
 a$chart(zoomType = "xy")
 a$exporting(enabled = T)
-a</pre>
-
-&nbsp;
+a
+```
 
 ![rcharts-004](https://cos.name/wp-content/uploads/2016/06/rcharts-004.png)
 
 rCharts包可以画出更多漂亮的交互图， <http://ramnathv.github.io/rCharts/>和<https://github.com/ramnathv/rCharts/tree/master/demo>有更多的例子可供大家学习。
 
-**recharts****包**
+# recharts包
 
 学习完rCharts包，可能有读者会问，我们有没有国人开发的包实现相似的效果呢？这边给大家推荐一个同样功能强大的recharts包。
 
@@ -89,56 +93,59 @@ rCharts包可以画出更多漂亮的交互图， <http://ramnathv.github.io/rCh
 
 安装方式如下：
 
-<pre>library(devtools)
-install_github('yihui/recharts')</pre>
+```r
+library(devtools)
+install_github('yihui/recharts')
+```
 
 安装完后，需要在<https://github.com/madlogos/recharts/blob/master/R/echartR.R>将echartR.R脚本下载到本地。
 
 假如想对鸢尾花数据集绘制散点图，可以执行如下代码：
 
-<pre><strong>source</strong>("~echartR.R")
+```r
+source("~echartR.R")
 names(iris) = gsub("\\.", "", names(iris))
 echartR(data=iris,x=~SepalLength,y=~PetalWidth,series = ~Species,
-type = 'scatter')</pre>
-
-&nbsp;
+type = 'scatter')
+```
 
 ![rcharts-005](https://cos.name/wp-content/uploads/2016/06/rcharts-005.png)
 
 绘制柱状图：
 
-<pre>hair_eye_male &lt;- subset(as.data.frame(HairEyeColor), Sex == "Male")
-hair_eye_male[,1] &lt;- paste0("Hair",hair_eye_male[,1])
-hair_eye_male[,2] &lt;- paste0("Eye",hair_eye_male[,2])
+```r
+hair_eye_male <- subset(as.data.frame(HairEyeColor), Sex == "Male")
+hair_eye_male[,1] <- paste0("Hair",hair_eye_male[,1])
+hair_eye_male[,2] <- paste0("Eye",hair_eye_male[,2])
 echartR(data = hair_eye_male, x = Hair, y = ~Freq,  series = ~Eye,
 type = 'bar', palette='fivethirtyeight',
-xlab = 'Hair', ylab = 'Freq')</pre>
+xlab = 'Hair', ylab = 'Freq')
+```
 
-&nbsp;
+![rcharts-006](https://cos.name/wp-content/uploads/2016/06/rcharts-006.png)
 
-![rcharts-006](https://cos.name/wp-content/uploads/2016/06/rcharts-006.png)[
-  
-](https://cos.name/wp-content/uploads/2016/06/rcharts-007.png) 
+![rcharts-007](https://cos.name/wp-content/uploads/2016/06/rcharts-007.png) 
 
 玫瑰图：
 
-<pre>dtcars &lt;- mtcars
-dtcars$car &lt;- row.names(dtcars)
-dtcars$transmission &lt;- as.factor(dtcars$am)
-levels(dtcars$transmission) &lt;- c("Automatic","Manual")
-dtcars$cylinder &lt;- as.factor(dtcars$cyl)
-dtcars$carburetor &lt;-as.factor(dtcars$carb)
+```r
+dtcars <- mtcars
+dtcars$car <- row.names(dtcars)
+dtcars$transmission <- as.factor(dtcars$am)
+levels(dtcars$transmission) <- c("Automatic","Manual")
+dtcars$cylinder <- as.factor(dtcars$cyl)
+dtcars$carburetor <-as.factor(dtcars$carb)
 echartR(dtcars, x = ~cylinder,  y = ~car, type='rose',
 palette='colorblind', title='Number of Cylinders',
-subtitle = '(source: mtcars)')</pre>
-
-&nbsp;
+subtitle = '(source: mtcars)')
+```
 
 ![rcharts-007](https://cos.name/wp-content/uploads/2016/06/rcharts-007.png)
 
 雷达图：
 
-<pre>player &lt;- data.frame(name=c(rep("Philipp Lahm",8),rep("Dani Alves",8)),
+```r
+player <- data.frame(name=c(rep("Philipp Lahm",8),rep("Dani Alves",8)),
 para=rep(c("Passing%","Key passing","Comp crosses",
 "Crossing%","Successful dribbles",
 "Dispossessed","Dribbled past","Fouls"),2),
@@ -146,69 +153,74 @@ value=c(89.67, 1.51, 0.97, 24.32, 0.83, 0.86, 1.15, 0.47,
 86.62, 2.11, 0.99, 20.78, 1.58, 1.64, 0.9, 1.71))
 echartR(player, x= ~para, y= ~value, series= ~name, type='radarfill',
 symbolList='none', palette=c('firebrick1','dodgerblue'),
-title='Lahm vs Alves', subtitle= '(by @mixedknuts)')</pre>
+title='Lahm vs Alves', subtitle= '(by @mixedknuts)')
+```
 
-&nbsp;
+![rcharts-008](https://cos.name/wp-content/uploads/2016/06/rcharts-008.png)
 
-**![rcharts-008](https://cos.name/wp-content/uploads/2016/06/rcharts-008.png)**
-
-**plotly****包**
+# plotly包
 
 接下来要给大家介绍的是另一个功能强大的plotly包。它是一个基于浏览器的交互式图表库，它建立在开源的JavaScript图表库plotly.js之上。
 
 有两种安装方式：
 
-<pre>install.packages("plotly")</pre>
+```r
+install.packages("plotly")
+```
 
 或者
 
-<pre>devtools::install_github("ropensci/plotly")</pre>
+```r
+devtools::install_github("ropensci/plotly")
+```
 
 plotly包利用函数plot_ly函数绘制交互图。
 
 如果相对鸢尾花数据集绘制散点图，需要将mode参数设置为“markers”。
 
-<pre><strong>library</strong>(plotly)
-p &lt;- plot_ly(iris, x = Petal.Length, y = Petal.Width,
+```r
+library(plotly)
+p <- plot_ly(iris, x = Petal.Length, y = Petal.Width,
 color = Species, colors = "Set1", mode = "markers")
-p</pre>
-
-&nbsp;
+p
+```
 
 ![rcharts-009](https://cos.name/wp-content/uploads/2016/06/rcharts-009.png)
 
 如果想绘制交互箱线图，需要将type参数设置为box。
 
-<pre>library(plotly)
-plot_ly(midwest, x = percollege, color = state, type = "box")</pre>
+```r
+library(plotly)
+plot_ly(midwest, x = percollege, color = state, type = "box")
+```
 
 ![rcharts-010](https://cos.name/wp-content/uploads/2016/06/rcharts-010.png)
 
 如果你已熟悉ggplot2的绘图系统，也可以针对ggplot2绘制的对象p，利用ggplotly函数实现交互效果。例如我们想对ggplot绘制的密度图实现交互效果，执行以下代码即可。
 
-<pre>library(plotly)
-p &lt;- ggplot(data=lattice::singer,aes(x=height,fill=voice.part))+
+```r
+library(plotly)
+p <- ggplot(data=lattice::singer,aes(x=height,fill=voice.part))+
 geom_density()+
 facet_grid(voice.part~.)
-(gg &lt;- ggplotly(p))</pre>
+(gg <- ggplotly(p))
+```
 
-&nbsp;
+![rcharts-011](https://cos.name/wp-content/uploads/2016/06/rcharts-011.png)
 
-**![rcharts-011](https://cos.name/wp-content/uploads/2016/06/rcharts-011.png)**
-
-**其他**
+# 其他
 
 此外还有很多好玩有用的交互包。例如专门用来画交互时序图的dygraphs包，可通过install.packages(“dygraphs”)安装。
 
-<pre>library(dygraphs)
-lungDeaths &lt;- cbind(mdeaths, fdeaths)
+```r
+library(dygraphs)
+lungDeaths <- cbind(mdeaths, fdeaths)
 dygraph(lungDeaths) %&gt;%
 dySeries("mdeaths", label = "Male") %&gt;%
 dySeries("fdeaths", label = "Female") %&gt;%
 dyOptions(stackedGraph = TRUE) %&gt;%
-dyRangeSelector(height = 20)</pre>
-
-&nbsp;
+dyRangeSelector(height = 20)
+```
 
 ![rcharts-012](https://cos.name/wp-content/uploads/2016/06/rcharts-012.png)
 
@@ -216,14 +228,17 @@ DT包实现R数据对象可以在HTML页面中实现过滤、分页、排序以�
 
 以鸢尾花数据集iris为例，执行以下代码：
 
-<pre>library(DT)
-datatable(iris)</pre>
+```r
+library(DT)
+datatable(iris)
+```
 
 networkD3包可实现D3 JavaScript的网络图，通过install.packages(“networkD3”)安装。
 
 下面是绘制一个力导向的网络图的例子。
 
-<pre># 加载数据
+```r
+# 加载数据
 data(MisLinks)
 data(MisNodes)
 
@@ -231,27 +246,34 @@ data(MisNodes)
 forceNetwork(Links = MisLinks, Nodes = MisNodes,
 Source = "source", Target = "target",
 Value = "value", NodeID = "name",
-Group = "group", opacity = 0.8)</pre>
+Group = "group", opacity = 0.8)
+```
 
-![rcharts-014](https://cos.name/wp-content/uploads/2016/06/rcharts-014.png) 我们可以通过d3treeR包绘制交互treemap图，利用
+![rcharts-014](https://cos.name/wp-content/uploads/2016/06/rcharts-014.png) 
 
-<pre>devtools::install_github("timelyportfolio/d3treeR")</pre>
+我们可以通过d3treeR包绘制交互treemap图，利用
+
+```r
+devtools::install_github("timelyportfolio/d3treeR")
+```
 
 完成d3treeR包安装。
 
-<pre>library(treemap)
+```r
+library(treemap)
 library(d3treeR)
 data("GNI2014")
-tm &lt;-  treemap(
+tm <-  treemap(
 GNI2014,
 index=c("continent", "iso3"),
 vSize="population",
 vColor="GNI",
 type="value"
 )
-d3tree( tm,rootname = "World" )</pre>
+d3tree( tm,rootname = "World" )
+```
 
-&nbsp;
+
 
 ![rcharts-015](https://cos.name/wp-content/uploads/2016/06/rcharts-015.png)
 
