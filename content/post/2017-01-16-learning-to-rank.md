@@ -23,7 +23,7 @@ slug: learning-to-rank
 
 ![](https://cos.name/wp-content/uploads/2017/01/Google-e1457156368841.jpg)
 
-最近看到Google research放出来的一篇论文：[Learning to Rank with Selection Bias in Personal Search](http://research.google.com/pubs/pub45286.html)。这篇论文是跟排序算法相关的，虽然跟上面的“假新闻”事件没啥直接关系，但殊途同归之处不少。正巧园主前些时日涉足了一些相关的问题，加之标题中的选择偏差（selection bias），一下子引起园主的好奇心，遂通读此文。读完之后感觉有些想法很新颖，只是术语习惯等等和园主习惯的方式有所区别，所以打算以一个非算法的视角来解读一下这篇文章，谈谈园主的一些理解。
+最近看到Google research放出来的一篇论文：[Learning to Rank with Selection Bias in Personal Search](http://research.google.com/pubs/pub45286.html)。这篇论文是跟排序算法相关的，虽然跟上面的“假新闻”事件没啥直接关系，但殊途同归之处不少。正巧园主前些时日涉足了一些相关的问题，加之标题中的选择偏差（selection bias），一下子引起园主的好奇心，遂通读此文。读完之后感觉有些想法很新颖，只是术语习惯等等和园主习惯的方式有所区别，所以打算以一个非算法的视角来解读一下这篇文章，谈谈园主的一些理解。<!--more-->
 
 （注：本文非直接翻译，技术细节建议阅读原文）
  
