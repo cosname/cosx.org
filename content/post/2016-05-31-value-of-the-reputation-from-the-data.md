@@ -1,7 +1,7 @@
 ---
 title: 数据告诉你：高信誉的卖家应该收高价，还是收低价？
 date: '2016-05-31T23:03:14+00:00'
-author: 刘跃文（西安交通大学管理学院）
+author: 刘跃文
 categories:
   - 数据分析
   - 统计之都
@@ -17,7 +17,7 @@ slug: value-of-the-reputation-from-the-data
 
 且听我慢慢道来。
 
-**1 eBay说：卖家信誉越高，最终成交价格越高**
+# 1 eBay说：卖家信誉越高，最终成交价格越高
 
 ![1](https://cos.name/wp-content/uploads/2016/05/1.jpg)
 
@@ -25,7 +25,7 @@ slug: value-of-the-reputation-from-the-data
 
 <!--more-->
 
-**2淘宝说：卖家信誉越高，商品价格越低（这不可能！！！）**
+# 2 淘宝说：卖家信誉越高，商品价格越低（这不可能！！！）
 
 ![2](https://cos.name/wp-content/uploads/2016/05/2.jpg)
 
@@ -41,7 +41,7 @@ slug: value-of-the-reputation-from-the-data
 
 然而，“天不遂人愿”。在数据分析过程中，我注意到这事儿和我想象的不一样：**对于同质商品，信誉和价格竟然是负相关的**！！！相关系数是负的，多元回归系数也是负的！！！鉴于文献中卖家信誉与最终成交价格都是正的关系，我当时就懵了……当时还没有懵逼这个词。
 
-# 3宁死不屈的数据：信誉和价格负相关
+# 3 宁死不屈的数据：信誉和价格负相关
 
 ![3](https://cos.name/wp-content/uploads/2016/05/3.jpg)
 
@@ -49,7 +49,7 @@ slug: value-of-the-reputation-from-the-data
 
 真是一句话点醒梦中人。
 
-# 4好吃的肉夹馍便宜，难吃的肉夹馍贵
+# 4 好吃的肉夹馍便宜，难吃的肉夹馍贵
 
 ![4](https://cos.name/wp-content/uploads/2016/05/4.jpg)
 
@@ -57,7 +57,7 @@ slug: value-of-the-reputation-from-the-data
 
 来西安逛的游客们，没来西安之前一般是吃不到肉夹馍的。他们来西安逛，见到肉夹馍，就会认为是西安本地正宗肉夹馍，只要不是贵得太离谱，买来吃一个，拍个照片，发个朋友圈完事儿；所以，景区的肉夹馍不可能太便宜，反正游客也不会回头，赚一个是一个，这就使得景区的肉夹馍又贵又难吃。而西安本地的居民，平时肉夹馍吃太多了，嘴刁得不行，知道肉夹馍的分两大流派，哪个店是哪个流派的，价钱是多少，如果哪家的好吃又划算，就经常去吃；所以，西安本地居民吃的肉夹馍不可能太贵，肉夹馍店要靠高质量和低价格赢取回头客；也不可能太难吃，要不然肉夹馍店就倒闭了……那么，**均衡状态下，市场中就只有两种肉夹馍：便宜而好吃的肉夹馍（非景区的），贵而难吃的肉夹馍（景区的）。**
 
-# 5消费者的搜索能力
+# 5 消费者的搜索能力
 
 ![5](https://cos.name/wp-content/uploads/2016/05/5.jpg)
 
@@ -65,7 +65,7 @@ slug: value-of-the-reputation-from-the-data
 
 网上市场中的“知情”的消费者，寻找信誉水平较高且价格较低的卖家；如果信誉水平较高的卖家选择收取高价格，就会失去这批“知情”的消费者，因此不会收取高价。而网上市场中“不知情”的消费者，行为具有很高的随机性；信誉水平较低的卖家只能吸引到这部分“不知情”的消费者，因此没有动机选择低价格。[注1] 所以，信誉水平较高的卖家收取低价格，信誉水平较低的卖家收取高价格，对吗？
 
-# 6美国BizRate的数据：高信誉的商家，价格更低
+# 6 美国BizRate的数据：高信誉的商家，价格更低
 
 ![6](https://cos.name/wp-content/uploads/2016/05/6.jpg)
 
@@ -73,7 +73,7 @@ slug: value-of-the-reputation-from-the-data
 
 为了回答这个问题，得从理论出发。基于范里安的Sales model的设定，我写了一个博弈模型，证明在均衡状态下，信誉高的卖家选择混合策略，其平均的商品价格低于信誉低的卖家[注2]。为了进一步验证我的结论，我还从美国BizRate网上采集了数据。BizRate是一个第三方评估网站，给出的信誉评分不是按照交易量，而是按照顾客的满意度打分（10分制）的平均值作为商家的信誉得分。BizRate的结果也指出，对于同质商品，**信誉高的商家，商品价格平均更低一些。**2012年，这个研究终于在DSS（决策支持系统）上发表。这时离2007年我采集第一批数据，已经过了6年。尽管DSS是一个很普通的期刊，我还是很喜欢这篇论文，因为它讲了一个有趣的故事，而且经过了反复的求证。
 
-# 7总结
+# 7 总结
 
 ![7](https://cos.name/wp-content/uploads/2016/05/7.jpg)
 
@@ -83,17 +83,14 @@ slug: value-of-the-reputation-from-the-data
 
 我从这件事情上学到的有这么几点：
 
-1.**实践出真知，做一下试试。**很多大数据的问题，不是凭空想出来的，而是通过数据分析启发得来的。多玩玩数据，就算是看起来很无聊的事情，也可以做一下试试。说不定你就见证奇迹了呢？
+1. **实践出真知，做一下试试。**很多大数据的问题，不是凭空想出来的，而是通过数据分析启发得来的。多玩玩数据，就算是看起来很无聊的事情，也可以做一下试试。说不定你就见证奇迹了呢？
 
-1.**不要过于迷信已有的理论/结论，要尊重数据及结果。**如果不尊重数据，而是利用统计学的技巧来用数据说假话，是没有职业道德的行为，也会错失掉一些真正有趣的故事。
+1. **不要过于迷信已有的理论/结论，要尊重数据及结果。**如果不尊重数据，而是利用统计学的技巧来用数据说假话，是没有职业道德的行为，也会错失掉一些真正有趣的故事。
 
-1.**数据分析需要的是大胆假设，小心求证。**我们在数据分析过程中，会观察到一些出人意料的关联，这会使我们产生一些很大胆的假设。但是，这些大胆的假设，是需要去小心地求证的。仅仅停留在大胆的假设上，或者直接把一些大胆的假设作为事实或者规律，是不太恰当的。例如，阿里巴巴的同事曾经在数据分析中发现，胸围较大的女性购买能力较好。这是一个广为传播的并且很有趣的现象。如果能进一步探索其背后的原因，可能会产生一个更有趣的故事。
+1. **数据分析需要的是大胆假设，小心求证。**我们在数据分析过程中，会观察到一些出人意料的关联，这会使我们产生一些很大胆的假设。但是，这些大胆的假设，是需要去小心地求证的。仅仅停留在大胆的假设上，或者直接把一些大胆的假设作为事实或者规律，是不太恰当的。例如，阿里巴巴的同事曾经在数据分析中发现，胸围较大的女性购买能力较好。这是一个广为传播的并且很有趣的现象。如果能进一步探索其背后的原因，可能会产生一个更有趣的故事。
 
-1.**坚持。**
-
-^[注1：参考 “Pricing Strategy in Online Retailing Marketplaces of Homogeneous Goods: Should High Reputation Seller Charge More?,” _Lecture Notes in Business Information Processing_ (36:Value Creation in E-Business Management), pp 155-168.  http://link.springer.com/chapter/10.1007/978-3-642-03132-8_13]
-
-^[注2：参考 “Negative price premium effect in online market-The impact of competition and buyer informativeness on the pricing strategies of sellers with different reputation levels,” _Decision Support Systems_ (54:1) Dec, pp 681-690.  http://www.sciencedirect.com/science/article/pii/S016792361200228X]
+1. **坚持。**
+^[注1：参考 “Pricing Strategy in Online Retailing Marketplaces of Homogeneous Goods: Should High Reputation Seller Charge More?,” _Lecture Notes in Business Information Processing_ (36:Value Creation in E-Business Management), pp 155-168.  http://link.springer.com/chapter/10.1007/978-3-642-03132-8_13]^[注2：参考 “Negative price premium effect in online market-The impact of competition and buyer informativeness on the pricing strategies of sellers with different reputation levels,” _Decision Support Systems_ (54:1) Dec, pp 681-690.  http://www.sciencedirect.com/science/article/pii/S016792361200228X]
 
 # 后记
 
