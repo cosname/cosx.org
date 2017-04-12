@@ -1,5 +1,5 @@
 ---
-title: '分类模型的性能评估&mdash;&mdash;以SAS Logistic回归为例(3): Lift和Gain'
+title: '分类模型的性能评估——以SAS Logistic回归为例(3): Lift和Gain'
 date: '2009-02-18T17:38:59+00:00'
 author: 胡江堂
 categories:
@@ -21,172 +21,75 @@ tags:
 slug: measure-classification-model-performance-lift-gain
 ---
 
-书接[前文](/2008/12/measure-classification-model-performance-roc-auc/)。跟ROC类似，Lift（提升）和Gain（增益）也一样能简单地从[以前的Confusion Matrix](/2008/12/measure-classification-model-performance-confusion-matrix/)以及Sensitivity、Specificity等信息中推导而来，也有跟一个baseline model的比较，然后也是很容易画出来，很容易解释。以下先修知识，包括所需的数据集：
+书接[前文](/2008/12/measure-classification-model-performance-roc-auc/)。跟ROC类似，Lift（提升）和Gain（增益）也一样能简单地从[以前的Confusion Matrix](/2008/12/measure-classification-model-performance-confusion-matrix/)以及Sensitivity、Specificity等信息中推导而来，也有跟一个baseline model的比较，然后也是很容易画出来，很容易解释。以下先修知识，包括所需的数据集：<!--more-->
 
-  1. [分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵](/2008/12/measure-classification-model-performance-confusion-matrix/)
-  2. [分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC](/2008/12/measure-classification-model-performance-roc-auc/)
+1. [分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵](/2008/12/measure-classification-model-performance-confusion-matrix/)
+1. [分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC](/2008/12/measure-classification-model-performance-roc-auc/)
 
-**一些准备**
+# 一些准备
 
 说，混淆矩阵(Confusion Matrix)是我们永远值得信赖的朋友：
 
-<table border="0" cellspacing="0" cellpadding="2" width="609">
-  <tr>
-    <td width="48" valign="top">
-    </td>
-    
-    <td width="45" valign="top">
-    </td>
-    
-    <td width="189" valign="top">
-      预测
-    </td>
-    
-    <td width="179" valign="top">
-    </td>
-    
-    <td width="146" valign="top">
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="50" valign="top">
-    </td>
-    
-    <td width="46" valign="top">
-    </td>
-    
-    <td width="189" valign="top">
-      1
-    </td>
-    
-    <td width="179" valign="top">
-    </td>
-    
-    <td width="146" valign="top">
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="50" valign="top">
-      实
-    </td>
-    
-    <td width="47" valign="top">
-      1
-    </td>
-    
-    <td width="189" valign="top">
-      <span style="color: #ff0000;">d</span>, True Positive
-    </td>
-    
-    <td width="179" valign="top">
-      c, False Negative
-    </td>
-    
-    <td width="146" valign="top">
-      c+d, Actual Positive
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="50" valign="top">
-      际
-    </td>
-    
-    <td width="48" valign="top">
-    </td>
-    
-    <td width="189" valign="top">
-      b, False Positive
-    </td>
-    
-    <td width="179" valign="top">
-      a, True Negative
-    </td>
-    
-    <td width="146" valign="top">
-      a+b, Actual Negative
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="50" valign="top">
-    </td>
-    
-    <td width="49" valign="top">
-    </td>
-    
-    <td width="189" valign="top">
-      b+d, Predicted Positive
-    </td>
-    
-    <td width="179" valign="top">
-      a+c, Predicted Negative
-    </td>
-    
-    <td width="147" valign="top">
-    </td>
-  </tr>
-</table>
+|      |     | 预测                   |                  |                     |
+|:----:|:---:|:----------------------:|:----------------:|:-------------------:|
+|      |     |1                       |0                 |                     |
+|实    |1    |d, True Positive        |c, False Negative |c+d, Actual Positive |
+|际    |0    |b, False Positive       |a, True Negative  |a+b, Actual Negative |
+|      |     |b+d, Predicted Positive |a+c, Predicted Negative |               |
 
 几个术语需要随时记起：
 
-> 1. <span style="color: #ff0000;">Sensitivity</span>（覆盖率，True Positive Rate）=正确预测到的正例数/实际正例总数
-> 
-> Recall (True Positive Rate，or Sensitivity) =true positive/total actual positive=d/c+d
-> 
-> 2. PV+ (命中率，Precision, <span style="color: #ff0000;">Positive Predicted Value</span>) =正确预测到的正例数/预测正例总数
-> 
-> Precision (Positive Predicted Value, PV+) =true positive/ total predicted positive=d/b+d
-> 
-> 3. <span style="color: #ff0000;">Specificity </span>(负例的覆盖率，True Negative Rate) =正确预测到的负例个数/实际负例总数
-> 
-> Specificity (True Negative Rate) =true negative/total actual negative=a/a+b
+ >1. **Sensitivity**（覆盖率，True Positive Rate）=正确预测到的正例数/实际正例总数
+     Recall (True Positive Rate，or Sensitivity) =true positive/total actual positive=d/c+d
+ >1. PV+ (命中率，Precision, **Positive Predicted Value**) =正确预测到的正例数/预测正例总数
+     Precision (Positive Predicted Value, PV+) =true positive/ total predicted positive=d/b+d
+ >1. **Specificity** (负例的覆盖率，True Negative Rate) =正确预测到的负例个数/实际负例总数
+    Specificity (True Negative Rate) =true negative/total actual negative=a/a+b
 
 首先记我们valid数据中，正例的比例为pi1（念做pai 1），在我们的例子中，它等于c+d/a+b+c+d=0.365。单独提出pi1，是因为有时考虑oversampling后的一些小调整，比如正例的比例只有0.001，但我们把它调整为0.365（此时要在SAS proc logistic回归的score语句加一个priorevent=0.001选项）。本文不涉及oversampling。现在定义些新变量：
 
 > Ptp=proportion of true positives=d/a+b+c+d=(c+d/a+b+c+d)\*(d/c+d) =pi1\* Sensitivity，正确预测到的正例个数占总观测值的比例
-> 
-> Pfp=proportion of false positives=b/a+b+c+d= (a+b/a+b+c+d)\*(b/a+b) = (1-c+d/a+b+c+d)\*(1-a/a+b) = (1-pi1)*(1- Specificity) ，把负例错误地预测成正例的个数占总数的比例
-> 
-> <span style="color: #ff0000;">Depth</span>=proportion allocated to class 1=b+d/a+b+c+d=Ptp+Pfp，预测成正例的比例
-> 
-> <span style="color: #ff0000;">PV_plus</span>=Precision (Positive Predicted Value, PV+) = d/b+d=Ptp/depth，正确预测到的正例数占预测正例总数的比例
-> 
-> <span style="color: #ff0000;">Lift</span>= (d/b+d)/(c+d/a+b+c+d)=PV_plus/pi1，提升值，解释见下节。
+>
+> Pfp=proportion of false positives=b/a+b+c+d= (a+b/a+b+c+d)\*(b/a+b) = (1-c+d/a+b+c+d)\*(1-a/a+b) = (1-pi1)\*(1- Specificity) ，把负例错误地预测成正例的个数占总数的比例
+>
+> **Depth**=proportion allocated to class 1=b+d/a+b+c+d=Ptp+Pfp，预测成正例的比例
+>
+> **PV_plus**=Precision (Positive Predicted Value, PV+) = d/b+d=Ptp/depth，正确预测到的正例数占预测正例总数的比例
+>
+> **Lift**= (d/b+d)/(c+d/a+b+c+d)=PV_plus/pi1，提升值，解释见下节。
 
 以上都可以利用valid_roc数据计算出来：
 
+```sas
 > %let pi1=0.365;
-> 
+>
 > **data** valid_lift;
-> 
+>
 > set valid_roc;
-> 
-> cutoff=\_PROB\_;
-> 
-> Ptp=&pi1*\_SENSIT\_;
-> 
-> Pfp=(**1**-&pi1)*\_1MSPEC\_;
-> 
->  <span style="color: #ff0000;">depth</span>=Ptp+Pfp;
-> 
->  <span style="color: #ff0000;">PV_plus</span>=Ptp/depth;
-> 
->  <span style="color: #ff0000;">lift</span>=PV_plus/&pi1;
-> 
-> keep cutoff \_SENSIT\_ \_1MSPEC\_ depth PV_plus lift;
-> 
+>
+> cutoff=_PROB_;
+>
+> Ptp=&pi1*_SENSIT_;
+>
+> Pfp=(**1**-&pi1)*_1MSPEC_;
+>
+>  **depth**=Ptp+Pfp;
+>
+>  **PV_plus**=Ptp/depth;
+>
+>  **lift**=PV_plus/&pi1;
+>
+> keep cutoff _SENSIT_ _1MSPEC_ depth PV_plus lift;
+>
 > **run**;
-
+```
 先前我们说ROC curve是不同阈值下Sensitivity和1-Specificity的轨迹，类似，
 
 > Lift chart是不同阈值下Lift和Depth的轨迹
-> 
+>
 > Gains chart是不同阈值下PV+和Depth的轨迹
 
-<a name="_Toc218938116"></a>**Lift**
+# Lift
 
 **Lift** = (d/b+d)/(c+d/a+b+c+d)=PV_plus/pi1)，这个指标需要多说两句。它衡量的是，与不利用模型相比，模型的预测能力“变好”了多少。不利用模型，我们只能利用“正例的比例是c+d/a+b+c+d”这个样本信息来估计正例的比例（baseline model），而利用模型之后，我们不需要从整个样本中来挑选正例，只需要从我们预测为正例的那个样本的子集（b+d）中挑选正例，这时预测的准确率为d/b+d。
 
@@ -200,17 +103,17 @@ slug: measure-classification-model-performance-lift-gain
 
 上面说lift chart是不同阈值下Lift和Depth的轨迹，先画出来：
 
+```sas
 > symbol i=join v=none c=black;
-> 
+>
 > **proc** **gplot** data=valid_lift;
-> 
->  <span style="color: #ff0000;">plot lift*depth;</span>
-> 
+>
+>  **plot lift*depth;**
+>
 > **run**; **quit**;
+```
 
-<p style="text-align: center;">
-  [![lift](https://cos.name/wp-content/uploads/2009/02/lift-thumb.png)](https://cos.name/wp-content/uploads/2009/02/lift.png)
-</p>
+![lift](https://cos.name/wp-content/uploads/2009/02/lift.png)
 
 上图的纵坐标是lift，意义已经很清楚。横坐标depth需要多提一句。以前说过，随着阈值的减小，更多的客户就会被归为正例，也就是depth（预测成正例的比例）变大。当阈值设得够大，只有一小部分观测值会归为正例，但这一小部分（一小撮）一定是最具有正例特征的观测值集合（用上面数据库营销的例子来说，这一部分人群对邮寄问卷反应最为活跃），所以在这个depth下，对应的lift值最大。
 
@@ -218,29 +121,29 @@ slug: measure-classification-model-performance-lift-gain
 
 一个好的分类模型，就是要偏离baseline model足够远。在lift图中，表现就是，在depth为1之前，lift一直保持较高的（大于1的）数值，也即曲线足够的陡峭。
 
-/*注：在一些应用中（比如[信用评分](http://johnthu.spaces.live.com/blog/cns!2053CD511E6D5B1E!308.entry)），会根据分类模型的结果，把样本分成10个数目相同的子集，每一个子集称为一个decile，其中第一个decile拥有最多的正例特征，第二个decile次之，依次类推，以上lift和depth组合就可以改写成lift和decile的组合，也称作lift图，含义一样。刚才提到，“随着阈值的减小，更多的客户就会被归为正例，也就是depth（预测成正例的比例）变大。当阈值设得够大，只有一小部分观测值会归为正例，但这一小部分（_第一个__decile_）一定是最具有正例特征的观测值集合。”*/
+>注：在一些应用中（比如[信用评分](http://johnthu.spaces.live.com/blog/cns!2053CD511E6D5B1E!308.entry)），会根据分类模型的结果，把样本分成10个数目相同的子集，每一个子集称为一个decile，其中第一个decile拥有最多的正例特征，第二个decile次之，依次类推，以上lift和depth组合就可以改写成lift和decile的组合，也称作lift图，含义一样。刚才提到，“随着阈值的减小，更多的客户就会被归为正例，也就是depth（预测成正例的比例）变大。当阈值设得够大，只有一小部分观测值会归为正例，但这一小部分（第一个decile）一定是最具有正例特征的观测值集合。”
 
-**Gains**
+# Gains
 
 Gains (增益) 与 Lift （提升）相当类似：Lift chart是不同阈值下Lift和Depth的轨迹，Gains chart是不同阈值下PV+和Depth的轨迹，而PV+=lift*pi1= d/b+d（见上），所以它们显而易见的区别就在于纵轴刻度的不同：
 
+```sas
 > symbol i=join v=none c=black;
-> 
+>
 > **proc** **gplot** data=valid_lift;
-> 
->  <span style="color: #ff0000;">plot pv_plus*depth;</span>
-> 
+>
+>  **plot pv_plus*depth;**
+>
 > **run**; **quit**;
+```
 
-<p style="text-align: center;">
-  [![gains](https://cos.name/wp-content/uploads/2009/02/gains-thumb.png)](https://cos.name/wp-content/uploads/2009/02/gains.png)
-</p>
+![gains](https://cos.name/wp-content/uploads/2009/02/gains.png)
 
 上图阈值的变化，含义与lift图一样。随着阈值的减小，更多的客户就会被归为正例，也就是depth（预测成正例的比例，b+d/a+b+c+d）变大（b+d变大），这样PV+（d/b+d，正确预测到的正例数占预测正例总数的比例）就相应减小。当阈值设定得足够的小，那么几乎所有的观测值都会被归为正例（depth几乎为1），那么PV+就等于数据中正例的比例pi1了（这里是0.365。在Lift那一节里，我们说此时分类的效果就跟baseline model差不多，相对应的lift值就接近于1，而PV+=lift*pi1。Lift的baseline model是纵轴上恒等于1的水平线，而Gains的baseline model是纵轴上恒等于pi1的水平线）。显然，跟lift 图类似，一个好的分类模型，在阈值变大时，相应的PV+就要变大，曲线足够陡峭。
 
-/\*注：我们一般看到的Gains Chart，图形是往上走的，咋一看跟上文相反，其实道理一致，只是坐标选择有差别，不提。\*/
+>注：我们一般看到的Gains Chart，图形是往上走的，咋一看跟上文相反，其实道理一致，只是坐标选择有差别，不提。
 
-**总结和下期预告：****K-S******
+# 总结和下期预告：K-S
 
 以上提到的ROC、Lift、Gains，都是基于混淆矩阵及其派生出来的几个指标（Sensitivity和Specificity等等）。如果愿意，你随意组合几个指标，展示到二维空间，就是一种跟ROC平行的评估图。比如，你plot Sensitivity*Depth一把，就出一个新图了，——很不幸，这个图叫做Lorentz Curve（劳伦兹曲线），不过你还可以尝试一下别的组合，然后凑一个合理的解释。
 
