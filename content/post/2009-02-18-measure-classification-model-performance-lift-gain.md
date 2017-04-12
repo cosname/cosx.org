@@ -39,11 +39,11 @@ slug: measure-classification-model-performance-lift-gain
 
 几个术语需要随时记起：
 
- >1. **Sensitivity**（覆盖率，True Positive Rate）=正确预测到的正例数/实际正例总数
+1. **Sensitivity**（覆盖率，True Positive Rate）=正确预测到的正例数/实际正例总数
      Recall (True Positive Rate，or Sensitivity) =true positive/total actual positive=d/c+d
- >1. PV+ (命中率，Precision, **Positive Predicted Value**) =正确预测到的正例数/预测正例总数
+1. PV+ (命中率，Precision, **Positive Predicted Value**) =正确预测到的正例数/预测正例总数
      Precision (Positive Predicted Value, PV+) =true positive/ total predicted positive=d/b+d
- >1. **Specificity** (负例的覆盖率，True Negative Rate) =正确预测到的负例个数/实际负例总数
+1. **Specificity** (负例的覆盖率，True Negative Rate) =正确预测到的负例个数/实际负例总数
     Specificity (True Negative Rate) =true negative/total actual negative=a/a+b
 
 首先记我们valid数据中，正例的比例为pi1（念做pai 1），在我们的例子中，它等于c+d/a+b+c+d=0.365。单独提出pi1，是因为有时考虑oversampling后的一些小调整，比如正例的比例只有0.001，但我们把它调整为0.365（此时要在SAS proc logistic回归的score语句加一个priorevent=0.001选项）。本文不涉及oversampling。现在定义些新变量：
@@ -61,27 +61,27 @@ slug: measure-classification-model-performance-lift-gain
 以上都可以利用valid_roc数据计算出来：
 
 ```sas
-> %let pi1=0.365;
->
-> **data** valid_lift;
->
-> set valid_roc;
->
-> cutoff=_PROB_;
->
-> Ptp=&pi1*_SENSIT_;
->
-> Pfp=(**1**-&pi1)*_1MSPEC_;
->
->  **depth**=Ptp+Pfp;
->
->  **PV_plus**=Ptp/depth;
->
->  **lift**=PV_plus/&pi1;
->
-> keep cutoff _SENSIT_ _1MSPEC_ depth PV_plus lift;
->
-> **run**;
+%let pi1=0.365;
+
+data valid_lift;
+
+set valid_roc;
+
+cutoff=PROB;
+
+Ptp=&pi1*SENSIT;
+
+Pfp=(1-&pi1)*1MSPEC;
+
+ depth=Ptp+Pfp;
+
+ PV_plus=Ptp/depth;
+
+ lift=PV_plus/&pi1;
+
+keep cutoff SENSIT 1MSPEC depth PV_plus lift;
+
+run;
 ```
 先前我们说ROC curve是不同阈值下Sensitivity和1-Specificity的轨迹，类似，
 
@@ -104,13 +104,13 @@ slug: measure-classification-model-performance-lift-gain
 上面说lift chart是不同阈值下Lift和Depth的轨迹，先画出来：
 
 ```sas
-> symbol i=join v=none c=black;
->
-> **proc** **gplot** data=valid_lift;
->
->  **plot lift*depth;**
->
-> **run**; **quit**;
+symbol i=join v=none c=black;
+
+proc gplot data=valid_lift;
+
+ plot lift*depth;
+
+run; quit;
 ```
 
 ![lift](https://cos.name/wp-content/uploads/2009/02/lift.png)
@@ -128,13 +128,13 @@ slug: measure-classification-model-performance-lift-gain
 Gains (增益) 与 Lift （提升）相当类似：Lift chart是不同阈值下Lift和Depth的轨迹，Gains chart是不同阈值下PV+和Depth的轨迹，而PV+=lift*pi1= d/b+d（见上），所以它们显而易见的区别就在于纵轴刻度的不同：
 
 ```sas
-> symbol i=join v=none c=black;
->
-> **proc** **gplot** data=valid_lift;
->
->  **plot pv_plus*depth;**
->
-> **run**; **quit**;
+symbol i=join v=none c=black;
+
+proc gplot data=valid_lift;
+
+ plot pv_plus*depth;
+
+run; quit;
 ```
 
 ![gains](https://cos.name/wp-content/uploads/2009/02/gains.png)
