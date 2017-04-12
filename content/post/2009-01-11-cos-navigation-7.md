@@ -16,10 +16,11 @@ slug: cos-navigation-7
 
 # 一、主站
 
-本周一共发布了2篇日志。<!--more-->
+本周一共发布了2篇日志。
 
-  * [使用回归分析，样本过少时不妨好先作图看看](/2009/01/regression-with-graphics/)
-  * [开源的计量经济学软件gretl](https://cos.name/wp-admin/post-new.php//)
+* [使用回归分析，样本过少时不妨好先作图看看](/2009/01/regression-with-graphics/)
+* [开源的计量经济学软件gretl](https://cos.name/wp-admin/post-new.php//)
+<!--more-->
 
 # 二、维基
 
