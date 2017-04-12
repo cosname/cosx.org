@@ -63,7 +63,7 @@ slug: value-of-the-reputation-from-the-data
 
 肉夹馍的故事，看起来是景区与非景区的故事，本质上却是消费者的信息搜索能力的故事。搜索能力强的消费者，我们称之为“知情”的消费者，具有比较质量与价格的能力，可以找到质优价廉的商家；而搜索能力弱的消费者，我们称之为“不知情”的消费者，不具有质量与比较的能力，在市场上的购买行为几近于随机行为。范里安在他著名的论文“A model of sales”中，就使用了这样的模型设定。
 
-网上市场中的“知情”的消费者，寻找信誉水平较高且价格较低的卖家；如果信誉水平较高的卖家选择收取高价格，就会失去这批“知情”的消费者，因此不会收取高价。而网上市场中“不知情”的消费者，行为具有很高的随机性；信誉水平较低的卖家只能吸引到这部分“不知情”的消费者，因此没有动机选择低价格。[注1] 所以，信誉水平较高的卖家收取低价格，信誉水平较低的卖家收取高价格，对吗？
+网上市场中的“知情”的消费者，寻找信誉水平较高且价格较低的卖家；如果信誉水平较高的卖家选择收取高价格，就会失去这批“知情”的消费者，因此不会收取高价。而网上市场中“不知情”的消费者，行为具有很高的随机性；信誉水平较低的卖家只能吸引到这部分“不知情”的消费者，因此没有动机选择低价格。^[参考 “Pricing Strategy in Online Retailing Marketplaces of Homogeneous Goods: Should High Reputation Seller Charge More?,” _Lecture Notes in Business Information Processing_ (36:Value Creation in E-Business Management), pp 155-168.  http://link.springer.com/chapter/10.1007/978-3-642-03132-8_13]所以，信誉水平较高的卖家收取低价格，信誉水平较低的卖家收取高价格，对吗？
 
 # 6 美国BizRate的数据：高信誉的商家，价格更低
 
@@ -71,7 +71,7 @@ slug: value-of-the-reputation-from-the-data
 
 很多人可能会有疑问：淘宝上卖家的信誉得分反映了是累计交易量。这些卖家是因为定价低而信誉（累计成交量）高呢；还是因为像我说的一样，因为信誉高而选择低定价？
 
-为了回答这个问题，得从理论出发。基于范里安的Sales model的设定，我写了一个博弈模型，证明在均衡状态下，信誉高的卖家选择混合策略，其平均的商品价格低于信誉低的卖家[注2]。为了进一步验证我的结论，我还从美国BizRate网上采集了数据。BizRate是一个第三方评估网站，给出的信誉评分不是按照交易量，而是按照顾客的满意度打分（10分制）的平均值作为商家的信誉得分。BizRate的结果也指出，对于同质商品，**信誉高的商家，商品价格平均更低一些。**2012年，这个研究终于在DSS（决策支持系统）上发表。这时离2007年我采集第一批数据，已经过了6年。尽管DSS是一个很普通的期刊，我还是很喜欢这篇论文，因为它讲了一个有趣的故事，而且经过了反复的求证。
+为了回答这个问题，得从理论出发。基于范里安的Sales model的设定，我写了一个博弈模型，证明在均衡状态下，信誉高的卖家选择混合策略，其平均的商品价格低于信誉低的卖家。^[参考 “Negative price premium effect in online market-The impact of competition and buyer informativeness on the pricing strategies of sellers with different reputation levels,” _Decision Support Systems_ (54:1) Dec, pp 681-690.  http://www.sciencedirect.com/science/article/pii/S016792361200228X]为了进一步验证我的结论，我还从美国BizRate网上采集了数据。BizRate是一个第三方评估网站，给出的信誉评分不是按照交易量，而是按照顾客的满意度打分（10分制）的平均值作为商家的信誉得分。BizRate的结果也指出，对于同质商品，**信誉高的商家，商品价格平均更低一些。**2012年，这个研究终于在DSS（决策支持系统）上发表。这时离2007年我采集第一批数据，已经过了6年。尽管DSS是一个很普通的期刊，我还是很喜欢这篇论文，因为它讲了一个有趣的故事，而且经过了反复的求证。
 
 # 7 总结
 
@@ -90,7 +90,6 @@ slug: value-of-the-reputation-from-the-data
 1. **数据分析需要的是大胆假设，小心求证。**我们在数据分析过程中，会观察到一些出人意料的关联，这会使我们产生一些很大胆的假设。但是，这些大胆的假设，是需要去小心地求证的。仅仅停留在大胆的假设上，或者直接把一些大胆的假设作为事实或者规律，是不太恰当的。例如，阿里巴巴的同事曾经在数据分析中发现，胸围较大的女性购买能力较好。这是一个广为传播的并且很有趣的现象。如果能进一步探索其背后的原因，可能会产生一个更有趣的故事。
 
 1. **坚持。**
-^[注1：参考 “Pricing Strategy in Online Retailing Marketplaces of Homogeneous Goods: Should High Reputation Seller Charge More?,” _Lecture Notes in Business Information Processing_ (36:Value Creation in E-Business Management), pp 155-168.  http://link.springer.com/chapter/10.1007/978-3-642-03132-8_13]^[注2：参考 “Negative price premium effect in online market-The impact of competition and buyer informativeness on the pricing strategies of sellers with different reputation levels,” _Decision Support Systems_ (54:1) Dec, pp 681-690.  http://www.sciencedirect.com/science/article/pii/S016792361200228X]
 
 # 后记
 
@@ -125,8 +124,6 @@ slug: value-of-the-reputation-from-the-data
 段子手
 
 数据告诉你：高信誉的卖家应该收高价，还是收低价？
-
-<http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg/page_mp_article_improve_pc2c9cd6.css>
 
 如果您对我们的内容感兴趣，请关注微信公众号“狗熊会”，或扫描下方二维码
 
