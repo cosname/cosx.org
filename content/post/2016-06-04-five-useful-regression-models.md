@@ -1,7 +1,7 @@
 ---
 title: 数据江湖，回归5式
 date: '2016-06-04T00:15:20+00:00'
-author: 王汉生(北京大学光华管理学院)
+author: 王汉生
 categories:
   - 推荐文章
 tags:
