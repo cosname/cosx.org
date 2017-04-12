@@ -14,7 +14,7 @@ tags:
 slug: machine-learning-statistics-and-computation
 ---
 
-编辑部按：本文是从张志华老师在[第九届中国R语言会议](http://china-r.org/bj2016/)和上海交通大学的两次讲座中整理出来的，[点击此处观看幻灯片](http://server.9yuntu.cn/services/document?token=CJ4FzuQC6GFA2syNhYZIsC&code=011M8o6J0cW3642ZdT3J0nIp6J0M8o6Q&state=bindingYuntu)。[张志华](http://bcmi.sjtu.edu.cn/~zhzhang/)老师是上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。张老师主要从事人工智能、机器学习与应用统计学领域的教学与研究，迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文，是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委，其公开课《机器学习导论》和《统计机器学习》受到广泛关注。(https://cos.name/wp-content/uploads/2016/06/张志华.png)
+编辑部按：本文是从张志华老师在[第九届中国R语言会议](http://china-r.org/bj2016/)和上海交通大学的两次讲座中整理出来的，[点击此处观看幻灯片](http://server.9yuntu.cn/services/document?token=CJ4FzuQC6GFA2syNhYZIsC&code=011M8o6J0cW3642ZdT3J0nIp6J0M8o6Q&state=bindingYuntu)。[张志华](http://bcmi.sjtu.edu.cn/~zhzhang/)老师是上海交通大学计算机科学与工程系教授，上海交通大学数据科学研究中心兼职教授，计算机科学与技术和统计学双学科的博士生指导导师。在加入上海交通大学之前，是浙江大学计算机学院教授和浙江大学统计科学中心兼职教授。张老师主要从事人工智能、机器学习与应用统计学领域的教学与研究，迄今在国际重要学术期刊和重要的计算机学科会议上发表70余篇论文，是美国“数学评论”的特邀评论员，国际机器学习旗舰刊物Journal of Machine Learning Research 的执行编委，其公开课《机器学习导论》和《统计机器学习》受到广泛关注。
 
 ![张志华](https://cos.name/wp-content/uploads/2016/06/张志华.png)
 
@@ -40,7 +40,7 @@ slug: machine-learning-statistics-and-computation
 
 > “It is one of today’s rapidly growing technical fields,  lying at the intersection of computer science and statistics, and at the core of artificial intelligence and data science”
 > 
->                                                                                                       －－M. I. Jordan
+> ---M. I. Jordan
 
 通俗地说，机器学习就是从数据里面挖掘出有用的价值。数据本身是死的，它不能自动呈现出有用的信息。怎么样才能找出有价值的东西呢？第一步要给数据一个抽象的表示，接着基于表示进行建模，然后估计模型的参数，也就是计算，为了应对大规模的数据所带来的问题，我们还需要设计一些高效的实现手段。
 
