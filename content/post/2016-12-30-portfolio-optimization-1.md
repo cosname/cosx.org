@@ -13,7 +13,7 @@ slug: portfolio-optimization-1
 description: "最近，在研究投资组合优化的问题，主要针对的是股票持仓的组合优化，会在这个分析过程中发现一些有意思的现象，并一步一步优化、检验相应的风控模型。本文将有四个部分分别阐述具体步骤。"
 ---
 
-**译者简介:   Harry Zhu, R语言爱好者, FinanceR 专栏作者**
+**译者简介: Harry Zhu, R语言爱好者, FinanceR 专栏作者**
 
 # 概述
 
@@ -36,55 +36,52 @@ description: "最近，在研究投资组合优化的问题，主要针对的是
 首先，用如下函数来获取ETF的收益序列：
 
 ```R
-pacman::**p_load**(fImport,   
-PerformanceAnalytics,   
-stringb,   
-tidyverse) 
-_# 将股票数据加载到一个时间序列对象的函数_
+pacman::p_load(fImport, PerformanceAnalytics, stringb, tidyverse) 
+# 将股票数据加载到一个时间序列对象的函数
 importSeries = function(symbol,from,to) { 
-_# 从雅虎读取金融数据_     
-         input = **yahooSeries**(symbol,from = from, to = to)     
-_# 列名调整_     
-         adjClose = symbol %.% ".Adj.Close"     
-         inputReturn = symbol %.% ".Return"     
-         CReturn = symbol %.% ".CReturn"     
-_# 计算收益率并生成时间序列_     
-         input.Return = **returns**(input[,adjClose])     
-**         colnames**(input.Return)[1] = inputReturn     
-         input = **merge**(input,input.Return)     
-_# 计算累积收益率并生成时间序列_     
-         input.first = input[,adjClose][1]     
-         input.CReturn = **fapply**(input[,adjClose],
-                       FUN = function(x) **log**(x) - **log**(input.first))     
-         **colnames**(input.CReturn)[1] = CReturn     
-         input = **merge**(input,input.CReturn)     
-_# 删掉一些无用数据来释放内存_     
+# 从雅虎读取金融数据    
+  input = yahooSeries(symbol,from = from, to = to)     
+# 列名调整    
+  adjClose = symbol %.% ".Adj.Close"     
+  inputReturn = symbol %.% ".Return"     
+  CReturn = symbol %.% ".CReturn"     
+# 计算收益率并生成时间序列   
+  input.Return = returns(input[,adjClose])     
+  colnames(input.Return)[1] = inputReturn     
+         input = merge(input,input.Return)     
+# 计算累积收益率并生成时间序列    
+  input.first = input[,adjClose][1]     
+  input.CReturn = fapply(input[,adjClose],
+                       FUN = function(x) log(x) - log(input.first))     
+         colnames(input.CReturn)[1] = CReturn     
+         input = merge(input,input.CReturn)     
+# 删掉一些无用数据来释放内存
          rm(input.first,        
             input.Return,        
             input.CReturn,        
             adjClose,        
             inputReturn,        
             CReturn)     
-_# 返回时间序列_    
-**return**(input) 
+# 返回时间序列 
+  return(input) 
 }
 ```
 
 计算年化收益、标准差和夏普比率。
 
 ```R
-_# 获取短期、中期和长期政府债券的收益率序列_ 
+# 获取短期、中期和长期政府债券的收益率序列
 from = "2001-01-01" 
 to = "2011-12-16" 
-tlt = **importSeries**("tlt",from,to) 
-shy = **importSeries**("shy",from,to) 
-ief = **importSeries**("ief",from,to) 
-merged = **merge**(tlt,shy) %>% **merge**(ief) 
+tlt = importSeries("tlt",from,to) 
+shy = importSeries("shy",from,to) 
+ief = importSeries("ief",from,to) 
+merged = merge(tlt,shy) %>% merge(ief) 
 
-vars = **c**("tlt.Return",          
+vars = c("tlt.Return",          
          "shy.Return",          
          "ief.Return") 
-_# 计算年化收益率_ (t = **table.AnnualizedReturns_(merged[,vars],                              Rf = <strong>mean</strong>(merged[,"shy.Return"],                                                 na.rm=TRUE)))
+# 计算年化收益率 (t = table.AnnualizedReturns(merged[,vars], Rf = mean(merged[,"shy.Return"], na.rm=TRUE)))
 
 ##                           tlt.Return shy.Return ief.Return 
 ## Annualized Return             0.0810     0.0303     0.0684 
@@ -110,11 +107,11 @@ _# 计算年化收益率_ (t = **table.AnnualizedReturns_(merged[,vars],    �
 假设投资组合只包括持有长期和短期债券,便于需要计算投资组合的预期收益和风险。收益的计算是很容易的,这是两种持仓的加权平均收益,权重就是每个资产的投入资本百分比。
 
 `$$
-R\_p=W\_{TLT}\*R\_{TLT}+W\_{SHY}\*R_{SHY}
+R_p=W_{TLT}*R_{TLT}+W_{SHY}*R_{SHY}
 $$`
   
 `$$
-s.t. W\_{TLT}+W\_{SHY}=1
+s.t. W_{TLT}+W_{SHY}=1
 $$`
 
 显然这两种资产具有相关性(在马科维茨于1952年的博士论文发表之前,投资经理不了解相关性并且默认假设为1 -马科维茨因此获得了诺贝尔奖)。假设收益是正态分布的，那么投资组合方差将是：
@@ -129,17 +126,17 @@ $$`
 基于上述知识改变持仓权重并为杠铃策略建立风险收益模型。
 
 ```R
-_# 检查相关性_ 
-corr = **cor**(merged[,vars],use = "complete.obs") 
+# 检查相关性
+corr = cor(merged[,vars],use = "complete.obs") 
 c = corr["tlt.Return","shy.Return"] 
-_# 假设一个杠铃策略是持有长期和短期资产_
-_# 定义风险、收益_ 
+# 假设一个杠铃策略是持有长期和短期资产
+# 定义风险、收益
 ws = NULL 
 wt = NULL 
 mu = NULL 
 sigma = NULL 
-_# 50个观察_ n=50 
-_# 遍历杠铃策略的权重_ 
+# 50个观察 n=50 
+# 遍历杠铃策略的权重
 rTLT = t["Annualized Return","tlt.Return"] 
 rSHY = t["Annualized Return","shy.Return"] 
 sTLT = t["Annualized Std Dev","tlt.Return"] 
@@ -148,45 +145,45 @@ for (i in 0:n){wsi = i/n;
                wti = 1-wsi; 
                mui = wsi * rSHY + wti * rTLT
                sigmai = wsi*wsi*sSHY*sSHY + wti*wti*sTLT*sTLT + wsi*wti*sSHY*sTLT*c       
-               ws = **c**(ws,wsi)       
-               wt = **c**(wt,wti)       
-               mu = **c**(mu,mui)       
-               sigma = **c**(sigma,sigmai) } 
-_#风险收益的数据集_ 
-rrProfile = **data.frame**(ws=ws,wt=wt,mu=mu,sigma=sigma)
+               ws = c(ws,wsi)       
+               wt = c(wt,wti)       
+               mu = c(mu,mui)       
+               sigma = c(sigma,sigmai) } 
+#风险收益的数据集
+rrProfile = data.frame(ws=ws,wt=wt,mu=mu,sigma=sigma)
 ```
   
 注意,上面的方程是二次的，可以配合刚刚创建的点画出抛物线。注意,通常收益数据会放在X轴上,而把拟合方差(风险)数据作为因变量放在Y轴。
   
  ```R 
-_# 为模型拟合一个二次函数_ 
-fit = **lm**(rrProfile$sigma ~ rrProfile$mu + **I**(rrProfile$mu^2))
+# 为模型拟合一个二次函数 
+fit = lm(rrProfile$sigma ~ rrProfile$mu + I(rrProfile$mu^2))
 ```
 
 接下来,在图上添加拟合线。
 
 ```R
-_# 得到回归系数_ 
+# 得到回归系数
 coe = fit$coefficients 
-_# 得到每个回归预测的风险值
-_ muf = NULL 
+# 得到每个回归预测的风险值
+muf = NULL 
 sfit = NULL 
-for (i in **seq**(0,.08,by=.001)){
-               muf = **c**(muf,i)            
+for (i in seq(0,.08,by=.001)){
+               muf = c(muf,i)            
                
                s = coe[1] + coe[2]*i + coe[3]*i^2       
-               sfit = **c**(sfit,s) 
+               sfit = c(sfit,s) 
 } 
-_# 绘图_ 
-**plot**(rrProfile$sigma,
+# 绘图
+plot(rrProfile$sigma,
      rrProfile$mu,        
-     xlim=**c**(0,.022),        
-     ylim=**c**(0,.08),        
+     xlim=c(0,.022),        
+     ylim=c(0,.08),        
      ylab="Expected Yearly Return",        
      xlab="Expected Yearly Variance",        
      main="Efficient Frontier for Government Bond Portfolios") 
-_# 画出预测边值_
-**lines**(sfit,muf,col="red")
+# 画出预测边值
+lines(sfit,muf,col="red")
 ```
 
 ![](https://cos.name/wp-content/uploads/2016/12/1.jpg)
@@ -194,43 +191,43 @@ _# 画出预测边值_
 tseries包中的portfolio.optim比较而言更好用。只需要输入预期收益率,该函数会直接返回出来最优组合权重。在最低预期收益率(比如 100% 持有 SHY)到最高预期收益率(比如 100% 持有 TLT)之间修改输入的收益。注意,portfolio.optim会使用日收益率做计算,因此代码将不得不做一些处理并假设一年有255个交易日。
 
 ```R
-_# 添加第三个标的_
-_#除非想做一个格点搜索,否则就需要对每个级别的收益减少风险来优化投资组合。_
-_# portfolio.optim 在时间序列中不能有 NA 值。_ 
+# 添加第三个标的
+#除非想做一个格点搜索,否则就需要对每个级别的收益减少风险来优化投资组合。
+# portfolio.optim 在时间序列中不能有 NA 值。
 
-m2 = **removeNA**(merged[,vars]) 
+m2 = removeNA(merged[,vars]) 
 wSHY = NULL 
 wIEF = NULL 
 wTLT = NULL 
 er = NULL 
 eStd = NULL 
-_# 在收益水平之间不断循环搜索找到最优的投资组合，包括最小值(rSHY)和最大值(rTLT)_ 
-_# portfolio.optim 使用日收益数据，因此不得不做出相应的调整_ 
-for (i in **seq**((rSHY+.001),(rTLT-.001),length.out=100)){       
+# 在收益水平之间不断循环搜索找到最优的投资组合，包括最小值(rSHY)和最大值(rTLT)
+# portfolio.optim 使用日收益数据，因此不得不做出相应的调整
+for (i in seq((rSHY+.001),(rTLT-.001),length.out=100)){       
       pm = 1+i       
-      pm = **log**(pm)/255       
-      opt = tseries::**portfolio.optim**(m2,pm=pm)       
-      er = **c**(er,**exp**(pm*255)-1)       
-      eStd = **c**(eStd,opt$ps***sqrt**(255))       
-      wTLT = **c**(wTLT,opt$pw[1])       
-      wSHY = **c**(wSHY,opt$pw[2])       
-      wIEF = **c**(wIEF,opt$pw[3]) 
+      pm = log(pm)/255       
+      opt = tseries::portfolio.optim(m2,pm=pm)       
+      er = c(er,exp(pm*255)-1)       
+      eStd = c(eStd,opt$ps*sqrt(255))       
+      wTLT = c(wTLT,opt$pw[1])       
+      wSHY = c(wSHY,opt$pw[2])       
+      wIEF = c(wIEF,opt$pw[3]) 
 } 
-_# 绘图_ 
-**plot**(rrProfile$sigma,      
+# 绘图 
+plot(rrProfile$sigma,      
      rrProfile$mu,        
-     xlim=**c**(0,.022),        
-     ylim=**c**(0,.08),        
+     xlim=c(0,.022),        
+     ylim=c(0,.08),        
      ylab="Expected Yearly Return",        
      xlab="Expected Yearly Variance",        
      main="Efficient Frontier for Government Bond Portfolios") 
-_# 画出预测边值_
-**lines**(sfit,muf,col="red") 
-_# 画出三个标的的有效边界。_ 
-**lines**(eStd^2,er,col="blue") 
-**legend**(.014,0.015,**c**("Barbell Strategy","All Assets"),             
-                  col=**c**("red","blue"),             
-                  lty=**c**(1,1))
+# 画出预测边值
+lines(sfit,muf,col="red") 
+# 画出三个标的的有效边界。
+lines(eStd^2,er,col="blue") 
+legend(.014,0.015,c("Barbell Strategy","All Assets"),             
+                  col=c("red","blue"),             
+                  lty=c(1,1))
 solution = data.frame(wTLT,wSHY,wIEF,er,eStd)
 ```
 
@@ -266,11 +263,9 @@ solution = data.frame(wTLT,wSHY,wIEF,er,eStd)
 
 为第一部分里的边值拟合一个多项式;此时在持仓组合中只有 SHY 和 IEF。虽然这样也行得通，但是这不太通用。想找到一个可以不管是什么边值形状都适用的通用解决方案。下个部分会继续讨论这个问题。
 
+审稿：邓一硕
 
-                                                           审稿 | 邓一硕
-
-
-编辑 | 范超
+编辑：范超
 版权公告：原创文章，版权所有。
 
 敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
