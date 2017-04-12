@@ -5,7 +5,6 @@ author: COS编辑部
 categories:
   - 统计之都
 slug: learning-to-rank
-description: "最近有条很火的新闻。美国大选刚刚落下帷幕，却余波不断。其中一条新闻就是，Google被指责利用搜索结果（假新闻）左右民意。可是事情到底是怎么回事呢？"
 ---
 
 本文作者陈丽云，落园园主。
@@ -16,20 +15,18 @@ description: "最近有条很火的新闻。美国大选刚刚落下帷幕，却
 
 最近有条很火的新闻。美国大选刚刚落下帷幕，却余波不断。其中一条新闻就是，Google被指责利用搜索结果（假新闻）左右民意。可是事情到底是怎么回事呢？
 
-SAN, FRANCISCO/WASHINGTON – Google’s search engine is highlighting an inaccurate story claiming that President-elect Donald Trump won the popular vote in last week’s election, the latest example of bogus information spread by the internet’s gatekeepers.
+> SAN, FRANCISCO/WASHINGTON – Google’s search engine is highlighting an inaccurate story claiming that President-elect Donald Trump won the popular vote in last week’s election, the latest example of bogus information spread by the internet’s gatekeepers.
 
-The incorrect results are shown in a two-day-old story posted on the pro-Trump “70 News” site. On Monday, a link to the site appeared at or near the top of Google’s influential rankings of relevant news stories for searches on the final election results.
+> The incorrect results are shown in a two-day-old story posted on the pro-Trump “70 News” site. On Monday, a link to the site appeared at or near the top of Google’s influential rankings of relevant news stories for searches on the final election results.
 
 原文不翻译了，大意是，在Google搜索大选相关信息的时候，“popularity vote”第一条结果是一个“洋葱新闻”网站70News。显然Google的算法认为这个网站是最相关的，结果无数的网民就天真地点击过去了，然后愤怒地发现这是一条假新闻（相似的例子可能还有百度医疗广告问题…）。可见人们潜意识里对搜索引擎有一种莫名的信任——排在前面的应该就是我想要的信息。可是，搜索引擎背后也只是一堆堆的机器学习模型，而模型也是需要不断改进的。要改进模型就要告诉模型什么时候判断错了，然后进行参数修正。
 
 ![](https://cos.name/wp-content/uploads/2017/01/Google-e1457156368841.jpg)
 
-最近看到Google research放出来的一篇论文：Learning to Rank with Selection Bias in Personal Search<http://research.google.com/pubs/pub45286.html>。这篇论文是跟排序算法相关的，虽然跟上面的“假新闻”事件没啥直接关系，但殊途同归之处不少。正巧园主前些时日涉足了一些相关的问题，加之标题中的选择偏差（selection bias），一下子引起园主的好奇心，遂通读此文。读完之后感觉有些想法很新颖，只是术语习惯等等和园主习惯的方式有所区别，所以打算以一个非算法的视角来解读一下这篇文章，谈谈园主的一些理解。
-
+最近看到Google research放出来的一篇论文：[Learning to Rank with Selection Bias in Personal Search](http://research.google.com/pubs/pub45286.html)。这篇论文是跟排序算法相关的，虽然跟上面的“假新闻”事件没啥直接关系，但殊途同归之处不少。正巧园主前些时日涉足了一些相关的问题，加之标题中的选择偏差（selection bias），一下子引起园主的好奇心，遂通读此文。读完之后感觉有些想法很新颖，只是术语习惯等等和园主习惯的方式有所区别，所以打算以一个非算法的视角来解读一下这篇文章，谈谈园主的一些理解。
 
 （注：本文非直接翻译，技术细节建议阅读原文）
  
-
 # 一些背景：网站是如何评价搜索结果的？
 
 （下述内容是园主另加的，熟悉相关做法的读者可以直接跳过）先说一下背景。Google众所周知，做的就是对各种内容的排序。Google search自然是对各种互联网上的内容的排序（称之为大众搜索，或网页搜索），而其他产品诸如gmail，Google drive等，排序的时候就是针对每个用户自己的内容，故称之为个人搜索（personal search）。这篇文章虽然着重的是后面一种情形下的排序，从园主的角度来看其实也不仅限于后者。互联网各大公司其实都有相同的问题：如何优化站内搜索，比如在淘宝搜索商品。其实，在现在的环境下，大家不仅仅要优化自然搜索算法（基于内容），也要优化付费搜索和自然搜索的关系（毕竟一个网页就那么多内容，多了付费搜索、自然搜索就看不到了）。这其中，很重要的一个业界的衡量指标就是：关联度(Relevance)，说白了就是返回的搜索结果是不是用户想要的。 
@@ -124,14 +121,12 @@ The incorrect results are shown in a two-day-old story posted on the pro-Trump �
 
 作者在第五章进行了各种线上和线下用户实验来验证各个模型并计算其效果提升，包括我们前面提到的当数据是乱序故而可以直接计算排序位置影响的情况。在此不再赘述。
 
-
 # 总结
 
 通读文章几遍之后，园主的理解就是，点击率数据混合了两个因素的影响：排序位置、关联度。我们如果想办法剥离排序位置的影响，那么修正后的点击率数据就单纯的反映了关联度，故而可以直接用来改进排序算法。
 
 回到选择性偏差的问题，园主的理解是其产生是由于损失函数的限制。原文作者给出的解决办法是基于倾向度的逆加权，不知道其他办法是不是亦可行。园主对此领域了解颇为有限，若有贻笑大方之处，还请大家不吝指正。
 
+审稿：邱怡轩
 
-审稿 | 邱怡轩
-
-编辑 | 冯璟烁
+编辑：冯璟烁
