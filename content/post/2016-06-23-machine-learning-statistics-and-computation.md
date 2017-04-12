@@ -38,9 +38,9 @@ slug: machine-learning-statistics-and-computation
 
 毋庸置疑，大数据和人工智能是当今是最为时髦的名词，它们将为我们未来生活带来深刻的变革。数据是燃料，智能是目标，而机器学习是火箭，即通往智能的技术途径。机器学习大师Mike Jordan和Tom Mitchell 认为机器学习是计算机科学和统计学的交叉，同时是人工智能和数据科学的核心。
 
-> “It is one of today’s rapidly growing technical fields,  lying at the intersection of computer science and statistics, and at the core of artificial intelligence and data science”
+> It is one of today’s rapidly growing technical fields,  lying at the intersection of computer science and statistics, and at the core of artificial intelligence and data science.
 > 
-> ---M. I. Jordan
+> --- M. I. Jordan
 
 通俗地说，机器学习就是从数据里面挖掘出有用的价值。数据本身是死的，它不能自动呈现出有用的信息。怎么样才能找出有价值的东西呢？第一步要给数据一个抽象的表示，接着基于表示进行建模，然后估计模型的参数，也就是计算，为了应对大规模的数据所带来的问题，我们还需要设计一些高效的实现手段。
 
