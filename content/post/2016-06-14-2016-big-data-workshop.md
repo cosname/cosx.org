@@ -12,21 +12,11 @@ tags:
 slug: 2016-big-data-workshop
 ---
 
-<p style="text-align: center;">
-  <strong> 2016年“大数据时代的统计学”教学研讨会  </strong>
-</p>
+**2016年“大数据时代的统计学”教学研讨会暨第五届全国高校统计类专业骨干教师研修班**
 
-<p style="text-align: center;">
-  <strong>暨第五届全国高校统计类专业骨干教师研修班</strong>
-</p>
-
-<p style="text-align: center;">
   应用统计硕士教指委与五校联合大数据分析
-</p>
 
-<p style="text-align: center;">
   硕士培养协同创新平台联合推出
-</p>
 
 **主办单位**
 
@@ -84,7 +74,9 @@ slug: 2016-big-data-workshop
 
 标间380元/天，含双早
 
-![jiudian_2](https://cos.name/wp-content/uploads/2016/06/jiudian_2.jpg) ![jiudian_1](https://cos.name/wp-content/uploads/2016/06/jiudian_1.jpg) ![jiudian_3](https://cos.name/wp-content/uploads/2016/06/jiudian_3.jpg)
+![jiudian_2](https://cos.name/wp-content/uploads/2016/06/jiudian_2.jpg) ![jiudian_1](https://cos.name/wp-content/uploads/2016/06/jiudian_1.jpg) 
+
+![jiudian_3](https://cos.name/wp-content/uploads/2016/06/jiudian_3.jpg)
 
 联系人：
 
@@ -96,10 +88,4 @@ slug: 2016-big-data-workshop
 
 ![erwei_jiudian](https://cos.name/wp-content/uploads/2016/06/erwei_jiudian.png)
 
-&nbsp;
-
-&nbsp;
-
-<p style="text-align: left;">
-  报名链接：[http://form.mikecrm.com/0GNgZ8](http://form.mikecrm.com/0GNgZ8)
-</p>
+报名链接：<http://form.mikecrm.com/0GNgZ8>
