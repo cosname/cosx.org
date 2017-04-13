@@ -191,74 +191,74 @@ slug: weather-driven-industry-sales-big-data
                       饮品行业计量单位 
                       
                       
-                        单位：百升</td> </tr> </tbody> </table> 
+ 单位：百升</td> </tr> </tbody> </table> 
 
-						从一级渠道（经销商）到二级渠道数据的字段见表2。和一级渠道数据相同的是，该数据虽然不记录在ERP系统，而记录在渠道商的GO-TO-MARKET系统中，也定义有不同业务意义的日期系统审核日期（Audit Date）与发货日期（Shipping Date），两个日期在数据上几乎一致，而订单日期（Order Date）一般是在月底记录（渠道销售返利模式特性），所以该日期并不能准确反映天气驱动的实际日期，我们同样采用发货日期作为时间基准。对销量自然箱、销量百升、销量标准箱等行业特殊性记录，在与合作业务方交流后，与一级渠道数据相同，选用销量百升。
-                        
-                        
-                       
-                          表2 酒精性饮料二级渠道数据的字段描述
-                        
-                        
-                        <table width="555">
-                          <tr>
-                            <td colspan="2" width="225">
-                              <strong>数据</strong>
-                            </td>
-                            
-                            <td colspan="2" width="331">
-                              二级渠道销售数据(仅列出最终使用字段)
-                            </td>
-                          </tr>
-                          
-                          <tr>
-                            <td width="36">
-                              Id
-                            </td>
-                            
-                            <td width="189">
-                              <strong>字段名</strong><strong>Field name</strong>
-                            </td>
-                            
-                            <td width="170">
-                              <strong>字段说明</strong>
-                            </td>
-                            
-                            <td width="161">
-                              <strong>备注说明</strong>
-                            </td>
-                          </tr>
-                          
-                          <tr>
-                            <td width="36">
-                              1
-                            </td>
-                            
-                            <td width="189">
-                              auditdate 
-                              
-                              
-                                orderdate
-                              
-                              
-                              
-                                shipdate</td> 
-                                
-                                <td width="170">
-                                  系统审核日期 
-                                  
-                                  
-                                    订单日期
-                                  
-                                  
-                                  
-                                    发货日期</td> 
-                                    
-                                    <td width="161">
+从一级渠道（经销商）到二级渠道数据的字段见表2。和一级渠道数据相同的是，该数据虽然不记录在ERP系统，而记录在渠道商的GO-TO-MARKET系统中，也定义有不同业务意义的日期系统审核日期（Audit Date）与发货日期（Shipping Date），两个日期在数据上几乎一致，而订单日期（Order Date）一般是在月底记录（渠道销售返利模式特性），所以该日期并不能准确反映天气驱动的实际日期，我们同样采用发货日期作为时间基准。对销量自然箱、销量百升、销量标准箱等行业特殊性记录，在与合作业务方交流后，与一级渠道数据相同，选用销量百升。
+ 
+ 
+
+ 表2 酒精性饮料二级渠道数据的字段描述
+ 
+ 
+ <table width="555">
+ <tr>
+   <td colspan="2" width="225">
+     <strong>数据</strong>
+   </td>
+   
+   <td colspan="2" width="331">
+     二级渠道销售数据(仅列出最终使用字段)
+   </td>
+ </tr>
+ 
+ <tr>
+   <td width="36">
+     Id
+   </td>
+   
+   <td width="189">
+     <strong>字段名</strong><strong>Field name</strong>
+   </td>
+   
+   <td width="170">
+     <strong>字段说明</strong>
+   </td>
+   
+   <td width="161">
+     <strong>备注说明</strong>
+   </td>
+ </tr>
+ 
+ <tr>
+   <td width="36">
+     1
+   </td>
+   
+   <td width="189">
+     auditdate 
+     
+     
+       orderdate
+     
+     
+     
+       shipdate</td> 
+       
+       <td width="170">
+         系统审核日期 
+         
+         
+           订单日期
+         
+         
+         
+           发货日期</td> 
+           
+           <td width="161">
  2013年1月1日到2015年11月30日
-                                    </td></tr> 
-                                    
-                                    <tr>
+           </td></tr> 
+           
+           <tr>
  <td width="36">
    2
  </td>
@@ -274,9 +274,9 @@ slug: weather-driven-industry-sales-big-data
  <td width="161">
    城市G、城市S、城市H、城市Z、城市W
  </td>
-                                    </tr>
-                                    
-                                    <tr>
+           </tr>
+           
+           <tr>
  <td width="36">
    3
  </td>
@@ -542,7 +542,7 @@ slug: weather-driven-industry-sales-big-data
 从2011年1月1日到2013年12月31日共1096天，城市S、城市Z、城市W数据中多出来的数据量是由于某一天的销售量有两条记录导致的，我们把这些数据按天合并。而城市Q的某些天没有数据，我们认为其销量为0，气象数据则取相应时间段与观测城市的数据。与酒精性饮料数据一样按照日粒度进行整理，同时将一周销量加总作为周销量数据，按两种时间维度进行分析。
  
  
- ## （三）天气数据描述
+## （三）天气数据描述
 
  
  
@@ -1764,7 +1764,7 @@ slug: weather-driven-industry-sales-big-data
  
  
  
-（2）模型设定
+### （2）模型设定
  
  
  
