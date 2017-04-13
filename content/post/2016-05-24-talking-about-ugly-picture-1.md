@@ -26,7 +26,7 @@ slug: talking-about-ugly-picture-1
 
 然后说**“有效”**。什么叫做有效的描述，我举一个例子。现在我有两个变量，一个是性别，一个是年龄，我想比较男性和女性的年龄，选择什么样的统计图才好呢？大家可以先自己思考一下。我给大家展示一组我的学生画的图。
 
-![pan_1](https://cos.name/wp-content/uploads/2016/05/pan_1-1.png)
+![pan_1-1](https://cos.name/wp-content/uploads/2016/05/pan_1-1.png)
 
 ![pan_1-2](https://cos.name/wp-content/uploads/2016/05/pan_1-2.png) 
 
