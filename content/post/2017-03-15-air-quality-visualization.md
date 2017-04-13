@@ -5,6 +5,10 @@ author: 郎大为
 slug: "air-quality-visualization"
 categories:
   - 统计之都
+  - leaflet
+  - 地理信息可视化
+  - 地图
+  - R
 ---
 
 # 故事部分
