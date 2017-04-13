@@ -126,51 +126,51 @@ slug: credit-scoring-model-in-internet-credit-reporting
 <table width="557">
   <tr>
     <td width="104">
-      指标简称
+ 指标简称
     </td>
     
     <td width="454">
-      指标定义
+ 指标定义
     </td>
   </tr>
   
   <tr>
     <td width="104">
-      R
+ R
     </td>
     
     <td width="454">
-      一年内用户最后一次产生某类行为距离提取数据的时间
+ 一年内用户最后一次产生某类行为距离提取数据的时间
     </td>
   </tr>
   
   <tr>
     <td width="104">
-      F
+ F
     </td>
     
     <td width="454">
-      用户在一年内产生某次行为的频数
+ 用户在一年内产生某次行为的频数
     </td>
   </tr>
   
   <tr>
     <td width="104">
-      M
+ M
     </td>
     
     <td width="454">
-      用户在一年内产生某类行为的平均金额
+ 用户在一年内产生某类行为的平均金额
     </td>
   </tr>
   
   <tr>
     <td width="104">
-      S
+ S
     </td>
     
     <td width="454">
-      一年内该类行为产生金额的标准差
+ 一年内该类行为产生金额的标准差
     </td>
   </tr>
 </table>
@@ -244,101 +244,101 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
 <table width="539">
   <tr>
     <td width="112">
-      <strong>变量名</strong>
+ <strong>变量名</strong>
     </td>
     
     <td width="105">
-      <strong>估计值</strong>
+ <strong>估计值</strong>
     </td>
     
     <td width="76">
-      <strong>p</strong><strong>值</strong>
+ <strong>p</strong><strong>值</strong>
     </td>
     
     <td width="85">
-      <strong>变量名</strong>
+ <strong>变量名</strong>
     </td>
     
     <td width="85">
-      <strong>估计值</strong>
+ <strong>估计值</strong>
     </td>
     
     <td width="76">
-      <strong>p</strong><strong>值</strong>
+ <strong>p</strong><strong>值</strong>
     </td>
   </tr>
   
   <tr>
     <td width="112">
-      熊得分
+ 熊得分
     </td>
     
     <td width="105">
-      26.301
+ 26.301
     </td>
     
     <td width="76">
-      ***
+ ***
     </td>
     
     <td width="85">
-      转账R
+ 转账R
     </td>
     
     <td width="85">
-      -0.336
+ -0.336
     </td>
     
     <td width="76">
-      ***
+ ***
     </td>
   </tr>
   
   <tr>
     <td width="112">
-      借贷比率
+ 借贷比率
     </td>
     
     <td width="105">
-      1.752
+ 1.752
     </td>
     
     <td width="76">
-      ***
+ ***
     </td>
     
     <td width="85">
-      年龄
+ 年龄
     </td>
     
     <td width="85">
-      -0.254
+ -0.254
     </td>
     
     <td width="76">
-      ***
+ ***
     </td>
   </tr>
   
   <tr>
     <td width="112">
-      借记卡F
+ 借记卡F
     </td>
     
     <td width="105">
-      0.438
+ 0.438
     </td>
     
     <td width="76">
-      ***
+ ***
     </td>
     
     <td width="85">
-      公缴R
+ 公缴R
     </td>
     
     <td width="85">
-      -0.230
+ -0.230
     </td>
     
     <td width="76">
@@ -347,288 +347,288 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
   
   <tr>
     <td width="112">
-      用户所有 
-      
-      
-        行为均值</td> 
-        
-        <td width="105">
-          0.412
-        </td>
-        
-        <td width="76">
-          ***
-        </td>
-        
-        <td width="85">
-          四大F
-        </td>
-        
-        <td width="85">
-          -0.175
-        </td>
-        
-        <td width="76">
-          ***
-        </td></tr> 
-        
-        <tr>
-          <td width="112">
-            交易笔数
-          </td>
-          
-          <td width="105">
-            0.136
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-          
-          <td width="85">
-            四大R
-          </td>
-          
-          <td width="85">
-            -0.168
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-        </tr>
-        
-        <tr>
-          <td width="112">
-            借记卡M
-          </td>
-          
-          <td width="105">
-            0.083
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-          
-          <td width="85">
-            中型F
-          </td>
-          
-          <td width="85">
-            -0.122
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-        </tr>
-        
-        <tr>
-          <td width="112">
-            中型M
-          </td>
-          
-          <td width="105">
-            0.016
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-          
-          <td width="85">
-            中型R
-          </td>
-          
-          <td width="85">
-            -0.119
-          </td>
-          
-          <td width="76">
-            **
-          </td>
-        </tr>
-        
-        <tr>
-          <td width="112">
-            四大M
-          </td>
-          
-          <td width="105">
-            0.014
-          </td>
-          
-          <td width="76">
-            *
-          </td>
-          
-          <td width="85">
-            消费F
-          </td>
-          
-          <td width="85">
-            -0.096
-          </td>
-          
-          <td width="76">
-            **
-          </td>
-        </tr>
-        
-        <tr>
-          <td width="112">
-            信贷R
-          </td>
-          
-          <td width="105">
-            -0.922
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-          
-          <td width="85">
-            金卡F
-          </td>
-          
-          <td width="85">
-            -0.083
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-        </tr>
-        
-        <tr>
-          <td width="112">
-            银行卡数
-          </td>
-          
-          <td width="105">
-            -0.674
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-          
-          <td width="85">
-            转账M
-          </td>
-          
-          <td width="85">
-            -0.082
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-        </tr>
-        
-        <tr>
-          <td width="112">
-            信贷F
-          </td>
-          
-          <td width="105">
-            -0.633
-          </td>
-          
-          <td width="76">
-            ***
-          </td>
-          
-          <td width="85">
-            公缴M
-          </td>
-          
-          <td width="85">
-            -0.062
-          </td>
-          
-          <td width="76">
-            **
-          </td>
-        </tr>
-        
-        <tr>
-          <td width="112">
-            用户所有 
-            
-            
+ 用户所有 
+ 
+ 
+ 行为均值</td> 
+ 
+ <td width="105">
+ 0.412
+ </td>
+ 
+ <td width="76">
+ ***
+ </td>
+ 
+ <td width="85">
+ 四大F
+ </td>
+ 
+ <td width="85">
+ -0.175
+ </td>
+ 
+ <td width="76">
+ ***
+ </td></tr> 
+ 
+ <tr>
+ <td width="112">
+   交易笔数
+ </td>
+ 
+ <td width="105">
+   0.136
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ 
+ <td width="85">
+   四大R
+ </td>
+ 
+ <td width="85">
+   -0.168
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ </tr>
+ 
+ <tr>
+ <td width="112">
+   借记卡M
+ </td>
+ 
+ <td width="105">
+   0.083
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ 
+ <td width="85">
+   中型F
+ </td>
+ 
+ <td width="85">
+   -0.122
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ </tr>
+ 
+ <tr>
+ <td width="112">
+   中型M
+ </td>
+ 
+ <td width="105">
+   0.016
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ 
+ <td width="85">
+   中型R
+ </td>
+ 
+ <td width="85">
+   -0.119
+ </td>
+ 
+ <td width="76">
+   **
+ </td>
+ </tr>
+ 
+ <tr>
+ <td width="112">
+   四大M
+ </td>
+ 
+ <td width="105">
+   0.014
+ </td>
+ 
+ <td width="76">
+   *
+ </td>
+ 
+ <td width="85">
+   消费F
+ </td>
+ 
+ <td width="85">
+   -0.096
+ </td>
+ 
+ <td width="76">
+   **
+ </td>
+ </tr>
+ 
+ <tr>
+ <td width="112">
+   信贷R
+ </td>
+ 
+ <td width="105">
+   -0.922
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ 
+ <td width="85">
+   金卡F
+ </td>
+ 
+ <td width="85">
+   -0.083
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ </tr>
+ 
+ <tr>
+ <td width="112">
+   银行卡数
+ </td>
+ 
+ <td width="105">
+   -0.674
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ 
+ <td width="85">
+   转账M
+ </td>
+ 
+ <td width="85">
+   -0.082
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ </tr>
+ 
+ <tr>
+ <td width="112">
+   信贷F
+ </td>
+ 
+ <td width="105">
+   -0.633
+ </td>
+ 
+ <td width="76">
+   ***
+ </td>
+ 
+ <td width="85">
+   公缴M
+ </td>
+ 
+ <td width="85">
+   -0.062
+ </td>
+ 
+ <td width="76">
+   **
+ </td>
+ </tr>
+ 
+ <tr>
+ <td width="112">
+   用户所有 
+   
+   
 行为最大值</td> 
-              
-              <td width="105">
-                -0.474
-              </td>
-              
-              <td width="76">
-                ***
-              </td>
-              
-              <td width="85">
-                游戏M
-              </td>
-              
-              <td width="85">
-                -0.059
-              </td>
-              
-              <td width="76">
-                *
-              </td></tr> 
-              
-              <tr>
-                <td width="112">
-                  转账F
-                </td>
-                
-                <td width="105">
-                  -0.386
-                </td>
-                
-                <td width="76">
-                  ***
-                </td>
-                
-                <td width="85">
-                  信贷S
-                </td>
-                
-                <td width="85">
-                  -0.035
-                </td>
-                
-                <td width="76">
-                  ***
-                </td>
-              </tr>
-              
-              <tr>
-                <td width="112">
-                  公缴F
-                </td>
-                
-                <td width="105">
-                  -0.370
-                </td>
-                
-                <td width="76">
-                  *
-                </td>
-                
-                <td width="85">
-                </td>
-                
-                <td width="85">
-                </td>
-                
-                <td width="76">
-                </td>
-              </tr></tbody> </table> 
+ 
+ <td width="105">
+-0.474
+ </td>
+ 
+ <td width="76">
+***
+ </td>
+ 
+ <td width="85">
+游戏M
+ </td>
+ 
+ <td width="85">
+-0.059
+ </td>
+ 
+ <td width="76">
+*
+ </td></tr> 
+ 
+ <tr>
+<td width="112">
+  转账F
+</td>
+
+<td width="105">
+  -0.386
+</td>
+
+<td width="76">
+  ***
+</td>
+
+<td width="85">
+  信贷S
+</td>
+
+<td width="85">
+  -0.035
+</td>
+
+<td width="76">
+  ***
+</td>
+ </tr>
+ 
+ <tr>
+<td width="112">
+  公缴F
+</td>
+
+<td width="105">
+  -0.370
+</td>
+
+<td width="76">
+  *
+</td>
+
+<td width="85">
+</td>
+
+<td width="85">
+</td>
+
+<td width="76">
+</td>
+ </tr></tbody> </table> 
 
 注：***表示P<0.01，**表示0.01≤P<0.05，*表示0.05≤P<0.1。
    
