@@ -48,7 +48,7 @@ slug: weather-driven-industry-sales-big-data
 <table width="555">
   <tr>
 <td colspan="2" width="225">
-  <strong>数据</strong>
+  **数据**
 </td>
 
 <td colspan="2" width="331">
@@ -62,15 +62,15 @@ slug: weather-driven-industry-sales-big-data
 </td>
 
 <td width="189">
-  <strong>字段名</strong><strong>Field name</strong>
+  **字段名****Field name**
 </td>
 
 <td width="170">
-  <strong>字段说明</strong>
+  **字段说明**
 </td>
 
 <td width="161">
-  <strong>备注说明</strong>
+  **备注说明**
 </td>
   </tr>
   
@@ -203,7 +203,7 @@ slug: weather-driven-industry-sales-big-data
  <table width="555">
  <tr>
    <td colspan="2" width="225">
- <strong>数据</strong>
+ **数据**
    </td>
    
    <td colspan="2" width="331">
@@ -217,15 +217,15 @@ slug: weather-driven-industry-sales-big-data
    </td>
    
    <td width="189">
- <strong>字段名</strong><strong>Field name</strong>
+ **字段名****Field name**
    </td>
    
    <td width="170">
- <strong>字段说明</strong>
+ **字段说明**
    </td>
    
    <td width="161">
- <strong>备注说明</strong>
+ **备注说明**
    </td>
  </tr>
  
@@ -357,7 +357,7 @@ slug: weather-driven-industry-sales-big-data
  <table width="555">
    <tr>
  <td colspan="2" width="225">
-   <strong>数据</strong>
+   **数据**
  </td>
  
  <td colspan="2" width="331">
@@ -371,15 +371,15 @@ slug: weather-driven-industry-sales-big-data
  </td>
  
  <td width="189">
-   <strong>字段名</strong><strong>Field name</strong>
+   **字段名****Field name**
  </td>
  
  <td width="170">
-   <strong>字段说明</strong>
+   **字段说明**
  </td>
  
  <td width="161">
-   <strong>备注说明</strong>
+   **备注说明**
  </td>
    </tr>
    
@@ -469,11 +469,11 @@ slug: weather-driven-industry-sales-big-data
  <table width="565">
 <tr>
   <td width="282">
-<strong>城市</strong>
+**城市**
   </td>
   
   <td width="282">
-<strong>Observation</strong>
+**Observation**
   </td>
 </tr>
 
@@ -556,7 +556,7 @@ slug: weather-driven-industry-sales-big-data
  <table width="555">
 <tr>
   <td colspan="2" width="225">
-<strong>数据</strong>
+**数据**
   </td>
   
   <td colspan="2" width="331">
@@ -570,15 +570,15 @@ Id
   </td>
   
   <td width="189">
-<strong>字段名</strong><strong>Field name</strong>
+**字段名****Field name**
   </td>
   
   <td width="170">
-<strong>字段说明</strong>
+**字段说明**
   </td>
   
   <td width="161">
-<strong>备注说明</strong>
+**备注说明**
   </td>
 </tr>
 
@@ -1506,15 +1506,15 @@ SurfaceTemperatureMin
  <table>
 <tr>
   <td width="189">
-<strong>城市</strong>
+**城市**
   </td>
   
   <td width="189">
-<strong>销量（成交价格:元）</strong>
+**销量（成交价格:元）**
   </td>
   
   <td width="189">
-<strong>销量（件）</strong>
+**销量（件）**
   </td>
 </tr>
 
