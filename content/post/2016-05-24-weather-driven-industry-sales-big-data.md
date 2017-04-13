@@ -47,150 +47,150 @@ slug: weather-driven-industry-sales-big-data
 
 <table width="555">
   <tr>
-    <td colspan="2" width="225">
-      <strong>数据</strong>
-    </td>
-    
-    <td colspan="2" width="331">
-      一级渠道销售数据(仅列出最终使用字段)
-    </td>
+<td colspan="2" width="225">
+  <strong>数据</strong>
+</td>
+
+<td colspan="2" width="331">
+  一级渠道销售数据(仅列出最终使用字段)
+</td>
   </tr>
   
   <tr>
-    <td width="36">
-      Id
-    </td>
-    
-    <td width="189">
-      <strong>字段名</strong><strong>Field name</strong>
-    </td>
-    
-    <td width="170">
-      <strong>字段说明</strong>
-    </td>
-    
-    <td width="161">
-      <strong>备注说明</strong>
-    </td>
+<td width="36">
+  Id
+</td>
+
+<td width="189">
+  <strong>字段名</strong><strong>Field name</strong>
+</td>
+
+<td width="170">
+  <strong>字段说明</strong>
+</td>
+
+<td width="161">
+  <strong>备注说明</strong>
+</td>
   </tr>
   
   <tr>
-    <td width="36">
-      1
-    </td>
-    
-    <td width="189">
-      城市
-    </td>
-    
-    <td width="170">
-      销售城市；一级渠道所在城市
-    </td>
-    
-    <td width="161">
-      城市G、城市S、城市H、城市Z、城市W
-    </td>
+<td width="36">
+  1
+</td>
+
+<td width="189">
+  城市
+</td>
+
+<td width="170">
+  销售城市；一级渠道所在城市
+</td>
+
+<td width="161">
+  城市G、城市S、城市H、城市Z、城市W
+</td>
   </tr>
   
   <tr>
-    <td width="36">
-      2
-    </td>
-    
-    <td width="189">
-      产品
-    </td>
-    
-    <td width="170">
-      酒精性饮料产品描述
-    </td>
-    
-    <td width="161">
-      包括了品牌、子品牌、容量、包装等内容
-    </td>
+<td width="36">
+  2
+</td>
+
+<td width="189">
+  产品
+</td>
+
+<td width="170">
+  酒精性饮料产品描述
+</td>
+
+<td width="161">
+  包括了品牌、子品牌、容量、包装等内容
+</td>
   </tr>
   
   <tr>
-    <td width="36">
-      3
-    </td>
-    
-    <td width="189">
-      订单日期(Order Date) 
-      
-      
-        需求日期(Requirement Date)
-      
-      
-      
-        释放日期(Released Date)
-      
-      
-      
-        发货日期(Shipping Date)
-      
-      
-      
-        交货日期(PGI Date)</td> 
-        
-        <td width="170">
-          下单日期 
-          
-          
-            客户需要日期
-          
-          
-          
-            订单释放日期
-          
-          
-          
-            发货离厂日期
-          
-          
-          
-            交货日期</td> 
-            
-            <td width="161">
-              2013年至2015年共计三年
-            </td></tr> 
-            
-            <tr>
-              <td width="36">
-                4
-              </td>
-              
-              <td width="189">
-                交货单数量 
-                
-                
-                  发货数量</td> 
-                  
-                  <td width="170">
-                    实际发货数量
-                  </td>
-                  
-                  <td width="161">
-                    单位：件
-                  </td></tr> 
-                  
-                  <tr>
-                    <td width="36">
-                      5
-                    </td>
-                    
-                    <td width="189">
-                      体积
-                    </td>
-                    
-                    <td width="170">
-                      酒精性饮料的容量
-                    </td>
-                    
-                    <td width="161">
-                      饮品行业计量单位 
-                      
-                      
+<td width="36">
+  3
+</td>
+
+<td width="189">
+  订单日期(Order Date) 
+  
+  
+需求日期(Requirement Date)
+  
+  
+  
+释放日期(Released Date)
+  
+  
+  
+发货日期(Shipping Date)
+  
+  
+  
+交货日期(PGI Date)</td> 
+
+<td width="170">
+下单日期 
+
+
+  客户需要日期
+
+
+
+  订单释放日期
+
+
+
+  发货离厂日期
+
+
+
+  交货日期</td> 
+  
+  <td width="161">
+2013年至2015年共计三年
+  </td></tr> 
+  
+  <tr>
+<td width="36">
+  4
+</td>
+
+<td width="189">
+  交货单数量 
+  
+  
+发货数量</td> 
+
+<td width="170">
+实际发货数量
+</td>
+
+<td width="161">
+单位：件
+</td></tr> 
+
+<tr>
+<td width="36">
+  5
+</td>
+
+<td width="189">
+  体积
+</td>
+
+<td width="170">
+  酒精性饮料的容量
+</td>
+
+<td width="161">
+  饮品行业计量单位 
+  
+  
  单位：百升</td> </tr> </tbody> </table> 
 
 从一级渠道（经销商）到二级渠道数据的字段见表2。和一级渠道数据相同的是，该数据虽然不记录在ERP系统，而记录在渠道商的GO-TO-MARKET系统中，也定义有不同业务意义的日期系统审核日期（Audit Date）与发货日期（Shipping Date），两个日期在数据上几乎一致，而订单日期（Order Date）一般是在月底记录（渠道销售返利模式特性），所以该日期并不能准确反映天气驱动的实际日期，我们同样采用发货日期作为时间基准。对销量自然箱、销量百升、销量标准箱等行业特殊性记录，在与合作业务方交流后，与一级渠道数据相同，选用销量百升。
@@ -203,62 +203,62 @@ slug: weather-driven-industry-sales-big-data
  <table width="555">
  <tr>
    <td colspan="2" width="225">
-     <strong>数据</strong>
+ <strong>数据</strong>
    </td>
    
    <td colspan="2" width="331">
-     二级渠道销售数据(仅列出最终使用字段)
+ 二级渠道销售数据(仅列出最终使用字段)
    </td>
  </tr>
  
  <tr>
    <td width="36">
-     Id
+ Id
    </td>
    
    <td width="189">
-     <strong>字段名</strong><strong>Field name</strong>
+ <strong>字段名</strong><strong>Field name</strong>
    </td>
    
    <td width="170">
-     <strong>字段说明</strong>
+ <strong>字段说明</strong>
    </td>
    
    <td width="161">
-     <strong>备注说明</strong>
+ <strong>备注说明</strong>
    </td>
  </tr>
  
  <tr>
    <td width="36">
-     1
+ 1
    </td>
    
    <td width="189">
-     auditdate 
-     
-     
-       orderdate
-     
-     
-     
-       shipdate</td> 
-       
-       <td width="170">
-         系统审核日期 
-         
-         
-           订单日期
-         
-         
-         
-           发货日期</td> 
-           
-           <td width="161">
+ auditdate 
+ 
+ 
+   orderdate
+ 
+ 
+ 
+   shipdate</td> 
+   
+   <td width="170">
+系统审核日期 
+
+
+ 订单日期
+
+
+
+ 发货日期</td> 
+ 
+ <td width="161">
  2013年1月1日到2015年11月30日
-           </td></tr> 
-           
-           <tr>
+ </td></tr> 
+ 
+ <tr>
  <td width="36">
    2
  </td>
@@ -274,9 +274,9 @@ slug: weather-driven-industry-sales-big-data
  <td width="161">
    城市G、城市S、城市H、城市Z、城市W
  </td>
-           </tr>
-           
-           <tr>
+ </tr>
+ 
+ <tr>
  <td width="36">
    3
  </td>
@@ -469,71 +469,71 @@ slug: weather-driven-industry-sales-big-data
  <table width="565">
 <tr>
   <td width="282">
-    <strong>城市</strong>
+<strong>城市</strong>
   </td>
   
   <td width="282">
-    <strong>Observation</strong>
+<strong>Observation</strong>
   </td>
 </tr>
 
 <tr>
   <td width="282">
-    城市G
+城市G
   </td>
   
   <td width="282">
-    1096
+1096
   </td>
 </tr>
 
 <tr>
   <td width="282">
-    城市S
+城市S
   </td>
   
   <td width="282">
-    1100
+1100
   </td>
 </tr>
 
 <tr>
   <td width="282">
-    城市H
+城市H
   </td>
   
   <td width="282">
-    1096
+1096
   </td>
 </tr>
 
 <tr>
   <td width="282">
-    城市Z
+城市Z
   </td>
   
   <td width="282">
-    1099
+1099
   </td>
 </tr>
 
 <tr>
   <td width="282">
-    城市W
+城市W
   </td>
   
   <td width="282">
-    1100
+1100
   </td>
 </tr>
 
 <tr>
   <td width="282">
-    城市Q
+城市Q
   </td>
   
   <td width="282">
-    1079
+1079
   </td>
 </tr>
  </table>
@@ -556,61 +556,61 @@ slug: weather-driven-industry-sales-big-data
  <table width="555">
 <tr>
   <td colspan="2" width="225">
-    <strong>数据</strong>
+<strong>数据</strong>
   </td>
   
   <td colspan="2" width="331">
-    气象数据要素(日)
+气象数据要素(日)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    Id
+Id
   </td>
   
   <td width="189">
-    <strong>字段名</strong><strong>Field name</strong>
+<strong>字段名</strong><strong>Field name</strong>
   </td>
   
   <td width="170">
-    <strong>字段说明</strong>
+<strong>字段说明</strong>
   </td>
   
   <td width="161">
-    <strong>备注说明</strong>
+<strong>备注说明</strong>
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    1
+1
   </td>
   
   <td width="189">
-    SiteId
+SiteId
   </td>
   
   <td width="170">
-    台站编号
+台站编号
   </td>
   
   <td width="161">
-    根据观测台站所在位置可以明确所在地(对应到行政区，如北京市东城区)
+根据观测台站所在位置可以明确所在地(对应到行政区，如北京市东城区)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    2
+2
   </td>
   
   <td width="189">
-    Day
+Day
   </td>
   
   <td width="170">
-    观测日期
+观测日期
   </td>
   
   <td width="161">
@@ -619,397 +619,397 @@ slug: weather-driven-industry-sales-big-data
 
 <tr>
   <td width="36">
-    3
+3
   </td>
   
   <td width="189">
-    PressureAverage
+PressureAverage
   </td>
   
   <td width="170">
-    日均大气压力
+日均大气压力
   </td>
   
   <td width="161">
-    (单位:MPA)
+(单位:MPA)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    4
+4
   </td>
   
   <td width="189">
-    PressureMax
+PressureMax
   </td>
   
   <td width="170">
-    日最大大气压力
+日最大大气压力
   </td>
   
   <td width="161">
-    (单位:MPA)
+(单位:MPA)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    5
+5
   </td>
   
   <td width="189">
-    PressureMin
+PressureMin
   </td>
   
   <td width="170">
-    日最小大气压力
+日最小大气压力
   </td>
   
   <td width="161">
-    (单位:MPA)
+(单位:MPA)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    6
+6
   </td>
   
   <td width="189">
-    TemperatureAverage
+TemperatureAverage
   </td>
   
   <td width="170">
-    日平均气温
+日平均气温
   </td>
   
   <td width="161">
-    (单位:℃)
+(单位:℃)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    7
+7
   </td>
   
   <td width="189">
-    TemperatureMax
+TemperatureMax
   </td>
   
   <td width="170">
-    日最高气温
+日最高气温
   </td>
   
   <td width="161">
-    (单位:℃)
+(单位:℃)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    8
+8
   </td>
   
   <td width="189">
-    TemperatureMin
+TemperatureMin
   </td>
   
   <td width="170">
-    日最低气温
+日最低气温
   </td>
   
   <td width="161">
-    (单位:℃)
+(单位:℃)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    9
+9
   </td>
   
   <td width="189">
-    RelativeHumidityAverage
+RelativeHumidityAverage
   </td>
   
   <td width="170">
-    日平均相对湿度
+日平均相对湿度
   </td>
   
   <td width="161">
-    (单位:℃)
+(单位:℃)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    10
+10
   </td>
   
   <td width="189">
-    RelativeHumidityMin
+RelativeHumidityMin
   </td>
   
   <td width="170">
-    日最小相对湿度
+日最小相对湿度
   </td>
   
   <td width="161">
-    (单位:%)
+(单位:%)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    11
+11
   </td>
   
   <td width="189">
-    Precipitation20_8
+Precipitation20_8
   </td>
   
   <td width="170">
-    前一日20时至当日8时的各时段降水量的累加值
+前一日20时至当日8时的各时段降水量的累加值
   </td>
   
   <td width="161">
-    (单位:mm)
+(单位:mm)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    12
+12
   </td>
   
   <td width="189">
-    Precipitation8_20
+Precipitation8_20
   </td>
   
   <td width="170">
-    由当日08时至当日20时的各时段降水量的累加值
+由当日08时至当日20时的各时段降水量的累加值
   </td>
   
   <td width="161">
-    (单位:mm)
+(单位:mm)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    13
+13
   </td>
   
   <td width="189">
-    Precipitation20_20
+Precipitation20_20
   </td>
   
   <td width="170">
-    由前一日20时至当日20时的各时段降水量的累加值
+由前一日20时至当日20时的各时段降水量的累加值
   </td>
   
   <td width="161">
-    (单位:mm)
+(单位:mm)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    14
+14
   </td>
   
   <td width="189">
-    EvaporationSmall
+EvaporationSmall
   </td>
   
   <td width="170">
-    日最小蒸发量
+日最小蒸发量
   </td>
   
   <td width="161">
-    (单位:mm)
+(单位:mm)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    15
+15
   </td>
   
   <td width="189">
-    EvaporationLarge
+EvaporationLarge
   </td>
   
   <td width="170">
-    日最大蒸发量
+日最大蒸发量
   </td>
   
   <td width="161">
-    (单位:mm)
+(单位:mm)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    16
+16
   </td>
   
   <td width="189">
-    WindSpeedAverage
+WindSpeedAverage
   </td>
   
   <td width="170">
-    平均风速
+平均风速
   </td>
   
   <td width="161">
-    (单位: m/s)
+(单位: m/s)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    17
+17
   </td>
   
   <td width="189">
-    WindSpeedMax
+WindSpeedMax
   </td>
   
   <td width="170">
-    最大风速
+最大风速
   </td>
   
   <td width="161">
-    (单位: m/s)
+(单位: m/s)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    18
+18
   </td>
   
   <td width="189">
-    WindSpeedMaxDirection
+WindSpeedMaxDirection
   </td>
   
   <td width="170">
-    最大风速的风向
+最大风速的风向
   </td>
   
   <td width="161">
-    (度)
+(度)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    19
+19
   </td>
   
   <td width="189">
-    WindSpeedExtreme
+WindSpeedExtreme
   </td>
   
   <td width="170">
-    极大风速
+极大风速
   </td>
   
   <td width="161">
-    (单位: m/s)
+(单位: m/s)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    20
+20
   </td>
   
   <td width="189">
-    WindSpeedExtremeDirection
+WindSpeedExtremeDirection
   </td>
   
   <td width="170">
-    极大风速的风向
+极大风速的风向
   </td>
   
   <td width="161">
-    (度:角度)
+(度:角度)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    21
+21
   </td>
   
   <td width="189">
-    SunshineHour
+SunshineHour
   </td>
   
   <td width="170">
-    日照时长
+日照时长
   </td>
   
   <td width="161">
-    (单位:小时)
+(单位:小时)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    22
+22
   </td>
   
   <td width="189">
-    SurfaceTemperatureAverage
+SurfaceTemperatureAverage
   </td>
   
   <td width="170">
-    日地表均温
+日地表均温
   </td>
   
   <td width="161">
-    (单位:℃)
+(单位:℃)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    23
+23
   </td>
   
   <td width="189">
-    SurfaceTemperatureMax
+SurfaceTemperatureMax
   </td>
   
   <td width="170">
-    日地表最高温
+日地表最高温
   </td>
   
   <td width="161">
-    (单位:℃)
+(单位:℃)
   </td>
 </tr>
 
 <tr>
   <td width="36">
-    24
+24
   </td>
   
   <td width="189">
-    SurfaceTemperatureMin
+SurfaceTemperatureMin
   </td>
   
   <td width="170">
-    日地表最低温
+日地表最低温
   </td>
   
   <td width="161">
-    (单位:℃)
+(单位:℃)
   </td>
 </tr>
  </table>
@@ -1053,53 +1053,53 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td colspan="2" width="553">
-    城市G
+城市G
   </td>
 </tr>
 
 <tr>
   <td colspan="2" width="553">
-     ![luo_1](https://cos.name/wp-content/uploads/2016/05/luo_1.png)
+ ![luo_1](https://cos.name/wp-content/uploads/2016/05/luo_1.png)
   </td>
 </tr>
 
 <tr>
   <td width="277">
-    城市S
+城市S
   </td>
   
   <td width="277">
-    城市Z
+城市Z
   </td>
 </tr>
 
 <tr>
   <td width="277">
-     ![luo_2](https://cos.name/wp-content/uploads/2016/05/luo_2.png)
+ ![luo_2](https://cos.name/wp-content/uploads/2016/05/luo_2.png)
   </td>
   
   <td width="277">
-     ![luo_3](https://cos.name/wp-content/uploads/2016/05/luo_3.png)
+ ![luo_3](https://cos.name/wp-content/uploads/2016/05/luo_3.png)
   </td>
 </tr>
 
 <tr>
   <td width="277">
-    城市H
+城市H
   </td>
   
   <td width="277">
-    城市W
+城市W
   </td>
 </tr>
 
 <tr>
   <td width="277">
-     ![luo_4](https://cos.name/wp-content/uploads/2016/05/luo_4.png)
+ ![luo_4](https://cos.name/wp-content/uploads/2016/05/luo_4.png)
   </td>
   
   <td width="277">
-     ![luo_5](https://cos.name/wp-content/uploads/2016/05/luo_5.png)
+ ![luo_5](https://cos.name/wp-content/uploads/2016/05/luo_5.png)
   </td>
 </tr>
  </table>
@@ -1111,53 +1111,53 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td colspan="2" width="553">
-    城市G
+城市G
   </td>
 </tr>
 
 <tr>
   <td colspan="2" width="553">
-     ![luo_6](https://cos.name/wp-content/uploads/2016/05/luo_6.png)
+ ![luo_6](https://cos.name/wp-content/uploads/2016/05/luo_6.png)
   </td>
 </tr>
 
 <tr>
   <td width="277">
-    城市S
+城市S
   </td>
   
   <td width="277">
-    城市Z
+城市Z
   </td>
 </tr>
 
 <tr>
   <td width="277">
-     ![luo_7](https://cos.name/wp-content/uploads/2016/05/luo_7.png)
+ ![luo_7](https://cos.name/wp-content/uploads/2016/05/luo_7.png)
   </td>
   
   <td width="277">
-     ![luo_8](https://cos.name/wp-content/uploads/2016/05/luo_8.png)
+ ![luo_8](https://cos.name/wp-content/uploads/2016/05/luo_8.png)
   </td>
 </tr>
 
 <tr>
   <td width="277">
-    城市H
+城市H
   </td>
   
   <td width="277">
-    城市W
+城市W
   </td>
 </tr>
 
 <tr>
   <td width="277">
-     ![luo_9](https://cos.name/wp-content/uploads/2016/05/luo_9.png)
+ ![luo_9](https://cos.name/wp-content/uploads/2016/05/luo_9.png)
   </td>
   
   <td width="277">
-     ![luo_10](https://cos.name/wp-content/uploads/2016/05/luo_10.png)
+ ![luo_10](https://cos.name/wp-content/uploads/2016/05/luo_10.png)
   </td>
 </tr>
  </table>
@@ -1169,53 +1169,53 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td colspan="2" width="553">
-    城市G
+城市G
   </td>
 </tr>
 
 <tr>
   <td colspan="2" width="553">
-     ![luo_11](https://cos.name/wp-content/uploads/2016/05/luo_11.png)
+ ![luo_11](https://cos.name/wp-content/uploads/2016/05/luo_11.png)
   </td>
 </tr>
 
 <tr>
   <td width="277">
-    城市S
+城市S
   </td>
   
   <td width="277">
-    城市Z
+城市Z
   </td>
 </tr>
 
 <tr>
   <td width="277">
-     ![luo_12](https://cos.name/wp-content/uploads/2016/05/luo_12.png)
+ ![luo_12](https://cos.name/wp-content/uploads/2016/05/luo_12.png)
   </td>
   
   <td width="277">
-     ![luo_`13](https://cos.name/wp-content/uploads/2016/05/luo_13.png)
+ ![luo_`13](https://cos.name/wp-content/uploads/2016/05/luo_13.png)
   </td>
 </tr>
 
 <tr>
   <td width="277">
-    城市H
+城市H
   </td>
   
   <td width="277">
-    城市W
+城市W
   </td>
 </tr>
 
 <tr>
   <td width="277">
-     ![luo_14](https://cos.name/wp-content/uploads/2016/05/luo_14.png)
+ ![luo_14](https://cos.name/wp-content/uploads/2016/05/luo_14.png)
   </td>
   
   <td width="277">
-     ![luo_15](https://cos.name/wp-content/uploads/2016/05/luo_15.png)
+ ![luo_15](https://cos.name/wp-content/uploads/2016/05/luo_15.png)
   </td>
 </tr>
  </table>
@@ -1231,53 +1231,53 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td colspan="2" width="553">
-    城市G
+城市G
   </td>
 </tr>
 
 <tr>
   <td colspan="2" width="553">
-     ![luo_16](https://cos.name/wp-content/uploads/2016/05/luo_16.png)
+ ![luo_16](https://cos.name/wp-content/uploads/2016/05/luo_16.png)
   </td>
 </tr>
 
 <tr>
   <td width="277">
-    城市S
+城市S
   </td>
   
   <td width="277">
-    城市Z
+城市Z
   </td>
 </tr>
 
 <tr>
   <td width="277">
-     ![luo_17](https://cos.name/wp-content/uploads/2016/05/luo_17.png)
+ ![luo_17](https://cos.name/wp-content/uploads/2016/05/luo_17.png)
   </td>
   
   <td width="277">
-     ![luo_18](https://cos.name/wp-content/uploads/2016/05/luo_18.png)
+ ![luo_18](https://cos.name/wp-content/uploads/2016/05/luo_18.png)
   </td>
 </tr>
 
 <tr>
   <td width="277">
-    城市H
+城市H
   </td>
   
   <td width="277">
-    城市W
+城市W
   </td>
 </tr>
 
 <tr>
   <td width="277">
-     ![luo_19](https://cos.name/wp-content/uploads/2016/05/luo_19.png)
+ ![luo_19](https://cos.name/wp-content/uploads/2016/05/luo_19.png)
   </td>
   
   <td width="277">
-     ![luo_20](https://cos.name/wp-content/uploads/2016/05/luo_20-1.png)
+ ![luo_20](https://cos.name/wp-content/uploads/2016/05/luo_20-1.png)
   </td>
 </tr>
  </table>
@@ -1325,91 +1325,91 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td rowspan="2" width="189">
-    城市
+城市
   </td>
   
   <td colspan="2" width="379">
-    预测误差
+预测误差
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    一级渠道
+一级渠道
   </td>
   
   <td width="189">
-    二级渠道
+二级渠道
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市G
+城市G
   </td>
   
   <td width="189">
-    0.1133
+0.1133
   </td>
   
   <td width="189">
-    0.1203
+0.1203
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市S
+城市S
   </td>
   
   <td width="189">
-    0.2808
+0.2808
   </td>
   
   <td width="189">
-    0.2228
+0.2228
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市H
+城市H
   </td>
   
   <td width="189">
-    0.2821
+0.2821
   </td>
   
   <td width="189">
-    0.3046
+0.3046
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市Z
+城市Z
   </td>
   
   <td width="189">
-    0.4103
+0.4103
   </td>
   
   <td width="189">
-    0.1454
+0.1454
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市W
+城市W
   </td>
   
   <td width="189">
-    0.4457
+0.4457
   </td>
   
   <td width="189">
-    0.1988
+0.1988
   </td>
 </tr>
  </table>
@@ -1421,61 +1421,61 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td width="568">
-    城市G
+城市G
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_21](https://cos.name/wp-content/uploads/2016/05/luo_21.png)
+ ![luo_21](https://cos.name/wp-content/uploads/2016/05/luo_21.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市S
+城市S
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_22](https://cos.name/wp-content/uploads/2016/05/luo_22.png)
+ ![luo_22](https://cos.name/wp-content/uploads/2016/05/luo_22.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市Z
+城市Z
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_23](https://cos.name/wp-content/uploads/2016/05/luo_23.png)
+ ![luo_23](https://cos.name/wp-content/uploads/2016/05/luo_23.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市H
+城市H
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_24](https://cos.name/wp-content/uploads/2016/05/luo_24.png)
+ ![luo_24](https://cos.name/wp-content/uploads/2016/05/luo_24.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市W
+城市W
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_25](https://cos.name/wp-content/uploads/2016/05/luo_25.png)
+ ![luo_25](https://cos.name/wp-content/uploads/2016/05/luo_25.png)
   </td>
 </tr>
  </table>
@@ -1506,99 +1506,99 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td width="189">
-    <strong>城市</strong>
+<strong>城市</strong>
   </td>
   
   <td width="189">
-    <strong>销量（成交价格:元）</strong>
+<strong>销量（成交价格:元）</strong>
   </td>
   
   <td width="189">
-    <strong>销量（件）</strong>
+<strong>销量（件）</strong>
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市G
+城市G
   </td>
   
   <td width="189">
-    -0.3980
+-0.3980
   </td>
   
   <td width="189">
-    -0.3332
+-0.3332
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市S
+城市S
   </td>
   
   <td width="189">
-    -0.3188
+-0.3188
   </td>
   
   <td width="189">
-    -0.0008
+-0.0008
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市H
+城市H
   </td>
   
   <td width="189">
-    -0.3267
+-0.3267
   </td>
   
   <td width="189">
-    -0.2888
+-0.2888
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市Z
+城市Z
   </td>
   
   <td width="189">
-    -0.3043
+-0.3043
   </td>
   
   <td width="189">
-    -0.2828
+-0.2828
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市W
+城市W
   </td>
   
   <td width="189">
-    -0.3319
+-0.3319
   </td>
   
   <td width="189">
-    -0.2999
+-0.2999
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市Q
+城市Q
   </td>
   
   <td width="189">
-    -0.2283
+-0.2283
   </td>
   
   <td width="189">
-    -0.2185
+-0.2185
   </td>
 </tr>
  </table>
@@ -1610,73 +1610,73 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td width="568">
-    城市G
+城市G
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_26](https://cos.name/wp-content/uploads/2016/05/luo_26.png)
+ ![luo_26](https://cos.name/wp-content/uploads/2016/05/luo_26.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市S
+城市S
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_27](https://cos.name/wp-content/uploads/2016/05/luo_27.png)
+ ![luo_27](https://cos.name/wp-content/uploads/2016/05/luo_27.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市H
+城市H
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_28](https://cos.name/wp-content/uploads/2016/05/luo_28.png)
+ ![luo_28](https://cos.name/wp-content/uploads/2016/05/luo_28.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市Z
+城市Z
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_29](https://cos.name/wp-content/uploads/2016/05/luo_29.png)
+ ![luo_29](https://cos.name/wp-content/uploads/2016/05/luo_29.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市W
+城市W
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_30](https://cos.name/wp-content/uploads/2016/05/luo_30.png)
+ ![luo_30](https://cos.name/wp-content/uploads/2016/05/luo_30.png)
   </td>
 </tr>
 
 <tr>
   <td width="568">
-    城市Q
+城市Q
   </td>
 </tr>
 
 <tr>
   <td width="568">
-     ![luo_31](https://cos.name/wp-content/uploads/2016/05/luo_31.png)
+ ![luo_31](https://cos.name/wp-content/uploads/2016/05/luo_31.png)
   </td>
 </tr>
  </table>
@@ -1688,73 +1688,73 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td width="553">
-    城市G
+城市G
   </td>
 </tr>
 
 <tr>
   <td width="553">
-     ![luo_32](https://cos.name/wp-content/uploads/2016/05/luo_32.png)
+ ![luo_32](https://cos.name/wp-content/uploads/2016/05/luo_32.png)
   </td>
 </tr>
 
 <tr>
   <td width="553">
-    城市S
+城市S
   </td>
 </tr>
 
 <tr>
   <td width="553">
-     ![luo_33](https://cos.name/wp-content/uploads/2016/05/luo_33.png)
+ ![luo_33](https://cos.name/wp-content/uploads/2016/05/luo_33.png)
   </td>
 </tr>
 
 <tr>
   <td width="553">
-    城市H
+城市H
   </td>
 </tr>
 
 <tr>
   <td width="553">
-     ![luo_34](https://cos.name/wp-content/uploads/2016/05/luo_34.png)
+ ![luo_34](https://cos.name/wp-content/uploads/2016/05/luo_34.png)
   </td>
 </tr>
 
 <tr>
   <td width="553">
-    城市Z
+城市Z
   </td>
 </tr>
 
 <tr>
   <td width="553">
-     ![luo_35](https://cos.name/wp-content/uploads/2016/05/luo_35.png)
+ ![luo_35](https://cos.name/wp-content/uploads/2016/05/luo_35.png)
   </td>
 </tr>
 
 <tr>
   <td width="553">
-    城市W
+城市W
   </td>
 </tr>
 
 <tr>
   <td width="553">
-     ![luo_36](https://cos.name/wp-content/uploads/2016/05/luo_36.png)
+ ![luo_36](https://cos.name/wp-content/uploads/2016/05/luo_36.png)
   </td>
 </tr>
 
 <tr>
   <td width="553">
-    城市Q
+城市Q
   </td>
 </tr>
 
 <tr>
   <td width="553">
-     ![luo_37](https://cos.name/wp-content/uploads/2016/05/luo_37.png)
+ ![luo_37](https://cos.name/wp-content/uploads/2016/05/luo_37.png)
   </td>
 </tr>
  </table>
@@ -1786,105 +1786,105 @@ slug: weather-driven-industry-sales-big-data
  <table>
 <tr>
   <td rowspan="2" width="189">
-    城市
+城市
   </td>
   
   <td colspan="2" width="379">
-    预测误差
+预测误差
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    销量（元）
+销量（元）
   </td>
   
   <td width="189">
-    销量（件）
+销量（件）
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市G
+城市G
   </td>
   
   <td width="189">
-    0.0578
+0.0578
   </td>
   
   <td width="189">
-    0.1000
+0.1000
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市S
+城市S
   </td>
   
   <td width="189">
-    0.0452
+0.0452
   </td>
   
   <td width="189">
-    0.1537
+0.1537
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市H
+城市H
   </td>
   
   <td width="189">
-    0.0541
+0.0541
   </td>
   
   <td width="189">
-    0.0885
+0.0885
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市Z
+城市Z
   </td>
   
   <td width="189">
-    0.0527
+0.0527
   </td>
   
   <td width="189">
-    0.0855
+0.0855
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市W
+城市W
   </td>
   
   <td width="189">
-    0.0433
+0.0433
   </td>
   
   <td width="189">
-    0.0673
+0.0673
   </td>
 </tr>
 
 <tr>
   <td width="189">
-    城市Q
+城市Q
   </td>
   
   <td width="189">
-    0.0378
+0.0378
   </td>
   
   <td width="189">
-    0.0664
+0.0664
   </td>
 </tr>
  </table>
