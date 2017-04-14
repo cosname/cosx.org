@@ -165,7 +165,7 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
     mongo<-mongo.create()    
     ```
 
-- 查看接连是否正常
+- 查看连接是否正常
 
     ```
     mongo.is.connected(mongo)    
