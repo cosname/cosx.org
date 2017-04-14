@@ -34,8 +34,6 @@ slug: relationship-big-data-statistics
 这也不难回答，我们还是可以用民调数据了，只不过要在每个州都进行抽样调查，在仔细的分析汇总一下。数据量也就比预测全国的结果时用的多几十倍而已。而且如果知道了那些州两人相差太大，一方就没有必要再大肆花钱做广告了 ：）
   
 <!--more-->
-
-
   
 ![OxBWOGJ](https://cos.name/wp-content/uploads/2013/05/OxBWOGJ.jpg)
 
@@ -79,7 +77,6 @@ slug: relationship-big-data-statistics
 > 
 > The future is for those people who can take these two fields and integrate them into one brain, not having to bring every project to statisticians, trying to have them talking to computer scientists using some translation software. But one brain can bring these ideas jointly together. How do I think about my statistical risk and the errors I’m going to make when data come into a computer and how do I think about stating that so I don’t have to break when I have more than a few hundred thousand data points. 
 
-<embed src="http://player.youku.com/player.php/sid/XNDg3ODE1MzU2/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash">
-</embed>
+http://v.youku.com/v_show/id_XNDg3ODE1MzU2
 
 当统计学培养出来的学生能得心应手的对（大）数据进行分析时，叫不叫数据科学就无所谓了，因为社会的需求会最终决定一个专业的方向和发展。
