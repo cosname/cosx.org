@@ -31,10 +31,10 @@ R利剑NoSQL系列文章，主要介绍通过R语言连接使用nosql数据库�
 
 # 第二篇 R利剑Redis，分为4个章节。
 
-    Redis环境准备
-    rredis函数库
-    rredis基本使用操作
-    rredis使用案例
+Redis环境准备
+rredis函数库
+rredis基本使用操作
+rredis使用案例
     
 
 每一章节，都会分为“文字说明部分”和“代码部分”，保持文字说明与代码的连贯性。
@@ -111,22 +111,22 @@ R语言环境2.15.0，WinXP通过远程连接，访问Redis server。
 - 插入数据
 
 ```
-    rpush data 1
-    :1
+rpush data 1
+:1
 
-    rpush data 2
-    :2
+rpush data 2
+:2
 ```    
 
 - 查询数据
 
 ```bash
-    lrange data 0 -1
-    *2
-    $1
-    1
-    $1
-    2
+lrange data 0 -1
+*2
+$1
+1
+$1
+2
 ```    
 
 - R语言开发环境2.15.0，WinXP
@@ -356,9 +356,9 @@ rredis与redis-cli的交互操作
 
 ## rredis的基本操作：
 
-```bash
+```r
 #安装rredis
-install.packages(rredis)
+install.packages("rredis")
 
 #加载rredis类库
 library(rredis)
@@ -400,7 +400,7 @@ redisClose()
 
 ## string类型操作:
 
-```bash
+```r
 #插入对象
 redisSet('x',runif(5))
     1] "OK"
@@ -437,7 +437,7 @@ redisGet('x')
 
 ## list类型操作
 
-```bash
+```r
 #从数组左边插入数据
 redisLPush('a',1)
 redisLPush('a',2)
@@ -485,7 +485,7 @@ redisRPop('a')
 
 ## set类型操作
 
-```bash
+```r
 redisSAdd('A',runif(2))
 redisSAdd('A',55)
 
@@ -554,7 +554,7 @@ redisGet('shell')
 
 - rredis插入数据，redis客户端读取数据
 
-```bash
+```r
 #插入数据
 redisSet('R', 'Greetings, shell client!')
     [1] "OK"
@@ -566,7 +566,7 @@ redis 127.0.0.1:6379> get R
 
 - 转型以数组方式存储(charToRaw)
 
-```bash
+```r
 redisSet('R', charToRaw('Greetings, shell client!'))
     [1] TRUE
 
@@ -605,7 +605,7 @@ R语言读入数据文件。
 
 ## 代码部分
 
-```bash
+```r
 #读入数据
 data<-scan(file="data5.txt",what=character(),sep=" ")
 data<-data[which(data!='#')]
@@ -669,14 +669,16 @@ redisClose()
 
 ## 数据文件：data5.txt
 
-    wolys # wolysopen111 # wolys@21cn.com
-    coralshanshan # 601601601 # zss1984@126.com
-    pengfeihuchao # woaidami # 294522652@qq.com
-    simulategirl # @#$9608125 # simulateboy@163.com
-    daisypp # 12345678 # zhoushigang_123@163.com
-    sirenxing424 # tfiloveyou # sirenxing424@126.com
-    raininglxy # 1901061139 # lixinyu23@qq.com
-    leochenlei # leichenlei # chenlei1201@gmail.com
-    z370433835 # lkp145566 # 370433835@qq.com
-    cxx0409 # 12345678 # cxx0409@126.com
-    xldq_l # 061222ll # viv093@sina.com
+```txt
+wolys # wolysopen111 # wolys@21cn.com
+coralshanshan # 601601601 # zss1984@126.com
+pengfeihuchao # woaidami # 294522652@qq.com
+simulategirl # @#$9608125 # simulateboy@163.com
+daisypp # 12345678 # zhoushigang_123@163.com
+sirenxing424 # tfiloveyou # sirenxing424@126.com
+raininglxy # 1901061139 # lixinyu23@qq.com
+leochenlei # leichenlei # chenlei1201@gmail.com
+z370433835 # lkp145566 # 370433835@qq.com
+cxx0409 # 12345678 # cxx0409@126.com
+xldq_l # 061222ll # viv093@sina.com
+```
