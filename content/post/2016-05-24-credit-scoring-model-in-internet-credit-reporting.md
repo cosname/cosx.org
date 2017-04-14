@@ -28,7 +28,9 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 ![huang_1](https://cos.name/wp-content/uploads/2016/05/huang_1.png)
 
+<p style="text-align: center;">
 图1 银行的大企业贷款与小微企业贷款
+</p>
 
 在2C方面，个人信用贷款主要为了购车、房屋装修、旅游等消费使用，但一般不能用于支付购房款。一般来说信用良好、有固定居所以及稳定收入、还贷能力充足的人能够申请信用贷款。传统的信贷审核仍然存在以下缺点：效率低、速度慢、准确性差。由于这些问题存在，使其很难适应互联网信贷的审核模式。另一方面，信用卡对普罗大众来说能够支配的信用额度有限。因此，仅依靠金融领域已有产品并不能满足用户对贷款金额以及时效性的细化需求。网络信贷的出现将更快地撮合这一过程，从而大量地减少了时间成本。
 
@@ -36,7 +38,9 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 ![huang_2](https://cos.name/wp-content/uploads/2016/05/huang_2.png)
 
+<p style="text-align: center;">
 图2 个人信用贷款的用途
+</p>
 
 ## 2.业务背景介绍
 
@@ -50,7 +54,9 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 ![huang_3](https://cos.name/wp-content/uploads/2016/05/huang_3.png)
 
+<p style="text-align: center;">
 图3 熊小贷公司产品概况
+</p>
 
 本案例中将针对已收集的用户信息，匹配公司数据库中的用户交易行为信息，以及已采用“熊分期”产品贷款的用户的违约情况，建立信用评分模型。这一信用模型将是从业务目标出发，结合业务背景而建立的。模型将预测用户的信用评分作为参考，并直接指导业务层面的是否可以对用户发放贷款。具体的数据采集以及变量清理过程将在第二章着重介绍，模型建立将在第三章进行介绍。
 
@@ -73,7 +79,9 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 ![huang_4](https://cos.name/wp-content/uploads/2016/05/huang_4.png)
 
+<p style="text-align: center;">
 图4 熊分期产品用户数据结构
+</p>
 
 ## 2.数据清理变量采集
 
@@ -107,7 +115,9 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 ![huang_5](https://cos.name/wp-content/uploads/2016/05/huang_5.png)
 
+<p style="text-align: center;">
 图5 RFM模型图示
+</p>
 
 在营销领域，RFM模型是用来衡量客户的价值和客户的创利能力的重要工具和手段。这个模型通过一个客户的近期购买行为、购买的总体频率以及花了多少钱三项指标来描述该客户的综合价值，具体如下：
 
@@ -120,60 +130,14 @@ slug: credit-scoring-model-in-internet-credit-reporting
 在此案例中，我们将重新定义这三个指标，并借助这三个指标来概括用户所产生一类行为的特征，如表格1所示。而由于这三个指标并不能够衡量用户产生行为的波动性，所以我们增加一个指标S（Standard Deviation）来衡量用户行为的波动性。例如，对于购买游戏点卡类行为，我们可以定义R为用户最近一次购买游戏点卡距离数据提取时间的时间间隔，F定义为一年内用户购买游戏点卡的次数（考虑到用户注册时间不一样，此处采用的频数需要采用用户年龄进行标准化，即总次数除以用户年龄。用户年龄的定义将在下文中详述），M定义为一年内用户每次购买游戏点卡的平均金额，S定义为用户每次购买游戏点卡金额的标准差。我们将所有变量记作类别名称加指标简称的形式，例如游戏R。
 
 
-  表1 RFM指标定义
+表1 RFM指标定义
 
-
-<table width="557">
-  <tr>
-    <td width="104">
- 指标简称
-    </td>
-    
-    <td width="454">
- 指标定义
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="104">
- R
-    </td>
-    
-    <td width="454">
- 一年内用户最后一次产生某类行为距离提取数据的时间
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="104">
- F
-    </td>
-    
-    <td width="454">
- 用户在一年内产生某次行为的频数
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="104">
- M
-    </td>
-    
-    <td width="454">
- 用户在一年内产生某类行为的平均金额
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="104">
- S
-    </td>
-    
-    <td width="454">
- 一年内该类行为产生金额的标准差
-    </td>
-  </tr>
-</table>
+|指标简称 |	指标定义|
+|---------|---------|
+|R |一年内用户最后一次产生某类行为距离提取数据的时间|
+|F |用户在一年内产生某次行为的频数|
+|M |用户在一年内产生某类行为的平均金额|
+|S |一年内该类行为产生金额的标准差|
 
 用户行为的分类通过银行卡信息表，以及商户分类信息表，根据业务场景，我们提取了以下类别，每个类别都对应着以上我们已经定义好的RFMS四个指标。类别包括：
 
@@ -227,7 +191,9 @@ slug: credit-scoring-model-in-internet-credit-reporting
 
 ![huang_6](https://cos.name/wp-content/uploads/2016/05/huang_6.png)
 
+<p style="text-align: center;">
 图6 典型变量箱线图
+</p>
 
 ## 2.模型设定及估计结果
 
@@ -241,396 +207,24 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
 
 表2 BIC选模型回归系数结果表
 
-<table width="539">
-  <tr>
-    <td width="112">
- <strong>变量名</strong>
-    </td>
-    
-    <td width="105">
- <strong>估计值</strong>
-    </td>
-    
-    <td width="76">
- <strong>p</strong><strong>值</strong>
-    </td>
-    
-    <td width="85">
- <strong>变量名</strong>
-    </td>
-    
-    <td width="85">
- <strong>估计值</strong>
-    </td>
-    
-    <td width="76">
- <strong>p</strong><strong>值</strong>
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="112">
- 熊得分
-    </td>
-    
-    <td width="105">
- 26.301
-    </td>
-    
-    <td width="76">
- ***
-    </td>
-    
-    <td width="85">
- 转账R
-    </td>
-    
-    <td width="85">
- -0.336
-    </td>
-    
-    <td width="76">
- ***
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="112">
- 借贷比率
-    </td>
-    
-    <td width="105">
- 1.752
-    </td>
-    
-    <td width="76">
- ***
-    </td>
-    
-    <td width="85">
- 年龄
-    </td>
-    
-    <td width="85">
- -0.254
-    </td>
-    
-    <td width="76">
- ***
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="112">
- 借记卡F
-    </td>
-    
-    <td width="105">
- 0.438
-    </td>
-    
-    <td width="76">
- ***
-    </td>
-    
-    <td width="85">
- 公缴R
-    </td>
-    
-    <td width="85">
- -0.230
-    </td>
-    
-    <td width="76">
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="112">
- 用户所有 
- 
- 
- 行为均值</td> 
- 
- <td width="105">
- 0.412
- </td>
- 
- <td width="76">
- ***
- </td>
- 
- <td width="85">
- 四大F
- </td>
- 
- <td width="85">
- -0.175
- </td>
- 
- <td width="76">
- ***
- </td></tr> 
- 
- <tr>
- <td width="112">
-   交易笔数
- </td>
- 
- <td width="105">
-   0.136
- </td>
- 
- <td width="76">
-   ***
- </td>
- 
- <td width="85">
-   四大R
- </td>
- 
- <td width="85">
-   -0.168
- </td>
- 
- <td width="76">
-   ***
- </td>
- </tr>
- 
- <tr>
- <td width="112">
-   借记卡M
- </td>
- 
- <td width="105">
-   0.083
- </td>
- 
- <td width="76">
-   ***
- </td>
- 
- <td width="85">
-   中型F
- </td>
- 
- <td width="85">
-   -0.122
- </td>
- 
- <td width="76">
-   ***
- </td>
- </tr>
- 
- <tr>
- <td width="112">
-   中型M
- </td>
- 
- <td width="105">
-   0.016
- </td>
- 
- <td width="76">
-   ***
- </td>
- 
- <td width="85">
-   中型R
- </td>
- 
- <td width="85">
-   -0.119
- </td>
- 
- <td width="76">
-   **
- </td>
- </tr>
- 
- <tr>
- <td width="112">
-   四大M
- </td>
- 
- <td width="105">
-   0.014
- </td>
- 
- <td width="76">
-   *
- </td>
- 
- <td width="85">
-   消费F
- </td>
- 
- <td width="85">
-   -0.096
- </td>
- 
- <td width="76">
-   **
- </td>
- </tr>
- 
- <tr>
- <td width="112">
-   信贷R
- </td>
- 
- <td width="105">
-   -0.922
- </td>
- 
- <td width="76">
-   ***
- </td>
- 
- <td width="85">
-   金卡F
- </td>
- 
- <td width="85">
-   -0.083
- </td>
- 
- <td width="76">
-   ***
- </td>
- </tr>
- 
- <tr>
- <td width="112">
-   银行卡数
- </td>
- 
- <td width="105">
-   -0.674
- </td>
- 
- <td width="76">
-   ***
- </td>
- 
- <td width="85">
-   转账M
- </td>
- 
- <td width="85">
-   -0.082
- </td>
- 
- <td width="76">
-   ***
- </td>
- </tr>
- 
- <tr>
- <td width="112">
-   信贷F
- </td>
- 
- <td width="105">
-   -0.633
- </td>
- 
- <td width="76">
-   ***
- </td>
- 
- <td width="85">
-   公缴M
- </td>
- 
- <td width="85">
-   -0.062
- </td>
- 
- <td width="76">
-   **
- </td>
- </tr>
- 
- <tr>
- <td width="112">
-   用户所有 
-   
-   
-行为最大值</td> 
- 
- <td width="105">
--0.474
- </td>
- 
- <td width="76">
-***
- </td>
- 
- <td width="85">
-游戏M
- </td>
- 
- <td width="85">
--0.059
- </td>
- 
- <td width="76">
-*
- </td></tr> 
- 
- <tr>
-<td width="112">
-  转账F
-</td>
+|变量名|估计值|p值|变量名|估计值|p值|
+|:-----|:-----|:---|:----|:-----|:--|
+|熊得分 	|26.301 	|*** 	|转账R 	|-0.336 	|***|
+|借贷比率 	|1.752 	|*** 	|年龄 	|-0.254 	|***|
+|借记卡F 	|0.438 	|*** 	|公缴R 	|-0.230| 	
+|用户所有行为均值 	|0.412 	|*** 	|四大F 	|-0.175 	|***|
+|交易笔数 	|0.136 	|*** 	|四大R 	|-0.168 	|***|
+|借记卡M 	|0.083 	|*** 	|中型F 	|-0.122 	|***|
+|中型M 	|0.016 	|*** 	|中型R 	|-0.119 	|**|
+|四大M 	|0.014 	|* 	|消费F 	|-0.096 	|**|
+|信贷R 	|-0.922 	|*** 	|金卡F 	|-0.083 	|***|
+|银行卡数 	|-0.674 	|*** 	|转账M 	|-0.082 	|***|
+|信贷F 	|-0.633 	|*** 	|公缴M 	|-0.062 	|**|
+|用户所有行为最大值 	|-0.474 	|*** 	|游戏M 	|-0.059 	|*|
+|转账F 	|-0.386 	|*** 	|信贷S 	|-0.035 	|***|
+|公缴F 	|-0.370 	|* |			
 
-<td width="105">
-  -0.386
-</td>
-
-<td width="76">
-  ***
-</td>
-
-<td width="85">
-  信贷S
-</td>
-
-<td width="85">
-  -0.035
-</td>
-
-<td width="76">
-  ***
-</td>
- </tr>
- 
- <tr>
-<td width="112">
-  公缴F
-</td>
-
-<td width="105">
-  -0.370
-</td>
-
-<td width="76">
-  *
-</td>
-
-<td width="85">
-</td>
-
-<td width="85">
-</td>
-
-<td width="76">
-</td>
- </tr></tbody> </table> 
-
-注：***表示P<0.01，**表示0.01≤P<0.05，*表示0.05≤P<0.1。
+^[注：***表示P<0.01，**表示0.01≤P<0.05，*表示0.05≤P<0.1。]
    
 * 借记卡F越大用户违约可能性越低。这表明其他变量不变，用户使用储蓄卡频数越高，越可能是信用良好的用户。
 
@@ -644,11 +238,15 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
 
 ![huang_7](https://cos.name/wp-content/uploads/2016/05/huang_7.png)
 
+<p style="text-align: center;">
 图7 BIC选模型结果正系数
+</p>
 
 ![huang_8](https://cos.name/wp-content/uploads/2016/05/huang_8.png)
 
+<p style="text-align: center;">
 图8 BIC选模型结果负系数
+</p>
 
 模型预测结果
 
@@ -664,7 +262,9 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
 
 ![huang_9](https://cos.name/wp-content/uploads/2016/05/huang_9.png)
 
+<p style="text-align: center;">
 图9 回归模型对比ROC曲线  
+</p>
 
 # 四、业务实施
 
@@ -695,4 +295,3 @@ BIC选模型的估计系数结果如表2所示，由于系数较多，我们省�
 [2] 胡援成, 卢华征. 中小企业融资的调查与思考[J]. 管理世界, 2003(10):11-13.
 
 [3] 李焰, 高弋君, 李珍妮,等. 借款人描述性信息对投资人决策的影响——基于P2P网络借贷平台的分析[J]. 经济研究, 2014(S1):143-155.
-
