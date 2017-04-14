@@ -82,62 +82,62 @@ R语言环境2.15.0，WinXP通过远程连接，访问Redis server。
 
 - 查看系统进程
 
-    ```
-    ~ ps -aux|grep redis
-    
-        redis    20128  0.0  0.0  10676  1428 ?        Ss   16:39   0:00 /usr/bin/redis-server /etc/redis/redis.conf
-    ```
+```bash
+~ ps -aux|grep redis
+
+    redis    20128  0.0  0.0  10676  1428 ?        Ss   16:39   0:00 /usr/bin/redis-server /etc/redis/redis.conf
+```
 
 - 查看启日志
 
-    ```
-    ~ cat  /var/log/redis/redis-server.log
-    
-        [20128] 14 Apr 16:39:43 * Server started, Redis version 2.2.12
-        [20128] 14 Apr 16:39:43 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
-        [20128] 14 Apr 16:39:43 * The server is now ready to accept connections on port 6379
-    ```    
+```bash
+~ cat  /var/log/redis/redis-server.log
+
+    [20128] 14 Apr 16:39:43 * Server started, Redis version 2.2.12
+    [20128] 14 Apr 16:39:43 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+    [20128] 14 Apr 16:39:43 * The server is now ready to accept connections on port 6379
+```
 
 - telnet连接redis-server
 
-    ```
-    ~ telnet localhost 6379
-    
-        Trying 127.0.0.1...
-        Connected to localhost.
-        Escape character is '^]'.
-    ```    
+```bash
+~ telnet localhost 6379
+
+    Trying 127.0.0.1...
+    Connected to localhost.
+    Escape character is '^]'.
+```
 
 - 插入数据
 
-    ```
-        rpush data 1
-        :1
-    
-        rpush data 2
-        :2
-    ```    
+```
+    rpush data 1
+    :1
+
+    rpush data 2
+    :2
+```    
 
 - 查询数据
 
-    ```
-        lrange data 0 -1
-        *2
-        $1
-        1
-        $1
-        2
-    ```    
+```bash
+    lrange data 0 -1
+    *2
+    $1
+    1
+    $1
+    2
+```    
 
 - R语言开发环境2.15.0，WinXP
 
-    ```
-    ~ R
-    R version 2.15.0 (2012-03-30)
-    Copyright (C) 2012 The R Foundation for Statistical Computing
-    ISBN 3-900051-07-0
-    Platform: i386-pc-mingw32/i386 (32-bit)
-    ```    
+```bash
+~ R
+R version 2.15.0 (2012-03-30)
+Copyright (C) 2012 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: i386-pc-mingw32/i386 (32-bit)
+```
 
 # 第二章 rredis函数库
 
@@ -145,91 +145,91 @@ rredis提供了100函数，对应用redis的操作。虽然函数也不少，但
 
 下面列出了所有rredis函数库，我只挑选一些常用的介绍。
 
-### 文字说明部分：
+## 文字说明部分：
 
 - 建立连接，关闭连接
 
-    ```
-    redisConnect() , redisClose()
-    ```    
+```bash
+redisConnect() , redisClose()
+```
 
 - 清空当前/所有数据库数据
 
-    ```
-    redisFlushDB() , redisFlushAll()
-    ```    
+```bash
+redisFlushDB() , redisFlushAll()
+```
 
 - 列出所有KEY值，KEY的数量
 
-    ```
-    redisKeys(), redisDBSize()
-    ```    
+```bash
+redisKeys(), redisDBSize()
+```
 
 - 选择切换数据库:0是默认数据库
 
-    ```
-    redisSelect(0)    
-    ```    
+```bash
+redisSelect(0)    
+```
 
 - 插入string对象，批量插入
 
-    ```
-    redisSet('x',runif(5)), redisMSet(list(x=pi,y=runif(5),z=sqrt(2)))
-    ```    
+```bash
+redisSet('x',runif(5)), redisMSet(list(x=pi,y=runif(5),z=sqrt(2)))
+```
 
 - 读取string对象，批量读取
 
-    ```
-    redisGet('x'), redisMGet(c('x','y','z'))    
-    ```    
+```bash
+redisGet('x'), redisMGet(c('x','y','z'))
+```
 
 - 删除对象
 
-    ```
-    redisDelete('x')
-    ```    
+```bash
+redisDelete('x')
+```
 
 - 左边插入数组对象,右边插入数组对象
 
-    ```
-    redisLPush('a',1), redisRPush('a','A')
-    ```
+```bash
+redisLPush('a',1), redisRPush('a','A')
+```
 
 - 左边弹出一个数组对象， 右边弹出一个数组对象，
 
-    ```
-    redisLPop('a'), redisRPop('a')
-    ```
+```bash
+redisLPop('a'), redisRPop('a')
+```
 
 - 从左边显示数组对象列表
 
-    ```
-    redisLRange('a',0,-1)
-    ```
+```bash
+redisLRange('a',0,-1)
+```
 
 - 插入set类型对象
 
-    ```
-    redisSAdd('A',runif(2))
-    ```
+```bash
+redisSAdd('A',runif(2))
+```
 
 - 显示set对象有几个元素，列表显示set对象元素
 
-    ```
-    redisSCard('A'), redisSMembers('A')
-    ```
+```bash
+redisSCard('A'), redisSMembers('A')
+```
 
 - 显示两个set对象的差集，交集，并集
 
-    ```
-    redisSDiff(c('A','B')),redisSInter(c('A','B')),redisSUnion(c('A','B'))
-    ```
+```bash
+redisSDiff(c('A','B')),redisSInter(c('A','B')),redisSUnion(c('A','B'))
+```
 
-### 代码部分：
+## 代码部分：
 
 共有100个函数
 
-```
+```bash
 redisAuth
 redisBgRewriteAOF
 redisBgSave
@@ -334,7 +334,7 @@ redisZUnionStore
 
 # 第三章 rredis基本使用操作
 
-### 文字说明部分：
+## 文字说明部分：
 
 首先，要安装rredis类库，加载类库。
 
@@ -352,11 +352,11 @@ set类型操作：插入，读取，交集，差集，并集
 
 rredis与redis-cli的交互操作
 
-### 代码部分：
+## 代码部分：
 
-### redis的基本操作：
+## rredis的基本操作：
 
-```
+```bash
 #安装rredis
 install.packages(rredis)
 
@@ -398,11 +398,9 @@ redisFlushAll()
 redisClose()    
 ```
 
+## string类型操作:
 
-
-### string类型操作:
-
-```
+```bash
 #插入对象
 redisSet('x',runif(5))
     1] "OK"
@@ -437,9 +435,9 @@ redisGet('x')
     NULL
 ```
 
-### list类型操作
+## list类型操作
 
-```
+```bash
 #从数组左边插入数据
 redisLPush('a',1)
 redisLPush('a',2)
@@ -485,9 +483,9 @@ redisLRange('a',0,-1)
 redisRPop('a')
 ```
 
-### set类型操作
+## set类型操作
 
-```
+```bash
 redisSAdd('A',runif(2))
 redisSAdd('A',55)
 
@@ -540,42 +538,42 @@ redisSUnion(c('A','B'))
     [1] 0.6494041 0.3181108
 ```
 
-### rredis与redis-cli交互
+## rredis与redis-cli交互
 
 - redis客户端插入数据，rredis读取数据
 
-    ```
-    #打开redis客户端
-    ~ redis-cli
-    redis 127.0.0.1:6379> set shell "Greetings, R client!"
-        OK
-    
-    redisGet('shell')
-        [1] "Greetings, R client!"
-    ```
+```bash
+#打开redis客户端
+~ redis-cli
+redis 127.0.0.1:6379> set shell "Greetings, R client!"
+    OK
+
+redisGet('shell')
+    [1] "Greetings, R client!"
+```
 
 - rredis插入数据，redis客户端读取数据
 
-    ```
-    #插入数据
-    redisSet('R', 'Greetings, shell client!')
-        [1] "OK"
-    
-    #读取数据(有乱码)
-    redis 127.0.0.1:6379> get R
-        "X\\x00\x00\x00\x02\x00\x02\x0f\x00\x00\x02\x03\x00\x00\x00\x00\x10\x00\x00\x00\x01\x00\x04\x00\\x00\x00\x00\x18Greetings, shell client!"
-    ```
+```bash
+#插入数据
+redisSet('R', 'Greetings, shell client!')
+    [1] "OK"
+
+#读取数据(有乱码)
+redis 127.0.0.1:6379> get R
+    "X\\x00\x00\x00\x02\x00\x02\x0f\x00\x00\x02\x03\x00\x00\x00\x00\x10\x00\x00\x00\x01\x00\x04\x00\\x00\x00\x00\x18Greetings, shell client!"
+```
 
 - 转型以数组方式存储(charToRaw)
 
-    ```
-    redisSet('R', charToRaw('Greetings, shell client!'))
-        [1] TRUE
-    
-    #正常读取数据
-    redis 127.0.0.1:6379> get R
-        "Greetings, shell client!"
-    ```
+```bash
+redisSet('R', charToRaw('Greetings, shell client!'))
+    [1] TRUE
+
+#正常读取数据
+redis 127.0.0.1:6379> get R
+    "Greetings, shell client!"
+```
 
 # 第四章 rredis测试案例
 
@@ -605,9 +603,9 @@ R语言读入数据文件。
 
 以users:wolys为KEY，输出对应用的VALVE值。
 
-### 代码部分
+## 代码部分
 
-```
+```bash
 #读入数据
 data<-scan(file="data5.txt",what=character(),sep=" ")
 data<-data[which(data!='#')]
@@ -669,7 +667,7 @@ redisClose()
 
 完成测试案例。
 
-### 数据文件：data5.txt
+## 数据文件：data5.txt
 
     wolys # wolysopen111 # wolys@21cn.com
     coralshanshan # 601601601 # zss1984@126.com
