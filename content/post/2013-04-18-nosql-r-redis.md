@@ -13,8 +13,6 @@ tags:
 slug: nosql-r-redis
 ---
 
-# 
-
 Author: 张丹(Conan)
   
 Email: <bsspirit@gmail.com>
@@ -43,7 +41,7 @@ R利剑NoSQL系列文章，主要介绍通过R语言连接使用nosql数据库�
 
 # 第一章 Redis环境准备
 
-### 文字说明部分：
+## 文字说明部分：
 
 首先环境准备，这里我选择了Linux Ubuntu操作系统12.04的64位服务器版本，大家可以根据自己的使用习惯选择顺手的Linux。
 
@@ -60,27 +58,27 @@ Redis安装过程跳过。sudo apt-get install redis-server
 
 R语言环境2.15.0，WinXP通过远程连接，访问Redis server。
 
-### 代码部分：
+## 代码部分：
 
 - 查看操作系统
 
-    ```
-    ~ uname -a
-    
-        Linux AY121111030241cda8003 3.2.0-29-generic #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
-    
-    ~ cat /etc/issue
-    
-        Ubuntu 12.04.1 LTS \n \l
-    ```    
+```bash
+~ uname -a
+
+    Linux AY121111030241cda8003 3.2.0-29-generic #46-Ubuntu SMP Fri Jul 27 17:03:23 UTC 2012 x86_64 x86_64 x86_64 GNU/Linux
+
+~ cat /etc/issue
+
+    Ubuntu 12.04.1 LTS \n \l
+```    
 
 - 启动redis
 
-    ```
-    ~ /etc/init.d/redis-server start
-    
-        Starting redis-server: redis-server.
-    ```
+```bash
+~ /etc/init.d/redis-server start
+
+    Starting redis-server: redis-server.
+```
 
 - 查看系统进程
 
