@@ -18,37 +18,47 @@ slug: search-sequence-see-high-end-business-cars
 
 ## （一）中国汽车行业现状及高端乘用车市场
 
-汽车工业是我国国民经济的主导产业和支柱产业之一。自2001年中国加入世贸组织以来，我国私有车辆广泛普及，带来了汽车行业销售量连年增加。截止至2015年底，我国民用汽车保有量已达到16273万辆（如图 1所示）。近十年来，我国汽车销量由2004年的500万辆增加到2013年的2198万辆，增加了三倍有余（图 2^[数据来源：国家统计局]）。另一方面，中国在世界汽车行业的地位日渐凸显，已成为全球车企的主要增长市场。据德勤公布的2014年中国汽车行业投资促进报告显示，截止至2013年，中国中国汽车产销量已连续五年稳居全球汽车产销量首位，约占全球总产销量的四分之一。以上产需数据表明，我国汽车产业蕴含着巨大的商业价值^[1]^[10]。
+汽车工业是我国国民经济的主导产业和支柱产业之一。自2001年中国加入世贸组织以来，我国私有车辆广泛普及，带来了汽车行业销售量连年增加。截止至2015年底，我国民用汽车保有量已达到16273万辆（如图 1所示）。近十年来，我国汽车销量由2004年的500万辆增加到2013年的2198万辆，增加了三倍有余（图 2^[数据来源：国家统计局]）。另一方面，中国在世界汽车行业的地位日渐凸显，已成为全球车企的主要增长市场。据德勤公布的2014年中国汽车行业投资促进报告显示，截止至2013年，中国中国汽车产销量已连续五年稳居全球汽车产销量首位，约占全球总产销量的四分之一。以上产需数据表明，我国汽车产业蕴含着巨大的商业价值^[曹建海. 经济全球化与中国汽车产业发展[J]. 管理世界, 2003(4), 68–76.]^[宋泓, 柴瑜, 张泰. 市场开放, 企业学习及适应能力和产业成长模式转型——中国汽车产业案例研究[J]. 管理世界, 2004(8), 61–74.]。
 
 ![808D.tmp](https://cos.name/wp-content/uploads/2016/05/808D.tmp_.png)                     
 
+<p style="text-align: center;">
 图1中国民用汽车保有量与年增长率时间序列图
+</p>
 
-另一方面，从销售结构上而言，相对于整体乘用车销量增幅，高端车辆销量增长不容小觑。据麦肯锡2013年发布的报告^[资料来源：麦肯锡报告《乘势而上：中国高端汽车市场展望》（2013）]称，过去十年，中国高端汽车市场以年均36%的惊人速度持续增长，高于同期中国乘用车市场年均26%的整体增速。中国已然成为仅次于美国的全球第二大高端汽车市场。麦肯锡公司预计，从现在到2020年，中国高端汽车市场将保持年均12%的增长速度，预计到2020年，中国高端汽车年销售量将达到300万辆，基本与西欧市场销售量持平（图 3^[资料来源：IHS环球通视；麦肯锡M-View；麦肯锡中国高端汽车研究（2012）]）。从销售价格而言，价格区间在42-70万之间乘用车销售量在2007年至2016年期间增长了近5倍^[资料来源：[搜狐汽车网](auto.sohu.com)]。其中，高端乘用车领头品牌（奥迪、宝马、奔驰）销量不断上升，如图4^[资料来源：[搜狐汽车网](auto.sohu.com)]所示，以奥迪销量增长最为突出。以上数据表明，在汽车行业中，高端车市场具有巨大增长潜力，随着整体消费水平的提升，我国高端车市场将进一步扩增^[2]。
+另一方面，从销售结构上而言，相对于整体乘用车销量增幅，高端车辆销量增长不容小觑。据麦肯锡2013年发布的报告^[资料来源：麦肯锡报告《乘势而上：中国高端汽车市场展望》（2013）]称，过去十年，中国高端汽车市场以年均36%的惊人速度持续增长，高于同期中国乘用车市场年均26%的整体增速。中国已然成为仅次于美国的全球第二大高端汽车市场。麦肯锡公司预计，从现在到2020年，中国高端汽车市场将保持年均12%的增长速度，预计到2020年，中国高端汽车年销售量将达到300万辆，基本与西欧市场销售量持平（图 3^[资料来源：IHS环球通视；麦肯锡M-View；麦肯锡中国高端汽车研究（2012）]）。从销售价格而言，价格区间在42-70万之间乘用车销售量在2007年至2016年期间增长了近5倍^[资料来源：[搜狐汽车网](auto.sohu.com)]。其中，高端乘用车领头品牌（奥迪、宝马、奔驰）销量不断上升，如图4^[资料来源：[搜狐汽车网](auto.sohu.com)]所示，以奥迪销量增长最为突出。以上数据表明，在汽车行业中，高端车市场具有巨大增长潜力，随着整体消费水平的提升，我国高端车市场将进一步扩增^[邓晓爱. 浅谈我国高端车企市场营销策略[J]. 经营管理者, 2013(23), 269–269.]。
 
 ![C27E.tmp](https://cos.name/wp-content/uploads/2016/05/C27E.tmp_.png)                       
 
+<p style="text-align: center;">
 图 2 2004-2013 年中国汽车销量（万辆）
+</p>
 
 ![3520.tmp](https://cos.name/wp-content/uploads/2016/05/3520.tmp_.png)                       
 
+<p style="text-align: center;">
 图 3 全球高端汽车销售排名（千辆）
+</p>
 
 ![8305.tmp](https://cos.name/wp-content/uploads/2016/05/8305.tmp_.jpg)               
 
+<p style="text-align: center;">
 图 4 2007-2016 年中国奥迪、宝马、奔驰汽车销量（万辆）
+</p>
 
 ## （二）高端车潜在购车人群业务背景分析
 
-高端车市场规模的迅速增长为高端车厂商带来了巨大的机遇，但同时，日益复杂的市场结构也对其营销战略提出了新的挑战。想要在激烈竞争的高端车销售行列中占据不败之地，必须准确洞察和把握消费者的诉求。这要求高端车生产厂商回答以下问题：高端车消费者的特征如何？他们购买高端车的关键因素有哪些？他们背后的心理诉求及偏好如何？各个地区市场划分有哪些差异？在准确刻画消费者画像的基础上，高端车生产厂商才能拥有独特的机会把握市场风向，改进产品设计，并推行精准的个性化营销^[6]。
+高端车市场规模的迅速增长为高端车厂商带来了巨大的机遇，但同时，日益复杂的市场结构也对其营销战略提出了新的挑战。想要在激烈竞争的高端车销售行列中占据不败之地，必须准确洞察和把握消费者的诉求。这要求高端车生产厂商回答以下问题：高端车消费者的特征如何？他们购买高端车的关键因素有哪些？他们背后的心理诉求及偏好如何？各个地区市场划分有哪些差异？在准确刻画消费者画像的基础上，高端车生产厂商才能拥有独特的机会把握市场风向，改进产品设计，并推行精准的个性化营销^[黄彪虎. 个性化营销[J]. 企业管理, 2001 (11), 58–59.]。
 
 想要准确触及潜在购车群体，必须收集大量的用户行为数据。那么，如何大量的采集和分析用户数据？互联网技术的迅速发展为此提供了答案。据调查显示，近年来，互联网用户群体激增，已然成为主要消费群体寻求答案、表达核心诉求的主流媒体。这些媒体包括：搜索引擎、社交网络、门户网站、论坛、博客、贴吧等。
 
-在众多互联网媒体中，搜索引擎（Search Engine）积累和展现的信息具有举足轻重的地位^[3]^[7]^[9]。这主要是因为，用户在使用搜索引擎的过程中，往往带有明确的目的性。例如，如果一个用户频繁搜索“奥迪A6”，则表明他对于该车型相关信息有较强的兴趣，并极有可能转化为奥迪的购买用户。为了保有这些潜在用户，厂商往往会在搜索引擎上投放相关广告以吸引用户，如图 5示例为用[百度](www.baidu.com)搜索车型“奥迪A6”之后的广告展示结果。如果用户对搜索结果表现出进一步的兴趣，那么他会选择点击其中一些链接，这更加进一步表明其兴趣。因此，分析用户的高端车搜索、点击数据对于挖掘用户兴趣有独特的意义^[4]^[12]。
+在众多互联网媒体中，搜索引擎（Search Engine）积累和展现的信息具有举足轻重的地位^[Ghose A, Yang S. An empirical analysis of search engine advertising: Sponsored search in electronic markets[J]. Management Science, 2009, 55(10), 1605–1622.]^[Montgomery A, Srinivasan K. Learning about customers without asking[J]. Tepper School of Business, 2002, 324.]^[Ramos A, Cota S. Search engine marketing[M]. McGraw-Hill, Inc., 2008.]。这主要是因为，用户在使用搜索引擎的过程中，往往带有明确的目的性。例如，如果一个用户频繁搜索“奥迪A6”，则表明他对于该车型相关信息有较强的兴趣，并极有可能转化为奥迪的购买用户。为了保有这些潜在用户，厂商往往会在搜索引擎上投放相关广告以吸引用户，如图 5示例为用[百度](www.baidu.com)搜索车型“奥迪A6”之后的广告展示结果。如果用户对搜索结果表现出进一步的兴趣，那么他会选择点击其中一些链接，这更加进一步表明其兴趣。因此，分析用户的高端车搜索、点击数据对于挖掘用户兴趣有独特的意义^[Häubl G, Trifts V. Consumer decision making in online shopping environments: The effects of interactive decision aids[J]. Marketing science, 2000, 19(1), 4–21.]^[Schmidt J B, Spreng R A. A proposed model of external consumer information search[J]. Journal of the academy of Marketing Science, 1996, 24(3), 246–256.]。
 
 ![C63E.tmp](https://cos.name/wp-content/uploads/2016/05/C63E.tmp_.jpg)                         
 
+<p style="text-align: center;">
 图 5 百度搜索“奥迪A6”结果
+</p>
 
 # 二、数据描述
 
@@ -74,25 +84,33 @@ slug: search-sequence-see-high-end-business-cars
 
 ![BBE8.tmp](https://cos.name/wp-content/uploads/2016/05/BBE8.tmp_.png)                     
 
+<p style="text-align: center;">
 图 6 高端属性的三个维度：生活、事业、学业
+</p>
 
 首先，为了刻画用户对于品质生活的追求，本文考虑了住、吃、玩、用、出行等多个维度（图 7）。在住方面，通过借鉴携程、[艺龙](https://www.elong.com/)等多家旅游类垂直网站等公开资源，获得五星级及其以上的高档酒店列表。在吃方面，通过分析大众点评网等公开资源，获得人均消费单价远高于平均水平的高档餐厅列表。在玩方面，课题组关注以出国海岛游（例如：马尔代夫）、高级游轮为代表的高端旅游，以及相关的关键词。在用方面，课题组关注诸如iphone6、Vertu、高端单反相机等为代表的高科技产品，以及以LV、阿玛尼、香奈儿为代表的奢侈用品。在出行方面，课题组关注以高端酒店、私人包机等为代表的高端出行方式。通过对这些关键词的提取评估，我们对每个用户的生活方面打分。从中我们发现，高端车人群得分约为普通人群的两倍。清晰显示高端车人群对品质生活更高的追求。值得注意的是，商学院的得分更高，约是高端车人群的两倍，意味着商学院人群较之高端车人群，更加注重对于生活品质的追求。
 
 ![D553.tmp](https://cos.name/wp-content/uploads/2016/05/D553.tmp_.png)                                
 
+<p style="text-align: center;">
 图 7 高端属性（生活）
+</p>
 
 同时，在学习方面，本文主要考虑了抽取用户获取财经、科技等资讯信息的能力等信息（图 8）。首先，在财经方面，本文关注以[和讯网](https://www.hexun.com/)、[中金在线](https://www.cnfol.com/)、[凤凰财经](finance.ifeng.com)等代表的一线财经新闻网站，认为点击这些网站较多的用户对财经、经济、金融等方面信息的敏锐嗅觉高；在科技前沿方面，本文关注以[虎嗅网](https://www.huxiu.com/)、[36氪](https://36kr.com/)等为代表的科技、互联网信息分享平台，认为关注这些网站较多的用户对前沿科技有着较深厚的兴趣和洞察力。同样利用综合打分的方式，我们同样发现高端车人群约是普通人群的2倍。这一点表示高端车人群在前沿资讯获取方面有着更加浓厚的兴趣。值得注意的是，商学院的得分则表现得更高，约是高端车人群的3倍，这意味着商学院人群相对高端车人群和普通用户人群有着更大的学习热情和兴趣。
 
 ![C687.tmp](https://cos.name/wp-content/uploads/2016/05/C687.tmp_.png)                              
 
+<p style="text-align: center;">
 图 8 高端属性（学业）
+</p>
 
 最后，在事业方面，本文主要关注以创业、金融资产管理、高端房地产、高端社交为代表的多个维度（图 9）。在创业方面，研究组主要关注一线风投、投资公司，如红杉资本、创新工场、真格基金等；在金融理财方面，主要关注以高端信用卡、信托私募、家族财富管理为代表的理财方式；在房地产方面，课题组关注主要高端房地产品牌，如保利国际、万达、华远等；在社交领域，主要关注高端商务社交方式，如高级酒庄、高尔夫球俱乐部、商务会所等。综合以上关键词提取信息，利用综合打分的方式，我们同样发现高端车人群约是普通人群的2倍，可以看出高端车人群在社会中更多的扮演着成功商务人士的角色。同时，商学院人群得分约是高端车人群的2倍，这意味着商学院人群相对高端车人群在事业方面有着更加卓越的品位和追求。
 
 ![CD7D.tmp](https://cos.name/wp-content/uploads/2016/05/CD7D.tmp_.png)                               
 
+<p style="text-align: center;">
 图 9 高端属性（事业）
+</p>
 
 ## （三）高端车市场
 
@@ -100,11 +118,15 @@ slug: search-sequence-see-high-end-business-cars
 
 ![9486.tmp](https://cos.name/wp-content/uploads/2016/05/9486.tmp_.png)                            
 
+<p style="text-align: center;">
 图 10 高端车搜索量统计
+</p>
 
 ![414A.tmp](https://cos.name/wp-content/uploads/2016/05/414A.tmp_.png)                              
 
+<p style="text-align: center;">
 图 11 汽车媒体点击量统计
+</p>
 
 接下来，我们对各大高端车品牌之间的竞争关系进行描述。首先我们计算用户在搜索各大品牌时从不同品牌之间的跳转概率。设系统中共有`$i=1,2,\cdots,N$`个高端车用户，对于第`$i$`个用户，我们保留其关于高端车品牌相关搜索（也就是说，搜索文本必须与高端车品牌信息相关），设其搜索`$t=1,2,\cdots,T_i$`步（即发生了`$T_i$`次搜索）。另外，我们假设系统中共有`$j=1,2,\cdots,J$`个品牌，设第个用户在第步搜索品牌为`$Z_{it} \in \{1,\cdots,J\}$`。则我们可以得到用户从品牌`$j_1$`跳转到`$j_2$`的经验转移概率：
 
@@ -116,13 +138,17 @@ slug: search-sequence-see-high-end-business-cars
 
 ![A4FE.tmp](https://cos.name/wp-content/uploads/2016/05/A4FE.tmp_.png)                    
 
+<p style="text-align: center;">
 图 12 用户搜索高端车品牌转移概率矩阵
+</p>
 
 最后，为了描述各个品牌之间的竞争关系，我们按照用户对品牌的搜索对高端车品牌进行了聚类分析。其基本思路是，如果两个品牌被用户频繁的同时搜索，则可以认为这些品牌经常被用于比对，因此，其之间的竞争关系较为激烈。为了测评高端车品牌之间的竞争关系，首先，我们以每个用户为观测，以11个高端车品牌为变量，形成样本矩阵`$X=(X_{ij})\in \mathbb{R}^{N \times J}$`，其中，`$X_{ij}=1$`表示第个`$i$`人搜索过第`$j$`个品牌，否则`$X_{ij}=0$`。根据上述定义可以计算变量和变量之间的距离，距离越短表示相关两个品牌被同时搜索的次数越多。基于该距离矩阵，进行层次聚类分析，结果如图 13所示。由结果可以看出11个高端车品牌可以大体被分为三类，其中，奥迪、宝马、奔驰位于层次聚类树的最低端，并可以被归入一个类别中。这表明，这三个品牌之间的竞争关系较为激烈，其中以奥迪和宝马之间的竞争关系尤为突出。
 
 ![A435.tmp](https://cos.name/wp-content/uploads/2016/05/A435.tmp_.png)                         
 
+<p style="text-align: center;">
 图 13 高端车品牌层次聚类分析结果
+</p>
 
 # 三、数据建模
 
@@ -142,7 +168,9 @@ slug: search-sequence-see-high-end-business-cars
 
 ![7BA.tmp](https://cos.name/wp-content/uploads/2016/05/7BA.tmp_.png)                             
 
+<p style="text-align: center;">
 图 14 搜索品牌数
+</p>
 
 ### （2）时间间隔
 
@@ -150,7 +178,9 @@ slug: search-sequence-see-high-end-business-cars
 
 ![51E8.tmp](https://cos.name/wp-content/uploads/2016/05/51E8.tmp_.png)                        
 
+<p style="text-align: center;">
 图 15 log(1+x)变换后搜索时间间隔
+</p>
 
 ### （3）连续搜索数
 
@@ -158,15 +188,19 @@ slug: search-sequence-see-high-end-business-cars
 
 ![8E0F.tmp](https://cos.name/wp-content/uploads/2016/05/8E0F.tmp_.png)                           
 
+<p style="text-align: center;">
 图 16 同一品牌连续搜索数
+</p>
 
 ### （4）搜索词长度
 
-搜索词长度，是指用户上一步（第t步）的搜索关键词长度。从描述性分析来看（图 17），忠诚用户对应的搜索关键词长度稍长于“叛变”用户。搜索长尾关键词一定程度上意味着该用户在搜索过程中要付出更多的成本[11]，这也表明对应用户可能是深度用户，从而表现出更加忠诚的行为。
+搜索词长度，是指用户上一步（第t步）的搜索关键词长度。从描述性分析来看（图 17），忠诚用户对应的搜索关键词长度稍长于“叛变”用户。搜索长尾关键词一定程度上意味着该用户在搜索过程中要付出更多的成本^[Skiera B, Eckert J, Hinz O. An analysis of the importance of the long tail in search engine marketing[J]. Electronic Commerce Research and Applications, 2010, 9(6), 488–494.]，这也表明对应用户可能是深度用户，从而表现出更加忠诚的行为。
 
 ![A78A.tmp](https://cos.name/wp-content/uploads/2016/05/A78A.tmp_.png)                                    
 
+<p style="text-align: center;">
 图 17 搜索词长度
+</p>
 
 ### （5）是否搜索配置信息
 
@@ -174,7 +208,9 @@ slug: search-sequence-see-high-end-business-cars
 
 ![B9C4.tmp](https://cos.name/wp-content/uploads/2016/05/B9C4.tmp_.png)                              
 
+<p style="text-align: center;">
 图 18 是否搜索配置信息
+</p>
 
 ### （6）点击数
 
@@ -182,7 +218,9 @@ slug: search-sequence-see-high-end-business-cars
 
 ![A463.tmp](https://cos.name/wp-content/uploads/2016/05/A463.tmp_.png)                                
 
+<p style="text-align: center;">
 图 19 搜索后点击数
+</p>
 
 ### （7）问答百科
 
@@ -190,11 +228,13 @@ slug: search-sequence-see-high-end-business-cars
 
 ![5961.tmp](https://cos.name/wp-content/uploads/2016/05/5961.tmp_.png)                       
 
+<p style="text-align: center;">
 图 20 搜索后是否点击问答百科类网站
+</p>
 
 ## （三）估计结果
 
-根据忠诚模型，利用Newton-Raphson算法迭代得到估计结果如表 3所示$^6$。可以看到，所有变量系数估计在95%置信度下显著。其中我们发现，搜索汽车配置信息越多、搜索后点击数越多、点击问答百科类网站次数越多，以及连续搜索某品牌次数越多的用户，在搜索行为上表现的更加忠诚；而两次搜索时间间隔越长、用户历史搜索的品牌数越多，其在搜索过程中更容易出现“叛变”行为。
+根据忠诚模型，利用Newton-Raphson算法迭代得到估计结果如表 3所示^[由于数据保密性需求，本文在保持符号不变的情况下对系数估计结果进行了数值变换]。可以看到，所有变量系数估计在95%置信度下显著。其中我们发现，搜索汽车配置信息越多、搜索后点击数越多、点击问答百科类网站次数越多，以及连续搜索某品牌次数越多的用户，在搜索行为上表现的更加忠诚；而两次搜索时间间隔越长、用户历史搜索的品牌数越多，其在搜索过程中更容易出现“叛变”行为。
 
 ![C38A.tmp](https://cos.name/wp-content/uploads/2016/05/C38A.tmp_.png)
 
@@ -202,7 +242,9 @@ slug: search-sequence-see-high-end-business-cars
 
 ![39F3.tmp](https://cos.name/wp-content/uploads/2016/05/39F3.tmp_.png)                           
 
+<p style="text-align: center;">
 图 21 忠诚度系数估计值
+</p>
 
 ## （四）模型评估
 
@@ -210,7 +252,9 @@ slug: search-sequence-see-high-end-business-cars
 
 ![FBAE.tmp](https://cos.name/wp-content/uploads/2016/05/FBAE.tmp_.png)                        
 
+<p style="text-align: center;">
 图 22 忠诚模型成本收益曲线
+</p>
 
 # 四、业务实施
 
@@ -239,29 +283,3 @@ slug: search-sequence-see-high-end-business-cars
 本文认为目前文章可改进的地方有以下几点：
 1. 多数据源信息完善。目前而言，搜索引擎还没有建立完整的用户个人账户体系，但是，这一过程在逐渐完善。如果用户的个人信息资料建立完善，那么就可以更加完整的记录用户的搜索路径，完善其个人特征（例如，年龄、性别等特征）。另一方面，移动互联网的发展使得手机应用逐渐普及，这使得用户的生活轨迹（地理位置、轨迹数据）等可以被完整记录，通过匹配这一数据，可以还原用户的生活特征，并进行更加细节的用户画像。
 1. 模型扩展。注意到本文建立的忠诚模型因变量为搜索过程中是否对品牌忠诚，品牌差异性主要体现于模型的截距项参数上。然而，用户对于不同品牌的忠诚度行为模式可能存在更大差异，因此，需要进行更加细节的探索和建模。另外，在已知用户叛变的基础上，未来的研究可对用户对于其他品牌的选择行为进行讨论，从而对竞品投放的广告策略产生更有价值的指导。
-
-# 参考文献
-
-【1】曹建海. 经济全球化与中国汽车产业发展[J]. 管理世界, 2003(4), 68–76.
-
-【2】邓晓爱. 浅谈我国高端车企市场营销策略[J]. 经营管理者, 2013(23), 269–269.
-
-【3】Ghose A, Yang S. An empirical analysis of search engine advertising: Sponsored search in electronic markets[J]. Management Science, 2009, 55(10), 1605–1622.
-
-【4】Häubl G, Trifts V. Consumer decision making in online shopping environments: The effects of interactive decision aids[J]. Marketing science, 2000, 19(1), 4–21.
-
-【5】Huang P, Lurie N H, Mitra S. Searching for experience on the web: an empirical examination of consumer behavior for search and experience goods[J]. Journal of Marketing, 2009, 73(2), 55–69.
-
-【6】黄彪虎. 个性化营销[J]. 企业管理, 2001 (11), 58–59.
-
-【7】Montgomery A, Srinivasan K. Learning about customers without asking[J]. Tepper School of Business, 2002, 324.
-
-【8】Montgomery A L, Li S, Srinivasan K, et al. Modeling online browsing and path analysis using clickstream data[J]. Marketing Science, 2004, 23(4), 579–595.
-
-【9】Ramos A, Cota S. Search engine marketing[M]. McGraw-Hill, Inc., 2008.
-
-【10】宋泓, 柴瑜, 张泰. 市场开放, 企业学习及适应能力和产业成长模式转型——中国汽车产业案例研究[J]. 管理世界, 2004(8), 61–74.
-
-【11】Skiera B, Eckert J, Hinz O. An analysis of the importance of the long tail in search engine marketing[J]. Electronic Commerce Research and Applications, 2010, 9(6), 488–494.
-
-【12】Schmidt J B, Spreng R A. A proposed model of external consumer information search[J]. Journal of the academy of Marketing Science, 1996, 24(3), 246–256.
