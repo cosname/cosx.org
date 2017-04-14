@@ -168,7 +168,7 @@ rmongodb的开发了一大堆的函数，对应mongo的操作。比起别的NoSQ
 - 查看连接是否正常
 
     ```
-    mongo.is.connected(mongo)    
+    mongo.is.connected(mongo)    
     ```
 
 - 创建一个BSON对象缓存
