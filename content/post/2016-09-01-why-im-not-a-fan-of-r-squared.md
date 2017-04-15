@@ -125,11 +125,3 @@ John Myles White，Facebook 核心数据科学团队成员，加入 Facebook 之
 审稿：冯凌秉
 
 编辑：彭晨昱
-
-版权公告：
-
-原创文章，版权所有。
-
-敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。
-
-![QR](https://cos.name/wp-content/uploads/2016/08/QR.png)
