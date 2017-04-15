@@ -50,7 +50,7 @@ slug: weather-driven-industry-sales-big-data
 <table width="555">
   <tr>
 <td colspan="2" width="225">
-  **数据**
+  数据
 </td>
 
 <td colspan="2" width="331">
@@ -64,15 +64,15 @@ slug: weather-driven-industry-sales-big-data
 </td>
 
 <td width="189">
-  **字段名****Field name**
+  字段名Field name**
 </td>
 
 <td width="170">
-  **字段说明**
+  字段说明
 </td>
 
 <td width="161">
-  **备注说明**
+  备注说明
 </td>
   </tr>
   
