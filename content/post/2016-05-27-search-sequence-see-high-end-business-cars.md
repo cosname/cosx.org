@@ -52,7 +52,7 @@ slug: search-sequence-see-high-end-business-cars
 
 想要准确触及潜在购车群体，必须收集大量的用户行为数据。那么，如何大量的采集和分析用户数据？互联网技术的迅速发展为此提供了答案。据调查显示，近年来，互联网用户群体激增，已然成为主要消费群体寻求答案、表达核心诉求的主流媒体。这些媒体包括：搜索引擎、社交网络、门户网站、论坛、博客、贴吧等。
 
-在众多互联网媒体中，搜索引擎（Search Engine）积累和展现的信息具有举足轻重的地位^[Ghose A, Yang S. An empirical analysis of search engine advertising: Sponsored search in electronic markets[J]. Management Science, 2009, 55(10), 1605–1622.]^[Montgomery A, Srinivasan K. Learning about customers without asking[J]. Tepper School of Business, 2002, 324.]^[Ramos A, Cota S. Search engine marketing[M]. McGraw-Hill, Inc., 2008.]。这主要是因为，用户在使用搜索引擎的过程中，往往带有明确的目的性。例如，如果一个用户频繁搜索“奥迪A6”，则表明他对于该车型相关信息有较强的兴趣，并极有可能转化为奥迪的购买用户。为了保有这些潜在用户，厂商往往会在搜索引擎上投放相关广告以吸引用户，如图 5示例为用[百度](www.baidu.com)搜索车型“奥迪A6”之后的广告展示结果。如果用户对搜索结果表现出进一步的兴趣，那么他会选择点击其中一些链接，这更加进一步表明其兴趣。因此，分析用户的高端车搜索、点击数据对于挖掘用户兴趣有独特的意义^[Häubl G, Trifts V. Consumer decision making in online shopping environments: The effects of interactive decision aids[J]. Marketing science, 2000, 19(1), 4–21.]^[Schmidt J B, Spreng R A. A proposed model of external consumer information search[J]. Journal of the academy of Marketing Science, 1996, 24(3), 246–256.]。
+在众多互联网媒体中，搜索引擎（Search Engine）积累和展现的信息具有举足轻重的地位^[Ghose A, Yang S. An empirical analysis of search engine advertising: Sponsored search in electronic markets[J]. Management Science, 2009, 55(10), 1605–1622.] ^[Montgomery A, Srinivasan K. Learning about customers without asking[J]. Tepper School of Business, 2002, 324.] ^[Ramos A, Cota S. Search engine marketing[M]. McGraw-Hill, Inc., 2008.]。这主要是因为，用户在使用搜索引擎的过程中，往往带有明确的目的性。例如，如果一个用户频繁搜索“奥迪A6”，则表明他对于该车型相关信息有较强的兴趣，并极有可能转化为奥迪的购买用户。为了保有这些潜在用户，厂商往往会在搜索引擎上投放相关广告以吸引用户，如图 5示例为用[百度](www.baidu.com)搜索车型“奥迪A6”之后的广告展示结果。如果用户对搜索结果表现出进一步的兴趣，那么他会选择点击其中一些链接，这更加进一步表明其兴趣。因此，分析用户的高端车搜索、点击数据对于挖掘用户兴趣有独特的意义^[Häubl G, Trifts V. Consumer decision making in online shopping environments: The effects of interactive decision aids[J]. Marketing science, 2000, 19(1), 4–21.] ^[Schmidt J B, Spreng R A. A proposed model of external consumer information search[J]. Journal of the academy of Marketing Science, 1996, 24(3), 246–256.]。
 
 ![C63E.tmp](https://cos.name/wp-content/uploads/2016/05/C63E.tmp_.jpg)                         
 
@@ -66,7 +66,7 @@ slug: search-sequence-see-high-end-business-cars
 
 本文数据来自某搜索引擎平台的100万在线用户的13亿搜索序列文本。数据时间跨度3个月，数据记录为每个Cookie在此期间的精确到秒级的搜索和点击数据。
 
-原始数据格式如表 1所示，包含5个字段：Cookie、Query（检索词）、action（是否点击）、time（搜索时间）、url（点击的URL，如无点击则为空），具体见表 2中变量说明。以第一行数据为例，其表示Cookie为9的用户在2014年9月2日21点45分56秒搜索了“奔驰”关键词，并对地址为<http://www.hx2car.com/>的网站产生了点击行为。另外需要说明的是，如果同一Cookie在相邻的搜索时间内Query一列对应的检索词相同（如图1-2行），则为同一搜索词下的多项点击。如图7中1-2行表明用户在搜索“奔驰”后对于搜索结果中的2个链接地址进行了点击。
+原始数据格式如表1所示，包含5个字段：Cookie、Query（检索词）、action（是否点击）、time（搜索时间）、url（点击的URL，如无点击则为空），具体见表 2中变量说明。以第一行数据为例，其表示Cookie为9的用户在2014年9月2日21点45分56秒搜索了“奔驰”关键词，并对地址为<http://www.hx2car.com/>的网站产生了点击行为。另外需要说明的是，如果同一Cookie在相邻的搜索时间内Query一列对应的检索词相同（如图1-2行），则为同一搜索词下的多项点击。如图7中1-2行表明用户在搜索“奔驰”后对于搜索结果中的2个链接地址进行了点击。
 
 ![4A6D.tmp](https://cos.name/wp-content/uploads/2016/05/4A6D.tmp_.png)
 
@@ -80,7 +80,7 @@ slug: search-sequence-see-high-end-business-cars
 
 首先，在对高端车潜在用户的筛选中，我们选定了市场份额较大，以奥迪、宝马、奔驰等品牌为代表的11个高端车品牌。并按照品牌关键字与用户搜索文本进行匹配，最终提取出在搜索过程中对高端车品牌表现出浓厚兴趣的人群（累积搜索高端车品牌次数超过5次），将他们定义为高端车潜在用户人群（以下简称高端车用户）。经过处理，在100万总样本中，我们最终得到高端车用户数目约为21万人。类似地，在对商学院潜在人群的定位中，我们首先提取了国内知名商学院关键词（如光华商学院、长江商学院等），然后利用关键词匹配在搜索过程中对商学院浓厚兴趣的用户（以下简称商学院用户），最终得到约1万6千名商学院用户。
 
-基于以上用户划分，我们对其用户属性进行了描述。具体地，我们主要关注用户在生活、事业、学业表现出的“高端”属性（图 6）。为了总结这一特征，对于该属性的每一个维度，通过[携程](https://www.ctrip.com/)、[大众点评](https://www.dianping.com/)等第三方网站上的公开资源，获得相关关键词，并对其相应的消费等级分类打分。在此基础上对普通大众、高端车用户、商学院人群三类人做了对比分析。具体情况如下。
+基于以上用户划分，我们对其用户属性进行了描述。具体地，我们主要关注用户在生活、事业、学业表现出的“高端”属性（图6）。为了总结这一特征，对于该属性的每一个维度，通过[携程](https://www.ctrip.com/)、[大众点评](https://www.dianping.com/)等第三方网站上的公开资源，获得相关关键词，并对其相应的消费等级分类打分。在此基础上对普通大众、高端车用户、商学院人群三类人做了对比分析。具体情况如下。
 
 ![BBE8.tmp](https://cos.name/wp-content/uploads/2016/05/BBE8.tmp_.png)                     
 
@@ -96,7 +96,7 @@ slug: search-sequence-see-high-end-business-cars
 图 7 高端属性（生活）
 </p>
 
-同时，在学习方面，本文主要考虑了抽取用户获取财经、科技等资讯信息的能力等信息（图 8）。首先，在财经方面，本文关注以[和讯网](https://www.hexun.com/)、[中金在线](https://www.cnfol.com/)、[凤凰财经](finance.ifeng.com)等代表的一线财经新闻网站，认为点击这些网站较多的用户对财经、经济、金融等方面信息的敏锐嗅觉高；在科技前沿方面，本文关注以[虎嗅网](https://www.huxiu.com/)、[36氪](https://36kr.com/)等为代表的科技、互联网信息分享平台，认为关注这些网站较多的用户对前沿科技有着较深厚的兴趣和洞察力。同样利用综合打分的方式，我们同样发现高端车人群约是普通人群的2倍。这一点表示高端车人群在前沿资讯获取方面有着更加浓厚的兴趣。值得注意的是，商学院的得分则表现得更高，约是高端车人群的3倍，这意味着商学院人群相对高端车人群和普通用户人群有着更大的学习热情和兴趣。
+同时，在学习方面，本文主要考虑了抽取用户获取财经、科技等资讯信息的能力等信息（图8）。首先，在财经方面，本文关注以[和讯网](https://www.hexun.com/)、[中金在线](https://www.cnfol.com/)、[凤凰财经](finance.ifeng.com)等代表的一线财经新闻网站，认为点击这些网站较多的用户对财经、经济、金融等方面信息的敏锐嗅觉高；在科技前沿方面，本文关注以[虎嗅网](https://www.huxiu.com/)、[36氪](https://36kr.com/)等为代表的科技、互联网信息分享平台，认为关注这些网站较多的用户对前沿科技有着较深厚的兴趣和洞察力。同样利用综合打分的方式，我们同样发现高端车人群约是普通人群的2倍。这一点表示高端车人群在前沿资讯获取方面有着更加浓厚的兴趣。值得注意的是，商学院的得分则表现得更高，约是高端车人群的3倍，这意味着商学院人群相对高端车人群和普通用户人群有着更大的学习热情和兴趣。
 
 ![C687.tmp](https://cos.name/wp-content/uploads/2016/05/C687.tmp_.png)                              
 
@@ -114,7 +114,7 @@ slug: search-sequence-see-high-end-business-cars
 
 ## （三）高端车市场
 
-接下来，我们利用搜索文本数据对高端车市场进行了分析。首先，我们根据高端车品牌关键词匹配了搜索文本数据，并提取了各大品牌的搜索量排名，如图 10所示。其中，奥迪、宝马、奔驰三个品牌摘取前三甲，占据了近七成高端车市场。其中以奥迪、宝马品牌遥遥领先。类似地，我们对主要汽车媒体的点击量进行了描述分析，点击量占据前三名的汽车媒体分别为：易车网、汽车之家、爱卡汽车（图 11）。
+接下来，我们利用搜索文本数据对高端车市场进行了分析。首先，我们根据高端车品牌关键词匹配了搜索文本数据，并提取了各大品牌的搜索量排名，如图 10所示。其中，奥迪、宝马、奔驰三个品牌摘取前三甲，占据了近七成高端车市场。其中以奥迪、宝马品牌遥遥领先。类似地，我们对主要汽车媒体的点击量进行了描述分析，点击量占据前三名的汽车媒体分别为：易车网、汽车之家、爱卡汽车（图11）。
 
 ![9486.tmp](https://cos.name/wp-content/uploads/2016/05/9486.tmp_.png)                            
 
@@ -133,8 +133,6 @@ slug: search-sequence-see-high-end-business-cars
 `$$P_{j_1j_2}=\{\sum_{i=1}^N \sum_{t=1}^{T_i-1}I(Z_{i,t}=j_1)\}^{-1}\{\sum_{i=1}^N\sum_{t=1}^{T_i-1}I(Z_{it}=j_1,Z_{I(t+1)}= j_2)\}$$`
 
 通过计算，11个高端车品牌间概率矩阵如图 12所示。其中，第行列的数据表示从品牌$j_1$跳转到品牌`$j_2$`的转移概率（即`$P_{j_1j_2}$`），该概率越大，则对应矩阵块的颜色越深^[由于数据保密性需求，本文在保持符号不变的情况下对系数估计结果进行了数值变换]。首先，矩阵对角线表示用户相邻两步搜索同一品牌的概率，这反应了品牌保有客户的能力，是品牌忠诚度的反应。数据统计显示，奥迪品牌保有客户的能力最强，用户搜索奥迪品牌后约七成的概率持续搜索，占据首位。另一方面，非对角线每一列元素代表对应品牌吸引客户的能力，该列数字越大，代表对应品牌的魅力越大，从这一指标看，宝马品牌吸引客户的能力较强，这主要表现在用户在搜索其他品牌后转移到宝马品牌的概率较大（图 12转移概率矩阵第二列）。
-
-* * *
 
 ![A4FE.tmp](https://cos.name/wp-content/uploads/2016/05/A4FE.tmp_.png)                    
 
@@ -164,7 +162,7 @@ slug: search-sequence-see-high-end-business-cars
 
 ### （1）搜索品牌数
 
-搜索品牌数，是指用户第t步之前搜索不同品牌的数目。描述性分析如图 14显示，叛变用户之前平均搜索平均搜索品牌数约是忠诚用户的1.5倍。也就是说，叛变用户之前对于品牌的搜索中更多表现出“花心”特征，也更容易导致“叛变”行为。
+搜索品牌数，是指用户第t步之前搜索不同品牌的数目。描述性分析如图14显示，叛变用户之前平均搜索平均搜索品牌数约是忠诚用户的1.5倍。也就是说，叛变用户之前对于品牌的搜索中更多表现出“花心”特征，也更容易导致“叛变”行为。
 
 ![7BA.tmp](https://cos.name/wp-content/uploads/2016/05/7BA.tmp_.png)                             
 
@@ -194,7 +192,7 @@ slug: search-sequence-see-high-end-business-cars
 
 ### （4）搜索词长度
 
-搜索词长度，是指用户上一步（第t步）的搜索关键词长度。从描述性分析来看（图 17），忠诚用户对应的搜索关键词长度稍长于“叛变”用户。搜索长尾关键词一定程度上意味着该用户在搜索过程中要付出更多的成本^[Skiera B, Eckert J, Hinz O. An analysis of the importance of the long tail in search engine marketing[J]. Electronic Commerce Research and Applications, 2010, 9(6), 488–494.]，这也表明对应用户可能是深度用户，从而表现出更加忠诚的行为。
+搜索词长度，是指用户上一步（第t步）的搜索关键词长度。从描述性分析来看（图17），忠诚用户对应的搜索关键词长度稍长于“叛变”用户。搜索长尾关键词一定程度上意味着该用户在搜索过程中要付出更多的成本^[Skiera B, Eckert J, Hinz O. An analysis of the importance of the long tail in search engine marketing[J]. Electronic Commerce Research and Applications, 2010, 9(6), 488–494.]，这也表明对应用户可能是深度用户，从而表现出更加忠诚的行为。
 
 ![A78A.tmp](https://cos.name/wp-content/uploads/2016/05/A78A.tmp_.png)                                    
 
@@ -204,7 +202,7 @@ slug: search-sequence-see-high-end-business-cars
 
 ### （5）是否搜索配置信息
 
-是否搜索配置信息，是指用户上一步（第t步）是否搜索了高端车品牌的配置信息（如发动机、轮胎、转轴等）。从描述性分析来看（图 18），忠诚用户对应的搜索配置信息的次数更多，显著高于“叛变”用户一倍。搜索配置信息表明了该用户可能进入到更加深入的信息检索层面，这也是“深度用户更加忠诚”的佐证。
+是否搜索配置信息，是指用户上一步（第t步）是否搜索了高端车品牌的配置信息（如发动机、轮胎、转轴等）。从描述性分析来看（图18），忠诚用户对应的搜索配置信息的次数更多，显著高于“叛变”用户一倍。搜索配置信息表明了该用户可能进入到更加深入的信息检索层面，这也是“深度用户更加忠诚”的佐证。
 
 ![B9C4.tmp](https://cos.name/wp-content/uploads/2016/05/B9C4.tmp_.png)                              
 
@@ -214,7 +212,7 @@ slug: search-sequence-see-high-end-business-cars
 
 ### （6）点击数
 
-点击数，是指用户上一步搜索后产生的点击次数。从描述性分析（图 19）可以看出，忠诚用户搜索后产生的平均点击高于“叛变”用户。点击越多说明用户在一次搜索之后了解信息的意愿更强，也是深度用户的侧面反映。
+点击数，是指用户上一步搜索后产生的点击次数。从描述性分析（图19）可以看出，忠诚用户搜索后产生的平均点击高于“叛变”用户。点击越多说明用户在一次搜索之后了解信息的意愿更强，也是深度用户的侧面反映。
 
 ![A463.tmp](https://cos.name/wp-content/uploads/2016/05/A463.tmp_.png)                                
 
@@ -224,7 +222,7 @@ slug: search-sequence-see-high-end-business-cars
 
 ### （7）问答百科
 
-问答百科，是指用户上一步搜索后是否点击了问答百科类网站。其中，问答百科类网站主要是为用户解惑答疑的知识性网站，例如，[百度知道](https://zhidao.baidu.com)，[360百科](https://baike.so.com/) 等。从描述性分析（图 20）可以看出，忠诚用户搜索后点击问答百科网站的平均次数约为 “叛变”用户2倍。问答百科类网站上一般展示的是更加细节的问题和讨论，用户点击此类网站代表其对相关问题兴趣浓厚，可能是深度用户。
+问答百科，是指用户上一步搜索后是否点击了问答百科类网站。其中，问答百科类网站主要是为用户解惑答疑的知识性网站，例如，[百度知道](https://zhidao.baidu.com)，[360百科](https://baike.so.com/) 等。从描述性分析（图20）可以看出，忠诚用户搜索后点击问答百科网站的平均次数约为 “叛变”用户2倍。问答百科类网站上一般展示的是更加细节的问题和讨论，用户点击此类网站代表其对相关问题兴趣浓厚，可能是深度用户。
 
 ![5961.tmp](https://cos.name/wp-content/uploads/2016/05/5961.tmp_.png)                       
 
@@ -238,7 +236,7 @@ slug: search-sequence-see-high-end-business-cars
 
 ![C38A.tmp](https://cos.name/wp-content/uploads/2016/05/C38A.tmp_.png)
 
-同时，我们得到了控制自变量后的品牌忠诚度系数的估计结果，系数估计值如图 21中柱状图所示。可以看到，在控制自变量之后，忠诚度最高的三个品牌分别为，奥迪、奔驰和林肯，宝马位居第四。
+同时，我们得到了控制自变量后的品牌忠诚度系数的估计结果，系数估计值如图21中柱状图所示。可以看到，在控制自变量之后，忠诚度最高的三个品牌分别为，奥迪、奔驰和林肯，宝马位居第四。
 
 ![39F3.tmp](https://cos.name/wp-content/uploads/2016/05/39F3.tmp_.png)                           
 
