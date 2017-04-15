@@ -18,7 +18,7 @@ slug: ten_simple
 
 **原文出处：**
 [Ten Simple Rules for Effective Statistical Practice.](http://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1004961)
-Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12(6): e1004961. doi:10.1371/journal.pcbi.1004961
+Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12(6): e1004961. doi:10.1371/journal.pcbi.1004961.
 
 
 # 引言
@@ -122,7 +122,7 @@ Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12
 # 原则 6：保持简约
 
 在其他条件相同时，简约远胜于复杂。这条法则在不同领域的实践过程中反复被发现并被奉为圣典。
-它有着不同的称谓：“奥卡姆剃刀”，“KISS原则”（Keep it simple,stupid），“少即是多”和“至繁归于至简”。
+它有着不同的称谓：“奥卡姆剃刀”，“KISS原则”（Keep it simple, stupid），“少即是多”和“至繁归于至简”。
 我们可以放心的将这一“节俭原则”当做指导方针：开始时先用简单的方法，只在需要时才增加复杂性，而且只加必要的。
 
 正如之前所说，科学数据有很精细的结构，简单的模型不能总是概括其中的错综复杂。
@@ -228,28 +228,66 @@ Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12
 感谢 Phil Bourne 提议我们着手写这篇文章，以及感谢美国统计协会的 Steve Pierson 开始组织这些努力。
 
 
-### References
+# References
 
-<p class="js_message_plain ng-binding">
-  [1] Aschwanden C (2015) Science isn’t broken. August 11 2015 [ http://fivethirtyeight.com/features/science-isnt-broken/](https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=http%3A%2F%2Ffivethirtyeight.com%2Ffeatures%2Fscience-isnt-broken%2F&skey=%40crypt_17a2cd45_c949f5c9116f6656076b7b7223fd7745&deviceid=e882084818174922&pass_ticket=OhCiixjdhgsBHy%252BFvanl9s39yJ6o46DvpX6T1EhxlJaRu7VvvosgAmS%252Beq2fJYV1&opcode=2&scene=1&username=@91d79bb31527bed6496a6a23d8e785bae1cd35ccb68c90a67c34c8e4bcba7853)<br /> [2] Baker M (2016) Statisticians issue warning over misuse of P values. Nature 531, (151) doi: 10.1038/nature.2016.19503<br /> [3] Benjamini Y, Hochberg Y (1995) Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Statist Soc B 57: 289–300.<br /> [4] Cox DR, Donnelly CA (2011) Principles of Applied Statistics. Cambridge: Cambridge University Press.<br /> [5] Cox DR (2015) Big data and precision. Biometrika 102: 712–716.<br /> [6] Dashnow H, Lonsdale A, Bourne PE (2014) Ten simple rules for writing a PLOS ten simple rules article. PLoS Comput Biol 10(10): e1003858. doi: 10.1371/journal.pcbi.1003858 PMID: 25340653<br /> [7] Fisher RA (1938) Presidential address. Sankhya 4: 14–17.<br /> [8] Gelman A, Loken E (2014) The statistical crisis in science. Am Sci 102: 460–465<br /> [9] Goodman A, Pepe A, Blocker AW, Borgman CL, Cranmer K, et al. (2014) Ten simple rules for the care and feeding of scientific data. PLoS Comput Biol 10(4): e1003542. doi: 10.1371/journal.pcbi.1003858 PMID: 24763340<br /> [10] Harford T (2015) Big Data: are we making a big mistake? Significance 11: 14–19.<br /> [11] Kass RE, Eden UT, Brown EN (2014) Analysis of Neural Data. Springer: New York.<br /> [12] Leek JT (2015) The Elements of Data Analytic Style. Leanpub,[ https://leanpub.com/artofdatascience.](https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=https%3A%2F%2Fleanpub.com%2Fartofdatascience.&skey=%40crypt_17a2cd45_c949f5c9116f6656076b7b7223fd7745&deviceid=e882084818174922&pass_ticket=OhCiixjdhgsBHy%252BFvanl9s39yJ6o46DvpX6T1EhxlJaRu7VvvosgAmS%252Beq2fJYV1&opcode=2&scene=1&username=@91d79bb31527bed6496a6a23d8e785bae1cd35ccb68c90a67c34c8e4bcba7853)<br /> [13] Leisch F (2002) Sweave: Dynamic generation of statistical reports using data analysis. In Härdle W, Rönz H, editors. Compstat: Proceedings in Computational Statistics, Heidelberg: Springer-Verlag, pp. 575–580.<br /> [14] Meng XL (2014) A trio of inference problems that could win you a Nobel prize in statistics (if you help fund it). In: Lin X, Genest C, Banks DL, Molenberghs G, Scott DW, Wang J-L,editors. Past, Present, and Future of Statistical Science, Boca Raton: CRC Press. pp. 537–562.<br /> [15] Peng R (2014) The Art of Data Science. Leanpub,[ https://leanpub.com/artofdatascience.](https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=https%3A%2F%2Fleanpub.com%2Fartofdatascience.&skey=%40crypt_17a2cd45_c949f5c9116f6656076b7b7223fd7745&deviceid=e882084818174922&pass_ticket=OhCiixjdhgsBHy%252BFvanl9s39yJ6o46DvpX6T1EhxlJaRu7VvvosgAmS%252Beq2fJYV1&opcode=2&scene=1&username=@91d79bb31527bed6496a6a23d8e785bae1cd35ccb68c90a67c34c8e4bcba7853)<br /> [16] Perez F, Granger BE (2007) IPython: A system for interactive scientific computing. Comput Sci Eng 9(3), 21–29.<br /> [17] Tukey JW (1962) The future of data analysis. Ann Math Stat 33: 1–67.<br /> [18] Wasserstein RL, Lazar NA (2016) The ASA’s statement on p-values: context, process, and purpose, The American Statistician doi: 10.1080/00031305.2016.1154108<br /> [19] Xie Y (2014) Dynamic Documents with R and knitr. Boca Raton: CRC Press.<br /> [20] Yu, B (2015) Data wisdom for data science. April 13 2015 [http://www.odbms.org/2015/04/data-wisdom-for-data-science/](https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=http%3A%2F%2Fwww.odbms.org%2F2015%2F04%2Fdata-&skey=%40crypt_17a2cd45_c949f5c9116f6656076b7b7223fd7745&deviceid=e882084818174922&pass_ticket=OhCiixjdhgsBHy%252BFvanl9s39yJ6o46DvpX6T1EhxlJaRu7VvvosgAmS%252Beq2fJYV1&opcode=2&scene=1&username=@91d79bb31527bed6496a6a23d8e785bae1cd35ccb68c90a67c34c8e4bcba7853)<br /> [21] Yu B (2013) Stability. Bernoulli, 19(4): 1484–1500.
-</p>
+[1] Aschwanden C (2015) Science isn’t broken. August 11 2015  <http://fivethirtyeight.com/features/science-isnt-broken/>.
 
-### 作者简介
+[2] Baker M (2016) Statisticians issue warning over misuse of P values. Nature 531, (151) doi: 10.1038/nature.2016.19503.
 
-<p class="js_message_plain ng-binding">
-  <strong>Robert E. Kass:</strong> 卡耐基梅隆大学，统计系，机器学习系，认知神经基础中心，美国<br /> <strong>Brian S. Caffo:</strong> 约翰霍普金斯大学，生物统计系，布隆伯格公共卫生学院，美国<br /> <strong>Marie Davidian:</strong> 北卡罗莱纳州立大学，统计系，美国<br /> <strong>Xiaoli Meng 孟晓犁:</strong> 哈佛大学，统计系，美国<br /> <strong>Bin Yu 郁彬:</strong> 加州大学伯克利分校，统计系，电子工程与计算机科学系，美国<br /> <strong>Nancy Reid:</strong> 多伦多大学，统计科学系，加拿大
-</p>
+[3] Benjamini Y, Hochberg Y (1995) Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Statist Soc B 57: 289–300.
 
-<!--EndFragment-->
+[4] Cox DR, Donnelly CA (2011) Principles of Applied Statistics. Cambridge: Cambridge University Press.
+
+[5] Cox DR (2015) Big data and precision. Biometrika 102: 712–716.
+
+[6] Dashnow H, Lonsdale A, Bourne PE (2014) Ten simple rules for writing a PLOS ten simple rules article. PLoS Comput Biol 10(10): e1003858. doi: 10.1371/journal.pcbi.1003858 PMID: 25340653.
+
+[7] Fisher RA (1938) Presidential address. Sankhya 4: 14–17.
+
+[8] Gelman A, Loken E (2014) The statistical crisis in science. Am Sci 102: 460–465.
+
+[9] Goodman A, Pepe A, Blocker AW, Borgman CL, Cranmer K, et al. (2014) Ten simple rules for the care and feeding of scientific data. PLoS Comput Biol 10(4): e1003542. doi: 10.1371/journal.pcbi.1003858 PMID: 24763340.
+
+[10] Harford T (2015) Big Data: are we making a big mistake? Significance 11: 14–19.
+
+[11] Kass RE, Eden UT, Brown EN (2014) Analysis of Neural Data. Springer: New York.
+
+[12] Leek JT (2015) The Elements of Data Analytic Style. Leanpub, <https://leanpub.com/artofdatascience>.
+
+[13] Leisch F (2002) Sweave: Dynamic generation of statistical reports using data analysis. In Härdle W, Rönz H, editors. Compstat: Proceedings in Computational Statistics, Heidelberg: Springer-Verlag, pp. 575–580.
+
+[14] Meng XL (2014) A trio of inference problems that could win you a Nobel prize in statistics (if you help fund it). In: Lin X, Genest C, Banks DL, Molenberghs G, Scott DW, Wang J-L,editors. Past, Present, and Future of Statistical Science, Boca Raton: CRC Press. pp. 537–562.
+
+[15] Peng R (2014) The Art of Data Science. Leanpub, <https://leanpub.com/artofdatascience>.
+
+[16] Perez F, Granger BE (2007) IPython: A system for interactive scientific computing. Comput Sci Eng 9(3), 21–29.
+
+[17] Tukey JW (1962) The future of data analysis. Ann Math Stat 33: 1–67.
+
+[18] Wasserstein RL, Lazar NA (2016) The ASA’s statement on p-values: context, process, and purpose, The American Statistician doi: 10.1080/00031305.2016.1154108.
+
+[19] Xie Y (2014) Dynamic Documents with R and knitr. Boca Raton: CRC Press.
+
+[20] Yu, B (2015) Data wisdom for data science. April 13 2015 <http://www.odbms.org/2015/04/data-wisdom-for-data-science/>.
+
+[21] Yu B (2013) Stability. Bernoulli, 19(4): 1484–1500.
+
+
+# 作者简介
+
+**Robert E. Kass:** 卡耐基梅隆大学，统计系，机器学习系，认知神经基础中心，美国
+**Brian S. Caffo:** 约翰霍普金斯大学，生物统计系，布隆伯格公共卫生学院，美国
+**Marie Davidian:** 北卡罗莱纳州立大学，统计系，美国
+**Xiaoli Meng 孟晓犁:** 哈佛大学，统计系，美国
+**Bin Yu 郁彬:** 加州大学伯克利分校，统计系，电子工程与计算机科学系，美国
+**Nancy Reid:** 多伦多大学，统计科学系，加拿大
+
 
 <p style="text-align: right;">
-  翻译：吕翔 (Xiang Lyu)
+翻译：吕翔 (Xiang Lyu)
+
+审稿：施涛 (Tao Shi)、谢益辉 (Yihui Xie)
+
+编辑：闫晗 (Han Yan)、吕翔 (Xiang Lyu)
 </p>
 
-<p style="text-align: right;">
-  审稿：施涛 (Tao Shi)、谢益辉 (Yihui Xie)
-</p>
-
-<p style="text-align: right;">
-  编辑：闫晗 (Han Yan)、吕翔 (Xiang Lyu)
-</p>
