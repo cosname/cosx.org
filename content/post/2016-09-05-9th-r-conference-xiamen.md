@@ -8,8 +8,8 @@ slug: 9th-r-conference-xiamen
 ---
 
 <p style="text-align: center;">
-**第九届中国R语言会议（厦门）**
-**暨厦门大学数据科学与量化金融研讨会**
+<strong>第九届中国R语言会议（厦门）</strong><br>
+<strong>暨厦门大学数据科学与量化金融研讨会</strong>
 </p>
 
 # 一、会议概况
@@ -22,7 +22,7 @@ slug: 9th-r-conference-xiamen
 
 # 二、会议时间
 
-## 2016年11月19-20日
+2016年11月19-20日
 
 # 三、会议地点
 
