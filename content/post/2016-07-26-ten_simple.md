@@ -275,12 +275,12 @@ Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12
 
 # 作者简介
 
-**Robert E. Kass:** 卡耐基梅隆大学，统计系，机器学习系，认知神经基础中心，美国
-**Brian S. Caffo:** 约翰霍普金斯大学，生物统计系，布隆伯格公共卫生学院，美国
-**Marie Davidian:** 北卡罗莱纳州立大学，统计系，美国
-**Xiaoli Meng 孟晓犁:** 哈佛大学，统计系，美国
-**Bin Yu 郁彬:** 加州大学伯克利分校，统计系，电子工程与计算机科学系，美国
-**Nancy Reid:** 多伦多大学，统计科学系，加拿大
+**Robert E. Kass:** 卡耐基梅隆大学，统计系，机器学习系，认知神经基础中心，美国  
+**Brian S. Caffo:** 约翰霍普金斯大学，生物统计系，布隆伯格公共卫生学院，美国  
+**Marie Davidian:** 北卡罗莱纳州立大学，统计系，美国  
+**Xiaoli Meng 孟晓犁:** 哈佛大学，统计系，美国  
+**Bin Yu 郁彬:** 加州大学伯克利分校，统计系，电子工程与计算机科学系，美国  
+**Nancy Reid:** 多伦多大学，统计科学系，加拿大  
 
 
 <p style="text-align: right;">
