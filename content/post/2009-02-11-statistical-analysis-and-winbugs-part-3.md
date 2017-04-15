@@ -14,9 +14,9 @@ tags:
 slug: statistical-analysis-and-winbugs-part-3
 ---
 
-# <span style="color: #800000;">用GeoBUGS做简单的空间数据分析</span>
+# 用GeoBUGS做简单的空间数据分析
 
-## <span style="color: #800000;">第一节 实例介绍基本的空间模型</span>
+## 第一节 实例介绍基本的空间模型
 
 GeoBUGS是WinBUGS的一个模块，专门用来分析空间数据（spatial data)。由于和WinBUGS的基本模型结合得比较好，所以被广泛地使用。目前的GeoBUGS除了自身的地图格式外，还支持Splus, ArcInfo 以及 EpiMap的地图格式。当然了，在使用的时候需要做适当的转化才行。
 
@@ -24,12 +24,14 @@ GeoBUGS是WinBUGS的一个模块，专门用来分析空间数据（spatial data
 
 <!--more-->
 
-<pre class="brush: r">County	Observed	Expected	Percentage	SMR	Adjacent
+```winbugs
+County	Observed	Expected	Percentage	SMR	Adjacent
 	cases (Oi)	cases (Ei)	in agric.(xi)		counties
 1 	9 		1.4 		16 		652.2 	5,9,11,19
 2 	39 		8.7 		16 		450.3 	7,10
 … 	… 		… 		… 		… 	…
-56 	0 		1.8 		10 		0.0 	18,24,30,33,45,55</pre>
+56 	0 		1.8 		10 		0.0 	18,24,30,33,45,55
+```
 
 County 为郡的编号。
 
@@ -45,31 +47,36 @@ SMR（Standardised Mortality Ratios）为标准死亡率。
 
 通过观察数据，我们可以发现SMR在某些时候（比如Oi和Ei较小时）出现奇异的值（如 0.0），所以我们需要通过smooth方法来调整SMR的值。这里我们采用的方法是在条件自相关（CAR）的先验假定下，拟合具有空间相关的随机混效Poisson模型。模型如下：
 
-$O\_i \sim Poisson (\mu\_i) $
+`$$O_i \sim Poisson (\mu_i) $$`
 
-$log \mu\_i = log E\_i + \alpha\_0 + \alpha\_1 x\_i / 10 + b\_i$
+`$$log \mu_i = log E_i + \alpha_0 + \alpha_1 x_i / 10 + b_i$$`
 
-其中$\alpha_0$为intercept项反映的是各个区域间患病的相对基准风险。
+其中`$\alpha_0$`为intercept项反映的是各个区域间患病的相对基准风险。
 
-$b_i$反映的是与地域相关的潜在的患病风险因子。其他项不言自明。
+`$b_i$`反映的是与地域相关的潜在的患病风险因子。其他项不言自明。
 
-需要重点提出的是这里的$b_i$,在GeoBUGS中可以通过**<span style="color: #ff0000;">car.normal</span>**先验分布来描述。在贝叶斯统计中任河变量都可以通过一个分布来描述。
+需要重点提出的是这里的`$b_i$`,在GeoBUGS中可以通过**car.normal**先验分布来描述。在贝叶斯统计中任河变量都可以通过一个分布来描述。
 
-<pre class="brush: r">b[1:N] ~ car.normal(adj[], weights[], num[], tau)</pre>
+```winbugs
+b[1:N] ~ car.normal(adj[], weights[], num[], tau)
+```
 
-**adj[]**为邻接郡的编号
+**adj[]** 为邻接郡的编号
 
-**weights[]**为描述各个郡之间重要性差异的权因子
+**weights[]** 为描述各个郡之间重要性差异的权因子
 
-**num[]**每个郡的相邻郡的个数
+**num[]** 每个郡的相邻郡的个数
 
-**tau**反映的是精度，因为不知道，所以在模型设定时要将其放到先验参数中去。
+**tau** 反映的是精度，因为不知道，所以在模型设定时要将其放到先验参数中去。
 
 通过前两次介绍的方法，我们很容易就可以得到模型的结果。下面我们来看看如何将结果反映到地图上去。
 
-## <span style="color: #800000;">第二节 GeoBUGS的界面操作</span><figure id="attachment_1271" style="width: 438px" class="wp-caption aligncenter">
+## 第二节 GeoBUGS的界面操作
 
-![GeoBUGS的地图工具配置界面](https://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png "GeoBUGS的地图工具配置界面")<figcaption class="wp-caption-text">GeoBUGS的地图工具配置界面</figcaption></figure> 
+
+
+![GeoBUGS的地图工具配置界面](https://cos.name/wp-content/uploads/2009/02/geobugs-3-3.png "GeoBUGS的地图工具配置界面")
+<p style="text-align: center;">GeoBUGS的地图工具配置界面</p>
 
 第一步，打开Map-> Map Tool菜单，选择Scotland这张地图
 
@@ -81,19 +88,21 @@ $b_i$反映的是与地域相关的潜在的患病风险因子。其他项不言
 
 当然还可以在quantity中设置不同的需要反映的量的类型。
 
-很简单吧。<figure id="attachment_1272" style="width: 445px" class="wp-caption aligncenter">
+很简单吧。
+![GeoBUGS生成的地图](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png "GeoBUGS生成的地图")
+<p style="text-align: center;">GeoBUGS生成的地图</p>
 
-![GeoBUGS生成的地图](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-map.png "GeoBUGS生成的地图")<figcaption class="wp-caption-text">GeoBUGS生成的地图</figcaption></figure> 
+GeoBUGS还提供了一些小工具，比如Adjacency Map来查看邻接图。
 
-GeoBUGS还提供了一些小工具，比如Adjacency Map来查看邻接图。<figure id="attachment_1273" style="width: 300px" class="wp-caption aligncenter">
+![用GeoBUGS显示邻接地图](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png "用GeoBUGS显示邻接地图")
+<p style="text-align: center;">用GeoBUGS显示邻接地图</p>
 
-![用GeoBUGS显示邻接地图](https://cos.name/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png "用GeoBUGS显示邻接地图")<figcaption class="wp-caption-text">用GeoBUGS显示邻接地图</figcaption></figure> 
-
-## <span style="color: #800000;">附录</span>
+## 附录
 
 以下是WinBUGS用到的模型代码：
 
-<pre class="brush: r">#Model
+```winbugs
+#Model
 model
 {
     for (i in 1:N) {
@@ -152,6 +161,7 @@ list(N = 56, O = c(9, 39, 11, 9, 15, 8, 26, 7, 6,
 list(tau = 1, alpha0 = 0, alpha1 = 0, b = c(0, 0,
     0, 0, 0, NA, 0, NA, 0, 0, NA, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))</pre>
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+```
 
 WinBUGS在统计分析中的应用 第三部分完

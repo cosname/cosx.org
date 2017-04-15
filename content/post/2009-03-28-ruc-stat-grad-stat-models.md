@@ -18,108 +18,109 @@ slug: ruc-stat-grad-stat-models
 **Spring 2009**
 
 **Instructor:** 田茂再  (Email: mztian(at)ruc.edu.cn)
-  
-**Office Hours:** by appointment
-  
-**Lectures:** Friday, 2:00-5:00 p.m.,   0308 Mingde Main Building
-  
-**Teaching  Assistant:** 程晓月  (Email: chengxy(at)ruc.edu.cn)
 
-### Text Book:
+**Office Hours:** by appointment
+
+**Lectures:** Friday, 2:00-5:00 p.m.,   0308 Mingde Main Building
+
+**Teaching  Assistant:** 程晓月  (Email: chengxy(at)ruc.edu.cn)
+<!--more-->
+
+## Text Book:
 
   * Part 1 —- Linear Models
 Searle, S. R. Linear Models
-  
+
 Searle, S. R. Matrix Algebra Useful for Statistics
-  
+
 Seber G. A. F. Linear Regression Analysis
-  
-Graybill, F. A. The Theory and Applications of the Linear Model</ul> 
+
+Graybill, F. A. The Theory and Applications of the Linear Model</ul>
 
   * Part 2 —- Nonparametric & Semiparametric Models
 Wolfgang Hardle, et al.   Nonparametric and Semiparametric Models
-  
-Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul> 
 
-### Outline:
+Wolfgang Hardle.    Smoothing Techniques with Implementation in S</ul>
 
-  * Mar. 27 
+## Outline:
+
+  * Mar. 27
       1. Matrix Algebra
-      2. General Linear Model
+      1. General Linear Model
 
-  * Apr. 3 
+  * Apr. 3
       1. The Weighted Least Square Estimation
-      2. The Best Linear Unbiased Estimator (b.l.u.e.)
-      3. MLE
-      4. Partitioning Total Sum of Squares
+      1. The Best Linear Unbiased Estimator (b.l.u.e.)
+      1. MLE
+      1. Partitioning Total Sum of Squares
 
-  * Apr. 10 
+  * Apr. 10
       1. Introduction to Nonparametric & Semiparametric Models
-      2. Histogram
+      1. Histogram
 
-  * Apr. 17 
+  * Apr. 17
       1. Average Shifted Histogram
-      2. Kernel Density Estimation (properties, parameter selection, kernel choosing, multivariate situation)
+      1. Kernel Density Estimation (properties, parameter selection, kernel choosing, multivariate situation)
 
-  * May 8 
+  * May 8
       1. Nonparametric Regression
-      2. Multivariate Kernel Density Estimation
-      3. Local Polynomial Regression
-      4. _k_ – Nearest Neighbor Estimation
+      1. Multivariate Kernel Density Estimation
+      1. Local Polynomial Regression
+      1. _k_ – Nearest Neighbor Estimation
 
-  * May 15 
+  * May 15
       1. Dimension Reduction (Variable Selection in Nonparametric Regression, Nonparametric Link Function, Semi- or Nonparametric Index)
-      2. Generalized Linear Model (Exponential Family, Link Function)
+      1. Generalized Linear Model (Exponential Family, Link Function)
 
-  * May 22 
+  * May 22
       1. Single Index Model
-      2. Estimation (Semi-parametric Least Square, Pseudo Likelihood Estimation, Weighted Average Derivative Estimation)
+      1. Estimation (Semi-parametric Least Square, Pseudo Likelihood Estimation, Weighted Average Derivative Estimation)
 
-  * May 31 
+  * May 31
       1. Partial Linear Model
-      2. Generalized Partial Linear Model
-      3. Estimation Algorithm for PLM & GPLM
+      1. Generalized Partial Linear Model
+      1. Estimation Algorithm for PLM & GPLM
 
-  * June 5 
+  * June 5
       1. Profile likelihood
-      2. Testing the GPLM (LRT, Modified LRT)
+      1. Testing the GPLM (LRT, Modified LRT)
 
-  * June 12 
+  * June 12
       1. Additive Models
       2. Generalized Additive Models
 
-### Homework:
+## Homework:
 
-  * Mar. 27 
+  * Mar. 27
       1. ex1_05.pdf
-  
+
         —-**deadline:  Apr.10**
-      2. ex2\_05.pdf; ex3\_05.pdf; exercise in class($E(\epsilon’ A \epsilon)=?$)
-  
+      1. ex2\_05.pdf; ex3\_05.pdf; exercise in class($E(\epsilon’ A \epsilon)=?$)
+
         —-**deadline:  Apr.17**
 
-  * Apr. 3 
+  * Apr. 3
       1. Prove that $\hat{\beta}$ and SSE are independent.
-      2. What is R square?
+      1. What is R square?
 
-  * Apr. 10 
-      1. Why does the logit model choose the link function $G(\cdot)=\frac{1}{\exp (-X^T\beta)}$ ?
+  * Apr. 10
+      1. Why does the logit model choose the link function `$G(\cdot)=\frac{1}{\exp (-X^T\beta)}$` ?
 
-  * Apr. 17 
+  * Apr. 17
       1. Exercise 3.1, 3.9, 3.14,  Page 109 of “Nonparametric and Semiparametric__ Models-An introduction.pdf” ******
-  
+
         —-deadline: May. 8**
 
-### Final Exam:
+## Final Exam:
 
 June 26
 
-### Grading Policy:
+## Grading Policy:
 
   * 20% homework
   * 50% final exam
   * 30% paperwork
 
-### Note:
+## Note:
 
   * Late homework has influence on the grade. The reduced points are in direct proportion to the time delayed.
