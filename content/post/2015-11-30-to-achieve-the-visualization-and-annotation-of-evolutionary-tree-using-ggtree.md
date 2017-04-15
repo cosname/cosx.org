@@ -34,7 +34,7 @@ slug: to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggt
 
 是最常用的存储进化树的文件格式，如上面这个树，拓朴结构用[newick](http://evolution.genetics.washington.edu/phylip/newicktree.html)格式可以表示为：
 
-```r
+```
 (B,(A,C,E),D);
 ```  
 
@@ -42,7 +42,7 @@ slug: to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggt
 
 加上分支长度，使用:来分隔：
 
-```r
+```
 (B:6.0,(A:5.0,C:3.0,E:4.0):5.0,D:11.0);
 ```  
 
@@ -50,9 +50,9 @@ slug: to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggt
 
 内部节点也可以有label，写在相应的括号外面，如下所示：
 
-
+```
 (B:6.0,(A:5.0,C:3.0,E:4.0)Ancestor1:5.0,D:11.0);
-
+```
 
 这是最为广泛支持的文件格式，很多进化树可视软件只支持newick格式。
   
@@ -63,7 +63,7 @@ codeml_file <-system.file("extdata/PAML_Codeml/mlc", package="ggtree")
 tree_text <-readLines(codeml_file)[375:376]
 tree_text
  
-# [1] "w ratios as labels for TreeView:"                                                                                                                                                                                                                                             ## # [2] "(K #0.0224 , N #0.0095 , (D #0.0385 , (L #0.0001 , (J #0.0457 , (G #0.1621 , ((C #0.0461 , (E #0.0641 , O #0.0538 ) #0.0001 ) #0.0395 , (H #0.1028 , (I #0.0001 , (B #0.0001 , (A #0.0646 , (F #0.2980 , M #0.0738 ) #0.0453 ) #0.0863 ) #1.5591 ) #0.0001 ) #0.0001 ) #0.0549 ) #0.0419 ) #0.0001 ) #0.0964 ) #0.0129 );"
+# [1] "w ratios as labels for TreeView:"                                                                                                                                                                                                                     ## # [2] "(K #0.0224 , N #0.0095 , (D #0.0385 , (L #0.0001 , (J #0.0457 , (G #0.1621 , ((C #0.0461 , (E #0.0641 , O #0.0538 ) #0.0001 ) #0.0395 , (H #0.1028 , (I #0.0001 , (B #0.0001 , (A #0.0646 , (F #0.2980 , M #0.0738 ) #0.0453 ) #0.0863 ) #1.5591 ) #0.0001 ) #0.0001 ) #0.0549 ) #0.0419 ) #0.0001 ) #0.0964 ) #0.0129 );"
     
 ``` 
 
@@ -91,7 +91,7 @@ ggtree(read.tree(file))
 
 ```r
 if (show.tip.label) {
- p <-p + geom_text(data = df.tip, aes(x = x, y = y, label = label),
+ p <- p + geom_text(data = df.tip, aes(x = x, y = y, label = label),
  hjust = 0, size = tip.label.size)
  } 
 ```  
@@ -104,10 +104,10 @@ ggtree是真正扩展ggplot2，支持图形语法的包。我们首先扩展ggpl
 
 ```r
 library(ggplot2)
- library(ggtree)
- set.seed(2015-11-26)
- tree <-rtree(30)
- ggplot(tree, aes(x, y)) + geom_tree() 
+library(ggtree)
+set.seed(2015-11-26)
+tree <-rtree(30)
+ggplot(tree, aes(x, y)) + geom_tree() 
 ```  
 
 ![001](https://cos.name/wp-content/uploads/2015/11/0011.jpg)
@@ -131,15 +131,15 @@ ggtree(tree) + geom_tiplab() + geom_point(color='firebrick')
 ggtree提供了多个函数可以把clade放大缩小(scaleClade)，折叠(collapse)和展开(expand)，位置调换和旋转，以及分类(groupOTU, groupClade)。
 
 ```r
-nwk <-system.file("extdata", "sample.nwk", package="ggtree")
- tree <-read.tree(nwk)
- p <-ggtree(tree)
- cp <-ggtree(tree) %&gt;% collapse(node=21) + ggtitle('collapse')
- ep <-cp + expand(node=21) + ggtitle('expand')
- hp <-p + hilight(node=21) + ggtitle('hilight')
- rp <-hp + rotate(node=21) + ggtitle('rotate')
- library(gridExtra)
- grid.arrange(cp, ep, hp, rp, ncol=2) 
+nwk <- system.file("extdata", "sample.nwk", package="ggtree")
+tree <- read.tree(nwk)
+p <- ggtree(tree)
+cp <- ggtree(tree) %>% collapse(node=21) + ggtitle('collapse')
+ep <- cp + expand(node=21) + ggtitle('expand')
+hp <- p + hilight(node=21) + ggtitle('hilight')
+rp <- hp + rotate(node=21) + ggtitle('rotate')
+library(gridExtra)
+grid.arrange(cp, ep, hp, rp, ncol=2) 
 ```  
 
 ![005](https://cos.name/wp-content/uploads/2015/11/0051.jpg)
@@ -154,14 +154,14 @@ ggtree支持的文件格式包括Newick, Nexus, NHX和jplace。
 
 ```r
 nhxfile = system.file("extdata", "ADH.nhx", package="ggtree")
- nhx <-read.nhx(nhxfile)
- ggtree(nhx, ladderize=F) + geom_tiplab() + geom_point(aes(color=S), size=8, alpha=.3) +
- theme(legend.position="right") +
- geom_text(aes(label=branch.length, x=branch), vjust=-.5) +
- xlim(NA, 0.3) 
+nhx <-read.nhx(nhxfile)
+ggtree(nhx, ladderize=F) + geom_tiplab() + geom_point(aes(color=S), size=8, alpha=.3) +
+theme(legend.position="right") +
+geom_text(aes(label=branch.length, x=branch), vjust=-.5) +
+xlim(NA, 0.3) 
 ```  
 
- ![007](https://cos.name/wp-content/uploads/2015/11/0071.jpg)支持解析多种软件的输出文件
+![007](https://cos.name/wp-content/uploads/2015/11/0071.jpg)支持解析多种软件的输出文件
 
 我们知道FigTree是针对[BEAST](http://ygc.name/2015/04/01/an-example-of-drawing-beast-tree-using-ggtree/)的输出设计的，可以把BEAST的统计推断拿来给树做注释，但很多的进化分析软件并没有相应的画树软件支持，用户很难把信息展示出来。
 
@@ -171,10 +171,10 @@ ggtree支持ape, phangorn, r8s, RAxML, PAML, HYPHY, EPA, pplacer和BEAST的输�
 
 ```r
 raxml_file <-system.file("extdata/RAxML", "RAxML_bipartitionsBranchLabels.H3", package="ggtree")
- raxml <-read.raxml(raxml_file)
- ggtree(raxml) + geom_text(aes(label=bootstrap, color=bootstrap)) +
- scale_color_gradient(high='red', low='darkgreen') +
- theme(legend.position='right') 
+raxml <-read.raxml(raxml_file)
+ggtree(raxml) + geom_text(aes(label=bootstrap, color=bootstrap)) +
+scale_color_gradient(high='red', low='darkgreen') +
+theme(legend.position='right') 
 ```  
 
 ![008](https://cos.name/wp-content/uploads/2015/11/008.jpg)
@@ -183,8 +183,8 @@ multiPhylo也是支持的，所以100颗bootstrap树可以同时用一行代码�
 
 ```r
 btree_file <-system.file("extdata/RAxML", "RAxML_bootstrap.H3", package="ggtree")
- btree = read.tree(btree_file)
- ggtree(btree) + facet_wrap(~.id, ncol=10) 
+btree = read.tree(btree_file)
+ggtree(btree) + facet_wrap(~.id, ncol=10) 
 ```  
 
 ![010](https://cos.name/wp-content/uploads/2015/11/010.jpg)
@@ -197,9 +197,9 @@ btree_file <-system.file("extdata/RAxML", "RAxML_bootstrap.H3", package="ggtree"
 
 ```r
 rstfile <-system.file("extdata/PAML_Baseml", "rst", package="ggtree")
- rst <-read.paml_rst(rstfile)
- p <-ggtree(rst) + geom_text(aes(label=marginal_AA_subs, x=branch), vjust=-.5)
- print(p) 
+rst <-read.paml_rst(rstfile)
+p <-ggtree(rst) + geom_text(aes(label=marginal_AA_subs, x=branch), vjust=-.5)
+print(p) 
 ```  
 
 ![011](https://cos.name/wp-content/uploads/2015/11/011.png)
@@ -208,8 +208,8 @@ rstfile <-system.file("extdata/PAML_Baseml", "rst", package="ggtree")
 
 ```r
 rstfile <-system.file("extdata/PAML_Codeml", "rst", package="ggtree")
- crst <-read.paml_rst(rstfile)
- p %<% crst 
+crst <-read.paml_rst(rstfile)
+p %>% crst
 ```  
 
 ![012](https://cos.name/wp-content/uploads/2015/11/012.jpg)
@@ -222,10 +222,10 @@ CodeML的dN/dS分析，我们可以直接把数据拿来给树上色。同样道
 
 ```r
 mlc_file <-system.file("examples/mlc", package="ggtree")
- mlc <-read.codeml_mlc(mlc_file)
- ggtree(mlc, aes(color=dN_vs_dS)) +
- scale_color_continuous(limits=c(0, 1.5), high='red', low='green', oob=scales::squish, name='dN/dS') +
- theme(legend.position='right') 
+mlc <-read.codeml_mlc(mlc_file)
+ggtree(mlc, aes(color=dN_vs_dS)) +
+scale_color_continuous(limits=c(0, 1.5), high='red', low='green', oob=scales::squish, name='dN/dS') +
+theme(legend.position='right') 
 ```  
 
  ![013](https://cos.name/wp-content/uploads/2015/11/013.jpg) 使用用户定义数据
@@ -234,17 +234,16 @@ mlc_file <-system.file("examples/mlc", package="ggtree")
 
 ```r
 nwk <-system.file("extdata", "sample.nwk", package="ggtree")
- tree <-read.tree(nwk)
- p <-ggtree(tree)
-
- dd <-data.frame(taxa = LETTERS[1:13],
- place = c(rep("GZ", 5), rep("HK", 3), rep("CZ", 4), NA),
- value = round(abs(rnorm(13, mean=70, sd=10)), digits=1))
- ## you don't need to order the data
- ## data was reshuffled just for demonstration
- dd <-dd[sample(1:13, 13), ]
- row.names(dd) <-NULL
- print(dd) 
+tree <-read.tree(nwk)
+p <-ggtree(tree)
+dd <-data.frame(taxa = LETTERS[1:13],
+place = c(rep("GZ", 5), rep("HK", 3), rep("CZ", 4), NA),
+value = round(abs(rnorm(13, mean=70, sd=10)), digits=1))
+## you don't need to order the data
+## data was reshuffled just for demonstration
+dd <-dd[sample(1:13, 13), ]
+row.names(dd) <- NULL
+print(dd) 
 ```  
 
 ![014](https://cos.name/wp-content/uploads/2015/11/014.jpg)
@@ -253,7 +252,7 @@ nwk <-system.file("extdata", "sample.nwk", package="ggtree")
 
 ```r
 p <- p %<+% dd + geom_text(aes(color=place, label=label), hjust=-0.5) +
- geom_tippoint(aes(size=value, shape=place, color=place), alpha=0.25)
+geom_tippoint(aes(size=value, shape=place, color=place), alpha=0.25)
 p+theme(legend.position="right") 
 ```  
 
