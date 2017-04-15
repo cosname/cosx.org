@@ -11,11 +11,9 @@ tags:
 slug: r-and-parallel-computing
 ---
 
- 作者简介     
+作者简介     
 
-赵鹏，世界知名IT企业性能分析师。在包括多核、分布式以及GPU通用计算方面具有丰富的研究和实践经验，善于帮助客户解决性能问题以及提供并行化方案。R语言爱好者，业余时间创建了ParallelR网站，
-
-<www.parallelr.com>，以此来分享R和并行计算相关内容。
+赵鹏，世界知名IT企业性能分析师。在包括多核、分布式以及GPU通用计算方面具有丰富的研究和实践经验，善于帮助客户解决性能问题以及提供并行化方案。R语言爱好者，业余时间创建了ParallelR网站<www.parallelr.com>，以此来分享R和并行计算相关内容。
 
 # 文章摘要     
 
@@ -25,7 +23,7 @@ slug: r-and-parallel-computing
 
 # R与并行计算
 
-统计之都的小伙伴们对R，SAS，SPSS， MATLAB之类的统计软件的使用定是轻车熟路了，但是对并行计算（又名高性能计算，分布式计算）等概念可能多少会感到有点陌生。应太云兄之邀，在此给大家介绍一些关于并行计算的基本概念以及在R中的使用。                 
+统计之都的小伙伴们对R，SAS，SPSS， MATLAB之类的统计软件的使用定是轻车熟路了，但是对并行计算（又名高性能计算，分布式计算）等概念可能多少会感到有点陌生。应太云兄之邀，在此给大家介绍一些关于并行计算的基本概念以及在R中的使用。
 
 # 什么是并行计算？
 
@@ -33,9 +31,11 @@ slug: r-and-parallel-computing
 
 ![001](https://cos.name/wp-content/uploads/2016/09/001.png)
 
- 不过，近年来随着个人PC机，廉价机群，以及各种加速卡(NVIDIA GPU, Intel Xeon Phi, FPGA)的快速发展，现在个人电脑已经完全可以和过去的高性能计算机相媲美了。              相比于计算机硬件的迅速发展，并行软件的发展多少有些滞后，试想你现在使用的哪些软件是支持并行化运算的呢？
-  ![002](https://cos.name/wp-content/uploads/2016/09/002.png)    
- 软件的并行化需要更多的研发支持，以及对大量串行算法和现有软件的并行化，这部分工作被称之为代码现代化（code modernization）。听起来相当高大上的工作，然而在实际中大量的错误修正（BUGFIX），底层数据结构重写，软件框架的更改，以及代码并行化之后带来的运行不确定性和跨平台等问题极大地增加了软件的开发维护成本和运行风险，这也使得这项工作在实际中并没有想象中的那么吸引人。                
+不过，近年来随着个人PC机，廉价机群，以及各种加速卡(NVIDIA GPU, Intel Xeon Phi, FPGA)的快速发展，现在个人电脑已经完全可以和过去的高性能计算机相媲美了。相比于计算机硬件的迅速发展，并行软件的发展多少有些滞后，试想你现在使用的哪些软件是支持并行化运算的呢？
+
+![002](https://cos.name/wp-content/uploads/2016/09/002.png)
+
+软件的并行化需要更多的研发支持，以及对大量串行算法和现有软件的并行化，这部分工作被称之为代码现代化（code modernization）。听起来相当高大上的工作，然而在实际中大量的错误修正（BUGFIX），底层数据结构重写，软件框架的更改，以及代码并行化之后带来的运行不确定性和跨平台等问题极大地增加了软件的开发维护成本和运行风险，这也使得这项工作在实际中并没有想象中的那么吸引人。                
 
 # R为什么需要并行计算？          
 
@@ -58,13 +58,13 @@ slug: r-and-parallel-computing
 ![temp](https://cos.name/wp-content/uploads/2016/09/temp.png)     
 
 ## 2、使用R中的多线程函数
-OpenMP是一种基于共享内存的多线程库，主要用于单节点上应用程序加速。最新的R在编译时就已经打开了OpenMP选项，这意味着一些计算可以在多线程的模式下运行。比如R中的dist函数就 是一个多线程实现的函数，通过设置线程数目来使用当前机器上的多个计算核心，下面我们用一个简单的例子来感受下并行计算的效率， GitHub上有完整代码^[https://github.com/PatricZhao/ParallelR/blob/master/PP_for_COS/ImplicitParallel_MT.R]， 此代码需在Linux系统下运行。            
+OpenMP是一种基于共享内存的多线程库，主要用于单节点上应用程序加速。最新的R在编译时就已经打开了OpenMP选项，这意味着一些计算可以在多线程的模式下运行。比如R中的dist函数就是一个多线程实现的函数，通过设置线程数目来使用当前机器上的多个计算核心，下面我们用一个简单的例子来感受下并行计算的效率，GitHub上有完整代码^[https://github.com/PatricZhao/ParallelR/blob/master/PP_for_COS/ImplicitParallel_MT.R]， 此代码需在Linux系统下运行。            
 
 ```r
 #comparison of single thread and multiple threads run
 for(i in 6:11) {
     ORDER <- 2^i
-    m <- matrix(rnorm(ORDER*ORDER),ORDER,ORDER);
+    m <- matrix(rnorm(ORDER*ORDER),ORDER,ORDER)
     .Internal(setMaxNumMathThreads(1)); .Internal(setNumMathThreads(1)); res <- system.time(d <- dist(m))
     print(res)
     .Internal(setMaxNumMathThreads(20)); .Internal(setNumMathThreads(20)); res <- system.time(d <- dist(m))
@@ -72,7 +72,7 @@ for(i in 6:11) {
 }
 ```              
 
- ![005](https://cos.name/wp-content/uploads/2016/09/005.png)  
+![005](https://cos.name/wp-content/uploads/2016/09/005.png)  
 
 ## 3、使用并行化包
 在R高性能计算列表^[https://cran.r-project.org/web/views/HighPerformanceComputing.html]中已经列出了一些现有的并行化包和工具。用户使用这些并行化包可以像使用其他所有R包一样快捷方便，始终专注于所处理的问题本身，而不必考虑太多关于并行化实现以及性能提升的问题。 我们以H2O.ai^[http://www.h2o.ai/]为例。 H2O后端使用Java实现多线程以及多机计算，前端的R接口简单清晰，用户只需要在加载包之后初始化H2O的线程数即可，后续的计算， 如GBM，GLM, DeepLearning算法，将会自动被分配到多个线程以及多个CPU上。详细函数可参见H2O文档^[http://docs.h2o.ai/h2o/latest-stable/h2o-docs/booklets/RBooklet.pdf]。            
@@ -102,7 +102,9 @@ R is connected to the H2O cluster:
 # 显示并行计算        
 显式计算则要求用户能够自己处理算例中数据划分，任务分配，计算以及最后的结果收集。因此，显式计算模式对用户的要求更高，用户不仅需要理解自己的算法，还需要对并行计算和硬件有一定的理解。值得庆幸的是，现有R中的并行计算框架，如parallel (snow,multicores)，Rmpi和foreach等采用的是映射式并行模型（Mapping），使用方法简单清晰，极大地简化了编程复杂度。R用户只需要将现有程序转化为*apply或者for的循环形式之后，通过简单的API替换来实现并行计算。对于更为复杂的计算模式，用户可以通过重复映射收集（Map-Reduce）的过程来构造。
 
-![006](https://cos.name/wp-content/uploads/2016/09/006.png)          下面我们用一元二次方程求解问题来介绍如何利用*apply和foreach做并行化计算，完整的代码（ExplicitParallel.R）^[https://github.com/PatricZhao/ParallelR/blob/master/PP_for_COS/ExplicitParallel.R]可以在GitHuB上下载。 首先，我们给出一个非向量化的一元二次方程求解函数，其中包括了对几种特殊情况的处理，如二次项系数为零，二次项以及一次项系数都为零或者开根号数为负。我们随机生成了3个大向量分别保存了方程的二次项，一次项和常数项系数。            
+![006](https://cos.name/wp-content/uploads/2016/09/006.png)          
+
+下面我们用一元二次方程求解问题来介绍如何利用*apply和foreach做并行化计算，完整的代码（ExplicitParallel.R）^[https://github.com/PatricZhao/ParallelR/blob/master/PP_for_COS/ExplicitParallel.R]可以在GitHuB上下载。 首先，我们给出一个非向量化的一元二次方程求解函数，其中包括了对几种特殊情况的处理，如二次项系数为零，二次项以及一次项系数都为零或者开根号数为负。我们随机生成了3个大向量分别保存了方程的二次项，一次项和常数项系数。            
 
 ```r
 # Not vectorized function
@@ -128,7 +130,7 @@ b <- runif(len, -10, 10)
 c <- runif(len, -10, 10)
 ```                  
 
- apply实现方式：  首先我们来看串行代码，下面的代码利用lapply函数将方程求解函数solve.quad.eq映射到每一组输入数据上，返回值保存到列表里。            
+apply实现方式：首先我们来看串行代码，下面的代码利用lapply函数将方程求解函数solve.quad.eq映射到每一组输入数据上，返回值保存到列表里。            
 
 ```r
 # serial code
@@ -150,7 +152,7 @@ system.time(
 
 对于非Linux用户来说，我们可以使用parallel包里的parLapply函数来实现并行化。parLapply函数支持Windows，Linux，Mac等不同的平台，可移植性更好，但是使用稍微复杂一点。在使用parLapply函数之前，我们首先需要建立一个计算组（cluster）。计算组是一个软件层次的概念，它指我们需要创建多少个R工作进程（parallel包会创建新的R工作进程，而非multicores里R父进程的副本）来进行计算，理论上计算组的大小并不受硬件环境的影响。比如说我们可以创建一个大小为1000的计算组，即有1000个R工作进程。 但在实际使用中，我们通常会使用和硬件计算资源相同数目的计算组，即每个R工作进程可以被单独映射到一个计算内核。如果计算群组的数目多于现有硬件资源，那么多个R工作进程将会共享现有的硬件资源。
 
-如下例我们先用detectCores确定当前电脑中的内核数目。值得注意的是detectCores的默认返回数目是超线程数目而非真正物理内核的数目。例如在我的笔记本电脑上有2个物理核心，而每个物理核心可以模拟两个超线程，所以detectCores()的返回值是4。 对于很多计算密集型任务来说，超线程对性能没有太大的帮助，所以使用logical=FALSE参数来获得实际物理内核的数目并创建一个相同数目的计算组。由于计算组中的进程是全新的R进程，所以在父进程中的数据和函数对子进程来说并不可见。因此，我们需要利用clusterExport把计算所需的数据和函数广播给计算组里的所有进程。最后parLapply将计算平均分配给计算组里的所有R进程，然后收集合并结果。            
+如下例我们先用detectCores确定当前电脑中的内核数目。值得注意的是detectCores的默认返回数目是超线程数目而非真正物理内核的数目。例如在我的笔记本电脑上有2个物理核心，而每个物理核心可以模拟两个超线程，所以detectCores()的返回值是4。对于很多计算密集型任务来说，超线程对性能没有太大的帮助，所以使用`logical=FALSE`参数来获得实际物理内核的数目并创建一个相同数目的计算组。由于计算组中的进程是全新的R进程，所以在父进程中的数据和函数对子进程来说并不可见。因此，我们需要利用clusterExport把计算所需的数据和函数广播给计算组里的所有进程。最后parLapply将计算平均分配给计算组里的所有R进程，然后收集合并结果。
 
 ```r
 #Cluster on Windows
@@ -163,7 +165,7 @@ system.time(
 stopCluster(cl)
 ```           
 
- for实现方式：  for循环的计算和*apply形式基本类似。在如下的串行实现中，我们提前创建了矩阵用来保存计算结果，for循环内部只需要逐一赋值即可。            
+for实现方式：for循环的计算和apply形式基本类似。在如下的串行实现中，我们提前创建了矩阵用来保存计算结果，for循环内部只需要逐一赋值即可。            
 
 ```r
 # serial code
@@ -209,7 +211,7 @@ stopCluster(cl)
 ## 挑战：
 在实际中，并行计算的问题并没有这么简单。要并行化R以及整个生态环境的挑战仍然巨大。             
 
-##  1、R是一个分散的，非商业化的软件       
+## 1、R是一个分散的，非商业化的软件       
 R并不是由一个紧凑的组织或者公司开发的，其大部分包是由用户自己开发的。这就意味着很难在软件架构和设计上来统一调整和部署。一些商业软件，比如Matlab，它的管理维护开发就很统一，架构的调整和局部重构相对要容易一些。通过几个版本的迭代，软件整体并行化的程度就要高很多。             
 
 ## 2、R的底层设计仍是单线程，上层应用包依赖性很强      
