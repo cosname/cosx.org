@@ -284,10 +284,8 @@ Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12
 
 
 <p style="text-align: right;">
-翻译：吕翔 (Xiang Lyu)
-
-审稿：施涛 (Tao Shi)、谢益辉 (Yihui Xie)
-
-编辑：闫晗 (Han Yan)、吕翔 (Xiang Lyu)
+翻译：吕翔 (Xiang Lyu) <br>
+审稿：施涛 (Tao Shi)、谢益辉 (Yihui Xie) <br>
+编辑：闫晗 (Han Yan)、吕翔 (Xiang Lyu) <br>
 </p>
 
