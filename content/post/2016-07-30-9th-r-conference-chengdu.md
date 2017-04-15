@@ -28,7 +28,7 @@ slug: 9th-r-conference-chengdu
 十年间，统计之都服务着广大统计学爱好者，推动着R语言在中国的传播发展，见证着数据科学时代的逐渐崛起。
 迄今，统计之都已先后出版八本图书，举行海内外沙龙五十余期；未来，我们将再接再厉，继续为国内统计学和数据科学发展贡献自己的力量。
 
-![China-R-Logo-trans](https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans.png)</section> </section> </section> 
+![China-R-Logo-trans](https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans.png)
 
 
 # 二、会议时间
@@ -48,7 +48,7 @@ slug: 9th-r-conference-chengdu
 # 五、会议赞助
 
 本次大会欢迎任何企业、高校、个人的多种形式赞助，作为回馈，会议手册上会印制赞助商介绍，同时为赞助商提供报告演讲机会。
-会议具体情况请和会务组讨论商定，请联系sponsor@cos.name。
+会议具体情况请和会务组讨论商定，请联系 sponsor@cos.name。
 
 
 # 六、演讲者报名
@@ -84,7 +84,7 @@ slug: 9th-r-conference-chengdu
 
 # 十、主办方及协办方介绍
 
-** 西南交通大学经济管理学院**
+**西南交通大学经济管理学院**
 
 西南交通大学创建于1896年，是国家首批“211工程”、“特色985工程”重点建设、首批进入国家“2011计划”协同创新中心并设有研究生院的教育部直属全国重点大学。
 西南交通大学经济管理学院前身为管理工程系，始建于1984年。为适应社会主义市场经济发展对经济管理人才的需要，学校于1993年成立经济管理学院。
