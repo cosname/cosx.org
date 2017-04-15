@@ -64,15 +64,15 @@ devtools::install_github("yihui/xaringan")
 
     ```markdown
     # 忍者等级
-
+    
     - 上忍
-
+    
     --
-
+    
     - 中忍
-
+    
     --
-
+    
     - 下忍
     ```
 
@@ -156,9 +156,9 @@ devtools::install_github("yihui/xaringan")
 * nature下面设置 autoplay 选项，片子每隔一段时间自动播放，单位毫秒
 * 如果不想让无限月读锁死 R 进程，请设置：
 
-```r 
-options(servr.daemon = TRUE)
-```
+    ```r 
+    options(servr.daemon = TRUE)
+    ```
 
 * 累了还可以玩玩yolo大法
 
