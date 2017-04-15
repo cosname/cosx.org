@@ -20,7 +20,7 @@ slug: conjugate-gradient-for-regression
 
 ![共轭梯度示意图（图片来源：维基百科）](https://cos.name/wp-content/uploads/2016/11/CG.png)
 
-<p style="text-align: center;"><del>轮回眼</del> 共轭梯度示意图（图片来源：[维基百科](https://en.wikipedia.org/wiki/Conjugate_gradient_method)）</p>
+~~轮回眼~~ 共轭梯度示意图（图片来源：[维基百科](https://en.wikipedia.org/wiki/Conjugate_gradient_method)）
 
 # 引子
 
