@@ -18,7 +18,7 @@ description: "今天小编给大家介绍一款新的幻灯片神器：xaringan�
 
 在此声明一下本文适宜读者群：R码农，熟悉markdown语法，懂点前端的你们。当然如果以上你都不太熟悉但又有着求知欲，希望本文将是你成为幻灯忍者的起点。
 
-![](https://cloud.githubusercontent.com/assets/18478302/25060138/af1de534-21c8-11e7-8cc1-1a4c3977e798.png)
+![](https://cloud.githubusercontent.com/assets/163582/25060238/2975308c-215e-11e7-8afd-2e9200d7afe3.png)
 
 # 出发！
 
@@ -36,11 +36,11 @@ devtools::install_github("yihui/xaringan")
 
 * 点击菜单 `File -> New File -> R Markdown -> From Template -> Ninja Presentation (Simplified Chinese)`创建一个新文档。
 
-![](https://cos.name/wp-content/uploads/2017/02/fig1.png)
+    ![](https://cos.name/wp-content/uploads/2017/02/fig1.png)
 
 * 点击 Knit 进行编译
 
-![](https://cos.name/wp-content/uploads/2017/02/fig2.png)
+    ![](https://cos.name/wp-content/uploads/2017/02/fig2.png)
 
 此时你会看见一个默认模版，改改就可以开张了！在此之前，你需要了解一些基本魔法：
 
@@ -48,7 +48,7 @@ devtools::install_github("yihui/xaringan")
 
 * 用三个短横线来开始一页新的幻灯片，可以用一个井号开始写标题（标题不是必须元素）
 
-    ```
+    ```markdown
     # 引言
 
     这是第一张片子
@@ -61,7 +61,6 @@ devtools::install_github("yihui/xaringan")
     ```
 
 * 可以用两个短横线分割当前页面，两短横线下面的内容会被接续上面的内容生成在下一页上，比如你有一个三个项目的列表，中间用两短横线分割，最后出来的效果就是先显示第一项，翻下一页继续显示下一项
-
         
         # 忍者等级
     
@@ -77,8 +76,9 @@ devtools::install_github("yihui/xaringan")
 
 * 可以用三个问号添加片子的注释，注释不会直接显示在幻灯片中，而是在演讲者模式中才会出现（键盘上按p键）
 
-    ```
+    ```markdown
     # 影
+    
     只有五大国所属忍者村的首领才可以拥有的称号（动画原创剧情中增加了星影），是“村子中最伟大的忍者”。
 
     ???
@@ -117,38 +117,39 @@ devtools::install_github("yihui/xaringan")
 
 ## 魔法三：插入数学公式
 
-一般情况下依旧是 LaTeX语法，写在一对美元符号中间，如：**`$\alpha + \beta$`**会显示 `$α+β$`。如果你要将公式显示成一个段落而不是嵌在行内，那要用一对双美元符号，如：
+一般情况下依旧是 LaTeX语法，写在一对美元符号中间，如：`​$\alpha + \beta$` 会显示 `$\alpha + \beta$`。如果你要将公式显示成一个段落而不是嵌在行内，那要用一对双美元符号，如：
 
     `$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
 
-![](https://cos.name/wp-content/uploads/2017/02/屏幕快照-2017-02-12-下午10.52.33.png)
-
+`$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$`
 
 ## 魔法四：插入R代码及R图形
 
 * R代码
 
-    ```{r comment='#'}
-    # 一个无聊的回归模型
-    fit = lm(dist ~ 1 + speed, data = cars)
-    coef(summary(fit))
-    dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-    grep('天', dojutsu, value = TRUE)
-    ```
+        ```{r comment='#'}
+        # 一个无聊的回归模型
+        fit = lm(dist ~ 1 + speed, data = cars)
+        coef(summary(fit))
+        dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
+        grep('天', dojutsu, value = TRUE)
+        ```
 
 * R图形
 
-    ```{r cars, fig.height=3.5, dev='svg'}
-    par(mar = c(4, 4, 1, .1))
-    plot(cars, pch = 19, col = 'darkgray', las = 1)
-    abline(fit, lwd = 2)
-    ```
+        ```{r cars, fig.height=3.5, dev='svg'}
+        par(mar = c(4, 4, 1, .1))
+        plot(cars, pch = 19, col = 'darkgray', las = 1)
+        abline(fit, lwd = 2)
+        ```
 
 # 中忍篇
 
 在以上四种魔法的基础上，可以再吃两颗兵粮丸。(设置幻灯片的各种行为)
 
-## 丸子一：YAML(这也是一种标记语言，经常用来写一些配置)头文件设置整个幻灯片的选项
+## 丸子一：YAML^[这也是一种标记语言，经常用来写一些配置]
+
+头文件设置整个幻灯片的选项：
 
 * 定义输出格式：`xaringan::moon_reader`
 * CSS 样式：如果你比较熟悉 CSS ，不妨在外部自定义一个 CSS 文件，以`css: ['extra.css']`的形式引入。如果完全没听过css，请百度各种菜鸟教程，或者去了解一下W3C组织，同时恭喜你入坑。
@@ -161,7 +162,7 @@ devtools::install_github("yihui/xaringan")
 
 * 累了还可以玩玩yolo大法
 
-该选项默认的图片是 Karl Broman 的大头照。如果`yaml yolo: 3`你的幻灯片中将随机出现3次他的大头照，如果`yaml yolo: 0.3`你的幻灯片中将有30%的片子是他的大头照。当然你也可以把默认图片换掉。
+    该选项默认的图片是 Karl Broman 的大头照。如果`yaml yolo: 3`你的幻灯片中将随机出现3次他的大头照，如果`yaml yolo: 0.3`你的幻灯片中将有30%的片子是他的大头照。当然你也可以把默认图片换掉。
 
 * ……
 
@@ -221,7 +222,7 @@ class: center, middle
 
 好，就把这些复制上吧，在浏览器里打开该文件，你就看到了3张片子。
 
-![](https://cos.name/wp-content/uploads/2017/02/fig3-300x188.png)
+![](https://cos.name/wp-content/uploads/2017/02/fig3.png)
 
 不熟悉 HTML 和 CSS 基本语法的可能需要补补（这里用到的不难～）你会看到`<head>`标签里裹了个`<style>`标签，它规定了你的 HTML 元素在浏览器里呈现的样式（比如字体，边距，颜色…），其实也就是 CSS 样式表，这里还是帮大家写了几个例子，比如用类的方式定义颜色，字体粗细等等。在片子里使用的时候，直接用`css .red[我红得像龙虾]`。当然 CSS 可以以外部文件的形式引入。 好，下面来到关键的主体部分了。在这里，你需要用 Markdown 语法开始写你的片子，你的片子需要裹到一个文本区域里面：
 
