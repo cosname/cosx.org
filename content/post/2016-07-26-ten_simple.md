@@ -13,11 +13,12 @@ tags:
 slug: ten_simple
 ---
 
- **本文作者：Robert E. Kass; Brian S. Caffo; Marie Davidian; Xiao-Li Meng; Bin Yu;_ _Nancy Reid**
+ **原文作者：Robert E. Kass; Brian S. Caffo; Marie Davidian; Xiao-Li Meng; Bin Yu; Nancy Reid**
 
-### **原文出处**
+# 原文出处
 
-[Ten Simple Rules for Effective Statistical Practice.](http://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1004961) Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12(6): e1004961. doi:10.1371/journal.pcbi.1004961
+[Ten Simple Rules for Effective Statistical Practice.](http://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1004961)
+Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12(6): e1004961. doi:10.1371/journal.pcbi.1004961
 
 ### 引言
 
