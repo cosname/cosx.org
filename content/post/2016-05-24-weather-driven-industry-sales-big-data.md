@@ -26,9 +26,9 @@ slug: weather-driven-industry-sales-big-data
 
 气象的观测体系是由庞大的物联网（IOT: Internet of Things）构架而成，每分钟都在监测相关天气要素（风速、风向、温度、相对湿度、大气压力、降水等），协同全世界各国的观测网络，同时结合地球科学、大气物理、流体力学等专业知识，通过大型计算机技术完成数值天气预报（Numerical Weather Prediction）。目前的预报模式提供给公众的时间长度为15天，48小时内为逐小时预报，后续为逐日预报。由于观测体系的完备以及计算技术能力的大幅提升，预报的精细度也已经达到平方公里涵盖以及分钟级别，天气预报在一定的时间周期内已经相当成熟且具有高准确度。我们透过行业数据与气象历史数据进行相关性分析确立结果后，根据业务影响关系、数据同比影响等特性，低风险地进行因果性验证。天气数据有可靠的预报准确度，是气象数据可以作为天气驱动行业大数据分析的最大特点。
 
-本文主要研究两项容易受天气因素驱动（影响）的销售预测问题，业务形态特别选取B2B（Business to Business）与B2C（Business to Customer）两种目前多数的业务类型：酒精性饮料的渠道销售预测以及电商平台的羽绒服销量预测。酒精性饮料的销量由很多因素影响，Lee et al.<sup>[2]</sup>和Rojas et al.<sup>[3]</sup>研究了广告对酒精性饮料销量的影响，Voleti et al.<sup>[4]</sup>和Empen et al.<sup>[5]</sup>研究了品牌资产对于酒精性饮料销量的影响。而在酒精性饮料行业中，还有一个公认对酒精性饮料销量影响极大的指标：天气。2015年我国酒精性饮料行业整体销量下滑，很多人都归因于2015年整体气温偏低的。一般酒精性饮料销量呈现季节性变化，天气寒冷的时候消费者对于酒精性饮料的需求会下降，销量会比较低；而在天气炎热的时候，酒精性饮料的销量会明显增高；本项目不考虑终端零售数据，仅研究酒精性饮料的渠道销售情况是否受天气所驱动，也就是各阶层的渠道商实际销售情况是否受天气影响。
+本文主要研究两项容易受天气因素驱动（影响）的销售预测问题，业务形态特别选取B2B（Business to Business）与B2C（Business to Customer）两种目前多数的业务类型：酒精性饮料的渠道销售预测以及电商平台的羽绒服销量预测。酒精性饮料的销量由很多因素影响，Lee et al.和Rojas et al.研究了广告对酒精性饮料销量的影响^[Byunglak Lee, Victor J. Tremblay. Advertising and the U.S. Market Demand for Beer.[J]. Applied Economics, 1992, 24(1):69-76.] ^[Rojas C, Peterson E B. Demand for differentiated products: Price and advertising evidence from the U.S. beer market [J]. International Journal of Industrial Organization, 2008, 26(1):288-307.]，Voleti et al.和Empen et al.研究了品牌资产对于酒精性饮料销量的影响^[Voleti S, Ghosh P. A non-parametric model of residual brand equity in hierarchical branding structures with application to US beer data[J]. Journal of the Royal Statistical Society, 2014, 177(1):135–152.] ^[Empen J, Hamilton S F. How Do SUPERMARKETS RESPOND TO BRAND-LEVEL DEMAND SHOCKS? EVIDENCE FROM THE GERMAN BEER MARKET[J]. American Journal of Agricultural Economics, 2013, 95(5):1223-1229.]。而在酒精性饮料行业中，还有一个公认对酒精性饮料销量影响极大的指标：天气。2015年我国酒精性饮料行业整体销量下滑，很多人都归因于2015年整体气温偏低的。一般酒精性饮料销量呈现季节性变化，天气寒冷的时候消费者对于酒精性饮料的需求会下降，销量会比较低；而在天气炎热的时候，酒精性饮料的销量会明显增高；本项目不考虑终端零售数据，仅研究酒精性饮料的渠道销售情况是否受天气所驱动，也就是各阶层的渠道商实际销售情况是否受天气影响。
 
-对于羽绒服来说，天气的影响更加明显。从生活经验来看，人们主要是在冬天购买羽绒服，而夏天基本上不会有商家出售羽绒服。中国气象局公共气象服务中心和凡客诚品等公司合作利用气象数据进行羽绒服销量的研究，仅利用平均温度的三次多项式方程就得到了比较准确的结果（刘一伶等<sup>[6]</sup>），这表明天气的确对羽绒服的销量有十分重要的影响。
+对于羽绒服来说，天气的影响更加明显。从生活经验来看，人们主要是在冬天购买羽绒服，而夏天基本上不会有商家出售羽绒服。中国气象局公共气象服务中心和凡客诚品等公司合作利用气象数据进行羽绒服销量的研究，仅利用平均温度的三次多项式方程就得到了比较准确的结果（刘一伶等^[刘一伶, 杜春生, 张辉. 羽绒服销量预测模型及其商业应用研究[J]. 现代经济信息, 2012(19):175-176.]），这表明天气的确对羽绒服的销量有十分重要的影响。
 
 在不同的地区，天气对销量的影响也有明显区别。在中国北方地区，四季很明显，换季时时间间隔比较分明，因此人们能快速地根据气温变化进行反应。中国南方地区的换季却十分反复，经常会出现冬天穿夏装的情况，整体湿度也偏高，因此人们根据季节变化和气温变化进行的反应会和北方有很大差别。本文在研究天气对销量的影响时，会分城市进行分析，发现不同城市中天气对销量的影响规律。
 
@@ -203,7 +203,7 @@ slug: weather-driven-industry-sales-big-data
  <table width="555">
  <tr>
    <td colspan="2" width="225">
- **数据**
+ 数据
    </td>
    
    <td colspan="2" width="331">
@@ -217,15 +217,15 @@ slug: weather-driven-industry-sales-big-data
    </td>
    
    <td width="189">
- **字段名****Field name**
+ 字段名Field name
    </td>
    
    <td width="170">
- **字段说明**
+ 字段说明
    </td>
    
    <td width="161">
- **备注说明**
+ 备注说明
    </td>
  </tr>
  
@@ -357,7 +357,7 @@ slug: weather-driven-industry-sales-big-data
  <table width="555">
    <tr>
  <td colspan="2" width="225">
-   **数据**
+   数据
  </td>
  
  <td colspan="2" width="331">
@@ -371,15 +371,15 @@ slug: weather-driven-industry-sales-big-data
  </td>
  
  <td width="189">
-   **字段名****Field name**
+   字段名Field name
  </td>
  
  <td width="170">
-   **字段说明**
+   字段说明
  </td>
  
  <td width="161">
-   **备注说明**
+   备注说明
  </td>
    </tr>
    
@@ -469,11 +469,11 @@ slug: weather-driven-industry-sales-big-data
  <table width="565">
 <tr>
   <td width="282">
-**城市**
+城市
   </td>
   
   <td width="282">
-**Observation**
+Observation
   </td>
 </tr>
 
@@ -556,7 +556,7 @@ slug: weather-driven-industry-sales-big-data
  <table width="555">
 <tr>
   <td colspan="2" width="225">
-**数据**
+数据
   </td>
   
   <td colspan="2" width="331">
@@ -570,15 +570,15 @@ Id
   </td>
   
   <td width="189">
-**字段名****Field name**
+字段名Field name
   </td>
   
   <td width="170">
-**字段说明**
+字段说明
   </td>
   
   <td width="161">
-**备注说明**
+备注说明
   </td>
 </tr>
 
@@ -1299,7 +1299,7 @@ SurfaceTemperatureMin
  
  
  
-对于季节项部分，我们采用随机森林进行预测。随机森林由2001年被Breiman 提出<sup>[7]</sup>，是一种基于树的集成学习算法。Fernandez-Delgado et al.<sup> [8]</sup> 在121份数据集上进行了测试，证明随机森林是在支持向量机、神经网络等机器学习算法中表现得最好的一个算法。对于我们的数据来说，很难看出天气变化对销量的影响呈现特定的函数关系，因此我们选用随机森林这种不需要模型假设的非参数方法进行预测。
+对于季节项部分，我们采用随机森林进行预测。随机森林由2001年被Breiman提出一种基于树的集成学习算法^[Breiman L. Random Forests[J]. Machine Learning, 2001, 45(1):5–32.]。Fernandez-Delgado et al.^[Fernández-Delgado M, Cernadas E, Barro S, et al. Do we need hundreds of classifiers to solve real world classification problems?[J]. Journal of Machine Learning Research, 2014, 15(1):3133-3181.]在121份数据集上进行了测试，证明随机森林是在支持向量机、神经网络等机器学习算法中表现得最好的一个算法。对于我们的数据来说，很难看出天气变化对销量的影响呈现特定的函数关系，因此我们选用随机森林这种不需要模型假设的非参数方法进行预测。
  
  
  
@@ -1920,60 +1920,13 @@ SurfaceTemperatureMin
 # 五、总结讨论
 
 本文通过公共数据（气象数据）结合行业数据实际探讨两种不同交易形态的业务：B2B与B2C，完成通过实际交易数据与天气数据分析挖掘相关性与因果性实现天气驱动（Weather Driven）的实践，促使数据驱动（Data Driven）能够真实落地协助行业在同质化非常严重的产业环境中快速回应挑战；但在大环境下，企业对于开始数据驱动业务管理，总是希望以最低的投入让现有的资料、数据、IT等资源以最低成本、低风险又有效的方式完成数据驱动的企业经营，造成执行者必须面对以有限资源追求极大化成效的挑战，也造就企业开始数据驱动业务管理变革上的风险。
- 
- 
- 
+
 天气虽然影响众多行业，但是天气终究仅是一项影响因子；我们进行天气驱动业务分析业务实践中，天气驱动销售以快速消费品（FMCG）行业销售数据+天气数据的效果反馈最佳，主要是因消费者可以用低成本抵抗天气带来的影响，本文所提及的酒精性饮料快速消费品的实际案例。其他像是大气污染预报、医疗保健（Healthcare）、农林渔牧也有相当正面的反馈；但是对于需要产品生命周期较长、售价较高、品牌占比较重的行业或领域则需要更进一步的探讨。
- 
- 
- 
+
 在快速消费品的天气驱动销售虽然可以得到很好的效果，又可以细分为不同的区域（市场），以酒精性饮料为例，在城市G与城市S两个城市该品牌已经非常成熟，最终得到的预测准确性也非常高，可是在城市W对该品牌还属于新兴市场（Emerging Market）与天气的相关性远低于该酒精性饮料口碑、品牌认知与当地口味喜好等因素的影响。羽绒服的数据结果同样说明了类似的结论，特别呈现在羽绒服的功能性与服饰特性上，例如在城市Q这样冬天非常寒冷的区域就会更重视功能性，而像是城市G地区消费者更注重的是服『饰』的功能。
- 
- 
- 
+
 从天气驱动销售角度来看数据采集：酒精性饮料项目的数据来源于ERP以及渠道商的GO-TO-MARKET销售数据，有两项特点：(1)国内企业的ERP系统主要追求的目标是财务记账导向（以符合会计准则的记录为依据），可信的是交易数量与金额的正确，但无法记录真实的交易时间；(2)渠道商的GO-TO-MARKET销售数据受到返利（Rebate）政策影响，所有的交易数据都会因不同区域结算返利或渠道申报销售考核的时间点而无法记录真实的交易时间。这两项特点发生在非常多企业CRM（Customer Relationship Management）、ERP系统上，所以若需要进行天气驱动销售，需要投入更多的精力了解每一笔数据与每一个字段的业务含义，才有机会真正帮助到企业开始好的数据驱动管理（理解业务才能真正解决商业问题）。
- 
- 
  
 成功的数据驱动业务管理取决于设定正确的商业问题（Business Question），通过对行业的理解不断地提出可能的假设（Hypothesis）并使用大数据的方法论进行验证每一项假设，直到可验证数据因果性的阶段，并测试成功，才是完整的数据驱动业务实践（Practice）。错误的问题会增加企业在推动数据驱动管理业务成本与风险，例如我们将商业问题设定为酒精性饮料销售与天气要素的相关性，我们很容易得到天气炎热酒精性饮料销售量就会上升的结论（甚至不用数据就可以得到此结论），但是对于企业需要的是帮助企业用数据去掌握、洞悉（Insight）、预测商业行为，而不是为了大数据而大数据。
  
- 
- 
 本文主要研究天气驱动的销售预测，在酒精性饮料销量和羽绒服销量两个领域，利用天气进行预测均取得了十分优秀的效果。本文仍有很多可以进一步研究的空间；目前，我们研究的时间周期都只有三年，而很多特殊的气象现象，如厄尔尼诺（El Nino）、激烈天气等，只有在比较长的时间下才能表现出来，我们会进一步收集更多的数据改善我们已有的实践积累。在我们的数据中，特别是酒精性饮料数据，有很多异常的情况无法用现有的数据解释，需要和行业进行深入交流才能够进一步呈现出更好的数据驱动业务效果，好的数据驱动业务一定是来自于深入行业了解行业的努力与积累。
- 
- 
- 
-# 参考文献
- 
- 
- 
-[1] 施瓦茨. 气候经济学[M]. 气象出版社, 2012.
- 
- 
- 
-[2] Byunglak Lee, Victor J. Tremblay. Advertising and the U.S. Market Demand for Beer.[J]. Applied Economics, 1992, 24(1):69-76.
- 
- 
- 
-[3] Rojas C, Peterson E B. Demand for differentiated products: Price and advertising evidence from the U.S. beer market [J]. International Journal of Industrial Organization, 2008, 26(1):288-307.
- 
- 
- 
-[4] Voleti S, Ghosh P. A non-parametric model of residual brand equity in hierarchical branding structures with application to US beer data[J]. Journal of the Royal Statistical Society, 2014, 177(1):135–152.
- 
- 
- 
-[5] Empen J, Hamilton S F. How Do SUPERMARKETS RESPOND TO BRAND-LEVEL DEMAND SHOCKS? EVIDENCE FROM THE GERMAN BEER MARKET[J]. American Journal of Agricultural Economics, 2013, 95(5):1223-1229.
- 
- 
- 
-[6] 刘一伶, 杜春生, 张辉. 羽绒服销量预测模型及其商业应用研究[J]. 现代经济信息, 2012(19):175-176.
- 
- 
- 
-[7] Breiman L. Random Forests[J]. Machine Learning, 2001, 45(1):5–32.
- 
- 
- 
-[8] Fernández-Delgado M, Cernadas E, Barro S, et al. Do we need hundreds of classifiers to solve real world classification problems?[J]. Journal of Machine Learning Research, 2014, 15(1):3133-3181.
- 
