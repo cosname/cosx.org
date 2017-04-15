@@ -1,7 +1,7 @@
 ---
 title: 一款新的 R Markdown 幻灯片制作工具：xaringan
 date: '2017-02-13T13:17:47+00:00'
-author: COS编辑部
+author: 边蓓蕾
 categories:
   - 推荐文章
   - 统计之都
@@ -18,7 +18,7 @@ description: "今天小编给大家介绍一款新的幻灯片神器：xaringan�
 
 在此声明一下本文适宜读者群：R码农，熟悉markdown语法，懂点前端的你们。当然如果以上你都不太熟悉但又有着求知欲，希望本文将是你成为幻灯忍者的起点。
 
-![](https://cos.name/wp-content/uploads/2017/02/fig4.png)
+![](https://cloud.githubusercontent.com/assets/18478302/25060138/af1de534-21c8-11e7-8cc1-1a4c3977e798.png)
 
 # 出发！
 
@@ -36,11 +36,11 @@ devtools::install_github("yihui/xaringan")
 
 * 点击菜单 `File -> New File -> R Markdown -> From Template -> Ninja Presentation (Simplified Chinese)`创建一个新文档。
 
-![](https://cos.name/wp-content/uploads/2017/02/fig1-300x188.png)
+![](https://cos.name/wp-content/uploads/2017/02/fig1.png)
 
 * 点击 Knit 进行编译
 
-![](https://cos.name/wp-content/uploads/2017/02/fig2-300x188.png)
+![](https://cos.name/wp-content/uploads/2017/02/fig2.png)
 
 此时你会看见一个默认模版，改改就可以开张了！在此之前，你需要了解一些基本魔法：
 
@@ -62,19 +62,18 @@ devtools::install_github("yihui/xaringan")
 
 * 可以用两个短横线分割当前页面，两短横线下面的内容会被接续上面的内容生成在下一页上，比如你有一个三个项目的列表，中间用两短横线分割，最后出来的效果就是先显示第一项，翻下一页继续显示下一项
 
-    ```
-    # 忍者等级
+        
+        # 忍者等级
     
-    - 上忍
+        - 上忍
     
-    --
+        --
     
-    - 中忍
+        - 中忍
     
-    --
+        --
     
-    - 下忍
-    ```
+        - 下忍
 
 * 可以用三个问号添加片子的注释，注释不会直接显示在幻灯片中，而是在演讲者模式中才会出现（键盘上按p键）
 
@@ -264,8 +263,6 @@ devtools::install_github("ramnathv/slidifyLibraries")
 如果 xaringan 是一把忍刀的话，slidify 更像是一把瑞士军刀，功能多得令人发指（这句话是褒是贬请自行判断），单纯支持的幻灯片库就有七八个，io2012，reveal，impress，……与之对应的是复杂的参数设置以及需要自己定义的模板. 如果对 slidify 进行深入的设计与开发，可以让自己的幻灯片变得很炫，如果没有，默认的样式能把自己丑哭。
 
 对了，slidify还有两个没法回避的问题，一个是作者Ramnath大大已经有一年半没有更新这个包了，同时你也别想在 CRAN 上找到它；第二个问题是，到目前为止，在 Windows下，还没有一个完美的中文解决方案。与之比较，如果你遇到这类问题了，可以去 xaringan 的 Github 库里提问（<https://github.com/yihui/xaringan/issues>），相信谢大大会尽力让你的幻灯片说一屏流利的中文的。
-
-作者：边蓓蕾
 
 审校：郎大为
 
