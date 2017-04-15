@@ -209,7 +209,7 @@ print(p)
 ```r
 rstfile <-system.file("extdata/PAML_Codeml", "rst", package="ggtree")
 crst <-read.paml_rst(rstfile)
-p %>% crst
+p %<% crst
 ```  
 
 ![012](https://cos.name/wp-content/uploads/2015/11/012.jpg)
