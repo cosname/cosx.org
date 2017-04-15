@@ -78,9 +78,8 @@ Scikit-learn是非常著名的机器学习库，它提供一个统一的接口�
 
 江湖路远，少侠们一路走好。
 
-编者注：
-
-了解RStudio为TensorFlow制作的接口，请点击网页<https://rstudio.github.io/tensorflow/>
+编者注：若想了解RStudio为TensorFlow制作的接口，请点击网页<https://rstudio.github.io/tensorflow/>
 
 **作者简介**
- 一个喜欢折腾数据的人，与李舰合著了《数据科学中的R语言》，现就职于蚂蚁金服。
+
+一个喜欢折腾数据的人，与李舰合著了《数据科学中的R语言》，现就职于蚂蚁金服。
