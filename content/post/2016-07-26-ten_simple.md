@@ -13,43 +13,48 @@ tags:
 slug: ten_simple
 ---
 
- **本文作者：Robert E. Kass; Brian S. Caffo; Marie Davidian; Xiao-Li Meng; Bin Yu;_ _Nancy Reid**
 
-### **原文出处**
+**原文作者：Robert E. Kass; Brian S. Caffo; Marie Davidian; Xiao-Li Meng; Bin Yu; Nancy Reid**
 
-[Ten Simple Rules for Effective Statistical Practice.](http://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1004961) Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12(6): e1004961. doi:10.1371/journal.pcbi.1004961
+**原文出处：**
+[Ten Simple Rules for Effective Statistical Practice.](http://journals.plos.org/ploscompbiol/article?id=10.1371%2Fjournal.pcbi.1004961)
+Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12(6): e1004961. doi:10.1371/journal.pcbi.1004961.
 
-### 引言
 
-数月前，广受好评的“十项简则”系列（“Ten Simple Rules” series）的创始人和长期作者 Phil Bourne 建议一些统计学家写一篇关于统计学“十项简则“的文章。(既然如何写好PLOS“十项简则”文章的原则之一就是请 Phil Bourne 加入作者群 [6], 我们希望在这对Phil的热情赞美也能达到足够的效果。)
+# 引言
 
-在如何写“十项简则”的指导方针[6]里暗含了一条原则: 了解你的读者。因此，我们罗列在本文的这些原则主要是针对符合这些条件的研究者：具有一定统计知识，并且有可能得到周围统计学家的帮助，或者有亲力亲为的态度并在电脑里已经安装了一些统计软件。本文提及的原则是我们从合作研究与教学经验，以及不止一次的令人沮丧的求助：“麻烦看一下我学生的毕业论文/我的基金申请/审稿人的意见：这需要再加点统计内容，但还要看上去简洁明了。”中总结出来的。
+数月前，广受好评的“十项简则”系列（"Ten Simple Rules" series）的创始人和长期作者 Phil Bourne 建议一些统计学家写一篇关于统计学“十项简则”的文章。
+（既然如何写好PLOS“十项简则”文章的原则之一就是请 Phil Bourne 加入作者群[6], 我们希望在这对 Phil 的热情赞美也能达到足够的效果。)<!--more-->
+
+在如何写“十项简则”的指导方针里暗含了一条原则: 了解你的读者。因此，我们罗列在本文的这些原则主要是针对符合这些条件的研究者：具有一定统计知识，并且有可能得到周围统计学家的帮助，或者有亲力亲为的态度并在电脑里已经安装了一些统计软件。本文提及的原则是我们从合作研究与教学经验，以及不止一次的令人沮丧的求助：“麻烦看一下我学生的毕业论文/我的基金申请/审稿人的意见：这需要再加点统计内容，但还要看上去简洁明了”，中总结出来的。
 
 读者也可以找到一些更细致地解释本文观点的优秀文章：比如我们最欣赏的 [4]，[12]，[15]，[11]，[17] 和 [21]。
 
 统计学的每一篇文章一般都有一个防止被误解的声明。我们声明是：在本文中，“科学”一词代表了那些通过数据来解决感兴趣的问题的研究。这包括了社会科学，工程学，数字化人文学科，金融等领域。当然统计学家也不会羞于提醒管理者统计科学对任何机构的几乎所有活动都有影响的事实。
 
-### 原则 1：统计方法应使得数据能够解决科学问题
+
+# 原则 1：统计方法应使得数据能够解决科学问题
 
 初级统计使用者和统计专家之间的巨大差别在他们思考如何利用手头的数据时就显露出来。 尽管实验数据显然是为了解决科学问题而收集的，初级使用者往往潜意识里就已经默认数据和所研究的科学问题之间存在联系，然后直接考虑该用哪种方法对数据进行操作，而不是思考研究目标。例如，给定一张基因表达数据的表格，初级使用者往往会问“我该用什么方法去检验？”并寻找相应方法，而一个经验丰富的研究员则会先思考“表达有差异的基因是哪些？”，接着再思考能用数据解决研究问题的各种统计方法。某个正式的统计检验可能非常有用，但是一些其他的方法也可以作为备选，例如热图或者聚类技术。与之类似，在神经影像学中，在不同的实验条件下理解大脑活动是首要目标，用好看的图像来展示这些活动则是次要目标。这种从统计方法到科学问题的观念转变会重塑一个人数据收集和分析的方式。在充分了解这些问题后，统计专家会和他们的合作者讨论数据如何能解决问题以及哪种方法是最有效的。与此同时，他们会确认各种变异性（variablility）的来源和哪些未考虑的情况会打破数据和统计推断之间联系的假设。在完成这些之后，他们才试着建立分析目标和策略。这就是为何与统计学家合作会对研究非常有帮助，以及越早合作，效果就越好的原因 。详情请参考原则 **2**。
 
-<!--more-->
 
-### 原则 2：信号与噪音共存
+# 原则 2：信号与噪音共存
 
 刻画变异性是统计学的重要课题之一。变异性以各种形式存在。在某些情况下，变异性是有用的，因为我们需要预测变量由变异性带来的差异来解释结果中的差异。例如，当研究吸烟和肺癌是否相关时，我们需要吸烟习惯的差异；寻找和某种疾病相关的基因时，我们需要基因具有差异。但是在其他时候，变异性可能会让人非常头疼，比如当我们三次测量同一物体却取得三种不同数值时。这种变异性往往被叫做“噪音”，因为它既不能被解释也被认为与研究无关。统计分析的目标就是在存在噪音和无关的变异性的情况下评估数据中的信号以及研究者感兴趣的变异性。
 
-许多统计分析流程的起点就是进行数学上的抽象处理：统计一般采用概率分布来描述结果在被研究个体的集合内的差异，例如病人被诊断是否患有某种疾病或者诊断检验的得分。于是，数据直方图在理论分析时就会被概率分布代替，从而将研究的注意力从原始数据转到几个决定概率分布特点的数值参数上，例如分布形状，范围或者中心位置。概率分布被用于统计模型中，并通过模型来解释信号和噪音如何相互结合而产生我们观测到的或者想要观测到的数据。这一基本步骤使得统计推断变得可行。如果没有这一步的话，每一个数据取值都会被认为是独一无二的，从而使得我们忙于弄清楚所有可能导致仪器在多次相同测量时读数不同的具体工序。用概率分布来将统计模型中的信号和噪音进行概念化抽象被证明是一种非常有效的简化，这使我们能够抓住数据中的变异性并准确描述我们对感兴趣变量的变异性。这个步骤也能指引我们寻找可能的系统误差，例如偏差的来源。
+许多统计分析流程的起点就是进行数学上的抽象处理：统计一般采用概率分布来描述结果在被研究个体的集合内的差异，例如病人被诊断是否患有某种疾病或者诊断检验的得分。于是，数据直方图在理论分析时就会被概率分布代替，从而将研究的注意力从原始数据转到几个决定概率分布特点的数值参数上，例如分布形状，范围或者中心位置。
+概率分布被用于统计模型中，并通过模型来解释信号和噪音如何相互结合而产生我们观测到的或者想要观测到的数据。这一基本步骤使得统计推断变得可行。如果没有这一步的话，每一个数据取值都会被认为是独一无二的，从而使得我们忙于弄清楚所有可能导致仪器在多次相同测量时读数不同的具体工序。用概率分布来将统计模型中的信号和噪音进行概念化抽象被证明是一种非常有效的简化，这使我们能够抓住数据中的变异性并准确描述我们对感兴趣变量的变异性。这个步骤也能指引我们寻找可能的系统误差，例如偏差的来源。
 
-大数据使得这些问题变得更加重要。一个很好的例子是谷歌流感趋势（Google Flu Trends）在2008年初次登场时引起很大的轰动，但最后却高估了近50%的流感流行程度。这主要是由数据收集过程中产生的偏差导致的 ，具体请参考[10]。
+大数据使得这些问题变得更加重要。一个很好的例子是谷歌流感趋势（Google Flu Trends）在2008年初次登场时引起很大的轰动，但最后却高估了近50%的流感流行程度。这主要是由数据收集过程中产生的偏差导致的 ，具体请参考 [10]。
 
-### 原则 3：提前计划，越早越好
 
-当数据收集将花费大量精力时，统计议题往往不能被简单地概括为单独的某个问题，比如“样本量_n_该取多大？”。就像原则**1**中所说，那些拥有丰富统计分析经验的人不会只关注实验设计中的某个具体细节，而更有可能会后退一步，在总体目标的背景下考虑数据收集的各个层面，并询问类似“实验预期的理想结果是什么？你该如何解释它？”这样的问题作为出发点。在试图确定X和Y的观测是否共同变化（相较于独立）时，核心问题会涉及到X和Y是如何被测量的，测量结果能代表X和Y潜在概念意义的程度，能影响测量结果的因素，控制这些因素的手段，以及其中是否存在一些因素会引入系统误差（偏差）。
+# 原则 3：提前计划，越早越好
 
-在原则 **2**中我们指出统计方法应该通过将研究的注意力转移到相关参数取值上来帮助建立数据与研究问题间的联系。例如，当神经生物学家通过电生理学测量一对神经元时，他们可能把这种的测量手段认为是理所应当的，因为他们假设在相似的实验条件下这两个神经元能代表一整类类似的神经元。然而，统计学家会立刻考虑这一对神经元在协同变异情况下的测量会发生怎样的变化；对测量造成的主要影响有哪些，其中某些影响是否能通过合理的实验设计来消除；是什么造成了重复测量间的变异，关于变异来源的定量信息如何影响数据收集；这些神经元是否能被认为是从一个定义明确的总体中抽取，抽取这些神经元对的过程是否会影响后续的统计分析。一段涵盖上述基本问题的谈话就可能揭露研究者尚未考虑到的可能性。在设计阶段提出问题可以减轻在分析阶段的头痛程度：谨慎的数据收集能简化分析并使之更加严谨。或者正如Ronald Fisher爵士所说：“在实验结束后去咨询统计学家就好比让他去做尸检一样，他可能只能告诉你实验是因为什么原因而失败的”[7]。就如何规划研究调查的参考资料来说，[4]的第1至第4章是不错的起点。
+当数据收集将花费大量精力时，统计议题往往不能被简单地概括为单独的某个问题，比如“样本量 n 该取多大？”。就像原则 **1** 中所说，那些拥有丰富统计分析经验的人不会只关注实验设计中的某个具体细节，而更有可能会后退一步，在总体目标的背景下考虑数据收集的各个层面，并询问类似“实验预期的理想结果是什么？你该如何解释它？”这样的问题作为出发点。在试图确定 X 和 Y 的观测是否共同变化（相较于独立）时，核心问题会涉及到X和Y是如何被测量的，测量结果能代表 X 和 Y 潜在概念意义的程度，能影响测量结果的因素，控制这些因素的手段，以及其中是否存在一些因素会引入系统误差（偏差）。
 
-### 原则 4：关心数据质量
+在原则 **2** 中我们指出统计方法应该通过将研究的注意力转移到相关参数取值上来帮助建立数据与研究问题间的联系。例如，当神经生物学家通过电生理学测量一对神经元时，他们可能把这种的测量手段认为是理所应当的，因为他们假设在相似的实验条件下这两个神经元能代表一整类类似的神经元。然而，统计学家会立刻考虑这一对神经元在协同变异情况下的测量会发生怎样的变化；对测量造成的主要影响有哪些，其中某些影响是否能通过合理的实验设计来消除；是什么造成了重复测量间的变异，关于变异来源的定量信息如何影响数据收集；这些神经元是否能被认为是从一个定义明确的总体中抽取，抽取这些神经元对的过程是否会影响后续的统计分析。一段涵盖上述基本问题的谈话就可能揭露研究者尚未考虑到的可能性。在设计阶段提出问题可以减轻在分析阶段的头痛程度：谨慎的数据收集能简化分析并使之更加严谨。或者正如 Ronald Fisher 爵士所说：“在实验结束后去咨询统计学家就好比让他去做尸检一样，他可能只能告诉你实验是因为什么原因而失败的” [7]。就如何规划研究调查的参考资料来说，[4]的第1至第4章是不错的起点。
+
+# 原则 4：关心数据质量
 
 训练有素的实验者本能地明白：在数据分析时，“无用的输入导致无用的输出”（garbage in produces garbage out）。然而现代数据收集的复杂性导致其需要许多关于技术功能的假设，通常包括数据预处理技术。我们建议对预处理谨慎操作，因为它容易造成不易察觉但深远的影响。
 
@@ -59,98 +64,135 @@ slug: ten_simple
 
 数据被转换为便利的格式后，我们应该先好好地观察一番。这也被叫做探索性数据分析（exploratory data analysis），它通常是分析中提供信息最多的环节。探索性图表往往能揭露数据质量问题和离群值。简单的概括性描述，如均值，标准差，以及分位数，能帮助研究者改进思路或提供对分析假设的直观检测。许多研究，尤其是进入一个全新的科学方向时，往往首选探索性数据分析；这些领域充满新奇与未知，以致于无法确立一个明确的先验假设。这样非正式地操作数据能帮助产生新的假设和想法，但在正式分析前要确认数据收集的具体方法以及思考这样的收集方法会对结论产生多大的影响。同时要牢记用同一个数据集既生成假设又检验假设是不严谨 ，具体请参考原则 **9**。
 
-### 原则 5：统计分析并不只是一系列数字计算
+# 原则 5：统计分析并不只是一系列数字计算
 
-统计软件提供了帮助分析的工具，而不是定义了分析。问题的科学背景是至关重要的，同时分析的关键就是把分析方法和科学问题紧密联系起来，具体请参考原则**1**。尽管有时在论文的方法论中直接参考某个特定的算法和软件是很有帮助的，但这些并不能替代你回答你为何选择了这个统计方法。读者往往会思考这个分析技术与实质上想解决的问题是否相关联这一基本问题。不要让读者迷惑，要把这个解释清楚。
+统计软件提供了帮助分析的工具，而不是定义了分析。问题的科学背景是至关重要的，同时分析的关键就是把分析方法和科学问题紧密联系起来，具体请参考原则 **1**。
+尽管有时在论文的方法论中直接参考某个特定的算法和软件是很有帮助的，但这些并不能替代你回答你为何选择了这个统计方法。读者往往会思考这个分析技术与实质上想解决的问题是否相关联这一基本问题。不要让读者迷惑，要把这个解释清楚。
 
 同时，将你的分析中的某些步骤转换为结构化的算法，这样会对你自己和有相似或相同数据的其他研究者今后重复这种分析很有帮助，具体请参考原则 **10**。
 
-### 原则 6：保持简约
+# 原则 6：保持简约
 
-在其他条件相同时，简约远胜于复杂。这条法则在不同领域的实践过程中反复被发现并被奉为圣典。它有着不同的称谓：“奥卡姆剃刀”，“KISS原则”（Keep it simple, Stupid），“少即是多”和“至繁归于至简”。我们可以放心的将这一“节俭原则”当做指导方针：开始时先用简单的方法，只在需要时才增加复杂性，而且只加必要的。
+在其他条件相同时，简约远胜于复杂。这条法则在不同领域的实践过程中反复被发现并被奉为圣典。它有着不同的称谓：“奥卡姆剃刀”，“KISS原则”（Keep it simple, stupid），“少即是多”和“至繁归于至简”。我们可以放心的将这一“节俭原则”当做指导方针：开始时先用简单的方法，只在需要时才增加复杂性，而且只加必要的。
 
 正如之前所说，科学数据有很精细的结构，简单的模型不能总是概括其中的错综复杂。常用的独立性假设常常是不正确的并总是需要仔细得检验，参考原则 **8**。大量的观测，变量间的交互，动作间的非线性机制，缺失数据，混淆，抽样偏差等，都会要求模型复杂性的增加。
 
 请牢记一点：正确执行的合理的实验设计能使简单的分析方法产生强有力的结果，参考原则 **3**。简单的模型能帮助我们从复杂的现象中建立规律，并方便我们与同行以及更广泛的世界的交流。
 
-### 原则 7：对变异性进行评估
+# 原则 7：对变异性进行评估
 
 几乎所有的生物学测量在重复时都会展现明显的差异，造成基于数据计算出的所有结果都具有变异性。统计分析的一个基本目标就是帮助研究者评估变异性，通常以标准差或置信区间的形式体现。统计建模和推断的一个最大的成功就是用估计参数的数据来估计误差。当报告结果时，提供一些变异性的说明是非常必要的。一个常见的错误就是计算标准误差时忘记考虑数据或变量间的相关性，这样通常会低估真实的变异性，参考原则 **8**。
 
 还记得这一点吗：即使在同样的个体上重复测量，我们从数据中计算得出的结果都会略微变动。如果你使用新样本，你可以确信测量变异会增加，因为样本间天然存在变异。如果你在不同的时间，从不同的实验室，用不同的手法收集数据，这样就要额外考虑三种可能的变异来源。在微列分析中，批次效应是个非常著名的引入额外的变异性的来源，并有好几种方法能消除它。数据中额外的变异性意味着结论中额外的变异性，而这种变异性应该写进报告中。这种报告对接下来研究的规划具有重大价值。
 
-大数据的一个普遍特点就是它的变异性评估往往过于乐观（[5]，[14]）。建议大家参考[14]的 “数据欺骗”章节中举出的关于抽样调查中具有启发性，但也带有欺骗性的案例。大数据有时并不如它看上去那么大：基于对小样本的大量重复观测而得到的标准误差要进行非常谨慎的估计，因为这些测量很有可能是 高度相关的。
+大数据的一个普遍特点就是它的变异性评估往往过于乐观（Cox [5]，Meng [14]）。建议大家参考 [14] 的 “数据欺骗”章节中举出的关于抽样调查中具有启发性，但也带有欺骗性的案例。大数据有时并不如它看上去那么大：基于对小样本的大量重复观测而得到的标准误差要进行非常谨慎的估计，因为这些测量很有可能是 高度相关的。
 
-<!--EndFragmen-->
-
-### 原则 8：检查你的假设
+# 原则 8：检查你的假设
 
 任何统计推断都需要假设。这些假设是基于已有知识和对数据变异性的概率表示—后者我们叫做统计模型—而提出的。即使是所谓的“无模型”（model-free）方法也需要假设（虽然这些假设相对较弱），所以这个术语在一定程度上会令人误解。
 
-常见的统计模型都会用到线性关系的假设。例如普通相关系数，又叫Pearson相关系数，是线性关联的测量。线性在一阶近似或者描述总体趋势时往往效果不错，尤其是当数据中的噪音使得线性关系和非线性关系的区分变得非常困难时。然而在给定数据时，线性模型的合适程度是一个实际中经常碰到的问题，因此需要被仔细研究。
+常见的统计模型都会用到线性关系的假设。例如普通相关系数，又叫 Pearson 相关系数，是线性关联的测量。线性在一阶近似或者描述总体趋势时往往效果不错，尤其是当数据中的噪音使得线性关系和非线性关系的区分变得非常困难时。然而在给定数据时，线性模型的合适程度是一个实际中经常碰到的问题，因此需要被仔细研究。
 
 统计分析中一个非常令人头疼但是又很常见的假设就是数据中的不同观测结果是统计独立的。它令人头疼的原因是即使真实情况相对于该假设仅有很小的偏离，也会产生巨大的影响。例如当观测是在不同时间执行的，按照观测时间排序就非常重要；如果是这样的话，那就应该考虑适用于时间序列的特定模型。
 
-除了非线性和统计相关，数据缺失，测量时的系统偏差，以及一系列其他因素都可能偏离统计模型的假设，这种现象即使是在最成功的实验中也会存在。随手可得的统计软件极大的方便了分析但也让人更容易忽视内在的假设，因此倾向于产生不精确的或者令人误解的结果。因此充分理解你所采用的方法中蕴含的假设和尽力去评估这些假设是至关重要的。至少你会想要检查统计模型与数据的拟合程度。可视化展示和拟合残差图对评价假设的成立和模型的拟合是非常有益的。一些基本的评价模型拟合的方法已经被包含在大多数统计软件中了。但是要切记，不同的模型能在相同的数据上都通过拟合适度检验，参考原则 **1**和原则 **6**。
+除了非线性和统计相关，数据缺失，测量时的系统偏差，以及一系列其他因素都可能偏离统计模型的假设，这种现象即使是在最成功的实验中也会存在。随手可得的统计软件极大的方便了分析但也让人更容易忽视内在的假设，因此倾向于产生不精确的或者令人误解的结果。因此充分理解你所采用的方法中蕴含的假设和尽力去评估这些假设是至关重要的。至少你会想要检查统计模型与数据的拟合程度。可视化展示和拟合残差图对评价假设的成立和模型的拟合是非常有益的。一些基本的评价模型拟合的方法已经被包含在大多数统计软件中了。但是要切记，不同的模型能在相同的数据上都通过拟合适度检验，参考原则 **1** 和原则 **6**。
 
-### 原则 9：尽一切可能的去重复
+# 原则 9：尽一切可能的去重复
 
 一个好的分析师会仔细地检查数据，寻找各种类型的模式并搜寻可预测与不可预测的结果。这个过程通常涉及到许多操作，包含了一些可视化以及大量的数据切片。最终，数据中一些特定的特征会被认为是有趣且重要的，并往往会被放进发表结果中。
 
-当统计推断太关注于数据时，例如p值，他们就会失去通常的解释性。忽略这个事实
-  
-是不诚实的：就好像是把靶的红心画在你射的箭的落点附近。这在某些圈子叫做“p值操控”（p-hacking），并有很多文献介绍它的危害和漏洞，具体请参考[8]和[1]。
+当统计推断太关注于数据时，例如p值，他们就会失去通常的解释性。忽略这个事实是不诚实的：就好像是把靶的红心画在你射的箭的落点附近。这在某些圈子叫做“p值操控”（p-hacking），并有很多文献介绍它的危害和漏洞，具体请参考 [8] 和 [1]。
 
-近来有大量的批评是关于在科学研究中p值的使用，其主要是针对“如果p值小于0.05则结果不足以发表”这一误解。美国统计协会最近的一个声明给出了p值具体的优点和局限，具体请参考[18]。
+近来有大量的批评是关于在科学研究中p值的使用，其主要是针对“如果 p 值小于 0.05 则结果不足以发表”这一误解。美国统计协会最近的一个声明给出了 p 值具体的优点和局限，具体请参考 [18]。
 
-统计学家往往知道最明显的数据窥探的方法，例如选择特定的变量来做分析报告，以及一系列在该情况下调整结果的方法；错误发现率控制法是其中一部分方法的基础，具体请参考[3]。
+统计学家往往知道最明显的数据窥探的方法，例如选择特定的变量来做分析报告，以及一系列在该情况下调整结果的方法；错误发现率控制法是其中一部分方法的基础，具体请参考 [3]。
 
 在某些情况下，部分预先的数据操控可能是无害的。在其他情况下，研究者用一个非常小的p值来当做他们结果的非正式验证。例如在高能物理中，满足“5-sigma”要求被看做为是对“别处效应”（look-elsewhere effect）的近似修正。
 
 唯一能解决数据窥探造成的问题的可靠方案是记录产生关键结果的统计推断手段，以及它所用于的数据的特征，然后再在新的数据上重复相同的分析。这样的独立重复通常会更进一步，因为它会对实验流程做出一定的修改。这样的话，重复也会对实验细节提供一定程度的稳健性。
 
-理想情况下，重复实验应该由独立的研究员进行。那些在不同但密切相关的情景下均得到验证的结果才是经得住时间考验的结果。在缺乏重复实验的情况下，适当形式的数据排列也是很有帮助的，参考[20]。在很多情况下，例如多中心临床试验等大规模实验，完全的重复是很困难甚至不可能的。在这种情况下，最低的标准应该参考原则 **10**。
+理想情况下，重复实验应该由独立的研究员进行。那些在不同但密切相关的情景下均得到验证的结果才是经得住时间考验的结果。在缺乏重复实验的情况下，适当形式的数据排列也是很有帮助的，参考 [20]。在很多情况下，例如多中心临床试验等大规模实验，完全的重复是很困难甚至不可能的。在这种情况下，最低的标准应该参考原则 **10**。
 
-### 原则 10：使你的分析可再现
 
-在现今的科学结果发表框架下，原则**9**中要求的独立重复对大多数研究者有些不切实际。一个相对来说比较容易完成的是可再现性（reproducibility）：在给定相同数据和对分析细节的完整描述，再现那些结果中的表格，图像和统计推断应该是可能的。然而，即使是这个相对较低的标准在执行时也会碰到各种各样的阻碍，例如不同的计算框架，软件版本和设定。
+# 原则 10：使你的分析可再现
 
-有一些方法可以极大的提高结果的可再现能力：将一些步骤系统化（原则**5**），将用于生成结果的数据和代码共享，以及参照[9]中的内容。现代可再现性研究工具，例如Sweave[13]，knitr [19]，iPython [16]，使这些方法更进一步并将实验报告与代码相连。可再现研究本身就是一个正在进行的研究领域，而且是一个重要且值得我们关注的领域。
+在现今的科学结果发表框架下，原则 **9** 中要求的独立重复对大多数研究者有些不切实际。一个相对来说比较容易完成的是可再现性（reproducibility）：在给定相同数据和对分析细节的完整描述，再现那些结果中的表格，图像和统计推断应该是可能的。然而，即使是这个相对较低的标准在执行时也会碰到各种各样的阻碍，例如不同的计算框架，软件版本和设定。
 
-### 结语
+有一些方法可以极大的提高结果的可再现能力：将一些步骤系统化（原则 **5**），将用于生成结果的数据和代码共享，以及参照 [9] 中的内容。现代可再现性研究工具，例如 Sweave [13]，knitr [19]，iPython [16]，使这些方法更进一步并将实验报告与代码相连。可再现研究本身就是一个正在进行的研究领域，而且是一个重要且值得我们关注的领域。
 
-马克_·_吐温有句广为流传的话：“有三种谎言：谎言，可恶的谎言，以及统计。”数据的确经常被有选择的使用以错误地支持某个论点。故意的误用数据或者故意隐瞒关于数据和其概要的获得方式等重要信息是极度不道德的。更可恶的是那些出于善意但是错误的统计推断而得出的广为流传的科学结论。我们这篇文章的主要目的就是简练地强调这类问题的源头以及如何避免这些陷阱。
+# 结语
+
+马克·吐温有句广为流传的话：“有三种谎言：谎言，可恶的谎言，以及统计。”数据的确经常被有选择的使用以错误地支持某个论点。故意的误用数据或者故意隐瞒关于数据和其概要的获得方式等重要信息是极度不道德的。更可恶的是那些出于善意但是错误的统计推断而得出的广为流传的科学结论。我们这篇文章的主要目的就是简练地强调这类问题的源头以及如何避免这些陷阱。
 
 研究者所面临的一个核心且常见的课题就是揭示数据所能告诉我们关于要研究的科学问题的信息。统计学可以看作为了帮助这个过程而构建的语言，概率论则是其语法。尽管日常的基本谈话不需要精通它（像例行公事一般），按照一定规则进行统计分析对处理细微的现象以确保在翻译过程中没有严重遗漏和以增加研究结果经得住时间考验的可能性是至关重要的。要实现流利使用这门数学上复杂的语言需要数年的训练和实践，但是我们希望这篇“十大原则”文章能提供一些关键的指导。
 
-在众多报告美国统计协会批判p值的文章中，我们尤其喜欢[2]中引用生物统计学家 Andrew Vickers 的一句话：“将统计学看做一门科学，而不是一份菜谱。”这是0号原则 的最佳候选。
+在众多报告美国统计协会批判p值的文章中，我们尤其喜欢 [2] 中引用生物统计学家 Andrew Vickers 的一句话：“将统计学看做一门科学，而不是一份菜谱。”这是 **0** 号原则的最佳候选。
 
-### 致谢
+# 致谢
 
-我们私下征询了许多同行关于这篇文章的看法，但是里面的观点均是由我们这个小型作者委员会提供。我们衷心感谢 [<span style="color: #800000;">xkcd.com</span>](http://www.xkcd.com/) 在幽默中传递统计思想，感谢 [<span style="color: #800000;">Simply Statistics</span>](http://simplystatistics.org/) 为深思熟虑的评论提供可靠来源，感谢 [<span style="color: #800000;">FiveThirtyEight</span>](http://fivethirtyeight.com/) 把统计学带向世人的视野（至少带向了媒体的视野），感谢 Phil Bourne 提议我们着手写这篇文章，以及感谢美国统计协会的 Steve Pierson 开始组织这些努力。
+我们私下征询了许多同行关于这篇文章的看法，但是里面的观点均是由我们这个小型作者委员会提供。
+我们衷心感谢 [xkcd.com](http://www.xkcd.com/) 在幽默中传递统计思想，
+感谢 [Simply Statistics](http://simplystatistics.org/) 为深思熟虑的评论提供可靠来源，
+感谢 [FiveThirtyEight](http://fivethirtyeight.com/) 把统计学带向世人的视野（至少带向了媒体的视野），
+感谢 Phil Bourne 提议我们着手写这篇文章，以及感谢美国统计协会的 Steve Pierson 开始组织这些努力。
 
-### References
 
-<p class="js_message_plain ng-binding">
-  [1] Aschwanden C (2015) Science isn’t broken. August 11 2015 [ http://fivethirtyeight.com/features/science-isnt-broken/](https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=http%3A%2F%2Ffivethirtyeight.com%2Ffeatures%2Fscience-isnt-broken%2F&skey=%40crypt_17a2cd45_c949f5c9116f6656076b7b7223fd7745&deviceid=e882084818174922&pass_ticket=OhCiixjdhgsBHy%252BFvanl9s39yJ6o46DvpX6T1EhxlJaRu7VvvosgAmS%252Beq2fJYV1&opcode=2&scene=1&username=@91d79bb31527bed6496a6a23d8e785bae1cd35ccb68c90a67c34c8e4bcba7853)<br /> [2] Baker M (2016) Statisticians issue warning over misuse of P values. Nature 531, (151) doi: 10.1038/nature.2016.19503<br /> [3] Benjamini Y, Hochberg Y (1995) Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Statist Soc B 57: 289–300.<br /> [4] Cox DR, Donnelly CA (2011) Principles of Applied Statistics. Cambridge: Cambridge University Press.<br /> [5] Cox DR (2015) Big data and precision. Biometrika 102: 712–716.<br /> [6] Dashnow H, Lonsdale A, Bourne PE (2014) Ten simple rules for writing a PLOS ten simple rules article. PLoS Comput Biol 10(10): e1003858. doi: 10.1371/journal.pcbi.1003858 PMID: 25340653<br /> [7] Fisher RA (1938) Presidential address. Sankhya 4: 14–17.<br /> [8] Gelman A, Loken E (2014) The statistical crisis in science. Am Sci 102: 460–465<br /> [9] Goodman A, Pepe A, Blocker AW, Borgman CL, Cranmer K, et al. (2014) Ten simple rules for the care and feeding of scientific data. PLoS Comput Biol 10(4): e1003542. doi: 10.1371/journal.pcbi.1003858 PMID: 24763340<br /> [10] Harford T (2015) Big Data: are we making a big mistake? Significance 11: 14–19.<br /> [11] Kass RE, Eden UT, Brown EN (2014) Analysis of Neural Data. Springer: New York.<br /> [12] Leek JT (2015) The Elements of Data Analytic Style. Leanpub,[ https://leanpub.com/artofdatascience.](https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=https%3A%2F%2Fleanpub.com%2Fartofdatascience.&skey=%40crypt_17a2cd45_c949f5c9116f6656076b7b7223fd7745&deviceid=e882084818174922&pass_ticket=OhCiixjdhgsBHy%252BFvanl9s39yJ6o46DvpX6T1EhxlJaRu7VvvosgAmS%252Beq2fJYV1&opcode=2&scene=1&username=@91d79bb31527bed6496a6a23d8e785bae1cd35ccb68c90a67c34c8e4bcba7853)<br /> [13] Leisch F (2002) Sweave: Dynamic generation of statistical reports using data analysis. In Härdle W, Rönz H, editors. Compstat: Proceedings in Computational Statistics, Heidelberg: Springer-Verlag, pp. 575–580.<br /> [14] Meng XL (2014) A trio of inference problems that could win you a Nobel prize in statistics (if you help fund it). In: Lin X, Genest C, Banks DL, Molenberghs G, Scott DW, Wang J-L,editors. Past, Present, and Future of Statistical Science, Boca Raton: CRC Press. pp. 537–562.<br /> [15] Peng R (2014) The Art of Data Science. Leanpub,[ https://leanpub.com/artofdatascience.](https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=https%3A%2F%2Fleanpub.com%2Fartofdatascience.&skey=%40crypt_17a2cd45_c949f5c9116f6656076b7b7223fd7745&deviceid=e882084818174922&pass_ticket=OhCiixjdhgsBHy%252BFvanl9s39yJ6o46DvpX6T1EhxlJaRu7VvvosgAmS%252Beq2fJYV1&opcode=2&scene=1&username=@91d79bb31527bed6496a6a23d8e785bae1cd35ccb68c90a67c34c8e4bcba7853)<br /> [16] Perez F, Granger BE (2007) IPython: A system for interactive scientific computing. Comput Sci Eng 9(3), 21–29.<br /> [17] Tukey JW (1962) The future of data analysis. Ann Math Stat 33: 1–67.<br /> [18] Wasserstein RL, Lazar NA (2016) The ASA’s statement on p-values: context, process, and purpose, The American Statistician doi: 10.1080/00031305.2016.1154108<br /> [19] Xie Y (2014) Dynamic Documents with R and knitr. Boca Raton: CRC Press.<br /> [20] Yu, B (2015) Data wisdom for data science. April 13 2015 [http://www.odbms.org/2015/04/data-wisdom-for-data-science/](https://wx.qq.com/cgi-bin/mmwebwx-bin/webwxcheckurl?requrl=http%3A%2F%2Fwww.odbms.org%2F2015%2F04%2Fdata-&skey=%40crypt_17a2cd45_c949f5c9116f6656076b7b7223fd7745&deviceid=e882084818174922&pass_ticket=OhCiixjdhgsBHy%252BFvanl9s39yJ6o46DvpX6T1EhxlJaRu7VvvosgAmS%252Beq2fJYV1&opcode=2&scene=1&username=@91d79bb31527bed6496a6a23d8e785bae1cd35ccb68c90a67c34c8e4bcba7853)<br /> [21] Yu B (2013) Stability. Bernoulli, 19(4): 1484–1500.
-</p>
+# References
 
-### 作者简介
+[1] Aschwanden C (2015) Science isn’t broken. August 11 2015  <http://fivethirtyeight.com/features/science-isnt-broken/>.
 
-<p class="js_message_plain ng-binding">
-  <strong>Robert E. Kass:</strong> 卡耐基梅隆大学，统计系，机器学习系，认知神经基础中心，美国<br /> <strong>Brian S. Caffo:</strong> 约翰霍普金斯大学，生物统计系，布隆伯格公共卫生学院，美国<br /> <strong>Marie Davidian:</strong> 北卡罗莱纳州立大学，统计系，美国<br /> <strong>Xiaoli Meng 孟晓犁:</strong> 哈佛大学，统计系，美国<br /> <strong>Bin Yu 郁彬:</strong> 加州大学伯克利分校，统计系，电子工程与计算机科学系，美国<br /> <strong>Nancy Reid:</strong> 多伦多大学，统计科学系，加拿大
-</p>
+[2] Baker M (2016) Statisticians issue warning over misuse of P values. Nature 531, (151) doi: 10.1038/nature.2016.19503.
 
-<!--EndFragment-->
+[3] Benjamini Y, Hochberg Y (1995) Controlling the false discovery rate: a practical and powerful approach to multiple testing. J R Statist Soc B 57: 289–300.
 
-<p style="text-align: right;">
-  翻译：吕翔 (Xiang Lyu)
-</p>
+[4] Cox DR, Donnelly CA (2011) Principles of Applied Statistics. Cambridge: Cambridge University Press.
 
-<p style="text-align: right;">
-  审稿：施涛 (Tao Shi)、谢益辉 (Yihui Xie)
-</p>
+[5] Cox DR (2015) Big data and precision. Biometrika 102: 712–716.
 
-<p style="text-align: right;">
-  编辑：闫晗 (Han Yan)、吕翔 (Xiang Lyu)
-</p>
+[6] Dashnow H, Lonsdale A, Bourne PE (2014) Ten simple rules for writing a PLOS ten simple rules article. PLoS Comput Biol 10(10): e1003858. doi: 10.1371/journal.pcbi.1003858 PMID: 25340653.
+
+[7] Fisher RA (1938) Presidential address. Sankhya 4: 14–17.
+
+[8] Gelman A, Loken E (2014) The statistical crisis in science. Am Sci 102: 460–465.
+
+[9] Goodman A, Pepe A, Blocker AW, Borgman CL, Cranmer K, et al. (2014) Ten simple rules for the care and feeding of scientific data. PLoS Comput Biol 10(4): e1003542. doi: 10.1371/journal.pcbi.1003858 PMID: 24763340.
+
+[10] Harford T (2015) Big Data: are we making a big mistake? Significance 11: 14–19.
+
+[11] Kass RE, Eden UT, Brown EN (2014) Analysis of Neural Data. Springer: New York.
+
+[12] Leek JT (2015) The Elements of Data Analytic Style. Leanpub, <https://leanpub.com/artofdatascience>.
+
+[13] Leisch F (2002) Sweave: Dynamic generation of statistical reports using data analysis. In Härdle W, Rönz H, editors. Compstat: Proceedings in Computational Statistics, Heidelberg: Springer-Verlag, pp. 575–580.
+
+[14] Meng XL (2014) A trio of inference problems that could win you a Nobel prize in statistics (if you help fund it). In: Lin X, Genest C, Banks DL, Molenberghs G, Scott DW, Wang J-L,editors. Past, Present, and Future of Statistical Science, Boca Raton: CRC Press. pp. 537–562.
+
+[15] Peng R (2014) The Art of Data Science. Leanpub, <https://leanpub.com/artofdatascience>.
+
+[16] Perez F, Granger BE (2007) IPython: A system for interactive scientific computing. Comput Sci Eng 9(3), 21–29.
+
+[17] Tukey JW (1962) The future of data analysis. Ann Math Stat 33: 1–67.
+
+[18] Wasserstein RL, Lazar NA (2016) The ASA’s statement on p-values: context, process, and purpose, The American Statistician doi: 10.1080/00031305.2016.1154108.
+
+[19] Xie Y (2014) Dynamic Documents with R and knitr. Boca Raton: CRC Press.
+
+[20] Yu, B (2015) Data wisdom for data science. April 13 2015 <http://www.odbms.org/2015/04/data-wisdom-for-data-science/>.
+
+[21] Yu B (2013) Stability. Bernoulli, 19(4): 1484–1500.
+
+
+# 作者简介
+
+**Robert E. Kass:** 卡耐基梅隆大学，统计系，机器学习系，认知神经基础中心，美国  
+**Brian S. Caffo:** 约翰霍普金斯大学，生物统计系，布隆伯格公共卫生学院，美国  
+**Marie Davidian:** 北卡罗莱纳州立大学，统计系，美国  
+**Xiaoli Meng 孟晓犁:** 哈佛大学，统计系，美国  
+**Bin Yu 郁彬:** 加州大学伯克利分校，统计系，电子工程与计算机科学系，美国  
+**Nancy Reid:** 多伦多大学，统计科学系，加拿大  
+
+翻译：吕翔 (Xiang Lyu) 
+
+审稿：施涛 (Tao Shi)、谢益辉 (Yihui Xie)
+
+编辑：闫晗 (Han Yan)、吕翔 (Xiang Lyu)
