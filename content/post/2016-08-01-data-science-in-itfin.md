@@ -204,13 +204,7 @@ SMOTE：<https://www3.nd.edu/~nchawla/papers/ECML03.pdf>
 从事数据相关行业十余年来，看到其实数据科学真正能在工业领域充分发挥决定性作用的时候少之又少，多少数据昏析师迷茫于此，找到一份数据化决策能发挥极大价值的职位，能承载一个数据小兵到数据科学家的行业是每位数据从业人员的幸运。大家共勉！
 
 <p style="text-align: right;">
-  审稿：魏太云 朱雪宁
+审稿：魏太云 朱雪宁  
+编辑：范超
 </p>
 
-<p style="text-align: right;">
-  编辑：范超
-</p><section class=""></section> 
-
-#### **版权公告**<section class="">原创文章，版权所有。</section> <section class=""></section> <section class=""></section> 
-
-敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都）。
