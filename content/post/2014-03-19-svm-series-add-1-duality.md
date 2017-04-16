@@ -171,6 +171,6 @@ g(\tilde{\lambda},\tilde{\nu}) &= \min_x L(x,\tilde{\lambda},\tilde{\nu}) \\
 \end{aligned} 
 $$`
 
-最后一个式子是根据 KKT 条件的第二和第四个条件得到。由于 $g$ 是 $f_0$ 的下界，这样一来，就证明了 duality gap 为零，也就是说，strong duality 成立。
+最后一个式子是根据 KKT 条件的第二和第四个条件得到。由于`$g$`是`$f_0$`的下界，这样一来，就证明了 duality gap 为零，也就是说，strong duality 成立。
 
 到此为止，做一下总结。我们简要地介绍了 duality 的概念，基本上没有给什么具体的例子。不过由于内容比较多，为了避免文章超长，就挑了一些重点讲了一下。总的来说，一个优化问题，通过求出它的 dual problem ，在只有 weak duality 成立的情况下，我们至少可以得到原始问题的一个下界。而如果 strong duality 成立，则可以直接求解 dual problem 来解决原始问题，就如同经典的 SVM 的求解过程一样。有可能 dual problem 比 primal problem 更容易求解，或者 dual problem 有一些优良的结构（例如 SVM 中通过 dual problem 我们可以将问题表示成数据的内积形式从而使得 kernel trick 的应用成为可能）。此外，还有一些情况会同时求解 dual 和 primal problem ，比如在迭代求解的过程中，通过判断 duality gap 的大小，可以得出一个有效的迭代停止条件。
