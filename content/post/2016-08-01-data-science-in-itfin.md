@@ -1,7 +1,7 @@
 ---
 title: 互联网金融中的数据科学
 date: '2016-08-01T11:53:01+00:00'
-author: COS编辑部
+author: 张云松
 categories:
   - 统计之都
 tags:
