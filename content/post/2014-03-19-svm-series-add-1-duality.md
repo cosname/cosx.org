@@ -38,7 +38,7 @@ $$`
 z(x)=\max_{\lambda\succeq 0, \nu}L(x,\lambda,\nu)
 $$`
 
-这里`$\lambda\succeq 0$`理解为向量`$\lambda$`的每一个元素都非负即可。这个函数`$z(x)$`对于满足原始问题约束条件的那些`$x$`来说，其值等于 `$f_0(x)$`，这很容易验证，因为满足约束条件的`$x$`会使得`$h_i(x)=0$`，因此最后一项消掉了，而`$f_i(x)\leq 0$`，并且我们要求了`$\lambda \succeq 0$`，因此`$\lambda_{if}_{i(x)}\leq 0$`，所以最大值只能在它们都取零的时候得到，这个时候就只剩下`$f_0(x)$`了。因此，对于满足约束条件的那些`$x$` 来说，`$f_0(x)=z(x)$`。这样一来，原始的带约束的优化问题其实等价于如下的无约束优化问题：
+这里`$\lambda\succeq 0$`理解为向量`$\lambda$`的每一个元素都非负即可。这个函数`$z(x)$`对于满足原始问题约束条件的那些`$x$`来说，其值等于 `$f_0(x)$`，这很容易验证，因为满足约束条件的`$x$`会使得`$h_i(x)=0$`，因此最后一项消掉了，而`$f_i(x)\leq 0$`，并且我们要求了`$\lambda \succeq 0$`，因此`$\lambda_{i}f_{i}(x)\leq 0$`，所以最大值只能在它们都取零的时候得到，这个时候就只剩下`$f_0(x)$`了。因此，对于满足约束条件的那些`$x$` 来说，`$f_0(x)=z(x)$`。这样一来，原始的带约束的优化问题其实等价于如下的无约束优化问题：
 
 `$$
 \min_x z(x)
@@ -64,7 +64,7 @@ $$`
 g(\lambda,\nu) = \min_x L(x, \lambda, \nu)
 $$`
 
-并称`$g(\lambda,\nu)$`为 Lagrange dual function （不要和`$L$`的 Lagrangian 混淆了）。$g$ 有一个很好的性质就是它是 primal problem 的一个下界。换句话说，如果 primal problem 的最小值记为`$p^*$`，那么对于所有的`$\lambda \succeq 0$`和`$\nu$`，我们有：
+并称`$g(\lambda,\nu)$`为 Lagrange dual function （不要和`$L$`的 Lagrangian 混淆了）。`$g$`有一个很好的性质就是它是 primal problem 的一个下界。换句话说，如果 primal problem 的最小值记为`$p^*$`，那么对于所有的`$\lambda \succeq 0$`和`$\nu$`，我们有：
 
 `$$
 g(\lambda,\nu)\leq p^*
@@ -150,11 +150,11 @@ $$`
 
 `$$
 \begin{aligned}
-f_i(x^*)\leq 0,&\quad i=1,\ldots,m\\
-h_i(x^*)=0,&\quad i=1,\ldots,p\\
-\lambda_i^*\geq 0,&\quad i=1,\ldots,m\\
-\lambda_i^*f_i(x^*)=0,&\quad i=1,\ldots,m\\
-\textstyle\nabla f_0(x^*)+\sum_{i=1}^m\lambda_i^*\nabla f_i(x^*)+\sum_{i=1}^p\nu_i^* \nabla h_i(x^*)=0&
+f_i(x^*)\leq 0,&\quad i=1,\ldots,m \\
+h_i(x^*)=0,&\quad i=1,\ldots,p \\
+\lambda_i^*\geq 0,&\quad i=1,\ldots,m \\
+\lambda_i^*f_i(x^*)=0,&\quad i=1,\ldots,m \\
+\textstyle\nabla f_0(x^*)+\sum_{i=1}^m\lambda_i^*\nabla f_i(x^*)+\sum_{i=1}^p\nu_i^* \nabla h_i(x^*)=0
 \end{aligned}
 $$`
 
