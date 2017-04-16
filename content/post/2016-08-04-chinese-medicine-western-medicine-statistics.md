@@ -11,7 +11,7 @@ tags:
 slug: chinese-medicine-western-medicine-statistics
 ---
 
-**作者简介：**李舰，现任九峰移动医疗CTO，曾任 Mango Solutions 中国区数据总监。专注于数据科学在行业里的应用。
+**作者简介：** 李舰，现任九峰移动医疗CTO，曾任 Mango Solutions 中国区数据总监。专注于数据科学在行业里的应用。
 擅长R语言的工程开发与分析建模，是 Rweibo、Rwordseg、tmcn 等 R 包的作者。与肖凯合著了《数据科学中的R语言》，
 参与翻译了《R语言核心技术手册》、《机器学习与R语言》。
 
