@@ -40,7 +40,7 @@ slug: rlist-package
 可以用`devtools`扩展包直接从[GitHub](https://github.com/renkun-ken/rlist)安装rlist最新的开发版本：
 
 ```r
-    devtools::install_github("rlist","renkun-ken")
+devtools::install_github("rlist","renkun-ken")
 ```
 
 下面将通过一些例子来分别介绍这个扩展包的主要功能。下面的例子基本都在以下数据中进行。
@@ -89,7 +89,7 @@ slug: rlist-package
 
 上面的代码是直接在R中建立一个名为`devs`的list对象，里面包含的正是前面提到的非关系型数据。由于直接输出数据占用篇幅较长，在后面的例子中可能采用`str`函数来显示数据。
 
-**映射（mapping）**
+# 映射（mapping）
 
 `list.map` 函数提供了list中元素的映射功能。
 
@@ -134,7 +134,7 @@ $p3
 [1] "r"      "cpp"    "python"
 ```
 
-**筛选（filtering）**
+# 筛选（filtering）
 
 筛选出年龄不低于25岁的个体：
 
@@ -198,7 +198,7 @@ List of 1
   .. ..$ python: num 3
 ```
 
-**分组（grouping）**
+# 分组（grouping）
 
 按照年龄做互斥分组：
 
@@ -300,7 +300,7 @@ List of 4
   .. .. ..$ cpp : num 5
 ```
 
-**排序（sorting）**
+# 排序（sorting）
 
 按照年龄升序排列：
 
@@ -363,7 +363,8 @@ List of 3
   .. ..$ cpp   : num 4
   .. ..$ python: num 2
 ```
-**更新（updating）**
+
+# 更新（updating）
 
 去除 interest 和 lang 两个字段，加入 nlang 表示掌握语言数目，以及 expert 使用时间最长的语言名称：
 
@@ -392,7 +393,7 @@ List of 3
   ..$ expert: chr "r"</code></pre>
 ```
 
-**Lambda表达式**
+# Lambda表达式
 
 rlist中所有支持表达式计算的函数都支持 Lambda 表达式，允许用户访问列表元素的元数据（metadata），即元素本身、元素索引编号（index）、元素名称（name）。
 
@@ -437,7 +438,8 @@ $a
 $b
 [1]  6  8 10
 ```
-**管道操作**
+
+# 管道操作
 
 由于rlist中函数结构设计具有很强的一致性，推荐和[pipeR](http://renkun.me/pipeR)扩展包中定义的管道操作符一同使用，使得R中的非关系型数据操作易读、可维护。
 
@@ -456,7 +458,7 @@ p1   Ken  24
 p2 James  25
 ```
 
-**包含结构化对象的列表**  
+# 包含结构化对象的列表  
 
 下面是一个更为复杂的例子，其中涉及到生成一列 `data.frame`、处理一列线性模型等等：
 ```r  
@@ -488,19 +490,20 @@ set.seed(1)
 9  0.7994     0.016558 2.011
 10 0.5008    -0.016187 1.006
 ```
-**其他功能**
+
+# 其他功能
 
 除了上述函数之外，rlist扩展包还提供了许多其他函数，这里只做简单介绍：
 
 `list.join`：根表达式合并两个list
 
-      `list.parse`：将其他类型的对象转换为结构相同的list
+- `list.parse`：将其他类型的对象转换为结构相同的list
 
-      `list.load`, `list.save`：读写JSON, YAML, RData格式的list
+- `list.load`, `list.save`：读写JSON, YAML, RData格式的list
 
-      `list.if`, `list.which`, `list.any`, `list.all`：list元素的逻辑判断
+- `list.if`, `list.which`, `list.any`, `list.all`：list元素的逻辑判断
 
-      `list.find`, `list.findi`：在list中按照表达式寻找指定数量的元素
+- `list.find`, `list.findi`：在list中按照表达式寻找指定数量的元素
 
 详细介绍请参见帮助文档：
 
@@ -512,6 +515,4 @@ help(package = “rlist”)
 
 ```r   
 vignette("introduction", package = "rlist")
-
 ```
-
