@@ -63,19 +63,13 @@ slug: how-to-vote
 
 为了在高维问题中更精确地估计`$\Omega$`矩阵，可以采用罚极大似然估计。首先回顾对数似然函数的表达式
   
-`$$\begin{split}
-  
-\sum\_{i=1}^n\log & f(x\_i)=\frac{np}{2}\log(2\pi)-\frac{n}{2}\log|\Sigma|
-  
--\frac{1}{2}\sum\_{i=1}^n(x\_i-\bar{x})^T\Sigma^{-1}(x_i-\bar{x})\\
-  
-&=\frac{np}{2}\log(2\pi)-\frac{n}{2}\log|\Sigma|
-  
--\frac{1}{2}tr\Big(\sum\_{i=1}^n(x\_i-\bar{x})(x_i-\bar{x})^T\Sigma^{-1}\Big)\\
-  
-&\propto p\log(2\pi)-\log|\Sigma|-tr\big(S\Sigma^{-1}\big)
-  
-\end{split}$$`
+`\begin{split}  
+\sum\_{i=1}^n\log & f(x\_i)=\frac{np}{2}\log(2\pi)-\frac{n}{2}\log|\Sigma| 
+-\frac{1}{2}\sum\_{i=1}^n(x\_i-\bar{x})^T\Sigma^{-1}(x_i-\bar{x})\\  
+&=\frac{np}{2}\log(2\pi)-\frac{n}{2}\log|\Sigma| 
+-\frac{1}{2}tr\Big(\sum\_{i=1}^n(x\_i-\bar{x})(x_i-\bar{x})^T\Sigma^{-1}\Big)\\  
+&\propto p\log(2\pi)-\log|\Sigma|-tr\big(S\Sigma^{-1}\big)  
+\end{split}`
   
 此外，由于`$\Omega=\Sigma^{-1}$`，令上式最大等价于求解下式的最小值
   
@@ -83,11 +77,9 @@ slug: how-to-vote
   
 在`$\Omega$`矩阵非零元素稀疏的假定下，通过加罚，我们可以得到以下的最优化问题（解空间为正定矩阵）：
   
-`$$\begin{equation}
-  
+`\begin{equation}  
 \min\_{\Omega\succ 0}\Big\{tr(S\Omega)-\log|\Omega|+\lambda\sum\_{i\neq j}|\omega_{ij}|\Big\} \label{obj:main}
-  
-\end{equation}$$`
+\end{equation}`
 
 针对此最优化问题，Yuan and Lin(2007)通过maxdet最优化算法求解，banerjee(2007)则借用内点搜索方法(interior point method)，此外Friedman(2007)则将它转化为Lasso 的表达形式再通过shooting 算法求解。还有一类算法是从贝叶斯角度考虑，Bayesian Graphical Lasso,思想很像 Bayesian Lasso.
 
