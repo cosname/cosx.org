@@ -58,7 +58,7 @@ sentences=sentences[sentences!=""];
 
 ```r
 s.len=nchar(sentences);
-sentences=sentences[s.len>=15];
+sentences=sentences[s.len<=15];
 s.len=nchar(sentences);
 ```
 
