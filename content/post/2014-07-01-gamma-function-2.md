@@ -32,7 +32,7 @@ description: “本文主要讲述伽玛函数的定义、性质以及随机数�
 
 欧拉在伽玛函数的推导中实际上引入了两类积分形式
   
-$$ \int_0^1 t^{x}(1-t)^{y}dt, \quad \quad \int_0^{\infty} t^{x}e^{-t}dt $$
+`$$ \int_0^1 t^{x}(1-t)^{y}dt, \quad \quad \int_0^{\infty} t^{x}e^{-t}dt $$`
   
 现在我们分别称为欧拉一类积分和欧拉二类积分。勒让德追随欧拉的脚步，发表了多篇论文对欧拉积分进行了深入的研究和推广，不过在勒让德的研究中，对积分中的参数做了 `$-1$`的移位修改，主要定义为
   
@@ -158,7 +158,7 @@ $$`
 
 伽马函数还有一个奇妙的运用是求高维空间中球的体积。我们知道 二维球是圆；其面积为 `$\pi r^2$`，三维球的体积为 `$\frac{4}{3} \pi r^3$`，那$n$维空间中半径为$r$的球的体积如何计算呢？ 数学上这个体积应该是如下多重积分
   
-`$$ \displaystyle V\_n(r) = \idotsint\limits\_{ \tiny \{(x\_1, \cdots, x\_n) | \sum x\_i^2 < r^2 \} } 1 \quad dx_1dx_2 \cdots dx_n $$`
+`$$ \displaystyle V_n(r) = \idotsint\limits_{ \tiny \{(x_1, \cdots, x_n) | \sum x_i^2 < r^2 \} } 1 \quad dx_1dx_2 \cdots dx_n $$`
   
 可以证明
   
@@ -290,7 +290,7 @@ k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
 我们发现这两个式子形式上具有对偶关系。由于`$\sum$` 和`$\int$` 都表示求和， 几乎可以认为从第一个式子只是把 `$e^\lambda$` 和 `$k!$` 交换一下就得到了第二个式子。 这两个式子之间有更多的内在联系吗？事实上有如下一个奇妙的等式成立 
 
 `\begin{equation} 
-\label{gamma-e-taylor} \frac{1}{k!} \int_0^\lambda \frac{\lambda^k}{e^\lambda} d\lambda + \frac{1}{e^\lambda} \sum\_{n=0}^k \frac{\lambda^n}{n!} = 1 
+\label{gamma-e-taylor} \frac{1}{k!} \int_0^\lambda \frac{\lambda^k}{e^\lambda} d\lambda + \frac{1}{e^\lambda} \sum_{n=0}^k \frac{\lambda^n}{n!} = 1 
 \end{equation}`
   
 用上面描述的泊松过程的物理模型，可以很容易的证明这个等式。我们把数轴分成 `$(0, \lambda]$` 和 `$(\lambda, \infty)$` 这两个区间，考察第$k+1$ 个电话接到时间 `$Y_{k+1}$` 分别落在这两个区间的概率，当然有 `$$ P(Y_{k+1} \le \lambda) + P(Y_{k+1} > \lambda) = 1 $$`
