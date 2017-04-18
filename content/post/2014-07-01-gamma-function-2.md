@@ -32,7 +32,7 @@ description: “本文主要讲述伽玛函数的定义、性质以及随机数�
 
 欧拉在伽玛函数的推导中实际上引入了两类积分形式
   
-`$$ \int\_0^1 t^{x}(1-t)^{y}dt, \quad \quad \int\_0^{\infty} t^{x}e^{-t}dt $$`
+$$ \int_0^1 t^{x}(1-t)^{y}dt, \quad \quad \int_0^{\infty} t^{x}e^{-t}dt $$
   
 现在我们分别称为欧拉一类积分和欧拉二类积分。勒让德追随欧拉的脚步，发表了多篇论文对欧拉积分进行了深入的研究和推广，不过在勒让德的研究中，对积分中的参数做了 `$-1$`的移位修改，主要定义为
   
@@ -48,12 +48,9 @@ description: “本文主要讲述伽玛函数的定义、性质以及随机数�
 
 什么原因驱使勒让德偏向选择`$\Gamma(n) = (n-1)!$` 的定义呢？ 这成为了一个谜，没有明确的解释。 不过有数学史研究者们对欧拉的研究表明，在`$1730\sim1768$`年之间欧拉自己在研究一类积分的时候，实际上就已经对积分中的参数做了$-1$的移位修改，从而明确的引入了贝塔积分，而这个修改显然被勒让德注意到了。 是什么原因使得欧拉和勒让德在研究他们的积分形式的时候都考虑引入$-1$ 移位修改呢？ 有数学家猜测一个可能的原因是这两位数学家注意到，如果按照现代伽玛函数的定义，那么有
   
-`\begin{equation}
-  
+`\begin{equation}  
 \label{beta-gamma-decompose}
-  
 B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} ,
-  
 \end{equation}`
   
 `$B(x,y)$` 具有非常漂亮的对称形式。可是如果选取高斯给出的 `$\Pi(n)=n!$` 的定义，令
@@ -69,22 +66,16 @@ B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} ,
 还有一个类似的解释是从抽象代数的角度提出的，考虑伽玛分布的概率密度函数
   
 `$$ f_\alpha(x)= \left\{
-  
 \begin{aligned}
-  
 \frac{x^{\alpha-1} e^{-x}}{\Gamma(\alpha)} & \text{for }x>0
-  
 \\ 0 \quad \quad & \text{for }x < 0
-  
 \end{aligned}
-  
 \right.
-  
 $$`
   
 形成的集合 `$\{f_\alpha : \alpha > 0\}$`,那么该集合在卷积运算 `$*$`之下构成一个抽象代数中的半环，即满足
   
-`$$ f\_\alpha * f\_\beta = f_{\alpha+\beta} .$$`
+`$$ f_\alpha * f_\beta = f_{\alpha+\beta} .$$`
   
 而用`$\Pi(x)$` 的定义则无法得到类似的结果。
 
@@ -95,11 +86,8 @@ $$`
 做一个线性变换 `$h: t \rightarrow ct$`，可以得到如下函数
   
 `\begin{equation}
-  
-\label{generalized-gamma}
-  
-\frac{\Gamma(x)}{c^x} = \int_0^{\infty} e^{-ct} t^x \frac{dt}{t}
-  
+\label{generalized-gamma} 
+\frac{\Gamma(x)}{c^x} = \int_0^{\infty} e^{-ct} t^x \frac{dt}{t}  
 \end{equation}`
   
 由此 `$dt/t = d \log t$` 可以被看成是乘法群 `$(0, \infty)$` 上的一个不变测度，在尺度伸缩变换下满足不变性：
@@ -116,7 +104,7 @@ $$`
   
 由于积分表示的是求和， 所以\eqref{generalized-gamma} 式 被看成是乘法群 `$(0, \infty)$` 上加法特征和乘法特征混合乘积的累积求和。有了这个分解，只要在抽象代数的有限域上定义了$f$ 和$g$ 这两个映射， 实数域上定义的`$\frac{\Gamma(x)}{c^x}$` 函数就可以被推广到有限域上进行定义，只是无限求和的积分号变成了有限求和符号`$\Sigma$` 。 进一步，借用贝塔函数和伽玛函数满足的关系式\eqref{beta-gamma-decompose}, `$Beta(x,y)$`也可以完全类似的在有限域中定义出来， 而这种推广也将变得具有简洁的对称美。当然，这个理由和欧拉、勒让德的选择无关，而是现代数学家们给出的一个额外的解释。
 
- # 六、伽玛函数欣赏
+# 六、伽玛函数欣赏
 
 伽玛函数从它诞生开始就被许多数学家追逐研究，包括高斯、勒让德、威尔斯特拉斯、柳维尔等等，数学家们发现了这个函数大量的奇特性质，在解决许多数学问题的时候是一把利器。伽玛函数作为阶乘的推广，首先它也满足如下的斯特林公式
   
@@ -128,14 +116,13 @@ $$`
 
 **[Bohr-Mullerup 定理]** 如果 `$f:(0,\infty)\rightarrow (0,\infty)$`,且满足
 
-  1.  `$f(1) = 1$`
-  2. ` $f(x+1) = xf(x)$`
-  3. ` $\log f(x)$` 是凸函数
+  1. `$f(1) = 1$`
+  2. `$f(x+1) = xf(x)$`
+  3. `$\log f(x)$` 是凸函数
 
-那么 `$f(x) = \Gamma(x)$`, 也就是`$\Gamma(x)$`是唯一满足以上条件的函数。
+那么 `$f(x) = \Gamma(x)$`, 也就是`$\Gamma(x)$`是唯一满足以上条件的函数。`$log \Gamma(x)$` 是一个凸函数
 
-  ![digamma-func](https://cos.name/wp-content/uploads/2014/07/digamma-func.png) `$log \Gamma(x)$` 是一个凸函数
-
+  ![digamma-func](https://cos.name/wp-content/uploads/2014/07/digamma-func.png) 
 
 伽玛函数有不少等价的表示形式和神奇的结果。高斯给出的伽玛函数的形式是
   
@@ -148,7 +135,6 @@ $$`
 维尔斯特拉斯把高斯的伽玛函数形式做一下变换，就得到如下表达为无穷乘积的结果
   
 `$$ {\Gamma(x)} = \frac{1}{xe^{\gamma x}} \prod_{k=1}^\infty
-  
 \frac{e^{\frac{x}{k}}} {1+\frac{x}{k}} .$$`
   
 此处 `$\gamma = 0.5772156649\cdots$` 为欧拉常数。这个结果在复平面上也成立。由于伽玛函数的这个分解形式的启发，导致维尔斯特拉斯发现复平面上任意整函数`$f(z)$` 都以分解为无穷乘积形式。基于维尔斯特拉斯的这个无穷乘积形式和欧拉的反射公式，分别整理简化一下 `$\Gamma(1+x)\Gamma(1-x)$`，就可以轻松地得到介绍沃利斯公式的时候中提到的 `$\sin x$` 的无穷乘积展开式。
@@ -161,12 +147,9 @@ $$`
   
 `$$ f(x)^{(k)} = \frac{\Gamma{(n+1)}}{\Gamma{(n-k+1)}} x^{n-k} $$`
   
-基于上式，可以把导数的阶从整数延拓到实数集。例如，取`$n=1, k=\frac{1}{2}$` 我
-  
-们可以计算 $x$ 的 `$\frac{1}{2}$`阶导数为
+基于上式，可以把导数的阶从整数延拓到实数集。例如，取`$n=1, k=\frac{1}{2}$` 我们可以计算 $x$ 的 `$\frac{1}{2}$`阶导数为
   
 `$$ f(x)^{(\frac{1}{2})} = \frac{\Gamma{(1+1)}}{\Gamma{(1-1/2+1)}} x^{1-1/2}
-  
 = \frac{2\sqrt{x}}{\sqrt{\pi}} .$$`
   
 很容易想到对于一般的函数 `$f(x)$`通过泰勒级数展开可以表达为幂级数，于是借用 `$x^n$`的分数阶导数，我们可以尝试定义出任意函数的分数阶导数。不过有点遗憾的是这种简单的基于泰勒级数的定义方法不是良定义的，并非对所有函数都适用，但是这个思想却给后来的数学家提供了重要的线索，并由此发展了数学分析中的一个研究课题： Fractional Calculus。 在这种微积分中，分数阶的导数是具有良定义的，而积分作为导数的逆运算，也可以有分数阶。 这听起来真是很神奇，而这一切都要归功于伽玛函数。
@@ -175,7 +158,7 @@ $$`
 
 伽马函数还有一个奇妙的运用是求高维空间中球的体积。我们知道 二维球是圆；其面积为 `$\pi r^2$`，三维球的体积为 `$\frac{4}{3} \pi r^3$`，那$n$维空间中半径为$r$的球的体积如何计算呢？ 数学上这个体积应该是如下多重积分
   
-`$$ \displaystyle V\_n(r) = \idotsint\limits\_{ \tiny \{(x\_1, \cdots, x\_n) | \sum x\_i^2 < r^2 \} } 1 \quad dx\_1dx\_2 \cdots dx\_n $$`
+`$$ \displaystyle V\_n(r) = \idotsint\limits\_{ \tiny \{(x\_1, \cdots, x\_n) | \sum x\_i^2 < r^2 \} } 1 \quad dx_1dx_2 \cdots dx_n $$`
   
 可以证明
   
@@ -184,7 +167,6 @@ $$`
 下面我们来说一说伽玛函数和数论的关系。 伽玛函数和欧拉常数`$\gamma$` 有密切关系，可以发现
   
 `$$ \gamma = -\frac{d\Gamma(x)}{dx}|_{x=1} =
-  
 \lim_{n\rightarrow \infty}(1+\frac{1}{2} + \frac{1}{3}+\cdots+\frac{1}{n} – \log n) $$`
   
 欧拉常数`$\gamma$` 是一个神奇的常数，数学家们至今也没搞清楚它是一个有理数还是一个无理数。进一步还可以发现伽玛函数和黎曼`$\zeta(s)$`函数
@@ -206,8 +188,7 @@ $$`
 被称为 Digamma 函数，可以证明
   
 `$$\Psi(x) = -\gamma + (x-1) – \frac{(x-1)(x-2)}{2\cdot 2!}
-  
-+ \frac{(x-1)(x-2)(x-3)}{3\cdot 3!} \cdots $$`
+ \frac{(x-1)(x-2)(x-3)}{3\cdot 3!} \cdots $$`
   
 这也是一个很重要的函数，具有如下一个漂亮的性质
   
@@ -219,19 +200,17 @@ $$`
   
 可以证明
   
-`$$\Psi_1(x) = \frac{d^{2}\log\Gamma(x)}{dx^{2}}
-  
+`$$\Psi_1(x) = \frac{d^{2}\log\Gamma(x)}{dx^{2}}  
 = \frac{1}{x^2} + \frac{1}{(x+1)^2} + \frac{1}{(x+2)^2} + \cdots .$$`
   
 对于几个具体的数值，有如下漂亮的结果
   
-`$$\Psi(1) = -\gamma, \quad \quad \Psi(2) = 1-\gamma $$
-  
-$$\Psi_1(1) = \zeta(2) = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \cdots
-  
+`$$\Psi(1) = -\gamma, \quad \quad \Psi(2) = 1-\gamma $$` 
+
+`$$\Psi_1(1) = \zeta(2) = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \cdots
 = \frac{\pi^2}{6} $$`
 
- # 七、随机数学中的伽马函数
+# 七、随机数学中的伽马函数
 
 伽玛函数在概率统计中频繁现身，众多的统计分布，包括常见的统计学三大分布(`$t$` 分布，`$\chi^2$` 分布，`$F$` 分布)、贝塔分布、狄利克雷分布的密度公式中都有伽玛函数的身影。当然发生最直接联系的概率分布是直接由伽玛函数变换得到的伽玛分布。对伽玛函数的定义做一个变形，就可以得到如下式子
   
@@ -255,8 +234,7 @@ $$\Psi_1(1) = \zeta(2) = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \cd
   
 在伽玛分布的密度中取 `$\alpha = k+1$` 得到
   
-`$$ Gamma(\lambda|\alpha=k+1)
-  
+`$$ Gamma(\lambda|\alpha=k+1)  
 = \frac{\lambda^ke^{-\lambda}}{\Gamma(k+1)}= \frac{\lambda^k e^{-\lambda}}{k!} $$`
   
 所以这两个分布的数学形式具有高度的一致性，只是泊松分布是离散的，伽玛分布是连续的。这种数学上的一致性是偶然的吗？ 事实上，从泊松分布出发，可以利用一个简单的概率物理模型对伽玛分布的密度函数给出清晰的解释。
@@ -271,9 +249,7 @@ $$\Psi_1(1) = \zeta(2) = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \cd
   
 `$$p(X=k) = \binom{n}{k} p^k(1-p)^{n-k} .$$`
   
-由于 `$np= \lambda$`, 于是 $n$ 趋向于无穷的时候，粒子个数$X$将满足参数为
-  
-`$\lambda$` 的泊松分布
+由于 `$np= \lambda$`, 于是 $n$ 趋向于无穷的时候，粒子个数$X$将满足参数为`$\lambda$` 的泊松分布
   
 `$$p(X=k) = \frac{\lambda^k e^{-\lambda}}{k!} .$$`
 
@@ -306,36 +282,32 @@ $$\Psi_1(1) = \zeta(2) = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} + \cd
 
 如果我们把伽玛函数和`$e^\lambda$`的泰勒展开式对照写成如下形式
   
-`\begin{align} e^\lambda & = \sum_{k=0}^{\infty} {\lambda^k \over k!} \\
-  
-k! & = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
-  
+`\begin{align} 
+e^\lambda = \sum_{k=0}^{\infty} {\lambda^k \over k!} \\
+k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
 \end{align}`
   
 我们发现这两个式子形式上具有对偶关系。由于`$\sum$` 和`$\int$` 都表示求和， 几乎可以认为从第一个式子只是把 `$e^\lambda$` 和 `$k!$` 交换一下就得到了第二个式子。 这两个式子之间有更多的内在联系吗？事实上有如下一个奇妙的等式成立 
 
-`\begin{equation} \label{gamma-e-taylor} \frac{1}{k!} \int\_0^\lambda \frac{\lambda^k}{e^\lambda} d\lambda + \frac{1}{e^\lambda} \sum\_{n=0}^k \frac{\lambda^n}{n!} = 1
-  
+`\begin{equation} 
+\label{gamma-e-taylor} \frac{1}{k!} \int_0^\lambda \frac{\lambda^k}{e^\lambda} d\lambda + \frac{1}{e^\lambda} \sum\_{n=0}^k \frac{\lambda^n}{n!} = 1 
 \end{equation}`
   
-用上面描述的泊松过程的物理模型，可以很容易的证明这个等式。我们把数轴分成 `$(0, \lambda]$` 和 `$(\lambda, \infty)$` 这两个区间，考察第$k+1$ 个电话接到时间 `$Y\_{k+1}$` 分别落在这两个区间的概率，当然有 `$$ P(Y\_{k+1} \le \lambda) + P(Y_{k+1} > \lambda) = 1 $$`
+用上面描述的泊松过程的物理模型，可以很容易的证明这个等式。我们把数轴分成 `$(0, \lambda]$` 和 `$(\lambda, \infty)$` 这两个区间，考察第$k+1$ 个电话接到时间 `$Y_{k+1}$` 分别落在这两个区间的概率，当然有 `$$ P(Y_{k+1} \le \lambda) + P(Y_{k+1} > \lambda) = 1 $$`
   
 按照上述的物理模型，显然第$k+1$ 个电话的时间落入`$(0, \lambda]$` 的概率为
   
-`$$ P(Y\_{k+1} \le \lambda) = \int\_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!} d \lambda $$`
+`$$ P(Y_{k+1} \le \lambda) = \int_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!} d \lambda $$`
   
 如果第$k+1$ 个电话的时间点落入 `$(\lambda, \infty)$`，这个事件等价地可以理解为 `$(0, \lambda]$` 上的电话个数不能超过 $k$ 个，由于`$(0, \lambda]$` 这个有限时间区间上的电话次数符合参数为`$\lambda$` 的泊松分布， 所以这个概率为
   
-`$$ P(Y\_{k+1} > \lambda) = \sum\_{n=0}^k \frac{\lambda^n e^{-\lambda} }{n!} $$`
+`$$ P(Y_{k+1} > \lambda) = \sum_{n=0}^k \frac{\lambda^n e^{-\lambda} }{n!} $$`
   
 所以我们得到
   
-`\begin{equation}
-  
-\label{poisson-gamma-dual}
-  
-\int_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!}d\lambda+\sum_{n=0}^k \frac{\lambda^n e^{-\lambda}}{n!} = 1
-  
+`\begin{equation}  
+\label{poisson-gamma-dual}  
+\int_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!}d\lambda+\sum_{n=0}^k \frac{\lambda^n e^{-\lambda}}{n!} = 1  
 \end{equation}`
   
 这个式子俗称泊松-伽玛对偶，简单整理一下就是 \eqref{gamma-e-taylor} 式。
@@ -346,42 +318,33 @@ k! & = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
   
 所以伽马分布的概率密度可以重写为
   
-`\begin{align*}
-  
-\frac{\lambda^k e^{-\lambda}}{k!}
-  
-& = \lim_{n\rightarrow \infty} \frac{\lambda^k (1-\frac{\lambda}{n}) ^n}{k!} \\
-  
-& = \lim_{n\rightarrow \infty} \frac{ n! n^k (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n}{k! \cdot n!} \\
-  
-& = \lim_{n\rightarrow \infty} \frac{(n+k)!}{k!\cdot n!} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n \\
-  
-& = \lim_{n\rightarrow \infty} \binom{n+k}{k} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n
-  
+`\begin{align*}  
+\frac{\lambda^k e^{-\lambda}}{k!}  
+& = \lim_{n\rightarrow \infty} \frac{\lambda^k (1-\frac{\lambda}{n}) ^n}{k!} \\  
+& = \lim_{n\rightarrow \infty} \frac{ n! n^k (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n}{k! \cdot n!} \\ 
+& = \lim_{n\rightarrow \infty} \frac{(n+k)!}{k!\cdot n!} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n \\  
+& = \lim_{n\rightarrow \infty} \binom{n+k}{k} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n  
 \end{align*}`
   
 显然上式具有明确的二项分布的物理含义。事实上，二项分布和贝塔分布之间也存在完全类似\eqref{poisson-gamma-dual} 的一个等式：
   
 `\begin{equation}
-  
 \label{binomial-beta-dual}
-  
-\frac{n!}{k!(n-k-1)!} \int\_0^p t^k(1-t)^{n-k-1} dt + \sum\_{v=0}^k \binom{n}{v} p^v(1-p)^{n-v} = 1
-  
+\frac{n!}{k!(n-k-1)!} \int_0^p t^k(1-t)^{n-k-1} dt + \sum_{v=0}^k \binom{n}{v} p^v(1-p)^{n-v} = 1  
 \end{equation}`
   
 如果我们知道`$n\rightarrow\infty$`时上式中二项分布的极限是泊松分布，而贝塔分布的极限是伽玛分布，那么就很容易理解 \eqref{poisson-gamma-dual} 其实可以看做是 \eqref{binomial-beta-dual} 的极限形式。
 
 # 八、结语
 
-作家海明威说：“冰山运动之雄伟壮观，是因为它只有八分之一在水面上。”阶乘，这么一个简单的基于整数的数学概念，俨然是一座冰山，我们日常看到的只是它浮在水面上的一角。而数学家们眼光犀利，看出这座山并非只有整数的一角，他们逐步地深入挖掘探索，挖出了神奇的伽马函数，把深藏在冰山下的实数域、复数域、甚至有限域都给挖了出来。而挖掘出来的伽玛函数真是一个魔术师，它跨越了人们的直觉想象，使得许多数学概念能够神奇地从整数延拓到分数；而伽玛函数同时又在现代数学的各个分支中表演着自己的神奇技艺。有许多人认为数学的概念是静态的：这些数学概念产生于历史上某一个时刻，某一位数学大家之手，之后就几乎一成不变了。对于大多数非数学专业的人而言，这种感觉貌似很自然，毕竟普通读者所接触的几何、代数、微积分这些数学知识都已经体系成熟，存在了几百甚至上千年。 然而数学的发展其实是先有探索的阶段，然后才有逻辑与体系，只是我们的数学课本历来偏重后者而忽视前者。而如果我们对数学知识的探索过程有所了解的话，会发现这些探索也犹如冰山掩藏在水面之下的部分，甚至比露出的尖角还更具魅力。
+作家海明威说：“冰山运动之雄伟壮观，是因为它只有八分之一在水面上。阶乘，这么一个简单的基于整数的数学概念，俨然是一座冰山，我们日常看到的只是它浮在水面上的一角。而数学家们眼光犀利，看出这座山并非只有整数的一角，他们逐步地深入挖掘探索，挖出了神奇的伽马函数，把深藏在冰山下的实数域、复数域、甚至有限域都给挖了出来。而挖掘出来的伽玛函数真是一个魔术师，它跨越了人们的直觉想象，使得许多数学概念能够神奇地从整数延拓到分数；而伽玛函数同时又在现代数学的各个分支中表演着自己的神奇技艺。有许多人认为数学的概念是静态的：这些数学概念产生于历史上某一个时刻，某一位数学大家之手，之后就几乎一成不变了。对于大多数非数学专业的人而言，这种感觉貌似很自然，毕竟普通读者所接触的几何、代数、微积分这些数学知识都已经体系成熟，存在了几百甚至上千年。 然而数学的发展其实是先有探索的阶段，然后才有逻辑与体系，只是我们的数学课本历来偏重后者而忽视前者。而如果我们对数学知识的探索过程有所了解的话，会发现这些探索也犹如冰山掩藏在水面之下的部分，甚至比露出的尖角还更具魅力。
 
 台湾的数学教授蔡聪明先生在数学的科普传播方面写过大量的文章，他在《数学的发现趣谈》一书中对于数学的创造、发现与发展有一段精彩的论述：“如果你不知道一个定理（或公式）是怎样发现的，那么你对它并没有真正的了解，因为真正的了解必须从逻辑因果掌握到创造的心理因果。一个定理的诞生，基本上跟一粒种子在适当的土壤、风雨、阳光、气候 … 之下，发芽成一颗树，再开花结果，并没有两样。”本文尝试尽可能的呈现伽玛函数这颗数学之树的生长历程，可以说伽玛函数的种子最早是沃利斯播下的，欧拉给予了最好的施肥、灌溉使得种子发芽，而后来众多数学家们的努力使得这颗嫩芽茁壮成长，最终几乎成长为一颗参天大树。
 
 伽玛函数这颗大树在现代数学中如此繁茂，笔者知识有限仅能描绘它很有限的一部分。这个函数在数学上魅力独特，不仅能够被一个理科本科生很好的理解，它本身又足够的深刻，具有很多漂亮的数学性质，历史上吸引了众多一流的数学家对它进行探索研究。美国数学家 Philip J.Davis 在1959年在《美国数学月刊》上发表了一篇很有名的介绍伽玛函数的文章，文中对伽玛函数一些特性发现的历史进行了详细的描述，这篇文章获得了 Chauvenet Prize (美国数学会颁发的数学科普奖)。 他在文中最后总结道：
 
 > Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also. (每一代人都发现了一些伽马函数的有趣性质，也许下一代人也会有所发现。)    
-—Philip J.Davis        
+     
 
 # 九、推荐阅读
   
