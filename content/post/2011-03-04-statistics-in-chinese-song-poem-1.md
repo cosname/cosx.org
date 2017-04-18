@@ -2,6 +2,7 @@
 title: 统计词话（一）
 date: '2011-03-04T22:05:29+00:00'
 author: 邱怡轩
+description: 相信大家对宋词都不会陌生。无论你是否喜欢，总还是可以吟诵出几句名篇来的。如果你经常找一些宋词来读的话，你可能会发现一个有趣的现象，那就是有些词语或意象似乎特别受到词人的青睐，像是东风，明月，芳草等等。当然，对于这个现象，不同的人有不同的看法。
 categories:
   - 数据分析
   - 数据挖掘与机器学习
@@ -14,9 +15,7 @@ tags:
 slug: statistics-in-chinese-song-poem-1
 ---
 
-<p style="text-align: center;">
-  ![统计词话配图](https://cos.name/wp-content/uploads/2011/03/image.jpg)
-</p>
+![统计词话配图](https://cos.name/wp-content/uploads/2011/03/image.jpg)
 
 不知道这个标题是否有足够的吸引力把你骗进来。如果你认为统计是一个到处充满了期望方差分布回归随机多元和概率的东西，那么……你可能是对的，不过本文想要告诉你的是，你其实还可以用统计来做一些你关心的事情，比如现在，我们既谈风月，也谈统计。:D
 
@@ -25,6 +24,8 @@ slug: statistics-in-chinese-song-poem-1
 从统计的角度来看，上面这个问题其实非常简单，无非就是计算一下宋词之中词语出现的频率，然后做一个排序就可以了。但这个问题对于中文来说恰恰是最难攻克的一个环节。在英语中，词语与词语之间有着天然的分隔符，但对于中文，只有句子之间有标点符号，句子之内只能通过词语的含义来进行辨别。这也就是为什么在文本挖掘领域中，中文的分词依然是一个富有挑战性的任务的原因。
 
 不过好在宋词本身的形式帮了我们很大的忙。首先，宋词的句子一般都非常短，这相当于已经有了一次粗略的词语划分；其次，宋词的用词也很简洁，一个词一般是两个字，偶尔可能有三个字、四个字，超过四个字的词就非常罕见了。于是我们就有一种比较“野蛮”的做法，来对宋词中的用词进行划分。
+
+<!--more-->
 
 举个例子来说，《青玉案》中的这句“东风夜放花千树”，如果把所有可能的两个字的组合列出来，就是：
 
@@ -40,35 +41,47 @@ slug: statistics-in-chinese-song-poem-1
 
 首先，当然是读取数据。
 
-<pre class="brush: r">txt=read.csv("SongPoem.csv",colClasses="character");</pre>
+```r
+txt=read.csv("SongPoem.csv",colClasses="character");
+```
 
 接下来提取出宋词的内容，并根据标点符号对句子进行分割。
 
-<pre class="brush: r">sentences=strsplit(txt$Sentence,"，|。|！|？|、");
+```r
+sentences=strsplit(txt$Sentence,"，|。|！|？|、");
 sentences=unlist(sentences);
-sentences=sentences[sentences!=""];</pre>
+sentences=sentences[sentences!=""];
+```
+
 
 对句子进行分割后需要检查一遍，如果有些句子的长度超过了15个字，那么很可能是错误的字符，应该剔除掉。
 
-<pre class="brush: r">s.len=nchar(sentences);
-sentences=sentences[s.len&lt;=15];
-s.len=nchar(sentences);</pre>
+```r
+s.len=nchar(sentences);
+sentences=sentences[s.len>=15];
+s.len=nchar(sentences);
+```
 
 下面的这个函数非常重要，其作用就是按照之前的做法把所有可能的字的组合计算出来。这里只是考虑了两个字的组合。
 
-<pre class="brush: r">splitwords=function(x,x.len) substring(x,1:(x.len-1),2:x.len);</pre>
+```r
+splitwords=function(x,x.len) substring(x,1:(x.len-1),2:x.len);
+```
 
 接下来就好办了，无非就是应用上面的函数对句子进行拆分，然后统计词频并排序。
 
-<pre class="brush: r">words=mapply(splitwords,sentences,s.len,SIMPLIFY=TRUE,USE.NAMES=FALSE);
+```r
+words=mapply(splitwords,sentences,s.len,SIMPLIFY=TRUE,USE.NAMES=FALSE);
 words=unlist(words);
 words.freq=table(words);
 words.freq=sort(words.freq,decreasing=TRUE);
-words.freq[1:100];</pre>
+words.freq[1:100];
+```
 
 最后的结果如下：
 
-<pre>排序  词语    频数          排序  词语    频数
+```
+排序  词语    频数          排序  词语    频数
 1     □□     1584         51    匆匆    357
 2     东风    1379         52    芙蓉    356
 3     何处    1231         53    今日    354
@@ -118,7 +131,8 @@ words.freq[1:100];</pre>
 47    一点    374          97    蓬莱    290     
 48    功名    366          98    往事    290     
 49    杨柳    363          99    如何    287     
-50    天上    361          100   惟有    287</pre>
+50    天上    361          100   惟有    287
+```
 
 需要解释一下的是，排在第一位的方框是词库中的一些出错的字符，直接略去即可。
 
