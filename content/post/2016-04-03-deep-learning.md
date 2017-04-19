@@ -12,7 +12,7 @@ tags:
 slug: deep-learning
 ---
 
-本期投稿： [王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)  王小宁            编辑：王小宁
+本期投稿：[王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁；编辑：王小宁
 
 # 深度学习
 
