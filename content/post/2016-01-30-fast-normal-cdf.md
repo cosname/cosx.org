@@ -33,7 +33,14 @@ library(Rcpp)
 sourceCpp("test_as26217.cpp")
 
 x = seq(-6, 6, by = 1e-6)
-system.time(y
+system.time(y <- pnorm(x))
+## user  system elapsed
+## 1.049   0.000   1.048
+system.time(asy <- r_as26217ncdf(x))
+## user  system elapsed
+## 0.293   0.019   0.311
+max(abs(y - asy))
+## [1] 6.968772e-08
 ```
 
 可以看出，A&S 26.2.17 的速度大约是 `pnorm()` 的三倍，且误差也在预定的范围里，是对计算效率的一次巨大提升。
@@ -61,7 +68,11 @@ library(Rcpp)
 sourceCpp("test_fastncdf.cpp")
 
 x = seq(-6, 6, by = 1e-6)
-system.time(fasty
+system.time(fasty <- r_fastncdf(x))
+## user  system elapsed
+## 0.043   0.024   0.066
+max(abs(y - fasty))
+## [1] 9.99999e-08
 ```
 
 与之前的结果相比，相当于速度是 `pnorm()` 的15倍！
