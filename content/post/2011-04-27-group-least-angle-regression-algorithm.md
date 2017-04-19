@@ -2,6 +2,7 @@
 title: 分组最小角回归算法（group LARS）
 date: '2011-04-27T18:31:10+00:00'
 author: 郝智恒
+description: 继续前两篇博文中对于最小角回归（LARS)和lasso的介绍。在这篇文章中，我打算介绍一下分组最小角回归算法（Group LARS）。本文的主要观点均来自Ming Yuan和Yi Lin二人2006合作发表在JRSSB上的论文Model selection and estimation in regression with grouped variables.
 categories:
   - 回归分析
   - 统计计算
@@ -17,11 +18,13 @@ slug: group-least-angle-regression-algorithm
 
 首先，我想说明一下，为何要引入分组变量（grouped variable)的概念。举一个简单的例子，在可加的多项式模型中，每一项都是多项式。这个多项式有可能可以通过最初的变量的线性组合来表达。在进行这种类型的回归中，挑选重要的变量其实质是挑选重要的因子（factor），而因子则是最初的那些变量的线性组合。分组变量的回归问题，实际上就是我们一般所说的回归问题的推广。如果我们把每一个单独的变量都看成一个因子，那么这种情况下的回归就是一般意义下的回归。下面用公式更加直白的说明这个问题：
 
-<p style="text-align: center;">
-  $Y=\sum_{j=1}^JX_j\beta_j+e$
-</p>
+`$$
+  Y=\sum_{j=1}^JX_j\beta_j+e
+$$`
 
 其中$Y$是个$n$维向量，$e\~N\_n(0,\sigma^2I)$.$X\_j$是$n\times p\_j$矩阵，代表的是第j个因子（factor，是变量variables的线性组合)。$\beta\_j$是$p\_j$维的系数向量。依然假定$Y$是中心化的，$X\_j$是中心化并且正交化的（$X\_j’X\_j=I$）。这个就是分组变量的回归模型。
+
+<!--more-->
 
 在小弟之前的文章中介绍过最小角回归（LARS）算法，对于变量选择来说，这种算法是比较易于计算机实现的，而且比传统的向前逐步回归（forward selection）更加谨慎，但是没有逐段回归（stagewise）那么谨小慎微。对于分组变量的回归模型选择问题来说，直接套用LARS算法可能会挑选出一些不必要的因子进入回归模型中。因此在文章中，作者提出了分组最小角回归（group LARS).这种算法对最小角回归进行了推广，下面简单介绍一下这种算法。
 
