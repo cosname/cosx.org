@@ -19,7 +19,7 @@ slug: how-to-vote
 ---
 
 
-# **一、议员投票**
+# 一、议员投票
 
 这个数据在近几年的图模型文章中常能见到，并且已有很多深入的讨论——包括图结构随时间变化、多图联合估计等情况。本文只涉及单个图结构的估计，此外笔者对政治不了解，因此文中摘录wiki的相关评论。
 
@@ -31,19 +31,19 @@ slug: how-to-vote
 
 首先，红绿交界处的Lincoln、Nelson、Collins等人是否代表了某种“中间力量”？以下从维基摘录的一段话（<http://en.wikipedia.org/wiki/Bill_Nelson>）或许回答这个问题。
 
-> **Nelson’s** votes have tended to be more liberal than conservative. He has received high ratings from left-of-center groups such as Americans for Democratic Action, and low ones from right-of-center groups such as the Eagle Forum and the Club for Growth. According to ratings by the National Journal, Nelson’s votes have been liberal on economic matters, moderate on social issues, and liberal but close to the center on foreign policy.
+> Nelson’s votes have tended to be more liberal than conservative. He has received high ratings from left-of-center groups such as Americans for Democratic Action, and low ones from right-of-center groups such as the Eagle Forum and the Club for Growth. According to ratings by the National Journal, Nelson’s votes have been liberal on economic matters, moderate on social issues, and liberal but close to the center on foreign policy.
 
 其次，我们再来看另一个极端。选取图中远离红点的一个绿点（图中左下角）——Cantwell；以及远离绿色区域的红点（图中右下角）——Enzi。同样是摘自wiki的两段话，验证了他们的“极左”和“极右”。
 
-> While **she(Cantwell)** scores high on a progressive chart from ProgressivePunch.org,[25] Cantwell has made several controversial votes during her time in the Senate that have created friction between her and members of the Democratic Party.
+> While she (Cantwell) scores high on a progressive chart from ProgressivePunch.org,[25] Cantwell has made several controversial votes during her time in the Senate that have created friction between her and members of the Democratic Party.
 > 
-> **Enzi** was ranked by National Journal as the sixth-most conservative U.S. Senator in its March 2007 conservative/liberal rankings.[7] Despite his strong support of the War in Iraq, he was one of 14 U.S. Senators to vote against the Iraq War funding bill in May 2007 because he opposes the clauses of the bill which increase domestic spending.
+> Enzi was ranked by National Journal as the sixth-most conservative U.S. Senator in its March 2007 conservative/liberal rankings.[7] Despite his strong support of the War in Iraq, he was one of 14 U.S. Senators to vote against the Iraq War funding bill in May 2007 because he opposes the clauses of the bill which increase domestic spending.
 
 此外，被绿点包围的蓝点Lieberman——“A former member of the Democratic Party, he was the party’s nominee for Vice President in the 2000 election. Currently an independent, he remains closely affiliated with the party.”
 
 除了以上分析，还可以获得很多信息。比如可以分析图中的重要节点、用局部估计的方法了解投票关联是如何随时间变化的，等等。
 
-# **二、图模型——罚极大似然**
+# 二、图模型——罚极大似然
 
 如何才能获得这幅“议员投票图”呢？它的理论依据是什么？估计图结构的方法也有很多，这里只介绍罚极大似然的方法。
 
@@ -51,23 +51,23 @@ slug: how-to-vote
   
 `$$f(x)=\frac{1}{(2\pi)^{p/2}|\Sigma|^{1/2}}\exp\Big\{-\frac{1}{2}(X-\mu)^T\Sigma^{-1}(X-\mu)\Big\}$$`
   
-假设数据`$x\_1, x\_2, \cdots, x\_n$`来自正态分布，每个`$x\_i$`（p维向量）记录p位议员的一次投票结果。如果用协方差矩阵描述议员投票的相关关系，那么它的极大似然估计为，
+假设数据`$x_1, x_2, \cdots, x_n$`来自正态分布，每个`$x_i$`（p维向量）记录p位议员的一次投票结果。如果用协方差矩阵描述议员投票的相关关系，那么它的极大似然估计为，
   
-`$$S=\frac{1}{n}\sum\_{i=1}^N(x\_i-\bar{x})(x_i-\bar{x})^T$$`
+`$$S=\frac{1}{n}\sum_{i=1}^N(x_i-\bar{x})(x_i-\bar{x})^T$$`
   
-协方差矩阵的逆`$\Omega=\Sigma^{-1}=\big(\omega\_{ij}\big)\_{p\times p}$`在图模型中被称为Concentration Matrix或者Precision Matrix。该矩阵与偏相关系数有如下关系：
+协方差矩阵的逆`$\Omega=\Sigma^{-1}=\big(\omega_{ij}\big)_{p\times p}$`在图模型中被称为Concentration Matrix或者Precision Matrix。该矩阵与偏相关系数有如下关系：
   
-`$$\rho\_{ij|\\\{i,j\}}=-\frac{\omega\_{ij}}{\sqrt{\omega\_{ii}\omega\_{jj}}}$$`
+`$$\rho_{ij|\{i,j\}}=-\frac{\omega_{ij}}{\sqrt{\omega_{ii}\omega_{jj}}}$$`
 
 由此可以看出，`$\Omega$`矩阵中的零元素代表了对应议员投票行为的条件独立关系。
 
 为了在高维问题中更精确地估计`$\Omega$`矩阵，可以采用罚极大似然估计。首先回顾对数似然函数的表达式
   
 `\begin{split}  
-\sum\_{i=1}^n\log & f(x\_i)=\frac{np}{2}\log(2\pi)-\frac{n}{2}\log|\Sigma| 
--\frac{1}{2}\sum\_{i=1}^n(x\_i-\bar{x})^T\Sigma^{-1}(x_i-\bar{x})\\  
+\sum_{i=1}^n\log & f(x_i)=\frac{np}{2}\log(2\pi)-\frac{n}{2}\log|\Sigma| 
+-\frac{1}{2}\sum_{i=1}^n(x_i-\bar{x})^T\Sigma^{-1}(x_i-\bar{x})\\  
 &=\frac{np}{2}\log(2\pi)-\frac{n}{2}\log|\Sigma| 
--\frac{1}{2}tr\Big(\sum\_{i=1}^n(x\_i-\bar{x})(x_i-\bar{x})^T\Sigma^{-1}\Big)\\  
+-\frac{1}{2}tr\Big(\sum_{i=1}^n(x_i-\bar{x})(x_i-\bar{x})^T\Sigma^{-1}\Big)\\  
 &\propto p\log(2\pi)-\log|\Sigma|-tr\big(S\Sigma^{-1}\big)  
 \end{split}`
   
@@ -78,7 +78,7 @@ slug: how-to-vote
 在`$\Omega$`矩阵非零元素稀疏的假定下，通过加罚，我们可以得到以下的最优化问题（解空间为正定矩阵）：
   
 `\begin{equation}  
-\min\_{\Omega\succ 0}\Big\{tr(S\Omega)-\log|\Omega|+\lambda\sum\_{i\neq j}|\omega_{ij}|\Big\} \label{obj:main}
+\min_{\Omega\succ 0}\Big\{tr(S\Omega)-\log|\Omega|+\lambda\sum_{i\neq j}|\omega_{ij}|\Big\} \label{obj:main}
 \end{equation}`
 
 针对此最优化问题，Yuan and Lin(2007)通过maxdet最优化算法求解，banerjee(2007)则借用内点搜索方法(interior point method)，此外Friedman(2007)则将它转化为Lasso 的表达形式再通过shooting 算法求解。还有一类算法是从贝叶斯角度考虑，Bayesian Graphical Lasso,思想很像 Bayesian Lasso.
@@ -87,7 +87,7 @@ slug: how-to-vote
    求解（1）式，得到`$\Omega$`矩阵，它的非零元素便对应“投票图”中的一条边。
    
 
-# **三、数据与代码**
+# 三、数据与代码
 
 R数据下载——数据中包含三个矩阵（数据来自<http://www.senate.gov>）。
 
