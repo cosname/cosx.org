@@ -12,9 +12,9 @@ tags:
 slug: deep-learning
 ---
 
-本期投稿： [王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)  王小宁            编辑：王小宁
+本期投稿：[王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁；编辑：王小宁
 
-#### 深度学习
+# 深度学习
 
 2006年Hinton 等人的深度学习论文在当时掀起了一股深度学习的研究浪潮，今年的人机围棋大战（AlphaGo 对战李世石）更是赚足了大众的眼球，相关的论文更是被更多的人拿来研读，小编为大家[整理了一下](http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html)，供大家学习交流。
 
@@ -28,7 +28,7 @@ Yann LeCun 是卷积神经网络的发明人，Facebook 人工智能研究院的
 
 互联网公司一直是走在深度学习的前沿道路上，Google 是最领先的一个公司，他的深度学习究竟强在哪？且听谷歌的[首席科学家谈一谈](http://mp.weixin.qq.com/s?__biz=MzAxMzAwNzY3NA==&mid=403498834&idx=2&sn=10032971d2ac497cd0bee4aa3c6e0db5&3rd=MzA3MDU4NTYzMw==&scene=6#rd)。
 
-#### 学习资料
+# 学习资料
 
 THULAC（THU Lexical Analyzer for Chinese）由清华大学自然语言处理与社会人文计算实验室研制推出的一套中文词法分析工具包。他们最近发布了THULAC分词算法的[Python版本](http://thulac.thunlp.org/)，已经可以试用了。
 
