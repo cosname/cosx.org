@@ -18,7 +18,7 @@ slug: quality-courses-series-applied-stochastic-process
 
 # 一、课程简介
 
-主讲教师：[张波](http://www.jingjiluntan.com/a/jiaoxuetuandui/jiaoyanshi/2011/0219/121.html "主页")、[张景肖](http://www.jingjiluntan.com/a/jiaoxuetuandui/jiaoyanshi/2011/0219/125.html "主页")、[肖宇谷](http://www.jingjiluntan.com/a/jiaoxuetuandui/jiaoyanshi/2011/0215/68.html?1297946806 "主页")
+主讲教师：[张波](http://www.jingjiluntan.com/a/jiaoxuetuandui/jiaoyanshi/2011/0219/121.html)、[张景肖](http://www.jingjiluntan.com/a/jiaoxuetuandui/jiaoyanshi/2011/0219/125.html)、[肖宇谷](http://www.jingjiluntan.com/a/jiaoxuetuandui/jiaoyanshi/2011/0215/68.html?1297946806)
 
 指定教材：张波、张景肖《应用随机过程》，清华大学出版社
 
@@ -144,7 +144,7 @@ slug: quality-courses-series-applied-stochastic-process
   4. 几何布朗运动
   5. 有漂移的布朗运动
 
-#### 第十五讲 伊藤积分和期权定价公式
+## 第十五讲 伊藤积分和期权定价公式
 
   1. 伊藤积分
   2. BS期权定价公式
