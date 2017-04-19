@@ -16,7 +16,9 @@ tags:
 slug: causality2-rcm
 ---
 
-![](https://cos.name/wp-content/uploads/2012/03/Donald-Rubin.jpg) 因果推断用的最多的模型是 Rubin Causal Model (RCM; Rubin 1978) 和 Causal Diagram (Pearl 1995)。Pearl (2000) 中介绍了这两个模型的等价性，但是就应用来看，RCM 更加精确，而 Causal Diagram 更加直观，后者深受计算机专家们的推崇。这部分主要讲 RCM。
+![Donald Rubin](https://cos.name/wp-content/uploads/2012/03/Donald-Rubin.jpg)
+
+因果推断用的最多的模型是 Rubin Causal Model (RCM; Rubin 1978) 和 Causal Diagram (Pearl 1995)。Pearl (2000) 中介绍了这两个模型的等价性，但是就应用来看，RCM 更加精确，而 Causal Diagram 更加直观，后者深受计算机专家们的推崇。这部分主要讲 RCM。
 
 设  `$Z\_i$` 表示个体 `$i$` 接受处理与否，处理取 `$1$`，对照取`$0$` (这部分的处理变量都讨论二值的，多值的可以做相应的推广)；`$Y\_i$` 表示个体 `$i$` 的结果变量。另外记 `$\{  Y\_i(1),Y\_i(0)\}$` 表示个体 `$i$` 接受处理或者对照的潜在结果 (potential outcome)，那么 `$Y\_i(1) -Y\_i(0)$`  表示个体 `$i$`  接受治疗的个体因果作用。不幸的是，每个个体要么接受处理，要么接受对照 `$\{Y\_i(1),Y\_i(0)\}$` 中必然缺失一半，个体的因果作用是不可识别的。观测的结果是 `$Y\_i = Z\_i Y\_i(1) + (1 – Z\_i) Y_i(0)$`。 但是，在 `$Z$` 做随机化的前提下，我们可以识别总体的平均因果作用 (Average Causal Effect; ACE):
 
@@ -73,7 +75,7 @@ COR(Z \rightarrow Y) & = & \frac{P(Y(1) = 1)P(Y(0)=0) }{P(Y(0)=1)P(Y(1)=0) } \
   3. `$QTE(\tau)$` 在随机化下是可识别的。另外一个和它“对偶”的量是 Ju and Geng (2010) 提出的分布因果作用（distributional causal effect: DCE）：`$DCE(y) = P(Y(1) \geq y) – P(Y(0) \geq y)$` ，在随机化下也可以识别。
   4. 即使完全随机化，`$\Delta(\delta)$` 也不可识别。也就是说，经济学家提出的具有“经济学意义”的量，很难用观测数据来估计。这种现象在实际中常常发生：关心实际问题的人向统计学家索取的太多，而他们提供的数据又很有限。
 
-*关于 RCM 的版权，需要做一些说明。目前可以看到的文献，最早的是 Jerzy Neyman 于 1923 年用波兰语写的博士论文，第一个在试验设计中提出了“潜在结果”（potential outcome）的概念。后来 Donald Rubin 在观察性研究中重新（独立地）提出了这个概念，并进行了广泛的研究。Donald Rubin 早期的文章并没有引用 Jerzy Neyman 的文章，Jerzy Neyman 的文章也不为人所知。一直到 1990 年，D. M. Dabrowska 和 T. P. Speed 将 Jerzy Neyman 的文章翻译成英文发表在 Statistical Science 上，大家才知道 Jerzy Neyman 早期的重要贡献。今天的文献中，有人称 Neyman-Rubin Model，其实就是潜在结果模型。计量经济学家，如 James Heckman 称，经济学中的 Roy Model 是潜在结果模型的更早提出者。在 Donald Rubin 2004 年的 Fisher Lecture 中，他非常不满地批评计量经济学家，因为 Roy 最早的论文中，全文没有一个数学符号，确实没有明确的提出这个模型。详情请见，Donald Rubin 的 Fisher Lecture，发表在 2005 年的 Journal of the American Statistical Association 上。研究 Causal Diagram 的学者，大多比较认可 Donald Rubin 的贡献。但是 Donald Rubin 却是 Causal Diagram 的坚定反对者，他认为 Causal Diagram 具有误导性，且没有他的模型清楚。他与James Heckman （诺贝尔经济学奖）， Judea Pearl （图灵奖） 和 James Robins 之间的激烈争论，成为了广为流传的趣闻。
+关于 RCM 的版权，需要做一些说明。目前可以看到的文献，最早的是 Jerzy Neyman 于 1923 年用波兰语写的博士论文，第一个在试验设计中提出了“潜在结果”（potential outcome）的概念。后来 Donald Rubin 在观察性研究中重新（独立地）提出了这个概念，并进行了广泛的研究。Donald Rubin 早期的文章并没有引用 Jerzy Neyman 的文章，Jerzy Neyman 的文章也不为人所知。一直到 1990 年，D. M. Dabrowska 和 T. P. Speed 将 Jerzy Neyman 的文章翻译成英文发表在 Statistical Science 上，大家才知道 Jerzy Neyman 早期的重要贡献。今天的文献中，有人称 Neyman-Rubin Model，其实就是潜在结果模型。计量经济学家，如 James Heckman 称，经济学中的 Roy Model 是潜在结果模型的更早提出者。在 Donald Rubin 2004 年的 Fisher Lecture 中，他非常不满地批评计量经济学家，因为 Roy 最早的论文中，全文没有一个数学符号，确实没有明确的提出这个模型。详情请见，Donald Rubin 的 Fisher Lecture，发表在 2005 年的 Journal of the American Statistical Association 上。研究 Causal Diagram 的学者，大多比较认可 Donald Rubin 的贡献。但是 Donald Rubin 却是 Causal Diagram 的坚定反对者，他认为 Causal Diagram 具有误导性，且没有他的模型清楚。他与James Heckman （诺贝尔经济学奖）， Judea Pearl （图灵奖） 和 James Robins 之间的激烈争论，成为了广为流传的趣闻。
 
 参考文献：
 
