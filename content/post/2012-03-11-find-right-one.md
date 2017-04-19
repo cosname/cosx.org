@@ -47,63 +47,63 @@ R代码如下：
 
 ```r
 # 进行观察和选取的函数，n负责对整体进行划分，取值在1到100之间
-selection &lt;- function(n) {
-  raw.data &lt;- sample(1:100,100)
-  first.group &lt;- raw.data[1:n]
-  second.group &lt;- raw.data[(n+1):100]
-  first.max &lt;- max(first.group)
-  morethan.first &lt;- second.group &gt; first.max
-  my.select &lt;- ifelse(any(morethan.first) == TRUE,
+selection <- function(n) {
+  raw.data <- sample(1:100,100)
+  first.group <- raw.data[1:n]
+  second.group <- raw.data[(n+1):100]
+  first.max <- max(first.group)
+  morethan.first <- second.group > first.max
+  my.select <- ifelse(any(morethan.first) == TRUE,
                       second.group[morethan.first][1],0)
   return(my.select)
 }
 
 # 进行第一次模拟，找到最优的划分参数，使选取到最大值的概率最大。
-data &lt;- matrix(rep(0,10000*100),ncol=100)
-result1 &lt;- rep(0,100)
+data <- matrix(rep(0,10000*100),ncol=100)
+result1 <- rep(0,100)
 for (i in 1:100) {
-  temp &lt;- replicate(n=10000,selection(i))
-  data[ ,i] &lt;- temp
-  result1[i] &lt;- sum(data[,i] == 100)
+  temp <- replicate(n=10000,selection(i))
+  data[ ,i] <- temp
+  result1[i] <- sum(data[,i] == 100)
 }
 which.max(result1)
 
 # 用ggplot2绘图包进行观察
 library(ggplot2)
-index &lt;- 1:100
-p &lt;- ggplot(data=data.frame(index,result1),aes(index,result1))
+index <- 1:100
+p <- ggplot(data=data.frame(index,result1),aes(index,result1))
 p+geom_line(size=1, colour='turquoise4') +
   geom_point(aes(x = which.max(result1),y=result1[which.max(result1)]),colour=alpha('red',0.5),size=5) 
 
 # 进行第二次模拟，找到最优的划分参数，使选取的期望值达到最大
-result2 &lt;- rep(0,100)
+result2 <- rep(0,100)
 for (i in 1:100) {
-  result2[i] &lt;- mean(replicate(n=10000,selection(i)))
+  result2[i] <- mean(replicate(n=10000,selection(i)))
 }
-p &lt;- ggplot(data=data.frame(index,result2),aes(index,result2))
+p <- ggplot(data=data.frame(index,result2),aes(index,result2))
 p+geom_line(size=1, colour='turquoise4') +
   geom_point(aes(x = which.max(result2),y=result2[which.max(result2)]),colour=alpha('red',0.5),size=5)
 
 # 构造函数，记录需要多少次尝试才能选取较优的对象
-howmany &lt;- function(n) {
-  raw.data &lt;- sample(1:100,100)
-  first.group &lt;- raw.data[1:n]
-  second.group &lt;- raw.data[(n+1):100]
-  first.max &lt;- max(first.group)
-  morethan.first &lt;- second.group &gt; first.max
-  which.select &lt;- ifelse(any(morethan.first) == TRUE,
+howmany <- function(n) {
+  raw.data <- sample(1:100,100)
+  first.group <- raw.data[1:n]
+  second.group <- raw.data[(n+1):100]
+  first.max <- max(first.group)
+  morethan.first <- second.group > first.max
+  which.select <- ifelse(any(morethan.first) == TRUE,
                       which(morethan.first==T)[1],0)
   return(which.select)
 } 
 
 # 记录尝试次数的10000次模拟结果，并绘制直方图
-result3&lt;- replicate(n=10000,howmany(7))
-p &lt;- ggplot(data=data.frame(result3),aes(result3))
+result3<- replicate(n=10000,howmany(7))
+p <- ggplot(data=data.frame(result3),aes(result3))
 p + geom_histogram(binwidth=1, position='identity',
     alpha=0.5,fill='lightskyblue4',aes(y = ..density..,))+
     stat_density(geom = 'line',colour='red4')
 
 # 观察10次尝试内可选取到合适对象的人数比例
-length(result[result&gt;0 & result &lt;10])/10000
-length(result[result&gt;0 & result &lt;30])/10000
+length(result[result>0 & result <10])/10000
+length(result[result>0 & result <30])/10000
 ```
