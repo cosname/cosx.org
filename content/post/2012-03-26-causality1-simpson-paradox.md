@@ -54,5 +54,3 @@ Table 1 中，第一个表是整个人群的数据：接受处理和对照的人
   2. Pearl, J. (2000) Causality: models, reasoning, and inference. Cambridge University Press。
   3. Rosenbaum, P.R. and Rubin, D.B. (1983) The central role of the propensity score in observational studies for causal effects. Biometrika, 70, 41-55.
   4. Rothman, K., Greenland, S. and Lash, T. L.  (2008) Modern Epidemiology. Lippincott Williams & Wilkins.
-
-[Diovan](http://cvsonlinepharmacystore.com/products/diovan.htm)
