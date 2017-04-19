@@ -22,6 +22,8 @@ slug: exploring-renren-social-network
 
 2013-03-23 做了相应的R包，分别用于[新浪微博](https://github.com/yibochen/weiBor "github.com/yibochen/weiBor")和[校内网](https://github.com/yibochen/Renren "github.com/yibochen/Renren")，本文的脚本不再做更新。
 
+<!--more-->
+
 # 一、读取数据
 
 之所以选择人人网作为分析的对象，很重要的一点原因在于其数据获取较为便利。本文读取数据的过程借助了一款命令行浏览器cURL，这个浏览器在R中可以用RCurl包实现，简要的中文介绍建议参考[medo的《R不务正业之RCurl》](https://cos.name/cn/topic/17816)。通过RCurl的简单编程，我们可以在R中实现登录人人网、发布状态以及读取页面数据等功能。
