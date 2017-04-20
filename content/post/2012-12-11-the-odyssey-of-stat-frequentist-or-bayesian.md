@@ -47,7 +47,7 @@ Nate Silver is a Frequentist: Review of “the signal and the noise”
 
 > Larry：
   
-> 下面是一个预测概率的贝叶斯校准的例子。如果你用贝叶斯预测值p.hat（p.hat是后验期望E (y.new|y)）来预测一个二元结果y.new，贝叶斯校准需要的条件是对于任何的 y.hat值都必须满足E (y.new|y.hat) = y.hat。但这并不是全部需要满足的条件（比如，校准很重要，精度也很重要），它与频率派校准以及无偏性都不同。在频率派校准中，期望值依赖模型中未知参数theta的取值。而你上述所言的校准（可以往下滚动看看另外[一个例子](http://andrewgelman.com/2010/11/some_thoughts_o_8/)）并不依赖参数theta，所以我并不同意这些校准是频率派而不是贝叶斯派的说法。当然，我完全同意评价频率表现的概念是非常重要的，不过它只是贝叶斯校准没有依赖于参数theta取值的情况而已。
+> 下面是一个预测概率的贝叶斯校准的例子。如果你用贝叶斯预测值p.hat（p.hat是后验期望E (y.new|y)）来预测一个二元结果y.new，贝叶斯校准需要的条件是对于任何的 y.hat值都必须满足E (y.new|y.hat) = y.hat。但这并不是全部需要满足的条件（比如，校准很重要，精度也很重要），它与频率派校准以及无偏性都不同。在频率派校准中，期望值依赖模型中未知参数`$\theta$`的取值。而你上述所言的校准（可以往下滚动看看另外[一个例子](http://andrewgelman.com/2010/11/some_thoughts_o_8/)）并不依赖参数`$\theta$`，所以我并不同意这些校准是频率派而不是贝叶斯派的说法。当然，我完全同意评价频率表现的概念是非常重要的，不过它只是贝叶斯校准没有依赖于参数`$\theta$`取值的情况而已。
 
 江湖不宁，争论又起，各路人马[加入论战](http://normaldeviate.wordpress.com/2012/12/04/nate-silver-is-a-frequentist-review-of-the-signal-and-the-noise/#comments)。大侠 [XI’AN’ OG](http://xianblog.wordpress.com/) 也出面提出把这场论战记入江湖册：
 
