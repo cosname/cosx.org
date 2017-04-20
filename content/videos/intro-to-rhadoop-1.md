@@ -1,5 +1,5 @@
 ---
-title: RHadoop助R突破大数据难关(1) &#8211; RHadoop的安装与使用介绍
+title: RHadoop助R突破大数据难关(1) RHadoop的安装与使用介绍
 date: '2014-02-25T18:34:04+00:00'
 author: 陈堰平
 ---
