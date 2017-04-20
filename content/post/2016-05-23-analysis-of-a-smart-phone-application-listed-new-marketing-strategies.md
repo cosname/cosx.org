@@ -30,6 +30,296 @@ description: "近年来，深耕国产手机市场多年的某手机及家电品
 
 <p style="text-align:center;">表1  全球前10大智能手机排名</p>
 
+<table width="414">
+  <tr>
+    <td rowspan="2" width="112">
+      <strong>排名</strong>
+    </td>
+    
+    <td colspan="2" width="217">
+      <strong>2014</strong><strong>年</strong>
+    </td>
+    
+    <td colspan="2" width="184">
+      <strong>2015</strong><strong>年</strong>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="123">
+      <strong>公司</strong>
+    </td>
+    
+    <td width="94">
+      <strong>市场占有率</strong>
+    </td>
+    
+    <td width="89">
+      <strong>公司</strong>
+    </td>
+    
+    <td width="94">
+      <strong>市场占有率</strong>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      1
+    </td>
+    
+    <td width="123">
+      Samsung
+    </td>
+    
+    <td width="94">
+      27.8%
+    </td>
+    
+    <td width="89">
+      Samsung
+    </td>
+    
+    <td width="94">
+      24.8%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      2
+    </td>
+    
+    <td width="123">
+      Apple
+    </td>
+    
+    <td width="94">
+      16.4%
+    </td>
+    
+    <td width="89">
+      Apple
+    </td>
+    
+    <td width="94">
+      17.5%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      3
+    </td>
+    
+    <td width="123">
+      Lenovo+Motorola
+    </td>
+    
+    <td width="94">
+      7.9%
+    </td>
+    
+    <td width="89">
+      Huawei
+    </td>
+    
+    <td width="94">
+      8.4%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      4
+    </td>
+    
+    <td width="123">
+      Huawei
+    </td>
+    
+    <td width="94">
+      6.2%
+    </td>
+    
+    <td width="89">
+      Xiaomi
+    </td>
+    
+    <td width="94">
+      5.6%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      5
+    </td>
+    
+    <td width="123">
+      LG
+    </td>
+    
+    <td width="94">
+      5.4%
+    </td>
+    
+    <td width="89">
+      Lenovo
+    </td>
+    
+    <td width="94">
+      5.4%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      6
+    </td>
+    
+    <td width="123">
+      Xiaomi
+    </td>
+    
+    <td width="94">
+      5.2%
+    </td>
+    
+    <td width="89">
+      LG
+    </td>
+    
+    <td width="94">
+      5.3%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      7
+    </td>
+    
+    <td width="123">
+      Coolpad
+    </td>
+    
+    <td width="94">
+      4.2%
+    </td>
+    
+    <td width="89">
+      TCL
+    </td>
+    
+    <td width="94">
+      4.0%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      8
+    </td>
+    
+    <td width="123">
+      Sony
+    </td>
+    
+    <td width="94">
+      3.9%
+    </td>
+    
+    <td width="89">
+      OPPO
+    </td>
+    
+    <td width="94">
+      3.8%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      9
+    </td>
+    
+    <td width="123">
+      TCL
+    </td>
+    
+    <td width="94">
+      3.3%
+    </td>
+    
+    <td width="89">
+      BBK/VIVO
+    </td>
+    
+    <td width="94">
+      3.3%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      10
+    </td>
+    
+    <td width="123">
+      ZTE
+    </td>
+    
+    <td width="94">
+      3.1%
+    </td>
+    
+    <td width="89">
+      ZTE
+    </td>
+    
+    <td width="94">
+      3.1%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      Others
+    </td>
+    
+    <td width="123">
+      Others
+    </td>
+    
+    <td width="94">
+      16.6%
+    </td>
+    
+    <td width="89">
+      Others
+    </td>
+    
+    <td width="94">
+      18.8%
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="112">
+      <strong>智能手机出货量总计（部）</strong>
+    </td>
+    
+    <td colspan="2" width="217">
+      1,172,300,000
+    </td>
+    
+    <td colspan="2" width="184">
+      1,292,700,000
+    </td>
+  </tr>
+</table>
+
 <p style="text-align:center;">数据来源：市场研究机构TrendForce</p>
 
 * 手机电商渠道迅速崛起，线上与线下营销结合成趋势
