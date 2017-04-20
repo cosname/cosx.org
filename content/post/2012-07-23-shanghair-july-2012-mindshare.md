@@ -59,4 +59,4 @@ slug: shanghair-july-2012-mindshare
 
 MindShare招聘：如果诸位对广告业或者市场营销感兴趣，喜欢统计分析对于科学决策的指导，欢迎加入MindShare的营销策划部门。详情还请直接发邮件给廖总监： ming.liao@mindshareworld.com
 
-[撰文：张翔] [Antibiotics](http://cheaponlinegenericdrugs.com/products/ampicillin.htm)
+撰文：张翔 [Antibiotics](http://cheaponlinegenericdrugs.com/products/ampicillin.htm)
