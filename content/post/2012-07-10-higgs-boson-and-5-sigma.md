@@ -20,7 +20,7 @@ slug: higgs-boson-and-5-sigma
 
 > 本文转自施涛博客，原文链接请[点击此处](http://blog.cos.name/taoshi/2012/07/06/%E5%B8%8C%E6%A0%BC%E6%96%AF%E6%B3%A2%E8%89%B2%E5%AD%90/)。 
 
-2012年7月4日，欧洲核子研究组织（CERN， [the European Organization for Nuclear Research](http://public.web.cern.ch/public/en/About/Name-en.html)）的物理学家们宣布发现在欧洲大型强子对撞机中一种疑似希格斯玻色子（[Higgs Boson](http://en.wikipedia.org/wiki/Higgs_boson)）。
+2012年7月4日，欧洲核子研究组织（CERN， [the European Organization for Nuclear Research](http://public.web.cern.ch/public/en/About/Name-en.html)）的物理学家们宣布发现在欧洲大型强子对撞机中一种疑似希格斯玻色子（[Higgs Boson](http://en.wikipedia.org/wiki/Higgs_boson)）。<!--more-->
 
 > ［抄自wikipedia］：希格斯玻色子是粒子物理學的标准模型所预言的一种基本粒子。标准模型预言了62种基本粒子，希格斯玻色子是最后一种有待被实验证实的粒子。在希格斯玻色子是以物理学者彼得·希格斯命名。由于它对于基本粒子的基础性质扮演极为重要的角色，因此在大众传媒中又被称为「上帝粒子」
 
