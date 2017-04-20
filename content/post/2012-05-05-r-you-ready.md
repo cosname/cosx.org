@@ -23,11 +23,11 @@ slug: r-you-ready
 
 作者按：本文根据去年11月份CSDN举办的“大数据技术大会”演讲材料整理，最初发表于2012年2月期《程序员》杂志。
 
-## 1. 历史
+# 1. 历史
 
-R（R Development Core Team, 2011）语言由新西兰奥克兰大学的 Ross Ihaka 和 Robert Gentleman 两人共同发明，其词法和语法分别源自 Scheme 和 S 语言，R 语言一般认为是 S 语言（John Chambers, Bell Labs, 1972）的一种方言。R 是“GNU S”， 一个自由的、有效的、用于统计计算和绘图的语言和环境，它提供了广泛的统计分析和绘图技术：包括线性和非线性模型、统计检验、时间序列、分类、聚类等方法。我们更倾向于认为 R 是一个环境，在 R 环境里实现了很多经典的、现代的统计技术。<figure id="attachment_5534" style="width: 281px" class="wp-caption aligncenter">
+R（R Development Core Team, 2011）语言由新西兰奥克兰大学的 Ross Ihaka 和 Robert Gentleman 两人共同发明，其词法和语法分别源自 Scheme 和 S 语言，R 语言一般认为是 S 语言（John Chambers, Bell Labs, 1972）的一种方言。R 是“GNU S”， 一个自由的、有效的、用于统计计算和绘图的语言和环境，它提供了广泛的统计分析和绘图技术：包括线性和非线性模型、统计检验、时间序列、分类、聚类等方法。我们更倾向于认为 R 是一个环境，在 R 环境里实现了很多经典的、现代的统计技术。
 
-![](https://cos.name/wp-content/uploads/2012/05/Ihaka-Gentleman.jpg)<figcaption class="wp-caption-text">图1: 1992 年，Ross Ihaka 和Robert Gentleman 在奥克兰大学成为同事。后来为了方便教授初等统计课程，二人开发了一种语言；而他们名字的首字母都是R，于是R 便成为了这门语言的名称。</figcaption></figure> 
+![图1](https://cos.name/wp-content/uploads/2012/05/Ihaka-Gentleman.jpg) 1992 年，Ross Ihaka 和Robert Gentleman 在奥克兰大学成为同事。后来为了方便教授初等统计课程，二人开发了一种语言；而他们名字的首字母都是R，于是R 便成为了这门语言的名称。
 
 作为 R 语言的前身——S 语言的代码几乎不需要进行任何修改即可在R 语言环境下运行，从这个角度讲两种语言几乎等价。S 语言诞生于上个世纪 70 年代的由 John M. Chambers 领导的贝尔实验室统计部，它的诞生过程几乎就是现代统计分析方式的演化历程的写照（[谢益辉，郑冰, 2008](https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt)）：
 
@@ -50,11 +50,11 @@ John Chambers 老爷子一直不遗余力的致力于R 语言的发展，至今�
 
 当然，R 语言的这些特点很难在一篇短文里细致的体现出来，那下面我将简要的描述一下 R 语言的现状和未来。
 
-## 2. 现状及应用
+# 2. 现状及应用
 
 R 语言在国际和国内的发展差异非常大，国际上 R 语言已然是专业数据分析领域的标准，但在国内依旧任重而道远，这固然有数据学科地位的原因，国人版权概念薄弱以及学术领域相对闭塞也是原因。那为什么 R 语言能够被广大的数据分析工作者做接受？这其中原因是很多的：
 
-### 2.1 优势及特点
+## 2.1 优势及特点
 
 从 R 语言的发展历史上看，R 主要是统计学家为解决数据分析领域问题而开发的语言，因此 R 具有一些独特的优势：
 
@@ -71,7 +71,7 @@ R 语言在国际和国内的发展差异非常大，国际上 R 语言已然是
 
 <!--more-->
 
-### 2.2 荣誉
+## 2.2 荣誉
 
 R 语言拥有这么多优势，很大部分原因是由于它同样继承了 S 语言的优秀血统。S 语言在1998 年被美国计算机协会（ACM）授予了软件系统奖，这是迄今为止众多统计软件中“唯一”被 ACM 授予的统计系统。
 
@@ -94,21 +94,21 @@ R 语言拥有这么多优势，很大部分原因是由于它同样继承了 S 
 
 2009 年纽约时报发表了题为 “Data Analysts Captivated by R’s Power” 的社评，集中的讨论了 R 语言在数据分析领域的发展，并引发了 SAS 和 R 用户广泛而激烈的争论。接下来的 2010 年，美国统计协会（American Statistical Association）又将第一届“统计计算及图形奖” 授予了 R 语言，用于表彰其在统计应用和统计研究广泛的影响。
 
-### 2.3 社团及活动
+## 2.3 社团及活动
 
 正如前文 John Chambers 所说，R 也是一个社区，其线下的活动也是非常活跃。在国际上，欧洲和美国每年会轮值举办一次 useR! 会议，届时来自于世界各地的 R 用户齐聚一堂，讨论 R 语言的应用与科研方面的成果。出于对统计计算的特殊考虑，每两年还会举办一次 DSC 会议（Directions in Statistical Computing），专门讨论 R 在统计计算方面的应用及理论研究。各大城市也会有相应的 R Group，方便本地的R 用户聚会及交流。
 
 在国内，每年会以统计之都牵头在北京和上海举办两次中国 R 语言会议，至今年已经在中国人民大学、华东师范大学等高校举办了四届 R 语言会议，历年的演讲主题涉及医药、金融、地理信息、统计图形、数据挖掘、制药、高性能计算、社会学、生物信息学、互联网等多个领域，从明年起，台北将成为第三个举办中国 R 语言会议的城市，2012 年6月的中华 R 语言会议台北场已经在筹划当中。
 
-### 2.4 业界的认可
+## 2.4 业界的认可
 
 KDnuggets 网站每年都会做一些数据分析、数据挖掘方面的专题问卷调查，在 2011 年 8月份的数据挖掘领域语言流行度的调查中，R 语言位于数据挖掘领域居于所有语言之首（图2），而紧随其后的SQL、Python、Java 则是在某一领域具有各自的独到优势。在数据挖掘范畴下，R 语言同这些语言相互补足、相得益彰。
 
-根据互联网搜索结果计算的TIOBE 编程社区指数（Programming Community Index）（TIOBE, 2011）可能更能代表编程语言的流行度。在 2011 年 12 月份排名中，R 语言依旧是在统计领域中最为流行的语言，位列第 24（Ratings 0.522%），而时常被放在一起比较的SAS 则排名第 31（0.417%）。<figure id="attachment_5537" style="width: 492px" class="wp-caption aligncenter">
+根据互联网搜索结果计算的TIOBE 编程社区指数（Programming Community Index）（TIOBE, 2011）可能更能代表编程语言的流行度。在 2011 年 12 月份排名中，R 语言依旧是在统计领域中最为流行的语言，位列第 24（Ratings 0.522%），而时常被放在一起比较的SAS 则排名第 31（0.417%）。
 
-![](https://cos.name/wp-content/uploads/2012/05/language-preference.jpg)<figcaption class="wp-caption-text">图2: 虽然KDnuggets 网站的调查存在样本有偏的嫌疑，但毕竟代表了某一类人群的偏好。并 且排名前五位的语言在各自的领域确有代表性。数据来源http://www.kdnuggets.com/2011/08/poll-languages-for-data-mining-analytics.html</figcaption></figure> 
+![图2](https://cos.name/wp-content/uploads/2012/05/language-preference.jpg) 虽然KDnuggets 网站的调查存在样本有偏的嫌疑，但毕竟代表了某一类人群的偏好。并 且排名前五位的语言在各自的领域确有代表性。数据来源<http://www.kdnuggets.com/2011/08/poll-languages-for-data-mining-analytics.html>
 
-## 3. 挑战和未来
+# 3. 挑战和未来
 
 虽然 R 语言有诸多的优势，但 R 语言不是万能的，它毕竟是统计编程类语言。受到其算法架构的通用性以及速度性能方面的影响，因此其初始设计完全基于单线程和纯粹的内存计算。虽然一般情况下无关 R 的使用，在当今大数据条件下，这两个设计思路的劣势逐渐变得愈加刺眼，好在 R 的一些优秀的扩展性包解决了上述问题，比如：
 
@@ -121,7 +121,7 @@ KDnuggets 网站每年都会做一些数据分析、数据挖掘方面的专题�
 
 这里需要着重提一下 parallel 包，这个包是 R 核心团队为了解决大数据计算问题而在标准安装程序下新增的功能包。
 
-### 3.1 一些误区
+## 3.1 一些误区
 
 很多人认为 R 语言是 GNU 开源项目软件，因此软件的使用是“没有任何保证” 的。但在美国，R 的计算结果被 FDA（Food and Drug Administration）所承认；并且有报告指出R 相比其他商业软件，bug 数量非常少（UCLA, 2006）！
 
@@ -129,7 +129,7 @@ R 开发的核心团队对于 R 的新功能持异常谨慎的态度，比如cai
 
 当然，这里所说的是 R 的标准安装程序包，并不代表所有的扩展包的质量。毕竟3700+的扩展包良莠不齐，虽然不乏一些优秀的包（如Rcpp, RODBC, VGAM, rattle），但必然存在一些扩展包质量不佳的情况。
 
-### 3.2 应用的思考
+## 3.2 应用的思考
 
 R 语言并不是人人都会接触到的语言，相对要小众很多，有些人即便接触到没准也搞不清楚 R 到底是做什么用途。对于走上这条路的人，经常会有一些应用困难，比如对个人学习角度而言：
 
@@ -145,16 +145,16 @@ R 语言并不是人人都会接触到的语言，相对要小众很多，有些
   * 对于大量工作已经由其他软件实现（比如用SAS）的公司来讲，转化成本很高；
   * 技术支持获取的问题。
 
-## 4. 结语
+# 4. 结语
 
 R 语言虽然诞生于统计社区，服务于数据，但现在随着数据渗透到各行各业，R 语言已经远远超过统计范畴，相信不久的将来会有更多的朋友加入到 R 语言社区。
 
-## 参考目录
+# 参考目录
 
   * 谢益辉，郑冰(2008). [R 语言的历史背景、发展历程和现状](https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt). 1st China R Conference.
-  * 刘思喆(2012). 商业数据库对 r 语言的支持. [http://www.bjt.name/2012/04/r-language-enterprise/](http://www.bjt.name/2012/04/r-language-enterprise/).
+  * 刘思喆(2012). 商业数据库对 r 语言的支持.<http://www.bjt.name/2012/04/r-language-enterprise/>.
   * R Development Core Team (2011). R: A Language and Environment for Statistical Computing.R Foundation for Statistical Computing, Vienna, Austria. ISBN 3-900051-07-0.
   * Ripley, B. (2011). The r development process. Technical report, Department of Statistics,
   * University of Oxford.
-  * TIOBE (2011). [http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html](http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html).
+  * TIOBE (2011). <http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html>.
   * UCLA (2006). R relative to statistical packages. Technical report, UCLA.
