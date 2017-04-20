@@ -31,7 +31,7 @@ R（R Development Core Team, 2011）语言由新西兰奥克兰大学的 Ross Ih
 
 1992 年，Ross Ihaka 和Robert Gentleman 在奥克兰大学成为同事。后来为了方便教授初等统计课程，二人开发了一种语言；而他们名字的首字母都是R，于是R 便成为了这门语言的名称。
 
-作为 R 语言的前身——S 语言的代码几乎不需要进行任何修改即可在R 语言环境下运行，从这个角度讲两种语言几乎等价。S 语言诞生于上个世纪 70 年代的由 John M. Chambers 领导的贝尔实验室统计部，它的诞生过程几乎就是现代统计分析方式的演化历程的写照（[谢益辉，郑冰, 2008](https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt)）：
+作为 R 语言的前身——S 语言的代码几乎不需要进行任何修改即可在R 语言环境下运行，从这个角度讲两种语言几乎等价。S 语言诞生于上个世纪 70 年代的由 John M. Chambers 领导的贝尔实验室统计部，它的诞生过程几乎就是现代统计分析方式的演化历程的写照^[谢益辉，郑冰(2008). [R 语言的历史背景、发展历程和现状](https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt). 1st China R Conference.]：
 
 * 1975-1976 年，贝尔实验室统计研究部使用一套文档齐全的 Fortran 库做统计研究，简称为 SCS ( Statistical Computing Subroutines )；
 * 当时的商业统计软件采用的是批处理的方式，一次性输出问题的所有相关的信息，在那个时代，这个过程需要几个小时，并且商业软件不能对程序做任何修改。而贝尔实验室的统计学家们需要灵活的交互式数据分析方式，因此 SCS 在贝尔实验室非常受欢迎；
@@ -69,7 +69,7 @@ R语言在国际和国内的发展差异非常大，国际上R语言已然是专
     * 同 Python、Java、C、C++ 等语言进行互调
     * 提供 API 接口均可以调用，比如 Google、Twitter、Weibo
     * 其他统计软件大部分均可调用 R，比如 SAS、SPSS、Statistica等
-    * 甚至一些比较直接的商业应用，比如 Oracle R Enterprise, IBM Netezza, R add-on for Teradata, SAP HANA, Sybase RAP（[刘思喆，2012](http://www.bjt.name/2012/04/r-language-enterprise/)）
+    * 甚至一些比较直接的商业应用，比如 Oracle R Enterprise, IBM Netezza, R add-on for Teradata, SAP HANA, Sybase RAP^[刘思喆(2012). 商业数据库对 r 语言的支持.<http://www.bjt.name/2012/04/r-language-enterprise/>.]
 
 ## 2.2 荣誉
 
@@ -104,7 +104,7 @@ R 语言拥有这么多优势，很大部分原因是由于它同样继承了 S 
 
 KDnuggets 网站每年都会做一些数据分析、数据挖掘方面的专题问卷调查，在2011年8月份的数据挖掘领域语言流行度的调查中，R语言位于数据挖掘领域居于所有语言之首（图2），而紧随其后的SQL、Python、Java则是在某一领域具有各自的独到优势。在数据挖掘范畴下，R语言同这些语言相互补足、相得益彰。
 
-根据互联网搜索结果计算的TIOBE 编程社区指数（Programming Community Index）（TIOBE, 2011）可能更能代表编程语言的流行度。在2011年12月份排名中，R 语言依旧是在统计领域中最为流行的语言，位列第 24（Ratings 0.522%），而时常被放在一起比较的SAS 则排名第31（0.417%）。
+根据互联网搜索结果计算的TIOBE 编程社区指数（Programming Community Index）^[TIOBE (2011). <http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html>.]可能更能代表编程语言的流行度。在2011年12月份排名中，R 语言依旧是在统计领域中最为流行的语言，位列第 24（Ratings 0.522%），而时常被放在一起比较的SAS 则排名第31（0.417%）。
 
 ![图2](https://cos.name/wp-content/uploads/2012/05/language-preference.jpg) 
 
@@ -112,7 +112,7 @@ KDnuggets 网站每年都会做一些数据分析、数据挖掘方面的专题�
 
 # 3. 挑战和未来
 
-虽然 R 语言有诸多的优势，但 R 语言不是万能的，它毕竟是统计编程类语言。受到其算法架构的通用性以及速度性能方面的影响，因此其初始设计完全基于单线程和纯粹的内存计算。虽然一般情况下无关 R 的使用，在当今大数据条件下，这两个设计思路的劣势逐渐变得愈加刺眼，好在 R 的一些优秀的扩展性包解决了上述问题，比如：
+虽然R语言有诸多的优势，但R语言不是万能的，它毕竟是统计编程类语言。受到其算法架构的通用性以及速度性能方面的影响，因此其初始设计完全基于单线程和纯粹的内存计算。虽然一般情况下无关 R 的使用，在当今大数据条件下，这两个设计思路的劣势逐渐变得愈加刺眼，好在R的一些优秀的扩展性包解决了上述问题，比如：
 
 * **snow** 支持MPI、PVM、nws、sockets 通讯，解决单线程和内存限制；
 * **multicore** 适合大规模计算环境，主要解决单线程问题；
@@ -121,41 +121,32 @@ KDnuggets 网站每年都会做一些数据分析、数据挖掘方面的专题�
 * **RHIPE** 更友好的R 代码运行环境，解决单线程和内存限制；
 * **Segue** 利用Amazon’s Web Services(EC2)。
 
-这里需要着重提一下 parallel 包，这个包是 R 核心团队为了解决大数据计算问题而在标准安装程序下新增的功能包。
+这里需要着重提一下parallel包，这个包是R核心团队为了解决大数据计算问题而在标准安装程序下新增的功能包。
 
 ## 3.1 一些误区
 
-很多人认为R语言是GNU开源项目软件，因此软件的使用是“没有任何保证” 的。但在美国，R的计算结果被 FDA（Food and Drug Administration）所承认；并且有报告指出R相比其他商业软件，bug数量非常少（UCLA, 2006）！
+很多人认为R语言是GNU开源项目软件，因此软件的使用是“没有任何保证” 的。但在美国，R的计算结果被 FDA（Food and Drug Administration）所承认；并且有报告指出R相比其他商业软件，bug数量非常少^[UCLA (2006). R relative to statistical packages. Technical report, UCLA.]！
 
-R开发的核心团队对于R的新功能持异常谨慎的态度，比如cairographics从2007开始酝酿，直到上一个大版本（2011 年）才引入到R标准安装程序；byte-compile功能更是经历了1999-2011 近12年的孵化（Ripley, 2011）。从这个角度讲，R语言的代码质量以及运算结果的可信性是完全可以保证的。
+R开发的核心团队对于R的新功能持异常谨慎的态度，比如cairographics从2007开始酝酿，直到上一个大版本（2011 年）才引入到R标准安装程序；byte-compile功能更是经历了1999-2011 近12年的孵化^[Ripley, B. (2011). The r development process. Technical report, Department of Statistics, University of Oxford.]。从这个角度讲，R语言的代码质量以及运算结果的可信性是完全可以保证的。
 
 当然，这里所说的是R的标准安装程序包，并不代表所有的扩展包的质量。毕竟3700+的扩展包良莠不齐，虽然不乏一些优秀的包（如Rcpp, RODBC, VGAM, rattle），但必然存在一些扩展包质量不佳的情况。
 
 ## 3.2 应用的思考
 
-R 语言并不是人人都会接触到的语言，相对要小众很多，有些人即便接触到没准也搞不清楚 R 到底是做什么用途。对于走上这条路的人，经常会有一些应用困难，比如对个人学习角度而言：
+R 语言并不是人人都会接触到的语言，相对要小众很多，有些人即便接触到没准也搞不清楚R到底是做什么用途。对于走上这条路的人，经常会有一些应用困难，比如对个人学习角度而言：
 
-* 虽然 R 语言的设计之初就是避免通过大量编程实现统计算法，但最基本的编程能力还是需要的，因此对于一般非计算机专业的工作者来说无疑提高了难度；
-* 还有很多人提到，R 语言的学习曲线非常陡峭。但从个人这么多年的使用经验上看，陡峭的学习曲线并不是R 语言本身的，而是隐藏在后面的统计知识很难在短时间内掌握的缘故。
+* 虽然R语言的设计之初就是避免通过大量编程实现统计算法，但最基本的编程能力还是需要的，因此对于一般非计算机专业的工作者来说无疑提高了难度；
+* 还有很多人提到，R语言的学习曲线非常陡峭。但从个人这么多年的使用经验上看，陡峭的学习曲线并不是R语言本身的，而是隐藏在后面的统计知识很难在短时间内掌握的缘故。
 
 从公司商业应用的角度而言，也存在一些不可回避的问题：
 
 * 首先是人力资源成本如何核算；
-* 软件成本问题，由于 R 是自由软件，可以随时随地下载，因此对于企业来说如何度量成本是一个问题；
+* 软件成本问题，由于R是自由软件，可以随时随地下载，因此对于企业来说如何度量成本是一个问题；
 * R 的技能核定并没有官方或机构标准，简历上“熟练使用R 语言” 可能没有任何意义；
-* 实际上，即便没有上述两个问题，那企业想找到 R 相关的人才不那么简单；
+* 实际上，即便没有上述两个问题，那企业想找到R相关的人才不那么简单；
 * 对于大量工作已经由其他软件实现（比如用SAS）的公司来讲，转化成本很高；
 * 技术支持获取的问题。
 
 # 4. 结语
 
 R语言虽然诞生于统计社区，服务于数据，但现在随着数据渗透到各行各业，R语言已经远远超过统计范畴，相信不久的将来会有更多的朋友加入到R语言社区。
-
-# 参考目录
-
-* 谢益辉，郑冰(2008). [R 语言的历史背景、发展历程和现状](https://cos.name/wp-content/uploads/2008/12/the-history-of-r-language-and-current-developments.ppt). 1st China R Conference.
-* 刘思喆(2012). 商业数据库对 r 语言的支持.<http://www.bjt.name/2012/04/r-language-enterprise/>.
-* R Development Core Team (2011). R: A Language and Environment for Statistical Computing.R Foundation for Statistical Computing, Vienna, Austria. ISBN 3-900051-07-0.
-* Ripley, B. (2011). The r development process. Technical report, Department of Statistics, University of Oxford.
-* TIOBE (2011). <http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html>.
-* UCLA (2006). R relative to statistical packages. Technical report, UCLA.
