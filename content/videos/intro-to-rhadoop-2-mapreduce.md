@@ -1,5 +1,5 @@
 ---
-title: RHadoop助R突破大数据难关(2) &#8211; R实现MapReduce协同过滤算法
+title: RHadoop助R突破大数据难关(2) R实现MapReduce协同过滤算法
 date: '2014-02-25T18:41:50+00:00'
 author: 陈堰平
 ---
