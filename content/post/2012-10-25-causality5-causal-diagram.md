@@ -9,63 +9,55 @@ categories:
 slug: causality5-causal-diagram
 ---
 
-![J. Pearl](http://i.imgur.com/neP7X.jpg) 这部分介绍 [Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
+![J. Pearl](http://i.imgur.com/neP7X.jpg) 
 
-**一 有向无环图和 do 算子**
+这部分介绍 [Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) 于 1995 年发表在 Biometrika 上的工作 “Causal diagrams for empirical research”，这篇文章是 Biometrika 创刊一百多年来少有的讨论文章，Sir David Cox，Guido Imbens, Donald Rubin 和 James Robins 等人都对文章作了讨论。由于 Judea Pearl 最近刚获得了图灵奖，我想他的工作会引起更多的关注（事实上计算机界早就已经过度的关注了）。<!--more-->
 
-为了避免过多图论的术语，这里仅仅需要知道有向图中“父亲”和“后代”的概念：有向箭头上游的变量是“父亲”，下游的变量是“后代”。在一个有向无环图（Directed Acyclic Graph；DAG）中，记所有的节点集合为 $\overrightarrow{X} = (X\_1,…,X\_p)$。这里用 $P(\cdot)$ 表示连续变量的密度函数和离散变量的概率函数。有两种观点看待一个 DAG：一是将其看成表示条件独立性的模型；二是将其看成一个数据生成机制。当然，本质上这两种观点是一样的。在第一种观点下，给定 DAG 中某个节点的“父亲”节点，它与其所有的非“后代”都独立。根据全概公式和条件独立性，DAG 中变量的联合分布可以有如下的递归分解：
+# 一 有向无环图和 do 算子
 
-$$P(x\_1,…,x\_n) = \prod\_{i=1}^{p} P(x\_i \mid pa_i ),$$
+为了避免过多图论的术语，这里仅仅需要知道有向图中“父亲”和“后代”的概念：有向箭头上游的变量是“父亲”，下游的变量是“后代”。在一个有向无环图（Directed Acyclic Graph；DAG）中，记所有的节点集合为 `$\overrightarrow{X} = (X\_1,…,X\_p)$`。这里用 `$P(\cdot)$` 表示连续变量的密度函数和离散变量的概率函数。有两种观点看待一个 DAG：一是将其看成表示条件独立性的模型；二是将其看成一个数据生成机制。当然，本质上这两种观点是一样的。在第一种观点下，给定 DAG 中某个节点的“父亲”节点，它与其所有的非“后代”都独立。根据全概公式和条件独立性，DAG 中变量的联合分布可以有如下的递归分解：
 
-其中 $pa\_i$ 表示 $X\_i $ 的“父亲”集合，即所有指向 $X_i $ 的节点集合。
+`$$P(x_1,…,x_n) = \prod_{i=1}^{p} P(x_i \mid pa_i ),$$`
+
+其中 `$pa_i$` 表示 `$X_i$` 的“父亲”集合，即所有指向 `$X_i$` 的节点集合。
 
 ![](http://i.imgur.com/VtiVg.png)
-
-<p style="text-align: center">
-  Figure 1: An Example of Causal Diagram
-</p>
+ 
+Figure 1: An Example of Causal Diagram
 
 **例子：**在 Figure 1 中，联合分布可以分解成为
 
-$$\begin{eqnarray\*}&&P(X\_1, X\_2, X\_3, X\_4, X\_5, X\_6, X\_i, X\_j)\\&=& P(X\_1)(X\_2)P(X\_3\mid X\_1) \\& &\cdot P(X\_5\mid X\_2)P(X\_4\mid X\_1, X\_2)P(X\_i\mid X\_3, X\_4) \\&& \cdot P(X\_6\mid X\_i) P(X\_j\mid X\_4, X\_5, X\_6).\end{eqnarray\*}$$
+`$$\begin{eqnarray\*}&&P(X_1, X_2, X_3, X_4, X_5, X_6, X_i, X_j)\\&=& P(X_1)(X_2)P(X_3\mid X_1) \\& &\cdot P(X_5\mid X_2)P(X_4\mid X_1, X_2)P(X_i\mid X_3, X_4) \\&& \cdot P(X_6\mid X_i) P(X_j\mid X_4, X_5, X_6).\end{eqnarray\*}$$`
 
 如果将 DAG 看成一个数据生成机制，那么它和下面的非参数结构方程模型是等价的：
 
-$$\begin{eqnarray\*}X\_i = f\_i (pa\_i, \varepsilon\_i), i = 1, \cdots, p.\end{eqnarray\*}$$
+`$$\begin{eqnarray\*}X_i = f_i (pa_i, \varepsilon_i), i = 1, \cdots, p.\end{eqnarray\*}$$`
 
 注意，这个联立方程组是“三角的”（triangular）或者“递归的”（recursive），因为 DAG 中没有环，方程组中也就没有反馈。计量经济学中的联立方程组模型 （simultaneous equation model: SEM），并不在这个讨论的框架下。DAG 用于描述数据的生成机制，而不常用于描述系统均衡时的状态；后者主要是 SEM 的目的。这样描述变量联合分布或者数据生成机制的模型，被称为“图模型”或者“贝叶斯网络”（Bayesian network）。
 
-显然，一个有向无环图唯一地决定了一个联合分布；反过来，一个联合分布不能唯一地决定有向无环图。反过来的结论不成立，对我们的实践有很重要的意义，比如 Figure 2 中的两个有向无环图，原因和结果不同，图的结构也不同；但是，我们观测到的联合分布 $ P(X\_1, X\_2) $ 可以有两种分解 $ P(X\_1) P(X\_2\mid X\_1) $ 和 $ P(X\_2) P(X\_1\mid X\_2) .$ 因此，我们从观测变量的联合分布，很难确定“原因”和“结果”。在下一节图模型结构的学习中，我们会看到，只有在一些假定和特殊情形下，我们可以从观测数据确定“原因”和“结果”。
+显然，一个有向无环图唯一地决定了一个联合分布；反过来，一个联合分布不能唯一地决定有向无环图。反过来的结论不成立，对我们的实践有很重要的意义，比如 Figure 2 中的两个有向无环图，原因和结果不同，图的结构也不同；但是，我们观测到的联合分布 `$ P(X_1, X_2) $` 可以有两种分解 `$ P(X_1) P(X_2\mid X_1) $` 和 `$ P(X_2) P(X_1\mid X_2) .$` 因此，我们从观测变量的联合分布，很难确定“原因”和“结果”。在下一节图模型结构的学习中，我们会看到，只有在一些假定和特殊情形下，我们可以从观测数据确定“原因”和“结果”。
 
 用一个 DAG 连表示变量之间的关系，并不是最近才有的。图模型也并不是 Judea Pearl 发明的。但是，早期将图模型作为因果推断的工具，成果并不深刻，大家也不太清楚仅仅凭一个图，怎么能讲清楚因果关系。教育、心理和社会学中常用的结构方程模型（structural equation model: SEM），就是早期的尝试；甚至可以说 SEM 是因果图的先驱。（注意，这里出现的两个 SEM 表示不同的模型！）
 
-DAG 中的箭头，似乎表示了某种“因果关系”。但是，要在 DAG 上引入“因果”的概念，则需要引进 **do 算子**，do 的意思可以理解成“干预” （intervention）。没有“干预”的概念，很多时候没有办法谈因果关系。在 DAG 中 $do(X\_i)=x\_i’$ (也可以记做 $\check{x\_i’}$)，表示如下的操作：将 $DAG$ 中指向 $X\_i$ 的有向边全部切断，且将 $X\_i$ 的取值固定为常数 $x\_i’$. 如此操作，得到的新 $DAG$ 的联合分布可以记做 $P(x\_1,…,x\_n\mid do(X\_i)=x\_i’)$ 可以证明，干预后的联合分布为
+DAG 中的箭头，似乎表示了某种“因果关系”。但是，要在 DAG 上引入“因果”的概念，则需要引进 **do 算子**，do 的意思可以理解成“干预” （intervention）。没有“干预”的概念，很多时候没有办法谈因果关系。在 DAG 中 `$do(X_i)=x_i’$` (也可以记做 `$\check{x_i’}$)`，表示如下的操作：将 `$DAG$` 中指向 `$X_i$` 的有向边全部切断，且将 `$X_i$` 的取值固定为常数 `$x_i’$`. 如此操作，得到的新 `$DAG$` 的联合分布可以记做 `$P(x_1,…,x_n\mid do(X_i)=x_i’)$` 可以证明，干预后的联合分布为
   
-$$
-  
-P(x\_1,…,x\_n\mid do(X\_i)=x\_i’) = \frac{P(x\_1,…,x\_n)}{P(x\_i\mid pa\_i)}I(x\_i = x\_i’).
-  
-$$
+`$$P(x_1,…,x_n\mid do(X_i)=x_i’) = \frac{P(x_1,…,x_n)}{P(x_i\mid pa_i)}I(x_i = x_i’).$$`
 
-请注意，$ P( \cdot \mid do(X\_i)=x\_i’ ) $ 和 $ P( \cdot \mid X\_i=x\_i’ ) $ 在绝大多数情况下是不同的。
+请注意，`$ P( \cdot \mid do(X_i)=x_i’ ) $` 和 `$ P( \cdot \mid X_i=x_i’ ) $` 在绝大多数情况下是不同的。
+
 
 **例子**：考虑如下的两个 DAG：
 
 ![](http://i.imgur.com/Ji9fU.png)
 
-在 Figure 2 (1) 中，有 $ P(X\_2 = x\_2\mid X\_1 = x\_1) = P(X\_2 = x\_2\mid do(X\_1) = x\_1) $。由于 $X\_1 $ 是 $ X\_2 $ 的“原因”，“条件”和“干预” $X\_1 $，对应的 $ X\_2 $ 的分布相同。但是在 Figure 2 (2) 中，有 $ P(X\_2 = x\_2\mid X\_1 = x\_1) \neq P(X\_2 = x\_2\mid do(X\_1) = x\_1) = P(X\_2 = x\_2) $. 由于 $X\_1 $ 是 $ X\_2 $ 的“结果”，“条件”（或者“给定”）“结果”，“原因”的分布不再等于他的边缘分布，但是人为的“干预”“结果”$X\_1 $，并不影响“原因” $ X\_2 $ 的分布。
+在 Figure 2 (1) 中，有 `$ P(X_2 = x_2\mid X_1 = x_1) = P(X_2 = x_2\mid do(X_1) = x_1) $`。由于 `$X_1$` 是 `$X_2$` 的“原因”，“条件”和“干预” `$X_1$`，对应的 `$X_2$` 的分布相同。但是在 Figure 2 (2) 中，有 `$ P(X_2 = x_2\mid X_1 = x_1) \neq P(X_2 = x_2\mid do(X_1) = x_1) = P(X_2 = x_2) $`. 由于 `$X_1$` 是 `$X_2$` 的“结果”，“条件”（或者“给定”）“结果”，“原因”的分布不再等于他的边缘分布，但是人为的“干预”“结果`”$X_1$`，并不影响“原因” `$X_2$` 的分布。
 
 根据 do 算子，便可以定义因果作用。比如二值的变量 $Z$ 对于 $Y$ 的平均因果作用定义为
 
-$$
-  
-\begin{equation*}
-  
-ACE(Z \rightarrow Y) = E\{ Y\mid do(Z)=1 \} – E\{ Y\mid do(Z)=0\} ,
-  
-\end{equation*}
-  
-$$
+`$$\begin{equation*}  
+ACE(Z \rightarrow Y) = E\{ Y\mid do(Z)=1 \} – E\{ Y\mid do(Z)=0\} ,  
+\end{equation*}  
+$$`
 
 上面 do 算子下的期望，分别对应 do 算子下的分布。这样在 do 算子下定义的因果模型，被已故计量经济学家 Halbert White 称为 Pearl Causal Model (PCM; White and Chalak 2009)。Pearl 在其书中写到：
 
@@ -73,25 +65,16 @@ $$
 
 在书中 Pearl 论述了 RCM 和 PCM 的等价性，即
 
-$$
-  
-\begin{equation}
-  
-P\{Y\mid do(Z) = z\} = P\{ Y(z) \},
-  
-\end{equation}
-  
-$$
+`$$\begin{equation}  
+P\{Y\mid do(Z) = z\} = P\{ Y(z) \},  
+\end{equation}  
+$$`
 
-其中，$ Y(z)  $ 表示潜在结果。要想说明两个模型的等价性，可以将 潜在结果嵌套在 DAG 所对应的数据生成机制之中，所有的潜在结果 $ Y(z) $ 都由这个非参数结构方程模型产生：
+其中，`$ Y(z) $` 表示潜在结果。要想说明两个模型的等价性，可以将 潜在结果嵌套在 DAG 所对应的数据生成机制之中，所有的潜在结果 `$Y(z)$ `都由这个非参数结构方程模型产生：
 
-$$
-  
-Y(z) = f( \{ pa\_Y\backslash Z\} (Z=z), Z=z , \varepsilon\_Y ) .
-  
-$$
+`$$Y(z) = f( \{ pa\_Y\backslash Z\} (Z=z), Z=z , \varepsilon\_Y ) .$$`
 
-其中，$ pa_Y\backslash Z$ 表示 $ Y $ 除去 $ Z $ 的父亲节点。上面的方程表示：将 $ Z $ 的值强制在 $ z $ 时，DAG 系统所产生的 $Y $ 值。这个意义下，do 算子导出的结果，就是“潜在结果”。
+其中，`$ pa_Y\backslash Z$` 表示 `$ Y $` 除去 `$ Z $` 的父亲节点。上面的方程表示：将 `$ Z $` 的值强制在 `$ z $` 时，DAG 系统所产生的 `$ Y $` 值。这个意义下，do 算子导出的结果，就是“潜在结果”。
 
 # 二 d 分离，前门准则和后门准则
 
@@ -103,18 +86,16 @@ $$
 
 前门准则和后门准则，都涉及了 d 分离（d-seperation）的概念。
 
-定义（**d 分离**）: 设 $ X$，$Y$，$Z$ 是 DAG 中不相交的节点集合，$ \pi $ 为一条连接 $X$ 中某节点到 $Y$ 中某节点的路径 （不管方向）。如果路径 $\pi$ 上某节点满足如下的条件：
+定义（**d 分离**）: 设 `$X$`，`$Y$`，`$Z$` 是 DAG 中不相交的节点集合，`$\pi$` 为一条连接 `$X$` 中某节点到 `$Y$` 中某节点的路径 （不管方向）。如果路径 `$\pi$` 上某节点满足如下的条件：
 
-  1. 在路径 $\pi$ 上，$w$ 点处为 $V$ 结构 （或称冲撞点，collider），且 $w$ 及其后代不在 $Z$ 中；
-  2. 在路径 $\pi$ 上，$w$ 点处不是 $V$ 结构，且 $w$ 在$Z$ 中,
-
-那么称 $Z$ 阻断 (block) 了路径 $\pi$。进一步，如果 $Z$ 阻断了$X$ 到 $Y$ 的所有路径，那么称 $Z$ d 分离 $X$ 和 $Y$，记为 $(X\bot Y|Z)_{G}$。
+  1. 在路径 `$\pi$` 上，`$w$` 点处为 `$V$` 结构 （或称冲撞点，collider），且 `$w$` 及其后代不在 `$Z$` 中；
+  2. 在路径 `$\pi$` 上，`$w$` 点处不是 `$V$` 结构，且 `$w$` 在 `$Z$` 中,
+ 
+那么称 `$Z$` 阻断 (block) 了路径 `$\pi$`。进一步，如果 `$Z$` 阻断了`$X$` 到 `$Y$` 的所有路径，那么称 `$Z$` d 分离 `$X$` 和 `$Y$`，记为 `$(X\bot Y|Z)_{G}$`。
 
 下面介绍 Pearl (1995) 的主要工作：**后门准则和前门准则**。
 
-<p style="text-align: center">
-  [![](http://i.imgur.com/nu3vB.png)](/2012/10/causality5-causal-diagram/)
-</p>
+![](http://i.imgur.com/nu3vB.png)
 
 **后门准则：**在 DAG 中，如果如下条件满足：
 
