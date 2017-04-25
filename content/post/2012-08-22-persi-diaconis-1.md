@@ -14,7 +14,7 @@ slug: persi-diaconis-1
 
 你能想象，一个人在14岁离家出走，学习魔术，浪迹江湖，24岁后潜心学术，之后成为斯坦福大学的教授？
 
-Persi Diaconis（[维基](http://en.wikipedia.org/wiki/Persi_Diaconis)）确实如此，他在搞魔术的时候，为了想研究如何防止被其他魔术师骗，买了本 William Feller 的 **An Introduction to Probability Theory and Its Applications**，但是里面涉及到了微积分等知识，看不懂，那年他18岁。他发誓要回学校学习，以此能够看得懂这本书。24岁重返校园（[City College of New York](http://en.wikipedia.org/wiki/City_College_of_New_York "City College of New York")）。他向《科学美国人》投稿介绍他两个有意思的洗牌方法。这样被一个马丁·葛登能的人看重，给他写了推荐信去哈佛大学，当时哈佛的统计学家 Fred Mosteller 正在研究魔术，于是就要了他（[http://blog.sciencenet.cn/home.php?mod=space&uid;=1557&do;=blog&id;=418859](http://blog.sciencenet.cn/home.php?mod=space&uid=1557&do=blog&id=418859)）。
+Persi Diaconis（[维基](http://en.wikipedia.org/wiki/Persi_Diaconis)）确实如此，他在搞魔术的时候，为了想研究如何防止被其他魔术师骗，买了本 William Feller 的 **An Introduction to Probability Theory and Its Applications**，但是里面涉及到了微积分等知识，看不懂，那年他18岁。他发誓要回学校学习，以此能够看得懂这本书。24岁重返校园（[City College of New York](http://en.wikipedia.org/wiki/City_College_of_New_York "City College of New York")）。他向《科学美国人》投稿介绍他两个有意思的洗牌方法。这样被一个马丁·葛登能的人看重，给他写了推荐信去哈佛大学，当时哈佛的统计学家 Fred Mosteller 正在研究魔术，于是就要了他（<http://blog.sciencenet.cn/home.php?mod=space&uid=1557&do=blog&id=418859>）。
 
 Persi Diaconis 做了几个很有意思的工作，如洗牌多少次能够洗得比较彻底（我希望在统计之美里面，能够有一篇来单独介绍洗牌问题）等。他还有个绝活，据刘军老师说，他总可以抛硬币时，抛出他想要的那一面。而他每次的学术报告之前，都会表演一番，很多人实际上不是去听他的报告的，而是看看他的绝活。
 
@@ -32,6 +32,5 @@ Persi Diaconis 做了几个很有意思的工作，如洗牌多少次能够洗�
 
 在下一篇我给出他的想法，从而写完MCMC算法的引子。
 
-<div style="display: none">
-  win your ex girlfriend backfree advice on how to make her want you back [How To Get Your Ex Girlfriend Back](http://blog.dotsub.com/) how to get back with your ex girlfriendhow to get your girlfriend back
-</div>
+  win your ex girlfriend backfree advice on how to make her want you back [How To Get Your Ex Girlfriend Back](http://blog.dotsub.com/) 
+
