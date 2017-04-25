@@ -21,7 +21,7 @@ slug: new-names-for-statistical-terms
 
 <!--more-->
 
-**贝叶斯分类规则**：给定{(X,Y)}，其中Y是0-1变量，最佳的分类器就当P(Y=1|X=x)>1/2的时候猜Y=1，或者P(Y=1|X=x)<1/2的时候猜Y=0。这个和贝叶斯规则听起来经常会混淆是不是？其实这个规则有点黄金标准的味道，不如改叫：
+**贝叶斯分类规则**：给定{(X,Y)}，其中Y是0-1变量，最佳的分类器就当P(Y=1|X=x)>1/2的时候猜Y=1，或者P(Y=1|X=x)< 1/2的时候猜Y=0。这个和贝叶斯规则听起来经常会混淆是不是？其实这个规则有点黄金标准的味道，不如改叫：
   
 新名字：**黄金律**
 
@@ -183,5 +183,5 @@ slug: new-names-for-statistical-terms
 > 
 > 
 > No constant is used more than 0. Since no one else has ever names it, this is my chance for a place in history.
-  
+>  
 > New Name: Wasserman’s Constant.
