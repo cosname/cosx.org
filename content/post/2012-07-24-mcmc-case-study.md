@@ -404,7 +404,8 @@ print(data1.table, type = "html")
 
   * 后验方差估计
 
-```rdata2 <- rbind(sigmasq, sigmasq.mcse)
+```r
+data2 <- rbind(sigmasq, sigmasq.mcse)
 colnames(data2) <- c("constant", "x1", "x2", "x3", "x4")
 rownames(data2) <- c("estimate", "MCSE")
 data2.table <- xtable(data2, digits = 5)
@@ -413,12 +414,11 @@ print(data2.table, type = "html")
 
   * 后验标准差估计
 
-```rdata3 <- rbind(sigma, sigma.mcse)
+```r
+data3 <- rbind(sigma, sigma.mcse)
 colnames(data3) <- c("constant", "x1", "x2", "x3", "x4")
 rownames(data3) <- c("estimate", "MCSE")
 data3.table <- xtable(data3, digits = 5)
 print(data3.table, type = "html")
-```<table border=1> 
-
-</table>
+```
 
