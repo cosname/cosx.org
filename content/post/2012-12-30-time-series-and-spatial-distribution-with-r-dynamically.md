@@ -19,9 +19,9 @@ slug: time-series-and-spatial-distribution-with-r-dynamically
 
 一张图可以解说一个场景，而很多张图连续起来形成的动画就可以讲一个故事。
 
-<p style="text-align: center;">
-  <embed src="http://www.tudou.com/v/EvWrnasuQdc/&resourceId=0_05_05_99&bid=05/v.swf" type="application/x-shockwave-flash" allowfullscreen="true" width="480" height="400" />
-</p>
+<http://www.tudou.com/v/EvWrnasuQdc/&resourceId=0_05_05_99&bid=05/v.swf>
+
+<!--more-->
 
 7-Eleven 便利店是源于美国的全球最大的便利连锁店，后来被日本伊藤洋华堂公司收购，在全球拥有42000家持有或连锁的店面，在美国本土也有超过8000家店。动态的显示美国8000家店的开店序列和空间分布，可以揭示这家连锁企业的发展规律，也对其他零售连锁企业的发展有着借鉴作用。
 
@@ -31,4 +31,4 @@ slug: time-series-and-spatial-distribution-with-r-dynamically
 
 ![7-11](https://cos.name/wp-content/uploads/2012/12/7-11.png)
 
-该动画采用了R里的animation 包，并得到了该包的作者谢益辉的指点。数据来自于现任美国7-Eleven市场规划部的总监，分析解读来自前任美国7-Eleven地产部副总裁。
+该动画采用了R里的animation包，并得到了该包的作者谢益辉的指点。数据来自于现任美国7-Eleven市场规划部的总监，分析解读来自前任美国7-Eleven地产部副总裁。
