@@ -74,7 +74,7 @@ $$`
 
 `$$Y(z) = f( \{ pa\_Y\backslash Z\} (Z=z), Z=z , \varepsilon\_Y ) .$$`
 
-其中，`$ pa_Y\backslash Z$` 表示 `$ Y $` 除去 `$ Z $` 的父亲节点。上面的方程表示：将 `$ Z $` 的值强制在 `$ z $` 时，DAG 系统所产生的 `$ Y $` 值。这个意义下，do 算子导出的结果，就是“潜在结果”。
+其中，`$ pa_Y\backslash Z$` 表示 `$Y$` 除去 `$Z$` 的父亲节点。上面的方程表示：将 `$Z$` 的值强制在 `$z$` 时，DAG 系统所产生的 `$Y$` 值。这个意义下，do 算子导出的结果，就是“潜在结果”。
 
 # 二 d 分离，前门准则和后门准则
 
@@ -132,7 +132,7 @@ $$`
 P(y\mid do(X)=x) = \sum_{z} P(z\mid x) \sum_{x’} P(y\mid x’,z)P(x’).  
 $$`
 
-**证明：**Figure 3 (b) 中蕴含了条件独立性，将在推导中用到：$ Z\bot U|X, Y\bot X| (Z,U) $。
+**证明：**Figure 3 (b) 中蕴含了条件独立性，将在推导中用到：`$Z\bot U|X, Y\bot X| (Z,U)$`。
 
 `$$\begin{eqnarray*}
 &&P(y\mid do(X) = x) \\
