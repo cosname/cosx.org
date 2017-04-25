@@ -79,8 +79,8 @@ x <- out$x
 y <- out$y
 lupost <- function(beta, x, y) {
     eta <- as.numeric(x %*% beta)
-    logp <- ifelse(eta &lt; 0, eta - log1p(exp(eta)), -log1p(exp(-eta)))
-    logq <- ifelse(eta &lt; 0, -log1p(exp(eta)), -eta - log1p(exp(-eta)))
+    logp <- ifelse(eta < 0, eta - log1p(exp(eta)), -log1p(exp(-eta)))
+    logq <- ifelse(eta < 0, -log1p(exp(eta)), -eta - log1p(exp(-eta)))
     logl <- sum(logp[y == 1]) + sum(logq[y == 0])
     return(logl - sum(beta^2)/8)
 }
