@@ -15,11 +15,11 @@ slug: new-names-for-statistical-terms
   
 新名字：**拉普拉斯推断**
 
-**贝叶斯网络**：一个有向无环图加上了一些概率分布就可以跟贝叶斯推断扯上亲戚了？或者应该叫拉普拉斯推断？维基百科明明告诉你，这只是Judea Pearl无聊时候臆想出来的名字…
+**贝叶斯网络**：一个有向无环图加上了一些概率分布就可以跟贝叶斯推断扯上亲戚了？或者应该叫拉普拉斯推断？维基百科明明告诉你，这只是Judea Pearl无聊时候臆想出来的名字… <!--more-->
   
 新名字：**珀尔图**
 
-**贝叶斯分类规则**：给定{(X,Y)}，其中Y是0-1变量，最佳的分类器就当P(Y=1|X=x)>1/2的时候猜Y=1，或者P(Y=1|X=x)<1/2的时候猜Y=0。这个和贝叶斯规则听起来经常会混淆是不是？其实这个规则有点黄金标准的味道，不如改叫：
+**贝叶斯分类规则**：给定{(X,Y)}，其中Y是0-1变量，最佳的分类器就当P(Y=1|X=x)>1/2的时候猜Y=1，或者P(Y=1|X=x)< 1/2的时候猜Y=0。这个和贝叶斯规则听起来经常会混淆是不是？其实这个规则有点黄金标准的味道，不如改叫：
   
 新名字：**黄金律**
 
@@ -42,11 +42,7 @@ slug: new-names-for-statistical-terms
 **因果推断**:有没有曾几何时causal和casual傻傻分不清楚？有些人说这东西还是叫做“实验效果分析”，但是听起来一点也不让人兴奋。依我说，这东西就应该叫：
   
 新名字：**正式推断（Formal Inference）**
-  
-<!--more-->
-
-
-  
+    
 **中心极限定理**：多无趣的名字呀！联想到它的历史，我觉得还是叫：
   
 新名字：**棣莫弗定理**
@@ -89,118 +85,101 @@ slug: new-names-for-statistical-terms
   
 新名字：**Mercer空间**
 
-. 没有比0更常用的常量了…鉴于这东西还没有人命名过，我决定把自己载入史册：
+没有比0更常用的常量了…鉴于这东西还没有人命名过，我决定把自己载入史册：
   
 新名字：**Wasserman 常量.**
 
 原文附下：
 
 > Bayesian Inference. Bayes did use his famous theorem to do a calculation. But it was really Laplace who systematically used Bayes’ theorem for inference.
-  
+>  
 > New Name: Laplacian Inference.
 > 
-> &nbsp;
 > 
 > Bayesian Nets. A Bayes nets is just a directed acyclic graph endowed with probability distribution. This has nothing to do with Bayesian — oops, I mean Laplacian — inference. According to Wikipedia, it was Judea Pearl who came up with the name.
-  
+> 
 > New Name: Pearl Graph.
 > 
-> &nbsp;
 > 
 > The Bayes Classification Rule. Give {(X,Y)}, with {Yin {0,1}}, the optimal classifier is to guess that {Y=1} when {P(Y=1|X=x)geq 1/2} and to guess that {Y=0} when {P(Y=1|X=x)< 1/2}. This is often called the Bayes rule. This is confusing for many reasons. Since this rule is a sort of gold standard how about:
-  
+> 
 > New Name: The Golden Rule.
 > 
-> &nbsp;
 > 
 > Unbiased Estimator. Talk about a name that promises more than it delivers.
   
 > New Name: Mean Centered Estimator.
 > 
-> &nbsp;
 > 
 > Credible Set. This is a set with a specified posterior probability content such as: here is a 95 percent credible set. Might as well make it sound more exciting.
-  
+> 
 > New Name: Incredible Set.
 > 
-> &nbsp;
 > 
 > Confidence Interval. I am tempted to suggest “Uniform Frequency Coverage Set” but that’s clumsy. However it does yield a good acronym if you permute the letter a bit.
-  
+>  
 > New Name: Coverage Set.
 > 
-> &nbsp;
 > 
 > The Bootstrap. If I remember correctly, Brad Efron considered several names and John Tukey suggested “the shotgun.” Brad, you should have listened to Tukey.
-  
+>  
 > New Name: The Shotgun.
 > 
-> &nbsp;
 > 
 > Causal Inference. For some reason, whenever I try to type “causal” I end up typing “casual.” Anyway, the mere mention of causation upsets some people. Some people call causal inference “the analysis of treatment effects” but that’s boring. I suggest we go with the opposite of casual:
-  
+>  
 > New Name: Formal Inference.
 > 
-> &nbsp;
 > 
 > The Central Limit Theorem. Boring! For historical reasons I suggest:
-  
+>  
 > de Moivre’s Theorem.
 > 
 > The Law of Large Numbers. Another boring name. Again, to respect history I suggest:
-  
+>  
 > New Name: Bernoulli’s Theorem.
 > 
-> &nbsp;
 > 
 > Minimum Variance Unbiased Estimator. Let’s just eliminate this one.
 > 
 > The lasso. Nice try Rob, but most people don’t even know what it stands for. How about this:
-  
+>  
 > New Name: the Taser. (Tibshirani’s Awesome Sparse Estimator for regression).
 > 
-> &nbsp;
 > 
 > Stigler’s law of eponymy. If you don’t know what this is, check it out on Wikipedia. The you’ll understand why it name should be:
-  
+> 
 > New Name: Stigler’s law of eponymy.
 > 
-> &nbsp;
 > 
 > Neural nets. Let’s call them what they are.
-  
+>  
 > (Not so) New name: Nonlinear regression.
 > 
 > p-values. I hope you’ll agree that this is a less than inspiring name. The best I can come up with is:
-  
+>
 > New Name: Fisher Statistic.
 > 
-> &nbsp;
 > 
-> Support Vector Machines. This might get the award for the worst name ever. Sounds like some industrial device in a factory. Since we already like the acronym VC, I suggest:
-  
+> Support Vector Machines. This might get the award for the worst name ever. Sounds like some industrial device in a factory. >Since we already like the acronym VC, I suggest: 
 > New Name: Vapnik Classifier.
 > 
-> &nbsp;
 > 
-> U-statistic. I think this one is obvious.
-  
+> U-statistic. I think this one is obvious. 
+>
 > New Name: iStatistic.
 > 
-> &nbsp;
 > 
 > Kernels. In statistics, this refers to a type of local smoothing, such as kernel density estimation and Nadaraya-Watson kernel regression. Some people use “Parzen Window” which sounds like something you buy when remodeling your house. But in Machine Learning it is used to refer to Mercer kernels with play a part in Reproducing Kernel Hilbert Spaces. We don’t really need new names we just need to clarify how we use the terms:
-  
+>  
 > New Usage: Smoothing Kernels for density estimators etc. Mercer kernels for kernels that generate a RKHS.
 > 
-> &nbsp;
 > 
 > Reproducing Kernel Hilbert Space. Saying this phrase is exhausting. The acronym RKHS is not much better. If we used history as a guide we’d say Aronszajn-Bergman space but that’s just as clumsy. How about:
-  
+>  
 > New Name: Mercer Space.
 > 
-> &nbsp;
 > 
-> . No constant is used more than 0. Since no one else has ever names it, this is my chance for a place in history.
-  
+> No constant is used more than 0. Since no one else has ever names it, this is my chance for a place in history.
+>  
 > New Name: Wasserman’s Constant.
