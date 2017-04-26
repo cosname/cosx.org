@@ -5,6 +5,7 @@ author: 李舰
 categories:
   - 统计之都
 slug: 5th-china-r-shanghai-summary
+description: "第五届中国R语言会议（上海会场）于2012年11月3日~4日在上海财经大学行政楼一楼报告厅成功召开。会议由上海财经大学统计与管理学院主办、统计之都（[cos.name](https://cos.name)）协办，艾瑞咨询（[iresearch](http://www.iresearch.cn/)）、Mango Solutions（[mango-solutions](http://www.mango-solutions.com.cn/)）、上海财经大学数理经济学教育部重点实验室以及上海财经大学上海市一流学科（B类， 统计学）提供了赞助。在两天的会议时间里，群贤毕集，盛况空前。"
 ---
 
 ![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 
@@ -14,7 +15,6 @@ slug: 5th-china-r-shanghai-summary
 # 会议概况
 
 本次会议吸引了437名各界人士注册报名，有200多位嘉宾来到现场。报名人数和会场气氛的热烈程度都创下新高。根据注册报名信息，同意在参会者之间分享个人信息的312位嘉宾所在单位的汇总如下。
-<!--more-->
 
 高校和研究所：
 
@@ -112,26 +112,26 @@ slug: 5th-china-r-shanghai-summary
 
 经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循[CC 3.0协议](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)：署名-非商业性使用-相同方式共享）。
 
-  * 冯兴东：[R语言和其他计算机语言的混合编程](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_01_FXD.pdf)
-  * 刘思喆：[R语言环境下的文本挖掘](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_02_LSZ.pdf)
-  * 张翔：[短文本分类器与电商品类数据挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_03_ZX.pdf)
-  * ebay：R语言在eBay搜索引擎反馈与测试中的应用 
-  * 周春英：[ebay试验分析、评估与R](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_ZCY.pdf)
-  * 沈羽：[用户反馈挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_SY.pdf)
-  * 周扬：[基于R的地理信息系统](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_05_ZY.zip)（HTML5格式）
-  * 肖凯：[twitteR包入门和应用](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_06_XK.pdf)
-  * 陈钢：[系统生物学和转换医学中的R语言](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_07_CG.pdf)
-  * 杭兴宜：[R / Bioconductor在生物多维组学数据整合中的应用](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_08_HXY.pdf)
-  * 肖嘉敏：[网络用户浏览路径分析](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_01_XJM.pdf)
-  * 李忠：[R Case Study from ebay APD](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_02_LZ.pdf)
-  * 洪健飞：[啤酒与尿布的当代版——商品分析在电子商务中的应用](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_03_HJF.pdf)
-  * 廖明：[营销分析模型及其在广告界的应用](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_04_LM.pdf)
-  * 陈逸波：[基于RHadoop的关联规则挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_05_CYB.pdf)
-  * 刘成昊：[模型预测的利器——随机森林](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_06_LCH.pdf)
-  * 王雨晨：[R与面向对象统计分析](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_07_WYC.pdf)
-  * 魏太云：[R基础作图与可重复研究](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_08_WTY.pdf)
-  * 专题讨论： 
-  * 林祯舜：[大数据时代下电子商务及营销的机遇与挑战](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_Panel_LZS.pdf)
+* 冯兴东：[R语言和其他计算机语言的混合编程](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_01_FXD.pdf)
+* 刘思喆：[R语言环境下的文本挖掘](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_02_LSZ.pdf)
+* 张翔：[短文本分类器与电商品类数据挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_03_ZX.pdf)
+* ebay：R语言在eBay搜索引擎反馈与测试中的应用 
+* 周春英：[ebay试验分析、评估与R](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_ZCY.pdf)
+* 沈羽：[用户反馈挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_SY.pdf)
+* 周扬：[基于R的地理信息系统](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_05_ZY.zip)（HTML5格式）
+* 肖凯：[twitteR包入门和应用](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_06_XK.pdf)
+* 陈钢：[系统生物学和转换医学中的R语言](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_07_CG.pdf)
+* 杭兴宜：[R / Bioconductor在生物多维组学数据整合中的应用](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_08_HXY.pdf)
+* 肖嘉敏：[网络用户浏览路径分析](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_01_XJM.pdf)
+* 李忠：[R Case Study from ebay APD](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_02_LZ.pdf)
+* 洪健飞：[啤酒与尿布的当代版——商品分析在电子商务中的应用](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_03_HJF.pdf)
+* 廖明：[营销分析模型及其在广告界的应用](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_04_LM.pdf)
+* 陈逸波：[基于RHadoop的关联规则挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_05_CYB.pdf)
+* 刘成昊：[模型预测的利器——随机森林](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_06_LCH.pdf)
+* 王雨晨：[R与面向对象统计分析](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_07_WYC.pdf)
+* 魏太云：[R基础作图与可重复研究](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_08_WTY.pdf)
+* 专题讨论： 
+    * 林祯舜：[大数据时代下电子商务及营销的机遇与挑战](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_Panel_LZS.pdf)
 
 # 感想和建议
 
