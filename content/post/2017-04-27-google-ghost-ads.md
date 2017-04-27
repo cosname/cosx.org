@@ -1,13 +1,13 @@
 ---
-title: 第十届中国R会议（北京）会议通知
-author: 统计之都
-date: '2017-04-05'
-tags: [R会议,北京]
-slug: chinar-2017-bj-announcement
+title: 幽灵广告
+author: 陈丽云
+date: '2017-04-27'
+tags: [计算广告]
+slug: google-ghost-ads
 ---
 
 # 谷歌为什么创造了幽灵广告？
-说起广告大家肯定都知道，可是什么是幽灵广告？其实幽灵广告的英文是ghost ads，源自Google的一篇论文，Johnson, Garrett A., Randall A. Lewis, and Elmar I. Nubbemeyer. "Ghost Ads: Improving the Economics of Measuring Online Ad Effectiveness." (2016)。幽灵广告是他们创造出来用来提高衡量在线广告效果的一套系统。由于实施过程中某些广告会化作用户看不到的幽灵，所以称之为“幽灵广告”系统，专门用于线上广告的随机对照实验。
+说起广告大家肯定都知道，可是什么是幽灵广告？其实幽灵广告的英文是ghost ads，源自Google的一篇论文，Johnson, Garrett A., Randall A. Lewis, and Elmar I. Nubbemeyer. "Ghost Ads: Improving the Economics of Measuring Online Ad Effectiveness." (2016)。幽灵广告是他们创造出来用来提高衡量在线广告效果的一套系统。由于实施过程中某些广告会化作用户看不到的幽灵，所以称之为“幽灵广告”系统，专门用于线上广告的随机对照实验。<!--more-->
 
 园主断断续续也写了不少关于线上实验的各种介绍了，可是大多数都没有涉及在线广告。可能大家会想，在线广告和其他的在线实验不都一样么，有什么需要特别注意的？园主在没有听Randall讲这篇论文之前，也是一头雾水地读了一遍，不知所云。听Randall讲完之后，才大概明白个中精妙。直到最近自己开始做跟广告相关的事情了、认认真真把这篇论文翻了出来，重新通读，顺便跟大家分享一下从开始到现在的一些感悟。
 
