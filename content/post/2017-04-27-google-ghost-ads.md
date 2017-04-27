@@ -16,7 +16,7 @@ slug: google-ghost-ads
 
 在详细介绍幽灵广告之前，园主先大概讲一下在线广告的情况。面向用户的互联网企业盈利的大头无非就是三种：广告，游戏，卖东西（实体产品和服务）。大部分网站对用户是免费使用的，所以赚钱的方式就来自广告，比如谷歌和百度。简单如付费搜索，即相关网站付钱给谷歌，让用户在搜索特定关键字的时候，可以先看到自己的网站。当然，大家更常见的是各种各样的图片和视频，比如在优酷追剧的时候会强制插播一小段广告，或者刷刷微博发现时间流里面夹杂着一些不太熟悉的博主。对于普通用户来说，可能不会想到自己看到的广告背后是多么复杂的一套生态系统。园主也不知道，直到看到了这张图。好吧，原来生态链可以这么冗长。
 
-![enter image description here](https://lh3.googleusercontent.com/-Wg6HS1kQNW8/WPviEqG7EKI/AAAAAAAAKEE/MssMXWTZFNIHi_rrPmGcVy7fx54fz7YkgCLcB/s0/display_advertising_ecosystem_011011.png "在线广告系统生态圈")
+![在线广告系统生态圈](https://cloud.githubusercontent.com/assets/7221728/25469374/6afd9cde-2b4e-11e7-9dfe-6d1a2429b209.png "在线广告系统生态圈")
 原图：http://earlh.com/blog/2011/07/19/online-display-advertising-ecosystem/
 
 显然这个生态系统中的付钱的广告主们，很想知道他们每一分钱都花在哪里了，花得到底值不值得。毕竟广告届一直流传着一句名言：
@@ -51,14 +51,17 @@ slug: google-ghost-ads
 
 下面我们基于第二代利用行为反馈数据优化过的系统，来理解为什么Google这篇论文一开始就说在第二代广告投放系统之上，公益广告并不是一个很好的对照组。
 
-![图1：理想的实验设计](https://lh3.googleusercontent.com/-xZ4exgMZZco/WPviz7Xk6qI/AAAAAAAAKEQ/rliRQVmbqzclW9sabS3t1lz4H8ZgDkSYwCLcB/s0/Screen+Shot+2017-03-18+at+10.25.54+PM.png "图1：理想的实验设计")
+![图1：理想的实验设计](https://cloud.githubusercontent.com/assets/7221728/25469379/6fefcbb8-2b4e-11e7-879b-90d5d925be1e.png "图1：理想的实验设计")
+
 图一，理想的实验设计。所有人被随机分配到实验组和对照组，然后我们可以观察到哪些实验组里面的人实际看到广告，哪些对照组的人如果放在实验组的话是本应看到广告的。这种理想情况下，绿色部分所示的 实验组和对照组里面看到广告和本应看到广告的人是相同的。
-![图2: 意向处理分析](https://lh3.googleusercontent.com/-wi9oSddrCF0/WPvi-bGuSoI/AAAAAAAAKEY/M-uMRUEszx059giL0JmvwPrmAasiJMz2wCLcB/s0/Screen+Shot+2017-03-18+at+10.26.03+PM.png "图2: 意向处理分析intent-to-treat")
+
+![图2: 意向处理分析](https://cloud.githubusercontent.com/assets/7221728/25469381/7647eca2-2b4e-11e7-951b-d1b513198506.png "图2: 意向处理分析intent-to-treat")
+
 图2说的是意向处理分析（intent-to-treat，一些文献简写为ITT）的情况。此时，我们知道实验组里面哪些人看到了广告，却不知道对照组里面哪些人本应看得到广告。这是我们只能按照实验设计的初始意向来分析，即回到随机化的初始阶段，把所有实验参与者都包括进来，然后对比所有实验组和对照组的人（不管他们是不是实际看到了广告）。显然，相比于图1的理想情况，意向处理分析由于包括了那些并没有实际看到广告的人，所以会稀释处理效应。意向处理分析的优势在于它给出的是无偏的估计量。
 
 此外，在真正的广告投放实践中，由于制约广告效果的往往是广告的预算，所以在初期的时候对于看到广告的人的平均效应（即ATT）的估计会变得额外的有意义。这样的结果可以用来推测在增加预算以后，可以达到什么样的预期效果。而基于意向处理分析（ITT）的估计量由于没有考虑随着广告预算增加实际看到广告的人的比例也会增加的问题，所以没办法给出较好的预测。
 
-![图3: 公益广告作为对照组](https://lh3.googleusercontent.com/-7HJOlbJoNow/WPvjK3BP3AI/AAAAAAAAKEg/kub2_AkTvko_9UQ70XNxIzNTMbdREQH9wCLcB/s0/Screen+Shot+2017-03-18+at+10.26.12+PM.png "图3: 公益广告作为对照组")
+![图3: 公益广告作为对照组](https://cloud.githubusercontent.com/assets/7221728/25469382/7b5f3f2e-2b4e-11e7-806d-76a77f2a30da.png "图3: 公益广告作为对照组")
 
 图3说的是利用公益广告作为对照组的情况。显然，由于广告投放优化系统的存在，实验组里看到广告的人会和公益广告组里面看到广告的人的分布不一样，所以如果直接对比这两组，我们会得到一个有偏的估计量。
 
@@ -68,7 +71,7 @@ slug: google-ghost-ads
 
 如果我们想得到和图1一致的观测结果，那么用户实际看到的广告应该是什么样子的呢？
 
-![enter image description here](https://lh3.googleusercontent.com/-SQYx7VBqLZw/WPvjY9dOQgI/AAAAAAAAKEs/18ZfzogTt-wWR0S6JpLOOfRa0wpSOvoFgCLcB/s0/Screen+Shot+2017-03-19+at+4.18.41+PM.png "图4: 看到广告的人")
+![图4: 看到广告的人](https://cloud.githubusercontent.com/assets/7221728/25469387/80006508-2b4e-11e7-81e0-7c192166d360.png "图4: 看到广告的人")
 图4显示了不同情形下人们最终看到的广告。
 
 左上角的1）是实验组，有3个人看到的我们关心的Louboutin鞋子广告（灰色虚线框），而剩下三个人看到的是丰田、星巴克和熊猫。
@@ -78,7 +81,7 @@ slug: google-ghost-ads
 右下角的图4是幽灵广告的情形，和2）的结果一致，但是我们明确知道是哪三个本应看到Louboutin广告的人看到了其他广告。
 
 为了实现4）的结果，幽灵广告系统需要在真正的广告拍卖之外再加一层“模拟拍卖”，并对那三个本应看到Louboutin广告的用户和行为进行一步额外的记录。
-![enter image description here](https://lh3.googleusercontent.com/-wisqq_7eX2M/WPvjkhbdADI/AAAAAAAAKE0/ZTA5PtiTiYoOA7d33Z63mC7cgoyMwrcOQCLcB/s0/Screen+Shot+2017-03-19+at+4.25.30+PM.png "图5: 幽灵广告系统工作原理")
+![图5: 幽灵广告系统工作原理](https://cloud.githubusercontent.com/assets/7221728/25469399/8e04b140-2b4e-11e7-82db-7e8fb16ca2a4.png "图5: 幽灵广告系统工作原理")
 
 图5描述了幽灵广告的工作原理。
 左边是实验组的用户，Louboutin广告被放入可以显示的广告集中，然后进入实际的广告拍卖过程，赢取的用户将看到Louboutin广告。
@@ -90,7 +93,7 @@ slug: google-ghost-ads
 
 图8总结了幽灵广告在三代广告投放系统上的效果。
 
-![enter image description here](https://lh3.googleusercontent.com/-soCI9KCdAJ4/WPvjwit1wCI/AAAAAAAAKE8/v75FJLQsA1wqQn2cfemk2Rv9VnlMP-ByQCLcB/s0/Screen+Shot+2017-03-19+at+4.31.49+PM.png "图8: 幽灵广告之于三代广告系统")
+![图8: 幽灵广告之于三代广告系统](https://cloud.githubusercontent.com/assets/7221728/25469401/909e6040-2b4e-11e7-8b1e-a31de581a5de.png "图8: 幽灵广告之于三代广告系统")
 
 第一代广告系统：基于投放量的系统不考虑各种基于用户反馈的优化，故而幽灵广告和公益广告会产生一样的效果。
 
