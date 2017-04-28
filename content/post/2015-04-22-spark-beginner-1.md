@@ -15,71 +15,78 @@ slug: spark-beginner-1
 
 现在的各种数据处理技术更新换代太快，新的名词和工具层出不穷，像是 Hadoop 和 Spark 这些，最近几年着实火了一把。事实上听说 Spark 也有一段时间了，但一直是只闻其名不见其实，今天就来简单记录一下初学 Spark 的若干点滴。
 
-### Spark 是什么 {#spark-}
+# Spark 是什么
 
 按照 [Spark 官方的说法](http://spark.apache.org/)，Spark 是一个快速的集群运算平台，以及一系列处理大型数据集的工具包。用通俗的话说，Spark 与 R 一样是一套用于数据处理的软件和平台，但它最显著的特点就是处理大型数据（我就是不说大数据 (￣^￣)）的能力。
 
-### 极简安装 {#section}
+# 极简安装
 
 Spark 本身面向的是大规模的分布式计算，但对学习和测试来说，利用单机的多核 CPU 就已经足够了，所以作为入门，我并没有打算去涉及多台计算机相连的情形。在这个基础上，第一件出乎我意料的事情就是，Spark 的安装和配置其实可以是**异常简单**的。
 
 在网上出现的各种资料中，Spark 经常与 Hadoop 和 Scala 这两个名词一起出现。前者也是一个大型分布式计算的框架，诞生得比 Spark 更早；后者是 Spark 主要使用的一种编程语言。这就给不明真相的群众造成了一种印象，好像要使用 Spark 的话就得先安装配置好 Hadoop 和 Scala，而要安装它们又得有更多的软件依赖。但实际上，要在单机上使用 Spark，真正需要的只有下面几样：
 
-  1. 一台金光闪闪的电脑
-  2. 在上面这台电脑里面装一个金光闪闪的 Linux 操作系统
-  3. 在上面这个系统里面装一个金光闪闪的 Java 开发环境（JDK）
+1. 一台金光闪闪的电脑
+1. 在上面这台电脑里面装一个金光闪闪的 Linux 操作系统
+1. 在上面这个系统里面装一个金光闪闪的 Java 开发环境（JDK）
 
 这三样可以说是大部分计算环境的标配，如果系统还没有安装 JDK，那么一般都可以用系统的包管理工具，比如 Fedora 下是
 
-<pre>sudo yum install java-1.8.0-openjdk</pre>
+```bash
+sudo yum install java-1.8.0-openjdk
+```
 
 Ubuntu 下是
 
-<pre>sudo apt-get install openjdk-7-jdk</pre>
+```bash
+sudo apt-get install openjdk-7-jdk
+```
 
 有了上面的开发环境，安装 Spark 就非常容易了，基本上只要下载预编译包，解压缩，然后添加系统路径即可。首先，到 <https://spark.apache.org/downloads.html> 选择最新的 Spark 版本和 Hadoop 版本（实际上我们暂时用不上 Hadoop，所以任何版本都行），然后下载压缩包。<!--more-->
 
-<div align="center">
-  ![](http://i.imgur.com/2IbWNhI.png)
-</div>
+![](http://i.imgur.com/2IbWNhI.png)
+
 
 完毕后，将其中的文件夹解压到某个特定的位置，比如，我将解压出的文件夹命名为 `spark`，并放在我的主文件夹 `/home/qyx` 里，这样我就可以执行
 
-<pre>/home/qyx/spark/bin/spark-shell</pre>
+```bash
+/home/qyx/spark/bin/spark-shell
+```
 
 来运行 Spark 的终端了。为了避免每次打开 Spark 都要输入很长一串的路径，可以将 Spark 的 `bin` 目录加入到系统路径中，例如我在 `~/.bashrc` 文件中写入了
 
-<pre>export PATH=$PATH:/home/qyx/spark/bin</pre>
+```bash
+export PATH=$PATH:/home/qyx/spark/bin
+```
 
 于是安装过程就这么愉快地结束了。
 
-### Spark 终端 {#spark--1}
+# Spark 终端
 
 我觉得 Spark 非常亲民的一点是它提供了一个交互式的命令行终端，这样用户就可以快速地测试一些命令和语句，而无需每次都保存代码脚本然后调用执行，这对于 R 和 Python 用户来说是非常顺心的一件事。如果已经将 Spark 的 `bin` 目录加入到了系统路径，那么在系统命令行里输入 `spark-shell` 就可以进入 Spark 的交互式终端了。
 
-<div align="center">
-  ![](http://i.imgur.com/WXuIyFf.png)
-</div>
+![](http://i.imgur.com/WXuIyFf.png)
 
 如果出现了像图中 `scala>` 这样的提示符，就说明 Spark 安装成功。这里的 `scala` 指的是 Scala 编程语言。前面说了，Spark 主要使用 Scala 来进行开发，这意味着要最大程度地发挥 Spark 的性能，还需要再多学一门编程语言（Spark 还支持 Java 和 Python 的接口，但 Java 的语法没有 Scala 简洁，Python 的性能没有 Scala 的高）。虽然这需要花费一些额外的时间，但好在 Scala 的语法非常直观，基本上通过例子就可以模仿写出自己的程序来。
 
 如果对 Scala 语言感兴趣，可以参考[这份教程](http://people.cis.ksu.edu/%7Eschmidt/705a/Scala/scala_tutorial.pdf)来了解其基本的语法。但在这里我们将直接进入正题，用 Spark 来跑一个回归的例子。
 
-### Spark 例子：回归模型 {#spark--2}
+# Spark 例子：回归模型
 
 Spark 的数据分析功能包含在一个称为 MLlib 的组件当中，顾名思义，这是 Spark 的机器学习库，而回归是它支持的模型之一。为了演示例子，我们首先用 R 生成一组模拟的数据（是不是感觉怪怪的，主要是我还没用熟 Scala）：
 
-<pre>set.seed(123)
+```r
+set.seed(123)
 n = 1e6
 p = 5
 x = matrix(rnorm(n * p), n)
 b = rnorm(p)
 y = x %*% b + rnorm(n, 1, 3)
 z = data.frame(y, x)
-write.table(z, "reg.txt", sep = " ", row.names = FALSE, col.names = FALSE)</pre>
+write.table(z, "reg.txt", sep = " ", row.names = FALSE, col.names = FALSE)
+```
 
 我们将数据保存为 `reg.txt` 文件，它共有一百万行，每一行有6个数，用空格分隔，其中第一个数代表因变量，其余的为自变量。
-  
+
 下面就是一段用 Scala 实现的 Spark 算回归的程序，其中包括了读取数据，拟合回归，计算回归系数，进行模型预测以及计算 $R^2$ 的过程。将这段程序复制到 Spark 的终端里，就可以迅速查看输出结果，体验 Spark 的基本功能了。
 
 ![spark-regression](https://cos.name/wp-content/uploads/2015/04/spark-regression.png)（复制代码可以去[这里](http://yixuan.cos.name/cn/2015/04/spark-beginner-1/)）
@@ -100,18 +107,17 @@ write.table(z, "reg.txt", sep = " ", row.names = FALSE, col.names = FALSE)</pre>
 
 在第31行中，我们用拟合出的模型对训练集本身进行了预测。`parsed.map(_.features)` 的目的是取出训练集中的自变量部分，而 `predict()` 方法返回的结果就是因变量的预测值向量。
 
-<p class=" has-jax">
-  最后的第33行，我们利用 MLlib 为我们封装好的 <code>corr()</code> 函数计算了预测值与真实值之间的相关系数（<code>parsed.map(_.label)</code> 与 <code>parsed.map(_.features)</code> 相对，是取出训练集中的因变量），将它平方一下，就是模型的 $R^2$ 值了。
-</p>
+>最后的第33行，我们利用 MLlib 为我们封装好的 `corr()` 函数计算了预测值与真实值之间的相关系数（`parsed.map(_.label)` 与 `parsed.map(_.features)` 相对，是取出训练集中的因变量），将它平方一下，就是模型的 `$R^2$` 值了。
 
-### 整体印象 {#section-1}
+
+# 整体印象
 
 总体感觉，Spark 还是挺好上手的，唯一麻烦的地方大概就是要对 Scala 语言有所了解。不过好在 Spark 也提供了 Python 和 Java 的接口，所以如果只是想尝尝鲜，也完全可以用其他的语言来加以操作。另外一个好消息是，从2015年4月起，Spark 官方已经开始提供 R 语言的接口，大约在2015年夏季发布 Spark 1.4 版本时，R 用户就可以使用原生的 Spark 接口了。
 
-### 学习资源 {#section-2}
+# 学习资源
 
 下面几个链接我觉得对于 Spark 入门是非常有帮助的：
 
-  1. [伯克利的 Spark 迷你课程](http://ampcamp.berkeley.edu/big-data-mini-course/index.html)
-  2. [Spark 官方快速入门教程](https://spark.apache.org/docs/latest/quick-start.html)
-  3. [MLlib 官方文档](https://spark.apache.org/docs/latest/mllib-guide.html)
+1. [伯克利的 Spark 迷你课程](http://ampcamp.berkeley.edu/big-data-mini-course/index.html)
+1. [Spark 官方快速入门教程](https://spark.apache.org/docs/latest/quick-start.html)
+1. [MLlib 官方文档](https://spark.apache.org/docs/latest/mllib-guide.html)
