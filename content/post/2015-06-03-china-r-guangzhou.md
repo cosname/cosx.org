@@ -144,121 +144,20 @@ Robert Krzyzanowski 是Avant公司数据工程的领导人。在这次的演讲�
 
 第一批已经通过嘉宾授权，允许公开幻灯片的列表。[幻灯片见附件](http://pan.baidu.com/s/1bncyp7h)。
 
-<table width="443">
-  <tr>
-    <td width="95">
-      李舰
-    </td>
-    
-    <td width="348">
-      数据科学在业界的应用
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="95">
-      刘斌
-    </td>
-    
-    <td width="348">
-      Adaptive Annealed Importance Sampling for Bayesian Multimodal Posterior Exploration
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="95">
-      罗应琏
-    </td>
-    
-    <td width="348">
-      气象大数据
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="95">
-      谢佳标
-    </td>
-    
-    <td width="348">
-      R 语言并行计算实战
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="95">
-      游皓麟
-    </td>
-    
-    <td width="348">
-      R 语言并行计算实战
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="95">
-      刘黎春
-    </td>
-    
-    <td width="348">
-      用户画像‐大数据时代下的用户洞察
-    </td>
-  </tr>
-</table>
+* 李舰: 数据科学在业界的应用
+* 刘斌: Adaptive Annealed Importance Sampling for Bayesian Multimodal Posterior Exploration
+* 罗应琏: 气象大数据
+* 谢佳标: R 语言并行计算实战
+* 游皓麟: R 语言并行计算实战
+* 刘黎春: 用户画像‐大数据时代下的用户洞察
 
 第二批已经通过嘉宾授权，允许公开幻灯片的列表。幻灯片还需等待嘉宾回复。
 
-<table width="443">
-  <tr>
-    <td width="72">
-      陈钢
-    </td>
-    
-    <td width="371">
-      机器学习在面向消费者的个人基因组检测中的应用
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="72">
-      梁淇俊
-    </td>
-    
-    <td width="371">
-      量化投资之个人工作坊
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="72">
-      Robert Krzyzanowski
-    </td>
-    
-    <td width="371">
-      Building better credit models through deployable analytics in R
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="72">
-      周扬
-    </td>
-    
-    <td width="371">
-      htmlwidgets让recharts 再起航
-    </td>
-  </tr>
-  
-  <tr>
-    <td width="72">
-      伍丽历等
-    </td>
-    
-    <td width="371">
-      利用 LDA 模型预测电视观众的浏览兴趣
-    </td>
-  </tr>
-</table>
+* 陈钢: 机器学习在面向消费者的个人基因组检测中的应用
+* 梁淇俊: 量化投资之个人工作坊
+* Robert Krzyzanowski: Building better credit models through deployable analytics in R
+* 周扬: htmlwidgets让recharts 再起航
+* 伍丽历等: 利用 LDA 模型预测电视观众的浏览兴趣
 
 # 会议组织
 
