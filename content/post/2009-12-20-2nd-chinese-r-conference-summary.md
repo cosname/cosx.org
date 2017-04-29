@@ -9,9 +9,14 @@ tags:
 slug: 2nd-chinese-r-conference-summary
 ---
 
-<figure style="width: 500px" class="wp-caption aligncenter">![第二届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ.jpg "第二届中国R语言会议北京会场合影")<figcaption class="wp-caption-text">第二届中国R语言会议北京会场合影（右键另存为看大图）</figcaption></figure> <figure style="width: 500px" class="wp-caption aligncenter">![第二届中国R语言会议上海会场演讲者和工作人员合影](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH.jpg "第二届中国R语言会议上海会场演讲者和工作人员合影")<figcaption class="wp-caption-text">第二届中国R语言会议上海会场演讲者和工作人员合影（右键另存为看大图）</figcaption></figure> 
+![第二届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-BJ.jpg "第二届中国R语言会议北京会场合影")
+<p style="text-align: center;">第二届中国R语言会议北京会场合影</p>
+
+![第二届中国R语言会议上海会场演讲者和工作人员合影](https://cos.name/wp-content/uploads/2009/12/2nd-R-Conf-SH.jpg "第二届中国R语言会议上海会场演讲者和工作人员合影")
+<p style="text-align: center;">第二届中国R语言会议上海会场演讲者和工作人员合影</p>
 
 2009年12月5~6日以及2009年12月12~13日，第二届中国R语言会议分别在北京和上海两个分会场成功召开。北京会场由中国人民大学应用统计科学研究中心和中国人民大学统计学院主办；上海会场由华东师范大学资源与环境科学学院、金融与统计学院主办，Mango Solutions咨询公司提供赞助。对R语言在中国的推广做出了杰出贡献的吴喜之教授和谢益辉博士远在美国为本次会议发来祝贺；中国R语言的领军人物、华东师范大学的汤银才老师也应邀参加会议并做了专题报告。两个会场的会议就R语言在众多领域中的应用展开了广泛的交流和讨论，为R语言在中国的进一步应用和推广开辟了更宽阔的道路。
+<!--more-->
 
 # 会议主题
 
@@ -36,7 +41,8 @@ slug: 2nd-chinese-r-conference-summary
 
 用R对填写了年龄信息的参会人员数据进行汇总，得到年龄分布的结果如下：
 
-<pre class="brush: r">Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
+```r
+Min. 1st Qu.  Median    Mean 3rd Qu.    Max.
   18.00   22.00   24.00   24.93   27.00   45.00
 
   18 | 00
@@ -52,7 +58,8 @@ slug: 2nd-chinese-r-conference-summary
   38 | 00
   40 |
   42 |
-  44 | 0</pre>
+  44 | 0
+```
 
 从中不难看出R的使用者大体是年轻一代，同时也不乏年龄稍大、经验丰富的一批人。
 
@@ -105,9 +112,9 @@ slug: 2nd-chinese-r-conference-summary
 # 会议展望
 
   1. 在谢益辉博士的建议下，未来的R语言会议可能会邀请到R核心团队（R Development Core Team）成员来中国进行演讲和交流，并希望以暑期学校的形式让更多的人参与到R语言的学习中；
-  2. 在第一届R语言会议的基础上，本届会议采取了北京和上海两个分会场的形式举办，今后有望将会议的地点转向国内更多的地区，使得R语言的影响力进一步扩大；
-  3. 为加强大家的交流与合作，平时可以在全国各地举办更多的小型讨论会，巩固和丰富年度R语言会议的成果；
-  4. 更多，请畅所欲言……
+  1. 在第一届R语言会议的基础上，本届会议采取了北京和上海两个分会场的形式举办，今后有望将会议的地点转向国内更多的地区，使得R语言的影响力进一步扩大；
+  1. 为加强大家的交流与合作，平时可以在全国各地举办更多的小型讨论会，巩固和丰富年度R语言会议的成果；
+  1. 更多，请畅所欲言……
 
 # 会议报道
 
@@ -138,7 +145,8 @@ slug: 2nd-chinese-r-conference-summary
 
 本次会议所用的胸牌完全是用R代码生成的，其中用到了rimage这个包（现在CRAN上不再提供rimage包的Windows版本，如果想要测试代码的话可以到[这里](https://cos.name/wp-content/uploads/2009/12/rimage.zip)下载一个较早版本的rimage包）：
 
-<pre class="brush: r">#字符画
+```r
+#字符画
 library(rimage)
 plot.ch = function(ch, pch = "#", cex = 3) {
     height = 15 * cex
@@ -199,4 +207,5 @@ contact = data.frame(name = c("张三", "李四"), unit = c("张家村",
 # 写入PDF文件
 pdf(width = 3.5, height = 4.5, family = "GB1")
 draw.card(contact)
-dev.off()</pre>
+dev.off()
+```
