@@ -83,8 +83,8 @@ slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
 
 # 参考文献
 
-[1] Christopher M Bishop, <em>Pattern recognition and machine learning</em>, 2006
+[1] Christopher M Bishop, Pattern recognition and machine learning, 2006
 
-[2] Carl Edward Rasmussen, <em>Gaussian processes for machine learning</em>, 2006
+[2] Carl Edward Rasmussen, Gaussian processes for machine learning, 2006
 
-[3] Radford M Neal, <em>Bayesian Learning for Neural Networks</em>, 1994
+[3] Radford M Neal, Bayesian Learning for Neural Networks, 1994
