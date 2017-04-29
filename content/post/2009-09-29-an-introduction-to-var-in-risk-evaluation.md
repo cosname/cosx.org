@@ -69,4 +69,4 @@ Artzner(1999)指出好的风险度量方法需满足一致性，满足一致性�
 
 (4)满足单调性。
 
-`﻿$\forall X,Y$`满足`$\rho(X)\leq \rho(Y)$`，如果 `$ X\leq Y $`。
+`$\forall X,Y$`满足`$\rho(X)\leq \rho(Y)$`，如果 `$ X\leq Y $`。
