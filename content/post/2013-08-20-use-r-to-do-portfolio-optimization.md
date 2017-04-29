@@ -127,7 +127,7 @@ Make a plot selection (or 0 to exit):
 8:   Add Sharpe Ratio [Markowitz PF Only]
 ```
 
-![pic1](http://i1.tietuku.com/2013/0817/3/13767107819590.png)
+![1](https://cloud.githubusercontent.com/assets/18478302/25556624/64101902-2d32-11e7-8aa7-a86d26a11038.png)
 
 ```
 Selection: 2
@@ -144,7 +144,7 @@ Make a plot selection (or 0 to exit):
 8:   Add Sharpe Ratio [Markowitz PF Only]
 ```
 
-![pic2](http://i1.tietuku.com/2013/0817/3/13767107819590.png)
+![2](https://cloud.githubusercontent.com/assets/18478302/25556627/69cd045e-2d32-11e7-8760-702972d70372.png)
 
 ```
 Selection: 3
@@ -161,7 +161,7 @@ Make a plot selection (or 0 to exit):
 8:   Add Sharpe Ratio [Markowitz PF Only]
 ```
 
-![pic3](http://i1.tietuku.com/2013/0817/3/13767107819590.png)
+![3](https://cloud.githubusercontent.com/assets/18478302/25556629/6c9a6780-2d32-11e7-9812-6693583e1b58.png)
 
 ```
 Selection: 4
@@ -178,7 +178,7 @@ Make a plot selection (or 0 to exit):
 8:   Add Sharpe Ratio [Markowitz PF Only]
 ```
 
-![pic4](http://i1.tietuku.com/2013/0817/3/13767107819590.png)
+![4](https://cloud.githubusercontent.com/assets/18478302/25556630/6e73deec-2d32-11e7-8407-92cba6db4d87.png)
 
 ```
 Selection: 5
@@ -195,7 +195,7 @@ Make a plot selection (or 0 to exit):
 8:   Add Sharpe Ratio [Markowitz PF Only]
 ```
 
-![pic5](http://i1.tietuku.com/2013/0817/3/13767107839572.png)
+![5](https://cloud.githubusercontent.com/assets/18478302/25556631/6fb507c2-2d32-11e7-9c46-942186ec3b2d.png)
 
 ```
 Selection: 6
@@ -212,7 +212,7 @@ Make a plot selection (or 0 to exit):
 8:   Add Sharpe Ratio [Markowitz PF Only]
 ```
 
-![pic6](http://i1.tietuku.com/2013/0817/3/13767107845933.png)
+![6](https://cloud.githubusercontent.com/assets/18478302/25556632/70f91ff6-2d32-11e7-8250-fa6b5b36825e.png)
 
 ```
 Selection: 7
@@ -229,7 +229,7 @@ Make a plot selection (or 0 to exit):
 8:   Add Sharpe Ratio [Markowitz PF Only]
 ```
 
-![pic7](http://i1.tietuku.com/2013/0817/3/13767107845933.png)
+![7](https://cloud.githubusercontent.com/assets/18478302/25556668/e8d4e23a-2d32-11e7-93e6-dc22a6bf9070.png)
 
 ```
 Selection: 8
@@ -246,7 +246,7 @@ Make a plot selection (or 0 to exit):
 8:   Add Sharpe Ratio [Markowitz PF Only]
 ```
 
-![pic8](http://i1.tietuku.com/2013/0817/3/13767107845933.png)
+![8](https://cloud.githubusercontent.com/assets/18478302/25556669/ea4455ce-2d32-11e7-93de-0930f5617385.png)
 
 注：本文转载自邓一硕博客，原文请[点击此处](http://yishuo.org/r/2013/08/09/use-r-to-do-portfolio-optimization.html)。转载请注明出处。
 
