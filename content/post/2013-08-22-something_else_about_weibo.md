@@ -98,7 +98,7 @@ sort(PR,decreasing=T)[1:10]
 
 设structure vertice与attribute vertice组合的权重分别为`\(\alpha\)`和`\(\beta\)`，满足`\(\alpha+\beta=1\)`，即将pagerank算法中的M矩阵乘以`\(\alpha\)`，将topicmodel得到的topic在doc上的后验分布乘以`\(\beta\)`得到上述矩阵中的`\(P_s\)`矩阵和A矩阵。O分块矩阵为零矩阵，代表topic之间不可相互转移（实际上这个假设略强）。同时，设topic在doc上的后验分布为C（doc-topic矩阵），其每一行和为1，对其列做归一化处理可得到B矩阵。
 
-同时，structure vertice与attribute vertice之间的区别还在于转移概率的不同。这里假设structure->structure的d参数为`\(d\_1\)`，由structure->attribute的d参数为`\(d\_2\)`，为了满足PR值和为1的假设，可以计算得到由attribute->structure的d参数为`\(d_{1}\times\alpha+d_{2}\times\beta\)`；原来的常数列则为前`\(N\_s\)`个分量为`\((1-d_1)/\alpha/{N_s}\)`，后`\(N_a\)`个分量分别为`\((1-d_2)/\beta/{N_a}\)`，`\(N_s\)`与`\(N_a\)`分别表示structure vertice与attribute vertice的个数。
+同时，structure vertice与attribute vertice之间的区别还在于转移概率的不同。这里假设structure->structure的d参数为`\(d_1\)`，由structure->attribute的d参数为`\(d_2\)`，为了满足PR值和为1的假设，可以计算得到由attribute->structure的d参数为`\(d_{1}\times\alpha+d_{2}\times\beta\)`；原来的常数列则为前`\(N_s\)`个分量为`\((1-d_1)/\alpha/{N_s}\)`，后`\(N_a\)`个分量分别为`\((1-d_2)/\beta/{N_a}\)`，`\(N_s\)`与`\(N_a\)`分别表示structure vertice与attribute vertice的个数。
 
 其数学表达式如下：
 
