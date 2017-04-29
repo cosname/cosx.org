@@ -55,7 +55,7 @@ slug: a-statistical-view-of-deep-learning-i-recursive-glms
 |分类的 |多项式     |                                                                                    |多项式逻辑斯蒂`$\frac{\eta_i}{\sum_j \eta_j}$` |SOFTMAX      |
 |计数   |泊松       |`$\log{\mu}$`                                                                         |`$\exp(\nu)$`                                  |             |
 |计数   |泊松       |`$\sqrt(\mu)$`                                                                        |`$\nu^2$`                                      |             |
-|非负的 |伽玛       |倒数$`\frac{1}{\mu}$`                                                                 |`$\frac{1}{\nu}$`                              |             |
+|非负的 |伽玛       |倒数`$\frac{1}{\mu}$`                                                                 |`$\frac{1}{\nu}$`                              |             |
 |稀疏的 |截取回归   |                                                                                    |最大值`$\max(0;\nu)$`                          |纠正线性单位 |
 |顺序   |序数       |                                                                                    |累积的逻辑斯蒂回归                           |             |
 
@@ -99,10 +99,10 @@ slug: a-statistical-view-of-deep-learning-i-recursive-glms
 
 # 参考文献
 
-[1] Christopher M Bishop, *Neural networks for pattern recognition*, , 1995
+[1] Christopher M Bishop, *Neural networks for pattern recognition*, 1995
 
-[2] Peter McCullagh, John A Nelder, *Generalized linear models.*, , 1989
+[2] Peter McCullagh, John A Nelder, *Generalized linear models.*, 1989
 
-[3] Peter J Bickel, Kjell A Doksum, *Mathematical Statistics, volume I*, , 2001
+[3] Peter J Bickel, Kjell A Doksum, *Mathematical Statistics, volume I*, 2001
 
 [4] Leon Bottou, *Stochastic Gradient Descent Tricks*, Neural Networks: Tricks of the Trade, 2012
