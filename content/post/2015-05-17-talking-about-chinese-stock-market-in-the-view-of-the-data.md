@@ -20,17 +20,17 @@ slug: talking-about-chinese-stock-market-in-the-view-of-the-data
 
 <!--more-->
 
-#### 可视化
+# 可视化
 
 How old are you?微软近日发布的[年龄分析网站](http://www.how-old.net/)风靡一时，来看看你是不是长得着急了？用完美颜别忘了看看背后的[黑魔法](http://blog.how-old.net/)。
 
-#### 新书速递
+# 新书速递
 
 Roger Peng的新书，twitter的热门[书籍](https://leanpub.com/rprogramming)。
 
 [Statistics Done Wrong](http://www.statisticsdonewrong.com)一书出版了。
 
-#### 实用技术
+# 实用技术
 
 Kaggler的[福音](http://suanfazu.com/t/kaggle-ji-qi-xue-xi-jing-sai-guan-jun-ji-you-sheng-zhe-de-yuan-dai-ma-hui-zong/230)：秘籍在手，独步武林，谁与争锋？
 
