@@ -10,23 +10,19 @@ categories:
 slug: interview-of-chutingjin
 ---
 
-&nbsp;
+[![SAMSUNG CAMERA PICTURES](https://cos.name/wp-content/uploads/2015/04/褚老师-300x225.jpg)](https://cos.name/wp-content/uploads/2015/04/-e1429669031759.jpg)
 
-<span style="color: #2e1f1f;">[![SAMSUNG CAMERA PICTURES](https://cos.name/wp-content/uploads/2015/04/褚老师-300x225.jpg)](https://cos.name/wp-content/uploads/2015/04/-e1429669031759.jpg)</span>
+【COS编辑部按】
 
-<span style="color: #888888;">【COS编辑部按】</span>
+受访人：褚挺进老师   
 
-<span style="color: #888888;">受访人：褚挺进老师   </span>
+采访人：王小宁
 
-<span style="color: #888888;">采访人：王小宁</span>
+整理：王小宁
 
-<span style="color: #888888;">整理：王小宁</span>
+褚挺进老师现任中国人民大学统计学院讲师, 于2012年获得美国科罗拉多州立大学统计学博士学位。他主要从事空间统计和数据挖掘方法的研究, 已在重要学术期刊上发表多篇论文, 包括统计学顶级期刊The Annals of Statistics和Journal of the Royal Statistical Society, Series B。
 
-&nbsp;
-
-<span style="color: #888888;">褚挺进老师现任中国人民大学统计学院讲师, 于2012年获得美国科罗拉多州立大学统计学博士学位。他主要从事空间统计和数据挖掘方法的研究, 已在重要学术期刊上发表多篇论文, 包括统计学顶级期刊The Annals of Statistics和Journal of the Royal Statistical Society, Series B。</span>
-
-**<span style="color: #2e1f1f;">问：您最初学的数学，为什么在读Ph</span>D转为统计呢？统计学有什么吸引您的地方**？
+**问：您最初学的数学，为什么在读PhD转为统计呢？统计学有什么吸引您的地方**？
 
 褚：我一开始做得是数学，然后感觉自己又解决不了什么巨大的数学问题，所以感觉做偏数据和偏应用的比较好一点。然后大家都说统计是处理数据的科学，所以选择了统计。当然，另外一个原因是那时候学长们都说统计比较容易找工作。统计学吸引我的地方是它的应用价值比数学要强点，统计虽然有一些理论推导但是比数学少多了。
 
