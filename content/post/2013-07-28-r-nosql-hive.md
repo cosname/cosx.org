@@ -16,45 +16,41 @@ slug: r-nosql-hive
 
 **关于作者：**
 
-  * 张丹(Conan), 程序员Java,R,PHP,Javascript
-  * weibo：@Conan_Z
-  * blog: http://blog.fens.me
-  * email: bsspirit@gmail.com
+* 张丹(Conan), 程序员Java,R,PHP,Javascript
+* weibo：@Conan_Z
+* blog: http://blog.fens.me
+* email: bsspirit@gmail.com
 
 **转载请注明：**
   
-[/2013/07/r-nosql-hive/](/2013/07/r-nosql-hive/ "R利剑NoSQL系列文章 之 hive")
+[/2013/07/r-nosql-hive/](/2013/07/r-nosql-hive/ "R利剑NoSQL系列文章之hive")
 
 ![rhive](http://blog.fens.me/wp-content/uploads/2013/07/rhive.png)
 
-**第四篇 R利剑Hive，分为5个章节。**
+**第四篇 R利剑Hive，分为5个章节**
 
-  1. Hive介绍
-  2. Hive安装
-  3. RHive安装
-  4. RHive函数库
-  5. RHive基本使用操作
+1. Hive介绍
+1. Hive安装
+1. RHive安装
+1. RHive函数库
+1. RHive基本使用操作
 
-## 1. Hive介绍
+# 1. Hive介绍
 
-Hive是建立在Hadoop上的数据仓库基础构架。它提供了一系列的工具，可以用来进行数据提取转化加载（ETL），这是一种可以存储、查询和分析存储在 Hadoop 中的大规模数据的机制。Hive 定义了简单的类 SQL 查询语言，称为 HQL，它允许熟悉 SQL 的用户查询数据。同时，这个语言也允许熟悉 MapReduce 开发者的开发自定义的 mapper 和 reducer 来处理内建的 mapper 和 reducer 无法完成的复杂的分析工作。
-  
-<!--more-->
+Hive是建立在Hadoop上的数据仓库基础构架。它提供了一系列的工具，可以用来进行数据提取转化加载（ETL），这是一种可以存储、查询和分析存储在 Hadoop 中的大规模数据的机制。Hive 定义了简单的类 SQL 查询语言，称为 HQL，它允许熟悉 SQL 的用户查询数据。同时，这个语言也允许熟悉 MapReduce 开发者的开发自定义的 mapper 和 reducer 来处理内建的 mapper 和 reducer 无法完成的复杂的分析工作。<!--more-->
 
-
-  
-Hive 没有专门的数据格式。 Hive 可以很好的工作在 Thrift 之上，控制分隔符，也允许用户指定数据格式
+Hive 没有专门的数据格式。 Hive 可以很好的工作在Thrift之上，控制分隔符，也允许用户指定数据格式
 
 上面内容摘自 百度百科(http://baike.baidu.com/view/699292.htm)
 
 hive与关系数据库的区别：
 
-  * 数据存储不同：hive基于hadoop的HDFS，关系数据库则基于本地文件系统
-  * 计算模型不同：hive基于hadoop的mapreduce，关系数据库则基于索引的内存计算模型
-  * 应用场景不同：hive是OLAP数据仓库系统提供海量数据查询的，实时性很差;关系数据库是OLTP事务系统，为实时查询业务服务
-  * 扩展性不同：hive基于hadoop很容易通过分布式增加存储能力和计算能力，关系数据库水平扩展很难，要不断增加单机的性能
+* 数据存储不同：hive基于hadoop的HDFS，关系数据库则基于本地文件系统
+* 计算模型不同：hive基于hadoop的mapreduce，关系数据库则基于索引的内存计算模型
+* 应用场景不同：hive是OLAP数据仓库系统提供海量数据查询的，实时性很差;关系数据库是OLTP事务系统，为实时查询业务服务
+* 扩展性不同：hive基于hadoop很容易通过分布式增加存储能力和计算能力，关系数据库水平扩展很难，要不断增加单机的性能
 
-## 2. Hive安装
+# 2. Hive安装
 
 Hive是基于Hadoop开发的数据仓库产品，所以首先我们要先有Hadoop的环境。
 
@@ -76,12 +72,14 @@ http://archive.apache.org/dist/hive/hive-0.9.0/
   
 启动hiveserver的服务
 
-    ~ nohup hive --service hiveserver  &
-    Starting Hive Thrift Server
-    
+```bash
+~ nohup hive --service hiveserver  &
+Starting Hive Thrift Server
+```
 
 打开hive shell
 
+```bash
     ~ hive shell
     Logging initialized using configuration in file:/home/conan/hadoop/hive-0.9.0/conf/hive-log4j.proper             ties
     Hive history file=/tmp/conan/hive_job_log_conan_201306261459_153868095.txt
@@ -107,37 +105,41 @@ http://archive.apache.org/dist/hive/hive-0.9.0/
     10      ade121@sohu.com 2013-04-23 09:21:24
     11      addde@sohu.com  2013-04-23 09:21:24
     Time taken: 0.469 seconds
-    
+```    
 
-## 3. RHive安装
+# 3. RHive安装
 
 请提前配置好JAVA的环境：
 
+```bash
     ~ java -version
     java version "1.6.0_29"
     Java(TM) SE Runtime Environment (build 1.6.0_29-b11)
     Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02, mixed mode)
-    
+```    
 
 安装R：Ubuntu 12.04，请更新源再下载R2.15.3版本
 
+```bash
     ~ sudo sh -c "echo deb http://mirror.bjtu.edu.cn/cran/bin/linux/ubuntu precise/ >>/etc/apt/sources.list"
     ~ sudo apt-get update
     ~ sudo apt-get install r-base-core=2.15.3-1precise0precise1
-    
+```    
 
 安装R依赖库：rjava
 
+```
     #配置rJava
     ~ sudo R CMD javareconf
     
     #启动R程序
     ~ sudo R
     install.packages("rJava")
-    
+```    
 
 安装RHive
 
+```r
     install.packages("RHive")
     
     library(RHive)
@@ -146,9 +148,9 @@ http://archive.apache.org/dist/hive/hive-0.9.0/
     This is RHive 0.0-7. For overview type ‘?RHive’.
     HIVE_HOME=/home/conan/hadoop/hive-0.9.0
     call rhive.init() because HIVE_HOME is set.
-    
+```    
 
-## 4. RHive函数库
+# 4. RHive函数库
 
     rhive.aggregate        rhive.connect          rhive.hdfs.exists      rhive.mapapply
     rhive.assign           rhive.desc.table       rhive.hdfs.get         rhive.mrapply
@@ -199,8 +201,9 @@ http://archive.apache.org/dist/hive/hive-0.9.0/
     RHive: rhive.close()
     
 
-## 5. RHive基本使用操作
+# 5. RHive基本使用操作
 
+```r
     #初始化
     rhive.init()
     
@@ -308,7 +311,7 @@ Hive操作HDFS
     1abc@163.com2013-04-22 12:21:39
     2dedac@163.com2013-04-22 12:21:39
     3qq8fed@163.com2013-04-22 12:21:39
-    
+```    
 
 **转载请注明：**
   
