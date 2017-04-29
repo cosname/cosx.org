@@ -19,18 +19,15 @@ tags:
 slug: regression-of-large-dataset-in-r
 ---
 
-  * 作者：[Yixuan Qiu](http://statr.me/)
-  * 原文地址：<http://statr.me/2011/10/large-regression/>
-  * 译者：[黄俊文](http://www.fyears.org/)
+* 作者：[Yixuan Qiu](http://statr.me/)
+* 原文地址：<http://statr.me/2011/10/large-regression/>
+* 译者：[黄俊文](http://www.fyears.org/)
 
-众所周知，R 是一个依赖于内存的软件，就是说一般情况下，数据集都会被整个地复制到内存之中再被处理。对于小型或者中型的数据集，这样处理当然没有什么问题。但是对于大型的数据集，例如网上抓取的金融类型时间序列数据或者一些日志数据，这样做就有很多因为内存不足导致的问题了。
-  
-<!--more-->
-
-
-  
+众所周知，R 是一个依赖于内存的软件，就是说一般情况下，数据集都会被整个地复制到内存之中再被处理。对于小型或者中型的数据集，这样处理当然没有什么问题。但是对于大型的数据集，例如网上抓取的金融类型时间序列数据或者一些日志数据，这样做就有很多因为内存不足导致的问题了。<!--more-->
+ 
 这里是一个具体的例子。在 R 中输入如下代码，创建一个叫 x 的矩阵和叫 y 的向量。
 
+```r
     set.seed(123);
     n = 5000000;
     p = 5;
@@ -38,9 +35,11 @@ slug: regression-of-large-dataset-in-r
     x = cbind(1, x);
     bet = c(2, rep(1, p));
     y = c(x %*% bet) + rnorm(n);
+```
 
 如果用内置的 `lm` 函数对 x 和 y 进行回归分析，就有可能出现如下错误（当然，也有可能因为内存足够而运行成功）：
 
+```
     > lm(y ~ 0 + x);
     Error: cannot allocate vector of size 19.1 Mb
     In addition: Warning messages:
@@ -52,6 +51,7 @@ slug: regression-of-large-dataset-in-r
       Reached total allocation of 1956Mb: see help(memory.size)
     4: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
       Reached total allocation of 1956Mb: see help(memory.size)
+```
 
 本文代码运行的电脑的配置是：
 
@@ -65,9 +65,11 @@ R: 2.13.1 32-bit
 
 在 R 中，每一个 numeric 数 占用 8 Bytes，所以可以估算到 x 和 y 只是占用 5000000  _7_ 8 / 1024 ^ 2 Bytes = 267 MB，离运行的电脑的内存 2 GB 差很远。问题在于，运行 `lm()` 函数会生成很多额外的变量塞满内存。比如说拟合值和残差。
 
-如果我们只是关心回归的系数，我们可以直接用矩阵运算来计算 $\hat{\beta}$ ：
+如果我们只是关心回归的系数，我们可以直接用矩阵运算来计算 `$\hat{\beta}$` ：
 
-    beta.hat = solve(t(x) %*% x, t(x) %*% y);
+```r
+beta.hat = solve(t(x) %*% x, t(x) %*% y);
+```
 
 在本文运行的计算机中，这个命令成功执行，而且很快（0.6秒）（我使用了一个优化版本的 Rblas, [下载](https://bitbucket.org/yixuan/cn/downloads/gotoblas2.zip)）。然而，如果样本变得更加大了，这个矩阵运算也会变得不可用。可以估算出，如果样本大小为 2GB / 7 / 8 Bytes = 38347922 ，x 和 y 自己就会占用了全部内存，更不要说其他计算过程中出现的临时变量了。
 
@@ -79,6 +81,7 @@ R 支持很多数据库，其中 [SQLite](http://www.sqlite.org/) 是最轻量�
 
 采用上面的那个例子，我这里说明我们会怎样用数据库和 SQL 语句来对数据集进行回归。首先我们要把数据塞到硬盘上面。
 
+```r
     gc();
     dat = as.data.frame(x);
     rm(x);
@@ -105,25 +108,29 @@ R 支持很多数据库，其中 [SQLite](http://www.sqlite.org/) 是最轻量�
     # Garbage collection
     rm(dat);
     gc();
+```
 
 上述代码有很多 `rm()` 和 `gc()` ，函数，这些函数是用来移除没有用的临时变量和释放内存。当代码运行完毕的时候，你就会发现在你的工作空间中有一个 320M 左右的 `regression.db` 文件。然后就是最重要的一步了：把回归的算法转化为 SQL。
 
 我们有
 
-$$\hat{\beta}=(X’X)^{-1}X’y$$
+`$$\hat{\beta}=(X’X)^{-1}X’y$$`
 
-而且，无论 $n$ 有多大，$X’X$ 和 $X’y$ 的大小总是 $(p+1)*(p+1)$ 。如果变量不是很多，R 处理矩阵逆和矩阵乘法还是很轻松的，所以我们的主要目标是用 SQL 来计算 $X’X$ 和 $X’y$ 。
+而且，无论 `$n$` 有多大，`$X’X$` 和 `$X’y$` 的大小总是 `$(p+1)*(p+1)$` 。如果变量不是很多，R 处理矩阵逆和矩阵乘法还是很轻松的，所以我们的主要目标是用 SQL 来计算 `$X’X$` 和 `$X’y$` 。
 
-由于 $X=(x\_0,x\_1,…,x_p)$，所以 $X’X$ 可以表达为：
+由于 `$X=(x_0,x_1,…,x_p)$`，所以 `$X’X$` 可以表达为：
 
-$$%  \left(\begin{array}{cccc}\mathbf{x\_{0}'x\_{0}} & \mathbf{x\_{0}'x\_{1}} & \ldots & \mathbf{x\_{0}'x\_{p}}\\\mathbf{x\_{1}'x\_{0}} & \mathbf{x\_{1}'x\_{1}} & \ldots & \mathbf{x\_{1}'x\_{p}}\\\vdots & \vdots & \ddots & \vdots\\\mathbf{x\_{p}'x\_{0}} & \mathbf{x\_{p}'x\_{1}} & \ldots & \mathbf{x\_{p}'x\_{p}}\end{array}\right) %$$
+`$$%  \left(\begin{array}{cccc}\mathbf{x_{0}'x_{0}} & \mathbf{x_{0}'x_{1}} & \ldots & \mathbf{x_{0}'x_{p}}\\\mathbf{x_{1}'x_{0}} & \mathbf{x_{1}'x_{1}} & \ldots & \mathbf{x_{1}'x_{p}}\\\vdots & \vdots & \ddots & \vdots\\\mathbf{x_{p}'x_{0}} & \mathbf{x_{p}'x_{1}} & \ldots & \mathbf{x_{p}'x_{p}}\end{array}\right) %$$`
 
 而每一个矩阵元素都可以用 SQL 来计算，比如说：
 
-    select sum(x0 * x0), sum(x0 * x1) from regdata;
+```
+select sum(x0 * x0), sum(x0 * x1) from regdata;
+```
 
 我们可以用 R 来生成 SQL 语句，然后把语句发送到 SQLite ：
 
+```r
     m = dbDriver("SQLite");
     dbfile = "regression.db";
     con = dbConnect(m, dbname = dbfile);
@@ -151,11 +158,13 @@ $$%  \left(\begin{array}{cccc}\mathbf{x\_{0}'x\_{0}} & \mathbf{x\_{0}'x\_{1}} & 
     # Compute beta hat in R
     beta.hat.DB = solve(txx, txy);
     t6 = Sys.time();
-
+```
 我们可以检查这个结果：
 
+```r
     > max(abs(beta.hat - beta.hat.DB));
     [1] 3.028688e-13
+```
 
 可以看出差别是舍入误差导致的。
 
