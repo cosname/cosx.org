@@ -55,7 +55,7 @@ slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
 
 这时的记忆机制已经完全转换为非参数型的了，也就是说通过核矩阵K我们现在显示地刻画了所有样本点。核方法的优势就在于我们能更容易的获得具有我们期望性质的函数，例如具有p阶可微的函数或者周期函数，而这些性质是不太可能通过随机逼近得到的。测试数据`$x^{\star}$`的预测值也可以用一些不一样的方式写出：
 
-`$$f =\mathbf{w}_{MAP}^\top \phi(\mathbf{x}^\*) = \boldsymbol{\alpha}^\top \boldsymbol{\Phi}(\mathbf{x}) \phi(\mathbf{x}^\*) = \sum_n \alpha_n k(\mathbf{x^\*, x}_n) = k(\mathbf{X, x}^\*)^\top (\mathbf{K} + \lambda\mathbf{I})^{-1} \mathbf{y}$$`
+`$$f =\mathbf{w}_{MAP}^\top \phi(\mathbf{x}^*) = \boldsymbol{\alpha}^\top \boldsymbol{\Phi}(\mathbf{x}) \phi(\mathbf{x}^*) = \sum_n \alpha_n k(\mathbf{x^*, x}_n) = k(\mathbf{X, x}^*)^\top (\mathbf{K} + \lambda\mathbf{I})^{-1} \mathbf{y}$$`
   
 最后一个等式是由表示定理（[Representer theorem](http://en.wikipedia.org/wiki/Representer_theorem)）得出的解。这让我们从另一个视角定义这个问题，即直接对我们想要估计的函数加惩罚项，并限定该函数属于希尔伯特空间中（一个直接的非参数视角）：
 
@@ -69,11 +69,11 @@ slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
   
 我们现在我们可以采用一些在条件高斯分布下常用的做法来得到任意预测样本x的均值与方差：
 
-`$$p(f^\* | \mathbf{X, y, x^\*}) = \mathcal{N}(\mathbb{E}[f^\*] ,\mathbb{V}[f^\*])$$`
+`$$p(f^* | \mathbf{X, y, x^*}) = \mathcal{N}(\mathbb{E}[f^*] ,\mathbb{V}[f^*])$$`
 
-`$$\mathbb{E}[f^\*] = k(\mathbf{X, x}^\*)^\top (\mathbf{K} + \lambda \mathbf{I})^{-1} \mathbf{y}$$`
+`$$\mathbb{E}[f^*] = k(\mathbf{X, x}^*)^\top (\mathbf{K} + \lambda \mathbf{I})^{-1} \mathbf{y}$$`
 
-`$$\mathbb{V}[f^\*] =k(\mathbf{x^\*, x^\*}) -k(\mathbf{X, x}^\*)^\top (\mathbf{K} + \lambda \mathbf{I})^{-1}k(\mathbf{X, x}^*)$$`
+`$$\mathbb{V}[f^*] =k(\mathbf{x^*, x^*}) -k(\mathbf{X, x}^*)^\top (\mathbf{K} + \lambda \mathbf{I})^{-1}k(\mathbf{X, x}^*)$$`
   
 # 总结
 
