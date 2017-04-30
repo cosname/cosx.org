@@ -14,6 +14,7 @@ slug: something_about_weibo
 微博，这一新生代大规模杀伤性社交武器近年来迅速在国内走红，其来势之汹，范围之广，威力之猛当不可小觑。通过它，我们不仅能第一时间八卦到身边柴米油盐、鸡毛蒜皮的小事儿，而诸如家国天下、业内前沿的大事记也难以逃过公众的法眼。
 
 这样迅捷高效的信息传播是怎样做到的呢？相信每一个微博控都能如数家珍的道出自己心仪的几位微博名人们，不妨就从那些微博名人们入手，看看这些名人们身边的故事。
+<!--more-->
 
 # 1、信息采集
 
@@ -24,13 +25,13 @@ slug: something_about_weibo
 ```r
 library(XML)
 # get data from web
-webpage &lt;-'http://data.weibo.com/top/influence/famous?class=29&type=day'
-tables &lt;- readHTMLTable(webpage,stringsAsFactors = FALSE)
+webpage <-'http://data.weibo.com/top/influence/famous?class=29&type=day'
+tables <- readHTMLTable(webpage,stringsAsFactors = FALSE)
 sports=tables[[1]][,c(1,2,3,6)]
 names(sports)=c("rank","name","influence","description")
 ```
 
-这样，我们就获取了这些名人们的微博大名。  <!--more-->
+这样，我们就获取了这些名人们的微博大名。  
   
 接下来，顺藤摸瓜，根据李舰老师Rweibo包（0.2-7版本）的`web.search.user()`以及`web.user_timeline()`函数就能得到他们的微博文本信息，这里考虑到可能会抓取失败的情形（教练我想要个高级权限T^T），得到如下代码(name为之前得到各个)：
 
@@ -41,7 +42,7 @@ res_719=list()
 for (i in 1:length(name))
 {
  show(i)
- res_719[[i]] &lt;- tryCatch({
+ res_719[[i]] <- tryCatch({
  user=web.search.user(name[i])
  a=web.user_timeline(roauth, uid=user$uid, pages = 1:3)
  }, error = function(err) {
@@ -83,7 +84,7 @@ stopwords=readLines("your_home_path/CH_stopwords.txt")
 接下来对微博内容去除链接、标点、数字、人名、停词等噪音信息，并以每位名人的逐条微博为单位保存。同时鉴于汉语的表意单元只保存了双字节及以上的汉语词汇，处理代码如下：
 
 ```r
-Clean.Weibo.list&lt;-function(x)
+Clean.Weibo.list <- function(x)
 {
  weibos=c(x$Weibo,x$Forward)
  weibos=weibos[!is.na(weibos)]
@@ -94,7 +95,7 @@ Clean.Weibo.list&lt;-function(x)
  seg_weibo=segmentCN(weibos1)
  seg_weibo1=lapply(seg_weibo,
  function(x)
- {y=setdiff(x,stopwords);z=y[y!=""&nchar(y)&gt;=2];
+ {y=setdiff(x,stopwords);z=y[y!=""&nchar(y)>=2];
  if (length(z)==0) return(0)
  return(table(z))})
  ll=sapply(seg_weibo1,function(x) return(all(x==0)))
@@ -116,7 +117,7 @@ name=name[ll]
 Weibo.sample <- function(x)
 {
  l=length(x)
- if (l&lt;10) return(x)
+ if (l<10) return(x)
  ind=sample(1:l,floor(l/3))
  return(x[ind])
 }
@@ -170,9 +171,9 @@ dtm <- as.DocumentTermMatrix(weibo_mat_long,weighting =weightTf,
  control = list(stemming = TRUE, stopwords = TRUE, removePunctuation = TRUE,tolower=T))
 
 term_tfidf <- tapply(dtm$v/row_sums(dtm)[dtm$i], dtm$j, mean) *
- log2(nDocs(dtm)/col_sums(dtm &gt; 0))
+ log2(nDocs(dtm)/col_sums(dtm > 0))
 
-ll=term_tfidf&gt;=quantile(term_tfidf,0.01)
+ll=term_tfidf>=quantile(term_tfidf,0.01)
 dtm <- dtm[,ll]
 dtm <- dtm[row_sums(dtm) > 0,]
 ```
@@ -262,7 +263,7 @@ Clean.Weibo <-function(x)
  seg_weibo=unlist(segmentCN(weibos1))
  seg_weibo1=setdiff(seg_weibo,stopwords)
  seg_weibo2=gsub('[[:punct:][:digit:]a-zA-Z\\-]+',"",seg_weibo1)
- seg_weibo2=seg_weibo2[seg_weibo2!=""&nchar(seg_weibo2)&gt;=2]
+ seg_weibo2=seg_weibo2[seg_weibo2!=""&nchar(seg_weibo2)>=2]
  if (length(seg_weibo2)==0) return(0)
  return(table(seg_weibo2))
 }
@@ -295,7 +296,7 @@ colnames(dist1)=c("电子","娱乐","城管","地震","新闻","机场","广告"
  "体育","政治","时尚","文化","法律","情感","青春","家庭")
 
 k=2
-while(max(sapply(rect.hclust(hc, k=k),length))&gt;60)
+while(max(sapply(rect.hclust(hc, k=k),length))>60)
  {k=k+1;
  show(k)}
 
@@ -315,7 +316,7 @@ p=p + theme(axis.text.y = element_text(size=rel(1.5),colour="black"),
  hjust = 0.5, vjust = 0.5))
 
 p
-hc_name=lapply(hc_res,function(x) {return(name[x])})
+hc_name =lapply(hc_res,function(x) {return(name[x])})
 ```
 
 ![](http://farm3.staticflickr.com/2813/9361857131_0ddd755308.jpg)
