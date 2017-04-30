@@ -236,15 +236,15 @@ mu.muce
 
 ## 4.2 均值的函数
 
-下面我们使用delta method 得到后验方差的MC标准误。`$ u\_{i} $` 代表某个参数单批次的一阶矩的估计值,`$\overline u $`代表某个参数所有批次均值的均值，它们都是针对一阶矩而言。对于二阶矩而言样有`$ v\_{i} $`和`$ \overline v $` 。令`$ u=E(\overline u)$`, `$ v=E(\overline v) $` 。采用delta方法将非线性函数线性化：
+下面我们使用delta method 得到后验方差的MC标准误。`$ u_{i} $` 代表某个参数单批次的一阶矩的估计值,`$\overline u $`代表某个参数所有批次均值的均值，它们都是针对一阶矩而言。对于二阶矩而言样有`$ v_{i} $`和`$ \overline v $` 。令`$ u=E(\overline u)$`, `$ v=E(\overline v) $` 。采用delta方法将非线性函数线性化：
 
 `$$g(u,v)=v-u^{2}$$`
   
 `$$\Delta g(u,v)=\Delta v-2u\Delta u $$`
 
-也就是说，`$ g(\overline u, \overline v)-g(u,v) $` 与 `$ (\overline v – v)- 2u(\overline u – u) $`具有相同的渐进正态分布。而 `$ (\overline v – v)- 2u(\overline u – u) $`的方差是`$ (v\_{i} -v)-2u(u\_{i} -u) $`方差的1/nbatch倍。这样MCSE可以这样计算：
+也就是说，`$ g(\overline u, \overline v)-g(u,v) $` 与 `$ (\overline v – v)- 2u(\overline u – u) $`具有相同的渐进正态分布。而 `$ (\overline v – v)- 2u(\overline u – u) $`的方差是`$ (v_{i} -v)-2u(u_{i} -u) $`方差的1/nbatch倍。这样MCSE可以这样计算：
 
-`$$\frac{1}{n\_{batch}} \displaystyle \sum\_{i=1}^{n\_{batch}}[(v\_{i} – \overline v)-2\overline u  
+`$$\frac{1}{n_{batch}} \displaystyle \sum_{i=1}^{n_{batch}}[(v_{i} – \overline v)-2\overline u  
 (u_{i} – \overline u)]^2 $$`
 
 我们将以上的计算过程用程序实现:
