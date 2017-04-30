@@ -242,7 +242,7 @@ rhive.query("select * from o_account");
 #关闭连接
 rhive.close()
 [1] TRUE
-```r
+```
 
 创建临时表
 
