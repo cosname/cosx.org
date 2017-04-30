@@ -12,19 +12,15 @@ tags:
 slug: data-sciencs-series-interview-of-scott-iverson
 ---
 
-<span style="color: #888888;">【COS编辑部按】受访人：Scott Iverson。 </span>
+【COS编辑部按】受访人：Scott Iverson。
 
-<span style="color: #888888;"> 采访人：林荟，女，杜邦先锋总部市场部统计师，毕业于 Iowa State University 统计系，生年不详卒年尚无法预测。</span>
+采访人：林荟，女，杜邦先锋总部市场部统计师，毕业于 Iowa State University 统计系，生年不详卒年尚无法预测。
 
-<span style="color: #888888;">译者：[<span style="color: #888888;">黄俊文</span>](http://www.fyears.org)（主要），[<span style="color: #888888;">潘岚锋</span>](https://cos.name/author/lanfeng/)（勘误），[<span style="color: #888888;">高涛</span>](http://www.gaotao.name/cn/)（勘误）。</span>
+译者：[黄俊文](http://www.fyears.org)（主要），[潘岚锋](https://cos.name/author/lanfeng/)（勘误），[高涛](http://www.gaotao.name/cn/)（勘误）。
 
-<span style="color: #888888;">简介：Scott Iverson，Sr. Marketing manager, Marketing information, DuPont Pioneer (HQ), 在先锋从事数据分析工作 27 年，现任杜邦先锋全球总部市场信息高级经理。</span>
+简介：Scott Iverson，Sr. Marketing manager, Marketing information, DuPont Pioneer (HQ), 在先锋从事数据分析工作 27 年，现任杜邦先锋全球总部市场信息高级经理。
 
-<span style="color: #888888;">[<span style="color: #888888;">杜邦先锋国际良种公司</span>](www.pioneer.com)：杜邦先锋公司是世界 500 强企业，美国杜邦公司旗下的全资子公司，成立于 1926 年，是世界上最早的玉米种业公司，总部设在美国爱荷华州。</span>
-
-&nbsp;
-
-<!--more-->
+[杜邦先锋国际良种公司](www.pioneer.com)：杜邦先锋公司是世界 500 强企业，美国杜邦公司旗下的全资子公司，成立于 1926 年，是世界上最早的玉米种业公司，总部设在美国爱荷华州。<!--more-->
 
 **Hui**: 你吃牛排吗？
   
