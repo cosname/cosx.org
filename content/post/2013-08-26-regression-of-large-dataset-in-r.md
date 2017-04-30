@@ -28,29 +28,29 @@ slug: regression-of-large-dataset-in-r
 这里是一个具体的例子。在 R 中输入如下代码，创建一个叫 x 的矩阵和叫 y 的向量。
 
 ```r
-    set.seed(123);
-    n = 5000000;
-    p = 5;
-    x = matrix(rnorm(n * p), n, p);
-    x = cbind(1, x);
-    bet = c(2, rep(1, p));
-    y = c(x %*% bet) + rnorm(n);
+set.seed(123);
+n = 5000000;
+p = 5;
+x = matrix(rnorm(n * p), n, p);
+x = cbind(1, x);
+bet = c(2, rep(1, p));
+y = c(x %*% bet) + rnorm(n);
 ```
 
 如果用内置的 `lm` 函数对 x 和 y 进行回归分析，就有可能出现如下错误（当然，也有可能因为内存足够而运行成功）：
 
 ```
-    > lm(y ~ 0 + x);
-    Error: cannot allocate vector of size 19.1 Mb
-    In addition: Warning messages:
-    1: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
-      Reached total allocation of 1956Mb: see help(memory.size)
-    2: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
-      Reached total allocation of 1956Mb: see help(memory.size)
-    3: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
-      Reached total allocation of 1956Mb: see help(memory.size)
-    4: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
-      Reached total allocation of 1956Mb: see help(memory.size)
+> lm(y ~ 0 + x);
+Error: cannot allocate vector of size 19.1 Mb
+In addition: Warning messages:
+1: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
+  Reached total allocation of 1956Mb: see help(memory.size)
+2: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
+  Reached total allocation of 1956Mb: see help(memory.size)
+3: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
+  Reached total allocation of 1956Mb: see help(memory.size)
+4: In lm.fit(x, y, offset = offset, singular.ok = singular.ok, ...) :
+  Reached total allocation of 1956Mb: see help(memory.size)
 ```
 
 本文代码运行的电脑的配置是：
@@ -82,32 +82,32 @@ R 支持很多数据库，其中 [SQLite](http://www.sqlite.org/) 是最轻量�
 采用上面的那个例子，我这里说明我们会怎样用数据库和 SQL 语句来对数据集进行回归。首先我们要把数据塞到硬盘上面。
 
 ```r
-    gc();
-    dat = as.data.frame(x);
-    rm(x);
-    gc();
-    dat$y = y;
-    rm(y);
-    gc();
-    colnames(dat) = c(paste("x", 0:p, sep = ""), "y");
-    gc();
-    
-    # Will also load the DBI package
-    library(RSQLite);
-    # Using the SQLite database driver
-    m = dbDriver("SQLite");
-    # The name of the database file
-    dbfile = "regression.db";
-    # Create a connection to the database
-    con = dbConnect(m, dbname = dbfile);
-    # Write the data in R into database
-    if(dbExistsTable(con, "regdata")) dbRemoveTable(con, "regdata");
-    dbWriteTable(con, "regdata", dat, row.names = FALSE);
-    # Close the connection
-    dbDisconnect(con);
-    # Garbage collection
-    rm(dat);
-    gc();
+gc();
+dat = as.data.frame(x);
+rm(x);
+gc();
+dat$y = y;
+rm(y);
+gc();
+colnames(dat) = c(paste("x", 0:p, sep = ""), "y");
+gc();
+
+# Will also load the DBI package
+library(RSQLite);
+# Using the SQLite database driver
+m = dbDriver("SQLite");
+# The name of the database file
+dbfile = "regression.db";
+# Create a connection to the database
+con = dbConnect(m, dbname = dbfile);
+# Write the data in R into database
+if(dbExistsTable(con, "regdata")) dbRemoveTable(con, "regdata");
+dbWriteTable(con, "regdata", dat, row.names = FALSE);
+# Close the connection
+dbDisconnect(con);
+# Garbage collection
+rm(dat);
+gc();
 ```
 
 上述代码有很多 `rm()` 和 `gc()` ，函数，这些函数是用来移除没有用的临时变量和释放内存。当代码运行完毕的时候，你就会发现在你的工作空间中有一个 320M 左右的 `regression.db` 文件。然后就是最重要的一步了：把回归的算法转化为 SQL。
@@ -131,39 +131,39 @@ select sum(x0 * x0), sum(x0 * x1) from regdata;
 我们可以用 R 来生成 SQL 语句，然后把语句发送到 SQLite ：
 
 ```r
-    m = dbDriver("SQLite");
-    dbfile = "regression.db";
-    con = dbConnect(m, dbname = dbfile);
-    # Get variable names
-    vars = dbListFields(con, "regdata");
-    xnames = vars[-length(vars)];
-    yname = vars[length(vars)];
-    # Generate SQL statements to compute X'X
-    mult = outer(xnames, xnames, paste, sep = "*");
-    lower.index = lower.tri(mult, TRUE);
-    mult.lower = mult[lower.index];
-    sql = paste("sum(", mult.lower, ")", sep = "", collapse = ",");
-    sql = sprintf("select %s from regdata", sql);
-    txx.lower = unlist(dbGetQuery(con, sql), use.names = FALSE);
-    txx = matrix(0, p + 1, p + 1);
-    txx[lower.index] = txx.lower;
-    txx = t(txx);
-    txx[lower.index] = txx.lower;
-    # Generate SQL statements to compute X'Y
-    sql = paste(xnames, yname, sep = "*");
-    sql = paste("sum(", sql, ")", sep = "", collapse = ",");
-    sql = sprintf("select %s from regdata", sql);
-    txy = unlist(dbGetQuery(con, sql), use.names = FALSE);
-    txy = matrix(txy, p + 1);
-    # Compute beta hat in R
-    beta.hat.DB = solve(txx, txy);
-    t6 = Sys.time();
+m = dbDriver("SQLite");
+dbfile = "regression.db";
+con = dbConnect(m, dbname = dbfile);
+# Get variable names
+vars = dbListFields(con, "regdata");
+xnames = vars[-length(vars)];
+yname = vars[length(vars)];
+# Generate SQL statements to compute X'X
+mult = outer(xnames, xnames, paste, sep = "*");
+lower.index = lower.tri(mult, TRUE);
+mult.lower = mult[lower.index];
+sql = paste("sum(", mult.lower, ")", sep = "", collapse = ",");
+sql = sprintf("select %s from regdata", sql);
+txx.lower = unlist(dbGetQuery(con, sql), use.names = FALSE);
+txx = matrix(0, p + 1, p + 1);
+txx[lower.index] = txx.lower;
+txx = t(txx);
+txx[lower.index] = txx.lower;
+# Generate SQL statements to compute X'Y
+sql = paste(xnames, yname, sep = "*");
+sql = paste("sum(", sql, ")", sep = "", collapse = ",");
+sql = sprintf("select %s from regdata", sql);
+txy = unlist(dbGetQuery(con, sql), use.names = FALSE);
+txy = matrix(txy, p + 1);
+# Compute beta hat in R
+beta.hat.DB = solve(txx, txy);
+t6 = Sys.time();
 ```
 我们可以检查这个结果：
 
 ```r
-    > max(abs(beta.hat - beta.hat.DB));
-    [1] 3.028688e-13
+> max(abs(beta.hat - beta.hat.DB));
+[1] 3.028688e-13
 ```
 
 可以看出差别是舍入误差导致的。
