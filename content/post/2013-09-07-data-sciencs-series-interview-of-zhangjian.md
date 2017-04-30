@@ -47,6 +47,6 @@ slug: data-sciencs-series-interview-of-zhangjian
 
 五成熟， 我觉得最好.
 
-欢迎大家加我的[Linkedin](http://www.linkedin.com/profile/view?id=57165019)或者email 我 <fdujian at hotmail.com>
+欢迎大家加我的[Linkedin](http://www.linkedin.com/profile/view?id=57165019)或者email我：fdujian at hotmail.com
 
 谢谢！
