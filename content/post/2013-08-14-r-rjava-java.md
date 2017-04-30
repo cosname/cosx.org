@@ -62,55 +62,55 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 **系统环境：**
 
 ```
-  * Linux Ubuntu 12.04.2 LTS 64bit server
-  * R version 3.0.1 64bit
-  * Java (Oracle SUN) 1.6.0_29 64bit Server VM
+* Linux Ubuntu 12.04.2 LTS 64bit server
+* R version 3.0.1 64bit
+* Java (Oracle SUN) 1.6.0_29 64bit Server VM
 
-    
-    ~ uname -a
-    Linux conan 3.5.0-23-generic #35~precise1-Ubuntu SMP Fri Jan 25 17:13:26 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
-    
-    ~ cat /etc/issue
-    Ubuntu 12.04.2 LTS \n \l
-    
-    ~ R --version
-    R version 3.0.1 (2013-05-16) -- "Good Sport"
-    Copyright (C) 2013 The R Foundation for Statistical Computing
-    Platform: x86_64-pc-linux-gnu (64-bit)
-    
-    R is free software and comes with ABSOLUTELY NO WARRANTY.
-    You are welcome to redistribute it under the terms of the
-    GNU General Public License versions 2 or 3.
-    For more information about these matters see
-    http://www.gnu.org/licenses/.
-    
-    ~ java -version
-    java version "1.6.0_29"
-    Java(TM) SE Runtime Environment (build 1.6.0_29-b11)
-    Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02, mixed mode)
+
+~ uname -a
+Linux conan 3.5.0-23-generic #35~precise1-Ubuntu SMP Fri Jan 25 17:13:26 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+
+~ cat /etc/issue
+Ubuntu 12.04.2 LTS \n \l
+
+~ R --version
+R version 3.0.1 (2013-05-16) -- "Good Sport"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under the terms of the
+GNU General Public License versions 2 or 3.
+For more information about these matters see
+http://www.gnu.org/licenses/.
+
+~ java -version
+java version "1.6.0_29"
+Java(TM) SE Runtime Environment (build 1.6.0_29-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 20.4-b02, mixed mode)
 ```    
 
 **rJava安装**
 
 ```    
-    #配置rJava环境
-    ~ sudo R CMD javareconf
-    
-    #启动R
-    ~ sudo R
-    > install.packages("rJava")
-    installing via 'install.libs.R' to /usr/local/lib/R/site-library/rJava
-    ** R
-    ** inst
-    ** preparing package for lazy loading
-    ** help
-    *** installing help indices
-    ** building package indices
-    ** testing if installed package can be loaded
-    * DONE (rJava)
-    
-    The downloaded source packages are in
-            ‘/tmp/RtmpiZyCE7/downloaded_packages’
+#配置rJava环境
+~ sudo R CMD javareconf
+
+#启动R
+~ sudo R
+> install.packages("rJava")
+installing via 'install.libs.R' to /usr/local/lib/R/site-library/rJava
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (rJava)
+
+The downloaded source packages are in
+        ‘/tmp/RtmpiZyCE7/downloaded_packages’
 ```    
 
 # 3. rJava实现R调用Java
@@ -118,56 +118,56 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 在R环境中，使用rJava包编程
 
 ```r    
-    #加载rJava包
-    > library(rJava)
-    > search()
-     [1] ".GlobalEnv"        "package:rJava"     "package:stats"
-     [4] "package:graphics"  "package:grDevices" "package:utils"
-     [7] "package:datasets"  "package:methods"   "Autoloads"
-    [10] "package:base"
-    
-    #启动JVM
-    > .jinit()
-    
-    #声明并赋值到字符串
-    > s  s
-    [1] "Java-Object{Hello World!}"
-    
-    #查看字符串长度
-    > .jcall(s,"I","length")
-    [1] 12
-    
-    #索引World的位置
-    > .jcall(s,"I","indexOf","World")
-    [1] 6
-    
-    #查看concat的方法声明
-    > .jmethods(s,"concat")
-    [1] "public java.lang.String java.lang.String.concat(java.lang.String)"
-    
-    #使用concat方法连接字符串
-    > .jcall(s,"Ljava/lang/String;","concat",s)
-    [1] "Hello World!Hello World!"
-    
-    #打印字符串对象
-    > print(s)
-    [1] "Java-Object{Hello World!}"
-    
-    #打印字符串值
-    > .jstrVal(s)
-    [1] "Hello World!"
+#加载rJava包
+> library(rJava)
+> search()
+ [1] ".GlobalEnv"        "package:rJava"     "package:stats"
+ [4] "package:graphics"  "package:grDevices" "package:utils"
+ [7] "package:datasets"  "package:methods"   "Autoloads"
+[10] "package:base"
+
+#启动JVM
+> .jinit()
+
+#声明并赋值到字符串
+> s  s
+[1] "Java-Object{Hello World!}"
+
+#查看字符串长度
+> .jcall(s,"I","length")
+[1] 12
+
+#索引World的位置
+> .jcall(s,"I","indexOf","World")
+[1] 6
+
+#查看concat的方法声明
+> .jmethods(s,"concat")
+[1] "public java.lang.String java.lang.String.concat(java.lang.String)"
+
+#使用concat方法连接字符串
+> .jcall(s,"Ljava/lang/String;","concat",s)
+[1] "Hello World!Hello World!"
+
+#打印字符串对象
+> print(s)
+[1] "Java-Object{Hello World!}"
+
+#打印字符串值
+> .jstrVal(s)
+[1] "Hello World!"
  ```   
 
 **rJava优化过的方法调用，用$来调用方法**
 
 ```r
-    #同.jcall(s,"I","length")
-    > s$length()
-    [1] 12
-    
-    #同.jcall(s,"I","indexOf","World")
-    > s$indexOf("World")
-    [1] 6
+#同.jcall(s,"I","length")
+> s$length()
+[1] 12
+
+#同.jcall(s,"I","indexOf","World")
+> s$indexOf("World")
+[1] 6
 ```    
 
 # 4. rJava(JRI)实现Java调用R (win7)
@@ -183,66 +183,66 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 **设置环境变量**
 
 ```bash
-    PATH: C:\Program Files\R\R-3.0.1\bin\x64;D:\toolkit\java\jdk6\bin;;D:\toolkit\java\jdk6\jre\bin\server
-    JAVA_HOME: D:\toolkit\java\jdk6
-    CLASSPATH: C:\Program Files\R\R-3.0.1\library\rJava\jri
+PATH: C:\Program Files\R\R-3.0.1\bin\x64;D:\toolkit\java\jdk6\bin;;D:\toolkit\java\jdk6\jre\bin\server
+JAVA_HOME: D:\toolkit\java\jdk6
+CLASSPATH: C:\Program Files\R\R-3.0.1\library\rJava\jri
 ```    
 
 **在R中安装rJava**
 
 ```r    
-    > install.packages("rJava")
-    
-    #加载rJava
-    > library(rJava)
-    > .jinit()
-    
-    #R调用Java变量测试
-    > s  s
-    [1] "Java-Object{Hello World!}"
+> install.packages("rJava")
+
+#加载rJava
+> library(rJava)
+> .jinit()
+
+#R调用Java变量测试
+> s  s
+[1] "Java-Object{Hello World!}"
 ```    
 
 **启动Eclipse编写程序**
-  
+
 ![rjava2](http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png)
 
 ```java
-    package org.conan.r.rjava;
-    
-    import org.rosuda.JRI.Rengine;
-    
-    public class DemoRJava {
-    
-        public static void main(String[] args) {
-            DemoRJava demo = new DemoRJava();
-            demo.callRJava();
-        }
-    
-        public void callRJava() {
-            Rengine re = new Rengine(new String[] { "--vanilla" }, false, null);
-            if (!re.waitForR()) {
-                System.out.println("Cannot load R");
-                return;
-            }
-    
-            //打印变量
-            String version = re.eval("R.version.string").asString();
-            System.out.println(version);
-    
-            //循环打印数组
-            double[] arr = re.eval("rnorm(10)").asDoubleArray();
-            for (double a : arr) {
-                System.out.print(a + ",");
-            }
-            re.end();
-        }
+package org.conan.r.rjava;
+
+import org.rosuda.JRI.Rengine;
+
+public class DemoRJava {
+
+    public static void main(String[] args) {
+        DemoRJava demo = new DemoRJava();
+        demo.callRJava();
     }
+
+    public void callRJava() {
+        Rengine re = new Rengine(new String[] { "--vanilla" }, false, null);
+        if (!re.waitForR()) {
+            System.out.println("Cannot load R");
+            return;
+        }
+
+        //打印变量
+        String version = re.eval("R.version.string").asString();
+        System.out.println(version);
+
+        //循环打印数组
+        double[] arr = re.eval("rnorm(10)").asDoubleArray();
+        for (double a : arr) {
+            System.out.print(a + ",");
+        }
+        re.end();
+    }
+}
 ```    
 
 **在Eclipse启动设置VM参数：**
 
 ```
-    -Djava.library.path="C:\Program Files\R\R-3.0.1\library\rJava\jri\x64"
+-Djava.library.path="C:\Program Files\R\R-3.0.1\library\rJava\jri\x64"
 ```
 
 ![rjava](http://blog.fens.me/wp-content/uploads/2013/08/rjava.png)
@@ -250,8 +250,8 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 **运行结果：**
 
 ```   
-    R version 3.0.1 (2013-05-16)
-    0.04051018703700011,-0.3321596519938258,0.45642459001166913,-1.1907153494936031,1.5872266854172385,1.3639721994863943,-0.6309712627586983,-1.5226698569087498,-1.0416402147174952,0.4864034017637044
+R version 3.0.1 (2013-05-16)
+0.04051018703700011,-0.3321596519938258,0.45642459001166913,-1.1907153494936031,1.5872266854172385,1.3639721994863943,-0.6309712627586983,-1.5226698569087498,-1.0416402147174952,0.4864034017637044
 ```    
 
 **打包DemoRJava.jar**
@@ -263,24 +263,24 @@ rJava还提供了Java调用R的功能，是通过JRI(Java/R Interface)实现的�
 新建目录DemoRJava，上传DemoRJava.jar到DemoRJava
 
 ```bash
-    ~ mkdir /home/conan/R/DemoRJava
-    ~ cd /home/conan/R/DemoRJava
-    ~ ls -l
-    -rw-r--r-- 1 conan conan 1328 Aug  8  2013 DemoRJava.jar
+~ mkdir /home/conan/R/DemoRJava
+~ cd /home/conan/R/DemoRJava
+~ ls -l
+-rw-r--r-- 1 conan conan 1328 Aug  8  2013 DemoRJava.jar
 ```    
 
 **运行Jar包**
 
 ```bash
-    ~ export R_HOME=/usr/lib/R
-    ~ java -Djava.library.path=/usr/local/lib/R/site-library/rJava/jri -cp /usr/local/lib/R/site-library/rJava/jri/JRI.jar:/home/conan/R/DemoRJava/DemoRJava.jar org.conan.r.rjava.DemoRJava
+~ export R_HOME=/usr/lib/R
+~ java -Djava.library.path=/usr/local/lib/R/site-library/rJava/jri -cp /usr/local/lib/R/site-library/rJava/jri/JRI.jar:/home/conan/R/DemoRJava/DemoRJava.jar org.conan.r.rjava.DemoRJava
 ```    
 
 **运行结果**
 
 ```   
-    R version 3.0.1 (2013-05-16)
-    0.6374494596732511,1.3413824702002808,0.04573045670001342,-0.6885617932810327,0.14970067632722675,-0.3989493870007832,-0.6148250252955993,0.40132038323714453,-0.5385260423222166,0.3459850956295771
+R version 3.0.1 (2013-05-16)
+0.6374494596732511,1.3413824702002808,0.04573045670001342,-0.6885617932810327,0.14970067632722675,-0.3989493870007832,-0.6148250252955993,0.40132038323714453,-0.5385260423222166,0.3459850956295771
 ```
 
 我们完成了，R和Java的互调。包括了R通过rJava调用Java，Java通过JRI调用R。并演示了win和linux中的使用方法。
