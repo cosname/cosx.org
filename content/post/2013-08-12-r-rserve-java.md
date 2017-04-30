@@ -55,74 +55,74 @@ Linux Ubuntu 12.04.2 LTS 64bit server
 R 3.0.1 64bit
 
 ```bash    
-    ~ uname -a
-    Linux conan 3.5.0-23-generic #35~precise1-Ubuntu SMP Fri Jan 25 17:13:26 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
-    
-    ~ cat /etc/issue
-    Ubuntu 12.04.2 LTS \n \l
-    
-    ~ R --version
-    R version 3.0.1 (2013-05-16) -- "Good Sport"
-    Copyright (C) 2013 The R Foundation for Statistical Computing
-    Platform: x86_64-pc-linux-gnu (64-bit)
-    
-    R is free software and comes with ABSOLUTELY NO WARRANTY.
-    You are welcome to redistribute it under the terms of the
-    GNU General Public License versions 2 or 3.
-    For more information about these matters see
-    http://www.gnu.org/licenses/.
+~ uname -a
+Linux conan 3.5.0-23-generic #35~precise1-Ubuntu SMP Fri Jan 25 17:13:26 UTC 2013 x86_64 x86_64 x86_64 GNU/Linux
+
+~ cat /etc/issue
+Ubuntu 12.04.2 LTS \n \l
+
+~ R --version
+R version 3.0.1 (2013-05-16) -- "Good Sport"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under the terms of the
+GNU General Public License versions 2 or 3.
+For more information about these matters see
+http://www.gnu.org/licenses/.
 ```    
 
 **Rserve安装**
 
 ```    
-    #建议使用root权限安装
-    ~ sudo R
-    
-    > install.packages("Rserve")
-    installing via 'install.libs.R' to /usr/local/lib/R/site-library/Rserve
-    ** R
-    ** inst
-    ** preparing package for lazy loading
-    ** help
-    *** installing help indices
-    ** building package indices
-    ** testing if installed package can be loaded
-    * DONE (Rserve)
+#建议使用root权限安装
+~ sudo R
+
+> install.packages("Rserve")
+installing via 'install.libs.R' to /usr/local/lib/R/site-library/Rserve
+** R
+** inst
+** preparing package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded
+* DONE (Rserve)
 ```   
 
 **启动Rserve**
 
 ```    
-    ~ R CMD Rserve
-    
-    R version 3.0.1 (2013-05-16) -- "Good Sport"
-    Copyright (C) 2013 The R Foundation for Statistical Computing
-    Platform: x86_64-pc-linux-gnu (64-bit)
-    
-    R is free software and comes with ABSOLUTELY NO WARRANTY.
-    You are welcome to redistribute it under certain conditions.
-    Type 'license()' or 'licence()' for distribution details.
-    
-      Natural language support but running in an English locale
-    
-    R is a collaborative project with many contributors.
-    Type 'contributors()' for more information and
-    'citation()' on how to cite R or R packages in publications.
-    
-    Type 'demo()' for some demos, 'help()' for on-line help, or
-    'help.start()' for an HTML browser interface to help.
-    Type 'q()' to quit R.
-    
-    Rserv started in daemon mode.
-    
-    #查看进程
-    ~ ps -aux|grep Rserve
-    conan     7142  0.0  1.2 116296 25240 ?        Ss   09:13   0:00 /usr/lib/R/bin/Rserve
-    
-    #查看端口
-    ~ netstat -nltp|grep Rserve
-    tcp        0      0 127.0.0.1:6311          0.0.0.0:*               LISTEN      7142/Rserve
+~ R CMD Rserve
+
+R version 3.0.1 (2013-05-16) -- "Good Sport"
+Copyright (C) 2013 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+Rserv started in daemon mode.
+
+#查看进程
+~ ps -aux|grep Rserve
+conan     7142  0.0  1.2 116296 25240 ?        Ss   09:13   0:00 /usr/lib/R/bin/Rserve
+
+#查看端口
+~ netstat -nltp|grep Rserve
+tcp        0      0 127.0.0.1:6311          0.0.0.0:*               LISTEN      7142/Rserve
 ```    
 
 这时Rserve已经启动，端口是6311。接下来，我们来简单地用一下。
@@ -162,40 +162,40 @@ R 3.0.1 64bit
 
 * 4、Java编程实现
 
-```java    
+    ```java    
     package org.conan.r.rserve;
-    
+
     import org.rosuda.REngine.REXP;
     import org.rosuda.REngine.REXPMismatchException;
     import org.rosuda.REngine.Rserve.RConnection;
     import org.rosuda.REngine.Rserve.RserveException;
-    
+
     public class Demo1 {
-    
+
         public static void main(String[] args) throws RserveException, REXPMismatchException {
             Demo1 demo = new Demo1();
             demo.callRserve();
         }
-    
+
         public void callRserve() throws RserveException, REXPMismatchException {
             RConnection c = new RConnection("192.168.1.201");
             REXP x = c.eval("R.version.string");
             System.out.println(x.asString());//打印变量x
-    
+
             double[] arr = c.eval("rnorm(10)").asDoubles();
             for (double a : arr) {//循环打印变量arr
                 System.out.print(a + ",");
             }
         }
     }
-```    
+    ```    
 
 * 5、运行结果
 
-```r   
+    ```r   
     R version 3.0.1 (2013-05-16)
     1.7695224124757984,-0.29753038160770323,0.26596993631142246,1.4027325257239547,-0.30663565983302676,-0.17594309812158912,0.10071253841443684,0.9365455161259986,0.11272119436439701,0.5766373030674361
-```
+    ```
 
 通过Rserve非常简单地实现了，Java和R的通信。
   
