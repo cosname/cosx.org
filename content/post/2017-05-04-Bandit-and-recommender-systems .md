@@ -111,8 +111,9 @@ UCB算法全称是Upper Confidence Bound(置信区间上界)，它的算法步�
 
 1. 初始化：先对每一个臂都试一遍
 2. 按照如下公式计算每个臂的分数，然后选择分数最大的臂作为选择：
+
 	![](https://dn-shimo-image.qbox.me/TC8SxR8bpWYe7MjQ/image.png!thumbnail)
-3. 观察选择结果，更新t和Tjt。其中加号前面是这个臂到目前的收益均值，后面的叫做bonus，本质上是均值的标准差，t是目前的试验次数，Tjt是这个臂被试次数。
+3. 观察选择结果，更新t和`$T_{jt}$`。其中加号前面是这个臂到目前的收益均值，后面的叫做bonus，本质上是均值的标准差，t是目前的试验次数，Tjt是这个臂被试次数。
 
 这个公式反映一个特点：均值越大，标准差越小，被选中的概率会越来越大，同时哪些被选次数较少的臂也会得到试验机会。
 
@@ -175,18 +176,18 @@ LinUCB基本算法描述如下：
 
 1. 设定一个参数`$\alpha$`，这个参数决定了我们Explore的程度
 2. 开始试验迭代
-3. 获取每一个arm的特征向量`$x_a,t$`
+3. 获取每一个arm的特征向量`$x_{a,t}$`
 4. 开始计算每一个arm的预估回报及其置信区间
 5. 如果arm还从没有被试验过，那么：
-6. 用单位矩阵初始化Aa
-7. 用0向量初始化ba，
-8. 处理完没被试验过的arm
-9. 计算线性参数`
-10. 用\theta和特征向量xa,t计算预估回报, 同时加上置信区间宽度
-11. 处理完每一个arm
-12. 选择第10步中最大值对应的arm，观察真实的回报rt
-13. 更新Aat
-14. 更新bat
+6. 用单位矩阵初始化`$A_a$`
+7. 用0向量初始化`$b_a$`，
+8. 处理完没被试验过的`$a_{rm}$`
+9. 计算线性参数`$\theta$`
+10. 用`$\theta$`和特征向量`$x_{a,t}$`计算预估回报, 同时加上置信区间宽度
+11. 处理完每一个`$a_rm$`
+12. 选择第10步中最大值对应的`$a_{rm}$`，观察真实的回报`$r_t$`
+13. 更新`$A_{at}$`
+14. 更新`$b_{at}$`
 15. 算法结束
 
 注意到上面的第4步，给特征矩阵加了一个单位矩阵，这就是岭回归（ridge regression），岭回归主要用于当样本数小于特征数时，对回归参数进行修正^[https://en.wikipedia.org/wiki/Tikhonov_regularization ]。
@@ -414,17 +415,3 @@ Exploit-Explore这一对矛盾一直客观存在，bandit算法是公认的一�
 3. 深度思考，这样才不会做出脑残的产品，产品不会早早夭折，才有可能让Explore机制有用武之地。
 
 # 参考文献
-
-[1] https://en.wikipedia.org/wiki/Multi-armed_bandit
-[2] http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter6_Priorities/Chapter6.ipynb#
-[3] https://en.wikipedia.org/wiki/Thompson_sampling
-[4] http://hunch.net/~coms-4771/lecture20.pdf
-[5] https://gist.github.com/anonymous/211b599b7bef958e50af
-[6] http://www.research.rutgers.edu/~lihong/pub/Li10Contextual.pdf
-[7] 《计算广告：互联网商业变现的市场与技术》p253, 刘鹏，王超著
-[8] https://en.wikipedia.org/wiki/Tikhonov_regularization
-[9] https://github.com/Fengrui/HybridLinUCB-python/blob/master/policy_hybrid.py
-[10] http://www.gatsby.ucl.ac.uk/~chuwei/paper/isp781-chu.pdf
-[11] http://arxiv.org/abs/1401.8257
-[12] http://arxiv.org/abs/1502.03473
-[13] https://github.com/qw2ky/CoLinUCB_Revised/blob/master/COFIBA.py
