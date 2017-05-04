@@ -5,7 +5,7 @@ date: '2017-05-04'
 tags: [推荐系统]
 slug: Bandit-and-recommender-systems
 ---
-^[注]本文首发于《程序员》杂志
+注:本文首发于《程序员》杂志
 
 # 0.导语
 
@@ -21,7 +21,7 @@ slug: Bandit-and-recommender-systems
 
 ![](https://dn-shimo-image.qbox.me/2bUHX2SBO88rm28U/image.png!thumbnail)
 
-bandit算法来源于历史悠久的赌博学，它要解决的问题是这样的^[1]：
+bandit算法来源于历史悠久的赌博学，它要解决的问题是这样的^[https://en.wikipedia.org/wiki/Multi-armed_bandit]：
 
 一个赌徒，要去摇老虎机，走进赌场一看，一排老虎机，外表一模一样，但是每个老虎机吐钱的概率可不一样，他不知道每个老虎机吐钱的概率分布是什么，那么每次该选择哪个老虎机可以做到最大化收益呢？这就是多臂赌博机问题(Multi-armed bandit problem, K-armed bandit problem, MAB)。
 
@@ -66,7 +66,7 @@ bandit算法来源于历史悠久的赌博学，它要解决的问题是这样�
 
 而我说：算法要是无憾，那应该是过拟合了。
 
-所以说：怎么衡量不同bandit算法在解决多臂问题上的效果？首先介绍一个概念，叫做累积遗憾(regret)^[2]：
+所以说：怎么衡量不同bandit算法在解决多臂问题上的效果？首先介绍一个概念，叫做累积遗憾(regret)^[http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter6_Priorities/Chapter6.ipynb#]：
 
 ![](https://dn-shimo-image.qbox.me/CdG11r5oZEQ3xDyQ/image.png!thumbnail)
 
@@ -84,7 +84,7 @@ wB(i)是第i次试验时被选中臂的期望收益， w*是所有臂中的最�
 
 ### Thompson sampling算法
 
-thompson  sampling算法简单实用，因为它只有一行代码就可以实现^[3]。简单介绍一下它的原理，要点如下：
+thompson  sampling算法简单实用，因为它只有一行代码就可以实现^[https://en.wikipedia.org/wiki/Thompson_sampling ]。简单介绍一下它的原理，要点如下：
 
 1. 假设每个臂是否产生收益，其背后有一个概率分布，产生收益的概率为p。
 2. 我们不断地试验，去估计出一个置信度较高的“概率p的概率分布”就能近似解决这个问题了。
@@ -105,7 +105,7 @@ trials += 1
 
 ### UCB算法
 
-UCB算法全称是Upper Confidence Bound(置信区间上界)，它的算法步骤如下^[4]：
+UCB算法全称是Upper Confidence Bound(置信区间上界)，它的算法步骤如下^[http://hunch.net/~coms-4771/lecture20.pdf ]：
 
 1. 初始化：先对每一个臂都试一遍
 2. 按照如下公式计算每个臂的分数，然后选择分数最大的臂作为选择：
@@ -128,7 +128,7 @@ UCB算法全称是Upper Confidence Bound(置信区间上界)，它的算法步�
 
 最朴素的bandit算法就是：先随机试若干次，计算每个臂的平均收益，一直选均值最大那个臂。这个算法是人类在实际中最常采用的，不可否认，它还是比随机乱猜要好。
 
-以上五个算法，我们用10000次模拟试验的方式对比了其效果如图，实验代码来源^[5]：
+以上五个算法，我们用10000次模拟试验的方式对比了其效果如图，实验代码来源^[https://gist.github.com/anonymous/211b599b7bef958e50af ]：
 
 ![](https://dn-shimo-image.qbox.me/cSjOYaxmbz4ufGb3/simulation.png!thumbnail)
 
@@ -153,7 +153,7 @@ UCB解决Multi-armed bandit问题的思路是：用置信区间。置信区间�
 
 ## 2.2 UCB算法加入特征信息
 
-Yahoo!的科学家们在2010年发表了一篇论文^[6]，给UCB引入了特征信息，同时还把改造后的UCB算法用在了Yahoo!的新闻推荐中，算法名叫LinUCB，刘鹏博士在《计算广告》一书中也有介绍LinUCB在计算广告中的应用^[7]。
+Yahoo!的科学家们在2010年发表了一篇论文^[http://www.research.rutgers.edu/~lihong/pub/Li10Contextual.pdf ]，给UCB引入了特征信息，同时还把改造后的UCB算法用在了Yahoo!的新闻推荐中，算法名叫LinUCB，刘鹏博士在《计算广告》一书中也有介绍LinUCB在计算广告中的应用^[《计算广告：互联网商业变现的市场与技术》p253, 刘鹏，王超著]。
 
 ![](https://dn-shimo-image.qbox.me/l8WKUvxeMKw1TRzX/image.png!thumbnail)
 
@@ -186,15 +186,15 @@ LinUCB基本算法描述如下：
 14. 更新bat
 15. 算法结束
 
-注意到上面的第4步，给特征矩阵加了一个单位矩阵，这就是岭回归（ridge regression），岭回归主要用于当样本数小于特征数时，对回归参数进行修正^[8]。
+注意到上面的第4步，给特征矩阵加了一个单位矩阵，这就是岭回归（ridge regression），岭回归主要用于当样本数小于特征数时，对回归参数进行修正^[https://en.wikipedia.org/wiki/Tikhonov_regularization ]。
 对于加了特征的bandit问题，正符合这个特点：试验次数（样本）少于特征数。
 
 每一次观察真实回报之后，要更新的不止是岭回归参数，还有每个arm的回报向量ba。
 
 ## 2.3 详解LinUCB的实现
 
-根据论文给出的算法描述，其实很好写出LinUCB的代码[9]，麻烦的只是构建特征。
-
+根据论文给出的算法描述，其实很好写出LinUCB的代码^[https://github.com/Fengrui/HybridLinUCB-python/blob/master/policy_hybrid.py ]，麻烦的只是构建特征。
+ 
 代码如下，一些必要的注释说明已经写在代码中。
 
 ```
@@ -302,7 +302,7 @@ LinUCB算法有一个很重要的步骤，就是给User和Item构建特征，也
 
 然后，用投射后的80多维特征对用户聚类，得到5个类簇，文章页同样聚类成5个簇，再加上常数1，用户和文章各自被表示成6维向量。
 
-Yahoo!的科学家们之所以选定为6维，因为数据表明它的效果最好[10]，并且这大大降低了计算复杂度和存储空间。
+Yahoo!的科学家们之所以选定为6维，因为数据表明它的效果最好^[http://www.gatsby.ucl.ac.uk/~chuwei/paper/isp781-chu.pdf ]，并且这大大降低了计算复杂度和存储空间。
 
 我们实际上可以考虑三类特征：U（用户），A（广告或文章），C（所在页面的一些信息）。
 
@@ -325,7 +325,7 @@ Yahoo!的科学家们之所以选定为6维，因为数据表明它的效果最�
 
 做Explore的方法有很多，bandit算法是其中的一种流派。前面也介绍过几种bandit算法，基本上就是估计置信区间的做法，然后按照置信区间的上界来进行推荐，以UCB,LinUCB为代表。
 
-作为要寻找诗和远方的bandit浪漫派算法，能不能和协同过滤这种正统算法结合起来呢？事实上已经有人这么尝试过了，叫做COFIBA算法，具体在题目为Collaborative Filtering Bandits[11]和Online Clustering of Bandits[12]）的两篇文章中有详细的描述，它就是bandit和协同过滤的结合算法，两篇文章的区别是后者只对用户聚类（即只考虑了User-based的协同过滤），而前者采用了协同聚类（co-clustering，可以理解为item-based和user-based两种协同方式在同时进行），后者是前者的一个特殊情况。下面详细介绍一下这种结合算法。
+作为要寻找诗和远方的bandit浪漫派算法，能不能和协同过滤这种正统算法结合起来呢？事实上已经有人这么尝试过了，叫做COFIBA算法，具体在题目为Collaborative Filtering Bandits^[http://arxiv.org/abs/1401.8257 ]和Online Clustering of Bandits^[http://arxiv.org/abs/1502.03473 ]）的两篇文章中有详细的描述，它就是bandit和协同过滤的结合算法，两篇文章的区别是后者只对用户聚类（即只考虑了User-based的协同过滤），而前者采用了协同聚类（co-clustering，可以理解为item-based和user-based两种协同方式在同时进行），后者是前者的一个特殊情况。下面详细介绍一下这种结合算法。
 
 ## 3.2 bandit结合协同过滤
 
@@ -344,7 +344,7 @@ Yahoo!的科学家们之所以选定为6维，因为数据表明它的效果最�
 
 ## 3.3 COFIBA算法
 
-基于这些思想，有人提出了算法COFIBA（读作coffee bar）[13]，简要描述如下：
+基于这些思想，有人提出了算法COFIBA（读作coffee bar）^[https://github.com/qw2ky/CoLinUCB_Revised/blob/master/COFIBA.py ]，简要描述如下：
 
 在时刻t，用户来访问推荐系统，推荐系统需要从已有的候选池子中挑一个最佳的物品推荐给他，然后观察他的反馈，用观察到的反馈来更新挑选策略。 这里的每个物品都有一个特征向量，所以这里的bandit算法是context相关的。 这里依然是用岭回归去拟合用户的权重向量，用于预测用户对每个物品的可能反馈（payoff），这一点和linUCB算法是一样的。
 
