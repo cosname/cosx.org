@@ -7,7 +7,7 @@ menu: main
 ---
 
 <style>
-img{
+table img{
 width: 150px;
 height: 200px
 }
