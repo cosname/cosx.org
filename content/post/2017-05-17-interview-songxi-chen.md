@@ -1,6 +1,6 @@
 ---
 title: 陈松蹊老师采访
-author: 陈丽云
+author: COS编辑部
 date: '2017-05-17'
 tags: [cos访谈]
 slug: interview-songxi-chen
