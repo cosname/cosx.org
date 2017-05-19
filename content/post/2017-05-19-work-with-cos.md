@@ -118,9 +118,11 @@ Markdown是个简单的语言，设计的初衷是让使用者专注于内容而
 1. [统计之都的网站](cos.name)
   
 代码部分
-   ```r
-   print("Hello World")
-   ```
+````
+```r
+print("Hello World")
+```
+````
 ```
 
 网站中会自动生成：
