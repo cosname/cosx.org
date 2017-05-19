@@ -87,7 +87,8 @@ description: "描述部分"
 
 编辑和进一步的修改请查看[编辑须知wiki](https://github.com/cosname/cosx.org/wiki/Github%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C)
 
-![default](https://cloud.githubusercontent.com/assets/7221728/26231824/48274d1c-3c84-11e7-9002-2f9a441d5978.png) 
++
++![default](https://cloud.githubusercontent.com/assets/7221728/26232013/947c3d34-3c85-11e7-8436-bb5b1d0e77aa.png)
 
 # <span id="part">我只会git & Github，不会Markdown</span>
 
@@ -118,11 +119,9 @@ Markdown是个简单的语言，设计的初衷是让使用者专注于内容而
 1. [统计之都的网站](cos.name)
   
 代码部分
-````
-```r
-print("Hello World")
-```
-````
+   ```r
+   print("Hello World")
+   ```
 ```
 
 网站中会自动生成：
