@@ -30,8 +30,8 @@ description: "COS主站的文章已经全部迁移至github.com，从今以后�
 
 - [快速入门](#quick)
 - [我什么都会，投稿的格式是什么？](#format)
-- [我只会git & Github，不会Markdown](#web)
-- [懂一些 markdown 不懂 github](#part)
+- [懂一些 markdown 不懂 github](#web)
+- [我只会git & Github，不会Markdown](#part)
 - [Markdown是个啥？](#markdown)
 - [高阶作者与编辑需要注意的格式](#high)
 
