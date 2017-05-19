@@ -74,7 +74,7 @@ description: "描述部分"
 - tags中的标签也就是文章的关键字，方便归档
 - slug与文件名的英文简写一致（不带日期）
 
-![default](https://cloud.githubusercontent.com/assets/7221728/26231824/48274d1c-3c84-11e7-9002-2f9a441d5978.png)
+![default](https://cloud.githubusercontent.com/assets/7221728/26232013/947c3d34-3c85-11e7-8436-bb5b1d0e77aa.png)
 
 # <span id="web">懂一些 markdown 不懂 github</span>
 
