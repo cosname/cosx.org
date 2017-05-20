@@ -35,5 +35,5 @@ menu: main
 
   <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
 
-  <script src="https://raw.githubusercontent.com/Lchiffon/vue-github-api/master/algolia/search.js"></script>
+  <script src="/css/search.js"></script>
 
