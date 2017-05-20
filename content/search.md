@@ -9,8 +9,6 @@ menu: main
  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css" />
 
   <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Lchiffon/vue-github-api/master/algolia/main.css" />
