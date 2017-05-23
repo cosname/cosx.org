@@ -68,8 +68,6 @@ bandit算法来源于历史悠久的赌博学，它要解决的问题是这样�
 
 所以说：怎么衡量不同bandit算法在解决多臂问题上的效果？首先介绍一个概念，叫做累积遗憾(regret)^[http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter6_Priorities/Chapter6.ipynb#]：
 
-`$$=$$`
-
 `\begin{align*}
 R_T & = \sum_{i=1}^T(w_{opt}-w_{B(i)}) \\
 &= T_{w^*}-\sum_{i=1}^Tw_{B(i)} 
@@ -117,7 +115,7 @@ UCB算法全称是Upper Confidence Bound(置信区间上界)，它的算法步�
 1. 初始化：先对每一个臂都试一遍
 2. 按照如下公式计算每个臂的分数，然后选择分数最大的臂作为选择：
 
-`$$\barx_j(t)+\sqrt{\frac{2\ln{t}}{T_{j,t}}}$$`
+`$$\bar{x}_j(t)+\sqrt{\frac{2\ln{t}}{T_{j,t}}}$$`
 
 3. 观察选择结果，更新t和`$T_{jt}$`。其中加号前面是这个臂到目前的收益均值，后面的叫做bonus，本质上是均值的标准差，t是目前的试验次数，`$T_{jt}$`是这个臂被试次数。
 
@@ -165,7 +163,7 @@ UCB解决Multi-armed bandit问题的思路是：用置信区间。置信区间�
 
 Yahoo!的科学家们在2010年发表了一篇论文^[http://www.research.rutgers.edu/~lihong/pub/Li10Contextual.pdf ]，给UCB引入了特征信息，同时还把改造后的UCB算法用在了Yahoo!的新闻推荐中，算法名叫LinUCB，刘鹏博士在《计算广告》一书中也有介绍LinUCB在计算广告中的应用^[《计算广告：互联网商业变现的市场与技术》p253, 刘鹏，王超著]。
 
-![](https://dn-shimo-image.qbox.me/l8WKUvxeMKw1TRzX/image.png!thumbnail)
+![应用LinUCB算法的Yahoo!首页](https://dn-shimo-image.qbox.me/l8WKUvxeMKw1TRzX/image.png!thumbnail)
 
 单纯的老虎机回报情况就是老虎机自己内部决定的，而在广告推荐领域，一个选择的回报，是由User和Item一起决定的，如果我们能用feature来刻画User和Item这一对CP，在每次选择item之前，通过feature预估每一个arm（item）的期望回报及置信区间，选择的收益就可以通过feature泛化到不同的item上。
 
@@ -176,7 +174,7 @@ LinUCB算法做了一个假设：一个Item被选择后推送给一个User，其
 于是试验过程就变成：用User和Item的特征预估回报及其置信区间，选择置信区间上界最大的item推荐，观察回报后更新线性关系的参数，以此达到试验学习的目的。
 LinUCB基本算法描述如下：
 
-![](https://dn-shimo-image.qbox.me/tMRcWGzSOHEC0O7d/image.png!thumbnail)
+![LinUCB算法描述](https://dn-shimo-image.qbox.me/tMRcWGzSOHEC0O7d/image.png!thumbnail)
 
 对照每一行解释一下(编号从1开始)：
 
@@ -365,7 +363,7 @@ Yahoo!的科学家们之所以选定为6维，因为数据表明它的效果最�
 
 整体算法过程如下：
 
-![](https://dn-shimo-image.qbox.me/v3LRSExuxoA9kNQ4/image.png!thumbnail)
+![COFIBA算法描述](https://dn-shimo-image.qbox.me/v3LRSExuxoA9kNQ4/image.png!thumbnail)
 
 核心步骤是，针对某个用户i，在每一轮试验时做以下事情：
 
@@ -382,7 +380,7 @@ Yahoo!的科学家们之所以选定为6维，因为数据表明它的效果最�
 
 如何更新user和item的聚类呢？示意图为：
 
-![](https://dn-shimo-image.qbox.me/ILQ4rKG2lB4p3PWP/image.png!thumbnail)
+![User和Item聚类更新描述](https://dn-shimo-image.qbox.me/ILQ4rKG2lB4p3PWP/image.png!thumbnail)
 
 解释一下这个图。
 
