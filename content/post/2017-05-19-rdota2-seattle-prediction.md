@@ -130,15 +130,15 @@ head(hero.df)
 
 * radiant_win: 天辉是否获胜，1=是, 0=否
 * duration: 比赛总时长，以秒计
-* pre_game_duration: 正式比赛前准备时长
+* pre\_game\_duration: 正式比赛前准备时长
 * start_time: 游戏开始时间，Unix 时间形式，下面例子里有时间转化方法
 * match_id: 比赛 ID
-* match_seq_num: 比赛序列号，该编号按比赛开始时间呈次序排列
-* tower_status_radiant: 天辉防御塔状态，具体参考 [此处](https://dota2api.readthedocs.io/en/latest/responses.html#towers-and-barracks)
-* tower_status_dire: 夜魇防御塔状态，具体同上
-* barracks_status_radiant: 天辉兵营状态，具体参考 [此处](https://dota2api.readthedocs.io/en/latest/responses.html#towers-and-barracks)
-* barracks_status_dire: 夜魇兵营塔状态，具体同上
-* first_blood_time: 一血时间
+* match\_seq\_num: 比赛序列号，该编号按比赛开始时间呈次序排列
+* tower\_status\_radiant: 天辉防御塔状态，具体参考 [此处](https://dota2api.readthedocs.io/en/latest/responses.html#towers-and-barracks)
+* tower\_status\_dire: 夜魇防御塔状态，具体同上
+* barracks\_status\_radiant: 天辉兵营状态，具体参考 [此处](https://dota2api.readthedocs.io/en/latest/responses.html#towers-and-barracks)
+* barracks\_status\_dire: 夜魇兵营塔状态，具体同上
+* first\_blood\_time: 一血时间
 * lobby_type: 游戏大厅，具体参考 [此处](https://dota2api.readthedocs.io/en/latest/responses.html#lobby-type)，常见的有：
     + 0=公共比赛
     + 1=练习，但所有职业比赛都在这一类里
@@ -389,7 +389,7 @@ library(ggplot2)
 ggplot(dt[[1]], aes(duration/60)) + geom_histogram(aes(y = ..density..), binwidth=1)
 ```
 
-![](rdota2_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](https://cloud.githubusercontent.com/assets/11251354/26334810/b27e5260-3f35-11e7-9caa-1e4f243ea7ed.png)
 
 
 ### 数据处理
@@ -514,7 +514,7 @@ plot(roc1, type="o")
 plot(roc2, type="o")
 ```
 
-![](rdota2_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](https://cloud.githubusercontent.com/assets/11251354/26334811/b27fb4de-3f35-11e7-9289-4b0d0ad8b924.png)
 
 右图是随机预测时产生的 ROC。记录点多了之后，左边 ROC 就变为一条曲线，右边 ROC 就是(0, 0)到(1, 1)的对角线。
 如果是完美的模型，那么 ROC 会从(0, 0)直接上升到(1, 0)，再向右至(1, 1)。
@@ -694,11 +694,6 @@ GBM 模型0.65的 AUC，和略高于60%的正确率还是让人满意的。
 但是话又说回来，游戏越复杂，推广起来就越不容易。好了，就写到这里。
 在我写这篇文章的时候，统计之都正在清华举办第十届中国R会。
 通过统计之都，我认识了很多优秀的朋友，在这里也获益良多，所以祝统计之都越办越好，也期待更多人的加入！
-
-
-
-
-
 
 
 
