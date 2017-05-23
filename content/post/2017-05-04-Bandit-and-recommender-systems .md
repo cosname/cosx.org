@@ -76,7 +76,7 @@ bandit算法来源于历史悠久的赌博学，它要解决的问题是这样�
 
 然后，每次选择后，计算和最佳的选择差了多少，然后把差距累加起来就是总的遗憾。
 
-`$w_{B(i)}$``$X_i +Y_i$`是第i次试验时被选中臂的期望收益，`$w^*$`是所有臂中的最佳那个，如果上帝提前告诉你，我们当然每次试验都选它，问题是上帝不告诉你，所以就有了bandit算法，我们就有了这篇文章。
+`$w_{B(i)}$`是第i次试验时被选中臂的期望收益，`$w^*$`是所有臂中的最佳那个，如果上帝提前告诉你，我们当然每次试验都选它，问题是上帝不告诉你，所以就有了bandit算法，我们就有了这篇文章。
 
 这个公式可以用来对比不同bandit算法的效果：对同样的多臂问题，用不同的bandit算法试验相同次数，看看谁的regret增长得慢。
 
@@ -193,7 +193,7 @@ LinUCB基本算法描述如下：
 注意到上面的第4步，给特征矩阵加了一个单位矩阵，这就是岭回归（ridge regression），岭回归主要用于当样本数小于特征数时，对回归参数进行修正^[https://en.wikipedia.org/wiki/Tikhonov_regularization ]。
 对于加了特征的bandit问题，正符合这个特点：试验次数（样本）少于特征数。
 
-每一次观察真实回报之后，要更新的不止是岭回归参数，还有每个arm的回报向量ba。
+每一次观察真实回报之后，要更新的不止是岭回归参数，还有每个arm的回报向量$b_a$。
 
 ## 2.3 详解LinUCB的实现
 
@@ -296,11 +296,11 @@ LinUCB算法有一个很重要的步骤，就是给User和Item构建特征，也
 还要对原始特征降维，以及模型要能刻画一些非线性的关系。
 用Logistic Regression去拟合用户对文章的点击历史，其中的线性回归部分为：
 
-![](https://dn-shimo-image.qbox.me/nYbAY3ThhpgEfFbl/projection_of_user_features.png!thumbnail)
+`$$\phi_u^\mathrm{T}W\phi_a$$`
 
 拟合得到参数矩阵W，可以将原始用户特征（1000多维）投射到文章的原始特征空间（80多维），投射计算方式：
 
-![](https://dn-shimo-image.qbox.me/6YixBh5LuEER9stS/image.png!thumbnail)
+`$$\psi_u\stackrel{def}{=}\phi_u^\mathrm{T}W$$`
 
 这是第一次降维，把原始1000多维降到80多维。
 
