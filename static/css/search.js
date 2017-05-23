@@ -45,7 +45,7 @@ search.addWidget(
       if(!hit.description){
         hit.description = hit.content.slice(0,100).replace("\n","")+'...'
       }
-      hit.date = hit.date.slice(0,9);
+      hit.date = hit.date.slice(0,10);
       // hit.stars = [];
       // for (var i = 1; i <= 5; ++i) {
       //   hit.stars.push(i <= hit.rating);
