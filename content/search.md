@@ -11,10 +11,20 @@ menu: main
     width: 100%;
   }
   .input-group {
-    display: table;
+    display: flex;
+    flex-direction: row;
   }
-  .input-group .form-control, .input-group-addon, .input-group-btn {
-    display: table-cell;
+  .ais-search-box {
+    width: 100%;
+    flex: 1;
+  }
+  .form-control {
+    width: 100%;
+    flex: 1;
+    height: 2rem;
+  }
+  .input-group-btn button {
+    height: 100%;
   }
   </style>
 
