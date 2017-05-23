@@ -23,7 +23,7 @@ search.addWidget(
 var hitTemplate =
   '<div class="hit media">' +
     '<div class="media-body">' +
-      '<a href={{url}}><h4 class="media-heading">{{{title}}} </h4></a>' +
+      '<a href={{url}}><h4 class="media-heading">{{{title}}} </h4></a><br>' +
       '<p class="year">作者: {{{autor}}}</p>' +
       '<p class="year">发布时间: {{{date}}}</p>' +
       '<p class="year">描述: {{{description}}}</p>' +
@@ -45,6 +45,7 @@ search.addWidget(
       if(!hit.description){
         hit.description = hit.content.slice(0,100).replace("\n","")+'...'
       }
+      hit.date = hit.date.slice(0,9);
       // hit.stars = [];
       // for (var i = 1; i <= 5; ++i) {
       //   hit.stars.push(i <= hit.rating);
