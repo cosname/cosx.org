@@ -21,14 +21,19 @@ search.addWidget(
 // );
 
 var hitTemplate =
-  '<div class="hit media">' +
-    '<div class="media-body">' +
-      '<a href={{url}}><h4 class="media-heading">{{{title}}} </h4></a><br>' +
-      '<p class="year">作者: {{{autor}}}</p>' +
-      '<p class="year">发布时间: {{{date}}}</p>' +
-      '<p class="year">描述: {{{description}}}</p>' +
-    '</div>' +
-  '</div>';
+  '<article class="preview">' +
+    '<header>' +
+      '<h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>' +
+      '<div class="post-meta">' +
+        '<span>{{{autor}}}</span> · ' +
+        '<time datetime="{{{date}}}">{{{date}}}</time>' +
+      '</div>' +
+    '</header>' +
+    '<section class="post-excerpt">' +
+      '<p>{{{description}}}</p>' +
+      '<p class="readmore"><a href="{{url}}">阅读全文 <i class="fa fa-angle-double-right" style="padding-left: 5px;"></i></a></p>' +
+    '</section>' +
+  '</article>';
 
 var noResultsTemplate =
   '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
