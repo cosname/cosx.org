@@ -19,7 +19,7 @@ slug: Bandit-and-recommender-systems
 
 当然有！那就是bandit算法！
 
-![](https://dn-shimo-image.qbox.me/2bUHX2SBO88rm28U/image.png!thumbnail)
+![MAB问题](https://dn-shimo-image.qbox.me/2bUHX2SBO88rm28U/image.png!thumbnail)
 
 bandit算法来源于历史悠久的赌博学，它要解决的问题是这样的^[https://en.wikipedia.org/wiki/Multi-armed_bandit]：
 
@@ -68,7 +68,12 @@ bandit算法来源于历史悠久的赌博学，它要解决的问题是这样�
 
 所以说：怎么衡量不同bandit算法在解决多臂问题上的效果？首先介绍一个概念，叫做累积遗憾(regret)^[http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter6_Priorities/Chapter6.ipynb#]：
 
-![](https://dn-shimo-image.qbox.me/CdG11r5oZEQ3xDyQ/image.png!thumbnail)
+`$$=$$`
+
+`\begin{align*}
+R_T & = \sum_{i=1}^T(w_{opt}-w_{B(i)}) \\
+&= T_{w^*}-\sum_{i=1}^Tw_{B(i)} 
+\end{align*}`
 
 这个公式就是计算bandit算法的累积遗憾，解释一下：
 
@@ -112,7 +117,8 @@ UCB算法全称是Upper Confidence Bound(置信区间上界)，它的算法步�
 1. 初始化：先对每一个臂都试一遍
 2. 按照如下公式计算每个臂的分数，然后选择分数最大的臂作为选择：
 
-	![](https://dn-shimo-image.qbox.me/TC8SxR8bpWYe7MjQ/image.png!thumbnail)
+`$$\barx_j(t)+\sqrt{\frac{2\ln{t}}{T_{j,t}}}$$`
+
 3. 观察选择结果，更新t和`$T_{jt}$`。其中加号前面是这个臂到目前的收益均值，后面的叫做bonus，本质上是均值的标准差，t是目前的试验次数，`$T_{jt}$`是这个臂被试次数。
 
 这个公式反映一个特点：均值越大，标准差越小，被选中的概率会越来越大，同时哪些被选次数较少的臂也会得到试验机会。
