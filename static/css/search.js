@@ -9,7 +9,8 @@ var search = instantsearch({
 
 search.addWidget(
   instantsearch.widgets.searchBox({
-    container: '#q'
+    container: '#q',
+    searchOnEnterKeyPressOnly: true
   })
 );
 
