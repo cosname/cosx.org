@@ -4,7 +4,16 @@ var search = instantsearch({
   appId: 'VB9T8VTPNU',
   apiKey: 'cb3265feef0bb0b4bc7f8a4a4986456a',
   indexName: 'cosx.org',
-  urlSync: {}
+  urlSync: {},
+  searchFunction: function(helper) {
+    var searchResults = $('.search-results');
+    if (helper.state.query === '') {
+      searchResults.hide();
+      return;
+    }
+    helper.search();
+    searchResults.show();
+  }
 });
 
 search.addWidget(
