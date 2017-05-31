@@ -1,118 +1,323 @@
 ---
-title: 谷歌为什么创造了幽灵广告？
-author: 陈丽云
-date: '2017-04-27'
-tags: [计算广告]
-slug: google-ghost-ads
+title: 随机数生成及其在统计模拟中的应用
+date: '2017-05-26'
+author: 黄湘云
+tags: [随机数,统计检验，模拟]
+slug: random number generation and its application to statistical simulation
 ---
 
-说起广告大家肯定都知道，可是什么是幽灵广告？其实幽灵广告的英文是ghost ads，源自Google的一篇论文，Johnson, Garrett A., Randall A. Lewis, and Elmar I. Nubbemeyer. "Ghost Ads: Improving the Economics of Measuring Online Ad Effectiveness." (2016)。幽灵广告是他们创造出来用来提高衡量在线广告效果的一套系统。由于实施过程中某些广告会化作用户看不到的幽灵，所以称之为“幽灵广告”系统，专门用于线上广告的随机对照实验。<!--more-->
+# 引言
 
-园主断断续续也写了不少关于线上实验的各种介绍了，可是大多数都没有涉及在线广告。可能大家会想，在线广告和其他的在线实验不都一样么，有什么需要特别注意的？园主在没有听Randall讲这篇论文之前，也是一头雾水地读了一遍，不知所云。听Randall讲完之后，才大概明白个中精妙。直到最近自己开始做跟广告相关的事情了、认认真真把这篇论文翻了出来，重新通读，顺便跟大家分享一下从开始到现在的一些感悟。
+随机数是统计模拟的基础，均匀分布随机数又是其中最重要的，因为由均匀分布随机数可以产生其它分布的随机数，所以好的随机数发生器，其实指的就是一个高质量、高效的均匀分布随机数发生器。高质量就是经得起纯随机性检验，高效就是要产生速度快。话不多说，先加载一些必要的*R*包。
 
-# 在线广告的大背景
-
-在详细介绍幽灵广告之前，园主先大概讲一下在线广告的情况。面向用户的互联网企业盈利的大头无非就是三种：广告，游戏，卖东西（实体产品和服务）。大部分网站对用户是免费使用的，所以赚钱的方式就来自广告，比如谷歌和百度。简单如付费搜索，即相关网站付钱给谷歌，让用户在搜索特定关键字的时候，可以先看到自己的网站。当然，大家更常见的是各种各样的图片和视频，比如在优酷追剧的时候会强制插播一小段广告，或者刷刷微博发现时间流里面夹杂着一些不太熟悉的博主。对于普通用户来说，可能不会想到自己看到的广告背后是多么复杂的一套生态系统。园主也不知道，直到看到了这张图。好吧，原来生态链可以这么冗长。
-
-![在线广告系统生态圈](https://cloud.githubusercontent.com/assets/7221728/25469374/6afd9cde-2b4e-11e7-9dfe-6d1a2429b209.png "在线广告系统生态圈")
-原图：http://earlh.com/blog/2011/07/19/online-display-advertising-ecosystem/
-
-显然这个生态系统中的付钱的广告主们，很想知道他们每一分钱都花在哪里了，花得到底值不值得。毕竟广告届一直流传着一句名言：
-
-> 我知道我的广告费有一半浪费了，但遗憾的是，我不知道是哪一半被浪费了。
-（著名广告大师约翰•沃纳梅克，其实园主也不知道他到底多著名...）
-
-所以在广告这个生态圈里面，衡量广告效果自然也是很重要的一个环节。在线广告的好处就是可以搜集很多用户反馈的数据，从而可以更好的了解广告主的每一分钱到底花在了哪里。所以对于在线广告来说，很重要的一点就是我们可以衡量到底投入产出比如何。
-
-# 在线广告投放系统的历史
-
-在线广告得益于数据追踪的方便性，迭代出前后三代广告投放系统。
-
-## 第一代广告投放系统
-
-基于投放量的系统（CPM，Cost Per Mille，按展现收费）。此类系统类似于买断报纸版面或者电视时段，即在给定广告主的投放要求的情况下，把广告投放到事先约定好的数量，并不考虑用户对于广告的反馈情况。此种情形没有任何投放优化，完全是根据流量直接随机投放。
+```r
+library(ggplot2)
+library(viridisLite)
+library(viridis)
+library(gridExtra)
+library(R.matlab)
+```
 
 
-## 第二代广告投放系统
+# 随机数生成
 
-基于群体行为的优化投放（CPC，Cost Per Click，按点击付费，或者CPA，Cost Per action，按给定用户行为付费）。此类系统会追踪用户的反馈数据（比如是否点击广告，是否购买了广告中的商品），然后把行为数据反馈回投放算法，专门针对反馈效果好的人群进行有效投放。比如我打算投放一个适合80后的护肤品广告，那么此类算法会先随机投放给所有人，然后在他意识到80后反馈比较好的时候，会集中投放给80后的用户，而减少对其他用户的无效投放。
+讲随机数发生器，不得不提及Mersenne Twister（简称MT），它的周期长达`$2^{19937}-1$`， 现在是R 、Octave 和Matlab 等软件（较新版本）的默认随机数发生器。 在产生`$2^{24}$`个随机数的过程中，[MT发生器的C语言64位版本](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt64.html)，我在 Dev-C++ 5.11  上编译运行10秒左右。（由于整个代码比较长就不贴了）
 
-## 第三代广告投放系统
+Matlab新版本内置了早期的随机数发生器（这里以1995年的Matlab随机数发生器为例），两行代码就可以产生`$2^{24}$`个随机数。
 
-基于个体用户的优化投放。此类系统在第二代系统的基础之上，增加了对于每个用户点击和行为历史的考虑，从而实现了更为个性化的投放优化。
+```matlab
+% matlab code % 大约几秒
+rng(1234, 'v5uniform')
+x = rand(1,2^24);
+```
 
-# 在线广告随机控制实验的挑战
+[randtx](https://www.mathworks.com/moler/chapters.html )是实现这个随机数发生器的源代码（打包在 NCM 工具箱内），我把代码略作改动以适应在 Octave 中运行（没有 Matlab 照样玩得转），下面在 Octave 内产生可重复的随机数 `$2^{24}$`  个（1600多万），保存成 mat 格式文件，方便后续检验使用。这一番从 Matlab 到 Octave 的折腾，只是为了避免使用 Matlab 而已，再说 Octave 对 Matlab 的兼容性很高（涉及GUI编程的代码是不兼容的，Octave 貌似只专注计算<http://www.gnu.org/software/octave/about.html>）。
 
-相比于普通的线上产品实验，比如测试一下怎么布局比较好，在线广告的实验就要更为复杂一些。其实核心的问题还是，假如用户看不到我的广告，那他们还会买我的产品吗？有些人自然还是会的，而有些人则不一定。
+```octave
+% octave code
+id = tic % 时间耗费大约一小时
+randtx("state",0)
+x = randtx(1,2^24);
+toc (id)
+save -mat random_number.mat x # 保存随机数到文件
+```
 
-所以问题来了，在线广告的对照组是什么？如果我们考虑第一代广告系统，那么他是垄断投放量的。比如我买了新浪首页的横幅广告，那么每个访问新浪首页的人看到的都是同样的广告。此时广告界常用的是PSA（Public Service Announcements，即公益广告）作为对照组，然后直接对比该商业广告和公益广告效果之间的差别。可是从第二代系统开始，在线广告的投放开始基于各种机器学习的优化算法的，所以并不是每个人看到的都是一样的广告，自然实际看到实验广告的用户和看到公益广告的用户是不同的。从因果推断的角度来讲，这样的非随机的广告投放会导致我们对接受处理的人（即实际看到广告的人）的平均处理效应 (average treatmenet effect on treated，一些文献简写为ATT) 的估计会产生偏差。对细节感兴趣的读者可以阅读 Imbens, Guido W., and Donald B. Rubin. *Causal inference in statistics, social, and biomedical sciences* 一书的23章。
+# 统计检验
 
-下面我们基于第二代利用行为反馈数据优化过的系统，来理解为什么Google这篇论文一开始就说在第二代广告投放系统之上，公益广告并不是一个很好的对照组。
+## 相关性检验
 
-![图1：理想的实验设计](https://cloud.githubusercontent.com/assets/7221728/25469379/6fefcbb8-2b4e-11e7-879b-90d5d925be1e.png "图1：理想的实验设计")
+先来一个简单的，就用 *R* 产生的两个独立同均匀分布样本，调用 **cor.test** 做相关性检验，然后眼球验证一下，随着样本量增大，相关性趋于0。
 
-图一，理想的实验设计。所有人被随机分配到实验组和对照组，然后我们可以观察到哪些实验组里面的人实际看到广告，哪些对照组的人如果放在实验组的话是本应看到广告的。这种理想情况下，绿色部分所示的 实验组和对照组里面看到广告和本应看到广告的人是相同的。
+```r
+set.seed(1234)
+corr <- rep(0,1000)
+for(i in seq(from=1000,to=1000000,by=1000)){  
+	corr[i/1000] <-  cor.test(runif(i,min = 0,max = 1),                            
+		runif(i,min = 0,max = 1))$estimate }
+ggplot(data.frame(x = seq(1000), y = corr), aes(x = x, y = y)) +   
+	geom_hex(show.legend=FALSE)+
+	scale_fill_viridis(direction = -1) + xlab("Sample size *10^3")+ylab("Correlation")
+```
 
-![图2: 意向处理分析](https://cloud.githubusercontent.com/assets/7221728/25469381/7647eca2-2b4e-11e7-951b-d1b513198506.png "图2: 意向处理分析intent-to-treat")
+![fig1](/figures/img1.png)
 
-图2说的是意向处理分析（intent-to-treat，一些文献简写为ITT）的情况。此时，我们知道实验组里面哪些人看到了广告，却不知道对照组里面哪些人本应看得到广告。这是我们只能按照实验设计的初始意向来分析，即回到随机化的初始阶段，把所有实验参与者都包括进来，然后对比所有实验组和对照组的人（不管他们是不是实际看到了广告）。显然，相比于图1的理想情况，意向处理分析由于包括了那些并没有实际看到广告的人，所以会稀释处理效应。意向处理分析的优势在于它给出的是无偏的估计量。
+## 分布检验
 
-此外，在真正的广告投放实践中，由于制约广告效果的往往是广告的预算，所以在初期的时候对于看到广告的人的平均效应（即ATT）的估计会变得额外的有意义。这样的结果可以用来推测在增加预算以后，可以达到什么样的预期效果。而基于意向处理分析（ITT）的估计量由于没有考虑随着广告预算增加实际看到广告的人的比例也会增加的问题，所以没办法给出较好的预测。
+检验产生的随机数是否服从指定的分布：原假设是样本来自指定的分布，计算的P值比较大，就不能拒绝原假设。
 
-![图3: 公益广告作为对照组](https://cloud.githubusercontent.com/assets/7221728/25469382/7b5f3f2e-2b4e-11e7-806d-76a77f2a30da.png "图3: 公益广告作为对照组")
+```r
+ks.test(runif(1000),"punif") # 分布检验
+##
+## One-sample Kolmogorov-Smirnov test
+##
+## data: runif(1000)
+## D = 0.022302, p-value = 0.7025
+## alternative hypothesis: two-sided
+```
 
-图3说的是利用公益广告作为对照组的情况。显然，由于广告投放优化系统的存在，实验组里看到广告的人会和公益广告组里面看到广告的人的分布不一样，所以如果直接对比这两组，我们会得到一个有偏的估计量。
+检验两样本是否来自同一分布：原假设是两样本来自同一分布，计算的P值比较小，就表示两样本不是来自同一分布。
+```r
+ks.test(runif(1000),runif(1000)) # 同分布检验
+##
+## Two-sample Kolmogorov-Smirnov test
+##
+## data: runif(1000) and runif(1000)
+## D = 0.04, p-value = 0.4005
+## alternative hypothesis: two-sided
+```
+从结果来看，*R*内置的随机数发生器通过了检验（嘿嘿，这是肯定的！！）。
 
-所以，幽灵广告的目标就是得到近似于图1的情形，找出一种办法来观察到对照组中本应看到广告的人，从而可以直接估计看到广告的人的平均处理效应（ATT）。
+## 游程检验
 
-# 幽灵广告系统的设计原理
+游程检验对随机数的随机性检验就相对严格，是一种非参数检验。先略作解释，简单起见，我们考虑0-1序列，抛掷均匀的硬币1000次，正面向上记为1，反面向上记为0，这是一个离散的均匀分布，每一次抛掷硬币都无法准确地判断出现的是正面还是反面，若记录的序列中0和1相对集中的出现，显然不是随机，0和1交替出现，呈现周期性也不是随机，除了这两种情况基本就是随机了。游程检验的原假设是序列随机的，当计算的P值比较大时，不能拒绝原假设，即不能否认这个序列是随机的。
 
-如果我们想得到和图1一致的观测结果，那么用户实际看到的广告应该是什么样子的呢？
+```r
+library(tseries)
+x <- sample(c(0,1),1000,replace = TRUE,prob = c(1/2,1/2))
+runs.test(factor(x))
+##
+## Runs Test
+##
+## data: factor(x)
+## Standard Normal = 0.45116, p-value = 0.6519
+## alternative hypothesis: two.sided
+```
 
-![图4: 看到广告的人](https://cloud.githubusercontent.com/assets/7221728/25469387/80006508-2b4e-11e7-81e0-7c192166d360.png "图4: 看到广告的人")
-图4显示了不同情形下人们最终看到的广告。
+我们现在拿 *Matlab* 早期随机数发生器、*R* 内置的Mersenne-Twister发生器和*C*语言实现的Mersenne-Twister发生器比较，程序实现仿[*Matlab*版的游程检验](https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/moler/random.pdf)。
 
-左上角的1）是实验组，有3个人看到的我们关心的Louboutin鞋子广告（灰色虚线框），而剩下三个人看到的是丰田、星巴克和熊猫。
+```r
+# 游程频数直方图
+run_test_fun <- function(x,string,delta) {
+  n <- length(x)
+  len <- diff(c(0,which(x<delta),n+1))-1
+  ggplot(data.frame(x=len[len < 101]),aes(x,fill=..count..)) +
+  	scale_fill_viridis(direction = -1)+
+  	geom_histogram(binwidth = 1,show.legend = FALSE) +
+  	xlab(string)+ylab("")
+}
+set.seed(1234) # R默认采用Mersenne Twister发生器
+r_data <- runif(2^24,0,1); # R内生成均匀分布随机数
+matlabv5_data <- readMat("random_number.mat") # 读取Octave生成的均匀分布随机数
+temp <- read.table(file = "random_number.txt") # 读取C语言生成的均匀分布随机数
+c_data <- c(as.matrix(t(temp)))
+p1 <- run_test_fun(x = r_data,string = "R",delta = 0.01)
+p2 <- run_test_fun(x = matlabv5_data$x,string = "Matlab v5",delta = 0.01)
+p3 <- run_test_fun(x = c_data,string = "C",delta = 0.01)
+grid.arrange(p1, p2, p3, ncol=3)
+```
+![fig2](/figures/img2.png)
 
-右上角的2）是对照组，没有放入鞋子的广告，故而那三个本应看到Louboutin鞋子广告的人看到的是其他三个广告（另外一个鞋子网站、迪斯尼和可口可乐）,但是我们没法区分是哪三个人。
-左下角的3）是有公益广告广告的情形，那三个人看到的是公益广告广告。
-右下角的图4是幽灵广告的情形，和2）的结果一致，但是我们明确知道是哪三个本应看到Louboutin广告的人看到了其他广告。
+在游程长度为27的位置，有一条深沟，这是George Marsaglia 提出的借位相减（subtract-with-borrow）算法的特性，显然不符合随机性的要求，该算法细节参见[Cleve B. Moler的书《Numerical Computing with MATLAB》第9章第267页](https://www.mathworks.com/moler/chapters.html) 。
 
-为了实现4）的结果，幽灵广告系统需要在真正的广告拍卖之外再加一层“模拟拍卖”，并对那三个本应看到Louboutin广告的用户和行为进行一步额外的记录。
-![图5: 幽灵广告系统工作原理](https://cloud.githubusercontent.com/assets/7221728/25469399/8e04b140-2b4e-11e7-82db-7e8fb16ca2a4.png "图5: 幽灵广告系统工作原理")
+# 应用
 
-图5描述了幽灵广告的工作原理。
-左边是实验组的用户，Louboutin广告被放入可以显示的广告集中，然后进入实际的广告拍卖过程，赢取的用户将看到Louboutin广告。
-右边显示的是对照组的情形。蓝色的方框表示，如果我们直接把Louboutin广告从备选集中拿出来，那么所有用户经过拍卖系统看到的都是其他广告，而我们无从得知哪些人本应看到Louboutin广告。所以这里多了一个黄色方框所指示的步骤，对照组用户先进入一个“模拟拍卖”过程，决定到底哪些人应该看到Louboutin广告，哪些人看到其他广告，并记录下来这样的结果。然后我们把Louboutin广告拿出来，让其他广告进入实际的拍卖，并记录最后的结果。
+## 两个均匀分布的统计模拟
 
-所以这里，幽灵广告的原理就是利用提前一步的模拟拍卖，有机会记录哪些人本应看到Louboutin广告，即前面所述的对照组中本应看到广告的人。故而就算第二代系统实现了投放的优化，我们还是有计划来记录那些本应看到广告的人。
+随机变量 `$X_{1},X_{2}\stackrel{iid}{\sim}$`某分布（比如二项分布，泊松分布，正态分布，指数分布，卡方分布，伽马分布），则`$X_{1}+X_{2}$`也服从该分布。常见的均匀分布是否具有这样的可加性？具体地说，就是`$X_{1},X_{2}\stackrel{iid}{\sim}U(0,1)$ ，$X_{1}+X_{2}$` 是否服从`$U(0,2)$` ？ 如果有一台电脑在旁边，我首先想到的就是敲三五行代码，画个散点图、直方图，看图说话。
 
-# 幽灵广告之于三代广告投放系统
+```r
+set.seed(1234)
+x <- runif(10000,min = 0,max = 1)
+y <- runif(10000,min = 0,max = 1)
+z <- x+y
+plot(z) # 散点图
+hist(z) # 直方图
+```
 
-图8总结了幽灵广告在三代广告投放系统上的效果。
+为美观起见，多写了一行，图就可以长下面那样
 
-![图8: 幽灵广告之于三代广告系统](https://cloud.githubusercontent.com/assets/7221728/25469401/909e6040-2b4e-11e7-8b1e-a31de581a5de.png "图8: 幽灵广告之于三代广告系统")
+```r
+ggplot(data.frame(x = seq(10000), y = z), aes(x = x, y = y)) +   
+	geom_hex(show.legend=FALSE)+
+	scale_fill_viridis(direction = -1) + xlab("")+ylab("")
+```
+![fig2](/figures/img3.png)
 
-第一代广告系统：基于投放量的系统不考虑各种基于用户反馈的优化，故而幽灵广告和公益广告会产生一样的效果。
+显然这不是均匀分布，在 `$z=1$` 处，散点比较集中，看起来有点像正态分布，如果往中心极限定理上靠，将作如下标准化`$$Y_{2}^{\star}=\frac{X_1 + X_2 - 2*\frac{1}{2}}{\sqrt{\frac{1}{12}}*\sqrt{2}}=\sqrt{6}(X_1 + X_2 -1)$$` 则$Y_{2}^{\star}$的期望为0，方差为1。
 
-第二代广告系统：基于行为的优化投放系统会追踪用户的反馈数据，故而由于优化的产生，公益广告对照组会成为一个无效的对照组，而幽灵广告可以准确识别对照组中的complier。
+```r
+p4 <- ggplot(data.frame(x=z),aes(x,fill=..count..))+     
+	scale_fill_viridis(direction = -1)+     
+	geom_histogram(bins=20,show.legend=FALSE) + xlab("")+ylab("")  
+p5 <- ggplot(data.frame(x=sqrt(6)*(z-1)),aes(x,fill=..count..))+     
+	scale_fill_viridis(direction = -1)+     
+	geom_histogram(bins=20,show.legend=FALSE) + xlab("")+ylab("")  
+grid.arrange(p4, p5,  ncol=2)
+```
+![fig2](/figures/img4.png)
 
-第三代广告系统：基于个体用户的优化投放。此类系统在第二代系统的基础之上，增加了对于每个用户点击和行为历史的考虑，从而实现了更为个性化的优化投放。此时需要幽灵广告的升级版，作者称之为Predicted Ghost Ad methodology，感兴趣的读者可以阅读原文第四章。
+只是变换后的图像和之前基本一致，那么现在看来眼球检验不好使了，那就上`$P$`值呗！
 
-# 总结
+```r
+ks.test(sqrt(6)*(z-1),"pnorm") # 分布检验
+##
+## One-sample Kolmogorov-Smirnov test
+##
+## data: sqrt(6) * (z - 1)
+## D = 0.025778, p-value = 3.381e-06
+## alternative hypothesis: two-sided
+```
 
-总之，幽灵广告相比于公益广告作为对照组，有以下四个优点：
+也不是正态分布，既然如此，那就在两个随机变量的情况下，把精确分布推导出来。
 
- - 得到的是无偏的估计量
- -  没有公益广告的额外执行成本
- - 正确的基准成功率
- - 提高了估计效率
+## 精确分布的推导及计算
 
-可是幽灵广告就是完美的吗？在现在这个在线广告优化技术日新月异的年代，幽灵广告也有着自己的局限性。比如为了保证模拟拍卖的效果和实际拍卖的效果差别不大，幽灵广告需要在模拟拍卖的阶段就得到所有决定实际广告投放与否的信息与数据变量。一旦实际拍卖过程中产生了其他变化（最常见的是预算的变化），模拟拍卖就有可能离实际效果相差甚远。
+课本如《概率论与数理统计教程》 采用卷积的方法求分布函数，这种方法实行起来比较繁琐，也不利于后续编程，下面考虑用特征函数的方法求。我们知道标准均匀分布的特征函数`$$\varphi(t)=\frac{e^{it}-1}{it}$$`考虑`$X_1$`和`$X_2$`相互独立，它们的和用`$S_2$`表示，则随机变量`$S_2$`的特征函数为 `$$\varphi_2(t)=\varphi(t)*\varphi(t)=(\frac{e^{it}-1}{it})^2=\frac{2(1-\cos(t))e^{it}}{t^2}$$`
 
-此外，幽灵广告系统只解决了单一的实验组和对照组的对比问题，而实践过程中我们往往需要对比多个实验组，比如简单的全因子实验（full factrial design）。此时幽灵广告并不比意向处理分析(ITT)多出来显著的优势。
+只要满足条件
 
-最后，在线广告实验也难逃一般在线实验的共同挑战。比如大部分在线实验目前还是基于cookie的，而在移动互联网时代，不可避免的同一个用户拥有多个设备，而很多行为、尤其是多步骤的购买行为，往往并不是在一个设备上就一气呵成的。基于点击的追踪也有自己的问题，比如用户可能在多个渠道看到同一家的广告，比如用户买机票订酒店的时候可能在百度、新浪、淘宝、携程分别搜索，然后认为最后的成交是由最后一个点击带来的也是不甚公允的。这些挑战现实存在，相关从业人员也一直致力于寻找更好的衡量办法，以期达到更精准的实验效果估计。
+`$$\int_{-\infty}^{+\infty}\vert \varphi_2(t) \vert \mathrm{d} t < \infty$$`
 
-审稿: 熊熹，郎大为
-编辑: 雷博文
+`$S_2$`的密度函数就可以表示为
+
+`$$p_2(x)=\frac{1}{2 \pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}\varphi_2(t)\mathrm{d}t$$`
+
+经计算
+`$$\int_{-\infty}^{+\infty}\vert \varphi_2(t) \vert \mathrm{d} t=4\int_{0}^{+\infty}\frac{1-\cos(t)}{t^2}\mathrm{d}t=4\int_{0}^{+\infty}\big(\frac{\sin(x)}{x}\big)^2\mathrm{d}x=2\pi$$`
+
+那么
+`$$p_2(x)=\frac{1}{2 \pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}\varphi_2(t)\mathrm{d}t=\frac{2}{\pi}\int_{0}^{+\infty}\frac{(1-\cos(t))\cos(t(1-x))}{t^2}\mathrm{d}t=\frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(1-x)t\big)\big(\frac{\sin(t)}{t}\big)^2\mathrm{d}t$$`
+一般地，`$n$`个独立随机变量的和
+`$$\varphi_n(t)=\big(\frac{e^{it}-1}{it}\big)^n=\big(\frac{\sin(t/2)\mathrm{e}^{\frac{it}{2}}}{t/2}\big)^n$$`
+那么，同理
+`$$p_n(x)=\frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(n/2-x)t\big)(\frac{\sin(t)}{t})^n\mathrm{d}t$$`
+
+要说数值计算一个`$p(x)$`近似值，是一点问题没有！且看
+
+```r
+integrate(function(t,x,n) 2/pi*cos((n-2*x)*t)*(sin(t)/t)^n ,x = 1,n = 2,
+			lower = 0,upper = Inf,subdivisions = 1000)
+## 0.9999846 with absolute error < 6.6e-05			
+```
+
+那如果要把上面的积分积出来，获得一个精确的表达式，在$n=2$的时候还可以手动计算，主要使用分部积分，余弦积化和差公式和一个狄利克雷积分公式`$\int_{0}^{+\infty}\frac{\sin(ax)}{x}\mathrm{d}x=\frac{\pi}{2}\mathrm{sgn}(a)$`，过程略，最后算得
+`$$p_2(x)=\frac{1}{2}\big((2-x)\mathrm{sgn}(2-x)-x\mathrm{sgn}(-x)\big)-(1-x)\mathrm{sgn}(1-x)=\frac{1}{2}(\left | x \right |+\left | x-2 \right |)-\left | x-1 \right |,0<x<2$$`
+`$p_2(x)$`的密度函数图象如下：
+
+```r
+fun_p2_1 <- function(x) { 1 / 2 * (abs(x - 2) - 2 * abs(x - 1) + abs(x)) }
+fun_p2_2 <- function(x) {
+    x <- as.matrix(x)
+    tempfun <- function(x) {
+        integrate(function(t, x, n) 2 / pi * cos((n - 2 * x) * t) * (sin(t) / t) ^ n,
+            x = x, n = 2,lower = 0, upper = Inf, subdivisions = 1000)$value
+    }
+   return( sapply(x,tempfun) )
+}
+ggplot(data.frame(x = c(0, 2)), aes(x = x)) +
+    stat_function(fun = fun_p2_2, geom = "point", colour = "#2A768EFF") +
+    stat_function(fun = fun_p2_1, geom = "line", colour = "#78D152FF")
+```
+
+![fig2](/figures/img5.png)
+
+从图中可以看出，两种形式的密度函数在数值计算的结果上很一致，当`$n=100,1000$`时，含参量积分的表示形式就很方便啦！任意给定一个`$n$`，符号计算上面的含参量积分，这个时候还是用软件计算比较合适，*R*的符号计算仅限于求导，积分运算需要借助Ryacas，rSymPy，可惜的是，这些包更新缓慢，即使 `$\int_{0}^{+\infty}\frac{\sin(at)}{t}\mathrm{d}t$`也算不出来，果断直接使用*Python*的sympy模块
+
+```python
+from sympy import *
+a=symbols('a', real=True)
+t=symbols('t', real=True,positive=True)
+print(integrate(sin(a*t)/t,(t,0,oo)))
+
+## Piecewise((pi/2, Eq(Abs(periodic_argument(polar_lift(a)**2, oo)), 0)), (Integral(sin(a*t)/t, (t, 0, oo)), True))
+```
+
+。。。初次见到这样的结果，是不是一脸mb，翻译一下，就是
+
+`$$
+\begin{equation*}
+\begin{cases}
+\frac{\pi}{2} & \text{for}\: \left|{\operatorname{periodic_{argument}}{\left (\operatorname{polar\_lift}^{2}{\left (a \right )},\infty \right )}}\right| = 0 \\
+\int\limits_{0}^{\infty} \frac{1}{t} \sin{\left (a t \right )}\, dt & \text{otherwise} \end{cases}
+\end{equation*}
+$$`
+
+稍为好点，但是还是有一大块看不懂，那个绝对值里是什么？还是不要纠结了，路远坑多，慢走不送啊！话说要是计算`$p_2(x)$`密度函数里的积分，
+
+```python
+from sympy import *
+x=symbols('x', real=True)
+t=symbols('t', real=True,positive=True)
+print(integrate(2/pi*cos(2*t*(1-x))*(sin(t)/t)**2,(t,0,oo)))
+
+## Piecewise((Piecewise((2*x, (2*x - 2)**2/4 < 1), (0, 4/(2*x - 2)**2 < 1), (meijerg(((1/2,), (1, 1, 3/2)), ((1/2, 1, 0), (1/2,)), polar_lift(-2*x + 2)**2/4), True))/2, Eq(Abs(periodic_argument(polar_lift(-2*x + 2)**2, oo)), 0)), (Integral(2*sin(t)**2*cos(2*t*(-x + 1))/(pi*t**2), (t, 0, oo)), True))
+```
+
+那就更长了。。。
+`$$
+\begin{equation*}
+\begin{cases}
+\frac{1}{2} \begin{cases}
+2 x & \text{for}\: \frac{1}{4} \left(2 x - 2\right)^{2} < 1 \\
+0 & \text{for}\: \frac{4}{\left(2 x - 2\right)^{2}} < 1 \\
+{G_{4, 4}^{3, 1}\left(\begin{matrix} \frac{1}{2} & 1, 1, \frac{3}{2} \\\frac{1}{2}, 1, 0 & \frac{1}{2} \end{matrix} \middle| {\frac{1}{4} \operatorname{polar\_lift}^{2}{\left (- 2 x + 2 \right )}} \right)} & \text{otherwise} \end{cases} & \text{for}\: \left|{\operatorname{periodic_{argument}}{\left (\operatorname{polar\_lift}^{2}{\left (- 2 x + 2 \right )},\infty \right )}}\right| = 0 \\
+\int\limits_{0}^{\infty} \frac{2}{\pi t^{2}} \sin^{2}{\left (t \right )} \cos{\left (2 t \left(- x + 1\right) \right )}\, dt & \text{otherwise}
+\end{cases}
+\end{equation*}
+$$`
+
+sympy模块还是比较强的，化简可能比较弱，感觉是我的条件声明没有充分利用，要看懂，得知道一些复变函数的知识，这个时候，可以试试Maple或者Mathematica，面对高昂的费用，我们可以使用在线的免费计算WolframAlpha（<http://www.wolframalpha.com/>），输入
+
+```mathematica
+integrate 2/pi*cos(2*t*(1-x))*(sin(t)/t)^2 ,t ,0,oo
+```
+
+即可得`$p_2(x)=\frac{1}{2}(\left | x-2 \right |-2\left | x-1 \right |+\left | x \right |)$`，`$n$` 取任意值都是可以算的，由于式子比较复杂，就不展示了。
+
+
+# 软件信息
+
+```r
+sessionInfo()
+## R version 3.4.0 (2017-04-21)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 8.1 x64 (build 9600)
+##
+## Matrix products: default
+##
+## locale:
+## [1] LC_COLLATE=Chinese (Simplified)_China.936
+## [2] LC_CTYPE=Chinese (Simplified)_China.936
+## [3] LC_MONETARY=Chinese (Simplified)_China.936
+## [4] LC_NUMERIC=C
+## [5] LC_TIME=Chinese (Simplified)_China.936
+##
+## attached base packages:
+## [1] stats graphics grDevices utils datasets methods base
+##
+## other attached packages:
+## [1] tseries_0.10-40 hexbin_1.27.1 R.matlab_3.6.1 gridExtra_2.2.1
+## [5] viridis_0.4.0 viridisLite_0.2.0 ggplot2_2.2.1
+##
+## loaded via a namespace (and not attached):
+## [1] Rcpp_0.12.10 knitr_1.15.1 magrittr_1.5
+## [4] munsell_0.4.3 lattice_0.20-35 colorspace_1.3-2
+## [7] quadprog_1.5-5 stringr_1.2.0 plyr_1.8.4
+## [10] tools_3.4.0 grid_3.4.0 gtable_0.2.0
+## [13] R.oo_1.21.0 htmltools_0.3.6 yaml_2.1.14
+## [16] lazyeval_0.2.0 rprojroot_1.2 digest_0.6.12
+## [19] tibble_1.3.0 codetools_0.2-15 R.utils_2.5.0
+## [22] evaluate_0.10 rmarkdown_1.5 labeling_0.3
+## [25] stringi_1.1.5 compiler_3.4.0 scales_0.4.1
+## [28] backports_1.0.5 R.methodsS3_1.7.1 zoo_1.8-0
+```
