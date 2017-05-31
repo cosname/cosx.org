@@ -59,7 +59,7 @@ ggplot(data.frame(x = seq(1000), y = corr), aes(x = x, y = y)) +
 	scale_fill_viridis(direction = -1) + xlab("Sample size *10^3")+ylab("Correlation")
 ```
 
-![fig1](/figures/img1.png)
+![image](https://cloud.githubusercontent.com/assets/7221728/26611329/2f03625c-45e0-11e7-8aeb-ac6daed5e179.png)
 
 ## 分布检验
 
@@ -125,7 +125,7 @@ p2 <- run_test_fun(x = matlabv5_data$x,string = "Matlab v5",delta = 0.01)
 p3 <- run_test_fun(x = c_data,string = "C",delta = 0.01)
 grid.arrange(p1, p2, p3, ncol=3)
 ```
-![fig2](/figures/img2.png)
+![image](https://cloud.githubusercontent.com/assets/7221728/26611333/374195ba-45e0-11e7-97e2-7c3ddfa03ad1.png)
 
 在游程长度为27的位置，有一条深沟，这是George Marsaglia 提出的借位相减（subtract-with-borrow）算法的特性，显然不符合随机性的要求，该算法细节参见[Cleve B. Moler的书《Numerical Computing with MATLAB》第9章第267页](https://www.mathworks.com/moler/chapters.html) 。
 
@@ -151,9 +151,10 @@ ggplot(data.frame(x = seq(10000), y = z), aes(x = x, y = y)) +
 	geom_hex(show.legend=FALSE)+
 	scale_fill_viridis(direction = -1) + xlab("")+ylab("")
 ```
-![fig2](/figures/img3.png)
 
-显然这不是均匀分布，在 `$z=1$` 处，散点比较集中，看起来有点像正态分布，如果往中心极限定理上靠，将作如下标准化`$$Y_{2}^{\star}=\frac{X_1 + X_2 - 2*\frac{1}{2}}{\sqrt{\frac{1}{12}}*\sqrt{2}}=\sqrt{6}(X_1 + X_2 -1)$$` 则$Y_{2}^{\star}$的期望为0，方差为1。
+![image](https://cloud.githubusercontent.com/assets/7221728/26611336/417e5e3c-45e0-11e7-91c5-b82e899fe30a.png)
+
+显然这不是均匀分布，在 `$z=1$` 处，散点比较集中，看起来有点像正态分布，如果往中心极限定理上靠，将作如下标准化`$$Y_{2}^{\star}=\frac{X_1 + X_2 - 2*\frac{1}{2}}{\sqrt{\frac{1}{12}}*\sqrt{2}}=\sqrt{6}(X_1 + X_2 -1)$$` 则`$Y_{2}^{\star}$`的期望为0，方差为1。
 
 ```r
 p4 <- ggplot(data.frame(x=z),aes(x,fill=..count..))+     
@@ -164,7 +165,8 @@ p5 <- ggplot(data.frame(x=sqrt(6)*(z-1)),aes(x,fill=..count..))+
 	geom_histogram(bins=20,show.legend=FALSE) + xlab("")+ylab("")  
 grid.arrange(p4, p5,  ncol=2)
 ```
-![fig2](/figures/img4.png)
+
+![image](https://cloud.githubusercontent.com/assets/7221728/26611342/485f3410-45e0-11e7-9e2d-306f7bc97e5d.png)
 
 只是变换后的图像和之前基本一致，那么现在看来眼球检验不好使了，那就上`$P$`值呗！
 
@@ -229,7 +231,7 @@ ggplot(data.frame(x = c(0, 2)), aes(x = x)) +
     stat_function(fun = fun_p2_1, geom = "line", colour = "#78D152FF")
 ```
 
-![fig2](/figures/img5.png)
+![image](https://cloud.githubusercontent.com/assets/7221728/26611346/4f1be5be-45e0-11e7-8e69-37b91636268a.png)
 
 从图中可以看出，两种形式的密度函数在数值计算的结果上很一致，当`$n=100,1000$`时，含参量积分的表示形式就很方便啦！任意给定一个`$n$`，符号计算上面的含参量积分，这个时候还是用软件计算比较合适，*R*的符号计算仅限于求导，积分运算需要借助Ryacas，rSymPy，可惜的是，这些包更新缓慢，即使 `$\int_{0}^{+\infty}\frac{\sin(at)}{t}\mathrm{d}t$`也算不出来，果断直接使用*Python*的sympy模块
 
