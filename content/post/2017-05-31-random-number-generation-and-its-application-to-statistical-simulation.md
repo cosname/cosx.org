@@ -3,7 +3,7 @@ title: 随机数生成及其在统计模拟中的应用
 date: '2017-05-26'
 author: 黄湘云
 tags: [随机数,统计检验，模拟]
-slug: random number generation and its application to statistical simulation
+slug: random-number-generation-and-its-application-to-statistical-simulation
 ---
 
 # 引言
