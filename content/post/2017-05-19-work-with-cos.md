@@ -37,14 +37,20 @@ description: "COS主站的文章已经全部迁移至github.com，从今以后�
 
 # <span id="quick">快速入门</span>
 
-1. 点击这个链接: https://github.com/cosname/cosx.org/new/master/content/post
-1. 点击绿色的大框: Fork this repository and propose changes
+这是一个超简单的教程，按照以下四步，就可以上传最简单的草稿，不需要命令行的操作。
+
+1. 点击这个链接：https://github.com/cosname/cosx.org/new/master/content/post
+1. 点击绿色的大框：Fork this repository and propose changes
 1. 更新文章的内容
-1. 点击 
+1. 一路绿色按钮点下去直到没有东西可以点
 
-TODO：待更新一个简短的入门以及视频
+以下是视频教程：
+<video controls="controls" height=500px width=100%>
+<source src="http://lchiffon.github.io/reveal_slidify/cos/ldw/work-with-cos.webm" type="video/webm">
+</video>
 
-TODO: 上传图片及更新
+你可以在[这里](https://github.com/cosname/cosx.org/pull/558)看到测试的草稿
+
 
 # <span id="format">我什么都会，投稿的格式是什么？</span>
 
