@@ -2,7 +2,7 @@
 title: 投稿指南
 date: '2017-05-19'
 author: COS编辑部
-tags: [投稿] 
+tags: [投稿]
 slug: work-with-COS
 description: "COS主站的文章已经全部迁移至github.com，从今以后，所有主站的文章可以通过更新github的项目内容来实现。
 更新一个markdown文件之后，后台服务器会自动完成编译，更新，发布的工作。本文将详细介绍如何为新的统计之都网站投稿。"
@@ -37,6 +37,11 @@ description: "COS主站的文章已经全部迁移至github.com，从今以后�
 
 # <span id="quick">快速入门</span>
 
+1. 点击这个链接: https://github.com/cosname/cosx.org/new/master/content/post
+1. 点击绿色的大框: Fork this repository and propose changes
+1. 更新文章的内容
+1. 点击 
+
 TODO：待更新一个简短的入门以及视频
 
 TODO: 上传图片及更新
@@ -47,6 +52,13 @@ TODO: 上传图片及更新
 
 - 文件名和路径
 - 文件头的信息
+
+## Rstudio 深度用户
+
+如果你是一个Rstudio深度用户，可以使用`blogdown::new_post()`[函数来生成文件](https://bookdown.org/yihui/blogdown/rstudio-ide.html)，Rstudio会自动弹出一个窗口，在窗口中填入所需要的信息就可以完成完成新文章的生成。上述的路径和文件头信息都会被配置好。
+
+![image](https://cloud.githubusercontent.com/assets/7221728/26714960/626cc9a4-47a6-11e7-8cd0-d310693886ca.png)
+
 
 ## 文件名和路径
 
@@ -63,7 +75,7 @@ TODO: 上传图片及更新
 title: 文章的标题
 date: '文章的时间：YYYY-MM-DD'
 author: 作者
-tags: [标签1,标签2] 
+tags: [标签1,标签2]
 slug: article-name-english
 description: "描述部分"
 ---
@@ -76,6 +88,9 @@ description: "描述部分"
 
 ![default](https://cloud.githubusercontent.com/assets/7221728/26232013/947c3d34-3c85-11e7-8436-bb5b1d0e77aa.png)
 
+
+
+
 # <span id="web">懂一些 markdown 不懂 github</span>
 
 如果对github不熟，可以按照以下步骤进行投稿：
@@ -87,8 +102,7 @@ description: "描述部分"
 
 编辑和进一步的修改请查看[编辑须知wiki](https://github.com/cosname/cosx.org/wiki/Github%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C)
 
-+
-+![default](https://cloud.githubusercontent.com/assets/7221728/26232013/947c3d34-3c85-11e7-8436-bb5b1d0e77aa.png)
+![default](https://cloud.githubusercontent.com/assets/7221728/26232013/947c3d34-3c85-11e7-8436-bb5b1d0e77aa.png)
 
 # <span id="part">我只会git & Github，不会Markdown</span>
 
@@ -97,7 +111,7 @@ description: "描述部分"
 # <span id="markdown">Markdown是个啥？</span>
 
 Markdown 是一门轻量级的标注语言，谢益辉在[knitr与可重复的统计研究](http://cos.name/2012/06/reproducible-research-with-knitr/)聊到：
- 
+
 > 我选择Markdown作为给初学者入门的媒介，原因就是它超级简单，你可以在五分钟之内基本学会它的用法，若再多花点时间，完全有可能学完它的用法，注意是“学完”。这世上能被学完的语言不多，因为大多数语言都想让自己功能多，而Markdown是为了让功能少。
 
 Markdown是个简单的语言，设计的初衷是让使用者专注于内容而不是格式，以下是常用的功能：
@@ -117,7 +131,7 @@ Markdown是个简单的语言，设计的初衷是让使用者专注于内容而
 有序列表用`1.`
 1. ~~删除线~~
 1. [统计之都的网站](cos.name)
-  
+
 代码部分
    ```r
    print("Hello World")
@@ -138,7 +152,7 @@ Markdown是个简单的语言，设计的初衷是让使用者专注于内容而
 有序列表用`1.`
 1. ~~删除线~~
 1. [统计之都的网站](cos.name)
-  
+
 代码部分
 
 ```r
@@ -166,11 +180,11 @@ print("Hello World")
 
     ```markdown
     # 第一节
-    
+
     ## 1.1 小节
-    
+
     ### 1.1.1 小小节
-    
+
     # 第二节
     ```
 
@@ -190,14 +204,14 @@ print("Hello World")
     段落
     ![图片](地址)
     ```
-    
+
     正确的例子：
-    
+
     ```markdown
     # 标题
-    
+
     段落
-    
+
     ![图片](地址)
     ```
 
