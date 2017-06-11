@@ -6,9 +6,9 @@ tags: [随机数,统计检验，模拟]
 slug: random-number-generation-and-its-application-to-statistical-simulation
 ---
 
-# 引言
 
-揭秘统计软件如R，Octave，Matlab等使用的随机数发生器，然后做一些统计检验，再将其应用到独立随机变量和的模拟中，最后与符号计算得到的精确结果比较。
+
+揭秘统计软件如R，Octave，Matlab等使用的随机数发生器，然后做一些统计检验，再将其应用到独立随机变量和的模拟中，最后比较了符号计算得到的精确结果。
 
 # 背景
 
@@ -16,7 +16,7 @@ slug: random-number-generation-and-its-application-to-statistical-simulation
 
 # 随机数生成
 
-讲随机数发生器，不得不提及Mersenne Twister（简称MT），它的周期长达`$2^{19937}-1$`， 现在是R 、Octave 和Matlab 等软件（较新版本）的默认随机数发生器。 在产生`$2^{24}$`个随机数的过程中，[MT发生器的C语言64位版本](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt64.html)，我在 Dev-C++ 5.11  上编译运行10秒左右（包含编译和写随机数到文件的时间，实际产生随机数的时间应该远小于这个时间）。
+讲随机数发生器，不得不提及一个名为Mersenne Twister（简称MT）的发生器，它的周期长达`$2^{19937}-1$`， 现在是R 、Octave 和Matlab 等软件（较新版本）的默认随机数发生器。 只需要编译运行10秒左右，在产生的过程中，[MT发生器](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt64.html)就可以生成`$2^{24}$`个随机数（版本为C语言64位版本，环境Dev-C++ 5.11）。其中包含编译和写随机数到文件的时间，实际产生随机数的时间应该远小于这个时间。
 
 Matlab新版本内置了早期的随机数发生器（这里以1995年的Matlab随机数发生器为例），两行代码就可以产生`$2^{24}$`个随机数。
 
