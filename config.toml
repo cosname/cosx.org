@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://cosx.org/"
 languageCode = "zh-CN"
 title = "统计之都"
 theme = "hugo-steam-cos"
