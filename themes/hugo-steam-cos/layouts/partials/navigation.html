@@ -1,0 +1,9 @@
+{{ if .Site.Menus.main }}
+<nav class="menu" role="nav">
+    <ul>
+        {{ range .Site.Menus.main }}
+        	<li class="nav nav-current"><a href="{{ .URL }}">{{ .Name }}</a></li>
+      	{{end}}
+    </ul>
+</nav>
+{{ end }}

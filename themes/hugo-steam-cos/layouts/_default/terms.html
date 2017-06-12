@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="terms-list">
+	<ul>
+        {{ $data := .Data }}
+        {{ range $key, $value := .Data.Terms.ByCount }}
+        {{ $url := printf "/%s/%s" $data.Plural ($value.Name | urlize) }}
+        <li><a href="{{ $url | absURL }}">{{ $value.Name |title }}</a> {{ $value.Count }}</li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}

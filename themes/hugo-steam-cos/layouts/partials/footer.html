@@ -1,0 +1,23 @@
+<footer class="site-footer">
+	<div class="inner">
+		{{ partial "social" . }}
+
+		<section class="copyright">&copy; 2006 - {{ now.Format "2006"}} <a href="{{ .Site.BaseURL }}">{{ .Site.Params.name }}</a> {{ .Site.Params.copyright | markdownify }}</section>
+	</div>
+</footer>
+
+{{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
+<script src="/js/math-code.js"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  },
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script async type="text/javascript"
+  src="https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+{{ end }}
