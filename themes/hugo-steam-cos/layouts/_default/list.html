@@ -1,7 +1,7 @@
 {{ define "main" }}
 	{{ $paginator := .Paginate .Data.Pages }}
     {{ range $paginator.Pages }}
-        {{ .Render "summary" }} 
+        {{ .Render "summary" }}
     {{ end }}
-    {{ partial "pagination" . }}
+{{ template "_internal/pagination.html" . }}
 {{ end }}
