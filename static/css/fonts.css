@@ -1,4 +1,12 @@
 @font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans-Regular'),
+       url('../fonts/open-sans-latin-regular.woff2') format('woff2'),
+       url('../fonts/open-sans-latin-regular.woff') format('woff');
+}
+@font-face {
   font-family: 'Open Sans Condensed';
   font-style: normal;
   font-weight: 300;

@@ -8,8 +8,8 @@ menu: main
 
 <style>
 img{
-width: 150px;
-height: 200px
+  max-width: 150px;
+  max-height: 200px
 }
 </style>
 
@@ -19,8 +19,9 @@ height: 200px
 
 读者可以点击下面每本书的链接进入该书的的页面，下载随书代码，我们还会不定期发布图书的勘误，也欢迎读者留言提问。
 
-|![R-in-Action](https://cos.name/wp-content/uploads/2013/03/r-in-action-small.jpg) [《R语言实战》](/2013/03/r-in-action/ "《R语言实战》")                                                                                                           |![ggplot2](https://cos.name/wp-content/uploads/2013/05/ggplot2-212x300.jpg) [《ggplot2：数据分析与图形艺术》](/2013/05/ggplot2/ "《ggplot2：数据分析与图形艺术》")                                      |![art-of-r-programming](https://cos.name/wp-content/uploads/2013/05/art-of-r-small.jpg) [《R语言编程艺术》](/2013/05/the-art-r-programming/ "《R语言编程艺术》")                        |
+| | | |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|![R-in-Action](https://cos.name/wp-content/uploads/2013/03/r-in-action-small.jpg) [《R语言实战》](/2013/03/r-in-action/ "《R语言实战》")                                                                                                           |![ggplot2](https://cos.name/wp-content/uploads/2013/05/ggplot2-212x300.jpg) [《ggplot2：数据分析与图形艺术》](/2013/05/ggplot2/ "《ggplot2：数据分析与图形艺术》")                                      |![art-of-r-programming](https://cos.name/wp-content/uploads/2013/05/art-of-r-small.jpg) [《R语言编程艺术》](/2013/05/the-art-r-programming/ "《R语言编程艺术》")                        |
 |![Dynamic-Documents-with-R-and-knitr](http://images.tandf.co.uk/common/jackets/crclarge/978148220/9781482203530.jpg) [Dynamic Documents with R and knitr](http://www.crcpress.com/product/isbn/9781482203530 "Dynamic Documents with R and knitr") |![R_in_a_nutshell](https://cos.name/wp-content/uploads/2013/03/R_in_a_nutshell.jpg)[《R语言核心技术手册》](http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-121-23786-7)                        |![R_graphics_cookbook](https://cos.name/wp-content/uploads/2013/03/R_graphics_cookbook.png) [《R数据可视化手册》](http://www.oreilly.com.cn/index.php?func=book&isbn=978-7-115-34227-0) |
 |![R_data_science](https://cos.name/wp-content/uploads/2013/03/R_data_science.jpg) [《数据科学中的R语言》](/2015/07/years-as-a-data-scientist/ "Dynamic Documents with R and knitr")                                                                |[ ![rcpp0](https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg)](https://cos.name/wp-content/uploads/2013/03/rcpp0.jpg) [《Rcpp:R与C++的无缝整合》](/2016/01/seamless-r-and-c-integration-with-rcpp/) |  
 
