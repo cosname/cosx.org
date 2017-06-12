@@ -2,7 +2,7 @@
     <header>
         <h1 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
         <div class="post-meta">
-          {{ with .Params.author }}<i class="fa fa-user fa-fw"></i><span>{{ . }} </span> &middot; {{ end }}
+          {{ with .Params.author }}<i class="fa fa-user fa-fw"></i><span>{{ . }} </span>{{ end }}
           <i class="fa fa-calendar fa-fw"></i>
           <time datetime="{{ .Date.Format "2006/01/02" }}">{{ .Date.Format "2006/01/02" }}</time>
         </div>
