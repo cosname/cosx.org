@@ -31,7 +31,7 @@ slug: thoughts-on-insurance
 26家纽约当地的火险公司中有23家因为无法支付赔偿而倒闭。
 就在此时我东家公司的创始人挺身而出，抵押了自己的所有财产，以此支付了所有保险赔偿，立下了口碑，继而把公司发展成了美国保险业诸侯之一。
 
-![1](https://cos.name/wp-content/uploads/2017/03/IMG_0868.jpg)  
+![1](https://uploads.cosx.org/wp-content/uploads/2017/03/IMG_0868.jpg)  
 公司展览室里奇葩的古董消防车
 
 我觉得火险的兴起，继而带动整个美国保险行业的发展，主要原因之一当然就是有需求。
@@ -104,7 +104,7 @@ slug: thoughts-on-insurance
 接盘的代价自然会水涨船高，这也是电影《大空头》（The Big Shot）里的那一帮人在经济危机前夜疯狂敛财的途径。
 不过总的来说，把风险转移给庞大的金融市场还是十分有效的，只要不发生波及全国的自然灾害（金融危机的可能性倒是更大），就总能愉快得找到接盘侠。
 
-![2](https://cos.name/wp-content/uploads/2017/03/Screen-Shot-2015-12-10-at-10.20.11-AM.png)  
+![2](https://uploads.cosx.org/wp-content/uploads/2017/03/Screen-Shot-2015-12-10-at-10.20.11-AM.png)  
 大空头海报：蝙蝠贝爷，高司令，皮神，还有一位神偷奶爸声音的正主儿
 
 介绍这些，只是提供一种视角：可能在某一领域，在当前社会框架下，保险制度是相对最节约社会成本的选择。
@@ -156,7 +156,7 @@ R里面我常用的GLM工具包是**glmnet**，之前我发过一篇文章，介
 同时，GBM的拟合参数比较多，大多数的参数都在控制过度拟合（over-fitting）情况的出现，一个好的GBM模型往往需要大量的调试工作。
 现在最好用的GBM软件包是**xgboost**，R/Python/Java都有各自版本，特点是提供了非常多可供调试的参数，拟合效率高。
 
-![3](https://cos.name/wp-content/uploads/2017/03/cart.png)  
+![3](https://uploads.cosx.org/wp-content/uploads/2017/03/cart.png)  
 一个树状模型（请原谅一名老DOTAer对LOLer的恶意）
 
 但很多时候，相较于尝试各种模型，或者致力于调试模型参数，反而不如把时间花在收集更多数据和处理数据上。

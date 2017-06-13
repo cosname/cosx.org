@@ -74,13 +74,13 @@ Gibbs抽样的最终目的是从一个多维分布`\(f(X_1,X_2,\ldots,X_n)\)`中
 \left[\begin{array}{c}X\\ Y\end{array}\right]\sim\mathcal{N}\left(\left[\begin{array}{c}0\\ 1\end{array}\right],\left[\begin{array}{cc} 4 & 4.2\\ 4.2 & 9\end{array}\right]\right)
 $$`
 
-详细过程和结果参见下面这份PDF文档（点击下载）：[A Simple Demo on Caching R Objects and Graphics with pgfSweave (PDF)](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf)
+详细过程和结果参见下面这份PDF文档（点击下载）：[A Simple Demo on Caching R Objects and Graphics with pgfSweave (PDF)](https://uploads.cosx.org/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.pdf)
 
-![二维正态分布随机数及其等高线图](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png)
+![二维正态分布随机数及其等高线图](https://uploads.cosx.org/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie-cache-graph.png)
 
 我们生成了50万行随机数，并画了X与Y的散点图。由于我们设定了相关系数为0.7，所以图中自然而然显现出正相关；而等高线也体现出多维正态分布的“椭球形”特征。均值在(0, 1)附近，都和理论分布吻合。所以这个Gibbs抽样还不太糟糕。
 
-生成上面的PDF文档和图形的LyX/Sweave源文档在这里 ：[A Simple Demo on Caching R Objects and Graphics with pgfSweave (LyX)](https://cos.name/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.zip)
+生成上面的PDF文档和图形的LyX/Sweave源文档在这里 ：[A Simple Demo on Caching R Objects and Graphics with pgfSweave (LyX)](https://uploads.cosx.org/wp-content/uploads/2011/01/cache-pgfSweave-demo-Yihui-Xie.zip)
   
 如果你已经按照我[前面的文章](/2010/11/reproducible-research-in-statistics/)配置好你的工具（**即使当时配置过，现在也需要重新配置**，因为我最近作了重大修改），这个文档应该可以让你重新生成我的结果。文档中有两处关键选项：
 

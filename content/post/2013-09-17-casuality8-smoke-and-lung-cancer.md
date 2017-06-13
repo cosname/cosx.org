@@ -24,13 +24,13 @@ description: "这一节介绍一个有趣的历史性例子：吸烟是否导致
 # 一、Cornfield 条件或者 Cornfield 不等式
 
 
-![fisher](https://cos.name/wp-content/uploads/2013/09/fisher.gif)
+![fisher](https://uploads.cosx.org/wp-content/uploads/2013/09/fisher.gif)
 
 （图注：R A Fisher）
 
 我先陈述 Fisher 的观点。由于 Yule-Simpson Paradox 的存在，即使我们观测到吸烟和肺癌之间的正相关关系，也不能断定它们之间有因果性。可能存在一个未观测的基因，它既使得某些人更可能吸烟，又使得这些人更可能患肺癌。因此，即使吸烟和肺癌没有因果关系，这个未观测的基因也可能导致吸烟和肺癌是正相关的。关于 Yule-Simpson Paradox，这一系列的第一篇有介绍。Fisher 的观点可以用一个有向无环图 （DAG） 来表示：
 
-![Cornfield](https://cos.name/wp-content/uploads/2013/09/Cornfield.jpg)
+![Cornfield](https://uploads.cosx.org/wp-content/uploads/2013/09/Cornfield.jpg)
 
 图中，吸烟到肺癌没有直接的边，因此吸烟对肺癌的因果作用是 `\(0\)`。但是由于它们之间存在一个共同原因 “hidden gene”，它们是相关的。我们用 `\(E\)` 表示是否吸烟 (`\(1=\)` 是，`\(0=\)` 否)；`\(D\)` 表示是否患肺癌 (`\(1=\)` 是，`\(0=\)` 否)；`\(U\)` 表示是否有某种基因 (`\(1=\)` 是，`\(0=\)` 否)。这个符号系统在流行病学比较常用，因为 `\(E\)` 表示暴露与否 （exposure），`\(D\)` 表示疾病 （disease），`\(U\)` 表示未观测的混杂因素 （unobservable confounder）。 在 Fisher 的时代，研究者通过收集的大量数据，得到吸烟对于肺癌的相对风险（relative risk；或称风险比，risk ratio；都简写成 `\(RR\)`）是
   
@@ -42,7 +42,7 @@ $$`
 
 那么 Cornfield 是如何有力反驳Fisher的观点的呢？
 
-![cornfield](https://cos.name/wp-content/uploads/2013/09/cornfield.jpeg)
+![cornfield](https://uploads.cosx.org/wp-content/uploads/2013/09/cornfield.jpeg)
 
 （图注：J Cornfield）
 

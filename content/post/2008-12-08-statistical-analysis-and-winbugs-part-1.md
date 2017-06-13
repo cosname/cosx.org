@@ -38,7 +38,7 @@ WinBUGS目前是一款免费的软件，去<https://www.mrc-bsu.cam.ac.uk/softwa
 
 # 第四节 初试WinBUGS
 
-![WinBUGS-GUI](https://cos.name/wp-content/uploads/2008/12/22221.jpg)
+![WinBUGS-GUI](https://uploads.cosx.org/wp-content/uploads/2008/12/22221.jpg)
 
 我们先找一个例子来实际地运行一下WinBUGS，感受一下基本的操作流程，然后再考虑高级的操作。
 
@@ -78,7 +78,7 @@ WinBUGS目前是一款免费的软件，去<https://www.mrc-bsu.cam.ac.uk/softwa
 
 第十八步，点history看所有迭代的时间序列图，点trace看最后一次迭代的时间序列图，点auto cor看correlogram时间序列图，点stat看参数估计的结果
 
-![Estimation results by WinBUGS 1.4](https://cos.name/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png "Estimation results by WinBUGS 1.4")
+![Estimation results by WinBUGS 1.4](https://uploads.cosx.org/wp-content/uploads/2008/12/Estimation-results-by-WinBUGS.png "Estimation results by WinBUGS 1.4")
 
 附第二步中的代码如下：
 ```winbugs

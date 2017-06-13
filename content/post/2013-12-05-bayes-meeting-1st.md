@@ -22,12 +22,12 @@ description: "纪念贝叶斯定理250周年暨首届中国贝叶斯统计学术
 
 天津财经大学月牙报告厅（统计湖畔）
 
-![tianjinUniv0map](https://cos.name/wp-content/uploads/2013/12/tianjinUniv0map.png)
+![tianjinUniv0map](https://uploads.cosx.org/wp-content/uploads/2013/12/tianjinUniv0map.png)
 
 
 # 三、论坛日程安排
 
-  ![cloud-bayes](https://cos.name/wp-content/uploads/2013/12/cloud-bayes.png)
+  ![cloud-bayes](https://uploads.cosx.org/wp-content/uploads/2013/12/cloud-bayes.png)
 
 
 ## （一）论坛特邀报告（上午：9:00-12:00）

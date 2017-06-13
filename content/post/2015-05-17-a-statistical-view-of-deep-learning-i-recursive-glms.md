@@ -74,7 +74,7 @@ slug: a-statistical-view-of-deep-learning-i-recursive-glms
 那么我们可以很容易地通过反复应用这一基本部件定义一个递归的GLM
 
 
-![无标题](https://cos.name/wp-content/uploads/2015/05/无标题.png)
+![无标题](https://uploads.cosx.org/wp-content/uploads/2015/05/无标题.png)
 
 `$$\mathbb{E}[y] = \mu_L = h_L \circ \ldots \circ h_1 \circ h_o(x)$$`
 

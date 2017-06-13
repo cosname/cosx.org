@@ -49,11 +49,11 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
 
 在获取的三种产品评论语料中，kindle的语料数超过了50%，而kindle paperwhite评论语料最少，不足20%，详见图1。将各月评论数累积加总，绘制各月累积评论数趋势图2。
 
-![cai_1](https://cos.name/wp-content/uploads/2016/05/cai_1.png)
+![cai_1](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_1.png)
 
 图1 三种产品评论语料占比
 
-![cai_2](https://cos.name/wp-content/uploads/2016/05/cai_2.png)
+![cai_2](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_2.png)
 
 图2 累积评论趋势(注：横坐标,时间/月，纵坐标,评论数/条)
 
@@ -63,29 +63,29 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
 
 从三类产品各自的词云图（图3至6）可以看出，除了“kindle”、“电子书”、“亚马逊”、“分辨率”、“快递”、“性价比”等相同的高频词汇，三个子类产品都出现了词汇“iPad”，可见多数消费者都会讲kindle与iPad进行对比；此外，“退货”问题也是关注的重点。分别来看，三种产品词云的差异之处在于：“Paperwhite”有关于“反应速度”的评论语句；“voyage”有“赠送”、“限量版”、“珍藏版”出现；“kindle”则出现“数据线”、“充电器”、“开机”、“待机时间”等高频词汇。可见，虽然消费者对三种产品都存在共性的关注点，但是针对不同的产品也有不同的侧重点。
 
-![cai_3](https://cos.name/wp-content/uploads/2016/05/cai_3.jpg)
+![cai_3](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_3.jpg)
 
 图3 全部语料词云图
 
-![cai_4](https://cos.name/wp-content/uploads/2016/05/cai_4.jpg)
+![cai_4](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_4.jpg)
 
 图4 Paperwhite语料词云
 
-![cai_5](https://cos.name/wp-content/uploads/2016/05/cai_5.jpg)
+![cai_5](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_5.jpg)
 
 图5 Voyage语料词云
 
-![cai_6](https://cos.name/wp-content/uploads/2016/05/cai_6.jpg)
+![cai_6](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_6.jpg)
 
 图6 kindle语料词云
 
 此外，在产品大类层次下，5分评论占比最多，达到65%，2分评论最少，仅为3%，整体评论趋于乐观。图8显示产品voyage 1分评价显著高于2分评价，且占比高于另外两种子产品，属于评价分布异常产品，应给予预警。
 
-![cai_7](https://cos.name/wp-content/uploads/2016/05/cai_7.png)
+![cai_7](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_7.png)
 
 图7 总体评分占比
 
-![cai_8](https://cos.name/wp-content/uploads/2016/05/cai_8.png)
+![cai_8](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_8.png)
 
 图8 各子产品评分分布
 
@@ -97,7 +97,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
 
 表2 文本TF-IDF矩阵
 
-![cai_0](https://cos.name/wp-content/uploads/2016/05/cai_0-1.png)
+![cai_0](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_0-1.png)
 
 矩阵元素`$tf-idf_{i,j}=tf_{i,j}\cdot idf_j$`，其中：
 
@@ -158,7 +158,7 @@ slug: e-commerce-customer-reviews-hot-topic-analysis
 本文采用纯度(purity)和F值两个指标评价聚类系统的整体性能。假设标注的类别用L表示，共有I类，其中第i个标注类别表示为`$L_i$ `，同样，假设聚类类别用K表示，共有J类，则第j个聚类类别表示为`$K_j$` ，聚类结果和标注结果匹配表如表3所示。
 
 表3聚类结果匹配表
-![cai_9](https://cos.name/wp-content/uploads/2016/05/cai_9.png)
+![cai_9](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_9.png)
 
 其中`$n_{ij}$`表示聚类结果j中包含的标注类别为i的样本个数，括号中的`$n_i$` 表示标注的类别`$L_i$` 中包含的样本数，即`$n_i=\sum_{j=1}^Jn(i,j)$` 。定义聚类类别j的纯度`$p(i,j)$` 如下：
 
@@ -403,19 +403,19 @@ F值</td>
   </tr>
 </table>
 
-![cai_9_1](https://cos.name/wp-content/uploads/2016/05/cai_9_1.png)
+![cai_9_1](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_9_1.png)
 
 图9 话题“喜欢”词云图
 
-![cai_10](https://cos.name/wp-content/uploads/2016/05/cai_10.png)
+![cai_10](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_10.png)
 
 图10 话题“翻页闪屏”词云图 
 
-![cai_11](https://cos.name/wp-content/uploads/2016/05/cai_11.png)
+![cai_11](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_11.png)
 
 图11话题“不错”词云图
 
-![cai_12](https://cos.name/wp-content/uploads/2016/05/cai_12.png)
+![cai_12](https://uploads.cosx.org/wp-content/uploads/2016/05/cai_12.png)
 
 图12话题“电子书券”词云图
 

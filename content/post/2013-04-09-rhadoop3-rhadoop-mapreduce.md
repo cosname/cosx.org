@@ -181,7 +181,7 @@ RHadoop实践是一套系列文章，主要包括“Hadoop环境搭建”，“R
 
 同现矩阵*评分矩阵=推荐结果
 
-  ![alogrithm_1](https://cos.name/wp-content/uploads/2013/04/alogrithm_1.jpg)
+  ![alogrithm_1](https://uploads.cosx.org/wp-content/uploads/2013/04/alogrithm_1.jpg)
   
 图片摘自“Mahout In Action”
 
@@ -373,7 +373,7 @@ R语言实现的MapReduce算法，可以基于R的数据对象实现，不必如
 
 通过MapReduce实现时，所有操作都要使用Map和Reduce的任务完成，程序实现过程略有变化。
 
-  ![aglorithm_2](https://cos.name/wp-content/uploads/2013/04/aglorithm_2.jpg)
+  ![aglorithm_2](https://uploads.cosx.org/wp-content/uploads/2013/04/aglorithm_2.jpg)
 
 图片摘自“Mahout In Action”
 

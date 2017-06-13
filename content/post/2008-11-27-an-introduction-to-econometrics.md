@@ -25,9 +25,9 @@ slug: an-introduction-to-econometrics
 
 计量经济学的基础是一整套建立在数理统计理论上的计量方法，属于计量经济学的“硬件”，其主要内容如下：
 
-![计量经济学方法-图1](https://cos.name/wp-content/uploads/2008/11/1.jpg "计量经济学方法-图1")
+![计量经济学方法-图1](https://uploads.cosx.org/wp-content/uploads/2008/11/1.jpg "计量经济学方法-图1")
 
-![计量经济学方法-图2](https://cos.name/wp-content/uploads/2008/11/2.jpg "计量经济学方法-图2")
+![计量经济学方法-图2](https://uploads.cosx.org/wp-content/uploads/2008/11/2.jpg "计量经济学方法-图2")
 
 从上面的介绍可看出，计量经济学的主要用途或目的主要有两个方面：
 

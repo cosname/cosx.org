@@ -14,7 +14,7 @@ slug: 7th-r-conference-beijing
 
 R是一门用于数据分析和图形展示的语言、平台和环境，其官方机构每年都会举办useR!会议，各个国家及地区也定期有R用户的交流活动。在国内，自2008年以来，中国已经在北京和上海成功举办了六届R语言会议，促进了R语言在中国的推广和发展。为了进一步加强各领域R语言使用者之间的交流和互动，我们准备在2014年5月24-25日在北京举行第七届中国R语言会议（北京会场）。除了统计之都主站，会务信息还会通会议主页(<http://china-r.org/>)，微信 (扫描本页面右侧微信公众平台二维码即可关注)、微博([@统计之都](http://weibo.com/cosname))来发布，欢迎大家关注获取最新消息。<!--more-->
 
-![logo](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+![logo](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-Logo.png)
 
 会议的相关情况如下：
 

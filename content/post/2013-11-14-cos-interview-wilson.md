@@ -19,7 +19,7 @@ description: "前阵子统计之都发布了一系列数据分析领域专家的
 
 写在前面的话：前阵子统计之都发布了一系列数据分析领域专家的采访，从学界到业界，从新人到鼻祖。而后统计之都的主编向我约稿，我第一个想起来采访的人就是Wilson。虽然在eBay不同的部门工作，但同属数据科学的大圈子有交集也有不同的见解。我一直很好奇CS或者EE出身、从事系统开发背景的人会在工作中感受到什么样的数据分析，而Wilson正是回答这个问题最好的人选。
 
-![wilson](https://cos.name/wp-content/uploads/2013/11/wilson.jpg)
+![wilson](https://uploads.cosx.org/wp-content/uploads/2013/11/wilson.jpg)
   
 Wilson是eBay美国Engineering, behavioral insights and science总监。他于2006年加入eBay，先后参与过eBay支付系统、搜索产品、行为数据产品的开发。在加入eBay之前他在IBM从事了5年多的架构师和资深顾问工作。从浙大读书时期的创业经历，到咨询公司、再到电子商务公司，我们希望他对于学术知识、职业发展、数据科学的理解和心路历程可以启发后来者，以期在这个领域做出更大的成就。
   

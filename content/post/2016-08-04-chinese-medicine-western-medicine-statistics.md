@@ -15,7 +15,7 @@ slug: chinese-medicine-western-medicine-statistics
 擅长R语言的工程开发与分析建模，是 Rweibo、Rwordseg、tmcn 等 R 包的作者。与肖凯合著了《数据科学中的R语言》，
 参与翻译了《R语言核心技术手册》、《机器学习与R语言》。<!--more-->
 
-![tuyouyou.pic](https://cos.name/wp-content/uploads/2016/08/1.pic_.jpg)
+![tuyouyou.pic](https://uploads.cosx.org/wp-content/uploads/2016/08/1.pic_.jpg)
 
 这篇文章本来是从屠呦呦得诺奖的时候开始写的，作为一个拖延症晚期患者，直到今天才修改好。
 当然，现在讨论这个话题可以避免很多信仰方面的争端，大家可以心平气和地讨论药的问题。

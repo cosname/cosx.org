@@ -30,7 +30,7 @@ LDA是一种[非监督机器学习](https://en.wikipedia.org/wiki/Unsupervised_l
   
 更形式化一点说，语料库中的每一篇文档与 `\(T\)`（通过反复试验等方法事先给定）个主题的一个多项分布相对应，将该多项分布记为 $\theta$。每个主题又与词汇表（vocabulary）中的  `\(V\)`个单词的一个多项分布相对应，将这个多项分布记为 `\(\phi\)`。上述词汇表是由语料库中所有文档中的所有互异单词组成，但实际建模的时候要剔除一些停用词（stopword），还要进行一些词干化（[stemming](https://en.wikipedia.org/wiki/Stemming)）处理等。`\(\theta\)` 和`\(\phi\)`分别有一个带有超参数（hyperparameter）`\(\alpha\)`和`\(\beta\)`的Dirichlet先验分布。对于一篇文档`\(d\)`中的每一个单词，我们从该文档所对应的多项分布`\(\theta\)`中抽取一个主题`\(z\)`，然后我们再从主题$z$所对应的多项分布`\(\phi\)`中抽取一个单词`\(w\)`。将这个过程重复`\(N_d\)`次，就产生了文档`\(d\)`，这里的`\(N_d\)`是文档`\(d\)`的单词总数。这个生成过程可以用如下的图模型表示：
 
-![LDA](https://cos.name/wp-content/uploads/2010/10/LDA.png) 
+![LDA](https://uploads.cosx.org/wp-content/uploads/2010/10/LDA.png) 
   
 这个图模型表示法也称作“盘子表示法”（plate notation）。图中的阴影圆圈表示可观测变量（observed variable），非阴影圆圈表示潜在变量（latent variable），箭头表示两变量间的条件依赖性（conditional dependency），方框表示重复抽样，重复次数在方框的右下角。
 

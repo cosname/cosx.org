@@ -32,7 +32,7 @@ slug: from-proportion-to-conclusion
 [1]  7 14 21 28
 ```
 
-![从比例数字还原分式](https://cos.name/wp-content/uploads/2009/04/digit-detection.png "从比例数字还原分式")
+![从比例数字还原分式](https://uploads.cosx.org/wp-content/uploads/2009/04/digit-detection.png "从比例数字还原分式")
 
 我们很容易发现分母（样本量）是24的倍数，因为上图中24的倍数乘以29.167%得到的结果很靠近整数；而具备某种特征的样本数量为7的倍数。根据具体的调查背景，我们可以自己猜测报告方究竟调查了多少人：24人？太少；960人？为什么不是1000人？……
 

@@ -16,9 +16,9 @@ slug: 5th-china-r-beijing-summary
 description: "第五届中国 R 语言会议（北京会场）于 2012 年 5 月 26 日 ~ 27 日在中国人民大学明德法学楼 0201 成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院、统计之都 ([cos.name](https://cos.name)) 主办，[mango-solutions](http://www.mango-solutions.com.cn/)赞助。在两天的会议时间里，参会者齐聚一堂，就 R 语言在互联网、商业、统计、生物等诸多方面的应用进行了深入的探讨。"
 ---
 
-![第五届中国R语言会议（北京会场）合影](https://cos.name/wp-content/uploads/2012/05/5th-China-R-BJ.jpg)
+![第五届中国R语言会议（北京会场）合影](https://uploads.cosx.org/wp-content/uploads/2012/05/5th-China-R-BJ.jpg)
 
-![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 
+![中国R语言会议标识](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-Logo.png) 
 
 第五届中国 R 语言会议（北京会场）于 2012 年 5 月 26 日 ~ 27 日在中国人民大学明德法学楼 0201 成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院、统计之都 ([cos.name](https://cos.name)) 主办，[mango-solutions](http://www.mango-solutions.com.cn/)赞助。在两天的会议时间里，参会者齐聚一堂，就 R 语言在互联网、商业、统计、生物等诸多方面的应用进行了深入的探讨。
 
@@ -34,7 +34,7 @@ University of Southern California、University of Wisconsin、北京城市学院
 
 Allianz Global Assistance、艾美仕咨询公司、埃森哲、艾亿新融资本管理公司、宝宝树信息技术有限公司、暴风影音、百济神州（北京）生物科技有限公司、北京安泰科信息开发有限公司、北京紫博蓝网络技术服务有限公司、北京贝瑞和康生物技术有限公司、北京德昂信息技术有限公司、北京果壳互动科技传媒有限公司、北京名影科漫有限公司、北京雀巢研发中心有限公司、北京瑞星信息技术有限公司、北京神州数码思特奇信息技术股份有限公司、北京网达信联科技发展有限公司、北京雪球财经信息科技有限公司、北京中彩在线科技有限责任公司、北京中软国际信息技术有限公司、北京质量协会、百度、北森、豆瓣、当当网、Doubleday Enterprises、敦煌网、凡客诚品、风行在线、广联达软件股份有限公司、华夏人寿、弘毅远道科技有限公司、IBM、IMS、ICON医药咨询有限公司、京东商城、精品购物指南、江苏百盛工程咨询有限公司、KPMG、乐视网、Mango Solutions、NCUK、Oracle、澳际PMP、奇虎360、去哪儿网、盘古文化传播有限公司、普华基础软件股份有限公司、品友互动、人人网、Springer Beijing Office、山东浪潮齐鲁软件、水利部发展研究中心、SAS R&D（Beijing）、搜浩捌捌（北京）企业管理有限公司、上海证券交易所、腾讯科技、完美世界、新华社中经社控股有限公司、新浪微博、新浪乐居、讯奇、银华基金、优酷网、亚信联创、用友软件股份有限公司、知本咨询、中华英才网、中国环境监测总站、中国建设银行北京市分行、中金公司、中粮我买网、中国气象局
 
-![会议现场](https://cos.name/wp-content/uploads/2012/05/IMG_8116.jpg)
+![会议现场](https://uploads.cosx.org/wp-content/uploads/2012/05/IMG_8116.jpg)
 
 # 会议内容
 
@@ -116,39 +116,39 @@ Allianz Global Assistance、艾美仕咨询公司、埃森哲、艾亿新融资�
 
 经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习。
 
-- 李舰：[基于R和pentaho的全套开源BI平台的实现](https://cos.name/wp-content/uploads/2012/05/lijian-BI.pptx)
+- 李舰：[基于R和pentaho的全套开源BI平台的实现](https://uploads.cosx.org/wp-content/uploads/2012/05/lijian-BI.pptx)
 
-- 周涛：[个性化推荐的十大挑战](https://cos.name/wp-content/uploads/2012/05/2-zhoutao-recommendation.pdf)
+- 周涛：[个性化推荐的十大挑战](https://uploads.cosx.org/wp-content/uploads/2012/05/2-zhoutao-recommendation.pdf)
 
-- 肖凯：[30分钟学会ggplot2](https://cos.name/wp-content/uploads/2012/05/30分钟学会ggplot2.pdf)
+- 肖凯：[30分钟学会ggplot2](https://uploads.cosx.org/wp-content/uploads/2012/05/30分钟学会ggplot2.pdf)
   
-- 邱怡轩：[R中大规模数据的整理和分析](https://cos.name/wp-content/uploads/2012/05/4-qiuyixuan-bigdata.pdf)
+- 邱怡轩：[R中大规模数据的整理和分析](https://uploads.cosx.org/wp-content/uploads/2012/05/4-qiuyixuan-bigdata.pdf)
 
-- 潘岚锋：[用bignmf进行非负矩阵分解](https://cos.name/wp-content/uploads/2012/05/5-panlanfeng-bignmf.pdf)
+- 潘岚锋：[用bignmf进行非负矩阵分解](https://uploads.cosx.org/wp-content/uploads/2012/05/5-panlanfeng-bignmf.pdf)
  
-- 王剑：[COS沙龙介绍](https://cos.name/wp-content/uploads/2012/05/6-wangjian-COS-salon.pptx)
+- 王剑：[COS沙龙介绍](https://uploads.cosx.org/wp-content/uploads/2012/05/6-wangjian-COS-salon.pptx)
   
-- 魏太云：[knitr与动态报告生成系统](https://cos.name/wp-content/uploads/2012/05/7-weitaiyun-knitr.pdf)
+- 魏太云：[knitr与动态报告生成系统](https://uploads.cosx.org/wp-content/uploads/2012/05/7-weitaiyun-knitr.pdf)
   
-- 陈丽云：[统计辟谣训练营](https://cos.name/wp-content/uploads/2012/05/8-chenliyun-rumor.zip)
+- 陈丽云：[统计辟谣训练营](https://uploads.cosx.org/wp-content/uploads/2012/05/8-chenliyun-rumor.zip)
    
-- 邓一硕：[R与金融投资分析的框架](https://cos.name/wp-content/uploads/2012/05/9-dengyishuo-finance.pdf)
+- 邓一硕：[R与金融投资分析的框架](https://uploads.cosx.org/wp-content/uploads/2012/05/9-dengyishuo-finance.pdf)
 
-- 孟生旺：[R在精算中的应用](https://cos.name/wp-content/uploads/2012/05/10-mengshengwang-actuarial-science.pptx)
+- 孟生旺：[R在精算中的应用](https://uploads.cosx.org/wp-content/uploads/2012/05/10-mengshengwang-actuarial-science.pptx)
   
-- 陈逸波：[R在社会网络分析中的一些应用](https://cos.name/wp-content/uploads/2012/05/11-chenyibo-social-network.pdf)
+- 陈逸波：[R在社会网络分析中的一些应用](https://uploads.cosx.org/wp-content/uploads/2012/05/11-chenyibo-social-network.pdf)
  
-- 段敏明：[Data Mining with R-ORE](https://cos.name/wp-content/uploads/2012/05/12-duanminming-ORE.ppt)
+- 段敏明：[Data Mining with R-ORE](https://uploads.cosx.org/wp-content/uploads/2012/05/12-duanminming-ORE.ppt)
   
-- 黄金山：[Rcpp快速入门](https://cos.name/wp-content/uploads/2012/05/13-huangjinshan-Rcpp.pdf)
+- 黄金山：[Rcpp快速入门](https://uploads.cosx.org/wp-content/uploads/2012/05/13-huangjinshan-Rcpp.pdf)
   
-- 叶明：[R在工业智能中的应用](https://cos.name/wp-content/uploads/2012/05/14-yeming-industrial-intelligence.pptx)
+- 叶明：[R在工业智能中的应用](https://uploads.cosx.org/wp-content/uploads/2012/05/14-yeming-industrial-intelligence.pptx)
  
-- 陆银波：[隐马尔可夫链模型](https://cos.name/wp-content/uploads/2012/05/15-luyinbo-HMM.pdf)
+- 陆银波：[隐马尔可夫链模型](https://uploads.cosx.org/wp-content/uploads/2012/05/15-luyinbo-HMM.pdf)
  
-- 郝智恒：[机器学习的试验设计初探](https://cos.name/wp-content/uploads/2012/05/16-haozhiheng-DOE.pdf)
+- 郝智恒：[机器学习的试验设计初探](https://uploads.cosx.org/wp-content/uploads/2012/05/16-haozhiheng-DOE.pdf)
   
-- 李欣海：[用R实现随机森林的分类与回归](https://cos.name/wp-content/uploads/2012/05/17-lixinhai-random-forest.pdf)
+- 李欣海：[用R实现随机森林的分类与回归](https://uploads.cosx.org/wp-content/uploads/2012/05/17-lixinhai-random-forest.pdf)
 
 # 感想和建议
   

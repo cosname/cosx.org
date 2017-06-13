@@ -30,7 +30,7 @@ parallel(~iris[1:4], iris, groups = Species,
     horizontal.axis = FALSE, scales = list(x = list(rot = 90)))
 ```
 
-![Iris 数据的轮廓图(Parallel Coordinate Plots)](https://cos.name/wp-content/uploads/2009/03/parallel2.png)
+![Iris 数据的轮廓图(Parallel Coordinate Plots)](https://uploads.cosx.org/wp-content/uploads/2009/03/parallel2.png)
 <p style="text-align: center;">图1 Iris 数据的轮廓图(Parallel Coordinate Plots)</p>
 
 观察图1，可以发现同一品种的鸢尾花的轮廓图粗略地聚集在一起。
@@ -72,7 +72,7 @@ legend(x = -3, y = 15, c("setosa", "versicolor", "virginica"),
     lty = 1, col = c("red", "green3", "blue"))
 ```
 
-![Iris 数据的调和曲线图](https://cos.name/wp-content/uploads/2009/03/unison.png)
+![Iris 数据的调和曲线图](https://uploads.cosx.org/wp-content/uploads/2009/03/unison.png)
 <p style="text-align: center;">图2 Iris 数据的调和曲线图</p>
 
 观察图2，同样可以发现同一品种鸢尾花数据的调和曲线图基本上扭在一起。同图1 比较后，发现图2 更加清楚明白，事实上Andrews证明了调和曲线图有许多良好性质。

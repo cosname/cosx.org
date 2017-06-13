@@ -33,7 +33,7 @@ slug: jinyong-fiction-mining
 
 这些怎么看起来这么不靠谱…算了，还是自己动手丰衣足食吧。眼看太阳就要下山了，小编赶紧打开电脑。噼里啪啦一阵键盘声响起，金庸大侠的十四本小说就乖乖的躺在那里了。稍待片刻，等我做好了分析，嘿嘿，晚上就不怕师傅拷问了。都说群众的智慧是无穷的，听说[一博彩公司预测大选什么的比那些专门的学者们还要准](http://www.npr.org/2012/11/29/166177281/y)…我还是先看看那些大侠们都用什么吧！都说剑品即人品，那我们就来看看这些武器的PR值吧（此处纯属开玩笑 :P，PageRank还是一个比较好用的计算网络权重的指标）。
 
-![金庸的武侠世界](https://cos.name/wp-content/uploads/2012/11/the_world.png "金庸的武侠世界")
+![金庸的武侠世界](https://uploads.cosx.org/wp-content/uploads/2012/11/the_world.png "金庸的武侠世界")
 
 金庸的武侠世界
 
@@ -63,19 +63,19 @@ slug: jinyong-fiction-mining
 
 嘻嘻，搞定了晚上梦会师傅的事情，就可以开始玩玩其他的了。顺便，好奇的心情发作…有没有发现，其实这朵花，真的是开了好多瓣呢？一瓣，怕就是一本书吧！
 
-![金庸一枝花](https://cos.name/wp-content/uploads/2012/11/jinyong_flower.png "金庸一枝花")
+![金庸一枝花](https://uploads.cosx.org/wp-content/uploads/2012/11/jinyong_flower.png "金庸一枝花")
 
 金庸一枝花 
 
 好吧，继续过过瘾…既然都这样了，就开始八卦一下这些人物的关系吧！
 
-![金庸人物关系网](https://cos.name/wp-content/uploads/2012/11/characters_main.png "金庸人物关系网")
+![金庸人物关系网](https://uploads.cosx.org/wp-content/uploads/2012/11/characters_main.png "金庸人物关系网")
 
 金庸人物关系网
 
 等等，什么，射雕三部曲居然不在一块儿！这到底是什么个情况！！！
 
-![射雕三部曲关系网](https://cos.name/wp-content/uploads/2012/11/fiction_three_small.png "射雕三部曲关系网")
+![射雕三部曲关系网](https://uploads.cosx.org/wp-content/uploads/2012/11/fiction_three_small.png "射雕三部曲关系网")
 
 射雕三部曲关系网
 

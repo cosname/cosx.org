@@ -16,9 +16,9 @@ tags:
 slug: 3rd-china-r-beijing-summary
 ---
 
-![第三届中国R语言会议北京会场合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg "第三届中国R语言会议北京会场合影") 第三届中国R语言会议北京会场合影（右键另存为看大图）
+![第三届中国R语言会议北京会场合影](https://uploads.cosx.org/wp-content/uploads/2010/06/3rd-China-R-BJ.jpg "第三届中国R语言会议北京会场合影") 第三届中国R语言会议北京会场合影（右键另存为看大图）
 
-![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+![中国R语言会议标识](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-Logo.png)
 
 第三届中国R语言会议（北京会场）于2010年6月14日~15日在中国人民大学明德法学楼0101成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都网站([cos.name](https://cos.name))协办。在两天的会议时间里，来自各行各业的R用户齐聚北京，共同探讨和交流R软件的使用经验，取得了丰厚的成果。 
 
@@ -77,23 +77,23 @@ slug: 3rd-china-r-beijing-summary
 
 培训讲稿下载：
 
-  * [R语言基础](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Rintro.pdf)
+  * [R语言基础](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-Rintro.pdf)
   
-  * [R作图](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Graphics.zip)
+  * [R作图](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-Graphics.zip)
 
 6月15日为会议的演讲报告部分，本次会议共进行了九场正式报告，在此要特别感谢各位演讲者热情的参与和支持。以下演讲资料都遵守[CC协议](http://creativecommons.org/licenses/by/3.0/deed.zh)：
 
   * 谢益辉：傻瓜软件是怎样炼成的：[用gWidgets包创建图形用户界面](http://yihui.name/cn/wp-content/uploads/2010/06/3rd-ChinaR-gWidgets-Yihui-Xie.pdf)（[相关程序代码](http://yihui.name/cn/wp-content/uploads/2010/06/3rd-ChinaR-gWidgets-Yihui-Xie.txt)）
-  * 江麒：[Nlme包](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Nlme-Package.pdf)及[数学建模中的R](https://cos.name/wp-content/uploads/2010/06/China-R-2010-MCM-with-R.pdf)
-  * 李舰：[R与文本挖掘](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Text-Mining.pdf)
-  * 杨仁东：[R与Python在昼夜节律分析中的应用](https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Python.pdf)
-  * 陈堰平：[非参数回归的R语言实现](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Nonparametric-Regression-with-R.pdf)
-  * 稳国柱：[加速R，矢量化运算与并行运算](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Vectorization.ppt)（更详细的介绍请参见[这里](http://www.wentrue.net/blog/?p=945)）
-  * 祝迎春：[R与因子分析的新发展](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Factor-Analysis.pdf)
-  * 甄一松：[R/BioConductor在斑马鱼心脏再生领域的应用](https://cos.name/wp-content/uploads/2010/06/China-R-2010-R-Bioconductor.pdf)
-  * 胡一睿：[R在处理门限自回归模型中的应用](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Time-Series-TAR-Model.pdf)
+  * 江麒：[Nlme包](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-Nlme-Package.pdf)及[数学建模中的R](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-MCM-with-R.pdf)
+  * 李舰：[R与文本挖掘](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-Text-Mining.pdf)
+  * 杨仁东：[R与Python在昼夜节律分析中的应用](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-R-Python.pdf)
+  * 陈堰平：[非参数回归的R语言实现](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-Nonparametric-Regression-with-R.pdf)
+  * 稳国柱：[加速R，矢量化运算与并行运算](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-Vectorization.ppt)（更详细的介绍请参见[这里](http://www.wentrue.net/blog/?p=945)）
+  * 祝迎春：[R与因子分析的新发展](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-Factor-Analysis.pdf)
+  * 甄一松：[R/BioConductor在斑马鱼心脏再生领域的应用](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-R-Bioconductor.pdf)
+  * 胡一睿：[R在处理门限自回归模型中的应用](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-2010-Time-Series-TAR-Model.pdf)
 
-![第三届中国R语言会议北京会场演讲者与组织人员合影](https://cos.name/wp-content/uploads/2010/06/3rd-China-R-BJ-2.jpg "第三届中国R语言会议北京会场演讲者与组织人员合影")
+![第三届中国R语言会议北京会场演讲者与组织人员合影](https://uploads.cosx.org/wp-content/uploads/2010/06/3rd-China-R-BJ-2.jpg "第三届中国R语言会议北京会场演讲者与组织人员合影")
 
 第三届中国R语言会议北京会场演讲者与组织人员合影（右键另存为看大图）
   

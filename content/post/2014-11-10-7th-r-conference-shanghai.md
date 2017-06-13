@@ -17,7 +17,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 除了统计之都主站，会务信息还会通过统计之都微信、微博([@统计之都](http://weibo.com/cosname))来发布，欢迎大家关注获取最新消息。
 
-![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+![](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-Logo.png)
 
 会议的相关情况如下：
 
@@ -31,7 +31,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
   
 地址：中山北路3663号（地铁3，4号线金沙江路站）。
   
-[![ECNU](https://cos.name/wp-content/uploads/2011/09/ECNU_MAP.png)](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
+[![ECNU](https://uploads.cosx.org/wp-content/uploads/2011/09/ECNU_MAP.png)](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
 
 # 三、会议主题
 
@@ -64,7 +64,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 请下载会议手册的电子版获取更详细的内容：
   
-[第七届中国R语言会议（上海会场）会议手册](https://cos.name/wp-content/uploads/2014/11/ChinaR2014SH_Manual_V3.pdf)
+[第七届中国R语言会议（上海会场）会议手册](https://uploads.cosx.org/wp-content/uploads/2014/11/ChinaR2014SH_Manual_V3.pdf)
 
 # 四、会议赞助
 

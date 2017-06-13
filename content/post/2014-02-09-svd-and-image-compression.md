@@ -71,12 +71,12 @@ slug: svd-and-image-compression
 
 为了直观地来看看 SVD 压缩图像的效果，我们拿一幅 1000×622 的图片来做实验（图片来源：<http://www.bjcaca.com/bisai/show.php?pid=33844&bid=40>）
 
-![SVD演示图片，原图](https://cos.name/wp-content/uploads/2014/02/pic2.jpg)
-![svd_1](https://cos.name/wp-content/uploads/2014/02/svd_1.jpg)
-![svd_5](https://cos.name/wp-content/uploads/2014/02/svd_5.jpg)
-![svd_20](https://cos.name/wp-content/uploads/2014/02/svd_20.jpg)
-![svd_50](https://cos.name/wp-content/uploads/2014/02/svd_50.jpg)
-![svd_100](https://cos.name/wp-content/uploads/2014/02/svd_100.jpg)
+![SVD演示图片，原图](https://uploads.cosx.org/wp-content/uploads/2014/02/pic2.jpg)
+![svd_1](https://uploads.cosx.org/wp-content/uploads/2014/02/svd_1.jpg)
+![svd_5](https://uploads.cosx.org/wp-content/uploads/2014/02/svd_5.jpg)
+![svd_20](https://uploads.cosx.org/wp-content/uploads/2014/02/svd_20.jpg)
+![svd_50](https://uploads.cosx.org/wp-content/uploads/2014/02/svd_50.jpg)
+![svd_100](https://uploads.cosx.org/wp-content/uploads/2014/02/svd_100.jpg)
 
 可以看出，当取一个成分时，景物完全不可分辨，但还是可以看出原始图片的整体色调。取 5 个成分时，已经依稀可以看出景物的轮廓。而继续增加`\(k\)`的取值，会让图片的细节更加清晰；当增加到 100 时，已经几乎与原图看不出区别。
 

@@ -12,7 +12,7 @@ slug: 2rd-bayesian-statistics-meeting
 description: 第二届中国贝叶斯统计学术论坛（天津，2014）将于2014年12月21日（周日）在天津财经大学召开，本次会议由天津财经大学中国经济统计研究中心、贝叶斯之道研究室主办，统计之都协办，本文为该会议详细的日程安排。
 ---
 
-![bayes-forum](https://cos.name/wp-content/uploads/2014/12/bayes-forum.png)
+![bayes-forum](https://uploads.cosx.org/wp-content/uploads/2014/12/bayes-forum.png)
 
 第二届中国贝叶斯统计学术论坛（天津，2014）将于2014年12月21日（周日）在天津财经大学召开，本次会议由天津财经大学中国经济统计研究中心、贝叶斯之道研究室主办，统计之都协办，会议通知如下：
 
@@ -24,7 +24,7 @@ description: 第二届中国贝叶斯统计学术论坛（天津，2014）将于
 
 天津财经大学B座205教室（统计湖畔）
 
-![tjcd](https://cos.name/wp-content/uploads/2014/12/tjcd.png)
+![tjcd](https://uploads.cosx.org/wp-content/uploads/2014/12/tjcd.png)
 
 # 三、论坛内容
 
@@ -38,7 +38,7 @@ description: 第二届中国贝叶斯统计学术论坛（天津，2014）将于
 
 **报告题目： Bayesian forecasting of demographic rates for small areas**
 
-![zhangjunni](https://cos.name/wp-content/uploads/2014/12/zhangjunni.png)
+![zhangjunni](https://uploads.cosx.org/wp-content/uploads/2014/12/zhangjunni.png)
 
 张俊妮（北京大学）
 
@@ -46,7 +46,7 @@ description: 第二届中国贝叶斯统计学术论坛（天津，2014）将于
 
 **报告题目： 农村土地流转综合评估与大数据监测**
 
-![gubin](https://cos.name/wp-content/uploads/2014/12/gubin.png)
+![gubin](https://uploads.cosx.org/wp-content/uploads/2014/12/gubin.png)
  
 谷彬（国家统计局）
 
@@ -54,7 +54,7 @@ description: 第二届中国贝叶斯统计学术论坛（天津，2014）将于
 
 **报告题目： R-web :大型多人在线数据分析协作平台(Massively Multi-analyst Online Data Analysis Platform)**
 
-![linzhenshun](https://cos.name/wp-content/uploads/2014/12/linzhenshun.png)
+![linzhenshun](https://uploads.cosx.org/wp-content/uploads/2014/12/linzhenshun.png)
 
  林祯舜（CEO，辰智咨询/江苏先锋信息科技）
 
@@ -62,7 +62,7 @@ description: 第二届中国贝叶斯统计学术论坛（天津，2014）将于
 
 **报告题目：统计分析的第三范式：大数据与贝叶斯统计思维**
 
-![bayes-dao](https://cos.name/wp-content/uploads/2014/12/bayes-dao.png)
+![bayes-dao](https://uploads.cosx.org/wp-content/uploads/2014/12/bayes-dao.png)
  
 [贝叶斯之道](https://bayes-stat.github.com)
 
@@ -86,7 +86,7 @@ description: 第二届中国贝叶斯统计学术论坛（天津，2014）将于
 
 # 五、交通和住宿提示
 
-![ditu](https://cos.name/wp-content/uploads/2014/12/ditu.png)
+![ditu](https://uploads.cosx.org/wp-content/uploads/2014/12/ditu.png)
 
 ## （一）本市学友：
 

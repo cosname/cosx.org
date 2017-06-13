@@ -17,7 +17,7 @@ slug: 7th-r-conference-hangzhou
 
 除了统计之都主站，会务信息还会通过统计之都微信、微博([@统计之都](http://weibo.com/cosname))来发布，欢迎大家关注获取最新消息。
 
-![](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+![](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-Logo.png)
 
 会议的相关情况如下：
 
@@ -29,7 +29,7 @@ slug: 7th-r-conference-hangzhou
 
 杭州市余杭区杭州师范大学仓前校区，恕园7号楼艺术大厅。
   
-![仓前校区图片](https://cos.name/wp-content/uploads/2014/11/仓前校区图片.jpg)
+![仓前校区图片](https://uploads.cosx.org/wp-content/uploads/2014/11/仓前校区图片.jpg)
 
 # 三、会议情况
 
@@ -62,7 +62,7 @@ slug: 7th-r-conference-hangzhou
   * 周宁奕（淘宝数据平台）：基于地图的数据可视展现
   * 郎大为（SupStat数据科学家）：地图可视化中的数据挖掘
 
-请下载会议手册的电子版获取更详细的内容：[第七届中国R语言（杭州会场）会议手册](https://cos.name/wp-content/uploads/2014/11/ChinaR2014HZ_Manual_V4.pdf)
+请下载会议手册的电子版获取更详细的内容：[第七届中国R语言（杭州会场）会议手册](https://uploads.cosx.org/wp-content/uploads/2014/11/ChinaR2014HZ_Manual_V4.pdf)
 
 # 五、会议赞助
 

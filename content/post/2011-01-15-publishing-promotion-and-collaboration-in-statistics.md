@@ -15,7 +15,7 @@ tags:
 slug: publishing-promotion-and-collaboration-in-statistics
 ---
 
-![统计学论文的发表流程、及统计学家的晋升和合作（内幕）](https://cos.name/wp-content/uploads/2011/01/shapeimage_3.png)
+![统计学论文的发表流程、及统计学家的晋升和合作（内幕）](https://uploads.cosx.org/wp-content/uploads/2011/01/shapeimage_3.png)
 
 这标题很吸引人，所有统计学相关领域的人可能都关心这几件事，但敬请降低对本文的期望。我不能再多说，否则要剧透了（看过的朋友也请不要剧透）。这段35分钟的视频讲述了统计学论文是如何发表的、统计学家在机构内如何得到晋升（影响晋升的指标），以及统计学家和生物学家如何交流和合作的种种“内幕”。新年伊始，我们也不想用大篇技术文章来“折磨”[统计之都](https://cos.name)的读者们，那么，开始欣赏这部小电影吧：
 

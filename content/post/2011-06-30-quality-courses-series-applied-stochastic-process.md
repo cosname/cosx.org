@@ -34,23 +34,23 @@ slug: quality-courses-series-applied-stochastic-process
 
 # 二、课程讲义及历年考题
 
-[第1章 预备知识](https://cos.name/wp-content/uploads/2011/06/%E7%AC%AC1%E7%AB%A0-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.pdf)
+[第1章 预备知识](https://uploads.cosx.org/wp-content/uploads/2011/06/%E7%AC%AC1%E7%AB%A0-%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86.pdf)
   
-[第2章 随机过程的基本概念和类型](https://cos.name/wp-content/uploads/2011/06/%E7%AC%AC2%E7%AB%A0-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E7%B1%BB%E5%9E%8B.pdf)
+[第2章 随机过程的基本概念和类型](https://uploads.cosx.org/wp-content/uploads/2011/06/%E7%AC%AC2%E7%AB%A0-%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E5%92%8C%E7%B1%BB%E5%9E%8B.pdf)
   
-[第3章 Poisson过程](https://cos.name/wp-content/uploads/2011/06/%E7%AC%AC3%E7%AB%A0-Poisson%E8%BF%87%E7%A8%8B.pdf)
+[第3章 Poisson过程](https://uploads.cosx.org/wp-content/uploads/2011/06/%E7%AC%AC3%E7%AB%A0-Poisson%E8%BF%87%E7%A8%8B.pdf)
   
-[第4章 更新过程](https://cos.name/wp-content/uploads/2011/06/%E7%AC%AC4%E7%AB%A0-%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B.pdf)
+[第4章 更新过程](https://uploads.cosx.org/wp-content/uploads/2011/06/%E7%AC%AC4%E7%AB%A0-%E6%9B%B4%E6%96%B0%E8%BF%87%E7%A8%8B.pdf)
   
-[第5章 Markov链](https://cos.name/wp-content/uploads/2011/06/%E7%AC%AC5%E7%AB%A0-Markov%E9%93%BE.pdf)
+[第5章 Markov链](https://uploads.cosx.org/wp-content/uploads/2011/06/%E7%AC%AC5%E7%AB%A0-Markov%E9%93%BE.pdf)
   
-[第6章 鞅](https://cos.name/wp-content/uploads/2011/06/%E7%AC%AC6%E7%AB%A0-%E9%9E%85.pdf)
+[第6章 鞅](https://uploads.cosx.org/wp-content/uploads/2011/06/%E7%AC%AC6%E7%AB%A0-%E9%9E%85.pdf)
   
-[第7章 Brown运动](https://cos.name/wp-content/uploads/2011/06/%E7%AC%AC7%E7%AB%A0-Brown%E8%BF%90%E5%8A%A8.pdf)
+[第7章 Brown运动](https://uploads.cosx.org/wp-content/uploads/2011/06/%E7%AC%AC7%E7%AB%A0-Brown%E8%BF%90%E5%8A%A8.pdf)
   
-[第8章 随机积分](https://cos.name/wp-content/uploads/2011/06/%E7%AC%AC8%E7%AB%A0-%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86.pdf)
+[第8章 随机积分](https://uploads.cosx.org/wp-content/uploads/2011/06/%E7%AC%AC8%E7%AB%A0-%E9%9A%8F%E6%9C%BA%E7%A7%AF%E5%88%86.pdf)
   
-历年考题（[2008](https://cos.name/wp-content/uploads/2011/06/2008+%E5%BA%94%E7%94%A8%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%80%83%E9%A2%98.pdf)、[2009](https://cos.name/wp-content/uploads/2011/06/%E5%BA%94%E7%94%A8%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B1.doc)、[2010](https://cos.name/wp-content/uploads/2011/06/2010+%E5%BA%94%E7%94%A8%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%80%83%E9%A2%98.pdf)）
+历年考题（[2008](https://uploads.cosx.org/wp-content/uploads/2011/06/2008+%E5%BA%94%E7%94%A8%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%80%83%E9%A2%98.pdf)、[2009](https://uploads.cosx.org/wp-content/uploads/2011/06/%E5%BA%94%E7%94%A8%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B1.doc)、[2010](https://uploads.cosx.org/wp-content/uploads/2011/06/2010+%E5%BA%94%E7%94%A8%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B%E8%80%83%E9%A2%98.pdf)）
 
 # 三、教学进度及内容
 

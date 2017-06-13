@@ -186,7 +186,7 @@ plot(rrProfile$sigma,
 lines(sfit,muf,col="red")
 ```
 
-![](https://cos.name/wp-content/uploads/2016/12/1.jpg)
+![](https://uploads.cosx.org/wp-content/uploads/2016/12/1.jpg)
 
 tseries包中的portfolio.optim比较而言更好用。只需要输入预期收益率,该函数会直接返回出来最优组合权重。在最低预期收益率(比如 100% 持有 SHY)到最高预期收益率(比如100％持有TLT)之间修改输入的收益。注意，portfolio.optim会使用日收益率做计算，因此代码将不得不做一些处理并假设一年有255个交易日。
 
@@ -235,7 +235,7 @@ solution = data.frame(wTLT,wSHY,wIEF,er,eStd)
 
 如下图：
 
-![2](https://cos.name/wp-content/uploads/2016/12/2.jpg)
+![2](https://uploads.cosx.org/wp-content/uploads/2016/12/2.jpg)
 
 总资产组合中有效边界的蓝线表示其优于杠铃策略。对于每个风险水平，预期收益都更高。从图表上看,这表明添加 IEF 到组合将优化组合。进一步，看到杠铃策略收益的逼近最大值，用三个标的组合的组合策略比之前的风险少了一半。
 

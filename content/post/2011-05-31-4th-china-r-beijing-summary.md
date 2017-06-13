@@ -16,11 +16,11 @@ tags:
 slug: 4th-china-r-beijing-summary
 ---
 
-![第四届中国R语言会议（北京会场）合影](https://cos.name/wp-content/uploads/2011/05/4th-China-R-BJ.jpg)
+![第四届中国R语言会议（北京会场）合影](https://uploads.cosx.org/wp-content/uploads/2011/05/4th-China-R-BJ.jpg)
 
 第四届中国R语言会议（北京会场）合影（右键另存为看大图）
 
-![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 第四届中国R语言会议（北京会场）于2011年5月28日~29日在中国人民大学明德法学楼0201成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都([cos.name](https://cos.name))协办。在两天的会议时间里，参会者齐聚一堂，就R语言在生物、金融、网络、商业等诸多方面的应用进行了深入的探讨。
+![中国R语言会议标识](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-Logo.png) 第四届中国R语言会议（北京会场）于2011年5月28日~29日在中国人民大学明德法学楼0201成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院主办、统计之都([cos.name](https://cos.name))协办。在两天的会议时间里，参会者齐聚一堂，就R语言在生物、金融、网络、商业等诸多方面的应用进行了深入的探讨。
 
 <!--more-->
 
@@ -34,7 +34,7 @@ slug: 4th-china-r-beijing-summary
 
 > 58同城、Mango Solutions、Sanofi Pasteur、SAS北京研发中心、SPSS China、艾瑞咨询、百度、北京安泰科信息开发有限公司、北京风行在线技术有限公司、北京汉端科技有限公司、北京航空航天大学出版社、北京市国富如荷网络科技有限公司、北京网达信联科技发展有限公司上海分公司、北京正和之道管理咨询有限责任公司、北京质量协会、北森、博奥生物有限公司、创维数字、当当网、歌尔泰克、好耶网络广告、华胜天成、甲骨文、酷6网、奇艺网、上海烟草集团有限责任公司、深圳华大基因研究院、深圳茂源投资管理有限公司、首钢、水利部发展研究中心、淘宝、腾讯、同方股份有限公司、无线讯奇、西安交通大学出版社、小米科技、新华社中经社控股有限公司、新华信咨询、新浪、益普索、优酷网、中诚信信用管理、中国电子科技集团公司信息化工程总体研究中心、中国疾控、中国移动、中国邮政集团、卓望信息
 
-![会议现场20110528](https://cos.name/wp-content/uploads/2011/05/hot.jpg)
+![会议现场20110528](https://uploads.cosx.org/wp-content/uploads/2011/05/hot.jpg)
 
 会议现场  
 
@@ -119,23 +119,23 @@ R的高级编程技巧主要包括向量运算和扩展软件包的使用两方�
 经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习。演讲视频请[点击这里](http://t.cn/aKWeMl)。
 
   
-+ 李舰：[R与高性能运算](https://cos.name/wp-content/uploads/2011/05/01-Li-Jian-HPC.pdf)（[代码](https://cos.name/wp-content/uploads/2011/05/01-Li-Jian-HPC.txt)）
-+ 李欣海：[广义线性模型的基本原理及其应用](https://cos.name/wp-content/uploads/2011/06/2.-%E6%9D%8E%E6%AC%A3%E6%B5%B7-%E5%B9%BF%E4%B9%89%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B.pdf)
-+ 肖嘉敏：[基于R的网络用户行为研究](https://cos.name/wp-content/uploads/2011/06/3.-%E8%82%96%E5%98%89%E6%95%8F-%E5%9F%BA%E4%BA%8ER%E7%9A%84%E7%BD%91%E7%BB%9C%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E7%A0%94%E7%A9%B6.pdf)
-+ 张金龙：[R 与进化生态学](https://cos.name/wp-content/uploads/2011/06/4.-%E5%BC%A0%E9%87%91%E9%BE%99-R%E4%B8%8E%E8%BF%9B%E5%8C%96%E7%94%9F%E6%80%81%E5%AD%A6_%E7%B3%BB%E7%BB%9F%E5%8F%91%E8%82%B2%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0.ppt)
-+ 李青龙：[R与EXCEL VBA及MATLAB混合编程](https://cos.name/wp-content/uploads/2011/05/05-Li-Qinglong-R-Matlab-VBA.pdf)
-+ 王洪月：[SAS Interaction with R](https://cos.name/wp-content/uploads/2011/05/6.-王洪月-SAS-Interation-with-R.ppt)
-+ 颜林林：[R高级编程技巧及Rcpp的介绍](https://cos.name/wp-content/uploads/2011/06/7.-%E9%A2%9C%E6%9E%97%E6%9E%97-R%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7%E5%8F%8ARcpp%E7%9A%84%E4%BB%8B%E7%BB%8D.ppt)
-+ 曹宗富：[基于R/Bioconductor进行生物芯片数据分析](https://cos.name/wp-content/uploads/2011/06/8.-%E6%9B%B9%E5%AE%97%E5%AF%8C-%E5%9F%BA%E4%BA%8ER_Bioconductor%E8%BF%9B%E8%A1%8C%E7%94%9F%E7%89%A9%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.ppt)
-+ 李颖：[推进R语言图书的发展](https://cos.name/wp-content/uploads/2011/06/9.-%E6%9D%8E%E9%A2%96-%E6%8E%A8%E8%BF%9BR%E8%AF%AD%E8%A8%80%E5%9B%BE%E4%B9%A6%E7%9A%84%E5%8F%91%E5%B1%95.ppt)
-+ 邓一硕：[R与现代金融分析](https://cos.name/wp-content/uploads/2011/05/10-Deng-Yishuo-Finance.pdf)
-+ 林伟林：[R在量化投资的应用](https://cos.name/wp-content/uploads/2011/06/11.-%E6%9E%97%E4%BC%9F%E6%9E%97-R%E5%9C%A8%E9%87%8F%E5%8C%96%E6%8A%95%E8%B5%84%E7%9A%84%E5%BA%94%E7%94%A8.ppt)
-+ 胡江堂：[关于R和SAS的7个广为流传的误解](https://cos.name/wp-content/uploads/2011/06/12.-%E8%83%A1%E6%B1%9F%E5%A0%82-R-versus-SAS.ppt)
-+ 李舰：[R的商用情况简介](https://cos.name/wp-content/uploads/2011/05/13-Li-Jian-R-in-Commerce.pdf)
-+ 朱剑锋：[R在宏基因组研究中的应用](https://cos.name/wp-content/uploads/2011/06/14.-%E6%9C%B1%E5%89%91%E9%94%8B-R%E5%9C%A8%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%A0%94%E7%A9%B6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf)
-+ 赵毅：[R与.NET混合编程及其在化学计量学中的应用](https://cos.name/wp-content/uploads/2011/06/15.-%E8%B5%B5%E6%AF%85-R%E4%B8%8E.NET%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%8C%96%E5%AD%A6%E8%AE%A1%E9%87%8F%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf)
-+ 卢一鸣：[R在基因芯片数据处理中的应用](https://cos.name/wp-content/uploads/2011/06/16.-%E5%8D%A2%E4%B8%80%E9%B8%A3-R%C2%8A%E5%9C%A8%E5%9F%BA%E5%9B%A0%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%)
-+ 张雯：[R语言在物种进化分析中的应用](https://cos.name/wp-content/uploads/2011/06/17.-%E5%BC%A0%E9%9B%AF-R%E8%AF%AD%E8%A8%80%E5%9C%A8%E7%89%A9%E7%A7%8D%E8%BF%9B%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.ppt)
++ 李舰：[R与高性能运算](https://uploads.cosx.org/wp-content/uploads/2011/05/01-Li-Jian-HPC.pdf)（[代码](https://uploads.cosx.org/wp-content/uploads/2011/05/01-Li-Jian-HPC.txt)）
++ 李欣海：[广义线性模型的基本原理及其应用](https://uploads.cosx.org/wp-content/uploads/2011/06/2.-%E6%9D%8E%E6%AC%A3%E6%B5%B7-%E5%B9%BF%E4%B9%89%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B.pdf)
++ 肖嘉敏：[基于R的网络用户行为研究](https://uploads.cosx.org/wp-content/uploads/2011/06/3.-%E8%82%96%E5%98%89%E6%95%8F-%E5%9F%BA%E4%BA%8ER%E7%9A%84%E7%BD%91%E7%BB%9C%E7%94%A8%E6%88%B7%E8%A1%8C%E4%B8%BA%E7%A0%94%E7%A9%B6.pdf)
++ 张金龙：[R 与进化生态学](https://uploads.cosx.org/wp-content/uploads/2011/06/4.-%E5%BC%A0%E9%87%91%E9%BE%99-R%E4%B8%8E%E8%BF%9B%E5%8C%96%E7%94%9F%E6%80%81%E5%AD%A6_%E7%B3%BB%E7%BB%9F%E5%8F%91%E8%82%B2%E6%AF%94%E8%BE%83%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0.ppt)
++ 李青龙：[R与EXCEL VBA及MATLAB混合编程](https://uploads.cosx.org/wp-content/uploads/2011/05/05-Li-Qinglong-R-Matlab-VBA.pdf)
++ 王洪月：[SAS Interaction with R](https://uploads.cosx.org/wp-content/uploads/2011/05/6.-王洪月-SAS-Interation-with-R.ppt)
++ 颜林林：[R高级编程技巧及Rcpp的介绍](https://uploads.cosx.org/wp-content/uploads/2011/06/7.-%E9%A2%9C%E6%9E%97%E6%9E%97-R%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7%E5%8F%8ARcpp%E7%9A%84%E4%BB%8B%E7%BB%8D.ppt)
++ 曹宗富：[基于R/Bioconductor进行生物芯片数据分析](https://uploads.cosx.org/wp-content/uploads/2011/06/8.-%E6%9B%B9%E5%AE%97%E5%AF%8C-%E5%9F%BA%E4%BA%8ER_Bioconductor%E8%BF%9B%E8%A1%8C%E7%94%9F%E7%89%A9%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.ppt)
++ 李颖：[推进R语言图书的发展](https://uploads.cosx.org/wp-content/uploads/2011/06/9.-%E6%9D%8E%E9%A2%96-%E6%8E%A8%E8%BF%9BR%E8%AF%AD%E8%A8%80%E5%9B%BE%E4%B9%A6%E7%9A%84%E5%8F%91%E5%B1%95.ppt)
++ 邓一硕：[R与现代金融分析](https://uploads.cosx.org/wp-content/uploads/2011/05/10-Deng-Yishuo-Finance.pdf)
++ 林伟林：[R在量化投资的应用](https://uploads.cosx.org/wp-content/uploads/2011/06/11.-%E6%9E%97%E4%BC%9F%E6%9E%97-R%E5%9C%A8%E9%87%8F%E5%8C%96%E6%8A%95%E8%B5%84%E7%9A%84%E5%BA%94%E7%94%A8.ppt)
++ 胡江堂：[关于R和SAS的7个广为流传的误解](https://uploads.cosx.org/wp-content/uploads/2011/06/12.-%E8%83%A1%E6%B1%9F%E5%A0%82-R-versus-SAS.ppt)
++ 李舰：[R的商用情况简介](https://uploads.cosx.org/wp-content/uploads/2011/05/13-Li-Jian-R-in-Commerce.pdf)
++ 朱剑锋：[R在宏基因组研究中的应用](https://uploads.cosx.org/wp-content/uploads/2011/06/14.-%E6%9C%B1%E5%89%91%E9%94%8B-R%E5%9C%A8%E5%AE%8F%E5%9F%BA%E5%9B%A0%E7%BB%84%E7%A0%94%E7%A9%B6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf)
++ 赵毅：[R与.NET混合编程及其在化学计量学中的应用](https://uploads.cosx.org/wp-content/uploads/2011/06/15.-%E8%B5%B5%E6%AF%85-R%E4%B8%8E.NET%E6%B7%B7%E5%90%88%E7%BC%96%E7%A8%8B%E5%8F%8A%E5%85%B6%E5%9C%A8%E5%8C%96%E5%AD%A6%E8%AE%A1%E9%87%8F%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.pdf)
++ 卢一鸣：[R在基因芯片数据处理中的应用](https://uploads.cosx.org/wp-content/uploads/2011/06/16.-%E5%8D%A2%E4%B8%80%E9%B8%A3-R%C2%8A%E5%9C%A8%E5%9F%BA%E5%9B%A0%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E4%B8%AD%E7%9A%84%)
++ 张雯：[R语言在物种进化分析中的应用](https://uploads.cosx.org/wp-content/uploads/2011/06/17.-%E5%BC%A0%E9%9B%AF-R%E8%AF%AD%E8%A8%80%E5%9C%A8%E7%89%A9%E7%A7%8D%E8%BF%9B%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8.ppt)
 
 # 感想和建议
 

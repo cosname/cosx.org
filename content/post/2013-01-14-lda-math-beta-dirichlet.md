@@ -23,7 +23,7 @@ slug: lda-math-beta-dirichlet
 
 对于不喜欢数学的同学而言，估计每个概率分布都是一个恶魔，那在概率统计学中，均匀分布应该算得上是潘多拉魔盒，几乎所有重要的概率分布都可以从均匀分布`\(Uniform(0,1)\)`中生成出来;尤其是在统计模拟中，所有统计分布的随机样本都是通过均匀分布产生的。
 
-![pandora](https://cos.name/wp-content/uploads/2013/01/pandora.jpg)
+![pandora](https://uploads.cosx.org/wp-content/uploads/2013/01/pandora.jpg)
   
 潘多拉魔盒Uniform(0,1)
 
@@ -39,7 +39,7 @@ E = \{ & X_1 \in [x, x+\Delta x], \\
 & X_j \in (x+\Delta x,1] \quad (j=k+1,\cdots,n)\}
 \end{align*}`
 
-![beta-game-1](https://cos.name/wp-content/uploads/2013/01/beta-game-1.png)
+![beta-game-1](https://uploads.cosx.org/wp-content/uploads/2013/01/beta-game-1.png)
 
 **事件 `\(E\)`**
 
@@ -61,7 +61,7 @@ E’ = \{ & X_1,X_2\in [x, x+\Delta x], \\
 & X_j \in (x+\Delta x,1] \quad (j=k+1,\cdots,n)\}
 \end{align*}`
 
-![beta-game-2](https://cos.name/wp-content/uploads/2013/01/beta-game-2.png)
+![beta-game-2](https://uploads.cosx.org/wp-content/uploads/2013/01/beta-game-2.png)
 
 **事件E’**
 
@@ -117,7 +117,7 @@ f(x) = \frac{\Gamma(\alpha+\beta)}{\Gamma(\alpha)\Gamma(\beta)}x^{\alpha-1}(1-x)
   2. 数据`\(Y_i\)`中有`\(m_1\)`个比`\(p\)`小，`\(m_2\)`个比`\(p\)`大，`\(Y_i\)`相当于是做了`\(m\)`次贝努利实验，所以`\(m_1\)` 服从二项分布 `\(B(m,p)\)`；
   3. 在给定了来自数据提供的`\((m_1,m_2)\)`的知识后，`\(p\)` 的后验分布变为 `\(f(p|m_1,m_2)=Beta(p|k+m_1,n-k+1+m_2)\)`
 
-![coin-toss](https://cos.name/wp-content/uploads/2013/01/coin-toss.jpg)
+![coin-toss](https://uploads.cosx.org/wp-content/uploads/2013/01/coin-toss.jpg)
 
 **贝努利实验**
 
@@ -154,7 +154,7 @@ P(p|m_1,m_2) & = \frac{P(p)\cdot P(m_1,m_2|p)}{P(m_1,m_2)} \\
   
 计算得到的后验分布正好是 `\(Beta(p|m_1+1,m_2+1)\)`。
 
-  ![beta-distribution](https://cos.name/wp-content/uploads/2013/01/beta-distribution.png)
+  ![beta-distribution](https://uploads.cosx.org/wp-content/uploads/2013/01/beta-distribution.png)
   
   **百变星君Beta分布**
 
@@ -171,7 +171,7 @@ P(C \le k) = \frac{n!}{k!(n-k-1)!} \int_p^1 t^k(1-t)^{n-k-1} dt, \quad C\sim B(n
 
 我们可以如下构造二项分布，取随机变量 `\(X_1, X_2, \cdots, X_n {\stackrel{\mathrm{iid}}{\sim}}Uniform(0,1)\)`,一个成功的贝努利实验就是 `\(X_i<p\)`,否则表示失败,于是成功的概率为`\(p\)`。`\(C\)`用于计数成功的次数，于是`\(C\sim B(n,p)\)`。
 
-![beta-binomial](https://cos.name/wp-content/uploads/2013/01/beta-binomial.png)
+![beta-binomial](https://uploads.cosx.org/wp-content/uploads/2013/01/beta-binomial.png)
 
 **贝努利实验最多成功`\(k\)`次**
 
@@ -207,7 +207,7 @@ P(C \le k) & = P(X_{(k+1)} > p) \\
 
 完全类似于第一个游戏的推导过程，我们可以进行如下的概率计算(为了数学公式的简洁对称，我们取`\(x_3\)`满足`\(x_1+x_2+x_3 = 1\)`,但只有`\(x_1,x_2\)`是变量)
 
-![dirichlet-game](https://cos.name/wp-content/uploads/2013/01/dirichlet-game.png)
+![dirichlet-game](https://uploads.cosx.org/wp-content/uploads/2013/01/dirichlet-game.png)
 
   **`\((X_{(k_1)}, X_{(k_1+k_2)})\)`的联合分布推导**
 
@@ -235,7 +235,7 @@ f(x_1,x_2,x_3) & = \frac{n!}{(k_1-1)!(k_2-1)!(n-k_1-k_2)!}x_1^{k_1-1}x_2^{k_2-1}
 
 从形式上我们也能看出，Dirichlet 分布是Beta 分布在高维度上的推广，他和Beta 分布一样也是一个百变星君，密度函数可以展现出多种形态。
 
-![dirichlet-distribution](https://cos.name/wp-content/uploads/2013/01/dirichlet-distribution.png)
+![dirichlet-distribution](https://uploads.cosx.org/wp-content/uploads/2013/01/dirichlet-distribution.png)
 
 **不同 `\(\alpha\)` 下的Dirichlet 分布**
 

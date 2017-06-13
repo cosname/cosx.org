@@ -158,4 +158,4 @@ Number of iterations in optim(): 138
 
 以上向大家简单介绍了分组检测的一些方法及其在 R 中的实现。我们这里只讨论了分组检测中参数估计的问题。还有很多方法(参看 Bilder, Tebbs, and Chen, 2010)专注于如何通过再检验最快找出所有 `\(Y\_{ik}=1\)` 的样本，这些方法反过来也依赖于我们估计的 `\(\widehat{p}\_{ik}\)`（在阳性组中优先再检验 `\(\widehat{p}_{ik}\)` 大的样本）。如果你的工作中能用到这些方法，欢迎你使用我们的 **binGroup** 包以及向我咨询；如果和你的工作没有直接的联系，我们的模型和 R 程序也涉及了统计学中一些热门的方法，希望能对大家有所帮助和启发。
 
-下载本文PDF文档： [分组检测方法和binGroup包](https://cos.name/wp-content/uploads/2011/11/分组检测方法和binGroup包.pdf)
+下载本文PDF文档： [分组检测方法和binGroup包](https://uploads.cosx.org/wp-content/uploads/2011/11/分组检测方法和binGroup包.pdf)

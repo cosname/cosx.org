@@ -8,7 +8,7 @@ slug: 5th-china-r-shanghai-summary
 description: "第五届中国R语言会议（上海会场）于2012年11月3日~4日在上海财经大学行政楼一楼报告厅成功召开。会议由上海财经大学统计与管理学院主办、统计之都（[cos.name](https://cos.name)）协办，艾瑞咨询（[iresearch](http://www.iresearch.cn/)）、Mango Solutions（[mango-solutions](http://www.mango-solutions.com.cn/)）、上海财经大学数理经济学教育部重点实验室以及上海财经大学上海市一流学科（B类， 统计学）提供了赞助。在两天的会议时间里，群贤毕集，盛况空前。"
 ---
 
-![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png) 
+![中国R语言会议标识](https://uploads.cosx.org/wp-content/uploads/2010/06/China-R-Logo.png) 
 
 第五届中国R语言会议（上海会场）于2012年11月3日~4日在上海财经大学行政楼一楼报告厅成功召开。会议由上海财经大学统计与管理学院主办、统计之都（[cos.name](https://cos.name)）协办，艾瑞咨询（[iresearch](http://www.iresearch.cn/)）、Mango Solutions（[mango-solutions](http://www.mango-solutions.com.cn/)）、上海财经大学数理经济学教育部重点实验室以及上海财经大学上海市一流学科（B类， 统计学）提供了赞助。在两天的会议时间里，群贤毕集，盛况空前。
 
@@ -25,7 +25,7 @@ description: "第五届中国R语言会议（上海会场）于2012年11月3日~
 > 3M中国有限公司、Acxion、ARKO consulting、CBI易贸、ChinaScope、CIC Kantar Media、eBay Inc、FESCO Adecco、GE Capital、GroupM、HP、HRS、Ihush 俏物悄语、Mango Solutions、Merkle 美库尔咨询公司、Millward Brown、Nielsen、Opera Solutions、SAS公司、Springer Science+Business Media、TeleNav、UBSS、阿里巴巴云计算、埃森哲、艾瑞咨询、安徽中烟、百度、北京中油瑞飞信息技术有限责任公司、大陆汽车系统管理有限公司、大众点评、到到网、德络易捷国际物流上海有限公司、东软集团（上海）有限公司、分众传媒、福卡智库、港澳资讯、功典资讯股份有限公司、国泰君安证券股份有限公司、国投瑞银基金公司、海通证券、杭州摩数科技信息咨询有限公司、杭州数云信息技术有限公司、华杰资信评级公司、汇添富基金、嘉里置业、江苏百盛工程咨询有限公司、麦包包、麦思瑞信息技术（上海）有限公司、魅力惠 Glamour Sales、南京军区南京总院、瑞易信息技术（上海）有限公司、上海邦助信息技术公司（上海订餐小秘书）、上海伯豪生物技术有限公司、上海词海信息技术有限公司、上海大智慧股份有限公司、上海迪堡金融设备有限公司、上海和伍科技有限公司、上海杰之能信息科技有限公司、上海玖数软件、上海蓝瀚广告有限公司、上海品糖网络科技有限公司、上海睿广智能科技有限公司、上海市万达信息、上海微创、上海吾思信息技术有限公司、上海易贸、上海易迅电子商务有限责任公司、上海银行、上海银联、上海优唯市场研究、上海致卓信息科技有限公司、上海中期、上海众源网络有限公司、上海资信有限公司、盛大游戏、数库财务咨询（上海）有限公司、泰为信息科技有限公司、淘宝、腾讯科技（上海）有限公司、天柏宽带、通用电气、沃尔玛电子商务、西安交通大学出版社有限责任公司、湘财证券、新创机电工程有限公司、新蛋、新华社、新锐互动、亿贝软件工程 、益普索市场咨询有限公司、银联商务有限公司、优酷土豆网、闸北疾控、浙江核新同花顺网络信息股份有限公司、中国建设银行、中国农业银行、中国人寿保险公司、中国移动（深圳）有限公司、中国移动通信集团上海有限公司、中移设计院上海分院、猪八戒网
 
 
-  ![会议现场20121103](https://cos.name/wp-content/uploads/2012/11/5th-SH-live.jpg)
+  ![会议现场20121103](https://uploads.cosx.org/wp-content/uploads/2012/11/5th-SH-live.jpg)
 
 
 # 会议内容
@@ -112,26 +112,26 @@ description: "第五届中国R语言会议（上海会场）于2012年11月3日~
 
 经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循[CC 3.0协议](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)：署名-非商业性使用-相同方式共享）。
 
-* 冯兴东：[R语言和其他计算机语言的混合编程](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_01_FXD.pdf)
-* 刘思喆：[R语言环境下的文本挖掘](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_02_LSZ.pdf)
-* 张翔：[短文本分类器与电商品类数据挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_03_ZX.pdf)
+* 冯兴东：[R语言和其他计算机语言的混合编程](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_01_FXD.pdf)
+* 刘思喆：[R语言环境下的文本挖掘](https://uploads.cosx.org/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_02_LSZ.pdf)
+* 张翔：[短文本分类器与电商品类数据挖掘](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_03_ZX.pdf)
 * ebay：R语言在eBay搜索引擎反馈与测试中的应用 
-* 周春英：[ebay试验分析、评估与R](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_ZCY.pdf)
-* 沈羽：[用户反馈挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_SY.pdf)
-* 周扬：[基于R的地理信息系统](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_05_ZY.zip)（HTML5格式）
-* 肖凯：[twitteR包入门和应用](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_06_XK.pdf)
-* 陈钢：[系统生物学和转换医学中的R语言](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_07_CG.pdf)
-* 杭兴宜：[R / Bioconductor在生物多维组学数据整合中的应用](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_08_HXY.pdf)
-* 肖嘉敏：[网络用户浏览路径分析](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_01_XJM.pdf)
-* 李忠：[R Case Study from ebay APD](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_02_LZ.pdf)
-* 洪健飞：[啤酒与尿布的当代版——商品分析在电子商务中的应用](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_03_HJF.pdf)
-* 廖明：[营销分析模型及其在广告界的应用](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_04_LM.pdf)
-* 陈逸波：[基于RHadoop的关联规则挖掘](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_05_CYB.pdf)
-* 刘成昊：[模型预测的利器——随机森林](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_06_LCH.pdf)
-* 王雨晨：[R与面向对象统计分析](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_07_WYC.pdf)
-* 魏太云：[R基础作图与可重复研究](https://cos.name/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_08_WTY.pdf)
+* 周春英：[ebay试验分析、评估与R](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_ZCY.pdf)
+* 沈羽：[用户反馈挖掘](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_04_SY.pdf)
+* 周扬：[基于R的地理信息系统](https://uploads.cosx.org/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_05_ZY.zip)（HTML5格式）
+* 肖凯：[twitteR包入门和应用](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_06_XK.pdf)
+* 陈钢：[系统生物学和转换医学中的R语言](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov03_07_CG.pdf)
+* 杭兴宜：[R / Bioconductor在生物多维组学数据整合中的应用](https://uploads.cosx.org/wp-content/uploads/2012/11/ChinaR2012_SH_Nov03_08_HXY.pdf)
+* 肖嘉敏：[网络用户浏览路径分析](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_01_XJM.pdf)
+* 李忠：[R Case Study from ebay APD](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_02_LZ.pdf)
+* 洪健飞：[啤酒与尿布的当代版——商品分析在电子商务中的应用](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_03_HJF.pdf)
+* 廖明：[营销分析模型及其在广告界的应用](https://uploads.cosx.org/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_04_LM.pdf)
+* 陈逸波：[基于RHadoop的关联规则挖掘](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_05_CYB.pdf)
+* 刘成昊：[模型预测的利器——随机森林](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_06_LCH.pdf)
+* 王雨晨：[R与面向对象统计分析](https://uploads.cosx.org/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_07_WYC.pdf)
+* 魏太云：[R基础作图与可重复研究](https://uploads.cosx.org/wp-content/uploads/2012/11/ChinaR2012_SH_Nov04_08_WTY.pdf)
 * 专题讨论： 
-    * 林祯舜：[大数据时代下电子商务及营销的机遇与挑战](https://cos.name/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_Panel_LZS.pdf)
+    * 林祯舜：[大数据时代下电子商务及营销的机遇与挑战](https://uploads.cosx.org/wp-content/uploads/2012/09/ChinaR2012_SH_Nov04_Panel_LZS.pdf)
 
 # 感想和建议
 

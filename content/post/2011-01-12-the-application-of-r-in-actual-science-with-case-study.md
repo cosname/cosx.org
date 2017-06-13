@@ -12,7 +12,7 @@ tags:
 slug: the-application-of-r-in-actual-science-with-case-study
 ---
 
-**本文作者为张缔香，文章由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://cos.name/wp-content/uploads/2011/01/R软件在精算教学中的应用案例.pdf)**
+**本文作者为张缔香，文章由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://uploads.cosx.org/wp-content/uploads/2011/01/R软件在精算教学中的应用案例.pdf)**
 
 R软件做为一种统计软件，因其开源、免费、灵活的诸多优点得到越来越多的关注，无论网络上还是实体书店，关于R的教程铺天盖地，不甚枚举。因此，本文的目标不是做R的教程，而是将R和保险、精算教学结合起来，通过几个案例来说明R在保险、精算专业日常的教学和研究中可用之处。
 
@@ -286,7 +286,7 @@ ax
 amat
 ```
 
-![actual-fig-1](https://cos.name/wp-content/uploads/2011/01/actual-fig-1.png)
+![actual-fig-1](https://uploads.cosx.org/wp-content/uploads/2011/01/actual-fig-1.png)
   
 各年龄的均值如上图所示。
 
@@ -325,7 +325,7 @@ bmat
 
 在bmat矩阵中其中，如各列名称所示，第一列为年龄，第二列为bx，第三至六列分别为线性拟合bx时的t值、t临界值、F值、F临界值和拟合优度值，可以看出所有的bx都是显著的。
   
-![actual-fig-2](https://cos.name/wp-content/uploads/2011/01/actual-fig-2.png)
+![actual-fig-2](https://uploads.cosx.org/wp-content/uploads/2011/01/actual-fig-2.png)
 
 ### 2.3 k值的调整
 
@@ -363,10 +363,10 @@ k.lm
 
 下图为向后预测39期得出的出生平均余命的预测值，在2050年左右，中国男性的平均出生余命达到90岁。这似乎有些过高，所以本模型只适合做15年以内的预测。
 
-![actual-fig-3](https://cos.name/wp-content/uploads/2011/01/actual-fig-3.png)
+![actual-fig-3](https://uploads.cosx.org/wp-content/uploads/2011/01/actual-fig-3.png)
 
 **代码：**附录三
 
 # 附录
 
-[R软件在精算教学中的应用案例（附录）](https://cos.name/wp-content/uploads/2011/01/R软件在精算教学中的应用案例（附录）.zip)（包含附录一、二、三）
+[R软件在精算教学中的应用案例（附录）](https://uploads.cosx.org/wp-content/uploads/2011/01/R软件在精算教学中的应用案例（附录）.zip)（包含附录一、二、三）

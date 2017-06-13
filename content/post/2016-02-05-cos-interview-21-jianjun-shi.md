@@ -17,7 +17,7 @@ slug: cos-interview-21-jianjun-shi
 
 史建军老师是工业工程领域的知名教授和学术带头人，现任佐治亚理工学院（Georgia Institute of Technology，后文简称Georgia Tech）工业工程系（后文简称IE，该系在美国连续28年专业排名第一）冠名教授，同时兼任机械工程系教授。史老师开创了系统信息学和控制（system informatics and control）这一新的博士研究培养方向，是美国工业工程学会（IIE）会士，美国机械工程学会（ASME）会士，运筹学和管理科学学会（INFORMS）会士，国际统计学会（ISI）会士，国际质量研究院（IAQ）院士，也是美国INFORMS的质量统计与可靠性分会的founding Chair，曾获得 the IIE Albert G. Holzman Distinguished Educator Award 等重要奖项。他是多个国际期刊的编委，包括主编管理工程国际顶尖期刊“IIE Transactions”的 Quality and Reliability Engineering 子刊等。史建军教授是使用系统控制和多元统计相结合研究多工位误差建模与分析理论的创始人。他培养的博士生已经有二十几位在国际一流大学任教，其中有7名获得美国自然科学基金委NSF Career奖，1名获得美国总统奖，多名学生在工业公司担任副总或资深管理人员。史老师一直与工业界紧密合作，他的研究小组中开发出的技术已经应用到各种生产系统并带来重大的经济效益，被广泛用在了汽车组装、飞机制造、钢铁冶炼等诸多领域。史老师也是国内多处高校的客座教授，是中科院质量研究中心的创始人之一和海外主任，也是北京大学工业工程系的访问首席教授。<!--more-->
 
-![史建军](https://cos.name/wp-content/uploads/2016/02/jianjun.png)
+![史建军](https://uploads.cosx.org/wp-content/uploads/2016/02/jianjun.png)
 
 本访谈既学术又八卦，由黄帅、常象宇、魏太云执行并撰写。出于读者阅读习惯的考虑，我们将一些英文翻译成了中文，并且做了相应的中文写作处理。如果由于我们的失误造成一些误解，还请各位读者多多谅解。
 

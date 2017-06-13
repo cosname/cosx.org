@@ -34,7 +34,7 @@ gretl（**G**nu **R**egression，**E**conometrics and **T**ime-series **L**ibrar
 # 界面截图
 
 
-![gretl界面截图](https://cos.name/wp-content/uploads/2009/01/gretl_screenshot.jpg)
+![gretl界面截图](https://uploads.cosx.org/wp-content/uploads/2009/01/gretl_screenshot.jpg)
 <p style="text-align: center;">gretl界面截图</p>
 
 # 相关链接

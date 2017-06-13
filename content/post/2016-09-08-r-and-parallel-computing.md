@@ -29,11 +29,11 @@ slug: r-and-parallel-computing
 
 并行计算，准确地说应该包括高性能计算机和并行软件两个方面。在很长一段时间里，中国的高性能计算机处于世界领先水平。在最近一期的世界TOP500超级计算机排名中，中国的神威太湖之光列居榜首。 但是高性能计算机的应用领域却比较有限，主要集中在军事，航天航空等国防军工以及科研领域。对于多数个人，中小型企业来说高性能计算机还是阳春白雪。
 
-![001](https://cos.name/wp-content/uploads/2016/09/001.png)
+![001](https://uploads.cosx.org/wp-content/uploads/2016/09/001.png)
 
 不过，近年来随着个人PC机，廉价机群，以及各种加速卡(NVIDIA GPU, Intel Xeon Phi, FPGA)的快速发展，现在个人电脑已经完全可以和过去的高性能计算机相媲美了。相比于计算机硬件的迅速发展，并行软件的发展多少有些滞后，试想你现在使用的哪些软件是支持并行化运算的呢？
 
-![002](https://cos.name/wp-content/uploads/2016/09/002.png)
+![002](https://uploads.cosx.org/wp-content/uploads/2016/09/002.png)
 
 软件的并行化需要更多的研发支持，以及对大量串行算法和现有软件的并行化，这部分工作被称之为代码现代化（code modernization）。听起来相当高大上的工作，然而在实际中大量的错误修正（BUGFIX），底层数据结构重写，软件框架的更改，以及代码并行化之后带来的运行不确定性和跨平台等问题极大地增加了软件的开发维护成本和运行风险，这也使得这项工作在实际中并没有想象中的那么吸引人。                
 
@@ -44,7 +44,7 @@ slug: r-and-parallel-computing
 # 怎么破？并行计算！                
 并行计算技术正是为了在实际应用中解决单机内存容量和单核计算能力无法满足计算需求的问题而提出的。因此，并行计算技术将非常有力地扩充R的使用范围和场景。最新版本的R已经将parallel包设为了默认安装包。可见R核心开发组也对并行计算非常重视了。
 
-![003](https://cos.name/wp-content/uploads/2016/09/003.png)  
+![003](https://uploads.cosx.org/wp-content/uploads/2016/09/003.png)  
 
 # R用户：如何使用并行计算？          
 从用户的使用方式来划分，R中的并行计算模式大致可以分为隐式和显示两种。下面我将用具体实例给大家做一个简单介绍。          
@@ -55,7 +55,7 @@ slug: r-and-parallel-computing
 ## 1、使用并行计算库
 使用并行计算库，如OpenBLAS，Intel MKL，NVIDIA cuBLAS  这类并行库通常是由硬件制造商提供并基于对应的硬件进行了深度优化，其性能远超R自带的BLAS库，所以建议在编译R的时候选择一个高性能库或者在运行时通过LD_PRELOAD来指定加载库。具体的编译和加载方法可以参见这篇博客的附录部分^[http://www.parallelr.com/r-hpac-benchmark-analysis/]。在下面左图中的矩阵计算比较实验中，并行库在16核的CPU上轻松超过R原有库百倍之多。在右图中，我们可以看到GPU的数学库对常见的一些分析算法也有相当显著的提速。     
 
-![temp](https://cos.name/wp-content/uploads/2016/09/temp.png)     
+![temp](https://uploads.cosx.org/wp-content/uploads/2016/09/temp.png)     
 
 ## 2、使用R中的多线程函数
 OpenMP是一种基于共享内存的多线程库，主要用于单节点上应用程序加速。最新的R在编译时就已经打开了OpenMP选项，这意味着一些计算可以在多线程的模式下运行。比如R中的dist函数就是一个多线程实现的函数，通过设置线程数目来使用当前机器上的多个计算核心，下面我们用一个简单的例子来感受下并行计算的效率，GitHub上有完整代码^[https://github.com/PatricZhao/ParallelR/blob/master/PP_for_COS/ImplicitParallel_MT.R]， 此代码需在Linux系统下运行。            
@@ -72,7 +72,7 @@ for(i in 6:11) {
 }
 ```              
 
-![005](https://cos.name/wp-content/uploads/2016/09/005.png)  
+![005](https://uploads.cosx.org/wp-content/uploads/2016/09/005.png)  
 
 ## 3、使用并行化包
 在R高性能计算列表^[https://cran.r-project.org/web/views/HighPerformanceComputing.html]中已经列出了一些现有的并行化包和工具。用户使用这些并行化包可以像使用其他所有R包一样快捷方便，始终专注于所处理的问题本身，而不必考虑太多关于并行化实现以及性能提升的问题。 我们以H2O.ai^[http://www.h2o.ai/]为例。 H2O后端使用Java实现多线程以及多机计算，前端的R接口简单清晰，用户只需要在加载包之后初始化H2O的线程数即可，后续的计算， 如GBM，GLM, DeepLearning算法，将会自动被分配到多个线程以及多个CPU上。详细函数可参见H2O文档^[http://docs.h2o.ai/h2o/latest-stable/h2o-docs/booklets/RBooklet.pdf]。            
@@ -102,7 +102,7 @@ R is connected to the H2O cluster:
 # 显示并行计算        
 显式计算则要求用户能够自己处理算例中数据划分，任务分配，计算以及最后的结果收集。因此，显式计算模式对用户的要求更高，用户不仅需要理解自己的算法，还需要对并行计算和硬件有一定的理解。值得庆幸的是，现有R中的并行计算框架，如parallel (snow,multicores)，Rmpi和foreach等采用的是映射式并行模型（Mapping），使用方法简单清晰，极大地简化了编程复杂度。R用户只需要将现有程序转化为*apply或者for的循环形式之后，通过简单的API替换来实现并行计算。对于更为复杂的计算模式，用户可以通过重复映射收集（Map-Reduce）的过程来构造。
 
-![006](https://cos.name/wp-content/uploads/2016/09/006.png)          
+![006](https://uploads.cosx.org/wp-content/uploads/2016/09/006.png)          
 
 下面我们用一元二次方程求解问题来介绍如何利用*apply和foreach做并行化计算，完整的代码（ExplicitParallel.R）^[https://github.com/PatricZhao/ParallelR/blob/master/PP_for_COS/ExplicitParallel.R]可以在GitHuB上下载。 首先，我们给出一个非向量化的一元二次方程求解函数，其中包括了对几种特殊情况的处理，如二次项系数为零，二次项以及一次项系数都为零或者开根号数为负。我们随机生成了3个大向量分别保存了方程的二次项，一次项和常数项系数。            
 
@@ -204,7 +204,7 @@ stopCluster(cl)
 ```           
 最后，我们在Linux平台下使用4个线程进行测试，以上几个版本的并行实现均可达到3倍以上的加速比。
 
-![007](https://cos.name/wp-content/uploads/2016/09/007.png)        
+![007](https://uploads.cosx.org/wp-content/uploads/2016/09/007.png)        
 
 # R并行化的挑战与展望       
 
