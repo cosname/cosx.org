@@ -132,8 +132,8 @@ quantstrat 是一个专门用于量化投资的R包。不仅可以构建交易�
   
 * Chih-Jen Lin：[Experiences and Lessons in Developing Machine Learning and Data Mining Software](https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_01_LinCJ.pdf)
     
-* 林祯舜：[R与大数据对统计教育的影响](https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_02_LinZS.pdf
-    
+* 林祯舜：[R与大数据对统计教育的影响](https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_02_LinZS.pdf)
+    
 * 李忠：[EBAY Multiscreen Insight](https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_03_LiZhong.pdf)
    
 * 赵扬：[Large Data Analysis using Rhipe/Rhadoop](https://cos.name/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_04_ZhaoYang.pdf)
