@@ -227,6 +227,9 @@ blockquote {
   margin-top: 0.3em;
   text-transform: uppercase;
 }
+.post-meta .post-author {
+  padding-right: 10px;
+}
 .tags {
   font-size: 16px;
   margin-bottom: 0.5em;
