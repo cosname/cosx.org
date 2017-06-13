@@ -1,0 +1,8 @@
+<header id="site-head">
+	{{ with .Site.Params.logoFull }}
+	<h1 class="blog-title"><a href="{{ $.Site.BaseURL }}">{{ . | markdownify }}</a></h1>
+	{{ end }}
+	{{ with .Site.Params.subtitle }}
+	<h1 class="blog-subtitle">{{ . | markdownify }}</h1>
+	{{ end }}
+</header>
