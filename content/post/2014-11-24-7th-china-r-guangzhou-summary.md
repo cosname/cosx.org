@@ -27,19 +27,19 @@ description: "第七届中国R语言会议（广州会场）于2014年11月15日
 
 本次会议交流的主题涵盖了R语言在互联网、统计、金融和生物技术等方面应用的最新进展，共包含12场特邀报告，其中上午5场，下午7场。会场现场反响热烈，座无虚席，众多背景各异、行业不同的人以R软件为纽带，共享了一场关于R语言和统计分析的盛会。
 
-![1](https://uploads.cosx.org/wp-content/uploads/2014/11/1.jpg)
+![1](https://uploads.cosx.org/2014/11/1.jpg)
 
 会议的流程和主要内容摘录如下。
 
 ## 吴喜之教授会议致辞
 
-![2](https://uploads.cosx.org/wp-content/uploads/2014/11/2.jpg)
+![2](https://uploads.cosx.org/2014/11/2.jpg)
 
 吴喜之教授是统计学界的前辈，在应用、推广R以及相关统计知识方面属于中国的开拓者。吴老师的欢迎致辞引人入胜，带领大家一起回忆了往昔R语言会议历程，令我们不禁更加珍惜走到今天的中国R会议。
 
 ## 李英浩：互联网金融大数据与风险
 
-![3](https://uploads.cosx.org/wp-content/uploads/2014/11/3.jpg)
+![3](https://uploads.cosx.org/2014/11/3.jpg)
 
 李英浩先生是美国佐治亚大学应用经济学硕士，美国康乃尔大学MBA，现任融360首席风险官。
 
@@ -47,7 +47,7 @@ description: "第七届中国R语言会议（广州会场）于2014年11月15日
 
 ## 李舰：数据科学中的R语言
 
-![4](https://uploads.cosx.org/wp-content/uploads/2014/11/4.jpg)
+![4](https://uploads.cosx.org/2014/11/4.jpg)
 
 李舰先生本科毕业于中国人民大学统计学院，研究生就读于北京大学软件与微电子学院，现任Mango Solutions中国区数据总监。
 
@@ -55,7 +55,7 @@ description: "第七届中国R语言会议（广州会场）于2014年11月15日
 
 ## 葛建辉：基于GIS技术与R耘慧的渠道大数据解决方案
 
-![5](https://uploads.cosx.org/wp-content/uploads/2014/11/5.jpg)
+![5](https://uploads.cosx.org/2014/11/5.jpg)
 
 葛建辉先生是辰智咨询联合创始人，现担任辰智咨询总裁，拥有超过10年专业市场研究、管理咨询和商业地产策划经验，长期从事各种类型商业地产项目的研究咨询工作。
 
@@ -63,7 +63,7 @@ description: "第七届中国R语言会议（广州会场）于2014年11月15日
 
 ## 林祯舜：R-web -大型多人在线数据分析协作平台
 
-![6](https://uploads.cosx.org/wp-content/uploads/2014/11/6.jpg)
+![6](https://uploads.cosx.org/2014/11/6.jpg)
 
 林祯舜先生是中国人民大学统计学博士，先锋信息科技有限公司首席数据分析师。
 
@@ -71,7 +71,7 @@ description: "第七届中国R语言会议（广州会场）于2014年11月15日
 
 ## 任坤：跳出数据框，拥抱非结构化数据
 
-![7](https://uploads.cosx.org/wp-content/uploads/2014/11/7.jpg)
+![7](https://uploads.cosx.org/2014/11/7.jpg)
 
 任坤先生是厦门大学王亚南经济研究院金融硕士研究生，研究兴趣为计算统计与量化交易，是R开源社区的活跃开发者，管道操作符pipeR、非关系数据处理rlist等扩展包以及learnR教程的作者。
 
@@ -79,7 +79,7 @@ R语言中的数据框是一种最常使用和最易操作的结构化数据类�
 
 ## 赵学敏：Topic Modeling工程实践
 
-![8](https://uploads.cosx.org/wp-content/uploads/2014/11/8.jpg)
+![8](https://uploads.cosx.org/2014/11/8.jpg)
 
 赵学敏先生于2011年毕业于北京大学智能科学系，硕士研究方向是模式识别与图像处理，毕业后加入腾讯，作为主要开发人员参与和负责了大规模隐含语义训练系统Peacock的开发及应用、大规模层次文本分类器、Look Alike定向、广告索引系统的开发以及广告文本相关性优化等项目。
 
@@ -87,7 +87,7 @@ R语言中的数据框是一种最常使用和最易操作的结构化数据类�
 
 ## 王斌会：基于R语言的统计分析系统
 
-![9](https://uploads.cosx.org/wp-content/uploads/2014/11/9.jpg)
+![9](https://uploads.cosx.org/2014/11/9.jpg)
 
 王斌会教授是暨南大学管理学院统计学专业博士生导师，统计学、数量经济学及应用统计学专业硕士生导师，从事数学、统计学及管理学教学和科研工作20余年，是广东省“千百十”培养对象。
 
@@ -95,7 +95,7 @@ R语言中的数据框是一种最常使用和最易操作的结构化数据类�
 
 ## 范建宁：R务正业之量化投资
 
-![10](https://uploads.cosx.org/wp-content/uploads/2014/11/10.jpg)
+![10](https://uploads.cosx.org/2014/11/10.jpg)
 
 范建宁先生是中国人民大学统计学院硕士研究生，原统计之都管理员以及第二、三、四届中国R语言会议组委会成员，现任茂源资本量化研究员。
 
@@ -103,7 +103,7 @@ R语言中的数据框是一种最常使用和最易操作的结构化数据类�
 
 ## 关菁菁：投资属于你的编程语言组合
 
-![11](https://uploads.cosx.org/wp-content/uploads/2014/11/11.jpg)
+![11](https://uploads.cosx.org/2014/11/11.jpg)
 
 关菁菁女士是香港城市大学博士，研究方向为大规模复杂数据的建模方法，在统计模型和数据挖掘方面造诣颇深。
 
@@ -111,7 +111,7 @@ R语言中的数据框是一种最常使用和最易操作的结构化数据类�
 
 ## 尤晓斌：用数据科学优化人口健康模式
 
-![12](https://uploads.cosx.org/wp-content/uploads/2014/11/12.jpg)
+![12](https://uploads.cosx.org/2014/11/12.jpg)
 
 尤晓斌先生曾就读于新加坡国立大学统计系和厦门大学统计系，现任新加坡国立医疗集团数据分析员。
 
@@ -119,7 +119,7 @@ R语言中的数据框是一种最常使用和最易操作的结构化数据类�
 
 ## 王珺伟：大数据分析中R的一体化应用
 
-![13](https://uploads.cosx.org/wp-content/uploads/2014/11/13.jpg)
+![13](https://uploads.cosx.org/2014/11/13.jpg)
 
 王珺伟先生经历丰富，2009年创办装饰设计公司，2010年参与ATM智能选址系统研究,2014年承担CRM系统数据挖掘模型应用,现任SAS数据挖掘讲师。
 
@@ -127,7 +127,7 @@ R语言中的数据框是一种最常使用和最易操作的结构化数据类�
 
 ## 谢佳标：RCurl爬虫和Shiny包在游戏行业的应用
 
-![14](https://uploads.cosx.org/wp-content/uploads/2014/11/14.jpg)
+![14](https://uploads.cosx.org/2014/11/14.jpg)
 
 谢佳标先生是深圳市东方博雅科技有限公司数据分析师，从事数据分析工作7年。曾经从事过咨询、电商、电购、电力行业，了解不同领域的数据特点，目前主要用R语言做数据分析和建模研究工作。
 
@@ -152,7 +152,7 @@ R语言中的数据框是一种最常使用和最易操作的结构化数据类�
 
 ## 感想与建议
 
-![15](https://uploads.cosx.org/wp-content/uploads/2014/11/15.jpg)
+![15](https://uploads.cosx.org/2014/11/15.jpg)
 
 第七届R语言会在2015年11月15日晚六点顺利闭幕。会议虽只有短短一天时间，却足以结识来自四面八方的志同道合的useR（R语言的用户），极大深化与会各界人士之间的交流和讨论。无论是学生还是从业者，都收获颇多。
 
@@ -211,17 +211,17 @@ R语言会议官方网站：<http://china-r.org>
 
   * 华南统计科学研究中心QQ群
   
-  ![16](https://uploads.cosx.org/wp-content/uploads/2014/11/16.jpg)
+  ![16](https://uploads.cosx.org/2014/11/16.jpg)
   * 华南统计科学研究中心微信群
   
-  ![17](https://uploads.cosx.org/wp-content/uploads/2014/11/17.jpg)
+  ![17](https://uploads.cosx.org/2014/11/17.jpg)
   
 * 中山大学数学与计算科学学院 <http://math.sysu.edu.cn/>
 * 统计之都 <https://cos.name/>
 
 # 赞助单位
 
-[![18](https://uploads.cosx.org/wp-content/uploads/2014/11/18.jpg)](www.Rong360.com)
+[![18](https://uploads.cosx.org/2014/11/18.jpg)](www.Rong360.com)
 
 # 参会人员与单位
 
@@ -233,19 +233,19 @@ R语言会议官方网站：<http://china-r.org>
 
 ## 参会人员性别比例
 
-![19](https://uploads.cosx.org/wp-content/uploads/2014/11/19.jpg)
+![19](https://uploads.cosx.org/2014/11/19.jpg)
 
 ## 参会人员年龄分布
 
-![20](https://uploads.cosx.org/wp-content/uploads/2014/11/20.jpg)
+![20](https://uploads.cosx.org/2014/11/20.jpg)
 
 ## 参会人员学生与在职比例
 
-![21](https://uploads.cosx.org/wp-content/uploads/2014/11/21.jpg)
+![21](https://uploads.cosx.org/2014/11/21.jpg)
 
 ## 参会人员感兴趣的主题
 
-![22](https://uploads.cosx.org/wp-content/uploads/2014/11/22.png)
+![22](https://uploads.cosx.org/2014/11/22.png)
 
 ## 参会单位
 

@@ -20,7 +20,7 @@ weight: 7
 * 2012年9月，上海，[《七周七语言系列活动之三 “R语言”》](http://topgeek.org/?p=546)，由GDG Shanghai和统计之都联合主办
 * 2012年5月，上海，科学松鼠会《第8期科学报道工作坊：别让数字吓到你2.0（[上](http://s-camp.songshuhui.net/2012/05/s-workshop008_part1/ "第8期科学报道工作坊：别让数字吓到你2.0（上）")、[下](http://s-camp.songshuhui.net/2012/05/s-workshop008_part2/ "第8期科学报道工作坊：别让数字吓到你2.0（下）")）》
 * 2012年3月，北京，科学松鼠会《[第5期科学报道工作坊：别让数字吓到你](http://s-camp.songshuhui.net/2012/03/s-workshop005/ "第5期科学报道工作坊：别让数字吓到你")》
-* 2011年5月，北京，《统计之都五周年系列活动——漫谈统计分析与 R 语言》，首都经贸大学邀请演讲（[幻灯片](https://uploads.cosx.org/wp-content/uploads/2013/04/statistics-and-r-programming-at-cueb.pptx "统计之都五周年系列活动——漫谈统计分析与R语言")）
+* 2011年5月，北京，《统计之都五周年系列活动——漫谈统计分析与 R 语言》，首都经贸大学邀请演讲（[幻灯片](https://uploads.cosx.org/2013/04/statistics-and-r-programming-at-cueb.pptx "统计之都五周年系列活动——漫谈统计分析与R语言")）
 * 2010年6月，北京，《中国第三届R语言会议基础培训》
 * 2007年，北京，_Jokes in Statistics_，首都经贸大学统计学院邀请讲座（[幻灯片](https://github.com/downloads/yihui/yihui.github.com/Jokes-2007-Yihui-Xie.pdf)）
 * 2007年，北京，《略谈统计的工具》，首都经贸大学统计学院邀请讲座（[幻灯片](https://github.com/downloads/yihui/yihui.github.com/Stat-tools-2007-Yihui-Xie.pdf)；[R代码](https://gist.github.com/1756901)）

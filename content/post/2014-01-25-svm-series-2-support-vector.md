@@ -18,7 +18,7 @@ description: "[上一次](/2014/01/svm-series-maximum-margin-classifier/)介绍�
 
 [上一次](/2014/01/svm-series-maximum-margin-classifier/)介绍支持向量机，结果说到 Maximum Margin Classifier ，到最后都没有说“支持向量”到底是什么东西。不妨回忆一下上次最后一张图：
 
-![Optimal-Hyper-Plane](https://uploads.cosx.org/wp-content/uploads/2014/01/Optimal-Hyper-Plane.png)
+![Optimal-Hyper-Plane](https://uploads.cosx.org/2014/01/Optimal-Hyper-Plane.png)
 
 可以看到两个支撑着中间的 gap 的超平面，它们到中间的 separating hyper plane 的距离相等（想想看：为什么一定是相等的？），即我们所能得到的最大的 geometrical margin `\(\tilde{\gamma}\)` 。而“支撑”这两个超平面的必定会有一些点，试想，如果某超平面没有碰到任意一个点的话，那么我就可以进一步地扩充中间的 gap ，于是这个就不是最大的 margin 了。由于在 `\(n\)` 维向量空间里一个点实际上是和以原点为起点，该点为终点的一个向量是等价的，所以这些“支撑”的点便叫做支持向量。
 

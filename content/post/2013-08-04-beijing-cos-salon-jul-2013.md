@@ -16,7 +16,7 @@ slug: beijing-cos-salon-jul-2013
 by [肖展航](http://weibo.com/xzhman)
 
 
-![cos101](https://uploads.cosx.org/wp-content/uploads/2013/08/cos101.jpg)
+![cos101](https://uploads.cosx.org/2013/08/cos101.jpg)
 
 
 
@@ -58,15 +58,15 @@ install.views("Spatial")
 
 嘉宾在分享了自己专业方面的收获后，向大家展示了课余娱乐时间开发的可视化项目。R中的时序图、日历图和栅格数据、矢量数据、时空数据可视化，D3、Rchart等十八般武艺信手拈来。其中，mvtsplot包下的mvtsplot()函数更是让大家感受到可视化对于提取时空数据信息的重要作用。Web下的可视化主要利用到了网络地图，利用谷歌地图和R展示了H7N9和雅安地震的热力图ggmap::heatmap()，不禁让人想起了第六届R语言会议上萌主（@Yummy_zhou）为大家展示的动态交互图。
 
-[幻灯片下载](https://uploads.cosx.org/wp-content/uploads/2013/08/时空统计与时空数据可视化_COS.pdf)
+[幻灯片下载](https://uploads.cosx.org/2013/08/时空统计与时空数据可视化_COS.pdf)
 
 来自百度、新浪、豆瓣、微软、中航工业集团、京东商城、新华网、6City、友盟、随视传媒、中国统计信息咨询中心、际恒集团、博识教育、中科院、北京邮电大学、北京大学、清华大学、中国人民大学、北京理工大学、华中科技大学的业界人士和高校学生以及创业者逾30余人报名参与了此次活动，席间与嘉宾积极互动，围绕主题展开了深入精彩的讨论。
 
 报名嘉宾中填写的报名理由如下图：
 
-![cos102](https://uploads.cosx.org/wp-content/uploads/2013/08/cos102.jpg)
+![cos102](https://uploads.cosx.org/2013/08/cos102.jpg)
 
 
-![cos103](https://uploads.cosx.org/wp-content/uploads/2013/08/cos103.jpg)
+![cos103](https://uploads.cosx.org/2013/08/cos103.jpg)
   
 [更多沙龙信息](https://cos.name/salon)

@@ -42,12 +42,12 @@ slug: ruc-math-stat-course
 
 # 课件下载
 
-* [概率基础](https://uploads.cosx.org/wp-content/uploads/2009/06/Probability.ppt)
-* [抽样和抽样分布](https://uploads.cosx.org/wp-content/uploads/2009/06/Sampling_dist.ppt)（Sampling and Sampling Distribution）
-* [参数估计](https://uploads.cosx.org/wp-content/uploads/2009/06/Parameter_est.ppt)
-* [贝叶斯估计](https://uploads.cosx.org/wp-content/uploads/2009/06/Bayes.ppt)（Bayesian Estimation)
-* [假设检验](https://uploads.cosx.org/wp-content/uploads/2009/06/Hypothesis_test.ppt)
-* [方差分析](https://uploads.cosx.org/wp-content/uploads/2009/06/ANOVA.ppt)
+* [概率基础](https://uploads.cosx.org/2009/06/Probability.ppt)
+* [抽样和抽样分布](https://uploads.cosx.org/2009/06/Sampling_dist.ppt)（Sampling and Sampling Distribution）
+* [参数估计](https://uploads.cosx.org/2009/06/Parameter_est.ppt)
+* [贝叶斯估计](https://uploads.cosx.org/2009/06/Bayes.ppt)（Bayesian Estimation)
+* [假设检验](https://uploads.cosx.org/2009/06/Hypothesis_test.ppt)
+* [方差分析](https://uploads.cosx.org/2009/06/ANOVA.ppt)
 
 # 课程视频
 

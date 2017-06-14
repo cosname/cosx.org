@@ -60,7 +60,7 @@ title("世界地图")
 
 输出为：
 
-![world_map](https://uploads.cosx.org/wp-content/uploads/2013/01/world_map.png)</a>
+![world_map](https://uploads.cosx.org/2013/01/world_map.png)</a>
 
   无比绚丽的世界，引无数骚客竞折腰啊……
 
@@ -79,7 +79,7 @@ title("美国地图")
 
 输出为：
 
-![us_map](https://uploads.cosx.org/wp-content/uploads/2013/01/us_map.png)
+![us_map](https://uploads.cosx.org/2013/01/us_map.png)
 
 整体形状这是像啥啊，山姆大叔……
 
@@ -96,7 +96,7 @@ title("美国三州地图")
 
 输出结果为：
 
-![states_map](https://uploads.cosx.org/wp-content/uploads/2013/01/states_map.png)
+![states_map](https://uploads.cosx.org/2013/01/states_map.png)
 
 三州鼎力！！
 
@@ -115,7 +115,7 @@ title(" 中国地图")
 
 输出为：
 
-![China_map](https://uploads.cosx.org/wp-content/uploads/2013/01/China_map.png)
+![China_map](https://uploads.cosx.org/2013/01/China_map.png)
 
 哭，重庆在哪里，重庆在哪里？？
 
@@ -183,7 +183,7 @@ ggmap(map)
 
 于是：
 
-![China_map_2](https://uploads.cosx.org/wp-content/uploads/2013/01/China_map_2.png)
+![China_map_2](https://uploads.cosx.org/2013/01/China_map_2.png)
 
 我天朝雄赳赳，气昂昂啊！！请注意左下角的Google logo！！
 
@@ -197,7 +197,7 @@ ggmap(map)
 
 于是：
 
-![Beijing_map](https://uploads.cosx.org/wp-content/uploads/2013/01/Beijing_map.png)
+![Beijing_map](https://uploads.cosx.org/2013/01/Beijing_map.png)
 
 最后，我想看下大冬天的有没有人在人民大学的各个楼顶上晒太阳浴：
 
@@ -208,13 +208,13 @@ map <- get_map(location = 'Renmin University of China', zoom = 14,
 ggmap(map)
 ```
 
-![RUC_map](https://uploads.cosx.org/wp-content/uploads/2013/01/RUC_map.png)
+![RUC_map](https://uploads.cosx.org/2013/01/RUC_map.png)
 
 太不清楚了，根本看不清楚哪跟哪啊。就这么着吧，我估计快够当天限制数了。
 
 最后来个正经的，借用[肖凯老师编好的代码](http://xccds1977.blogspot.com/2012/06/ggmap.html)（肖老师的原文后面还有用谢老大animation包做的动态图呢），从[中国地震数据中心](http://data.earthquake.cn/datashare/globeEarthquake_csn.html)下载 2013.1.5-2013.1.11 这一周发生在中国的小地震，呃，应该都是小地震，因为没有听到相关的大地震的新闻报道。
 
-![earthquake_map](https://uploads.cosx.org/wp-content/uploads/2013/01/earthquake_map.png)
+![earthquake_map](https://uploads.cosx.org/2013/01/earthquake_map.png)
 
 从这图上看，每周发生在我亲爱的祖国上的地震真心不少啊，我大台湾也饱受其苦啊。向天祈祷，让地震少震我中国吧……
 

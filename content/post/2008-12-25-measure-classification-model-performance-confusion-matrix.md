@@ -225,7 +225,7 @@ tables good_bad*good_bad_predicted;
 run;
 ```
 
-![PV](https://uploads.cosx.org/wp-content/uploads/2008/12/pv.png)
+![PV](https://uploads.cosx.org/2008/12/pv.png)
 
 其中，准确率=12.00%+57.25%=69.25% ，覆盖率=32.88% ，命中率=65.75% ，Specificity=90.16%，PV-=70.03% 。
 

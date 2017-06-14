@@ -17,7 +17,7 @@ tags:
 slug: causality1-simpson-paradox
 ---
 
-![](https://uploads.cosx.org/wp-content/uploads/2012/03/causality2-cover.jpg)
+![](https://uploads.cosx.org/2012/03/causality2-cover.jpg)
 
 在国内的时候，向别人介绍自己是研究因果推断（causal inference）的，多半的反应是：什么？统计还能研究因果？这确实是一个问题：统计研究因果，能，还是不能？直接给出回答，比较冒险；如果有可能，我需要花一些篇幅来阐述这个问题。
 
@@ -27,7 +27,7 @@ slug: causality1-simpson-paradox
 
 在高维列联表分析中， 有一个很有名的例子，叫做 Yule-Simpson’s Paradox。有文献称，Karl Pearson 很早就发现了这个悖论 — 也许这正是他反对统计因果推断的原因。此悖论表明，存在如下的可能性：$X$ 和 $Y$ 在边缘上正相关；但是给定另外一个变量 `$Z$` 后，在 `$Z$` 的每一个水平上，`$X$` 和 `$Y$` 都负相关。Table 1 是一个数值的例子，取自 Pearl (2000)。
 
-  ![simpson](https://uploads.cosx.org/wp-content/uploads/2012/03/simpson.png)
+  ![simpson](https://uploads.cosx.org/2012/03/simpson.png)
 
 Table 1 中，第一个表是整个人群的数据：接受处理和对照的人都是 40 人，处理有较高的存活率，因此处理对整个人群有“正作用”。第二个表和第三个表是将整个人群用性别分层得到的，因为第一个表的四个格子数，分别是下面两个表对应格子数的和： `$$20 = 18+2, 20 = 12+8, 16 = 7+9, 24 = 3+21.$$` 奇怪的是，处理对男性有“负作用”，对女性也有“负作用”。一个处理对男性和女性都有“负作用”，但是他对整个人群却有“正作用”：悖论产生了！
 

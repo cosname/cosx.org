@@ -69,11 +69,11 @@ author: COS管理员
 
 # 会议事宜——上海会场
 
-  ![第二届中国 R 语言会议 上海分会场 去logo](https://uploads.cosx.org/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR.jpg)
+  ![第二届中国 R 语言会议 上海分会场 去logo](https://uploads.cosx.org/2010/01/2nd-Chinese-R-Conference-SH-poster1-wtuseR.jpg)
 
-  ![第二届中国 R 语言会议 上海分会场 去logo](https://uploads.cosx.org/wp-content/uploads/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR.jpg)
+  ![第二届中国 R 语言会议 上海分会场 去logo](https://uploads.cosx.org/2010/01/2nd-Chinese-R-Conference-SH-poster2-wtuseR.jpg)
 
-[](https://uploads.cosx.org/wp-content/uploads/2009/10/2nd-Chinese-R-Conference-SH-poster1.jpg)
+[](https://uploads.cosx.org/2009/10/2nd-Chinese-R-Conference-SH-poster1.jpg)
 
 ## 一、会议时间
 

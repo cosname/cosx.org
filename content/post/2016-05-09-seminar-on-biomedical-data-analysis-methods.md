@@ -82,5 +82,5 @@ description: "当前生物医学研究面临着大数据时代的挑战与机遇
 
 附图：
 
-![ruc_bio](https://uploads.cosx.org/wp-content/uploads/2016/05/ruc_bio.jpg)
+![ruc_bio](https://uploads.cosx.org/2016/05/ruc_bio.jpg)
 

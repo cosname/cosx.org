@@ -15,9 +15,9 @@ description: "第六届中国 R 语言会议（上海会场）于 2013 年 11 �
 
 第六届中国 R 语言会议（上海会场）于 2013 年 11 月 2 日 ~ 3 日在华东师范大学中山北路校区的科学会堂成功召开。会议由华东师范大学金融与统计学院和统计之都（[cos.name](https://cos.name)）主办。在两天的会议时间里，参会者齐聚一堂，就 R 语言在电商、互联网、金融、可视化、机器学习、数据挖掘等行业和领域展开了深入的探讨。
 
-![6th-china-r-sh](https://uploads.cosx.org/wp-content/uploads/2013/11/6th-china-r-sh.jpg)
+![6th-china-r-sh](https://uploads.cosx.org/2013/11/6th-china-r-sh.jpg)
   
-![6th-china-r-sh2](https://uploads.cosx.org/wp-content/uploads/2013/11/6th-china-r-sh2.jpg)
+![6th-china-r-sh2](https://uploads.cosx.org/2013/11/6th-china-r-sh2.jpg)
 
 # 会议概况
 
@@ -130,50 +130,50 @@ quantstrat 是一个专门用于量化投资的R包。不仅可以构建交易�
   
 经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（请遵循[CC 3.0协议](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)：署名-非商业性使用-相同方式共享）。
   
-* Chih-Jen Lin：[Experiences and Lessons in Developing Machine Learning and Data Mining Software](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_01_LinCJ.pdf)
+* Chih-Jen Lin：[Experiences and Lessons in Developing Machine Learning and Data Mining Software](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_01_LinCJ.pdf)
     
-* 林祯舜：[R与大数据对统计教育的影响](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_02_LinZS.pdf)
+* 林祯舜：[R与大数据对统计教育的影响](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_02_LinZS.pdf)
     
-* 李忠：[EBAY Multiscreen Insight](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_03_LiZhong.pdf)
+* 李忠：[EBAY Multiscreen Insight](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_03_LiZhong.pdf)
    
-* 赵扬：[Large Data Analysis using Rhipe/Rhadoop](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_04_ZhaoYang.pdf)
+* 赵扬：[Large Data Analysis using Rhipe/Rhadoop](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_04_ZhaoYang.pdf)
     
-* 朱筠珺：[How R helps personalization analysis in marketing campaign](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_05_ZhuJunjun.pdf)
+* 朱筠珺：[How R helps personalization analysis in marketing campaign](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_05_ZhuJunjun.pdf)
     
-* 甘华来：[R语言在旅游行业中的应用](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_06_GanHualai.pdf)
+* 甘华来：[R语言在旅游行业中的应用](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_06_GanHualai.pdf)
    
-* 严紫丹：[x13季节调整方法的R实现及应用](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_07_YanZidan.pdf)
+* 严紫丹：[x13季节调整方法的R实现及应用](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_07_YanZidan.pdf)
 
-* 魏太云，周扬：[通向高富帅图表的R包——recharts](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_08_WeiTYZhouY.pdf) [[echarts介绍](http://echarts.baidu.com/doc/slide/whyEcharts.html)，[recharts工程](https://github.com/taiyun/recharts)]
+* 魏太云，周扬：[通向高富帅图表的R包——recharts](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_08_WeiTYZhouY.pdf) [[echarts介绍](http://echarts.baidu.com/doc/slide/whyEcharts.html)，[recharts工程](https://github.com/taiyun/recharts)]
    
-* 朱雪宁：[微博那些事儿](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_09_ZhuXuening.zip)
+* 朱雪宁：[微博那些事儿](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_09_ZhuXuening.zip)
    
-* 何通：[豆瓣网标签的整理和分析](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov02_10_HeTong.zip)
+* 何通：[豆瓣网标签的整理和分析](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov02_10_HeTong.zip)
    
 * 刘思喆：R语言企业级应用
    
-* 孙哲：[小分队撬动大估值——关于零售金融服务行业的大数据应用模式探讨](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_02_SunZhe.pdf)
+* 孙哲：[小分队撬动大估值——关于零售金融服务行业的大数据应用模式探讨](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov03_02_SunZhe.pdf)
     
-* 许亮：[复杂交易网络中的白富美挖掘](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_03_XuLiang.pdf)
+* 许亮：[复杂交易网络中的白富美挖掘](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov03_03_XuLiang.pdf)
    
-* 李洪成：[用R进行高频金融数据分析简介](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_04_LiHongcheng.pdf)
+* 李洪成：[用R进行高频金融数据分析简介](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov03_04_LiHongcheng.pdf)
     
-* 邓一硕：[quantstrat包与R中的量化投资之路](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_05_DengYishuo.pdf)
+* 邓一硕：[quantstrat包与R中的量化投资之路](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov03_05_DengYishuo.pdf)
    
-* 罗立辉：[R语言在陆面建模系统上的应用研究](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_06_LuoLihui.pdf)
+* 罗立辉：[R语言在陆面建模系统上的应用研究](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov03_06_LuoLihui.pdf)
     
-* 李舰：[中文文本挖掘和tmcn包](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_07_LiJian.pdf)
+* 李舰：[中文文本挖掘和tmcn包](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov03_07_LiJian.pdf)
     
-* 陈逸波：[kaggle数据比赛的一些经验分享——以Amazon Employee Access Challenge为例](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_08_ChenYibo.zip)
+* 陈逸波：[kaggle数据比赛的一些经验分享——以Amazon Employee Access Challenge为例](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov03_08_ChenYibo.zip)
     
-* 刘辰昂：[use R for fun](https://uploads.cosx.org/wp-content/uploads/2013/11/ChinaR2013SH_Nov03_09_LiuChenang.pdf)
+* 刘辰昂：[use R for fun](https://uploads.cosx.org/2013/11/ChinaR2013SH_Nov03_09_LiuChenang.pdf)
    
   
 # 会议赞助
  
   
   
-[![ebay](https://uploads.cosx.org/wp-content/uploads/2013/11/ebay.png)](http://www.ebay.com/)    [![mango](https://uploads.cosx.org/wp-content/uploads/2013/11/mango.jpg)](http://www.mango-solutions.com.cn/)    [![Chinese_CS_logo_9](https://uploads.cosx.org/wp-content/uploads/2013/11/Chinese_CS_logo_9-500x323.jpg)](http://www.contactsingapore.sg/cn)
+[![ebay](https://uploads.cosx.org/2013/11/ebay.png)](http://www.ebay.com/)    [![mango](https://uploads.cosx.org/2013/11/mango.jpg)](http://www.mango-solutions.com.cn/)    [![Chinese_CS_logo_9](https://uploads.cosx.org/2013/11/Chinese_CS_logo_9-500x323.jpg)](http://www.contactsingapore.sg/cn)
   
   
 如果您对于中国R语言会议还有任何感想、意见或建议，欢迎您在本页面、[统计之都人人网页面](http://renren.com/cosname)或[统计之都新浪微博](http://weibo.com/cosname)留言，我们会尽力在今后对会议质量进行进一步的改善。

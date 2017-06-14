@@ -75,7 +75,7 @@ b[1:N] ~ car.normal(adj[], weights[], num[], tau)
 
 
 
-![GeoBUGS的地图工具配置界面](https://uploads.cosx.org/wp-content/uploads/2009/02/geobugs-3-3.png "GeoBUGS的地图工具配置界面")
+![GeoBUGS的地图工具配置界面](https://uploads.cosx.org/2009/02/geobugs-3-3.png "GeoBUGS的地图工具配置界面")
 <p style="text-align: center;">GeoBUGS的地图工具配置界面</p>
 
 第一步，打开Map-> Map Tool菜单，选择Scotland这张地图
@@ -89,12 +89,12 @@ b[1:N] ~ car.normal(adj[], weights[], num[], tau)
 当然还可以在quantity中设置不同的需要反映的量的类型。
 
 很简单吧。
-![GeoBUGS生成的地图](https://uploads.cosx.org/wp-content/uploads/2009/02/GeoBUGS-map.png "GeoBUGS生成的地图")
+![GeoBUGS生成的地图](https://uploads.cosx.org/2009/02/GeoBUGS-map.png "GeoBUGS生成的地图")
 <p style="text-align: center;">GeoBUGS生成的地图</p>
 
 GeoBUGS还提供了一些小工具，比如Adjacency Map来查看邻接图。
 
-![用GeoBUGS显示邻接地图](https://uploads.cosx.org/wp-content/uploads/2009/02/GeoBUGS-adjacency-map.png "用GeoBUGS显示邻接地图")
+![用GeoBUGS显示邻接地图](https://uploads.cosx.org/2009/02/GeoBUGS-adjacency-map.png "用GeoBUGS显示邻接地图")
 <p style="text-align: center;">用GeoBUGS显示邻接地图</p>
 
 ## 附录

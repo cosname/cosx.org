@@ -89,7 +89,7 @@ Pollard J.H. (1982), The expectation of life and its relationship to mortality, 
 
 第六讲幻灯片下载：
 
-  * [关于发展的指标、数据、应用（一）](https://uploads.cosx.org/wp-content/uploads/2009/03/development-statistics-gao-minxue.ppt)
+  * [关于发展的指标、数据、应用（一）](https://uploads.cosx.org/2009/03/development-statistics-gao-minxue.ppt)
 
 第七讲小结：待发。
 

@@ -7,7 +7,7 @@ categories:
 slug: the-art-r-programming
 ---
 
-![R语言编程艺术](https://uploads.cosx.org/wp-content/uploads/2013/05/art-of-r.jpg)
+![R语言编程艺术](https://uploads.cosx.org/2013/05/art-of-r.jpg)
 
 
 <p style="text-align: center;">《R语言编程艺术》</p>

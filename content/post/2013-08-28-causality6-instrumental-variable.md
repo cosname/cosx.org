@@ -47,7 +47,7 @@ $$`
 
 以上的各个假定，可以用下面的一个图来形象的描述。
 
-![iv](https://uploads.cosx.org/wp-content/uploads/2013/08/iv.png)
+![iv](https://uploads.cosx.org/2013/08/iv.png)
 
 如图所示，由于`$D$`和`$Y$`之间存在一个混杂因素`$U$`，两者之间的因果作用是不可以用线性回归相合估计的。工具变量`$Z$`的存在，使得`$D$`到`$Y$`的因果作用的识别成为了可能。这里的工具变量`$Z$`满足如下的条件: `$Z\perp U, Z\not \perp D$`，并且`$Z\perp Y|(D,U)$`。第三个条件，可以理解成为“无 `$Z$`到`$Y$`的直接作用”。
 
@@ -117,7 +117,7 @@ $$`
 
 原始数据总结如下：
 
-![table](https://uploads.cosx.org/wp-content/uploads/2013/08/table1.png)
+![table](https://uploads.cosx.org/2013/08/table1.png)
 
 根据下一个部分的函数，我们得到如下的结果：
 

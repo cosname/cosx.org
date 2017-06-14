@@ -29,7 +29,7 @@ map("china")
 
 幸运的是，通过[谢益辉的这篇博文](http://yihui.name/cn/2007/09/china-map-at-province-level/ "终于搞定了中国分省市地图")我们已经可以大体知道该如何操作了，下面就为大家介绍一下具体的步骤。
 
-首先，从[这里](https://uploads.cosx.org/wp-content/uploads/2009/07/chinaprovinceborderdata_tar_gz.zip)下载中国地图的GIS数据，这是一个压缩包，完全解压后包含三个文件（bou2\_4p.dbf、bou2\_4p.shp和bou2\_4p.shx），将这三个文件解压到同一个目录下，并在R中设好相应的工作空间，然后安装`maptools`包，运行如下程序：
+首先，从[这里](https://uploads.cosx.org/2009/07/chinaprovinceborderdata_tar_gz.zip)下载中国地图的GIS数据，这是一个压缩包，完全解压后包含三个文件（bou2\_4p.dbf、bou2\_4p.shp和bou2\_4p.shx），将这三个文件解压到同一个目录下，并在R中设好相应的工作空间，然后安装`maptools`包，运行如下程序：
 
 ```r
 library(maptools);
@@ -82,7 +82,7 @@ provcol = c("red", "green", "yellow", "purple");
 plot(x, fg = getColor(x, provname, provcol, "white"));
 ```
 
-![map00](https://uploads.cosx.org/wp-content/uploads/2009/07/map00-e1262748931991.png "map00")
+![map00](https://uploads.cosx.org/2009/07/map00-e1262748931991.png "map00")
 
 注意`provname`一定要写地区的全称，写法可以参照下面这条命令生成的向量：
 
@@ -111,7 +111,7 @@ provcol = rgb(red = 1 - pop/max(pop)/2, green = 1-pop/max(pop)/2, blue = 0);
 plot(x, fg = getColor(x, provname, provcol, "white"), xlab = "", ylab = "");
 ```
 
-![map01](https://uploads.cosx.org/wp-content/uploads/2009/07/map01-e1262748729327.png "map01")
+![map01](https://uploads.cosx.org/2009/07/map01-e1262748729327.png "map01")
 
 其中颜色越深的地方代表人口数越多，反之为人口数越少。
 
@@ -128,7 +128,7 @@ plot(x, recs = getID(x, midchina), fg = "green", ol = "white", xlab = "",
 		ylab = "");
 ```
 
-![map02](https://uploads.cosx.org/wp-content/uploads/2009/07/map02-e1262748890424.png "map02")
+![map02](https://uploads.cosx.org/2009/07/map02-e1262748890424.png "map02")
 
 上面的`getID()`是我编写的一个功能与`getColor()`类似的函数，用来返回指定省份的ID。
 

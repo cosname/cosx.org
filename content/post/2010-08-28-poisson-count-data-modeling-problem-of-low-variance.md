@@ -17,7 +17,7 @@ tags:
 slug: poisson-count-data-modeling-problem-of-low-variance
 ---
 
-> 本文作者为中国人民大学统计学院饶燕芳同学，由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://uploads.cosx.org/wp-content/uploads/2010/08/poisson.pdf)
+> 本文作者为中国人民大学统计学院饶燕芳同学，由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://uploads.cosx.org/2010/08/poisson.pdf)
 
 # 一、问题的引出
 
@@ -51,7 +51,7 @@ W=\sum^{\infty}_{k=1}\frac{e^{-\lambda}\lambda^k\omega_k }{k!}\label{a}
 
 对于`\(\beta\_1,\beta\_2>0\)`，它的分布类似将概率密度图线向均值“挤压”(见图1)，分布更加集中，相对于标准的泊松分布就有更小的方差，称该分布为三参数指数加权泊松分布，记为 EWP3 。特殊地，当`\(\beta\_1=\beta\_2=\beta\)`时，称为两参数指数加权泊松分布，记为 EWP2 分布，当`\(\beta=0\)`时退化为标准泊松分布。对于EWP2 和 EWP3 ，它们拥有更高的峰值，标准化因子 W 可以由式 \ref{a} 导出。尽管矩的表达没有显式，但可以确定分布的方差随着`\(\beta\_1,\beta\_2\)`或`\(\beta\)`的增大而降低。
 
-![lambda=10,beta1=0.1,beta2=0.2的EWP分布](https://uploads.cosx.org/wp-content/uploads/2010/08/photo1.png)
+![lambda=10,beta1=0.1,beta2=0.2的EWP分布](https://uploads.cosx.org/2010/08/photo1.png)
 
 图1 lambda=10,beta1=0.1,beta2=0.2的EWP分布
 
@@ -103,7 +103,7 @@ W=\sum^{\infty}_{k=1}\frac{e^{-\lambda}\lambda^k\omega_k }{k!}\label{a}
 
 我们引用 Faddy（2001）的小鼠胚胎数据，作者已对该数据用 CBR 方法做了较好的分析。在产生该数据的实验中，对已经怀孕的小鼠用药（除草剂2,4,5-T），同时记录小鼠子宫上的胚胎着床数。数据给出了7种剂量水平下胚胎着床数的频率分布。在交配后的6-14天内，往怀孕的雌鼠体内注射某种剂量水平的2,4,5-T。在分娩之前，将雌鼠杀死，确定其体内的活胎数目。0剂量组的频数分布便具有泊松低方差特征。0剂量组数据的均值为11.55，方差为9.92，方差均值比为0.859。
 
-![lambda=10,beta1=0.1,beta2=0.2的EWP分布](https://uploads.cosx.org/wp-content/uploads/2010/08/photo21.png)
+![lambda=10,beta1=0.1,beta2=0.2的EWP分布](https://uploads.cosx.org/2010/08/photo21.png)
 
 图2
 
@@ -113,7 +113,7 @@ W=\sum^{\infty}_{k=1}\frac{e^{-\lambda}\lambda^k\omega_k }{k!}\label{a}
 
 分别使用 EWP2 和 EWP3 分布对0剂量组数据进行参数的最大似然估计。其中EWP2分布中，`\(\hat{\lambda}= 11.79\)`， `\(\hat{\beta}=0.11\)`，EWP3中，`\(\hat{\lambda}=14.56\)`，`\(\hat{\beta}\_1=-0.15\)`，`\(\hat{\beta}\_2=0.68\)`，估计的 EWP2 、EWP3 分布如图3。由于分布具有了泊松低方差特征，通过权重参数`\(\beta(\beta\_1,\beta\_2)\)`将分布向中部“挤压”，分布更加集中且峰值更高，估计的效果相比之下比泊松分布好很多。EWP2 由于在 `\(\lambda\)` 的左右都赋予相等的权重，因此对称的“压缩”模式不如 EWP3 的非对称“压缩”有弹性，从观测数据经验分布的轻微左偏也暗示了允许`\(\beta\_1,\beta\_2\)`取不同值的 EWP3 分布在分布的拟合上更具优势。
 
-![EWP2 、EWP3和CBR的分布拟合图](https://uploads.cosx.org/wp-content/uploads/2010/08/photo3.png)
+![EWP2 、EWP3和CBR的分布拟合图](https://uploads.cosx.org/2010/08/photo3.png)
 
 图3 EWP2 、EWP3和CBR的分布拟合图
 
@@ -125,7 +125,7 @@ CBR参数的极大似然估计`\(\hat{\lambda}\_1,\hat{\lambda}\_2,\ldots,\hat{\
 
 对于0剂量组数据，`\(\left(a,b,c,d\right)\)`的估计值为 {1.360, 3.507, 0.648, 2.953}，估计的分布与经验分布的对比如图4，尽管模型中减少了17个参数，但由于函数形式的合理，该分布仍旧保持较好的拟合效果，拟合优度`\(\chi^2(13)=6.755\)`，p值为0.914。
 
-![图4](https://uploads.cosx.org/wp-content/uploads/2010/08/photo4.png)
+![图4](https://uploads.cosx.org/2010/08/photo4.png)
 
 图4
 

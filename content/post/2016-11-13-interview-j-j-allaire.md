@@ -17,7 +17,7 @@ slug: interview-j-j-allaire
 本文是一篇Joseph B Rickert（简称JBR）对J.J. Allaire（RStudio的创始人和首席执行官）的采访稿，[原文在此](https://www.rstudio.com/rviews/2016/10/12/interview-with-j-j-allaire/)。统计之都与作者沟通后得到授权将其翻译为中文，希望可以让广大读者能够更多了解在R的世界中这个叫RStudio的地方。在这次采访中讨论了RStudio的历史、使命和J.J.的未来愿景。 短暂的交谈中讨论了各种各样的主题，包括RStudio的业务、R语言的发展、R联盟对R社群的重要性以及J.J.对R新手们的建议。
 <!--more-->
 
-![J.J. Allaire](https://uploads.cosx.org/wp-content/uploads/2016/11/图片-1.png)
+![J.J. Allaire](https://uploads.cosx.org/2016/11/图片-1.png)
 
 **JBR ：问您最早是如何接触到R的？R最开始引起您的关注时，您在做什么？为什么是R？**
 

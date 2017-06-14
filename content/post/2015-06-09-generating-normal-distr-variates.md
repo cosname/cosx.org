@@ -72,7 +72,7 @@ for index,n in enumerate(N):
 ```
 得到结果如下图所示
 
-![generate-normal-1](https://uploads.cosx.org/wp-content/uploads/2015/06/generate-normal-1.png) 
+![generate-normal-1](https://uploads.cosx.org/2015/06/generate-normal-1.png) 
 
 可以看到，`$n=1$`时其实就是均匀分布，随着`$n$`逐渐增大，直方图轮廓越来越接近正态分布了~因此利用中心极限定理暴力生成服从正态分布的随机数是可行的。但是这样生成正态分布速度是非常慢的，因为要生成若干个同分布随机变量，然后求和、计算，效率是非常低的。
 
@@ -82,7 +82,7 @@ for index,n in enumerate(N):
 
 正态分布的概率分布函数(CDF)如下图所示，
 
-![generate-normal-2](https://uploads.cosx.org/wp-content/uploads/2015/06/generate-normal-2.png) 
+![generate-normal-2](https://uploads.cosx.org/2015/06/generate-normal-2.png) 
 
 在y轴上产生服从(0,1)均匀分布的随机数，水平向右投影到曲线上，然后垂直向下投影到x轴，这样在x轴上就得到了正态分布。
 
@@ -104,7 +104,7 @@ plt.show()
 ```
 结果如下图所示，
 
-![generate-normal-3](https://uploads.cosx.org/wp-content/uploads/2015/06/generate-normal-3.png) 
+![generate-normal-3](https://uploads.cosx.org/2015/06/generate-normal-3.png) 
 
 以上两个方法虽然方便也容易理解，但是效率实在太低，并不实用，那么在实际中到底是如何生成正态分布的呢？
 
@@ -175,7 +175,7 @@ plt.show()
 
 得到的结果如下图所示，
 
-![generate-normal-4](https://uploads.cosx.org/wp-content/uploads/2015/06/generate-normal-4.png) 
+![generate-normal-4](https://uploads.cosx.org/2015/06/generate-normal-4.png) 
 
 这里抽样次数达到1千万次，1秒左右就完成了，速度非常快~
 
@@ -187,7 +187,7 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 拒绝采样（Rejection Sampling），有的时候也称接收-拒绝采样，使用场景是有些函数`$p(x)$`太复杂在程序中没法直接采样，那么可以设定一个程序可抽样的分布`$q(x)$`比如正态分布等等，然后按照一定的方法拒绝某些样本，达到接近`$p(x)$`分布的目的：
 
-![generate-normal-5](https://uploads.cosx.org/wp-content/uploads/2015/06/generate-normal-5.png) 
+![generate-normal-5](https://uploads.cosx.org/2015/06/generate-normal-5.png) 
 
 具体操作如下，设定一个方便抽样的函数$q(x)$，以及一个常量$k$，使得$p(x)$总在$kq(x)$的下方。（参考上图）
 
@@ -204,11 +204,11 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 采用拒绝采样来生成正态分布，最简单直观的方法莫过于用均匀分布作为$q(x)$，但是这样的话，矩形与正态分布曲线间的距离很大，就会出现刚才提到的问题，高效也就无从谈起了。
 
-![generate-normal-6](https://uploads.cosx.org/wp-content/uploads/2015/06/generate-normal-6.png) 
+![generate-normal-6](https://uploads.cosx.org/2015/06/generate-normal-6.png) 
 
 而Ziggurat算法高效的秘密在于构造了一个非常精妙的`$q(x)$`，看下面这张图
 
-![generate-normal-7](https://uploads.cosx.org/wp-content/uploads/2015/06/generate-normal-7.png) 
+![generate-normal-7](https://uploads.cosx.org/2015/06/generate-normal-7.png) 
 
 我们用多个堆叠在一起的矩形，这样保证阴影部分（被拒绝部分）的始终较小，这样就非常高效了
 
@@ -227,7 +227,7 @@ Box–Muller算法虽然非常快，但是由于用到了三角函数和对数�
 
 最后对比一下Ziggurat算法与Box-muller算法的效率
 
-![generate-normal-8](https://uploads.cosx.org/wp-content/uploads/2015/06/generate-normal-8.png) 
+![generate-normal-8](https://uploads.cosx.org/2015/06/generate-normal-8.png) 
 
 # 总结
 

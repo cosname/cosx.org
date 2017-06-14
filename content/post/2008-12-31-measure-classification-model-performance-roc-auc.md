@@ -52,7 +52,7 @@ plot _SENSIT_*_1MSPEC_ _1MSPEC_*_1MSPEC_
 run; quit;
 ```
 
-![roc](https://uploads.cosx.org/wp-content/uploads/2008/12/roc.png)
+![roc](https://uploads.cosx.org/2008/12/roc.png)
 
 上图那条曲线就是ROC曲线，横轴是1-Specificity，纵轴是Sensitivity。[以前](/2008/12/measure-classification-model-performance-confusion-matrix/)提到过，随着阈值的减小（更多的客户就会被归为正例），Sensitivity和1-Specificity也相应增加（也即Specificity相应减少），所以ROC呈递增态势（至于**ROC**曲线凹向原点而非凸向原点，不知道有无直观的解释，不提）。那条45度线是作为参照（baseline model）出现的，就是说，ROC的好坏，乃是跟45度线相比的，怎么讲？
 
@@ -67,7 +67,7 @@ run; quit;
 
 如果不用模型，我们就根据原始数据的分布来指派，随机地把客户归为某个类别，那么，你得到的True Positive对False Positive之比，应该等于Actual Positive对Actual Negative之比（你做得跟样本分布一样好）——即，`\(d/b=(c+d)/(a+b)\)`，可以有`\((d/c+d)/(b/a+b)=1\)`，而这正好是Sensitivity/(1-Specificity)。在不使用模型的情况下，Sensitivity和1-Specificity之比恒等于1，这就是45度线的来历。一个模型要有所提升，首先就应该比这个baseline表现要好。ROC曲线就是来评估模型比baseline好坏的一个著名图例。这个可能不够直观，但可以想想线性回归的baseline model：
 
-![clip_image003](https://uploads.cosx.org/wp-content/uploads/2008/12/clip-image003.jpg)
+![clip_image003](https://uploads.cosx.org/2008/12/clip-image003.jpg)
 
 如果不用模型，对因变量的最好估计就是样本的均值（上图水平红线）。绿线是回归线（模型），回归线与水平线之间的偏离，称作Explained Variability， 就是由模型解释了的变动，这个变动（在方差分析里，又称作model sum of squares, SSM）越大，模型表现就越好了（决定系数R-square标准）。同样的类比，ROC曲线与45度线偏离越大，模型的效果就越好。最好好到什么程度呢？
 
@@ -99,7 +99,7 @@ run;
 ods graphics off;
 ```
 
-![ROCCurve](https://uploads.cosx.org/wp-content/uploads/2008/12/roccurve.png)
+![ROCCurve](https://uploads.cosx.org/2008/12/roccurve.png)
 
 这个ROC图貌似还漂亮些，眼神好能看见标出来的AUC是0.8029。 最后提一句，ROC全称是Receiver Operating Characteristic Curve，中文叫“接受者操作特性曲线”，江湖黑话了（有朋友能不能出来解释一下，谁是Receiver，为什么Operating，何谓Characteristic——这个看着好像是Sensitivity和Specificity），不过并不妨碍我们使用ROC作为模型评估的工具。
 

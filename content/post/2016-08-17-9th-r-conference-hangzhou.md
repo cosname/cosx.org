@@ -16,7 +16,7 @@ slug: 9th-r-conference-hangzhou
 
 自2008年在中国人民大学举办第一届中国R语言会议起，到2016年中国R语言会议已经成功地走过了第九年，先后在全国七个城市举办，影响日渐扩大，前后报名参与人数已过万人。会议内容覆盖数据科学及R语言在各行各业的应用，包括天文、地理、医疗、生物、金融、能源、互联网等领域。十年磨一剑，破鞘天下惊。在R语言会议发展壮大的同时，统计之都也已走过十年风雨。十年间，统计之都服务着广大统计学爱好者，推动着R语言在中国的传播和发展，见证着数据科学时代的逐渐崛起。迄今为止，统计之都已先后出版八本R语言相关图书，举行五十余期海内外沙龙；未来，我们将再接再厉，继续为国内统计学和数据科学的发展贡献自己的力量。
 
-![2](https://uploads.cosx.org/wp-content/uploads/2016/08/2.jpg)
+![2](https://uploads.cosx.org/2016/08/2.jpg)
 
 <!--more-->
 
@@ -54,9 +54,9 @@ slug: 9th-r-conference-hangzhou
 
 主办方
 
-![3](https://uploads.cosx.org/wp-content/uploads/2016/08/3.jpg)
+![3](https://uploads.cosx.org/2016/08/3.jpg)
 
-![4](https://uploads.cosx.org/wp-content/uploads/2016/08/4.png)
+![4](https://uploads.cosx.org/2016/08/4.png)
 
 # 八、承办方
 

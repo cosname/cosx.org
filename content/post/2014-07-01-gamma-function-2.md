@@ -28,7 +28,7 @@ description: “本文主要讲述伽玛函数的定义、性质以及随机数�
   
 然而这个定义在历史上并没有流传开来。
 
-  ![勒让德肖像水彩画](https://uploads.cosx.org/wp-content/uploads/2014/07/legendre.jpg)
+  ![勒让德肖像水彩画](https://uploads.cosx.org/2014/07/legendre.jpg)
 
 欧拉在伽玛函数的推导中实际上引入了两类积分形式
   
@@ -122,7 +122,7 @@ $$`
 
 那么 `$f(x) = \Gamma(x)$`, 也就是`$\Gamma(x)$`是唯一满足以上条件的函数。`$log \Gamma(x)$` 是一个凸函数
 
-  ![digamma-func](https://uploads.cosx.org/wp-content/uploads/2014/07/digamma-func.png) 
+  ![digamma-func](https://uploads.cosx.org/2014/07/digamma-func.png) 
 
 伽玛函数有不少等价的表示形式和神奇的结果。高斯给出的伽玛函数的形式是
   
@@ -141,7 +141,7 @@ $$`
 
 伽玛函数还有很多妙用，它能扩展一些重要的数学概念，譬如导数。我们可以定义一阶、二阶等整数阶导数，而数学家们却追问一个奇怪的问题：我们能定义分数阶的导数吗？ 这个问题早年莱布尼茨研究微积分的时候他就提出来过，然而没有获得实质性进展。而欧拉给出了伽玛函数之后，也研究过分数阶导数的问题。我们观察一下函数`$f(x) = x^n$` 的各阶导数
 
-![derivatives](https://uploads.cosx.org/wp-content/uploads/2014/07/derivatives.png)
+![derivatives](https://uploads.cosx.org/2014/07/derivatives.png)
 
 由于k阶导数可以用阶乘表达，于是我们用伽玛函数表达为
   
@@ -154,7 +154,7 @@ $$`
   
 很容易想到对于一般的函数 `$f(x)$`通过泰勒级数展开可以表达为幂级数，于是借用 `$x^n$`的分数阶导数，我们可以尝试定义出任意函数的分数阶导数。不过有点遗憾的是这种简单的基于泰勒级数的定义方法不是良定义的，并非对所有函数都适用，但是这个思想却给后来的数学家提供了重要的线索，并由此发展了数学分析中的一个研究课题： Fractional Calculus。 在这种微积分中，分数阶的导数是具有良定义的，而积分作为导数的逆运算，也可以有分数阶。 这听起来真是很神奇，而这一切都要归功于伽玛函数。
 
-  ![n 维球的体积](https://uploads.cosx.org/wp-content/uploads/2014/07/n-dim-ball.jpg)
+  ![n 维球的体积](https://uploads.cosx.org/2014/07/n-dim-ball.jpg)
 
 伽马函数还有一个奇妙的运用是求高维空间中球的体积。我们知道 二维球是圆；其面积为 `$\pi r^2$`，三维球的体积为 `$\frac{4}{3} \pi r^3$`，那$n$维空间中半径为$r$的球的体积如何计算呢？ 数学上这个体积应该是如下多重积分
   
@@ -224,7 +224,7 @@ $$`
   
 `$$Gamma(t|\alpha, \beta) = \frac{\beta^\alpha t^{\alpha-1}e^{-\beta t}}{\Gamma(\alpha)} .$$`
 
-  ![gamma-distribution](https://uploads.cosx.org/wp-content/uploads/2014/07/gamma-distribution.png)
+  ![gamma-distribution](https://uploads.cosx.org/2014/07/gamma-distribution.png)
 
 伽玛分布在概率统计领域也是一个万人迷，众多统计分布和它有密切关系。指数分布和 $\chi^2$ 分布都是特殊的伽玛分布。另外伽玛分布是一个很强大的先验分布，在贝叶斯统计分析中被广泛的用作其它分布的先验。如果把统计分布中的共轭关系类比为人类生活中的情侣关系的话，那指数分布、泊松分布、正态分布、对数正态分布都可以是伽玛分布的情人。
 
@@ -360,4 +360,4 @@ k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
   * George E. Andrews et al., Special Functions, Cambridge University Press, 2001
   * Ian Tweddle, James Stirling’s Methodus Differentialis: An Annotated Translation of Stirling’s Text, Springer, 2003
 
-![flickering-logo](https://uploads.cosx.org/wp-content/uploads/2014/07/flickering-logo.png)
+![flickering-logo](https://uploads.cosx.org/2014/07/flickering-logo.png)

@@ -45,11 +45,11 @@ slug: outlook-on-statistical-methods
 
 同样我们可以看看什么样的`\(\xi\)`使得上面的目标函数最小？通过对`\(\xi\)`简单的求导，不难发现满足条件的`\(\xi\)`正是`\(y\)`的`\(\tau\)`分位数 。
 
-![分位回归目标函数示意图](https://uploads.cosx.org/wp-content/uploads/2008/11/obj-function-for-qr.png)
+![分位回归目标函数示意图](https://uploads.cosx.org/2008/11/obj-function-for-qr.png)
 
 在R中，与分位数回归对应的包是**quantreg**，这个包也有自带的一份Vignette，对于分位数回归的学习者来说绝对是好材料（位于/doc目录下，rq.pdf）。这份文档中举了一个关于恩格尔系数的例子（见图 2），图中虚线是最小二乘回归结果，黑线是中位数回归结果（实际上就是`\(\tau=0.5\)`），灰线从下至上分别是0.05、0.1、0.25、0.75、 0.90、0.95分位数；从图中可以看出，大趋势是随家庭收入增大，食品支出也增加（废话！），但是在给定家庭收入的情况下，食品支出的不同分位数的变化趋势（斜率）是有差别的，高分位变化更陡峭，而低分位相对平缓；说明的实际问题大约也就是恩格尔系数高的家庭更倾向于在食品上花钱。相比起来，最小二乘回归就不能说明这样的趋势，而只能说明前面那句“废话”。
 
-![图2 收入与支出的分位回归](https://uploads.cosx.org/wp-content/uploads/2008/11/quantile-regression-income-expenditure.png)
+![图2 收入与支出的分位回归](https://uploads.cosx.org/2008/11/quantile-regression-income-expenditure.png)
 
 # 三、Bootstrap & Jackknife 与抽样
 

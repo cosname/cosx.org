@@ -15,7 +15,7 @@ slug: 8th-china-r-wuhan-summary
 
 第八届中国R语言会议（武汉会场）暨华中地区数据科学会议于2015年11月7日在湖北经济学院大学生活动中心二号报告厅顺利举行。会议由湖北经济学院统计学院和统计之都主办，湖北数据与分析中心协办，优酷土豆和辰智咨询提供了赞助。会议当天，众多R语言兴趣爱好者齐聚一堂，就R语言在行业中的应用进行了交流探讨。经过大家的努力，R语言的火种顺利传到了武汉，接下来还会一直传递下去。<!--more-->
 
-![wh-001](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-001.jpg)
+![wh-001](https://uploads.cosx.org/2015/12/wh-001.jpg)
 
 # 会议概况 
 
@@ -30,7 +30,7 @@ slug: 8th-china-r-wuhan-summary
 
 1. 开幕致辞
 
-![开幕致辞](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-002.jpg)
+![开幕致辞](https://uploads.cosx.org/2015/12/wh-002.jpg)
 
 会议筹备组主席李巧玲代表整个筹备组对各位来宾表示欢迎，同时也分享了在会议筹备过程中的一些经历、感受，令人忍俊不禁却又发人深省。
 
@@ -40,7 +40,7 @@ slug: 8th-china-r-wuhan-summary
 
 2. 谢军： 当R真的遇到了大数据
 
-![wh-003](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-003.jpg)
+![wh-003](https://uploads.cosx.org/2015/12/wh-003.jpg)
 
 谢军博士从事数据分析行业已有28年，拥有丰富的金融大数据处理经验，现任上海雅捷信息技术股份有限公司的首席数据科学家。
 
@@ -49,7 +49,7 @@ slug: 8th-china-r-wuhan-summary
 
 3. 李舰：R与自动化报告
 
-![wh-004](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-004.jpg)
+![wh-004](https://uploads.cosx.org/2015/12/wh-004.jpg)
 
 李舰先生专注于数据科学在行业里的应用。擅长R语言的工程开发与分析建模，是 Rweibo、Rwordseg、tmcn、Rofficetool 等 R 包的作者，现任堡力山集团副总。
 
@@ -57,7 +57,7 @@ slug: 8th-china-r-wuhan-summary
 
 4. 肖凯：基于OpenCPU的R模型部署
 
-![wh-005](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-005.jpg)
+![wh-005](https://uploads.cosx.org/2015/12/wh-005.jpg)
 
 肖凯先生是《数据科学中的R语言》的作者之一，现任1号店商务智能部资深数据挖掘工程师。
 
@@ -65,7 +65,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 5. 何宇兵：商业大数据时代，GIS和R更配
 
-![wh-006](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-006.jpg)
+![wh-006](https://uploads.cosx.org/2015/12/wh-006.jpg)
 
 何宇兵先生是上海辰智商务信息咨询有限公司GIS商业应用研究中心技术总监，他主要关注GIS在选址规划、经营数据地理可视化、市场潜力分析、物流优化等领域的应用，从事GIS（地理信息系统）技术开发和商业应用研究工作近10年。
 
@@ -73,7 +73,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 6. 张兵：基于R软件的传染病监测系统数据可视化及分析平台搭建
 
-![wh-007](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-007.jpg)
+![wh-007](https://uploads.cosx.org/2015/12/wh-007.jpg)
 
 
 张兵先生毕业于华中科技大学劳动卫生与环境卫生学系，目前就职于浙江省疾病预防控制中心，研究方向为环境流行病学和传染病模型，同时也致力于推广R软件在公共卫生领域的应用。
@@ -82,7 +82,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 7. 苏建冲：运营商数据应用场景的尝试和探讨
 
-![wh-008](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-008.jpg)
+![wh-008](https://uploads.cosx.org/2015/12/wh-008.jpg)
 
 
 苏建冲先生毕业于中国人民大学统计学院，使用R语言已逾4年。现就职于中国移动研究院从事资费研究工作。
@@ -91,7 +91,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 8. 谢佳标：大数据的处理及建模技术——基于R语言实现
 
-![wh-009](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-009.jpg)
+![wh-009](https://uploads.cosx.org/2015/12/wh-009.jpg)
 
 谢佳标是深圳创梦天地科技有限公司高级数据分析师，从事数据挖掘建模工作已有8年，主要利用R语言进行大数据的挖掘和可视化工作。
 
@@ -99,7 +99,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 9. 周翔：怦然心动的数据整理&描述魔法
 
-![wh-010](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-010.jpg)
+![wh-010](https://uploads.cosx.org/2015/12/wh-010.jpg)
 
 周翔是中山大学数学与计算科学学院统计学本科生，R Square和华南统计研究中心成员。R语言和生物统计爱好者。
 
@@ -107,7 +107,7 @@ OpenCPU是一个服务接口，将Web地址翻译成相应的R函数以供调用
 
 10. 闭幕致辞
 
-![wh-011](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-011.jpg)
+![wh-011](https://uploads.cosx.org/2015/12/wh-011.jpg)
 
 林祯舜老师在会议最后进行了闭幕致辞。“学R不思则罔，思R不学则殆”，重要的事情要说三遍。林祯舜老师鼓励在场的学生，学习R语言一定要多动手，多思考，而不能总是copy-paste，做代码和模型的搬运工。从做中学，在学中思，这是一个没有人能替代的过程。
 
@@ -169,7 +169,7 @@ R语言会议第一次在武汉举办，会议的顺利进行离不开很多人�
 
 张耀峰  湖北数据与分析中心主任
 
-![wh-012](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-012.jpg)
+![wh-012](https://uploads.cosx.org/2015/12/wh-012.jpg)
 
 
 
@@ -177,12 +177,12 @@ R语言会议第一次在武汉举办，会议的顺利进行离不开很多人�
 
 ## 优酷土豆股份有限公司
 
-![wh-013](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-013.jpg)
+![wh-013](https://uploads.cosx.org/2015/12/wh-013.jpg)
 
 
 ## 辰智商务信息咨询有限公司
 
-![wh-014](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-014.jpg)
+![wh-014](https://uploads.cosx.org/2015/12/wh-014.jpg)
 
 
 # 全体参会人员信息统计
@@ -192,21 +192,21 @@ R语言会议第一次在武汉举办，会议的顺利进行离不开很多人�
 
 ## 参会人员性别比例
 
-![wh-015](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-015.jpg)
+![wh-015](https://uploads.cosx.org/2015/12/wh-015.jpg)
 
 ## 参会人员年龄分布
 
-![wh-016](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-016.jpg)
+![wh-016](https://uploads.cosx.org/2015/12/wh-016.jpg)
 
 
 
 ## 参会人员学生与在职比例
 
-![wh-017](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-017.jpg)
+![wh-017](https://uploads.cosx.org/2015/12/wh-017.jpg)
 
 ## 参会人员得知会议的方式
 
-![wh-018](https://uploads.cosx.org/wp-content/uploads/2015/12/wh-018.jpg)**
+![wh-018](https://uploads.cosx.org/2015/12/wh-018.jpg)**
 
 # 参会单位
 

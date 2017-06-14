@@ -16,7 +16,7 @@ tags:
 slug: statistics-in-chinese-song-poem-2
 ---
 
-![统计词话（二）配图](https://uploads.cosx.org/wp-content/uploads/2012/03/galaxy.jpg)
+![统计词话（二）配图](https://uploads.cosx.org/2012/03/galaxy.jpg)
 
 > 抬头，他们看到了诗云。
   
@@ -27,7 +27,7 @@ slug: statistics-in-chinese-song-poem-2
 
 时光荏苒，距离[上次论词](/2011/03/statistics-in-chinese-song-poem-1/)已经过去了一年。今天我们接着这一话题，不过这回要看的是词牌和作者。
 
-既然数据库里面有词牌和作者的记录，那么一个很自然的疑问是，哪些词牌被使用的频率最高？又有哪些词人的词作最为丰盛？这两个问题并不困难，只需要对他们进行频率统计然后排序即可。以下是R语言的代码和结果（[数据下载地址](https://uploads.cosx.org/wp-content/uploads/2011/03/SongPoem.tar.gz)）：<!--more-->
+既然数据库里面有词牌和作者的记录，那么一个很自然的疑问是，哪些词牌被使用的频率最高？又有哪些词人的词作最为丰盛？这两个问题并不困难，只需要对他们进行频率统计然后排序即可。以下是R语言的代码和结果（[数据下载地址](https://uploads.cosx.org/2011/03/SongPoem.tar.gz)）：<!--more-->
 
 ```r
 doc = read.csv("SongPoem.csv");
@@ -104,7 +104,7 @@ Cipai Freq
 
 对于这个疑问，一个很直接的想法是做出词人与词牌的对应关系。在《全宋词》的数据中，共有1377位词人和876个词牌，那么我们就可以构造一个1377\*876的0-1矩阵，取1的元素表示这一行所对应的词人使用了这一列对应的词牌。我们将这个矩阵变成一张图片，每一个像素点就是矩阵的一个元素，黑色的部分是0，白色的部分是1，结果就会是下面这样：
 
-![统计词话（二）——词人与词牌对应关系](https://uploads.cosx.org/wp-content/uploads/2012/03/original.png) 
+![统计词话（二）——词人与词牌对应关系](https://uploads.cosx.org/2012/03/original.png) 
 
 从这张“夜空中的星星”我们可以发现，绝大部分的点都被黑色所占据，这其实很容易理解：一个词人不可能写过所有的词牌，一个词牌也不可能人人都会去写。然而我们会注意到一个问题——“星星”隔得太远了。在黑色的背景中，这些“星星”零散地分布在夜空中的各个角落，而出于一种“星星相惜”的心情，我们似乎希望能把那些最亮的“星”聚在一起。
 
@@ -112,7 +112,7 @@ Cipai Freq
 
 为了解决这个矛盾，在此向大家介绍一种叫做双向聚类（Co-clustering，Biclustering，或Two-mode clustering）的算法。双向聚类是一种矩阵排序技术，简单地来说，它就是通过矩阵中行与行之间、列与列之间的交换，来使得取值相近的元素尽可能靠在一起，达到聚类的效果。我们使用R中的`seriation`软件包来对之前的0-1矩阵进行聚类，最终可以得到这样的一张图：
 
-![统计词话（二）——矩阵排序](https://uploads.cosx.org/wp-content/uploads/2012/03/seriate.png) 
+![统计词话（二）——矩阵排序](https://uploads.cosx.org/2012/03/seriate.png) 
 
 很明显，这张图中“星星”变得更加集中，放眼望去，就好像是文字和名字交织成的两条银河。让我们把目光聚焦到“星星”最密集的地方，最后可以得到以下这几个“星团”（只选取了若干最有代表性的）：
 
@@ -694,7 +694,7 @@ corrplot(M.AOE);
 corrRect(c(4, 2, 5));
 ```
 
-![统计词话（二）——相关系数矩阵排序](https://uploads.cosx.org/wp-content/uploads/2012/03/order.png) 
+![统计词话（二）——相关系数矩阵排序](https://uploads.cosx.org/2012/03/order.png) 
 
 关于双向聚类只是在这里做一个简单的介绍，如果对此感兴趣，还可以继续搜索相关的文献，例如这篇[综述文章](http://innar.com/Liiv_Seriation.pdf)。
 
@@ -702,11 +702,11 @@ corrRect(c(4, 2, 5));
 
 你有没有觉得之前那张黑夜与星星的图不够炫？那是因为词人和词牌这两个维度是在相互垂直的坐标轴上，所以给人一种太规整的感觉。接下来我们摆弄一个小的技巧，就是把它们放到极坐标中，每一个词牌代表一个角度（方向），每一位词人则对应于一个距离，于是之前的那张图就转变成了下面的样子：
 
-![统计词话（二）——极坐标](https://uploads.cosx.org/wp-content/uploads/2012/03/poem-cloud.png) 
+![统计词话（二）——极坐标](https://uploads.cosx.org/2012/03/poem-cloud.png) 
 
 最后，我们再用核密度平滑来模拟星光的效果（使用`smoothScatter()`绘制平滑散点图），就成了最后这片璀璨的群星：
 
-![统计词话（二）——诗云](https://uploads.cosx.org/wp-content/uploads/2012/03/poem-cloud-smooth.png) 
+![统计词话（二）——诗云](https://uploads.cosx.org/2012/03/poem-cloud-smooth.png) 
 
 在这一片星海中，每一个同心圆（椭圆）都代表了一位词人，而从中心向外的每一个方向都是一个词牌。这是人类的群星闪耀时，而幸运的是，这一片星空，是属于这个古老的国度的。
 

@@ -39,7 +39,7 @@ slug: story-of-normal-distribution-2
 
 多么奇妙的性质，随意的一个概率分布中生成的随机变量，在序列和(或者等价的求算术平均)的操作之下，表现出如此一致的行为，统一的规约到正态分布。
 
-![central_limit_theorem](https://uploads.cosx.org/wp-content/uploads/2013/01/central_limit_theorem.jpg)
+![central_limit_theorem](https://uploads.cosx.org/2013/01/central_limit_theorem.jpg)
 
 **中心极限定理**
 
@@ -47,7 +47,7 @@ slug: story-of-normal-distribution-2
 
 中心极限定理虽然表述形式简洁，但是严格证明它却非常困难。中心极限定理就像一张大蜘蛛网，棣莫弗和拉普拉斯编织了它的雏形，可是这张网上漏洞太多，一个多世纪来，数学家们就像蜘蛛一样前赴后继，努力想把所有的漏洞都补上。在19世纪，泊松 (Siméon Denis Poisson, 1781-1840)、狄利克莱(Gustav Lejeune Dirichlet, 1805-1859)、柯西(Augustin-Louis Cauchy, 1789-1857)、贝塞尔(Friedrich Bessel, 1784-1846)这些大蜘蛛都曾经试图对把这张网上的漏洞补上。从现代概率论的角度来看，整个19世纪的经典概率理论并没有能输出一个一般意义下严格的证明。而真正把漏洞补上的是来自俄罗斯的几位蜘蛛侠：切比雪夫(Pafnuty Chebyshev, 1821-1894)、马尔可夫(Andrey Andreyevich Markov, 1856-1922)和李雅普诺夫(Aleksandr Mikhailovich Lyapunov, 1857-1918)。俄罗斯是一个具有优秀的数学传统的民族，产生过几位顶尖的的数学家，在现代概率论的发展中，俄罗斯的圣彼得堡学派可以算是顶了半边天。把漏洞补上的严格方案的雏形是从切比雪夫 1887年的工作开始的，不过切比雪夫的证明存在一些漏洞。马尔可夫和李雅普诺夫都是切比雪夫的学生，马尔科夫沿着老师的基于矩法的思路在蜘蛛网上辛勤编织，但洞还是补得不够严实；李雅普诺夫不像马尔可夫那样深受老师的影响，他沿着拉普拉斯当年提出的基于特征函数的思路，于1901年给出了一个补洞的方法，切比雪夫对这个方法大加赞赏，李雅普诺夫的证明被认为是第一个在一般条件下的严格证明；而马尔科夫也不甘示弱，在 1913年基于矩法也把洞给补严实了。
 
-![clt_proof](https://uploads.cosx.org/wp-content/uploads/2013/01/clt_proof.jpg)
+![clt_proof](https://uploads.cosx.org/2013/01/clt_proof.jpg)
 
 **华山论剑**
 
@@ -72,7 +72,7 @@ slug: story-of-normal-distribution-2
 
 花开两朵，各表一枝。上面说了正态分布在概率论中的发展，现在来看看正态分布在数理统计学中发展的故事。这个故事的领衔主演是凯特勒(Adolphe Quetelet, 1796-1874)和高尔顿 (Francis Galton, 1822-1911)。
 
-![galton_quetelet](https://uploads.cosx.org/wp-content/uploads/2013/01/galton_quetelet.jpg)
+![galton_quetelet](https://uploads.cosx.org/2013/01/galton_quetelet.jpg)
 
 **凯特勒和高尔顿**
 
@@ -84,7 +84,7 @@ slug: story-of-normal-distribution-2
 
 1831年，凯特勒参与主持新建比利时统计总局的工作。他开始从事有关人口问题的统计学研究。在这种研究中，凯特勒发现,以往被人们认为杂乱无章的、偶然性占统治地位的社会现象，如同自然现象一样也具有一定的规律性。 凯特勒 搜集了大量关于人体生理测量的数据，如体重、身高与胸围等，并使用概率统计方法来对数据进行数据分析。但是当时的统计分析方法遭到了社会学家的质疑，社会学家们的反对意见主要在于：社会问题与科学实验不同，其数据一般由观察得到，无法控制且经常不了解其异质因素，这样数据的同质性连带其分析结果往往就有了问题，于是社会统计工作者就面临一个如何判断数据同质性的问题。凯特勒大胆地提出：
 
-![normal_fitness](https://uploads.cosx.org/wp-content/uploads/2013/01/normal_fitness.jpg)
+![normal_fitness](https://uploads.cosx.org/2013/01/normal_fitness.jpg)
 
 **把一批数据是否能很好地拟合正态分布，作为判断该批数据同质的标准。**
 
@@ -96,13 +96,13 @@ slug: story-of-normal-distribution-2
 
 如下图中每一点表示钉在板上的一颗钉子，它们彼此的距离均相等。当小圆球向下降落过程中，碰到钉子后皆以 1/2 的概率向左或向右滚下。如果有n排钉子，则各槽内最终球的个数服从二项分布 `\(B(n,1/2)\)`, 当`\(n\)` 较大的时候，接近正态分布。
 
-![galton_quincunx](https://uploads.cosx.org/wp-content/uploads/2013/01/galton_quincunx.jpg)
+![galton_quincunx](https://uploads.cosx.org/2013/01/galton_quincunx.jpg)
 
 **高尔顿钉板**
 
 设想在此装置的中间某个地方 AB 设一个挡板把小球截住，小球将在AB处聚成正态曲线形状，如果挡板上有许多阀门，打开一些阀门，则在底部形成多个大小不一的正态分布，而最终的大正态分布正是这些小正态分布的混合。
 
-![galton_quincunx3](https://uploads.cosx.org/wp-content/uploads/2013/01/galton_quincunx3.jpg)
+![galton_quincunx3](https://uploads.cosx.org/2013/01/galton_quincunx3.jpg)
 
 **高尔顿钉板解释遗传现象**
 
@@ -119,7 +119,7 @@ slug: story-of-normal-distribution-2
 
 在这个背景之下，统计学三大分布`\(\chi^2\)`分布、`\(t\)`分布、`\(F\)`分布逐步登上历史舞台。这三大分布现在的理科本科生都很熟悉。在历史上，这三个分布和来自英国的现代数理统计学的三大剑客有着密切的关系。
 
- ![three-swords](https://uploads.cosx.org/wp-content/uploads/2013/01/three-swords.jpg)
+ ![three-swords](https://uploads.cosx.org/2013/01/three-swords.jpg)
  
  **数理统计三剑客**
 
@@ -196,7 +196,7 @@ slug: story-of-normal-distribution-2
 
 概率学家卡克在他的自述传记《机遇之谜》(Enigmas of chance: An autobiography) 中描述他与正态分布的渊源：“我接触到正态分布之后马上被他深深的吸引，我感到难以相信，这个来自经验直方图和赌博游戏的规律，居然会成为我们日常生活数学的一部分。”另一位概率学家 Michel Loéve(1907-1979) 说：“如果我们要抽取列维的概率中心思想，那我们可以这样说，自从 1919 年以后，列维研究的主题曲就是正态分布，他一而再再而三的以她为出发点，并且坚决的又回到她…… 他是带着随机时钟沿着随机过程的样本路径作旅行的人。”美国国家标准局的顾问 W. J. Youden 用如下一段排列为正态曲线形状的文字给予正态分布极高的评价，意思是说：误差的正态分布规律在人类的经验中具有“鹤立鸡群”的地位，它在物理、社会科学、医学、农业、工程等诸多领域都充当了研究的指南，在实验和观测数据的解读中是不可或缺的工具。
 
-![youden-normal-curve](https://uploads.cosx.org/wp-content/uploads/2013/01/youden-normal-curve.jpg)
+![youden-normal-curve](https://uploads.cosx.org/2013/01/youden-normal-curve.jpg)
 
 **正态误差态分布律**
 
@@ -204,7 +204,7 @@ slug: story-of-normal-distribution-2
 
 在一次采访当中，作为数学家的托姆同两位古人类学家讨论问题。谈到远古的人们为什么要保存火种时，一个人类学家说，因为保存火种可以取暖御寒；另外一个人类学家说，因为保存火种可以烧出鲜美的肉食。而托姆说，因为夜幕来临之际，火光摇曳妩媚，灿烂多姿，是最美最美的……
 
-![fire](https://uploads.cosx.org/wp-content/uploads/2013/01/fire.jpg)
+![fire](https://uploads.cosx.org/2013/01/fire.jpg)
 
 # 9. 推荐阅读
 

@@ -20,7 +20,7 @@ slug: chase-after-eb
 
 故事的主人公自然是 Efron Bradley(EB)。今年的 5 月 24 日，是他 74 岁生日。从他拿到 PhD 的那年算起，正好五十年。他对统计学的贡献是巨大的，必将永远载入人类史册。正如爱因斯坦所说：“方程对我而言更重要些，因为政治是为当前，而一个方程却是一种永恒的东西（Equations are more important to me, because politicsis for the present, but anequation is something for eternity）。”人生天地之间，如白驹过隙，忽然而已。然而，经典就永远是经典。若干年后，人们遥想 Efron 当年，LARS 初嫁了。雄姿英发，羽扇纶巾。谈笑间，LB^[LB不是指“老板”，而是指“Lasso”与“Boosting” 之间的“秘密”。]灰飞烟灭…… 于是乎，江山如画，一时多少豪杰! 总之，LARS 的故事必然成为统计学史上的一段佳话。
 
-![citations](https://uploads.cosx.org/wp-content/uploads/2013/01/citation.png)
+![citations](https://uploads.cosx.org/2013/01/citation.png)
 
 图1：此图来源于Bulhmann教授的一篇文章。右边是Efron教授的成名绝技Bootstrap。左边四个中有两个都与Efron教授有很大的关系：1.Lasso。2.FDR。
 
@@ -176,17 +176,17 @@ g(\mu|z)&=\varphi(z-\mu)g(\mu)/f(z) \\
   
 总之，不能说一个模型越通用就越好，更不能说一个模型越简单就越不好。关键看什么情况下用以及怎么用！乔峰打出的少林长拳都是虎虎生威的！
 
-![James-Stein估计量](https://uploads.cosx.org/wp-content/uploads/2013/01/JS.png)
+![James-Stein估计量](https://uploads.cosx.org/2013/01/JS.png)
 
 图2：James-Stein Estimator结构图。
 
-![HMM](https://uploads.cosx.org/wp-content/uploads/2013/01/HMM.png)
+![HMM](https://uploads.cosx.org/2013/01/HMM.png)
 
 图3：HMM或者Kalman filter结构图。
 
 现在要问的是，除了图 2 这种结构，还有没有其它结构呢？答案还是肯定的，如图 3 所示。当 `$\mu$` 的状态是离散的时候，这就是著名的 HMM(Hidden Markov Model，隐马尔科夫链)；当 `$\mu$` 的状态是连续的时候，这就是著名的Kalman filter （卡尔曼滤波）。值得一提的是，多层次线性模型 (Hierarchical linear models) 也源自于此，LMM(linear mixed model，昵称“林妹妹”吧)也可以有经验贝叶斯的理解，此处略去 `$n$` 个字。天下武功，若说邪的，那是各有各的邪法，若说正的，则都有一种“天下武功出少林”的感觉。不管你们有没有震惊，我当时意识到“这股浩然正气”的时候，是相当震惊的。这里我还得再次表达《统计学习那些事》里面的一个观点，那就是，只有一个模型结构是不够的，还需要快速的算法去优化模型。HMM 和 Kalman filter 之所以听上去就这么如雷贯耳，还在于他们都有很好的算法。没有算法，也就没法执行，将神马都不是。掌握一个模型，除了掌握它和其它模型的联系之外，还需要掌握它的算法。如果老师只让学生学模型的大致结构，就如同赵志敬只教杨过背全真教的内功心法一样，到比武的时候，武学天才的杨过连鹿清笃都搞不定，由此可知后果是相当严重的。学算法，最好的办法就是自己亲自去试一下，试的时候就知道能不能和内功心法映证了。我记得小学时候的一篇课文《小马过河》，亲自实验的结果很可能是：“河水既没有老牛说的那么浅，也没有小松鼠说的那么深”。
 
-![经验贝叶斯](https://uploads.cosx.org/wp-content/uploads/2013/01/EmpBayes.png)
+![经验贝叶斯](https://uploads.cosx.org/2013/01/EmpBayes.png)
 
 图4：经验贝叶斯（黑色实线）与shrunken centroids(绿色虚线)。红色虚线是经验贝叶斯估计的标准差。
 
@@ -194,13 +194,13 @@ g(\mu|z)&=\varphi(z-\mu)g(\mu)/f(z) \\
 
 2000年到2008年，Efron 教授主要致力于研究 Large-scale Inference，他有关 False Discovery Rate(FDR) 的经验贝叶斯解释，给人拨云见日的感觉。2008 年的时候，Efron 教授突然神龙摆尾，用经验贝叶斯做预测^[Efron B. (2008) Empirical Bayes estimates for large-scale prediction problems。预测(prediction)和推理(Inference)关注的是不同的问题。]。他用到了 `$\mu\sim g(\cdot),z|\mu \sim \mathcal{N}(\mu,1)$`，根据 Tweedie’s formula(19) 得到 `$\mathbb{E}(\mu|z)$`。 他观察到一个很有意思的情况：他的结果与 Tibshirani 的shrunken centroids (SC) 给出的结果很相似，如图 4 所示。我们可以看到两点吧：第一，在大规模推理 (Large-scale-inference) 时，有很多 `$\mu=0$`。第二，就算`$\mu\neq0$`，`$|\mu|$` 也比实际观察到的 `$|z|$` 要小。比如，实际观察到的`$z=4$`，不能因此认为 `$\mu=4$`，经验贝叶斯（Tweedie’s formula）告诉我们，`$\mathbb{E}{(\mu|z)}=2.74$`。同样的，`$z=-4$` 时，`$\mathbb{E}{(\mu|z)}=-3.1$`。这表明真实情况往往没有直接观察到的情况那么极端。现实生活中，我们也会发现，网络上表扬谁或者批评谁的言论，大多都会因为偏激而失真。真实的情况往往没有歌颂的这么好，当然也不会到诋毁的那么差。一个比较理性的做法是shrink （收缩）一下，从而洞察真相。统计学为这种【中庸】的思考方式提供了强有力的支持。
 
-![Shrinkage operators](https://uploads.cosx.org/wp-content/uploads/2013/01/shrinkage.png)
+![Shrinkage operators](https://uploads.cosx.org/2013/01/shrinkage.png)
 
 图5：Shrinkage operators。
 
 EB 与 SC 紧密相连，SC 又与 Lasso 紧密相连^[参见Elements of statistical learning (2nd), Ex18.2。]。SC 有更多的假设，如 feature 之间是独立的，Lasso 更加宽松，但都用了soft-shrinkage operator(对应 `$L_1$` penalty)。 当然，shrinkage operator 有很多，比较出名的还有：Hard-shrinkage operator (对应`$L_0$` penalty)，Ridge-shrinkage operator(对应`$L_2$` penalty)，如图 5 所示。于是我们可以看到一个五彩缤纷的 penalty 世界。近年来，各式各样的 penalty 如雨后春笋般的涌现，个人认为比较成功的有 Elastic net^[H. Zou, T. Hastie (2005) Regularization and variable selection via the elastic net.]和 `$MC+$` penalty^[R. Mazumder, J. Friedman and T. Hastie: SparseNet : Coordinate Descent with Non-Convex Penalties.]。好了，最后用 Efron 教授办公室的照片(图6)来总结一下吧：那些年，我们一起追的EB。
 
-![Efron办公室](https://uploads.cosx.org/wp-content/uploads/2013/01/office.jpg)
+![Efron办公室](https://uploads.cosx.org/2013/01/office.jpg)
 
 图6：Efron office at Sequoia hall of Stanford。图片由师弟在逛Stanford时拍下。能否认出照片中的人？
 

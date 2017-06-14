@@ -17,11 +17,11 @@ description: "最近几天不少微信群里面又流行起来一种“红包接
 
 如果你有一台智能手机，如果你装了一个名叫微信的软件，那么你今年的春节很可能是在下面这样的场景中度过的（图片来自微信群）：
 
-![lucky_money_3](https://uploads.cosx.org/wp-content/uploads/2015/02/lucky_money_3.gif) ![lucky_money_2](https://uploads.cosx.org/wp-content/uploads/2015/02/lucky_money_2.gif) ![lucky_money_1](https://uploads.cosx.org/wp-content/uploads/2015/02/lucky_money_1.gif)
+![lucky_money_3](https://uploads.cosx.org/2015/02/lucky_money_3.gif) ![lucky_money_2](https://uploads.cosx.org/2015/02/lucky_money_2.gif) ![lucky_money_1](https://uploads.cosx.org/2015/02/lucky_money_1.gif)
 
 这也使得众多的网络大V发出了下面的感慨：
 
-![lucky_money_4](https://uploads.cosx.org/wp-content/uploads/2015/02/lucky_money_4.png)
+![lucky_money_4](https://uploads.cosx.org/2015/02/lucky_money_4.png)
 
 而最近几天不少微信群里面又流行起来一种“红包接力”的玩法，大概的规则是：群里面先由一人发一个红包，然后大家开始抢，其中金额最大的那个人继续发新一轮的红包，之后不断往复循环。
 
@@ -93,7 +93,7 @@ hb_experiment(param)$last_balance
 
 这个结果的绝对数值可能并没有太大的意义，因此我们在每一轮接力之后都计算出当时这个群的基尼系数，然后观察它的变化。结果如下：
 
-![lucky_money_5](https://uploads.cosx.org/wp-content/uploads/2015/02/lucky_money_5.png)
+![lucky_money_5](https://uploads.cosx.org/2015/02/lucky_money_5.png)
 
 在这里我们将接力次数延长到了500次。可以看出，随着接力的进行，基尼系数的整体趋势是在不断变大的，意味着贫富差距会随着游戏的进行变得越来越大。这其实很好理解：总是会有人因为拿了太多头奖而破产，这样财富会在越来越少的人中间进行分配，所以相应地贫富差距就拉大了。
 
@@ -105,7 +105,7 @@ hb_experiment(param)$last_balance
 
 前面提到，在我们的模型中有一个参数 `\(\alpha\)` 用来控制红包金额分配的“公平”程度（或者更准确地说，是“平均”的程度，因为就机会而言，每个人分得金额的可能性都是相同的，但就每一次实际分得的金额而言，`\(\alpha\)` 越大，这种分配越倾向于平均，即结果的波动性越小）。下图展示了一组随机模拟实验的结果，其中我们模拟了20次红包接力的游戏，10次取 `\(\alpha=2\)`， 另外10次取 `\(\alpha=20\)`。每次游戏中，红包都接力了500次。
 
-![lucky_money_6](https://uploads.cosx.org/wp-content/uploads/2015/02/lucky_money_6.png)
+![lucky_money_6](https://uploads.cosx.org/2015/02/lucky_money_6.png)
 
 可以看出，红线和蓝线虽然有所重叠，但总体来看蓝线的取值要比红线更大，也就是说，**红包金额越“公平”，贫富差距反而会越大**。
 
@@ -115,7 +115,7 @@ hb_experiment(param)$last_balance
 
 我们最后再看一个这样的规则：第一个红包金额为20元，下一个为21元，再下一个为22元……到了30元后，又逐渐递减至20元，以此反复。我们对代码稍作修改后，同样画出基尼系数的变化图，对比这两种规则产生的结果：
 
-![lucky_money_7](https://uploads.cosx.org/wp-content/uploads/2015/02/lucky_money_7.png)
+![lucky_money_7](https://uploads.cosx.org/2015/02/lucky_money_7.png)
 
 很明显，当红包的金额发生这种变动后，贫富差距又进一步拉大了。
 

@@ -28,15 +28,15 @@ slug: story-of-normal-distribution-1
 
 更加的简洁漂亮，两个最重要的数学常量 `\(\pi\)`、`\(e\)` 都出现在这公式之中。在我个人的审美之中，它也属于 top-N 的最美丽的数学公式之一，如果有人问我数理统计领域哪个公式最能让人感觉到上帝的存在，那我一定投正态分布的票。因为这个分布戴着神秘的面纱，在自然界中无处不在，让你在纷繁芜杂的数据背后看到隐隐的秩序。
 
-![normal_curve](https://uploads.cosx.org/wp-content/uploads/2013/01/normal_curve.png)
+![normal_curve](https://uploads.cosx.org/2013/01/normal_curve.png)
 
 **正态分布曲线**
 
 正态分布又通常被称为高斯分布，在科学领域，冠名权那是一个很高的荣誉。2002年以前去过德国的兄弟们还会发现，德国1991年至2001年间发行的的一款10马克的纸币上印着高斯(Carl Friedrich Gauss, 1777-1855)的头像和正态密度曲线，而1977年东德发行的20马克的可流通纪念钢镚上，也印着正态分布曲线和高斯的名字。正态分布被冠名高斯分布，我们也容易认为是高斯发现了正态分布，其实不然，不过高斯对于正态分布的历史地位的确立是起到了决定性的作用。
 
-![10dm_with_gauss_curve](https://uploads.cosx.org/wp-content/uploads/2013/01/10dm_with_gauss_curve.jpg)
-![10dm_with_gauss_curve_detail](https://uploads.cosx.org/wp-content/uploads/2013/01/10dm_with_gauss_curve_detail.jpg)
-![20-mark-gauss](https://uploads.cosx.org/wp-content/uploads/2013/01/20-mark-gauss.jpg)
+![10dm_with_gauss_curve](https://uploads.cosx.org/2013/01/10dm_with_gauss_curve.jpg)
+![10dm_with_gauss_curve_detail](https://uploads.cosx.org/2013/01/10dm_with_gauss_curve_detail.jpg)
+![20-mark-gauss](https://uploads.cosx.org/2013/01/20-mark-gauss.jpg)
 
 **德国马克和纪念币上的高斯头像和正态分布曲线**
 
@@ -49,8 +49,8 @@ slug: story-of-normal-distribution-1
 
 第一个故事和概率论的发展密切相关，主角是棣莫弗(Abraham de Moivre, 1667-1754) 和拉普拉斯 (Pierre-Simon Laplace 1749-1827)。拉普拉斯是个大科学家，被称为法国的牛顿；棣莫弗名气可能不算很大，不过大家应该都应该很熟悉这个名字，因为我们在高中数学学复数的时候都学过棣莫弗公式 `\((\cos\theta + i \sin\theta)^n = \cos(n\theta) + i \sin(n\theta).\)`而棣莫弗所写的《机遇论》（The doctrine of chances）是概率论发展历史中很重要的一本书。牛顿对棣莫弗十分欣赏,遇到学生向他请教概率方面的问题时，他就说：“这样的问题应该去找棣莫弗，他对这些问题的研究比我深入得多。”
 
-![abraham-de-moivre](https://uploads.cosx.org/wp-content/uploads/2013/01/abraham-de-moivre.jpg)
-![laplace](https://uploads.cosx.org/wp-content/uploads/2013/01/laplace.jpg) 
+![abraham-de-moivre](https://uploads.cosx.org/2013/01/abraham-de-moivre.jpg)
+![laplace](https://uploads.cosx.org/2013/01/laplace.jpg) 
 
 **棣莫弗和拉普拉斯**
 
@@ -158,7 +158,7 @@ y\_n = \beta\_0 + \beta\_1x\_{1n} + \cdots + \beta\_px\_{pn} .
 \end{array}
 \end{eqnarray}`
 
-![legendre](https://uploads.cosx.org/wp-content/uploads/2013/01/legendre.jpg)
+![legendre](https://uploads.cosx.org/2013/01/legendre.jpg)
 
 **勒让德**
 
@@ -196,7 +196,7 @@ y\_n = \beta\_0 + \beta\_1x\_{1n} + \cdots + \beta\_px\_{pn} .
 
 许多天文学家和数学家开始了寻找误差分布曲线的尝试。 天文学家辛普森(Thomas Simpson, 1710-1761) 先走出了有意义的一步。设真值为 `\(\theta$, $x\_1, \cdots, x\_n\)` 为n次测量值, 每次测量的误差为`\( e\_i = x\_i – \theta \)`，若用算术平均 `\(\overline{x} = \frac{\sum\_{i=1}^n x\_i}{n} \)`去估计`\(\theta\)`, 其误差为 `\(\overline{e} = \frac{\sum\_{i=1}^n e\_i}{n} \)`。 辛普森证明了, 对于如下的一个概率分布，
 
-![simpson-error-curve](https://uploads.cosx.org/wp-content/uploads/2013/01/simpson-error-curve.jpg)
+![simpson-error-curve](https://uploads.cosx.org/2013/01/simpson-error-curve.jpg)
 
 **辛普森的误差分布曲线**
 
@@ -219,7 +219,7 @@ f(x) = \frac{m}{2} e^{-m|x|} .
 
 这个概率密度函数现在被称为拉普拉斯分布。
 
-![laplace-error-curve](https://uploads.cosx.org/wp-content/uploads/2013/01/laplace-error-curve.jpg)
+![laplace-error-curve](https://uploads.cosx.org/2013/01/laplace-error-curve.jpg)
 
 **拉普拉斯的误差分布曲线**
 

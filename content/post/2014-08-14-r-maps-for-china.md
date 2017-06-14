@@ -34,7 +34,7 @@ mydat = readShapePoly("maps/bou1/bou1_4p.shp")
 plot(mydat)
 ```
 
-[![unnamed-chunk-1](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-1-e1408027878462.png)](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-1.png)
+[![unnamed-chunk-1](https://uploads.cosx.org/2014/08/unnamed-chunk-1-e1408027878462.png)](https://uploads.cosx.org/2014/08/unnamed-chunk-1.png)
   
 但是，可以看出这样绘制的地图的形状有些扁平。这是因为，在绘图的过程中，默认把经度和纬度作为普通数据，均匀平等对待，绘制在笛卡尔坐标系上造成的。其实，地球的球面图形如何映射到平面图上，在地理学上是有一系列不同的专业算法的。地图不应该画在普通的笛卡尔坐标系上，而是要画在地理学专业的坐标系上。在这一点上，R的ggplot2包提供了专门的`coord_map()`函数。所以推荐R的ggplot2包来绘制地图。
 
@@ -47,7 +47,7 @@ mymap = ggplot(data = fortify(mydat)) +
 print(mymap + coord_map())
 ```
 
-![unnamed-chunk-2](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-2.png)
+![unnamed-chunk-2](https://uploads.cosx.org/2014/08/unnamed-chunk-2.png)
   
 这次中国地图的形状与百度地图一样了。
 
@@ -57,7 +57,7 @@ ggplot2包的`coord_map`函数默认的映射类型是mercator。如果有其他
 mymap + coord_map(projection = "azequidistant")
 ```
 
-[![unnamed-chunk-3](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-3-e1408027824797.png)](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-3.png)`coord_map`函数的映射类型及其含义可以通过下列代码查询帮助，一般我们用默认的就可以。
+[![unnamed-chunk-3](https://uploads.cosx.org/2014/08/unnamed-chunk-3-e1408027824797.png)](https://uploads.cosx.org/2014/08/unnamed-chunk-3.png)`coord_map`函数的映射类型及其含义可以通过下列代码查询帮助，一般我们用默认的就可以。
 
 ```r
 library(mapproj)
@@ -129,7 +129,7 @@ Shanghai = mydat[mydat$ADCODE99 == 310000,]
 plot(Shanghai)
 ```
 
-[![unnamed-chunk-8](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-8-e1408027792888.png)](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-8.png)
+[![unnamed-chunk-8](https://uploads.cosx.org/2014/08/unnamed-chunk-8-e1408027792888.png)](https://uploads.cosx.org/2014/08/unnamed-chunk-8.png)
 
 其中ADCODE99是国家基础地理信息中心定义的区域代码，共有6位数字，由省、地市、县各两位代码组成。
 
@@ -206,7 +206,7 @@ csmap = ggplot(myepidat) +
 print(csmap)
 ```
 
-[![unnamed-chunk-12](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-12-e1408027716212.png)](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-12.png)接下来的工作就是添加地名，sp包提供了`coordinates`函数，来计算地图的中心坐标：
+[![unnamed-chunk-12](https://uploads.cosx.org/2014/08/unnamed-chunk-12-e1408027716212.png)](https://uploads.cosx.org/2014/08/unnamed-chunk-12.png)接下来的工作就是添加地名，sp包提供了`coordinates`函数，来计算地图的中心坐标：
 
 ```r
 tmp = coordinates(Changsha)
@@ -233,7 +233,7 @@ print(tmp)
 csmap + geom_text(aes(x = V1,y = V2,label = names), family = "GB1", data = tmp)
 ```
 
-[![unnamed-chunk-13](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-13-e1408027752719.png)](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-13.png)如果需要支持更多字体，可以配合使用showtext包。
+[![unnamed-chunk-13](https://uploads.cosx.org/2014/08/unnamed-chunk-13-e1408027752719.png)](https://uploads.cosx.org/2014/08/unnamed-chunk-13.png)如果需要支持更多字体，可以配合使用showtext包。
 
 ## 3.2 内地省份的地市级图的情况
 
@@ -295,7 +295,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), map = mysh) +
     expand_limits(mysh) + coord_map()
 ```
 
-![unnamed-chunk-14](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-14.png)
+![unnamed-chunk-14](https://uploads.cosx.org/2014/08/unnamed-chunk-14.png)
 
 ## 3.4 其他问题
 
@@ -311,7 +311,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), map = mysh) +
 
 我们以起点中文网小说《江山美人志》开篇所附地图为例，绘制虚拟世界里面“中南郡”的GIS地图。为了和实际问题类似，我在地图中画上了参考坐标线。
 
-![mymap](https://uploads.cosx.org/wp-content/uploads/2014/08/mymap.png)
+![mymap](https://uploads.cosx.org/2014/08/mymap.png)
 
 利用ImageJ“点”工具，同时按住Shift键一次批量多点采样，再点击分析菜的测量，最后保存结果。
 
@@ -381,7 +381,7 @@ mydat = readShapePoly("data/myDIYmap_poly.shp")
 plot(mydat)
 ```
 
-![unnamed-chunk-17](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-17.png)
+![unnamed-chunk-17](https://uploads.cosx.org/2014/08/unnamed-chunk-17.png)
 
 可以发现，在区域相邻的边界，有咬合分离现象，这是由于我们采样的时候，每个区单独描边，产生了共享边的不一致。不过，我们绘制地图是为了展示流行病学数据，这个误差是可以接受的。
 
@@ -400,7 +400,7 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), color = "white", map 
     expand_limits(mysh) + coord_map()
 ```
 
-![unnamed-chunk-18](https://uploads.cosx.org/wp-content/uploads/2014/08/unnamed-chunk-18.png)
+![unnamed-chunk-18](https://uploads.cosx.org/2014/08/unnamed-chunk-18.png)
 
 如上，画成统计地图，还算美观。
 
@@ -424,5 +424,5 @@ ggplot(myepidat) + geom_map(aes(map_id = id, fill = rand), color = "white", map 
   4. 写长城的诗，2012，<http://www.r-bloggers.com/lang/chinese/1010>
   5. 杨灿，2011，<https://cos.name/2011/12/stories-about-statistical-learning/>
 
-附：本文所用地图数据[下载](https://uploads.cosx.org/wp-content/uploads/2014/08/maps_data.7z)
+附：本文所用地图数据[下载](https://uploads.cosx.org/2014/08/maps_data.7z)
 

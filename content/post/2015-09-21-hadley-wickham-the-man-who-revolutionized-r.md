@@ -19,7 +19,7 @@ slug: hadley-wickham-the-man-who-revolutionized-r
 
 [Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包`ggplot2`的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如`plyr`、`reshape2`等。本文取自[PRICEONOMICS](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/).<!--more-->
 
-![HadleyObama](https://uploads.cosx.org/wp-content/uploads/2015/09/HadleyObama.png)
+![HadleyObama](https://uploads.cosx.org/2015/09/HadleyObama.png)
 
 **通过数据从根本上了解世界真的是一件非常，非常酷的事情。**
 
@@ -39,7 +39,7 @@ Wickham出生在新西兰汉密尔顿的一个统计学世家。他父亲[Brian 
 
 从第一份工作开始，Wickham就开始反思存储和操纵数据是否存在一种更好的办法。“对于找到更好的解决之道，我一直颇为自信”，他解释说，“并且这个办法可以造福他人。”虽然彼时的他依然在懵懂中，但正在那时他“内化”了[第三范式](https://en.wikipedia.org/wiki/Third_normal_form)（Third Normal Form）的概念，这将在他未来的工作中扮演重要的角色。第三范式的本质是一种降低数据冗余且保证数据一致性的数据构架方法。Wickham把这种数据叫做“干净”（tidy）数据，而他的工具推广了并依赖于这种数据结构。
 
-![RLogo](https://uploads.cosx.org/wp-content/uploads/2015/09/RLogo.png)
+![RLogo](https://uploads.cosx.org/2015/09/RLogo.png)
 
 R的标志，该语言的革命性演化部分归功于Hadley Wickham
 
@@ -59,7 +59,7 @@ Wickham显然被reshape的成功所鼓舞。他开发这个工具包正是因为
 
 在幻灭之旅上，Wickham开发了ggplot2这个工具包。迄今为止，该工具包已经被下载了几百万次，它不仅是Wickham最成功的作品，也改变了许多人对于数据可视化的观念。ggplot2的巨大成功也促使他离开学术界去[Rstudio](https://www.rstudio.com/)担任首席科学家，从而专心致志地改进R。（Rstudio是R语言最受欢迎的集成开发环境的盈利开发机构。）		
 
-![HadleyObama2](https://uploads.cosx.org/wp-content/uploads/2015/09/HadleyObama2.png)		
+![HadleyObama2](https://uploads.cosx.org/2015/09/HadleyObama2.png)		
 	
 Hadley Wickham放了一个用ggplot2画的图片。[图片](https://github.com/hadley/ggplot2/wiki/Crime-in-Downtown-Houston,-Texas-:-Combining-ggplot2-and-Google-Maps)由David Kahle和Garrett Grolemund提供
 
@@ -67,7 +67,7 @@ ggplot2 包是以统计学家Leland Wilkinson 的“图形语法”为基础，�
 	
 在图形语法背后的概念是相当抽象的。最大的想法是图是由“几何对象”（我们在图表上看到的一个点或柱子的图形元素）和“图形属性”（关于其中几何形状被放置的方向）组成的。这听起来可能不是革命性的，但由Wickham实现的这个概念使得成千上万的人可以更加容易地画图。问答网站[Stack Overflow](http://stackoverflow.com/tags/ggplot2/info)上已经有近9000个问题标记为ggplot2，甚至说 ggplot2 在R中让作图变得更“好玩”。用 ggplot2 画的图已经出现在了[Nature](http://www.nature.com/)，[FiveThirtyEight](http://fivethirtyeight.com/features/what-12-months-of-record-setting-temperatures-looks-like-across-the-u-s/)和[纽约时报](http://www.nytimes.com/interactive/sports/football/2013-fantasy-football-tier-charts-QB.html?ref=football&_r=1&)上。		
 
-![China](https://uploads.cosx.org/wp-content/uploads/2015/09/China.png)		
+![China](https://uploads.cosx.org/2015/09/China.png)		
 	
 Hadley Wickham手里拿着一本关于他的可视化软件包ggplot2的中文译本。图片来源于[statr](http://statr.me/2013/09/a-conversation-with-hadley-wickham/)
 
@@ -77,7 +77,7 @@ Hadley Wickham手里拿着一本关于他的可视化软件包ggplot2的中文�
 
 下面的图标展示了Hadley的超过2000次下载的17个包（有时候它们被戏称为“[Hadley宇宙](http://barryrowlingson.github.io/hadleyverse/#1)”）的发布日期和下载的数量。这些下载数字少得可怜，因为它们只反映了从2012年年底其中一个流行的下载来源的数据。并且，是的，这个图是用Hadley的包（[ggvis](http://ggvis.rstudio.com/)）绘制的。
 
-![Chart](https://uploads.cosx.org/wp-content/uploads/2015/09/Chart.png)
+![Chart](https://uploads.cosx.org/2015/09/Chart.png)
 	
 Dan Kopf, Priceonomics；数据来源：[cranlogs](https://github.com/metacran/cranlogs)		
 

@@ -106,7 +106,7 @@ Draw a plot for the iris data:
 \end{document}
 ```
 
-从这个极端简化的例子来看，我们完全不必复制粘贴结果，比如我们生成了一个变量`x`，从中提取第三个数字`x[3]`输出在正文中，而不必写死`-1.668`；图形也一样，它可以根据数据动态生成，而不必先画好一幅图再插入文档中。最后我们运行`pdflatex`编译这份文档，就得到了最终的报告（[本例PDF下载](https://uploads.cosx.org/wp-content/uploads/2010/11/myfile.pdf)）。
+从这个极端简化的例子来看，我们完全不必复制粘贴结果，比如我们生成了一个变量`x`，从中提取第三个数字`x[3]`输出在正文中，而不必写死`-1.668`；图形也一样，它可以根据数据动态生成，而不必先画好一幅图再插入文档中。最后我们运行`pdflatex`编译这份文档，就得到了最终的报告（[本例PDF下载](https://uploads.cosx.org/2010/11/myfile.pdf)）。
 
 为什么Sweave是一个具有“可重复”性质的工具？原因就是代码控制了流程。比如我们可以用代码读取数据，进行变量转换，建模，输出我们需要的部分（而不是甭管有用没用、一气儿输出三十页统计报告）。代码的灵活性是无限的，它也忠实记录了统计分析的详细过程，所以我们不可能捏造结果，另外也能大大减轻手工重复劳动。
 
@@ -144,7 +144,7 @@ R会自动处理那些血腥细节：下载文件并解压缩、复制到正确�
   * 图形格式和大小设定：Sweave默认会生成PDF和postscript格式的图片（分别可用pdf = TRUE/FALSE和eps = TRUE/FALSE控制），通常矢量图当然比位图强百倍，美观、无损缩放，但R图形有个小问题（纯属挑剔）就是字体，默认情况下图形都是用无衬线字体（Windows底下如Arial字体），这和LaTeX文档的字体可能不一致（尽管[这个不一致可以在一定程度上减轻](https://yihui.name/en/2010/03/font-families-for-the-r-pdf-device/)，而pgfSweave直接从根本上解决了这个问题，因为它是以tikz格式记录R图形，这种格式实际上就是LaTeX代码，因此编译文档的时候图形也会被重新编译，所以图中的文本的字体和正文就完全一致了（[例](https://yihui.name/cn/wp-content/uploads/2010/02/lyx-pgfsweave.pdf)）；另外，默认Sweave中图形大小的控制方式也很不直观，选项width和height是控制图形设备的宽和高的，而非实际LaTeX文档中图形的宽高，我们只能通过LaTeX命令`\setkeys{Gin}{width=?}`来设定（尽管这个也有办法绕过去），而pgfSweave则默认采取了直观的指定宽高方式，即：直接在选项中指定。
   * Sweave本身没有缓存功能，这对于大批量的计算来说是个灾难：所谓缓存就是计算结果被缓存在某个位置，下次运行Sweave文档的时候如果代码没有修改，这些结果则可以不必被重新计算一遍，直接从缓存里读出来就可以了，这是cacheSweave包的功能； pgfSweave在这个基础上更进一步，让图形也有缓存功能了。缓存可以让整篇文档在R层面上的编译速度加快（但事实上由于pgfSweave用tikz图形而这种图形需要LaTeX编译，所以整体速度未必真的加快了）；
 
-![LyX和pgfSweave包生成的图形](https://uploads.cosx.org/wp-content/uploads/2010/11/lyx-formula.png "LyX和pgfSweave包生成的图形")
+![LyX和pgfSweave包生成的图形](https://uploads.cosx.org/2010/11/lyx-formula.png "LyX和pgfSweave包生成的图形")
 
 LyX和pgfSweave包生成的图形
 

@@ -14,7 +14,7 @@ slug: 6th-china-r-beijing-summary
 
 第六届中国 R 语言会议（北京会场）于 2013 年 5 月 18 日 ~ 19 日在中国人民大学国学馆113、114教室成功召开。会议由中国人民大学应用统计科学研究中心、中国人民大学统计学院、北京大学商务智能研究中心、统计之都（[cos.name](https://cos.name)）主办。在两天的会议时间里，参会者齐聚一堂，就R语言在互联网、商业、统计、生物、制药、可视化等诸多方面的应用进行了深入的探讨。
 
-![6th-china-r-bj](https://uploads.cosx.org/wp-content/uploads/2013/05/6th-china-r-bj.jpg)
+![6th-china-r-bj](https://uploads.cosx.org/2013/05/6th-china-r-bj.jpg)
 
 # 会议概况
 
@@ -90,7 +90,7 @@ Julia是一个新的高性能动态高级编程语言，提供了精度和分布
 
 该环节的主持人依旧由动感的林祯舜博士主持，林博士继第一天“致青春”后，今天果断转向“那些年-我们一起追的R版本”。标题进化者林博士今天确定的标题是：“学R不思则罔，思R不学则殆”，给人以深思。只知道学习却不思考，就会因为迷惑而无所适从；只知道思考却不去学习，就会对所有事情一知半解、不懂装懂。对于R学习，更是如此。
  
-![Learning_R](https://uploads.cosx.org/wp-content/uploads/2013/05/Learning_R.png) 
+![Learning_R](https://uploads.cosx.org/2013/05/Learning_R.png) 
 
 之后分别有阿里巴巴的郝智恒先生、eBay潘佳鸣先生、京东商城赵灿女士、百度侯俊琦先生、豆瓣稳国柱先生、Springer 出版社的 Niels P. Thomas 先生以及Supstat邓一硕先生依次讲述各自单位对不同层次人才的需求，会议现场更有参会者向心仪单位投递了简历，会下的交流更是火热。
  
@@ -129,33 +129,33 @@ Julia是一个新的高性能动态高级编程语言，提供了精度和分布
   
 - [谢益辉：R包那些事儿](http://dl.dropboxusercontent.com/u/15335397/slides/ChinaR-2013-Yihui-Xie.html)
     
-- [AHAM WILLIAMS：DATA MINING WITH RATTLE AND R](https://uploads.cosx.org/wp-content/uploads/2013/05/130518_graham_china_r_conference_beijing.pdf)
+- [AHAM WILLIAMS：DATA MINING WITH RATTLE AND R](https://uploads.cosx.org/2013/05/130518_graham_china_r_conference_beijing.pdf)
     
-- [DATA MINING雲端決策平台CDMS Smart Score II——以 R 為基礎](https://uploads.cosx.org/wp-content/uploads/2013/05/DATA-MINING雲端決策平台CDMS-Smart-Score-II-以-R-為基礎-REVISED.pptx)
+- [DATA MINING雲端決策平台CDMS Smart Score II——以 R 為基礎](https://uploads.cosx.org/2013/05/DATA-MINING雲端決策平台CDMS-Smart-Score-II-以-R-為基礎-REVISED.pptx)
    
-- [John Maindonald：Rethinking Data Analysis and Data Analysis Tools](https://uploads.cosx.org/wp-content/uploads/2013/05/John-Maindonald.pdf)
+- [John Maindonald：Rethinking Data Analysis and Data Analysis Tools](https://uploads.cosx.org/2013/05/John-Maindonald.pdf)
   
-- [李舰、周扬：禽流感分析中的R——MSToolkit, Rweibo, html5vis的介绍](https://uploads.cosx.org/wp-content/uploads/2013/05/lijian_ChinaR20130518.ppt)（[代码](https://uploads.cosx.org/wp-content/uploads/2013/05/lijian_ChinaR20130518.7z)）
+- [李舰、周扬：禽流感分析中的R——MSToolkit, Rweibo, html5vis的介绍](https://uploads.cosx.org/2013/05/lijian_ChinaR20130518.ppt)（[代码](https://uploads.cosx.org/2013/05/lijian_ChinaR20130518.7z)）
     
-- [张晓华：DISPLAYHTS: A R PACKAGE FOR DISPLAYING DATA AND RESULTS FROM HIGH-THROUGHPUT SCREENING EXPERIMENTS](https://uploads.cosx.org/wp-content/uploads/2013/05/Rconference.Zhang_.Xiaohua.pptx)
+- [张晓华：DISPLAYHTS: A R PACKAGE FOR DISPLAYING DATA AND RESULTS FROM HIGH-THROUGHPUT SCREENING EXPERIMENTS](https://uploads.cosx.org/2013/05/Rconference.Zhang_.Xiaohua.pptx)
    
-- [张常有、张先轶：JULIA语言介绍](https://uploads.cosx.org/wp-content/uploads/2013/05/changyou-Julia-20130518.pdf)
+- [张常有、张先轶：JULIA语言介绍](https://uploads.cosx.org/2013/05/changyou-Julia-20130518.pdf)
    
-- [肖楠：WEB SCRAPING WITH R](https://uploads.cosx.org/wp-content/uploads/2013/05/Web-Scraping-with-R-XiaoNan.pdf)
+- [肖楠：WEB SCRAPING WITH R](https://uploads.cosx.org/2013/05/Web-Scraping-with-R-XiaoNan.pdf)
    
 - 庄宝童：机器学习在互联网广告中的应用
    
-- [李忠、潘佳鸣：R在EBAY大数据分析中的应用](https://uploads.cosx.org/wp-content/uploads/2013/05/R-Case-Study-from-EBAY-DDI.pptx)
+- [李忠、潘佳鸣：R在EBAY大数据分析中的应用](https://uploads.cosx.org/2013/05/R-Case-Study-from-EBAY-DDI.pptx)
     
-- [稳国柱：R的工程实践和DATA SCIENTIST](https://uploads.cosx.org/wp-content/uploads/2013/05/第六届R会议-阿稳.pdf)
+- [稳国柱：R的工程实践和DATA SCIENTIST](https://uploads.cosx.org/2013/05/第六届R会议-阿稳.pdf)
     
-- [王浩：用户产生内容的质量评价与智能排序](https://uploads.cosx.org/wp-content/uploads/2013/05/quality-evaluation-and-ordering-of-user-generated-content-wanghao.pdf)
+- [王浩：用户产生内容的质量评价与智能排序](https://uploads.cosx.org/2013/05/quality-evaluation-and-ordering-of-user-generated-content-wanghao.pdf)
    
-- [王汉生：ON THE ULTRAHIGH DIMENSIONAL LINEAR DISCRIMINANT ANALYSIS PROBLEM WITH A DIVERGING NUMBER OF CLASSES](https://uploads.cosx.org/wp-content/uploads/2013/05/Wang.pdf)
+- [王汉生：ON THE ULTRAHIGH DIMENSIONAL LINEAR DISCRIMINANT ANALYSIS PROBLEM WITH A DIVERGING NUMBER OF CLASSES](https://uploads.cosx.org/2013/05/Wang.pdf)
    
-- [李欣海：用R和WinBUGS实现贝叶斯分级模型](https://uploads.cosx.org/wp-content/uploads/2013/05/Hierarchical-modeling-with-R.pdf)
+- [李欣海：用R和WinBUGS实现贝叶斯分级模型](https://uploads.cosx.org/2013/05/Hierarchical-modeling-with-R.pdf)
    
-- [王贺：网络舆情监测：基于R语言的网络文本挖掘与数据可视化](https://uploads.cosx.org/wp-content/uploads/2013/05/网络舆情监测_王贺_201305.rar)
+- [王贺：网络舆情监测：基于R语言的网络文本挖掘与数据可视化](https://uploads.cosx.org/2013/05/网络舆情监测_王贺_201305.rar)
   
   
 # 感想和建议

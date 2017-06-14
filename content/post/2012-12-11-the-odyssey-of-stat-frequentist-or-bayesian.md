@@ -21,7 +21,7 @@ slug: the-odyssey-of-stat-frequentist-or-bayesian
 
 前言：先向无法科学上网的客官作揖抱歉了，有些江湖野史可能被墙
 
-![Nate_Silver](https://uploads.cosx.org/wp-content/uploads/2012/12/Nate_Silver.png) 话说江湖风云人物，神算子 [Nate Silver](http://en.wikipedia.org/wiki/Nate_Silver)， 在纽约时报[开博占卜](http://fivethirtyeight.blogs.nytimes.com/)各项江湖话题，每每言中。并著书立传， [The Signal and the Noise](http://www.us.penguingroup.com/static/pages/features/the_signal_and_the_noise.html)，一时引来[各相追捧](/2012/11/the-rise-of-data-scientists/)。
+![Nate_Silver](https://uploads.cosx.org/2012/12/Nate_Silver.png) 话说江湖风云人物，神算子 [Nate Silver](http://en.wikipedia.org/wiki/Nate_Silver)， 在纽约时报[开博占卜](http://fivethirtyeight.blogs.nytimes.com/)各项江湖话题，每每言中。并著书立传， [The Signal and the Noise](http://www.us.penguingroup.com/static/pages/features/the_signal_and_the_noise.html)，一时引来[各相追捧](/2012/11/the-rise-of-data-scientists/)。
 
 这日，曾留下武林秘籍 [All of Statistics: A Concise Course in Statistical Inference](http://www.amazon.com/All-Statistics-Statistical-Inference-Springer/dp/0387402721/) 的大侠 [Larry Wasserman](http://www.stat.cmu.edu/~larry/) (Department of Statistics, Department of Machine Learning, Carnegie Mellon University) 突发感想，在自己博客 [Normal Deviate ](http://normaldeviate.wordpress.com/)中写下大号书评：
   

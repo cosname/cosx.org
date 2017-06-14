@@ -17,7 +17,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 为了完美的实现从数据到价值的转化，促进各领域R语言的使用者之间的交流，西安欧亚学院、统计之都、北京大学商务智能研究中心将于2015年4月18日在古城西安举办2015数据与价值欧亚论坛暨R会议西安分论坛。这将是R会议首次在西北地区举办。
 
-![China-R-Logo-trans](https://uploads.cosx.org/wp-content/uploads/2015/09/China-R-Logo-trans.png)
+![China-R-Logo-trans](https://uploads.cosx.org/2015/09/China-R-Logo-trans.png)
 
 会议的相关情况如下：
 
@@ -162,7 +162,7 @@ R是一门用于数据分析和图形展示的语言、平台和环境，其官�
 
 扫描下方二维码，即可获得更多关于R会议（西安会场）的更多资讯。
 
-![erweima](https://uploads.cosx.org/wp-content/uploads/2015/04/erweima.jpg)
+![erweima](https://uploads.cosx.org/2015/04/erweima.jpg)
 
 
 主办方：
