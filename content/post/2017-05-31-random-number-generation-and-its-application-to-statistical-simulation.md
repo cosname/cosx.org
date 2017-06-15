@@ -114,6 +114,7 @@ runs.test(factor(x))
 ```
 
 我们现在拿 *Matlab* 早期随机数发生器、*R* 内置的Mersenne-Twister发生器和*C*语言实现的Mersenne-Twister发生器比较，程序实现仿[*Matlab*版的游程检验](https://www.mathworks.com/content/dam/mathworks/mathworks-dot-com/moler/random.pdf)。
+先给定阈值delta为0.01（也可以取别的值），取出序列中的值小于delta的位置，位置序列前面添加0，再差分后，然后每个值减1，得到新序列，新序列中的值为0，表明原序列连续两个值小于delta，新序列中的值为1，表明间隔1个数小于delta，新序列中的值为2，表明间隔2个数小于delta，依次类推.....统计所有的情况，用直方图显示（间隔数取到100足可示意）。
 
 ```r
 library(gridExtra)
@@ -159,7 +160,7 @@ plot(z) # 散点图
 hist(z) # 直方图
 ```
 
-为美观起见，多写了一行，图就可以长下面那样
+为美观起见，从[viridis包](https://cran.r-project.org/web/packages/viridis/index.html)调用viridis调色板，颜色越深的地方，相应的数值越大，不管是此处 geom_hex 绘制的六角形热图，还是 geom_histogram 绘制的直方图，都遵循这个规律。
 
 ```r
 ggplot(data.frame(x = seq(10000), y = z), aes(x = x, y = y)) +   
@@ -302,3 +303,10 @@ integrate 2/pi*cos(2*t*(1-x))*(sin(t)/t)^2 ,t ,0,oo
 ```
 
 即可得`$p_2(x)=\frac{1}{2}(\left | x-2 \right |-2\left | x-1 \right |+\left | x \right |)$`，`$n$` 取任意值都是可以算的，由于式子比较复杂，就不展示了。
+
+
+# 小结
+
+1. 现在，R、Octave和Matlab这些软件没有单纯用借位相减算法来产生随机数，1995年后，Matlab使用延迟斐波那契和移位寄存器的组合发生器，直到2007年，Matlab推出7.4版本的时候才采用MT发生器。
+2. 随机数的检验是有一套标准的，如 George Marsaglia 开发的 DieHard 检验程序，检验的内容很丰富，这篇文章只能算初窥门径，R内产生真随机数的包是 [Dirk Eddelbuettel](http://dirk.eddelbuettel.com/) 开发的 [random](https://cran.r-project.org/web/packages/random/)包，它是连接产生[真随机数网站](https://www.random.org/)的接口。
+3. Python的符号计算模块sympy功能比较全，但是化简比较弱，导致结果理解起来不是很方便，比如第二个式子的第一行，看似当`$0<x<2$`时,`$p_{2}(x)$=x`是错的，正确的范围应该是`$0<x<1$`，其实for后面的函数 `$polar\_lift()$`要求参数大于0，这样就没问题了，建议多撸一撸[sympy官方文档](http://docs.sympy.org/latest/index.html?v=20170321095755)。
