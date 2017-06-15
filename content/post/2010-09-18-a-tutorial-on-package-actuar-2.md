@@ -20,9 +20,9 @@ slug: a-tutorial-on-package-actuar-2
 
 本次更新包扩两个部分：
 
-1）对actuar包学习笔记（一）的内容进行补充和完善，并将其按小节拆分成两个部分[actuar包学习笔记（一）](https://cos.name/wp-content/uploads/2010/09/actuar_1.pdf)和[actuar包学习笔记（二）](https://cos.name/wp-content/uploads/2010/09/actuar_2.pdf)。
+1）对actuar包学习笔记（一）的内容进行补充和完善，并将其按小节拆分成两个部分[actuar包学习笔记（一）](https://uploads.cosx.org/2010/09/actuar_1.pdf)和[actuar包学习笔记（二）](https://uploads.cosx.org/2010/09/actuar_2.pdf)。
 
-2）新增了对风险理论分布计算的一节[actuar包学习笔记（三）](https://cos.name/wp-content/uploads/2010/09/actuar_3.pdf)。
+2）新增了对风险理论分布计算的一节[actuar包学习笔记（三）](https://uploads.cosx.org/2010/09/actuar_3.pdf)。
 
 目前未完成的信度理论部分将在今后某个时间发表。
 

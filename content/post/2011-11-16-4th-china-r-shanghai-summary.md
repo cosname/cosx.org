@@ -15,7 +15,7 @@ slug: 4th-china-r-shanghai-summary
 description: "第四届中国R语言会议（上海会场）于2011年11月12日~13日在华东师范大学学术交流中心（逸夫楼）成功召开。会议由华东师范大学金融与统计学院主办、统计之都([cos.name](https://cos.name))协办。在两天的会议时间里，胜友如云，高朋满座，大家就R语言在行业里的应用进行了深入的探讨。"
 ---
 
-![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+![中国R语言会议标识](https://uploads.cosx.org/2010/06/China-R-Logo.png)
 
 第四届中国R语言会议（上海会场）于2011年11月12日~13日在华东师范大学学术交流中心（逸夫楼）成功召开。会议由华东师范大学金融与统计学院主办、统计之都([cos.name](https://cos.name))协办。在两天的会议时间里，胜友如云，高朋满座，大家就R语言在行业里的应用进行了深入的探讨。
 
@@ -32,7 +32,7 @@ description: "第四届中国R语言会议（上海会场）于2011年11月12日
 > AC尼尔森、JMP of SAS、MacroStat (Shanghai) Ltd.Co.、Mango Solutions、Merkle Inc.、Unilever、上海伯豪生物技术有限公司、上海华腾软件系统有限公司、上海大智慧股份有限公司、上海宝信软件股份有限公司、上海河广信息科技有限公司、上海烟草集团有限责任公司、上海聚胜万合广告有限公司、上海蓝滨石化设备有限责任公司、上海诺铭商务咨询有线公司、上海金蝶软件科技有限公司、上海高达、东南融通、中国平安、云南瑞升烟草技术（集团）有限公司、光大证券研究所、兴业证券、北京网达信联科技发展有限公司、北京高信达通信技术有限公司福州分公司、国泰君安期货有限公司、复旦大学附属肿瘤医院、奥浦诺管理咨询（上海）有限公司、宝景信息技术发展有限公司、富士施乐、山东泰丰、川渝中烟工业公司、德邦证券有限责任公司、支付宝、数库财务咨询（上海）有限公司、新华社中经社控股有限公司、汇添富基金、淘宝网、瑞易信息技术（上海）有限公司、电讯盈科信息技术有限公司、益普索、盛大网络、米其林中国投资有限公司、红星美凯龙集团、美斯达（上海）医药研发有限公司、艾瑞咨询、花旗软件、茂源投资管理有限公司、西安交通大学出版社、说宝堂信息科技有限公司、诺华、释锐教育软件、阿里巴巴
 > 
 
-![会议现场20111112](https://cos.name/wp-content/uploads/2011/11/4th-SH-live-500x333.jpg "会议现场20111112")
+![会议现场20111112](https://uploads.cosx.org/2011/11/4th-SH-live-500x333.jpg "会议现场20111112")
 
 # 会议内容
 
@@ -120,45 +120,45 @@ Thomas来自于R的故乡新西兰的Auckland大学。为我们介绍了他编�
 
 经演讲者的授权同意，已将所有同意公开的幻灯片加了超链接供大家下载学习（持续更新中，请遵循[CC 3.0协议](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh)：署名-非商业性使用-相同方式共享）。
 
-  * 谢邦昌：[云计算在统计Data Mining研究之应用及前沿综述](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_01_bcx.pdf)
+  * 谢邦昌：[云计算在统计Data Mining研究之应用及前沿综述](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_01_bcx.pdf)
 
-  * Thomas W. Yee：[An Overview of the VGAM Package](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_02_ty.pdf)
+  * Thomas W. Yee：[An Overview of the VGAM Package](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_02_ty.pdf)
 
-  * 李强：[淘宝网购数据和建模](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_03_ql.pdf)
+  * 李强：[淘宝网购数据和建模](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_03_ql.pdf)
 
-  * 卢凌坚：[利用R来建立更准确的市场预测](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_04_ljl.pdf)
+  * 卢凌坚：[利用R来建立更准确的市场预测](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_04_ljl.pdf)
 
-  * 刘思喆：[Data Mining With RWeka](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_05_szl.pdf)
+  * 刘思喆：[Data Mining With RWeka](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_05_szl.pdf)
 
-  * 陈丽云：[社会网络中的实验与R](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_06_lyc.pdf)>
+  * 陈丽云：[社会网络中的实验与R](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_06_lyc.pdf)>
 
-  * 余苓：[R在烟草及其加工制品研发中的应用](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_07_ly.pdf)
+  * 余苓：[R在烟草及其加工制品研发中的应用](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_07_ly.pdf)
 
-  * 史军：[R语言在新药开发中的应用](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_08_js.pdf)
+  * 史军：[R语言在新药开发中的应用](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_08_js.pdf)
 
-  * 钟春燕：[R在肿瘤生存分析中的应用](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_09_cyz.pdf)
+  * 钟春燕：[R在肿瘤生存分析中的应用](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_09_cyz.pdf)
 
-  * 邵凡：[R的商用：案例分享和前景展望](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_10_fs.pdf)
+  * 邵凡：[R的商用：案例分享和前景展望](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_10_fs.pdf)
 
-  * 赵明：[不同标准化方法对基因集富集分析的影响](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov12_11_mz.pdf)
+  * 赵明：[不同标准化方法对基因集富集分析的影响](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov12_11_mz.pdf)
 
-  * 牟官迅：[R与高频交易数据](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov13_01_gxm.pdf)
+  * 牟官迅：[R与高频交易数据](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov13_01_gxm.pdf)
 
-  * 陈堰平：[R在数据挖掘的应用：以预测股票收益率为例](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov13_02_ypc.pdf)
+  * 陈堰平：[R在数据挖掘的应用：以预测股票收益率为例](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov13_02_ypc.pdf)
   
-  * 邓一硕：[R与投资组合分析](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov13_03_ysd.pdf)
+  * 邓一硕：[R与投资组合分析](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov13_03_ysd.pdf)
 
   * 周涛：信息挖掘：预测、排序和过滤（无幻灯片）
 
   * 统计之都：R与现代统计图形及其实例
 
-  * 高涛：[R与统计作图及其实例](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov13_05_1_tg.pdf)
+  * 高涛：[R与统计作图及其实例](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov13_05_1_tg.pdf)
 
-  * 熊熹：[R中的函数型数据展示](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov13_05_2_xx.pdf)
+  * 熊熹：[R中的函数型数据展示](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov13_05_2_xx.pdf)
 
-  * 邱怡轩：[R与交互式图形](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov13_05_3_yxq.pdf)
+  * 邱怡轩：[R与交互式图形](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov13_05_3_yxq.pdf)
 
-  * 汤银才：[R工作环境简介](https://cos.name/wp-content/uploads/2011/11/ChinaR2011_SH_Nov13_06_yct.pdf)
+  * 汤银才：[R工作环境简介](https://uploads.cosx.org/2011/11/ChinaR2011_SH_Nov13_06_yct.pdf)
 
   * 李舰：中国R语言会议及相关活动介绍
 

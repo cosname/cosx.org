@@ -186,7 +186,7 @@ Simplify(D(body(Normfun), "x"))
 
 作为本节的最后，献上函数图像，这个函数的作用主要是计算多元正态分布的概率，详细内容参看 [2]。
 
-![Tetrachoric](https://cos.name/wp-content/uploads/2016/07/Tetrachoric.jpg)
+![Tetrachoric](https://uploads.cosx.org/2016/07/Tetrachoric.jpg)
 
 
 #### 3.符号计算扩展包Ryacas
@@ -216,7 +216,7 @@ yacas("Taylor(x, a, 3) Exp(x)")
 学过运筹学或者数值分析课程的可能知道，有不少优化算法是要求导或者求梯度的，如拟牛顿算法，最速下降法和共轭梯度法，
 还有求解非线性方程组的拟牛顿算法及其修正算法。下面以求Rosenbrock函数的极小值为例：
 
-![Rosenbrock2](https://cos.name/wp-content/uploads/2016/07/Rosenbrock2.png)
+![Rosenbrock2](https://uploads.cosx.org/2016/07/Rosenbrock2.png)
 
 符号微分
 

@@ -30,7 +30,7 @@ slug: to-achieve-the-visualization-and-annotation-of-evolutionary-tree-using-ggt
 
 层次聚类的输入是距离，比如euclidean或manhattan距离。把距离近的聚在一起。而进化树推断是从生物序列（DNA或氨基酸）的比对开始。最简单的方法是计算一下序列中不匹配的数目，称之为hamming distance（通常用序列长度做归一化），使用距离当然也可以应用层次聚类的方法。进化树的构建最简单的方法是非加权配对平均法（Unweighted Pair Group Method with Arithmetic Mean, UPGMA），这其实是使用average linkage的层次聚类。这种方法在进化树推断上现在基本没人用。更为常用的是邻接法（neighbor joining），两个节点距离其它节点都比较远，而这两个节点又比较近，它们就是neighbor，可以看出neighbor不一定是距离最近的两个节点。真正做进化的人，这个方法也基本不用。现在主流的方法是最大似然法(Maximum likelihood, ML)，通过进化模型（evolutionary model)估计拓朴结构和分支长度，估计的结果具有最高的概率能够产生观测数据（多序列比对）。另外还有最大简约法和贝叶斯推断等方法用于构建进化树。
 
-![newicktree](https://cos.name/wp-content/uploads/2015/11/newicktree.gif)
+![newicktree](https://uploads.cosx.org/2015/11/newicktree.gif)
 
 是最常用的存储进化树的文件格式，如上面这个树，拓朴结构用[newick](http://evolution.genetics.washington.edu/phylip/newicktree.html)格式可以表示为：
 
@@ -110,7 +110,7 @@ tree <-rtree(30)
 ggplot(tree, aes(x, y)) + geom_tree() 
 ```  
 
-![001](https://cos.name/wp-content/uploads/2015/11/0011.jpg)
+![001](https://uploads.cosx.org/2015/11/0011.jpg)
 
 ggtree函数是 ggplot() + geom\_tree() + xlab(NA) + ylab(NA) + theme\_tree() 的简单组合。
 
@@ -118,7 +118,7 @@ ggtree函数是 ggplot() + geom\_tree() + xlab(NA) + ylab(NA) + theme\_tree() �
 ggtree(tree) 
 ```  
 
-![002](https://cos.name/wp-content/uploads/2015/11/0021.jpg)
+![002](https://uploads.cosx.org/2015/11/0021.jpg)
 
 想要加 tip.label，用 geom_tiplab 图层，并且ggplot2的图层都可以直接应用 ggtree。
 
@@ -126,7 +126,7 @@ ggtree(tree)
 ggtree(tree) + geom_tiplab() + geom_point(color='firebrick')
 ```  
 
-![004](https://cos.name/wp-content/uploads/2015/11/0041.jpg) 树的操作与注释
+![004](https://uploads.cosx.org/2015/11/0041.jpg) 树的操作与注释
 
 ggtree提供了多个函数可以把clade放大缩小(scaleClade)，折叠(collapse)和展开(expand)，位置调换和旋转，以及分类(groupOTU, groupClade)。
 
@@ -142,9 +142,9 @@ library(gridExtra)
 grid.arrange(cp, ep, hp, rp, ncol=2) 
 ```  
 
-![005](https://cos.name/wp-content/uploads/2015/11/0051.jpg)
+![005](https://uploads.cosx.org/2015/11/0051.jpg)
 
-![006](https://cos.name/wp-content/uploads/2015/11/0061.jpg)
+![006](https://uploads.cosx.org/2015/11/0061.jpg)
 
 ## 支持多种文件格式
 
@@ -161,7 +161,7 @@ geom_text(aes(label=branch.length, x=branch), vjust=-.5) +
 xlim(NA, 0.3) 
 ```  
 
-![007](https://cos.name/wp-content/uploads/2015/11/0071.jpg)支持解析多种软件的输出文件
+![007](https://uploads.cosx.org/2015/11/0071.jpg)支持解析多种软件的输出文件
 
 我们知道FigTree是针对[BEAST](http://ygc.name/2015/04/01/an-example-of-drawing-beast-tree-using-ggtree/)的输出设计的，可以把BEAST的统计推断拿来给树做注释，但很多的进化分析软件并没有相应的画树软件支持，用户很难把信息展示出来。
 
@@ -177,7 +177,7 @@ scale_color_gradient(high='red', low='darkgreen') +
 theme(legend.position='right') 
 ```  
 
-![008](https://cos.name/wp-content/uploads/2015/11/008.jpg)
+![008](https://uploads.cosx.org/2015/11/008.jpg)
 
 multiPhylo也是支持的，所以100颗bootstrap树可以同时用一行代码展示出来。
 
@@ -187,7 +187,7 @@ btree = read.tree(btree_file)
 ggtree(btree) + facet_wrap(~.id, ncol=10) 
 ```  
 
-![010](https://cos.name/wp-content/uploads/2015/11/010.jpg)
+![010](https://uploads.cosx.org/2015/11/010.jpg)
 
 如果不分面，这100颗树会重叠画在一起，这也能很好地展示bootstrap分析的结果，bootstrap值低的clade，线条会比较乱，而bootstrap值高的地方，线条一致性比较好。
 
@@ -202,7 +202,7 @@ p <-ggtree(rst) + geom_text(aes(label=marginal_AA_subs, x=branch), vjust=-.5)
 print(p) 
 ```  
 
-![011](https://cos.name/wp-content/uploads/2015/11/011.png)
+![011](https://uploads.cosx.org/2015/11/011.png)
 
 不同于BaseML以碱基为单位，CodeML预测祖先序列，以密码子为单位。\`ggtree\`定义了一个操作符[%<%](http://ygc.name/2015/02/10/ggtree-updating-a-tree-view/)，如果有相同的注释信息要展示，可以用tree object来更新tree view。
 
@@ -212,7 +212,7 @@ crst <-read.paml_rst(rstfile)
 p %<% crst
 ```  
 
-![012](https://cos.name/wp-content/uploads/2015/11/012.jpg)
+![012](https://uploads.cosx.org/2015/11/012.jpg)
 
 
 
@@ -228,7 +228,7 @@ scale_color_continuous(limits=c(0, 1.5), high='red', low='green', oob=scales::sq
 theme(legend.position='right') 
 ```  
 
- ![013](https://cos.name/wp-content/uploads/2015/11/013.jpg) 使用用户定义数据
+ ![013](https://uploads.cosx.org/2015/11/013.jpg) 使用用户定义数据
 
 进化树已经被广泛应用于各种跨学科的研究中，随着实验技术的发展，各种数据也更易于获得，使用用户数据注释进化树，也是ggtree所支持的。
 
@@ -246,7 +246,7 @@ row.names(dd) <- NULL
 print(dd) 
 ```  
 
-![014](https://cos.name/wp-content/uploads/2015/11/014.jpg)
+![014](https://uploads.cosx.org/2015/11/014.jpg)
 
 在上面的例子中，使用一个分类数据和一个连续型数据，输入的唯一要求是第一列是taxon label。ggtree中定义了操作符%<+%，来添加数据。添加之后，用户的数据对ggplot是可见的。可以用于树的注释。
 
@@ -256,7 +256,7 @@ geom_tippoint(aes(size=value, shape=place, color=place), alpha=0.25)
 p+theme(legend.position="right") 
 ```  
 
-![016](https://cos.name/wp-content/uploads/2015/11/016.jpg)
+![016](https://uploads.cosx.org/2015/11/016.jpg)
 
 ggtree还支持用户把自己的数据和树保存为jplace格式。
 
@@ -277,7 +277,7 @@ pp <-ggtree(tree) %<+% phylopic("79ad5f09-cf21-4c89-8e7d-0c82a00ce728", color="s
  pp + geom_tiplab(align=T, linetype='dashed', linesize=.5) + geom_tippoint(color='firebrick', size=2) 
 ```  
 
-![017](https://cos.name/wp-content/uploads/2015/11/017.jpg)
+![017](https://uploads.cosx.org/2015/11/017.jpg)
 
 另一个好玩又为我们展现各种可能性的是[subview](http://ygc.name/2015/08/31/subview/)函数，它使得图上加小图变得特别容易。并且已经被应用于[地图上加饼图](http://stackoverflow.com/questions/10368180/plotting-pie-graphs-on-map-in-ggplot/32380396#32380396)。解决这个问题的初衷在于，想要给节点加饼图注释。有了subview函数之后，这会变得很容易，当然我还没有写出给节点加饼图的函数，因为我还没有这个需求，得有一些实际的数据做参考，这样才能够设计出更易用的函数呈现给用户。
 

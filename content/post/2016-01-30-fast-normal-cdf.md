@@ -46,7 +46,7 @@ max(abs(y - asy))
 
 那么还有没有可能更快呢？答案是肯定的，而且你其实已经多次使用过这种方法了。怎么，不相信？看看下面这张图，你就明白了。
 
-![normal_table](https://cos.name/wp-content/uploads/2016/01/normal_table.png)
+![normal_table](https://uploads.cosx.org/2016/01/normal_table.png)
 
 
 

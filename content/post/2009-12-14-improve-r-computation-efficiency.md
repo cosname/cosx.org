@@ -189,7 +189,7 @@ dyn.unload(sprintf("calc_pvalue%s", .Platform$dynlib.ext))
 
 头文件`Rmath.h`的引入使得我们可以调用很多基于C程序的R函数，详情参考手册Writing R Extensions。通过C计算出来的P值和前面用R算的略有差异，下面画出`p6 - p1` vs `p1`以及`p6 - p5` vs `p5`的图：
 
-![P值的差异](https://cos.name/wp-content/uploads/2009/12/p-values-error.png "P值的差异")
+![P值的差异](https://uploads.cosx.org/2009/12/p-values-error.png "P值的差异")
 <p style="text-align: center;">P值的差异</p>
 
 导致差异的原因此处不细究，感兴趣的读者可以帮忙检查一下。

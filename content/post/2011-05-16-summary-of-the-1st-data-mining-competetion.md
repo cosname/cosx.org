@@ -65,26 +65,26 @@ slug: summary-of-the-1st-data-mining-competetion
 
 其中，第1名为一等奖（奖金10000￥），第2名为二等奖（奖金5000￥），第3~8名为三等奖（3~5名奖金2000￥，6~8名奖金500￥）。
 
-附：[首届全国大学生数据挖掘邀请赛结果排名（前100名）](https://cos.name/wp-content/uploads/2011/09/DM_rank.pdf)
+附：[首届全国大学生数据挖掘邀请赛结果排名（前100名）](https://uploads.cosx.org/2011/09/DM_rank.pdf)
 
 # 竞赛相关数据展示
 
 每天注册的队伍数:
 
-![每日注册队伍数目](https://cos.name/wp-content/uploads/2011/05/bar.DM2_.png)
+![每日注册队伍数目](https://uploads.cosx.org/2011/05/bar.DM2_.png)
 
 
 上图为3月16日~4月15日每天注册的队伍数（注：竞赛于3月19日全面公开注册，在此之前在对中科大学生提前公布了注册网站以测试系统）。
 
 每日有效提交次数：
 
-![每日有效提交次数](https://cos.name/wp-content/uploads/2011/05/bar.DM_1.png)
+![每日有效提交次数](https://uploads.cosx.org/2011/05/bar.DM_1.png)
 
 上图为3月23日~4月27日每天成功提交的符合规范的预测结果数目，总共提交的次数为11162次。
 
 提交次数频数：
 
-![提交次数频数图](https://cos.name/wp-content/uploads/2011/05/plot.DM2_.png)
+![提交次数频数图](https://uploads.cosx.org/2011/05/plot.DM2_.png)
 
 
 上图为提交次数的频数图，从上图可以看出，大部分队伍提交次数很少。提交次数超过10的队伍有217个，超过50的有70个，超过100的有29个。最终获奖的队伍的提交总次数都很高。

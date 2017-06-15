@@ -41,7 +41,7 @@ slug: statistics-on-article-titles
 相反，引用一篇文章，通常是对文章有了充分理解之后产生的行为，这时候标题的作用可能就非常微弱了。
 总而言之，JASA 文章的下载量可以较好地代表读者在获取了文章的基本信息后对它感兴趣的程度。
 
-![jasa](https://cos.name/wp-content/uploads/2016/06/jasa.png)
+![jasa](https://uploads.cosx.org/2016/06/jasa.png)
 
 那么怎么研究文章标题与下载量之间的关系呢？
 我们知道，标题是由一个个的单词组成的，如果忽略掉单词之间的语法关系，
@@ -76,7 +76,7 @@ slug: statistics-on-article-titles
 由于是英文期刊，我们基本上可以省掉分词的步骤。对文章标题进行简单的处理，如转换小写，删除停用词之后，就可以构造词频矩阵了。
 我们首先构造一个所有文章标题词项的字典，标记为 Term 1 到 Term p，然后词频矩阵的每一行代表一篇文章，每一列代表这个词项在各标题中的词频。
 
-![dtm](https://cos.name/wp-content/uploads/2016/06/dtm.png)
+![dtm](https://uploads.cosx.org/2016/06/dtm.png)
 
 在本文的分析中，我们定义一个词项可以是1~3个连续单词的组合，比如如果文章标题是 _Applied linear regression_，
 那么由此生成的词项就有 applied，linear，regression，applied\_linear，linear\_regression，applied\_linear\_regression 共六个。
@@ -118,7 +118,7 @@ title_mat  = create_dtm(it, vectorizer)
 注意到图中没有包括截距项，而且其中一个变量，文章所在的期数（IssueNO.），
 因为系数太大影响图片美观，所以对它的柱形进行了截断，其真实的数值标注在柱形上。
 
-![result](https://cos.name/wp-content/uploads/2016/06/result.png)
+![result](https://uploads.cosx.org/2016/06/result.png)
 
 # 结果分析
 

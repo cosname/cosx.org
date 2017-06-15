@@ -15,7 +15,7 @@ slug: interview-jianxin-yin
 
 <!--more-->
 
-![avq550gnetmkc7tlser8](https://cos.name/wp-content/uploads/2016/11/AVQ550GNETMKC7TLSER8.png)
+![avq550gnetmkc7tlser8](https://uploads.cosx.org/2016/11/AVQ550GNETMKC7TLSER8.png)
 
 **小宁**：请问您当初为什么从物理专业转到数学专业呢？
 

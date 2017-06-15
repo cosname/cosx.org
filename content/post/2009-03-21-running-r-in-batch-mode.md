@@ -84,4 +84,4 @@ invisible()
 
 在测试函数中通过用`try`命令，实现对异常的收集，而不直接跳出测试。
 
-![batch mode](https://cos.name/wp-content/uploads/2009/03/batch.jpg)
+![batch mode](https://uploads.cosx.org/2009/03/batch.jpg)

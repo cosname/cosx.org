@@ -164,7 +164,7 @@ Line.1的均值等价于：
 > hist(x,main='Histogram for unspecified x')
 ```
 
-![image004](https://cos.name/wp-content/uploads/2009/11/image004.jpg)
+![image004](https://uploads.cosx.org/2009/11/image004.jpg)
 
 
 3）绘制累计频率图。如同对连续的随机变量可以绘制经验分布函数图一样，对于分组曲线也可以绘制“拱形图”（ogive），也就是累计频率曲线，它通过将分组边界值所对应的累计频率用直线连接起来得到。累计频率曲线的公式如下：
@@ -183,7 +183,7 @@ Line.1的均值等价于：
 > plot(Fnt)
 ```
 
-![image008](https://cos.name/wp-content/uploads/2009/11/image008.jpg)
+![image008](https://uploads.cosx.org/2009/11/image008.jpg)
 
 # 3、计算经验矩
 
@@ -247,7 +247,7 @@ elev()函数可以计算经验有限期望值（limited expected value）。使�
 > plot(lev2,type='o',pch=19)
 ```
 
-![image018](https://cos.name/wp-content/uploads/2009/11/image018.jpg)
+![image018](https://uploads.cosx.org/2009/11/image018.jpg)
 
 # 4、分布拟合
 
@@ -309,18 +309,18 @@ In optim(x = c(0, 25, 50, 100, 150, 250, 500, 1000, 1500, 2500,  :
 > curve(theta*exp(1)^(-theta*x),from=0,to=4000,add=T,col='red')
 ```
 
-![clip_image002](https://cos.name/wp-content/uploads/2009/11/clip_image0021.jpg)
+![clip_image002](https://uploads.cosx.org/2009/11/clip_image0021.jpg)
 在此，我们感兴趣的是将基于距离的分布拟合方法与极大似然估计的参数估计效果进行以下对比。因此不妨做一个实验：
 
 简单起见，先从单参数拟合问题开始，这是一个一维优化问题。
 
 首先生成50组来自于rate=1的指数分布随机数，每组的个数都为10。然后，对于每一组随机数，分别用基于距离的估计方法和极大似然估计进行参数估计，将50次模拟结果的均值和标准差记录下来。之后，将随机数的个数由10增加到20，30…200，重复之前的过程。最终得到的结果如下图：
 
-![clip_image002](https://cos.name/wp-content/uploads/2009/11/clip_image0022.jpg)
+![clip_image002](https://uploads.cosx.org/2009/11/clip_image0022.jpg)
 
 可以看出，在单参数估计中，尤其是在样本量较大时，两种方法估计的结果相差不大，而极大似然估计的方差要比基于距离的估计方差略小。那么，两种方法对于异常值的稳健性如何呢？在上面生成的所有组随机数中，剔除两个指数分布随机数，再混入两个来自[200,300]均匀分布的随机数，再重新对参数进行估计，结果很明显，基于距离的估计方法估计的结果很稳定，而极大似然估计的参数结果受异常值的影响很大！
 
-![image052](https://cos.name/wp-content/uploads/2009/11/image052.jpg)
+![image052](https://uploads.cosx.org/2009/11/image052.jpg)
 
 因此，对于经常存在异常值的损失数据，使用基于距离的分布拟合方法往往更加稳健。
 

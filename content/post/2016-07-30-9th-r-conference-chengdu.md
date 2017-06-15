@@ -13,7 +13,7 @@ slug: 9th-r-conference-chengdu
 
 2016年是统计之都发起主办的中国R语言会议第九年，也是统计之都成立十周年。本届中国R语言会议（成都）将由统计之都与西南交通大学联合主办，西南交通大学经济管理学院智慧营销实验室协办。这次R会议首次走进西南地区，愿与更多的数据爱好者探讨数据科学，共同进步提高！中国R语言会议，欢迎各位的到来！<!--more-->
 
-![xinanjiaoda](https://cos.name/wp-content/uploads/2016/07/xinanjiaoda.jpg) 
+![xinanjiaoda](https://uploads.cosx.org/2016/07/xinanjiaoda.jpg) 
 
 # 一、会议概况
 
@@ -21,7 +21,7 @@ slug: 9th-r-conference-chengdu
 
 十年磨一剑，破鞘天下惊。R语言会议发展壮大的同时，统计之都也已走过十年风雨。十年间，统计之都服务着广大统计学爱好者，推动着R语言在中国的传播发展，见证着数据科学时代的逐渐崛起。迄今，统计之都已先后出版八本图书，举行海内外沙龙五十余期；未来，我们将再接再厉，继续为国内统计学和数据科学发展贡献自己的力量。
 
-![China-R-Logo-trans](https://cos.name/wp-content/uploads/2016/07/China-R-Logo-trans.png)
+![China-R-Logo-trans](https://uploads.cosx.org/2016/07/China-R-Logo-trans.png)
 
 # 二、会议时间
 
@@ -51,11 +51,11 @@ slug: 9th-r-conference-chengdu
 
 * 西南交通大学
 
-![xnjt](https://cos.name/wp-content/uploads/2016/07/xnjt.jpg)
+![xnjt](https://uploads.cosx.org/2016/07/xnjt.jpg)
 
 * 统计之都
 
-![统计](https://cos.name/wp-content/uploads/2015/10/统计.png)
+![统计](https://uploads.cosx.org/2015/10/统计.png)
 
 # 九、协办方
 

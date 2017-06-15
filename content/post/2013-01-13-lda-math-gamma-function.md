@@ -42,9 +42,9 @@ slug: lda-math-gamma-function
 
 1728年，哥德巴赫在考虑数列插值的问题，通俗的说就是把数列的通项公式定义从整数集合延拓到实数集合，例如数列`\(1,4,9,16,\cdots\)`可以用通项公式`\(n^2\)`自然的表达，即便`\(n\)`为实数的时候，这个通项公式也是良好定义的。直观的说也就是可以找到一条平滑的曲线`\(y=x^2\)`通过所有的整数点`\((n,n^2)\)`，从而可以把定义在整数集上的公式延拓到实数集合。一天哥德巴赫开始处理阶乘序列`\(1,2,6,24,120,720,\cdots\)`,我们可以计算`\(2!,3!\)`，是否可以计算`\(2.5!\)`呢？我们把最初的一些`\((n,n!)\)`的点画在坐标轴上，确实可以看到，容易画出一条通过这些点的平滑曲线。
 
-![factorial](https://cos.name/wp-content/uploads/2013/01/factorial.png)
+![factorial](https://uploads.cosx.org/2013/01/factorial.png)
 
-![factorial-curve](https://cos.name/wp-content/uploads/2013/01/factorial-curve.png)
+![factorial-curve](https://uploads.cosx.org/2013/01/factorial-curve.png)
 
 但是哥德巴赫无法解决阶乘往实数集上延拓的这个问题，于是写信请教尼古拉斯.贝努利和他的弟弟丹尼尔.贝努利，由于欧拉当时和丹尼尔.贝努利在一块，他也因此得知了这个问题。而欧拉于1729 年完美的解决了这个问题，由此导致了`\(\Gamma\)`函数的诞生，当时欧拉只有22岁。
 
@@ -97,7 +97,7 @@ slug: lda-math-gamma-function
 
 `$$ \Bigl(\frac{1}{2}\Bigr)! = \frac{\sqrt{\pi}}{2} $$`
 
-![大数学家欧拉](https://cos.name/wp-content/uploads/2013/01/euler.jpg)
+![大数学家欧拉](https://uploads.cosx.org/2013/01/euler.jpg)
 
 大数学家欧拉
 
@@ -133,7 +133,7 @@ slug: lda-math-gamma-function
 
 `$$ \Gamma(x) = \int_0^1 (-\log t)^{x-1}dt = \int_0^{\infty} t^{x-1}e^{-t}dt $$`
 
-![gamma-func](https://cos.name/wp-content/uploads/2013/01/gamma-func.png)
+![gamma-func](https://uploads.cosx.org/2013/01/gamma-func.png)
 
 Gamma函数找到了，我们来看看第二个问题，为何Gamma函数被定义为`\(\Gamma(n)=(n-1)!\)`，这看起来挺别扭的。如果我们稍微修正一下，把Gamma函数定义中的`\(t^{x-1}\)`替换为`\(t^x\)`
 
@@ -175,13 +175,13 @@ Gamma函数从它诞生开始就被许多数学家进行研究，包括高斯、
 
 另外，Gamma函数不仅可以定义在实数集上，还可以延拓到整个复平面上。
 
-![gamma-complex](https://cos.name/wp-content/uploads/2013/01/gamma-complex.png)
+![gamma-complex](https://uploads.cosx.org/2013/01/gamma-complex.png)
 
 复平面上的Gamma函数
 
 Gamma函数有很多妙用，它不但使得(1/2)!的计算有意义，还能扩展很多其他的数学概念。比如导数，我们原来只能定义一阶、二阶等整数阶导数，有了Gamma函数我们可以把函数导数的定义延拓到实数集，从而可以计算1/2阶导数,同样的积分作为导数的逆运算也可以有分数阶。我们先考虑一下`\(x^n\)`的各阶导数
 
-![derivatives](https://cos.name/wp-content/uploads/2013/01/derivatives.png)
+![derivatives](https://uploads.cosx.org/2013/01/derivatives.png)
 
 由于k阶导数可以用阶乘表达，于是我们用Gamma函数表达为
 
@@ -203,7 +203,7 @@ Gamma函数和欧拉常数`\(\gamma\)`有密切关系，可以发现
 
 而`\(\zeta\)` 函数涉及了数学中著名的黎曼猜想和素数的分布定理。希尔伯特曾说，如果他在沉睡1000年后醒来，他将问的第一个问题便是:黎曼猜想得到证明了吗？
 
-![digamma-func](https://cos.name/wp-content/uploads/2013/01/digamma-func.png)
+![digamma-func](https://uploads.cosx.org/2013/01/digamma-func.png)
 
 `\(\log \Gamma(x)\)`
 
@@ -255,7 +255,7 @@ Gamma函数在概率统计中频繁现身，众多的统计分布，包括常见
 
 其中`\(\alpha\)`称为shape parameter，主要决定了分布曲线的形状;而`\(\beta\)`称为rate parameter或者inverse scale parameter(`\(\frac{1}{\beta}\)`称为scale parameter)，主要决定曲线有多陡。
 
-![gamma-distribution](https://cos.name/wp-content/uploads/2013/01/gamma-distribution.png)
+![gamma-distribution](https://uploads.cosx.org/2013/01/gamma-distribution.png)
 
 `\(Gamma(t|\alpha,\beta)\)`分布图像
 

@@ -77,4 +77,4 @@ C=\cap\_{k=1}^\infty C_k $$`
 
 类似地，我们可以进一步解释广义康托集与强大数定律的关系。有兴趣的读者可以作出相应推广。
 
-注：本文已经由COS编辑部整理为PDF（LaTeX）版本，读者可以下载：[强大数定律与康托三分集（PDF，105K）](https://cos.name/wp-content/uploads/2010/10/强大数定律与康托三分集.pdf)
+注：本文已经由COS编辑部整理为PDF（LaTeX）版本，读者可以下载：[强大数定律与康托三分集（PDF，105K）](https://uploads.cosx.org/2010/10/强大数定律与康托三分集.pdf)

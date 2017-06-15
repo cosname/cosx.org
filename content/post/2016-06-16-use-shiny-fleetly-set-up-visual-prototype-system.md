@@ -18,7 +18,7 @@ Shiny是R中的一种Web开发框架，使得R的使用者不必太了解css、j
 
 Shiny应用包含连个基本的组成部分：一个是用户界面脚本（a user-interface script），另一个是服务器脚本(a server script)。
 
-![Shiny应用包含连个基本的组成部分](https://cos.name/wp-content/uploads/2016/06/M_86@S224HFW_AKSLVEN.png)
+![Shiny应用包含连个基本的组成部分](https://uploads.cosx.org/2016/06/M_86@S224HFW_AKSLVEN.png)
 
 <!--more-->
 
@@ -53,7 +53,7 @@ hist(rnorm(input$n))
 shinyApp(ui = ui, server = server)
 ```
 
-![~M4UT2WID$7MR462EO9M~F6](https://cos.name/wp-content/uploads/2016/06/M4UT2WID7MR462EO9MF6.png)
+![~M4UT2WID$7MR462EO9M~F6](https://uploads.cosx.org/2016/06/M4UT2WID7MR462EO9MF6.png)
 
 shinydashboard扩展包为shiny框架提供了BI框架，一个dashboard由三部分组成：标题栏、侧边栏、主面板。通过install.packages("shinydashboard")完成安装。执行以下脚本可以得到shinydashboard的基本框架。
 
@@ -71,7 +71,7 @@ server <- function(input, output) { }
 shinyApp(ui, server)
 ```
 
-![LA_74B35XI8Q2GO71L_T)V](https://cos.name/wp-content/uploads/2016/06/LA_74B35XI8Q2GO71L_TV.png)
+![LA_74B35XI8Q2GO71L_T)V](https://uploads.cosx.org/2016/06/LA_74B35XI8Q2GO71L_TV.png)
 
 到此，关于shiny和shinydashboard框架我们已经掌握了。接下来，我们将前面学到的动态交互绘图包与Shiny Web开发框架结合，一步步搭建数据可视化平台demo。先创建新文件夹myapp，并在myapp文件夹里面创建两个脚本ui.R和server.R，用来存放客户端和服务端的脚本。
 
@@ -116,7 +116,7 @@ plotOutput("wireframe")
 
 平台界面如下图所示：
 
-![6VR87SQB8W65HT08](https://cos.name/wp-content/uploads/2016/06/6VR87SQB8W65HT08.png)
+![6VR87SQB8W65HT08](https://uploads.cosx.org/2016/06/6VR87SQB8W65HT08.png)
 
 对于rCharts包绘制的图形，我们在server.R中用renderChart( )函数将图形赋予输出对象mygraph，并在ui.R中用showOutput("mygraph" )将图形输出到web中。形式如下（以hPlot函数为例）：
 
@@ -154,7 +154,7 @@ return(p1)
 showOutput("mychart1","nvd3")
 ```
 
-![ZG9Q9WYN071IKW8UVRXC](https://cos.name/wp-content/uploads/2016/06/ZG9Q9WYN0_71IKW8UVRXC.png)
+![ZG9Q9WYN071IKW8UVRXC](https://uploads.cosx.org/2016/06/ZG9Q9WYN0_71IKW8UVRXC.png)
 
 如下图所示，我们在网页上输出了hPlot函数绘制的交互气泡图。
 
@@ -175,7 +175,7 @@ return(a)
 showOutput("mychart2","highcharts")
 ```
 
-![NNW9QYQ8XA6CV%SLCKQ5A](https://cos.name/wp-content/uploads/2016/06/NNW@9QYQ8XA6CVSLCKQ5A.png)
+![NNW9QYQ8XA6CV%SLCKQ5A](https://uploads.cosx.org/2016/06/NNW@9QYQ8XA6CVSLCKQ5A.png)
 
 对于DT包制作的数据表格，我们在server.R中用renderDataTable ( )函数将表格赋予输出对象mytable，并在ui.R中用dataTableOutput ("mytable" )将图形输出到web中。形式如下：
 
@@ -191,7 +191,7 @@ datatable(data)
 dataTableOutput("mytable")
 ```
 
-![BC3E.tmp](https://cos.name/wp-content/uploads/2016/06/BC3E.tmp_.png)
+![BC3E.tmp](https://uploads.cosx.org/2016/06/BC3E.tmp_.png)
 
 对于networkD3包制作的网络图，我们在server.R中用renderForceNetwork ( )函数将表格赋予输出对象mygraph，并在ui.R中用forceNetworkOutput ("mygraph" )将图形输出到web中。形式如下：
 
@@ -224,7 +224,7 @@ Group = "group", opacity = 0.8,zoom = T)
 forceNetworkOutput("networkD3")
 ```
 
-![4EDD.tmp](https://cos.name/wp-content/uploads/2016/06/4EDD.tmp_.png)
+![4EDD.tmp](https://uploads.cosx.org/2016/06/4EDD.tmp_.png)
 
 好了，以上就是关于如何将一些数据可视化包结合shiny，快速搭建一套可视化原型系统。由于篇幅有限，本文不能将页面设计及控件代码都一一罗列出。对shiny包感兴趣的读者可以自己上RStudio官网自行学习。
 
@@ -234,8 +234,8 @@ forceNetworkOutput("networkD3")
 
 最后，shiny除了能完美结合数据可视化包绘制出的精美动态图表，对于模型结果可视化，我们也可以使用这种方式把可视化结果在网页上输出。我们对关联规则和kmeans聚类结果进行了可视化，并增加了选择栏和数字输入选项来调整关联规则可视化的方法和聚类的K值。
 
-![85E.tmp](https://cos.name/wp-content/uploads/2016/06/85E.tmp_.png)
+![85E.tmp](https://uploads.cosx.org/2016/06/85E.tmp_.png)
 
 可以通过控件去控制关联规则可视化中的method类型及K-Means聚类中的K值。
 
-![FD59.tmp](https://cos.name/wp-content/uploads/2016/06/FD59.tmp_.png)
+![FD59.tmp](https://uploads.cosx.org/2016/06/FD59.tmp_.png)

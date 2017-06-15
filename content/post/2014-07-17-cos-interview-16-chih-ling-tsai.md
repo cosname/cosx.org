@@ -14,7 +14,7 @@ slug: cos-interview-16-chih-ling-tsai
 
 简介：**蔡知令，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。**
 
-![caizhiling](https://cos.name/wp-content/uploads/2014/07/tsai_web.jpg)
+![caizhiling](https://uploads.cosx.org/2014/07/tsai_web.jpg)
 
 Xuening: 听说您的求学经历比较曲折，能给我们讲讲嘛？
 

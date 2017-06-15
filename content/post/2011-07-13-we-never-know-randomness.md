@@ -56,7 +56,7 @@ description: "最近在Google Reader中看见科学松鼠会有两篇文章被�
 
 另一个例子和统计学结合紧密一点，我们谈谈残差的QQ图。QQ图是用来检查数据正态性的一种统计图形，与腾讯无关，细节此处略去，大意是图中的点若呈直线状（大致分布在对角线上），那么可以说明数据的正态性比较好，因此QQ图经常被用在对回归模型残差的正态性诊断上。我的问题是，即使数据真的是正态分布，你是否真的会看见一些分布在直线上的点？若答案是否定的，那么我们就得重新审视我们对分布和随机的认识了。下图是一幅教科书式的QQ图（仍然基于30个正态分布随机数）：
 
-![“正常的”QQ图（来自R语言qqnorm(rnorm(30)))](https://cos.name/wp-content/uploads/2011/07/normal-qq-plot.png)
+![“正常的”QQ图（来自R语言qqnorm(rnorm(30)))](https://uploads.cosx.org/2011/07/normal-qq-plot.png)
 
 随机性并没有这么美好，即使数据真的来自正态分布，你也有可能很容易观察到歪歪扭扭的QQ图，尤其是小样本的情况下。比如下图是50次重复抽样的正态数据QQ图，它和你想象的QQ图本来的样子差多远？
 
@@ -68,7 +68,7 @@ par(mar = c(3, 3, 2, 0.5), mgp = c(1.5, 0.5, 0), tcl = -0.3)
 sim.qqnorm(n = 30, pch = 19, col = "red", last.plot = expression(abline(0, 1)))
 ```
 
-![真实的正态分布QQ图（图中直线为y = x）](https://cos.name/wp-content/uploads/2011/07/true-qq-norm.gif)
+![真实的正态分布QQ图（图中直线为y = x）](https://uploads.cosx.org/2011/07/true-qq-norm.gif)
 
 正态分布是统计学中比较“正常”的一类分布（台湾学者甚至译为“常态分布”），我们尚不能很好感知它的随机性，就不必说其它“怪异”的分布了。
 

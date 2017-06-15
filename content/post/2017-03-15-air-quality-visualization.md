@@ -33,7 +33,7 @@ categories:
 
 AQI的数据来源于pm25.in, 网页上是一个html的表格, 可以简单的用XML的readHTMLtable来完成读取.
 
-![](https://cos.name/wp-content/uploads/2017/02/web.png)
+![](https://uploads.cosx.org/2017/02/web.png)
 
 好了, 以下是代码, 分成三个部分:
 
@@ -64,7 +64,7 @@ geojsonMap(dat, "city",
 
 猛击图片查看这个可交互的地图吧！
 
-[![leafet地图](https://cos.name/wp-content/uploads/2017/02/leaflet.png)](http://langdawei.com/reveal_slidify/cos/ldw/aqi.html)
+[![leafet地图](https://uploads.cosx.org/2017/02/leaflet.png)](http://langdawei.com/reveal_slidify/cos/ldw/aqi.html)
 
 故事讲完了, 吃瓜群众们可以点转发了, 无聊的user们可以继续读`leafletCN`的使用
 
@@ -116,7 +116,7 @@ regionNames("成都")
 demomap("台湾")
 ```
 
-![](https://cos.name/wp-content/uploads/2017/02/demo1.png)
+![](https://uploads.cosx.org/2017/02/demo1.png)
 
 #### geojsonmap
 
@@ -130,7 +130,7 @@ dat = data.frame(name = regionNames("china"),
 geojsonMap(dat,"china")
 ```
 
-![](https://cos.name/wp-content/uploads/2017/02/demo2.png)
+![](https://uploads.cosx.org/2017/02/demo2.png)
 
 #### amap
 
@@ -143,7 +143,7 @@ leaflet() %>%
        popup = "The birthplace of COS")
 ```
 
-![](https://cos.name/wp-content/uploads/2017/02/demo3.png)
+![](https://uploads.cosx.org/2017/02/demo3.png)
 
 #### read.geoShape
 
@@ -157,7 +157,7 @@ if(require(sp)){
 }
 ```
 
-![](https://cos.name/wp-content/uploads/2017/02/demo4.png)
+![](https://uploads.cosx.org/2017/02/demo4.png)
 
 
 #### leafletGeo
@@ -189,7 +189,7 @@ if(require(leaflet)){
 }
 ```
 
-![](https://cos.name/wp-content/uploads/2017/02/demo5.png)
+![](https://uploads.cosx.org/2017/02/demo5.png)
 
 如果你看到这里还没有走, 说明你还是有心找彩蛋的, 或者你什么都没看, 但是本文没啥彩蛋, 只有我的[github求赞](http://github.com/lchiffon/leafletCN).
 

@@ -48,7 +48,7 @@ slug: a-brief-talk-on-buffon-throwing-needle-problems
 
 因为尽管它们的周长不一样，和平行线交点的期望不一样，但是它们和平行线是否有交点的概率是一样的。下图中的类半圆图形就是月牙图形生成的最小凸区域，它们显然和平行线是否相交完全等价。
 
-![](https://cos.name/wp-content/uploads/2009/11/semicircle2.gif)
+![](https://uploads.cosx.org/2009/11/semicircle2.gif)
 
 最后，要说的是直观思维的重要性，定理有千千万万，如果能用直观的形式将它们逐渐消化，那是最好不过的了，我在看书的时候经常能把一个定理啃下来，但是还是觉得对这个定理依然云里雾里的。对此，[matrix67](http://www.matrix67.com/blog/archives/2494)做了很精彩的评价：
 
