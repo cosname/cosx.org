@@ -3,14 +3,17 @@ title: 随机数生成及其在统计模拟中的应用
 date: '2017-05-26'
 author: 黄湘云
 tags: [随机数,统计检验，模拟]
-slug: random-number-generation-and-its-application-to-statistical-simulation
+slug: random-number-generation
+description: '随机数的产生和检验方法是蒙特卡罗方法的重要部分，另外两个是概率分布抽样方法和降低方差提高效率方法。在20世纪40年代中期，当时为了原子弹的研制，乌拉姆（S.Ulam）、冯诺依曼（J.von Neumann） 和梅特罗波利斯（N. Metropolis） 在美国核武器研究实验室创立蒙特卡罗方法。BTW，当时出于保密的需要，与随机模拟相关的技术就代号“蒙特卡罗”。早期取得的成果有产生随机数的平方取中方法，取舍算法和逆变换法等。这两个算法的内容[见统计之都王夜笙的文章](http://cos.name/2015/06/generating-normal-distr-variates/)。'
 ---
 
-揭秘统计软件如R，Octave，Matlab等使用的随机数发生器，然后做一些统计检验，再将其应用到独立随机变量和的模拟中，最后比较了符号计算得到的精确结果。
 
 # 背景
 
 随机数的产生和检验方法是蒙特卡罗方法的重要部分，另外两个是概率分布抽样方法和降低方差提高效率方法。在20世纪40年代中期，当时为了原子弹的研制，乌拉姆（S.Ulam）、冯诺依曼（J.von Neumann） 和梅特罗波利斯（N. Metropolis） 在美国核武器研究实验室创立蒙特卡罗方法。BTW，当时出于保密的需要，与随机模拟相关的技术就代号“蒙特卡罗”。早期取得的成果有产生随机数的平方取中方法，取舍算法和逆变换法等。这两个算法的内容[见统计之都王夜笙的文章](http://cos.name/2015/06/generating-normal-distr-variates/)。
+
+本文揭秘了统计软件如R，Octave，Matlab等使用的随机数发生器，并做了一些统计检验，再将其应用到独立随机变量和的模拟中，最后比较了符号计算得到的精确结果。
+
 <!--more-->
 
 # 随机数生成
@@ -52,7 +55,7 @@ runif(n) # 产生n个服从标准均匀分布的随机数
 
 # 统计检验
 
-随机数的检验是有一套标准的，如 George Marsaglia 开发的 DieHard 检验程序，检验的内容很丰富，这篇文章只能算初窥门径，R内产生真随机数的包是 [Dirk Eddelbuettel](http://dirk.eddelbuettel.com/) 开发的 [random](https://cran.r-project.org/web/packages/random/)包，它是连接产生[真随机数网站](https://www.random.org/)的接口。
+随机数的检验是有一套标准的，如 George Marsaglia 开发的 DieHard 检验程序，检验的内容很丰富。这篇文章只能算初窥门径，R内产生真随机数的包是 [Dirk Eddelbuettel](http://dirk.eddelbuettel.com/) 开发的 [random](https://cran.r-project.org/web/packages/random/)包，它是连接产生[真随机数网站](https://www.random.org/)的接口。
 
 ## 相关性检验
 
@@ -143,10 +146,10 @@ grid.arrange(p1, p2, p3, ncol=3)
 ```
 ![image](https://cloud.githubusercontent.com/assets/7221728/26611333/374195ba-45e0-11e7-97e2-7c3ddfa03ad1.png)
 
-从图中可以比较看出，在间隔为27的位置，有一条深沟。当时Matlab采用的是George Marsaglia 在1991年提出的借位相减（subtract-with-borrow）算法，取模32的运算和5一起消耗了间隔为27的游程，导致不符合随机性的要求，该算法细节参见[Cleve B. Moler](https://www.wikiwand.com/en/Cleve_Moler)的书《Numerical Computing with MATLAB》[第9章第267页](https://www.mathworks.com/moler/chapters.html) 。
+从图中可以比较看出，在间隔为27的位置，有一条深沟。这是因为当时Matlab采用的是George Marsaglia 在1991年提出的借位相减（subtract-with-borrow）算法，取模32的运算和5一起消耗了间隔为27的游程，导致不符合随机性的要求，该算法细节参见[Cleve B. Moler](https://www.wikiwand.com/en/Cleve_Moler)的书《Numerical Computing with MATLAB》[第9章第267页](https://www.mathworks.com/moler/chapters.html) 。
 
 这里的借位相减是指序列的第`$i$`个随机数`$z_{i}$`要依据如下递推关系产生，`$$z_i=z_{i+20}-z_{i+5}-b$$`
-下标`$i,i+20,i+5$`都是对32取模的结果，`$b$`的取值与前一步有关，当`$z_i$`是正值时，下一步将`$b$`置为0，如果计算的`$z_i$`是负值，在保存`$z_i$`之前，将其值加1，并在下一步，将`$b$`的值设为`$2^{-53}$`^[现在，R、Octave和Matlab这些软件没有单纯用借位相减算法来产生随机数，1995年后，Matlab使用延迟斐波那契和移位寄存器的组合发生器，直到2007年，Matlab推出7.4版本的时候才采用MT发生器。]。
+下标`$i,i+20,i+5$`都是对32取模的结果，`$b$`的取值与前一步有关，当`$z_i$`是正值时，下一步将`$b$`置为`$0$`，如果计算的`$z_i$`是负值，在保存`$z_i$`之前，将其值加1，并在下一步，将`$b$`的值设为`$2^{-53}$`^[现在，R、Octave和Matlab这些软件没有单纯用借位相减算法来产生随机数，1995年后，Matlab使用延迟斐波那契和移位寄存器的组合发生器，直到2007年，Matlab推出7.4版本的时候才采用MT发生器。]。
 
 # 应用
 
@@ -163,7 +166,7 @@ plot(z) # 散点图
 hist(z) # 直方图
 ```
 
-为美观起见，从[viridis包](https://cran.r-project.org/web/packages/viridis/index.html)调用viridis调色板，颜色越深的地方，相应的数值越大，不管是此处 geom_hex 绘制的六角形热图，还是 geom_histogram 绘制的直方图，都遵循这个规律。
+为美观起见，从[viridis包](https://cran.r-project.org/web/packages/viridis/index.html)调用viridis调色板，颜色越深的地方，相应的数值越大，不管是此处 `geom_hex` 绘制的六角形热图，还是 `geom_histogram` 绘制的直方图，都遵循这个规律。
 
 ```r
 ggplot(data.frame(x = seq(10000), y = z), aes(x = x, y = y)) +   
@@ -173,7 +176,7 @@ ggplot(data.frame(x = seq(10000), y = z), aes(x = x, y = y)) +
 
 ![image](https://cloud.githubusercontent.com/assets/7221728/26611336/417e5e3c-45e0-11e7-91c5-b82e899fe30a.png)
 
-显然这不是均匀分布，在 `$z=1$` 处，散点比较集中，看起来有点像正态分布，如果往中心极限定理上靠，将作如下标准化`$$Y_{2}^{\star}=\frac{X_1 + X_2 - 2*\frac{1}{2}}{\sqrt{\frac{1}{12}}*\sqrt{2}}=\sqrt{6}(X_1 + X_2 -1)$$` 则$Y_{2}^{\star}$的期望为0，方差为1。
+显然这不是均匀分布，在 `$z=1$` 处，散点比较集中，看起来有点像正态分布。如果往中心极限定理上靠，将作如下标准化`$$Y_{2}^{\star}=\frac{X_1 + X_2 - 2*\frac{1}{2}}{\sqrt{\frac{1}{12}}*\sqrt{2}}=\sqrt{6}(X_1 + X_2 -1)$$` 则`$Y_{2}^{\star}$`的期望为0，方差为1。
 
 ```r
 p4 <- ggplot(data.frame(x=z),aes(x,fill=..count..))+     
@@ -218,7 +221,9 @@ ks.test(sqrt(6)*(z-1),"pnorm") # 分布检验
 
 那么
 `$$p_2(x)=\frac{1}{2 \pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}\varphi_2(t)\mathrm{d}t=\frac{2}{\pi}\int_{0}^{+\infty}\frac{(1-\cos(t))\cos(t(1-x))}{t^2}\mathrm{d}t=\frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(1-x)t\big)\big(\frac{\sin(t)}{t}\big)^2\mathrm{d}t$$`
+
 一般地，`$n$`个独立随机变量的和
+
 `$$\varphi_n(t)=\big(\frac{e^{it}-1}{it}\big)^n=\big(\frac{\sin(t/2)\mathrm{e}^{\frac{it}{2}}}{t/2}\big)^n$$`
 那么，同理 
 `$$p_n(x)=\frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(n/2-x)t\big)(\frac{\sin(t)}{t})^n\mathrm{d}t$$`
@@ -231,8 +236,10 @@ integrate(function(t,x,n) 2/pi*cos((n-2*x)*t)*(sin(t)/t)^n ,x = 1,n = 2,
 ## 0.9999846 with absolute error < 6.6e-05			
 ```
 
-那如果要把上面的积分积出来，获得一个精确的表达式，在$n=2$的时候还可以手动计算，主要使用分部积分，余弦积化和差公式和一个狄利克雷积分公式`$\int_{0}^{+\infty}\frac{\sin(ax)}{x}\mathrm{d}x=\frac{\pi}{2}\mathrm{sgn}(a)$`，过程略，最后算得
+那如果要把上面的积分积出来，获得一个精确的表达式，在`$n=2$`的时候还可以手动计算，主要使用分部积分，余弦积化和差公式和一个狄利克雷积分公式`$\int_{0}^{+\infty}\frac{\sin(ax)}{x}\mathrm{d}x=\frac{\pi}{2}\mathrm{sgn}(a)$`，过程略，最后算得
+
 `$$p_2(x)=\frac{1}{2}\big((2-x)\mathrm{sgn}(2-x)-x\mathrm{sgn}(-x)\big)-(1-x)\mathrm{sgn}(1-x)=\frac{1}{2}(\left | x \right |+\left | x-2 \right |)-\left | x-1 \right |,0<x<2$$`
+
 `$p_2(x)$`的密度函数图象如下：
 
 ```r
@@ -311,5 +318,7 @@ integrate 2/pi*cos(2*t*(1-x))*(sin(t)/t)^2 ,t ,0,oo
 # 小结
 
 > 作者的一些经验感悟:
+>
 > 因为看论文的原因（感觉MCMC好像哪都有），接着从随机数生成开始自学MCMC，一次偶然的机会，去年在北京计算科学研究中心听清华喻文健教授的报告，提到均匀分布的随机数检验，中间也出现了这个图，现在已经记不得是喻教授因为时间原因，没细讲背后的原因，还是自己没听懂，总之只觉得挺有意思的（涉及统计中的游程检验，周围基本都是工科学生，我想我听的更明白些），就记下来，在听报告之前，囫囵地看了康崇禄写的《蒙特卡罗方法理论和应用》的前两章（前两章故事比较多因此看完了），这本书没讲那个例子，却把背后的原因讲明白了（后来细看才知道的）。错位相减算法曾出现在Matlab，自然就去读Cleve B. Moler写的《Numerical Computing with MATLAB》(Revised in 2013)，这本书在文中有出现，也介绍了Matlab这么多年内置的随机数发生器的变化史。其实还是推荐看康崇禄那本，不仅因为故事多，而且内容全面和透彻，可以挑自己需要和感兴趣的部分读，也不拘泥于Matlab。
+>
 > 关于应用部分的举例，源于面试，陷于教材，钟于符号计算。这部分涉及一本广为人知的教材《概率论与数理统计教程》（第二版）茆诗松、程依明和濮晓龙著，这本书给了用卷积求独立随机变量和的例子，后面讲特征函数，说它在求独立随机变量和有优势，但是没有举例，所以正好是补充，而且意外地简洁和统一。符号计算获得精确结果是为了和数值计算的结果比较，之前在统计之都的投名状就是符号计算与R语言，但是没有提及python的sympy，这下也正好合体了。
