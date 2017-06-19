@@ -36,7 +36,7 @@ toc (id)
 save -mat random_number.mat x # 保存随机数到文件
 ```
 
-目前Matlab和Octave产生随机数的代码是一样的，内置的随机数发生器也是一样的
+目前Matlab和Octave产生随机数的代码是一样的，内置的随机数发生器也是一样的。
 
 ```octave
 rand(m,n) % 产生m行n列的服从标准均与分布的随机数 
@@ -48,7 +48,11 @@ R产生随机数的代码也是简短，默认的随机数发生器也是MT。
 runif(n) # 产生n个服从标准均匀分布的随机数
 ```
 
+原始代码，调Matlab内置函数rng设定随机数发生器，内置函数rand产生随机数，速度自然快，后面octave实现的源于用Matlab重写的随机数发生器，自然慢，一方面受限于代码水平，另一方面也是C语言和Matlab编程语言的差别，因为Matlab内置函数都是高度优化过的C或fortran代码。
+
 # 统计检验
+
+随机数的检验是有一套标准的，如 George Marsaglia 开发的 DieHard 检验程序，检验的内容很丰富，这篇文章只能算初窥门径，R内产生真随机数的包是 [Dirk Eddelbuettel](http://dirk.eddelbuettel.com/) 开发的 [random](https://cran.r-project.org/web/packages/random/)包，它是连接产生[真随机数网站](https://www.random.org/)的接口。
 
 ## 相关性检验
 
@@ -139,10 +143,10 @@ grid.arrange(p1, p2, p3, ncol=3)
 ```
 ![image](https://cloud.githubusercontent.com/assets/7221728/26611333/374195ba-45e0-11e7-97e2-7c3ddfa03ad1.png)
 
-在游程长度为27的位置，有一条深沟，这是George Marsaglia 提出的借位相减（subtract-with-borrow）算法的特性，显然不符合随机性的要求，该算法细节参见[Cleve B. Moler的书《Numerical Computing with MATLAB》第9章第267页](https://www.mathworks.com/moler/chapters.html) 。
+从图中可以比较看出，在间隔为27的位置，有一条深沟。当时Matlab采用的是George Marsaglia 在1991年提出的借位相减（subtract-with-borrow）算法，取模32的运算和5一起消耗了间隔为27的游程，导致不符合随机性的要求，该算法细节参见[Cleve B. Moler](https://www.wikiwand.com/en/Cleve_Moler)的书《Numerical Computing with MATLAB》[第9章第267页](https://www.mathworks.com/moler/chapters.html) 。
 
 这里的借位相减是指序列的第`$i$`个随机数`$z_{i}$`要依据如下递推关系产生，`$$z_i=z_{i+20}-z_{i+5}-b$$`
-下标`$i,i+20,i+5$`都是对32取模的结果，`$b$`的取值与前一步有关，当`$z_i$`是正值时，下一步将`$b$`置为0，如果计算的`$z_i$`是负值，在保存`$z_i$`之前，将其值加1，并在下一步，将`$b$`的值设为`$2^{-53}$`。
+下标`$i,i+20,i+5$`都是对32取模的结果，`$b$`的取值与前一步有关，当`$z_i$`是正值时，下一步将`$b$`置为0，如果计算的`$z_i$`是负值，在保存`$z_i$`之前，将其值加1，并在下一步，将`$b$`的值设为`$2^{-53}$`^[现在，R、Octave和Matlab这些软件没有单纯用借位相减算法来产生随机数，1995年后，Matlab使用延迟斐波那契和移位寄存器的组合发生器，直到2007年，Matlab推出7.4版本的时候才采用MT发生器。]。
 
 # 应用
 
@@ -270,7 +274,7 @@ print(integrate(sin(a*t)/t,(t,0,oo)))
 \end{equation*}
 $$`
 
-稍为好点，但是还是有一大块看不懂，那个绝对值里是什么？还是不要纠结了，路远坑多，慢走不送啊！话说要是计算`$p_2(x)$`密度函数里的积分，
+稍为好点，但是还是有一大块看不懂，那个绝对值里是什么^[Python的符号计算模块sympy功能比较全，但是化简比较弱，导致结果理解起来不是很方便，比如式子的第一行，看似当`$0<x<2$`时,`$p_{2}(x)=x$`是错的，正确的范围应该是`$0<x<1$`，其实for后面的函数 `$polar\_lift()$`要求参数大于`$0$`，这样就没问题了，建议多撸一撸[sympy官方文档](http://docs.sympy.org/latest/index.html?v=20170321095755)。]？还是不要纠结了，路远坑多，慢走不送啊！话说要是计算`$p_2(x)$`密度函数里的积分，
 
 ```python
 from sympy import * 
@@ -305,10 +309,6 @@ integrate 2/pi*cos(2*t*(1-x))*(sin(t)/t)^2 ,t ,0,oo
 
 
 # 小结
-
-1. 现在，R、Octave和Matlab这些软件没有单纯用借位相减算法来产生随机数，1995年后，Matlab使用延迟斐波那契和移位寄存器的组合发生器，直到2007年，Matlab推出7.4版本的时候才采用MT发生器。
-2. 随机数的检验是有一套标准的，如 George Marsaglia 开发的 DieHard 检验程序，检验的内容很丰富，这篇文章只能算初窥门径，R内产生真随机数的包是 [Dirk Eddelbuettel](http://dirk.eddelbuettel.com/) 开发的 [random](https://cran.r-project.org/web/packages/random/)包，它是连接产生[真随机数网站](https://www.random.org/)的接口。
-3. Python的符号计算模块sympy功能比较全，但是化简比较弱，导致结果理解起来不是很方便，比如第二个式子的第一行，看似当`$0<x<2$`时,`$p_{2}(x)$=x`是错的，正确的范围应该是`$0<x<1$`，其实for后面的函数 `$polar\_lift()$`要求参数大于0，这样就没问题了，建议多撸一撸[sympy官方文档](http://docs.sympy.org/latest/index.html?v=20170321095755)。
 
 > 作者的一些经验感悟:
 > 因为看论文的原因（感觉MCMC好像哪都有），接着从随机数生成开始自学MCMC，一次偶然的机会，去年在北京计算科学研究中心听清华喻文健教授的报告，提到均匀分布的随机数检验，中间也出现了这个图，现在已经记不得是喻教授因为时间原因，没细讲背后的原因，还是自己没听懂，总之只觉得挺有意思的（涉及统计中的游程检验，周围基本都是工科学生，我想我听的更明白些），就记下来，在听报告之前，囫囵地看了康崇禄写的《蒙特卡罗方法理论和应用》的前两章（前两章故事比较多因此看完了），这本书没讲那个例子，却把背后的原因讲明白了（后来细看才知道的）。错位相减算法曾出现在Matlab，自然就去读Cleve B. Moler写的《Numerical Computing with MATLAB》(Revised in 2013)，这本书在文中有出现，也介绍了Matlab这么多年内置的随机数发生器的变化史。其实还是推荐看康崇禄那本，不仅因为故事多，而且内容全面和透彻，可以挑自己需要和感兴趣的部分读，也不拘泥于Matlab。
