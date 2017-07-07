@@ -107,13 +107,13 @@ library(ggplot2)
 library(viridisLite)
 library(viridis)
 set.seed(1234)
-corr <- rep(0,1000) 
-for(i in seq(from=1000,to=1000000,by=1000)){  
-	corr[i/1000] <-  cor.test(runif(i,min = 0,max = 1),                            
-		runif(i,min = 0,max = 1))$estimate } 
+corr <- rep(0, 1000) 
+for(i in seq(from = 1000, to = 1000000, by = 1000)) {  
+	corr[i/1000] <-  cor.test(runif(i, min = 0, max = 1),                            
+		runif(i, min = 0, max = 1))$estimate} 
 ggplot(data.frame(x = seq(1000), y = corr), aes(x = x, y = y)) +   
-	geom_hex(show.legend=FALSE)+ 
-	scale_fill_viridis(direction = -1) + xlab("Sample size *10^3")+ylab("Correlation") 
+	geom_hex(show.legend = FALSE) + 
+	scale_fill_viridis(direction = -1) + xlab("Sample size *10^3") + ylab("Correlation") 
 ```
 
 ![image](https://cloud.githubusercontent.com/assets/7221728/26611329/2f03625c-45e0-11e7-8aeb-ac6daed5e179.png)
@@ -123,7 +123,7 @@ ggplot(data.frame(x = seq(1000), y = corr), aes(x = x, y = y)) +
 检验产生的随机数是否服从指定的分布：原假设是样本来自指定的分布，计算的P值比较大，就不能拒绝原假设。
 
 ```r
-ks.test(runif(1000),"punif") # 分布检验
+ks.test(runif(1000), "punif") # 分布检验
 ##
 ## One-sample Kolmogorov-Smirnov test
 ##
@@ -134,7 +134,7 @@ ks.test(runif(1000),"punif") # 分布检验
 
 检验两样本是否来自同一分布：原假设是两样本来自同一分布，计算的P值比较小，就表示两样本不是来自同一分布。
 ```r
-ks.test(runif(1000),runif(1000)) # 同分布检验
+ks.test(runif(1000), runif(1000)) # 同分布检验
 ##
 ## Two-sample Kolmogorov-Smirnov test
 ##
@@ -152,7 +152,7 @@ ks.test(runif(1000),runif(1000)) # 同分布检验
 
 ```r
 library(tseries)
-x <- sample(c(0,1),1000,replace = TRUE,prob = c(1/2,1/2))
+x <- sample(c(0, 1), 1000, replace = TRUE, prob = c(1/2, 1/2))
 runs.test(factor(x))
 ##
 ## Runs Test
@@ -170,22 +170,22 @@ runs.test(factor(x))
 library(gridExtra)
 library(R.matlab)
 # 游程频数直方图
-run_test_fun <- function(x,string,delta) {
+run_test_fun <- function(x, string, delta) {
   n <- length(x)
-  len <- diff(c(0,which(x<delta),n+1))-1 
-  ggplot(data.frame(x=len[len < 101]),aes(x,fill=..count..)) + 
-  	scale_fill_viridis(direction = -1)+ 
-  	geom_histogram(binwidth = 1,show.legend = FALSE) + 
-  	xlab(string)+ylab("") 
+  len <- diff(c(0, which(x < delta), n + 1)) - 1 
+  ggplot(data.frame(x = len[len < 101]), aes(x, fill = ..count..)) + 
+  	scale_fill_viridis(direction = -1) + 
+  	geom_histogram(binwidth = 1, show.legend = FALSE) + 
+  	xlab(string) + ylab("") 
 }
 set.seed(1234) # R默认采用Mersenne Twister发生器
-r_data <- runif(2^24,0,1); # R内生成均匀分布随机数
+r_data <- runif(2^24, 0, 1); # R内生成均匀分布随机数
 matlabv5_data <- readMat("random_number.mat") # 读取Octave生成的均匀分布随机数
 temp <- read.table(file = "random_number.txt") # 读取C语言生成的均匀分布随机数 
 c_data <- c(as.matrix(t(temp)))
-p1 <- run_test_fun(x = r_data,string = "R",delta = 0.01)
-p2 <- run_test_fun(x = matlabv5_data$x,string = "Matlab v5",delta = 0.01)
-p3 <- run_test_fun(x = c_data,string = "C",delta = 0.01)
+p1 <- run_test_fun(x = r_data, string = "R", delta = 0.01)
+p2 <- run_test_fun(x = matlabv5_data$x, string = "Matlab v5", delta = 0.01)
+p3 <- run_test_fun(x = c_data, string = "C", delta = 0.01)
 grid.arrange(p1, p2, p3, ncol=3)
 ```
 ![image](https://cloud.githubusercontent.com/assets/7221728/26611333/374195ba-45e0-11e7-97e2-7c3ddfa03ad1.png)
@@ -200,9 +200,9 @@ grid.arrange(p1, p2, p3, ncol=3)
 
 ```r
 set.seed(1234) 
-x <- runif(10000,min = 0,max = 1) 
-y <- runif(10000,min = 0,max = 1) 
-z <- x+y
+x <- runif(10000, min = 0, max = 1) 
+y <- runif(10000, min = 0, max = 1) 
+z <- x + y
 plot(z) # 散点图
 hist(z) # 直方图
 ```
@@ -211,8 +211,8 @@ hist(z) # 直方图
 
 ```r
 ggplot(data.frame(x = seq(10000), y = z), aes(x = x, y = y)) +   
-	geom_hex(show.legend=FALSE)+ 
-	scale_fill_viridis(direction = -1) + xlab("")+ylab("")
+	geom_hex(show.legend = FALSE) + 
+	scale_fill_viridis(direction = -1) + xlab("") + ylab("")
 ```
 
 ![image](https://cloud.githubusercontent.com/assets/7221728/26611336/417e5e3c-45e0-11e7-91c5-b82e899fe30a.png)
@@ -220,13 +220,13 @@ ggplot(data.frame(x = seq(10000), y = z), aes(x = x, y = y)) +
 显然这不是均匀分布，在 `$z=1$` 处，散点比较集中，看起来有点像正态分布。如果往中心极限定理上靠，将作如下标准化`$$Y_{2}^{\star}=\frac{X_1 + X_2 - 2*\frac{1}{2}}{\sqrt{\frac{1}{12}}*\sqrt{2}}=\sqrt{6}(X_1 + X_2 -1)$$` 则`$Y_{2}^{\star}$`的期望为0，方差为1。
 
 ```r
-p4 <- ggplot(data.frame(x=z),aes(x,fill=..count..))+     
-	scale_fill_viridis(direction = -1)+     
-	geom_histogram(bins=20,show.legend=FALSE) + xlab("")+ylab("")  
-p5 <- ggplot(data.frame(x=sqrt(6)*(z-1)),aes(x,fill=..count..))+     
-	scale_fill_viridis(direction = -1)+     
-	geom_histogram(bins=20,show.legend=FALSE) + xlab("")+ylab("")  
-grid.arrange(p4, p5,  ncol=2)
+p4 <- ggplot(data.frame(x = z), aes(x, fill = ..count..)) +     
+	scale_fill_viridis(direction = -1) +     
+	geom_histogram(bins=20, show.legend = FALSE) + xlab("") + ylab("")  
+p5 <- ggplot(data.frame(x = sqrt(6)*(z-1)), aes(x, fill = ..count..)) +     
+	scale_fill_viridis(direction = -1) +     
+	geom_histogram(bins = 20, show.legend = FALSE) + xlab("") + ylab("")  
+grid.arrange(p4, p5, ncol=2)
 ```
 
 ![image](https://cloud.githubusercontent.com/assets/7221728/26611342/485f3410-45e0-11e7-9e2d-306f7bc97e5d.png)
@@ -234,7 +234,7 @@ grid.arrange(p4, p5,  ncol=2)
 只是变换后的图像和之前基本一致，那么现在看来眼球检验不好使了，那就上`$P$`值呗！
 
 ```r
-ks.test(sqrt(6)*(z-1),"pnorm") # 分布检验
+ks.test(sqrt(6)*(z-1), "pnorm") # 分布检验
 ##
 ## One-sample Kolmogorov-Smirnov test
 ##
@@ -305,9 +305,9 @@ ggplot(data.frame(x = c(0, 2)), aes(x = x)) +
 
 ```python
 from sympy import * 
-a=symbols('a', real=True)
-t=symbols('t', real=True,positive=True)
-print(integrate(sin(a*t)/t,(t,0,oo)))
+a=symbols('a', real = True)
+t=symbols('t', real = True, positive = True)
+print(integrate(sin(a*t)/t, (t, 0, oo)))
 
 ## Piecewise((pi/2, Eq(Abs(periodic_argument(polar_lift(a)**2, oo)), 0)), (Integral(sin(a*t)/t, (t, 0, oo)), True))
 ```
