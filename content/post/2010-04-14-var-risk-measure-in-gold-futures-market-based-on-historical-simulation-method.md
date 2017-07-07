@@ -97,7 +97,7 @@ VaR模型的检验方法有很多种，其中Kupiec（1995）提出的失败率�
 [<br /> ](https://cos.name/?attachment_id=)
 
 
-![](https://cos.name/wp-content/uploads/2010/04/yishuao-yield.png)
+![](https://uploads.cosx.org/2010/04/yishuao-yield.png)
 
 
   图2 收益率的序列图和收益率的直方图
@@ -117,7 +117,7 @@ VaR模型的检验方法有很多种，其中Kupiec（1995）提出的失败率�
 在应用历史模拟法时，本文选取的历史数据模拟长度为25，置信水平为95%。根据2.2中所述方法计算au0901的时变VaR值，将其与实际收益率对比如下:
 
 
-![图3  置信水平95%下的时变VaR值与实际收益率对比图](https://cos.name/wp-content/uploads/2010/04/yishuo-vaR-yield.png)
+![图3  置信水平95%下的时变VaR值与实际收益率对比图](https://uploads.cosx.org/2010/04/yishuo-vaR-yield.png)
 
 
 图3  置信水平95%下的时变VaR值与实际收益率对比图

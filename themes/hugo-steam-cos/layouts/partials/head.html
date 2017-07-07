@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{ if not .IsHome }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}</title>
+    {{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ .Hugo.Generator }}
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    {{ "<!-- RSS autodiscovery -->" | safeHTML }}
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml"
+    title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml"
+    title="{{ .Site.Title }}" />
+    {{ end }}
+
+    <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
+    <link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css">
+
+    {{ "<!-- Stylesheets -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ "css/screen.css" | relURL }}">
+    <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css">
+    <script async src="https://use.fontawesome.com/32c3d13def.js"></script>
+    {{ range .Site.Params.customCSS }}
+    <link rel="stylesheet" href="{{ . | relURL }}">
+    {{ end }}
+
+    {{ with .Site.Params.favicon }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ . | relURL }}">
+    <link rel="icon" type="image/x-icon" href="{{ . | relURL }}">
+    {{ end }}
+
+    {{ "<!-- Stylesheet for theme color -->" | safeHTML }}
+    {{ partial (printf "themes/%s-theme" .Site.Params.themecolor) . }}
+</head>

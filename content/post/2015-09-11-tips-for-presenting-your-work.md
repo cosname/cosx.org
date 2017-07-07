@@ -25,7 +25,7 @@ slug: tips-for-presenting-your-work
 >原文发表在[The R journal](http://journal.r-project.org/archive/2011-1/RJournal_2011-1_Cook.pdf)，本文由陈妍翻译，
 >[高涛](http://joegaotao.github.io/)、肖楠和[谢益辉](http://yihui.name/)审校，王小宁编辑。
 
-![](https://cos.name/wp-content/uploads/2015/09/dicook-2014-500x314.jpg)
+![](https://uploads.cosx.org/2015/09/dicook-2014-500x314.jpg)
 
 # 摘要
 

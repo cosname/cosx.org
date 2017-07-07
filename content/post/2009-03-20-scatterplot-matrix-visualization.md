@@ -34,7 +34,7 @@ pairs(iris[1:4], main = "Anderson's Iris Data -- 3 species",
       bg = c("red", "green3", "blue")[unclass(iris$Species)])
 ```
 
-![pairs](https://cos.name/wp-content/uploads/2009/03/pairs.png)
+![pairs](https://uploads.cosx.org/2009/03/pairs.png)
 
 <p style="text-align: center;">图1 pairs</p>
 
@@ -52,7 +52,7 @@ spm(~Sepal.Length + Sepal.Width + Petal.Length + Petal.Width |
     Species, data = iris)
 ```
 
-![spm](https://cos.name/wp-content/uploads/2009/03/spm.png)
+![spm](https://uploads.cosx.org/2009/03/spm.png)
 
 <p style="text-align: center;">图2 spm</p>
 
@@ -68,7 +68,7 @@ gpairs(iris, upper.pars = list(scatter = 'stats'),
          stat.pars = list(verbose = FALSE))
 ```
 
-![gpairs](https://cos.name/wp-content/uploads/2009/03/gpairs.png)
+![gpairs](https://uploads.cosx.org/2009/03/gpairs.png)
 <p style="text-align: center;">图3 gpairs</p>
 
 # splom(lattice)
@@ -89,7 +89,7 @@ splom(~iris[1:4], groups = Species, data = iris,
                  text = list(c("Setosa", "Versicolor", "Virginica"))))
 ```
 
-![splom](https://cos.name/wp-content/uploads/2009/03/splom.png)
+![splom](https://uploads.cosx.org/2009/03/splom.png)
 <p style="text-align: center;">图4 splom</p>
 
 # 讨论

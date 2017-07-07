@@ -16,7 +16,7 @@ tags:
 slug: 1st-data-mining-competetion-for-college-students
 ---
 
-![数据挖掘竞赛](https://cos.name/wp-content/uploads/2011/03/DataMiningCompetetion.png)
+![数据挖掘竞赛](https://uploads.cosx.org/2011/03/DataMiningCompetetion.png)
 
 # 竞赛背景
 

@@ -22,7 +22,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 上海财经大学（国定路777号），行政楼一楼阶梯教室、报告厅（地图右上角）。
 
-![上海财经大学地图](https://cos.name/wp-content/uploads/2010/10/SHUFE_map.jpg)
+![上海财经大学地图](https://uploads.cosx.org/2010/10/SHUFE_map.jpg)
 
 ## 三、会议组委
 
@@ -31,9 +31,9 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 ## 四、会议海报与传单
 
-![第三届中国R语言会议上海会场海报](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Poster.jpg)
+![第三届中国R语言会议上海会场海报](https://uploads.cosx.org/2010/10/ChinaR-2010-SH-Poster.jpg)
 
-![第三届中国R语言会议上海会场传单](https://cos.name/wp-content/uploads/2010/10/ChinaR-2010-SH-Leaflet.jpg)
+![第三届中国R语言会议上海会场传单](https://uploads.cosx.org/2010/10/ChinaR-2010-SH-Leaflet.jpg)
 
 # 会议事宜（北京会场）
 
@@ -55,7 +55,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 人大校内地图（点击看大图）：
 
-![人大校内地图](https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg)
+![人大校内地图](https://uploads.cosx.org/2010/06/RUCmap1.jpg)
 
 ## 三、会议演讲
 
@@ -75,7 +75,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 时间长度要求：每位演讲者20~30分钟的演讲时间 (演示文稿大约15到30页)，若需更长的时间可以提前申请。
 
-会议日程手册：[下载](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Manual.pdf)。
+会议日程手册：[下载](https://uploads.cosx.org/2010/06/China-R-2010-Manual.pdf)。
 
 ## 四、会前培训
 
@@ -85,7 +85,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 R语言基础
 
-演讲幻灯片简稿：[下载](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Rintro.pdf)。
+演讲幻灯片简稿：[下载](https://uploads.cosx.org/2010/06/China-R-2010-Rintro.pdf)。
 
 ### 下午（谢益辉主讲）
 
@@ -97,7 +97,7 @@ R语言基础
 
 不适合听众：本培训为实用性质的培训，可能不适合以发表学术论文为目标的听众，统计图形看似过于浅显，在统计学术界非主流研究方向
 
-演讲幻灯片简稿及相关代码：[下载](https://cos.name/wp-content/uploads/2010/06/China-R-2010-Graphics.zip)。
+演讲幻灯片简稿及相关代码：[下载](https://uploads.cosx.org/2010/06/China-R-2010-Graphics.zip)。
 
 ## 五、会议费用
 

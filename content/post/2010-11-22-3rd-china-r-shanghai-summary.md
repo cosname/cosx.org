@@ -17,9 +17,9 @@ slug: 3rd-china-r-shanghai-summary
 
 本文撰稿：第三届中国R语言会议（上海会场）主席张翔。
 
-![第三届中国R语言会议上海会场合影1](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-1.jpg "第三届中国R语言会议上海会场合影1") 第三届中国R语言会议上海会场合影（右键另存为看大图） 
+![第三届中国R语言会议上海会场合影1](https://uploads.cosx.org/2010/11/3rd-China-R-SH-1.jpg "第三届中国R语言会议上海会场合影1") 第三届中国R语言会议上海会场合影（右键另存为看大图） 
 
-![中国R语言会议标识](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+![中国R语言会议标识](https://uploads.cosx.org/2010/06/China-R-Logo.png)
 
 第三届中国R语言会议（上海会场）于2010年11月13日~14日在上海财经大学行政楼成功召开。会议由上海财经大学统计与管理学院与统计之都网站([cos.name](https://cos.name/))协办，由 Mango Solutions 提供赞助。在两天的会议时间里，来自各行各业的R用户齐聚上海，共同探讨和交流R软件的使用经验，取得了丰厚的成果。
 
@@ -39,19 +39,19 @@ slug: 3rd-china-r-shanghai-summary
 
 ## 会议培训：
 
-  * 张霞峰：[R语言基础培训讲座](https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-basic.ppt)
-  * 李舰：[R语言应用讲座](https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-Training-Shanghai.zip)
+  * 张霞峰：[R语言基础培训讲座](https://uploads.cosx.org/2010/11/China-R-2010-R-basic.ppt)
+  * 李舰：[R语言应用讲座](https://uploads.cosx.org/2010/11/China-R-2010-R-Training-Shanghai.zip)
 
 ## 会议演讲：
 
   * 茆长暄：Marketing your research by R packages
-  * 牟官迅：[快速神经网络在R上的绑定](https://cos.name/wp-content/uploads/2010/11/China-R-2010-libfann-R-Binding.ppt)
-  * 邵凡：[R在欧美市场的商业化应用](https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-in-Enterprise-Environment.ppt)
-  * 邹德强：[Market Segmentation with Latent Class Regression](https://cos.name/wp-content/uploads/2010/11/China-R-2010-Market-Segmentation-with-Latent-Class-Regression.pdf)
-  * 陈钢：[R与Cytoscape配合在生物网络研究中的应用](https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-and-Cytoscape.pdf)
-  * 邵晨：[协整理论及其R语言的实现](https://cos.name/wp-content/uploads/2010/11/China-R-2010-Cointegrate.ppt)
-  * 张翔：[Social network analysis with R sna package](https://cos.name/wp-content/uploads/2010/11/China-R-2010-SNA.pdf)
-  * 刘思喆：[R与统计图形](https://cos.name/wp-content/uploads/2010/11/China-R-2010-R-and-Statistical-Graphics.pdf)
-  * 李舰：[R与高性能运算以及R在中国未来发展的讨论](https://cos.name/wp-content/uploads/2010/11/China-R-2010-High-Performance-Computing.pdf)
+  * 牟官迅：[快速神经网络在R上的绑定](https://uploads.cosx.org/2010/11/China-R-2010-libfann-R-Binding.ppt)
+  * 邵凡：[R在欧美市场的商业化应用](https://uploads.cosx.org/2010/11/China-R-2010-R-in-Enterprise-Environment.ppt)
+  * 邹德强：[Market Segmentation with Latent Class Regression](https://uploads.cosx.org/2010/11/China-R-2010-Market-Segmentation-with-Latent-Class-Regression.pdf)
+  * 陈钢：[R与Cytoscape配合在生物网络研究中的应用](https://uploads.cosx.org/2010/11/China-R-2010-R-and-Cytoscape.pdf)
+  * 邵晨：[协整理论及其R语言的实现](https://uploads.cosx.org/2010/11/China-R-2010-Cointegrate.ppt)
+  * 张翔：[Social network analysis with R sna package](https://uploads.cosx.org/2010/11/China-R-2010-SNA.pdf)
+  * 刘思喆：[R与统计图形](https://uploads.cosx.org/2010/11/China-R-2010-R-and-Statistical-Graphics.pdf)
+  * 李舰：[R与高性能运算以及R在中国未来发展的讨论](https://uploads.cosx.org/2010/11/China-R-2010-High-Performance-Computing.pdf)
   
-![第三届中国R语言会议上海会场合影2](https://cos.name/wp-content/uploads/2010/11/3rd-China-R-SH-2.jpg "第三届中国R语言会议上海会场合影2") 第三届中国R语言会议上海会场合影（右键另存为看大图）
+![第三届中国R语言会议上海会场合影2](https://uploads.cosx.org/2010/11/3rd-China-R-SH-2.jpg "第三届中国R语言会议上海会场合影2") 第三届中国R语言会议上海会场合影（右键另存为看大图）

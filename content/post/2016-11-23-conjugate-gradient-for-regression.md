@@ -18,7 +18,7 @@ slug: conjugate-gradient-for-regression
 ---
 
 
-![共轭梯度示意图（图片来源：维基百科）](https://cos.name/wp-content/uploads/2016/11/CG.png)
+![共轭梯度示意图（图片来源：维基百科）](https://uploads.cosx.org/2016/11/CG.png)
 
 ~~轮回眼~~ 共轭梯度示意图（图片来源：[维基百科](https://en.wikipedia.org/wiki/Conjugate_gradient_method)）
 
@@ -66,7 +66,7 @@ slug: conjugate-gradient-for-regression
 
 至于为什么应该用共轭梯度而不是梯度，我建议感兴趣的读者看一看文章最后的那篇参考文献，其中对共轭梯度的优势进行了非常详细的阐述。一个直观的理解就是，普通的梯度法往往会有重复移动的方向（如文首图片中的绿线），而共轭梯度保证了每次移动的方向是共轭的（即关于 $A$ 是正交的，如文首图片中的红线），因此不会有重复的劳动。关于 CG 的理论说来那个话就长了，因此本文不在这方面做过多的论述（其实是因为作者太懒），我在这里更想强调的其实是它的计算过程，参见图 1。
 
-![](https://cos.name/wp-content/uploads/2016/11/algorithm-1.png)
+![](https://uploads.cosx.org/2016/11/algorithm-1.png)
 <p style="text-align: center;">图1：共轭梯度法算法流程</p>
 
 # 神奇在哪里？

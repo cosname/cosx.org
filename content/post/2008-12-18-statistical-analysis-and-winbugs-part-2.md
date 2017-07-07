@@ -58,7 +58,7 @@ model
 }
 ```
 
-![WinBUGS doodle模型](https://cos.name/wp-content/uploads/2008/12/WinBUGS-doodle.png "WinBUGS doodle模型")
+![WinBUGS doodle模型](https://uploads.cosx.org/2008/12/WinBUGS-doodle.png "WinBUGS doodle模型")
 **WinBUGS doodle模型**
 
 数据
@@ -202,7 +202,7 @@ b12		-0.8104		0.3852		20	-2.1	0.0482		0.05	-1.6139	-0.007	0.00037
 
 当然了winBUGS的强大之处并不在于此，而是在处理诸如GLME（有些文献称GLMM），空间数据模型等计算复杂的模型，之后还会继续讨论。
 
-![](https://cos.name/wp-content/uploads/2008/12/cover.jpg)
+![](https://uploads.cosx.org/2008/12/cover.jpg)
 
 参考文献：
 
@@ -212,6 +212,6 @@ b12		-0.8104		0.3852		20	-2.1	0.0482		0.05	-1.6139	-0.007	0.00037
 
 最后再送出一本书，供大家研究参考
 
-[Disease Mapping with WINBUGS and MLWin](https://cos.name/wp-content/uploads/2008/12/lawson-ab-disease-mapping-with-winbugs-and-ml-win-wiley-2003-isbn-0470856041-600dpitc282s.djvu)（djvu格式）
+[Disease Mapping with WINBUGS and MLWin](https://uploads.cosx.org/2008/12/lawson-ab-disease-mapping-with-winbugs-and-ml-win-wiley-2003-isbn-0470856041-600dpitc282s.djvu)（djvu格式）
 
 WinBUGS在统计分析中的应用 第二部分完

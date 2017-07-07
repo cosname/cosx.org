@@ -222,7 +222,7 @@ coef(fit, s=c(fit$lambda[16],0.1))
 ```r
 plot(fit, xvar="lambda", label=TRUE)
 ```
-![1](https://cos.name/wp-content/uploads/2016/10/1.png)
+![1](https://uploads.cosx.org/2016/10/1.png)
 
 图中的每一条曲线代表了每一个自变量系数的变化轨迹，纵坐标是系数的值，下横坐标是 log⁡(λ)，上横坐标是此时模型中非零系数的个数。
 我们可以看到，黑线代表的自变量1在 λ 值很大时就有非零的系数，然后随着 λ 值变小不断变大。
@@ -250,7 +250,7 @@ predict(fit, newx=nx, s=c(fit$lambda[16],0.1))
 lfit=glmnet(x, y, lower=-.7, upper=.5)
 plot(lfit, xvar="lambda", label=TRUE)
 ```
-![2](https://cos.name/wp-content/uploads/2016/10/2.png)
+![2](https://uploads.cosx.org/2016/10/2.png)
 
 上限与下限可以是一个值，也可以是一个向量，向量的每一个值作为对应自变量的参数上下限。
 有时，在建模之前我们就想凸显某几个自变量的作用，此时我们可以调整惩罚参数。
@@ -262,7 +262,7 @@ p.fac[c(5, 10, 15)] = 0
 pfit = glmnet(x, y, penalty.factor=p.fac)
 plot(pfit, xvar="lambda", label = TRUE)
 ```
-![3](https://cos.name/wp-content/uploads/2016/10/3.png)
+![3](https://uploads.cosx.org/2016/10/3.png)
 
 我们可以看到，自变量5/10/15的系数一直不为0，而其他的参数系数绝对值随着 λ 值变小而变大。
 
@@ -320,7 +320,7 @@ stopImplicitCluster()
 ```r
 plot(cvfit)
 ```
-![4](https://cos.name/wp-content/uploads/2016/10/4.png)
+![4](https://uploads.cosx.org/2016/10/4.png)
   
 因为交叉验证，对于每一个 λ 值，在红点所示目标参量的均值左右，我们可以得到一个目标参量的置信区间。两条虚线分别指示了两个特殊的 λ 值：
 ```r
@@ -364,14 +364,14 @@ predict(cvfit, newx=x[1:5,], type="response", s="lambda.1se")
 
 在这一节我们会了解一些关于Elastic Net模型家族的理论。首先我们先来看看一般线性Elastic Net模型的目标函数：
 
-![6](https://cos.name/wp-content/uploads/2016/10/公式.png)
+![6](https://uploads.cosx.org/2016/10/公式.png)
   
 目标函数的第一行与传统线性回归模型完全相同，即我们希望得到相应的自变量系数 `\(\beta\)`，
 以此最小化实际因变量y与预测应变量 `\(\beta x\)` 之间的误差平方和。
 而线性Elastic Net与线性回归的不同之处就在于有无第二行的这个约束，线性Elastic Net希望得到的自变量系数是在由 `\(t\)` 控制的一个范围内。
 这一约束也是Elastic Net模型能进行复杂度调整，LASSO回归能进行变量筛选和复杂度调整的原因。我们可以通过下面的这张图来解释这个道理：
 
-![5](https://cos.name/wp-content/uploads/2016/10/5.png)
+![5](https://uploads.cosx.org/2016/10/5.png)
   
 先看左图，假设一个二维模型对应的系数是 `\(\beta_1\)` 和 `\(\beta_2\)`，然后 `\(\hat{\beta}\)` 是最小化误差平方和的点，
 即用传统线性回归得到的自变量系数。
@@ -406,7 +406,7 @@ plot(cvfit10, main="LASSO")
 plot(cvfit0, main="Ridge")
 plot(cvfit5, main="Elastic Net")
 ```
-![6](https://cos.name/wp-content/uploads/2016/10/6.png)
+![6](https://uploads.cosx.org/2016/10/6.png)
   
 通过比较可以看出，Ridge回归得到的模型一直都有30个自变量，而 α=0.5 时的Elastic Net与LASSO回归有相似的性能。
 

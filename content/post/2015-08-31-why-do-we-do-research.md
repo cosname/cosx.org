@@ -23,7 +23,7 @@ slug: why-do-we-do-research
 >本文由王小宁翻译，冯凌秉、施涛审校。
 
 
-![](https://cos.name/wp-content/uploads/2015/08/Terry-Speed-1-2.jpg)
+![](https://uploads.cosx.org/2015/08/Terry-Speed-1-2.jpg)
 
 “我们为什么要做研究？” －－这个问题似乎由调查机构，比如说像_Vitae_这种立志于通过转化研究者专业和职业发展路径来激发他们潜能的国际项目，通过抽样调查来回答最为合适。这里我只是想用我的个人经验来探讨一下这个问题。
 

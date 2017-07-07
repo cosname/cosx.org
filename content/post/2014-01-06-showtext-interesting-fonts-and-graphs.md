@@ -79,7 +79,7 @@ dev.off();
 
 上面的小程序会在图形中随机显示一些汉字，效果如下图：
 
-![随机显示汉字](https://cos.name/wp-content/uploads/2014/01/chinese-char.png)
+![随机显示汉字](https://uploads.cosx.org/2014/01/chinese-char.png)
 
 <p style="text-align: center;">
   图1：随机显示汉字
@@ -91,7 +91,7 @@ dev.off();
 
 有了上面介绍的`showtext`包，你基本上可以使用任何一种字体来显示文字了。这时候我们可以做一些有意思的事情：有些字体中包含的并不是字母和数字，而是一些符号或图标。例如这个[WM People 1](http://www.dafont.com/wm-people-1.font)字体，其中字母p和字母u分别是男人和女人的图案，利用这一点我们可以绘制出下面这幅图：
 
-![教育程度统计](https://cos.name/wp-content/uploads/2014/01/edu-stat.png)
+![教育程度统计](https://uploads.cosx.org/2014/01/edu-stat.png)
 <p style="text-align: center;">
   图2：用特殊字体绘图
 </p>
@@ -166,7 +166,7 @@ dev.off();
 
 不过这种思路确实很赞，试想一下，如果我们把一些枯燥的坐标轴说明文字变成了更形象的图案，那么整幅图的表现力是不是就更强了呢？像是下面这样：
 
-![豆瓣评分](https://cos.name/wp-content/uploads/2014/01/douban.png)
+![豆瓣评分](https://uploads.cosx.org/2014/01/douban.png)
 <p style="text-align: center;">
   图4：坐标轴上放置表情
 </p>

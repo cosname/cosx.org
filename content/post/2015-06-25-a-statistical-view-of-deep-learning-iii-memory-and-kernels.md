@@ -16,7 +16,7 @@ slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
 
 作者：[Shakir Mohamed](http://www.shakirm.com/)  翻译：丁维悦 审校：朱雪宁 何通 施涛 编辑：王小宁
 
-![methodTriangle1-300x300](https://cos.name/wp-content/uploads/2015/06/methodTriangle1-300x300.png)
+![methodTriangle1-300x300](https://uploads.cosx.org/2015/06/methodTriangle1-300x300.png)
 
 <p style="text-align:center">连接机器学习的回归方法</p>
 

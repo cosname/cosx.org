@@ -20,7 +20,7 @@ description: 绘制数据地图是一种有效展现空间数据的方法，美�
 
 绘制数据地图是一种有效展现空间数据的方法，美丽的数据展示更容易引起读者的共鸣。本地图设计的初衷是展示中国航线的分布规律，进而可以分析成本、客流量等问题。
 
-![flight-night-scene](https://cos.name/wp-content/uploads/2014/09/flight-night-scene.png) 本文参考了以下文献进行绘制：
+![flight-night-scene](https://uploads.cosx.org/2014/09/flight-night-scene.png) 本文参考了以下文献进行绘制：
   
 <http://spatialanalysis.co.uk/2012/06/mapping-worlds-biggest-airlines/>
 
@@ -339,4 +339,4 @@ ggplot() + wrld + urb + airline +
 dev.off()
 ```
 
-完整尺寸的超清航线夜景图可以在[这里下载](https://cos.name/wp-content/uploads/2014/09/flight-night-scene-HD.png)得到（7.9M）。
+完整尺寸的超清航线夜景图可以在[这里下载](https://uploads.cosx.org/2014/09/flight-night-scene-HD.png)得到（7.9M）。

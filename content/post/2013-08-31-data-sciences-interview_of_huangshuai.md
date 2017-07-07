@@ -12,7 +12,7 @@ tags:
 slug: data-sciences-interview_of_huangshuai
 ---
 
-![ENG - Industrial & Management Systems Engineering - Shuai Huang](https://cos.name/wp-content/uploads/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang.jpg)
+![ENG - Industrial & Management Systems Engineering - Shuai Huang](https://uploads.cosx.org/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang.jpg)
 
 【COS编辑部按】受访人：黄帅
 

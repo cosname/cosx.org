@@ -6,7 +6,7 @@ author: COS管理员
 
 R是一门用于统计计算和作图的语言，其官方机构每年都会举办useR!会议，但会议地点主要局限在欧美地区。自2008年以来，在谢益辉的倡导下，中国已经成功举办了两届自行组织的R语言会议，极大促进了R语言在中国的推广和发展。在前两届会议的成功经验下，为了进一步加强各领域R语言使用者之间的交流，我们于2011年5月（北京会场）和2011年11月（上海会场）举办了第四届中国R语言会议。
 
-![China-R-Logo](https://cos.name/wp-content/uploads/2010/06/China-R-Logo.png)
+![China-R-Logo](https://uploads.cosx.org/2010/06/China-R-Logo.png)
 
 **北京会场和上海会场均已顺利召开，详情请见[北京会场会议纪要](/2011/05/4th-china-r-beijing-summary/)及[上海会场会议纪要](/2011/11/4th-china-r-shanghai-summary/)。**
 
@@ -28,7 +28,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 人大校内地图（点击看大图）：
 
-![人大校内地图](https://cos.name/wp-content/uploads/2010/06/RUCmap1.jpg)
+![人大校内地图](https://uploads.cosx.org/2010/06/RUCmap1.jpg)
 
 
 ## 三、会议演讲
@@ -49,7 +49,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 会议演讲日程、摘要等信息参见会议手册：
 
-[会议手册下载](https://cos.name/wp-content/uploads/2011/04/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C.pdf)
+[会议手册下载](https://uploads.cosx.org/2011/04/%E4%BC%9A%E8%AE%AE%E6%89%8B%E5%86%8C.pdf)
 
 ## 四、会议费用
 
@@ -94,7 +94,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 开车方式：内环金沙江路出口下来（以逆时针方向为例，顺时针方向下高架后需要在前方金沙江路口调头），靠右行驶两百米，留意路的右边有一个蓝色标牌，上书“进华师大车辆”，右转即可进入校门。进门后会收停车费10元。一直向前，到先锋路（进校后第一个左转路口）左转，即可看到停车场的标志。逸夫楼就在停车场旁边。如果使用GARMIN的GPS，可以直接定位“华东师范大学停车场”。
 
-[![ECNU](https://cos.name/wp-content/uploads/2011/09/ECNU_MAP.png)](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
+[![ECNU](https://uploads.cosx.org/2011/09/ECNU_MAP.png)](http://ditu.google.cn/maps?hl=zh-CN&tab=wl&q=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E9%80%B8%E5%A4%AB%E6%A5%BC)
 
 ## 三、会议主题
 

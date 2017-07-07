@@ -17,18 +17,18 @@ slug: lda-math-mcmc-and-gibbs-sampling
 
 随机模拟(或者统计模拟)方法有一个很酷的别名是蒙特卡罗方法(Monte Carlo Simulation)。这个方法的发展始于20世纪40年代，和原子弹制造的曼哈顿计划密切相关，当时的几个大牛，包括乌拉姆、冯.诺依曼、费米、费曼、Nicholas Metropolis， 在美国洛斯阿拉莫斯国家实验室研究裂变物质的中子连锁反应的时候，开始使用统计模拟的方法,并在最早的计算机上进行编程实现。
 
-![simulation](https://cos.name/wp-content/uploads/2013/01/simulation.jpg)
+![simulation](https://uploads.cosx.org/2013/01/simulation.jpg)
 
 **随机模拟与计算机**
 
 现代的统计模拟方法最早由数学家乌拉姆提出，被Metropolis命名为蒙特卡罗方法，蒙特卡罗是著名的赌场，赌博总是和统计密切关联的，所以这个命名风趣而贴切，很快被大家广泛接受。被不过据说费米之前就已经在实验中使用了，但是没有发表。说起蒙特卡罗方法的源头，可以追溯到18世纪，布丰当年用于计算`$\pi$`的著名的投针实验就是蒙特卡罗模拟实验。统计采样的方法其实数学家们很早就知道，但是在计算机出现以前，随机数生成的成本很高，所以该方法也没有实用价值。随着计算机技术在二十世纪后半叶的迅猛发展，随机模拟技术很快进入实用阶段。对那些用确定算法不可行或不可能解决的问题，蒙特卡罗方法常常为人们带来希望。<!--more-->
 
-![monte-carlo-simulation](https://cos.name/wp-content/uploads/2013/01/monte-carlo-simulation.jpg)
+![monte-carlo-simulation](https://uploads.cosx.org/2013/01/monte-carlo-simulation.jpg)
 **蒙特卡罗方法**
 
 统计模拟中有一个重要的问题就是给定一个概率分布`$p(x)$`，我们如何在计算机中生成它的样本。一般而言均匀分布 `$Uniform(0,1)$`的样本是相对容易生成的。 通过线性同余发生器可以生成伪随机数，我们用确定性算法生成`$[0,1]$`之间的伪随机数序列后，这些序列的各种统计指标和均匀分布 `$Uniform(0,1)$`的理论计算结果非常接近。这样的伪随机序列就有比较好的统计性质，可以被当成真实的随机数使用。
 
-![sampling](https://cos.name/wp-content/uploads/2013/01/sampling.png)
+![sampling](https://uploads.cosx.org/2013/01/sampling.png)
 
 **生成一个概率分布的样本**
 
@@ -62,9 +62,9 @@ Z_1 & = \sqrt{-2\ln U_1} sin(2\pi U_2)
 
 我们先来看马氏链的一个具体的例子。社会学家经常把人按其经济状况分成3类：下层(lower-class)、中层(middle-class)、上层(upper-class)，我们用1、2、3分别代表这三个阶层。社会学家们发现决定一个人的收入阶层的最重要的因素就是其父母的收入阶层。如果一个人的收入属于下层类别，那么他的孩子属于下层收入的概率是0.65，属于中层收入的概率是0.28，属于上层收入的概率是0.07。事实上，从父代到子代，收入阶层的变化的转移概率如下
 
-![table-1](https://cos.name/wp-content/uploads/2013/01/table-1.jpg)
+![table-1](https://uploads.cosx.org/2013/01/table-1.jpg)
 
-![markov-transition](https://cos.name/wp-content/uploads/2013/01/markov-transition.png)
+![markov-transition](https://uploads.cosx.org/2013/01/markov-transition.png)
 
 使用矩阵的表示方式，转移概率矩阵记为
   
@@ -80,11 +80,11 @@ $$`
 
 假设初始概率分布为`$\pi_0 = [0.21,0.68,0.11] $`，则我们可以计算前`$n$`代人的分布状况如下
 
-![table-2](https://cos.name/wp-content/uploads/2013/01/table-2.jpg)
+![table-2](https://uploads.cosx.org/2013/01/table-2.jpg)
 
 我们发现从第7代人开始，这个分布就稳定不变了，这个是偶然的吗？我们换一个初始概率分布`$\pi_0 = [0.75,0.15,0.1]$` 试试看，继续计算前`$n$`代人的分布状况如下
 
-![table-3](https://cos.name/wp-content/uploads/2013/01/table-3.jpg)
+![table-3](https://uploads.cosx.org/2013/01/table-3.jpg)
 
 我们发现，到第9代人的时候, 分布又收敛了。最为奇特的是，两次给定不同的初始概率分布，最终都收敛到概率分布 `$\pi=[0.286, 0.489, 0.225]$`，也就是说收敛的行为和初始概率分布 `$\pi_0$` 无关。这说明这个收敛行为主要是由概率转移矩阵$P$决定的。我们计算一下 `$P^n$`
 
@@ -201,12 +201,12 @@ p(i) \underbrace{q(i,j)\alpha(i,j)}_{Q'(i,j)}
 
 在改造 `$Q$` 的过程中引入的`$\alpha(i,j)$`称为接受率，物理意义可以理解为在原来的马氏链上，从状态 `$i$` 以`$q(i,j)$` 的概率转跳转到状态`$j$` 的时候，我们以`$\alpha(i,j)$`的概率接受这个转移，于是得到新的马氏链`$Q’$`的转移概率为`$q(i,j)\alpha(i,j)$`。
 
-![mcmc-transition](https://cos.name/wp-content/uploads/2013/01/mcmc-transition.jpg)
+![mcmc-transition](https://uploads.cosx.org/2013/01/mcmc-transition.jpg)
 **马氏链转移和接受概率**
 
 假设我们已经有一个转移矩阵Q(对应元素为`$q(i,j)$`), 把以上的过程整理一下，我们就得到了如下的用于采样概率分布`$p(x)$`的算法。
 
-![mcmc-algo-1](https://cos.name/wp-content/uploads/2013/01/mcmc-algo-1.jpg)
+![mcmc-algo-1](https://uploads.cosx.org/2013/01/mcmc-algo-1.jpg)
 
 上述过程中`$p(x),q(x|y)$`说的都是离散的情形，事实上即便这两个分布是连续的，以上算法仍然是有效，于是就得到更一般的连续概率分布`$p(x)$`的采样算法，而`$q(x|y)$`就是任意一个连续二元概率分布对应的条件分布。
 
@@ -226,7 +226,7 @@ p(i) \underbrace{q(i,j)\alpha(i,j)}_{Q'(i,j)}
   
 于是，经过对上述MCMC 采样算法中接受率的微小改造，我们就得到了如下教科书中最常见的 Metropolis-Hastings 算法。
 
-![mcmc-algo-2](https://cos.name/wp-content/uploads/2013/01/mcmc-algo-2.jpg)
+![mcmc-algo-2](https://uploads.cosx.org/2013/01/mcmc-algo-2.jpg)
 
 对于分布 `$p(x)$`,我们构造转移矩阵 `$Q’$` 使其满足细致平稳条件
   
@@ -262,7 +262,7 @@ p(x_1,y_1)p(y_2|x_1) = p(x_1,y_2)p(y_1|x_1)  \quad (***)
   
 `$$ p(A)p(x_2|y_1) = p(C)p(x_1|y_1). $$`
 
-![gibbs-transition](https://cos.name/wp-content/uploads/2013/01/gibbs-transition.png)
+![gibbs-transition](https://uploads.cosx.org/2013/01/gibbs-transition.png)
 
 **平面上马氏链转移矩阵的构造**
 
@@ -280,9 +280,9 @@ Q(A\rightarrow D) & = 0 & \text{其它} &
   
 于是这个二维空间上的马氏链将收敛到平稳分布 `$p(x,y)$`。而这个算法就称为 Gibbs Sampling 算法，是 Stuart Geman 和Donald Geman 这两兄弟于1984年提出来的，之所以叫做Gibbs Sampling 是因为他们研究了Gibbs random field，这个算法在现代贝叶斯分析中占据重要位置。
 
-![gibbs-algo-1](https://cos.name/wp-content/uploads/2013/01/gibbs-algo-1.jpg)
+![gibbs-algo-1](https://uploads.cosx.org/2013/01/gibbs-algo-1.jpg)
 
-![two-stage-gibbs](https://cos.name/wp-content/uploads/2013/01/two-stage-gibbs.png)
+![two-stage-gibbs](https://uploads.cosx.org/2013/01/two-stage-gibbs.png)
 
 **Gibbs Sampling 算法中的马氏链转移**
 
@@ -302,6 +302,6 @@ p(\mathbf{x_1},y_1)p(y_2|\mathbf{x_1}) = p(\mathbf{x_1},y_2)p(y_1|\mathbf{x_1})
 
 于是我们可以把Gibbs Smapling算法从采样二维的`$p(x,y)$`推广到采样`$n$`维的`$p(x_1,x_2,\cdots, x_n)$`
 
-![gibbs-algo-2](https://cos.name/wp-content/uploads/2013/01/gibbs-algo-2.jpg)
+![gibbs-algo-2](https://uploads.cosx.org/2013/01/gibbs-algo-2.jpg)
 
 以上算法收敛后，得到的就是概率分布`$p(x_1,x_2,\cdots,x_n)$`的样本，当然这些样本并不独立，但是我们此处要求的是采样得到的样本符合给定的概率分布，并不要求独立。同样的，在以上算法中，坐标轴轮换采样不是必须的，可以在坐标轴轮换中引入随机性，这时候转移矩阵`$Q$`中任何两个点的转移概率中就会包含坐标轴选择的概率，而在通常的Gibbs Sampling算法中，坐标轴轮换是一个确定性的过程，也就是在给定时刻`$t$`，在一根固定的坐标轴上转移的概率是1。

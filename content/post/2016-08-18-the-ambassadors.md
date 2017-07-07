@@ -24,7 +24,7 @@ slug: the-ambassadors
 
 1533年一个叫（小）霍尔拜因的德国画家画了一幅油画，名为《大使们》（The Ambassadors）。这幅画的主角是二脸懵圈的大使，长这样：
 
-![大使们（小霍尔拜因）](https://cos.name/wp-content/uploads/2016/08/825197412.jpg)
+![大使们（小霍尔拜因）](https://uploads.cosx.org/2016/08/825197412.jpg)
 <p style="text-align: center;">图1：大使们（小汉斯·霍尔拜因）</p>
 
 这位画家的一个显著特点就是画工极其精良，上面这幅画中的细节之清晰简直让人惊愕，感兴趣的可以去搜了[原图](https://www.nationalgallery.org.uk/paintings/hans-holbein-the-younger-the-ambassadors)来放大了仔细看：大使衣服上的一根根毛发、地球仪上的国界线、展开的乐谱、那个不知道是什么葫芦瓢乐器上断了的一根弦，等等。这特么是人画出来的么。
@@ -48,12 +48,12 @@ Cook 大人接下了 Tukey 大人传下来的接力棒，捣鼓了二十来年�
 
 说来惭愧，我博士期间开发的工具基本上成了一个烂尾工程，那个包安装起来太麻烦，我就不用它来演示了，而是派现在的新秀 Shiny 上场。整个[应用](https://yihui.shinyapps.io/ambassadors)的源代码在我的 Github 库里可以找到：<https://github.com/yihui/shiny-apps/> 首先我们把这幅油画加载进来：
 
-![图2：初始应用](https://cos.name/wp-content/uploads/2016/08/1400655015.jpg)
+![图2：初始应用](https://uploads.cosx.org/2016/08/1400655015.jpg)
 <p style="text-align: center;">图2：初始应用</p>
 
 我们内心大概又一次开始抗拒了。这，这又是什么？莫方，这纯属为了讲故事而强行加入的插曲。故事就是应该在反复的悬念和啊哈中前进。这不，我把样本量加大一些，你就知道它是什么了：
 
-![加大样本量，显示油画轮廓](https://cos.name/wp-content/uploads/2016/08/888776897.jpg)
+![加大样本量，显示油画轮廓](https://uploads.cosx.org/2016/08/888776897.jpg)
 <p style="text-align: center;">图3：加大样本量，显示油画轮廓</p>
 
 当时论文答辩我最得意的大概是这幅萌得让人不忍戳的艺术再创作了。霍尔拜因大侠请饶命，小的只是随便一玩，想让答辩在一片欢乐祥和的气氛中进行下去而已。这个 Shiny 应用可以用来刷图、旋转、缩放，主要通过操作界面左边的滑动条完成，具体的实现参考源代码，基本都是高中数学知识。
@@ -62,21 +62,21 @@ Cook 大人接下了 Tukey 大人传下来的接力棒，捣鼓了二十来年�
 
 原图是否清晰已经无所谓了，我们现在需要原图的关键信息只是那个局部区域，所以我们在那萌萌圈圈的图上戳着鼠标抬手一刷，选取子区域，在下面放大重绘出原图即可：
 
-![放大重绘子区域](https://cos.name/wp-content/uploads/2016/08/1156769480.jpg)
+![放大重绘子区域](https://uploads.cosx.org/2016/08/1156769480.jpg)
 <p style="text-align: center;">图4：放大重绘子区域</p>
 
 # 转转转
 
 好嘛，现在成了个斜长条，如果你开始歪着脑袋看它就对了。何必歪脑袋呢？我们把它转一下不就好了。于是转转转，不转不是中国人。拖一下第二个滑动条旋转大概60度：
 
-![旋转后的子图](https://cos.name/wp-content/uploads/2016/08/99008968.jpg)
+![旋转后的子图](https://uploads.cosx.org/2016/08/99008968.jpg)
 <p style="text-align: center;">图5：旋转后的子图</p>
 
 # 压压压
 
 哎你说你咋儿就这么长条呢？让洒家来对你实施一下二向箔打击。统计图形中有一个重要概念是纵横比（aspect ratio），这个比率是一单位的纵轴物理长度与一单位的横轴物理长度的比率，比如0.5的意思就是纵轴上0到10的距离是横轴0到10的距离一半。我们把这个比率调低一点就可以实现图形在纵向上的压缩了，下面是纵横比约为0.15时的情形：
 
-![图6：纵向压缩后的子图](https://cos.name/wp-content/uploads/2016/08/999832794.jpg)
+![图6：纵向压缩后的子图](https://uploads.cosx.org/2016/08/999832794.jpg)
 <p style="text-align: center;">图6：纵向压缩后的子图</p>
 
 相信多数人已经看出来这是什么鬼了。这特么还真的是个鬼啊！如果你还没看清，我再拖一下最后那个滑动条，放大一下，死给你看。
@@ -86,14 +86,14 @@ Cook 大人接下了 Tukey 大人传下来的接力棒，捣鼓了二十来年�
 
 对吧？啊哈！用郭德纲的话来翻译，就是哟~~西。图穷骷髅见。
 
-![图7：放大后的子图](https://cos.name/wp-content/uploads/2016/08/262604117.jpg)
+![图7：放大后的子图](https://uploads.cosx.org/2016/08/262604117.jpg)
 <p style="text-align: center;">图7：放大后的子图</p>
 
 # 回放
 
 最后我们回放一下所有镜头：
 
-![镜头回放](https://cos.name/wp-content/uploads/2016/08/app.gif)
+![镜头回放](https://uploads.cosx.org/2016/08/app.gif)
 <p style="text-align: center;">图8：镜头回放</p>
 
 # 结语

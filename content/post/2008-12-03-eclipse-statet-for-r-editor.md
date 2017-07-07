@@ -47,7 +47,7 @@ step 4: 安装StatET。StatET可以通过Eclipse安装：
   * 依次选择“Help”－＞“Software Updates”，在弹出的对话框中选择“Available Software”标签。
   * 点击“Add Site”按扭，在弹出的对话框中将“`http://download.walware.de/eclipse-3.4`”加入到更新源中（如果是3.3版本的Eclipse则添加`http://download.walware.de/eclipse-3.3`），确定后，出现下图
 
-![安装](https://cos.name/wp-content/uploads/2010/03/install.png)
+![安装](https://uploads.cosx.org/2010/03/install.png)
 
 然后按提示安装StatET。
 
@@ -61,11 +61,11 @@ step 4: 安装StatET。StatET可以通过Eclipse安装：
 
 Eclipse启动后如下图。
 
-![开始界面](https://cos.name/wp-content/uploads/2010/03/startup.png)
+![开始界面](https://uploads.cosx.org/2010/03/startup.png)
 
 依次选择菜单栏中的“Wndows”，“Open perspective”，“Other”,在弹出的对话框中选中“StatET”并单击“确定”，我们就打开了StatET视界（perspective），如下图：
 
-![视界](https://cos.name/wp-content/uploads/2010/03/perspective.png)
+![视界](https://uploads.cosx.org/2010/03/perspective.png)
 
 这儿的概念视界（perspective）就是指的Eclipse提供的一个桌面开发环境，它包含不同的窗口，编辑器和视图，它们分别被归类到不同的标签（tab）中。这些组件可以随意拖动，放到不同的位置。
 
@@ -78,11 +78,11 @@ Eclipse启动后如下图。
 依次选择菜单栏中的“File”, “New”,“R-Project”，打开新建R的工程的对话框。如下图所示
 
 
-![建立工程](https://cos.name/wp-content/uploads/2010/03/project.jpg)
+![建立工程](https://uploads.cosx.org/2010/03/project.jpg)
 
 在上图所示的对话框填好工程名和工作路径后，单击”Finish”按钮。我们的工程就建好了。新建好的工程我们可以在“Project Explorer”视图中看到。在下图中，我建立了一个名为myProject的工程。
 
-![myproject](https://cos.name/wp-content/uploads/2010/03/myproject.jpg)
+![myproject](https://uploads.cosx.org/2010/03/myproject.jpg)
 
 一个工程就相当于一个容器，你可以在其中添加或新建各种各样的文件。建好一个工程后，在该工程的工作目录下就会多出一个“.project”文件，该文件用来保存整个工程的各种信息。
 
@@ -90,7 +90,7 @@ Eclipse启动后如下图。
 
 右键单击“Project Explorer”中的工程名，依次选择“New”,“R-Script file”，打开新建R的脚本文件对话框。如下图
 
-![添加R脚本](https://cos.name/wp-content/uploads/2010/03/script.jpg)
+![添加R脚本](https://uploads.cosx.org/2010/03/script.jpg)
 
 在选择好文件夹，指定了文件名后，单击“Finish”，我们的R脚本文件就建好了。本例中，我建立了一个名为“prime.R”的文件，用来查找质数。
 
@@ -137,45 +137,45 @@ prime(1000)
 
 我们在前面编辑的R程序现在还不能运行。还要对StatET作一番配置才行。选择菜单栏中的“windows”，“Preferences”，打开配置窗口，展开StatET，如下图
 
-![配置交互环境](https://cos.name/wp-content/uploads/2008/12/image12.png)
+![配置交互环境](https://uploads.cosx.org/2008/12/image12.png)
 
 定位到“R Environments”,点右侧的按钮“Add”,将你计算机上安装的R的添加进去，如下图。
 
-![设置路径](https://cos.name/wp-content/uploads/2008/12/image13.png)
+![设置路径](https://uploads.cosx.org/2008/12/image13.png)
 
 关闭该对话框.
 
 在Eclipse菜单栏中选择“Run”->“Run Configurations”, 在Main标签中按下图作出配置。
 
-![运行配置](https://cos.name/wp-content/uploads/2010/03/runconf.png)
+![运行配置](https://uploads.cosx.org/2010/03/runconf.png)
 
 在工具栏中打开刚配置好的R控制台，如下图。
 
-![运行](https://cos.name/wp-content/uploads/2010/03/run.jpg)
+![运行](https://uploads.cosx.org/2010/03/run.jpg)
 
 R控制台被打开。点红色按钮就可以关闭R控制台。
 
-![控制台](https://cos.name/wp-content/uploads/2010/03/console.png)
+![控制台](https://uploads.cosx.org/2010/03/console.png)
 
 在控制台的底部，你可以手动输入R的代码，提交给R执行。如下图。
 
-![命令行](https://cos.name/wp-content/uploads/2010/03/commandline.png)
+![命令行](https://uploads.cosx.org/2010/03/commandline.png)
 
 现在，我们就可以将前面在Eclipse中建立的文件prime.R提交给R运行。
 
 将焦点设置到“prime.R”文件上，这时工具栏上就会出现R的运行命令，
 
-![image](https://cos.name/wp-content/uploads/2008/12/image-thumb27.png)
+![image](https://uploads.cosx.org/2008/12/image-thumb27.png)
 
 ，我们可以选择我们想要的方式运行文件prime.R中的代码。
 
 也可以在文件中单击右键，在上下文菜单中选择所要的运行方式。这里，我们通过快捷键先按Ctrl+R,再按Ctrl+D,将整个文件直接提交给R执行。在R控制台中就出输出执行结果。如下图。
 
-![运行代码](https://cos.name/wp-content/uploads/2010/03/runcode.png)
+![运行代码](https://uploads.cosx.org/2010/03/runcode.png)
 
 这样我们就成功地在Eclipse中编辑并运行R代码了。
 
-在退出Eclipse时，应先关闭R控制台（按钮 ![image](https://cos.name/wp-content/uploads/2008/12/image-thumb29.png) ），再退出Eclipse.
+在退出Eclipse时，应先关闭R控制台（按钮 ![image](https://uploads.cosx.org/2008/12/image-thumb29.png) ），再退出Eclipse.
 
 注：下面的内容来自COS论坛（[https://cos.name/cn](https://cos.name/cn "https://cos.name/cn")）：
 

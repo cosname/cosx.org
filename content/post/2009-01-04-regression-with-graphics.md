@@ -63,7 +63,7 @@ x4          0.4999091  0.1178189 4.243028 0.002164602
 
 紧接着我就给他们做出一幅图：
 
-![anscombe](https://cos.name/wp-content/uploads/2009/01/anscombe.png)
+![anscombe](https://uploads.cosx.org/2009/01/anscombe.png)
 
 这时候他们有点明白，能回答说左上是我们“常见”的回归；右上完全就是二次曲线嘛；左下存在一个“异常点”；而右下，完全就属于“诡异”情形。
 

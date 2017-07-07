@@ -113,7 +113,7 @@ proc gplot data=valid_lift;
 run; quit;
 ```
 
-![lift](https://cos.name/wp-content/uploads/2009/02/lift.png)
+![lift](https://uploads.cosx.org/2009/02/lift.png)
 
 上图的纵坐标是lift，意义已经很清楚。横坐标depth需要多提一句。以前说过，随着阈值的减小，更多的客户就会被归为正例，也就是depth（预测成正例的比例）变大。当阈值设得够大，只有一小部分观测值会归为正例，但这一小部分（一小撮）一定是最具有正例特征的观测值集合（用上面数据库营销的例子来说，这一部分人群对邮寄问卷反应最为活跃），所以在这个depth下，对应的lift值最大。
 
@@ -137,7 +137,7 @@ proc gplot data=valid_lift;
 run; quit;
 ```
 
-![gains](https://cos.name/wp-content/uploads/2009/02/gains.png)
+![gains](https://uploads.cosx.org/2009/02/gains.png)
 
 上图阈值的变化，含义与lift图一样。随着阈值的减小，更多的客户就会被归为正例，也就是depth（预测成正例的比例，b+d/a+b+c+d）变大（b+d变大），这样PV+（d/b+d，正确预测到的正例数占预测正例总数的比例）就相应减小。当阈值设定得足够的小，那么几乎所有的观测值都会被归为正例（depth几乎为1），那么PV+就等于数据中正例的比例pi1了（这里是0.365。在Lift那一节里，我们说此时分类的效果就跟baseline model差不多，相对应的lift值就接近于1，而PV+=lift*pi1。Lift的baseline model是纵轴上恒等于1的水平线，而Gains的baseline model是纵轴上恒等于pi1的水平线）。显然，跟lift 图类似，一个好的分类模型，在阈值变大时，相应的PV+就要变大，曲线足够陡峭。
 

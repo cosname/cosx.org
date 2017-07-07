@@ -1,0 +1,20 @@
+<article class="preview">
+    <header>
+        <h1 class="post-title"><a href="{{ .URL }}">{{ .Title }}</a></h1>
+        <div class="post-meta">
+          {{ with .Params.author }}<span class="post-author"><i class="fa fa-user fa-fw"></i><span>{{ . }} </span></span>{{ end }}
+          <i class="fa fa-calendar fa-fw"></i>
+          <time datetime="{{ .Date.Format "2006/01/02" }}">
+            {{ .Date.Format "2006/01/02" }}
+          </time>
+        </div>
+    </header>
+    <section class="post-excerpt">
+        {{ if and (not .Description) (.Site.Params.useSummaryIfNoDescription)}}
+        {{ .Summary }}
+        {{ else }}
+        <p>{{ .Description | markdownify }}</p>
+        {{ end }}
+        <p class="readmore"><a href="{{ .URL }}">{{ .Site.Params.keepReadingStr }} <i class="fa fa-arrow-right" style="padding-left: 5px;"></i></a></p>
+    </section>
+</article>

@@ -37,7 +37,7 @@ slug: some-basic-ideas-and-methods-of-model-selection
 
 模型的预测能力通常也被称作模型的泛化能力，表示模型在新的、独立的测试数据上的预测能力。在很多关于模型泛化能力的介绍中，我们总会看到这样一幅图：模型在训练集上的训练误差与在测试集上的测试误差的变化趋势对比。
 
-![var_bias_small](https://cos.name/wp-content/uploads/2015/08/var_bias_small.png)
+![var_bias_small](https://uploads.cosx.org/2015/08/var_bias_small.png)
 
 
 图上横轴表示模型的复杂度大小（比如线性模型中特征维度大小），纵轴表示预测误差，衡量预测值与真实值间的平均损失大小`\(E(L(Y,\hat{f}(X)))\)`，损失函数根据分类、回归问题做合适的选择，比如0-1损失、负似然函数、平方损失、对数损失、指数损失、交叉熵损失、Hinge损失等。平均损失大小在训练集上预测误差称作训练误差，在测试集上称作测试误差。图中每一条线都表示同一个训练集（浅蓝色）和测试集（浅红色）上的预测误差表现，从图上可以看到两个现象
@@ -70,7 +70,7 @@ slug: some-basic-ideas-and-methods-of-model-selection
 
 这个目标即上图预测误差波动想要表达的含义，想要通过多个训练集训练来获取平均的预测误差，抹平训练集变动带来的影响，这是评价模型预测能力最理想方法，可以防止某个训练集上训练所得模型表现过好而夸大模型的预测能力。但是实际情况中，我们手边通常可能只有一个训练集，实际的需求是在此训练集上模型做到最好，所以`\(\text{Err}_{\mathcal{T}}\)`又是我们最关心的目标，即希望在当前训练集下获取最佳的预测能力，也就是说我们想获取上图的一条线的趋势中最小的测试误差的点，如下
 
-![var_bias_sample](https://cos.name/wp-content/uploads/2015/08/var_bias_sample.png)
+![var_bias_sample](https://uploads.cosx.org/2015/08/var_bias_sample.png)
 
 换句话说，很多时候人们给你一个训练集就希望你能够给他一个相对最稳定的预测模型，这个目标相对获取平均预测误差来说更难，后续模型选择方法比如CV法、bootstrap法、Cp法等其实都是估计测试误差的期望，即第一幅图中的红色均线。
 
@@ -113,11 +113,11 @@ slug: some-basic-ideas-and-methods-of-model-selection
 
 对于普通线性模型易知其“估计偏移（Estimation Bias）”为0（最小二乘估计也是线性估计类中的最佳估计），易知随着特征个数`\(p\)`增加，方差（注：第一个等式根据线性回归很容易推导方差（Variance）为`\(\frac{p}{N}\sigma^2_{\epsilon}\)`）逐步增大，而对于真实`\(f(X)\)`却近似越好，模型偏误（Model Bias）越小，但预测误差是这两者的综合，则整体变化趋势如下图
 
-![bias_var](https://cos.name/wp-content/uploads/2015/08/bias_var.png)
+![bias_var](https://uploads.cosx.org/2015/08/bias_var.png)
 
 这与上图测试集误差变化一致。另外，之所以特地提到还有“估计偏移”，因为对于线性模型类，还有其他诸如岭回归、Lasso等受限的回归类别，他们都属于线性模型类，相比纯线性模型，他们由于对回归系数做了不同程度的压缩，因此相比于最佳线性估计`\(\beta_{*}\)`会有些差距，产生“估计偏移”，进而整体上导致“模型偏移”增加，但是他们限制了参数个数和压缩了回归系数，模型可能更加简单，因此直观上这类模型估计平均而言会稳定些（模型方差小），用图形来表示他们的关系即如下图
 
-![scheme_bias_var](https://cos.name/wp-content/uploads/2015/08/scheme_bias_var.png)
+![scheme_bias_var](https://uploads.cosx.org/2015/08/scheme_bias_var.png)
 
 箭头组合长短即表示了平均预测误差，可以看到在受限模型空间中由于较小的模型估计方差，可能使得整体的平均预测误差更小。
 
@@ -132,7 +132,7 @@ slug: some-basic-ideas-and-methods-of-model-selection
 
 随着机器学习普及，大家都有了“训练-验证-评价”的思维，这其实就是完整重现模型选择、模型评价的过程。如下图我们将数据集分成三个不相交的集合来做模型选择和模型评价：
 
-![model_proc](https://cos.name/wp-content/uploads/2015/08/model_proc.png)
+![model_proc](https://uploads.cosx.org/2015/08/model_proc.png)
 
   * 训练集：获得模型及其训练误差，用来训练不同模型；
   * 验证集：与训练集相对独立，获取训练模型在该集上的预测误差，用来做模型选择；
@@ -171,7 +171,7 @@ slug: some-basic-ideas-and-methods-of-model-selection
 
 交叉验证法（CV法）是最自然的重复抽样法，过程如下图所示
 
-![cv](https://cos.name/wp-content/uploads/2015/08/cv.png)
+![cv](https://uploads.cosx.org/2015/08/cv.png)
 
 将一个训练集随机分成K份（图中所示为5份），然后选择第K份作为验证集（图中为第3份），然后剩余的K-1份作为训练集训练模型，这样便可以得到K个“预测误差”，求其平均值即为所谓的“CV值”，所以常说的CV值实际上是预测误差期望`\(\text{Err}\)`的一个估计值。数学语言叙述如下：记`\(\tau:\{1, \ldots, N\} \rightarrow \{1, \ldots, K\}\)`是一个划分函数，表示随机地将第`\(i\)`个观测分配`\(\{1, \ldots, K\}\)`中某个指标；记`\(\hat{f}^{-k}(x)\)`表示去除第`\(k\)`部分数据训练所得的模型，则预测误差的交叉验证估计（CV值）为
 
@@ -226,7 +226,7 @@ slug: some-basic-ideas-and-methods-of-model-selection
 
 对于bootstrap，不管是统计还是机器学习的同学，可能对这个名词以及实施方式都比较熟悉。bootstrap法由Efron于1979年提出，随后在统计中得到了大量的应用，主要用于解决复杂统计量的置信区间等估计问题；而在机器学习中，由Breiman在94年提出bagging方法（全称为bootstrap aggregating）实际上就是bootstrap的直接应用，它是一种模型组合方法，主要用于分类问题中以获取比较稳定的结果。bootstrap的思路和操作都非常简单，如下图
 
-![bootstrap](https://cos.name/wp-content/uploads/2015/08/bootstrap.png)
+![bootstrap](https://uploads.cosx.org/2015/08/bootstrap.png)
 
 假设有样本`\(\mathbf{Z}\)`，则不断重复随机抽同样大小的B个样本集`\(\mathbf{Z}^{*b}\)`，这些样本被称作bootstrap样本，随后用着B个样本分别训练模型，得到B个目标估计量`\(S(\mathbf{Z}^{*b})\)`。然后可以用这些统计量求某些指标，比如统计量的均值、方差、偏移等。对于分类问题，用这些bootstrap样本训练多个分类器，比如决策树或神经网络，然后将这B个分类模型对新的样本做预测，把B个分类结果做一个投票获取最终的结果即可，这边是所谓的bagging。
 

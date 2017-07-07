@@ -36,11 +36,11 @@ devtools::install_github("yihui/xaringan")
 
 * 点击菜单 `File -> New File -> R Markdown -> From Template -> Ninja Presentation (Simplified Chinese)`创建一个新文档。
 
-    ![](https://cos.name/wp-content/uploads/2017/02/fig1.png)
+    ![](https://uploads.cosx.org/2017/02/fig1.png)
 
 * 点击 Knit 进行编译
 
-    ![](https://cos.name/wp-content/uploads/2017/02/fig2.png)
+    ![](https://uploads.cosx.org/2017/02/fig2.png)
 
 此时你会看见一个默认模版，改改就可以开张了！在此之前，你需要了解一些基本魔法：
 
@@ -220,7 +220,7 @@ class: center, middle
 
 好，就把这些复制上吧，在浏览器里打开该文件，你就看到了3张片子。
 
-![](https://cos.name/wp-content/uploads/2017/02/fig3.png)
+![](https://uploads.cosx.org/2017/02/fig3.png)
 
 不熟悉 HTML 和 CSS 基本语法的可能需要补补（这里用到的不难～）你会看到`<head>`标签里裹了个`<style>`标签，它规定了你的 HTML 元素在浏览器里呈现的样式（比如字体，边距，颜色…），其实也就是 CSS 样式表，这里还是帮大家写了几个例子，比如用类的方式定义颜色，字体粗细等等。在片子里使用的时候，直接用`.red[我红得像龙虾]`。当然 CSS 可以以外部文件的形式引入。 好，下面来到关键的主体部分了。在这里，你需要用 Markdown 语法开始写你的片子，你的片子需要裹到一个文本区域里面：
 
