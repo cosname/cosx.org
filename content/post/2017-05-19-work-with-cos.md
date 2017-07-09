@@ -59,9 +59,9 @@ description: "COS主站的文章已经全部迁移至github.com，从今以后�
 - 文件名和路径
 - 文件头的信息
 
-## Rstudio 深度用户
+## RStudio 深度用户
 
-如果你是一个Rstudio深度用户，可以使用`blogdown::new_post()`[函数来生成文件](https://bookdown.org/yihui/blogdown/rstudio-ide.html)，Rstudio会自动弹出一个窗口，在窗口中填入所需要的信息就可以完成完成新文章的生成。上述的路径和文件头信息都会被配置好。
+如果你是一个RStudio深度用户，可以使用`blogdown::new_post()`[函数来生成文件](https://bookdown.org/yihui/blogdown/rstudio-ide.html)，RStudio会自动弹出一个窗口，在窗口中填入所需要的信息就可以完成完成新文章的生成。上述的路径和文件头信息都会被配置好。
 
 ![image](https://cloud.githubusercontent.com/assets/7221728/26714960/626cc9a4-47a6-11e7-8cd0-d310693886ca.png)
 
