@@ -8,6 +8,7 @@ categories:
   - 职业事业
   - 高校课堂
 slug: interview-of-chutingjin
+forum_id: 419074
 ---
 
 [![SAMSUNG CAMERA PICTURES](https://uploads.cosx.org/2015/04/褚老师-300x225.jpg)](https://uploads.cosx.org/2015/04/-e1429669031759.jpg)

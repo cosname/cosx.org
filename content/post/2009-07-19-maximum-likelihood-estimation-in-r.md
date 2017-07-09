@@ -12,6 +12,7 @@ tags:
   - 数值优化
   - 极大似然估计
 slug: maximum-likelihood-estimation-in-r
+forum_id: 418800
 ---
 
 【注：本文的PDF格式版本可以从[这里](https://uploads.cosx.org/2009/07/ML.pdf "https://cos.name/wp-content/uploads/2009/07/ML.pdf")下载。】

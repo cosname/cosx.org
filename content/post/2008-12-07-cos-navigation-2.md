@@ -12,6 +12,7 @@ tags:
   - 维基
   - 论坛
 slug: cos-navigation-2
+forum_id: 418753
 ---
 
 # 前言

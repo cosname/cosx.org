@@ -15,6 +15,7 @@ tags:
   - 论文
   - 词频
 slug: statistics-on-article-titles
+forum_id: 419150
 ---
 
 如果你是被这个标题骗进来的，那么说明标题党的存在的确是有原因的。

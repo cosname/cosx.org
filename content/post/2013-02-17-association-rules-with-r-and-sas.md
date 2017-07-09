@@ -10,6 +10,7 @@ tags:
   - SAS
   - 关联分析
 slug: association-rules-with-r-and-sas
+forum_id: 418909
 ---
 
 啤酒和尿布的故事是关联分析方法最经典的案例，而用于关联分析的Apriori算法更是十大数据挖掘算法之一（<http://www.cs.uvm.edu/~icdm/algorithms/index.shtml>，这个排名虽然是几年前的调查结果，但是其重要性仍可见一斑）。本文以《[R and Data Mining](http://www.rdatamining.com/docs)》书中使用的泰坦尼克号人员的生存数据为例，介绍如何使用R和SAS的Apriori算法进行关联分析，比较两者的建模结果并对结果中存在的差异进行解释分析。

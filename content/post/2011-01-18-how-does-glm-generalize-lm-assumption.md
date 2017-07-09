@@ -12,6 +12,7 @@ tags:
   - 线性模型
   - 统计之都
 slug: how-does-glm-generalize-lm-assumption
+forum_id: 418829
 ---
 
 在统计学里，对特定变量之间的关系进行建模、分析最常用的手段之一就是回归分析。回归分析的输出变量通常记做`\( Y\)`，也称为因变量(dependent)、响应变量(response)、被解释变量(explained)、被预测变量(predicted)、从属变量(regressand)；输入变量通常记做`\( x_1\)`,…,`\(x_p\)`，也称为自变量(independent)、控制变量(control&controlled)、解释变量(explanatory)、预测变量(predictor)、回归量(regressor)。本文根据作者自己的一些学习心得和理解，简单且不严格地介绍在模型假设方面普通线性模型和广义线性模型的区别和联系/推广(generalization)。广义线性模型的拟合检验、推断、诊断等方面的方法和手段依赖于模型所采用的分布类型，难以一概而论，将在作者后续的学习心得文章里具体介绍。

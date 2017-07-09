@@ -8,6 +8,7 @@ tags:
   - 每周精选
 slug: 21-century-bayesian-thm
 description: "本期投稿：谢益辉 魏太云。"
+forum_id: 418975
 ---
 
 _每周精选回归啦，欢迎大家继续支持！_

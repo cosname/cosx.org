@@ -11,6 +11,7 @@ tags:
   - 金融
   - 黄金期货
 slug: var-risk-measure-in-gold-futures-market-based-on-historical-simulation-method
+forum_id: 418813
 ---
 
 # 0.引言

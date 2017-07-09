@@ -10,6 +10,7 @@ tags:
   - StatET
   - 编辑器
 slug: eclipse-statet-for-r-editor
+forum_id: 418747
 ---
 
 本文的目的是告诉你如何打造一个好的R的编程界面和环境，让你充分享受用R编程的乐趣。这不是一个关于R的教程，可以访问[这里](http://a-lucky-bird.spaces.live.com/blog/cns!9FE71C3A1FA0267F!662.entry)以获得更多关于R的资源。大家也可以加入QQ群42131822和[R的邮件列表](http://groups.google.com/group/R-Forum?hl=zh-CN)(需要google账号)可以认识正在使用R的更多的朋友，也可以通过`hurongxing[at]126.com`和我联系。本文论坛讨论帖参见[这里](https://cos.name/cn/topic/12136 "Eclipse + StatET真的不错")。

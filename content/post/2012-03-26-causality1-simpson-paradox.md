@@ -15,6 +15,7 @@ tags:
   - 辛普森悖论
   - 随机化试验
 slug: causality1-simpson-paradox
+forum_id: 418864
 ---
 
 ![](https://uploads.cosx.org/2012/03/causality2-cover.jpg)

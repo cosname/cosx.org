@@ -10,6 +10,7 @@ tags:
   - 强大数定律
   - 正轨数
 slug: cantor-set-and-slln
+forum_id: 418821
 ---
 
 首先从博雷尔正轨数定律(Borel’s Normal Number Theorem)说起。众所周知，(0,1]区间上的每一个实数`\(\omega\)`都与一列唯一的无穷的二进制展开序列`\(\{X_k(\omega)\}\)`一一对应，其中`\(X_k (\omega)\)`表示二进制展开的第k位，对应关系为：

@@ -27,6 +27,7 @@ tags:
   - 缓存
   - 随机模拟
 slug: cache-objects-in-sweave-stat-computation-and-graphics
+forum_id: 418826
 ---
 
 学无止境。我曾以为我明白了如何在Sweave中使用缓存加快计算和图形，但后来发现我并没有真的理解，直到读了另外一些手册才明白，因此本文作为前文“[Sweave：打造一个可重复的统计研究流程](/2010/11/reproducible-research-in-statistics/)”之续集，向大家介绍一下如何在Sweave的计算和图形中使用缓存，以节省不必要的重复计算和作图，让那些涉及到密集型计算的用户不再对Sweave感到难堪。

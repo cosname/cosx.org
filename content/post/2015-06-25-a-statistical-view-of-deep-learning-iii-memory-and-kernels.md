@@ -10,6 +10,7 @@ tags:
   - 机器学习
   - 神经网络
 slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
+forum_id: 419087
 ---
 
 原文链接：<http://blog.shakirm.com/2015/04/a-statistical-view-of-deep-learning-iii-memory-and-kernels/>

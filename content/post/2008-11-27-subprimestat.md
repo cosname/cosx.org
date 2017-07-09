@@ -17,6 +17,7 @@ tags:
   - 黑天鹅理论
 slug: subprimestat
 description: "统计分析只能从数据中**提取**信息，而不能**创造**数据本身。正如联通器中的水，不能超越水源的高度。"
+forum_id: 418740
 ---
 
 有点标题党的意思了，确切地说，本文只是一个小小的通讯稿。前两天（11月25-26）我参加一个“[中国银行风险管理国际峰会2008](http://www.bankingrisksummit.com/indexcn.html)”，其中SunGard公司的David M.Rowe博士的主题演讲Lessons from the Subprime Mortgage Crisis（次级按揭危机经验教训），第一条就是Limits of Statistical Analysis(统计分析的局限性)。Rowe先生是SunGard公司风险管理部门的高级副总裁，宾大计量经济学与金融学博士，沃顿商学院MBA，以及卡内基梅隆大学的经济学学士。

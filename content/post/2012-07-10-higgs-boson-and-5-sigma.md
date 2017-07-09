@@ -16,6 +16,7 @@ tags:
   - 物理
   - 置信区间
 slug: higgs-boson-and-5-sigma
+forum_id: 418876
 ---
 
 > 本文转自施涛博客，原文链接请[点击此处](http://blog.cos.name/taoshi/2012/07/06/%E5%B8%8C%E6%A0%BC%E6%96%AF%E6%B3%A2%E8%89%B2%E5%AD%90/)。 

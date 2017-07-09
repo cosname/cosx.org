@@ -12,6 +12,7 @@ tags:
   - 文本建模
   - 贝叶斯
 slug: lda-math-text-modeling
+forum_id: 418916
 ---
 
 # 4. 文本建模

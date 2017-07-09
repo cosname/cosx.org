@@ -7,6 +7,7 @@ categories:
   - 推荐文章
   - 统计之都
 slug: interview-jianxin-yin
+forum_id: 419173
 ---
 
 >【COS编辑者按】受访者：尹建鑫      采访者：王小宁     校对：王佳

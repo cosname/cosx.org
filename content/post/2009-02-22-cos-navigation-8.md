@@ -12,6 +12,7 @@ tags:
   - 维基
   - 论坛
 slug: cos-navigation-8
+forum_id: 418772
 ---
 
 # 一、主站

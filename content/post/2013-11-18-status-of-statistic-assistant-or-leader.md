@@ -10,6 +10,7 @@ tags:
   - 每周精选
 slug: status-of-statistic-assistant-or-leader
 description: "统计往往应用于其他领域，帮助人做出决断，但是这个决断到底该由统计学家做出，还是由领域内的专家做出，却成了一个问题。早些时候COS放出的Terry Speed教授的访谈中也谈“统计学本来就应该成就其他学科，我太爱统计了，它像把钥匙一样让我们能溜进任何学科的后院里随便玩耍”相信对于每一个深爱统计专业的同学对此问题都一定有过自己的想法—-我们应该如何为自己定位？"
+forum_id: 418986
 ---
 
 本期投稿： [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB#place) [谢益辉](http://yihui.name) [何通](http://weibo.com/p/1005051635976784/home?from=page_100505&mod=TAB#place)

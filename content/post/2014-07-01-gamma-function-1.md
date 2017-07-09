@@ -8,6 +8,7 @@ tags:
   - gamma
   - 伽玛函数
 slug: gamma-function-1
+forum_id: 419023
 ---
 
 原文链接： <http://www.flickering.cn/?p=163>

@@ -10,6 +10,7 @@ tags:
   - 伽玛函数
 slug: gamma-function-2
 description: “本文主要讲述伽玛函数的定义、性质以及随机数学中的伽玛函数，来看这棵大树如何在各代数学家的灌溉下生根发芽，继续领略伽玛函数的神秘之美。”
+forum_id: 419024
 ---
 
 原文链接： <http://www.flickering.cn/?p=203>

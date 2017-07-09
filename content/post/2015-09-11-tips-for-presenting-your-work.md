@@ -17,6 +17,7 @@ tags:
   - 海报
   - 研究成果
 slug: tips-for-presenting-your-work
+forum_id: 419095
 ---
 
 >【COS编辑部按】本文作者是美国统计协会（ASA）的会员、莫纳什大学教授

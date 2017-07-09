@@ -9,6 +9,7 @@ categories:
 tags:
   - COS沙龙
 slug: cos-salon-review-1
+forum_id: 418875
 ---
 
 2012年6月16日，第一期COS沙龙以“**数据挖掘，商业软件还是开源软件**”为话题，在人民大学泊星地咖啡厅举行。

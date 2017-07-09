@@ -11,6 +11,7 @@ tags:
   - Monte-Carlo
   - 统计模拟
 slug: lda-math-mcmc-and-gibbs-sampling
+forum_id: 418899
 ---
 
 ## 3.1 随机模拟

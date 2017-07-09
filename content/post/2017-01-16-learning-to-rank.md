@@ -5,6 +5,7 @@ author: COS编辑部
 categories:
   - 统计之都
 slug: learning-to-rank
+forum_id: 419183
 ---
 
 本文作者陈丽云，落园园主。

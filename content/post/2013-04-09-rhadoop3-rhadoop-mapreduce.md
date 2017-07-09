@@ -14,6 +14,7 @@ tags:
   - 协同过滤
   - 推荐系统
 slug: rhadoop3-rhadoop-mapreduce
+forum_id: 418929
 ---
 
 # 

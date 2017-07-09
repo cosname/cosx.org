@@ -6,6 +6,7 @@ categories:
   - 统计之都
   - 职业事业
 slug: thoughts-on-insurance
+forum_id: 419186
 ---
 
 

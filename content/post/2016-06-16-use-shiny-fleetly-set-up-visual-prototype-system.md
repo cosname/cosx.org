@@ -10,6 +10,7 @@ tags:
   - shiny包
   - 可视化原型系统
 slug: use-shiny-fleetly-set-up-visual-prototype-system
+forum_id: 419145
 ---
 
 前几周给大家分享了一篇[《利用R语言进行交互数据可视化》](/2016/06/using-r-for-interactive-data-visualization/)的文章。文章末尾提到的在R的环境中，动态交互图形的优势在于能和knitr、shiny等框架整合在一起，能迅速建立一套可视化原型系统。今天接着给大家分享如何将动态交互图形与shiny框架整合在一起，迅速建立一套可视化原型系统。

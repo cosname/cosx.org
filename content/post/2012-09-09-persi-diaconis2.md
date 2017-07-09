@@ -7,6 +7,7 @@ categories:
   - 统计计算
   - 贝叶斯方法
 slug: persi-diaconis2
+forum_id: 418883
 ---
 
 本篇将给出上次提出的解码问题的一个可能的解(建议大家阅读Persi Diaconis写的原文，可以很容易在谷歌中找到，文章名字见上一篇)。

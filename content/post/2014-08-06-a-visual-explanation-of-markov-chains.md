@@ -9,6 +9,7 @@ categories:
 tags:
   - 每周精选
 slug: a-visual-explanation-of-markov-chains
+forum_id: 419028
 ---
 
 本周投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB#place) [施涛](http://blog.cos.name/taoshi)

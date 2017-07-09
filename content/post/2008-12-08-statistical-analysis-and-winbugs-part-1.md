@@ -10,6 +10,7 @@ tags:
   - WinBUGS
   - 空间统计
 slug: statistical-analysis-and-winbugs-part-1
+forum_id: 418755
 ---
 
 # 开篇词

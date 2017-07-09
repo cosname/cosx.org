@@ -9,6 +9,7 @@ tags:
   - 正态分布
   - 经典理论
 slug: story-of-normal-distribution-2
+forum_id: 418902
 ---
 
 # 6. 开疆拓土，正态分布的进一步发展

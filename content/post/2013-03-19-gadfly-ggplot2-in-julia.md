@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: gadfly-ggplot2-in-julia
+forum_id: 418920
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [肖楠](http://www.road2stat.com/)

@@ -10,6 +10,7 @@ tags:
   - 学习经历
   - 精算
 slug: the-application-of-r-in-actual-science-with-case-study
+forum_id: 418827
 ---
 
 **本文作者为张缔香，文章由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://uploads.cosx.org/2011/01/R软件在精算教学中的应用案例.pdf)**

@@ -13,6 +13,7 @@ tags:
   - 数据科学
   - 数据科学家
 slug: data-sciencs-series-interview-of-zhangjian
+forum_id: 418966
 ---
 
 ![zhangjian_photo](https://uploads.cosx.org/2013/08/zhangjian_photo.jpg)

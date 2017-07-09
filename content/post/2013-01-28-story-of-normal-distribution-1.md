@@ -8,6 +8,7 @@ tags:
   - 历史
   - 正态分布
 slug: story-of-normal-distribution-1
+forum_id: 418901
 ---
 
 > 神说，要有正态分布，就有了正态分布。

@@ -7,6 +7,7 @@ categories:
 tags:
   - 每周精选
 slug: remove-significance-stars
+forum_id: 418905
 ---
 
 本期材料由[谢益辉](http://yihui.name/)、[肖楠](http://www.road2stat.com/)整理提供。

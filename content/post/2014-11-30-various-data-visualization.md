@@ -8,6 +8,7 @@ categories:
   - 每周精选
   - 统计之都
 slug: various-data-visualization
+forum_id: 419045
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [邱怡轩](http://yixuan.cos.name/cn/) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

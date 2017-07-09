@@ -13,6 +13,7 @@ tags:
   - 晋升
   - 统计学家
 slug: publishing-promotion-and-collaboration-in-statistics
+forum_id: 418828
 ---
 
 ![统计学论文的发表流程、及统计学家的晋升和合作（内幕）](https://uploads.cosx.org/2011/01/shapeimage_3.png)

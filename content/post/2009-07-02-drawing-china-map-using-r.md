@@ -11,6 +11,7 @@ tags:
   - R软件
   - 中国地图
 slug: drawing-china-map-using-r
+forum_id: 418798
 ---
 
 >【注】新版本的`maptools`包对很多函数进行了修改，对于修改的内容，文章中用粗体文字进行了说明。

@@ -12,6 +12,7 @@ tags:
   - rjava
   - R语言
 slug: r-rjava-java
+forum_id: 418953
 ---
 
 [R的极客理想系列文章](http://blog.fens.me/series-r/ "R的极客理想系列文章")，涵盖了R的思想，使用，工具，创新等的一系列要点，以我个人的学习和体验去诠释R的强大。

@@ -8,6 +8,7 @@ categories:
 tags:
   - R语言
 slug: r-symbol-calculate
+forum_id: 419152
 ---
 
 **本文作者：**黄湘云，2011-2015年在中国矿业大学（北京）的数学与应用数学专业获得学士学位，

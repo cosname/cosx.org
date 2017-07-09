@@ -10,6 +10,7 @@ tags:
   - 贝叶斯
 slug: 2rd-bayesian-statistics-meeting
 description: 第二届中国贝叶斯统计学术论坛（天津，2014）将于2014年12月21日（周日）在天津财经大学召开，本次会议由天津财经大学中国经济统计研究中心、贝叶斯之道研究室主办，统计之都协办，本文为该会议详细的日程安排。
+forum_id: 419048
 ---
 
 ![bayes-forum](https://uploads.cosx.org/2014/12/bayes-forum.png)

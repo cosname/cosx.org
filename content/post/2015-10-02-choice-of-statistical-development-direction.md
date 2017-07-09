@@ -11,6 +11,7 @@ tags:
   - 统计学发展方向
   - 统计学挑战
 slug: choice-of-statistical-development-direction
+forum_id: 419101
 ---
 
 

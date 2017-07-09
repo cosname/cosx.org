@@ -7,6 +7,7 @@ categories:
   - 每周精选
   - 统计之都
 slug: let-us-talk-about-statistics
+forum_id: 419071
 ---
 
 本期投稿：[谢益辉](http://yihui.name/)   [ 王威廉 ](  http://weibo.com/u/1657470871?from=feed&loc=avatar)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

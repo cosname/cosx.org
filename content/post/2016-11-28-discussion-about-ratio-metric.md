@@ -7,6 +7,7 @@ categories:
   - 统计之都
   - 统计推断
 slug: discussion-about-ratio-metric
+forum_id: 419174
 ---
 
 > **作者简介**：陈丽云，在eBay从事 Experimentation Analytics Research。网络上素来自黑为“落园园主”。

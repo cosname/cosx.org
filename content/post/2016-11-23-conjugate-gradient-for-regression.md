@@ -15,6 +15,7 @@ tags:
   - 线性方程组
   - 迭代法
 slug: conjugate-gradient-for-regression
+forum_id: 419172
 ---
 
 

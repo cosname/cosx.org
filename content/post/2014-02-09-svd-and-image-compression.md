@@ -17,6 +17,7 @@ tags:
   - 奇异值分解
   - 矩阵
 slug: svd-and-image-compression
+forum_id: 419004
 ---
 
 【2.18更新】：[楠神](https://github.com/road2stat)写了一个非常gelivable的[Shiny应用](https://github.com/road2stat/imgsvd)，用来动态展示图片压缩的效果随k的变化情况。[谢大大](http://yihui.name/)把这个应用放到了[RStudio的服务器](https://yihui.shinyapps.io/imgsvd/)上，大家可以点进去玩玩看了。

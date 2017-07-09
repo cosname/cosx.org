@@ -14,6 +14,7 @@ tags:
   - 研究生学习
   - 随机过程
 slug: the-training-of-the-main-courses-about-probability-theory
+forum_id: 418868
 ---
 
 # 1. 引言

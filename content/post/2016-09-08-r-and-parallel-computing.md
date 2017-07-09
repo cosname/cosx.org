@@ -9,6 +9,7 @@ tags:
   - R并行计算
   - 并行计算
 slug: r-and-parallel-computing
+forum_id: 419163
 ---
 
 作者简介     

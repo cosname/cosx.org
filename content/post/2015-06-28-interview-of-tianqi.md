@@ -13,6 +13,7 @@ tags:
   - 机器学习
   - 陈天奇
 slug: interview-of-tianqi
+forum_id: 419088
 ---
 
 【COS编辑部按】受访者：[陈天奇](http://homes.cs.washington.edu/~tqchen/) 采访者：何通 编辑：王小宁

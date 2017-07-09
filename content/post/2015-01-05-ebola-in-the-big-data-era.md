@@ -5,6 +5,7 @@ author: COS编辑部
 categories:
   - 统计之都
 slug: ebola-in-the-big-data-era
+forum_id: 419055
 ---
 
 > 2014年时代杂志的年度人物称号由埃博拉患者护理人员获得，在向他们致敬的同时，让我们回顾一下去年这场饱受关注并且持续到今年的全球性传染病事件。

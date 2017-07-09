@@ -9,6 +9,7 @@ categories:
   - 软件应用
   - 金融统计
 slug: talking-about-r-software
+forum_id: 419076
 ---
 
 本期投稿： [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)　Ron　[王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)

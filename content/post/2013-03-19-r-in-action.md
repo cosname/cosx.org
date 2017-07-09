@@ -6,6 +6,7 @@ categories:
   - 图书出版
   - 统计之都
 slug: r-in-action
+forum_id: 418921
 ---
 
 ![r-in-action](https://uploads.cosx.org/2013/03/r-in-action1.jpg)

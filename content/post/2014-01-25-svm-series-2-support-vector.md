@@ -12,6 +12,7 @@ tags:
   - 监督学习
 slug: svm-series-2-support-vector
 description: "[上一次](/2014/01/svm-series-maximum-margin-classifier/)介绍支持向量机，结果说到 Maximum Margin Classifier ，到最后都没有说“支持向量”到底是什么东西。"
+forum_id: 419001
 ---
 
 原文链接请点击[这里](http://blog.pluskid.org/?p=682)

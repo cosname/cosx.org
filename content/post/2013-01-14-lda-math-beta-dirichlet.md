@@ -11,6 +11,7 @@ tags:
   - Dirichlet-Multinomial共轭
   - Dirichlet分布
 slug: lda-math-beta-dirichlet
+forum_id: 418898
 ---
 
 # 2. 认识Beta/Dirichlet分布

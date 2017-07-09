@@ -18,6 +18,7 @@ tags:
   - 混淆矩阵
   - 覆盖率
 slug: measure-classification-model-performance-confusion-matrix
+forum_id: 418760
 ---
 
 跑完分类模型（Logistic回归、决策树、神经网络等），我们经常面对一大堆模型评估的报表和指标，如Confusion Matrix、ROC、Lift、Gini、K-S之类（这个单子可以列很长），往往让很多在业务中需要解释它们的朋友头大：“这个模型的Lift是4，表明模型运作良好。——啊，怎么还要解释ROC，ROC如何如何，表明模型表现良好……”如果不明白这些评估指标的背后的直觉，就很可能陷入这样的机械解释中，不敢多说一句，就怕哪里说错。本文就试图用一个统一的例子（SAS Logistic回归），从实际应用而不是理论研究的角度，对以上提到的各个评估指标逐一点评，并力图表明：

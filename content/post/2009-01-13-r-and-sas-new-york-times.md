@@ -12,6 +12,7 @@ tags:
   - SAS-L
   - 纽约时报
 slug: r-and-sas-new-york-times
+forum_id: 418767
 ---
 
 现在R与SAS社区里，最热闹的大概是源于《纽约时报》的一篇文章而引发的R与SAS之争。

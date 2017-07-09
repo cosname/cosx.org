@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: personal-feelings
+forum_id: 419007
 ---
 
 本期投稿： [谢益辉](http://yihui.name/) [邱怡轩](http://yixuan.cos.name/cn/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB#place) [施涛](http://blog.cos.name/taoshi) 熊熹

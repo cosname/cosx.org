@@ -9,6 +9,7 @@ tags:
   - '2013'
   - R语言会议
 slug: 6th-chiner-conference-register
+forum_id: 418922
 ---
 
 由统计之都组织的2012年第六届ChinaR会议正式开始接受报名了。和往年一样，报名仍然是免费的，并欢迎投稿演讲。会议详情请见[第六届中国R会议通知](/2013/02/chinar-beijing-2013/)。

@@ -12,6 +12,7 @@ tags:
   - 精算
   - 风险理论
 slug: a-tutorial-on-package-actuar-2
+forum_id: 418819
 ---
 
 本次发布的是actuar包学习笔记的第二部分。

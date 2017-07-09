@@ -11,6 +11,7 @@ tags:
   - 精华帖
   - 论坛
 slug: cos-series-inverse-function-of-strsplit
+forum_id: 418952
 ---
 
 我们知道，R 中的 `strsplit` 函数可以将字符串按照分隔符来进行分割。正如下面所示：

@@ -11,6 +11,7 @@ tags:
   - 假设检验
   - 零假设
 slug: meaning-of-failure-to-reject-h0
+forum_id: 418777
 ---
 
 # 由一道试题引发的一点思考

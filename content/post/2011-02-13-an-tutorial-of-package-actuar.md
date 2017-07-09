@@ -14,6 +14,7 @@ tags:
   - 精算
   - 风险理论
 slug: an-tutorial-of-package-actuar
+forum_id: 418832
 ---
 
 时隔半年，终于隆重推出了最终版~

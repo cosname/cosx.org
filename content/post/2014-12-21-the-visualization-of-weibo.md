@@ -9,6 +9,7 @@ categories:
   - 职业事业
 slug: the-visualization-of-weibo
 description: "如何把新浪微博POI签到数据炫酷的可视化？2014年，Hadoop技术有什么重要发展?优秀博士通常具备哪些品质？本期COS精选为你揭晓。"
+forum_id: 419051
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)

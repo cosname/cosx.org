@@ -10,6 +10,7 @@ tags:
   - COS访谈
   - 数据科学
 slug: interviewof-jeff-leek
+forum_id: 418942
 ---
 
 【COS编辑部按】 受访人：Jeff Leek

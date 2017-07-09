@@ -17,6 +17,7 @@ tags:
   - 高性能计算
 slug: gossip-r-gpu
 description: "GPGPU算是近几年兴起的一个领域，以CUDA为代表，在高性能计算方面成果相当多。作为一种相对廉价的高性能解决方案，越来越多的程序员开始加入GPGPU阵营。Andrew Ng（就是那个Machine Learning公开课的Andrew）去年在Google用造价大约一百万美的集群完成了猫脸识别，而这个月他刚刚宣布他的团队用造价两万美元的GPU集群，达到了同样的效果。从这里我们也可以大致看出GPU在Machine Learning方面的潜力。"
+forum_id: 418974
 ---
 
 > 注：本文来自寇强的博客，[原文请点击此处](http://thirdwing.github.io/2013/09/27/rgpu/)。

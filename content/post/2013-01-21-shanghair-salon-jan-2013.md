@@ -9,6 +9,7 @@ categories:
 tags:
   - COS沙龙
 slug: shanghair-salon-jan-2013
+forum_id: 418900
 ---
 
 冬日的阴霾还没有完全散去，而温度却也在悄然的回升。周末的下午，相聚在极富小资情调的沙龙，也不失为一种打磨时光的优雅方式嘛。（感谢[联合创业办公社](http://www.people-squared.com/  "http://www.people-squared.com/ ")）

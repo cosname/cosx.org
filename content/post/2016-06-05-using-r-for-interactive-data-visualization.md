@@ -13,6 +13,7 @@ tags:
   - rCharts
   - recharts
 slug: using-r-for-interactive-data-visualization
+forum_id: 419142
 ---
 
 上周在中国R语言大会北京会场上，给大家分享了如何利用R语言交互数据可视化。现场同学对这块内容颇有兴趣，故今天把一些常用的交互可视化的R包搬出来与大家分享。

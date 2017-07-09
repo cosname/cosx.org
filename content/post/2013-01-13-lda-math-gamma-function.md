@@ -15,6 +15,7 @@ tags:
   - 欧拉
   - 阶乘
 slug: lda-math-gamma-function 
+forum_id: 418897
 ---
 
 # 1. 神奇的Gamma函数

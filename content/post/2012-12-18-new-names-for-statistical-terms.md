@@ -5,6 +5,7 @@ author: Liyun
 categories:
   - 统计之都
 slug: new-names-for-statistical-terms
+forum_id: 418892
 ---
 
 原文载于卡耐基梅隆大学统计系教授Larry Wasserman的博客：[Normal Deviate](http://normaldeviate.wordpress.com/2012/12/16/new-names-for-statistical-methods/)

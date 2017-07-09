@@ -13,6 +13,7 @@ tags:
   - 可视化
   - 气泡图
 slug: dynamic-bubble-plot-in-r
+forum_id: 418894
 ---
 
 最近我逐渐发现了ggplot2这个包的好处——只要用过一次，就再也不想回头使用R中自带的作图函数了。前两天鼓捣完一个地图的数据，又受到统计之都[最新文章](/2013/01/cos.name/2012/12/time-series-and-spatial-distribution-with-r-dynamically/)的影响，我忽然想起了Hans Rosling在TED上的[精彩演讲](http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen.html)。在图中横坐标是国民收入，纵坐标是国民的期望寿命，气泡的大小则是该国人口。整个图从1800年的统计数据开始，一直到2009年不断动态地展示，图上的气泡也随着时间变化不停地抖动上升。有一位在斯坦福专做可视化的博士用JavaScript在网页上重现了这段动态效果图，点开页面即可观看：<http://bost.ocks.org/mike/nations/>。

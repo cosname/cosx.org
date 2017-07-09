@@ -7,6 +7,7 @@ categories:
 tags:
   - 每周精选
 slug: rise-of-the-machine
+forum_id: 418913
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [邱怡轩](http://statr.me/) [吕晓玲](http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/128.html) [@–子墨–](http://weibo.com/weizhangzimo)

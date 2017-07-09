@@ -15,6 +15,7 @@ tags:
   - 软件包
 slug: jiebar-text-segmentation
 description: 中文分词包 jiebaR 的简介与实现示例
+forum_id: 419040
 ---
 
 > 本文作者：覃文锋，厦门大学公共卫生学院本科生，研究兴趣为生物统计和数据挖掘。

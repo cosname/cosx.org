@@ -9,6 +9,7 @@ tags:
   - python
   - 数据分析
 slug: python-seven-weapons
+forum_id: 419164
 ---
 
 君子生非异也，善假于物也。

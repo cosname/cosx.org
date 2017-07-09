@@ -19,6 +19,7 @@ tags:
   - 数据挖掘
   - 混淆矩阵
 slug: measure-classification-model-performance-lift-gain
+forum_id: 418770
 ---
 
 书接[前文](/2008/12/measure-classification-model-performance-roc-auc/)。跟ROC类似，Lift（提升）和Gain（增益）也一样能简单地从[以前的Confusion Matrix](/2008/12/measure-classification-model-performance-confusion-matrix/)以及Sensitivity、Specificity等信息中推导而来，也有跟一个baseline model的比较，然后也是很容易画出来，很容易解释。以下先修知识，包括所需的数据集：<!--more-->

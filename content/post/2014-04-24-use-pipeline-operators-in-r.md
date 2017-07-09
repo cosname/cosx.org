@@ -12,6 +12,7 @@ tags:
   - R语言
   - 管道
 slug: use-pipeline-operators-in-r
+forum_id: 419017
 ---
 
   * 原文作者：[任坤](http://renkun.me/)，厦门大学王亚南经济研究院金融硕士生，研究兴趣为计算统计和金融量化交易。

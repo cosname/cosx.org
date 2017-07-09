@@ -9,6 +9,7 @@ tags:
   - rlist
   - 非关系型数据
 slug: rlist-package
+forum_id: 419025
 ---
 
 本文作者：[任坤](http://renkun.me/)，厦门大学王亚南经济研究院金融硕士生，研究兴趣为计算统计和金融量化交易，pipeR，learnR，rlist等[项目](https://github.com/renkun-ken)的作者。

@@ -12,6 +12,7 @@ tags:
   - 旅行者1号
   - 航海家1号
 slug: voyager1-cross-hp
+forum_id: 418965
 ---
 
 [航海家1号](http://zh.wikipedia.org/zh-tw/旅行者1号)（[Voyager 1](http://voyager.jpl.nasa.gov)）作为一艘无人太空探测船于1977年9月5日从佛罗里达洲的卡纳维尔角发射升空，先后位临木星，土星，正在向星际间的太空进发。

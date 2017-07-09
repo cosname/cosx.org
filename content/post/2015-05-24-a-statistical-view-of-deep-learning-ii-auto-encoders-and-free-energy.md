@@ -6,6 +6,7 @@ categories:
   - 推荐文章
   - 统计之都
 slug: a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy
+forum_id: 419083
 ---
 
 原文链接：[http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/](http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/)

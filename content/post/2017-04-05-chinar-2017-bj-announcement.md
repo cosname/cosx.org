@@ -4,6 +4,7 @@ author: 统计之都
 date: '2017-04-05'
 tags: [R会议,北京]
 slug: chinar-2017-bj-announcement
+forum_id: 419188
 ---
 
 ![thu](https://cloud.githubusercontent.com/assets/26495735/24694334/12ec0e68-1a14-11e7-9c6f-bf1a0c31fbad.png)

@@ -11,6 +11,7 @@ tags:
   - rmongodb
   - R语言
 slug: nosql1-rmongodb
+forum_id: 418932
 ---
 
 Author: 张丹

@@ -10,6 +10,7 @@ tags:
   - SAS
   - 集成
 slug: integrating-sas-with-r
+forum_id: 418906
 ---
 
 # 一、为什么R与SAS要集成？

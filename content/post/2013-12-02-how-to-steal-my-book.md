@@ -9,6 +9,7 @@ tags:
   - 每周精选
 slug: how-to-steal-my-book
 description: "匹兹堡大学的这位教授非常帅气地在自己的网站上挂着“如何偷走我这本书”的链接。不知出版社作何感想。这是一本比较经典的时间序列书，带R示例，而且既有正式版，又有简化版，所谓阳春白雪，老少咸宜。"
+forum_id: 418989
 ---
 
 本期投稿： [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB#place) [谢益辉](http://yihui.name) [魏太云](http://www.weibo.com/taiyun?topnav=1&wvr=5&topsug=1)

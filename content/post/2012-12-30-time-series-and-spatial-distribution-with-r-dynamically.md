@@ -13,6 +13,7 @@ tags:
   - 时间序列
   - 空间统计
 slug: time-series-and-spatial-distribution-with-r-dynamically
+forum_id: 418893
 ---
 
 > 作者简介：陈少飞，美国Tango Management Consulting公司高级地理研究分析员，主要工作为在连锁零售/餐饮的商业地产咨询中，从空间优化的角度给客户制订选址方案，并预测店面销售额。05年开始接触R，主要研究R在地理信息科学方面的应用，包括可视化，空间回归，地理统计和空间最优化等。

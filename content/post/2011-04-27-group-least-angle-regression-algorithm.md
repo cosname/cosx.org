@@ -12,6 +12,7 @@ tags:
   - lasso
   - 回归
 slug: group-least-angle-regression-algorithm
+forum_id: 418838
 ---
 
 继续前两篇博文中对于最小角回归（LARS)和lasso的介绍。在这篇文章中，我打算介绍一下分组最小角回归算法（Group LARS）。本文的主要观点均来自Ming Yuan和Yi Lin二人2006合作发表在JRSSB上的论文Model selection and estimation in regression with grouped variables.

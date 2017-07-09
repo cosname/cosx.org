@@ -14,6 +14,7 @@ tags:
   - 新浪微博
   - 社交网络
 slug: weibo-influence-hindex
+forum_id: 418927
 ---
 
 H-index其实更广泛的应用于学术论文评价，其定义为：

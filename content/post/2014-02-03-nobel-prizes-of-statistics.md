@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: nobel-prizes-of-statistics
+forum_id: 419002
 ---
 
 本期投稿： [谢益辉](http://yihui.name/) [朱雪宁](http://www.puddingnnn.com) [冷静](http://weibo.com/u/1756465937) 

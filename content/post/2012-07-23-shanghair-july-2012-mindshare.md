@@ -9,6 +9,7 @@ categories:
 tags:
   - COS沙龙
 slug: shanghair-july-2012-mindshare
+forum_id: 418877
 ---
 
 炎炎夏日，上海的R用户沙龙从上次远飘到杭州以后，在2012年7月21日又飘回上海，落在了长乐路MindShare广告公司31层的办公室。

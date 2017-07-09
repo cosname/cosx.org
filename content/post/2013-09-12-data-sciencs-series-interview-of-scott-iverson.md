@@ -10,6 +10,7 @@ tags:
   - 杜邦先锋
   - 统计
 slug: data-sciencs-series-interview-of-scott-iverson
+forum_id: 418968
 ---
 
 【COS编辑部按】受访人：Scott Iverson。

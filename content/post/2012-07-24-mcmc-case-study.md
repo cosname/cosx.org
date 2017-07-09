@@ -16,6 +16,7 @@ tags:
   - 计算
   - 贝叶斯
 slug: mcmc-case-study
+forum_id: 418878
 ---
 
 > 本文是R中mcmc包的一篇[帮助文档](http://www.stat.umn.edu/geyer/mcmc/library/mcmc/doc/demo.pdf)，作者为Charles J.Geyer。经过[knitr](/2012/06/reproducible-research-with-knitr/)编译后的pdf文档[可见此处](http://cloud.github.com/downloads/cosname/editor/mcmc.pdf)，提供中文译稿的作者：

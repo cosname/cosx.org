@@ -11,6 +11,7 @@ tags:
   - 时间序列
   - 统计分析
 slug: cos-interview-rob-j-hyndman
+forum_id: 419003
 ---
 
 【COS编辑部按】：受访者：[Rob J. Hyndman](http://robjhyndman.com/)，采访者：[Earo Wang](http://earo.me/)，译者：[黄俊文](http://www.fyears.org/)。原文[在这](http://earo.me/2014/01/interview-with-rob/)。

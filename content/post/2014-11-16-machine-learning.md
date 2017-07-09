@@ -9,6 +9,7 @@ categories:
   - 统计计算
 slug: machine-learning
 description: "本期精选为大家分享机器学习的误区有哪些？深度学习有哪些值得一看的资料？有一个自动统计分析机器人，可以实现数据进报告出，你感兴趣吗？更多精彩内容，尽在本期精选。"
+forum_id: 419041
 ---
 
 本期投稿： [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)  [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

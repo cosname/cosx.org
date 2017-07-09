@@ -14,6 +14,7 @@ tags:
   - 矩母函数
   - 随机网络系统
 slug: introduction-and-application-of-gert
+forum_id: 418803
 ---
 
 问题：一枚均匀的硬币，一直抛直至出现HTT（H表示正面，T表示背面），期望要抛多少次？一直抛直至出现HTH（即正反正），期望要抛多少次？假定出现H面的概率为`$p$`，出现T面的概率为`$q$`，且`$p=q=1/2$`

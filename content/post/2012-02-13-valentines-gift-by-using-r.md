@@ -8,6 +8,7 @@ tags:
   - R语言
   - 情人节
 slug: valentines-gift-by-using-r
+forum_id: 418859
 ---
 
 > 作者简介：林宇，加拿大西安大略大学精算专业在读硕士。

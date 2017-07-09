@@ -12,6 +12,7 @@ tags:
   - R语言
   - 海量数据
 slug: rhadoop1-hadoop
+forum_id: 418923
 ---
 
 # RHadoop实践系列文章

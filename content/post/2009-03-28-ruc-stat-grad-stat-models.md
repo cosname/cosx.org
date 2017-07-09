@@ -11,6 +11,7 @@ tags:
   - 统计模型
   - 课程
 slug: ruc-stat-grad-stat-models
+forum_id: 418784
 ---
 
 # Statistical Models

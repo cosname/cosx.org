@@ -14,6 +14,7 @@ tags:
   - 中国地图
   - 空间统计
 slug: statistical-analysis-and-winbugs-part-4
+forum_id: 418797
 ---
 
 # 如何生成一个GeoBUGS格式的中国地图

@@ -13,6 +13,7 @@ tags:
   - 统计之都
 slug: terry-speed
 description: "Terry Speed从不觉得能很快在媒体的头条上看到类似“统计学家治愈癌症”的标题，不过他坚信数学和统计学可以有效地帮助研究者认识癌症背后的诱因，从而减少手术的需要。身兼数学家和统计学家，Terry笔下诞生了不少鲜有人读得懂的精美学术著作，但除此之外，他还有学术成就以外的另一面，他曾出席法庭作证，帮助农户和采钻矿工，还为生物学家提供统计工具以解决基因的进化问题。"
+forum_id: 418984
 ---
 
 【COS编辑部按】本译文原文来自澳大利亚[Science in Public](http://www.scienceinpublic.com.au/)，讲 述Terry Speed，一位著作等身的统计学者，对学术和社会生活的热情；[原文](http://www.scienceinpublic.com.au/prime-ministers-prize/2013-science)版权归 Science in Public所有。本文译者：尤晓斌(新加坡国立大学)；审校：李妙竹(上海生科院)、施涛(The Ohio State University)。

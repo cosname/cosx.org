@@ -17,6 +17,7 @@ tags:
   - 数据库
   - 矩阵运算
 slug: regression-of-large-dataset-in-r
+forum_id: 418960
 ---
 
 * 作者：[Yixuan Qiu](http://statr.me/)

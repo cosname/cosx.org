@@ -10,6 +10,7 @@ tags:
   - 期望
   - 概率论
 slug: a-brief-talk-on-buffon-throwing-needle-problems
+forum_id: 418806
 ---
 
 公元1777年，法国科学家D·布丰(D.Buffon 1707～1788)设计了一个巧夺天工的实验：往间距为a的平行线族之间投掷长为L 的针，可以计算出针和平行线相交的概率为：

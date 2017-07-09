@@ -13,6 +13,7 @@ tags:
   - 数据可视化
   - 统计图形
 slug: hadley-wickham-the-man-who-revolutionized-r
+forum_id: 419098
 ---
 
 【COS编辑部按】本译文得到了原英文作者的授权同意，翻译：[冯俊晨](http://www.fengjunchen.com)、王小宁， 审校：邱怡轩、朱雪宁、蔡寒蕴，编辑：王小宁。

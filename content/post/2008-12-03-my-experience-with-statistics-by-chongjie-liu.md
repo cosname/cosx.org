@@ -13,6 +13,7 @@ tags:
   - 统计学
   - 自我介绍
 slug: my-experience-with-statistics-by-chongjie-liu
+forum_id: 418748
 ---
 
 首次遇到益辉应该是在一个论坛上，讨论了各类专业统计软件的使用情况，就聊到了[R](http://www.r-project.org)。接着就开始到cos灌水，慢慢就认识了这个领域里面的很多朋友。而益辉等兄弟姐妹为在统计这个领域的推广“正确”方面实在是做出了极其有益处，乃至可以称为辉煌的工作。

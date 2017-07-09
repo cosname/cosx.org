@@ -13,6 +13,7 @@ tags:
   - 群体智慧
   - 贝叶斯
 slug: search-rescue-plane-statistical-data-analysis
+forum_id: 419015
 ---
 
 > 大数据时代如何活用数据可视化、大数据与众包、群体智慧、贝叶斯方法等为失联搜救出谋献策？请看下文。

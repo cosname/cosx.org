@@ -10,6 +10,7 @@ tags:
   - Machine Learning
   - 深度学习
 slug: deep-learning
+forum_id: 419123
 ---
 
 本期投稿：[王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁；编辑：王小宁

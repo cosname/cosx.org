@@ -11,6 +11,7 @@ tags:
   - 统计发展
   - 统计定位
 slug: what-is-the-stat-dept-25-years-from-now
+forum_id: 418860
 ---
 
 > 本文是统计学家Leo Breiman1994年在加州伯克利统计系毕业典礼上的讲话，原文请参考[此处](http://www.stat.berkeley.edu/~dpurdy/Breiman-1994-commencement.html)。

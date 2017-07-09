@@ -4,6 +4,7 @@ date: '2008-11-23T17:22:34+00:00'
 author: COS管理员
 weight: 2
 menu: main
+forum_id: 418703
 ---
 
 # 简介

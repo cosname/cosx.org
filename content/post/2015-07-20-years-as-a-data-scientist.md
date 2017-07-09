@@ -12,6 +12,7 @@ tags:
   - 数据科学家
   - 统计之都
 slug: years-as-a-data-scientist
+forum_id: 419089
 ---
 
 【COS编辑部按】 作者：[李舰](http://jianl.org/)

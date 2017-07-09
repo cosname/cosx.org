@@ -10,6 +10,7 @@ tags:
   - LDA
   - Topic Model
 slug: lda_topic_model
+forum_id: 418820
 ---
 
 上个学期到现在陆陆续续研究了一下主题模型（[topic model](https://en.wikipedia.org/wiki/Topic_model)）这个东东。何谓“主题”呢？望文生义就知道是什么意思了，就是诸如一篇文章、一段话、一个句子所表达的中心思想。不过从统计模型的角度来说， 我们是用一个特定的词频分布来刻画主题的，并认为一篇文章、一段话、一个句子是从一个概率模型中生成的。

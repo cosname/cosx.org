@@ -9,6 +9,7 @@ categories:
 tags:
   - 每周精选
 slug: dangers-everywhere-in-random-experiment
+forum_id: 418908
 ---
 
 By [陈丽云](https://cos.name/author/liyun/)

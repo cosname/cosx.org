@@ -14,6 +14,7 @@ tags:
   - 演讲
   - 纪要
 slug: 4th-china-r-beijing-summary
+forum_id: 418844
 ---
 
 ![第四届中国R语言会议（北京会场）合影](https://uploads.cosx.org/2011/05/4th-China-R-BJ.jpg)

@@ -14,6 +14,7 @@ tags:
   - 培训
   - 演讲
 slug: 3rd-china-r-beijing-summary
+forum_id: 418816
 ---
 
 ![第三届中国R语言会议北京会场合影](https://uploads.cosx.org/2010/06/3rd-China-R-BJ.jpg "第三届中国R语言会议北京会场合影") 第三届中国R语言会议北京会场合影（右键另存为看大图）

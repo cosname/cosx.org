@@ -12,6 +12,7 @@ tags:
   - RCassandra
   - 大数据
 slug: r-nosql-cassandra
+forum_id: 418945
 ---
 
 [R利剑NoSQL系列文章](http://blog.fens.me/series-r-nosql/ "R利剑NoSQL系列文章")，主要介绍通过R语言连接使用nosql数据库。涉及的NoSQL产品，包括[Redis](http://blog.fens.me/nosql-r-redis/ "R利剑NoSQL系列文章 之 Redis"), [MongoDB](http://blog.fens.me/nosql-r-mongodb/ "R利剑NoSQL系列文章 之 MongoDB"), [HBase](http://blog.fens.me/nosql-r-hbase "R利剑NoSQL系列文章 之 HBase"), [Hive](http://blog.fens.me/nosql-r-hive/ "R利剑NoSQL系列文章 之 Hive"), [Cassandra](http://blog.fens.me/nosql-r-cassandra/ "R利剑NoSQL系列文章 之 Cassandra"), [Neo4j](http://blog.fens.me/nosql-r-neo4j/ "R利剑NoSQL系列文章 之 Neo4j")。希望通过我的介绍让广大的R语言爱好者，有更多的开发选择，做出更多地激动人心的应用。

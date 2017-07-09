@@ -10,6 +10,7 @@ tags:
   - 统计数据
   - 统计资源
 slug: how-to-search-for-statistics-resources
+forum_id: 418743
 ---
 
 关于搜集资料，其实是许久以来我很想谈的一个话题，因为身边太多太多的同学在这方面根本就没入门。找点资料，也不知上哪里找。顶多Baidu一下，高级一些的就Google一下，就算完事了。<!--more-->

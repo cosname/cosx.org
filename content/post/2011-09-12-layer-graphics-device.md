@@ -13,6 +13,7 @@ tags:
   - 图形设备
 slug: layer-graphics-device
 description: "你在用R画图的时候，是否会遇到以下的麻烦：加图例或文字时总是对不准坐标，要花很多精力调整元素的位置；某个细节出错，整幅图得重新绘制；想要更酷的平移、拉伸、旋转操作，就好像在Gimp或Photoshop里面一样；想更方便地使用字体，特别是中文的显示。"
+forum_id: 418850
 ---
 
 ![Layer图形设备配图](https://uploads.cosx.org/2011/09/Festival2.png)

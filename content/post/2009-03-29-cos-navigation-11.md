@@ -12,6 +12,7 @@ tags:
   - 高校联系人
   - 高校课堂
 slug: cos-navigation-11
+forum_id: 418786
 ---
 
 # 一、主站

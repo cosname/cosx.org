@@ -18,6 +18,7 @@ tags:
   - 统计学习
 slug: stories-about-statistical-learning
 description: "在港科大拿到PhD，做的是Bioinformatics方面的东西。Bioinformatics这个领域很乱，从业者水平参差不齐，但随着相关技术（比如Microarray, Genotyping）的进步，这个领域一直风风光光。因为我本科是学计算机电子技术方面的，对这些技术本身并没有多大的兴趣，支持我一路走过来的一个重要原因是我感受到**统计学习(Statistical learning)**的魅力。正如本科时代看过的一本网络小说《悟空传》所写的：“你不觉得天边的晚霞很美吗？只有看着她，我才能坚持向西走。”"
+forum_id: 418858
 ---
 
 > 编辑部按：本文转载Yang Can主页中的文章，稍有修改，原文链接请[点击此处](http://ihome.ust.hk/~eeyang/Stories_about_SL.pdf)。

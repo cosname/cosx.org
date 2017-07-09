@@ -20,6 +20,7 @@ tags:
   - 统计学
   - 软件工程
 slug: econ-software-sas
+forum_id: 418801
 ---
 
 > 这个青年的经历，只代表他个人，没有任何群体的意义。

@@ -10,6 +10,7 @@ categories:
 tags:
   - COS沙龙
 slug: beijing-cos-salon-jul-2013
+forum_id: 418948
 ---
 
 

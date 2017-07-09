@@ -12,6 +12,7 @@ tags:
   - 维基
   - 论坛
 slug: cos-navigation-3
+forum_id: 418756
 ---
 
 # 主站

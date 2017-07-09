@@ -16,6 +16,7 @@ tags:
   - 社交网络
   - 竞赛
 slug: summary-of-the-1st-data-mining-competetion
+forum_id: 418842
 ---
 
 ![建模答辩-021-fixed](https://web.archive.org/web/20110521125938/https://cos.name/wp-content/uploads/2011/05/%E5%BB%BA%E6%A8%A1%E7%AD%94%E8%BE%A9-021-fixed.jpg)

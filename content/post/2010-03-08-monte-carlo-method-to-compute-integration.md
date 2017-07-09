@@ -11,6 +11,7 @@ tags:
   - 模拟
   - 蒙特卡洛
 slug: monte-carlo-method-to-compute-integration
+forum_id: 418811
 ---
 
 本文讲述一下蒙特卡洛模拟方法与定积分计算，首先从一个题目开始：设`\(0\leq f(x) \leq 1\)`，用蒙特卡洛模拟法求定积分`\(J=\int_{0}^{1}f(x)dx\)`的值。

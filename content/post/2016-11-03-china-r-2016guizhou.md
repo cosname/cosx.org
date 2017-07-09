@@ -8,6 +8,7 @@ categories:
 tags:
   - R语言会议
 slug: china-r-2016guizhou
+forum_id: 419167
 ---
 
 # 一、会议概况

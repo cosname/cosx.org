@@ -12,6 +12,7 @@ tags:
   - 统计计算
 slug: a-conversaton-with-leo-breiman
 description: "1928年1月28日，Leo Breiman生于纽约。5年后，他们家搬到了旧金山，然后Leo开始了他的学业。在他读初中的时候，他们家又搬去了洛杉矶。1945年，Leo从Roosevelt高中毕业后考进了加州理工学院，在那里他花了4年时间主修物理。1950年，Leo拿到了哥伦比亚大学的数学硕士学位，1954年，他又拿到了加州大学伯克利分校的数学博士学位。"
+forum_id: 419175
 ---
 
 > COS编辑部按：本文是一篇Richard Olshen对Leo Breiman的采访稿（[原文发表在Statistical Science](http://projecteuclid.org/download/pdf_1/euclid.ss/1009213290)）。翻译工作已经得到作者授权。翻译: 张晔、成慧敏、李宇轩。审校：高涛、侯澄钧、丁鹏、魏太云。此外，郑重感谢施涛、丁鹏、郁彬老师为文章的翻译指导和版权沟通提供的帮助。

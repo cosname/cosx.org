@@ -7,6 +7,7 @@ categories:
 tags:
   - 每周精选
 slug: the-threat-from-data-science
+forum_id: 418934
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [肖楠](http://www.road2stat.com/) 林荟

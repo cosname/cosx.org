@@ -15,6 +15,7 @@ tags:
   - 比率
   - 辅助变量
 slug: why-ratio-estimation-is-more-accurate-in-sampling
+forum_id: 418789
 ---
 
 # 一、比率的方差估计式

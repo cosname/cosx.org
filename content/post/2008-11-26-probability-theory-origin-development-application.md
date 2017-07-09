@@ -16,6 +16,7 @@ tags:
   - 随机过程
   - 非参数统计
 slug: probability-theory-origin-development-application
+forum_id: 418739
 ---
 
 概率论源于游戏和赌博，发展过程和数学理论密不可分。<!--more-->

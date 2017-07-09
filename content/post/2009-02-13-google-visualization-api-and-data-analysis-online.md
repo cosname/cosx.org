@@ -12,6 +12,7 @@ tags:
   - Visualization API
 slug: google-visualization-api-and-data-analysis-online
 description: "近日Google推出了Google Visualization API为在线数据分析开拓了一条崭新的道路。这个项目的初衷就是希望提供一种灵活的在线数据分析的解决方案。之前的名声大噪的Google Map API已经应用到国内的许多诸如地图查询，导航信息，GIS等等诸多领域。也许你也曾是其中一员或将要成为其中一员呢。回过头来，Visualization API则将重点放在数据的探索性分析与结果的展现上。虽然现在没有提供丰富的分析类库，但是在不久的将来，功能强大的在线分析软件，甚至在线开发平台都将不再遥不可及。"
+forum_id: 418769
 ---
 
 ![Visualization API](https://uploads.cosx.org/2009/02/gviz1.jpg)

@@ -6,6 +6,7 @@ categories:
   - 中国R语言会议
   - 统计之都
 slug: 9th-r-conference-guangzhou
+forum_id: 419166
 ---
 
 # 一、会议概况

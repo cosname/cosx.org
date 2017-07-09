@@ -13,6 +13,7 @@ tags:
   - 核局部Fisher判别分析
   - 算法说明
 slug: a-brief-description-of-the-method-and-the-algorithm-of-the-lfda-package
+forum_id: 419092
 ---
 
 作者： 唐源（Yuan Tang） 编辑：王小宁

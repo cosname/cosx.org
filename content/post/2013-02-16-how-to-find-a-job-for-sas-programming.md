@@ -8,6 +8,7 @@ categories:
 tags:
   - SAS Career
 slug: how-to-find-a-job-for-sas-programming
+forum_id: 418907
 ---
 
 在LinkedIn上看到一个帖子问“金融和会计背景且有SAS知识的学生是否很难找到SAS程序员的工作？”，第一位回复的是SAS公司资的深培训师 [Cynthia Zender](http://blogs.sas.com/content/sastraining/author/cynthiazender/)，回复内容非常专业具体，值得一看。

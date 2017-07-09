@@ -5,6 +5,7 @@ author: COS编辑部
 categories:
   - 统计之都
 slug: cos-interview-26-kouqiang
+forum_id: 419181
 ---
 
 【COS编辑者按】受访者：寇强      采访者：王小宁     审稿：成慧敏

@@ -11,6 +11,7 @@ tags:
   - 杭州
   - 阿里巴巴
 slug: 7th-chinar-hangzhou-openning-remarks-alibaba
+forum_id: 419046
 ---
 
 ![7ooJC](https://uploads.cosx.org/2014/12/7ooJC.jpg)

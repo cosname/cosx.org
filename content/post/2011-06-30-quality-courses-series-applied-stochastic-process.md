@@ -14,6 +14,7 @@ tags:
   - 精品课程
   - 随机过程
 slug: quality-courses-series-applied-stochastic-process
+forum_id: 418846
 ---
 
 # 一、课程简介

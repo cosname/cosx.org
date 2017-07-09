@@ -13,6 +13,7 @@ tags:
   - 破产概率
   - 随机模拟
 slug: compound-poisson
+forum_id: 418880
 ---
 
 > 本文作者：叶钫，南京大学数学系

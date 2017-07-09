@@ -8,6 +8,7 @@ tags:
   - R语言
   - 包 package
 slug: create-r-packages-under-windows
+forum_id: 418771
 ---
 
 本文将向你介绍在Windows下创建包的步骤。在Unix下的创建过程以及如何用R调用C语言代码，请参考Google Group中的[如何写R的程序包](http://r-forum.googlegroups.com/web/如何写R的程序包.pdf?hl=zh-CN&gsc=UkZ_EAsAAAAPPWk_9MdapAnGcC-3E6DA)一文。

@@ -12,6 +12,7 @@ tags:
   - 个人征信
   - 征信误差
 slug: flooding-and-deletions-personal-credit-vs-credit-scoring-error-assessment
+forum_id: 419104
 ---
 
 王汉生@北大光华

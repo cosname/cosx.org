@@ -17,6 +17,7 @@ tags:
   - 边界
   - 非参数统计
 slug: kernel-density-estimation-with-unbounded-region
+forum_id: 418812
 ---
 
 # 一、一个例子

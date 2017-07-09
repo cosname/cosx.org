@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: the-most-poisoned-baby-name
+forum_id: 418903
 ---
 
  从本周起，统计之都将会定期为大家精选若干有猛料和干货的海外统计日志、文章、项目。如果大家读到好的统计博客，可以向我们推荐(editor@cos.name)。如果有人愿意把或已经把这些博客翻译成中文，请与我们联系(editor@cos.name)。我们将会收录在主站的博客翻译模块，供更多读者阅读。

@@ -8,6 +8,7 @@ categories:
 tags:
   - COS访谈
 slug: cos-interview-16-chih-ling-tsai
+forum_id: 419026
 ---
 
 受访者：**[蔡知令](http://gsm.ucdavis.edu/faculty/chih-ling-tsai"蔡知令")**; 采访者: **朱雪宁**。

@@ -13,6 +13,7 @@ tags:
   - 学习经历
   - 广义线性模型
 slug: how-does-glm-generalize-lm-fit-and-test
+forum_id: 418831
 ---
 
 # 1.GLM参数估计——极大似然法

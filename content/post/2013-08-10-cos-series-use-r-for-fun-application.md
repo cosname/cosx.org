@@ -12,6 +12,7 @@ tags:
   - 应用
   - 论坛
 slug: cos-series-use-r-for-fun-application
+forum_id: 418950
 ---
 
 系列以use R for fun为主题，以[COS论坛](https://cos.name/cn/)上的精华帖、相关的package以及自己的一些code为素材，结合自身的一些编程体会，从而整合成文。本文是第二篇小应用制作篇。

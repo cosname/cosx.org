@@ -11,6 +11,7 @@ tags:
   - 数据挖掘
   - 数据科学
 slug: top-10-data-mining-algorithms
+forum_id: 419091
 ---
 
 本期投稿：[谢益辉](http://yihui.name) [施涛](http://blog.cos.name/taoshi/)^[编者注：该链接已过期]

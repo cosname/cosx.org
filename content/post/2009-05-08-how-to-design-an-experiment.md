@@ -9,6 +9,7 @@ tags:
   - 双盲试验
   - 试验设计
 slug: how-to-design-an-experiment
+forum_id: 418788
 ---
 
 R·A·费歇尔爵士说在试验设计中经历的不是一个试验而是一种经验。

@@ -18,6 +18,7 @@ tags:
   - 统计学习
   - 郁彬
 slug: interview-of-zhangzhihua
+forum_id: 419100
 ---
 
 【COS编辑部按】 受访者：[张志华](http://bcmi.sjtu.edu.cn/~zhzhang/)   采访者：常象宇   文字整理：王莉晶 朱雪宁

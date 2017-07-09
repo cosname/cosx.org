@@ -15,6 +15,7 @@ tags:
   - 深度网络
   - 稀疏表达
 slug: discussion-of-sparse-coding-in-deep-learning
+forum_id: 419148
 ---
 
 > “王杨卢骆当时体，轻薄为文哂未休。 尔曹身与名俱灭，不废江河万古流。”

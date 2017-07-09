@@ -11,6 +11,7 @@ tags:
   - lars
   - lasso
 slug: an-introduction-to-lars
+forum_id: 418836
 ---
 
 最近临时抱佛脚，为了讨论班报告Group Regression方面的文章，研究了Efron等人于2004年发表在Annals of Statistics里一篇被讨论的文章LEAST ANGLE REGRESSION。这篇文章很长，有45页。加上后面一些模型方面大牛的讨论的文章，一共有93页。对于这种超长论文，我向来敬畏。后来因为要报告的文章里很多东西都看不懂，才回过头来研读这篇基石性的文章。

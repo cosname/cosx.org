@@ -9,6 +9,7 @@ tags:
   - 物联网
   - 统计学风口
 slug: wind_in_chinese_stat
+forum_id: 419096
 ---
 <p style = "text-align: center;">王汉生@北大光华</p>
 

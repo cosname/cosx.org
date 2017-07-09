@@ -7,6 +7,7 @@ categories:
 tags:
   - R语言会议
 slug: 2nd-chinese-r-conference-summary
+forum_id: 418809
 ---
 
 ![第二届中国R语言会议北京会场合影](https://uploads.cosx.org/2009/12/2nd-R-Conf-BJ.jpg "第二届中国R语言会议北京会场合影")

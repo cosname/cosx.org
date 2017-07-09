@@ -5,6 +5,7 @@ author: Liyun
 categories:
   - 新闻通知
 slug: china-r-shanghai-2012
+forum_id: 418885
 ---
 
 继五月份北京会场圆满举行之后，第五届中国R语言会议的上海会场也将揭开帷幕。报名已经开始，会议详情猛击： <https://cos.name/chinar/chinar-2012/>。

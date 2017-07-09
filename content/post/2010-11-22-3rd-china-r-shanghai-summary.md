@@ -13,6 +13,7 @@ tags:
   - 培训
   - 演讲
 slug: 3rd-china-r-shanghai-summary
+forum_id: 418824
 ---
 
 本文撰稿：第三届中国R语言会议（上海会场）主席张翔。

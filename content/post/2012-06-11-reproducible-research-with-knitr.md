@@ -11,6 +11,7 @@ tags:
   - 文学化编程
   - 自动化报告
 slug: reproducible-research-with-knitr
+forum_id: 418874
 ---
 
 2010年年底我写了[两](/2010/11/reproducible-research-in-statistics/)篇[文](/2011/01/cache-objects-in-sweave-stat-computation-and-graphics/)章，关于Sweave/LyX/pgfSweave，顺便引出可重复研究（Reproducible Research）的概念。一年过后，我逐渐意识到这一系列基于Sweave的工具都有致命的设计缺陷，束缚感越来越强，屡屡冒出要重复造轮子的[想法](https://cos.name/cn/topic/104960#post-222213)。于是就在“造乎？不造乎？”的犹豫中最终痛下决心全盘重造，[knitr包](http://yihui.name/knitr/)就诞生了。在第五届中国R语言会议上魏太云已经对它作了初步介绍，我会在统计之都以系列文章全面介绍它，本篇先以各种花絮开头。过去几天里我和RStudio的作者先后在我们Ames村办大学、明尼苏达R用户组和纽约R用户组分别做了knitr与RStudio的报告，下周R官方会议useR! 2012在田纳西州举办，我们也有幸得到了在会上做邀请报告的机会。在这个报告里，我要谈的就是一些开发中的思考，本文先给出这些思考的一个预览。如果你之前不熟悉Sweave，下面的内容可能不太容易理解，但没关系，一来很多东西你已经没有理解的必要了（旧世界的糟粕），二来今后我还会详细介绍knitr的功能。<!--more-->

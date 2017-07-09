@@ -10,6 +10,7 @@ tags:
   - 支持向量机
   - 机器学习
 slug: svm-series-5-support-vector
+forum_id: 419010
 ---
 
 原文链接请点击[这里](http://blog.pluskid.org/?p=696)

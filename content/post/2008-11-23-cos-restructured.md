@@ -12,6 +12,7 @@ tags:
   - 论坛
   - 重构
 slug: cos-restructured
+forum_id: 418731
 ---
 
 本文是 2008 年改版时写的，现已过期。以下是原文内容。

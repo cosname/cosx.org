@@ -6,6 +6,7 @@ categories:
   - 中国R语言会议
   - 统计之都
 slug: china-r-guangzhou
+forum_id: 419084
 ---
 
 编辑：王小宁

@@ -11,6 +11,7 @@ tags:
   - 聚类
   - 顾客评论
 slug: e-commerce-customer-reviews-hot-topic-analysis
+forum_id: 419138
 ---
 
 > **作者：**蔡越<span style="font-size: 12px; line-height: 0px;"> </span>(厦门大学经济学院统计系)，郭鹏（厦门数析信息科技有限公司），	方匡南（厦门大学经济学院统计系，厦门大学数据挖掘研究中心）

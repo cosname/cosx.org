@@ -15,6 +15,7 @@ tags:
   - 泊松低方差
   - 纯生过程模型
 slug: poisson-count-data-modeling-problem-of-low-variance
+forum_id: 418817
 ---
 
 > 本文作者为中国人民大学统计学院饶燕芳同学，由COS编辑部审核发表，略有修改。[点击此处下载/阅读本文PDF版本](https://uploads.cosx.org/2010/08/poisson.pdf)

@@ -14,6 +14,7 @@ tags:
   - 竞赛
   - 通知
 slug: 1st-data-mining-competetion-for-college-students
+forum_id: 418834
 ---
 
 ![数据挖掘竞赛](https://uploads.cosx.org/2011/03/DataMiningCompetetion.png)

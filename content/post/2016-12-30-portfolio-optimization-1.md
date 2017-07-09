@@ -11,6 +11,7 @@ tags:
   - 量化
 slug: portfolio-optimization-1
 description: "最近，在研究投资组合优化的问题，主要针对的是股票持仓的组合优化，会在这个分析过程中发现一些有意思的现象，并一步一步优化、检验相应的风控模型。本文将有四个部分分别阐述具体步骤。"
+forum_id: 419180
 ---
 
 **译者简介: Harry Zhu, R语言爱好者, FinanceR 专栏作者**

@@ -10,6 +10,7 @@ categories:
 tags:
   - COS沙龙
 slug: beijing-cos-salon-june-2013
+forum_id: 418944
 ---
 
 # ![配图](http://blog.fens.me/wp-content/uploads/2013/06/photo-cos1-small.jpg)

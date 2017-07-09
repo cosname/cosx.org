@@ -17,6 +17,7 @@ tags:
   - 统计图形
   - 重抽样
 slug: lowess-to-explore-bivariate-correlation-by-yihui
+forum_id: 418736
 ---
 
 ![局部加权回归散点平滑法](https://uploads.cosx.org/2008/11/counts.png "局部加权回归散点平滑法")

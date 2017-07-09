@@ -11,6 +11,7 @@ tags:
   - 可视化
   - 模型
 slug: ggfortify-visualization-in-one-line-of-code
+forum_id: 419108
 ---
 
 本文作者：唐源，目前就职于芝加哥一家创业公司，曾参与和创作过多个被广泛使用的R和Python开源项目，是ggfortify，lfda，metric-learn等包的作者，也是 xgboost，caret，pandas等包的贡献者。（喜欢爬山和烧烤）

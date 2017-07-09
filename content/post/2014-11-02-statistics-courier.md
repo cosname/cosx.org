@@ -11,6 +11,7 @@ tags:
   - 统计学习
 slug: statistics-courier
 description: "你听说过维数灾难嘛？你知道维数灾难还能可视化嘛？当你提出一种新的统计方法时，有一个竞争平台可以帮你客观的把自己的方法与其他方法比较，你知道是什么嘛？更多有趣知识尽在本期COS精选。"
+forum_id: 419036
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

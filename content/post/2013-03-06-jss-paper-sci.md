@@ -12,6 +12,7 @@ tags:
   - 投稿
   - 论文
 slug: jss-paper-sci
+forum_id: 418915
 ---
 
 # Journal of Statistical Software简介

@@ -12,6 +12,7 @@ tags:
   - xaringan
 slug: a-new-r-markdown-ppt-tool
 description: "今天小编给大家介绍一款新的幻灯片神器：xaringan（中文名：幻灯忍者）。它基于大家都熟悉的 R Markdown 语法，幻灯片中能嵌入 R 代码动态生成输出结果，最后生成的是 HTML5 幻灯片，可以在网页浏览器里打开阅览，我们一起来探个究竟吧。"
+forum_id: 419184
 ---
 
 今天小编给大家介绍一款新的幻灯片神器：xaringan（中文名：幻灯忍者）。它基于大家都熟悉的 R Markdown 语法，幻灯片中能嵌入 R 代码动态生成输出结果，最后生成的是 HTML5 幻灯片，可以在网页浏览器里打开阅览，我们一起来探个究竟吧。对了，官方教程在这里：<https://slides.yihui.name/xaringan/zh-CN.html>。

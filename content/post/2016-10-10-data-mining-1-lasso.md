@@ -7,6 +7,7 @@ categories:
   - 数据挖掘与机器学习
   - 统计之都
 slug: data-mining-1-lasso
+forum_id: 419165
 ---
 
 **作者简介：**

@@ -12,6 +12,7 @@ tags:
   - 演讲
   - 纪要
 slug: 7th-china-r-beijing-summary
+forum_id: 419021
 ---
 
 > **作者：** 霍志骥，中国人民大学统计学院

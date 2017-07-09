@@ -6,6 +6,7 @@ categories:
   - 推荐文章
   - 统计之都
 slug: the-data-wisdom-for-data-science
+forum_id: 419082
 ---
 
 原文链接：[http://www.odbms.org/2015/04/data-wisdom-for-data-science/](http://www.odbms.org/2015/04/data-wisdom-for-data-science/)

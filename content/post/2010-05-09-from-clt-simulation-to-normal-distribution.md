@@ -25,6 +25,7 @@ tags:
   - 钟形曲线
   - 随机变量
 slug: from-clt-simulation-to-normal-distribution
+forum_id: 418815
 ---
 
 昨日翻看朱世武老师的《金融计算与建模》幻灯片（[来源](https://cos.name/cn/topic/15637)，幻灯片“13随机模拟基础”），其中提到了中心极限定理（Central Limit Theorem，下文简称CLT）及其SAS模拟实现。由于我一直觉得我们看到的大多数对CLT的模拟都有共同的误导性，因此在此撰文讲述我的观点，希望能说清楚CLT的真实面目，让读者对它有更深刻的理解。

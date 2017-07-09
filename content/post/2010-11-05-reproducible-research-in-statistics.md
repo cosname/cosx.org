@@ -17,6 +17,7 @@ tags:
   - 统计数据
   - 统计研究
 slug: reproducible-research-in-statistics
+forum_id: 418822
 ---
 
 **警告**：本文提到的工具在更新中，请暂时不要按本文的配置去做，静候LyX 2.0.3的发布。

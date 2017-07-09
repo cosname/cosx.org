@@ -12,6 +12,7 @@ tags:
   - 可视化
   - 地图
 slug: introduction-to-remap
+forum_id: 419149
 ---
 
 ![](http://lchiffon.github.io/REmap/REmapExamples/Nanchang/pic/remap.png)

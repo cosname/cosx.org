@@ -11,6 +11,7 @@ tags:
   - 广义线性模型
   - 非寿险定价
 slug: glm-for-insurance-data-in-r
+forum_id: 418845
 ---
 
 **作者：** 吕定海，南开大学精算专业2010级硕士生

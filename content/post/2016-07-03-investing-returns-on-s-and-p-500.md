@@ -11,6 +11,7 @@ tags:
   - 投资
   - 股票
 slug: investing-returns-on-s-and-p-500
+forum_id: 419151
 ---
 
 > 本文翻译自 GitHub 项目 [`zonination/investing`](https://github.com/zonination/investing) 的描述文件 `README.md`。译者对原文顺序有所改动。

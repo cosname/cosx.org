@@ -12,6 +12,7 @@ tags:
   - SAS
   - 数据科学
 slug: interview_of_xie_liang
+forum_id: 418956
 ---
 
 ![xie-liang-pic](https://uploads.cosx.org/2013/08/xie-liang-pic.jpg)

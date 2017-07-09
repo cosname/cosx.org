@@ -9,6 +9,7 @@ tags:
   - 临床试验
   - 新药研发
 slug: chinese-medicine-western-medicine-statistics
+forum_id: 419157
 ---
 
 **作者简介：** 李舰，现任九峰移动医疗 CTO，曾任 Mango Solutions 中国区数据总监。专注于数据科学在行业里的应用。

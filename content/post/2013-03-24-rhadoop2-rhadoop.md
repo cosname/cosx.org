@@ -12,6 +12,7 @@ tags:
   - R语言
   - 海量数据
 slug: rhadoop2-rhadoop
+forum_id: 418924
 ---
 
 Author：张丹(Conan)

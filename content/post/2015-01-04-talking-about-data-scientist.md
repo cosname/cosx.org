@@ -8,6 +8,7 @@ categories:
   - 每周精选
   - 职业事业
 slug: talking-about-data-scientist
+forum_id: 419054
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo)

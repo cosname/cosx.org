@@ -11,6 +11,7 @@ tags:
   - rredis
   - R语言
 slug: nosql-r-redis
+forum_id: 418933
 ---
 
 Author: 张丹(Conan)

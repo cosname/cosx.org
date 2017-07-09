@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: an-debate-with-the-past
+forum_id: 418926
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [肖楠](http://www.road2stat.com/)

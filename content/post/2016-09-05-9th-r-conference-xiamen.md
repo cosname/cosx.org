@@ -5,6 +5,7 @@ author: COS编辑部
 categories:
   - 统计之都
 slug: 9th-r-conference-xiamen
+forum_id: 419162
 ---
 
 <p style="text-align: center;">

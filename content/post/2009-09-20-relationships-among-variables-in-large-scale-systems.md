@@ -12,6 +12,7 @@ tags:
   - 大规模系统
   - 贝叶斯
 slug: relationships-among-variables-in-large-scale-systems
+forum_id: 418804
 ---
 
 # 引言——变量关系分析的广泛意义

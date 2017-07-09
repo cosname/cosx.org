@@ -10,6 +10,7 @@ tags:
   - 车联网大数据
   - 驾驶行为
 slug: driving-action-date-ubi-model
+forum_id: 419134
 ---
 
 作者：

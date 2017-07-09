@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: first-bioconductor-mirror-in-china
+forum_id: 418914
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [施涛](http://taoshistat.wordpress.com/) [肖楠](http://www.road2stat.com/)

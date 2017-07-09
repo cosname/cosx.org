@@ -9,6 +9,7 @@ tags:
   - 张无忌
   - 文本分析
 slug: zhang-wuji
+forum_id: 419146
 ---
 
 ![图片 1](https://uploads.cosx.org/2016/06/图片-1.png)

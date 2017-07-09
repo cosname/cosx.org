@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: human-eye-vs-machine-learning
+forum_id: 418928
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [曾如山](http://t.qq.com/chris-h-n-cheung)

@@ -11,6 +11,7 @@ tags:
   - 支持向量机
   - 机器学习
 slug: svm-series-maximum-margin-classifier
+forum_id: 419000
 ---
 
 原文链接请点击[这里](http://blog.pluskid.org/?p=632)

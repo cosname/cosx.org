@@ -8,6 +8,7 @@ categories:
   - 每周精选
 slug: the-story-about-statistics
 description: 从公元前450年的伊利斯的希皮亚斯利用国王统治时间的均值计算出了第一次奥林匹克奥运会的时间早于他生活的时代300年到2012年统计学家纳特·西尔弗，成功预测美国大选的50个州的结果，让我们用一张图来看清[统计学发展的历史](http://www.statslife.org.uk/images/pdf/timeline-of-statistics.pdf)。
+forum_id: 419060
 ---
 
 本期投稿：[Mindey](http://mindey.com) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

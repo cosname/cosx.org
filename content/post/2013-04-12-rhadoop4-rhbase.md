@@ -12,6 +12,7 @@ tags:
   - rhbase
   - thrift
 slug: rhadoop4-rhbase
+forum_id: 418930
 ---
 
 Author：张丹(Conan)

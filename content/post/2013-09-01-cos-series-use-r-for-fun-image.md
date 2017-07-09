@@ -12,6 +12,7 @@ tags:
   - R语言
   - 图像处理
 slug: cos-series-use-r-for-fun-image
+forum_id: 418964
 ---
 
 系列以use R for fun为主题，以[COS论坛](https://cos.name/cn/)上的精华帖、相关package以及自己的一些code为素材，结合自身的一些编程体会，从而整合成文。本文是第三篇[玩转图像篇](http://chenangliu.info/cn/use-r-for-fun-image/)。

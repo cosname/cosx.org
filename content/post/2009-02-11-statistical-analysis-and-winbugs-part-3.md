@@ -12,6 +12,7 @@ tags:
   - 空间统计
   - 贝叶斯
 slug: statistical-analysis-and-winbugs-part-3
+forum_id: 418768
 ---
 
 # 用GeoBUGS做简单的空间数据分析

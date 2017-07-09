@@ -9,6 +9,7 @@ categories:
 tags:
   - COS沙龙
 slug: 5th-r-salon-in-shenzhen
+forum_id: 418884
 ---
 
 公元二〇一二年九月八日，在依山傍海、年轻美丽、自由开放的深圳，中国R语言爱好者终于迎来了南方首聚，R语言之火种从祖国华北、华东欣欣燃烧到了华南。<!--more-->

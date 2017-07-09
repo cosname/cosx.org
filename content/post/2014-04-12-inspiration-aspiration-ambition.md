@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: inspiration-aspiration-ambition
+forum_id: 419014
 ---
 
 本周投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB#place) [施涛](http://blog.cos.name/taoshi) [肖楠](http://www.road2stat.com/) 

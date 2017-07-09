@@ -10,6 +10,7 @@ tags:
   - 每周精选
 slug: famous-sayings
 description: "名家名言：王汉生：传统制造业才是大数据的金矿。R 包：突破数据框读写瓶颈，又一个造轮子的工作，Feather值得一试..."
+forum_id: 419125
 ---
 
 本期投稿：朱雪宁、[王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁；编辑：王小宁。

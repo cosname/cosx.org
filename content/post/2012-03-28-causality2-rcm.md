@@ -14,6 +14,7 @@ tags:
   - 平均因果作用
   - 随机化试验
 slug: causality2-rcm
+forum_id: 418865
 ---
 
 ![Donald Rubin](https://uploads.cosx.org/2012/03/Donald-Rubin.jpg)

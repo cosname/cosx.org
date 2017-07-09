@@ -7,6 +7,7 @@ categories:
 tags:
   - 每周精选
 slug: webgl-instead-of-html5
+forum_id: 418910
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [陈堰平](http://yanping.me/cn/) [吕晓玲](http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/128.html)

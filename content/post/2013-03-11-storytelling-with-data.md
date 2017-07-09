@@ -7,6 +7,7 @@ categories:
 tags:
   - 每周精选
 slug: storytelling-with-data
+forum_id: 418919
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [肖楠](http://www.road2stat.com/) [魏太云](http://taiyun.cos.name/)

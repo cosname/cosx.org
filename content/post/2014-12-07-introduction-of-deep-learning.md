@@ -8,6 +8,7 @@ categories:
   - 每周精选
   - 统计之都
 slug: introduction-of-deep-learning
+forum_id: 419047
 ---
 
 本期投稿：[王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo%20)

@@ -11,6 +11,7 @@ tags:
   - COS访谈
   - 数据科学
 slug: interview-of-yidanhui
+forum_id: 418946
 ---
 
 【COS编辑部按】受访人：易丹辉教授

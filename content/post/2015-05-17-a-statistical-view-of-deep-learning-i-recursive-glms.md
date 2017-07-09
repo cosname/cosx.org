@@ -5,6 +5,7 @@ author: COS编辑部
 categories:
   - 统计之都
 slug: a-statistical-view-of-deep-learning-i-recursive-glms
+forum_id: 419080
 ---
 
 原文链接：[http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/](http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/)

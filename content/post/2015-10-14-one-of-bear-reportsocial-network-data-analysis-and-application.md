@@ -11,6 +11,7 @@ tags:
   - 新闻推荐
   - 社交网络
 slug: one-of-bear-reportsocial-network-data-analysis-and-application
+forum_id: 419102
 ---
 
 周静、朱雪宁

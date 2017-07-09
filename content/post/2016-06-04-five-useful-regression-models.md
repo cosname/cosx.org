@@ -12,6 +12,7 @@ tags:
   - 线性回归
   - 计数回归
 slug: five-useful-regression-models
+forum_id: 419141
 ---
 
 今天要跟大家分享的主题叫做：数据江湖，回归5式！

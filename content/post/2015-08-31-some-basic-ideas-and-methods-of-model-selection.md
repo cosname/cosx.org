@@ -12,6 +12,7 @@ tags:
   - 统计分析
   - 统计学习
 slug: some-basic-ideas-and-methods-of-model-selection
+forum_id: 419093
 ---
 
 作者：[高涛](http://joegaotao.github.io)  编辑：王小宁

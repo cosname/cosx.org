@@ -25,6 +25,7 @@ tags:
 slug: measure-classification-model-performance-roc-auc
 description: "上回我们提到，ROC曲线就是不同的阈值下，以下两个变量的组合（如果对Sensitivity和Specificity两个术语没有概念，不妨返回，《分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵》，强烈建议读者对着看）：
 Sensitivity（覆盖率，True Positive Rate）;1-Specificity (Specificity, 负例的覆盖率，True Negative Rate)"
+forum_id: 418762
 ---
 
 # ROC

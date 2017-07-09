@@ -12,6 +12,7 @@ tags:
   - 词频
   - 频率
 slug: statistics-in-chinese-song-poem-1
+forum_id: 418833
 ---
 
 ![统计词话配图](https://uploads.cosx.org/2011/03/image.jpg)

@@ -8,6 +8,7 @@ categories:
 tags:
   - 每周精选
 slug: super-mario-and-machine-learning
+forum_id: 418931
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [肖楠](http://www.road2stat.com/)

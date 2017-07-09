@@ -15,6 +15,7 @@ tags:
   - 频率
   - 频率派
 slug: the-odyssey-of-stat-frequentist-or-bayesian
+forum_id: 418890
 ---
 
 本文引自施涛的博客，其中重要的英文都进行了翻译，原文请[点击此处](http://blog.cos.name/taoshi/2012/12/07/frequentist-or-bayesian/)

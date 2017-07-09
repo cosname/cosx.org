@@ -15,6 +15,7 @@ tags:
   - 精细估计
   - 统计分析
 slug: relationship-big-data-statistics
+forum_id: 418940
 ---
 
 > 本文转载自施涛的博客，原文链接请[点击此处](http://blog.cos.name/taoshi/2013/05/29/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%97%B6%E4%BB%A3%E5%92%8C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E9%9C%80%E6%B1%82%EF%BC%8C%E7%BB%9F%E8%AE%A1%E8%BF%98%E6%B2%BE%E8%BE%B9%E5%90%97%EF%BC%9F/)。

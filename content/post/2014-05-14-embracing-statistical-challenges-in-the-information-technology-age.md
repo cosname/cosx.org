@@ -14,6 +14,7 @@ tags:
   - 统计应用
   - 读书
 slug: embracing-statistical-challenges-in-the-information-technology-age
+forum_id: 419019
 ---
 
 本文略有修改，原文请点击[此处](http://blog.cos.name/taoshi/2014/05/12/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE%EF%BC%9A%E8%BF%8E%E6%8E%A5%E4%BF%A1%E6%81%AF%E6%97%B6%E4%BB%A3%E7%9A%84%E7%BB%9F%E8%AE%A1%E6%8C%91%E6%88%98/)

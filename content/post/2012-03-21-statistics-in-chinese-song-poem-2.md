@@ -14,6 +14,7 @@ tags:
   - 词人
   - 词牌
 slug: statistics-in-chinese-song-poem-2
+forum_id: 418863
 ---
 
 ![统计词话（二）配图](https://uploads.cosx.org/2012/03/galaxy.jpg)

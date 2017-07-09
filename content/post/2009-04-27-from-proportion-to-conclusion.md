@@ -12,6 +12,7 @@ tags:
   - 调查
   - 造假
 slug: from-proportion-to-conclusion
+forum_id: 418787
 ---
 
 新华网刚发布了一个[关于学生冬季长跑的调查结果](http://news.xinhuanet.com/society/2009-04/22/content_11230487.htm "http://news.xinhuanet.com/society/2009-04/22/content_11230487.htm")（于2009年4月27日13:52访问），一共调查了100人，结果中却出现了92.79%这样的比例数字，有常识的读者都知道，世上不存在0.79个人，因此这里面必然有某个地方是错的（姑且不妄言造假）。这则消息让我马上想起《统计陷阱》这本书，我们生活中有多少陷阱呢？

@@ -13,6 +13,7 @@ tags:
   - 论坛
   - 高校计划
 slug: cos-navigation-9
+forum_id: 418776
 ---
 
 # 一、主站

@@ -14,6 +14,7 @@ tags:
   - 数据源
   - 日历热图
 slug: calendarheatmap
+forum_id: 418870
 ---
 
 ![看着有节，摸着无节，打一生活用品](https://uploads.cosx.org/2012/05/summer.jpg)

@@ -15,6 +15,7 @@ tags:
   - 鞅
   - 马氏过程
 slug: different-ways-to-solve-a-tossing-problem
+forum_id: 418830
 ---
 
 ![](https://uploads.cosx.org/2011/01/coin.jpg)

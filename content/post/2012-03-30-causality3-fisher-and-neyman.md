@@ -16,6 +16,7 @@ tags:
   - 随机化检验
   - 零假设
 slug: causality3-fisher-and-neyman
+forum_id: 418866
 ---
 
 ![R.A. Fisher](https://uploads.cosx.org/2012/03/R.A.-Fisher.jpg)

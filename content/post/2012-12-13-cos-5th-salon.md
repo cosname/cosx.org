@@ -9,6 +9,7 @@ categories:
 tags:
   - COS沙龙
 slug: cos-5th-salon
+forum_id: 418891
 ---
 
 2012年12月9日，第七期COS沙龙以“**数据可视化**”为话题，在人民大学泊星地咖啡厅举行。

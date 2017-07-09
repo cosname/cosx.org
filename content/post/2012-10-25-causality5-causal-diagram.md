@@ -7,6 +7,7 @@ categories:
   - 经典理论
   - 统计推断
 slug: causality5-causal-diagram
+forum_id: 418887
 ---
 
 ![nep7x](https://cloud.githubusercontent.com/assets/18478302/25562030/a1d55f52-2dac-11e7-80b9-13f4c11cf121.jpg)

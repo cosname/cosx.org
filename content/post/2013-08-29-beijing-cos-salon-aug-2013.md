@@ -9,6 +9,7 @@ categories:
 tags:
   - COS沙龙
 slug: beijing-cos-salon-aug-2013
+forum_id: 418962
 ---
 
 ![salon_11_1](https://uploads.cosx.org/2013/08/salon_11_1.jpg) 2013年8月24日，COS数据分析沙龙（北京）第十三期如期在中国人民大学举行。本期嘉宾我们邀请了来自宏源证劵高级分析师赵国栋先生，赵国栋先生给大家分享了主题为“大数据时代的历史机遇”讲座。酷热的夏天即将离去，但大数据的热度才刚刚开始。

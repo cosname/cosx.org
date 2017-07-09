@@ -5,6 +5,7 @@ date: '2009-10-26T05:04:42+00:00'
 author: COS管理员
 weight: 4
 menu: main
+forum_id: 418705
 ---
 
 # 中国R语言会议运行机制

@@ -12,6 +12,7 @@ tags:
   - 潜在结果模型
   - 随机性
 slug: causality7-lord-paradox
+forum_id: 418967
 ---
 
 在充满随机性的统计世界中，悖论无处不在。这一节介绍一个很有名，但是在中文统计教科书中几乎从未介绍过的悖论。这个悖论是 Educational Testing Service (ETS) 的统计学家 Frederic Lord 于 1967 年提出来的；最终由同在 ETS 工作的另外两位统计学家 Paul Holland 和 Donald Rubin 于 1982 年圆满地找出了这个悖论的根源。这部分先介绍这个悖论，再介绍 Holland 和 Rubin 的解释，最后是一些结论。

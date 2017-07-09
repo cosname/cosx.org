@@ -10,6 +10,7 @@ tags:
   - 维基
   - 论坛
 slug: cos-navigation-10
+forum_id: 418783
 ---
 
 # 一、主站
