@@ -123,6 +123,7 @@ Markdown 是一门轻量级的标注语言，谢益辉在[knitr与可重复的�
 Markdown是个简单的语言，设计的初衷是让使用者专注于内容而不是格式，以下是常用的功能：
 
 如果你使用写出以下的Markdown的内容
+
 ```markdown
 # 这是一级标题
 ## 这是二级标题
@@ -139,12 +140,15 @@ Markdown是个简单的语言，设计的初衷是让使用者专注于内容而
 1. [统计之都的网站](cos.name)
 
 代码部分
-   ```r
-   print("Hello World")
-   ```
+
+        ```r
+        print("Hello World")
+        ```
+
 ```
 
 网站中会自动生成：
+
 # 这是一级标题
 ## 这是二级标题
 
@@ -165,7 +169,7 @@ Markdown是个简单的语言，设计的初衷是让使用者专注于内容而
 print("Hello World")
 ```
 
-以上的语法足以应对90%以上的问题，想学完功能可以看[Rstudio中Markdown的介绍](http://rmarkdown.rstudio.com/lesson-8.html)，或者看[高阶作者与编辑须知](#high)
+以上的语法足以应对90%以上的问题，想学完功能可以看[RStudio中Markdown的介绍](http://rmarkdown.rstudio.com/lesson-8.html)，或者看[高阶作者与编辑须知](#high)
 
 # <span id="high">高阶作者与编辑需要注意的格式</span>
 
