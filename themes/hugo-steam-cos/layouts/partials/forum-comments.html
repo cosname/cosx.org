@@ -1,0 +1,8 @@
+<section class="forum-comments">
+    {{ if isset .Params "forum_id" }}
+    <p>
+    <span><i class="fa fa-commenting fa-2x"></i><span>
+    {{ .Site.Params.commentStr }} <a href="{{ .Site.Params.commentForumURL }}{{ .Params.forum_id }}">{{ .Site.Params.commentForumStr }}</a>
+    </p>
+    {{ end }}
+</section>

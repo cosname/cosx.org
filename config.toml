@@ -67,3 +67,7 @@ footnotereturnlinkcontents = "↩"
 
     postCopyrightStr = "敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。"
     postCopyrightImgAddr = "https://cos.name/wp-content/uploads/2017/02/qrcode_for_gh_946beec24de4_1280-300x300.jpg"
+
+    commentStr = "参与本文讨论请访问"
+    commentForumStr = "统计之都论坛"
+    commentForumURL = "https://d.cosx.org/d/"
