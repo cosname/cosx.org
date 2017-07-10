@@ -1,0 +1,5 @@
+{{ if and .Params.forum_id .Site.Params.comment_url }}
+<section class="comments">
+<p><a href="{{ .Site.Params.comment_url }}{{ .Params.forum_id }}">{{ default "View Comments" .Site.Params.text.comment }}</a></p>
+</section>
+{{ end }}
