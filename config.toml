@@ -34,9 +34,9 @@ footnotereturnlinkcontents = "↩"
 [params.text]
   back = "&larr; 返回首页"
   edit = "编辑本页 &rarr;"
-  more = "阅读全文 &rarr;"
   tags = "关键词："
   comment = "发表/查看评论"
+  truncated = "&hellip;&hellip;"
 
 [params]
 	copyright = "统计之都 版权所有 2006 - 2017"
