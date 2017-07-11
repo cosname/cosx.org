@@ -3,7 +3,7 @@ title: COS访谈第29期：出国申请经验分享（下）
 date: '2017-06-18'
 author: 统计之都
 tags: [cos访谈]
-slug: interview with bachelor 2
+slug: cos-interview-29
 description: "大家好，经历一个多月的沉淀，我们针对大四毕业生出国访谈的下篇已经新鲜出炉啦！在本访谈上篇中，我们成功领略到了师兄师姐们分享的云彩。在这一篇中，我们的小编记者团再次出动，这次兵分五路，采访了五位和统计之都十分有渊源的小伙伴，在这里，有他们的一段申请故事："
 ---
 
@@ -18,7 +18,7 @@ description: "大家好，经历一个多月的沉淀，我们针对大四毕业
 
 **录取去向：**斯坦福大学地球科学PHD
 
-![](https://github.com/MikeLYX/picture/blob/master/picture/%E7%8E%8B%E8%8E%89%E6%99%B6.png?raw=true)
+![王莉晶](https://github.com/MikeLYX/picture/blob/master/picture/%E7%8E%8B%E8%8E%89%E6%99%B6.png?raw=true)
 
 
 **邓金涛：**很开心能采访莉晶师姐。第一个问题我相信大家都会很好奇的。师姐本科是空间物理专业的，是怎么与统计打上交道的呢，最后师姐为什么又申请了地球科学这个专业呢？ 
@@ -62,7 +62,7 @@ description: "大家好，经历一个多月的沉淀，我们针对大四毕业
 
 **录取去向：**约翰霍普金斯生物统计学PHD
 
-![](https://github.com/MikeLYX/picture/blob/master/picture/%E9%99%88%E6%AC%A2.png?raw=true)
+![陈欢](https://github.com/MikeLYX/picture/blob/master/picture/%E9%99%88%E6%AC%A2.png?raw=true)
 
 
 **于嘉傲：**请问师兄最早是什么时候决定出国呢？当时是出于什么原因？
@@ -109,7 +109,7 @@ description: "大家好，经历一个多月的沉淀，我们针对大四毕业
 
 **录取去向：**南加州大学统计PHD
 
-![](https://github.com/MikeLYX/picture/blob/master/picture/%E9%82%B5%E6%80%9D%E8%90%8C.png?raw=true)
+![邵思萌](https://github.com/MikeLYX/picture/blob/master/picture/%E9%82%B5%E6%80%9D%E8%90%8C.png?raw=true)
 
 
 **李宇轩：**师姐能否简单说一下自己的本科学习经历？
@@ -191,7 +191,7 @@ description: "大家好，经历一个多月的沉淀，我们针对大四毕业
 
 **录取去向：**华盛顿大学工业工程系PHD
 
-![](https://github.com/MikeLYX/picture/blob/master/picture/%E5%86%AF%E7%92%9F%E7%83%81.png?raw=true)
+![冯璟烁](https://github.com/MikeLYX/picture/blob/master/picture/%E5%86%AF%E7%92%9F%E7%83%81.png?raw=true)
 
 
 **雷博文：**师兄好，感谢师兄接受我的采访，首先想麻烦师兄简单介绍一下自己的本科学习经历。
