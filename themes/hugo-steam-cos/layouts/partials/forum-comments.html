@@ -2,7 +2,8 @@
     {{ if isset .Params "forum_id" }}
     <p>
     <span><i class="fa fa-commenting fa-2x"></i><span>
-    {{ .Site.Params.commentStr }} <a href="{{ .Site.Params.commentForumURL }}{{ .Params.forum_id }}">{{ .Site.Params.commentForumStr }}</a>
+    {{ .Site.Params.commentStr1 }}<a href="{{ .Site.Params.commentForumURL }}">{{ .Site.Params.commentForumStr }}</a>{{ .Site.Params.commentStr2 }}
     </p>
+    <iframe src="{{ .Site.Params.commentForumURL }}/embed/{{ .Params.forum_id }}" width="100%" style="border:none;display:block;height:100vh;"></iframe>
     {{ end }}
 </section>
