@@ -1,7 +1,11 @@
+body { color: #333; }
+a { color: #f05948; }
 .article-list h1 {
   font-size: 1.3em;
   line-height: 1.3em;
 }
+.article-list a { color: #333; }
+.categories a { color: #666; }
 @media (min-width: 715px) {
   .article-list h1 {
     white-space: nowrap;
