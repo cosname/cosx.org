@@ -1,4 +1,15 @@
-.article-list h1 { font-size: 1.3em; line-height: 1.3em; }
+.article-list h1 {
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+@media (min-width: 715px) {
+  .article-list h1 {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+  .article-list h1:hover { white-space: normal; }
+}
 .header {
   border-top: 5px solid #8C1F22;
   border-bottom-color: #8C1F22;
