@@ -37,6 +37,7 @@ footnotereturnlinkcontents = "↩"
   tags = "关键词："
   comment = "发表/查看评论"
   truncated = "&hellip;&hellip;"
+  uncategorized = "未分类"
 
 [params]
 	copyright = "统计之都 版权所有 2006 - 2017"
