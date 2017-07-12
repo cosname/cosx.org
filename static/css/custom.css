@@ -1,0 +1,6 @@
+.article-list h1 { font-size: 1.3em; line-height: 1.3em; }
+.header {
+  border-top: 5px solid #8C1F22;
+  border-bottom-color: #8C1F22;
+}
+.footer { background: #8C1F22; }
