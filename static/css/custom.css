@@ -27,3 +27,13 @@ a { color: #f05948; }
 }
 .post-nav a, .pagination a { text-decoration: none; }
 .active a { text-decoration: underline; }
+
+/* iframe of Flarum page */
+#forum-frame {
+  display: block;
+  border: none;
+  width: 100%;
+  /* height and visibility will be changed by Javascript on loading */
+  visibility: hidden;
+  height: 0;
+}
