@@ -34,13 +34,10 @@ a { color: #f05948; }
   transition: background .3s;
   padding: 0 .5em;
   font-weight: bolder;
-}
-.menu-top li:hover { background: #8c1f22; }
-.menu-top li a {
-  display: flex;
-  height: 100%;
   align-items: center;
 }
+.menu-top li:hover { background: #8c1f22; }
+.menu-top li a { display: flex; }
 .menu-top li:hover a { color: #fff; }
 .footer { background: #8c1f22; }
 .article-list h1 {
