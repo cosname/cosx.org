@@ -112,28 +112,28 @@ tulips  | 799
 
 然后把需要用的python module都import进来
 
-~~~python
+```python
 import os
 import numpy as np
 import tensorflow as tf
 
 from tensorflow_vgg import vgg16
 from tensorflow_vgg import utils
-~~~
+```
 
 ### 加载识花数据集
 
 接下来我们将flower_photos文件夹中的花朵图片都载入到进来，并且用图片所在的子文件夹作为标签值。
 
-~~~
+```
 data_dir = 'flower_photos/'
 contents = os.listdir(data_dir)
 classes = [each for each in contents if os.path.isdir(data_dir + each)]
-~~~
+```
 
 ### 利用VGG16计算得到特征值
 
-~~~python
+```python
 # 首先设置计算batch的值，如果运算平台的内存越大，这个值可以设置得越高
 batch_size = 10
 # 用codes_list来存储特征值
@@ -181,13 +181,13 @@ with tf.Session() as sess:
                 # 清空数组准备下一个batch的计算
                 batch = []
                 print('{} images processed'.format(ii))
-~~~
+```
 
 这样我们就可以得到一个codes数组，和一个labels数组，分别存储了所有花朵的特征值和类别。
 
 可以用如下的代码将这两个数组保存到硬盘上：
 
-~~~python
+```python
 with open('codes', 'w') as f:
     codes.tofile(f)
     
@@ -195,24 +195,24 @@ import csv
 with open('labels', 'w') as f:
     writer = csv.writer(f, delimiter='\n')
     writer.writerow(labels)
-~~~
+```
 
 ### 准备训练集，验证集和测试集
 
 一次严谨的模型训练一定是要包含验证和测试这两个部分的。首先我把labels数组中的分类标签用One Hot Encode的方式替换。
 
-~~~python
+```python
 from sklearn.preprocessing import LabelBinarizer
 
 lb = LabelBinarizer()
 lb.fit(labels)
 
 labels_vecs = lb.transform(labels)
-~~~
+```
 
 接下来就是抽取数据，因为不同类型的花的数据数量并不是完全一样的，而且labels数组中的数据也还没有被打乱，所以最合适的方法是使用StratifiedShuffleSplit方法来进行分层随机划分。假设我们使用训练集：验证集：测试集=8:1:1，那么代码如下：
 
-~~~python
+```python
 from sklearn.model_selection import StratifiedShuffleSplit
 
 ss = StratifiedShuffleSplit(n_splits=1, test_size=0.2)
@@ -229,21 +229,21 @@ test_x, test_y = codes[test_idx], labels_vecs[test_idx]
 print("Train shapes (x, y):", train_x.shape, train_y.shape)
 print("Validation shapes (x, y):", val_x.shape, val_y.shape)
 print("Test shapes (x, y):", test_x.shape, test_y.shape)
-~~~
+```
 
 这时如果我们输出数据的维度，应该会得到如下结果：
 
-~~~
+```
 Train shapes (x, y): (2936, 4096) (2936, 5)
 Validation shapes (x, y): (367, 4096) (367, 5)
 Test shapes (x, y): (367, 4096) (367, 5)
-~~~
+```
 
 ### 训练网络
 
 分好了数据集之后，就可以开始对数据集进行训练了，假设我们使用一个256维的全连接层，一个5维的全连接层（因为我们要分类五种不同类的花朵），和一个softmax层。当然，这里的网络结构可以任意修改，你可以不断尝试其他的结构以找到合适的结构。
 
-~~~python
+```python
 # 输入数据的维度
 inputs_ = tf.placeholder(tf.float32, shape=[None, codes.shape[1]])
 # 标签数据的维度
@@ -270,11 +270,11 @@ predicted = tf.nn.softmax(logits)
 # 计算准确度
 correct_pred = tf.equal(tf.argmax(predicted, 1), tf.argmax(labels_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_pred, tf.float32))
-~~~
+```
 
 为了方便把数据分成一个个batch以降低内存的使用，还可以再用一个函数专门用来生成batch。
 
-~~~python
+```python
 def get_batches(x, y, n_batches=10):
     """ 这是一个生成器函数，按照n_batches的大小将数据划分了小块 """
     batch_size = len(x)//n_batches
@@ -288,11 +288,11 @@ def get_batches(x, y, n_batches=10):
             X, Y = x[ii:], y[ii:]
         # 生成器语法，返回X和Y
         yield X, Y
-~~~
+```
 
 现在可以运行训练了，
 
-~~~python
+```python
 # 运行多少轮次
 epochs = 20
 # 统计训练效果的频率
@@ -322,13 +322,13 @@ with tf.Session() as sess:
                       "Validation Acc: {:.4f}".format(val_acc))
     # 保存模型
     saver.save(sess, "checkpoints/flowers.ckpt")
-~~~
+```
 
 ### 测试网络
 
 接下来就是用测试集来测试模型效果
 
-~~~python
+```python
 with tf.Session() as sess:
     saver.restore(sess, tf.train.latest_checkpoint('checkpoints'))
     
@@ -336,7 +336,7 @@ with tf.Session() as sess:
             labels_: test_y}
     test_acc = sess.run(accuracy, feed_dict=feed)
     print("Test accuracy: {:.4f}".format(test_acc))
-~~~
+```
 
 最终我在自己电脑上得到了88.83%的准确度，你可以继续调整batch的大小，或者模型的结构以得到一个更好的结果。
 
