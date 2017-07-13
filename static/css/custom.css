@@ -2,10 +2,10 @@ body { color: #333; }
 a { color: #f05948; }
 .header, .header .banner { padding: 0; }
 .header {
-  border-top: 5px solid #8C1F22;
+  border-top: 5px solid #8c1f22;
   border-bottom: none;
   margin-bottom: 5px;
-  box-shadow: 0 0 10px #8C1F22;
+  box-shadow: 0 0 10px #8c1f22;
 }
 .header .banner-wrapper {
   max-width: 100%;
@@ -25,18 +25,24 @@ a { color: #f05948; }
   display: flex;
   padding-left: 0;
 }
-.menu-top li:first-child { border-left: 1px solid #8C1F22; }
+.menu-top li:first-child { border-left: 1px solid #8c1f22; }
 .menu-top li {
   display: inline-flex;
   width: 1em;
   word-break: break-all;
-  border-right: 1px solid #8C1F22;
+  border-right: 1px solid #8c1f22;
+  transition: background .3s;
   padding: 0 .5em;
   font-weight: bolder;
+}
+.menu-top li:hover { background: #8c1f22; }
+.menu-top li a {
+  display: flex;
   height: 100%;
   align-items: center;
 }
-.footer { background: #8C1F22; }
+.menu-top li:hover a { color: #fff; }
+.footer { background: #8c1f22; }
 .article-list h1 {
   font-size: 1.3em;
   line-height: 1.3em;
