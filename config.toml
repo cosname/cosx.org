@@ -46,4 +46,5 @@ footnotereturnlinkcontents = "↩"
   summary_length = 200
   github_edit = "https://github.com/cosname/cosx.org/edit/master/content/"
   comment_url = "https://d.cosx.org/d/"
+  comment_embed_url = "https://d.cosx.org/embed/"
   footer = "&copy; [统计之都](https://cosx.org) 2006 - 2017 | [新浪微博](http://weibo.com/cosname) | [Github](https://github.com/cosname) | [Twitter](https://twitter.com/cos_name) | [Google+](https://plus.google.com/110727350576315935180) | [LinkedIn](https://www.linkedin.com/groups/4564122)"
