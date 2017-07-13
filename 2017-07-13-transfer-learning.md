@@ -6,7 +6,7 @@
 
 这篇文章将示范如何利用迁移学习训练一个能从图片中分类不同种类的花的模型，它在五种花中能达到80%以上的准确度（比瞎蒙高了60%哦），而且只需要普通的家用电脑就可以完成训练过程。
 
-![花图](flower.jpg)
+![flower](https://user-images.githubusercontent.com/18478302/28164663-f7a00906-6802-11e7-8808-cbc23c810772.jpg)
 
 ## 什么是迁移学习
 
@@ -14,7 +14,7 @@
 
 举例说，源任务可以是识别图片中车辆，而目标任务可以是识别卡车，识别桥车，识别公交车等。合理的使用迁移学习可以避免针对每个目标任务单独训练模型，从而极大的节约了计算资源。
 
-![车辆识别](autopilot_car.png)
+![autopilot_car](https://user-images.githubusercontent.com/18478302/28164453-07775722-6802-11e7-8625-accff072b88b.png)
 
 
 接下来的例子中将示范如何将一个图像识别的深度卷积网络，VGG，迁移到识别花朵类型的新任务上，在原先的任务中，VGG只能识别花，但是迁移学习可以让模型不但能识别花，还能识别花的具体品种。
@@ -25,11 +25,11 @@ VGG是视觉领域竞赛ILSVRC在2014年的获胜模型，以7.3%的错误率在
 
 VGG的结构图如下：
 
-![VGG架构](vgg_architecture.jpg)
+![vgg_architecture](https://user-images.githubusercontent.com/18478302/28164680-0aa03a12-6803-11e7-968a-30eab96dd7fe.jpg)
 
 VGG的输入数据格式是244 * 224 * 3的像素数据，经过一系列的卷积神经网络和池化网络处理之后，输出的是一个4096维的特征数据，然后再通过3层全连接的神经网络处理，最终由softmax规范化得到分类结果。
 
-![softmax_demo](softmax_demo.jpg)
+![softmax_demo](https://user-images.githubusercontent.com/18478302/28164677-0362c8fa-6803-11e7-83e2-16a62dc68884.jpg)
 
 VGG16模型可以通过[这里下载](https://mega.nz/#!YU1FWJrA!O1ywiCS2IiOlUCtCpI6HTJOMrneN-Qdv3ywQP5poecM)，模型是一个.npy文件，本质上是一个巨大的numpy对象，包含了VGG16模型中的所有参数，该文件大约有500M，所以可见如果是从头训练这样一个模型是非常耗时的，借助于迁移学习的思想，我们可以直接在这个模型的基础上进行训练。
 
@@ -39,32 +39,32 @@ VGG16模型可以通过[这里下载](https://mega.nz/#!YU1FWJrA!O1ywiCS2IiOlUCt
 
 卷积神经网络在图像数据中使用得尤其多，不同于一般的全连接的神经网络需要对上下两层网络中的任意两个节点之间训练权值，每层卷积网络仅仅训练若干个卷积核，下一层的网络的输入即是前一个层的输出的卷积，因此，多层卷积神经网络会把一个薄薄的图片数据，转化为更小但是也更厚的数组，如下图所示
 
-![convolutional nn](convolutional nn.png)
+![convolutional nn](https://user-images.githubusercontent.com/18478302/28164629-d62feb1a-6802-11e7-8915-93f46f508170.png)
 
 卷积神经网络具有良好的统计不变性，而且每个层可以学习到不同层次的知识。比如第一层会学习到识别图片中的简单形状，例如直线和纯色块等。而之后的层将会上升到更高的抽象层次，比如例如形状，物体的组成部分，直到能够识别整个物体。
 
 如果我们将卷积神经网络中激活神经元的图像可视化出来，那么会得到如下的结果，首先第一层能识别出一些对角线和颜色的分界。
 
-![layer1](CNN layer1)
+![layer1](https://user-images.githubusercontent.com/18478302/28164544-7688dd66-6802-11e7-9136-c34bd8005af3.png)
 
 然后第二层网络可以学习到了一些稍微复杂的概念，比如圈和条纹。
 
-![layer2](CNN layer2)
+![layer2](https://user-images.githubusercontent.com/18478302/28164552-86728b28-6802-11e7-97af-a3c18b1a9353.png)
 
 第三层学习到了一些简单的物体，比如轮胎和脸。
 
-![layer3](CNN layer3)
+![layer3](https://user-images.githubusercontent.com/18478302/28164576-a2b80038-6802-11e7-8ad0-d9d41c8be26f.png)
 
 到了更高的层数，卷积神经网络能够识别出越来越复杂的物体，这个过程也非常符合人类识别物体的过程，即从简单模式越来越复杂的模式。
 
-![layer4](CNN layer4)
+![layer5](https://user-images.githubusercontent.com/18478302/28164612-c219e7b6-6802-11e7-8b43-4b7958db57c0.png)
 
 
 ## Max Pooling和Drop out
 
 最大池化和Drop out都是卷积神经网络中常用的技巧，他们的原理都非常简单，最大池化既是一个滤波器，该滤波器按照一定的步长把一个区域内的值选出一个最大值作为这个区域的代表值。如下图所示：
 
-![pooling](pooling.png)
+![pooling](https://user-images.githubusercontent.com/18478302/28164669-fdffd150-6802-11e7-98d1-24603f1a1383.png)
 
 这样的做的一个好处是可以使神经网络专注于最重要的元素，减少输入元素的大小。
 
@@ -342,15 +342,15 @@ with tf.Session() as sess:
 
 对这张有一个七星瓢虫的蒲公英图
 
-![dadelion_test](dadelion_test.png)
+![dadelion_test](https://user-images.githubusercontent.com/18478302/28164645-e5edb564-6802-11e7-8a23-358f8318afc1.png)
 
 模型给出的预测值如下
 
-![dadelion_test_result](dadelion_test_result.png)
+![dadelion_test_result](https://user-images.githubusercontent.com/18478302/28164657-f0b4280c-6802-11e7-9400-2daf0938873f.png)
 
 可以看出模型的效果还是相当稳定的，而且整个过程中我们的计算时间不过超过30分钟，这就是迁移学习的魅力。
 
-## 参考资料
+# 参考资料
 
 * Tensorflow的识花迁移学习[https://www.tensorflow.org/tutorials/image_retraining](https://www.tensorflow.org/tutorials/image_retraining)
 * VGG网络[https://arxiv.org/pdf/1409.1556.pdf](https://arxiv.org/pdf/1409.1556.pdf)
