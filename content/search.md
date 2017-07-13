@@ -34,7 +34,7 @@ menu: main
       <div class="input-group">
         <input type="text" class="form-control" id="q" />
         <span class="input-group-btn">
-          <button onclick='search.helper.search();'><i class="fa fa-search"></i></button>
+          <button onclick='search.helper.search();'>搜索</button>
         </span>
       </div>
     </div>

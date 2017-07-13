@@ -1,4 +1,4 @@
-/* global instantsearch */
+(function() {
 
 var search = instantsearch({
   appId: 'VB9T8VTPNU',
@@ -6,13 +6,7 @@ var search = instantsearch({
   indexName: 'cosx.org',
   urlSync: {},
   searchFunction: function(helper) {
-    var searchResults = $('.search-results');
-    if (helper.state.query === '') {
-      searchResults.hide();
-      return;
-    }
-    helper.search();
-    searchResults.show();
+    if (helper.state.query !== '') helper.search();
   }
 });
 
@@ -22,12 +16,6 @@ search.addWidget(
     searchOnEnterKeyPressOnly: true
   })
 );
-
-// search.addWidget(
-//   instantsearch.widgets.stats({
-//     container: '#stats'
-//   })
-// );
 
 var hitTemplate =
   '<article class="preview">' +
@@ -56,53 +44,15 @@ search.addWidget(
       item: hitTemplate
     },
     transformData: function(hit) {
-      if(!hit.description){
+      if (!hit.description){
         hit.description = hit.content.slice(0,100).replace("\n","")+'...'
       }
       hit.date = hit.date.slice(0,10);
-      // hit.stars = [];
-      // for (var i = 1; i <= 5; ++i) {
-      //   hit.stars.push(i <= hit.rating);
-      // }
-      console.log(hit)
       return hit;
     }
   })
 );
 
-// search.addWidget(
-//   instantsearch.widgets.pagination({
-//     container: '#pagination',
-//     cssClasses: {
-//       root: 'pagination',
-//       active: 'active'
-//     }
-//   })
-// );
-
-// search.addWidget(
-//   instantsearch.widgets.refinementList({
-//     container: '#genres',
-//     attributeName: 'genre',
-//     operator: 'and',
-//     limit: 10,
-//     cssClasses: {
-//       list: 'nav nav-list',
-//       count: 'badge pull-right',
-//       active: 'active'
-//     }
-//   })
-// );
-//
-// search.addWidget(
-//   instantsearch.widgets.starRating({
-//     container: '#ratings',
-//     attributeName: 'rating',
-//     cssClasses: {
-//       list: 'nav',
-//       count: 'badge pull-right'
-//     }
-//   })
-// );
-
 search.start();
+
+})();
