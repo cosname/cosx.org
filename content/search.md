@@ -1,7 +1,7 @@
 ---
 title: 搜索
 weight: 8
-menu: main
+menu: [main, top]
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css" />

@@ -1,0 +1,15 @@
+<div class="banner-wrapper">
+<div class="banner">
+<div class="banner-image"><a href="{{ relURL .Site.BaseURL }}">{{ with .Site.Params.banner }}
+<picture>
+  {{ range .source }}<source media="{{ .media }}" srcset="{{ relURL .srcset }}">{{ end }}
+  <img src="{{ relURL .src }}" alt="{{ .alt }}">
+</picture>
+{{ end }}</a></div>
+<ul class="menu-top">
+  {{ range .Site.Menus.top }}
+  <li><a href="{{ .URL | relURL }}"><span data-hover="{{ .Name }}">{{ .Name }}</span></a></li>
+  {{ end }}
+</ul>
+</div>
+</div>

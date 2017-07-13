@@ -27,9 +27,32 @@ footnotereturnlinkcontents = "↩"
   url = "https://d.cosx.org"
   weight = 3
 
+[[menu.top]]
+  name = "首页"
+  url = "/"
+  weight = 1
+
+[[menu.top]]
+  name = "论坛"
+  url = "https://d.cosx.org"
+  weight = 3
+
+[[menu.top]]
+  name = "投稿"
+  url = "/contribute/"
+  weight = 4
+
 [params.banner]
-  src = "/img/logo-full.png"
+  src = "/img/logo-wide.png"
   alt = "统计之都 标志"
+
+[[params.banner.source]]
+  media = "(max-width: 715px)"
+  srcset = "/img/logo.png"
+
+[[params.banner.source]]
+  media = "(max-width: 380px)"
+  srcset = "/img/logo-80.png"
 
 [params.text]
   about_author = "关于作者"
