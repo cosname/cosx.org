@@ -17,6 +17,10 @@ a { color: #f05948; }
   justify-content: space-between;
   align-items: stretch;
 }
+.header .banner-image, .menu-top {
+  display: table-cell;
+  vertical-align: middle;
+}
 .header .banner-image {
   margin-left: 0;
   padding-left: 0;
@@ -27,6 +31,7 @@ a { color: #f05948; }
 }
 .menu-top li:first-child { border-left: 1px solid #8c1f22; }
 .menu-top li {
+  display: inline-block;
   display: flex;
   width: 1em;
   word-break: break-all;
