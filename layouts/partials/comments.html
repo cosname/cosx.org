@@ -1,11 +1,11 @@
 {{ if and .Params.forum_id .Site.Params.comment_url }}
 <section class="comments">
-<p><a href="{{ .Site.Params.comment_url }}{{ .Params.forum_id }}">{{ default "View Comments" .Site.Params.text.comment }}</a></p>
+<p><a href="{{ .Site.Params.comment_url }}{{ .Params.forum_id }}" target="_blank">{{ default "View Comments" .Site.Params.text.comment }}</a></p>
 </section>
 
 <div id="comment-box">
-    <iframe id="forum-frame" data-src="{{ .Site.Params.comment_embed_url }}{{ .Params.forum_id }}"></iframe>
+  <iframe id="forum-frame" data-src="{{ .Site.Params.comment_embed_url }}{{ .Params.forum_id }}"></iframe>
 </div>
 
-<script type="text/javascript" src="/js/comments.js"></script>
+<script type="text/javascript" src="{{ relURL "/js/comments.js"}}"></script>
 {{ end }}
