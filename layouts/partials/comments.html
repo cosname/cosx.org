@@ -4,11 +4,8 @@
 </section>
 
 <div id="comment-box">
-    <iframe id="forum-frame"></iframe>
+    <iframe id="forum-frame" data-src="{{ .Site.Params.comment_embed_url }}{{ .Params.forum_id }}"></iframe>
 </div>
 
 <script type="text/javascript" src="/js/comments.js"></script>
-<script type="text/javascript">
-    comments_delayed_loading("comment-box", "forum-frame", "{{ .Site.Params.comment_embed_url }}{{ .Params.forum_id }}");
-</script>
 {{ end }}
