@@ -1,5 +1,8 @@
-body { color: #333; }
+body { color: radial-gradient(8em circle at 30%,30%, white, rgb(170, 170, 170))}
 a { color: #f05948; }
+
+
+
 .article-list h1 {
   font-size: 1.3em;
   line-height: 1.3em;
@@ -11,11 +14,13 @@ a { color: #f05948; }
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
-	-webkit-transition: height 0.6s;
-	-moz-transition: height 0.6s;
-	transition: height 0.6s;
+	max-height: 30px;
+	transition: max-height 3s
   }
-  .article-list h1:hover { white-space: normal; 
+  .article-list h1:hover { 
+	max-height:100px;
+	white-space: normal;
+	transition: max-height 3s
 
   }
 }
