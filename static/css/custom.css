@@ -96,6 +96,7 @@ article a:hover { font-weight: bold; color: #00b0cf; }
   font-size: .9em;
   margin-top: 1em;
 }
+.article-footer img { max-width: 200px; }
 
 .post-nav {padding: 1em 0;}
 .post-nav a { font-weight: bold; }
