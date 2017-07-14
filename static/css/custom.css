@@ -28,48 +28,24 @@ a { color: #f05948; }
 .post-nav a, .pagination a { text-decoration: none; }
 .active a { text-decoration: underline; }
 
-.article-meta {
-	background: white
+.article-meta { background: transparent; }
+article { box-shadow: 0 0 8px #ccc; }
+
+article a { text-decoration: none; }
+
+article a:hover { font-weight: bold; color: #00b0cf; }
+
+.article-footer {
+  padding: 0 1em 0 1em;
+  border: 1px solid #8c1f22;
+  font-size: .9em;
 }
 
-article {
-    box-shadow: 0 0 8px #ccc;
-    margin: 0 1em 0 1em;
-	  letter-spacing: 0.04em
-}
+.post-nav {padding-top: 1em;}
 
-article a{
-	text-decoration: none;
-}
+.post-nav a { font-weight: bold; }
 
-article a:hover{
-	font-weight: bold;
-	color: #00B0CF
-}
+.nav-prev { text-align: left; }
+.nav-next { text-align: right; }
 
-.article-footer{
-	padding: 0 1em 0 1em;
-	border: 1px solid #8c1f22;
-	font-size: 1.1em;
-	letter-spacing: 0.07em
-}
-
-.post-nav{padding-top:15px}
-
-
-.post-nav a{
-	font-weight: bold;
-	position: relative;
-}
-
-
-.nav-prev {
-	text-align: left;
-}
-
-.nav-sep{
-  color: white;
-}
-.nav-next {
-	text-align: right;
-}
+.nav-sep { color: transparent; }
