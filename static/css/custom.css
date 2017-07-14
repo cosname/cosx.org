@@ -1,7 +1,5 @@
-body { color: radial-gradient(8em circle at 30%,30%, white, rgb(170, 170, 170))}
+body { color: #333}
 a { color: #f05948; }
-
-
 
 .article-list h1 {
   font-size: 1.3em;
@@ -14,14 +12,9 @@ a { color: #f05948; }
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
-	max-height: 30px;
-	transition: max-height 3s
   }
   .article-list h1:hover { 
-	max-height:100px;
 	white-space: normal;
-	transition: max-height 3s
-
   }
 }
 .header {
@@ -30,67 +23,39 @@ a { color: #f05948; }
 }
 .footer { background: #8C1F22; }
 
-.footer .menu a{
-padding:0
-}
-.footer .menu a {
-	line-height: 2em;
-	-webkit-perspective: 800px;
-	-moz-perspective: 800px;
-	perspective: 800px;
-}
 
-.footer .menu a span {
+/* Effect 4: bottom border enlarge */
+.footer .menu a {
+	padding:0;
 	position: relative;
 	display: inline-block;
-	padding: 3px 15px 0;
-	background: #8C1F22;
-	box-shadow: inset 0 3px #8C1F22;
-	-webkit-transition: background 0.6s;
-	-moz-transition: background 0.6s;
-	transition: background 0.6s;
-	-webkit-transform-origin: 50% 0;
-	-moz-transform-origin: 50% 0;
-	transform-origin: 50% 0;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform-origin: 0% 50%;
-	-moz-transform-origin: 0% 50%;
-	transform-origin: 0% 50%;
+	color: #fff;
 }
 
-.footer .menu a span::before {
+.footer .menu a:hover,
+.footer .menu a:focus {
+	outline: none;
+	background: #8C1F22;
+}
+
+.footer .menu a::after {
 	position: absolute;
-	top: 0;
+	top: 100%;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 10px;
 	background: #fff;
-	color: #8C1F22;
-	content: attr(data-hover);
-	-webkit-transform: rotateX(270deg);
-	-moz-transform: rotateX(270deg);
-	transform: rotateX(270deg);
-	-webkit-transition: -webkit-transform 0.6s;
-	-moz-transition: -moz-transform 0.6s;
-	transition: transform 0.6s;
-	-webkit-transform-origin: 0 0;
-	-moz-transform-origin: 0 0;
-	transform-origin: 0 0;
-	pointer-events: none;
+	content: '';
+	opacity: 0;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	transform: translateY(-5px);
 }
 
-.footer .menu a:hover span,
-.footer .menu a:focus span {
-	background: #8C1F22;
-}
-
-.footer .menu a:hover span::before,
-.footer .menu a:focus span::before {
-	-webkit-transform: rotateX(10deg);	
-	-moz-transform: rotateX(10deg);
-	transform: rotateX(10deg);
+.footer .menu a:hover::after,
+.footer .menu a:focus::after {
+	height: 3px;
+	opacity: 1;
+	transform: translateY(0px);
 }
 
 .summary img{
@@ -102,28 +67,34 @@ padding:0
     transform: scale(1.4);
 }
 
+/* Effect 1: Brackets */
+.categories a{
+	position: relative;
+	left:-16px;
+	transition: left 0.6s;
+}
+
+.categories a:hover{
+	left:0px;
+	transition: left 0.6s;
+}
+
 .categories a::before,
 .categories a::after {
 	display: inline-block;
 	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.2s;
 	transition: transform 0.3s, opacity 0.2s;
 }
 
 .categories a::before {
 	margin-right: 10px;
 	content: '[';
-	-webkit-transform: translateX(20px);
-	-moz-transform: translateX(20px);
 	transform: translateX(20px);
 }
 
 .categories a::after {
 	margin-left: 10px;
 	content: ']';
-	-webkit-transform: translateX(-20px);
-	-moz-transform: translateX(-20px);
 	transform: translateX(-20px);
 }
 
@@ -132,25 +103,5 @@ padding:0
 .categories a:focus::before,
 .categories a:focus::after {
 	opacity: 1;
-	-webkit-transform: translateX(0px);
-	-moz-transform: translateX(0px);
 	transform: translateX(0px);
 }
-
-
-
-
-.article-list h1 a:hover {
-	color: #f05948;
-	text-decoration: none
-}
-
-
-.pagination a{
-	text-decoration: none
-}
-
-.pagination a:hover{
-	text-decoration: none
-}
-
