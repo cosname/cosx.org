@@ -23,8 +23,7 @@ a { color: #f05948; }
 }
 .footer { background: #8C1F22; }
 
-
-/* Effect 4: bottom border enlarge */
+/*脚注CSS */
 .footer .menu a {
 	padding:0;
 	position: relative;
@@ -58,16 +57,7 @@ a { color: #f05948; }
 	transform: translateY(0px);
 }
 
-.summary img{
-    cursor: pointer;
-    transition: all 0.6s;
-}
-
-.summary img:hover {
-    transform: scale(1.4);
-}
-
-/* Effect 1: Brackets */
+/* 分类CSS */
 .categories a{
 	position: relative;
 	left:-16px;
@@ -105,3 +95,15 @@ a { color: #f05948; }
 	opacity: 1;
 	transform: translateX(0px);
 }
+
+/*图片CSS*/
+.summary img { transition: transform 0.6s; }
+.summary img:hover { transform: scale(1.4); }
+
+.article-list h1 a:hover {
+  color: #f05948;
+  text-decoration: none
+}
+.post-nav a, .pagination a { text-decoration: none; }
+.active a { text-decoration: underline; }
+
