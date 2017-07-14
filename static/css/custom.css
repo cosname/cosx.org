@@ -27,3 +27,50 @@ a { color: #f05948; }
 }
 .post-nav a, .pagination a { text-decoration: none; }
 .active a { text-decoration: underline; }
+
+
+article {
+    box-shadow: 0 0 8px #ccc;
+    margin: 1em 0 0 15px;
+	letter-spacing: 0.04em
+}
+
+article a{
+	text-decoration: none;
+}
+
+article a:hover{
+	font-weight: bold;
+	color: #00B0CF
+}
+
+.article-footer{
+	padding: 0 1em 0 1em;
+	border: 1px solid #8c1f22;
+	font-size: 1.1em;
+	letter-spacing: 0.07em
+}
+
+.post-nav{padding-top:15px}
+
+.post-nav a{
+	font-weight: bold;
+	font-size:1.5em;
+	position: relative;
+	white-space: nowrap;
+}
+
+.post-nav a:hover{
+	white-space: normal;
+}
+
+.nav-prev {
+	text-align: left;
+}
+
+.nav-sep{
+	display:none
+}
+.nav-next {
+	text-align: right;
+}
