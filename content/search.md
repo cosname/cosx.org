@@ -1,6 +1,5 @@
 ---
 title: 搜索
-date: '2009-03-15T23:48:26+00:00'
 weight: 8
 menu: main
 ---

@@ -49,3 +49,13 @@ article a:hover { font-weight: bold; color: #00b0cf; }
 .nav-next { text-align: right; }
 
 .nav-sep { color: transparent; }
+
+/* iframe of Flarum page */
+#forum-frame {
+  display: block;
+  border: none;
+  width: 100%;
+  /* height and visibility will be changed by Javascript on loading */
+  visibility: hidden;
+  height: 0;
+}
