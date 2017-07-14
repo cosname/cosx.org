@@ -7,6 +7,11 @@ a { color: #f05948; }
   margin-bottom: 5px;
   box-shadow: 0 0 10px #8c1f22;
 }
+.page .header {
+  box-shadow: none;
+  border-bottom: 1px solid #8c1f22;
+  margin-bottom: 1em;
+}
 .header .banner-wrapper {
   max-width: 100%;
   background: rgba(142, 31, 35, 0.025);
@@ -48,6 +53,11 @@ a { color: #f05948; }
 .article-list h1 {
   font-size: 1.3em;
   line-height: 1.3em;
+}
+main h1 {
+  font-size: 1.7em;
+  padding-bottom: .3em;
+  border-bottom: 5px solid #eee;
 }
 .article-list a { color: #333; }
 .categories a { color: #666; }
