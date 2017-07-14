@@ -4,11 +4,9 @@ function show_iframe(iframe_elem) {
     if (iframe_elem.hasAttribute("src")) {
         return;
     }
-    if (iframe_elem.hasAttribute("data-src")) {
-        iframe_elem.src = iframe_elem.getAttribute("data-src");
-        iframe_elem.style.height = "700px";
-        iframe_elem.style.visibility = "visible";
-    }
+    iframe_elem.src = iframe_elem.getAttribute("data-src");
+    iframe_elem.style.height = "700px";
+    iframe_elem.style.visibility = "visible";
 }
 
 // https://stackoverflow.com/questions/487073/check-if-element-is-visible-after-scrolling/488073#488073
@@ -37,7 +35,7 @@ function iframe_delayed_loading(iframe_elem) {
 }
 
 // Find all iframes
-var iframes = document.querySelectorAll("iframe");
+var iframes = document.querySelectorAll("iframe[data-src]");
 var len = iframes.length;
 var i;
 for (i = 0; i < len; i++) {
