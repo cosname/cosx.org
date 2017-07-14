@@ -15,7 +15,7 @@ a {
   border-bottom: 1px solid #8c1f22;
   margin-bottom: 1em;
 }
-.header .banner-wrapper {
+.header .banner-wrapper, .page .header .banner-wrapper {
   max-width: 100%;
   background: rgba(142, 31, 35, 0.025);
 }
