@@ -1,5 +1,6 @@
-body { color: #333; }
+body { color: #333}
 a { color: #f05948; }
+
 .article-list h1 {
   font-size: 1.3em;
   line-height: 1.3em;
@@ -12,18 +13,97 @@ a { color: #f05948; }
     overflow-x: hidden;
     text-overflow: ellipsis;
   }
-  .article-list h1:hover { white-space: normal; }
+  .article-list h1:hover { 
+	white-space: normal;
+  }
 }
 .header {
   border-top: 5px solid #8C1F22;
   border-bottom-color: #8C1F22;
 }
 .footer { background: #8C1F22; }
+
+/*脚注CSS */
+.footer .menu a {
+	padding:0;
+	position: relative;
+	display: inline-block;
+	color: #fff;
+}
+
+.footer .menu a:hover,
+.footer .menu a:focus {
+	outline: none;
+	background: #8C1F22;
+}
+
+.footer .menu a::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	background: #fff;
+	content: '';
+	opacity: 0;
+	transition: height 0.3s, opacity 0.3s, transform 0.3s;
+	transform: translateY(-5px);
+}
+
+.footer .menu a:hover::after,
+.footer .menu a:focus::after {
+	height: 3px;
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+/* 分类CSS */
+.categories a{
+	position: relative;
+	left:-16px;
+	transition: left 0.6s;
+}
+
+.categories a:hover{
+	left:0px;
+	transition: left 0.6s;
+}
+
+.categories a::before,
+.categories a::after {
+	display: inline-block;
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.categories a::before {
+	margin-right: 10px;
+	content: '[';
+	transform: translateX(20px);
+}
+
+.categories a::after {
+	margin-left: 10px;
+	content: ']';
+	transform: translateX(-20px);
+}
+
+.categories a:hover::before,
+.categories a:hover::after,
+.categories a:focus::before,
+.categories a:focus::after {
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+/*图片CSS*/
 .summary img { transition: transform 0.6s; }
 .summary img:hover { transform: scale(1.4); }
+
 .article-list h1 a:hover {
   color: #f05948;
   text-decoration: none
 }
 .post-nav a, .pagination a { text-decoration: none; }
 .active a { text-decoration: underline; }
+
