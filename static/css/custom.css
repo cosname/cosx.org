@@ -58,22 +58,15 @@ article a:hover{
 
 .post-nav a{
 	font-weight: bold;
-	font-size:1.5em;
 	position: relative;
-	white-space: nowrap;
 }
 
-.post-nav a:hover{
-	white-space: normal;
-}
 
 .nav-prev {
 	text-align: left;
 }
 
-.nav-sep{
-	display:none
-}
+
 .nav-next {
 	text-align: right;
 }
