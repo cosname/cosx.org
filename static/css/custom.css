@@ -34,8 +34,8 @@ a { color: #f05948; }
 
 article {
     box-shadow: 0 0 8px #ccc;
-    margin: 1em 0 0 15px;
-	letter-spacing: 0.04em
+    margin: 0 1em 0 1em;
+	  letter-spacing: 0.04em
 }
 
 article a{
@@ -56,6 +56,7 @@ article a:hover{
 
 .post-nav{padding-top:15px}
 
+
 .post-nav a{
 	font-weight: bold;
 	position: relative;
@@ -66,7 +67,9 @@ article a:hover{
 	text-align: left;
 }
 
-
+.nav-sep{
+  color: white;
+}
 .nav-next {
 	text-align: right;
 }
