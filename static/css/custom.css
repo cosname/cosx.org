@@ -1,8 +1,66 @@
 body { color: #333; }
-a { color: #f05948; }
+a {
+  color: #f05948;
+  text-decoration: none;
+}
+.header, .header .banner { padding: 0; }
+.header {
+  border-top: 5px solid #8c1f22;
+  border-bottom: none;
+  margin-bottom: 5px;
+  box-shadow: 0 0 10px #8c1f22;
+}
+.page .header {
+  box-shadow: none;
+  border-bottom: 1px solid #8c1f22;
+  margin-bottom: 1em;
+}
+.header .banner-wrapper, .page .header .banner-wrapper {
+  max-width: 100%;
+  background: rgba(142, 31, 35, 0.025);
+}
+.banner {
+  font-size: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.header .banner-image, .menu-top {
+  display: table-cell;
+  vertical-align: middle;
+}
+.header .banner-image {
+  margin-left: 0;
+  padding-left: 0;
+}
+.menu-top {
+  display: flex;
+  padding-left: 0;
+}
+.menu-top li:first-child { border-left: 1px solid #8c1f22; }
+.menu-top li {
+  display: inline-block;
+  display: flex;
+  width: 1em;
+  word-break: break-all;
+  border-right: 1px solid #8c1f22;
+  transition: background .3s;
+  padding: 0 .5em;
+  font-weight: bolder;
+  align-items: center;
+}
+.menu-top li:hover { background: #8c1f22; }
+.menu-top li a { display: flex; }
+.menu-top li:hover a { color: #fff; }
+.footer { background: #8c1f22; }
 .article-list h1 {
   font-size: 1.3em;
   line-height: 1.3em;
+}
+.page main h1 {
+  font-size: 1.7em;
+  padding-bottom: .3em;
+  border-bottom: 5px solid #eee;
 }
 .article-list a { color: #333; }
 .categories a { color: #666; }
@@ -14,40 +72,34 @@ a { color: #f05948; }
   }
   .article-list h1:hover { white-space: normal; }
 }
-.header {
-  border-top: 5px solid #8C1F22;
-  border-bottom-color: #8C1F22;
+@media (max-width: 715px) {
+  .banner img {
+    max-height: 5.5em;
+    max-width: none;
+    margin: 2px 0;
+  }
 }
-.footer { background: #8C1F22; }
 .summary img { transition: transform 0.6s; }
 .summary img:hover { transform: scale(1.4); }
 .article-list h1 a:hover {
   color: #f05948;
   text-decoration: none
 }
-.post-nav a, .pagination a { text-decoration: none; }
 .active a { text-decoration: underline; }
 .article-meta { background: transparent; }
 article { box-shadow: 0 0 8px #ccc; }
-
-article a { text-decoration: none; }
-
 article a:hover { font-weight: bold; color: #00b0cf; }
 
 .article-footer {
   padding: 0 1em 0 1em;
   border: 1px solid #8c1f22;
   font-size: .9em;
+  margin-top: 1em;
 }
+.article-footer img { max-width: 200px; }
 
-.post-nav {padding-top: 1em;}
-
+.post-nav {padding: 1em 0;}
 .post-nav a { font-weight: bold; }
-
-.nav-prev { text-align: left; }
-.nav-next { text-align: right; }
-
-.nav-sep { color: transparent; }
 
 .profile img {
   max-width: 8em;

@@ -3,7 +3,7 @@ title: 关于
 date: '2008-11-23T17:22:34+00:00'
 author: COS管理员
 weight: 2
-menu: main
+menu: [main, top]
 forum_id: 418703
 ---
 
