@@ -27,7 +27,7 @@ a { color: #f05948; }
 }
 .menu-top li:first-child { border-left: 1px solid #8c1f22; }
 .menu-top li {
-  display: inline-flex;
+  display: flex;
   width: 1em;
   word-break: break-all;
   border-right: 1px solid #8c1f22;
