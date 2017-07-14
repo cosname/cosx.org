@@ -1,0 +1,7 @@
+<table class="profile">
+<tbody>
+{{ range (sort $.Site.Data.members "weight") }}
+<tr><td><img src="{{ .image }}" alt="{{ .name }}"/></td><td><h3>{{ .name }}</h3>{{ .intro | markdownify }}</td></tr>
+{{ end }}
+</tbody>
+</table>

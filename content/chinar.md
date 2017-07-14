@@ -3,8 +3,10 @@ title: R会议
 description: R语言会议相关规则
 date: '2009-10-26T05:04:42+00:00'
 author: COS管理员
-weight: 4
-menu: main
+menu:
+  main:
+    name: 会议
+    weight: 5
 forum_id: 418705
 ---
 

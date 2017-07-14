@@ -32,6 +32,7 @@ footnotereturnlinkcontents = "↩"
   alt = "统计之都 标志"
 
 [params.text]
+  about_author = "关于作者"
   back = "&larr; 返回首页"
   edit = "编辑本页 &rarr;"
   tags = "关键词："

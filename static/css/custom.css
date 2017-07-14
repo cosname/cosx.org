@@ -27,7 +27,6 @@ a { color: #f05948; }
 }
 .post-nav a, .pagination a { text-decoration: none; }
 .active a { text-decoration: underline; }
-
 .article-meta { background: transparent; }
 article { box-shadow: 0 0 8px #ccc; }
 
@@ -50,12 +49,18 @@ article a:hover { font-weight: bold; color: #00b0cf; }
 
 .nav-sep { color: transparent; }
 
-/* iframe of Flarum page */
+.profile img {
+  max-width: 8em;
+  border-radius: 5%;
+}
+.profile { border: none; }
+.profile tr:nth-child(even) { background: none; }
+.profile td { vertical-align: top; }
+.profile td h3 { margin-top: 0; }
+
 #forum-frame {
-  display: block;
   border: none;
   width: 100%;
-  /* height and visibility will be changed by Javascript on loading */
   visibility: hidden;
   height: 0;
 }

@@ -1,9 +1,11 @@
 ---
-title: 图书
+title: 统计之都成员出版物
 date: '2013-03-19T11:08:37+00:00'
-author: 陈堰平
-weight: 5
-menu: main
+author: 统计之都
+menu:
+  main:
+    name: 出版
+    weight: 5
 forum_id: 418711
 ---
 
