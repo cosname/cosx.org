@@ -86,7 +86,11 @@ a {
   text-decoration: none
 }
 .active a { text-decoration: underline; }
-.article-meta { background: transparent; }
+.article-meta {
+  background: transparent;
+  padding: 0;
+}
+.article-extra { text-align: left; }
 article { box-shadow: 0 0 8px #ccc; }
 article a:hover { font-weight: bold; color: #00b0cf; }
 
