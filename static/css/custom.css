@@ -28,6 +28,9 @@ a { color: #f05948; }
 .post-nav a, .pagination a { text-decoration: none; }
 .active a { text-decoration: underline; }
 
+.article-meta {
+	background: white
+}
 
 article {
     box-shadow: 0 0 8px #ccc;
