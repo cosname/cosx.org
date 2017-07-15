@@ -4,7 +4,7 @@ date: '2017-06-19'
 author: 冯璟烁
 tags: [cos访谈]
 slug: interview-fugee-tsung
-meta: "采访：冯璟烁；编辑：冯璟烁，张心雨"
+meta_extra: "采访：冯璟烁；编辑：冯璟烁，张心雨"
 ---
 
 
