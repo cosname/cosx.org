@@ -3,6 +3,7 @@ a {
   color: #f05948;
   text-decoration: none;
 }
+blockquote { margin: auto; }
 .header, .header .banner { padding: 0; }
 .header {
   border-top: 5px solid #8c1f22;
