@@ -59,79 +59,84 @@
   intro: 俄亥俄州立大学运筹学博士，目前在美国从事财产事故险领域的保险产品开发，涉及数据分析、统计建模，产品算法优化等方面的工作。离乡十载，海飘七年，至今未归。喜欢运动，尤其爱好滑雪和网球。作为一名十年老Dotaer，面对“联盟”和“荣耀”时总有一种深深的优越感。热爱数据科学，也十分相信数据科学在未来的无限可能。
   weight: 12
   name: 侯澄钧
+黄俊文:
+  image: https://user-images.githubusercontent.com/1142836/28239124-c75cde6e-6996-11e7-842a-66b29f4cb77c.jpg
+  intro: 本科中山大学，硕士 University of California, San Diego。现工作于腾讯。
+  weight: 13
+  name: 黄俊文
 雷博文:
   image: https://cloud.githubusercontent.com/assets/7221728/25788480/06a7d182-33dc-11e7-8181-1cfbc8452691.jpg
   intro: 人大统院本科生，爱运动，爱旅游，喜欢尝试新的东西，喜欢探索未知的世界。一颗好奇的心让我永远有着探索和求知的方向，而持之以恒的性格则让我坚持不懈朝着心之所向而努力，让人生之船不断航行，不再漂流。
-  weight: 13
+  weight: 14
   name: 雷博文
 李宇轩:
   image: https://cloud.githubusercontent.com/assets/7221728/25788586/d81c09ae-33dc-11e7-8580-05ab733a7c73.jpg
   intro: 人大统院本科生，爱看书（从小喜欢），爱音乐（多听不多唱）、爱运动（玩和看都爱），很喜欢旅游（尤其一人游），虽然现在还是一只小本科僧，但相信自己会有用武之地，不达目的绝不放弃。
-  weight: 14
+  weight: 15
   name: 李宇轩
 彭晨昱:
   image: https://cloud.githubusercontent.com/assets/7221728/25793129/4e8cf290-33fd-11e7-9f0c-846ac1e0efbe.jpg
   intro: 目前就读江西财大国际会计专业，三年临川求学路，四年江财蛟湖畔。和图片展示的一样，天然吃货一枚，在任何环境下一定不会让自己饿着，很开心并荣幸加入COS大家庭，作为众多统计大神中夹着的一位做账的小会计，时刻膜拜并谦虚的学习着。当然，最最最希望的统计之都能朝着理想的未来走的越来越好!
-  weight: 15
+  weight: 16
   name: 彭晨昱
 邱怡轩:
   image: https://cloud.githubusercontent.com/assets/7221728/25788496/216e3484-33dc-11e7-8e7d-ca50b6450cc7.jpg
   intro: 普渡大学统计系在读博士生，感兴趣的方向包括计算统计学、机器学习、大型数据处理等，参与翻译了《应用预测建模》《R语言编程艺术》《ggplot2：数据分析与图形艺术》等经典书籍，是
     showtext、RSpectra、recosystem、prettydoc 等流行R软件包的作者。
-  weight: 16
+  weight: 17
   name: 邱怡轩
 覃文锋:
   image: https://cloud.githubusercontent.com/assets/7221728/25788591/dab66736-33dc-11e7-9d38-720da8ddb85a.jpg
   intro: R Weekly 创始人，参与了一些的 R 包的开发，爱好是看正在用的工具的源代码。
-  weight: 17
+  weight: 18
   name: 覃文锋
 王佳:
   image: https://cloud.githubusercontent.com/assets/7221728/25832304/50a0da66-349c-11e7-9ead-70091ddd1dd7.jpg
   intro: 人大统计硕士在读，R与SAS爱好者，写得了代码，做得了调查，温柔靠谱的双鱼座妹子。能和cos聪明有趣的小编们一起工作玩耍是非常过瘾的经历
-  weight: 18
+  weight: 19
   name: 王佳
 王健桥:
   image: https://cloud.githubusercontent.com/assets/7221728/25788475/fff5f3be-33db-11e7-9c01-000d3a9a2580.png
   intro: 中国人民大学统计学本科毕业，即将去宾夕法尼亚大学攻读生物统计博士学位，爱好广泛，热爱交友，喜欢了解各种各样的学术掌故。
-  weight: 19
+  weight: 20
   name: 王健桥
 王毅然:
   image: https://cloud.githubusercontent.com/assets/7221728/25788597/e295b736-33dc-11e7-9e62-61ea8f0190b1.jpg
   intro: 中国人民大学2013级经济学与数学（双学位）实验班本科生，美国北卡罗莱纳州立大学2017级统计学PhD。新人一枚，2017年5月刚刚加入统计之都，希望以后可以为统计之都贡献更多自己的力量。
-  weight: 20
+  weight: 21
   name: 王毅然
 谢益辉:
   image: https://db.yihui.name/images/avatar-200.png
   intro: 人大统计硕士，爱荷华州立大学统计学博士，现为 RStudio 软件工程师。
-  weight: 21
+  weight: 22
   name: 谢益辉
 徐浩:
   image: https://cloud.githubusercontent.com/assets/7221728/25791994/77d093e8-33f6-11e7-9990-3d4436146817.jpg
   intro: JD Power的数据分析师。
-  weight: 22
+  weight: 23
   name: 徐浩
 闫晗:
   image: https://cloud.githubusercontent.com/assets/7221728/25832350/af4afea2-349c-11e7-9bc5-374056619d8e.jpg
   intro: 人大统计硕士，资深吃货，混迹于cos大神中的小学渣一枚。好读书，不求甚解；好行路，不问远方。
-  weight: 23
+  weight: 24
   name: 闫晗
 闫施:
   image: https://cloud.githubusercontent.com/assets/7221728/25832241/086315d4-349c-11e7-8f7b-8cfd270ea279.png
   intro: 现就读于中央财经大学应用统计专业。木讷外表下，有一颗充满热情的心。爱好广泛，方方面面皆有涉猎，钟情运动，因而长相和学识远不及身材。虽然系统地学习统计的时间不长，却被统计知识和统计应用独特的魅力所深深吸引，是一名求知欲旺盛的统计学忠实拥趸。
-  weight: 24
+  weight: 25
   name: 闫施
 翟晋:
   image: https://cloud.githubusercontent.com/assets/7221728/25788531/67c2c7d8-33dc-11e7-8bc5-894640e04688.jpg
   intro: 硕士生，目前就读于中央财经大学应用统计专业，尤爱美食和旅行。10%的理科生，编程很鶸，轻度R语言使用者。90%的文科生，爱读书，爱写作，爱硬笔书法，爱PPT的设计与制作。一大波技能正等着我去学习……
-  weight: 25
+  weight: 26
   name: 翟晋
 张晔:
   image: https://cloud.githubusercontent.com/assets/5897454/25801021/5e8a8d62-341e-11e7-8aa4-d4c2bc3a82b2.png
   intro: 严肃科技平台开发工程师，几乎是纯码农一枚。 参与翻译《R绘图系统》、《Rcpp:R与C++的无缝整合》。
-  weight: 26
+  weight: 27
   name: 张晔
 周扬:
   image: https://cloud.githubusercontent.com/assets/7221728/25789219/7fc60408-33e1-11e7-9228-1311ac6b2fa8.png
   intro: 彩虹无线数据科学家，数据科学部总监，浙江大学客座讲师，四川大学生物信息/生物统计专业硕士，拥有国家发明专利一项，先后在NAR、Bioinformatics发表论文三篇，累计影响因子超过18。多年来致力于车联网数据与汽车行业数据的价值研究，为汽车智能制造、车辆工况研究、创新车险等方面提供数据赋能。
-  weight: 27
+  weight: 28
   name: 周扬
