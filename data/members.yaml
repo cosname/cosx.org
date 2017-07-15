@@ -125,13 +125,18 @@
   intro: 硕士生，目前就读于中央财经大学应用统计专业，尤爱美食和旅行。10%的理科生，编程很鶸，轻度R语言使用者。90%的文科生，爱读书，爱写作，爱硬笔书法，爱PPT的设计与制作。一大波技能正等着我去学习……
   weight: 25
   name: 翟晋
+张心雨:
+  image: https://user-images.githubusercontent.com/26495735/28239054-21169780-6995-11e7-8b72-1f4de46cb721.jpg
+  intro: 张心雨，人大统计学院2017届统计学毕业生，清华大学统计学研究中心直博在读。日常在COS编辑部打杂，经常在北京R会组委会酱油。
+  weight: 26
+  name: 张心雨
 张晔:
   image: https://cloud.githubusercontent.com/assets/5897454/25801021/5e8a8d62-341e-11e7-8aa4-d4c2bc3a82b2.png
   intro: 严肃科技平台开发工程师，几乎是纯码农一枚。 参与翻译《R绘图系统》、《Rcpp:R与C++的无缝整合》。
-  weight: 26
+  weight: 27
   name: 张晔
 周扬:
   image: https://cloud.githubusercontent.com/assets/7221728/25789219/7fc60408-33e1-11e7-9228-1311ac6b2fa8.png
   intro: 彩虹无线数据科学家，数据科学部总监，浙江大学客座讲师，四川大学生物信息/生物统计专业硕士，拥有国家发明专利一项，先后在NAR、Bioinformatics发表论文三篇，累计影响因子超过18。多年来致力于车联网数据与汽车行业数据的价值研究，为汽车智能制造、车辆工况研究、创新车险等方面提供数据赋能。
-  weight: 27
+  weight: 28
   name: 周扬
