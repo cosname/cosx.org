@@ -108,10 +108,14 @@ article a:hover { font-weight: bold; color: #00b0cf; }
 .profile img {
   max-width: 8em;
   border-radius: 5%;
+  margin-left: 1em;
 }
 .profile { border: none; }
 .profile tr:nth-child(even) { background: none; }
-.profile td { vertical-align: top; }
+.profile td {
+  vertical-align: top;
+  padding: 0 0 1em;
+}
 .profile td h3 { margin-top: 0; }
 
 #forum-frame {

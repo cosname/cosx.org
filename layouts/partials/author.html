@@ -3,7 +3,7 @@
 {{ with (index $.Site.Data.members .) }}
 <section class="article-meta article-footer">
   <h3>{{ default "About the Author" $.Site.Params.text.about_author }}</h3>
-  <table class="profile"><tbody><tr><td><img src="{{ .image }}" alt="{{ .name }}"/></td><td><h3>{{ $.Params.author }}</h3>{{ .intro | markdownify }}</td></tr></tbody></table>
+  <table class="profile"><tbody><tr><td><h3>{{ $.Params.author }}</h3>{{ .intro | markdownify }}</td><td><img src="{{ .image }}" alt="{{ .name }}"/></td></tr></tbody></table>
 </section>
 {{ end }}
 {{ end }}
