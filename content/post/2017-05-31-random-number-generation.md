@@ -269,7 +269,7 @@ ks.test(sqrt(6)*(z-1), "pnorm") # 分布检验
 那么，同理 
 `$$p_n(x)=\frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(n/2-x)t\big)(\frac{\sin(t)}{t})^n\mathrm{d}t$$`
 
-要说数值计算一个$p(x)$近似值，是一点问题没有！且看
+要说数值计算一个`$p(x)$`近似值，是一点问题没有！且看
 
 ```r
 integrate(function(t,x,n) 2/pi*cos((n-2*x)*t)*(sin(t)/t)^n ,x = 1,n = 2,
