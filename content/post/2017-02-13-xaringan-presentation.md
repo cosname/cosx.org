@@ -7,11 +7,14 @@ categories:
   - 统计之都
   - 统计软件
 tags:
-  - HTML5 幻灯片
+  - 幻灯片
   - R Markdown
+  - Markdown
+  - HTML5
   - xaringan
-slug: a-new-r-markdown-ppt-tool
-description: "今天小编给大家介绍一款新的幻灯片神器：xaringan（中文名：幻灯忍者）。它基于大家都熟悉的 R Markdown 语法，幻灯片中能嵌入 R 代码动态生成输出结果，最后生成的是 HTML5 幻灯片，可以在网页浏览器里打开阅览，我们一起来探个究竟吧。"
+  - remark.js
+slug: xaringan-presentation
+meta: "审校：郎大为；编辑：彭晨昱"
 forum_id: 419184
 ---
 
@@ -263,7 +266,3 @@ devtools::install_github("ramnathv/slidifyLibraries")
 如果 xaringan 是一把忍刀的话，slidify 更像是一把瑞士军刀，功能多得令人发指（这句话是褒是贬请自行判断），单纯支持的幻灯片库就有七八个，io2012，reveal，impress，……与之对应的是复杂的参数设置以及需要自己定义的模板. 如果对 slidify 进行深入的设计与开发，可以让自己的幻灯片变得很炫，如果没有，默认的样式能把自己丑哭。
 
 对了，slidify还有两个没法回避的问题，一个是作者Ramnath大大已经有一年半没有更新这个包了，同时你也别想在 CRAN 上找到它；第二个问题是，到目前为止，在 Windows下，还没有一个完美的中文解决方案。与之比较，如果你遇到这类问题了，可以去 xaringan 的 Github 库里提问（<https://github.com/yihui/xaringan/issues>），相信谢大大会尽力让你的幻灯片说一屏流利的中文的。
-
-审校：郎大为
-
-编辑：彭晨昱
