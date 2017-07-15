@@ -31,7 +31,7 @@ tags:
 以下是视频教程：
 
 <video controls="controls" height=500px width=100%>
-<source src="http://lchiffon.github.io/reveal_slidify/cos/ldw/work-with-cos.webm" type="video/webm">
+<source src="https://uploads.cosx.org/images/github-web-pr.webm" type="video/webm">
 </video>
 
 您可以在[这里](https://github.com/cosname/cosx.org/pull/558)看到一份测试的草稿。注意：如果您的 PR 被编辑要求继续修改，请**不要**关闭它并重开一个新的 PR，而是继续修改它里面的文件。如下图所示，切换到 PR 界面的 Files changed 一栏中，点击相应文件的编辑按钮即可。如果您使用了 GIT 命令行而不是 Github 界面提交的文章，请继续向原来的 GIT 分支提交修改。一篇新文章从开始到结束都应该留在同一个 PR 中进行。
