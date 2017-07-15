@@ -14,6 +14,8 @@ menu:
 
 {{< members >}}
 
+所有编辑和作者的信息存放在 Github 库的 [data/authors.yaml](https://github.com/cosname/cosx.org/blob/master/data/members.yaml) 文件中。若上述信息有误或需要更新，请更新该源文件。
+
 # 理事会
 
 本届（2014 - 2017）统计之都理事会成员包括：
