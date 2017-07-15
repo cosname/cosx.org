@@ -59,6 +59,11 @@
   intro: 俄亥俄州立大学运筹学博士，目前在美国从事财产事故险领域的保险产品开发，涉及数据分析、统计建模，产品算法优化等方面的工作。离乡十载，海飘七年，至今未归。喜欢运动，尤其爱好滑雪和网球。作为一名十年老Dotaer，面对“联盟”和“荣耀”时总有一种深深的优越感。热爱数据科学，也十分相信数据科学在未来的无限可能。
   weight: 12
   name: 侯澄钧
+黄俊文:
+  image: https://user-images.githubusercontent.com/1142836/28239124-c75cde6e-6996-11e7-842a-66b29f4cb77c.jpg
+  intro: 本科中山大学，硕士 University of California, San Diego。现工作于腾讯。
+  weight: 13
+  name: 黄俊文
 黄湘云:
   image: https://user-images.githubusercontent.com/12031874/28239932-9c296f42-69a9-11e7-90fa-d1d20cbad4db.jpg
   intro: 中国矿业大学（北京）理学院2015级硕士，从时间序列分析课程接触R语言，对数据分析和可视化乐此不疲，也喜欢看《红楼梦》，目前主要学习空间广义线性混合效应模型及其应用。
