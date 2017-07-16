@@ -18,11 +18,6 @@ footnotereturnlinkcontents = "↩"
   post = "/:year/:month/:slug/"
 
 [[menu.main]]
-  name = "首页"
-  url = "/"
-  weight = 1
-
-[[menu.main]]
   name = "论坛"
   url = "https://d.cosx.org"
   weight = 3
