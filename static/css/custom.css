@@ -70,14 +70,42 @@ blockquote { margin: auto; }
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
+    /* This transparent border line is used for exact layout of .full-title */
+    border: 1px solid rgba(1,1,1,0.0);
   }
-  .article-list h1:hover { white-space: normal; }
+  .title-wrapper { position: relative; }
+  .title-wrapper h1.full-title {
+    position: absolute;
+    top: 0;
+    margin-top: -5px; /* offset 5px padding */
+    margin-left: -5px;
+    padding: 5px;
+
+    white-space: normal;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+
+    /* https://stackoverflow.com/a/6943704 */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s linear;
+  }
+  .title-wrapper:hover h1.full-title {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 @media (max-width: 715px) {
   .banner img {
     max-height: 5.5em;
     max-width: none;
     margin: 2px 0;
+  }
+  /* Do not show the cloned title element in small screen */
+  .full-title {
+      display: none;
   }
 }
 .summary img { transition: transform 0.6s; }
