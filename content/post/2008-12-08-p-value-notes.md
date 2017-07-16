@@ -25,7 +25,7 @@ forum_id: 418754
 >
 > [The P-value is the probability of obtaining a result at least as extreme as the one that was actually observed, given that the null hypothesis is true.](http://en.wikipedia.org/wiki/P-value)
 
-以下延续[白话系列](/2008/12/decision-risk/)，解释一下，“什么是P值，什么是极端”，算是郑文的一个长长的注脚。
+以下延续[白话系列](/2008/12/decision-and-risk/)，解释一下，“什么是P值，什么是极端”，算是郑文的一个长长的注脚。
 
 回到[上次的硬币试验](/2008/12/decision-and-risk/)，那是一次二项试验，每次试验投100次，记下出现正面的次数,比如，如果
 
