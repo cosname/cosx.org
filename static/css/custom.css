@@ -103,6 +103,10 @@ blockquote { margin: auto; }
     max-width: none;
     margin: 2px 0;
   }
+  /* Do not show the cloned title element in small screen */
+  .full-title {
+      display: none;
+  }
 }
 .summary img { transition: transform 0.6s; }
 .summary img:hover { transform: scale(1.4); }
