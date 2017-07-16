@@ -5,6 +5,7 @@ date: '2017-04-27'
 tags:
   - 计算广告
 slug: google-ghost-ads
+forum_id: 419206
 ---
 
 说起广告大家肯定都知道，可是什么是幽灵广告？其实幽灵广告的英文是ghost ads，源自Google的一篇论文，Johnson, Garrett A., Randall A. Lewis, and Elmar I. Nubbemeyer. "Ghost Ads: Improving the Economics of Measuring Online Ad Effectiveness." (2016)。幽灵广告是他们创造出来用来提高衡量在线广告效果的一套系统。由于实施过程中某些广告会化作用户看不到的幽灵，所以称之为“幽灵广告”系统，专门用于线上广告的随机对照实验。<!--more-->
