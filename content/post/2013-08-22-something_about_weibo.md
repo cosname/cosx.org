@@ -1,9 +1,9 @@
 ---
+categories:
+  - 统计软件
 title: 微博名人那些事儿
 date: '2013-08-22T11:35:14+00:00'
 author: COS编辑部
-categories:
-  - 统计软件
 tags:
   - Topic Model
   - 微博

@@ -1,12 +1,12 @@
 ---
-title: jiebaR中文分词——R的灵活，C的效率
-date: '2014-11-15T10:46:46+00:00'
-author: COS编辑部
 categories:
   - 数据分析
   - 数据挖掘与机器学习
   - 统计软件
   - 软件应用
+title: jiebaR中文分词——R的灵活，C的效率
+date: '2014-11-15T10:46:46+00:00'
+author: COS编辑部
 tags:
   - jiebaR
   - Rcpp

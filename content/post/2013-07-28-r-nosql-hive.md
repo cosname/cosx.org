@@ -1,9 +1,9 @@
 ---
+categories:
+  - 软件应用
 title: R利剑NoSQL系列文章 之 Hive
 date: '2013-07-28T12:00:32+00:00'
 author: COS编辑部
-categories:
-  - 软件应用
 tags:
   - hive
   - nosql

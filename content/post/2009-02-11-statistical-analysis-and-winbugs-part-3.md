@@ -1,11 +1,11 @@
 ---
-title: WinBUGS在统计分析中的应用（第三部分）
-date: '2009-02-11T21:20:12+00:00'
-author: 齐韬
 categories:
   - 数据分析
   - 统计图形
   - 统计软件
+title: WinBUGS在统计分析中的应用（第三部分）
+date: '2009-02-11T21:20:12+00:00'
+author: 齐韬
 tags:
   - GeoBUGS
   - WinBUGS

@@ -1,10 +1,10 @@
 ---
-title: COS每周精选：再谈knitr
-date: '2014-02-13T09:26:15+00:00'
-author: 霍志骥
 categories:
   - 新闻通知
   - 网站导读
+title: COS每周精选：再谈knitr
+date: '2014-02-13T09:26:15+00:00'
+author: 霍志骥
 tags:
   - 每周精选
 slug: knitr-again

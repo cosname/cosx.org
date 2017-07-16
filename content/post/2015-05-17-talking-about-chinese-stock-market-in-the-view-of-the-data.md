@@ -1,12 +1,12 @@
 ---
-title: COS每周精选：从数据的角度来谈谈中国股市
-date: '2015-05-17T19:06:08+00:00'
-author: COS编辑部
 categories:
   - 可视化
   - 每周精选
   - 统计之都
   - 软件应用
+title: COS每周精选：从数据的角度来谈谈中国股市
+date: '2015-05-17T19:06:08+00:00'
+author: COS编辑部
 slug: talking-about-chinese-stock-market-in-the-view-of-the-data
 forum_id: 419081
 ---

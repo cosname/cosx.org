@@ -1,11 +1,11 @@
 ---
-title: 诲人以心
-date: '2014-06-28T10:04:08+00:00'
-author: COS编辑部
 categories:
   - 推荐文章
   - 统计之都
   - 职业事业
+title: 诲人以心
+date: '2014-06-28T10:04:08+00:00'
+author: COS编辑部
 slug: teaching-with-heart
 forum_id: 419022
 ---

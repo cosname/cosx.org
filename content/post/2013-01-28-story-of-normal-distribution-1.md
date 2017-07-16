@@ -1,9 +1,9 @@
 ---
+categories:
+  - 经典理论
 title: 正态分布的前世今生(上)
 date: '2013-01-28T22:06:38+00:00'
 author: rickjin
-categories:
-  - 经典理论
 tags:
   - 历史
   - 正态分布

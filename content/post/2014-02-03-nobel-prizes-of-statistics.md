@@ -1,10 +1,10 @@
 ---
-title: COS每周精选：统计界的诺贝尔？
-date: '2014-02-03T08:57:10+00:00'
-author: 霍志骥
 categories:
   - 新闻通知
   - 网站导读
+title: COS每周精选：统计界的诺贝尔？
+date: '2014-02-03T08:57:10+00:00'
+author: 霍志骥
 tags:
   - 每周精选
 slug: nobel-prizes-of-statistics

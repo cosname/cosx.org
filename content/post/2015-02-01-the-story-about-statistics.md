@@ -1,11 +1,11 @@
 ---
-title: COS每周精选：那些年，我们了解的统计学历史
-date: '2015-02-01T20:47:48+00:00'
-author: COS编辑部
 categories:
   - 可视化
   - 新闻通知
   - 每周精选
+title: COS每周精选：那些年，我们了解的统计学历史
+date: '2015-02-01T20:47:48+00:00'
+author: COS编辑部
 slug: the-story-about-statistics
 description: 从公元前450年的伊利斯的希皮亚斯利用国王统治时间的均值计算出了第一次奥林匹克奥运会的时间早于他生活的时代300年到2012年统计学家纳特·西尔弗，成功预测美国大选的50个州的结果，让我们用一张图来看清[统计学发展的历史](http://www.statslife.org.uk/images/pdf/timeline-of-statistics.pdf)。
 forum_id: 419060

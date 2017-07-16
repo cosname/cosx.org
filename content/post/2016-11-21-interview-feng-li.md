@@ -1,11 +1,11 @@
 ---
-title: COS访谈第22期:李丰老师
-date: '2016-11-21T17:13:37+00:00'
-author: COS编辑部
 categories:
   - cos访谈
   - 推荐文章
   - 统计之都
+title: COS访谈第22期:李丰老师
+date: '2016-11-21T17:13:37+00:00'
+author: COS编辑部
 tags:
   - COS访谈
   - 大数据

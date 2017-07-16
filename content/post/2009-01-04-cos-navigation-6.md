@@ -1,9 +1,9 @@
 ---
+categories:
+  - 网站导读
 title: 统计之都《本周导读》第六辑
 date: '2009-01-04T13:00:33+00:00'
 author: 郑冰
-categories:
-  - 网站导读
 tags:
   - 主站
   - 博客

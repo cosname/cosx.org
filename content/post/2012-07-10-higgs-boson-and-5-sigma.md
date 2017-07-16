@@ -1,12 +1,12 @@
 ---
-title: 希格斯玻色子与5σ
-date: '2012-07-10T23:26:02+00:00'
-author: COS编辑部
 categories:
   - 经典理论
   - 统计之都
   - 统计推断
   - 高校课堂
+title: 希格斯玻色子与5σ
+date: '2012-07-10T23:26:02+00:00'
+author: COS编辑部
 tags:
   - 5sigma
   - Tukey

@@ -1,11 +1,11 @@
 ---
-title: COS访谈第十九期：张志华教授
-date: '2015-09-29T15:12:47+00:00'
-author: COS编辑部
 categories:
   - cos访谈
   - 推荐文章
   - 统计之都
+title: COS访谈第十九期：张志华教授
+date: '2015-09-29T15:12:47+00:00'
+author: COS编辑部
 tags:
   - COS访谈
   - ESL

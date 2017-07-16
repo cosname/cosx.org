@@ -1,9 +1,9 @@
 ---
+categories:
+  - 经典理论
 title: 次贷冲击下的统计学反思
 date: '2008-11-27T10:39:10+00:00'
 author: 胡江堂
-categories:
-  - 经典理论
 tags:
   - Black Swan Theory
   - David M.Rowe
@@ -16,7 +16,7 @@ tags:
   - 统计学局限
   - 黑天鹅理论
 slug: subprimestat
-description: "统计分析只能从数据中**提取**信息，而不能**创造**数据本身。正如联通器中的水，不能超越水源的高度。"
+description: 统计分析只能从数据中**提取**信息，而不能**创造**数据本身。正如联通器中的水，不能超越水源的高度。
 forum_id: 418740
 ---
 

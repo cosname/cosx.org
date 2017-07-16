@@ -1,12 +1,12 @@
 ---
-title: 统计学博文导读：内贾德大选作弊？流星撞飞机的概率？买双色球？
-date: '2009-06-17T16:22:06+00:00'
-author: 谢益辉
 categories:
   - 推荐文章
   - 统计图形
   - 统计推断
   - 网站导读
+title: 统计学博文导读：内贾德大选作弊？流星撞飞机的概率？买双色球？
+date: '2009-06-17T16:22:06+00:00'
+author: 谢益辉
 tags:
   - Benford's Law
   - Journal of Statistical Software

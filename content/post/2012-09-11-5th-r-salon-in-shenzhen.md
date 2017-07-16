@@ -1,11 +1,11 @@
 ---
-title: COS数据分析沙龙第五期（深圳）
-date: '2012-09-11T22:07:18+00:00'
-author: 范建宁
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
+title: COS数据分析沙龙第五期（深圳）
+date: '2012-09-11T22:07:18+00:00'
+author: 范建宁
 tags:
   - COS沙龙
 slug: 5th-r-salon-in-shenzhen

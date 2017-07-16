@@ -1,11 +1,11 @@
 ---
-title: COS访谈第五期：黄帅
-date: '2013-08-31T15:09:27+00:00'
-author: COS编辑部
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
+title: COS访谈第五期：黄帅
+date: '2013-08-31T15:09:27+00:00'
+author: COS编辑部
 tags:
   - COS访谈
   - 数据科学

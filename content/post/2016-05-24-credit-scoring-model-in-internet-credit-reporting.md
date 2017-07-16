@@ -1,9 +1,9 @@
 ---
+categories:
+  - 统计之都
 title: 互联网征信中的信用评分模型
 date: '2016-05-24T23:03:20+00:00'
 author: 黄丹阳
-categories:
-  - 统计之都
 tags:
   - Logistic 回归模型
   - 互联网征信

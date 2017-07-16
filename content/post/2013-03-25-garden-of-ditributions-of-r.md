@@ -1,10 +1,10 @@
 ---
+categories:
+  - 网站导读
 title: COS每周精选:R的概率分布花园
 date: '2013-03-25T12:47:50+00:00'
 author: 潘岚锋
-description: "R为什么这样红？统计学家的汗水捧红了它！R的概率分布花园中有近两百种不同的分布函数，每一种都清晰的归类并配上详细的文档，任君采摘。"
-categories:
-  - 网站导读
+description: R为什么这样红？统计学家的汗水捧红了它！R的概率分布花园中有近两百种不同的分布函数，每一种都清晰的归类并配上详细的文档，任君采摘。
 tags:
   - 每周精选
 slug: garden-of-ditributions-of-r

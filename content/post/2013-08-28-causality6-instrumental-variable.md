@@ -1,10 +1,10 @@
 ---
-title: 因果推断简介之六：工具变量（instrumental variable）
-date: '2013-08-28T12:42:57+00:00'
-author: 丁鹏
 categories:
   - 推荐文章
   - 经典理论
+title: 因果推断简介之六：工具变量（instrumental variable）
+date: '2013-08-28T12:42:57+00:00'
+author: 丁鹏
 tags:
   - 内生性
   - 因果推断

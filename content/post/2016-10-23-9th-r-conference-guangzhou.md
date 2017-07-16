@@ -1,10 +1,10 @@
 ---
-title: 第九届中国R语言会议（广州） 暨华南地区数据科学会议通知
-date: '2016-10-23T20:53:52+00:00'
-author: COS编辑部
 categories:
   - 中国R语言会议
   - 统计之都
+title: 第九届中国R语言会议（广州） 暨华南地区数据科学会议通知
+date: '2016-10-23T20:53:52+00:00'
+author: COS编辑部
 slug: 9th-r-conference-guangzhou
 forum_id: 419166
 ---

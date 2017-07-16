@@ -1,10 +1,10 @@
 ---
-title: 25年后的统计系会是什么样？
-date: '2012-02-21T14:21:11+00:00'
-author: COS编辑部
 categories:
   - 推荐文章
   - 职业事业
+title: 25年后的统计系会是什么样？
+date: '2012-02-21T14:21:11+00:00'
+author: COS编辑部
 tags:
   - Leo Breiman
   - 统计

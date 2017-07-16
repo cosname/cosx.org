@@ -1,9 +1,9 @@
 ---
+categories:
+  - 网站导读
 title: 统计之都《本周导读》第三辑
 date: '2008-12-15T20:23:46+00:00'
 author: 谢益辉
-categories:
-  - 网站导读
 tags:
   - 主站
   - 博客

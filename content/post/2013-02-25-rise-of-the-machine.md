@@ -1,9 +1,9 @@
 ---
+categories:
+  - 网站导读
 title: COS每周精选:机器崛起！
 date: '2013-02-25T02:54:41+00:00'
 author: 潘岚锋
-categories:
-  - 网站导读
 tags:
   - 每周精选
 slug: rise-of-the-machine

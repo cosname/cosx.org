@@ -1,11 +1,11 @@
 ---
-title: 日历中的夏天
-date: '2012-05-03T22:37:45+00:00'
-author: 肖凯
 categories:
   - 统计图形
   - 统计软件
   - 软件应用
+title: 日历中的夏天
+date: '2012-05-03T22:37:45+00:00'
+author: 肖凯
 tags:
   - ggplot2
   - RCurl

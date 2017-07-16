@@ -1,9 +1,9 @@
 ---
+categories:
+  - 优化与模拟
 title: 浅谈Buffon投针问题及其推广
 date: '2009-11-13T17:04:09+00:00'
 author: 魏太云
-categories:
-  - 优化与模拟
 tags:
   - Buffon投针
   - 几何概率

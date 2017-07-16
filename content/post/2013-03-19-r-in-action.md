@@ -1,10 +1,10 @@
 ---
-title: 《R语言实战》
-date: '2013-03-19T13:00:10+00:00'
-author: 陈堰平
 categories:
   - 图书出版
   - 统计之都
+title: 《R语言实战》
+date: '2013-03-19T13:00:10+00:00'
+author: 陈堰平
 slug: r-in-action
 forum_id: 418921
 ---

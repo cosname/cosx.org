@@ -1,9 +1,9 @@
 ---
+categories:
+  - cos访谈
 title: COS访谈第21期~史建军：饱学致用育桃李，锦袍换酒傲江湖
 date: '2016-02-05T11:27:36+00:00'
 author: COS编辑部
-categories:
-  - cos访谈
 tags:
   - COS访谈
   - IE

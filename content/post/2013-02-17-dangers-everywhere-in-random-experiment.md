@@ -1,11 +1,11 @@
 ---
-title: COS每周精选:随机试验处处坑
-date: '2013-02-17T04:04:27+00:00'
-author: 潘岚锋
 categories:
   - 经典理论
   - 网站导读
   - 试验设计
+title: COS每周精选:随机试验处处坑
+date: '2013-02-17T04:04:27+00:00'
+author: 潘岚锋
 tags:
   - 每周精选
 slug: dangers-everywhere-in-random-experiment

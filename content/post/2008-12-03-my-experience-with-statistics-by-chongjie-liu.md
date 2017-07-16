@@ -1,9 +1,9 @@
 ---
+categories:
+  - 经典理论
 title: 刘重杰：和统计接触的经历
 date: '2008-12-03T15:20:21+00:00'
 author: 刘重杰
-categories:
-  - 经典理论
 tags:
   - COS访谈
   - R语言

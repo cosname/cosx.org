@@ -1,11 +1,11 @@
 ---
-title: COS数据分析沙龙第七期（北京）
-date: '2012-12-13T23:08:25+00:00'
-author: COS编辑部
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
+title: COS数据分析沙龙第七期（北京）
+date: '2012-12-13T23:08:25+00:00'
+author: COS编辑部
 tags:
   - COS沙龙
 slug: cos-5th-salon

@@ -1,10 +1,10 @@
 ---
+categories:
+  - 网站导读
 title: COS每周精选:群众智慧vs机器学习？
 date: '2013-04-08T10:49:21+00:00'
 author: 潘岚锋
-description: "亚马逊土耳其机器人（Amazon Mechanical Turk）是一个著名的众包平台，借群众的智慧解决机器很难或无法解决的问题，各位机器学习/人工智能专家们，要不要挑战一下？"
-categories:
-  - 网站导读
+description: 亚马逊土耳其机器人（Amazon Mechanical Turk）是一个著名的众包平台，借群众的智慧解决机器很难或无法解决的问题，各位机器学习/人工智能专家们，要不要挑战一下？
 tags:
   - 每周精选
 slug: human-eye-vs-machine-learning

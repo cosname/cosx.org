@@ -1,11 +1,11 @@
 ---
-title: 用R也能做精算—actuar包学习笔记（一）
-date: '2009-11-27T12:24:55+00:00'
-author: 李皞
 categories:
   - 推荐文章
   - 统计软件
   - 风险精算
+title: 用R也能做精算—actuar包学习笔记（一）
+date: '2009-11-27T12:24:55+00:00'
+author: 李皞
 tags:
   - R语言
   - 损失分布

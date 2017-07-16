@@ -1,12 +1,12 @@
 ---
-title: COS每周精选：数据科学职业选择“大家”谈
-date: '2015-01-04T23:32:49+00:00'
-author: COS编辑部
 categories:
   - 推荐文章
   - 数据挖掘与机器学习
   - 每周精选
   - 职业事业
+title: COS每周精选：数据科学职业选择“大家”谈
+date: '2015-01-04T23:32:49+00:00'
+author: COS编辑部
 slug: talking-about-data-scientist
 forum_id: 419054
 ---

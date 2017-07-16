@@ -1,11 +1,11 @@
 ---
-title: COS数据分析沙龙第九期（上海，@联合创业办公社）
-date: '2013-05-14T11:47:59+00:00'
-author: Liyun
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
+title: COS数据分析沙龙第九期（上海，@联合创业办公社）
+date: '2013-05-14T11:47:59+00:00'
+author: Liyun
 tags:
   - COS沙龙
 slug: shanghai-r-salon-may-2013

@@ -1,11 +1,11 @@
 ---
-title: COS数据分析沙龙第十三期（北京）
-date: '2013-08-29T10:17:13+00:00'
-author: COS编辑部
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
+title: COS数据分析沙龙第十三期（北京）
+date: '2013-08-29T10:17:13+00:00'
+author: COS编辑部
 tags:
   - COS沙龙
 slug: beijing-cos-salon-aug-2013

@@ -1,9 +1,9 @@
 ---
+categories:
+  - 网站导读
 title: 统计之都《本周导读》第五辑
 date: '2008-12-28T22:09:12+00:00'
 author: 郑冰
-categories:
-  - 网站导读
 tags:
   - 主站
   - 博客
@@ -12,9 +12,7 @@ tags:
   - 维基
   - 论坛
 slug: cos-navigation-5
-description: "大家忙着准备期末复习，本周一共发布了1篇日志。
-分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵。
-期待胡江堂下期对传说中的ROC曲线的分解。"
+description: '大家忙着准备期末复习，本周一共发布了1篇日志。 分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵。 期待胡江堂下期对传说中的ROC曲线的分解。'
 forum_id: 418761
 ---
 

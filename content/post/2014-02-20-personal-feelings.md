@@ -1,10 +1,10 @@
 ---
-title: COS每周精选：听过来人说
-date: '2014-02-20T07:57:39+00:00'
-author: 霍志骥
 categories:
   - 新闻通知
   - 网站导读
+title: COS每周精选：听过来人说
+date: '2014-02-20T07:57:39+00:00'
+author: 霍志骥
 tags:
   - 每周精选
 slug: personal-feelings

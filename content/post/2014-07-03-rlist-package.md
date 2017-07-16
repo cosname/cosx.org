@@ -1,10 +1,10 @@
 ---
-title: rlist：基于list在R中处理非关系型数据
-date: '2014-07-03T09:51:55+00:00'
-author: COS编辑部
 categories:
   - 统计软件
   - 软件应用
+title: rlist：基于list在R中处理非关系型数据
+date: '2014-07-03T09:51:55+00:00'
+author: COS编辑部
 tags:
   - rlist
   - 非关系型数据

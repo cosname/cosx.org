@@ -1,14 +1,15 @@
 ---
-title: COS每周精选：再谈P值
-date: '2015-02-09T08:21:21+00:00'
-author: COS编辑部
 categories:
   - 数据挖掘与机器学习
   - 每周精选
   - 经典理论
   - 统计之都
+title: COS每周精选：再谈P值
+date: '2015-02-09T08:21:21+00:00'
+author: COS编辑部
 slug: talking-about-p-value-again
-description: "统计之都主站之前有一篇《不得不提的P值》曾引发众多的讨论，去年的《P值之死》也曾在圈内引起不小的骚动，编者罗列了一些新的资料供各位客官慢慢欣赏，孰是孰非，您来决断。一篇 [pvalue applet](https://stat.duke.edu/~berger/applet2/pvalue.html)，作者Jim Berger有一系列关于pvalue的[好文章](https://stat.duke.edu/~berger/p-values.html)，提醒人们慎用pvalue。跳出来想，对比CS对待数据科学的态度，统计人还是有些保守悲观的。学术需要保守，业界需要激进。这么大费篇幅的“自我检讨”其实并不利于学科的推广。"
+description: 统计之都主站之前有一篇《不得不提的P值》曾引发众多的讨论，去年的《P值之死》也曾在圈内引起不小的骚动，编者罗列了一些新的资料供各位客官慢慢欣赏，孰是孰非，您来决断。一篇 [pvalue
+  applet](https://stat.duke.edu/~berger/applet2/pvalue.html)，作者Jim Berger有一系列关于pvalue的[好文章](https://stat.duke.edu/~berger/p-values.html)，提醒人们慎用pvalue。跳出来想，对比CS对待数据科学的态度，统计人还是有些保守悲观的。学术需要保守，业界需要激进。这么大费篇幅的“自我检讨”其实并不利于学科的推广。
 forum_id: 419061
 ---
 

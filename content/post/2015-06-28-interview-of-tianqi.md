@@ -1,9 +1,9 @@
 ---
+categories:
+  - 统计之都
 title: COS访谈第十八期：陈天奇
 date: '2015-06-28T15:48:28+00:00'
 author: COS编辑部
-categories:
-  - 统计之都
 tags:
   - COS访谈
   - dmlc

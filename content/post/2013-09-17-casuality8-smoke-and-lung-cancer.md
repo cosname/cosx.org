@@ -1,9 +1,9 @@
 ---
+categories:
+  - 经典理论
 title: 因果推断简介之八：吸烟是否导致肺癌？Fisher versus Cornfield
 date: '2013-09-17T10:30:03+00:00'
 author: 丁鹏
-categories:
-  - 经典理论
 tags:
   - Cornfield
   - Cornfield不等式
@@ -14,7 +14,10 @@ tags:
   - 相对风险
   - 肺癌
 slug: casuality8-smoke-and-lung-cancer
-description: "这一节介绍一个有趣的历史性例子：吸烟是否导致肺癌？主要涉及的人物是 R A Fisher 和 J Cornfield。前者估计上这个网站的人都听过，后者就显得比较陌生了。事实上，Cornfield 在统计、生物统计和流行病学都有着非常重要的贡献。来自 Wikipedia 的一句介绍：“He was the R. A. Fisher Lecturer in 1973 and President of the American Statistical Association in 1974.” 虽然 Cornfield 和 Fisher 学术观点不同（本节介绍），但是 Cornfield 还是在 1973 年给了 Fisher Lecture。"
+description: 这一节介绍一个有趣的历史性例子：吸烟是否导致肺癌？主要涉及的人物是 R A Fisher 和 J Cornfield。前者估计上这个网站的人都听过，后者就显得比较陌生了。事实上，Cornfield
+  在统计、生物统计和流行病学都有着非常重要的贡献。来自 Wikipedia 的一句介绍：“He was the R. A. Fisher Lecturer in
+  1973 and President of the American Statistical Association in 1974.” 虽然 Cornfield
+  和 Fisher 学术观点不同（本节介绍），但是 Cornfield 还是在 1973 年给了 Fisher Lecture。
 forum_id: 418970
 ---
 

@@ -1,9 +1,9 @@
 ---
+categories:
+  - 统计之都
 title: R语千寻第三期：张无忌究竟爱谁？
 date: '2016-06-18T08:01:08+00:00'
 author: 朱雪宁
-categories:
-  - 统计之都
 tags:
   - 倚天屠龙记
   - 张无忌

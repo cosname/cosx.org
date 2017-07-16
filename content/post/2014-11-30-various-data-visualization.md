@@ -1,12 +1,12 @@
 ---
-title: COS每周精选：形形色色的数据可视化
-date: '2014-11-30T17:28:18+00:00'
-author: COS编辑部
 categories:
   - 可视化
   - 数据挖掘与机器学习
   - 每周精选
   - 统计之都
+title: COS每周精选：形形色色的数据可视化
+date: '2014-11-30T17:28:18+00:00'
+author: COS编辑部
 slug: various-data-visualization
 forum_id: 419045
 ---

@@ -1,10 +1,10 @@
 ---
-title: LDA-math-神奇的Gamma函数
-date: '2013-01-13T19:33:31+00:00'
-author: rickjin
 categories:
   - 数学方法
   - 概率论
+title: LDA-math-神奇的Gamma函数
+date: '2013-01-13T19:33:31+00:00'
+author: rickjin
 tags:
   - Gamma函数
   - Gamma分布
@@ -14,7 +14,7 @@ tags:
   - 插值
   - 欧拉
   - 阶乘
-slug: lda-math-gamma-function 
+slug: lda-math-gamma-function
 forum_id: 418897
 ---
 

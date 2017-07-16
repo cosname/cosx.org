@@ -1,10 +1,10 @@
 ---
-title: 从统计学角度来看深度学习（2）：自动编码器和自由能
-date: '2015-05-24T23:09:24+00:00'
-author: COS编辑部
 categories:
   - 推荐文章
   - 统计之都
+title: 从统计学角度来看深度学习（2）：自动编码器和自由能
+date: '2015-05-24T23:09:24+00:00'
+author: COS编辑部
 slug: a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy
 forum_id: 419083
 ---

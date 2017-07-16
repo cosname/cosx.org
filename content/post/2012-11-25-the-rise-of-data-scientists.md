@@ -1,9 +1,9 @@
 ---
+categories:
+  - 职业事业
 title: 数据科学家的崛起
 date: '2012-11-25T05:09:59+00:00'
 author: 谢益辉
-categories:
-  - 职业事业
 tags:
   - Nate Silver
   - 数据可视化

@@ -1,10 +1,10 @@
 ---
-title: 支持向量机系列五：Numerical Optimization
-date: '2014-03-06T20:47:13+00:00'
-author: 张驰原
 categories:
   - 推荐文章
   - 数据挖掘与机器学习
+title: 支持向量机系列五：Numerical Optimization
+date: '2014-03-06T20:47:13+00:00'
+author: 张驰原
 tags:
   - Numerical Optimization
   - 支持向量机

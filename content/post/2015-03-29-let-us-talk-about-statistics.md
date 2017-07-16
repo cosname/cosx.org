@@ -1,11 +1,11 @@
 ---
-title: COS每周精选：统计学“大家”谈
-date: '2015-03-29T21:01:19+00:00'
-author: COS编辑部
 categories:
   - 可视化
   - 每周精选
   - 统计之都
+title: COS每周精选：统计学“大家”谈
+date: '2015-03-29T21:01:19+00:00'
+author: COS编辑部
 slug: let-us-talk-about-statistics
 forum_id: 419071
 ---

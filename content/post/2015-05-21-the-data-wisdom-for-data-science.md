@@ -1,10 +1,10 @@
 ---
-title: 数据科学中的“数据智慧”
-date: '2015-05-21T14:20:24+00:00'
-author: COS编辑部
 categories:
   - 推荐文章
   - 统计之都
+title: 数据科学中的“数据智慧”
+date: '2015-05-21T14:20:24+00:00'
+author: COS编辑部
 slug: the-data-wisdom-for-data-science
 forum_id: 419082
 ---

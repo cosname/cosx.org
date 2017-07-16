@@ -1,10 +1,10 @@
 ---
-title: 决策与风险
-date: '2008-12-03T17:09:32+00:00'
-author: 胡江堂
 categories:
   - 经典理论
   - 统计推断
+title: 决策与风险
+date: '2008-12-03T17:09:32+00:00'
+author: 胡江堂
 tags:
   - Error Type I
   - Error Type II
@@ -20,7 +20,10 @@ tags:
   - 第I类错误
   - 风险
 slug: decision-and-risk
-description: "读书笔记，白话统计系列，力图用普通话讲述统计学的基本概念。这里的题目是“决策与风险”，讲的就是两类错误（type I and type II errors）。以下改编至维恩堡《数理统计初级教程》（常学将等译，太原：山西人民出版社，1986），英文名叫[Statistics: An Intuitive Approach By George H. Weinberg and John Abraham Schumaker](http://books.google.com/books?id=x95dAAAAIAAJ&q=Statistics:+An+Intuitive+Approach&dq=Statistics:+An+Intuitive+Approach&ei=6Ug2SenRGIyYyASdoLDxAg&pgis=1) 。这书几近绝迹，当回文抄公，以期重见天日。"
+description: '读书笔记，白话统计系列，力图用普通话讲述统计学的基本概念。这里的题目是“决策与风险”，讲的就是两类错误（type I and type
+  II errors）。以下改编至维恩堡《数理统计初级教程》（常学将等译，太原：山西人民出版社，1986），英文名叫[Statistics: An Intuitive
+  Approach By George H. Weinberg and John Abraham Schumaker](http://books.google.com/books?id=x95dAAAAIAAJ&q=Statistics:+An+Intuitive+Approach&dq=Statistics:+An+Intuitive+Approach&ei=6Ug2SenRGIyYyASdoLDxAg&pgis=1)
+  。这书几近绝迹，当回文抄公，以期重见天日。'
 forum_id: 418750
 ---
 

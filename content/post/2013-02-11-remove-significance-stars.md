@@ -1,9 +1,9 @@
 ---
+categories:
+  - 网站导读
 title: COS每周精选:让祸害人间的显著性星号消失吧！
 date: '2013-02-11T00:47:55+00:00'
 author: 潘岚锋
-categories:
-  - 网站导读
 tags:
   - 每周精选
 slug: remove-significance-stars

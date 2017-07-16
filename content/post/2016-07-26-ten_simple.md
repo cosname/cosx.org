@@ -1,9 +1,9 @@
 ---
+categories:
+  - 数据分析
 title: 有效统计实践的十项简明原则
 date: '2016-07-26T14:54:41+00:00'
 author: COS翻译组
-categories:
-  - 数据分析
 tags:
   - 假设
   - 原则

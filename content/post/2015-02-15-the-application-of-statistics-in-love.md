@@ -1,13 +1,13 @@
 ---
-title: COS每周精选：统计学在爱情中的那些应用
-date: '2015-02-15T10:13:44+00:00'
-author: COS编辑部
-categories: 
+categories:
   - 推荐文章
   - 每周精选
   - 统计之都
+title: COS每周精选：统计学在爱情中的那些应用
+date: '2015-02-15T10:13:44+00:00'
+author: COS编辑部
 slug: the-application-of-statistics-in-love
-description: "大数据能搞定女朋友，信不信我们看一个例子：他曾获中文本科学位，在世贸大厦做汉译英，因下午2点上班逃过了911大爆炸，后成为MIT决战21点队员，从拉斯维加斯猛抢6万美金，因此迷上了数学，还[通过统计算法找到了GF](http://www.csdn.net/article/2014-01-23/2818243-how-to-hack-okcupid)。"
+description: 大数据能搞定女朋友，信不信我们看一个例子：他曾获中文本科学位，在世贸大厦做汉译英，因下午2点上班逃过了911大爆炸，后成为MIT决战21点队员，从拉斯维加斯猛抢6万美金，因此迷上了数学，还[通过统计算法找到了GF](http://www.csdn.net/article/2014-01-23/2818243-how-to-hack-okcupid)。
 forum_id: 419062
 ---
 

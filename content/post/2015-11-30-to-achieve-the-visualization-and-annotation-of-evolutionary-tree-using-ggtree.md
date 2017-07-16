@@ -1,13 +1,13 @@
 ---
-title: 使用ggtree实现进化树的可视化和注释
-date: '2015-11-30T00:55:37+00:00'
-author: COS编辑部
 categories:
   - 推荐文章
   - 统计之都
   - 统计图形
   - 统计软件
   - 软件应用
+title: 使用ggtree实现进化树的可视化和注释
+date: '2015-11-30T00:55:37+00:00'
+author: COS编辑部
 tags:
   - ggtree
   - 可视化

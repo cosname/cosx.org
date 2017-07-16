@@ -1,10 +1,10 @@
 ---
-title: 应聘准备：非统计和计算机背景的学生如何找到SAS程序员的工作？
-date: '2013-02-16T15:55:12+00:00'
-author: 高燕
 categories:
   - 统计之都
   - 职业事业
+title: 应聘准备：非统计和计算机背景的学生如何找到SAS程序员的工作？
+date: '2013-02-16T15:55:12+00:00'
+author: 高燕
 tags:
   - SAS Career
 slug: how-to-find-a-job-for-sas-programming

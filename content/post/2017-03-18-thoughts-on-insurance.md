@@ -1,10 +1,10 @@
 ---
-title: 聊聊美国保险业
-date: '2017-03-18T13:01:00+00:00'
-author: 侯澄钧
 categories:
   - 统计之都
   - 职业事业
+title: 聊聊美国保险业
+date: '2017-03-18T13:01:00+00:00'
+author: 侯澄钧
 slug: thoughts-on-insurance
 forum_id: 419186
 ---

@@ -1,10 +1,10 @@
 ---
-title: 漫谈正态分布的生成
-date: '2015-06-09T10:47:29+00:00'
-author: COS编辑部
 categories:
   - 优化与模拟
   - 统计计算
+title: 漫谈正态分布的生成
+date: '2015-06-09T10:47:29+00:00'
+author: COS编辑部
 tags:
   - Box-Muller
   - Ziggurat

@@ -1,12 +1,12 @@
 ---
-title: 3张图 解释我的数据价值观
-date: '2016-12-05T20:45:39+00:00'
-author: COS编辑部
 categories:
   - 推荐文章
   - 统计之都
+title: 3张图 解释我的数据价值观
+date: '2016-12-05T20:45:39+00:00'
+author: COS编辑部
 slug: three-pictures-date-value
-description: "做数据的人现在越来越强调价值，那么在商业世界里，什么数据价值最高？我们先看几个例子。"
+description: 做数据的人现在越来越强调价值，那么在商业世界里，什么数据价值最高？我们先看几个例子。
 forum_id: 419176
 ---
 

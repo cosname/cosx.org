@@ -1,9 +1,9 @@
 ---
+categories:
+  - 生物与医学统计
 title: 医学统计学系列
 date: '2013-08-15T11:30:15+00:00'
 author: COS编辑部
-categories:
-  - 生物与医学统计
 tags:
   - 医学统计
   - 系列

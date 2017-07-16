@@ -1,10 +1,10 @@
 ---
-title: '[火光摇曳]神奇的伽玛函数(下)'
-date: '2014-07-01T19:52:23+00:00'
-author: rickjin
 categories:
   - 概率论
   - 统计之都
+title: '[火光摇曳]神奇的伽玛函数(下)'
+date: '2014-07-01T19:52:23+00:00'
+author: rickjin
 tags:
   - gamma
   - 伽玛函数

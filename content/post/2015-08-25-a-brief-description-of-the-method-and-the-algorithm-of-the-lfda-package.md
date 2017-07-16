@@ -1,11 +1,11 @@
 ---
-title: lfda R包的使用方法以及算法的简要说明
-date: '2015-08-25T00:25:22+00:00'
-author: COS编辑部
 categories:
   - 推荐文章
   - 统计之都
   - 统计软件
+title: lfda R包的使用方法以及算法的简要说明
+date: '2015-08-25T00:25:22+00:00'
+author: COS编辑部
 tags:
   - lfda 包
   - R包

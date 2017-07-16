@@ -1,9 +1,9 @@
 ---
+categories:
+  - 统计之都
 title: COS访谈第26期：寇强
 date: '2017-01-11T23:51:49+00:00'
 author: COS编辑部
-categories:
-  - 统计之都
 slug: cos-interview-26-kouqiang
 forum_id: 419181
 ---

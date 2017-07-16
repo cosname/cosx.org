@@ -1,10 +1,10 @@
 ---
-title: 在R中使用管道操作
-date: '2014-04-24T12:00:17+00:00'
-author: COS编辑部
 categories:
   - 统计软件
   - 软件应用
+title: 在R中使用管道操作
+date: '2014-04-24T12:00:17+00:00'
+author: COS编辑部
 tags:
   - dplyr
   - pipeline

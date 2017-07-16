@@ -1,15 +1,15 @@
 ---
+categories:
+  - 统计之都
 title: 国债收益率的影响因素
 date: '2013-12-08T20:28:32+00:00'
 author: COS分析报告
-categories:
-  - 统计之都
 tags:
   - 分析报告
   - 国债收益率
   - 狗熊会
 slug: national-debt-treasury-bonds-return-rate
-description: "国债收益率曲线是众多金融资产定价的重要基础。因此理解其影响因素（7天回购利率，CPI增速，固定资产投资增速），并刻画其回归关系，具有一定实际指导意义。"
+description: 国债收益率曲线是众多金融资产定价的重要基础。因此理解其影响因素（7天回购利率，CPI增速，固定资产投资增速），并刻画其回归关系，具有一定实际指导意义。
 forum_id: 418992
 ---
 

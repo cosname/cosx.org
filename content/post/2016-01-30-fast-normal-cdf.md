@@ -1,9 +1,9 @@
 ---
+categories:
+  - 统计计算
 title: 标准正态分布函数的快速计算方法
 date: '2016-01-30T21:27:19+00:00'
 author: 邱怡轩
-categories:
-  - 统计计算
 tags:
   - 正态分布
   - 计算

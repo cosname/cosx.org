@@ -1,11 +1,11 @@
 ---
-title: RStudio的前世今生——RStudio创始人专访
-date: '2016-11-13T22:33:57+00:00'
-author: COS编辑部
 categories:
   - 统计之都
   - 职业事业
   - 软件应用
+title: RStudio的前世今生——RStudio创始人专访
+date: '2016-11-13T22:33:57+00:00'
+author: COS编辑部
 tags:
   - COS访谈
   - J.J. Allaire

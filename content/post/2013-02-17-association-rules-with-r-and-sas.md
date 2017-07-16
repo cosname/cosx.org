@@ -1,10 +1,10 @@
 ---
-title: 关联规则：R与SAS的比较
-date: '2013-02-17T20:10:19+00:00'
-author: 高 燕
 categories:
   - 统计软件
   - 软件应用
+title: 关联规则：R与SAS的比较
+date: '2013-02-17T20:10:19+00:00'
+author: 高 燕
 tags:
   - R语言
   - SAS

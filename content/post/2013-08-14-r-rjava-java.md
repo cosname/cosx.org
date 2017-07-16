@@ -1,9 +1,9 @@
 ---
+categories:
+  - 软件应用
 title: 解惑rJava R与Java的高速通道
 date: '2013-08-14T22:30:14+00:00'
 author: 张丹
-categories:
-  - 软件应用
 tags:
   - java
   - jcall

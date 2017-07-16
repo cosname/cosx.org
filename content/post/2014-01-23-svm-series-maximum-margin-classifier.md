@@ -1,11 +1,11 @@
 ---
-title: '支持向量机系列一: Maximum Margin Classifier'
-date: '2014-01-23T17:13:44+00:00'
-author: 张驰原
 categories:
   - 推荐文章
   - 数据挖掘与机器学习
   - 统计之都
+title: '支持向量机系列一: Maximum Margin Classifier'
+date: '2014-01-23T17:13:44+00:00'
+author: 张驰原
 tags:
   - Maximum Margin Classifier
   - 支持向量机

@@ -1,9 +1,9 @@
 ---
+categories:
+  - 数据分析
 title: 使用R语言构造投资组合的有效前沿
 date: '2013-08-20T09:45:15+00:00'
 author: COS编辑部
-categories:
-  - 数据分析
 tags:
   - R语言
   - 投资组合

@@ -1,11 +1,11 @@
 ---
-title: COS访谈第二期：约翰·霍普金斯大学Jeff Leek
-date: '2013-06-17T18:40:17+00:00'
-author: 潘岚锋
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
+title: COS访谈第二期：约翰·霍普金斯大学Jeff Leek
+date: '2013-06-17T18:40:17+00:00'
+author: 潘岚锋
 tags:
   - COS访谈
   - 数据科学
