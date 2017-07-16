@@ -13,6 +13,11 @@ function title_effect(el) {
   var cln = el.cloneNode(true);
   cln.className = "full-title";
   el.parentNode.appendChild(cln);
+  var comp_style = window.getComputedStyle(cln, null);
+  var ht = parseFloat(comp_style.getPropertyValue("height"));
+  var lht = parseFloat(comp_style.getPropertyValue("line-height"));
+  // Only enable title effect for multi-line titles
+  if (ht < 1.5 * lht)  el.parentNode.removeChild(cln);
 }
 
 // Find all titles
