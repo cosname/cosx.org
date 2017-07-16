@@ -70,8 +70,13 @@ blockquote { margin: auto; }
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
+    max-height: 30px;
+    transition: max-height 1s
   }
-  .article-list h1:hover { white-space: normal; }
+  .article-list h1:hover {
+    white-space: normal;
+    max-height:100px;
+  }
 }
 @media (max-width: 715px) {
   .banner img {
