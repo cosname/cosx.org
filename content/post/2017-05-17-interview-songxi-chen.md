@@ -10,6 +10,7 @@ description: 陈松蹊，国家特聘专家， 北京大学讲席教授，商务
   (International Statistics Institute) 当选会员 （elected member），国际数理统计学会 (IMS) 理事会常务理事(
   Council member)。他现在是The Annals of Statistics(统计年鉴) 副主编 (自2010年）；Journal of Business
   and Economic Statistics 副主编 （自2013年）；曾任Statistics and Its Interface 的联席主编 （2010-2013）
+forum_id: 419208
 ---
 
 ![image](https://cloud.githubusercontent.com/assets/7221728/26141339/f5aea4c6-3b0d-11e7-8449-0f9aa53512f6.png)
