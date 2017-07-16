@@ -15,7 +15,7 @@ function title_effect(el) {
   el.parentNode.appendChild(cln);
 }
 
-// Find all iframes
+// Find all titles
 var titles = document.querySelectorAll(".article-list h1"), len = titles.length;
 for (var i = 0; i < len; i++) {
   title_effect(titles[i]);
