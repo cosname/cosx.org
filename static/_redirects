@@ -4,3 +4,13 @@
 /2017/02/a-new-r-markdown-ppt-tool/   /2017/02/xaringan-presentation/
 
 /2013/12/the-250th-anniversary-of-bayes-theorem-1st-bayesian-statistics-meeting/    /2013/12/1st-bayesian-statistics-meeting/
+
+/page/:slug/        /
+
+/tag/:slug/*         /tags/:slug
+/category/:slug/*    /categories/:slug
+
+/:year/             /archives/
+/:year/:month/      /archives/
+/:year/:month/page/*  /archives/
+
