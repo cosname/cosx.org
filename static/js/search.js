@@ -44,10 +44,10 @@ search.addWidget(
       item: hitTemplate
     },
     transformData: function(hit) {
-      if (!hit.description){
-        hit.description = hit.content.slice(0,100).replace("\n","")+'...'
+      if (!hit.description) {
+        hit.description = hit.content.slice(0, 100).replace("\n", "") + '...';
       }
-      hit.date = hit.date.slice(0,10);
+      hit.date = hit.date.slice(0, 10);
       return hit;
     }
   })
