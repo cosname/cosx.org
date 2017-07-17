@@ -108,6 +108,7 @@ blockquote { margin: auto; }
       display: none;
   }
 }
+.date-author { margin-bottom: .5em; }
 .summary img { transition: transform 0.6s; }
 .summary img:hover { transform: scale(1.4); }
 .article-list h1 a:hover {
