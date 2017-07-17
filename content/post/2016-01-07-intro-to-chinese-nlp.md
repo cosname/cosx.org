@@ -1,12 +1,12 @@
 ---
+title: 中文文本处理简要介绍
+date: '2016-01-07T03:50:18+00:00'
+author: COS编辑部
 categories:
   - 数据分析
   - 数据挖掘与机器学习
   - 统计软件
   - 软件应用
-title: 中文文本处理简要介绍
-date: '2016-01-07T03:50:18+00:00'
-author: COS编辑部
 tags:
   - NLP
   - 中文
@@ -16,9 +16,7 @@ tags:
   - 词向量
   - 词性标注
 slug: intro-to-chinese-nlp
-description: 作为一个处理自然语言数据的团队，我们在日常工作中要用到不同的工具来预处理中文文本，比如 [Jieba](https://github.com/fxsjy/jieba)
-  和 [Stanford NLP software](http://nlp.stanford.edu/software/)。出于准确性和效率的考虑，我们选择了Stanford
-  NLP software， 所以本文将介绍基于 Stanford NLP software 的中文文本预处理流程。
+description: "作为一个处理自然语言数据的团队，我们在日常工作中要用到不同的工具来预处理中文文本，比如 [Jieba](https://github.com/fxsjy/jieba) 和 [Stanford NLP software](http://nlp.stanford.edu/software/)。出于准确性和效率的考虑，我们选择了Stanford NLP software， 所以本文将介绍基于 Stanford NLP software 的中文文本预处理流程。"
 forum_id: 419116
 ---
 

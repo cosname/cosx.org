@@ -1,10 +1,10 @@
 ---
-categories:
-  - 经典理论
-  - 统计计算
 title: 那些年，我们一起追的EB
 date: '2012-05-26T00:32:12+00:00'
 author: eeyangc
+categories:
+  - 经典理论
+  - 统计计算
 tags:
   - Bootstrap
   - Efron

@@ -1,9 +1,9 @@
 ---
-categories:
-  - 网站导读
 title: 统计之都《本周导读》第九辑
 date: '2009-03-15T22:43:59+00:00'
 author: 郑冰
+categories:
+  - 网站导读
 tags:
   - 主站
   - 博客

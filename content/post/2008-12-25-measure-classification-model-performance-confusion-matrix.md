@@ -1,11 +1,11 @@
 ---
+title: '分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵'
+date: '2008-12-25T14:42:45+00:00'
+author: 胡江堂
 categories:
   - 数据挖掘与机器学习
   - 生物与医学统计
   - 统计软件
-title: '分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵'
-date: '2008-12-25T14:42:45+00:00'
-author: 胡江堂
 tags:
   - Confusion Matrix
   - Logistic回归

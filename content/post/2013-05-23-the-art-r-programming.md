@@ -1,9 +1,9 @@
 ---
-categories:
-  - 图书出版
 title: 《R语言编程艺术》
 date: '2013-05-23T16:52:04+00:00'
 author: 陈堰平
+categories:
+  - 图书出版
 slug: the-art-r-programming
 forum_id: 418938
 ---

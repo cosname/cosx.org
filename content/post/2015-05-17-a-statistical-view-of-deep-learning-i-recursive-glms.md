@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计之都
 title: 从统计学角度来看深度学习（1）：递归广义线性模型
 date: '2015-05-17T10:52:45+00:00'
 author: COS编辑部
+categories:
+  - 统计之都
 slug: a-statistical-view-of-deep-learning-i-recursive-glms
 forum_id: 419080
 ---

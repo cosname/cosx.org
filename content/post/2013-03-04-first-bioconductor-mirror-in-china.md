@@ -1,10 +1,10 @@
 ---
-categories:
-  - 统计之都
-  - 网站导读
 title: COS每周精选:中国首个Bioconductor镜像建成
 date: '2013-03-04T07:21:21+00:00'
 author: 潘岚锋
+categories:
+  - 统计之都
+  - 网站导读
 tags:
   - 每周精选
 slug: first-bioconductor-mirror-in-china

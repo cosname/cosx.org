@@ -1,10 +1,10 @@
 ---
-categories:
-  - 统计软件
-  - 软件应用
 title: R与SAS的集成
 date: '2013-02-16T15:01:54+00:00'
 author: 高燕
+categories:
+  - 统计软件
+  - 软件应用
 tags:
   - R语言
   - SAS

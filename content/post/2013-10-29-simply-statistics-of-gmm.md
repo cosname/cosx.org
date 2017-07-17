@@ -1,20 +1,17 @@
 ---
-categories:
-  - 推荐文章
-  - 网站导读
 title: COS每周精选:Simply Statistics为你解释GMM
 date: '2013-10-29T00:40:36+00:00'
 author: 霍志骥
+categories:
+  - 推荐文章
+  - 网站导读
 tags:
   - 数据挖掘
   - 文本挖掘
   - 机器学习
   - 每周精选
 slug: simply-statistics-of-gmm
-description: 统计学家在其他领域大放异彩已经不是什么新鲜事，最近公布的三位诺贝尔经济学奖获得者之一，Lars Hansen，就是其中一员。有趣的是，因为Hansen
-  的理论过于复杂以致于众多新闻报道乃至经济学评论都对他的成果支支吾吾，一带而过。以至于Chicago Magazine 称之为the forgotten Nobel
-  Prize winner。甚至在是诺贝尔奖委员会（Nobel Prize Committee）对三人研究的介绍中，对GMM究竟是什么也是暧昧不清。Simply
-  Statistics 决心为普罗大众（general audience）写一篇科普文，如果你看懂了，恭喜你，你已经超越了一般的普罗大众，而成为一个统计学家眼中的普罗大众了。
+description: "统计学家在其他领域大放异彩已经不是什么新鲜事，最近公布的三位诺贝尔经济学奖获得者之一，Lars Hansen，就是其中一员。有趣的是，因为Hansen 的理论过于复杂以致于众多新闻报道乃至经济学评论都对他的成果支支吾吾，一带而过。以至于Chicago Magazine 称之为the forgotten Nobel Prize winner。甚至在是诺贝尔奖委员会（Nobel Prize Committee）对三人研究的介绍中，对GMM究竟是什么也是暧昧不清。Simply Statistics 决心为普罗大众（general audience）写一篇科普文，如果你看懂了，恭喜你，你已经超越了一般的普罗大众，而成为一个统计学家眼中的普罗大众了。"
 forum_id: 418978
 ---
 

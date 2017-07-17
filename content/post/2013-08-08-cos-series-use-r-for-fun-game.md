@@ -1,11 +1,11 @@
 ---
+title: COS论坛精华帖系列——use R for fun系列之小游戏开发篇
+date: '2013-08-08T18:27:06+00:00'
+description: "系列以use R for fun为主题，以COS论坛上的精华帖、相关的package以及自己的一些code为素材，结合自身的一些编程体会，从而整合成文。"
+author: 刘辰昂
 categories:
   - 推荐文章
   - 软件应用
-title: COS论坛精华帖系列——use R for fun系列之小游戏开发篇
-date: '2013-08-08T18:27:06+00:00'
-description: 系列以use R for fun为主题，以COS论坛上的精华帖、相关的package以及自己的一些code为素材，结合自身的一些编程体会，从而整合成文。
-author: 刘辰昂
 tags:
   - fun包
   - 交互

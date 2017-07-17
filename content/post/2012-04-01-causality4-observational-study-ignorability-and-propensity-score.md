@@ -1,10 +1,10 @@
 ---
-categories:
-  - 经典理论
-  - 统计推断
 title: 因果推断简介之四：观察性研究，可忽略性和倾向得分
 date: '2012-04-01T14:41:38+00:00'
 author: 丁鹏
+categories:
+  - 经典理论
+  - 统计推断
 tags:
   - Donald Rubin
   - ignorability

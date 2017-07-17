@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计之都
 title: '[火光摇曳]神奇的伽玛函数(上)'
 date: '2014-07-01T08:50:52+00:00'
 author: rickjin
+categories:
+  - 统计之都
 tags:
   - gamma
   - 伽玛函数

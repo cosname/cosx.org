@@ -1,11 +1,11 @@
 ---
+title: 精品课程系列：应用随机过程
+date: '2011-06-30T16:46:09+00:00'
+author: 张景肖
 categories:
   - 数学方法
   - 随机过程
   - 高校课堂
-title: 精品课程系列：应用随机过程
-date: '2011-06-30T16:46:09+00:00'
-author: 张景肖
 tags:
   - Markov
   - Martingale

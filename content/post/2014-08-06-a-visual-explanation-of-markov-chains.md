@@ -1,11 +1,11 @@
 ---
+title: COS每周精选：A visual explanation of Markov Chains
+date: '2014-08-06T08:29:29+00:00'
+author: 霍志骥
 categories:
   - 新闻通知
   - 统计之都
   - 网站导读
-title: COS每周精选：A visual explanation of Markov Chains
-date: '2014-08-06T08:29:29+00:00'
-author: 霍志骥
 tags:
   - 每周精选
 slug: a-visual-explanation-of-markov-chains

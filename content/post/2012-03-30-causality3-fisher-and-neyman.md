@@ -1,10 +1,10 @@
 ---
-categories:
-  - 经典理论
-  - 统计推断
 title: 因果推断简介之三：R. A. Fisher 和 J. Neyman 的分歧
 date: '2012-03-30T13:10:09+00:00'
 author: 丁鹏
+categories:
+  - 经典理论
+  - 统计推断
 tags:
   - Fisher randomization test
   - Neyman repeated sampling procedure

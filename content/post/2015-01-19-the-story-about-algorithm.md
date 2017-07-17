@@ -1,16 +1,15 @@
 ---
+title: COS每周精选：算法学习知哪些？
+date: '2015-01-19T00:39:08+00:00'
+author: COS编辑部
 categories:
   - 数学方法
   - 数据挖掘与机器学习
   - 每周精选
   - 统计之都
   - 统计计算
-title: COS每周精选：算法学习知哪些？
-date: '2015-01-19T00:39:08+00:00'
-author: COS编辑部
 slug: the-story-about-algorithm
-description: K-means是最常用的聚类算法之一：容易理解，实现不难，虽然会有local optimum，但通常结果也不差。但k-means也不是万金油，比如在一些比较复杂的问题和非线性数据分布上，k-means也会失败。普林斯顿博士David
-  Robinson写了一篇不错的分析[文章](http://varianceexplained.org/r/kmeans-free-lunch/)，介绍了几种k-means会失效的情形。
+description: "K-means是最常用的聚类算法之一：容易理解，实现不难，虽然会有local optimum，但通常结果也不差。但k-means也不是万金油，比如在一些比较复杂的问题和非线性数据分布上，k-means也会失败。普林斯顿博士David Robinson写了一篇不错的分析[文章](http://varianceexplained.org/r/kmeans-free-lunch/)，介绍了几种k-means会失效的情形。"
 forum_id: 419058
 ---
 

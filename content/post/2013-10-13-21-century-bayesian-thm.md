@@ -1,13 +1,13 @@
 ---
-categories:
-  - 网站导读
 title: COS每周精选:21世纪的贝叶斯定理？
 date: '2013-10-13T12:57:22+00:00'
 author: 潘岚锋
+categories:
+  - 网站导读
 tags:
   - 每周精选
 slug: 21-century-bayesian-thm
-description: 本期投稿：谢益辉 魏太云。
+description: "本期投稿：谢益辉 魏太云。"
 forum_id: 418975
 ---
 

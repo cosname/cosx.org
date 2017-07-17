@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计软件
 title: 在Batch Mode下完成无人值守的R项目测试
 date: '2009-03-21T12:28:31+00:00'
 author: 齐韬
+categories:
+  - 统计软件
 tags:
   - R语言
   - simulation

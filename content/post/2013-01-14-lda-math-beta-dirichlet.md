@@ -1,10 +1,10 @@
 ---
-categories:
-  - 数学方法
-  - 概率论
 title: LDA-math-认识Beta/Dirichlet分布
 date: '2013-01-14T23:54:35+00:00'
 author: rickjin
+categories:
+  - 数学方法
+  - 概率论
 tags:
   - Beta-Binomial共轭
   - Beta分布

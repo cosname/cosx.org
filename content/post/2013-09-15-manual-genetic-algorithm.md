@@ -1,9 +1,9 @@
 ---
-categories:
-  - 优化与模拟
 title: 自制简单遗传算法实验
 date: '2013-09-15T10:36:35+00:00'
 author: 严酷的魔王
+categories:
+  - 优化与模拟
 tags:
   - 旅行商问题
   - 最优化

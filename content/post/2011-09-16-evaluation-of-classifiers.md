@@ -1,10 +1,10 @@
 ---
-categories:
-  - 数据分析
-  - 数据挖掘与机器学习
 title: 分类器评价、混淆矩阵与ROC曲线
 date: '2011-09-16T09:26:46+00:00'
 author: COS编辑部
+categories:
+  - 数据分析
+  - 数据挖掘与机器学习
 tags:
   - ROC曲线
   - 分类
@@ -12,7 +12,7 @@ tags:
   - 混淆矩阵
   - 评价
 slug: evaluation-of-classifiers
-description: 本文转载自阿稳的博客，原文链接请点击[此处](http://www.wentrue.net/blog/?p=1279)。本文主要介绍了数据挖掘中分类器的评价指标，以及混淆矩阵、ROC曲线等内容。
+description: "本文转载自阿稳的博客，原文链接请点击[此处](http://www.wentrue.net/blog/?p=1279)。本文主要介绍了数据挖掘中分类器的评价指标，以及混淆矩阵、ROC曲线等内容。"
 forum_id: 418852
 ---
 

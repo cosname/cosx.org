@@ -1,10 +1,10 @@
 ---
-categories:
-  - 统计之都
-  - 网站导读
 title: COS每周精选:Gadfly：Julia下ggplot2的雏形
 date: '2013-03-19T09:46:07+00:00'
 author: 潘岚锋
+categories:
+  - 统计之都
+  - 网站导读
 tags:
   - 每周精选
 slug: gadfly-ggplot2-in-julia

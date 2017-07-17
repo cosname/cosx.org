@@ -1,11 +1,11 @@
 ---
+title: Hadley Wickham：一个改变了R的人
+date: '2015-09-21T10:16:43+00:00'
+author: COS编辑部
 categories:
   - 推荐文章
   - 统计图形
   - 统计软件
-title: Hadley Wickham：一个改变了R的人
-date: '2015-09-21T10:16:43+00:00'
-author: COS编辑部
 tags:
   - ggplot2
   - Hadley Wickham

@@ -1,11 +1,11 @@
 ---
+title: COS每周精选：深度学习
+date: '2016-04-03T14:00:33+00:00'
+author: COS编辑部
 categories:
   - 推荐文章
   - 每周精选
   - 统计之都
-title: COS每周精选：深度学习
-date: '2016-04-03T14:00:33+00:00'
-author: COS编辑部
 tags:
   - Machine Learning
   - 深度学习

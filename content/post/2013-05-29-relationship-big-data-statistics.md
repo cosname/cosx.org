@@ -1,11 +1,11 @@
 ---
+title: 大数据时代和数据分析需求，统计还沾边吗？
+date: '2013-05-29T13:29:01+00:00'
+author: COS编辑部
 categories:
   - 推荐文章
   - 统计之都
   - 职业事业
-title: 大数据时代和数据分析需求，统计还沾边吗？
-date: '2013-05-29T13:29:01+00:00'
-author: COS编辑部
 tags:
   - Michael Jordan
   - 大数据

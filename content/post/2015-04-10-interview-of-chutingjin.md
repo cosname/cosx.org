@@ -1,12 +1,12 @@
 ---
+title: COS访谈第十七期：褚挺进
+date: '2015-04-10T12:00:58+00:00'
+author: COS编辑部
 categories:
   - 推荐文章
   - 统计之都
   - 职业事业
   - 高校课堂
-title: COS访谈第十七期：褚挺进
-date: '2015-04-10T12:00:58+00:00'
-author: COS编辑部
 slug: interview-of-chutingjin
 forum_id: 419074
 ---

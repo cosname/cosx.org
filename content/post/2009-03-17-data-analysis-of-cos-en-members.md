@@ -1,9 +1,9 @@
 ---
-categories:
-  - 数据挖掘与机器学习
 title: COS竞赛：英文站点会员类型的识别
 date: '2009-03-17T00:15:17+00:00'
 author: 谢益辉
+categories:
+  - 数据挖掘与机器学习
 tags:
   - 判别分析
   - 数据分析

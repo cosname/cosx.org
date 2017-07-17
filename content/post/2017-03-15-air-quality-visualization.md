@@ -1,13 +1,14 @@
 ---
+title: 十行代码看到空气质量指数
+date: 2017-03-15T22:25:09+00:00
+author: 郎大为
+slug: "air-quality-visualization"
 categories:
   - 统计之都
-  - R语言
+  - leaflet
   - 地理信息可视化
   - 地图
-title: 十行代码看到空气质量指数
-date: '2017-03-15T22:25:09+00:00'
-author: 郎大为
-slug: air-quality-visualization
+  - R
 forum_id: 419185
 ---
 

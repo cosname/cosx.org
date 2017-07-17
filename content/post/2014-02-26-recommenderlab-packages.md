@@ -1,12 +1,12 @@
 ---
+title: recommenderlab 包实现电影评分预测
+date: '2014-02-26T13:51:44+00:00'
+author: 龚 得星
 categories:
   - 数据分析
   - 数据挖掘与机器学习
   - 统计软件
   - 软件应用
-title: recommenderlab 包实现电影评分预测
-date: '2014-02-26T13:51:44+00:00'
-author: 龚 得星
 tags:
   - 推荐
   - 模型

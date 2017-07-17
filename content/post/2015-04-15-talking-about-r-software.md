@@ -1,13 +1,13 @@
 ---
+title: COS每周精选：再谈R学习
+date: '2015-04-15T20:09:07+00:00'
+author: COS编辑部
 categories:
   - 每周精选
   - 统计之都
   - 统计软件
   - 软件应用
   - 金融统计
-title: COS每周精选：再谈R学习
-date: '2015-04-15T20:09:07+00:00'
-author: COS编辑部
 slug: talking-about-r-software
 forum_id: 419076
 ---

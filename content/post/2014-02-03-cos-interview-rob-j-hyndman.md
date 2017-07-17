@@ -1,11 +1,11 @@
 ---
+title: COS 访谈第十五期：Rob J. Hyndman
+date: '2014-02-03T17:40:05+00:00'
+author: COS编辑部
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
-title: COS 访谈第十五期：Rob J. Hyndman
-date: '2014-02-03T17:40:05+00:00'
-author: COS编辑部
 tags:
   - COS访谈
   - 时间序列

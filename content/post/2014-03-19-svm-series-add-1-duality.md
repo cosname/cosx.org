@@ -1,10 +1,10 @@
 ---
-categories:
-  - 推荐文章
-  - 数据挖掘与机器学习
 title: '“支持向量机系列”的番外篇一: Duality'
 date: '2014-03-19T13:10:08+00:00'
 author: 张 驰原
+categories:
+  - 推荐文章
+  - 数据挖掘与机器学习
 tags:
   - Duality
   - 支持向量机

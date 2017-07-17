@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计推断
 title: 概率论的起源、发展、应用
 date: '2008-11-26T22:50:37+00:00'
 author: 赵永红
+categories:
+  - 统计推断
 tags:
   - 中心极限定理
   - 伯努利大数定理

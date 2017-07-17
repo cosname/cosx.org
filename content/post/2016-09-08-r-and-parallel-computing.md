@@ -1,10 +1,10 @@
 ---
-categories:
-  - 推荐文章
-  - 统计软件
 title: R与并行计算
 date: '2016-09-08T23:40:01+00:00'
 author: COS编辑部
+categories:
+  - 推荐文章
+  - 统计软件
 tags:
   - R并行计算
   - 并行计算

@@ -1,9 +1,9 @@
 ---
-categories:
-  - 新闻通知
 title: 第二届中国R语言会议纪要
 date: '2009-12-20T15:53:18+00:00'
 author: 邱怡轩
+categories:
+  - 新闻通知
 tags:
   - R语言会议
 slug: 2nd-chinese-r-conference-summary

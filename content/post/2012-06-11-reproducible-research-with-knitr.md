@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计软件
 title: knitr与可重复的统计研究（花絮篇）
 date: '2012-06-11T00:04:12+00:00'
 author: 谢益辉
+categories:
+  - 统计软件
 tags:
   - knitr
   - Markdown

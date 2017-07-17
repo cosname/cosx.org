@@ -1,15 +1,15 @@
 ---
-categories:
-  - 每周精选
-  - 统计之都
 title: COS每周精选：名家名言
 date: '2016-04-17T21:03:44+00:00'
 author: COS编辑部
+categories:
+  - 每周精选
+  - 统计之都
 tags:
   - Feather包
   - 每周精选
 slug: famous-sayings
-description: 名家名言：王汉生：传统制造业才是大数据的金矿。R 包：突破数据框读写瓶颈，又一个造轮子的工作，Feather值得一试...
+description: "名家名言：王汉生：传统制造业才是大数据的金矿。R 包：突破数据框读写瓶颈，又一个造轮子的工作，Feather值得一试..."
 forum_id: 419125
 ---
 

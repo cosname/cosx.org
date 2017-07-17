@@ -1,14 +1,14 @@
 ---
+title: COS每周精选：新浪微博的数据可视化
+date: '2014-12-21T22:40:02+00:00'
+author: COS编辑部
 categories:
   - 可视化
   - 数据挖掘与机器学习
   - 每周精选
   - 职业事业
-title: COS每周精选：新浪微博的数据可视化
-date: '2014-12-21T22:40:02+00:00'
-author: COS编辑部
 slug: the-visualization-of-weibo
-description: 如何把新浪微博POI签到数据炫酷的可视化？2014年，Hadoop技术有什么重要发展?优秀博士通常具备哪些品质？本期COS精选为你揭晓。
+description: "如何把新浪微博POI签到数据炫酷的可视化？2014年，Hadoop技术有什么重要发展?优秀博士通常具备哪些品质？本期COS精选为你揭晓。"
 forum_id: 419051
 ---
 

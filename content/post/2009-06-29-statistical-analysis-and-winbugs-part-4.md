@@ -1,11 +1,11 @@
 ---
+title: WinBUGS在统计分析中的应用（第四部分）
+date: '2009-06-29T14:15:13+00:00'
+author: 齐韬
 categories:
   - 统计图形
   - 统计软件
   - 贝叶斯方法
-title: WinBUGS在统计分析中的应用（第四部分）
-date: '2009-06-29T14:15:13+00:00'
-author: 齐韬
 tags:
   - ArcInfo
   - GeoBUGS

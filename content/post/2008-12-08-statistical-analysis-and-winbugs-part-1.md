@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计软件
 title: WinBUGS在统计分析中的应用（第一部分）
 date: '2008-12-08T19:40:06+00:00'
 author: 齐韬
+categories:
+  - 统计软件
 tags:
   - MCMC
   - R语言

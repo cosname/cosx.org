@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计之都
 title: 互联网+物联网：中国统计学的风口
 date: '2015-09-13T09:13:43+00:00'
 author: 王汉生
+categories:
+  - 统计之都
 tags:
   - 互联网
   - 物联网

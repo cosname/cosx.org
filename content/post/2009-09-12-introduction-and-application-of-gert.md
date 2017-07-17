@@ -1,10 +1,10 @@
 ---
-categories:
-  - 推荐文章
-  - 统计推断
 title: 用GERT方法求解两个抛硬币问题
 date: '2009-09-12T09:44:05+00:00'
 author: 刘飞燕
+categories:
+  - 推荐文章
+  - 统计推断
 tags:
   - GERT
   - 图解评审技术

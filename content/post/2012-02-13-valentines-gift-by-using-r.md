@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计图形
 title: 用R绘制情人节的礼物
 date: '2012-02-13T20:00:05+00:00'
 author: 林宇
+categories:
+  - 统计图形
 tags:
   - R语言
   - 情人节

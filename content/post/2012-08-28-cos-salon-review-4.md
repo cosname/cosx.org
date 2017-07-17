@@ -1,11 +1,11 @@
 ---
+title: COS数据分析沙龙第四期（北京）
+date: '2012-08-28T20:20:51+00:00'
+author: 邓一硕
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
-title: COS数据分析沙龙第四期（北京）
-date: '2012-08-28T20:20:51+00:00'
-author: 邓一硕
 tags:
   - COS沙龙
 slug: cos-salon-review-4

@@ -1,9 +1,9 @@
 ---
-categories:
-  - 生物与医学统计
 title: 医学统计学的渊源
 date: '2013-08-23T19:22:30+00:00'
 author: 冯国双
+categories:
+  - 生物与医学统计
 tags:
   - 医学统计学
   - 变异

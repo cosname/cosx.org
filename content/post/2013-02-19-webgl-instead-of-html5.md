@@ -1,9 +1,9 @@
 ---
-categories:
-  - 网站导读
 title: COS每周精选:还在研究HTML5么，看看WebGL如何!
 date: '2013-02-19T11:18:18+00:00'
 author: 潘岚锋
+categories:
+  - 网站导读
 tags:
   - 每周精选
 slug: webgl-instead-of-html5

@@ -1,16 +1,16 @@
 ---
-categories:
-  - 图书出版
-  - 新闻通知
 title: 《Rcpp：R与C++的无缝整合》
 date: '2016-01-10T12:29:09+00:00'
 author: COS编辑部
+categories:
+  - 图书出版
+  - 新闻通知
 tags:
   - Rcpp
   - 图书出版
   - 统计之都
 slug: seamless-r-and-c-integration-with-rcpp
-description: Rcpp是R应用最为广泛的语言扩展包，它被应用于超过100个CRAN和BioConductor的包中。这本书是关于Rcpp的第一本综合性导论。Rcpp使得用户可以在R和C++之间来回传递数值、向量、列表或者完整的R对象，在给R分析框架带来深度的同时，也带来了C++的威力、速度和效率。
+description: "Rcpp是R应用最为广泛的语言扩展包，它被应用于超过100个CRAN和BioConductor的包中。这本书是关于Rcpp的第一本综合性导论。Rcpp使得用户可以在R和C++之间来回传递数值、向量、列表或者完整的R对象，在给R分析框架带来深度的同时，也带来了C++的威力、速度和效率。"
 forum_id: 419117
 ---
 

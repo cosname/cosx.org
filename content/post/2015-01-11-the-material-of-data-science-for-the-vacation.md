@@ -1,4 +1,7 @@
 ---
+title: COS每周精选：寒假来了，小编分享一些学习资料
+date: '2015-01-11T19:51:41+00:00'
+author: COS编辑部
 categories:
   - 可视化
   - 推荐文章
@@ -6,9 +9,6 @@ categories:
   - 统计之都
   - 统计图形
   - 职业事业
-title: COS每周精选：寒假来了，小编分享一些学习资料
-date: '2015-01-11T19:51:41+00:00'
-author: COS编辑部
 slug: the-material-of-data-science-for-the-vacation
 forum_id: 419057
 ---
