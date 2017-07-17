@@ -1,10 +1,10 @@
 ---
-categories:
-  - 推荐文章
-  - 统计之都
 title: 失联搜救中的统计数据分析
 date: '2014-04-12T13:48:15+00:00'
 author: COS编辑部
+categories:
+  - 推荐文章
+  - 统计之都
 tags:
   - 众包
   - 可视化

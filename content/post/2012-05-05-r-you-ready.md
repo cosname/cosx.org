@@ -1,11 +1,11 @@
 ---
+title: R You Ready?——大数据时代下优雅、卓越的统计分析及绘图环境
+date: '2012-05-05T11:46:56+00:00'
+author: 刘思喆
 categories:
   - 推荐文章
   - 统计软件
   - 软件应用
-title: R You Ready?——大数据时代下优雅、卓越的统计分析及绘图环境
-date: '2012-05-05T11:46:56+00:00'
-author: 刘思喆
 tags:
   - GNU
   - John M. Chambers

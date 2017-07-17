@@ -1,9 +1,9 @@
 ---
-categories:
-  - 经典理论
 title: 统计学的历史与今天
 date: '2008-11-26T22:13:02+00:00'
 author: 张晓牟
+categories:
+  - 经典理论
 tags:
   - 创立
   - 历史

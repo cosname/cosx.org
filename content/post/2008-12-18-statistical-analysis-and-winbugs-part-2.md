@@ -1,17 +1,17 @@
 ---
+title: WinBUGS在统计分析中的应用（第二部分）
+date: '2008-12-18T15:15:19+00:00'
+author: 齐韬
 categories:
   - 数据分析
   - 统计软件
   - 贝叶斯方法
-title: WinBUGS在统计分析中的应用（第二部分）
-date: '2008-12-18T15:15:19+00:00'
-author: 齐韬
 tags:
   - SAS
   - WinBUGS
   - 贝叶斯
 slug: statistical-analysis-and-winbugs-part-2
-description: 本文为WinBUGS在统计分析中的应用的第二部分，包括了数据分析案例；结合SAS做比较分析两个部分的内容。
+description: "本文为WinBUGS在统计分析中的应用的第二部分，包括了数据分析案例；结合SAS做比较分析两个部分的内容。"
 forum_id: 418758
 ---
 

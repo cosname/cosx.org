@@ -1,9 +1,9 @@
 ---
-categories:
-  - 职业事业
 title: COS访谈第七期：Scott Iverson（杜邦先锋）
 date: '2013-09-12T11:50:55+00:00'
 author: COS编辑部
+categories:
+  - 职业事业
 tags:
   - COS访谈
   - 市场

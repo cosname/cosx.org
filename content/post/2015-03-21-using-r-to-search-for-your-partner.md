@@ -1,15 +1,15 @@
 ---
+title: COS每周精选：用R来找寻你的另一半吧！！！
+date: '2015-03-21T19:42:12+00:00'
+author: COS编辑部
 categories:
   - 可视化
   - 推荐文章
   - 每周精选
   - 统计之都
   - 统计软件
-title: COS每周精选：用R来找寻你的另一半吧！！！
-date: '2015-03-21T19:42:12+00:00'
-author: COS编辑部
 slug: using-r-to-search-for-your-partner
-description: 还记得小编的每周精选“[统计学在爱情中的那些应用](/2015/02/the-application-of-statistics-in-love/)”么，正值春暖花开之时，是不是想约个妹子一起去春游啊。小编又苦心找了几篇文章，以统计学的思维助你一臂之力。
+description: "还记得小编的每周精选“[统计学在爱情中的那些应用](/2015/02/the-application-of-statistics-in-love/)”么，正值春暖花开之时，是不是想约个妹子一起去春游啊。小编又苦心找了几篇文章，以统计学的思维助你一臂之力。"
 forum_id: 419067
 ---
 

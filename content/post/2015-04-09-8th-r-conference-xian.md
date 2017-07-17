@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计之都
 title: 2015数据与价值欧亚论坛暨R会议西安分论坛通知
 date: '2015-04-09T17:53:04+00:00'
 author: COS编辑部
+categories:
+  - 统计之都
 tags:
   - R语言会议
   - 新闻通知

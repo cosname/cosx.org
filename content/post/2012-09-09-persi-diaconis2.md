@@ -1,11 +1,11 @@
 ---
+title: Persi  Diaconis(2)
+date: '2012-09-09T18:05:52+00:00'
+author: montecarlo
 categories:
   - 统计推断
   - 统计计算
   - 贝叶斯方法
-title: Persi  Diaconis(2)
-date: '2012-09-09T18:05:52+00:00'
-author: montecarlo
 slug: persi-diaconis2
 forum_id: 418883
 ---

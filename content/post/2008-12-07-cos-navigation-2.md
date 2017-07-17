@@ -1,9 +1,9 @@
 ---
-categories:
-  - 网站导读
 title: 统计之都《本周导读》第二辑
 date: '2008-12-07T21:29:44+00:00'
 author: 郑冰
+categories:
+  - 网站导读
 tags:
   - 主站
   - 博客

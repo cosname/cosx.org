@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计之都
 title: 埃博拉病毒——大数据时代的疫情防控
 date: '2015-01-05T05:46:02+00:00'
 author: COS编辑部
+categories:
+  - 统计之都
 slug: ebola-in-the-big-data-era
 forum_id: 419055
 ---

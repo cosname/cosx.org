@@ -1,10 +1,10 @@
 ---
-categories:
-  - 推荐文章
-  - 软件应用
 title: use R for fun系列之玩转图像篇
 date: '2013-09-01T12:35:13+00:00'
 author: COS编辑部
+categories:
+  - 推荐文章
+  - 软件应用
 tags:
   - biOps
   - EBImage

@@ -1,12 +1,12 @@
 ---
+title: COS数据分析沙龙第十一期（北京）
+date: '2013-07-02T14:29:22+00:00'
+description: "2013年6月23日，十一期COS数据分析沙龙（北京站）在明主1016如期举行。本期沙龙主题是“RHadoop助R突破大数据难关”；沙龙嘉宾张丹先生围绕沙龙主题分享了有关在ubuntu系统下配置RHadoop的相关知识以及基于RHadoop完成数据分析工作的相关案例。"
+author: 邓一硕
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
-title: COS数据分析沙龙第十一期（北京）
-date: '2013-07-02T14:29:22+00:00'
-description: 2013年6月23日，十一期COS数据分析沙龙（北京站）在明主1016如期举行。本期沙龙主题是“RHadoop助R突破大数据难关”；沙龙嘉宾张丹先生围绕沙龙主题分享了有关在ubuntu系统下配置RHadoop的相关知识以及基于RHadoop完成数据分析工作的相关案例。
-author: 邓一硕
 tags:
   - COS沙龙
 slug: beijing-cos-salon-june-2013

@@ -1,10 +1,10 @@
 ---
-categories:
-  - 推荐文章
-  - 统计之都
 title: 我们为什么要做研究？
 date: '2015-08-31T10:09:00+00:00'
 author: COS编辑部
+categories:
+  - 推荐文章
+  - 统计之都
 tags:
   - COS翻译
   - Terry Speed

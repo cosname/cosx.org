@@ -1,10 +1,10 @@
 ---
-categories:
-  - 新闻通知
-  - 网站导读
 title: 'COS每周精选：统计学者的工作及风范: 灵感、抱负与雄心'
 date: '2014-04-12T10:27:54+00:00'
 author: 霍志骥
+categories:
+  - 新闻通知
+  - 网站导读
 tags:
   - 每周精选
 slug: inspiration-aspiration-ambition

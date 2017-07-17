@@ -1,12 +1,11 @@
 ---
+title: "LDA主题模型简介"
+description: "主题模型是一种语言模型，是对自然语言进行建模，在信息检索中很有用。D. M. Blei在2003年（准确地说应该是2002年）提出的LDA（Latent Dirichlet Allocation）模型让主题模型火了起来，现在已经成为了主题建模中的一个标准。"
+date: '2010-10-08T17:55:53+00:00'
+author: 范建宁
 categories:
   - 数据挖掘与机器学习
   - 贝叶斯方法
-title: LDA主题模型简介
-description: 主题模型是一种语言模型，是对自然语言进行建模，在信息检索中很有用。D. M. Blei在2003年（准确地说应该是2002年）提出的LDA（Latent
-  Dirichlet Allocation）模型让主题模型火了起来，现在已经成为了主题建模中的一个标准。
-date: '2010-10-08T17:55:53+00:00'
-author: 范建宁
 tags:
   - LDA
   - Topic Model

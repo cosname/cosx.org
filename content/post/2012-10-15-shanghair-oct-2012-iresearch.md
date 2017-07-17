@@ -1,11 +1,11 @@
 ---
+title: COS数据分析沙龙第六期（上海）
+date: '2012-10-15T15:14:20+00:00'
+author: Liyun
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
-title: COS数据分析沙龙第六期（上海）
-date: '2012-10-15T15:14:20+00:00'
-author: Liyun
 tags:
   - COS沙龙
 slug: shanghair-oct-2012-iresearch

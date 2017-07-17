@@ -1,12 +1,12 @@
 ---
+title: 漫谈相关与回归
+date: '2009-06-11T20:56:28+00:00'
+author: 刘飞燕
 categories:
   - 回归分析
   - 推荐文章
   - 数据分析
   - 经典理论
-title: 漫谈相关与回归
-date: '2009-06-11T20:56:28+00:00'
-author: 刘飞燕
 tags:
   - David Freedman
   - 回归分析

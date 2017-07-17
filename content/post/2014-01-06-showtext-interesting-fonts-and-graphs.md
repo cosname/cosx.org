@@ -1,11 +1,11 @@
 ---
+title: showtext：字体，好玩的字体和好玩的图形
+date: '2014-01-06T11:23:32+00:00'
+author: 邱怡轩
 categories:
   - 统计图形
   - 统计软件
   - 软件应用
-title: showtext：字体，好玩的字体和好玩的图形
-date: '2014-01-06T11:23:32+00:00'
-author: 邱怡轩
 tags:
   - R语言
   - 图形

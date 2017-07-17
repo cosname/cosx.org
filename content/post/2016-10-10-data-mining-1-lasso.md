@@ -1,11 +1,11 @@
 ---
+title: '热门数据挖掘模型应用入门（一）: LASSO回归'
+date: '2016-10-10T20:01:59+00:00'
+author: 侯澄钧
 categories:
   - 数据分析
   - 数据挖掘与机器学习
   - 统计之都
-title: '热门数据挖掘模型应用入门（一）: LASSO回归'
-date: '2016-10-10T20:01:59+00:00'
-author: 侯澄钧
 slug: data-mining-1-lasso
 forum_id: 419165
 ---

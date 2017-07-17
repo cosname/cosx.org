@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计软件
 title: 打造得心应手的统计编程平台－－Eclipse + StatET
 date: '2008-12-03T13:31:04+00:00'
 author: 胡荣兴
+categories:
+  - 统计软件
 tags:
   - Eclipse
   - R语言

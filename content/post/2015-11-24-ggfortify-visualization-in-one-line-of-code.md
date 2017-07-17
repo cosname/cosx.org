@@ -1,10 +1,10 @@
 ---
-categories:
-  - 统计图形
-  - 软件应用
 title: 一行R代码来实现繁琐的可视化
 date: '2015-11-24T10:41:34+00:00'
 author: COS编辑部
+categories:
+  - 统计图形
+  - 软件应用
 tags:
   - ggfortify
   - ggplot2

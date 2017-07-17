@@ -1,9 +1,9 @@
 ---
-categories:
-  - 计量经济学
 title: 计量经济学概论（郑志姣）
 date: '2008-11-27T22:35:50+00:00'
 author: 郑志姣
+categories:
+  - 计量经济学
 tags:
   - 发展
   - 学习方法

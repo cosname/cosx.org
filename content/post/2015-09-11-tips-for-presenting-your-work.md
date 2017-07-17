@@ -1,4 +1,7 @@
 ---
+title: 如何更好的展示你的研究成果
+date: '2015-09-11T18:02:07+00:00'
+author: COS编辑部
 categories:
   - 可视化
   - 推荐文章
@@ -7,9 +10,6 @@ categories:
   - 统计图形
   - 统计软件
   - 职业事业
-title: 如何更好的展示你的研究成果
-date: '2015-09-11T18:02:07+00:00'
-author: COS编辑部
 tags:
   - Dianne Cook
   - useR

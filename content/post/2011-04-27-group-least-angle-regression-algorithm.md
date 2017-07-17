@@ -1,13 +1,11 @@
 ---
-categories:
-  - 回归分析
-  - 统计计算
 title: 分组最小角回归算法（group LARS）
 date: '2011-04-27T18:31:10+00:00'
 author: 郝智恒
-description: 继续前两篇博文中对于最小角回归（LARS)和lasso的介绍。在这篇文章中，我打算介绍一下分组最小角回归算法（Group LARS）。本文的主要观点均来自Ming
-  Yuan和Yi Lin二人2006合作发表在JRSSB上的论文Model selection and estimation in regression with
-  grouped variables.
+description: 继续前两篇博文中对于最小角回归（LARS)和lasso的介绍。在这篇文章中，我打算介绍一下分组最小角回归算法（Group LARS）。本文的主要观点均来自Ming Yuan和Yi Lin二人2006合作发表在JRSSB上的论文Model selection and estimation in regression with grouped variables.
+categories:
+  - 回归分析
+  - 统计计算
 tags:
   - group variable
   - lars

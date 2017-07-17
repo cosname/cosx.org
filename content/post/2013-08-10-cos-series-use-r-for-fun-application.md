@@ -1,10 +1,10 @@
 ---
-categories:
-  - 推荐文章
-  - 软件应用
 title: COS论坛精华帖系列——use R for fun系列之小应用制作篇
 date: '2013-08-10T16:24:30+00:00'
 author: COS编辑部
+categories:
+  - 推荐文章
+  - 软件应用
 tags:
   - fun包
   - R语言

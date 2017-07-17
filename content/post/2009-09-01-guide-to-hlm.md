@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计软件
 title: 分层线性模型软件HLM6.0操作简介
 date: '2009-09-01T10:28:45+00:00'
 author: 陈堰平
+categories:
+  - 统计软件
 tags:
   - HLM
   - 分层线性模型

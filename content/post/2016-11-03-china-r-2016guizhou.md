@@ -1,10 +1,10 @@
 ---
-categories:
-  - 中国R语言会议
-  - 统计之都
 title: 第九届中国R语言会议（贵阳）暨西南地区数据科学会议通知
 date: '2016-11-03T16:49:15+00:00'
 author: COS编辑部
+categories:
+  - 中国R语言会议
+  - 统计之都
 tags:
   - R语言会议
 slug: china-r-2016guizhou

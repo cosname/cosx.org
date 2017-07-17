@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计软件
 title: 在Windows中创建R的包的步骤
 date: '2009-02-20T10:51:52+00:00'
 author: 胡荣兴
+categories:
+  - 统计软件
 tags:
   - R语言
   - 包 package

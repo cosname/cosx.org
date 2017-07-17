@@ -1,11 +1,11 @@
 ---
+title: REmap入门示例
+date: '2016-06-29T09:57:01+00:00'
+author: 郎大为
 categories:
   - 统计图形
   - 统计软件
   - 软件应用
-title: REmap入门示例
-date: '2016-06-29T09:57:01+00:00'
-author: 郎大为
 tags:
   - Echarts
   - REmap

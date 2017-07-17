@@ -1,11 +1,11 @@
 ---
+title: 开源的计量经济学软件gretl
+date: '2009-01-05T21:43:31+00:00'
+author: 陈堰平
 categories:
   - 时间序列
   - 统计软件
   - 计量经济学
-title: 开源的计量经济学软件gretl
-date: '2009-01-05T21:43:31+00:00'
-author: 陈堰平
 tags:
   - gretl
   - 计量经济学软件

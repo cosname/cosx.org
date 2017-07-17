@@ -1,18 +1,17 @@
 ---
-categories:
-  - 推荐文章
-  - 数据挖掘与机器学习
 title: '支持向量机系列二: Support Vector'
 date: '2014-01-25T10:38:32+00:00'
 author: 张驰原
+categories:
+  - 推荐文章
+  - 数据挖掘与机器学习
 tags:
   - 优化
   - 支持向量机
   - 机器学习
   - 监督学习
 slug: svm-series-2-support-vector
-description: '[上一次](/2014/01/svm-series-maximum-margin-classifier/)介绍支持向量机，结果说到 Maximum
-  Margin Classifier ，到最后都没有说“支持向量”到底是什么东西。'
+description: "[上一次](/2014/01/svm-series-maximum-margin-classifier/)介绍支持向量机，结果说到 Maximum Margin Classifier ，到最后都没有说“支持向量”到底是什么东西。"
 forum_id: 419001
 ---
 

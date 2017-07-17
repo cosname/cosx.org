@@ -1,10 +1,10 @@
 ---
-categories:
-  - 中国R语言会议
-  - 统计之都
 title: 中国R语言（广州）会议-暨华南地区数据科学会议纪要【含演讲资料】
 date: '2015-06-03T08:33:12+00:00'
 author: COS编辑部
+categories:
+  - 中国R语言会议
+  - 统计之都
 slug: china-r-guangzhou
 forum_id: 419084
 ---

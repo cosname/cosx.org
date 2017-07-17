@@ -1,11 +1,11 @@
 ---
+title: COS数据分析沙龙第八期（上海，@联合创业办公社）
+date: '2013-01-21T11:05:44+00:00'
+author: Liyun
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
-title: COS数据分析沙龙第八期（上海，@联合创业办公社）
-date: '2013-01-21T11:05:44+00:00'
-author: Liyun
 tags:
   - COS沙龙
 slug: shanghair-salon-jan-2013

@@ -1,10 +1,10 @@
 ---
-categories:
-  - 统计软件
-  - 软件应用
 title: R语言做符号计算
 date: '2016-07-08T19:48:37+00:00'
 author: 黄湘云
+categories:
+  - 统计软件
+  - 软件应用
 tags:
   - R语言
 slug: r-symbol-calculate

@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计推断
 title: 闲扯“自由度”
 date: '2008-12-04T01:20:43+00:00'
 author: 胡荣兴
+categories:
+  - 统计推断
 tags:
   - 参数估计
   - 自由度

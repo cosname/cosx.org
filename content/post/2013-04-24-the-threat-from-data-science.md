@@ -1,9 +1,9 @@
 ---
-categories:
-  - 网站导读
 title: COS每周精选:数据科学的威胁
 date: '2013-04-24T04:29:14+00:00'
 author: 潘岚锋
+categories:
+  - 网站导读
 tags:
   - 每周精选
 slug: the-threat-from-data-science

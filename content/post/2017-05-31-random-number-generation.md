@@ -2,12 +2,14 @@
 title: 随机数生成及其在统计模拟中的应用
 date: '2017-05-26'
 author: 黄湘云
-tags:
-  - 随机数
-  - 统计检验，模拟
+tags: [随机数,统计检验，模拟]
 slug: random-number-generation
+<<<<<<< HEAD
 meta_extra: 审稿：郎大为、边蓓蕾；编辑：吴佳萍
 forum_id: 419212
+=======
+meta_extra: "审稿：郎大为、边蓓蕾；编辑：吴佳萍"
+>>>>>>> parent of e34098d... update categories
 ---
 
 揭秘统计软件如R，Octave，Matlab等使用的随机数发生器，然后做一些统计检验，再将其应用到独立随机变量和的模拟中，最后与符号计算得到的精确结果比较。除特别说明外，文中涉及到的随机数都是指伪随机数，发生器都是指随机数发生器。

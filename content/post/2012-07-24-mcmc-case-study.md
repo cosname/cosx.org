@@ -1,12 +1,12 @@
 ---
+title: MCMC案例学习
+date: '2012-07-24T14:49:32+00:00'
+author: COS编辑部
 categories:
   - 优化与模拟
   - 统计计算
   - 统计软件
   - 软件应用
-title: MCMC案例学习
-date: '2012-07-24T14:49:32+00:00'
-author: COS编辑部
 tags:
   - MCMC
   - R语言

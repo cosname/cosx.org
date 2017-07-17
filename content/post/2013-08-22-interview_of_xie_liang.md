@@ -1,11 +1,11 @@
 ---
+title: COS访谈第四期：谢梁（微软）
+date: '2013-08-22T09:49:14+00:00'
+author: COS编辑部
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
-title: COS访谈第四期：谢梁（微软）
-date: '2013-08-22T09:49:14+00:00'
-author: COS编辑部
 tags:
   - COS访谈
   - R语言

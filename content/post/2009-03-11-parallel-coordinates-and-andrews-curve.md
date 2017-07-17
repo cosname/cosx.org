@@ -1,10 +1,10 @@
 ---
-categories:
-  - 推荐文章
-  - 统计图形
 title: 调和曲线图和轮廓图的比较
 date: '2009-03-11T23:36:45+00:00'
 author: 魏太云
+categories:
+  - 推荐文章
+  - 统计图形
 tags:
   - iris
   - R语言

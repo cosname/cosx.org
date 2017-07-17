@@ -1,11 +1,11 @@
 ---
+title: '[朝花夕拾] 从学习数学公式到实践统计分析'
+date: '2014-05-28T10:34:05+00:00'
+author: 施涛
 categories:
   - 统计之都
   - 职业事业
   - 高校课堂
-title: '[朝花夕拾] 从学习数学公式到实践统计分析'
-date: '2014-05-28T10:34:05+00:00'
-author: 施涛
 tags:
   - David Freedman
   - Richard D. De Veaux

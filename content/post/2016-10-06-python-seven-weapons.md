@@ -1,10 +1,10 @@
 ---
-categories:
-  - 统计之都
-  - 统计软件
 title: Python的七种武器
 date: '2016-10-06T19:30:41+00:00'
 author: 肖凯
+categories:
+  - 统计之都
+  - 统计软件
 tags:
   - python
   - 数据分析

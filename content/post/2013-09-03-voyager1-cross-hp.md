@@ -1,9 +1,9 @@
 ---
-categories:
-  - 数据分析
 title: 航海家1号离开太阳系了吗？
 date: '2013-09-03T10:30:22+00:00'
 author: 施涛
+categories:
+  - 数据分析
 tags:
   - 太空
   - 太阳系

@@ -1,11 +1,11 @@
 ---
+title: 泛滥与缺失：个人征信vs. 征信误差评估
+date: '2015-11-04T23:38:31+00:00'
+author: 王 汉生
 categories:
   - 推荐文章
   - 统计之都
   - 高校课堂
-title: 泛滥与缺失：个人征信vs. 征信误差评估
-date: '2015-11-04T23:38:31+00:00'
-author: 王 汉生
 tags:
   - Credit Scoring Error
   - CSE

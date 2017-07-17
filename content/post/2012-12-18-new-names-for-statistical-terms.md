@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计之都
 title: '[译作]一些统计名词的新名字'
 date: '2012-12-18T16:31:43+00:00'
 author: Liyun
+categories:
+  - 统计之都
 slug: new-names-for-statistical-terms
 forum_id: 418892
 ---

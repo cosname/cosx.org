@@ -1,10 +1,10 @@
 ---
-categories:
-  - 新闻通知
-  - 统计之都
 title: 第九届中国R语言会议（成都）会议通知
 date: '2016-07-30T20:28:16+00:00'
 author: COS编辑部
+categories:
+  - 新闻通知
+  - 统计之都
 tags:
   - R语言会议
   - 成都R会

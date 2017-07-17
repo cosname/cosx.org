@@ -1,11 +1,11 @@
 ---
+title: '分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC'
+date: '2008-12-31T13:09:43+00:00'
+author: 胡江堂
 categories:
   - 数据挖掘与机器学习
   - 生物与医学统计
   - 统计图形
-title: '分类模型的性能评估——以SAS Logistic回归为例(2): ROC和AUC'
-date: '2008-12-31T13:09:43+00:00'
-author: 胡江堂
 tags:
   - AUC
   - Confusion Matrix
@@ -23,9 +23,8 @@ tags:
   - 混淆矩阵
   - 覆盖率
 slug: measure-classification-model-performance-roc-auc
-description: '上回我们提到，ROC曲线就是不同的阈值下，以下两个变量的组合（如果对Sensitivity和Specificity两个术语没有概念，不妨返回，《分类模型的性能评估——以SAS
-  Logistic回归为例(1): 混淆矩阵》，强烈建议读者对着看）： Sensitivity（覆盖率，True Positive Rate）;1-Specificity
-  (Specificity, 负例的覆盖率，True Negative Rate)'
+description: "上回我们提到，ROC曲线就是不同的阈值下，以下两个变量的组合（如果对Sensitivity和Specificity两个术语没有概念，不妨返回，《分类模型的性能评估——以SAS Logistic回归为例(1): 混淆矩阵》，强烈建议读者对着看）：
+Sensitivity（覆盖率，True Positive Rate）;1-Specificity (Specificity, 负例的覆盖率，True Negative Rate)"
 forum_id: 418762
 ---
 

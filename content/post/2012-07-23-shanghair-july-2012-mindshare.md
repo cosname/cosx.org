@@ -1,11 +1,11 @@
 ---
+title: COS数据分析沙龙第二期（上海）
+date: '2012-07-23T09:39:31+00:00'
+author: Liyun
 categories:
   - 新闻通知
   - 统计之都
   - 职业事业
-title: COS数据分析沙龙第二期（上海）
-date: '2012-07-23T09:39:31+00:00'
-author: Liyun
 tags:
   - COS沙龙
 slug: shanghair-july-2012-mindshare

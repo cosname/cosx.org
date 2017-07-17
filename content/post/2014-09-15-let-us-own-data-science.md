@@ -1,12 +1,12 @@
 ---
+title: 郁彬：让我们拥抱数据科学（Let us own data science）
+date: '2014-09-15T09:49:10+00:00'
+author: COS编辑部
 categories:
   - 推荐文章
   - 新闻通知
   - 职业事业
   - 高校课堂
-title: 郁彬：让我们拥抱数据科学（Let us own data science）
-date: '2014-09-15T09:49:10+00:00'
-author: COS编辑部
 tags:
   - 大数据
   - 数据科学
@@ -14,7 +14,7 @@ tags:
   - 讲座
   - 郁彬
 slug: let-us-own-data-science
-description: 郁彬教授8月22日在北京大学做了名为让我们拥抱数据科学(Let us own data science)的讲座。在演讲中郁彬从一个统计学家的角度出发，讲述了数据科学的兴起历史和目前状况，并且对统计学科、从事统计相关工作的人士如何跟上时代步伐拥抱数据科学给出了非常多的建议。
+description: "郁彬教授8月22日在北京大学做了名为让我们拥抱数据科学(Let us own data science)的讲座。在演讲中郁彬从一个统计学家的角度出发，讲述了数据科学的兴起历史和目前状况，并且对统计学科、从事统计相关工作的人士如何跟上时代步伐拥抱数据科学给出了非常多的建议。"
 forum_id: 419031
 ---
 

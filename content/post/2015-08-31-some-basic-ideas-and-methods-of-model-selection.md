@@ -1,9 +1,9 @@
 ---
-categories:
-  - 统计之都
 title: 模型选择的一些基本思想和方法
 date: '2015-08-31T08:29:54+00:00'
 author: COS编辑部
+categories:
+  - 统计之都
 tags:
   - 机器学习
   - 模型评价
