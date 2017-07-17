@@ -1,7 +1,7 @@
 ---
 title: 假新闻引发的愤怒——非算法视角对自我学习的搜索排序算法和选择偏差的一些解读
 date: '2017-01-16T14:59:16+00:00'
-author: COS编辑部
+author: 陈丽云
 categories:
   - 统计之都
 slug: learning-to-rank
