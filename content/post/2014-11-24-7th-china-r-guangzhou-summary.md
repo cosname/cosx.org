@@ -209,21 +209,21 @@ R语言会议官方网站：<http://china-r.org>
 
 # 主办单位
 
-* 中山大学 华南统计科学研究中心  <http://scrcss.sysu.edu.cn/> 
+* 中山大学 华南统计科学研究中心  <http://scrcss.sysu.edu.cn/>
 
   * 华南统计科学研究中心QQ群
-  
+
   ![16](https://uploads.cosx.org/2014/11/16.jpg)
   * 华南统计科学研究中心微信群
-  
+
   ![17](https://uploads.cosx.org/2014/11/17.jpg)
-  
+
 * 中山大学数学与计算科学学院 <http://math.sysu.edu.cn/>
 * 统计之都 <https://cos.name/>
 
 # 赞助单位
 
-[![18](https://uploads.cosx.org/2014/11/18.jpg)](www.Rong360.com)
+[![18](https://uploads.cosx.org/2014/11/18.jpg)](https://www.Rong360.com)
 
 # 参会人员与单位
 
