@@ -4,17 +4,12 @@ author: COS编辑部
 date: '2017-05-17'
 tags: [cos访谈]
 slug: interview-songxi-chen
-<<<<<<< HEAD
 description: 陈松蹊，国家特聘专家， 北京大学讲席教授，商务统计与经济计量系联合系主任、北京大学统计科学中心联席主任 国家首批“千人计划”入选者，加盟北大后主要致力于商务统计与经济计量学学科建设及北大统计学研究队伍的建设工作。
   他是数理统计学会(Institute of Mathematical Statistics) 资深会员（fellow)，美国统计学会会士（fellow），国际统计学会
   (International Statistics Institute) 当选会员 （elected member），国际数理统计学会 (IMS) 理事会常务理事(
   Council member)。他现在是The Annals of Statistics(统计年鉴) 副主编 (自2010年）；Journal of Business
   and Economic Statistics 副主编 （自2013年）；曾任Statistics and Its Interface 的联席主编 （2010-2013）
 forum_id: 419208
-=======
-description: '陈松蹊，国家特聘专家， 北京大学讲席教授，商务统计与经济计量系联合系主任、北京大学统计科学中心联席主任 国家首批“千人计划”入选者，加盟北大后主要致力于商务统计与经济计量学学科建设及北大统计学研究队伍的建设工作。
-他是数理统计学会(Institute of Mathematical Statistics) 资深会员（fellow)，美国统计学会会士（fellow），国际统计学会 (International Statistics Institute) 当选会员 （elected member），国际数理统计学会 (IMS) 理事会常务理事( Council member)。他现在是The Annals of Statistics(统计年鉴) 副主编 (自2010年）；Journal of Business and Economic Statistics 副主编 （自2013年）；曾任Statistics and Its Interface 的联席主编 （2010-2013）'
->>>>>>> parent of e34098d... update categories
 ---
 
 ![image](https://cloud.githubusercontent.com/assets/7221728/26141339/f5aea4c6-3b0d-11e7-8449-0f9aa53512f6.png)
