@@ -16,3 +16,10 @@
 /:year/:month/      /archives/
 /:year/:month/page/*  /archives/
 
+/wiki/htest/start      /archives/
+/wiki/doe/start      /archives/
+/wiki/biostat/start      /archives/
+/wiki/nonparametric/start      /archives/
+
+/training/*      /archives/
+/videos/:slug/      /archives/
