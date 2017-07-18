@@ -2,6 +2,8 @@
 title: 第十届中国R会议（北京）会议通知
 author: 统计之都
 date: '2017-04-05'
+categories:
+  - R会议
 tags: [R会议,北京]
 slug: chinar-2017-bj-announcement
 forum_id: 419188
