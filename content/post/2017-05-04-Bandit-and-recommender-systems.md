@@ -2,6 +2,8 @@
 title: Bandit算法与推荐系统
 author: 陈开江
 date: '2017-05-04'
+categories:
+  - 统计计算
 tags: [推荐系统]
 slug: Bandit-and-recommender-systems
 forum_id: 419209
