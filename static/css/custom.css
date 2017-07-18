@@ -149,6 +149,12 @@ article a:hover { font-weight: bold; color: #00b0cf; }
   padding: 0 0 1em;
 }
 .profile td h3 { margin-top: 0; }
+.pagination {
+  padding: 0;
+}
+.pagination a {
+  padding: 0 0.5em;
+}
 
 #forum-frame {
   border: none;
