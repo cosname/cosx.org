@@ -3,8 +3,8 @@ title: 谷歌为什么创造了幽灵广告？
 author: 陈丽云
 date: '2017-04-27'
 categories:
-  - 统计计算
-  - 统计应用
+  - 统计计算
+  - 统计应用
 tags: [计算广告]
 slug: google-ghost-ads
 forum_id: 419206
