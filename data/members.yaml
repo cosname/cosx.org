@@ -67,7 +67,7 @@ list:
     intro: 中国人民大学2013级经济学与数学（双学位）实验班本科生，美国北卡罗莱纳州立大学2017级统计学PhD。新人一枚，2017年5月刚刚加入统计之都，希望以后可以为统计之都贡献更多自己的力量。
   - name: 谢益辉
     image: https://user-images.githubusercontent.com/163582/28285860-d3c70c72-6afb-11e7-9a92-71d9575188b5.png
-    intro: 人大统计硕士，爱荷华州立大学统计学博士，现为 RStudio 软件工程师。
+    intro: 中国人民大学统计硕士，爱荷华州立大学统计学博士，R 包 [knitr](https://yihui.name/knitr/) 的主要作者。现为 RStudio 软件工程师，曾负责 Shiny 包相关开发工作，后转入 R Markdown 相关扩展包的开发，包括 [bookdown](https://github.com/rstudio/bookdown) 和 [blogdown](https://github.com/rstudio/blogdown)。对统计计算、可视化、以及各类网页相关技术感兴趣，有志于对技术写作工具做减法工作，坚信人类浪费了太多时间在期刊论文、学位论文、书籍的排版上。平时主要活跃在 [Github](https://github.com/yihui) 上。个人主页在 <https://yihui.name>，思想偏激，流水账、意识流甚多，小人之心甚重，慎入。
   - name: 徐浩
     image: https://cloud.githubusercontent.com/assets/7221728/25791994/77d093e8-33f6-11e7-9990-3d4436146817.jpg
     intro: JD Power的数据分析师。
