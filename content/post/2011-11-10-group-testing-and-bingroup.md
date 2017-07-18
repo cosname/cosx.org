@@ -13,7 +13,6 @@ tags:
   - 分组检测
   - 样本检测
 slug: group-testing-and-bingroup
-description: "今天给大家介绍一下分组检测（group testing）方法和我们写的关于该方法的 R 包 binGroup。分组检测（又叫 pooled testing）主要用在样本检测当中，就是把一定数量的单个样本混合在一起，然后对混合样本（称为组；group）检测是否有某种特征。"
 forum_id: 418856
 ---
 

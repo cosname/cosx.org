@@ -11,7 +11,6 @@ tags:
   - WinBUGS
   - 贝叶斯
 slug: statistical-analysis-and-winbugs-part-2
-description: "本文为WinBUGS在统计分析中的应用的第二部分，包括了数据分析案例；结合SAS做比较分析两个部分的内容。"
 forum_id: 418758
 ---
 

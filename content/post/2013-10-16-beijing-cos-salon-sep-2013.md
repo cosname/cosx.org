@@ -9,7 +9,6 @@ categories:
 tags:
   - COS沙龙
 slug: beijing-cos-salon-sep-2013
-description: "2013年9月14日，第十四期COS数据分析沙龙（北京站）在明德主楼1016如期举行。来自中科院数学与系统科学研究院的**刁瑞**先生（@刁瑞_Dora）为大家呈现了主题为“**数据挖掘竞赛的那些人那些事儿**”的精彩讲座。"
 forum_id: 418976
 ---
 

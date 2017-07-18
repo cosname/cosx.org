@@ -13,7 +13,6 @@ tags:
   - 演讲
   - 纪要
 slug: 5th-china-r-beijing-summary
-description: "第五届中国 R 语言会议（北京会场）于 2012 年 5 月 26 日 ~ 27 日在中国人民大学明德法学楼 0201 成功召开。会议由中国人民大学应用统计科学研究中心与中国人民大学统计学院、统计之都 ([cos.name](https://cos.name)) 主办，[mango-solutions](http://www.mango-solutions.com.cn/)赞助。在两天的会议时间里，参会者齐聚一堂，就 R 语言在互联网、商业、统计、生物等诸多方面的应用进行了深入的探讨。"
 forum_id: 418873
 ---
 

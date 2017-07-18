@@ -11,7 +11,6 @@ tags:
   - 机器学习
   - 深度学习
 slug: weekly-digest-machine-learning
-description: "非平衡样本的分类问题是机器学习的经典问题之一，困扰着不少童鞋。这篇博文提供在R中解决该问题的[实用指南](http://www.analyticsvidhya.com/blog/2016/03/practical-guide-deal-imbalanced-classification-problems/)"
 forum_id: 419126
 ---
 

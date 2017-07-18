@@ -11,7 +11,6 @@ tags:
   - 数据科学
   - 统计之都
 slug: data-sciencs-series-interview-of-wanghansheng
-description: "简介：王汉生教授现任北京大学光华管理学院商务统计与经济计量系副系主任。1998年北京大学数学科学学院，概率统计系，统计学本科，2001年美国威斯康星大学麦迪逊分校，统计学博士。现为国际统计协会(International Statistical Institute)、美国统计学会(American Statistical Association)、美国数理统计协会(Institute of Mathematical Statistics)、英国皇家统计协会(Royal Statistical Society)，以及泛华统计学会(International Chinese Statistical Association)会员。"
 forum_id: 418971
 ---
 

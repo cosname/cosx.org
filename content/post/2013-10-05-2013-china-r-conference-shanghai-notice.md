@@ -6,7 +6,6 @@ categories:
   - 新闻通知
   - 统计之都
 slug: 2013-china-r-conference-shanghai-notice
-description: "第六届中国R语言会议（上海会场）将于2013年11月2日上午9:00正式开幕，请注册报名了的参会者提前半小时进场，签到和领取资料（包括胸牌、会议手册、纸笔等）。"
 forum_id: 418973
 ---
 

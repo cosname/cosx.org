@@ -15,7 +15,6 @@ tags:
   - 数据整理
   - 数据科学
 slug: a-conversation-with-hadley-wickham
-description: "简介：Hadley Wickham 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包 ```ggplot2``` 的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如 ```plyr```、```reshape2``` 等。"
 forum_id: 418972
 ---
 
