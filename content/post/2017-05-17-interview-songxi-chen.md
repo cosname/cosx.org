@@ -2,6 +2,8 @@
 title: COS访谈第28期：陈松蹊老师
 author: COS编辑部
 date: '2017-05-17'
+categories:
+  - COS访谈
 tags: [cos访谈]
 slug: interview-songxi-chen
 description: 陈松蹊，国家特聘专家， 北京大学讲席教授，商务统计与经济计量系联合系主任、北京大学统计科学中心联席主任 国家首批“千人计划”入选者，加盟北大后主要致力于商务统计与经济计量学学科建设及北大统计学研究队伍的建设工作。
