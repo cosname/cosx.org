@@ -2,6 +2,8 @@
 title: COS访谈第30期：宗福季老师
 date: '2017-06-19'
 author: 冯璟烁
+categories:
+  - COS访谈
 tags: [cos访谈]
 slug: interview-fugee-tsung
 meta_extra: 采访：冯璟烁；编辑：冯璟烁，张心雨
