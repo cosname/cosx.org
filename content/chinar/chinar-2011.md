@@ -160,7 +160,7 @@ Mango Solutions是一家总部位于英国的私人企业。成立于2002年，�
 
 主席：李舰（lijian.pku@gmail.com），陈丽云（cloudlychen@gmail.com）
 
-会议联系邮箱：[chinar-2011-sh@cos.name](chinar-2011-sh@cos.name)
+会议联系邮箱：（chinar-2011-sh@cos.name）
 
 官方微博：[http://weibo.com/cosname](http://weibo.com/cosname)
 

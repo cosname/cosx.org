@@ -18,3 +18,10 @@ https://master--cosx.netlify.com/*   https://cosx.org/:splat  301!
 /:year/:month/      /archives/
 /:year/:month/page/*  /archives/
 
+/wiki/htest/start      /archives/
+/wiki/doe/start      /archives/
+/wiki/biostat/start      /archives/
+/wiki/nonparametric/start      /archives/
+
+/training/*      /training/
+/videos/:slug/      /videos/

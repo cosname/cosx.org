@@ -10,7 +10,7 @@ slug: let-us-talk-about-statistics
 forum_id: 419071
 ---
 
-本期投稿：[谢益辉](http://yihui.name/)   [ 王威廉 ](  http://weibo.com/u/1657470871?from=feed&loc=avatar)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
+本期投稿：[谢益辉](http://yihui.name/)   [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
