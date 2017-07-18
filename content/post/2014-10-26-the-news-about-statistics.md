@@ -5,7 +5,6 @@ author: COS编辑部
 categories:
   - 统计之都
 slug: the-news-about-statistics
-description: "本期给大家带来很多统计界的新鲜事：世界上最高的螺旋楼梯长什么样？埃博拉的死亡率怎么计算才科学？大数据浪潮中京东如何布局？尽在今天的分享。"
 forum_id: 419035
 ---
 

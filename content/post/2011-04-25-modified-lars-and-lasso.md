@@ -2,7 +2,6 @@
 title: 修正的LARS算法和lasso
 date: '2011-04-25T17:29:36+00:00'
 author: 郝智恒
-description: 在小弟的上一篇文章中，简单的介绍了LARS算法是怎么回事。主要参考的是Efron等人的经典文章least angle regression。在这篇文章中，还提到了一些有趣的看法，比如如何用LARS算法来求解lasso estimate和forward stagewise estimate。这种看法将我对于模型选择的认识提升了一个层次。在这个更高的层次下看回归的变量选择过程，似乎能有一些更加创新的想法。
 categories:
   - 回归分析
   - 统计计算

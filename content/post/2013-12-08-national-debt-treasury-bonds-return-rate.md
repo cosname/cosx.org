@@ -9,7 +9,6 @@ tags:
   - 国债收益率
   - 狗熊会
 slug: national-debt-treasury-bonds-return-rate
-description: "国债收益率曲线是众多金融资产定价的重要基础。因此理解其影响因素（7天回购利率，CPI增速，固定资产投资增速），并刻画其回归关系，具有一定实际指导意义。"
 forum_id: 418992
 ---
 

@@ -8,7 +8,6 @@ categories:
 tags:
   - 每周精选
 slug: probability-of-diabetesone-minus-not
-description: "年度最糟糕的图形：它说明了这样一个事实：得II型糖尿病的概率 = 1 – 不得II型糖尿病的概率。当小编看到这样的题目时，便毅然决然的将其作为了本次导读的标题。因为它勾起了我很久以前的回忆–在妄图解出一个庞大而又复杂的方程式时，一不小心发现它是恒等式。。。"
 forum_id: 418996
 ---
 

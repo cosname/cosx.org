@@ -5,7 +5,6 @@ author: COS编辑部
 categories:
   - 推荐文章
 slug: a-data-scientist-is-changing-peoples-vision-to-city
-description: "Ben Wellington因为一个消防栓而被鉴定为纽约“开放数据”运动之王，他开了一个博客“I Quant NY”，旨在使用开放数据改变政府的政策。随着他公开了城市机构正在做的所有错事，他正成为一支被重视的力量。"
 forum_id: 419052
 ---
 
