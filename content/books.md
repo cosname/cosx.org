@@ -10,9 +10,9 @@ forum_id: 418711
 ---
 
 <style>
-img{
-  max-width: 150px;
-  max-height: 200px
+table img{
+width: 150px;
+height: 200px
 }
 </style>
 
