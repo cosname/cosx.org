@@ -9,7 +9,6 @@ tags:
   - 最小二乘法
   - 每周精选
 slug: teaching-le-to-a-child
-description: "Rafael Irizarry教他上五年级的儿子用最小二乘法改进机器人模型，最小二乘是统计学家的看家本领，普通得不能再普通，但在Rafa手里用出来却让人不得不佩服，套用COS论坛上doctorjxd一句话：牛人活在当下，常人却在彷徨。在五年级的娃面前直接上RStudio敲代码，这是培养码农的节奏么？"
 forum_id: 418980
 ---
 

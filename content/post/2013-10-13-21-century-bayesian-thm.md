@@ -7,7 +7,6 @@ categories:
 tags:
   - 每周精选
 slug: 21-century-bayesian-thm
-description: "本期投稿：谢益辉 魏太云。"
 forum_id: 418975
 ---
 

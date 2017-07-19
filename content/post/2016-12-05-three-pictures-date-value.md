@@ -6,7 +6,6 @@ categories:
   - 推荐文章
   - 统计之都
 slug: three-pictures-date-value
-description: "做数据的人现在越来越强调价值，那么在商业世界里，什么数据价值最高？我们先看几个例子。"
 forum_id: 419176
 ---
 

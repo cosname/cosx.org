@@ -11,7 +11,6 @@ tags:
   - R包开发
   - sourceCpp
 slug: rcpp-introduction
-description: "Rcpp牛到什么程度，我想不用我多说。光是看Author五人组的名字就足够唬人了（简直是R包开发男子天团了）。最近正在为实验室开发R包（平生第一次），愉快地用起了Rcpp。有过这些天之后觉得感觉真的很好，于是也就厚颜无耻地写篇小文介绍一下。以下的内容都是在Linux下完成了，Windows的朋友们需要安装Rtools才能用上Rcpp。"
 forum_id: 418991
 ---
 

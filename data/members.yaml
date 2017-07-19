@@ -59,6 +59,9 @@ list:
   - name: 刘跃文
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 香港城市大学及中国科学技术大学博士<br/>前鹅厂数据研究员<br/>商科小讲师一枚，努力写论文中<br/>玩数据分析、玩社交网络<br/>梦想着讲有趣的故事，做有价值的研究<br/>讲授信息技术管理、数据库与数据管理、数据挖掘与知识发现等课程<br/>段子手
+  - name: 罗大钧
+    image: https://user-images.githubusercontent.com/18478302/28310018-ada8bb7a-6bdd-11e7-89a5-05dd4d00d79e.jpeg
+    intro: WeGene数据挖掘工程师，毕业于浙江大学数学系。
   - name: 彭晨昱
     image: https://cloud.githubusercontent.com/assets/7221728/25793129/4e8cf290-33fd-11e7-9f0c-846ac1e0efbe.jpg
     intro: 目前就读江西财大国际会计专业，三年临川求学路，四年江财蛟湖畔。和图片展示的一样，天然吃货一枚，在任何环境下一定不会让自己饿着，很开心并荣幸加入COS大家庭，作为众多统计大神中夹着的一位做账的小会计，时刻膜拜并谦虚的学习着。当然，最最最希望的统计之都能朝着理想的未来走的越来越好!
@@ -94,7 +97,7 @@ list:
     intro: 乐逗游戏高级数据分析师，负责大数据挖掘及可视化。资深R语言用户，有九年以上数据挖掘工作实战经验，多次在中国R语言大会上作主题演讲。与张良均老师、杨坦老师合著的《R语言与数据挖掘》一书已在2016年7月出版，新书《R语言游戏数据分析》一书也即将于2017年初出版。**
   - name: 谢益辉
     image: https://user-images.githubusercontent.com/163582/28285860-d3c70c72-6afb-11e7-9a92-71d9575188b5.png
-    intro: 人大统计硕士，爱荷华州立大学统计学博士，现为 RStudio 软件工程师。
+    intro: 中国人民大学统计硕士，爱荷华州立大学统计学博士，R 包 [knitr](https://yihui.name/knitr/) 的主要作者。现为 RStudio 软件工程师，曾负责 Shiny 包相关开发工作，后转入 R Markdown 相关扩展包的开发，包括 [bookdown](https://github.com/rstudio/bookdown) 和 [blogdown](https://github.com/rstudio/blogdown)。对统计计算、可视化、以及各类网页相关技术感兴趣，有志于对技术写作工具做减法工作，坚信人类浪费了太多时间在期刊论文、学位论文、书籍的排版上。平时主要活跃在 [Github](https://github.com/yihui) 上。个人主页在 <https://yihui.name>，思想偏激，流水账、意识流甚多，小人之心甚重，慎入。
   - name: 徐浩
     image: https://cloud.githubusercontent.com/assets/7221728/25791994/77d093e8-33f6-11e7-9990-3d4436146817.jpg
     intro: JD Power的数据分析师。

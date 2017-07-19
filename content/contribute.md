@@ -23,7 +23,7 @@ tags:
 
 这是一个超简单的教程，按照以下四步，就可以上传最简单的草稿，不需要命令行的操作。
 
-1. 点击这个链接：https://github.com/cosname/cosx.org/new/master/content/post；
+1. 点击这个链接：<https://github.com/cosname/cosx.org/new/master/content/post/>；
 1. 点击绿色的大框：Fork this repository and propose changes；
 1. 添加、更新文章的内容；
 1. 一路绿色按钮点下去直到没有东西可以点。

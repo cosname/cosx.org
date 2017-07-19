@@ -14,7 +14,6 @@ tags:
   - 词库
   - 软件包
 slug: jiebar-text-segmentation
-description: 中文分词包 jiebaR 的简介与实现示例
 forum_id: 419040
 ---
 

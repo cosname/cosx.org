@@ -1,6 +1,5 @@
 ---
 title: 第六届R语言会议开始报名
-description: "第六届R语言会议报名通知"
 date: '2013-03-20T23:00:36+00:00'
 author: COS编辑部
 categories:

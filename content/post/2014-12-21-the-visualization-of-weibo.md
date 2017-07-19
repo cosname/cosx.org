@@ -8,7 +8,6 @@ categories:
   - 每周精选
   - 职业事业
 slug: the-visualization-of-weibo
-description: "如何把新浪微博POI签到数据炫酷的可视化？2014年，Hadoop技术有什么重要发展?优秀博士通常具备哪些品质？本期COS精选为你揭晓。"
 forum_id: 419051
 ---
 

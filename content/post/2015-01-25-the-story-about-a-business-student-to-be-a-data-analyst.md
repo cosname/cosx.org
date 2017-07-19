@@ -9,7 +9,6 @@ categories:
   - 每周精选
   - 统计之都
 slug: the-story-about-a-business-student-to-be-a-data-analyst
-description: "一个商科出身的学生，在大学四年级开始逆袭，留英几年习得一手数据分析好本事，让我们来看看[他的成长故事](http://www.zhihu.com/question/27573926)？在过去两年间，大数据成为人们关注的热词。尽管一些人对大数据的理解还处在概念上。但是对于前两年打下的数据基础，有人预测2015年将是[大数据爆发的一年](http://www.36dsj.com/archives/21652)。"
 forum_id: 419059
 ---
 
