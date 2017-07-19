@@ -1,7 +1,7 @@
 ---
 title: 第十届中国R会议(太原)暨山西省大数据产业创新发展论坛纪要
 date: '2017-07-12'
-author: COS编辑部
+author: 邓金涛
 categories:
   - 新闻通知
 tags:
