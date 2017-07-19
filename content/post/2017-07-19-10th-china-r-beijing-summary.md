@@ -48,7 +48,10 @@ forum_id: 419229
 在会议的开幕式结束之后，嘉宾们展开了自己的演讲。在上午的演讲中，王永雄博士围绕医疗健康研究讲述了目前重要医疗卫生数据模型、数据的重要性；刘军教授为我们描述了如何利用统计学方法和模型处理基因组大数据；李航博士则分享了目前华为在产品、服务智能化等方面所推动的研发发展。在下午的演讲中，郭建华教授讨论了如何建立统计学模型并应用在文本挖掘领域；宗福季教授则围绕迁移学习问题为我们展开演讲；最后，邓一硕先生结合经典案例，讨论了投资工具如何帮助我们实现自身财富保值增值。
 
 <div align=center>
-   <img src="https://user-images.githubusercontent.com/18381242/28358852-ff5e9b7c-6ca2-11e7-8cf1-30ae2a245b25.jpg", width = "400">
+   <img src="https://user-images.githubusercontent.com/18381242/28358852-ff5e9b7c-6ca2-11e7-8cf1-30ae2a245b25.jpg", width = "400
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28358855-011d316c-6ca3-11e7-9f7e-a85c618d0c7b.jpg", width = "400">
 </div>
 
@@ -66,8 +69,17 @@ forum_id: 419229
 
 <div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28358983-5e8709ae-6ca3-11e7-8eca-42c8d8eabe90.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28358987-603e4014-6ca3-11e7-877c-44b8502b4bb7.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359033-82dfa162-6ca3-11e7-932a-6ee08fe28030.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359035-841b43b0-6ca3-11e7-991b-2744b4455938.jpg", width = "400">
 </div>
 
@@ -77,9 +89,21 @@ forum_id: 419229
 
 <div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359091-b84578c2-6ca3-11e7-8b89-f40db5d320d2.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359098-bd95555e-6ca3-11e7-9aec-91742ade75be.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359100-c07d8e76-6ca3-11e7-8f84-0c5dbb47e803.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359104-c1e36fd8-6ca3-11e7-951a-808cb8ede0bc.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359111-c596bba8-6ca3-11e7-87cb-1b85e8c582d4.jpg", width = "400">
 </div>
 
@@ -109,7 +133,13 @@ forum_id: 419229
 
 <div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359476-e1467838-6ca4-11e7-97c3-b012d8d65211.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359477-e15a72d4-6ca4-11e7-9df4-541c9d8bd1c9.jpg", width = "400">
+</div>
+
+<div align=center>
    <img src="https://user-images.githubusercontent.com/18381242/28359479-e1b9ed5e-6ca4-11e7-8f47-40ab5d1cf669.jpg", width = "400">
 </div>
 
@@ -123,11 +153,6 @@ R会议官方网站：http://china-r.org
     <a href="https://user-images.githubusercontent.com/18381242/28359485-e7ebad48-6ca4-11e7-9492-0911905f854a.jpg"><img src="https://user-images.githubusercontent.com/18381242/28359485-e7ebad48-6ca4-11e7-9492-0911905f854a.jpg", width = "300"></a>
     <a href="https://user-images.githubusercontent.com/18381242/28359526-1b2d9bf8-6ca5-11e7-8eee-2ac0234e6b88.jpg"><img src="https://user-images.githubusercontent.com/18381242/28359526-1b2d9bf8-6ca5-11e7-8eee-2ac0234e6b88.jpg", width = "300"></a>
 </figure>
-
-<center class="half">
-    <img src="https://user-images.githubusercontent.com/18381242/28359485-e7ebad48-6ca4-11e7-9492-0911905f854a.jpg", width = "300">
-    <img src="https://user-images.githubusercontent.com/18381242/28359526-1b2d9bf8-6ca5-11e7-8eee-2ac0234e6b88.jpg", width = "300">
-</center>
 
 #### 听一场不可多得的演讲
 
