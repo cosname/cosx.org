@@ -1,6 +1,6 @@
 ---
 title: 第十届中国R会议（北京）纪要
-date: 2017-07-19
+date: '2017-07-19T18:42:25+00:00'
 author: 
   - 杨舒仪 
   - 李宇轩
@@ -15,7 +15,7 @@ slug: 10th-china-r-beijing-summary
 forum_id: 419229
 ---
 
-中国R 会议（The China-R Conference）始于2008 年，由统计之都（Capital of Statistics, COS）发起，联合各地高校、企业共同举办。会议旨在提供一个高质量的分享平台，让更多人了解、使用、推广、发展统计学方法及其在各领域的应用。R会议起始于R 语言的讨论，后来兼容并包，积极走向更广义的数据科学领域，聚各领域的学术专家、业界精英、技术大咖、莘莘学子于一堂，让各界参会者自由、充分、平等地交流。作为国内最大的数据科学会议，R 会议已服务数万参会人员。第十届中国R会议（北京）由清华大学统计学研究中心、北京大学商务智能研究中心、统计之都和狗熊会于2017年5月19日至21日联合主办，5月19日主会场在清华大学新清华学堂隆重召开，狗熊会专场位于紫光国际会议中心、各个分会场位于清华大学第六教学楼。
+中国R会议（The China-R Conference）始于2008 年，由统计之都（Capital of Statistics, COS）发起，联合各地高校、企业共同举办。会议旨在提供一个高质量的分享平台，让更多人了解、使用、推广、发展统计学方法及其在各领域的应用。R会议起始于R 语言的讨论，后来兼容并包，积极走向更广义的数据科学领域，聚各领域的学术专家、业界精英、技术大咖、莘莘学子于一堂，让各界参会者自由、充分、平等地交流。作为国内最大的数据科学会议，R 会议已服务数万参会人员。第十届中国R会议（北京）由清华大学统计学研究中心、北京大学商务智能研究中心、统计之都和狗熊会于2017年5月19日至21日联合主办，5月19日主会场在清华大学新清华学堂隆重召开，狗熊会专场位于紫光国际会议中心、各个分会场位于清华大学第六教学楼。
 
 # 一、会议概况
 
@@ -34,13 +34,13 @@ forum_id: 419229
 会议首先由会议主席清华大学统计学研究中心2015级博士生姜瑛恺致辞。主席对本次会议进行了简要介绍，并对支持会议的志愿者以及主办方表示了感谢。
 
 <div align=center>
-   <img src="https://user-images.githubusercontent.com/18381242/28358275-e3d02abc-6ca0-11e7-9b53-94049ac9678a.jpg", width = "400">
+   <img src="https://user-images.githubusercontent.com/18381242/28358275-e3d02abc-6ca0-11e7-9b53-94049ac9678a.jpg", width = "400", alt ="姜瑛恺主席致辞">
 </div>
 
 此后致辞的是清华大学统计学研究中心主任刘军教授，刘军教授表明了清华大学对于数据科学的支持，并阐述了当前数据科学的重要意义，也表达了清华大学统计学研究中心能够跟紧时代步伐的希望。
 
 <div align=center>
-   <img src="https://user-images.githubusercontent.com/18381242/28358850-fca8e25c-6ca2-11e7-998d-def29481c4c1.jpg", width = "400">
+   <img src="https://user-images.githubusercontent.com/18381242/28358850-fca8e25c-6ca2-11e7-998d-def29481c4c1.jpg", width = "400", alt="刘军教授致辞">
 </div>
 
 ### 嘉宾演讲
@@ -48,11 +48,11 @@ forum_id: 419229
 在会议的开幕式结束之后，嘉宾们展开了自己的演讲。在上午的演讲中，王永雄博士围绕医疗健康研究讲述了目前重要医疗卫生数据模型、数据的重要性；刘军教授为我们描述了如何利用统计学方法和模型处理基因组大数据；李航博士则分享了目前华为在产品、服务智能化等方面所推动的研发发展。在下午的演讲中，郭建华教授讨论了如何建立统计学模型并应用在文本挖掘领域；宗福季教授则围绕迁移学习问题为我们展开演讲；最后，邓一硕先生结合经典案例，讨论了投资工具如何帮助我们实现自身财富保值增值。
 
 <div align=center>
-   <img src="https://user-images.githubusercontent.com/18381242/28358852-ff5e9b7c-6ca2-11e7-8cf1-30ae2a245b25.jpg", width = "400
+   <img src="https://user-images.githubusercontent.com/18381242/28358852-ff5e9b7c-6ca2-11e7-8cf1-30ae2a245b25.jpg", width = "400", alt="嘉宾演讲"/>
 </div>
 
 <div align=center>
-   <img src="https://user-images.githubusercontent.com/18381242/28358855-011d316c-6ca3-11e7-9f7e-a85c618d0c7b.jpg", width = "400">
+   <img src="https://user-images.githubusercontent.com/18381242/28358855-011d316c-6ca3-11e7-9f7e-a85c618d0c7b.jpg", width = "400",  alt="嘉宾演讲"/>
 </div>
 
 ### 圆桌讨论
@@ -60,7 +60,7 @@ forum_id: 419229
 主会场演讲结束之后，各位嘉宾共同讨论了目前统计学科的机遇以及未来的发展趋势，同时也为现今投入统计事业的青年学生给出了自己的建议。在讨论的最后，大家针对如何促进学术界和产业界的互动也发表了自己的看法，为本次主会场留下了浓墨重彩的一笔。
 
 <div align=center>
-   <img src="https://user-images.githubusercontent.com/18381242/28358980-5c3c8aac-6ca3-11e7-9723-08997c965421.jpg", width = "400">
+   <img src="https://user-images.githubusercontent.com/18381242/28358980-5c3c8aac-6ca3-11e7-9723-08997c965421.jpg", width = "400"，  alt="圆桌会议"/>
 </div>
 
 ## 2.狗熊会专场
