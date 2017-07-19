@@ -8,7 +8,7 @@
 
 - 若是新作者（参阅[现有作者列表](https://cosx.org/members/)），与作者联系提供照片、个人介绍以及文章摘要。
 
-- 若作者没有自己在 Github 上发送合并请求（Pull request），就请小编帮忙发一下，然后再开始在线审稿。
+- 若作者没有自己在 Github 上发送合并请求（Pull request，简称 PR），就请小编帮忙发一下，然后再开始在线审稿。
 
     - 注意是否有错字别字
     - 其它文章结构部分跟作者沟通修改
@@ -20,6 +20,8 @@
 - 注明：作者姓名（`author` 选项）、审稿以及编辑姓名（`meta_extra` 选项）。
 
 关于 YAML 元数据的设置，可以参见[这篇文章示例](https://github.com/cosname/cosx.org/blame/master/content/post/2017-07-17-cos-new-site.md)。
+
+当 PR 被合并之后，文章会自动发表（通常在两分钟左右）。等首页能看到文章之后，按照[这里的指示](https://github.com/cosname/cosx.org/wiki/%E6%96%87%E7%AB%A0%E8%AF%84%E8%AE%BA)到 COS 论坛上发帖，并将帖子的 ID 插入文章的 `forum_id` 选项中。
 
 微信： 
 
