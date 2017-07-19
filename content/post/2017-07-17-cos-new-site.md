@@ -16,7 +16,7 @@ tags:
   - 历史
 slug: cos-new-site
 forum_id: 419224
-meta_extra: "[审稿](https://github.com/cosname/cosx.org/pull/631)：朱雪宁、边蓓蕾、郎大为、邱怡轩"
+meta_extra: "[审稿](https://github.com/cosname/cosx.org/pull/631)：朱雪宁、边蓓蕾、郎大为、邱怡轩；微信编辑：杨舒仪"
 ---
 
 如[小轩哥所说](https://d.cosx.org/d/419190)：是的，没有错，我们又双叒叕改版换系统了。我都快记不清统计之都从 2006 年成立至今到底改过几次版了，于是我去万能的时光机器上[看了一眼](http://web.archive.org/web/*/cos.name)，顺便忆苦思甜了一番。我把这些鸡毛蒜皮的事情放在了本文的附录中，下面先说正事。
