@@ -1,7 +1,7 @@
 ---
 title: 降维攻击：目标，比率指标
 date: '2016-11-28T20:35:40+00:00'
-author: COS编辑部
+author: 陈丽云
 categories:
   - 数据分析
   - 统计之都
