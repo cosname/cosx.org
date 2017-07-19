@@ -7,7 +7,7 @@ categories:
 tags:
   - R会议
   - R语言
-  - 合肥
+  - 太原
   - 统计之都
 slug: 10th-chinar-taiyuan-summary
 ---
