@@ -94,7 +94,7 @@ list:
     intro: 一个喜欢折腾数据的人，与李舰合著了《数据科学中的R语言》，现就职于蚂蚁金服。
   - name: 谢佳标
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
-    intro: 乐逗游戏高级数据分析师，负责大数据挖掘及可视化。资深R语言用户，有九年以上数据挖掘工作实战经验，多次在中国R语言大会上作主题演讲。与张良均老师、杨坦老师合著的《R语言与数据挖掘》一书已在2016年7月出版，新书《R语言游戏数据分析》一书也即将于2017年初出版。**
+    intro: 乐逗游戏高级数据分析师，负责大数据挖掘及可视化。资深R语言用户，有九年以上数据挖掘工作实战经验，多次在中国R语言大会上作主题演讲。与张良均老师、杨坦老师合著的《R语言与数据挖掘》一书已在2016年7月出版，新书《R语言游戏数据分析》一书也即将于2017年初出版。
   - name: 谢益辉
     image: https://user-images.githubusercontent.com/163582/28285860-d3c70c72-6afb-11e7-9a92-71d9575188b5.png
     intro: 中国人民大学统计硕士，爱荷华州立大学统计学博士，R 包 [knitr](https://yihui.name/knitr/) 的主要作者。现为 RStudio 软件工程师，曾负责 Shiny 包相关开发工作，后转入 R Markdown 相关扩展包的开发，包括 [bookdown](https://github.com/rstudio/bookdown) 和 [blogdown](https://github.com/rstudio/blogdown)。对统计计算、可视化、以及各类网页相关技术感兴趣，有志于对技术写作工具做减法工作，坚信人类浪费了太多时间在期刊论文、学位论文、书籍的排版上。平时主要活跃在 [Github](https://github.com/yihui) 上。个人主页在 <https://yihui.name>，思想偏激，流水账、意识流甚多，小人之心甚重，慎入。
@@ -109,7 +109,7 @@ list:
     intro: 现就读于中央财经大学应用统计专业。木讷外表下，有一颗充满热情的心。爱好广泛，方方面面皆有涉猎，钟情运动，因而长相和学识远不及身材。虽然系统地学习统计的时间不长，却被统计知识和统计应用独特的魅力所深深吸引，是一名求知欲旺盛的统计学忠实拥趸。
   - name: 严酷的魔王
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
-    intro: 何通，[SupStat Inc](http://www.supstat.com)(总部在纽约，中国分部为[北京数博思达信息科技有限公司](http://supstat.com.cn/)）数据科学家，加拿大Simon Fraser University计算机学院研究生，研究兴趣为数据挖掘和生物信息学。 主页：<https://github.com/hetong007>
+    intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任Fortinet软件工程师。
   - name: 杨灿
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 杨灿于2011年在香港科技大学电子计算机工程系获得博士学位，2011-2012为耶鲁大学生物统计系博士后，现为耶鲁大学副研究员。
