@@ -149,10 +149,12 @@ R会议官方网站：http://china-r.org
 
 #### 来一次清华校内的旅行
 
+<div align=center>
 <figure class="half">
     <a href="https://user-images.githubusercontent.com/18381242/28359485-e7ebad48-6ca4-11e7-9492-0911905f854a.jpg"><img src="https://user-images.githubusercontent.com/18381242/28359485-e7ebad48-6ca4-11e7-9492-0911905f854a.jpg", width = "300"></a>
     <a href="https://user-images.githubusercontent.com/18381242/28359526-1b2d9bf8-6ca5-11e7-8eee-2ac0234e6b88.jpg"><img src="https://user-images.githubusercontent.com/18381242/28359526-1b2d9bf8-6ca5-11e7-8eee-2ac0234e6b88.jpg", width = "300"></a>
 </figure>
+</div>
 
 #### 听一场不可多得的演讲
 
