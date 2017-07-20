@@ -11,6 +11,7 @@ tags:
   - R语言
   - 北京
   - 统计之都
+  - 清华大学
 slug: 10th-china-r-beijing-summary
 forum_id: 419229
 ---
@@ -33,52 +34,52 @@ forum_id: 419229
 
 会议首先由会议主席清华大学统计学研究中心2015级博士生姜瑛恺致辞。主席对本次会议进行了简要介绍，并对支持会议的志愿者以及主办方表示了感谢。
 
-![1](https://user-images.githubusercontent.com/18381242/28358275-e3d02abc-6ca0-11e7-9b53-94049ac9678a.jpg)
+![会议致辞1](https://user-images.githubusercontent.com/18381242/28358275-e3d02abc-6ca0-11e7-9b53-94049ac9678a.jpg)
 
 此后致辞的是清华大学统计学研究中心主任刘军教授，刘军教授表明了清华大学对于数据科学的支持，并阐述了当前数据科学的重要意义，也表达了清华大学统计学研究中心能够跟紧时代步伐的希望。
 
-![2](https://user-images.githubusercontent.com/18381242/28358850-fca8e25c-6ca2-11e7-998d-def29481c4c1.jpg)
+![会议致辞2](https://user-images.githubusercontent.com/18381242/28358850-fca8e25c-6ca2-11e7-998d-def29481c4c1.jpg)
 
 ### 嘉宾演讲
 
 在会议的开幕式结束之后，嘉宾们展开了自己的演讲。在上午的演讲中，王永雄博士围绕医疗健康研究讲述了目前重要医疗卫生数据模型、数据的重要性；刘军教授为我们描述了如何利用统计学方法和模型处理基因组大数据；李航博士则分享了目前华为在产品、服务智能化等方面所推动的研发发展。在下午的演讲中，郭建华教授讨论了如何建立统计学模型并应用在文本挖掘领域；宗福季教授则围绕迁移学习问题为我们展开演讲；最后，邓一硕先生结合经典案例，讨论了投资工具如何帮助我们实现自身财富保值增值。
 
-![3](https://user-images.githubusercontent.com/18381242/28358852-ff5e9b7c-6ca2-11e7-8cf1-30ae2a245b25.jpg)
+![嘉宾演讲1](https://user-images.githubusercontent.com/18381242/28358852-ff5e9b7c-6ca2-11e7-8cf1-30ae2a245b25.jpg)
 
-![4](https://user-images.githubusercontent.com/18381242/28358855-011d316c-6ca3-11e7-9f7e-a85c618d0c7b.jpg)
+![嘉宾演讲2](https://user-images.githubusercontent.com/18381242/28358855-011d316c-6ca3-11e7-9f7e-a85c618d0c7b.jpg)
 
 ### 圆桌讨论
 
 主会场演讲结束之后，各位嘉宾共同讨论了目前统计学科的机遇以及未来的发展趋势，同时也为现今投入统计事业的青年学生给出了自己的建议。在讨论的最后，大家针对如何促进学术界和产业界的互动也发表了自己的看法，为本次主会场留下了浓墨重彩的一笔。
 
-![5](https://user-images.githubusercontent.com/18381242/28358980-5c3c8aac-6ca3-11e7-9723-08997c965421.jpg)
-</div>
+![圆桌讨论1](https://user-images.githubusercontent.com/18381242/28358980-5c3c8aac-6ca3-11e7-9723-08997c965421.jpg)
+
 
 ## 2.狗熊会专场
 
 5月19日下午，狗熊会专场在清华紫光交流中心二楼宴会厅顺利召开，狗熊会政委常象宇主持了本场会议，狗熊会CEO总裁李广雨、狗熊会熊大王汉生教授先后致辞。本会场聚焦于理论与实践的结合，为我们讲述了R语言在各行各业中精彩的应用。
 
-![6](https://user-images.githubusercontent.com/18381242/28358983-5e8709ae-6ca3-11e7-8eca-42c8d8eabe90.jpg)
+![狗熊会专场1](https://user-images.githubusercontent.com/18381242/28358983-5e8709ae-6ca3-11e7-8eca-42c8d8eabe90.jpg)
 
-![7](https://user-images.githubusercontent.com/18381242/28358987-603e4014-6ca3-11e7-877c-44b8502b4bb7.jpg)
+![狗熊会专场2](https://user-images.githubusercontent.com/18381242/28358987-603e4014-6ca3-11e7-877c-44b8502b4bb7.jpg)
 
-![8](https://user-images.githubusercontent.com/18381242/28359033-82dfa162-6ca3-11e7-932a-6ee08fe28030.jpg)
+![狗熊会专场3](https://user-images.githubusercontent.com/18381242/28359033-82dfa162-6ca3-11e7-932a-6ee08fe28030.jpg)
 
-![9](https://user-images.githubusercontent.com/18381242/28359035-841b43b0-6ca3-11e7-991b-2744b4455938.jpg)
+![狗熊会专场4](https://user-images.githubusercontent.com/18381242/28359035-841b43b0-6ca3-11e7-991b-2744b4455938.jpg)
 
 ## 3.分会场
 
 5月20-21日，28个分会场的153场演讲如火如荼地展开，来自全国各地的诸多数据科学同侪们畅所欲言，演讲者既有在校学生、教师，也有业界诸多人士，会场话题包括资产管理、智能制造、消费金融、医疗健康等领域。
 
-![10](https://user-images.githubusercontent.com/18381242/28359091-b84578c2-6ca3-11e7-8b89-f40db5d320d2.jpg)
+![分会场1](https://user-images.githubusercontent.com/18381242/28359091-b84578c2-6ca3-11e7-8b89-f40db5d320d2.jpg)
 
-![11](https://user-images.githubusercontent.com/18381242/28359098-bd95555e-6ca3-11e7-9aec-91742ade75be.jpg)
+![分会场2](https://user-images.githubusercontent.com/18381242/28359098-bd95555e-6ca3-11e7-9aec-91742ade75be.jpg)
    
-![12](https://user-images.githubusercontent.com/18381242/28359100-c07d8e76-6ca3-11e7-8f84-0c5dbb47e803.jpg)
+![分会场3](https://user-images.githubusercontent.com/18381242/28359100-c07d8e76-6ca3-11e7-8f84-0c5dbb47e803.jpg)
 
-![13](https://user-images.githubusercontent.com/18381242/28359104-c1e36fd8-6ca3-11e7-951a-808cb8ede0bc.jpg)
+![分会场4](https://user-images.githubusercontent.com/18381242/28359104-c1e36fd8-6ca3-11e7-951a-808cb8ede0bc.jpg)
 
-![14](https://user-images.githubusercontent.com/18381242/28359111-c596bba8-6ca3-11e7-87cb-1b85e8c582d4.jpg)
+![分会场5](https://user-images.githubusercontent.com/18381242/28359111-c596bba8-6ca3-11e7-87cb-1b85e8c582d4.jpg)
 
 # 三、资源下载
 
@@ -94,21 +95,21 @@ forum_id: 419229
 
 # 五、筹备委员会成员
 
-![15](https://user-images.githubusercontent.com/18381242/28359476-e1467838-6ca4-11e7-97c3-b012d8d65211.jpg)
+![筹备委员会成员1](https://user-images.githubusercontent.com/18381242/28359476-e1467838-6ca4-11e7-97c3-b012d8d65211.jpg)
 
-![16](https://user-images.githubusercontent.com/18381242/28359477-e15a72d4-6ca4-11e7-9df4-541c9d8bd1c9.jpg)
+![筹备委员会成员2](https://user-images.githubusercontent.com/18381242/28359477-e15a72d4-6ca4-11e7-9df4-541c9d8bd1c9.jpg)
 
-![17](https://user-images.githubusercontent.com/18381242/28359479-e1b9ed5e-6ca4-11e7-8f47-40ab5d1cf669.jpg)
+![筹备委员会成员3](https://user-images.githubusercontent.com/18381242/28359479-e1b9ed5e-6ca4-11e7-8f47-40ab5d1cf669.jpg)
 
->**主席**： 姜瑛恺
->
->**副主席**： 汪子栋
->
->**秘书长**： 于嘉傲
->
->**秘书团**： 邓金涛、冯璟烁、蒋斐宇、雷博文、李艺超、李宇轩、林毓聪、王健桥、王小宁、王毅然、徐崇元、徐嘉泽、闫施、杨舒仪、杨洋、张心雨、朱万闯
->
->**志愿者**： 毕嘉辉、蔡利、蔡振帝、常皓、常勤缘、车明佳、陈坤博、陈玲玲、储奕宇、戴庭萱、单娜阳、丁宗巨、董安澜、董航、杜国栋、甘释宇、高彬、耿瑞轩、龚欢、郭瀚民、郭文魁、韩辰、胡贵平、胡涛、黄维佳、黄伟清、姬生翔、贾册、李浩然、李杰、李祺、李婷婷、李雨霏、梁骞、刘朝阳、刘漩、刘燕、卢剑秋、卢少强、卢心笛、吕学远、马宁、苗定豪、倪丹、欧阳志成、秦宇婷、邱雅娟、商丰瑞、汪洁、王尔实、王琦轩、王秋皓、王通、王欣薇、王雨洲、王昭、吴鹏、熊竹清、杨坤、姚启坤、于金萍、余丽珊、袁正、苑斌杰、翟頔、张翰宇、张家齐、张谦、张若帆、张思韫、张文轩、张晓宇、张怿良、张玉晨、张园园、张卓然、张紫嫣、赵永芳、郑浩天、周美孜、周璇、周艺、朱珂、朱淑怡、朱叶、朱之恺
+**主席**： 姜瑛恺
+
+**副主席**： 汪子栋
+
+**秘书长**： 于嘉傲
+
+**秘书团**： 邓金涛、冯璟烁、蒋斐宇、雷博文、李艺超、李宇轩、林毓聪、王健桥、王小宁、王毅然、徐崇元、徐嘉泽、闫施、杨舒仪、杨洋、张心雨、朱万闯
+
+**志愿者**： 毕嘉辉、蔡利、蔡振帝、常皓、常勤缘、车明佳、陈坤博、陈玲玲、储奕宇、戴庭萱、单娜阳、丁宗巨、董安澜、董航、杜国栋、甘释宇、高彬、耿瑞轩、龚欢、郭瀚民、郭文魁、韩辰、胡贵平、胡涛、黄维佳、黄伟清、姬生翔、贾册、李浩然、李杰、李祺、李婷婷、李雨霏、梁骞、刘朝阳、刘漩、刘燕、卢剑秋、卢少强、卢心笛、吕学远、马宁、苗定豪、倪丹、欧阳志成、秦宇婷、邱雅娟、商丰瑞、汪洁、王尔实、王琦轩、王秋皓、王通、王欣薇、王雨洲、王昭、吴鹏、熊竹清、杨坤、姚启坤、于金萍、余丽珊、袁正、苑斌杰、翟頔、张翰宇、张家齐、张谦、张若帆、张思韫、张文轩、张晓宇、张怿良、张玉晨、张园园、张卓然、张紫嫣、赵永芳、郑浩天、周美孜、周璇、周艺、朱珂、朱淑怡、朱叶、朱之恺
 
 R会议官方网站：http://china-r.org
 
@@ -116,20 +117,20 @@ R会议官方网站：http://china-r.org
 
 #### 来一次清华校内的旅行
 
-![18](https://user-images.githubusercontent.com/18381242/28364533-64e7a6c8-6cb7-11e7-95e4-f56193245960.jpg)
+![来一次清华校内的旅行](https://user-images.githubusercontent.com/18381242/28364533-64e7a6c8-6cb7-11e7-95e4-f56193245960.jpg)
 
 #### 听一场不可多得的演讲
 
-![20](https://user-images.githubusercontent.com/18381242/28359520-14108592-6ca5-11e7-8e05-0df1e74a4bc9.jpg)
+![听一场不可多得的演讲](https://user-images.githubusercontent.com/18381242/28359520-14108592-6ca5-11e7-8e05-0df1e74a4bc9.jpg)
 
 #### 看一回群英荟萃的晚会
 
-![21](https://user-images.githubusercontent.com/18381242/28359523-15d4c7e4-6ca5-11e7-83a9-c3f0b0a10891.jpg)
+![看一回群英荟萃的晚会](https://user-images.githubusercontent.com/18381242/28359523-15d4c7e4-6ca5-11e7-83a9-c3f0b0a10891.jpg)
 
 本次晚会共设十个节目：1.R会十周年独唱（人大合唱团二团团长张欣宜独唱，伴奏：叶征）；2.燕园情（二重奏：叶征、赵秦-北大手风琴队长）；3.梁祝（叶征独奏）；4.东北风情组曲 （赵秦独奏）5.G大调弦乐小夜曲（清华手风琴队三重奏）；6.G弦上的咏叹调 （清华手风琴队四重奏）7.打虎上山 (清华尹说独奏）8.琅琊榜 主题曲（清华尹说独奏）9.清华大学校歌 (叶征和清华手风琴队八重奏）10.在多年以后(北大仇心诚独唱）
 
 #### 吃一顿欢聚一堂的盛宴
 
-![22](https://user-images.githubusercontent.com/18381242/28359524-171acb44-6ca5-11e7-94fc-7a8b7e6de061.jpg)
+![吃一顿欢聚一堂的盛宴](https://user-images.githubusercontent.com/18381242/28359524-171acb44-6ca5-11e7-94fc-7a8b7e6de061.jpg)
 
 
