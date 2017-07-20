@@ -1,10 +1,25 @@
 {{ with .Params.author }}
+{{ if eq (substr (jsonify .) 0 1) "["}}
+{{ $.Scratch.Set "page_author" .}}
+{{ else }}
+{{ $.Scratch.Set "page_author" (slice .) }}
+{{ end }}
+
 {{ if $.Site.Data.members }}
-{{ range (where $.Site.Data.members.list "name" .) }}
+{{ $.Scratch.Set "author_info" (where $.Site.Data.members.list "name" "in" ($.Scratch.Get "page_author")) }}
+{{ end }}
+
+{{ with $.Scratch.Get "author_info" }}
 <section class="article-meta article-footer">
   <h3>{{ default "About the Author" $.Site.Params.text.about_author }}</h3>
-  <table class="profile"><tbody><tr><td><h3>{{ .name }}</h3>{{ .intro | markdownify }}</td><td><img src="{{ .image }}" alt="{{ .name }}"/></td></tr></tbody></table>
+  <table class="profile">
+    <tbody>
+    {{ range . }}
+    <tr><td><h3>{{ .name }}</h3>{{ .intro | markdownify }}</td><td><img src="{{ .image }}" alt="{{ .name }}"/></td></tr>
+    {{ end }}
+    </tbody>
+  </table>
 </section>
 {{ end }}
-{{ end }}
+
 {{ end }}

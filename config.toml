@@ -51,6 +51,7 @@ footnotereturnlinkcontents = "↩"
 
 [params.text]
   about_author = "关于作者"
+  author_delimiter = " / "
   back = "&larr; 返回首页"
   edit = "编辑本页 &rarr;"
   tags = "关键词："
