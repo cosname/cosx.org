@@ -35,6 +35,9 @@ list:
   - name: 冯凌秉
     image: https://cloud.githubusercontent.com/assets/7221728/26047173/a982236e-3984-11e7-9065-2baac85fccf4.png
     intro: 统计之都理事会主席，江西财经大学金融管理国际研究院助理教授，澳大利亚国立大学2011级统计学博士，中国人民大学2009级统计学硕士，中南财经政法大学2005级统计学&法学学士。2007年初识统计之都，常年潜水于COS论坛，并迅速成为COS迷粉，追随多年。2014年于南通婚礼偶遇太云，相逢恨晚，当即遁入COS门。现在在COS编辑部主要负责端茶送水，跑腿打杂，偶尔审审文章。
+  - name: 何通
+    image: https://avatars2.githubusercontent.com/u/1289856
+    intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任Fortinet软件工程师。
   - name: 侯澄钧
     image: https://cloud.githubusercontent.com/assets/7221728/25832197/c3961488-349b-11e7-9b2d-814f6cfc1e63.jpg
     intro: 俄亥俄州立大学运筹学博士，目前在美国从事财产事故险领域的保险产品开发，涉及数据分析、统计建模，产品算法优化等方面的工作。离乡十载，海飘七年，至今未归。喜欢运动，尤其爱好滑雪和网球。作为一名十年老Dotaer，面对“联盟”和“荣耀”时总有一种深深的优越感。热爱数据科学，也十分相信数据科学在未来的无限可能。
@@ -107,9 +110,6 @@ list:
   - name: 闫施
     image: https://cloud.githubusercontent.com/assets/7221728/25832241/086315d4-349c-11e7-8f7b-8cfd270ea279.png
     intro: 现就读于中央财经大学应用统计专业。木讷外表下，有一颗充满热情的心。爱好广泛，方方面面皆有涉猎，钟情运动，因而长相和学识远不及身材。虽然系统地学习统计的时间不长，却被统计知识和统计应用独特的魅力所深深吸引，是一名求知欲旺盛的统计学忠实拥趸。
-  - name: 严酷的魔王
-    image: https://avatars2.githubusercontent.com/u/1289856
-    intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任Fortinet软件工程师。
   - name: 杨灿
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 杨灿于2011年在香港科技大学电子计算机工程系获得博士学位，2011-2012为耶鲁大学生物统计系博士后，现为耶鲁大学副研究员。

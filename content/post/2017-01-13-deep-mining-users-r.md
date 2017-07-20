@@ -1,7 +1,7 @@
 ---
 title: 利用R语言对用户进行深度挖掘
 date: '2017-01-13T22:36:55+00:00'
-author: COS编辑部
+author: 谢佳标
 categories:
   - 统计之都
 slug: deep-mining-users-r
