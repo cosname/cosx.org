@@ -12,10 +12,14 @@ meta_extra: 编辑：王健桥 审核：
 description: 介绍 Julia 的分布式计算机制，并提供一个 asynchronized stochastic gradient descent 的例子以及完整示例代码。
 ---
 
+![julia_prog_language](https://user-images.githubusercontent.com/19310150/28401762-c5576c4a-6d4e-11e7-9427-4186e8653f00.png)
+
 # 引子
+
 [Julia](https://julialang.org/) 是一门相对比较新的着眼于科学计算的语言，语法上看起来有点类似于 Matlab 的脚本语言，但是实际上从 Ruby、Python、Lisp 之类的语言里吸收了许多有趣的特性。在这篇文章中，我想介绍一下Julia的分布式计算机制，它方便的并行和分布式计算的能力，结合优质的数值计算能力，其实让它非常方便用于做分布式数据处理——比如 distributed optimization、learning 之类的任务。虽然 Julia 这些年一直在稳步发展并且每个版本都会 break 一些东西，让人需要不断地维护和修改代码有点心累，同时 community 里的第三方库也还不够强大，不过最近在做一点点 distributed optimization 相关的东西中体会到它在这方面的好处，在这里简单分享一下。一方面因为 Julia 的文档虽然比较全，但是似乎还是比较难找到一个完整的例子。本文相关的完整代码会放在[这里](https://github.com/pluskid/DistLearn.jl)。
 
 <!--more-->
+
 # 入门
 
 在 Julia 里分布式编程主要是通过 Remote Procedure Call (RPC) 的方式来完成。但是 RPC 并不需要用户显式地启动一个 server 来监听调用，然后做 message passing 之类的传输结果，而是有更加 high level 的 API 可以直接实现“在某个节点上执行某段代码”这类的语义。这里提到的 API 如果在将来改变或者改名之类的，主要可以参考 Julia 文档的 [Parallel Computing](https://docs.julialang.org/en/stable/manual/parallel-computing/) 一章查看最新的接口。
