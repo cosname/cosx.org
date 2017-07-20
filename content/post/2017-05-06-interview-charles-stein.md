@@ -6,7 +6,7 @@ author:
 date: "2017-05-06"
 categories:
   - COS访谈
-tags: [cos访谈]
+tags: [cos访谈, 求学, 论道]
 forum_id: 419227
 slug: interview-charles-stein
 ---
