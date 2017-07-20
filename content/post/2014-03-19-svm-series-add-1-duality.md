@@ -1,7 +1,7 @@
 ---
 title: '“支持向量机系列”的番外篇一: Duality'
 date: '2014-03-19T13:10:08+00:00'
-author: 张 驰原
+author: 张驰原
 categories:
   - 推荐文章
   - 数据挖掘与机器学习
@@ -145,7 +145,7 @@ $$`
 \lambda_i^*f_i(x^*)=0,\quad i=1,\ldots,m
 $$`
 
-这个条件叫做 complementary slackness 。显然，如果`$\lambda_i^*>0$`，那么必定有`$f_i(x^*)=0$`；反过来，如果`$f_i(x^*)<0$`那么可以得到 `$\lambda_i^*=0$`。这个条件正是我们在[介绍支持向量的文章](http://blog.pluskid.org/?p=682)末尾时用来证明那些非支持向量（对应于`$f_i(x^*)<0$`）所对应的系数`$\alpha_i$`（在本文里对应 `$\lambda_i$`）是为零的。 
+这个条件叫做 complementary slackness 。显然，如果`$\lambda_i^*>0$`，那么必定有`$f_i(x^*)=0$`；反过来，如果`$f_i(x^*)<0$`那么可以得到 `$\lambda_i^*=0$`。这个条件正是我们在[介绍支持向量的文章](http://blog.pluskid.org/?p=682)末尾时用来证明那些非支持向量（对应于`$f_i(x^*)<0$`）所对应的系数`$\alpha_i$`（在本文里对应 `$\lambda_i$`）是为零的。
 
 再将其他一些显而易见的条件写到一起，就是传说中的 KKT (Karush-Kuhn-Tucker) 条件：
 
@@ -169,7 +169,7 @@ g(\tilde{\lambda},\tilde{\nu}) &= \min_x L(x,\tilde{\lambda},\tilde{\nu}) \\
 &= L(\tilde{x},\tilde{\lambda},\tilde{\nu}) \\
 & = f_0(\tilde{x})+\sum_{i=1}^m\tilde{\lambda}_i^*f_i(\tilde{x})+\sum_{i=1}^p\tilde{\nu_i}^*h_i(\tilde{x}) \\
 &= f_0(\tilde{x})
-\end{aligned} 
+\end{aligned}
 $$`
 
 最后一个式子是根据 KKT 条件的第二和第四个条件得到。由于`$g$`是`$f_0$`的下界，这样一来，就证明了 duality gap 为零，也就是说，strong duality 成立。

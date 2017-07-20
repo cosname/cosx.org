@@ -55,7 +55,7 @@ devtools::install_github("rstudio/blogdown")
 blogdown::install_hugo()
 ```
 
-然后使用Studio 工具栏上的 Addins 菜单中的 [New Post](https://bookdown.org/yihui/blogdown/rstudio-ide.html) 插件弹出一个窗口（见下图），在窗口中填入所需要的信息就可以完成完成新文章的生成。其中文件名（Filename）一栏会自动生成，但通常来说，对中文文章的文件名需要您手工调整为英文，注意保留文件名中的 `post/2017-02-14-` 部分，只修改后面的基础文件名。修改文件名之后 Slug 一栏会自动更新，它会是将来您的文章网址的最后组成部分。例如下图中的示例文章最终的网址是 `/2017/02/hello-r-markdown-world` （实际网址还要包含前面的域名，对本站来说域名是 `https://cosx.org`）。
+然后使用RStudio 工具栏上的 Addins 菜单中的 [New Post](https://bookdown.org/yihui/blogdown/rstudio-ide.html) 插件弹出一个窗口（见下图），在窗口中填入所需要的信息就可以完成完成新文章的生成。其中文件名（Filename）一栏会自动生成，但通常来说，对中文文章的文件名需要您手工调整为英文，注意保留文件名中的 `post/2017-02-14-` 部分，只修改后面的基础文件名。修改文件名之后 Slug 一栏会自动更新，它会是将来您的文章网址的最后组成部分。例如下图中的示例文章最终的网址是 `/2017/02/hello-r-markdown-world` （实际网址还要包含前面的域名，对本站来说域名是 `https://cosx.org`）。
 
 [![RStudio 插件 New Post](https://bookdown.org/yihui/blogdown/images/new-post.png)](https://bookdown.org/yihui/blogdown/rstudio-ide.html)
 

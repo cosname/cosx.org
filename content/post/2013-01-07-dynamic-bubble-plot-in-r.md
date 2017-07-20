@@ -1,7 +1,7 @@
 ---
 title: 在R中实现动态气泡图
 date: '2013-01-07T12:52:47+00:00'
-author: 严酷的魔王
+author: 何通
 categories:
   - 统计图形
   - 统计软件
