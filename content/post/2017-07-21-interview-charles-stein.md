@@ -4,7 +4,7 @@ author:
   - Morris H. DeGroot
   - 王佳
   - 张晔
-date: "2017-05-06"
+date: "2017-07-21"
 categories:
   - COS访谈
 tags: [访谈, 求学, 论道]
