@@ -1,6 +1,7 @@
 ---
 title: "COS访谈第31期：Charles Stein"
 author:
+  - Morris H. DeGroot
   - 王佳
   - 张晔
 date: "2017-05-06"
@@ -10,6 +11,8 @@ tags: [访谈, 求学, 论道]
 forum_id: 419227
 slug: interview-charles-stein
 ---
+
+> COS编辑部按：本文是Morris DeGroot对Charles Stein的采访稿，原文见 http://statweb.stanford.edu/~ckirby/charles/Conversation1986.pdf，翻译工作已经得到作者授权。
 
 # 摘要
 
