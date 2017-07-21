@@ -12,7 +12,7 @@ forum_id: 419227
 slug: interview-charles-stein
 ---
 
-> COS编辑部按：本文是Morris DeGroot对Charles Stein的采访稿，原文见 http://statweb.stanford.edu/~ckirby/charles/Conversation1986.pdf，翻译工作已经得到作者授权。
+> COS编辑部按：本文是Morris DeGroot对Charles Stein的采访稿，原文见 <http://statweb.stanford.edu/~ckirby/charles/Conversation1986.pdf>，翻译工作已经得到作者授权。
 
 # 摘要
 
