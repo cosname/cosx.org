@@ -47,7 +47,7 @@ Charles Stein于1920年3月22日出生在纽约布鲁克林，1940年在芝加�
 
 **DeGroot**: 你在伯克利的时候，Wald在哥伦比亚吗？
 
-**Stein**: 是的， Wald在那里。Hotelling刚走，Wolfowitz也在那里。P. L. Hsu(许宝騄)正在访问;Doob也是；B. O. Koopman在那里，在另一个系。Ted Anderson在来年来了。
+**Stein**: 是的， Wald在那里。Hotelling刚走，Wolfowitz也在那里。P. L. Hsu（许宝騄）正在访问;Doob也是；B. O. Koopman在那里，在另一个系。Ted Anderson在来年来了。
 
 **DeGrood**: 虽然你已经完成你的论文了，但是还是和他们保持联系？
 
