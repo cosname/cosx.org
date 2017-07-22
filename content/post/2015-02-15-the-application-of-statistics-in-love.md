@@ -1,18 +1,20 @@
 ---
 title: COS每周精选：统计学在爱情中的那些应用
 date: '2015-02-15T10:13:44+00:00'
-author: COS编辑部
+author:
+  - 施涛
+  - 朱雪宁
+  - 王小宁
 categories: 
   - 推荐文章
   - 每周精选
   - 统计之都
 slug: the-application-of-statistics-in-love
 forum_id: 419062
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[施涛](http://blog.cos.name/taoshi/) [朱雪宁](http://www.xueningzhu.com/) [王小宁](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)
-
-编辑：[王小宁](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)
 
 大数据能搞定女朋友，信不信我们看一个例子：他曾获中文本科学位，在世贸大厦做汉译英，因下午2点上班逃过了911大爆炸，后成为MIT决战21点队员，从拉斯维加斯猛抢6万美金，因此迷上了数学，还[通过统计算法找到了GF](http://www.csdn.net/article/2014-01-23/2818243-how-to-hack-okcupid)。
 

@@ -1,7 +1,14 @@
 ---
 title: 失联搜救中的统计数据分析
 date: '2014-04-12T13:48:15+00:00'
-author: COS编辑部
+author:
+  - 邓一硕
+  - 关菁菁
+  - 刘辰昂
+  - 邱怡轩
+  - 施涛
+  - 熊熹
+  - 周祺
 categories:
   - 推荐文章
   - 统计之都
@@ -179,7 +186,5 @@ DigitalGlobe公司几乎在获知马航事件的第一时间就展开了他们�
 马航事件脉络梳理：
 
 [http://news.qq.com/zt2014/MH370/index.html](http://news.qq.com/zt2014/MH370/index.html)
-
-本文作者：统计之都创作小组（[邓一硕](http://yishuo.org/)，[关菁菁](http://blog.sina.com.cn/cattyguan)，[刘辰昂](http://chenangliu.info/)，[邱怡轩](http://yixuan.cos.name/cn/)，[施涛](http://blog.cos.name/taoshi/)，[熊熹](http://weibo.com/u/1572842322)，[周祺](http://weibo.com/u/2296442893)）
 
 感谢统计之都资深顾问谢益辉和香港浸会大学数学讲座教授汤涛在写作工程中提出的宝贵建议。

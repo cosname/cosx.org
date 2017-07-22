@@ -1,7 +1,7 @@
 ---
 title: 第九届中国R语言会议（杭州）
 date: '2016-08-17T13:54:21+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 新闻通知
   - 统计之都

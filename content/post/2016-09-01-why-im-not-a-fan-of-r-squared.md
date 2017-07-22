@@ -1,7 +1,7 @@
 ---
 title: 为什么我不是R方的粉丝
 date: '2016-09-01T09:29:21+00:00'
-author: COS编辑部
+author: John Myles White
 categories:
   - 回归分析
   - 推荐文章
@@ -18,6 +18,7 @@ tags:
   - 评判标准
 slug: why-im-not-a-fan-of-r-squared
 forum_id: 419161
+meta_extra: "译者：邱怡轩；审稿：冯凌秉；编辑：彭晨昱"
 ---
 
 > 本文翻译自 [John Myles White](http://www.johnmyleswhite.com/) 的博客 [Why I’m Not a Fan of R-Squared](http://www.johnmyleswhite.com/notebook/2016/07/23/why-im-not-a-fan-of-r-squared/)。翻译工作已经获得作者授权同意。
@@ -116,13 +117,3 @@ forum_id: 419161
 # 作者简介：
 
 John Myles White，Facebook 核心数据科学团队成员，加入 Facebook 之前获得普林斯顿大学心理系博士学位，并在麻省理工学院从事 Julia 编程语言的开发。
-
-# 译者简介：
-
-邱怡轩，普渡大学统计系博士研究生，对统计计算和机器学习等领域感兴趣，是Spectra、showtext、recosystem、prettydoc等开源软件包的作者，个人主页 <http://yixuan.cos.name/cn>。
-
-翻译：邱怡轩
-
-审稿：冯凌秉
-
-编辑：彭晨昱

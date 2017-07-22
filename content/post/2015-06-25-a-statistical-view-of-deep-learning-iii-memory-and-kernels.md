@@ -1,7 +1,7 @@
 ---
 title: 从统计学角度来看深度学习（3）：记忆和核方法
 date: '2015-06-25T12:49:15+00:00'
-author: COS编辑部
+author: Shakir Mohamed
 categories:
   - 推荐文章
   - 统计之都
@@ -11,11 +11,12 @@ tags:
   - 神经网络
 slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
 forum_id: 419087
+meta_extra: "译者：丁维悦；审校：朱雪宁、何通、施涛；编辑：王小宁"
 ---
 
 原文链接：<http://blog.shakirm.com/2015/04/a-statistical-view-of-deep-learning-iii-memory-and-kernels/>
 
-作者：[Shakir Mohamed](http://www.shakirm.com/)  翻译：丁维悦 审校：朱雪宁 何通 施涛 编辑：王小宁
+作者：[Shakir Mohamed](http://www.shakirm.com/)
 
 ![methodTriangle1-300x300](https://uploads.cosx.org/2015/06/methodTriangle1-300x300.png)
 

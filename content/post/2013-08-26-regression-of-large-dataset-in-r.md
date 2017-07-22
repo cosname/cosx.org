@@ -1,7 +1,7 @@
 ---
 title: R 中大型数据集的回归
 date: '2013-08-26T12:21:35+00:00'
-author: COS编辑部
+author: 邱怡轩
 categories:
   - 优化与模拟
   - 回归分析
@@ -18,11 +18,10 @@ tags:
   - 矩阵运算
 slug: regression-of-large-dataset-in-r
 forum_id: 418960
+meta_extra: "译者：黄俊文"
 ---
 
-* 作者：[Yixuan Qiu](http://statr.me/)
-* 原文地址：<http://statr.me/2011/10/large-regression/>
-* 译者：[黄俊文](http://www.fyears.org/)
+> 原文地址：<http://statr.me/2011/10/large-regression/>
 
 众所周知，R 是一个依赖于内存的软件，就是说一般情况下，数据集都会被整个地复制到内存之中再被处理。对于小型或者中型的数据集，这样处理当然没有什么问题。但是对于大型的数据集，例如网上抓取的金融类型时间序列数据或者一些日志数据，这样做就有很多因为内存不足导致的问题了。<!--more-->
  

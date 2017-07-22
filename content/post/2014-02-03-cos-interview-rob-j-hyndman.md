@@ -1,7 +1,9 @@
 ---
 title: COS 访谈第十五期：Rob J. Hyndman
 date: '2014-02-03T17:40:05+00:00'
-author: COS编辑部
+author:
+  - Rob J. Hyndman
+  - Earo Wang
 categories:
   - 新闻通知
   - 统计之都
@@ -12,9 +14,10 @@ tags:
   - 统计分析
 slug: cos-interview-rob-j-hyndman
 forum_id: 419003
+meta_extra: "译者：黄俊文"
 ---
 
-【COS编辑部按】：受访者：[Rob J. Hyndman](http://robjhyndman.com/)，采访者：[Earo Wang](http://earo.me/)，译者：[黄俊文](http://www.fyears.org/)。原文[在这](http://earo.me/2014/01/interview-with-rob/)。
+【COS编辑部按】：受访者：[Rob J. Hyndman](http://robjhyndman.com/)，采访者：[Earo Wang](http://earo.me/)。原文[在这](http://earo.me/2014/01/interview-with-rob/)。
 
 Rob J. Hyndman 是澳大利亚的 [Monash University](http://www.monash.edu/) 的统计学教授以及 International Journal of Forecasting 的主编。他也是 `forecast` 和 `hts` 等广泛被使用的 R 包的作者。
 

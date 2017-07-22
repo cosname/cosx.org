@@ -1,7 +1,7 @@
 ---
 title: 十八般武艺，谁主天下？
 date: '2013-02-05T18:30:45+00:00'
-author: Liyun
+author: 陈丽云
 categories:
   - 数据挖掘与机器学习
 tags:

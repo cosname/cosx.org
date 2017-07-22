@@ -1,7 +1,7 @@
 ---
 title: 统计学习那些事
 date: '2011-12-14T01:27:12+00:00'
-author: eeyangc
+author: 杨灿
 categories:
   - 推荐文章
   - 数据分析

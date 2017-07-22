@@ -1,7 +1,7 @@
 ---
 title: 郁彬：让我们拥抱数据科学（Let us own data science）
 date: '2014-09-15T09:49:10+00:00'
-author: COS编辑部
+author: 郁彬
 categories:
   - 推荐文章
   - 新闻通知

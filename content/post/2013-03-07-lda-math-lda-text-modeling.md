@@ -1,7 +1,7 @@
 ---
 title: LDA-math-LDA 文本建模
 date: '2013-03-07T18:27:42+00:00'
-author: rickjin
+author: 靳志辉
 categories:
   - 数据分析
   - 数据挖掘与机器学习

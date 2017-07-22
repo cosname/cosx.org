@@ -1,7 +1,10 @@
 ---
 title: COS每周精选：新浪微博的数据可视化
 date: '2014-12-21T22:40:02+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 王威廉
+  - 王小宁
 categories:
   - 可视化
   - 数据挖掘与机器学习
@@ -9,11 +12,10 @@ categories:
   - 职业事业
 slug: the-visualization-of-weibo
 forum_id: 419051
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)
-
-编辑：王小宁
 
 # 可视化篇
 

@@ -1,7 +1,7 @@
 ---
 title: 微博名人那些事儿
 date: '2013-08-22T11:35:14+00:00'
-author: COS编辑部
+author: 朱雪宁
 categories:
   - 统计软件
 tags:
@@ -337,9 +337,5 @@ hc_name =lapply(hc_res,function(x) {return(name[x])})
 （5）最后的聚类效果不仅仅考虑名人的专业领域，也考虑了其生活中的情感状态、爱好兴趣等，是一个综合的结果，选取不同的专业领域可以通过选取不同topic做聚类分析而得。
 
 **关于作者**
-
-* 朱雪宁
-* 博客：[他山](http://www.puddingnnn.com/)
-* 微博：[**@布丁Nnn**](http://weibo.com/puddingnnn529)
 
 注：原文链接：[微博名人那些事儿](http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/) ，转载请注明出处。

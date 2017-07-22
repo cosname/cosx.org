@@ -1,7 +1,7 @@
 ---
 title: 谷歌趋势与股票市场
 date: '2013-12-10T12:00:45+00:00'
-author: COS分析报告
+author: COS 分析报告
 categories:
   - 统计之都
 tags:

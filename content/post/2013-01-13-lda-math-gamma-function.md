@@ -1,7 +1,7 @@
 ---
 title: LDA-math-神奇的Gamma函数
 date: '2013-01-13T19:33:31+00:00'
-author: rickjin
+author: 靳志辉
 categories:
   - 数学方法
   - 概率论

@@ -1,7 +1,11 @@
 ---
 title: COS每周精选：数据挖掘中的十大算法
 date: '2015-08-03T22:39:24+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 施涛
+  - 朱雪宁
+  - 王小宁
 categories:
   - 模型专题
   - 每周精选
@@ -12,13 +16,11 @@ tags:
   - 数据科学
 slug: top-10-data-mining-algorithms
 forum_id: 419091
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name) [施涛](http://blog.cos.name/taoshi/)^[编者注：该链接已过期]
 朱雪宁 [王小宁](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)
-
-
-编辑：王小宁
 
 国际权威的学术组织 The IEEE International Conference on Data Mining (ICDM) 2006年12月评选出了数据挖掘领域的十大经典算法：C4.5, k-Means, SVM, Apriori, EM, PageRank, AdaBoost, kNN, Naive Bayes, 和 CART ，相关的论文[在这里](http://www.cs.umd.edu/~samir/498/10Algorithms-08.pdf)。
 最近有人把这些算法用[R实现了](http://rayli.net/blog/data/top-10-data-mining-algorithms-in-plain-r/)。

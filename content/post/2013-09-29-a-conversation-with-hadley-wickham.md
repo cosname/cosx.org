@@ -1,7 +1,9 @@
 ---
 title: COS访谈第九期：Hadley Wickham
 date: '2013-09-29T07:42:14+00:00'
-author: 邱怡轩
+author:
+  - Hadley Wickham
+  - 邱怡轩
 categories:
   - 新闻通知
   - 统计之都

@@ -1,23 +1,16 @@
 ---
 title: 数据科学中的“数据智慧”
 date: '2015-05-21T14:20:24+00:00'
-author: COS编辑部
+author: 郁彬
 categories:
   - 推荐文章
   - 统计之都
 slug: the-data-wisdom-for-data-science
 forum_id: 419082
+meta_extra: "译者：吕翔、张心雨；审校：施涛、高涛；编辑：王小宁"
 ---
 
 原文链接：[http://www.odbms.org/2015/04/data-wisdom-for-data-science/](http://www.odbms.org/2015/04/data-wisdom-for-data-science/)
-
-作者：[Bin Yu](http://www.stat.berkeley.edu/~binyu/Site/Welcome.html)   
-
-翻译：吕翔  张心雨    
-
-审校：[施涛](http://blog.cos.name/taoshi/) 高涛  
-
-编辑：王小宁
 
 **本文得到了原英文作者[郁彬](http://www.stat.berkeley.edu/~binyu/Site/Welcome.html)的授权同意，由吕翔和张心雨翻译、[施涛](http://blog.cos.name/taoshi/)和高涛审校。感谢他们的支持和帮助。**
 

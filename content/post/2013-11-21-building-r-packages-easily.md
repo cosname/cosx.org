@@ -1,7 +1,7 @@
 ---
 title: 极简 R 包建立方法
 date: '2013-11-21T11:07:48+00:00'
-author: COS编辑部
+author: 黄俊文
 categories:
   - 统计之都
   - 统计软件
@@ -14,10 +14,6 @@ tags:
 slug: building-r-packages-easily
 forum_id: 418988
 ---
-
-# 作者
-
-[黄俊文](https://www.fyears.org)
 
 # 前言 
 

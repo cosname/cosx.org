@@ -1,7 +1,7 @@
 ---
 title: Rserve与Java的跨平台通信
 date: '2013-08-12T23:19:29+00:00'
-author: 张 丹
+author: 张丹
 categories:
   - 软件应用
 tags:

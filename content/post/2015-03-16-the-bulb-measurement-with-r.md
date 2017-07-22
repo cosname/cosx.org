@@ -1,7 +1,7 @@
 ---
 title: 用R测量灯泡的体积
 date: '2015-03-16T17:08:11+00:00'
-author: COS编辑部
+author: 姜晓东
 categories:
   - 推荐文章
   - 生物与医学统计

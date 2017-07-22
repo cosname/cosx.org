@@ -1,7 +1,9 @@
 ---
 title: COS每周精选：数据科学职业选择“大家”谈
 date: '2015-01-04T23:32:49+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 蔡占锐
 categories:
   - 推荐文章
   - 数据挖掘与机器学习
@@ -9,11 +11,10 @@ categories:
   - 职业事业
 slug: talking-about-data-scientist
 forum_id: 419054
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo)
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 两位亚马逊员工Greg Duncan和Guy Lebanon谈职业选择：走学术路线还是进公司发展？大家[看了](https://www.linkedin.com/pulse/academic-vs-industry-careers-guy-lebanon)自己思考吧！
 

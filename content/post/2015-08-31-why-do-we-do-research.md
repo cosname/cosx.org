@@ -1,7 +1,7 @@
 ---
 title: 我们为什么要做研究？
 date: '2015-08-31T10:09:00+00:00'
-author: COS编辑部
+author: Terry Speed
 categories:
   - 推荐文章
   - 统计之都
@@ -12,6 +12,7 @@ tags:
   - 统计学习
 slug: why-do-we-do-research
 forum_id: 419094
+meta_extra: "译者：王小宁；审校：冯凌秉、施涛"
 ---
 
 >【COS编辑部按】本文作者是2013年的总理科学奖得主 

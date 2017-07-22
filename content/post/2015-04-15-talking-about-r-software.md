@@ -1,7 +1,10 @@
 ---
 title: COS每周精选：再谈R学习
 date: '2015-04-15T20:09:07+00:00'
-author: COS编辑部
+author:
+  - 王小宁
+  - Ron
+  - 王威廉
 categories:
   - 每周精选
   - 统计之都
@@ -10,11 +13,10 @@ categories:
   - 金融统计
 slug: talking-about-r-software
 forum_id: 419076
+meta_extra: "编辑：王小宁"
 ---
 
-本期投稿： [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)　Ron　[王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)
-
-编辑：王小宁
+本期投稿： [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)　Ron　[王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)
 
 **小编注**：小编上网看科技新闻，大多数的文章都在讲“大数据”“深度学习”“互联网+”等等高大上的名词，作为一名统计学的研究生小编觉得再高大上的东西，也需要一项或几项核心的技术。近日，小编再为您提供一些R学习的资料。
 

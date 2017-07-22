@@ -1,7 +1,9 @@
 ---
 title: COS访谈第十四期：北大光华张俊妮老师
 date: '2013-12-16T13:32:54+00:00'
-author: COS编辑部
+author:
+  - 张俊妮
+  - 朱雪宁
 categories:
   - 新闻通知
   - 统计之都

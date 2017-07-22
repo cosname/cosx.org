@@ -1,7 +1,7 @@
 ---
 title: 浅谈医学大数据（上）
 date: '2015-03-22T21:54:55+00:00'
-author: COS编辑部
+author: 陈遵秋
 categories:
   - 推荐文章
   - 统计之都

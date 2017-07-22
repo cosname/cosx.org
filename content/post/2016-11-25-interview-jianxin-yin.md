@@ -1,13 +1,16 @@
 ---
 title: COS访谈第23期:尹建鑫老师
 date: '2016-11-25T21:14:51+00:00'
-author: COS编辑部
+author:
+  - 尹建鑫
+  - 王小宁
 categories:
   - cos访谈
   - 推荐文章
   - 统计之都
 slug: interview-jianxin-yin
 forum_id: 419173
+meta_extra: "校对：王佳"
 ---
 
 >【COS编辑者按】受访者：尹建鑫      采访者：王小宁     校对：王佳

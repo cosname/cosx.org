@@ -1,7 +1,9 @@
 ---
 title: COS访谈第七期：Scott Iverson（杜邦先锋）
 date: '2013-09-12T11:50:55+00:00'
-author: COS编辑部
+author:
+  - Scott Iverson
+  - 林荟
 categories:
   - 职业事业
 tags:
@@ -11,6 +13,7 @@ tags:
   - 统计
 slug: data-sciencs-series-interview-of-scott-iverson
 forum_id: 418968
+meta_extra: "译者：黄俊文；审稿：潘岚锋、高涛"
 ---
 
 【COS编辑部按】受访人：Scott Iverson。

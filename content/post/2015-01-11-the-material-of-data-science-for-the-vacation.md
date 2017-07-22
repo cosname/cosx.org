@@ -1,7 +1,11 @@
 ---
 title: COS每周精选：寒假来了，小编分享一些学习资料
 date: '2015-01-11T19:51:41+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 王威廉
+  - 蔡占锐
+  - 王小宁
 categories:
   - 可视化
   - 推荐文章
@@ -11,11 +15,10 @@ categories:
   - 职业事业
 slug: the-material-of-data-science-for-the-vacation
 forum_id: 419057
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)
 
 # R 可视化
 

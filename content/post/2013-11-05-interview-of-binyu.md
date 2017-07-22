@@ -1,7 +1,9 @@
 ---
 title: COS访谈第十一期：郁彬教授
 date: '2013-11-05T11:00:29+00:00'
-author: COS翻译组
+author:
+  - 郁彬
+  - 施涛
 categories:
   - 推荐文章
   - 统计之都

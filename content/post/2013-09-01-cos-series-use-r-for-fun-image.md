@@ -1,7 +1,7 @@
 ---
 title: use R for fun系列之玩转图像篇
 date: '2013-09-01T12:35:13+00:00'
-author: COS编辑部
+author: 刘辰昂
 categories:
   - 推荐文章
   - 软件应用
@@ -16,13 +16,6 @@ forum_id: 418964
 ---
 
 系列以use R for fun为主题，以[COS论坛](https://cos.name/cn/)上的精华帖、相关package以及自己的一些code为素材，结合自身的一些编程体会，从而整合成文。本文是第三篇[玩转图像篇](http://chenangliu.info/cn/use-r-for-fun-image/)。
-
-**关于作者**
-
-* 刘辰昂，浙大准大四本科，统计之都主站编辑
-* weibo：[求证1加1](http://weibo.com/2011764505/profile?topnav=1&wvr=5)
-* blog: <http://chenangliu.info/cn/>
-* email: liuchenang@gmail.com
 
 **本文素材出处均已在正文中注明**
 

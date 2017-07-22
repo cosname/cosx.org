@@ -1,7 +1,7 @@
 ---
 title: "泊松低方差计数数据建模问题"
 date: '2010-08-28T21:08:34+00:00'
-author: COS编辑部
+author: 饶燕芳
 categories:
   - 推荐文章
   - 数据分析

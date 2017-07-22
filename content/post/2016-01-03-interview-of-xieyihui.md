@@ -1,7 +1,9 @@
 ---
 title: COS访谈第二十期:千秋邈矣独留我，百战归来再读书：谢益辉
 date: '2016-01-03T16:37:47+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 冯俊晨
 categories:
   - cos访谈
   - 推荐文章
@@ -13,10 +15,10 @@ tags:
   - 谢益辉
 slug: interview-of-xieyihui
 forum_id: 419115
+meta_extra: "编辑：王小宁"
 ---
 
-【COS编辑部按】 受访者：[谢益辉 ](http://yihui.name/)  采访者：[冯俊晨](http://www.fengjunchen.com/)   编辑：王小宁
-
+【COS编辑部按】 受访者：[谢益辉](http://yihui.name/)  采访者：[冯俊晨](http://www.fengjunchen.com/) 
 
 >  他站在技术与艺术的交界点。
 >

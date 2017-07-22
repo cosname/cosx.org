@@ -1,7 +1,7 @@
 ---
 title: “统计之都”网站结构调整
 date: '2008-11-23T17:22:34+00:00'
-author: COS管理员
+author: 统计之都
 categories:
   - 新闻通知
 tags:

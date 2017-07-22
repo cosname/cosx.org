@@ -1,6 +1,9 @@
 ---
 title: COS访谈第28期：陈松蹊老师
-author: COS编辑部
+author:
+  - 陈松蹊
+  - 王健桥
+  - 朱雪宁
 date: '2017-05-17'
 categories:
   - COS访谈

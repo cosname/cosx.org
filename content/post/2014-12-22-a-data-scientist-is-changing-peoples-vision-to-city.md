@@ -1,7 +1,7 @@
 ---
 title: 一个数据分析师的博客正在改变着纽约人看待城市的方式
 date: '2014-12-22T22:26:00+00:00'
-author: COS编辑部
+author: 腊八粥
 categories:
   - 推荐文章
 slug: a-data-scientist-is-changing-peoples-vision-to-city

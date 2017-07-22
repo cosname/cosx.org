@@ -252,10 +252,3 @@ Ready!
 ![shudu](https://uploads.cosx.org/2013/08/shudu.jpg)
   
 关于小游戏就暂时写到这了(可能的话会再来一篇进阶篇)，如果有更好的示例或者idea欢迎和我或者COS的几位前辈联系，并及时更新，当然如果很棒的话目测就果断收录fun包了，下一篇将是小应用开发篇，里面将会给出更多的示例和demo，内容更精彩！
-
-**关于作者**
-
-  * 刘辰昂，浙大准大四本科，统计之都主站编辑
-  * weibo：[求证1加1](http://weibo.com/2011764505/profile?topnav=1&wvr=5)
-  * blog: <http://chenangliu.info/cn/>
-  * email: liuchenang@gmail.com

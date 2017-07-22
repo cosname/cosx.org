@@ -1,7 +1,10 @@
 ---
 title: COS每周精选：形形色色的数据可视化
 date: '2014-11-30T17:28:18+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 邱怡轩
+  - 王小宁
 categories:
   - 可视化
   - 数据挖掘与机器学习
@@ -9,11 +12,10 @@ categories:
   - 统计之都
 slug: various-data-visualization
 forum_id: 419045
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [邱怡轩](http://yixuan.cos.name/cn/) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 # 数据可视化 
 

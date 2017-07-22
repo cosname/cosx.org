@@ -1,7 +1,7 @@
 ---
 title: 模型选择的一些基本思想和方法
 date: '2015-08-31T08:29:54+00:00'
-author: COS编辑部
+author: 高涛
 categories:
   - 统计之都
 tags:
@@ -13,9 +13,8 @@ tags:
   - 统计学习
 slug: some-basic-ideas-and-methods-of-model-selection
 forum_id: 419093
+meta_extra: "编辑：王小宁"
 ---
-
-作者：[高涛](http://joegaotao.github.io)  编辑：王小宁
 
 # 0. 引言
 

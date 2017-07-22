@@ -1,18 +1,20 @@
 ---
 title: COS每周精选：统计学“大家”谈
 date: '2015-03-29T21:01:19+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 王威廉
+  - 王小宁
 categories:
   - 可视化
   - 每周精选
   - 统计之都
 slug: let-us-talk-about-statistics
 forum_id: 419071
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/)   [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 # 统计学的七大支柱
 

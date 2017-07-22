@@ -1,7 +1,7 @@
 ---
 title: jiebaR中文分词——R的灵活，C的效率
 date: '2014-11-15T10:46:46+00:00'
-author: COS编辑部
+author: 覃文锋
 categories:
   - 数据分析
   - 数据挖掘与机器学习
@@ -17,9 +17,6 @@ slug: jiebar-text-segmentation
 forum_id: 419040
 ---
 
-> 本文作者：覃文锋，厦门大学公共卫生学院本科生，研究兴趣为生物统计和数据挖掘。
-
-> 主页：<http://qinwenfeng.com/cn/jiebaR-dev/>
 
 # R是什么？
 
