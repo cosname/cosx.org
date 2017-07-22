@@ -42,7 +42,8 @@ list:
     image: https://cloud.githubusercontent.com/assets/7221728/26047173/a982236e-3984-11e7-9065-2baac85fccf4.png
     intro: 统计之都理事会主席，江西财经大学金融管理国际研究院助理教授，澳大利亚国立大学2011级统计学博士，中国人民大学2009级统计学硕士，中南财经政法大学2005级统计学&法学学士。2007年初识统计之都，常年潜水于COS论坛，并迅速成为COS迷粉，追随多年。2014年于南通婚礼偶遇太云，相逢恨晚，当即遁入COS门。现在在COS编辑部主要负责端茶送水，跑腿打杂，偶尔审审文章。
   - name: 高涛
-    intro: 博客：<http://joegaotao.github.io/cn/>。
+    image: https://user-images.githubusercontent.com/1142836/28492456-ea8789ca-6f36-11e7-8b47-91eada415a4c.jpg
+    intro: 高涛，中国人民大学2012级数理统计研究生，2009年在太云带领下加入COS，给COS编辑部和R会议打杂，参与《R语言实战》《ggplot2：数据分析与图形艺术》书籍翻译。对统计机器学习、优化算法、时序预测感兴趣，之前混迹于互联网圈，现就职上海明汯投资做量化。博客：<http://joegaotao.github.io/>。
   - name: 何通
     image: https://avatars2.githubusercontent.com/u/1289856
     intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任Fortinet软件工程师。
