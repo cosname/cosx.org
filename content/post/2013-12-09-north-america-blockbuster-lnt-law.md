@@ -1,7 +1,13 @@
 ---
 title: 北美大片票房的ln(t)定律
 date: '2013-12-09T14:21:40+00:00'
-author: COS分析报告
+author:
+  - 刘钰
+  - 毛铮
+  - 谯谦
+  - 吕俊杰
+  - 祁自帅
+  - 刘哲
 categories:
   - 统计之都
 tags:

@@ -1,7 +1,9 @@
 ---
 title: COS访谈第十七期：褚挺进
 date: '2015-04-10T12:00:58+00:00'
-author: COS编辑部
+author:
+  - 褚挺进
+  - 王小宁
 categories:
   - 推荐文章
   - 统计之都

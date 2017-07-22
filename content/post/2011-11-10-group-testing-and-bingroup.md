@@ -1,7 +1,7 @@
 ---
 title: 分组检测方法和 binGroup 包
 date: '2011-11-10T12:01:08+00:00'
-author: COS编辑部
+author: 张博安
 categories:
   - 数据分析
   - 生物与医学统计

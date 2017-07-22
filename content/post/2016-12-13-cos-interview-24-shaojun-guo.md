@@ -1,13 +1,17 @@
 ---
 title: COS访谈第24期：郭绍俊老师
 date: '2016-12-13T11:05:41+00:00'
-author: COS编辑部
+author: 
+  - 郭绍俊
+  - 冯璟烁
+  - 于嘉傲
 categories:
   - cos访谈
   - 统计之都
   - 职业事业
 slug: cos-interview-24-shaojun-guo
 forum_id: 419177
+meta_extra: "校对：于嘉傲"
 ---
 
 【COS编辑者按】受访者：郭绍俊  采访者：冯璟烁、于嘉傲  校对：于嘉傲   

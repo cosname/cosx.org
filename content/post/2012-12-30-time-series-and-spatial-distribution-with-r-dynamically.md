@@ -1,7 +1,7 @@
 ---
 title: 用R动态的显示开店序列和空间分布
 date: '2012-12-30T10:38:06+00:00'
-author: COS编辑部
+author: 陈少飞
 categories:
   - 统计图形
   - 统计软件

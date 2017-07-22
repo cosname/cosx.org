@@ -1,17 +1,16 @@
 ---
 title: 从统计学角度来看深度学习（2）：自动编码器和自由能
 date: '2015-05-24T23:09:24+00:00'
-author: COS编辑部
+author: Shakir Mohamed
 categories:
   - 推荐文章
   - 统计之都
 slug: a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy
 forum_id: 419083
+meta_extra: "译者：钟琰；审校：何通；编辑：王小宁"
 ---
 
 原文链接：[http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/](http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/)
-
-作者：[Shakir Mohamed](http://www.shakirm.com/)  翻译：钟琰    审校：何通    编辑：王小宁
 
 **本文得到了原英文作者[Shakir Mohamed](http://www.shakirm.com/)的授权同意，由钟琰翻译、何通审校。感谢他们的支持和帮助。**
 

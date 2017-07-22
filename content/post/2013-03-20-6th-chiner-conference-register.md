@@ -1,7 +1,7 @@
 ---
 title: 第六届R语言会议开始报名
 date: '2013-03-20T23:00:36+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 统计之都
 tags:

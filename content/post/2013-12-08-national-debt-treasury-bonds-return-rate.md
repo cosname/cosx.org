@@ -1,7 +1,11 @@
 ---
 title: 国债收益率的影响因素
 date: '2013-12-08T20:28:32+00:00'
-author: COS分析报告
+author:
+  - 赵圣斌
+  - 门金生
+  - 张帆
+  - 赵和
 categories:
   - 统计之都
 tags:

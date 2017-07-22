@@ -1,7 +1,7 @@
 ---
 title: 第八届中国R语言会议（上海）纪要
 date: '2015-12-16T15:07:01+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 统计之都
 slug: 8th-china-r-shanghai-summary

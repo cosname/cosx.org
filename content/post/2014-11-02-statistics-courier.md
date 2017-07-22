@@ -1,7 +1,10 @@
 ---
 title: COS每周精选：统计速递
 date: '2014-11-02T18:57:47+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 冷静
+  - 王小宁
 categories:
   - 每周精选
   - 统计之都
@@ -11,11 +14,10 @@ tags:
   - 统计学习
 slug: statistics-courier
 forum_id: 419036
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 # 数据可视化
 

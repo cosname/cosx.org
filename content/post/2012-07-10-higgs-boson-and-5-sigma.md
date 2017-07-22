@@ -1,7 +1,7 @@
 ---
 title: 希格斯玻色子与5σ
 date: '2012-07-10T23:26:02+00:00'
-author: COS编辑部
+author: 施涛
 categories:
   - 经典理论
   - 统计之都

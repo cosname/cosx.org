@@ -1,7 +1,9 @@
 ---
 title: 第七届中国R语言会议（广州）纪要【含演讲资料】
 date: '2014-11-24T16:40:47+00:00'
-author: COS编辑部
+author:
+  - 江彩霞
+  - 统计之都
 categories:
   - 统计之都
 tags:

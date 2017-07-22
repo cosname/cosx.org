@@ -1,7 +1,7 @@
 ---
 title: 第八届中国R语言会议（广州会场）通知
 date: '2015-04-07T15:14:01+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 中国R语言会议
   - 新闻通知

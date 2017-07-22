@@ -1,7 +1,7 @@
 ---
 title: 他乡与梦想：吕令子纪念基金
 date: '2014-08-10T21:35:06+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 出国留学
   - 推荐文章

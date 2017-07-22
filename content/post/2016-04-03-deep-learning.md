@@ -1,7 +1,9 @@
 ---
 title: COS每周精选：深度学习
 date: '2016-04-03T14:00:33+00:00'
-author: COS编辑部
+author:
+  - 王威廉
+  - 王小宁
 categories:
   - 推荐文章
   - 每周精选
@@ -11,9 +13,10 @@ tags:
   - 深度学习
 slug: deep-learning
 forum_id: 419123
+meta_extra: "编辑：王小宁"
 ---
 
-本期投稿：[王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁；编辑：王小宁
+本期投稿：[王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁
 
 # 深度学习
 

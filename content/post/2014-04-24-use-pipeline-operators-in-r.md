@@ -1,7 +1,8 @@
 ---
 title: 在R中使用管道操作
 date: '2014-04-24T12:00:17+00:00'
-author: COS编辑部
+author:
+  - 任坤
 categories:
   - 统计软件
   - 软件应用
@@ -13,6 +14,7 @@ tags:
   - 管道
 slug: use-pipeline-operators-in-r
 forum_id: 419017
+meta_extra: "译者：高涛"
 ---
 
   * 原文作者：[任坤](http://renkun.me/)，厦门大学王亚南经济研究院金融硕士生，研究兴趣为计算统计和金融量化交易。

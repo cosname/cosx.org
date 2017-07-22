@@ -1,6 +1,6 @@
 ---
 title: 统计之都投稿指南
-author: COS编辑部
+author: 统计之都
 date: '2017-05-19'
 tags:
   - 投稿

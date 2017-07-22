@@ -1,7 +1,9 @@
 ---
 title: Breiman访谈实录
 date: '2016-12-02T12:01:16+00:00'
-author: COS翻译组
+author:
+  - Leo Breiman
+  - Richard Olshen
 categories:
   - cos访谈
 tags:
@@ -12,11 +14,10 @@ tags:
   - 统计计算
 slug: a-conversaton-with-leo-breiman
 forum_id: 419175
+meta_extra: "翻译：张晔、成慧敏、李宇轩；审稿：高涛、侯澄钧、丁鹏、魏太云；编辑：王佳、杨舒仪"
 ---
 
 > COS编辑部按：本文是一篇Richard Olshen对Leo Breiman的采访稿（[原文发表在Statistical Science](http://projecteuclid.org/download/pdf_1/euclid.ss/1009213290)）。翻译工作已经得到作者授权。翻译: 张晔、成慧敏、李宇轩。审校：高涛、侯澄钧、丁鹏、魏太云。此外，郑重感谢施涛、丁鹏、郁彬老师为文章的翻译指导和版权沟通提供的帮助。
-
-> 译者简介：张晔，毕业于华南统计科学研究中心，现严肃科技平台开发工程师，主要负责docker容器调度系统开发。成慧敏，就读于中央财经大学统计与数学学院，硕士研究生二年级，研究兴趣为复杂网络分析与深度学习。李宇轩,就读于中国人民大学统计学院,大二本科生,目测统计有关都可以是学习方向。
 
 ![Leo Breiman](https://uploads.cosx.org/2012/02/Leo_Breiman.jpg)
 
@@ -485,10 +486,3 @@ Ken做的很好。在1989年末开始准备1990年的普查时，Dave给我打�
 **Olshen**：或许你自己的例子会给大家带来正面积极的影响。谢谢你，Leo！
 
 **Breiman**：那将是我的荣幸，Richard。
-
-翻译：张晔、成慧敏、李宇轩 
-审校：高涛、魏太云、侯澄钧
-编辑：王佳、杨舒仪
-
-版权公告 原创文章，版权所有。
-敬告各位友媒，如需转载，请与统计之都小编联系（直接留言或发至邮箱：editor@cos.name ），获准转载的请在显著位置注明作者和出处（转载自：统计之都），并在文章结尾处附上统计之都二维码。

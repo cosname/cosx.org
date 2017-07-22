@@ -1,7 +1,7 @@
 ---
 title: 聊聊R和GPU
 date: '2013-10-07T10:30:11+00:00'
-author: COS编辑部
+author: 寇强
 categories:
   - 统计软件
   - 软件应用

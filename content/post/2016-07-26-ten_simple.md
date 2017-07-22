@@ -1,7 +1,13 @@
 ---
 title: 有效统计实践的十项简明原则
 date: '2016-07-26T14:54:41+00:00'
-author: COS翻译组
+author:
+  - Robert E. Kass
+  - Brian S. Caffo
+  - Marie Davidian
+  - 孟晓犁
+  - 郁彬
+  - Nancy Reid
 categories:
   - 数据分析
 tags:
@@ -12,6 +18,7 @@ tags:
   - 科学
 slug: ten_simple
 forum_id: 419154
+meta_extra: "翻译：吕翔；审稿：施涛、谢益辉；编辑：闫晗、吕翔"
 ---
 
 
@@ -191,9 +198,3 @@ Kass RE, Caffo BS, Davidian M, Meng X-L, Yu B, Reid N (2016) PLoS Comput Biol 12
 **Xiaoli Meng 孟晓犁:** 哈佛大学，统计系，美国  
 **Bin Yu 郁彬:** 加州大学伯克利分校，统计系，电子工程与计算机科学系，美国  
 **Nancy Reid:** 多伦多大学，统计科学系，加拿大  
-
-翻译：吕翔 (Xiang Lyu) 
-
-审稿：施涛 (Tao Shi)、谢益辉 (Yihui Xie)
-
-编辑：闫晗 (Han Yan)、吕翔 (Xiang Lyu)

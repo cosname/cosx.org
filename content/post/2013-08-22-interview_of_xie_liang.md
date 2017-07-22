@@ -1,7 +1,9 @@
 ---
 title: COS访谈第四期：谢梁（微软）
 date: '2013-08-22T09:49:14+00:00'
-author: COS编辑部
+author:
+  - 谢梁
+  - 谢益辉
 categories:
   - 新闻通知
   - 统计之都

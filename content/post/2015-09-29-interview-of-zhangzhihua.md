@@ -1,7 +1,9 @@
 ---
 title: COS访谈第十九期：张志华教授
 date: '2015-09-29T15:12:47+00:00'
-author: COS编辑部
+author:
+  - 张志华
+  - 常象宇
 categories:
   - cos访谈
   - 推荐文章
@@ -19,6 +21,7 @@ tags:
   - 郁彬
 slug: interview-of-zhangzhihua
 forum_id: 419100
+meta_extra: "文字整理：王莉晶、朱雪宁"
 ---
 
 【COS编辑部按】 受访者：[张志华](http://bcmi.sjtu.edu.cn/~zhzhang/)   采访者：常象宇   文字整理：王莉晶 朱雪宁

@@ -1,7 +1,7 @@
 ---
 title: COS论坛精华帖系列——strsplit 的反函数
 date: '2013-08-13T12:30:53+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 统计软件
   - 软件应用
@@ -135,8 +135,3 @@ str_new_5
 ```
 
 如你所见，R 有着无与伦比的灵活性，希望各位客官看完这篇文章能够感受到 R 的强大和好玩！
-
-# 关于编辑
-
-* 黄俊文
-* blog: <http://www.fyears.org/>

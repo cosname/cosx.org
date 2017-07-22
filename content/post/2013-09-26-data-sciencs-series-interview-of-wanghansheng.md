@@ -1,7 +1,9 @@
 ---
 title: COS访谈第八期：北大光华王汉生老师
 date: '2013-09-26T08:44:48+00:00'
-author: COS编辑部
+author:
+  - 王汉生
+  - 陈昱
 categories:
   - 新闻通知
   - 统计之都

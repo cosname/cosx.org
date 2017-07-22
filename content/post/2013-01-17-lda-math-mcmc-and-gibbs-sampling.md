@@ -1,7 +1,7 @@
 ---
 title: LDA-math-MCMC 和 Gibbs Sampling
 date: '2013-01-17T23:13:02+00:00'
-author: rickjin
+author: 靳志辉
 categories:
   - 数学方法
   - 概率论

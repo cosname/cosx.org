@@ -1,7 +1,7 @@
 ---
 title: COS访谈第十二期：Terry Speed教授，2013年总理科学奖得主
 date: '2013-11-14T08:55:07+00:00'
-author: COS翻译组
+author: Terry Speed
 categories:
   - 新闻通知
   - 统计之都
@@ -13,6 +13,7 @@ tags:
   - 统计之都
 slug: terry-speed
 forum_id: 418984
+meta_extra: "译者：尤晓斌；审稿：李妙竹、施涛"
 ---
 
 【COS编辑部按】本译文原文来自澳大利亚[Science in Public](http://www.scienceinpublic.com.au/)，讲 述Terry Speed，一位著作等身的统计学者，对学术和社会生活的热情；[原文](http://www.scienceinpublic.com.au/prime-ministers-prize/2013-science)版权归 Science in Public所有。本文译者：尤晓斌(新加坡国立大学)；审校：李妙竹(上海生科院)、施涛(The Ohio State University)。

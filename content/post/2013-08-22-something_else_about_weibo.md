@@ -1,7 +1,7 @@
 ---
 title: 微博名人那些事儿（二）
 date: '2013-08-22T13:12:17+00:00'
-author: COS编辑部
+author: 朱雪宁
 categories:
   - 数据挖掘与机器学习
   - 统计之都
@@ -148,10 +148,6 @@ term[,ind]
 
 [Notes on PageRank Algorithm](http://home.ie.cuhk.edu.hk/~wkshum/papers/pagerank.pdf)
 
-**关于作者**
+**备注**
 
-* 朱雪宁
-* 博客：[他山](http://www.puddingnnn.com/)
-* 微博：[**@布丁Nnn**](http://weibo.com/puddingnnn529)
-
-注：原文链接：[微博名人那些事儿（二）](http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%EF%BC%88%E4%BA%8C%EF%BC%89/) ，转载请注明出处。
+原文链接：[微博名人那些事儿（二）](http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%EF%BC%88%E4%BA%8C%EF%BC%89/) ，转载请注明出处。

@@ -1,7 +1,7 @@
 ---
 title: 正态分布的前世今生(上)
 date: '2013-01-28T22:06:38+00:00'
-author: rickjin
+author: 靳志辉
 categories:
   - 经典理论
 tags:

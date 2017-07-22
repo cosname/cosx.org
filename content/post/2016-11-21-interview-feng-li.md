@@ -1,7 +1,10 @@
 ---
 title: COS访谈第22期:李丰老师
 date: '2016-11-21T17:13:37+00:00'
-author: COS编辑部
+author:
+  - 李丰
+  - 王小宁
+  - 张心雨
 categories:
   - cos访谈
   - 推荐文章
@@ -12,6 +15,7 @@ tags:
   - 计算机
 slug: interview-feng-li
 forum_id: 419171
+meta_extra: "审稿：成慧敏"
 ---
 
 受访者：李丰

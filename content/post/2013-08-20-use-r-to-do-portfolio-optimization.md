@@ -1,7 +1,7 @@
 ---
 title: 使用R语言构造投资组合的有效前沿
 date: '2013-08-20T09:45:15+00:00'
-author: COS编辑部
+author: 邓一硕
 categories:
   - 数据分析
 tags:
@@ -250,9 +250,3 @@ Make a plot selection (or 0 to exit):
 ![8](https://cloud.githubusercontent.com/assets/18478302/25556669/ea4455ce-2d32-11e7-93de-0930f5617385.png)
 
 注：本文转载自邓一硕博客，原文请[点击此处](http://yishuo.org/r/2013/08/09/use-r-to-do-portfolio-optimization.html)。转载请注明出处。
-
-关于作者：邓一硕，毕业于中央财经大学，感兴趣领域是数据挖掘技术（R语言）在金融投资分析和计量经济学中的应用。
-
-博客：<http://yishuo.org>
-
-微博：<http://weibo.com/dengyishuo>

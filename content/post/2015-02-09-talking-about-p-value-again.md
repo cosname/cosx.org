@@ -1,7 +1,11 @@
 ---
 title: COS每周精选：再谈P值
 date: '2015-02-09T08:21:21+00:00'
-author: COS编辑部
+author:
+  - 尤晓斌
+  - 冷静
+  - 王威廉
+  - 数学文化
 categories:
   - 数据挖掘与机器学习
   - 每周精选
@@ -9,11 +13,10 @@ categories:
   - 统计之都
 slug: talking-about-p-value-again
 forum_id: 419061
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：尤晓斌 [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [数学文化](http://weibo.com/mathematicalculture?from=feed&loc=nickname)
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 统计之都主站之前有一篇《不得不提的P值》曾引发众多的讨论，去年的《P值之死》也曾在圈内引起不小的骚动，编者罗列了一些新的资料供各位客官慢慢欣赏，孰是孰非，您来决断。
 

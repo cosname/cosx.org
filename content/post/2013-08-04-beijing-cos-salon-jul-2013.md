@@ -1,7 +1,9 @@
 ---
 title: COS数据分析沙龙第十二期（北京）
 date: '2013-08-04T21:58:23+00:00'
-author: COS编辑部
+author:
+  - 肖展航
+  - 统计之都
 categories:
   - 新闻通知
   - 统计之都

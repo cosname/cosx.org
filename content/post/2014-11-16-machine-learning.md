@@ -1,7 +1,10 @@
 ---
 title: COS每周精选：机器学习哪家强？
 date: '2014-11-16T20:51:19+00:00'
-author: COS编辑部
+author:
+  - 冷静
+  - 蔡占锐
+  - 王小宁
 categories:
   - 数据挖掘与机器学习
   - 每周精选
@@ -9,11 +12,10 @@ categories:
   - 统计计算
 slug: machine-learning
 forum_id: 419041
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿： [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)  [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
-
-编辑：王小宁
 
 # 机器学习
 

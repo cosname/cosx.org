@@ -1,7 +1,7 @@
 ---
 title: COS数据分析沙龙第十期（广州）
 date: '2013-07-01T18:00:00+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 新闻通知
   - 统计之都

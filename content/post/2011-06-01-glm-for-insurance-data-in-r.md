@@ -1,7 +1,7 @@
 ---
 title: 在R中对保险数据建立广义线性模型
 date: '2011-06-01T23:57:49+00:00'
-author: COS编辑部
+author: 吕定海
 categories:
   - 统计之都
   - 风险精算

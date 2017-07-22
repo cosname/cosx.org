@@ -1,7 +1,7 @@
 ---
 title: 一个数据科学家的这些年
 date: '2015-07-20T22:35:22+00:00'
-author: COS编辑部
+author: 李舰
 categories:
   - 图书出版
   - 推荐文章

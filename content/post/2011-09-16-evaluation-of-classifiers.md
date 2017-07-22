@@ -1,7 +1,7 @@
 ---
 title: 分类器评价、混淆矩阵与ROC曲线
 date: '2011-09-16T09:26:46+00:00'
-author: COS编辑部
+author: 阿稳
 categories:
   - 数据分析
   - 数据挖掘与机器学习

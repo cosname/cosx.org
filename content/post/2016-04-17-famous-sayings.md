@@ -1,7 +1,9 @@
 ---
 title: COS每周精选：名家名言
 date: '2016-04-17T21:03:44+00:00'
-author: COS编辑部
+author:
+  - 朱雪宁
+  - 王威廉
 categories:
   - 每周精选
   - 统计之都
@@ -10,9 +12,10 @@ tags:
   - 每周精选
 slug: famous-sayings
 forum_id: 419125
+meta_extra: "编辑：王小宁"
 ---
 
-本期投稿：朱雪宁、[王威廉 ](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁；编辑：王小宁。
+本期投稿：朱雪宁、[王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁。
 
 # 名家名言
 

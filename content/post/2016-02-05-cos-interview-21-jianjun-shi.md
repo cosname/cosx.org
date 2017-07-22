@@ -1,7 +1,11 @@
 ---
 title: COS访谈第21期~史建军：饱学致用育桃李，锦袍换酒傲江湖
 date: '2016-02-05T11:27:36+00:00'
-author: COS编辑部
+author:
+  - 史建军
+  - 黄帅
+  - 常象宇
+  - 魏太云
 categories:
   - cos访谈
 tags:

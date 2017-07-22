@@ -1,7 +1,7 @@
 ---
 title: R绘制中国航线分布夜景图
 date: '2014-09-23T11:05:19+00:00'
-author: COS编辑部
+author: 李根
 categories:
   - 统计图形
   - 统计软件

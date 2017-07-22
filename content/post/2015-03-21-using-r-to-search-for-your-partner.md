@@ -1,7 +1,9 @@
 ---
 title: COS每周精选：用R来找寻你的另一半吧！！！
 date: '2015-03-21T19:42:12+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 王小宁
 categories:
   - 可视化
   - 推荐文章
@@ -10,13 +12,12 @@ categories:
   - 统计软件
 slug: using-r-to-search-for-your-partner
 forum_id: 419067
+meta_extra: "编辑：王小宁"
 ---
 
 
 本期投稿：[谢益辉](http://yihui.name/) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 还记得小编的每周精选“[统计学在爱情中的那些应用](/2015/02/the-application-of-statistics-in-love/)”么，正值春暖花开之时，是不是想约个妹子一起去春游啊。小编又苦心找了几篇文章，以统计学的思维助你一臂之力。
 

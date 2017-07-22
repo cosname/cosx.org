@@ -1,7 +1,7 @@
 ---
 title: 《Rcpp：R与C++的无缝整合》
 date: '2016-01-10T12:29:09+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 图书出版
   - 新闻通知

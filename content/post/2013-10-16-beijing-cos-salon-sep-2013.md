@@ -1,7 +1,7 @@
 ---
 title: COS数据分析沙龙第十四期（北京）[附录音]
 date: '2013-10-16T23:37:56+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 新闻通知
   - 统计之都

@@ -1,7 +1,7 @@
 ---
 title: 生物医学大数据分析方法研讨会
 date: '2016-05-09T10:12:07+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 生物与医学统计
 tags:

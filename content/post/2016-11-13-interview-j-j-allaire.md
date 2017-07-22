@@ -1,7 +1,9 @@
 ---
 title: RStudio的前世今生——RStudio创始人专访
 date: '2016-11-13T22:33:57+00:00'
-author: COS编辑部
+author:
+  - J.J. Allaire
+  - Joseph B. Rickert
 categories:
   - 统计之都
   - 职业事业
@@ -13,9 +15,10 @@ tags:
   - R语言
 slug: interview-j-j-allaire
 forum_id: 419170
+meta_extra: "译者：王佳；审校：谢益辉、王小宁；编辑：丁维悦"
 ---
 
-本文是一篇Joseph B Rickert（简称JBR）对J.J. Allaire（RStudio的创始人和首席执行官）的采访稿，[原文在此](https://www.rstudio.com/rviews/2016/10/12/interview-with-j-j-allaire/)。统计之都与作者沟通后得到授权将其翻译为中文，希望可以让广大读者能够更多了解在R的世界中这个叫RStudio的地方。在这次采访中讨论了RStudio的历史、使命和J.J.的未来愿景。 短暂的交谈中讨论了各种各样的主题，包括RStudio的业务、R语言的发展、R联盟对R社群的重要性以及J.J.对R新手们的建议。
+本文是一篇Joseph B. Rickert（简称JBR）对J.J. Allaire（RStudio的创始人和首席执行官）的采访稿，[原文在此](https://www.rstudio.com/rviews/2016/10/12/interview-with-j-j-allaire/)。统计之都与作者沟通后得到授权将其翻译为中文，希望可以让广大读者能够更多了解在R的世界中这个叫RStudio的地方。在这次采访中讨论了RStudio的历史、使命和J.J.的未来愿景。 短暂的交谈中讨论了各种各样的主题，包括RStudio的业务、R语言的发展、R联盟对R社群的重要性以及J.J.对R新手们的建议。
 <!--more-->
 
 ![J.J. Allaire](https://uploads.cosx.org/2016/11/图片-1.png)
@@ -119,10 +122,3 @@ R语言联盟是一个真正的意义深远且重要的群体。它有潜力成�
 我希望在接下里的十年中，我们能看到R现今在大学中占有的优势能真正地占领专业统计学家的世界。我对此充满了希望，而且我希望RStudio能在促进R积极转型中起到重要的作用。我们继续致力于使R构建得更容易学习和使用。这样，当一些机构决定长期使用R代替他们现在的专业统计软件时，他们会进入一个非常完善、非常强大、很容易学习的环境。所以他们可以成功地采取行动大规模应用R。我希望接下来的十年中RStudio可以促进完成所有的这些事情。
 
 **JBR** ：谢谢你，J.J.!
-
-
-翻译：王佳
-
-审校：谢益辉、王小宁
-
-编辑：丁维悦

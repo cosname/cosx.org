@@ -1,7 +1,7 @@
 ---
 title: 大话统计：Frequentist or Bayesian
 date: '2012-12-11T12:44:25+00:00'
-author: COS编辑部
+author: 施涛
 categories:
   - 经典理论
   - 统计推断

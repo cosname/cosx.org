@@ -1,7 +1,7 @@
 ---
 title: COS数据分析沙龙第二期（上海）
 date: '2012-07-23T09:39:31+00:00'
-author: Liyun
+author: 陈丽云
 categories:
   - 新闻通知
   - 统计之都

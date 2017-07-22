@@ -1,7 +1,8 @@
 ---
 title: 25年后的统计系会是什么样？
 date: '2012-02-21T14:21:11+00:00'
-author: COS编辑部
+author:
+  - Leo Breiman
 categories:
   - 推荐文章
   - 职业事业
@@ -12,6 +13,7 @@ tags:
   - 统计定位
 slug: what-is-the-stat-dept-25-years-from-now
 forum_id: 418860
+meta_extra: "译者：施涛"
 ---
 
 > 本文是统计学家Leo Breiman1994年在加州伯克利统计系毕业典礼上的讲话，原文请参考[此处](http://www.stat.berkeley.edu/~dpurdy/Breiman-1994-commencement.html)。

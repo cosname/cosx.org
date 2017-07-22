@@ -1,7 +1,7 @@
 ---
 title: 第七届中国R语言会议（北京会场）通知
 date: '2014-04-07T15:51:39+00:00'
-author: COS管理员
+author: 统计之都
 categories:
   - 统计之都
 tags:

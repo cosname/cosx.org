@@ -1,16 +1,18 @@
 ---
 title: COS每周精选：统计学中的新鲜事
 date: '2014-10-26T23:09:28+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 冷静
+  - 王小宁
 categories:
   - 统计之都
 slug: the-news-about-statistics
 forum_id: 419035
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/1656310700/profile?topnav=1&wvr=5&user=1)
-
-编辑：王小宁
 
 # 数据可视化：
 

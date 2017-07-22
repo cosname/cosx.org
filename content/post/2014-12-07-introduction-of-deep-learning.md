@@ -1,7 +1,9 @@
 ---
 title: COS每周精选：深度学习面面观
 date: '2014-12-07T16:00:40+00:00'
-author: COS编辑部
+author:
+  - 王威廉
+  - 王小宁
 categories:
   - 推荐文章
   - 数据挖掘与机器学习
@@ -9,11 +11,10 @@ categories:
   - 统计之都
 slug: introduction-of-deep-learning
 forum_id: 419047
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo%20)
-
-编辑：王小宁
 
 在了解深度学习之前，让我们先来看看@戴文渊 大牛的关于机器学习的前世今生的[介绍](http://blog.sina.com.cn/s/blog_b09d46020101bl6x.html)。
 

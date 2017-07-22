@@ -1,7 +1,7 @@
 ---
 title: 第五届中国R语言会议（北京会场）纪要
 date: '2012-05-31T10:53:00+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 推荐文章
   - 新闻通知

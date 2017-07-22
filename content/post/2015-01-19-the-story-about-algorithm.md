@@ -1,7 +1,11 @@
 ---
 title: COS每周精选：算法学习知哪些？
 date: '2015-01-19T00:39:08+00:00'
-author: COS编辑部
+author:
+  - 谢益辉
+  - 王威廉
+  - 冷静
+  - 王小宁
 categories:
   - 数学方法
   - 数据挖掘与机器学习
@@ -10,12 +14,10 @@ categories:
   - 统计计算
 slug: the-story-about-algorithm
 forum_id: 419058
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)
-
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)
 
 # 算法
 

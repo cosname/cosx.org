@@ -1,7 +1,9 @@
 ---
 title: COS访谈第一期：吕晓玲
 date: '2013-03-09T12:24:25+00:00'
-author: 潘岚锋
+author:
+  - 吕晓玲
+  - 潘岚锋
 categories:
   - 新闻通知
   - 统计之都

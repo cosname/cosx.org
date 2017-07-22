@@ -1,7 +1,7 @@
 ---
 title: COS每周精选：一个商科学生成为数据分析师的故事
 date: '2015-01-25T19:49:32+00:00'
-author: COS编辑部
+author: 王小宁
 categories:
   - 可视化
   - 推荐文章
@@ -10,11 +10,10 @@ categories:
   - 统计之都
 slug: the-story-about-a-business-student-to-be-a-data-analyst
 forum_id: 419059
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：统计之都编辑部 王小宁
-
-编辑：[王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 一个商科出身的学生，在大学四年级开始逆袭，留英几年习得一手数据分析好本事，让我们来看看[他的成长故事](http://www.zhihu.com/question/27573926)？
 

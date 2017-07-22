@@ -1,7 +1,7 @@
 ---
 title: Hadley Wickham：一个改变了R的人
 date: '2015-09-21T10:16:43+00:00'
-author: COS编辑部
+author: Dan Kopf
 categories:
   - 推荐文章
   - 统计图形
@@ -14,9 +14,10 @@ tags:
   - 统计图形
 slug: hadley-wickham-the-man-who-revolutionized-r
 forum_id: 419098
+meta_extra: "译者：冯俊晨、王小宁；审校：邱怡轩、朱雪宁、蔡寒蕴；编辑：王小宁"
 ---
 
-【COS编辑部按】本译文得到了原英文作者的授权同意，翻译：[冯俊晨](http://www.fengjunchen.com)、王小宁， 审校：邱怡轩、朱雪宁、蔡寒蕴，编辑：王小宁。
+【COS编辑部按】本译文得到了原英文作者的授权同意，翻译：[冯俊晨](http://www.fengjunchen.com)、王小宁。
 
 [Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包`ggplot2`的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如`plyr`、`reshape2`等。本文取自[PRICEONOMICS](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/).<!--more-->
 

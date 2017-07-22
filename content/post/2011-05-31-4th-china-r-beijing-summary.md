@@ -1,7 +1,7 @@
 ---
 title: 第四届中国R语言会议（北京会场）纪要
 date: '2011-05-31T00:17:52+00:00'
-author: COS管理员
+author: 统计之都
 categories:
   - 推荐文章
   - 新闻通知

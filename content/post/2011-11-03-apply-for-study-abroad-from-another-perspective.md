@@ -1,7 +1,9 @@
 ---
 title: 从另一个角度看统计学留学申请
 date: '2011-11-03T19:13:13+00:00'
-author: COS编辑部
+author:
+  - 施涛
+  - 陈甜
 categories:
   - 出国留学
 tags:

@@ -1,7 +1,8 @@
 ---
 title: COS访谈第五期：黄帅
 date: '2013-08-31T15:09:27+00:00'
-author: COS编辑部
+author:
+  - 黄帅
 categories:
   - 新闻通知
   - 统计之都

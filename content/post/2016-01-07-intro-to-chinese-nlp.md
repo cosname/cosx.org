@@ -1,7 +1,7 @@
 ---
 title: 中文文本处理简要介绍
 date: '2016-01-07T03:50:18+00:00'
-author: COS编辑部
+author: 李绳
 categories:
   - 数据分析
   - 数据挖掘与机器学习

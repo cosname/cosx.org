@@ -1,7 +1,7 @@
 ---
 title: COS数据分析沙龙第十三期（北京）
 date: '2013-08-29T10:17:13+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 新闻通知
   - 统计之都

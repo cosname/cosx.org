@@ -1,7 +1,7 @@
 ---
 title: COS数据分析沙龙第一期（北京）
 date: '2012-06-25T00:25:06+00:00'
-author: COS编辑部
+author: 统计之都
 categories:
   - 新闻通知
   - 统计之都

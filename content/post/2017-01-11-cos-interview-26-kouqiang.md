@@ -1,11 +1,14 @@
 ---
 title: COS访谈第26期：寇强
 date: '2017-01-11T23:51:49+00:00'
-author: COS编辑部
+author: 
+  - 寇强
+  - 王小宁
 categories:
   - 统计之都
 slug: cos-interview-26-kouqiang
 forum_id: 419181
+meta_extra: "审稿：成慧敏"
 ---
 
 【COS编辑者按】受访者：寇强      采访者：王小宁     审稿：成慧敏

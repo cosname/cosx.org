@@ -1,7 +1,10 @@
 ---
 title: COS每周精选：统计速递（2）
 date: '2014-11-09T23:27:05+00:00'
-author: COS编辑部
+author:
+  - 施涛
+  - 冷静
+  - 王小宁
 categories:
   - 每周精选
   - 统计之都
@@ -12,11 +15,10 @@ tags:
   - 统计分布
 slug: statistics-courier-2
 forum_id: 419038
+meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[施涛](http://blog.cos.name/taoshi/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
-
-编辑：王小宁
 
 # 推荐系统
 

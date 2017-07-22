@@ -1,7 +1,9 @@
 ---
 title: COS访谈第十八期：陈天奇
 date: '2015-06-28T15:48:28+00:00'
-author: COS编辑部
+author:
+  - 陈天奇
+  - 何通
 categories:
   - 统计之都
 tags:
@@ -14,9 +16,10 @@ tags:
   - 陈天奇
 slug: interview-of-tianqi
 forum_id: 419088
+meta_extra: "编辑：王小宁"
 ---
 
-【COS编辑部按】受访者：[陈天奇](http://homes.cs.washington.edu/~tqchen/) 采访者：何通 编辑：王小宁
+【COS编辑部按】受访者：[陈天奇](http://homes.cs.washington.edu/~tqchen/) 采访者：何通
 
 简介：陈天奇，华盛顿大学计算机系博士生，研究方向为大规模机器学习。他曾获得KDD CUP 2012 Track 1第一名，并开发了SVDFeature，XGBoost，cxxnet等著名机器学习工具，是[Distributed (Deep) Machine Learning Common](https://github.com/dmlc/)的发起人之一。
 
