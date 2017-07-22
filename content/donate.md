@@ -1,7 +1,7 @@
 ---
 title: 捐赠
 date: '2009-03-15T23:48:26+00:00'
-author: COS管理员
+author: 统计之都
 weight: 8
 menu: main
 forum_id: 418704

@@ -148,6 +148,6 @@ term[,ind]
 
 [Notes on PageRank Algorithm](http://home.ie.cuhk.edu.hk/~wkshum/papers/pagerank.pdf)
 
-**关于作者**
+**备注**
 
-注：原文链接：[微博名人那些事儿（二）](http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%EF%BC%88%E4%BA%8C%EF%BC%89/) ，转载请注明出处。
+原文链接：[微博名人那些事儿（二）](http://www.puddingnnn.com/%E5%BE%AE%E5%8D%9A%E5%90%8D%E4%BA%BA%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF%EF%BC%88%E4%BA%8C%EF%BC%89/) ，转载请注明出处。

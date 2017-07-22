@@ -1,7 +1,7 @@
 ---
 title: MCMC案例学习
 date: '2012-07-24T14:49:32+00:00'
-author: Charles J.Geyer
+author: Charles J. Geyer
 categories:
   - 优化与模拟
   - 统计计算
