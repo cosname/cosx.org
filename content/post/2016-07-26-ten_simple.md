@@ -5,8 +5,8 @@ author:
   - Robert E. Kass
   - Brian S. Caffo
   - Marie Davidian
-  - Xiao-Li Meng
-  - Bin Yu
+  - 孟晓犁
+  - 郁彬
   - Nancy Reid
 categories:
   - 数据分析
