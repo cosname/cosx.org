@@ -7,7 +7,7 @@ author:
   - 常象宇
   - 魏太云
 categories:
-  - cos访谈
+  - COS访谈
 tags:
   - COS访谈
   - IE

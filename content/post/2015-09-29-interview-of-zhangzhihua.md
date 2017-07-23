@@ -5,7 +5,7 @@ author:
   - 张志华
   - 常象宇
 categories:
-  - cos访谈
+  - COS访谈
   - 推荐文章
   - 统计之都
 tags:
@@ -21,7 +21,7 @@ tags:
   - 郁彬
 slug: interview-of-zhangzhihua
 forum_id: 419100
-meta_extra: "文字整理：王莉晶、朱雪宁"
+meta_extra: 文字整理：王莉晶、朱雪宁
 ---
 
 【COS编辑部按】 受访者：[张志华](http://bcmi.sjtu.edu.cn/~zhzhang/)   采访者：常象宇   文字整理：王莉晶 朱雪宁

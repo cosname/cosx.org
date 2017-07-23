@@ -6,7 +6,7 @@ author:
   - 王小宁
   - 张心雨
 categories:
-  - cos访谈
+  - COS访谈
   - 推荐文章
   - 统计之都
 tags:
@@ -15,7 +15,7 @@ tags:
   - 计算机
 slug: interview-feng-li
 forum_id: 419171
-meta_extra: "审稿：成慧敏"
+meta_extra: 审稿：成慧敏
 ---
 
 受访者：李丰

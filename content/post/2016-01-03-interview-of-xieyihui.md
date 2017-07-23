@@ -5,7 +5,7 @@ author:
   - 谢益辉
   - 冯俊晨
 categories:
-  - cos访谈
+  - COS访谈
   - 推荐文章
   - 统计之都
 tags:
@@ -15,7 +15,7 @@ tags:
   - 谢益辉
 slug: interview-of-xieyihui
 forum_id: 419115
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 【COS编辑部按】 受访者：[谢益辉](http://yihui.name/)  采访者：[冯俊晨](http://www.fengjunchen.com/) 
