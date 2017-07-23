@@ -122,7 +122,8 @@ list:
     image: https://user-images.githubusercontent.com/163582/28285860-d3c70c72-6afb-11e7-9a92-71d9575188b5.png
     intro: 中国人民大学统计硕士，爱荷华州立大学统计学博士，R 包 [knitr](https://yihui.name/knitr/) 的主要作者。现为 RStudio 软件工程师，曾负责 Shiny 包相关开发工作，后转入 R Markdown 相关扩展包的开发，包括 [bookdown](https://github.com/rstudio/bookdown) 和 [blogdown](https://github.com/rstudio/blogdown)。对统计计算、可视化、以及各类网页相关技术感兴趣，有志于对技术写作工具做减法工作，坚信人类浪费了太多时间在期刊论文、学位论文、书籍的排版上。平时主要活跃在 [Github](https://github.com/yihui) 上。个人主页在 <https://yihui.name>，思想偏激，流水账、意识流甚多，小人之心甚重，慎入。
   - name: 熊熹
-    intro: 女，人称“师姐”。
+    image: https://user-images.githubusercontent.com/1586648/28498380-a363f05e-6fce-11e7-98b5-f30c379cc8c7.jpg
+    intro: 女，人称“师姐”。京东商城data science lab的算法工程师，现在主要在做一些推荐系统和个性化的工作
   - name: 徐浩
     image: https://cloud.githubusercontent.com/assets/7221728/25791994/77d093e8-33f6-11e7-9990-3d4436146817.jpg
     intro: JD Power的数据分析师。
