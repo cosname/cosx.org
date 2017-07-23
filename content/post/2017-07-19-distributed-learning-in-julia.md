@@ -54,7 +54,7 @@ Julia 还提供一些更加 high level 的函数，诸如 `pmap` 之类的可以
 
 总而言之，要保证分布式和单进程计算的 SGD 结果一样，我们需要在每个 mini-batch 的计算中等待所有 worker 算完，把结果 gradient 求一个平均值，再更新参数，然后进行下一个 mini-batch 的计算。但是这样会导致很大的等待延迟，特别是如果其中有一个 worker 计算速度或者网速很慢的话，就会直接拖慢其他所有节点。ASGD 则选择直接无视同步从而获得更好的 scalability，并且在实际中通常收敛得也很好（有时候可能需要使用更小的 step size）。假设我么想要实现 ASGD，大致可以写成这个样子：
 
-```{julia}
+```julia
 function asgd_step(w :: Vector{Float64})
   grad = compute_grad(w)
   return grad
@@ -71,7 +71,7 @@ end
 
 为了解决这个问题，我们不能够调用 `fetch` 来 block 住主进程的执行，但是我们逻辑上我们又必须要等到每个 worker 算完之后拿到结果，然后再用那个结果来更新参数。如何将异步程序逻辑串起来这几乎是所有异步编程中都会碰到的问题。有两种比较常见的解决方案，一种是使用回调函数，在 Javascript 里这是非常常见的做法，并且有很方便的 `then` 函数可以把一个一个的回调函数串起来，例如下面这个没有什么意义的例子：
 
-```{javascript}
+```javascript
 var p = new Promise(function(resolve, reject) {
     // a promise that will be fulfilled after
     // sleeping for 1 second
@@ -92,7 +92,7 @@ p.then(function(value) {
 
 这里的做法就是把整个程序的逻辑分成一个一个的 block，分别包装在一些函数里，然后通过把一堆回调函数按顺序串起来的方式来实现异步操作。另一种解决办法是用不同的调度线程，这样我们在调用 `fetch` 进行 block 等待的时候只是 block 了那个 worker 对应的调度线程，而主线程则可以继续运行，大致可以用下面的伪代码来表示：
 
-```{julia}
+```julia
 # pseudo code for thread-based scheduling
 threads = []
 for wid in worker_ids
@@ -134,7 +134,7 @@ end
 
 弄清了这个基本概念之后，我们可以写一个如下的基本的工具函数，来将一个任务分配到所有 worker 上执行，并等待所有 worker 执行完毕，拿到最终结果（其实和系统自带的 `pmap` 很像），只额外再加了一点点异常处理的代码。这段代码可以在我们提供的[样例 project](https://github.com/pluskid/DistLearn.jl) 中的 `src/worker.jl` 找到。
 
-```{julia}
+```julia
 """
     invoke_on_workers(f, workers, args...)
 
@@ -164,7 +164,7 @@ end
 
 有了这个 building block，我们就可以把分布式算法的基本框架写出来（这里我们用了 Julia 的 “do block” 来方便地构建匿名函数传入 `invoke_on_workers` 的第一个参数）：
 
-```{julia}
+```julia
 # create workers
 workers = spawn_workers(...)
 
@@ -205,7 +205,7 @@ end
 
 这里的 `worker` 对象是我们自己定义的一个 struct，它并不是一个进程或者工作节点，而是我们定义的用于方便存储所有工作节点本地需要维护的状态和临时变量的一个容器。在实际的代码中它长这个样子：
 
-```{julia}
+```julia
 """
 A `Worker` object holds the necessary local states for a learner worker:
 
@@ -232,7 +232,7 @@ end
 
 有这样的限制的原因是分布式编程逻辑处理起来比较复杂，如果 worker 和 scheduler 都是独立自主的节点，同时有自己的主线逻辑，以及在监听外部节点发过来的请求的话，整个逻辑线就会变得复杂起来。通常我们会把主要逻辑放在某一方，而让另一方以纯监听事件触发任务的被动方式执行。我们这里选择的是将主线逻辑放在 scheduler 这一方，另一种比较常见的做法是将主线逻辑放在 worker 上，而中央进程此时退化成一个 parameter server，它只实现简单的 pull 和 push 事件（或者说 RPC 接口），当 worker 请求 pull 最新参数的时候它发送 w，当 worker 调用 push 回传 gradient 的时候它通过传回的 gradient 来更新 w，其他时间则处于等待状态。然后每个 worker 自己处理自己的逻辑，类似于这样子：
 
-```{julia}
+```julia
 # on worker
 data = load_data(my_data_partition)
 
@@ -249,7 +249,7 @@ end
 
 总之对于调度逻辑比较多的情况下，似乎把主线逻辑放在中央节点会让程序写起来更自然一点。回到刚才的 ASGD 的问题，虽然 worker 节点只能被动地与中央节点通信，但是这并不是非常大的一个问题。一个比较 naive 的解决办法就是把 ASGD 的内层循环写开来，大概像这个样子：
 
-```{julia}
+```julia
 for epoch = 1:n_epoch
   for batch = 1:n_batch
     grad_all = invoke_on_workers(worker, w) do w_ref, w
@@ -266,7 +266,7 @@ end
 
 当然这个其实并不是 ASGD，而是 Synchronized SGD，因为我们等待所有 worker 把 gradient 算出来之后求了 average，然后统一加到 w 上。这是由于我们之前写的 `invoke_on_workers` 这个辅助函数的逻辑导致的，正确的做法可以通过写开来：
 
-```{julia}
+```julia
 function asgd_step(w_ref :: Future, w :: Vector{Float64})
   worker = fetch(w_ref)
   ...
@@ -289,7 +289,7 @@ end
 
 这个看上去似乎是正确的，因为现在我们让每个 worker 的 coroutine 单独去更新 `w` 了。不过实际上还是没有达到我们想要的效果，因为我们的 `@sync` block 被放在了 mini-batch 循环的内部，所以每个 mini-batch 结束 worker 都会停下来等其他所有 worker 执行完，还是没有达到 async 的效果。幸运的是 Julia 的 coroutine 和 RPC 的接口非常 flexible，要实现这里想要的逻辑，我们只要把 mini-batch 和 `@sync` block 交换一下顺序即可。下面是我们示例代码里 ASGD.jl 中的实际 code：
 
-```{julia}
+```julia
 function run_epoch(workers, params :: Parameters)
   @sync begin
     for (pid, worker_ref) in workers
