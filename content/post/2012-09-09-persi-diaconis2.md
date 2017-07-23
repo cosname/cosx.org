@@ -1,7 +1,7 @@
 ---
 title: Persi  Diaconis(2)
 date: '2012-09-09T18:05:52+00:00'
-author: montecarlo
+author: 韩钧
 categories:
   - 统计推断
   - 统计计算
@@ -53,4 +53,3 @@ forum_id: 418883
 ![](http://fmn.rrfmn.com/fmn058/20120811/2145/b_large_Cljo_39a5000013c91263.jpg)
 
 从这里，我们看到的是混合有英语，西班牙语等信息的文件。而算法本身的可行性，涉及到了MCMC算法的理论，我们后续给出。
-

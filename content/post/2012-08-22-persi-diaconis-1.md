@@ -1,7 +1,7 @@
 ---
 title: Persi Diaconis (1)
 date: '2012-08-22T07:26:18+00:00'
-author: montecarlo
+author: 韩钧
 categories:
   - 优化与模拟
   - 统计之都
@@ -33,6 +33,3 @@ Persi Diaconis 做了几个很有意思的工作，如洗牌多少次能够洗�
 我们可以想到，上图看起来怪怪的字符，每个都应该对应一个字母，只要我们找到字符和字母的对应关系，我们就可以解码了。但是怎么找到这个对应关系呢？（我想到了福尔摩斯探案集里面有这样一个例子，不过那个例子中的字符代表体系和这个不同，但是福尔摩斯的推断相当惊人！）
 
 在下一篇我给出他的想法，从而写完MCMC算法的引子。
-
-  win your ex girlfriend backfree advice on how to make her want you back [How To Get Your Ex Girlfriend Back](http://blog.dotsub.com/) 
-
