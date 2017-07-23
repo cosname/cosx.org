@@ -5,12 +5,12 @@ author:
   - 尹建鑫
   - 王小宁
 categories:
-  - cos访谈
+  - COS访谈
   - 推荐文章
   - 统计之都
 slug: interview-jianxin-yin
 forum_id: 419173
-meta_extra: "校对：王佳"
+meta_extra: 校对：王佳
 ---
 
 >【COS编辑者按】受访者：尹建鑫      采访者：王小宁     校对：王佳

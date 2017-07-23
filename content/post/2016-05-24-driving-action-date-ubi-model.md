@@ -1,12 +1,12 @@
 ---
 title: 基于驾驶行为数据的UBI车险模型
 date: '2016-05-24T22:35:29+00:00'
-author: 
+author:
   - 陈星
   - 潘蕊
   - 黄亮
 categories:
-  - cos访谈
+  - COS访谈
 tags:
   - Logistic回归模型
   - UBI车险
