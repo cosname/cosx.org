@@ -30,13 +30,13 @@ description: 介绍 Julia 的分布式计算机制，并提供一个 asynchroniz
 
 启动 worker 进程之后，就可以进行 RPC 来调度任务了。Julia 里 RPC 的接口非常简单，最基本的一个函数是 `remotecall(func, wid, args...)`，其中 `func` 是要调用的函数，`wid` 是对应的 worker 的 ID，而 `args...` 则是需要传给函数的参数，参数会被自动传输到对应的 worker 那里。`remotecall` 函数是立即范围的，它返回的结果是一个 `Future`，这相当于对于 RPC 执行结果的一个 handle，对于这个 handle 调用 `fetch` 会拿到对应的结果，如果对应的 RPC 计算还没有完成，则 block 等待完成，同时 `fetch` 还会自动把结果传输到当前调用 `fetch` 的这个节点上来，当然如果结果已经在同一个节点上了，`fetch` 则不需要额外的数据传输开销。下面是一个例子：
 
-``` julia
+```julia
 data_ref = remotecall(rand, 2, (20, 30))
 ret = remotecall_fetch(x -> norm(fetch(x)), 2, data)
 ```
 在 worker 2 上调用了 `rand` 生成一个随机矩阵，注意这里参数传输的代价只是 `(20, 30)` 这个 tuple，并且 `data_ref` 只是作为一个 handle 返回到当前进程，这个 handle 直接被传回 worker 2 上计算其 `norm`，而在 worker 2 上调用 `fetch` 的时候会发现生成出来的矩阵已经在该节点上了，所以最终结果并没有太大的数据传输代价。这里的 `remotecall_fetch` 有点类似于嵌套调用 `fetch(remotecall(...))`，但是由于它自己本身是一个 primitive，所以更加高效，也不会出现隐藏的 race condition 问题。除了这些 primitive 之外，还有一些更 high level 的 API 和宏，比如 `@spawn` 和 `@spawnat` 可以很方便地在 worker 上执行任意代码，例如：
 
-``` julia
+```julia
 julia> ref = @spawnat 2 begin
          x = rand(2, 2)
          norm(x)
