@@ -30,7 +30,7 @@ description: 介绍 Julia 的分布式计算机制，并提供一个 asynchroniz
 
 启动 worker 进程之后，就可以进行 RPC 来调度任务了。Julia 里 RPC 的接口非常简单，最基本的一个函数是 `remotecall(func, wid, args...)`，其中 `func` 是要调用的函数，`wid` 是对应的 worker 的 ID，而 `args...` 则是需要传给函数的参数，参数会被自动传输到对应的 worker 那里。`remotecall` 函数是立即范围的，它返回的结果是一个 `Future`，这相当于对于 RPC 执行结果的一个 handle，对于这个 handle 调用 `fetch` 会拿到对应的结果，如果对应的 RPC 计算还没有完成，则 block 等待完成，同时 `fetch` 还会自动把结果传输到当前调用 `fetch` 的这个节点上来，当然如果结果已经在同一个节点上了，`fetch` 则不需要额外的数据传输开销。下面是一个例子：
 
-``` julia
+```julia
 data_ref = remotecall(rand, 2, (20, 30))
 ret = remotecall_fetch(x -> norm(fetch(x)), 2, data)
 ```
