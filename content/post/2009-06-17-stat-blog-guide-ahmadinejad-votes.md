@@ -6,7 +6,7 @@ categories:
   - 推荐文章
   - 统计图形
   - 统计推断
-  - 网站导读
+  - 新闻动态
 tags:
   - Benford's Law
   - Journal of Statistical Software

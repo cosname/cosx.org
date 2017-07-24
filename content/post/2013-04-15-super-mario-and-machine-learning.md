@@ -3,7 +3,7 @@ title: COS每周精选:论机器学习技术在超级玛丽自动化中的应用
 date: '2013-04-15T11:10:32+00:00'
 author: 潘岚锋
 categories:
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: super-mario-and-machine-learning

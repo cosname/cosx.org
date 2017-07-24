@@ -3,7 +3,7 @@ title: COS每周精选:如何用数据讲故事？
 date: '2013-03-11T07:38:30+00:00'
 author: 潘岚锋
 categories:
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: storytelling-with-data

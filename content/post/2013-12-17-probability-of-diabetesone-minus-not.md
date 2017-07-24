@@ -4,7 +4,7 @@ date: '2013-12-17T00:13:31+00:00'
 author: 霍志骥
 categories:
   - 新闻通知
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: probability-of-diabetesone-minus-not

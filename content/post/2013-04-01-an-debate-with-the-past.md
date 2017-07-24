@@ -3,7 +3,7 @@ title: COS每周精选:一场穿越时空的辩护
 date: '2013-04-01T12:08:19+00:00'
 author: 潘岚锋
 categories:
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: an-debate-with-the-past

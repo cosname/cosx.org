@@ -3,7 +3,7 @@ title: COS每周精选:21世纪的贝叶斯定理？
 date: '2013-10-13T12:57:22+00:00'
 author: 潘岚锋
 categories:
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: 21-century-bayesian-thm

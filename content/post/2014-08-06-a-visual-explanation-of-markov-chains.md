@@ -5,7 +5,7 @@ author: 霍志骥
 categories:
   - 新闻通知
   - 统计之都
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: a-visual-explanation-of-markov-chains

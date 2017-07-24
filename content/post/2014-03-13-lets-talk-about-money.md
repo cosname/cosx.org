@@ -4,7 +4,7 @@ date: '2014-03-13T08:58:15+00:00'
 author: 霍志骥
 categories:
   - 新闻通知
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: lets-talk-about-money
