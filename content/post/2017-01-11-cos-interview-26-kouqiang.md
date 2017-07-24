@@ -5,7 +5,7 @@ author:
   - 寇强
   - 王小宁
 categories:
-  - 统计之都
+  - COS访谈
 slug: cos-interview-26-kouqiang
 forum_id: 419181
 meta_extra: "审稿：成慧敏"
