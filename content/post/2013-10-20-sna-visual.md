@@ -3,7 +3,7 @@ title: COS每周精选:统计自然语言处理之新书快递
 date: '2013-10-20T00:00:41+00:00'
 author: 霍志骥
 categories:
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: sna-visual

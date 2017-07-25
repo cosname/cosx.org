@@ -4,7 +4,7 @@ date: '2013-02-03T05:27:29+00:00'
 author: 潘岚锋
 categories:
   - 统计之都
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: the-most-poisoned-baby-name

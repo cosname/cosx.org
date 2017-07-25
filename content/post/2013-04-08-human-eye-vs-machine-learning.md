@@ -3,7 +3,7 @@ title: COS每周精选:群众智慧vs机器学习？
 date: '2013-04-08T10:49:21+00:00'
 author: 潘岚锋
 categories:
-  - 网站导读
+  - 新闻动态
 tags:
   - 每周精选
 slug: human-eye-vs-machine-learning

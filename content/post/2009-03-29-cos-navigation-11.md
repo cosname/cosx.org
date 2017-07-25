@@ -4,7 +4,7 @@ date: '2009-03-29T22:53:55+00:00'
 author: 郑冰
 categories:
   - 统计之都
-  - 网站导读
+  - 新闻动态
 tags:
   - Hilbert
   - 捐赠
