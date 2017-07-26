@@ -1,5 +1,5 @@
 ---
-title: COS访谈第九期：Hadley Wickham
+title: COS访谈第9期：Hadley Wickham
 date: '2013-09-29T07:42:14+00:00'
 author:
   - Hadley Wickham

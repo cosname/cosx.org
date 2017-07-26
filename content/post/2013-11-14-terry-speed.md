@@ -1,5 +1,5 @@
 ---
-title: COS访谈第十二期：Terry Speed教授，2013年总理科学奖得主
+title: COS访谈第12期：Terry Speed教授，2013年总理科学奖得主
 date: '2013-11-14T08:55:07+00:00'
 author: Terry Speed
 categories:
