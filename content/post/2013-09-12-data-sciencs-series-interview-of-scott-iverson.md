@@ -1,5 +1,5 @@
 ---
-title: COS访谈第七期：Scott Iverson（杜邦先锋）
+title: COS访谈第7期：Scott Iverson（杜邦先锋）
 date: '2013-09-12T11:50:55+00:00'
 author:
   - Scott Iverson

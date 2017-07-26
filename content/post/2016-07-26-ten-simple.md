@@ -16,7 +16,7 @@ tags:
   - 变异性
   - 数据
   - 科学
-slug: ten_simple
+slug: ten-simple
 forum_id: 419154
 meta_extra: "翻译：吕翔；审稿：施涛、谢益辉；编辑：闫晗、吕翔"
 ---

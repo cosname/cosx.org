@@ -32,7 +32,7 @@ meta_extra: "编辑：王小宁"
 
 # 知识图谱推断
 
-我们关于知识图谱推断的统计关系学习期刊论文在[Machine Learning发表](http://www.cs.cmu.edu/~yww/papers/ProPPR_MLJ_sub.pdf)。 每条一阶逻辑规则都有特征向量，可从数据中学习规则的权重，并在推断时映射到图结构的边上来指引推断算法找到正确答案。我们的推断时间与图谱大小无关，比Markov逻辑网快特别多。[代码](%20https://github.com/TeamCohen/ProPPR)。
+我们关于知识图谱推断的统计关系学习期刊论文在[Machine Learning发表](http://www.cs.cmu.edu/~yww/papers/ProPPR_MLJ_sub.pdf)。 每条一阶逻辑规则都有特征向量，可从数据中学习规则的权重，并在推断时映射到图结构的边上来指引推断算法找到正确答案。我们的推断时间与图谱大小无关，比Markov逻辑网快特别多。[代码](https://github.com/TeamCohen/ProPPR)。
 
 人们发电子邮件都有什么习惯？雅虎研究院用统计和机器学习算法分析了160亿封邮件，发现年纪大的用户回复时间比较长，写的邮件也比较长，并且用户回邮件的习惯也能被预测出来[《麻省理工科技评论》](http://www.technologyreview.com/view/536586/machine-learning-algorithm-mines-16-billion-e-mails/)。[WWW论文](http://arxiv.org/pdf/1504.00704v1.pdf)。
 
