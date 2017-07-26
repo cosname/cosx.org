@@ -10,6 +10,7 @@ tags:
   - 北大
   - 讲话
 slug: yubin-graduation-speech
+meta_extra: 审稿：黄俊文、谢益辉；编辑：林枫
 forum_id: 419230
 ---
 
