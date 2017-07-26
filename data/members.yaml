@@ -37,7 +37,8 @@ list:
     image: https://cloud.githubusercontent.com/assets/7221728/25802086/6784d95e-3423-11e7-9bd5-f58775b4e3d7.jpg
     intro: 中国人民大学统计学院应用统计学2017届本科生，华盛顿大学工业工程系2017级在读博士。2015年加入统计之都，曾多次在各R会组委会中露脸，专职画画，兼职办会。目前是COS编辑部小编一枚。
   - name: 冯俊晨
-    intro: http://www.fengjunchen.com
+    image: https://user-images.githubusercontent.com/1142836/28624742-ae8f3c10-724c-11e7-82cd-700106f1f5fc.jpg
+    intro: 个人网站：<http://www.fengjunchen.com>
   - name: 冯凌秉
     image: https://cloud.githubusercontent.com/assets/7221728/26047173/a982236e-3984-11e7-9065-2baac85fccf4.png
     intro: 统计之都理事会主席，江西财经大学金融管理国际研究院助理教授，澳大利亚国立大学2011级统计学博士，中国人民大学2009级统计学硕士，中南财经政法大学2005级统计学&法学学士。2007年初识统计之都，常年潜水于COS论坛，并迅速成为COS迷粉，追随多年。2014年于南通婚礼偶遇太云，相逢恨晚，当即遁入COS门。现在在COS编辑部主要负责端茶送水，跑腿打杂，偶尔审审文章。
@@ -111,7 +112,8 @@ list:
     image: https://uploads.cosx.org/2016/06/tutu.jpeg
     intro: 汪张扬，男，1991年出生；2012年中国科学技术大学电子通信工程本科毕业；2016年伊利诺伊大学香槟分校电子计算机工程博士毕业；2016年加入德州A&M大学计算机科学系任助理教授。更多信息见[个人主页](http://www.atlaswang.com)。
   - name: 魏太云
-    intro: <http://www.weibo.com/taiyun>
+    image: https://avatars.githubusercontent.com/u/507671
+    intro: 魏太云，毕业于中国人民大学统计学院，感兴趣的领域是统计建模、机器学习、数据可视化。此外，魏太云还曾担任统计之都理事会主席（2011-2016），参与多届中国R语言会议的组织工作，合作翻译出版了《ggplot2：数据分析与图形艺术》、《R数据可视化手册》等书籍。
   - name: 肖凯
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 一个喜欢折腾数据的人，与李舰合著了《数据科学中的R语言》，现就职于蚂蚁金服。
