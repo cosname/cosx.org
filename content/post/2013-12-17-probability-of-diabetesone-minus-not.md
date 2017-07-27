@@ -3,7 +3,6 @@ title: COS每周精选：得II型糖尿病的概率 = 1 – 不得II型糖尿病
 date: '2013-12-17T00:13:31+00:00'
 author: 霍志骥
 categories:
-  - 新闻通知
   - 新闻动态
 tags:
   - 每周精选

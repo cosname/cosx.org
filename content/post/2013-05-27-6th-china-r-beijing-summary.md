@@ -3,8 +3,7 @@ title: 第六届中国R语言会议（北京）纪要
 date: '2013-05-27T12:19:50+00:00'
 author: 统计之都
 categories:
-  - 新闻通知
-  - 统计之都
+  - 新闻动态
   - 软件应用
 tags:
   - lightning talk

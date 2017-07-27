@@ -7,7 +7,6 @@ author:
 categories:
   - COS访谈
   - 时间序列
-  - 统计之都
 slug: cos-interview-25-dong-li
 forum_id: 419179
 ---

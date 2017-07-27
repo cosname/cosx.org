@@ -3,7 +3,7 @@ title: RHadoop实践系列之三 R实现MapReduce的协同过滤算法
 date: '2013-04-09T12:30:29+00:00'
 author: 张丹
 categories:
-  - 数据分析
+  - 统计应用
   - 软件应用
 tags:
   - hadoop

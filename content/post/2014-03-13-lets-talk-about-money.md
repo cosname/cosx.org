@@ -3,7 +3,6 @@ title: COS每周精选：谈钱不伤感情
 date: '2014-03-13T08:58:15+00:00'
 author: 霍志骥
 categories:
-  - 新闻通知
   - 新闻动态
 tags:
   - 每周精选

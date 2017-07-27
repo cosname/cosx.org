@@ -1,9 +1,9 @@
 ---
-title: "蒙特卡洛方法与定积分计算"
+title: 蒙特卡洛方法与定积分计算
 date: '2010-03-08T17:21:23+00:00'
 author: 邓一硕
 categories:
-  - 优化与模拟
+  - 统计计算
 tags:
   - Monte-Carlo
   - 定积分

@@ -4,7 +4,7 @@ date: '2014-07-29T01:32:17+00:00'
 author:
   - 郁彬
 categories:
-  - 新闻通知
+  - 新闻动态
   - 统计刊物
   - 职业事业
 tags:
@@ -16,7 +16,7 @@ tags:
   - 职业
 slug: ims-a-cross-continent-human-network
 forum_id: 419027
-meta_extra: "译者：肖楠、尤晓斌、蔡占锐；审稿：邱怡轩、郁彬"
+meta_extra: 译者：肖楠、尤晓斌、蔡占锐；审稿：邱怡轩、郁彬
 ---
 译者注：[原文](http://bulletin.imstat.org/2014/07/ims-a-cross-continent-human-network-with-free-student-membership/)刊登于 [IMS Bulletin](http://bulletin.imstat.org/)，作者为国际数理统计学会（Institute of Mathematical Statistics）现任主席郁彬教授。郁彬是加州大学伯克利分校统计系和电子工程与计算机科学系的讲席教授，是美国国家科学院、美国艺术与科学院双院士。她曾在威斯康星麦迪逊和耶鲁大学都任过教，并且曾经是贝尔实验室的技术研究成员。她在2009年到2012年间担任加州大学伯克利分校统计系系主任，还是北大微软统计和信息技术实验室的创办者和主任之一。
 

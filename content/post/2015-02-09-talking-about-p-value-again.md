@@ -7,13 +7,12 @@ author:
   - 王威廉
   - 数学文化
 categories:
-  - 数据挖掘与机器学习
-  - 每周精选
+  - 机器学习
+  - 新闻动态
   - 经典理论
-  - 统计之都
 slug: talking-about-p-value-again
 forum_id: 419061
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：尤晓斌 [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [数学文化](http://weibo.com/mathematicalculture?from=feed&loc=nickname)

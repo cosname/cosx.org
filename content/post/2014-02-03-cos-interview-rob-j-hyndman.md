@@ -5,8 +5,7 @@ author:
   - Rob J. Hyndman
   - Earo Wang
 categories:
-  - 新闻通知
-  - 统计之都
+  - 新闻动态
   - 职业事业
 tags:
   - COS访谈
@@ -14,7 +13,7 @@ tags:
   - 统计分析
 slug: cos-interview-rob-j-hyndman
 forum_id: 419003
-meta_extra: "译者：黄俊文"
+meta_extra: 译者：黄俊文
 ---
 
 【COS编辑部按】：受访者：[Rob J. Hyndman](http://robjhyndman.com/)，采访者：[Earo Wang](http://earo.me/)。原文[在这](http://earo.me/2014/01/interview-with-rob/)。

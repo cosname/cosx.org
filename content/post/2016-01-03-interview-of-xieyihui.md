@@ -7,7 +7,6 @@ author:
 categories:
   - COS访谈
   - 推荐文章
-  - 统计之都
 tags:
   - RStudio
   - R开发者

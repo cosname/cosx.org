@@ -5,7 +5,7 @@ author: 刘飞燕
 categories:
   - 回归分析
   - 推荐文章
-  - 数据分析
+  - 统计应用
   - 经典理论
 tags:
   - David Freedman

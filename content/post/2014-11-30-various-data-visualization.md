@@ -6,13 +6,12 @@ author:
   - 邱怡轩
   - 王小宁
 categories:
-  - 可视化
-  - 数据挖掘与机器学习
-  - 每周精选
-  - 统计之都
+  - 统计图形
+  - 机器学习
+  - 新闻动态
 slug: various-data-visualization
 forum_id: 419045
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [邱怡轩](http://yixuan.cos.name/cn/) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

@@ -7,7 +7,6 @@ author:
 categories:
   - COS访谈
   - 推荐文章
-  - 统计之都
 slug: interview-jianxin-yin
 forum_id: 419173
 meta_extra: 校对：王佳

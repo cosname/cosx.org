@@ -7,15 +7,13 @@ author:
   - 蔡占锐
   - 王小宁
 categories:
-  - 可视化
-  - 推荐文章
-  - 每周精选
-  - 统计之都
   - 统计图形
+  - 推荐文章
+  - 新闻动态
   - 职业事业
 slug: the-material-of-data-science-for-the-vacation
 forum_id: 419057
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)

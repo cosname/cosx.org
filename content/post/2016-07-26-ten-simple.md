@@ -9,7 +9,7 @@ author:
   - 郁彬
   - Nancy Reid
 categories:
-  - 数据分析
+  - 统计应用
 tags:
   - 假设
   - 原则
@@ -18,7 +18,7 @@ tags:
   - 科学
 slug: ten-simple
 forum_id: 419154
-meta_extra: "翻译：吕翔；审稿：施涛、谢益辉；编辑：闫晗、吕翔"
+meta_extra: 翻译：吕翔；审稿：施涛、谢益辉；编辑：闫晗、吕翔
 ---
 
 

@@ -6,13 +6,12 @@ author:
   - 蔡占锐
   - 王小宁
 categories:
-  - 数据挖掘与机器学习
-  - 每周精选
-  - 统计之都
+  - 机器学习
+  - 新闻动态
   - 统计计算
 slug: machine-learning
 forum_id: 419041
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿： [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)  [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

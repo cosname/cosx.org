@@ -5,7 +5,7 @@ author: John Myles White
 categories:
   - 回归分析
   - 推荐文章
-  - 数据分析
+  - 统计应用
   - 模型专题
   - 统计之都
 tags:
@@ -18,7 +18,7 @@ tags:
   - 评判标准
 slug: why-im-not-a-fan-of-r-squared
 forum_id: 419161
-meta_extra: "译者：邱怡轩；审稿：冯凌秉；编辑：彭晨昱"
+meta_extra: 译者：邱怡轩；审稿：冯凌秉；编辑：彭晨昱
 ---
 
 > 本文翻译自 [John Myles White](http://www.johnmyleswhite.com/) 的博客 [Why I’m Not a Fan of R-Squared](http://www.johnmyleswhite.com/notebook/2016/07/23/why-im-not-a-fan-of-r-squared/)。翻译工作已经获得作者授权同意。

@@ -6,12 +6,12 @@ author:
   - 蔡占锐
 categories:
   - 推荐文章
-  - 数据挖掘与机器学习
-  - 每周精选
+  - 机器学习
+  - 新闻动态
   - 职业事业
 slug: talking-about-data-scientist
 forum_id: 419054
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [蔡占锐](http://weibo.com/3264504301/profile?rightmod=1&wvr=6&mod=personinfo)

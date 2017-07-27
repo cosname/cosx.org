@@ -5,8 +5,7 @@ author:
   - Hadley Wickham
   - 邱怡轩
 categories:
-  - 新闻通知
-  - 统计之都
+  - 新闻动态
   - 职业事业
 tags:
   - COS访谈

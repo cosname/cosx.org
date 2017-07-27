@@ -6,10 +6,10 @@ author:
 categories:
   - 推荐文章
   - 概率论
-  - 每周精选
+  - 新闻动态
 slug: the-story-about-measure-theory
 forum_id: 419053
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：尤晓斌

@@ -5,8 +5,7 @@ author:
   - 肖展航
   - 统计之都
 categories:
-  - 新闻通知
-  - 统计之都
+  - 新闻动态
   - 职业事业
 tags:
   - COS沙龙
