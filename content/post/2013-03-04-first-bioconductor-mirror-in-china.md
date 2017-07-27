@@ -3,7 +3,6 @@ title: COS每周精选:中国首个Bioconductor镜像建成
 date: '2013-03-04T07:21:21+00:00'
 author: 潘岚锋
 categories:
-  - 统计之都
   - 新闻动态
 tags:
   - 每周精选

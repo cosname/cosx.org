@@ -3,7 +3,6 @@ title: COS每周精选：Hilary，你的名字弱爆了！
 date: '2013-02-03T05:27:29+00:00'
 author: 潘岚锋
 categories:
-  - 统计之都
   - 新闻动态
 tags:
   - 每周精选

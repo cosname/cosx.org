@@ -3,7 +3,6 @@ title: 统计之都《本周导读》第十一辑
 date: '2009-03-29T22:53:55+00:00'
 author: 郑冰
 categories:
-  - 统计之都
   - 新闻动态
 tags:
   - Hilbert

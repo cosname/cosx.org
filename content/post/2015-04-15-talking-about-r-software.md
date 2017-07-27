@@ -6,14 +6,13 @@ author:
   - Ron
   - 王威廉
 categories:
-  - 每周精选
-  - 统计之都
+  - 新闻动态
   - 统计软件
   - 软件应用
   - 金融统计
 slug: talking-about-r-software
 forum_id: 419076
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿： [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)　Ron　[王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)

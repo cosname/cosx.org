@@ -3,11 +3,10 @@ title: R 中大型数据集的回归
 date: '2013-08-26T12:21:35+00:00'
 author: 邱怡轩
 categories:
-  - 优化与模拟
+  - 统计计算
   - 回归分析
   - 模型专题
   - 统计之都
-  - 统计计算
   - 统计软件
   - 软件应用
 tags:
@@ -18,7 +17,7 @@ tags:
   - 矩阵运算
 slug: regression-of-large-dataset-in-r
 forum_id: 418960
-meta_extra: "译者：黄俊文"
+meta_extra: 译者：黄俊文
 ---
 
 > 原文地址：<http://statr.me/2011/10/large-regression/>

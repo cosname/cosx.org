@@ -6,12 +6,11 @@ author:
   - 王威廉
   - 王小宁
 categories:
-  - 可视化
-  - 新闻通知
-  - 每周精选
+  - 统计图形
+  - 新闻动态
 slug: the-story-about-statistics
 forum_id: 419060
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[Mindey](http://mindey.com) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

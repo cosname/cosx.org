@@ -6,15 +6,14 @@ author:
   - 冷静
   - 王小宁
 categories:
-  - 每周精选
-  - 统计之都
+  - 新闻动态
 tags:
   - 可视化
   - 深度学习
   - 统计学习
 slug: statistics-courier
 forum_id: 419036
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

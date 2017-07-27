@@ -5,7 +5,7 @@ author:
   - 施涛
   - 陈甜
 categories:
-  - 出国留学
+  - 职业事业
 tags:
   - 出国
   - 博士

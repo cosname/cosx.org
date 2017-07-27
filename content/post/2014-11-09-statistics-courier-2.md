@@ -6,8 +6,7 @@ author:
   - 冷静
   - 王小宁
 categories:
-  - 每周精选
-  - 统计之都
+  - 新闻动态
 tags:
   - 大数据应用
   - 推荐系统
@@ -15,7 +14,7 @@ tags:
   - 统计分布
 slug: statistics-courier-2
 forum_id: 419038
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[施涛](http://blog.cos.name/taoshi/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)

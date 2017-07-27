@@ -6,8 +6,8 @@ author:
   - 王威廉
   - 王小宁
 categories:
-  - 数据挖掘与机器学习
-  - 每周精选
+  - 机器学习
+  - 新闻动态
 tags:
   - ICML
   - weightr
@@ -15,7 +15,7 @@ tags:
   - 深度学习
 slug: weekly-digest-machine-learning
 forum_id: 419126
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：冯凌秉 [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) 王小宁

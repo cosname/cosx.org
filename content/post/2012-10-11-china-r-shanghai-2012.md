@@ -3,7 +3,7 @@ title: 第五届中国R语言会议（上海会场）报名开始
 date: '2012-10-11T14:44:11+00:00'
 author: 陈丽云
 categories:
-  - 新闻通知
+  - 新闻动态
 slug: china-r-shanghai-2012
 forum_id: 418885
 ---

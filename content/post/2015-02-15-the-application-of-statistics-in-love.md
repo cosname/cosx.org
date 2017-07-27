@@ -5,13 +5,12 @@ author:
   - 施涛
   - 朱雪宁
   - 王小宁
-categories: 
+categories:
   - 推荐文章
-  - 每周精选
-  - 统计之都
+  - 新闻动态
 slug: the-application-of-statistics-in-love
 forum_id: 419062
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[施涛](http://blog.cos.name/taoshi/) [朱雪宁](http://www.xueningzhu.com/) [王小宁](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)

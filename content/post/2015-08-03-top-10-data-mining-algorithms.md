@@ -8,15 +8,14 @@ author:
   - 王小宁
 categories:
   - 模型专题
-  - 每周精选
-  - 统计之都
+  - 新闻动态
 tags:
   - R语言
   - 数据挖掘
   - 数据科学
 slug: top-10-data-mining-algorithms
 forum_id: 419091
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[谢益辉](http://yihui.name) [施涛](http://blog.cos.name/taoshi/)^[编者注：该链接已过期]

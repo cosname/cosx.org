@@ -5,14 +5,13 @@ author:
   - 朱雪宁
   - 王威廉
 categories:
-  - 每周精选
-  - 统计之都
+  - 新闻动态
 tags:
   - Feather包
   - 每周精选
 slug: famous-sayings
 forum_id: 419125
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：朱雪宁、[王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)、王小宁。

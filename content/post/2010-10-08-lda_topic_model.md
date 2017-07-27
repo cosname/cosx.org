@@ -1,9 +1,9 @@
 ---
-title: "LDA主题模型简介"
+title: LDA主题模型简介
 date: '2010-10-08T17:55:53+00:00'
 author: 范建宁
 categories:
-  - 数据挖掘与机器学习
+  - 机器学习
   - 贝叶斯方法
 tags:
   - LDA

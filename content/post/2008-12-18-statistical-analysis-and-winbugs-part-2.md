@@ -3,7 +3,7 @@ title: WinBUGS在统计分析中的应用（第二部分）
 date: '2008-12-18T15:15:19+00:00'
 author: 齐韬
 categories:
-  - 数据分析
+  - 统计应用
   - 统计软件
   - 贝叶斯方法
 tags:

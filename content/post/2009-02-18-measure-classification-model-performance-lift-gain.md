@@ -3,7 +3,7 @@ title: '分类模型的性能评估——以SAS Logistic回归为例(3): Lift和
 date: '2009-02-18T17:38:59+00:00'
 author: 胡江堂
 categories:
-  - 数据挖掘与机器学习
+  - 机器学习
   - 统计图形
 tags:
   - Confusion Matrix

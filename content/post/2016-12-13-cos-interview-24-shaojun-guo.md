@@ -7,7 +7,6 @@ author:
   - 于嘉傲
 categories:
   - COS访谈
-  - 统计之都
   - 职业事业
 slug: cos-interview-24-shaojun-guo
 forum_id: 419177

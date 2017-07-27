@@ -6,13 +6,13 @@ author:
   - 王威廉
   - 王小宁
 categories:
-  - 可视化
-  - 数据挖掘与机器学习
-  - 每周精选
+  - 统计图形
+  - 机器学习
+  - 新闻动态
   - 职业事业
 slug: the-visualization-of-weibo
 forum_id: 419051
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar) [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinf)

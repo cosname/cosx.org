@@ -3,7 +3,7 @@ title: '分类模型的性能评估——以SAS Logistic回归为例(2): ROC和A
 date: '2008-12-31T13:09:43+00:00'
 author: 胡江堂
 categories:
-  - 数据挖掘与机器学习
+  - 机器学习
   - 生物与医学统计
   - 统计图形
 tags:

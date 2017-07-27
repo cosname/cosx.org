@@ -5,14 +5,13 @@ author:
   - 谢益辉
   - 王小宁
 categories:
-  - 可视化
+  - 统计图形
   - 推荐文章
-  - 每周精选
-  - 统计之都
+  - 新闻动态
   - 统计软件
 slug: using-r-to-search-for-your-partner
 forum_id: 419067
-meta_extra: "编辑：王小宁"
+meta_extra: 编辑：王小宁
 ---
 
 

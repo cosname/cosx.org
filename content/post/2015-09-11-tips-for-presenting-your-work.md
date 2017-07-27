@@ -3,11 +3,10 @@ title: 如何更好的展示你的研究成果
 date: '2015-09-11T18:02:07+00:00'
 author: Dianne Cook
 categories:
-  - 可视化
+  - 统计图形
   - 推荐文章
   - 经典理论
   - 统计之都
-  - 统计图形
   - 统计软件
   - 职业事业
 tags:
@@ -18,7 +17,7 @@ tags:
   - 研究成果
 slug: tips-for-presenting-your-work
 forum_id: 419095
-meta_extra: "译者：陈妍；审校：高涛、肖楠、谢益辉；编辑：王小宁"
+meta_extra: 译者：陈妍；审校：高涛、肖楠、谢益辉；编辑：王小宁
 ---
 
 >【COS编辑部按】本文作者是美国统计协会（ASA）的会员、莫纳什大学教授

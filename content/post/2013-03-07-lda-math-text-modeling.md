@@ -3,8 +3,8 @@ title: LDA-math-文本建模
 date: '2013-03-07T18:23:27+00:00'
 author: 靳志辉
 categories:
-  - 数据分析
-  - 数据挖掘与机器学习
+  - 统计应用
+  - 机器学习
 tags:
   - PLSA
   - Unigram Model

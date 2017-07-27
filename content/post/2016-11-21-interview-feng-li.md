@@ -8,7 +8,6 @@ author:
 categories:
   - COS访谈
   - 推荐文章
-  - 统计之都
 tags:
   - COS访谈
   - 大数据

@@ -3,9 +3,8 @@ title: Persi Diaconis (1)
 date: '2012-08-22T07:26:18+00:00'
 author: 韩钧
 categories:
-  - 优化与模拟
-  - 统计之都
   - 统计计算
+  - 统计之都
   - 贝叶斯方法
 slug: persi-diaconis-1
 forum_id: 418881

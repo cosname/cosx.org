@@ -3,7 +3,6 @@ title: COS每周精选:如何偷走我这本书
 date: '2013-12-02T22:58:19+00:00'
 author: 霍志骥
 categories:
-  - 新闻通知
   - 新闻动态
 tags:
   - 每周精选

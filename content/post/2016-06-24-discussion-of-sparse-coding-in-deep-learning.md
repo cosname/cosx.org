@@ -3,7 +3,7 @@ title: 浅谈深度学习中潜藏的稀疏表达
 date: '2016-06-24T21:36:05+00:00'
 author: 汪张扬
 categories:
-  - 数据挖掘与机器学习
+  - 机器学习
 tags:
   - Deep Learning
   - dnn

@@ -3,7 +3,6 @@ title: 嘿，朋友，抢红包了吗？
 date: '2015-02-24T08:28:29+00:00'
 author: 邱怡轩
 categories:
-  - 优化与模拟
   - 统计计算
 tags:
   - Dirichlet分布
