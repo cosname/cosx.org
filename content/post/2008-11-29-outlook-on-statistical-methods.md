@@ -3,10 +3,7 @@ title: 我的一些统计方法观（写给在统计学院学习的学弟学妹�
 date: '2008-11-29T23:43:37+00:00'
 author: 谢益辉
 categories:
-  - 回归分析
   - 推荐文章
-  - 统计推断
-  - 非参数统计
 tags:
   - Bootstrap
   - Jackknife

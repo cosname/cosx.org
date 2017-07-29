@@ -3,7 +3,6 @@ title: R与SAS之争：一个导读
 date: '2009-01-13T11:41:11+00:00'
 author: 胡江堂
 categories:
-  - 推荐文章
   - 统计软件
 tags:
   - Ashlee Vance

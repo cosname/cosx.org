@@ -3,8 +3,7 @@ title: 决策与风险
 date: '2008-12-03T17:09:32+00:00'
 author: 胡江堂
 categories:
-  - 经典理论
-  - 统计推断
+  - 统计模型
 tags:
   - Error Type I
   - Error Type II

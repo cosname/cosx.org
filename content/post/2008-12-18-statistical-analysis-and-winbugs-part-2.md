@@ -4,8 +4,6 @@ date: '2008-12-18T15:15:19+00:00'
 author: 齐韬
 categories:
   - 统计应用
-  - 统计软件
-  - 贝叶斯方法
 tags:
   - SAS
   - WinBUGS

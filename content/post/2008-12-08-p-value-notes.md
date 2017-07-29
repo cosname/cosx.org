@@ -3,8 +3,7 @@ title: P-value：一个注脚
 date: '2008-12-08T16:58:17+00:00'
 author: 胡江堂
 categories:
-  - 经典理论
-  - 统计推断
+  - 统计模型
 tags:
   - George H. Weinberg
   - John Abraham Schumaker

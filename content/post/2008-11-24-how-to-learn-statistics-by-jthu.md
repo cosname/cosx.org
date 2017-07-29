@@ -4,9 +4,6 @@ date: '2008-11-24T21:48:21+00:00'
 author: 胡江堂
 categories:
   - 推荐文章
-  - 经典理论
-  - 统计软件
-  - 计量经济学
 tags:
   - COS访谈
   - EViews

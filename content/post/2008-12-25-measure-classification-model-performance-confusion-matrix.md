@@ -4,8 +4,6 @@ date: '2008-12-25T14:42:45+00:00'
 author: 胡江堂
 categories:
   - 机器学习
-  - 生物与医学统计
-  - 统计软件
 tags:
   - Confusion Matrix
   - Logistic回归
