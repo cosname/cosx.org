@@ -3,7 +3,7 @@ title: 'Rcmdr: 山寨版的SPSS'
 date: '2008-12-03T16:50:55+00:00'
 author: 刘重杰
 categories:
-  - 统计软件
+  - R语言
 tags:
   - Rcmdr
   - R语言
