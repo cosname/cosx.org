@@ -3,8 +3,6 @@ title: 用局部加权回归散点平滑法观察二维变量之间的关系
 date: '2008-11-26T13:57:27+00:00'
 author: 谢益辉
 categories:
-  - 回归分析
-  - 推荐文章
   - 统计图形
 tags:
   - Bootstrap
