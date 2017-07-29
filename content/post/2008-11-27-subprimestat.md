@@ -3,7 +3,7 @@ title: 次贷冲击下的统计学反思
 date: '2008-11-27T10:39:10+00:00'
 author: 胡江堂
 categories:
-  - 经典理论
+  - 新闻动态
 tags:
   - Black Swan Theory
   - David M.Rowe
