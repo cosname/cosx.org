@@ -486,3 +486,5 @@ Ken做的很好。在1989年末开始准备1990年的普查时，Dave给我打�
 **Olshen**：或许你自己的例子会给大家带来正面积极的影响。谢谢你，Leo！
 
 **Breiman**：那将是我的荣幸，Richard。
+
+![Leo Breiman](https://raw.githubusercontent.com/yangggshuyi/picture/master/Breiman.jpeg)
