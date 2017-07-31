@@ -5,7 +5,7 @@ author: 黄湘云
 categories:
   - 统计计算
   - R语言
-tags: [随机数,统计检验，模拟]
+tags: [随机数,统计检验,模拟]
 slug: random-number-generation
 meta_extra: 审稿：郎大为、边蓓蕾；编辑：吴佳萍
 forum_id: 419212
