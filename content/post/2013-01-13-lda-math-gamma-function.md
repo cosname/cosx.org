@@ -3,8 +3,7 @@ title: LDA-math-神奇的Gamma函数
 date: '2013-01-13T19:33:31+00:00'
 author: 靳志辉
 categories:
-  - 数学方法
-  - 概率论
+  - 统计模型
 tags:
   - Gamma函数
   - Gamma分布
@@ -64,7 +63,7 @@ forum_id: 418897
 \Bigl[\Bigl(\frac{2}{1}\Bigr)^n\frac{1}{n+1}\Bigr]
 \Bigl[\Bigl(\frac{3}{2}\Bigr)^n\frac{2}{n+2}\Bigr]
 \Bigl[\Bigl(\frac{4}{3}\Bigr)^n\frac{3}{n+3}\Bigr] \cdots = n!
-\quad  (*)
+\quad (*)
 \end{equation}`
 
 用极限形式，这个式子整理后可以写为
@@ -72,7 +71,7 @@ forum_id: 418897
 `\begin{equation}
 \label{euler-series2}
 \lim_{m \rightarrow \infty} \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} = n!
-\quad  (**)
+\quad (**)
 \end{equation}`
 
 左边可以整理为
@@ -166,7 +165,7 @@ Gamma函数找到了，我们来看看第二个问题，为何Gamma函数被定�
 
 ## 1.2 Gamma函数欣赏
 
-> Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also.
+> Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also.
 
 > -- Philip J.Davis
 
@@ -210,11 +209,11 @@ Gamma函数和欧拉常数`\(\gamma\)`有密切关系，可以发现
 
 从Gamma函数的图像我们可以看到它是一个凸函数，不仅如此，`\(\log\Gamma(x)\)`也是一个凸函数，数学上可以证明如下定理:
 
-**[Bohr-Mullerup定理]**  如果`\(f:(0,\infty)\rightarrow(0,\infty)\)`，且满足
+**[Bohr-Mullerup定理]** 如果`\(f:(0,\infty)\rightarrow(0,\infty)\)`，且满足
 
-  1.  `\(f(1) = 1\)`
-  2.  `\(f(x+1) = xf(x)\)`
-  3.  `\(\log f(x)\)`是凸函数
+  1. `\(f(1) = 1\)`
+  2. `\(f(x+1) = xf(x)\)`
+  3. `\(\log f(x)\)`是凸函数
 
 那么`\(f(x) = \Gamma(x)\)`，也就是`\(\Gamma(x)\)`是唯一满足以上条件的函数。
 

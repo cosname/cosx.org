@@ -3,7 +3,6 @@ title: 不同版本的散点图矩阵
 date: '2009-03-20T17:10:14+00:00'
 author: 魏太云
 categories:
-  - 多元统计
   - 统计图形
 tags:
   - iris

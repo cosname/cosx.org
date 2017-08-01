@@ -3,7 +3,7 @@ title: 分组最小角回归算法（group LARS）
 date: '2011-04-27T18:31:10+00:00'
 author: 郝智恒
 categories:
-  - 回归分析
+  - 统计模型
   - 统计计算
 tags:
   - group variable

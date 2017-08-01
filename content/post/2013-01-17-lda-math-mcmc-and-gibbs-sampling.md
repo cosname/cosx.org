@@ -3,8 +3,7 @@ title: LDA-math-MCMC 和 Gibbs Sampling
 date: '2013-01-17T23:13:02+00:00'
 author: 靳志辉
 categories:
-  - 数学方法
-  - 概率论
+  - 统计计算
 tags:
   - Gibbs抽样
   - MCMC
@@ -99,7 +98,7 @@ $$`
 
 我们发现，当 `$n$` 足够大的时候，这个`$P^n$`矩阵的每一行都是稳定地收敛到`$\pi=[0.286, 0.489, 0.225]$` 这个概率分布。自然的，这个收敛现象并非是我们这个马氏链独有的，而是绝大多数马氏链的共同行为，关于马氏链的收敛我们有如下漂亮的定理：
 
-**马氏链定理：** 如果一个非周期马氏链具有转移概率矩阵`$P$`,且它的任何两个状态是连通的，那么 `$\displaystyle \lim_{n\rightarrow\infty}P_{ij}^n$` 存在且与`$i$`无关，记 `$\displaystyle \lim_{n\rightarrow\infty}P_{ij}^n = \pi(j)$`， 我们有
+**马氏链定理：**如果一个非周期马氏链具有转移概率矩阵`$P$`,且它的任何两个状态是连通的，那么 `$\displaystyle \lim_{n\rightarrow\infty}P_{ij}^n$` 存在且与`$i$`无关，记 `$\displaystyle \lim_{n\rightarrow\infty}P_{ij}^n = \pi(j)$`， 我们有
 
   1. `$$ \displaystyle \lim_{n \rightarrow \infty} P^n =\begin{bmatrix}
     \pi(1) & \pi(2) & \cdots & \pi(j) & \cdots \\
@@ -109,8 +108,8 @@ $$`
     \cdots & \cdots & \cdots & \cdots & \cdots \\ 
     \end{bmatrix} $$`
 
-  1.  `$ \displaystyle \pi(j) = \sum_{i=0}^{\infty}\pi(i)P_{ij} $`
-  1.  `$\pi$` 是方程 `$\pi P = \pi$` 的唯一非负解
+  1. `$ \displaystyle \pi(j) = \sum_{i=0}^{\infty}\pi(i)P_{ij} $`
+  1. `$\pi$` 是方程 `$\pi P = \pi$` 的唯一非负解
 
 其中,
   
@@ -118,7 +117,7 @@ $$`
   
 `$\pi$`称为马氏链的平稳分布。
 
-这个马氏链的收敛定理非常重要，**所有的 MCMC(Markov Chain Monte Carlo) 方法都是以这个定理作为理论基础的。** 定理的证明相对复杂，一般的随机过程课本中也不给证明，所以我们就不用纠结它的证明了，直接用这个定理的结论就好了。我们对这个定理的内容做一些解释说明：
+这个马氏链的收敛定理非常重要，**所有的 MCMC(Markov Chain Monte Carlo) 方法都是以这个定理作为理论基础的。**定理的证明相对复杂，一般的随机过程课本中也不给证明，所以我们就不用纠结它的证明了，直接用这个定理的结论就好了。我们对这个定理的内容做一些解释说明：
 
   1. 该定理中马氏链的状态不要求有限，可以是有无穷多个的；
   1. 定理中的“非周期”这个概念我们不打算解释了，因为我们遇到的绝大多数马氏链都是非周期的；
@@ -161,7 +160,7 @@ X_{n+2}& \sim \pi(x) \\
 
 我们接下来介绍的MCMC算法是Metropolis算法的一个改进变种，即常用的Metropolis-Hastings算法。由上一节的例子和定理我们看到了，马氏链的收敛性质主要由转移矩阵`$P$`决定,所以基于马氏链做采样的关键问题是如何构造转移矩阵`$P$`,使得平稳分布恰好是我们要的分布`$p(x)$`。如何能做到这一点呢？我们主要使用如下的定理。
 
-**定理：[细致平稳条件] **如果非周期马氏链的转移矩阵`$P$`和分布`$\pi(x)$`满足
+**定理：[细致平稳条件]**如果非周期马氏链的转移矩阵`$P$`和分布`$\pi(x)$`满足
   
 `\begin{equation}
 \pi(i)P_{ij} = \pi(j)P_{ji} \quad\quad \text{for all} \quad i,j
@@ -195,7 +194,7 @@ p(i) q(i,j)\alpha(i,j) = p(j) q(j,i)\alpha(j,i)  \quad (*)
 `\begin{equation}
 \label{detailed-balance}
 p(i) \underbrace{q(i,j)\alpha(i,j)}_{Q'(i,j)}
-= p(j) \underbrace{q(j,i)\alpha(j,i)}_{Q'(j,i)}  \quad (**)
+= p(j) \underbrace{q(j,i)\alpha(j,i)}_{Q'(j,i)} \quad (**)
 \end{equation}`
   
 于是我们把原来具有转移矩阵$Q$的一个很普通的马氏链，改造为了具有转移矩阵`$Q’$`的马氏链，而 `$Q’$`恰好满足细致平稳条件，由此马氏链`$Q’$`的平稳分布就是`$p(x)$`！

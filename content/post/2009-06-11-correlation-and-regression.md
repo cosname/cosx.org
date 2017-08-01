@@ -3,10 +3,7 @@ title: 漫谈相关与回归
 date: '2009-06-11T20:56:28+00:00'
 author: 刘飞燕
 categories:
-  - 回归分析
-  - 推荐文章
-  - 统计应用
-  - 经典理论
+  - 统计模型
 tags:
   - David Freedman
   - 回归分析
