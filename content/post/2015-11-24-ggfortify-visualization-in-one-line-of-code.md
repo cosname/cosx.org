@@ -235,7 +235,7 @@ autoplot(as.timeSeries(AirPassengers), ts.colour = ('dodgerblue3'))
 
 ```r
 autoplot(AirPassengers, ts.geom = 'bar', fill = 'blue')
-```r
+```
 
 ![ggfortify-unnamed-chunk-19-1](https://uploads.cosx.org/2015/11/ggfortify-unnamed-chunk-19-1.png)
 
