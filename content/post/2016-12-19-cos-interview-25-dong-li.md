@@ -6,7 +6,6 @@ author:
   - 张心雨
 categories:
   - COS访谈
-  - 时间序列
 slug: cos-interview-25-dong-li
 forum_id: 419179
 ---

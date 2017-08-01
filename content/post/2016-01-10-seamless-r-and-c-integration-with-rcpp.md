@@ -3,7 +3,6 @@ title: 《Rcpp：R与C++的无缝整合》
 date: '2016-01-10T12:29:09+00:00'
 author: 统计之都
 categories:
-  - 图书出版
   - 新闻动态
 tags:
   - Rcpp
@@ -17,7 +16,7 @@ forum_id: 419117
   
 Seamless R and C++ Integration with Rcpp
 
-[法] 德克·埃德比特尔 著    寇强 张晔 译
+[法] 德克·埃德比特尔 著 寇强 张晔 译
 
 
 # 内容简介

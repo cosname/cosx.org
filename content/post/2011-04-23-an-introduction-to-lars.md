@@ -3,7 +3,7 @@ title: LARS算法简介
 date: '2011-04-23T14:53:19+00:00'
 author: 郝智恒
 categories:
-  - 回归分析
+  - 统计模型
   - 统计计算
 tags:
   - Efron

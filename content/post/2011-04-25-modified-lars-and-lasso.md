@@ -3,7 +3,7 @@ title: 修正的LARS算法和lasso
 date: '2011-04-25T17:29:36+00:00'
 author: 郝智恒
 categories:
-  - 回归分析
+  - 统计模型
   - 统计计算
 tags:
   - lars

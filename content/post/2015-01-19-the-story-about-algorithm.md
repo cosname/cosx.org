@@ -7,10 +7,7 @@ author:
   - 冷静
   - 王小宁
 categories:
-  - 数学方法
   - 机器学习
-  - 新闻动态
-  - 统计计算
 slug: the-story-about-algorithm
 forum_id: 419058
 meta_extra: 编辑：王小宁

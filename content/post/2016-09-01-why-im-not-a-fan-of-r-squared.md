@@ -3,11 +3,8 @@ title: 为什么我不是R方的粉丝
 date: '2016-09-01T09:29:21+00:00'
 author: John Myles White
 categories:
-  - 回归分析
   - 推荐文章
-  - 统计应用
-  - 模型专题
-  - 统计之都
+  - 统计模型
 tags:
   - MSE
   - R方
