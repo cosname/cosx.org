@@ -1,6 +1,6 @@
 ---
-title: Distributed Learning in Julia
-author: Chiyuan Zhang
+title: Julia 中的分布式计算
+author: 张弛原
 date: '2017-07-19'
 slug: distributed-learning-in-julia
 categories:
@@ -8,25 +8,24 @@ categories:
 tags:
   - Julia
   - 分布式计算
-meta_extra: 编辑：王健桥 审核：
-description: 介绍 Julia 的分布式计算机制，并提供一个 asynchronized stochastic gradient descent 的例子以及完整示例代码。
+meta_extra: 编辑：王健桥 审稿：谢益辉，邱怡轩
 ---
 
 ![julia_prog_language](https://user-images.githubusercontent.com/19310150/28401762-c5576c4a-6d4e-11e7-9427-4186e8653f00.png)
 
 # 引子
 
-[Julia](https://julialang.org/) 是一门相对比较新的着眼于科学计算的语言，语法上看起来有点类似于 Matlab 的脚本语言，但是实际上从 Ruby、Python、Lisp 之类的语言里吸收了许多有趣的特性。在这篇文章中，我想介绍一下Julia的分布式计算机制，它方便的并行和分布式计算的能力，结合优质的数值计算能力，其实让它非常方便用于做分布式数据处理——比如 distributed optimization、learning 之类的任务。虽然 Julia 这些年一直在稳步发展并且每个版本都会 break 一些东西，让人需要不断地维护和修改代码有点心累，同时 community 里的第三方库也还不够强大，不过最近在做一点点 distributed optimization 相关的东西中体会到它在这方面的好处，在这里简单分享一下。一方面因为 Julia 的文档虽然比较全，但是似乎还是比较难找到一个完整的例子。本文相关的完整代码会放在[这里](https://github.com/pluskid/DistLearn.jl)。
+[Julia](https://julialang.org/) 是一门相对比较新的着眼于科学计算的语言，语法上看起来有点类似于 Matlab 的脚本语言，但是实际上从 Ruby、Python、Lisp 之类的语言里吸收了许多有趣的特性。在这篇文章中，我想介绍一下 Julia 的分布式计算机制，它方便的并行和分布式计算的能力，结合优质的数值计算能力，其实让它非常方便用于做分布式数据处理——比如 distributed optimization、learning 之类的任务。虽然 Julia 这些年一直在稳步发展并且每个版本都会不兼容旧版本中的一些东西，让人需要不断地维护和修改代码有点心累，同时社区 里的第三方库也还不够强大，不过最近在做一点点 distributed optimization 相关的东西中体会到它在这方面的好处，在这里简单分享一下。一方面因为 Julia 的文档虽然比较全，但是似乎还是比较难找到一个完整的例子。本文相关的完整代码会放在[这里](https://github.com/pluskid/DistLearn.jl)。
 
 <!--more-->
 
 # 入门
 
-在 Julia 里分布式编程主要是通过 Remote Procedure Call (RPC) 的方式来完成。但是 RPC 并不需要用户显式地启动一个 server 来监听调用，然后做 message passing 之类的传输结果，而是有更加 high level 的 API 可以直接实现“在某个节点上执行某段代码”这类的语义。这里提到的 API 如果在将来改变或者改名之类的，主要可以参考 Julia 文档的 [Parallel Computing](https://docs.julialang.org/en/stable/manual/parallel-computing/) 一章查看最新的接口。
+在 Julia 里分布式编程主要是通过 Remote Procedure Call (RPC) 的方式来完成。但是 RPC 并不需要用户显式地启动一个 server 来监听调用，然后做 message passing 之类的传输结果，而是有更加上层的 API 可以直接实现“在某个节点上执行某段代码”这类的语义。这里提到的 API 如果在将来改变或者改名之类的，主要可以参考 Julia 文档的 [Parallel Computing](https://docs.julialang.org/en/stable/manual/parallel-computing/) 一章查看最新的接口。
 
 要进行分布式编程，首先要做的是启动计算节点。在 Julia 里非常简单地可以通过 `julia -p 2` 来启动两个 worker 进程，利用 `nprocs()` 函数可以看到当前有 3 个进程，`myid()` 会返回每个进程的 id （和系统里的 pid 并不一样，而是从 1 开始的数字），其中主进程的 id 总是 1，然后其余的是 worker。在这个例子中，`nworkers()` 会返回 2，表示一个主进程两个 worker 进程。默认情况下（不加 `-p` 参数启动 Julia 的时候）只有一个进程，`nprocs()` 和 `nworkers()` 都返回 1，这时主进程自己同时也是 worker。除了在启动的时候用 `-p` 参数之外，还可以在启动之后通过调用 `addprocs(...)` 函数来添加 worker 进程。
 
-当然 `-p` 只是启动单机多进程，要实现真正的分布式，可以通过给定一个 hostname 列表的方式，Julia 会尝试通过 SSH 启动远程节点进程，或者如果你的集群已经有一个集群或者调度管理器的话，可以通过实现 Julia 里的 `ClusterManager` 接口来进行对接，在专用集群里启动任务。方便的是单机多进程和真正的分布式对于在 Julia 的 high level API 来说大部分情况下并没有区别。除非实现具体的计算中需要专门考虑多机通讯比本地更慢这些方面的问题，否则可以直接在本机写代码和小范围调试，再 deploy 到集群上去。
+当然 `-p` 只是启动单机多进程，要实现真正的分布式，可以通过给定一个 hostname 列表的方式，Julia 会尝试通过 SSH 启动远程节点进程，或者如果你的集群已经有一个集群或者调度管理器的话，可以通过实现 Julia 里的 `ClusterManager` 接口来进行对接，在专用集群里启动任务。方便的是单机多进程和真正的分布式对于在 Julia 的上层 API 来说大部分情况下并没有区别。除非实现具体的计算中需要专门考虑多机通讯比本地更慢这些方面的问题，否则可以直接在本机写代码和小范围调试，再部署到集群上去。
 
 启动 worker 进程之后，就可以进行 RPC 来调度任务了。Julia 里 RPC 的接口非常简单，最基本的一个函数是 `remotecall(func, wid, args...)`，其中 `func` 是要调用的函数，`wid` 是对应的 worker 的 ID，而 `args...` 则是需要传给函数的参数，参数会被自动传输到对应的 worker 那里。`remotecall` 函数是立即范围的，它返回的结果是一个 `Future`，这相当于对于 RPC 执行结果的一个 handle，对于这个 handle 调用 `fetch` 会拿到对应的结果，如果对应的 RPC 计算还没有完成，则 block 等待完成，同时 `fetch` 还会自动把结果传输到当前调用 `fetch` 的这个节点上来，当然如果结果已经在同一个节点上了，`fetch` 则不需要额外的数据传输开销。下面是一个例子：
 
@@ -34,7 +33,8 @@ description: 介绍 Julia 的分布式计算机制，并提供一个 asynchroniz
 data_ref = remotecall(rand, 2, (20, 30))
 ret = remotecall_fetch(x -> norm(fetch(x)), 2, data)
 ```
-在 worker 2 上调用了 `rand` 生成一个随机矩阵，注意这里参数传输的代价只是 `(20, 30)` 这个 tuple，并且 `data_ref` 只是作为一个 handle 返回到当前进程，这个 handle 直接被传回 worker 2 上计算其 `norm`，而在 worker 2 上调用 `fetch` 的时候会发现生成出来的矩阵已经在该节点上了，所以最终结果并没有太大的数据传输代价。这里的 `remotecall_fetch` 有点类似于嵌套调用 `fetch(remotecall(...))`，但是由于它自己本身是一个 primitive，所以更加高效，也不会出现隐藏的 race condition 问题。除了这些 primitive 之外，还有一些更 high level 的 API 和宏，比如 `@spawn` 和 `@spawnat` 可以很方便地在 worker 上执行任意代码，例如：
+
+在 worker 2 上调用了 `rand` 生成一个随机矩阵，注意这里参数传输的代价只是 `(20, 30)` 这个 tuple，并且 `data_ref` 只是作为一个 handle 返回到当前进程，这个 handle 直接被传回 worker 2 上计算其 `norm`，而在 worker 2 上调用 `fetch` 的时候会发现生成出来的矩阵已经在该节点上了，所以最终结果并没有太大的数据传输代价。这里的 `remotecall_fetch` 有点类似于嵌套调用 `fetch(remotecall(...))`，但是由于它自己本身是一个 基础函数（primitive），所以更加高效，也不会出现隐藏的竞态条件（race condition）问题。除了这些基础函数之外，还有一些更上层的 API 和宏，比如 `@spawn` 和 `@spawnat` 可以很方便地在 worker 上执行任意代码，例如：
 
 ```julia
 julia> ref = @spawnat 2 begin
@@ -46,11 +46,12 @@ Future(2, 1, 12, Nullable{Any}())
 julia> fetch(ref)
 1.2147872352524431
 ```
+
 # 进阶
 
-Julia 还提供一些更加 high level 的函数，诸如 `pmap` 之类的可以很自动地把计算分配到当前可用的 worker 上执行，并收集结果之类的。但是如果我们需要实现非常具体和细致的算法 scheduling——哪个 worker 执行那一段代码等等，则需要直接使用比较 low level 一点的 API。
+Julia 还提供一些更加高级的函数，诸如 `pmap` 之类的可以很自动地把计算分配到当前可用的 worker 上执行，并收集结果之类的。但是如果我们需要实现非常具体和细致的算法调度——哪个 worker 执行那一段代码等等，则需要直接使用比较底层一点的 API。
 
-假设我们现在要实现一个 ASGD，也就是 Asynchronized Stochastic Gradient Descent，算法的基本思想是每一个 worker 有自己的一份数据，算法执行的时候每个 worker 并行地从 parameter server 里拿到当前最新的参数，然后在本地数据的一个 mini-batch 上计算 gradient，再把 gradient 传回 parameter server，后者再根据传回的 gradient 更新参数。之所以是 asynchronized 是因为每个 worker 是并行并且独立地工作的，因此会有许多可能的不一致的情况，比如当一个 worker 拿到参数，计算了 gradient 并传回去的时候，parameter 上最新的参数已经由其他 worker 传回的结果更新过了，因此参数和梯度的对应关系出现了不一致。在一些给定的条件下，一定程度的不一致是可以允许的，并且能够证明最终收敛性，因为 SGD 本身就是 noisy 的，并且优化算法只要保证前进的方向和 descent 当方向有足够的 correlation，而不一定非常完全 align 起来。不过这些并不是本文要讨论的主要问题。
+假设我们现在要实现一个 ASGD，也就是 Asynchronized Stochastic Gradient Descent，算法的基本思想是每一个 worker 有自己的一份数据，算法执行的时候每个 worker 并行地从参数服务器（parameter server）里拿到当前最新的参数，然后在本地数据的一个 mini-batch 上计算 gradient，再把 gradient 传回 parameter server，后者再根据传回的 gradient 更新参数。之所以是 asynchronized 是因为每个 worker 是并行并且独立地工作的，因此会有许多可能的不一致的情况，比如当一个 worker 拿到参数，计算了 gradient 并传回去的时候，parameter 上最新的参数已经由其他 worker 传回的结果更新过了，因此参数和梯度的对应关系出现了不一致。在一些给定的条件下，一定程度的不一致是可以允许的，并且能够证明最终收敛性，因为 SGD 本身就是 noisy 的，并且优化算法只要保证前进的方向和 descent 当方向有足够的 correlation，而不一定非常完全 align 起来。不过这些并不是本文要讨论的主要问题。
 
 总而言之，要保证分布式和单进程计算的 SGD 结果一样，我们需要在每个 mini-batch 的计算中等待所有 worker 算完，把结果 gradient 求一个平均值，再更新参数，然后进行下一个 mini-batch 的计算。但是这样会导致很大的等待延迟，特别是如果其中有一个 worker 计算速度或者网速很慢的话，就会直接拖慢其他所有节点。ASGD 则选择直接无视同步从而获得更好的 scalability，并且在实际中通常收敛得也很好（有时候可能需要使用更小的 step size）。假设我么想要实现 ASGD，大致可以写成这个样子：
 
