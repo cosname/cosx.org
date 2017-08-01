@@ -1,5 +1,5 @@
 ---
-title: 深度学习识花实践
+title: 基于深度学习和迁移学习的识花实践
 date: '2017-07-13'
 author: 罗大钧
 tags: [深度学习,迁移学习,VGG,CNN]
@@ -20,6 +20,7 @@ slug: transfer-learning
 
 ![autopilot_car](https://user-images.githubusercontent.com/18478302/28164453-07775722-6802-11e7-8625-accff072b88b.png)
 
+此外，迁移学习并不是一种特定的机器学习模型，它更像是一种优化技巧。通常来说，机器学习任务的要求测试集和训练集有相同的概率分布，然而在一些情况下往往会缺乏足够大的有针对性的数据集来满足一个特定的训练任务。迁移学习提出我们可以在一个通用的大数据集上进行一定量的训练后，再用针对性的小数据集进一步强化训练。
 
 接下来的例子中将示范如何将一个图像识别的深度卷积网络，VGG，迁移到识别花朵类型的新任务上，在原先的任务中，VGG只能识别花，但是迁移学习可以让模型不但能识别花，还能识别花的具体品种。
 
@@ -253,7 +254,7 @@ inputs_ = tf.placeholder(tf.float32, shape=[None, codes.shape[1]])
 # 标签数据的维度
 labels_ = tf.placeholder(tf.int64, shape=[None, labels_vecs.shape[1]])
 
-# 加入一个256维德全连接的层
+# 加入一个256维的全连接的层
 fc = tf.contrib.layers.fully_connected(inputs_, 256)
 
 # 加入一个5维的全连接层
@@ -356,6 +357,7 @@ with tf.Session() as sess:
 
 # 参考资料
 
+* A Survey on Transfer Learning[http://ieeexplore.ieee.org/document/5288526/]
 * Tensorflow的识花迁移学习[https://www.tensorflow.org/tutorials/image_retraining](https://www.tensorflow.org/tutorials/image_retraining)
 * VGG网络[https://arxiv.org/pdf/1409.1556.pdf](https://arxiv.org/pdf/1409.1556.pdf)
 * 卷积神经网络的可视化[http://www.matthewzeiler.com/pubs/arxive2013/eccv2014.pdf](http://www.matthewzeiler.com/pubs/arxive2013/eccv2014.pdf)
