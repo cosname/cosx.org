@@ -21,7 +21,7 @@ meta_extra: 编辑：王健桥 审稿：谢益辉，邱怡轩，潘岚锋
 
 # 入门
 
-在 Julia 里分布式编程主要是通过 Remote Procedure Call (RPC) 的方式来完成。但是 RPC 并不需要用户显式地启动一个 server 来监听调用，然后做 message passing 之类的传输结果，而是有更加上层的 API 可以直接实现“在某个节点上执行某段代码”这类的语义。这里提到的 API 如果在将来改变或者改名之类的，主要可以参考 Julia 文档的 [Parallel Computing](https://docs.julialang.org/en/stable/manual/parallel-computing/) 一章查看最新的接口。
+在 Julia 里分布式编程主要是通过 Remote Procedure Call (RPC) 的方式来完成。但是 RPC 并不需要用户显式地启动一个服务器来监听调用，然后做 message passing 之类的传输结果，而是有更加上层的 API 可以直接实现“在某个节点上执行某段代码”这类的语义。这里提到的 API 如果在将来改变或者改名之类的，主要可以参考 Julia 文档的 [Parallel Computing](https://docs.julialang.org/en/stable/manual/parallel-computing/) 一章查看最新的接口。
 
 要进行分布式编程，首先要做的是启动计算节点。在 Julia 里非常简单地可以通过 `julia -p 2` 来启动两个 worker 进程，利用 `nprocs()` 函数可以看到当前有 3 个进程，`myid()` 会返回每个进程的 id （和系统里的 pid 并不一样，而是从 1 开始的数字），其中主进程的 id 总是 1，然后其余的是 worker。在这个例子中，`nworkers()` 会返回 2，表示一个主进程两个 worker 进程。默认情况下（不加 `-p` 参数启动 Julia 的时候）只有一个进程，`nprocs()` 和 `nworkers()` 都返回 1，这时主进程自己同时也是 worker。除了在启动的时候用 `-p` 参数之外，还可以在启动之后通过调用 `addprocs(...)` 函数来添加 worker 进程。
 
