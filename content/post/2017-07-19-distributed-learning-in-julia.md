@@ -264,7 +264,7 @@ for epoch = 1:n_epoch
 end
 ```
 
-当然这个其实并不是 ASGD，而是同步SGD，因为我们等待所有 worker 把梯度 算出来之后求了平均，然后统一加到 w 上。这是由于我们之前写的 `invoke_on_workers` 这个辅助函数的逻辑导致的，正确的做法可以通过写开来：
+当然这个其实并不是 ASGD，而是同步SGD，因为我们等待所有 worker 把梯度算出来之后求了平均，然后统一加到 w 上。这是由于我们之前写的 `invoke_on_workers` 这个辅助函数的逻辑导致的，正确的做法可以通过写开来：
 
 ```julia
 function asgd_step(w_ref :: Future, w :: Vector{Float64})
