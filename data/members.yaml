@@ -147,7 +147,8 @@ list:
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 余光创，香港大学公共卫生学院，生物信息学博士生。博客：<https://guangchuangyu.github.io>， 公众号：biobabble
   - name: 张驰原
-    intro: 英文名 pluskid，博客：<http://blog.pluskid.org>。
+    image: https://user-images.githubusercontent.com/19310150/28874258-a5070976-77c3-11e7-934c-226e46387f96.jpeg
+    intro: 张驰原，网络 id pluskid，MIT 计算机博士在读，假装的 Julia 语言爱好者。
   - name: 张翔
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 车轮互联数据副总裁，COS9年老水友
