@@ -38,7 +38,7 @@ footnotereturnlinkcontents = "↩"
   weight = 4
 
 [params.banner]
-  src = "/img/logo.png"
+  src = "/img/logo-wide.png"
   alt = "统计之都 标志"
 
 [[params.banner.source]]
