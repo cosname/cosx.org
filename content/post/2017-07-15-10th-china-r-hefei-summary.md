@@ -3,7 +3,7 @@ title: 第十届中国R会议（合肥）纪要
 date: '2017-07-15T0:10:32+00:00'
 author: 林枫
 categories:
-  - 新闻动态
+  - R会议
 tags:
   - R会议
   - R语言
