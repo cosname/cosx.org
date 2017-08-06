@@ -3,10 +3,7 @@ title: "假设检验初步"
 date: '2010-11-14T16:39:46+00:00'
 author: 胡江堂
 categories:
-  - 推荐文章
-  - 生物与医学统计
-  - 统计推断
-  - 统计软件
+  - 统计模型
 tags:
   - Error Type I
   - Error Type II
