@@ -5,10 +5,7 @@ author:
   - 褚挺进
   - 王小宁
 categories:
-  - 推荐文章
-  - 统计之都
-  - 职业事业
-  - 高校课堂
+  - COS访谈
 slug: interview-of-chutingjin
 forum_id: 419074
 ---
