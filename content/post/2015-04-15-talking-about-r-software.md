@@ -6,10 +6,7 @@ author:
   - Ron
   - 王威廉
 categories:
-  - 新闻动态
-  - 统计软件
-  - 软件应用
-  - 金融统计
+  - R语言
 slug: talking-about-r-software
 forum_id: 419076
 meta_extra: 编辑：王小宁
