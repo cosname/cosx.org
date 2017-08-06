@@ -7,7 +7,6 @@ author:
   - 朱雪宁
   - 王小宁
 categories:
-  - 模型专题
   - 新闻动态
 tags:
   - R语言
@@ -30,7 +29,7 @@ meta_extra: 编辑：王小宁
 
 一位2013年毕业于杜克大学的同学总结的今年在Coursera 上关于约翰霍普金斯大学数据科学[课程的笔记](https://sux13.github.io/DataScienceSpCourseNotes/)，有志于上此系列课的童鞋可以先看看哦！小编提醒，新的一轮数据科学课程也从[8月3日开始](https://www.coursera.org/specialization/jhudatascience/1?utm_source=spark&utm_medium=banner)了。
 
-一篇关于R 语言进行并行计算的[深度好文](http://wrathematics.github.io/RparallelGuide/)。
+一篇关于R语言进行并行计算的[深度好文](http://wrathematics.github.io/RparallelGuide/)。
 
 广义线性模型（GLMS）在数据科学工具箱中不可或缺的工具。它们是适用于涉及很多现实世界的问题，连续数据，计数和生存数据（及其他）。模型本身是直观的，并且可以被用于推断和预测。一些非常高品质的免费软件和开源软件的实现方式是可获得的[如R](http://bwlewis.github.io/GLM/)。
 
