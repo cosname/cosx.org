@@ -3,8 +3,7 @@ title: 大规模系统内变量关系的研究以及可视化－1因果分析
 date: '2009-09-20T08:19:10+00:00'
 author: 黄帅
 categories:
-  - 推荐文章
-  - 贝叶斯方法
+ - 统计模型
 tags:
   - graphical model
   - 可视化
