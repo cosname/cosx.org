@@ -3,7 +3,7 @@ title: 中国人民大学统计学院研究生课程“统计模型”
 date: '2009-03-28T22:01:50+00:00'
 author: 程曉岄
 categories:
-  - 高校课堂
+  - 新闻动态
 tags:
   - grading policy
   - homework
