@@ -5,7 +5,7 @@ author:
   - 杨舒仪
   - 李宇轩
 categories:
-  - 新闻动态
+  - R会议
 tags:
   - R会议
   - R语言
