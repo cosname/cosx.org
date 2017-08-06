@@ -4,8 +4,6 @@ date: '2015-11-04T23:38:31+00:00'
 author: 王汉生
 categories:
   - 推荐文章
-  - 统计之都
-  - 高校课堂
 tags:
   - Credit Scoring Error
   - CSE

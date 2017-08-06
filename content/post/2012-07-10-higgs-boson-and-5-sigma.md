@@ -3,10 +3,7 @@ title: 希格斯玻色子与5σ
 date: '2012-07-10T23:26:02+00:00'
 author: 施涛
 categories:
-  - 经典理论
-  - 统计之都
-  - 统计推断
-  - 高校课堂
+  - 统计模型
 tags:
   - 5sigma
   - Tukey
@@ -41,7 +38,7 @@ forum_id: 418876
 
 念玩后大家鼓掌拥抱，热泪盈眶。一番周折后，我才终于找到了CERN的 [原版视频](https://cdsweb.cern.ch/record/1459565)（将近两小时，值得看看）。
 
-开始时只是想搞清楚这 5`$\sigma $`怎么回事（35：10,第84页），没想到听到一堆统计词汇“multivariate analysis technique”，“p-value”,“sensitivity”, 等等劈头盖脸的飞来。最给力的是 Rolf Heuer 讲了一些用[Boosted decision tree](http://en.wikipedia.org/wiki/Boosting)来提高分类器准确性的过程（18：20,第33页）。不出所料，研究中用到了很前沿的数据分析方法。老祖师果然没错。看来欲知其中细节，得看数据分析啊！
+开始时只是想搞清楚这 5`$\sigma$`怎么回事（35：10,第84页），没想到听到一堆统计词汇“multivariate analysis technique”，“p-value”,“sensitivity”, 等等劈头盖脸的飞来。最给力的是 Rolf Heuer 讲了一些用[Boosted decision tree](http://en.wikipedia.org/wiki/Boosting)来提高分类器准确性的过程（18：20,第33页）。不出所料，研究中用到了很前沿的数据分析方法。老祖师果然没错。看来欲知其中细节，得看数据分析啊！
 
 比较遗憾的是我比较看不懂的是[环球科学（科学美国人中文版）的文章 “希格斯粒子现身LHC](http://www.huanqiukexue.com/html/newqqkj/newwl/2012/0704/22320.html)？”最后对 5`$\sigma$` 的解释：
 
@@ -49,4 +46,4 @@ forum_id: 418876
 
 好像这是把假设检验和置信区间绞在一起解释了。本来看了视频还我还觉着我这物理外行也看懂了，现在又被解释糊涂了。谁能看懂给解释一下？
 
-  <http://tourpartner.com.ua/ru/visy/visy-v-italy-IT.html>
+<http://tourpartner.com.ua/ru/visy/visy-v-italy-IT.html>

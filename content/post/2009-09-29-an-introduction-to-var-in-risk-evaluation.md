@@ -3,7 +3,7 @@ title: 风险评价的VaR方法简介
 date: '2009-09-29T08:00:05+00:00'
 author: 邓一硕
 categories:
-  - 金融统计
+  - 统计模型
 tags:
   - VaR
   - 金融

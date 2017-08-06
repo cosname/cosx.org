@@ -3,7 +3,7 @@ title: 第十届中国R会议（太原）暨山西省大数据产业创新发展
 date: '2017-07-12'
 author: 邓金涛
 categories:
-  - 新闻动态
+  - R会议
 tags:
   - R会议
   - R语言

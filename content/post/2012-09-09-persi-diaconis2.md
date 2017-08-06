@@ -3,9 +3,7 @@ title: Persi  Diaconis(2)
 date: '2012-09-09T18:05:52+00:00'
 author: 韩钧
 categories:
-  - 统计推断
   - 统计计算
-  - 贝叶斯方法
 slug: persi-diaconis2
 forum_id: 418883
 ---

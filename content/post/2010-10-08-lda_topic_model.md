@@ -4,7 +4,6 @@ date: '2010-10-08T17:55:53+00:00'
 author: 范建宁
 categories:
   - 机器学习
-  - 贝叶斯方法
 tags:
   - LDA
   - Topic Model

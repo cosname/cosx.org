@@ -4,9 +4,7 @@ date: '2014-12-28T20:33:45+00:00'
 author:
   - 尤晓斌
 categories:
-  - 推荐文章
-  - 概率论
-  - 新闻动态
+  - 统计模型
 slug: the-story-about-measure-theory
 forum_id: 419053
 meta_extra: 编辑：王小宁
