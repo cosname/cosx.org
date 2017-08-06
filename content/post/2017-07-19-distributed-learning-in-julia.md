@@ -9,6 +9,7 @@ tags:
   - Julia
   - 分布式计算
 meta_extra: 编辑：王健桥 审稿：谢益辉，邱怡轩，潘岚锋
+forum_id: 419330
 ---
 
 ![julia_prog_language](https://user-images.githubusercontent.com/19310150/28401762-c5576c4a-6d4e-11e7-9427-4186e8653f00.png)
@@ -31,7 +32,7 @@ meta_extra: 编辑：王健桥 审稿：谢益辉，邱怡轩，潘岚锋
 
 ```julia
 data_ref = remotecall(rand, 2, (20, 30))
-ret = remotecall_fetch(x -> norm(fetch(x)), 2, data)
+ret = remotecall_fetch(x -> norm(fetch(x)), 2, data_ref)
 ```
 
 在 worker 2 上调用了 `rand` 生成一个随机矩阵，注意这里参数传输的代价只是 `(20, 30)` 这个 tuple，并且 `data_ref` 只是作为一个 handle 返回到当前进程，这个 handle 直接被传回 worker 2 上计算其 `norm`，而在 worker 2 上调用 `fetch` 的时候会发现生成出来的矩阵已经在该节点上了，所以最终结果并没有太大的数据传输代价。这里的 `remotecall_fetch` 有点类似于嵌套调用 `fetch(remotecall(...))`，但是由于它自己本身是一个基础函数（primitive），所以更加高效，也不会出现隐藏的竞态条件（race condition）问题。除了这些基础函数之外，还有一些更上层的 API 和宏，比如 `@spawn` 和 `@spawnat` 可以很方便地在 worker 上执行任意代码，例如：
