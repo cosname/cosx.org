@@ -3,8 +3,7 @@ title: "用R也能做精算——actuar包学习笔记（二）"
 date: '2010-09-18T10:57:06+00:00'
 author: 李皞
 categories:
-  - 统计之都
-  - 风险精算
+  - R语言
 tags:
   - R语言
   - 损失分布
