@@ -1,0 +1,125 @@
+---
+title: 72位著名统计学家呼吁提高统计显著性水平以提升科学研究的可重复性
+author: 战立侃
+date: '2017-08-07'
+slug: redefine-statistical-significance
+categories:
+  - 统计推断
+  - 统计软件
+---
+
+
+
+<p>本文主要内容来自 Benjamin 等 72 位科学家将于近期 (2017) 发表在《自然人类行为》杂志上的文章。读者还可以参看 Chawla 于 8 月 3 日发表在 《自然》 杂志的相关评论。</p>
+<div class="section level1">
+<h1>1. 简单介绍</h1>
+<p>由于可重复性问题 (lack of reproducibility) 不高，基于统计显著性 (statistically significant) 结果而得出的新科学发现 的有效性正引起越来越多科学家的关注。导致某项研究可重复性差的原因有很多，如多重检验 (multiple testing)、p值操控 (p-hacking)、发表偏差 (publication bias)、以及统计效力过低 (underpowered) 等。导致实验可重复性不高的一项更直接的原因是：研究者用于支持新发现的<strong>证据标准过低</strong>。一项研究如果把统计显著性定义在 <em>p &lt; 0.05</em> 的水平上，那么就算没有实验设计、实验程序和结果报告方面的问题，该研究也依然会产生非常高的<strong>假阳性率</strong> (hight rate of false positives)。</p>
+<p>由此，科学家建议传统上把统计显著性水平定义在 <em>P &lt; 0.05</em> 的相关学术领域，研究者应该把显著性水平提高到 <em>P &lt; 0.005</em>。这一改变将显著提高这些领域中科学研究的可重复性水平。当然在旧标准下具有显著性但没有达到新显著性标准的结果，即显著性水平处于 <em>0.005 &lt; P &lt; 0.05</em> 的结果将被称作<strong>倾向于显著</strong> (sugestive)。</p>
+<p>当然该建议并不涉及已经发表的研究，也不涉及已经采用更为严苛的显著性水平的科学研究领域，如基因组学 (genoics) 和高能物理研究 (high-energy physics) 等。</p>
+<p>该建议将仅适用于涉及零假设检验的显著性检验中。当然，其他一些别的方法也可以提高研究的可重复性，如基于某些清晰界定的模型假设的贝叶斯因子或其他后验方法，都比 <em>P</em>-值优越。然而，改变 <em>P</em>-值的显著性水平最为直接，尤其是对于某些没有受过专业训练的人来说，而且也更容易获得大范围的认可。</p>
+</div>
+<div class="section level1">
+<h1>2. 证据强度</h1>
+<p>在基于观测值 <span class="math inline">\(x_{obs}\)</span>，对零假设 <span class="math inline">\(H_0\)</span> 和 备择假设 <span class="math inline">\(H_1\)</span> 的点假设检验中，<em>P</em>-值指的是在零假设正确的前提下，某个检验统计量 (test statistic) 与观测值 (observed value) 一样极端或者比观测值更极端的概率。如果 <em>P</em>-值位于提前设定的 I 类错误 (Type I) 的临界值 <span class="math inline">\(\alpha=0.05\)</span> 之下，那么零假设就被拒绝，我们就说结果在统计上显著 (statistically significant)。</p>
+<p>从贝叶斯角度来看，假设检验更直接的证据来自于备择假设 <span class="math inline">\(H_1\)</span> 和零假设 <span class="math inline">\(H_0\)</span> 发生概率的比率 (Odds)。根据贝叶斯规则 (Bayes’ Rule)，这个比率可以表示为：</p>
+<p><span class="math display">\[
+\frac{\text{Pr }(H_1|X_{obs})}{\text{Pr }(H_0|X_{obs})}=
+\frac{\text{Pr }(X_{obs}|H_1)}{\text{Pr }(X_{obs}|H_0)}\times
+\frac{\text{Pr }(H_1)}{\text{Pr }(|H_0)}=
+BF \times (\text{prior odds}) 
+\]</span></p>
+<p>这个公式中，<em>BF</em> 是<strong>贝叶斯因子</strong> (Bayes factor) 的简称。贝叶斯因子是研究者可以从观测数据中计算出来的证据。按照 Kass 和 Raftery (1995) 的观点，贝叶斯因子的大小和证据强度 (strength of evidence) 存在以下关系：</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">贝叶斯因子大小</th>
+<th align="center">否定零假设的证据强度</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1-3.2</td>
+<td align="center">不值一提</td>
+</tr>
+<tr class="even">
+<td align="center">3.2-10</td>
+<td align="center">显著的 (Substantial)</td>
+</tr>
+<tr class="odd">
+<td align="center">10-100</td>
+<td align="center">强 (Strong)</td>
+</tr>
+<tr class="even">
+<td align="center">&gt;100</td>
+<td align="center">确定的 (Decisive)</td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>先验概率</strong> (prior odds) 需要通过研究者的前期假设、科学研究共识、或相同领域中相似研究问题的其他研究中获得。研究中多重检验、<em>P</em>-值操控、出版偏差等都会削弱前人研究中相关证据的可信性。例如，研究中改变假设检验涉及的整体的行为等都会降低该先验比率。目前为止，预测市场 (Prediction markets) 和可重复性研究领域的研究者都认为心理科学研究中，备择假设和零假设的先验比率仅为 <em>1:10</em> 左右。癌症临床应用 (cancer clinical trials) 研究领域的先验概率也为 <em>1:10</em> 左右。而在前临床的生物医学研究 (preclinical biomedical reaearch) 中，先验比率会更低。</p>
+<p><em>P</em>-值和贝叶斯因子之间并不存在一一对应的关系，因为贝叶斯因子受备择假设 <span class="math inline">\(H_1\)</span> 的影响。但在某些特定前提假设条件下，某些特定统计量的贝叶斯因子和 <em>P</em>-值之间是存在某些特定关系的。图 1a 和图 1b 描述了 <em>P</em>-值和贝叶斯因子之间的关系。在不损失结果一般性的前提下，我们把 <em>P</em>-值界定为从一个平均值为 0、标准差为 1 的正态分布的随机变量中，选取一个平均值为 <span class="math inline">\(\mu\)</span> 的独立同分布样本 (An independent and identically distributed sample) 的双尾检验的概率值。图中贝叶斯因子大小的计算方法可以有如下几种：</p>
+<ul>
+<li><strong>效力曲线</strong> (Power) 表示在双尾检验条件下，I 类错误为 5%，统计效力为 75% 时计算出来的贝叶斯因子的大小。</li>
+<li><strong>似然值比率范围</strong> (likelihood ratio bound)。 Berger 和 Sellke (1987) 认为，在假定备择假设正确的前提下，如果 <span class="math inline">\(H_1\)</span> 是以 <span class="math inline">\(H_0\)</span> 为中心呈对称分布的，那么贝叶斯因子大小的上限可以用下面公式计算 <span class="math inline">\(BF = 1/(2\times \exp(\frac{1}{2}t^2))\)</span>，<span class="math inline">\(t\)</span> 指 I 类错误的大小。</li>
+<li><strong>均匀最大功效贝叶斯检验</strong> (Uniformly Most Powerful Bayesian Test, UMPBT) 的计算方法来自 Johnson (2013)。该方法与 <span class="math inline">\(\alpha = 0.005\)</span> 的双尾检验类似，即备择假设处于 <span class="math inline">\(\pm 2.81\)</span> 时贝叶斯因子的大小。注意，当统计效力为 80% 时，效力曲线与该曲线几乎重合 (图1b)。</li>
+<li><strong>局部 <span class="math inline">\(H_1\)</span> 范围</strong> (Local-<span class="math inline">\(H_1\)</span> Bound)。Sellke、Bayarri 和 Berger (2001) 认为当备择假设是一个以零假设为众数的单峰分布 (unimodal)，并满足某些限制条件时，贝叶斯因子的上限将不超过 <span class="math inline">\(BF=1/(-\exp(1) \cdot p \ \cdot \ln(p))\)</span>，<span class="math inline">\(p\)</span> 即为 <span class="math inline">\(p\)</span>-值的大小。</li>
+</ul>
+<p><img src="/post/2017-08-04-redefine-statistical-significance_files/figure-html/Figure_1_A-1.png" width="672" /></p>
+<p>图1a. <span class="math inline">\(P\)</span>-值和贝叶斯因子大小的关系</p>
+<p><img src="/post/2017-08-04-redefine-statistical-significance_files/figure-html/Figure_1_B-1.png" width="672" /></p>
+<p>图1b. <span class="math inline">\(P\)</span>-值和贝叶斯因子大小的关系。效力曲线是按统计效力为 80% 计算出来的。</p>
+<p>根据图 1a-b 所示，显著性水平为 <span class="math inline">\(P &lt; 0.05\)</span> 的双尾检验所对应的贝叶斯因子仅为 <span class="math inline">\(2.5 - 3.4\)</span> 之间。此时否定零假设的证据是非常弱的。如果我们把研究的先验概率设定为 <span class="math inline">\(1:10\)</span>，此时备择假设发生的可能性仅为零假设发生可能性的 <span class="math inline">\(\frac{1}{3} = 3.4 \times \frac{1}{10}\)</span> ！</p>
+</div>
+<div class="section level1">
+<h1>3. 新标准的好处？</h1>
+<p>显著性标准是人为设定，该设定需要在 I 类错误和 II 类错误之间的进行权衡。选择 <span class="math inline">\(0.005\)</span> 作为新标准至少有两个好处。首先，显著性水平为 <span class="math inline">\(P = 0.005\)</span> 的双尾检验所对应的贝叶斯因子大小约为 <span class="math inline">\(14-26\)</span> 之间，这说明证据强度是较强的。</p>
+<p>其次，在多数研究领域，<span class="math inline">\(P &lt; 0.005\)</span> 所导致的假阳性率 (false positive rate) 水平是合理和可接受的。假阳性指研究者得出了统计上显著，即得出了拒绝零假设的结论，但实际上零假设是正确的。如果用 <span class="math inline">\(\phi\)</span> 表示零假设正确的概率，<span class="math inline">\((1-\beta)\)</span> 表示正确拒绝零假设的统计效力的大小，<span class="math inline">\(\alpha\)</span> 表示 I 类错误和显著性水平的大小，那么随着被检验整体的变大，假阳性率可以用如下公式表示：</p>
+<p><span class="math display">\[
+\text{false positive rate} \approx 
+\frac
+{\alpha\phi}
+{\alpha\phi + (1-\beta)(1-\alpha)}
+\]</span></p>
+<p>上述公式显示假阳性率受先验概率(<span class="math inline">\(\frac{1-\phi}{\phi}\)</span>)、显著性水平、和统计效力的共同影响。如果把先验概率设定在 <span class="math inline">\(1:40\)</span>、<span class="math inline">\(1:10\)</span>、和 <span class="math inline">\(1:5\)</span> 三个水平，显著性水平设定为 <span class="math inline">\(p &lt; 0.05\)</span> 或 <span class="math inline">\(p &lt; 0.005\)</span>，那么统计效力和假阳性率的关系可以用下图表示：</p>
+<p><img src="/post/2017-08-04-redefine-statistical-significance_files/figure-html/Figure_2-1.png" width="672" /></p>
+<p>图 2 显示，低统计效力加上低的显著性水平 <span class="math inline">\(\alpha=0.05\)</span> 将产生高比率的假阳性率。例如，如果先验概率设定为 <span class="math inline">\(1:10\)</span>，显著性水平设置为 <span class="math inline">\(P&lt;0.05\)</span>，那么无论统计效力处于什么水平，该分析的假阳性率将<strong>不低于 33%</strong>。统计效力在很多研究中实际上都比较低。而如果把显著性水平降为 <em>0.005</em>，则在绝大部分统计效力范围内，假阳性率可降到 <em>5%</em> 之下。</p>
+<p>近期心理学和实验经济学领域中两个可重复性研究项目显示了提高显著性水平在增强研究的可重复性方面的重要作用。这两个项目分别分析了 96 项心理学研究和 16 项实验经济学研究，发现在 <span class="math inline">\(p &lt; 0.005\)</span> 水平上显著的原初研究的重复率，比在 <span class="math inline">\(0.005 &lt; p &lt; 0.05\)</span> 水平上显著的原初研究的可重复率要高一倍：心理学研究可重复率分别为 50% 和 25%；实验经济学中这两个数字分别是 85% 和 44%。而在生物医学领域 96% 的研究采用的显著性水平均为 <span class="math inline">\(P &lt; 0.05\)</span>。而这些研究的重复率非常低，这也从侧面说明了提高显著性水平的作用。</p>
+</div>
+<div class="section level1">
+<h1>4. 可能导致的批评</h1>
+<ul>
+<li>第一、提高显著性水平会提高 II 类错误，假阴性的比率 (false negative rate)。</li>
+</ul>
+<p>没有达到新显著性标准水平的研究应该被视作<strong>建议性的</strong> (suggestive)。在有可能的情况下，这些结果将需要进一步的研究来进行确认。一项研究的结果不够肯定，而汇总和多项研究的结果却是可以非常确定的。另外需要注意的一点是，无法拒绝零假设 (fail to reject the null hypothesis) 并不意味着接受零假设。另外，如果研究者通过提高样本量的方式来让统计效力保持不变，那么提高显著性水平并不会导致假阴性率的提高。</p>
+<p>对于大多数常见的统计分析而言，把显著性水平从 <span class="math inline">\(\alpha=0.05\)</span> 提高到 <span class="math inline">\(\alpha=0.005\)</span> 并且要保持 80% 的统计效力的话，样本量大约需要增加 70%。这就意味着目前实验设计和资金支持条件下，研究者能进行的研究数量将变少。但是，降低假阳性率的好处也是显而易见的：研究者将不需要投入大量资源去重复和验证前人发现的结果。</p>
+<ul>
+<li>第二、该建议没有解决多重假设检验 (multiple testing)、p值操控(p-hacking)、发表偏差 (publication bias)、统计效力过低 (underpowered)、以及其他偏差如变量混淆、选择性报告、测量错误等所导致的问题。</li>
+</ul>
+<p>提高显著性水平将是解决上述问题的补充而不是替代。提高研究可重复性的其他方法包括好的实验设计、预注册实验、ex ante power calculation 重复、清晰报告实验过程和实验分析方法等。</p>
+<ul>
+<li>第三、显著性水平应该随着研究领域的不同而不同。</li>
+</ul>
+<p>的确，一项研究显著性水平的选择应该受研究的先验概率、被检验假设的数量、实验设计、I 类和 II 类错误的后果、及其他因素的影响。 对于某些先验概率非常低 (远超出图 2 所表示的范围) 的探索性研究而言，研究者需要远比 0.005 更为严苛的显著性水平。 遗传学研究领域的科学家正是因为认识到了这一问题，才在十年前就把基因研究领域的显著性水平确定为 <span class="math inline">\(5\times 10^{-8}\)</span>。高能物理研究领域的研究者也在很早前就确定了显著性水平的五个标准差原则 (5-sigma)，即显著性水平大约为 <span class="math inline">\(P &lt; 3\times 10^{-7}\)</span>。</p>
+<p>本文的建议仅涉及图 2 可描述的相关研究领域，即先验概率处于<span class="math inline">\(1/5 - 1/40\)</span> 之间，传统上把显著性水平定义在 <span class="math inline">\(P &lt; 0.05\)</span> 的研究领域。在这些领域中，研究者应该把显著性水平从两个标准差原则提高到三个标准差原则。</p>
+<ul>
+<li>第四、提高显著性水平标准将影响对问题解决的真正方案的探索。而真正的解决方案将通过强调效应值大小、置信区间、把 P 值看成一个连续测量、和贝叶斯方法等，来逐步代替零假设的显著性检验。</li>
+</ul>
+<p>大部分研究者都同意我们需要更合适的统计方法，但是对于什么是更好的替代品这个问题，研究者并没有达成一致。</p>
+</div>
+<div class="section level1">
+<h1>5. 总结</h1>
+<p>对继续使用零假设的显著性检验的科学团体而言，把显著性水平的标准提高到 0.005的水平是非常容易操作的，而该改变将极大地提高科学研究的可重复性。</p>
+<p>在此，研究者强调，这项提议是关于<strong>证据强度的标准</strong> (stabdard of evidence)，而不是关于政策制定和出版与否的标准。如果一项研究考察的是重要的科学问题，而且使用了严格的科学方法，那么无论结果是否达到了统计的显著性水平，这种研究都是重要的，都应该在顶级期刊上得到发表。这项提议不应该被用来作为拒绝研究结果发表的理由，尤其是当一项研究把显著性水平位于 <span class="math inline">\(0.005 &lt; P &lt; 0.05\)</span> 之间的结果正确地标记为了<em>建议性的</em>证据的时候。在提高统计显著性标准的同时，我们应该对高质量和高透明度的研究予以奖励，并把对研究者行为的影响降为最低。否则的话，显著性水平的提高将会影响到研究的质量和透明度。</p>
+</div>
+<div class="section level1">
+<h1>6. 参考文献</h1>
+<p>1). Benjamin, D. J., et al.,. (2017). Redefine Statistical Significance. <em>Nature Human Behavior</em>. doi: <a href="http://osf.io/preprints/psyarxiv/mky9j" class="uri">http://osf.io/preprints/psyarxiv/mky9j</a></p>
+<p>2). Berger, J. O., &amp; Sellke, T. (1987). Testing a Point Null Hypothesis: The Irreconcilability of P Values and Evidence. Journal of the American Statistical Association, 82(397), 112-122.</p>
+<p>3). Chawla, D. S. (2017). P-value shake-up proposed. <em>Nature, 548</em>, 16-17. <a href="doi:10.1038/nature.2017.22375" class="uri">doi:10.1038/nature.2017.22375</a></p>
+<p>4). Johnson, V. E. (2013). Revised standards for statistical evidence. <em>Proceedings of the National Academy of Sciences of the United States of America, 110</em>(48), 19313-19317. <a href="doi:10.1073/pnas.1313476110" class="uri">doi:10.1073/pnas.1313476110</a></p>
+<p>5). Kass, R. E., &amp; Raftery, A. E. (1995). Bayes Factors. <em>Journal of the American Statistical Association, 90</em>(430), 773-795. <a href="doi:10.1080/01621459.1995.10476572" class="uri">doi:10.1080/01621459.1995.10476572</a></p>
+<p>6). Sellke, T., Bayarri, M. J., &amp; Berger, J. O. (2001). Calibration of p Values for Testing Precise Null Hypotheses. <em>The American Statistician, 55</em>(1), 62-71. <a href="doi:10.1198/000313001300339950" class="uri">doi:10.1198/000313001300339950</a></p>
+</div>
