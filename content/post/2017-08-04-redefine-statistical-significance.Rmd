@@ -1,39 +1,78 @@
 ---
-title: 72位著名统计学家呼吁提高统计显著性水平以提升科学研究的可重复性
-author: 战立侃
-date: '2017-08-07'
-slug: redefine-statistical-significance
-categories:
-  - 统计推断
-  - 统计软件
+title: "统计的显著性水平"
+author: "战立侃"
+date: '2018-08-10'
+output:
+  html_document:
+    fig_height: 4
+    fig_width: 8
+  pdf_document:
+    includes:
+      in_header: header.tex
+    latex_engine: xelatex
 ---
+```{r echo = FALSE}
+source('external.R')
+```
 
-本文主要内容来自 Benjamin 等 72 位科学家将于近期 (2017) 发表在《自然人类行为》杂志上的文章。读者还可以参看 Chawla 于 8 月 3 日发表在 《自然》 杂志的相关评论。
+提高某些领域研究可重复性的一个直接和简单的方法是提高假设检验的统计显著性水平。
 
-# 1. 简单介绍
+# 1. 统计检验和显著性水平
 
-由于可重复性问题 (lack of reproducibility) 不高，基于统计显著性 (statistically significant) 结果而得出的新科学发现 的有效性正引起越来越多科学家的关注。导致某项研究可重复性差的原因有很多，如多重检验 (multiple testing)、p值操控 (p-hacking)、发表偏差 (publication bias)、以及统计效力过低 (underpowered) 等。导致实验可重复性不高的一项更直接的原因是：研究者用于支持新发现的**证据标准过低**。一项研究如果把统计显著性定义在 *p < 0.05* 的水平上，那么就算没有实验设计、实验程序和结果报告方面的问题，该研究也依然会产生非常高的**假阳性率** (hight rate of false positives)。
+统计检验中，研究者最终希望确定零假设 ($H_{i,i=0}$) 和备则假设 ($H_{i, i \neq 0}$)  中哪一个正确。由于这两种状态的不相容性，事实情况只有两种：要么是零假设正确；要么是其中一个备择假设如 $H_1$ 正确。让事情变得更为复杂的是，研究者用于判断哪个假设正确的证据并不来自于数据整体，而来自于整体数据的一部分，即一个样本。样本统计量对于总体参数来说始终存在一定偏差，即抽样误差。
 
-由此，科学家建议传统上把统计显著性水平定义在 *P < 0.05* 的相关学术领域，研究者应该把显著性水平提高到 *P < 0.005*。这一改变将显著提高这些领域中科学研究的可重复性水平。当然在旧标准下具有显著性但没有达到新显著性标准的结果，即显著性水平处于 *0.005 < P < 0.05* 的结果将被称作**倾向于显著** (sugestive)。
+第一、假如事实情况是零假设正确。假定零假设 ($H_0$) 整体服从平均值为 $\mu_0 = 0$, 标准差为 $\sigma = 1$ 的正态分布。即使在该零假设正确的前提下，由于抽样误差的原因，一个样本量为 $n=1$ 的随机样本的样本平均值 ($\overline{X}_i$) 理论上来说可以是位于 $[-\infty, +\infty]$ 之间的任何一个数。但是从概率上来讲，样本平均值在总体平均值 0 的位置出现的概率最高；一个位置离总体平均值越远，样本平均值在该位置出现的概率就越低。例如，一个样本平均值出现在 $\pm 3$ 位置上的概率就非常低了。
+以样本平均值的大小为横坐标，该样本平均值出现的概率为纵坐标，可以画出如下样本平均值的概率密度分布图。
 
-当然该建议并不涉及已经发表的研究，也不涉及已经采用更为严苛的显著性水平的科学研究领域，如基因组学 (genoics) 和高能物理研究 (high-energy physics) 等。
+```{r label = "Figure_1_01", echo = FALSE, fig.align = "center"}
+hh(H0 = T, H1 = F, body = F, tail = F, beta = F, power = F, level =  F, reject = F)
+```
 
-该建议将仅适用于涉及零假设检验的显著性检验中。当然，其他一些别的方法也可以提高研究的可重复性，如基于某些清晰界定的模型假设的贝叶斯因子或其他后验方法，都比 *P*-值优越。然而，改变 *P*-值的显著性水平最为直接，尤其是对于某些没有受过专业训练的人来说，而且也更容易获得大范围的认可。
+*P*-值指在零假设正确的前提下，样本平均值 ($\overline{X}_i$) 与某个观测值 ($\overline{X}_\text{obs}$) 一样极端或者比观测值更极端的概率。如观测值 ($\overline{X}_\text{obs} = -1$) 对应的 *P* 值为 $P=0.16$。 
 
-# 2. 证据强度
+```{r label = "Figure_1_02", echo = FALSE, fig.align = "center"}
+hh(sig = 2 * pnorm(-1), H0 = T, H1 = F, body = F, tail = T, beta = F, power = F, level = T, reject = F)
+```
 
-在基于观测值 $x_{obs}$，对零假设 $H_0$ 和 备择假设 $H_1$ 的点假设检验中，*P*-值指的是在零假设正确的前提下，某个检验统计量 (test statistic) 与观测值 (observed value) 一样极端或者比观测值更极端的概率。如果 *P*-值位于提前设定的 I 类错误 (Type I) 的临界值 $\alpha=0.05$ 之下，那么零假设就被拒绝，我们就说结果在统计上显著 (statistically significant)。
+如前所述，一个位置离总体平均值越远，样本平均值在该位置出现的概率就越低。当一个实际观测值 ($\overline{X}_\text{obs}$) 离总体平均值足够远的时候，我们就有理由怀疑该样本不是来自零假设条件下的总体，而是来自于另外一个总体了。这个人为设定的**足够远**，即为 $\alpha$ 水平。心理学学家通常把该临界值定为 $\alpha=0.05$ (如下图)。如果观测值 ($\overline{X}_\text{obs}$) 大于等于 1.96, 即 $|\overline{X}_\text{obs}|\geq 1.96$，或其在分布中出现的概率小于等于 0.05, 研究者则断定该样本并不来自于零假设整体，而是来自某个备择假设整体。如图所示，$\alpha$ 水平又等价于当零假设实际上正确，但研究者拒绝零假设的概率，即 **I 类错误水平**。
 
-从贝叶斯角度来看，假设检验更直接的证据来自于备择假设 $H_1$ 和零假设 $H_0$ 发生概率的比率 (Odds)。根据贝叶斯规则 (Bayes' Rule)，这个比率可以表示为：
+```{r label = "Figure_1_03", echo = FALSE, fig.align = "center"}
+hh(H0 = T, H1 = F, body = F, tail = T, beta = F, power = F, level = T, reject = T)
+```
+第二、假设事实情况是零假设 ($H_0$) 错误，备择假设 ($H_1$) 正确。同时假定零假设 ($H_0$) 和备择假设 ($H_1$) 间效应值大小为 $\text{Cohen's D} = 4$，即备择假设 ($H_1$) 整体服从平均值为 $\mu_0 = 4$, 标准差为 $\sigma = 1$ 的正态分布。如果依然把显著性水平定为 $\alpha=0.05$，即当 $P \leq 0.05$ 或观测值 $\overline{X}_{obs} \geq 1.96$ 时，拒绝零假设。 因为实际情况是备择假设 ($H_1$) 正确 (如下图)，此时样本平均值 ($\overline{X}_i$) 有 $1-\beta=0.98$ 的可能性位于临界值 1.96 的右侧，另有 $\beta = 0.021$ 的可能性位于临界值的左侧。所以当 $\overline{X}_{obs} \geq 1.96$ 时，如果我们拒绝零假设($H_0$)，接受备则假设 $H_1$，那么我们的判断正确的概率是 $1-\beta = 0.98$。正确拒绝零假设的概率，$1-\beta$ 又被称作统计效力 (statistical power)。因为在备择假设 ($H_1$) 正确的前提下，样本平均值 ($\overline{X}_i$) 仍有  $\beta = 0.021$ 的可能性位于临界值的左侧。所以当观测值位于临界值左侧 $\overline{X}_{obs} < 1.96$，我们的结论是无法拒绝零假设时，我们有 $\beta = 0.021$ 的可能性是错的。此时研究者犯的是 **II 类错误**，即实际上零假设 $H_0$ 错误，备择假设 $H_1$ 正确，但根据观测数据研究者无法拒绝零假设的情况。如图所示，II 类错误的概率是 $\beta$。
+
+```{r label = "Figure_1_04", echo = FALSE, fig.align = "center"}
+hh(H0 = T, H1 = T, body = F, tail = F, beta = T, power = T, level = T, reject = T)
+```
+
+上述四种情况可以总结为下面这个表格：
+
+
+|              |$H_0$        |$H_1$        |
+|--------------|:--------:|:--------:|
+|没有拒绝零假设|正确拒斥（$1-\alpha$）      |漏报（II类错误，$\beta$值）|
+|拒绝零假设    |虚报（I类错误，$\alpha$值）|击中（统计效力，$1-\beta$）|
+
+以及下面这个图：
+
+```{r label = "Figure_1_05", echo = FALSE, fig.align = "center"}
+hh()
+```
+
+# 2. 显著性水平和贝叶斯因子
+
+如前所述，*P* 值指在零假设 ($H_0$) 正确的条件下，研究者记录到某个观测值 ($\overline{X}_{obs}$) 的概率，即 $Pr(\overline{X}_{obs}|H_0)$。而研究者关心的是记录到该观测值时零假设或备择假设正确与否的概率，即$Pr(H_0|\overline{X}_{obs})$ 或 $Pr(H_1|\overline{X}_{obs})$ 概率的大小。大多数情况下，研究者通常无法以一种二元论的方式去确定零假设还是备择假设正确，而只能从概率上哪讲哪个假设正确的可能性更大。判断哪个可能性更大的更直接证据来自于备择假设 $H_1$ 和零假设 $H_0$ 发生概率的比率 (Odds)。如下图所示，根据贝叶斯原则，在观测值 $\overline{X}_{obs}$  条件下，备择假设和零假设发生率之比受**贝叶斯因子** (Bayes factor, **BF**) 和**先验概率** (prior odds) 两个因素的共同影响。
 
 $$
-\frac{\text{Pr }(H_1|X_{obs})}{\text{Pr }(H_0|X_{obs})}=
-\frac{\text{Pr }(X_{obs}|H_1)}{\text{Pr }(X_{obs}|H_0)}\times
-\frac{\text{Pr }(H_1)}{\text{Pr }(|H_0)}=
+\frac{\text{Pr }(H_1|\overline{X}_{obs})}{\text{Pr }(H_0|\overline{X}_{obs})}=
+\frac{\text{Pr }(\overline{X}_{obs}|H_1)}{\text{Pr }(\overline{X}_{obs}|H_0)}\times
+\frac{\text{Pr }(H_1)}{\text{Pr }(H_0)}=
 BF \times (\text{prior odds}) 
 $$
 
-这个公式中，*BF* 是**贝叶斯因子** (Bayes factor) 的简称。贝叶斯因子是研究者可以从观测数据中计算出来的证据。按照 Kass 和 Raftery (1995) 的观点，贝叶斯因子的大小和证据强度 (strength of evidence) 存在以下关系：
+第一，关于备择假设和零假设发生概率之比的**先验知识** (prior odds) 通常来源于研究者的前期假设、相关领域科学研究的共识、或同领域相似研究问题的其他研究。通常认为，心理学研究和癌症临床研究中，备择假设和零假设的先验比率约为 **1:10**。而在前临床的生物医学研究 (preclinical biomedical reaearch) 领域，该先验比率会更低。
+
+第二、 **贝叶斯因子**来源于观测数据，贝叶斯因子的大小表明了证据的强度。贝叶斯因子越大，观测数据越有能力支持备择假设假设。按照 Kass 和 Raftery (1995) 的观点，贝叶斯因子的大小和证据强度 (strength of evidence) 存在以下关系：
 
 |贝叶斯因子大小|否定零假设的证据强度|
 |:---:|:---:|
@@ -41,122 +80,39 @@ $$
 |3.2-10|显著的 (Substantial)|
 |10-100|强 (Strong)|
 |>100|确定的 (Decisive)|
-|||
 
-**先验概率** (prior odds) 需要通过研究者的前期假设、科学研究共识、或相同领域中相似研究问题的其他研究中获得。研究中多重检验、*P*-值操控、出版偏差等都会削弱前人研究中相关证据的可信性。例如，研究中改变假设检验涉及的整体的行为等都会降低该先验比率。目前为止，预测市场 (Prediction markets) 和可重复性研究领域的研究者都认为心理科学研究中，备择假设和零假设的先验比率仅为 *1:10* 左右。癌症临床应用 (cancer clinical trials) 研究领域的先验概率也为 *1:10* 左右。而在前临床的生物医学研究 (preclinical biomedical reaearch) 中，先验比率会更低。
+贝叶斯因子和 *P*-值之间的关系受备择假设的影响。要确定贝叶斯因子和 *P*-值之间的关系，首先要确定备择假设 $\overline{H}_{i,i\neq0}$ 的分布特征。确定备择假设的方法不同，计算出的贝叶斯因子和 *P*-值的关系也不同。如果我们假定备择假设和零假设条件下整体分布的形状一致，那么确定备择假设的分布特征就是确定其整体平均值 $\mu_1$。
 
-*P*-值和贝叶斯因子之间并不存在一一对应的关系，因为贝叶斯因子受备择假设 $H_1$ 的影响。但在某些特定前提假设条件下，某些特定统计量的贝叶斯因子和 *P*-值之间是存在某些特定关系的。图 1a 和图 1b 描述了 *P*-值和贝叶斯因子之间的关系。在不损失结果一般性的前提下，我们把 *P*-值界定为从一个平均值为 0、标准差为 1 的正态分布的随机变量中，选取一个平均值为 $\mu$ 的独立同分布样本 (An independent and identically distributed sample) 的双尾检验的概率值。图中贝叶斯因子大小的计算方法可以有如下几种：
+- 第一种方法利用显著性检验中的**统计效力**大小确定备择假设的整体平均值。例如，备择假设整体平均值 $\mu_1$ 的大小必须让被则假设满足其统计效力为 75%。根据统计效力大小确定备择假设后，观察到的 *P*-值大小和贝叶斯因子大小之间的关系叫做 **效力曲线** (power)。
 
-- **效力曲线** (Power) 表示在双尾检验条件下，I 类错误为 5%，统计效力为 75% 时计算出来的贝叶斯因子的大小。
-- **似然值比率范围** (likelihood ratio bound)。 Berger 和 Sellke (1987) 认为，在假定备择假设正确的前提下，如果 $H_1$ 是以 $H_0$ 为中心呈对称分布的，那么贝叶斯因子大小的上限可以用下面公式计算 $BF = 1/(2\times \exp(\frac{1}{2}t^2))$，$t$ 指 I 类错误的大小。
-- **均匀最大功效贝叶斯检验** (Uniformly Most Powerful Bayesian Test, UMPBT) 的计算方法来自 Johnson (2013)。该方法与 $\alpha = 0.005$ 的双尾检验类似，即备择假设处于 $\pm 2.81$ 时贝叶斯因子的大小。注意，当统计效力为 80% 时，效力曲线与该曲线几乎重合 (图1b)。
-- **局部 $H_1$ 范围** (Local-$H_1$ Bound)。Sellke、Bayarri 和 Berger (2001) 认为当备择假设是一个以零假设为众数的单峰分布 (unimodal)，并满足某些限制条件时，贝叶斯因子的上限将不超过 $BF=1/(-\exp(1) \cdot p \ \cdot \ln(p))$，$p$ 即为 $p$-值的大小。
-
-```{r echo = FALSE, eval = TRUE}
-bff <- function(
-type1 = 0.05, # alpha level is 0.05/2
-type2 = 0.25, # beta is 0.25, so that power is 1-0.25 = 0.75
-UMPTB = 0.005
-){
-p = 1 - c(9000 : 9990) / 10000
-xbar = qnorm(p = 1 - p / 2, mean = 0, sd = 1)
-
-## alternative based on 80% POWER IN 5% TEST
-muPower = qnorm(p = 1 - type2, mean = 0, sd = 1) +
-          qnorm(p = 1 - type1 / 2, mean = 0, sd = 1)  # mu of the alternative with the power of 75%
-bfPow = 0.5 * (dnorm(x = xbar, mean =  muPower, sd = 1) +
-               dnorm(x = xbar, mean = -muPower, sd = 1)) /
-               dnorm(x = xbar, mean = 0, sd = 1)
-muUMPBT = qnorm(p = 1 - UMPTB / 2, mean = 0, sd = 1)
-bfUMPBT = 0.5 * (dnorm(x = xbar, mean =  muUMPBT, sd = 1) +
-                 dnorm(x = xbar, mean = -muUMPBT, sd = 1)) /
-                 dnorm(x = xbar, mean = 0, sd = 1)
-
-## two-sided "LR" bound
-bfLR = 0.5 / exp(- 0.5 * xbar ^ 2)
-bfLocal = -1 / (exp(1) * p * log(p))  # Local bound; no need for two-sided adjustment
-yy <- cbind(bfLR, bfLocal)
-
-## Coordinates for dashed lines
-data = data.frame(p, bfLocal, bfLR, bfPow, bfUMPBT)
-U_005 = max(data[data$p == "0.005", -1])
-L_005 = min(data[data$p == "0.005", -1])
-U_05  = max(data[data$p == "0.05", -1])
-L_05  = min(data[data$p == "0.05", -1])
-
-# plot margins
-# par(family = "Source Han Serif CN") # STKaiti                                     
-par(mai = c(0.8, 0.8, 0.1, 0.6))
-par(mgp = c(2, 1, 0))
-matplot(p, yy, type = 'n', log = 'xy',
-        xlab = expression(paste(italic(P) , "-value")),
-        ylab = "Bayes Factor", 
-        ylim = c(0.3, 100), bty = "n", xaxt = "n", yaxt = "n")
-lines(p, bfPow, col = "red", lty = 1, lwd = 2)
-lines(p, bfLR, col = "black", lty = 2, lwd = 2)
-lines(p, bfUMPBT, col = "blue", lty = 3, lwd = 2)
-lines(p, bfLocal, col = "#56B4E9", lty = 4, lwd = 2)
-legend(x = 0.015, y = 100,
-       legend = c(expression(paste("Power")), "Likelihood Ratio Bound", "UMPBT", expression(paste("Local-", italic(H)[1]," Bound"))),
-       lty = 1:4, lwd = 2, col = c("red", "black", "blue", "#56B4E9"), cex = 0.8)
-## customizing axes
-# x axis
-axis(side = 1,
-  at = c(-2, 0.001, 0.0025, 0.005, 0.010, 0.025, 0.050, 0.100, 0.14),
-  labels = c("", "0.0010", "0.0025", "0.0050", "0.0100", "0.0250", "0.0500", "0.1000", ""),
-  lwd = 1, tck = -0.01, padj = -1.1, cex.axis = 0.8)
-
-# y axis on the left - main
-axis(side = 2,
-     at = c(-0.2, 0.3, 0.5, 1, 2, 5, 10, 20, 50, 100),
-     labels = c("", "0.3", "0.5", "1.0", "2.0", "5.0", "10.0", "20.0", "50.0", "100.0"),
-     lwd = 1, las = 1, tck = -0.01, hadj = 0.6, cex.axis = 0.8)
-
-#y axis on the left - secondary (red labels)
-axis(side = 2, at = c(L_005, U_005),
-     labels = c(formatC(L_005, digits = 2, format = "f"), formatC(U_005, digits = 2, format = "f")),
-     lwd = 1, las = 1, tck = -0.01,
-     hadj = 0.6, cex.axis = 0.6, col.axis = "red")
-
-#y axis on the right - main
-axis(side = 4, at = c(-0.2, 0.3, 0.5, 1, 2, 5, 10, 20, 50, 100),
-     labels = c("","0.3","0.5","1.0","2.0","5.0","10.0","20.0","50.0","100.0"),
-     lwd = 1, las= 1, tck = -0.01, hadj = 0.4, cex.axis = 0.8)
-
-# y axis on the right - secondary (red labels)
-axis(side = 4, at = c(L_05, U_05),
-     labels = c(formatC(L_05, digits = 2, format = "f"), formatC(U_05, digits = 2, format = "f")),
-     lwd = 1, las = 1, tck = -0.01, hadj = 0.4, cex.axis = 0.6, col.axis = "red")
-
-### dashed lines
-segments(x0 = 0.000011, y0 = U_005, x1 = 0.005, y1 = U_005, col = "gray40", lty = 2)
-segments(x0 = 0.000011, y0 = L_005, x1 = 0.005, y1 = L_005, col = "gray40", lty = 2)
-segments(x0 = 0.005, y0 = 0.00000001, x1 = 0.005, y1 = U_005, col = "gray40", lty = 2)
-segments(x0 = 0.05, y0 = U_05, x1 = 0.14, y1 = U_05, col = "gray40", lty = 2)
-segments(x0 = 0.05, y0 = L_05, x1 = 0.14, y1 = L_05, col = "gray40", lty = 2)
-segments(x0 = 0.05, y0 = 0.00000001, x1 = 0.05, y1 = U_05, col = "gray40", lty = 2)
-}
+```{r label = "Figure_1_06", echo = FALSE, fig.align = "center"}
+mm1 <- qnorm(1 - 0.05/2) + qnorm(0.75)
+hh(m1 = mm1)
 ```
 
-```{r label = `Figure_1_A`, echo = FALSE, eval = TRUE}
-bff()
+- 第二种方法是通过显著性水平来确定备择假设的整体平均值的。Johnson (2013) 认为备择假设的整体平均值应该设定在 $\alpha／2 = 0.0025$ 处。这种方法叫做**均匀最大功效贝叶斯检验** (Uniformly Most Powerful Bayesian Test, UMPBT)。在我们的例子中，零假设为真时 $\alpha／2 = 0.0025$ 对应的 $\overline{X}_{obs}=$ `r formatC(qnorm(1 - 0.005/2), digits = 2, format = "f")`，所以备择假设的整体平均值为  $\mu_1=$ `r formatC(qnorm(1 - 0.005/2), digits = 2, format = "f")`。因为当备择假设的整体平均值为 $\mu_1=$ `r formatC(qnorm(1-0.005/2), digits = 2, format = "f")` 时，显著性检验的统计效力为 $1-\beta=0.80$，所以该方法确定的备择假设与第一种方法中把统计效力设定为 $80\%$ 时的出来的 $P$-值和贝叶斯因子之间的关系是一样的。
+
+```{r label = "Figure_1_07", echo = FALSE, fig.align = "center"}
+mm1 <- qnorm(1 - 0.005/2)
+hh(m1 = mm1)
 ```
 
-图1a. $P$-值和贝叶斯因子大小的关系
+后两种方法没有试图找到一个特定备择假设，而是在假定备择假设具有某种特点时，去描述 *P*-值和贝叶斯因子的关系。
 
-```{r label = "Figure_1_B", echo = FALSE, eval = TRUE}
-bff(type2 = 0.2)
+- 第三种方法认为如果备择假设 $H_{i}$ 的整体平均值 $\mu_i$ 以零假设 $H_{i, i=0}$ 的整体平均值 $\mu_0$ 为中心的对称分布时，那么贝叶斯因子的上限将不超过 $BF = 1/(2\times \exp(\frac{1}{2}t^2))$，此处 $t$ 指 I 类错误的大小。此种方法被称作 **似然值比率范围** (likelihood ratio bound) (Berger, & Sellke, 1987)
+- 第四种方法认为当备择假设 $H_{i}$ 的整体平均值 $\mu_i$ 是一个以零假设 $H_{i, i=0}$ 的整体平均值 $\mu_0$ 为众数的单峰分布 (unimodal)，并满足某些限制条件时，贝叶斯因子的上限将不超过 $BF=1/(-\exp(1) \cdot p \ \cdot \ln(p))$，$p$ 即为 $p$-值的大小。此方法被称作**局部 $H_1$ 范围** (Local-$H_1$ Bound) (Sellke, Bayarri, & Berger, 2001) 
+
+用上述四种方法确定备择假设或者假定备择假设具有某种特征后，*P*-值和贝叶斯因子的关系可以用下图表示(Benjamin et al., 2017)：
+
+```{r label = "Figure_2_01", echo = FALSE, fig.align = "center"}
+pBF()
 ```
+如上图所示，显著性水平为 $P < .05$ 的双尾检验所对应的贝叶斯因子仅为 $2.5 - 3.4$。根据前面的描述，此时否定零假设的证据是非常弱的。如果我们把研究的先验概率设定为 $1:10$，此时备择假设发生的可能性仅为零假设发生可能性的三分之一，即 $\frac{1}{3} = 3.4 \times \frac{1}{10}$。而当我们把显著性水平设定为 $p < .005$ 的水平上时，贝叶斯因子就增加到了 $13.80-25.70$。根据前述标准，此时证据力度是很强的。在同样的先验概率下，备择假设和零假设的比率增加到了 $2.57$。
 
-图1b. $P$-值和贝叶斯因子大小的关系。效力曲线是按统计效力为 80% 计算出来的。
+# 3. 显著性水平和假阳性率
 
-根据图 1a-b 所示，显著性水平为 $P < 0.05$ 的双尾检验所对应的贝叶斯因子仅为 $2.5 - 3.4$ 之间。此时否定零假设的证据是非常弱的。如果我们把研究的先验概率设定为 $1:10$，此时备择假设发生的可能性仅为零假设发生可能性的 $\frac{1}{3} = 3.4 \times \frac{1}{10}$ ！
-
-# 3. 新标准的好处？
-
-显著性标准是人为设定，该设定需要在 I 类错误和 II 类错误之间的进行权衡。选择 $0.005$ 作为新标准至少有两个好处。首先，显著性水平为 $P = 0.005$ 的双尾检验所对应的贝叶斯因子大小约为 $14-26$ 之间，这说明证据强度是较强的。
-
-其次，在多数研究领域，$P < 0.005$ 所导致的假阳性率 (false positive rate) 水平是合理和可接受的。假阳性指研究者得出了统计上显著，即得出了拒绝零假设的结论，但实际上零假设是正确的。如果用 $\phi$ 表示零假设正确的概率，$(1-\beta)$ 表示正确拒绝零假设的统计效力的大小，$\alpha$ 表示 I 类错误和显著性水平的大小，那么随着被检验整体的变大，假阳性率可以用如下公式表示：
+在贝叶斯框架下，*P*-值的一个对应替代方案是**假阳性率**（false positive rate，FPR)。错误发现率指在所有零假设被拒绝的情景中，零假设实际上为真的概率。假设一项研究中，零假设 ($H_0$) 为真的概率为 $\phi$，备择假设 ($H_i$) 为真概率则为 $1-\phi$。如果把假设检验的临界值设定为 $\alpha$， 即当 $P < \alpha$ 时拒绝零假设 ($H_0$)。因为零假设发生的概率是 $\phi$，那么研究者错误拒绝零假设的概率为 $\alpha\phi$。另外如果该假设检验的统计效力为 $1-\beta$，那么研究者正确拒绝零假设的概率为 $(1-\beta)(1-\phi)$。
+此时错误发现率可以表示为错误决绝零假设的概率与所有拒绝零假设的概率的比率，如下图：
 
 $$
 \text{false positive rate} \approx 
@@ -165,130 +121,57 @@ $$
 {\alpha\phi + (1-\beta)(1-\alpha)}
 $$
 
-上述公式显示假阳性率受先验概率($\frac{1-\phi}{\phi}$)、显著性水平、和统计效力的共同影响。如果把先验概率设定在 $1:40$、$1:10$、和 $1:5$ 三个水平，显著性水平设定为 $p < 0.05$ 或 $p < 0.005$，那么统计效力和假阳性率的关系可以用下图表示：
+如上面的公式所示，假阳性率同时受显著性水平、先验概率和统计效力的共同影响。在选取了三个先验概率水平 $1:40$、$1:10$ 和 $1:5$，两个显著性水平 $P <.05$ 和 $p <.005$ 后，我们可以看到假阳性率和统计效力存在下图所示的关系：
 
-```{r label = "Figure_2", echo = FALSE, eval = TRUE}
-#graph margins
-pow1 = c(5 : 999) / 1000 # power range for 0.005 tests 
-pow2 = c(50 : 999) / 1000 # power range for 0.05 tests 
-
-pow   <- c("pow1", "pow2", "pow2", "pow1",  "pow2",  "pow1")
-alpha <- c( 0.005,   0.05,   0.05,  0.005,    0.05,   0.005)
-pi0   <- c(   5/6,    5/6,  10/11,  10/11,   40/41,   40/41)
-lty   <- c(     1,      2,      2,      1,       2,       1)
-col   <- c("blue", "blue",  "red",  "red", "green", "green")
-df <- data.frame(pow, alpha, pi0, lty, col, stringsAsFactors=FALSE)
-
-ddata <- function(
- pow = "pow1", 
- alpha = 0.005, 
- pi0 = 5/6, 
- id
-){
- N = 10^6
- pow = eval(parse(text = pow))
- # yy = alpha * N * pi0 / (alpha * N * pi0 + pow[id] * (1 - pi0) * N)
- yy = alpha * pi0 /(alpha * pi0 + pow[id] * (1 - pi0))
- return(yy)
-}
-
-lline <- function(x
-){
-pow = df[x, 1]
-alpha = df[x, 2]
-pi0 = df[x, 3]
-lty = df[x, 4]
-col = df[x, 5]
-xx = eval(parse(text = pow))
-yy = ddata(pow = pow, alpha = alpha, pi0 = pi0)
-lines(xx, yy, lty = lty, col = col, lwd = 2)
-}
-
-# png("Figure_2.png", width = 10, height = 8, units = "in", res = 600) # Print the plot 
-#par(family = "Source Han Serif CN") # STKaiti                                     
-par(mai = c(0.8, 0.8, 0.1, 0.1)) 
-par(mgp = c(2, 1, 0))
-plot(x = pow1, y = ddata(), type='n', ylim = c(0, 1), xlim = c(0, 1.5), 
-     xlab = 'Power',
-     ylab = 'False positive rate', 
-     bty = "n", xaxt = "n", yaxt = "n") 
-#grid lines
-segments(x0 = -0.058, y0 = (0:5) * 0.2, x1 = 1, lty = 1, col = "gray92")
-for (x in 1:6) lline(x)
-
-#customizing axes 
-aat <- c(-0.5, 0, 0.2, 0.4, 0.6, 0.8, 1.0)
-llabels <- c("", "0.0", "0.2", "0.4", "0.6", "0.8", "1.0")
-llegend <- c("Prior odds = 1:40", "Prior odds = 1:10", "Prior odds = 1:5") 
-#llegend <- c("先验概率 = 1:40", "先验概率 = 1:10", "先验概率 = 1:5") 
-axis(side = 2, at = aat, labels = llabels, 
-  lwd = 1, las = 1, tck = -0.01, hadj = 0.4, cex.axis = .8)
-axis(side = 1, at = aat, labels = llabels,
-  lwd = 1, las = 1, tck = -0.01, padj = -1.1, cex.axis = .8)
-legend(x = 1.05, y = 1, legend = llegend, 
-  pch = c(15, 15, 15), col = c("green", "red", "blue"), cex = 1)
-  
-library(pBrackets)
-odd_1_5_1  <- ddata(pow = "pow1", alpha = 0.005, pi0 = 5/6, id = 995)
-odd_1_5_2  <- ddata(pow = "pow2", alpha = 0.05, pi0 = 5/6, id = 950)
-odd_1_10_2 <- ddata(pow = "pow2", alpha = 0.05, pi0 = 10/11, id = 950)
-odd_1_10_1 <- ddata(pow = "pow1", alpha = 0.005, pi0 = 10/11, id = 995)
-odd_1_40_2 <- ddata(pow = "pow2", alpha = 0.05, pi0 = 40/41, id = 950)
-odd_1_40_1 <- ddata(pow = "pow1", alpha = 0.005, pi0 = 40/41, id = 995)
-
-t1label <- expression(paste(italic(P), " < 0.05 threshold"))
-t2label <- expression(paste(italic(P), " < 0.005 threshold"))
-text(1.11, (odd_1_5_2 + odd_1_40_2)/2, label = t1label, cex = 0.9,adj=0) 
-text(1.11, (odd_1_5_1 + odd_1_40_1)/2, label = t2label, cex = 0.9,adj=0)
-brackets(1.03, odd_1_40_1, 1.03, odd_1_5_1, h = NULL, ticks = 0.5, curvature = 0.7, type = 1, col = 1, lwd = 1, lty = 1, xpd = FALSE)
-brackets(1.03, odd_1_40_2, 1.03, odd_1_5_2, h = NULL, ticks = 0.5, curvature = 0.7, type = 1, col = 1, lwd = 1, lty = 1, xpd = FALSE) 
-#dev.off()
+```{r label = "Figure_3_01", echo = FALSE, fig.align = "center"}
+ppp()
 ```
 
-图 2 显示，低统计效力加上低的显著性水平 $\alpha=0.05$ 将产生高比率的假阳性率。例如，如果先验概率设定为 $1:10$，显著性水平设置为 $P<0.05$，那么无论统计效力处于什么水平，该分析的假阳性率将**不低于 33%**。统计效力在很多研究中实际上都比较低。而如果把显著性水平降为 *0.005*，则在绝大部分统计效力范围内，假阳性率可降到 *5%* 之下。
+如上图所示，低统计效力加上低显著性水平 $\alpha = 0.05$ 将产生高比率的假阳性率。如果显著性水平设置为 $P < 0.05$，先验概率设定为 *1:10*，那么无论统计效力处于什么水平，该分析的假阳性率将**不低于 33%**。心理学及许多科学研究的一个事实是统计效力都比较低。而如果把显著性水提高到 *0.005*，则在绝大部分统计效力范围内，假阳性率可降到 $5\%$ 之下。
 
-近期心理学和实验经济学领域中两个可重复性研究项目显示了提高显著性水平在增强研究的可重复性方面的重要作用。这两个项目分别分析了 96 项心理学研究和 16 项实验经济学研究，发现在 $p < 0.005$ 水平上显著的原初研究的重复率，比在 $0.005 < p < 0.05$ 水平上显著的原初研究的可重复率要高一倍：心理学研究可重复率分别为 50% 和 25%；实验经济学中这两个数字分别是 85%  和 44%。而在生物医学领域 96% 的研究采用的显著性水平均为 $P < 0.05$。而这些研究的重复率非常低，这也从侧面说明了提高显著性水平的作用。
+# 4. 显著性水平和统计效力
 
-# 4. 可能导致的批评
+提高统计显著性水平的缺点也是显而易见的，即提高统计的显著性水平将显著降低假设检验的统计效力、提高 II 类错误的概率。如下图所示，在 $\alpha=0.05$ 的显著性水平下，该显著性检验的统计效力为 $1-\beta=0.80$ 。
+```{r label = "Figure_1_08", echo = FALSE, fig.align = "center"}
+hh(m1 = 1.25, sigma = 2, n = 20)
+```
 
-- 第一、提高显著性水平会提高 II 类错误，假阴性的比率 (false negative rate)。
+但当我们把统计显著性提高到 $\alpha=0.005$ 时，该检验的统计效力就降低到了 $1-\beta=0.50$。
 
-没有达到新显著性标准水平的研究应该被视作**建议性的** (suggestive)。在有可能的情况下，这些结果将需要进一步的研究来进行确认。一项研究的结果不够肯定，而汇总和多项研究的结果却是可以非常确定的。另外需要注意的一点是，无法拒绝零假设  (fail to reject the null hypothesis) 并不意味着接受零假设。另外，如果研究者通过提高样本量的方式来让统计效力保持不变，那么提高显著性水平并不会导致假阴性率的提高。
+```{r label = "Figure_1_09", echo = FALSE, fig.align = "center"}
+hh(m1 = 1.25, sig = 0.005, sigma = 2, n = 20)
+```
 
-对于大多数常见的统计分析而言，把显著性水平从 $\alpha=0.05$ 提高到 $\alpha=0.005$ 并且要保持 80% 的统计效力的话，样本量大约需要增加 70%。这就意味着目前实验设计和资金支持条件下，研究者能进行的研究数量将变少。但是，降低假阳性率的好处也是显而易见的：研究者将不需要投入大量资源去重复和验证前人发现的结果。
+此时，如果想保持原来的统计效力水平，研究者就需要提高研究的样本量（实际应用中，这将增加项目的研究成本）。如下图所示，如果我们把样本量增加 70%，检验的统计效力将恢复到 $1-\beta=0.80$ 的水平。
 
-- 第二、该建议没有解决多重假设检验 (multiple testing)、p值操控(p-hacking)、发表偏差 (publication bias)、统计效力过低 (underpowered)、以及其他偏差如变量混淆、选择性报告、测量错误等所导致的问题。
-
-提高显著性水平将是解决上述问题的补充而不是替代。提高研究可重复性的其他方法包括好的实验设计、预注册实验、ex ante power calculation 重复、清晰报告实验过程和实验分析方法等。
-
-- 第三、显著性水平应该随着研究领域的不同而不同。
-
-的确，一项研究显著性水平的选择应该受研究的先验概率、被检验假设的数量、实验设计、I 类和  II 类错误的后果、及其他因素的影响。
-对于某些先验概率非常低 (远超出图 2 所表示的范围) 的探索性研究而言，研究者需要远比 0.005 更为严苛的显著性水平。 遗传学研究领域的科学家正是因为认识到了这一问题，才在十年前就把基因研究领域的显著性水平确定为 $5\times 10^{-8}$。高能物理研究领域的研究者也在很早前就确定了显著性水平的五个标准差原则 (5-sigma)，即显著性水平大约为 $P < 3\times 10^{-7}$。
-
-本文的建议仅涉及图 2 可描述的相关研究领域，即先验概率处于$1/5 - 1/40$ 之间，传统上把显著性水平定义在 $P < 0.05$ 的研究领域。在这些领域中，研究者应该把显著性水平从两个标准差原则提高到三个标准差原则。
-
-- 第四、提高显著性水平标准将影响对问题解决的真正方案的探索。而真正的解决方案将通过强调效应值大小、置信区间、把 P 值看成一个连续测量、和贝叶斯方法等，来逐步代替零假设的显著性检验。
-
-大部分研究者都同意我们需要更合适的统计方法，但是对于什么是更好的替代品这个问题，研究者并没有达成一致。
+```{r label = "Figure_1_10", echo = FALSE, fig.align = "center"}
+hh(m1 = 1.25, sig = 0.005, sigma = 2, n = 20 * 1.7 )
+```
 
 # 5. 总结
 
-对继续使用零假设的显著性检验的科学团体而言，把显著性水平的标准提高到 0.005的水平是非常容易操作的，而该改变将极大地提高科学研究的可重复性。
+如前所述，提高假设检验中的统计显著性水平能显著提高统计检验的贝叶斯因子水平、显著降低统计检验的假阳性率。在实践中，提高统计显著性水平也能显著提高科学研究的可重复性 (Benjamin et al., 2017)。正是基于上述原因，目前有 72 为统计学家联名发文希望在传统上使用两个标准差 ($\alpha = .05$) 作为显著性水平的研究领域应该把显著性水平提高到三个标准差 ($\alpha = .005$) (Benjamin et al., 2017)。
 
-在此，研究者强调，这项提议是关于**证据强度的标准** (stabdard of evidence)，而不是关于政策制定和出版与否的标准。如果一项研究考察的是重要的科学问题，而且使用了严格的科学方法，那么无论结果是否达到了统计的显著性水平，这种研究都是重要的，都应该在顶级期刊上得到发表。这项提议不应该被用来作为拒绝研究结果发表的理由，尤其是当一项研究把显著性水平位于 $0.005 < P < 0.05$ 之间的结果正确地标记为了*建议性的*证据的时候。在提高统计显著性标准的同时，我们应该对高质量和高透明度的研究予以奖励，并把对研究者行为的影响降为最低。否则的话，显著性水平的提高将会影响到研究的质量和透明度。
+在某些先验概率非常低的探索性研究领域，研究者需要远比 0.005 更为严苛的显著性水平。如通常认为基因和高能物理研究领域的显著性水平应该符合五个标准差原则 (5-sigma)，即显著性水平大约为 $P < 3\times 10^{-7}$。
+
+提高统计的显著性水平并不是解决研究可重复性问题的唯一方法。其他可能的解决方案包括选择更为合适的统计方法，如模型比较和贝叶斯学习等、更周到的实验设计、预实验等等。当然，改变 *P*-值的显著性水平最为直接和最为简单的方法。
 
 # 6. 参考文献
 
+Altman, N., & Krzywinski, M. (2017). Points of Significance: Interpreting P values. *Nature Methods, 14*(3), 213-214. doi:10.1038/nmeth.4210
 
-1). Benjamin, D. J., et al.,. (2017). Redefine Statistical Significance. *Nature Human Behavior*. doi: http://osf.io/preprints/psyarxiv/mky9j
+Benjamin, D. J., et al.,. (2017). Redefine Statistical Significance. *Nature Human Behavior*. doi: http://osf.io/preprints/psyarxiv/mky9j
 
-2). Berger, J. O., & Sellke, T. (1987). Testing a Point Null Hypothesis: The Irreconcilability of P Values and Evidence. Journal of the American Statistical Association, 82(397), 112-122. 
+Berger, J. O., & Sellke, T. (1987). Testing a Point Null Hypothesis: The Irreconcilability of P Values and Evidence. *Journal of the American Statistical Association, 82*(397), 112-122. 
 
-3). Chawla, D. S. (2017). P-value shake-up proposed. *Nature, 548*, 16-17. doi:10.1038/nature.2017.22375
+Chawla, D. S. (2017). P-value shake-up proposed. *Nature, 548*, 16-17. doi:10.1038/nature.2017.22375
 
-4). Johnson, V. E. (2013). Revised standards for statistical evidence. *Proceedings of the National Academy of Sciences of the United States of America, 110*(48), 19313-19317. doi:10.1073/pnas.1313476110
+Johnson, V. E. (2013). Revised standards for statistical evidence. *Proceedings of the National Academy of Sciences of the United States of America, 110*(48), 19313-19317. doi:10.1073/pnas.1313476110
 
-5). Kass, R. E., & Raftery, A. E. (1995). Bayes Factors. *Journal of the American Statistical Association, 90*(430), 773-795. doi:10.1080/01621459.1995.10476572
+Kass, R. E., & Raftery, A. E. (1995). Bayes Factors. *Journal of the American Statistical Association, 90*(430), 773-795. doi:10.1080/01621459.1995.10476572
 
-6). Sellke, T., Bayarri, M. J., & Berger, J. O. (2001). Calibration of  p Values for Testing Precise Null Hypotheses. *The American Statistician, 55*(1), 62-71. doi:10.1198/000313001300339950
+Nuzzo, B. (2014). Statistical errors. *Nature, 506*, 150-152. doi:http://doi.org/10.1038/506150a
+
+Sellke, T., Bayarri, M. J., & Berger, J. O. (2001). Calibration of  p Values for Testing Precise Null Hypotheses. *The American Statistician, 55*(1), 62-71. doi:10.1198/000313001300339950
+
+Wasserstein, R. L., & Lazar, N. A. (2016). The ASA‘s Statement on p-Values: Context, Process, and Purpose. *The American Statistician, 70*(2), 129-133. doi:10.1080/00031305.2016.1154108
