@@ -58,7 +58,7 @@ OS: Windows 7 64-bit
   
 R: 2.13.1 32-bit
 
-在 R 中，每一个 numeric 数 占用 8 Bytes，所以可以估算到 x 和 y 只是占用 5000000  _7_ 8 / 1024 ^ 2 Bytes = 267 MB，离运行的电脑的内存 2 GB 差很远。问题在于，运行 `lm()` 函数会生成很多额外的变量塞满内存。比如说拟合值和残差。
+在 R 中，每一个 numeric 数 占用 8 Bytes，所以可以估算到 x 和 y 只是占用 `5000000  \*7\* 8 / 1024 ^ 2 Bytes = 267 MB`，离运行的电脑的内存 2 GB 差很远。问题在于，运行 `lm()` 函数会生成很多额外的变量塞满内存。比如说拟合值和残差。
 
 如果我们只是关心回归的系数，我们可以直接用矩阵运算来计算 `$\hat{\beta}$` ：
 
@@ -66,7 +66,7 @@ R: 2.13.1 32-bit
 beta.hat = solve(t(x) %*% x, t(x) %*% y);
 ```
 
-在本文运行的计算机中，这个命令成功执行，而且很快（0.6秒）（我使用了一个优化版本的 Rblas, [下载](https://bitbucket.org/yixuan/cn/downloads/gotoblas2.zip)）。然而，如果样本变得更加大了，这个矩阵运算也会变得不可用。可以估算出，如果样本大小为 2GB / 7 / 8 Bytes = 38347922 ，x 和 y 自己就会占用了全部内存，更不要说其他计算过程中出现的临时变量了。
+在本文运行的计算机中，这个命令成功执行，而且很快（0.6秒）（我使用了一个优化版本的 Rblas, [下载](https://bitbucket.org/yixuan/cn/downloads/gotoblas2.zip)）。然而，如果样本变得更加大了，这个矩阵运算也会变得不可用。可以估算出，如果样本大小为 `2GB / 7 / 8 Bytes = 38347922` ，x 和 y 自己就会占用了全部内存，更不要说其他计算过程中出现的临时变量了。
 
 怎么破？
 
@@ -111,11 +111,11 @@ gc();
 
 `$$\hat{\beta}=(X’X)^{-1}X’y$$`
 
-而且，无论 `$n$` 有多大，`$X’X$` 和 `$X’y$` 的大小总是 `$(p+1)*(p+1)$` 。如果变量不是很多，R 处理矩阵逆和矩阵乘法还是很轻松的，所以我们的主要目标是用 SQL 来计算 `$X’X$` 和 `$X’y$` 。
+而且，无论 `$n$` 有多大，`$X’X$` 和 `$X’y$` 的大小总是 `$(p+1)\times (p+1)$` 。如果变量不是很多，R 处理矩阵逆和矩阵乘法还是很轻松的，所以我们的主要目标是用 SQL 来计算 `$X’X$` 和 `$X’y$` 。
 
-由于 `$X=(x_0,x_1,…,x_p)$`，所以 `$X’X$` 可以表达为：
+由于 `$X=(\mathbf{x_0},\mathbf{x_1},…,\mathbf{x_p})$`，所以 `$X’X$` 可以表达为：
 
-`$$%  \left(\begin{array}{cccc}\mathbf{x_{0}'x_{0}} & \mathbf{x_{0}'x_{1}} & \ldots & \mathbf{x_{0}'x_{p}}\\\mathbf{x_{1}'x_{0}} & \mathbf{x_{1}'x_{1}} & \ldots & \mathbf{x_{1}'x_{p}}\\\vdots & \vdots & \ddots & \vdots\\\mathbf{x_{p}'x_{0}} & \mathbf{x_{p}'x_{1}} & \ldots & \mathbf{x_{p}'x_{p}}\end{array}\right) %$$`
+`$$  \left(\begin{array}{cccc}\mathbf{x_{0}'x_{0}} & \mathbf{x_{0}'x_{1}} & \ldots & \mathbf{x_{0}'x_{p}}\\\mathbf{x_{1}'x_{0}} & \mathbf{x_{1}'x_{1}} & \ldots & \mathbf{x_{1}'x_{p}}\\\vdots & \vdots & \ddots & \vdots\\\mathbf{x_{p}'x_{0}} & \mathbf{x_{p}'x_{1}} & \ldots & \mathbf{x_{p}'x_{p}}\end{array}\right) $$`
 
 而每一个矩阵元素都可以用 SQL 来计算，比如说：
 
