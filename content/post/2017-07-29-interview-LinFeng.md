@@ -6,7 +6,7 @@ date: "2017-07-29"
 categories:
   - COS访谈
 tags: [COS访谈、R会议]
-forum_id:419329
+forum_id: 419329
 slug: interview-linfeng
 meta_extra: 审稿：  ٩͡[๏̯͡๏]۶ ；编辑：杨舒仪
 ---
