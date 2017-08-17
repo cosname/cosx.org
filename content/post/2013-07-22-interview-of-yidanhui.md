@@ -5,8 +5,7 @@ author:
   - 易丹辉
   - 陈堰平
 categories:
-  - 新闻动态
-  - 职业事业
+  - COS访谈
 tags:
   - COS访谈
   - 数据科学

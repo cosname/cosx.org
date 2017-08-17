@@ -3,8 +3,7 @@ title: 一起来投SCI吧：谈谈我的第一篇JSS论文
 date: '2013-03-06T11:51:03+00:00'
 author: 主伟呈
 categories:
-  - 统计之都
-  - 统计刊物
+  - 统计软件
 tags:
   - JSS
   - SCI

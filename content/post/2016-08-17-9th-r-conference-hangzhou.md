@@ -3,7 +3,7 @@ title: 第九届中国R语言会议（杭州）
 date: '2016-08-17T13:54:21+00:00'
 author: 统计之都
 categories:
-  - 新闻动态
+  - R会议
 tags:
   - R语言
   - R语言会议

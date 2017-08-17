@@ -6,7 +6,7 @@ author:
   - 潘蕊
   - 黄亮
 categories:
-  - COS访谈
+  - 统计应用
 tags:
   - Logistic回归模型
   - UBI车险

@@ -5,8 +5,7 @@ author:
   - 谢梁
   - 谢益辉
 categories:
-  - 新闻动态
-  - 职业事业
+  - COS访谈
 tags:
   - COS访谈
   - R语言

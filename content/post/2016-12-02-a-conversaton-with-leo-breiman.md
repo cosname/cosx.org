@@ -5,7 +5,7 @@ author:
   - Leo Breiman
   - Richard Olshen
 categories:
-  - COS访谈
+  - 统计之都
 tags:
   - breiman
   - 数据科学

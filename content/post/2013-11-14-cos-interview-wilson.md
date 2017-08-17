@@ -5,9 +5,7 @@ author:
   - 逄伟
   - 陈丽云
 categories:
-  - 推荐文章
-  - 统计之都
-  - 职业事业
+  - COS访谈
 tags:
   - COS访谈
   - 数据科学
