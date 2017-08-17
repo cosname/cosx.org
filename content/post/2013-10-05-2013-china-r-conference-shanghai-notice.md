@@ -3,7 +3,7 @@ title: 第六届中国R语言会议（上海会场）通知
 date: '2013-10-05T16:22:51+00:00'
 author: 李舰
 categories:
-  - 新闻动态
+  - R会议
 slug: 2013-china-r-conference-shanghai-notice
 forum_id: 418973
 ---
