@@ -4,7 +4,6 @@ date: '2008-11-24T21:07:35+00:00'
 author: 谢益辉
 categories:
   - R会议
-  - 新闻动态
 tags:
   - R语言
   - R语言会议
