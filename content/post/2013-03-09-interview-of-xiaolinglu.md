@@ -5,8 +5,7 @@ author:
   - 吕晓玲
   - 潘岚锋
 categories:
-  - 新闻动态
-  - 职业事业
+  - COS访谈
 tags:
   - COS访谈
   - 人民大学统计学院
