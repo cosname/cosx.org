@@ -4,7 +4,6 @@ date: '2015-04-07T15:14:01+00:00'
 author: 统计之都
 categories:
   - R会议
-  - 新闻动态
 slug: 8th-r-conference-guangzhou
 forum_id: 419072
 ---
