@@ -5,8 +5,7 @@ author:
   - 霍志骥
   - 统计之都
 categories:
-  - 新闻动态
-  - 软件应用
+  - R会议
 tags:
   - R语言
   - R语言会议
