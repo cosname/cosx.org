@@ -1,6 +1,6 @@
 ---
 title: Julia 中的分布式计算
-author: 张弛原
+author: 张驰原
 date: '2017-08-18'
 slug: distributed-learning-in-julia
 categories:
