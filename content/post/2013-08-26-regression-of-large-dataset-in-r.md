@@ -119,7 +119,7 @@ gc();
 
 而每一个矩阵元素都可以用 SQL 来计算，比如说：
 
-```
+```sql
 select sum(x0 * x0), sum(x0 * x1) from regdata;
 ```
 
