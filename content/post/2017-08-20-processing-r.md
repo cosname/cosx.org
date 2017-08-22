@@ -10,7 +10,6 @@ tags:
   - 新媒体艺术
   - 可视化
 slug: processing-r
-forum_id: #TODO
 ---
 
 ![processing.r](https://github.com/gaocegege/Processing.R/raw/master/raw-docs/img/logo/logo.png)
