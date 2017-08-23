@@ -115,7 +115,7 @@ tulips  | 799
     	├── vgg16.npy
     	└── ...
 
-然后把需要用的python module都import进来
+然后导入需要用的python模块
 
 ```python
 import os
