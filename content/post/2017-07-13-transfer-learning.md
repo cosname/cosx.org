@@ -67,7 +67,7 @@ VGG16模型可以通过[这里下载](https://mega.nz/#!YU1FWJrA!O1ywiCS2IiOlUCt
 
 # Max Pooling和Drop out
 
-最大池化和Drop out都是卷积神经网络中常用的技巧，他们的原理都非常简单，最大池化既是一个滤波器，该滤波器按照一定的步长把一个区域内的值选出一个最大值作为这个区域的代表值。如下图所示：
+最大池化和Drop out都是卷积神经网络中常用的技巧，他们的原理都非常简单，最大池化是一个滤波器，该滤波器按照一定的步长把一个区域内的值选出一个最大值作为这个区域的代表值。如下图所示：
 
 ![pooling](https://user-images.githubusercontent.com/18478302/28164669-fdffd150-6802-11e7-98d1-24603f1a1383.png)
 
