@@ -7,7 +7,6 @@ categories:
   - 统计之都
   - 统计图形
   - 统计软件
-  - 软件应用
 tags:
   - ggtree
   - 可视化

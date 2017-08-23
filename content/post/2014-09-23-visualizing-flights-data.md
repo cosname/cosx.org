@@ -5,7 +5,6 @@ author: 李根
 categories:
   - 统计图形
   - 统计软件
-  - 软件应用
 tags:
   - 可视化
   - 地图

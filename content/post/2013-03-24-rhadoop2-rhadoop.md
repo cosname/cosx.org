@@ -3,7 +3,7 @@ title: RHadoop实践系列之二：RHadoop安装与使用
 date: '2013-03-24T21:59:56+00:00'
 author: 张丹
 categories:
-  - 软件应用
+  - 统计软件
 tags:
   - hadoop
   - MapReduce

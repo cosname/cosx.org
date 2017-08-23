@@ -5,7 +5,6 @@ author:
   - 任坤
 categories:
   - 统计软件
-  - 软件应用
 tags:
   - dplyr
   - pipeline
@@ -13,8 +12,8 @@ tags:
   - R语言
   - 管道
 slug: use-pipeline-operators-in-r
+meta_extra: 译者：高涛
 forum_id: 419017
-meta_extra: "译者：高涛"
 ---
 
   * 原文作者：[任坤](http://renkun.me/)，厦门大学王亚南经济研究院金融硕士生，研究兴趣为计算统计和金融量化交易。

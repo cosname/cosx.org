@@ -3,7 +3,7 @@ title: R利剑NoSQL系列文章 之 Redis
 date: '2013-04-18T12:00:50+00:00'
 author: 张丹
 categories:
-  - 软件应用
+  - 统计软件
 tags:
   - nosql
   - redis

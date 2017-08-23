@@ -5,7 +5,7 @@ author: 贺诗源
 categories:
   - 统计计算
   - 统计图形
-  - 软件应用
+  - 统计软件
 tags:
   - igraph
   - 图模型

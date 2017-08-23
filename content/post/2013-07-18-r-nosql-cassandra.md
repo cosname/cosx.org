@@ -4,7 +4,6 @@ date: '2013-07-18T18:05:14+00:00'
 author: 张丹
 categories:
   - 统计软件
-  - 软件应用
 tags:
   - Cassandra
   - nosql

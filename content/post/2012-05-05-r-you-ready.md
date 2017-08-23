@@ -5,7 +5,6 @@ author: 刘思喆
 categories:
   - 推荐文章
   - 统计软件
-  - 软件应用
 tags:
   - GNU
   - John M. Chambers

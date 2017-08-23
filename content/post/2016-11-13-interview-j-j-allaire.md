@@ -7,15 +7,15 @@ author:
 categories:
   - 统计之都
   - 职业事业
-  - 软件应用
+  - 统计软件
 tags:
   - COS访谈
   - J.J. Allaire
   - RStudio
   - R语言
 slug: interview-j-j-allaire
+meta_extra: 译者：王佳；审校：谢益辉、王小宁；编辑：丁维悦
 forum_id: 419170
-meta_extra: "译者：王佳；审校：谢益辉、王小宁；编辑：丁维悦"
 ---
 
 本文是一篇Joseph B. Rickert（简称JBR）对J.J. Allaire（RStudio的创始人和首席执行官）的采访稿，[原文在此](https://www.rstudio.com/rviews/2016/10/12/interview-with-j-j-allaire/)。统计之都与作者沟通后得到授权将其翻译为中文，希望可以让广大读者能够更多了解在R的世界中这个叫RStudio的地方。在这次采访中讨论了RStudio的历史、使命和J.J.的未来愿景。 短暂的交谈中讨论了各种各样的主题，包括RStudio的业务、R语言的发展、R联盟对R社群的重要性以及J.J.对R新手们的建议。

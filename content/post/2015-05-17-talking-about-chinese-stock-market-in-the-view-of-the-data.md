@@ -11,10 +11,10 @@ author:
 categories:
   - 统计图形
   - 新闻动态
-  - 软件应用
+  - 统计软件
 slug: talking-about-chinese-stock-market-in-the-view-of-the-data
-forum_id: 419081
 meta_extra: 编辑：王小宁
+forum_id: 419081
 ---
 
 本期投稿： [邓一硕](http://yishuo.org/) 朱雪宁 冯凌秉 [谢益辉](http://yihui.name/) [何通](https://github.com/hetong007)  [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)

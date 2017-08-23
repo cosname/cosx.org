@@ -5,7 +5,6 @@ author: 何通
 categories:
   - 统计图形
   - 统计软件
-  - 软件应用
 tags:
   - animation
   - ggplot2

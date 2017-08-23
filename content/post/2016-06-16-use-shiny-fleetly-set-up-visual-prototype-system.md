@@ -5,7 +5,6 @@ author: 谢佳标
 categories:
   - 统计图形
   - 统计软件
-  - 软件应用
 tags:
   - shiny包
   - 可视化原型系统

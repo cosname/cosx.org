@@ -5,7 +5,6 @@ author: 肖凯
 categories:
   - 统计图形
   - 统计软件
-  - 软件应用
 tags:
   - ggplot2
   - RCurl

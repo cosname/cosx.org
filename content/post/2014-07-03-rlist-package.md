@@ -4,7 +4,6 @@ date: '2014-07-03T09:51:55+00:00'
 author: 任坤
 categories:
   - 统计软件
-  - 软件应用
 tags:
   - rlist
   - 非关系型数据

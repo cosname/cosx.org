@@ -6,7 +6,6 @@ categories:
   - 统计应用
   - 机器学习
   - 统计软件
-  - 软件应用
 tags:
   - RCurl
   - ROAuth

@@ -5,7 +5,6 @@ author: 黄俊文
 categories:
   - 统计之都
   - 统计软件
-  - 软件应用
 tags:
   - R包
   - R文档

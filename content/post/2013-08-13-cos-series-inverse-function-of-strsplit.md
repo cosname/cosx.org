@@ -4,7 +4,6 @@ date: '2013-08-13T12:30:53+00:00'
 author: 统计之都
 categories:
   - 统计软件
-  - 软件应用
 tags:
   - strplit
   - 字符串

@@ -5,7 +5,6 @@ author: 苏建冲
 categories:
   - 统计图形
   - 统计软件
-  - 软件应用
 tags:
   - ggmap
   - ggplot2

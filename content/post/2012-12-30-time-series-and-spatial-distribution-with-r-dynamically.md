@@ -5,7 +5,6 @@ author: 陈少飞
 categories:
   - 统计图形
   - 统计软件
-  - 软件应用
 tags:
   - 7-Eleven
   - animation

@@ -4,7 +4,7 @@ date: '2013-06-02T20:12:35+00:00'
 author: 朱雪宁
 categories:
   - 统计图形
-  - 软件应用
+  - 统计软件
 tags:
   - animation
   - ggmap

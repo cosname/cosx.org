@@ -4,7 +4,7 @@ date: '2015-11-24T10:41:34+00:00'
 author: 唐源
 categories:
   - 统计图形
-  - 软件应用
+  - 统计软件
 tags:
   - ggfortify
   - ggplot2
