@@ -3,7 +3,7 @@ title: 因果推断简介之一：从 Yule-Simpson’s Paradox 讲起
 date: '2012-03-26T10:04:14+00:00'
 author: 丁鹏
 categories:
-  - 统计推断
+  - 统计模型
 tags:
   - Causality Inference
   - Donald Rubin

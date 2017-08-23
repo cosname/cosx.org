@@ -3,8 +3,7 @@ title: 因果推断简介之二：Rubin Causal Model (RCM)和随机化试验
 date: '2012-03-28T11:48:23+00:00'
 author: 丁鹏
 categories:
-  - 经典理论
-  - 统计推断
+  - 统计模型
 tags:
   - Donald Rubin
   - RCM
