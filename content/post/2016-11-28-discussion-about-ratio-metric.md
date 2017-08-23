@@ -4,8 +4,6 @@ date: '2016-11-28T20:35:40+00:00'
 author: 陈丽云
 categories:
   - 统计应用
-  - 统计之都
-  - 统计推断
 slug: discussion-about-ratio-metric
 forum_id: 419174
 ---
