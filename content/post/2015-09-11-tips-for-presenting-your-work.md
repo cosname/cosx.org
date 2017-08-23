@@ -4,11 +4,6 @@ date: '2015-09-11T18:02:07+00:00'
 author: Dianne Cook
 categories:
   - 统计图形
-  - 推荐文章
-  - 经典理论
-  - 统计之都
-  - 统计软件
-  - 职业事业
 tags:
   - Dianne Cook
   - useR

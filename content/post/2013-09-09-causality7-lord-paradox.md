@@ -3,7 +3,7 @@ title: 因果推断简介之七：Lord’s Paradox
 date: '2013-09-09T19:00:58+00:00'
 author: 丁鹏
 categories:
-  - 经典理论
+  - 统计模型
 tags:
   - load paradox
   - 假设条件
