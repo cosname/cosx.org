@@ -3,7 +3,7 @@ title: 极简 R 包建立方法
 date: '2013-11-21T11:07:48+00:00'
 author: 黄俊文
 categories:
-  - 统计软件
+  - R语言
 tags:
   - R包
   - R文档

@@ -5,7 +5,6 @@ author: Dan Kopf
 categories:
   - 推荐文章
   - 统计图形
-  - 统计软件
 tags:
   - ggplot2
   - Hadley Wickham

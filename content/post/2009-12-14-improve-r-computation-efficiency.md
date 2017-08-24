@@ -4,7 +4,7 @@ date: '2009-12-14T16:38:22+00:00'
 author: 谢益辉
 categories:
   - 统计计算
-  - 统计软件
+  - R语言
 tags:
   - C/C++
   - P值

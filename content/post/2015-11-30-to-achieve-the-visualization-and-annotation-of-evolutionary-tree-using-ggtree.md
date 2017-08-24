@@ -5,7 +5,7 @@ author: 余光创
 categories:
   - 推荐文章
   - 统计图形
-  - 统计软件
+  - R语言
 tags:
   - ggtree
   - 可视化

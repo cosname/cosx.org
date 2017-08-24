@@ -4,7 +4,6 @@ date: '2013-01-11T09:01:53+00:00'
 author: 苏建冲
 categories:
   - 统计图形
-  - 统计软件
 tags:
   - ggmap
   - ggplot2

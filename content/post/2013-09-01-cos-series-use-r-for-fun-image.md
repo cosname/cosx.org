@@ -4,7 +4,7 @@ date: '2013-09-01T12:35:13+00:00'
 author: 刘辰昂
 categories:
   - 推荐文章
-  - 统计软件
+  - 统计图形
 tags:
   - biOps
   - EBImage

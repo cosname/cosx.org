@@ -4,7 +4,6 @@ date: '2016-06-05T14:18:51+00:00'
 author: 谢佳标
 categories:
   - 统计图形
-  - 统计软件
 tags:
   - dygraphs
   - ggplot2

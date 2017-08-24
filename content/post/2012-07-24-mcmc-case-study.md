@@ -4,7 +4,6 @@ date: '2012-07-24T14:49:32+00:00'
 author: Charles J. Geyer
 categories:
   - 统计计算
-  - 统计软件
 tags:
   - MCMC
   - R语言

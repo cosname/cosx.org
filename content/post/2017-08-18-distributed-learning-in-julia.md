@@ -3,6 +3,7 @@ title: Julia 中的分布式计算
 date: '2017-08-18'
 author: 张驰原
 categories:
+  - 统计计算
   - 统计软件
 tags:
   - Julia

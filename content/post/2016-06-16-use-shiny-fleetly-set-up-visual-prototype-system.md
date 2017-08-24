@@ -4,7 +4,6 @@ date: '2016-06-16T12:07:03+00:00'
 author: 谢佳标
 categories:
   - 统计图形
-  - 统计软件
 tags:
   - shiny包
   - 可视化原型系统

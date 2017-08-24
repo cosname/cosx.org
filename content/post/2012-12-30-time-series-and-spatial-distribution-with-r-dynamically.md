@@ -4,7 +4,6 @@ date: '2012-12-30T10:38:06+00:00'
 author: 陈少飞
 categories:
   - 统计图形
-  - 统计软件
 tags:
   - 7-Eleven
   - animation

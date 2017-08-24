@@ -4,7 +4,7 @@ date: '2014-04-24T12:00:17+00:00'
 author:
   - 任坤
 categories:
-  - 统计软件
+  - R语言
 tags:
   - dplyr
   - pipeline

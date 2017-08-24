@@ -4,7 +4,7 @@ date: '2017-02-13T13:17:47+00:00'
 author: 边蓓蕾
 categories:
   - 推荐文章
-  - 统计软件
+  - R语言
 tags:
   - 幻灯片
   - R Markdown

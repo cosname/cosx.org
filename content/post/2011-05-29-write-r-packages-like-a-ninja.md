@@ -3,7 +3,7 @@ title: 开发R程序包之忍者篇
 date: '2011-05-29T13:04:26+00:00'
 author: 谢益辉
 categories:
-  - 统计软件
+  - R语言
 tags:
   - Doxygen
   - Emacs

@@ -4,7 +4,6 @@ date: '2016-08-18T13:39:21+00:00'
 author: 谢益辉
 categories:
   - 统计图形
-  - 统计软件
 tags:
   - R语言
   - Shiny

@@ -3,7 +3,7 @@ title: R中面向对象编程方法
 date: '2009-07-04T11:13:09+00:00'
 author: 胡荣兴
 categories:
-  - 统计软件
+  - R语言
 tags:
   - R语言
   - S4
