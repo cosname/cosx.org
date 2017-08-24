@@ -6,8 +6,6 @@ author:
   - 门金生
   - 张帆
   - 赵和
-categories:
-  - 统计之都
 tags:
   - 分析报告
   - 国债收益率

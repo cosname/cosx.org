@@ -7,7 +7,6 @@ author:
   - 张文学
 categories:
   - 推荐文章
-  - 统计之都
 tags:
   - AHP 方法
   - sna

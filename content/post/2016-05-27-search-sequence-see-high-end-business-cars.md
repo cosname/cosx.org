@@ -1,11 +1,9 @@
 ---
 title: 从搜索序列文本看高端商务车
 date: '2016-05-27T14:20:54+00:00'
-author: 
+author:
   - 朱雪宁
   - 王汉生
-categories:
-  - 统计之都
 tags:
   - Logistic回归模型
   - 品牌忠诚度

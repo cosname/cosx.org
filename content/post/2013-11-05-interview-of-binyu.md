@@ -6,7 +6,6 @@ author:
   - 施涛
 categories:
   - 推荐文章
-  - 统计之都
   - 职业事业
 tags:
   - COS访谈

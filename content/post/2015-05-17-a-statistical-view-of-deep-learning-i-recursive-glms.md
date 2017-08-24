@@ -2,11 +2,9 @@
 title: 从统计学角度来看深度学习（1）：递归广义线性模型
 date: '2015-05-17T10:52:45+00:00'
 author: Shakir Mohamed
-categories:
-  - 统计之都
 slug: a-statistical-view-of-deep-learning-i-recursive-glms
+meta_extra: 翻译：王小宁；审校：冯凌秉、朱雪宁；编辑：王小宁
 forum_id: 419080
-meta_extra: "翻译：王小宁；审校：冯凌秉、朱雪宁；编辑：王小宁"
 ---
 
 原文链接：[http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/](http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/)

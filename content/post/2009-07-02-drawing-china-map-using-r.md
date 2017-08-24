@@ -4,7 +4,6 @@ date: '2009-07-02T13:25:03+00:00'
 author: 邱怡轩
 categories:
   - 推荐文章
-  - 统计之都
   - 统计软件
 tags:
   - GIS数据

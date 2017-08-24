@@ -7,7 +7,6 @@ author:
 categories:
   - 推荐文章
   - 统计应用
-  - 统计之都
 tags:
   - 推荐系统
   - 新闻推荐

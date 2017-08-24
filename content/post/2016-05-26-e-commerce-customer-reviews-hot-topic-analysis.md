@@ -7,7 +7,6 @@ author:
   - 方匡南
 categories:
   - 推荐文章
-  - 统计之都
 tags:
   - 文本分析
   - 热点话题

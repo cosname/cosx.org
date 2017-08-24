@@ -2,8 +2,6 @@
 title: 第二届中国贝叶斯统计学术论坛（天津，2014）会议纪要
 date: '2015-01-08T08:54:09+00:00'
 author: 统计之都
-categories:
-  - 统计之都
 slug: second_china_bayesian_statistics_conference_2014_review
 forum_id: 419056
 ---

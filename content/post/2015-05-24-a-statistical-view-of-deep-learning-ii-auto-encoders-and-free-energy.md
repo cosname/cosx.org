@@ -4,10 +4,9 @@ date: '2015-05-24T23:09:24+00:00'
 author: Shakir Mohamed
 categories:
   - 推荐文章
-  - 统计之都
 slug: a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy
+meta_extra: 译者：钟琰；审校：何通；编辑：王小宁
 forum_id: 419083
-meta_extra: "译者：钟琰；审校：何通；编辑：王小宁"
 ---
 
 原文链接：[http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/](http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/)

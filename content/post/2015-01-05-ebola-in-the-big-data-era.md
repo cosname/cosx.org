@@ -6,8 +6,6 @@ author:
   - 邓一硕
   - 刘辰昂
   - 关菁菁
-categories:
-  - 统计之都
 slug: ebola-in-the-big-data-era
 forum_id: 419055
 ---

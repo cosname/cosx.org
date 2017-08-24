@@ -4,8 +4,6 @@ date: '2016-12-02T12:01:16+00:00'
 author:
   - Leo Breiman
   - Richard Olshen
-categories:
-  - 统计之都
 tags:
   - breiman
   - 数据科学
@@ -13,8 +11,8 @@ tags:
   - 统计学
   - 统计计算
 slug: a-conversaton-with-leo-breiman
-forum_id: 419175
 meta_extra: 翻译：张晔、成慧敏、李宇轩；审稿：高涛、侯澄钧、丁鹏、魏太云；编辑：王佳、杨舒仪
+forum_id: 419175
 ---
 
 > COS编辑部按：本文是一篇Richard Olshen对Leo Breiman的采访稿（[原文发表在Statistical Science](http://projecteuclid.org/download/pdf_1/euclid.ss/1009213290)）。翻译工作已经得到作者授权。翻译: 张晔、成慧敏、李宇轩。审校：高涛、侯澄钧、丁鹏、魏太云。此外，郑重感谢施涛、丁鹏、郁彬老师为文章的翻译指导和版权沟通提供的帮助。

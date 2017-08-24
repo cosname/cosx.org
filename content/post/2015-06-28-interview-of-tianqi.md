@@ -4,8 +4,6 @@ date: '2015-06-28T15:48:28+00:00'
 author:
   - 陈天奇
   - 何通
-categories:
-  - 统计之都
 tags:
   - COS访谈
   - dmlc
@@ -15,8 +13,8 @@ tags:
   - 机器学习
   - 陈天奇
 slug: interview-of-tianqi
+meta_extra: 编辑：王小宁
 forum_id: 419088
-meta_extra: "编辑：王小宁"
 ---
 
 【COS编辑部按】受访者：[陈天奇](http://homes.cs.washington.edu/~tqchen/) 采访者：何通

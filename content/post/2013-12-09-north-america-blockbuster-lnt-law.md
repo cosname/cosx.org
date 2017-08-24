@@ -8,8 +8,6 @@ author:
   - 吕俊杰
   - 祁自帅
   - 刘哲
-categories:
-  - 统计之都
 tags:
   - 分析报告
   - 北美大片

@@ -11,7 +11,6 @@ author:
   - 周祺
 categories:
   - 推荐文章
-  - 统计之都
 tags:
   - 众包
   - 可视化

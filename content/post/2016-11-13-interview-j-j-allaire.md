@@ -5,7 +5,6 @@ author:
   - J.J. Allaire
   - Joseph B. Rickert
 categories:
-  - 统计之都
   - 职业事业
   - 统计软件
 tags:

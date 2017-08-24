@@ -4,7 +4,6 @@ date: '2015-08-25T00:25:22+00:00'
 author: 唐源
 categories:
   - 推荐文章
-  - 统计之都
   - 统计软件
 tags:
   - lfda 包
@@ -13,8 +12,8 @@ tags:
   - 核局部Fisher判别分析
   - 算法说明
 slug: a-brief-description-of-the-method-and-the-algorithm-of-the-lfda-package
+meta_extra: 编辑：王小宁
 forum_id: 419092
-meta_extra: "编辑：王小宁"
 ---
 
 作者： 唐源（Yuan Tang）
