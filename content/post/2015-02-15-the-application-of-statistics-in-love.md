@@ -6,8 +6,7 @@ author:
   - 朱雪宁
   - 王小宁
 categories:
-  - 推荐文章
-  - 新闻动态
+  - 统计应用
 slug: the-application-of-statistics-in-love
 forum_id: 419062
 meta_extra: 编辑：王小宁

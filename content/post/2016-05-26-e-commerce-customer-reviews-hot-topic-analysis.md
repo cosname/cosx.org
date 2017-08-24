@@ -6,7 +6,7 @@ author:
   - 郭鹏
   - 方匡南
 categories:
-  - 推荐文章
+  - 统计应用
 tags:
   - 文本分析
   - 热点话题

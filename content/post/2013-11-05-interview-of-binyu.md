@@ -5,8 +5,7 @@ author:
   - 郁彬
   - 施涛
 categories:
-  - 推荐文章
-  - 职业事业
+  - COS访谈
 tags:
   - COS访谈
   - 学习经历

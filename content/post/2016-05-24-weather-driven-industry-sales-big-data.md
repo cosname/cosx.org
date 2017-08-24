@@ -8,7 +8,7 @@ author:
   - 周翔
   - 李昶
   - 王学钦
-categories;
+categories:
   - 统计应用
 tags:
   - 大数据分析

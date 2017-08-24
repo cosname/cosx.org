@@ -5,7 +5,6 @@ author:
   - 周静
   - 朱雪宁
 categories:
-  - 推荐文章
   - 统计应用
 tags:
   - 推荐系统

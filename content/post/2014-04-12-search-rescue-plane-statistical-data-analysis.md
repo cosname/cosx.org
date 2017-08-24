@@ -10,7 +10,7 @@ author:
   - 熊熹
   - 周祺
 categories:
-  - 推荐文章
+  - 统计应用
 tags:
   - 众包
   - 可视化

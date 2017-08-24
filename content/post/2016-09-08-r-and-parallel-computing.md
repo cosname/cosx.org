@@ -3,8 +3,8 @@ title: R与并行计算
 date: '2016-09-08T23:40:01+00:00'
 author: 赵鹏
 categories:
-  - 推荐文章
-  - 统计软件
+  - R语言
+  - 统计计算
 tags:
   - R并行计算
   - 并行计算
@@ -64,12 +64,12 @@ OpenMP是一种基于共享内存的多线程库，主要用于单节点上应�
 ```r
 #comparison of single thread and multiple threads run
 for(i in 6:11) {
-    ORDER <- 2^i
-    m <- matrix(rnorm(ORDER*ORDER),ORDER,ORDER)
-    .Internal(setMaxNumMathThreads(1)); .Internal(setNumMathThreads(1)); res <- system.time(d <- dist(m))
-    print(res)
-    .Internal(setMaxNumMathThreads(20)); .Internal(setNumMathThreads(20)); res <- system.time(d <- dist(m))
-    print(res)
+    ORDER <- 2^i
+    m <- matrix(rnorm(ORDER*ORDER),ORDER,ORDER)
+    .Internal(setMaxNumMathThreads(1)); .Internal(setNumMathThreads(1)); res <- system.time(d <- dist(m))
+    print(res)
+    .Internal(setMaxNumMathThreads(20)); .Internal(setNumMathThreads(20)); res <- system.time(d <- dist(m))
+    print(res)
 }
 ```              
 

@@ -6,7 +6,6 @@ author:
   - 常象宇
 categories:
   - COS访谈
-  - 推荐文章
 tags:
   - COS访谈
   - ESL

@@ -6,7 +6,7 @@ author:
   - 唐晓密
   - 张文学
 categories:
-  - 推荐文章
+  - 统计应用
 tags:
   - AHP 方法
   - sna

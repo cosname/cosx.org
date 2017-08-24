@@ -7,10 +7,7 @@ author:
   - 蔡占锐
   - 王小宁
 categories:
-  - 统计图形
-  - 推荐文章
   - 新闻动态
-  - 职业事业
 slug: the-material-of-data-science-for-the-vacation
 forum_id: 419057
 meta_extra: 编辑：王小宁

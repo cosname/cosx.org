@@ -3,7 +3,7 @@ title: COS访谈第16期——加州大学戴文斯分校蔡知令教授
 date: '2014-07-17T15:29:56+00:00'
 author: 朱雪宁
 categories:
-  - 推荐文章
+  - COS访谈
 tags:
   - COS访谈
 slug: cos-interview-16-chih-ling-tsai
