@@ -6,7 +6,6 @@ author:
   - 王威廉
   - 王小宁
 categories:
-  - 统计图形
   - 新闻动态
 slug: the-story-about-statistics
 forum_id: 419060
@@ -20,7 +19,7 @@ meta_extra: 编辑：王小宁
 
 
 
-# 数据分析 
+# 数据分析
 
 怎么分析原始的数据？预处理大数据时需要注意什么？从编程的角度看，有什么有效方法？Rochester助理教授Philip Guo写了一篇不错的[博文](http://pgbovine.net/parsing-raw-data.htm)，介绍了不少关于分析数据的实际建议。
 

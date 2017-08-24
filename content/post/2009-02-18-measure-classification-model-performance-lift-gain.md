@@ -4,7 +4,6 @@ date: '2009-02-18T17:38:59+00:00'
 author: 胡江堂
 categories:
   - 机器学习
-  - 统计图形
 tags:
   - Confusion Matrix
   - Gain

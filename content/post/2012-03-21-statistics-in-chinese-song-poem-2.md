@@ -5,7 +5,6 @@ author: 邱怡轩
 categories:
   - 统计应用
   - 统计图形
-  - 统计软件
 tags:
   - 双向聚类
   - 可视化

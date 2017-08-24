@@ -9,25 +9,23 @@ author:
   - 何通
   - 冷静
 categories:
-  - 统计图形
   - 新闻动态
-  - 统计软件
 slug: talking-about-chinese-stock-market-in-the-view-of-the-data
 meta_extra: 编辑：王小宁
 forum_id: 419081
 ---
 
-本期投稿： [邓一硕](http://yishuo.org/) 朱雪宁 冯凌秉 [谢益辉](http://yihui.name/) [何通](https://github.com/hetong007)  [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)
+本期投稿： [邓一硕](http://yishuo.org/) 朱雪宁 冯凌秉 [谢益辉](http://yihui.name/) [何通](https://github.com/hetong007) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0)
 
 中国系统性金融风险有多大？近期中国股市表现抢眼，不少人开始担心金融风险，在纽约大学Stern商学院计算的国家金融系统性风险中，中国的系统性风险创出新高，相关链接[请戳](http://vlab.stern.nyu.edu/welcome/risk/)。测算方案简单明了：假定股票市场半年内下跌40%，需要注入多少资金才能避免金融机构资不抵债。参考论文。
 
-摩尔定律大家都很熟悉，但你知道吗，生命复杂度方面也有类似的“摩尔定律”。美国巴尔的摩老化研究中心的研究人员发现，从最初的原核生物到哺乳动物之间，每隔3.76亿年生命复杂度就会翻一番。也就是说，生物复杂度的摩尔周期是3.76亿年。 [详情猛戳](http://www.technologyreview.com/view/513781/moores-law-and-the-origin-of-life/)。
+摩尔定律大家都很熟悉，但你知道吗，生命复杂度方面也有类似的“摩尔定律”。美国巴尔的摩老化研究中心的研究人员发现，从最初的原核生物到哺乳动物之间，每隔3.76亿年生命复杂度就会翻一番。也就是说，生物复杂度的摩尔周期是3.76亿年。[详情猛戳](http://www.technologyreview.com/view/513781/moores-law-and-the-origin-of-life/)。
 
 <!--more-->
 
 # 可视化
 
-How old are you?微软近日发布的[年龄分析网站](http://www.how-old.net/)风靡一时，来看看你是不是长得着急了？用完美颜别忘了看看背后的[黑魔法](http://blog.how-old.net/)。
+How old are you?微软近日发布的[年龄分析网站](http://www.how-old.net/)风靡一时，来看看你是不是长得着急了？用完美颜别忘了看看背后的[黑魔法](http://blog.how-old.net/)。
 
 # 新书速递
 

@@ -3,9 +3,7 @@ title: 议员是如何投票的？
 date: '2012-03-03T14:40:49+00:00'
 author: 贺诗源
 categories:
-  - 统计计算
-  - 统计图形
-  - 统计软件
+  - 统计模型
 tags:
   - igraph
   - 图模型
@@ -84,7 +82,7 @@ forum_id: 418861
 针对此最优化问题，Yuan and Lin(2007)通过maxdet最优化算法求解，banerjee(2007)则借用内点搜索方法(interior point method)，此外Friedman(2007)则将它转化为Lasso 的表达形式再通过shooting 算法求解。还有一类算法是从贝叶斯角度考虑，Bayesian Graphical Lasso,思想很像 Bayesian Lasso.
 
 
-   求解（1）式，得到`$\Omega$`矩阵，它的非零元素便对应“投票图”中的一条边。
+求解（1）式，得到`$\Omega$`矩阵，它的非零元素便对应“投票图”中的一条边。
    
 
 # 三、数据与代码
@@ -124,5 +122,5 @@ plot(g,layout=layout.fruchterman.reingold, edge.color=grey(0.5),vertex.size=10)
   1. Yuan, M., and Lin, Y. (2007) Model selection and estimation in the Gaussian graphical model. _Biometrika_ , 94, 1, pp. 19–35
   2. Friedman, J. H., Hastie T, Tibshirani R. “Sparse inverse covariance estimation with the graphical lasso.” _Biostat_ (2008) 9 (3): 432-441.
   3. Banerjee, O., Ghaoui, L. E. and d’Aspremont, A. (2007), Model selection through sparse maximum likelihood Estimation, _J. Machine Learning Research_ 101.
-  4. Wang, H. [The Bayesian Graphical Lasso](http://apps.olin.wustl.edu/conf/SBIES/Files/pdf/2011/27.pdf)
-  5. Mladen Kolar, Le Song, Amr Ahmed, Eric P. Xing. Estimating time-varying networks. Annals of Applied Stat. [arXiv:0812.5087v2](http://arxiv.org/abs/0812.5087v2)
+  4. Wang, H. [The Bayesian Graphical Lasso](http://apps.olin.wustl.edu/conf/SBIES/Files/pdf/2011/27.pdf)
+  5. Mladen Kolar, Le Song, Amr Ahmed, Eric P. Xing. Estimating time-varying networks. Annals of Applied Stat.[arXiv:0812.5087v2](http://arxiv.org/abs/0812.5087v2)
