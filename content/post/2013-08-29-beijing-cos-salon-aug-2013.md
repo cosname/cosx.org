@@ -4,7 +4,6 @@ date: '2013-08-29T10:17:13+00:00'
 author: 统计之都
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: beijing-cos-salon-aug-2013

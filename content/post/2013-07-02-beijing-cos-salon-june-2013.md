@@ -4,7 +4,6 @@ date: '2013-07-02T14:29:22+00:00'
 author: 邓一硕
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: beijing-cos-salon-june-2013

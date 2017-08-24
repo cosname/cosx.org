@@ -4,7 +4,6 @@ date: '2013-05-14T11:47:59+00:00'
 author: 陈丽云
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: shanghai-r-salon-may-2013

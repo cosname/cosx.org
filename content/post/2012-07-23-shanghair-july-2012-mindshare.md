@@ -4,7 +4,6 @@ date: '2012-07-23T09:39:31+00:00'
 author: 陈丽云
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: shanghair-july-2012-mindshare

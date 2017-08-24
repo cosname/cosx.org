@@ -4,7 +4,6 @@ date: '2012-09-11T22:07:18+00:00'
 author: 范建宁
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: 5th-r-salon-in-shenzhen

@@ -54,7 +54,7 @@ forum_id: 419022
 
 本文来自BizEd，翻译工作得到了蔡老师和的BizEd的许可和支持，特此感谢。
 
-This article is from the September/October 2013 issue of _BizEd_, published by AACSB International. The English version of the article and the complete _BizEd_ archives may be accessed at [www.BizEdmagazine.com](http://www.bizedmagazine.com/).
+This article is from the September/October 2013 issue of _BizEd_, published by AACSB International. The English version of the article and the complete _BizEd_ archives may be accessed at [www.BizEdmagazine.com](http://www.bizedmagazine.com/).
 
 翻译工作由[统计之都](https://cos.name/)团队的朋友们完成，感谢[王汉生](http://hansheng.gsm.pku.edu.cn/)教授的支持和审阅。
 
