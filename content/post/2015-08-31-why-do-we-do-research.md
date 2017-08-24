@@ -4,15 +4,14 @@ date: '2015-08-31T10:09:00+00:00'
 author: Terry Speed
 categories:
   - 推荐文章
-  - 统计之都
 tags:
   - COS翻译
   - Terry Speed
   - 科学研究
   - 统计学习
 slug: why-do-we-do-research
+meta_extra: 译者：王小宁；审校：冯凌秉、施涛
 forum_id: 419094
-meta_extra: "译者：王小宁；审校：冯凌秉、施涛"
 ---
 
 >【COS编辑部按】本文作者是2013年的总理科学奖得主 

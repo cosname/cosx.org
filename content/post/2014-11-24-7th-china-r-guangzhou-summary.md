@@ -5,7 +5,7 @@ author:
   - 江彩霞
   - 统计之都
 categories:
-  - 统计之都
+  - R会议
 tags:
   - R语言
   - R语言会议

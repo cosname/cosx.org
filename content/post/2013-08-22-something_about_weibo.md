@@ -3,7 +3,7 @@ title: 微博名人那些事儿
 date: '2013-08-22T11:35:14+00:00'
 author: 朱雪宁
 categories:
-  - 统计软件
+  - 统计应用
 tags:
   - Topic Model
   - 微博

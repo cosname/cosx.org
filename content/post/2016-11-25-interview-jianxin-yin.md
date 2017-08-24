@@ -6,13 +6,12 @@ author:
   - 王小宁
 categories:
   - COS访谈
-  - 推荐文章
 slug: interview-jianxin-yin
 forum_id: 419173
 meta_extra: 校对：王佳
 ---
 
->【COS编辑者按】受访者：尹建鑫      采访者：王小宁     校对：王佳
+>【COS编辑者按】受访者：尹建鑫  采访者：王小宁  校对：王佳
 
 **尹建鑫** 中国人民大学副教授，2009年在北京大学获得博士学位。2009年至2011年在美国宾夕法尼亚大学医学院生物统计系做博士后研究。2011年8月回国到中国人民大学任教。从事高维变量选择、图模型估计、结构学习算法、自适应实验设计、非参数统计等方面的研究。研究成果发表在国际知名统计杂志上（Annals of Applied Statistics, Journal ofMultivariate Analysis，Statistica Sinica）及Journal of Machine Learning Research的W&CP系列中。曾多次参加国际、国内学术会议，做演讲、邀请报告。并曾作为参赛队代表获因果与预测国际挑战赛“最佳整体贡献奖”。目前主持一项国家自然科学基金青年项目、一项教育部博士点基金项目。2015年获教育部第七届高等学校科学研究优秀成果奖（人文社会科学）统计学三等奖
 

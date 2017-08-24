@@ -1,9 +1,9 @@
 ---
-title: "蒲丰投针问题的推广"
+title: 蒲丰投针问题的推广
 date: '2010-01-07T20:40:44+00:00'
 author: 蔡永强
 categories:
-  - 统计之都
+  - 统计模型
 tags:
   - Buffon投针
   - 几何概率

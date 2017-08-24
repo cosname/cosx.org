@@ -9,7 +9,7 @@ author:
   - 祁自帅
   - 刘哲
 categories:
-  - 统计之都
+  - 统计应用
 tags:
   - 分析报告
   - 北美大片

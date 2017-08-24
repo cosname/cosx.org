@@ -4,7 +4,6 @@ date: '2012-06-25T00:25:06+00:00'
 author: 统计之都
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: cos-salon-review-1

@@ -3,7 +3,7 @@ title: Rcpp简明入门
 date: '2013-12-07T12:25:21+00:00'
 author: 张晔
 categories:
-  - 统计软件
+  - R语言
 tags:
   - C/C++
   - cppFunction

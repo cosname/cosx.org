@@ -5,7 +5,7 @@ author:
   - Scott Iverson
   - 林荟
 categories:
-  - 职业事业
+  - COS访谈
 tags:
   - COS访谈
   - 市场

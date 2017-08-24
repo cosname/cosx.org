@@ -6,10 +6,10 @@ author:
   - 冷静
   - 王小宁
 categories:
-  - 统计之都
+  - 新闻动态
 slug: the-news-about-statistics
+meta_extra: 编辑：王小宁
 forum_id: 419035
-meta_extra: "编辑：王小宁"
 ---
 
 本期投稿：[谢益辉](http://yihui.name/) [冷静](http://www.weibo.com/p/1005051756465937/home?from=page_100505&mod=TAB&noscale_head=1#_0) [王小宁](http://weibo.com/1656310700/profile?topnav=1&wvr=5&user=1)
@@ -20,7 +20,7 @@ meta_extra: "编辑：王小宁"
 
 # 学界VS业界：
 
-“如果我像科学对待我一样对待我老婆，她恐怕早就跑了”，从学术界跳槽到业界当数据科学家的John Stanton-Geddes [如是说](http://johnstantongeddes.org/personal/2014/10/16/leaving-academia.html)。小编认为学术界并非不再重要，而是已经开始供大于求，学界追求方法创新，业界更偏重实用，现今创新的速度也许超过了实用的需求。
+“如果我像科学对待我一样对待我老婆，她恐怕早就跑了”，从学术界跳槽到业界当数据科学家的John Stanton-Geddes[如是说](http://johnstantongeddes.org/personal/2014/10/16/leaving-academia.html)。小编认为学术界并非不再重要，而是已经开始供大于求，学界追求方法创新，业界更偏重实用，现今创新的速度也许超过了实用的需求。
 
 # 贝叶斯统计：
 

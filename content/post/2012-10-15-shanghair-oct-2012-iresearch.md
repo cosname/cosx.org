@@ -4,7 +4,6 @@ date: '2012-10-15T15:14:20+00:00'
 author: 陈丽云
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: shanghair-oct-2012-iresearch

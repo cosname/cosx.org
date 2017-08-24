@@ -3,7 +3,7 @@ title: 因果推断简介之八：吸烟是否导致肺癌？Fisher versus Cornf
 date: '2013-09-17T10:30:03+00:00'
 author: 丁鹏
 categories:
-  - 经典理论
+  - 统计模型
 tags:
   - Cornfield
   - Cornfield不等式

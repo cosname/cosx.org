@@ -4,7 +4,6 @@ date: '2013-05-29T13:29:01+00:00'
 author: 施涛
 categories:
   - 推荐文章
-  - 统计之都
   - 职业事业
 tags:
   - Michael Jordan

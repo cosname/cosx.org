@@ -3,7 +3,7 @@ title: 第五届中国R语言会议（上海会场）纪要
 date: '2012-11-08T22:02:26+00:00'
 author: 李舰
 categories:
-  - 统计之都
+  - R会议
 slug: 5th-china-r-shanghai-summary
 forum_id: 418888
 ---

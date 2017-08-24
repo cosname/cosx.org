@@ -4,7 +4,6 @@ date: '2015-03-23T23:53:17+00:00'
 author: 陈遵秋
 categories:
   - 推荐文章
-  - 统计之都
 slug: the-big-data-of-medicine2
 forum_id: 419069
 ---

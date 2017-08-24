@@ -3,10 +3,7 @@ title: jiebaR中文分词——R的灵活，C的效率
 date: '2014-11-15T10:46:46+00:00'
 author: 覃文锋
 categories:
-  - 统计应用
-  - 机器学习
-  - 统计软件
-  - 软件应用
+  - R语言
 tags:
   - jiebaR
   - Rcpp

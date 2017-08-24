@@ -4,7 +4,6 @@ date: '2012-08-28T20:20:51+00:00'
 author: 邓一硕
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: cos-salon-review-4

@@ -4,11 +4,10 @@ date: '2014-06-28T10:04:08+00:00'
 author: 蔡知令
 categories:
   - 推荐文章
-  - 统计之都
   - 职业事业
 slug: teaching-with-heart
+meta_extra: 译者：罗兰、陈雅慧、蔡占锐；校对：高涛、邱怡轩、魏太云；审阅：王汉生
 forum_id: 419022
-meta_extra: "译者：罗兰、陈雅慧、蔡占锐；校对：高涛、邱怡轩、魏太云；审阅：王汉生"
 ---
 
 在过去的10年里，我们目睹了许多显赫的商人做出了愚蠢和冒险的决策，这些决策对全球经济和个人投资者都造成了严重的损失。例如在去年，一名摩根大通的无良交易员因为投资某些隐晦且复杂的金融衍生品而损失了58亿美元。随着这类行为变得越来越常见，大众已不再相信商业和金融机构能为他们的行为负责，这种不信任的情绪也损害了商学院以及那些获得MBA学位毕业生们的声誉。
@@ -55,7 +54,7 @@ meta_extra: "译者：罗兰、陈雅慧、蔡占锐；校对：高涛、邱怡�
 
 本文来自BizEd，翻译工作得到了蔡老师和的BizEd的许可和支持，特此感谢。
 
-This article is from the September/October 2013 issue of _BizEd_, published by AACSB International. The English version of the article and the complete _BizEd_ archives may be accessed at [www.BizEdmagazine.com](http://www.bizedmagazine.com/).
+This article is from the September/October 2013 issue of _BizEd_, published by AACSB International. The English version of the article and the complete _BizEd_ archives may be accessed at [www.BizEdmagazine.com](http://www.bizedmagazine.com/).
 
 翻译工作由[统计之都](https://cos.name/)团队的朋友们完成，感谢[王汉生](http://hansheng.gsm.pku.edu.cn/)教授的支持和审阅。
 

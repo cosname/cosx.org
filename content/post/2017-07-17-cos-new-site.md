@@ -1,9 +1,10 @@
 ---
-title: 2017 年统计之都网站改版说明
+title: 2017年统计之都网站改版说明
 author: 谢益辉
 date: '2017-07-18'
 categories:
   - 新闻动态
+  - 统计之都
 tags:
   - blogdown
   - Flarum

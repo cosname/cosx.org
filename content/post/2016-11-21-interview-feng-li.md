@@ -7,7 +7,6 @@ author:
   - 张心雨
 categories:
   - COS访谈
-  - 推荐文章
 tags:
   - COS访谈
   - 大数据

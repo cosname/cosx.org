@@ -4,14 +4,13 @@ date: '2015-06-25T12:49:15+00:00'
 author: Shakir Mohamed
 categories:
   - 推荐文章
-  - 统计之都
 tags:
   - Fisher
   - 机器学习
   - 神经网络
 slug: a-statistical-view-of-deep-learning-iii-memory-and-kernels
+meta_extra: 译者：丁维悦；审校：朱雪宁、何通、施涛；编辑：王小宁
 forum_id: 419087
-meta_extra: "译者：丁维悦；审校：朱雪宁、何通、施涛；编辑：王小宁"
 ---
 
 原文链接：<http://blog.shakirm.com/2015/04/a-statistical-view-of-deep-learning-iii-memory-and-kernels/>

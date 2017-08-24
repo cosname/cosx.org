@@ -6,14 +6,13 @@ author:
   - 王威廉
   - 王小宁
 categories:
-  - 统计图形
   - 新闻动态
 slug: let-us-talk-about-statistics
 forum_id: 419071
 meta_extra: 编辑：王小宁
 ---
 
-本期投稿：[谢益辉](http://yihui.name/)   [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
+本期投稿：[谢益辉](http://yihui.name/) [王威廉](http://weibo.com/u/1657470871?from=feed&loc=avatar)  [王小宁](http://weibo.com/wangxiaoningtongxue/profile?rightmod=1&wvr=6&mod=personinfo)
 
 # 统计学的七大支柱
 

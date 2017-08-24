@@ -4,7 +4,6 @@ date: '2016-12-05T20:45:39+00:00'
 author: 张翔
 categories:
   - 推荐文章
-  - 统计之都
 slug: three-pictures-date-value
 forum_id: 419176
 ---

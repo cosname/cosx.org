@@ -3,18 +3,17 @@ title: lfda R包的使用方法以及算法的简要说明
 date: '2015-08-25T00:25:22+00:00'
 author: 唐源
 categories:
-  - 推荐文章
-  - 统计之都
   - 统计软件
+  - 统计模型
 tags:
-  - lfda 包
+  - lfda包
   - R包
   - 局部Fisher判别分析
   - 核局部Fisher判别分析
   - 算法说明
 slug: a-brief-description-of-the-method-and-the-algorithm-of-the-lfda-package
+meta_extra: 编辑：王小宁
 forum_id: 419092
-meta_extra: "编辑：王小宁"
 ---
 
 作者： 唐源（Yuan Tang）
@@ -63,7 +62,7 @@ model <- klfda(k, y, r, metric = "plain")
 ```
 注意klfda的\`predict\`方法还在实现当中，\`plot\`三维可视化的方法和\`lfda\`的一样已经实现。
 
-半监督局部Fisher判别分析- Semi-supervised Local Fisher Discriminant Analysis(SELF) 这个算法要求另外一项参数\`beta\`来代表半监督的程度： 如果beta=0， 即代表完全监督； 如果beta=0， 则完全不监督（不使用任何类标识信息）。假设我们想要忽略\`iris\`数据里10%的类标识：
+半监督局部Fisher判别分析- Semi-supervised Local Fisher Discriminant Analysis(SELF)这个算法要求另外一项参数\`beta\`来代表半监督的程度： 如果beta=0， 即代表完全监督； 如果beta=0， 则完全不监督（不使用任何类标识信息）。假设我们想要忽略\`iris\`数据里10%的类标识：
 
 ```r
 k <- iris[,-5]

@@ -1,5 +1,5 @@
 ---
-title: COS 访谈第15期：Rob J. Hyndman
+title: COS访谈第15期：Rob J. Hyndman
 date: '2014-02-03T17:40:05+00:00'
 author:
   - Rob J. Hyndman

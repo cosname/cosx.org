@@ -4,7 +4,6 @@ date: '2013-11-10T00:56:13+00:00'
 author: 霍志骥
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: cos-salon-15th-guangzhou

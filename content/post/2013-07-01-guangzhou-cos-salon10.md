@@ -4,7 +4,6 @@ date: '2013-07-01T18:00:00+00:00'
 author: 统计之都
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: guangzhou-cos-salon10

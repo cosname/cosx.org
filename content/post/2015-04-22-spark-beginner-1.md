@@ -4,7 +4,6 @@ date: '2015-04-22T11:00:05+00:00'
 author: 邱怡轩
 categories:
   - 统计软件
-  - 软件应用
 tags:
   - Spark
   - 回归

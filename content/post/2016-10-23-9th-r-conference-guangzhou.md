@@ -4,7 +4,6 @@ date: '2016-10-23T20:53:52+00:00'
 author: 统计之都
 categories:
   - R会议
-  - 统计之都
 slug: 9th-r-conference-guangzhou
 forum_id: 419166
 ---

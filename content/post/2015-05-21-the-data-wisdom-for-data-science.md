@@ -4,10 +4,9 @@ date: '2015-05-21T14:20:24+00:00'
 author: 郁彬
 categories:
   - 推荐文章
-  - 统计之都
 slug: the-data-wisdom-for-data-science
+meta_extra: 译者：吕翔、张心雨；审校：施涛、高涛；编辑：王小宁
 forum_id: 419082
-meta_extra: "译者：吕翔、张心雨；审校：施涛、高涛；编辑：王小宁"
 ---
 
 原文链接：[http://www.odbms.org/2015/04/data-wisdom-for-data-science/](http://www.odbms.org/2015/04/data-wisdom-for-data-science/)

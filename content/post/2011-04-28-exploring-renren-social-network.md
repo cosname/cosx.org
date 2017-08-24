@@ -3,8 +3,7 @@ title: 社会网络分析：探索人人网好友推荐系统
 date: '2011-04-28T01:30:28+00:00'
 author: 陈逸波
 categories:
-  - 推荐文章
-  - 统计图形
+  - 统计应用
 tags:
   - igraph
   - RCurl

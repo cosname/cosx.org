@@ -5,8 +5,7 @@ author:
   - 王威廉
   - 王小宁
 categories:
-  - 推荐文章
-  - 新闻动态
+  - 机器学习
 tags:
   - Machine Learning
   - 深度学习

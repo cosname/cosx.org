@@ -3,7 +3,7 @@ title: 解惑rJava R与Java的高速通道
 date: '2013-08-14T22:30:14+00:00'
 author: 张丹
 categories:
-  - 软件应用
+  - 统计软件
 tags:
   - java
   - jcall

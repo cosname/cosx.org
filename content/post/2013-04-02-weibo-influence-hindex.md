@@ -3,8 +3,7 @@ title: 微博用户影响力评价的H-Index指数
 date: '2013-04-02T20:06:46+00:00'
 author: 陈丽云
 categories:
-  - 机器学习
-  - 统计图形
+  - 统计应用
 tags:
   - H-index指数
   - Rweibo
