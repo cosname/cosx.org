@@ -4,6 +4,8 @@ date: '2014-11-24T16:40:47+00:00'
 author:
   - 江彩霞
   - 统计之都
+categories:
+  - R会议
 tags:
   - R语言
   - R语言会议

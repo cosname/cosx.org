@@ -2,6 +2,8 @@
 title: 第八届中国R语言会议（上海）纪要
 date: '2015-12-16T15:07:01+00:00'
 author: 统计之都
+categories;
+  - R会议
 slug: 8th-china-r-shanghai-summary
 forum_id: 419112
 ---

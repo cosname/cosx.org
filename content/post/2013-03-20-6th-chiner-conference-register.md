@@ -2,6 +2,8 @@
 title: 第六届R语言会议开始报名
 date: '2013-03-20T23:00:36+00:00'
 author: 统计之都
+categories:
+  - R会议
 tags:
   - '2013'
   - R语言会议

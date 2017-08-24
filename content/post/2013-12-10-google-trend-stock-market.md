@@ -2,6 +2,8 @@
 title: 谷歌趋势与股票市场
 date: '2013-12-10T12:00:45+00:00'
 author: 统计之都
+categories:
+  - 统计应用
 tags:
   - 分析报告
   - 狗熊会
@@ -18,7 +20,7 @@ forum_id: 418994
 联系方式：[birc@gsm.pku.ed.cn](mailto:birc@gsm.pku.ed.cn)
 
 
-  ![](http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34wMhLw9CmoWSeTvXLQiby6tcv1D52XPtztSRePhvhVUWW8LmggmEzJ5pNvOI83hC7bBIr6uvu3gwYA/0)
+![](http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34wMhLw9CmoWSeTvXLQiby6tcv1D52XPtztSRePhvhVUWW8LmggmEzJ5pNvOI83hC7bBIr6uvu3gwYA/0)
 
 
 # 摘要
@@ -27,7 +29,7 @@ forum_id: 418994
   
 # 背景介绍
  
-我们都知道在股票市场上获利有一个很简单的原则: 低价买进,高价卖出。但是预测股票价格并非易事。许多专业分析师多年来一直在潜心尝试研究出一个能够预测股市趋势的模型。但是许多类似的模型研究都以无法正确预测股市而失败告终。
+我们都知道在股票市场上获利有一个很简单的原则:低价买进,高价卖出。但是预测股票价格并非易事。许多专业分析师多年来一直在潜心尝试研究出一个能够预测股市趋势的模型。但是许多类似的模型研究都以无法正确预测股市而失败告终。
  
 对于那些对股市没有太多研究，并且没有时间和财力去收集数据来预测股市的人来讲，谷歌趋势或许能够给他们带来一些帮助。谷歌趋势是谷歌提供的一个服务。通过它，可以查询人们用谷歌对某个词语在一段时间内的搜索量。我们用做了一个试验来尝试是否可以用某个词语的谷歌趋势来预测股票价格的变动。
  

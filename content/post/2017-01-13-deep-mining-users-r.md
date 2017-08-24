@@ -2,6 +2,8 @@
 title: 利用R语言对用户进行深度挖掘
 date: '2017-01-13T22:36:55+00:00'
 author: 谢佳标
+categories:
+  - 统计应用
 slug: deep-mining-users-r
 forum_id: 419182
 ---

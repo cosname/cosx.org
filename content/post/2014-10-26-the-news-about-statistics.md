@@ -5,6 +5,8 @@ author:
   - 谢益辉
   - 冷静
   - 王小宁
+categories:
+  - 新闻动态
 slug: the-news-about-statistics
 meta_extra: 编辑：王小宁
 forum_id: 419035
@@ -18,7 +20,7 @@ forum_id: 419035
 
 # 学界VS业界：
 
-“如果我像科学对待我一样对待我老婆，她恐怕早就跑了”，从学术界跳槽到业界当数据科学家的John Stanton-Geddes [如是说](http://johnstantongeddes.org/personal/2014/10/16/leaving-academia.html)。小编认为学术界并非不再重要，而是已经开始供大于求，学界追求方法创新，业界更偏重实用，现今创新的速度也许超过了实用的需求。
+“如果我像科学对待我一样对待我老婆，她恐怕早就跑了”，从学术界跳槽到业界当数据科学家的John Stanton-Geddes[如是说](http://johnstantongeddes.org/personal/2014/10/16/leaving-academia.html)。小编认为学术界并非不再重要，而是已经开始供大于求，学界追求方法创新，业界更偏重实用，现今创新的速度也许超过了实用的需求。
 
 # 贝叶斯统计：
 

@@ -2,6 +2,8 @@
 title: 第六届中国R语言会议（上海）纪要
 date: '2013-11-09T14:25:43+00:00'
 author: 李舰
+categories:
+  - R会议
 tags:
   - R语言会议
   - 上海

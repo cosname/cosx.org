@@ -4,6 +4,8 @@ date: '2016-12-02T12:01:16+00:00'
 author:
   - Leo Breiman
   - Richard Olshen
+categories:
+  - COS访谈
 tags:
   - breiman
   - 数据科学

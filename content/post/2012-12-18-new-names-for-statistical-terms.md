@@ -2,6 +2,8 @@
 title: '[译作]一些统计名词的新名字'
 date: '2012-12-18T16:31:43+00:00'
 author: Larry Wasserman
+categories:
+  - 推荐文章
 slug: new-names-for-statistical-terms
 meta_extra: 译者：陈丽云
 forum_id: 418892

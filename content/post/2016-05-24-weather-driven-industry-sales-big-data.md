@@ -8,6 +8,8 @@ author:
   - 周翔
   - 李昶
   - 王学钦
+categories;
+  - 统计应用
 tags:
   - 大数据分析
   - 气象数据

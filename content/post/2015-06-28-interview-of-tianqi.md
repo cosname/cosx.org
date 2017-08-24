@@ -4,6 +4,8 @@ date: '2015-06-28T15:48:28+00:00'
 author:
   - 陈天奇
   - 何通
+categories:
+  - COS访谈
 tags:
   - COS访谈
   - dmlc

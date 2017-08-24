@@ -2,6 +2,8 @@
 title: 第八届中国R语言会议（北京）纪要
 date: '2015-06-15T09:37:12+00:00'
 author: 蔡占锐
+categories:
+  - R会议
 tags:
   - R语言会议
   - 北京
