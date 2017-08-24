@@ -5,7 +5,6 @@ author: 邱怡轩
 categories:
   - 统计应用
   - 机器学习
-  - 统计软件
 tags:
   - lasso
   - 分词

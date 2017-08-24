@@ -3,8 +3,6 @@ title: 中文文本处理简要介绍
 date: '2016-01-07T03:50:18+00:00'
 author: 李绳
 categories:
-  - 统计应用
-  - 机器学习
   - 统计软件
 tags:
   - NLP

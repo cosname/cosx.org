@@ -7,9 +7,7 @@ author:
   - 蔡占锐
   - 王小宁
 categories:
-  - 机器学习
   - 新闻动态
-  - 统计计算
 slug: visualization-of-pm2-5
 forum_id: 419042
 meta_extra: 编辑：王小宁

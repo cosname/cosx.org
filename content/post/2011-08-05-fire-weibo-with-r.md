@@ -3,9 +3,7 @@ title: 用R来给微博添把火
 date: '2011-08-05T00:31:26+00:00'
 author: 李舰
 categories:
-  - 统计应用
-  - 机器学习
-  - 统计软件
+  - R语言
 tags:
   - RCurl
   - ROAuth

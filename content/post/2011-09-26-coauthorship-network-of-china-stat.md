@@ -3,9 +3,7 @@ title: 中国统计之网
 date: '2011-09-26T21:04:14+00:00'
 author: 范建宁
 categories:
-  - 机器学习
-  - 统计图形
-  - 统计软件
+  - 统计应用
 tags:
   - igraph
   - R语言

@@ -3,6 +3,7 @@ title: 支持向量机系列四：Outliers
 date: '2014-02-22T10:01:37+00:00'
 author: 张驰原
 categories:
+  - 推荐文章
   - 机器学习
 tags:
   - Outliers

@@ -6,10 +6,7 @@ author:
   - 王威廉
   - 王小宁
 categories:
-  - 统计图形
-  - 机器学习
   - 新闻动态
-  - 职业事业
 slug: the-visualization-of-weibo
 forum_id: 419051
 meta_extra: 编辑：王小宁
