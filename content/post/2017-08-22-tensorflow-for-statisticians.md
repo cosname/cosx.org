@@ -68,9 +68,7 @@ x[np.logical_not(ind)] = np.random.normal(mu2, sigma2, N - n1)
 plt.hist(x, bins=30)
 ```
 
-<div align="center">
-    <img src="https://uploads.cosx.org/2017/08/mixture_hist.png" alt="Histogram" />
-</div>
+![Histogram](https://uploads.cosx.org/2017/08/mixture_hist.png)
 
 假设我们用的是“真实”的模型，也就是 `$p_1 N(\mu_1,\sigma_1^2)+p_2 N(\mu_2,\sigma_2^2)$`，那么接下来的任务就是用极大似然的方法来估计这些未知参数的取值。
 
@@ -123,9 +121,7 @@ True values: [0.3, 0.0, 5.0, 1.0, 1.5]
 
 可以看出来，估计的结果和真值是非常接近的。下图中的黄线展示了估计出来的密度曲线。
 
-<div align="center">
-    <img src="https://uploads.cosx.org/2017/08/mixture_hist_den.png" alt="Histogram with density curve" />
-</div>
+![Histogram with density curve](https://uploads.cosx.org/2017/08/mixture_hist_den.png)
 
 在这里稍微做一些解释，更详细的介绍可以去查阅 TensorFlow 的[官方文档](https://www.TensorFlow.org/get_started/get_started)。这段 TensorFlow 程序其实非常贴合统计建模的思路。首先，我们定义一个结构 `t_x` 用来表示观测到的数据，这里 `placeholder` 的意思是我们先给这个变量“占一个位”，其实际的数值会在之后予以提供。后面有一连串的 `Variable`，是 TensorFlow 中用来表达待估参数的一种方式，括号中的第一个数是我们提供的初值。其中我们还用到了一个 `softplus` 运算符，这是为了照顾那些恒正的参数而做的一个变换，等价于函数 `log(exp(x) + 1)`。在这之后就是定义我们的混合分布模型，可以看到该模型的参数都依赖于之前定义的 `Variable` 对象，而我们的目标函数就是该混合分布在数据上的对数似然函数值，我们把它存储在 `t_ll` 变量中。
 
