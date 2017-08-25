@@ -66,6 +66,7 @@ x[np.logical_not(ind)] = np.random.normal(mu2, sigma2, N - n1)
 
 # Histogram
 plt.hist(x, bins=30)
+plt.show()
 ```
 
 ![Histogram](https://uploads.cosx.org/2017/08/mixture_hist.png)
@@ -80,6 +81,7 @@ import tensorflow.contrib.distributions as ds
 
 # Define data
 t_x = tf.placeholder(tf.float32)
+
 # Define parameters
 t_p1_ = tf.Variable(0.0, dtype=tf.float32)
 t_p1 = tf.nn.softplus(t_p1_)
@@ -89,6 +91,7 @@ t_sigma1_ = tf.Variable(1.0, dtype=tf.float32)
 t_sigma1 = tf.nn.softplus(t_sigma1_)
 t_sigma2_ = tf.Variable(1.0, dtype=tf.float32)
 t_sigma2 = tf.nn.softplus(t_sigma2_)
+
 # Define model and objective function
 t_gm = ds.Mixture(
     cat=ds.Categorical(probs=[t_p1, 1.0 - t_p1]),
@@ -98,9 +101,11 @@ t_gm = ds.Mixture(
     ]
 )
 t_ll = tf.reduce_mean(t_gm.log_prob(t_x))
+
 # Optimization
 optimizer = tf.train.GradientDescentOptimizer(0.5)
 train = optimizer.minimize(-t_ll)
+
 # Run
 sess = tf.Session()
 init = tf.global_variables_initializer()
@@ -123,7 +128,9 @@ True values: [0.3, 0.0, 5.0, 1.0, 1.5]
 
 ![Histogram with density curve](https://uploads.cosx.org/2017/08/mixture_hist_den.png)
 
-在这里稍微做一些解释，更详细的介绍可以去查阅 TensorFlow 的[官方文档](https://www.TensorFlow.org/get_started/get_started)。这段 TensorFlow 程序其实非常贴合统计建模的思路。首先，我们定义一个结构 `t_x` 用来表示观测到的数据，这里 `placeholder` 的意思是我们先给这个变量“占一个位”，其实际的数值会在之后予以提供。后面有一连串的 `Variable`，是 TensorFlow 中用来表达待估参数的一种方式，括号中的第一个数是我们提供的初值。其中我们还用到了一个 `softplus` 运算符，这是为了照顾那些恒正的参数而做的一个变换，等价于函数 `log(exp(x) + 1)`。在这之后就是定义我们的混合分布模型，可以看到该模型的参数都依赖于之前定义的 `Variable` 对象，而我们的目标函数就是该混合分布在数据上的对数似然函数值，我们把它存储在 `t_ll` 变量中。
+这段 TensorFlow 程序其实非常贴合统计建模的思路：首先我们收集到了一组数据，然后我们对它的分布进行了假设，该分布依赖于若干未知的参数，而估计参数的方法是极大似然法，即参数的估计值应该最大化这组数据的似然函数值。回到之前的程序，可以看出其整个流程也基本符合这一思路。在这里我稍微对其中用到的函数做一些解释，更详细的介绍可以去查阅 TensorFlow 的[官方文档](https://www.TensorFlow.org/get_started/get_started)。
+
+首先，我们定义一个结构 `t_x` 用来表示观测到的数据，这里 `placeholder` 的意思是我们先给这个变量“占一个位”，其实际的数值会在之后予以提供。后面有一连串的 `Variable`，是 TensorFlow 中用来表达待估参数的一种方式，括号中的第一个数是我们提供的初值。其中我们还用到了一个 `softplus` 运算符，这是为了照顾那些恒正的参数而做的一个变换，等价于函数 `log(exp(x) + 1)`。在这之后就是定义我们的混合分布模型，可以看到该模型的参数都依赖于之前定义的 `Variable` 对象，而我们的目标函数就是该混合分布在数据上的对数似然函数值，我们把它存储在 `t_ll` 变量中。
 
 定义好这个模型后，TensorFlow 就可以自动计算 `t_ll` 相对于 `t_p1_`，`t_mu1` 等参数的导数，而利用 TensorFlow 提供的最优化工具，我们只需要反复迭代更新参数，直到满足收敛条件就可以了。
 
