@@ -15,7 +15,7 @@ tags:
   - TensorFlow
   - 最优化
   - 自动微分
-meta_extra: 编辑：雷博文 审稿：张源源，谢益辉
+meta_extra: [审稿](https://github.com/cosname/cosx.org/pull/711)：张源源、谢益辉；微信编辑：雷博文
 forum_id: 419419
 ---
 
