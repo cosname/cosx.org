@@ -17,33 +17,32 @@ tags:
 
 # 爬虫简介
 
-简单来说，爬虫就是从网上自动下载网页，经过解析处理得到你想到要的数据，存贮下来。
-这里的步骤和关键词有三个: **下载**, **解析**, **存贮**。本文只介绍下载和解析的术式，存贮暂不考虑。
-
+简单来说，爬虫就是从网上自动下载网页，经过解析处理得到你想到要的数据。
+这里的步骤和关键词有两个: **下载**, **解析**。本文的所有技巧也都是围绕这个两个关键词。
 
 ## 入门篇
 
-"知己知彼，百战百胜"。这是为新手入门准备的网页简介。一个网页的源代码其实就是纯文本，包含了HTML,CSS和JavaScript。
+大多数的爬虫都是爬取网页上的数据。新手入门，就先搞清楚网页到底是什么。网页的源代码其实就是纯文本，包含了HTML, CSS 和 JavaScript 。
 
 - HTML: 标记语言，只有语法，没有变量和逻辑，不能称之为**编程**语言。
 
-- CSS: 控制元素的展现形式
+- CSS: 层叠样式表，控制元素的展现形式
 
-- JavaScript: 操作HTML中元素的增删改
+- JavaScript: 脚本语言，可以动态操作HTML中元素的增删改
 
 一般来说，数据是在HTML元素中(否则你看不见它)。详细的HTML介绍可以参考W3School的
 [HTML 教程](http://www.w3school.com.cn/html/index.asp)。
 
 ### 下载术
 
-在R或Python中的下载网页是很简单的。以下的两行代码，使用R的`readLines`函数读取了豆瓣电影 Top 250 的网页源码：
+在R语言或Python中下载网页是很简单的。以下的两行代码，使用R的`readLines`函数读取了豆瓣电影 Top 250 的网页源码：
 
 ```{r eval=FALSE}
 html_lines = readLines('https://movie.douban.com/top250')
 doc = paste0(html_lines, collapse = '')
 ```
 
-其他的R包也有类似的函数，如`RCurl::getURL`和`httr:GET`。Python中的标配是`requests`模块。读文档，不细讲。
+其他的R包也有类似的函数，如`RCurl::getURL`和`httr::GET`。Python中的标配是[requests模块](http://docs.python-requests.org/en/master/)。读文档，不细讲。
 
 ### 解析术
 
@@ -122,28 +121,30 @@ read_html(doc) %>%
   html_text()
 ```
 
-读读[CSS 元素选择器](http://www.w3school.com.cn/css/css_selector_type.asp)教程，可以学到更多用法。
+读读[CSS 元素选择器](http://www.w3school.com.cn/css/css_selector_type.asp)教程，可以学到更多用法。另外，这个一边学一边练习的[小网站](http://flukeout.github.io/)也很带感呢。
 
 
 三种技巧相比之下，XPath的CSS选择器明显简单易用，但它们只适用于HTML和XML文档。正则表达式虽然规则复杂，但及其强大。利剑在手，任君选择。
 
 ## 工具破解篇
 
-此篇介绍一些工具和技巧，破解以下常见的问题:
+掌握前文提到的下载函数和解析术，就足以抓取大部分的网页了。但江湖险恶，网页叵测，你很可能会遇到以下常见的问题:
 
-- 动态加载数据
+- 在网页中看到的数据，下载后看不到了？(动态加载数据)
 
-- 数据分散在多个网页，难遍历
+- 数据分散在多个网页，但没有列表页也不知道网页链接的生成规则，难以遍历抓取
 
-- 登录验证
+- 需要登录才有查看权限，没办法直接下载(登录验证)
+
+接下来就介绍一些工具和技巧，一一破解上述问题。
 
 ### 破解动态加载数据
 
 当你下载网页得到正常的结果(status code等于200)，却看不到想要的数据时，那么它通常都不在原始的HTML网页中，是通过二次请求得到。
 
-判断数据是否包含在HTML网页中的方法很简单：在Chrome浏览器下打开网页后，结印 `Ctrl + Alt + U` 查看网页源代码，搜索是否有你想到的数据。
+判断数据是否包含在HTML网页中的方法很简单：在Chrome浏览器下打开网页后，右键，点击"查看源代码"(View Page Source)，搜索是否有你想到的数据。
 
-如果没有，结印`Ctrl + Alt + J`，调出Chrome的开发者模式，并切换到`Network`选项卡。接下来再次访问网页，就可以看到网页加载的过程。其中包含了HTML文件，js文件和cc文件，以及可能的图片和音视频文件等。接下来就是一个个查看这些请求的Response，寻找数据是从哪个请求中返回的。
+如果没有，调出Chrome的开发者模式(结印`Ctrl + Shift + I`，或者Mac上的`Cmd + Opt + I`)，并切换到`Network`选项卡。再次访问网页，就可以看到网页加载过程的所有请求。其中包含了HTML文件，js文件和cc文件，以及可能的图片和音视频文件等。接下来就是一个个查看这些请求的Response，寻找数据是从哪个请求中返回的。
 
 比如这篇[COS访谈第31期: Charles Stein](https://cosx.org/2017/07/interview-charles-stein/)博文的评论，是通过iframe加载得到的:
 
@@ -166,6 +167,13 @@ read_html(doc) %>%
 
 1. 访问[首页](http://www.peugeot.com.cn/)，抓取省市和响应的数字编码，比如北京市对应3361，河北省对应3363。
 
+```HTML
+# 部分网页源代码
+<option value="3361">北京市</option>
+<option value="3362">天津市</option>
+<option value="3363">河北省</option>
+```
+
 2. 根据省的数字编码，获取市区的数据编码。比如河北省各市的数字编码：http://dealer.peugeot.com.cn/ajax.php?pid=3363&action=city 。查看源码可以看到石家庄市的数字编码是3394。
 
 3. 根据市区的数字编码，抓该市的经销商列表。比如石家庄市的两家经销商：http://dealer.peugeot.com.cn/ajax.php?cid=3394&action=dealer。从中可以拿到两个对应的字符编码，河北盛威汽车贸易有限公司的编码是 HBSWQCMYYXGS。
@@ -175,14 +183,17 @@ read_html(doc) %>%
 最后，将4步串接起来，前三步可以拿到所有经销商列表和相应的编码，最后遍历所有的详情页抓取详细信息即可。
 
 
-### 破解登陆
+### 破解登陆状态
 
-模拟登陆是一个极有对抗性的话题，简单的网站或许就是一个POST请求。而复杂的网站如新浪微博，登陆过程可能经过层层加密，多个请求前后依赖，少一步都不可。幸而网站一般都是通过Cookie来验证登陆状态，所以在模拟请求的过程中带上相应的Cookie，便可骗过对方。
+某些网站的信息会要求登录后才有权限查看。当你填完表单，点击登录时，浏览器的背后会发送一个POST请求，将你的用户名和密码发送到服务器进行验证。通过验证后，会在你的浏览器中存下Cookie来记录登录状态，后续的请求中只要带上这个Cookie就不需要再次登录。
 
-这里介绍一套工具: Chrome + [CurlWget](https://chrome.google.com/webstore/detail/curlwget/jmocjfidanebdlinpbcdkcmgdifblncg) + [uncurl](https://github.com/spulec/uncurl)/ [curl2r](https://github.com/badbye/curl2r)。
+因为要破解登录状态验证，最直接的方法就是模拟发送POST请求，拿到权限。然而模拟登陆是一个极有对抗性的话题，简单的网站或许就是一个POST请求。而复杂的网站如新浪微博，登陆过程可能经过层层加密，多个请求前后依赖，少一步都不可。因此更简单的方法是，在浏览器中登录，再拿相应的Cookie到脚本里直接用。
+
+说来复杂，但操作简单。你需要的，只是这套提取Cookie和模拟网页请求的利器组合: Chrome + [CurlWget](https://chrome.google.com/webstore/detail/curlwget/jmocjfidanebdlinpbcdkcmgdifblncg) + [uncurl](https://github.com/spulec/uncurl)/ [curl2r](https://github.com/badbye/curl2r)。
 
 #### CurlWget
-Chrome不必多言，CurlWget是一个将浏览器请求转换为curl或者wget命令的工具(curl和wget是两个终端下常用的浏览器)。通过它你可以拨开浏览器的外衣，看到一个网络请求的真面目:访问的url地址，携带的Cookie和Header的配置。
+
+CurlWget是一个将浏览器请求转换为curl或者wget命令的工具(curl和wget是两个终端下常用的浏览器)。通过它你可以拨开浏览器的外衣，看到一个网络请求的真面目:访问的url地址，携带的Cookie和Header的配置。
 
 具体操作是，在Network选项卡里选中某个请求，右键，单击`Copy`->`Copy as cURL`。如图，单击后，该请求的curl命令便存贮在粘贴板里了。
 
@@ -216,28 +227,17 @@ requests.get("http://weibo.com/u/xxxxxxxxx/home?topnav=1&wvr=5",
         "wvr": "6"
     },
 )
-
-$ curl2r 拷贝进来curl的命令  # 此处不要用双引号括住!
-library(httr)
-GET("https://www.baidu.com/",
-    add_headers(c(Pragma = "no-cache",
-        DNT = "1", `Accept-Encoding` = "gzip, deflate, sdch, br",
-        `Accept-Language` = "zh-CN,zh;q=0.8,en;q=0.6,de;q=0.4",
-        `Upgrade-Insecure-Requests` = "1",
-        `User-Agent` = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36",
-        Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        `Cache-Control` = "no-cache",
-        Connection = "keep-alive")),
-    set_cookies(XXX)) # 我是不会暴露自己的cookie的...
 ```
 
-此术虽然方便，但需牢记，不可泄漏你的Cookie信息。
+其中第一个参数是微博主页的链接(涉及到的微博ID已打码)；接下来的headers中包含了一些请求参数，如"Accept"代表接受返回的数据类型(包括HTML和image等)，"User-Agent"是使用的设备和浏览器版本等；cookies里则是当前网站在浏览器中存下的数据，可能记录了你的登录状态和浏览轨迹等，通常是经过加密的，属于隐私数据。
+
+curl2r的示例不再展示，可到Github的项目上查看。此术虽然方便，但需牢记，不可泄漏你的Cookie信息。
+
 
 ## 手机APP篇
+移动互联网的兴起，导致一些企业着重APP应用，却不提供PC端的网站服务。对于手机APP而言，比较难查看流量请求。虽然也有对应的软件，但据我所知好用的都是收费的。而且难以通用在安卓和IOS两大平台。
 
-对于手机APP而言，比较难查看流量请求。虽然也有对应的软件，但据我所知好用的都是收费的。而且难以通用在安卓和IOS两大平台。这里介绍另一个工具: [Charles](https://www.charlesproxy.com/)。通过它，可以在PC端开启一个代理，然后把手机设备设置通过代理上网，所有HTTP(S)流量都会在该软件中一览无余。
-
-Charles是一款免费，且在Windows，Mac OS和Linux上通用的跨平台软件。不论任何手机型号都可以连接Charles代理，可以说是很完美的解决方案的。
+这里介绍另一个工具: [Charles](https://www.charlesproxy.com/)。通过它，可以在PC端开启一个代理，把手机设备设置通过代理上网，所有HTTP(S)流量都会在该软件中一览无余。Charles是一款免费，且在Windows，Mac和Linux上通用的跨平台软件。不论任何手机型号都可以连接Charles代理，可以说是很完美的解决方案了。
 
 安装并开启Charles后，可以在`Help` -> `Local IP Address`里查看本级IP地址。接下来用手机接入同一个WIFI，填入Charles的IP地址和8888端口，配置HTTP代理。
 
@@ -248,7 +248,6 @@ Charles是一款免费，且在Windows，Mac OS和Linux上通用的跨平台软�
 
 
 如需查看HTTPS的流量，需要[安装SSL证书](http://www.charlesproxy.com/getssl/)，并在`Proxy` -> `SSL Proxying Settings...`中设置添加信任的网站列表。
-
 
 
 如果想练练手的话，可以试试查看国际版微博。虽然它是HTTPS，但其数据获取方式及其简单，只是纯粹的一个GET请求，没有User Agent校验和Cookie校验等。
