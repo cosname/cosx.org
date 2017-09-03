@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "心理学的危机"
 date: 2017-08-30
 author: "杨洵默"
