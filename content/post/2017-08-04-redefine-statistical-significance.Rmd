@@ -456,7 +456,7 @@ hh(m1 = 1.25, sig = 0.005, sigma = 2, n = 20 * 1.7 )
 
 Altman, N., & Krzywinski, M. (2017). Points of Significance: Interpreting P values. *Nature Methods, 14*(3), 213-214. doi:10.1038/nmeth.4210
 
-Benjamin, D. J., et al.,. (2017). Redefine Statistical Significance. *Nature Human Behavior*. doi: http://osf.io/preprints/psyarxiv/mky9j
+Benjamin, D. J., et al.,. (2017). Redefine Statistical Significance. *Nature Human Behavior*. doi: 10.1038/s41562-017-0189-z
 
 Berger, J. O., & Sellke, T. (1987). Testing a Point Null Hypothesis: The Irreconcilability of P Values and Evidence. *Journal of the American Statistical Association, 82*(397), 112-122. 
 
