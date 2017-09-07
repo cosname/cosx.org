@@ -6,7 +6,7 @@ author:
   - 谢益辉
 categories:
   - COS访谈
-tags: [生物统计，R]
+tags: [生物统计, R]
 slug: interview-sanzhen-liu
 meta_extra: 
   - 编辑：王毅然
