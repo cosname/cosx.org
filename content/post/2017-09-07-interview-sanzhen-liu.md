@@ -6,10 +6,10 @@ author:
   - 谢益辉
 categories:
   - COS访谈
-tags: [生物信息, 数据挖掘, 统计, 计算科学, R 语言, bookdown, 科研生活]
+tags: [生物信息, 数据挖掘, 统计, 计算科学, R语言, bookdown, 科研生活]
 slug: interview-sanzhen-liu
 meta_extra: "编辑：王毅然；审稿：黄俊文"
-form_id: 419300
+forum_id: 419300
 ---
 
 这篇访谈的形式很特别，是在论坛回帖中完成的，整理得以下对话。原帖见[这里](https://d.cosx.org/d/419300)。
