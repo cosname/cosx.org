@@ -298,98 +298,98 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 
 就我所见，对此次危机的统计方面讨论得最透彻的是Andrew Gelman，他的[博客](http://andrewgelman.com/)和文章是个不错的起点。假如你对更一般的方法论和科学哲学感兴趣，那Paul Meehl是[绕不过去](http://www.psychwiki.com/wiki/Meehl,_P._E._(1978)._Theoretical_risks_and_tabular_asterisks:_Sir_karl,_sir_ronald,_and_the_slow_progress_of_soft_psychology._Journal_of_Consulting_and_Clinical_Psychology,_46(4),_806-834.)的。
 
-<span id="skinner1992superstition">1.Skinner, B. F. "Superstition" in the pigeon. _Journal of Experimental Psychology: General_ **121,** 273 (1992).</sup>
+<span id="skinner1992superstition">1.Skinner, B. F. "Superstition" in the pigeon. _Journal of Experimental Psychology: General_ **121,** 273 (1992).</span>
 
-<span id="herbranson2010birds">2.Herbranson, W. T. & Schroeder, J. Are birds smarter than mathematicians? Pigeons (Columba livia) perform optimally on a version of the Monty Hall Dilemma. _Journal of Comparative Psychology_ **124,** 1 (2010).</sup>
+<span id="herbranson2010birds">2.Herbranson, W. T. & Schroeder, J. Are birds smarter than mathematicians? Pigeons (Columba livia) perform optimally on a version of the Monty Hall Dilemma. _Journal of Comparative Psychology_ **124,** 1 (2010).</span>
 
-<span id="herbranson2012pigeons">3.Herbranson, W. T. Pigeons, humans, and the Monty Hall dilemma. _Current Directions in Psychological Science_ **21,** 297–301 (2012).</sup>
+<span id="herbranson2012pigeons">3.Herbranson, W. T. Pigeons, humans, and the Monty Hall dilemma. _Current Directions in Psychological Science_ **21,** 297–301 (2012).</span>
 
-<span id="zentall2015monty">4.Zentall, T. R., Case, J. P. & Collins, T. L. The Monty Hall dilemma with pigeons: No, you choose for me. _Learning & behavior_ **43,** 209–216 (2015).</sup>
+<span id="zentall2015monty">4.Zentall, T. R., Case, J. P. & Collins, T. L. The Monty Hall dilemma with pigeons: No, you choose for me. _Learning & behavior_ **43,** 209–216 (2015).</span>
 
-<span id="stagner2015further">5.Stagner, J. P. & Zentall, T. R. Further investigation of the Monty Hall Dilemma in pigeons and rats. _Behavioural processes_ **112,** 14–21 (2015).</sup>
+<span id="stagner2015further">5.Stagner, J. P. & Zentall, T. R. Further investigation of the Monty Hall Dilemma in pigeons and rats. _Behavioural processes_ **112,** 14–21 (2015).</span>
 
-<span id="gilovich1985hot">6.Gilovich, T., Vallone, R. & Tversky, A. The hot hand in basketball: On the misperception of random sequences. _Cognitive psychology_ **17,** 295–314 (1985).</sup>
+<span id="gilovich1985hot">6.Gilovich, T., Vallone, R. & Tversky, A. The hot hand in basketball: On the misperception of random sequences. _Cognitive psychology_ **17,** 295–314 (1985).</span>
 
-<span id="korb2003story">7.Korb, K. B. & Stillwell, M. The story of the hot hand: Powerful myth or powerless critique. in _international conference on cognitive science_ (2003).</sup>
+<span id="korb2003story">7.Korb, K. B. & Stillwell, M. The story of the hot hand: Powerful myth or powerless critique. in _international conference on cognitive science_ (2003).</span>
 
-<span id="miller2016surprised">8.Miller, J. B. & Sanjurjo, A. Surprised by the gambler’s and hot hand fallacies? A truth in the law of small numbers. (2016).</sup>
+<span id="miller2016surprised">8.Miller, J. B. & Sanjurjo, A. Surprised by the gambler’s and hot hand fallacies? A truth in the law of small numbers. (2016).</span>
 
-<span id="miller2014cold">9.Miller, J. B. & Sanjurjo, A. A cold shower for the hot hand fallacy. (2014).</sup>
+<span id="miller2014cold">9.Miller, J. B. & Sanjurjo, A. A cold shower for the hot hand fallacy. (2014).</span>
 
-<span id="miller2015bridge">10.Miller, J. B. & Sanjurjo, A. A Bridge from Monty Hall to the (Anti-) Hot Hand: Restricted Choice, Selection Bias, and Empirical Practice. (2015).</sup>
+<span id="miller2015bridge">10.Miller, J. B. & Sanjurjo, A. A Bridge from Monty Hall to the (Anti-) Hot Hand: Restricted Choice, Selection Bias, and Empirical Practice. (2015).</span>
 
-<span id="open2015estimating">11.Collaboration, O. S. & others. Estimating the reproducibility of psychological science. _Science_ **349,** aac4716 (2015).</sup>
+<span id="open2015estimating">11.Collaboration, O. S. & others. Estimating the reproducibility of psychological science. _Science_ **349,** aac4716 (2015).</span>
 
-<span id="bargh1996automaticity">12.Bargh, J. A., Chen, M. & Burrows, L. Automaticity of social behavior: Direct effects of trait construct and stereotype activation on action. _Journal of personality and social psychology_ **71,** 230 (1996).</sup>
+<span id="bargh1996automaticity">12.Bargh, J. A., Chen, M. & Burrows, L. Automaticity of social behavior: Direct effects of trait construct and stereotype activation on action. _Journal of personality and social psychology_ **71,** 230 (1996).</span>
 
-<span id="Cohen1993">13.Cohen, J. The Earth Is Round (p < .05). _American Psychologist_ 997–1003 (1993).</sup>
+<span id="Cohen1993">13.Cohen, J. The Earth Is Round (p < .05). _American Psychologist_ 997–1003 (1993).</span>
 
-<span id="meehl1978theoretical">14.Meehl, P. E. Theoretical risks and tabular asterisks: Sir Karl, Sir Ronald, and the slow progress of soft psychology. _Journal of consulting and clinical Psychology_ **46,** 806 (1978).</sup>
+<span id="meehl1978theoretical">14.Meehl, P. E. Theoretical risks and tabular asterisks: Sir Karl, Sir Ronald, and the slow progress of soft psychology. _Journal of consulting and clinical Psychology_ **46,** 806 (1978).</span>
 
-<span id="greenland2016statistical">15.Greenland, S. _et al._ Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. _European journal of epidemiology_ **31,** 337–350 (2016).</sup>
+<span id="greenland2016statistical">15.Greenland, S. _et al._ Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. _European journal of epidemiology_ **31,** 337–350 (2016).</span>
 
-<span id="wasserstein2016asa">16.Wasserstein, R. L. & Lazar, N. A. The ASA’s statement on p-values: context, process, and purpose. (2016).</sup>
+<span id="wasserstein2016asa">16.Wasserstein, R. L. & Lazar, N. A. The ASA’s statement on p-values: context, process, and purpose. (2016).</span>
 
-<span id="gelman2013garden">17.Gelman, A. & Loken, E. The garden of forking paths: Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time. _Department of Statistics, Columbia University_ (2013).</sup>
+<span id="gelman2013garden">17.Gelman, A. & Loken, E. The garden of forking paths: Why multiple comparisons can be a problem, even when there is no “fishing expedition” or “p-hacking” and the research hypothesis was posited ahead of time. _Department of Statistics, Columbia University_ (2013).</span>
 
-<span id="petersen2013ancestral">18.Petersen, M. B., Sznycer, D., Sell, A., Cosmides, L. & Tooby, J. The ancestral logic of politics: Upper-body strength regulates men’s assertion of self-interest over economic redistribution. _Psychological Science_ **24,** 1098–1103 (2013).</sup>
+<span id="petersen2013ancestral">18.Petersen, M. B., Sznycer, D., Sell, A., Cosmides, L. & Tooby, J. The ancestral logic of politics: Upper-body strength regulates men’s assertion of self-interest over economic redistribution. _Psychological Science_ **24,** 1098–1103 (2013).</span>
 
-<span id="gelman2016problems">19.Gelman, A. The problems with p-values are not just with p-values. _The American Statistician, supplemental material to the ASA statement on p-values and statistical significance_ **10,** 1154108 (2016).</sup>
+<span id="gelman2016problems">19.Gelman, A. The problems with p-values are not just with p-values. _The American Statistician, supplemental material to the ASA statement on p-values and statistical significance_ **10,** 1154108 (2016).</span>
 
-<span id="simmons2011false">20.Simmons, J. P., Nelson, L. D. & Simonsohn, U. False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. _Psychological science_ **22,** 1359–1366 (2011).</sup>
+<span id="simmons2011false">20.Simmons, J. P., Nelson, L. D. & Simonsohn, U. False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. _Psychological science_ **22,** 1359–1366 (2011).</span>
 
-<span id="gelman2012we">21.Gelman, A., Hill, J. & Yajima, M. Why we (usually) don’t have to worry about multiple comparisons. _Journal of Research on Educational Effectiveness_ **5,** 189–211 (2012).</sup>
+<span id="gelman2012we">21.Gelman, A., Hill, J. & Yajima, M. Why we (usually) don’t have to worry about multiple comparisons. _Journal of Research on Educational Effectiveness_ **5,** 189–211 (2012).</span>
 
-<span id="durante2013fluctuating">22.Durante, K. M., Rae, A. & Griskevicius, V. The fluctuating female vote: Politics, religion, and the ovulatory cycle. _Psychological Science_ **24,** 1007–1016 (2013).</sup>
+<span id="durante2013fluctuating">22.Durante, K. M., Rae, A. & Griskevicius, V. The fluctuating female vote: Politics, religion, and the ovulatory cycle. _Psychological Science_ **24,** 1007–1016 (2013).</span>
 
-<span id="cumming2014new">23.Cumming, G. The new statistics: Why and how. _Psychological science_ **25,** 7–29 (2014).</sup>
+<span id="cumming2014new">23.Cumming, G. The new statistics: Why and how. _Psychological science_ **25,** 7–29 (2014).</span>
 
-<span id="gelman2014beyond">24.Gelman, A. & Carlin, J. Beyond power calculations: Assessing Type S (sign) and Type M (magnitude) errors. _Perspectives on Psychological Science_ **9,** 641–651 (2014).</sup>
+<span id="gelman2014beyond">24.Gelman, A. & Carlin, J. Beyond power calculations: Assessing Type S (sign) and Type M (magnitude) errors. _Perspectives on Psychological Science_ **9,** 641–651 (2014).</span>
 
-<span id="button2013power">25.Button, K. S. _et al._ Power failure: why small sample size undermines the reliability of neuroscience. _Nature Reviews Neuroscience_ **14,** 365–376 (2013).</sup>
+<span id="button2013power">25.Button, K. S. _et al._ Power failure: why small sample size undermines the reliability of neuroscience. _Nature Reviews Neuroscience_ **14,** 365–376 (2013).</span>
 
-<span id="ioannidis2016power">26.Ioannidis, J. P. A., Stanley, T. D. & Doucouliagos, H. The power of bias in economics research. _The Economic Journal, forthcoming, SWP, Economics Series_ **1,** (2016).</sup>
+<span id="ioannidis2016power">26.Ioannidis, J. P. A., Stanley, T. D. & Doucouliagos, H. The power of bias in economics research. _The Economic Journal, forthcoming, SWP, Economics Series_ **1,** (2016).</span>
 
-<span id="cohen1962statistical">27.Cohen, J. The statistical power of abnormal-social psychological research: a review. _The Journal of Abnormal and Social Psychology_ **65,** 145 (1962).</sup>
+<span id="cohen1962statistical">27.Cohen, J. The statistical power of abnormal-social psychological research: a review. _The Journal of Abnormal and Social Psychology_ **65,** 145 (1962).</span>
 
-<span id="sedlmeier1989studies">28.Sedlmeier, P. & Gigerenzer, G. Do studies of statistical power have an effect on the power of studies? _Psychological bulletin_ **105,** 309 (1989).</sup>
+<span id="sedlmeier1989studies">28.Sedlmeier, P. & Gigerenzer, G. Do studies of statistical power have an effect on the power of studies? _Psychological bulletin_ **105,** 309 (1989).</span>
 
-<span id="tversky1971belief">29.Tversky, A. & Kahneman, D. Belief in the law of small numbers. _Psychological bulletin_ **76,** 105 (1971).</sup>
+<span id="tversky1971belief">29.Tversky, A. & Kahneman, D. Belief in the law of small numbers. _Psychological bulletin_ **76,** 105 (1971).</span>
 
-<span id="denny2007big">30.Denny, K. Big and tall parents do not have more sons. (2007).</sup>
+<span id="denny2007big">30.Denny, K. Big and tall parents do not have more sons. (2007).</span>
 
-<span id="gelman2007letter">31.Gelman, A. Letter to the editors regarding some papers of Dr. Satoshi Kanazawa. _Journal of Theoretical Biology_ **245,** 597–599 (2007).</sup>
+<span id="gelman2007letter">31.Gelman, A. Letter to the editors regarding some papers of Dr. Satoshi Kanazawa. _Journal of Theoretical Biology_ **245,** 597–599 (2007).</span>
 
-<span id="gelman2009beauty">32.Gelman, A. & Weakliem, D. Of beauty, sex and power: Too little attention has been paid to the statistical challenges in estimating small effects. _American Scientist_ **97,** 310–316 (2009).</sup>
+<span id="gelman2009beauty">32.Gelman, A. & Weakliem, D. Of beauty, sex and power: Too little attention has been paid to the statistical challenges in estimating small effects. _American Scientist_ **97,** 310–316 (2009).</span>
 
-<span id="bennett2009neural">33.Bennett, C. M., Miller, M. B. & Wolford, G. L. Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: An argument for multiple comparisons correction. _Neuroimage_ **47,** S125 (2009).</sup>
+<span id="bennett2009neural">33.Bennett, C. M., Miller, M. B. & Wolford, G. L. Neural correlates of interspecies perspective taking in the post-mortem Atlantic Salmon: An argument for multiple comparisons correction. _Neuroimage_ **47,** S125 (2009).</span>
 
-<span id="vul2009puzzlingly">34.Vul, E., Harris, C., Winkielman, P. & Pashler, H. Puzzlingly high correlations in fMRI studies of emotion, personality, and social cognition. _Perspectives on psychological science_ **4,** 274–290 (2009).</sup>
+<span id="vul2009puzzlingly">34.Vul, E., Harris, C., Winkielman, P. & Pashler, H. Puzzlingly high correlations in fMRI studies of emotion, personality, and social cognition. _Perspectives on psychological science_ **4,** 274–290 (2009).</span>
 
-<span id="kriegeskorte2009circular">35.Kriegeskorte, N., Simmons, W. K., Bellgowan, P. S. F. & Baker, C. I. Circular analysis in systems neuroscience: the dangers of double dipping. _Nature neuroscience_ **12,** 535–540 (2009).</sup>
+<span id="kriegeskorte2009circular">35.Kriegeskorte, N., Simmons, W. K., Bellgowan, P. S. F. & Baker, C. I. Circular analysis in systems neuroscience: the dangers of double dipping. _Nature neuroscience_ **12,** 535–540 (2009).</span>
 
-<span id="jonas2017could">36.Jonas, E. & Kording, K. P. Could a neuroscientist understand a microprocessor? _PLoS computational biology_ **13,** e1005268 (2017).</sup>
+<span id="jonas2017could">36.Jonas, E. & Kording, K. P. Could a neuroscientist understand a microprocessor? _PLoS computational biology_ **13,** e1005268 (2017).</span>
 
-<span id="gelman2013commentary">37.Gelman, A. Commentary: P values and statistical practice. _Epidemiology_ **24,** 69–72 (2013).</sup>
+<span id="gelman2013commentary">37.Gelman, A. Commentary: P values and statistical practice. _Epidemiology_ **24,** 69–72 (2013).</span>
 
-<span id="gelman2013problem">38.Gelman, A. The problem with p-values is how they’re used. _Ecology. Online: http://www.stat.columbia.edu/gelman/research/unpublished/murtaugh2.pdf_ (2013).</sup>
+<span id="gelman2013problem">38.Gelman, A. The problem with p-values is how they’re used. _Ecology. Online: http://www.stat.columbia.edu/gelman/research/unpublished/murtaugh2.pdf_ (2013).</span>
 
-<span id="aad2012observation">39.Aad, G. _et al._ Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC. _Physics Letters B_ **716,** 1–29 (2012).</sup>
+<span id="aad2012observation">39.Aad, G. _et al._ Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC. _Physics Letters B_ **716,** 1–29 (2012).</span>
 
-<span id="meehl1990summaries">40.Meehl, P. E. Why summaries of research on psychological theories are often uninterpretable. _Psychological reports_ **66,** 195–244 (1990).</sup>
+<span id="meehl1990summaries">40.Meehl, P. E. Why summaries of research on psychological theories are often uninterpretable. _Psychological reports_ **66,** 195–244 (1990).</span>
 
-<span id="meehl1967theory">41.Meehl, P. E. Theory-testing in psychology and physics: A methodological paradox. _Philosophy of science_ **34,** 103–115 (1967).</sup>
+<span id="meehl1967theory">41.Meehl, P. E. Theory-testing in psychology and physics: A methodological paradox. _Philosophy of science_ **34,** 103–115 (1967).</span>
 
-<span id="meehl1997problem">42.Meehl, P. E. The problem is epistemology, not statistics: Replace significance tests by confidence intervals and quantify accuracy of risky numerical predictions. (1997).</sup>
+<span id="meehl1997problem">42.Meehl, P. E. The problem is epistemology, not statistics: Replace significance tests by confidence intervals and quantify accuracy of risky numerical predictions. (1997).</span>
 
-<span id="fiskesocial">43.Meehl, P. E. What Social Scientists Don’t Understand.</sup>
+<span id="fiskesocial">43.Meehl, P. E. What Social Scientists Don’t Understand.</span>
 
-<span id="makel2012replications">44.Makel, M. C., Plucker, J. A. & Hegarty, B. Replications in psychology research: How often do they really occur? _Perspectives on Psychological Science_ **7,** 537–542 (2012).</sup>
+<span id="makel2012replications">44.Makel, M. C., Plucker, J. A. & Hegarty, B. Replications in psychology research: How often do they really occur? _Perspectives on Psychological Science_ **7,** 537–542 (2012).</span>
 
-<span id="meehl1990appraising">45.Meehl, P. E. Appraising and amending theories: The strategy of Lakatosian defense and two principles that warrant it. _Psychological Inquiry_ **1,** 108–141 (1990).</sup>
+<span id="meehl1990appraising">45.Meehl, P. E. Appraising and amending theories: The strategy of Lakatosian defense and two principles that warrant it. _Psychological Inquiry_ **1,** 108–141 (1990).</span>
 
-<span id="ioannidis2005most">46.Ioannidis, J. P. A. Why most published research findings are false. _PLoS medicine_ **2,** e124 (2005).</sup>
+<span id="ioannidis2005most">46.Ioannidis, J. P. A. Why most published research findings are false. _PLoS medicine_ **2,** e124 (2005).</span>
 
-<span id="siegfried2010odds">47.Siegfried, T. Odds are, it’s wrong: Science fails to face the shortcomings of statistics. _Science news_ **177,** 26–29 (2010).</sup>
+<span id="siegfried2010odds">47.Siegfried, T. Odds are, it’s wrong: Science fails to face the shortcomings of statistics. _Science news_ **177,** 26–29 (2010).</span>
 
-<span id="gelman2012freakonomics">48.Gelman, A. & Fung, K. Freakonomics: What Went Wrong? _American Scientist_ **100,** 6 (2012).</sup>
+<span id="gelman2012freakonomics">48.Gelman, A. & Fung, K. Freakonomics: What Went Wrong? _American Scientist_ **100,** 6 (2012).</span>
