@@ -132,16 +132,16 @@ p值带来了[太多的误解](https://en.wikipedia.org/wiki/Misunderstandings_o
 
 有啊，假如他们发现胳膊越粗的人越反对再分配他们会发表文章并视为对自己理论的支持吗？我相信会的；假如他们发现男性手臂越粗越反对再分配他们会发表文章并视为对自己理论的支持吗？我相信会的；假如他们这些都没有发现，但是发现年纪大的男性手臂越粗越反对再分配但年纪轻的男性反之他们会发表文章并视为对自己理论的支持吗？我相信会的，因为年长的人往往积累了更多财富需要捍卫嘛；假如他们发现年纪轻的男性手臂越粗越反对再分配但年长的男性反之他们会发表文章并视为对自己理论的支持吗？我相信会的，因为年轻正是自我打拼赚资源的时候，再分配不符合这种雄心壮志……
 
-我随口编的这些“解释”也许并不都合理，我也不认为Tooby夫妇会有任何学术不端（做为进化心理学的忠实拥趸，我很尊敬他们），我想说的正是即使你十分正直诚实，你完全在数据的指引下寻找结论，你自始至终只做了一次假设检验，你依然可能涉及多重比较——潜在的多重比较[<sup>19</sup>](#gelman2016problems)，而这也正是假设检验的危险之处。当然这种情况还叫多重比较已经不合适了，更好的叫法是研究者自由度(researcher degrees of freedom)，这种自由度可以在参与者浑然不觉的情况下轻易地让p值产生巨大的变化[<sup>20</sup>](#simmons2011false)，因此也非常地难以避免。一个简单的解决办法[就是](http://www.guokr.com/article/438043/)把研究显式地分为探索阶段和验证阶段，探索阶段有了任何新发现，就固定数据分析方法，进行预注册实验，看看在验证阶段是否能重复出来。这适用于成本低廉的实验，但有些实验重复起来太不现实，那就只好采用其它方法，贝叶斯多层模型是一个不错的选择，因为partial pooling，它能在很大程度上自动校正多重比较问题[<sup>21</sup>](#gelman2012we)。
+我随口编的这些“解释”也许并不都合理，我也不认为Tooby夫妇会有任何学术不端（做为进化心理学的忠实拥趸，我很尊敬他们），我想说的正是即使你十分正直诚实，你完全在数据的指引下寻找结论，你自始至终只做了一次假设检验，你依然可能涉及多重比较——潜在的多重比较[<sup>19</sup>](#gelman2016problems)，而这也正是假设检验的危险之处。当然这种情况还叫多重比较已经不合适了，更好的叫法是多重建模(multiple modeling)[<sup>20</sup>](#young2011deming)，或者研究者自由度(researcher degrees of freedom)。这种自由度可以在参与者浑然不觉的情况下轻易地让p值产生巨大的变化[<sup>21</sup>](#simmons2011false)，因此也非常地难以避免。一个简单的解决办法[就是](http://www.guokr.com/article/438043/)把研究显式地分为探索阶段和验证阶段，探索阶段有了任何新发现，就固定数据分析方法，进行预注册实验，看看在验证阶段是否能重复出来。这适用于成本低廉的实验，但有些实验重复起来太不现实，那就只好采用其它方法，贝叶斯多层模型是一个不错的选择，因为partial pooling，它能在很大程度上自动校正多重比较问题[<sup>22</sup>](#gelman2012we)。
 
 ![Andrew Gelman关于潜在多重比较的计算](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/all_poss_p.png)
-*一项研究发现单身女性在排卵期内会更有可能投票给奥巴马，相反，处于排卵期的非单身女性更愿意投给罗姆尼，变化值超过十个百分点[<sup>22</sup>](#durante2013fluctuating)，这背后当然也有一套进化理论啦，但让我们来看下数据处理上可能的自由度吧：大姨妈后的第几天到第几天算排卵期？那些大姨妈不规律的样本要不要排除掉？如果调查对象对上次大姨妈的时间不够确定，要排除掉吗？多不确定才排除？怎么样算非单身？处于暧昧期的算吗？一垒呢？二垒呢？三垒呢？四垒呢？五垒呢？……[Andrew Gelman](http://themonkeycage.org/2013/05/more-on-those-psychological-science-papers-menstrual-cycles-and-political-attitudes-biceps-size-and-political-attitudes/)认为整个数据至少有168种完全合理的处理方式，然后他把168个置信区间全[算了一遍](https://youtu.be/fc1hkFC2c1E?t=2633)，得到上图，蓝线对应的是论文[<sup>22</sup>](#durante2013fluctuating)实际采用的分析方法。*
+*一项研究发现单身女性在排卵期内会更有可能投票给奥巴马，相反，处于排卵期的非单身女性更愿意投给罗姆尼，变化值超过十个百分点[<sup>23</sup>](#durante2013fluctuating)，这背后当然也有一套进化理论啦，但让我们来看下数据处理上可能的自由度吧：大姨妈后的第几天到第几天算排卵期？那些大姨妈不规律的样本要不要排除掉？如果调查对象对上次大姨妈的时间不够确定，要排除掉吗？多不确定才排除？怎么样算非单身？处于暧昧期的算吗？一垒呢？二垒呢？三垒呢？四垒呢？五垒呢？……[Andrew Gelman](http://themonkeycage.org/2013/05/more-on-those-psychological-science-papers-menstrual-cycles-and-political-attitudes-biceps-size-and-political-attitudes/)认为整个数据至少有168种完全合理的处理方式，然后他把168个置信区间全[算了一遍](https://youtu.be/fc1hkFC2c1E?t=2633)，得到上图，蓝线对应的是论文[<sup>23</sup>](#durante2013fluctuating)实际采用的分析方法。*
 
 #### The law of small numbers
 
 在GVT的讨论里我们已经提到了效力不足的问题，教科书上对效力的说法是效力不足你就不能发现该发现的东西，现实比这糟的多，你不是没有发现该发现的，而是会发现一堆乱七八糟不该发现的东西。
 
-首先，在效力不足的情况下，得到的p值会很不稳定(p dancing[<sup>23</sup>](#cumming2014new))，不显著还好，要是碰巧显著了，恭喜你，你又为学术共同体贡献了一个虚假发现。
+首先，在效力不足的情况下，得到的p值会很不稳定(p dancing[<sup>24</sup>](#cumming2014new))，不显著还好，要是碰巧显著了，恭喜你，你又为学术共同体贡献了一个虚假发现。
 
 ```
 (* Mathematica codes *)
@@ -167,7 +167,7 @@ Histogram[{p1, p2}, {0.05}, "Probability",
 ![统计效力不足时p值不稳定的图示](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/p_dancing2.png)
 *效应值=1，样本标准差=2，对应的[Cohen's d](https://en.wikipedia.org/wiki/Effect_size#Cohen.27s_d)=0.5，在心理学中被认为是中等效应。图上是模拟实验一万次得到的p值分布，最左边的柱对应着显著(p≤0.05)，不难看出p值的不稳定。*
 
-其次，如果你在效力不足时得到了显著性，你很有可能会严重高估效应值，甚至连符号都可能是错的，这被称作<del>抖</del>S(ign)和M(agnitude)型错误[<sup>24</sup>](#gelman2014beyond)。<del>[S怎么也能算错误](https://zh.moegirl.org/zh-hans/%E7%94%B7%E4%BA%BA%E5%8F%98%E6%80%81%E6%9C%89%E4%BB%80%E4%B9%88%E9%94%99)</del>
+其次，如果你在效力不足时得到了显著性，你很有可能会严重高估效应值，甚至连符号都可能是错的，这被称作<del>抖</del>S(ign)和M(agnitude)型错误[<sup>25</sup>](#gelman2014beyond)。<del>[S怎么也能算错误](https://zh.moegirl.org/zh-hans/%E7%94%B7%E4%BA%BA%E5%8F%98%E6%80%81%E6%9C%89%E4%BB%80%E4%B9%88%E9%94%99)</del>
 
 ```
 (* Mathematica codes *)
@@ -186,7 +186,7 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 ![统计效力不足时结果常常是高估的图示](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/type_M_error2.png)
 *真实效应值=1，可以看出即使效力=0.8估计值也普遍偏高。*
 
-那现实中科学研究的效力如何呢？这几年有人评估了神经科学领域的研究，认为中位效力只有21%[<sup>25</sup>](#button2013power)；经济学领域则不超过18%[<sup>26</sup>](#ioannidis2016power)；Cohen在62年[评估](https://replicationindex.wordpress.com/2015/09/22/the-statistical-power-of-abnormal-social-psychological-research-a-revew-by-jacob-cohen/)了心理学界，认为如果研究的是小效应，当时的效力大概只有18%，中等效应的话有48%[<sup>27</sup>](#cohen1962statistical)；二十几年后人们用Cohen的方法又研究了一遍，发现心理学研究效力不仅没有改善，还恶化了[<sup>28</sup>](#sedlmeier1989studies)。这些研究有的有争议，但即使最乐观的研究者大概也不会认为现在的平均效力超过0.5。其实早在1971年，后来的诺奖得主卡尼曼和他的好基友特沃斯基就注意到他们的同行常常严重高估实验的效力，仿照大数定律，他们把这种认为小样本也能很好地代表整体的倾向命名为小数定律[<sup>29</sup>](#tversky1971belief)。这种错误倾向有多难以克服呢？你只要再读一遍论文作者的名字就知道了。看到了吗？特沃斯基，他就是GVT里的那个T啊，连他都掉到自己发现的坑里去了。而卡尼曼也没好到哪去，几个月前刚刚有人[指出](https://replicationindex.wordpress.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/)《思考：快与慢》中关于social priming的那一章是效力严重不足的……卡尼曼爽快地[承认](https://replicationindex.wordpress.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/#comment-1454)了错误。
+那现实中科学研究的效力如何呢？这几年有人评估了神经科学领域的研究，认为中位效力只有21%[<sup>26</sup>](#button2013power)；经济学领域则不超过18%[<sup>27</sup>](#ioannidis2016power)；Cohen在62年[评估](https://replicationindex.wordpress.com/2015/09/22/the-statistical-power-of-abnormal-social-psychological-research-a-revew-by-jacob-cohen/)了心理学界，认为如果研究的是小效应，当时的效力大概只有18%，中等效应的话有48%[<sup>28</sup>](#cohen1962statistical)；二十几年后人们用Cohen的方法又研究了一遍，发现心理学研究效力不仅没有改善，还恶化了[<sup>29</sup>](#sedlmeier1989studies)。这些研究有的有争议，但即使最乐观的研究者大概也不会认为现在的平均效力超过0.5。其实早在1971年，后来的诺奖得主卡尼曼和他的好基友特沃斯基就注意到他们的同行常常严重高估实验的效力，仿照大数定律，他们把这种认为小样本也能很好地代表整体的倾向命名为小数定律[<sup>30</sup>](#tversky1971belief)。这种错误倾向有多难以克服呢？你只要再读一遍论文作者的名字就知道了。看到了吗？特沃斯基，他就是GVT里的那个T啊，连他都掉到自己发现的坑里去了。而卡尼曼也没好到哪去，几个月前刚刚有人[指出](https://replicationindex.wordpress.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/)《思考：快与慢》中关于social priming的那一章是效力严重不足的……卡尼曼爽快地[承认](https://replicationindex.wordpress.com/2017/02/02/reconstruction-of-a-train-wreck-how-priming-research-went-of-the-rails/#comment-1454)了错误。
 
 为了避免让你产生这届心理学家不行的误解，我们来做个测试。
 
@@ -194,27 +194,27 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 
 ![Google Scholar中Satoshi Kanazawa关于出生性别比研究的搜索结果](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/Satoshi_Kanazawa.png)
 
-他还合著过一本书，书名也很简单粗暴，叫"[Why Beautiful People Have More Daughters](https://book.douban.com/subject/2351927/)"（[中译本](https://book.douban.com/subject/4913068/)叫《生猛的进化心理学》）。我对政治不正确的研究没有任何意见——如果不是喜闻乐见的话，但是你的方法得靠谱啊。Kanazawa的研究充满了各种统计错误[<sup>24,30,31,32</sup>](#gelman2014beyond)，我们以上图最后一篇论文为例，他分析了[Add Health数据集](http://www.cpc.unc.edu/projects/addhealth)，这是最大、最综合的关于青少年的长期追踪数据集，从人们还是青少年时开始追踪，四次回访，记录了这些人的许多信息，其中两个与这里的话题有关，一是这些人的孩子的性别，二是调查人员会对被采访者的外貌打分，从最丑到最美共有五档。Kanazawa选取了第三次回访中有孩子的人（2972个）进行了分析，他发现最美的一档生女孩的可能性比其他人高8个百分点(56% vs 48%)，p < 0.05，所以，beautiful parents have more daughters。首先这里存在明显的多重比较问题，第一档和其他档比显著了，和最丑的一档、倒数第二档比怎么反而都不显著了呢？为什么不把最美的两档和剩下的三档比，假如这么比显著的话Kanazawa会不提吗？……这里更好的办法显然是对外貌和出生性别建模，弄个回归方程啥的，而不是进行假设检验。不过即使那样也是毫无意义的，为什么呢？因为，你觉得2972个样本在这里效力够吗？
+他还合著过一本书，书名也很简单粗暴，叫"[Why Beautiful People Have More Daughters](https://book.douban.com/subject/2351927/)"（[中译本](https://book.douban.com/subject/4913068/)叫《生猛的进化心理学》）。我对政治不正确的研究没有任何意见——如果不是喜闻乐见的话，但是你的方法得靠谱啊。Kanazawa的研究充满了各种统计错误[<sup>25,31-33</sup>](#gelman2014beyond)，我们以上图最后一篇论文为例，他分析了[Add Health数据集](http://www.cpc.unc.edu/projects/addhealth)，这是最大、最综合的关于青少年的长期追踪数据集，从人们还是青少年时开始追踪，四次回访，记录了这些人的许多信息，其中两个与这里的话题有关，一是这些人的孩子的性别，二是调查人员会对被采访者的外貌打分，从最丑到最美共有五档。Kanazawa选取了第三次回访中有孩子的人（2972个）进行了分析，他发现最美的一档生女孩的可能性比其他人高8个百分点(56% vs 48%)，p < 0.05，所以，beautiful parents have more daughters。首先这里存在明显的多重比较问题，第一档和其他档比显著了，和最丑的一档、倒数第二档比怎么反而都不显著了呢？为什么不把最美的两档和剩下的三档比，假如这么比显著的话Kanazawa会不提吗？……这里更好的办法显然是对外貌和出生性别建模，弄个回归方程啥的，而不是进行假设检验。不过即使那样也是毫无意义的，为什么呢？因为，你觉得2972个样本在这里效力够吗？
 
 假如放平时我相信大部分人都觉得够了，快三千个样本，在心理学里是很大型的研究了，今天你还可以看到很多研究就几十个样本呢。但现在我这么一问你应该也知道答案是不够，那我再问，你觉得多少样本才够呢？
 
-我们还是来算算吧。生男生女是个伯努利事件，假设我们现在有数量相等的两档人，每一群人数是n，从过往的研究中我们知道人类在极度营养不良下生女孩的概率大约会增加3%[<sup>32</sup>](#gelman2009beauty)，所以长相对性别比的影响极不可能是8%，撑死2%吧。一群人出生性别比的样本标准差是`$\sqrt{p(1-p)/n} \approx 0.5/\sqrt{n} $`，两个群体的差值的标准差就是`$0.5 * \sqrt{2/n} $`。2%的效应想要显著，意味着2%得大于两倍标准差， `$$0.02 > 2 * 0.5 * \sqrt{2/n} \Rightarrow n > 5000 $$` 这是一个群体的数量，两个群体就至少得要一万人。这已经是很乐观的估计了，假如效应值是1%（实际情况很可能更小），那样本数就得要四万了。需要这么大的样本的原因和分析投篮数据时是一样的——二项分布难以估计准确。所以这项研究的问题与假设检验无关，改用贝叶斯也救不回来，这个研究想法出生的那刻就已经被宣判死刑了。
+我们还是来算算吧。生男生女是个伯努利事件，假设我们现在有数量相等的两档人，每一群人数是n，从过往的研究中我们知道人类在极度营养不良下生女孩的概率大约会增加3%[<sup>33</sup>](#gelman2009beauty)，所以长相对性别比的影响极不可能是8%，撑死2%吧。一群人出生性别比的样本标准差是`$\sqrt{p(1-p)/n} \approx 0.5/\sqrt{n} $`，两个群体的差值的标准差就是`$0.5 * \sqrt{2/n} $`。2%的效应想要显著，意味着2%得大于两倍标准差， `$$0.02 > 2 * 0.5 * \sqrt{2/n} \Rightarrow n > 5000 $$` 这是一个群体的数量，两个群体就至少得要一万人。这已经是很乐观的估计了，假如效应值是1%（实际情况很可能更小），那样本数就得要四万了。需要这么大的样本的原因和分析投篮数据时是一样的——二项分布难以估计准确。所以这项研究的问题与假设检验无关，改用贝叶斯也救不回来，这个研究想法出生的那刻就已经被宣判死刑了。
 
-现在你知道通过直觉判断效力有多容易出错了吗？这也是效力计算为何如此重要的原因。对于那些复杂的实验，可能没办法从数学上进行计算，那可以先在已知数据上进行验证，例如用电脑生成的手热数据去验证GVT的统计方法。我这里还有两个特别有趣的例子，一个是关于功能性磁共振成像(fMRI)的。你应该读过一些科学家一边让被试做某类事情一边用fMRI扫被试大脑，然后得出XX脑区负责XX行为的研究。09年的时候有人想这玩意到底可不可靠啊，于是他们就用fMRI去扫描了一条三文鱼的大脑，结果发现了信号，好像没什么不对？可是，他们扫的是一条死三文鱼啊[<sup>33</sup>](#bennett2009neural)（这项研究众望所归地[拿到了](https://blogs.scientificamerican.com/scicurious-brain/ignobel-prize-in-neuroscience-the-dead-salmon-study/)搞笑诺贝尔奖）。同年还有另外两篇论文指出当时fMRI实践中大量存在的几个统计问题[<sup>34,35</sup>](#vul2009puzzlingly)，自那以后大部分研究者都[提高了](http://www.culturalcognition.net/blog/2013/4/30/deja-voodoo-the-puzzling-reemergence-of-invalid-neuroscience.html)警惕，整个领域发展的更健康了（至少比心理学好）。而就在今年，有人把神经科学中常用的一些研究方法应用到红白机处理器上去，想看看这些方法到底能不能帮助我们理解一个信息处理系统，结果不能算特别乐观[<sup>36</sup>](#jonas2017could)。这篇文章太新了，结论可以再讨论，不过这个研究想法是非常好的。
+现在你知道通过直觉判断效力有多容易出错了吗？这也是效力计算为何如此重要的原因。对于那些复杂的实验，可能没办法从数学上进行计算，那可以先在已知数据上进行验证，例如用电脑生成的手热数据去验证GVT的统计方法。我这里还有两个特别有趣的例子，一个是关于功能性磁共振成像(fMRI)的。你应该读过一些科学家一边让被试做某类事情一边用fMRI扫被试大脑，然后得出XX脑区负责XX行为的研究。09年的时候有人想这玩意到底可不可靠啊，于是他们就用fMRI去扫描了一条三文鱼的大脑，结果发现了信号，好像没什么不对？可是，他们扫的是一条死三文鱼啊[<sup>34</sup>](#bennett2009neural)（这项研究众望所归地[拿到了](https://blogs.scientificamerican.com/scicurious-brain/ignobel-prize-in-neuroscience-the-dead-salmon-study/)搞笑诺贝尔奖）。同年还有另外两篇论文指出当时fMRI实践中大量存在的几个统计问题[<sup>35,36</sup>](#vul2009puzzlingly)，自那以后大部分研究者都[提高了](http://www.culturalcognition.net/blog/2013/4/30/deja-voodoo-the-puzzling-reemergence-of-invalid-neuroscience.html)警惕，整个领域发展的更健康了（至少比心理学好）。而就在今年，有人把神经科学中常用的一些研究方法应用到红白机处理器上去，想看看这些方法到底能不能帮助我们理解一个信息处理系统，结果不能算特别乐观[<sup>37</sup>](#jonas2017could)。这篇文章太新了，结论可以再讨论，不过这个研究想法是非常好的。
 
 #### 和物理学的比较
 
-在说了那么多假设检验的坏话后，有两个问题是无法回避的：其他学科，包括物理学，也有使用假设检验，为什么没这么多问题？假设检验在它的提出者手里为什么表现的挺好，不然后来也不会被这么广泛地使用？这是两个好问题，通过对比成功范例可以让我们更好地理解心理学里的假设检验到底哪出了问题，以及为什么这种问题更多的是因为使用上、而不是理论上的错误[<sup>37,38</sup>](#gelman2013commentary)。
+在说了那么多假设检验的坏话后，有两个问题是无法回避的：其他学科，包括物理学，也有使用假设检验，为什么没这么多问题？假设检验在它的提出者手里为什么表现的挺好，不然后来也不会被这么广泛地使用？这是两个好问题，通过对比成功范例可以让我们更好地理解心理学里的假设检验到底哪出了问题，以及为什么这种问题更多的是因为使用上、而不是理论上的错误[<sup>38,39</sup>](#gelman2013commentary)。
 
-粒子物理学里也使用假设检验，虽然他们往往不说p值，而说几个标准差，但是一个意思，那为什么希格斯粒子的发现就显得那么可靠？首先，他们使用的p值很小。发现新粒子的黄金标准是5个标准差，对应的p值大概是三百万分之一。这还是开新闻发布会时候的数字，等写成论文发表的时候ATLAS的数据已经达到5.9个标准差，对应的p值是`$1.7*10^{-9}$`[<sup>39</sup>](#aad2012observation)。
+粒子物理学里也使用假设检验，虽然他们往往不说p值，而说几个标准差，但是一个意思，那为什么希格斯粒子的发现就显得那么可靠？首先，他们使用的p值很小。发现新粒子的黄金标准是5个标准差，对应的p值大概是三百万分之一。这还是开新闻发布会时候的数字，等写成论文发表的时候ATLAS的数据已经达到5.9个标准差，对应的p值是`$1.7*10^{-9}$`[<sup>40</sup>](#aad2012observation)。
 
-其次，物理学的原假设是很强的，希格斯粒子不存在是个完全有可能的假设，需要很强的数据才能否定它，所以当它真的被否定时，对互补假设是强大的支持。心理学则完全不是这样。心理学里最常见的零假设是X和Y没有关系（相关=0），或者稍微强一点的也就是X对Y的效应是正的（或者负的），否定这样一个假设你得到的结论也不过是X和Y有关系，至于多大的关系、重要吗，则完全无法回答。而考虑到心理学中各因素的普遍联系，X和Y没有关系几乎是一个必然错误的假设，所以推翻它毫无意义。经期跟投票倾向有关吗？当然有关啊，而且不仅经期有关，你的身高体重鞋码三围无名指长度姓名首字母织毛衣的技巧……都会有关好吗？只不过有些相关太小了需要极大的样本才能检测出来，Paul Meehl曾经分析过一个有45个变量、包含57000个明尼苏达高中生资料的数据集，计算了所有变量的两两关系，结果其中92%是显著的，71%的p值小于`$10^{-6}$`[<sup>40</sup>](#meehl1990summaries)，所以有人说假设检验本质上是对于样本数的检验，就是这个意思。这种弱检验导致了心理学和物理学的一个重要区别：随着测量手段的进步，物理学里否定一个假设越来越难了，从而得到的结论也越来越可靠；而心理学里否定零假设却越来越容易了，你放眼望去哪都是效应，整个学科却没什么进展。这个方法论上的区别最早还是由Meehl注意到的，所以也被称作[Meehl's paradox](http://andrewgelman.com/2015/03/23/paul-meehl-continues-boss/#comment-214488)[<sup>14,41,42</sup>](#meehl1978theoretical)。
+其次，物理学的原假设是很强的，希格斯粒子不存在是个完全有可能的假设，需要很强的数据才能否定它，所以当它真的被否定时，对互补假设是强大的支持。心理学则完全不是这样。心理学里最常见的零假设是X和Y没有关系（相关=0），或者稍微强一点的也就是X对Y的效应是正的（或者负的），否定这样一个假设你得到的结论也不过是X和Y有关系，至于多大的关系、重要吗，则完全无法回答。而考虑到心理学中各因素的普遍联系，X和Y没有关系几乎是一个必然错误的假设，所以推翻它毫无意义。经期跟投票倾向有关吗？当然有关啊，而且不仅经期有关，你的身高体重鞋码三围无名指长度姓名首字母织毛衣的技巧……都会有关好吗？只不过有些相关太小了需要极大的样本才能检测出来，Paul Meehl曾经分析过一个有45个变量、包含57000个明尼苏达高中生资料的数据集，计算了所有变量的两两关系，结果其中92%是显著的，71%的p值小于`$10^{-6}$`[<sup>41</sup>](#meehl1990summaries)，所以有人说假设检验本质上是对于样本数的检验，就是这个意思。这种弱检验导致了心理学和物理学的一个重要区别：随着测量手段的进步，物理学里否定一个假设越来越难了，从而得到的结论也越来越可靠；而心理学里否定零假设却越来越容易了，你放眼望去哪都是效应，整个学科却没什么进展。这个方法论上的区别最早还是由Meehl注意到的，所以也被称作[Meehl's paradox](http://andrewgelman.com/2015/03/23/paul-meehl-continues-boss/#comment-214488)[<sup>14,42,43</sup>](#meehl1978theoretical)。
 
-最后，物理学从理论假设到实验数据的链条紧实，实验数据可以很有效地作用在理论上。什么意思呢？当一个理论对现实做出预测时，它往往需要涉及一些辅助假设，举例来说，从长得好看的人多生女孩有进化优势（理论假设）推出在Add Health数据集中最美的一档会比其他人多生女孩（观测）时，我们暗中引入了许多辅助假设，比如好看的女性往往也嫁给社会地位高的男性，假如好看女性的基因会让她多生女孩，那成功男性的基因会不会导致多生男孩呢？Add Health的数据有代表性吗？对外貌的评分准确吗？Kanazawa使用的是第三次回访的数据，这数据有什么系统性偏差吗？……只有当这许多假设都成立的时候我们才能从理论推出预期的观测结果，反过来说，如果我们没观察到预期结果，也不意味着理论一定错了，因为也可能是辅助假设错了（这点后文还会进一步讨论）。所以如果整个逻辑链条过于松垮，实验对理论的验证效果就很弱。物理学中的推理当然也需要辅助假设，例如从希格斯粒子的存在到监视器上的信号，中间你至少需要一套关于加速器正确运作的假设。但物理学中的辅助假设常常可以被单独验证，比如LHC开机后，做的第一件事不是寻找希格斯粒子，而是先跑一组已知结果的实验，看看能不能重复出来（对LHC发现希格斯粒子的整个过程，《[粒子狂热](https://movie.douban.com/subject/3569996/)》是一部不错的纪录片）。这也顺便回答了本节开头的第二个问题：为什么假设检验在它的提出者手里应用的不错？首先，不管是费雪、内曼还是皮尔逊，他们要是看到今天心理学家对假设检验的使用都绝对会气得晕过去，他们在提出这套方法时都特意强调了它的局限和问题；其次，费雪当时研究的是农业产量问题，理论（施肥会带来产量增长）到观测（那块施了肥的地玉米确实长得比较多）几乎零距离，只要效力足够，假设检验用起来完全没问题[<sup>43</sup>](#fiskesocial)。
+最后，物理学从理论假设到实验数据的链条紧实，实验数据可以很有效地作用在理论上。什么意思呢？当一个理论对现实做出预测时，它往往需要涉及一些辅助假设，举例来说，从长得好看的人多生女孩有进化优势（理论假设）推出在Add Health数据集中最美的一档会比其他人多生女孩（观测）时，我们暗中引入了许多辅助假设，比如好看的女性往往也嫁给社会地位高的男性，假如好看女性的基因会让她多生女孩，那成功男性的基因会不会导致多生男孩呢？Add Health的数据有代表性吗？对外貌的评分准确吗？Kanazawa使用的是第三次回访的数据，这数据有什么系统性偏差吗？……只有当这许多假设都成立的时候我们才能从理论推出预期的观测结果，反过来说，如果我们没观察到预期结果，也不意味着理论一定错了，因为也可能是辅助假设错了（这点后文还会进一步讨论）。所以如果整个逻辑链条过于松垮，实验对理论的验证效果就很弱。物理学中的推理当然也需要辅助假设，例如从希格斯粒子的存在到监视器上的信号，中间你至少需要一套关于加速器正确运作的假设。但物理学中的辅助假设常常可以被单独验证，比如LHC开机后，做的第一件事不是寻找希格斯粒子，而是先跑一组已知结果的实验，看看能不能重复出来（对LHC发现希格斯粒子的整个过程，《[粒子狂热](https://movie.douban.com/subject/3569996/)》是一部不错的纪录片）。这也顺便回答了本节开头的第二个问题：为什么假设检验在它的提出者手里应用的不错？首先，不管是费雪、内曼还是皮尔逊，他们要是看到今天心理学家对假设检验的使用都绝对会气得晕过去，他们在提出这套方法时都特意强调了它的局限和问题；其次，费雪当时研究的是农业产量问题，理论（施肥会带来产量增长）到观测（那块施了肥的地玉米确实长得比较多）几乎零距离，只要效力足够，假设检验用起来完全没问题[<sup>44</sup>](#fiskesocial)。
 
 #### 抽屉效应/发表偏见
 
-理论上，抽屉效应指的是因为期刊喜欢发表新发现，所以一个没得到显著性的研究会被锁在抽屉里，没有机会发表，从而你在期刊上看到的都是正面结果。抽屉效应确实是发表偏见的结果，但我不同意很多人因此把二者混为一谈，进一步的区分是有意义的。现实中，心理学的发表偏见不仅仅是不发表没有得到显著性的论文，如果只是这样，那倒也还好，毕竟有着研究者自由度，躺在抽屉里的文章其实不会太多。糟糕的是它们还不喜欢发表重复实验。心理学家极少重复前人的实验[<sup>44</sup>](#makel2012replications)，直接重复就更少了，他们偏好间接重复(conceptual replication)，也就是把原始实验改来改去，理论上相符就好。这一恶习甚至连费曼都注意到了。
+理论上，抽屉效应指的是因为期刊喜欢发表新发现，所以一个没得到显著性的研究会被锁在抽屉里，没有机会发表，从而你在期刊上看到的都是正面结果。抽屉效应确实是发表偏见的结果，但我不同意很多人因此把二者混为一谈，进一步的区分是有意义的。现实中，心理学的发表偏见不仅仅是不发表没有得到显著性的论文，如果只是这样，那倒也还好，毕竟有着研究者自由度，躺在抽屉里的文章其实不会太多。糟糕的是它们还不喜欢发表重复实验。心理学家极少重复前人的实验[<sup>45</sup>](#makel2012replications)，直接重复就更少了，他们偏好间接重复(conceptual replication)，也就是把原始实验改来改去，理论上相符就好。这一恶习甚至连费曼都注意到了。
 
 ![费曼对心理学家不重复实验的批评](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/conceptual_replication.png)
 
@@ -235,7 +235,7 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 
 这似乎就是发生在social priming领域的事（最早的那篇Bargh的论文样本数是30……），不然你很难解释卡尼曼怎么会那么信誓旦旦。这个领域中不乏正直的人，仅仅用发表压力下的学术不端解释不了这样大规模的错误，只能说大家是真的相信。
 
-这个模型并不是我的首创，again，Meehl1967年就提出了类似的看法[<sup>41</sup>](#meehl1967theory)。这真的让人觉得很奇怪，Meehl在心理学界[备受尊重](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/Paul_Meehl.png)，所有人都知道他，他60年代写的一系列批评假设检验的文章也很多人读，但就是[没人听](http://andrewgelman.com/2015/03/23/paul-meehl-continues-boss/)，几十年过去了整个学科还是老样子。到了90年代，Meehl自己都受不了了，又写了好几篇文章，其中有一篇无奈地说道[<sup>45</sup>](#meehl1990appraising)：
+这个模型并不是我的首创，again，Meehl1967年就提出了类似的看法[<sup>42</sup>](#meehl1967theory)。这真的让人觉得很奇怪，Meehl在心理学界[备受尊重](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/Paul_Meehl.png)，所有人都知道他，他60年代写的一系列批评假设检验的文章也很多人读，但就是[没人听](http://andrewgelman.com/2015/03/23/paul-meehl-continues-boss/)，几十年过去了整个学科还是老样子。到了90年代，Meehl自己都受不了了，又写了好几篇文章，其中有一篇无奈地说道[<sup>46</sup>](#meehl1990appraising)：
 
 > Ten years later, I wrote at greater length along similar lines (Meehl, 1978); but, despite my having received more than 1,000 reprint requests for that article in the first year after its appearance, I cannot discern that it had more impact on research habits in soft psychology than did Morrison and Henkel. Our graduate students typically plan and write their doctoral dissertations in blissful ignorance that “the significance test controversy” even exists, or could have a bearing on their research problems. This article (see also Meehl, 1990c) is my final attempt to call attention to a methodological problem of our field that I insist is not minor but of grave import.
 
@@ -272,11 +272,11 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 
 你应该已经看出一个层次化的认知模型有多重要，否则稍不注意就不知道滑到哪里去了。但这自然带来了一个疑问，我们之前刚刚批评过心理学中从理论到观测的链条太过松垮，拉卡托斯的这个模型难道不也是这样吗？我的回答是这样的：辅助假设是不可避免的，你应该让它尽量的紧实（就像物理学中那样），但如果你拉得太过头，赋予了它多于事实能支撑的强度，那整个结构又会牵一发而动全身，也是不行的。至于怎么样的强度算恰当，这就取决于你的学术品味了。品味这东西一两句也说不清，我只能尽力而为，一方面我可以给你[推荐](https://book.douban.com/people/whigzhou/collect?sort=rating&start=0&mode=grid&tags_sort=count)一些[比较好](https://book.douban.com/people/tcya/collect?sort=rating&start=0&mode=grid&tags_sort=count)的书，品味都是[多吃好东西培养出来的](http://headsalon.org/archives/6935.html)；另一方面我可以提供一些拇指法则，尽量帮你避开一些坑：
 
-*   假如你对一项研究没把握，请假设它是错的[<sup>46,47</sup>](#ioannidis2005most)；
-*   或者至少假设它的结论是严重高估的[<sup>24</sup>](#gelman2014beyond)；
+*   假如你对一项研究没把握，请假设它是错的[<sup>47,48</sup>](#ioannidis2005most)；
+*   或者至少假设它的结论是严重高估的[<sup>25</sup>](#gelman2014beyond)；
 *   如果一篇论文没有任何描述性统计的图，而全是假设检验的表，这是一个危险信号；如果只报告p值，完全没提效应值和置信区间，这是一个危险信号；如果使用了一堆假设检验却完全没有效力分析，这是一个危险信号；如果一篇文章有两个危险信号，你最好还是把它扔到垃圾桶去；
 *   除非你特别特别感兴趣，社会启动效应和具身认知的东西先不要看了；
-*   如果你对[魔鬼经济学](http://freakonomics.com/)或[格拉德威尔](https://en.wikipedia.org/wiki/Malcolm_Gladwell)深信不疑，那你对心理学的信任[太](http://andrewgelman.com/?s=freakonomics)高[了](http://www.nytimes.com/2009/11/15/books/review/Pinker-t.html?pagewanted=all)[<sup>48</sup>](#gelman2012freakonomics)；
+*   如果你对[魔鬼经济学](http://freakonomics.com/)或[格拉德威尔](https://en.wikipedia.org/wiki/Malcolm_Gladwell)深信不疑，那你对心理学的信任[太](http://andrewgelman.com/?s=freakonomics)高[了](http://www.nytimes.com/2009/11/15/books/review/Pinker-t.html?pagewanted=all)[<sup>49</sup>](#gelman2012freakonomics)；
 *   ……
 
 # 结语
@@ -335,6 +335,8 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 <span id="petersen2013ancestral">18.Petersen, M. B., Sznycer, D., Sell, A., Cosmides, L. & Tooby, J. The ancestral logic of politics: Upper-body strength regulates men’s assertion of self-interest over economic redistribution. _Psychological Science_ **24,** 1098–1103 (2013).</span>
 
 <span id="gelman2016problems">19.Gelman, A. The problems with p-values are not just with p-values. _The American Statistician, supplemental material to the ASA statement on p-values and statistical significance_ **10,** 1154108 (2016).</span>
+
+<li><span id="young2011deming">20.Young, S. S. &amp; Karr, A. Deming, data and observational studies. <i>Significance</i> <b>8,</b> 116–120 (2011).</span></li>
 
 <span id="simmons2011false">20.Simmons, J. P., Nelson, L. D. & Simonsohn, U. False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. _Psychological science_ **22,** 1359–1366 (2011).</span>
 
