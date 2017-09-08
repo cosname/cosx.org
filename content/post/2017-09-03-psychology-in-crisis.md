@@ -21,7 +21,7 @@ n年以前，斯金纳在一系列经典的鸽子实验中展示了如何通过�
 
 但斯金纳的手段远不止于此，通过改变不同的强化方式，他发现了一个有趣的现象。假如你在鸽子做出某个动作后让食物掉出来，那鸽子很快就会学会这个动作，就像上面学会原地转圈那样；如果鸽子不管做什么你都不放食物出来，那鸽子很快就啥都不做了。这些都很合理，但当你放出食物的时机与鸽子的动作毫无关系时（比如固定每隔20秒掉食物），那鸽子会展现出各种奇怪的强化行为——有的会不断地逆时针转圈、有的会向左边扭一下头再去看有没有吃的、有的会使劲地晃动脑袋……这些行为也很好解释，当鸽子做出某个动作时食物碰巧掉出来了，鸽子就会认为它一定做对了什么，从而重复这个动作，而过一会食物果然又掉出来了……最终鸽子就这样学会了各种奇奇怪怪的动作，斯金纳把这称之为“鸽子的迷信”[<sup>1</sup>](#skinner1992superstition)。
 
-你说鸽子笨嘛，脑袋那么小，难怪容易迷信。那请你想想赌场里赌徒们千奇百怪的禁忌、想想星座、想想本命年的红内裤……我们这个物种的许多成员表现又好到哪里去呢？事实上我们和鸽子一样，非常擅长从随机中看出“规律”([Apophenia](https://en.wikipedia.org/wiki/Apophenia))——如果不是更擅长的话[<sup>2-5</sup>](#herbranson2010birds)。iTunes早期的随机播放是完全随机的，结果收到用户投诉，说咋这么不随机？乔布斯不得不[采用](http://itindex.net/detail/21634-ipod-%E4%BA%A7%E5%93%81-%E9%9A%8F%E6%9C%BA)了更复杂、完全不随机的算法，才让用户满意。用乔布斯自己的话说:“We’ve actually added Smart Shuffle to make it less random. But it seems more random.”
+你说鸽子笨嘛，脑袋那么小，难怪容易迷信。那请你想想赌场里赌徒们千奇百怪的禁忌、想想星座、想想本命年的红内裤……我们这个物种的许多成员又好到哪里去呢？事实上我们和鸽子一样，非常擅长从随机中看出“规律”([Apophenia](https://en.wikipedia.org/wiki/Apophenia))——如果不是更擅长的话[<sup>2-5</sup>](#herbranson2010birds)。iTunes早期的随机播放是完全随机的，结果收到用户投诉，说咋这么不随机？乔布斯不得不[采用](http://itindex.net/detail/21634-ipod-%E4%BA%A7%E5%93%81-%E9%9A%8F%E6%9C%BA)了更复杂、完全不随机的算法，才让用户满意。用乔布斯自己的话说:“We’ve actually added Smart Shuffle to make it less random. But it seems more random.”
 
 这种根深蒂固的本能自然有着进化上的道理，在一个没规律的地方看出规律你可能也就多晃几下脑袋，但假如食物真的是因为晃脑袋掉出来的你却没发现，那你就得饿死了。既然错过规律比找错规律代价要大得多，那我们肯定宁愿多找出些“规律”。这种认知偏见自然没有逃过心理学家的眼睛，于是有一天几个心理学家琢磨着：“人们认为的手热会不会也是纯粹的随机现象呢？”
 
@@ -104,11 +104,11 @@ p值——以及更一般的，整个假设检验范式，在这次危机中起�
 
 > I believe that the almost universal reliance on merely refuting the null hypothesis as the standard method for corroborating substantive theories in the soft areas is a terrible mistake, is basically unsound, poor scientific strategy, and one of the worst things that ever happened in the history of psychology.
 
-p值带来了[太多的误解](https://en.wikipedia.org/wiki/Misunderstandings_of_p-values)[<sup>15</sup>](#greenland2016statistical)，连美国统计学会都少见的出来说了几句[<sup>16</sup>](#wasserstein2016asa)，这里是几点主要的。
+人们对p值有着[太多的误解](https://en.wikipedia.org/wiki/Misunderstandings_of_p-values)[<sup>15</sup>](#greenland2016statistical)，连美国统计学会都少见的出来说了几句[<sup>16</sup>](#wasserstein2016asa)，这里是几点主要的。
 
 #### [Confusion of the inverse](https://en.wikipedia.org/wiki/Confusion_of_the_inverse)
 
-这个问题已经是[老生常谈](http://www.guokr.com/article/438043/)了。p值的含义是在零假设成立的情况下观察到手上数据（或比手上数据更极端的数据）的概率，也就是说它指向的是数据，但大部分情况下我们根本不关心这，我们关心的是凭着手上的数据，假设有多大的可能成立。我们关心的是假设，不是数据。xkcd的这幅[漫画](https://xkcd.com/1132/)很好地体现了这种区别。
+这个问题已经是[老生常谈](http://www.guokr.com/article/438043/)了。p值的含义是在零假设成立的情况下观察到手上数据（或比手上数据更极端的数据）落在拒绝域的概率，也就是说它指向的是数据，但大部分情况下我们根本不关心这，我们关心的是凭着手上的数据，假设有多大的可能成立。我们关心的是假设，不是数据。xkcd的这幅[漫画](https://xkcd.com/1132/)很好地体现了这种区别。
 
 ![xkcd关于频率学派和贝叶斯学派的漫画](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/frequentist_vs_bayesians.jpg)
 
