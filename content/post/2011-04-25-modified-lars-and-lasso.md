@@ -26,7 +26,7 @@ lasso estimate具有shrinkage和selection两种功能，shrinkage这个不用多
 
 在我的上一篇文章中，提到了Efron对于逐步回归的一种看法，就是在某个标准之下（比如LARS的标准就是要保证当前残差和已入选变量之间的相关系数相等，也就是当前残差在已入选变量的构成空间中的投影，是那些变量的角平分线）选择一条solution path，在这个solution path上proceed，不断吸收新的变量进入，然后调整solution path 继续proceed。那么对于求解lasso的算法，也有一个相应的对应。Efron提出了一种修正的LARS算法，可以用修正的LARS算法来求解所有的lasso estimates。下面我介绍一下这种修正的LARS算法。
 
-首先假设我们已经完成了几步LARS steps。这时候，我们已经有了一个回归变量集，我们记这个回归变量集为$X\_{\mathscr{A}}$。这个集合就对应着一个对于$Y$的估计，我们记为$\hat{\mu}\_{\mathscr{A}}$。这个估值对应着一个lasso方法对于响应的估值（这里我认为LARS估值和lasso估值应该是一样的），lasso的估值，对应着回归系数的lasso估值，回归系数向量的lasso估值我们记为$\hat{\beta}$。
+首先假设我们已经完成了几步LARS steps。这时候，我们已经有了一个回归变量集，我们记这个回归变量集为$X_{\mathscr{A}}$。这个集合就对应着一个对于$Y$的估计，我们记为$\hat{\mu}_{\mathscr{A}}$。这个估值对应着一个lasso方法对于响应的估值（这里我认为LARS估值和lasso估值应该是一样的），lasso的估值，对应着回归系数的lasso估值，回归系数向量的lasso估值我们记为$\hat{\beta}$。
 
 为了继续进行下一步，我们先给出一个向量的表达式，然后再解释一下它
 
@@ -34,7 +34,7 @@ lasso estimate具有shrinkage和selection两种功能，shrinkage这个不用多
 w_{A}=(1_{A}'(X_{A}’X_{A})^{-1}1_{A})^{-\frac{1}{2}}(X_{A}’X_{A})^{-1}1_{A}
 $$`
 
-$X\_{A}w\_{A}$就是LARS算法的在当前回归变量集下的solution path。那么我们可以把$w\_{A}$作为$\beta$的proceed的path。Efron定义了一个向量$\hat{d}$,这个向量的元素是$s\_jw\_j$,其中$s\_j$是入选变量$x\_j$与当前残差的相关系数的符号，也是$\hat{\beta\_j}$的符号。对于没有入选的变量，他们对应在$\hat{d}$中的元素为0。也就是对应着 `$\mu(r)=X\beta(r)$`，我们有
+$X_{A}w_{A}$就是LARS算法的在当前回归变量集下的solution path。那么我们可以把$w_{A}$作为$\beta$的proceed的path。Efron定义了一个向量$\hat{d}$,这个向量的元素是$s_jw_j$,其中$s_j$是入选变量$x_j$与当前残差的相关系数的符号，也是$\hat{\beta_j}$的符号。对于没有入选的变量，他们对应在$\hat{d}$中的元素为0。也就是对应着 `$\mu(r)=X\beta(r)$`，我们有
 
 `$$
   \beta_j(r)=\hat{\beta_j}+r\hat{d_j}
@@ -42,9 +42,9 @@ $$`
 
 将LARS的solution path对应到lasso estimate的path上，这种对应的想法非常值得借鉴。
 
-很显然，`$\beta_j(r)$`会在`$r_j=-\hat{\beta_j}/\hat{d_j}$`处变号。那么对于我们已经有的lasso estimate `$\beta(r)$`,它中的元素会在最小的的那个大于$0$的$r\_j$处变号。我们记之为$\bar{r}$。如果没有$r\_j$大于$0$,那么$\bar{r}$就记为无穷大。
+很显然，`$\beta_j(r)$`会在`$r_j=-\hat{\beta_j}/\hat{d_j}$`处变号。那么对于我们已经有的lasso estimate `$\beta(r)$`,它中的元素会在最小的的那个大于$0$的$r_j$处变号。我们记之为$\bar{r}$。如果没有$r_j$大于$0$,那么$\bar{r}$就记为无穷大。
 
-对于LARS本身而言，在已经有了如今的回归变量集和当前残差的基础上，我们就会有条solution path，在这个solution path上proceed的最大步记为$\hat{r}$.通过比较$\hat{r}$和$\bar{r}$就会有进一步的想法。Efron的文章证明了如果$\bar{r}$小于$\hat{r}$，则对应于LARS估计的那个`$\beta_j(r)$`不会成为一个lasso estimation。（这个是因为当前残差和对应变量的相关系数的符号一定是和该变量的系数符号一致才行）。在这种情况下，我们就不能继续在LARS的solution path上继续前进了，为了利用LARS算法求得lasso estimate，Efron提出把$\bar{r}$所对应的那个$r\_j$所对应的$x_j$从回归变量中去掉。去掉之后再计算当前残差和当前这些变量集之间的相关系数，从而确定一条新的solution path，继续进行LARS step。这样进行下去，可以通过LARS算法得到所有的lasso estimate。
+对于LARS本身而言，在已经有了如今的回归变量集和当前残差的基础上，我们就会有条solution path，在这个solution path上proceed的最大步记为$\hat{r}$.通过比较$\hat{r}$和$\bar{r}$就会有进一步的想法。Efron的文章证明了如果$\bar{r}$小于$\hat{r}$，则对应于LARS估计的那个`$\beta_j(r)$`不会成为一个lasso estimation。（这个是因为当前残差和对应变量的相关系数的符号一定是和该变量的系数符号一致才行）。在这种情况下，我们就不能继续在LARS的solution path上继续前进了，为了利用LARS算法求得lasso estimate，Efron提出把$\bar{r}$所对应的那个$r_j$所对应的$x_j$从回归变量中去掉。去掉之后再计算当前残差和当前这些变量集之间的相关系数，从而确定一条新的solution path，继续进行LARS step。这样进行下去，可以通过LARS算法得到所有的lasso estimate。
 
 这个对于LARS的lasso修正算法，被Efron称作“one at a time”条件，也就是每一步都要增加或删掉一个变量。下图显示了用修正了的LARS算法求lasso estimate的过程。
 
@@ -60,7 +60,7 @@ $$`
   y={x^3}_1+{x^2}_1+x_1+\frac{1}{3}{x^3}_2-{x^2}_2+\frac{2}{3}x_2+e
 $$`
 
-其中$x\_1$和$x\_2$是服从二维联合正态分布，均值为零向量，$cov(x\_1,x\_2)=0.5$，$var(x\_1)=var(x\_2)=1$，$e$服从$N(0,9)$。我取了50次观测，然后分别通过lasso，lars，以及forward stagewise三种算法进行了回归，其变量的回归路径如下图。
+其中$x_1$和$x_2$是服从二维联合正态分布，均值为零向量，$cov(x_1,x_2)=0.5$，$var(x_1)=var(x_2)=1$，$e$服从$N(0,9)$。我取了50次观测，然后分别通过lasso，lars，以及forward stagewise三种算法进行了回归，其变量的回归路径如下图。
 
 ![模拟lars.png](https://web.archive.org/web/20120602095612/https://cos.name/wp-content/uploads/2011/04/%E6%A8%A1%E6%8B%9Flars.png)
 

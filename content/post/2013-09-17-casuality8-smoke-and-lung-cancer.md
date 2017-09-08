@@ -81,8 +81,8 @@ $$`
 `$$
 \begin{eqnarray}
 RR_{ED} &=& \frac{ P(D=1\mid E=1) } { P(D=1\mid E=0) }\\
-&=& \frac{ \sum\_{u=0,1}P(D=1, U=u\mid E=1) } {\sum\_{u=0,1} P(D=1, U=u\mid E=0) }\\
-&=& \frac{ \sum\_{u=0,1}P(D=1\mid U=u) P(U=u\mid E=1) } {\sum\_{u=0,1} P(D=1\mid U=u) P(U=u\mid E=0) }\\
+&=& \frac{ \sum_{u=0,1}P(D=1, U=u\mid E=1) } {\sum_{u=0,1} P(D=1, U=u\mid E=0) }\\
+&=& \frac{ \sum_{u=0,1}P(D=1\mid U=u) P(U=u\mid E=1) } {\sum_{u=0,1} P(D=1\mid U=u) P(U=u\mid E=0) }\\
 &=& \frac{ P(D=1\mid U=1)P(U=1\mid E=1) + P(D=1\mid U=0)P(U=0\mid E=1) }
 { P(D=1\mid U=1)P(U=1\mid E=0) + P(D=1\mid U=0)P(U=0\mid E=0) }\\
 &=& \frac{ RR\_{UD} f\_1 + (1-f\_1)} { RR\_{UD} f\_0 + (1-f\_0) }.
