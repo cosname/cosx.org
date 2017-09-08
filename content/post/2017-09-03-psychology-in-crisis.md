@@ -194,7 +194,7 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 
 ![Google Scholar中Satoshi Kanazawa关于出生性别比研究的搜索结果](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/Satoshi_Kanazawa.png)
 
-他还合著过一本书，书名也很简单粗暴，叫"[Why Beautiful People Have More Daughters](https://book.douban.com/subject/2351927/)"（[中译本](https://book.douban.com/subject/4913068/)叫《生猛的进化心理学》）。我对政治不正确的研究没有任何意见——如果不是喜闻乐见的话，但是你的方法得靠谱啊。Kanazawa的研究充满了各种统计错误[<sup>25,31-33</sup>](#gelman2014beyond)，我们以上图最后一篇论文为例，他分析了[Add Health数据集](http://www.cpc.unc.edu/projects/addhealth)，这是最大、最综合的关于青少年的长期追踪数据集，从人们还是青少年时开始追踪，四次回访，记录了这些人的许多信息，其中两个与这里的话题有关，一是这些人的孩子的性别，二是调查人员会对被采访者的外貌打分，从最丑到最美共有五档。Kanazawa选取了第三次回访中有孩子的人（2972个）进行了分析，他发现最美的一档生女孩的可能性比其他人高8个百分点(56% vs 48%)，p < 0.05，所以，beautiful parents have more daughters。首先这里存在明显的多重比较问题，第一档和其他档比显著了，和最丑的一档、倒数第二档比怎么反而都不显著了呢？为什么不把最美的两档和剩下的三档比，假如这么比显著的话Kanazawa会不提吗？……这里更好的办法显然是对外貌和出生性别建模，弄个回归方程啥的，而不是进行假设检验。不过即使那样也是毫无意义的，为什么呢？因为，你觉得2972个样本在这里效力够吗？
+他还合著过一本书，书名也很简单粗暴，叫*[Why Beautiful People Have More Daughters](https://book.douban.com/subject/2351927/)*（[中译本](https://book.douban.com/subject/4913068/)叫《生猛的进化心理学》）。我对政治不正确的研究没有任何意见——如果不是喜闻乐见的话，但是你的方法得靠谱啊。Kanazawa的研究充满了各种统计错误[<sup>25,31-33</sup>](#gelman2014beyond)，我们以上图最后一篇论文为例，他分析了[Add Health数据集](http://www.cpc.unc.edu/projects/addhealth)，这是最大、最综合的关于青少年的长期追踪数据集，从人们还是青少年时开始追踪，四次回访，记录了这些人的许多信息，其中两个与这里的话题有关，一是这些人的孩子的性别，二是调查人员会对被采访者的外貌打分，从最丑到最美共有五档。Kanazawa选取了第三次回访中有孩子的人（2972个）进行了分析，他发现最美的一档生女孩的可能性比其他人高8个百分点(56% vs 48%)，p < 0.05，所以，beautiful parents have more daughters。首先这里存在明显的多重比较问题，第一档和其他档比显著了，和最丑的一档、倒数第二档比怎么反而都不显著了呢？为什么不把最美的两档和剩下的三档比，假如这么比显著的话Kanazawa会不提吗？……这里更好的办法显然是对外貌和出生性别建模，弄个回归方程啥的，而不是进行假设检验。不过即使那样也是毫无意义的，为什么呢？因为，你觉得2972个样本在这里效力够吗？
 
 假如放平时我相信大部分人都觉得够了，快三千个样本，在心理学里是很大型的研究了，今天你还可以看到很多研究就几十个样本呢。但现在我这么一问你应该也知道答案是不够，那我再问，你觉得多少样本才够呢？
 
@@ -253,7 +253,7 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 ![大卫·巴斯的《进化心理学》中对拉卡托斯科学哲学的论述5](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/lakatosian_5.png)
 *大卫·巴斯把整个第二章都贡献给了方法论，这在外国教材中很常见，而在中国人写的书里你基本看不到。就如辉格[指出过](http://headsalon.org/archives/526.html)的，中国人最需要普及的不是科学知识，而是科学哲学。*
 
-熟悉科学哲学的朋友一眼就能看出这套“硬核-保护带-具体假设”的模型正是拉卡托斯的理论，不过可能为了减轻学生负担，巴斯把拉卡托斯的名字藏到了最后引用的文献里（那篇论文的题目叫“Are evolutionary explanations unfalsifiable? Evolutionary psychology and the Lakatosian philosophy of science.”）。
+熟悉科学哲学的朋友一眼就能看出这套“硬核-保护带-具体假设”的模型正是拉卡托斯的理论，不过可能为了减轻学生负担，巴斯把拉卡托斯的名字藏到了最后引用的文献里（那篇论文的题目叫*Are evolutionary explanations unfalsifiable? Evolutionary psychology and the Lakatosian philosophy of science*）。
 
 通过拉卡托斯的框架可以很好地消化这次危机。经过这次危机，我的认知结构里关于心理学的许多具体假设完全改变了，一部分中级理论节点进行了适当更新，至于硬核……谁会怀疑进化论呢？但显然不是每个人都像我这样。
 
