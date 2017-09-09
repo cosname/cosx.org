@@ -243,14 +243,14 @@ curl2r的示例不再展示，可到Github的项目上查看。此术虽然方�
 
 ![proxy](https://user-images.githubusercontent.com/3295865/29710289-3d3f8096-89c2-11e7-88cb-3457b198515e.png)
 
-配置成功后，手机访问的HTTP(S)流量便会在Charles中展示出来。
+配置成功后，手机访问的HTTP(S)流量便会在Charles中展示出来。如需查看HTTPS的流量，需要[安装SSL证书](http://www.charlesproxy.com/getssl/)，并在`Proxy` -> `SSL Proxying Settings...`中设置添加信任的网站列表。
+
+如下图，将 appi.51talk.com 添加到信任列表后，打开51talk的APP时可以看到收藏的英语外教列表。右侧的*Response*中展示了老师的姓名，头像链接，口音链接和得分等。切换到*Overview*标签栏，就可以看到相应的接口地址和其他请求参数。
+
+![image](https://user-images.githubusercontent.com/3295865/30236661-fe51514e-9550-11e7-9970-3db73c21c93c.png)
 
 
-
-如需查看HTTPS的流量，需要[安装SSL证书](http://www.charlesproxy.com/getssl/)，并在`Proxy` -> `SSL Proxying Settings...`中设置添加信任的网站列表。
-
-
-如果想练练手的话，可以试试查看国际版微博。虽然它是HTTPS，但其数据获取方式及其简单，只是纯粹的一个GET请求，没有User Agent校验和Cookie校验等。
+如果想练练手的话，可以试试查看国际版微博。最后你会发现接口极其简单，只要拿到一个密匙，就可以直接在电脑端直接访问接口。没有任何User Agent或者Cookie的验证。
 
 <!-- 一个国际版微博的例子(access_token和source已打码)：
 https://api.weibo.com/2/short_url/info.json?url_short=http://t.cn/RCfjzFp&url_short=http://t.cn/RCwWit9&url_short=http://t.cn/RCfIpLB&url_short=http://m.weibo.cn/client/version&url_short=http://t.cn/RCGrqQd&url_short=http://t.cn/RCf5KPO&url_short=http://t.cn/RC2cwtB&url_short=http://t.cn/RCcu0Vz&access_token=xxxx&source=xxxx -->
