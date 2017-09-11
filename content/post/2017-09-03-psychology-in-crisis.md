@@ -73,6 +73,9 @@ GVT论文里进行了这么几项研究：
 
 首先，直觉是没错的，扔出多少次正面都不会影响后续的结果，这体现在第三列的和一定是第二列和的一半，但第四列的和却一定小于第二列的一半。区别在哪呢？在于`$E(X)/E(Y) \neq E(X/Y) $`。`$E(HH)/E(HX)$`一定等于0.5，但`$E(HH/HX) $`就不一定了。这样我们就理解了为什么这个概率不是0.5，那它为什么还一定会小于0.5呢？我们假想这样一张表，它的前两列与上表完全一样，但第三列的数都正好是第二列的一半，从而第四列就都是0.5。假想表与上表的第三列虽然不一样，但和是一样的，所以我们可以在不同行间挪动第三列的数值，这行加一点，那行就减掉一点，始终保持第三列的和不变，这样最终我们可以得到上表。这种操作会给第四列的均值带来什么影响呢？会让它变小。理由是这样的：记第二列第`$i$`行的数为`$n_i$`，第三列第`$i$`行的数为`$k_i$`，那第四列的相应数值就是`$k_i / n_i $`，当我们从第`$i$`行挪一单位第三列的值给第`$j$`行时，第四列的和的变化是`$1/n_j -1/n_i $`。所以假如`$n$`大的那些行`$k$`倾向于大于`$n/2$`，那第四列的均值就会小于假想表的均值——0.5。观察上表你会发现这个倾向是存在的，所以均值确实小于0.5。那这个倾向是怎么来的呢？来源于重复计算。也就是HHT会被我们当做HH和HT算两遍，这在序列长度为4的情况下会看的更清楚，如果我们把HHHT算作HH、HH、HT，那H多的序列HH会异常的多，算出来的概率就会小于0.5，如果我们不重复计算，只把它拆成HH、HT，那就不会有任何偏差，预期概率=0.5，这点你可以自行验证。
 
+![不同投掷次数、连续正面次数和单次正面概率下下一次是正面的概率公布图](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/streaking_prob.png)
+*下一次投掷是正面的概率对不同的投掷次数n、连续出现正面的次数k和单次投掷出现正面的概率p作图。“扔一百次，观察连扔出三个正面后下一次的结果”对应着n=100，k=3，p=0.5，所以下一次是正面的概率约为0.46。图片取自论文[<sup>8</sup>](#miller2016surprised)。*
+
 假如你还没想明白，这篇论文[<sup>10</sup>](#miller2015bridge)提供了这个问题由易到难的各种变形，其中还包括一道Google以前的面试题：
 
 _有个国家特别地重男轻女，每家都一直生一直生直到生出儿子为止（只要生出儿子他们就不再生了），请问这个国家人口中女性的比例预期是多少？_
@@ -90,7 +93,11 @@ _有个国家特别地重男轻女，每家都一直生一直生直到生出儿�
 GVT只不过是这几年科学可重复性危机的冰山一角，在心理学领域大量重复失败的研究里[<sup>11</sup>](#open2015estimating)，GVT的论文质量算是比较好的了。我再随便举两个出了问题的研究：
 
 *   哈佛美女教授Amy Cuddy在TED上的[著名演讲](https://www.ted.com/talks/amy_cuddy_your_body_language_shapes_who_you_are?language=zh-cn)，认为强势的身体动作(power pose)可以助你成功。这个演讲在TED上观看次数超过四千两百万，是历史第二多，当时在社交网站上也掀起了一波"Fake it until you make it"的鸡汤潮。结果不仅没重复出来，原论文的另一个作者还直接在网上写了一封[公开信](http://faculty.haas.berkeley.edu/dana_carney/pdf_My%20position%20on%20power%20poses.pdf)，声称观点已变，现在认为power pose效应不存在了，建议其他研究者别再浪费时间。![Amy Cuddy在TED的演讲](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/power_pose.png)
-*   社会启动效应(social priming)。这个领域发端于John Bargh1996年的研究[<sup>12</sup>](#bargh1996automaticity)，他们让学生从五个词里挑四个出来造句，一组学生拿到的是普通词，另一组拿到的是与老年相关的词汇，比如健忘、秃顶、满脸皱纹、佛罗里达，实验完后他们告诉学生穿过大厅去另一个地方做下一组实验，但他们关心的其实既不是造句也不是下一个实验，而是学生穿过走廊的速度，他们发现那些被老年相关词汇启动(prime)了的学生比另一组慢了将近一秒。这个惊人的结果启发了大量后续研究，十几年来整个领域欣欣向荣，Bargh的原论文已被引用了四千多次。人们发现啥都能拿来prime，比如让你描述一个严厉教授的样子你考试就能[考得更好](http://blogs.discovermagazine.com/neuroskeptic/2016/10/13/social-priming-works-after-all/#.WW2hzdPyvdQ)，考卷字迹模糊也能让你[考得更好](http://weibo.com/p/1001603935981584676451)……卡尼曼在《思考：快与慢》里举了整整一章的例子，我们来稍微感受一下， ![《思考：快与慢》中关于社会启动效应的论述1](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/social_priming_1.png) ![《思考：快与慢》中关于社会启动效应的论述2](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/social_priming_2.png) ![《思考：快与慢》中关于社会启动效应的论述3](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/social_priming_3.png) 请注意卡尼曼最后的结论，“你别无选择”、“你必须承认”……好吧，现在Bargh的最初实验和其他许多实验都[没能重复出来](http://www.guokr.com/article/436704/)，整个领域风雨飘摇。Bargh前几年没憋住还[发了通火](http://blogs.discovermagazine.com/notrocketscience/2012/03/10/failed-replication-bargh-psychology-study-doyen/)，又引来更多非议。这里有[一篇](https://rolfzwaan.blogspot.com/2013/09/how-to-cook-up-your-own-social-priming.html)手把手教你做social priming研究的文章，辛辣搞笑，推荐阅读。当然我不是说这领域一定就全错了，毕竟我也不是专业人士，我只是觉得怎么看我应该都还是[有点选择](http://andrewgelman.com/2014/09/03/disagree-alan-turing-daniel-kahneman-regarding-strength-statistical-evidence/)的。
+*   社会启动效应(social priming)。这个领域发端于John Bargh1996年的研究[<sup>12</sup>](#bargh1996automaticity)，他们让学生从五个词里挑四个出来造句，一组学生拿到的是普通词，另一组拿到的是与老年相关的词汇，比如健忘、秃顶、满脸皱纹、佛罗里达，实验完后他们告诉学生穿过大厅去另一个地方做下一组实验，但他们关心的其实既不是造句也不是下一个实验，而是学生穿过走廊的速度，他们发现那些被老年相关词汇启动(prime)了的学生比另一组慢了将近一秒。这个惊人的结果启发了大量后续研究，十几年来整个领域欣欣向荣，Bargh的原论文已被引用了四千多次。人们发现啥都能拿来prime，比如让你描述一个严厉教授的样子你考试就能[考得更好](http://blogs.discovermagazine.com/neuroskeptic/2016/10/13/social-priming-works-after-all/#.WW2hzdPyvdQ)，考卷字迹模糊也能让你[考得更好](http://weibo.com/p/1001603935981584676451)……卡尼曼在《思考：快与慢》里举了整整一章各种惊人的例子，最后得出结论，
+
+> 然而，问题的关键是要接受相关研究的结果，而不是对此心存怀疑。这些结果不是捏造出来的，也不是统计上的偶然现象。你别无选择，只能接受这些研究的主要结论是正确的这一事实。
+
+“你别无选择”、“你必须承认”……好吧，现在Bargh的最初实验和其他许多实验都[没能重复出来](http://www.guokr.com/article/436704/)，整个领域风雨飘摇。Bargh前几年没憋住还[发了通火](http://blogs.discovermagazine.com/notrocketscience/2012/03/10/failed-replication-bargh-psychology-study-doyen/)，又引来更多非议。这里有[一篇](https://rolfzwaan.blogspot.com/2013/09/how-to-cook-up-your-own-social-priming.html)手把手教你做social priming研究的文章，辛辣搞笑，推荐阅读。当然我不是说这领域一定就全错了，毕竟我也不是专业人士，我只是觉得怎么看我应该都还是[有点选择](http://andrewgelman.com/2014/09/03/disagree-alan-turing-daniel-kahneman-regarding-strength-statistical-evidence/)的。
 
 所以心理学到底是怎么落到这步田地的呢？
 
@@ -100,7 +107,7 @@ GVT只不过是这几年科学可重复性危机的冰山一角，在心理学�
 
 ### The Earth Is Round (p < .05) [<sup>13</sup>](#Cohen1993)
 
-p值——以及更一般的，整个假设检验范式，在这次危机中起了核心作用。越来越多人知道这套范式不好，但大多数人还没意识到它到底有多糟，对此，备受尊敬的前美国心理学会会长保罗·米尔(Paul Meehl)是这么说的[<sup>14</sup>](#meehl1978theoretical)，
+p值——以及更一般的，整个假设检验范式，在这次危机中起了核心作用。越来越多人知道单纯地依赖这套范式不好，但大多数人还没意识到它到底有多糟，对此，备受尊敬的前美国心理学会会长保罗·米尔(Paul Meehl)是这么说的[<sup>14</sup>](#meehl1978theoretical)，
 
 > I believe that the almost universal reliance on merely refuting the null hypothesis as the standard method for corroborating substantive theories in the soft areas is a terrible mistake, is basically unsound, poor scientific strategy, and one of the worst things that ever happened in the history of psychology.
 
