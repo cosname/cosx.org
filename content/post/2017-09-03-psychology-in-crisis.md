@@ -254,13 +254,12 @@ Histogram[{pe1, pe2}, Automatic, "Probability",
 
 ## 正确的应对
 
-现在来说下作为外人怎么消化这次危机吧。因为心理学的软科学性质，心理学家中最优秀的那一撮对方法论其实思考颇多（比如Meehl），所以他们对危机的到来早有准备，我们来看看大卫·巴斯在《[进化心理学](https://book.douban.com/subject/2143904/)》里为大家打的预防针。
+现在来说下作为外人怎么消化这次危机吧。因为心理学的软科学性质，心理学家中最优秀的那一撮对方法论其实思考颇多（比如Meehl），所以他们对危机的到来早有准备，在《[进化心理学](https://book.douban.com/subject/2143904/)》里，作者大卫·巴斯早早地为大家打好了预防针。他详尽地论述了进化心理学中不同的分析层次，从最一般的进化理论、到中级水平的进化理论、到具体的进化假设，每一级别既要兼容上一级，又要引入新的情境，从而得出更具体的预测。理论上确实存在某些现象能够证伪一般的进化理论（比如霍尔丹那句著名的“[前寒武纪的兔子](https://en.wikipedia.org/wiki/Precambrian_rabbit)”），但现实中这些例子从来没有出现过，科学家们的日常工作还是集中于检验具体的进化假设。因为每个层次都引入了上一层次不具有的假设，所以证伪低层次的预测并不会自动推翻高层次的理论，对进化阐述的评估也因此不必依赖于某一个预测是否成功，而应该要看证据的积累量，这样就在核心理论与相对脆弱的外围间建立了有效的缓冲。
 
-![大卫·巴斯的《进化心理学》中对拉卡托斯科学哲学的论述1](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/lakatosian_1.png) ![大卫·巴斯的《进化心理学》中对拉卡托斯科学哲学的论述2](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/lakatosian_2.png) ![大卫·巴斯的《进化心理学》中对拉卡托斯科学哲学的论述3](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/lakatosian_3.png) ![大卫·巴斯的《进化心理学》中对拉卡托斯科学哲学的论述4](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/lakatosian_4.png)
-![大卫·巴斯的《进化心理学》中对拉卡托斯科学哲学的论述5](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/lakatosian_5.png)
-*大卫·巴斯把整个第二章都贡献给了方法论，这在外国教材中很常见，而在中国人写的书里你基本看不到。就如辉格[指出过](http://headsalon.org/archives/526.html)的，中国人最需要普及的不是科学知识，而是科学哲学。*
+![大卫·巴斯的《进化心理学》中对拉卡托斯科学哲学的论述](https://raw.githubusercontent.com/tcya/tcya.github.io/master/assets/images/david_buss.png)
+*巴斯把整个第二章都贡献给了方法论，这在外国教材中很常见，而在中国人写的书里你基本看不到。就如辉格[指出过](http://headsalon.org/archives/526.html)的，中国人最需要普及的不是科学知识，而是科学哲学。*
 
-熟悉科学哲学的朋友一眼就能看出这套“硬核-保护带-具体假设”的模型正是拉卡托斯的理论，不过可能为了减轻学生负担，巴斯把拉卡托斯的名字藏到了最后引用的文献里（那篇论文的题目叫*Are evolutionary explanations unfalsifiable? Evolutionary psychology and the Lakatosian philosophy of science*）。
+熟悉科学哲学的朋友一眼就能看出这套“硬核-保护带-具体假设”的模型正是拉卡托斯的理论，不过可能为了减轻学生负担，巴斯并没有在正文提到拉卡托斯，而是把他藏到了参考文献里（书里最后引用了一篇论文，题目叫*Are evolutionary explanations unfalsifiable? Evolutionary psychology and the Lakatosian philosophy of science*）。
 
 通过拉卡托斯的框架可以很好地消化这次危机。经过这次危机，我的认知结构里关于心理学的许多具体假设完全改变了，一部分中级理论节点进行了适当更新，至于硬核……谁会怀疑进化论呢？但显然不是每个人都像我这样。
 
