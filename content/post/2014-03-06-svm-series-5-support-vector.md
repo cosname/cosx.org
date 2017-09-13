@@ -20,7 +20,7 @@ forum_id: 419010
 
 `$$
 \begin{align} 
-\max\_\alpha &\sum_{i=1}^n\alpha_i – \frac{1}{2}\sum_{i,j=1}^n\alpha_i\alpha_jy_iy_j\kappa(x_i,x_j) \\  
+\max_\alpha &\sum_{i=1}^n\alpha_i – \frac{1}{2}\sum_{i,j=1}^n\alpha_i\alpha_jy_iy_j\kappa(x_i,x_j) \\  
 s.t., &0\leq \alpha_i\leq C, i=1,\ldots,n \\  
 &\sum_{i=1}^n\alpha_iy_i = 0  
 \end{align}
