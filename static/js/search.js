@@ -1,4 +1,4 @@
-var search = (function() {
+(function() {
 
 var search = instantsearch({
   appId: 'VB9T8VTPNU',
@@ -70,9 +70,7 @@ search.addWidget(
   
  
 );
-	 return search;
+   search.start();
+
+   document.getElementById("btn").addEventListener("click", search.helper.search);
 })();
-
-
-search.start();
-
