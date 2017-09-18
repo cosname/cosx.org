@@ -1,4 +1,4 @@
-(function() {
+var search = (function() {
 
 var search = instantsearch({
   appId: 'VB9T8VTPNU',
@@ -6,7 +6,13 @@ var search = instantsearch({
   indexName: 'cosx.org',
   urlSync: {},
   searchFunction: function(helper) {
-    if (helper.state.query !== '') helper.search();
+
+    if (helper.state.query !== ''){ 
+	  	document.getElementById("q").disabled = true;
+		document.getElementById("btn").disabled = true;
+		document.getElementById("stats").style.display = 'block';
+		helper.search();
+	}
   }
 });
 
@@ -16,6 +22,16 @@ search.addWidget(
     searchOnEnterKeyPressOnly: true
   })
 );
+
+
+var onRenderHandler = function() {
+	document.getElementById("q").disabled = false;
+	document.getElementById("btn").disabled = false;
+	document.getElementById("stats").style.display = 'none';
+};
+
+search.on('render', onRenderHandler);
+
 
 var hitTemplate =
   '<article class="preview">' +
@@ -51,8 +67,12 @@ search.addWidget(
       return hit;
     }
   })
+  
+ 
 );
+	 return search;
+})();
+
 
 search.start();
 
-})();
