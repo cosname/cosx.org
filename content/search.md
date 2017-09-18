@@ -32,7 +32,7 @@ menu: [main, top]
     <div class="input-group">
       <input type="text" class="form-control" id="q" />
       <span class="input-group-btn">
-        <button onclick='search.helper.search();'  id="btn" >搜索</button>
+        <button id="btn" >搜索</button>
       </span>
     </div>
   </div>
