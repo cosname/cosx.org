@@ -27,7 +27,7 @@
 
 
   var onRenderHandler = function() {
-    toggleElems(flase)
+    toggleElems(false)
   };
 
   search.on('render', onRenderHandler);
