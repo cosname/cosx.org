@@ -260,8 +260,7 @@ https://api.weibo.com/2/short_url/info.json?url_short=http://t.cn/RCfjzFp&url_sh
 最后，此术只能查看HTTP(S)的流量。不要试图用它偷窥微信和支付宝等涉及支付的机密APP。
 
 <script>
-console.log("看来你是个性情中人, 真的打开调试的页面查看信息了, 赞一个.
-文中练习的答案可以在网页源码中找到喔！")
+console.log("看来你是个性情中人, 真的打开调试的页面查看信息了, 赞一个. 文中练习的答案可以在网页源码中找到喔！")
 </script>
 
 # 结语
