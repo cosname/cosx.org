@@ -37,7 +37,7 @@ tags:
 
 在R语言或Python中下载网页是很简单的。以下的两行代码，使用R的`readLines`函数读取了豆瓣电影 Top 250 的网页源码：
 
-```{r eval=FALSE}
+```r
 html_lines = readLines('https://movie.douban.com/top250')
 doc = paste0(html_lines, collapse = '')
 ```
@@ -64,15 +64,15 @@ doc = paste0(html_lines, collapse = '')
 
 ```r
 # 匹配包含class="title"字符的行 无关正则
-title_lines = grep('class="title"', html_lines, value=T)
+title_lines = grep('class="title"', html_lines, value = T)
 # 用正则抽取>字符和<字符中间的字符
-titles = gsub('.*>(.*?)<.*', '\\1', title_lines, perl=T)
+titles = gsub('.*>(.*?)<.*', '\\1', title_lines, perl = T)
 ```
 
 如果想看看第二行的效果，可以试试下边的代码：
 ```r
 gsub('.*>(.*?)<.*', '\\1', 
-     '<span class="title">肖生克的救赎</span>', perl=T)
+     '<span class="title">肖生克的救赎</span>', perl = T)
 ```
 
 其中`.*>(.*?)<.*`是一个正则表达式，其匹配规则如下图所示。
@@ -89,7 +89,7 @@ XPath是XML路径语言，适用于HTML和XML这两种标记语言。了解HTML�
 
 下边的代码试用`xml2::read_html`函数解析下载的网页源代码，接下来使用XPath语言寻找所有包含 `class="title"` 属性的span标签。
 
-```{r eval=FALSE}
+```r
 library(xml2)
 dom = read_html(doc)
 title_nodes = xml_find_all(dom, './/span[@class="title"]')
@@ -114,7 +114,7 @@ CSS选择器是通过标签的CSS属性达到筛选的目的。类似与XPath，
 
 这里借用`rvest`包来实现，筛选出`class="title"`的标签并拿到标签内的文本。
 
-```{r eval=FALSE}
+```
 library(rvest)
 read_html(doc) %>% 
   html_nodes('.title') %>% # class="title"的标签
@@ -167,18 +167,19 @@ read_html(doc) %>%
 
 1. 访问[首页](http://www.peugeot.com.cn/)，抓取省市和响应的数字编码，比如北京市对应3361，河北省对应3363。
 
+
+1. 根据省的数字编码，获取市区的数据编码。比如河北省各市的数字编码：http://dealer.peugeot.com.cn/ajax.php?pid=3363&action=city 。查看源码可以看到石家庄市的数字编码是3394。
+
+1. 根据市区的数字编码，抓该市的经销商列表。比如石家庄市的两家经销商：http://dealer.peugeot.com.cn/ajax.php?cid=3394&action=dealer。从中可以拿到两个对应的字符编码，河北盛威汽车贸易有限公司的编码是 HBSWQCMYYXGS。
+
+1. 由经销商的编码，进入到该经销商的详情页: http://dealer.peugeot.com.cn/dealer/HBSWQCMYYXGS 。接下来就使用解析术抽取响应的地址和电话等信息即可。提示，地图中的经纬度数据，可以搜索在源码中搜索 BMap.Point 看到。
+
 ```HTML
-# 部分网页源代码
+# 部分网页源代码: 城市和相应的编码
 <option value="3361">北京市</option>
 <option value="3362">天津市</option>
 <option value="3363">河北省</option>
 ```
-
-2. 根据省的数字编码，获取市区的数据编码。比如河北省各市的数字编码：http://dealer.peugeot.com.cn/ajax.php?pid=3363&action=city 。查看源码可以看到石家庄市的数字编码是3394。
-
-3. 根据市区的数字编码，抓该市的经销商列表。比如石家庄市的两家经销商：http://dealer.peugeot.com.cn/ajax.php?cid=3394&action=dealer。从中可以拿到两个对应的字符编码，河北盛威汽车贸易有限公司的编码是 HBSWQCMYYXGS。
-
-4. 由经销商的编码，进入到该经销商的详情页: http://dealer.peugeot.com.cn/dealer/HBSWQCMYYXGS 。接下来就使用解析术抽取响应的地址和电话等信息即可。提示，地图中的经纬度数据，可以搜索在源码中搜索 BMap.Point 看到。
 
 最后，将4步串接起来，前三步可以拿到所有经销商列表和相应的编码，最后遍历所有的详情页抓取详细信息即可。
 
@@ -234,7 +235,7 @@ requests.get("http://weibo.com/u/xxxxxxxxx/home?topnav=1&wvr=5",
 curl2r的示例不再展示，可到Github的项目上查看。此术虽然方便，但需牢记，不可泄漏你的Cookie信息。
 
 
-## 手机APP篇
+# 手机APP篇
 移动互联网的兴起，导致一些企业着重APP应用，却不提供PC端的网站服务。对于手机APP而言，比较难查看流量请求。虽然也有对应的软件，但据我所知好用的都是收费的。而且难以通用在安卓和IOS两大平台。
 
 这里介绍另一个工具: [Charles](https://www.charlesproxy.com/)。通过它，可以在PC端开启一个代理，把手机设备设置通过代理上网，所有HTTP(S)流量都会在该软件中一览无余。Charles是一款免费，且在Windows，Mac和Linux上通用的跨平台软件。不论任何手机型号都可以连接Charles代理，可以说是很完美的解决方案了。
@@ -252,12 +253,17 @@ curl2r的示例不再展示，可到Github的项目上查看。此术虽然方�
 
 如果想练练手的话，可以试试查看国际版微博。最后你会发现接口极其简单，只要拿到一个密匙，就可以直接在电脑端直接访问接口。没有任何User Agent或者Cookie的验证。
 
+
 <!-- 一个国际版微博的例子(access_token和source已打码)：
 https://api.weibo.com/2/short_url/info.json?url_short=http://t.cn/RCfjzFp&url_short=http://t.cn/RCwWit9&url_short=http://t.cn/RCfIpLB&url_short=http://m.weibo.cn/client/version&url_short=http://t.cn/RCGrqQd&url_short=http://t.cn/RCf5KPO&url_short=http://t.cn/RC2cwtB&url_short=http://t.cn/RCcu0Vz&access_token=xxxx&source=xxxx -->
 
 最后，此术只能查看HTTP(S)的流量。不要试图用它偷窥微信和支付宝等涉及支付的机密APP。
 
+<script>
+console.log("看来你是个性情中人, 真的打开调试的页面查看信息了, 赞一个.
+文中练习的答案可以在网页源码中找到喔！")
+</script>
 
-## 结语
+# 结语
 
 掌握以上术式后，你的数据召唤术已达到中忍级别。且容在下多嘴一句，**不要短时间内高频率的爬**。如果给网站服务器造成压力，你离被封杀也就不远了。友好的爬虫是KPI提升的重要组成部分，你好我好，大家好。
