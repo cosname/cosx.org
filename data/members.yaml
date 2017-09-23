@@ -170,3 +170,6 @@ list:
   - name: 朱俊辉
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: Harry Zhu, R语言爱好者, FinanceR 专栏作者
+  - name: 杜亚磊
+    image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
+    intro: 掉入R坑有多年，如今回首已惘然；也曾痴心于Python，偶尔兼职写前端。现任51talk算法工程师，探索教育行业里的数据价值。
