@@ -2,10 +2,9 @@
 title: "神经网络算法的优势与应用"
 date: 2017-09-14
 author: "Jahnavi Mahanta"
-Translator: "陈浩"
 categories: ["数据挖掘", "神经网络"]
 tags: ["神经网络","应用"]
-slug: Introduction to NEURAL NETWORKS, Advantages and Applications
+slug: Introduction-to-NEURAL-NETWORKS-Advantages-and-Applications
 ---
 
 # 神经网络算法的优势与应用
