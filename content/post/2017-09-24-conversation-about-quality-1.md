@@ -23,9 +23,8 @@ forum_id:
 
 在这些年来，经过美国、日本和其他国家的专家的努力和积累，特别是在第二次世界大战之后，质量管理工程已经形成了完整的体系，质量管理的手段和方法已经得到了长远的进步。品质的发展、改善和监控都是有方法可循的。丰田公司曾经占有很大的汽车市场份额，但也因为“刹车门”的质量事件而跌入谷底；三星公司也因为最近的“电池事件”导致企业形象一落千丈，这些问题都可以归结到质量控制出现了问题。  
 
-[![Toyota](https://user-images.githubusercontent.com/16065479/30312360-065b0cb4-974e-11e7-86be-7fad78611346.jpg)](http://jjx/images/xxx.jpg)
+![Toyota&Sumsung](https://user-images.githubusercontent.com/7221728/30789226-9ffad2d6-a1d6-11e7-8d90-8b66118d6cb6.png)
 
-[![Sumsung](https://user-images.githubusercontent.com/16065479/30312371-13944896-974e-11e7-8f0b-5ec83ed75ca2.jpg)](http://jjx/images/yyy.jpg)
 
 *丰田刹车门：2009年，丰田公司因刹车设计问题对旗下凯美瑞轿车进行召回，涉及车辆近26万辆。*  
 *三星电池门：2016年，三星Galaxy Note7手机在全球范围内发生多起电池自燃爆炸事故，三星电子停产了该款手机并召回近20万台。*
