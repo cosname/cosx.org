@@ -9,7 +9,7 @@ tags:
  - 质量
  - 统计应用
  - 创新
-slug: quality1
+slug: conversation-about-quality-1
 meta_extra: 编辑：冯璟烁；审稿：朱雪宁，
 forum_id: 
 ---
