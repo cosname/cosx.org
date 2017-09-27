@@ -1,5 +1,5 @@
 ---
-title: 忍法:数据通灵术
+title: 数据通灵术之爬虫技巧
 author: 杜亚磊
 date: '2017-08-20'
 slug: web-scrap-tools
