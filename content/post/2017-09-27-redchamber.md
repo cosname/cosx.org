@@ -165,7 +165,7 @@ chapters$pred <- predict(model, newx=mat.honglou$tf, type='response', s=model$la
 ggplot(chapters, aes(x = chapter, y = pred, color = training))  +geom_point() +geom_vline(xintercept=80) +geom_vline(xintercept=108) + geom_text(aes(chapter-3,pred, label = chapter), data = chapters %>% filter((pred<.85 & chapter<81 & training==0) | (pred > .5 & chapter>80 & training==0)))
 ```
 
-![plot of chunk chunk2](figure/chunk2-1.png)
+![plot of chunk chunk2](https://d33wubrfki0l68.cloudfront.net/05b02661bfc512dd10529ffaed8b0e6f62c01b04/a7e5a/post/2017-09-19-red-chamber_files/figure-html/chunk2-1.png)
 
 在图中， 我画了两条竖线， 80和108回。 有些人认为曹的原作只有108回。
 
@@ -223,7 +223,7 @@ ggplot(merged, aes(y = yhat, x = chapter, group = chapter)) +
   geom_boxplot() + facet_grid(training ~ .)
 ```
 
-![plot of chunk chunk3](figure/chunk3-1.png)
+![plot of chunk chunk3](https://d33wubrfki0l68.cloudfront.net/d614eb4fa90bdecdb986582afd2375517fea2ff3/a336c/post/2017-09-19-red-chamber_files/figure-html/chunk3-1.png)
 
 在这里我画的是重复100次取样后的box plot， 上面是testing, 下面是training。  第二种模型和第一种结论类似，只是引入不确定性。
 
@@ -250,7 +250,7 @@ lda2 <- LDA(mat.honglou2$tf, k = 2, method="Gibbs", control = list(seed = 1, bur
 plot(topics(lda2))
 ```
 
-![plot of chunk chunk4](figure/chunk4-1.png)
+![plot of chunk chunk4](https://d33wubrfki0l68.cloudfront.net/083719fc6bdf622018a7b745f17f08e99c47edf5/ea6a8/post/2017-09-19-red-chamber_files/figure-html/chunk4-1.png)
 
 ```r
 lda_topics <- as.data.frame(posterior(lda2)$topics)
@@ -264,7 +264,7 @@ ggplot(newdata, aes(y = prob1, x = chapter, group = chapter)) +
  geom_point() +geom_vline(xintercept=80) +geom_vline(xintercept=108) + geom_text(aes(chapter-3,prob1, label = chapter), data = newdata %>% filter((prob1<.5 & chapter<81 ) | (prob1 > .5 & chapter>80 )))
 ```
 
-![plot of chunk chunk4](figure/chunk4-2.png)
+![plot of chunk chunk4](https://d33wubrfki0l68.cloudfront.net/00fb108b1ca1942dcc5a8b6beed0aa0be502a729/67f22/post/2017-09-19-red-chamber_files/figure-html/chunk4-2.png)
 
 我们看到前80回有19回是作者1写的概率低于50%。 尤其第67回， 只有25%的概率是作者1写的。 在后40回中， 没有一回概率大于50%！ 作者1应该是曹雪芹。这里我们不能分析出作者是谁，只是说后40回的作者与前80回大多数章节的作者不同。
 
