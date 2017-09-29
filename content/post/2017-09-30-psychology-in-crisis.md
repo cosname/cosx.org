@@ -1,10 +1,11 @@
 ---
 title: "心理学的危机"
-date: 2017-09-03
+date: 2017-09-30
 author: "杨洵默"
 categories: ["心理学", "统计模型", "统计计算"]
 tags: []
 slug: psychology-in-crisis
+meta_extra: "[审稿](https://github.com/cosname/cosx.org/pull/715)：黄湘云"
 ---
 
 NBA总决赛刚结束不久，今年最幸福的肯定就是勇士球迷了。宇宙勇的球迷一定很关心一个东西，因为它决定着你看到的是海啸组合还是铁花兄弟——它就是手感。
