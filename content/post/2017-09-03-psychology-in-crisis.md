@@ -3,7 +3,7 @@ title: "心理学的危机"
 date: 2017-09-03
 author: "杨洵默"
 categories:
-  - 统计应用
+   - 统计应用
 tags: [心理学, 统计模型, 统计计算]
 slug: psychology-in-crisis
 meta_extra: 审稿：黄湘云，胡传鹏，谢益辉；编辑：杨舒仪
