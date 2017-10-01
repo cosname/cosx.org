@@ -158,14 +158,14 @@ GVT只不过是这几年科学可重复性危机的冰山一角，在心理学�
 nSamples1 = 11;  (* Power ≈ 0.5 *)
 nSamples2 = 25;  (* Power ≈ 0.8 *)
 nTrials = 10000;
-\[Sigma] = 2;
+σ = 2;
 effect = 1;
 p1 = p2 = {};
 Do[
-  result1 = RandomVariate[NormalDistribution[effect, \[Sigma]], nSamples1];
-  AppendTo[p1, LocationTest[result1,  Subscript[\[Mu], 0] = 0]];
-  result2 = RandomVariate[NormalDistribution[effect, \[Sigma]], nSamples2];
-  AppendTo[p2, LocationTest[result2, Subscript[\[Mu], 0] = 0]];
+  result1 = RandomVariate[NormalDistribution[effect, σ], nSamples1];
+  AppendTo[p1, LocationTest[result1,  μ_0 = 0]];
+  result2 = RandomVariate[NormalDistribution[effect, σ], nSamples2];
+  AppendTo[p2, LocationTest[result2, μ_0 = 0]];
 , {nTrials}]
 Histogram[{p1, p2}, {0.05}, "Probability",
   AxesLabel -> {"p value", "Frequency"},
@@ -182,10 +182,10 @@ Histogram[{p1, p2}, {0.05}, "Probability",
 (* Mathematica codes *)
 pe1 = pe2 = {};  (* Point estimate *)
 Do[
-  result1 = RandomVariate[NormalDistribution[effect, \[Sigma]], nSamples1];
-  If[LocationTest[result1, Subscript[\[Mu], 0] = 0] ≤ 0.05, AppendTo[pe1, Mean[result1]]];
-  result2 = RandomVariate[NormalDistribution[effect, \[Sigma]], nSamples2];
-  If[LocationTest[result2, Subscript[\[Mu], 0] = 0] ≤ 0.05, AppendTo[pe2, Mean[result1]]];
+  result1 = RandomVariate[NormalDistribution[effect, σ], nSamples1];
+  If[LocationTest[result1, μ_0 = 0] ≤ 0.05, AppendTo[pe1, Mean[result1]]];
+  result2 = RandomVariate[NormalDistribution[effect, σ], nSamples2];
+  If[LocationTest[result2, μ_0 = 0] ≤ 0.05, AppendTo[pe2, Mean[result1]]];
 , {nTrials}]
 Histogram[{pe1, pe2}, Automatic, "Probability",
   AxesLabel -> {"Point estimate", "Frequency"},
