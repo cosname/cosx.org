@@ -183,9 +183,9 @@ Histogram[{p1, p2}, {0.05}, "Probability",
 pe1 = pe2 = {};  (* Point estimate *)
 Do[
   result1 = RandomVariate[NormalDistribution[effect, \[Sigma]], nSamples1];
-  If[LocationTest[result1, `$\mu_0$` = 0] ≤ 0.05, AppendTo[pe1, Mean[result1]]];
+  If[LocationTest[result1, Subscript[\[Mu], 0] = 0] ≤ 0.05, AppendTo[pe1, Mean[result1]]];
   result2 = RandomVariate[NormalDistribution[effect, \[Sigma]], nSamples2];
-  If[LocationTest[result2, `$\mu_0$` = 0] ≤ 0.05, AppendTo[pe2, Mean[result1]]];
+  If[LocationTest[result2, Subscript[\[Mu], 0] = 0] ≤ 0.05, AppendTo[pe2, Mean[result1]]];
 , {nTrials}]
 Histogram[{pe1, pe2}, Automatic, "Probability",
   AxesLabel -> {"Point estimate", "Frequency"},
