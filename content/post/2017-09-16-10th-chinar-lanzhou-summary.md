@@ -11,12 +11,12 @@ tags:
   - 统计之都
 slug: 10th-chinar-lanzhou-summary
 forum_id: 419521
-meta_extra: 审稿：郎大为；编辑：林枫
+meta_extra: 审稿：郎大为、谢益辉、朱雪宁；编辑：林枫
 ---
 
 第十届中国R语言会议（兰州会场）暨西北地区数据科学会议于2017年9月16日在兰州财经大学和平校区成功举办。主会场位于兴隆讲堂。 
 
-![default](https://user-images.githubusercontent.com/18381242/31055065-5cb635f4-a6f1-11e7-8d95-4b51fa1e1560.png)
+![mainpic](https://user-images.githubusercontent.com/18381242/31055065-5cb635f4-a6f1-11e7-8d95-4b51fa1e1560.png)
 
 # 一、会议概况
 
@@ -28,16 +28,16 @@ meta_extra: 审稿：郎大为；编辑：林枫
 
 会议在兰州财经大学统计学院院长庞智强教授的致辞中拉开序幕。庞院长对本次R语言会议做了简要介绍，并且对兰州财经大学统计学院的创立与发展做了简要的介绍，回顾过去的同时展望未来，并对辛勤工作的志愿者、主办方、协办方以及与会的各位嘉宾和参会者表达了感谢。
 
-![default](https://user-images.githubusercontent.com/18381242/31055078-711c82dc-a6f1-11e7-8ab3-5bcb4700b83d.png)
+![open](https://user-images.githubusercontent.com/18381242/31055078-711c82dc-a6f1-11e7-8ab3-5bcb4700b83d.png)
 
 随后，兰州财经大学的傅德印校长也对本次会议做了致辞，傅校长强调了兰州财经大学对于统计学和数据科学的关注与支持，从国家发展战略角度对数据科学的重要意义发表了独到见解，并表达了对兰州财经大学统计学科紧跟时代前沿、不断开拓创新的希望，引人入胜。
 
-![default](https://user-images.githubusercontent.com/18381242/31055238-cb53cad4-a6f2-11e7-8cc3-8380ce8fea35.png)
+![fd](https://user-images.githubusercontent.com/18381242/31055238-cb53cad4-a6f2-11e7-8cc3-8380ce8fea35.png)
 
 
 简短的开幕式结束后，组织与会人员合影留念。
 
-![default](https://user-images.githubusercontent.com/18381242/31055172-519d6588-a6f2-11e7-8832-e8ac492eb941.png)
+![photo](https://user-images.githubusercontent.com/18381242/31055172-519d6588-a6f2-11e7-8832-e8ac492eb941.png)
 
 
 ## 2.嘉宾报告
@@ -46,40 +46,40 @@ meta_extra: 审稿：郎大为；编辑：林枫
 
 ### （1）陈江：人工智能化大数据分析
 
-![default](https://user-images.githubusercontent.com/18381242/31055241-dd9eee6c-a6f2-11e7-85e6-fa086b778eae.png)
+![cj](https://user-images.githubusercontent.com/18381242/31055241-dd9eee6c-a6f2-11e7-85e6-fa086b778eae.png)
 
 ### （2）李吉元：基于电信网络的面向用户特征的 大数据分析平台
 
-![default](https://user-images.githubusercontent.com/18381242/31055246-e5a22304-a6f2-11e7-9d32-513ee851040b.png)
+![ljy](https://user-images.githubusercontent.com/18381242/31055246-e5a22304-a6f2-11e7-9d32-513ee851040b.png)
 
 ### （3）谢佳标：大数据挖掘利器--R 语言
 
-![default](https://user-images.githubusercontent.com/18381242/31055260-0cbe3586-a6f3-11e7-91e0-08393be16ab3.png)
+![xjb](https://user-images.githubusercontent.com/18381242/31055260-0cbe3586-a6f3-11e7-91e0-08393be16ab3.png)
 
 ### （4）翁称誉：北京遇上西雅图 - 心理学遇上大数据
 
-![default](https://user-images.githubusercontent.com/18381242/31055263-11c0bf18-a6f3-11e7-876d-f328f244cc97.png)
+![wcy](https://user-images.githubusercontent.com/18381242/31055263-11c0bf18-a6f3-11e7-876d-f328f244cc97.png)
 
 ### （5）成慧敏：数据融合与信用风险评估
 
-![default](https://user-images.githubusercontent.com/18381242/31055265-2559164c-a6f3-11e7-9dcc-da8a7e10e7d0.png)
+![chm](https://user-images.githubusercontent.com/18381242/31055265-2559164c-a6f3-11e7-9dcc-da8a7e10e7d0.png)
 
  
 ### （6）张耀南：大数据认知与关键技术思考
 
-![default](https://user-images.githubusercontent.com/18381242/31055267-2a789080-a6f3-11e7-8311-0e439a22941c.png)
+![zyn](https://user-images.githubusercontent.com/18381242/31055267-2a789080-a6f3-11e7-8311-0e439a22941c.png)
  
 ### （7）罗立辉：R语言与地学建模：从函数到可视化
 
-![default](https://user-images.githubusercontent.com/18381242/31055298-416112d6-a6f3-11e7-95eb-ce8023682cef.png)
+![llh](https://user-images.githubusercontent.com/18381242/31055298-416112d6-a6f3-11e7-95eb-ce8023682cef.png)
  
 ### （8）黄恒君：R语言与互联网数据价值发现
 
-![default](https://user-images.githubusercontent.com/18381242/31055302-47e8e386-a6f3-11e7-82d0-4e854d85435d.png)
+![hhj](https://user-images.githubusercontent.com/18381242/31055302-47e8e386-a6f3-11e7-82d0-4e854d85435d.png)
 
 闭幕式由组委会主席陈鑫鹏主持，他对本次数据科学会议做了全面系统的总结，并对与会的各位来宾表示了衷心的感谢。
  
-![default](https://user-images.githubusercontent.com/18381242/31055316-8ec5fd5c-a6f3-11e7-8891-8811980ff1a6.png)
+![close](https://user-images.githubusercontent.com/18381242/31055316-8ec5fd5c-a6f3-11e7-8891-8811980ff1a6.png)
 
 # 二、资料下载
 
