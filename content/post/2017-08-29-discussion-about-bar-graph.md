@@ -10,7 +10,7 @@ slug: discussion-about-bar-graph
 
 这篇文章的起因是源于COS论坛中的下图，该图引起了热烈的讨论，具体的探讨细节[见此](https://d.cosx.org/d/417769)。
 
-![图0：起因条形图](https://user-images.githubusercontent.com/12031874/28810063-2fe63496-76ba-11e7-88be-e0c9d14dd486.png){ width=70% }
+<img width=70% alt="图0：起因条形图" src="https://user-images.githubusercontent.com/12031874/28810063-2fe63496-76ba-11e7-88be-e0c9d14dd486.png">
 
 <p style="text-align: center;">图0：起因条形图</p>
 
@@ -28,7 +28,7 @@ slug: discussion-about-bar-graph
 
 这个问题描述的是坐标名称特别长的情况下应该如何处理。当坐标比较短时，这也是绘制条形图的大部分情况，用正立条形图或者横躺条形图都是可以的，比如下图1，这个图横竖都非常美观，在此就不放横躺条形图的样式了。
 
-![图1：泊松分布](https://user-images.githubusercontent.com/12031874/29483578-d90c9658-84db-11e7-85c9-d44db8994d33.png){ width=70% }
+<img width=70% alt="图1：泊松分布" src="https://user-images.githubusercontent.com/12031874/29483578-d90c9658-84db-11e7-85c9-d44db8994d33.png">
 
 <p style="text-align: center;">图1：泊松分布</p>
 
