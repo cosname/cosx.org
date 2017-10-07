@@ -4,11 +4,11 @@ date: '2017-10-07'
 author: 
   - 黄湘云 
   - 李宇轩
-categories:
-  - 统计图形
+slug: discussion-about-bar-graph  
+categories: 
+  - 统计图形
 tags: 
-  - 条形图
-slug: discussion-about-bar-graph
+  - 条形图 
 forum_id: 419520
 ---
 
