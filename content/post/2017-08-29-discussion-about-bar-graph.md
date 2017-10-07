@@ -14,7 +14,7 @@ forum_id: 419520
 
 这篇文章的起因是源于COS论坛中的下图，该图引起了热烈的讨论，具体的探讨细节[见此](https://d.cosx.org/d/417769)。
 
-<img width=70% alt="图0：起因条形图" src="https://user-images.githubusercontent.com/12031874/28810063-2fe63496-76ba-11e7-88be-e0c9d14dd486.png">
+![图0：起因条形图](https://user-images.githubusercontent.com/12031874/28810063-2fe63496-76ba-11e7-88be-e0c9d14dd486.png)
 
 <p style="text-align: center;">图0：起因条形图</p>
 
@@ -98,7 +98,7 @@ forum_id: 419520
 
 <img width=70% alt="图9：冈比亚儿童患疟疾情况" src="https://user-images.githubusercontent.com/12031874/29740264-234eedde-8a85-11e7-8425-5a60cda96845.png">
 
-<p style="text-align: center;">图9：冈比亚儿童患疟疾的影响因素（是否有蚊帐，蚊帐是否杀虫，RDT表示快速诊断结果：\n 0表示没有感染疟疾，1表示感染疟疾）</p>
+<p style="text-align: center;">图9：冈比亚儿童患疟疾的影响因素（是否有蚊帐，蚊帐是否杀虫，RDT表示快速诊断结果：0表示没有感染疟疾，1表示感染疟疾）</p>
 
 图9这张分类条形图中规中矩，利用颜色区分了不同的情况，颜色的不同也产生了对比，此时颜色图例自然是有必要的。分类条形图在类型比较多时用的也较多，因为类型少时，我们同时可以使用堆积条形图，而类型多时，堆积条形图就没有那么直观了，如下图10：
 
