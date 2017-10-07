@@ -14,7 +14,7 @@ forum_id: 419520
 
 这篇文章的起因是源于COS论坛中的下图，该图引起了热烈的讨论，具体的探讨细节[见此](https://d.cosx.org/d/417769)。
 
-<img width=70% alt="图0：起因条形图" src="https://user-images.githubusercontent.com/12031874/28810063-2fe63496-76ba-11e7-88be-e0c9d14dd486.png">
+![图0：起因条形图](https://user-images.githubusercontent.com/12031874/28810063-2fe63496-76ba-11e7-88be-e0c9d14dd486.png)
 
 <p style="text-align: center;">图0：起因条形图</p>
 
