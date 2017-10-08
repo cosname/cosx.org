@@ -11,7 +11,7 @@ tags:
  - 创新
 slug: conversation-about-quality-2
 meta_extra: "编辑：冯璟烁；审稿：朱雪宁"
-forum_id: 
+forum_id: 419535
 ---
 
 *原文刊载于中国美术学院“商道与艺道”2017论坛专刊。转载请注明出处*
