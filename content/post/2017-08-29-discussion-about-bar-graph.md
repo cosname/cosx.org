@@ -1,6 +1,6 @@
 ---
 title: "漫谈条形图"
-date: '2017-10-07'
+date: '2017-10-14'
 author: 
   - 黄湘云 
   - 李宇轩
@@ -9,7 +9,7 @@ categories:
   - 统计图形
 tags: 
   - 条形图 
-forum_id: 419520
+forum_id: 417769
 ---
 
 这篇文章的起因是源于COS论坛中的下图，该图引起了热烈的讨论，具体的探讨细节[见此](https://d.cosx.org/d/417769)。
@@ -203,7 +203,7 @@ forum_id: 419520
 
 这张图中的各个柱子没有明显趋势，但有明显分类，而这种横坐标之间也没有明显关系的图形，利用不同的颜色要比渐变色更好。渐变色更适合用于那些横坐标之间有连续关系的图形，如下面的图24，图25和图26：
 
-<img width=70% alt="图24：立方条形图2" src="https://user-images.githubusercontent.com/12031874/29644438-993e3efc-88a8-11e7-94ba-c04e57f15e4c.png">
+<img width=70% alt="图24：立方条形图2" src="https://user-images.githubusercontent.com/12031874/31571727-ccb07184-b0ca-11e7-8583-ca6af4165087.png">
 
 <p style="text-align: center;">图24：立方条形图2</p>
 
