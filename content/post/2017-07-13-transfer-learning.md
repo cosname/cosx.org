@@ -79,7 +79,7 @@ VGG16模型可以通过[这里下载](https://pan.baidu.com/s/1eSnKB1S)（密码
 
 # 识花数据集
 
-我们要使用的花数据集可以从tensorflow的官网上[下载](https://pan.baidu.com/s/1jIMOc1S)。
+我们要使用的花数据集可以在这里[下载](https://pan.baidu.com/s/1jIMOc1S)。
 
 该数据集有包含如下数据：
 
