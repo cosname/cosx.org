@@ -1,6 +1,6 @@
 ---
 title: 基于深度学习和迁移学习的识花实践
-date: '2017-07-13'
+date: '2017-10-16'
 author: 罗大钧
 tags: [深度学习,迁移学习,VGG,CNN]
 slug: transfer-learning
