@@ -9,7 +9,7 @@ categories:
   - 统计图形
 tags:
   - 条形图 
-meta_extra: "[审稿]()：谢益辉、朱雪宁"
+meta_extra: "[审稿](https://github.com/cosname/cosx.org/pull/713)：谢益辉、朱雪宁；编辑：王祎帆"
 forum_id: 417769
 ---
 
