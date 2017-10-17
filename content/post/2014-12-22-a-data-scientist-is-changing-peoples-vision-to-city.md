@@ -6,13 +6,12 @@ categories:
   - 推荐文章
 slug: a-data-scientist-is-changing-peoples-vision-to-city
 forum_id: 419052
+meta_extra: "编辑：王小宁"
 ---
 
 **本文摘自：腊八粥**
 
 **原文：<http://www.labazhou.net/2014/12/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city/>**
-
-编辑：王小宁
 
 ![数据分析师的博客正在改变着纽约人看待城市的方式](http://www.labazhou.net/wp-content/uploads/2014/12/ben-wellington-i-quant-ny-1.jpg)
 

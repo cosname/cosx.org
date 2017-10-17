@@ -13,7 +13,7 @@ tags:
   - xaringan
   - remark.js
 slug: xaringan-presentation
-meta_extra: 审校：郎大为；编辑：彭晨昱
+meta_extra: 审稿：郎大为；编辑：彭晨昱
 forum_id: 419184
 ---
 

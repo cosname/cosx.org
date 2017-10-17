@@ -11,9 +11,8 @@ tags:
   - 数据科学
 slug: interviewof-jeff-leek
 forum_id: 418942
+meta_extra: "受访人：Jeff Leek"
 ---
-
-【COS编辑部按】 受访人：Jeff Leek
 
 简介：Jeff Leek是约翰·霍普金斯大学布隆博格公共卫生学院（Johns Hopkins Bloomberg School of Public Health）助理教授。他与另外两位教授共同打理的[Simply Statistics](http://simplystatistics.org/)是最受欢迎的统计学博客之一。本文是小编对Jeff Leek采访的录音稿。
 

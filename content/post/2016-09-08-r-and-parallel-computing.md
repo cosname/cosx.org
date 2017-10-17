@@ -10,6 +10,7 @@ tags:
   - 并行计算
 slug: r-and-parallel-computing
 forum_id: 419163
+meta_extra: "审稿人：何通；编辑：邓金涛"
 ---
 
 作者简介     
@@ -227,8 +228,4 @@ R最初是以单线程模式来设计的，意味着许多基础数据结构并�
 ## 2、云计算平台       
 随着云计算的兴起，数据分析即服务（DAAS：Data Analyst as a Services）以及机器学习即服务（MLAS： machine learning as a services）的浪潮将会到来。 各大服务商从底层的硬件部署，数据库优化到上次的算法优化都提供了相应的并行化措施，比如微软近期推出了一系列R在云上的产品，更多信息请参见
 
-[这篇文章](http://www.zdnet.com/article/microsofts-r-strategy/)。因此，未来更多的并行化工作将会对用户透明，R用户看到的还是原来的R，然而真正的计算已经分布到云端了。     
-
-审稿人：何通
-
-本文编辑：邓金涛
+[这篇文章](http://www.zdnet.com/article/microsofts-r-strategy/)。因此，未来更多的并行化工作将会对用户透明，R用户看到的还是原来的R，然而真正的计算已经分布到云端了。
