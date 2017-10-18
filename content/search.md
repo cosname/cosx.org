@@ -21,6 +21,10 @@ menu: [main, top]
   width: 60px;
   margin-left: 10px;
 }
+#stats {
+  text-align: center;
+  display: none;
+}
 </style>
 
 <section class="">
@@ -28,11 +32,14 @@ menu: [main, top]
     <div class="input-group">
       <input type="text" class="form-control" id="q" />
       <span class="input-group-btn">
-        <button onclick='search.helper.search();'>搜索</button>
+        <button id="btn" >搜索</button>
       </span>
     </div>
   </div>
-  <div id="stats"></div>
+  <div id="stats">
+		<img src="/img/loading.svg" width="64" height="64" />
+		<h3 class="h1 mt2 mb0">搜索中...</h3>
+  </div>
   <hr />
   <div id="hits"></div>
   <div id="pagination"></div>
