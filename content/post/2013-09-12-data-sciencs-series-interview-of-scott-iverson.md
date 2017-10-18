@@ -13,12 +13,10 @@ tags:
   - 统计
 slug: data-sciencs-series-interview-of-scott-iverson
 forum_id: 418968
-meta_extra: "译者：黄俊文；审稿：潘岚锋、高涛"
+meta_extra: "受访人：Scott Iverson；采访人：林荟；译者：黄俊文；审稿：潘岚锋、高涛"
 ---
 
-【COS编辑部按】受访人：Scott Iverson。
-
-采访人：林荟，女，杜邦先锋总部市场部统计师，毕业于 Iowa State University 统计系，生年不详卒年尚无法预测。
+林荟，女，杜邦先锋总部市场部统计师，毕业于 Iowa State University统计系，生年不详卒年尚无法预测。
 
 译者：[黄俊文](http://www.fyears.org)（主要），[潘岚锋](https://cos.name/author/lanfeng/)（勘误），[高涛](http://www.gaotao.name/cn/)（勘误）。
 

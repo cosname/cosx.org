@@ -16,8 +16,6 @@ meta_extra: 编辑：王小宁
 forum_id: 419092
 ---
 
-作者： 唐源（Yuan Tang）
-
 局部Fisher判别分析(Local Fisher Discriminant Analysis)是许多度量学习（Metric Learning）方法中效果最好的其中一种，它是一种线性监督降维方法，它可以自动找到合适的距离转换矩阵(transformation matrix)来抓住数据的不同类(class)的特征，通过加大不同类之间的距离(between-class distance)以及缩小同类里面每个样本的距离(within-class distance)，让不同类之间的界限更明显，从而使可视化效果更清晰。它同时也保持了多模(multimodality)的特征，这在处理一个类有多个的集群的时候有非常大的作用，比如说对于一种有多种可能症状的疾病来说，那些可能的症状都是同一类里面不同的集群，lfda可以把这种病的局部结构和特征(local structure)保持下来从而不会影响到之后的机器学习算法的效果。更细节一点的英文的理论介绍和应用可以
 [点击](https://gastrograph.com/resources/whitepapers/local-fisher-discriminant-analysis-on-beer-style-clustering.html)
 [这里](https://gastrograph.com/resources/whitepapers/local-fisher-discriminant-analysis-on-beer-style-clustering.html)

@@ -12,13 +12,12 @@ tags:
   - R语言
   - 管道
 slug: use-pipeline-operators-in-r
-meta_extra: 译者：高涛
+meta_extra: 译者：[高涛](http://joegaotao.github.io/cn/)
 forum_id: 419017
 ---
 
   * 原文作者：[任坤](http://renkun.me/)，厦门大学王亚南经济研究院金融硕士生，研究兴趣为计算统计和金融量化交易。
   * 原文地址：<http://renkun.me/blog/r/2014/04/08/use-pipeline-operators-in-r.html>
-  * 翻译：[高涛](http://joegaotao.github.io/cn/)
 
 在数据驱动的统计计算和数据分析过程中，逐步使用一串命令来完成任务是很常见的情况。但是，由于后调用的函数需要先写出来，所以写一组深层嵌套的函数既不直观又缺乏灵活性。<!--more-->
 

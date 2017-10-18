@@ -12,9 +12,8 @@ tags:
   - 数据科学
 slug: data-sciencs-series-interview-of-zibao-and-shouwu
 forum_id: 418979
+meta_extra: "受访者：陈逸波、郝智恒"
 ---
-
-【COS编辑部按】受访者：
 
 ![ava.s](https://uploads.cosx.org/2013/10/ava.s.jpeg) 陈逸波（花名：子豹），江苏常州人士，2010年毕业于浙江大学数学系，目前在淘宝网的数据科学部门做一些电商相关的数据分析和数据挖掘工作。下称yb。
 

@@ -11,6 +11,7 @@ tags:
   - 量化
 slug: portfolio-optimization-1
 forum_id: 419180
+meta_extra: "审稿：邓一硕；编辑：范超"
 ---
 
 **译者简介: Harry Zhu, R语言爱好者, FinanceR 专栏作者**
@@ -262,9 +263,3 @@ solution = data.frame(wTLT,wSHY,wIEF,er,eStd)
 只有一个实根，其余的都是虚根，需要另一种方法。
 
 为第一部分里的边值拟合一个多项式；此时在持仓组合中只有 SHY 和 IEF。虽然这样也行得通，但是这不太通用。想找到一个可以不管是什么边值形状都适用的通用解决方案。下个部分会继续讨论这个问题。
-
-审稿：邓一硕
-
-编辑：范超
-
-版权公告：原创文章，版权所有。
