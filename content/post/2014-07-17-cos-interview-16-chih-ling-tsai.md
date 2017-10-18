@@ -8,10 +8,10 @@ tags:
   - COS访谈
 slug: cos-interview-16-chih-ling-tsai
 forum_id: 419026
-meta_extra: "受访者：[蔡知令](http://gsm.ucdavis.edu/faculty/chih-ling-tsai"蔡知令")；采访者：朱雪宁"
+meta_extra: 受访者：蔡知令；采访者：朱雪宁
 ---
 
-简介：**蔡知令，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。**
+简介：**[蔡知令](http://gsm.ucdavis.edu/faculty/chih-ling-tsai"蔡知令")，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。**
 
 ![caizhiling](https://uploads.cosx.org/2014/07/tsai_web.jpg)
 
