@@ -3,7 +3,7 @@ title: 可视化的另一种选择，Processing.R
 date: '2017-08-20T0:10:32+00:00'
 author: 高策
 categories:
-  - 可视化
+  - 统计图形
 tags:
   - Processing
   - renjin
