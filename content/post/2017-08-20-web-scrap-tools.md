@@ -4,7 +4,7 @@ author: 杜亚磊
 date: '2017-08-20'
 slug: web-scrap-tools
 categories:
-  - 软件应用
+  - 统计软件
 tags:
   - 爬虫
   - python
