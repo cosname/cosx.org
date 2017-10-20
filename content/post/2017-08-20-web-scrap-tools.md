@@ -89,7 +89,7 @@ gsub('.*>(.*?)<.*', '\\1',
 
 XPath是XML路径语言，适用于HTML和XML这两种标记语言。了解HTML的树状结构之后，便自可得其精髓。
 
-下边的代码试用`xml2::read_html`函数解析下载的网页源代码，接下来使用XPath语言寻找所有包含 `class="title"` 属性的span标签。
+下边的代码使用`xml2::read_html`函数解析下载的网页源代码，接下来使用XPath语言寻找所有包含 `class="title"` 属性的span标签。
 
 ```r
 library(xml2)
