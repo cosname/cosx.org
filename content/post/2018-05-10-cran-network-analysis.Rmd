@@ -1,0 +1,68 @@
+---
+title: "CRAN 网络分析"
+author: "黄湘云"
+date: '2017-12-04'
+slug: cran-network-analysis
+categories:
+  - 统计计算
+  - 统计图形
+tags:
+  - ggplot2
+  - Data Visualization
+---
+
+```{r setup,include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, collapse=TRUE, fig.align='center')
+```
+
+## 数据获取和描述
+
+每个 R 包都有一个 **DESCRIPTION** 文件，顾名思义，即描述说明 R 包内容的文件，举例如 tools
+
+```{r}
+packageDescription('tools')
+```
+
+而要获取 CRAN 上所有 R 包信息，就得借助 tools 包
+
+```{r,cache=TRUE}
+# 通过 tools 包获取 CRAN 上 R 包的描述(Description)信息 
+pdb <- tools::CRAN_package_db()
+```
+
+目前，发布在 CRAN 上的R包共有`r dim(pdb)[1]` 个，都是最新版本，我们先看看R包的发布日期
+
+```{r}
+summary(as.Date(pdb$Published))
+summary(as.Date(pdb$Packaged))
+summary(as.Date(pdb$Date))
+```
+
+Published、Packaged、Date三个日期，分别表示
+竟然还有10多年不更新的，该 R 包是 `r pdb[pdb$Published == "2005-10-29",]$Package`
+
+```{r}
+packageDescription('vioplot')
+```
+
+再来看看总体情况
+
+```{r}
+length(sort(unique(as.Date(pdb$Published))))
+```
+
+```{r,fig.width=6,fig.height=3,fig.cap='有趣的是在2012年10月29日更新的R包多达172个'}
+library(ggplot2)
+ggplot(pdb, aes( as.Date(Published) ) ) +
+  geom_bar(color = 'firebrick') + 
+  geom_line(data = data.frame( date = as.Date( c("2011-01-01","2012-10-20") ),
+                               count = c(130,155)), aes(x = date , y = count),
+            arrow = arrow(angle = 15, length = unit(0.15, "inches"))) +
+  annotate("text", x = as.Date("2010-11-01"), y = 128, label = "(2012-10-29,172)") +
+  scale_x_date(date_breaks = "1 year",date_labels = "%Y") +
+  labs(x = "Published Date" ,y = "Count" ) +
+  theme_minimal()
+```
+
+约定 Maintainer 字段为 R 包开发者，创建者和维护者，是同一人，所以下面不再区分，而 Author和Authors\@R 字段可能包含开发者，也可能缺失，或者是其他参与此R包开发的贡献者。
+

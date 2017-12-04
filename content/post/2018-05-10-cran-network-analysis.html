@@ -1,0 +1,91 @@
+---
+title: "CRAN 网络分析"
+author: "黄湘云"
+date: '2017-12-04'
+slug: cran-network-analysis
+categories:
+  - 统计计算
+  - 统计图形
+tags:
+  - ggplot2
+  - Data Visualization
+---
+
+
+
+<div class="section level2">
+<h2>数据获取和描述</h2>
+<p>每个 R 包都有一个 <strong>DESCRIPTION</strong> 文件，顾名思义，即描述说明 R 包内容的文件，举例如 tools</p>
+<pre class="r"><code>packageDescription(&#39;tools&#39;)
+## Package: tools
+## Version: 3.4.3
+## Priority: base
+## Title: Tools for Package Development
+## Author: R Core Team
+## Maintainer: R Core Team &lt;R-core@r-project.org&gt;
+## Description: Tools for package development, administration and
+##        documentation.
+## License: Part of R 3.4.3
+## Suggests: codetools, methods, xml2, curl
+## NeedsCompilation: yes
+## Built: R 3.4.3; x86_64-w64-mingw32; 2017-11-30 19:43:31 UTC;
+##        windows
+## 
+## -- File: C:/Program Files/R/R-3.4.3/library/tools/Meta/package.rds</code></pre>
+<p>而要获取 CRAN 上所有 R 包信息，就得借助 tools 包</p>
+<pre class="r"><code># 通过 tools 包获取 CRAN 上 R 包的描述(Description)信息 
+pdb &lt;- tools::CRAN_package_db()</code></pre>
+<p>目前，发布在 CRAN 上的R包共有11960 个，都是最新版本，我们先看看R包的发布日期</p>
+<pre class="r"><code>summary(as.Date(pdb$Published))
+##         Min.      1st Qu.       Median         Mean      3rd Qu. 
+## &quot;2005-10-29&quot; &quot;2015-05-28&quot; &quot;2016-11-04&quot; &quot;2016-04-02&quot; &quot;2017-07-14&quot; 
+##         Max. 
+## &quot;2017-12-04&quot;
+summary(as.Date(pdb$Packaged))
+##         Min.      1st Qu.       Median         Mean      3rd Qu. 
+## &quot;2009-04-28&quot; &quot;2015-06-04&quot; &quot;2016-11-08&quot; &quot;2016-04-10&quot; &quot;2017-07-15&quot; 
+##         Max.         NA&#39;s 
+## &quot;2017-12-04&quot;         &quot;57&quot;
+summary(as.Date(pdb$Date))
+##         Min.      1st Qu.       Median         Mean      3rd Qu. 
+## &quot;0004-12-20&quot; &quot;2014-12-18&quot; &quot;2016-07-20&quot; &quot;2014-10-19&quot; &quot;2017-06-07&quot; 
+##         Max.         NA&#39;s 
+## &quot;2018-08-23&quot;       &quot;3133&quot;</code></pre>
+<p>Published、Packaged、Date三个日期，分别表示 竟然还有10多年不更新的，该 R 包是 vioplot</p>
+<pre class="r"><code>packageDescription(&#39;vioplot&#39;)
+## Package: vioplot
+## Version: 0.2
+## Date: 2005-10-26
+## Title: Violin plot
+## Author: Daniel Adler &lt;dadler@uni-goettingen.de&gt;
+## Maintainer: Daniel Adler &lt;dadler@uni-goettingen.de&gt;
+## Depends: sm
+## Description: A violin plot is a combination of a box plot and a
+##        kernel density plot.
+## License: BSD
+## URL: http://wsopuppenkiste.wiso.uni-goettingen.de/~dadler
+## Packaged: Wed Oct 26 18:46:49 2005; root
+## Built: R 3.4.2; ; 2017-11-19 11:02:02 UTC; windows
+## 
+## -- File: D:/Program/site-library/vioplot/Meta/package.rds</code></pre>
+<p>再来看看总体情况</p>
+<pre class="r"><code>length(sort(unique(as.Date(pdb$Published))))
+## [1] 2028</code></pre>
+<pre class="r"><code>library(ggplot2)
+ggplot(pdb, aes( as.Date(Published) ) ) +
+  geom_bar(color = &#39;firebrick&#39;) + 
+  geom_line(data = data.frame( date = as.Date( c(&quot;2011-01-01&quot;,&quot;2012-10-20&quot;) ),
+                               count = c(130,155)), aes(x = date , y = count),
+            arrow = arrow(angle = 15, length = unit(0.15, &quot;inches&quot;))) +
+  annotate(&quot;text&quot;, x = as.Date(&quot;2010-11-01&quot;), y = 128, label = &quot;(2012-10-29,172)&quot;) +
+  scale_x_date(date_breaks = &quot;1 year&quot;,date_labels = &quot;%Y&quot;) +
+  labs(x = &quot;Published Date&quot; ,y = &quot;Count&quot; ) +
+  theme_minimal()</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="/post/2018-05-10-cran-network-analysis_files/figure-html/unnamed-chunk-6-1.png" alt="有趣的是在2012年10月29日更新的R包多达172个" width="576" />
+<p class="caption">
+Figure 1: 有趣的是在2012年10月29日更新的R包多达172个
+</p>
+</div>
+<p>约定 Maintainer 字段为 R 包开发者，创建者和维护者，是同一人，所以下面不再区分，而 Author和Authors@R 字段可能包含开发者，也可能缺失，或者是其他参与此R包开发的贡献者。</p>
+</div>
