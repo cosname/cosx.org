@@ -118,7 +118,7 @@ tags:
 
 **主会场视频回顾**
 
-<iframe height="450" width="800" src='https://player.youku.com/embed/XMzIwNjQ2NDY0NA==' frameborder="0"></iframe>
+<iframe height="450" width="100%" src='https://player.youku.com/embed/XMzIwNjQ2NDY0NA==' frameborder="0"></iframe>
 
 [分会场视频回顾](http://v.youku.com/v_show/id_XMzIwNjQ2NDY0NA==.html?spm=a2h1n.8251843.0.0&f=51371486#paction)
 
