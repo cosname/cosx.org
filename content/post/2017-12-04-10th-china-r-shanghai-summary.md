@@ -118,9 +118,7 @@ tags:
 
 **主会场视频回顾**
 
-<iframe height="450" width="100%" src='https://player.youku.com/embed/XMzIwNjQ2NDY0NA==' frameborder="0"></iframe>
-
-[分会场视频回顾](http://v.youku.com/v_show/id_XMzIwNjQ2NDY0NA==.html?spm=a2h1n.8251843.0.0&f=51371486#paction)
+<iframe height="450" width="100%" src='https://v.qq.com/iframe/player.html?vid=f0518jlld1b&tiny=0&auto=0' frameborder="0"></iframe>
 
 **可公开的幻灯片下载请点击链接：**
 
