@@ -3,6 +3,7 @@ title: 第十届中国R会议（上海）暨华东地区数据科学会议纪要
 author: 陈新宇
 date: '2017-12-04'
 slug: 10th-china-r-shanghai-summary
+forum_id: 419694
 categories:
   - R会议
 tags:
