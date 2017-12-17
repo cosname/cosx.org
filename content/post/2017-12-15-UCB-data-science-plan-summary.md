@@ -8,7 +8,7 @@ tags:
  - 数据科学
  - 发展规划
 slug: UCB-data-science-plan-summary
-meta_extra: "译者：王健桥、王毅然"
+meta_extra: "译者：王健桥、王毅然；审阅者：王汉生、郁彬、张志华"
 forum_id: 419698
 ---
 
