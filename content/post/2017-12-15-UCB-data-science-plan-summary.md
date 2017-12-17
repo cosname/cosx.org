@@ -1,16 +1,15 @@
 ---
 title: 远见：加州大学伯克利数据科学发展规划
 date: '2017-12-15'
-author: 
-  - 加州大学伯克利分校数据科学规划教授顾问委员会
-  - 王健桥
-  - 王毅然
+author: 加州大学伯克利分校数据科学规划教授顾问委员会
 categories:
  - 数据科学
 tags: 
  - 数据科学
  - 发展规划
 slug: UCB-data-science-plan-summary
+meta_extra: "译者：王健桥、王毅然"
+forum_id: 419698
 ---
 
 > COS编辑部按：原文由Cathryn Carson作为主任的加州大学伯克利分校数据科学规划教授顾问委员会共同撰写，由统计之都翻译组成员王健桥、王毅然翻译了原文的前三部分，并由王汉生、郁彬和张志华审阅。标题由审阅者所加。原文可于此分享链接<https://pan.baidu.com/s/1nvacKf3>查看下载。
