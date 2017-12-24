@@ -4,19 +4,14 @@ date: '2016-07-08T19:48:37+00:00'
 author: 黄湘云
 categories:
   - R语言
-tags: [表达式计算,优化计算]
+tags: [符号计算,优化计算]
 slug: r-symbol-calculate
 forum_id: 419152
 ---
 
 ## 引言
 
-谈起符号计算，大家首先想到的可能就是大名鼎鼎的Maple，其次是Mathematica，但是他们都是商业软件，
-除了其自身昂贵的价格外，对于想知道底层，并做一些修改的极客而言，这些操作也很不可能实现。
-自从遇到R以后，还是果断脱离商业软件的苦海，R做符号计算固然比不上Maple，但是你真的需要Maple这样的软件去做符号计算吗？我们看看R语言的符号计算能做到什么程度。
-<!--more-->
-
-
+谈起符号计算，大家首先想到的可能就是大名鼎鼎的Maple，其次是Mathematica，但是他们都是商业软件，除了其自身昂贵的价格外，对于想知道底层，并做一些修改的极客而言，这些操作也很不可能实现。自从遇到R以后，还是果断脱离商业软件的苦海，R做符号计算固然比不上Maple，但是你真的需要Maple这样的软件去做符号计算吗？我们看看R语言的符号计算能做到什么程度。
 
 ## 符号计算
 
@@ -182,8 +177,7 @@ Simplify(D(body(Normfun), "x"))
 
 作为本节的最后，献上函数图像，这个函数的作用主要是计算多元正态分布的概率，详细内容参看 [2]。
 
-![Tetrachoric](https://uploads.cosx.org/2016/07/Tetrachoric.jpg)
-
+<img src="https://uploads.cosx.org/2016/07/Tetrachoric.jpg" width="65%" />
 
 #### 3.符号计算扩展包Ryacas
 
@@ -212,7 +206,7 @@ yacas("Taylor(x, a, 3) Exp(x)")
 学过运筹学或者数值分析课程的可能知道，有不少优化算法是要求导或者求梯度的，如拟牛顿算法，最速下降法和共轭梯度法，
 还有求解非线性方程组的拟牛顿算法及其修正算法。下面以求Rosenbrock函数的极小值为例：
 
-![Rosenbrock2](https://uploads.cosx.org/2016/07/Rosenbrock2.png)
+<img src="https://uploads.cosx.org/2016/07/Rosenbrock2.png" width="65%" />
 
 符号微分
 
@@ -340,6 +334,7 @@ optim(c(-1.2, 1), fr, grr2, method = "BFGS")
 导致两个函数（fr与fr1）的参数列表的形式不一样，应能看出fr这种写法更好些。
 
 注：
+
 1. 求极值和求解方程（组）往往有联系的，如统计中求参数的最大似然估计，有不少可以转化为求方程（组），如 stat4 包 [5] 的 mle 函数。
 
 1. 目标函数可以求导，使用拟牛顿算法效果比较好，如上例中 methods 参数设置成 CG，结果就会不一样。
