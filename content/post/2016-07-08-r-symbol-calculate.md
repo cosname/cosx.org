@@ -4,7 +4,7 @@ date: '2016-07-08T19:48:37+00:00'
 author: 黄湘云
 categories:
   - R语言
-tags: [表达式计算,优化计算]
+tags: [符号计算,优化计算]
 slug: r-symbol-calculate
 forum_id: 419152
 ---
