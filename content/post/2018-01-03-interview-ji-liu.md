@@ -8,8 +8,8 @@ categories:
   - COS访谈
 tags: [cos访谈，机器学习，优化，科研生活]
 slug: interview-ji-liu
-meta_extra: 采访：冯璟烁，冯天舒；编辑：冯璟烁
-forum_id: 
+meta_extra: "采访：冯璟烁，冯天舒；编辑：冯璟烁；审稿：王毅然"
+forum_id: 419731
 ---
 
 
