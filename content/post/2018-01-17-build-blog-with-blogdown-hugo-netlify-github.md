@@ -31,7 +31,7 @@ tags:
 
 ## 别误会
 
-如果你通过百度搜索**blogdown**，绝大部分都是说*博客备份工具*、*破解版*，这都不是本文要说的blogdown，本文的blogdown是R语言里面的package。
+如果你通过百度搜索**blogdown**，绝大部分都是说**博客备份工具**、**破解版**，这都不是本文要说的blogdown，本文的blogdown是R语言里面的package。
 
 ![1.5-search-blogdown](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-01-1-search-blogdown.png)
 
@@ -168,7 +168,7 @@ blogdown
 
 ![4-init-blogdown](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-04-init-blogdown.png)
 
-因为我们已经安装了hugo，所以去掉hugo选项，Yihui是建议用**hugo-xmin**主题开始我们的blogdown之旅的，所以这里就选择了hugo-xmin，。
+因为我们已经安装了hugo，所以去掉hugo选项，Yihui是建议用**hugo-xmin**主题开始我们的blogdown之旅的，所以这里就选择了hugo-xmin。
 
 有人会疑问为什么要两次新建项目？这并不是必须，只是我当时不知道怎么从一个已有本地项目同步到github上的一个repository。其实是可以省去**创建项目**这一步，直接按**初始化blogdown**这一步，然后从右上角的`build -> More -> Configure Build TOols...`，如下图所示：
 
