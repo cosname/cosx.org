@@ -22,14 +22,14 @@ tags:
 
 ![1-4swordsman](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-01-swordsman-800.png)
 
-## 优点
+### 优点
 
 - **个性域名**
 - **免费**，无限流量
 - 静态网页，**速度快**
 - github保存内容，不需要搭建数据库，**不需要备份**
 
-## 别误会
+### 别误会
 
 如果你通过百度搜索**blogdown**，绝大部分都是说**博客备份工具**、**破解版**，这都不是本文要说的blogdown，本文的blogdown是R语言里面的package。
 
@@ -97,14 +97,15 @@ In addition: Warning messages:
   InternetOpenUrl failed: ''
 ```
 
-那么就把错误信息中的链接复制到浏览器直接下载吧，把文件解压发现里面就只有一个文件，Yihui选择hugo就是因为hugo只有一个文件，够简单，至于为什么我会知道Yihui选择hugo的原因？因为我读了[**blogdown故事**](https://yihui.name/en/2017/12/blogdown-book/)。
-
-Yihui也很快针对上面那位同志提到的问题写了个install_hugo_bin函数提供另外一个安装hugo的方法（[看这里](https://github.com/rstudio/blogdown/issues/244#issuecomment-357999150)），那么就安装个最新开发版的blogdown吧：
+这个时候就直接安装开发版，就可以解决：
 
 ```
 install.packages("devtools")
 devtools::install_github("rstudio/blogdown")
 ```
+
+如果安装了开发版的blogdown，还没有搞定，那么就把错误信息中的链接复制到浏览器直接下载，把文件解压发现里面就只有一个文件，Yihui选择hugo就是因为hugo只有一个文件，够简单，至于为什么我会知道Yihui选择hugo的原因？因为我读了[**blogdown故事**](https://yihui.name/en/2017/12/blogdown-book/)。
+
 
 把解压好的hugo.exe文件放在`d:\`根目录下，然后输入下面代码安装hugo：
 
@@ -121,9 +122,9 @@ ok，我们来到这里，暂时离开一下Rstudio，我们去弄弄github。
 
 ### 注册域名
 
-虽然个人域名不是必须的（你可以直接netlify的二级域名，如yourname.netlify.com），但是为了彰显个性，当然是注册个人域名啦。
+虽然个人域名不是必须的（你可以直接使用netlify的二级域名，如yourname.netlify.com），但是为了彰显个性，当然是注册个人域名啦。
 
-怎么注册域名就不详说了，国内的有万网等，国外有GoDaddy之类的，选择国内服务商的话，域名要备案，国外就可以省略这个步骤了。
+怎么注册域名就不详说了，国内的有万网等，国外有GoDaddy之类的，选择国内服务商的话，域名要备案，国外就可以省略这个步骤。
 
 还有第三个选择就是到[**rbind.io**](https://support.rbind.io/about/)向**blogdown组织**申请一个二级域名**yourname.rbind.io**。
 
@@ -160,7 +161,18 @@ blogdown
 
 上面的文件或者目录就不会提交到github上。
 
-我是建议在这个时候就把`.gitignore`文件修改好的，因为我发现生成public文件夹之后(后面的步骤会生成public)，我再修改`.gitignore`文件添加`public`文件夹，貌似git那里还是会显示public文件夹的内容在那里，写这篇文章的时候我也重头试了一下也是有同样的问题，不知道怎么搞-_-!。
+如果对git命令不是很熟悉，建议在这个时候就把`.gitignore`文件修改好的，因为在生成public文件夹之后(后面的步骤会生成public)，再修改`.gitignore`文件添加`public`文件夹，那么`Git`标签那里**还是不会**把public文件夹忽略掉，要解决这个问题，参考这个操作（hetong007指导，原文呈上）：
+
+
+.gitignore只会在git add的时候产生作用，仅限于还没被入库的文件/文件夹。
+
+在这个例子中，如果public文件夹已经被加入git了，之后又想去掉，可以
+
+    用git rm -r --cached public命令把它从git的记录中去掉；
+    在.gitignore中添加相应规则。
+
+这样下次的 git add .就不会把public加进去了。
+
 
 ### 初始化blogdown
 
@@ -168,17 +180,25 @@ blogdown
 
 ![4-init-blogdown](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-04-init-blogdown.png)
 
-因为我们已经安装了hugo，所以去掉hugo选项，Yihui是建议用**hugo-xmin**主题开始我们的blogdown之旅的，所以这里就选择了hugo-xmin。
+因为我们已经安装了hugo，所以去掉hugo选项，Yihui是建议用**hugo-xmin**主题开始我们的blogdown之旅的，所以这里就选择了hugo-xmin。点击`Create Project`创建项目。
 
-有人会疑问为什么要两次新建项目？这并不是必须，只是我当时不知道怎么从一个已有本地项目同步到github上的一个repository。其实是可以省去**创建项目**这一步，直接按**初始化blogdown**这一步，然后从右上角的`build -> More -> Configure Build TOols...`，如下图所示：
+有人会疑问为什么要两次新建项目？这并不是必须，其实可以不做**创建项目**这一步，不过就要另外一个步骤，把本地项目同步到github仓库，可以参考下面步骤(详细解释可以看[这里](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)，谢谢hetong007指导)：
 
-![5-Build](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-05-build.png)
+```
+cd进入本地项目目录
+git init
+git add .
+git commit -m "first comment"
+git remote add origin https://github.com/<github帐号>/<仓库名称>
+git remote -v
+git pull origin master --allow-unrelated-histories
+git push -u origin master
+```
 
-选择`Git/SVN -> Version control system: -> Git`，点`ok`就可以初始化git项目了，这个时候`build`标签右边就会多了一个`Git`标签。
 
 ### 本地运行网站
 
-到这里，博客已经可以在本地运行了，我们试试看吧，我们点击菜单`Help`下面的`Addins`，如下图所示：
+到这里，博客已经可以在本地运行，我们试试看吧，点击菜单`Help`下面的`Addins`，如下图所示：
 
 ![6-Addins-serve-site](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-06-serve-site.png)
 
@@ -230,7 +250,7 @@ Yihui是这样说的：
 
 所以呢，可以先把hugo官网上面的主题都浏览一下，看看哪个合眼缘，挑好再改吧。
 
-学习怎么修改主题的另外一个好去处是[hugo-xmin](https://github.com/yihui/hugo-xmin/pulls)的pull request，如果你有好的改进，也可以在这里提交pull request让别人学习。
+学习怎么修改主题的另外一个好去处是hugo-xmin的[pull request](https://github.com/yihui/hugo-xmin/pulls)。如果你有好的改进，也可以在这里提交pull request让别人学习。
 
 看看下面的pull request图：
 
@@ -263,8 +283,7 @@ Yihui是这样说的：
 
 ### 绑定域名
 
-
-这个时候生成的网站网址是`<一串类似md5的字符串>.netlify.com`，点击导航栏的`Overview`，再点击`Site settings -> Change site name`，就可以输入你的英文名字了，这是就得到一个netlify的二级域名`yourname.netlify.com`。
+这个时候生成的网站网址是`<一串类似md5的字符串>.netlify.com`，点击导航栏的`Overview`，再点击`Site settings -> Change site name`，就可以输入你的英文名字，这时就得到一个netlify的二级域名`<Site Name>.netlify.com`。
 
 点击左边导航栏的`Domain management -> Domains`，
 
@@ -282,11 +301,11 @@ Yihui是这样说的：
 
 ![16-nameservers-config](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-16-nameservers-config.png)
 
-到此，所有的基本设置都已经完成了，
+到此，所有的基本设置都已经完成。
 
 ### 更新博客内容
 
-前面提到我们可以专注于写作了，现在所有东西都准备好了，就可以把写好的文章update到线上了，点击右上角`Git`标签，点击`commit`（如下图所示），填写好commit message就可以点`commit`了，然后再点`push`，这样就已经更新线上的博客了，大概不用1分钟的时间，打开你的个人主页`www.domainname.com`就可以看到最新的文章出现了。
+前面提到我们可以专注于写作，现在所有东西都准备好，就可以把写好的文章update到线上，点击右上角`Git`标签，点击`commit`（如下图所示），填写好commit message点击`commit -> push`，这样就已经更新线上的博客，大概不用1分钟的时间，打开你的个人主页`www.domainname.com`就可以看到最新的文章出现了。
 
 ![20180117-17-1-git-commit](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-17-1-git-commit.png)
 
