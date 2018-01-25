@@ -161,15 +161,14 @@ blogdown
 
 上面的文件或者目录就不会提交到github上。
 
-如果对git命令不是很熟悉，建议在这个时候就把`.gitignore`文件修改好的，因为在生成public文件夹之后(后面的步骤会生成public)，再修改`.gitignore`文件添加`public`文件夹，那么`Git`标签那里**还是不会**把public文件夹忽略掉，要解决这个问题，参考这个操作（hetong007指导，原文呈上）：
+如果对git命令不是很熟悉，建议在这个时候就把`.gitignore`文件修改好的，因为在生成public文件夹之后(后面的步骤会生成public)，再修改`.gitignore`文件添加`public`文件夹，那么`Git`标签那里**还是不会**把public文件夹忽略掉，要解决这个问题，可以按如下操作：
 
+```
+git rm -r --cached public
 
-.gitignore只会在git add的时候产生作用，仅限于还没被入库的文件/文件夹。
-
-在这个例子中，如果public文件夹已经被加入git了，之后又想去掉，可以
-
-    用git rm -r --cached public命令把它从git的记录中去掉；
-    在.gitignore中添加相应规则。
+# 然后在.gitignore文件添加规则
+public
+```
 
 这样下次的 git add .就不会把public加进去了。
 
@@ -182,7 +181,7 @@ blogdown
 
 因为我们已经安装了hugo，所以去掉hugo选项，Yihui是建议用**hugo-xmin**主题开始我们的blogdown之旅的，所以这里就选择了hugo-xmin。点击`Create Project`创建项目。
 
-有人会疑问为什么要两次新建项目？这并不是必须，其实可以不做**创建项目**这一步，不过就要另外一个步骤，把本地项目同步到github仓库，可以参考下面步骤(详细解释可以看[这里](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)，谢谢hetong007指导)：
+有人会疑问为什么要两次新建项目？这并不是必须，其实可以不做**创建项目**这一步，不过就要另外一个步骤，把本地项目同步到github仓库，可以按下面步骤处理(详细解释可以看[这里](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/))：
 
 ```
 cd进入本地项目目录
