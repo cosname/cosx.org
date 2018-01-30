@@ -11,14 +11,14 @@ tags:
   - blogdown
   - netlify
   - github
-  - Rstudio
+  - rstudio
 ---
 
 
 
 ## 目标
 
-用R语言的blogdown + hugo + netlify + github搭建静态博客系统，用Rstudio**专注于写作**。
+用R语言的blogdown + hugo + netlify + github搭建静态博客系统，用rstudio**专注于写作**。
 
 ![1-4swordsman](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-01-swordsman-800.png)
 
@@ -29,43 +29,41 @@ tags:
 - 静态网页，**速度快**
 - github保存内容，不需要搭建数据库，**不需要备份**
 
-### 别误会
-
-如果你通过百度搜索**blogdown**，绝大部分都是说**博客备份工具**、**破解版**，这都不是本文要说的blogdown，本文的blogdown是R语言里面的package。
-
-![1.5-search-blogdown](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-01-1-search-blogdown.png)
-
-现在不错了，第二名有本文正版的blogdown的链接出现。
-
 ## 准备工作
 
 ### 软件准备
 
-系统：windows
+系统：本文以Windows操作系统为例来介绍安装和配置方法。其他操作系统是类似的。
 
 - 安装R，[点此下载](https://www.r-project.org/)
-- 安装Rstudio，[点此下载](https://www.rstudio.com/products/rstudio/download/#download)
+- 安装rstudio，[点此下载](https://www.rstudio.com/products/rstudio/download/#download)
 - 安装git，[点此下载](https://git-scm.com/download/win)
 
 windows下安装很简单，就不描述了。
 
 对于git，作为非程序猿的我，一直想学但是一直没学，直到打算用blogdown建个blog玩之后，就注册了github看看git是怎么玩的，不过我倒不是从命令行学起的（虽然我也玩linux），而是装了个[GitKraKen](https://www.gitkraken.com/)来摸git是怎么玩的，然后再对应的学一点命令行的。其实只需要会add、commit、push、pull、merge就足够对付blogdown了。如果想用github对blogdown的主题启用一个转移魔法的话，可以看这里：[git-submodule](https://yihui.name/cn/2017/03/git-submodule/)
 
-我们这里并不需要安装GitKraKen，因为**Rstudio**已经有git的gui功能了，所以上面提到的命令怎么打也不用学，直接在Rstudio上点点点。
+我们这里并不需要安装GitKraKen，因为**rstudio**已经有git的gui功能了，所以上面提到的命令怎么打也不用学，直接在rstudio上点点点。
 
-### Rstudio配置
+### rstudio配置
 
 安装好上述软件后，需要对rstudio进行一下简单配置：
 
 - Tools -> Global Options -> Sweave -> Weave Rnw files using:**knitr**
 - Tools -> Global Options -> Sweave -> Typeset LaTex into PDF using:**XeLaTeX**
 	- 这个是生成PDF文件用的，中文用户最好选择XeLaTeX
+	
+![2-sweave](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-02-sweave.png)	
+	
 - Tools -> Global Options -> Git/SVN -> Git executable:
 	- 安装好git后，打开这里应该就可以看到git的路径了
-- Tools -> Global Options -> Packages -> CRAN mirror: 
-	- 选择一个China的镜像速度会快点
 
-![2-git](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-02-git.png)
+![2-git](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-02-git.png)	
+
+- Tools -> Global Options -> Packages -> CRAN mirror: 
+	- 建议选择一个距离你比较近的镜像，速度会快点。例如，国内用户可以选择一个 China 的镜像。
+
+![2-cran](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-02-cran.png)	
 
 ### 安装blogdown和hugo
 
@@ -85,7 +83,7 @@ blogdown::install_hugo()
 
 ```
 > blogdown::install_hugo()
-The latest Hugo version is 0.32.4
+The latest hugo version is 0.32.4
 trying URL 'https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Windows-64bit.zip'
 trying URL 'https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Windows-64bit.zip'
 Error in download.file(url, ..., method = method, extra = extra) : 
@@ -107,7 +105,7 @@ devtools::install_github("rstudio/blogdown")
 如果安装了开发版的blogdown，还没有搞定，那么就把错误信息中的链接复制到浏览器直接下载，把文件解压发现里面就只有一个文件，Yihui选择hugo就是因为hugo只有一个文件，够简单，至于为什么我会知道Yihui选择hugo的原因？因为我读了[**blogdown故事**](https://yihui.name/en/2017/12/blogdown-book/)。
 
 
-把解压好的hugo.exe文件放在`d:\`根目录下，然后输入下面代码安装hugo：
+把解压好的hugo.exe文件放在`d:/`根目录下，然后输入下面代码安装hugo：
 
 ```
 # 注意这里是三个冒号
@@ -116,9 +114,9 @@ blogdown:::install_hugo_bin("d:/hugo.exe")
 
 安装成功。
 
-不知道是不是墙的问题，最近从github下载文件都比较慢(浏览github网页倒没有问题)，经常用`devtools::install_github()`安装包都不成功，就算用浏览器下载hugo也经常出现错误，估计这就是用`blogdown::install_hugo()`安装不了的原因吧。
+不知道是不是网络国际出口的问题，最近从github下载文件都比较慢(浏览github网页倒没有问题)，经常用`devtools::install_github()`安装包都不成功，就算用浏览器下载hugo也经常出现错误，估计这就是用`blogdown::install_hugo()`安装不了的原因吧。
 
-ok，我们来到这里，暂时离开一下Rstudio，我们去弄弄github。
+ok，我们来到这里，暂时离开一下rstudio，我们去弄弄github。
 
 ### 注册域名
 
@@ -143,11 +141,11 @@ ok，我们来到这里，暂时离开一下Rstudio，我们去弄弄github。
 
 ### 创建项目
 
-现在回到Rstudio，`File -> New Project -> Version Control -> Git`，然后填写Repository URL:`https://github.com/yourGithubName/domainname.com`，`Project directory name`应该自动就生成了，可以选择一个合适的文件夹存放，点击**Create Project**创建项目。
+现在回到rstudio，`File -> New Project -> Version Control -> Git`，然后填写Repository URL:`https://github.com/yourGithubName/domainname.com`，`Project directory name`应该自动就生成了，可以选择一个合适的文件夹存放，点击**Create Project**创建项目。
 
 ### 设置gitignore
 
-打开Rstudio右下角的`Files`标签，点击`.gitignore`文件，改成下面这样吧（copy Yihui的）：
+打开rstudio右下角的`Files`标签，点击`.gitignore`文件，改成下面这样吧（copy Yihui的）：
 
 ```
 .Rproj.user
@@ -184,7 +182,7 @@ public
 有人会疑问为什么要两次新建项目？这并不是必须，其实可以不做**创建项目**这一步，不过就要另外一个步骤，把本地项目同步到github仓库，可以按下面步骤处理(详细解释可以看[这里](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/))：
 
 ```
-cd进入本地项目目录
+cd <本地项目目录>
 git init
 git add .
 git commit -m "first comment"
@@ -230,7 +228,7 @@ install.packages("xaringan")
 
 ![8-yihui-new-post](https://bookdown.org/yihui/blogdown/images/new-post.png)
 
-`Filename`处会自动帮你填写为`Title`处的内容，`Filename`和`Slug`还是建议使用字母，尤其是`Filename`，如果博文里面不需要用到R语言的代码计算结果生成图表的话，`Format`处就选择`Markdown`格式，这可以省去一些系统生成的步骤，ok，点击`Done`，就会在`\content\post`文件夹下面生成一个文件名为`2000-01-01-my-first-blog.Rmd`这样的文件了，content文件夹下面的文件就是博客的文章了。
+`Filename`处会自动帮你填写为`Title`处的内容，`Filename`和`Slug`还是建议使用字母，尤其是`Filename`，如果博文里面不需要用到R语言的代码计算结果生成图表的话，`Format`处就选择`Markdown`格式，这可以省去一些系统生成的步骤，ok，点击`Done`，就会在`/content/post`文件夹下面生成一个文件名为`2000-01-01-my-first-blog.Rmd`这样的文件了，content文件夹下面的文件就是博客的文章了。
 
 这个时候就可以用markdown格式**专注于写作**了。
 
@@ -280,9 +278,14 @@ Yihui是这样说的：
 
 ![13-deploy-settings](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-13-deploy-settings.png)
 
-### 绑定域名
+
+### 设置个性二级域名
 
 这个时候生成的网站网址是`<一串类似md5的字符串>.netlify.com`，点击导航栏的`Overview`，再点击`Site settings -> Change site name`，就可以输入你的英文名字，这时就得到一个netlify的二级域名`<Site Name>.netlify.com`。
+
+### 绑定个人域名
+
+如果你不满足于netlify的二级域名，还可以选择绑定个人域名。
 
 点击左边导航栏的`Domain management -> Domains`，
 
@@ -310,7 +313,7 @@ Yihui是这样说的：
 
 至此，关于用R语言的blogdown + hugo + netlify + github搭建静态博客系统的介绍全部结束了，更多关于blogdown的魔法就等大家自己去挖掘了吧。
 
-Go，用Rstudio去写博客吧！
+Go，用rstudio去写博客吧！
 
 ## 参考资料
 
@@ -320,6 +323,6 @@ Go，用Rstudio去写博客吧！
 1. [R blogdown 科研网站的公式和参考文献](http://www.pzhao.org/zh/post/rblogdown-bib/)
 1. [如何在 R markdown 里输出 r pi 并前后加上小撇\`](http://www.pzhao.org/zh/post/backticks-in-rmd/)
 1. [Enable Code folding](https://github.com/statnmap/hugo-statnmap-theme/pull/1/files)
-1. [Making a Website Using Blogdown, Hugo, and GitHub pages](https://proquestionasker.github.io/blog/Making_Site/)
-1. [Getting Started With Blogdown](https://www.znmeb.mobi/2017/05/12/getting-started-with-blogdown/)
+1. [Making a Website Using blogdown, hugo, and GitHub pages](https://proquestionasker.github.io/blog/Making_Site/)
+1. [Getting Started With blogdown](https://www.znmeb.mobi/2017/05/12/getting-started-with-blogdown/)
 1. [rbind support](https://support.rbind.io/)
