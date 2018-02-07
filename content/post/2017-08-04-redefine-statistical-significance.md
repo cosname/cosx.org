@@ -1,12 +1,11 @@
-
- ---
- title: 统计的显著性水平
- author: 战立侃
- date: '2017-08-04'
- slug: redefine-statistical-significance
- categories:
- tags:
- ---
+---
+title: 统计的显著性水平
+author: 战立侃
+date: '2017-08-04'
+slug: redefine-statistical-significance
+categories:
+tags:
+---
  
 
 
