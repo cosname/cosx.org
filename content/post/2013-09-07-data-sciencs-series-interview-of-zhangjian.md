@@ -14,11 +14,12 @@ tags:
   - 数据科学家
 slug: data-sciencs-series-interview-of-zhangjian
 forum_id: 418966
+meta_extra: "受访人：张健"
 ---
 
 ![zhangjian_photo](https://uploads.cosx.org/2013/08/zhangjian_photo.jpg)
 
-【COS编辑部按】：受访人：张健，微软公司担任data scientist。
+张健，微软公司担任data scientist。
 
 写在前面的话：前面小编采访了[微软的数据科学家谢梁](/2013/08/interview_of_xie_liang/)，当时同小编一同吃酒的还有微软的另一位数据科学家张健，巧在张健兄乃小编的师兄，毕业于Ames村办大学（又名爱荷华州立大学），当年我前脚到村，他后脚离村，所以之前也不认识。敝村可能名气不大，张健兄在统计界可能也不会有太多人知晓，但俗话说（好吧，我承认我瞎编的）“村长亦干部，凡夫即圣人”，小编很好奇一个物理博士在统计行当里捣鼓什么，于是发去这次采访，希望对外专业的同行们有所启示。 <!--more-->
 

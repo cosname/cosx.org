@@ -6,6 +6,7 @@ categories:
   - 统计应用
 slug: discussion-about-ratio-metric
 forum_id: 419174
+meta_extra: "审稿：施涛；编辑：王健桥"
 ---
 
 > **作者简介**：陈丽云，在eBay从事 Experimentation Analytics Research。网络上素来自黑为“落园园主”。
@@ -114,7 +115,3 @@ t 检验的一个假设就是数据分布为独立同分布（i.i.d）。我们�
 版权声明：本文参考作者首发于 [eBay Techblog](http://www.ebaytechblog.com) 的 Significance Test for Ratio Metrics in Experiments 一文，并在翻译的过程中进行了适当内容扩展以易于阅读。英文版权属于eBay Techblog所有，中文版权归译者。
 
 在撰写本文的过程中，作者曾收到很多好友的审稿及修改意见，不胜感激，在此不再一一致谢。
-
-审稿：施涛
-
-编辑：王健桥

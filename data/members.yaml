@@ -23,11 +23,17 @@ list:
   - name: 陈丽云
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 在eBay从事 Experimentation Analytics Research。网络上素来自黑为“落园园主”。
+  - name: 陈新宇
+    image: https://raw.githubusercontent.com/xinyulab/xinyulab.github.io/master/img/avatar-cxy.jpg
+    intro: 华东师范大学应用统计硕士，研究方向为Statistical Learning & Deep Learning，做过美编，懂点前端，会修电脑的半吊子程序员。
   - name: 邓金涛
     image: https://cloud.githubusercontent.com/assets/7221728/25788559/9a1f0282-33dc-11e7-9f63-10a7ac42c4f9.jpg
     intro: 男，中国人民大学2014级统计学院学渣一枚，出于莫名的原因大家都叫我“小王子”。 兴趣爱好还算广泛，篮球打得还过得去，钢琴弹得也还马虎。当初由于担任宣传部部长等机缘巧合进入了统计之都大家庭。不过自从本人大三在宣传部卸任后，业务技术早已被抛到九霄云外，因而硬着头皮怒怼出的东西常被云伯，秋思等人吐槽，实在有愧于江东父老。
   - name: 邓一硕
     intro: 毕业于中央财经大学，感兴趣领域是数据挖掘技术（R语言）在金融投资分析和计量经济学中的应用。博客：<http://yishuo.org>；微博：<http://weibo.com/dengyishuo>。
+  - name: 杜亚磊
+    image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
+    intro: 掉入R坑有多年，如今回首已惘然；也曾痴心于Python，偶尔兼职写前端。现任51talk算法工程师，探索教育行业里的数据价值。
   - name: 范超
     image: https://cloud.githubusercontent.com/assets/7221728/25791993/7581204e-33f6-11e7-9095-e7a6f7dc0e6c.jpg
     intro: 江湖代号小妹，混迹于人大统计学院，崇尚数据分析的快乐， 希望和志同道合的童鞋一起学习成长～
@@ -73,6 +79,9 @@ list:
     intro: 女，杜邦先锋总部市场部统计师，毕业于 Iowa State University 统计系，生年不详卒年尚无法预测。
   - name: 刘辰昂
     intro: "浙大准大四本科，统计之都主站编辑。weibo：[求证1加1](http://weibo.com/2011764505/profile)；blog: <http://chenangliu.info/cn/>；email: liuchenang@gmail.com"
+  - name: 刘霁
+    image: https://user-images.githubusercontent.com/16065479/34287096-d4ffb8a4-e699-11e7-9171-d940f5388072.png
+    intro: 罗切斯特大学计算机科学系、电子与计算机工程系助理教授。刘霁教授毕业于中国科学技术大学，并于亚利桑那州立大学与威斯康星麦迪逊分校取得了硕士与博士学位。他的研究兴趣广泛，包括机器学习、优化及其在计算机视觉、数据挖掘等领域的应用。刘霁教授于罗切斯特大学建立了机器学习和优化研究组。他在2010年SIGKDD大会上获得最佳论文奖，已在包括JMLR，SIMOPT等顶级期刊和会议上发表过多篇论文。
   - name: 刘三震
     image: https://avatars2.githubusercontent.com/u/5862321?v=4&s=460
     intro: 美国Iowa State University遗传学博士，国内毕业于厦门大学生物系。现在美国Kansas State University植物病理系担任助理教授（实验室主页：<http://plantgenomics.ksu.edu/>），从事生物信息学、生物技术，遗传学和基因组学研究。主要研究手段是利用大量基因组数据加深理解生物学问题。因项目需要，开始接触大数据和统计分析，乐于编程和从数据中寻找故事。
@@ -141,6 +150,12 @@ list:
   - name: 杨灿
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 杨灿于2011年在香港科技大学电子计算机工程系获得博士学位，2011-2012为耶鲁大学生物统计系博士后，现为耶鲁大学副研究员。
+  - name: 杨洵默
+    image: https://avatars3.githubusercontent.com/u/7607410
+    intro: 化学博士，Google码农，正在缓慢地变成一个数据科学家……博客 <https://tcya.xyz>
+  - name: 于淼
+    image: https://yufree.cn/images/MYu.jpg
+    intro: 中科院环境科学博士，目前海外漂泊，业余跨学科理论搬运工 博客 <https://yufree.cn>
   - name: 翟晋
     image: https://cloud.githubusercontent.com/assets/7221728/25788531/67c2c7d8-33dc-11e7-8bc5-894640e04688.jpg
     intro: 硕士生，目前就读于中央财经大学应用统计专业，尤爱美食和旅行。10%的理科生，编程很鶸，轻度R语言使用者。90%的文科生，爱读书，爱写作，爱硬笔书法，爱PPT的设计与制作。一大波技能正等着我去学习……
@@ -173,3 +188,6 @@ list:
   - name: 朱俊辉
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: Harry Zhu, R语言爱好者, FinanceR 专栏作者
+  - name: 宗福季
+    image: https://user-images.githubusercontent.com/16065479/30360079-1c9a8c50-9804-11e7-9244-fbb875a3c0cd.jpg
+    intro: 宗福季教授，现任香港科技大学工业工程与物流管理系教授，前系主任，及质量实验室主任，国际质量科学院（IAQ）院士，美国统计学会（ASA）会士，美国工业工程师学会（IIE）会士，美国质量学会（ASQ）会士，国际统计协会（ISI）当选会员，香港工程学会（HKIE）会士。任职科大后，宗福季教授积极参与有关质量改善和管理的教育及研究工作，也为不同行业提供咨询及培训服务，包括制造、银行、电信及医疗等行业。宗教授目前是美国质量学会旗舰期刊Journal of Quality Technology（JQT）的主编，工业工程学会期刊IISE Transactions及Technometrics的副编辑。宗教授于国立台湾大学取得机械工程学士学位，其后于美国密歇根大学获工业工程硕士及博士学位。

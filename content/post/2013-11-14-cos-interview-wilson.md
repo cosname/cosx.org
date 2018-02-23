@@ -11,9 +11,8 @@ tags:
   - 数据科学
 slug: cos-interview-wilson
 forum_id: 418985
+meta_extra: "受访人：逄伟 (读音：páng wěi，英文名：Wilson)"
 ---
-
-【COS编辑部按】受访人：逄伟 (读音：páng wěi，英文名：Wilson),
 
 简介：逄伟，Director of Engineering, behavioral insights and science, eBay Inc.采访人：陈丽云（Liyun）, Marketing Analyst, eBay Inc.
 

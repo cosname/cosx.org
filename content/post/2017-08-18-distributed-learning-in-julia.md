@@ -9,7 +9,7 @@ tags:
   - Julia
   - 分布式计算
 slug: distributed-learning-in-julia
-meta_extra: 编辑：王健桥 审稿：谢益辉，邱怡轩，潘岚锋
+meta_extra: 审稿：谢益辉，邱怡轩，潘岚锋；编辑：王健桥
 forum_id: 419330
 ---
 

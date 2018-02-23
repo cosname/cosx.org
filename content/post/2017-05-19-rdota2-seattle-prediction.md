@@ -7,6 +7,7 @@ categories:
   - 机器学习
 slug: rdota2-seattle-prediction
 forum_id: 419210
+meta_extra: "审稿：何通、郎大为、朱雪宁；编辑：雷博文"
 ---
 
 

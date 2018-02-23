@@ -11,10 +11,8 @@ tags:
   - 数据科学
 slug: interview-of-yidanhui
 forum_id: 418946
+meta_extra: "受访人：易丹辉教授"
 ---
-
-【COS编辑部按】受访人：易丹辉教授
-
 
 简介：易丹辉教授是中国人民大学统计学院的教授，博士生导师，主要从事统计方法在经济、金融、保险、医疗、管理等领域应用的研究。具体介绍参见[学院网站](http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/129.html) 。本文根据易老师的邮件回复和采访录音整理而成，如有不当之处，责任都由编辑承担。
 

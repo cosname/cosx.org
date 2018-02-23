@@ -10,11 +10,10 @@ tags:
   - 数据科学
 slug: data-sciences-interview_of_huangshuai
 forum_id: 418963
+meta_extra: "受访人：黄帅"
 ---
 
 ![ENG - Industrial & Management Systems Engineering - Shuai Huang](https://uploads.cosx.org/2013/08/ENG-Industrial-Management-Systems-Engineering-Shuai-Huang.jpg)
-
-【COS编辑部按】受访人：黄帅
 
 简介：黄帅/1988出生/2007科大本科理学学士/2012ASU工业工程系博士/2012任教于USF工业工程与管理系
 

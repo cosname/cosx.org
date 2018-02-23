@@ -16,8 +16,6 @@ slug: rhadoop3-rhadoop-mapreduce
 forum_id: 418929
 ---
 
-# 
-
 Author：张丹(Conan)
   
 Date: 2013-04-07

@@ -13,12 +13,8 @@ tags:
   - 数据科学家
 slug: interview-of-binyu
 forum_id: 418981
+meta_extra: "受访者：郁彬；采访者：施涛"
 ---
-
-
-**COS编辑部按**：受访者：郁彬             采访者：施涛
-
-
 
 [原文](http://www.icsa.org/bulletin/issues/ICSABulletin13Jul.pdf)刊登于ICSA。本文由[COS翻译组](https://github.com/cosname/translation)策划翻译。译者是密西根大学的[冷静](https://github.com/angelleng)、新加坡国立大学的[尤晓斌](https://github.com/AlexXXXX1988)和中国人民大学的[霍志骥](https://github.com/huozhiji)，全文最终由采访者施涛和被访者郁彬审核、修改、定稿，个别地方对英文原文作了补充。本翻译征得了ICSA、郁彬和施涛的同意和支持，在此表示诚挚的谢意。此外，陈丽云、高涛、肖楠、牟官迅、邓一硕、姜晓东、邱怡轩、魏太云对译文也提出了一些修正建议，在此一并表示感谢。
 
@@ -174,11 +170,11 @@ Leo Breiman对我的影响是引领我走向机器学习的重要因素。他是
 
 施： 当你从贝尔实验室回来的时候，你已经涉及了不少应用领域。那时候可能你已经能对这些项目应付自如了吧？
 
-郁： 没错。我觉得贝尔实验室给我自由发展的空间，但不得不说在伯克利的经历也相当重要，因为伯克利迫使我自己找到自我。当时我是在系主任John Rice鼓励下返回伯克利的。我在贝尔实验室时Michael Jordan加入了伯克利统计系和计算机系。他也写信鼓励我回来。回来之后，我仍然继续坚持我在贝尔实验室的工作内容——跨学科研究和统计机器学习。 ![Dave Graham-Squire, Gang Liang, Peng Zhao, Bin Yu, Tao Shi.](http://www.stat.berkeley.edu/~yugroup/fig/yugroup_2003.jpg)
+郁： 没错。我觉得贝尔实验室给我自由发展的空间，但不得不说在伯克利的经历也相当重要，因为伯克利迫使我自己找到自我。当时我是在系主任John Rice鼓励下返回伯克利的。我在贝尔实验室时Michael Jordan加入了伯克利统计系和计算机系。他也写信鼓励我回来。回来之后，我仍然继续坚持我在贝尔实验室的工作内容——跨学科研究和统计机器学习。 ![Dave Graham-Squire, Gang Liang, Peng Zhao, Bin Yu, Tao Shi.](https://github.com/cosname/translation/blob/master/Yubin-interview/fig/fig2.jpg?raw=true)
 
 图2 郁彬及学生2003：Dave Graham-Square, Gang Liang, Peng Zhao, Bin Yu, Tao Shi。
 
-![Back: David Purdy, Jing Lei, Ethan Anderes, Guilherme Rocha.  Front: Kei Kobayashi, Nicolai Meinshausen, Bin Yu, Vincent Vu, Nate Coehlo, Xing Wang.](http://www.stat.berkeley.edu/~yugroup/fig/yugroup_2006.jpg)
+![Back: David Purdy, Jing Lei, Ethan Anderes, Guilherme Rocha.  Front: Kei Kobayashi, Nicolai Meinshausen, Bin Yu, Vincent Vu, Nate Coehlo, Xing Wang.](https://github.com/cosname/translation/blob/master/Yubin-interview/fig/fig3.png?raw=true)
 
 图3 郁彬及学生 2006。 后排：David Purdy, Jing Lei, Ethan Anderes, Guiherme Rocha；前排：Kei Kobayashi, Nicolai Meinshausen, Bin Yu, Vincent Vu, Nate Coehlo, Xing Wang。
 
@@ -200,7 +196,7 @@ Leo Breiman对我的影响是引领我走向机器学习的重要因素。他是
 
 近期我仍然和我的学生、我的同事一同研究稀疏模型和谱聚类，我对这些课题相当感兴趣。我们大家总能形成一个整体，一同解决各种研究中碰到得问题。我常鼓励我的学生尽力研究一些理论。显然我们遇到的数据问题都会同时涉及这两方面的内容，还有计算。
 
-![alt](http://www.stat.berkeley.edu/~yugroup/fig/yugroup_2009.png "Back: Yueqing Wang, Hongwei Li, Harry Kim, Bin Yu, Chinghway Lim, Kyle Jia.<br /><br /><br /> Front: Garvesh Raskutti, Karl Rohe, Yuval Benjamini.")
+![alt](https://github.com/cosname/translation/blob/master/Yubin-interview/fig/fig4.png?raw=true "Back: Yueqing Wang, Hongwei Li, Harry Kim, Bin Yu, Chinghway Lim, Kyle Jia.<br /><br /><br /> Front: Garvesh Raskutti, Karl Rohe, Yuval Benjamini.")
 
 图4 郁彬2009年的团队。后排：Yuqing Wang, Hongwei Li, Harry Kim, Bin Yu, Chinghway Lim, Kyle Jia；前排：Garvesh Raskutti, Karl Rohe, Yuval Benjamini。
 
@@ -208,7 +204,7 @@ Leo Breiman对我的影响是引领我走向机器学习的重要因素。他是
 
 郁： 也不能完全这么说吧。其他学科也一样的，不过也许对它们来说应用结合理论的确比较难些。我总觉得我不属于某个特定的领域，因为我没有在某一个特定的学术领域里呆太长时间；有时候我也会觉得我分身乏术。但最终我意识到，我们手头上要解决的问题决定了我们的研究是“T”型——既要有深度又要有广度。
 
-![alt](http://www.stat.berkeley.edu/~yugroup/fig/yugroup_2012.png "Back: Hanzhong Liu, Antony Joseph, Thibault Vatter, Geoffrey Schiebinger, Adam Bloniarz, Ling Hong, Trine Abrahamsen, Taesup Moon, Xiangyu Chang, Siqi Wu, Hau-tieng Wu. Front: Toshiyasu Matsushima, Xiaoling Lu, Yuval Benjamini, Bin Yu, Hongwei Li, Guoqiang Cai.")
+![alt](https://github.com/cosname/translation/blob/master/Yubin-interview/fig/fig5.png?raw=true "Back: Hanzhong Liu, Antony Joseph, Thibault Vatter, Geoffrey Schiebinger, Adam Bloniarz, Ling Hong, Trine Abrahamsen, Taesup Moon, Xiangyu Chang, Siqi Wu, Hau-tieng Wu. Front: Toshiyasu Matsushima, Xiaoling Lu, Yuval Benjamini, Bin Yu, Hongwei Li, Guoqiang Cai.")
 
 图5 郁彬2012年的团队。后排：Hanzhong Liu, Antony Joseph,Thibault Vatter,Geoffrey Schiebinger, Adam Blonaiarz , Ling Hong, Trine Abrahamsen, Taesup Moon, Xiangyu Chang, SiQi Wu, Hau-tieng Wu；前排：Toshiyasu Matsushima, Xiaoling Lu, Yuval Benjamini , Bin Yu, Hongwei LI, Guoqiang Cai。
 
