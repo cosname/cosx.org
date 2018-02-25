@@ -4,8 +4,8 @@ author: 钟浩光
 date: '2018-01-17'
 slug: build-blog-with-blogdown-hugo-netlify-github
 categories:
-  - R
-  - blogdown
+  - 推荐文章
+  - R语言
 tags:
   - R
   - blogdown
