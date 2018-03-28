@@ -34,7 +34,7 @@ forum_id: 418872
 
 ## 2.1 James-Stein Estimator
 
-先来一个简约不简单的例子。现已观察到 `$N$` 个 `$z$` 值，即 `$[z_1,z_2,\dots,z_N]$`，还知道 `$z_i$` 独立地来自以 `$\mu_i$` 为均值，方差为 1 的正态分布，即 `$z_i|\mu_i \sim \mathcal{N}(\mu_i,1)$, $i=1,2,\dots,N$`. 问题是：如何从观察到的 `$\mathbf{z} =[z_1,z_2,\dots,z_N]$` 估计`$\boldsymbol{\mu}=[\mu_1,\mu_2,\dots,\mu_N]$`？地球人都知道有一种方法去估计`$\boldsymbol{\mu}=[\mu_1,\mu_2,\dots,\mu_N]$`，那就是 `$\hat{\boldsymbol{\mu}}=\mathbf{z}$`，即 `$\hat{\mu}_i = z_i,i =1, 2,\dots,N$`。其实，这就是最大似然估计，记为 `$\hat{\boldsymbol{\mu}}_{ML}$`。现在的问题是：有没有更好的办法呢？答案是肯定的！那就是传说中的 James-Stein Estimator，
+先来一个简约不简单的例子。现已观察到 `$N$` 个 `$z$` 值，即 `$[z_1,z_2,\dots,z_N]$`，还知道 `$z_i$` 独立地来自以 `$\mu_i$` 为均值，方差为 1 的正态分布，即 `$z_i|\mu_i \sim \mathcal{N}(\mu_i,1)$`, `$i=1,2,\dots,N$`. 问题是：如何从观察到的 `$\mathbf{z} =[z_1,z_2,\dots,z_N]$` 估计`$\boldsymbol{\mu}=[\mu_1,\mu_2,\dots,\mu_N]$`？地球人都知道有一种方法去估计`$\boldsymbol{\mu}=[\mu_1,\mu_2,\dots,\mu_N]$`，那就是 `$\hat{\boldsymbol{\mu}}=\mathbf{z}$`，即 `$\hat{\mu}_i = z_i,i =1, 2,\dots,N$`。其实，这就是最大似然估计，记为 `$\hat{\boldsymbol{\mu}}_{ML}$`。现在的问题是：有没有更好的办法呢？答案是肯定的！那就是传说中的 James-Stein Estimator，
   
 `$$\begin{equation} 
 \hat{\boldsymbol{\mu}}_{JS}=(1-\frac{N-2}{{\Vert \mathbf{z} \Vert}^2})\mathbf{z}. 
