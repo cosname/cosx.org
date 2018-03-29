@@ -1,5 +1,5 @@
 ---
-title: 深入对比数据科学工具箱: SparkR vs Sparklyr
+title: '深入对比数据科学工具箱: SparkR vs Sparklyr'
 date: '2018-03-29'
 author: Harry Zhu
 slug: sparkr-vs-sparklyr
