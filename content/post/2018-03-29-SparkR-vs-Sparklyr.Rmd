@@ -1,10 +1,19 @@
+---
+title: "深入对比数据科学工具箱: SparkR vs Sparklyr"
+date: YYYY-mm-dd
+author: "作者"
+categories: ["分类1", "分类2"]
+tags: ["标签1", "标签2"]
+slug: article-base-name-in-english
+---
+
 ![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAjKAAAAJDc4NWRjNGE5LTA0ZTktNGE3Mi1iZjBiLWE0YzIyZmVhOGJkZg.png)
 
-## 背景介绍
+# 背景介绍
 
 SparkR 和 Sparklyr 是两个基于Spark的R语言接口，通过简单的语法深度集成到R语言生态中。SparkR 由 Spark 社区维护，通过源码级别更新SparkR的最新功能，最初从2016年夏天的1.5版本开始支持，从使用上非常像`Spark Native`。Sparklyr 由 RStudio 社区维护，通过深度集成 RStudio 的方式，提供更易于扩展和使用的方法，更强调统计特性与机器学习，实现本地与分布式代码的一致性，通常会比SparkR延迟1-2个版本，从使用上看接近于`dplyr`。
 
-## 整体对比
+# 整体对比
 
 特性|	SparkR|	sparklyr
 ---|---|---
@@ -21,21 +30,21 @@ SQL|+ +|+ + +
 
 
 
-## 深度对比
+# 深度对比
 
-### 文档
+## 文档
 
 两者文档相对来说 Sparklyr 更加丰富一些，其中包含了业界/学界大量案例，但以中文版较少。SparkR 由第三方提供了中文版文档。
 
 SparkR 文档：http://spark.apachecn.org/docs/cn/2.3.0/structured-streaming-programming-guide.html
 Sparklyr 文档：https://spark.rstudio.com
 
-### 安装便利性
+## 安装便利性
 
 SparkR: 从官网下载,支持最新2.3版本。
 Sparklyr: `sparklyr::install_spark()`，不依赖于Spark版本，spark 2.X 完美兼容1.X。截止2018年3月18日，目前暂不支持2.3版本。
 
-### Spark初始化
+## Spark初始化
 
 SparkR:
 ```
@@ -53,7 +62,7 @@ sc <- sparklyr::spark_connect(master = "yarn-client", spark_home = "/data/Financ
 
 ```
 
-### 数据IO
+## 数据IO
 
 以写Parquet文件为例
 
@@ -70,7 +79,7 @@ df <- sparklyr::copy_to(sc,faithful,"df")
 sparklyr::spark_write_parquet(df,path="/user/FinanceR",mode="overwrite",partition_by = "dt")
 ```
 
-### 数据清洗
+## 数据清洗
 
 以统计计数为例：
 
@@ -115,7 +124,7 @@ pipeline %>% sdf_persist() # 大数据集 缓存在集群上
 pipeline %>% head() %>% collect() # 小数据 加载到本地
 ```
 
-### SQL
+## SQL
 
 SparkR
 ```
@@ -135,7 +144,7 @@ df %>% dbplyr::sql_render() # 将 pipeline 自动翻译为 SQL
 # SELECT * FROM financer_tbl WHERE dt = "20180318"
 ```
 
-### 分发R代码
+## 分发R代码
 
 SparkR
 ```
@@ -156,7 +165,7 @@ sparklyr::spark_apply(x = df,packages=T,name = c("key","value"),func =func,group
 SparkR 手动通过 `spark.addFile` 加载本地依赖，Sparklyr 自动将本地依赖分发到集群上
 
 
-### 流式计算
+## 流式计算
 
 SparkR
 
@@ -189,7 +198,7 @@ SparkR::sql() %>%
 
 Sparklyr 暂时不支持流式计算，功能开发中
 
-### 图计算
+## 图计算
 
 SparkR 不直接支持 Graph Mining，具体实现通过GraphX来实现
 Sparklyr 通过拓展程序，`graphframes` 实现图挖掘，比如Pagerank、LPA等
@@ -212,12 +221,12 @@ gf_graphframe(vertices_tbl, edges_tbl) %>%
   gf_pagerank(reset_prob = 0.15, max_iter = 10L, source_id = "1")
 ```
 
-### 深度学习
+## 深度学习
 
 SparkR 不直接支持 Deep Learning
 Sparklyr 通过拓展程序 [Rsparkling](http://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-science/deep-learning.html) 实现深度学习，比如 Anto-Encoder
 
-## 总结
+# 总结
 
 目前，SparkR 仅在实时计算上领先于 Sparklyr，在图计算、机器学习、深度学习等领域已经被拉开差距，在大多数场景下，Sparklyr将是一个更好的选择，在不久的将来，Sparklyr也将集成Streaming模块，届时将全面覆盖SparkR功能。
 
