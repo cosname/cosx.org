@@ -1,10 +1,10 @@
 ---
 title: "深入对比数据科学工具箱: SparkR vs Sparklyr"
-date: YYYY-mm-dd
-author: "作者"
+date: 2018-03-29
+author: Harry Zhu
 categories: ["分类1", "分类2"]
 tags: ["标签1", "标签2"]
-slug: article-base-name-in-english
+slug: sparkr-vs-sparklyr
 ---
 
 ![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAjKAAAAJDc4NWRjNGE5LTA0ZTktNGE3Mi1iZjBiLWE0YzIyZmVhOGJkZg.png)
