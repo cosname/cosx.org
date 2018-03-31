@@ -28,8 +28,6 @@ SQL|+ +|+ + +
 图计算| -|+ +
 分发R代码|+ + +	|+ + +
 
-
-
 # 深度对比
 
 ## 文档
@@ -70,7 +68,6 @@ sc <- sparklyr::spark_connect(master = "yarn-client",
                              spark_home = "/data/FinanceR/Spark",
                              version = "2.2.0",
                              config = sparklyr::spark_config())
-
 ```
 
 ## 数据IO
@@ -200,6 +197,9 @@ SparkR 手动通过 `spark.addFile` 加载本地依赖，Sparklyr 自动将本�
 
 ## 流式计算
 
+>什么是流式计算?
+>流式计算是介于实时与离线计算之间的一种计算方式，以亚秒级准实时的方式小批量计算数据，广泛应用在互联网广告、推荐等场景。
+
 SparkR
 
 ```{r}
@@ -234,7 +234,7 @@ Sparklyr 暂时不支持流式计算，功能开发中
 
 ## 图计算
 
-SparkR 不直接支持 Graph Mining，具体实现通过GraphX来实现
+SparkR 不直接支持 Graph Minining。
 Sparklyr 通过拓展程序，`graphframes` 实现图挖掘，比如Pagerank、LPA等
 
 ```{r}
@@ -257,8 +257,8 @@ gf_graphframe(vertices_tbl, edges_tbl) %>%
 
 ## 深度学习
 
-SparkR 不直接支持 Deep Learning
-Sparklyr 通过拓展程序 [Rsparkling](http://docs.h2o.ai/h2o/latest-stable/h2o-docs/data-science/deep-learning.html) 实现深度学习，比如 Anto-Encoder
+SparkR 不直接支持 Deep Learnig。
+Sparklyr 通过拓展程序 [Rsparkling](http://spark.rstudio.com/guides/h2o/#deep-learning) 实现深度学习，比如 Anto-Encoder
 
 # 总结
 
