@@ -1,11 +1,13 @@
 ---
 title: '深入对比数据科学工具箱: SparkR vs Sparklyr'
 date: '2018-03-29'
-author: Harry Zhu
+author: 朱俊辉 
 slug: sparkr-vs-sparklyr
+meta_extra: ""
+forum_id: 
 ---
 
-![](https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAjKAAAAJDc4NWRjNGE5LTA0ZTktNGE3Mi1iZjBiLWE0YzIyZmVhOGJkZg.png)
+![](https://sfault-image.b0.upaiyun.com/340/584/3405848728-5ab3c7fb13cac_articlex)
 
 # 背景介绍
 
@@ -39,15 +41,23 @@ Sparklyr 文档：https://spark.rstudio.com
 
 ## 安装便利性
 
-SparkR: 从官网下载,支持最新2.3版本。
-Sparklyr: `sparklyr::install_spark()`，不依赖于Spark版本，spark 2.X 完美兼容1.X。截止2018年3月18日，目前暂不支持2.3版本。
+SparkR: 从官网下载。
+Sparklyr: `sparklyr::spark_install(version = "2.3.0", hadoop_version = "2.7")`，不依赖于Spark版本，spark 2.X 完美兼容1.X。
+
+Spark环境配置需要注意的问题：
+
+1. 下载和Hadoop对应版本号的发行版，具体可以通过  `sparklyr::spark_available_versions()` 查询可用的spark版本
+2. JAVA_HOME/SPARK_HOME/HADOOP_HOME 是必须要指定的环境变量，建议使用JDK8/spark2.x/hadoop2.7
+3. yarn-client/yarn-cluster 模式需要设置环境变量 `Sys.setenv("HADOOP_CONF_DIR"="/etc/hadoop/conf")`
+4. 连接 Hive 需要提供 Hive 链接配置, 在spark-connection 初始化时指定对应 `hive-site.xml` 文件
+
+由于不同发行版本的Hadoop/Yarn集群略有差异，环境Setup问题可以留言讨论。
 
 ## Spark初始化
 
 SparkR:
-```
+```{r}
 Sys.setenv("SPARKR_SUBMIT_ARGS"="--master yarn-client sparkr-shell")
-
 
 sc <- SparkR::sparkR.session(enableHiveSupport = T,
                              sparkHome = "/data/FinanceR/Spark")
@@ -55,25 +65,34 @@ sc <- SparkR::sparkR.session(enableHiveSupport = T,
 
 Sparklyr:
 
-```
-sc <- sparklyr::spark_connect(master = "yarn-client", spark_home = "/data/FinanceR/Spark", version = "2.2.0", config = sparklyr::spark_config())
+```{r}
+sc <- sparklyr::spark_connect(master = "yarn-client",
+                             spark_home = "/data/FinanceR/Spark",
+                             version = "2.2.0",
+                             config = sparklyr::spark_config())
 
 ```
 
 ## 数据IO
 
-以写Parquet文件为例
+以写Parquet文件为例,同理你可以用 `SparkR::write.*()`/`sparklyr::spark_write_*()` 等写入其他格式文件到HDFS上,比如 csv/text
+
+> 什么是 Parquet 文件？
+> Parquet 是一种高性能列式存储文件格式，比CSV文件强在内建索引，可以快速查询数据，目前普遍应用在模型训练过程。
 
 SparkR:
-```
+
+```{r}
 df <- SparkR::as.DataFrame(faithful) 
 
 SparkR::write.parquet(df,path= "/user/FinanceR",mode="overwrite",partition_by = "dt")
 ```
 
 Sparklyr:
-```
+
+```{r}
 df <- sparklyr::copy_to(sc,faithful,"df")
+
 sparklyr::spark_write_parquet(df,path="/user/FinanceR",mode="overwrite",partition_by = "dt")
 ```
 
@@ -82,41 +101,48 @@ sparklyr::spark_write_parquet(df,path="/user/FinanceR",mode="overwrite",partitio
 以统计计数为例：
 
 SparkR
-```
+
+```{r}
 library(SparkR)
 library(magrittr)
 
-df %>%
-mutate(a = df$b + 2) %>%
-filter("a > 2")%>%
-group_by("key")%>%
-count()%>%
-withColumn("count","cnt")%>%
-orderBy("cnt",decrease = F)%>%
-dropna() ->
-pipeline
+remote_df = SparkR::sql("select * from db.financer_tbl limit 10")
+
+remote_df %>%
+    mutate(a = df$b + 2) %>%
+    filter("a > 2")%>%
+    group_by("key")%>%
+    count()%>%
+    withColumn("count","cnt")%>%
+    orderBy("cnt",decrease = F)%>%
+    dropna() ->
+    pipeline
 
 pipeline %>% persist("MEM_AND_DISK") # 大数据集 缓存在集群上
 pipeline %>% head() # 小数据 加载到本地
 ```
 
 Sparklyr
-```
+
+```{r}
 library(sparklyr)
 library(dplyr)
 
 # 在 mutate 中支持 Hive UDF
 
-df %>%
-mutate(a = b+2) %>%
-filter(a > 2)%>%
-group_by(key)%>%
-summarize(count = n())%>%
-select(cnt = count)%>% 
-order_by(cnt)%>%
-arrange(desc(cnt))%>%
-na.omit() ->
-pipeline
+remote_df = dplyr::tbl(sc,from = "db.financer_tbl") # 
+# 或者 remote_df = dplyr::tbl(sc,from = dplyr::sql("select * from db.financer_tbl limit 10")) #
+
+remote_df %>%
+    mutate(a = b+2) %>%
+    filter(a > 2)%>%
+    group_by(key)%>%
+    summarize(count = n())%>%
+    select(cnt = count)%>% 
+    order_by(cnt)%>%
+    arrange(desc(cnt))%>%
+    na.omit() ->
+    pipeline
 
 pipeline %>% sdf_persist() # 大数据集 缓存在集群上
 pipeline %>% head() %>% collect() # 小数据 加载到本地
@@ -125,14 +151,16 @@ pipeline %>% head() %>% collect() # 小数据 加载到本地
 ## SQL
 
 SparkR
-```
+
+```{r}
 df <- SparkR::sql('SELECT * FROM financer_tbl WHERE dt = "20180318"')
 ```
 
 Sparklyr
 
-所有操作几乎和MySQL完全一样，学习成本≈0
-```
+由于Sparklyr通过dplyr接口操作，所以，所有数据操作几乎和MySQL完全一样，学习成本≈0。
+
+```{r}
 df <- sc %>% 
       dplyr::tbl(dplyr::sql('SELECT * FROM financer_tbl WHERE dt = "20180318"'))
 
@@ -144,8 +172,14 @@ df %>% dbplyr::sql_render() # 将 pipeline 自动翻译为 SQL
 
 ## 分发R代码
 
+分发机制：
+
+系统会将本地依赖文件打包上传到HDFS路径上，通过 Spark 动态分发到执行任务的机器上解压缩。
+执行任务的机器本地独立的线程、内存中执行代码，最后汇总到主要节点机器上实现R代码的分发。
+
 SparkR
-```
+
+```{r}
 #SparkR::dapply/SparkR::gapply/SparkR::lapply
 
 func <- function(x){x + runif(1) } # 原生R代码
@@ -154,7 +188,8 @@ SparkR::gapplyCollect(x = df, func = func,group = "key")
 ```
 
 Sparklyr:
-```
+
+```{r}
 func <- function(x){x + runif(1) } # 原生 R代码
 
 sparklyr::spark_apply(x = df,packages=T,name = c("key","value"),func =func,group = "key")
@@ -167,11 +202,12 @@ SparkR 手动通过 `spark.addFile` 加载本地依赖，Sparklyr 自动将本�
 
 SparkR
 
-```
-
-stream <- SparkR::read.stream(source = "kafka",
-                 "kafka.bootstrap.servers" = "a1.financer.com:9092,a2.financer.com:9092",
-                                           "subscribe" =  "binlog.financer.financer")
+```{r}
+stream <- SparkR::read.stream(
+            source = "kafka",
+            "kafka.bootstrap.servers" = "a1.financer.com:9092,
+                                         a2.financer.com:9092",
+            "subscribe" =  "binlog.financer.financer")
 
 stream %>%
   SparkR::selectExpr( "CAST(key AS STRING)", "CAST(value AS STRING)") %>%
@@ -201,7 +237,7 @@ Sparklyr 暂时不支持流式计算，功能开发中
 SparkR 不直接支持 Graph Mining，具体实现通过GraphX来实现
 Sparklyr 通过拓展程序，`graphframes` 实现图挖掘，比如Pagerank、LPA等
 
-```
+```{r}
 library(graphframes)
 # copy highschool dataset to spark
 highschool_tbl <- copy_to(sc, ggraph::highschool, "highschool")
