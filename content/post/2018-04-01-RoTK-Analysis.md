@@ -577,7 +577,7 @@ wuhu_vs_wuzi("武力") ## 下图由于众武将武力接近，所以名字全挤
 ```{r}
 wuhu_vs_wuzi("智力")
 ```
-
+![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-30-1.png)
 智力从图来看五子除了张辽总体趋势都是在上升的，并且平均来看高于五虎将，主要是张飞和马超拖了后腿，而黄忠马马虎虎，智力维持在60上下。
 
 感觉相对于五虎大将，五子良将更多的是属于帅才，武力不一定是最顶尖的，但带兵打仗，以弱胜强，摧城拔寨的本事要强于五虎大将。
