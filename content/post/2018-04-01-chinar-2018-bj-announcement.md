@@ -9,7 +9,7 @@ slug: chinar-2018-bj-announcement
 forum_id: 
 ---
 
-![r-pku](https://mmbiz.qpic.cn/mmbiz_png/dMFkbmlFTgdgQZibLDevPKhicrhic6xumPUBpDMrmIwYToN92ZyDjcUu4upBsN5zzuKeoKVoTEeSmEkcoKG0wBYQA/640?wx_fmt=png)
+![r-pku](https://user-images.githubusercontent.com/35906792/38172335-225c4bac-35dd-11e8-97cc-d787a0605e7e.jpg)
 
 2018年，第十一届中国R会议(北京)将于5月25-27日在北京大学举办。今年也是北京大学建校120周年，在这样一个值得纪念的时刻，让我们相约燕园，相约北大百年讲堂，共赴这场数据科学盛会！本届会议涵盖了多个学科领域，我们真诚地期待您的到来，一同感受数据科学为这个时代带来的惊喜与挑战。
 
@@ -19,7 +19,7 @@ forum_id:
 
 # 二、会议地点
 
-![pku](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgdgQZibLDevPKhicrhic6xumPU5ToB8Jz3X2zK7M9O3TnhrPJDHp4rNaGAZ6Cia5NPkaIKMic3iaLFX4UZA/640?wx_fmt=jpeg)
+![pku](https://user-images.githubusercontent.com/35906792/38172333-1ff87b56-35dd-11e8-9375-289cec037011.jpg)
 
 北京大学，25日主会场地点为北京大学百年纪念讲堂，26~27日分会场地点为北京大学光华管理学院1号楼。具体会场地址敬请关注中国R会议官方网站<www.china-r.org>。
 
@@ -48,46 +48,44 @@ forum_id:
 
 # 八、会议组织
 
-主办方：
+## 主办方
 
-![guanghua-logo](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgdgQZibLDevPKhicrhic6xumPUJOHriaHgPg6hvgbkpRtdtl2UM46ia9iaSlDicSDXp5ou0UkYeD64IyWAJw/640?wx_fmt=jpeg)
+### 北京大学光华管理学院
 
-![cos-logo](https://mmbiz.qpic.cn/mmbiz_png/dMFkbmlFTgdgQZibLDevPKhicrhic6xumPU5gZ4RFZibQMZxuE5fyTcmgdg9I8FtqAsI4bRnfqXJOicBXTQNb1tsm5A/640?wx_fmt=png)
-
-协办方：
-
-![clubear-logo](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgdgQZibLDevPKhicrhic6xumPUibIpfdpkTmEAU5Mvia2ZPHoiarQn38GfUOEHyKfjLDWIk8Gvwbibb94Q1w/640?wx_fmt=jpeg)
-
-![clubear-QR](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgdgQZibLDevPKhicrhic6xumPUbwrlGvyfdFg3BZhIxol9NPa6jonbAomrGKdTz2licKro76T6q8pv0FA/640?wx_fmt=jpeg)
-
-## 北京大学光华管理学院
+![guanghua-logo](https://user-images.githubusercontent.com/35906792/38172363-970fd806-35dd-11e8-8551-dead256dea5a.jpg)
 
 秉承北大百年风骨，以“创造管理知识，培养商界领袖，推动社会进步”为使命，作为北大工商管理教育的主体，北京大学光华管理学院是亚太地区最优秀的商学院之一。历经三十三年的发展，北大光华已形成完整的学科结构、一流的师资队伍、丰富的教学体系，吸引着有理想、有担当、有情怀、有责任感的有志之士砥砺前行，取得了令人瞩目的成绩，是中国商学教育的一面旗帜，并形成了植根于燕园独立精神与自由思想的“因思想，而光华”的独特精神气质。
 
-## 统计之都
+### 统计之都
 
-统计之都（Capital of Statistics，简称COS，网址 <http://cos.name/>），成立于2006年5月，是一家旨在推广与应用统计学知识的网站和社区，其口号是“中国统计学门户网站，免费统计学服务平台”。统计之都发源于中国人民大学统计学院，由谢益辉创建。现由世界各地的众多志愿者共同管理维护，理事会现任主席为冯凌秉先生。统计之都致力于搭建一个开放的平台，使得科研人员、数据分析人员和统计学爱好者能互相交流合作，一方面促进彼此专业知识技能的增长，另一方面为国内统计学和数据科学的发展贡献自己的力量。
+![cos-logo](https://user-images.githubusercontent.com/35906792/38172329-1cc826a2-35dd-11e8-868a-cd55a9d629c5.png)
 
-## 狗熊会
+统计之都（Capital of Statistics，简称COS，网址 <http://cosx.org/>），成立于2006年5月，是一家旨在推广与应用统计学知识的网站和社区，其口号是“中国统计学门户网站，免费统计学服务平台”。统计之都发源于中国人民大学统计学院，由谢益辉创建。现由世界各地的众多志愿者共同管理维护，理事会现任主席为冯凌秉先生。统计之都致力于搭建一个开放的平台，使得科研人员、数据分析人员和统计学爱好者能互相交流合作，一方面促进彼此专业知识技能的增长，另一方面为国内统计学和数据科学的发展贡献自己的力量。
+
+## 协办方
+
+### 狗熊会
+
+![clubear-logo](https://user-images.githubusercontent.com/35906792/38172302-9e5a99da-35dc-11e8-89a7-b8c2259238ed.jpg)
+
+![clubear-QR](https://user-images.githubusercontent.com/35906792/38172327-15fed6c2-35dd-11e8-902d-7085044447fa.jpg)
 
 狗熊会（微信公众号：CluBear），数据产业的高端智库，并以“聚数据英才、助产业振兴”为己任。通过精品案例，让更多的朋友享受数据分析的快乐，并助力其终身的职业幸福与成长。通过企业联合研究，陪伴中国的数据产业一起成长，共同见证他们的辉煌！
 
-# 九、赞助商介绍
+## 战略合作伙伴
 
-战略合作伙伴：
+### 派生集团
 
-![paisheng-logo](http://chinar.xueqingtv.com/img/logo_ptg.jpg)
-
-## 派生集团
+![paisheng-logo](https://user-images.githubusercontent.com/35906792/38172332-1e4860e6-35dd-11e8-8084-a4156f9633e9.jpg)
 
 派生集团于2011年在东莞成立，注册资金10亿元。聚焦实业、科技、金融三大战略投资方向，致力于成为一家以“大数据、人工智能、互联网科技”等技术力量驱动产融结合、提升产业运营效率的投资服务集团。
 自2013年起，集团旗下公司陆续获得三轮累计6.75亿元的融资，投资方包括九鼎投资、巨人投资等。2017年，集团再获新一轮18亿元投资，由民生资本领投，盈生创新、海慧科技及北海宏泰等跟投。
 
-会议赞助商：
+## 会议赞助商
 
-![satcom-logo](https://mmbiz.qpic.cn/mmbiz_png/dMFkbmlFTgdgQZibLDevPKhicrhic6xumPUM3D7ZxPPC3vv1uzvBWFStriaPoFrRV146LuYHIOFF29hoAWayfGOvyQ/640?wx_fmt=png)
+### 星通联华
 
-## 星通联华
+![satcom-logo](https://user-images.githubusercontent.com/35906792/38172337-2731913c-35dd-11e8-96e7-8ade013b1151.jpg)
 
 北京星通联华科技发展股份有限公司是物联网技术的整体服务提供商，包括高端自主知识产权高端传感器的生产、软件开发、系统集成以及运营服务。拥有质量管理体系认证证书、信息安全管理体系认证证书及多项专利技术和高端传感器的生产许可证，业务涵盖了公路、铁路桥梁的健康检测监测；地质灾害预警和地下水环境监测；高层建筑安全检测监测；交通运输物流信息化系统、物联网金融技术服务等多个领域。
 
@@ -97,6 +95,6 @@ forum_id:
 
 新浪微博：@统计之都
 
-微信公众号：统计之都
+微信公众号：统计之都（ID: CapStat）
 
 邮箱：chinar-2018-bj@cos.name
