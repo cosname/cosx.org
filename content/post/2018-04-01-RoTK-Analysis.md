@@ -4,7 +4,7 @@ date: 2018-04-01
 author: "Xinchen Pan"
 categories: ["R", "Data Analysis"]
 tags: ["三国", "R"]
-slug: RoTC-Analysis
+slug: RoTK-Analysis
 ---
 
 ## 前言
