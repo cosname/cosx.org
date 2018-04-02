@@ -52,14 +52,14 @@ Sys.setlocale('LC_ALL','Chs')
 ```
 
 接着用<code>readxl::read_excel</code>读取数据，每一个版本的数据分别存在了1个data frame里，我们总共有11个data frame，而这11个data frame又都再存在一个list里，因为<code>lapply</code>返回的就是list结构，我们给它命名为<code>dt</code>.
-```{r}
+```r
 dt <- lapply(1:11, function(x) read_excel("Characters.xlsx", x)) 
 ```
 
 由于每一代武将所拥有的属性不一样，为了后边方便，我希望能做一个大的data frame，它的变量有姓名，所有版本的属性以及该人物出场的版本。下面我们来看如何达到这个目的。
 
 我先把每一个版本的数据移除不需要的变量和那一个版本没有出现过的武将，部分NPC各项属性全都为0，我们也将它去掉，把清理过后的数据存到一个新的变量里，叫做<code>series</code>。
-```{r}
+```r
 # Column 2-8 为不需要的变量
 series <- lapply(1:11, function(x) {select(dt[[x]], -c(2:8)) %>%
     filter(complete.cases(dt[[x]][,-c(2:8)])) %>%
@@ -85,18 +85,18 @@ head(series[[1]])
 前边说过，每一代游戏武将拥有的属性不一样，第一代有体力，第二代把统率分成了陆指和水指, 第九代没有魅力。那我们来看下所有作品都有属性是什么，以及每一代都有的属性。
 
 排除姓名和版本，历代都出现过的属性只有武力和智力，这两个属性也是我们后边会主要分析的。
-```{r}
+```r
 common_attr <- Reduce(intersect, sapply(series, colnames))
 all_attr <- Reduce(union, sapply(series, colnames))
 all_attr[2:9]
 ```
-```{r}
+```r
 [1] "體力" "武力" "智力" "魅力" "運勢" "版本" "政治" "陸指"
 ```
-```{r}
+```r
 common_attr[2:3]
 ```
-```{r}
+```r
 [1] "武力" "智力"
 ```
 
@@ -104,13 +104,13 @@ common_attr[2:3]
 
 我还调整了版本这个categorical variable的level，使它是按照1-11代的顺序排列， 主要是为了之后做图的时候X轴的值（版本）能够按照正常顺序排列。
 
-```{r}
+```r
 series_full <- do.call(plyr::rbind.fill, series) %>%
    mutate(版本 = factor(版本, levels = paste0("三國志", 1:11))) %>%
    select(c(1,11,3:10,2)) # 体力只出现于第一个版本，把它移到最后一列
 ```
 现在我们得到了我们想要的这个大的data frame,它是这个样子的。
-```{r}
+```r
 head(series_full)
 ```
 ```r
@@ -128,11 +128,11 @@ head(series_full)
 ### 2.1 各代人物数量分析
 
 先来看下各代出场的人物数量，
-```{r}
+```r
 char_freq <- group_by(series_full, 版本) %>% summarise(人數 = n())
 char_freq
 ```
-```{r}
+```r
 # A tibble: 11 x 2
    版本      人數
    <fct>    <int>
@@ -153,7 +153,7 @@ char_freq
 
 再来看十一部作品中都出场的有多少位人物。
 
-```{r}
+```r
 show_in_all <- Reduce(intersect, lapply(series, "[", 1))
 nrow(show_in_all)
 ```
@@ -162,10 +162,10 @@ nrow(show_in_all)
 ```
 
 1-11代每一代都出现的角色有221名，我们从里边随机选10个，不出意外都是你可以随便说出他的故事的角色(说出你的故事)。
-```{r}
+```r
 sample_n(show_in_all, 10)
 ```
-```{r}
+```r
 # A tibble: 10 x 1
    姓名 
    <chr>
@@ -183,11 +183,11 @@ sample_n(show_in_all, 10)
 
 
 那有哪些角色出现在了第一部，却在后边某些版本没出现呢。
-```{r}
+```r
 show_in_all <- Reduce(intersect, lapply(series, "[", 1))
 setdiff(filter(series_full, 版本 == "三國志1")$姓名, show_in_all$姓名)
 ```
-```{r}
+```r
  [1] "朱褒"   "朱儁"   "呂公"   "宋謙"   "李堪"   "侯選"   "胡軫"  
  [8] "馬延"   "張既"   "張顗"   "梁綱"   "陳紀"   "陳珪"   "陳琳"  
 [15] "陳嬉"   "陳應"   "陳蘭"   "傅士仁" "傅幹"   "楊奉"   "楊彪"  
@@ -201,13 +201,13 @@ setdiff(filter(series_full, 版本 == "三國志1")$姓名, show_in_all$姓名)
 
 先把刘备孙权和曹操的数据抓出来单独存在一个data  frame里，把它叫做<code>emperor</code>
 
-```{r, warning=FALSE}
+```r
 # 刻意调整了level的顺序，来对应游戏中吴国势力的红色，蜀国势力的绿色，以及魏国势力的蓝色
 emperor <- filter(series_full, 姓名 %in% c("劉備", "曹操", "孫權")) %>%
   mutate(姓名 = factor(姓名, levels = c("孫權", "劉備", "曹操")))
 ```
 用这个function来画属性对比折线图。
-```{r}
+```r
 emperor_attr <- function(attrs){
   result <- ggplot(emperor, aes_string(x = "版本", y = attrs, 
     group = "姓名")) + 
@@ -222,7 +222,7 @@ emperor_attr <- function(attrs){
 
 #### 2.2.1 武力对比
 
-```{r, fig.height=4.5, echo=FALSE}
+```r
 emperor_attr("武力")
 ```
 ![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-14-1.png)
@@ -245,7 +245,7 @@ emperor_attr("武力")
 
 #### 2.2.2 智力对比
 
-```{r,  fig.height=4.5, echo=FALSE}
+```r
 emperor_attr("智力")
 ```
 ![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-15-1.png)
@@ -268,7 +268,7 @@ emperor_attr("智力")
 刘备和孙权的统率最终又交汇到了75左右。統率指的是带兵打仗能力，刘备一生虽然败仗打得多，但汉中之战也算是个人巅峰，孙权统治江东五十余年，一直没在曹魏的淮南地区占得便宜，虽说镇守合肥的历来都是曹魏的名将，但也稍微说明了点孙权的打仗能力。
 
 临时决定确认下《三国志1》是否整体数值偏高。
-```{r}
+```r
 series_full %>% group_by(版本) %>% 
   summarise(智力均值 = mean(智力), 武力均值 = mean(武力))
 ```
@@ -296,7 +296,7 @@ series_full %>% group_by(版本) %>%
 
 下面这个function是用来算历代游戏中各人物进入最强武力，最强智力，最弱武力等等top10的次数。
 
-```{r}
+```r
 # If n is positive, selects the top n rows. If negative, selects the bottom n rows.
 top_low_attr <- function(attrs, bw = 1){
   col_name <- enquo(attrs) 
@@ -313,7 +313,7 @@ top_low_attr <- function(attrs, bw = 1){
 
 注：这武力均值是该角色进入前10的时候的武力值的平均数
 
-```{r}
+```r
 top_low_attr(武力)
 ```
 ```r
@@ -335,7 +335,7 @@ top_low_attr(武力)
 #### 2.3.2 历代最高智力
 
 把左慈这个神棍去掉的话就有失悬念了，唯一意外的是诸葛亮有一次没进前十，有可能是我的代码没考虑第十名并列的情况，不过诸葛亮智力怎么会排到第十？
-```{r}
+```r
 top_low_attr(智力)
 ```
 ```r
@@ -354,7 +354,7 @@ top_low_attr(智力)
 10 左慈       4   99.
 ```
 那我们来看下是哪一代诸葛亮掉队了。原來是第七部，这部游戏的人物数值设计师看来是个诸葛亮黑，或者他把诸葛亮其他能力调高了？
-```{r}
+```r
 series_full %>% filter(姓名 == "諸葛亮")  %>%
   select("智力", "版本")
 ```
@@ -374,7 +374,7 @@ series_full %>% filter(姓名 == "諸葛亮")  %>%
 ```
 
 嚯，原来如此，在历代诸葛亮武力都在5，60，甚至3，40的情况下，第七部诸葛亮一跃成为了一名武力为87的武将，有理由相信这是光荣为了平衡而nerf诸葛亮智力的原因。
-```{r}
+```r
 series_full %>% filter(姓名 == "諸葛亮") 
 ```
 ```r
@@ -397,7 +397,7 @@ series_full %>% filter(姓名 == "諸葛亮")
 
 这表格中少数部落的人占了50%，兀突骨，忙牙长，金环三结，孟优都是南蛮人，拥有三国演义最喜感名字的俄何燒戈是羌族武将（迷当大王，郝萌φ(￣∇￣o)不服）。演义中基本蛮人羌人作为援军出场的下场都不太好。刘备伐吴请来的沙摩柯被周泰所杀，雅丹和越吉一个被活捉一个被杀，接着就是俄何烧戈了（历史上俄何和烧戈是两个人）。
 
-```{r}
+```r
 top_low_attr(智力, -1)
 ```
 ```r
@@ -428,7 +428,7 @@ top_low_attr(智力, -1)
 #### 2.3.4 历代最差魅力
 
 宦官黄皓，佞臣岑昏入围比较没悬念，演义中被描述成”平生性急，轻于杀戮，众皆恶之“的韩玄，卖了张鲁协助曹军最后却身首异处的杨松，投降东吴的糜芳都比较合理。
-```{r}
+```r
 top_low_attr(魅力, -1)
 ```
 ```r
@@ -451,7 +451,7 @@ top_low_attr(魅力, -1)
 
 #### 2.4.1 有勇有谋
 下面来看下在武力比智力高的人里智力最高的是谁
-```{r}
+```r
 war_int <- series_full %>% filter(武力 > 智力) %>% 
   group_by(版本) %>%
   top_n(n = 1, 智力) %>%
@@ -468,7 +468,7 @@ table(war_int$姓名)
 #### 2.4.2 文武双全
 
 智力比武力高的人里武力最高的会有谁。
-```{r}
+```r
 int_war <- series_full %>% filter(智力 >= 武力) %>% 
   group_by(版本) %>%
   top_n(n = 1, 武力) %>%
@@ -484,7 +484,7 @@ table(int_war$姓名)
 
 
 再来看下武力+智力最高的人是谁，是否和上边的人物有所出入
-```{r}
+```r
 war_int2 <- series_full %>%  mutate(智勇 = 智力 + 武力) %>%
   group_by(版本) %>%
   top_n(n = 1, 智勇)
@@ -511,7 +511,7 @@ table(war_int2$姓名)
 
 #### 2.5.1 武力对比
 
-```{r}
+```r
 wuzi <- c("張郃", "徐晃", "張遼", "于禁", "樂進")
 wuhu <- c("關羽", "張飛", "趙雲", "馬超", "黃忠")
 
@@ -530,7 +530,7 @@ wuhu_vs_wuzi <- function(attrs){
 ```
 
 
-```{r, fig.width=7}
+```r
 wuhu_vs_wuzi("武力") ## 下图由于众武将武力接近，所以名字全挤在了一块，
 ```
 ![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-28-1.png)
@@ -574,7 +574,7 @@ wuhu_vs_wuzi("武力") ## 下图由于众武将武力接近，所以名字全挤
 
 
 #### 2.5.2 智力对比
-```{r}
+```r
 wuhu_vs_wuzi("智力")
 ```
 ![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-30-1.png)
@@ -587,7 +587,7 @@ wuhu_vs_wuzi("智力")
 #### 2.6.1 武力值变化最大人物
 
 先来看武力变化比较大的人是谁
-```{r}
+```r
 series_full %>% group_by(姓名) %>% 
   summarise(武力變化 = max(武力) - min(武力)) %>%
   top_n(10, 武力變化) %>%
@@ -617,7 +617,7 @@ series_full %>% group_by(姓名) %>%
 </pre>
 和之后孔融小孩的”覆巢之下，安有完卵乎”有异曲同工之妙。
 
-```{r}
+```r
 series_full %>% filter(姓名=="孔融")
 ```
 ```r
@@ -635,7 +635,7 @@ series_full %>% filter(姓名=="孔融")
 11 孔融   30    5   72   65   NA 三國志11   75   NA   NA   NA
 ```
 #### 2.6.2 智力值变化最大人物
-```{r}
+```r
 series_full %>% group_by(姓名) %>% 
   summarise(智力變化 = max(智力) - min(智力)) %>%
   top_n(10, 智力變化) %>%
@@ -674,7 +674,7 @@ series_full %>% group_by(姓名) %>%
 胸无大志不是错，刘璋的目标可能就是偏安一隅，能让国富民安就挺好。无奈刘备的目标是天下，占荆州，夺西蜀，待天下有变。
 当时看演义，读到黄权用牙齿咬着刘璋的衣服不让刘璋去涪城见刘备，王累以死相逼都拦不住，真是一声叹息。蜀中多才俊，无奈碰到刘璋这个主君。
 
-```{r}
+```r
 series_full %>% filter(姓名 == "劉璋")
 ```
 
@@ -698,7 +698,7 @@ series_full %>% filter(姓名 == "劉璋")
 
 玩《三国志10》的时候看到过两个马忠，两个李丰，那么还有没有别的重名人物呢。
 
-```{r}
+```r
 series_full %>% group_by(版本, 姓名) %>%
   summarise(人数 = n()) %>%
   filter(人数 > 1)
