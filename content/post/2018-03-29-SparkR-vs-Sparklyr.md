@@ -35,11 +35,13 @@ SQL|+ +|+ + +
 两者文档相对来说 Sparklyr 更加丰富一些，其中包含了业界/学界大量案例，但以中文版较少。SparkR 由第三方提供了中文版文档。
 
 SparkR 文档：http://spark.apachecn.org/docs/cn/2.3.0/structured-streaming-programming-guide.html
+
 Sparklyr 文档：https://spark.rstudio.com
 
 ## 安装便利性
 
 SparkR: 从官网下载。
+
 Sparklyr: `sparklyr::spark_install(version = "2.3.0", hadoop_version = "2.7")`，不依赖于Spark版本，spark 2.X 完美兼容1.X。
 
 Spark环境配置需要注意的问题：
@@ -54,6 +56,7 @@ Spark环境配置需要注意的问题：
 ## Spark初始化
 
 SparkR:
+
 ```{r}
 Sys.setenv("SPARKR_SUBMIT_ARGS"="--master yarn-client sparkr-shell")
 
@@ -97,7 +100,7 @@ sparklyr::spark_write_parquet(df,path="/user/FinanceR",mode="overwrite",partitio
 
 以统计计数为例：
 
-SparkR
+SparkR:
 
 ```{r}
 library(SparkR)
@@ -119,7 +122,7 @@ pipeline %>% persist("MEM_AND_DISK") # 大数据集 缓存在集群上
 pipeline %>% head() # 小数据 加载到本地
 ```
 
-Sparklyr
+Sparklyr:
 
 ```{r}
 library(sparklyr)
@@ -147,13 +150,13 @@ pipeline %>% head() %>% collect() # 小数据 加载到本地
 
 ## SQL
 
-SparkR
+SparkR:
 
 ```{r}
 df <- SparkR::sql('SELECT * FROM financer_tbl WHERE dt = "20180318"')
 ```
 
-Sparklyr
+Sparklyr:
 
 由于Sparklyr通过dplyr接口操作，所以，所有数据操作几乎和MySQL完全一样，学习成本≈0。
 
@@ -174,7 +177,7 @@ df %>% dbplyr::sql_render() # 将 pipeline 自动翻译为 SQL
 系统会将本地依赖文件打包上传到HDFS路径上，通过 Spark 动态分发到执行任务的机器上解压缩。
 执行任务的机器本地独立的线程、内存中执行代码，最后汇总到主要节点机器上实现R代码的分发。
 
-SparkR
+SparkR:
 
 ```{r}
 #SparkR::dapply/SparkR::gapply/SparkR::lapply
@@ -200,7 +203,7 @@ SparkR 手动通过 `spark.addFile` 加载本地依赖，Sparklyr 自动将本�
 >什么是流式计算?
 >流式计算是介于实时与离线计算之间的一种计算方式，以亚秒级准实时的方式小批量计算数据，广泛应用在互联网广告、推荐等场景。
 
-SparkR
+SparkR:
 
 ```{r}
 stream <- SparkR::read.stream(
@@ -230,25 +233,32 @@ SparkR::sql() %>%
 
 ```
 
-Sparklyr 暂时不支持流式计算，功能开发中
+Sparklyr: 暂时不支持流式计算，功能开发中。
 
 ## 图计算
 
-SparkR 不直接支持 Graph Minining。
-Sparklyr 通过拓展程序，`graphframes` 实现图挖掘，比如Pagerank、LPA等
+>什么是图计算?
+>图计算是以“图论”为基础的对现实世界的一种“图”结构的抽象表达，以及在这种数据结构上的计算模式。
+>通常，在图计算中，基本的数据结构表达就是： G = （V，E，D） V = vertex （顶点或者节点） E = edge （边） D = data （权重）。
+
+SparkR: 不直接支持 Graph Minining。
+
+Sparklyr: 通过拓展程序，`graphframes` 实现图挖掘，比如Pagerank、LPA等。
+
+下面是一个通过 `graphframes` 实现 Pagerank 的例子：
 
 ```{r}
 library(graphframes)
-# copy highschool dataset to spark
+# 复制  highschool 数据集到到 spark
 highschool_tbl <- copy_to(sc, ggraph::highschool, "highschool")
 
-# create a table with unique vertices using dplyr
+# 通过 dplyr 初始化节点列表
 vertices_tbl <- sdf_bind_rows(
   highschool_tbl %>% distinct(from) %>% transmute(id = from),
   highschool_tbl %>% distinct(to) %>% transmute(id = to)
 )
 
-# create a table with <source, destination> edges
+# 初始化边列表  create a table with <source, destination> edges
 edges_tbl <- highschool_tbl %>% transmute(src = from, dst = to)
 
 gf_graphframe(vertices_tbl, edges_tbl) %>%
@@ -264,7 +274,7 @@ Sparklyr 通过拓展程序 [Rsparkling](http://spark.rstudio.com/guides/h2o/#de
 
 目前，SparkR 仅在实时计算上领先于 Sparklyr，在图计算、机器学习、深度学习等领域已经被拉开差距，在大多数场景下，Sparklyr将是一个更好的选择，在不久的将来，Sparklyr也将集成Streaming模块，届时将全面覆盖SparkR功能。
 
-相比于 pandas 和 pyspark，R 和 SparkR 的差异更小，并且如果你已经掌握了 dplyr 操作 mysql 的方法，学习 Sparklyr 将变得十分容易，因为他们共用同一套数据处理的语法，使用spark几乎只有参数配置的学习成本， 更多 Sparklyr教程可见 spark.rstudio.com 以及 Sparklyr 使用手册:https://github.com/rstudio/cheatsheets/raw/master/translations/chinese/sparklyr-cheatsheet_zh_CN.pdf 。
+相比于 pandas 和 pyspark，R 和 SparkR 的差异更小，并且如果你已经掌握了 dplyr 操作 mysql 的方法，学习 Sparklyr 将变得十分容易，因为他们共用同一套数据处理的语法，使用spark几乎只有参数配置的学习成本， 更多 Sparklyr 教程可见 Sparklyr 官网 spark.rstudio.com 以及 Sparklyr 使用手册:https://github.com/rstudio/cheatsheets/raw/master/translations/chinese/sparklyr-cheatsheet_zh_CN.pdf 。
 
 # 参考资料
 
