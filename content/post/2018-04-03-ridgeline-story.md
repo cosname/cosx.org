@@ -14,6 +14,7 @@ tags:
 1979年，英国乐队快乐小分队（Joy Division）发行了自己的首张唱片《Unknown Pleasuers》，这张专辑发行两周内就卖了5000份，但问题是……印了10000份。然而，当乐队的单曲《Transmission》发布后，这张后朋克唱片很快销售一空。作为一个乐盲，我是没搞懂这歌的意思（好像对收音机很不满）。整个70年代不断衰落的英国社会使青少年群体对现实极度不满，采取了一些很强烈的表现形式来抒发感情，这催生了朋克运动，至于后朋克运动，据说比朋克更具实验性质。有意思的是这个专辑在2017年又重新流行了，倒不是因为社会再度衰落，而是那个设计极为特殊的封面。
 
 ![《Unknown Pleasuers》封面](https://yufree.cn/images/up.jpeg)
+
 *《Unknown Pleasuers》封面（图片来自[维基百科](https://upload.wikimedia.org/wikipedia/en/7/70/Unknown_Pleasures_Joy_Division_LP_sleeve.jpg)）*
 
 这里说的封面流行是指在数据可视化领域里，其实它本就很流行……在流行文化里。很多人用这个类似波谱的图来指征一种波动、起伏的感受，恰恰应和《Unknown Pleasuers》中那种迷茫而强烈的情感，同时封面设计师又开放了版权，所以我们可以看到其在很多场景中的再现。例如 [3D 打印版](http://i.document.m05.de/2013/05/23/joy-divisions-unknown-pleasures-printed-in-3d/)、[服装版](http://www.virgula.com.br/musica/no-aniversario-de-ian-curtis-relembramos-as-mil-e-uma-faces-da-capa-de-unknown-pleasures/#img=3&galleryId=995918)、[电影版](https://thetab.com/uk/bristol/2016/02/13/survive-waking-strangers-bed-valentines-day-23604)等。甚至有人制作了一个[网站](https://garrettdreyfus.github.io/unknownpleasures/)来用鼠标生成类似风格的图。不过这个图仔细看是很有问题的：坐标轴是什么？线的间隔是固定的吗？有什么意义？这图又是怎么做出来的？
