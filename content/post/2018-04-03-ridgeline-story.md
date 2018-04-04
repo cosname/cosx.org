@@ -14,7 +14,7 @@ tags:
 1979年，英国乐队快乐小分队（Joy Division）发行了自己的首张唱片《Unknown Pleasuers》，这张专辑发行两周内就卖了5000份，但问题是……印了10000份。然而，当乐队的单曲《Transmission》发布后，这张后朋克唱片很快销售一空。作为一个乐盲，我是没搞懂这歌的意思（好像对收音机很不满）。整个70年代不断衰落的英国社会使青少年群体对现实极度不满，采取了一些很强烈的表现形式来抒发感情，这催生了朋克运动，至于后朋克运动，据说比朋克更具实验性质。有意思的是这个专辑在2017年又重新流行了，倒不是因为社会再度衰落，而是那个设计极为特殊的封面。
 
 ![《Unknown Pleasuers》封面](https://yufree.cn/images/up.jpeg)
-*《Unknown Pleasuers》封面（图片来自维基百科）*
+*《Unknown Pleasuers》封面（图片来自[维基百科](https://upload.wikimedia.org/wikipedia/en/7/70/Unknown_Pleasures_Joy_Division_LP_sleeve.jpg)）*
 
 这里说的封面流行是指在数据可视化领域里，其实它本就很流行……在流行文化里。很多人用这个类似波谱的图来指征一种波动、起伏的感受，恰恰应和《Unknown Pleasuers》中那种迷茫而强烈的情感，同时封面设计师又开放了版权，所以我们可以看到其在很多场景中的再现。例如 [3D 打印版](http://i.document.m05.de/2013/05/23/joy-divisions-unknown-pleasures-printed-in-3d/)、[服装版](http://www.virgula.com.br/musica/no-aniversario-de-ian-curtis-relembramos-as-mil-e-uma-faces-da-capa-de-unknown-pleasures/#img=3&galleryId=995918)、[电影版](https://thetab.com/uk/bristol/2016/02/13/survive-waking-strangers-bed-valentines-day-23604)等。甚至有人制作了一个[网站](https://garrettdreyfus.github.io/unknownpleasures/)来用鼠标生成类似风格的图。不过这个图仔细看是很有问题的：坐标轴是什么？线的间隔是固定的吗？有什么意义？这图又是怎么做出来的？
 
@@ -43,10 +43,10 @@ tags:
 
 
 ```r
-group1 <- cbind(rnorm(1000),1)
-group2 <- cbind(runif(1000,min = -1,max = 1),2)
-group3 <- cbind(c(rnorm(500,1,0.5),rnorm(500,-1,0.5)),3)
-data <- rbind.data.frame(group1,group2,group3)
+group1 <- cbind(rnorm(1000), 1)
+group2 <- cbind(runif(1000, min = -1, max = 1), 2)
+group3 <- cbind(c(rnorm(500, 1, 0.5),rnorm(500, -1, 0.5)), 3)
+data <- rbind.data.frame(group1, group2, group3)
 ```
 
 可能最简单的就是条形图了吧，用条形长度表示均值，然后用标准误或标准差表示变异程度。这里需要说明的是这种作图方法如果倒退到快乐小分队那个年代是很有必要的，因为那个年代作图不能太过复杂，毕竟有时还要描边，属于纯体力活。在这种大环境下你是可以用统计量例如均值来表示数据整体进行可视化的，甚至 Edward Tufte 都提出了类似奥卡姆剃刀原则的[数据墨水比](http://www.infovis-wiki.net/index.php/Data-Ink_Ratio)来表示数据的展示要尽量简洁。
@@ -60,18 +60,18 @@ data %>%
         group_by(V2) %>%
         summarise(mean = mean(V1)) %>%
         ungroup() %>%
-        ggplot(aes(x=V2, y=mean)) +
+        ggplot(aes(x = V2, y = mean)) +
   geom_bar(stat = 'identity')
 ```
 
 ![plot of chunk barplot](https://yufree.cn/images/barplot-1.png)
 
-简洁是有了，数据细节几乎完全丢失。当前的可视化趋势是尽可能少对数据做分布假设，所以要尽可能多的展示细节。那么有人可能就说我用盒式图行不行？
+简洁是有了，数据细节几乎完全丢失。当前的可视化趋势是尽可能少对数据做分布假设，所以要尽可能多的展示细节。那么有人可能就说我用箱线图行不行？
 
 
 ```r
 data %>%
-        ggplot(aes(x=factor(V2), y=V1)) +
+        ggplot(aes(x = factor(V2), y = V1)) +
   geom_boxplot()
 ```
 
@@ -82,7 +82,7 @@ data %>%
 
 ```r
 data %>%
-        ggplot(aes(x=factor(V2), y=V1)) +
+        ggplot(aes(x = factor(V2), y = V1)) +
   geom_violin()
 ```
 
@@ -93,7 +93,7 @@ data %>%
 
 ```r
 data %>%
-        ggplot(aes(x=factor(V2), y=V1)) +
+        ggplot(aes(x = factor(V2), y = V1)) +
   geom_jitter()
 ```
 
@@ -105,7 +105,7 @@ data %>%
 ```r
 library(ggridges)
 data %>%
-        ggplot(aes(y=factor(V2), x=V1)) +
+        ggplot(aes(y = factor(V2), x = V1)) +
   geom_density_ridges()
 ```
 
@@ -116,7 +116,7 @@ data %>%
 
 ```r
 data %>%
-        ggplot(aes(y=factor(V2), x=V1),height = ..density..) +
+        ggplot(aes(y = factor(V2), x = V1),height = ..density..) +
   geom_density_ridges(stat = 'binline')
 ```
 
@@ -131,17 +131,17 @@ data %>%
 
 ```r
 library(tidypvals)
-aj1 = anti_join(head2015,chavalarias2016)
-aj2 = anti_join(chavalarias2016,head2015)
-sj1 = semi_join(head2015,chavalarias2016)
-allp = rbind(aj1,aj2,sj1)
+aj1 = anti_join(head2015, chavalarias2016)
+aj2 = anti_join(chavalarias2016, head2015)
+sj1 = semi_join(head2015, chavalarias2016)
+allp = rbind(aj1, aj2, sj1)
 
-allp = rbind(allp,brodeur2016)
+allp = rbind(allp, brodeur2016)
 
 allp %>% 
         filter(!is.na(field)) %>%
-        ggplot(aes(y=field, x=pvalue)) +
-  geom_density_ridges() + xlim(0,0.25)
+        ggplot(aes(y = field, x = pvalue)) +
+  geom_density_ridges() + xlim(0, 0.25)
 ```
 
 ![plot of chunk pvalue](https://yufree.cn/images/pvalue-1.png)
