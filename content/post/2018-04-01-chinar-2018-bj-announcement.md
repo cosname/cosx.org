@@ -1,12 +1,12 @@
 ---
 title: 第十一届中国R会议（北京）会议通知
 author: 统计之都
-date: '2018-04-02'
+date: '2018-04-04'
 categories:
   - R会议
 tags: [R会议,北京]
 slug: chinar-2018-bj-announcement
-forum_id: 
+forum_id: 419907
 ---
 
 ![r-pku](https://user-images.githubusercontent.com/35906792/38172335-225c4bac-35dd-11e8-97cc-d787a0605e7e.jpg)
@@ -21,7 +21,7 @@ forum_id:
 
 ![pku](https://user-images.githubusercontent.com/35906792/38172333-1ff87b56-35dd-11e8-9375-289cec037011.jpg)
 
-北京大学，25日主会场地点为北京大学百年纪念讲堂，26~27日分会场地点为北京大学光华管理学院1号楼。具体会场地址敬请关注中国R会议官方网站: <www.china-r.org>。
+北京大学，25日主会场地点为北京大学百年纪念讲堂，26~27日分会场地点为北京大学光华管理学院1号楼。具体会场地址敬请关注中国R会议官方网站: <http://china-r.org/>。
 
 # 三、会议主题
 
