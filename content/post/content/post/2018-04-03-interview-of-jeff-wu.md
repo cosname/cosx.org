@@ -5,12 +5,12 @@ date: '2018-04-03'
 categories:
   - COS访谈
 tags: [访谈, 工业统计, 数据科学, 实验设计, 计算机实验, EM算法, 重抽样方法]
-slug: interview-of-Chien-Fu-Jeff-Wu
+slug: interview-of-jeff-wu
 author: 
   - Hugh A. Chipman
   - V. Roshan Joseph
   - 吴建福
-  -《数学译林》
+  - 《数学译林》
 meta_extra: "编辑: 雷博文; 审稿: 黄帅; 译者: 庹睿, 熊世峰; 校对: 李国英"
 forum_id: 419906
 ---
