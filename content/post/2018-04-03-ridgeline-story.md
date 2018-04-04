@@ -9,7 +9,7 @@ tags:
   - 数据可视化
   - 历史
   - 软件包
-meta_extra: "审稿: 谢益辉"
+meta_extra: "审稿: 谢益辉；编辑：吴佳萍"
 forum_id: 419270
 ---
 
