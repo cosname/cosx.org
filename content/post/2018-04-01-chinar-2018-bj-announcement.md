@@ -1,5 +1,5 @@
 ---
-title: 第十一届中国R会议（北京）会议通知
+title: 第十一届中国R会议（北京）参会报名通知
 author: 统计之都
 date: '2018-04-11'
 categories:
