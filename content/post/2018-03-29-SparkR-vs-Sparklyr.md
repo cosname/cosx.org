@@ -15,7 +15,7 @@ SparkR 和 Sparklyr 是两个基于Spark的R语言接口，通过简单的语法
 
 # 整体对比
 
-特性|	SparkR|	sparklyr
+特性|	SparkR|	Sparklyr
 ---|---|---
 文档|	+ + |	+ + +
 安装便利性|	+	|+ + +
@@ -47,7 +47,7 @@ Sparklyr: `sparklyr::spark_install(version = "2.3.0", hadoop_version = "2.7")`�
 Spark环境配置需要注意的问题：
 
 1. 下载和Hadoop对应版本号的发行版，具体可以通过  `sparklyr::spark_available_versions()` 查询可用的spark版本
-2. JAVA_HOME/SPARK_HOME/HADOOP_HOME 是必须要指定的环境变量，建议使用JDK8/spark2.x/hadoop2.7
+2. `JAVA_HOME/SPARK_HOME/HADOOP_HOME` 是必须要指定的环境变量，建议使用 `JDK8/spark2.x/hadoop2.7`
 3. yarn-client/yarn-cluster 模式需要设置环境变量 `Sys.setenv("HADOOP_CONF_DIR"="/etc/hadoop/conf")`
 4. 连接 Hive 需要提供 Hive 链接配置, 在spark-connection 初始化时指定对应 `hive-site.xml` 文件
 
@@ -75,7 +75,7 @@ sc <- sparklyr::spark_connect(master = "yarn-client",
 
 ## 数据IO
 
-以写Parquet文件为例,同理你可以用 `SparkR::write.*()`/`sparklyr::spark_write_*()` 等写入其他格式文件到HDFS上,比如 csv/text
+以写Parquet文件为例,同理你可以用 `SparkR::write.*()`/`sparklyr::spark_write_*()` 等写入其他格式文件到HDFS上,比如 csv/text。
 
 > 什么是 Parquet 文件？
 > Parquet 是一种高性能列式存储文件格式，比CSV文件强在内建索引，可以快速查询数据，目前普遍应用在模型训练过程。
@@ -99,6 +99,8 @@ sparklyr::spark_write_parquet(df,path="/user/FinanceR",mode="overwrite",partitio
 ## 数据清洗
 
 以统计计数为例：
+
+从 db.financer_tbl 表中过滤出 b > 0 条件下，每个 key 对应出现的次数并按照升序排序，最后去除统计缺失值。
 
 SparkR:
 
@@ -174,8 +176,8 @@ df %>% dbplyr::sql_render() # 将 pipeline 自动翻译为 SQL
 
 分发机制：
 
-系统会将本地依赖文件打包上传到HDFS路径上，通过 Spark 动态分发到执行任务的机器上解压缩。
-执行任务的机器本地独立的线程、内存中执行代码，最后汇总到主要节点机器上实现R代码的分发。
+系统会将本地依赖文件压缩打包上传到HDFS路径上，通过 Spark 动态分发到执行任务的机器上解压缩。
+执行任务的机器本地独立的线程、内存中执行代码，最后汇总计算结果到主要节点机器上实现R代码的分发。
 
 SparkR:
 
@@ -195,7 +197,7 @@ func <- function(x){x + runif(1) } # 原生 R代码
 sparklyr::spark_apply(x = df,packages=T,name = c("key","value"),func =func,group = "key")
 ```
 
-SparkR 手动通过 `spark.addFile` 加载本地依赖，Sparklyr 自动将本地依赖分发到集群上
+SparkR 手动通过 `spark.addFile` 加载本地依，而 Sparklyr 自动将本地依赖分发到集群上
 
 
 ## 流式计算
