@@ -100,6 +100,8 @@ sparklyr::spark_write_parquet(df,path="/user/FinanceR",mode="overwrite",partitio
 
 ## 数据清洗
 
+dplyr 集成 spark/mysql 需要用到远程处理模式。它要求先定义数据源表，再通过一系列dplyr操作惰性求值，直到执行 `head()` 或者 `collect()` 等触发函数，才会执行计算过程，并将数据返回。如此设计是因为大数据集如果立即处理是无法优化数据处理流程的，通过惰性求值的方式，系统会在远程机器上自动优化数据处理流程。
+
 以统计计数为例：
 
 从 db.financer_tbl 表中给 b 列 +2 后赋值为 a，过滤出 a > 2 条件下，每个 key 对应出现的次数并按照升序排序，最后去除统计缺失值。
@@ -110,7 +112,7 @@ SparkR:
 library(SparkR)
 library(magrittr)
 
-remote_df = SparkR::sql("select * from db.financer_tbl limit 10")
+remote_df = SparkR::sql("select * from db.financer_tbl limit 10") # 定义数据源表
 
 remote_df %>%
     mutate(a = df$b + 2) %>%
@@ -134,7 +136,7 @@ library(dplyr)
 
 # 在 mutate 中支持 Hive UDF
 
-remote_df = dplyr::tbl(sc,from = "db.financer_tbl") # 
+remote_df = dplyr::tbl(sc,from = "db.financer_tbl") # 定义数据源表 
 # 或者 remote_df = dplyr::tbl(sc,from = dplyr::sql("select * from db.financer_tbl limit 10")) #
 
 remote_df %>%
