@@ -102,7 +102,7 @@ sparklyr::spark_write_parquet(df,path="/user/FinanceR",mode="overwrite",partitio
 
 以统计计数为例：
 
-从 db.financer_tbl 表中过滤出 b > 0 条件下，每个 key 对应出现的次数并按照升序排序，最后去除统计缺失值。
+从 db.financer_tbl 表中给 b 列 +2 后赋值为 a，过滤出 a > 2 条件下，每个 key 对应出现的次数并按照升序排序，最后去除统计缺失值。
 
 SparkR:
 
@@ -138,7 +138,7 @@ remote_df = dplyr::tbl(sc,from = "db.financer_tbl") #
 # 或者 remote_df = dplyr::tbl(sc,from = dplyr::sql("select * from db.financer_tbl limit 10")) #
 
 remote_df %>%
-    mutate(a = b+2) %>%
+    mutate(a = b+2) %>%   # 在 mutate 中支持 Hive UDF
     filter(a > 2)%>%
     group_by(key)%>%
     summarize(count = n())%>%
@@ -199,7 +199,7 @@ func <- function(x){x + runif(1) } # 原生 R代码
 sparklyr::spark_apply(x = df,packages=T,name = c("key","value"),func =func,group = "key")
 ```
 
-SparkR 手动通过 `spark.addFile` 加载本地依，而 Sparklyr 自动将本地依赖分发到集群上
+SparkR 手动通过 `spark.addFile` 加载本地依赖，而 Sparklyr 打包本地 R 包只需通过 package = TRUE 参数即可，最大化减少学习成本。
 
 
 ## 流式计算
