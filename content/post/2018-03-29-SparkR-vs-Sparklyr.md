@@ -3,7 +3,13 @@ title: '深入对比数据科学工具箱: SparkR vs Sparklyr'
 date: '2018-03-29'
 author: 朱俊辉 
 slug: sparkr-vs-sparklyr
-meta_extra: ""
+categories:
+  - 统计软件
+tags:
+  - spark
+  - 软件包
+  - 并行计算
+meta_extra: "审稿：郎大为、黄俊文、朱雪宁"
 forum_id: 
 ---
 
