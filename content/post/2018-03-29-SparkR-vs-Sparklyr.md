@@ -10,7 +10,7 @@ tags:
   - 软件包
   - 并行计算
 meta_extra: "审稿：郎大为、黄俊文、朱雪宁"
-forum_id: 
+forum_id: 419983
 ---
 
 ![](https://sfault-image.b0.upaiyun.com/340/584/3405848728-5ab3c7fb13cac_articlex)
