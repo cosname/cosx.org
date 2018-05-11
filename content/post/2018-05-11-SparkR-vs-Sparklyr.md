@@ -1,6 +1,6 @@
 ---
 title: '深入对比数据科学工具箱: SparkR vs Sparklyr'
-date: '2018-03-29'
+date: '2018-05-11'
 author: 朱俊辉 
 slug: sparkr-vs-sparklyr
 categories:
