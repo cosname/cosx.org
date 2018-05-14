@@ -13,8 +13,8 @@ tags:
  - 生物等价性
  - 时间分配
 slug: interview-of-jun-shao
-meta_extra: "编辑：-  审稿：朱雪宁"
-forum_id: 
+meta_extra: "编辑：王小宁  审稿：朱雪宁"
+forum_id: 419984
 ---
 
 > **简介** [邵军教授](http://www.stat.wisc.edu/~shao/)1987年8月获美国威斯康星-麦迪逊分校统计学博士学位，1996年获美国数理统计学会Fellow，1999年获美国统计学会Fellow，多次获得美国自然科学基金，曾任JASA、Statistica Sinica副主编，Journal of Multivariate Analysis和Sankhya联合主编，现任Journal of Nonparametric Statistics 主编，Journal of System Science and Complexity联合主编，2017年联合创立Statistical Theory and Related Fields 并担任总编辑。曾担任美国威斯康星-麦迪逊分校统计系系主任（2005-2009）、泛华统计学会会长（2007），现兼任美国国家统计局高级研究员，并任美国多家制药厂的统计顾问，2009年入选“国家千人计划”，现为美国威斯康星-麦迪逊分校统计系教授和华东师范大学特聘教授。邵教授的6本统计学专著和课本之一的《数理统计》已成为数理统计理论名著，并成为北美和中国多个大学的统计学研究生教材。自1987年以来邵教授共发表学术论文180余篇，其中50余篇为医药统计方面论文，在重抽样技术、变量选择、生物统计和缺失数据的统计处理等方面做了大量的开创性工作。
