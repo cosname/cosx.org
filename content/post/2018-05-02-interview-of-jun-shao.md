@@ -13,7 +13,7 @@ tags:
  - 生物等价性
  - 时间分配
 slug: interview-of-jun-shao
-meta_extra: "编辑：王小宁  审稿：朱雪宁"
+meta_extra: "编辑：王小宁、范超  审稿：朱雪宁"
 forum_id: 419984
 ---
 
