@@ -6,12 +6,12 @@ slug: interview-of-jun-shao
 categories:
   - COS访谈
 tags: 
- - cos访谈
- - 重抽样
- - 缺失数据
- - Rao-Shao方法
- - 生物等价性
- - 时间分配
+  - cos访谈
+  - 重抽样
+  - 缺失数据
+  - Rao-Shao方法
+  - 生物等价性
+  - 时间分配
 slug: interview-of-jun-shao
 meta_extra: "编辑：王小宁、范超  审稿：朱雪宁"
 forum_id: 419984
