@@ -37,6 +37,7 @@ slug: RoTK-Analysis
 我决定自己手动把版本数据分开到11个表格里，每一个如下图所示。(自然我也可以手动直接得到我们最终想要的数据，但我还是决定用R实现它。）
 ![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/attr1.png)
 
+该数据我放到了[这里](https://github.com/spsufawi/My-Blog/blob/master/content/post/Characters.xlsx)
 
 这些是我们需要用到的package.
 ```r
@@ -46,7 +47,7 @@ library(data.table)
 library(ggplot2)
 ```
 
-为了能在R里使用中文，我们用下面的代码将系统locale设置为”Chs”.
+为了能在R里使用中文，我们用下面的代码将系统locale设置为”Chs”. 我使用的操作系统是Win10家庭版。
 ```r
 Sys.setlocale('LC_ALL','Chs')
 ```
