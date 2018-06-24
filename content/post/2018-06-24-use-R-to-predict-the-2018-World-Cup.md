@@ -4,6 +4,7 @@ author: Summer
 date: '2018-06-24'
 slug: use-R-to-predict-the-2018-World-Cup
 ---
+[原文blog_worldcup2018](https://github.com/MangoTheCat/blog_worldcup2018)
 
 我在近十年间看的唯一一场比赛是几周前皇家马德里VS利物浦的欧冠总决赛，那么是什么让我敢预巴西会捧起2018年的大力神杯？因为我在足球上的表达能力有限，你可能会觉得下文有点枯燥。但是问题不大，优秀的数据科学会让这篇文章变得十分有趣。
 
