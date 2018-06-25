@@ -1,10 +1,11 @@
 ---
 title: 用R来预测2018世界杯
-author: Summer
+author: Ava Yang
 date: '2018-06-24'
 slug: use-R-to-predict-the-2018-World-Cup
+meta_extra: 译者：夏丰盛；
 ---
->本文翻译自Github项目[MangoTheCat/blog_worldcup2018](https://github.com/MangoTheCat/blog_worldcup2018)的描述文件README.MD，已获得原作者授权
+>本文翻译自[Mango Solution的博客](https://www.r-bloggers.com/another-prediction-for-the-fifa-world-cup-2018/)，已获得原作者授权
 
 我在近十年间看的唯一一场比赛是几周前皇家马德里VS利物浦的欧冠总决赛，那么是什么让我敢预巴西会捧起2018年的大力神杯？因为我在足球上的表达能力有限，你可能会觉得下文有点枯燥。但是问题不大，优秀的数据科学会让这篇文章变得十分有趣。
 
@@ -41,11 +42,11 @@ data(wcmatches_train)
 
 # 游戏开始
 
-Claus提出了三个计算单场比赛结果的模型。第一个模型基于两个独立的泊松分布，在这个模型中，两个球队平等对待，所以无论他们实际技术和天赋如何，比赛的结果都是随机的。第二个模型假设一场比赛的分数是两个泊松事件，以及这两个泊松事件的差服从 skellam 分布。由于参数是根据实际的投注估计的，所以这个模型的结果更加可靠。第三个模型基于World Football Elo Ratings[评分规则](https://www.eloratings.net/about)，根据现在ELO评分，我们计算一场比赛中单个队伍的成绩，结果可以被看做二项分布中成功的概率。由于二项分布的性质（只有0和1），这个模型忽略了平局的存在。
+Claus提出了三个计算单场比赛结果的模型。第一个模型基于两个独立的泊松分布，在这个模型中两个球队平等对待，所以无论他们实际技术和天赋如何，比赛的结果都是随机的。第二个模型假设一场比赛的分数是两个泊松事件，以及这两个泊松事件的差服从 skellam 分布。由于参数是根据实际的投注估计的，所以这个模型的结果更加可靠。第三个模型基于ELO评分( World Football Elo Ratings，一个通用的球员[评分规则](https://www.eloratings.net/about)， 根据现在ELO评分，我们计算一场比赛中单个队伍的成绩，结果可以被看做二项分布中成功的概率。由于二项分布的性质（只有0和1）这个模型忽略了平局的存在。
 
-下面介绍的第四个模型是我的第一次尝试。下面简单的说明下它，我们假设了两个独立的泊松事件，它们的lambda参数是另一个已经训练好的泊松分布模型的预测结果。预测的结果又由rpois模拟。
+第四个模型是我的第一次尝试，这里简单介绍下。在这个模型中我们假设了两个独立的泊松事件，它们的lambda参数是另一个已经训练好的泊松分布模型的预测结果，预测的结果又由rpois模拟。
 
-`playgame`函数包装好了上述四个模型，模型的选择由参数**play_fun**参数实现。
+`play_game`函数包装好了上述四个模型，模型的选择由参数**play_fun**参数实现。
 
 ```R
 # Specify team Spain and Portugal
@@ -108,7 +109,7 @@ broom::tidy(mod)
 ## 3  fifa_start -0.0002296051 0.0003288228 -0.6982638 4.850123e-01
 ```
 
-从模型的summary可以看出，在统计学的角度ELO评分比FIFA评分更重要。更有趣的是FIFA评分的系数竟然是负数,1分FIFA评分平均能降低0.0002296进球数。总体而言，ELO评分的预测性要好于FIFA评分。**One possible reason is that ratings in 2014 alone are collected, and it may be worth future effort to go into history.这句话不能理解**.毕竟有关于FIFA评分的预测效果不好已经不是什么[新闻](https://www.sbnation.com/soccer/2017/11/16/16666012/world-cup-2018-draw-elo-rankings-fifa)了。
+从模型的summary可以看出，在统计学的角度ELO评分比FIFA评分更重要。更有趣的是FIFA评分的系数竟然是负数,1分FIFA评分平均能降低0.0002296进球数。总体而言，ELO评分的预测性要好于FIFA评分。由于模型中的自变量是2014年世界杯开始前的FIFA评分和ELO评分，所以这也可能是导致这样结果的原因，更进一步，可能我们需要考虑更早的世界杯数据.毕竟有关于FIFA评分的预测效果不好已经不是什么[新闻](https://www.sbnation.com/soccer/2017/11/16/16666012/world-cup-2018-draw-elo-rankings-fifa)了。
 
 训练集**wcmatches_train**有一个**is_home**列，代表在这个比赛中队伍是不是主场。然而，很难说明主客场因素在第三方国家进行的比赛和有职业联赛之间有很大的不同。而且，对于本届俄罗斯世界杯我也没有找到明确划分主客场的方法。我们可以新增一个相似特征-主场优势来表征这个国家、这个洲是否是主场，这在未来的建模可以派上用场。主场优势这个特征暂时没有出现在**wcmatches_train**数据集中。
 
@@ -168,7 +169,7 @@ find_knockout_winners(team_data = team_data,
 说了这么多，我们最后把上述提到的关键功能都打包到了函数`simulate_tournament()`里，函数的返回结果是`nsim`次模拟比赛的排名和进球数，`nsim`就是`simulate_tournament()`函数的`nsim`参数。每次模拟结果都包含32支队伍。`set.seed()`函数设置随机数种子以保证结果可以复现。
 
 ```R
-# Run nsim number of times world cup tournament
+# 模拟nsim次世界杯
 set.seed(000)
 result <- simulate_tournament(nsim = nsim, play_fun = "play_fun_simplest") 
 result2 <- simulate_tournament(nsim = nsim, play_fun = "play_fun_skellam")
@@ -230,7 +231,7 @@ get_top_scorer(nsim = nsim, result_data = result4) %>% plot_top_scorer()
 
 模型的整体框架还是很清晰的，你需要做的只是通过参数来选择`play_game`函数，比如 `game_fun_simplest`, `game_fun_skellam` 和 `game_fun_elo`。
 
-欢迎优秀的大家在Github上给[ekstroem/socceR2018](https://github.com/MangoTheCat/blog_worldcup2018/blob/master/github.com/ekstroem/socceR2018)提交PR。谁又能成为本届世界杯最佳预言帝呢？~~周老师~~
+欢迎优秀的大家在Github上给[ekstroem/socceR2018](https://github.com/MangoTheCat/blog_worldcup2018/)提交PR。谁又能成为本届世界杯最佳预言帝呢？
 
 
 
@@ -239,7 +240,7 @@ get_top_scorer(nsim = nsim, result_data = result4) %>% plot_top_scorer()
 1. 数据收集。**team_data**数据集里面并没有最新的赔率和ELO评分。如果你想添加这些信息，它们可以从下面三个网站获取。FIFA评分获取是最简单的，能用常规的爬虫获得，而赔率和ELO评分似乎是由JavaScript代码提供，我还没想到一个很好的解决方案。至于一些赌球信息，你可以从Betfair网站获取。Betfair是一个线上的博彩网站，它提供了获取信息的API，R包[abettor](https://github.com/phillc73/abettor)能直接爬取。这对于那些靠战略获胜人这些信息就会显得十分重要。
    - <https://www.betfair.com/sport/football>
    - <https://www.eloratings.net/2018_World_Cup>
-   - http://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html
+   - <http://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html>
 2. 模型改进。这可能是最关键的一点。举例而言，已经有不少的研究证明双变量的泊松分布对足球预测是有帮助的。
 3. 特征工程。GDP之类的经济因素；球员总价、球员保险、球员受伤等市场因素可能也会帮助提升精度。
 4. 模型评价。了解我们的模型是否具有良好的预测可信度的一种方法是在2018年7月15日之后根据实际结果评估预测结果。目前来自赌场的赔率也是一个参考因素。在历史数据集上运行模型也不是也不能的，比如可以对2014世界杯运行模型，并对模型进行选择。
