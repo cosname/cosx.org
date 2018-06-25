@@ -7,7 +7,8 @@ meta_extra: 译者：夏丰盛；
 ---
 >本文翻译自[Mango Solution的博客](https://www.r-bloggers.com/another-prediction-for-the-fifa-world-cup-2018/)，已获得原作者授权
 
-我在近十年间看的唯一一场比赛是几周前皇家马德里VS利物浦的欧冠总决赛，那么是什么让我敢预巴西会捧起2018年的大力神杯？因为我在足球上的表达能力有限，你可能会觉得下文有点枯燥。但是问题不大，优秀的数据科学会让这篇文章变得十分有趣。
+我在近十年间看的唯一一场比赛是几周前皇家马德里VS利物浦的欧冠总决赛，那么是什么让我敢预巴西会捧起2018年的大力神杯？答案就在下文。
+对了，因为我在足球上的表达能力有限，你可能会觉得下文有点枯燥。但是问题不大，优秀的数据科学会让这篇文章变得十分有趣！
 
 > 本文主要基于 Claus Thorn EkstrÃ¸m.在eRum2018上关于2018年世界杯的预测。第一手资料请点击,[PPT](http://www.biostatistics.dk/talks/eRum2018/#1),[视频](https://www.youtube.com/watch?v=urJ1obHPsV8),[代码](https://github.com/MangoTheCat/blog_worldcup2018/blob/master/github.com/ekstroem/socceR2018),如果你没有梯子，视频链接在[这里](https://pan.baidu.com/s/1r1NuJppNGkNeeybEVgs3SA)
 
@@ -17,13 +18,12 @@ meta_extra: 译者：夏丰盛；
 
 # 初始化
 
-`dataMod.Rmd`R Markdown文件包含了所有的R代码。为了能复现我的分析过程，我建议你下载或者克隆这个[仓库](https://github.com/MangoTheCat/blog_worldcup2018)，然后运行`dataMod.Rmd`。
+首先，加载包含 `worldcup`在内的R包，我把我的函数都集成到了[ `worldcup`](https://github.com/MangoTheCat/blog_worldcup2018/tree/master/worldcup)里。R包是一个分享代码、集成函数和加速迭代的便捷方式。`dataMod.Rmd`头部的YAML部分中声明了**normalgoals**（世界杯中一场比赛的平均进球数）和**nsim**（模拟次数）两个变量。
 
-首先，加载包含 `worldcup`在内的R包，我把我的函数都集成到了 `worldcup`里。R包是一个分享代码、集成函数和加速迭代的便捷方式。`dataMod.Rmd`头部的YAML部分中声明了**normalgoals**（世界杯中一场比赛的平均进球数）和**nsim**（模拟次数）两个变量。
 
 接着我们加载了三个数据集，这三个数据集的原始数据来自开源数据集，我对原始数据做了一些改进。收集数据、调整队伍名称和清洗特征花了我非常多的时间。
 
-  * team_data包含跟队伍有关的特征
+* team_data包含跟队伍有关的特征
 * group_match_data是比赛时间表，来自公开数据
 * wcmatches_train是一个处理过的数据，数据源自[Kaggle比赛](https://www.kaggle.com/abecklas/fifa-world-cup/data)。这个数据可以作为训练集来估计lambda参数（每个球队的场均进球数），训练集采用了1994-2014年的数据。
 
@@ -232,6 +232,9 @@ get_top_scorer(nsim = nsim, result_data = result4) %>% plot_top_scorer()
 模型的整体框架还是很清晰的，你需要做的只是通过参数来选择`play_game`函数，比如 `game_fun_simplest`, `game_fun_skellam` 和 `game_fun_elo`。
 
 欢迎优秀的大家在Github上给[ekstroem/socceR2018](https://github.com/MangoTheCat/blog_worldcup2018/)提交PR。谁又能成为本届世界杯最佳预言帝呢？
+
+如果你喜欢这篇文章，欢迎来这篇文章的[Github](https://github.com/MangoTheCat/blog_worldcup2018)Star，fork，提交issue或者扔香蕉，文章所提及的所有代码都在[Github](https://github.com/MangoTheCat/blog_worldcup2018)中。同时非常感谢Rich, Doug, Adnan以及所有分享过想法的人，没有他们的帮助就没有这篇文章，让我们一起把知识传递给算法。
+
 
 
 
