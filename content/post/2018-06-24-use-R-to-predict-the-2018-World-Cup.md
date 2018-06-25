@@ -233,7 +233,7 @@ get_top_scorer(nsim = nsim, result_data = result4) %>% plot_top_scorer()
 
 欢迎优秀的大家在Github上给[ekstroem/socceR2018](https://github.com/MangoTheCat/blog_worldcup2018/)提交PR。谁又能成为本届世界杯最佳预言帝呢？
 
-如果你喜欢这篇文章，欢迎来这篇文章的[Github](https://github.com/MangoTheCat/blog_worldcup2018)Star，fork，提交issue或者扔香蕉，文章所提及的所有代码都在[Github](https://github.com/MangoTheCat/blog_worldcup2018)中。同时非常感谢Rich, Doug, Adnan以及所有分享过想法的人，没有他们的帮助就没有这篇文章，让我们一起把知识传递给算法。
+如果你喜欢这篇文章，欢迎给这篇文章的[Github](https://github.com/MangoTheCat/blog_worldcup2018)点Star，fork，提交issue或者扔香蕉，文章所提及的所有代码都在[Github](https://github.com/MangoTheCat/blog_worldcup2018)中。同时非常感谢Rich, Doug, Adnan以及所有分享过想法的人，没有他们的帮助就没有这篇文章，让我们一起把知识传递给算法。
 
 
 
