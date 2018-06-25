@@ -1,9 +1,15 @@
 ---
-title: 用R来预测2018世界杯
+title: 2018世界杯的另一个预测
 author: Ava Yang
 date: '2018-06-24'
 slug: use-R-to-predict-the-2018-World-Cup
 meta_extra: 译者：夏丰盛；
+categories:
+  - R语言
+  - 统计应用
+tags:
+  - R语言
+  - 世界杯
 ---
 >本文翻译自[Mango Solution的博客](https://www.r-bloggers.com/another-prediction-for-the-fifa-world-cup-2018/)，已获得原作者授权
 
@@ -18,7 +24,7 @@ meta_extra: 译者：夏丰盛；
 
 # 初始化
 
-首先，加载包含 `worldcup`在内的R包，我把我的函数都集成到了[ `worldcup`](https://github.com/MangoTheCat/blog_worldcup2018/tree/master/worldcup)里。R包是一个分享代码、集成函数和加速迭代的便捷方式。`dataMod.Rmd`头部的YAML部分中声明了**normalgoals**（世界杯中一场比赛的平均进球数）和**nsim**（模拟次数）两个变量。
+首先，加载包含 `worldcup`在内的R包，我把我的函数都集成到了[`worldcup`](https://github.com/MangoTheCat/blog_worldcup2018/tree/master/worldcup)里。R包是一个分享代码、集成函数和加速迭代的便捷方式。`dataMod.Rmd`头部的YAML部分中声明了**normalgoals**（世界杯中一场比赛的平均进球数）和**nsim**（模拟次数）两个变量。
 
 
 接着我们加载了三个数据集，这三个数据集的原始数据来自开源数据集，我对原始数据做了一些改进。收集数据、调整队伍名称和清洗特征花了我非常多的时间。
@@ -27,7 +33,7 @@ meta_extra: 译者：夏丰盛；
 * group_match_data是比赛时间表，来自公开数据
 * wcmatches_train是一个处理过的数据，数据源自[Kaggle比赛](https://www.kaggle.com/abecklas/fifa-world-cup/data)。这个数据可以作为训练集来估计lambda参数（每个球队的场均进球数），训练集采用了1994-2014年的数据。
 
-```R
+```r
 library(tidyverse)
 library(magrittr)
 devtools::load_all("worldcup")
@@ -48,47 +54,47 @@ Claus提出了三个计算单场比赛结果的模型。第一个模型基于两
 
 `play_game`函数包装好了上述四个模型，模型的选择由参数**play_fun**参数实现。
 
-```R
+```r
 # Specify team Spain and Portugal
 play_game(play_fun = "play_fun_simplest", 
           team1 = 7, team2 = 8, 
           musthavewinner=FALSE, normalgoals = normalgoals)
 ```
 
-```R
+```r
 ##      Agoals Bgoals
 ## [1,]      1      3
 ```
 
-```R
+```r
 play_game(team_data = team_data, play_fun = "play_fun_skellam", 
           team1 = 7, team2 = 8, 
           musthavewinner=FALSE, normalgoals = normalgoals)
 ```
 
-```R
+```r
 
 ##      Agoals Bgoals
 ## [1,]      0      2
 ```
 
-```R
+```r
 play_game(team_data = team_data, play_fun = "play_fun_elo", 
           team1 = 7, team2 = 8)
 ```
 
-```R
+```r
 ##      Agoals Bgoals
 ## [1,]      1      0
 ```
 
-```R
+```r
 play_game(team_data = team_data, train_data = wcmatches_train, 
           play_fun = "play_fun_double_poisson", 
           team1 = 7, team2 = 8)
 ```
 
-```R
+```r
 ##      Agoals Bgoals
 ## [1,]      0      1
 ```
@@ -97,12 +103,12 @@ play_game(team_data = team_data, train_data = wcmatches_train,
 
 让我们快速浏览下回归函数`glm`中的核心部分，`glm`函数中的因变量是一个队伍一场比赛中的进球数，自变量是2014年世界杯开始前的FIFA评分和ELO评分。FIFA评分和ELO评分都是著名的评分系统，两者之间的区别在于FIFA评分是官方的而ELO不是。ELO评分是基于国际象棋排名方法更改的。
 
-```R
+```r
 mod <- glm(goals ~ elo + fifa_start, family = poisson(link = log), data = wcmatches_train)
 broom::tidy(mod)
 ```
 
-```R
+```r
 ##          term      estimate    std.error  statistic      p.value
 ## 1 (Intercept) -3.5673415298 0.7934373236 -4.4960596 6.922433e-06
 ## 2         elo  0.0021479463 0.0005609247  3.8292949 1.285109e-04
@@ -117,7 +123,7 @@ broom::tidy(mod)
 
 下面展示的是在不同场景中预测获胜队伍的结果，包含小组赛、16强、1/4决赛、半决赛和总决赛。
 
-```R
+```r
 find_group_winners(team_data = team_data, 
                    group_match_data = group_match_data, 
                    play_fun = "play_fun_double_poisson",
@@ -125,7 +131,7 @@ find_group_winners(team_data = team_data,
   filter(groupRank %in% c(1,2)) %>% collect()
 ```
 
-```R
+```r
 ## # A tibble: 16 x 11
 ##    number name        group rating   elo fifa_start points goalsFore
 ##     <int> <chr>       <chr>  <dbl> <dbl>      <dbl>  <dbl>     <int>
@@ -149,14 +155,14 @@ find_group_winners(team_data = team_data,
 ## #   groupRank <int>
 ```
 
-```R
+```r
 find_knockout_winners(team_data = team_data, 
-                      match_data = structure(c(3L, 8L, 10L, 13L), .Dim = c(2L, 2L)), 
+                     match_data = structure(c(3L, 8L, 10L, 13L), .Dim = c(2L, 2L)), 
                       play_fun = "play_fun_double_poisson",
                       train_data = wcmatches_train)$goals
 ```
 
-```
+```r
 ##   team1 team2 goals1 goals2
 ## 1     3    10      0      4
 ## 2     8    13      1      1
@@ -168,7 +174,7 @@ find_knockout_winners(team_data = team_data,
 
 说了这么多，我们最后把上述提到的关键功能都打包到了函数`simulate_tournament()`里，函数的返回结果是`nsim`次模拟比赛的排名和进球数，`nsim`就是`simulate_tournament()`函数的`nsim`参数。每次模拟结果都包含32支队伍。`set.seed()`函数设置随机数种子以保证结果可以复现。
 
-```R
+```r
 # 模拟nsim次世界杯
 set.seed(000)
 result <- simulate_tournament(nsim = nsim, play_fun = "play_fun_simplest") 
@@ -183,25 +189,25 @@ result4 <- simulate_tournament(nsim = nsim, play_fun = "play_fun_double_poisson"
 
 `get_winner()`函数返回一个获胜概率的表单，从高到低依次往下排列。除了随机泊松模型外，其余三个模型都认为巴西会获得冠军，巴西和德国包揽了比赛的前两名。至于第三名和第四名，当随机数种子不同时队伍（下图中深蓝色）很有可能会变化。方差可能是一个可以深挖的点。
 
-```R
+```r
 get_winner(result) %>% plot_winner()
 ```
 
 ![r1i](https://github.com/MangoTheCat/blog_worldcup2018/raw/master/dataMod_files/figure-markdown_github/winner-1.png)
 
-```R
+```r
 get_winner(result2) %>% plot_winner()
 ```
 
 ![r2i](https://github.com/MangoTheCat/blog_worldcup2018/raw/master/dataMod_files/figure-markdown_github/winner-2.png)
 
-```R
+```r
 get_winner(result3) %>% plot_winner()
 ```
 
 ![ri3](https://github.com/MangoTheCat/blog_worldcup2018/raw/master/dataMod_files/figure-markdown_github/winner-3.png)
 
-```R
+```r
 get_winner(result4) %>% plot_winner()
 ```
 
@@ -211,7 +217,7 @@ get_winner(result4) %>% plot_winner()
 
 四个模型中，skellum模型似乎最可靠，我的双泊松模型所给出的得分频率要比实际的更低。这两个模型的结果都认为巴西将获得最多的进球数。
 
-```R
+```r
 get_top_scorer(nsim = nsim, result_data = result2) %>% plot_top_scorer()
 ```
 
@@ -219,7 +225,7 @@ get_top_scorer(nsim = nsim, result_data = result2) %>% plot_top_scorer()
 
 
 
-```R
+```r
 get_top_scorer(nsim = nsim, result_data = result4) %>% plot_top_scorer()
 ```
 
@@ -231,7 +237,7 @@ get_top_scorer(nsim = nsim, result_data = result4) %>% plot_top_scorer()
 
 模型的整体框架还是很清晰的，你需要做的只是通过参数来选择`play_game`函数，比如 `game_fun_simplest`, `game_fun_skellam` 和 `game_fun_elo`。
 
-欢迎优秀的大家在Github上给[ekstroem/socceR2018](https://github.com/MangoTheCat/blog_worldcup2018/)提交PR。谁又能成为本届世界杯最佳预言帝呢？
+欢迎优秀的大家在Github上给[ekstroem/socceR2018](https://github.com/ekstroem/socceR2018)提交PR。谁又能成为本届世界杯最佳预言帝呢？
 
 如果你喜欢这篇文章，欢迎给这篇文章的[Github](https://github.com/MangoTheCat/blog_worldcup2018)点Star，fork，提交issue或者扔香蕉，文章所提及的所有代码都在[Github](https://github.com/MangoTheCat/blog_worldcup2018)中。同时非常感谢Rich, Doug, Adnan以及所有分享过想法的人，没有他们的帮助就没有这篇文章，让我们一起把知识传递给算法。
 
@@ -244,7 +250,7 @@ get_top_scorer(nsim = nsim, result_data = result4) %>% plot_top_scorer()
    - <https://www.betfair.com/sport/football>
    - <https://www.eloratings.net/2018_World_Cup>
    - <http://www.fifa.com/fifa-world-ranking/ranking-table/men/index.html>
-2. 模型改进。这可能是最关键的一点。举例而言，已经有不少的研究证明双变量的泊松分布对足球预测是有帮助的。
-3. 特征工程。GDP之类的经济因素；球员总价、球员保险、球员受伤等市场因素可能也会帮助提升精度。
-4. 模型评价。了解我们的模型是否具有良好的预测可信度的一种方法是在2018年7月15日之后根据实际结果评估预测结果。目前来自赌场的赔率也是一个参考因素。在历史数据集上运行模型也不是也不能的，比如可以对2014世界杯运行模型，并对模型进行选择。
-5. 函数和R包还有改善的余地，代码也可以进一步整理。
+1. 模型改进。这可能是最关键的一点。举例而言，已经有不少的研究证明双变量的泊松分布对足球预测是有帮助的。
+1. 特征工程。GDP之类的经济因素；球员总价、球员保险、球员受伤等市场因素可能也会帮助提升精度。
+1. 模型评价。了解我们的模型是否具有良好的预测可信度的一种方法是在2018年7月15日之后根据实际结果评估预测结果。目前来自赌场的赔率也是一个参考因素。在历史数据集上运行模型也不是也不能的，比如可以对2014世界杯运行模型，并对模型进行选择。
+1. 函数和R包还有改善的余地，代码也可以进一步整理。
