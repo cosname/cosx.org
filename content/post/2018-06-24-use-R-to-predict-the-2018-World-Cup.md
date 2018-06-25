@@ -10,6 +10,7 @@ categories:
 tags:
   - R语言
   - 世界杯
+forum_id: XXXXXX
 ---
 >本文翻译自[Mango Solution的博客](https://www.r-bloggers.com/another-prediction-for-the-fifa-world-cup-2018/)，已获得原作者授权
 
@@ -55,7 +56,7 @@ Claus提出了三个计算单场比赛结果的模型。第一个模型基于两
 `play_game`函数包装好了上述四个模型，模型的选择由参数**play_fun**参数实现。
 
 ```r
-# Specify team Spain and Portugal
+# 选定西班牙和葡萄牙作为对手
 play_game(play_fun = "play_fun_simplest", 
           team1 = 7, team2 = 8, 
           musthavewinner=FALSE, normalgoals = normalgoals)
