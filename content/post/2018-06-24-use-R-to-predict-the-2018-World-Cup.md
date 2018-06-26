@@ -12,7 +12,7 @@ tags:
   - 世界杯
 forum_id: XXXXXX
 ---
->本文翻译自[Mango Solution的博客](https://www.r-bloggers.com/another-prediction-for-the-fifa-world-cup-2018/)，作者杨环，就职于Mango Solutions，担任数据科学咨询顾问。本文已获得原作者授权。
+>本文翻译自[Mango Solution的博客](https://www.mango-solutions.com/blog/another-prediction-of-fifa-world-cup-2018)，作者杨环，就职于Mango Solutions，担任数据科学咨询顾问。本文已获得原作者授权。
 
 
 几周前的皇家马德里VS利物浦的欧冠总决赛是我差不多十年来唯一严肃认真看完的一场比赛，但我居然会挺胸抬头地预测捧起2018年大力神杯的会是巴西队？如果（真假伪）各界球迷朋友发现本文口感略柴，可能是因为我的足球类自然语言处理能力欠佳。不要紧，你可以关注下面更有趣的模型训练、预测模拟与代码实现的讨论。 
