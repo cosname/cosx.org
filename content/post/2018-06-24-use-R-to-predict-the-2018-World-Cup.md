@@ -1,16 +1,16 @@
 ---
 title: R代码模拟世界杯1000次，足球小白速成世界杯预言姐
-author: Ava Yang
+author: 夏丰盛
 date: '2018-06-24'
 slug: use-R-to-predict-the-2018-World-Cup
-meta_extra: 译者：夏丰盛；
+meta_extra: 原作者：杨环；译者：夏丰盛；审稿：郎大为；编辑：雷博文；
 categories:
   - R语言
   - 统计应用
 tags:
   - R语言
   - 世界杯
-forum_id: XXXXXX
+forum_id: 420058
 ---
 >本文翻译自[Mango Solution的博客](https://www.mango-solutions.com/blog/another-prediction-of-fifa-world-cup-2018)，作者杨环，就职于Mango Solutions，担任数据科学咨询顾问。本文已获得原作者授权。
 
