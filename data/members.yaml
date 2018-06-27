@@ -141,6 +141,9 @@ list:
   - name: 徐浩
     image: https://cloud.githubusercontent.com/assets/7221728/25791994/77d093e8-33f6-11e7-9990-3d4436146817.jpg
     intro: JD Power的数据分析师。
+  - name: 夏丰盛
+    image: https://avatars3.githubusercontent.com/u/25638404?s=460&v=4
+    intro: 浙江大学在读硕士研究生，钟情R语言，画过电路，焊过板子，热爱编程，励志做个数据科学家。
   - name: 闫晗
     image: https://cloud.githubusercontent.com/assets/7221728/25832350/af4afea2-349c-11e7-9bc5-374056619d8e.jpg
     intro: 人大统计硕士，资深吃货，混迹于cos大神中的小学渣一枚。好读书，不求甚解；好行路，不问远方。
