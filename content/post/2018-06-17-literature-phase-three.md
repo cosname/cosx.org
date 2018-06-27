@@ -7,6 +7,7 @@ categories:
   - 推荐文章
 tags:
   - 科研生活
+  - 文献管理
 meta_extra: ""
 forum_id:
 ---
