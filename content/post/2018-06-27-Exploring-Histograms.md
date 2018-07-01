@@ -1,6 +1,6 @@
 ---
 title: 探索直方图
-date: '2018-6-27'
+date: '2018-06-27'
 author: 曾加
 categories:
   - 数据可视化
