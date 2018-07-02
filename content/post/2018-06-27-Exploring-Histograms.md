@@ -3,7 +3,7 @@ title: 探索直方图
 date: '2018-06-27'
 author: 曾加
 categories:
-  - 数据可视化
+  - 统计图形
 tags:
 slug: Exploring Histograms
 forum_id: 
