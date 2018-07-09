@@ -1,4 +1,21 @@
-#特伦斯的作品:统计学上的创造力
+title: 特伦斯的作品：统计学上的创造力
+
+date: ‘2018-07-07’
+
+author: 李杰桠
+
+slug: Terence's-Stuff:-Creativity-in-Statistics
+
+meta_extra: 原作者：Terence；
+
+categories:
+
+tags:
+
+forum_id:
+>本文翻译自http://bulletin.imstat.org/category/terences-stuff/ ，作者Terence。本文已获得原作者授权。
+
+# 特伦斯的作品:统计学上的创造力
 
 你可能知道那句老话:他使用统计数据，就像一个醉汉用灯柱来支撑而不是照明。但是其他人，比如：非统计学家、非应用统计学家，知道我们是如何阐明的，而不是支持或者不支持?
 
