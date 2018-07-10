@@ -6,12 +6,12 @@ slug: interview-of-jun-shao
 categories:
   - COS访谈
 tags: 
- - cos访谈
- - 重抽样
- - 缺失数据
- - Rao-Shao方法
- - 生物等价性
- - 时间分配
+  - cos访谈
+  - 重抽样
+  - 缺失数据
+  - Rao-Shao方法
+  - 生物等价性
+  - 时间分配
 slug: interview-of-jun-shao
 meta_extra: "编辑：王小宁、范超  审稿：朱雪宁"
 forum_id: 419984
@@ -19,7 +19,7 @@ forum_id: 419984
 
 > **简介** [邵军教授](http://www.stat.wisc.edu/~shao/)1987年8月获美国威斯康星-麦迪逊分校统计学博士学位，1996年获美国数理统计学会Fellow，1999年获美国统计学会Fellow，多次获得美国自然科学基金，曾任JASA、Statistica Sinica副主编，Journal of Multivariate Analysis和Sankhya联合主编，现任Journal of Nonparametric Statistics 主编，Journal of System Science and Complexity联合主编，2017年联合创立Statistical Theory and Related Fields 并担任总编辑。曾担任美国威斯康星-麦迪逊分校统计系系主任（2005-2009）、泛华统计学会会长（2007），现兼任美国国家统计局高级研究员，并任美国多家制药厂的统计顾问，2009年入选“国家千人计划”，现为美国威斯康星-麦迪逊分校统计系教授和华东师范大学特聘教授。邵教授的6本统计学专著和课本之一的《数理统计》已成为数理统计理论名著，并成为北美和中国多个大学的统计学研究生教材。自1987年以来邵教授共发表学术论文180余篇，其中50余篇为医药统计方面论文，在重抽样技术、变量选择、生物统计和缺失数据的统计处理等方面做了大量的开创性工作。
 
-![图1，邵军教授](https://github.com/xiaoningwang/Archive/blob/master/Shao/shao.jpg)
+![图1，邵军教授](https://github.com/xiaoningwang/Archive/raw/master/Shao/shao.jpg)
 
 ## 求学生涯
 
@@ -45,13 +45,13 @@ forum_id: 419984
 
 **邵老师**：因为当时在威斯康星的时候，一开始本来是想跟刁锦寰先生学习，那时候他主要的研究方向一个是时间序列，还有一个是贝叶斯统计。当时就觉得这个挺好，但是我来的那一年刁先生去了芝加哥大学任教。所以我修课还是照样修，那个时候去做什么问题呢，时间序列和贝叶斯有其他老师，但我觉得不好，就没有去做相关的研究。后来就跟吴建福老师搞了一些东西，因为他当时给我出了一个问题，他当时对重抽样（Jackknife）很感兴趣，那时已经搞了几年，他已经证明出来一个结果，他说关于这个问题更广泛的结果还没有做出来，所以就把这个问题的一般性情况交给我来证明。那个时候正好暑假，他说你没事情可能弄弄看。后来我就证明出来了，证明出这个问题后好像自然而然的就选这个作为我的研究方向，那后面的研究方向就基本上都是重抽样的Jackknife和Bootstrap这些方法。当时在80年代的时候，那个东西是蛮好的一个课题，因为79年的时候，Efron发表了第一篇关于Bootstrap的文章，所以80年代正好很多人都研究Bootstrap，我当时也研究这个问题。
 
-![图2，1987年邵老师博士毕业](https://github.com/xiaoningwang/Archive/blob/master/Shao/grad_1987.jpg)
+![图2，1987年邵老师博士毕业](https://github.com/xiaoningwang/Archive/raw/master/Shao/grad_1987.jpg)
 
 **王小宁**：后来您的方向就是跨的领域也比较多，包括重抽样、抽样技术、缺失数据后面又做高维变量选择，您能介绍一下您取得一些成果及其该领域的最新进展么。
 
 **邵老师**：做重抽样的时候，完成了我的毕业论文，然后写了几篇文章，那些都是有关重抽样的。后来我去了加拿大，在加拿大的渥太华通过吴建福老师的介绍，就认识了[J.N.K. Rao](http://lrsp.carleton.ca/directors/rao/)，他是抽样里面的一个大人物，所以当时就觉得好像跟他在一个城市里面，可以跟他做一些差不多的东西。所以实际上抽样不是我的主要研究方向，抽样的研究大多已经很完善了。主要在抽样里面有一些缺失数据，就去做这个缺失数据了。一开始就是跟 J.N.K. Rao 合作做了很多的缺失数据研究(Rao and Shao 1992,1996,1999;Shao and Rao 1993a,1993b)。在90年代的时候，跟他一块写了好几篇文章，其中有一篇92年的文章(Rao and Shao 1992)，那篇文章里的方法后来被大家称作 Rao-Shao 方法。
 
-![图3，Rao-Shao方法(Rao and Shao 1992)](https://github.com/xiaoningwang/Archive/blob/master/Shao/Rao-Shao.jpg)
+![图3，Rao-Shao方法(Rao and Shao 1992)](https://github.com/xiaoningwang/Archive/raw/master/Shao/Rao-Shao.jpg)
 
 后来为什么去做变量选择呢，是因为重抽样做到后面就变成了用交叉验证(Cross-Validation)来去做变量选择。所以是从那个地方去做了变量选择，发现变量选择自己本身有一大串事情可以做。当时做的变量选择中变量的个数不是太大，不是现在的那种高维度，比如说你从10个里面选2或3个变量这样子的做法，所以当时除了做这个缺失数据之外，对那个变量选择主要开始是从重抽样的角度去研究，后来发现你不用重抽样，其他的方法也可以来做变量选择。高维度的研究是到了2010年以后，那个时候才发现原先做的那些变量选择已经跟不上趟了，之前的只能处理很小的维度。
 
@@ -106,7 +106,7 @@ forum_id: 419984
 
 上完两个学期，这个学生他什么地方比较强我都比较清楚，一般来说我选的学生都是从那个地方来，其实我自己很少跑去选学生。通常都是那门课结束以后，学生他自己就找我，然后我一看这个学生可以，我觉得在我的范围之内，我就收了。也有个别学生不是学的那么好的，他跑来找我，有的时候我也收了，有的时候我就找些借口没收，这种情况不多。因为学我上的课那些学生也对我比较了解，所以来找我的人那门课修的也比较好才会来找我，好像有个别的那个课没怎么修得很好的人来找我。后来有些我也收了有些没收，这些实际上也没有特意去选。
 
-![图4，2017年邵老师和家人学生](https://github.com/xiaoningwang/Archive/blob/master/Shao/Birth_2017.JPG)
+![图4，2017年邵老师和家人学生](https://github.com/xiaoningwang/Archive/raw/master/Shao/Birth_2017.JPG)
 
 培养学生的话，我觉得学生可以初分成两类，一类学生应用的能力很强，但是他对搞理论的东西不大感兴趣。另外一类学生会整理论，可能对应用不太感兴趣。当然也有学生是应用和理论都擅长的，也有学生是两个都差的。我一般来说就是按照学生大概是哪方面比较强，我就给找一个问题，比如说学生本身做研究、推导比较厉害，我就找一个比较细的问题，需要推导的。有的学生可能计算比较厉害，其他的可能不擅长，我也不会去找一个非常麻烦的题目。但不管怎么样，我的学生基本上总要证明一点什么东西，总要有点新的东西，然后发表至少一篇文章，有的学生弄好了以后，从来不再做这个研究了。
 
@@ -114,7 +114,7 @@ forum_id: 419984
 
 找到工作也不容易，但是至少也要完成自己的这部分东西。所以有的时候我跟学生说，我说你毕不了业，你先去工作，工作了以后你再回来考试，但是最终能够做到这一点的人也很少，后来跑来考试的也就是跟前面考试差不多了，也没有说因为这个过了半年他又做的怎么样了。
 
-![图5，邵老师和他的博士毕业生](https://github.com/xiaoningwang/Archive/blob/master/Shao/grad_2018.jpeg)
+![图5，邵老师和他的博士毕业生](https://github.com/xiaoningwang/Archive/raw/master/Shao/grad_2018.jpeg)
 
 ## 个人观点
 
@@ -139,7 +139,7 @@ forum_id: 419984
 
 **王小宁**：请您介绍一下去年办的杂志《[Statistical Theory and Related Fields](https://www.tandfonline.com/loi/tstf20)》。
 
-![图6，Statistical Theory and Related Fields 杂志封面](https://github.com/xiaoningwang/Archive/blob/master/Shao/Strf.jpg)
+![图6，Statistical Theory and Related Fields 杂志封面](https://github.com/xiaoningwang/Archive/raw/master/Shao/Strf.jpg)
 
 **邵老师**：因为多年中国本土没有一个英文的统计杂志，所以当时觉得这是第一本英文杂志，我们以前有的都是中文的，或者不是中国本土的，所以从去年开始出了第一期和第二期，现在为了这个事情在奋斗，为了稿源在奋斗。
 

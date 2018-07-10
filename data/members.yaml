@@ -25,7 +25,7 @@ list:
     intro: 在eBay从事 Experimentation Analytics Research。网络上素来自黑为“落园园主”。
   - name: 陈新宇
     image: https://raw.githubusercontent.com/xinyulab/xinyulab.github.io/master/img/avatar-cxy.jpg
-    intro: 华东师范大学应用统计硕士，研究方向为Statistical Learning & Deep Learning，做过美编，懂点前端，会修电脑的半吊子程序员。
+    intro: 华东师范大学应用统计硕士，研究方向为Deep Learning & Hign Performance Computing，现任Intel Deep Learning Engineer，为深度学习框架MXNet添砖加瓦。
   - name: 邓金涛
     image: https://cloud.githubusercontent.com/assets/7221728/25788559/9a1f0282-33dc-11e7-9f63-10a7ac42c4f9.jpg
     intro: 男，中国人民大学2014级统计学院学渣一枚，出于莫名的原因大家都叫我“小王子”。 兴趣爱好还算广泛，篮球打得还过得去，钢琴弹得也还马虎。当初由于担任宣传部部长等机缘巧合进入了统计之都大家庭。不过自从本人大三在宣传部卸任后，业务技术早已被抛到九霄云外，因而硬着头皮怒怼出的东西常被云伯，秋思等人吐槽，实在有愧于江东父老。
@@ -53,7 +53,7 @@ list:
     intro: 高涛，中国人民大学2012级数理统计研究生，2009年在太云带领下加入COS，给COS编辑部和R会议打杂，参与《R语言实战》《ggplot2：数据分析与图形艺术》书籍翻译。对统计机器学习、优化算法、时序预测感兴趣，之前混迹于互联网圈，现就职上海明汯投资做量化。博客：<http://joegaotao.github.io/>。
   - name: 何通
     image: https://avatars2.githubusercontent.com/u/1289856
-    intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任Fortinet软件工程师。
+    intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任AWS Applied Scientist，为深度学习框架MXNet添砖加瓦。
   - name: 侯澄钧
     image: https://cloud.githubusercontent.com/assets/7221728/25832197/c3961488-349b-11e7-9b2d-814f6cfc1e63.jpg
     intro: 俄亥俄州立大学运筹学博士，目前在美国从事财产事故险领域的保险产品开发，涉及数据分析、统计建模，产品算法优化等方面的工作。离乡十载，海飘七年，至今未归。喜欢运动，尤其爱好滑雪和网球。作为一名十年老Dotaer，面对“联盟”和“荣耀”时总有一种深深的优越感。热爱数据科学，也十分相信数据科学在未来的无限可能。
@@ -141,6 +141,9 @@ list:
   - name: 徐浩
     image: https://cloud.githubusercontent.com/assets/7221728/25791994/77d093e8-33f6-11e7-9990-3d4436146817.jpg
     intro: JD Power的数据分析师。
+  - name: 夏丰盛
+    image: https://avatars3.githubusercontent.com/u/25638404?s=460&v=4
+    intro: 浙江大学在读硕士研究生，钟情R语言，画过电路，焊过板子，热爱编程，励志做个数据科学家。
   - name: 闫晗
     image: https://cloud.githubusercontent.com/assets/7221728/25832350/af4afea2-349c-11e7-9bc5-374056619d8e.jpg
     intro: 人大统计硕士，资深吃货，混迹于cos大神中的小学渣一枚。好读书，不求甚解；好行路，不问远方。
