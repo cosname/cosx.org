@@ -75,7 +75,7 @@ Data Carpentry上的关于如何使用电子表格的课程（点击查看：<ht
 
 我们认为这个表格列举的都很具有代表性，当然，有时候也可以换掉一些大写字母。也就是说，使用`max_temp`, `precipitation`和`mean_year_growth`等。
 
-不要在文件名中使用"`final`"，不要在文件名中使用"`final`"，不要在文件名中使用"`final`"。如果一定要用的话，你肯定会有"`final_ver2`"。（这个观点来自于一个被广泛引用的PhD漫画：<http://bit.ly/phdcom_final>）
+不要在文件名中使用"`final`"，不要在文件名中使用"`final`"，不要在文件名中使用"`final`"。如果一定要用的话，你肯定会有"`final_ver2`"。（这个观点来自于一个被广泛引用的PhD漫画：<http://phdcomics.com/comics/archive.php?comicid=1531>）
 
 ## 将日期写成YYYY-MM-DD的形式
 
