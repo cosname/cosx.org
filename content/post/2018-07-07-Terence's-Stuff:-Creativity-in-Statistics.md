@@ -1,6 +1,6 @@
 ---
 title: 特伦斯的作品：统计学上的创造力
-date: ‘2018-07-07’
+date: '2018-07-07'
 author: 李杰桠
 slug: Terence's-Stuff:-Creativity-in-Statistics
 meta_extra: 原作者：Terence；
