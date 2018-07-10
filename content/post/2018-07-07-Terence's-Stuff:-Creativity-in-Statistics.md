@@ -1,3 +1,4 @@
+---
 title: 特伦斯的作品：统计学上的创造力
 
 date: ‘2018-07-07’
@@ -14,6 +15,8 @@ tags:
 
 forum_id:
 >本文翻译自http://bulletin.imstat.org/category/terences-stuff/ ，作者Terence。本文已获得原作者授权。
+---
+
 
 # 特伦斯的作品:统计学上的创造力
 
