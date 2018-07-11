@@ -1,12 +1,9 @@
 ---
 title: 特伦斯的作品：统计学上的创造力
-date: '2018-07-07'
 author: 李杰桠
+date: '2018-07-07'
 slug: Terence's-Stuff:-Creativity-in-Statistics
-meta_extra: 原作者: Terence；
-categories:
-tags:
-forum_id:
+meta_extra: 原作者：Terence；译者：李杰桠；
 ---
 
 >本文翻译自http://bulletin.imstat.org/2014/05/terence’s-stuff-creativity-in-statistics/ ,作者Terence。本文已获得原作者授权。
