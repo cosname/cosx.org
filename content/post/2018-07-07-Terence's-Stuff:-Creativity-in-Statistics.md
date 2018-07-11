@@ -7,7 +7,6 @@ meta_extra: 原作者: Terence；
 categories:
 tags:
 forum_id:
-
 ---
 
 >本文翻译自http://bulletin.imstat.org/2014/05/terence’s-stuff-creativity-in-statistics/ ,作者Terence。本文已获得原作者授权。
