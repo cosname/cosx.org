@@ -1,11 +1,15 @@
 ---
 title: 电子表格中的数据整理
 author: 任怡萌
-date: '2018-07-10'
-slug: Data-organization-in-spreadsheets
+date: '2018-07-12'
+slug: data-organization-in-spreadsheets
 meta_extra: 原作者：Karl W. Broman，Kara Woo；译者：任怡萌
 categories:
+  - 统计软件
 tags:
+  - Excel
+  - 统计计算
+  - 数据整理
 forum_id:
 ---
 
@@ -91,8 +95,7 @@ Data Carpentry上的关于如何使用电子表格的课程（点击查看：<ht
 >
 > Kasper: _为什么？_
 >
-> Jeff: _Oct-4: because Excel turns it into a date and it actually has a cool function._
-> Jeff: _Oct-4: 因为Excel会把它转换成日期数据，这个函数真的太厉害了。_
+> Jeff: _因为Excel会把它转换成日期数据，但实际上这个转录因子有非常厉害的作用。_
 
 关于这个问题，Ziemann等（[ziemann2016](http://dx.doi.org/10.1186/s13059-016-1044-7)）研究了来自2005-2015年的18个期刊中补充文件的基因列表，发现大约20%的基因列表在基因名称上出现了错误，这些错误基本上都是刚才提到的被误转换成日期数据或者转换成浮点型数字。
 
