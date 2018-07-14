@@ -1,15 +1,24 @@
 ---
 title: 教程----什么是变分自动编码器
-author: 姚杰，黄理强
+author: 
+  - 姚杰
+  - 黄理强
 date: '2018-06-27'
 slug: what-is-variational-autoencoder-vae-tutorial
-meta_extra: 原作者：Jaan Altosaar；译者：姚杰，黄理强；
+meta_extra: "原作者：Jaan Altosaar；译者：姚杰，黄理强"
+categories:
+  - 机器学习
+tags:
+  - 机器学习
+  - 翻译
+forum_id: ""
 ---
->本文翻译自[Jaan Altosaar的博客](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/)，本文已获得原作者授权。
+
+> 本文翻译自[Jaan Altosaar的博客](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/)，本文已获得原作者授权。
 
 # 教程----什么是变分自动编码器
 
-从深度学习和图模型这两个角度来理解变分自动编码器。
+**从深度学习和图模型这两个角度来理解变分自动编码器（Variational Autoencoders，VAE）。**
 
 为什么深度学习研究者和概率机器学习人员谈及变分自动编码器会感到困惑？什么是变分自动编码器？围绕这个名词为什么会有一些不合理的疑惑？
 
@@ -17,7 +26,7 @@ meta_extra: 原作者：Jaan Altosaar；译者：姚杰，黄理强；
 
 变分自动编码器很酷。它可以使得我们基于数据设计复杂的生成模型，并且在大数据集上拟合。它可以生成虚构的名人脸部图像以及高分辨率的数字艺术作品。
 
-![img](https://jaan.io/images/variational-autoencoder-faces.jpg)
+![由变分自动编码器生成的虚构名人脸（作者: ALEC RADFORD）](https://jaan.io/images/variational-autoencoder-faces.jpg)
 
 <center>由变分自动编码器生成的虚构名人脸[作者: ALEC RADFORD](https://www.youtube.com/watch?v=XNZIN7Jh3Sg) </center>
 
@@ -29,7 +38,7 @@ meta_extra: 原作者：Jaan Altosaar；译者：姚杰，黄理强；
 
 在神经网络语言中，变分自动编码器由编码器，解码器和损失函数组成。
 
-![img](https://jaan.io/images/encoder-decoder.png)
+![编码器将数据压缩成一个潜在的空间，解码器在给定隐藏表示的情况下重建数据](https://jaan.io/images/encoder-decoder.png)
 
 <center>编码器将数据压缩成一个潜在的空间，解码器在给定隐藏表示的情况下重建数据</center>
 
@@ -70,8 +79,7 @@ $$
 
 我们可以将其表示为一个图模型：
 
-![img](https://jaan.io/images/graphical-model-variational-autoencoder.png)
-
+![变分自动编码器中模型的图模型表示](https://jaan.io/images/graphical-model-variational-autoencoder.png)
 
 <center>变分自动编码器中模型的图模型表示。潜变量Z是一个标准法线，数据是从$$P（X | Z）$$绘制的。X的阴影节点表示观测数据。对于手写数字的黑白图像，该数据似然性是伯努利分布式的。</center>
 
@@ -125,12 +133,12 @@ $ELBO_i(θ,ϕ)=−l_i(θ,ϕ)$。但是我们从概率模型和近似后验推理
 
 模型参数怎么样呢？我们掩饰了这一点，但这是一个重要的观点。术语“变分推断”通常是指关于变分参数λ的ELBO的最大化。我们也可以根据模型参数ϕ使得ELBO最大化（例如生成神经网络的权重和偏差）。这个技术称为变分EM（期望最大化），因为我们正在基于模型参数最大化数据的期望对数似然性。
 
-
 我们已经遵循变分推断的方法，我们已经定义：
   - 具有潜在变量和数据的概率模型p
   - 为了潜在变量近似后验概率的变量簇q
 
 然后我们使用变分推断算法来学习变分参数（在ELBO上使用梯度上升来学习$$λ$$）。我们使用变分EM作为模型参数（在ELBO上使用梯度上升来学习$$ϕ$$）
+
 ## 实验
 
 现在我们已经准备好查看模型中的样本了。 我们有两种选择来衡量进步: 先验概率和后验概率。 为了让我们更好地理解潜空间，我们可以想象潜变量$$  q_λ(z∣x)$$ 的后验分布是怎样的。
@@ -153,13 +161,13 @@ $ELBO_i(θ,ϕ)=−l_i(θ,ϕ)$。但是我们从概率模型和近似后验推理
 
 变分自动编码器(VAE)：在神经网络语言中，VAE由编码器，解码器和损失函数组成。在概率模型术语中，变分自编码器是指隐性高斯模型中的近似推理，其近似后验和可能性模型由神经网络（推理和生成网络）参数化得到。
 
-损失函数(Loss function)：在神经网络语言中，我们考虑损失函数。训练意味着尽量减少这些损失函数。但在变分推断中，我们最大化ELBO（这不是损失函数）。这会导致像调用名为optimizer.minimize(-elbo)的优化器那样的尴尬，因为神经网络框架中的优化器只支持最小化。
+损失函数(Loss function)：在神经网络语言中，我们考虑损失函数。训练意味着尽量减少这些损失函数。但在变分推断中，我们最大化ELBO（这不是损失函数）。这会导致像调用名为 `optimizer.minimize(-elbo)` 的优化器那样的尴尬，因为神经网络框架中的优化器只支持最小化。
 
 编码器(Encoder)：在神经网络世界中，编码器是根据数据x输出z的神经网络。在概率模型术语中，推理网络将潜变量z的近似后验参数化。推理网络将参数输出到分布q(z | x)。
 
 解码器(Decoder)：在深度学习中，解码器是根据z学习重建数据x的神经网络。就概率模型而言，给定潜变量z时数据x的可能性由生成网络进行参数化。生成网络将参数输出到似然分布p(x | z)。
 
-局部潜变量(Local  latent variables)：这些是每个数据点xi的对应的zi。全局潜变量是不存在的。因为只有局部潜变量，我们可以轻松地将ELBO分解为只依赖于单个数据点xi的Li，这使得随机梯度下降得以实现。
+局部潜变量(Local Latent Variables)：这些是每个数据点xi的对应的zi。全局潜变量是不存在的。因为只有局部潜变量，我们可以轻松地将ELBO分解为只依赖于单个数据点xi的Li，这使得随机梯度下降得以实现。
 
 推理(Inference)：在神经网络中，推理通常意味着给出新的，从未见过的数据点的隐藏表示预测。在概率模型中，推理是指根据给定观测数据推断潜变量的值。
 
@@ -185,7 +193,7 @@ $$
 
 ### 样本实现
 
-这里有一个简单的实现，用来生成这篇文章中的数字: [Github link](https://github.com/altosaar/vae/blob/master/vae.py) 
+这里有一个简单的实现，用来生成这篇文章中的数字: [Github 链接](https://github.com/altosaar/vae/blob/master/vae.py) 
 
 ### 脚注: 再参数化的技巧
 
