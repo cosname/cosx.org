@@ -4,7 +4,6 @@ author:
   - 姚杰
   - 黄理强
 date: '2018-06-27'
-slug: what-is-variational-autoencoder-vae-tutorial
 meta_extra: "原作者：Jaan Altosaar；译者：姚杰，黄理强"
 categories:
   - 机器学习
@@ -16,9 +15,7 @@ forum_id: ""
 
 > 本文翻译自[Jaan Altosaar的博客](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/)，本文已获得原作者授权。
 
-# 教程----什么是变分自动编码器
-
-**从深度学习和图模型这两个角度来理解变分自动编码器（Variational Autoencoders，VAE）。**
+> 从深度学习和图模型这两个角度来理解变分自动编码器（Variational Autoencoders，VAE）。
 
 为什么深度学习研究者和概率机器学习人员谈及变分自动编码器会感到困惑？什么是变分自动编码器？围绕这个名词为什么会有一些不合理的疑惑？
 
