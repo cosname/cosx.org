@@ -2,7 +2,7 @@
 title: "用R分析光荣《三国志》系列人物数据"
 date: 2018-04-01
 author: "Xinchen Pan"
-categories: ["R", "Data Analysis"]
+categories: ["R语言"]
 tags: ["三国", "R"]
 slug: RoTK-Analysis
 ---
@@ -534,9 +534,9 @@ wuhu_vs_wuzi <- function(attrs){
 
 
 ```r
-wuhu_vs_wuzi("武力") ## 下图由于众武将武力接近，所以名字全挤在了一块，
+wuhu_vs_wuzi("武力")
 ```
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-28-1.png)
+![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-30-1.png)
 
 从这个图来看基本五虎武力是碾压五子的，而五子里又属张辽徐晃武力最高。前者没有什么好说的，毕竟关羽赵飞的“万人敌”的称号是《三国志魏书程昱传》里记载的。赵云先不说在历史上真实形象如何，就凭他在演义里长坂坡，汉水拒敌的表现，以及他的人气，光荣就不敢不给赵云95以上的武力。五虎将的武力历代基本没什么变化，维持在95左右。乐进和于禁的武力在2代一度跌破60，后边走高达到了80多。
 
@@ -580,7 +580,7 @@ wuhu_vs_wuzi("武力") ## 下图由于众武将武力接近，所以名字全挤
 ```r
 wuhu_vs_wuzi("智力")
 ```
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-30-1.png)
+![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-31-1.png)
 智力从图来看五子除了张辽总体趋势都是在上升的，并且平均来看高于五虎将，主要是张飞和马超拖了后腿，而黄忠马马虎虎，智力维持在60上下。
 
 感觉相对于五虎大将，五子良将更多的是属于帅才，武力不一定是最顶尖的，但带兵打仗，以弱胜强，摧城拔寨的本事要强于五虎大将。
