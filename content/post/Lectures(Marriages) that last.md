@@ -2,8 +2,8 @@
 title：婚姻长久的秘诀
 author:王屿凌
 date:'2018-07-15'
-slug:lectures(marriages)-that-last
-meta-extra:原作者：Xiaomeng Li;译者：王屿凌；
+slug:lectures(marriages) that last
+meta-extra:原作者:Xiao-Li Meng;译者:王屿凌;
 categories:
   -统计应用
 tags:
@@ -12,7 +12,7 @@ tags:
 ---
 
 
->本文翻译自bulletin.imstat.org，作者Xiao-Li Meng。本文已获得作者授权。
+>本文翻译自http://bulletin.imstat.org/2016/05/xl-files-lectures-marriages-that-last/, 作者Xiao-Li Meng。本文已获得作者授权。
 
 当我在想读过我2013年7月发表在这里的文章的读者们还有多少能回忆起哈佛的地平线项目时，我以为一个人都没有。这个项目主要是训练学生根据他们的研究内容进行一个
 五分钟的Ted式演讲。但是显然不是没有人记得，因为有的学生也想让我经历他们所经历的，并且他们中的很多人还提名我参加了一年一度的“最具影响力讲座”，这个讲座于
