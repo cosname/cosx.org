@@ -172,7 +172,7 @@ read_html(doc) %>%
 
 1. 根据省的数字编码，获取市区的数据编码。比如河北省各市的数字编码：http://dealer.peugeot.com.cn/ajax.php?pid=3363&action=city 。查看源码可以看到石家庄市的数字编码是3394。
 
-1. 根据市区的数字编码，抓该市的经销商列表。比如石家庄市的两家经销商：http://dealer.peugeot.com.cn/ajax.php?cid=3394&action=dealer。从中可以拿到两个对应的字符编码，河北盛威汽车贸易有限公司的编码是 HBSWQCMYYXGS。
+1. 根据市区的数字编码，抓该市的经销商列表。比如石家庄市的两家经销商：http://dealer.peugeot.com.cn/ajax.php?cid=3394&action=dealer 。从中可以拿到两个对应的字符编码，河北盛威汽车贸易有限公司的编码是 HBSWQCMYYXGS。
 
 1. 由经销商的编码，进入到该经销商的详情页: http://dealer.peugeot.com.cn/dealer/HBSWQCMYYXGS 。接下来就使用解析术抽取响应的地址和电话等信息即可。提示，地图中的经纬度数据，可以搜索在源码中搜索 BMap.Point 看到。
 
