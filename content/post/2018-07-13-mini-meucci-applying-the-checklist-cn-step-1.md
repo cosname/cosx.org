@@ -1,6 +1,7 @@
 ---
 title: mini-Meucci：应用指南 - 第 1 步
 date: 2018-07-13
+slug: mini-meucci-applying-the-checklist-cn-step-1
 author: 何国星
 meta_extra: "原著：Peter Chan"
 categories:
