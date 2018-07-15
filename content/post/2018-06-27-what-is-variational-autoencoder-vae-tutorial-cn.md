@@ -4,6 +4,7 @@ author:
   - 姚杰
   - 黄理强
 date: '2018-06-27'
+slug: what-is-variational-autoencoder-vae-tutorial-cn
 meta_extra: "原作者：Jaan Altosaar；译者：姚杰，黄理强"
 categories:
   - 机器学习
