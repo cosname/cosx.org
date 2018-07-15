@@ -8,7 +8,7 @@ categories:
 tags:
   - 科研生活
   - 文献管理
-meta_extra: "审稿：朱雪宁"
+meta_extra: "审稿：黄帅"
 forum_id: 420076
 ---
 
