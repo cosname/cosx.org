@@ -1,6 +1,7 @@
 ---
 title: "Terence's Stuff: 解决不开心？改变你的心理模型。"
 date: '2018-07-08'
+slug: terences-stuff-not-happy-change-your-mental-model-cn
 author: "张冰清"
 tags:
   - 心理学
