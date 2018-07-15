@@ -2,6 +2,7 @@
 title: 特伦斯的作品：统计学上的创造力
 author: 李杰桠
 date: '2018-07-07'
+slug: terences-stuff-creativity-in-statistics-cn
 categories:
   - 推荐文章
 tags:
