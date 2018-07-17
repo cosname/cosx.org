@@ -112,7 +112,7 @@ xml_text(title_nodes)
 
 #### CSS选择器
 
-CSS选择器是通过标签的CSS属性达到筛选的目的。类似与XPath，它同样需要先将纯文本解析成DOM文档，再进行选择操作。
+CSS选择器是通过标签的CSS属性达到筛选的目的。类似于XPath，它同样需要先将纯文本解析成DOM文档，再进行选择操作。
 
 这里借用`rvest`包来实现，筛选出`class="title"`的标签并拿到标签内的文本。
 
@@ -126,7 +126,7 @@ read_html(doc) %>%
 读读[CSS 元素选择器](http://www.w3school.com.cn/css/css_selector_type.asp)教程，可以学到更多用法。另外，这个一边学一边练习的[小网站](http://flukeout.github.io/)也很带感呢。
 
 
-三种技巧相比之下，XPath的CSS选择器明显简单易用，但它们只适用于HTML和XML文档。正则表达式虽然规则复杂，但及其强大。利剑在手，任君选择。
+三种技巧相比之下，XPath和CSS选择器明显简单易用，但它们只适用于HTML和XML文档。正则表达式虽然规则复杂，但及其强大。利剑在手，任君选择。
 
 ## 工具破解篇
 
@@ -170,11 +170,11 @@ read_html(doc) %>%
 1. 访问[首页](http://www.peugeot.com.cn/)，抓取省市和响应的数字编码，比如北京市对应3361，河北省对应3363。
 
 
-1. 根据省的数字编码，获取市区的数据编码。比如河北省各市的数字编码：http://dealer.peugeot.com.cn/ajax.php?pid=3363&action=city 。查看源码可以看到石家庄市的数字编码是3394。
+1. 根据省的数字编码，获取市区的数据编码。比如河北省各市的数字编码：<http://dealer.peugeot.com.cn/ajax.php?pid=3363&action=city>。查看源码可以看到石家庄市的数字编码是3394。
 
-1. 根据市区的数字编码，抓该市的经销商列表。比如石家庄市的两家经销商：http://dealer.peugeot.com.cn/ajax.php?cid=3394&action=dealer 。从中可以拿到两个对应的字符编码，河北盛威汽车贸易有限公司的编码是 HBSWQCMYYXGS。
+1. 根据市区的数字编码，抓该市的经销商列表。比如石家庄市的两家经销商：<http://dealer.peugeot.com.cn/ajax.php?cid=3394&action=dealer>。从中可以拿到两个对应的字符编码，河北盛威汽车贸易有限公司的编码是 HBSWQCMYYXGS。
 
-1. 由经销商的编码，进入到该经销商的详情页: http://dealer.peugeot.com.cn/dealer/HBSWQCMYYXGS 。接下来就使用解析术抽取响应的地址和电话等信息即可。提示，地图中的经纬度数据，可以搜索在源码中搜索 BMap.Point 看到。
+1. 由经销商的编码，进入到该经销商的详情页: <http://dealer.peugeot.com.cn/dealer/HBSWQCMYYXGS>。接下来就使用解析术抽取响应的地址和电话等信息即可。提示，地图中的经纬度数据，可以搜索在源码中搜索 BMap.Point 看到。
 
 ```HTML
 # 部分网页源代码: 城市和相应的编码
