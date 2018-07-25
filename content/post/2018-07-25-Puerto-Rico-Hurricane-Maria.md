@@ -26,6 +26,7 @@ tags:
 
 首先画出波多黎各2017和2018年的每日死亡人数：
 
+
 ```r
 library(tidyverse)
 library(showtext)
@@ -44,9 +45,12 @@ official %>% filter(year >= 2017 & deaths > 0) %>%
   ggtitle("2017-2018年数据")
 ```
 
+![fig1](https://github.com/yongxin14/translation/blob/master/figures/raw_data.png)
+
 可以看到"玛利亚"飓风登陆之后的2-3个星期内，波多黎各每日死亡人数都明显增加，并在之后的3-4个月仍处于较高的数值。为保证数据质量，不考虑2018年4月15后的数据。
 
 随后结合从网上获得的波多黎各人口基数计算出每天的死亡率。取每年9月20日之前的日死亡率的中位数作为年死亡率（2018年由于数据缺失，取2017年的年死亡率），以此反映人口老龄化对死亡率的影响。由于自然死亡率还会随季节发生波动，因此利用2015年和2016年的数据计算每年同一天，日死亡率与年死亡率差值的均值。并用局部回归法重新拟合出一条光滑曲线，作为季节项。
+
 
 ```r
 population_by_year <- read_csv("https://raw.githubusercontent.com/yongxin14/translation/master/pr_popest_2010_17.csv")
@@ -95,7 +99,10 @@ official %>%
   ggtitle("日死亡率的季节波动")
 ```
 
+![fig2](https://github.com/yongxin14/translation/blob/master/figures/trend.png)
+
 接下来，将2017年1月1日至2018年4月15日的日死亡率序列进行季节和老龄化趋势调整，并以飓风登陆日期2017年9月20日为分界点，分别对灾前和灾后调整后的死亡率重新进行局部加权回归，拟合为两条光滑曲线。
+
 
 ```r
 after_smooth <- official %>% 
@@ -126,7 +133,10 @@ tmp %>% left_join(year_rate, by='year') %>%
   geom_hline(yintercept = 0, lty = 2)
 ```
 
+![fig3](https://github.com/yongxin14/translation/blob/master/figures/diff.png)
+
 如果假设2017年波多黎加的总人口恒定，以2016年底的人口数作为基数，那么结合之前已进行调整的死亡率，可以计算出灾后每天累积的"额外死亡人数“ ，即遇难人数。
+
 
 ```r
 the_pop <- filter(population_by_year, year == 2016) %>% .$pop
@@ -143,6 +153,8 @@ tmp %>% left_join(year_rate, by='year') %>%
   xlab('日期')+ylab("累积遇难人数") + 
   geom_hline(yintercept = 64, lty=2, col="grey")
 ```
+
+![fig4](https://github.com/yongxin14/translation/blob/master/figures/mortality.png)
 
 结果显示，截止17年10月底，飓风就已造成超过1000人遇难，远高于官方声称的64人。虽然该方法也存在部分问题，比如研究者一开始假设18年的人口老龄化影响和17年一致，即年死亡率相同，但由于巨灾导致了大量的人口迁移和死亡，社会年龄结构已产生较大变化，该假设是否合理需要进一步验证。但基本可以肯定的是，政府给出的数字确实严重低估了。
 
