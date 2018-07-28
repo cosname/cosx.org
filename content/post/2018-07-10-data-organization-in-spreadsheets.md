@@ -1,7 +1,7 @@
 ---
 title: 电子表格中的数据整理
 author: 任怡萌
-date: '2018-07-17'
+date: '2018-07-28'
 slug: data-organization-in-spreadsheets
 meta_extra: 原作者：Karl W. Broman，Kara Woo；译者：任怡萌
 categories:
@@ -10,7 +10,7 @@ tags:
   - Excel
   - 统计计算
   - 数据整理
-forum_id:
+forum_id: 420095
 ---
 
 > 本文翻译自Karl W. Broman和Kara H. Woo发表的[Data organization in spreadsheets](https://peerj.com/preprints/3183/)。作者Karl W. Broman，工作于威斯康星大学麦迪逊分校，担任生物统计和医学信息学部教授；作者Kara H. Woo，担任华盛顿大学信息学院信息管理员。本文已获得原作者授权。
