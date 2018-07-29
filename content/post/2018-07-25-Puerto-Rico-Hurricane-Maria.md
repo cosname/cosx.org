@@ -10,6 +10,7 @@ categories:
 tags:
   - 估计
   - 新闻
+ forum_id: 420097
 ---
 
 2017年9月20日，超级飓风“玛利亚”袭击了美属波多黎各自治邦，这场近90年来最强的飓风造成当地的基础设施严重损毁。同年12月9日，波多黎各政府发布的数据显示截止11月底，有64人死于飓风灾害。消息一出，社会舆论一片哗然，多家媒体和学术机构对此数据表示怀疑，认为这与当地受灾情况的严重程度不符。《纽约时报》的[独立调查](https://www.nytimes.com/interactive/2017/12/08/us/puerto-rico-hurricane-maria-death-toll.html)显示，截至17年10月底，遇难人数可能多达1052人；[Center for Investigative Journalism](http://periodismoinvestigativo.com/2017/12/nearly-1000-more-people-died-in-puerto-rico-after-hurricane-maria/)认为至少985人在灾害后的40天内死亡；波多黎各大学马亚圭斯分校的学者[计算](http://academic.uprm.edu/wrolke/research/Maria%20Deaths%20-%20Significance.pdf)出的死亡人数为822；一篇来自宾州州立大学与独立研究者的[论文](https://osf.io/preprints/socarxiv/s7dmu)估计出，因飓风遇难的人数应该是官方数据的10倍；2018年2月来自[Latino USA](http://latinousa.org/)对波多黎各健康署的数据分析显示，17年9月与10月应该有1194人死于飓风；而2018年5月来自哈佛大学的一份发表在《新英格兰医学杂志》上的[研究报告](http://www.nejm.org/doi/pdf/10.1056/NEJMsa1803972)则称截至17年底，“玛利亚”至少造成了当地4645人死亡。
