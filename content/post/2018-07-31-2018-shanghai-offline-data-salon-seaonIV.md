@@ -25,13 +25,19 @@ meta_extra:
 
 ## 演讲嘉宾 1：杜亚磊 （51talk ）
 
+![wechatimg909](https://user-images.githubusercontent.com/25638404/43410669-437f0b5e-945a-11e8-9fe5-52d96d6c1a44.jpeg)
+
 个人介绍： 掉入R坑有多年，如今回首已惘然；也曾痴心于Python，偶尔兼职写前端。现任51talk算法工程师，探索教育行业里的数据价值。
 
 ## 演讲嘉宾 2：曾加（彩虹无线）
 
+![9621532968993_ pic](https://user-images.githubusercontent.com/25638404/43410805-c1b659f0-945a-11e8-9c42-8117cd3541f1.jpg)
+
 个人介绍：曾加，浙大软院在读研究生，统计之都翻译组成员，对数据可视化较有兴趣，常用R语言和D3.js。 
 
 ## 演讲嘉宾3: 姚杰 （彩虹无线）
+
+![9631532968993_ pic](https://user-images.githubusercontent.com/25638404/43410806-c25543da-945a-11e8-8573-91b8b9325d99.jpg)
 
 个人介绍：姚杰，浙江大学在读研究生，统计之都翻译组成员，心平气和的折腾爱好者。
 
