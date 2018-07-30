@@ -127,6 +127,7 @@ plt.show()
 Attilio还提供不变性的可视化测试，糟糕的是他的所有代码都是用[Matlab](https://www.mathworks.com/matlabcentral/profile/authors/409528-attilio-meucci)写的。
 好消息是，他的所有代码都将用Python写，并且可供训练营的参加者使用。同时，你可以等我将它转化为Python代码（希望不是很差）。
 
+
 ### 测试模拟数据
 
 下面的图表显示了使用模拟数据进行不变性测试，模拟数据的构造是IID，前两个图表是对同分布的测试——数据简单地分为两半，如果它们是同分布的，则两个直方图应该看起来很相似。
