@@ -21,6 +21,8 @@ meta_extra:
 
 主持人：黄理强；	记录员：姚杰；	摄影：夏丰盛
 
+[猛戳我报名](http://2018shanghaisalon-4.eventdove.com/event/142609/page/183454)
+
 # 嘉宾简介
 
 ## 演讲嘉宾 1：杜亚磊 （51talk ）
