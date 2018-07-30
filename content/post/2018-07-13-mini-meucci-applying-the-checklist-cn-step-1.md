@@ -152,7 +152,7 @@ rnr.IIDAnalysis(Data)
 rnr.IIDAnalysis(invariants.ix[:,'AAPL'])
 ```
 
-![avatar](https://user-images.githubusercontent.com/36249755/43380755-d9c52b62-9404-11e8-92a9-fcdde0332401.png)
+![](https://user-images.githubusercontent.com/36249755/43380755-d9c52b62-9404-11e8-92a9-fcdde0332401.png)
 
 这看起来还不错（大致上是不变性成立），所以我们可以检查指南中的第一个框。顺便说一下，你应该对所有的代码进行这个测试，我将把它作为联系留给感兴趣的读者。
 
