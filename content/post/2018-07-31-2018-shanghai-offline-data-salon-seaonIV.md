@@ -37,7 +37,7 @@ meta_extra:
 
 ## 演讲嘉宾3: 姚杰 （彩虹无线）
 
-![9631532968993_ pic](https://user-images.githubusercontent.com/25638404/43410806-c25543da-945a-11e8-8573-91b8b9325d99.jpg)
+![1241532970612_ pic](https://user-images.githubusercontent.com/25638404/43412108-c4b17c6c-945e-11e8-9cb2-3b7210167f6f.jpg)
 
 个人介绍：姚杰，浙江大学在读研究生，统计之都翻译组成员，心平气和的折腾爱好者。
 
