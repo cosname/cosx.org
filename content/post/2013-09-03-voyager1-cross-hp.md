@@ -57,7 +57,7 @@ forum_id: 418965
 
 关于航海家旅行的数据可以很容易地在[这里](https://voyager.jpl.nasa.gov/science/Voyager_Science_Data.html)找到，但要是想得到各种模型的结果，那就要找物理专科的来了。
 
-![](http://abyss.uoregon.edu/~js/images/voy_traj.jpg)
+![](https://uploads.cosx.org/2013/09/voy_traj.jpg)
 
 航海家用了36年时间在看似庞大的太阳系里画了一条线，物理学家需要用它传回地有限数据来判断各种可能物理模型，或提出新的模型，来探索我们的星系的边际。科学探索的魅力正在于以观测到的和已有的知识来探索未知的领域。数据分析的精彩瞬间也在于不同人对于相同的数据也可以得到不同的结论。多有趣啊！
 

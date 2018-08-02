@@ -29,7 +29,7 @@ R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直�
   
 [http://blog.fens.me/r-rserve-java/](http://blog.fens.me/r-rserve-java/ "Rserve与Java的跨平台通信")
 
-![rserve-java](http://blog.fens.me/wp-content/uploads/2013/08/rserve-java.png)
+![rserve-java](https://uploads.cosx.org/2013/08/rserve-java.png)
 
 **前言**
 
@@ -159,7 +159,7 @@ tcp        0      0 127.0.0.1:6311          0.0.0.0:*               LISTEN      
   
     在Eclipse中新建Java工程，并加载JAR包环境中。
   
-![rserve1](http://blog.fens.me/wp-content/uploads/2013/08/rserve1.png)
+![rserve1](https://uploads.cosx.org/2013/08/rserve1.png)
 
 * 4、Java编程实现
 

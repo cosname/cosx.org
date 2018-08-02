@@ -10,7 +10,7 @@ slug: beijing-cos-salon-june-2013
 forum_id: 418944
 ---
 
-# ![配图](http://blog.fens.me/wp-content/uploads/2013/06/photo-cos1-small.jpg)
+# ![配图](https://uploads.cosx.org/2013/07/photo-cos1-small.jpg)
 
 2013年6月23日，十一期COS数据分析沙龙（北京站）在明主1016如期举行。本期沙龙主题是“RHadoop助R突破大数据难关”；沙龙嘉宾张丹先生围绕沙龙主题分享了有关在ubuntu系统下配置`RHadoop`的相关知识以及基于`RHadoop`完成数据分析工作的相关案例。
 
@@ -218,7 +218,7 @@ recommend <- function(udata = udata, co = coMatrix, num = 0){
 
 **现场图片**
 
-![rhadoop-cos4](http://blog.fens.me/wp-content/uploads/2013/06/rhadoop-cos4.jpg)
+![rhadoop-cos4](https://uploads.cosx.org/2013/07/rhadoop-cos4.jpg)
 
 **沙龙视频：**
 

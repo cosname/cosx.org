@@ -100,7 +100,7 @@ forum_id: 419023
   
 `$$ \int_0^1 x^n dx = \frac{1}{n+1}, n=0,1,2,\ldots .$$`
 
-![求圆弧下的面积](http://www.flickering.cn/wp-content/uploads/2014/06/circle-area.png)
+![求圆弧下的面积](https://uploads.cosx.org/2014/07/circle-area.png)
 
 圆的面积一直是千百年来数学家们深入关心和研究的问题，很自然地沃利斯也想到了可以使用同样的思路来处理圆的面积。 不过数学家们早已经证明道圆的面积是 `\(\pi r^2\)`，用积分的方法去计算圆的面积能带来什么好处呢？ 沃利斯在此做了一个逆向思维，他的真实目标并不是要计算圆的面积，而是冲着`\(\pi\)` 去的。 沃利斯的一个漂亮的思路是：我们已经知道四分之一的单位圆圆弧 `\(y=\sqrt{1-x^2} (0 \le x \le 1)\)` 和坐标轴围成的面积是 `\(\frac{\pi}{4}\)`, 如果这个面积能通过无穷分割的方法表达成一个解析表达式，那我们其实就可以得到计算 `\(\pi\)` 的一个解析表达式。
 
@@ -257,7 +257,7 @@ P\{{S_n} = n\} & = & \displaystyle P\{ n -1 < {S_n} \le n\} \\
 
 ![The factors](https://uploads.cosx.org/2014/07/factorial1.png)
 
-![通过`\((n,n!)\)`的曲线](http://www.flickering.cn/wp-content/uploads/2014/06/factorial-curve.png)
+![通过`\((n,n!)\)`的曲线](https://uploads.cosx.org/2014/07/factorial-curve.png)
 
 但是`\(n!\)`这个数列增长的速度过快，数值计算非常困难，要做这个序列的插值计算可不容易。幸运的是当时对数已经被纳皮尔(John Napier, 1550-1617) 发明出来，并且在数值计算上显示了其神通，被科学家们广泛接受。斯特林和棣莫弗在他们的研究中大量的使用对数做计算，所以很自然地斯特林转而考虑对序列 `\(\log_{10} n!\)` 做插值计算。
 

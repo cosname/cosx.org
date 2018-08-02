@@ -19,7 +19,7 @@ forum_id: 418755
 
 # 第一节 什么是WinBUGS?
 
-[![](http://www.ejwagenmakers.com/misc/WinBUGSlogo.jpg)](https://www.mrc-bsu.cam.ac.uk/software/bugs/)
+[![](https://uploads.cosx.org/2008/12/WinBUGSlogo.jpg)](https://www.mrc-bsu.cam.ac.uk/software/bugs/)
 
 WinBUGS对于研究Bayesian统计分析的人来说，应该不会陌生。至少对于MCMC方法是不陌生的。WinBUGS (Bayesian inference Using Gibbs Sampling）就是一款通过MCMC方法来分析复杂统计模型的软件。其基本原理就是通过Gibbs sampling和Metropolis算法，从完全条件概率分布中抽样，从而生成马尔科夫链，通过迭代，最终估计出模型参数。引入Gibbs抽样与MCMC的好处是不言而喻的，就是想避免计算一个具有高维积分形式的完全联合后验概率公布，而代之以计算每个估计参数的单变量条件概率分布。具体的算法思想，在讲到具体问题的时候再加以叙述，在此不过多论述。就不拿公式出来吓人了（毕竟打公式也挺费劲啊）。<!--more-->
 

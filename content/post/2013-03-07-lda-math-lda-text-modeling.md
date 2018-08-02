@@ -22,13 +22,13 @@ forum_id: 418917
 
 对于上述的 PLSA 模型，贝叶斯学派显然是有意见的，doc-topic 骰子`$\overrightarrow{\theta}_m$`和 topic-word 骰子`$\overrightarrow{\varphi}_k$`都是模型中的参数，参数都是随机变量，怎么能没有先验分布呢？于是，类似于对 Unigram Model 的贝叶斯改造， 我们也可以如下在两个骰子参数前加上先验分布从而把 PLSA 对应的游戏过程改造为一个贝叶斯的游戏过程。由于 `$\overrightarrow{\varphi}_k$`和`$\overrightarrow{\theta}_m$`都对应到多项分布，所以先验分布的一个好的选择就是Drichlet 分布，于是我们就得到了 LDA(Latent Dirichlet Allocation)模型。
 
-![lda-dice](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dice.jpg)
+![lda-dice](https://uploads.cosx.org/2013/03/lda-dice.jpg)
 
 **LDA模型**
 
 在 LDA 模型中, 上帝是按照如下的规则玩文档生成的游戏的
 
-![game-lda-1](http://www.52nlp.cn/wp-content/uploads/2013/02/game-lda-1.jpg)
+![game-lda-1](https://uploads.cosx.org/2013/03/game-lda-1.jpg)
 
 <!--more-->假设语料库中有`$M$`篇文档，所有的的word和对应的topic如下表示
   
@@ -39,7 +39,7 @@ forum_id: 418917
   
 其中，`$\overrightarrow{w}_m$`表示第`$m$`篇文档中的词，`$\overrightarrow{z}_m$`表示这些词对应的 topic 编号。
 
-![word-topic-vector](http://www.52nlp.cn/wp-content/uploads/2013/02/word-topic-vector.jpg)
+![word-topic-vector](https://uploads.cosx.org/2013/03/word-topic-vector.jpg)
 
 **语料生成过程中的 word 和 topic**
 
@@ -47,7 +47,7 @@ forum_id: 418917
 
 使用概率图模型表示， LDA模型的游戏过程如图所示。
 
-![lda-graph-model](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-graph-model.jpg)
+![lda-graph-model](https://uploads.cosx.org/2013/03/lda-graph-model.jpg)
 
 **LDA概率图模型表示**
 
@@ -60,7 +60,7 @@ forum_id: 418917
 
 由第一个物理过程，我们知道`$\overrightarrow{\alpha}\rightarrow \overrightarrow{\theta}_m \rightarrow \overrightarrow{z}_{m}$`表示生成第`$m$`篇文档中的所有词对应的topics，显然`$\overrightarrow{\alpha}\rightarrow \overrightarrow{\theta}_m $`对应于 Dirichlet 分布，`$\overrightarrow{\theta}_m \rightarrow \overrightarrow{z}_{m}$`对应于 Multinomial 分布， 所以整体是一个 Dirichlet-Multinomial 共轭结构；
 
-![lda-dir-mult-conjugate-1](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dir-mult-conjugate-1.jpg)
+![lda-dir-mult-conjugate-1](https://uploads.cosx.org/2013/03/lda-dir-mult-conjugate-1.jpg)
   
 前文介绍 Bayesian Unigram Model 的小节中我们对 Dirichlet-Multinomial 共轭结构做了一些计算。借助于该小节中的结论，我们可以得到
   
@@ -80,7 +80,7 @@ p(\overrightarrow{\mathbf{z}} |\overrightarrow{\alpha}) & = \prod_{m=1}^M p(\ove
 
 目前为止，我们由`$M$`篇文档得到了`$M$`个 Dirichlet-Multinomial 共轭结构，还有额外`$K$`个 Dirichlet-Multinomial 共轭结构在哪儿呢？在上帝按照之前的规则玩 LDA 游戏的时候，上帝是先完全处理完成一篇文档，再处理下一篇文档。文档中每个词的生成都要抛两次骰子，第一次抛一个doc-topic骰子得到 topic, 第二次抛一个topic-word骰子得到 word，每次生成每篇文档中的一个词的时候这两次抛骰子的动作是紧邻轮换进行的。如果语料中一共有`$N$`个词，则上帝一共要抛 `$2N$`次骰子，轮换的抛doc-topic骰子和 topic-word骰子。但实际上有一些抛骰子的顺序是可以交换的，我们可以等价的调整`$2N$`次抛骰子的次序：前`$N$`次只抛doc-topic骰子得到语料中所有词的 topics,然后基于得到的每个词的 topic 编号，后$N$次只抛topic-word骰子生成`$N$`个word。于是上帝在玩 LDA 游戏的时候，可以等价的按照如下过程进行：
 
-![game-lda-2](http://www.52nlp.cn/wp-content/uploads/2013/02/game-lda-2.jpg)
+![game-lda-2](https://uploads.cosx.org/2013/03/game-lda-2.jpg)
 
 以上游戏是先生成了语料中所有词的 topic, 然后对每个词在给定 topic 的条件下生成 word。在语料中所有词的 topic 已经生成的条件下，任何两个 word 的生成动作都是可交换的。于是我们把语料中的词进行交换，把具有相同 topic 的词放在一起
 
@@ -93,7 +93,7 @@ p(\overrightarrow{\mathbf{z}} |\overrightarrow{\alpha}) & = \prod_{m=1}^M p(\ove
 
 对应于概率图中的第二个物理过程`$\overrightarrow{\beta} \rightarrow \overrightarrow{\varphi}_k \rightarrow w_{m,n} | k=z_{m,n}$`，在`$k=z_{m,n}$`的限制下，语料中任何两个由 topic`$k$`生成的词都是可交换的，即便他们不再同一个文档中，所以我们此处不再考虑文档的概念，转而考虑由同一个 topic 生成的词。考虑如下过程`$\overrightarrow{\beta} \rightarrow \overrightarrow{\varphi}_k \rightarrow \overrightarrow{w}_{(k)}$`，容易看出， 此时`$\overrightarrow{\beta} \rightarrow \overrightarrow{\varphi}_k $`对应于 Dirichlet 分布，`$ \overrightarrow{\varphi}_k \rightarrow \overrightarrow{w}_{(k)}$`对应于 Multinomial 分布， 所以整体也还是一个 Dirichlet-Multinomial 共轭结构；
 
-![lda-dir-mult-conjugate-2](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-dir-mult-conjugate-2.jpg)
+![lda-dir-mult-conjugate-2](https://uploads.cosx.org/2013/03/lda-dir-mult-conjugate-2.jpg)
   
 同样的，我们可以得到
   
@@ -191,7 +191,7 @@ p(z_i = k|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}) \pr
 
 这个公式是很漂亮的， 右边其实就是`$p(topic|doc) \cdot p(word|topic)$`，这个概率其实是`$doc \rightarrow topic \rightarrow word$`的路径概率，由于topic 有`$K$`个，所以 Gibbs Sampling 公式的物理意义其实就是在这`$K$`条路径中进行采样。
 
-![gibbs-path-search](http://www.52nlp.cn/wp-content/uploads/2013/02/gibbs-path-search.jpg)
+![gibbs-path-search](https://uploads.cosx.org/2013/03/gibbs-path-search.jpg)
 
 **doc-topic-word 路径概率**
 
@@ -204,7 +204,7 @@ p(z_i = k|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}) \pr
 
 有了 Gibbs Sampling 公式， 我们就可以基于语料训练 LDA 模型，并应用训练得到的模型对新的文档进行 topic 语义分析。训练的过程就是获取语料中的`$(z,w)$`的样本，而模型中的所有的参数都可以基于最终采样得到的样本进行估计。训练的流程很简单:
 
-![lda-training](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-training.jpg)
+![lda-training](https://uploads.cosx.org/2013/03/lda-training.jpg)
 
 对于 Gibbs Sampling 算法实现的细节，请参考 Gregor Heinrich 的 _Parameter estimation for text analysis_ 中对算法的描述，以及 [PLDA](http://code.google.com/p/plda) 的代码实现，此处不再赘述。
 
@@ -212,7 +212,7 @@ p(z_i = k|\overrightarrow{\mathbf{z}}_{\neg i}, \overrightarrow{\mathbf{w}}) \pr
 
 有了 LDA 的模型，对于新来的文档`$doc_{new}$`，我们如何做该文档的 topic 语义分布的计算呢？基本上 inference 的过程和 training 的过程完全类似。对于新的文档， 我们只要认为 Gibbs Sampling 公式中的`$\hat{\varphi}_{kt}$` 部分是稳定不变的，是由训练语料得到的模型提供的，所以采样过程中我们只要估计该文档的 topic 分布`$\overrightarrow{\theta}_{new}$`就好了。
 
-![lda-inference](http://www.52nlp.cn/wp-content/uploads/2013/02/lda-inference.jpg)
+![lda-inference](https://uploads.cosx.org/2013/03/lda-inference.jpg)
   
 # 6. 后记
 
