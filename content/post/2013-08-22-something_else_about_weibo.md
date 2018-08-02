@@ -87,13 +87,13 @@ sort(PR,decreasing=T)[1:10]
 
 结果如下：
 
-![](http://farm4.staticflickr.com/3802/9513512901_cd93357e03.jpg)
+![](https://farm4.staticflickr.com/3802/9513512901_cd93357e03.jpg)
 
 除了网络的结构（structure），是否微博的文本信息也能被我们利用呢？例如，\***和###都是体育爱好者，那么他们之间是否存在关联路径呢？如果存在，如何表示这种关系？
 
 鉴于上一篇的结果，我们可以将人与人之间的关系用topic联系起来。在一种更广泛的定义上，除了以人作为节点（structure vertice）表征的图模型，我们还可以加入以topic作为节点的关系表示（attribute vertice）。由于增加了图的表示信息，我们将它称为“增强图”（augmented graph）【此处翻译仅为本人理解而已，这种做法在paper中比较常见】。从另一种意义上说，信息通过他与其他人的文本信息关联传播了出去。将augmented graph用矩阵形式表示出来得到：
 
-![](http://farm4.staticflickr.com/3676/9513807523_7d53e24d75.jpg)
+![](https://farm4.staticflickr.com/3676/9513807523_7d53e24d75.jpg)
 
 设structure vertice与attribute vertice组合的权重分别为`\(\alpha\)`和`\(\beta\)`，满足`\(\alpha+\beta=1\)`，即将pagerank算法中的M矩阵乘以`\(\alpha\)`，将topicmodel得到的topic在doc上的后验分布乘以`\(\beta\)`得到上述矩阵中的`\(P_s\)`矩阵和A矩阵。O分块矩阵为零矩阵，代表topic之间不可相互转移（实际上这个假设略强）。同时，设topic在doc上的后验分布为C（doc-topic矩阵），其每一行和为1，对其列做归一化处理可得到B矩阵。
 
@@ -101,7 +101,7 @@ sort(PR,decreasing=T)[1:10]
 
 其数学表达式如下：
 
-![](http://farm4.staticflickr.com/3671/9514064743_8babf1d185.jpg)
+![](https://farm4.staticflickr.com/3671/9514064743_8babf1d185.jpg)
 
 这部分代码如下：
 
@@ -128,7 +128,7 @@ sort(PR,decreasing=T)[1:10]
 
 结果如下：
 
-![](http://farm4.staticflickr.com/3763/9513983533_16c5fc61a0.jpg)
+![](https://farm4.staticflickr.com/3763/9513983533_16c5fc61a0.jpg)
 
 来单独看看topic的排名以及对应的高频词吧：
 
@@ -138,7 +138,7 @@ ind=as.numeric(names(sort(PR[length(PR):(length(PR)-50+1)],decreasing=T)))
 term[,ind]
 ```
 
-![](http://farm6.staticflickr.com/5471/9516785250_8b14b04da8.jpg)
+![](https://farm6.staticflickr.com/5471/9516785250_8b14b04da8.jpg)
 
 **参考文献：**
 

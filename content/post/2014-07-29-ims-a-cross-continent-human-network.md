@@ -20,7 +20,7 @@ forum_id: 419027
 
 本文由肖楠、尤晓斌和蔡占锐翻译，邱怡轩、郁彬老师校对。
 
-![](http://bulletin.imstat.org/wp-content/uploads/Bin-Yu-2013.jpg)随着我在 IMS（国际数理统计学会）的主席任期行将结束，继而成为“前任主席”之际， 我想为吸纳新成员作出努力而回顾 IMS 的作用。正如 IMS 网站所述：“ IMS的宗旨在于促进统计和概率的理论与应用的发展和传播”。伴随着数据科学的出现，统计和概率思维在数据科学中扮演着越来越出众的角色，而 IMS 能否吸引更多的成员也变得至关重要。尤其是在诸如统计，概率，应用数学，计算机科学，电子工程和其他数据科学相关学科行将获得学历的人才，都将成为IMS的关注对象。对于这些年轻人而言，他们有一大部分职业生涯会在本职工作岗位，而另一部分将会是在诸如 IMS 等专业学会中。
+![](https://uploads.cosx.org/2014/07/Bin-Yu-2013.jpg)随着我在 IMS（国际数理统计学会）的主席任期行将结束，继而成为“前任主席”之际， 我想为吸纳新成员作出努力而回顾 IMS 的作用。正如 IMS 网站所述：“ IMS的宗旨在于促进统计和概率的理论与应用的发展和传播”。伴随着数据科学的出现，统计和概率思维在数据科学中扮演着越来越出众的角色，而 IMS 能否吸引更多的成员也变得至关重要。尤其是在诸如统计，概率，应用数学，计算机科学，电子工程和其他数据科学相关学科行将获得学历的人才，都将成为IMS的关注对象。对于这些年轻人而言，他们有一大部分职业生涯会在本职工作岗位，而另一部分将会是在诸如 IMS 等专业学会中。
 
 IMS 是个什么样的组织呢？回忆一下 IMS 的起源将会让我们更好地认识它。1930 年，Annals of Mathematical Statistics（数理统计年刊）成立。随后的 1935 年，在密歇根大学统计教授 Carver 的努力下促成了 IMS 独立于 ASA（美国统计协会）而组建，以帮助数理统计学家建立联系的纽带。1938 年，年刊的编委会由诸多重量级统计学者组成，Wilks（主编），Fisher，Neyman，Hotelling，Pearson，Darmois，Craig，Deming，von Mises，Rietz，Shewhart 均在编辑之列。1973年期刊被分为两份刊物，一为 Annals of Statistics（统计学年刊），另一为 Annals of Probability（概率论年刊）。之后，Statistical Science（统计科学），Annals of Applied Probability（应用概率论年刊）及 Annals of Applied Statistics（应用统计学年刊）随之创立。此外 IMS 也和其他学术组织合作创办了期刊，例如 Electronic Journal of Probability（概率论电子期刊），the Electronic Journal of Statistics（统计学电子期刊），the Journal of Computational and Graphical Statistics（计算机及图形统计期刊），Probability Surveys（概率论与统计调查）以及 Statistics Surveys（统计学与统计调查）。**从一开始，IMS 的重点就在高质量的期刊上。今天，IMS 已有更多重点，包括举办主要学术峰会和颁发统计及概率领域重要奖项等**
 

@@ -33,50 +33,50 @@ forum_id: 418828
 
 Imagine a circle that contains all of human knowledge:
 
-![PhDKnowledge.001](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.001.jpg)
+![PhDKnowledge.001](https://uploads.cosx.org/2011/01/PhDKnowledge.001.jpg)
 
 By the time you finish elementary school, you know a little:
 
-![PhDKnowledge.002](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.002.jpg)
+![PhDKnowledge.002](https://uploads.cosx.org/2011/01/PhDKnowledge.002.jpg)
 
 By the time you finish high school, you know a bit more:
 
-![PhDKnowledge.003](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.003.jpg)
+![PhDKnowledge.003](https://uploads.cosx.org/2011/01/PhDKnowledge.003.jpg)
 
 With a bachelor’s degree, you gain a specialty:
 
-![PhDKnowledge.004](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.004.jpg)
+![PhDKnowledge.004](https://uploads.cosx.org/2011/01/PhDKnowledge.004.jpg)
 
 A master’s degree deepens that specialty:
 
-![PhDKnowledge.005](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.005.jpg)
+![PhDKnowledge.005](https://uploads.cosx.org/2011/01/PhDKnowledge.005.jpg)
 
 Reading research papers takes you to the edge of human knowledge:
 
-![PhDKnowledge.006](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.006.jpg)
+![PhDKnowledge.006](https://uploads.cosx.org/2011/01/PhDKnowledge.006.jpg)
 
 Once you’re at the boundary, you focus:
 
-![PhDKnowledge.007](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.007.jpg)
+![PhDKnowledge.007](https://uploads.cosx.org/2011/01/PhDKnowledge.007.jpg)
 
 You push at the boundary for a few years:
 
-![PhDKnowledge.008](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.008.jpg)
+![PhDKnowledge.008](https://uploads.cosx.org/2011/01/PhDKnowledge.008.jpg)
 
 Until one day, the boundary gives way:
 
-![PhDKnowledge.009](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.009.jpg)
+![PhDKnowledge.009](https://uploads.cosx.org/2011/01/PhDKnowledge.009.jpg)
 
 And, that dent you’ve made is called a Ph.D.:
 
-![PhDKnowledge.010](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.010.jpg)
+![PhDKnowledge.010](https://uploads.cosx.org/2011/01/PhDKnowledge.010.jpg)
 
 Of course, the world looks different to you now:
 
-![PhDKnowledge.011](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.011.jpg)
+![PhDKnowledge.011](https://uploads.cosx.org/2011/01/PhDKnowledge.011.jpg)
 
 So, don’t forget the bigger picture:
 
-![PhDKnowledge.012](http://matt.might.net/articles/phd-school-in-pictures/images/PhDKnowledge.012.jpg)
+![PhDKnowledge.012](https://uploads.cosx.org/2011/01/PhDKnowledge.012.jpg)
 
 Keep pushing.

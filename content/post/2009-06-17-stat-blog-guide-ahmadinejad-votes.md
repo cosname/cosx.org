@@ -25,7 +25,7 @@ forum_id: 418791
 
 # 一、用数字作弊要小心：关于内贾德的选票
 
-![内贾德](http://i3.sinaimg.cn/dy/w/2009-06-13/1244852110_fSEzgk.jpg "内贾德") 日前伊朗的大选可谓轰轰隆隆，颇引人注目，内贾德在胜出之后却引来一片质疑，今日又有传闻说穆萨维才是真正的胜出者。总之疑云重重，那么让政治家玩政治家的游戏吧，我们从另一个视角来关注一下这次选举。密歇根大学的教授[Walter R. Mebane, Jr.](http://www-personal.umich.edu/)这几天一直在分析选票数据，今天的文章参见：[Note on the presidential election in Iran, June 2009](http://www-personal.umich.edu/~wmebane/note17jun2009.pdf)（注意论文和数据以及R代码都在更新中，如果不能访问，请到他的主页上找）
+![内贾德](https://i3.sinaimg.cn/dy/w/2009-06-13/1244852110_fSEzgk.jpg "内贾德") 日前伊朗的大选可谓轰轰隆隆，颇引人注目，内贾德在胜出之后却引来一片质疑，今日又有传闻说穆萨维才是真正的胜出者。总之疑云重重，那么让政治家玩政治家的游戏吧，我们从另一个视角来关注一下这次选举。密歇根大学的教授[Walter R. Mebane, Jr.](http://www-personal.umich.edu/)这几天一直在分析选票数据，今天的文章参见：[Note on the presidential election in Iran, June 2009](http://www-personal.umich.edu/~wmebane/note17jun2009.pdf)（注意论文和数据以及R代码都在更新中，如果不能访问，请到他的主页上找）
 
 文章主要基于两点理论去检验选票数据：
 

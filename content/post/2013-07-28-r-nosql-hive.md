@@ -26,7 +26,7 @@ forum_id: 418947
   
 [/2013/07/r-nosql-hive/](/2013/07/r-nosql-hive/ "R利剑NoSQL系列文章之hive")
 
-![rhive](http://blog.fens.me/wp-content/uploads/2013/07/rhive.png)
+![rhive](https://uploads.cosx.org/2013/07/rhive.png)
 
 **第四篇 R利剑Hive，分为5个章节**
 
@@ -55,7 +55,7 @@ hive与关系数据库的区别：
 
 Hive是基于Hadoop开发的数据仓库产品，所以首先我们要先有Hadoop的环境。
 
-![rhive](http://blog.fens.me/wp-content/uploads/2013/07/rhive.jpg)
+![rhive](https://uploads.cosx.org/2013/07/rhive.jpg)
 
 **Hadoop安装**，请参考：[Hadoop环境搭建](http://blog.fens.me/rhadoop-hadoop/ "RHadoop实践系列之一:Hadoop环境搭建"), [创建Hadoop母体虚拟机](http://blog.fens.me/hadoop-base-kvm/ "让Hadoop跑在云端系列文章 之 创建Hadoop母体虚拟机")
 

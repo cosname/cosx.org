@@ -194,19 +194,19 @@ R语言会议官方网站：[http://china-r.org](http://china-r.org/)
 
 # 赞助单位
 
-[![微量网](http://china-r.org/img/logo-wquant.png)](http://www.wquant.com/ "微量网")
+[![微量网](https://uploads.cosx.org/2014/06/logo-wquant.png)](http://www.wquant.com/ "微量网")
   
-[![光大证券](http://china-r.org/img/logo-everbright.png)](http://www.ebscn.com/ "光大证券") 
+[![光大证券](https://uploads.cosx.org/2014/06/logo-everbright.png)](http://www.ebscn.com/ "光大证券") 
 
-[![SupStat Inc.](http://china-r.org/img/logo-supstat.png)](http://supstat.com/cn "SupStat Inc.") 
+[![SupStat Inc.](https://uploads.cosx.org/2014/06/logo-supstat.png)](http://supstat.com/cn "SupStat Inc.") 
 
-[![Revolution Analytics](http://china-r.org/img/logo-revo.png)](http://www.revolutionanalytics.com/ "Revolution Analytics") 
+[![Revolution Analytics](https://uploads.cosx.org/2014/06/logo-revo.png)](http://www.revolutionanalytics.com/ "Revolution Analytics") 
 
-[![RStudio](http://china-r.org/img/logo-rstudio.png)](http://rstudio.com "RStudio") 
+[![RStudio](https://uploads.cosx.org/2014/06/logo-rstudio.png)](http://rstudio.com "RStudio") 
 
-[![VSNC](http://china-r.org/img/logo-vscn.jpg)](http://www.vsnc.com.cn/ "VSNC") 
+[![VSNC](https://uploads.cosx.org/2014/06/logo-vscn.jpg)](http://www.vsnc.com.cn/ "VSNC") 
 
-[![1degreenorth](http://china-r.org/img/logo-1degreenorth.png)](http://www.1degreenorth.com/ "1degreenorth")
+[![1degreenorth](https://uploads.cosx.org/2014/06/logo-1degreenorth.png)](http://www.1degreenorth.com/ "1degreenorth")
 
 # 参会单位
 
