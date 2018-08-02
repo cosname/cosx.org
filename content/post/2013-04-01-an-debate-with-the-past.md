@@ -20,7 +20,7 @@ forum_id: 418926
 
 弱水三千，取一瓢……建模……[用一千万条数据和用一万条数据建模有显著区别吗？](http://blog.revolutionanalytics.com/2013/03/lots-of-data-big-data.html)大数据时代，人人都赶着上Hadoop山下NoSQL海，在你苦等程序跑几个小时之前，不妨先取个子集探探路。（[肖楠](http://road2stat.com/)配图，旁白：一瓢足以撬动三千。）
 
-![旁白：一瓢足以撬动三千](http://i.imgur.com/KKywpqS.gif)
+![旁白：一瓢足以撬动三千](https://i.imgur.com/KKywpqS.gif)
 
 随着工具链的日趋完善，有人认为 [Python 数据分析社区正在崛起](http://strata.oreilly.com/2013/03/python-data-tools-just-keep-getting-better.html)。 与此同时，在 R 中调用 Python 也有了新的选择，DTL 大人已经 8 年没有维护的 RSPython 包出现了可能的继任者 [rPython](http://cran.r-project.org/package=rPython)。
 
