@@ -14,7 +14,7 @@ forum_id: 418928
 
 群众智慧vs机器学习？亚马逊土耳其机器人（Amazon Mechanical Turk）是一个著名的众包平台，借群众的智慧解决机器很难或无法解决的问题，例如[这段面目全非的文字竟然被广大群众活生生给识别还原了回来](http://www.decisionsciencenews.com/2013/04/02/who-would-have-thought-turkers-could-do-this/)。机器学习/人工智能专家们，要不要挑战一下？
 
-![](http://i.imgur.com/I6t4RE7.png)
+![](https://i.imgur.com/I6t4RE7.png)
 
 知名博客FlowingData的博主终于毕业了（历时七年），让我们看看[一个不靠谱的统计博士是怎么读出来的](http://flowingdata.com/2013/04/01/a-survival-guide-to-starting-and-finishing-a-phd/)。这家伙的学校在加州，而大部分时间却待在美国东部，这年头读博都能远程，革命靠自觉啊。
 

@@ -14,7 +14,7 @@ slug: introduction-to-remap
 forum_id: 419149
 ---
 
-![](http://lchiffon.github.io/REmap/REmapExamples/Nanchang/pic/remap.png)
+![](https://lchiffon.github.io/REmap/REmapExamples/Nanchang/pic/remap.png)
 
 REmap是一个基于Echarts2.0 <http://echarts.baidu.com/echarts2/>的一个R包。主要的目的是为广大数据玩家提供一个简便的，可交互的地图数据可视化工具。目前托管在github，<https://github.com/lchiffon/REmap>。
 

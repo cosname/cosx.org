@@ -95,7 +95,7 @@ R作为一门编程语言似乎名声不太好，但我觉得那不是事实。�
 
 **Yixuan**：好的，非常感谢你给我这次采访的机会！
 
-![](http://i.imgur.com/ICvLmEQ.jpg)
+![](https://i.imgur.com/ICvLmEQ.jpg)
 
 （Hadley Wickham 和统计之都翻译的[《ggplot2：数据分析与图形艺术》](/2013/05/ggplot2/)）
 

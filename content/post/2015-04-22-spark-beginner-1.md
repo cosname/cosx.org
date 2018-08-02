@@ -43,7 +43,7 @@ sudo apt-get install openjdk-7-jdk
 
 有了上面的开发环境，安装 Spark 就非常容易了，基本上只要下载预编译包，解压缩，然后添加系统路径即可。首先，到 <https://spark.apache.org/downloads.html> 选择最新的 Spark 版本和 Hadoop 版本（实际上我们暂时用不上 Hadoop，所以任何版本都行），然后下载压缩包。<!--more-->
 
-![](http://i.imgur.com/2IbWNhI.png)
+![](https://i.imgur.com/2IbWNhI.png)
 
 
 完毕后，将其中的文件夹解压到某个特定的位置，比如，我将解压出的文件夹命名为 `spark`，并放在我的主文件夹 `/home/qyx` 里，这样我就可以执行
@@ -64,7 +64,7 @@ export PATH=$PATH:/home/qyx/spark/bin
 
 我觉得 Spark 非常亲民的一点是它提供了一个交互式的命令行终端，这样用户就可以快速地测试一些命令和语句，而无需每次都保存代码脚本然后调用执行，这对于 R 和 Python 用户来说是非常顺心的一件事。如果已经将 Spark 的 `bin` 目录加入到了系统路径，那么在系统命令行里输入 `spark-shell` 就可以进入 Spark 的交互式终端了。
 
-![](http://i.imgur.com/WXuIyFf.png)
+![](https://i.imgur.com/WXuIyFf.png)
 
 如果出现了像图中 `scala>` 这样的提示符，就说明 Spark 安装成功。这里的 `scala` 指的是 Scala 编程语言。前面说了，Spark 主要使用 Scala 来进行开发，这意味着要最大程度地发挥 Spark 的性能，还需要再多学一门编程语言（Spark 还支持 Java 和 Python 的接口，但 Java 的语法没有 Scala 简洁，Python 的性能没有 Scala 的高）。虽然这需要花费一些额外的时间，但好在 Scala 的语法非常直观，基本上通过例子就可以模仿写出自己的程序来。
 
