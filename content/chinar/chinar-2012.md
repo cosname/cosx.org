@@ -23,7 +23,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 交通地图（点击看大图）：
 
-![人大交通地图](http://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)
+![人大交通地图](https://i288.photobucket.com/albums/ll181/xieyihui/1st-R-Conference-Beijing-map.png)
 
 人大校内地图（点击看大图）：
 
@@ -93,7 +93,7 @@ R是一门用于统计计算和作图的语言，其官方机构每年都会举�
 
 交通地图（点击看大图）：
 
-![上财交通地图](http://i1324.photobucket.com/albums/u608/lijian001/5th-R-Conference-Shanghai-map_zpsf8cf1f8c.png)
+![上财交通地图](https://i1324.photobucket.com/albums/u608/lijian001/5th-R-Conference-Shanghai-map_zpsf8cf1f8c.png)
 
 会议手册下载：[ChinaR!2012SH_Manual_V6](https://uploads.cosx.org/2012/09/ChinaR2012SH_Manual_V6.pdf)
 

@@ -20,7 +20,7 @@ forum_id: 418994
 联系方式：[birc@gsm.pku.ed.cn](mailto:birc@gsm.pku.ed.cn)
 
 
-![](http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34wMhLw9CmoWSeTvXLQiby6tcv1D52XPtztSRePhvhVUWW8LmggmEzJ5pNvOI83hC7bBIr6uvu3gwYA/0)
+![](https://mmbiz.qpic.cn/mmbiz/1y1ObuUF34wMhLw9CmoWSeTvXLQiby6tcv1D52XPtztSRePhvhVUWW8LmggmEzJ5pNvOI83hC7bBIr6uvu3gwYA/0)
 
 
 # 摘要

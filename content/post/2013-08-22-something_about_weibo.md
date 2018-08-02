@@ -68,7 +68,7 @@ name=name[aa]
 
 截取部分显示如下：
   
-![](http://farm4.staticflickr.com/3722/9358128510_ea8bfe62b3.jpg)
+![](https://farm4.staticflickr.com/3722/9358128510_ea8bfe62b3.jpg)
 
 # 2、数据清洗
 
@@ -248,7 +248,7 @@ Gibbs = LDA(dtm, k = k, method = "Gibbs",
 terms(Gibbs,5)
 ```
 
-![](http://farm8.staticflickr.com/7440/9363559724_8b4cf9a07f.jpg)
+![](https://farm8.staticflickr.com/7440/9363559724_8b4cf9a07f.jpg)
 
 可以看到它们之中有关于电子产品的（手机、电脑、游戏）、有关于热点新闻的（首都机场爆炸、雅安地震、城管打死瓜农）、有娱乐新闻的、也有各种活动有奖转发的。接下来，用训练好的topicmodel做inference，这里我们需要的是以人为单位的document:
 
@@ -280,15 +280,15 @@ dist=posterior(Gibbs,newdata=dtm)[[2]]
 
 不妨选取几个有代表性的topic（这里我去除了一些副词、连接词以及表征时间的词汇代表的topic），做聚类热力图。与单纯用词频文档聚类而得的热力图对比如下：
 
-![](http://farm8.staticflickr.com/7443/9360987263_837e7d2423.jpg)
+![](https://farm8.staticflickr.com/7443/9360987263_837e7d2423.jpg)
 
-![](http://farm8.staticflickr.com/7330/9360987287_03229dfe24.jpg)
+![](https://farm8.staticflickr.com/7330/9360987287_03229dfe24.jpg)
 
 可见topicmodel起到了一定的提取特征，去粗取精的功效。
 
 不妨拿名人们在所选的topic上的得分做一下聚类分析。这里按照每个topic中的高频词对不同topic进行命名，选取类别数为10（最大类中的名人个数<=60），对每一类中的均值topic得分做均值图：
 
-![](http://farm4.staticflickr.com/3698/9541751665_c935e93cec.jpg)
+![](https://farm4.staticflickr.com/3698/9541751665_c935e93cec.jpg)
 
 代码如下，每一类的名人保存于hc_name中：
 
@@ -320,7 +320,7 @@ p
 hc_name =lapply(hc_res,function(x) {return(name[x])})
 ```
 
-![](http://farm3.staticflickr.com/2813/9361857131_0ddd755308.jpg)
+![](https://farm3.staticflickr.com/2813/9361857131_0ddd755308.jpg)
 
 后记：
 

@@ -22,7 +22,7 @@ forum_id: 418992
 
 联系方式：[birc@gsm.pku.ed.cn](mailto:birc@gsm.pku.ed.cn)
 
-![](http://mmbiz.qpic.cn/mmbiz/1y1ObuUF34xYTDTr8YI4eASicXdjzhFmYVV2X4NXQnxZEPIfrbVSOKVicBMa79lzsBic1q9cGL8l4TEMqO5gNbEnQ/0)
+![](https://mmbiz.qpic.cn/mmbiz/1y1ObuUF34xYTDTr8YI4eASicXdjzhFmYVV2X4NXQnxZEPIfrbVSOKVicBMa79lzsBic1q9cGL8l4TEMqO5gNbEnQ/0)
 
 **狗熊会：**有限的数据，一丁点发现，无穷多可能的解释，不知对错！但是，这不妨碍好奇与探索，以及数据分析的快乐….
   
