@@ -32,7 +32,7 @@ R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直�
   
 [http://blog.fens.me/r-rjava-java](http://blog.fens.me/r-rjava-java "解惑rJava R与Java的高速通道")
   
-![rjava](http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png)
+![rjava](https://uploads.cosx.org/2013/08/rjava1.png)
 
 **前言**
   
