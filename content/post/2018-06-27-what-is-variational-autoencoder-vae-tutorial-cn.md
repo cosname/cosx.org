@@ -13,7 +13,7 @@ tags:
 forum_id: ""
 ---
 
-> 本文翻译自[Jaan Altosaar的博客](https://jaan。io/what-is-variational-autoencoder-vae-tutorial/)，本文已获得原作者授权。
+> 本文翻译自[Jaan Altosaar的博客](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/)，本文已获得原作者授权。
 
 > 从深度学习和图模型这两个角度来理解变分自动编码器(Variational Autoencoders，VAE)。
 
@@ -23,9 +23,9 @@ forum_id: ""
 
 变分自动编码器很酷。它可以使得我们基于数据设计复杂的生成模型，并且在大数据集上拟合。它可以生成虚构的名人脸部图像以及高分辨率的数字艺术作品。
 
-![由变分自动编码器生成的虚构名人脸(作者: ALEC RADFORD)](https://jaan。io/images/variational-autoencoder-faces。jpg)
+![由变分自动编码器生成的虚构名人脸(作者: ALEC RADFORD)](https://jaan.io/images/variational-autoencoder-faces.jpg)
 
-<center>由变分自动编码器生成的虚构名人脸[作者: ALEC RADFORD](https://www。youtube。com/watch?v=XNZIN7Jh3Sg) </center>
+<center>由变分自动编码器生成的虚构名人脸[作者: ALEC RADFORD](https://www.youtube.com/watch?v=XNZIN7Jh3Sg) </center>
 
 这些模型同时在图像生成和强化学习中也能产生最先进的机器学习结果。Kingma和Rezenda等人在2013年定义了变分自动编码器(VAEs)。
 
@@ -35,7 +35,7 @@ forum_id: ""
 
 在神经网络语言中，变分自动编码器由编码器，解码器和损失函数组成。
 
-![编码器将数据压缩成一个潜在空间(Z)，解码器在给定隐藏表示的情况下重建数据](https://jaan。io/images/encoder-decoder。png)
+![编码器将数据压缩成一个潜在空间(Z)，解码器在给定隐藏表示的情况下重建数据](https://jaan.io/images/encoder-decoder.png)
 
 <center>编码器将数据压缩成一个潜在空间(Z)，解码器在给定隐藏表示的情况下重建数据</center>
 
@@ -63,7 +63,7 @@ forum_id: ""
 
 我们可以将其表示为一个图模型：
 
-![变分自动编码器中模型的图模型表示](https://jaan。io/images/graphical-model-variational-autoencoder。png)
+![变分自动编码器中模型的图模型表示](https://jaan.io/images/graphical-model-variational-autoencoder.png)
 
 <center>变分自动编码器中模型的图模型表示。潜变量Z是一个标准正态变量，数据是根据`$P(X|Z)$`绘制的。X的阴影节点表示观测数据。对于手写数字的黑白图像，其似然是服从伯努利分布。</center>
 
@@ -108,15 +108,15 @@ forum_id: ""
 
 在计算上，这意味着通过推理网络输入图像x得到正态分布的参数，然后取一个潜变量z的样本。我们可以在训练期间将其绘图，以了解推理网络如何学习以更好地逼近后验分布，并将潜变量分配给潜空间的不同部分标上不同类别的数字。请注意，在训练开始时，潜变量的分布接近先验分布(0周围的一个圆斑)。
 
-<iframe src="https://giphy。com/embed/26ufoVqZDjHoPrp8k" width="480" height="414" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<iframe src="https://giphy.com/embed/26ufoVqZDjHoPrp8k" width="480" height="414" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 将训练过程中逼近后验概率的学习进行可视化。随着训练的进行，数字分类在二维空间中变得分化。
 
 我们也可以将先验预测分布可视化。我们将潜变量固定为-3和3之间的等间隔的值，然后我们可以从生成网络参数化的条件概率中抽取样本。这些“幻觉”图像向我们展示了模型与潜空间的每个部分的联系。
 
-<iframe src="https://giphy。com/embed/26ufgj5LH3YKO1Zlu" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<iframe src="https://giphy.com/embed/26ufgj5LH3YKO1Zlu" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
-通过观察条件概率的样本，将预测分布可视化。 X 轴和 Y 轴表示二维中 -3和3之间等距的潜变量值 
+通过观察条件概率的样本，将预测分布可视化。X轴和 Y轴表示二维中-3和3之间等距的潜变量值。
 
 # 术语表
 
@@ -152,7 +152,7 @@ forum_id: ""
 
 ## 样本实现
 
-这里有一个简单的实现，用来生成这篇文章中的数字: [Github 链接](https://github。com/altosaar/vae/blob/master/vae。py) 
+这里有一个简单的实现，用来生成这篇文章中的数字: [Github 链接](https://github.com/altosaar/vae/blob/master/vae.py) 
 
 ## 脚注: 再参数化的技巧
 
@@ -160,21 +160,21 @@ forum_id: ""
 
 对于某些分布，可以用一种巧妙的方式再参数化样本，这样的抽象性是独立于参数外的。我们希望我们的样本在确定性上取决于分布的参数。例如，在一个平均值为`$\mu $`和标准差为`$\sigma $`的正态分布中，我们可以这样取样：
 `$$z = \mu + \sigma \odot \epsilon $$`
-其中`$\epsilon \sim Normal(0, 1) $`，由表示从分布中抽取的`$∼$`到表示相等的`$=$`是关键的一步。我们已经定义了一个函数，它依赖于参数的确定。因此，我们可以对`$z$`，`$f(z) $`的函数求关于它的分布参数`$\mu $`和`$\sigma $`的导数。
-![img](https://jaan。io/images/reparametrization。png)
+其中`$\epsilon \sim Normal(0,1) $`，由表示从分布中抽取的`$∼$`到表示相等的`$=$`是关键的一步。我们已经定义了一个函数，它依赖于参数的确定。因此，我们可以对`$z$`，`$f(z) $`的函数求关于它的分布参数`$\mu $`和`$\sigma $`的导数。
+![img](https://jaan.io/images/reparametrization.png)
 再参数化技巧允许我们将一个正态分布的随机变量Z的随机性推入`$\epsilon $`，这是从标准正态中取样的。菱形表示确定的依赖关系，圆圈表示随机变量
 
 在变分自动编码器中，平均值和方差是由具有我们优化的参数`$\theta $`推理网络输出的。再参数化的技巧使得我们可以通过作为潜变量`$z$`的样本的函数的目标(ELBO)对`$\theta $`反向传播(链式求导)。
 
-(作者原话)如果这篇文章中的任何内容令你感到困惑，或者有什么改进的建议？请提交[pull request](https://github。com/altosaar/jaan。io/blob/master/_posts/blog/2016-07-18-what-is-variational-autoencoder-vae-tutorial。md), [tweet](https://twitter。com/thejaan), 或者 [email](mailto:altosaar@princeton。edu) 
+(作者原话)如果这篇文章中的任何内容令你感到困惑，或者有什么改进的建议？请提交[pull request](https://github.com/altosaar/jaan.io/blob/master/_posts/blog/2016-07-18-what-is-variational-autoencoder-vae-tutorial.md), [tweet](https://twitter.com/thejaan), 或者 [email](mailto:altosaar@princeton.edu) 
 
 ## 想法和图解的参考
 
-许多想法和图解来自Shakir Mohamed关于[再参数化技巧](http://blog。shakirm。com/2015/10/machine-learning-trick-of-the-day-4-reparameterisation-tricks/)和 [自动编码器](http://blog。shakirm。com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/)的优秀博客文章。Durk Kingma创造了[再参数化技巧](http://dpkingma。com/?page_id=277)优秀的视觉效果。这个 [教程](https://arxiv。org/abs/1601。00670)和David Blei’s的 [课程笔记](https://www。cs。princeton。edu/courses/archive/fall11/cos597C/lectures/variational-inference-i。pdf)对于变分推断有很好的参考。Dustin Tran有有一篇关于变分自动编码器的有用的 [博客文章](http://dustintran。com/blog/denoising-criterion-for-variational-auto-encoding-framework/)。开头的动图来自于[Rui Shu](https://github。com/RuiShu/variational-autoencoder)。
+许多想法和图解来自Shakir Mohamed关于[再参数化技巧](http://blog.shakirm。com/2015/10/machine-learning-trick-of-the-day-4-reparameterisation-tricks/)和 [自动编码器](http://blog.shakirm.com/2015/03/a-statistical-view-of-deep-learning-ii-auto-encoders-and-free-energy/)的优秀博客文章。Durk Kingma创造了[再参数化技巧](http://dpkingma.com/?page_id=277)优秀的视觉效果。这个 [教程](https://arxiv.org/abs/1601.00670)和David Blei’s的 [课程笔记](https://www.cs.princeton.edu/courses/archive/fall11/cos597C/lectures/variational-inference-i.pdf)对于变分推断有很好的参考。Dustin Tran有有一篇关于变分自动编码器的有用的 [博客文章](http://dustintran.com/blog/denoising-criterion-for-variational-auto-encoding-framework/)。开头的动图来自于[Rui Shu](https://github.com/RuiShu/variational-autoencoder)。
 
 感谢 Rajesh Ranganath，Ben Poole，Jon Berliner，Cassandra Xia，and Ryan Sepassi 在本文中的讨论和提出的许多概念。
 
-关于[Hacker News](https://news。ycombinator。com/edit?id=12292576)和 [Reddit](https://www。reddit。com/r/MachineLearning/comments/4xv5b5/explainer_of_variational_autoencoders_from_a/)的讨论。 在 David Duvenaud 关于"[可微推理和生成模型](http://www。cs。toronto。edu/~duvenaud/courses/csc2541/)"的课程大纲中。
+关于[Hacker News](https://news.ycombinator.com/edit?id=12292576)和 [Reddit](https://wwwreddit.com/r/MachineLearning/comments/4xv5b5/explainer_of_variational_autoencoders_from_a/)的讨论。 在 David Duvenaud 关于"[可微推理和生成模型](http://www.cs.toronto.edu/~duvenaud/courses/csc2541/)"的课程大纲中。
 ```
 
 ```
