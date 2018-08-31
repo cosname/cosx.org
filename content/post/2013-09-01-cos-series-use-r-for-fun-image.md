@@ -23,7 +23,7 @@ forum_id: 418964
 
 # 1 从画一张红色毛爷爷说起
 
-![More...](http://chenangliu.info/cn/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif)
+<!-- ![More...](http://chenangliu.info/cn/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif) -->
 
 关于这一篇得先从一张红色毛爷爷说起，有一次跟朋友聊天谈起无比艰辛的生活，聊着聊着那哥们就开始质疑R的作图功能，突然冒了一句R能画张人民币出来么，我一想这不简轻松加愉快么，网上下张图片读进去不就完了(具体读图方法后面会讲)，结果那哥们也不是白痴，跟了一句一定要画不能读图而且不能用扩展包，听起来好像有点难度，于是就在完全不考虑代码美观性的前提下三下五除二码了一段交了差，画出来了一张高仿假钞，还顺便借这玩意去某论坛刷了下人气(好吧确实有点猥琐)。
 
@@ -45,7 +45,7 @@ image(1:457,1:225,b,col=Rcolor3,add=T,axes=F,ann=F);
 
 其实代码非常水，是一个非常典型的反面教材。而且从某种意义上讲是一种耍赖行为，因为没说不能读数据于是我就光明正大的把RGB矩阵给读了进来，最后借助了颜色图也就是image函数(该函数在之后的文章中会有比较高的出场频率)。
   
-![100rmb](http://chenangliu.info/cn/wp-content/uploads/2013/08/100rmb.png)
+![100rmb](https://github.com/StevenBoys/photo/blob/master/100rmb.png?raw=true)
 
 这里简单介绍一下颜色图和image函数，颜色图本质上是一种网格图，每个网格可以展示一种颜色，正是因为这一特点，它可以用于在平面上展示三维数据，很多时候将其与等高图结合使用描述地理信息时往往会有非常不错的视觉效果。不过在这里就被我用来画位图了，即把每一个网格当成一个像素点，通过读进来的颜色矩阵来上色。关于image函数，不妨先来看看它的用法
 
@@ -152,7 +152,7 @@ ima <- readJpeg(system.file("samples","violet.jpg",package="biOps"))
 plot(ima)
 ```
 
-![violet1](http://chenangliu.info/cn/wp-content/uploads/2013/08/violet1.png)
+![violet1](https://github.com/StevenBoys/photo/blob/master/violet1.png?raw=true)
 
 ## 4.2 简单的啰嗦一下空间变换
 
@@ -164,7 +164,7 @@ y <- imgRotate(x,45,"spline")
 plot(y);
 ```
 
-![violet2](http://chenangliu.info/cn/wp-content/uploads/2013/08/violet2.png)
+![violet2](https://github.com/StevenBoys/photo/blob/master/violet2.png?raw=true)
 
 此外如果是放缩只需把上述函数名后的Rotate改成Scale就OK了，类似的也有imgScale()函数是一个综合的函数，同样的interpolation 参数用于选择插值方式(一般用于放大)。同时开发者们本着宁缺毋滥的精神还提供了imgAverageShrink()和imgMedianShrink()主要用于缩小。除旋转放缩外，切割图像用的是imgCrop()函数，例如
 
@@ -223,7 +223,7 @@ plot(y)
 
 m即为所用到的滤波器掩模，如此一来，明显的浮雕效果就出来了。
 
-![violetfudiao](http://chenangliu.info/cn/wp-content/uploads/2013/08/violetfudiao.png)
+![violetfudiao](https://github.com/StevenBoys/photo/blob/master/violetfudiao.png?raw=true)
 
 如果还想玩的再high一点的话，那就不妨用这招给自己做枚纪念币？
 
@@ -236,7 +236,7 @@ y <- imgGaussianNoise(x,0,200);
 plot(y)
 ```
 
-![violetrain](http://chenangliu.info/cn/wp-content/uploads/2013/08/violetrain.png)
+![violetrain](https://github.com/StevenBoys/photo/blob/master/violetrain.png?raw=true)
   
 是否能看出一丝下雨的效果呢？
 
@@ -244,19 +244,19 @@ plot(y)
 
 边缘探测(Edge Detection)常见于遥感，即针对遥感图像的分析，既如此那么边缘探测的算法也则必然是一个很重要的角色，因此biOps包的作者们往包里塞了一大坨的各式各样的边缘探测的函数唯恐遗漏，不同的函数算法大多不同， 故请自行help或google。
 
-![violetedge](http://chenangliu.info/cn/wp-content/uploads/2013/08/violetedge.png)
+![violetedge](https://github.com/StevenBoys/photo/blob/master/violetedge.png?raw=true)
 
 如此并勾勒出了大致的轮廓，看起来效果还是很不错的。稍作改动也可以做出壁画的感觉
 
-![violetbihua](http://chenangliu.info/cn/wp-content/uploads/2013/08/violetbihua.png)
+![violetbihua](https://github.com/StevenBoys/photo/blob/master/violetbihua.png?raw=true)
 
 ### 4.4.5 素描效果
 
 这条来自于轩哥博客，算法也略微要复杂些，在他博文中有详细的说明和代码，感兴趣的读者请猛戳[这里](http://yixuan.cos.name/cn/2010/05/processing-pictures-with-a-pencil-sketch-effect-using-r/) ，但千万不要复制下来直接跑，不要忘了rimage已经不复存在了，至于怎么改的问题看了前文这里应该不需要多说了吧。顺便盗用一下效果图
   
-![pencil2](http://chenangliu.info/cn/wp-content/uploads/2013/08/pencil2.jpg) 
+![pencil2](https://github.com/StevenBoys/photo/blob/master/pencil2.jpg?raw=true) 
 
-![pencil1](http://chenangliu.info/cn/wp-content/uploads/2013/08/pencil1.jpg)
+![pencil1](https://github.com/StevenBoys/photo/blob/master/pencil1.jpg?raw=true)
 
 由于很多功能与接下来介绍的EBImage包重复，故某些地方并未详细叙述，此外由于函数众多且很多函数的存在实在是没必要(并且解释也及其简单)所以并无法面面俱到，所以希望进一步了解的可以自行参考帮助文档或者google。跟biOps包有着紧密联系的还有一个biOpsGUI 包。biOpsGUI 提供了一个GUI 用于展示图片，需要GTK+ 的支持，也就是得事先安装RGtk2包，他的优点在于展示图片方便，而且鼠标所到支出可以返回该点的坐标和颜色值(RGB)，缺点则是除此之外就没什么其他功能了，仅仅是一个展示。用帮助文档中所给的例子也就足以说明一切了。
 
@@ -305,7 +305,7 @@ display(lenac)
 display(lenac,method="raster")
 ```
 
-![lenac](http://chenangliu.info/cn/wp-content/uploads/2013/08/lenac.png)
+![lenac](https://github.com/StevenBoys/photo/blob/master/lenac.png?raw=true)
 
 写入图片可以通过writeImage()函数实现，文件格式可以通过文件扩展名推断。事实上这一功能也是用来实现图片格式转换的一个不错方式，比方说下面这句命令就在眨眼之间把图片从png转换成了jpeg格式。
 
@@ -337,7 +337,7 @@ lena6 <- t(lena);
 
 这几条怕是不用说大家也能知道是怎么回事了，相比而言取个阈值出来的效果更带感一点(读者可自行把该命令用于彩色图中，同样请保护双眼)。
 
-![lenac2](http://chenangliu.info/cn/wp-content/uploads/2013/08/lenac2.png)
+![lenac2](https://github.com/StevenBoys/photo/blob/master/lenac2.png?raw=true)
 
 是不是能看出一点剪纸效果呢？此外该包还提供了combine()函数用于多重画面的制作，例如
 
@@ -346,7 +346,7 @@ lenacomb <- combine(lenac, lenac+0.1, lenac+0.2, lenac+0.4)
 display(lenacomb,method="raster",all=T)
 ```
 
-![lenac3](http://chenangliu.info/cn/wp-content/uploads/2013/08/lenac3.png)
+![lenac3](https://github.com/StevenBoys/photo/blob/master/lenac3.png?raw=true)
 
 需要注意的是如果这里不选择浏览器显示，那么参数all一定要改为TRUE即显示全部图片，否则只会显示第一张图。
 
@@ -362,7 +362,7 @@ lenacomb <- combine(lenac, lenac7, lenac8, lenac9)
 display(lenacomb,method="raster",all=T)
 ```
 
-![lenac4](http://chenangliu.info/cn/wp-content/uploads/2013/08/lenac4.png)
+![lenac4](https://github.com/StevenBoys/photo/blob/master/lenac4.png?raw=true)
 
 不过按照惯例最后多嘴一句，这些函数同样可以用在常规的矩阵操作上(因为本质就是对矩阵操作)。
 
@@ -383,7 +383,7 @@ lenab <- rgbImage(red=lena,green=flip(lena),blue=flop(lena))
 display(lenab,method="raster")
 ```
 
-![lenaccolor](http://chenangliu.info/cn/wp-content/uploads/2013/08/lenaccolor.png)
+![lenaccolor](https://github.com/StevenBoys/photo/blob/master/lenaccolor.png?raw=true)
 
 是不是有种幻影的感觉呢？
 
@@ -405,7 +405,7 @@ lenacomb <- combine(lenac,lenaflo,lenafhi1,lenafhi2)
 display(lenacomb,method="raster",all=T)
 ```
 
-![lenac5](http://chenangliu.info/cn/wp-content/uploads/2013/08/lenac5.png)
+![lenac5](https://github.com/StevenBoys/photo/blob/master/lenac5.png?raw=true)
   
 操作方法大体类似，只不过换了一个函数(filter2)而已，函数makeBrush()用于指定画刷的大小类型等，当然之前所提到的浮雕等效果在这里同样OK，矩阵变着变着就各式各样的效果都出来了，并且我觉得EBImage所提供的相比用起来更顺手也更灵活些。这里再提一些之前没有提到的
 
@@ -425,7 +425,7 @@ display(y,method="raster",all=T)
 
 老照片效果的作用是把一张正常的照片通过线性变换糟蹋成年久泛黄的效果，自然也就给人一种老照片的感觉。实现起来同样非常简单，自己动手写几句即可，本着能水则水的原则不到一分钟就可以搞定
 
-![lenacold](http://chenangliu.info/cn/wp-content/uploads/2013/08/lenacold.png)
+![lenacold](https://github.com/StevenBoys/photo/blob/master/lenacold.png?raw=true)
 
 效果大致是有了，但还有很多不尽如人意的地方，这点大家可以根据喜好自行修改(如变换的矩阵，亮度对比的调整等)。
 
@@ -450,9 +450,9 @@ display(lenact,method="raster",all=T)
 
 这里再讲一讲该包的形态学处理功能。这一点在对文字图片的处理上有更直观的体现，包中自带了一张用于演示的例图，效果一看便知。
   
-![qinshi](http://chenangliu.info/cn/wp-content/uploads/2013/08/qinshi.png) 
+![qinshi](https://github.com/StevenBoys/photo/blob/master/qinshi.png?raw=true) 
 
-![pengzhang](http://chenangliu.info/cn/wp-content/uploads/2013/08/pengzhang.png)
+![pengzhang](https://github.com/StevenBoys/photo/blob/master/pengzhang.png?raw=true)
 
 一张是冲刷的效果，而另一张则是膨胀的效果，分别通过erode(),dilate()函数实现，最后附上代码
 
