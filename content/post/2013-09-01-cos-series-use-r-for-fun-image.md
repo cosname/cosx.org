@@ -23,7 +23,7 @@ forum_id: 418964
 
 # 1 从画一张红色毛爷爷说起
 
-![More...](http://chenangliu.info/cn/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif)
+<!-- ![More...](http://chenangliu.info/cn/wp-includes/js/tinymce/plugins/wordpress/img/trans.gif) -->
 
 关于这一篇得先从一张红色毛爷爷说起，有一次跟朋友聊天谈起无比艰辛的生活，聊着聊着那哥们就开始质疑R的作图功能，突然冒了一句R能画张人民币出来么，我一想这不简轻松加愉快么，网上下张图片读进去不就完了(具体读图方法后面会讲)，结果那哥们也不是白痴，跟了一句一定要画不能读图而且不能用扩展包，听起来好像有点难度，于是就在完全不考虑代码美观性的前提下三下五除二码了一段交了差，画出来了一张高仿假钞，还顺便借这玩意去某论坛刷了下人气(好吧确实有点猥琐)。
 
