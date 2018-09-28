@@ -41,7 +41,7 @@ demo(HappyNewYear2010Yixuan)
 
 就能看到炫酷的动画
 
-![happynewyear2010](http://chenangliu.info/cn/wp-content/uploads/2013/08/happynewyear2010.jpg)
+![happynewyear2010](https://github.com/StevenBoys/photo/blob/master/happynewyear2010.jpg?raw=true)
 
 再来看看happy new year的滚动字幕，原来demo中并没有把坐标去掉，若想要更好的效果，可以先
 
@@ -51,7 +51,7 @@ par(bty="n",xaxt="n", yaxt="n",mar=c(0,0,0,0))
 
 把坐标去掉，同时拓宽作图面积(再多嘴一句，要想画出自己满意的图，par一定要掌握好)，当然同时也可以自己再加一个喜庆一点的背景什么的，截取某一个瞬间
 
-![happynewyear2009](http://chenangliu.info/cn/wp-content/uploads/2013/08/happynewyear2009.jpg)
+![happynewyear2009](https://github.com/StevenBoys/photo/blob/master/happynewyear2009.jpg?raw=true)
 
 此外
 
@@ -81,7 +81,7 @@ lines(1.1*r*sin(t)+x, 1.1*r*cos(t)+y, col="blue", lwd=5);
 
 然后随机点的设置的多一点(改成200个点或许效果更好点)，就有种放大镜(显微镜)下看细菌(点的形状可变，例如变成杆菌之类的)的感觉了！当然其实也有很多可以进一步改进的地方，例如对某几个点特殊处理一下，就可以改成照妖镜了。当然也可以再往镜子上加根棍子之类的，不怕做不到就怕想不到！
 
-![fangdajing](http://chenangliu.info/cn/wp-content/uploads/2013/08/fangdajing.jpeg)
+![fangdajing](https://github.com/StevenBoys/photo/blob/master/fangdajing.jpg?raw=true)
 
 # 四、计算器——DIY
 
@@ -89,7 +89,7 @@ lines(1.1*r*sin(t)+x, 1.1*r*cos(t)+y, col="blue", lwd=5);
 
 计算器的制作分为三步，一是计算机界面，关于界面参考最老式的就行了，输出框+数字键+运算符，ok搞定，用一下segments和text足矣，当然为了不瞎了别人的眼，配色什么的也需要调一下，考虑到笔者审美观非常拙计，已遭n多人吐槽，故无奈只得通过随机数的方法进行配色，还请广大读者谅解。第二步是键盘与图形的交互，这里与图片中的按键无关，但需要制定键盘上某些需要的按键的具体功能，而重点又在于运算符，这里为了能和后面的鼠标结合操作，需要用到双箭头赋值，即”<<-“，它的意思是向上一层环境中的对象赋值，如果找不到，就再往上一层，如果一直往上都找不到，就到最顶层的环境即全局环境中赋值，具体可以参考[这里](https://cos.name/cn/topic/106805#post-231488)。也就是第三步就是鼠标和数字键的对应啦，这一步并不繁琐因为具体的操作都可以直接copy第二步的代码，唯独需要改动的就是把坐标信息和图中的数字键对应起来。
 
-![jisuanqi](http://chenangliu.info/cn/wp-content/uploads/2013/08/jisuanqi.jpeg)
+![jisuanqi](https://github.com/StevenBoys/photo/blob/master/jisuanqi.png?raw=true)
 
 这里只是开发了部分最基本的四则运算功能，剩下的就留给大家发挥自己的想象来填补这些空缺了，具体的方法完全可以依葫芦画瓢，但更提倡另辟蹊径开拓创新。
 
@@ -99,7 +99,7 @@ lines(1.1*r*sin(t)+x, 1.1*r*cos(t)+y, col="blue", lwd=5);
 
 之前可以说是一个半成品，那么最后给一个成品——闹钟来收官，这其实是闹钟兼时钟，最初想法的来源是某处programming的时候用到了系统时间的获取，于是想到了把他可视化(勉强称之为可视化吧，各位看官给我留点面子)出来， 闹钟其实本质上是一个动画，其中融合了简单音乐的制作。之前我把只完成了一部分的代码传在了人大经济论坛上(bug比较多，忽略为好)，后经过了修缮，大致做出了点样子，具体的过程我就不说了，关于最终的代码方便起见我做成了一个小的package，可以在[我的blog上同名文章](http://chenangliu.info/cn/use-r-for-fun-application/)的附录中下载。
 
-![clock](http://chenangliu.info/cn/wp-content/uploads/2013/08/clock.jpg)
+![clock](https://github.com/StevenBoys/photo/blob/master/clock.jpg?raw=true)
 
 # 六、关于一些用到函数的解释
 
@@ -113,7 +113,7 @@ winDialog(type = c("ok", "okcancel", "yesno", "yesnocancel"), message)
 
 tag共有两个，type指的是窗口的类型。如果选择的是“ok”则弹出的窗口中会有“确定”按钮，同理“okcancel”则是“确定”和“取消”，“yes”和“no”为“是”和“否”，而message则是弹出的窗口需要表达的信息，例如“Hello World”。winDialog函数的效果可以参考下图：
 
-![question](http://chenangliu.info/cn/wp-content/uploads/2013/08/question.jpg)
+![question](https://github.com/StevenBoys/photo/blob/master/question.jpg?raw=true)
 
 另外与winDialog有关的还有一个非常有意思的函数，就是winMenus系列function，它可以用来修改windows窗口菜单，具体可以参考?winMenus
 
