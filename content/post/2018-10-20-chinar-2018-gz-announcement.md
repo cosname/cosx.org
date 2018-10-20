@@ -98,7 +98,7 @@ RStudio公司成立于2008年，创始人为JJ Allaire，R社区领军人物Hadl
 会议联系邮箱：chinar-2018-gz@cos.name
 
 
-# 十、更多会议消息请关注：
+**更多会议消息请关注：**
 
 统计之都：http://cosx.org/  以及微信公众号：统计之都
 
