@@ -93,7 +93,7 @@ RStudio公司成立于2008年，创始人为JJ Allaire，R社区领军人物Hadl
 
 新浪微博：@统计之都
 
-微信公众号：统计之都
+微信公众号：统计之都（英文微信号：CapStat）
 
 会议联系邮箱：chinar-2018-gz@cos.name
 
