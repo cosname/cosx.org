@@ -6,7 +6,7 @@ categories:
   - R会议
 tags: [R会议,广州]
 slug: chinar-2018-gz-announcement
-forum_id: 
+forum_id: 420236
 ---
 
 ![r-logo](https://user-images.githubusercontent.com/35906792/47231821-92a25200-d400-11e8-8656-5fb6f4c55c3f.png)
