@@ -22,7 +22,7 @@ slug: Python-and-R-implementation-of-gcForest
 + DNN是一个黑盒子，训练的结果很难去解释描述，并且学习行为很难用理论去分析解释；
 + DNN在训练之前就得确定具体的网络结构，模型的复杂度也是提前设定好的，虽然有一些dropout等的技术。
 
-但是有一点是我们相信的，在处理更复杂的学习问题时，算法的学习模块应该要变的更深，现在的深层网络结构依旧依赖于神经网络（我们这里把像CNN,RNN的基本结构单元也归结为神经网络单元）, 周志华团队考虑深度学习的结构可不可以用其他不可微的模块组成：
+但是有一点是我们相信的，在处理更复杂的学习问题时，算法的学习模块应该要变的更深（论文The Power of Depth for Feedforward Neural Networks从理论上已经证明了加深网络比加宽网络更有效），现在的深层网络结构依旧依赖于神经网络（我们这里把像CNN,RNN的基本结构单元也归结为神经网络单元）, 周志华团队考虑深度学习的结构可不可以用其他不可微的模块组成：
 
 > Can deep learning be realized with non-differentiable modules?
 
@@ -41,7 +41,7 @@ slug: Python-and-R-implementation-of-gcForest
 
 ## 2.1 DNN中的灵感来源
 
-深度学习在一些学习任务上之所以成功，关键在于特征的表示学习上（representation learning,不知道理解的对不对），如下图所示，随着一层一层的处理（layer-by-layer processing），马的图像数据的特征被高度抽象出来用于动物分类任务。
+深度学习在一些学习任务上之所以成功，关键在于特征的表示学习上（representation learning），如下图所示，随着一层一层的处理（layer-by-layer processing），马的图像数据的特征被高度抽象出来用于动物分类任务。
 
 ![pic1](https://raw.githubusercontent.com/DataXujing/Cos_pic/master/pic1.png)
 
@@ -139,7 +139,7 @@ slug: Python-and-R-implementation-of-gcForest
 
 # 4.gcForest模型的Python实现
 
-GitHub上有两个star比较多的gcForest项目，在参考文献中我们已经列出来了，下面我们就使用这两个gcForest的Python模块去尝试使用gcForest模型去解决一些问题，这里要说明的是其中参考文献[3]是官方提供（由gcForest的作者之一Ji Feng维护）的一个Python版本。目前gcForest并没有相对好用的R语言接口，我们已经开发了基于参考文献[4]的R接口包（目前托管在GitHub，正在接受CRAN审核）。这里我们仅介绍参考文献[4]中的gcForest模块，如果感兴趣，可以自行研究官方提供的gcForest模块（官方模块，集成模型的选择除了随机森林外还可以选择其他的结构像XGBoost，ExtraTreesClassifier
+GitHub上有两个star比较多的gcForest项目，在参考文献中已经列出，下面我们就使用这两个gcForest的Python模块去尝试使用gcForest模型去解决一些问题，这里要说明的是其中参考文献[3]是官方提供（由gcForest的作者之一Ji Feng维护）的一个Python版本。目前gcForest并没有相对好用的R语言接口，我们已经开发了基于参考文献[4]的R接口包（目前已托管在GitHub和CRAN）。这里我们仅介绍参考文献[4]中的gcForest模块，如果感兴趣，可以自行研究官方提供的gcForest模块（官方模块，集成模型的选择除了随机森林外还可以选择其他的结构像XGBoost，ExtraTreesClassifier
 LogisticRegression，SGDClassifier等，因此建议使用该模块）。这里仅介绍参考文献[4]中gcForest的模块使用。
 
 Example1: iris数据集预测
@@ -254,13 +254,13 @@ accuracy_score(y_true=y_te, y_pred=preds)
 
 # 5.gcForest模型的R实现
 
-我们已经基于[4]开发了其R版本的gcForest包（该包目前托管在GitHub，正在接受CRAN审核）<sup>[5]</sup>，如果你习惯用R语言，可以尝试该包，这里列出gcForest的Cheat Sheet
+我们已经基于[4]开发了其R版本的gcForest包（该包已托管在GitHub和CRAN）<sup>[5,6]</sup>，如果你习惯用R语言，可以尝试该包，这里列出gcForest的Cheat Sheet
 
 ![gcforest_r](https://raw.githubusercontent.com/DataXujing/Cos_pic/master/gcforest.PNG)
 
 # 6.小结
 
-文中我们介绍了gcForest的模型算法和Python及R的实现，目前gcForest算法的官方Python包<sup>[3]</sup>并未托管在Pypi，但v1.1.1支持Python3.5，也有开源实现基于Python3.x的gcForest version0.1.6版本(上一节中已经演示)<sup>[4]</sup>，但其功能要相对弱于[3];如果你是R语言的忠实用户，那么可以使用我们开发的R版本的gcForest包<sup>[5]</sup>。
+文中我们介绍了gcForest的模型算法和Python及R的实现，目前gcForest算法的官方Python包<sup>[3]</sup>并未托管在Pypi，但v1.1.1支持Python3.5，也有开源实现基于Python3.x的gcForest version0.1.6版本(上一节中已经演示)<sup>[4]</sup>，但其功能要相对弱于[3];如果你是R语言的忠实用户，那么可以使用我们开发的R版本的gcForest包<sup>[5,6]</sup>。
 
 
 # 7.参考文献
@@ -274,3 +274,5 @@ accuracy_score(y_true=y_te, y_pred=preds)
 [4].gcForest version 0.1.6(https://github.com/pylablanche/gcForest)
 
 [5].gcForest_r(https://github.com/DataXujing/gcForest_r)
+
+[6].CRAN gcForest(https://CRAN.R-project.org/package=gcForest)
