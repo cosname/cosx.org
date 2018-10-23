@@ -28,9 +28,9 @@ slug: Python-and-R-implementation-of-gcForest
 
 这个问题会使我们想到一些其他问题：
 
-+ 深度学习是不是就等同于DNN（深度模型是不是只能通过可微的函数结构去构建）？
-+ 是不是可以不通过后向传播训练深度模型？
-+ 是不是在一些RandomForest,XGBoost,lightGBM成功的学习任务上,深度模型能够战胜它们？
++ 深度学习是否就等同于DNN（深度模型是不是只能通过可微的函数结构去构建）？
++ 是否可以不通过后向传播训练深度模型？
++ 在一些RandomForest，XGBoost，lightGBM，catBoost成功的学习任务上,深度模型是否也能够战胜它们？
 
 下面我们就来看一下，如何从传统的机器学习和深度学习中获得灵感，构建gcForest Model。
 
@@ -80,7 +80,7 @@ slug: Python-and-R-implementation-of-gcForest
 
 解释：
 
-+ 每一个Level包含若干个集成学习的分类器（这里是决策树森林，你可以换成XGBoost，lightGBM等），这是一种集成中的集成的结构；
++ 每一个Level包含若干个集成学习的分类器（这里是决策树森林，你可以换成XGBoost，lightGBM，catBoost等），这是一种集成中的集成的结构；
 + 为了体现多样性，黑色和蓝色的Forest代表了若干不同的集成学习器，为了说明这里用了两种，黑色的是完全随机森林：由500棵决策树组成，每棵树随机选取一个特征作为分裂树的分裂节点，然后一直生长，直到每个叶节点细分到只有一个类或者不多于10个样本，蓝色的表示普通的随机森林：由500棵决策树组成，每棵树通过随机选取sqrt(d)(d表示输入特征的维度)个候选特征然后通过gini系数筛选分裂节点；
 + gcForest采用了DNN中的layer-by-layer结构，从前一层输入的数据和输出结果数据做concat作为下一层的输入；
 + 为了防止过拟合的情况出现，每个森林的训练都使用了k-折交叉验证，也即每一个训练样本在Forest中都被使用k-1次，产生k-1个类别列表，取平均作为下一个Level级联的输入的一部分；
@@ -96,7 +96,7 @@ slug: Python-and-R-implementation-of-gcForest
 
 其过程可描述如下：
 
-+ 先输入一个完整的p维样本（p是样本特征的维度），然后通过一个长度为k的采样窗口进行滑动采样，得到s=(p-k)/1+1个（这个过程就类似于CNN中的卷积核的滑动，这里假设窗口移动的步长为1）k维特征子样本向量；
++ 先输入一个完整的p维样本（p是样本特征的维度），然后通过一个长度为k的采样窗口进行滑动采样，得到s=(p-k)+1个（这个过程就类似于CNN中的卷积核的滑动，这里假设窗口移动的步长为1）k维特征子样本向量；
 + 接着每个子样本都用于完全随机森林和普通随机森林的训练，并在每个森林都获得一个长度为c的概率向量（c是分类类别个数，上图中c=3），这样每个森林都产生一个s*c的表征向量，最后把每层的F个森林的结果拼接在一起，得到样本输出。
 
 上图是一个滑动窗口的简单情形，下图我们展示了多滑动窗口的过程：
@@ -137,7 +137,7 @@ slug: Python-and-R-implementation-of-gcForest
 + 每个级联生成使用交叉验证，避免过拟合
 + 相对于DNN，gcForest更容易进行理论分析
 
-但文献[1,2]中CIFAR-10数据集的训练上gcForest在简单的结构设定下显然逊色于AleNet和ResNet（可以通过增加网络结构的复杂度和增强特征表示来优化gcForest），未来仍需要在特征表示和内存消耗上做进一步的优化。
+但Zhi-Hua Zhou和Ji Feng在Deep Forest <sup>[1,2]</sup>论文中CIFAR-10数据集的训练上gcForest在简单的结构设定下显然逊色于AlexNet和ResNet（可以通过增加网络结构的复杂度和增强特征表示来优化gcForest），未来仍需要在特征表示和内存消耗上做进一步的优化。
 
 
 # 4.gcForest模型的Python实现
@@ -223,6 +223,13 @@ accuracy_score(y_true=y_te, y_pred=preds)
 Example1:iris数据集预测
 
 ```r
+# install from CRAN
+# install.packages('gcForest')
+
+# install from github
+# install.packages("devtools")
+# devtools::install_github('DataXujing/gcForest_r')
+
 library(gcForest)
 
 sk <- reticulate::import('sklearn')
