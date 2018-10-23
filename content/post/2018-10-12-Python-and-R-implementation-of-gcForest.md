@@ -230,6 +230,14 @@ Example1:iris数据集预测
 # install.packages("devtools")
 # devtools::install_github('DataXujing/gcForest_r')
 
+# 在运行gcForest包前，请确保系统中已经安装了Python3.X及相应的模块包括：
+# Numpy >= 1.12.0
+# Scikit-learn >= 0.18.1
+
+# 如果你不想手动安装可以通过req_py()函数，进行Python环境的包的监测和安装：
+# library(gcForest)
+# req_py()
+
 library(gcForest)
 
 sk <- reticulate::import('sklearn')
