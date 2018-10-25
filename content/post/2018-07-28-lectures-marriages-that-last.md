@@ -8,7 +8,7 @@ categories:
   - 统计应用
 tags:
   - 情感
-forum_id: ''
+forum_id: 420244
 ---
 
 > 本文翻译自http://bulletin.imstat.org/2016/05/xl-files-lectures-marriages-that-last/, 作者Xiao-Li Meng。本文已获得作者授权。
