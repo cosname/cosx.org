@@ -8,6 +8,7 @@ categories:
   - 统计应用
 tags:
   - XL-Files
+forum_id: 420247
 ---
 > 翻译自 XL-Files：Why （Good） Statisticians Tend To Be Happier。
 
