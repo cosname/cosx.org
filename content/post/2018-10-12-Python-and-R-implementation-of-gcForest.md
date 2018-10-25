@@ -9,6 +9,7 @@ tags:
     - Python
     - R
 slug: Python-and-R-implementation-of-gcForest
+forum_id: 420242
 ---
 
 # 1.背景介绍
