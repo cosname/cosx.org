@@ -10,7 +10,7 @@ tags:
   - 统计学
   - 创造
 meta_extra: "原作者：Terence、译者：李杰桠"
-forum_id: ""
+forum_id: 420246
 ---
 
 > 本文翻译自 [Terence’s Stuff: Creativity in Statistics](http://bulletin.imstat.org/2014/05/terence’s-stuff-creativity-in-statistics/) ,作者Terence。本文已获得原作者授权。
