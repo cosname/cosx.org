@@ -6,7 +6,7 @@ categories:
   - 统计图形
 tags:
 slug: Exploring Histograms
-forum_id: 
+forum_id: 420248
 meta_extra: 译者：曾加；审稿：；编辑：
 ---
 
