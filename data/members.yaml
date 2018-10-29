@@ -62,7 +62,7 @@ list:
     intro: 本科中山大学，硕士 University of California, San Diego。现工作于腾讯。
   - name: 黄湘云
     image: https://user-images.githubusercontent.com/12031874/28239932-9c296f42-69a9-11e7-90fa-d1d20cbad4db.jpg
-    intro: 中国矿业大学（北京）理学院2015级硕士，从时间序列分析课程接触R语言，对数据分析和可视化乐此不疲，也喜欢看《红楼梦》，目前主要学习空间广义线性混合效应模型及其应用。
+    intro: 中国矿业大学（北京）本硕，本科学数学与应用数学，硕士学统计学，毕设做空间广义线性混合效应模型及其应用。R语言死忠，假红迷伪码农。曾在新浪运维部做过数据分析方向的实习生。
   - name: 寇强
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 寇强 <http://weibo.com/thirdwing?is_all=1>，Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。
@@ -77,7 +77,7 @@ list:
     intro: 人大统院本科生，爱看书（从小喜欢），爱音乐（多听不多唱）、爱运动（玩和看都爱），很喜欢旅游（尤其一人游），虽然现在还是一只小本科僧，但相信自己会有用武之地，不达目的绝不放弃。
   - name: 林枫
     image: https://user-images.githubusercontent.com/18381242/47626418-fa297180-db65-11e8-8d76-84182b4ca314.JPG
-    intro: 中国科学技术大学计算机学院2017级硕士，本科就读于科大管理学院统计与金融系统计专业。研究兴趣主要为机器学习相关方向。好读书，不求甚解。音乐、动漫爱好者。  
+    intro: 中国科学技术大学计算机学院2017级硕士，本科就读于科大管理学院统计与金融系统计专业。研究兴趣主要为机器学习相关方向。好读书，不求甚解。音乐、动漫爱好者。
   - name: 林荟
     intro: 女，杜邦先锋总部市场部统计师，毕业于 Iowa State University 统计系，生年不详卒年尚无法预测。
   - name: 刘辰昂
