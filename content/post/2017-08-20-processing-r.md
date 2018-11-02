@@ -24,16 +24,31 @@ Processing 是一门运行在 JVM 上的编程语言，其最初目标是用来�
 
 阅读本文，需要事先了解以下姿势：
 
-* R 语言，会疯狂出现，涉及使用层面。
+* R 语言，涉及使用层面。
 * Java Virtual Machine(JVM)，会多次出现在文章中，涉及实现层面。
 
 # Processing 环境
 
-Processing 是运行在 JVM 上的，因此具有跨平台的特性。目前主流的操作系统（Windows, macOS, Ubuntu 等 Linux 发行版）都可以运行 Processing 程序和 IDE。
+Processing 是运行在 JVM 上的，因此具有跨平台的特性。目前主流的操作系统（Windows, macOS, Ubuntu 等 Linux 发行版）都可以运行 Processing 程序和 IDE。Processing 不仅可以绘制 2D 的静态图形与动画，同时也有 3D 的支持。很多设计师和艺术家也会用这一语言来制作海报，完成创意作品等。
 
-![](https://user-images.githubusercontent.com/5100735/29493291-d548ad1e-85c5-11e7-9950-51b361b206bd.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/life.gif" height=150></img>
+<img src="https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/plot.png" height=150></img>
+<img src="https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/history.png" height=150></img>
+</p>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/noise.gif" height=150></img>
+<img src="https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/demo-geo.gif" height=150></img>
+<img src="https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/math.gif" height=150></img>
+<img src="https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/demo.gif" height=150></img>
+<img src="https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/people.gif" height=150></img>
+</p>
+<p align="center">由 Processing.R 实现的可视化作品</p>
 
 在 Processing 的语境中，Processing Sketch 就是指一个可以运行的 Processing 程序。而 Processing IDE 是开发和测试 Processing Sketch 的集成开发环境，也被称作 PDE，可以从 [Processing.org](https://processing.org/download/) 下载，<del>这是梦开始的地方。</del>在上图右侧，就是 PDE 主要的界面。而左边的小窗口，是显示窗口。在 Processing Sketch 的代码被运行的时候，就会产生一个默认情况下是 100 * 100 的展示窗口，Processing Sketch 中编写的逻辑都会呈现在其中。
+
+![](https://user-images.githubusercontent.com/5100735/29493291-d548ad1e-85c5-11e7-9950-51b361b206bd.png)
 
 # Processing 语言
 
@@ -47,24 +62,27 @@ Processing 最初是重用了 Java 语言，实现了一个基于其语言规约
 * **R for Processing；R 语言模式**
 * REPL 模式；Processing Java 的 REPL 模式
 
-而本文所要讨论的就是 Processing 的 R 语言模式。
+而本文所要讨论的就是 Processing 的 R 语言模式。值得注意的是，Processing.R 并不是一个标准的 R 包，其只能配合 Processing IDE 使用。
 
 # 实现一个 Processing.R Sketch
 
 Processing.R 可以使得 R 语言下的动态图形编程变得异常简单，下面是一段不到 40 行的代码，但麻雀虽小五脏俱全，这是一个不断在做扩胸运动的正方体团体，通过这个例子介绍下 Processing 的编程模型。
 
-![](https://user-images.githubusercontent.com/5100735/29493559-57fd93f0-85cb-11e7-9f50-ee853d1578e6.gif)
+![](https://raw.githubusercontent.com/processing-r/Processing.R/master/raw-docs/img/demo.gif)
 
 ```r
+# 用于初始化窗口的大小
 settings <- function() {
     size(500, 500, P3D)
 }
 
+# 用于初始化颜色与窗口的帧率
 setup <- function() {
     colorMode(RGB, 1)
     frameRate(24)
 }
 
+# 每帧会被调用一次的绘制函数，绘制真正的图像或动画
 draw <- function() {
     frames <- 24 * 3
     t <- frameCount/frames
@@ -102,7 +120,7 @@ draw <- function() {
 
 * R 语言原生的语法
 * [绝大多数的 Processing 函数](https://processing-r.github.io/reference/)
-* [部分 Processing 库](https://github.com/gaocegege/Processing.R#processing-libraries-importlibrary)
+* [部分 Processing 库](https://github.com/processing-r/Processing.R#processing-libraries-importlibrary)
 * [部分 R 包](http://packages.renjin.org/)
 
 # 实现细节
