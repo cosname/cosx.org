@@ -4,7 +4,7 @@ list:
     intro: 现任编辑部主编，复旦大学大数据学院助理教授。北京大学光华管理学院商务统计系博士,宾州州立大学统计博士后。研究上关注社交网络分析,时空数据建模等；狗熊会创始团队成员。
   - name: 于淼
     image: https://yufree.cn/images/MYu.jpg
-    intro: 现任编辑部执行主编，中科院生态环境研究中心博士，美国西奈山伊坎医学院博后，研究方向为环境化学与暴露组学数据分析， 博客 <https://yufree.cn>
+    intro: 现任编辑部执行主编，中科院生态环境研究中心博士，美国西奈山伊坎医学院博后，研究方向为环境化学与暴露组学数据分析，博客 <https://yufree.cn>
   - name: 黄湘云
     image: https://user-images.githubusercontent.com/12031874/28239932-9c296f42-69a9-11e7-90fa-d1d20cbad4db.jpg
     intro: 现任编辑部副主编，中国矿业大学（北京）本硕，本科学数学与应用数学，硕士学统计学，毕设做空间广义线性混合效应模型及其应用。R语言死忠，假红迷伪码农。曾在新浪运维部做过数据分析方向的实习生。
@@ -53,7 +53,7 @@ list:
     intro: 统计之都理事会主席，江西财经大学金融管理国际研究院助理教授，澳大利亚国立大学2011级统计学博士，中国人民大学2009级统计学硕士，中南财经政法大学2005级统计学&法学学士。2007年初识统计之都，常年潜水于COS论坛，并迅速成为COS迷粉，追随多年。2014年于南通婚礼偶遇太云，相逢恨晚，当即遁入COS门。现在在COS编辑部主要负责端茶送水，跑腿打杂，偶尔审审文章。
   - name: 高涛
     image: https://user-images.githubusercontent.com/1142836/28492456-ea8789ca-6f36-11e7-8b47-91eada415a4c.jpg
-    intro: 高涛,中国人民大学2012级数理统计研究生,2009年在太云带领下加入COS,给COS编辑部和R会议打杂,参与《R语言实战》《ggplot2：数据分析与图形艺术》书籍翻译。对统计机器学习、优化算法、时序预测感兴趣,之前混迹于互联网圈,现在从事量化投资。博客：<http://joegaotao.github.io/>。
+    intro: 高涛，中国人民大学2012级数理统计研究生，2009年在太云带领下加入COS，给COS编辑部和R会议打杂，参与《R语言实战》《ggplot2：数据分析与图形艺术》书籍翻译。对统计机器学习、优化算法、时序预测感兴趣，之前混迹于互联网圈，现在从事量化投资。博客：<http://joegaotao.github.io/>。
   - name: 何通
     image: https://avatars2.githubusercontent.com/u/1289856
     intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任AWS Applied Scientist，为深度学习框架MXNet添砖加瓦。
@@ -81,8 +81,7 @@ list:
   - name: 林荟
     intro: 女，杜邦先锋总部市场部统计师，毕业于 Iowa State University 统计系，生年不详卒年尚无法预测。
   - name: 刘辰昂
-    image:
-    intro: 浙大准大四本科，统计之都主站编辑。weibo：[求证1加1](http://weibo.com/2011764505/profile)；blog: <http://chenangliu.info/cn/>；email: liuchenang@gmail.com
+    intro: "浙大准大四本科，统计之都主站编辑。weibo：[求证1加1](http://weibo.com/2011764505/profile)；blog: <http://chenangliu.info/cn/>；email: liuchenang@gmail.com"
   - name: 刘霁
     image: https://user-images.githubusercontent.com/16065479/34287096-d4ffb8a4-e699-11e7-9171-d940f5388072.png
     intro: 罗切斯特大学计算机科学系、电子与计算机工程系助理教授。刘霁教授毕业于中国科学技术大学，并于亚利桑那州立大学与威斯康星麦迪逊分校取得了硕士与博士学位。他的研究兴趣广泛，包括机器学习、优化及其在计算机视觉、数据挖掘等领域的应用。刘霁教授于罗切斯特大学建立了机器学习和优化研究组。他在2010年SIGKDD大会上获得最佳论文奖，已在包括JMLR，SIMOPT等顶级期刊和会议上发表过多篇论文。
@@ -112,7 +111,7 @@ list:
     intro: 毕业于北京大学光华管理学院商务统计系，女博士一枚<br/>师从王汉生教授，狗熊会熊孩子一只<br/>现任职于中央财经大学统计与数学学院，年轻讲师一个<br/>在理论研究方面，关注高维数据和社交网络数据，在JASA和Annals上均有发表<br/>在业界实践方面，关注车联网行业的数据分析
   - name: 唐源
     image: https://terrytangyuan.github.io/img/final_prof_pic_2.png
-    intro: 目前在蚂蚁金服担任技术专家，建立AI基础架构和自动机器学习平台。在此之前，在芝加哥的Uptake带领团队建立用于多个物联网垂直领域的数据科学引擎，现在被用于航空、能源等大型机械领域。一直活跃在开源软件社区，是TensorFlow和DMLC的成员，是TensorFlow、XGBoost、MXNet等软件的committer，ggfortify、reticulate等软件的作者。曾获得谷歌Open Source Peer Bonus，以及多项高校和企业编程竞赛的奖项。在美国宾州州立大学获得荣誉数学学位，曾在本科学习期间成为创业公司DataNovo的核心创始成员，研究专利数据挖掘、无关键字现有技术搜索、策略推荐等。个人主页：<https://terrytangyuan.github.io/about/>
+    intro: 《TensorFlow实战》作者，目前在蚂蚁金服担任技术专家，建立AI基础架构和自动机器学习平台。在此之前，在芝加哥的Uptake带领团队建立用于多个物联网垂直领域的数据科学引擎，现在被用于航空、能源等大型机械领域。一直活跃在开源软件社区，是TensorFlow和DMLC的成员，是TensorFlow、XGBoost、MXNet等软件的committer，ggfortify、reticulate等软件的作者。曾获得谷歌Open Source Peer Bonus，以及多项高校和企业编程竞赛的奖项。在美国宾州州立大学获得荣誉数学学位，曾在本科学习期间成为创业公司DataNovo的核心创始成员，研究专利数据挖掘、无关键字现有技术搜索、策略推荐等。个人主页：<https://terrytangyuan.github.io/about/>
   - name: 王佳
     image: https://cloud.githubusercontent.com/assets/7221728/25832304/50a0da66-349c-11e7-9ead-70091ddd1dd7.jpg
     intro: 人大统计硕士在读，R与SAS爱好者，写得了代码，做得了调查，温柔靠谱的双鱼座妹子。能和cos聪明有趣的小编们一起工作玩耍是非常过瘾的经历
@@ -131,8 +130,8 @@ list:
   - name: 王毅然
     image: https://cloud.githubusercontent.com/assets/7221728/25788597/e295b736-33dc-11e7-9e62-61ea8f0190b1.jpg
     intro: 中国人民大学2013级经济学与数学（双学位）实验班本科生，美国北卡罗莱纳州立大学2017级统计学PhD。新人一枚，2017年5月刚刚加入统计之都，希望以后可以为统计之都贡献更多自己的力量。
-  - name: Earo Wang
-    intro: [Earo Wang](https://earo.me/), Ph.D. student at Monash University.
+  - name: "Earo Wang"
+    intro: "[Earo Wang](https://earo.me/), Ph.D. student at Monash University."
   - name: 汪张扬
     image: https://uploads.cosx.org/2016/06/tutu.jpeg
     intro: 汪张扬，男，1991年出生；2012年中国科学技术大学电子通信工程本科毕业；2016年伊利诺伊大学香槟分校电子计算机工程博士毕业；2016年加入德州A&M大学计算机科学系任助理教授。更多信息见[个人主页](http://www.atlaswang.com)。
@@ -173,7 +172,7 @@ list:
     image: https://cloud.githubusercontent.com/assets/7221728/25788531/67c2c7d8-33dc-11e7-8bc5-894640e04688.jpg
     intro: 硕士生，目前就读于中央财经大学应用统计专业，尤爱美食和旅行。10%的理科生，编程很鶸，轻度R语言使用者。90%的文科生，爱读书，爱写作，爱硬笔书法，爱PPT的设计与制作。一大波技能正等着我去学习……
   - name: 郁彬
-    intro: [郁彬](http://www.stat.berkeley.edu/~binyu/Site/Welcome.html)，1980年进入北京大学数学系攻读本科，1985年获陈省身数学交流项目资助前往美国，于1987年和1990年分别获伯克利大学统计学硕士和博士学位。她曾在威斯康星大学麦迪逊分校和耶鲁大学任教，并且在贝尔实验室工作。2006年，郁彬院友获得古根海姆奖。2009年到2012年间，她担任加州大学伯克利分校统计系系主任，现在则是伯克利分校统计系和电子工程与计算机科学系终身教授。2013年，郁彬院友当选美国艺术与科学学院院士，2014年当选美国国家科学院院士，此外，她还是北大微软统计和信息技术实验室的创办者和主任之一。
+    intro: "[郁彬](http://www.stat.berkeley.edu/~binyu/Site/Welcome.html)，1980年进入北京大学数学系攻读本科，1985年获陈省身数学交流项目资助前往美国，于1987年和1990年分别获伯克利大学统计学硕士和博士学位。她曾在威斯康星大学麦迪逊分校和耶鲁大学任教，并且在贝尔实验室工作。2006年，郁彬院友获得古根海姆奖。2009年到2012年间，她担任加州大学伯克利分校统计系系主任，现在则是伯克利分校统计系和电子工程与计算机科学系终身教授。2013年，郁彬院友当选美国艺术与科学学院院士，2014年当选美国国家科学院院士，此外，她还是北大微软统计和信息技术实验室的创办者和主任之一。"
   - name: 余光创
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 余光创，香港大学公共卫生学院，生物信息学博士生。博客：<https://guangchuangyu.github.io>， 公众号：biobabble
