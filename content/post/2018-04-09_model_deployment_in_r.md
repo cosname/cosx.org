@@ -28,7 +28,7 @@ knitr::opts_chunk$set(eval = FALSE)
 
 一句话概括，[模型部署](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle-deployment)是将一个调试好的模型应用置于生产或者类生产环境中，其意义在于处理预测新数据，为公司提供数据决策或者对接其他需求部门提供模型支持。我们先来看下面这幅数据科学项目开发流程图。
 
-<img src="http://chuantu.biz/t6/319/1527346823x-1404775605.png",height = "1000px", width = "800px">
+<img src="https://lalzzy.github.io/travis/images/model-deployment/datascience-lifecycle2.png",height = "1000px", width = "800px">
 
 位于图片左边区域中的紫色圆圈中的文字，相信对大部分读者都不陌生。我们在学校中习得了很多关于数据科学模型、特征选择技巧及模型评价方法的知识，回想一下，在你过去大多数课程作业或是打比赛的经历中，完成了模型评价也就意味着项目宣告结束。然而在商业应用中，模型部署才标志着一个项目开发的阶段性结束。它的价值体现在两点：
 
@@ -38,11 +38,15 @@ knitr::opts_chunk$set(eval = FALSE)
 
 ### 模型部署的手段[1]：
 
-这里我引述了一些常用的模型部署的手段，接下来我们将会介绍借助R中的网络服务这种形式来搭建一个线上的模型。
+首先我引述其中几种常用的模型部署的手段，接下来我们将会介绍借助R中的网络服务这种形式来搭建一个线上的模型。
 
-#### 各种类型的工件(artifact)
+#### 各种工具/工件(artifact)
 
-这类工件能够将训练好的模型装入一些设备或者终端中，通常在编程语言的均有调用接口。PMML(Predictive Model Markup Language)是其中最常用的一种，它适合应用在实时、大规模数据量的场景。而在深度学习方面，TensorFlow框架提供了模型部署的功能。除此之外还有一些其他的工具，相应的在R中也基本有接口包。
+有很多软件包均提供了将模型部署至小型终端设备上的功能。他们大都是将训练好的模型封装成一个对象并储存成自定义格式的文件，然后在相对应的平台或系统中加载调用这个对象，诸编程平台也大都有相应调用接口。PMML(Predictive Model Markup Language)是其中最常用的一种，它适合应用在实时、大规模数据量的场景。而在深度学习方面，TensorFlow社区开发的[Tensorflow Lite](https://www.tensorflow.org/lite/overview)工具能翻译转换tensorflow预训练模型至TensorFlow Lite 文件格式，然后用其他的接口来调用模型文件实现部署。除此之外还有一些其他的工具,可以参考R官网的[task view模型部署部分](https://cran.r-project.org/web/views/ModelDeployment.html)，这里不再一一赘述。
+
+<img src="https://lalzzy.github.io/travis/images/model-deployment/tflite-architecture.jpg",height = "1000px", width = "700px">
+
+*注*: 图片来源自tensorflow官网
 
 #### 云/服务器
 
@@ -58,7 +62,7 @@ knitr::opts_chunk$set(eval = FALSE)
 
 这种方式相对来说就比较稀松平常了。问离线部署共分几步？答：共分三步。写好模型脚本xx.R或xx.python；把累计的新数据down下来；执行 Rscript xx.R & python xx.python。完事儿~
 
-### 闲话流数据：
+### 闲话流数据
 
 前文说到模型部署的一大价值便在于它赋予了数据科学模型处理新数据的能力，而很多新数据通常是实时采集的流式数据。而在我看来，对于流式数据的陌生也是大部分同学在校期间对模型部署接触不多的一大原因，或者与数据采集环节的遥远导致我们把大部分的精力都投入在如何用模型把面前样本数据中的模式挖掘出来。在这种场景下，数据是固定的，被存放在.csv或者各式各样的文件中。
 
@@ -76,7 +80,7 @@ knitr::opts_chunk$set(eval = FALSE)
 我们演示的场景为垃圾邮件拦截，数据来源自ElemStatLearn包spam数据集。把问题拆解为以下四个步骤来模拟实际生产环境。
 
 1. 根据线下数据训练模型
-2. 从线上mysql数据库中获取新数据
+2. 从线上MySQL数据库中获取新数据
 3. 将数据传递至部署在web服务器上的模型并返回预测值
 4. 使用预测值来决策
 
@@ -99,12 +103,12 @@ for (i in c('opencpu','fiery','plumber','xgboost','glmnet','ElemStatLearn','RMyS
 library(xgboost)
 library(glmnet)
 library(ElemStatLearn)
-x <- as.matrix(spam[, -ncol(spam)])
-y <- as.numeric(spam$spam) - 1
-xgbmodel <- xgboost(data = x, label = y, nrounds = 5, objective = 'binary:logistic')
+x = as.matrix(spam[, -ncol(spam)])
+y = as.numeric(spam$spam) - 1
+xgbmodel = xgboost(data = x, label = y, nrounds = 5, objective = 'binary:logistic')
 # 这里模型保存的路径可以自己设置
 save(xgbmodel, file="../xgb.rda")
-glmmodel <- cv.glmnet(x = x, y = y, family = 'binomial')
+glmmodel = cv.glmnet(x = x, y = y, family = 'binomial')
 save(glmmodel, file="../glm.rda")
 ```
 
@@ -129,13 +133,13 @@ opencpu包在这三者中是发布最早的，包作者在2013年9月CRAN上发�
 ## getdata: 从数据库中提取垃圾邮件数据
 ## params: 
 ##   id: 邮件id
-getdata <- function(id = 1){
+getdata = function(id = 1){
   # 这里spam_mail是MySQL数据库中已经建好的一张表
   con = dbConnect(MySQL(),user = 'username',password = '123456',dbname = 'spam_mail')
   sqlquery = paste0('SELECT * FROM spam WHERE id = ',id)
-  res <- dbSendQuery(con, sqlquery)
-  data <- dbFetch(res, n=-1)
-  z <- unlist(data[,-1])
+  res = dbSendQuery(con, sqlquery)
+  data = dbFetch(res, n=-1)
+  z = unlist(data[,-1])
   # 清空con的查询结果并关闭连接
   dbClearResult(dbListResults(con)[[1]])
   dbDisconnect(con)
@@ -146,9 +150,8 @@ getdata <- function(id = 1){
 此处模拟的情景是从MySQL数据库中提取数据，需要在本机上配置MySQL或者连接一个远程的MySQL数据库，具体的配置过程从略。
 
 
-
 ```r
-xgbpred <- function(id = 1){
+xgbpred = function(id = 1){
   # xgbmodel与glmmodel是前面保存的xgb.rda与glm.rda，采用了默认加载的方式
   v = xgboost:::predict.xgb.Booster(object = xgbmodel, newdata = getdata(id))
   v = as.character(v)
@@ -156,7 +159,7 @@ xgbpred <- function(id = 1){
               id = id))
 }
 
-linearpred <- function(id = 1){
+linearpred = function(id = 1){
   v = glmnet:::predict.cv.glmnet(object = glmmodel, newx = getdata(id), s = "lambda.min", type = 'response')
   v = as.character(v)
   return(list(class = v,
@@ -168,7 +171,7 @@ linearpred <- function(id = 1){
 
 创建R包SpamModelOpencpu并编辑文档，下图是编译好的R包的介绍。
 
-![](http://chuantu.biz/t6/318/1527077707x-1404755480.png)
+![](https://lalzzy.github.io/travis/images/model-deployment/buildRpackage.png)
 
 如果你对R包开发不熟悉，可以参考这个[教程](https://blog.csdn.net/iccsu/article/details/24237885)或是谢益辉大大在统计之都上的[旧文](https://cosx.org/2011/05/write-r-packages-like-a-ninja)。
 
@@ -232,13 +235,13 @@ suppressPackageStartupMessages(library(xgboost))
 app = Fire$new()
 
 # 设置ip 地址和端口号
-app$host <- "127.0.0.1"
-app$port <- 9123
+app$host = "127.0.0.1"
+app$port = 9123
 ```
 
 #### STEP 2
 
-启动服务并同时开启监听，同时加载训练好的xgboost模型。
+启动服务并同时开启监听，同时加载训练好的储存在model.rds文件中的xgboost模型。
 
 
 ```r
@@ -264,7 +267,7 @@ app$on('request', function(server, id, request, ...) {
   
   response = request$respond()
   ## Step3:获取请求的path，一旦判断为 /predict 则进行预测
-  path <- get("url", envir = request)
+  path = get("url", envir = request)
   message(path)
   ## 索引介绍页面
   if (grepl("hello", path)){
@@ -281,25 +284,25 @@ app$on('request', function(server, id, request, ...) {
     ##Step3.1 获取并解析query string，
     
     ##query期待处理为 id=##
-    query  <- get("querystring", envir = request)
+    query = get("querystring", envir = request)
     message(query)
     ## 解析query, 大概传递的是类似这个：parseQueryString("?foo=1&bar=b%20a%20r")
     ## input 解析出来是 list 对象
     
-    input <- shiny::parseQueryString(query)
+    input = shiny::parseQueryString(query)
     message(sprintf("Input: %s", input$'?id'))
     
     ## Step3.2 定义获取数据的函数
-    ## 这里模拟从线上mysql提取数据的逻辑，传入待查数据的id
+    ## 这里模拟从线上MySQL提取数据的逻辑，传入待查数据的id
     ## 若id不存在，那么返回报错
     
-    getdata <- function(id = 1){
+    getdata = function(id = 1){
       con = dbConnect(MySQL(),user = 'username',password = '123456',dbname = 'spam_mail')
       sqlquery = paste0('SELECT * FROM spam WHERE id = ',id)
       print(sqlquery)
-      res <- dbSendQuery(con, sqlquery)  
-      data <- dbFetch(res, n=-1)
-      z <- unlist(data[,-1])
+      res = dbSendQuery(con, sqlquery)  
+      data = dbFetch(res, n=-1)
+      z = unlist(data[,-1])
       # 清空con的查询结果并关闭连接
       dbClearResult(dbListResults(con)[[1]])
       dbDisconnect(con)
@@ -309,10 +312,10 @@ app$on('request', function(server, id, request, ...) {
     ## Step3.3 进入模型预测环节
     ## 声明返回 res 是一个 list，传递参数为 input$val
     
-    res <- list()
-    res$v <-  xgboost:::predict.xgb.Booster(object = model, newdata = getdata(input$'?id'))
+    res = list()
+    res$v =  xgboost:::predict.xgb.Booster(object = model, newdata = getdata(input$'?id'))
     message(res$v)
-    response$body <- jsonlite::toJSON(res, auto_unbox = TRUE, pretty = TRUE)
+    response$body = jsonlite::toJSON(res, auto_unbox = TRUE, pretty = TRUE)
     response$status = 200L
   }
   response
@@ -356,22 +359,17 @@ $ curl --silent  http://127.0.0.1:9123/predict?id=1
 
 ```
 
-
-
-
-TODO(换电脑个人MySQL没配好 :( )
-
 ## plumber
 
 ### 包的介绍
 
-plumber是要介绍的最后一个包。在我看来该包的优势有以下几点：1. 响应速度很快。2. 学习曲线平缓，即便你是个缺乏http请求与html语言的知识的小白，这并不妨碍你入门使用这个包，当然如果是深度用户，还是要对该包的运行机制有所了解的。3. 最后一点，该包提供了用bookdown编辑的[学习文档](https://www.rplumber.io/docs/)方便上手学习（相信很多人对一份简明的开源工具的使用文档的重要性深有体会！）。
+plumber是要介绍的最后一个包。在我看来该包的优势有以下几点：1. 响应速度很快。2. 学习曲线平缓，即便你是个缺乏http请求与html语言的知识的小白，这并不妨碍你入门使用这个包，当然如果是深度使用用户，还是要对该包的运行机制有所了解的。3. 最后一点，该包提供的用bookdown编辑的[学习文档](https://www.rplumber.io/docs/)方便上手学习（相信很多人对一份简明的开源工具使用文档的必要性深有体会！）。
 
 ### 案例实现
 
 下面讲一下plumber的实现步骤，并不涉及过多原理。简要来说，plumber借助endpoint与filter这两个控件搭建一个可用的http服务。
 
-在使用plumber实现我们识别垃圾邮件的案例中，我们需要使用endpoint来指明路由，后面跟随这个路由对应的R环境中的函数操作。endpoint的声明借由在脚本里函数的前面嵌入`@`来实现，比如下面这段代码我们定义了一个get方法，它的路由是./predict，当你访问并向该路由发送请求时，请求中的参数id将会被提取出来并被传递至下面的函数。函数同样是定义了从MYSQL中按照id提取数据并加载入模型。
+在使用plumber实现我们识别垃圾邮件的案例中，我们需要使用endpoint来指明路由，后面跟随这个路由对应的R环境中的函数操作。endpoint的声明借由在脚本里函数的前面嵌入`@`来实现，比如下面这段代码我们定义了一个get方法，它的路由是./predict，当你访问并向该路由发送请求时，请求中的参数id将会被提取出来并被传递至下面的函数。函数同样是定义了从MySQL中按照id提取数据并加载入模型。
 
 
 
@@ -379,19 +377,19 @@ plumber是要介绍的最后一个包。在我看来该包的优势有以下几�
 #' 对request提取用户id并做预测
 #' @get /predict
 function(id){
-  getdata <- function(id = 1){
+  getdata = function(id = 1){
     con = dbConnect(MySQL(),user = 'username',password = '123456',dbname = 'spam_mail')
     sqlquery = paste0('SELECT * FROM spam WHERE id = ',id)
     print(sqlquery)
-    res <- dbSendQuery(con, sqlquery)  
-    data <- dbFetch(res, n=-1)
-    z <- unlist(data[,-1])
+    res = dbSendQuery(con, sqlquery)  
+    data = dbFetch(res, n=-1)
+    z = unlist(data[,-1])
     # 清空con的查询结果并关闭连接
     dbClearResult(dbListResults(con)[[1]])
     dbDisconnect(con)
     return(t(as.matrix(z)))
   }
-  res =  xgboost:::predict.xgb.Booster(object = model, newdata = getdata(id))
+  res = xgboost:::predict.xgb.Booster(object = model, newdata = getdata(id))
   res
 }
 ```
@@ -417,7 +415,7 @@ function(req){
 
 ```r
 # 你需切换工作目录至service_plumber.r文件所在位置
-pr <- plumber::plumb("service_plumber.r")
+pr = plumber::plumb("service_plumber.r")
 pr$run(port = 2018)
 ```
 
@@ -450,9 +448,9 @@ microbenchmark::microbenchmark(system('curl 127.0.0.1:2018/predict?id=1'))
 
 ```{}
                                                                      expr      min
- system("curl http://localhost:5656/ocpu/library/SpamModelOpencpu/R/xgbpred/json -d \\"id=1\\"") 1.472951
+ system("curl http://localhost:5656/ocpu/library/SpamModelOpencpu/R/xgbpred/json -d \\"id=1\\"") 1472.951
        lq     mean   median       uq      max neval
- 1.699469 1.779102 1.808699 1.830126 2.772285   100
+ 1699.469 1779.102 1808.699 1830.126 2772.285   100
  
  
                                        expr      min       lq     mean   median       uq      max neval
@@ -467,7 +465,7 @@ microbenchmark::microbenchmark(system('curl 127.0.0.1:2018/predict?id=1'))
 
 至此你已经完成了模型部署的入门训练，恭喜！最后考虑到响应测试与上手难度，我个人向你推荐plumbeR这个包。与此同时，一个悲喜交加的消息是R社区中今年又发布了一个用并行化来实现的网络服务包RestRserve，其响应速度堪称秒杀plumbeR([据说是后者的20倍](https://github.com/dselivanov/RestRserve))，留待后话。
 
-[1]: https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle-deployment
+[1]: https://cran.r-project.org/web/views/ModelDeployment.html
 [2]: https://en.wikipedia.org/wiki/Line_of_business
 
 参考资料
@@ -475,3 +473,4 @@ microbenchmark::microbenchmark(system('curl 127.0.0.1:2018/predict?id=1'))
 1. [利用R和opencpu搭建高可用的HTTP服务——by刘思喆](http://www.bjt.name/2017/04/28/opencpu-application.html)
 2. [plumbeR官方网站](https://www.rplumber.io/)
 3. [开发 R 程序包之忍者篇——by谢大](https://cosx.org/2011/05/write-r-packages-like-a-ninja)
+
