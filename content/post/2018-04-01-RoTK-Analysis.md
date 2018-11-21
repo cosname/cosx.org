@@ -252,7 +252,7 @@ emperor_attr("武力")
 ```r
 emperor_attr("智力")
 ```
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-15-1.png)
+![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-16-1.png)
 
 
 从图中可以看到除了曹操每一代智力都稳定在90以上，孙权和刘备的智力都呈下降趋势，分别稳定在80和70左右，这还是比较合理的，一来是刘备在整部《三国演义》里都没有什么出彩的料敌制胜，智谋过人的表现，在诸葛亮出山以前长期依附着不同势力，从曹操，到袁绍，再到刘表，一直没有自己的一片根据地。当然刘备最大的招牌也不是智谋，是仁德，是能得人心，早期实力不济的时候依然选择救援公孙瓒，孔融等诸侯，带新野襄阳数十万百姓逃到江夏，这也能解释为什么关羽张飞等能一直死心塌地跟着刘备，为什么诸葛亮愿意出山。
@@ -268,7 +268,7 @@ emperor_attr("智力")
 
 #### 2.2.3 统率对比
 
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-16-1.png)
+![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-17-1.png)
 刘备和孙权的统率最终又交汇到了75左右。統率指的是带兵打仗能力，刘备一生虽然败仗打得多，但汉中之战也算是个人巅峰，孙权统治江东五十余年，一直没在曹魏的淮南地区占得便宜，虽说镇守合肥的历来都是曹魏的名将，但也稍微说明了点孙权的打仗能力。
 
 临时决定确认下《三国志1》是否整体数值偏高。
