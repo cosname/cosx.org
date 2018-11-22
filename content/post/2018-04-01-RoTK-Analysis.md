@@ -29,7 +29,7 @@ forum_id: 420245
 ## 1. 数据处理
 
 首先看下这份数据本身的格式。
-![](https://github.com/spsufawi/My-Blog/blob/master/static/content/post/RoTC-Analysis_files/attr.png)
+![](https://spsufawi.rbind.io/content/post/RoTC-Analysis_files/attr.png)
 
 我们发现有多个相同的变量分部在不同的列，而且版本信息占据了多个格子。这种数据不手动处理很难读进R（可能可以？），在excel里也许能直接用，但在R里这不属于我们所说的[干净数据](http://r4ds.had.co.nz/tidy-data.html)。干净数据有如下定义
 
@@ -38,7 +38,7 @@ forum_id: 420245
 3. 每一个数值必须在它自己的格子
 
 我决定自己手动把版本数据分开到11个表格里，每一个如下图所示。(自然我也可以手动直接得到我们最终想要的数据，但我还是决定用R实现它。）
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/attr1.png)
+![](https://spsufawi.rbind.io/post/RoTC-Analysis_files/attr1.png)
 
 初步处理过后的数据我放到了[这里](https://github.com/spsufawi/My-Blog/blob/master/content/post/Characters.xlsx)
 
@@ -229,7 +229,7 @@ emperor_attr <- function(attrs){
 ```r
 emperor_attr("武力")
 ```
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-14-1.png)
+![](https://spsufawi.rbind.io/post/RoTC-Analysis_files/figure-html/unnamed-chunk-15-1.png)
 
 《三国志1》作为一款1985年出品的游戏，可能在人物数值上稍欠考究，在这一代中，孙权和曹操的武力达到了惊人的94，93。之后几乎是一直在下降，最终三人的武力都在70上下，基本是个准二流武将的水平。
 
@@ -252,7 +252,7 @@ emperor_attr("武力")
 ```r
 emperor_attr("智力")
 ```
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-16-1.png)
+![](https://spsufawi.rbind.io/post/RoTC-Analysis_files/figure-html/unnamed-chunk-16-1.png)
 
 
 从图中可以看到除了曹操每一代智力都稳定在90以上，孙权和刘备的智力都呈下降趋势，分别稳定在80和70左右，这还是比较合理的，一来是刘备在整部《三国演义》里都没有什么出彩的料敌制胜，智谋过人的表现，在诸葛亮出山以前长期依附着不同势力，从曹操，到袁绍，再到刘表，一直没有自己的一片根据地。当然刘备最大的招牌也不是智谋，是仁德，是能得人心，早期实力不济的时候依然选择救援公孙瓒，孔融等诸侯，带新野襄阳数十万百姓逃到江夏，这也能解释为什么关羽张飞等能一直死心塌地跟着刘备，为什么诸葛亮愿意出山。
@@ -268,7 +268,7 @@ emperor_attr("智力")
 
 #### 2.2.3 统率对比
 
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-17-1.png)
+![](https://spsufawi.rbind.io/post/RoTC-Analysis_files/figure-html/unnamed-chunk-17-1.png)
 刘备和孙权的统率最终又交汇到了75左右。統率指的是带兵打仗能力，刘备一生虽然败仗打得多，但汉中之战也算是个人巅峰，孙权统治江东五十余年，一直没在曹魏的淮南地区占得便宜，虽说镇守合肥的历来都是曹魏的名将，但也稍微说明了点孙权的打仗能力。
 
 临时决定确认下《三国志1》是否整体数值偏高。
@@ -504,7 +504,7 @@ table(war_int2$姓名)
 
 来对比下蜀国五虎大将和五子良将吧。先来放一张光荣风格的武将头像图。
 
-![](https://github.com/spsufawi/My-Blog/blob/master/static/content/post/RoTC-Analysis_files/wuhua-vs-wuzi.jpg)
+![](https://spsufawi.rbind.io/content/post/RoTC-Analysis_files/wuhua-vs-wuzi.jpg)
 
 五子良将指的是魏国将领张辽，徐晃，乐进，张郃，于禁。这个称号来自陈寿的《三国志》
 <pre>
@@ -537,7 +537,7 @@ wuhu_vs_wuzi <- function(attrs){
 ```r
 wuhu_vs_wuzi("武力")
 ```
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-30-1.png)
+![](https://spsufawi.rbind.io/post/RoTC-Analysis_files/figure-html/unnamed-chunk-30-1.png)
 
 从这个图来看基本五虎武力是碾压五子的，而五子里又属张辽徐晃武力最高。前者没有什么好说的，毕竟关羽赵飞的“万人敌”的称号是《三国志魏书程昱传》里记载的。赵云先不说在历史上真实形象如何，就凭他在演义里长坂坡，汉水拒敌的表现，以及他的人气，光荣就不敢不给赵云95以上的武力。五虎将的武力历代基本没什么变化，维持在95左右。乐进和于禁的武力在2代一度跌破60，后边走高达到了80多。
 
@@ -581,7 +581,7 @@ wuhu_vs_wuzi("武力")
 ```r
 wuhu_vs_wuzi("智力")
 ```
-![](https://github.com/spsufawi/My-Blog/blob/master/static/post/RoTC-Analysis_files/figure-html/unnamed-chunk-31-1.png)
+![](https://spsufawi.rbind.io/post/RoTC-Analysis_files/figure-html/unnamed-chunk-31-1.png)
 智力从图来看五子除了张辽总体趋势都是在上升的，并且平均来看高于五虎将，主要是张飞和马超拖了后腿，而黄忠马马虎虎，智力维持在60上下。
 
 感觉相对于五虎大将，五子良将更多的是属于帅才，武力不一定是最顶尖的，但带兵打仗，以弱胜强，摧城拔寨的本事要强于五虎大将。
