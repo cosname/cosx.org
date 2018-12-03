@@ -3,7 +3,7 @@ title: R代码模拟世界杯1000次，足球小白速成世界杯预言姐
 author: 夏丰盛
 date: '2018-06-24'
 slug: use-R-to-predict-the-2018-World-Cup
-meta_extra: 原作者：杨环；译者：夏丰盛；审稿：郎大为；编辑：雷博文；
+meta_extra: "原作者：杨环；译者：夏丰盛；编辑：雷博文；审稿：郎大为"
 categories:
   - R语言
   - 统计应用
