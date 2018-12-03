@@ -3,7 +3,7 @@ title: 电子表格中的数据整理
 author: 任怡萌
 date: '2018-07-28'
 slug: data-organization-in-spreadsheets
-meta_extra: '原作者：Karl W. Broman，Kara Woo；译者：任怡萌'
+meta_extra: "原作者：Karl W. Broman，Kara Woo；译者：任怡萌；审稿：范超"
 categories:
   - 统计软件
 tags:
