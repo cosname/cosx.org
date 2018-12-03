@@ -10,6 +10,8 @@ tags:
   - 新媒体艺术
   - 可视化
 slug: processing-r
+meta_extra: "审稿：郎大为"
+forum_id: 420330
 ---
 
 ![processing.r](https://github.com/gaocegege/Processing.R/raw/master/raw-docs/img/logo/logo.png)
