@@ -1,6 +1,7 @@
 https://master--cosx.netlify.com/*   https://cosx.org/:splat  301!
 
 /flarum/*                          https://d.cosx.org/:splat
+/cn/topic/*           https://d.cosx.org/d/:splat
 
 /2017/05/work-with-cos/            /contribute/
 /2008/11/how-to-work-with-cos-2/   /contribute/
