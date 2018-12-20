@@ -1,12 +1,12 @@
 ---
 title: R语言实战之模型部署
 author: 周震宇
-date: '2018-07-23'
-slug: r-model-deployment
+date: '2018-12-20'
+slug: model-deployment-in-action-with-r
 categories:
-  - R
+  - R 语言
 tags:
-  - model-deployment
+  - 模型部署
 meta_extra: "审稿：郎大为"
 forum_id: 420368
 ---
@@ -27,7 +27,7 @@ forum_id: 420368
 
 位于图片左边区域中的紫色圆圈中的文字，相信对大部分读者都不陌生。我们在学校中习得了很多关于数据科学模型、特征选择技巧及模型评价方法的知识，回想一下，在你过去大多数课程作业或是打比赛的经历中，完成了模型评价也就意味着项目宣告结束。然而在商业应用中，模型部署才标志着一个项目开发的阶段性结束。它的价值体现在两点：
 
-* 赋予数据科学模型处理新数据的能力（可以是实时的流数据，或者是积累的批数据）。
+* 赋予数据科学模型处理新数据的能力，可以是实时的流数据，或者是积累的批数据。
 * 在实际应用场景中完成模型效果与性能的反馈，为模型调整提供依据，实现建模开发流程的闭环。
 
 ### 模型部署的手段
@@ -36,7 +36,7 @@ forum_id: 420368
 
 #### 各种工具/工件(artifact)
 
-有很多软件包均提供了将模型部署至小型终端设备上的功能。他们大都是将训练好的模型封装成一个对象并储存成自定义格式的文件，然后在相对应的平台或系统中加载调用这个对象，诸编程平台也大都有相应调用接口。 PMML (Predictive Model Markup Language) 是其中最常用的一种，它适合应用在实时、大规模数据量的场景。而在深度学习方面，TensorFlow 社区开发的 [Tensorflow Lite](https://www.tensorflow.org/lite/overview) 工具能翻译转换 tensorflow 预训练模型至 TensorFlow Lite 文件格式，然后用其他的接口来调用模型文件实现部署。除此之外还有一些其他的工具，可以参考R官网的 [task view模型部署部分](https://cran.r-project.org/web/views/ModelDeployment.html)，这里不再一一赘述。
+有很多软件包均提供了将模型部署至小型终端设备上的功能。他们大都是将训练好的模型封装成一个对象并储存成自定义格式的文件，然后在相对应的平台或系统中加载调用这个对象，诸编程平台也大都有相应调用接口。 PMML (Predictive Model Markup Language) 是其中最常用的一种，它适合应用在实时、大规模数据量的场景。而在深度学习方面，TensorFlow 社区开发的 [Tensorflow Lite](https://www.tensorflow.org/lite/overview) 工具能翻译转换 tensorflow 预训练模型至 TensorFlow Lite 文件格式，然后用其他的接口来调用模型文件实现部署。除此之外还有一些其他的工具，可以参考R官网的 [任务视图之模型部署部分](https://cran.r-project.org/web/views/ModelDeployment.html)，这里不再一一赘述。
 
 <img src="https://lalzzy.github.io/travis/images/model-deployment/tflite-architecture.jpg",height = "1000px", width = "700px">
 
@@ -50,11 +50,11 @@ forum_id: 420368
 
 用网络服务做模型部署，将划分出线上与线下两个环境。线下环境是单机环境，用以做一些探索性或者验证性的分析，包含了分析建模的每一个步骤：特征工程、模型选择、模型评价、参数调节等 
 
-而线上环境则是生产环境，是把线下调整好参数的模型传至线上对新搜集的数据进行实时反馈。其背后的原理是借助 get&post 方法把特征字段传递给web 服务器，服务器将会用封装好的模型预测并返回参数数值。对 get&post 不熟悉的可以参考 [这个教程](http://www.w3school.com.cn/tags/html_ref_httpmethods.asp)。
+而线上环境则是生产环境，是把线下调整好参数的模型传至线上对新搜集的数据进行实时反馈。其背后的原理是借助 get&post 方法把特征字段传递给 web 服务器，服务器将会用封装好的模型预测并返回参数数值。对 get&post 不熟悉的可以参考 [这个教程](http://www.w3school.com.cn/tags/html_ref_httpmethods.asp)。
 
 #### 离线部署
 
-这种方式相对来说就比较稀松平常了。问离线部署共分几步？答：共分三步。写好模型脚本 `xx.R` 或 `xx.py`；把累计的新数据下载下来；执行 `Rscript xx.R` 或者 `python xx.py`。完事儿~
+这种方式相对来说就比较稀松平常了。问离线部署共分几步？答：共分三步。写好模型脚本 `xx.R` 或 `xx.py`；把累积的新数据下载下来；执行 `Rscript xx.R` 或者 `python xx.py`。完事儿~
 
 ### 闲话流数据
 
@@ -64,7 +64,7 @@ forum_id: 420368
 
 ## 实战环节
 
-得益于 Rstudio 开发的工具包 [httpuv](https://github.com/rstudio/httpuv)，在 R 语言中处理 http 以及 Websocket 请求变成了现实，基于此工具包二次开发的框架 opencpu, fiery 和 plumbeR 提供了在线模型部署的 R 版本的解决方案，下面我们一一介绍：
+得益于 RStudio 开发的工具包 [httpuv](https://github.com/rstudio/httpuv)，在 R 语言中处理 http 以及 Websocket 请求变成了现实，基于此工具包二次开发的框架 opencpu, fiery 和 plumbeR 提供了在线模型部署的解决方案，下面我们一一介绍：
 
 ### 场景实例：
 
@@ -157,11 +157,11 @@ linearpred = function(id = 1){
 
 #### STEP 2
 
-创建 R 包 SpamModelOpencpu 并编辑文档，下图是编译好的R包的介绍。
+创建 R 包 SpamModelOpencpu 并编辑文档，下图是编译好的 R 包的介绍。
 
 ![](https://lalzzy.github.io/travis/images/model-deployment/buildRpackage.png)
 
-如果你对R包开发不熟悉，可以参考这个 [教程](https://blog.csdn.net/iccsu/article/details/24237885)或是谢益辉大大在统计之都上的 [旧文](https://cosx.org/2011/05/write-r-packages-like-a-ninja)。
+如果你对R包开发不熟悉，可以参考这个 [教程](https://blog.csdn.net/iccsu/article/details/24237885) 或是谢益辉大大在统计之都上的 [旧文](https://cosx.org/2011/05/write-r-packages-like-a-ninja)。
 
 #### STEP 3
 
@@ -181,9 +181,9 @@ ocpu_start_server()
 [2018-05-23 19:24:58] Press ESC or CTRL+C to quit!
 ```
 
-控制台的输出告诉我们服务已经在 `http://localhost:5656/ocpu` 启动了，接下来你可以用浏览器访问这个url，或者在控制台中 curl 一下 (我使用windows平台下的`git bash`，cmd中输入的命令可能会有些差异)
+控制台的输出告诉我们服务已经在 `http://localhost:5656/ocpu` 启动了，接下来你可以用浏览器访问这个url，或者在控制台中 curl 一下 (我使用windows平台下的`git bash`，CMD 中输入的命令可能会有些差异)
 
-```
+```bash
 curl http://localhost:5656/ocpu/library/SpamModelOpencpu/R/xgbpred/json -d "id=1"
 ```
 ```
@@ -244,8 +244,8 @@ app$on("start", function(server, ...) {
 
 响应 http 请求，编辑函数定义对访问路径为 hello 或 predict 的请求的操作逻辑。
 
-* /hello 页面：介绍页面
-* /predict 页面：输入id，返回预测值的页面。
+* `/hello` 页面：介绍页面
+* `/predict` 页面：输入id，返回预测值的页面。
 
 ```r
 app$on('request', function(server, id, request, ...) {
@@ -315,7 +315,7 @@ app$on('request', function(server, id, request, ...) {
 app$ignite(showcase=FALSE) # 启动服务
 ```
 
-接下来保存上面的所有编辑，并在控制台中运行该脚本。在 Windows 的 CMD 或者 Mac OS/Linux 的 Shell 中，这并没什么不妥，然而如果你是在 Windows下使用的 `git bash`，就要输入`winpty Rscript SpamM.r`
+接下来保存上面的所有编辑，并在控制台中运行该脚本。在 Windows 的 CMD 或者 Mac OS/Linux 的 Shell 中，这并没什么不妥，然而如果你是在 Windows下使用的 git bash，就要输入 `winpty Rscript SpamM.r`
 
 ```bash
 Rscript SpamM.r
@@ -361,7 +361,7 @@ plumber 是要介绍的最后一个包。在我看来，该包的优势有以下
 
 下面讲一下plumber的实现步骤，并不涉及过多原理。简要来说，plumber 借助 endpoint 与 filter 这两个控件搭建一个可用的 http 服务。
 
-在使用 plumber 实现我们识别垃圾邮件的案例中，我们需要使用 endpoint 来指明路由，后面跟随这个路由对应的R环境中的函数操作。 endpoint 的声明借由在脚本里函数的前面嵌入`@`来实现，比如下面这段代码我们定义了一个 get 方法，它的路由是 ./predict，当你访问并向该路由发送请求时，请求中的参数 id 将会被提取出来并被传递至下面的函数。函数同样是定义了从 MySQL 中按照 id 提取数据并加载入模型。
+在使用 plumber 实现我们识别垃圾邮件的案例中，我们需要使用 endpoint 来指明路由，后面跟随这个路由对应的R环境中的函数操作。 endpoint 的声明借由在脚本里函数的前面嵌入`@`来实现，比如下面这段代码我们定义了一个 get 方法，它的路由是 `./predict`，当你访问并向该路由发送请求时，请求中的参数 id 将会被提取出来并被传递至下面的函数。函数同样是定义了从 MySQL 中按照 id 提取数据并加载入模型。
 
 ```r
 #' 对request提取用户id并做预测
