@@ -7,6 +7,9 @@ categories:
   - R 语言
 tags:
   - 模型部署
+  - opencpu
+  - fiery
+  - plumber
 meta_extra: "审稿：郎大为"
 forum_id: 420368
 ---
@@ -15,7 +18,7 @@ forum_id: 420368
 
 如果此时你对何谓模型部署仍然一无所知的话，不必有任何焦虑的心情，带你入门正是本文的目标所在。请相信我，这篇介绍将会是十分新手友好的，怀着好奇心和耐心读下去，你也会对模型部署建立起清晰的认识。
 
-模型部署是商业统计建模中极其重要的一部分，然而却往往被人忽视。读完本文，你将了解模型部署的基本概念与用途，学会如何在R语言环境中使用网络服务来部署上线一个模型，更多地，你的方法武器库中将会增添几柄利器: opencpu、fiery 及 plumbeR。话不多说，让我们开始吧！
+模型部署是商业统计建模中极其重要的一部分，然而却往往被人忽视。读完本文，你将了解模型部署的基本概念与用途，学会如何在R语言环境中使用网络服务来部署上线一个模型，更多地，你的方法武器库中将会增添几柄利器: opencpu、fiery 及 plumber。话不多说，让我们开始吧！
 
 ## 引入模型部署
 
@@ -64,7 +67,7 @@ forum_id: 420368
 
 ## 实战环节
 
-得益于 RStudio 开发的工具包 [httpuv](https://github.com/rstudio/httpuv)，在 R 语言中处理 http 以及 Websocket 请求变成了现实，基于此工具包二次开发的框架 opencpu, fiery 和 plumbeR 提供了在线模型部署的解决方案，下面我们一一介绍：
+得益于 RStudio 开发的工具包 [httpuv](https://github.com/rstudio/httpuv)，在 R 语言中处理 http 以及 Websocket 请求变成了现实，基于此工具包二次开发的框架 opencpu, fiery 和 plumber 提供了在线模型部署的解决方案，下面我们一一介绍：
 
 ### 场景实例：
 
@@ -436,7 +439,7 @@ microbenchmark::microbenchmark(system('curl 127.0.0.1:2018/predict?id=1'))
 测试结果可能会因机器而异，下面的结果显示opencpu搭建的服务响应时间最久，中位时长为1.809s，而另外两个R搭建的服务的响应时长都在200毫秒左右，差异不大。
 
 ```
-                                                                                  expr          min    lq     mean   median       uq      max neval
+                                                                                      expr          min    lq     mean   median       uq      max neval
 system("curl http://localhost:5656/ocpu/library/SpamModelOpencpu/R/xgbpred/json -d \\"id=1\\"") 1472.951 1699.469 1779.102 1808.699 1830.126 2772.285   100
 
                                      expr      min       lq     mean   median       uq      max neval
@@ -449,11 +452,10 @@ system("curl 127.0.0.1:2018/predict?id=1") 204.974 207.8494 214.0799 212.2421 21
 
 ## 小结
 
-至此你已经完成了模型部署的入门训练，恭喜！最后考虑到响应测试与上手难度，我个人向你推荐 plumbeR 这个包。与此同时，一个悲喜交加的消息是R社区中今年又发布了一个用并行化来实现的网络服务包 [RestRserve](https://github.com/dselivanov/RestRserve)，其响应速度堪称秒杀 plumbeR，据说是后者的20倍，留待后话。
+至此你已经完成了模型部署的入门训练，恭喜！最后考虑到响应测试与上手难度，我个人向你推荐 plumber 这个包。与此同时，一个悲喜交加的消息是R社区中今年又发布了一个用并行化来实现的网络服务包 [RestRserve](https://github.com/dselivanov/RestRserve)，其响应速度堪称秒杀 plumber，据说是后者的20倍，留待后话。
 
 参考资料
 
 1. [利用R和opencpu搭建高可用的HTTP服务---刘思喆](http://www.bjt.name/2017/04/28/opencpu-application.html)
-2. [plumbeR官方网站](https://www.rplumber.io/)
+2. [plumber官方网站](https://www.rplumber.io/)
 3. [开发 R 程序包之忍者篇---谢益辉](https://cosx.org/2011/05/write-r-packages-like-a-ninja)
-
