@@ -330,6 +330,3 @@ shinyApp(ui, server)
 * https://eng.uber.com/keplergl/
 * [译 解密 Uber 数据部门的数据可视化最佳实践](https://segmentfault.com/a/1190000005154321)
 * [gpu-accelerated-aggregation-in-deck-gl](https://medium.com/vis-gl/gpu-accelerated-aggregation-in-deck-gl-7e2c7d701fb0)
-
-> 作为分享主义者(sharism)，本人所有互联网发布的图文均遵从CC版权，转载请保留作者信息并注明作者 Harry Zhu 的 FinanceR专栏:https://segmentfault.com/blog/harryprince，如果涉及源代码请注明GitHub地址：https://github.com/harryprince。微信号: harryzhustudio
-> 商业使用请联系作者。
