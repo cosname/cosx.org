@@ -10,6 +10,11 @@ tags:
 categories:
 - R 语言
 - 统计图形
+output:
+  html_document:
+    theme: united
+    toc: true
+    toc_depth: 2
 ---
 
 ![](https://image-static.segmentfault.com/102/916/1029164137-5bcd1bffc11d7)
@@ -71,48 +76,47 @@ H3 的前身其实是 DDGS(Discrete global grid systems) 中的 ISEA3H，其原�
 
 下面是 ISEA3H 五边形问题的示例：
 
-```
+```{r}
 # 加载相关包
 library(dggridR)
 library(dplyr)
 
-# 构建公里网格 
-dggs <- dgconstruct(spacing=1000, metric=FALSE, resround='down')
+# 构建公里网格
+dggs <- dgconstruct(spacing = 1000, metric = FALSE, resround = "down")
 
-# 加载测试数据集 
+# 加载测试数据集
 data(dgquakes)
 
 # 获取每个震源中心对应的网格
-dgquakes$cell <- dgGEO_to_SEQNUM(dggs,dgquakes$lon,dgquakes$lat)$seqnum
+dgquakes$cell <- dgGEO_to_SEQNUM(dggs, dgquakes$lon, dgquakes$lat)$seqnum
 
 # 将 SEQNUM 转为网格中心
-Converting SEQNUM to GEO gives the center coordinates of the cells
-cellcenters <- dgSEQNUM_to_GEO(dggs,dgquakes$cell)
+cellcenters <- dgSEQNUM_to_GEO(dggs, dgquakes$cell)
 
 # 获取每个单元的地震次数
-quakecounts <- dgquakes %>% group_by(cell) %>% summarise(count=n())
+quakecounts <- dgquakes %>% group_by(cell) %>% summarise(count = n())
 
 # 获取地震网格单元边界
-grid <- dgcellstogrid(dggs,quakecounts$cell,frame=TRUE,wrapcells=TRUE)
+grid <- dgcellstogrid(dggs, quakecounts$cell, frame = TRUE, wrapcells = TRUE)
 
 # 更新网格单元的地震次数
-grid <- merge(grid,quakecounts,by.x="cell",by.y="cell")
+grid <- merge(grid, quakecounts, by.x = "cell", by.y = "cell")
 
 # Normarlize 指标便于展示
 grid$count <- log(grid$count)
-cutoff <- quantile(grid$count,0.9)
-grid <- grid %>% mutate(count=ifelse(count>cutoff,cutoff,count))
+cutoff <- quantile(grid$count, 0.9)
+grid <- grid %>% mutate(count = ifelse(count > cutoff, cutoff, count))
 
 # 获取每个国家的多边形
 countries <- map_data("world")
 
 # 绘制地图
-p<- ggplot() + 
- geom_polygon(data=countries, aes(x=long, y=lat, group=group), fill=NA, color="black") +
- geom_polygon(data=grid, aes(x=long, y=lat, group=group, fill=count), alpha=0.4) +
- geom_path (data=grid, aes(x=long, y=lat, group=group), alpha=0.4, color="white") +
- geom_point (aes(x=cellcenters$lon_deg, y=cellcenters$lat_deg)) +
- scale_fill_gradient(low="blue", high="red")
+p <- ggplot() +
+  geom_polygon(data = countries, aes(x = long, y = lat, group = group), fill = NA, color = "black") +
+  geom_polygon(data = grid, aes(x = long, y = lat, group = group, fill = count), alpha = 0.4) +
+  geom_path(data = grid, aes(x = long, y = lat, group = group), alpha = 0.4, color = "white") +
+  geom_point(aes(x = cellcenters$lon_deg, y = cellcenters$lat_deg)) +
+  scale_fill_gradient(low = "blue", high = "red")
 p
 ```
 
@@ -120,40 +124,45 @@ p
 
 转化坐标系后：
 
-```
+
+```{r}
 # 重新在球坐标上绘制
-p+coord_map("ortho", orientation = c(-38.49831, -179.9223, 0))+
-  xlab('')+ylab('')+
-  theme(axis.ticks.x=element_blank())+
-  theme(axis.ticks.y=element_blank())+
-  theme(axis.text.x=element_blank())+
-  theme(axis.text.y=element_blank())+
-  ggtitle('Your data could look like this')
+p + coord_map("ortho", orientation = c(-38.49831, -179.9223, 0)) +
+  theme(
+    axis.ticks.x = element_blank(),
+    axis.ticks.y = element_blank(),
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank()
+  ) +
+  labs(x = "", y = "", title = "Your data could look like this")
 ```
 
 ![ISEA3H 正射投影](https://image-static.segmentfault.com/393/288/3932888592-5bcb3959e2629)
 
-在 H3 开源后，你也可以使用 `h3r` 实现六边形的编码与解码：
+可以看到此时在若干个六边形中存在五边形的情形。
 
-```
+在 H3 开源后，也可以使用 `h3r` 实现六边形的编码与解码：
+
+```{r}
 # 以亮马桥地铁站为例
 devtools::install_github("scottmmjackson/h3r")
 library(h3r)
 
-df <- h3r::getBoundingHexFromCoords(39.949958,116.46343,11) %>% # 单边长为24米
- purrr::transpose() %>% 
- purrr::simplify_all() %>%
- data.frame()
+df <- h3r::getBoundingHexFromCoords(39.949958, 116.46343, 11) %>% # 单边长为24米
+  purrr::transpose() %>%
+  purrr::simplify_all() %>%
+  data.frame()
 
-df %>% bind_rows(
- df %>% head(1)
-) %>% 
- leaflet::leaflet() %>% 
- leafletCN::amap() %>% 
- leaflet::addPolylines(lng = ~lon,lat=~lat)
+df %>%
+  bind_rows(
+    df %>% head(1)
+  ) %>%
+  leaflet::leaflet() %>%
+  leafletCN::amap() %>%
+  leaflet::addPolylines(lng = ~lon, lat = ~lat)
 ```
 
-![Geohash 与 H3 对比](https://image-static.segmentfault.com/600/246/60024670-5bce4f9c1f336)
+![Geohash-7/8 与 H3-11 对比](https://image-static.segmentfault.com/600/246/60024670-5bce4f9c1f336)
 
 H3 中还提供了类似 S2 的六边形压缩技术，使得数据的存储空间可以极大压缩，在处理大规模稀疏数据时将体现出优势：
 
@@ -167,13 +176,13 @@ H3 中还提供了类似 S2 的六边形压缩技术，使得数据的存储空�
 
 序号|leaflet 插件|功能
 ---|---|---
-1|leaflet|基础功能，几何元素CRUD，图层等，可结合 shiny，crosstalk
-2|leaflet.opacity|透明度调节
-3|leaflet.extras|高级功能, 包括热力图, 搜索, 米尺等
-4|leaflet.esri|高级功能，ESRI插件 可结合 Arcgis
-5|mapview|高级功能, 多图联动等
-6|mapedit|高级功能，地图编辑
-7|leafletCN|提供高德底图
+1|[leaflet](https://github.com/rstudio/leaflet)|基础功能，几何元素CRUD，图层等，可结合 shiny，crosstalk
+2|[leaflet.opacity](https://github.com/be-marc/leaflet.opacity)|透明度调节
+3|[leaflet.extras](https://github.com/bhaskarvk/leaflet.extras)|高级功能, 包括热力图, 搜索, 米尺等
+4|[leaflet.esri](https://github.com/bhaskarvk/leaflet.esri)|高级功能，ESRI插件 可结合 Arcgis
+5|[mapview](https://github.com/r-spatial/mapview)|高级功能, 多图联动等
+6|[mapedit](https://github.com/r-spatial/mapedit)|高级功能，地图编辑
+7|[leafletCN](https://github.com/Lchiffon/leafletCN)|提供高德底图
 
 虽然 Leaflet 功能强大，不过工业界的发展也暴露出一些新的问题。如何更好地支持诸如 轨迹、风向、三维空间、六边形网格的交互式可视化此前没有好的解决方案。好在近年来 Mapbox 和 Deck.gl 正在着手改变这一现状。
 
@@ -183,7 +192,7 @@ H3 中还提供了类似 S2 的六边形压缩技术，使得数据的存储空�
 
 下面是一个具体的例子，如何可视化Hexagon：
 
-```
+```{r}
 # 初始化
 devtools::install_github("crazycapivara/deckgl")
 
@@ -212,7 +221,7 @@ properties <- list(
 # 可视化
 deckgl(zoom = 11, pitch = 45) %>%
   add_hexagon_layer(data = sample_data, properties = properties) %>%
-  add_mapbox_basemap(style = "mapbox://styles/mapbox/light-v9") 
+  add_mapbox_basemap(style = "mapbox://styles/mapbox/light-v9")
 ```
 
 ![Hexagon](https://image-static.segmentfault.com/365/269/3652694454-5bcd06406e3ad)
@@ -227,83 +236,81 @@ deckgl(zoom = 11, pitch = 45) %>%
 
 Deck.gl 结合 Shiny 后，可将可视化结果输出到仪表盘上,举个例子：
 
-```
+```{r}
 library(mapdeck)
 library(shiny)
 library(shinydashboard)
 library(jsonlite)
 ui <- dashboardPage(
-	dashboardHeader()
-	, dashboardSidebar()
-	, dashboardBody(
-		mapdeckOutput(
-			outputId = 'myMap'
-			),
-		sliderInput(
-			inputId = "longitudes"
-			, label = "Longitudes"
-			, min = -180
-			, max = 180
-			, value = c(-90, 90)
-		)
-		, verbatimTextOutput(
-			outputId = "observed_click"
-		)
-	)
+  dashboardHeader(),
+  dashboardSidebar(), dashboardBody(
+    mapdeckOutput(
+      outputId = "myMap"
+    ),
+    sliderInput(
+      inputId =
+        "longitudes", label =
+        "Longitudes", min =
+        -180, max =
+        180, value = c(-90, 90)
+    ), verbatimTextOutput(
+      outputId = "observed_click"
+    )
+  )
 )
 server <- function(input, output) {
-	
-	set_token('pk.eyJ1IjoidWJlcmRhdGEiLCJhIjoiY2poczJzeGt2MGl1bTNkcm1lcXVqMXRpMyJ9.9o2DrYg8C8UWmprj-tcVpQ') ## 如果token 过期了，需要去Mapbox官网免费申请一个
-	
-	origin <- capitals[capitals$country == "Australia", ]
-	destination <- capitals[capitals$country != "Australia", ]
-	origin$key <- 1L
-	destination$key <- 1L
-	
-	df <- merge(origin, destination, by = 'key', all = T)
-	
-	output$myMap <- renderMapdeck({
-		mapdeck(style = mapdeck_style('dark')) 
-	})
-	
-	## plot points & lines according to the selected longitudes
-	df_reactive <- reactive({
-		if(is.null(input$longitudes)) return(NULL)
-		lons <- input$longitudes
-		return(
-			df[df$lon.y >= lons[1] & df$lon.y <= lons[2], ]
-		)
-	})
-	
-	observeEvent({input$longitudes}, {
-		if(is.null(input$longitudes)) return()
-		
-		mapdeck_update(map_id = 'myMap') %>%
-			add_scatterplot(
-				data = df_reactive()
-				, lon = "lon.y"
-				, lat = "lat.y"
-				, fill_colour = "country.y"
-				, radius = 100000
-				, layer_id = "myScatterLayer"
-			) %>%
-			add_arc(
-				data = df_reactive()
-				, origin = c("lon.x", "lat.x")
-				, destination = c("lon.y", "lat.y")
-				, layer_id = "myArcLayer"
-				, stroke_width = 4
-			)
-	})
-	
-	## observe clicking on a line and return the text
-	observeEvent(input$myMap_arc_click, {
-		
-		event <- input$myMap_arc_click
-		output$observed_click <- renderText({
-			jsonlite::prettify( event )
-		})
-	})
+  set_token("pk.eyJ1IjoidWJlcmRhdGEiLCJhIjoiY2poczJzeGt2MGl1bTNkcm1lcXVqMXRpMyJ9.9o2DrYg8C8UWmprj-tcVpQ") ## 如果token 过期了，需要去Mapbox官网免费申请一个
+
+  origin <- capitals[capitals$country == "Australia", ]
+  destination <- capitals[capitals$country != "Australia", ]
+  origin$key <- 1L
+  destination$key <- 1L
+
+  df <- merge(origin, destination, by = "key", all = T)
+
+  output$myMap <- renderMapdeck({
+    mapdeck(style = mapdeck_style("dark"))
+  })
+
+  ## plot points & lines according to the selected longitudes
+  df_reactive <- reactive({
+    if (is.null(input$longitudes)) return(NULL)
+    lons <- input$longitudes
+    return(
+      df[df$lon.y >= lons[1] & df$lon.y <= lons[2], ]
+    )
+  })
+
+  observeEvent({
+    input$longitudes
+  }, {
+    if (is.null(input$longitudes)) return()
+
+    mapdeck_update(map_id = "myMap") %>%
+      add_scatterplot(
+        data =
+          df_reactive(), lon =
+          "lon.y", lat =
+          "lat.y", fill_colour =
+          "country.y", radius =
+          100000, layer_id = "myScatterLayer"
+      ) %>%
+      add_arc(
+        data =
+          df_reactive(), origin =
+          c("lon.x", "lat.x"), destination =
+          c("lon.y", "lat.y"), layer_id =
+          "myArcLayer", stroke_width = 4
+      )
+  })
+
+  ## observe clicking on a line and return the text
+  observeEvent(input$myMap_arc_click, {
+    event <- input$myMap_arc_click
+    output$observed_click <- renderText({
+      jsonlite::prettify(event)
+    })
+  })
 }
 shinyApp(ui, server)
 ```
