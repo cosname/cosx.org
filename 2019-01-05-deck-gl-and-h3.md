@@ -2,7 +2,7 @@
 title: "大规模地理数据可视化入门：Deck.gl 和 H3"
 author: "朱俊辉"
 date: '2019-01-05'
-slug: large-scale-spatial-data-visualization-with-deck-gl-and-h3
+slug: deck-gl-and-h3
 tags:
 - 数据可视化
 - GIS与R
