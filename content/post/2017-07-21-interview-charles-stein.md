@@ -7,7 +7,7 @@ author:
 date: "2017-07-21"
 categories:
   - COS访谈
-tags: [访谈, 求学, 论道]
+tags: [访谈, 求学, 论道, 翻译]
 forum_id: 419227
 slug: interview-charles-stein
 meta_extra: 审稿：郎大为、林枫、谢益辉、闫晗；编辑：林枫
