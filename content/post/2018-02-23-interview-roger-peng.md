@@ -6,7 +6,7 @@ author:
   - 林枫
 categories:
   - COS访谈
-tags: [cos访谈，学者，可重复，自媒体，生活]
+tags: [访谈，学者，可重复，自媒体，生活]
 slug: interview-of-roger-peng
 meta_extra: "编辑：林枫  审稿：Earo Wang，高涛"
 forum_id: 419831
