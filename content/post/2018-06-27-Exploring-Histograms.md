@@ -5,6 +5,9 @@ author: 曾加
 categories:
   - 统计图形
 tags:
+  - 数据可视化
+  - 直方图
+  - 翻译
 slug: Exploring Histograms
 forum_id: 420248
 meta_extra: 译者：曾加；审稿：于淼；编辑：
