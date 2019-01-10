@@ -6,9 +6,14 @@ author:
   - 林枫
 categories:
   - COS访谈
-tags: [访谈，学者，可重复，自媒体，生活]
+tags: 
+  - 访谈
+  - 学者
+  - 可重复
+  - 自媒体
+  - 翻译
 slug: interview-of-roger-peng
-meta_extra: "编辑：林枫  审稿：Earo Wang，高涛"
+meta_extra: "译者：林枫  审稿：Earo Wang，高涛"
 forum_id: 419831
 ---
 **COS编辑部按** 本文是Earo Wang对Roger Peng的采访稿，[原文传送门点击此处](http://user2018.r-project.org/blog/2018/01/24/interview-with-roger-peng/ )，翻译工作已经得到作者授权。
