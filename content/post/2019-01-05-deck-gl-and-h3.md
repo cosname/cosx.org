@@ -47,7 +47,7 @@ categories:
 
 传统的空间划分方法主要分为两类：
 
-1. 以 [R-tree]() 为代表的动态单元
+1. 以 [R-tree](https://en.wikipedia.org/wiki/R-tree) 为代表的动态单元
 2. 以 [Geohash](https://en.wikipedia.org/wiki/Geohash) 为代表的静态单元
 
 > R-tree 简单来说是将空间划分为若干个不规则的边界框矩形的b+树索引，适用于面、线数据，查询时间复杂度为 O(n)。
@@ -75,6 +75,8 @@ categories:
 
 常见的静态单元除 geohash 以外还有 S2 。其中 S2 和 geohash非常类似，也是基于四叉树的一种方法，只是在填充空间时使用了希尔伯特曲线而不是geohash中的Z阶曲线使得索引更加稳定，二者的详细原理分析见[高效的多维空间点索引算法 — Geohash 和 Google S2](https://halfrost.com/go_spatial_search/)。
 
+![静态地理单元特点对比](https://image-static.segmentfault.com/176/708/1767087967-5b0a76ab645b5)
+
 但是，一方面，传统的地理单元比如 S2和geohash，在国际化业务中却存在一个致命缺陷：在不同纬度的地区会出现地理单元单位面积差异较大的情况，比如北京和新加坡的 geohash 对应面积有将近30%的差异。这导致业务指标和模型输入的特征存在一定的分布倾斜和偏差，使用等面积、等形状的六边形地理单元可以减少指标和特征normalization的成本。
 
 另一方面，在常用的地理范围查询中，基于矩形的查询方法，存在8邻域到中心网格的距离不相等的问题，四边形存在两类长度不等的距离，而六边形的周围邻居到中心网格的距离却是有且仅有一个，从形状上来说更加接近于圆形。
@@ -85,7 +87,6 @@ categories:
 
 在这样的背景下 Uber 基于六边形网格的地理单元开源解决方案 [H3](https://eng.uber.com/h3/) 应运而生，它使得部署 Hexagon 方案的成本非常低，通过UDF、R pacakge等方式可以以非常低的成本大规模推广。
 
-![静态地理单元特点对比](https://image-static.segmentfault.com/176/708/1767087967-5b0a76ab645b5)
 
 ### 什么是 H3
 
@@ -211,41 +212,22 @@ H3 中还提供了类似 S2 的六边形压缩技术，使得数据的存储空�
 
 [Deck.gl](http://deck.gl) 基于 WebGL 的大规模数据可视化框架，通过响应式编程和GPU并行加速的方式进行高效地 WebGL 渲染，与 Mapbox GL 深度结合能够呈现非凡的 3D 视觉效果。
 
-下面是一个具体的例子，如何可视化Hexagon：
+下面是一个具体的例子，如何以Hexagon可视化百万个样本点：
 
 ```{r}
 # 初始化
-devtools::install_github("crazycapivara/deckgl")
+library(mapdeck)
 
-library(deckgl)
+# 生成 百万数据样本点
+df = data.frame(lat = rnorm(1000000,40,1),lng =rnorm(1000000,160,1)) # 以二维正态生成随机数据
 
-# 设置 Mapbox token，过期需要免费在 Mapbox 官网申请
-Sys.setenv(MAPBOX_API_TOKEN = "pk.eyJ1IjoidWJlcmRhdGEiLCJhIjoiY2poczJzeGt2MGl1bTNkcm1lcXVqMXRpMyJ9.9o2DrYg8C8UWmprj-tcVpQ")
+# 渲染
+mapdeck::mapdeck(style = "mapbox://styles/mapbox/dark-v9",token = "pk.eyJ1IjoidWJlcmRhdGEiLCJhIjoiY2poczJzeGt2MGl1bTNkcm1lcXVqMXRpMyJ9.9o2DrYg8C8UWmprj-tcVpQ") %>%
+  mapdeck::add_hexagon(lon = "lng",lat="lat",data = df,elevation_scale = 1000)
 
-
-# 数据集合
-sample_data <- paste0(
-  "https://raw.githubusercontent.com/",
-  "uber-common/deck.gl-data/",
-  "master/website/sf-bike-parking.json"
-)
-
-properties <- list(
-  pickable = TRUE,
-  extruded = TRUE,
-  cellSize = 200,
-  elevationScale = 4,
-  getPosition = JS("data => data.COORDINATES"),
-  getTooltip = JS("object => object.count")
-)
-
-# 可视化
-deckgl(zoom = 11, pitch = 45) %>%
-  add_hexagon_layer(data = sample_data, properties = properties) %>%
-  add_mapbox_basemap(style = "mapbox://styles/mapbox/light-v9")
 ```
 
-![Hexagon](https://image-static.segmentfault.com/365/269/3652694454-5bcd06406e3ad)
+![Hexagon](https://s2.ax1x.com/2019/01/27/kKAPa9.md.png)
 
 
 除了六边形之外 Deck.gl 也支持其他常见几何图形，比如 Grid、Arc、Contour、Polygon 等等。
