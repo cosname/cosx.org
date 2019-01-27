@@ -2,6 +2,14 @@
 title: "大规模地理数据可视化入门：Deck.gl 和 H3"
 author: "朱俊辉"
 date: '2019-01-05'
+output:
+  html_document:
+    theme: united
+    toc: yes
+    toc_depth: 2
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
 slug: deck-gl-and-h3
 tags:
 - 数据可视化
@@ -10,11 +18,6 @@ tags:
 categories:
 - R 语言
 - 统计图形
-output:
-  html_document:
-    theme: united
-    toc: true
-    toc_depth: 2
 ---
 
 ![](https://image-static.segmentfault.com/102/916/1029164137-5bcd1bffc11d7)
@@ -24,25 +27,38 @@ output:
 
 如何大规模可视化地理数据一直都是一个业界的难点，随着[2015年起 Uber 在这一领域的发力](https://segmentfault.com/a/1190000005154321)，构建了基于 Deck.gl + H3 ([deckgl](https://github.com/crazycapivara/deckgl),[h3r](https://github.com/scottmmjackson/h3r/)) 的大规模数据可视化方案。一方面，极大地满足了日常前端开发者的需求。另一方面，也极大地方便了数据科学家的可视化工作。在大规模空间轨迹分析、交通流量与供需预测等领域这一方案正得到广泛应用，突破了传统方法中数据量（通常不会超过10W个原始点）的瓶颈问题，实现百万点绘制无压力，并且可以结合 GPU 实现加速渲染。
 
-在大规模地理数据可视化中，有两个核心要素：
+## 举例
 
-1. 空间划分
-2. 渲染引擎
+具体而言，比如，在移动互联网中常见的一个场景，预测城市中每个区域的供给和需求。在这个过程中，通常需要将预测的结果进行可视化以追踪模型的表现和问题。
 
-本文将着重从这两个角度入手，讲解大规模地理数据可视化入门的方法。
+![Uber Movement 展示供需情况](https://fortunedotcom.files.wordpress.com/2017/01/manila-02.png)
+
+在传统的数据量下（比如以行政区或街道为单位）通常是1000个多边形或者点的数量级进行城市数据的汇总或者采样，在这种数据量条件下直接查询和渲染数据并不会出现瓶颈问题。
+
+但是，随着移动互联网的发展，涌现出了精度更高的需求（10米或100米），以求更精细地追踪用户在末端网络上的需求。通常这种场景都是至少百万个多边形或者点的数据量级，在这种条件下粗暴地直接查询和渲染是完全不可行的。
+
+为了实现大规模地理数据可视化中，需要从 空间划分 和 渲染引擎 两方面入手。
 
 ## 空间划分
 
 ### 什么是空间划分
 
-随着移动互联网公司的全球化扩张，为了提供更加快捷方便的用户体验，越来越多的公司涌现出对空间划分的需求。
-
-通常，通过空间的划分，建立数据库索引可以实现高效的实时查询服务，比如周边车辆位置查询，周边餐厅位置查询等。
+通过空间划分，建立数据库索引可以实现高效的实时查询服务，比如[周边车辆位置查询](https://segmentfault.com/a/1190000008657566#articleHeader1)，[周边餐厅位置查询](https://tech.meituan.com/2014/09/05/lucene-distance.html)等。
 
 传统的空间划分方法主要分为两类：
 
-1. 以 R-tree 为代表的动态单元
-2. 以 Geohash 为代表的静态单元
+1. 以 [R-tree]() 为代表的动态单元
+2. 以 [Geohash](https://en.wikipedia.org/wiki/Geohash) 为代表的静态单元
+
+> R-tree 简单来说是将空间划分为若干个不规则的边界框矩形的b+树索引，适用于面、线数据，查询时间复杂度为 O(n)。
+
+![R-tree 示意图](https://image-static.segmentfault.com/324/068/3240684669-58c3eafc3283a)
+
+> Geohash 简单来说是将二维的经纬度转换成字符串的四叉树线性索引，适用于点数据，查询时间复杂度为 O(log(N))
+
+![Geohash 示意图](https://images0.cnblogs.com/blog/522490/201309/09185339-add66a56b3da417ab00370e354c74667.png)
+
+下面是动态单元与静态单元的对比：
 
 对比维度|动态单元/R-tree|静态单元/Geohash
 ---|---|---
@@ -51,11 +67,15 @@ output:
 水平扩张| 难|易
 索引精度| 高|低
 
-可以在大多数对精度要求不严格的场景下，牺牲一部分尽可能小的索引精度，此时，静态单元是优于动态单元的选择。
+动态单元通常应用于对精度要求苛刻的场景，比如共享单车的违停区域判罚。
 
-![静态地理单元特点](https://image-static.segmentfault.com/176/708/1767087967-5b0a76ab645b5)
+在本例中，供需预测对于几何边缘并没有高精度要求，所以牺牲一部分尽可能小的索引精度来换取计算性能是被允许的，此时，静态单元是优于动态单元的选择。
 
-但是，一方面，传统的地理单元比如 S2和geohash，在不同纬度的地区会出现地理单元单位面积差异较大的情况，这导致业务指标和模型输入的特征存在一定的分布倾斜和偏差，使用等面积、等形状的六边形地理单元可以减少指标和特征normalization的成本。
+### 静态单元对比
+
+常见的静态单元除 geohash 以外还有 S2 。其中 S2 和 geohash非常类似，也是基于四叉树的一种方法，只是在填充空间时使用了希尔伯特曲线而不是geohash中的Z阶曲线使得索引更加稳定，二者的详细原理分析见[高效的多维空间点索引算法 — Geohash 和 Google S2](https://halfrost.com/go_spatial_search/)。
+
+但是，一方面，传统的地理单元比如 S2和geohash，在国际化业务中却存在一个致命缺陷：在不同纬度的地区会出现地理单元单位面积差异较大的情况，比如北京和新加坡的 geohash 对应面积有将近30%的差异。这导致业务指标和模型输入的特征存在一定的分布倾斜和偏差，使用等面积、等形状的六边形地理单元可以减少指标和特征normalization的成本。
 
 另一方面，在常用的地理范围查询中，基于矩形的查询方法，存在8邻域到中心网格的距离不相等的问题，四边形存在两类长度不等的距离，而六边形的周围邻居到中心网格的距离却是有且仅有一个，从形状上来说更加接近于圆形。
 
@@ -63,8 +83,9 @@ output:
 
 ![图示为 Uber 峰时定价服务示意图](https://image-static.segmentfault.com/366/883/3668837560-5bcb33f58adcb)
 
-
 在这样的背景下 Uber 基于六边形网格的地理单元开源解决方案 [H3](https://eng.uber.com/h3/) 应运而生，它使得部署 Hexagon 方案的成本非常低，通过UDF、R pacakge等方式可以以非常低的成本大规模推广。
+
+![静态地理单元特点对比](https://image-static.segmentfault.com/176/708/1767087967-5b0a76ab645b5)
 
 ### 什么是 H3
 
@@ -145,7 +166,7 @@ p + coord_map("ortho", orientation = c(-38.49831, -179.9223, 0)) +
 
 ```{r}
 # 以亮马桥地铁站为例
-devtools::install_github("scottmmjackson/h3r")
+devtools::install_github("scottmmjackson/h3r") #或者 devtools::install_github("harryprince/h3r", ref="bug-fix/Makefile")
 library(h3r)
 
 df <- h3r::getBoundingHexFromCoords(39.949958, 116.46343, 11) %>% # 单边长为24米
@@ -335,5 +356,6 @@ shinyApp(ui, server)
 * https://uber.github.io/h3/
 * https://eng.uber.com/shan-he/
 * https://eng.uber.com/keplergl/
+* [译 解密 Uber 数据团队的车辆定位查询算法](https://segmentfault.com/a/1190000008657566)
 * [译 解密 Uber 数据部门的数据可视化最佳实践](https://segmentfault.com/a/1190000005154321)
 * [gpu-accelerated-aggregation-in-deck-gl](https://medium.com/vis-gl/gpu-accelerated-aggregation-in-deck-gl-7e2c7d701fb0)
