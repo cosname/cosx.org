@@ -56,7 +56,7 @@ categories:
 
 > Geohash 简单来说是将二维的经纬度转换成字符串的四叉树线性索引，适用于点数据，查询时间复杂度为 O(log(N))
 
-![Geohash 示意图](https://images0.cnblogs.com/blog/522490/201309/09185339-add66a56b3da417ab00370e354c74667.png)
+![Geohash 示意图](http://ww1.sinaimg.cn/mw690/7178f37ejw1emyk4wbz4bj206i06lt9b.jpg)
 
 下面是动态单元与静态单元的对比：
 
