@@ -18,6 +18,7 @@ tags:
 categories:
 - R 语言
 - 统计图形
+forum_id: 420447
 ---
 
 ![](https://image-static.segmentfault.com/102/916/1029164137-5bcd1bffc11d7)
