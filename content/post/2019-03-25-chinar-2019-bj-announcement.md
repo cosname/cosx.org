@@ -11,7 +11,7 @@ tags:
   - 统计之都
   - 中国人民大学
 slug: 12th-china-r-beijing-announcement
-forum_id: 
+forum_id: 420542
 meta_extra: 
 ---
 
