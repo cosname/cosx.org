@@ -7,13 +7,13 @@ categories:
 tags:
   - LDA
   - Topic Model
-slug: lda_topic_model
+slug: lda-topic-model
 forum_id: 418820
 ---
 
 上个学期到现在陆陆续续研究了一下主题模型（[topic model](https://en.wikipedia.org/wiki/Topic_model)）这个东东。何谓“主题”呢？望文生义就知道是什么意思了，就是诸如一篇文章、一段话、一个句子所表达的中心思想。不过从统计模型的角度来说， 我们是用一个特定的词频分布来刻画主题的，并认为一篇文章、一段话、一个句子是从一个概率模型中生成的。
 
-[D. M. Blei](http://www.cs.princeton.edu/~blei/)^[编者注：这个链接现在已经失效，抱歉。]在2003年（准确地说应该是2002年）提出的LDA（[Latent Dirichlet Allocation](http://www.cs.princeton.edu/~blei/papers/BleiNgJordan2003.pdf)^[编者注：这个链接现在已经失效，抱歉。]）模型（翻译成中文就是——潜在狄利克雷分配模型）让主题模型火了起来， 今年3月份我居然还发现了一个专门的[LDA的R软件包](https://cran.r-project.org/web/packages/lda/)（7月份有更新），可见主题模型方兴未艾呀。主题模型是一种语言模型，是对自然语言进行建模，这个在信息检索中很有用。
+[D. M. Blei](http://www.cs.columbia.edu/~blei/)在2003年（准确地说应该是2002年）提出的LDA（[Latent Dirichlet Allocation](http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf)）模型（翻译成中文就是——潜在狄利克雷分配模型）让主题模型火了起来， 今年3月份我居然还发现了一个专门的[LDA的R软件包](https://cran.r-project.org/web/packages/lda/)（7月份有更新），可见主题模型方兴未艾呀。主题模型是一种语言模型，是对自然语言进行建模，这个在信息检索中很有用。
 
 LDA主题模型涉及到贝叶斯理论、[Dirichlet分布](https://en.wikipedia.org/wiki/Dirichlet_distribution)、[多项分布](https://en.wikipedia.org/wiki/Multinomial_distribution)、图模型、[变分推断](https://en.wikipedia.org/wiki/Variational_Bayes)、[EM算法](https://en.wikipedia.org/wiki/EM_algorithm)、[Gibbs抽样](https://en.wikipedia.org/wiki/Gibbs_sampling)等知识，不是很好懂，LDA那篇30 页的文章我看了四、五遍才基本弄明白是咋回事。那篇文章其实有点老了，但是很经典，从它衍生出来的文章现在已经有n多n多了。主题模型其实也不只是LDA 了，LDA之前也有主题模型，它是之前的一个突破，它之后也有很多对它进行改进的主题模型。需要注意的是，LDA也是有名的Linear Discriminant Analysis（线性判别分析）的缩写。
 
