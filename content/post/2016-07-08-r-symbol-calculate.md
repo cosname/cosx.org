@@ -38,7 +38,7 @@ class(NormDensity)
 ```r
 D(NormDensity, "x")
 ## -(1/sqrt(2 * pi) * (exp(-x^2/2) * (2 * x/2)))
-
+# 或者
 deriv(NormDensity, "x")
 ## expression({
 ##      .expr3 <- 1/sqrt(2 * pi)
@@ -49,24 +49,15 @@ deriv(NormDensity, "x")
 ##      attr(.value, "gradient") <- .grad
 ##     .value
 ## })
+```
 
-deriv3(NormDensity, "x")
-## expression({
-##     .expr3 <- 1/sqrt(2 * pi)
-##     .expr7 <- exp(-x^2/2)
-##     .expr10 <- 2 * x/2
-##     .expr11 <- .expr7 * .expr10
-##     .value <- .expr3 * .expr7
-##     .grad <- array(0, c(length(.value), 1L), list(NULL, c("x")))
-##     .hessian <- array(0, c(length(.value), 1L, 1L), list(NULL, 
-##     c("x"), c("x")))
-##     .grad[, "x"] <- -(.expr3 * .expr11)
-##     .hessian[, "x", "x"] <- -(.expr3 * (.expr7 * (2/2) - .expr11  
-##     ＊.expr10))
-##     attr(.value, "gradient") <- .grad
-##     attr(.value, "hessian") <- .hessian
-##     .value
-## })
+计算三阶导数
+
+```r
+as.expression(deriv3(NormDensity, "x"))
+## expression(1/sqrt(2 * pi) * (exp(-x^2/2) * (2 * x/2) * (2/2) + 
+##    ((exp(-x^2/2) * (2/2) - exp(-x^2/2) * (2 * x/2) * (2 * x/2)) * 
+##        (2 * x/2) + exp(-x^2/2) * (2 * x/2) * (2/2))))
 ```
 
 计算 n 阶导数
