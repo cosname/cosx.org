@@ -13,7 +13,7 @@ forum_id: 420715
 
 R. A. Fisher 的名著《实验设计；第八版，1971年》第二部分有十六页，仅仅讲了一个最简单的实验：女士品茶。这个故事非常有名，以至于 Salsburg 的统计学通俗读物就以它命名：《女士品茶：20世纪统计怎样变革了科学》。
 
-![lady_tasting_tea](https://img.alicdn.com/imgextra/i3/1049653664/TB2C99IXEhnpuFjSZFPXXb_4XXa_!!1049653664.jpg){:width="30%"}
+<img src="https://img.alicdn.com/imgextra/i3/1049653664/TB2C99IXEhnpuFjSZFPXXb_4XXa_!!1049653664.jpg" width="30%">
 
 先回顾一下这个故事。在英国的 Rothamsted 实验站，Fisher 给一位名叫 Muriel Bristol 的女士倒了一杯茶，但是 Bristol 表示，自己更喜欢先将牛奶倒入杯中，再倒入茶。这位女士号称能够分辨先倒茶和先倒牛奶的区别。作为实验设计的鼻祖，Fisher 当然想用实验检验一下：这位女士的味觉是否有这么敏锐？Fisher 倒了 8 杯奶茶：其中 4 杯“先奶后茶”，其余 4 杯“先茶后奶”。随机打乱次序后，Fisher 请 Bristol 品尝，并选出“先奶后茶”的 4 杯，看她是否能分辨奶和茶的顺序。下面的`$2 \times 2$`表格大致描述了这个问题，其中`$k$`是 Bristol 选对的“先奶后茶”的杯数。
 
