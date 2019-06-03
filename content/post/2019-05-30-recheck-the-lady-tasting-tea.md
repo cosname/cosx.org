@@ -8,6 +8,7 @@ categories:
 tags:
   - 试验设计
   - 假设检验
+meta_extra: "编辑：于淼、林枫 审稿：黄湘云、魏太云"
 forum_id: 420715
 ---
 
