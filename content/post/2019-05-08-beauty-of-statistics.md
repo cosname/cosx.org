@@ -9,7 +9,7 @@ tags:
   - 图书出版
   - 统计之都
 slug: beauty-of-statistics
-meta_extra: "编辑：于淼 审稿：朱雪宁"
+meta_extra: "编辑：于淼  审稿：朱雪宁"
 forum_id: 420685
 ---
 
