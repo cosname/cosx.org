@@ -20,7 +20,7 @@ NBA总决赛刚结束不久，今年最幸福的肯定就是勇士球迷了。�
 
 n年以前，斯金纳在一系列经典的鸽子实验中展示了如何通过强化学习让鸽子学会各种习惯（现在很火的深度学习中的[强化学习](https://en.wikipedia.org/wiki/Reinforcement_learning)的名字是从[心理学中](https://en.wikipedia.org/wiki/Reinforcement)借用来的，二者有关联但也很不一样），比如下面的[视频](https://v.qq.com/x/page/k01302xpfz3.html)展示了斯金纳是怎么在一分钟内把鸽子调教到会原地转圈的。
 
-<iframe frameborder="0" src="https://v.qq.com/iframe/player.html?vid=k01302xpfz3&amp;tiny=0&amp;auto=0" allowfullscreen=""></iframe>
+<iframe width="800" height="600" frameborder="0" src="https://v.qq.com/iframe/player.html?vid=k01302xpfz3&amp;tiny=0&amp;auto=0" allowfullscreen=""></iframe>
 
 但斯金纳的手段远不止于此，通过改变不同的强化方式，他发现了一个有趣的现象。假如你在鸽子做出某个动作后让食物掉出来，那鸽子很快就会学会这个动作，就像上面学会原地转圈那样；如果鸽子不管做什么你都不放食物出来，那鸽子很快就啥都不做了。这些都很合理，但当你放出食物的时机与鸽子的动作毫无关系时（比如固定每隔20秒掉食物），那鸽子会展现出各种奇怪的强化行为——有的会不断地逆时针转圈、有的会向左边扭一下头再去看有没有吃的、有的会使劲地晃动脑袋……这些行为也很好解释，当鸽子做出某个动作时食物碰巧掉出来了，鸽子就会认为它一定做对了什么，从而重复这个动作，而过一会食物果然又掉出来了……最终鸽子就这样学会了各种奇奇怪怪的动作，斯金纳把这称之为“鸽子的迷信”[<sup>1</sup>](#skinner1992superstition)。
 
