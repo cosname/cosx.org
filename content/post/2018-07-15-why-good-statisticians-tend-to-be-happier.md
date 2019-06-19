@@ -1,18 +1,19 @@
 ---
 title: 为什么（好的）统计学家会更幸福
 author: 张文轩
-date: '2018-07-15'
+date: '2019-06-19'
 slug: why-good-statisticians-tend-to-be-happier
 meta_extra: "原作者：孟晓犁；译者：张文轩"
 categories: 
   - 统计应用
 tags:
-  - XL-Files
+  - 孟晓犁
 forum_id: 420247
 ---
-> 翻译自 XL-Files：Why （Good） Statisticians Tend To Be Happier。
 
-很多人都问过我成为系主任之后有什么乐趣和烦恼。要想听那些糟糕的部分，只有两杯长岛冰茶才能打开我的话匣子。但是那些令人愉悦的故事我随时随地都可以分享。担任系主任最大的好处就是能和许多年轻才俊，特别是马上就要成为研究生的年轻人，聊聊统计思想对人生有多么重要。今年五月，我十分荣幸地做了两场毕业演讲，而哈佛大学艺术和科学学院（GSAS）每年通常只有一场毕业演讲，这可能是对我成功熬过五年系主任生涯的一个奖励吧。我很感谢伊利诺伊大学香槟分校数学系和统计学系邀请我做了第二场演讲。那场演讲的内容与我之前写的两篇文章中的观点相近（[爱情向均值回归](http://bulletin.imstat.org/2013/11/xl-files-romantic-regression-towards-the-mean/)，[婚姻长久的秘诀](http://bulletin.imstat.org/2016/05/xl-files-lectures-marriages-that-last/)）。如果你觉得这些文字不能满足你的好奇，或者你的油管还没被墙，你也许会想看看这段[视频](https://www.youtube.com/watch?v=xQGBKNHLFqM&feature=youtu.be)。
+> 翻译自孟晓犁：Why (Good) Statisticians Tend To Be Happier.
+
+很多人都问过我成为系主任之后有什么乐趣和烦恼。要想听那些糟糕的部分，只有两杯长岛冰茶才能打开我的话匣子。但是那些令人愉悦的故事我随时随地都可以分享。担任系主任最大的好处就是能和许多年轻才俊，特别是马上就要成为研究生的年轻人，聊聊统计思想对人生有多么重要。今年五月，我十分荣幸地做了两场毕业演讲，而哈佛大学艺术和科学学院（GSAS）每年通常只有一场毕业演讲，这可能是对我成功熬过五年系主任生涯的一个奖励吧。我很感谢伊利诺伊大学香槟分校数学系和统计学系邀请我做了第二场演讲。那场演讲的内容与我之前写的两篇文章中的观点相近（[爱情向均值回归](https://bulletin.imstat.org/2013/11/xl-files-romantic-regression-towards-the-mean/)，[婚姻长久的秘诀](https://bulletin.imstat.org/2016/05/xl-files-lectures-marriages-that-last/)）。如果你觉得这些文字不能满足你的好奇，或者你的油管还没被墙，你也许会想看看这段[视频](https://www.youtube.com/watch?v=xQGBKNHLFqM&feature=youtu.be)。
 
 在GSAS毕业典礼的演讲中，我简单提到了给我带来更多幸福感和更多捐款的大数定律（LLN）。下面是我的一部分演讲稿：
 
