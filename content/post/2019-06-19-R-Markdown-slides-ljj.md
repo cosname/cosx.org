@@ -4,7 +4,7 @@ author: "李家郡"
 date: "2019-06-19"
 tags: [R Markdown, slides]
 categories: ["统计软件"]
-slug: r_markdown_slides-ljj
+slug: r-markdown-slides-ljj
 ---
 
 ## 背景介绍
