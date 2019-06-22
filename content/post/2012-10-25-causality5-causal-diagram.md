@@ -6,6 +6,8 @@ categories:
   - 统计模型
 slug: causality5-causal-diagram
 forum_id: 418887
+tags:
+  - 因果推断
 ---
 
 ![nep7x](https://cloud.githubusercontent.com/assets/18478302/25562030/a1d55f52-2dac-11e7-80b9-13f4c11cf121.jpg)
