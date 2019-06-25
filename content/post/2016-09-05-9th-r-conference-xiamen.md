@@ -3,7 +3,7 @@ title: 第九届中国R语言会议（厦门）会议通知
 date: '2016-09-05T22:48:44+00:00'
 author: 统计之都
 categories:
-  - 统计之都
+  - R会议
 slug: 9th-r-conference-xiamen
 forum_id: 419162
 ---

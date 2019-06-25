@@ -5,10 +5,7 @@ author:
   - 谢益辉
   - 蔡占锐
 categories:
-  - 推荐文章
-  - 机器学习
   - 新闻动态
-  - 职业事业
 slug: talking-about-data-scientist
 forum_id: 419054
 meta_extra: 编辑：王小宁

@@ -4,7 +4,7 @@ date: '2013-04-09T12:30:29+00:00'
 author: 张丹
 categories:
   - 统计应用
-  - 软件应用
+  - 统计软件
 tags:
   - hadoop
   - mahout
@@ -15,8 +15,6 @@ tags:
 slug: rhadoop3-rhadoop-mapreduce
 forum_id: 418929
 ---
-
-# 
 
 Author：张丹(Conan)
   

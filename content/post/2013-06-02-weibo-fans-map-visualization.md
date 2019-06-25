@@ -4,7 +4,6 @@ date: '2013-06-02T20:12:35+00:00'
 author: 朱雪宁
 categories:
   - 统计图形
-  - 软件应用
 tags:
   - animation
   - ggmap
@@ -116,7 +115,7 @@ drawit<-function(i){
 print(drawit(3800))
 ``` 
 
-![](http://farm9.staticflickr.com/8395/8708205712_fc5f4d397d.jpg)
+![](https://farm9.staticflickr.com/8395/8708205712_fc5f4d397d.jpg)
 
 # 4. 结合animation包绘制动态图形
 

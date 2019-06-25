@@ -1,14 +1,15 @@
 ---
 title: Julia 中的分布式计算
-author: 张驰原
 date: '2017-08-18'
-slug: distributed-learning-in-julia
+author: 张驰原
 categories:
-  - 软件应用
+  - 统计计算
+  - 统计软件
 tags:
   - Julia
   - 分布式计算
-meta_extra: 编辑：王健桥 审稿：谢益辉，邱怡轩，潘岚锋
+slug: distributed-learning-in-julia
+meta_extra: 审稿：谢益辉，邱怡轩，潘岚锋；编辑：王健桥
 forum_id: 419330
 ---
 

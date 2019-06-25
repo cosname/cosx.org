@@ -3,7 +3,7 @@ title: 一种使用SEM广告展现数据优化投放策略的方法
 date: '2016-05-19T23:22:52+00:00'
 author: 常莹
 categories:
-  - 统计之都
+  - 统计应用
 slug: sem-data-optimization-strategy
 forum_id: 419130
 ---

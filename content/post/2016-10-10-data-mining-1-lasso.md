@@ -5,7 +5,6 @@ author: 侯澄钧
 categories:
   - 统计应用
   - 机器学习
-  - 统计之都
 slug: data-mining-1-lasso
 forum_id: 419165
 ---

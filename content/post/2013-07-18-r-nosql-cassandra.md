@@ -4,7 +4,6 @@ date: '2013-07-18T18:05:14+00:00'
 author: 张丹
 categories:
   - 统计软件
-  - 软件应用
 tags:
   - Cassandra
   - nosql
@@ -27,7 +26,7 @@ forum_id: 418945
   
 [/2013/07/r-nosql-cassandra/](/2013/07/r-nosql-cassandra/ "R利剑NoSQL系列文章 之 cassandra")
 
-![rcassandra](http://blog.fens.me/wp-content/uploads/2013/07/rcassandra.png)
+![rcassandra](https://uploads.cosx.org/2013/07/rcassandra.png)
   
 
 第三篇 R利剑Cassandra，分为7个章节。

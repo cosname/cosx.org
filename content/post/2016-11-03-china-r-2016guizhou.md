@@ -4,7 +4,6 @@ date: '2016-11-03T16:49:15+00:00'
 author: 统计之都
 categories:
   - R会议
-  - 统计之都
 tags:
   - R语言会议
 slug: china-r-2016guizhou

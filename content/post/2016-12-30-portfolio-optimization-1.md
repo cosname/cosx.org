@@ -3,7 +3,7 @@ title: '[译]量化投资教程：投资组合优化与R实践（上）'
 date: '2016-12-30T09:19:43+00:00'
 author: 朱俊辉
 categories:
-  - 统计之都
+  - 统计模型
 tags:
   - R语言
   - 投资
@@ -11,6 +11,7 @@ tags:
   - 量化
 slug: portfolio-optimization-1
 forum_id: 419180
+meta_extra: "审稿：邓一硕；编辑：范超"
 ---
 
 **译者简介: Harry Zhu, R语言爱好者, FinanceR 专栏作者**
@@ -39,29 +40,29 @@ forum_id: 419180
 pacman::p_load(fImport, PerformanceAnalytics, stringb, tidyverse)
 # 将股票数据加载到一个时间序列对象的函数
 importSeries = function(symbol,from,to) {
-# 从雅虎读取金融数据   
-  input = yahooSeries(symbol,from = from, to = to)    
-# 列名调整   
-  adjClose = symbol %.% ".Adj.Close"    
-  inputReturn = symbol %.% ".Return"    
-  CReturn = symbol %.% ".CReturn"    
-# 计算收益率并生成时间序列  
-  input.Return = returns(input[,adjClose])    
-  colnames(input.Return)[1] = inputReturn    
-         input = merge(input,input.Return)    
-# 计算累积收益率并生成时间序列   
-  input.first = input[,adjClose][1]    
+# 从雅虎读取金融数据
+  input = yahooSeries(symbol,from = from, to = to)
+# 列名调整
+  adjClose = symbol %.% ".Adj.Close"
+  inputReturn = symbol %.% ".Return"
+  CReturn = symbol %.% ".CReturn"
+# 计算收益率并生成时间序列
+  input.Return = returns(input[,adjClose])
+  colnames(input.Return)[1] = inputReturn
+         input = merge(input,input.Return)
+# 计算累积收益率并生成时间序列
+  input.first = input[,adjClose][1]
   input.CReturn = fapply(input[,adjClose],
-                       FUN = function(x) log(x) - log(input.first))    
-         colnames(input.CReturn)[1] = CReturn    
-         input = merge(input,input.CReturn)    
+                       FUN = function(x) log(x) - log(input.first))
+         colnames(input.CReturn)[1] = CReturn
+         input = merge(input,input.CReturn)
 # 删掉一些无用数据来释放内存
-         rm(input.first,       
-            input.Return,       
-            input.CReturn,       
-            adjClose,       
-            inputReturn,       
-            CReturn)    
+         rm(input.first,
+            input.Return,
+            input.CReturn,
+            adjClose,
+            inputReturn,
+            CReturn)
 # 返回时间序列
   return(input)
 }
@@ -78,25 +79,25 @@ shy = importSeries("shy",from,to)
 ief = importSeries("ief",from,to)
 merged = merge(tlt,shy) %>% merge(ief)
 
-vars = c("tlt.Return",         
-         "shy.Return",         
+vars = c("tlt.Return",
+         "shy.Return",
          "ief.Return")
 # 计算年化收益率 (t = table.AnnualizedReturns(merged[,vars], Rf = mean(merged[,"shy.Return"], na.rm=TRUE)))
 
-##                           tlt.Return shy.Return ief.Return
-## Annualized Return             0.0810     0.0303     0.0684
-## Annualized Std Dev            0.1403     0.0173     0.0740
-## Annualized Sharpe (Rf=3%)     0.3496    -0.0086     0.4974
+##                  tlt.Return shy.Return ief.Return
+## Annualized Return             0.0810     0.0303     0.0684
+## Annualized Std Dev            0.1403     0.0173     0.0740
+## Annualized Sharpe (Rf=3%)     0.3496    -0.0086     0.4974
 ```
 
 结果如下：
 
 
-|标的                   | tlt.Return         | shy.Return        | ief.Return |
+|标的                   | tlt.Return        | shy.Return         | ief.Return |
 |:---------------------:|:-----------------:|:------------------:|:----------:|
-|年化收益率              | 0.0772            | 0.1404             | 0.3378     |
-|年化波动率              | 0.0283            | 0.0173             | -0.0086    |
-|年化夏普率 (Rf=2.81%)   | 0.0645            | 0.0740             | 0.4729     |
+|年化收益率             | 0.0772            | 0.1404             | 0.3378     |
+|年化波动率             | 0.0283            | 0.0173             | -0.0086   |
+|年化夏普率 (Rf=2.81%)  | 0.0645            | 0.0740             | 0.4729    |
 
 ## 杠铃策略
 
@@ -144,10 +145,10 @@ sSHY = t["Annualized Std Dev","shy.Return"]
 for (i in 0:n){wsi = i/n;
                wti = 1-wsi;
                mui = wsi * rSHY + wti * rTLT
-               sigmai = wsi*wsi*sSHY*sSHY + wti*wti*sTLT*sTLT + wsi*wti*sSHY*sTLT*c      
-               ws = c(ws,wsi)      
-               wt = c(wt,wti)      
-               mu = c(mu,mui)      
+               sigmai = wsi*wsi*sSHY*sSHY + wti*wti*sTLT*sTLT + wsi*wti*sSHY*sTLT*c
+               ws = c(ws,wsi)
+               wt = c(wt,wti)
+               mu = c(mu,mui)
                sigma = c(sigma,sigmai) }
 #风险收益的数据集
 rrProfile = data.frame(ws=ws,wt=wt,mu=mu,sigma=sigma)
@@ -169,18 +170,18 @@ coe = fit$coefficients
 muf = NULL
 sfit = NULL
 for (i in seq(0,.08,by=.001)){
-               muf = c(muf,i)           
+               muf = c(muf,i)
 
-               s = coe[1] + coe[2]*i + coe[3]*i^2      
+               s = coe[1] + coe[2]*i + coe[3]*i^2
                sfit = c(sfit,s)
 }
 # 绘图
 plot(rrProfile$sigma,
-     rrProfile$mu,       
-     xlim=c(0,.022),       
-     ylim=c(0,.08),       
-     ylab="Expected Yearly Return",       
-     xlab="Expected Yearly Variance",       
+     rrProfile$mu,
+     xlim=c(0,.022),
+     ylim=c(0,.08),
+     ylab="Expected Yearly Return",
+     xlab="Expected Yearly Variance",
      main="Efficient Frontier for Government Bond Portfolios")
 # 画出预测边值
 lines(sfit,muf,col="red")
@@ -203,30 +204,30 @@ er = NULL
 eStd = NULL
 # 在收益水平之间不断循环搜索找到最优的投资组合，包括最小值(rSHY)和最大值(rTLT)
 # portfolio.optim 使用日收益数据，因此不得不做出相应的调整
-for (i in seq((rSHY+.001),(rTLT-.001),length.out=100)){      
-      pm = 1+i      
-      pm = log(pm)/255      
-      opt = tseries::portfolio.optim(m2,pm=pm)      
-      er = c(er,exp(pm*255)-1)      
-      eStd = c(eStd,opt$ps*sqrt(255))      
-      wTLT = c(wTLT,opt$pw[1])      
-      wSHY = c(wSHY,opt$pw[2])      
+for (i in seq((rSHY+.001),(rTLT-.001),length.out=100)){
+      pm = 1+i
+      pm = log(pm)/255
+      opt = tseries::portfolio.optim(m2,pm=pm)
+      er = c(er,exp(pm*255)-1)
+      eStd = c(eStd,opt$ps*sqrt(255))
+      wTLT = c(wTLT,opt$pw[1])
+      wSHY = c(wSHY,opt$pw[2])
       wIEF = c(wIEF,opt$pw[3])
 }
 # 绘图
-plot(rrProfile$sigma,     
-     rrProfile$mu,       
-     xlim=c(0,.022),       
-     ylim=c(0,.08),       
-     ylab="Expected Yearly Return",       
-     xlab="Expected Yearly Variance",       
+plot(rrProfile$sigma,
+     rrProfile$mu,
+     xlim=c(0,.022),
+     ylim=c(0,.08),
+     ylab="Expected Yearly Return",
+     xlab="Expected Yearly Variance",
      main="Efficient Frontier for Government Bond Portfolios")
 # 画出预测边值
 lines(sfit,muf,col="red")
 # 画出三个标的的有效边界。
 lines(eStd^2,er,col="blue")
-legend(.014,0.015,c("Barbell Strategy","All Assets"),            
-                  col=c("red","blue"),            
+legend(.014,0.015,c("Barbell Strategy","All Assets"),
+                  col=c("red","blue"),
                   lty=c(1,1))
 solution = data.frame(wTLT,wSHY,wIEF,er,eStd)
 ```
@@ -262,9 +263,3 @@ solution = data.frame(wTLT,wSHY,wIEF,er,eStd)
 只有一个实根，其余的都是虚根，需要另一种方法。
 
 为第一部分里的边值拟合一个多项式；此时在持仓组合中只有 SHY 和 IEF。虽然这样也行得通，但是这不太通用。想找到一个可以不管是什么边值形状都适用的通用解决方案。下个部分会继续讨论这个问题。
-
-审稿：邓一硕
-
-编辑：范超
-
-版权公告：原创文章，版权所有。

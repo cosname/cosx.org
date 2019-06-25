@@ -3,7 +3,7 @@ title: RHadoop实践系列之四 rhbase安装与使用
 date: '2013-04-12T12:22:55+00:00'
 author: 张丹
 categories:
-  - 软件应用
+  - 统计软件
 tags:
   - hadoop
   - hbase

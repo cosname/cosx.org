@@ -4,8 +4,6 @@ date: '2012-07-24T14:49:32+00:00'
 author: Charles J. Geyer
 categories:
   - 统计计算
-  - 统计软件
-  - 软件应用
 tags:
   - MCMC
   - R语言
@@ -15,8 +13,8 @@ tags:
   - 计算
   - 贝叶斯
 slug: mcmc-case-study
-forum_id: 418878
 meta_extra: 译者：闫超、高磊
+forum_id: 418878
 ---
 
 > 本文是R中mcmc包的一篇[帮助文档](http://www.stat.umn.edu/geyer/mcmc/library/mcmc/doc/demo.pdf)，作者为Charles J.Geyer。经过[knitr](/2012/06/reproducible-research-with-knitr/)编译后的pdf文档[可见此处](http://cloud.github.com/downloads/cosname/editor/mcmc.pdf)，提供中文译稿的作者：

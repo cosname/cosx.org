@@ -78,6 +78,6 @@ forum_id: 418969
 
 下面的动态图就是在这个地图上应用遗传算法的全程进化过程展示。可以看出，一开始的一万代能够很快地从一个随机的情况进化到一个较好的结果，之后效率则会有明显的下降了，而最后的几次进化则花费了非常久的时间。
 
-![GA2](http://ww3.sinaimg.cn/mw690/61830650jw1e84jucph1dg20fk0gob2b.gif)
+![GA2](https://ww3.sinaimg.cn/mw690/61830650jw1e84jucph1dg20fk0gob2b.gif)
 
 最后，[代码](https://github.com/hetong007/code4cos/tree/master/Genetic%20Algorithm%20for%20Travelling%20Salesman%20Problem)在这里，仅供参考，欢迎捉虫。

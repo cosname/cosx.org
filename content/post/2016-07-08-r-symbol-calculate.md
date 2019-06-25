@@ -3,25 +3,15 @@ title: R语言做符号计算
 date: '2016-07-08T19:48:37+00:00'
 author: 黄湘云
 categories:
-  - 统计软件
-  - 软件应用
-tags:
   - R语言
+tags: [符号计算,优化计算]
 slug: r-symbol-calculate
 forum_id: 419152
 ---
 
-**本文作者：**黄湘云，2011-2015年在中国矿业大学（北京）的数学与应用数学专业获得学士学位，
-并从2015年至今在中国矿业大学（北京）统计学专业硕士在读，主要研究方向为复杂数据分析。
-
 ## 引言
 
-谈起符号计算，大家首先想到的可能就是大名鼎鼎的Maple，其次是Mathematica，但是他们都是商业软件，
-除了其自身昂贵的价格外，对于想知道底层，并做一些修改的极客而言，这些操作也很不可能实现。
-自从遇到R以后，还是果断脱离商业软件的苦海，R做符号计算固然比不上Maple，但是你真的需要Maple这样的软件去做符号计算吗？我们看看R语言的符号计算能做到什么程度。
-<!--more-->
-
-
+谈起符号计算，大家首先想到的可能就是大名鼎鼎的Maple，其次是Mathematica，但是他们都是商业软件，除了其自身昂贵的价格外，对于想知道底层，并做一些修改的极客而言，这些操作也很不可能实现。自从遇到R以后，还是果断脱离商业软件的苦海，R做符号计算固然比不上Maple，但是你真的需要Maple这样的软件去做符号计算吗？我们看看R语言的符号计算能做到什么程度。
 
 ## 符号计算
 
@@ -48,7 +38,7 @@ class(NormDensity)
 ```r
 D(NormDensity, "x")
 ## -(1/sqrt(2 * pi) * (exp(-x^2/2) * (2 * x/2)))
-
+# 或者
 deriv(NormDensity, "x")
 ## expression({
 ##      .expr3 <- 1/sqrt(2 * pi)
@@ -59,24 +49,15 @@ deriv(NormDensity, "x")
 ##      attr(.value, "gradient") <- .grad
 ##     .value
 ## })
+```
 
-deriv3(NormDensity, "x")
-## expression({
-##     .expr3 <- 1/sqrt(2 * pi)
-##     .expr7 <- exp(-x^2/2)
-##     .expr10 <- 2 * x/2
-##     .expr11 <- .expr7 * .expr10
-##     .value <- .expr3 * .expr7
-##     .grad <- array(0, c(length(.value), 1L), list(NULL, c("x")))
-##     .hessian <- array(0, c(length(.value), 1L, 1L), list(NULL, 
-##     c("x"), c("x")))
-##     .grad[, "x"] <- -(.expr3 * .expr11)
-##     .hessian[, "x", "x"] <- -(.expr3 * (.expr7 * (2/2) - .expr11  
-##     ＊.expr10))
-##     attr(.value, "gradient") <- .grad
-##     attr(.value, "hessian") <- .hessian
-##     .value
-## })
+计算三阶导数
+
+```r
+as.expression(deriv3(NormDensity, "x"))
+## expression(1/sqrt(2 * pi) * (exp(-x^2/2) * (2 * x/2) * (2/2) + 
+##    ((exp(-x^2/2) * (2/2) - exp(-x^2/2) * (2 * x/2) * (2 * x/2)) * 
+##        (2 * x/2) + exp(-x^2/2) * (2 * x/2) * (2/2))))
 ```
 
 计算 n 阶导数
@@ -187,8 +168,7 @@ Simplify(D(body(Normfun), "x"))
 
 作为本节的最后，献上函数图像，这个函数的作用主要是计算多元正态分布的概率，详细内容参看 [2]。
 
-![Tetrachoric](https://uploads.cosx.org/2016/07/Tetrachoric.jpg)
-
+<img src="https://uploads.cosx.org/2016/07/Tetrachoric.jpg" width="65%" />
 
 #### 3.符号计算扩展包Ryacas
 
@@ -217,7 +197,7 @@ yacas("Taylor(x, a, 3) Exp(x)")
 学过运筹学或者数值分析课程的可能知道，有不少优化算法是要求导或者求梯度的，如拟牛顿算法，最速下降法和共轭梯度法，
 还有求解非线性方程组的拟牛顿算法及其修正算法。下面以求Rosenbrock函数的极小值为例：
 
-![Rosenbrock2](https://uploads.cosx.org/2016/07/Rosenbrock2.png)
+<img src="https://uploads.cosx.org/2016/07/Rosenbrock2.png" width="65%" />
 
 符号微分
 
@@ -345,11 +325,17 @@ optim(c(-1.2, 1), fr, grr2, method = "BFGS")
 导致两个函数（fr与fr1）的参数列表的形式不一样，应能看出fr这种写法更好些。
 
 注：
+
 1. 求极值和求解方程（组）往往有联系的，如统计中求参数的最大似然估计，有不少可以转化为求方程（组），如 stat4 包 [5] 的 mle 函数。
+
 1. 目标函数可以求导，使用拟牛顿算法效果比较好，如上例中 methods 参数设置成 CG，结果就会不一样。
+
 1. nlm、optim 和 nlminb 等函数都实现了带梯度的优化算法。
+
 1. 不过话又说回来，真实的场景大多是目标函数不能求导，一阶导数都不能求,更多细节请读者参见 optim 函数帮助。
+
 1. 还有一些做数值优化的 R 包，如 BB 包 [6] 求解大规模非线性系统，numDeriv 包是数值微分的通用求解器，更多的内容可参见 <https://cran.rstudio.com/web/views/Optimization.html>。
+
 1. 除了数值优化还有做概率优化的 R 包，如仅遗传算法就有 GA [7]，gafit [8]，galts [9]，mcga [10]，rgenoud [11]，gaoptim [12]，genalg [13] 等 R 包，这方面的最新成果参考文献 [14]。
 
 

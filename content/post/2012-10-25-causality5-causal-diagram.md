@@ -3,11 +3,11 @@ title: 因果推断简介之五：因果图  (Causal Diagram)
 date: '2012-10-25T12:00:24+00:00'
 author: 丁鹏
 categories:
-  - 推荐文章
-  - 经典理论
-  - 统计推断
+  - 统计模型
 slug: causality5-causal-diagram
 forum_id: 418887
+tags:
+  - 因果推断
 ---
 
 ![nep7x](https://cloud.githubusercontent.com/assets/18478302/25562030/a1d55f52-2dac-11e7-80b9-13f4c11cf121.jpg)

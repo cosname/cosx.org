@@ -7,9 +7,7 @@ author:
   - 王威廉
   - 数学文化
 categories:
-  - 机器学习
-  - 新闻动态
-  - 经典理论
+  - 统计模型
 slug: talking-about-p-value-again
 forum_id: 419061
 meta_extra: 编辑：王小宁

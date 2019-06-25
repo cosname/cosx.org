@@ -3,8 +3,6 @@ title: COS每周精选：一个商科学生成为数据分析师的故事
 date: '2015-01-25T19:49:32+00:00'
 author: 王小宁
 categories:
-  - 统计图形
-  - 推荐文章
   - 新闻动态
 slug: the-story-about-a-business-student-to-be-a-data-analyst
 forum_id: 419059

@@ -3,7 +3,6 @@ title: 那些年，我们一起追的EB
 date: '2012-05-26T00:32:12+00:00'
 author: 杨灿
 categories:
-  - 经典理论
   - 统计计算
 tags:
   - Bootstrap
@@ -15,7 +14,7 @@ forum_id: 418872
 
 写了[《统计学习那些事》](/2011/12/stories-about-statistical-learning/)，很多童鞋都表示喜欢，这让我越来越觉得冯导的一句话很有道理：“我的电影一向只伺候中国观众，还没想过拍给全世界人民看。这就跟献血一样，本身是好事，但如果血型不对，输进去的血也会产生排异现象。我的‘血型’就适合中国人，对不上世界观众，别到时伤了我的身子骨，还伤害了世界观众，所以我暂时不会‘献血’。”比如他的《天下无贼》，我就特别喜欢。然而天下可以无贼，却不可以没有英雄（不是张导的那个《英雄》）。今天我要写的是统计界的英雄以及英雄的故事。英雄的名字叫 EB，英雄的故事也叫 EB。<!--more-->
 
-![](http://statweb.stanford.edu/~ckirby/brad/images/efron.jpg)
+![](https://statweb.stanford.edu/~ckirby/brad/images/efron.jpg)
 
 # 1、谁是 EB？
 
@@ -35,7 +34,7 @@ forum_id: 418872
 
 ## 2.1 James-Stein Estimator
 
-先来一个简约不简单的例子。现已观察到 `$N$` 个 `$z$` 值，即 `$[z_1,z_2,\dots,z_N]$`，还知道 `$z_i$` 独立地来自以 `$\mu_i$` 为均值，方差为 1 的正态分布，即 `$z_i|\mu_i \sim \mathcal{N}(\mu_i,1)$, $i=1,2,\dots,N$`. 问题是：如何从观察到的 `$\mathbf{z} =[z_1,z_2,\dots,z_N]$` 估计`$\boldsymbol{\mu}=[\mu_1,\mu_2,\dots,\mu_N]$`？地球人都知道有一种方法去估计`$\boldsymbol{\mu}=[\mu_1,\mu_2,\dots,\mu_N]$`，那就是 `$\hat{\boldsymbol{\mu}}=\mathbf{z}$`，即 `$\hat{\mu}_i = z_i,i =1, 2,\dots,N$`。其实，这就是最大似然估计，记为 `$\hat{\boldsymbol{\mu}}_{ML}$`。现在的问题是：有没有更好的办法呢？答案是肯定的！那就是传说中的 James-Stein Estimator，
+先来一个简约不简单的例子。现已观察到 `$N$` 个 `$z$` 值，即 `$[z_1,z_2,\dots,z_N]$`，还知道 `$z_i$` 独立地来自以 `$\mu_i$` 为均值，方差为 1 的正态分布，即 `$z_i|\mu_i \sim \mathcal{N}(\mu_i,1)$`, `$i=1,2,\dots,N$`. 问题是：如何从观察到的 `$\mathbf{z} =[z_1,z_2,\dots,z_N]$` 估计`$\boldsymbol{\mu}=[\mu_1,\mu_2,\dots,\mu_N]$`？地球人都知道有一种方法去估计`$\boldsymbol{\mu}=[\mu_1,\mu_2,\dots,\mu_N]$`，那就是 `$\hat{\boldsymbol{\mu}}=\mathbf{z}$`，即 `$\hat{\mu}_i = z_i,i =1, 2,\dots,N$`。其实，这就是最大似然估计，记为 `$\hat{\boldsymbol{\mu}}_{ML}$`。现在的问题是：有没有更好的办法呢？答案是肯定的！那就是传说中的 James-Stein Estimator，
   
 `$$\begin{equation} 
 \hat{\boldsymbol{\mu}}_{JS}=(1-\frac{N-2}{{\Vert \mathbf{z} \Vert}^2})\mathbf{z}. 
@@ -61,7 +60,7 @@ z_i \sim \mathcal {N}(0, 1+\sigma^2)
 \mathbb{E}(\mu_i|z_i)=(1-\frac{1}{\sigma^2+1})z_i. 
 \end{equation}$$`
 
-注意，这里 `$\sigma^2$` 是不知道的，需要估计 $\sigma^2$。经验贝叶斯就在这里起作用了，即用观察到的数据去估计 `$\sigma^2$`。下面需要用到统计学里面的两个常识^[参见wikipedia: http://en.wikipedia.org/wiki/Chi-squared_distribution与http://en.wikipedia.org/wiki/Inverse-chi-squared_distribution.]：第一，如果随机变量 `$z_i,i=1,2,\dots,N$` 都独立地来自标准正态分布，那么他们的平方和服从自由度为 `$N$` 的 `$\chi^2$` 分布，即 `$Q=\sum^N_{i=1}z^2_i\sim \chi^2_N$`。第二，如果 `$Q\sim \chi^2_N$` ，那么 `$1/Q$`服从自由度为 `$N$` 的 Inverse-`$\chi^2$` 分布，`$\mathbb{E}(1/Q)=\frac{1}{N-2}$`。现在来估计 `$\sigma^2$`。根据式(3)，我们知道 `$\frac{z_i}{1+\sigma^2}\sim \mathcal{N}(0,1)$`，进一步可知 `$\left(\frac{1}{\sum^N_{i=1} \frac{z^2_i}{1+\sigma^2}}\right)$` 服从 Inverse-`$\chi^2$` 分布，且 `$\mathbb{E}\left(\frac{1}{\sum^N_{i=1} \frac{z^2_i}{1+\sigma^2}}\right)=\frac{1}{N-2}$`。 因此我们可以用 `$\frac{N-2}{\sum^N_{i=1}z^2_i}$` 作为对 `$\frac{1}{1+\sigma^2}$` 的估计。这样就得到神奇的 James-Stein Estimator(1)。有一点是值得注意和思考的，在估计 `$\mu_i$` 的时候，James-Stein Estimator 实际上用到了所有的 `$z_i$` 的信息，尽管每个 `$z_i$` 都是独立的。Efron 教授把这个称为“Learning from experience of others”。
+注意，这里 `$\sigma^2$` 是不知道的，需要估计`$\sigma^2$`。经验贝叶斯就在这里起作用了，即用观察到的数据去估计 `$\sigma^2$`。下面需要用到统计学里面的两个常识^[参见wikipedia: http://en.wikipedia.org/wiki/Chi-squared_distribution与http://en.wikipedia.org/wiki/Inverse-chi-squared_distribution.]：第一，如果随机变量 `$z_i,i=1,2,\dots,N$` 都独立地来自标准正态分布，那么他们的平方和服从自由度为 `$N$` 的 `$\chi^2$` 分布，即 `$Q=\sum^N_{i=1}z^2_i\sim \chi^2_N$`。第二，如果 `$Q\sim \chi^2_N$` ，那么 `$1/Q$`服从自由度为 `$N$` 的 Inverse-`$\chi^2$` 分布，`$\mathbb{E}(1/Q)=\frac{1}{N-2}$`。现在来估计 `$\sigma^2$`。根据式(3)，我们知道 `$\frac{z_i}{\sqrt{1+\sigma^2}}\sim \mathcal{N}(0,1)$`，进一步可知 `$\left(\frac{1}{\sum^N_{i=1} \frac{z^2_i}{1+\sigma^2}}\right)$` 服从 Inverse-`$\chi^2$` 分布，且 `$\mathbb{E}\left(\frac{1}{\sum^N_{i=1} \frac{z^2_i}{1+\sigma^2}}\right)=\frac{1}{N-2}$`。 因此我们可以用 `$\frac{N-2}{\sum^N_{i=1}z^2_i}$` 作为对 `$\frac{1}{1+\sigma^2}$` 的估计。这样就得到神奇的 James-Stein Estimator(1)。有一点是值得注意和思考的，在估计 `$\mu_i$` 的时候，James-Stein Estimator 实际上用到了所有的 `$z_i$` 的信息，尽管每个 `$z_i$` 都是独立的。Efron 教授把这个称为“Learning from experience of others”。
 
 我们试着从其它角度来看这个问题。能否通过对下面这个问题的求解来估计 `$\boldsymbol{\mu}$` 呢？
   
@@ -105,7 +104,7 @@ g(\mu|z)=\varphi(z-\mu)g(\mu)/f(z).
 h(x)=\exp(\eta x -\psi(\eta))h_0(x).  
 \end{equation}$$`
 
-其中，`$\eta$` 叫自然参数(natural paramter)，`$\psi(\eta)$` 叫矩发生函数(cumulant generating function，等会就明白啥意思了)。这些名字是挺难叫的，但是这些概念又确实重要，不取个名字更麻烦，既然大家都这么叫，就学着叫吧。来几个简单的例子，一下就明白(11)并不是那么抽象了。比如正态分布 `$\mathcal{N}(\mu,1)$` 的概率密度函数，
+其中，`$\eta$` 叫自然参数(natural paramter)，`$\psi(\eta)$` 叫累积量生成函数(cumulant generating function，等会就明白啥意思了)。这些名字是挺难叫的，但是这些概念又确实重要，不取个名字更麻烦，既然大家都这么叫，就学着叫吧。来几个简单的例子，一下就明白(11)并不是那么抽象了。比如正态分布 `$\mathcal{N}(\mu,1)$` 的概率密度函数，
 
 `$$\begin{equation} 
 h(x)=\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2}\right)=\exp(\mu x-\frac{\mu^2}{2})\varphi(x).  
@@ -167,13 +166,13 @@ g(\mu|z)&=\varphi(z-\mu)g(\mu)/f(z) \\
 \mathbb{E}(\mu|z) = z + \frac{d}{dz}\log f(z).
 \end{equation}$$`
 
-其中，`$z$` 是最大似然估计，`$\frac{d}{dz}\log f(z)$` 可以看做贝叶斯修正。式(19)被称为Tweedie’s formula。**最神奇的是：Tweedie’s formula 并不包含先验分布 `$g(\cdot)$`，而只用到了`$z$` 的边际分布 `$f(z)$`。**接下来的事件就简单了，根据观察到的经验数据 `$\mathbf{z}=[z_1,z_2,\dots,z_N]$ 直接去估计 $f(z)$`。 当 `$N$` 较大的时候，`$f(z)$` 可以估计得很准。
+其中，`$z$` 是最大似然估计，`$\frac{d}{dz}\log f(z)$` 可以看做贝叶斯修正。式(19)被称为Tweedie’s formula。**最神奇的是：Tweedie’s formula 并不包含先验分布 `$g(\cdot)$`，而只用到了`$z$` 的边际分布 `$f(z)$`。**接下来的事件就简单了，根据观察到的经验数据 `$\mathbf{z}=[z_1,z_2,\dots,z_N]$` 直接去估计 `$f(z)$`。 当 `$N$` 较大的时候，`$f(z)$` 可以估计得很准。
 
 # 3 浅草才能没马蹄
 
 古诗云：乱花渐欲迷人眼，浅草才能没马蹄。花太多容易迷失方向，草太深则跑不了马。所以，一定要“浅”才行。
 
-前面的数学推导，读起来肯定不流畅（我也写得累啊），尤其是对这些东西不太熟悉的童鞋。好吧，现在简单地总结一下。前面的讨论都是基于图 2 所示的结构。不同的只在于对先验分布 `$g(\cdot)$` 的选取。James-Stein Estimator 假设$g(\cdot)$ 是高斯分布，Tweedie’s formula 则没有。从这个意义上说，Tweedie’s formula 适用范围更广(flexible)，但需要较多的数据来估计 $g(\cdot)$。换一个角度说，当数据不够的时候，往往假设 `$g(\cdot)$` 具有某种参数形式会更好一些。类似的情况可以比较最近邻域法和线性回归^[参见Elements of statistical learning第二章。]：最近邻域法是非 常flexible 的，在低维数据分析中很好用，因为总是有足够数据支持这种 flexibility，但在高维情况下效果就很差。线性模型在高维数据分析中往往表现出惊人的性能，就在于它简单的结构。
+前面的数学推导，读起来肯定不流畅（我也写得累啊），尤其是对这些东西不太熟悉的童鞋。好吧，现在简单地总结一下。前面的讨论都是基于图 2 所示的结构。不同的只在于对先验分布 `$g(\cdot)$` 的选取。James-Stein Estimator 假设 `$g(\cdot)$` 是高斯分布，Tweedie’s formula 则没有。从这个意义上说，Tweedie’s formula 适用范围更广(flexible)，但需要较多的数据来估计 `$g(\cdot)$`。换一个角度说，当数据不够的时候，往往假设 `$g(\cdot)$` 具有某种参数形式会更好一些。类似的情况可以比较最近邻域法和线性回归^[参见Elements of statistical learning第二章。]：最近邻域法是非 常flexible 的，在低维数据分析中很好用，因为总是有足够数据支持这种 flexibility，但在高维情况下效果就很差。线性模型在高维数据分析中往往表现出惊人的性能，就在于它简单的结构。
   
 总之，不能说一个模型越通用就越好，更不能说一个模型越简单就越不好。关键看什么情况下用以及怎么用！乔峰打出的少林长拳都是虎虎生威的！
 

@@ -4,7 +4,6 @@ date: '2012-12-13T23:08:25+00:00'
 author: 统计之都
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: cos-5th-salon
@@ -21,7 +20,7 @@ forum_id: 418891
 
 <!--more-->
 
-![袁老师可视化讲座](http://i.imgur.com/nRCsu.jpg)
+![袁老师可视化讲座](https://i.imgur.com/nRCsu.jpg)
 
 袁老师的报告非常精彩，引来了数次热烈的掌声，袁老师还展示他们的可视化科研成果，把大家的眼珠子都给看绿了。
 

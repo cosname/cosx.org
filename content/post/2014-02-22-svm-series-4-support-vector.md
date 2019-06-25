@@ -3,8 +3,8 @@ title: 支持向量机系列四：Outliers
 date: '2014-02-22T10:01:37+00:00'
 author: 张驰原
 categories:
+  - 推荐文章
   - 机器学习
-  - 统计之都
 tags:
   - Outliers
   - 支持向量机
@@ -69,7 +69,7 @@ $$`
 \begin{align}
 \[ \max_\alpha \] &\sum_{i=1}^n\alpha_i – \frac{1}{2}\sum_{i,j=1}^n\alpha_i\alpha_jy_iy_j\langle x_i,x_j\rangle \\ 
 s.t., &0 \leq \alpha_i\leq C, i=1,\ldots,n \\ 
-&\sum\_{i=1}^n\alpha_iy_i = 0  
+&\sum_{i=1}^n\alpha_iy_i = 0  
 \end{align}
 $$`
 

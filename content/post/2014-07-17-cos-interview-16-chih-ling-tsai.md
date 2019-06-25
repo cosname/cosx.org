@@ -3,19 +3,17 @@ title: COS访谈第16期——加州大学戴文斯分校蔡知令教授
 date: '2014-07-17T15:29:56+00:00'
 author: 朱雪宁
 categories:
-  - 推荐文章
-  - 统计之都
+  - COS访谈
 tags:
   - COS访谈
 slug: cos-interview-16-chih-ling-tsai
 forum_id: 419026
+meta_extra: 受访者：蔡知令；采访者：朱雪宁
 ---
 
-受访者：**[蔡知令](http://gsm.ucdavis.edu/faculty/chih-ling-tsai"蔡知令")**; 采访者: **朱雪宁**。
+简介：[蔡知令](http://gsm.ucdavis.edu/faculty/chih-ling-tsai)，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。
 
-简介：**蔡知令，加州大学戴维斯分校管理学院杰出教授和讲席教授。曾被MBA学生14次评选为年度教师。**
-
-![caizhiling](https://uploads.cosx.org/2014/07/tsai_web.jpg)
+![蔡知令](https://uploads.cosx.org/2014/07/tsai_web.jpg)
 
 Xuening: 听说您的求学经历比较曲折，能给我们讲讲嘛？
 

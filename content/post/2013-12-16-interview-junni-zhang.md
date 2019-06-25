@@ -10,11 +10,10 @@ tags:
   - COS访谈
 slug: interview-junni-zhang
 forum_id: 418995
+meta_extra: "受访人：[北大光华张俊妮副教授](http://www.gsm.pku.edu.cn/faculty/zjn.html)；采访人：[朱雪宁](http://weibo.com/puddingnnn529)"
 ---
 
 ![](https://uploads.cosx.org/2013/12/0267_PHOTO1.jpg)
-
-【COS编辑部按】：受访人：[北大光华张俊妮副教授](http://www.gsm.pku.edu.cn/faculty/zjn.html)，采访人：[朱雪宁](http://weibo.com/puddingnnn529)
 
 简介：张俊妮博士现任北京大学光华管理学院统计学副教授。她1998年毕业于中国科学技术大学，获计算机软件学士学位；2002年毕业于美国哈佛大学，获统计学博士学位。她的研究领域为因果推断、贝叶斯分析、小区估计、数据挖掘和文本挖掘。
 

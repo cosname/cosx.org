@@ -13,11 +13,10 @@ tags:
   - 数据科学
 slug: interview_of_xie_liang
 forum_id: 418956
+meta_extra: "受访人：谢梁"
 ---
 
 ![xie-liang-pic](https://uploads.cosx.org/2013/08/xie-liang-pic.jpg)
-
-【COS编辑部按】受访人：谢梁
 
 简介：谢梁，现微软（西雅图）高级数据科学家，在各大SAS论坛混迹的朋友也许不知道他的真名，但oloolo这个id可能大家都非常熟悉。本站小编[谢益辉](http://weibo.com/yihuixie?topnav=1&wvr=5&topsug=1)有幸在西雅图得遇谢梁真身：本家相逢，又是同行；把酒言欢，各自买单；幸甚至哉，采访即来。谢梁的[个人技术博客](http://www.sas-programming.com)。（因为现在不用SAS了，目前更新速度比较慢），更多信息，参见[LinkedIn页面](http://www.linkedin.com/in/liangxie/)。
 

@@ -6,15 +6,14 @@ categories:
   - 推荐文章
 slug: a-data-scientist-is-changing-peoples-vision-to-city
 forum_id: 419052
+meta_extra: "编辑：王小宁"
 ---
 
 **本文摘自：腊八粥**
 
 **原文：<http://www.labazhou.net/2014/12/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city/>**
 
-编辑：王小宁
-
-![数据分析师的博客正在改变着纽约人看待城市的方式](http://www.labazhou.net/wp-content/uploads/2014/12/ben-wellington-i-quant-ny-1.jpg)
+![数据分析师的博客正在改变着纽约人看待城市的方式](https://uploads.cosx.org/2014/12/ben-wellington-i-quant-ny-1.jpg)
 
 Ben Wellington因为这个消防栓而被鉴定为纽约“开放数据”运动之王。今年早些时候，Wellington钻研了纽约市的违章停车罚单的数据，识别出连续街区的两个消防栓一年产生了$55,000的罚单进项，它们[都来自于貌似合法停车的车主](http://iquantny.tumblr.com/post/87573867759/success-how-nyc-open-data-and-reddit-saved-new)。Wellington的在线报告病毒式地扩散不久，热衷数据的市民调查者发现，交通部门已经调整了道路标志，还重新粉刷了停车位，以便司机不会被处罚。（交通部门没有就此询问给出回应）
 
@@ -34,7 +33,7 @@ Wellington受欢迎的[博客“I Quant NY”](http://iquantny.tumblr.com/)，�
 
 这是他的风格：自然而然。去年，他和妻子莱斯利从易趣网买了一辆1973年的大众巴士，在3个月里开着它走遍了美国（他们原打算卖掉的，但是爱上了它）。甚至在课堂上，学生把他的[演讲](http://www.labazhou.net/speaking/ "演讲")风格描述成狂热的、快人快语，他在学生之间跳跃，毫无疑问在找到了一个喜剧即兴表演小组之后，他在苦练，最近开始与另一个小组一起工作。
 
-![数据分析师的博客正在改变着纽约人看待城市的方式](http://www.labazhou.net/wp-content/uploads/2014/12/wellington-i-quant-ny-vw.jpg)
+![数据分析师的博客正在改变着纽约人看待城市的方式](https://uploads.cosx.org/2014/12/wellington-i-quant-ny-vw.jpg)
 
 根据这个博学者的调查，一些机构或许准备与其合作。他说，他正在和很多当地政府办公室进行“初步沟通”，纽约市发言人——Wellington数次挖掘该城市的合法要求、以找到预见性的、大数据提供者——说Wellington的工作是在帮助“形成对话、促进美国最大城市的数据驱动政策的发展。”
 

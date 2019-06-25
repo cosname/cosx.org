@@ -4,7 +4,6 @@ date: '2013-11-18T21:49:42+00:00'
 author: 霍志骥
 categories:
   - 新闻动态
-  - 职业事业
 tags:
   - COS沙龙
 slug: salon-beijing-16th

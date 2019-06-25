@@ -3,10 +3,11 @@ title: 从统计学角度来看深度学习（1）：递归广义线性模型
 date: '2015-05-17T10:52:45+00:00'
 author: Shakir Mohamed
 categories:
-  - 统计之都
+  - 机器学习
+  - 统计模型
 slug: a-statistical-view-of-deep-learning-i-recursive-glms
+meta_extra: 翻译：王小宁；审校：冯凌秉、朱雪宁；编辑：王小宁
 forum_id: 419080
-meta_extra: "翻译：王小宁；审校：冯凌秉、朱雪宁；编辑：王小宁"
 ---
 
 原文链接：[http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/](http://blog.shakirm.com/2015/01/a-statistical-view-of-deep-learning-i-recursive-glms/)
@@ -75,7 +76,7 @@ meta_extra: "翻译：王小宁；审校：冯凌秉、朱雪宁；编辑：王�
 `$$\mathbb{E}[y] = \mu_L = h_L \circ \ldots \circ h_1 \circ h_o(x)$$`
 
 
- 这正是一个L层深度神经网络模型的定义。这个模型中没有什么秘密（在前馈神经网络中也是如此），并且因为我们能很容易地在线性组合的基础上做极大的拓展，相比于只使用线性预测变量的模型它的能力是显而易见的。这表示递归GLM和神经网络是核函数回归的一种方式。这里核函数就是不断递归使用线性预测值得到的。
+这正是一个L层深度神经网络模型的定义。这个模型中没有什么秘密（在前馈神经网络中也是如此），并且因为我们能很容易地在线性组合的基础上做极大的拓展，相比于只使用线性预测变量的模型它的能力是显而易见的。这表示递归GLM和神经网络是核函数回归的一种方式。这里核函数就是不断递归使用线性预测值得到的。
 
 # 学习和估计
 
@@ -95,10 +96,10 @@ meta_extra: "翻译：王小宁；审校：冯凌秉、朱雪宁；编辑：王�
 
 # 参考文献
 
-[1] Christopher M Bishop, *Neural networks for pattern recognition*, 1995
+[1] Christopher M Bishop, *Neural networks for pattern recognition*, 1995
 
 [2] Peter McCullagh, John A Nelder, *Generalized linear models.*, 1989
 
-[3] Peter J Bickel, Kjell A Doksum, *Mathematical Statistics, volume I*, 2001
+[3] Peter J Bickel, Kjell A Doksum, *Mathematical Statistics, volume I*, 2001
 
-[4] Leon Bottou, *Stochastic Gradient Descent Tricks*, Neural Networks: Tricks of the Trade, 2012
+[4] Leon Bottou, *Stochastic Gradient Descent Tricks*, Neural Networks: Tricks of the Trade, 2012

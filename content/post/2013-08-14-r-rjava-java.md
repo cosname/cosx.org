@@ -3,7 +3,7 @@ title: 解惑rJava R与Java的高速通道
 date: '2013-08-14T22:30:14+00:00'
 author: 张丹
 categories:
-  - 软件应用
+  - 统计软件
 tags:
   - java
   - jcall
@@ -32,7 +32,7 @@ R语言作为统计学一门语言，一直在小众领域闪耀着光芒。直�
   
 [http://blog.fens.me/r-rjava-java](http://blog.fens.me/r-rjava-java "解惑rJava R与Java的高速通道")
   
-![rjava](http://blog.fens.me/wp-content/uploads/2013/08/rjava1.png)
+![rjava](https://uploads.cosx.org/2013/08/rjava1.png)
 
 **前言**
   
@@ -205,7 +205,7 @@ CLASSPATH: C:\Program Files\R\R-3.0.1\library\rJava\jri
 
 **启动Eclipse编写程序**
 
-![rjava2](http://blog.fens.me/wp-content/uploads/2013/08/rjava2.png)
+![rjava2](https://uploads.cosx.org/2013/08/rjava2.png)
 
 ```java
 package org.conan.r.rjava;
@@ -246,7 +246,7 @@ public class DemoRJava {
 -Djava.library.path="C:\Program Files\R\R-3.0.1\library\rJava\jri\x64"
 ```
 
-![rjava](http://blog.fens.me/wp-content/uploads/2013/08/rjava.png)
+![rjava](https://uploads.cosx.org/2013/08/rjava.png)
 
 **运行结果：**
 

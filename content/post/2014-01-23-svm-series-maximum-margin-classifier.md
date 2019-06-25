@@ -5,7 +5,6 @@ author: 张驰原
 categories:
   - 推荐文章
   - 机器学习
-  - 统计之都
 tags:
   - Maximum Margin Classifier
   - 支持向量机

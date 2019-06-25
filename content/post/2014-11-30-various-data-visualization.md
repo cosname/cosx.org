@@ -7,7 +7,6 @@ author:
   - 王小宁
 categories:
   - 统计图形
-  - 机器学习
   - 新闻动态
 slug: various-data-visualization
 forum_id: 419045

@@ -12,15 +12,14 @@ tags:
   - 数据科学
 slug: interview-of-xiaolinglu
 forum_id: 418918
+meta_extra: "受访人：吕晓玲"
 ---
 
 > 统计之都今后会为大家贡献名师访谈系列文章，我们的野心是：遍访统计界名士高人！我们是统计之都，我们喂自己袋盐！
 
-【COS编辑部按】受访人：吕晓玲
-
 简介：[吕晓玲](http://stat.ruc.edu.cn/a/jiaoxuetuandui/jiaoyanshi/2011/0219/128.html)老师是中国人民大学统计学院经济与社会统计教研室副教授，也是小编的硕士研究生导师。吕老师在学术上高度自我驱动，效率极高，能够同时把多件事情做好，让小编至今只能遥望。
 
-![吕晓玲](http://stat.ruc.edu.cn/uploads/teacher/lvxiaoling.jpg)
+![吕晓玲](https://uploads.cosx.org/2013/03/lvxiaoling.jpg)
 
 # 1. 简要介绍一下你自己（教育背景，研究兴趣，个人爱好等）
 
