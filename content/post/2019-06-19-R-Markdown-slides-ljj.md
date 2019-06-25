@@ -5,6 +5,7 @@ date: "2019-06-19"
 tags: [R Markdown, slides]
 categories: ["统计软件"]
 slug: r-markdown-slides-ljj
+forum_id: 420750
 ---
 
 ## 背景介绍
@@ -172,5 +173,4 @@ pandoc -D beamer > beamer-template.tex
 * [Yihui Xie (2019). tinytex: Helper Functions to Install and Maintain 'TeX Live', and Compile 'LaTeX' Documents. R package version 0.13.](https://CRAN.R-project.org/package=tinytex)
 * [Yihui Xie (2018). xaringan: Presentation Ninja. R package version 0.8.](https://CRAN.R-project.org/package=xaringan)
 * [Hakim El Hattab and JJ Allaire (2017). revealjs: R Markdown Format for 'reveal.js' Presentations. R package version 0.9.](https://CRAN.R-project.org/package=revealjs)
-
 
