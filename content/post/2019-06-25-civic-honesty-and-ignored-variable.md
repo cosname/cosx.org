@@ -164,18 +164,16 @@ dat = raw %>% inner_join(email, by = "Country")
 ## Reproduce the result in the paper
 res = dat %>% group_by(Country, cond) %>%
     summarize(rate = mean(response)) %>%
-    arrange(cond, desc(rate)) %>%
-    as.data.frame
+    arrange(cond, rate) %>% as.data.frame
 ordering = res$Country[res$cond == 0]
 
-ggplot(res, aes(x = Country, y = rate, color = factor(cond))) +
-    geom_point(size = 3) +
-    scale_x_discrete(limits = ordering) +
+ggplot(res, aes(x = rate, y = Country, color = factor(cond))) +
+    geom_point(size = 3.5) +
+    scale_y_discrete(limits = ordering) +
     scale_color_hue("", labels = c("NoMoney", "Money")) +
-    ylab("Original Rate") + ylim(20, 90) +
-    coord_flip() +
+    xlab("Original Rate") + xlim(20, 90) +
     theme_bw(base_size = 20) +
-    theme(legend.position = "top")
+    theme(legend.position = "top", axis.title.y = element_blank())
 
 
 ## Include control variables
@@ -187,8 +185,7 @@ drop1(mod0, test = "Chisq")
 dat0$resid = residuals(mod0)
 res0 = dat0 %>% group_by(Country) %>%
     summarize(rate = mean(resid)) %>%
-    arrange(desc(rate)) %>%
-    as.data.frame
+    arrange(rate) %>% as.data.frame
 res0$rate = res0$rate + mean(dat0$response)
 res0$cond = 0
 ## Money case
@@ -207,12 +204,11 @@ res1$cond = 1
 res_adj = rbind(res0, res1)
 ordering_adj = res_adj$Country[res_adj$cond == 0]
 
-ggplot(res_adj, aes(x = Country, y = rate, color = factor(cond))) +
-    geom_point(size = 3) +
-    scale_x_discrete(limits = ordering) +
+ggplot(res_adj, aes(x = rate, y = Country, color = factor(cond))) +
+    geom_point(size = 3.5) +
+    scale_y_discrete(limits = ordering) +
     scale_color_hue("", labels = c("NoMoney", "Money")) +
-    ylab("Adjusted Rate") + ylim(20, 90) +
-    coord_flip() +
+    xlab("Adjusted Rate") + xlim(20, 90) +
     theme_bw(base_size = 20) +
-    theme(legend.position = "top")
+    theme(legend.position = "top", axis.title.y = element_blank())
 ```
