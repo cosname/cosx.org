@@ -11,6 +11,7 @@ tags:
   - 控制变量
   - 回归模型
 slug: civic-honesty-and-ignored-variable
+forum_id: 420753
 ---
 
 今天朋友之间分享了一篇发表在《科学》杂志上的论文，《[Civic honesty around the globe](https://science.sciencemag.org/content/early/2019/06/19/science.aau8712.full)》，意即全球各地的公民诚信度。这篇论文的作者在全世界的40个国家做了一个大型的社会实验，即在不同的场所放置事先准备好的钱包，钱包中留有“主人”的联系方式，然后通过观察是否有人联系失主来推断公民的诚信程度。
