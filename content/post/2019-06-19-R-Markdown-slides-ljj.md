@@ -1,5 +1,5 @@
 ---
-title: "基于 R Markdown 的展示、报告模板使用"
+title: "基于 R Markdown 的演示文稿和报告模板使用经验"
 author: "李家郡"
 date: "2019-06-19"
 tags: [R Markdown, slides]
