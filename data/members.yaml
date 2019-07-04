@@ -75,6 +75,8 @@ list:
   - name: 李舰
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 现任九峰移动医疗 CTO，曾任 Mango Solutions 中国区数据总监。专注于数据科学在行业里的应用。擅长R语言的工程开发与分析建模，是 Rweibo、Rwordseg、tmcn 等 R 包的作者。与肖凯合著了《数据科学中的R语言》，参与翻译了《R语言核心技术手册》、《机器学习与R语言》。
+  - name: 李家郡
+    intro: 本科就读于中国人民大学统计学院，研究生将就读于中国人民大学信息学院。热爱编程、运动和艺术。个人博客 <https://llijiajun.github.io/github-io/>
   - name: 李宇轩
     image: https://cloud.githubusercontent.com/assets/7221728/25788586/d81c09ae-33dc-11e7-8580-05ab733a7c73.jpg
     intro: 人大统院本科生，爱看书（从小喜欢），爱音乐（多听不多唱）、爱运动（玩和看都爱），很喜欢旅游（尤其一人游），虽然现在还是一只小本科僧，但相信自己会有用武之地，不达目的绝不放弃。
@@ -96,7 +98,7 @@ list:
     intro: WeGene数据挖掘工程师，毕业于浙江大学数学系。
   - name: 潘新晨
     image: https://avatars1.githubusercontent.com/u/26174885?s=460&v=4
-    intro: 潘新晨，伊利诺伊大学香槟分校统计硕士，现在芝加哥一家市场研究公司做数据分析方面的工作。R爱好者，乒乓球疯狂爱好者，东野圭吾小说狂热爱好者。    
+    intro: 潘新晨，伊利诺伊大学香槟分校统计硕士，现在芝加哥一家市场研究公司做数据分析方面的工作。R爱好者，乒乓球疯狂爱好者，东野圭吾小说狂热爱好者。
   - name: 彭晨昱
     image: https://cloud.githubusercontent.com/assets/7221728/25793129/4e8cf290-33fd-11e7-9f0c-846ac1e0efbe.jpg
     intro: 目前就读江西财大国际会计专业，三年临川求学路，四年江财蛟湖畔。和图片展示的一样，天然吃货一枚，在任何环境下一定不会让自己饿着，很开心并荣幸加入COS大家庭，作为众多统计大神中夹着的一位做账的小会计，时刻膜拜并谦虚的学习着。当然，最最最希望的统计之都能朝着理想的未来走的越来越好!
