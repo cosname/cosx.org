@@ -18,7 +18,7 @@ forum_id: 420768
 
 > 《数据资产论》作者王汉生简介
 >
-> 王汉生，北京大学光华管理学院商务统计与经济计量系,嘉茂荣聘讲席教授，博导，系主任。北京大学商务智能研究中心、主任。数据科学微信公众号“狗熊会”创始人。致力于商务统计学的理论研究与产业实践。
+> 王汉生，北京大学光华管理学院商务统计与经济计量系,嘉茂荣聘讲席教授，博导，系主任。北京大学商务智能研究中心主任。数据科学微信公众号“狗熊会”创始人。致力于商务统计学的理论研究与产业实践。
 > 
 > 1998 年北京大学数学学院概率统计系本科毕业，2001 年美国威斯康星大学麦迪逊分校统计系博士毕业。2003年加入光华至今。国内外各种专业杂志上发表文章一百多篇，并合著有英文专著共一本，（合）著中文教材三本。国际统计协会（International Statistical Institute）、英国皇家统计协会（Royal Statistical Society）、美国数理统计协会（Institute of Mathematical Statistics）、泛华国际统计协会（International Chinese Statistical Association）的会员。美国统计协会（American Statistical Association）2014 年 Fellow。先后历任以下国际学术刊物副主编（Associate Editor）：The Annals of Statistics （2008-2009）， Computational Statistics & Data Analysis （2008-2012），Statistics and its Interface （2010-现在）， Journal of the American Statistical Association （2011-现在），以及Statistica Sinica （2011-现在）。Journal of Business and Economics Statistics （2012-现在）， Science China: Mathematics （2013-现在）。 
 
