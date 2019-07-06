@@ -4,7 +4,7 @@ list:
     intro: 现任编辑部主编，中科院生态环境研究中心博士，美国西奈山伊坎医学院博后，研究方向为环境化学与暴露组学数据分析，博客 <https://yufree.cn>
   - name: 黄湘云
     image: https://user-images.githubusercontent.com/12031874/28239932-9c296f42-69a9-11e7-90fa-d1d20cbad4db.jpg
-    intro: 现任编辑部副主编，中国矿业大学（北京）本硕，本科学数学与应用数学，硕士学统计学，毕设做空间广义线性混合效应模型及其应用。R语言死忠，假红迷伪码农。曾在新浪运维部做过数据分析方向的实习生。
+    intro: 现任编辑部副主编，中国矿业大学（北京）本硕，本科学数学与应用数学，硕士学统计学，研究方向是空间广义线性混合效应模型，博客 <https://xiangyunhuang.com.cn/>。
   - name: 林枫
     image: https://user-images.githubusercontent.com/18381242/47626418-fa297180-db65-11e8-8d76-84182b4ca314.JPG
     intro: 现任编辑部副主编，中国科学技术大学计算机学院2017级硕士，本科就读于科大管理学院统计与金融系统计专业。研究兴趣主要为机器学习相关方向。好读书，不求甚解。音乐、动漫爱好者。
@@ -76,6 +76,7 @@ list:
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 现任九峰移动医疗 CTO，曾任 Mango Solutions 中国区数据总监。专注于数据科学在行业里的应用。擅长R语言的工程开发与分析建模，是 Rweibo、Rwordseg、tmcn 等 R 包的作者。与肖凯合著了《数据科学中的R语言》，参与翻译了《R语言核心技术手册》、《机器学习与R语言》。
   - name: 李家郡
+    image: https://llijiajun.github.io/github-io/images/ljj.jpg
     intro: 本科就读于中国人民大学统计学院，研究生将就读于中国人民大学信息学院。热爱编程、运动和艺术。个人博客 <https://llijiajun.github.io/github-io/>
   - name: 李宇轩
     image: https://cloud.githubusercontent.com/assets/7221728/25788586/d81c09ae-33dc-11e7-8580-05ab733a7c73.jpg
