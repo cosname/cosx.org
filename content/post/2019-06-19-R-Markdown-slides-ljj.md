@@ -27,7 +27,7 @@ output: html_document
 ---
 ```
 
-从最简单地生成一个普通 HTML 报告来说，看似这四行代码没什么好解释的，但实际上，可使用的参数可以根据这四行代码推出。其中最重要的一行是第四行—— output:html_document，在我只会套用模板而没深入研究时，无法注意到这行代码的重要性。实际上，只需在 R 中引入 rmarkdown 包后，然后输入 ?html_document，之后新世界便打开了，那 html_document 后加的参数根本就是这个函数的参数：
+从最简单地生成一个普通 HTML 报告来说，看似这四行代码没什么好解释的，但实际上，可使用的参数可以根据这四行代码推出。其中最重要的一行是第四行—— `output: html_document`，在我只会套用模板而没深入研究时，无法注意到这行代码的重要性。实际上，只需在 R 中引入 rmarkdown 包后，然后输入 `?html_document`，之后新世界便打开了，那 html_document 后加的参数根本就是这个函数的参数：
 
 ```
 library("rmarkdown")
