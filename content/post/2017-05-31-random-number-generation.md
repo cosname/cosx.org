@@ -107,16 +107,15 @@ R，Octave，Matlab和Python内置的发生器都是MT发生器，与之实现�
 
 ```r
 library(ggplot2)
-library(viridisLite)
-library(viridis)
 set.seed(1234)
 corr <- rep(0, 1000) 
 for(i in seq(from = 1000, to = 1000000, by = 1000)) {  
 	corr[i/1000] <-  cor.test(runif(i, min = 0, max = 1),                            
 		runif(i, min = 0, max = 1))$estimate} 
 ggplot(data.frame(x = seq(1000), y = corr), aes(x = x, y = y)) +   
-	geom_hex(show.legend = FALSE) + 
-	scale_fill_viridis(direction = -1) + xlab("Sample size *10^3") + ylab("Correlation") 
+  geom_hex(show.legend = FALSE) + 
+  scale_fill_viridis_c(direction = -1) + 
+  labs(x = "Sample size *10^3", y = "Correlation")
 ```
 
 ![image](https://cloud.githubusercontent.com/assets/7221728/26611329/2f03625c-45e0-11e7-8aeb-ac6daed5e179.png)
@@ -250,27 +249,64 @@ ks.test(sqrt(6)*(z-1), "pnorm") # 分布检验
 
 ## 精确分布的推导及计算
 
-课本如《概率论与数理统计教程》 采用卷积的方法求分布函数，这种方法实行起来比较繁琐，也不利于后续编程，下面考虑用特征函数的方法求。我们知道标准均匀分布的特征函数`$$\varphi(t)=\frac{e^{it}-1}{it}$$`考虑`$X_1$`和`$X_2$`相互独立，它们的和用`$S_2$`表示，则随机变量`$S_2$`的特征函数为 `$$\varphi_2(t)=\varphi(t)*\varphi(t)=(\frac{e^{it}-1}{it})^2=\frac{2(1-\cos(t))e^{it}}{t^2}$$` 
+课本如《概率论与数理统计教程》 采用卷积的方法求分布函数，这种方法实行起来比较繁琐，也不利于后续编程，下面考虑用特征函数的方法求。我们知道标准均匀分布的特征函数
+
+`$$
+\varphi(t)=\frac{e^{it}-1}{it}
+$$`
+
+考虑`$X_1$`和`$X_2$`相互独立，它们的和用`$S_2$`表示，则随机变量`$S_2$`的特征函数为
+
+`$$
+\varphi_2(t) = \varphi(t)*\varphi(t) = (\frac{e^{it}-1}{it})^2 = \frac{2(1-\cos(t))e^{it}}{t^2}
+$$` 
 
 只要满足条件
 
-`$$\int_{-\infty}^{+\infty}\vert \varphi_2(t) \vert \mathrm{d} t < \infty$$`
+`$$
+\int_{-\infty}^{+\infty}\vert \varphi_2(t) \vert \mathrm{d} t < \infty
+$$`
 
 `$S_2$`的密度函数就可以表示为
 
-`$$p_2(x)=\frac{1}{2 \pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}\varphi_2(t)\mathrm{d}t$$`
+`$$
+p_2(x) = \frac{1}{2 \pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}\varphi_2(t)\mathrm{d}t
+$$`
 
 经计算
-`$$\int_{-\infty}^{+\infty}\vert \varphi_2(t) \vert \mathrm{d} t=4\int_{0}^{+\infty}\frac{1-\cos(t)}{t^2}\mathrm{d}t=4\int_{0}^{+\infty}\big(\frac{\sin(x)}{x}\big)^2\mathrm{d}x=2\pi$$`
+
+`$$
+\begin{align}
+\int_{-\infty}^{+\infty}\vert \varphi_2(t) \vert \mathrm{d} t &= 4\int_{0}^{+\infty}\frac{1-\cos(t)}{t^2}\mathrm{d}t \\
+  &= 4\int_{0}^{+\infty}\big(\frac{\sin(x)}{x}\big)^2\mathrm{d}x \\
+  &= 2\pi
+\end{align}
+$$`
 
 那么
-`$$p_2(x)=\frac{1}{2 \pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}\varphi_2(t)\mathrm{d}t=\frac{2}{\pi}\int_{0}^{+\infty}\frac{(1-\cos(t))\cos(t(1-x))}{t^2}\mathrm{d}t=\frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(1-x)t\big)\big(\frac{\sin(t)}{t}\big)^2\mathrm{d}t$$`
+
+`$$
+\begin{align}
+p_2(x) &= \frac{1}{2 \pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-itx}\varphi_2(t)\mathrm{d}t \\
+       &= \frac{2}{\pi}\int_{0}^{+\infty}\frac{(1-\cos(t))\cos(t(1-x))}{t^2}\mathrm{d}t \\
+       &= \frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(1-x)t\big)\big(\frac{\sin(t)}{t}\big)^2\mathrm{d}t
+\end{align}
+$$`
 
 一般地，`$n$`个独立随机变量的和
 
-`$$\varphi_n(t)=\big(\frac{e^{it}-1}{it}\big)^n=\big(\frac{\sin(t/2)\mathrm{e}^{\frac{it}{2}}}{t/2}\big)^n$$`
-那么，同理 
-`$$p_n(x)=\frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(n/2-x)t\big)(\frac{\sin(t)}{t})^n\mathrm{d}t$$`
+`$$
+\begin{align}
+\varphi_n(t) &= \big(\frac{e^{it}-1}{it}\big)^n \\
+             &= \big(\frac{\sin(t/2)\mathrm{e}^{\frac{it}{2}}}{t/2}\big)^n
+\end{align}
+$$`
+
+那么，同理
+
+`$$
+p_n(x) = \frac{2}{\pi}\int_{0}^{+\infty}\cos\big(2(n/2-x)t\big)(\frac{\sin(t)}{t})^n\mathrm{d}t
+$$`
 
 要说数值计算一个`$p(x)$`近似值，是一点问题没有！且看
 
@@ -282,7 +318,12 @@ integrate(function(t,x,n) 2/pi*cos((n-2*x)*t)*(sin(t)/t)^n ,x = 1,n = 2,
 
 那如果要把上面的积分积出来，获得一个精确的表达式，在`$n=2$`的时候还可以手动计算，主要使用分部积分，余弦积化和差公式和一个狄利克雷积分公式`$\int_{0}^{+\infty}\frac{\sin(ax)}{x}\mathrm{d}x=\frac{\pi}{2}\mathrm{sgn}(a)$`，过程略，最后算得
 
-`$$p_2(x)=\frac{1}{2}\big((2-x)\mathrm{sgn}(2-x)-x\mathrm{sgn}(-x)\big)-(1-x)\mathrm{sgn}(1-x)=\frac{1}{2}(\left | x \right |+\left | x-2 \right |)-\left | x-1 \right |,0<x<2$$`
+`$$
+\begin{align}
+p_2(x) &= \frac{1}{2}\big((2-x)\mathrm{sgn}(2-x)-x\mathrm{sgn}(-x)\big)-(1-x)\mathrm{sgn}(1-x) \\
+       &= \frac{1}{2}(\left | x \right |+\left | x-2 \right |)-\left | x-1 \right |,0<x<2
+\end{align}
+$$`
 
 `$p_2(x)$`的密度函数图象如下：
 
@@ -325,7 +366,7 @@ print(integrate(sin(a*t)/t, (t, 0, oo)))
 \end{equation*}
 $$`
 
-稍为好点，但是还是有一大块看不懂，那个绝对值里是什么^[Python的符号计算模块sympy功能比较全，但是化简比较弱，导致结果理解起来不是很方便，比如式子的第一行，看似当`$0<x<2$`时，`$p_{2}(x)=x$`是错的，正确的范围应该是`$0<x<1$`，其实for后面的函数 `$polar\_lift()$`要求参数大于`$0$`，这样就没问题了，建议多撸一撸[sympy官方文档](http://docs.sympy.org/latest/index.html?v=20170321095755)。]？还是不要纠结了，路远坑多，慢走不送啊！话说要是计算`$p_2(x)$`密度函数里的积分，
+稍为好点，但是还是有一大块看不懂，那个绝对值里是什么^[Python的符号计算模块sympy功能比较全，但是化简比较弱，导致结果理解起来不是很方便，比如式子的第一行，看似当`$0<x<2$`时，`$p_{2}(x)=x$`是错的，正确的范围应该是`$0<x<1$`，其实for后面的函数 `polar_lift`要求参数大于`$0$`，这样就没问题了，建议多撸一撸[sympy官方文档](https://docs.sympy.org/latest/modules/integrals/integrals.html)。]？还是不要纠结了，路远坑多，慢走不送啊！话说要是计算`$p_2(x)$`密度函数里的积分，
 
 ```python
 from sympy import * 
@@ -342,9 +383,9 @@ print(integrate(2/pi*cos(2*t*(1-x))*(sin(t)/t)**2,(t,0,oo)))
 \begin{equation*}
 \begin{cases} 
 \frac{1}{2} \begin{cases} 
-2 x & \text{for}\: \frac{1}{4} \left(2 x - 2\right)^{2} < 1 \\
-0 & \text{for}\: \frac{4}{\left(2 x - 2\right)^{2}} < 1 \\
-{G_{4, 4}^{3, 1}\left(\begin{matrix} \frac{1}{2} & 1, 1, \frac{3}{2} \\\frac{1}{2}, 1, 0 & \frac{1}{2} \end{matrix} \middle| {\frac{1}{4} \operatorname{polar\_lift}^{2}{\left (- 2 x + 2 \right )}} \right)} & \text{otherwise} \end{cases} & \text{for}\: \left|{\operatorname{periodic_{argument}}{\left (\operatorname{polar\_lift}^{2}{\left (- 2 x + 2 \right )},\infty \right )}}\right| = 0 \\
+2 x & \text{for}\: 0 < x < 2 \\
+0 & \text{for}\: x > 2 \: \text{or} \: x < 0 \\
+{G_{4, 4}^{3, 1}\left(\begin{matrix} \frac{1}{2} & 1, 1, \frac{3}{2} \\\frac{1}{2}, 1, 0 & \frac{1}{2} \end{matrix} \middle| {\frac{1}{4} \operatorname{polar\_lift}^{2}{\left (- 2 x + 2 \right )}} \right)} & \text{otherwise} \end{cases} & \text{for}\: x < 1 \\
 \int\limits_{0}^{\infty} \frac{2}{\pi t^{2}} \sin^{2}{\left (t \right )} \cos{\left (2 t \left(- x + 1\right) \right )}\, dt & \text{otherwise} 
 \end{cases}
 \end{equation*}
