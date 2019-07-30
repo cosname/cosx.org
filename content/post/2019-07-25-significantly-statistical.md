@@ -17,7 +17,7 @@ forum_id: XX
 
 > 文章翻译自孟晓犁在 IMS 主席专栏上的文章 <http://bulletin.imstat.org/2019/05/presidents-column-statistical-significance/> 翻译工作已经获得原作授权
 
-我们统计学家已经成功地说服每个人：样本量越大，拒绝原假设的依据就愈加坚实有力。 然而，人们有时会过度而错误地理解这件事情。2017 年 70 多位学者联名在杂志《自然人类行为》上发表文章《重新定义统计显著性》， 2019 年又有 800 多个署名的文章《停用统计显著性》在《自然》杂志上发表，这些都证实了如上的说法。对此，统计学界就身陷囹圄的 `$p$` 值做出了有组织的响应。美国统计协会在 2016 年发布《关于`$p$`值的声明》， 在 2017 年开展以“ `$p<0.05$` 以外的世界”为主题的座谈会，在 2019 年《美国统计学家》杂志上发表特刊，让统计学界对 `$p$` 值问题做出的相应走进公众的视野。在特刊中，43 篇文章都围绕着一个问题在讨论：我们究竟做了什么导致 `$p$` 值的作用在减弱。
+我们统计学家已经成功地说服每个人：样本量越大，拒绝原假设的依据就愈加坚实有力。 然而，人们有时会过度而错误地理解这件事情。2017 年 70 多位学者联名在杂志《自然人类行为》上发表文章《重新定义统计显著性》[1]， 2019 年又有 800 多个署名的文章《停用统计显著性》[2] 在《自然》杂志上发表，这些都证实了如上的说法。对此，统计学界就身陷囹圄的 `$p$` 值做出了有组织的响应。美国统计协会在 2016 年发布《关于`$p$`值的声明》， 在 2017 年开展以“ `$p<0.05$` 以外的世界”为主题的座谈会，在 2019 年《美国统计学家》杂志上发表特刊，让统计学界对 `$p$` 值问题做出的相应走进公众的视野。在特刊中，43 篇文章都围绕着一个问题在讨论：我们究竟做了什么导致 `$p$` 值的作用在减弱。
 
 实验的可重复性受到越来越多的关注，国际数理统计协会（IMS）可以对更广泛的学术讨论做什么呢？在前辈的启发下，我有一个有些不同寻常的观点，你得仔细思考才能得其精髓，请继续阅读下文。
 
@@ -52,4 +52,8 @@ forum_id: XX
 
 ## 参考文献
 
-[1]: Ronald L. Wasserstein and Allen L. Schirm and Nicole A. Lazar. The American Statistician. 2019, 73:1-19. Moving to a World Beyond `$p< 0.05$` <https://doi.org/10.1080/00031305.2019.1583913>
+[1]: Benjamin, Daniel J. and Berger, James O. and Johannesson, Magnus and Nosek, Brian A. and Wagenmakers, E.-J. and Berk, Richard and Bollen, Kenneth A. and Brembs, Björn and Brown, Lawrence and Camerer, Colin and Cesarini, David and Chambers, Christopher D. and Clyde, Merlise and Cook, Thomas D. and De Boeck, Paul and Dienes, Zoltan and Dreber, Anna and Easwaran, Kenny and Efferson, Charles and Fehr, Ernst and Fidler, Fiona and Field, Andy P. and Forster, Malcolm and George, Edward I. and Gonzalez, Richard and Goodman, Steven and Green, Edwin and Green, Donald P. and Greenwald, Anthony G. and Hadfield, Jarrod D. and Hedges, Larry V. and Held, Leonhard and Hua Ho, Teck and Hoijtink, Herbert and Hruschka, Daniel J. and Imai, Kosuke and Imbens, Guido and Ioannidis, John P. A. and Jeon, Minjeong and Jones, James Holland and Kirchler, Michael and Laibson, David and List, John and Little, Roderick and Lupia, Arthur and Machery, Edouard and Maxwell, Scott E. and McCarthy, Michael and Moore, Don A. and Morgan, Stephen L. and Munafó, Marcus and Nakagawa, Shinichi and Nyhan, Brendan and Parker, Timothy H. and Pericchi, Luis and Perugini, Marco and Rouder, Jeff and Rousseau, Judith and Savalei, Victoria and Schönbrodt, Felix D. and Sellke, Thomas and Sinclair, Betsy and Tingley, Dustin and Van Zandt, Trisha and Vazire, Simine and Watts, Duncan J. and Winship, Christopher and Wolpert, Robert L. and Xie, Yu and Young, Cristobal and Zinman, Jonathan and Johnson, Valen E. 2018. Redefine statistical significance. Nature Human Behaviour. 2(1): 6--10. <https://doi.org/10.1038/s41562-017-0189-z>
+
+[2]: Valentin Amrhein, Sander Greenland, Blake McShane and more than 800 signatories. 2019. Nature. Scientists rise up against statistical significance. 567:305--307. <https://doi.org/10.1038/d41586-019-00857-9>
+
+[3]: Ronald L. Wasserstein and Allen L. Schirm and Nicole A. Lazar. 2019. Moving to a World Beyond `$p< 0.05$`. The American Statistician. 73(sup1):1--19. <https://doi.org/10.1080/00031305.2019.1583913>
