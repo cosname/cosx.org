@@ -16,9 +16,9 @@ forum_id: 419098
 meta_extra: "译者：冯俊晨、王小宁；审校：邱怡轩、朱雪宁、蔡寒蕴；编辑：王小宁"
 ---
 
-【COS编辑部按】本译文得到了原英文作者的授权同意，翻译：[冯俊晨](http://www.fengjunchen.com)、王小宁。
+【COS编辑部按】考普斯总统奖（The Committee of Presidents of Statistical Societies Awards，简称 COPSS 奖）是国际统计学领域的最高奖项，被誉为“统计学的诺贝尔奖”，每年只颁奖给一位40岁及以下最杰出的统计学者。昨天，在2019年国际统计学年会（Joint Statistical Meetings，简称 JSM）上，将 COPSS 奖颁给 Hadley Wickham，以表彰他在统计应用领域做出的突出贡献 。以此为契机，我们希望有更多的专家学者和学校老师重视统计软件和应用领域，借此机会向大家介绍这位给R社区带来巨大变化的年轻数据科学家。
 
-[Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包`ggplot2`的开发者，以及其他许多被广泛使用的软件包的作者，代表作品如`plyr`、`reshape2`等。本文取自[PRICEONOMICS](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/).<!--more-->
+[Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包`ggplot2`的开发者，以及其他许多被广泛使用的软件包作者，如`dplyr`、`tidyverse`等。本文翻译自[PRICEONOMICS](http://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/)。本译文得到了原英文作者的授权同意。
 
 ![HadleyObama](https://uploads.cosx.org/2015/09/HadleyObama.png)
 
