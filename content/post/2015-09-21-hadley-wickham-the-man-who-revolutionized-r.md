@@ -20,11 +20,12 @@ meta_extra: "译者：冯俊晨、王小宁；审校：邱怡轩、朱雪宁、�
 
 [Hadley Wickham](http://had.co.nz/) 是 RStudio 的首席科学家以及 Rice University 统计系的助理教授。他是著名图形可视化软件包`ggplot2`的开发者，以及其他许多被广泛使用的软件包作者，如`dplyr`、`tidyverse`等。本文翻译自[PRICEONOMICS](https://priceonomics.com/hadley-wickham-the-man-who-revolutionized-r/)。本译文得到了原英文作者的授权同意。
 
-![HadleyObama](https://uploads.cosx.org/2015/09/HadleyObama.png)
-
-> 通过数据从根本上了解世界真的是一件非常，非常酷的事情。
+> 通过数据从根本上了解世界真的是一件非常非常酷的事情。
 > 
 >  Hadley Wickham，多产的R包开发者  
+
+
+![HadleyObama](https://uploads.cosx.org/2015/09/HadleyObama.png)
 
 如果你不花很多时间在开源统计编程语言R中写代码的话，他的名字你可能并不熟悉——但统计学家Hadley Wickham用他自己的话说是那种“以书呆子出名”的人。他是那种在统计会议上人们排队要和他拍照，问他要签名的人，并且人们对他充满了尊敬。他也承认“这种现象实在太奇特了。因为写R程序而出名？这太疯狂了。”
 
