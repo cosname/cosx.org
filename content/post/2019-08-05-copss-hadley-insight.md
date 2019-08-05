@@ -11,7 +11,7 @@ tags:
   - ggplot2
   - tidyverse
   - 统计学
-slug: copss-hadley-special-long-comment
+slug: copss-hadley-special-comment
 ---
 
 > 编者按：[前文](https://cosx.org/2019/08/copss-hadley-comments/)我们刊登了收集到的各方评论。本文刊登的是统计之都邀请的一位特约评论员的长文评论。
