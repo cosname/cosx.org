@@ -14,9 +14,9 @@ tags:
 slug: copss-hadley-special-long-comment
 ---
 
-> 编者按：[前文]()我们刊登了收集到的各方评论。这里刊登的是另一位特约评论员的长文评论。
+> 编者按：[前文](https://cosx.org/2019/08/copss-hadley-comments/)我们刊登了收集到的各方评论。这里刊登的是另一位特约评论员的长文评论。
 
-![Hadley in COPSS](https://user-images.githubusercontent.com/1142836/62476732-2a2f3080-b7da-11e9-9c38-60556399484c.jpg")
+![Hadley in COPSS](https://user-images.githubusercontent.com/1142836/62476732-2a2f3080-b7da-11e9-9c38-60556399484c.jpg)
 
 # 重要的不是谁获奖，而是它给我们的启发和思考
 
