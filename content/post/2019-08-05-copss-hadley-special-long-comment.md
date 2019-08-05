@@ -1,7 +1,7 @@
 ---
 title: Hadley 获奖 -- 特约评论
 date: '2019-08-05'
-author: 统计之都编辑部
+author: 统计之都
 categories:
   - 新闻动态
 tags:
