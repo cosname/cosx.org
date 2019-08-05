@@ -1,5 +1,5 @@
 ---
-title: 重要的不是谁获COPSS奖，而是它给我们的启发和思考
+title: 重要的不是谁获 COPSS 奖，而是它给我们的启发和思考
 date: '2019-08-05'
 author: 特约评论员
 categories:
