@@ -19,8 +19,6 @@ slug: copss-hadley-comments
 
 <img src="https://user-images.githubusercontent.com/1212123/62468759-67d78d80-b7c9-11e9-9bde-ef781c26c803.jpg" width="70%" />
 
-<img src="https://user-images.githubusercontent.com/1142836/62476732-2a2f3080-b7da-11e9-9c38-60556399484c.jpg" width="70%" />
-
 Hadley在R语言圈是个如雷贯耳的名字，他创建并发布了很多流行的R包，近一年（2018.8.1-2019.8.1）下载量超过1.3亿次，近两年下载量超过2亿次。下图列出了近一年来来下载量超过250万次的24个包的5年走势。
 
 <img src="https://user-images.githubusercontent.com/1212123/62469058-0f54c000-b7ca-11e9-9422-daca7d43a1e6.png" width="70%" />
