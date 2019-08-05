@@ -12,6 +12,7 @@ tags:
   - 统计学
   - 软件
   - tidyverse
+forum_id: 420831
 slug: copss-hadley-comments
 ---
 
