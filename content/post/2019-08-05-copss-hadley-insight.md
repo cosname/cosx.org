@@ -15,7 +15,7 @@ forum_id: 420832
 slug: copss-hadley-special-comment
 ---
 
-> 编者按：[前文](https://cosx.org/2019/08/copss-hadley-comments/)我们刊登了收集到的各方评论。本文刊登的是统计之都邀请的一位特约评论员的长文评论。
+> 编者按：[另一文](https://cosx.org/2019/08/copss-hadley-comments/)我们刊登了收集到的各方评论。本文刊登的是统计之都邀请的一位特约评论员的长文评论。
 
 ![Hadley in COPSS](https://user-images.githubusercontent.com/1142836/62476732-2a2f3080-b7da-11e9-9c38-60556399484c.jpg)
 
