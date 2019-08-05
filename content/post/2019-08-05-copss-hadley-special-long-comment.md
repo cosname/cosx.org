@@ -1,5 +1,5 @@
 ---
-title: Hadley 获奖-特约评论
+title: Hadley 获奖 -- 特约评论
 date: '2019-08-05'
 author: 统计之都编辑部
 categories:
@@ -14,7 +14,7 @@ tags:
 slug: copss-hadley-special-long-comment
 ---
 
-> 编者按：[前文](https://cosx.org/2019/08/copss-hadley-comments/)我们刊登了收集到的各方评论。这里刊登的是另一位特约评论员的长文评论。
+> 编者按：[前文](https://cosx.org/2019/08/copss-hadley-comments/)我们刊登了收集到的各方评论。这里刊登的是一位统计之都特约评论员的长文评论。
 
 ![Hadley in COPSS](https://user-images.githubusercontent.com/1142836/62476732-2a2f3080-b7da-11e9-9c38-60556399484c.jpg)
 
