@@ -2,7 +2,7 @@
 title: 从统计地显著到显著地统计
 author: 
   - 孟晓犁
-date: '2019-07-25'
+date: '2019-08-08'
 slug: significantly-statistical
 categories:
   - 推荐文章
