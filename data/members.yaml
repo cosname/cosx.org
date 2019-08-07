@@ -1,4 +1,5 @@
-- name: 于淼
+list:
+  - name: 于淼
     image: https://yufree.cn/images/MYu.jpg
     intro: 现任编辑部主编，中科院生态环境研究中心博士，美国西奈山伊坎医学院博后，研究方向为环境化学与暴露组学数据分析，博客 <https://yufree.cn>
   - name: 黄湘云
@@ -211,3 +212,4 @@
   - name: 宗福季
     image: https://user-images.githubusercontent.com/16065479/30360079-1c9a8c50-9804-11e7-9244-fbb875a3c0cd.jpg
     intro: 宗福季教授，现任香港科技大学工业工程与物流管理系教授，前系主任，及质量实验室主任，国际质量科学院（IAQ）院士，美国统计学会（ASA）会士，美国工业工程师学会（IIE）会士，美国质量学会（ASQ）会士，国际统计协会（ISI）当选会员，香港工程学会（HKIE）会士。任职科大后，宗福季教授积极参与有关质量改善和管理的教育及研究工作，也为不同行业提供咨询及培训服务，包括制造、银行、电信及医疗等行业。宗教授目前是美国质量学会旗舰期刊Journal of Quality Technology（JQT）的主编，工业工程学会期刊IISE Transactions及Technometrics的副编辑。宗教授于国立台湾大学取得机械工程学士学位，其后于美国密歇根大学获工业工程硕士及博士学位。
+    
