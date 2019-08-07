@@ -12,7 +12,7 @@ tags:
   - 假设检验
   - P 值
 meta_extra: "译者：任焱、黄湘云 审稿：杨洵默"
-forum_id: XX
+forum_id: 420838
 ---
 
 > 文章翻译自孟晓犁在 IMS 主席专栏上的文章 <http://bulletin.imstat.org/2019/05/presidents-column-statistical-significance/> 翻译工作已经获得原作授权
