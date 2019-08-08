@@ -4,47 +4,25 @@ weight: 8
 menu: [main, top]
 ---
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css" />
-<style>
-.input-group { display: flex; }
-.ais-search-box {
-  width: 100%;
-  flex: 1;
-}
-.form-control {
-  width: 100%;
-  flex: 1;
-  height: 2rem;
-}
-.input-group-btn button {
-  height: 100%;
-  width: 60px;
-  margin-left: 10px;
-}
-#stats {
-  text-align: center;
-  display: none;
-}
-</style>
 
-<section class="">
-  <div class="searchbox-container">
-    <div class="input-group">
-      <input type="text" class="form-control" id="q" />
-      <span class="input-group-btn">
-        <button id="btn" >搜索</button>
-      </span>
-    </div>
-  </div>
-  <div id="stats">
-		<img src="/img/loading.svg" width="64" height="64" />
-		<h3 class="h1 mt2 mb0">搜索中...</h3>
-  </div>
-  <hr />
+<body>
+  <!-- place holders -->
+  <header>
+      <div class="searchbox-container" id="searchbox" placeholder="Search for keywords">
+  </header>
+ 
   <div id="hits"></div>
-  <div id="pagination"></div>
-</section>
+  <div class="pagination" id="pagination"></div>
+  
 
-<script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-<script src="/js/search.js"></script>
 
+  <!-- load algolia js and style, use instantsearch 3.4.0-->
+
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js" integrity="sha256-pM0n88cBFRHpSn0N26ETsQdwpA7WAXJDvkHeCLh3ujI=" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js" integrity="sha256-3Laj91VXexjTlFLgL8+vvIq27laXdRmFIcO2miulgEs=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous"> 
+
+  <script src="/js/search_app.js"></script>
+</body>
