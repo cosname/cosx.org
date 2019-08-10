@@ -1,14 +1,14 @@
 ---
 title: "什么是政府统计"
 author: "高敏雪"
-date: "2019-08-09"
+date: "2019-08-10"
 categories:
   - 推荐文章
   - 职业事业
   - 统计应用
 tags:
   - 政府统计
-slug: what-government-statistics
+slug: what-is-gov-stats
 ---
 
 什么是政府统计？将“政府”这个前置词加在统计前面究竟意味着什么?在国际文献中，政府统计作为专有名词有多种大体类似的表述，对应的英语表述分别有：Government statistics、Official statistics，以及National statistics、Public statistics等。我们从这几个可以混用的英文词语中即可有一些感觉：政府统计是官方的，是在政府主导下完成的，是关于整个国家的，是具有公共性质的。
