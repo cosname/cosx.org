@@ -9,8 +9,8 @@ categories:
 tags:
   - 政府统计
 slug: what-is-gov-stats
-meta_extra:
-forum_id
+meta_extra: "审稿：黄俊文；编辑：雷博文"
+forum_id: 420848
 ---
 
 > 编者按：以下内容节选自即将完稿、预计年底出版的《政府统计导论》一书，文字略有调整。
