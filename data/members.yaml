@@ -51,6 +51,9 @@ list:
   - name: 冯凌秉
     image: https://cloud.githubusercontent.com/assets/7221728/26047173/a982236e-3984-11e7-9065-2baac85fccf4.png
     intro: 统计之都理事会主席，江西财经大学金融管理国际研究院助理教授，澳大利亚国立大学2011级统计学博士，中国人民大学2009级统计学硕士，中南财经政法大学2005级统计学&法学学士。2007年初识统计之都，常年潜水于COS论坛，并迅速成为COS迷粉，追随多年。2014年于南通婚礼偶遇太云，相逢恨晚，当即遁入COS门。现在在COS编辑部主要负责端茶送水，跑腿打杂，偶尔审审文章。
+  - name: 高敏雪
+    image: https://user-images.githubusercontent.com/18381242/62707961-f3992600-ba24-11e9-9b0f-db4d2ec76f6e.JPG
+    intro: 经济学博士，中国人民大学统计学院教授，学术兼职包括北京市统计学会副会长、中国国民经济核算研究会副理事长，是国家统计专家委员会成员、国家气候变化专家委员会成员。研究领域以国民经济核算为中心，延伸到环境经济核算，并扩展到整个政府统计。
   - name: 高涛
     image: https://user-images.githubusercontent.com/1142836/28492456-ea8789ca-6f36-11e7-8b47-91eada415a4c.jpg
     intro: 高涛，中国人民大学2012级数理统计研究生，2009年在太云带领下加入COS，给COS编辑部和R会议打杂，参与《R语言实战》《ggplot2：数据分析与图形艺术》书籍翻译。对统计机器学习、优化算法、时序预测感兴趣，之前混迹于互联网圈，现在从事量化投资。博客：<http://joegaotao.github.io/>。
@@ -62,7 +65,7 @@ list:
     intro: 俄亥俄州立大学运筹学博士，目前在美国从事财产事故险领域的保险产品开发，涉及数据分析、统计建模，产品算法优化等方面的工作。离乡十载，海飘七年，至今未归。喜欢运动，尤其爱好滑雪和网球。作为一名十年老Dotaer，面对“联盟”和“荣耀”时总有一种深深的优越感。热爱数据科学，也十分相信数据科学在未来的无限可能。
   - name: 黄俊文
     image: https://user-images.githubusercontent.com/1142836/28239124-c75cde6e-6996-11e7-842a-66b29f4cb77c.jpg
-    intro: 本科中山大学，硕士 University of California, San Diego。现工作于腾讯。
+    intro: 本科中山大学，硕士 University of California, San Diego。现于业界从事数据分析工作。
   - name: 寇强
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 寇强 <http://weibo.com/thirdwing?is_all=1>，Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。
