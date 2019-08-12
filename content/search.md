@@ -11,9 +11,10 @@ menu: [main, top]
       <div class="searchbox-container" id="searchbox" placeholder="Search for keywords">
   </header>
  
+ <div id="results">
   <div id="hits"></div>
   <div class="pagination" id="pagination"></div>
-  
+ </div>
 
 
   <!-- load algolia js and style, use instantsearch 3.4.0-->

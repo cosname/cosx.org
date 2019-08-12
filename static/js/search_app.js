@@ -6,6 +6,19 @@ var search = instantsearch({
   searchClient,
   searchParameters: {
     hitsPerPage: 10
+  },
+  // handling empty query
+  // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/js/#handling-empty-queries
+  searchFunction(helper) {
+    const container = document.querySelector('#results');
+
+    if (helper.state.query === '') {
+      container.style.display = 'none';
+    } else {
+      container.style.display = '';
+    }
+
+    helper.search();
   }
 });
 
