@@ -81,6 +81,9 @@ list:
   - name: 李家郡
     image: https://llijiajun.github.io/github-io/images/ljj.jpg
     intro: 本科就读于中国人民大学统计学院，研究生将就读于中国人民大学信息学院。热爱编程、运动和艺术。个人博客 <https://llijiajun.github.io/github-io/>
+  - name: 李杰桠  
+    image: 
+    intro: 南开大学数学科学院在读研究生，本科就读于中国农业大学数学应用数学专业，研究兴趣为机器学习及其相关方向。好读杂书，发散思考。
   - name: 李宇轩
     image: https://cloud.githubusercontent.com/assets/7221728/25788586/d81c09ae-33dc-11e7-8580-05ab733a7c73.jpg
     intro: 人大统院本科生，爱看书（从小喜欢），爱音乐（多听不多唱）、爱运动（玩和看都爱），很喜欢旅游（尤其一人游），虽然现在还是一只小本科僧，但相信自己会有用武之地，不达目的绝不放弃。
@@ -133,6 +136,9 @@ list:
   - name: 王汉生
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 王汉生教授现任狗熊会会长、北京大学商务智能研究中心主任、北京大学光华管理学院商务统计与经济计量系系主任。现为ISI, ASA, IMS, RSS, ICSA会员，ASA会士(2014年6月23日更新)。
+  - name: 王文静
+    image: https://user-images.githubusercontent.com/18381242/62843942-5c67f300-bcf0-11e9-9309-d3bda6e8fa8b.jpg
+    intro: 中央财经大学统计与数学学院讲师。中国人民大学统计学院博士。当前研究领域为经济统计、稳健统计。
   - name: 王小宁
     image: https://cloud.githubusercontent.com/assets/7221728/25788528/65b1af86-33dc-11e7-9f1b-207eae93ff58.jpg
     intro: 中国人民大学统计学院博士，喜欢跑步，研究兴趣为抽样技术和机器学习。
