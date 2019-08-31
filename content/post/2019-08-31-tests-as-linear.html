@@ -13,6 +13,100 @@ meta_extra: "翻译：黄俊文"
 slug: tests-as-linear
 ---
 
+<script src="https://fyears.github.io/tests-as-linear/index_files/jquery-1.12.4/jquery.min.js"></script>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+<script src="https://fyears.github.io/tests-as-linear/index_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="https://fyears.github.io/tests-as-linear/index_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="https://fyears.github.io/tests-as-linear/index_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<script src="https://fyears.github.io/tests-as-linear/index_files/navigation-1.1/tabsets.js"></script>
+<script src="https://fyears.github.io/tests-as-linear/index_files/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="https://fyears.github.io/tests-as-linear/index_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="https://fyears.github.io/tests-as-linear/index_files/datatables-binding-0.8/datatables.js"></script>
+<link href="https://fyears.github.io/tests-as-linear/index_files/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="https://fyears.github.io/tests-as-linear/index_files/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="https://fyears.github.io/tests-as-linear/index_files/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="https://fyears.github.io/tests-as-linear/index_files/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="https://fyears.github.io/tests-as-linear/index_files/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+
+<style type="text/css">
+  .tabset-dropdown > .nav-tabs {
+    display: inline-table;
+    max-height: 500px;
+    min-height: 44px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .tabset-dropdown > .nav-tabs > li.active:before {
+    content: "";
+    font-family: 'Glyphicons Halflings';
+    display: inline-block;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+    content: "&#xe258;";
+    border: none;
+  }
+  
+  .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+    content: "";
+    font-family: 'Glyphicons Halflings';
+    display: inline-block;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .tabset-dropdown > .nav-tabs > li.active {
+    display: block;
+  }
+  
+  .tabset-dropdown > .nav-tabs > li > a,
+  .tabset-dropdown > .nav-tabs > li > a:focus,
+  .tabset-dropdown > .nav-tabs > li > a:hover {
+    border: none;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  
+  .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+    display: block;
+    float: none;
+  }
+  
+  .tabset-dropdown > .nav-tabs > li {
+    display: none;
+  }
+</style>
+
+<style>
+.showopt {
+  background-color: black;
+  color: #FFFFFF; 
+  width: 110px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle !important;
+  float: right;
+  font-family: sans-serif;
+  border-radius: 8px;
+}
+
+.showopt:hover {
+    background-color: #dfe4f2;
+    color: gray;
+}
+
+pre.plot {
+  background-color: white !important;
+}
+</style>
+
+<script src="https://fyears.github.io/tests-as-linear/include/hideOutput.js"></script>
+
 <p>作者：Jonas Kristoffer Lindeløv (<a href="https://lindeloev.net">博客</a>, <a href="http://personprofil.aau.dk/117060">个人主页</a>).<br /> 最后更新日期：31 August, 2019 (见<a href="https://github.com/lindeloev/tests-as-linear/commits/master">更新日志</a>)。<br /> 可查阅<a href="https://eigenfoo.xyz/tests-as-linear/">Python 版本</a> 和<a href="https://twitter.com/jonaslindeloev/status/1110907133833502721">Twitter 概况</a>.</p>
 <p><br /></p>
 <blockquote>
