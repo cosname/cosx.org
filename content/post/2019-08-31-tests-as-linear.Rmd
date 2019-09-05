@@ -34,18 +34,18 @@ output:
 ```{r echo=FALSE}
 # Options for building this document
 knitr::opts_chunk$set(
-  dev = 'svg',
+  dev = "svg",
   fig.height = 4,
   fig.width = 6,
-  fig.align = 'center',
+  fig.align = "center",
   message = FALSE,
   warning = FALSE
 )
 
 # To show tables.
-print_df = function(D,
-                    decimals = 4,
-                    navigate = FALSE) {
+print_df <- function(D,
+                     decimals = 4,
+                     navigate = FALSE) {
   DT::datatable(
     mutate_if(D, is.numeric, round, decimals),
     rownames = FALSE,
@@ -81,12 +81,12 @@ print_df = function(D,
 >     'tidyverse',
 >     'sm',
 >     'rprojroot',
->     'devtools'
+>     'remotes'
 > )
 > install.packages(pkgs)
 > 
-> devtools::install_github("jumpingrivers/headR")
-> devtools::install_github("thomasp85/patchwork")
+> remotes::install_github("jumpingrivers/headR")
+> remotes::install_github("thomasp85/patchwork")
 > ```
 
 此文档整理如下表。它展示了在常见的参数和“非参”检验之下的线性模型。在同一个框架下展示所有检验，表达出了它们之间的许多相似之处。获得[图片版本](linear_tests_cheat_sheet.png)或 [PDF 版本](linear_tests_cheat_sheet.pdf)或[在线版](linear_tests_cheat_sheet.html)。
@@ -108,11 +108,7 @@ print_df = function(D,
 
 当考虑到在入门课程教授*“非参”*检验的时候，我认为我们可以避开“[欺骗儿童](https://en.wikipedia.org/wiki/Lie-to-children)”的手段，而直接教导学生“非参”检验其实就是和秩相关的参数检验。对学生来说，思考“秩！”，更优于相信你可以魔术般地扔掉各种假设。实际上，在 [JASP](https://jasp-stats.org/) 里，“非参”检验的贝叶斯等价模型，确实[就是使用（隐）秩](https://arxiv.org/abs/1712.06941)来实现的。这里讨论的频率学派的“非参”检验，对于 N > 15 的情况来说非常精确。
 
-<center>
 ![](https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg)
-</center>
-
-<br />
 
 使用导航栏来跳转到你最喜欢的章节。在[来源](#links)和[教材](#course)两章节，有很多类似（尽管更为散乱）的材料。我希望你们可以一起来提供优化建议，或者直接在[Github](https://github.com/lindeloev/tests-as-linear)提交修改。让我们一起来使本文章变得更棒！
 
@@ -131,25 +127,25 @@ library(broom)
 set.seed(40)
 
 # Generate normal data with known parameters
-rnorm_fixed = function(N, mu = 0, sd = 1)
+rnorm_fixed <- function(N, mu = 0, sd = 1)
   scale(rnorm(N)) * sd + mu
 
 # Plot style.
-theme_axis = function(P,
-                      jitter = FALSE,
-                      xlim = c(-0.5, 2),
-                      ylim = c(-0.5, 2),
-                      legend.position = NULL) {
-  P = P + theme_bw(15) +
+theme_axis <- function(P,
+                       jitter = FALSE,
+                       xlim = c(-0.5, 2),
+                       ylim = c(-0.5, 2),
+                       legend.position = NULL) {
+  P <- P + theme_bw(15) +
     geom_segment(
       x = -1000, xend = 1000,
       y = 0, yend = 0,
-      lty = 2, color = 'dark gray', lwd = 0.5
+      lty = 2, color = "dark gray", lwd = 0.5
     ) +
     geom_segment(
       x = 0, xend = 0,
       y = -1000, yend = 1000,
-      lty = 2, color = 'dark gray', lwd = 0.5
+      lty = 2, color = "dark gray", lwd = 0.5
     ) +
     coord_cartesian(xlim = xlim, ylim = ylim) +
     theme(
@@ -160,7 +156,7 @@ theme_axis = function(P,
       panel.grid = element_blank(),
       legend.position = legend.position
     )
-  
+
   # Return jittered or non-jittered plot?
   if (jitter) {
     P + geom_jitter(width = 0.1, size = 2)
@@ -174,16 +170,18 @@ theme_axis = function(P,
 
 
 一开始，我们简单点，使用三组正态分布数据，且整理为宽（`a`、`b`、`c`）和长（`value`、`group`）格式：
+
+
 ```{r}
 # Wide format (sort of)
-#y = rnorm_fixed(50, mu=0.3, sd=2)  # Almost zero mean.
-y = c(rnorm(15), exp(rnorm(15)), runif(20, min = -3, max = 0))  # Almost zero mean, not normal
-x = rnorm_fixed(50, mu = 0, sd = 1)  # Used in correlation where this is on x-axis
-y2 = rnorm_fixed(50, mu = 0.5, sd = 1.5)  # Used in two means
+# y = rnorm_fixed(50, mu=0.3, sd=2)  # Almost zero mean.
+y <- c(rnorm(15), exp(rnorm(15)), runif(20, min = -3, max = 0)) # Almost zero mean, not normal
+x <- rnorm_fixed(50, mu = 0, sd = 1) # Used in correlation where this is on x-axis
+y2 <- rnorm_fixed(50, mu = 0.5, sd = 1.5) # Used in two means
 
 # Long format data with indicator
-value = c(y, y2)
-group = rep(c('y1', 'y2'), each = 50)
+value <- c(y, y2)
+group <- rep(c("y1", "y2"), each = 50)
 ```
 
 
@@ -201,23 +199,31 @@ $y = \beta_0 + \beta_1 x \qquad \mathcal{H}_0: \beta_1 = 0$
 <div class="fold s">
 ```{r}
 # Fixed correlation
-D_correlation = data.frame(MASS::mvrnorm(30, mu = c(0.9, 0.9), Sigma = matrix(c(1, 0.8, 1, 0.8), ncol = 2), empirical = TRUE))  # Correlated data
+D_correlation <- data.frame(MASS::mvrnorm(30,
+  mu = c(0.9, 0.9),
+  Sigma = matrix(c(1, 0.8, 1, 0.8), ncol = 2),
+  empirical = TRUE
+)) # Correlated data
 
 # Add labels (for next plot)
-D_correlation$label_num = sprintf('(%.1f,%.1f)', D_correlation$X1, D_correlation$X2)
-D_correlation$label_rank = sprintf('(%i,%i)', rank(D_correlation$X1), rank(D_correlation$X2))
+D_correlation$label_num <- sprintf("(%.1f,%.1f)", D_correlation$X1, D_correlation$X2)
+D_correlation$label_rank <- sprintf("(%i,%i)", rank(D_correlation$X1), rank(D_correlation$X2))
 
 # Plot it
-fit = lm(I(X2 * 0.5 + 0.4) ~ I(X1 * 0.5 + 0.2), D_correlation)
-intercept_pearson = coefficients(fit)[1]
+fit <- lm(I(X2 * 0.5 + 0.4) ~ I(X1 * 0.5 + 0.2), D_correlation)
+intercept_pearson <- coefficients(fit)[1]
 
-P_pearson = ggplot(D_correlation, aes(x=X1*0.5+0.2, y=X2*0.5+0.4)) +
-  geom_smooth(method=lm, se=FALSE, lwd=2, aes(colour='beta_1')) + 
-  geom_segment(x=-100, xend=100, 
-               y=intercept_pearson, yend=intercept_pearson, 
-               lwd=2, aes(color="beta_0")) + 
-  scale_color_manual(name=NULL, values=c("blue", "red"), labels=c(bquote(beta[0]*" (intercept)"), bquote(beta[1]*" (slope)")))
-  
+P_pearson <- ggplot(D_correlation, aes(x = X1 * 0.5 + 0.2, y = X2 * 0.5 + 0.4)) +
+  geom_smooth(method = lm, se = FALSE, lwd = 2, aes(colour = "beta_1")) +
+  geom_segment(
+    x = -100, xend = 100,
+    y = intercept_pearson, yend = intercept_pearson,
+    lwd = 2, aes(color = "beta_0")
+  ) +
+  scale_color_manual(name = NULL, values = c("blue", "red"), 
+                     labels = c(bquote(beta[0] * " (intercept)"), 
+                                bquote(beta[1] * " (slope)")))
+
 theme_axis(P_pearson, legend.position = c(0.4, 0.9))
 ```
 </div>
@@ -235,20 +241,28 @@ $rank(y) = \beta_0 + \beta_1 \cdot rank(x) \qquad \mathcal{H}_0: \beta_1 = 0$
 <div class="fold s">
 ```{r, fig.width=8, figh.height=7}
 # Spearman intercept
-intercept_spearman = coefficients(lm(rank(X2) ~ rank(X1), D_correlation))[1]
+intercept_spearman <- coefficients(lm(rank(X2) ~ rank(X1), D_correlation))[1]
 
 # Spearman plot
-P_spearman = ggplot(D_correlation, aes(x=rank(X1), y=rank(X2))) +
-  geom_smooth(method=lm, se=FALSE, lwd=2, aes(color='beta_1')) + 
-  geom_text(aes(label=label_rank), nudge_y=1, size=3, color='dark gray') + 
-  geom_segment(x=-100, xend=100, 
-               y=intercept_spearman, yend=intercept_spearman, 
-               lwd=2, aes(color='beta_0')) + 
-  scale_color_manual(name=NULL, values=c("blue", "red"), labels=c(bquote(beta[0]*" (intercept)"), bquote(beta[1]*" (slope)")))
+P_spearman <- ggplot(D_correlation, aes(x = rank(X1), y = rank(X2))) +
+  geom_smooth(method = lm, se = FALSE, lwd = 2, aes(color = "beta_1")) +
+  geom_text(aes(label = label_rank), nudge_y = 1, size = 3, color = "dark gray") +
+  geom_segment(
+    x = -100, xend = 100,
+    y = intercept_spearman, yend = intercept_spearman,
+    lwd = 2, aes(color = "beta_0")
+  ) +
+  scale_color_manual(name = NULL, values = c("blue", "red"), 
+                     labels = c(bquote(beta[0] * " (intercept)"), 
+                                bquote(beta[1] * " (slope)")))
 
 # Stich together using patchwork
-(theme_axis(P_pearson, legend.position=c(0.5, 0.1)) + geom_text(aes(label=label_num), nudge_y=0.1, size=3, color='dark gray') + labs(title='         Pearson')) + (theme_axis(P_spearman, xlim=c(-7.5, 30), ylim=c(-7.5, 30), legend.position=c(0.5, 0.1)) + labs(title='         Spearman'))
-
+(theme_axis(P_pearson, legend.position = c(0.5, 0.1)) + 
+    geom_text(aes(label = label_num), nudge_y = 0.1, size = 3, color = "dark gray") +
+    labs(title = "         Pearson")) + 
+  (theme_axis(P_spearman, xlim = c(-7.5, 30), ylim = c(-7.5, 30), 
+              legend.position = c(0.5, 0.1)) + 
+     labs(title = "         Spearman"))
 ```
 </div>
 
@@ -272,31 +286,35 @@ signed_rank = function(x) sign(x) * rank(abs(x))
 
 
 ```{r}
-a = cor.test(y, x, method = "pearson") # Built-in
-b = lm(y ~ 1 + x) # Equivalent linear model: y = Beta0*1 + Beta1*x
-c = lm(scale(y) ~ 1 + scale(x))  # On scaled vars to recover r
+a <- cor.test(y, x, method = "pearson") # Built-in
+b <- lm(y ~ 1 + x) # Equivalent linear model: y = Beta0*1 + Beta1*x
+c <- lm(scale(y) ~ 1 + scale(x)) # On scaled vars to recover r
 ```
 
 结果：
-```{r, echo=FALSE}
-at = tidy(a)
-bt = tidy(b)[2,]  # Only slope
-bt$conf.low = confint(b)[2, 1]
-bt$conf.high = confint(b)[2, 2]
 
-ct = tidy(c)[2,]  # Only slope
-ct$conf.low = confint(c)[2, 1]
-ct$conf.high = confint(c)[2, 2]
+```{r, echo=FALSE}
+at <- tidy(a)
+bt <- tidy(b)[2, ] # Only slope
+bt$conf.low <- confint(b)[2, 1]
+bt$conf.high <- confint(b)[2, 2]
+
+ct <- tidy(c)[2, ] # Only slope
+ct$conf.low <- confint(c)[2, 1]
+ct$conf.high <- confint(c)[2, 2]
 
 # Merge and print nicely
-df = bind_rows(at, ct, bt) %>%
-  mutate(model = c('cor.test', 'lm scaled', 'lm')) %>%
-  rename(t = statistic,
-         r = estimate) %>%
+df <- bind_rows(at, ct, bt) %>%
+  mutate(model = c("cor.test", "lm scaled", "lm")) %>%
+  rename(
+    t = statistic,
+    r = estimate
+  ) %>%
   select(model, p.value, t, r, conf.low, conf.high)
 
 print_df(df)
 ```
+
 <div class="fold o">
 ```{r, echo=FALSE, results='hold'}
 a
@@ -316,20 +334,22 @@ summary(c)
 
 ```{r, results='hold'}
 # Spearman correlation
-a = cor.test(y, x, method = "spearman") # Built-in
-b = lm(rank(y) ~ 1 + rank(x)) # Equivalent linear model
+a <- cor.test(y, x, method = "spearman") # Built-in
+b <- lm(rank(y) ~ 1 + rank(x)) # Equivalent linear model
 ```
 
 让我们看一下结果：
+
 ```{r, echo=FALSE}
-df = data.frame(
-  model = c('cor.test', 'lm'),
+df <- data.frame(
+  model = c("cor.test", "lm"),
   p.value = c(a$p.value, tidy(b)$p.value[2]),
   rho = c(a$estimate, b$coefficients[2])
 )
 
 print_df(df)
 ```
+
 <div class="fold o">
 ```{r, echo=FALSE, results='hold'}
 a
@@ -341,6 +361,7 @@ summary(b)
 # 单均值
 ## 单样本 t 检验和 Wilcoxon 符号秩检验 {#t1}
 ### 理论：作为线性模型
+
 **t 检验**模型：单独一个数字来预测 $y$。
 
 $y = \beta_0 \qquad \mathcal{H}_0: \beta_0 = 0$
@@ -356,30 +377,41 @@ $signed\_rank(y) = \beta_0$
 <div class="fold s">
 ```{r fig.width=7, fig.height=5}
 # T-test
-D_t1 = data.frame(y = rnorm_fixed(20, 0.5, 0.6),
-                  x = runif(20, 0.93, 1.07))  # Fix mean and SD
+D_t1 <- data.frame(
+  y = rnorm_fixed(20, 0.5, 0.6),
+  x = runif(20, 0.93, 1.07)
+) # Fix mean and SD
 
-P_t1 = ggplot(D_t1, aes(y = y, x = 0)) + 
-  stat_summary(fun.y=mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y.., color='beta_0'), lwd=2) +
-  scale_color_manual(name = NULL, values = c("blue"), labels = c(bquote(beta[0] * " (intercept)"))) +
-  
-  geom_text(aes(label = round(y, 1)), nudge_x = 0.2, size = 3, color = 'dark gray') + 
-  labs(title='         T-test')
+P_t1 <- ggplot(D_t1, aes(y = y, x = 0)) +
+  stat_summary(
+    fun.y = mean, geom = "errorbar",
+    aes(ymax = ..y.., ymin = ..y.., color = "beta_0"), lwd = 2
+  ) +
+  scale_color_manual(
+    name = NULL, values = c("blue"),
+    labels = c(bquote(beta[0] * " (intercept)"))
+  ) +
+  geom_text(aes(label = round(y, 1)), nudge_x = 0.2, size = 3, color = "dark gray") +
+  labs(title = "         T-test")
 
 # Wilcoxon
-D_t1_rank = data.frame(y = signed_rank(D_t1$y))
+D_t1_rank <- data.frame(y = signed_rank(D_t1$y))
 
-P_t1_rank = ggplot(D_t1_rank, aes(y = y, x = 0)) + 
-  stat_summary(fun.y = mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y..,  color = 'beta_0'), lwd = 2) +
-  scale_color_manual(name = NULL, values = c("blue"), labels = c(bquote(beta[0] * " (intercept)"))) +
-
-  geom_text(aes(label = y), nudge_x = 0.2, size = 3, color = 'dark gray') + 
-  labs(title='         Wilcoxon')
-
+P_t1_rank <- ggplot(D_t1_rank, aes(y = y, x = 0)) +
+  stat_summary(
+    fun.y = mean, geom = "errorbar",
+    aes(ymax = ..y.., ymin = ..y.., color = "beta_0"), lwd = 2
+  ) +
+  scale_color_manual(
+    name = NULL, values = c("blue"),
+    labels = c(bquote(beta[0] * " (intercept)"))
+  ) +
+  geom_text(aes(label = y), nudge_x = 0.2, size = 3, color = "dark gray") +
+  labs(title = "         Wilcoxon")
 
 # Stich together using patchwork
-theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1)) + 
-  theme_axis(P_t1_rank, ylim = NULL,  legend.position = c(0.6, 0.1))
+theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1)) +
+  theme_axis(P_t1_rank, ylim = NULL, legend.position = c(0.6, 0.1))
 ```
 </div>
 
@@ -389,17 +421,17 @@ theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1)) +
 
 ```{r}
 # Built-in t-test
-a = t.test(y)
+a <- t.test(y)
 
 # Equivalent linear model: intercept-only
-b = lm(y ~ 1)
+b <- lm(y ~ 1)
 ```
 
 结果：
 
 ```{r, echo=FALSE}
-df = data.frame(
-  model = c('t.test', 'lm'),
+df <- data.frame(
+  model = c("t.test", "lm"),
   mean = c(a$estimate, b$coefficients),
   p.value = c(a$p.value, tidy(b)$p.value),
   t = c(a$statistic, tidy(b)$statistic),
@@ -424,20 +456,20 @@ summary(b)
 
 ```{r, results='hold'}
 # Built-in
-a = wilcox.test(y)
+a <- wilcox.test(y)
 
 # Equivalent linear model
-b = lm(signed_rank(y) ~ 1)  # See? Same model as above, just on signed ranks
+b <- lm(signed_rank(y) ~ 1) # See? Same model as above, just on signed ranks
 
 # Bonus: of course also works for one-sample t-test
-c = t.test(signed_rank(y))
+c <- t.test(signed_rank(y))
 ```
 
 结果：
 
 ```{r, echo=FALSE}
-df = data.frame(
-  model = c('wilcox.test', 'lm', 't.test'),
+df <- data.frame(
+  model = c("wilcox.test", "lm", "t.test"),
   p.value = c(a$p.value, tidy(b)$p.value, c$p.value),
   mean_rank = c(NA, tidy(b)$estimate, c$estimate)
 )
@@ -465,18 +497,18 @@ $y_2-y_1 = \beta_0 \qquad \mathcal{H}_0: \beta_0 = 0$
 <div class="fold s">
 ```{r, fig.width=7, fig.height=3}
 # Data for plot
-N = nrow(D_t1)
-start = rnorm_fixed(N, 0.2, 0.3)
-D_tpaired = data.frame(
+N <- nrow(D_t1)
+start <- rnorm_fixed(N, 0.2, 0.3)
+D_tpaired <- data.frame(
   x = rep(c(0, 1), each = N),
   y = c(start, start + D_t1$y),
   id = 1:N
 )
 
 # Plot
-P_tpaired = ggplot(D_tpaired, aes(x = x, y = y)) +
+P_tpaired <- ggplot(D_tpaired, aes(x = x, y = y)) +
   geom_line(aes(group = id)) +
-  labs(title = '          Pairs')
+  labs(title = "          Pairs")
 
 # Use patchwork to put them side-by-side
 theme_axis(P_tpaired) + theme_axis(P_t1, legend.position = c(0.6, 0.1))
@@ -489,16 +521,17 @@ $signed\_rank(y_2-y_1) = \beta_0 \qquad \mathcal{H}_0: \beta_0 = 0$
 
 
 ### R 代码：配对样本 t 检验
+
 ```{r, results='hold'}
-a = t.test(y, y2, paired = TRUE) # Built-in paired t-test
-b = lm(y - y2 ~ 1) # Equivalent linear model
+a <- t.test(y, y2, paired = TRUE) # Built-in paired t-test
+b <- lm(y - y2 ~ 1) # Equivalent linear model
 ```
 
 结果：
 
 ```{r, echo=FALSE}
-df = data.frame(
-  model = c('t.test', 'lm'),
+df <- data.frame(
+  model = c("t.test", "lm"),
   mean = c(a$estimate, b$coefficients),
   p.value = c(a$p.value, tidy(b)$p.value),
   df = c(a$parameter, b$df.residual),
@@ -524,21 +557,21 @@ summary(b)
 
 ```{r, results='hold'}
 # Built-in Wilcoxon matched pairs
-a = wilcox.test(y, y2, paired = TRUE)
+a <- wilcox.test(y, y2, paired = TRUE)
 
 # Equivalent linear model:
-b = lm(signed_rank(y - y2) ~ 1)
+b <- lm(signed_rank(y - y2) ~ 1)
 
 # Bonus: identical to one-sample t-test ong signed ranks
-c = t.test(signed_rank(y - y2))
+c <- t.test(signed_rank(y - y2))
 ```
 
 结果：
 
 ```{r, echo=FALSE}
 # Print nicely
-df = data.frame(
-  model = c('wilcox.test', 'lm', 't.test'),
+df <- data.frame(
+  model = c("wilcox.test", "lm", "t.test"),
   p.value = c(a$p.value, tidy(b)$p.value, c$p.value),
   mean_rank_diff = c(NA, b$coefficients, c$estimate)
 )
@@ -560,6 +593,7 @@ c
 
 ## 独立 t 检验和 Mann-Whitney U 检验 {#t2}
 ### 理论：作为线性模型
+
 独立 t 检验模型：两个均值来预测 $y$。
 
 $y_i = \beta_0 + \beta_1 x_i \qquad \mathcal{H}_0: \beta_1 = 0$
@@ -583,20 +617,29 @@ $slope = \Delta y / \Delta x = \Delta y / 1 = \Delta y = difference$
 <div class="fold s">
 ```{r}
 # Data
-N = 20  # Number of data points per group
-D_t2 = data.frame(
-  x = rep(c(0, 1), each=N),
+N <- 20 # Number of data points per group
+D_t2 <- data.frame(
+  x = rep(c(0, 1), each = N),
   y = c(rnorm_fixed(N, 0.3, 0.3), rnorm_fixed(N, 1.3, 0.3))
 )
 
 # Plot
-P_t2 = ggplot(D_t2, aes(x=x, y=y)) + 
-  stat_summary(fun.y = mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y..,  color = 'something'), lwd = 2) +
-  geom_segment(x = -10, xend = 10, y = 0.3, yend = 0.3, lwd = 2, aes(color = 'beta_0')) + 
-  geom_segment(x = 0, xend = 1, y = 0.3, yend = 1.3, lwd = 2, aes(color = 'beta_1')) + 
-  
-  scale_color_manual(name = NULL, values = c("blue", "red", "darkblue"), labels=c(bquote(beta[0]*" (group 1 mean)"), bquote(beta[1]*" (slope = difference)"), bquote(beta[0]+beta[1]%.%1*" (group 2 mean)")))
-  #scale_x_discrete(breaks=c(0.5, 1.5), labels=c('1', '2'))
+P_t2 <- ggplot(D_t2, aes(x = x, y = y)) +
+  stat_summary(
+    fun.y = mean, geom = "errorbar",
+    aes(ymax = ..y.., ymin = ..y.., color = "something"), lwd = 2
+  ) +
+  geom_segment(x = -10, xend = 10, y = 0.3, yend = 0.3, lwd = 2, aes(color = "beta_0")) +
+  geom_segment(x = 0, xend = 1, y = 0.3, yend = 1.3, lwd = 2, aes(color = "beta_1")) +
+  scale_color_manual(
+    name = NULL, values = c("blue", "red", "darkblue"),
+    labels = c(
+      bquote(beta[0] * " (group 1 mean)"),
+      bquote(beta[1] * " (slope = difference)"),
+      bquote(beta[0] + beta[1] %.% 1 * " (group 2 mean)")
+    )
+  )
+# scale_x_discrete(breaks=c(0.5, 1.5), labels=c('1', '2'))
 
 theme_axis(P_t2, jitter = TRUE, xlim = c(-0.3, 2), legend.position = c(0.53, 0.08))
 ```
@@ -623,28 +666,28 @@ theme_axis(P_t2, jitter = TRUE, xlim = c(-0.3, 2), legend.position = c(0.53, 0.0
 
 ```{r, results='hold'}
 # Built-in independent t-test on wide data
-a = t.test(y, y2, var.equal = TRUE)
+a <- t.test(y, y2, var.equal = TRUE)
 
 # Be explicit about the underlying linear model by hand-dummy-coding:
-group_y2 = ifelse(group == 'y2', 1, 0)  # 1 if group == y2, 0 otherwise
-b = lm(value ~ 1 + group_y2)  # Using our hand-made dummy regressor
+group_y2 <- ifelse(group == "y2", 1, 0) # 1 if group == y2, 0 otherwise
+b <- lm(value ~ 1 + group_y2) # Using our hand-made dummy regressor
 
 # Note: We could also do the dummy-coding in the model
 # specification itself. Same result.
-c = lm(value ~ 1 + I(group == 'y2'))
+c <- lm(value ~ 1 + I(group == "y2"))
 ```
 
 结果：
 
 ```{r, echo=FALSE}
 # Put it together. Note that the signs are inversed for t.test.
-df = data.frame(
-  model = c('t.test', 'lm'),
+df <- data.frame(
+  model = c("t.test", "lm"),
   mean_y = c(at$estimate1, bt$estimate[1]),
   difference = c(at$estimate2 - at$estimate1, bt$estimate[2]),
   p.value = c(at$p.value, bt$p.value[2]),
   df = c(at$parameter, b$df.residual),
-  
+
   conf.low = c(-at$conf.high, confint(b)[2, 1]),
   conf.high = c(-at$conf.low, confint(b)[2, 2])
 )
@@ -664,18 +707,19 @@ summary(c)
 
 
 ### R 代码：Mann-Whitney U 检验
+
 ```{r, results='hold'}
 # Wilcoxon / Mann-Whitney U
-a = wilcox.test(y, y2)
+a <- wilcox.test(y, y2)
 
 # As linear model with our dummy-coded group_y2:
-b = lm(rank(value) ~ 1 + group_y2)  # compare to linear model above
+b <- lm(rank(value) ~ 1 + group_y2) # compare to linear model above
 ```
 
 
 ```{r, echo=FALSE}
-df = data.frame(
-  model = c('wilcox.test', 'lm'),
+df <- data.frame(
+  model = c("wilcox.test", "lm"),
   p.value = c(a$p.value, tidy(b)$p.value[2]),
   rank_diff = c(NA, b$coefficients[2])
 )
@@ -696,18 +740,17 @@ summary(b)
 
 ```{r, results='hold'}
 # Built-in
-a = t.test(y, y2, var.equal=FALSE)
+a <- t.test(y, y2, var.equal = FALSE)
 
 # As linear model with per-group variances
-b = nlme::gls(value ~ 1 + group_y2, weights = nlme::varIdent(form=~1|group), method="ML")
+b <- nlme::gls(value ~ 1 + group_y2, weights = nlme::varIdent(form = ~ 1 | group), method = "ML")
 ```
 
 结果：
 
-
 ```{r, echo=FALSE}
-df = data.frame(
-  model = c('t.test', 'gls'),
+df <- data.frame(
+  model = c("t.test", "gls"),
   mean_y = c(a$estimate[1], b$coefficients[1]),
   mean_diff = c(a$estimate[2] - a$estimate[1], b$coefficients[2]),
   p.value = c(a$p.value, coef(summary(b))[2, 4]),
@@ -717,6 +760,7 @@ df = data.frame(
 )
 print_df(df)
 ```
+
 <div class='fold o'>
 ```{r, echo=FALSE, results='hold'}
 a
@@ -731,6 +775,7 @@ ANOVA 是（只）有类别自变量的线性模型，所以它们可以简单�
 
 ## 单因素方差分析（one-way ANOVA）和 Kruskal-Wallis 检验 {#anova1}
 ### 理论：作为线性模型
+
 模型：每组一个均值来预测 $y$。
 
 $y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 +... \qquad \mathcal{H}_0: y = \beta_0$
@@ -742,8 +787,8 @@ $y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 +... \qquad \mathcal{H}_0
 <div class="fold s">
 ```{r}
 # Figure
-N = 15
-D_anova1 = data.frame(
+N <- 15
+D_anova1 <- data.frame(
   y = c(
     rnorm_fixed(N, 0.5, 0.3),
     rnorm_fixed(N, 0, 0.3),
@@ -752,23 +797,24 @@ D_anova1 = data.frame(
   ),
   x = rep(0:3, each = 15)
 )
-ymeans = aggregate(y~x, D_anova1, mean)$y
-P_anova1 = ggplot(D_anova1, aes(x=x, y=y)) + 
-  stat_summary(fun.y=mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y.., color='intercepts'), lwd=2) + 
-  geom_segment(x = -10, xend = 100, y = 0.5, yend = 0.5, lwd = 2, aes(color = 'beta_0')) +
-  geom_segment(x = 0, xend = 1, y = ymeans[1], yend = ymeans[2], lwd = 2, aes(color = 'betas')) +
-  geom_segment(x = 1, xend = 2, y = ymeans[1], yend = ymeans[3], lwd = 2, aes(color = 'betas')) +
-  geom_segment(x = 2, xend = 3, y = ymeans[1], yend = ymeans[4], lwd = 2, aes(color = 'betas')) +
-  
+ymeans <- aggregate(y ~ x, D_anova1, mean)$y
+P_anova1 <- ggplot(D_anova1, aes(x = x, y = y)) +
+  stat_summary(
+    fun.y = mean, geom = "errorbar",
+    aes(ymax = ..y.., ymin = ..y.., color = "intercepts"), lwd = 2
+  ) +
+  geom_segment(x = -10, xend = 100, y = 0.5, yend = 0.5, lwd = 2, aes(color = "beta_0")) +
+  geom_segment(x = 0, xend = 1, y = ymeans[1], yend = ymeans[2], lwd = 2, aes(color = "betas")) +
+  geom_segment(x = 1, xend = 2, y = ymeans[1], yend = ymeans[3], lwd = 2, aes(color = "betas")) +
+  geom_segment(x = 2, xend = 3, y = ymeans[1], yend = ymeans[4], lwd = 2, aes(color = "betas")) +
   scale_color_manual(
-    name = NULL, values = c("blue", "red", "darkblue"), 
-    labels=c(
-      bquote(beta[0]*" (group 1 mean)"), 
-      bquote(beta[1]*", "*beta[2]*",  etc. (slopes/differences to "*beta[0]*")"),
-      bquote(beta[0]*"+"*beta[1]*", "*beta[0]*"+"*beta[2]*", etc. (group 2, 3, ... means)")
+    name = NULL, values = c("blue", "red", "darkblue"),
+    labels = c(
+      bquote(beta[0] * " (group 1 mean)"),
+      bquote(beta[1] * ", " * beta[2] * ",  etc. (slopes/differences to " * beta[0] * ")"),
+      bquote(beta[0] * "+" * beta[1] * ", " * beta[0] * "+" * beta[2] * ", etc. (group 2, 3, ... means)")
     )
   )
-  
 
 theme_axis(P_anova1, xlim = c(-0.5, 4), legend.position = c(0.7, 0.1))
 ```
@@ -789,17 +835,17 @@ $rank(y) = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 +...$
 
 ```{r}
 # Three variables in "long" format
-N = 20  # Number of samples per group
-D = data.frame(
+N <- 20 # Number of samples per group
+D <- data.frame(
   value = c(rnorm_fixed(N, 0), rnorm_fixed(N, 1), rnorm_fixed(N, 0.5)),
-  group = rep(c('a', 'b', 'c'), each = N),
-  
+  group = rep(c("a", "b", "c"), each = N),
+
   # Explicitly add indicator/dummy variables
   # Could also be done using model.matrix(~D$group)
-  #group_a = rep(c(1, 0, 0), each=N),  # This is the intercept. No need to code
+  # group_a = rep(c(1, 0, 0), each=N),  # This is the intercept. No need to code
   group_b = rep(c(0, 1, 0), each = N),
   group_c = rep(c(0, 0, 1), each = N)
-)  # N of each level
+) # N of each level
 ```
 ```{r, echo=FALSE}
 print_df(D, navigate=TRUE)
@@ -814,16 +860,16 @@ OK，我们来看看一个专用的**方差分析**函数（`car::Anova`）和�
 
 ```{r, results='hold'}
 # Compare built-in and linear model
-a = car::Anova(aov(value ~ group, D))  # Dedicated ANOVA function
-b = lm(value ~ 1 + group_b + group_c, data = D)  # As in-your-face linear model
+a <- car::Anova(aov(value ~ group, D)) # Dedicated ANOVA function
+b <- lm(value ~ 1 + group_b + group_c, data = D) # As in-your-face linear model
 ```
 
 结果：
 
 ```{r, echo=FALSE}
-df = data.frame(
-  model = c('Anova', 'lm'),
-  df = c(a$Df[1], glance(b)$df - 1),  # -1? https://github.com/tidymodels/broom/issues/273
+df <- data.frame(
+  model = c("Anova", "lm"),
+  df = c(a$Df[1], glance(b)$df - 1), # -1? https://github.com/tidymodels/broom/issues/273
   df.residual = c(a$Df[2], b$df.residual),
   F = c(a$`F value`[1], bt$statistic),
   p.value = c(a$`Pr(>F)`[1], bt$p.value)
@@ -847,10 +893,12 @@ summary(b)
 
 
 ### R 代码：Kruskal-Wallis 检验
+
 ```{r, results='hold'}
-a = kruskal.test(value ~ group, D)  # Built-in
-b = lm(rank(value) ~ 1 + group_b + group_c, D)  # As linear model
-c = car::Anova(aov(rank(value) ~ group, D))  # The same model, using a dedicated ANOVA function. It just wraps lm.
+a <- kruskal.test(value ~ group, D) # Built-in
+b <- lm(rank(value) ~ 1 + group_b + group_c, D) # As linear model
+# The same model, using a dedicated ANOVA function. It just wraps lm.
+c <- car::Anova(aov(rank(value) ~ group, D)) 
 ```
 
 结果：
@@ -889,15 +937,14 @@ $y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_1 X_2 \qquad \mathcal{H}_0:
 
 ```{r}
 # Crossing factor
-D$mood = c('happy', 'sad')
-
+D$mood <- c("happy", "sad")
 # Dummy coding
-D$mood_happy = ifelse(D$mood == 'happy', 1, 0)  # 1 if mood==happy. 0 otherwise.
-#D$mood_sad = ifelse(D$mood == 'sad', 1, 0)  # Same, but we won't be needing this
+D$mood_happy <- ifelse(D$mood == "happy", 1, 0) # 1 if mood==happy. 0 otherwise.
+# D$mood_sad = ifelse(D$mood == 'sad', 1, 0)  # Same, but we won't be needing this
 ```
 
 ```{r, echo=FALSE}
-print_df(D, navigate=TRUE)
+print_df(D, navigate = TRUE)
 ```
 
 $\beta_0$ 成为了 a 组的开心者！
@@ -907,12 +954,10 @@ $\beta_0$ 成为了 a 组的开心者！
 # Add intercept line
 # Add cross...
 # Use other data?
-
-means = lm(value ~ mood * group, D)$coefficients
-
-P_anova2 = ggplot(D, aes(x=group, y=value, color=mood)) + 
-  geom_segment(x = -10, xend = 100, y = means[1], yend = 0.5, col = 'blue', lwd = 2) +
-  stat_summary(fun.y = mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y..),  lwd = 2)
+means <- lm(value ~ mood * group, D)$coefficients
+P_anova2 <- ggplot(D, aes(x = group, y = value, color = mood)) +
+  geom_segment(x = -10, xend = 100, y = means[1], yend = 0.5, col = "blue", lwd = 2) +
+  stat_summary(fun.y = mean, geom = "errorbar", aes(ymax = ..y.., ymin = ..y..), lwd = 2)
 theme_axis(P_anova2, xlim = c(-0.5, 3.5)) + theme(axis.text.x = element_text())
 ```
 </div>
@@ -924,30 +969,33 @@ theme_axis(P_anova2, xlim = c(-0.5, 3.5)) + theme(axis.text.x = element_text())
 
 ```{r, results='hold'}
 # Dedicated two-way ANOVA functions
-a = car::Anova(aov(value ~ mood * group, D), type='II')  # Normal notation. "*" both multiplies and adds main effects
-b = car::Anova(aov(value ~ mood + group + mood:group, D))  # Identical but more verbose about main effects and interaction
+a <- car::Anova(aov(value ~ mood * group, D), type = "II") # Normal notation. "*" both multiplies and adds main effects
+b <- car::Anova(aov(value ~ mood + group + mood:group, D)) # Identical but more verbose about main effects and interaction
 
 # Testing the interaction terms as linear model.
-full = lm(value ~ 1 + group_b + group_c + mood_happy + group_b:mood_happy + group_c:mood_happy, D)  # Full model
-null = lm(value ~ 1 + group_b + group_c + mood_happy, D)  # Without interaction
-c = anova(null, full)  # whoop whoop, same F, p, and Dfs
+full <- lm(value ~ 1 + group_b + group_c + mood_happy + group_b:mood_happy + group_c:mood_happy, D) # Full model
+null <- lm(value ~ 1 + group_b + group_c + mood_happy, D) # Without interaction
+c <- anova(null, full) # whoop whoop, same F, p, and Dfs
 ```
 
 结果：
 
 ```{r, echo=FALSE, warning=FALSE}
-at = tidy(a)[3, ]
-at$res.df = tidy(a)[4,]$df
-at$rss = tidy(a)[4,]$sumsq
-ct = tidy(c)[2, ]
+at <- tidy(a)[3, ]
+at$res.df <- tidy(a)[4, ]$df
+at$rss <- tidy(a)[4, ]$sumsq
+ct <- tidy(c)[2, ]
 
-df = bind_rows(at, ct) %>%
-  mutate(model = c('Anova mood:group', 'lm LRT')) %>%
-  rename(F = statistic,
-         res.sumsq = rss) %>%
+df <- bind_rows(at, ct) %>%
+  mutate(model = c("Anova mood:group", "lm LRT")) %>%
+  rename(
+    F = statistic,
+    res.sumsq = rss
+  ) %>%
   select(model, F, df, p.value, sumsq, res.sumsq)
 print_df(df)
 ```
+
 <div class='fold o'>
 ```{r, echo=FALSE, results='hold'}
 a
@@ -959,27 +1007,26 @@ c
 
 在模型的汇总统计量里可以找到可对比以上 `Anova` 拟合的主因素效应的数值。
 
-
 ```{r, results='hold'}
 # Main effect of group.
-e = lm(value ~ 1 + group_b + group_c, D)
+e <- lm(value ~ 1 + group_b + group_c, D)
 
 # Main effect of mood.
-f = lm(value ~ 1 + mood_happy, D)
+f <- lm(value ~ 1 + mood_happy, D)
 ```
 
 
 ```{r, echo=FALSE}
-et = glance(e)
-et$df = et$df - 1 # see https://github.com/tidymodels/broom/issues/273
-ft = glance(f)
-ft$df = ft$df - 1 # see https://github.com/tidymodels/broom/issues/273
-at = tidy(a)[1:2, ]
+et <- glance(e)
+et$df <- et$df - 1 # see https://github.com/tidymodels/broom/issues/273
+ft <- glance(f)
+ft$df <- ft$df - 1 # see https://github.com/tidymodels/broom/issues/273
+at <- tidy(a)[1:2, ]
 
-df = bind_rows(et, ft, at) %>%
+df <- bind_rows(et, ft, at) %>%
   mutate(
-    model = c('lm', 'lm', 'Anova', 'Anova'),
-    term = c('group', 'mood', 'mood', 'group')
+    model = c("lm", "lm", "Anova", "Anova"),
+    term = c("group", "mood", "mood", "group")
   ) %>%
   rename(F = statistic) %>%
   select(term, model, df, F, p.value) %>%
@@ -1005,7 +1052,7 @@ $y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_3 age$
 
 ```{r, results='hold'}
 # Update data with a continuous covariate
-D$age = D$value + rnorm_fixed(nrow(D), sd = 3)  # Correlated to value
+D$age <- D$value + rnorm_fixed(nrow(D), sd = 3) # Correlated to value
 ```
 
 比起使用位于 x 轴的位置，最好使用颜色来可视化各组数据。$\beta$ 依然是数据的平均 $y$ 移动量，唯一的不同是我们现在用斜率而不是截距来对每一组进行建模。换句话说，单因素方差分析实际上是对于每一组（$y = \beta_0$）的[单样本 t 检验](#t1)，而**单因素协方差分析**实际上是每一组（$y_i = \beta_0 + \beta_i + \beta_1 \cdot age$）的[Pearson 相关性检验](#correlation)：
@@ -1014,14 +1061,15 @@ D$age = D$value + rnorm_fixed(nrow(D), sd = 3)  # Correlated to value
 <div class="fold s">
 ```{r}
 # For linear model plot
-D$pred = predict(lm(value ~ age + group, D))
+D$pred <- predict(lm(value ~ age + group, D))
 
 # Plot
-P_ancova = ggplot(D, aes(x=age, y=value, color=group, shape=group)) + 
-  geom_line(aes(y=pred), lwd=2)
+P_ancova <- ggplot(D, aes(x = age, y = value, color = group, shape = group)) +
+  geom_line(aes(y = pred), lwd = 2)
 
 # Theme it
-theme_axis(P_ancova, xlim=NULL, ylim=NULL, legend.position=c(0.8, 0.2)) + theme(axis.title=element_text())
+theme_axis(P_ancova, xlim = NULL, ylim = NULL, legend.position = c(0.8, 0.2)) + 
+  theme(axis.title = element_text())
 ```
 </div>
 
@@ -1030,35 +1078,35 @@ theme_axis(P_ancova, xlim=NULL, ylim=NULL, legend.position=c(0.8, 0.2)) + theme(
 ```{r, results='hold'}
 # Dedicated ANCOVA functions. The order of factors matter in pure-aov (type-I variance).
 # Use type-II (default for car::Anova) or type-III (set type=3),
-a = car::Anova(aov(value ~ group + age, D))
-#a = aov(value ~ group + age, D)  # Predictor order matters. Not nice!
+a <- car::Anova(aov(value ~ group + age, D))
+# a = aov(value ~ group + age, D)  # Predictor order matters. Not nice!
 
 # As dummy-coded linear model.
-full = lm(value ~ 1 + group_b + group_c + age, D)
+full <- lm(value ~ 1 + group_b + group_c + age, D)
 
 # Testing main effect of age using Likelihood-ratio test
-null_age = lm(value ~ 1 + group_b + group_c, D)  # Full without age. One-way ANOVA!
-result_age = anova(null_age, full)
+null_age <- lm(value ~ 1 + group_b + group_c, D) # Full without age. One-way ANOVA!
+result_age <- anova(null_age, full)
 
 # Testing main effect of groupusing Likelihood-ratio test
-null_group = lm(value ~ 1 + age, D)  # Full without group. Pearson correlation!
-result_group = anova(null_group, full)
+null_group <- lm(value ~ 1 + age, D) # Full without group. Pearson correlation!
+result_group <- anova(null_group, full)
 ```
 
 
 结果：
 
 ```{r, echo=FALSE}
-at = tidy(a)[1:2,]
-at$rss = a$`Sum Sq`[3]
-at$res.df = a$Df[3]
-groupt = tidy(result_group)[2, ]
-aget = tidy(result_age)[2,]
+at <- tidy(a)[1:2, ]
+at$rss <- a$`Sum Sq`[3]
+at$res.df <- a$Df[3]
+groupt <- tidy(result_group)[2, ]
+aget <- tidy(result_age)[2, ]
 
-df = bind_rows(at, groupt, aget) %>%
+df <- bind_rows(at, groupt, aget) %>%
   mutate(
-    model=rep(c('Anova', 'lm'), each=2),
-    term = c('group', 'age', 'group', 'age')
+    model = rep(c("Anova", "lm"), each = 2),
+    term = c("group", "age", "group", "age")
   ) %>%
   rename(
     F = statistic,
@@ -1085,11 +1133,10 @@ $rank(y) = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_3 rank(age)$
 As I noted earlier, this does not match up perfectly with the true "non-parametric" model (if that exists), but it can be very close!
 
 ```{r}
-full = lm(rank(value) ~ group + rank(age), D)
-null = lm(rank(value) ~ rank(age), D)
+full <- lm(rank(value) ~ group + rank(age), D)
+null <- lm(rank(value) ~ rank(age), D)
 anova(null, full)
-sm::sm.ancova(x=D$age, y=D$value, group=D$group, display='none', model='equal')
-
+sm::sm.ancova(x = D$age, y = D$value, group = D$group, display = "none", model = "equal")
 ```
 -->
 
@@ -1128,12 +1175,13 @@ $log(y) = log(N\beta_1*x_1/N + N)$
 
 ```{r}
 # Data in long format
-D = data.frame(mood = c('happy', 'sad', 'meh'),
-               counts = c(60, 90, 70))
-
+D <- data.frame(
+  mood = c("happy", "sad", "meh"),
+  counts = c(60, 90, 70)
+)
 # Dummy coding for the linear model
-D$mood_happy = ifelse(D$mood == 'happy', 1, 0)
-D$mood_sad = ifelse(D$mood == 'sad', 1, 0)
+D$mood_happy <- ifelse(D$mood == "happy", 1, 0)
+D$mood_sad <- ifelse(D$mood == "sad", 1, 0)
 ```
 
 ```{r, echo=FALSE}
@@ -1147,22 +1195,22 @@ print_df(D)
 
 ```{r, results='hold'}
 # Built-in test
-a = chisq.test(D$counts)
+a <- chisq.test(D$counts)
 
 # As log-linear model, comparing to an intercept-only model
-full = glm(counts ~ 1 + mood_happy + mood_sad, data = D, family = poisson())
-null = glm(counts ~ 1, data = D, family = poisson())
-b = anova(null, full, test = 'Rao')
+full <- glm(counts ~ 1 + mood_happy + mood_sad, data = D, family = poisson())
+null <- glm(counts ~ 1, data = D, family = poisson())
+b <- anova(null, full, test = "Rao")
 
 # Note: glm can also do the dummy coding for you:
-c = glm(counts ~ mood, data = D, family = poisson())
+c <- glm(counts ~ mood, data = D, family = poisson())
 ```
 
 我们来看看结果：
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
-df = data.frame(
-  model = c('chisq.test', 'glm LRT'),
+df <- data.frame(
+  model = c("chisq.test", "glm LRT"),
   Chisq = c(a$statistic, b$Rao[2]),
   df = c(a$parameter, b$Df[2]),
   p.value = c(a$p.value, b$`Pr(>Chi)`[2])
@@ -1211,23 +1259,23 @@ $log(y_i) = log(N) + log(\alpha_i) + log(\beta_j) + log(\alpha_i\beta_j)$
 
 ```{r}
 # Contingency data in long format for linear model
-D = data.frame(
-  mood = c('happy', 'happy', 'meh', 'meh', 'sad', 'sad'),
-  sex = c('male', 'female', 'male', 'female', 'male', 'female'),
+D <- data.frame(
+  mood = c("happy", "happy", "meh", "meh", "sad", "sad"),
+  sex = c("male", "female", "male", "female", "male", "female"),
   Freq = c(100, 70, 30, 32, 110, 120)
 )
 
 # ... and as table for chisq.test
-D_table = D %>%
-  spread(key = mood, value = Freq) %>%  # Mood to columns
-  select(-sex) %>%  # Remove sex column
+D_table <- D %>%
+  spread(key = mood, value = Freq) %>% # Mood to columns
+  select(-sex) %>% # Remove sex column
   as.matrix()
 
 # Dummy coding of D for linear model (skipping mood=="sad" and gender=="female")
 # We could also use model.matrix(D$Freq~D$mood*D$sex)
-D$mood_happy = ifelse(D$mood == 'happy', 1, 0)
-D$mood_meh = ifelse(D$mood == 'meh', 1, 0)
-D$sex_male = ifelse(D$sex == 'male', 1, 0)
+D$mood_happy <- ifelse(D$mood == "happy", 1, 0)
+D$mood_meh <- ifelse(D$mood == "meh", 1, 0)
+D$sex_male <- ifelse(D$sex == "male", 1, 0)
 ```
 
 ```{r, echo=FALSE}
@@ -1241,25 +1289,26 @@ print_df(D)
 
 ```{r, results='hold'}
 # Built-in chi-square. It requires matrix format.
-a = chisq.test(D_table)
+a <- chisq.test(D_table)
 
 # Using glm to do a log-linear model, we get identical results when testing the interaction term:
-full = glm(Freq ~ 1 + mood_happy + mood_meh + sex_male + mood_happy*sex_male + mood_meh*sex_male, data = D, family = poisson())
-null = glm(Freq ~ 1 + mood_happy + mood_meh + sex_male, data = D, family = poisson())
-b = anova(null, full, test = 'Rao')  # Could also use test='LRT' or test='Chisq'
+full <- glm(Freq ~ 1 + mood_happy + mood_meh + sex_male + 
+              mood_happy * sex_male + mood_meh * sex_male, data = D, family = poisson())
+null <- glm(Freq ~ 1 + mood_happy + mood_meh + sex_male, data = D, family = poisson())
+b <- anova(null, full, test = "Rao") # Could also use test='LRT' or test='Chisq'
 
 # Note: let glm do the dummy coding for you
-full = glm(Freq ~ mood * sex, family = poisson(), data = D)
-c = anova(full, test = 'Rao')
+full <- glm(Freq ~ mood * sex, family = poisson(), data = D)
+c <- anova(full, test = "Rao")
 
 # Note: even simpler syntax using MASS:loglm ("log-linear model")
-d = MASS::loglm(Freq ~ mood + sex, D)
+d <- MASS::loglm(Freq ~ mood + sex, D)
 ```
 
 
 ```{r, echo=FALSE, warning=FALSE}
-df = data.frame(
-  model = c('chisq.test', 'glm', 'loglm'),
+df <- data.frame(
+  model = c("chisq.test", "glm", "loglm"),
   Chisq = c(a$statistic, b$Rao[2], d$pearson),
   df = c(a$parameter, b$Df[2], d$df),
   p.value = c(a$p.value, b$`Pr(>Chi)`[2], summary(d)$tests[2, 3])
