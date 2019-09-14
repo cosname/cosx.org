@@ -247,7 +247,7 @@ theme_axis(P_pearson, legend.position = c(0.4, 0.9))</code></pre>
 <p>这通常被称为<strong>回归</strong>模型，而且当右边有多个 <span class="math inline">\(\beta\)</span> 和自变量相乘的时候，它被扩展为<strong>多元回归</strong>。以下的所有模型，从<a href="#t1">单样本 t 检验</a>到<a href="#anova2">双因素方差分析</a>，都只是这个设定下的特殊形式。不多不少。</p>
 <p>正如它名字所示意的，<strong>Spearman 秩相关系数</strong>就是 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 的秩变换后的<strong>Pearson 相关系数</strong>：</p>
 <p><span class="math inline">\(rank(y) = \beta_0 + \beta_1 \cdot rank(x) \qquad \mathcal{H}_0: \beta_1 = 0\)</span></p>
-<p>很快我就会介绍<a href="#rank">秩</a>这一个概念。现在，注意到线性模型的相关系数就是等价于“真正的” Pearson 相关系数，但是 p 值是近似值，<a href="simulations/simulate_spearman.html">这个近似值适用于 N&gt;10，并且在 N &gt; 20 的情况下几乎完美</a>。</p>
+<p>很快我就会介绍<a href="#rank">秩</a>这一个概念。现在，注意到线性模型的相关系数就是等价于“真正的” Pearson 相关系数，但是 p 值是近似值，<a href="https://fyears.github.io/tests-as-linear/simulations/simulate_spearman.html">这个近似值适用于 N&gt;10，并且在 N &gt; 20 的情况下几乎完美</a>。</p>
 <p>很多学生都没有意识到这么漂亮和神奇的等价关系！对它们带上数据标签来可视化，我们可立刻看到这一秩转换过程：</p>
 <div class="fold s">
 <pre class="r"><code># Spearman intercept
@@ -394,7 +394,7 @@ b &lt;- lm(rank(y) ~ 1 + rank(x)) # Equivalent linear model</code></pre>
 <p>换句话说，这是我们所熟悉的 <span class="math inline">\(y = \beta_0 + \beta_1*x\)</span>，其中最后一项消失了，因为 <span class="math inline">\(x\)</span> 不存在了（等价地，<span class="math inline">\(x=0\)</span>。见下方左图）。</p>
 <p>以上模型，一旦用 <span class="math inline">\(y\)</span> 的<a href="#rank">符号秩</a>来替换了 <span class="math inline">\(y\)</span> 本身（见下方右图），就和<strong>Wilcoxon 符号秩检验</strong>非常相近。</p>
 <p><span class="math inline">\(signed\_rank(y) = \beta_0\)</span></p>
-<p><a href="simulations/simulate_wilcoxon.html">这个近似对于样本量大于 14 的情况已足够好，对于大于 50 的情况下接近完美</a>。</p>
+<p><a href="https://fyears.github.io/tests-as-linear/simulations/simulate_wilcoxon.html">这个近似对于样本量大于 14 的情况已足够好，对于大于 50 的情况下接近完美</a>。</p>
 <div class="fold s">
 <pre class="r"><code># T-test
 D_t1 &lt;- data.frame(
@@ -655,7 +655,7 @@ c &lt;- t.test(signed_rank(y - y2))</code></pre>
 <p>上式中，<span class="math inline">\(x_i\)</span> 是示性变量（0 或 1），用于示意数据点 <span class="math inline">\(i\)</span> 是从一个组里采样还是另一个组里采样的。<a href="https://en.wikipedia.org/wiki/Dummy_variable_(statistics)">示性变量（indicator variable 或 dummy coding）</a> 存在于很多线性模型当中，我们很快就会看到它有什么用途。</p>
 <p><strong>Mann-Whitney U 检验</strong>（也被称为对两个独立组的 <strong>Wilcoxon 秩和检验</strong>；这次没有<em>符号</em>秩了）是有着非常接近的近似的相同模型，除了它不是在原有值而是在 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 的秩上计算的：</p>
 <p><span class="math inline">\(rank(y_i) = \beta_0 + \beta_1 x_i \qquad \mathcal{H}_0: \beta_1 = 0\)</span></p>
-<p>对我来说，这种等价性使得“非参”统计量更为容易地理解了。这种近似<a href="simulations/simulate_mannwhitney.html">在每个组样本量大于 11 的时候比较合适，在每个组样本量大于 30 的时候视觉效果上相当完美</a>.</p>
+<p>对我来说，这种等价性使得“非参”统计量更为容易地理解了。这种近似<a href="https://fyears.github.io/tests-as-linear/simulations/simulate_mannwhitney.html">在每个组样本量大于 11 的时候比较合适，在每个组样本量大于 30 的时候视觉效果上相当完美</a>.</p>
 </div>
 <div id="dummy" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> 理论：示性变量</h3>
@@ -910,7 +910,7 @@ theme_axis(P_anova1, xlim = c(-0.5, 4), legend.position = c(0.7, 0.1))</code></p
 <p>单因素方差分析有一个对数线性版本，称为<a href="#goodness">拟合优度</a>检验，我们稍后会讲到。顺便一说，因为我们现在对多个 <span class="math inline">\(x\)</span> 进行回归，因此单因素方差分析是 <strong>多元回归</strong> 模型。</p>
 <p><strong>Kruskal-Wallis</strong> 检验只是对于秩转换的 <span class="math inline">\(y\)</span>（<code>value</code>）的 <strong>单因素方差分析</strong>：</p>
 <p><span class="math inline">\(rank(y) = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 +...\)</span></p>
-<p>这个近似<a href="simulations/simulate_kruskall.html">在 12 或更多数据点时候已经近似得足够好</a>。同样，如果你对一个或两个组做这个检验，我们已经有对应等式，分别为 <a href="#t1">Wilcoxon 符号秩检验</a> 或 <a href="#t2">Mann-Whitney U 检验</a>。</p>
+<p>这个近似<a href="https://fyears.github.io/tests-as-linear/simulations/simulate_kruskall.html">在 12 或更多数据点时候已经近似得足够好</a>。同样，如果你对一个或两个组做这个检验，我们已经有对应等式，分别为 <a href="#t1">Wilcoxon 符号秩检验</a> 或 <a href="#t2">Mann-Whitney U 检验</a>。</p>
 </div>
 <div id="section-10" class="section level3">
 <h3><span class="header-section-number">6.1.2</span> 示例数据</h3>
