@@ -130,16 +130,16 @@ install.packages(pkgs)
 remotes::install_github(&quot;jumpingrivers/headR&quot;)
 remotes::install_github(&quot;thomasp85/patchwork&quot;)</code></pre>
 </blockquote>
-<p>此文档可归纳如下表。它展示了在常见的参数和“非参数”检验之下的线性模型。我们通过在同一个框架下展示所有的检验，来体现它们之间的许多相似之处。点击链接可获得<a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.png">图片版本</a>或 <a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf">PDF 版本</a>或<a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.html">在线版</a>。</p>
+<p>此文档可归纳如下表。它展示了在常见的参数和“非参数”检验之下的线性模型。在同一个框架下展示所有的检验， 我们可以看到它们之间的许多相似之处。点击链接可获得<a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.png">图片版本</a>或 <a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf">PDF 版本</a>或<a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.html">在线版</a>。</p>
 <hr />
 <p><a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf"><img src="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.png" /></a></p>
 <hr />
 <div id="section" class="section level1">
 <h1><span class="header-section-number">1</span> 常见检验的简洁本质</h1>
-<p>大部分常见统计模型（t 检验、相关性、方差分析（ANOVA）、卡方，等等）都是线性模型的特殊形式，或者可看作线性模型的近似。这优雅的简洁性，意味着我们不需要掌握太多技巧。具体来说，这都来源于大部分学生从高中就学习的模型：<span class="math inline">\(y = a \cdot x + b\)</span>。然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。</p>
+<p>大部分常见统计模型（t 检验、相关性、方差分析（ANOVA）、卡方，等等）都是线性模型的特殊形式，或者可看作线性模型的近似。这种优雅的简洁性，意味着我们不需要掌握太多技巧。具体来说，这都来源于大部分学生从高中就学习的模型：<span class="math inline">\(y = a \cdot x + b\)</span>。然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。</p>
 <p>另一方面，当学生们学习每一个检验背后的基本假设时，如果不是从线性模型推导，而是每个检验都单独死记硬背，这种不必要的复杂性又会成倍增加。</p>
-<p>因此，我认为，先教导线性模型和扩展，<em>然后</em>对于一些特殊形式进行“改名”，是一种优秀的教导策略，并且有助于更深刻地<em>理解</em>假设检验。因为线性模型在频率学派、贝叶斯学派、自助法统计推断之间，都是相同的。我认为从模型开始，比从 p 值、第 1 类错误、贝叶斯因子、或其它东西开始，更为友好。</p>
-<p>当考虑到在入门课程教授<em>“非参”</em>检验的时候，我认为我们可以避开“<a href="https://en.wikipedia.org/wiki/Lie-to-children">欺骗儿童</a>”的手段，而直接教导学生“非参”检验其实就是和秩相关的参数检验。对学生来说，思考“秩！”，更优于相信你可以魔术般地扔掉各种假设。实际上，在 <a href="https://jasp-stats.org/">JASP</a> 里，“非参”检验的贝叶斯等价模型，确实<a href="https://arxiv.org/abs/1712.06941">就是使用（隐）秩</a>来实现的。这里讨论的频率学派的“非参”检验，对于 N &gt; 15 的情况来说非常精确。</p>
+<p>因此，我认为，先教导线性模型和扩展，<em>然后</em>对于一些特殊形式进行“改名”，是一种优秀的教导策略，并且有助于更深刻地<em>理解</em>假设检验。因为线性模型在频率学派、贝叶斯学派、自助法统计推断之间，都是相同的。我认为从模型开始，比从 p 值、第 1 类错误、贝叶斯因子、或其它东西开始，对初学者更为友好。</p>
+<p>当考虑到在入门课程教授<em>“非参”</em>检验的时候，我认为我们可以避开“<a href="https://en.wikipedia.org/wiki/Lie-to-children">欺骗儿童</a>”的手段，而直接教导学生“非参”检验其实就是和秩相关的参数检验。对学生来说，思考“秩（rank）！”的概念，比相信你可以把各种假设抛在脑后更好。实际上，在 <a href="https://jasp-stats.org/">JASP</a> 里，“非参”检验的贝叶斯等价模型，确实<a href="https://arxiv.org/abs/1712.06941">就是使用（隐）秩</a>来实现的。这里讨论的频率学派的“非参”检验，对于 N &gt; 15 的情况来说非常精确。</p>
 <p><img src="https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg" /></p>
 <p>使用导航栏来跳转到你最喜欢的章节（因排版问题，统计之都翻译版没有导航栏，可以直接搜索相关关键词。—-译者著）。在<a href="#links">来源</a>和<a href="#course">教材</a>两章节，有很多类似（尽管更为散乱）的材料。我希望你们可以一起来提供优化建议，或者直接在<a href="https://github.com/lindeloev/tests-as-linear">Github</a>提交修改。让我们一起来使本文章变得更棒！</p>
 </div>
@@ -1498,7 +1498,7 @@ d &lt;- MASS::loglm(Freq ~ mood + sex, D)</code></pre>
 </ol>
 </div>
 <div id="section-14" class="section level1">
-<h1><span class="header-section-number">10</span> 限制</h1>
+<h1><span class="header-section-number">10</span> 不足之处</h1>
 <p>一些需要澄清的简化前提：</p>
 <ol style="list-style-type: decimal">
 <li><p>我没在这里覆盖到前提假设的内容。这会在另一篇文章揭晓！但是所有检验都很可能有三个预定假设：a) 数据点的独立性，b) 残差的正态分布性质，c) 同方差性（homoscedasticity）。</p></li>
