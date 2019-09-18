@@ -9,7 +9,7 @@ categories:
 tags:
   - 方法论
   - 统计学
-meta_extra: "翻译：黄俊文"
+meta_extra: "译者：黄俊文"
 slug: tests-as-linear
 lang: "zh-Hans"
 output: 
@@ -24,12 +24,6 @@ output:
 <!-- From https://stackoverflow.com/a/37839683/1297830 -->
 <link rel="stylesheet" type="text/css" href="include/hideOutput.css">
 <script src="include/hideOutput.js"></script>
-
-作者：Jonas Kristoffer Lindeløv ([博客](https://lindeloev.net), [个人主页](http://personprofil.aau.dk/117060)).<br />
-最后更新日期：`r format(Sys.time(), '%d %B, %Y')` (见[更新日志](https://github.com/lindeloev/tests-as-linear/commits/master))。<br />
-可查阅[Python 版本](https://eigenfoo.xyz/tests-as-linear/) 和[Twitter 概况](https://twitter.com/jonaslindeloev/status/1110907133833502721).
-
-<br />
 
 ```{r echo=FALSE}
 # Options for building this document
@@ -60,53 +54,35 @@ print_df <- function(D,
     )
   )
 }
+
+# packages only available on Github
+remote_pkgs = c(headR = 'jumpingrivers', patchwork = 'thomasp85')
+
+lapply(c(
+  'car', 'broom', 'DT', 'knitr', 'tidyverse', 'sm', 'rprojroot', 'remotes'
+  ), function(pkg) {
+    if (system.file(package = pkg) != '') return()
+    repo = remote_pkgs[pkg]
+    if (is.na(repo)) install.packages(pkg) else {
+      remotes::install_github(paste(repo, pkg, sep = '/'))
+    }
+  }
+)
 ```
 
-> 译者注：
->
-> **翻译说明：本文翻译自英文文章[Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/)，作者 Jonas Kristoffer Lindeløv；本翻译已获得作者授权，首发于[统计之都](https://cosx.org)，译者黄俊文。**<br/>
-> **This Chinese article is translated from English version [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/) written by Jonas Kristoffer Lindeløv. And the translation is authorized by original author, firstly published on [Capital of Statistics](https://cosx.org).**
->
-> 译者评语：本文使用了统一的线性模型框架，来解释各种统计检验，极富思考性和启发性。
-> 
-> 翻译准则：除了众所周知的（“牛顿”、“贝叶斯”），基本上不翻译人名。其余如 ANOVA 或 goodness of fit 等中文统计教材有常见叫法的，翻译成（除人名部分外）中文版本。除了 markdown 语法和代码和英文文本片段之外，使用正规中文标点符号。本文译者水平有限，欢迎各位在中文版 GitHub repo 下提出对各种错漏的修改建议。
->
-> 运行：要运行本文所有代码，你需要安装以下软件包：
-> ```r
-> pkgs = c(
->     'car',
->     'broom',
->     'DT',
->     'knitr',
->     'tidyverse',
->     'sm',
->     'rprojroot',
->     'remotes'
-> )
-> install.packages(pkgs)
-> 
-> remotes::install_github("jumpingrivers/headR")
-> remotes::install_github("thomasp85/patchwork")
-> ```
+> 本文翻译自 [Jonas Kristoffer Lindeløv](https://lindeloev.net/) 的 [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/)，翻译工作已获得原作授权。
 
-此文档可归纳如下表。它展示了在常见的参数和“非参数”检验之下的线性模型。在同一个框架下展示所有的检验， 我们可以看到它们之间的许多相似之处。点击链接可获得[图片版本](linear_tests_cheat_sheet.png)或 [PDF 版本](linear_tests_cheat_sheet.pdf)或[在线版](linear_tests_cheat_sheet.html)。
+本文将常见的参数和非参数检验统一用线性模型来表示，在同一个框架下， 我们可以看到不同检验之间的许多相似之处，极富思考性和启发性。点击链接可获得一份 [PDF 电子版](linear_tests_cheat_sheet.pdf) 或 [HTML 网页版](linear_tests_cheat_sheet.html)。
 
-***
-
-[![](linear_tests_cheat_sheet.png)](linear_tests_cheat_sheet.pdf)
-
-***
+[![linear-tests-cheat-heet](linear_tests_cheat_sheet.png)](linear_tests_cheat_sheet.pdf)
 
 
 # 常见检验的简洁本质
 
-大部分常见统计模型（t 检验、相关性、方差分析（ANOVA）、卡方，等等）都是线性模型的特殊形式，或者可看作线性模型的近似。这种优雅的简洁性，意味着我们不需要掌握太多技巧。具体来说，这都来源于大部分学生从高中就学习的模型：$y = a \cdot x + b$。然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。
+大部分常见的统计模型（t 检验、相关性、方差分析（ANOVA）、卡方等）是线性模型的特殊情况或者是非常接近的近似。这种优雅的简洁性意味着我们学习起来不需要掌握太多的技巧。具体来说，这都来源于大部分学生从高中就学习的模型：$y = a \cdot x + b$。然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。
+在学习每一个检验的基本假设时，如果不是从线性模型切入，而是每个检验都死记硬背，这种复杂性又会成倍增加。因此，我认为先教线性模型，然后对线性模型的一些特殊形式进行改名是一种优秀的教学策略，这有助于更深刻地理解假设检验。线性模型在频率学派、贝叶斯学派和基于置换的统计推断之间是相通的，对初学者而言，从模型开始比从 P 值、第 I 类错误、贝叶斯因子或其它地方更为友好。
 
-另一方面，当学生们学习每一个检验背后的基本假设时，如果不是从线性模型推导，而是每个检验都单独死记硬背，这种不必要的复杂性又会成倍增加。
-
-因此，我认为，先教导线性模型和扩展，*然后*对于一些特殊形式进行“改名”，是一种优秀的教导策略，并且有助于更深刻地*理解*假设检验。因为线性模型在频率学派、贝叶斯学派、自助法统计推断之间，都是相同的。我认为从模型开始，比从 p 值、第 1 类错误、贝叶斯因子、或其它东西开始，对初学者更为友好。
-
-当考虑到在入门课程教授*“非参”*检验的时候，我认为我们可以避开“[欺骗儿童](https://en.wikipedia.org/wiki/Lie-to-children)”的手段，而直接教导学生“非参”检验其实就是和秩相关的参数检验。对学生来说，思考“秩（rank）！”的概念，比相信你可以把各种假设抛在脑后更好。实际上，在 [JASP](https://jasp-stats.org/) 里，“非参”检验的贝叶斯等价模型，确实[就是使用（隐）秩](https://arxiv.org/abs/1712.06941)来实现的。这里讨论的频率学派的“非参”检验，对于 N > 15 的情况来说非常精确。
+当考虑到在入门课程教授非参数检验的时候，我认为我们可以避开 [欺骗儿童](https://en.wikipedia.org/wiki/Lie-to-children) 的手段，直接告诉学生非参检验其实就是和秩相关的参数检验。对学生来说，接受秩的概念比相信你可以神奇地放弃各种假设好的多。实际上，在统计软件 [JASP](https://jasp-stats.org/) 里，非参检验的贝叶斯等价模型就是使用 [潜秩](https://arxiv.org/abs/1712.06941)来实现的。频率学派的非参检验在样本量 $N > 15$ 的时非常准确。
 
 ![](https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg)
 
