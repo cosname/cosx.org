@@ -10,7 +10,7 @@ tags:
   - 方法论
   - 统计学
 meta_extra: "译者：黄俊文"
-slug: tests-as-linear
+slug: common-tests-as-linear-models
 lang: "zh-Hans"
 output: 
   html_fragment:
