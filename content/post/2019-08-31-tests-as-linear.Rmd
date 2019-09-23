@@ -253,7 +253,7 @@ P_spearman <- ggplot(D_correlation, aes(x = rank(X1), y = rank(X2))) +
 signed_rank = function(x) sign(x) * rank(abs(x))
 ```
 
-我希望，我说秩很容易理解的时候，没有冒犯到其他人；然而，这就是你转换大部分参数检验到它们的对应“非参”检验所要做的所有事情！一个重要的推论是，*很多“非参”检验和它们的对应参数检验版本都有一致的参数：均值、标准差、方差齐次性，等等 ---- 区别在于它们是在秩转换后的数据上计算的*。这是为什么我把“非参”用引号包起来。
+我希望，我说秩很容易理解的时候，没有冒犯到其他人；然而，这就是你转换大部分参数检验到它们的对应非参检验所要做的所有事情！一个重要的推论是，很多非参检验和它们的对应参数检验版本都有一致的参数：均值、标准差、方差齐次性，等等 ---- 区别在于它们是在秩转换后的数据上计算的。这是为什么我把非参用引号包起来。
 
 
 ### R 代码：Pearson 相关系数
@@ -306,7 +306,7 @@ summary(c)
 
 注意，我们可以把斜率解释为：对于每一 $x$ 的秩的变化，所获得的相应 $y$ 的秩的变化。我认为这个数字非常有趣。然而，截距更难解释，因为它定义在 $rank(x) = 0$ 的时候，然而这其实是不可能的，因为 x 是从 1 开始的。
 
-查看相同的 `r` (now "rho") 和 `p`：
+查看相同的 `r` （即这里的 `rho`） 和 `p`：
 
 ```{r, results='hold'}
 # Spearman correlation
@@ -580,7 +580,7 @@ $y_i = \beta_0 + \beta_1 x_i \qquad \mathcal{H}_0: \beta_1 = 0$
 
 $rank(y_i) = \beta_0 + \beta_1 x_i \qquad \mathcal{H}_0: \beta_1 = 0$
 
-对我来说，这种等价性使得“非参”统计量更为容易地理解了。这种近似[在每个组样本量大于 11 的时候比较合适，在每个组样本量大于 30 的时候视觉效果上相当完美](simulations/simulate_mannwhitney.html).
+对我来说，这种等价性使得非参统计量更为容易地理解了。这种近似[在每个组样本量大于 11 的时候比较合适，在每个组样本量大于 30 的时候视觉效果上相当完美](simulations/simulate_mannwhitney.html).
 
 ### 理论：示性变量 {#dummy}
 
@@ -712,7 +712,7 @@ summary(b)
 
 
 ## Welch t 检验 {#welch}
-这等价于以上（学生）[独立 t 检验](#t2)，除了学生 t 检验假设同方差，而 **Welch t 检验** 没有这个假设。所以线性模型是相同的，区别在于，我们对每一个组指定一个方差。我们可用 `nlme` 包（[查阅细节](https://stats.stackexchange.com/questions/142685/equivalent-to-welchs-t-test-in-gls-framework)）：
+这等价于以上（学生）[独立 t 检验](#t2)，除了学生 t 检验假设同方差，而 **Welch t 检验** 没有这个假设。所以线性模型是相同的，区别在于，我们对每一个组指定一个方差。我们可用 `nlme` 包（[查阅细节](https://stats.stackexchange.com/questions/142685/)）：
 
 ```{r, results='hold'}
 # Built-in
@@ -1315,7 +1315,7 @@ summary(full)
  * [Christoph Scheepers 的幻灯片](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)，介绍了卡方检验如何被理解为对数线性模型。
  * [Philip M. Alday 的笔记](https://rpubs.com/palday/glm-test)，里面包括了卡方、二项、多项、泊松分布作为对数线性模型和 logistic 模型的理解。这里介绍的“等价性”没有我在本文里所上展示的那些那么精确，因此我没有在本文详细介绍。然而，它们还是对理解这些检验有着优秀的帮助的！
  * [Kristoffer Magnusson 的文章](https://rpsychologist.com/r-guide-longitudinal-lme-lmer)，使用 `lme4::lmer` 混合模型（mixed model）介绍了 RM-ANOVA 和增长模型（growth model）。
- * [Thom Baguley 的文章](https://seriousstats.wordpress.com/2012/02/14/friedman/)，介绍了 Friedman 检验。这篇文章实际上启发了我开始思考“非参”检验的线性模型等价形式，而且最终推动我写下了本文章。
+ * [Thom Baguley 的文章](https://seriousstats.wordpress.com/2012/02/14/friedman/)，介绍了 Friedman 检验。这篇文章实际上启发了我开始思考非参检验的线性模型等价形式，而且最终推动我写下了本文章。
 
 # 教材和课程大纲 {#course}
 
