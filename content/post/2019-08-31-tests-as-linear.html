@@ -1,5 +1,5 @@
 ---
-title: "翻译：常见的统计检验是线性模型（或：如何教导统计学）"
+title: "翻译：常见统计检验的本质都是线性模型（或：如何教统计学）"
 author: "Jonas Kristoffer Lindeløv"
 date: "2019-08-31"
 categories:
@@ -9,8 +9,16 @@ categories:
 tags:
   - 方法论
   - 统计学
-meta_extra: "翻译：黄俊文"
-slug: tests-as-linear
+meta_extra: "译者：黄俊文、校对：蔡占锐，谢益辉，黄湘云、编辑：孙腾飞、任焱"
+slug: common-tests-as-linear-models
+lang: "zh-Hans"
+forum_id: 420930
+output: 
+  html_fragment:
+    df_print: default
+    number_sections: yes
+    self_contained: no
+    toc: no
 ---
 
 <script src="https://fyears.github.io/tests-as-linear/index_files/jquery-1.12.4/jquery.min.js"></script>
@@ -107,93 +115,26 @@ pre.plot {
 
 <script src="https://fyears.github.io/tests-as-linear/include/hideOutput.js"></script>
 
-<p>作者：Jonas Kristoffer Lindeløv (<a href="https://lindeloev.net">博客</a>, <a href="http://personprofil.aau.dk/117060">个人主页</a>).<br /> 最后更新日期：14 September, 2019 (见<a href="https://github.com/lindeloev/tests-as-linear/commits/master">更新日志</a>)。<br /> 可查阅<a href="https://eigenfoo.xyz/tests-as-linear/">Python 版本</a> 和<a href="https://twitter.com/jonaslindeloev/status/1110907133833502721">Twitter 概况</a>.</p>
-<p><br /></p>
 <blockquote>
-<p>译者注：</p>
-<p><strong>翻译说明：本文翻译自英文文章<a href="https://lindeloev.github.io/tests-as-linear/">Common statistical tests are linear models (or: how to teach stats)</a>，作者 Jonas Kristoffer Lindeløv；本翻译已获得作者授权，首发于<a href="https://cosx.org">统计之都</a>，译者黄俊文。</strong><br/> <strong>This Chinese article is translated from English version <a href="https://lindeloev.github.io/tests-as-linear/">Common statistical tests are linear models (or: how to teach stats)</a> written by Jonas Kristoffer Lindeløv. And the translation is authorized by original author, firstly published on <a href="https://cosx.org">Capital of Statistics</a>.</strong></p>
-<p>译者评语：本文使用了统一的线性模型框架，来解释各种统计检验，极富思考性和启发性。</p>
-<p>翻译准则：除了众所周知的（“牛顿”、“贝叶斯”），基本上不翻译人名。其余如 ANOVA 或 goodness of fit 等中文统计教材有常见叫法的，翻译成（除人名部分外）中文版本。除了 markdown 语法和代码和英文文本片段之外，使用正规中文标点符号。本文译者水平有限，欢迎各位在中文版 GitHub repo 下提出对各种错漏的修改建议。</p>
-<p>运行：要运行本文所有代码，你需要安装以下软件包：</p>
-<pre class="r"><code>pkgs = c(
-    &#39;car&#39;,
-    &#39;broom&#39;,
-    &#39;DT&#39;,
-    &#39;knitr&#39;,
-    &#39;tidyverse&#39;,
-    &#39;sm&#39;,
-    &#39;rprojroot&#39;,
-    &#39;remotes&#39;
-)
-install.packages(pkgs)
-
-remotes::install_github(&quot;jumpingrivers/headR&quot;)
-remotes::install_github(&quot;thomasp85/patchwork&quot;)</code></pre>
+<p>本文翻译自 <a href="https://lindeloev.net/">Jonas Kristoffer Lindeløv</a> 的 <a href="https://lindeloev.github.io/tests-as-linear/">Common statistical tests are linear models (or: how to teach stats)</a>，翻译工作已获得原作授权。</p>
 </blockquote>
-<p>此文档可归纳如下表。它展示了在常见的参数和“非参数”检验之下的线性模型。在同一个框架下展示所有的检验， 我们可以看到它们之间的许多相似之处。点击链接可获得<a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.png">图片版本</a>或 <a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf">PDF 版本</a>或<a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.html">在线版</a>。</p>
-<hr />
-<p><a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf"><img src="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.png" /></a></p>
-<hr />
+<p>本文将常见的参数和“非参”数检验统一用线性模型来表示，在同一个框架下， 我们可以看到不同检验之间的许多相似之处，极富思考性和启发性。点击链接可获得一份 <a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf">PDF 电子版</a> 或 <a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.html">HTML 网页版</a>。</p>
+<p><a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf"><img src="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.png" alt="linear-tests-cheat-sheet" /></a></p>
 <div id="section" class="section level1">
 <h1><span class="header-section-number">1</span> 常见检验的简洁本质</h1>
-<p>大部分常见统计模型（t 检验、相关性、方差分析（ANOVA）、卡方，等等）都是线性模型的特殊形式，或者可看作线性模型的近似。这种优雅的简洁性，意味着我们不需要掌握太多技巧。具体来说，这都来源于大部分学生从高中就学习的模型：<span class="math inline">\(y = a \cdot x + b\)</span>。然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。</p>
-<p>另一方面，当学生们学习每一个检验背后的基本假设时，如果不是从线性模型推导，而是每个检验都单独死记硬背，这种不必要的复杂性又会成倍增加。</p>
-<p>因此，我认为，先教导线性模型和扩展，<em>然后</em>对于一些特殊形式进行“改名”，是一种优秀的教导策略，并且有助于更深刻地<em>理解</em>假设检验。因为线性模型在频率学派、贝叶斯学派、自助法统计推断之间，都是相同的。我认为从模型开始，比从 p 值、第 1 类错误、贝叶斯因子、或其它东西开始，对初学者更为友好。</p>
-<p>当考虑到在入门课程教授<em>“非参”</em>检验的时候，我认为我们可以避开“<a href="https://en.wikipedia.org/wiki/Lie-to-children">欺骗儿童</a>”的手段，而直接教导学生“非参”检验其实就是和秩相关的参数检验。对学生来说，思考“秩（rank）！”的概念，比相信你可以把各种假设抛在脑后更好。实际上，在 <a href="https://jasp-stats.org/">JASP</a> 里，“非参”检验的贝叶斯等价模型，确实<a href="https://arxiv.org/abs/1712.06941">就是使用（隐）秩</a>来实现的。这里讨论的频率学派的“非参”检验，对于 N &gt; 15 的情况来说非常精确。</p>
-<p><img src="https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg" /></p>
-<p>使用导航栏来跳转到你最喜欢的章节（因排版问题，统计之都翻译版没有导航栏，可以直接搜索相关关键词。—-译者著）。在<a href="#links">来源</a>和<a href="#course">教材</a>两章节，有很多类似（尽管更为散乱）的材料。我希望你们可以一起来提供优化建议，或者直接在<a href="https://github.com/lindeloev/tests-as-linear">Github</a>提交修改。让我们一起来使本文章变得更棒！</p>
+<p>大部分常见的统计模型（t 检验、相关性检验、方差分析（ANOVA）、卡方检验等） 是线性模型的特殊情况或者是非常好的近似。这种优雅的简洁性意味着我们学习起来不需要掌握太多的技巧。具体来说，这都来源于大部分学生从高中就学习的模型：<span class="math inline">\(y = a \cdot x + b\)</span>。 然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。在学习每一个检验的基本假设时，如果不是从线性模型切入，而是每个检验都死记硬背，这种复杂性又会成倍增加。因此，我认为先教线性模型，然后对线性模型的一些特殊形式进行改名是一种优秀的教学策略，这有助于更深刻地理解假设检验。线性模型在频率学派、贝叶斯学派和基于置换的U检验的统计推断之间是相通的，对初学者而言，从模型开始比从 P 值、第 I 类错误、贝叶斯因子或其它地方更为友好。</p>
+<p>在入门课程教授“非参”数检验的时候，可以避开 <a href="https://en.wikipedia.org/wiki/Lie-to-children">骗小孩</a> 的手段，直接告诉学生“非参”检验其实就是和秩相关的参数检验。对学生来说，接受秩的概念比相信你可以神奇地放弃各种假设好的多。实际上，在统计软件 <a href="https://jasp-stats.org/">JASP</a> 里，“非参”检验的贝叶斯等价模型就是使用 <a href="https://arxiv.org/abs/1712.06941">潜秩</a>（Latent Rank）来实现的。频率学派的“非参”检验在样本量 <span class="math inline">\(N &gt; 15\)</span> 的时非常准确。</p>
+<div class="figure">
+<img src="https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg" alt="Path to success" />
+<p class="caption">Path to success</p>
+</div>
+<p>在<a href="#links">来源</a>和<a href="#course">教材</a>两章节，有很多类似（尽管更为散乱）的材料。我希望你们可以一起来提供优化建议，或者直接在 <a href="https://github.com/lindeloev/tests-as-linear">Github</a> 提交修改。让我们一起来使本文章变得更棒！</p>
 </div>
 <div id="section-1" class="section level1">
 <h1><span class="header-section-number">2</span> 设置和示例数据</h1>
 <p>如果你想查看函数和本笔记的其它设置的话，可以展开这片代码查看：</p>
 <div class="fold s">
-<pre class="r"><code># Load packages for data handling and plotting
-library(tidyverse)
-library(patchwork)
-library(broom)
 
-# Reproducible &quot;random&quot; results
-set.seed(40)
-
-# Generate normal data with known parameters
-rnorm_fixed &lt;- function(N, mu = 0, sd = 1)
-  scale(rnorm(N)) * sd + mu
-
-# Plot style.
-theme_axis &lt;- function(P,
-                       jitter = FALSE,
-                       xlim = c(-0.5, 2),
-                       ylim = c(-0.5, 2),
-                       legend.position = NULL) {
-  P &lt;- P + theme_bw(15) +
-    geom_segment(
-      x = -1000, xend = 1000,
-      y = 0, yend = 0,
-      lty = 2, color = &quot;dark gray&quot;, lwd = 0.5
-    ) +
-    geom_segment(
-      x = 0, xend = 0,
-      y = -1000, yend = 1000,
-      lty = 2, color = &quot;dark gray&quot;, lwd = 0.5
-    ) +
-    coord_cartesian(xlim = xlim, ylim = ylim) +
-    theme(
-      axis.title = element_blank(),
-      axis.text = element_blank(),
-      axis.ticks = element_blank(),
-      panel.border = element_blank(),
-      panel.grid = element_blank(),
-      legend.position = legend.position
-    )
-
-  # Return jittered or non-jittered plot?
-  if (jitter) {
-    P + geom_jitter(width = 0.1, size = 2)
-  }
-  else {
-    P + geom_point(size = 2)
-  }
-}</code></pre>
 </div>
 <p>一开始，我们简单点，使用三组正态分布数据，且整理为宽（<code>a</code>、<code>b</code>、<code>c</code>）和长（<code>value</code>、<code>group</code>）格式：</p>
 <pre class="r"><code># Wide format (sort of)
@@ -208,11 +149,11 @@ group &lt;- rep(c(&quot;y1&quot;, &quot;y2&quot;), each = 50)</code></pre>
 </div>
 <div id="correlation" class="section level1">
 <h1><span class="header-section-number">3</span> Pearson 相关性和 Spearman 相关性</h1>
-<div id="section-2" class="section level3">
-<h3><span class="header-section-number">3.0.1</span> 理论：作为线性模型</h3>
-<p>模型：<span class="math inline">\(y\)</span> 的形式是一个斜率（<span class="math inline">\(\beta_1\)</span>）乘以 <span class="math inline">\(x\)</span> 加上一个截距（<span class="math inline">\(\beta_0\)</span>，也就是一条直线）。</p>
+<div id="section-2" class="section level2">
+<h2><span class="header-section-number">3.1</span> 理论：作为线性模型</h2>
+<p>模型：<span class="math inline">\(y\)</span> 的形式是一个斜率（<span class="math inline">\(\beta_1\)</span>）乘以 <span class="math inline">\(x\)</span> 加上一个截距（<span class="math inline">\(\beta_0\)</span>），也就是一条直线。</p>
 <p><span class="math inline">\(y = \beta_0 + \beta_1 x \qquad \mathcal{H}_0: \beta_1 = 0\)</span></p>
-<p>以上模型，实际上是我们熟悉的旧公式 <span class="math inline">\(y = ax + b\)</span> （这里书写顺序变为 <span class="math inline">\(y = b + ax\)</span>）的一个“更数学化”的表达。R 里面，我们比较懒，所以写成了 <code>y ~ 1 + x</code>，R 对此理解为 <code>y = 1*数 + x*另一个数</code>，而且，t 检验，线性回归，等等……，都只是去寻找能够最好地预测 <span class="math inline">\(y\)</span> 的数字。</p>
+<p>以上模型，实际上是我们熟悉的旧公式 <span class="math inline">\(y = ax + b\)</span> （这里书写顺序变为 <span class="math inline">\(y = b + ax\)</span>）的一个更数学化的表达。在 R 软件里面，我们比较懒，所以写成了 <code>y ~ 1 + x</code>，R 对此理解为 <span class="math inline">\(y = 1\times\mathrm{数} + x\times\mathrm{另一个数}\)</span>，而且，t 检验，线性回归等等都只是去寻找能够最好地预测 <span class="math inline">\(y\)</span> 的数字。</p>
 <p>无论你怎么书写，截距（<span class="math inline">\(\beta_0\)</span>）和斜率（<span class="math inline">\(\beta_1\)</span>）都可以确定一条直线：</p>
 <div class="fold s">
 <pre class="r"><code># Fixed correlation
@@ -244,10 +185,10 @@ P_pearson &lt;- ggplot(D_correlation, aes(x = X1 * 0.5 + 0.2, y = X2 * 0.5 + 0.4
 theme_axis(P_pearson, legend.position = c(0.4, 0.9))</code></pre>
 <p><img src="https://fyears.github.io/tests-as-linear/index_files/figure-html/unnamed-chunk-4-1.svg" width="576" style="display: block; margin: auto;" /></p>
 </div>
-<p>这通常被称为<strong>回归</strong>模型，而且当右边有多个 <span class="math inline">\(\beta\)</span> 和自变量相乘的时候，它被扩展为<strong>多元回归</strong>。以下的所有模型，从<a href="#t1">单样本 t 检验</a>到<a href="#anova2">双因素方差分析</a>，都只是这个设定下的特殊形式。不多不少。</p>
-<p>正如它名字所示意的，<strong>Spearman 秩相关系数</strong>就是 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 的秩变换后的<strong>Pearson 相关系数</strong>：</p>
-<p><span class="math inline">\(rank(y) = \beta_0 + \beta_1 \cdot rank(x) \qquad \mathcal{H}_0: \beta_1 = 0\)</span></p>
-<p>很快我就会介绍<a href="#rank">秩</a>这一个概念。现在，注意到线性模型的相关系数就是等价于“真正的” Pearson 相关系数，但是 p 值是近似值，<a href="https://fyears.github.io/tests-as-linear/simulations/simulate_spearman.html">这个近似值适用于 N&gt;10，并且在 N &gt; 20 的情况下几乎完美</a>。</p>
+<p>这通常被称为回归模型，而且当右边有多个 <span class="math inline">\(\beta\)</span> 和自变量相乘的时候，它被扩展为多元回归。以下的所有模型，从<a href="#t1">单样本 t 检验</a>到<a href="#anova2">双因素方差分析</a>，都是在这个设定下的特殊形式，不多不少。</p>
+<p>顾名思义，<strong>Spearman 秩相关系数</strong>就是 <span class="math inline">\(x\)</span> 和 <span class="math inline">\(y\)</span> 的秩变换后的<strong>Pearson 相关系数</strong>：</p>
+<p><span class="math inline">\(\mathrm{rank}(y) = \beta_0 + \beta_1 \cdot \mathrm{rank}(x) \qquad \mathcal{H}_0: \beta_1 = 0\)</span></p>
+<p>很快我就会介绍<a href="#rank">秩</a>这一个概念。现在，注意到线性模型的相关系数就是等价于“真正的” Pearson 相关系数，但是 P 值是近似值，这个近似值适用于 <span class="math inline">\(N&gt;10\)</span>，并且在 <span class="math inline">\(N &gt; 20\)</span> 的情况下<a href="https://fyears.github.io/tests-as-linear/simulations/simulate_spearman.html">几乎完美</a>。</p>
 <p>很多学生都没有意识到这么漂亮和神奇的等价关系！对它们带上数据标签来可视化，我们可立刻看到这一秩转换过程：</p>
 <div class="fold s">
 <pre class="r"><code># Spearman intercept
@@ -269,23 +210,22 @@ P_spearman &lt;- ggplot(D_correlation, aes(x = rank(X1), y = rank(X2))) +
 # Stich together using patchwork
 (theme_axis(P_pearson, legend.position = c(0.5, 0.1)) + 
     geom_text(aes(label = label_num), nudge_y = 0.1, size = 3, color = &quot;dark gray&quot;) +
-    labs(title = &quot;         Pearson&quot;)) + 
-  (theme_axis(P_spearman, xlim = c(-7.5, 30), ylim = c(-7.5, 30), 
+    labs(title = &quot;         Pearson&quot;))</code></pre>
+<p><img src="https://fyears.github.io/tests-as-linear/index_files/figure-html/unnamed-chunk-5-1.svg" width="768" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>(theme_axis(P_spearman, xlim = c(-7.5, 30), ylim = c(-7.5, 30), 
               legend.position = c(0.5, 0.1)) + 
      labs(title = &quot;         Spearman&quot;))</code></pre>
-<p><img src="https://fyears.github.io/tests-as-linear/index_files/figure-html/unnamed-chunk-5-1.svg" width="768" style="display: block; margin: auto;" /></p>
+<p><img src="https://fyears.github.io/tests-as-linear/index_files/figure-html/unnamed-chunk-5-2.svg" width="768" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="rank" class="section level3">
-<h3><span class="header-section-number">3.0.2</span> 理论：秩转换</h3>
-<p><code>秩（rank）</code>意思是对于一串数字，使用它们的排序号来“替换”它们（第 1 最小的，第 2 最小的，第 3 最小的，……）。因此 <code>rank(c(3.6, 3.4, -5.0, 8.2))</code> 的秩转换结果是 <code>3, 2, 1, 4</code>。注意到以上图像了吗？</p>
-<p>“符号”秩是相同的，除了我们先根据绝对值排序，再添加上符号。所以以上的符号秩是 <code>2, 1, -3, 4</code>。或者用代码表达：</p>
+<div id="rank" class="section level2">
+<h2><span class="header-section-number">3.2</span> 理论：秩转换</h2>
+<p>对于一串数字，秩（rank）意思是使用它们的排序号来替换它们（第 1 最小的，第 2 最小的，第 3 最小的，以此类推）。因此 <code>rank(c(3.6, 3.4, -5.0, 8.2))</code> 的秩转换结果是 <code>3, 2, 1, 4</code>。从上面的图形里看出来了吗？符号秩是一样的，先根据绝对值排序，再添加上数值前面的符号。所以上面的符号秩是 <code>2, 1, -3, 4</code>。用代码表示如下：</p>
 <pre class="r"><code>signed_rank = function(x) sign(x) * rank(abs(x))</code></pre>
-<p>我希望，我说秩很容易理解的时候，没有冒犯到其他人；然而，这就是你转换大部分参数检验到它们的对应“非参”检验所要做的所有事情！一个重要的推论是，<em>很多“非参”检验和它们的对应参数检验版本都有一致的参数：均值、标准差、方差齐次性，等等 —- 区别在于它们是在秩转换后的数据上计算的</em>。这是为什么我把“非参”用引号包起来。</p>
-</div>
+<p>我希望我说秩很容易理解的时候没有冒犯到其他人。然而，这就是你转换大部分“非参”数检验到它们的对应参数检验所要做的全部事情！一个重要的推论是，很多“非参”检验和它们的对应参数检验版本都有一致的参数：均值、标准差、方差齐次性等等 —- 区别在于它们是在秩转换后的数据上计算的。这是为什么我把“非参”用引号包起来。</p>
 <div id="r-pearson-" class="section level3">
-<h3><span class="header-section-number">3.0.3</span> R 代码：Pearson 相关系数</h3>
-<p>在 R 里运行这些模型再容易不过了。它们产生相同的 <code>p</code> 和 <code>t</code>，但是这里有个问题：<code>lm</code> 返回<em>斜率</em>，尽管它通常比<em>相关系数</em> <em>r</em> 更容易理解和反映了更多信息，你依然想得到 <em>r</em> 值。幸运地，如果 <code>x</code> 和 <code>y</code> 有相同的标准差，斜率就会变成 <code>r</code>。现在，我们使用 <code>scale(x)</code> 使得 <span class="math inline">\(SD(x) = 1.0\)</span> 和 <span class="math inline">\(SD(y) = 1.0\)</span>：</p>
+<h3><span class="header-section-number">3.2.1</span> R 代码：Pearson 相关系数</h3>
+<p>在 R 里运行这些模型再容易不过了。它们产生相同的 <code>p</code> 值和 <code>t</code> 值，但是这里有个问题：<code>lm</code> 返回<em>斜率</em>，尽管它通常比<em>相关系数</em> <em>r</em> 更容易理解和反映了更多信息，但你依然想得到 <em>r</em> 值。幸运地，如果 <code>x</code> 和 <code>y</code> 有相同的标准差，斜率就会变成 <code>r</code>。所以，在这里我们使用 <code>scale(x)</code> 使得 <span class="math inline">\(SD(x) = 1.0\)</span> 和 <span class="math inline">\(SD(y) = 1.0\)</span>：</p>
 <pre class="r"><code>a &lt;- cor.test(y, x, method = &quot;pearson&quot;) # Built-in
 b &lt;- lm(y ~ 1 + x) # Equivalent linear model: y = Beta0*1 + Beta1*x
 c &lt;- lm(scale(y) ~ 1 + scale(x)) # On scaled vars to recover r</code></pre>
@@ -342,9 +282,9 @@ c &lt;- lm(scale(y) ~ 1 + scale(x)) # On scaled vars to recover r</code></pre>
 <p>置信区间没有完全一致，但是非常相近。</p>
 </div>
 <div id="r-spearman-" class="section level3">
-<h3><span class="header-section-number">3.0.4</span> R 代码：Spearman 相关系数</h3>
-<p>注意，我们可以把斜率解释为：对于每一 <span class="math inline">\(x\)</span> 的秩的变化，所获得的相应 <span class="math inline">\(y\)</span> 的秩的变化。我认为这个数字非常有趣。然而，截距更难解释，因为它定义在 <span class="math inline">\(rank(x) = 0\)</span> 的时候，然而这其实是不可能的，因为 x 是从 1 开始的。</p>
-<p>查看相同的 <code>r</code> (now “rho”) 和 <code>p</code>：</p>
+<h3><span class="header-section-number">3.2.2</span> R 代码：Spearman 相关系数</h3>
+<p>注意，我们可以把斜率解释为：对于每一 <span class="math inline">\(x\)</span> 的秩的变化，所获得的相应 <span class="math inline">\(y\)</span> 的秩的变化。我认为这个数字非常有趣。然而，截距更难解释，因为它定义在 <span class="math inline">\(\mathrm{rank}(x) = 0\)</span> 的时候，然而这其实是不可能的，因为 x 是从 1 开始的。</p>
+<p>查看相同的 <code>r</code> （即这里的 <code>rho</code>） 和 <code>p</code>：</p>
 <pre class="r"><code># Spearman correlation
 a &lt;- cor.test(y, x, method = &quot;spearman&quot;) # Built-in
 b &lt;- lm(rank(y) ~ 1 + rank(x)) # Equivalent linear model</code></pre>
@@ -383,6 +323,7 @@ b &lt;- lm(rank(y) ~ 1 + rank(x)) # Equivalent linear model</code></pre>
 </div>
 </div>
 </div>
+</div>
 <div id="section-3" class="section level1">
 <h1><span class="header-section-number">4</span> 单均值</h1>
 <div id="t1" class="section level2">
@@ -394,7 +335,7 @@ b &lt;- lm(rank(y) ~ 1 + rank(x)) # Equivalent linear model</code></pre>
 <p>换句话说，这是我们所熟悉的 <span class="math inline">\(y = \beta_0 + \beta_1*x\)</span>，其中最后一项消失了，因为 <span class="math inline">\(x\)</span> 不存在了（等价地，<span class="math inline">\(x=0\)</span>。见下方左图）。</p>
 <p>以上模型，一旦用 <span class="math inline">\(y\)</span> 的<a href="#rank">符号秩</a>来替换了 <span class="math inline">\(y\)</span> 本身（见下方右图），就和<strong>Wilcoxon 符号秩检验</strong>非常相近。</p>
 <p><span class="math inline">\(signed\_rank(y) = \beta_0\)</span></p>
-<p><a href="https://fyears.github.io/tests-as-linear/simulations/simulate_wilcoxon.html">这个近似对于样本量大于 14 的情况已足够好，对于大于 50 的情况下接近完美</a>。</p>
+<p>这个近似对于样本量大于 14 的情况已足够好，对于大于 50 的情况下<a href="https://fyears.github.io/tests-as-linear/simulations/simulate_wilcoxon.html">接近完美</a>。</p>
 <div class="fold s">
 <pre class="r"><code># T-test
 D_t1 &lt;- data.frame(
@@ -430,9 +371,10 @@ P_t1_rank &lt;- ggplot(D_t1_rank, aes(y = y, x = 0)) +
   labs(title = &quot;         Wilcoxon&quot;)
 
 # Stich together using patchwork
-theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1)) +
-  theme_axis(P_t1_rank, ylim = NULL, legend.position = c(0.6, 0.1))</code></pre>
+theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1))</code></pre>
 <p><img src="https://fyears.github.io/tests-as-linear/index_files/figure-html/unnamed-chunk-13-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>theme_axis(P_t1_rank, ylim = NULL, legend.position = c(0.6, 0.1))</code></pre>
+<p><img src="https://fyears.github.io/tests-as-linear/index_files/figure-html/unnamed-chunk-13-2.svg" width="672" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="r--t-" class="section level3">
@@ -547,8 +489,10 @@ P_tpaired &lt;- ggplot(D_tpaired, aes(x = x, y = y)) +
   labs(title = &quot;          Pairs&quot;)
 
 # Use patchwork to put them side-by-side
-theme_axis(P_tpaired) + theme_axis(P_t1, legend.position = c(0.6, 0.1))</code></pre>
+theme_axis(P_tpaired)</code></pre>
 <p><img src="https://fyears.github.io/tests-as-linear/index_files/figure-html/unnamed-chunk-20-1.svg" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>theme_axis(P_t1, legend.position = c(0.6, 0.1))</code></pre>
+<p><img src="https://fyears.github.io/tests-as-linear/index_files/figure-html/unnamed-chunk-20-2.svg" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <p>相似地，<strong>Wilcoxon 配对组</strong>和<strong>Wilcoxon 符号秩</strong>的唯一差别，就是它是对配对的 <span class="math inline">\(y-x\)</span> 差的符号秩进行检验。</p>
 <p><span class="math inline">\(signed\_rank(y_2-y_1) = \beta_0 \qquad \mathcal{H}_0: \beta_0 = 0\)</span></p>
@@ -809,12 +753,13 @@ b &lt;- lm(rank(value) ~ 1 + group_y2) # compare to linear model above</code></p
 </div>
 <div id="welch" class="section level2">
 <h2><span class="header-section-number">5.2</span> Welch t 检验</h2>
-<p>这等价于以上（学生）<a href="#t2">独立 t 检验</a>，除了学生 t 检验假设同方差，而 <strong>Welch t 检验</strong> 没有这个假设。所以线性模型是相同的，区别在于，我们对每一个组指定一个方差。我们可用 <code>nlme</code> 包（<a href="https://stats.stackexchange.com/questions/142685/equivalent-to-welchs-t-test-in-gls-framework">查阅细节</a>）：</p>
+<p>这等价于以上（学生）<a href="#t2">独立 t 检验</a>，除了学生 t 检验假设同方差，而 <strong>Welch t 检验</strong> 没有这个假设。所以线性模型是相同的，区别在于，我们对每一个组指定一个方差。我们可用 <code>nlme</code> 包（<a href="https://stats.stackexchange.com/questions/142685/">查阅细节</a>）：</p>
 <pre class="r"><code># Built-in
 a &lt;- t.test(y, y2, var.equal = FALSE)
 
 # As linear model with per-group variances
-b &lt;- nlme::gls(value ~ 1 + group_y2, weights = nlme::varIdent(form = ~ 1 | group), method = &quot;ML&quot;)</code></pre>
+b &lt;- nlme::gls(value ~ 1 + group_y2, method = &quot;ML&quot;, 
+               weights = nlme::varIdent(form = ~ 1 | group))</code></pre>
 <p>结果：</p>
 <div id="htmlwidget-13141ec77403f9884899" style="width:100%;height:auto;" class="datatables html-widget"></div>
 <script type="application/json" data-for="htmlwidget-13141ec77403f9884899">{"x":{"filter":"none","data":[["t.test","gls"],[-0.0952,-0.0952],[0.5952,0.5952],[0.0753,0.0753],[-1.798,-1.798],[-0.062,-0.0536],[1.2524,1.244]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>model<\/th>\n      <th>mean_y<\/th>\n      <th>mean_diff<\/th>\n      <th>p.value<\/th>\n      <th>t<\/th>\n      <th>conf.low<\/th>\n      <th>conf.high<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"lengthChange":false,"ordering":false,"autoWidth":true,"bPaginate":false,"bInfo":false,"paging":false,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6]}],"order":[],"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
@@ -910,7 +855,7 @@ theme_axis(P_anova1, xlim = c(-0.5, 4), legend.position = c(0.7, 0.1))</code></p
 <p>单因素方差分析有一个对数线性版本，称为<a href="#goodness">拟合优度</a>检验，我们稍后会讲到。顺便一说，因为我们现在对多个 <span class="math inline">\(x\)</span> 进行回归，因此单因素方差分析是 <strong>多元回归</strong> 模型。</p>
 <p><strong>Kruskal-Wallis</strong> 检验只是对于秩转换的 <span class="math inline">\(y\)</span>（<code>value</code>）的 <strong>单因素方差分析</strong>：</p>
 <p><span class="math inline">\(rank(y) = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 +...\)</span></p>
-<p>这个近似<a href="https://fyears.github.io/tests-as-linear/simulations/simulate_kruskall.html">在 12 或更多数据点时候已经近似得足够好</a>。同样，如果你对一个或两个组做这个检验，我们已经有对应等式，分别为 <a href="#t1">Wilcoxon 符号秩检验</a> 或 <a href="#t2">Mann-Whitney U 检验</a>。</p>
+<p>这个近似在 12 或更多数据点时候已经近似得<a href="https://fyears.github.io/tests-as-linear/simulations/simulate_kruskall.html">足够好</a>。同样，如果你对一个或两个组做这个检验，我们已经有对应等式，分别为 <a href="#t1">Wilcoxon 符号秩检验</a> 或 <a href="#t2">Mann-Whitney U 检验</a>。</p>
 </div>
 <div id="section-10" class="section level3">
 <h3><span class="header-section-number">6.1.2</span> 示例数据</h3>
@@ -1318,12 +1263,12 @@ c &lt;- glm(counts ~ mood, data = D, family = poisson())</code></pre>
 <p>理论：作为对数线性模型</p>
 <p>这里的理论会变得更令人费解，我会简单地写一下，从而你可以<em>感受</em>到它其实就是对数线性<a href="#anova2">双因素方差分析模型</a>。来，开始探索……</p>
 <p>对于双因素列联表，计数变量 <span class="math inline">\(y\)</span> 的模型使用了列联表的边缘比率来建模。为什么这是可行的呢？答案比较高深，我们不会在这里详解，但读者可以通过查阅 <a href="https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf">Christoph Scheepers 的相关幻灯片</a>来获得精彩的解答。这个模型包含了很多计数变量和回归系数 <span class="math inline">\(A_i\)</span> 和 <span class="math inline">\(B_i\)</span>：</p>
-<p><span class="math inline">\(y_i = N \cdot x_i(A_i/N) \cdot z_j(B_j/N) \cdot x_{ij}/((A_i x_i)/(B_j z_j)/N)\)</span></p>
+<p><span class="math display">\[y_i = N \cdot x_i(A_i/N) \cdot z_j(B_j/N) \cdot x_{ij}/((A_i x_i)/(B_j z_j)/N)\]</span></p>
 <p>多复杂呀！！！这里，<span class="math inline">\(i\)</span> 是行标号，<span class="math inline">\(j\)</span> 列标号，<span class="math inline">\(x_{something}\)</span> 是那一行和/或列的求和值：<span class="math inline">\(N = sum(y)\)</span>。请记得，<span class="math inline">\(y\)</span> 是计数变量，所以 <span class="math inline">\(N\)</span> 其实就是总计数值。</p>
 <p>我们可以通过定义<em>比率</em> 来简化以上记号：<span class="math inline">\(\alpha_i = x_i(A_i/N)\)</span>，<span class="math inline">\(\beta_i = x_j(B_i/N)\)</span>，<span class="math inline">\(\alpha_i\beta_j = x_{ij}/(A_i x_i)/(B_j z_j)/N\)</span>。重写模型如下：</p>
-<p><span class="math inline">\(y_i = N \cdot \alpha_i \cdot \beta_j \cdot \alpha_i\beta_j\)</span></p>
-<p>嗯，好多了。然而，这里依然有很多乘法项，使得我们很难直觉上理解变量之间是如何交互的。如果我们记得 <span class="math inline">\(log(A \cdot B) = log(A) + log(B)\)</span>，那么我们可以使得变得更为清晰易懂。两边取对数变换，可得：</p>
-<p><span class="math inline">\(log(y_i) = log(N) + log(\alpha_i) + log(\beta_j) + log(\alpha_i\beta_j)\)</span></p>
+<p><span class="math display">\[y_i = N \cdot \alpha_i \cdot \beta_j \cdot \alpha_i\beta_j\]</span></p>
+<p>嗯，好多了。然而，这里依然有很多乘法项，使得我们很难直觉上理解变量之间是如何交互的。如果我们记得 <span class="math inline">\(\log(A \cdot B) = \log(A) + \log(B)\)</span>，那么我们可以使得变得更为清晰易懂。两边取对数变换，可得：</p>
+<p><span class="math display">\[\log(y_i) = \log(N) + \log(\alpha_i) + \log(\beta_j) + \log(\alpha_i\beta_j)\]</span></p>
 <p>太爽了！现在我们可以直观地理解，回归系数（都是比率）是怎样独立地影响到 <span class="math inline">\(y\)</span> 的。这就是为什么对数变换对比率数据如此有效。注意到，这其实就是<a href="#anova2">双因素方差分析模型</a>加上一些对数变换，从而我们可以回到我们所熟悉的旧线性模型—-除了对系数的解释发生了变化而已！此外我们不能继续使用 R 里的 <code>lm</code> 函数了。</p>
 <div id="section-13" class="section level3">
 <h3><span class="header-section-number">7.2.1</span> 示例数据</h3>
@@ -1444,7 +1389,7 @@ d &lt;- MASS::loglm(Freq ~ mood + sex, D)</code></pre>
 <p>下面提供了对其它介绍了一部分本文内容的资料来源的链接，它们也包含了更多这里没有提到的等价性模型：</p>
 <ul>
 <li>Cross Validated 网站上，<a href="https://stats.stackexchange.com/questions/303269/common-statistical-tests-as-linear-models">我的原始想法</a>。</li>
-<li>对于非参检验，<a href="https://stats.stackexchange.com/questions/210529/are-parametric-tests-on-rank-transformed-data-equivalent-to-non-parametric-test?noredirect=1#comment399981_210529">我之前提出的疑问</a>，和有用的答案。</li>
+<li>对于“非参”检验，<a href="https://stats.stackexchange.com/questions/210529/are-parametric-tests-on-rank-transformed-data-equivalent-to-non-parametric-test?noredirect=1#comment399981_210529">我之前提出的疑问</a>，和有用的答案。</li>
 <li>StackOverflow 网站上，这个关于 t 检验和方差分析的<a href="https://stats.stackexchange.com/questions/59047/how-are-regression-the-t-test-and-the-anova-all-versions-of-the-general-linear">问题和回答</a>。</li>
 <li><a href="https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf">Christoph Scheepers 的幻灯片</a>，介绍了卡方检验如何被理解为对数线性模型。</li>
 <li><a href="https://rpubs.com/palday/glm-test">Philip M. Alday 的笔记</a>，里面包括了卡方、二项、多项、泊松分布作为对数线性模型和 logistic 模型的理解。这里介绍的“等价性”没有我在本文里所上展示的那些那么精确，因此我没有在本文详细介绍。然而，它们还是对理解这些检验有着优秀的帮助的！</li>
