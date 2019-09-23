@@ -1,5 +1,5 @@
 ---
-title: "翻译：常见的统计检验是线性模型（或：如何教导统计学）"
+title: "翻译：常见统计检验的本质都是线性模型（或：如何教统计学）"
 author: "Jonas Kristoffer Lindeløv"
 date: "2019-08-31"
 categories:
@@ -9,7 +9,7 @@ categories:
 tags:
   - 方法论
   - 统计学
-meta_extra: "译者：黄俊文"
+meta_extra: "译者：黄俊文 校对：蔡占锐，谢益辉，黄湘云 编辑：孙腾飞、任焱"
 slug: common-tests-as-linear-models
 lang: "zh-Hans"
 output: 
@@ -72,28 +72,27 @@ lapply(c(
 
 > 本文翻译自 [Jonas Kristoffer Lindeløv](https://lindeloev.net/) 的 [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/)，翻译工作已获得原作授权。
 
-本文将常见的参数和非参数检验统一用线性模型来表示，在同一个框架下， 我们可以看到不同检验之间的许多相似之处，极富思考性和启发性。点击链接可获得一份 [PDF 电子版](linear_tests_cheat_sheet.pdf) 或 [HTML 网页版](linear_tests_cheat_sheet.html)。
+本文将常见的参数和“非参”数检验统一用线性模型来表示，在同一个框架下， 我们可以看到不同检验之间的许多相似之处，极富思考性和启发性。点击链接可获得一份 [PDF 电子版](linear_tests_cheat_sheet.pdf) 或 [HTML 网页版](linear_tests_cheat_sheet.html)。
 
 [![linear-tests-cheat-heet](linear_tests_cheat_sheet.png)](linear_tests_cheat_sheet.pdf)
 
 
 # 常见检验的简洁本质
 
-大部分常见的统计模型（t 检验、相关性、方差分析（ANOVA）、卡方等）是线性模型的特殊情况或者是非常接近的近似。这种优雅的简洁性意味着我们学习起来不需要掌握太多的技巧。具体来说，这都来源于大部分学生从高中就学习的模型：$y = a \cdot x + b$。然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。
-在学习每一个检验的基本假设时，如果不是从线性模型切入，而是每个检验都死记硬背，这种复杂性又会成倍增加。因此，我认为先教线性模型，然后对线性模型的一些特殊形式进行改名是一种优秀的教学策略，这有助于更深刻地理解假设检验。线性模型在频率学派、贝叶斯学派和基于置换的统计推断之间是相通的，对初学者而言，从模型开始比从 P 值、第 I 类错误、贝叶斯因子或其它地方更为友好。
+大部分常见的统计模型（t 检验、相关性检验、方差分析（ANOVA）、卡方检验等） 是线性模型的特殊情况或者是非常好的近似。这种优雅的简洁性意味着我们学习起来不需要掌握太多的技巧。具体来说，这都来源于大部分学生从高中就学习的模型：$y = a \cdot x + b$。 然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。在学习每一个检验的基本假设时，如果不是从线性模型切入，而是每个检验都死记硬背，这种复杂性又会成倍增加。因此，我认为先教线性模型，然后对线性模型的一些特殊形式进行改名是一种优秀的教学策略，这有助于更深刻地理解假设检验。线性模型在频率学派、贝叶斯学派和基于置换的U检验的统计推断之间是相通的，对初学者而言，从模型开始比从 P 值、第 I 类错误、贝叶斯因子或其它地方更为友好。
 
-当考虑到在入门课程教授非参数检验的时候，我认为我们可以避开 [欺骗儿童](https://en.wikipedia.org/wiki/Lie-to-children) 的手段，直接告诉学生非参检验其实就是和秩相关的参数检验。对学生来说，接受秩的概念比相信你可以神奇地放弃各种假设好的多。实际上，在统计软件 [JASP](https://jasp-stats.org/) 里，非参检验的贝叶斯等价模型就是使用 [潜秩](https://arxiv.org/abs/1712.06941)来实现的。频率学派的非参检验在样本量 $N > 15$ 的时非常准确。
+在入门课程教授“非参”数检验的时候，我认为我们可以避开 [欺骗儿童](https://en.wikipedia.org/wiki/Lie-to-children) 的手段，直接告诉学生“非参”检验其实就是和秩相关的参数检验。对学生来说，接受秩的概念比相信你可以神奇地放弃各种假设好的多。实际上，在统计软件 [JASP](https://jasp-stats.org/) 里，“非参”检验的贝叶斯等价模型就是使用 [潜秩](https://arxiv.org/abs/1712.06941)（Latent Rank）来实现的。频率学派的“非参”检验在样本量 $N > 15$ 的时非常准确。
 
-![](https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg)
+![Path to success](https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg)
 
-使用导航栏来跳转到你最喜欢的章节（因排版问题，统计之都翻译版没有导航栏，可以直接搜索相关关键词。----译者著）。在[来源](#links)和[教材](#course)两章节，有很多类似（尽管更为散乱）的材料。我希望你们可以一起来提供优化建议，或者直接在[Github](https://github.com/lindeloev/tests-as-linear)提交修改。让我们一起来使本文章变得更棒！
+在[来源](#links)和[教材](#course)两章节，有很多类似（尽管更为散乱）的材料。我希望你们可以一起来提供优化建议，或者直接在 [Github](https://github.com/lindeloev/tests-as-linear) 提交修改。让我们一起来使本文章变得更棒！
 
 # 设置和示例数据
 
 如果你想查看函数和本笔记的其它设置的话，可以展开这片代码查看：
 
 <div class='fold s'>
-```{r, message=FALSE, warning=FALSE, results='hide'}
+```{r, echo=FALSE, R.options=list(tidyverse.quiet = TRUE), message=FALSE}
 # Load packages for data handling and plotting
 library(tidyverse)
 library(patchwork)
@@ -162,13 +161,14 @@ group <- rep(c("y1", "y2"), each = 50)
 
 
 # Pearson 相关性和 Spearman 相关性 {#correlation}
-### 理论：作为线性模型
 
-模型：$y$ 的形式是一个斜率（$\beta_1$）乘以 $x$ 加上一个截距（$\beta_0$，也就是一条直线）。
+## 理论：作为线性模型
+
+模型：$y$ 的形式是一个斜率（$\beta_1$）乘以 $x$ 加上一个截距（$\beta_0$），也就是一条直线。
 
 $y = \beta_0 + \beta_1 x \qquad \mathcal{H}_0: \beta_1 = 0$
 
-以上模型，实际上是我们熟悉的旧公式 $y = ax + b$ （这里书写顺序变为 $y = b + ax$）的一个“更数学化”的表达。R 里面，我们比较懒，所以写成了 `y ~ 1 + x`，R 对此理解为 `y = 1*数 + x*另一个数`，而且，t 检验，线性回归，等等......，都只是去寻找能够最好地预测 $y$ 的数字。
+以上模型，实际上是我们熟悉的旧公式 $y = ax + b$ （这里书写顺序变为 $y = b + ax$）的一个更数学化的表达。在 R 软件里面，我们比较懒，所以写成了 `y ~ 1 + x`，R 对此理解为 $y = 1\times\mathrm{数} + x\times\mathrm{另一个数}$，而且，t 检验，线性回归等等都只是去寻找能够最好地预测 $y$ 的数字。
 
 无论你怎么书写，截距（$\beta_0$）和斜率（$\beta_1$）都可以确定一条直线： 
 
@@ -204,13 +204,13 @@ theme_axis(P_pearson, legend.position = c(0.4, 0.9))
 ```
 </div>
 
-这通常被称为**回归**模型，而且当右边有多个 $\beta$ 和自变量相乘的时候，它被扩展为**多元回归**。以下的所有模型，从[单样本 t 检验](#t1)到[双因素方差分析](#anova2)，都只是这个设定下的特殊形式。不多不少。
+这通常被称为回归模型，而且当右边有多个 $\beta$ 和自变量相乘的时候，它被扩展为多元回归。以下的所有模型，从[单样本 t 检验](#t1)到[双因素方差分析](#anova2)，都是在这个设定下的特殊形式，不多不少。
 
-正如它名字所示意的，**Spearman 秩相关系数**就是 $x$ 和 $y$ 的秩变换后的**Pearson 相关系数**：
+顾名思义，**Spearman 秩相关系数**就是 $x$ 和 $y$ 的秩变换后的**Pearson 相关系数**：
 
-$rank(y) = \beta_0 + \beta_1 \cdot rank(x) \qquad \mathcal{H}_0: \beta_1 = 0$
+$\mathrm{rank}(y) = \beta_0 + \beta_1 \cdot \mathrm{rank}(x) \qquad \mathcal{H}_0: \beta_1 = 0$
 
-很快我就会介绍[秩](#rank)这一个概念。现在，注意到线性模型的相关系数就是等价于“真正的” Pearson 相关系数，但是 p 值是近似值，[这个近似值适用于 N>10，并且在 N > 20 的情况下几乎完美](simulations/simulate_spearman.html)。
+很快我就会介绍[秩](#rank)这一个概念。现在，注意到线性模型的相关系数就是等价于“真正的” Pearson 相关系数，但是 P 值是近似值，这个近似值适用于 $N>10$，并且在 $N > 20$ 的情况下[几乎完美](simulations/simulate_spearman.html)。
 
 很多学生都没有意识到这么漂亮和神奇的等价关系！对它们带上数据标签来可视化，我们可立刻看到这一秩转换过程：
 
@@ -235,30 +235,29 @@ P_spearman <- ggplot(D_correlation, aes(x = rank(X1), y = rank(X2))) +
 # Stich together using patchwork
 (theme_axis(P_pearson, legend.position = c(0.5, 0.1)) + 
     geom_text(aes(label = label_num), nudge_y = 0.1, size = 3, color = "dark gray") +
-    labs(title = "         Pearson")) + 
-  (theme_axis(P_spearman, xlim = c(-7.5, 30), ylim = c(-7.5, 30), 
+    labs(title = "         Pearson"))
+
+(theme_axis(P_spearman, xlim = c(-7.5, 30), ylim = c(-7.5, 30), 
               legend.position = c(0.5, 0.1)) + 
      labs(title = "         Spearman"))
 ```
 </div>
 
 
-### 理论：秩转换 {#rank}
+## 理论：秩转换 {#rank}
 
-`秩（rank）`意思是对于一串数字，使用它们的排序号来“替换”它们（第 1 最小的，第 2 最小的，第 3 最小的，......）。因此 `rank(c(3.6, 3.4, -5.0, 8.2))` 的秩转换结果是 `3, 2, 1, 4`。注意到以上图像了吗？ 
-
-“符号”秩是相同的，除了我们先根据绝对值排序，再添加上符号。所以以上的符号秩是 `2, 1, -3, 4`。或者用代码表达：
+对于一串数字，秩（rank）意思是使用它们的排序号来替换它们（第 1 最小的，第 2 最小的，第 3 最小的，以此类推）。因此 `rank(c(3.6, 3.4, -5.0, 8.2))` 的秩转换结果是 `3, 2, 1, 4`。从上面的图形里看出来了吗？符号秩是一样的，先根据绝对值排序，再添加上数值前面的符号。所以上面的符号秩是 `2, 1, -3, 4`。用代码表示如下：
 
 ```{r}
 signed_rank = function(x) sign(x) * rank(abs(x))
 ```
 
-我希望，我说秩很容易理解的时候，没有冒犯到其他人；然而，这就是你转换大部分参数检验到它们的对应非参检验所要做的所有事情！一个重要的推论是，很多非参检验和它们的对应参数检验版本都有一致的参数：均值、标准差、方差齐次性，等等 ---- 区别在于它们是在秩转换后的数据上计算的。这是为什么我把非参用引号包起来。
+我希望我说秩很容易理解的时候没有冒犯到其他人。然而，这就是你转换大部分“非参”数检验到它们的对应参数检验所要做的全部事情！一个重要的推论是，很多“非参”检验和它们的对应参数检验版本都有一致的参数：均值、标准差、方差齐次性等等 ---- 区别在于它们是在秩转换后的数据上计算的。这是为什么我把“非参”用引号包起来。
 
 
 ### R 代码：Pearson 相关系数
 
-在 R 里运行这些模型再容易不过了。它们产生相同的 `p` 和 `t`，但是这里有个问题：`lm` 返回*斜率*，尽管它通常比*相关系数* *r* 更容易理解和反映了更多信息，你依然想得到 *r* 值。幸运地，如果 `x` 和 `y` 有相同的标准差，斜率就会变成 `r`。现在，我们使用 `scale(x)` 使得 $SD(x) = 1.0$ 和 $SD(y) = 1.0$：
+在 R 里运行这些模型再容易不过了。它们产生相同的 `p` 值和 `t` 值，但是这里有个问题：`lm` 返回*斜率*，尽管它通常比*相关系数* *r* 更容易理解和反映了更多信息，但你依然想得到 *r* 值。幸运地，如果 `x` 和 `y` 有相同的标准差，斜率就会变成 `r`。所以，在这里我们使用 `scale(x)` 使得 $SD(x) = 1.0$ 和 $SD(y) = 1.0$：
 
 
 ```{r}
@@ -304,7 +303,7 @@ summary(c)
 
 ### R 代码：Spearman 相关系数
 
-注意，我们可以把斜率解释为：对于每一 $x$ 的秩的变化，所获得的相应 $y$ 的秩的变化。我认为这个数字非常有趣。然而，截距更难解释，因为它定义在 $rank(x) = 0$ 的时候，然而这其实是不可能的，因为 x 是从 1 开始的。
+注意，我们可以把斜率解释为：对于每一 $x$ 的秩的变化，所获得的相应 $y$ 的秩的变化。我认为这个数字非常有趣。然而，截距更难解释，因为它定义在 $\mathrm{rank}(x) = 0$ 的时候，然而这其实是不可能的，因为 x 是从 1 开始的。
 
 查看相同的 `r` （即这里的 `rho`） 和 `p`：
 
@@ -348,7 +347,7 @@ $y = \beta_0 \qquad \mathcal{H}_0: \beta_0 = 0$
 
 $signed\_rank(y) = \beta_0$
 
-[这个近似对于样本量大于 14 的情况已足够好，对于大于 50 的情况下接近完美](simulations/simulate_wilcoxon.html)。
+这个近似对于样本量大于 14 的情况已足够好，对于大于 50 的情况下[接近完美](simulations/simulate_wilcoxon.html)。
 
 <div class="fold s">
 ```{r fig.width=7, fig.height=5}
@@ -386,8 +385,8 @@ P_t1_rank <- ggplot(D_t1_rank, aes(y = y, x = 0)) +
   labs(title = "         Wilcoxon")
 
 # Stich together using patchwork
-theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1)) +
-  theme_axis(P_t1_rank, ylim = NULL, legend.position = c(0.6, 0.1))
+theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1))
+theme_axis(P_t1_rank, ylim = NULL, legend.position = c(0.6, 0.1))
 ```
 </div>
 
@@ -487,7 +486,8 @@ P_tpaired <- ggplot(D_tpaired, aes(x = x, y = y)) +
   labs(title = "          Pairs")
 
 # Use patchwork to put them side-by-side
-theme_axis(P_tpaired) + theme_axis(P_t1, legend.position = c(0.6, 0.1))
+theme_axis(P_tpaired)
+theme_axis(P_t1, legend.position = c(0.6, 0.1))
 ```
 </div>
 
@@ -580,7 +580,7 @@ $y_i = \beta_0 + \beta_1 x_i \qquad \mathcal{H}_0: \beta_1 = 0$
 
 $rank(y_i) = \beta_0 + \beta_1 x_i \qquad \mathcal{H}_0: \beta_1 = 0$
 
-对我来说，这种等价性使得非参统计量更为容易地理解了。这种近似[在每个组样本量大于 11 的时候比较合适，在每个组样本量大于 30 的时候视觉效果上相当完美](simulations/simulate_mannwhitney.html).
+对我来说，这种等价性使得“非参”统计量更为容易地理解了。这种近似[在每个组样本量大于 11 的时候比较合适，在每个组样本量大于 30 的时候视觉效果上相当完美](simulations/simulate_mannwhitney.html).
 
 ### 理论：示性变量 {#dummy}
 
@@ -712,6 +712,7 @@ summary(b)
 
 
 ## Welch t 检验 {#welch}
+
 这等价于以上（学生）[独立 t 检验](#t2)，除了学生 t 检验假设同方差，而 **Welch t 检验** 没有这个假设。所以线性模型是相同的，区别在于，我们对每一个组指定一个方差。我们可用 `nlme` 包（[查阅细节](https://stats.stackexchange.com/questions/142685/)）：
 
 ```{r, results='hold'}
@@ -719,7 +720,8 @@ summary(b)
 a <- t.test(y, y2, var.equal = FALSE)
 
 # As linear model with per-group variances
-b <- nlme::gls(value ~ 1 + group_y2, weights = nlme::varIdent(form = ~ 1 | group), method = "ML")
+b <- nlme::gls(value ~ 1 + group_y2, method = "ML", 
+               weights = nlme::varIdent(form = ~ 1 | group))
 ```
 
 结果：
@@ -802,7 +804,7 @@ theme_axis(P_anova1, xlim = c(-0.5, 4), legend.position = c(0.7, 0.1))
 
 $rank(y) = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 +...$
 
-这个近似[在 12 或更多数据点时候已经近似得足够好](simulations/simulate_kruskall.html)。同样，如果你对一个或两个组做这个检验，我们已经有对应等式，分别为 [Wilcoxon 符号秩检验](#t1) 或 [Mann-Whitney U 检验](#t2)。 
+这个近似在 12 或更多数据点时候已经近似得[足够好](simulations/simulate_kruskall.html)。同样，如果你对一个或两个组做这个检验，我们已经有对应等式，分别为 [Wilcoxon 符号秩检验](#t1) 或 [Mann-Whitney U 检验](#t2)。 
 
 
 ### 示例数据
@@ -831,6 +833,7 @@ print_df(D, navigate=TRUE)
 
 
 ### R 代码：单因素方差分析
+
 OK，我们来看看一个专用的**方差分析**函数（`car::Anova`）和手动创建示性变量的 `lm` 线性模型结果是否一致：
 
 
@@ -1214,17 +1217,17 @@ b
 
 对于双因素列联表，计数变量 $y$ 的模型使用了列联表的边缘比率来建模。为什么这是可行的呢？答案比较高深，我们不会在这里详解，但读者可以通过查阅 [Christoph Scheepers 的相关幻灯片](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)来获得精彩的解答。这个模型包含了很多计数变量和回归系数 $A_i$ 和 $B_i$：
 
-$y_i = N \cdot x_i(A_i/N) \cdot z_j(B_j/N) \cdot x_{ij}/((A_i x_i)/(B_j z_j)/N)$ 
+$$y_i = N \cdot x_i(A_i/N) \cdot z_j(B_j/N) \cdot x_{ij}/((A_i x_i)/(B_j z_j)/N)$$ 
 
 多复杂呀！！！这里，$i$ 是行标号，$j$ 列标号，$x_{something}$ 是那一行和/或列的求和值：$N = sum(y)$。请记得，$y$ 是计数变量，所以 $N$ 其实就是总计数值。
 
 我们可以通过定义*比率* 来简化以上记号：$\alpha_i = x_i(A_i/N)$，$\beta_i = x_j(B_i/N)$，$\alpha_i\beta_j =  x_{ij}/(A_i x_i)/(B_j z_j)/N$。重写模型如下：
 
-$y_i = N \cdot \alpha_i \cdot \beta_j \cdot \alpha_i\beta_j$
+$$y_i = N \cdot \alpha_i \cdot \beta_j \cdot \alpha_i\beta_j$$
 
-嗯，好多了。然而，这里依然有很多乘法项，使得我们很难直觉上理解变量之间是如何交互的。如果我们记得 $log(A \cdot B) = log(A) + log(B)$，那么我们可以使得变得更为清晰易懂。两边取对数变换，可得：
+嗯，好多了。然而，这里依然有很多乘法项，使得我们很难直觉上理解变量之间是如何交互的。如果我们记得 $\log(A \cdot B) = \log(A) + \log(B)$，那么我们可以使得变得更为清晰易懂。两边取对数变换，可得：
 
-$log(y_i) = log(N) + log(\alpha_i) + log(\beta_j) + log(\alpha_i\beta_j)$
+$$\log(y_i) = \log(N) + \log(\alpha_i) + \log(\beta_j) + \log(\alpha_i\beta_j)$$
 
 太爽了！现在我们可以直观地理解，回归系数（都是比率）是怎样独立地影响到 $y$ 的。这就是为什么对数变换对比率数据如此有效。注意到，这其实就是[双因素方差分析模型](#anova2)加上一些对数变换，从而我们可以回到我们所熟悉的旧线性模型----除了对系数的解释发生了变化而已！此外我们不能继续使用 R 里的 `lm` 函数了。
 
@@ -1310,12 +1313,12 @@ summary(full)
 下面提供了对其它介绍了一部分本文内容的资料来源的链接，它们也包含了更多这里没有提到的等价性模型：
 
  * Cross Validated 网站上，[我的原始想法](https://stats.stackexchange.com/questions/303269/common-statistical-tests-as-linear-models)。 
- * 对于非参检验，[我之前提出的疑问](https://stats.stackexchange.com/questions/210529/are-parametric-tests-on-rank-transformed-data-equivalent-to-non-parametric-test?noredirect=1#comment399981_210529)，和有用的答案。
+ * 对于“非参”检验，[我之前提出的疑问](https://stats.stackexchange.com/questions/210529/are-parametric-tests-on-rank-transformed-data-equivalent-to-non-parametric-test?noredirect=1#comment399981_210529)，和有用的答案。
  * StackOverflow 网站上，这个关于 t 检验和方差分析的[问题和回答](https://stats.stackexchange.com/questions/59047/how-are-regression-the-t-test-and-the-anova-all-versions-of-the-general-linear)。
  * [Christoph Scheepers 的幻灯片](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)，介绍了卡方检验如何被理解为对数线性模型。
  * [Philip M. Alday 的笔记](https://rpubs.com/palday/glm-test)，里面包括了卡方、二项、多项、泊松分布作为对数线性模型和 logistic 模型的理解。这里介绍的“等价性”没有我在本文里所上展示的那些那么精确，因此我没有在本文详细介绍。然而，它们还是对理解这些检验有着优秀的帮助的！
  * [Kristoffer Magnusson 的文章](https://rpsychologist.com/r-guide-longitudinal-lme-lmer)，使用 `lme4::lmer` 混合模型（mixed model）介绍了 RM-ANOVA 和增长模型（growth model）。
- * [Thom Baguley 的文章](https://seriousstats.wordpress.com/2012/02/14/friedman/)，介绍了 Friedman 检验。这篇文章实际上启发了我开始思考非参检验的线性模型等价形式，而且最终推动我写下了本文章。
+ * [Thom Baguley 的文章](https://seriousstats.wordpress.com/2012/02/14/friedman/)，介绍了 Friedman 检验。这篇文章实际上启发了我开始思考“非参”检验的线性模型等价形式，而且最终推动我写下了本文章。
 
 # 教材和课程大纲 {#course}
 
