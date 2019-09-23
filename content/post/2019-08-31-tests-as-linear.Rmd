@@ -12,6 +12,7 @@ tags:
 meta_extra: "译者：黄俊文 校对：蔡占锐，谢益辉，黄湘云 编辑：孙腾飞、任焱"
 slug: common-tests-as-linear-models
 lang: "zh-Hans"
+forum_id: 420930
 output: 
   html_fragment:
     df_print: default
