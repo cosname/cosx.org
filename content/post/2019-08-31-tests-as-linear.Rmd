@@ -1033,18 +1033,18 @@ summary(f)
 
 ## 协方差分析（ANCOVA） {#ancova}
 
-协方差分析，只是方差分析加上被回归连续变量，从而模型里包含了连续以及（被转化为示性变量的）类别因变量。比如说，如果我们沿用上文[单因素方差分析](#anova1)的例子，那么我们可以加上 `age`，从而变成**单因素协方差分析（one-way ANCOVA）**：
+协方差分析是在方差分析的基础上添加连续型回归变量，从而模型里包含了连续型以及（示性变量转化来的）类别型变量。沿用上文[单因素方差分析](#anova1)的例子，加上 `age`，就变成**单因素协方差分析（one-way ANCOVA）**：
 
 $$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_3 \mathrm{age}$$
 
-其中，$x_i$ 是我们熟悉的示性变量。$\beta_0$ 是第一个组在 $\mathrm{age}=0$ 时候的均值。你可以用这个方法，把所有的方差分析转化成为协方差分析，比如说在上一节的**双因素方差分析**加上 $\beta_N \cdot \mathrm{age}$。但我们先继续探究单因素协方差分析，从添加 $\mathrm{age}$ 到模型里开始：
+其中，$x_i$ 是熟悉的示性变量。$\beta_0$ 是第一个组在 $\mathrm{age}=0$ 时候的均值。可以用这个方法把所有的方差分析转化成为协方差分析，比如说，在上一节的**双因素方差分析**加上 $\beta_N \cdot \mathrm{age}$。我们先继续探究单因素协方差分析，从添加 $\mathrm{age}$ 到模型里开始：
 
 ```{r, results='hold'}
 # Update data with a continuous covariate
 D$age <- D$value + rnorm_fixed(nrow(D), sd = 3) # Correlated to value
 ```
 
-比起使用位于 x 轴的位置，最好使用颜色来可视化各组数据。$\beta$ 依然是数据的平均 $y$ 移动量，唯一的不同是我们现在用斜率而不是截距来对每一组进行建模。换句话说，单因素方差分析实际上是对于每一组（$y = \beta_0$）的[单样本 t 检验](#t1)，而**单因素协方差分析**实际上是每一组（$y_i = \beta_0 + \beta_i + \beta_1 \cdot \mathrm{age}$）的[Pearson 相关性检验](#correlation)：
+比起使用位于 x 轴的位置，最好使用颜色来区分各组数据。$\beta$ 依然是数据的平均 $y$ 移动量，唯一的不同是现在用斜率而不是截距来对每一组进行建模。换句话说，单因素方差分析实际上是对于每一组（$y = \beta_0$）的[单样本 t 检验](#t1)，而**单因素协方差分析**实际上是每一组（$y_i = \beta_0 + \beta_i + \beta_1 \cdot \mathrm{age}$）的[Pearson 相关性检验](#correlation)：
 
 
 <div class="fold s">
@@ -1062,7 +1062,7 @@ theme_axis(P_ancova, xlim = NULL, ylim = NULL, legend.position = c(0.8, 0.2)) +
 ```
 </div>
 
-这里是使用线性模型运行单因素方差分析的 R 代码：
+这里是使用线性模型来做单因素方差分析的 R 代码：
 
 ```{r, results='hold'}
 # Dedicated ANCOVA functions. The order of factors matter in pure-aov (type-I variance).
@@ -1132,13 +1132,14 @@ sm::sm.ancova(x = D$age, y = D$value, group = D$group, display = "none", model =
 
 # 比率（proportion）：卡方（chi-square）检验是对数线性模型
 
-回想一下，当你使用了对数转换的时候，你就可以简单地处理*比率（proportion）*，举例来说，$x$ 每一个单位的增加，都会带来 $y$ 的一定数量的百分比的增加。这种性质使它成为了最简单（因此是最好的！）方式之一去清晰地理解计数数据和列联表。查阅[此简介文章](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)看看如何使用线性模型来理解卡方检验。
+回想一下，使用对数转换可以简单地处理*比率（proportion）*，举例来说，$x$ 每一个单位的增加，都会带来 $y$ 的一定数量的百分比的增加。借助这个特点，可以最简单有效地理解计数数据和列联表。查阅[此简介文章](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)看看如何使用线性模型来理解卡方检验。
 
 
 ## 拟合优度（goodness of fit）检验 {#goodness}
+
 理论：作为对数线性模型
 
-模型：单独一个截距来预测 $log(y)$。
+模型：单独一个截距来预测 $\log(y)$。
 
 我提议你参考阅读[列联表一节](#contingency)，基本上它就是“双因素拟合优度检验”。
 
@@ -1160,7 +1161,7 @@ $log(y) = log(N\beta_1*x_1/N + N)$
 
 ### 示例数据
 
-本例子中，我们需要一些“宽”的计数数据：
+本例子中，需要一些“宽”格式的计数数据：
 
 ```{r}
 # Data in long format
@@ -1180,7 +1181,7 @@ print_df(D)
 
 ### R 代码：拟合优度检验
 
-现在，让我们展示一下，拟合优度检验实际上就是单因素方差分析的对数线性转换版本。我们设置 `family = poisson()`，这个设置默认使用 log 作为[联连函数（link function）](https://en.wikipedia.org/wiki/Generalized_linear_model#Link_function)（`family = poisson(link='log')`）。
+现在，让我们展示一下，拟合优度检验实际上就是单因素方差分析的对数线性转换版本。设置 `family = poisson()`，这个设置默认使用 log 作为[联系函数（link function）](https://en.wikipedia.org/wiki/Generalized_linear_model#Link_function)（`family = poisson(link='log')`）。
 
 ```{r, results='hold'}
 # Built-in test
@@ -1195,7 +1196,7 @@ b <- anova(null, full, test = "Rao")
 c <- glm(counts ~ mood, data = D, family = poisson())
 ```
 
-我们来看看结果：
+来看看结果：
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE}
 df <- data.frame(
@@ -1215,9 +1216,9 @@ b
 </div>
 
 
-注意，这里奇怪的 `anova(..., test='Rao')`，实际上只是说 p 值需要使用（Rao）[score 检验（又被称为“拉格朗日乘子检验（Lagrange multiplier test，LM test）”）](https://en.wikipedia.org/wiki/Score_test)。我们也可以使用 `test='Chisq'` 或 `test='LRT'`，它们会返回近似的 p 值。你可能认为我们这里作弊了，偷偷地对卡方模型进行后续处理。然而，`anova` 仅仅指定了 p 值的计算方式，而内部的所有对数线性模型都发生在 `glm` 其中。
+注意，这里的 `anova(..., test = 'Rao')` 表示计算 p 值需要借助 [Rao 得分 检验，又称为拉格朗日乘子检验（Lagrange multiplier test，LM test）](https://en.wikipedia.org/wiki/Score_test)。也可以使用 `test='Chisq'` 或 `test='LRT'`，它们会返回近似的 p 值。你可能认为我们在这里作弊了，偷偷地对卡方模型进行后续处理。然而，`anova` 仅仅指定了 p 值的计算方式，而内部的所有对数线性模型都发生在 `glm` 中。
 
-顺带一说，如果只有两个计数变量，而且样本量较大（N > 100），这个模型开始有效地近似于**二项检验（binomial test）** `binom.test`。但是这个样本量比通常情况要更大，所以我没有认为这是经验准则，也不会在此进一步探索。
+顺带一说，如果只有两个计数变量，而且样本量较大（$N > 100$），这个模型开始有效地近似于**二项检验（binomial test）** `binom.test`。这个样本量比通常情况要更大，所以我认为这不是经验准则，也不会在此进一步探索。
 
 
 ## 列联表 {#contingency}
@@ -1230,22 +1231,22 @@ b
 
 $$y_i = N \cdot x_i(A_i/N) \cdot z_j(B_j/N) \cdot x_{ij}/((A_i x_i)/(B_j z_j)/N)$$ 
 
-多复杂呀！！！这里，$i$ 是行标号，$j$ 列标号，$x_{something}$ 是那一行和/或列的求和值：$N = sum(y)$。请记得，$y$ 是计数变量，所以 $N$ 其实就是总计数值。
+多复杂呀！！！这里，$i$ 是行标号，$j$ 列标号，$x_{something}$ 是相应行和或列和的值：$N = \sum{y}$。请记得，$y$ 是计数变量，所以 $N$ 是总计数值。
 
 我们可以通过定义*比率* 来简化以上记号：$\alpha_i = x_i(A_i/N)$，$\beta_i = x_j(B_i/N)$，$\alpha_i\beta_j =  x_{ij}/(A_i x_i)/(B_j z_j)/N$。重写模型如下：
 
 $$y_i = N \cdot \alpha_i \cdot \beta_j \cdot \alpha_i\beta_j$$
 
-嗯，好多了。然而，这里依然有很多乘法项，使得我们很难直觉上理解变量之间是如何交互的。如果我们记得 $\log(A \cdot B) = \log(A) + \log(B)$，那么我们可以使得变得更为清晰易懂。两边取对数变换，可得：
+嗯，好多了。然而，这里依然有很多乘法项，使得我们很难从直观上理解变量之间是如何交互的。如果还记得 $\log(A \cdot B) = \log(A) + \log(B)$，那么两边取对数就清晰易懂了，可得：
 
 $$\log(y_i) = \log(N) + \log(\alpha_i) + \log(\beta_j) + \log(\alpha_i\beta_j)$$
 
-太爽了！现在我们可以直观地理解，回归系数（都是比率）是怎样独立地影响到 $y$ 的。这就是为什么对数变换对比率数据如此有效。注意到，这其实就是[双因素方差分析模型](#anova2)加上一些对数变换，从而我们可以回到我们所熟悉的旧线性模型----除了对系数的解释发生了变化而已！此外我们不能继续使用 R 里的 `lm` 函数了。
+太爽了！现在我们可以直观地理解回归系数（都是比率）是怎样独立地影响到 $y$ 的。这就是为什么对数变换对比率数据如此有效。注意到，这其实就是[双因素方差分析模型](#anova2)加上一些对数变换，这就回到了所熟悉的线性模型———只是对系数的解释发生了变化而已！此外，我们不能继续使用 R 里的 `lm` 函数了。
 
 
 ### 示例数据
 
-我们需要一些“长”数据，并且需要保存为表格格式，才能作为 `chisq.test` 的输入：
+我们需要一些“长”格式的数据，并且需要保存为表格格式，才能作为 `chisq.test` 的输入：
 
 ```{r}
 # Contingency data in long format for linear model
@@ -1275,7 +1276,7 @@ print_df(D)
 
 ### R 代码：卡方检验
 
-接下来我们看看卡方检验模型和对数线性模型之间的等价性。这个过程和上述[双因素方差分析](#anova2)过程非常相似：
+接下来看看卡方检验和对数线性模型之间的等价性。这个过程和上述[双因素方差分析](#anova2)过程非常相似：
 
 ```{r, results='hold'}
 # Built-in chi-square. It requires matrix format.
@@ -1317,79 +1318,79 @@ summary(full)
 ```
 </div>
 
-我代码里用了 `summary(full)`，从而你可以取消以上代码的折叠，查看回归模型拟合的系数的原始值。作为对数线性模型，这些系数表示了：如果跳转到一个类别的话，$y$ 将会获得多少*比例上的提升*。
+代码里用了 `summary(full)`，你可以取消以上代码的折叠，查看回归模型拟合的系数的原始值。作为对数线性模型，这些系数表示了：如果跳转到一个类别的话，$y$ 将会获得多少*比例上的提升*。
 
 # 资料来源和更多的等价性模型 {#links}
 
-下面提供了对其它介绍了一部分本文内容的资料来源的链接，它们也包含了更多这里没有提到的等价性模型：
+下面是本文内容的部分资料来源，还包含了很多本文没有提到的等价性模型：
 
- * Cross Validated 网站上，[我的原始想法](https://stats.stackexchange.com/questions/303269/common-statistical-tests-as-linear-models)。 
- * 对于“非参”检验，[我之前提出的疑问](https://stats.stackexchange.com/questions/210529/are-parametric-tests-on-rank-transformed-data-equivalent-to-non-parametric-test?noredirect=1#comment399981_210529)，和有用的答案。
- * StackOverflow 网站上，这个关于 t 检验和方差分析的[问题和回答](https://stats.stackexchange.com/questions/59047/how-are-regression-the-t-test-and-the-anova-all-versions-of-the-general-linear)。
+ * Cross Validated 网站上，[我的原始想法](https://stats.stackexchange.com/questions/303269/)。 
+ * 对于“非参”检验，[我之前提出的疑问](https://stats.stackexchange.com/questions/210529) 和有用的答案。
+ * StackOverflow 网站上，关于 t 检验和方差分析的[问题和回答](https://stats.stackexchange.com/questions/59047)。
  * [Christoph Scheepers 的幻灯片](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)，介绍了卡方检验如何被理解为对数线性模型。
- * [Philip M. Alday 的笔记](https://rpubs.com/palday/glm-test)，里面包括了卡方、二项、多项、泊松分布作为对数线性模型和 logistic 模型的理解。这里介绍的“等价性”没有我在本文里所上展示的那些那么精确，因此我没有在本文详细介绍。然而，它们还是对理解这些检验有着优秀的帮助的！
- * [Kristoffer Magnusson 的文章](https://rpsychologist.com/r-guide-longitudinal-lme-lmer)，使用 `lme4::lmer` 混合模型（mixed model）介绍了 RM-ANOVA 和增长模型（growth model）。
- * [Thom Baguley 的文章](https://seriousstats.wordpress.com/2012/02/14/friedman/)，介绍了 Friedman 检验。这篇文章实际上启发了我开始思考“非参”检验的线性模型等价形式，而且最终推动我写下了本文章。
+ * [Philip M. Alday 的笔记](https://rpubs.com/palday/glm-test)，里面包括了卡方、二项、多项、泊松分布作为对数线性模型和 logistic 模型的理解。文中介绍的“等价性”没有我在本文展示的那么精确，因此我没有在本文详细介绍。然而，它们对理解这些检验是有帮助的！
+ * [Kristoffer Magnusson 的文章](https://rpsychologist.com/r-guide-longitudinal-lme-lmer)使用 `lme4::lmer` 混合模型（mixed model）介绍了 RM-ANOVA 和增长模型（growth model）。
+ * [Thom Baguley 的文章](https://seriousstats.wordpress.com/2012/02/14/friedman/)介绍了 Friedman 检验。这篇文章实际上启发了我开始思考“非参”检验的线性模型等价形式，而且最终推动我写下了本文章。
 
 # 教材和课程大纲 {#course}
 
-大部分高等统计书籍（和一些入门书籍）也都同意“所有模型都是 GLMM”。然而，“线性模型”部分通常都是概念上提了一下，而没有清晰的指出细节。我想通过简练的方式，把线性模型当作*工具*。幸运地，大部分对初学者友好的教材后来都合并了：
+大部分高等统计书籍（和一些入门书籍）也都同意“所有模型都是 GLMM（广义线性混合效应模型） 的观点”。然而，线性模型部分通常都是概念上提了一下，而没有清晰地指出细节。我想通过简练的方式把线性模型当作*工具*。幸运地，大部分对初学者友好的教材后来都合并了：
 
  * Russ Poldrack 的开源书籍 "Statistical Thinking for the 21st century"（从[关于建模的第 5 章](http://statsthinking21.org/fitting-models-to-data.html)开始）
  * [Jeff Rouder 的课程笔记](https://jeffrouder.blogspot.com/2019/03/teaching-undergrad-stats-without-p-f-or.html)，介绍了仅使用 $R^2$ 和 BIC 来对比模型。它避开了所有关于 p 值、F 值等等的繁琐问题。完整的材料和幻灯片可[在这里找到](https://drive.google.com/drive/folders/1CiJK--bAuO0F-ug3B5I3FvmsCdpPGZ03)。
 
-我说一下对我所做的事情的看法。我已使用了本文的一部分进行教学，并获得了巨大的成功，但是这并不是完整的教学过程，因为我依然没有被分派到教导整一个课程。
+我说一下对我所做的事情的看法。我已使用了本文的一部分进行教学，并获得了巨大的成功，但是这并不是完整的教学过程，因为我并没有分派到教授整个课程。
 
-我会花费 50% 的时间在数据的线性模型上，因为它包含了学生所需知道的 70%（以下的第 1 点）。剩下来的课程则是关于当你有一个组、两个组等等的数据时候会发生什么事情的。
+我会花费 50\% 的时间在数据的线性模型上，因为它包含了学生所需知道的 70\%（以下的第 1 点）。剩下来的课程则是关于当你有一个组、两个组等等数据的时候会发生什么事情。
 
-注意，主流的统计课程的开始部分，一般都是关于对采样和假设检验的理解的；但是我这里把这部分移动到后面，从而学生可以基于之前学习的知识来进行理解，而不是一上来就面对各种陌生的概念。
+注意，主流统计课程的开始部分都是关于采样和假设检验的理解；我这里把这部分移动到后面，这样，学生可以基于之前学习的知识来进行理解，而不是一上来就面对各种陌生的概念。
 
 1. **回归的基础知识**
 
-    1. 回想高中的知识：$y = a \cdot x + b$，然后获得对斜率和截距的非常好的直觉。理解到这条式子能用所有的变量名称来重写：如 `money = profit * time + starting_money`，或 $y = \beta_1x + \beta_2*1$，或去除系数之后可写成 `y ~ x + 1`。如果听众接受程度高的话，可以探索这些模型是如何解[微分方程](https://magesblog.com/post/modelling-change)的，并指出 $y$ 是如何随着 $x$ 的变化*而变化*的。
+    1. 回想高中的知识：$y = a \cdot x + b$，然后获得对斜率和截距的非常好的直觉。理解到这条式子能用所有的变量名称来重写：如 `money = profit * time + starting_money`，或 $y = \beta_1x + \beta_2*1$，或去除系数之后可写成 `y ~ x + 1`。如果听众接受程度高的话，可以探索这些模型是如何解[微分方程](https://magesblog.com/post/modelling-change)的，并指出 $y$ 是如何随着 $x$ 的变化而变化的。
    
-    2. 扩展到多元回归模型。记得这时候要带有非常多的生活例子和练习，从而使这些概念变得直觉上非常容易理解。让听众感叹于这些这么简洁的模型都可以用来描述非常大的数据集。
+    2. 扩展到多元回归模型。记得这时候要带有非常多的生活例子和练习，从而使这些概念变得直觉上非常容易理解。让听众感叹于这些简洁的模型都可以用来描述非常大的数据集。
 
     3. 介绍对于非数值型数据如何进行秩转换，并进行各种尝试。
    
-    4. 教导三种前提假设：数据点的独立性，残差的正态分布性质，和同方差性（homoscedasticity）。
+    4. 教授三种前提假设：数据点的独立性，残差分布的正态性和方差齐性（homoscedasticity）。
     
-    5. 参数的置信（confidence）/可信（credible）区间。指出最大似然估计（Maximum-Likelihood estimate）很难计算，因此区间更为重要。
+    5. 参数的置信（confidence）/可信（credible）区间。指出极大似然估计（Maximum-Likelihood estimate）很难计算，因此区间估计更为重要。
     
     6. 对以上简单的回归模型，简要地介绍 $R^2$。顺便提及一下，这就是 [Pearson 和 Spearman 相关系数](#correlation)。 
 
  
 2. **特殊情况 #1：一个或两个均值（t 检验、Wilcoxon 检验、Mann-Whitney 检验）：**
 
-    1. **单均值：**当只有一个 x 值得时候，回归模型简化成了 $y = b$。如果 $y$ 不是数值型的，你可以进行秩转换。应用模型假设（只有一个 $x$，因此方差齐性不适用于这里）。顺便提及一下这些仅有截距的模型也分别可称为[单样本 t 检验和 Wilcoxon 符号秩检验](#t1)。
+    1. **单均值：**当只有一个 x 值的时候，回归模型简化成了 $y = b$。如果 $y$ 不是数值型的，你可以进行秩转换。应用模型假设（只有一个 $x$，因此方差齐性不适用于这里）。顺便提及一下，这些仅有截距的模型也分别可称为[单样本 t 检验和 Wilcoxon 符号秩检验](#t1)。
     
-    2. **双均值：**如果我们把两个变量一起放在 x 轴，两者均值之差就是斜率。很好！这就能用我们称为线性模型的瑞士军刀来解决。应用模型的假设条件，检查两个组的方差是否相等，相等即方差齐性。这模型称为[独立 t 检验](#t2)。构造一些例子，做一些练习，也许也能加上 Welch 检验，然后加上秩转换 ---- 被称为 Mann-Whitney U 检验 ---- 的版本。
+    2. **双均值：**如果我们把两个变量一起放在 x 轴，两者均值之差就是斜率。很好！这就能用我们称为瑞士军刀的线性模型来解决。应用模型的假设条件，检查两个组的方差是否相等，相等即方差齐性。这模型称为[独立 t 检验](#t2)。构造一些例子，做一些练习，也许还能加上 Welch 检验，再加上秩转换 ---- 变成所谓的 Mann-Whitney U 检验的版本。
     
-    3. *配对样本：*违反了独立性假设。通过计算配对组的差值，这转化成了 2.1（单截距）的等价形式，尽管这种情况有另外的名称：[配对 t 检验和 Wilcoxon 配对组检验](#tpair)。
+    3. **配对样本：**违反了独立性假设。通过计算配对组的差值，这就转化成了 2.1（单截距）的等价形式，尽管这种情况有另外的名称：[配对 t 检验和 Wilcoxon 配对组检验](#tpair)。
     
 3. **特殊情况 #2：三个或多个均值（方差分析（ANOVA））**
 
-    1. *对类别转化后的[示性变量](#dummy)：*类别的每一个取值范围对应的回归系数，是如何通过乘以一个二元（binary）示性变量，来对每个取值范围对应的截距来进行建模的。（How one regression coefficient for each level of a factor models an intercept for each level when multiplied by a binary indicator.）这只是我们为了使数据能用线性模型建模，而扩展了在 2.1 所做的事情而已。
+    1. **对类别转化后的[示性变量](#dummy)：**类别的每一个取值范围对应的回归系数，是如何通过乘以一个二元（binary）示性变量，来对每个取值范围对应的截距来进行建模的。（How one regression coefficient for each level of a factor models an intercept for each level when multiplied by a binary indicator.）这只是我们为了使数据能用线性模型建模，而扩展了在 2.1 所做的事情而已。
     
-    2. *一个变量的均值：*[单因素方差分析（one-way ANOVA）](#anova1).
+    2. **一个变量的均值：**[单因素方差分析（one-way ANOVA）](#anova1).
     
-    3. *两个变量的均值：*[双因素方差分析（two-way ANOVA）](#anova2).
+    3. **两个变量的均值：**[双因素方差分析（two-way ANOVA）](#anova2).
     
     
 4. **特殊情况 #3：三个或多个比率（卡方检验）**
 
-    1. *对数变换：*通过对数变换，把“多元乘法”模型转换成线性模型，从而可以对比率进行建模。关于对数线性模型和对比率的卡方检验的等价性，可以查阅[这个非常优秀的介绍](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)。此外，还需要介绍 (log-) odds ratio（一般被翻译为“比值比”或“优势比”）。当“多元乘法”模型使用对数变换转化为“加法”模型之后，我们仅加上来自 3.1 的示性变量技巧，就会在接下来发现模型等价于 3.2 和 3.3 的方差分析----除了系数的解释发生了变化。
+    1. **对数变换：**通过对数变换，把“多元乘法”模型转化成线性模型，从而可以对比率进行建模。关于对数线性模型和对比率的卡方检验的等价性，可以查阅[这个非常优秀的介绍](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)。此外，还需要介绍 (log-) odds ratio（一般翻译为“比值比”或“优势比”）。当“多元乘法”模型使用对数变换转化为“加法”模型之后，我们仅加上来自 3.1 的示性变量技巧，就会在接下来发现模型等价于 3.2 和 3.3 的方差分析----除了系数的解释发生了变化。
     
-    2. *单变量的比率：*[拟合优度检验](#goodness).
+    2. **单变量的比率：**[拟合优度检验](#goodness).
     
-    3. *双变量的比率：*[列联表](#contingency).
+    3. **双变量的比率：**[列联表](#contingency).
 
 
 5. **假设检验：** 
 
-    1. *视为模型比较的假设检验：*假设检验，用于对全模型和另一个某参数固定了的（通常为 0，也即从模型中去除）的模型进行比较，而不是对模型进行估计。比如说，在 [t 检验](#t2)把两个均值之一固定为零之后，我们探究单独一个均值（[单样本 t 检验](#t1)）对两个组的所有数据的解释程度如何。如果解释程度比较好，那么我们更倾向于这个单均值模型，而不是双均值模型，因为前者更为简单。所以假设检验其实只是通过比较多个线性模型，来获得比我们在以上 1 至 4 点的真正的量化陈述的更多的量化描述。对于单个参数的检验，假设检验包含的信息更少。但是，对于同一时间的多个参数（如方差分析的类别变量）进行检验的话，模型比较就会变得没有价值了。
+    1. **视为模型比较的假设检验：**假设检验用于全模型和某个参数固定了（通常为 0，也即从模型中去除）的模型进行比较，而不是对模型进行估计。比如说，在 [t 检验](#t2) 把两个均值之一固定为零之后，我们探究单独一个均值（[单样本 t 检验](#t1)）对两个组的数据的解释程度。如果解释程度比较好，那么我们更倾向于这个单均值模型，而不是双均值模型，因为前者更为简单。假设检验其实是比较多个线性模型，来获得更多的定量描述。单参数的检验，假设检验包含的信息更少。但是，同时对多个参数（如方差分析的类别变量）进行检验的话，模型比较就会变得没有价值了。
     
-    2. *似然比：*似然比是一把瑞士军刀，它适用于单样本 t 检验到 GLMM 等情况的建模。BIC 对模型复杂度进行惩罚。还有，加上先验（prior）的话，你就能得到贝叶斯因子（Bayes Factor）。一个工具，就能解决所有问题。我在上文方差分析中使用了似然比检验。
+    2. **似然比：**似然比是一把瑞士军刀，它适用于单样本 t 检验到 GLMM 等情况。BIC 对模型复杂度进行惩罚。还有，加上先验（prior）的话，你就能得到贝叶斯因子（Bayes Factor）。一个工具，就能解决所有问题。我在上文方差分析中使用了似然比检验。
 
 
 # 不足之处
@@ -1400,7 +1401,7 @@ summary(full)
 
 2. 我假定所有的零假设是缺失了效应的情况，但是所有原理都和非 0 的零假设所一致的。
 
-3. 我没有讨论推断内容。因为大家都会关心 p 值，因此我在比较中只提到了 p 值，从而简短地展示了背后的模型的等价性。参数的估计值也会展示出相同的等价性。如何进行*推断*则是另一个话题了。我个人是贝叶斯学派的，但是展示贝叶斯学派内容的话，会减少这篇文章的受众。此外，建造[稳健模型](https://en.wikipedia.org/wiki/Robust_statistics)是更好的选择，但是它无法揭示模型的等价性。
+3. 我没有讨论推断内容。因为大家都会关心 p 值，因此我在比较中提到了 p 值，从而简短地展示了背后的模型等价性。参数的估计值也会展示出相同的等价性。如何进行*推断*则是另一个话题了。我个人是贝叶斯学派的，但是展示贝叶斯学派内容的话，会减少这篇文章的受众。此外，构造[稳健模型](https://en.wikipedia.org/wiki/Robust_statistics)是更好的选择，但是它无法揭示模型的等价性。
 
 4. 本文列表依然缺失了很多其它有名称的检验，有可能在以后添加进来。比如说符号检验（sign test）（要求很大的 N 从而可以有效地使用线性模型来近似），Friedman 检验 -- 即在 `rank(y)` 上的 RM-ANOVA，McNemar 检验，和二项（Binomial）/多项（Multinomial）检验。在[链接一节](#links)可查阅更多的等价模型。如果你认为它们需要在本文提及到，欢迎在本文档的 [Github 仓库](https://github.com/lindeloev/tests-as-linear/) 提交对应说明！
 
