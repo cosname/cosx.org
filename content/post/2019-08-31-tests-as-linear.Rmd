@@ -34,7 +34,8 @@ knitr::opts_chunk$set(
   fig.width = 6,
   fig.align = "center",
   message = FALSE,
-  warning = FALSE
+  warning = FALSE,
+  collapse = TRUE
 )
 
 # To show tables.
@@ -84,7 +85,7 @@ lapply(c(
 
 在入门课程教授“非参”数检验的时候，可以避开 [骗小孩](https://en.wikipedia.org/wiki/Lie-to-children) 的手段，直接告诉学生“非参”检验其实就是和秩相关的参数检验。对学生来说，接受秩的概念比相信你可以神奇地放弃各种假设好的多。实际上，在统计软件 [JASP](https://jasp-stats.org/) 里，“非参”检验的贝叶斯等价模型就是使用 [潜秩](https://arxiv.org/abs/1712.06941)（Latent Rank）来实现的。频率学派的“非参”检验在样本量 $N > 15$ 的时非常准确。
 
-![Path to success](https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg)
+![](https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg)
 
 在[来源](#links)和[教材](#course)两章节，有很多类似（尽管更为散乱）的材料。我希望你们可以一起来提供优化建议，或者直接在 [Github](https://github.com/lindeloev/tests-as-linear) 提交修改。让我们一起来使本文章变得更棒！
 
@@ -216,7 +217,7 @@ $$\mathrm{rank}(y) = \beta_0 + \beta_1 \cdot \mathrm{rank}(x) \qquad \mathcal{H}
 很多学生都没有意识到这么漂亮和神奇的等价关系！给线性回归带上数据标签来，我们可立刻看到秩转换过程：
 
 <div class="fold s">
-```{r, fig.width=8, figh.height=7}
+```{r, fig.width=8, figh.height=7,collapse=TRUE}
 # Spearman intercept
 intercept_spearman <- coefficients(lm(rank(X2) ~ rank(X1), D_correlation))[1]
 
@@ -237,7 +238,6 @@ P_spearman <- ggplot(D_correlation, aes(x = rank(X1), y = rank(X2))) +
 (theme_axis(P_pearson, legend.position = c(0.5, 0.1)) + 
     geom_text(aes(label = label_num), nudge_y = 0.1, size = 3, color = "dark gray") +
     labs(title = "         Pearson"))
-
 (theme_axis(P_spearman, xlim = c(-7.5, 30), ylim = c(-7.5, 30), 
               legend.position = c(0.5, 0.1)) + 
      labs(title = "         Spearman"))
