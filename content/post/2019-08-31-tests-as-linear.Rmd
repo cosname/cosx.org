@@ -74,9 +74,9 @@ lapply(c(
 
 > 本文翻译自 [Jonas Kristoffer Lindeløv](https://lindeloev.net/) 的 [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/)，翻译工作已获得原作授权。
 
-本文将常见的参数和“非参”数检验统一用线性模型来表示，在同一个框架下， 我们可以看到不同检验之间的许多相似之处，极富思考性和启发性。点击链接可获得一份 [PDF 电子版](linear_tests_cheat_sheet.pdf) 或 [HTML 网页版](linear_tests_cheat_sheet.html)。
+本文将常见的参数和“非参”数检验统一用线性模型来表示，在同一个框架下， 我们可以看到不同检验之间的许多相似之处，极富思考性和启发性。点击链接可获得一份 [PDF 电子版](./linear_tests_cheat_sheet.pdf) 或 [HTML 网页版](./linear_tests_cheat_sheet.html)。
 
-[![linear-tests-cheat-sheet](linear_tests_cheat_sheet.png)](linear_tests_cheat_sheet.pdf)
+[![linear-tests-cheat-sheet](./linear_tests_cheat_sheet.png)](./linear_tests_cheat_sheet.pdf)
 
 
 # 常见检验的简洁本质
