@@ -857,8 +857,8 @@ df <- data.frame(
   model = c("Anova", "lm"),
   df = c(a$Df[1], glance(b)$df - 1), # -1? https://github.com/tidymodels/broom/issues/273
   df.residual = c(a$Df[2], b$df.residual),
-  F = c(a$`F value`[1], bt$statistic),
-  p.value = c(a$`Pr(>F)`[1], bt$p.value)
+  F = c(a$`F value`[1], glance(b)$statistic),
+  p.value = c(a$`Pr(>F)`[1], glance(b)$p.value)
 )
 print_df(df, 5)
 ```
@@ -870,7 +870,7 @@ summary(b)
 ```
 </div>
 
-实际上，`car::Anova` 和 `aov` 就是 `lm` 包装而来的，所以得到相同的结果一点也不令人感到意外。这只说明了，可直接理解为线性模型的示性变量公式，是缩写语法 `y ~ factor` 背后的模型。实际上，使用 `aov` 和 `car::Anova` 而不使用 `lm` 是为了得到一个漂亮的格式化的方差分析表。
+实际上，`car::Anova` 和 `aov` 就是 `lm` 包装而来的，所以得到相同的结果一点也不令人感到意外。线性模型的示性变量公式是缩写语法 `y ~ factor` 背后的模型。实际上，使用 `aov` 和 `car::Anova` 而不使用 `lm` 是为了得到一个漂亮的格式化的方差分析表。
 
 
 `lm` 的默认输出包含了参数估计的结果（额外收获！），可以将上述 R 代码展开来看。因为它就是方差分析模型，所以你也可以用 `coefficients(aov(...))` 得到参数估计的结果。
