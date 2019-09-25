@@ -27,7 +27,7 @@ output:
 <script src="include/hideOutput.js"></script>
 
 ```{r echo=FALSE}
-# Options for building this document
+# 设置编译文档的选项
 knitr::opts_chunk$set(
   dev = "svg",
   fig.height = 4,
@@ -38,7 +38,7 @@ knitr::opts_chunk$set(
   collapse = TRUE
 )
 
-# To show tables.
+# 展示表格
 print_df <- function(D,
                      decimals = 4,
                      navigate = FALSE) {
@@ -57,10 +57,10 @@ print_df <- function(D,
   )
 }
 
-# packages only available on Github
+# 必须从 Github 安装的 R 包
 remote_pkgs = c(headR = 'jumpingrivers', patchwork = 'thomasp85')
 
-lapply(c(
+invisible(lapply(c(
   'car', 'broom', 'DT', 'knitr', 'tidyverse', 'sm', 'rprojroot', 'remotes'
   ), function(pkg) {
     if (system.file(package = pkg) != '') return()
@@ -69,7 +69,7 @@ lapply(c(
       remotes::install_github(paste(repo, pkg, sep = '/'))
     }
   }
-)
+))
 ```
 
 > 本文翻译自 [Jonas Kristoffer Lindeløv](https://lindeloev.net/) 的 [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/)，翻译工作已获得原作授权。
@@ -95,21 +95,20 @@ lapply(c(
 
 <div class='fold s'>
 ```{r, echo=FALSE, R.options=list(tidyverse.quiet = TRUE), message=FALSE}
-# Load packages for data handling and plotting
+# 加载必要的 R 包用于处理数据和绘图
 library(tidyverse)
 library(patchwork)
 library(broom)
 
-# Reproducible "random" results
+# 设置随机数种子复现本文结果
 set.seed(40)
 
-# Generate normal data with known parameters
+# 生成已知参数的服从正态分布的随机数
 rnorm_fixed <- function(N, mu = 0, sd = 1)
   scale(rnorm(N)) * sd + mu
 
-# Plot style.
-theme_axis <- function(P,
-                       jitter = FALSE,
+# 图形风格
+theme_axis <- function(P, jitter = FALSE,
                        xlim = c(-0.5, 2),
                        ylim = c(-0.5, 2),
                        legend.position = NULL) {
@@ -134,7 +133,7 @@ theme_axis <- function(P,
       legend.position = legend.position
     )
 
-  # Return jittered or non-jittered plot?
+  # 是否设置抖动
   if (jitter) {
     P + geom_jitter(width = 0.1, size = 2)
   }
@@ -234,10 +233,10 @@ P_spearman <- ggplot(D_correlation, aes(x = rank(X1), y = rank(X2))) +
                      labels = c(bquote(beta[0] * " (intercept)"), 
                                 bquote(beta[1] * " (slope)")))
 
-# Stich together using patchwork
+# 用 patchwork 包把图组合在一块
 (theme_axis(P_pearson, legend.position = c(0.5, 0.1)) + 
     geom_text(aes(label = label_num), nudge_y = 0.1, size = 3, color = "dark gray") +
-    labs(title = "         Pearson"))
+    labs(title = "         Pearson")) +
 (theme_axis(P_spearman, xlim = c(-7.5, 30), ylim = c(-7.5, 30), 
               legend.position = c(0.5, 0.1)) + 
      labs(title = "         Spearman"))
@@ -386,7 +385,7 @@ P_t1_rank <- ggplot(D_t1_rank, aes(y = y, x = 0)) +
   labs(title = "         Wilcoxon")
 
 # Stich together using patchwork
-theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1))
+theme_axis(P_t1, ylim = c(-1, 2), legend.position = c(0.6, 0.1)) +
 theme_axis(P_t1_rank, ylim = NULL, legend.position = c(0.6, 0.1))
 ```
 </div>
@@ -491,7 +490,7 @@ P_tpaired <- ggplot(D_tpaired, aes(x = x, y = y)) +
   labs(title = "          Pairs")
 
 # Use patchwork to put them side-by-side
-theme_axis(P_tpaired)
+theme_axis(P_tpaired) +
 theme_axis(P_t1, legend.position = c(0.6, 0.1))
 ```
 </div>
@@ -665,13 +664,12 @@ c <- lm(value ~ 1 + I(group == "y2"))
 # Put it together. Note that the signs are inversed for t.test.
 df <- data.frame(
   model = c("t.test", "lm"),
-  mean_y = c(at$estimate1, bt$estimate[1]),
-  difference = c(at$estimate2 - at$estimate1, bt$estimate[2]),
-  p.value = c(at$p.value, bt$p.value[2]),
-  df = c(at$parameter, b$df.residual),
-
-  conf.low = c(-at$conf.high, confint(b)[2, 1]),
-  conf.high = c(-at$conf.low, confint(b)[2, 2])
+  mean_y = c(a$estimate[1], b$estimate[1]),
+  difference = c(a$estimate[2] - a$estimate[1], b$estimate[2]),
+  p.value = c(a$p.value, b$p.value),
+  df = c(a$parameter, b$df.residual),
+  conf.low = c(-a$conf.int[2], confint(b)[2, 1]),
+  conf.high = c(-a$conf.int[1], confint(b)[2, 2])
 )
 
 # Print it nicely
@@ -755,9 +753,9 @@ summary(b)
 
 # 三个或多个均值
 
-ANOVA 是（只）有类别自变量的线性模型，所以它们可以简单地扩展我们上述的所有模型，并重度依赖示性变量。如果你还没准备好，确保去阅读[示性变量一节](#dummy)。
+方差分析 ANOVA 是只有类别型自变量的线性模型，它们可以简单地扩展上述模型，并重度依赖示性变量。如果你还没准备好，一定要去阅读[示性变量一节](#dummy)。
 
-## 单因素方差分析（one-way ANOVA）和 Kruskal-Wallis 检验 {#anova1}
+## 单因素方差分析和 Kruskal-Wallis 检验 {#anova1}
 
 ### 理论：作为线性模型
 
@@ -816,7 +814,9 @@ $$\mathrm{rank}(y) = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 +\ldots$$
 
 ### 示例数据
 
-我们创建可能取值为 `a`、`b`、`c` 的类别变量（本文中，“factor”翻译为“类别变量”或“因子”，“level”翻译为“取值范围”或“水平”；就译者认为，这两个词语的前一种翻译更贴近常见汉语，后一种翻译虽然简练但是不知所云。----译者注），那么**单因素方差分析**基本上成为了“三样本 t 检验”。我们手动对每个组创建[示性变量](#dummy)。
+[^note]: 本文中，factor 翻译为类别变量或因子，level 翻译为取值范围或水平；就译者认为，这两个词语的前一种翻译更贴近常见汉语，后一种翻译虽然简练但是不知所云。---- 译者注
+
+首先创建可能取值为 `a`、`b`、`c` 的类别变量[^note]，那么 **单因素方差分析**基本上成为了**三样本 t 检验**，然后手动对每个组创建[示性变量](#dummy)。
 
 ```{r}
 # Three variables in "long" format
@@ -908,7 +908,7 @@ c
 
 
 
-## 双因素方差分析（two-way ANOVA）（待绘图） {#anova2}
+## 双因素方差分析（待绘图） {#anova2}
 
 ### 理论：作为线性模型
 
@@ -922,7 +922,7 @@ $$y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \beta_3 X_1 X_2 \qquad \mathcal{H}_0
 
 这里 $\beta_i$ 是 $\beta$ 的分量，其中之后一个会被示性向量 $X_i$ 所选取。这里出现的$\mathcal{H}_0$ 是交互效应。注意，截距是 $\beta_0$ 是所有因子中第一个水平的均值，而其它所有的 $\beta$ 都是相对于 $\beta_0$ 的值。
 
-继续探究上文单因素方差分析的数据集，我们加上交互因子 `mood`（情绪），这样就能够测试 `group:mood` 的交互效应（$3\times2$ ANOVA）。同样，为了使用线性模型，我们把这个因子转为 [示性变量](#dummy)。
+继续探究上文单因素方差分析的数据集，我们加上交互因子 `mood`（情绪），这样就能够测试 `group:mood` 的交互效应（$3\times2$ 的 ANOVA）。同样，为了使用线性模型 `lm`，将这个因子转为[示性变量](#dummy)。
 
 ```{r}
 # Crossing factor
@@ -1031,9 +1031,9 @@ summary(f)
 </div>
 
 
-## 协方差分析（ANCOVA） {#ancova}
+## 协方差分析 {#ancova}
 
-协方差分析是在方差分析的基础上添加连续型回归变量，从而模型里包含了连续型以及（示性变量转化来的）类别型变量。沿用上文[单因素方差分析](#anova1)的例子，加上 `age`，就变成**单因素协方差分析（one-way ANCOVA）**：
+协方差分析 ANCOVA 是在方差分析的基础上添加连续型回归变量，从而模型里包含了连续型以及（示性变量转化来的）类别型变量。沿用上文[单因素方差分析](#anova1)的例子，加上 `age`，就变成**单因素协方差分析（one-way ANCOVA）**：
 
 $$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \ldots + \beta_3 \mathrm{age}$$
 
@@ -1130,38 +1130,37 @@ sm::sm.ancova(x = D$age, y = D$value, group = D$group, display = "none", model =
 -->
 
 
-# 比率（proportion）：卡方（chi-square）检验是对数线性模型
+# 比率：卡方检验是对数线性模型
 
-回想一下，使用对数转换可以简单地处理*比率（proportion）*，举例来说，$x$ 每一个单位的增加，都会带来 $y$ 的一定数量的百分比的增加。借助这个特点，可以最简单有效地理解计数数据和列联表。查阅[此简介文章](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)看看如何使用线性模型来理解卡方检验。
+回想一下，使用对数转换可以简单地处理**比率（proportion）**，举例来说，$x$ 每一个单位的增加，都会带来 $y$ 的一定数量的百分比的增加。借助这个特点，可以最简单有效地理解计数数据和列联表。查阅[此简介文章](https://www.uni-tuebingen.de/fileadmin/Uni_Tuebingen/SFB/SFB_833/A_Bereich/A1/Christoph_Scheepers_-_Statistikworkshop.pdf)看看如何使用线性模型来理解卡方检验。
 
 
-## 拟合优度（goodness of fit）检验 {#goodness}
+## 拟合优度检验 {#goodness}
 
-理论：作为对数线性模型
+### 理论：作为对数线性模型
 
-模型：单独一个截距来预测 $\log(y)$。
+模型：一个单独截距来预测 $\log(y)$。
 
-我提议你参考阅读[列联表一节](#contingency)，基本上它就是“双因素拟合优度检验”。
+我提议你参考阅读[列联表一节](#contingency)，基本上它就是**双因素拟合优度检验**。
 
 <!--
-Before log-transforming, this is a one-way ANOVA:
+在对数变换前，这是一个单因素方差分析模型：
 
-$y = \beta_1*x_1 + \beta_2*x_2 + \beta_3*x_3 +... \qquad \mathcal{H}_0: y = \beta_1$
+$$y = \beta_1*x_1 + \beta_2*x_2 + \beta_3*x_3 +... \qquad \mathcal{H}_0: y = \beta_1$$
+我们应该把这看作 $\sum y$ 的比率，因为那样在 [列联表](#contingency) 一节会看得更加清楚：
 
-We should think of these as proportions of $sum(y)$ for reasons that will be clearer in [the section on contingency tables](#contingency):
+$$y = N\beta_1*x_1/N + N\beta_2*x_2/N + N\beta_3*x_3/N + ...$$
 
-$y = N\beta_1*x_1/N + N\beta_2*x_2/N + N\beta_3*x_3/N + ...$
+但是现在我们忽略比率表示，拟合对数变换后的模型：
 
-But we fit parameters on the log_transformed model (ignoring the proportion-notation for now):
+$$\log(y) = \log(\beta_1*x_1 + \beta_2*x_2 + \beta_3*x_3 +...) \qquad \mathcal{H}_0: \log(y) = \log(\beta_1)$$
 
-$log(y) = log(\beta_1*x_1 + \beta_2*x_2 + \beta_3*x_3 +...) \qquad \mathcal{H}_0: log(y) = log(\beta_1)$
-
-$log(y) = log(N\beta_1*x_1/N + N)$
+$\log(y) = \log(N\beta_1*x_1/N + N)$
 -->
 
 ### 示例数据
 
-本例子中，需要一些“宽”格式的计数数据：
+本例子中，需要一些宽格式的计数数据：
 
 ```{r}
 # Data in long format
@@ -1181,7 +1180,7 @@ print_df(D)
 
 ### R 代码：拟合优度检验
 
-现在，让我们展示一下，拟合优度检验实际上就是单因素方差分析的对数线性转换版本。设置 `family = poisson()`，这个设置默认使用 log 作为[联系函数（link function）](https://en.wikipedia.org/wiki/Generalized_linear_model#Link_function)（`family = poisson(link='log')`）。
+现在，让我们展示一下，拟合优度检验其实是单因素方差分析的对数线性变换版本。设置 `family = poisson()` ，它默认使用 log 作为[联系函数（link function）](https://en.wikipedia.org/wiki/Generalized_linear_model#Link_function)（`family = poisson(link='log')`）。
 
 ```{r, results='hold'}
 # Built-in test
@@ -1216,14 +1215,14 @@ b
 </div>
 
 
-注意，这里的 `anova(..., test = 'Rao')` 表示计算 p 值需要借助 [Rao 得分 检验，又称为拉格朗日乘子检验（Lagrange multiplier test，LM test）](https://en.wikipedia.org/wiki/Score_test)。也可以使用 `test='Chisq'` 或 `test='LRT'`，它们会返回近似的 p 值。你可能认为我们在这里作弊了，偷偷地对卡方模型进行后续处理。然而，`anova` 仅仅指定了 p 值的计算方式，而内部的所有对数线性模型都发生在 `glm` 中。
+注意，其中 `anova(..., test = 'Rao')` 表示用 [Rao 得分 检验，又称为拉格朗日乘子检验（Lagrange Multiplier test，LM test）](https://en.wikipedia.org/wiki/Score_test)来计算 p 值。当然也可以使用 `test='Chisq'` 或 `test='LRT'`，它们计算近似的 p 值。你可能会认为我们在这里作弊了，偷偷地对卡方模型进行后续处理，实际上，`anova` 仅仅指定了 p 值的计算方式，内部对数线性模型仍然发生在 `glm` 中。
 
-顺带一说，如果只有两个计数变量，而且样本量较大（$N > 100$），这个模型开始有效地近似于**二项检验（binomial test）** `binom.test`。这个样本量比通常情况要更大，所以我认为这不是经验准则，也不会在此进一步探索。
+顺带一说，如果只有两个计数变量，而且样本量较大（$N > 100$），模型会有效地近似于**二项检验（binomial test）** `binom.test`。这个样本量比通常情况要更大，所以我认为这不是经验准则，也不会在此进一步探索。
 
 
 ## 列联表 {#contingency}
 
-理论：作为对数线性模型
+### 理论：作为对数线性模型
 
 这里的理论会变得更令人费解，我会简单地写一下，从而你可以*感受*到它其实就是对数线性[双因素方差分析模型](#anova2)。来，开始探索......
 
@@ -1258,7 +1257,7 @@ D <- data.frame(
 
 # ... and as table for chisq.test
 D_table <- D %>%
-  spread(key = mood, value = Freq) %>% # Mood to columns
+  tidyr::spread(key = mood, value = Freq) %>% # Mood to columns
   select(-sex) %>% # Remove sex column
   as.matrix()
 
@@ -1407,44 +1406,49 @@ summary(full)
 
 
 <!--
-# Visualization of models (in progress)
-These will eventually be included under the respective headers and in the infographic.
-```{r echo=FALSE, eval=FALSE, fig.height=1.5, fig.width=2}
+# 模型可视化 (进行中)
 
+这些最终会包含在相应的章节和图表里
+
+```{r echo=FALSE, eval=FALSE, fig.height=1.5, fig.width=2}
 # Plot style for icons in table
-theme_icon = function(P, jitter=FALSE, xlim=c(-0.5, 2), ylim=c(-0.5, 2)) {
-  P = P + theme_bw(15) + 
-  coord_cartesian(xlim=xlim, ylim=ylim) +
-  theme(axis.title = element_blank(), 
-        axis.text = element_blank(),
-        axis.ticks = element_blank(),
-        title = element_blank(),
-        text = element_blank(),
-        panel.border = element_blank(),
-        panel.grid = element_blank(),
-        legend.position = 'none',
-        legend.key=element_blank())
-  
-    # Return jittered or non-jittered plot?
-  if(jitter) {
-    P + geom_jitter(width=0.1, size=2)
+theme_icon <- function(P, jitter = FALSE, xlim = c(-0.5, 2), ylim = c(-0.5, 2)) {
+  P <- P + theme_bw(15) +
+    coord_cartesian(xlim = xlim, ylim = ylim) +
+    theme(
+      axis.title = element_blank(),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      title = element_blank(),
+      text = element_blank(),
+      panel.border = element_blank(),
+      panel.grid = element_blank(),
+      legend.position = "none",
+      legend.key = element_blank()
+    )
+
+  # Return jittered or non-jittered plot?
+  if (jitter) {
+    P + geom_jitter(width = 0.1, size = 2)
   }
   else {
-    P + geom_point(size=2)
+    P + geom_point(size = 2)
   }
 }
 
-P_t1_icon = ggplot(D_t1, aes(y=y, x=0)) + 
-  stat_summary(fun.y=mean, geom = "errorbar", color='blue', aes(ymax = ..y.., ymin = ..y..), lwd=2)
+P_t1_icon <- ggplot(D_t1, aes(y = y, x = 0)) +
+  stat_summary(
+    fun.y = mean, geom = "errorbar", color = "blue",
+    aes(ymax = ..y.., ymin = ..y..), lwd = 2
+  )
 
-theme_icon(P_t1_icon, jitter=TRUE)
+theme_icon(P_t1_icon, jitter = TRUE)
 
 theme_icon(P_pearson)
-#theme_icon(P_t1)
+# theme_icon(P_t1)
 theme_icon(P_tpaired)
-theme_icon(P_t2, jitter=TRUE)
-theme_icon(P_anova1, xlim=c(-0.5, 4), jitter=TRUE)
-theme_icon(P_ancova, xlim=NULL, ylim=NULL)
-
+theme_icon(P_t2, jitter = TRUE)
+theme_icon(P_anova1, xlim = c(-0.5, 4), jitter = TRUE)
+theme_icon(P_ancova, xlim = NULL, ylim = NULL)
 ```
 -->
