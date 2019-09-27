@@ -1,7 +1,7 @@
 ---
 title: "翻译：常见统计检验的本质都是线性模型（或：如何教统计学）"
 author: "Jonas Kristoffer Lindeløv"
-date: "2019-08-31"
+date: "2019-09-27"
 categories:
   - 推荐文章
   - 统计理论
