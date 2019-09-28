@@ -114,13 +114,14 @@ pre.plot {
 </style>
 
 <script src="https://fyears.github.io/tests-as-linear/include/hideOutput.js"></script>
+
 <blockquote>
-<p>本文翻译自 <a href="https://lindeloev.net/">Jonas Kristoffer Lindeløv</a> 的 <a href="https://lindeloev.github.io/tests-as-linear/">Common statistical tests are linear models (or: how to teach stats)</a>，翻译工作已获得原作授权。</p>
+<p>本文翻译自 <a href="https://lindeloev.net/">Jonas Kristoffer Lindeløv</a> 的 <a href="https://lindeloev.github.io/tests-as-linear/">Common statistical tests are linear models (or: how to teach stats)</a>，翻译工作已获得原作授权。本翻译工作首发于统计之都网站和微信公众号上。</p>
 </blockquote>
 <p>本文将常见的参数和“非参”数检验统一用线性模型来表示，在同一个框架下， 我们可以看到不同检验之间的许多相似之处，极富思考性和启发性。点击链接可获得一份 <a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf">PDF 电子版</a> 或 <a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.html">HTML 网页版</a>。</p>
 <p><a href="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf"><img src="https://fyears.github.io/tests-as-linear/linear_tests_cheat_sheet.png" alt="linear-tests-cheat-sheet" /></a></p>
 <div id="section" class="section level1">
-<h1><span class="header-section-number">1</span> 常见检验的简洁本质</h1>
+<h1><span class="header-section-number">1</span> 常见检验的本质</h1>
 <p>大部分常见的统计模型（t 检验、相关性检验、方差分析（ANOVA）、卡方检验等） 是线性模型的特殊情况或者是非常好的近似。这种优雅的简洁性意味着我们学习起来不需要掌握太多的技巧。具体来说，这都来源于大部分学生从高中就学习的模型：<span class="math inline">\(y = a \cdot x + b\)</span>。 然而很不幸的是，统计入门课程通常把各种检验分开教学，给学生和老师们增加了很多不必要的麻烦。在学习每一个检验的基本假设时，如果不是从线性模型切入，而是每个检验都死记硬背，这种复杂性又会成倍增加。因此，我认为先教线性模型，然后对线性模型的一些特殊形式进行改名是一种优秀的教学策略，这有助于更深刻地理解假设检验。线性模型在频率学派、贝叶斯学派和基于置换的U检验的统计推断之间是相通的，对初学者而言，从模型开始比从 P 值、第 I 类错误、贝叶斯因子或其它地方更为友好。</p>
 <p>在入门课程教授“非参”数检验的时候，可以避开 <a href="https://en.wikipedia.org/wiki/Lie-to-children">骗小孩</a> 的手段，直接告诉学生“非参”检验其实就是和秩相关的参数检验。对学生来说，接受秩的概念比相信你可以神奇地放弃各种假设好的多。实际上，在统计软件 <a href="https://jasp-stats.org/">JASP</a> 里，“非参”检验的贝叶斯等价模型就是使用 <a href="https://arxiv.org/abs/1712.06941">潜秩</a>（Latent Rank）来实现的。频率学派的“非参”检验在样本量 <span class="math inline">\(N &gt; 15\)</span> 的时非常准确。</p>
 <p><img src="https://www.picsellmedia.com/wp-content/uploads/2017/01/shutterstock_336913772.jpg" /></p>
@@ -1386,7 +1387,7 @@ d &lt;- MASS::loglm(Freq ~ mood + sex, D)</code></pre>
 </div>
 <div id="course" class="section level1">
 <h1><span class="header-section-number">9</span> 教材和课程大纲</h1>
-<p>大部分高等统计书籍（和一些入门书籍）也都同意“所有模型都是 GLMM（广义线性混合效应模型） 的观点”。然而，线性模型部分通常都是概念上提了一下，而没有清晰地指出细节。我想通过简练的方式把线性模型当作<em>工具</em>。幸运地，大部分对初学者友好的教材后来都合并了：</p>
+<p>大部分高等统计书籍（和一些入门书籍）也都同意“所有模型都是 GLMM（广义线性混合效应模型） 的观点”。然而，线性模型部分通常都是概念上提了一下，而没有清晰地指出细节。我想通过简练的方式把线性模型当作工具。幸运地，大部分对初学者友好的教材后来都合并了：</p>
 <ul>
 <li>Russ Poldrack 的开源书籍 “Statistical Thinking for the 21st century”（从<a href="http://statsthinking21.org/fitting-models-to-data.html">关于建模的第 5 章</a>开始）</li>
 <li><a href="https://jeffrouder.blogspot.com/2019/03/teaching-undergrad-stats-without-p-f-or.html">Jeff Rouder 的课程笔记</a>，介绍了仅使用 <span class="math inline">\(R^2\)</span> 和 BIC 来对比模型。它避开了所有关于 p 值、F 值等等的繁琐问题。完整的材料和幻灯片可<a href="https://drive.google.com/drive/folders/1CiJK--bAuO0F-ug3B5I3FvmsCdpPGZ03">在这里找到</a>。</li>
@@ -1436,7 +1437,7 @@ d &lt;- MASS::loglm(Freq ~ mood + sex, D)</code></pre>
 <li><p>我没在这里覆盖到前提假设的内容。这会在另一篇文章揭晓！但是所有检验都很可能有三个预定假设：a) 数据点的独立性，b) 残差的正态性，c) 同方差性（homoscedasticity）。</p></li>
 <li><p>我假定所有的零假设是缺失了效应的情况，但是所有原理都和非 0 的零假设所一致的。</p></li>
 <li><p>我没有讨论推断内容。因为大家都会关心 p 值，因此我在比较中提到了 p 值，从而简短地展示了背后的模型等价性。参数的估计值也会展示出相同的等价性。如何进行<em>推断</em>则是另一个话题了。我个人是贝叶斯学派的，但是展示贝叶斯学派内容的话，会减少这篇文章的受众。此外，构造<a href="https://en.wikipedia.org/wiki/Robust_statistics">稳健模型</a>是更好的选择，但是它无法揭示模型的等价性。</p></li>
-<li><p>本文列表依然缺失了很多其它有名称的检验，有可能在以后添加进来。比如说符号检验（sign test）（要求很大的 N 从而可以有效地使用线性模型来近似），Friedman 检验 – 即在 <code>rank(y)</code> 上的 RM-ANOVA，McNemar 检验，和二项（Binomial）/多项（Multinomial）检验。在<a href="#links">链接一节</a>可查阅更多的等价模型。如果你认为它们需要在本文提及到，欢迎在本文档的 <a href="https://github.com/lindeloev/tests-as-linear/">Github 仓库</a> 提交对应说明！</p></li>
+<li><p>本文列表依然缺失了很多其它著名的检验，有可能在以后添加进来。比如说符号检验（sign test）（要求很大的 N 从而可以有效地使用线性模型来近似），Friedman 检验 – 即在 <code>rank(y)</code> 上的 RM-ANOVA，McNemar 检验，和二项（Binomial）/多项（Multinomial）检验。在<a href="#links">链接一节</a>可查阅更多的等价模型。如果你认为它们需要在本文提及到，欢迎在本文档的 <a href="https://github.com/lindeloev/tests-as-linear/">Github 仓库</a> 提交对应说明！</p></li>
 </ol>
 <!--
 # 模型可视化 (进行中)
@@ -1445,6 +1446,24 @@ d &lt;- MASS::loglm(Freq ~ mood + sex, D)</code></pre>
 
 
 -->
+</div>
+<div id="section-18" class="section level1">
+<h1><span class="header-section-number">11</span> 附录：翻译稿评论</h1>
+<div id="section-19" class="section level2">
+<h2><span class="header-section-number">11.1</span> 译者评论</h2>
+<p>译者：相对于统计检验来说，线性回归实际上是更符合直觉的。想当年某检验实在让笔者百思不得其解，某师姐指点迷津：“你实在搞不懂可以看成是线性回归对系数的检验，我们如此这般建造一个 <span class="math inline">\(X\)</span>……”让笔者茅塞顿开。故听朋友推荐本文之后，笔者毛遂自荐承接了翻译任务。希望各位读者能从本文感受统计的威力和它带来的喜悦。如各位读者有指正或建议之处，热烈欢迎于主站或微信文下留言评论。</p>
+</div>
+<div id="section-20" class="section level2">
+<h2><span class="header-section-number">11.2</span> 审稿人讨论</h2>
+<p>审稿人：我（黄湘云）看完这篇文章的感受是怀疑自己读了个“假”大学，开个玩笑哈！感觉这篇文章是继<a href="https://cosx.org/2017/09/psychology-in-crisis/">《心理学的危机》</a>后又一篇需要找个地方安安静静读几天的，文中很多检验的细节都略过了，更加数学严格的检验介绍估计得去看《数理统计引论》陈希孺著的这本书才能明白。这篇文章的覆盖面起码是一个学期的课，如果把本文没有详述的其他检验补充进来，特别是加上检验的数学推导和一些实际应用案例后，估计能成一本书。我是学线性模型的（此线性模型非大多数人了解的彼线性模型），看完之后有点汗颜和如梦初醒，惊奇于作者独具一格的视角。不足之处是有些地方还不够通俗，比如列联表作为对数线性模型来理解，一点也不直接，作者也略去了！这里的列联表其实是指我们通常教科书上的独立性检验。拟合优度检验和独立性检验的检验统计量的极限分布都是卡方分布，故而都归纳在卡方检验下。</p>
+<p>文章介绍了那么多的检验问题，实际上都可以归为统计学三大检验 — 似然比检验、 Wald 检验、（Rao）Score（得分）检验 — 在线性模型下的特殊情况。数理统计的教材往往是利用似然比这把瑞士军刀展开介绍的。似然比在假设检验中地位相当于极大似然估计在参数估计中的地位，相当于正态分布在抽样分布中的地位。抽样分布、参数估计和假设检验合称统计推断。学数理统计的人往往不愿去记那么多的检验名称，比如 t 检验、F 检验和卡方检验，特别是诸多名人检验，因为本质上那只是似然比统计量在不同的条件下呈现的极限分布不同而已。三大检验的渐近等价性可参考</p>
+<ul>
+<li><p>Dennis D.Boos and L.A. Stefanski. Essential Statistical Inference: Theory and Methods. 2013. Springer, New York. <a href="doi:10.1007/978-1-4614-4818-1" class="uri">doi:10.1007/978-1-4614-4818-1</a> Chapter 3. Likelihood-Based Tests and Confidence Regions.</p></li>
+<li><p>Vito M. R. Muggeo and Gianfranco Lovison (2014) The “Three Plus One” Likelihood-Based Test Statistics: Unified Geometrical and Graphical Interpretations, The American Statistician, 68:4, 302-306, DOI: 10.1080/00031305.2014.955212</p></li>
+</ul>
+<p>Rao 在 1948 年给出得分检验的渐近性，文中提及 Rao 得分检验这个名称只是强调 Rao 在得分检验中的贡献，有些书籍中提及 Rao 检验基本等同于得分检验，而拉格朗日乘子检验由 Aitchison 和 Silvey 于 1958 年在经济学领域独立提出来的，所以在统计学文献中见最多的是得分检验，经济学文献中多描述为拉格朗日乘子检验。这二者是殊途同归，都对检验统计量的得分函数做泰勒展开，其极限分布都为卡方分布。</p>
+<p>列联表是分类数据的一种方便的组织形式，与之相关的检验和前面带连续变量的线性回归模型的检验是有本质区别的，列联表是与多项分布联系起来的，这里没有残差，线性回归模型往往对残差做了独立同正态分布的假设。</p>
+</div>
 </div>
 <div class="footnotes">
 <hr />
