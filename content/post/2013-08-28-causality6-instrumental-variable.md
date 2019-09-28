@@ -27,7 +27,6 @@ forum_id: 418961
 `$$ 
 E(\varepsilon_i) = 0, \text{ and }  \text{cov}(D_i, \varepsilon_i) = 0. \quad \quad (2) 
 $$`
-<!--more-->
  
 不同的教科书稍有不同，比如 Wooldridge 的书上假定`$E(\varepsilon_i\mid D_i ) =0$`，很显然，这蕴含着上面两个假定。零均值的假定并不强，因为 `$\alpha$`“吸收”了`$\varepsilon_i$`的均值；关键在第二个协方差为零的假定—它通常被称为“外生性”（exogeneity）假定。在这个假定下，我们在 (1) 的两边关于`$D_i$`取协方差，便可以得到：
 
@@ -79,7 +78,7 @@ $$`
 
 由于个体的结果`$Y$`直接受到所受的处理`$D$`的影响，而不会受到是否受鼓励`$Z$`的影响，下面的排除约束（exclusion restriction）的假定，很多时候也是合理的：
 
-（排除约束）`$D_i(1) = D_i(0) $ 蕴含着 $Y_i(1) = Y_i(0)$`.
+（排除约束）`$D_i(1) = D_i(0)$` 蕴含着 `$Y_i(1) = Y_i(0)$`.
 
 上面的假定表明，当随机化的“鼓励”`$Z$`不会影响是否接受处理`$D$`时，随机化的“鼓励” `$Z$`也不会影响结果变量`$Y$`。也可以理解成，随机化的“鼓励” `$Z$` 仅仅通过影响是否接受处理`$D$`来影响结果`$Y$`，或者说，随机化“鼓励” `$Z$`本身对与结果变量`$Y$`没有“直接作用”。
 
@@ -95,7 +94,7 @@ $$`
 \end{eqnarray*}
 $$`
 
-单调使得 `$D$` 的潜在结果的组合只有三种；排除约束假定使得上面分解的后两个式子为`$0$`。由于对于 `$(D_i(1)=0, D_i(0)=0)$ 和 $(D_i(1)=1, D_i(0)=1)$`两类人，随机化的“鼓励”对于`$D$`的作用为`$0$`，`$(D_i(1)=1, D_i(0)=0)$`一类人的比例就是`$Z$`对`$D$`平均因果作用：`$ACE(Z\rightarrow D) = P\{ D_i(1)=1, D_i(0)=0\} $`. 因此，
+单调使得 `$D$` 的潜在结果的组合只有三种；排除约束假定使得上面分解的后两个式子为`$0$`。由于对于 `$(D_i(1)=0, D_i(0)=0)$` 和 `$(D_i(1)=1, D_i(0)=1)$`两类人，随机化的“鼓励”对于`$D$`的作用为`$0$`，`$(D_i(1)=1, D_i(0)=0)$`一类人的比例就是`$Z$`对`$D$`平均因果作用：`$ACE(Z\rightarrow D) = P\{ D_i(1)=1, D_i(0)=0\} $`. 因此，
 
 `$$  
 CACE= E\{Y_i(1)-Y_i(0)\mid D_i(1)=1, D_i(0)=0 \} = \frac{ ACE(Z \rightarrow Y) }{ ACE(Z\rightarrow D) }.  
@@ -111,9 +110,9 @@ $$`
 
 # 四、实例
 
-这部分给出具体的例子来说明上理论的应用，具体计算用到了第五部分的一个函数（其中包括用delta方法算的抽样方差）。这里用到的数据来自一篇政治学的文章 Green et al. (2003) “Getting Out the Vote in Local Elections: Results from Six Door-to-Door Canvassing Experiments”，[数据点击此处可以在此下载](http://dvn.iq.harvard.edu/dvn/faces/study/StudyPage.xhtml?globalId=hdl:1902.1/21729&studyListingIndex=5_c49f1060ddaa41a23e5759168940)。
+这部分给出具体的例子来说明上述理论的应用，具体计算用到了第五部分的一个函数（其中包括用delta方法算的抽样方差）。这里用到的数据来自一篇政治学的文章 Green et al. (2003) “Getting Out the Vote in Local Elections: Results from Six Door-to-Door Canvassing Experiments”，[数据点击此处可以在此下载](http://dvn.iq.harvard.edu/dvn/faces/study/StudyPage.xhtml?globalId=hdl:1902.1/21729&studyListingIndex=5_c49f1060ddaa41a23e5759168940)。
 
-文章目的是研究某个社会实验是否能够提到投票率，实验是随机化的，但是并非所有的实验组的人都依从。因此这里的变量 `$Z$` 表示随机化的实验，`$D$` 表示依从与否，`$Y$` 是投票与否的示性变量。具体的数据描述，可参加前面提到的文章。
+文章目的是研究某个社会实验是否能够提高投票率，实验是随机化的，但是并非所有的实验组的人都依从。因此这里的变量 `$Z$` 表示随机化的实验，`$D$` 表示依从与否，`$Y$` 是投票与否的示性变量。具体的数据描述，可参加前面提到的文章。
 
 原始数据总结如下：
 
@@ -147,56 +146,58 @@ $se.complier
 
 ```r
 ## function for complier average causal effect
-CACE.IV = function(outcome, treatment, instrument)
-{
-Y = outcome
-D = treatment
-Z = instrument
-N = length(Y)
+CACE.IV <- function(outcome, treatment, instrument) {
+  Y <- outcome
+  D <- treatment
+  Z <- instrument
+  N <- length(Y)
 
-Y1 = Y[Z == 1]
-Y0 = Y[Z == 0]
-D1 = D[Z == 1]
-D0 = D[Z == 0]
+  Y1 <- Y[Z == 1]
+  Y0 <- Y[Z == 0]
+  D1 <- D[Z == 1]
+  D0 <- D[Z == 0]
 
-mean.Y1 = mean(Y1)
-mean.Y0 = mean(Y0)
-mean.D1 = mean(D1)
-mean.D0 = mean(D0)
+  mean.Y1 <- mean(Y1)
+  mean.Y0 <- mean(Y0)
+  mean.D1 <- mean(D1)
+  mean.D0 <- mean(D0)
 
-prob.complier = mean.D1 - mean.D0
-var.complier  = var(D1)/length(D1) + var(D0)/length(D0)
-se.complier   = var.complier^0.5
+  prob.complier <- mean.D1 - mean.D0
+  var.complier <- var(D1) / length(D1) + var(D0) / length(D0)
+  se.complier <- var.complier^0.5
 
-CACE = (mean.Y1 - mean.Y0)/(mean.D1 - mean.D0)
+  CACE <- (mean.Y1 - mean.Y0) / (mean.D1 - mean.D0)
 
-## COV
-pi1 = mean(Z)
-pi0 = 1 - pi1
+  ## COV
+  pi1 <- mean(Z)
+  pi0 <- 1 - pi1
 
-Omega = c( var(Y1)/pi1, cov(Y1, D1)/pi1, 0, 0,
-           cov(Y1, D1)/pi1, var(D1)/pi1, 0, 0,
-           0, 0, var(Y0)/pi0, cov(Y0, D0)/pi0,
-           0, 0, cov(Y0, D0)/pi0, var(D0)/pi0 )
-Omega = matrix(Omega, byrow = TRUE, nrow = 4)
+  Omega <- c(
+    var(Y1) / pi1, cov(Y1, D1) / pi1, 0, 0,
+    cov(Y1, D1) / pi1, var(D1) / pi1, 0, 0,
+    0, 0, var(Y0) / pi0, cov(Y0, D0) / pi0,
+    0, 0, cov(Y0, D0) / pi0, var(D0) / pi0
+  )
+  Omega <- matrix(Omega, byrow = TRUE, nrow = 4)
 
-## Gradient
-Grad = c(1, -CACE, -1, CACE)/(mean.D1 - mean.D0)
+  ## Gradient
+  Grad <- c(1, -CACE, -1, CACE) / (mean.D1 - mean.D0)
 
-COV.CACE = t(Grad)%*%Omega%*%Grad/N
+  COV.CACE <- t(Grad) %*% Omega %*% Grad / N
 
-se.CACE = COV.CACE^0.5
+  se.CACE <- COV.CACE^0.5
 
-p.value = 2*pnorm(abs(CACE/se.CACE), 0, 1, lower.tail = FALSE)
+  p.value <- 2 * pnorm(abs(CACE / se.CACE), 0, 1, lower.tail = FALSE)
 
-##results
-res = list(CACE          = CACE,
-           se.CACE       = se.CACE,
-           p.value       = p.value,
-           prob.complier = prob.complier,
-           se.complier   = se.complier)
+  ## results
+  res <- list(
+    CACE = CACE,
+    se.CACE = se.CACE,
+    p.value = p.value,
+    prob.complier = prob.complier,
+    se.complier = se.complier
+  )
 
-return(res)
-
+  return(res)
 }
 ```
