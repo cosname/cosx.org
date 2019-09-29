@@ -131,7 +131,52 @@ pre.plot {
 <h1><span class="header-section-number">2</span> 设置和示例数据</h1>
 <p>如果你想查看函数和本笔记的其它设置的话，可以展开这片代码查看：</p>
 <div class="fold s">
+<pre class="r"><code># 加载必要的 R 包用于处理数据和绘图
+library(tidyverse)
+library(patchwork)
+library(broom)
 
+# 设置随机数种子复现本文结果
+set.seed(40)
+
+# 生成已知参数的服从正态分布的随机数
+rnorm_fixed &lt;- function(N, mu = 0, sd = 1)
+  scale(rnorm(N)) * sd + mu
+
+# 图形风格
+theme_axis &lt;- function(P, jitter = FALSE,
+                       xlim = c(-0.5, 2),
+                       ylim = c(-0.5, 2),
+                       legend.position = NULL) {
+  P &lt;- P + theme_bw(15) +
+    geom_segment(
+      x = -1000, xend = 1000,
+      y = 0, yend = 0,
+      lty = 2, color = &quot;dark gray&quot;, lwd = 0.5
+    ) +
+    geom_segment(
+      x = 0, xend = 0,
+      y = -1000, yend = 1000,
+      lty = 2, color = &quot;dark gray&quot;, lwd = 0.5
+    ) +
+    coord_cartesian(xlim = xlim, ylim = ylim) +
+    theme(
+      axis.title = element_blank(),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      panel.border = element_blank(),
+      panel.grid = element_blank(),
+      legend.position = legend.position
+    )
+
+  # 是否设置抖动
+  if (jitter) {
+    P + geom_jitter(width = 0.1, size = 2)
+  }
+  else {
+    P + geom_point(size = 2)
+  }
+}</code></pre>
 </div>
 <p>一开始，我们简单点，使用三组正态分布数据，且整理为宽（<code>a</code>、<code>b</code>、<code>c</code>）和长（<code>value</code>、<code>group</code>）格式：</p>
 <pre class="r"><code># Wide format (sort of)
