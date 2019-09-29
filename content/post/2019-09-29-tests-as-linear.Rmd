@@ -92,7 +92,7 @@ invisible(lapply(c(
 如果你想查看函数和本笔记的其它设置的话，可以展开这片代码查看：
 
 <div class='fold s'>
-```{r, echo=FALSE, R.options=list(tidyverse.quiet = TRUE), message=FALSE}
+```{r, R.options=list(tidyverse.quiet = TRUE)}
 # 加载必要的 R 包用于处理数据和绘图
 library(tidyverse)
 library(patchwork)
