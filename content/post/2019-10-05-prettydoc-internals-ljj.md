@@ -4,7 +4,7 @@ author: "李家郡"
 date: "2019-10-05"
 tags: [R Markdown, Prettydoc]
 categories: ["统计软件"]
-slug: change-prettydoc-ljj
+slug: prettydoc-internals-ljj
 ---
 
 ## 声明
