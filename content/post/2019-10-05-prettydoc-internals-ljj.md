@@ -9,7 +9,7 @@ slug: prettydoc-internals-ljj
 
 ## 背景
 
-在之前我的[文章](https://cosx.org/2019/06/r-markdown-slides-ljj/)中，概括的介绍了修改R Markdown模板的思路。本文希望基于一个创作 R Markdown文档的[例子](https://llijiajun.github.io/github-io/images/R04-1.html) （在电脑上看效果比较好），对常用的报告模板 Prettydoc 进行分析。读者可以根据自己的程度和需求，选择是停留在对模板的颜色、字体大小的程度，或是往前走一点——自己发明创造，进行阅读。
+在之前我的[文章](https://cosx.org/2019/06/r-markdown-slides-ljj/)中，概括地介绍了修改 R Markdown模板的思路。本文希望基于一个创作 R Markdown文档的[例子](https://llijiajun.github.io/github-io/images/R04-1.html) （在电脑上看效果比较好），对常用的报告模板 Prettydoc 进行分析。读者可以根据自己的程度和需求，选择是停留在对模板的颜色、字体大小的程度，或是往前走一点——自己发明创造，进行阅读。
 
 
 ## 改造原理及意义
@@ -70,7 +70,7 @@ slug: prettydoc-internals-ljj
 
 >* 问题四 有两个CSS文件，到底修改哪一个？
 
-其实两个CSS文件的内容是一致的，但实际上R Markdown用的是`\*.min.css`。原因也很简单，`\*.css`的文件是正常的开发文件，`\*.min.css`是利用 CSS 工具手动压缩后的文件。因为后者删掉了很多冗余字符，可以使生成的文档更小。
+其实两个CSS文件的内容是一致的，但实际上 R Markdown用的是`\*.min.css`。原因也很简单，`\*.css`的文件是正常的开发文件，`\*.min.css`是利用 CSS 工具手动压缩后的文件。因为后者删掉了很多冗余字符，可以使生成的文档更小。
 
 下面就 Cayman 简单修改一下：
 
@@ -94,7 +94,7 @@ slug: prettydoc-internals-ljj
 
 ## 让文档动起来
 
-要引入 JavaScript 就必须先回答问题一，最朴素的想法是在模板外的目录下创建 js 文件夹，按照 CSS 文件的引用情况，有可能会自动将 js 文件夹复制过去，但实际上，这样的想法还是太天真。只要在生成 temp_files 文件夹时，将其拖拽出原来的文件夹（只有在R Markdown将临时文件删除前拖出去才能看），就可以发现，在生成临时文件时，并没有生成 js 文件夹，自然直接放 js 文件夹不可行。转念再想，至少复制了 images 文件夹下的所有东西，那么复制 images 文件夹不也可以吗?基于这个朴素的想法，和路径的尝试，在将 script.js 文件放进 images 文件夹后，在 HTML 中的引用路径就可以如下：
+要引入 JavaScript 就必须先回答问题一，最朴素的想法是在模板外的目录下创建 js 文件夹，按照 CSS 文件的引用情况，有可能会自动将 js 文件夹复制过去，但实际上，这样的想法还是太天真。只要在生成 temp_files 文件夹时，将其拖拽出原来的文件夹（只有在 R Markdown将临时文件删除前拖出去才能看），就可以发现，在生成临时文件时，并没有生成 js 文件夹，自然直接放 js 文件夹不可行。转念再想，至少复制了 images 文件夹下的所有东西，那么复制 images 文件夹不也可以吗?基于这个朴素的想法，和路径的尝试，在将 script.js 文件放进 images 文件夹后，在 HTML 中的引用路径就可以如下：
 
 ```
 <script  src="temp_files/images/script.js"></script>
