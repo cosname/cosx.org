@@ -5,6 +5,7 @@ date: "2019-10-05"
 tags: [R Markdown, Prettydoc]
 categories: ["统计软件"]
 slug: prettydoc-internals-ljj
+forum_id: 420972
 ---
 
 ## 背景
