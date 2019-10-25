@@ -48,7 +48,7 @@ Jackman(2009)采用了18名棒球运动员在1970年赛季的前45次击球数�
 
 <div align = center><img src = "https://zhanglj37.github.io/images/cos-multilevel/prior.png" width="400" height="200"></div>
 
-贝叶斯建模的JAGS(Just Another Gibbs Sampling)代码详见Jackman(2009)。贝叶斯估计结果如下图所示：
+贝叶斯估计结果如下图所示([数据和R代码](https://zhanglj37.github.io/share/cos_multilevel/ex1))：
 
 <div align = center><img src = "https://zhanglj37.github.io/images/cos-multilevel/ex1_results.png" width="500" height="250"></div>
 
@@ -59,13 +59,13 @@ Jackman(2009)采用了18名棒球运动员在1970年赛季的前45次击球数�
 
 ### 实例2
 
-实例2则以Heck和Thomas(2015)第三章的数据和模型为例，演示如何在M*plus*软件中进行贝叶斯多层建模，并灵活地在各个层次间探究变量间的关系。模型如下所示，在组内水平(Within)上，研究者希望探究在控制了性别和种族后，员工对于薪水的满意程度(satpay)对他们的士气(morale)的影响( `$β_1$` )，而在组间水平(Between)上，研究者希望探究员工所处部门的整体工资水平(pctbelow)对工作士气的影响，及部门的整体工资水平对个体水平上薪水满意度(satpay)对员工士气(morale)影响( `$β_1$` )的调节作用。
+实例2则以Heck和Thomas(2015)第三章的[数据](https://zhanglj37.github.io/share/cos_multilevel/ch3new.dat)和模型为例，演示如何在M*plus*软件中进行贝叶斯多层建模，并灵活地在各个层次间探究变量间的关系。模型如下所示，在组内水平(Within)上，研究者希望探究在控制了性别和种族后，员工对于薪水的满意程度(satpay)对他们的士气(morale)的影响( `$β_1$` )，而在组间水平(Between)上，研究者希望探究员工所处部门的整体工资水平(pctbelow)对工作士气的影响，及部门的整体工资水平对个体水平上薪水满意度(satpay)对员工士气(morale)影响( `$β_1$` )的调节作用。
 
 <div align = center><img src = "https://zhanglj37.github.io/images/cos-multilevel/ex2_model.PNG" width="500" height="300"></div>
 
 Heck和Thomas(2015)对该模型提供的是极大似然估计，本例中将采用贝叶斯估计，并对参数提供无信息先验分布。M*plus*软件默认会对参数提供无信息先验分布，因此代码中无需额外设定。
 
-代码如下所示，在模型部分，%Between%设定群体水平的模型，%Within%部分设定个体水平的模型。
+M*plus*代码如下所示，在模型部分，%Between%设定群体水平的模型，%Within%部分设定个体水平的模型。
 
 
 
