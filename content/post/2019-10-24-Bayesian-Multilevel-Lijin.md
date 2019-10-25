@@ -3,7 +3,7 @@ title: "从贝叶斯视角看多层模型"
 author: "张沥今"
 data: 2019-10-24
 categories: ["统计模型"]
-tags: ["贝叶斯", "多层模型","COStudy心理学"]
+tags: ["贝叶斯", "多层模型", "COStudy心理学"]
 slug: bayesian-multilevel-model
 ---
 
