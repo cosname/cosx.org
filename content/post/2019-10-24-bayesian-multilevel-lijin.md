@@ -65,9 +65,22 @@ Jackman(2009)采用了18名棒球运动员在1970年赛季的前45次击球数�
 
 Heck和Thomas(2015)对该模型提供的是极大似然估计，本例中将采用贝叶斯估计，并对参数提供无信息先验分布。M*plus*软件默认会对参数提供无信息先验分布，因此代码中无需额外设定。
 
-M*plus*代码如下所示，在模型部分，%Between%设定群体水平的模型，%Within%部分设定个体水平的模型。
+首先需要将结果变量士气(morale)的方差分解到组内和组间水平([代码和结果](https://zhanglj37.github.io/share/cos_multilevel/ex2))，结果显示，个体间方差为33.312，群体间方差为5.506，计算组内相关系数ICC(Intraclass Correlation)为0.142。ICC指组间方差占总方差的比例，公式如下：
+
+`$$
+ICC = \sigma_between^2 / (\sigma_between^2+\sigma_within^2)
+$$`
 
 
+接下来建立假设模型，M*plus*代码如下所示，在模型部分，%Between%设定群体水平的模型，%Within%部分设定个体水平的模型。在个体水平部分，用用性别、人种和satpay预测morale，并将satpay对morale的效应赋值给S。在群体水平部分，用pctbelow预测morale和S(即检验pctbelow对个体水平上薪水满意度(satpay)对员工士气(morale)影响( `$β_1$` )的调节作用)。
+
+模型对应公式如下:
+
+`$$
+Level 1: y_{ij} = \beta_{0j} + \beta_{1j} satpay_{ij} + \beta_{2j} female_{ij} + \beta_{3j} white_{ij} + \epsilon_{ij}
+\\Level 2: \beta_{0j} = \gamma_{00} + \gamma_{01} pctbelow_j + \mu_{0j}
+\\         \beta_{1j} = \gamma_{10} + \gamma_{11} pctbelow_j + \mu_{1j}
+$$`
 
 ```{}
 TITLE:	 Model 4: Explaining variation in the level-2 intercept and slope;
@@ -96,6 +109,7 @@ PLOT: TYPE = PLOT2;	!输出各参数的后验分布直方图等
 
 ```
 
+
 M*plus*软件会在算法迭代收敛后输出估计结果，运行过程如下所示
 
 <div align = center><img src = "https://zhanglj37.github.io/images/cos-multilevel/iteration.png" width="400" height="150"></div>
@@ -104,8 +118,7 @@ M*plus*软件会在算法迭代收敛后输出估计结果，运行过程如下�
 
 <div align = center><img src = "https://zhanglj37.github.io/images/cos-multilevel/ex2_results.png" width="600" height="400" ></div>
 
-结果显示，员工对于薪水的满意程度将显著的正向预测他们的工作士气(`$β_1 = 1.196, p < 0.001$`)，控制变量性别的效应不显著(`$𝛽 = 0.005, p = 0.473$`)、种族的效应显著(`$𝛽 = 0.911, p < 0.001$`)。所处部门的整体工资水平也能显著预测他们的工作士气(`$𝛽 = -0.026, p < .001$`)，但未发现整体工资水平对薪水满意度和士气的关系间存在调节作用(`$𝛽 = 0.001, p = 0.066$`)。上述无信息先验下贝叶斯方法的估计结果和书中极大似然法的估计结果类似。
-
+结果显示，员工对于薪水的满意程度将显著的正向预测他们的工作士气(`$β_1 = 1.196, p < 0.001$`)，控制变量性别的效应不显著(`$𝛽 = 0.005, p = 0.473$`)、种族的效应显著(`$𝛽 = 0.911, p < 0.001$`)。所处部门的整体工资水平也能显著预测他们的工作士气(`$𝛽 = -0.026, p < .001$`)，但未发现整体工资水平对薪水满意度和士气的关系间存在调节作用(`$𝛽 = 0.001, p = 0.066$`)。上述无信息先验下贝叶斯方法的估计结果和书中极大似然法的估计结果类似。此时，组内方差被解释了47.6%，残差为17.459，组间方差被解释了67.5%，残差为1.791。
 
 ## 总结
 
