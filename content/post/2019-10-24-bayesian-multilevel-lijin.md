@@ -74,7 +74,7 @@ $$`
 
 接下来建立假设模型，M*plus*代码如下所示，在模型部分，%Between%设定群体水平的模型，%Within%部分设定个体水平的模型。在个体水平部分，用用性别、人种和satpay预测morale，并将satpay对morale的效应赋值给S。在群体水平部分，用pctbelow预测morale和S(即检验pctbelow对个体水平上薪水满意度(satpay)对员工士气(morale)影响( `$β_1$` )的调节作用)。
 
-模型对应公式如下，其中`\epsilon_{ij}, \mu_{0j}`和`\mu_{1j}`代表误差项:
+模型对应公式如下，其中`$\epsilon_{ij}, \mu_{0j} $`和`$\mu_{1j} $`代表误差项:
 
 `$$
 Level 1: y_{ij} = \beta_{0j} + \beta_{1j} satpay_{ij} + \beta_{2} female_{ij} + \beta_{3} white_{ij} + \epsilon_{ij}
