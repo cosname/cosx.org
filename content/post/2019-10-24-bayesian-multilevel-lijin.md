@@ -5,6 +5,7 @@ date: 2019-10-24
 categories: ["统计模型"]
 tags: ["贝叶斯", "多层模型", "COStudy心理学"]
 slug: bayesian-multilevel-model
+forum_id: 421025
 ---
 
 
