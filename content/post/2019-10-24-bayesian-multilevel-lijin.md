@@ -145,6 +145,3 @@ Jackman, S. (2009). *Bayesian Analysis for the Social Science.* John Wiley & Son
 Heck, R. H., & Thomas, S. L. (2015). *An Introduction to Multilevel Modeling Techniques: MLM and SEM Approaches Using Mplus.* New Jersey: Lawrence Erlbaum Associate Inc.
 
 Muthén, L. K., & Muthén, B. O. (1998-2017). *Mplus User’s Guide. Eighth Edition.* Los Angeles, CA: Muthén & Muthén.
-
-作者介绍：张沥今，中山大学心理学系研究生，师从潘俊豪副教授，研究方向为贝叶斯结构方程建模。个人博客<https://www.lijinzhang.xyz/blog.html>
-
