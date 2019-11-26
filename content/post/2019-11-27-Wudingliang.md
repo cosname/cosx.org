@@ -3,7 +3,7 @@ title: "我国首位有重大国际影响的统计学家：吴定良"
 author: 
   - 袁卫
   - 李扬
-date: 2019-11-22
+date: 2019-11-27
 categories: 推荐文章
 tags: ["生物统计","国际影响","理论研究","实践研究"]
 slug: wu-ding-liang
