@@ -3,7 +3,7 @@ title: "我国首位有重大国际影响的统计学家：吴定良"
 author: 
   - 袁卫
   - 李扬
-date: 2019-11-27
+date: '2019-11-27'
 categories: 
   - 推荐文章
 tags: 
