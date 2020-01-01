@@ -1,7 +1,7 @@
 ---
-title: 十字路口的统计学: 谁在应对挑战？（一）
+title: "十字路口的统计学: 谁在应对挑战？（一）"
 date: '2019-12-31'
-author: Xuming He
+author: "Xuming He"
 categories: 
   - 推荐文章
 tags: 
