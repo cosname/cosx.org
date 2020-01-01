@@ -3,9 +3,6 @@ title: 十字路口的统计学: 谁在应对挑战？（一）
 author: Xuming He
 date: '2019-12-31'
 categories:
-  - 推荐文章
-  - 职业事业
-tags:
   - 数据科学
   - 十字路口
   - 统计教育
