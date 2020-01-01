@@ -1,8 +1,10 @@
 ---
 title: 十字路口的统计学: 谁在应对挑战？（一）
-author: Xuming He
 date: '2019-12-31'
-categories:
+author: Xuming He
+categories: 
+  - 推荐文章
+tags: 
   - 数据科学
   - 十字路口
   - 统计教育
@@ -10,10 +12,9 @@ categories:
   - 实践
   - 计算
 slug: crossroad-statistics-who-meet-challenge
+meta_extra: "译者：吴喜之；审稿：魏太云；编辑：向悦、雷博文"
 forum_id: 
-meta_extra: 译者：吴喜之；审稿：魏太云；编辑：向悦、雷博文
 ---
-    
 > 编者按：本系列推送为2018年10月15日至10月17日在弗吉尼亚州举行的“十字路口的统计:数据科学时代的挑战和机遇”研讨会的报告，该报告由Xuming He组织并由指导委员会（成员为James Berger， Xuming He， David Madigan， Susan Murphy， Bin Yu和Jon Wellner）审核，由吴喜之老师翻译，已得到译者授权。
 >
 > 报告正文由“统计和数据科学的作用/价值”、“科学和社会应用中的挑战”、“基础研究”、“专业文化与社区责任”、“博士教育”五部分组成，计划分三期推出。第一期内容为报告摘要和第一部分“统计和数据科学的作用/价值”。
