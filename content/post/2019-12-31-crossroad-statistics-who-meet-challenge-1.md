@@ -13,7 +13,7 @@ tags:
   - 计算
 slug: crossroad-statistics-who-meet-challenge-1
 meta_extra: "译者：吴喜之；编辑：向悦、雷博文"
-forum_id: 
+forum_id: 421169
 ---
 > 编者按：本系列推送为2018年10月15日至10月17日在弗吉尼亚州举行的“十字路口的统计:数据科学时代的挑战和机遇”研讨会的报告，该报告由Xuming He组织并由指导委员会（成员为James Berger， Xuming He， David Madigan， Susan Murphy， Bin Yu和Jon Wellner）审核，由吴喜之老师翻译，已得到译者授权。
 >
