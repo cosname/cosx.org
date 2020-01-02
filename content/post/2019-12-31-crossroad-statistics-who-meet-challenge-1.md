@@ -1,6 +1,6 @@
 ---
 title: "十字路口的统计学: 谁在应对挑战？（一）"
-date: '2019-12-31'
+date: '2020-01-02'
 author: "Xuming He, David Madigan, Bin Yu, Jon Wellner"
 categories: 
   - 推荐文章
@@ -11,7 +11,7 @@ tags:
   - 理论
   - 实践
   - 计算
-slug: crossroad-statistics-who-meet-challenge
+slug: crossroad-statistics-who-meet-challenge-1
 meta_extra: "译者：吴喜之；编辑：向悦、雷博文"
 forum_id: 
 ---
