@@ -12,7 +12,7 @@ tags:
   - 博士教育
 slug: crossroad-statistics-who-meet-challenge-3
 meta_extra: "译者：吴喜之；编辑：向悦、雷博文"
-forum_id: 421221
+forum_id: 421226
 ---
 > 本文翻译自 2018 年 10 月 15 日至 10 月 17 日在弗吉尼亚州举行的“十字路口的统计:数据科学时代的挑战和机遇”研讨会报告。该报告由 Xuming He 组织并由指导委员会（成员为 James Berger， Xuming He， David Madigan， Susan Murphy， Bin Yu 和 Jon Wellner）审核，由吴喜之老师翻译，已得到译者授权。本翻译工作首发于统计之都网站和微信公众号上。
 > 
