@@ -15,7 +15,7 @@ meta_extra: "译者：吴喜之；编辑：向悦、雷博文"
 forum_id: 421221
 ---
 > 本文翻译自 2018 年 10 月 15 日至 10 月 17 日在弗吉尼亚州举行的“十字路口的统计:数据科学时代的挑战和机遇”研讨会报告。该报告由 Xuming He 组织并由指导委员会（成员为 James Berger， Xuming He， David Madigan， Susan Murphy， Bin Yu 和 Jon Wellner）审核，由吴喜之老师翻译，已得到译者授权。本翻译工作首发于统计之都网站和微信公众号上。
-
+> 
 > 报告正文由“统计和数据科学的作用/价值”、“科学和社会应用中的挑战”、“基础研究”、“专业文化与社区责任”、“博士教育”五部分组成，计划分三期推出。第三期内容为第四部分“专业文化与社区责任”和第五部分“博士教育”。 
 
 ## 4. 专业文化与社区责任
@@ -148,7 +148,7 @@ NSF可以支持讲习班、训练营和暑期学校课程，提供课程开发�
 
 1. Lockhart, R., Taylor, J., Tibshirani, R. J. and Tibshirani, R. (2014). A significance test for the lasso. Ann. Statist. 42 413-468.
 
-1. Jordan, M.I. (2019). Artificial intelligence: The revolution hasn’t happened yet. Harvard Data Science Review, no. 1. https://doi.org/10.1162/ 99608f92.f06c6e61
+1. Jordan, M.I. (2019). Artificial intelligence: The revolution hasn’t happened yet. Harvard Data Science Review, no. 1. https://doi.org/10.1162/99608f92.f06c6e61
 
 1. Meng, X.-L. (2018). Statistical paradises and paradoxes in big data (I): Law of large populations, big data paradox, and the 2016 US presidential election. Ann. Appl. Stat. 12 685-726.
 
