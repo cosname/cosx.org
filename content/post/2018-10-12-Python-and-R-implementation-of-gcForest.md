@@ -1,6 +1,6 @@
 ---
 title: "gcForest算法原理及Python与R实现"
-date: 2018-10-12
+date: "2018-10-12"
 author: "徐静"
 categories: 
     - 统计软件

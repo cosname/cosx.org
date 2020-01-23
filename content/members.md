@@ -1,7 +1,7 @@
 ---
 title: 统计之都成员介绍
 author: 统计之都
-date: 2017-07-14
+date: "2017-07-14"
 menu:
   main:
     name: 成员
