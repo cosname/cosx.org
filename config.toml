@@ -62,11 +62,11 @@ footnotereturnlinkcontents = "↩"
   title_tags = "关键词列表"
 
 [params]
-	copyright = "统计之都 版权所有 2006 - 2017"
+	copyright = "统计之都 版权所有 2006 - 2020"
 	description = "中国统计学门户网站，免费统计学服务平台"
 
   summary_length = 200
   github_edit = "https://github.com/cosname/cosx.org/edit/master/content/"
   comment_url = "https://d.cosx.org/d/"
   comment_embed_url = "https://d.cosx.org/embed/"
-  footer = "&copy; [统计之都](https://cosx.org) 2006 - 2017 | [新浪微博](http://weibo.com/cosname) | [Github](https://github.com/cosname) | [Twitter](https://twitter.com/cos_name) | [Google+](https://plus.google.com/110727350576315935180) | [LinkedIn](https://www.linkedin.com/groups/4564122)"
+  footer = "&copy; [统计之都](https://cosx.org) 2006 - 2020 | [新浪微博](http://weibo.com/cosname) | [Github](https://github.com/cosname) | [Twitter](https://twitter.com/cos_name) | [Google+](https://plus.google.com/110727350576315935180) | [LinkedIn](https://www.linkedin.com/groups/4564122)"
