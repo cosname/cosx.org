@@ -12,7 +12,7 @@ tags:
   - 环境统计
   - 科学技术统计
 slug: what-is-gov-stats-2
-meta_extra: "审稿：魏太云；编辑：雷博文"
+meta_extra: "审稿：魏太云；编辑：任焱、雷博文"
 forum_id: 421251
 ---
 
