@@ -70,11 +70,11 @@ bandit算法来源于历史悠久的赌博学，它要解决的问题是这样�
 
 而我说：算法要是无憾，那应该是过拟合了。
 
-所以说：怎么衡量不同bandit算法在解决多臂问题上的效果？首先介绍一个概念，叫做累积遗憾(regret)^[http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter6_Priorities/Chapter6.ipynb#]：
+所以说：怎么衡量不同bandit算法在解决多臂问题上的效果？首先介绍一个概念，叫做累积遗憾(regret)^[https://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Chapter6_Priorities/Ch6_Priors_PyMC2.ipynb#]：
 
 `\begin{align*}
 R_T & = \sum_{i=1}^T(w_{opt}-w_{B(i)}) \\
-&= T_{w^*}-\sum_{i=1}^Tw_{B(i)} 
+&= T w^*-\sum_{i=1}^Tw_{B(i)} 
 \end{align*}`
 
 这个公式就是计算bandit算法的累积遗憾，解释一下：
@@ -103,7 +103,7 @@ thompson  sampling算法简单实用，因为它只有一行代码就可以实�
 
 以上就是Thompson采样，用python实现就一行：
 
-```
+```python
 import  numpy as np
 import  pymc
 #wins 和 trials 是一个N维向量，N是赌博机的臂的个数，每个元素记录了
@@ -207,7 +207,7 @@ LinUCB基本算法描述如下：
  
 代码如下，一些必要的注释说明已经写在代码中。
 
-```
+```python
 class LinUCB:
     def __init__(self):
         self.alpha = 0.25 
