@@ -39,13 +39,13 @@ parallel(~iris[1:4], iris, groups = Species,
 
 # 调和曲线图
 
-调和曲线图的思想和傅立叶变换十分相似，是根据三角变换方法将 p 维空间的点映射到二维平面上的曲线上。假设$X_r$是 p 维数据的第 r 个观测值，即
+调和曲线图的思想和傅立叶变换十分相似，是根据三角变换方法将 p 维空间的点映射到二维平面上的曲线上。假设 `$X_r$` 是 p 维数据的第 r 个观测值，即
 
 `$$X_r^T=(x_{r1}, \cdots , x_{rp})$$`
 
 则对应的调和曲线是
 
-`$$f_r(t)=\frac{x_{r1}}{sqrt{2}} +x_{r2}sin t+x_{r3} cos t+x_{r4}sin2 t+x_{r5} cos2 t+\cdots$$`
+`$$f_r(t)=\frac{x_{r1}}{\sqrt{2}} +x_{r2}\sin t+x_{r3} \cos t+x_{r4}\sin2 t+x_{r5} \cos2 t+\cdots$$`
 
 其中`$-\pi \leq t \leq \pi$`.
 
