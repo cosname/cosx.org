@@ -33,7 +33,7 @@ forum_id:
 
 比如，加州大学伯克利的 TRIPODS 项目 FODA(Foundations of Data Science) 研究所致力于从基础教育到交叉尖端研究等方面来深化数据科学的理论基础，并将这些基础进展转化至不同领域数据科学实践之中。该研究所课题组长包括Michael Mahoney (主任), Bin Yu, Michael Jordan, Peter Bartlett, Fernando Perez, and Richard Karp。他们面向全校开设了《数据科学基础》课程。而MIT数据科学基础研究所(MIFODS)所从事的是一项跨学科的工作，旨在通过综合研究和教育活动来发展数据科学的理论基础。其目标是在 MIT 和乃至整个学术界内促进数学、统计学和理论计算机科学间的研究和教育互动。因此，MIFODS 成员都是这三个领域的一线学者。
 
-在人工智能领域，加拿大多伦多大学和蒙特利尔大学依靠其 AI 科学家分别建立了独立运行的研究机构 Vector Institute (图灵奖 Geoffrey Hinton 领衔)和 MILA (图灵奖 Yoshua Bengio 领衔)。在英国，则以剑桥、牛津等大学相关领域教师为主体，成立了跨校 “Turing Institute”。这些机构主要从事学术研究，培养博士和博士后。
+在人工智能领域，加拿大多伦多大学和蒙特利尔大学依靠其 AI 科学家分别建立了独立运行的研究机构 Vector Institute (图灵奖 Geoffrey Hinton 领衔)和 MILA (图灵奖 Yoshua Bengio 领衔)。在英国，则以剑桥、牛津等大学相关领域教师为主体，成立了 Alan Turing Institute。这些机构主要从事学术研究，培养博士和博士后。
 
 ## 三
 
