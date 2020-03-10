@@ -37,7 +37,7 @@ forum_id: 421301
 
 斯坦福大学统计学家 Bradley Efron 和 Trevor Hastie 为了应对大数据、数据科学和机器学习对传统统计学的挑战和机遇，撰写了 《Computer Age Statistical Inference: Algorithms, Evidence, and Data Science》[5] 这一现代统计推理经典教材。斯坦福大学数学家和统计学家 David Donoho 则在2017年发表了文章 《50 Years of Data Science》[6]，对数据科学和统计学作了全面、系统和深刻的梳理和展望。而且，他新近又在斯坦福开设了课程 “Theory of Deep Learning”。
 
-2018年10月，美国NSF组织了题为 “Statistics at A Crossroads： Challenges and Opportunities in the Data Science Era” 研讨会[7]，48位领先研究者和教育者聚集一起，讨论统计学未来10-20年的发展愿景。2019年统计界一个有重要影响的事件是把统计学界最高奖 COPPS 奖颁发给了 RStudio 公司的首席科学家Hadley Wickham, 表彰其在统计应用和统计软件开发领域做出的卓越贡献。历届获奖者都是对统计理论做出杰出贡献的学者，今年首次来自业界。反映了统计学界在积极应对大数据和计算所带来的变革。
+2018年10月，美国NSF组织了题为 “Statistics at A Crossroads： Challenges and Opportunities in the Data Science Era” 研讨会[7]，48位领先研究者和教育者聚集一起，讨论统计学未来10-20年的发展愿景。2019年统计界一个有重要影响的事件是把统计学界最高奖 COPPS 奖颁发给了 RStudio 公司的首席科学家Hadley Wickham, 表彰其在统计应用和统计软件开发领域做出的卓越贡献。历届获奖者都是对统计理论做出杰出贡献的学者，今年首次来自业界。这反映了统计学界在积极应对大数据和计算所带来的变革。
 
 Leo Breiman、David Donoho、Bradley Efron、Trevor Hastie和Larry Wasserman 等是世界最著名的统计学家。他们在统计学领域不仅做出了许多奠基性的工作，且以推进统计学发展为己任，纷纷撰写教材和开设新课程来梳理学科的知识体系和开拓学科的领域边界。有境界则自成高格，自有名作，学科能常青在此。
 
