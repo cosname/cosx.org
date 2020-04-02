@@ -19,7 +19,7 @@ forum_id: 421363
 >
 > --- The Art of Readable Code, Boswell, D. / Foucher, T.
 
-## 安装配置 MySQL {#setup-mysql}
+# 安装配置 MySQL {#setup-mysql}
 
 MySQL 是 Oracle （甲骨文）公司出品的一款数据库管理系统，社区版以 [GPL 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 协议开源[^mysql-repo]。毕竟开源社区不希望被 Oracle 公司牵着走，所以出现了 MySQL 的开源替代版 [MariaDB](https://zh.wikipedia.org/wiki/MariaDB)，后者保证保持开源状态，所以那批原始的 MySQL 的开发者已经跑到 MariaDB 这杆旗下，下游的其它语言的接口，比如 [RMySQL](https://github.com/r-dbi/RMySQL) 包正逐步被 [RMariaDB](https://github.com/r-dbi/RMariaDB) 包替换，MySQL Server 也必将逐步被 [MariaDB Server](https://mariadb.org/) 替换。本文介绍使用的 MariaDB Server 版本为 10.3.18，在本文的环境下，你完全可以将 MariaDB Server 看作 MySQL Server 
 
@@ -64,11 +64,11 @@ create database demo;
 
     除了红帽系的 Fedora 系统还有 CentOS/Ubuntu/MacOS/Windows 等等，开源软件一大特点就是跨系统平台，支持的系统和版本详见 [MySQL 官网下载页面](https://dev.mysql.com/downloads/mysql/)
 
-[^sql-grammar]: 你可能已经发现 SQL 语法中，对关键词是不区分大小写的，比如 `create` 或 `CREATE` 都是可以的，但是在 SQL 代码中应尽量保持一致，对保留字都用大写，对自造的库名、表名、列名都用小写，我司采用的 Hive 仓库前端 [HUE](https://github.com/cloudera/hue) 就支持 SQL 语句格式化，再辅以手动调整，用起来也比较方便，这主要针对交付阶段的代码整理，以便协作和共享。
+[^sql-grammar]: 你可能已经发现 SQL 语法中，对关键词是不区分大小写的，比如 `create` 或 `CREATE` 都是可以的，但是在 SQL 代码中应尽量保持一致，对保留字都用大写，对自造的库名、表名、列名都用小写，我司采用的 Hive 仓库前端 [HUE](https://github.com/cloudera/hue) 就支持 SQL 语句格式化，再辅以手动调整，用起来也比较方便，这主要针对交付阶段的代码整理，以便协作和共享。还有一些网站也提供免费的 SQL 代码格式化工具，比如 [SQLFormat](https://sqlformat.org/)
 
 [^mysql-password]: 不要尝试用此密码来登录我的数据库系统，我从来不在主机上操作可能泄露隐私的事，都是在虚拟环境里操作，如果你真的攻进来了，欢迎加个好友！
 
-## 从 R 连接 MySQL {#connect-mysql}
+# 从 R 连接 MySQL {#connect-mysql}
 
 在安装配置好 MySQL 的情况下，准备好 R 软件和 R 扩展包
 
@@ -76,7 +76,7 @@ create database demo;
 install.packages(c('DBI','RMySQL'))
 ```
 
-然后加载连接 MySQL 数据库， dbname 是要连接的数据库名称，host 是数据库所在的网络位置，本机常常是 localhost 远程的话，就是 IP 地址，port 是连接 MySQL 数据库系统的端口，MySQL 作为一款软件，同时也是一个数据库管理系统，要访问它，就要知道访问它的通道，默认开放的端口就是 3306，user 用来指定登录的用户，比如拥有最高权限的 root 账户或其它账户，password 就是对应的账户密码[^root-password]
+然后加载 R包连接 MySQL 数据库， dbname 是要连接的数据库名称，host 是数据库所在的网络位置，本机常常是 localhost 远程的话，就是 IP 地址，port 是连接 MySQL 数据库系统的端口，MySQL 作为一款软件，同时也是一个数据库管理系统，要访问它，就要知道访问它的通道，默认开放的端口就是 3306，user 用来指定登录的用户，比如拥有最高权限的 root 账户或其它账户，password 就是对应的账户密码[^root-password]
 
 ```r
 library(DBI)
@@ -228,7 +228,7 @@ str(mtcars)
         #3) 权力越大，责任越大。
     ```
 
-    因此，数据库权限管理就是非常重要的话题，这里就不多展开了，想了解的看[删库新闻](https://www.pingwest.com/a/206242)，还有一则漫画[^drop-table]。
+    因此，数据库权限管理就是非常重要的话题，这里就不多展开了。总之，权限管理不到位，后果很严重，想了解的看[删库新闻](https://www.pingwest.com/a/206242)，还有一则漫画[^drop-table]。
     
     ![exploits-of-a-mom](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
 
@@ -236,9 +236,9 @@ str(mtcars)
 
 [^drop-table]: <https://stackoverflow.com/questions/332365/how-does-the-sql-injection-from-the-bobby-tables-xkcd-comic-work>
 
-## SQL 与 R 数据操作 {#sql-in-r}
+# SQL 与 R 数据操作 {#sql-in-r}
 
-统计数据库里表的行数[^count-trick]
+R 语言本身就是擅长数据分析的，各个数据操作都很完备，下面以统计数据库里表的行数为例做简要介绍[^count-trick]
 
 ```sql
 SELECT COUNT(*) as rows_count FROM mtcars;
@@ -278,9 +278,9 @@ mt[, .N]
 [1] 32
 ```
 
-[^data-table-count]: 作为数据分析师，数据操作方面，除了 SQL，我司的主力工具就是 data.table，[深受领导和大家的喜爱](https://mp.weixin.qq.com/s/LwpNbYwbSed2hvPQa0IwVw)，它的底层全部用 C 语言写，C 代码占比 **65.5%** 覆盖测试达到 **99.9%**，支持 3.1.0 至今的所有 R 软件版本，没有任何第三方软件和 R 包的硬性依赖，也不会有用户可见的 breaking changes ，核心开发者**49**人，自 2006年4月15日发布至今已经过去 **5000** 天，久经考验，核心开发者中包含多位华人，汉化程度在所有 R 包中 **最高**，没有之一，通过积累大量数据操作的案例和国际化来吸引更多的用户和开发者，而 dplyr 将很多实验性的功能暴露给用户，然后不断 breaking changes，让用户很痛苦 --- [别在生产环境中用净土](https://shrektan.com/post/2019/11/14/use-no-tdv-in-production/)！
+[^data-table-count]: 作为数据分析师，数据操作方面，除了 SQL，我司的主力工具就是 data.table，[深受领导和大家的喜爱](https://mp.weixin.qq.com/s/LwpNbYwbSed2hvPQa0IwVw)，它的底层全部用 C 语言写，C 代码占比 **65.5%** 覆盖测试达到 **99.9%**，支持 3.1.0 至今的所有 R 软件版本，没有任何第三方软件和 R 包的硬性依赖，也不会有用户可见的 breaking changes ，核心开发者**49**人，自 2006年4月15日发布至今已经过去 **5000** 天，久经考验，核心开发者中包含多位华人，汉化程度在所有 R 包中 **最高**，没有之一。积累了大量数据操作的案例，多语言支持吸引了很多的用户和开发者，而 dplyr 将很多实验性的功能暴露给用户，然后不断 breaking changes，让用户很痛苦 --- [别在生产环境中用净土](https://shrektan.com/post/2019/11/14/use-no-tdv-in-production/)！
 
-[^dplyr-count]: 几乎每次看到 dplyr 包，心里都有些不爽，因为我发现之前能用的函数在这里要么不能用了，要么已经变成 Deprecated 了。更加恼火的是 `dplyr::count` 已经不支持 data.frame 类型的数据对象了，现在必须调用 `tibble::as_tibble` 转化为它认可的类型，之前是可以用 `tibble::as.tibble` 函数来做的，现在被替换为 `tibble::as_tibble`，否则不久的将来就要面临代码运行报错的风险，如果你升级 dplyr 包的话。所以 dplyr 以后就尽量不介绍了，除非 Hadley Wickham 真的如他所说 dplyr 发布 1.0.0 版本之后，将不再做大量的 breaking changes.
+[^dplyr-count]: 几乎每次看到 dplyr 包，心里都有些不爽，因为我发现之前能用的函数在这里要么不能用了，要么已经变成 Deprecated 了。更加恼火的是 `dplyr::count` 已经不支持 data.frame 类型的数据对象了，现在必须调用 `tibble::as_tibble` 转化为它认可的类型。在此之前，是可以用 `tibble::as.tibble` 函数来做的，现在被替换为 `tibble::as_tibble`，否则不久的将来就要面临代码运行报错的风险。所以 dplyr 以后就尽量不介绍了，除非 Hadley Wickham 真的如他所说 dplyr 发布 1.0.0 版本之后，将不再做大量的 breaking changes.
 
     > After this release, dplyr will be a 1.0.0, which means that you should expect very few breaking changes in the future. We’ll continue to add new functions and arguments but will be much more conservative about modifying or removing features. [^dplyr-homepage]
     >
@@ -306,7 +306,7 @@ mt[, .N]
     ```
 
 
-## MySQL 入门命令 {#naive-commands}
+# MySQL 入门命令 {#naive-commands}
 
 1. 查看系统中有哪些数据库
 
@@ -370,9 +370,9 @@ mt[, .N]
     1 row in set (0.001 sec)
     ```
 
-## MySQL 和 markdown 表格 {#mysql-markdown}
+# MySQL 和 markdown 表格 {#mysql-markdown}
 
-将查询结果转化为 markdown 表格
+有时候需要将存储的 MySQL 表的各个字段的含义说清楚，以便交流协作。将查询结果转化为 markdown 表格就是一个有用的技巧
 
 ```sql
 select * from information_schema.tables
@@ -419,14 +419,14 @@ knitr::kable(table_desc[, c('Field', 'Type')], format = 'markdown', row.names = 
 [^table-desc]: 你可能会觉得 mtcars 数据集不就在 R 环境中吗，还啰里八嗦地用 SQL 查询的方式获取表的列名。实际上生产环境中， MySQL 里存储的库表是非常大的，不适合都拉到 R 环境中，即使 R 环境能放下，流程上也不对，会直接导致数据操作的性能低下。我们要考虑数据操作的性能，流程上的优化、让数据库和分析软件做各自擅长的事！
 
 
-## 本篇彩蛋 {#bonus}
+# 本篇彩蛋 {#bonus}
 
 在容器中如何连接使用数据库是类似的，集成到 R Markdown 文档中的使用介绍见 [Databases in R Markdown](https://xiangyunhuang.github.io/db-in-rmd/db-in-rmd.html)[^db-in-rmd]
 
 
 [^db-in-rmd]: 这篇文章完全是在 Docker 容器内编译 Rmd 源文档生成的，虽然基于 Debian GNU/Linux 10 和 PostgreSQL 但是丝毫不与本文相悖，反而可以互为补充。
 
-## 写作环境
+# 写作环境
 
 ```r
 sessionInfo()
@@ -462,7 +462,7 @@ sessionInfo()
 
 <sup>Created on 2020-03-14 by the [reprex package](https://reprex.tidyverse.org) (v0.3.0)</sup>
 
-## 参考文献
+# 参考文献
 
 1. SQL 代码格式化网站 <https://sqlformat.org/>
 1. 赖明星 MySQL 笔记 <http://mingxinglai.com/cn/>
