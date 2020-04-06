@@ -47,7 +47,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'xxx';
 进入 MySQL 数据库管理系统，创建一个名叫 demo 的数据库[^sql-grammar]
 
 ```sql
-create database demo;
+CREATE DATABASE demo;
 ```
 
 [^mysql-repo]: 以本文 Fedora 29 系统为例，从 MySQL 官网获取 Oracle 出品的开源社区版，需要先导入安装源
@@ -147,7 +147,7 @@ dbGetQuery(con, "SELECT * FROM mtcars")
 其实我们还想知道按照默认方式写入的表在 MySQL 中的存储情况，看看各个字段存储的数据类型
 
 ```sql
-SHOW columns FROM mtcars
+SHOW columns FROM mtcars;
 ```
 
 ```
@@ -241,7 +241,7 @@ str(mtcars)
 R 语言本身就是擅长数据分析的，各个数据操作都很完备，下面以统计数据库里表的行数为例做简要介绍[^count-trick]
 
 ```sql
-SELECT COUNT(*) as rows_count FROM mtcars;
+SELECT COUNT(*) AS rows_count FROM mtcars;
 ```
 
 ```
@@ -311,7 +311,7 @@ mt[, .N]
 1. 查看系统中有哪些数据库
 
     ```sql
-    show databases
+    SHOW databases;
     ```
     ```
     +--------------------+
@@ -325,17 +325,17 @@ mt[, .N]
     4 rows in set (0.000 sec)
     ```
 
-    除了 demo 库，information_schema,  mysql,  performance_schema 是数据库管理系统 MySQL 默认的三个数据库
+    除了 demo 库，information\_schema,  mysql,  performance\_schema 是数据库管理系统 MySQL 默认的三个数据库
     
     - **mysql** 存储 MySQL server 所需的系统信息
-    - **information_schema** 提供数据库元数据的连接
-    - **performance_schema**  监控 MySQL Server 的底层执行情况
+    - **information\_schema** 提供数据库元数据的连接
+    - **performance\_schema**  监控 MySQL Server 的底层执行情况
 
 
 2. 数据库里有哪些表，比如本文创建的 demo 数据库
 
     ```sql
-    show full tables from demo
+    SHOW FULL TABLES FROM demo;
     ```
     ```
     +----------------+------------+
@@ -350,7 +350,7 @@ mt[, .N]
 
 
     ```sql
-    show function status where db = 'demo';
+    SHOW FUNCTION status WHERE db = 'demo';
     ```
 
 1. 查看数据库里包含些什么表，以及类型
@@ -375,8 +375,10 @@ mt[, .N]
 有时候需要将存储的 MySQL 表的各个字段的含义说清楚，以便交流协作。将查询结果转化为 markdown 表格就是一个有用的技巧
 
 ```sql
-select * from information_schema.tables
-where table_schema = 'demo' and table_name = 'mtcars';
+SELECT *
+FROM information_schema.tables
+WHERE table_schema = 'demo'
+  AND TABLE_NAME = 'mtcars';
 ```
 ```
 +---------------+--------------+------------+------------+--------+---------+------------+------------+----------------+-------------+-----------------+--------------+-----------+----------------+---------------------+---------------------+------------+-------------------+----------+----------------+---------------+------------------+-----------+
