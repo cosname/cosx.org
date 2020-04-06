@@ -24,7 +24,7 @@ forum_id: 421363
 MySQL 是 Oracle （甲骨文）公司出品的一款数据库管理系统，社区版以 [GPL 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 协议开源[^mysql-repo]。毕竟开源社区不希望被 Oracle 公司牵着走，所以出现了 MySQL 的开源替代版 [MariaDB](https://zh.wikipedia.org/wiki/MariaDB)，后者保证保持开源状态，所以那批原始的 MySQL 的开发者已经跑到 MariaDB 这杆旗下，下游的其它语言的接口，比如 [RMySQL](https://github.com/r-dbi/RMySQL) 包正逐步被 [RMariaDB](https://github.com/r-dbi/RMariaDB) 包替换，MySQL Server 也必将逐步被 [MariaDB Server](https://mariadb.org/) 替换。本文介绍的 MariaDB Server 版本为 10.3.18，在本文的环境下，完全可以将 MariaDB Server 看作 MySQL Server。
 
 ```bash
-# 从系统仓库安装开源版
+# 从 Fedora 29 系统仓库安装开源版 MariaDB Server
 sudo dnf install -y mariadb-devel
 # 启动 mysql 服务
 systemctl start mariadb.service
@@ -70,7 +70,7 @@ CREATE DATABASE demo;
 
 # 从 R 连接 MySQL {#connect-mysql}
 
-在安装配置好 MySQL 的情况下，准备好 R 软件和 R 扩展包
+在安装配置好 MySQL 的情况下，准备好 R 软件和 R 扩展包：
 
 ```r
 install.packages(c('DBI','RMySQL'))
@@ -84,13 +84,13 @@ library(DBI)
 con <- DBI::dbConnect(RMySQL::MySQL(), dbname = 'demo', host = "localhost", port = 3306, user = "root", password = "xxx")
 ```
 
-到目前为止，数据库 demo 里还什么表都没有，先从将 R 环境中默认加载的数据集 mtcars 写入 demo 库，并将表名也命名为 mtcars
+到目前为止，数据库 demo 里还什么表都没有，先将 R 环境中默认加载的数据集 mtcars 写入 demo 库，并将表名也命名为 mtcars
 
 ```r
 dbWriteTable(con, "mtcars", mtcars)
 ```
 
-我们再来看看上面那行 R 代码在数据库中产生什么效果，进入数据库 demo 执行
+我们再来看看上面那行 R 代码在数据库中产生什么效果，进入数据库 demo 执行：
 
 ```sql
 SELECT * FROM mtcars;
@@ -138,13 +138,13 @@ MariaDB [demo]> SELECT * FROM mtcars;
 ```
 
 
-上一行 SQL 语句在 R 中的等价表示
+上一行 SQL 语句在 R 中的等价表示：
 
 ```r
 dbGetQuery(con, "SELECT * FROM mtcars")
 ```
 
-其实我们还想知道按照默认方式写入的表在 MySQL 中的存储情况，看看各个字段存储的数据类型
+其实我们还想知道按照默认方式写入的表在 MySQL 中的存储情况，看看各个字段存储的数据类型。
 
 ```sql
 SHOW columns FROM mtcars;
@@ -174,7 +174,7 @@ SHOW columns FROM mtcars;
 dbGetQuery(con, "SHOW columns FROM mtcars")
 ```
 
-然后和 R 环境中 mtcars 数据集的存储情况对比
+然后和 R 环境中 mtcars 数据集的存储情况对比。
 
 ```r
 str(mtcars)
@@ -202,7 +202,7 @@ str(mtcars)
     dbWriteTable(con, "mtcars", mtcars, row.names = FALSE)
     ```
     
-    顺便一提，从上面还可以看出 `tibble::rownames_to_column(mtcars)` 函数的相通之处了，tibble 包作为 dplyr 家族的一员，在数据库操作层面的对标是非常一致的。关于 dplyr 乃至 tidyverse 的数据库接口层的讨论详见 [帖子](https://d.cosx.org/d/420769-base-r-vs-tidyverse-bt/8)
+    顺便一提，从上面还可以看出 `tibble::rownames_to_column(mtcars)` 函数的相通之处了，**tibble** 包作为 **dplyr** 家族的一员，在数据库操作层面的对标是非常一致的。关于 **dplyr** 乃至 **tidyverse** 的数据库接口层的讨论详见 [帖子](https://d.cosx.org/d/420769-base-r-vs-tidyverse-bt/8)
 
 [^root-password]: 一般来讲，root 账户对应于超级管理员，拥有最高管理权限，系统中数据库、表等等想删哪个删哪个，但是权力越大责任也越大，在 Linux 系统中，每个登录系统的账户在首次使用 sudo 命令的时候都会蹦出如下警告，
 
@@ -238,7 +238,7 @@ str(mtcars)
 
 # SQL 与 R 数据操作 {#sql-in-r}
 
-R 语言本身就是擅长数据分析的，各个数据操作都很完备，下面以统计数据库里表的行数为例做简要介绍[^count-trick]
+R 语言本身就是擅长数据分析的，各个数据操作都很完备，下面以统计数据库里表的行数为例做简要介绍。[^count-trick]
 
 ```sql
 SELECT COUNT(*) AS rows_count FROM mtcars;
@@ -253,7 +253,7 @@ SELECT COUNT(*) AS rows_count FROM mtcars;
 1 row in set (0.000 sec)
 ```
 
-等价的 dplyr 操作 [^dplyr-count]
+等价的 **dplyr** 操作： [^dplyr-count]
 
 ```r
 dplyr::count(tibble::as_tibble(mtcars))
@@ -265,7 +265,7 @@ dplyr::count(tibble::as_tibble(mtcars))
 #> 1    32
 ```
 
-等价的 data.table 操作 [^data-table-count]
+等价的 **data.table** 操作： [^data-table-count]
 
 ```r
 dim(mtcars)[1]
@@ -308,7 +308,7 @@ mt[, .N]
 
 # MySQL 入门命令 {#naive-commands}
 
-1. 查看系统中有哪些数据库
+1. 查看系统中有哪些数据库：
 
     ```sql
     SHOW databases;
@@ -332,7 +332,7 @@ mt[, .N]
     - **performance\_schema**  监控 MySQL Server 的底层执行情况
 
 
-2. 数据库里有哪些表，比如本文创建的 demo 数据库
+2. 数据库里有哪些表，比如本文创建的 demo 数据库：
 
     ```sql
     SHOW FULL TABLES FROM demo;
@@ -346,14 +346,14 @@ mt[, .N]
     1 row in set (0.000 sec)
     ```
 
-1. 查看数据库 demo 里有哪些函数
+1. 查看数据库 demo 里有哪些函数：
 
 
     ```sql
     SHOW FUNCTION status WHERE db = 'demo';
     ```
 
-1. 查看数据库里包含些什么表，以及类型
+1. 查看数据库里包含些什么表，以及类型：
 
     ```sql
     SELECT TABLE_NAME, table_type
@@ -372,7 +372,7 @@ mt[, .N]
 
 # MySQL 和 markdown 表格 {#mysql-markdown}
 
-有时候需要将存储的 MySQL 表的各个字段的含义说清楚，以便交流协作。将查询结果转化为 markdown 表格就是一个有用的技巧
+有时候需要将存储的 MySQL 表的各个字段的含义说清楚，以便交流协作。将查询结果转化为 markdown 表格就是一个有用的技巧：
 
 ```sql
 SELECT *
@@ -389,7 +389,7 @@ WHERE table_schema = 'demo'
 1 row in set (0.001 sec)
 ```
 
-将表 mtcars 的列名和存储类型抽取出来转化成 markdown 表格，后期我们还可以自己填一个字段，用来解释说明每个字段的含义 [^table-desc]
+将表 mtcars 的列名和存储类型抽取出来转化成 markdown 表格，后期我们还可以自己填一个字段，用来解释说明每个字段的含义。 [^table-desc]
 
 ```r
 library(DBI)
@@ -423,7 +423,7 @@ knitr::kable(table_desc[, c('Field', 'Type')], format = 'markdown', row.names = 
 
 # 本篇彩蛋 {#bonus}
 
-在容器中如何连接使用数据库是类似的，集成到 R Markdown 文档中的使用介绍见 [Databases in R Markdown](https://xiangyunhuang.github.io/db-in-rmd/db-in-rmd.html)[^db-in-rmd]
+在容器中如何连接使用数据库是类似的，集成到 R Markdown 文档中的使用介绍见 [Databases in R Markdown](https://xiangyunhuang.github.io/db-in-rmd/db-in-rmd.html)。 [^db-in-rmd]
 
 
 [^db-in-rmd]: 这篇文章完全是在 Docker 容器内编译 Rmd 源文档生成的，虽然基于 Debian GNU/Linux 10 和 PostgreSQL 但是丝毫不与本文相悖，反而可以互为补充。
