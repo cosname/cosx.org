@@ -21,7 +21,7 @@ forum_id: 421363
 
 # 安装配置 MySQL {#setup-mysql}
 
-MySQL 是 Oracle （甲骨文）公司出品的一款数据库管理系统，社区版以 [GPL 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 协议开源[^mysql-repo]。毕竟开源社区不希望被 Oracle 公司牵着走，所以出现了 MySQL 的开源替代版 [MariaDB](https://zh.wikipedia.org/wiki/MariaDB)，后者保证保持开源状态，所以那批原始的 MySQL 的开发者已经跑到 MariaDB 这杆旗下，下游的其它语言的接口，比如 [RMySQL](https://github.com/r-dbi/RMySQL) 包正逐步被 [RMariaDB](https://github.com/r-dbi/RMariaDB) 包替换，MySQL Server 也必将逐步被 [MariaDB Server](https://mariadb.org/) 替换。本文介绍使用的 MariaDB Server 版本为 10.3.18，在本文的环境下，你完全可以将 MariaDB Server 看作 MySQL Server 
+MySQL 是 Oracle （甲骨文）公司出品的一款数据库管理系统，社区版以 [GPL 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 协议开源[^mysql-repo]。毕竟开源社区不希望被 Oracle 公司牵着走，所以出现了 MySQL 的开源替代版 [MariaDB](https://zh.wikipedia.org/wiki/MariaDB)，后者保证保持开源状态，所以那批原始的 MySQL 的开发者已经跑到 MariaDB 这杆旗下，下游的其它语言的接口，比如 [RMySQL](https://github.com/r-dbi/RMySQL) 包正逐步被 [RMariaDB](https://github.com/r-dbi/RMariaDB) 包替换，MySQL Server 也必将逐步被 [MariaDB Server](https://mariadb.org/) 替换。本文介绍的 MariaDB Server 版本为 10.3.18，在本文的环境下，完全可以将 MariaDB Server 看作 MySQL Server。
 
 ```bash
 # 从系统仓库安装开源版
@@ -32,25 +32,25 @@ systemctl start mariadb.service
 systemctl enable mariadb.service
 ```
 
-初始密码是空的，无密码，直接回车即可登录进去
+初始密码是空的，无密码，直接回车即可登录进去。
 
 ```bash
 mysql -u root -p
 ```
 
-进入 MySQL 后可以设置新的 root 账户密码，比如这里的 xxx [^mysql-password]
+进入 MySQL 后可以设置新的 root 账户密码，比如这里的 xxx。 [^mysql-password]
 
 ```sql
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'xxx';
 ```
 
-进入 MySQL 数据库管理系统，创建一个名叫 demo 的数据库[^sql-grammar]
+进入 MySQL 数据库管理系统，创建一个名叫 demo 的数据库。[^sql-grammar]
 
 ```sql
 CREATE DATABASE demo;
 ```
 
-[^mysql-repo]: 以本文 Fedora 29 系统为例，从 MySQL 官网获取 Oracle 出品的开源社区版，需要先导入安装源
+[^mysql-repo]: 以本文 Fedora 29 系统为例，从 MySQL 官网获取 Oracle 出品的开源社区版，需要先导入安装源。
 
     ```bash
     dnf install https://dev.mysql.com/get/mysql80-community-release-fc29-2.noarch.rpm
@@ -76,7 +76,7 @@ CREATE DATABASE demo;
 install.packages(c('DBI','RMySQL'))
 ```
 
-然后加载 R包连接 MySQL 数据库， dbname 是要连接的数据库名称，host 是数据库所在的网络位置，本机常常是 localhost 远程的话，就是 IP 地址，port 是连接 MySQL 数据库系统的端口，MySQL 作为一款软件，同时也是一个数据库管理系统，要访问它，就要知道访问它的通道，默认开放的端口就是 3306，user 用来指定登录的用户，比如拥有最高权限的 root 账户或其它账户，password 就是对应的账户密码[^root-password]
+然后加载 R包连接 MySQL 数据库， dbname 是要连接的数据库名称，host 是数据库所在的网络位置，本机常常是 localhost。 远程的话，就是 IP 地址，port 是连接 MySQL 数据库系统的端口，MySQL 作为一款软件，同时也是一个数据库管理系统，要访问它，就要知道访问它的通道，默认开放的端口就是 3306，user 用来指定登录的用户，比如拥有最高权限的 root 账户或其它账户，password 就是对应的账户密码。[^root-password]
 
 ```r
 library(DBI)
@@ -288,7 +288,7 @@ mt[, .N]
 
 [^dplyr-homepage]: <https://www.tidyverse.org/blog/2020/03/dplyr-1-0-0-is-coming-soon/>
 
-[^count-trick]: 偶然间搜到一篇[帖子](https://dba.stackexchange.com/questions/151769/mysql-difference-between-using-count-and-information-schema-tables-for-coun)在讨论为什么用 information_schema 统计的行数不对了，原因是在大规模数据集下，两种计算方式不一致，前者是精确计算，后者是近似计算。作为补充，特意看了下在这个迷你的 mtcars 数据集上是否也是近似计算行数？实际是和 count 计算结果一致，看来 information_schema 近似计算的准确度也比较高，内部近似计算的公式以后有空分享。希望从理论上了解不同体量的数据集上的近似效果！
+[^count-trick]: 偶然间搜到一篇[帖子](https://dba.stackexchange.com/questions/151769/mysql-difference-between-using-count-and-information-schema-tables-for-coun)在讨论为什么用 information\_schema 统计的行数不对了，原因是在大规模数据集下，两种计算方式不一致，前者是精确计算，后者是近似计算。作为补充，特意看了下在这个迷你的 mtcars 数据集上是否也是近似计算行数？实际是和 count 计算结果一致，看来 information\_schema 近似计算的准确度也比较高，内部近似计算的公式以后有空分享。希望从理论上了解不同体量的数据集上的近似效果！
 
     ```sql
     SELECT table_rows "rows_count"
