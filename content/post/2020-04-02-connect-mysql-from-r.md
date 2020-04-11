@@ -231,7 +231,7 @@ str(mtcars)
 dbWriteTable(con, "mtcars", mtcars, row.names = FALSE)
 ```
 
-顺便一提，从上面还可以看出 `tibble::rownames_to_column(mtcars)` 函数的相通之处了，**tibble** 包作为 **dplyr** 家族的一员，在数据库操作层面的对标是非常一致的。关于 **dplyr** 乃至 **tidyverse** 的数据库接口层的讨论详见 [帖子](https://d.cosx.org/d/420769-base-r-vs-tidyverse-bt/8)
+顺便一提，从上面还可以看出 `tibble::rownames_to_column(mtcars)` 函数的相通之处了，**tibble** 包作为 **dplyr** 家族的一员，在数据库操作层面的对标是非常一致的。关于 **dplyr** 乃至 **tidyverse** 的数据库接口层的讨论详见[帖子](https://d.cosx.org/d/420769-base-r-vs-tidyverse-bt/8)。
 
 [^drop-table]: <https://stackoverflow.com/questions/332365/how-does-the-sql-injection-from-the-bobby-tables-xkcd-comic-work>
 
@@ -281,7 +281,7 @@ dplyr::count(tibble::as_tibble(mtcars))
 #> 1    32
 ```
 
-几乎每次看到 dplyr 包，心里都有些不爽，因为我发现之前能用的函数在这里要么不能用了，要么已经变成 Deprecated 了。更加恼火的是 `dplyr::count` 已经不支持 data.frame 类型的数据对象了，现在必须调用 `tibble::as_tibble` 转化为它认可的类型。在此之前，是可以用 `tibble::as.tibble` 函数来做的，现在被替换为 `tibble::as_tibble`，否则不久的将来就要面临代码运行报错的风险。所以 dplyr 以后就尽量不介绍了，除非 Hadley Wickham 真的如他所说 dplyr 发布 1.0.0 版本之后，将不再做大量的 breaking changes。
+几乎每次看到 **dplyr** 包，心里都有些不爽，因为我发现之前能用的函数在这里要么不能用了，要么已经变成 Deprecated 了。更加恼火的是 `dplyr::count` 已经不支持 data.frame 类型的数据对象了，现在必须调用 `tibble::as_tibble` 转化为它认可的类型。在此之前，是可以用 `tibble::as.tibble` 函数来做的，现在被替换为 `tibble::as_tibble`，否则不久的将来就要面临代码运行报错的风险。所以 **dplyr** 以后就尽量不介绍了，除非 Hadley Wickham 真的如他所说 **dplyr** 发布 1.0.0 版本之后，将不再做大量的 breaking changes。
 
 > After this release, dplyr will be a 1.0.0, which means that you should expect very few breaking changes in the future. We’ll continue to add new functions and arguments but will be much more conservative about modifying or removing features. [^dplyr-homepage]
 >
@@ -326,7 +326,7 @@ mt[, .N]
     4 rows in set (0.000 sec)
     ```
 
-    除了 demo 库，information\_schema,  mysql,  performance\_schema 是数据库管理系统 MySQL 默认的三个数据库
+    除了 demo 库，information\_schema,  mysql,  performance\_schema 是数据库管理系统 MySQL 默认的三个数据库。
     
     - **mysql** 存储 MySQL server 所需的系统信息
     - **information\_schema** 提供数据库元数据的连接
