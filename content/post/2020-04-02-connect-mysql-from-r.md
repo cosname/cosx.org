@@ -29,7 +29,7 @@ MySQL 是 Oracle （甲骨文）公司出品的一款数据库管理系统，社
 
 ```bash
 # 安装开源版 MariaDB Server
-sudo dnf install -y mariadb-devel
+sudo dnf install -y mariadb-devel # 这是在 Fedora 29 系统上
 # 启动 mysql 服务
 systemctl start mariadb.service
 # 设置开机启动
