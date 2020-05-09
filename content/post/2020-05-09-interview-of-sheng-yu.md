@@ -11,7 +11,7 @@ tags:
   - 智能医疗
   - 深度学习
   - 自然语言处理
-slug: interview-of-sheng-yu
+slug: interview-of-yusheng
 meta_extra: "编辑：雷博文  审稿："
 forum_id: 
 ---
