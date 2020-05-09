@@ -16,7 +16,7 @@ tags:
 - GIS与R
 - Deckgl
 categories:
-- R 语言
+- R语言
 - 统计图形
 forum_id: 420447
 ---

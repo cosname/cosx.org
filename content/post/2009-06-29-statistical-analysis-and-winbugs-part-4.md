@@ -19,15 +19,18 @@ forum_id: 418797
 
 ## 第一节 导言
 
-![R, WinBUGS and ArcInfo](https://uploads.cosx.org/2009/06/r_bugs_esri.png) 之前有些对GeoBUGS感兴趣的同学发邮件询问我有没有GeoBUGS的中国地图，以用于分析中国国内的一些空间数据。我想有必要将如何生成GeoBUGS格式的地图的方法分享给大家。这样的话， GeoBUGS就可以真正为我们所用，从而对于其他GeoBUGS没有自带的地图，我们也可以轻松生成了。本节不涉及统计分析，仅为GeoBUGS的研究使用者提供一个软件使用的技术参考。关于GeoBUGS的统计的书，国外实在是很多了，但关于这块地图定制的参考资料较少，故提出来供大家参阅。
+![R, WinBUGS and ArcInfo](https://uploads.cosx.org/2009/06/r_bugs_esri.png) 
 
-<!--more-->
+之前有些对GeoBUGS感兴趣的同学发邮件询问我有没有GeoBUGS的中国地图，以用于分析中国国内的一些空间数据。我想有必要将如何生成GeoBUGS格式的地图的方法分享给大家。这样的话， GeoBUGS就可以真正为我们所用，从而对于其他GeoBUGS没有自带的地图，我们也可以轻松生成了。本节不涉及统计分析，仅为GeoBUGS的研究使用者提供一个软件使用的技术参考。关于GeoBUGS的统计的书，国外实在是很多了，但关于这块地图定制的参考资料较少，故提出来供大家参阅。
 
-目前分析用地图普遍采用的是shp格式，该格式可以用ESRI公司开发的ArcInfo工具进行编辑和分析。由于其通用性，故很容易在网上找到相应的资源。比如可以在国家基础地理信息系统的网站（<http://nfgis.nsdi.gov.cn/nfgis/chinese/>）上下载到有用的shp文件。我们主要需要的是其中的国界和省界的shp文件。可以点击链接下载[中国省级行政区域地图shp版](https://uploads.cosx.org/2009/06/bou2_4m.zip)。我们要用到的是其中的bou2_4p.shp文件。
+
+目前分析用地图普遍采用的是shp格式，该格式可以用ESRI公司开发的ArcInfo工具进行编辑和分析。由于其通用性，故很容易在网上找到相应的资源。比如可以在国家基础地理信息系统的网站 <http://nfgis.nsdi.gov.cn/nfgis/chinese/> 上下载到有用的shp文件。我们主要需要的是其中的国界和省界的shp文件。可以点击链接下载[中国省级行政区域地图shp版](https://uploads.cosx.org/2009/06/bou2_4m.zip)。我们要用到的是其中的bou2_4p.shp文件。
 
 ## 第二节 用ArcInfo生成一个GeoBUGS格式的中国地图
 
-第一步，打开ArcInfo，选中Layers（图层），点击右键，在打开的菜单中选择Add Data…（添加数据…），并定位到bou2_4p.shp，确定。![添加图层](https://uploads.cosx.org/2009/06/add_layers.png)
+第一步，打开ArcInfo，选中Layers（图层），点击右键，在打开的菜单中选择Add Data…（添加数据…），并定位到bou2_4p.shp，确定。
+
+![添加图层](https://uploads.cosx.org/2009/06/add_layers.png)
 
 第二步，打开位于图层工具箱上方的Editor按钮菜单，在其中选中Start Editing。
 
@@ -136,7 +139,7 @@ map: 33表示这个中国地图有33个行政区域，而regions: 35表示后面
 
 ![china_map](https://uploads.cosx.org/2009/06/china_map.png)
 
-生成的地图可以在这里下载[中国行政区域地图GeoBUGS版](https://uploads.cosx.org/2009/06/China.zip)。我们可以在许多政府官网得到许多可以分析的数据资源，如<http://www.moh.gov.cn/publicfiles//business/htmlfiles/zwgkzt/pwstj/index.htm>
+生成的地图可以在这里下载[中国行政区域地图GeoBUGS版](https://uploads.cosx.org/2009/06/China.zip)。我们可以在许多政府官网得到许多可以分析的数据资源，如 <http://www.moh.gov.cn/publicfiles//business/htmlfiles/zwgkzt/pwstj/index.htm>
 
 那么就下载一些数据用GeoBUGS进行分析吧
 

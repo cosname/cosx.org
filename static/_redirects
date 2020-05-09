@@ -3,12 +3,15 @@ https://master--cosx.netlify.com/*   https://cosx.org/:splat  301!
 /flarum/*                          https://d.cosx.org/:splat
 /cn/topic/*           https://d.cosx.org/d/:splat
 
+/2019/11/%E6%88%91%E5%9B%BD%E9%A6%96%E4%BD%8D%E6%9C%89%E9%87%8D%E5%A4%A7%E5%9B%BD%E9%99%85%E5%BD%B1%E5%93%8D%E7%9A%84%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AE%B6%E5%90%B4%E5%AE%9A%E8%89%AF/  /2019/11/wu-ding-liang/
 /2019/01/monthly-2019-01/          /2019/01/monthly/
 /2017/05/work-with-cos/            /contribute/
 /2008/11/how-to-work-with-cos-2/   /contribute/
 /2008/11/how-to-work-with-cos/     /contribute/
 /2017/02/a-new-r-markdown-ppt-tool/   /2017/02/xaringan-presentation/
 /2014/04/lmmandme         /2014/04/lmm-and-me
+
+/2010/04/kernel-density-estimation-with-unbounded-region         /2010/04/kernel-density-estimation-with-bounded-region
 
 /2013/12/the-250th-anniversary-of-bayes-theorem-1st-bayesian-statistics-meeting/    /2013/12/1st-bayesian-statistics-meeting/
 /2013/12/to-commemorate-the-250th-anniversary-of-bayes-theorem    /2013/12/1st-bayesian-statistics-meeting/

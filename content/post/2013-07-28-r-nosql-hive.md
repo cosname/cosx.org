@@ -22,10 +22,6 @@ forum_id: 418947
 * blog: http://blog.fens.me
 * email: bsspirit@gmail.com
 
-**转载请注明：**
-  
-[/2013/07/r-nosql-hive/](/2013/07/r-nosql-hive/ "R利剑NoSQL系列文章之hive")
-
 ![rhive](https://uploads.cosx.org/2013/07/rhive.png)
 
 **第四篇 R利剑Hive，分为5个章节**
@@ -42,7 +38,7 @@ Hive是建立在Hadoop上的数据仓库基础构架。它提供了一系列的�
 
 Hive 没有专门的数据格式。 Hive 可以很好的工作在Thrift之上，控制分隔符，也允许用户指定数据格式
 
-上面内容摘自 百度百科(http://baike.baidu.com/view/699292.htm)
+上面内容摘自百度百科(http://baike.baidu.com/view/699292.htm)
 
 hive与关系数据库的区别：
 
@@ -153,6 +149,7 @@ call rhive.init() because HIVE_HOME is set.
 
 # 4. RHive函数库
 
+```
 rhive.aggregate        rhive.connect          rhive.hdfs.exists      rhive.mapapply
 rhive.assign           rhive.desc.table       rhive.hdfs.get         rhive.mrapply
 rhive.basic.by         rhive.drop.table       rhive.hdfs.info        rhive.napply
@@ -168,7 +165,7 @@ rhive.size.table
 rhive.big.query        rhive.hdfs.close       rhive.load             rhive.write.table
 rhive.block.sample     rhive.hdfs.connect     rhive.load.table
 rhive.close            rhive.hdfs.du          rhive.load.table2
-
+```
 
 **Hive和RHive的基本操作对比：**
 
@@ -313,7 +310,3 @@ rhive.hdfs.cat('/user/hive/warehouse/o_account/part-m-00000')
 2dedac@163.com2013-04-22 12:21:39
 3qq8fed@163.com2013-04-22 12:21:39
 ```    
-
-**转载请注明：**
-  
-[/2013/07/r-nosql-hive/](/2013/07/r-nosql-hive/ "R利剑NoSQL系列文章 之 hive")

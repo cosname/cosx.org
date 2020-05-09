@@ -162,3 +162,23 @@ article a:hover { font-weight: bold; color: #00b0cf; }
   visibility: hidden;
   height: 0;
 }
+
+/*searchbox*/
+.ais-SearchBox-form { display: flex; }
+.ais-SearchBox-input {
+  width: 100%;
+  height:2rem;
+  flex: 1;
+}
+
+.ais-SearchBox-submitIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.ais-SearchBox-resetIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}

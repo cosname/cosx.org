@@ -47,4 +47,4 @@ E·皮尔逊问耶日·奈曼，在检验一组数据是否为正态分布时，
 
 其实也是关于假设检验的问题，具体内容可以参看：
 
-* [统计学博文导读：统计分布的检验](http://www.yihui.name/cn/post/260.htm)（谢益辉博客）
+* [统计学博文导读：统计分布的检验](https://yihui.org/cn/2009/02/test-statistical-distributions/)（谢益辉博客）

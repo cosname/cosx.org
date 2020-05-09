@@ -1,6 +1,6 @@
 ---
 title: "心理学的危机"
-date: 2017-09-30
+date: "2017-09-30"
 author: "杨洵默"
 categories:
    - 统计应用

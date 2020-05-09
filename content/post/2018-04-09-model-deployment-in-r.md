@@ -4,7 +4,7 @@ author: 周震宇
 date: '2018-12-20'
 slug: model-deployment-in-action-with-r
 categories:
-  - R 语言
+  - R语言
 tags:
   - 模型部署
   - opencpu

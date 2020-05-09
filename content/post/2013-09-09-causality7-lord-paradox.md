@@ -55,8 +55,7 @@ $$`
 \begin{eqnarray}
 \Delta &=& \Delta_1 – \Delta_0\\
 &=& E\{ Y(1) – Y(0) \mid G = 1 \} – E\{ Y(1) – Y(0) \mid G = 0 \}\\
-  
-&=&\left[ E\{ Y(1) \mid G = 1 \} – E\{ Y(1) \mid G = 0 \} \right] \\  
+&=& \left[ E\{ Y(1) \mid G = 1 \} – E\{ Y(1) \mid G = 0 \} \right] \\  
 && – 
 \left[ E\{ Y(0) \mid G = 1 \} – E\{ Y(0) \mid G = 0 \} \right]. 
 \end{eqnarray}
