@@ -170,4 +170,4 @@ dat %>% as_tibble() %>% select(cid, titleFormat, longTitle)
 
 ![](https://uploads.cosx.org/2020/05/add-details.png)
 
-如果你对这个 Shiny App 的开发感兴趣，欢迎去项目主页（[https://github.com/yixuan/conan-danmu](https://github.com/yixuan/conan-danmu)）关注、点赞、投币一键三连，噢对不起，走错片场了。总之 B 站还有很多值得去发掘和研究的数据，以后有机会的话再来和大家分享。~~其实下次也不一定~~
+如果你对这个 Shiny App 的开发感兴趣，欢迎去项目主页（[https://github.com/yixuan/conan-danmu](https://github.com/yixuan/conan-danmu)）点赞、投币、收藏一键三连，噢对不起，走错片场了。总之 B 站还有很多值得去发掘和研究的数据，以后有机会的话再来和大家分享。~~其实下次也不一定~~
