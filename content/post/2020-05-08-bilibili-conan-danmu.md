@@ -165,9 +165,13 @@ dat %>% as_tibble() %>% select(cid, titleFormat, longTitle)
 
 你是否从中找到了自己的童年阴影呢？不对，你是否通过本文的学习发现奇怪的知识又增加了呢？![](https://uploads.cosx.org/2020/05/weird-knowledge.png)
 
-最后又到了结尾彩蛋的时间。前面我们介绍了利用 R 中的相关软件包来抓取弹幕的操作，然后只需要再加上亿点点细节，就可以打造出一个实用的~~追剧~~可视化工具了。我们用 [R Shiny App](https://shiny.rstudio.com/) 来对弹幕信息进行展示，半成品如下：
-[https://yixuanq.shinyapps.io/conan-danmu/](https://yixuanq.shinyapps.io/conan-danmu/)。
+最后又到了结尾彩蛋的时间。前面我们介绍了利用 R 中的相关软件包来抓取弹幕的操作，然后只需要再加上亿点点细节，就可以打造出一个实用的~~追剧~~可视化工具了。
 
 ![](https://uploads.cosx.org/2020/05/add-details.png)
+
+我们用 [R Shiny App](https://shiny.rstudio.com/) 来对弹幕信息进行展示，半成品如下：
+[https://yixuanq.shinyapps.io/conan-danmu/](https://yixuanq.shinyapps.io/conan-danmu/)。
+
+![](https://raw.githubusercontent.com/yixuan/conan-danmu/master/screenshot.png)
 
 如果你对这个 Shiny App 的开发感兴趣，欢迎去项目主页（[https://github.com/yixuan/conan-danmu](https://github.com/yixuan/conan-danmu)）点赞、投币、收藏一键三连……啊不，走错片场了，欢迎大家关注、加星、分支。这个 GitHub 库大致分为两部分，根目录下的几个文件是用来抓取弹幕数据的 R 程序，相当于前文代码的完整版，而 `connan-danmu` 这个文件夹则是 Shiny App 的源文件，包含了交互可视化的实现方法。最后，B 站还有很多值得去发掘和研究的数据，以后有机会的话再来和大家分享。~~其实下次也不一定~~
