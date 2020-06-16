@@ -84,7 +84,7 @@ E-mail: chuxinyuan@outlook.com
 
 正文效果如下：
 
-[](https://rbind.gitee.io/html/mailbody.html)
+<iframe seamless src="https://rbind.gitee.io/html/mailbody.html" height = "900" width  = "750" frameborder="no"></iframe>
 
 ## 定义sendmail.R文件（这个文件不用管它）
 
@@ -128,4 +128,4 @@ smtp_send(
 
 定时发邮件可以参考我之前的博文[利用R语言定时自动发邮件](https://cxy.rbind.io/post/mailr/)。如果不想让自己的电脑当主机整天开着就是为了定时发个邮件，那么你需要掌握**travis**相关内容。
 
-最后，需要说明的是这篇文章主要是参考了blatula包在rstudio上发表的一篇博文。具体请看这里：[https://blog.rstudio.com/2019/12/05/emails-from-r-blastula-0-3/](https://blog.rstudio.com/2019/12/05/emails-from-r-blastula-0-3/)。
+最后，需要说明的是这篇文章主要是参考了`blatula`包在rstudio上发表的一篇博文。具体请看这里：[https://blog.rstudio.com/2019/12/05/emails-from-r-blastula-0-3/](https://blog.rstudio.com/2019/12/05/emails-from-r-blastula-0-3/)。
