@@ -84,9 +84,7 @@ E-mail: chuxinyuan@outlook.com
 
 正文效果如下：
 
-```
-<iframe seamless src="https://rbind.gitee.io/html/mailbody.html" height = "900" width  = "750" frameborder="no"></iframe>
-```
+![](https://user-images.githubusercontent.com/26518047/84739677-b3be9b80-af71-11ea-8888-c61479644d18.jpg)
 
 ## 定义sendmail.R文件（这个文件不用管它）
 
