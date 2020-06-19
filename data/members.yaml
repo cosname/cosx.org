@@ -66,6 +66,9 @@ list:
   - name: 黄俊文
     image: https://user-images.githubusercontent.com/1142836/28239124-c75cde6e-6996-11e7-842a-66b29f4cb77c.jpg
     intro: 本科中山大学，硕士 University of California, San Diego。现于业界从事数据分析工作。
+  - name: 黄建华
+    image: https://user-images.githubusercontent.com/26518047/83482179-44bb5000-a465-11ea-9008-a25436fed071.jpg
+    intro: 黄建华教授现任美国德州 A&M 大学统计系教授及数据科学研究所副主任，并为 Arseven/Mitchell Astronomical Statistics 讲席教授。黄教授于 1985-1992 年在北京大学概率统计系学习并获得概率统计学士及硕士学位，于 1997 年获加州大学伯克利分校统计学博士学位。他是美国统计协会资深会员（Fellow）, 国际数理统计学会资深会员（Fellow）, 国际统计学会当选会员（Elected Member），及国际泛华统计协会会员。 曾任 A&M 大学统计系研究生项目主任、理学院代理研究生项目副院长、统计系代理系主任等职务。研究方向包括统计学习，大数据分析及计算，非参数和半参数统计，函数型数据和纵向数据分析，以及统计学在工程、生物、天文、商业等领域中的应用。自 1998 年以来共发表学术论文 100 余篇，为统计学的发展做出了重大贡献。
   - name: 寇强
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 寇强 <http://weibo.com/thirdwing?is_all=1>，Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。
