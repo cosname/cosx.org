@@ -1,7 +1,7 @@
 ---
 date: "2020-06-22"
 slug: connect-mysql-from-r
-title: 从 R 连接 MySQL 数据库
+title: 从 R 连接 MySQL
 author: 黄湘云
 meta_extra: "审稿：丘怡轩；编辑：向悦"
 categories:
@@ -64,7 +64,7 @@ mysql -u root -p
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'xxx';
 ```
 
-接下来，在进入 MySQL 数据库管理系统后，创建一个名叫 demo 的数据库。你可能已经发现在 SQL 语法中，对关键词是不区分大小写的，比如 `create` 或 `CREATE` 都是可以的，但是在 SQL 代码中应尽量保持一致，对保留字都用大写，对自造的库名、表名、列名都用小写，我司采用的 Hive 仓库前端 [HUE](https://github.com/cloudera/hue) 就支持 SQL 语句格式化，再辅以手动调整，用起来也比较方便，这主要针对交付阶段的代码整理，以便协作和共享。一些网站也提供免费的 SQL 代码格式化工具，比如 [SQLFormat](https://sqlformat.org/)。
+接下来，在进入 MySQL 数据库管理系统后，创建一个名叫 demo 的数据库。你可能已经发现在 SQL 语法中，对关键词是不区分大小写的，比如 `create` 或 `CREATE` 都是可以的，但是在 SQL 代码中应尽量保持一致，对保留字都用大写，对自造的库名、表名、列名都用小写，我司采用的 [Hive](https://github.com/apache/hive) 仓库前端 [HUE](https://github.com/cloudera/hue) 就支持 SQL 语句格式化，再辅以手动调整，用起来也比较方便，这主要针对交付阶段的代码整理，以便协作和共享。一些网站也提供免费的 SQL 代码格式化工具，比如 [SQLFormat](https://sqlformat.org/)。
 
 ```sql
 CREATE DATABASE demo;
@@ -310,7 +310,7 @@ mt[, .N]
 
 [^dplyr-homepage]: <https://www.tidyverse.org/blog/2020/03/dplyr-1-0-0-is-coming-soon/>
 
-在实际生产环境中，我们最好也不要指望所有的数据操作都用 R 来实现，最好让 SQL 和 R 都发挥各自的优势，不要信奉 R 就是王道，也不要信奉什么“没有什么是一个 SQL 解决不了的，有，就用两个”的鬼话！总之，如果一行 SQL 正能解决的就不要用 R，反之亦然。所以下面简单介绍几个 MySQL 数据库的常用命令，纯当作为新手体验一下 MySQL 数据库的环境。
+在实际生产环境中，我们最好也不要指望所有的数据操作都用 R 来实现，最好让 SQL 和 R 都发挥各自的优势，不要信奉 R 就是王道，也不要信奉什么“没有什么是一个 SQL 解决不了的，有，就用两个”的鬼话！总之，如果一行 SQL 真能解决的就不要用 R，反之亦然。所以下面简单介绍几个 MySQL 数据库的常用命令，纯当作为新手体验一下 MySQL 数据库的环境。
 
 ## MySQL 入门命令 {#naive-commands}
 
@@ -379,9 +379,9 @@ mt[, .N]
 
 ## RMySQL 核心命令 {#core-commands}
 
-**DBI** 是一个用于数据库连接的基础包，表的连接 `dbConnect()`/`dbDisconnect()`、创建 `dbCreateTable()`、读 `dbReadTable()` 、写 `dbWriteTable()`、删除 `dbRemoveTable()`、查 `dbSendQuery()`/`dbGetQuery()`，更细一层，查看表是否存在 `dbExistsTable()`、 表的各个字段 `dbListFields()`、各个字段的存储类型 `dbDataType()` 等。以上操作对于每一种数据库都是需要支持的，所以它们被抽象出来作为一个基础的类，被具体的数据库连接接口如 **RMySQL**/**RSQLite** 等实例化继承。就 **RMySQL** 来说，和 **DBI** 共同的函数占到了其自身的 53.33\%，由于 MySQL 数据库本身支持事务操作（简单点，可以理解为单条记录的频繁增、删、改、查），所以 **RMySQL** 提供了支持事务操作的特别函数 `dbWithTransaction()`。
+**DBI** 是一个用于数据库连接的基础包，表的连接 `dbConnect()`/`dbDisconnect()`、创建 `dbCreateTable()`、读 `dbReadTable()` 、写 `dbWriteTable()`、删除 `dbRemoveTable()`、查 `dbSendQuery()`/`dbGetQuery()`，更细一层，查看表是否存在 `dbExistsTable()`、 表的各个字段 `dbListFields()`、各个字段的存储类型 `dbDataType()` 等。以上操作对于每一种数据库都是需要支持的，所以它们被抽象出来作为一个基础的类，被具体的数据库连接接口如 **RMySQL**/**RSQLite** 等实例化继承。就 **RMySQL** 来说，和 **DBI** 共同的函数占到了其自身的 53.33%，由于 MySQL 数据库本身支持事务操作（简单点，可以理解为单条记录的频繁增、删、改、查），所以 **RMySQL** 提供了支持事务操作的特别函数 `dbWithTransaction()`。
 
-**DBI** 是没有绑定驱动类型的，新近出现的 **odbc** 包在 DBI 基础上支持连接所有提供 ODBC（ Open Database Connectivity ） 驱动的数据库，它统一了 **RMySQL**/**RSQLite** 的接口，使用起来更加方便，不需要安装很多的 R 包，学习一个就够了，和 **DBI** 共同的函数占到 70.73\%，可以说是高度兼容，详见 <https://github.com/r-dbi/odbc> 和 <https://db.rstudio.com/>。
+**DBI** 是没有绑定驱动类型的，新近出现的 **odbc** 包在 **DBI** 基础上支持连接所有提供 ODBC（ Open Database Connectivity ） 驱动的数据库，它统一了 **RMySQL**/**RSQLite** 的接口，使用起来更加方便，不需要安装很多的 R 包，学习一个就够了，和 **DBI** 共同的函数占到 70.73%，可以说是高度兼容，详见 <https://github.com/r-dbi/odbc> 和 <https://db.rstudio.com/>。
 
 
 ## 其它连接方式 {#other-cons}
@@ -493,7 +493,7 @@ knitr::kable(table_desc[, c('Field', 'Type')], format = 'markdown', row.names = 
 | gear      | double |
 | carb      | double |
 
-你可能会觉得 mtcars 数据集不就在 R 环境中吗，还啰里八嗦地用 SQL 查询的方式获取表的列名。实际上生产环境中，MySQL 里存储的库表是非常大的，不适合都拉到 R 环境中，即使 R 环境能放下，流程上也不对，会直接导致数据操作的性能低下。我们要考虑数据操作的性能，流程上的优化、让数据库和分析软件做各自擅长的事！
+你可能会觉得 mtcars 数据集不就在 R 环境中吗，还啰里八嗦地用 SQL 查询的方式获取表的列名。实际上生产环境中，MySQL 里存储的库、表都是非常大的，不适合都拉到 R 环境中，即使 R 环境能放下，流程上也不对，会直接导致数据操作的性能低下。我们要考虑数据操作的性能，流程上的优化、让数据库系统管理软件和分析软件做各自擅长的事！
 
 
 ## 本篇彩蛋 {#bonus}
@@ -541,4 +541,3 @@ sessionInfo()
 1. SQL 代码格式化网站 <https://sqlformat.org/>
 1. 赖明星 MySQL 笔记 <http://mingxinglai.com/cn/>
 1. 无名氏的读书笔记 --- 编写可读代码的艺术 <http://beiyuu.com/readable-code>
-1. 在线通过网络安装迷你版 CentOS 8  <https://linuxhint.com/install_centos8_netboot_iso/>
