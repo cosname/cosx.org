@@ -12,7 +12,7 @@ meta_extra: "审稿：李家郡；编辑：雷博文"
 forum_id: 
 ---
 
-之前在我的博客里介绍了一个利用R发邮件的方法^[<https://cxy.rbind.io/post/mailr/>]，这次我要推荐一个发邮件的包:`blastula`，首先，这个包不依赖Java，带来的好处是省去了在你电脑上安装Java这一步，以及避免了后续Java版本更新可能会带来的兼容性问题；其次，推荐这个包最主要的原因是：这个包可以很容易的在邮件正文部分嵌入R Markdown渲染的内容，方便成果分享。关于这个包更多的细节，请查看这个包在GitHub上的源码^[<https://github.com/rich-iannone/blastula>]，在此就不再赘述了，这里仅从用户层面分享一个笔者应用该包发邮件的例子，代码如下:
+之前在我的博客里介绍了一个利用R发邮件的方法 (<https://cxy.rbind.io/post/mailr/>)，这次我要推荐一个发邮件的包:`blastula`，首先，这个包不依赖Java，带来的好处是省去了在你电脑上安装Java这一步，以及避免了后续Java版本更新可能会带来的兼容性问题；其次，推荐这个包最主要的原因是：这个包可以很容易的在邮件正文部分嵌入R Markdown渲染的内容，方便成果分享。关于这个包更多的细节，请查看这个包在GitHub上的源码 (<https://github.com/rich-iannone/blastula>)，在此就不再赘述了，这里仅从用户层面分享一个笔者应用该包发邮件的例子，代码如下:
 
 ## 创建许可证
 
@@ -33,7 +33,7 @@ create_smtp_creds_key(
 
 运行以上代码后，会弹出一个对话框要求你输入邮箱登陆密码，输入后提交即可。这里需要说明的是，创建许可证的另一种方式是使用`create_smtp_creds_file()`函数，具体请运行`?blastula::create_smtp_creds_file`查看该包帮助文档。
 
-需要说明的是，这个包不光支持Gmail和Outlook，事实上该包对国内用户常用的QQ邮箱、163邮箱和新浪邮箱等也是支持的。各类邮箱POP3和SMTP服务器地址和端口可以参考这篇博客：各类邮箱POP3和SMTP服务器地址和端口^[<https://blog.csdn.net/o_o814222198/article/details/100110288>]。
+需要说明的是，这个包不光支持Gmail和Outlook，事实上该包对国内用户常用的QQ邮箱、163邮箱和新浪邮箱等也是支持的。各类邮箱POP3和SMTP服务器地址和端口可以参考这篇博客：各类邮箱POP3和SMTP服务器地址和端口 (<https://blog.csdn.net/o_o814222198/article/details/100110288>)。
 
 ## 定义邮件各要素
 
