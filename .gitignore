@@ -5,3 +5,4 @@
 *.ipynb
 /public
 /cosx-public
+*.DS_Store
