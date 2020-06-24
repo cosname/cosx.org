@@ -3,7 +3,7 @@ date: "2020-06-22"
 slug: connect-mysql-from-r
 title: 从 R 连接 MySQL
 author: 黄湘云
-meta_extra: "审稿：丘怡轩；编辑：向悦"
+meta_extra: "审稿：邱怡轩；编辑：向悦"
 categories:
   - R 语言
 tags:
