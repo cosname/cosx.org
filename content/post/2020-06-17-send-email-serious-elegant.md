@@ -9,7 +9,7 @@ tags:
   - 发邮件
 slug: send-email-serious-elegant
 meta_extra: "审稿：李家郡；编辑：雷博文"
-forum_id: 
+forum_id: 421612
 ---
 
 之前在我的博客里介绍了一个利用R发邮件的方法 (<https://cxy.rbind.io/post/mailr/>)，这次我要推荐一个发邮件的包:`blastula`，首先，这个包不依赖Java，带来的好处是省去了在你电脑上安装Java这一步，以及避免了后续Java版本更新可能会带来的兼容性问题；其次，推荐这个包最主要的原因是：这个包可以很容易的在邮件正文部分嵌入R Markdown渲染的内容，方便成果分享。关于这个包更多的细节，请查看这个包在GitHub上的源码 (<https://github.com/rich-iannone/blastula>)，在此就不再赘述了，这里仅从用户层面分享一个笔者应用该包发邮件的例子，代码如下:
