@@ -1,7 +1,7 @@
 ---
 title: "发邮件这事你可以认真一点优雅一点"
 author: 楚新元
-date: "2020-06-17"
+date: "2020-07-06"
 categories:
   - R语言
 tags:
