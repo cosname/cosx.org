@@ -7,7 +7,7 @@ list:
     intro: 现任编辑部副主编，中国矿业大学（北京）本硕，本科学数学与应用数学，硕士学统计学，研究方向是空间广义线性混合效应模型，博客 <https://xiangyunhuang.com.cn/>。
   - name: 林枫
     image: https://user-images.githubusercontent.com/18381242/62635778-e28bde80-b96a-11e9-9a98-15780bcd075f.JPG
-    intro: 现任编辑部副主编，中国科学技术大学计算机学院2017级硕士，本科就读于科大管理学院统计与金融系统计专业。研究兴趣主要为机器学习相关方向。好读书，不求甚解。音乐、动漫爱好者。
+    intro: 现任编辑部副主编，中国科学技术大学本硕，美国华盛顿大学2020级博士。研究兴趣是应用驱动的学习与决策问题。一番机缘得入COS，深受触动，在未来也将继续见证着它的热情与力量。
   - name: 边蓓蕾
     image: https://cloud.githubusercontent.com/assets/18478302/25886695/64963cdc-3591-11e7-9f88-4dea4eb0f65f.jpg
     intro: 出生于天津市，吃着煎饼果子和狗不理包子长大成人，因此智商偏低。长跑耐力中等偏下，K歌水平中等偏上，爱喝清酒梅酒，性格异常温和。热爱统计计算和软件工程，水平差，但擅长死磕到底。和COS之间唯有相见恨晚，这之间要感谢的人太多太多。人生一半的信仰找到了，还得努力找另一半。最近从各个角度感受到了COS精神，异常感动，因此没有不为它努力的道理。
@@ -26,6 +26,9 @@ list:
   - name: 陈新宇
     image: https://raw.githubusercontent.com/xinyulab/xinyulab.github.io/master/img/avatar-cxy.jpg
     intro: 华东师范大学应用统计硕士，研究方向为Deep Learning & Hign Performance Computing，现任Intel Deep Learning Engineer，为深度学习框架MXNet添砖加瓦。
+  - name: 楚新元
+    image:
+    intro: 楚新元，新疆财经大学金融专业博士研究生，R语言爱好者，ecce包作者。个人主页：https://cxy.rbind.io，喜欢折腾各种好玩的R包，坚信科技解放人力。希望未来有更多的时间享受生活，工作尽可能都交给R，而不是把自己整成一台人肉计算机。
   - name: 邓金涛
     image: https://cloud.githubusercontent.com/assets/7221728/25788559/9a1f0282-33dc-11e7-9f63-10a7ac42c4f9.jpg
     intro: 男，中国人民大学2014级统计学院学渣一枚，出于莫名的原因大家都叫我“小王子”。 兴趣爱好还算广泛，篮球打得还过得去，钢琴弹得也还马虎。当初由于担任宣传部部长等机缘巧合进入了统计之都大家庭。不过自从本人大三在宣传部卸任后，业务技术早已被抛到九霄云外，因而硬着头皮怒怼出的东西常被云伯，秋思等人吐槽，实在有愧于江东父老。
