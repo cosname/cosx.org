@@ -2,10 +2,9 @@
 title: R语言中的网络可视化
 date: '2020-06-28'
 author: "于淼"
-meta_extra: "审稿：夏骁凯；编辑：XX"
+meta_extra: "审稿：夏骁凯；编辑：向悦"
 slug: r-network-visualization
 categories:
-  - R 语言
   - 统计图形
 ---
 
