@@ -1,6 +1,6 @@
 ---
 title: R语言中的网络可视化
-date: '2020-06-28'
+date: '2020-07-15'
 author: "于淼"
 meta_extra: "审稿：夏骁凯；编辑：向悦"
 slug: r-network-visualization
