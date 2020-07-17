@@ -66,4 +66,4 @@ forum_id: 418703
 - 新浪微博：[@统计之都](http://weibo.com/cosname)
 - Twitter：[@cos_name](http://twitter.com/cos_name)
 - 微信：CapStat
-- 人人网：[@统计之都](http://renren.com/cosname)
+- 哔哩哔哩：[@统计之都](https://space.bilibili.com/22035559)
