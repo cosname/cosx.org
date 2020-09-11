@@ -10,7 +10,7 @@ tags:
   - 可视化
   - shiny 
   - dashboard
-forum_id: InfinityLoop
+forum_id: 421731
 ---
 
 本文主要分享一下我从1月底开始的一个用`shiny`制作的用来关注日本疫情动态的项目。项目本身为日文版`(https://covid-2019.live/)`，然后5月份左右开始逐步翻译成中`(/cn)`英文`(/en)`版本。项目所有代码和数据集全部开源[swsoyee/2019-ncov-japan](https://github.com/swsoyee/2019-ncov-japan)。只要Clone到本地，安装完所有需要的软件包即可本地启动。
@@ -20,8 +20,11 @@ forum_id: InfinityLoop
 另外文笔不好请大家多多包涵。文章对废话进行了标注，各位跳着看即可。
 
 这个dashboard经过了数次迭代（GitHub的commit数量高达7000多次，去掉数据更新的类的commit外大概有数千次都是功能改善的结果），到现在它长成了下面这个样子：
+
 ![Figure1](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure1.png)
+
 而在最开始的时候，它还是下面这个样子的：
+
 ![Figure2](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure2.PNG)
 
 现在这个dashboard仅在口口相传而无推广下，浏览数从2月中旬刚上线的时候日均3000到最高时每日10万，到现在共取得了总浏览量超过1300万的成绩。
@@ -84,6 +87,7 @@ forum_id: InfinityLoop
 ### 1. 首页
 
 主要以横向布局为主，分为4层结构。
+
 ![Figure1](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure1.png)
 
 #### 1.1 总计数值栏面板
@@ -131,6 +135,7 @@ forum_id: InfinityLoop
 目前提供了2张热图，虽然完成度还很低，但能够让用户非常直观地掌握到全国各地区的每日增长和增速情况。此外还可以考虑制作成3d形式的热图或者添加更多信息到这图表中（如各地区政府的疫情应对政策和大事件等）。配合右边的依然存在的空位和鼠标点击、悬浮操作可以制作出具有信息量的页面。
 
 ![Figure10](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure10.png)
+
 ![Figure11](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure11.png)
 
 ##### 1.2.4 确诊矩形树图
@@ -172,7 +177,9 @@ forum_id: InfinityLoop
 接下来是PCR检测人数、康复和新冠咨询热线的接线情况等。在`echarts4r`下支持图例点击（显示/隐藏）效果，而在切换的过程中会有**默认过渡动画**效果，个人认为这一点比`plotly`更为出色。
 
 ![Figure18](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure18.png)
+
 ![Figure19](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure19.png)
+
 ![Figure20](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure20.png)
 
 #### 1.4 其他数据
@@ -190,6 +197,7 @@ forum_id: InfinityLoop
 剩下的一些页面由于完成度都不太高，就简要带过了。
 
 在`感染路线`子页面中，可以看到确诊的病例是如何传染开来构成一张整体的网络的。鼠标悬浮于节点可以高亮显示患者简要信息，点击则会在右侧面板中显示患者完整信息。此外还可以通过右侧的搜索框对患者进行搜索。不过目前由于通过第三方收集的数据集的结构常常发生变化，4月5日以后的数据暂时还无法更新。只能等待数据集稳定后再对此功能进行重构了。
+
 ![Figure22](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure22.png)
 
 接下来是各省份的单独页面。和首页使用厚劳省的数据不同，这里是直接使用各自治体所发布的数据进行可视化。但目前由于完成所有47个都道府县的独立页面的工程量实在太大，目前只能暂时放弃了。欢迎有感兴趣的伙伴提交PR。
