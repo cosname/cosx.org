@@ -1,5 +1,5 @@
 ---
-title: 用shiny和echarts4r制作一个COVID-19的dashboard
+title: 一个访问量高达1300万的shiny应用的前世今生
 date: '2020-09-01'
 author: "苏玮"
 meta_extra: ""
