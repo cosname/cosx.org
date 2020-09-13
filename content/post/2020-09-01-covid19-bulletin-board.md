@@ -14,23 +14,25 @@ tags:
 forum_id: 421731
 ---
 
-本文主要分享一下我从1月底开始的一个用**shiny**制作的关注日本疫情动态的项目。项目本身为日文版<https://covid-2019.live/>，5月份左右逐步翻译成[中文版](https://covid-2019.live/cn)和[英文版](https://covid-2019.live/en)。项目中的代码和数据集全部开源，详见 <https://github.com/swsoyee/2019-ncov-japan>，只要把整个仓库克隆（下载）到本地，安装所需的软件包即可本地启动。
+本文主要简要分享一下我从1月底开始的一个用**shiny**制作的关注日本疫情动态的仪表盘应用项目。
+
+![Figure1](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure1.png)
+
+项目本身为日文版<https://covid-2019.live/>，5月份左右逐步翻译成[中文版](https://covid-2019.live/cn)和[英文版](https://covid-2019.live/en)。项目中的代码和数据集全部开源，详见 <https://github.com/swsoyee/2019-ncov-japan>，只要把整个仓库克隆（下载）到本地，安装所需的软件包即可本地启动。
 
 项目开发是利用工作之余的时间，我本人不是R语言和**shiny**应用开发专家，个人精力也有限，项目在功能上已经不会有很大改动了，代码质量和项目结构可能极其恐怖且不规范，能用就行，希望各位读者吐槽之余建言献策，帮助继续维护项目。
 
 文笔不好请大家多多包涵。正文夹杂了不少冗长的个人对这个项目的定位以及思考过程，进行了引用标注，各位读者可以选择跳着看。
 
-这个仪表盘经过了数次迭代，GitHub的提交次数近8000次，除了数据更新类的提交，还有数千次是功能改善，到现在，它已经变成了这个样子：
+![Figure2](https://user-images.githubusercontent.com/20528423/93020556-b97f5800-f618-11ea-988a-42c2ee46cfe1.png)
 
-![Figure1](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure1.png)
+这个仪表盘随着日本疫情的发展经过了数次迭代，GitHub的提交次数高达8000次，除了数据更新类的提交外，有数千次是属于功能改善的提交。
 
-而在项目初期的时候，它还是这个样子：
+![Figure:NHK](https://user-images.githubusercontent.com/20528423/93020561-bbe1b200-f618-11ea-81e6-1d24af7dd6a9.png)
 
-![Figure2](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure2.PNG)
+在仅依靠口口相传下，浏览数从2月中旬刚上线的日均3000飙到最高时日均10万，截至发文之前，取得了总浏览量超过1300万的成绩。期间，项目不仅在[eRum2020::CovidR](https://milano-r.github.io/erum2020-covidr-contest/bulletin-board-japan.html)比赛中荣获优秀奖，也有幸被日本NHK（福冈）电视台在2个节目中进行了介绍，还受到了日本诺贝尔奖获得者山中伸弥教授的认可，被引用到他的[新冠肺炎信息网站中](https://www.covid19-yamanaka.com/cont3/16.html)。
 
-这个疫情仪表盘仅在口口相传下，浏览数从2月中旬刚上线的日均3000飙到最高时日均10万，截至发文之前，取得了总浏览量超过1300万的成绩。期间，项目不仅在[eRum2020::CovidR](https://milano-r.github.io/erum2020-covidr-contest/bulletin-board-japan.html)比赛中荣获优秀奖，也有幸被日本NHK（福冈）电视台在2个节目中进行了介绍，还受到了日本诺贝尔奖获得者山中伸弥教授的认可，被引用到他的[新冠肺炎信息网站中](https://www.covid19-yamanaka.com/cont3/16.html)。
-
-下面就让我来详细介绍一下这个仪表盘的制作过程和相关技术，在用**shiny**打造同类产品的路上，希望能够帮助各位读者梳理出来一个路径，少走一些弯路。
+由于个人时间和精力的关系，这个仪表盘应用完全不能说有多完美，仍有许多需要改善的烂尾部分，不过在项目进行的过程中也积攒了不少可供分享的个人经验和相关技术，希望能够帮助各位读者在用**shiny**打造同类产品的路上，梳理出来一个路径，少走一些弯路。
 
 ## 项目规划
 
