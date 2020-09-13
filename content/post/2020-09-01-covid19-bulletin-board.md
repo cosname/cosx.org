@@ -85,7 +85,7 @@ forum_id: 421731
 
 #### 1.1 总计数值栏面板
 
-和大多数仪表盘一样，最重要的四项总数指标放在首位。左边的结构使用了**shinydashboardPlus**中的`widgetUserBox()`，而右边的`valueBox()`在原版的基础上搭配`tagList()`和各种`tags$XX()`函数自行进行内容扩展，使其能够融入更多的信息量。
+和大多数仪表盘一样，最重要的四项总数指标放在首位。左边的结构使用了**shinydashboardPlus**中的`widgetUserBox()`，而右边的`valueBox()`在原版的基础上搭配`tagList()`和各种`tags$XX()`函数进行内容扩展，这样能够融入更多的信息量。
 
 ![Figure3](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure3.png)
 
