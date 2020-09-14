@@ -2,7 +2,7 @@
 title: 一个访问量高达1300万的shiny应用的诞生故事
 date: '2020-09-01'
 author: "苏玮"
-meta_extra: "审稿：黄湘云；编辑："
+meta_extra: "审稿：黄湘云；编辑：向悦"
 slug: covid19-bulletin-board
 categories:
   - R语言
