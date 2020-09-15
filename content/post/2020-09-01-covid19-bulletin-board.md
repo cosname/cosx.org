@@ -16,6 +16,8 @@ forum_id: 421731
 
 本文主要简要分享一下我从1月底开始的一个用**shiny**制作的关注日本疫情动态的仪表盘应用项目。
 
+可能有的读者对这篇文章有既视感，是因为在5月份的时候，我将当时访问量仅有 600 万的文章第一个版本投稿到了[Y叔叔（生信专业R包开发大牛）](https://github.com/GuangchuangYu)的公众账号上（[原创：用shiny和echarts4r制作一个COVID-19的dashboard](https://mp.weixin.qq.com/s?__biz=MzI5NjUyNzkxMg==&mid=2247489235&idx=1&sn=8b11a612a7609a23cf1be8ee2193d028&chksm=ec43a794db342e821991239138b3d933952169f8eb047eb71e71cc75d1ff4a4835daf94dbe98&mpshare=1&scene=1&srcid=0915zkcc09LYjnAvheoTIJgl&sharer_sharetime=1600161921601&sharer_shareid=84830aad05342f37650ee55dfc5af8ef&exportkey=AWFThKlhWh%2FAK7FWdwEUKjg%3D&pass_ticket=0xM21eBwyjYEbGagooffbv%2BDz5%2BH35gi2gkOvKIGTaabE%2F69Wjq345l4NcjVWAQC&wx_header=0#rd)）。而随着日本第二波疫情的扩大，4个月也已经转眼即逝，网站访问量再次翻倍突破了 1300 万。因此在统计之都编辑的帮助下，再次对文章做了细节优化，作为一份**shiny**应用开发经验分享给大家。
+
 ![Figure1](https://raw.githubusercontent.com/swsoyee/2019-ncov-japan/doc/www/doc/img/Figure1.png)
 
 项目本身为日文版<https://covid-2019.live/>，5月份左右逐步翻译成[中文版](https://covid-2019.live/cn)和[英文版](https://covid-2019.live/en)。项目中的代码和数据集全部开源，详见 <https://github.com/swsoyee/2019-ncov-japan>，只要把整个仓库克隆（下载）到本地，安装所需的软件包即可本地启动。
