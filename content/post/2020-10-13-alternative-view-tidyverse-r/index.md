@@ -3,7 +3,8 @@ title: '从另一种视角看 R 语言的 Tidyverse“方言” '
 author: "Norm Matloff"
 date: '2020-10-13'
 slug: alternative-view-tidyverse-r
-categories: R语言
+categories:
+- R语言
 tags:
 - R
 - tidyverse
