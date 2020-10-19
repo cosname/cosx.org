@@ -1,18 +1,18 @@
 ---
 title: '从另一种视角看 R 语言的 Tidyverse“方言” '
-author: "Norm Matloff"
+author: "作者：Norm Matloff，译者：李嵩，审校：任焱、黄湘云"
 date: '2020-10-13'
 slug: alternative-view-tidyverse-r
 categories:
 - R语言
 tags:
-- R
+- Base R
 - tidyverse
 ---
 
 从另一种视角看 R 语言的 Tidyverse “方言”，以及 RStudio 对 Tidyverse 的提倡。
 
-## Norm Matloff, Prof. of Computer Science, UC Davis (former Prof. of Statistics at UCD)
+## 作者简介
 
 作者 Norm Matloff 为 UC Davis 计算机科学教授（曾任 UCD 统计学教授）。本中文翻译经过作者[同意](https://github.com/matloff/TidyverseSkeptic/issues/22)。文中的“我”为作者视角，但译文中存在的任何不妥之处当然很可能是由译者引入的，还望读者不吝[赐教](https://github.com/boltomli/TidyverseSkeptic/issues/new)。
 
@@ -46,7 +46,7 @@ tags:
 
 * RStudio 作了可敬的工作，让更多女性及未被充分代表的少数群体能接触到 R。然而，由于被限制在复杂的 Tidyverse 系统中，这些群体将很难为 R 语言作出更多贡献，诸如编写 CRAN 包、撰写书籍等等。这些工作需要相当熟悉 base-R 的使用，即使代码本身仍然可以主要由 Tidyverse 写就。当然，也不只是这些群体，这对任何人都适用。可惜的是 RStudio 正在伤害它本想要帮助的那些人。
 
-## <a name="teachable"> </a> 可教学性
+## 可教学性
 
 从大学以来，教学一直是我兴趣所在。我成为统计和计算机老师很多年，也得过一些教学奖项。我写的课本 *Statistical Regression and Classification: from Linear Models to Machine Learning* 获得 2017 年的 Ziegel Award。
 
