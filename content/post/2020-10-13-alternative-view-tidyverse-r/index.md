@@ -1,5 +1,5 @@
 ---
-title: '从另一种视角看 R 语言的 Tidyverse“方言” '
+title: '从另一个视角看 R 语言的方言 Tidyverse'
 author: "作者：Norm Matloff，译者：李嵩，审校：任焱、黄湘云"
 date: '2020-10-13'
 slug: alternative-view-tidyverse-r
@@ -10,11 +10,11 @@ tags:
 - tidyverse
 ---
 
-从另一种视角看 R 语言的 Tidyverse “方言”，以及 RStudio 对 Tidyverse 的提倡。
+从另一个视角看 R 语言的“方言” Tidyverse，以及 RStudio 对 Tidyverse 的提倡。
 
 ## 作者简介
 
-作者 Norm Matloff 为 UC Davis 计算机科学教授（曾任 UCD 统计学教授）。本中文翻译经过作者[同意](https://github.com/matloff/TidyverseSkeptic/issues/22)。文中的“我”为作者视角，但译文中存在的任何不妥之处当然很可能是由译者引入的，还望读者不吝[赐教](https://github.com/boltomli/TidyverseSkeptic/issues/new)。
+作者 Norm Matloff 为 UC Davis 计算机科学教授（曾任 UCD 统计学教授）。中文翻译及投稿至 COS 经过作者[同意](https://github.com/matloff/TidyverseSkeptic/issues/22)。文中的“我”为作者视角，但译文中存在的任何不妥之处当然很可能是由译者引入的，还望读者不吝[赐教](https://github.com/boltomli/TidyverseSkeptic/issues/new)。
 
 ## 注意：此为简版
 
