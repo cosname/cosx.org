@@ -1,6 +1,7 @@
 ---
 title: '从另一个视角看 R 语言的方言 Tidyverse'
-author: "作者：Norm Matloff，译者：李嵩，审校：任焱、黄湘云"
+author: 'Norm Matloff'
+meta_extra: '译者：李嵩；校对：任焱、黄湘云；编辑：任焱'
 date: '2020-10-13'
 slug: alternative-view-tidyverse-r
 categories:
