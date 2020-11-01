@@ -9,6 +9,7 @@ categories:
 tags:
 - Base R
 - tidyverse
+forum_id: 421880
 ---
 
 从另一个视角看 R 语言的“方言” Tidyverse，以及 RStudio 对 Tidyverse 的提倡。
