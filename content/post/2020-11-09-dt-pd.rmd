@@ -1,0 +1,494 @@
+---
+title: data.table 与 pandas
+author: shichen xie
+date: '2019-12-26'
+slug: dt-pd
+tags: ['R', 'python']
+output:
+  html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+数据分析项目通常可以分解为以下过程，数据加载-数据清洗-(特征处理、可视化、模型训练)-结论交流。其中，数据清洗与特征处理一般占据整个项目的大部分时间。熟练掌握相关工具，提高数据处理的效率，是开展数据分析工作的基础。
+![](https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png)
+
+数据框（data frame）是我们接触最多的数据格式，它的每一列都是长度相等的向量。在 R 中我通常使用 data.table 包对数据框进行处理分析，而在 python 环境中 pandas 最为常用的。根据 [Database-like ops benchmark](https://h2oai.github.io/db-benchmark/) 显示，data.table 在大部分任务中性能表现最好，而且其语法也相对简洁统一。由于 R 是我对最为常用的分析工具，因此对 data.table 更为熟悉，虽然我也基于 pandas 开发过 python 包 ([scorecardpy](https://github.com/shichenxie/scorecardpy))，但是碰到 pandas 时还是经常需要查阅帮助文档。为了方便查阅和对比，本文分别用 [data.table](http://r-datatable.com) 与 [pandas](https://pandas.pydata.org/pandas-docs/stable/) 实现了常见的数据框操作任务[^1][^2]。
+
+对数据框的操作可以从行与列两个维度，拆解为有以下五类基本操作，其中英文均为 dplyr 包[^2]里面的对应函数。这些基本操作均可以与 group_by 相互结合使用。除了这几类基本操作，还包括行列转换、以及多个数据框合并等。具体的案例请参见下面的代码。
+
+- 行：选择 filter、排序 arrange
+- 列：选择 select、新建 mutate、计算 summarise
+
+[^1]: [Data Manipulation with Python Pandas and R Data.Table](https://datascience-enthusiast.com/R/pandas_datatable.html)
+[^2]: [R for Data Science](https://r4ds.had.co.nz/)
+[^3]: [A data.table and dplyr tour](https://atrebas.github.io/post/2019-03-03-datatable-dplyr/)
+
+### 探索数据
+#### 读取 csv 文件
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```r
+library(data.table)
+packageVersion('data.table')
+
+url = "https://vincentarelbundock.github.io/Rdatasets/csv/datasets/HairEyeColor.csv"
+dt = fread(url)
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```python
+import pandas as pd
+pd.__version__
+
+url = "https://vincentarelbundock.github.io/Rdatasets/csv/datasets/HairEyeColor.csv"
+df = pd.read_csv(url)
+```
+:::
+
+::::::
+
+#### 查看数据结构
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```
+#数据类型
+class(dt)
+str(dt)
+
+# 列名
+names(dt)
+# 打印前后几行
+head(dt, n=3)
+tail(dt, n=3)
+
+# 维度
+dim(dt)
+nrow(dt)
+ncol(dt)
+
+# 汇总
+summary(dt)
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```
+#数据类型
+type(df)
+df.dtypes
+
+# 列名
+list(df)
+# 打印前后几行
+df.head(n=3)
+df.tail(n=3)
+
+# 维度
+df.shape
+len(df.index)
+len(df.columns)
+
+# 汇总
+df.describe()
+```
+:::
+
+::::::
+
+### 行选择与排序
+#### rows filter
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```
+# 基于行所在位置筛选
+dt[c(3,1,2)]
+
+
+# 单条件筛选
+dt[Hair == 'Red']
+
+# 多条件筛选
+dt[Hair == 'Black' & 
+   Freq >= 10 & 
+   Eye %in% c('Brown', 'Blue')]
+
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```
+# 基于行所在位置筛选
+df.iloc[[2,0,1]] # python序数从0开始，2代表第三行
+df.loc[[2,0,1]] # 如果index未修改，效果与iloc的一致
+
+# 单条件筛选，去掉.loc效果一致
+df.loc[df['Hair'] == 'Red'] 
+
+# pandas 多条件筛选时要用 |, &, ~分别代表or, and, not; 
+# 且每个条件用括号区分 
+df.loc[(df['Hair'] == 'Black') & 
+       (df['Freq'] >= 10) & 
+       (df['Eye'].isin(['Brown', 'Blue']))]
+```
+:::
+
+::::::
+
+#### rows arrange
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```
+dt[order(Sex, -Freq)]
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```
+df.sort_values(
+  ['Sex', 'Freq'], 
+  ascending = [True, False] )
+```
+:::
+
+::::::
+
+### 列选择、新建与计算
+#### columns select
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```
+dt[,.(Hair, Freq)]
+# or 
+dt[,c('Eye', 'Sex'), with=FALSE]
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```
+df[['Hair', 'Freq']]
+# or 
+df.loc[:,['Eye', 'Sex']] # 选一列时也要保留[]，否则与df.Eye一样为series
+```
+:::
+
+::::::
+
+#### columns mutate
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```r
+# 新建一列
+dt[, nc := .I] # .I .N .SD为特殊符号,查看帮助?`.I`
+dt[,'nc0'] = 1:32
+
+# 新建多列
+dt[, `:=`(
+  nc1 = 1:32,
+  nc2 = paste(Hair, Eye, sep=',')
+)]
+
+# 基于条件新建列
+dt[, nc3 := ifelse(Freq >= 10, 1, 0)]
+dt[Freq >= 20, nc4 := 2]
+
+# 基于函数新建列
+ncols = c('nc', 'nc0') 
+dt[, 
+   (ncols) := lapply(.SD, function(x) x^0.5 + 1), 
+   .SDcols = ncols]
+
+# 删除列
+dt[, nc := NULL]
+dt[, (c('nc0','nc1','nc2','nc3','nc4')) := NULL]
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```python
+# 新建一列
+df = df.assign(nc = pd.Series(range(32)))
+df.loc[:,'nc0'] = pd.Series(range(32), index=df.index)
+
+# 新建多列
+df = df.assign(
+  nc1 = pd.Series(range(32)),
+  nc2 = df.Hair + ',' + df.Eye
+)
+
+# 基于条件新建列
+df = df.assign(nc3 = df.Freq.apply(lambda x: 1 if x >= 10 else 0))
+df.loc[df.Freq >= 20, 'nc4'] = 2
+
+# 基于函数新建列
+ncols = ['nc', 'nc0']
+df.loc[:, ncols] = df[ncols].apply(lambda x: x**0.5 + 1)
+
+# 删除列
+df = df.drop('nc', axis=1)
+df.drop(['nc0','nc1','nc2','nc3','nc4'], axis=1, inplace=True)
+```
+:::
+
+::::::
+
+#### columns summarise
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```
+# 对一列进行计算
+dt[, unique(Eye)]
+dt[, table(Eye)]
+
+dt[, max(Freq)]
+
+# 对多列进行计算
+## 所有列的最大值
+dt[, lapply(.SD, max)] 
+## 所有列的缺失率
+dt[, lapply(.SD, function(x) mean(is.na(x)))] 
+
+## 对部分列计算缺失率，且可扩展到其他函数
+sel_cols = c('Hair', 'Sex', 'Freq')
+dt[, lapply(.SD, function(x) mean(is.na(x))), .SDcols = sel_cols]
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```
+# 基于列的计算
+df.Eye.unique()
+df.Eye.value_counts()
+
+df.Freq.max()
+
+# 对多列进行计算
+## 所有列的最大值
+df.max() 
+## 所有列的缺失率 
+df.isnull().mean() 
+
+## 对部分列计算缺失率，且可扩展到其他函数
+sel_cols = ['Hair', 'Sex', 'Freq']
+df[sel_cols].apply(lambda x: x.isnull().mean())
+```
+:::
+
+::::::
+
+
+### 分组汇总计算
+#### grouped summarise
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```
+# max freq
+dt[, .(freq_max = max(Freq)), by = 'Sex']
+
+# count
+dt[, .(freq_count = .N), keyby = c('Hair', 'Sex')]
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```
+# max freq # pandas的groupby会自动删除缺失变量
+df.groupby('Sex').agg({'Freq':'max'}).
+  rename(columns={'Freq':'freq_max'}).
+  reset_index()
+
+# count
+df.groupby(['Hair','Sex']).agg({'Freq':'count'}).
+  rename(columns={'Freq':'freq_count'}).
+  reset_index()
+```
+:::
+
+::::::
+
+#### grouped mutate & filter
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```
+# 基于sex分组，新建一列等于freq的最大值
+dt[, freq_max := max(Freq), by = 'Sex']
+
+# 基于sex分组，选取freq最大的行
+dt[order(Freq)][, .SD[.N], by = 'Sex'][]
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```
+# 基于sex分组，新建一列等于freq的最大值
+df.loc[:,'freq_max'] = df.groupby('Sex')['Freq'].transform(max)
+
+# 基于sex分组，选取freq最大的行
+df.sort_values('Freq').groupby('Sex').tail(1)
+```
+:::
+
+::::::
+
+### 行列转换
+#### 长宽表转换
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```r
+# 长表转宽表
+dt_w = dcast(dt, Hair+Sex~Eye, value.var = 'Freq', fun.aggregate = sum)
+
+# 宽表转长表
+dt_l = melt(dt_w, id = c('Hair','Sex'), variable.name = 'Eye', value.name = 'Freq')
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```python
+# 长表转宽表
+df_w = pd.pivot_table(df, index=['Hair','Sex'], columns='Eye', values='Freq', aggfunc = sum).reset_index()
+
+# 宽表转长表
+df_l = df_w.melt(id_vars = ['Hair','Sex'], var_name='Freq')
+```
+:::
+
+::::::
+
+#### 行列合并切割
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```
+# 一行切割为多行
+dtr = dt[, paste0(Eye, collapse = ','), keyby = c('Hair', 'Sex')]
+dtr[, .(Eye = unlist(strsplit(V1, ','))), by = c('Hair', 'Sex')]
+
+# 一列切割为多列
+dtc = dt[, .(Hair, eye_sex = paste(Eye, Sex, sep = ','))]
+dtc[, c('Eye', 'Sex') := tstrsplit(eye_sex, ',')]
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```
+# 一行切割为多行
+dfr = df.groupby(['Hair','Sex'])['Eye'].apply(lambda x: ','.join(x)).reset_index()
+dfr.assign(Eye = dfr['Eye'].str.split(',')).explode('Eye')
+
+# 一列切割为多列
+dfc = df[['Hair']].assign(eye_sex = df.Eye+','+df.Sex)
+dfc['Eye'], dfc['Sex']= dfc['eye_sex'].str.split(',', 1).str
+```
+:::
+
+::::::
+
+### 数据框合并
+#### 数据框行合并
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```r
+# 合并两个数据框
+dtr1 = rbind(dt[sample(.N,2)], dt[sample(.N,3)])
+# 如果两个数据框的列名不一致，需要添加fill为TRUE
+dtr2 = rbind(dt[sample(.N,2)], dt[sample(.N,3), .(Hair)], fill=TRUE)
+
+# 直接合并多个数据框组成的 list
+dt_lst = list(
+  dt1 = dt[sample(.N,2)], 
+  dt2 = dt[sample(.N,3)], 
+  dt3 = dt[sample(.N,4)])
+dt_bind = rbindlist(dt_lst, idcol = 'dt')
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```python
+# 合并两个数据框
+dfr1 = pd.concat([df.sample(n=2), df.sample(n=3)])
+# 如果两个数据框的列名不一致
+dfr2 = pd.concat([df.sample(n=2), df.sample(n=3)[['Hair']]], sort=False)
+
+# 直接合并多个数据框组成的 list
+df_lst = [
+  df.sample(2), 
+  df.sample(3), 
+  df.sample(4)]
+df_con = pd.concat(df_lst, axis=0)
+```
+:::
+
+::::::
+
+
+#### 数据框列合并
+:::::: {.columns style="display: flex;"}
+
+::: {.column width="48%"}
+```r
+# merge
+```
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```python
+# pd.merge
+```
+:::
+
+::::::
+
