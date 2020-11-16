@@ -8,10 +8,6 @@ output:
   html_document
 ---
 
-<link href="{{< relref "post/2019-12-26-dt-pd/index.zh.html" >}}index.zh_files/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="{{< relref "post/2019-12-26-dt-pd/index.zh.html" >}}index.zh_files/anchor-sections/anchor-sections.js"></script>
-
-
 <p>数据分析项目通常可以分解为以下过程，数据加载-数据清洗-(特征处理、可视化、模型训练)-成果汇报<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>。其中，数据清洗与特征处理或称为数据预处理过程，一般占据了整个项目的大部分时间。熟练掌握相关工具，提高数据处理的效率，是开展数据分析工作的基础。
 <!-- ![](https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png) --></p>
 <p>开展数据科学相关工作时，最为常用的开源工具包括 <a href="https://www.r-project.org">R</a> 与 <a href="https://www.python.org">python</a>。在 R 中我通常使用 data.table 包进行数据处理分析，而在 python 环境中 pandas 包最为常用的。由于 R 是我主力工具，因此对 data.table 更为熟悉，虽然我也基于 pandas 开发过 python 包，但是碰到一些问题时还是经常需要查阅帮助文档。为了方便查阅和对比，本文分别用 <a href="http://r-datatable.com">data.table</a> 与 <a href="https://pandas.pydata.org/pandas-docs/stable/">pandas</a> 实现了常见的数据框操作任务<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>。</p>
