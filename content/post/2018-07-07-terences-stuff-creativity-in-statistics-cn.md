@@ -12,7 +12,7 @@ meta_extra: "译者：李杰桠"
 forum_id: 420246
 ---
 
-> 本文翻译自 [Terence Speed](https://www.wehi.edu.au/people/terry-speed) 发表在 IMS 主席专栏上的文章 [Creativity in Statistics](http://bulletin.imstat.org/2014/05/terence’s-stuff-creativity-in-statistics/)。本文已获得原作者授权。
+> 本文翻译自 [Terence Speed](https://www.wehi.edu.au/people/terry-speed) 发表在 IMS 主席专栏上的文章 [Creativity in Statistics](https://imstat.org/2014/05/15/terences-stuff-creativity-in-statistics/)。本文已获得原作者授权。
 
 ![Terence Speed](https://www.wehi.edu.au/sites/default/files/Terry-Speed-holding-a-book.jpg)
 
