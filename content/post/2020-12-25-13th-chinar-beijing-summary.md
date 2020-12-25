@@ -14,7 +14,7 @@ forum_id:
 meta_extra: 
 ---
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgr2lvQXo6o8w1XQwLAQ5pNsIiac5tTNoGcTo04u8lmq8RftDVUqW44f2w/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![14th-chinar-beijing-summary-01](https://user-images.githubusercontent.com/37477330/103118352-5dad7c00-46a9-11eb-876d-cc85b215959d.png)
 
 中国 R 会（The China-R Conference）始于2008 年，由统计之都（Capital of Statistics, COS）发起，并在中国人民大学举办了第一届中国 R 会。R 会起始于 R 语言的讨论，后来兼容并包，积极走向更广义的数据科学领域。本次会议内容不仅包括了数据科学、统计理论等专业领域，还覆盖了统计学在各行各业的应用，如医疗、金融等，聚集各领域的学术专家、业界精英、技术大咖、莘莘学子于一堂，为各界参会者提供了一个自由、充分、平等交流的平台，并为数据科学的普及做出了巨大贡献。
 
@@ -32,15 +32,15 @@ meta_extra:
 
 会议在中国人民大学统计学院院长王晓军教授的致辞中拉开序幕。王晓军教授简单介绍了统计学的发展现状，提出数据科学已经进入黄金时代。她表示，希望参会嘉宾通过此次 R 会充分探讨、深度交流、互相学习，共同促进统计学与数据科学发展进步。最后预祝 R 会圆满成功。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrEJldnefpf7b9lSukOBaDcjn8CoG3VWfmNvz6nxKUKB6nujFEAYfLEA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![13th-chinar-beijing-summary-02](https://user-images.githubusercontent.com/37477330/103118319-4ff7f680-46a9-11eb-8a63-fe8e90e16dc2.jpg)
 
 随后，中国人民大学统计学院数据科学与大数据系主任吕晓玲老师进行了发言。吕晓玲老师指出，数据科学和大数据技术在如今的时代有着极为重要的作用，希望各位参会者和嘉宾能在本次 R 会中共同探讨交流，体会数据科学的独特魅力。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrdR3gxjVGs6SJJf8eINfVCbBFia6icVXVD9NticdZcBMIcGNpuOu65CsGg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![13th-chinar-beijing-summary-03](https://user-images.githubusercontent.com/37477330/103118320-51292380-46a9-11eb-8459-1d7dd3162a29.jpg)
 
 最后，会议主席中国人民大学统计学院2017级本科生任焱也进行了发言。主席对本次 R 会的做了简要介绍，回顾过去的同时展望未来，并对辛勤工作的组委会同学与老师、专场负责人的付出、演讲嘉宾的出席、志愿者的工作以及大力支持 R 会的组织机构表达了由衷的感谢。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrytCmyzrUbdl7PQm3MHeicoQFVZV4jWloN65o4dFIWCv12uia28LzkOuQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![13th-chinar-beijing-summary-04](https://user-images.githubusercontent.com/37477330/103118321-51292380-46a9-11eb-82e2-a01c02e86cbd.jpg)
 
 ---
 
@@ -48,29 +48,28 @@ meta_extra:
 
 12月19日至20日两天，3个线下会场在中国人民大学展开，来自各个研究方向的学生、教师、研究人员及业界大咖们为大家介绍了统计理论知识及其在各个领域的应用，听众们也提出了很多有建设性的问题。无论是听众还是演讲者都在本次 R 会中受益匪浅。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrXUqd2ia1JHzMLkicksj77193D7qDmEravLdRgx7kxfuJ53NIpscf3W1g/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![13th-chinar-beijing-summary-talk-01](https://user-images.githubusercontent.com/37477330/103118338-58503180-46a9-11eb-9076-86ada338a19b.jpg)
+![13th-chinar-beijing-summary-talk-02](https://user-images.githubusercontent.com/37477330/103118339-58e8c800-46a9-11eb-801e-d31c80014a17.jpg)
+![13th-chinar-beijing-summary-talk-03](https://user-images.githubusercontent.com/37477330/103118342-59815e80-46a9-11eb-8e57-88bc761fbb22.jpg)
+![13th-chinar-beijing-summary-talk-04](https://user-images.githubusercontent.com/37477330/103118343-5a19f500-46a9-11eb-9e5b-f77ece611c7b.jpg)
+![13th-chinar-beijing-summary-talk-05](https://user-images.githubusercontent.com/37477330/103118344-5ab28b80-46a9-11eb-9b57-9e9d13ca4892.jpg)
+![13th-chinar-beijing-summary-talk-06](https://user-images.githubusercontent.com/37477330/103118345-5b4b2200-46a9-11eb-8dea-d9c539ee3329.jpg)
+![13th-chinar-beijing-summary-talk-07](https://user-images.githubusercontent.com/37477330/103118346-5be3b880-46a9-11eb-90b1-b1eb8398ae8a.jpg)
+![13th-chinar-beijing-summary-talk-08](https://user-images.githubusercontent.com/37477330/103118347-5be3b880-46a9-11eb-9993-45f5145a1d7f.jpg)
+![13th-chinar-beijing-summary-talk-09](https://user-images.githubusercontent.com/37477330/103118349-5c7c4f00-46a9-11eb-9fbd-419e2b9e38c2.jpg)
+![13th-chinar-beijing-summary-talk-10](https://user-images.githubusercontent.com/37477330/103118350-5d14e580-46a9-11eb-956b-13743a280753.jpg)
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrOShNdMLeRZ5hmt1bKJibcnJfMUJLvNmE9rrwPVwlOjaWY6tK68Q7MibA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrV0tk24S3hWRsF5iaCbqEA5iarktS0EK7N4Lymj2HbGWic2MiamyxFI3Ytw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrhiaricbp6SAP6WyLia5oWgmwRRbiaHGbBMHcuoiafmfBlsDkEgwevAWhacA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrr6CX8acJAa5EYguR2aia2YFQKqiar6yaLltTPMeJ8kw2SdQZyBKqvh7w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrDiaE6QoYm34J4t5gaL18z47gfQu9ezm1qRTPamHekmfMqg8Fw7WoRjA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgr3hPBOWl5OOaonY8D1OQnetSDMuuoMaUlficA7lf0mXQicIqNKF1WLgCQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrxvQoibSqAYr1ySIBuc6WOiakI1OEdjp4KR7wpYicSqgniaaGXISzIG08QQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrScH6XKmLNia7yXVdgTZnFU36FhXhoo9bibtJPTY4ZwtZhgEUn3jB0v5A/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrn7bvibDsEowa9EUlT4BWqe9FGKu6DZfZHrPePGLrrukRjlQXamdgKYw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_png/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrRLtrWlPzTDOcF7ibn3CHyXEJRlqKgqIr3lIqGibYRcSKnpWhgIllMovQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
-
-![图片](https://mmbiz.qpic.cn/mmbiz_png/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrPdic4jDciczcGpSwk5iaH7rWFHb5frVOCjVxAW0licsTP1VLcIC6pKv1aQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![13th-chinar-beijing-summary-online-01](https://user-images.githubusercontent.com/37477330/103118323-525a5080-46a9-11eb-97a1-36e4370adbff.jpg)
+![13th-chinar-beijing-summary-online-02](https://user-images.githubusercontent.com/37477330/103118324-52f2e700-46a9-11eb-94db-49e82fd5d5a3.jpg)
+![13th-chinar-beijing-summary-qa-01](https://user-images.githubusercontent.com/37477330/103118327-538b7d80-46a9-11eb-8471-4b97578c86b7.jpg)
+![13th-chinar-beijing-summary-qa-02](https://user-images.githubusercontent.com/37477330/103118328-54241400-46a9-11eb-86b7-2cfa585cf0ff.jpg)
+![13th-chinar-beijing-summary-qa-03](https://user-images.githubusercontent.com/37477330/103118329-54241400-46a9-11eb-9825-cb72268af3fb.jpg)
+![13th-chinar-beijing-summary-qa-04](https://user-images.githubusercontent.com/37477330/103118331-54bcaa80-46a9-11eb-9b67-47de76511fab.jpg)
+![13th-chinar-beijing-summary-qa-05](https://user-images.githubusercontent.com/37477330/103118333-55554100-46a9-11eb-8a81-270427121f3c.jpg)
+![13th-chinar-beijing-summary-qa-06](https://user-images.githubusercontent.com/37477330/103118334-56866e00-46a9-11eb-868d-c93534f4a1d0.jpg)
+![13th-chinar-beijing-summary-qa-07](https://user-images.githubusercontent.com/37477330/103118335-571f0480-46a9-11eb-80aa-254ac1ca673f.jpg)
+![13th-chinar-beijing-summary-qa-08](https://user-images.githubusercontent.com/37477330/103118336-571f0480-46a9-11eb-98e1-4c37a51aa5a9.jpg)
+![13th-chinar-beijing-summary-qa-09](https://user-images.githubusercontent.com/37477330/103118337-57b79b00-46a9-11eb-909e-04a9ed55b35e.jpg)
 
 ---
 
@@ -95,7 +94,7 @@ meta_extra:
 
 志愿者：梁栋佐、赵亦盈、宋琳、黎子锋、文韬、徐令雯、牛子昂、王兴睿、许天伊、李德林、韩子航、周紫萱、黄依诺、倪天辰、谢瑀婷、朱梓璇、夏再硕、何恕仁、蔡燕、李若珊、何贤文、齐恒慧、林欧祺、米沫璇、张怡然、唐雨欣、曲嘉卿  
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/dMFkbmlFTgc7icGRT2gZn2BR4MN7rhFgrOZBibQvKw9Yib07faloxSftNFa0iaGibtcV6QfJwe91zR4M0RP9jDIx65Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![13th-chinar-beijing-summary-05](https://user-images.githubusercontent.com/37477330/103118322-51c1ba00-46a9-11eb-8a71-d46778555f44.jpg)
 
 ---
 
