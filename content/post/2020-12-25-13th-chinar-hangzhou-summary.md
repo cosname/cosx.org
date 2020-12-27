@@ -59,7 +59,7 @@ meta_extra:
 
 之江实验室副研究员傅四维博士为大家介绍了一个名为Quda的新数据集，该数据集训练深度学习模型，从而能够处理一些自然语言可视化的任务。
 
-![6](https://user-images.githubusercontent.com/37477330/103147303-1bf70100-478f-11eb-9718-e34226f47e2c.png)=jpeg)
+![6](https://user-images.githubusercontent.com/37477330/103147303-1bf70100-478f-11eb-9718-e34226f47e2c.png)
 
 
 
