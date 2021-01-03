@@ -10,7 +10,7 @@ tags:
   - 统计之都
   - 中国人民大学
 slug: 13th-china-r-beijing-summary
-forum_id: 
+forum_id: 421999
 meta_extra: 
 ---
 
