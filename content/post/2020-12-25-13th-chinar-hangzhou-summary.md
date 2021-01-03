@@ -9,7 +9,7 @@ tags:
   - 杭州
   - 统计之都
 slug: 13th-china-r-hangzhou-summary
-forum_id: 
+forum_id: 421998
 meta_extra: 
 ---
 
