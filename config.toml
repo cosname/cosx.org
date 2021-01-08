@@ -5,7 +5,7 @@ theme = "hugo-xmag"
 disqusShortname = ""
 googleAnalytics = "UA-1988641-11"
 paginate = 12
-ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+ignoreFiles = ["\\.Rmd$","\\.Rmarkdown$", "\\.knit\\.md$", "\\.utf8\\.md$", "_files$", "_cache$"]
 hasCJKLanguage = true
 enableEmoji = true
 preserveTaxonomyNames = true
@@ -70,3 +70,8 @@ footnotereturnlinkcontents = "↩"
   comment_url = "https://d.cosx.org/d/"
   comment_embed_url = "https://d.cosx.org/embed/"
   footer = "&copy; [统计之都](https://cosx.org) 2006 - 2020 | [新浪微博](http://weibo.com/cosname) | [Github](https://github.com/cosname) | [Twitter](https://twitter.com/cos_name) | [LinkedIn](https://www.linkedin.com/groups/4564122)"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

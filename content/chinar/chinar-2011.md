@@ -2,6 +2,8 @@
 title: 第四届中国R语言会议
 date: '2011-09-27T11:12:08+00:00'
 author: COS管理员
+categories:
+  - R会议
 forum_id: 418709
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: '从另一个视角看 R 语言的方言 Tidyverse'
+title: '从另一个视角看R语言的方言Tidyverse'
 author: 'Norm Matloff'
 meta_extra: '译者：李嵩；校对：任焱、黄湘云；编辑：任焱'
 date: '2020-10-13'
@@ -12,7 +12,7 @@ tags:
 forum_id: 421880
 ---
 
-从另一个视角看 R 语言的“方言” Tidyverse，以及 RStudio 对 Tidyverse 的提倡。
+从另一个视角看R语言的“方言”Tidyverse，以及 RStudio 对 Tidyverse 的提倡。
 
 ## 作者简介
 

@@ -2,6 +2,8 @@
 title: 第六届中国R语言会议
 date: '2013-04-01T15:37:43+00:00'
 author: 陈堰平
+categories:
+  - R会议
 forum_id: 418712
 ---
 

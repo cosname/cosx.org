@@ -1,6 +1,5 @@
 ---
 title: 吴建福教授访谈
-author: 《数学译林》
 date: '2018-04-03'
 categories:
   - COS访谈

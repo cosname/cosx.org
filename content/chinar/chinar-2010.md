@@ -2,6 +2,8 @@
 title: 第三届中国R语言会议
 date: '2009-10-26T05:11:17+00:00'
 author: COS管理员
+categories:
+  - R会议
 forum_id: 418706
 ---
 

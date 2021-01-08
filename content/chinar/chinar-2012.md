@@ -2,6 +2,8 @@
 title: 第五届中国R语言会议
 date: '2012-09-29T12:27:04+00:00'
 author: 潘岚锋
+categories:
+  - R会议
 forum_id: 418710
 ---
 

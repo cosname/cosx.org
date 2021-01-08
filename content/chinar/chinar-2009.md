@@ -2,6 +2,8 @@
 title: 第二届中国R语言会议
 date: '2009-10-29T05:00:27+00:00'
 author: COS管理员
+categories:
+  - R会议
 forum_id: 418707
 ---
 
