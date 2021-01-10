@@ -12,39 +12,77 @@ tags:
 
 
 
-博士生涯终于走到了最后一步了。这次全程用R和Rmarkdown相关的包完整写完了论文，现在总结一下个人经验和踩过的坑，希望给后来人提供参考经验，同时安利一下提高生产力的工具。
+博士生涯终于走到了最后一步了。这次全程用R和Rmarkdown相关的包完整写完了论文，现在总结一下个人经验和踩过的坑，希望给后来人提供参考经验，同时安利一下Rmarkdown这个提高生产力的工具。
 
-## 用 Rmarkdown 写论文的理由
+## 选择 Rmarkdown 的理由
 
-比起一般的写作，学术写作讲究一个~~说学逗唱~~ 严谨。总结起来跟写个日记写个博客而言，额外多了一些需求：
-- 要作图表，图表要编号，还要在文中交叉引用
-- 引用文献，文献在文中如何排版也有具体格式要求，按名字(tctcab, 2020)还是按数字编号(1)
-- 要有目录，还有图和表的目录。
-- 页眉页脚，字体字号行间距，标题副标题大小等等其他细节。
+大部分大学的毕业论文对排版都着严格的排版要求，具体需要注意的细节可能有
+- 图表要编号，并经常需要在文中交叉引用
+- 引用文献，文中和文尾的参考文献格式需要注意
+- 目录，图和表的目录
+- 页眉页脚，字体字号行间距，标题副标题大小等等
 
-为了满足这些细致的排版要求，传统做法就两条路：要么用word跟排版搏斗，要么苦练latex语法，写个论文还得学一套编程语法。用Rmarkdown(其实是bookdown包) 提供了第三条路，这条路写论文的优势就在于上述这些排版细节自动做好，真正让人专注于写作内容本身，将精力用在刀刃上。
+个人感受而言，传统 Word 采用的所见即所得的编辑模式会将作者很大一部分精力吸引到“排版”工作上。而作为另一条路的 latex 则将文本与排版结果分离。功能强大然而语法复杂，学习曲线陡峭。使用 latex 颇有为码字而先修炼成排版工人的感觉。相比Word的上手容易精通难和latex的复杂功能， Rmarkdown 易用性和功能性之间达到了较好的平衡。Rmarkdown既可实现 latex 完全相同的最终论文排版效果，同时 markdown 语法简单易上手，比 word 难不了多少。
 
-我使用Rmarkdown写论文的最终形态：
-- 使用git做版本控制，在github上有一个私人库保存纯文本状态论文。好处是不用担心笔记本被雷劈了几个月心血毁于一旦。
-- 正式论文编译为pdf格式供打印，同时还有gitbook格式供在线浏览。
+值得一提的是用 Rmarkdown 写毕业论文并不适合所有人。如果读者有有一定折腾的极客精神，懂一点 R语言就更好了。
 
-下面进入正题。
+## 用 Rmarkdown 写论文
+
+### 准备工作
+
+首先我们需要安装R和Rstudio以及相关的包，具体包会在下面每一小节分别介绍。除此之外还需要git/github对文本源文件做版本控制，一个文本编辑器(我用的sublime text)，以及用Zotero作为文献库管理。
+
+其次，毕业论文包含很多材料，我们将创建一个项目文件夹来管理图片，数据，论文文本，引用文献记录(.bib)等资料。这个论文项目可以保存在本地和在线保存在github，从而实现备份和跨电脑工作的目的。
 
 ### 论文框架
 
-已经有很多人基于bookdown创建了好多大学论文格式的模板。搜了搜本校没有现成模板，隔壁学校倒是有，但是折腾半天弄不懂怎么调整目录页添加个list of tables跟list of figures，遂放弃。最后用的
-- [thesisdown](https://github.com/ismayc/thesisdown): 提供了基于bookdown的论文模板，快速地搭好了框架，改动地方主要是参考学校的论文格式要求改了改第一页格式，其他基本没怎么动。
+前人们创建了好多基于bookdown的毕业论文模板，并在Github上分享。个人推荐的是 [thesisdown](https://github.com/ismayc/thesisdown)。 它提供了基于bookdown的论文项目骨架，有助于快速地搭好框架。这样封面，目录，页眉页脚，引用文献等零碎的格式问题就基本搞定了。剩下的主要精力可以专注于码字上。
+
+论文项目目录，.Rmd文件即为章节文本，bib和csl目录保存文献引用记录和引用格式(apa)，data和figure目录保存数据和插图，prelims保存.Rmd文本格式的简介和前言。reedthesis.cls和template.tex是论文latex模板，针对具体排版要求可能需要调整代码。
+
+```
+.
+├── 01-chap1.Rmd
+├── 02-chap2.Rmd
+├── 03-chap3.Rmd
+├── 04-conclusion.Rmd
+├── 05-appendix.Rmd
+├── 99-references.Rmd
+├── bib
+│   └── thesis.bib
+├── _book
+│   ├── thesis.pdf
+│   └── thesis.tex
+├── _bookdown.yml
+├── chemarr.sty
+├── csl
+│   └── apa.csl
+├── data
+│   └── flights.csv
+├── figure
+│   ├── reed.jpg
+│   └── subdivision.pdf
+├── index.Rmd
+├── prelims
+│   ├── 00-abstract.Rmd
+│   └── 00--prelim.Rmd
+├── reedthesis.cls
+├── template.tex
+└── thesisdown_demo.Rproj
+
+```
 
 ### 作图
 
-专业的作图是学术写作的灵魂。我主要用的是 ggplot2，在R界大名鼎鼎就不用多介绍。配合ggplot2的包我用了:
-- [patchwork](https://patchwork.data-imaginist.com/): 绘图的话提供了多图拼接大图的功能，完美契合ggplot2, 值得称道的地方在于可以将子图的图表说明统一集合起来。另外子图的编号，主题也能统一设置，比起之前用的cowplot来说轻松太多了，推荐指数:❤❤❤❤❤
-- (可选)[ggsci](https://nanx.me/ggsci/articles/ggsci.html): 用途是拿杂志的色盘来装个B，lancet那个看起来很顺眼 推荐:❤
+专业的作图是学术写作的灵魂。如何用图来简明扼要地传达信息是现代科研工作的基本功。
+
+因为主要用R做数据分析，我选择的R绘图包是大名鼎鼎的 ggplot2。在此推荐的另一个包是[patchwork](https://patchwork.data-imaginist.com/): 它采用简单的语法实现将多个ggplot图拼接成大图。其他类似功能的包有 cowplot， gridExtra，但实际体验还是patchwork更为优雅强大。
 
 ### 做表
 
 做表用的 kable: rmarkdown引擎knitr自带。配合的包有
-- [kableextra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)。 可以实现表的标题，脚注，按行列分组等等功能。包的说明书写得非常详细，需要功能的时候对着查就行。推荐: ❤❤❤❤❤
+- [kableextra](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)。 可以实现表的标题，脚注，按行列分组等等功能。包的说明书写得非常详细，需要功能的时候对着查即可。
+
 
 ### 文献引用
 [Zotero](https://www.zotero.org/)， zotero是在线文献管理工具，具体工作原理是创建账号之后就拥有了在线的文献库。装了zotero浏览器插件设置好之后看到文章即可将文献收入收藏。这比起曾经用过的mendeley等工具方便了不少。而在R里也有相应的包与之匹配，也就是citr.
@@ -52,22 +90,29 @@ tags:
 - [citr](https://github.com/crsh/citr):  引用时在Rstudio里用citr直接连zotero库就能直接插文献了。全程不用手动编辑.bib库或者手动维护引用索引。添加引用的完整过程就是：看论文->浏览器中用zotero将论文添加到库->在Rstudio里将光标定位到需要插入引用的地方，用citr插件的"insert citation"连接zotero库，插入添加的文献。
 
 
-以上是写论文过程中所有需要用到的R包合集。它们学习曲线并不陡，熟悉之后将极大提高论文写作效率。
+最终效果展示:
 
-下面聊聊写论文中碰到的坑。
+![Screenshot from 2021-01-10 21-20-34](https://user-images.githubusercontent.com/19829201/104121385-8c09a780-5389-11eb-8262-46ce3aac8274.png)
+![Screenshot from 2021-01-10 21-19-35](https://user-images.githubusercontent.com/19829201/104121386-8dd36b00-5389-11eb-82e8-8549bf947cc1.png)
 
-## 如何与word选手玩家~~对线~~
+[论文repo](https://github.com/tcgriffith/thesisdown_demo)
 
-可能有些小伙伴已经尝试过Rmarkdown工具套的强大之处，然而实际要用它来写学术或毕业论文时则依然会有来自内部或外部的阻力。从cos论坛交流下来看，最大的阻力还是来自合作写作的需求。比如我写的学术或者毕业论文，都会在我，导师，其他合作者之间来回修改多遍，多的时候高达十多遍。有合作需求自然得选择大家共同使用的工具。
+[gitbook在线电子书版](https://tcgriffith.github.io/thesisdown_demo/_book/)
+[pdf版](https://github.com/tcgriffith/thesisdown_demo/blob/main/_book/thesis.pdf)
 
-个人经验是，即使纯文本的Rmarkdown加上git版本控制看上去再美，目前都无法替代微软word提供的逐条追踪修改的功能。小孩子才做选择，作为大人肯定是我全都要.jpg 所以我的做法是在Rmarkdown里写好一个章节，直接复制Rmarkdown源文本进word发给导师，改完之后传回来我再改改复制进Rmarkdown生成pdf。能这样做还是得亏markdown文本本身就很容易读，会不会markdown都毫无障碍。而对于word相当于仅仅使用了它的追踪修改功能，而把更复杂高级的论文排版交给强大的Rmarkdown，可谓一举两得。目前这是自己实践出来最合适的使用Rmarkdown与他人合作的方式。
 
-另一种方式是使用Rmarkdown生成word，再从生成的word开始之后的修改工作。但这与直接使用word排版也没啥太大区别了，故不推荐。
+下面聊聊我在用Rmarkdown写毕业论文中碰到的实际问题
 
-## 跨电脑工作
+## 如何与word选手玩家合作
 
-有了github存论文和zotero存文献库，我的论文写作可以在学校跟家里两台笔记本间轻松转换。写之前同步一下本地repo, 写完再把新内容推到github上。 再也不用拿个优盘把论文四处拷来拷去了。
+我碰到的第一个问题是：使用Rmarkdown写论文，如何与不懂Rmarkdown的合作者进行有效协作。更核心的是word强大的追踪修改的功能无法替代。
 
-但是最惨的一次是忘了同步引用论文的bib文件。事后发现编译论文里的引用全变了问号，只能忍痛从新加了一遍引用文献。
+经过沟通尝试之后我最终做法还是在Rmarkdown里写好一个章节，直接复制Rmarkdown源文本进word发给导师，改完之后传回来我再改改复制进Rmarkdown生成pdf。
 
-最后，从我写三次毕业论文的经验比较来看，用Rmarkdown来写论文真是非常愉快的体验，生命短暂，用Rmarkdown来解救论文写作中的排版噩梦吧。
+
+
+## 后记
+
+所谓工欲善其事必先利其器，科研工作者也需要像手艺人一样对工具仔细挑选和精研。但学校课程很少专门开课传授这方面的知识。本文介绍用Rmarkdown准备毕业论文以作为word, latex以外的第三种选择，希望能对有类似需求的同路人有所帮助。
+
+最后需要强调的是，工具只是“术”，要提高学术论文质量还是得修炼内功，安利一篇[写好英语科技论文的诀窍](https://sparks-lab.org/blog/recipe-sci-paper/)，祝诸君在学术之路上武运昌隆。
