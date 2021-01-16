@@ -1,6 +1,6 @@
 ---
 title: 用Rmarkdown写毕业论文
-author: tctcab
+author: 张桐川
 date: '2020-12-06'
 slug: writing-the-thesis-with-rmarkdown
 categories:
@@ -8,6 +8,10 @@ categories:
 tags:
   - rmarkdown
   - thesis
+  - bookdown
+  - ggplot2
+  - kableExtra
+  - citr
 ---
 
 
