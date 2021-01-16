@@ -218,6 +218,9 @@ list:
   - name: 张晔
     image: https://cloud.githubusercontent.com/assets/5897454/25801021/5e8a8d62-341e-11e7-8aa4-d4c2bc3a82b2.png
     intro: 严肃科技平台开发工程师，几乎是纯码农一枚。 参与翻译《R绘图系统》、《Rcpp:R与C++的无缝整合》。
+  - name: 张桐川
+    image: https://raw.githubusercontent.com/tcgriffith/owaraisite/master/static/img/jf_avatar.png
+    intro: id tctcab，R语言爱好者，cosx三年水友，中国科学技术大学本硕，澳洲格里菲斯博士生，鹰派，佛系，入关人。
   - name: 张云松
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 毕业于中科院，多年咨询公司和互联网公司从事数据算法、决策分析、风险管理和产品设计的工作，目前是融360风控总监，负责纯线上小额微贷信用贷款产品。
