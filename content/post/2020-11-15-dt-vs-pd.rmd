@@ -349,9 +349,9 @@ df.groupby('Sex').tail(1) # 每组的最后一行
 df.loc[:,'freq_total'] = df.groupby('Sex')['Freq'].transform(sum)
 
 ## 分组列计算
-df.groupby('Sex').agg({'Freq':'sum'}). \ 
-  rename(columns={'Freq':'freq_total'}). \
-  reset_index()
+df.groupby('Sex').agg({'Freq':'sum'}) \ 
+  .rename(columns={'Freq':'freq_total'}) \
+  .reset_index()
 ```
 :::
 
