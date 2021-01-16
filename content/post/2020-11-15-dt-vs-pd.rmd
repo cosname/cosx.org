@@ -1,7 +1,7 @@
 ---
 title: data.table 与 pandas
-author: shichen xie
-date: '2019-12-26'
+author: 谢士晨
+date: '2020-11-15'
 slug: dt-pd
 tags: ['R', 'python']
 output:
@@ -34,7 +34,7 @@ knitr::opts_chunk$set(echo = TRUE)
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```{r}
+```
 library(data.table)
 packageVersion('data.table')
 
@@ -47,7 +47,7 @@ dt = fread(url)
 :::
 
 ::: {.column width="49%"}
-```{python}
+```
 import pandas as pd
 pd.__version__
 
@@ -62,7 +62,7 @@ df = pd.read_csv(url)
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```r
+```
 # 数据类型
 class(dt)
 str(dt)
@@ -88,7 +88,7 @@ summary(dt)
 :::
 
 ::: {.column width="49%"}
-```python
+```
 # 数据类型
 type(df)
 df.dtypes
@@ -204,7 +204,7 @@ df.loc[:, ['Eye', 'Sex']] # 选一列时也要保留[]，否则与df.Eye一样�
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```r
+```
 # 新建一列
 dt[, nc := .I] # .I .N .SD为特殊符号,查看帮助?`.I`
 dt[,'nc0'] = 1:32
@@ -236,7 +236,7 @@ dt[, (c('nc0','nc1','nc2','nc3','nc4')) := NULL]
 :::
 
 ::: {.column width="49%"}
-```python
+```
 # 新建一列
 df = df.assign(nc = pd.Series(range(32)))
 df.loc[:,'nc0'] = pd.Series(range(32), index=df.index)
@@ -268,7 +268,7 @@ df.drop(['nc0','nc1','nc2','nc3','nc4'], axis=1, inplace=True)
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```r
+```
 # 对一列进行计算
 dt[, max(Freq)] # 最大值
 dt[, unique(Eye)] # 唯一值
@@ -291,7 +291,7 @@ dt[, lapply(.SD, function(x) mean(is.na(x))), .SDcols = sel_cols]
 :::
 
 ::: {.column width="49%"}
-```python
+```
 # 对一列进行计算
 df.Freq.max() # 最大值
 df.Eye.unique() # 唯一值
@@ -317,7 +317,7 @@ df[sel_cols].apply(lambda x: x.isnull().mean())
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```r
+```
 # 分组行操作
 ## 行选择
 dt[, .SD[1], by = 'Sex'] # 每组的第一行
@@ -337,7 +337,7 @@ dt[, .(freq_total = sum(Freq)), by = 'Sex'][]
 :::
 
 ::: {.column width="49%"}
-```python
+```
 # 分组行操作
 ## 行选择
 df.groupby('Sex').head(1) # 每组的第一行
@@ -362,7 +362,7 @@ df.groupby('Sex').agg({'Freq':'sum'}) \
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```r
+```
 # 长表转宽表
 dt_w = dcast(dt, Hair+Sex~Eye, value.var = 'Freq', fun.aggregate = sum)
 
@@ -375,7 +375,7 @@ dt_l = melt(dt_w, id = c('Hair','Sex'), variable.name = 'Eye', value.name = 'Fre
 :::
 
 ::: {.column width="49%"}
-```python
+```
 # 长表转宽表
 df_w = pd.pivot_table(df, index=['Hair','Sex'], columns='Eye', values='Freq', aggfunc = sum).reset_index()
 
@@ -390,7 +390,7 @@ df_l = pd.melt(df_w, id_vars = ['Hair','Sex'], var_name='Freq')
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```r
+```
 # 一行切割为多行
 dtr = dt[, paste0(Eye, collapse = ','), keyby = c('Hair', 'Sex')]
 dtr[, .(Eye = unlist(strsplit(V1, ','))), by = c('Hair', 'Sex')]
@@ -405,7 +405,7 @@ dtc[, c('Eye', 'Sex') := tstrsplit(eye_sex, ',')][]
 :::
 
 ::: {.column width="49%"}
-```python
+```
 # 一行切割为多行
 dfr = df.groupby(['Hair','Sex'])['Eye'].apply(lambda x: ','.join(x)).reset_index()
 dfr.assign(Eye = dfr['Eye'].str.split(',')).explode('Eye')
@@ -423,7 +423,7 @@ dfc[['Eye', 'Sex']]= dfc['eye_sex'].str.split(',', expand = True)
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```r
+```
 # 数据框行切割
 dtlist1 = split(dt, by = 'Sex')
 # or
@@ -438,7 +438,7 @@ dtbind2 = rbindlist(dtlist1)
 :::
 
 ::: {.column width="49%"}
-```python
+```
 # 数据框行切割
 dfdict = dict(tuple(df.groupby(['Sex'])))
 # or 
@@ -456,7 +456,7 @@ df_con = pd.concat(dfdict, axis=0).reset_index(drop=True)
 :::::: {.columns style="display: flex;"}
 
 ::: {.column width="49%"}
-```r
+```
 dt1 = dt[sample(.N,2)][,V1 := NULL]
 dt2 = dt[sample(.N,3)][,V1 := NULL]
 dt3 = dt[sample(.N,4)][,V1 := NULL]
@@ -485,7 +485,7 @@ dtmerge3 = Reduce(
 :::
 
 ::: {.column width="49%"}
-```python
+```
 df1 = df.sample(n=2).drop('Unnamed: 0', axis=1)
 df2 = df.sample(n=3).drop('Unnamed: 0', axis=1)
 df3 = df.sample(n=4).drop('Unnamed: 0', axis=1)
@@ -516,4 +516,3 @@ df_merge3 = reduce(
 ### 总结
 
 通过以上的对比介绍，大家可以从功能上直观地了解了，如何分别使用 data.table 和 pandas 实现常见数据分析任务。如果您希望更进一步了解这两个包的功能，请查看各自项目主页（[data.table](http://r-datatable.com),  [pandas](https://pandas.pydata.org/pandas-docs/stable/)）。在性能方面的对比，根据 [Database-like ops benchmark](https://h2oai.github.io/db-benchmark/) 显示，data.table 在大部分数据操作任务中性能表现最好，而且其语法也相对简洁统一。
-
