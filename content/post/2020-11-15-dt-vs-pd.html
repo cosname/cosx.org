@@ -8,29 +8,30 @@ output:
   html_document
 ---
 
-<p>数据分析项目通常可以分解为以下过程，数据加载-数据清洗-(特征处理、可视化、模型训练)-成果汇报<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>。其中，数据清洗与特征处理或称为数据预处理过程，一般占据了整个项目的大部分时间。熟练掌握相关工具，提高数据处理的效率，是开展数据分析工作的基础。
+
+<p>数据分析项目通常可以分解为以下过程，数据加载-数据清洗-(特征处理、可视化、模型训练)-成果汇报<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>。其中，数据清洗与特征处理或者称为数据预处理过程，一般会占据整个项目的大部分时间。熟练掌握相关工具，提高数据处理的效率，是开展数据分析工作的基础。
 <!-- ![](https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png) --></p>
-<p>开展数据科学相关工作时，最为常用的开源工具包括 <a href="https://www.r-project.org">R</a> 与 <a href="https://www.python.org">python</a>。在 R 中我通常使用 data.table 包进行数据处理分析，而在 python 环境中 pandas 包最为常用的。由于 R 是我主力工具，因此对 data.table 更为熟悉，虽然我也基于 pandas 开发过 python 包，但是碰到一些问题时还是经常需要查阅帮助文档。为了方便查阅和对比，本文分别用 <a href="http://r-datatable.com">data.table</a> 与 <a href="https://pandas.pydata.org/pandas-docs/stable/">pandas</a> 实现了常见的数据框操作任务<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>。</p>
-<p>数据框（data frame）是我们接触最多的数据格式，它的每一列都是长度相等、类型一致的向量。对数据框的操作可以从行与列两个维度，拆解为有以下五类基本操作，其中英文均为 <a href="https://dplyr.tidyverse.org">dplyr</a> 里面的对应函数。这些基本操作均可以与 group_by 相互结合使用。除了这几类基本操作，还包括行列转换、数据框的切割与合并等。具体的案例请参见下面的代码。</p>
+<p>在开展数据科学相关工作时，最常用的开源工具包括 <a href="https://www.r-project.org">R</a> 与 <a href="https://www.python.org">python</a>。对于可在内存级处理的数据，在 R 中通常使用 data.table 包进行数据处理，而在 python 环境中 pandas 包最为常用的。为了方便查阅和对比，本文分别用 <a href="http://r-datatable.com">data.table</a> 与 <a href="https://pandas.pydata.org/pandas-docs/stable/">pandas</a> 实现了常见的数据处理任务<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>。</p>
+<p>数据框（data frame）是大家接触最多的数据格式，它的每一列都是长度相等、类型一致的向量。对数据框的操作可以从行与列两个维度，拆解为以下五类基本操作。这一思路来自 <a href="https://dplyr.tidyverse.org">dplyr</a> 包<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>的帮助文档，因此下面五类基本操作的英文均为该包的函数名。这些基本操作均可以与 group_by 相互结合使用。除了这五类基本操作，还包括行列转换、数据框的切割与合并等。绝多数的数据处理任务都可以拆解为以上这几类基本操作，具体案例请参见下面的代码。</p>
 <ul>
 <li>行：选择 filter、排序 arrange</li>
 <li>列：选择 select、新建 mutate、计算 summarise</li>
 </ul>
 <div id="数据探索" class="section level3">
 <h3>数据探索</h3>
-<div id="读取-csv-文件" class="section level4">
-<h4>读取 csv 文件</h4>
+<div id="数据加载" class="section level4">
+<h4>数据加载</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre class="r"><code>library(data.table)
+<div class="column" style="width:49%;">
+<pre><code>library(data.table)
 packageVersion(&#39;data.table&#39;)
 
 url = &quot;https://vincentarelbundock.github.io/Rdatasets/csv/datasets/HairEyeColor.csv&quot;
 dt = fread(url)</code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
-<pre class="python"><code>import pandas as pd
+</div><div class="column" style="width:49%;">
+<pre><code>import pandas as pd
 pd.__version__
 
 url = &quot;https://vincentarelbundock.github.io/Rdatasets/csv/datasets/HairEyeColor.csv&quot;
@@ -41,8 +42,8 @@ df = pd.read_csv(url)</code></pre>
 <div id="查看数据结构" class="section level4">
 <h4>查看数据结构</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre><code>#数据类型
+<div class="column" style="width:49%;">
+<pre><code># 数据类型
 class(dt)
 str(dt)
 
@@ -58,12 +59,12 @@ dim(dt)
 nrow(dt)
 ncol(dt)
 
-# 汇总
+# 统计描述
 summary(dt)</code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
-<pre><code>#数据类型
+</div><div class="column" style="width:49%;">
+<pre><code># 数据类型
 type(df)
 df.dtypes
 
@@ -79,7 +80,7 @@ df.shape
 len(df.index)
 len(df.columns)
 
-# 汇总
+# 统计描述
 df.describe()</code></pre>
 </div>
 </div>
@@ -90,8 +91,8 @@ df.describe()</code></pre>
 <div id="行选择" class="section level4">
 <h4>行选择</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre><code># 基于行所在位置筛选
+<div class="column" style="width:49%;">
+<pre><code># 基于行所在位置筛选，data.table格式的index默认为1开始且
 dt[c(3,1,2)]
 
 
@@ -103,9 +104,9 @@ dt[Hair == &#39;Black&#39; &amp;
    Freq &gt;= 10 &amp; 
    Eye %in% c(&#39;Brown&#39;, &#39;Blue&#39;)]
 </code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
+</div><div class="column" style="width:49%;">
 <pre><code># 基于行所在位置筛选
 df.iloc[[2,0,1]] # python序数从0开始，2代表第三行
 df.loc[[2,0,1]] # 如果index未修改，效果与iloc的一致
@@ -123,11 +124,11 @@ df.loc[(df[&#39;Hair&#39;] == &#39;Black&#39;) &amp;
 <div id="行排序" class="section level4">
 <h4>行排序</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
+<div class="column" style="width:49%;">
 <pre><code>dt[order(Sex, -Freq)]</code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
+</div><div class="column" style="width:49%;">
 <pre><code>df.sort_values([&#39;Sex&#39;, &#39;Freq&#39;], 
                ascending = [True, False] )</code></pre>
 </div>
@@ -139,13 +140,13 @@ df.loc[(df[&#39;Hair&#39;] == &#39;Black&#39;) &amp;
 <div id="列选择" class="section level4">
 <h4>列选择</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
+<div class="column" style="width:49%;">
 <pre><code>dt[, .(Hair, Freq)]
 # or 
 dt[, c(&#39;Eye&#39;, &#39;Sex&#39;), with=FALSE]</code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
+</div><div class="column" style="width:49%;">
 <pre><code>df[[&#39;Hair&#39;, &#39;Freq&#39;]]
 # or 
 df.loc[:, [&#39;Eye&#39;, &#39;Sex&#39;]] # 选一列时也要保留[]，否则与df.Eye一样为series</code></pre>
@@ -155,8 +156,8 @@ df.loc[:, [&#39;Eye&#39;, &#39;Sex&#39;]] # 选一列时也要保留[]，否则�
 <div id="列新建" class="section level4">
 <h4>列新建</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre class="r"><code># 新建一列
+<div class="column" style="width:49%;">
+<pre><code># 新建一列
 dt[, nc := .I] # .I .N .SD为特殊符号,查看帮助?`.I`
 dt[,&#39;nc0&#39;] = 1:32
 
@@ -170,7 +171,7 @@ dt[, `:=`(
 dt[, nc3 := ifelse(Freq &gt;= 10, 1, 0)]
 dt[Freq &gt;= 20, nc4 := 2]
 
-# 基于函数新建列
+# 基于函数新建多列
 ncols = c(&#39;nc&#39;, &#39;nc0&#39;) 
 dt[, 
    (ncols) := lapply(.SD, function(x) x^0.5+1), 
@@ -180,10 +181,10 @@ dt[,
 dt[, nc := NULL]
 # 删除多列
 dt[, (c(&#39;nc0&#39;,&#39;nc1&#39;,&#39;nc2&#39;,&#39;nc3&#39;,&#39;nc4&#39;)) := NULL]</code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
-<pre class="python"><code># 新建一列
+</div><div class="column" style="width:49%;">
+<pre><code># 新建一列
 df = df.assign(nc = pd.Series(range(32)))
 df.loc[:,&#39;nc0&#39;] = pd.Series(range(32), index=df.index)
 
@@ -197,7 +198,7 @@ df = df.assign(
 df = df.assign(nc3 = df.Freq.apply(lambda x: 1 if x &gt;= 10 else 0))
 df.loc[df.Freq &gt;= 20, &#39;nc4&#39;] = 2
 
-# 基于函数新建列
+# 基于函数新建多列
 ncols = [&#39;nc&#39;, &#39;nc0&#39;]
 df.loc[:, ncols] = df[ncols].apply(lambda x: x**0.5+1)
 
@@ -211,8 +212,8 @@ df.drop([&#39;nc0&#39;,&#39;nc1&#39;,&#39;nc2&#39;,&#39;nc3&#39;,&#39;nc4&#39;],
 <div id="列计算" class="section level4">
 <h4>列计算</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre class="r"><code># 对一列进行计算
+<div class="column" style="width:49%;">
+<pre><code># 对一列进行计算
 dt[, max(Freq)] # 最大值
 dt[, unique(Eye)] # 唯一值
 dt[, table(Eye)] # 计数
@@ -227,10 +228,10 @@ dt[, lapply(.SD, function(x) mean(is.na(x)))]
 ## 对部分列计算缺失率，且可扩展到其他函数
 sel_cols = c(&#39;Hair&#39;, &#39;Sex&#39;, &#39;Freq&#39;)
 dt[, lapply(.SD, function(x) mean(is.na(x))), .SDcols = sel_cols]</code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
-<pre class="python"><code># 对一列进行计算
+</div><div class="column" style="width:49%;">
+<pre><code># 对一列进行计算
 df.Freq.max() # 最大值
 df.Eye.unique() # 唯一值
 df.Eye.value_counts() # 计数
@@ -249,50 +250,39 @@ df[sel_cols].apply(lambda x: x.isnull().mean())</code></pre>
 </div>
 </div>
 </div>
-<div id="分组汇总计算" class="section level3">
-<h3>分组汇总计算</h3>
-<div id="grouped-summarise" class="section level4">
-<h4>grouped summarise</h4>
+<div id="分组数据操作" class="section level3">
+<h3>分组数据操作</h3>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre><code># max freq
-dt[, .(freq_max = max(Freq)), by = &#39;Sex&#39;]
+<div class="column" style="width:49%;">
+<pre><code># 分组行操作
+## 行选择
+dt[, .SD[1], by = &#39;Sex&#39;] # 每组的第一行
+dt[, .SD[.N], by = &#39;Sex&#39;] # 每组的最后一行
 
-# count
-dt[, .(freq_count = .N), keyby = c(&#39;Hair&#39;, &#39;Sex&#39;)]</code></pre>
-</div><div class="column" style="width:4%;">
 
-</div><div class="column" style="width:48%;">
-<pre><code># max freq # pandas的groupby会自动删除缺失变量
-df.groupby(&#39;Sex&#39;).agg({&#39;Freq&#39;:&#39;max&#39;}).
-  rename(columns={&#39;Freq&#39;:&#39;freq_max&#39;}).
-  reset_index()
+# 分组列操作
+## 分组列新建
+dt[, freq_total := sum(Freq), by = &#39;Sex&#39;]
 
-# count
-df.groupby([&#39;Hair&#39;,&#39;Sex&#39;]).agg({&#39;Freq&#39;:&#39;count&#39;}).
-  rename(columns={&#39;Freq&#39;:&#39;freq_count&#39;}).
-  reset_index()</code></pre>
-</div>
-</div>
-</div>
-<div id="grouped-mutate-filter" class="section level4">
-<h4>grouped mutate &amp; filter</h4>
-<div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre><code># 基于sex分组，新建一列等于freq的最大值
-dt[, freq_max := max(Freq), by = &#39;Sex&#39;]
+## 分组列计算
+dt[, .(freq_total = sum(Freq)), by = &#39;Sex&#39;][]</code></pre>
+</div><div class="column" style="width:2%;">
 
-# 基于sex分组，选取freq最大的行
-dt[order(Freq)][, .SD[.N], by = &#39;Sex&#39;][]</code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:49%;">
+<pre><code># 分组行操作
+## 行选择
+df.groupby(&#39;Sex&#39;).head(1) # 每组的第一行
+df.groupby(&#39;Sex&#39;).tail(1) # 每组的最后一行
 
-</div><div class="column" style="width:48%;">
-<pre><code># 基于sex分组，新建一列等于freq的最大值
-df.loc[:,&#39;freq_max&#39;] = df.groupby(&#39;Sex&#39;)[&#39;Freq&#39;].transform(max)
 
-# 基于sex分组，选取freq最大的行
-df.sort_values(&#39;Freq&#39;).groupby(&#39;Sex&#39;).tail(1)</code></pre>
-</div>
+# 分组列操作
+## 分组列新建
+df.loc[:,&#39;freq_total&#39;] = df.groupby(&#39;Sex&#39;)[&#39;Freq&#39;].transform(sum)
+
+## 分组列计算
+df.groupby(&#39;Sex&#39;).agg({&#39;Freq&#39;:&#39;sum&#39;}) \ 
+  .rename(columns={&#39;Freq&#39;:&#39;freq_total&#39;}) \
+  .reset_index()</code></pre>
 </div>
 </div>
 </div>
@@ -301,100 +291,137 @@ df.sort_values(&#39;Freq&#39;).groupby(&#39;Sex&#39;).tail(1)</code></pre>
 <div id="长宽表转换" class="section level4">
 <h4>长宽表转换</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre class="r"><code># 长表转宽表
+<div class="column" style="width:49%;">
+<pre><code># 长表转宽表
 dt_w = dcast(dt, Hair+Sex~Eye, value.var = &#39;Freq&#39;, fun.aggregate = sum)
 
 # 宽表转长表
 dt_l = melt(dt_w, id = c(&#39;Hair&#39;,&#39;Sex&#39;), variable.name = &#39;Eye&#39;, value.name = &#39;Freq&#39;)</code></pre>
-</div><div class="column" style="width:4%;">
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
-<pre class="python"><code># 长表转宽表
+</div><div class="column" style="width:49%;">
+<pre><code># 长表转宽表
 df_w = pd.pivot_table(df, index=[&#39;Hair&#39;,&#39;Sex&#39;], columns=&#39;Eye&#39;, values=&#39;Freq&#39;, aggfunc = sum).reset_index()
 
 # 宽表转长表
-df_l = df_w.melt(id_vars = [&#39;Hair&#39;,&#39;Sex&#39;], var_name=&#39;Freq&#39;)</code></pre>
+df_l = pd.melt(df_w, id_vars = [&#39;Hair&#39;,&#39;Sex&#39;], var_name=&#39;Freq&#39;)</code></pre>
 </div>
 </div>
 </div>
-<div id="行列合并切割" class="section level4">
-<h4>行列合并切割</h4>
+<div id="行列切割合并" class="section level4">
+<h4>行列切割合并</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
+<div class="column" style="width:49%;">
 <pre><code># 一行切割为多行
 dtr = dt[, paste0(Eye, collapse = &#39;,&#39;), keyby = c(&#39;Hair&#39;, &#39;Sex&#39;)]
 dtr[, .(Eye = unlist(strsplit(V1, &#39;,&#39;))), by = c(&#39;Hair&#39;, &#39;Sex&#39;)]
 
 # 一列切割为多列
 dtc = dt[, .(Hair, eye_sex = paste(Eye, Sex, sep = &#39;,&#39;))]
-dtc[, c(&#39;Eye&#39;, &#39;Sex&#39;) := tstrsplit(eye_sex, &#39;,&#39;)]</code></pre>
-</div><div class="column" style="width:4%;">
+dtc[, c(&#39;Eye&#39;, &#39;Sex&#39;) := tstrsplit(eye_sex, &#39;,&#39;)][]</code></pre>
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
+</div><div class="column" style="width:49%;">
 <pre><code># 一行切割为多行
 dfr = df.groupby([&#39;Hair&#39;,&#39;Sex&#39;])[&#39;Eye&#39;].apply(lambda x: &#39;,&#39;.join(x)).reset_index()
 dfr.assign(Eye = dfr[&#39;Eye&#39;].str.split(&#39;,&#39;)).explode(&#39;Eye&#39;)
 
 # 一列切割为多列
 dfc = df[[&#39;Hair&#39;]].assign(eye_sex = df.Eye+&#39;,&#39;+df.Sex)
-dfc[&#39;Eye&#39;], dfc[&#39;Sex&#39;]= dfc[&#39;eye_sex&#39;].str.split(&#39;,&#39;, 1).str</code></pre>
+dfc[[&#39;Eye&#39;, &#39;Sex&#39;]]= dfc[&#39;eye_sex&#39;].str.split(&#39;,&#39;, expand = True)</code></pre>
 </div>
 </div>
 </div>
 </div>
-<div id="数据框合并" class="section level3">
-<h3>数据框合并</h3>
+<div id="多个数据框合并" class="section level3">
+<h3>多个数据框合并</h3>
 <div id="数据框行合并" class="section level4">
 <h4>数据框行合并</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre class="r"><code># 合并两个数据框
-dtr1 = rbind(dt[sample(.N,2)], dt[sample(.N,3)])
-# 如果两个数据框的列名不一致，需要添加fill为TRUE
-dtr2 = rbind(dt[sample(.N,2)], dt[sample(.N,3), .(Hair)], fill=TRUE)
+<div class="column" style="width:49%;">
+<pre><code># 数据框行切割
+dtlist1 = split(dt, by = &#39;Sex&#39;)
+# or
+dtlist2 = split(dt, list(dt$Sex))
 
-# 直接合并多个数据框组成的 list
-dt_lst = list(
-  dt1 = dt[sample(.N,2)], 
-  dt2 = dt[sample(.N,3)], 
-  dt3 = dt[sample(.N,4)])
-dt_bind = rbindlist(dt_lst, idcol = &#39;dt&#39;)</code></pre>
-</div><div class="column" style="width:4%;">
+# 数据框行合并
+dtbind2 = rbindlist(dtlist1)</code></pre>
+</div><div class="column" style="width:2%;">
 
-</div><div class="column" style="width:48%;">
-<pre class="python"><code># 合并两个数据框
-dfr1 = pd.concat([df.sample(n=2), df.sample(n=3)])
-# 如果两个数据框的列名不一致
-dfr2 = pd.concat([df.sample(n=2), df.sample(n=3)[[&#39;Hair&#39;]]], sort=False)
+</div><div class="column" style="width:49%;">
+<pre><code># 数据框行切割
+dfdict = dict(tuple(df.groupby([&#39;Sex&#39;])))
+# or 
+dflist = [d for _, d in df.groupby([&#39;Sex&#39;])]
 
-# 直接合并多个数据框组成的 list
-df_lst = [
-  df.sample(2), 
-  df.sample(3), 
-  df.sample(4)]
-df_con = pd.concat(df_lst, axis=0)</code></pre>
+# 数据框行合并
+df_con = pd.concat(dfdict, axis=0).reset_index(drop=True)</code></pre>
 </div>
 </div>
 </div>
 <div id="数据框列合并" class="section level4">
 <h4>数据框列合并</h4>
 <div class="columns" style="display: flex;">
-<div class="column" style="width:48%;">
-<pre class="r"><code># merge</code></pre>
-</div><div class="column" style="width:4%;">
+<div class="column" style="width:49%;">
+<pre><code>dt1 = dt[sample(.N,2)][,V1 := NULL]
+dt2 = dt[sample(.N,3)][,V1 := NULL]
+dt3 = dt[sample(.N,4)][,V1 := NULL]
 
-</div><div class="column" style="width:48%;">
-<pre class="python"><code># pd.merge</code></pre>
+# 合并两个数据框
+dtmerge2 = merge(
+  dt1, dt2, 
+  by = c(&#39;Hair&#39;, &#39;Eye&#39;, &#39;Sex&#39;), 
+  all = TRUE
+)
+# all, all.x, all.y: TRUE, FALSE
+
+# 合并多个数据框
+dtmerge3 = Reduce(
+  function(x,y) merge(
+    x,y, 
+    by = c(&#39;Hair&#39;, &#39;Eye&#39;, &#39;Sex&#39;), 
+    all = TRUE
+  ), 
+  list(dt1, dt2, dt3)
+)</code></pre>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:49%;">
+<pre><code>df1 = df.sample(n=2).drop(&#39;Unnamed: 0&#39;, axis=1)
+df2 = df.sample(n=3).drop(&#39;Unnamed: 0&#39;, axis=1)
+df3 = df.sample(n=4).drop(&#39;Unnamed: 0&#39;, axis=1)
+
+# 合并两个数据框
+dfmerge2 = pd.merge(
+  df1, df2, 
+  on = [&#39;Hair&#39;, &#39;Eye&#39;, &#39;Sex&#39;], 
+  how = &#39;outer&#39;
+)
+# how: left, right, inner, outer
+
+# 合并多个数据框
+from functools import reduce
+df_merge3 = reduce(
+  lambda x,y: pd.merge(
+    x,y, 
+    on = [&#39;Hair&#39;, &#39;Eye&#39;, &#39;Sex&#39;], 
+    how = &#39;outer&#39;
+  ),
+  [df1, df2, df3]
+)</code></pre>
 </div>
 </div>
-<p>根据 <a href="https://h2oai.github.io/db-benchmark/">Database-like ops benchmark</a> 显示，data.table 在大部分任务中性能表现最好，而且其语法也相对简洁统一。</p>
 </div>
+</div>
+<div id="总结" class="section level3">
+<h3>总结</h3>
+<p>通过以上的对比介绍，大家可以从功能上直观地了解了，如何分别使用 data.table 和 pandas 实现常见数据分析任务。如果您希望更进一步了解这两个包的功能，请查看各自项目主页（<a href="http://r-datatable.com">data.table</a>, <a href="https://pandas.pydata.org/pandas-docs/stable/">pandas</a>）。在性能方面的对比，根据 <a href="https://h2oai.github.io/db-benchmark/">Database-like ops benchmark</a> 显示，data.table 在大部分数据操作任务中性能表现最好，而且其语法也相对简洁统一。</p>
 </div>
 <div class="footnotes">
 <hr />
 <ol>
 <li id="fn1"><p><a href="https://r4ds.had.co.nz/">R for Data Science</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
-<li id="fn2"><p><a href="https://datascience-enthusiast.com/R/pandas_datatable.html">Data Manipulation with Python Pandas and R Data.Table</a><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>本文参考了 <a href="https://datascience-enthusiast.com/R/pandas_datatable.html">Data Manipulation with Python Pandas and R Data.Table</a> 并结合了自己的数据分析经验<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>dplyr 是 R 语言中另外一个广泛使用的数据处理工具包，其与 data.table 的对比请参考 <a href="https://atrebas.github.io/post/2019-03-03-datatable-dplyr/">A data.table and dplyr tour</a><a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
