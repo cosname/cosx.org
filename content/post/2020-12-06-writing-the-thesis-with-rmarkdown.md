@@ -1,7 +1,7 @@
 ---
 title: 用Rmarkdown写毕业论文
 author: 张桐川
-date: '2020-12-06'
+date: '2021-1-16'
 slug: writing-the-thesis-with-rmarkdown
 categories:
   - R语言
