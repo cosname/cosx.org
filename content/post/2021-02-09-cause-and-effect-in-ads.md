@@ -1,7 +1,7 @@
 ---
 title: '广告届的因果推断挑战'
 author: '陈丽云'
-meta_extra: '审稿：丁鹏；编辑：xx'
+meta_extra: '审稿：丁鹏；编辑：向悦、黄湘云'
 date: '2021-02-09'
 slug: cause-and-effect-in-ads
 categories:
