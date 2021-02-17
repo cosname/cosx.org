@@ -1,9 +1,9 @@
 ---
-title: 用“专业”的方式创建和开发你的 R 包
+title: 为新手准备的现代化 R 包开发流程
 date: '2021-02-16'
 author: "苏玮"
 meta_extra: ""
-slug: create-r-package-in-a-professional-way
+slug: writing-r-packages-a-modern-workflow-for-beginners
 categories:
   - R语言
 tags:
@@ -21,18 +21,12 @@ forum_id: XX
 
 1. [开发 R 程序包之忍者篇](https://cosx.org/2011/05/write-r-packages-like-a-ninja/);
 2. [极简 R 包建立方法](https://cosx.org/2013/11/building-r-packages-easily/);
-3. [R包开发](https://r-packages-zh-cn.readthedocs.io/zh_CN/latest/index.html);
-4. [如何快速写一个R包](https://www.bioinfo-scrounger.com/archives/546/)
-5. [9分钟写个R语言包：菜鸟致简速成](https://pzhao.org/zh/post/rmickey/)
-6. [R语言--创建（编写）R包](https://zhuanlan.zhihu.com/p/115763795)
-7. [创建R包](https://www.wzyblog.top/post/2018/09/19/creating-r-packages/)
-8. [R 包开发](https://rstudio-pubs-static.s3.amazonaws.com/462425_841be258782641ee83e8b89c45fa504c.html)
-9. [R包编写详细教程](http://personalbioinformatics.blogspot.com/2019/01/r.html)
-10. [创建R包+封装函数+上传到github](https://www.jianshu.com/p/5ed642733a2a)
+3. [R包开发](https://r-packages-zh-cn.readthedocs.io/zh_CN/latest/index.html);  
+......
 
 还有数不胜数的学习笔记和知识分享类的文章。那么问题来了，为什么我还要再写一篇来分享如何创建 R 包的文章呢？
-动机其实也很简单，可能也是由于自己阅读或者搜索深度不够，目前还没有发现一篇说到如何用“专业”的方式来创建 R 包的教程。
-
+动机其实也很简单，由于 R 社区的不断发展，`{usethis}`、`{testthat}`、`{styler}`、`{lintr}`、`{pkgdown}` 等等各类便于开发的工具层出不穷，在这些工具的帮助下，开发一个包的学习曲线愈发地降低。
+而现在中文网络中基于这些更为现代化工具的开发新手级入门教程还是尚且偏少。
 即使有（如上述参考链接中的 [3. R包开发](https://r-packages-zh-cn.readthedocs.io/zh_CN/latest/index.html)），略微过于详细，没有花上个把两天是很难体验到全流程的。
 
 因此，本文的主要目的就是用最短的时间，用专业的（自称）方式创建一个高逼格的 R 包并且托管在 GitHub 上。
@@ -68,10 +62,11 @@ forum_id: XX
 install.packages("usethis")
 
 # 命名一个 {rPackageTutorial} 包，并且创建，path 可以填写你想创建在哪个文件夹中。
-usethis::create_package(path = "../rPackageTutorial")
+# 这里我们选择在当前路径创建该包
+usethis::create_package(path = "rPackageTutorial")
 ```
 
-输入完毕后，自动会弹出一个新的 RStudio 窗口，并且自动设定了 `../rPackageTutorial` 为当前工作文件夹，名为 `{rPackageTutorial}` 就创建好了。
+输入完毕后，自动会弹出一个新的 RStudio 窗口，并且自动设定了 `rPackageTutorial` 为当前工作文件夹，名为 `{rPackageTutorial}` 就创建好了。
 ~~本期教程结束，谢谢！~~
 
 ### 3.2 加入版本控制（Git）
@@ -79,20 +74,20 @@ usethis::create_package(path = "../rPackageTutorial")
 这一步的方法有很多种，这里写的是本人用的最简单的一种。
 打开 GitHub Desktop（默认已经完成了登陆 GitHub 账号的操作），点击 `Add > Add Existing Repository`，在弹出的 `Add Local Repository` 中选择所创建好的 `{rPackageTutorial}` 路径。
 
-![3.2.1. 使用 GitHub Desktop 添加本地项目。](https://s3.ax1x.com/2021/02/15/y6D7PP.png)
+![3.2.1 使用 GitHub Desktop 添加本地项目。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.2.1.png)
 
 会提示您选择的文件夹还没有包含 Git 的相关设定，因此只需要继续点击 `create a repository` 创建相关设定即可。
 
-![3.2.2. 选择本地项目地址后点击 `create a repository` 创建相关设定。](https://s3.ax1x.com/2021/02/15/y6DWKe.png)
+![3.2.2 选择本地项目地址后点击 `create a repository` 创建相关设定。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.2.2.png)
 
 在下一步的 `Create a New Repository` 中可以什么都不改，直接点击右下角的 `Create Repository` 按钮完成项目的创建。
 
-![3.2.3. 填写云端项目信息内容后按 `Create a New Repository` 创建。](https://s3.ax1x.com/2021/02/15/y6Do5t.png)
+![3.2.3 填写云端项目信息内容后按 `Create a New Repository` 创建。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.2.3.png)
 
 至此，本地的设定就完成了，只需要点击 `Publish repository`，然后设置公不公开后即可将项目推送到你的 GitHub 中去了。
 可以点击这里 [`d78d245`](https://github.com/swsoyee/rPackageTutorial/commit/d78d245c641b4208de2ed726f764e4b4a38ab3ed) 查看第一次推送时候的变更内容。
 
-![3.2.4. 点击 `Publish repository` 推送到云端 GitHub 上。](https://s3.ax1x.com/2021/02/15/y6DfDH.png)
+![3.2.4 点击 `Publish repository` 推送到云端 GitHub 上。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.2.4.png)
 
 ### 3.3 用 `{renv}` 进行依赖（加载包）的版本控制
 
@@ -140,17 +135,30 @@ renv::snapshot()
 
 - 如果有引入新的包，运行 `renv::snapshot()` 进行 `lockfile` 的更新；
 - 如果想更新所使用的包，运行 `renv::update()` 进行包本身的更新；
-- 如果换了电脑进行开发，运行 `renv::restore` 恢复到开发时用的包环境；
+- 如果换了电脑进行开发，运行 `renv::restore()` 恢复到开发时用的包环境；
 
 完成这一步后，不要忘记进行 Git 的提交工作。
 让我们回到 GitHub Desktop，在 `Summary (required)` 中提交本次改动的内容（在这里我写了 `使用renv进行环境初始化`），点击 `Commit to main` 完成本地提交后，点击 `Push origin` 推送到云端（GitHub）上（[`2493654`](https://github.com/swsoyee/rPackageTutorial/commit/229365403eadbf8ed4ff49171a3f298a16e3c12e)）。
 
-![3.3.1 使用 GitHub Desktop 进行 Git 操作对于新手较为友好。](https://s3.ax1x.com/2021/02/15/y6Dhbd.png)
+![3.3.1 使用 GitHub Desktop 进行 Git 操作对于新手较为友好。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.3.1.png)
 
 至于如何写好提交信息可以参考[Angular提交信息规范](https://zj-git-guide.readthedocs.io/zh_CN/latest/message/Angular%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E8%A7%84%E8%8C%83/)，如果要显得包较为专业的话，那么这些小细节也是不容忽视的。
 在这之后将不再赘述每一步操作的提交工作，可以参考示例项目的提交记录即可。
 
 > 注：在本次教程中没有每次都适时的进行 `renv::snapshot()` 的包更新操作，在开发当中，每次引入或者使用新包的适合都建议进行一次 `lockfile` 的更新（[`bc5051d`](https://github.com/swsoyee/rPackageTutorial/commit/bc5051d1ed25a9d1ec36d139686acc84cfdf9f38)）。
+
+除了使用 `{renv}` 进行版本控制以外，还有一种在开发 R 包时更为普遍的方式，就是在 `DESCRIPTION` 中用添加会使用或者是建议使用的包的信息。
+我们可以使用下述命令进行快速添加：
+```r
+# 如果包为使用时必须的，则需要设置 type = "Imports"
+# {renv} 在这里只是开发必备，而非使用所开发的包必备，因此选择 "Suggests" 即可
+usethis::use_package(package = "renv", type = "Suggests")
+```
+
+变更结果可参考提交[`65e4fc4`](https://github.com/swsoyee/rPackageTutorial/commit/65e4fc4371d433fe1e883cea73e97bc692dcbf40)。
+对于非 R 包的项目（比如说用 `{shiny}` 来开发一个仪表盘应用）来说，用 `{renv}` 进行依赖管理就会显得非常重要。
+而在 R 包的开发中，标准的做法也就是用 `DESCRIPTION` 来记录依赖的版本信息。
+不过 `renv::restore()` 一条命令恢复开发环境的力量还是很香的，推荐使用度 + 1。
 
 ### 3.4 创建 README
 
@@ -171,7 +179,7 @@ usethis::use_readme_rmd()
 第一次 `Knit` 的时候，在 `README.Rmd` 会有你的包加载的这一条命令，因此需要先将包成功打包一次才能成功执行，否则会报错。
 或者你也可以先把自动生成的模版中的 `library(rPackageTutorial)` 先注释掉即可。
 
-![3.4.1 由于图中选择的加载包的代码存在，因此需要先将包成功打包一次才能成功执行。可以选择右侧面板中的 `Build` 标签，按 `Install and Restart` 即可。](https://s3.ax1x.com/2021/02/15/y6DOKg.png)
+![3.4.1 由于图中选择的加载包的代码存在，因此需要先将包成功打包一次才能成功执行。可以选择右侧面板中的 `Build` 标签，按 `Install and Restart` 即可。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.4.1.png)
 
 完成后回到 GitHub Desktop 进行提交（[`658b233`](https://github.com/swsoyee/rPackageTutorial/commit/658b2338783bd1a7ec2f8fcf75c2eb675cd66049)）。
 
@@ -194,7 +202,7 @@ add<-function(a,b) {
 这时候，就需要插入一些文档让打包的时候能够识别这个函数。
 这一步我们可以点击图中左上的 **魔术棒** 按钮（放大镜图标的右侧），点击 `Insert Roxygen Skeleton` 快速生成文档骨架。
 
-![3.5.1 在 `R` 文件夹h中创建 `add.R` 文件用于保存函数，点击 `Insert Roxygen Skeleton` 快速生成。](https://s3.ax1x.com/2021/02/15/y6Db28.png)
+![3.5.1 在 `R` 文件夹h中创建 `add.R` 文件用于保存函数，点击 `Insert Roxygen Skeleton` 快速生成。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.5.1.png)
 
 ```r
 # 点击 Insert Roxygen Skeleton 后就会出现文档结构
@@ -242,7 +250,7 @@ Writing add.Rd
 
 之后再按一下 `Install and Restart` 就可以使用了。也可以在命令行中使用 `?add` 来查看一下自己定义的帮助文档。
 
-![3.5.2 输入 `devtools::document()` 更新文档，然后点击 `Install and Restart` 重新打包并自动重新加载包，可用 `?add` 来确认没有问题。](https://s3.ax1x.com/2021/02/15/y6DIUI.png)
+![3.5.2 输入 `devtools::document()` 更新文档，然后点击 `Install and Restart` 重新打包并自动重新加载包，可用 `?add` 来确认没有问题。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.5.2.png)
 
 最后，回到 GitHub Desktop 中提交本次更改（[`88f0c57`](https://github.com/swsoyee/rPackageTutorial/commit/88f0c57f538d6b71bda138acc76ffd09aa7b1b18)）。
 至此，你的包就创建完成啦！~~本期教程结束，再次感谢！~~
@@ -329,7 +337,7 @@ usethis::use_github_action("lint")
 老样子，提交并推送代码到 GitHub 上（[`454c7f6`](https://github.com/swsoyee/rPackageTutorial/commit/454c7f6bf604d6ecb84c04848b1c923750193cd2)）。
 在这之后的每次当你提交的代码通过检查的时候，就会有一个绿色的小勾表示通过，是不是稍微显得专业一点了呢？
 
-![3.7.1 多出了一个小~~狗狗~~勾勾来显示我们的代码完全没问题，已通过检查。](https://s3.ax1x.com/2021/02/15/y6Djbj.png)
+![3.7.1 多出了一个小~~狗狗~~勾勾来显示我们的代码完全没问题，已通过检查。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.7.1.png)
 
 ### 3.8 用 `{testthat}` 来测试代码
 
@@ -376,7 +384,7 @@ test_that("add() function return the sum of two number", {
 
 在写完测试后，可以点击编写面板的右上角 `Run Tests` 进行单文件测试，也可以选择 `Addins > Report test coverage for a package` 进行整个包的函数测试覆盖率的测算。
 
-![3.8.1 运行测试的方法多种多样，最简单的单文件测试是点击编辑界面右上角的 `Run Tests`。](https://s3.ax1x.com/2021/02/15/y6DxVs.png)
+![3.8.1 运行测试的方法多种多样，最简单的单文件测试是点击编辑界面右上角的 `Run Tests`。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.8.1.png)
 
 当然还有其他办法来达成同样的目的，这只是其中一种方法而已。
 但如果他人对你的代码进行修改或者实现了功能时，通过什么办法确保对方修改的代码不会造成 Bug 呢？
@@ -412,7 +420,7 @@ Config/testthat/edition: 3
 
 通过 `{usethis}` 来修改 License 和 Version 信息：
 ```r
-# 如果没有依赖到别的具有不同版权的包的话，一般无脑 MIT 即可
+# 如果没有依赖到别的具有不同版权的第三方包的话，一般选择最为广泛使用的 MIT 即可
 usethis::use_mit_license()
 ```
 结果显示：
@@ -503,7 +511,7 @@ usethis::use_pkgdown()
 pkgdown::build_site()
 ```
 
-![3.10.1 嗯，有内味儿了。](https://s3.ax1x.com/2021/02/15/y66xyT.png)
+![3.10.1 嗯，有内味儿了。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.10.1.png)
 
 要对网站进行定制化，只需要给 `_pkgdown.yml` 中添加配置即可。
 具体可以参考文档说明，因此在这里也不赘述了。
@@ -554,7 +562,9 @@ devtools::build_rmd()
 
 提交本次变更推送到 GitHub 中（[`e78b035`](https://github.com/swsoyee/rPackageTutorial/commit/e78b03590faf9ed4281a7506f35bc73e85d48ce7)）。
 点开检查的标记，发现多出了非常多的流程。
-![3.11.1 运行中是黄色小圈圈，通过是绿色的勾，有错误是红色的叉。](https://s3.ax1x.com/2021/02/15/y6rS5q.png)
+
+![3.11.1 运行中是黄色小圈圈，通过是绿色的勾，有错误是红色的叉。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.11.1.png)
+
 包括 `{lintr}` 的代码规范性检查、 `test-coverage` 的测试覆盖度计算、 `{pkgdown}` 的帮助文档网站生成、包的构建结果检查 `R-CMD-check` 等等一些列的操作都会在合适的时候自动执行。
 其结果会反映到 README 和网站中，是不是整个就显得专业起来了呢？
 
@@ -563,11 +573,11 @@ devtools::build_rmd()
 首先在 GitHub 上设置激活我们的帮助手册托管页面。
 来到项目的 `Setting`，向下滚动到 `GitHub Pages` 一项。
 
-![3.11.2 来到设定页面。并且滚动到 `GitHub Pages` 一项。](https://s3.ax1x.com/2021/02/15/y6DXrQ.png)
+![3.11.2 来到设定页面。并且滚动到 `GitHub Pages` 一项。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.11.2.png)
 
 按图中设置分支 `Branch:gh-pages / root` 后按保存即可。
 
-![3.11.3 按图中设置即可。](https://s3.ax1x.com/2021/02/15/y6DH8f.png)
+![3.11.3 按图中设置即可。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.11.3.png)
 
 保存成功后会自动返回页面最上方，还是向下滚动到刚才的 `GitHub Pages`，能看到多了一行字，没几十秒就能看到我们的网址被激活了：
 ```
@@ -619,7 +629,7 @@ BugReports: https://github.com/swsoyee/rPackageTutorial/issues
 
 提交本次变更并且推送后[`8166dfa`](https://github.com/swsoyee/rPackageTutorial/commit/8166dface73993a7fe6be0c7e6d67bf3512eba68)，等通过 GitHub Action 调用 `{pkgdown}` 自动执行完操作后，一个页面信息更丰富的专业包说明网站就被自动更新了。
 
-![3.12.1 整体框架搭建完成。](https://s3.ax1x.com/2021/02/15/y6RVlq.png)
+![3.12.1 整体框架搭建完成。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.12.1.png)
 
 ## 4. 结语
 
@@ -631,5 +641,5 @@ BugReports: https://github.com/swsoyee/rPackageTutorial/issues
 只有构建了一个较为专业的环境，用户在搜索的时候才会对你的包略有信赖，从而获取用户。
 而也只有遵循了开源社区的规范时，才更方便他人来对你的包进行改进，降低了阅读源码的难度。
 
-除了以上列举的步骤外，其实还有很多能用的东西，但如果写起来真是没完没了。
-如果感兴趣的话可以去查看 **Hadley Wickham** 编写的 [R Packages](https://r-pkgs.org/)了解更多详细内容和具体的说明。
+除了以上列举的步骤外，其实还有很多能用的东西，单就 `{usethis}` 一个包中能用的函数就好几十个，如果写起来真是没完没了。
+如果感兴趣的话可以去查看 **Hadley Wickham** 编写的 [R Packages](https://r-pkgs.org/)和各个工具包的说明文档来了解更多详细内容和具体的说明。
