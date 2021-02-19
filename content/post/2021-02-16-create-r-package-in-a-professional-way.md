@@ -202,7 +202,7 @@ add<-function(a,b) {
 这时候，就需要插入一些文档让打包的时候能够识别这个函数。
 这一步我们可以点击图中左上的 **魔术棒** 按钮（放大镜图标的右侧），点击 `Insert Roxygen Skeleton` 快速生成文档骨架。
 
-![3.5.1 在 `R` 文件夹h中创建 `add.R` 文件用于保存函数，点击 `Insert Roxygen Skeleton` 快速生成。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.5.1.png)
+![3.5.1 在 `R` 文件夹中创建 `add.R` 文件用于保存函数，点击 `Insert Roxygen Skeleton` 快速生成。](https://raw.githubusercontent.com/swsoyee/rPackageTutorial/main/man/figures/3.5.1.png)
 
 ```r
 # 点击 Insert Roxygen Skeleton 后就会出现文档结构
