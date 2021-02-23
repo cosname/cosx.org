@@ -2,7 +2,7 @@
 title: 为新手准备的现代化 R 包开发流程
 date: '2021-02-16'
 author: "苏玮"
-meta_extra: ""
+meta_extra: "审稿：肖楠；编辑：李旋"
 slug: writing-r-packages-a-modern-workflow-for-beginners
 categories:
   - R语言
