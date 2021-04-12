@@ -19,7 +19,7 @@ Rmarkdown 是 R 语言环境中提供的 markdown 编辑工具，运用 rmarkdow
 
 ![](https://mmbiz.qpic.cn/mmbiz_jpg/MIcgkkEyTHgQIt6ob17tBZRRISiczGtKzz9ueTpfO198ZUvH00ibGDajbYgdhADwuDekjn7w2dKU0HAPEhhlNqYA/640?wx_fmt=jpeg)
 
-其他参考资料可见这一期推文：[R分享｜Rmarkdown参考资料分享和自制视频教程预告](http://mp.weixin.qq.com/s?__biz=MzI1NjUwMjQxMQ==&mid=2247490959&idx=1&sn=2374d35aa12a64bd00caea0bf424bbd0&chksm=ea24e26bdd536b7d2263b6e779a00f072f2e42f29346ab13a9ed4252144dc6d7e964c7ef7d52&scene=21#wechat_redirect)。关于 RMarkdown可参考专著(Xie, Allaire, and Grolemund[2019](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/rmarkdown.html#ref-Xie2019:rmarkdown "Xie, Allaire, and Grolemund"))和(Xie, Dervieux, and Riederer[2020](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/rmarkdown.html#ref-Xie2020:rmd-cook "Xie, Dervieux, and Riederer"))。RStudio 网站提供了一个 R Markdown 使用小抄的下载链接：(rmarkdown-2.0.pdf)[rmarkdown-2.0.pdf]。Pandoc 的文档见[pandoc 网站](https://www.pandoc.org/ "pandoc 网站")，knitr 的详细文档参见网站[knitr 文档](http://yihui.name/knitr/ "knitr 文档")。
+其他参考资料可见这一期推文：[R分享｜Rmarkdown参考资料分享和自制视频教程预告](http://mp.weixin.qq.com/s?__biz=MzI1NjUwMjQxMQ==&mid=2247490959&idx=1&sn=2374d35aa12a64bd00caea0bf424bbd0&chksm=ea24e26bdd536b7d2263b6e779a00f072f2e42f29346ab13a9ed4252144dc6d7e964c7ef7d52&scene=21#wechat_redirect)。关于 RMarkdown可参考专著([Xie, Allaire, and Grolemund 2019](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/rmarkdown.html#ref-Xie2019:rmarkdown "Xie, Allaire, and Grolemund"))和([Xie, Dervieux, and Riederer 2020](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/rmarkdown.html#ref-Xie2020:rmd-cook "Xie, Dervieux, and Riederer"))。RStudio 网站提供了一个 R Markdown 使用小抄的下载链接：(rmarkdown-2.0.pdf)[rmarkdown-2.0.pdf]。Pandoc 的文档见[pandoc 网站](https://www.pandoc.org/ "pandoc 网站")，knitr 的详细文档参见网站[knitr 文档](http://yihui.name/knitr/ "knitr 文档")。
 
 ## 第二章：Rmarkdown流程演示
 
@@ -870,5 +870,4 @@ if (TRUE) {
 - 当然Rmarkdown还可以做各种拓展，比如presentation（ioslides、Beamer、slidy、PowerPoint），Documents（Html、Notebook、PDF、word）及其他拓展（Dashboards、Tufte Handouts、xaringan Presentations、Websites）等。有部分我已经整理好了，可以在下面窗口的拓展教程中找到。
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/9601618034106_.pic_hd.jpg)
-
 
