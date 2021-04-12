@@ -393,7 +393,7 @@ pander::pander(lmr)
 
 - **kableExtra包**
 
-本文以kableExtra包为例，介绍rmarkdown中渲染表格的相关函数。 它在https://haozhu233.github.io/kableExtra/上有大量文档，其中提供了许多示例，说明如何针对HTML或LaTeX输出自定义kable（）输出。 建议阅读其文档，本节中仅介绍一些示例介绍。
+本文以kableExtra包为例，介绍rmarkdown中渲染表格的相关函数。 它在 https://haozhu233.github.io/kableExtra/ 上有大量文档，其中提供了许多示例，说明如何针对HTML或LaTeX输出自定义 kable() 输出。 建议阅读其文档，本节中仅介绍一些示例介绍。
 
 kableExtra包可以使用管道符号%>%操作，例如
 
