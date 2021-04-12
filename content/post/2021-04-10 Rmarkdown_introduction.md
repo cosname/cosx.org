@@ -251,7 +251,7 @@ cos(pi/2)
 
 - 全局设置
 
-若markdown内的代码块存在一样的参数设置，则可以提前设计好全局的代码块参数。全局代码块通过knitr::opts_chunk$set函数进行设置，一般设置在YAML文件下方，具体见下图。 
+若markdown内的代码块存在一样的参数设置，则可以提前设计好全局的代码块参数。全局代码块通过 `knitr::opts_chunk$set` 函数进行设置，一般设置在YAML文件下方，具体见下图。 
 
 ```
 ​```{r setup, include=FALSE}
@@ -870,4 +870,3 @@ if (TRUE) {
 - 当然Rmarkdown还可以做各种拓展，比如presentation（ioslides、Beamer、slidy、PowerPoint），Documents（Html、Notebook、PDF、word）及其他拓展（Dashboards、Tufte Handouts、xaringan Presentations、Websites）等。有部分我已经整理好了，可以在下面窗口的拓展教程中找到。
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/9601618034106_.pic_hd.jpg)
-
