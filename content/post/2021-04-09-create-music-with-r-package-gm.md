@@ -1,5 +1,5 @@
 ---
-title: "用 R 包 gm 写音乐"
+title: "用 R 包 gm 生成音乐"
 date: 2021-04-09
 author: "flujoo"
 categories: ["R 语言 ", "R 包"]
@@ -67,7 +67,7 @@ devtools::install_github("flujoo/gm")
 
 你还需要[安装 MuseScore](https://musescore.org/)，它是一款开源免费的打谱软件。
 
-MuseScore 有[默认的安装路径](https://musescore.org/en/handbook/3/revert-factory-settings)，如果你下载到其它路径，请在 .Renviron 文件中设置：
+MuseScore 有[默认的安装路径](https://musescore.org/en/handbook/3/revert-factory-settings)，如果你安装到其它路径，请在 .Renviron 文件中设置：
 
 1. 打开 .Renviron 文件。可以用命令 `file.edit("~/.Renviron")`。
 2. 在其中加入 `MUSESCORE_PATH=<MuseScore 可执行文件的路径>`，比如 `MUSESCORE_PATH="C:/Program Files (x86)/MuseScore 3/bin/MuseScore3.exe"`。
