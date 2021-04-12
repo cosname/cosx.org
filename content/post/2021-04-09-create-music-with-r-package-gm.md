@@ -1,5 +1,5 @@
 ---
-title: "用 R 包 gm 创作音乐"
+title: "用 R 包 gm 写音乐"
 date: 2021-04-09
 author: "flujoo"
 categories: ["R 语言 ", "R 包"]
@@ -8,13 +8,13 @@ slug: create-music-with-r-package-gm
 ---
 
 
-本文要介绍 R 包 [gm](https://github.com/flujoo/gm)，你可以用它来创作音乐。
+本文要介绍 R 包 [gm](https://github.com/flujoo/gm)，你可以用它来生成音乐。
 
 具体来说，gm 有三大特点：
 
 1. 它设计了一套非常简单的语言，你可以用这个语言来描述音乐。
 2. gm 会将你的描述转化成乐谱和音频，你几乎不需要考虑记谱的技术细节。
-3. gm 可以在 R Markdown 文档、R Jupyter 笔记本和 RStudio 中使用，并自动将生成的音乐嵌入在生成的文本之中。
+3. gm 可以在 R Markdown 文档或 R Jupyter 笔记本里自动将乐谱嵌入生成的文档中。
 
 先来看一个简单的例子。
 
@@ -31,7 +31,7 @@ m <-
   Music() +
   # 加上 4/4 拍号
   Meter(4, 4) +
-  # 加上一条包含四个音的旋律线
+  # 加上一条包含四个音的声部
   Line(list("C5", "D5", "E5", "F5"), list(1, 1, 1, 1))
 
 # 转化成乐谱和音频
@@ -65,12 +65,12 @@ install.packages("gm")
 devtools::install_github("flujoo/gm")
 ```
 
-你还需要[下载 MuseScore](https://musescore.org/)，它是一款开源免费的打谱软件。
+你还需要[安装 MuseScore](https://musescore.org/)，它是一款开源免费的打谱软件。
 
-MuseScore 有[默认的下载路径](https://musescore.org/en/handbook/3/revert-factory-settings)，如果你下载到其它路径，请在 .Renviron 文件中设置：
+MuseScore 有[默认的安装路径](https://musescore.org/en/handbook/3/revert-factory-settings)，如果你下载到其它路径，请在 .Renviron 文件中设置：
 
-1. 用 `usethis::edit_r_environ()` 打开 .Renviron 文件。
-2. 在其中加入 `MUSESCORE_PATH=<MuseScore 可执行文件的路径>`。
+1. 打开 .Renviron 文件。可以用命令 `file.edit("~/.Renviron")`。
+2. 在其中加入 `MUSESCORE_PATH=<MuseScore 可执行文件的路径>`，比如 `MUSESCORE_PATH="C:/Program Files (x86)/MuseScore 3/bin/MuseScore3.exe"`。
 3. 重启 R。
 
 
@@ -82,21 +82,29 @@ MuseScore 有[默认的下载路径](https://musescore.org/en/handbook/3/revert-
 m <- Music()
 ```
 
-在这个空的 `Music` 对象之上，我们可以加上其它的成分，比如加上拍号：
+我们可以直接打印它来查看它的结构：
+
+```r
+m
+
+#> Music
+```
+
+在这个空的 `Music` 对象之上，我们可以加上其它的成分。比如加上拍号：
 
 ```r
 m <- m + Meter(4, 4)
+m
+
+#> Music
+
+#> Meter 4/4 
 ```
 
-加上旋律线：
+加上声部：
 
 ```r
 m <- m + Line(pitches = list("C5"), durations = list("whole"))
-```
-
-我们可以直接打印 `m` 来查看其结构：
-
-```r
 m
 
 #> Music
@@ -130,7 +138,7 @@ show(m)
 
 ![](https://raw.githubusercontent.com/flujoo/gm/master/man/figures/cn/2_tempo.png)
 
-加上新的旋律线：
+加上新的声部：
 
 ```r
 m <- m + Line(
@@ -163,8 +171,6 @@ Python 有一个非常成熟的库 [music21](http://web.mit.edu/music21/)，它�
 3. 处理复杂的连音时不够直观，
 4. ......
 
-综合来说，gm 的优点是，语言高阶简单，并且适用于常见的 R 工作环境。而如果你想要专业级别的记谱软件，gm 目前还不够。
-
 
 ## 自动作曲
 
@@ -192,3 +198,7 @@ show(m, to = c("score", "audio"))
 上面的代码生成了九条声部，所有声部的音符都是相同的，区别是每条声部加入的时间都比前一条声部慢一点，因此形成了有趣的回音效果。
 
 从这个例子你也可以感受到，gm 利用 R 的基本数据结构来表征音高和时值，语法简单，非常适合用编程的方式产生音乐。
+
+综合来说，gm 的优点是，语言高阶简单，并且适用于常见的 R 工作环境。而如果你想要专业级别的记谱软件，gm 目前还不够。
+但在之后的版本中，gm 会实现更多的功能，包括添加乐器、力度记号等。
+如果你喜欢 gm 可以[在 Github 上点赞](https://github.com/flujoo/gm)。
