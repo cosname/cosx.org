@@ -100,8 +100,7 @@ rmarkdown的导出方法有两种，一种是依靠Rstudio手动导出，另一�
 
 若界面打开了rmd格式的文件时，Rstudio的界面发生了一些变化（多了一些按钮），如下图所示。
 
-
-![](/Users/liangliangzhuang/Library/Application Support/typora-user-images/image-20210414122411958.png)
+![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210414130134283.png)
 
 
 这里我们对界面做一些介绍，视频介绍在[这](https://mp.weixin.qq.com/s/Dl1a36omEVI1QGP0HgbuyA)。
