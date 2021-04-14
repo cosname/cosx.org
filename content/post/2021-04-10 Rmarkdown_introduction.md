@@ -87,10 +87,10 @@ rmarkdown的导出方法有两种，一种是依靠Rstudio手动导出，另一�
 
 #### 命令行导出
 
-命令行导出主要依靠rmarkdown::render实现，render函数主要包含如下几个参数：
+命令行导出主要依靠`rmarkdown::render`实现，render函数主要包含如下几个参数：
 
- -    **input**指定需要导出的rmarkdwon文件地址
- -    **output_format**指定需要导出的文件类型，同样支持pdf、word、html等多种文件格式。若未指定output\_format格式，则输出rmarkdown文件中output指定的格式类型。
+ -    **input*：指定需要导出的rmarkdwon文件地址
+ -    **output_format**：指定需要导出的文件类型，同样支持pdf、word、html等多种文件格式。若未指定`output_format`格式，则输出rmarkdown文件中output指定的格式类型。
 
 `rmarkdown::render("test.Rmd")`
 
@@ -98,9 +98,15 @@ rmarkdown的导出方法有两种，一种是依靠Rstudio手动导出，另一�
 
 ### 2.4. Rstudio界面介绍
 
-这时Rstudio的界面发生了一些变化，我们对界面做一些介绍，尤其是最新版本的新功能，视频介绍在[这](https://mp.weixin.qq.com/s/Dl1a36omEVI1QGP0HgbuyA)。
+若界面打开了rmd格式的文件时，Rstudio的界面发生了一些变化（多了一些按钮），如下图所示。
 
-> 演示的Rstudio版本为1.4.1
+
+![](/Users/liangliangzhuang/Library/Application Support/typora-user-images/image-20210414122411958.png)
+
+
+这里我们对界面做一些介绍，视频介绍在[这](https://mp.weixin.qq.com/s/Dl1a36omEVI1QGP0HgbuyA)。
+
+> **注**：演示的Rstudio版本为1.4.1，老版本的界面可能有所不同。
 
 ## 第三章：图、表和代码输出
 
@@ -247,7 +253,7 @@ cos(pi/2)
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/WeChatd2107f6cf1d1088d22c97e4b3e09f344.png)
 
-具体演示可见[b站]视频。
+具体演示可见[b站](https://www.bilibili.com/video/BV1ib4y1X7r9)视频。
 
 - 全局设置
 
@@ -272,13 +278,13 @@ plot(1:10)
 
 1. fig.show ：设置了图片输出方式 
 
-   - fig.show=‘asis’：表示plot在产生他们的代码后面
+   - `fig.show=‘asis’`：表示plot在产生他们的代码后面
 
-   - fig.show=‘hold’：所有代码产生的图片都放在一个完整的代码块之后
+   - `fig.show=‘hold’`：所有代码产生的图片都放在一个完整的代码块之后
 
-   - fig.show=‘animate’：表示将所有生成的图片合成一个动画图片
+   - `fig.show=‘animate’`：表示将所有生成的图片合成一个动画图片
 
-   - fig.show=‘hide’：表示产生所有图片,但是并不展示
+   - `fig.show=‘hide’`：表示产生所有图片,但是并不展示
 
 ```
 ​```{r, fig.show='animate'}
@@ -288,7 +294,7 @@ for (i in 1:2) {
 ​```
 ```
 
-2. fig.width：设置图片输出的宽度 
+2. `fig.width`：设置图片输出的宽度 
 3. fig.height：设置图片输出的高度 
 4. fig.align
    设置图片位置排版格式，默认为left,可以为right或者center 
@@ -378,7 +384,7 @@ pander::pander(lmr)
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211229254.png)
 
-但是，经过试验发现， 表中中有中文时pander包会出错。这里参考公众号[R友舍]
+但是，经过试验发现， 表中中有中文时pander包会出错，这里参考公众号[R友舍](https://mp.weixin.qq.com/s/MKvRoyCyEHqHNzC9DRfVWQ)。
 
 - 其他包
 
@@ -387,15 +393,15 @@ pander::pander(lmr)
 
 ### 3.4.表格渲染
 
-通过前面可以看到：用knitr::kable()输出表格结果其实不是非常美观，并且很多功能都不能实现。这时我们可以用kableExtra([Zhu 2020](https://bookdown.org/yihui/rmarkdown-cookbook/kableextra.html#ref-R-kableExtra "Zhu 2020"))、huxtable ([Hugh-Jones 2020](https://bookdown.org/yihui/rmarkdown-cookbook/table-other.html#ref-R-huxtable "Hugh-Jones 2020"))等扩展包来美化表格。
+通过前面可以看到：用`knitr::kable()`输出表格结果其实不是非常美观，并且很多功能都不能实现。这时我们可以用kableExtra([Zhu 2020](https://bookdown.org/yihui/rmarkdown-cookbook/kableextra.html#ref-R-kableExtra "Zhu 2020"))、huxtable ([Hugh-Jones 2020](https://bookdown.org/yihui/rmarkdown-cookbook/table-other.html#ref-R-huxtable "Hugh-Jones 2020"))等扩展包来美化表格。
 
 > 其他拓展包可以参考：https://bookdown.org/yihui/rmarkdown-cookbook/table-other.html
 
 - **kableExtra包**
 
-本文以kableExtra包为例，介绍rmarkdown中渲染表格的相关函数。 它在 https://haozhu233.github.io/kableExtra/ 上有大量文档，其中提供了许多示例，说明如何针对HTML或LaTeX输出自定义 kable() 输出。 建议阅读其文档，本节中仅介绍一些示例介绍。
+本文以kableExtra包为例，介绍rmarkdown中渲染表格的相关函数。 它在 https://haozhu233.github.io/kableExtra/上有大量文档，其中提供了许多示例，说明如何针对HTML或LaTeX输出自定义`kable()`输出。 建议阅读其文档，本节中仅介绍一些示例介绍。
 
-kableExtra包可以使用管道符号%>%操作，例如
+kableExtra包可以使用管道符号`%>%`操作，例如
 
 ```
 library(knitr)
@@ -439,7 +445,7 @@ kableExtra::kable_styling(x_html,bootstrap_options = "striped",
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211332249.png)
 
-> 注意：上面例子knitr:: kable制定了kable函数来自knitr包，目的是方式和其他包内同名函数冲突。
+> 注意：上面例子`knitr:: kable`制定了`kable`函数来自knitr包，目的是方式和其他包内同名函数冲突。
 
 另一种写法，如果想使用管道函数，需要加载kableExtra。其他代码也类似，大家要学会举一反三噢！
 ```
@@ -455,7 +461,7 @@ kable(head(rock), "html") %>%
 
 #### 3. 设置表格的对齐方式
 
-使用position = "left"使得整个表格像左对齐，当然也可以中心对齐和右对齐，视情况而定。
+使用`position = "left"`使得整个表格像左对齐，当然也可以中心对齐和右对齐，视情况而定。
 ```
 x_html <- knitr:: kable(head(rock), "html")
 kableExtra::kable_styling(x_html,bootstrap_options = "striped",
@@ -481,7 +487,7 @@ kableExtra::kable_styling(x_html,bootstrap_options = "striped",
 
 #### 5.设置表格的行与列
 
-这里使用的函数是column_spec()，其中以下代码含义为：制定前两列数据，字体加粗、颜色为白色，表格填充为"#D7261E"。而行的设置与列类似，使用函数名为row_spec()。
+这里使用的函数是`column_spec()`，其中以下代码含义为：制定前两列数据，字体加粗、颜色为白色，表格填充为`"#D7261E"`。而行的设置与列类似，使用函数名为`row_spec()`。
 ```
 x_html <- knitr:: kable(head(rock), "html")
 x_html <- kableExtra::kable_styling(x_html,
@@ -674,7 +680,7 @@ output:
 
 Markdown语法没有用于更改文本颜色的内置方法。我们可以使用HTML和LaTeX语法来更改单词的格式
 
-- 对于HTML，我们可以将文本包装在<span>标记中，并使用CSS设置颜色，例如<span style =“ color：red;”> text </ span>。
+- 对于HTML，我们可以将文本包装在<span>标记中，并使用CSS设置颜色，例如`<span style =“ color：red;”> text </ span>`。
 - 对于PDF，我们可以使用LaTeX命令`\textcolor{}{}`。 这需要使用LaTeX软件包xcolor，该软件包已包含在Pandoc的默认LaTeX模板中。
 
 ** 作为更改PDF文本颜色的示例：**
@@ -816,7 +822,7 @@ knitr::include_graphics("foo/bar.png")
 
 ### 5.7.图片对齐
 
-这个我也说过啦！可见：[R沟通｜Rmarkdown教程（3）](http://mp.weixin.qq.com/s?__biz=MzI1NjUwMjQxMQ==&mid=2247491844&idx=1&sn=36decacb06ca6ce1fc689141174bb98f&chksm=ea271ee0dd5097f615b87c27151200635a9e5ff3c3072864bcf8fe6e8fbc41c0cffc6c95148f&scene=21#wechat_redirect)，[R沟通｜Rmarkdown教程（2）](http://mp.weixin.qq.com/s?__biz=MzI1NjUwMjQxMQ==&mid=2247491546&idx=1&sn=00f8dea8903dbf4ec6e683ab5061a7a5&chksm=ea24e03edd536928ff6c5a3600c8fbbd87cafbf9286ad47bfe4c084032cada9bf6ee7dfddcd9&scene=21#wechat_redirect)。如果使用R代码导入图片的话，使用knitr::include_graphics()并结合R chunk中fig.align = 'center'参数进行居中。如果结果不想显示代码块，可在chunck中加入：echo=FALSE
+这个我也说过啦！可见：[R沟通｜Rmarkdown教程（3）](http://mp.weixin.qq.com/s?__biz=MzI1NjUwMjQxMQ==&mid=2247491844&idx=1&sn=36decacb06ca6ce1fc689141174bb98f&chksm=ea271ee0dd5097f615b87c27151200635a9e5ff3c3072864bcf8fe6e8fbc41c0cffc6c95148f&scene=21#wechat_redirect)，[R沟通｜Rmarkdown教程（2）](http://mp.weixin.qq.com/s?__biz=MzI1NjUwMjQxMQ==&mid=2247491546&idx=1&sn=00f8dea8903dbf4ec6e683ab5061a7a5&chksm=ea24e03edd536928ff6c5a3600c8fbbd87cafbf9286ad47bfe4c084032cada9bf6ee7dfddcd9&scene=21#wechat_redirect)。如果使用R代码导入图片的话，使用`knitr::include_graphics()`并结合R chunk中`fig.align = 'center'`参数进行居中。如果结果不想显示代码块，可在chunck中加入：`echo=FALSE`。
 
 > 任何输出形式都适用，推荐使用
 
