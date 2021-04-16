@@ -13,7 +13,7 @@ Rmarkdown 是 R 语言环境中提供的 markdown 编辑工具，运用 rmarkdow
 
 先通过[官方视频](https://rmarkdown.rstudio.com/lesson-1.html "官方视频")来看看 Rmarkdown 的介绍。
 
-> **注**：该视频来自官网，一般不一定打得开，所以小编为大家着想就下载下来了，以便大家更好地学习。可见这篇[推送](https://mp.weixin.qq.com/s/aPqjLILQvnRaM6S7j7zsLQ)
+> **注**：该视频来自官网，一般不一定打得开，所以小编为大家着想就下载下来了，以便大家更好地学习，可见这篇[推送](https://mp.weixin.qq.com/s/aPqjLILQvnRaM6S7j7zsLQ)。
 
 视频已经非常清楚的介绍了 Rmarkdown 如何使用，内部构造、不同的输出类型，以及其他拓展（发布，与 github 相连）等。我们先对此进行简单了解即可，之后几期我会详细介绍。当然，官网也有一套 Rmarkdown 的入门教程，欢迎大家前去学习，官网截图如下：  
 
@@ -27,7 +27,7 @@ Rmarkdown 是 R 语言环境中提供的 markdown 编辑工具，运用 rmarkdow
 
 假设你已经安装了 [R](https://www.r-project.org "R")（R Core Team 2020）和 [RStudio IDE](https://www.rstudio.com "RStudio IDE")。
 
-> 不需要 RStudio，但建议使用 RStudio，因为它可使普通用户更轻松地使用 R Markdown。如果未安装 RStudio IDE，则必须安装 Pandoc（http://pandoc.org），否则不需要单独安装 Pandoc，因为 RStudio 已将其捆绑在一起。
+> 不需要 RStudio，但建议使用 RStudio，因为它可使普通用户更轻松地使用 R Markdown。如果未安装 RStudio IDE，则必须安装 [Pandoc](http://pandoc.org)， 否则不需要单独安装 Pandoc，因为 RStudio 已将其捆绑在一起。
 
 接下来， Rstudio 中安装 rmarkdown 软件包，可以通过下面任意一种方式：
 
@@ -51,7 +51,7 @@ tinytex::install_tinytex() # install TinyTeX
 
 TinyTeX 是一种轻便，可移植，跨平台，易于维护的 LaTeX 发行版。 R 配套软件包 tinytex 可以帮助你在将 LaTeX 或 R Markdown 文档编译为 PDF 时自动安装缺少的 LaTeX 软件包，并确保将 LaTeX 文档编译正确的次数以解决所有交叉引用。
 
-> **注：** 如果 TinyTex 通过上面代码无法正常安装，可以参考张敬信老师的知乎文章：[搭建 Latex 环境：TinyTex+RStudio](https://zhuanlan.zhihu.com/p/328585804)如果编译.rmd格式时出现缺失某些 Latex 包，可以参考[这节](https://bookdown.org/yihui/rmarkdown-cookbook/install-latex-pkgs.html)内容。
+> **注：** 如果 TinyTex 通过上面代码无法正常安装，可以参考张敬信老师的知乎文章：[搭建 Latex 环境：TinyTex+RStudio](https://zhuanlan.zhihu.com/p/328585804) 如果编译 .rmd 格式时出现缺失某些 Latex 包，可以参考[这节](https://bookdown.org/yihui/rmarkdown-cookbook/install-latex-pkgs.html)内容。
 
 ### 2.2. 新建Rmarkdown项目
 
@@ -63,13 +63,13 @@ TinyTeX 是一种轻便，可移植，跨平台，易于维护的 LaTeX 发行�
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHONCibWGssENl6uFM7X9oCR1D1dnalEY02U0GH1n287RlXuwMZcWYaY1w/640?wx_fmt=png)
 
-3.  在新建的 markdown 文件里，主要包含三块内容：1. YAML、2. markdown 文本、3. 代码块。
+3.  在新建的 markdown 文件里，主要包含三块内容：1. YAML、2. markdown 文本、3.代码块。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHO1icK35EBlzW6IGic1A50UPInShxrMEoqKm5SszNgW4rY6f5pP40rXicHw/640?wx_fmt=png)
 
-**1）YAML**： Rmarkdown 的头部文件\(上图1位置\)， YAML 定义了 rmarkdwon 的性质，比如 title、author、date、 指定 output 文件类型等。
+**1）YAML**： Rmarkdown 的头部文件(上图1位置)， YAML 定义了 rmarkdwon 的性质，比如 title、author、date、 指定 output 文件类型等。
 
-**2）markdown文本**： rmarkdown 里的主要内容\(上图3位置\)，由编辑人员按照 markdown 语法自行编写文本内容，
+**2）markdown文本**： rmarkdown 里的主要内容(上图3位置)，由编辑人员按照 markdown 语法自行编写文本内容，
 
 **3）代码块**： rmarkdown 的一个主要功能是可以执行文件内的代码块(上图2位置)，并将代码执行结果展示在 markdown 里。这对撰写数据分析报告带来了极大的便利。 Rmd 文件中除了 R 代码段以外， 还可以插入 Rcpp、Python、Julia、SQL 等许多编程语言的代码段， 常用编程语言还可以与R代码段进行信息交换。
 
