@@ -59,19 +59,19 @@ TinyTeX 是一种轻便，可移植，跨平台，易于维护的 LaTeX 发行�
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHOnC8OiaxaEFicQwBYuFDAhREDzrHzf77ZzHONpFueanjvemwM8BzxZnOQ/640?wx_fmt=png)
 
-2.  在弹出的选项框里，可以申明 rmarkdown 的 Title、 Author 以及默认的输出文件格式，一般可以选择 HTML、 PDF、 Word 格式，具体见下图。
+2.  在弹出的选项框里，可以申明 rmarkdown 的 Title、 Author 以及默认的输出文件格式，一般可以选择 HTML、PDF、Word 格式，具体见下图。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHONCibWGssENl6uFM7X9oCR1D1dnalEY02U0GH1n287RlXuwMZcWYaY1w/640?wx_fmt=png)
 
-3.  在新建的 markdown 文件里，主要包含三块内容：1. YAML、 2. markdown 文本、 3. 代码块。
+3.  在新建的 markdown 文件里，主要包含三块内容：1. YAML、2. markdown 文本、3. 代码块。
 
 ![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHO1icK35EBlzW6IGic1A50UPInShxrMEoqKm5SszNgW4rY6f5pP40rXicHw/640?wx_fmt=png)
 
-**1）YAML**： Rmarkdown 的头部文件\(上图1位置\)， YAML 定义了 rmarkdwon 的性质，比如 title、 author、 date、 指定 output 文件类型等。
+**1）YAML**： Rmarkdown 的头部文件\(上图1位置\)， YAML 定义了 rmarkdwon 的性质，比如 title、author、date、 指定 output 文件类型等。
 
 **2）markdown文本**： rmarkdown 里的主要内容\(上图3位置\)，由编辑人员按照 markdown 语法自行编写文本内容，
 
-**3）代码块**： rmarkdown 的一个主要功能是可以执行文件内的代码块(上图2位置)，并将代码执行结果展示在 markdown 里。这对撰写数据分析报告带来了极大的便利。 Rmd 文件中除了 R 代码段以外， 还可以插入 Rcpp、 Python、 Julia、 SQL 等许多编程语言的代码段， 常用编程语言还可以与R代码段进行信息交换。
+**3）代码块**： rmarkdown 的一个主要功能是可以执行文件内的代码块(上图2位置)，并将代码执行结果展示在 markdown 里。这对撰写数据分析报告带来了极大的便利。 Rmd 文件中除了 R 代码段以外， 还可以插入 Rcpp、Python、Julia、SQL 等许多编程语言的代码段， 常用编程语言还可以与R代码段进行信息交换。
 
 > 这三个部分会在以后做详细介绍。
 
@@ -83,14 +83,14 @@ rmarkdown的导出方法有两种，一种是依靠 Rstudio 手动导出，另�
 
 ![手动导出](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHOLrG8D4fZfNIhXf2xaVhK8A1XcRqoRLcSKPC9vXQtUGvY6q2Ur9Zsjw/640?wx_fmt=png)
 
-手动导出方法很简单，在完成 markdown 编辑后，手动点击上图红圈内 knit 按钮，选择导出格式类型即可， Rstudio 支持导出 PDF、 html、 word 三种类型。
+手动导出方法很简单，在完成 markdown 编辑后，手动点击上图红圈内 knit 按钮，选择导出格式类型即可， Rstudio 支持导出 PDF、html、word 三种类型。
 
 #### 命令行导出
 
 命令行导出主要依靠 `rmarkdown::render` 实现， render 函数主要包含如下几个参数：
 
  -    **input*： 指定需要导出的rmarkdwon文件地址
- -    **output_format**： 指定需要导出的文件类型，同样支持 pdf、 word、 html 等多种文件格式。若未指定 `output_format` 格式，则输出 rmarkdown 文件中 output 指定的格式类型。
+ -    **output_format**： 指定需要导出的文件类型，同样支持 pdf、word、html 等多种文件格式。若未指定 `output_format` 格式，则输出 rmarkdown 文件中 output 指定的格式类型。
 
 ```
 rmarkdown::render("test.Rmd")
@@ -362,7 +362,7 @@ print(co)
 
 - **knitr包的 `kable()`** 
 
-knitr包提供了一个 `kable()` 函数可以用来把数据框或矩阵转化成有格式的表格， 支持 HTML、 docx、 LaTeX 等格式。
+knitr包提供了一个 `kable()` 函数可以用来把数据框或矩阵转化成有格式的表格， 支持 HTML、docx、LaTeX 等格式。
 
 可以用 knitr 包的 `kable` 函数来显示:
 
@@ -394,7 +394,7 @@ pander::pander(lmr)
 
 ### 3.4.表格渲染
 
-通过前面可以看到：用 `knitr::kable()` 输出表格结果其实不是非常美观，并且很多功能都不能实现。这时我们可以用 kableExtra([Zhu 2020](https://bookdown.org/yihui/rmarkdown-cookbook/kableextra.html#ref-R-kableExtra "Zhu 2020"))、 huxtable ([Hugh-Jones 2020](https://bookdown.org/yihui/rmarkdown-cookbook/table-other.html#ref-R-huxtable "Hugh-Jones 2020"))等扩展包来美化表格。
+通过前面可以看到：用 `knitr::kable()` 输出表格结果其实不是非常美观，并且很多功能都不能实现。这时我们可以用 kableExtra([Zhu 2020](https://bookdown.org/yihui/rmarkdown-cookbook/kableextra.html#ref-R-kableExtra "Zhu 2020"))、huxtable ([Hugh-Jones 2020](https://bookdown.org/yihui/rmarkdown-cookbook/table-other.html#ref-R-huxtable "Hugh-Jones 2020")) 等扩展包来美化表格。
 
 > 其他拓展包可以参考：https://bookdown.org/yihui/rmarkdown-cookbook/table-other.html
 
@@ -550,7 +550,7 @@ kable_styling(x_html,"striped")
 
 ## 第四章： Rmarkdown 的主题格式
 
-Rmarkdowm 作为可复用报告的优秀工具，除了提供文档编辑、图表输出外，还有许多主题格式供使用者选择。除了默认的主题外，还可以通过加载 rticles、 prettydoc、 rmdformats、 tufte 等包获取更多主题格式。下面我们看看几类扩展包里的主题样式。 
+Rmarkdowm 作为可复用报告的优秀工具，除了提供文档编辑、图表输出外，还有许多主题格式供使用者选择。除了默认的主题外，还可以通过加载 rticles、prettydoc、rmdformats、tufte 等包获取更多主题格式。下面我们看看几类扩展包里的主题样式。 
 
 > **注：** 接下来的教程我是已经安装这些包了，没安装的记得提前安装好！不然运行会出错。
 
