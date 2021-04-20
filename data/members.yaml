@@ -231,6 +231,9 @@ list:
     image: https://user-images.githubusercontent.com/18381242/69481710-8207ab00-0e4e-11ea-8407-44e9f6b65771.JPG
     intro: 北京大学数学科学学院统计学教授。曾经先后在上海交通大学和浙江大学计算机学院任教授。是国际机器学习旗舰刊物 JMLR 的执行编委，并多次受邀担任国际人工智能和机器学习顶级学术会议 ICML、IJCAI、AAAI、NIPS、CVPR、ICCV 等的程序委员/高级程序委员/领域主席。研究兴趣包括：贝叶斯推理与计算、深度强化学习及其在博弈游戏中的应用、非凸优化算法、自然语言处理、大规模机器学习模型的求解算法等。其课程《应用数学基础（深度学习基础）》《强化学习基础》《机器学习导论》《统计机器学习》视频对公众开放。
   - name: 赵鹏
+    image: https://pzhao.org/img/zhao2.jpg
+    intro: 西交利物浦大学健康与环境科学系助理教授。北京大学理学学士和环境科学硕士，德国拜罗伊特大学地理生态学博士。著有[《学 R：零基础学习 R 语言》（赵鹏，李怡，2018）](https://xuer.pzhao.org)、[《现代统计图形》（赵鹏，谢益辉，黄湘云，2021）](https://msg2020.pzhao.org)。
+  - name: 赵鹏
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 世界知名IT企业性能分析师。在包括多核、分布式以及GPU通用计算方面具有丰富的研究和实践经验，善于帮助客户解决性能问题以及提供并行化方案。R语言爱好者，业余时间创建了ParallelR网站<www.parallelr.com>，以此来分享R和并行计算相关内容。
   - name: 周扬
