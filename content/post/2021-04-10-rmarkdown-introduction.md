@@ -2,7 +2,7 @@
 title: "Rmarkdown 入门教程"
 date: 2021-04-10
 author: "庄亮亮"
-categories: ["R 语言 ", "R 包", "Rmarkdown"]
+categories: ["R 语言"]
 tags: ["R Markdown"]
 slug: rmarkdown-introduction
 ---
