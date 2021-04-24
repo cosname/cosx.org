@@ -4,7 +4,7 @@ date: 2021-04-10
 author: "庄亮亮"
 categories: ["R 语言 ", "R 包", "Rmarkdown"]
 tags: ["文档沟通"]
-slug: Rmarkdown_introduction
+slug: rmarkdown-introduction
 ---
 
 
@@ -27,7 +27,8 @@ Rmarkdown 是 R 语言环境中提供的 markdown 编辑工具，运用 rmarkdow
 
 视频已经非常清楚的介绍了 Rmarkdown 如何使用，内部构造、不同的输出类型，以及其他拓展（发布，与 github 相连）等。我们先对此进行简单了解即可，之后几期我会详细介绍。当然，官网也有一套 Rmarkdown 的入门教程，欢迎大家前去学习，官网截图如下：  
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/MIcgkkEyTHgQIt6ob17tBZRRISiczGtKzz9ueTpfO198ZUvH00ibGDajbYgdhADwuDekjn7w2dKU0HAPEhhlNqYA/640?wx_fmt=jpeg)
+![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172657080.png)
+
 
 其他参考资料可见这一期推文：[R分享｜Rmarkdown参考资料分享和自制视频教程预告](http://mp.weixin.qq.com/s?__biz=MzI1NjUwMjQxMQ==&mid=2247490959&idx=1&sn=2374d35aa12a64bd00caea0bf424bbd0&chksm=ea24e26bdd536b7d2263b6e779a00f072f2e42f29346ab13a9ed4252144dc6d7e964c7ef7d52&scene=21#wechat_redirect)。关于 RMarkdown 可参考专著([Xie, Allaire, and Grolemund 2019](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/rmarkdown.html#ref-Xie2019:rmarkdown "Xie, Allaire, and Grolemund"))和([Xie, Dervieux, and Riederer 2020](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/rmarkdown.html#ref-Xie2020:rmd-cook "Xie, Dervieux, and Riederer"))。 RStudio 网站提供了一个 R Markdown 使用小抄的下载链接：( rmarkdown-2.0.pdf )[rmarkdown-2.0.pdf]。 Pandoc 的文档见[pandoc 网站](https://www.pandoc.org/ "pandoc 网站")，knitr 的详细文档参见网站[ knitr 文档](http://yihui.name/knitr/ "knitr 文档")。
 
@@ -67,15 +68,15 @@ TinyTeX 是一种轻便，可移植，跨平台，易于维护的 LaTeX 发行�
 
 1.  点击 Rstudio 左上角的新建项目，选择 Rmarkdown 文件格式，即可建立一个 rmarkdown 编辑文件 。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHOnC8OiaxaEFicQwBYuFDAhREDzrHzf77ZzHONpFueanjvemwM8BzxZnOQ/640?wx_fmt=png)
+![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172842613.png)
 
 2.  在弹出的选项框里，可以申明 rmarkdown 的 Title、 Author 以及默认的输出文件格式，一般可以选择 HTML、PDF、Word 格式，具体见下图。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHONCibWGssENl6uFM7X9oCR1D1dnalEY02U0GH1n287RlXuwMZcWYaY1w/640?wx_fmt=png)
+![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172859520.png)
 
 3.  在新建的 markdown 文件里，主要包含三块内容：1. YAML、2. markdown 文本、3.代码块。
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHO1icK35EBlzW6IGic1A50UPInShxrMEoqKm5SszNgW4rY6f5pP40rXicHw/640?wx_fmt=png)
+![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172919598.png)
 
 **1）YAML**： Rmarkdown 的头部文件(上图1位置)， YAML 定义了 rmarkdwon 的性质，比如 title、author、date、 指定 output 文件类型等。
 
@@ -91,7 +92,7 @@ rmarkdown的导出方法有两种，一种是依靠 Rstudio 手动导出，另�
 
 #### 手动导出
 
-![手动导出](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHOLrG8D4fZfNIhXf2xaVhK8A1XcRqoRLcSKPC9vXQtUGvY6q2Ur9Zsjw/640?wx_fmt=png)
+![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172937025.png)
 
 手动导出方法很简单，在完成 markdown 编辑后，手动点击上图红圈内 knit 按钮，选择导出格式类型即可， Rstudio 支持导出 PDF、html、word 三种类型。
 
@@ -106,7 +107,7 @@ rmarkdown的导出方法有两种，一种是依靠 Rstudio 手动导出，另�
 rmarkdown::render("test.Rmd")
 ```
 
-![](https://mmbiz.qpic.cn/mmbiz_png/MIcgkkEyTHiayicgGYwRzibR9sxwM8TDrHOHREqDRxNrDKxVThbUuqusJ3icTDklw3STPKwb9BHNLFLMGR9G5bKnicQ/640?wx_fmt=png)
+![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424173011826.png)
 
 ### 2.4. Rstudio界面介绍
 
@@ -480,7 +481,7 @@ kableExtra::kable_styling(x_html,bootstrap_options = "striped",
                           position = "left")
 ```
 
-![](https://static01.imgkr.com/temp/3c0e46ee46cd42698cc578153b09e682.png)
+![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424173324184.png)
 
 #### 4. 设置表格的字体大小
 
