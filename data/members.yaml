@@ -72,6 +72,9 @@ list:
   - name: 黄建华
     image: https://user-images.githubusercontent.com/26518047/83482179-44bb5000-a465-11ea-9008-a25436fed071.jpg
     intro: 黄建华教授现任美国德州 A&M 大学统计系教授及数据科学研究所副主任，并为 Arseven/Mitchell Astronomical Statistics 讲席教授。黄教授于 1985-1992 年在北京大学概率统计系学习并获得概率统计学士及硕士学位，于 1997 年获加州大学伯克利分校统计学博士学位。他是美国统计协会资深会员（Fellow）, 国际数理统计学会资深会员（Fellow）, 国际统计学会当选会员（Elected Member），及国际泛华统计协会会员。 曾任 A&M 大学统计系研究生项目主任、理学院代理研究生项目副院长、统计系代理系主任等职务。研究方向包括统计学习，大数据分析及计算，非参数和半参数统计，函数型数据和纵向数据分析，以及统计学在工程、生物、天文、商业等领域中的应用。自 1998 年以来共发表学术论文 100 余篇，为统计学的发展做出了重大贡献。
+  - name: 黄帅
+    image: https://user-images.githubusercontent.com/16065479/119380041-0ff76880-bc75-11eb-92be-a5c6f2f4f76d.jpg
+    intro: 华盛顿大学工业工程系副教授，毕业于中国科学技术大学，并于亚利桑那州立大学取得博士学位。他的研究方向包括统计学习和数据挖掘，及其在医疗保健和制造领域的应用。
   - name: 寇强
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 寇强 <http://weibo.com/thirdwing?is_all=1>，Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。
@@ -251,3 +254,6 @@ list:
   - name: flujoo
     image:
     intro: 我写的音乐：https://flujoo.github.io/works/ 我的 R 项目：https://github.com/flujoo/gm 我关于自学的公众号：冬夜骑士/edu_knight
+  - name: Cynthia Chen
+    image: https://user-images.githubusercontent.com/16065479/119380027-0c63e180-bc75-11eb-8551-21d55e5552ac.jpg
+    intro: 华盛顿大学土木与环境工程系教授，毕业于加州大学戴维斯分校。她领导的 THINK 实验室的主要研究方向包括出行行为建模，用户行为干预以及其对交通网络的效果等。
