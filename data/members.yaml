@@ -1,316 +1,236 @@
 list:
   - name: 于淼
-    id: yufree
     image: https://yufree.cn/images/MYu.jpg
     intro: 现任编辑部主编，中科院生态环境研究中心博士，美国西奈山伊坎医学院博后，研究方向为环境化学与暴露组学数据分析，博客 <https://yufree.cn>
   - name: 黄湘云
-    id: cloud2016
     image: https://user-images.githubusercontent.com/12031874/28239932-9c296f42-69a9-11e7-90fa-d1d20cbad4db.jpg
     intro: 现任编辑部副主编，中国矿业大学（北京）本硕，16年一篇水文勾搭上谢大，而后得雪姨赏识出任副主编，目前在美团搬砖，博客 <https://xiangyun.rbind.io>。
   - name: 林枫
-    id: linfeng
     image: https://user-images.githubusercontent.com/18381242/62635778-e28bde80-b96a-11e9-9a98-15780bcd075f.JPG
     intro: 现任编辑部副主编，中国科学技术大学本硕，美国华盛顿大学2020级博士。研究兴趣是应用驱动的学习与决策问题。一番机缘得入COS，深受触动，在未来也将继续见证着它的热情与力量。
   - name: 边蓓蕾
-    id: bbl
     image: https://cloud.githubusercontent.com/assets/18478302/25886695/64963cdc-3591-11e7-9f88-4dea4eb0f65f.jpg
     intro: 出生于天津市，吃着煎饼果子和狗不理包子长大成人，因此智商偏低。长跑耐力中等偏下，K歌水平中等偏上，爱喝清酒梅酒，性格异常温和。热爱统计计算和软件工程，水平差，但擅长死磕到底。和COS之间唯有相见恨晚，这之间要感谢的人太多太多。人生一半的信仰找到了，还得努力找另一半。最近从各个角度感受到了COS精神，异常感动，因此没有不为它努力的道理。
   - name: 蔡占锐
-    id: caizhanrui
     image: https://cloud.githubusercontent.com/assets/7221728/25791987/71e81532-33f6-11e7-9c1a-19fa4a0e6148.png
     intro: 人大本科，宾州州立博士在读。个人主页：https://zhanruicai.github.io/
   - name: 常象宇
-    id: changxiangyu
     image: https://cloud.githubusercontent.com/assets/7221728/25788532/6931eef0-33dc-11e7-8bac-95fb83a25afe.jpg
     intro: 本科在西安交大应用数学系，08年与COS结缘，虽未参与，但关注。硕士阶段做与机器学习相关的研究发现用到了更多的统计知识，后博士阶段学了些统计。博士毕业后进入西安交通大学管理学院教书，完成了从数学、计算机、统计到管理的混沌。14年在北京乱晃的阶段，又与COS扛把子接头成功，被勾引后，感觉自己好像能干点什么了就又回到了COS。曾经在统计与机器学习的正经期刊上发表过文章，在机器学习的很多会议做过PC。在COS编辑部修改编辑过一些文章，负责采访过一些名师。希望以后还能在生活、科研与消耗大量时间的体制内工作中抽时间在COS做点有趣的事。
   - name: 成慧敏
-    id: chenghuimin
     image: https://cloud.githubusercontent.com/assets/7221728/25788558/9897e0f0-33dc-11e7-8d62-41883f058ce7.jpg
     intro: 佐治亚大学在读博士生,硕士毕业于中央财经大学统计与数学学院。平时没事就喜欢为统计之都做贡献(好吧,我说实话,平时喜欢到处吃吃吃喝喝喝)。稀里糊涂入了女博士的坑,对数据分析感兴趣,喜欢画漂亮的图写漂亮的code。
   - name: 陈丽云
-    id: chenliyun
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 目前在Facebook从事数据分析。亦常以”落园园主“自居。
   - name: 陈新宇
-    id: chenxinyu
     image: https://raw.githubusercontent.com/xinyulab/xinyulab.github.io/master/img/avatar-cxy.jpg
     intro: 华东师范大学应用统计硕士，研究方向为Deep Learning & Hign Performance Computing，现任Intel Deep Learning Engineer，为深度学习框架MXNet添砖加瓦。
   - name: 楚新元
-    id: chuxinyuan
     image:
     intro: 楚新元，新疆财经大学金融专业博士研究生，R语言爱好者，ecce包作者。个人主页：<https://cxy.rbind.io>，喜欢折腾各种好玩的R包，坚信科技解放人力。希望未来有更多的时间享受生活，工作尽可能都交给R，而不是把自己整成一台人肉计算机。
   - name: 邓金涛
-    id: dengjintao
     image: https://cloud.githubusercontent.com/assets/7221728/25788559/9a1f0282-33dc-11e7-9f63-10a7ac42c4f9.jpg
     intro: 男，中国人民大学2014级统计学院学渣一枚，出于莫名的原因大家都叫我“小王子”。 兴趣爱好还算广泛，篮球打得还过得去，钢琴弹得也还马虎。当初由于担任宣传部部长等机缘巧合进入了统计之都大家庭。不过自从本人大三在宣传部卸任后，业务技术早已被抛到九霄云外，因而硬着头皮怒怼出的东西常被云伯，秋思等人吐槽，实在有愧于江东父老。
   - name: 邓一硕
-    id: dengyishuo
     intro: 毕业于中央财经大学，感兴趣领域是数据挖掘技术（R语言）在金融投资分析和计量经济学中的应用。博客：<http://yishuo.org>；微博：<http://weibo.com/dengyishuo>。
   - name: 丁鹏
-    id: dingpeng
     image: https://statistics.berkeley.edu/sites/default/files/styles/photo_main/public/faculty/pengding.jpg
     intro: 2004-2011年在北京大学概率统计系学习，获得学士和硕士学位；2011-2015年在哈佛大学统计系学习，获得博士学位；2015年在哈佛大学流行病学系做博士后；2016年加入伯克利统计系任教。研究方向是因果推断。
   - name: 杜亚磊
-    id: duyalei
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 掉入R坑有多年，如今回首已惘然；也曾痴心于Python，偶尔兼职写前端。现任51talk算法工程师，探索教育行业里的数据价值。
   - name: 范超
-    id: fanchao
     image: https://cloud.githubusercontent.com/assets/7221728/25791993/7581204e-33f6-11e7-9095-e7a6f7dc0e6c.jpg
     intro: 江湖代号小妹，混迹于人大统计学院，崇尚数据分析的快乐， 希望和志同道合的童鞋一起学习成长～
   - name: 冯国双
-    id: fengguoshuang
     intro: 毕业于北京大学医学部，流行病与卫生统计学专业博士。现工作于中国疾病预防控制中心，负责中国疾控中心研究生和博士生的统计学教学工作。主要擅长各种回归分析、非独立数据分析、药物分析建模、新药临床试验中数据管理与统计分析、试验设计分析等。熟悉SAS软件的操作与应用，主编SAS专著2部：《医学案例统计分析与SAS应用》，《医学研究中的logistic回归分析及SAS实现》。现任“北京市免疫规划和疫苗评价专家委员会”专家委员、《中华护理学杂志》、《中国性病艾滋病学杂志》审稿专家，《慢性病学杂志》编委。博客：[“卫生统计空间”](http://hi.baidu.com/healthstat)
   - name: 冯璟烁
-    id: fengjingshuo
     image: https://cloud.githubusercontent.com/assets/7221728/25802086/6784d95e-3423-11e7-9bd5-f58775b4e3d7.jpg
     intro: 中国人民大学统计学院应用统计学2017届本科生，华盛顿大学工业工程系2017级在读博士。2015年加入统计之都，曾多次在各R会组委会中露脸，专职画画，兼职办会。目前是COS编辑部小编一枚。
   - name: 冯俊晨
-    id: fengjunchen
     image: https://user-images.githubusercontent.com/1142836/28624742-ae8f3c10-724c-11e7-82cd-700106f1f5fc.jpg
     intro: 个人网站：<http://www.fengjunchen.com>
   - name: 冯凌秉
-    id: fenglingbing
     image: https://cloud.githubusercontent.com/assets/7221728/26047173/a982236e-3984-11e7-9065-2baac85fccf4.png
     intro: 统计之都理事会主席，江西财经大学金融管理国际研究院助理教授，澳大利亚国立大学2011级统计学博士，中国人民大学2009级统计学硕士，中南财经政法大学2005级统计学&法学学士。2007年初识统计之都，常年潜水于COS论坛，并迅速成为COS迷粉，追随多年。2014年于南通婚礼偶遇太云，相逢恨晚，当即遁入COS门。现在在COS编辑部主要负责端茶送水，跑腿打杂，偶尔审审文章。
   - name: 高敏雪
-    id: gaominxue
     image: https://user-images.githubusercontent.com/18381242/62707961-f3992600-ba24-11e9-9b0f-db4d2ec76f6e.JPG
     intro: 经济学博士，中国人民大学统计学院教授，学术兼职包括北京市统计学会副会长、中国国民经济核算研究会副理事长，是国家统计专家委员会成员、国家气候变化专家委员会成员。研究领域以国民经济核算为中心，延伸到环境经济核算，并扩展到整个政府统计。
   - name: 高涛
-    id: gaotao
     image: https://user-images.githubusercontent.com/1142836/28492456-ea8789ca-6f36-11e7-8b47-91eada415a4c.jpg
     intro: 高涛，中国人民大学2012级数理统计研究生，2009年在太云带领下加入COS，给COS编辑部和R会议打杂，参与《R语言实战》《ggplot2：数据分析与图形艺术》书籍翻译。对统计机器学习、优化算法、时序预测感兴趣，之前混迹于互联网圈，现在从事量化投资。博客：<http://joegaotao.github.io/>。
   - name: 何通
-    id: hetong
     image: https://avatars2.githubusercontent.com/u/1289856
     intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任AWS Applied Scientist，为深度学习框架MXNet添砖加瓦。
   - name: 侯澄钧
-    id: houchengjun
     image: https://cloud.githubusercontent.com/assets/7221728/25832197/c3961488-349b-11e7-9b2d-814f6cfc1e63.jpg
     intro: 俄亥俄州立大学运筹学博士，目前在美国从事财产事故险领域的保险产品开发，涉及数据分析、统计建模，产品算法优化等方面的工作。离乡十载，海飘七年，至今未归。喜欢运动，尤其爱好滑雪和网球。作为一名十年老Dotaer，面对“联盟”和“荣耀”时总有一种深深的优越感。热爱数据科学，也十分相信数据科学在未来的无限可能。
   - name: 黄俊文
-    id: huangjunwen
     image: https://user-images.githubusercontent.com/1142836/28239124-c75cde6e-6996-11e7-842a-66b29f4cb77c.jpg
     intro: 本科中山大学，硕士 University of California, San Diego。现于业界从事数据分析工作。
   - name: 黄建华
-    id: huangjianhua
     image: https://user-images.githubusercontent.com/26518047/83482179-44bb5000-a465-11ea-9008-a25436fed071.jpg
     intro: 黄建华教授现任美国德州 A&M 大学统计系教授及数据科学研究所副主任，并为 Arseven/Mitchell Astronomical Statistics 讲席教授。黄教授于 1985-1992 年在北京大学概率统计系学习并获得概率统计学士及硕士学位，于 1997 年获加州大学伯克利分校统计学博士学位。他是美国统计协会资深会员（Fellow）, 国际数理统计学会资深会员（Fellow）, 国际统计学会当选会员（Elected Member），及国际泛华统计协会会员。 曾任 A&M 大学统计系研究生项目主任、理学院代理研究生项目副院长、统计系代理系主任等职务。研究方向包括统计学习，大数据分析及计算，非参数和半参数统计，函数型数据和纵向数据分析，以及统计学在工程、生物、天文、商业等领域中的应用。自 1998 年以来共发表学术论文 100 余篇，为统计学的发展做出了重大贡献。
   - name: 黄帅
-    id: huangshuai
     image: https://user-images.githubusercontent.com/16065479/119380041-0ff76880-bc75-11eb-92be-a5c6f2f4f76d.jpg
     intro: 华盛顿大学工业工程系副教授，毕业于中国科学技术大学，并于亚利桑那州立大学取得博士学位。他的研究方向包括统计学习和数据挖掘，及其在医疗保健和制造领域的应用。
   - name: 寇强
-    id: kouqiang
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 寇强 <http://weibo.com/thirdwing?is_all=1>，Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。
   - name: 雷博文
-    id: leibowen
     image: https://cloud.githubusercontent.com/assets/7221728/25788480/06a7d182-33dc-11e7-8181-1cfbc8452691.jpg
     intro: 美国德州 A&M 大学统计学在读博士，感兴趣的领域是机器学习和贝叶斯统计。爱运动，爱旅游，喜欢尝试新的东西。一颗好奇的心让我永远有着探索和求知的方向，而持之以恒的性格则让我坚持不懈朝着心之所向而努力，让人生之船不断航行，不再漂流。
   - name: 郎大为
-    id: langdawei
     image: https://cloud.githubusercontent.com/assets/7221728/25791991/738e86b4-33f6-11e7-8825-51396d1e764b.jpg
     intro: 一个不务正业的数据分析师,做过一些R包开发,不爱用箭头赋值,喜欢用半角符号,钟情Chrome,在J.D.Power ~~京东电力~~ 做分析 ~~抄代码~~
   - name: 李舰
-    id: lijian
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 现任九峰移动医疗 CTO，曾任 Mango Solutions 中国区数据总监。专注于数据科学在行业里的应用。擅长R语言的工程开发与分析建模，是 Rweibo、Rwordseg、tmcn 等 R 包的作者。与肖凯合著了《数据科学中的R语言》，参与翻译了《R语言核心技术手册》、《机器学习与R语言》。
   - name: 李家郡
-    id: lijiajun
     image: https://llijiajun.github.io/github-io/images/ljj.jpg
     intro: 本科就读于中国人民大学统计学院，研究生将就读于中国人民大学信息学院。热爱编程、运动和艺术。个人博客 <https://llijiajun.github.io/github-io/>
   - name: 李杰桠
-    id: lijieya
     image:
     intro: 南开大学数学科学院在读研究生，本科就读于中国农业大学数学应用数学专业，研究兴趣为机器学习及其相关方向。好读杂书，发散思考。
   - name: 李宇轩
-    id: liyuxuan
     image: https://cloud.githubusercontent.com/assets/7221728/25788586/d81c09ae-33dc-11e7-8580-05ab733a7c73.jpg
     intro: 人大统院本科生，爱看书（从小喜欢），爱音乐（多听不多唱）、爱运动（玩和看都爱），很喜欢旅游（尤其一人游），虽然现在还是一只小本科僧，但相信自己会有用武之地，不达目的绝不放弃。
   - name: 林荟
-    id: linhui
     intro: 女，杜邦先锋总部市场部统计师，毕业于 Iowa State University 统计系，生年不详卒年尚无法预测。
   - name: 刘辰昂
-    id: liuchenang
     intro: "浙大准大四本科，统计之都主站编辑。weibo：[求证1加1](http://weibo.com/2011764505/profile)；blog: <http://chenangliu.info/cn/>；email: liuchenang@gmail.com"
   - name: 刘霁
-    id: liuji
     image: https://user-images.githubusercontent.com/16065479/34287096-d4ffb8a4-e699-11e7-9171-d940f5388072.png
     intro: 罗切斯特大学计算机科学系、电子与计算机工程系助理教授。刘霁教授毕业于中国科学技术大学，并于亚利桑那州立大学与威斯康星麦迪逊分校取得了硕士与博士学位。他的研究兴趣广泛，包括机器学习、优化及其在计算机视觉、数据挖掘等领域的应用。刘霁教授于罗切斯特大学建立了机器学习和优化研究组。他在2010年SIGKDD大会上获得最佳论文奖，已在包括JMLR，SIMOPT等顶级期刊和会议上发表过多篇论文。
   - name: 刘三震
-    id: liusanzhen
     image: https://avatars2.githubusercontent.com/u/5862321?v=4&s=460
     intro: 美国Iowa State University遗传学博士，国内毕业于厦门大学生物系。现在美国Kansas State University植物病理系担任助理教授（实验室主页：<http://plantgenomics.ksu.edu/>），从事生物信息学、生物技术，遗传学和基因组学研究。主要研究手段是利用大量基因组数据加深理解生物学问题。因项目需要，开始接触大数据和统计分析，乐于编程和从数据中寻找故事。
   - name: 刘跃文
-    id: liuyuewen
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 香港城市大学及中国科学技术大学博士<br/>前鹅厂数据研究员<br/>商科小讲师一枚，努力写论文中<br/>玩数据分析、玩社交网络<br/>梦想着讲有趣的故事，做有价值的研究<br/>讲授信息技术管理、数据库与数据管理、数据挖掘与知识发现等课程<br/>段子手
   - name: 罗大钧
-    id: luodajun
     image: https://user-images.githubusercontent.com/18478302/28310018-ada8bb7a-6bdd-11e7-89a5-05dd4d00d79e.jpeg
     intro: WeGene数据挖掘工程师，毕业于浙江大学数学系。
   - name: 孟晓犁
-    id: mengxiaoli
     image: https://user-images.githubusercontent.com/18381242/62833268-719c3d80-bc6e-11e9-9c0f-1f8a8603c7ca.jpg
     intro: 哈佛大学统计系Whipple V.N. Jones教授，曾任哈佛大学统计系主任，文理研究生院院长。COPSS会长奖获得者。研究兴趣非常广泛，包括统计推断理论，统计计算以及统计学方法在自然、社会、工程等领域中的应用等。他在统计学领域做出了杰出的贡献，是一名享誉全球的华人统计学家。
   - name: 潘新晨
-    id: panxinchen
     image: https://avatars1.githubusercontent.com/u/26174885?s=460&v=4
     intro: 潘新晨，伊利诺伊大学香槟分校统计硕士，现在芝加哥一家市场研究公司做数据分析方面的工作。R爱好者，乒乓球疯狂爱好者，东野圭吾小说狂热爱好者。
   - name: 彭晨昱
-    id: pengchenyu
     image: https://cloud.githubusercontent.com/assets/7221728/25793129/4e8cf290-33fd-11e7-9f0c-846ac1e0efbe.jpg
     intro: 目前就读江西财大国际会计专业，三年临川求学路，四年江财蛟湖畔。和图片展示的一样，天然吃货一枚，在任何环境下一定不会让自己饿着，很开心并荣幸加入COS大家庭，作为众多统计大神中夹着的一位做账的小会计，时刻膜拜并谦虚的学习着。当然，最最最希望的统计之都能朝着理想的未来走的越来越好!
   - name: 邱怡轩
-    id: qiuyixuan
     image: https://cloud.githubusercontent.com/assets/7221728/25788496/216e3484-33dc-11e7-8e7d-ca50b6450cc7.jpg
     intro: 普渡大学统计系博士，现为卡耐基梅隆大学博士后，感兴趣的方向包括计算统计学、机器学习、大型数据处理等，参与翻译了《应用预测建模》《R语言编程艺术》《ggplot2：数据分析与图形艺术》等经典书籍，是 showtext、RSpectra、recosystem、prettydoc 等流行R软件包的作者。
   - name: 任怡萌
-    id: renyimeng
     image: https://user-images.githubusercontent.com/35906792/47757674-66c97b00-dce2-11e8-8b7f-b84bc71a7eef.png
     intro: 人大统计本科生,热爱运动和音乐,也喜欢认识新朋友,梦想成为懂点统计的美食博主。在学习的过程中,逐渐感受到统计学的魅力,所以也经常做数据科学的白日梦。相信每个人都会有幸运时刻,而加入COS就是我的幸运之一。
   - name: 覃文锋
-    id: qinwenfeng
     image: https://cloud.githubusercontent.com/assets/7221728/25788591/dab66736-33dc-11e7-9d38-720da8ddb85a.jpg
     intro: R Weekly 创始人，参与了一些的 R 包的开发，爱好是看正在用的工具的源代码。
   - name: 苏玮
-    id: suwei
     image: https://avatars1.githubusercontent.com/u/20528423?s=460&u=759ff0d239505605eb3ec0ee6a01541573493aa1&v=4
     intro: 本科就读于华中科技大学生物信息学专业，东京大学应用生命工学硕士毕业。爱好折腾 R + JavaScript 的各领域数据的互动可视化与分析，生命不息学而不止的技术菜鸟。一个随意分享的[个人博客](https://swsoyee.vercel.app/)。
   - name: 水妈
-    id: shuima
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 毕业于北京大学光华管理学院商务统计系，女博士一枚<br/>师从王汉生教授，狗熊会熊孩子一只<br/>现任职于中央财经大学统计与数学学院，年轻讲师一个<br/>在理论研究方面，关注高维数据和社交网络数据，在JASA和Annals上均有发表<br/>在业界实践方面，关注车联网行业的数据分析
   - name: 唐源
-    id: terrytangyuan
     image: https://raw.githubusercontent.com/terrytangyuan/terrytangyuan.github.com/77c4851b52dc30d345ec8b1c115d6b8725290dd2/img/avatar.jpg
     intro: 目前在蚂蚁金服担任技术专家，专注于建立AI基础架构和自动机器学习平台， 是多个开源软件的作者，XGBoost和Apache MXNet的项目管理委员会成员，Kubeflow的联合主席，TensorFlow、Couler、以及ElasticDL的Committer。同时也是《TensorFlow实战》以及《动手学深度学习》的作者之一。 个人主页：<https://terrytangyuan.github.io/about/>
   - name: 王佳
-    id: wangjia
     image: https://cloud.githubusercontent.com/assets/7221728/25832304/50a0da66-349c-11e7-9ead-70091ddd1dd7.jpg
     intro: 人大统计硕士在读，R与SAS爱好者，写得了代码，做得了调查，温柔靠谱的双鱼座妹子。能和cos聪明有趣的小编们一起工作玩耍是非常过瘾的经历
   - name: 王健桥
-    id: wangjianjiao
     image: https://cloud.githubusercontent.com/assets/7221728/25788475/fff5f3be-33db-11e7-9c01-000d3a9a2580.png
     intro: 中国人民大学统计学本科毕业，即将去宾夕法尼亚大学攻读生物统计博士学位，爱好广泛，热爱交友，喜欢了解各种各样的学术掌故。
   - name: 王汉生
-    id: wanghansheng
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 王汉生教授现任狗熊会会长、北京大学商务智能研究中心主任、北京大学光华管理学院商务统计与经济计量系系主任。现为ISI, ASA, IMS, RSS, ICSA会员，ASA会士(2014年6月23日更新)。
   - name: 王文静
-    id: wangwenjin
     image: https://user-images.githubusercontent.com/18381242/62843942-5c67f300-bcf0-11e9-9309-d3bda6e8fa8b.jpg
     intro: 中央财经大学统计与数学学院讲师。中国人民大学统计学院博士。当前研究领域为经济统计、稳健统计。
   - name: 王小宁
-    id: wangxiaonin
     image: https://cloud.githubusercontent.com/assets/7221728/25788528/65b1af86-33dc-11e7-9f1b-207eae93ff58.jpg
     intro: 中国人民大学统计学院博士，喜欢跑步，研究兴趣为抽样技术和机器学习。
   - name: 王祎帆
-    id: wangweifan
     image: https://user-images.githubusercontent.com/32222392/47916739-26d0e680-dee2-11e8-9926-065f0c608a62.jpg
     intro: 人大统计学院本科生,喜欢运动,更喜欢统计,希望能用统计做一些好玩的神奇的事情
   - name: 王毅然
-    id: wangyiran
     image: https://cloud.githubusercontent.com/assets/7221728/25788597/e295b736-33dc-11e7-9e62-61ea8f0190b1.jpg
     intro: 中国人民大学2013级经济学与数学（双学位）实验班本科生，美国北卡罗莱纳州立大学2017级统计学PhD。新人一枚，2017年5月刚刚加入统计之都，希望以后可以为统计之都贡献更多自己的力量。
   - name: "Earo Wang"
-    id: earowang
     intro: "[Earo Wang](https://earo.me/), Ph.D. student at Monash University."
   - name: 汪张扬
-    id: wangzhangyang
     image: https://uploads.cosx.org/2016/06/tutu.jpeg
     intro: 汪张扬，男，1991年出生；2012年中国科学技术大学电子通信工程本科毕业；2016年伊利诺伊大学香槟分校电子计算机工程博士毕业；2016年加入德州A&M大学计算机科学系任助理教授。更多信息见[个人主页](http://www.atlaswang.com)。
   - name: 魏太云
-    id: weitaiyun
     image: https://avatars.githubusercontent.com/u/507671
     intro: 魏太云，毕业于中国人民大学统计学院，感兴趣的领域是统计建模、机器学习、数据可视化。此外，魏太云还曾担任统计之都理事会主席（2011-2016），参与多届中国R语言会议的组织工作，合作翻译出版了《ggplot2：数据分析与图形艺术》、《R数据可视化手册》等书籍。
   - name: 肖凯
-    id: xiaokai
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 一个喜欢折腾数据的人，与李舰合著了《数据科学中的R语言》，现就职于蚂蚁金服。
   - name: 谢佳标
-    id: xiejiabiao
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 乐逗游戏高级数据分析师，负责大数据挖掘及可视化。资深R语言用户，有九年以上数据挖掘工作实战经验，多次在中国R语言大会上作主题演讲。与张良均老师、杨坦老师合著的《R语言与数据挖掘》一书已在2016年7月出版，新书《R语言游戏数据分析》一书也即将于2017年初出版。
   - name: 谢士晨
-    id: shichen
     image: http://shichen.name/images/whoami/avatar.jpg
     intro: 名古屋大学环境经济博士，R包 scorecard、pedquant 与 python 包 scorecardpy 的作者，目前在银行从事信用风险量化相关工作。
   - name: 谢益辉
-    id: yihui
     image: https://user-images.githubusercontent.com/163582/28285860-d3c70c72-6afb-11e7-9a92-71d9575188b5.png
     intro: 中国人民大学统计硕士，爱荷华州立大学统计学博士，R 包 [knitr](https://yihui.name/knitr/) 的主要作者。现为 RStudio 软件工程师，曾负责 Shiny 包相关开发工作，后转入 R Markdown 相关扩展包的开发，包括 [bookdown](https://github.com/rstudio/bookdown) 和 [blogdown](https://github.com/rstudio/blogdown)。对统计计算、可视化、以及各类网页相关技术感兴趣，有志于对技术写作工具做减法工作，坚信人类浪费了太多时间在期刊论文、学位论文、书籍的排版上。平时主要活跃在 [Github](https://github.com/yihui) 上。个人主页在 <https://yihui.name>，思想偏激，流水账、意识流甚多，小人之心甚重，慎入。
   - name: 熊熹
-    id: xiongxi
     image: https://user-images.githubusercontent.com/1586648/28498380-a363f05e-6fce-11e7-98b5-f30c379cc8c7.jpg
     intro: 女，人称“师姐”。京东商城 Data Science Lab 的算法工程师，现在主要在做一些推荐系统和个性化的工作。
   - name: 徐浩
-    id: xuhao
     image: https://cloud.githubusercontent.com/assets/7221728/25791994/77d093e8-33f6-11e7-9990-3d4436146817.jpg
     intro: 物理出身,GIS背景,入坑车联网。闲暇时间为维持英文水平做些书籍的英中/中英翻译工作的摄影师。
   - name: 夏丰盛
-    id: xiafengsheng
     image: https://avatars3.githubusercontent.com/u/25638404?s=460&v=4
     intro: 浙江大学在读硕士研究生，钟情R语言，画过电路，焊过板子，热爱编程，励志做个数据科学家。
   - name: 闫晗
-    id: yanhan
     image: https://cloud.githubusercontent.com/assets/7221728/25832350/af4afea2-349c-11e7-9bc5-374056619d8e.jpg
     intro: 人大统计硕士，资深吃货，混迹于cos大神中的小学渣一枚。好读书，不求甚解；好行路，不问远方。
   - name: 闫施
-    id: yanshi
     image: https://cloud.githubusercontent.com/assets/7221728/25832241/086315d4-349c-11e7-8f7b-8cfd270ea279.png
     intro: 现就读于中央财经大学应用统计专业。木讷外表下，有一颗充满热情的心。爱好广泛，方方面面皆有涉猎，钟情运动，因而长相和学识远不及身材。虽然系统地学习统计的时间不长，却被统计知识和统计应用独特的魅力所深深吸引，是一名求知欲旺盛的统计学忠实拥趸。
   - name: 杨灿
-    id: yangcan
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 杨灿于2011年在香港科技大学电子计算机工程系获得博士学位，2011-2012为耶鲁大学生物统计系博士后，现为耶鲁大学副研究员。
   - name: 杨洵默
-    id: tcya
     image: https://avatars3.githubusercontent.com/u/7607410
     intro: 化学博士，Google码农，正在缓慢地变成一个数据科学家……博客 <https://tcya.xyz>
   - name: 翟晋
-    id: dijin
     image: https://cloud.githubusercontent.com/assets/7221728/25788531/67c2c7d8-33dc-11e7-8bc5-894640e04688.jpg
     intro: 硕士生，目前就读于中央财经大学应用统计专业，尤爱美食和旅行。10%的理科生，编程很鶸，轻度R语言使用者。90%的文科生，爱读书，爱写作，爱硬笔书法，爱PPT的设计与制作。一大波技能正等着我去学习……
   - name: 郁彬
-    id: yubin
     intro: "[郁彬](http://www.stat.berkeley.edu/~binyu/Site/Welcome.html)，1980年进入北京大学数学系攻读本科，1985年获陈省身数学交流项目资助前往美国，于1987年和1990年分别获伯克利大学统计学硕士和博士学位。她曾在威斯康星大学麦迪逊分校和耶鲁大学任教，并且在贝尔实验室工作。2006年，郁彬院友获得古根海姆奖。2009年到2012年间，她担任加州大学伯克利分校统计系系主任，现在则是伯克利分校统计系和电子工程与计算机科学系终身教授。2013年，郁彬院友当选美国艺术与科学学院院士，2014年当选美国国家科学院院士，此外，她还是北大微软统计和信息技术实验室的创办者和主任之一。"
   - name: 余光创
-    id: yuguangchuang
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 余光创，香港大学公共卫生学院，生物信息学博士生。博客：<https://guangchuangyu.github.io>， 公众号：biobabble
   - name: 张驰原
-    id: pluskid
     image: https://user-images.githubusercontent.com/19310150/28874258-a5070976-77c3-11e7-934c-226e46387f96.jpeg
     intro: 张驰原，网络 id pluskid，MIT 计算机博士在读，假装的 Julia 语言爱好者。
   - name: 张翔
-    id: zhangxiang
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 车轮互联数据副总裁，COS9年老水友
   - name: 张沥今
-    id: zhanglj37
     image: https://zhanglj37.github.io/images/lijin.JPG
     intro: 中山大学心理学系研究生，师从潘俊豪副教授，研究方向为贝叶斯结构方程建模。个人博客 https://www.lijinzhang.xyz/blog.html
   - name: 张心雨
-    id: zhangxinyu
     image: https://user-images.githubusercontent.com/26495735/28239054-21169780-6995-11e7-8b72-1f4de46cb721.jpg
     intro: 张心雨，人大统计学院2017届统计学毕业生，清华大学统计学研究中心直博在读。日常在COS编辑部打杂，经常在北京R会组委会酱油。
   - name: 张晔
-    id: zhanghua
     image: https://cloud.githubusercontent.com/assets/5897454/25801021/5e8a8d62-341e-11e7-8aa4-d4c2bc3a82b2.png
     intro: 严肃科技平台开发工程师，几乎是纯码农一枚。 参与翻译《R绘图系统》、《Rcpp:R与C++的无缝整合》。
   - name: 张桐川
-    id: tctcab
     image: https://raw.githubusercontent.com/tcgriffith/owaraisite/master/static/img/jf_avatar.png
     intro: id tctcab，R语言爱好者，cosx三年水友，中国科学技术大学本硕，澳洲格里菲斯博士生，鹰派，佛系，入关人。
   - name: 张云松
-    id: zhangyunsong
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 毕业于中科院，多年咨询公司和互联网公司从事数据算法、决策分析、风险管理和产品设计的工作，目前是融360风控总监，负责纯线上小额微贷信用贷款产品。
   - name: 张志华
-    id: zhangzhihua
     image: https://user-images.githubusercontent.com/18381242/69481710-8207ab00-0e4e-11ea-8407-44e9f6b65771.JPG
     intro: 北京大学数学科学学院统计学教授。曾经先后在上海交通大学和浙江大学计算机学院任教授。是国际机器学习旗舰刊物 JMLR 的执行编委，并多次受邀担任国际人工智能和机器学习顶级学术会议 ICML、IJCAI、AAAI、NIPS、CVPR、ICCV 等的程序委员/高级程序委员/领域主席。研究兴趣包括：贝叶斯推理与计算、深度强化学习及其在博弈游戏中的应用、非凸优化算法、自然语言处理、大规模机器学习模型的求解算法等。其课程《应用数学基础（深度学习基础）》《强化学习基础》《机器学习导论》《统计机器学习》视频对公众开放。
   - name: 赵鹏
@@ -322,26 +242,20 @@ list:
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 世界知名IT企业性能分析师。在包括多核、分布式以及GPU通用计算方面具有丰富的研究和实践经验，善于帮助客户解决性能问题以及提供并行化方案。R语言爱好者，业余时间创建了ParallelR网站<www.parallelr.com>，以此来分享R和并行计算相关内容。
   - name: 周扬
-    id: zhouyang
     image: https://cloud.githubusercontent.com/assets/7221728/25789219/7fc60408-33e1-11e7-9228-1311ac6b2fa8.png
     intro: 彩虹无线数据科学家，数据科学部总监，浙江大学客座讲师，四川大学生物信息/生物统计专业硕士，拥有国家发明专利一项，先后在NAR、Bioinformatics发表论文三篇，累计影响因子超过18。多年来致力于车联网数据与汽车行业数据的价值研究，为汽车智能制造、车辆工况研究、创新车险等方面提供数据赋能。
   - name: 朱俊辉
-    id: zhujunhui
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: Harry Zhu, R语言爱好者, FinanceR 专栏作者
   - name: 朱雪宁
-    id: zhuxuening
     image: https://cloud.githubusercontent.com/assets/7221728/25791996/7965d06a-33f6-11e7-9a81-0899d4edbb8b.JPG
     intro: 曾任编辑部主编。复旦大学大数据学院助理教授。北京大学光华管理学院商务统计系博士,宾州州立大学统计博士后。研究上关注社交网络分析,时空数据建模等；狗熊会创始团队成员。
   - name: 宗福季
-    id: zongfuji
     image: https://user-images.githubusercontent.com/16065479/30360079-1c9a8c50-9804-11e7-9244-fbb875a3c0cd.jpg
     intro: 宗福季教授，现任香港科技大学工业工程与物流管理系教授，前系主任，及质量实验室主任，国际质量科学院（IAQ）院士，美国统计学会（ASA）会士，美国工业工程师学会（IIE）会士，美国质量学会（ASQ）会士，国际统计协会（ISI）当选会员，香港工程学会（HKIE）会士。任职科大后，宗福季教授积极参与有关质量改善和管理的教育及研究工作，也为不同行业提供咨询及培训服务，包括制造、银行、电信及医疗等行业。宗教授目前是美国质量学会旗舰期刊Journal of Quality Technology（JQT）的主编，工业工程学会期刊IISE Transactions及Technometrics的副编辑。宗教授于国立台湾大学取得机械工程学士学位，其后于美国密歇根大学获工业工程硕士及博士学位。
   - name: flujoo
-    id: flujoo
     image:
     intro: 我写的音乐：https://flujoo.github.io/works/ 我的 R 项目：https://github.com/flujoo/gm 我关于自学的公众号：冬夜骑士/edu_knight
   - name: Cynthia Chen
-    id: cynthiachen
     image: https://user-images.githubusercontent.com/16065479/119380027-0c63e180-bc75-11eb-8551-21d55e5552ac.jpg
     intro: 华盛顿大学土木与环境工程系教授，毕业于加州大学戴维斯分校。她领导的 THINK 实验室的主要研究方向包括出行行为建模，用户行为干预以及其对交通网络的效果等。
