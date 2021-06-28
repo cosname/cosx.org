@@ -2,6 +2,7 @@
 title: R与并行计算
 date: '2016-09-08T23:40:01+00:00'
 author: 赵鹏
+author_id: zhaopeng
 categories:
   - R语言
   - 统计计算
