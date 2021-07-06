@@ -63,7 +63,7 @@ $$`
 Y_i = Y_i (Z_i)  = Z_i Y_i (1) + (1 - Z_i)Y_i(0).
 $$`
 
-这个恒等式似乎显而易见：从数学上讲，它无非说明，当 `$Z_i = 1$` 时，`$Y_i = Y_i (1)$`；当 `$Z_i = 0$` 时，`$Y_i = Y_i (0)$`。 但是，我在和朱迪亚.珀尔（Judea Pearl）交流时，他认为这是因果推断最重要的恒等式，因为它联系了左边我们能够观测到的结果和右边的潜在结果。
+这个恒等式似乎显而易见：从数学上讲，它无非说明，当 `$Z_i = 1$` 时，`$Y_i = Y_i (1)$`；当 `$Z_i = 0$` 时，`$Y_i = Y_i (0)$`。 但是，我在和朱迪亚•珀尔（Judea Pearl）交流时，他认为这是因果推断最重要的恒等式，因为它联系了左边我们能够观测到的结果和右边的潜在结果。
 
 最终能够被观测的数据是`$\{(Z_i, Y_i) : i = 1, \cdots , n\}$`。一个显而易见的估计量是
 
@@ -152,7 +152,7 @@ $$`
 `$$ 
 \begin{aligned}
 P(X) &= P(X_1) \cdot P(X_2) \cdot P(X_3\mid X_1,X_2) \cdot P(X_4\mid X_1) \\
-&= \cdot P(X_5\mid X_1,X_4) \cdot P(X_6\mid X_5) \cdot P(X_7\mid X_2, X_4, X_6).
+& \cdot P(X_5\mid X_1,X_4) \cdot P(X_6\mid X_5) \cdot P(X_7\mid X_2, X_4, X_6).
 \end{aligned}
 $$`
 
@@ -187,7 +187,7 @@ $$`
 `$$
 \begin{aligned}
 P(X\mid \text{do}(X_5=1)) &= P(X_1) \cdot P(X_2) \cdot P(X_3\mid X_1,X_2) \cdot P(X_4\mid X_1,X_2,X_3) \\
-&= \cdot P(X_6\mid X_5) \cdot P(X_7\mid X_2, X_4, X_6) \cdot I(X_5=1).
+& \cdot P(X_6\mid X_5) \cdot P(X_7\mid X_2, X_4, X_6) \cdot I(X_5=1).
 \end{aligned}
 $$`
 
@@ -296,7 +296,7 @@ $$`
 因果推断的研究，对规范我国药物批准和政策评估，也大有帮助。比如，前面提到的 Prentice 和鲁宾，都常常为美国食品药品监督管理局做咨询，解决他们在评估药效方面遇到的困难。我国的生物医药行业在未来有很大的腾飞空间，因果推断的学者们将发挥他们的巨大作用。再如，美国顶级高校的公共政策学院或者政府学院，都有研究因果推断的专家，他们研究公共政策对社会福利的影响，对于优化社会资源，起着重要作用。研究因果推断的学者，以后也应该走出象牙塔，承担社会责任。
 
 ## 注释
-1. A. Gelman and A. Vehtari, What are the most important statistical ideas of the past 50 years? 见https://arxiv.org/abs/2012.00174。 第一作者曾获得年轻统计学家的最高奖 COPSS 奖章。
+1. A. Gelman and A. Vehtari, What are the most important statistical ideas of the past 50 years? 见<https://arxiv.org/abs/2012.00174>。 第一作者曾获得年轻统计学家的最高奖 COPSS 奖章。
 
 2. “[T]he sole end of science is the honor of the human mind.” —— Carl Jacobi（卡尔• 雅可比）
 
