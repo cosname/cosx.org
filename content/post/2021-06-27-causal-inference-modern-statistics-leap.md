@@ -116,7 +116,7 @@ $$`
 我们还可以证明如下的公式：
 
 `$$
-\tau = E\bigg\{ \frac{Z_i Y_i}{e(X_i)} \bigg\} - E\bigg\{ \frac{(1-Z_i)Y_i}{1 - e(X_i)} \bigg\},
+\tau = E\left\{ \frac{Z_i Y_i}{e(X_i)} \bigg\} - E\bigg\{ \frac{(1-Z_i)Y_i}{1 - e(X_i)} \right\},
 $$`
 
 其中 `$e(X_i) = P (Z_i = 1 \mid X_i)$` 是处理的指示变量给定协变量的条件概率。 这个公式也有比较直观的解释：处理组和对照组的个体并非完全随机选择的，我们需要根据他们入组的概率进行调整。Paul Rosenbaum 和鲁宾在他们1983 年的 *Biometrika* 文章中指出，`$e(X_i)$` 在观察性研究的因果推断中， 发挥着至关重要的作用，他们把这个条件概率称为“倾向得分”（propensity score）。这个公式有类似的、不平凡的意义：右边的量仅仅依赖于可以观测的变量 `$(Z_i, X_i, Y_i)$` 的联合分布。一旦拟合了 `$Z_i$` 关于 `$X_i$` 的统计模型，我们可以得到 `$e(X_i)$` 的估计，则可以进一步估计 `$\tau$`。这个估计方法涉及到了用条件概率的逆进行加权，所以在文献中它也被称为“逆概加权”（inverse probability weighting ；IPW）。
