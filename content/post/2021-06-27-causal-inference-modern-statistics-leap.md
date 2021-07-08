@@ -9,7 +9,7 @@ tags:
   - 统计
 slug: causal-inference-modern-statistics-leap
 meta_extra: "编辑：雷博文"
-forum_id: 
+forum_id: 422373
 ---
 
 > 转载自《数学文化》2021/第12卷第2期
