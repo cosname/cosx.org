@@ -36,7 +36,7 @@ list:
     intro: 毕业于中央财经大学，感兴趣领域是数据挖掘技术（R语言）在金融投资分析和计量经济学中的应用。博客：<http://yishuo.org>；微博：<http://weibo.com/dengyishuo>。
   - name: 丁鹏
     image: https://statistics.berkeley.edu/sites/default/files/styles/photo_main/public/faculty/pengding.jpg
-    intro: 2004-2011年在北京大学概率统计系学习，获得学士和硕士学位；2011-2015年在哈佛大学统计系学习，获得博士学位；2015年在哈佛大学流行病学系做博士后；2016年加入伯克利统计系任教。研究方向是因果推断。
+    intro: 2004-2011年在北京大学概率统计系学习，获得学士和硕士学位；2011-2015年在哈佛大学统计系学习，获得博士学位；2015年在哈佛大学流行病学系做博士后；2016年起任教于加州大学伯克利分校统计系，2021年晋升为副教授。研究方向是因果推断。
   - name: 杜亚磊
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 掉入R坑有多年，如今回首已惘然；也曾痴心于Python，偶尔兼职写前端。现任51talk算法工程师，探索教育行业里的数据价值。
