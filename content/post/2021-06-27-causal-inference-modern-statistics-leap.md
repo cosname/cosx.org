@@ -105,9 +105,9 @@ $$`
 
 `$$
 \begin{aligned}
-\tau &= \sum_x {E(Y_i(1) \mid X_i=x) − E(Y_i (0) \mid X_i = x)}P(X_i = x)\\
-&= \sum_x {E(Y_i(1) \mid Z_i = 1, X_i = x) − E(Y_i (0) \mid Z_i = 0, X_i = x)}P(X_i = x)\\
-&= \sum_x {E(Y_i \mid Z_i = 1, X_i = x) − E(Y_i \mid Z_i = 0, X_i = x)}P(X_i = x).
+\tau &= \sum_x \{E(Y_i(1) \mid X_i=x) − E(Y_i (0) \mid X_i = x)\}P(X_i = x)\\
+&= \sum_x \{E(Y_i(1) \mid Z_i = 1, X_i = x) − E(Y_i (0) \mid Z_i = 0, X_i = x)\}P(X_i = x)\\
+&= \sum_x \{E(Y_i \mid Z_i = 1, X_i = x) − E(Y_i \mid Z_i = 0, X_i = x)\}P(X_i = x).
 \end{aligned}
 $$`
 
