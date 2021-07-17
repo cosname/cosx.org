@@ -86,7 +86,7 @@ forum_id: 419150
 此外，我们希望选出来的词项具有一定的代表性，所以在构造词频矩阵的时候，我们要求每一个词项在文章集合中至少出现过两次。
 这样就避免了一些特殊的词语搭配因为出现在某一篇访问量极高的文章中而被挑选出来。
 
-在R中，可以使用`text2vec`包(https://cran.r-project.org/web/packages/text2vec/index.html)很方便地完成这一过程，代码如下：
+在R中，可以使用 [`text2vec`包](https://cran.r-project.org/web/packages/text2vec/index.html)很方便地完成这一过程，代码如下：
 
 ```r
 library(text2vec)
@@ -143,5 +143,4 @@ title_mat  = create_dtm(it, vectorizer)
 最后的最后，我们通过论文标题这个小窗口瞥见了统计学过去十年的一个缩影。下一个十年又会是怎样的光景呢？我们拭目以待。
 
 附：文中数据和代码都放在 [GitHub](https://github.com/yixuan/COS-article/tree/master/statistics-on-article-titles/) 上。
-
 
