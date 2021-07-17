@@ -86,7 +86,7 @@ forum_id: 419150
 此外，我们希望选出来的词项具有一定的代表性，所以在构造词频矩阵的时候，我们要求每一个词项在文章集合中至少出现过两次。
 这样就避免了一些特殊的词语搭配因为出现在某一篇访问量极高的文章中而被挑选出来。
 
-在R中，可以使用`text2vec`包(https://cran.r-project.org/web/packages/text2vec/index.html)很方便地完成这一过程，代码如下：
+在R中，可以使用`text2vec`包 <https://cran.r-project.org/web/packages/text2vec/index.html> 很方便地完成这一过程，代码如下：
 
 ```r
 library(text2vec)
