@@ -25,9 +25,13 @@ forum_id: 422399
 
 在方法/算法层面，建议考虑设置三门宽口径专业课程。第一门是“统计学原理“或“统计思维”，该课程围绕估计、推理、学习、置信区间、假设检验讲授其中统计原理和思想，包括频率派和贝叶斯派，可以取材《All of Statistics》(Larry Wasserman) 中的第二部分，以及经验贝叶斯和信息论相关内容。第二门是“机器学习”或“统计模型与方法”，内容包括多元统计分析、多元回归分析、高维统计和贝叶斯分析等，可以取材《All of Statistics》中的第二部分、《Computer Age Statistical Inference》(Bradley Efron & Trevor Hastie)第三部分和《Information Theory, Inference, and Learning Algorithms》(David MacKay) 部分内容。第三门课是“统计计算与随机模拟”，可以参考《Computational Statistics》（Geof Givens and Jennifer  Hoeting）和 《Simulation》(Sheldon Ross)。此外，如果有条件，建议开设一门高年级专业选修课《高等机器学习》来讲述深度学习、强化学习和因果学习等机器学习的较为前沿主题。
 
-![all-of-statistics](https://user-images.githubusercontent.com/18381242/126542756-3b5b48dd-7e0e-4501-b757-e46d86ea25a1.jpg)![computational-statistics](https://user-images.githubusercontent.com/18381242/126542763-f34696be-3953-4147-8a50-4d2fdc4dc5e5.jpg)
+![all-of-statistics](https://user-images.githubusercontent.com/18381242/126542756-3b5b48dd-7e0e-4501-b757-e46d86ea25a1.jpg)
 
-![computer-age](https://user-images.githubusercontent.com/18381242/126542808-16ea4bdc-a923-4fca-ba75-6a4783971665.jpg)![simulation](https://user-images.githubusercontent.com/18381242/126542810-dac217fc-7a51-44f2-bed7-dab74d477159.jpg)
+![computational-statistics](https://user-images.githubusercontent.com/18381242/126542763-f34696be-3953-4147-8a50-4d2fdc4dc5e5.jpg)
+
+![computer-age](https://user-images.githubusercontent.com/18381242/126542808-16ea4bdc-a923-4fca-ba75-6a4783971665.jpg)
+
+![simulation](https://user-images.githubusercontent.com/18381242/126542810-dac217fc-7a51-44f2-bed7-dab74d477159.jpg)
 
 超越本专业，拓宽学生知识，特别是培养学生的计算能力，建议学生选修计算机课程“计算机系统导论”（参考《Computer Systems: A Programmer’s Perspective》by Bryant & O’Hllaron）和“并行编程”（参考《Programming Massively Parallel Processors》by David Kirk & Wen-mei Hwu）。另外，我注意到耶鲁大学统计与数据科学系 Daniel Spielman教授最近开设了一门课“Computation and Optimization”（S&DS631）。这门课内容涵盖了数值线性代数、优化和自动微分等内容，对统计和数据科学专业学生非常有用，值得我们借鉴和引进。
 
