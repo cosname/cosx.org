@@ -13,7 +13,7 @@ tags:
   - 因果推断
   - 相对风险
   - 肺癌
-slug: casuality8-smoke-and-lung-cancer
+slug: causality8-smoke-and-lung-cancer
 forum_id: 418970
 ---
 
