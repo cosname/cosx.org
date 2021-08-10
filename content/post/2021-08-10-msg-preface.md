@@ -3,6 +3,9 @@ title: 《现代统计图形》之自序后记
 author: 
   - 谢益辉
   - 赵鹏
+author_id: 
+  - yihui
+  - pzhaonet
 date: '2021-08-10'
 categories:
   - 推荐文章
