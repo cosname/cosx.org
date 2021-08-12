@@ -60,6 +60,9 @@ list:
   - name: 高涛
     image: https://user-images.githubusercontent.com/1142836/28492456-ea8789ca-6f36-11e7-8b47-91eada415a4c.jpg
     intro: 高涛，中国人民大学2012级数理统计研究生，2009年在太云带领下加入COS，给COS编辑部和R会议打杂，参与《R语言实战》《ggplot2：数据分析与图形艺术》书籍翻译。对统计机器学习、优化算法、时序预测感兴趣，之前混迹于互联网圈，现在从事量化投资。博客：<http://joegaotao.github.io/>。
+  - name: 郭旭
+    image: https://user-images.githubusercontent.com/26518047/129151825-20b4f095-19d3-431d-8491-7b4c3185f480.jpg
+    intro: 郭旭博士，现为北京师范大学统计学院副教授，博士生导师。研究方向为大范围推断、高维数据分析、模型设定检验、半参数分析和因果推断等，并取得了一系列的研究成果。在包括统计学顶级期刊JRSSB，JASA和 Biometrika在内SCI和SSCI期刊发表论文30多篇。曾荣获北师大第十一届“最受本科生欢迎的十佳教师”。
   - name: 何通
     image: https://avatars2.githubusercontent.com/u/1289856
     intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任AWS Applied Scientist，为深度学习框架MXNet添砖加瓦。
