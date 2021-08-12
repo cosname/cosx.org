@@ -30,7 +30,7 @@ Rao出生于1920年9月10日，是家中的第八个孩子。他的父亲是一�
 
 在机缘巧合下，Rao和一个曾到Calcutta参加统计学培训项目的年轻人进行了一次交谈。在认识了印度统计研究所(ISI)的一些研究人员同时了解了一些正在进行的项目后，Rao确信这个统计学培训项目不仅能够提高他的就业前景还能提供一个继续做研究的机会。就这样，Rao带着妈妈给的每月30卢比在1941年1月1日进入了ISI。
 
-![](https://files.mdnice.com/user/4038/79b3a685-bf6d-4e3c-b572-c40908f9355b.png)
+![](https://user-images.githubusercontent.com/18381242/129157221-c34ab31c-1795-46f3-b92a-14693ee6409b.png)
 
 传奇科学家、数学家和统计学家Prasanta Chandra Mahalanobis对Rao的一生产生了非常重要和深远的影响。Mahalanobis在ISI被特指为“Professor”。在剑桥读物理学时，Mahalanobis偶然看到了Biometrika的一期复印本（Biometrika是由Karl Pearson，Francis Galton和Raphael Weldon一起创建的，现仍是统计学领域最顶尖的四个期刊之一。）统计学在当时正逐渐成长为一门新的学科，而Mahalanobis很快就意识到统计学在很多应用领域的潜在显著影响。Mahalanobis回到印度之后在1931年创建了ISI。
 
@@ -50,7 +50,7 @@ Rao在1945年发表的文章"Information and accuracy attainable in the estimati
 
 Cramer-Rao下界(CRLB)在几乎所有科学和工程领域都有重要的应用。文献当中有很多推广比如量子CRLB和贝叶斯CRLB。Dembo, Cover和Thomas(1991)综述了信息理论中的各种不等式及其和数学和物理等领域中的不等式的联系。他们进一步展示了Weyl-Heisenberg不确定性准则可以从Cramer-Rao不等式得到。
 
-![](https://files.mdnice.com/user/4038/290c14d7-7e52-4318-b4c3-ef1df8bb3998.png)
+![](https://user-images.githubusercontent.com/18381242/129157288-69e1c33d-0642-47ac-9775-34ebf5b77999.png)
 
 ### 2.2 Rao-Blackwell定理
 
@@ -86,9 +86,9 @@ Mahalanobis和Fisher都是非凡的人物，对工作极度热情，但又经常
 
 Rao在1948年8月回到ISI并在1949年7月被授予教授职位。当时他还不到29岁！
 
-![](https://files.mdnice.com/user/4038/534f119c-cadc-4124-be1f-1f7b53ae100d.png)
+![](https://user-images.githubusercontent.com/18381242/129157498-23a29d3d-3504-4782-b23e-d163cb57b6ef.png)
 
-![](https://files.mdnice.com/user/4038/e6986dcb-bc08-4807-877a-f32f86bd390e.png)
+![](https://user-images.githubusercontent.com/18381242/129157665-69951e6d-ce93-4e1f-b2d1-03875e04950c.png)
 
 ## 4. 1950-1978: Rao和印度统计研究所
 
@@ -102,7 +102,7 @@ Rao回国后的第一个工作是完成他的著作“生物学研究中的高�
 
 在以ISI为中心的印度统计学，1930-1960这段时期经常被指为统计学的”黄金年代“。ISI邀请了一系列知名学者来访，其中包括Norbert Weiner, Ragnar Frisch, John Kenneth Galbraith, J. B. S. Haldane, Walter Shewhart, A. N. Kolmogorov以及J. L. Doob。Rao鼓励研究所的老师和博士生要抓住这些难得的机会，去主动了解统计学和相关学科的新领域。这段时期的学术氛围可以说是非常活跃的。
 
-![](https://files.mdnice.com/user/4038/d3078c6d-53c4-4aa9-b1cc-35240a8f82c8.png)
+![](https://user-images.githubusercontent.com/18381242/129157728-30612711-588b-4b47-ab67-7119f458a7e7.png)
 
 为了满足政府和工业界的需求，Rao更新了ISI的培训项目，增加了关于统计质量控制和工业统计的课程。在1953年，ISI增加了一个新的统计质量控制的分会来给工业界提供咨询服务。这段时期的一位访问人员是日本的一位工程师和统计学家Genichi Taguchi。在二战后，他和Edward Deming一起帮助日本的公司采用了质量控制的原理。Rao关于正交表的工作对于稳健设计的发展以及工业试验标准的制定起到了非常关键的作用。
 
@@ -116,7 +116,7 @@ Rao同时还主导了国际统计教育中心的培训项目。他还参与了�
 
 Mahalanobis在1972去世后，Rao开始担任ISI的领导者。之后Rao被任命为“尼赫鲁教授”。在匹兹堡的另一次机遇将再次改变他的职业生涯。
 
-![](https://files.mdnice.com/user/4038/440cf2fa-2af2-44ec-b418-9f86f48d39fb.png)
+![](https://user-images.githubusercontent.com/18381242/129157803-53b85f40-8d3e-4871-b274-6fa5e54e4b6e.png)
 
 ## 5. 在美国的岁月
 
@@ -165,9 +165,9 @@ Rao还研究了如何确定因子个数。
 
 在匹斯堡大学工作期间，Rao和Krishnaiah从美国空军获批了很多项目来从事信号处理方面的理论和方法研究。美国空军感兴趣于如何提出有效的统计方法来分析来自多个传感器的含噪音的信号。Rao带领他的团队发展了相应的参数估计、假设检验、模型选择以及有效算法等。
 
-![](https://files.mdnice.com/user/4038/84887185-45e6-45c5-a16e-3842bd1b1646.png)
+![](https://user-images.githubusercontent.com/18381242/129157976-83c62fc4-4b59-4de3-a95c-583b04ac211b.png)
 
-![](https://files.mdnice.com/user/4038/fc1d7733-bd7b-4829-8d0e-82ce97bac665.png)
+![](https://user-images.githubusercontent.com/18381242/129158057-2a12918f-b49c-46f4-b2e7-f6c60167ccce.png)
 
 ## Rao的远见：大数据时代的统计
 
