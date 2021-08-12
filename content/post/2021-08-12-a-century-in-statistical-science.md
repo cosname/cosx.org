@@ -1,5 +1,5 @@
 ---
-title: "C. Radhakrishna Rao: 统计学的一百年"
+title: "C.R.Rao: 统计学的一百年"
 author: 
 date: "2021-08-12"
 categories:
@@ -35,12 +35,11 @@ Rao在这里结识了当时ISI非常杰出的研究人员，比如R. C. Bose, S.
 
 ## 2. 1945-创造传奇的突破性文章！
 
-Rao在1945年发表的文章"Information and accuracy attainable in the estimation of statistical parameters"
-Bulletin of the Calcutta Mathematical Society, Vol.37, No.3, pp.81-91, 1945为他的传奇人生增添了重重的一笔。这篇只有10页的论文表述简洁论证优美，却呈现了统计推断中两个基础性的结果并且孕育了信息几何这个领域。
+Rao在1945年发表的文章"Information and accuracy attainable in the estimation of statistical parameters" Bulletin of the Calcutta Mathematical Society, Vol.37, No.3, pp.81-91, 1945为他的传奇人生增添了重重的一笔。这篇只有10页的论文表述简洁论证优美，却呈现了统计推断中两个基础性的结果并且孕育了信息几何这个领域。
 
 ### 2.1 Cramer-Rao不等式-信息界
 
-在20世纪20年代早期，R.A.Fisher引入了Fisher信息这一概念。Fisher信息$I(\theta)$可用来测量一个随机样本$X_1,\cdots,X_n$包含未知参数$\theta$的信息量。它测量对数似然函数的期望曲率；对数似然弯曲程度越大，数据就能提供更多关于参数的信息。Fisher证明对于极大似然估计的渐近方差存在一个下界。
+在20世纪20年代早期，R.A.Fisher引入了Fisher信息这一概念。Fisher信息`$I(\theta)$`可用来测量一个随机样本`$X_1,\cdots,X_n$`包含未知参数`$\theta$`的信息量。它测量对数似然函数的期望曲率；对数似然弯曲程度越大，数据就能提供更多关于参数的信息。Fisher证明对于极大似然估计的渐近方差存在一个下界。
 
 在1945年的文章里，Rao证明对于任意无偏估计，它的方差都大于等于Fisher信息的倒数。这个结果通过巧妙地利用Cauchy-Schwarz不等式进行了论证。同一时期，瑞典数学家Harold Cramer也独立地建立了信息不等式并把该结果收录在他于1946年发表的书籍《统计学的数学方法》当中。
 
@@ -50,7 +49,7 @@ Cramer-Rao下界(CRLB)在几乎所有科学和工程领域都有重要的应用�
 
 ### 2.2 Rao-Blackwell定理
 
-在1945年所著文章当中建立的第二个基础性结果涉及利用充分统计量来提高估计量的效率。Rao在文章中指出“如果对于参数$\theta$，存在一个充分统计量及一个无偏估计，那么最优无偏估计量一定是充分统计量的一个函数"。严格地，这个结果表明，如果$g(X)$是未知参数$\theta$的一个估计，那么将$g(X)$对充分统计量$T(X)$取条件期望能够有更小的均方误差。在1947年的一篇文章中，David Blackwell证明了同样的结果。这一结果被称为Rao-Blackwell定理，而将一个估计替换为相应的条件期望这一过程被称为Rao-Blackwell化。这一经典结果也有很多现代化的应用。Doucet et al. (2000)利用Rao-Blackwell化来提高不同动态贝叶斯网络粒子滤波的效率。Robert and Roberts(2021)则讨论了Rao-Blackwell化在Gibbs抽样以及更一般化的MCMC中的应用。
+在1945年所著文章当中建立的第二个基础性结果涉及利用充分统计量来提高估计量的效率。Rao在文章中指出“如果对于参数`$\theta$`，存在一个充分统计量及一个无偏估计，那么最优无偏估计量一定是充分统计量的一个函数"。严格地，这个结果表明，如果`$g(X)$`是未知参数`$\theta$`的一个估计，那么将`$g(X)$`对充分统计量`$T(X)$`取条件期望能够有更小的均方误差。在1947年的一篇文章中，David Blackwell证明了同样的结果。这一结果被称为Rao-Blackwell定理，而将一个估计替换为相应的条件期望这一过程被称为Rao-Blackwell化。这一经典结果也有很多现代化的应用。Doucet et al. (2000)利用Rao-Blackwell化来提高不同动态贝叶斯网络粒子滤波的效率。Robert and Roberts(2021)则讨论了Rao-Blackwell化在Gibbs抽样以及更一般化的MCMC中的应用。
 
 ### 2.3 微分几何和统计：信息几何的开端
 
@@ -96,8 +95,7 @@ Rao回国后的第一个工作是完成他的著作“生物学研究中的高�
 
 在ISI期间，Rao基本保持同时指导5-6个博士生，而且涉及统计学完全不同的领域。其中包括抽样调查(A.C. Das, Des Raj)，多元分析(J. Roy)，质量控制(A. Mathai),特征化(R. G. Laha), 实验设计 (I. M. Chakraborti), 方向性数据 (J.S. Rao), 组合和图理论(U.S. R. Murthy, S. B. Rao)。基于他在剑桥所习得的知识和见解，他同时还指导学生从事统计遗传学(D. C. Rao, K. Dronamraju, Ranajit Chakraborty), 概率论和随机过程(S. R. S. Varadhan, V. Varadarajan, K. R. Parthasarathy)以及博弈论 (T. Parthasarathy, T.E.S. Raghavan)。在对他而言相对较新的领域，他会让学生仔细阅读相关文献并撰写综述。他非常善于在不同领域之间建立符合直觉的联系并提供独特的解决途径。
 
-在以ISI为中心的印度统计学，1930-1960这段时期经常被指为统计学的”黄金年代“。ISI邀请了一系列知名学者来访，其中包括Norbert Weiner, Ragnar Frisch, John Kenneth Galbraith, J. B. S. Haldane, Walter Shewhart, A.
-N. Kolmogorov以及J. L. Doob。Rao鼓励研究所的老师和博士生要抓住这些难得的机会，去主动了解统计学和相关学科的新领域。这段时期的学术氛围可以说是非常活跃的。
+在以ISI为中心的印度统计学，1930-1960这段时期经常被指为统计学的”黄金年代“。ISI邀请了一系列知名学者来访，其中包括Norbert Weiner, Ragnar Frisch, John Kenneth Galbraith, J. B. S. Haldane, Walter Shewhart, A. N. Kolmogorov以及J. L. Doob。Rao鼓励研究所的老师和博士生要抓住这些难得的机会，去主动了解统计学和相关学科的新领域。这段时期的学术氛围可以说是非常活跃的。
 
 ![](https://files.mdnice.com/user/4038/d3078c6d-53c4-4aa9-b1cc-35240a8f82c8.png)
 
@@ -105,11 +103,9 @@ N. Kolmogorov以及J. L. Doob。Rao鼓励研究所的老师和博士生要抓住
 
 Rao同时还主导了国际统计教育中心的培训项目。他还参与了全国抽样调查的设计和规程的制定。
 
-为了促进计量经济学和数量经济学的教学和研究，在1960年成立了印度计量经济协会。Rao是其中一个首创者。Ragnar Frisch是挪威经济学家，他在1969年和Jan
-Tinbergen共享了第一届的诺贝尔经济学家。同时他也是计量经济学在20世纪30年代创立时的其中一位创立者。Rao发表在Econometrica的文章对Frisch关于结构方程所提出的一个特征化问题提出了一个解决思路。Rao的很多工作都对经济学的发展起到了很大影响。
+为了促进计量经济学和数量经济学的教学和研究，在1960年成立了印度计量经济协会。Rao是其中一个首创者。Ragnar Frisch是挪威经济学家，他在1969年和Jan Tinbergen共享了第一届的诺贝尔经济学家。同时他也是计量经济学在20世纪30年代创立时的其中一位创立者。Rao发表在Econometrica的文章对Frisch关于结构方程所提出的一个特征化问题提出了一个解决思路。Rao的很多工作都对经济学的发展起到了很大影响。
 
-在1953年，Rao前往University of Illinois at Urbana-
-Champaign (UIUC)做了为期一年的访问研究教授。在此期间，Rao参加了编程课程。返回ISI后，Rao开始推广计算机在印度的使用。但由于很多人担心自动化会导致失业从而极大地延缓了计算机的使用。多年后，Rao说：“我们失去了基于复杂计算来发展统计方法的大好机会”。
+在1953年，Rao前往University of Illinois at Urbana-Champaign (UIUC)做了为期一年的访问研究教授。在此期间，Rao参加了编程课程。返回ISI后，Rao开始推广计算机在印度的使用。但由于很多人担心自动化会导致失业从而极大地延缓了计算机的使用。多年后，Rao说：“我们失去了基于复杂计算来发展统计方法的大好机会”。
 
 尽管有很重的行政事务，Rao仍然坚持科研工作。他开始写一本统计学基础的新书。这本发表于1965年的书籍“线性统计推断及其应用”现今已成为统计学专业学生的必读书籍。同时Rao在Mahalanobis之后担任Sankhya期刊的主编。
 
@@ -137,12 +133,11 @@ Rao开创性的贡献涉猎理论和应用统计学几乎所有领域以及很�
 
 ### 6.1 概率分布的刻画
 
-在某一天他偶然读到了H. V. Allen撰写了一篇文章，Rao开始对特征化问题产生兴趣。这篇文章对以下由Ragnar Frisch所提的问题给出了一个解决方案。该问题如下：
-若两个随机变量$X_1,X_2$满足
+在某一天他偶然读到了H. V. Allen撰写了一篇文章，Rao开始对特征化问题产生兴趣。这篇文章对以下由Ragnar Frisch所提的问题给出了一个解决方案。该问题如下：若两个随机变量`$X_1,X_2$`满足
 
-$$X_1=a\xi+\alpha, X_2=b\xi+\beta$$
+`$$X_1=a\xi+\alpha, X_2=b\xi+\beta$$`
 
-在什么条件下，$X_1$对$X_2$的回归是线性的。这里$\xi,\alpha,\beta$是独立变量而$a,b$是未知常数。Rao的结果建立了允许$\xi，\beta$方差无穷的充分必要条件。这部分结果是Rao硕士论文的一部分，并于1947年发表在Econometrica。他在这方面的研究给出了Poisson, gamma, 一元多元正态，无穷方差稳定分布的重要刻画。
+在什么条件下，`$X_1$对$X_2$`的回归是线性的。这里`$\xi,\alpha,\beta$`是独立变量而`$a,b$`是未知常数。Rao的结果建立了允许`$\xi，\beta$`方差无穷的充分必要条件。这部分结果是Rao硕士论文的一部分，并于1947年发表在Econometrica。他在这方面的研究给出了Poisson, gamma, 一元多元正态，无穷方差稳定分布的重要刻画。
 
 ### 6.2 广义逆
 Rao考虑了在正则方程中的矩阵奇异时最小二乘的一般性理论。在1955年的文章中，Rao提出了奇异矩阵伪逆的概念。同一年，Roger Penrose在Proceedings of the Cambridge Philosophical Society发表了”矩阵的广义逆“。Roger Penrose在2020年获得了诺贝尔物理学奖。尽管Rao所提伪逆不满足Moore-Penrose的限制，但Rao的伪逆对于最小二乘在一般情形下提供了一个答案。
@@ -151,9 +146,9 @@ Rao考虑了在正则方程中的矩阵奇异时最小二乘的一般性理论�
 
 在Mahalanobis距离的计算中，涉及协方差矩阵的逆。在矩阵较大时，在当时是不易求解的。Rao对此提出了一种简化求解的方法。在跟随Fisher攻读博士学位期间，Rao将Fisher对分类问题的工作进行了推广。
 
-在1948年，Rao将一元方差分析推广到多元情形。Rao发展了多元方差分析当中常用统计量Wilk$\lambda$的近似方法。
+在1948年，Rao将一元方差分析推广到多元情形。Rao发展了多元方差分析当中常用统计量Wilk `$\lambda$` 的近似方法。
 
-在分析一些二元数据时，Rao发现不管基于Mahalanobis距离还是Hotelling $T$统计量都没有显著性，但边际检验却有显著性。Healy将这种现象称为Rao悖论。这也反映了维数诅咒问题。
+在分析一些二元数据时，Rao发现不管基于Mahalanobis距离还是Hotelling `$T$`统计量都没有显著性，但边际检验却有显著性。Healy将这种现象称为Rao悖论。这也反映了维数诅咒问题。
 
 Rao将方差分析进行了推广，提出了多样性分析，在生态学、社会学和经济学等学科有很多应用。
 
@@ -173,7 +168,6 @@ Rao还研究了如何确定因子个数。
 
 在长达接近80年的职业生涯中,Rao不仅见证了统计学逐渐发展成一门独立的科学学科，而且是为数不多的统计学基石的建立者之一。他明白，对于统计学来讲，要想维持一个有影响的学科，统计学必须适应不断变化的世界。
 
-在二十世纪的前半部分，统计学的基础是通过运用强大的数学和概率论工具发展的。Efron在他的文章”统计世纪“中，把这段时期称为统计学理论的黄金年代。在这篇文章里面，Efron还写到”具有像Fisher, Neyman, Pearson, Hotelling, Wald,
-Cramer和Rao那样才智的人将统计学理论引向成熟“。
+在二十世纪的前半部分，统计学的基础是通过运用强大的数学和概率论工具发展的。Efron在他的文章”统计世纪“中，把这段时期称为统计学理论的黄金年代。在这篇文章里面，Efron还写到“具有像Fisher, Neyman, Pearson, Hotelling, Wald, Cramer和Rao那样才智的人将统计学理论引向成熟”。
 
 在和Mahalanobis以及Fisher的工作中，Rao意识到由实际应用驱动的研究的重要性。到了二十世纪50年代，Rao开始体会到计算机和计算方法在统计方法发展中的关键作用。作为一个具有极端预见性的科学家，Rao预见了大数据革命以及由数学、统计学和计算机科学所构成的交叉学科。在2007年，他建立了C.R. Rao数学、统计学和计算机科学前沿研究所(AIMSCS)。Rao持续拓展统计学的边界来解决大数据时代和人工智能中的挑战问题。
