@@ -7,9 +7,11 @@ date: '2021-08-12'
 categories:
   - 推荐文章
 tags:
+  - 数据科学
+  - 理论
+  - 实践
+  - 统计教育
   - 统计学
-  - 一百年
-  - 大数据时代
 slug: a-century-in-statistical-science
 meta_extra: "编译：郭旭、编辑：雷博文"
 forum_id: 422441
