@@ -20,7 +20,7 @@ forum_id: 422441
 
 这篇文章概述了C. R. Rao这位百岁老人的传奇人生。他的一生经历了Pearson，Fisher也经历了大数据和人工智能。他的一生就是统计学的一百年。Rao现在还健在，他将继续见证统计学的第二个一百年！
 
-![C. R. Rao](https://files.mdnice.com/user/4038/62bba6fe-72f2-4d55-a3c1-b7319aeb9af4.png)
+![](https://files.mdnice.com/user/4038/62bba6fe-72f2-4d55-a3c1-b7319aeb9af4.png)
 
 ## 1. Rao的早期时光
 
