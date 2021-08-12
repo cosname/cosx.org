@@ -3,6 +3,7 @@ title: 'C.R.Rao: 统计学的一百年'
 author: 
   - Nandini Kannan
   - Debasis Kundu
+  - 郭旭
 date: '2021-08-12'
 categories:
   - 推荐文章
