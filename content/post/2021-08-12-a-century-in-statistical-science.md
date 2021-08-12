@@ -1,7 +1,6 @@
 ---
-title: "C.R.Rao: 统计学的一百年"
-author: 
-  - 郭旭
+title: C.R.Rao: 统计学的一百年
+author: "郭旭"
 date: "2021-08-12"
 categories:
   - 推荐文章
