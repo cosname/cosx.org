@@ -1,16 +1,20 @@
 ---
-title: C.R.Rao: 统计学的一百年
-author: "郭旭"
-date: "2021-08-12"
+title: 《现代统计图形》之《自序》与《后记》
+author: 
+  - 谢益辉
+  - 赵鹏
+author_id: 
+  - yihui
+  - pzhaonet
+date: '2021-08-10'
 categories:
   - 推荐文章
 tags:
-  - 统计学
-  - 一百年
-  - 大数据时代
-slug: a-century-in-statistical-science
-meta_extra: "编辑：雷博文"
-forum_id: 422441
+  - 统计图形
+slug: msg-preface
+meta_extra: "编辑：黄湘云"
+description: "从我 2007 年开始写这本书起，就不断有人问我何时出版。当年我把这本书的信息放在博客的某个网页上，后来我把这个网页藏了起来，但现在仍然可以看见当年很多读者在下面的留言。有些读者甚至说“银子都准备好了”。一晃十三年过去，我也从一个不靠谱的小青年成长为一个不靠谱的小中年，唯一不变的是这书仍然没有出版，惊喜不惊喜……"
+forum_id: 422432
 ---
 
 
