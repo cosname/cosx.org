@@ -1,6 +1,8 @@
 ---
 title: C.R.Rao: 统计学的一百年
-author: "郭旭"
+author: 
+  - Nandini Kannan
+  - Debasis Kundu
 date: '2021-08-12'
 categories:
   - 推荐文章
@@ -9,7 +11,7 @@ tags:
   - 一百年
   - 大数据时代
 slug: a-century-in-statistical-science
-meta_extra: "编辑：雷博文"
+meta_extra: "编译：郭旭、编辑：雷博文"
 forum_id: 422441
 ---
 
