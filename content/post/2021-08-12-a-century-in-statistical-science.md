@@ -142,7 +142,7 @@ Rao开创性的贡献涉猎理论和应用统计学几乎所有领域以及很�
 
 `$$X_1=a\xi+\alpha, X_2=b\xi+\beta$$`
 
-在什么条件下，`$X_1$` 对 `$X_2$`的回归是线性的。这里`$\xi,\alpha,\beta$`是独立变量而`$a,b$`是未知常数。Rao的结果建立了允许`$\xi，\beta$`方差无穷的充分必要条件。这部分结果是Rao硕士论文的一部分，并于1947年发表在Econometrica。他在这方面的研究给出了Poisson, gamma, 一元多元正态，无穷方差稳定分布的重要刻画。
+在什么条件下，`$X_1`对`X_2$`的回归是线性的。这里`$\xi,\alpha,\beta$`是独立变量而`$a,b$`是未知常数。Rao的结果建立了允许`$\xi，\beta$`方差无穷的充分必要条件。这部分结果是Rao硕士论文的一部分，并于1947年发表在Econometrica。他在这方面的研究给出了Poisson, gamma, 一元多元正态，无穷方差稳定分布的重要刻画。
 
 ### 6.2 广义逆
 Rao考虑了在正则方程中的矩阵奇异时最小二乘的一般性理论。在1955年的文章中，Rao提出了奇异矩阵伪逆的概念。同一年，Roger Penrose在Proceedings of the Cambridge Philosophical Society发表了”矩阵的广义逆“。Roger Penrose在2020年获得了诺贝尔物理学奖。尽管Rao所提伪逆不满足Moore-Penrose的限制，但Rao的伪逆对于最小二乘在一般情形下提供了一个答案。
