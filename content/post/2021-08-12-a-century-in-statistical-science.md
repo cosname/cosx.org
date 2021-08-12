@@ -1,6 +1,7 @@
 ---
 title: "C.R.Rao: 统计学的一百年"
 author: 
+  - 郭旭
 date: "2021-08-12"
 categories:
   - 推荐文章
@@ -10,7 +11,7 @@ tags:
   - 大数据时代
 slug: a-century-in-statistical-science
 meta_extra: "编辑：雷博文"
-forum_id: 
+forum_id: 422441
 ---
 
 近日，统计学知名期刊《International Statistical Review》发表了Nandini Kannan和Debasis Kundu撰写的《C. Radhakrishna Rao: A Century in Statistical Science》。说起C.R.Rao，学过统计的应该都知道C-R不等式和Rao-Blackwell定理。而在中文世界里，他的“在终极的分析中，一切知识都是历史；在抽象的意义下，一切科学都是数学；在理性的世界里，所有的判断都是统计学”这段话也非常出名。今天我们就跟随这篇文章一起品读C.R.Rao所经历的统计学一百年。
