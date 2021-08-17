@@ -1,6 +1,8 @@
 ---
 title: 治学报国：民国时期的统计留学生
-author: 袁卫 李惠
+author: 
+  - 袁卫
+  - 李惠
 date: '2021-08-16'
 slug: study-on-statistics-overseas-students-before-1949
 categories:
@@ -209,12 +211,8 @@ Conditions{M}.，Washington Government Printing Office, 1923.
 \[8\]Chu J P. Chinese Students in America: Qualities Associated with
 Their Success{M}. T. C. Columbia Univ., 1922,:1.
 
-> 作者简介
-袁卫，中国人民大学一级教授，中国人民大学应用统计科学研究中心研究员。研究方向为中国统计学科史。
-李惠（通讯作者），中国人民大学档案馆研究员。研究方向为档案编研、教育行政管理。电子邮箱：[[lhui\@ruc.edu.cn]{.underline}](mailto:lhui@ruc.edu.cn)。
+> 作者简介：袁卫，中国人民大学一级教授，中国人民大学应用统计科学研究中心研究员。研究方向为中国统计学科史。李惠（通讯作者），中国人民大学档案馆研究员。研究方向为档案编研、教育行政管理。电子邮箱：[lhui@ruc.edu.cn](mailto:lhui@ruc.edu.cn)。
 
 [^1]: 基金项目：教育部人文社会科学重点研究基地重大项目"中国统计学科史研究"（13JJD910001）；中国人民大学科学研究基金重大规划项目"中国统计学史"（19XNLG01）。
 
-[^2]: 《数理统计年刊》Annals of Mathematical
-
-    Statistics，1973年改为《统计学年刊》Annals of Statistics。
+[^2]:《数理统计年刊》Annals of Mathematical Statistics，1973年改为《统计学年刊》Annals of Statistics。
