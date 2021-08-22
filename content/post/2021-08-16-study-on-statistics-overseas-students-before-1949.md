@@ -9,6 +9,8 @@ categories:
   - 推荐文章
 tags:
   - 统计史
+  - 统计学
+  - 留学生
 forum_id: 422516
 ---
 
