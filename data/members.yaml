@@ -87,6 +87,8 @@ list:
   - name: 郎大为
     image: https://cloud.githubusercontent.com/assets/7221728/25791991/738e86b4-33f6-11e7-8825-51396d1e764b.jpg
     intro: 一个不务正业的数据分析师,做过一些R包开发,不爱用箭头赋值,喜欢用半角符号,钟情Chrome,在J.D.Power ~~京东电力~~ 做分析 ~~抄代码~~
+  - name: 李惠
+    intro: 中国人民大学档案馆研究员。研究方向为档案编研、教育行政管理。电子邮箱：lhui@ruc.edu.cn。
   - name: 李舰
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 现任九峰移动医疗 CTO，曾任 Mango Solutions 中国区数据总监。专注于数据科学在行业里的应用。擅长R语言的工程开发与分析建模，是 Rweibo、Rwordseg、tmcn 等 R 包的作者。与肖凯合著了《数据科学中的R语言》，参与翻译了《R语言核心技术手册》、《机器学习与R语言》。
@@ -213,6 +215,9 @@ list:
   - name: 余光创
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 余光创，香港大学公共卫生学院，生物信息学博士生。博客：<https://guangchuangyu.github.io>， 公众号：biobabble
+  - name: 袁卫
+    image: https://user-images.githubusercontent.com/18381242/130374095-a7eb8b25-57d5-4354-9c12-75147686cc9b.jpg
+    intro: 中国人民大学一级教授，中国人民大学应用统计科学研究中心研究员。研究方向为中国统计学科史。
   - name: 张驰原
     image: https://user-images.githubusercontent.com/19310150/28874258-a5070976-77c3-11e7-934c-226e46387f96.jpeg
     intro: 张驰原，网络 id pluskid，MIT 计算机博士在读，假装的 Julia 语言爱好者。
