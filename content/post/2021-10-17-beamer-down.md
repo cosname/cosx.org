@@ -543,6 +543,6 @@ Pandoc version: 2.14.2
 
 1. 谢益辉. 2016. bookdown 交叉引用介绍. <https://bookdown.org/yihui/bookdown/cross-references.html>
 
-1. Xiangdong Zeng. 2020. 在 LATEX 中使用 OpenType 字体（三）. <https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/>
+1. 曾祥东. 2020. 在 LATEX 中使用 OpenType 字体（三）. <https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/>
 
 1. Alison Hill, Christophe Dervieux, Yihui Xie. 2021. R Markdown 又提供一些新的特性.  <https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/>
