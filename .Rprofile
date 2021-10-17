@@ -12,3 +12,5 @@ local({
     sep = if (.Platform$OS.type == 'unix') ':' else ';'
   ))
 })
+
+options(blogdown.hugo.version = "0.88.1")
