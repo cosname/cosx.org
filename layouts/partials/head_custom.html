@@ -2,3 +2,11 @@
 <link href="{{ relURL "/css/custom.css" }}" rel="stylesheet">
 <script async src="//yihui.name/js/no-highlight.js"></script>
 <script async src="{{ relURL "/js/pangu.js" }}"></script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+    Macros: { bm: ["{\\boldsymbol #1}",1], },
+  }
+});
+</script>
