@@ -323,6 +323,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 > ```bash
 > convert -delay 250 -density 300x300 -geometry 960x720 beamer.pdf beamer.gif
 > ```
+>
 
 至此，关于 「R Markdown 制作 beamer 幻灯片」的主题介绍可以告一段落了！眼力犀利的读者可能已经看出上面模版中还是使用 **unicode-math** 处理数学公式，导致符号样式怪怪的，`\boldsymbol` 也无法加粗希腊字母，这里留个疑问，希望读者看完本文后，自己能找到答案！
 对于想要玩出花样的读者，不妨接着往下看。
