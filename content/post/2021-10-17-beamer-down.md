@@ -356,7 +356,7 @@ output:
     dev: "cairo_pdf"
     theme: Verona
 header-includes:
-  - \logo{\includegraphics[height=0.8cm]{`r R.home('doc/html/Rlogo')`}}
+  - \logo{\includegraphics[height=0.8cm]{`r file.path(R.home("doc"), "html", "Rlogo")`}}
   - \usepackage{pifont}
   - \usepackage{iitem}
   - \setbeamertemplate{itemize item}{\ding{47}}
