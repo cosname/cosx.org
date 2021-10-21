@@ -20,7 +20,7 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 
 LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的数学或统计系会用它来排版毕业论文，相关的学习材料有很多，推荐 CTeX 开发小组翻译的[一份（不太）简短的LaTeX介绍](https://github.com/CTeX-org/lshort-zh-cn)。吴康隆的 [《简单粗暴LaTeX》](https://github.com/wklchris/Note-by-LaTeX)，盛文博翻译的[《LaTeX2e 插图指南, 第三版》](https://github.com/WenboSheng/epslatex-cn)，吕荐瑞的[科技文档排版课程材料](https://lvjr.bitbucket.io/tutorial/learn-latex.pdf)，曾祥东的[现代 LaTeX 入门讲座](https://github.com/stone-zeng/latex-talk)，都非常适合从零开始学习的。进阶的部分，根据需要去看宏包手册，LaTeX 宏包文档的长度一般都吓死个人，[PGF](https://github.com/pgf-tikz/pgf) 绘图 **1300** 多页，[pgfplots](https://ctan.org/pkg/pgfplots) 3D 绘图 **573** 页， [beamer](https://github.com/josephwright/beamer) 幻灯片制作 **247** 页，[geometry](https://github.com/davidcarlisle/geometry) 版面设置 **42** 页，[tcolorbox](https://github.com/T-F-S/tcolorbox) 箱子定制 **539**页，通常不需要从头到尾的看，除非遇到难处或需要自定义了。在对基础的 LaTeX 排版工具有一些了解后，日常使用过程中必备数学公式[速记小抄](https://gitlab.com/jim.hefferon/undergradmath) ，搭好梯子随时放狗去搜。
 
-去年6月份搬迁完[汉风主题](https://github.com/liantze/pgfornament-han)，在论坛开帖分享了[成果](https://d.cosx.org/d/421591-beamer)，又被撺掇着在主站[立了字句](https://github.com/cosname/cosx.org/issues/901)----要写一篇文章介绍 R Markdown 制作幻灯片模版的过程，一直囿于工作繁忙，难以抽身，前段时间在 WX 上和[楚新元](https://gitlab.com/chuxinyuan) 又聊到模版，看到有人又要准备趟我之前踩过的坑，心中不忍，咬咬牙还是把这文债给还了。算起来，从起心动念到最终交付拖延了整整一年零三个月！！！
+去年 6 月份搬迁完[汉风主题](https://github.com/liantze/pgfornament-han)，在论坛开帖分享了[成果](https://d.cosx.org/d/421591-beamer)，又被撺掇着在主站[立了字句](https://github.com/cosname/cosx.org/issues/901)----要写一篇文章介绍 R Markdown 制作幻灯片模版的过程，一直囿于工作繁忙，难以抽身，前段时间在 WX 上和[楚新元](https://gitlab.com/chuxinyuan)又聊到模版，看到有人又要准备趟我之前踩过的坑，心中不忍，咬咬牙还是把这文债给还了。算起来，从起心动念到最终交付拖延了整整一年零三个月！！！
 
 本文将介绍如何搬迁 beamer 主题到 R Markdown 生态里，涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
 
@@ -161,7 +161,7 @@ Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提�
 
 回到正题，Pandoc 内建的 LaTeX 模版功能已经很丰富了，通常用不着自己配置了，R Markdown 自从接入 **tinytex** 自动装缺失的 LaTeX 宏包的功能后，在产出 PDF 文档方面已经方便多了。
 
-metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在之前的文章[可重复性数据分析](https://xiangyun.rbind.io/2021-01-03-reproducible-analysis) 介绍过 [林莲枝](https://github.com/liantze/) 开发的汉风主题幻灯片，它是 metropolis 主题的衍生品。算上空行，只有十几行代码哈哈！！
+metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在之前的文章[可重复性数据分析](https://xiangyun.rbind.io/2021/01/reproducible-analysis/)介绍过[林莲枝](https://github.com/liantze/)开发的汉风主题幻灯片，它是 metropolis 主题的衍生品。算上空行，只有十几行代码哈哈！！
 
 ```tex
 \documentclass[169]{beamer}
@@ -214,7 +214,7 @@ tinytex::xelatex(file = "slide-template.tex")
 
 ## 一个永远填不满的坑
 
-最近统计之都论坛里又有人陆续[踩](https://d.cosx.org/d/422613)到我以前[踩](https://d.cosx.org/d/419931)过的[坑1](https://d.cosx.org/d/421770)、[坑2](https://d.cosx.org/d/421834)、[坑3](https://d.cosx.org/d/422087)、[坑4](https://d.cosx.org/d/422343)，都是中文 R Markdown 文档相关， 这里不妨简单说一下。
+最近统计之都论坛里又有人陆续[踩](https://d.cosx.org/d/422613)到我以前[踩](https://d.cosx.org/d/419931)过的[坑 1](https://d.cosx.org/d/421770)、[坑 2](https://d.cosx.org/d/421834)、[坑 3](https://d.cosx.org/d/422087)、[坑 4](https://d.cosx.org/d/422343)，都是中文 R Markdown 文档相关， 这里不妨简单说一下。
 
 ````
 ---
@@ -289,7 +289,7 @@ R Markdown 文档开头处为 YAML 元数据，它分两部分：其一是 Pando
 title: "R Markdown 制作 beamer 幻灯片"
 author: "黄湘云"
 date: "2021年10月01日"
-institute: "美团搜索技术部"
+institute: "xx 学院"
 documentclass: ctexbeamer
 output: 
   beamer_presentation: 
@@ -305,6 +305,7 @@ classoption: "fontset=fandol"
 without looking like it’s been marked up with tags or formatting instructions.
 > 
 > --- John Gruber
+>
 
 Markdown 提供一种简洁的格式语法，用来编辑 HTML、PDF 和 MS Word 文档，
 数学公式还是用 LaTeX 排版的好， 
