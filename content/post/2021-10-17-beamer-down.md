@@ -317,22 +317,38 @@ $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 ````
 
-编译后的效果如下：
+编译后的效果如下[^pdf-to-gif]：
 
 ![beamer](https://user-images.githubusercontent.com/12031874/135646967-3d417a18-7d13-4bdd-951f-7d2176f5b0d9.gif)
 
-> 提示
->
-> 将多页PDF格式的幻灯片转为GIF动图可以借助 [ImageMagick](https://imagemagick.org) 一行命令搞定：
-> 
-> ```bash
-> convert -delay 250 -density 300x300 -geometry 960x720 beamer.pdf beamer.gif
-> ```
->
 
 至此，关于 「R Markdown 制作 beamer 幻灯片」的主题介绍可以告一段落了！眼力犀利的读者可能已经看出上面模版中还是使用 **unicode-math** 处理数学公式，导致符号样式怪怪的，`\boldsymbol` 也无法加粗希腊字母，这里留个疑问，希望读者看完本文后，自己能找到答案！
 对于想要玩出花样的读者，不妨接着往下看。
 
+[^pdf-to-gif]: 将PDF格式的多页幻灯片转为GIF动图可以借助 [ImageMagick](https://imagemagick.org) 一行命令搞定：
+ 
+    ```bash
+    convert -delay 250 -density 300x300 -geometry 960x720 beamer.pdf beamer.gif
+    ```
+    
+    值得注意的是在 Ubuntu 20.04 LTS 系统环境下，安装完 ImageMagick 还需执行如下命令：
+    
+    ```bash
+    sudo sed -i_bak \
+    's/rights="none" pattern="PDF"/rights="read | write" pattern="PDF"/' \
+    /etc/ImageMagick-6/policy.xml
+    ```
+    
+    此外，还可以安装 [**magick**](https://github.com/ropensci/magick) 包，用 R 代码实现转化过程：
+    
+    ```r
+    library(magick)
+    img = image_read_pdf("beamer.pdf", density = 300)
+    img %>% 
+      image_resize(geometry_size_pixels(960, 720)) %>% 
+      image_animate(delay = 250) %>% 
+      image_write("beamer.gif")
+    ```
 
 ## R Markdown 模版（高级篇）
 
