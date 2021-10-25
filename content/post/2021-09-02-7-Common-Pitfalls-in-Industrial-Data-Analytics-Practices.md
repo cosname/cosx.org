@@ -10,6 +10,7 @@ tags:
   - 数据分析
   - 分析误区
 slug: 7-Common-Pitfalls-in-Industrial-Data-Analytics-Practices
+forum_id: 422687
 ---
 
 ## 引言
