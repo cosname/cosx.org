@@ -10,6 +10,7 @@ tags:
   - LaTeX
   - beamer
   - R Markdown
+toc: true
 thumbnail: https://user-images.githubusercontent.com/12031874/116777926-a1722100-aaa1-11eb-92c7-034ebfb90922.png
 description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来看，好多主题是大学开发的，大家不约而同地使用蓝调，看多了想睡觉。目前，现代风格的 beamer 主题已经陆续涌现出来，本文旨在介绍一条 R Markdown 制作 beamer 幻灯片的入坑路径，让 beamer 看起来更加清爽些！"
 ---
@@ -160,9 +161,9 @@ Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提�
 | [Fira Math](https://ctan.org/pkg/firamath)                   | 1052     |
 
 
-## metropolis 幻灯片主题
+## 幻灯片主题
 
-不记得初次见 metropolis 主题是什么时候，不过每次见都让我想到了 MCMC（**M**arkov **C**hain **M**onte **C**arlo，马尔科夫链蒙特卡洛，简称 MCMC）。学过 MCMC 算法的都知道 metropolis 是啥，我这半桶水的统计科班生就不在这献丑了，当年掉在 MCMC 的大坑里好多时间，以至于将 metropolis 和 MCMC 建立了极强的关联，可能这是我介绍 beamer 主题也拿它来举例的原因吧！
+下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。不记得初次见 metropolis 主题是什么时候，不过每次见都让我想到了 MCMC（**M**arkov **C**hain **M**onte **C**arlo，马尔科夫链蒙特卡洛，简称 MCMC）。学过 MCMC 算法的都知道 metropolis 是啥，我这半桶水的统计科班生就不在这献丑了，当年掉在 MCMC 的大坑里好多时间，以至于将 metropolis 和 MCMC 建立了极强的关联，可能这是我介绍 beamer 主题也拿它来举例的原因吧！
 
 回到正题，Pandoc 内建的 LaTeX 模版功能已经很丰富了，通常用不着自己配置了，R Markdown 自从接入 **tinytex** 自动装缺失的 LaTeX 宏包的功能后，在产出 PDF 文档方面已经方便多了。
 
