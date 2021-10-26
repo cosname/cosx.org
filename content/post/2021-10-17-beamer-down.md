@@ -65,8 +65,8 @@ tinytex::install_tinytex()
     # TinyTeX 字体目录
     basedir <- paste(tinytex::tinytex_root(), "texmf-dist/fonts/opentype/public", sep = "/")
     # MacOS 系统字体放在 ~/Library/Fonts/ 而 Linux 系统字体放在 ~/.fonts
-    if (xfun::is_macos()) xfun::dir_create("~/Library/Fonts/") else  xfun::dir_create("~/.fonts")
     distdir <- if (xfun::is_macos()) "~/Library/Fonts/" else "~/.fonts"
+    xfun::dir_create(distdir)
     # 获取字体文件的完整路径
     fontfiles <- list.files(path = paste(basedir, c("fira", "xits", "firamath"), sep = "/"), full.names = T)
     # 拷贝到字体目录下
