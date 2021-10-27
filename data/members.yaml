@@ -136,6 +136,9 @@ list:
   - name: 覃文锋
     image: https://cloud.githubusercontent.com/assets/7221728/25788591/dab66736-33dc-11e7-9d38-720da8ddb85a.jpg
     intro: R Weekly 创始人，参与了一些的 R 包的开发，爱好是看正在用的工具的源代码。
+  - name: 田春华
+    image: https://raw.githubusercontent.com/Re1aXX/COS8/main/Photo2.png
+    intro: 博士，北京工业大数据创新中心首席数据科学家，哈尔滨工业大学控制科学与工程系本硕连读，清华大学自动化系博士毕业，曾在IBM中国研究院担任研究经理。专注数据挖掘算法、产品及行业应用开发工作，有丰富的行业实践经验，帮助装备制造、石油化工、电子制造、能源电力、航空与港口等领域的几十家国际和国内领先企业，成功实施资产管理、运营优化、营销洞察等数据分析项目。参与了多个工业大数据相关标准的制定工作、白皮书的编写工作、竞赛支持工作及多个国际学术会议的组织工作。发表学术论文近百篇，拥有40余项国际和国内专利授权，著有《工业大数据分析实践》等书。
   - name: 苏玮
     image: https://avatars1.githubusercontent.com/u/20528423?s=460&u=759ff0d239505605eb3ec0ee6a01541573493aa1&v=4
     intro: 本科就读于华中科技大学生物信息学专业，东京大学应用生命工学硕士毕业。爱好折腾 R + JavaScript 的各领域数据的互动可视化与分析，生命不息学而不止的技术菜鸟。一个随意分享的[个人博客](https://swsoyee.vercel.app/)。
@@ -181,7 +184,7 @@ list:
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 乐逗游戏高级数据分析师，负责大数据挖掘及可视化。资深R语言用户，有九年以上数据挖掘工作实战经验，多次在中国R语言大会上作主题演讲。与张良均老师、杨坦老师合著的《R语言与数据挖掘》一书已在2016年7月出版，新书《R语言游戏数据分析》一书也即将于2017年初出版。
   - name: 谢士晨
-    image: http://shichen.name/images/whoami/avatar.jpg
+    image: https://shichen.name/images/whoami/avatar.jpg
     intro: 名古屋大学环境经济博士，R包 scorecard、pedquant 与 python 包 scorecardpy 的作者，目前在银行从事信用风险量化相关工作。
   - name: 谢益辉
     id: yihui
