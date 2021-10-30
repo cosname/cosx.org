@@ -163,7 +163,7 @@ Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提�
 
 回到正题，Pandoc 内建的 LaTeX 模版功能已经很丰富了，通常用不着自己配置了，R Markdown 自从接入 **tinytex** 自动装缺失的 LaTeX 宏包的功能后，在产出 PDF 文档方面已经方便多了。
 
-metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在之前的文章[可重复性数据分析](https://xiangyun.rbind.io/2021/01/reproducible-analysis/)介绍过[林莲枝](https://github.com/liantze/)开发的汉风主题幻灯片，它是 metropolis 主题的衍生品。算上空行，只有十几行代码哈哈！！
+metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在之前的文章[可重复性数据分析](https://xiangyun.rbind.io/2021/01/reproducible-analysis/)介绍过[林莲枝](https://github.com/liantze/)开发的汉风主题幻灯片，它是 metropolis 主题的衍生品。算上空行，只有十几行代码哈哈！！[^font-setup]
 
 ```tex
 \documentclass[169]{beamer}
@@ -172,6 +172,7 @@ metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在
 \usetheme{metropolis}
 
 \usepackage{fontspec}
+
 \setsansfont[BoldFont={Fira Sans SemiBold}]{Fira Sans Book}
 
 \usepackage{amsmath}
@@ -196,6 +197,14 @@ metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在
   \end{frame}
 \end{document}
 ```
+
+[^font-setup]: 在 Windows 系统上，需要选中字体右键安装并刷新字体缓存或者像下面这样指定字体路径。
+
+    ```tex
+    \setsansfont[Path = {\string~/.fonts/}, BoldFont={Fira Sans SemiBold}]{Fira Sans Book}
+    \setmathfont[Path = {\string~/.fonts/}]{Fira Math}
+    \setmathfont[Path = {\string~/.fonts/}, range={\top}]{XITS Math}
+    ```
 
 注意看加载 **unicode-math** 宏包时的选项设置，关于 **unicode-math** 数学符号的样式（比如选择 ISO 还是 TeX？） 说明见[文档](https://www.latex-project.org/publications/2010-wspr-TUG-unicode-mathematics-in-LaTeX-slides.pdf)，对绝大多数的使用者来说，做个拿来主义就好，别看我洋洋洒洒写了这么多，我也不例外，喜欢哪个用哪个！
 
