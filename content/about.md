@@ -78,7 +78,7 @@ forum_id: 418703
 	
 	联系人：任焱、张源源、于淼、李舰
 	
-	联系方式：主站 Github 的 issue 投稿
+	联系方式： 基于 [issue](https://github.com/cosname/cosx.org/issues) 投稿
 	
 - 数据科学之路：系统全面梳理、撰写数据科学思想、理论、技术、实践等知识体系，供大众学习和讨论
 	
