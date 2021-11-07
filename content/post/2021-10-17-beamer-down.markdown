@@ -102,7 +102,7 @@ LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的�
 
 去年 6 月份搬迁完[汉风主题](https://github.com/liantze/pgfornament-han)，在论坛开帖分享了[成果](https://d.cosx.org/d/421591-beamer)，又被撺掇着在主站[立了字句](https://github.com/cosname/cosx.org/issues/901)—-要写一篇文章介绍 R Markdown 制作幻灯片模版的过程，一直囿于工作繁忙，难以抽身，前段时间在 WX 上和[楚新元](https://gitlab.com/chuxinyuan)又聊到模版，看到有人又要准备趟我之前踩过的坑，心中不忍，咬咬牙还是把这文债给还了。算起来，从起心动念到最终交付拖延了整整一年零三个月！！！
 
-本文将介绍如何搬迁 beamer 主题到 R Markdown 生态里，涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
+本文将介绍如何创建 R Markdown 基础 beamer 文类的模版，介绍 R Markdown 制作 beamer 幻灯片的过程。然后介绍美化 beamer 幻灯片的过程，包括中英字体、数学公式、更换主题，特别是完整迁移到新的主题可能会遇到的问题。涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
 
 ## 安装 R 包
 
@@ -143,10 +143,12 @@ tinytex::install_tinytex()
     # MacOS 系统字体放在 ~/Library/Fonts/ 而 Linux 系统字体放在 ~/.fonts
     distdir <- if (xfun::is_macos()) "~/Library/Fonts/" else "~/.fonts"
     xfun::dir_create(distdir)
-    # 获取字体文件的完整路径
-    fontfiles <- list.files(path = paste(basedir, c("fira", "xits", "firamath"), sep = "/"), full.names = T)
+    # 字体文件的目录
+    fontdir <- paste(basedir, c("fira", "xits", "firamath"), sep = "/")
+    # 字体文件的路径
+    fontfile <- list.files(path = fontdir, full.names = T)
     # 拷贝到字体目录下
-    file.copy(from = fontfiles, to = distdir, overwrite = TRUE)
+    file.copy(from = fontfile, to = distdir, overwrite = TRUE)
     ```
 
 ## 数学符号
@@ -528,7 +530,7 @@ beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alert
 
 ![rmarkdown-verona](https://user-images.githubusercontent.com/12031874/135652566-08f27f9b-c7a0-4bcf-810a-88859e6db6a7.gif)
 
-## R Markdown 模版（忍着篇）
+## R Markdown 模版（忍者篇）
 
 此外，R 社区有几个 R 包专门打包了一些 R Markdown 幻灯片模版，比如 [binb](https://github.com/eddelbuettel/binb) 和 [uiucthemes](https://github.com/illinois-r/uiucthemes) 包，如何使用便不再赘述，掌握以上介绍的规律，beamer 主题任你玩[^5]。
 
