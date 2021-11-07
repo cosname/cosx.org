@@ -13,6 +13,7 @@ tags:
 toc: true
 bibliography: 
   - refer.bib
+link-citations: true
 thumbnail: https://user-images.githubusercontent.com/12031874/116777926-a1722100-aaa1-11eb-92c7-034ebfb90922.png
 description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来看，好多主题是大学开发的，大家不约而同地使用蓝调，看多了想睡觉。目前，现代风格的 beamer 主题已经陆续涌现出来，本文旨在介绍一条 R Markdown 制作 beamer 幻灯片的入坑路径，让 beamer 看起来更加清爽些！"
 ---
@@ -116,7 +117,7 @@ install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "rticles"))
 
 ## 安装 TinyTeX
 
-平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex)(Xie 2019) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
+平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex)([Xie 2019](#ref-tinytex2019)) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
 
 ``` r
 tinytex::install_tinytex()
@@ -153,8 +154,8 @@ tinytex::install_tinytex()
 
 ## 数学符号
 
-在正式介绍后续的 beamer 主题之前，还要先介绍一点数学符号和数学字体的坑，学术型幻灯片毕竟很难离开数学公式。在遇到花体数学符号，如常用来表示域或空间的 `$\mathcal{A,S}, \mathscr{A}, \mathbb{A,R}$`，抑或是常见的损失函数符号 `$\mathcal{L}$`。
-**unicode-math** 定义的数学样式有点怪，和通常见到的不一样，以前排版毕业论文的时候[坑过我一回](https://d.cosx.org/d/419931)，主要原因是 **unicode-math** 使用 Latin Modern Math 的 OpenType 字体。
+在正式介绍后续的 beamer 主题之前，还要先介绍一点数学符号和数学字体的坑，毕竟，学术型幻灯片很难离开数学公式([Pakin 2021](#ref-Pakin2021))。在遇到花体数学符号，如常用来表示域或空间的 `$\mathcal{A,S}, \mathscr{A}, \mathbb{A,R}$`，抑或是常见的损失函数符号 `$\mathcal{L}$`。
+**unicode-math** 定义的数学样式有点怪，和通常见到的不一样，以前排版毕业论文的时候[坑过我一回](https://d.cosx.org/d/419931)，主要原因是 **unicode-math** 使用 Latin Modern Math 的 OpenType 字体 ([曾祥东 2020](#ref-Zeng2020))。
 
     ---
     title: "Untitled"
@@ -175,7 +176,7 @@ tinytex::install_tinytex()
 
 ![unicode-math](https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png)
 
-Pandoc 内建的 LaTeX 模版[^1]默认调用 **unicode-math** 宏包的，除非编译 R Markdown 的时候，启用[LaTeX 变量](https://pandoc.org/MANUAL.html#using-variables-in-templates) `mathspec: yes`，加载 **amsfonts** 和 **mathrsfs** 宏包。目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 `\mscrA` 和 `\BbbA` 分别等价于 `\mathscr{A}` 和 `\mathbb{A}`。
+Pandoc 内建的 LaTeX 模版[^1]默认调用 **unicode-math** 宏包的，除非编译 R Markdown 的时候，启用[LaTeX 变量](https://pandoc.org/MANUAL.html#using-variables-in-templates)`mathspec: yes`，加载 **amsfonts** 和 **mathrsfs** 宏包([Xie, Dervieux, and Riederer 2020](#ref-Xie2020))。目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 `\mscrA` 和 `\BbbA` 分别等价于 `\mathscr{A}` 和 `\mathbb{A}`。
 
     ---
     title: "Untitled"
@@ -374,12 +375,12 @@ R Markdown 文档开头处为 YAML 元数据，它分两部分：其一是 Pando
 
 ![beamer](https://user-images.githubusercontent.com/12031874/135646967-3d417a18-7d13-4bdd-951f-7d2176f5b0d9.gif)
 
-至此，关于 「R Markdown 制作 beamer 幻灯片」的主题介绍可以告一段落了！眼力犀利的读者可能已经看出上面模版中还是使用 **unicode-math** 处理数学公式，导致符号样式怪怪的，`\boldsymbol` 也无法加粗希腊字母，这里留个疑问，希望读者看完本文后，自己能找到答案！
+至此，关于 「R Markdown 制作 beamer 幻灯片」([Xie, Allaire, and Grolemund 2018](#ref-Xie2018))的主题介绍可以告一段落了！眼力犀利的读者可能已经看出上面模版中还是使用 **unicode-math** 处理数学公式，导致符号样式怪怪的，`\boldsymbol` 也无法加粗希腊字母，这里留个疑问，希望读者看完本文后，自己能找到答案！
 对于想要玩出花样的读者，不妨接着往下看。
 
 ## R Markdown 模版（高级篇）
 
-下面是另一份完整的 R Markdown 模版，内容十分丰富：添加多个作者，动态日期，bookdown 交叉引用加持，参考文献支持，参考文献样式设置，更换 beamer 主题为 Verona，自定义导言区 `header-includes`，添加 Logo，R 绘图设备改为 `"cairo_pdf"`，设置幻灯片主题 Verona 的选项等[^4]。读者可以注释和编译交替进行，细节就不说了，可以看看后面的参考文献，边看边玩！
+下面是另一份完整的 R Markdown 模版，内容十分丰富：添加多个作者，动态日期， [交叉引用](https://bookdown.org/yihui/bookdown/cross-references.html)([Xie 2016](#ref-Xie2016))，参考文献，文献样式，Verona 主题，自定义导言区 `header-includes`，右下角 Logo，R 绘图设备改为 `"cairo_pdf"`，设置幻灯片主题 Verona 的选项等[^4]。读者可以注释和编译交替进行，细节就不说了，可以看看后面的参考文献，边看边玩！
 
 ``` yaml
 ---
@@ -463,7 +464,7 @@ beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alert
     without looking like it’s been marked up with tags or formatting instructions.  
     :::
 
-此处，不一一介绍，详情见讨论贴[don’t respect beamer theme’s buildin theorem/proof block](https://github.com/rstudio/bookdown/issues/1143)。完整的 R Markdown 幻灯片模版如下：
+此处，不一一介绍，详情见([Hill, Dervieux, and Xie. 2021](#ref-Alison2021))。完整的 R Markdown 幻灯片模版如下：
 
     ---
     title: "R Markdown 制作 beamer 幻灯片"
@@ -534,9 +535,20 @@ beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alert
 
 此外，R 社区有几个 R 包专门打包了一些 R Markdown 幻灯片模版，比如 [binb](https://github.com/eddelbuettel/binb) 和 [uiucthemes](https://github.com/illinois-r/uiucthemes) 包，如何使用便不再赘述，掌握以上介绍的规律，beamer 主题任你玩[^5]。
 
+Christophe Dervieux
+
+bookdown 提供的特殊语法 `name="bababa"` 仅适用于那些在 beamer （不局限于 beamer 基础文类提供的主题，还包括其它衍生的 beamer 主题，下同）中有定义且被 bookdown 支持的。其它 bookdown 支持的环境只有在 beamer 的导言区先定义才能被使用，如命题 `proposition`，猜想 `conjecture`，练习 `exercise`，假设 `hypothesis`，注记 `remark`，通常这部分东西放在 `preamble.tex` 里，并在 R Markdown 的 YAML 区域引入。另外，还有一些环境只出现在 beamer 文类下，bookdown 对这些是不支持的，比如事实 `fact`，问题 `problem` `block`，示例 `exampleblock` 等。
+
+创建一个 GIF 图，提供 R Markdown 基础 beamer 文类的模版，包含各种环境。
+
+忍者篇介绍萧山主题模版，列出 beamer 中有定义的和 bookdown 支持的。
+
+beamer 文档找到各类定理、block 块
+然后如何映射过来
+
 ## 环境信息
 
-在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 **blogdown** 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。
+在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 **blogdown** ([Xie, Hill, and Thomas 2017](#ref-Xie2017))构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。
 
 ``` r
 xfun::session_info(c(
@@ -569,23 +581,53 @@ xfun::session_info(c(
 
 ## 参考文献
 
-1.  LaTeX 数学符号合集. <https://www.ctan.org/pkg/comprehensive/>.
-
-2.  谢益辉. 2020. 适用于 LaTeX 环境的 Pandoc 选项. <https://bookdown.org/yihui/rmarkdown-cookbook/latex-variables.html>
-
-3.  谢益辉. 2018. R Markdown 制作 Beamer 幻灯片简介. <https://bookdown.org/yihui/rmarkdown/beamer-presentation.html>
-
-4.  谢益辉. 2016. bookdown 交叉引用介绍. <https://bookdown.org/yihui/bookdown/cross-references.html>
-
-5.  曾祥东. 2020. 在 LATEX 中使用 OpenType 字体（三）. <https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/>
-
-6.  Alison Hill, Christophe Dervieux, Yihui Xie. 2021. R Markdown 又提供一些新的特性. <https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/>
-
 <div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-Alison2021" class="csl-entry">
+
+Hill, Alison, Christophe Dervieux, and Yihui Xie. 2021. “Latest News from the r Markdown Family.” <https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/>.
+
+</div>
+
+<div id="ref-Pakin2021" class="csl-entry">
+
+Pakin, Scott. 2021. “The Comprehensive LaTeX Symbol List - Symbols Accessible from LaTeX.” <https://www.ctan.org/pkg/comprehensive/>.
+
+</div>
+
+<div id="ref-Xie2016" class="csl-entry">
+
+Xie, Yihui. 2016. *Bookdown: Authoring Books and Technical Documents with R Markdown*. Boca Raton, Florida: Chapman; Hall/CRC. <https://bookdown.org/yihui/bookdown/cross-references.html>.
+
+</div>
 
 <div id="ref-tinytex2019" class="csl-entry">
 
-Xie, Yihui. 2019. “TinyTeX: A Lightweight, Cross-Platform, and Easy-to-Maintain LaTeX Distribution Based on TeX Live.” *TUGboat*, no. 1: 30–32. <https://tug.org/TUGboat/Contents/contents40-1.html>.
+———. 2019. “TinyTeX: A Lightweight, Cross-Platform, and Easy-to-Maintain LaTeX Distribution Based on TeX Live.” *TUGboat*, no. 1: 30–32. <https://tug.org/TUGboat/Contents/contents40-1.html>.
+
+</div>
+
+<div id="ref-Xie2018" class="csl-entry">
+
+Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. *R Markdown: The Definitive Guide*. Boca Raton, Florida: Chapman; Hall/CRC. <https://bookdown.org/yihui/rmarkdown/beamer-presentation.html>.
+
+</div>
+
+<div id="ref-Xie2020" class="csl-entry">
+
+Xie, Yihui, Christophe Dervieux, and Emily Riederer. 2020. *R Markdown Cookbook*. Boca Raton, Florida: Chapman; Hall/CRC. <https://bookdown.org/yihui/rmarkdown-cookbook/latex-variables.html>.
+
+</div>
+
+<div id="ref-Xie2017" class="csl-entry">
+
+Xie, Yihui, Alison Presmanes Hill, and Amber Thomas. 2017. *Blogdown: Creating Websites with R Markdown*. Boca Raton, Florida: Chapman; Hall/CRC. <https://bookdown.org/yihui/blogdown/>.
+
+</div>
+
+<div id="ref-Zeng2020" class="csl-entry">
+
+曾祥东. 2020. “在 LATEX 中使用 OpenType 字体（三）.” <https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/>.
 
 </div>
 
