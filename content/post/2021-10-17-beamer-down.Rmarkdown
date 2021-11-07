@@ -11,11 +11,110 @@ tags:
   - beamer
   - R Markdown
 toc: true
+bibliography: 
+  - refer.bib
 thumbnail: https://user-images.githubusercontent.com/12031874/116777926-a1722100-aaa1-11eb-92c7-034ebfb90922.png
 description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来看，好多主题是大学开发的，大家不约而同地使用蓝调，看多了想睡觉。目前，现代风格的 beamer 主题已经陆续涌现出来，本文旨在介绍一条 R Markdown 制作 beamer 幻灯片的入坑路径，让 beamer 看起来更加清爽些！"
 ---
 
-> 声明：本文引用的所有信息均为公开信息，仅代表作者本人观点，与就职单位无关。
+
+```{r setup, echo=FALSE}
+# 修改输出的显示行数
+knitr::knit_hooks$set(output = local({
+  # the default output hook
+  hook_output = knitr::knit_hooks$get('output')
+  function(x, options) {
+    if (!is.null(n <- options$out.lines)) { # out.lines
+      x = xfun::split_lines(x)
+      if (length(x) > n) {
+        # truncate the output
+        x = c(head(x, n), '....\n')
+      }
+      x = paste(x, collapse = '\n') # paste first n lines together
+    }
+    hook_output(x, options)
+  }
+}))
+# 控制输出的宽度
+options(width = 69)
+```
+
+```{css, echo=FALSE}
+.rmdinfo {
+  border: 1px solid #ccc;
+}
+
+.rmdwarn {
+  border: 1px solid #EA4335;
+}
+
+.rmdnote {
+  border: 1px solid #FBBC05;
+}
+
+.rmdtip {
+  border: 1px solid #34A853;
+}
+
+.rmdinfo, .rmdwarn, .rmdnote, .rmdtip {
+  border-left-width: 5px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+div.rmdwarn::before, div.rmdnote::before, div.rmdtip::before {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+div.rmdwarn::before {
+  content: "警告";
+  color: #EA4335;
+}
+
+div.rmdnote::before {
+  content: "注意";
+  color: #FBBC05;
+}
+
+div.rmdtip::before {
+  content: "提示";
+  color: #34A853;
+}
+
+.todo {
+  display: block;
+  border: 1px solid #4285f4;
+  border-left-width: 5px;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+}
+
+.todo::before {
+  content: "TO DO: ";
+  font-weight: bold;
+  color: #4285f4;
+}
+
+blockquote > p:last-child {
+  text-align: right;
+}
+blockquote > p:first-child {
+  text-align: inherit;
+}
+
+figure {
+  text-align: center;
+}
+```
+
+::: rmdinfo
+声明：本文引用的所有信息均为公开信息，仅代表作者本人观点，与就职单位无关。
+:::
 
 故事还要从头开始讲起，6-7 年前，出于学术答辩和课程汇报需要，陆续学习和使用 LaTeX 来排版作业和论文，曾有一段时间深陷此坑不能自拔，以至于遍览 [TeXLive](https://tug.org/texlive/) 内置的幻灯片制作宏包，收集了大量 beamer 幻灯片的模版，藏于 Github 仓库 [awesome-beamers](https://github.com/XiangyunHuang/awesome-beamers)。
 
@@ -38,15 +137,13 @@ install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "rticles"))
 
 ## 安装 TinyTeX
 
-平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
+平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex)[@tinytex2019] 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
 
 ```r
 tinytex::install_tinytex()
 ```
 
 遇到啥问题，先去益辉的网站瞅瞅 <https://yihui.org/tinytex/>，要还没找到解决方案，就来论坛 <https://d.cosx.org/> 发帖。
-
-
 
 ## 安装字体
 
@@ -138,10 +235,9 @@ $$
 ![mathspec](https://user-images.githubusercontent.com/12031874/135605483-1cfe1c86-1567-495e-b3a0-27ff12a72b7f.png)
 
 
-> 注意
->
->  [fandol 字体](https://ctan.org/pkg/fandol)支持的汉字有限，比如[刘思喆](https://bjt.name/)的「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说[许宝騄先生](https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84)的「騄」字了。
-
+::: rmdnote
+[fandol 字体](https://ctan.org/pkg/fandol)支持的汉字有限，比如[刘思喆](https://bjt.name/)的「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说[许宝騄先生](https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84)的「騄」字了。
+:::
 
 Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号），后者支持是最广的。在 **unicode-math** 的世界里，公式环境里，加粗希腊字母，得用 `\symbf` 而不是 `\boldsymbol`。XITS Math、Fira Math 等字体数学符号的支持情况详见[unicode-math 宏包的官方文档](http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf)。
 
@@ -281,12 +377,11 @@ $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 ````
 
-> 提示
->
-> RStudio IDE 使用 [MathJaX](https://www.mathjax.org/) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 **unicode-math** 的 `\symbf` 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个[文档](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)，常见的 `\mathbb` 空心体 `$\mathbb{A}$` 和 `\mathfrak` 火星体 `$\mathfrak{A}$` 来自宏包 amsfonts，`\mathscr` 花体 `$\mathscr{A}$` 和 `\bm` 粗体 `$\bm{A}$` 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看[amsmath 文档](https://www.latex-project.org/help/documentation/amsldoc.pdf)，此处仅摘抄一例 `$\sqrt{x} +\sqrt{y} + \sqrt{z}$` 和 `$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$`，能看出来差别的一定有一双火眼金睛！
->
-> ![rstudio-mathjax](https://i.loli.net/2021/09/27/42otHGvZDOuJIxi.png)
+::: rmdtip
+RStudio IDE 使用 [MathJaX](https://www.mathjax.org/) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 **unicode-math** 的 `\symbf` 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个[文档](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)，常见的 `\mathbb` 空心体 `$\mathbb{A}$` 和 `\mathfrak` 火星体 `$\mathfrak{A}$` 来自宏包 amsfonts，`\mathscr` 花体 `$\mathscr{A}$` 和 `\bm` 粗体 `$\bm{A}$` 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看[amsmath 文档](https://www.latex-project.org/help/documentation/amsldoc.pdf)，此处仅摘抄一例 `$\sqrt{x} +\sqrt{y} + \sqrt{z}$` 和 `$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$`，能看出来差别的一定有一双火眼金睛！
 
+![rstudio-mathjax](https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png)
+:::
 
 再次强行回到本文主题，上述巨坑在 article 普通文类下介绍，而不是在 beamer 幻灯片主题下介绍也是有重要原因的：其一，我见过的大部分坑的背景都是 article 文类。其二，这个坑并不会随文类切换到 beamer 而有所不同！其三，若大家再遇到类似坑不妨也切换到 article 文类，这个是最基础的，褪去尽可能多的外部依赖，方便去根因。
 
@@ -506,25 +601,12 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 ## 自定义 block
 
 ::: {.exampleblock data-latex="{提示}"}
-记得安装一些 LaTeX 宏包，如果不记得也没关系，大多数情况下 tinytex [@tinytex] 会找齐依赖安装好，只是初次运行会有点慢！
+记得安装一些 LaTeX 宏包，如果不记得也没关系，大多数情况下 tinytex 会找齐依赖安装好，只是初次运行会有点慢！
 
-```{r, eval=FALSE}
-# 安装 LaTeX 宏包
+```r
 tinytex::tlmgr_install(c("psnfss", "iitem", "beamer-verona"))
 ```
 :::
-
-
-```{r bib, include=FALSE, cache=FALSE}
-bib <- knitr::write_bib(
-  x = c(
-    .packages(), "tinytex"
-  ), file = NULL, prefix = ""
-)
-bib <- unlist(bib)
-bib <- gsub("(\\\n)", " ", bib)
-xfun::write_utf8(bib, "packages.bib")
-```
 ````
 
 编译出来的效果如下：
@@ -532,34 +614,21 @@ xfun::write_utf8(bib, "packages.bib")
 ![rmarkdown-verona](https://user-images.githubusercontent.com/12031874/135652566-08f27f9b-c7a0-4bcf-810a-88859e6db6a7.gif)
 
 
----
+## R Markdown 模版（忍着篇）
 
 此外，R 社区有几个 R 包专门打包了一些 R Markdown 幻灯片模版，比如 [binb](https://github.com/eddelbuettel/binb) 和 [uiucthemes](https://github.com/illinois-r/uiucthemes) 包，如何使用便不再赘述，掌握以上介绍的规律，beamer 主题任你玩[^custom-block]。
 
 [^custom-block]: 想来想去，好像只剩一种情况还没有介绍，就是使用 Pandoc 支持的 [Lua 外挂](https://pandoc.org/lua-filters.html)，借助 LaTeX 宏包 [tcolorbox](https://ctan.org/pkg/tcolorbox) [自定义 block](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html)，而这当属于忍者玩法了！
 
----
 
-最后，贴出本文使用的 R 环境信息，供读者复现参考。
+## 环境信息
 
-```r
-xfun::session_info(c("tinytex", "knitr", "rmarkdown", "bookdown"))
-```
-```
-R version 4.1.1 (2021-08-10)
-Platform: x86_64-apple-darwin17.0 (64-bit)
-Running under: macOS Big Sur 11.6, RStudio 2021.9.0.351
+在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 **blogdown** 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。
 
-Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
-
-Package version:
-  base64enc_0.1.3 bookdown_0.24   digest_0.6.28   evaluate_0.14   fastmap_1.1.0  
-  glue_1.4.2      graphics_4.1.1  grDevices_4.1.1 highr_0.9       htmltools_0.5.2
-  jquerylib_0.1.4 jsonlite_1.7.2  knitr_1.36      magrittr_2.0.1  methods_4.1.1  
-  rlang_0.4.11    rmarkdown_2.11  stats_4.1.1     stringi_1.7.4   stringr_1.4.0  
-  tinytex_0.34    tools_4.1.1     utils_4.1.1     xfun_0.26       yaml_2.2.1     
-
-Pandoc version: 2.14.2
+```{r}
+xfun::session_info(c(
+  "tinytex", "knitr", "rmarkdown", "bookdown", "blogdown"
+))
 ```
 
 ## 参考文献
