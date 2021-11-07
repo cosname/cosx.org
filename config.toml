@@ -72,6 +72,7 @@ footnotereturnlinkcontents = "↩"
   footer = "&copy; [统计之都](https://cosx.org) 2006 - 2021 | [新浪微博](http://weibo.com/cosname) | [Github](https://github.com/cosname) | [Twitter](https://twitter.com/cos_name) | [LinkedIn](https://www.linkedin.com/groups/4564122)"
 
 [markup]
-  [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.highlight]
+      codeFences = false
