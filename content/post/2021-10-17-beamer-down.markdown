@@ -192,7 +192,8 @@ Pandoc 内建的 LaTeX 模版[^1]默认调用 **unicode-math** 宏包的，除�
           mathrsfs: null
     ---
 
-    拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 和 `\mathbb{A}`会被依次渲染成
+    拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 
+    和 `\mathbb{A}`会被依次渲染成
 
     $$
     \mathcal{A},\mathscr{A},\mathbb{A}
@@ -366,7 +367,8 @@ R Markdown 文档开头处为 YAML 元数据，它分两部分：其一是 Pando
     > --- John Gruber
     >
 
-    Markdown 提供一种简洁的格式语法，用来编辑 HTML、PDF 和 MS Word 文档，
+    Markdown 提供一种简洁的格式语法，
+    用来编辑 HTML、PDF 和 MS Word 文档，
     数学公式还是用 LaTeX 排版的好， 
     $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
     $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
@@ -513,14 +515,17 @@ beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alert
     without looking like it’s been marked up with tags or formatting instructions.  
     :::
 
-    Markdown 提供一种简洁的格式语法，用来编辑 HTML、PDF 和 MS Word 文档，数学公式还是用 LaTeX 排版的好， 
+    Markdown 提供一种简洁的格式语法，
+    用来编辑 HTML、PDF 和 MS Word 文档，
+    数学公式还是用 LaTeX 排版的好， 
     $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
     $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 
     ## 自定义 block
 
     ::: {.exampleblock data-latex="{提示}"}
-    记得安装一些 LaTeX 宏包，如果不记得也没关系，大多数情况下 tinytex 会找齐依赖安装好，只是初次运行会有点慢！
+    记得安装一些 LaTeX 宏包，如果不记得也没关系，
+    大多数情况下 tinytex 会找齐依赖安装好，只是初次运行会有点慢！
 
     ```r
     tinytex::tlmgr_install(c("psnfss", "iitem", "beamer-verona"))

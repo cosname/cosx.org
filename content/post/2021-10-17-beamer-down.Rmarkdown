@@ -228,7 +228,8 @@ output:
       mathrsfs: null
 ---
 
-拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 和 `\mathbb{A}`会被依次渲染成
+拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 
+和 `\mathbb{A}`会被依次渲染成
 
 $$
 \mathcal{A},\mathscr{A},\mathbb{A}
@@ -416,7 +417,8 @@ without looking like it’s been marked up with tags or formatting instructions.
 > --- John Gruber
 >
 
-Markdown 提供一种简洁的格式语法，用来编辑 HTML、PDF 和 MS Word 文档，
+Markdown 提供一种简洁的格式语法，
+用来编辑 HTML、PDF 和 MS Word 文档，
 数学公式还是用 LaTeX 排版的好， 
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
@@ -597,14 +599,17 @@ A Markdown-formatted document should be publishable as-is, as plain text,
 without looking like it’s been marked up with tags or formatting instructions.  
 :::
 
-Markdown 提供一种简洁的格式语法，用来编辑 HTML、PDF 和 MS Word 文档，数学公式还是用 LaTeX 排版的好， 
+Markdown 提供一种简洁的格式语法，
+用来编辑 HTML、PDF 和 MS Word 文档，
+数学公式还是用 LaTeX 排版的好， 
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 
 ## 自定义 block
 
 ::: {.exampleblock data-latex="{提示}"}
-记得安装一些 LaTeX 宏包，如果不记得也没关系，大多数情况下 tinytex 会找齐依赖安装好，只是初次运行会有点慢！
+记得安装一些 LaTeX 宏包，如果不记得也没关系，
+大多数情况下 tinytex 会找齐依赖安装好，只是初次运行会有点慢！
 
 ```r
 tinytex::tlmgr_install(c("psnfss", "iitem", "beamer-verona"))
