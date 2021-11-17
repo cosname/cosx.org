@@ -47,7 +47,13 @@ tags:
 
 ## RStudio 用户
 
-如果您是 RStudio 用户，请先克隆或者下载我们的 [Github 库](https://github.com/cosname/cosx.org)，打开里面的 `cosx.Rproj` 文件。然后安装 **blogdown** 包^[本站便是基于 **blogdown** 包编译生成。]：
+如果您是 RStudio 用户，请先克隆或者下载我们的 [Github 库](https://github.com/cosname/cosx.org)。克隆库的时候需要 `--recursive` 参数来加入子模块。
+
+```
+git clone --recursive git@github.com:cosname/cosx.org.git
+```
+
+打开里面的 `cosx.Rproj` 文件，然后安装 **blogdown** 包^[本站便是基于 **blogdown** 包编译生成。]：
 
 ```r
 if (!require("devtools")) install.packages("devtools")
