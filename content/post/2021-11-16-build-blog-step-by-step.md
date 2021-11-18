@@ -4,6 +4,7 @@ author: 庄亮亮
 date: '2021-11-16'
 categories:
   - 统计软件
+slug: build-blog-step-by-step
 ---
 
 ## 简介
