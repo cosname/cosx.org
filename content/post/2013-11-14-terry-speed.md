@@ -3,7 +3,7 @@ title: COS访谈第12期：Terry Speed教授，2013年总理科学奖得主
 date: '2013-11-14T08:55:07+00:00'
 author: Terry Speed
 categories:
-  - 新闻动态
+  - COS访谈
 tags:
   - COS翻译
   - COS访谈

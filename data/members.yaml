@@ -13,7 +13,7 @@ list:
     intro: 出生于天津市，吃着煎饼果子和狗不理包子长大成人，因此智商偏低。长跑耐力中等偏下，K歌水平中等偏上，爱喝清酒梅酒，性格异常温和。热爱统计计算和软件工程，水平差，但擅长死磕到底。和COS之间唯有相见恨晚，这之间要感谢的人太多太多。人生一半的信仰找到了，还得努力找另一半。最近从各个角度感受到了COS精神，异常感动，因此没有不为它努力的道理。
   - name: 蔡占锐
     image: https://cloud.githubusercontent.com/assets/7221728/25791987/71e81532-33f6-11e7-9c1a-19fa4a0e6148.png
-    intro: 人大本科，宾州州立博士在读。个人主页：https://zhanruicai.github.io/
+    intro: 人大本科，宾州州立大学博士，现为卡内基梅隆大学博士后。
   - name: 常象宇
     image: https://cloud.githubusercontent.com/assets/7221728/25788532/6931eef0-33dc-11e7-8bac-95fb83a25afe.jpg
     intro: 本科在西安交大应用数学系，08年与COS结缘，虽未参与，但关注。硕士阶段做与机器学习相关的研究发现用到了更多的统计知识，后博士阶段学了些统计。博士毕业后进入西安交通大学管理学院教书，完成了从数学、计算机、统计到管理的混沌。14年在北京乱晃的阶段，又与COS扛把子接头成功，被勾引后，感觉自己好像能干点什么了就又回到了COS。曾经在统计与机器学习的正经期刊上发表过文章，在机器学习的很多会议做过PC。在COS编辑部修改编辑过一些文章，负责采访过一些名师。希望以后还能在生活、科研与消耗大量时间的体制内工作中抽时间在COS做点有趣的事。
@@ -136,6 +136,9 @@ list:
   - name: 覃文锋
     image: https://cloud.githubusercontent.com/assets/7221728/25788591/dab66736-33dc-11e7-9d38-720da8ddb85a.jpg
     intro: R Weekly 创始人，参与了一些的 R 包的开发，爱好是看正在用的工具的源代码。
+  - name: 田春华
+    image: https://raw.githubusercontent.com/Re1aXX/COS8/main/Photo2.png
+    intro: 博士，北京工业大数据创新中心首席数据科学家，哈尔滨工业大学控制科学与工程系本硕连读，清华大学自动化系博士毕业，曾在IBM中国研究院担任研究经理。专注数据挖掘算法、产品及行业应用开发工作，有丰富的行业实践经验，帮助装备制造、石油化工、电子制造、能源电力、航空与港口等领域的几十家国际和国内领先企业，成功实施资产管理、运营优化、营销洞察等数据分析项目。参与了多个工业大数据相关标准的制定工作、白皮书的编写工作、竞赛支持工作及多个国际学术会议的组织工作。发表学术论文近百篇，拥有40余项国际和国内专利授权，著有《工业大数据分析实践》等书。
   - name: 苏玮
     image: https://avatars1.githubusercontent.com/u/20528423?s=460&u=759ff0d239505605eb3ec0ee6a01541573493aa1&v=4
     intro: 本科就读于华中科技大学生物信息学专业，东京大学应用生命工学硕士毕业。爱好折腾 R + JavaScript 的各领域数据的互动可视化与分析，生命不息学而不止的技术菜鸟。一个随意分享的[个人博客](https://swsoyee.vercel.app/)。
@@ -181,7 +184,7 @@ list:
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 乐逗游戏高级数据分析师，负责大数据挖掘及可视化。资深R语言用户，有九年以上数据挖掘工作实战经验，多次在中国R语言大会上作主题演讲。与张良均老师、杨坦老师合著的《R语言与数据挖掘》一书已在2016年7月出版，新书《R语言游戏数据分析》一书也即将于2017年初出版。
   - name: 谢士晨
-    image: http://shichen.name/images/whoami/avatar.jpg
+    image: https://shichen.name/images/whoami/avatar.jpg
     intro: 名古屋大学环境经济博士，R包 scorecard、pedquant 与 python 包 scorecardpy 的作者，目前在银行从事信用风险量化相关工作。
   - name: 谢益辉
     id: yihui

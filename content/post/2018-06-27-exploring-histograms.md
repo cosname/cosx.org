@@ -13,7 +13,7 @@ forum_id: 420248
 meta_extra: 译者：曾加；审稿：于淼；编辑：
 ---
 
->本文翻译自Aran Lunzer 和 Amelia McNamara发布的文章[Exploring Histograms](http://tinlizzie.org/histograms/)。翻译工作已获得作者授权同意。文中描述的交互式直方图可以前往原文链接查看。
+>本文翻译自Aran Lunzer 和 Amelia McNamara发布的文章[Exploring Histograms](https://tinlizzie.org/histograms/)。翻译工作已获得作者授权同意。文中描述的交互式直方图可以前往原文链接查看。
 
 # 直方图有什么难的？
 
@@ -30,7 +30,7 @@ meta_extra: 译者：曾加；审稿：于淼；编辑：
 分类变量只会有少量特定的取值。比如“性别”就是一个常见的分类变量，只包含“男性”、“女性”和“性别不明”三种。
 我们通常使用条形图来可视化一个分类变量。条形图会显示每一组类别中每一项的计数数量。下图是[fivethirtyeight](https://fivethirtyeight.com/features/a-statistical-analysis-of-the-work-of-bob-ross/)上统计Bob Ross绘画作品特征的条形图。一类绘画特征出现与否是离散的变量，所以Walt Hickey(图的作者)统计了包含每种元素的作品数量占总数的比例并用条形图展现出来。
 
-![picture1](http://tinlizzie.org/histograms/img/hickey-ross-tags-1.png)
+![picture1](https://tinlizzie.org/histograms/img/hickey-ross-tags-1.png)
 
 由于数据的离散性，分析师在绘制条形图时没有太多需要决定的参数，只要选择类别的排序，图形的配色和宽高比就足够了。等到对数值型变量绘制直方图时，我们会看到更多的可选参数。
 
@@ -46,7 +46,7 @@ meta_extra: 译者：曾加；审稿：于淼；编辑：
 
 下图是The Upshot的justin Wolfers制作的直方图，显示了1000万马拉松选手跑完全程所用时间的分布情况。
 
-![picture2](http://tinlizzie.org/histograms/img/0422-ups-marathon-945-1.png)
+![picture2](https://tinlizzie.org/histograms/img/0422-ups-marathon-945-1.png)
 
 乍一看，创建直方图非常简单——我们将数据分解成几个区间，然后数下每个区间中有多少个数据。 但是，当我们仔细观察时，可以发现实际上要选择很多正确的参数才能创建一个忠实地表现数据分布形式的直方图。
 

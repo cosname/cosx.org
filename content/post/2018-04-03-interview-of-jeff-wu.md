@@ -1,5 +1,5 @@
 ---
-title: 吴建福教授访谈
+title: COS访谈第39期：吴建福教授
 date: '2018-04-03'
 categories:
   - COS访谈
