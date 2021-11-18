@@ -24,7 +24,7 @@ footnotereturnlinkcontents = "↩"
 
 [[menu.top]]
   name = "首页"
-  url = "/post"
+  url = "/"
   weight = 1
 
 [[menu.top]]
