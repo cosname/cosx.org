@@ -8,9 +8,9 @@ categories:
 
 ## 简介
 
-你是不是特别想创建一个自己的私人博客？使用 blogdown 搭建博客难度大不大？和其他搭建博客而言有什么优点？
+你是不是特别想创建一个自己的私人博客？使用 blogdown 搭建博客难度大不大？与其他方式搭建博客相比又有什么优点？
 
-在使用过一段时间后，个人认为 blogdown 搭建博客的优势在于，将 Rmarkdown 与 hugo 相结合，再加上 github 和一个可以部署的网站。读者可以轻松的将一篇篇 Rmarkdown/markdown 的文章自动上传。而 Rmarkdown 的优势在于：代码结果都可以轻松呈现，而不是“复制粘贴”结果！
+在使用过一段时间后，个人认为  blogdown 搭建博客的优势在于。它能将 Rmarkdown 与 hugo 相结合，再加上 github 和一个可以部署的网站，读者可以轻松的将一篇篇 Rmarkdown/markdown 的文章自动上传。而 Rmarkdown 的优势在于：代码结果都可以轻松呈现，而不是“复制粘贴”结果！
 
 > 如果读者不熟悉 Rmarkdown，推荐阅读 [R Markdown 入门教程](https://cosx.org/2021/04/rmarkdown-introduction/)，结合 [b 站视频](https://www.bilibili.com/video/BV1ib4y1X7r9?spm_id_from=333.999.0.0)学习效果更佳。
 
@@ -30,7 +30,7 @@ categories:
 
 ### 1.2 创建
 
-安装完后，新建一个新的 `Project（File-New project）`，然后选择`New Directory`。鼠标滑到底部，找到 `Website using blogdown` 并点击进入。
+安装完后，新建一个新的 `Project（File-New project）`，然后选择 `New Directory`。鼠标滑到底部，找到 `Website using blogdown` 并点击进入。
 
 ![创建新的项目](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719154631549.png)
 
@@ -50,7 +50,7 @@ categories:
 
 ![addins 插件](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719144620808.png)
 
-稍等片刻，得到最为原始博客模板。。
+稍等片刻，得到原始博客模板。
 
 > 如果做到这，恭喜你！基本已经会 1/3 了，没错就是这么简单。
 
@@ -81,9 +81,7 @@ categories:
 
 ### 1.4 将项目与 github 相连
 
-本地博客基本构建完毕，接下来将其连接到自己的 github 上，再部署到线上。
-
-首先，先将该文件夹上传到自己的 github 上，你可以使用 Git（如果你熟悉的话），这里使用按钮式操作的桌面版本 github （入门新手使用更佳）。
+本地博客基本构建完毕，接下来将其连接到自己的 github 上，再部署到线上。首先，先将该文件夹上传到自己的 github 上，你可以使用 Git（如果你熟悉的话），这里使用按钮式操作的桌面版本 github （入门新手使用更佳）。
 
 > **注意**：如果第一次使用 github，以及还没下载 GitHub 桌面版本的小白。你可以通过搜索，简单学习下，这里不做过多介绍了。
 
@@ -113,7 +111,7 @@ categories:
 
 这时本地项目和 github 已经连接好啦！
 
-> 恭喜！你已经会了2/3啦。马上就可以拥有自己的私人网站！
+> 恭喜！你已经会了 2/3 啦。马上就可以拥有自己的私人网站！
 
 
 ### 1.5 使用 Netify 部署网站
@@ -124,7 +122,7 @@ categories:
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150812523.png)
 
-点击 `New site from Git`，跟着步骤往下做。点击左下角的 Github，选择刚才创建的仓库（zss）。
+点击  `New site from Git`，跟着步骤往下做。点击左下角的 Github，选择刚才创建的仓库（zss）。
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150849453.png)
 
