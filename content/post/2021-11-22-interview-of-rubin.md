@@ -10,7 +10,7 @@ tags:
   - 学科合作
   - 发展
 slug: interview-of-rubin
-meta_extra: "采访者：Fan Li，Fabrizia Mealli；译者：边蓓蕾，王子涵；审校：康贺铭，张晔，丁鹏"
+meta_extra: "采访者：Fan Li，Fabrizia Mealli；译者：边蓓蕾，王子涵；审校：康贺铭，张晔，宝立格，丁鹏"
 forum_id: 422747
 ---
 
@@ -35,11 +35,7 @@ Don指导或共同指导了超过50名博士生，撰写和编辑了12本著作�
 
 Fan：我们从你小时候聊起吧。我知道你生于一个律师家庭，这肯定对你的才智有着深远的影响。能不能简单介绍一下你的家庭？
 
-![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image1.jpeg)
-
-
-图1. 五岁时的D. B. Rubin。
-
+![五岁时的D. B. Rubin](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image1.jpeg)
 
 Don：是的。我父亲是他们四兄弟中最年轻的，他们都是律师，过去常常在各种话题上激烈地辩论。其中最善辩的叔叔大概是住在华盛顿的 Sy（Seymour Rubin，担任过 Arnold, Fortas 和 Porter 的高级合伙人，外交官，美国大学法学教授）。他服务过的总统（如杜鲁门、福特）、竞争对手（如 Adlai Stevenson）以及许多最高法院大法官，都曾向他致信来感谢他的服务。这令人敬佩，甚至令人敬畏。这让我对我们的法律体系中的原则产生了深深的敬意，并且我发现统计学和法律体系有高度相关性。在这样的熏陶和直接影响下，我把统计学应用在法律上，其中包括涉及死刑、平权法案和烟草诉讼的问题。
 
