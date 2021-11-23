@@ -1,0 +1,737 @@
+---
+title: "COS 访谈第 39 期：统计大师Donald B. Rubin教授"
+date: "2021-11-22"
+categories:
+  - COS访谈
+tags:
+  - cos访谈
+  - 统计学
+  - 数据科学
+  - 学科合作
+  - 发展
+slug: interview-of-rubin
+meta_extra: "采访者：Fan Li，Fabrizia Mealli；译者：边蓓蕾，王子涵；审校：康贺铭，张晔"
+forum_id: 422747
+---
+
+> 原文访谈于2013-2014年，作者：Fan Li（现为杜克大学统计科学系教授） 和 Fabrizia Mealli（现为佛罗伦萨大学教授），发表在Statistical Science 2014, Vol. 29, No. 3, 439–457。译者：昆士兰大学分子生物科学研究所在读博士边蓓蕾、中国人民大学统计学院数据科学与大数据技术专业在读学生王子涵，审校：澳门大学生物医药专业在读学生康贺铭、Shopee公司的Linux内核工程师张晔。文章翻译工作已得到原作者授权。感谢原文作者的授权和支持，感谢所有译者和审校志愿者的辛勤付出。
+
+
+Abstract. Donald Bruce Rubin is John L. Loeb Professor of Statistics at Harvard University. He has made fundamental contributions to statistical methods for missing data, causal inference, survey sampling, Bayesian inference, computing and applications to a wide range of disciplines, including psychology, education, policy, law, economics, epidemiology, public health and other social and biomedical sciences.
+
+摘要：Donald Bruce Rubin是哈佛大学统计系John L. Loeb讲座教授。他在缺失数据、因果推断、抽样调查、贝叶斯推断等统计学方法上作出了基础性贡献，其成果惠及心理学、教育学、政策、法律、经济学、流行病学、公共卫生以及其他社会及生物医学领域的计算及应用。
+
+Don was born in Washington, D.C. on December 22, 1943, to Harriet and Allan Rubin. One year later, his family moved to Evanston, Illinois, where he grew up. He developed a keen interest in physics and mathematics in high school. In 1961, he went to college at Princeton University, intending to major in physics, but graduated in psychology in 1965. He began graduate school in psychology at Harvard, then switched to Computer Science (MS, 1966) and eventually earned a Ph.D. in Statistics under the direction of Bill Cochran in 1970. After graduating from Harvard, he taught for a year in Harvard’s Department of Statistics, and then in 1971 he began working at Educational Testing Service (ETS) and served as a visiting faculty member at Princeton’s new Statistics Department. He held several visiting academic appointments in the next decade at Harvard, UC Berkeley, University of Texas at Austin and the University of Wisconsin at Madison. He was a full professor at the University of Chicago in 1981–1983, and in 1984 moved back to the Harvard Statistics Department, where he remains until now, and where he served as chair from 1985 to 1994 and from 2000 to 2004.
+
+1943年12月22日，Don出生于美国华盛顿特区，父母是Harriet和Allan。一年后，全家迁居伊利诺伊州埃文斯顿市，他在那里长大。高中时他对物理和数学产生了浓厚的兴趣。1961年，Don就读于普林斯顿大学，原计划主修物理，后转入心理学系，在1965年毕业。之后Don进入了哈佛大学心理学研究生院，1966年转读计算机系硕士，但最终于1970年获得统计学博士学位，师从Bill Cochran。毕业后，他在哈佛大学统计系教过一年书，1971年开始在美国教育考试服务中心（Educational Testing Service，ETS）工作，并成为普林斯顿大学新成立统计系的访问学者。接下来十年，他先后在哈佛大学、加州大学伯克利分校、得克萨斯大学奥斯汀分校、威斯康星麦迪逊大学做过访问学者。在1981-1983年，他是芝加哥大学的全职教授；1984年重返哈佛大学统计系并工作至今；1985-1994年，2000-2004年期间曾担任统计系主任。
+
+Don has advised or coadvised over 50 Ph.D. students, written or edited 12 books, and published nearly 400 articles. According to Google Scholar, by May 2014, Rubin’s academic work has 150,000 citations, 16,000 in 2013 alone, placing him at the top with the most cited scholars in the world.
+
+Don指导或共同指导了超过50名博士生，撰写和编辑了12本著作，发表了近400篇文章。根据谷歌学术截至2014年5月的统计，Rubin的学术成果已有15万次引用，单单2013年就有一万六千次引用，在全球学者中名列前茅。（译者注：截止目前2021年11月15日，Rubin的成果被引35万多次，2020年的数据为2.4万多次）
+
+For his many contributions, Don has been honored by election to Membership in the US National Academy of Sciences, the American Academy of Arts and Sciences, the British Academy, and Fellowship in the American Statistical Association, Institute of Mathematical Statistics, International Statistical Institute, Guggenheim Foundation, Humboldt Foundation and Woodrow Wilson Society. He has also received the Samuel S. Wilks Medal from the American Statistical Association, the Parzen Prize for Statistical Innovation, the Fisher Lectureship and the George W. Snedecor Award of the Committee of Presidents of Statistical Societies. He was named Statistician of the Year by the American Statistical Association’s Boston and Chicago Chapters. In addition, he has received honorary degrees from Bamberg University, Germany and the University of Ljubljana, Slovenia.
+
+由于他的诸多贡献，Don被选为美国国家科学院院士，美国艺术与科学学院院士，英国国家学术院院士，美国统计学会会士，国际数理统计协会会士，国际统计学会会士，古根海姆基金会会士，洪堡基金会会士，伍德罗·威尔逊基金会会士。他获得了美国统计学会的 Samuel S. Wilks 奖、针对统计创新的 Parzen 奖，以及统计学会会长委员会的 Fisher 讲席奖和 George W. Snedecor奖。他被美国统计学会的波士顿和芝加哥分会誉为年度统计学家。此外，他还获得了德国的班贝格大学以及斯洛文尼亚的卢布尔雅那大学的荣誉学位。
+（译者注：2021年的诺贝尔经济学奖，奖励给了因果推断工作，基于鲁宾因果模型Rubin Causal Model）
+
+Besides being a statistician, he is a music lover, audiophile and fan of classic sports cars.
+
+除了统计学家，他还是一位音乐爱好者，音响发烧友，跑车迷。
+
+This interview was initiated on August 7, 2013, during the Joint Statistical Meetings 2013 in Montreal, in anticipation of Rubin’s 70th birthday, and completed at various times over the following months.
+
+本访谈自2013年8月7日开始，正值JSM(Joint Statistical Meetings)大会在蒙特利尔举行。当时，Rubin即将迎来他的70岁生日，整个访谈在接下来的几个月中分次完成。
+
+
+# 开始
+
+Fan: Let’s begin with your childhood. I understand you grew up in a family of lawyers, which must have heavily influenced you intellectually. Can you talk a little about your family?
+
+Fan：我们从你小时候聊起吧。我知道你生于一个律师家庭，这肯定对你的才智有着深远的影响。能不能简单介绍一下你的家庭？
+
+![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image1.jpeg)
+
+
+图1. 五岁时的D. B. Rubin。
+
+
+Don: Yes. My father was the youngest of four brothers, all of whom were lawyers, and we used to have stimulating arguments about all sorts of topics. Probably the most argumentative uncle was Sy (Seymour Rubin, senior partner at Arnold, Fortas and Porter, diplomat, and professor of law at American University), from D.C., who had framed personal letters of thanks for service from all the presidents starting with Harry Truman and going through Jerry Ford, as well as from some contenders, such as Adlai Stevenson, and various Supreme Court Justices. I found this impressive but daunting. The relevance of this is that it clearly created in me a deep respect for the principles of our legal system, to which I find statistics highly relevant, this has obviously influenced my own application of statistics to law, for example, concerning issues as diverse as the death penalty, affirmative action and the tobacco litigation.
+
+Don：是的。我父亲是他们四兄弟中最年轻的，他们都是律师，过去常常在各种话题上激烈地辩论。其中最善辩的叔叔大概是住在华盛顿的 Sy（Seymour Rubin，担任过 Arnold, Fortas 和 Porter 的高级合伙人，外交官，美国大学法学教授）。他服务过的总统（如杜鲁门、福特）、竞争对手（如 Adlai Stevenson）以及许多最高法院大法官，都曾向他撰写过个人感谢信来感谢他的服务。这令人敬佩，也令人敬仰。这让我对我们的法律体系中的原则产生了深深的敬意，并且我发现统计学和法律体系有高度相关性。在这样的熏陶和直接影响下，我把统计学应用在法律上，其中包括涉及死刑、平权法案和烟草诉讼的问题。
+
+Fabri: We will surely get back to these issues later, but was there anyone else who influenced your interest in statistics?
+
+Fabri: 等下我们再回到这些问题上，还有其他人影响了你对统计学的兴趣吗？
+
+Don: Probably the most influential was Mel, my mother’s brother, a dentist (then a bachelor). He loved to gamble small amounts, either in the bleachers at Wrigley Field, betting on the outcome of the next pitch, while watching the Cubs lose, or at Arlington Race track, where I was taught at a young age how to read the Racing Form and estimate the “true” odds from the various displayed betting pools, while losing two dollar bets. Wednesday and Saturday afternoons, during the warm months when I was a preteen, were times to learn statistics—even if at various bookie joints that were sometimes raided. As I recall, I was a decent student of his, but still lost small amounts.
+
+Don：可能对我影响最深的是我舅舅 Mel，是一名牙医（那时他还是一个单身汉）。他喜欢小赌。比如在芝加哥里格利球场的露天看台，他会为下一场比赛的结果下赌注，而他押注的一方时常会输；或者在阿灵顿赛马场，他会教年幼的我阅读赛程表，根据不同的赌注估计胜率，而后又经常输掉两美元的赌注。在我温暖美好的童年时期，周三和周六的下午是我学习统计学的时光——尽管是在经常被突击搜查的赌场。记忆中，我是他那时的“高徒”，但仍然小输了一些。
+
+There were two other important influences on my statistical interests from the late 1950s and early 1960s. First, there was an old friend of my father’s from their government days together, a Professor Emeritus of Economics at UC Berkeley, George Mehren, with whom I had many entertaining and educational (to me) arguments, which generated a respect for economics that continues to grow to this day. And second, my wonderful teacher of physics at Evanston Township High School—Robert Anspaugh—who tried to teach me to think like a real scientist, and how to use mathematics in the pursuit of science.
+
+在20世纪50年代末和60年代初，还有两个人对我的统计学兴趣有重要影响。第一个是我父亲在政府的老朋友，加州大学伯克利分校经济系的退休教授，George Mehren。我与他有过许多有趣和有教育意义的争论（对我来说），这让我对经济学至今一直保持着尊敬。第二个是我在Evanston Township高中的物理老师Robert Anspaugh，他教导我像科学家一样思考问题，教我如何在追求科学的道路上应用好数学。
+
+By the time I left high school for college, I appreciated some statistical thinking from gambling, some scientific thinking from physics, and I had deep respect for disciplines other than formal mathematics, in particular, physics and the law. These, in hindsight, are exposures that were crucial to the kind of statistics to which I gravitated in my later years. More details of the influence of my mentors can be found in Rubin (2014b).
+
+在高中毕业上大学时，我很感激我从博彩中学到了统计学思想，从物理中学到了科学思想，我对除了数学以外的很多学科都保持尊敬，特别是物理和法律。如今看来，这些都是我后来被统计学吸引的关键因素。更多关于我的启发者对我影响的细节可以从这里找到Rubin(2014b)。
+
+# COLLEGE TIME AT PRINCETON
+
+# 在普林斯顿的大学时代
+
+Fan: You entered Princeton in 1961, first as a physics major, but later changed to psychology. Why the change and why psychology?
+
+Fan: 你在1961年进入普林斯顿大学，开始主修物理，但后来改修心理学，为什么？
+
+Don: That’s a good question. Inspired by Anspaugh, I wanted to become a physicist. I was lined up for a BA in three years when I entered Princeton, and unknown to me before I entered, also lined up for a crazy plan to get a Ph.D. in physics in five years, in a program being reconditely planned by John Wheeler, a very well-known professor of physics there (and Richard Feynman’s Ph.D. advisor years earlier). In retrospect, this was a wildly over-ambitious agenda, at least for me. For a combination of complications, including the Vietnam War (and its associated drafts) and Professor Wheeler’s sabbatical at a critical time, I think no one succeeded in completing a five-year Ph.D. from entry. In any case, there were many kids like me at Princeton then, who, even though primarily interested in math and physics, were encouraged to explore other subjects. I did that, and one of the courses I took was on personality theory, taught by a wonderful professor, Silvan Tomkins, who later became a good friend. At the end of my second year, I switched from Physics to Psychology, where my mathematical and scientific background seemed both rare and appreciated—it was an immature decision (not sure what a mature one would have been), but a fine one for me because it introduced me to some new ways of thinking, as well as to new fabulous academic mentors.
+
+Don：这是个好问题。在 Anspaugh先生的鼓舞下，我梦想成为一名物理学家。我进入普林斯顿被安排 3 年拿到学士学位，但进来之前我并不知道我还被安排了一个 5 年拿到物理学博士的疯狂计划，这是物理系非常有名的 John Wheeler 教授做的一个秘密计划。回想起来，那对于我来说是一个过于雄心勃勃的安排。结合一些其他的复杂因素，包括越南战争，Wheeler 教授在关键时期的休假，我觉得没人能在 5 年内拿到博士学位。不管怎样，在普林斯顿还有很多同学和我一样，即使开始对数学和物理感兴趣，也被鼓励去其他学科探索。我就是这么做的。我上的一门课叫人格理论，是一位很出色的教授Silvan Tomkins教的，后来我们成为了好朋友。在第二学年末，我从物理转到了心理系。在那里，我因为有过人的数学和科学背景而被尊重和欣赏。尽管这是一个幼稚可笑的决定（其实我也不确定什么算是成熟的），但对我来说也不错，因为它带给了我一些全新的思考方式，也让我认识了新的非常优秀的学术导师。
+
+Fabri: You had some computing skills which were uncommon then, right? So you started to use computers quite early.
+
+
+Fabri: 你学到了一些当时并不寻常的计算技能，是不？所以你很早就开始用计算机了？
+
+Don: Yes. Sometime between my first and second year at Princeton, I taught myself Fortran. As you mentioned, those skills were not common, even at places like Princeton then.
+
+Don：是的。我在普林斯顿的第一年和第二年时候，就自学了Fortran。就像你说的，这些技能就算是在当时的普林斯顿，也不常见。
+
+Fabri: Was learning Fortran just a matter of having fun or did you actually use these skills to solve problems?
+
+Fabri: 你当时学Fortran是个人兴趣还是真的要用这些技能解决问题？
+
+Don: It was for solving problems. When I was in the Psychology Department, I was helping to support myself by coding some of the early batch computer packages for PSTAT, a Princeton statistical software package, which competed with BMDP of UCLA at the time. I also wrote various programs for simulating human behavior.
+
+Don：是为了解决问题。当时在心理系，为了养活自己，我为普林斯顿一个名叫PSTAT的统计软件写了一些早期的计算代码包。这个软件包当时和UCLA的BMDP是竞争关系。我也写了很多模拟人类行为的程序。
+
+Fan: In your senior year at Princeton, you applied for Ph.D. programs in psychology and were accepted by several very good places.
+
+Fan：在普林斯顿高年级的时候，你申请了心理学的博士项目，并且被许多不错的地方录取了。
+
+Don: Yes, I was accepted by Stanford, Michigan and Harvard. I met some extraordinary people during my visits to these programs. I went out to Stanford first, and met William Estes, a quiet but wonderful professor with strong mathematical skills and a wry wit, who later moved to Harvard. Michigan had a very strong mathematical psychology program, and when I visited in the spring of 1965, I was hosted primarily by a very promising graduating Ph.D. student, Amos Tversky, who was doing extremely interesting work on human behavior and how people handled risks. In later years, he connected with another psychologist, Daniel Kahneman, and they wrote a series of extremely influential papers in psychology and economics, which eventually led to Kahneman’s winning the Nobel Prize in Economics in 2002; Tversky passed away in 1996 and was thus not eligible for the Nobel Prize. Kahneman (who recently was awarded a National Medal of Science by President Obama) always acknowledges that the Nobel Prize was really a joint award (to Tversky and him). I was on a committee sometime last year with Kahneman, and it was interesting to find out that I had known Tversky longer than he had.
+
+Don：是的，我被斯坦福大学、密歇根大学和哈佛大学录取了。在通过这些项目学习的过程中，我认识了很多杰出人物。我先去了斯坦福，认识了William Estes，一位不苟言笑但是很厉害的教授，他有很强的数学技能并且风趣幽默，后来他去了哈佛大学。密歇根大学的数学心理学项目非常强，当我1965年春天访问的时候，首先接待我的是一位非常有前途的应届博士生，Amos Tversky，他当时在做很有趣的有关人类行为和人是如何处理风险的项目。后来的几年，他和另一位心理学家Daniel Kahneman一起在心理学和经济学领域写了一系列极有影响力的文章，这也使得Kahneman最终在2002年获得诺贝尔经济学奖。Tversky在1996年去世，因此未能获得诺贝尔奖，但Kahneman一直声明诺贝尔奖是两人共同的奖项。去年我和Kahneman一起担任评审，非常有意思的是，我发现我认识Tversky的时间比他还要长。
+
+Fan: But ultimately you chose Harvard.
+
+Fan: 但最终你选择了哈佛。
+
+Don: Well, we all make strange decisions. The reason was that I had an east-coast girlfriend who had another year in college.
+
+Don：是啊，我们所有人都会做出奇怪的决定。选择哈佛的原因是我那时的女朋友在东海岸读书，还得一年才大学毕业。
+
+# GRADUATE YEARS AT HARVARD
+
+# 在哈佛的研究生时代
+
+Fabri: You first arrived at Harvard in 1965 as a Ph.D. student in psychology, which was in the Department of Social Relations then, but were soon disappointed, and switched to computer science. What happened?
+
+
+Fabri: 1965 年你到哈佛时，是社会关系学院心理学系的博士生，但你很快就失望了，并转到了计算机系。有什么故事？
+
+Don: When I visited Harvard in the summer of 1965, some senior people in Social Relations appeared to find my background, in subjects like math and physics, attractive, so they promised me that I could skip some of the basic more “mathy” requirements. But when I arrived there, the chair of the department, a sociologist, told me something like, “No, no, I looked over your transcript and found your undergraduate education scientifically deficient because it lacked ‘methods and statistics’ courses. You will have to take them now or withdraw.” Because of all the math and physics that I’d had at Princeton, I felt insulted! I had to get out of there. Because I had independent funding from an NSF graduate fellowship, I looked around. At the time, the main applied math appeared being done in the Division of Engineering and Applied Physics, which recently became the Harvard’s “School of Engineering and Applied Sciences.” The division had several sections; one of them was computer science (CS), which seemed happy to have me.
+
+Don：我 1965 年夏天访问哈佛大学的时候，社会关系学院一些大佬了解到我有数学、物理学这些很有吸引力的学科背景，他们向我保证可以跳过一些数学类基础课的要求。但当我到了那里之后，部门系主任（一位社会学家）告诉我，“不行，不行，我看了你的成绩单，发现你的本科教育缺乏科学性，因为缺少《方法和统计》这样的课程。你得现在就补修，不然就得退学”。由于我在普林斯顿上完了所有数学和物理学的课程，这让我我倍感屈辱，我必须离开那里。同时由于我拿了 NSF （美国国家自然基金会）的研究生独立奖学金，我开始寻找新的院系。那时，工程和应用物理系恰好新开了应用数学专业，且刚刚组建成为哈佛大学工程和应用科学学院。它有很多专业，其中一个就是计算机科学，而且这个专业似乎非常欢迎我的到来。
+
+Fan: But you got bored again soon. Was this because you found the problems in CS not interesting or challenging enough?
+
+Fan: 但是你很快又觉得很无聊。是因为你觉得计算机科学没意思或者不够有挑战性吗？
+
+Don: No, not really that. There were several reasons. First, there was a big emphasis on automatic language translation, because it was cold war time, and it appeared that CS got a lot of money for computational linguistics from ARPA (Advanced Research Projects Agency), now known as DARPA. The Soviet Union, from behind the iron curtain, produced a huge number of documents in Russian, but evidently there were not enough people in the US to translate them. A complication is that there are sentences that you could not translate without their context. I still remember one example: “Time flies fast,” a three-word sentence that has three different meanings depending on which of the three words is the verb. If this three-word sentence cannot be automatically translated, how can one get an automatic (i.e., by computer) translation of a complex paragraph? Related to this was Noam Chomsky’s work on transformational grammars, down the river at MIT.
+
+Don：不，不是那样的，有很多原因。首先，计算机系很注重自动化语言翻译，因为当时是冷战时期，它得到了 ARPA（高级研究计划署，现在称为DARPA，国防部高级研究计划署）所提供的，用于计算语言学的大量经费。在铁幕时代，苏联产出了大量的文档，但很显然美国没有足够的人手去翻译。更复杂的是，有些句子无法在没有语境的情况下翻译。我记得一个例子：“时光飞逝”（Time flies fast）。这个三个单词组成的句子，有三个不同的意思，取决于这三个单词哪个是动词。如果连这样三个单词的句子都不能被自动化翻译，何谈一个复杂的段落呢？麻省理工学院Noam Chomsky教授的转换生成语法（transformational grammar）的工作便与这有关。
+
+Second, although I found some real math courses and the ones in CS on mathy topics, such as computational complexity, which dealt with Turing machines, Godel’s theorem, etc., interesting, I found many of the courses dull. Much of the time they were about programming. I remember one of my projects was to write a program to project 4-dimensional figures into 2dimensions, and then rotate them using a DEC PDP-1. It took an enormous number of hours. Even though my program worked perfectly, I felt it was a gigantic waste of time. I also got a C+ in that course because I never went to any of the classes. Now, having dealt with many students, I would be more sympathetic that I deserved a C+, but not when I was a kid. At that time, I figured there must be something better to do than rotating 4D objects and getting a C+. But marching through rice paddies in Vietnam or departing for somewhere in Canada didn’t seem appealing. So after picking up a MS degree in CS in 1966, although I stayed another year in CS, I was ready to try something else.
+
+其次，虽然我发现一些数学课程和计算机领域的某些数学话题很有趣。比如复杂度计算，涉及图灵机、哥德尔定理等等。但我发现还是有许多课程很无聊，大部分都和编程有关。我记得一个项目是写一个程序将一个四维图片转成二维，然后用一个 DEC PDP-1 做旋转。这花费了我好几个小时，即使我的程序很完美，我仍然觉得这很浪费生命。我那门课成绩是C+，因为我从来没去上过课。在和许多学生打过交道后的现在，我认同那时就应该吃个C+。但当时，青春年少的我并不这么想。那时候，我想一定会有比把 4D 物体旋转并吃一个C+更有意义的事情去做。但是诸如参加越南战争，或者离开去加拿大的事情看起来都没有吸引力，所以在 1966 年拿到计算机硕士学位之后，我准备尝试点别的。
+
+
+Fabri: How did statistics end up in your path?
+
+Fabri: 那么你是如何最终选择了统计学的？
+
+Don: A summer job in Princeton in 1966 led to it. I did some programming for John Tukey in Fortran, LISP and COBOL. I also did some consulting for a Princeton sociology professor, Robert Althauser, basically writing programs to do matched sampling, matching blacks and whites, to study racial disparity in dropout rates at Temple University. I had a conversation with Althauser about how psychology and then CS weren’t working out for me at Harvard. Because Bob was doing some semi-technical things in sociology, he knew of Fred Mosteller, although not personally, and also knew that Harvard had a decade-old Statistics Department that was founded in 1957. He suggested that I contact Mosteller. After getting back to Harvard, I talked to Fred, and he suggested that I take some stat courses. So in my third year in Harvard, I took mostly stat courses and did OK in them. And the Stat department said “Yes” to me. It also helped to have my own NSF funding, which I had from the start; they kept renewing for some reason, showing their bad taste probably, but it worked out well for me. Anyway, at the end of my third year at Harvard, I had switched to statistics, my third department in four years.
+
+
+Don：1966 年夏天我在普林斯顿的工作促成了我的选择。我用 Fortran, LISP 和 COBOL 为 John Tukey写了一些程序，也为普林斯顿社会学教授 Robert Althauser 做了一些咨询。总体上来说是写一些匹配抽样法的程序来匹配黑人和白人，来研究天普大学（Temple University）辍学率的种族差异。我与 Althauser 谈论过在哈佛就读时心理学和计算机不适合我的原因。因为 Rob **【译者住：原文笔误为Bob】** 在社会学上做一些半技术性的工作，他知道 Fred Mosteller 的名字，但并不认识，不过他知道哈佛有一个 1957 年成立的统计系。他建议我联系 Mosteller。回到哈佛后，我和 Fred （Mosteller）谈了一下，他建议我修一些统计课程。所以在第三年，我上的大部分都是统计课程，并且成绩还不错。此后统计系接收了我，有一个原因是我从一开始入学就有自己的 NSF 资助。NSF 持续对我进行资助，这显示了 NSF 选人的坏品味，但是对我来说当然不错。不管怎样，在哈佛的第三年末，我转到了统计系，这是我在四年中的第三个系。
+
+
+Fabri: Besides Mosteller, who else was on the statistics faculty then? It was a quite new department, as you said.
+
+Fabri: 除了Mosteller，统计系还有哪些老师？就像你所说的那样，当时那是个很新的系。
+
+Don: The other senior people were Bill Cochran and Art Dempster, who had recently been promoted to tenure. The junior ones were Paul Holland; Jay Goldman, a probabilist; and Shulamith Gross from Berkeley, a student of Erich Lehmann’s.
+
+Don：其他资深的人还有Bill Cochran和刚升为终身教授的Art Dempster。年轻的有Paul Holland；概率论专家Jay Goldman；来自伯克利的Shulamith Gross，他是Erich Lehmann的学生。
+
+Fabri: And you decided to work with Bill.
+
+Fabri: 然后你决定和Bill做研究。
+
+Don: Actually, I first talked to Fred. Fred always had a lot of projects going; one was with John Tukey and he proposed that I work on it. I told him that I had this matched sampling project of my own, and he suggested that I talk to Cochran—Cochran a few years earlier was an advisor for the Surgeon General’s report on smoking and lung cancer. It was obviously based on observational data, not on randomized experiments, and Fred said that Cochran knew all about these issues in epidemiology and biostatistics. So I went to knock on Bill’s door. He answered with a grumpy sounding “yes,” I went in and he said, “No, not now, later!” So I thought “Hmmm, rough guy,” but actually he was a sweetheart, with a great Scottish dry sense of humor and a love of scotch and cigarettes (I understand the former, although not the latter).
+
+Don：事实上，我先找了Fred谈。他总是同时在做很多项目，其中一个是和John Tukey的，他建议我做这个。当我告诉他我做过抽样的项目，他就建议我去找Cochran谈，因为Cochran几年前是为Surgeon General关于吸烟和肺癌的报告做咨询。这个项目很明显是基于观察性数据，而不是随机实验，Fred说Cochran知道所有的关于流行病和生物统计的问题。我去敲了Bill的门。听到他很不爽的声音说“进来”，我就进去了但他却说，“不，不是现在，等一会儿！” 我当时想，“哦，这是个不好对付的家伙”。但事实上他心地善良，有很强的苏格兰幽默感，喜欢苏格兰威士忌和香烟（前者我理解，后者我不能理解）。
+
+Fabri: Cochran did have a lasting influence on you, right?
+
+Fabri: Cochran一直对你有着影响，是吗？
+
+Don: Yes, he had a tremendous influence on me. Once I was doing some irrelevant math on matching, which I now see popping up again in the literature. I showed that to Bill, and he asked me, “Do you think that’s important, Don?” I said, “Well, I don’t know.” Then he said, “It is not important to me. If you want to work on it, go find someone else to advise you. I care about statistical problems that matter, not about making things epsilon better.” Another person who was very influential was Art Dempster. Once I did some consulting for Data Text, a collection of batch computer programs like PSTAT or BMDP. I was designing programs to calculate analyses of variance, do regressions, ordinary least squares, matrix inversions, all when you have, in hindsight, limited computing power. For advice on some of those I talked to Dempster, who always has great multivariate insights based on his deep understanding of geometry—very Fisherian.
+
+
+Don：是的，他对我有巨大的影响。有一次我正在做一些无关紧要的关于匹配的数学（不过如今我在文献里又看到了它们的兴起）。我给Bill看，他问我，“Don，你认为那重要吗？”我说，“我不知道。”然后他说，“这对我不重要。如果你还想做这方面，去找其他人来给你建议。我关心有价值的统计问题，不关心琐碎问题的epsilon **【译者注：不太对，需要改】**。”另一个对我有很大影响的是Art Dempster。有一次我为文本数据做一些咨询，这是一组批处理计算机程序，像PSTAT或者BMDP一样。我设计程序计算方差、做回归、普通最小二乘、矩阵求逆，事后来看当时所有的工作都局限于算力。后来我向Dempster咨询相关问题，他对几何的理解已经和Fisher相差无几，对多元统计也有深刻理解。
+
+
+Fan: Your Ph.D. thesis was on matching, which is the start of your life-long pursuit of causal inference. How did your interest in causal inference start?
+
+Fan: 你的博士论文是关于匹配的，是从什么时候开始了你毕生追求的因果推断？你是如何对因果推断产生兴趣的？
+
+Don: When I worked with Althauser on the racial disparity problem, I always emphasized to him that it was inherently descriptive, not really causal. I remembered enough from my physics education in high school and Princeton that association is not causation. So I was probably not intrigued by causal inference per se, but rather by the confusion that the social scientists had about it. You have to describe a real or hypothetical experiment where you could intervene, and after you intervene, you see how things change, not in time but between intervention (i.e., treatment) groups. If you are not talking about intervention, you can’t talk about causality. For some reason, when I look at old philosophy, it seems to me that they didn’t get it right, whereas in previous centuries, some experimenters got it. They bred cows, or mated hunting falcons. If you mated excellent female and male falcons, the resulting next generation of falcons would generally be better hunters than those resulting from random mating. In the 20th century, many scientists and experimentalists got it.
+
+
+Don: 当我和Althauser一起研究种族差异问题的时候，我总是跟他强调，结论本质上是描述性的，并不是真正的因果关系。我记得我在高中和在普林斯顿学物理的时候就知道相关关系并不是因果关系。所以我可能对因果推断本身并不感兴趣，而是对社会科学家对此的困惑感兴趣。我必须要描述一个可以干预的，真实的或者假设的实验，而且在你干预之后，你会看到事情是如何变化的，不是瞬时的 **【译者注：待修正】**，而是在不同的干预之间（比如不同的治疗）。如果你不谈干预，你就不能谈因果。出于某种原因，当我审视旧哲学时，在我看来，他们似乎没有搞明白。而在前几个世纪，一些实验者搞明白了。他们养奶牛，或者让猎鹰交配。如果你让优秀的公母猎鹰交配，下一代的狩猎水平要高于随机交配的结果。在20世纪，许多科学家和实验员得到了这个结果。
+
+
+Fabri: So you were only doing descriptive comparisons in your Ph.D. thesis, and the notation of potential outcomes was not there.
+
+Fabri：所以你在你的博士论文里只做了描述性的比较，而潜在结果（potential outcome）的记号并未出现。
+
+Don: Partly correct. At that time, the notation of potential outcomes was in my mind, because that is the way that Cochran initiated discussions of randomized experiments in the class he taught in 1968. Initially, it was all based on randomization, unbiasedness, Fisher’s test, etc. But the concepts had to be flipped into ordinary least squares (OLS) regression and analysis of variance tables, because nobody could compute anything difficult back then. One of the lessons in Bill’s class in regression and experimental design was to use the abbreviated Dolittle method to invert matrices, by hand! So you really couldn’t do randomization tests in any generality. The other reason I was interested in experiments and social science was my family history. There was always this legal question lurking: “But for this alleged misconduct, what would have happened?”
+
+Don：说对了一部分。当时，潜在结果的符号出现在我的脑海中，因为这就是Cochran于1968年在随机实验课堂上讨论的方法。最开始全部都是基于随机化、无偏性、Fisher随机化检验等等。但是这些概念必须要被转换成普通最小二乘回归、方差分析表，因为那时候没人能计算出任何费力点的东西。Bill有一堂回归与实验设计课，就是用缩略的Dolittle方法来手工求矩阵的逆！所以你真的难以对随机化检验做任何普适的推广。我对实验和社会科学感兴趣的另一个原因是我的家族史。总是有这样一个法律问题埋在我心里：“如果这个涉嫌不当行为，会发生什么呢？”
+
+Fan: What was your first job after getting your Ph.D. degree in 1970?
+
+Fan: 在你1970年拿到博士学位后，你的第一份工作是什么？
+
+Don: I stayed at Harvard for one more year, as an instructor in the Statistics Department, partly supported by teaching, partly supported by the Cambridge Project, which was an ARPA funded Harvard–MIT joint effort; the idea was to bring the computer science technologies of MIT and the social sciences research of Harvard together to do wonderful things in the social sciences. In the Statistics Department, I was coteaching with Bob Rosenthal the “Statistics for Psychologists” course that, ironically, the Social Relations Department wanted me to take five years earlier, thereby driving me out of their department! Bob had, and has, tremendous intuition for experimental design and other practical issues, and we have written many things together.
+
+Don：我在哈佛多待了一年，作为统计系的讲师，一部分工资来自教学，一部分来自剑桥项目，这是一个ARPA支持的哈佛—麻省理工联合项目；旨在将麻省理工的计算机科学技术和哈佛大学的社会科学研究结合到一起，在社会科学上做一些有趣的事情。在统计系，我和Bob Rosenthal一起教“统计心理学”。讽刺的是，5年前社会关系学院就想让我上这门课，而正是由于这门课，他们把我逐出了他们院！一直以来，Bob对于实验设计和其他一些实践问题都有很强的直觉，我们一起合作写了很多东西。
+
+![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image2.jpeg)
+
+FIG. 2. D. B. Rubin (on left) with his puppy friend Thor (on right), about 1967
+
+
+图2. D. B. Rubin（左）和他的朋友，宠物狗Thor（右），1967年。
+
+
+# THE ETS DECADE: MISSING DATA, EM AND CAUSAL INFERENCE
+# ETS的10年：缺失数据，EM和因果推断
+
+Fan: After that one year, you went for a position at ETS in Princeton instead of a junior faculty position in a research university. It was quite an unusual choice, given that you could probably have found a position in a respected university statistics department easily.
+
+Fan: 一年后，你在普林斯顿的ETS找了一个职位，而不是研究型大学里的教职。这看起来是个很不寻常的选择，因为当时你已经能轻易地在一个有名的统计系找到教职。
+
+Don: Right—many people thought I was goofy. I did have several good offers, one was to stay at Harvard, and another was to go to Dartmouth. But I met Al Beaton, who was later my boss at ETS in Princeton, at a conference in Madison, Wisconsin, and he offered me a job, which I took. Al had a doctorate in education at Harvard, and had worked with Dempster on computational issues, such as the “sweep operator.” He was a great guy with a deep understanding of practical computing issues. Also, he appreciated my research. Because I was an undergrad at Princeton, it was almost like going home. For several years, I taught one course at Princeton. Between the jobs at ETS and Princeton, I was earning twice what the Harvard salary would have been, which allowed me to buy a house on an acre and a half, with a garage for rebuilding an older Mercedes roadster, etc. A different style of life from that in Cambridge.
+
+Don：是的，很多人认为我是一个傻蛋。我有很多不错的机会，一个是待在哈佛，另一个是去达特茅斯。但我遇到了Al Beaton，后来他是我在普林斯顿ETS的老板。在威斯康星麦迪逊的一个会议上，他给了我一份工作，我接受了。Al有一个哈佛的博士学位，他跟Dempster一起做一些计算问题，例如“扫描算子”（“sweep operator”）。他是个很厉害的人，并且对实际计算问题有很深刻的理解，同时他也很欣赏我的研究。由于我之前曾是普林斯顿的本科生，所以这种感觉有点像回老家。我在普林斯顿有好几年就只教一门课。在ETS和普林斯顿的工作中，我的工资是在哈佛的两倍，这让我可以买一栋1.5英亩的房子，还有一个为改造后的奔驰跑车准备的车库……。和在剑桥市相比，这是完全不同的生活方式。
+
+Fan: You seem to have had a lot of freedom to pursue research at the ETS. What was your responsibility at ETS?
+
+Fan: 看起来你在ETS做研究非常自由。你在ETS的职责是什么？
+
+Don: The position at ETS was like an academic position with teaching responsibilities replaced by consulting on ETS’s social science problems, including psychological and educational testing ones. I found consulting much easier for me than teaching, and ETS had interesting problems. Also there were many very good people around, like Fred Lord, who was highly respected in psychometrics. The Princeton faculty was great, too: Geoffrey Watson (of the Durbin–Watson statistic) was the chair; Peter Bloomfield was there as a junior faculty member before he moved to North Carolina; and of course Tukey was still there, even though he spent a lot of time at Bell Labs. John was John, having a spectacular but very unusual way of thinking— obviously a genius. Stuart Hunter was in the Engineering School then. These were fine times for me, with tremendous freedom to pursue what I regarded as important work.
+
+
+Don：我在ETS差不多是一个学术职位，但教学职责被社会科学问题的咨询所取代，包括心理和教育测试问题。我发现对我而言作咨询比教学更简单，ETS有很多有意思的问题。而且周围有很多不错的人，比如Fred Lord在计量心理学上很有名望。普林斯顿的同事们也相当牛：Geoffrey Watson(Durbin-Watson 统计量命名人)是系主任；Peter Bloomfield在去北卡罗来纳之前还是系里资历较浅的成员；当然必须包括还在职的Tukey（译者注：全名John Tukey，探索性数据分析的提出者），尽管他花了很多时间在贝尔实验室。John就是John，有着惊人但非常不寻常的思维方式——显然是个天才。Stuart Hunter那时在工程学院。对我来说那是一段美好的时光，我有大量自由的时间致力于我认为重要的工作。
+
+
+Fabri: By any measure, your accomplishments in the ETS years were astounding. In 1976, you published the paper “Inference and Missing Data” in Biometrika (Rubin, 1976) that lays the foundation for modern analysis of missing data; in 1977, with Arthur Dempster and Nan Laird, you published the EM paper “Maximum Likelihood from Incomplete Data via the EM Algorithm” in JRSS-B (Dempster, Laird and Rubin, 1977); in 1974, 1977, 1978, you published a series of papers that lay the foundation for the Rubin Causal Model (Rubin, 1974, 1977, 1978a). What was it like for you at that time? How come so many groundbreaking ideas exploded in your mind at the same time?
+
+Fabri: 从任何维度来看，你在 ETS 几年的成就都是令人震惊的。在 1976 年，你在 Biometrika 上发表了文章Inference and Missing Data (Rubin, 1976)，为现代缺失数据的分析奠定了基础；在 1977 年，你和 Arthur Dempster，Nan Laird 一起在 JRSS-B 上发表了EM算法文章 Maximum Likelihood from Incomplete Data via the EM Algorithm (Dempster, Laird and Rubin, 1977)；在 1974，1977，1978 年，你发表了一系列奠定了因果模型基础的文章 (Rubin, 1974, 1977, 1978a)。你在那个时候的感觉怎么样？你是如何在这一段时间爆出了这么多开创性的想法？
+
+
+Don: Probably the most important reason is that I always worried about solving real problems. I didn’t read the literature to uncover a hot topic to write about. I always liked math, but I never regarded much of mathematical statistics as real math—much of it is just so tedious. Can you keep track of these epsilons?
+
+Don：可能最重要的原因是我总是很忧心于如何解决实际问题。我根本没有读过写热门话题的文献。我一直喜欢数学，但是我不认为数理统计是真正的数学，大部数理统计问题是相当枯燥的。你能一直追逐这些epsilon吗？
+
+Fabri: There is no coincidence that all these papers share the common theme of missing data.
+
+Fabri: 不算巧合的是，所有这些论文都有共同的主题：缺失数据。
+
+Don: That’s right. That theme arose when I was a graduate student. The first paper I wrote on missing data, which is also my first sole-authored paper, was on analysis of variance designs, a quite algorithmic paper. It was always clear to me, from the experimental design course from Cochran that you should set up experiments as missing data problems, with all the potential outcomes under the not-taken treatments missing. But nobody did observational studies that way, which seemed very odd to me. Indeed, nobody was using potential outcomes outside the context of randomized experiments, and even there, most writers dropped potential outcomes in favor of least squares when actually doing things.
+
+Don：是的。在我还是研究生的时候这个主题就出现了。我写的第一篇关于缺失数据的论文，也是我的第一篇独立作者的论文，是关于实验设计的方差分析，一个非常偏算法的论文。自从上了Cochran的实验设计课之后，我便很清楚，你应该把自然实验当作缺失数据问题——所有未接受处理的潜在结果都缺失了。但让我奇怪的是，没有人这样搞观察性研究。事实上，没有人用随机实验以外的潜在结果；甚至，很多学者实际干活时，也会放弃潜在结果，而选择最小二乘法。
+
+
+Fan: What was the state of research on missing data before you came into the scene?
+
+Fan: 在你进入这个领域之前，缺失数据的研究是什么样的状态？
+
+Don: It was extremely ad hoc. The standard approach to missing data then was comparing the biases of filling in the means, or of regression imputation under different situations, but almost always under an implicit “missing completely at random” assumption. The purely technical sides of these papers are solid. But I found there were always counter examples to the propriety of the specific methods being considered, and to explore them, one almost needed a master’s thesis for each situation. I would rather address the class of problems with some generality. There is a mechanism that creates missing data, which is critical for deciding how to deal with the missing data. That idea of formal indicators for missing data goes way back in the contexts of experimental design and survey design. I am consistently amazed how this was not used in observational studies until I did so in the 1970s; maybe someone did, but I’ve looked for years and haven’t found anything. But probably because the missing data paper was done in a relatively new way, I had great difficulty in getting it published (more details in Rubin, 2014a).
+
+
+Don：非常诡异。标准的解决缺失数据的方法是比较用均值填补后的偏差，或者在不同的情况下，用回归插补，但是都要要基于隐含的“完全随机缺失”的假设。这些论文在纯技术层面上都非常扎实。但我发现考虑具体方法是否恰当之时，总会出现反例。为了探索这个问题，可能每种情况都是一篇硕士毕业论文。我宁愿用一种更普适的方法来解决这类问题。有一个机制能够生成缺失数据，这对于如何解决缺失数据的问题很关键。那个对缺失数据构建正式指标的思想可以追溯到实验设计和抽样调查的背景下 **【译者注：不太确定需修改】**。直到我20世纪70年代做这件事的时候，我很惊讶为什么没有用到观察研究上；可能也有人做了，不过这么多年我什么都没找到。但可能因为缺失数据论文中的方法相对很新，发表的过程中我遇到了非常大的困难(更多细节见 Rubin, 2014a)。
+
+
+Fan: The EM algorithm is another milestone in modern statistics; it is also relevant in computer science and one of the most important algorithm in data mining. Though similar ideas had been used in several specific contexts before, nobody had realized the generality of EM. How did Dempster, Laird and you discover the generality?
+
+Fan: EM算法是现代统计的另一个里程碑；它也和计算机科学（computer science）相关，是数据挖掘中最重要的算法之一。虽然在这之前有类似的想法，但是没有人意识到EM算法的普适性。你和Dempster, Laird是如何发现EM的普适性的？
+
+Don: In those early years at ETS, I had the freedom to remain in close contact with the Harvard people, Cochran, Dempster, Holland and Rosenthal, which was very important to me. I always enjoyed talking to Dempster, who is a very principled and deep thinker. I was able to arrange some consulting projects at ETS to bring him to Princeton. Once we were talking about some missing data problem, and we started discussing filling these values in, but I knew it wouldn’t work in generality. I pointed to a paper by Hartley and Hocking (1971), where they deserted the approach of iteratively filling in missing values, as in Hartley (1956) for the counted data case, and went to Newton–Raphson, I think, in the normal case. Even though aspects of EM were known for years, and Hartley and others were sort of nibbling around the edges of EM, apparently nobody put it all together as a general algorithm. Art and I realized that you have to fill in sufficient statistics. I had all these examples like t distributions, factor analysis (the ETS guys loved that), latent class models. And Art had a great graduate student, Nan Laird, available to work on parts of it, and we started writing it up. The EM paper was accepted right away by JRSS-B, even with invited discussions.
+
+
+Don：在ETS的早些年，我可以自由地和哈佛的人联系，比如Cochran, Dempster, Holland和Rosenthal，这对我来说非常重要。我非常喜欢和Dempster聊天，他关注更高的统计原则，思考问题很深入。我能在ETS安排一些咨询项目从而请他来到普林斯顿。有一次我们聊缺失数据的问题，我们开始讨论插补值，但是我知道它不具有普适性。我引出了一篇Hartley和Hocking (1971)的论文。针对插补缺失数据，它舍弃了类似Hartley（1956）计数数据情形和Newton-Raphson等迭代的方法。我认为，这才是一个普遍情形。尽管EM的某些方面已经被知道很多年了，Hartley和其他人也有点咬住EM边缘的意思了，但很明显没有人把它总结成一个普适性的算法。Art和我意识到必须填补充分统计量 **【译者注：不理解，需修改】**。我做了所有的例子，包括t分布、因子分析（ETS的人所喜欢的）、潜在类别模型（latent class models）。Art有一个很强的研究生，Nan Laird，她可以做一部分工作，于是我们开始写起来。EM的论文被JRSS-B接受，并且安排了邀请讨论（译者注：对于极少数重要的优秀文章，杂志编辑部才会邀请多个学者来评论，评论和文章一并出版）。
+
+
+Fan: Now let’s talk more about causal inference. You are known for proposing the general potential outcome framework. It was Neyman who first mentioned the notation of potential outcomes in his Ph.D. thesis (Neyman, 1990), but the notation seemed to have long been neglected.
+
+Fan: 让我们再说说因果推断。你因为提出了更广的潜在结果框架而出名。最初Neyman在他的博士论文里首先提到了潜在结果的记号，但是这个记号似乎被忽略了很久。（译者注：具体可参见丁鹏的文章：[因果推断——现代统计的思想飞跃](https://cosx.org/2021/06/causal-inference-modern-statistics-leap/)）
+
+Don: Yes, it was ignored outside randomized experiments. Within randomized studies, the notion became standard and used, for example, in Kempthorne’s work, but as I mentioned earlier, ignored otherwise.
+
+Don：是的，它被忽略在随机实验之外了。在随机实验研究领域，这个概念变得标准和通用，比如在Kempthorne的工作中，但是正如我之前提到的，它在其他地方都被忽略了。
+
+Fan: Were you aware of Neyman’s work before?
+
+Fan: 你之前注意到Neyman的工作了吗？
+
+Don: No. I wasn’t aware of his work defining potential outcomes until 1990 when his Ph.D. thesis was translated into English, although I attributed much of the perspective to him because of his work on surveys in Neyman (1934) and onward (see Rubin, 1990a, followed by Rubin, 1990b).
+
+Don：没有。虽然我对他在抽样调查（Neyman 1934)和相关工作(见Rubin, 1990a及Rubin, 1990b)十分敬佩，但我都没有注意到他的工作中定义了潜在结果，直到1990年他的博士论文被翻译成英文。
+
+Fabri: You actually met Neyman when you visited Berkeley in the mid-1970s. During all those lunches, had you ever discussed causal inference and potential outcomes with him?
+
+Fabri: 事实上你在20世纪70年代中去伯克利访问见到了Neyman。在吃午饭的时候，你和他讨论过因果推断和潜在结果么？
+
+Don: I did. In fact, I had an office right next to his. Neyman came to Berkeley in the late 30s. He was very impressive, not only as a mathematical statistician, but also as an individual. There was a tremendous aura about him. Shortly after arriving in Berkeley, I gave a talk on missing data and causal inference. The next day, I went to lunch with Neyman and I said something like, “It seems to me that formulating causal problems in terms of missing potential outcomes is an obvious thing to do, not just in randomized experiments, but also in observational studies.” Neyman answered to the effect that (remarkable in hindsight because he did so without acknowledging that he was the person who first formulated potential outcomes), “No, causality is far too speculative in nonrandomized settings.” He repeated something like this quote from his biography, “...Without randomization an experiment has little value irrespective of the subsequent treatment.” (Also see my comment on this conversion in Rubin, 2010.) Then he went to say politely but firmly, “Let’s not talk about that, let’s instead talk about astronomy.” He was very into astronomy at the time.
+
+
+Don：讨论过。事实上，我的办公室在他右边。Neyman在30年代末来到伯克利。他给人的印象很深刻，他不仅仅是一个数理统计学家，也很有人格魅力。他有一圈巨大的光环。在来到伯克利不久，我做了一个缺失数据和因果推断的演讲。第二天，我和Neyman吃午饭，我说，“我认为，利用缺失潜在结果来阐述因果问题，很明显是一个得干的事，不仅仅在随机实验中，也要在观察实验中。”Neyman回答，“不，因果关系在非随机的设定里过于臆想了”；事后想想，这很令人惊讶，因为他并没有把自己当作第一个提出潜在结果的人。他在他的自传中也重复了类似的话，“……没有随机实验的后续处理是没有价值的。”(也可以在我对这次访谈的评论 Rubin, 2010.里可以看到)然后他很有礼貌很严肃地说，“我们不讨论这个，我们讨论天文学。”他当时非常痴迷天文学。
+
+
+Fabri: You probably learned the reasons why he was so involved in the frequentist approach.
+
+Fabri: 你可能知道了为什么他这么支持频率学派方法。
+
+Don: Yes. I remember we once had a conversation about what confidence intervals really meant and why the formal Neyman–Pearson approach seemed irrelevant to me. He said something like, “You misinterpret what we have done. We were doing the mathematics; go back and read my 1934 paper where I first defined a confidence interval.” He defined it as a procedure that has the correct coverage for all prior distributions (see page 589, Neyman, 1934). If you think of that, you are forced to include all point mass priors and, therefore, you are forced to do Neyman–Pearson. He went on to say (approximately), “If you are a real scientist with a class of problems to work on, you don’t care about all point-mass priors, you only care about the priors for the class of problems you will be working on. But if you are doing the mathematics, you can’t talk about the problems you or anyone is working on.” I tried to make this point in a comment (Rubin, 1995), but it didn’t seem to resonate to others.
+
+
+Don：是的。我记得有一次我们谈论置信区间的真实含义，以及为什么正式的Neyman–Pearson的方法看起来跟我毫不相关。他说，“你错误地解释了我们已经做的。我们做的是数学；回去读我1934年的论文，里面我定义了置信区间。”他把它定义为对所有先验分布有正确覆盖的方法(见589页, Neyman, 1934)。如果你这么认为，你必须包括所有退化的单点先验分布 **【译者注：待修正】**，你必须做Neyman–Pearson。（好像）他又继续说道，“如果你是一位真正的科学家，在研究某一类问题时，你不要关注所有的先验（point-mass priors），你只需要关注你在做的那类问题的先验。但是如果你在做数学，你不能只谈论你或者其他人在做的东西。”我试图在一篇评论中指出这一点(Rubin, 1995)，但似乎并没有引起共鸣。
+
+Fabri: In his famous 1986 JASA paper, Paul Holland coined the term “Rubin Causal Model (RCM),” referring to the potential outcome framework to causal inference (Holland, 1986). Can you explain why, if you think so, the term “Rubin Causal Model” is a fair description of your contribution to this topic?
+
+Fabri: 在1986年那篇著名的JASA文章里，Paul Holland首次提出了名词“Rubin因果模型（Rubin Causal Model，RCM）”，指的是因果推断潜在结果框架(Holland, 1986)。你能解释下为什么“Rubin因果模型”是你对这个主题作出贡献的公正描述？如果你认同的话。
+
+Don: Actually Angrist, Imbens and I had a rejoinder in our 1996 JASA paper (Angrist, Imbens and Rubin, 1996), where we explain why we think it is fair. Neyman is pristinely associated with the development of potential outcomes in randomized experiments, no doubt about that. But in the 1974 paper (Rubin, 1974), I made the potential outcomes approach for defining causal effects front and center, not only in randomized experiments, but also in observational studies, which apparently had never been done before. As Neyman told me back in Berkeley, in some sense, he didn’t believe in doing statistical inference for causal effects outside of randomized experiments.
+
+Don：事实上Angrist, Imbens和我在我们1996年的JASA论文(Angrist, Imbens and Rubin, 1996)里一起回应了这种说法，我们解释了为什么我们认为这种说法是合理的。毫无疑问，Neyman是最初在随机实验中提出潜在结果的人。但是在1974年的文章里(Rubin, 1974)，我把通过潜在结果定义因果效应（causal effect）的方式设置核心观点，同时不仅在随机实验中，而且也在观察性研究的情境中进行了阐释，这很明显是之前没做过的。正如Neyman在伯克利告诉我的，在某种意义上，他不相信在随机实验之外做因果效应的统计推断。
+
+Fan: Also there are features in the RCM, such as the definition of the assignment mechanism, that belong to you.
+
+Fan: RCM也有很多特点，比如分配机制（assignment mechanism）的定义，这个是你提出的。
+
+Don: Yes, it was crucial to realize that randomized experiments are embedded in a larger class of assignment mechanisms, which was not in the literature. Also, in the 1978 paper (Rubin, 1978a), I proposed three integral parts to this RCM framework: potential outcomes, assignment mechanisms, and a (Bayesian) model for the science (the potential outcomes and covariates). The last two parts were not only something that Neyman never did, he possibly wouldn’t even like the third part. In fact, I think it is unfair to attribute something to someone who is dead, who may not approve of the content being attributed. If the fundamental idea is clear, such as with Fisher’s randomization test of a sharp null hypothesis, sure, attribute that idea to Fisher no matter what the test statistic, as in Brillinger, Jones and Tukey (1978). Panos Toulis (a fine Harvard Ph.D. student) helped me track down this statement that I remembered reading in my ETS days from a manuscript John gave to me:
+
+
+Don：是的，意识到随机实验是嵌套在一个大的分配机制中是很关键的，这个不在论文里。在1978年的论文里(Rubin, 1978a)，我给RCM框架提出了三个完整的部分：潜在结果、分配机制以及一个贝叶斯模型（包含潜在结果和协变量）。后两个部分不仅是Neyman从来没做过的，甚至他很可能不喜欢第三部分。事实上，我认为把某些东西归因于逝去的人是不公平的，他们可能也不赞成被归为自己成果的内容。如果基本的想法很清晰，例如对于强零假设的Fisher的随机化检验，也可以不管是什么检验统计量，把如Brillinger, Jones and Tukey (1978)中的想法归功于Fisher。Panos Toulis（一个很棒的哈佛的博士生）帮我追溯了这个陈述，我记得在ETS的那些日子我读了John给我的一个稿子：
+
+
+“In the precomputer era, the fact that almost all work could be done once and for all was of great importance. As a consequence, the advantages of randomization approaches—except for those few cases where the randomization distributions could be dealt with once and for all—were not adequately valued.
+
+“在前计算机时代，几乎所有的工作都只能执行一次，这十分重要。因此，随机化方法的优势——除了少数情况下随机分布能全部被一次性处理之外——并不能被充分体现。
+
+One reason for this undervaluation lay in the fact that, so long as randomization was confined to specially manageable key statistics, there seemed no way to introduce into the randomization approach the insights—some misleading and some important and valuable—into what test statistics would be highly sensitive to the changes that it was most desired to detect. The disappearance of this situation with the rise of the computer seems not to have received the attention that it deserves.” (Brillinger, Jones and Tukey, 1978, Chapter 25, page F-5.)
+
+
+“随机化的方法被低估的一个原因是，只要随机化被限制在一些特定的容易处理的关键统计问题上，似乎就没办法在随机化方法中引入可能产生误导、也可能重要且有价值的见解，因为在这些实验中统计量对（实验条件）变化很敏感，以至于这些统计量是最希望被检验的。**【译者注：待修改】**随着计算机的起步，这种现象消失了，而且它的消失看起来并没有引起它应有的关注度。”(Brillinger, Jones and Tukey, 1978, 25章, F-5页.)
+
+
+
+Fabri: Here I am quoting an interesting question by Tom Belin regarding potential outcomes: “Do you believe potential outcomes exist in people as fixed quantities, or is the notion that potential outcomes are a device to facilitate causal inference?”
+
+Fabri: 我在这引用Tom Belin提的关于潜在结果的一个有趣的问题：“你认为潜在结果像固定数值一样存在于人群中，还是解决因果推断问题的一个手段？”
+
+Don: Definitely the latter. Among other things, a person’s potential outcomes could change over time, and how do we know the people who were studied in the past are still exchangeable with people today? But there are lots of devices like that in science.
+
+Don：当然是后者。在其他事情中，一个人的潜在结果可能一直在变，我们怎么知道我们过去研究的人和现在所研究的人是可交换的？但是在科学中有很多那样的手段。
+
+Fan: In the RCM, cause/intervention should always be defined before you start the analysis. In other words, the RCM is a framework to investigate the “effects of a cause,” but not the “causes of an effect.” Some criticize this as a major limitation. Do you regard this as a limitation? Do you think it is ever possible to draw inference on the causes of effects from data, or is it, per se, an interesting question worth further investigation?
+
+Fan: 在RCM中，原因/干预在开始分析前就应该被定义。换句话说，RCM是一个研究“原因的效应”的框架，而不是研究“效应的原因”。一些人批评说这是其主要的局限。你觉得这是个局限吗？你认为可能从效应中推断原因吗？或者，它是个值得研究的有意思的问题吗？
+
+Don: I regard “the cause” of an event topic as more of a cocktail conversation topic than a scientific inquiry, because it leads to an essentially infinite regress. Someone says, “He died of lung cancer because he smoked three packs a day”; then someone else counters, “Oh no, he died of lung cancer because both of his parents smoked three packs a day and, therefore, there was no hope of his doing anything other than smoking three packs a day”; then another one says, “No, no, his parents smoked because his grandparents smoked— they lived in North Carolina where, back then, everyone smoked three packs a day, so the cause is where the grandparents lived,” and so on. How far back should you go? You can’t talk sensibly about the cause of an event; you can talk about “but for that cause (and there can be many ‘but for’s), what would have happened?” All these questions can be addressed hypothetically. But the cause? The notion is meaningless to me.
+
+
+Don：我觉得谈论一个事件的原因，这个话题更像喝酒时的闲聊，而不是一个科学的谈话，因为它会从本质上导致无限的回溯。有人说，“他死于肺癌是因为一天抽三包烟”；有人反驳，“不，他死于肺癌是因为他的父母每天抽三包烟，因此，除了抽三包烟以外，他别无选择”；另一个人说，“不，他的父母抽烟是因为他的祖父母抽烟，他们生活在北卡，那里的每个人都是一天抽三包烟，所以原因是他的祖父母居住的地方”等等。你要追溯到多远？你不能理智地谈论事件的原因；你可以说“若不是那个原因（可以有很多“若不是”）”，可能会发生什么？所有这些问题都能用假设解决。但是原因这个概念对我来说没有意义。
+
+Fabri: Do you feel that you benefit from knowing about history of statistics when you are thinking about fundamentals of statistics?
+
+Fabri: 你觉得当你思考统计学的基础问题时，了解统计学的发展历史对你有帮助吗？
+
+Don: I know some history, but not a large amount. The most important lessons occur when I feel that I understand why one of the giants, like Fisher or Neyman, got something wrong. When you understand why a mediocre thinker got something wrong, you learn little, but when you understand why a genius got something wrong, you learn a tremendous amount.
+
+
+Don：我知道一些历史，但不是非常多。最重要的教训发生在当我理解了像Fisher或者Neyman这样的天才为什么会犯错。当你理解了为什么一个平庸的思考者会出错，你学到的很少，但是当你理解了为什么天才会出错，你就学到很多了。
+
+![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image3.jpeg)
+
+FIG. 3. D. B. Rubin (on left) poses with the captain (on right) of Sy’s boat harbored in Bodrum, Turkey, mid-1970s.
+
+图3. D. B. Rubin （左）和船长Sy（右）合影，船停泊在Bodrum, Turkey，1970年代中期。
+
+
+# BACK TO HARVARD: PROPENSITY SCORE, MULTIPLE IMPUTATION AND MORE
+
+# 回到哈佛：倾向得分，多重插补法及其他
+
+Fabri: After those productive years at ETS, you spent some time at the EPA (US Environmental Protection Agency). Why did you decide to move, given that you were apparently doing very well at the ETS?
+
+
+Fabri：你在ETS研究了很多成果之后，就前往EPA（US Environmental Protection Agency，美国国家环境保护局）待了一段时间。那么既然你在ETS做得十分出色，为什么突然决定到EPA去？
+
+Don: It started partly from my joking answer to the question, “How long have you been at ETS?” I answered, “Too long.” The problems that I had dealt with at ETS started to appear repetitive, and I felt that I had made important contributions to them including EM and multiple imputation ideas, which were being used to address some serious issues, like test equating, and formulating the right ways to collect data. So I wanted to try something else. At the time, David Rosenbaum was the head of the Office of Radiation Programs at the EPA. He had the grand idea of putting together a team of applied mathematicians and statisticians. Somehow he found my name and invited me to D.C. to find out whether I wanted to lead such a group. Basically, I had the freedom to hire several people of my choice, and I had a good government salary (at the level of “Senior Executive Service”). So I said, “Let’s see whom I can get.” I was able to convince both Rod Little (who was in England at that time) and Paul Rosenbaum (whom I advised while I was still at ETS), as well as Susan Hinkins, who wrote a thesis on missing data at Montana State University, and two others. That was shortly before the presidential election. Then the Democrats lost and Reagan was to come in, and everything seemed to be falling apart. All of a sudden, many of the people above my level at the EPA (most of whom were presidential appointments), had to prepare to turn in their resignations, and had to be concerned about their next positions.
+
+Don：我之前对于问题“你在ETS工作了多长时间”的开玩笑的回答解释了我的部分想法。我当时回答说“很长的时间”。当时我在ETS处理的问题开始变得重复；而且我觉得我已经帮他们在EM和多重插补法（multiple imputation）方面作出了很重要的帮助，EM和多重插补法已经可以用来处理一些例如测验等值化（test equating），公式化收集数据等重要的问题，所以我想尝试一些其他的东西。当时David Rosenbaum是EPA中放射性项目研究办公室的主任。他有一个很宏伟的想法，想召集一些应用数学家和统计学家组建一支队伍。不知怎么他找到了我，想看看我是否愿意领导这样一支队伍，并邀请我去D.C.。我当时基本上可以自主选择聘用一些人，而且政府给我拨发了不菲的薪水（待遇同高级管理人员）。所以我说，“我先看看我能找到谁。”我可以叫来Rod Little（他当时在英国）、Paul Rosenbaum（我在ETS时曾指导过他）和Susan Hinkins（他在蒙大拿州立大学写了一篇有关缺失数据的论文），以及另外两个人。那会很快就要进行总统选举了。之后民主党下台，共和党掌权，似乎所有的事情就都乱套了。突然很多在EPA比我的职位高的人（他们中大部分人都是总统任命的）开始准备递交他们的辞职信，也在担忧他们接下来会担任什么职务。
+
+Fabri：So the EPA project ended before it even got started.
+
+Fabri：所以EPA的项目还没开始就结束了。
+
+Don: It didn’t start at all in some sense. I formally signed on at the beginning of December, and after one pay period, I turned in my resignation. But I felt responsible to find jobs for all these people I brought there. Eventually, Susan Hinkins got connected with Fritz Scheuren at the IRS; Paul Rosenbaum got a position at the University of Wisconsin at Madison; Rod got a job related to the Census. One nice thing about that short period of time is that, through the projects I was in charge of, I made several good connections, such as to Herman Chernoff and George Box. George and I really hit it off, primarily because of his insistence on statistics having connections to real problems, but also because of his wonderful sense of humor, which was witty and ribald, and his love of good spirits. In any case, the EPA position led to an invitation to visit Box at the Math Research Center at the University of Wisconsin, which I gladly accepted. That gave me the chance to finish writing the propensity score papers with Paul (Rosenbaum and Rubin, 1983a, 1983b, 1984a).
+
+Don：在某种意义上这个项目就是没开始。我在十二月初正式签约，不过只在一个支付期之后，我就递交了自己的辞职信，但我觉得我有义务为我带来的这些人提供工作。最终，Susan Hinkins和IRS的Fritz Scheuren取得了联系；Paul Rosenbaum在威斯康辛大学麦迪逊分校得到了一个职位；Rod也得到了一份有关普查的工作。在这么短的工作时间内，有一件特别棒的事情是，我通过我管理的这个项目，和Herman Chernoff、George Box等人建立了很好的联系。George和我真的很搭，主要是因为他坚持认为统计应该和实际问题相联系，但也有一部分原因是由于他那粗犷而又很诙谐的幽默感，以及他的乐观向上。不管发生了什么，EPA的位置让我有机会访问 Box 所在的威斯康辛大学数学研究中心，我欣然接受。那也给了我一个机会来和Paul一起完成倾向得分（propensity score）（Rosenbaum and Rubin, 1983a, 1983b, 1984a）的论文。
+
+Fan: Since you mentioned propensity score, arguably the most popular causal inference technique in a wide range of applied disciplines, can you give some insights on the “natural history” of propensity score?
+
+Fan：既然你提到了倾向得分——这项可以说是在大量应用学科中最流行的因果推断技术，那么你能够把倾向得分的发展历程分享给大家吗？
+
+Don: I first met Paul in 1978, when I came to Har-vard on a Guggenheim fellowship; he was a first-year Ph.D. student, extremely bright and devoted. Back in my Princeton days I did some consulting for a psychologist at Rutgers, June Reinisch, who later became the first director of the Kinsey Institute after Kinsey. She was very interested in studying the nature-nurture controversy——what makes men and women so different? She and her husband, who was also a psychologist, were doing experiments on rats and pigs. They injected hormones into the uteri of pregnant animals, and thereby exposed the fetuses to different prebirth environments; this kind of randomized experiment is obviously unethical to do with humans. One of the problems Paul and I were working on for this project, also as part of Paul’s thesis, was matching—matching background characteristics of exposed and unexposed. The covariates included a lot of continuous and discrete variables, some of which were rare events like certain serious diseases prior to, or during, early pregnancy. Soon it became clear that standard matching approaches, like Mahalanobis matching, do not work well in such high dimensional settings. You have to find some type of summaries of these variables and balance the summaries in the treatment and control groups, not individual to individual. Then we realized if you have an assignment mechanism, you can match on the individual assignment probabilities, which is essentially the Horvitz–Thompson idea, to eliminate all systematic bias. I don’t remember the exact details, but I think we first got the propensity score idea when working on a Duke data bank on coronary artery bypass surgery, but refined it for the Reinisch data, which is very similar in principle. Again, the idea of the propensity score is motivated by addressing real problems, but with generality.
+
+
+Don：1978 年，我去领古根海姆奖前往哈佛时，第一次见到 Paul；他是个一年级博士生，非常聪明且勤奋。在回到普林斯顿的日子里，我为一名罗格斯大学的心理学家，June Reinisch, 做了一些咨询，他后来成为了继 Kinsey 后的第一位 Kinsey 研究所的主任。她对于天性与教养之争的研究非常有兴趣——什么导致了男人与女人如此不同？她和同为心理学家的丈夫，在老鼠和猪身上做了一些实验。他们将荷尔蒙注射进了怀孕动物的子宫，从而使得暴露给胎儿的产前环境不同。当然，这种随机性的实验显然在人类身上做是不道德的。我和 Paul 为这个项目工作时出现了一个问题，是暴露组和未暴露组匹配背景特征的问题，同样这也是 Paul 论文中的一部分内容。问题在于，这个数据的协变量包括大量的离散变量和连续变量，这些变量中有一些发生频率很小，比如说在早期妊娠期间或者之前出现的各种严重的疾病。而在研究不久后，我们就发现标准匹配方法，比如说 Mahalanobis 匹配，很明显并不适用在高维的设定中。你需要找到这些变量的总结性变量，并且在治疗组和对照组中平衡这些总结性变量，而不是在单个变量的层次上进行平衡。然后我们意识到如果可以有一个分配机制，你就可以对个人的分配概率进行匹配来消除所有的系统误差，其本质上是 Horvitz–Thompson 估计的思想。我记不太清具体的了，但我记得我们在处理冠状动脉搭桥手术数据（归属于Duke数据银行， Duke data bank）时，第一次有了倾向得分的想法。之后我们处理Reinisch数据时对想法进行了提炼，但大致上还是类似的。总之，倾向性得分的提出是出于解决实际问题，而实际上它是具有普适性的。
+
+![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image4.jpeg)
+
+FIG. 4. D. B. Rubin at Harvard, early 1980s.
+
+图4. D. B. Rubin在哈佛，1980年代早期。
+
+Fan: Multiple Imputation (MI) is another very inﬂuential contribution of yours. Your book “Multiple Im-putation for Nonresponse in Sample Surveys” (Rubin, 1987a) has commonly been cited as the origin of MI. But my understanding is that you first developed the idea and coined the term much earlier.
+
+
+Fan：多重插补法（Multiple Imputation，简称MI）是你另一个有极高影响力的贡献。你的书“Multiple Imputation for Nonresponse in Sample Surveys”(Rubin, 1987a)通常被认为是MI的起源。但据我所知，你第一次提出这个想法并且创造了这个术语实际要早得多。
+
+Don: Correct, I first wrote about MI in an ASA proceedings paper in 1978 (Rubin, 1972, 1978b). That’s where “the 18+ years” comes from when I wrote “Multiple Imputation After 18+ Years” (Rubin, 1996).
+
+Don：不错！我第一次写有关MI的文章是在1978年在一份ASA的会议文章中（Rubin, 1972, 1978b). “Multiple Imputation After 18+ Years” (Rubin, 1996)中“the 18+ years”这个词就是来自于那篇文章。
+
+Fabri: MI has been developed in the context of missing data, but it applicability seems to be far beyond missing data.
+
+Fabri：MI过去在缺失数据的背景下不断发展，但是它的适用性似乎远远超过缺失数据本身。
+
+Don: Yes, MI has been applied and will be, I think, all over the place. The reason I titled the book that way, “Multiple Imputation for Nonresponse in Sample Surveys,” is that it was obvious to me that in the settings where you need to create public-use data sets, you had to have a separation between the person who fixed up the missing data problem and the many people who might do analyses of the data. So there was an obvious need to do something like this, because users could not possibly have the collection of tools and resources to do the imputation, for example, using confidential information. My Ph.D. students, Trivellore Raghunathan(Raghu) and Jerry Reiter, have made wonderful contributions to confidentiality using MI. Of course, other great Ph.D. students of mine Nat Schenker, Kim Hung Lee, Xiao-Li Meng, Joe Schafer, as well as many others, have also made major contributions to MI. The development of MI really reﬂects the collective efforts from these people and others like Rod Little and his colleagues and students.
+
+Don: 是的，我认为MI现在已经并且将会应用于各个领域。我之所以把书名起为“Multiple Imputation for Nonresponse in Sample Surveys”，是因为很显然在你需要创建公共的数据集时，你需要将修复缺失数据问题的人和做分析的人们进行分离。所以我们很有必要做出一些类似的东西，因为用户可能没有工具和资源进行收集来插补，比如使用一些机密信息时。我的博士生，Trivellore Raghunathan(Raghu)和Jerry Reiter对于利用MI处理机密信息作出了巨大的贡献。当然，我其他的很棒的博士生Nat Schenker, Kim Hung Lee, Xiao-Li Meng, Joe Schafer，以及其他的很多人，也对MI作出了很大的贡献。MI的发展的确是来自于这些人以及其他人如 Rod Little以及他的同事和学生们的集体努力。
+
+Fabri: Rod Little once half-jokingly said, “Want to be highly cited? Coauthor a book with Rubin!” And indeed he wrote the book “Statistical Analysis with Miss-ing Data” with you (Little and Rubin, 1987, 2002), which is now regarded as the classic textbook on missing data. There have been a lot of new advances and changes in missing data since then. Will we see a new edition of the book that incorporates these developments sometime soon?
+
+Fabri：Rod Little曾经有一次半开玩笑地说：“想要被高度引用吗？和Rubin合著一本书吧！”而且他的确和你合著了“Statistical Analysis with Missing Data”  (Little and Rubin, 1987, 2002)，这本书现在被认为是缺失数据的经典教材。但从那时起缺失数据方面有了很大的提高和改变。我们之后会不会看到你这本书在整合了这些发展之后的新版本？
+
+Don: Oh yes, we are working on that now. The main changes from 1987 to 2002 reﬂect the greater acceptability of Bayesian methods and MCMC type computations. Rod is a fabulous coauthor, a much more ﬂuid writer than I am. I believe this third edition will have even more major changes than the 2002 one did from the 1987 one, but again many driven by computational advances.
+
+Don：嗯是的，我们现在正在做。从1987到2002年的变化主要反映了贝叶斯方法和MCMC型计算更大的可接受性。Rod是位超凡的合著者，一名比我厉害得多的作家。我相信第三版的主要变化要多于从1987年那版到2002年那版的变化，但这些改变同样也来自于计算的进步。
+
+![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image5.jpeg)
+
+FIG. 5. In classroom at Harvard, late 1980s.
+
+
+图5. 在哈佛的课堂上，1980年代后期。
+# ON BAYESIAN
+
+# 关于贝叶斯
+
+Fan: In the 1978 Annals paper (Rubin, 1978a), you gave, for the first time, a rigorous formulation of Bayesian inference for causal effects. But the Bayesian approach to causal inference did not have much following until very recently, and the field of causal inference is still largely frequentist. How do you view the role of Bayesian approach in causal inference?
+
+Fan：在 1978 年发表于 Annals 的文章中（Rubin，1978a），你第一次给出了因果效应的贝叶斯推断的严格表述。但是针对因果推断的贝叶斯方法直到最近才有一些后续，而且因果推断领域仍然是频率学派为主。你怎么看待因果推断的贝叶斯方法？
+
+
+Don: I believe being Bayesian is the right way to approach things, because the basic frequentist approach, such as the Fisherian tests and Neyman’s unbiased estimates and confidence intervals, usually does not work in complicated problems with many nuisance un-knowns. So you have to go Bayesian to create procedures. You can go partially Bayesian using things like posterior predictive checks, where you put down a null that you may discover evidence against, or direct likelihood approaches as in Frumento et al. (2012); if the data are consistent with a null that is interesting, you live with it. But Neyman-style frequentist evaluations of Bayesian procedures are still relevant.
+
+
+Don：我相信贝叶斯是正确的解决事情的方法，因为基本的频率统计方法，比如说Fisherian检验以及Neyman的无偏估计和置信区间经常并不适用处理一些有许多未知信息的复杂问题。所以你需要用贝叶斯原理来创造方法。你也可以用半贝叶斯的方法，比如后验预测检测来衡量一个你想否定的一个零假设；或者你也可以如Frumento等人 (2012)中用的直接的似然方法。如果数据始终和一个有趣的零假设表现一致，那就别拒绝哈。但是用Neyman式的频率统计评估贝叶斯方法仍然是有重大意义的。
+
+
+Fan: But why is the field of causal inference still predominantly frequentist?
+
+Fan：但是为什么因果推断的领域仍然主要是频率统计呢？
+
+Don: I think there are several reasons. First, there are many Bayesian statisticians who are far more interested in MCMC algebra and algorithms, and do not get into the science. Second, I regard the method of moments (MOM) frequentist approach as pedagogically easier for motivating and revealing sources of information. Take the simple instrumental variable setting with one-sided noncompliance. Here, it is very easy to look at the simple MOM estimate to see where information comes from. With Bayesian methods, the answer is, in some sense, just there in front of you. But when you ask where the information comes from, you have to start with any value, and iterate using conditional expectations, or draws from the current joint distributions. You have to have far more sophisticated mathematical thinking to understand fully Bayesian ideas. There are these problems with missing data (as in my discussion of Efron, 1994) where there are unique, consistent estimates of some parameters using MOM, but for which the joint MLE is on the boundary. So I think it is often easier, pedagogically, to motivate simple estimators and simple procedures, and not try to be efficient when you convey ideas. In causal inference, that corresponds to talking about unbiased or nearly unbiased estimates of causal estimands, as in Rubin (1977). There are other reasons having to do with the current education of most statisticians.
+
+Don：我认为主要有这几个原因。首先，有很多的贝叶斯统计学家对MCMC的代数和算法要感兴趣得多，但他们并不对其进行科学研究。第二，我认为频率方法中的矩方法（MOM）从教学的角度更加容易，它可以用来启发和揭示信息的来源。拿简单的有单边不依从（one-sided noncompliance）的工具变量（instrumental variable）举个例子。我们能够通过简单的MOM估计来看出信息来自哪里。利用贝叶斯方法，答案就仿佛直接放在你面前一样。但当你询问信息从哪里来的时，你需要从任何值开始，重复利用条件期望，或者从当前的联合分布抽样。你需要更成熟的数学思维方式来完全理解贝叶斯的思想。有缺失数据的一些问题（如我在Efron，1994讨论中讨论的）要利用MOM对一些参数进行特别的相合估计，但其联合极大似然估计是在参数空间边界上。所以我觉得在教学方面，当你传播思想时，应该鼓励使用简单的估计和过程，并且不要太追求效率。在因果推断中，那和讨论因果中无偏或者几乎无偏的估计是一致的，就是在Rubin（1977）中所说的那样。此外，这和大多数统计学家当下的教育有关。
+
+Fan: After EM, starting from the early 1980s, you were heavily involved in developing methods for Bayesian computing, including the Bayesian bootstrap (Rubin, 1981), the sampling importance-resampling (SIR) algorithm (Rubin, 1987b), and (lesser-acknowledged) “approximate Bayesian computation (ABC)” (Rubin, 1984, Section 3.1).
+
+
+Fan：在研究出EM之后，从20世纪80年代初开始，你参与研究了贝叶斯计算方法，包括贝叶斯自助法（Rubin, 1981），采样重要性重采样（SIR）算法（Rubin，1987b），和（较少人承认的）“近似贝叶斯计算（ABC）”（Rubin, 1984, 3.1 部分）。
+
+
+Don: It was clear then that computers were going to allow Bayes to work far more broadly than earlier. You, as well as others such as Simon Tavare, Christian Robert and Jean-Michel Marin, are giving me credit for first proposing ABC. Thanks! Although, frankly, I never thought that would be a useful algorithm except in problems with simple sufficient statistics.
+
+Don：现在很明显计算机能够让贝叶斯应用的范围比之前广很多。你和其他人比如Simon Tavare, Christian Robert and Jean-Michel Marin，对我提出的ABC给予了肯定。谢谢！但坦白来说，我从未想过在有简单充分统计量的问题之外，它可以变成如此有用的算法。
+
+Fabri: But you do not seem to have followed up much on these ideas later, even if you have used them. Also you do not label yourself as a Bayesian or a frequentist, even if all these papers made extraordinary contributions to Bayesian inference with fundamental and big ideas.
+
+
+Fabri：但是你后来虽然使用了这些想法，但似乎并没有沿着这些想法继续研究。即便你的这些论文都对贝叶斯推断中基本而又庞大的思想作出了非凡的贡献，你也没有把自己定位成贝叶斯统计学家或者一位频率统计学家。
+
+
+Don: First of all, fundamentally I am hostile to all “religions.” I recently heard a talk by Raghu in Bamberg, Germany, where he said that in his world they have zillions of gods, and I think that is right; you should have zillions of gods, one for this good idea, one for that good idea. And different people can create different gods to whatever extent they want to. I am not a fully-pledged member of the Bayesian camp—I like being friends with them, but I never want to be religiously Bayesian. My attitude is that any complication that creates problems for one form of inference creates problems for all forms of inference, just in different ways. For example, the fact that confounded treatment assignments cause problems for frequentist inference is obvious. Does it generate problems for the Bayesian?Yeah, that point was made in the 1978 Annals paper: Randomization matters to a Bayesian, although not in the same way as to a frequentist, that is, not as the basis for inference, but it affects the likelihood function.
+
+Don：首先，我基本上对所有的“信仰”都持反对意见。我最近听了 Raghu 在德国 Bamberg 的一次演讲，他提到在他的世界中有无数个神，我觉得他是对的；首先需要有无数个神，这个神提供了这个好主意，那个神提供了那个好主意，而且不同的人可以在不同程度创造不同的神。我不完全是贝叶斯学派的一员——我喜欢成为他们的朋友，但我不会变成完全信仰贝叶斯的人。我的态度是任何有可能为某一种推断形式造成麻烦的复杂情况同样也可以对所有的推断方式造成麻烦，只不过是不同的方式。比如，有混杂的分配机制显然会使频率推断出现问题。那么会使贝叶斯方法出现问题吗？是的，这个问题我在1978年的 Annals 文章中有所提及：随机化对贝叶斯推断也是重要的，尽管不是像在频率统计中作为推断的基础，但它也影响到了似然函数。
+
+There is something I am currently working on with a Ph.D. student, Viviana Garcia, that builds on a paper I wrote with Paul Rosenbaum in 1984 (Rosenbaum and Rubin, 1984b), which is the only Bayesian paper that Paul has ever written, at least with me. In that paper, we did some simulations to show there is an effect on Bayesian inference of the stopping rule. We show that if you have a stopping rule and use the “wrong” prior to do the analysis, like a uniform improper prior, but the data are coming from a “correct” prior, and you look at the answer you get from the right prior and from the “wrong” prior, they are different. The portion of the right posterior that you cover using the “wrong” posterior is incorrect. This extends to all situations and it is related to all of these ignorability theorems, and it means that you need to have the right model with respect to the right measure. Of course achieving this is impossible in practice and, therefore, leads to the need for frequentist (Neymanian) evaluations of the operating characteristics of Bayesian procedures when using incorrect models (Rubin, 1984). Bayes works, in principle, there is no doubt, but it can be so hard! It can work, in practice, but you must have some other principles ﬂoating around somewhere to evaluate the consequences—how wrong your conclusions can be. So you must have something to fall back on, and I think that is where these frequentist evaluations are extremely useful, not the unconditional Neyman–Pearson frequentist evaluations for all point mass priors (which were critical as mathematical demonstrations that we cannot achieve the ideal goal in any generality), but evaluations for the class of problems that you are dealing with in your situation.
+
+
+我最近正在和我的博士生Viviana Garcia基于我和Paul Rosenbaum在1984年写的文章(Rosenbaum and Rubin, 1984b)继续进行研究，那可能是Paul唯一的贝叶斯文章，至少是和我一起写的唯一的。在那篇文章中，我们做了一些模拟来展示停止规则对贝叶斯推断的影响。我们发现，如果你有终止规则，并使用了“错误”的先验来进行分析，例如均匀非正常先验，而数据是从“正确”的先验得来的，那么你会发现你从正确那面和错误那面得到的答案是不一样的。用“错误”的后验所覆盖的正确的后验的那部分是错误的。这可以延伸到所有的情况，而且也与所有的这些可忽略性理论有关。这也意味着你需要使用正确的模型，这才是正确的举措。当然，这是在实践中不可能实现的，因此，当我们在贝叶斯方法中使用模型不当时，对所操作特征的频率（Neymanian）估计就成了一种需要（Rubin，1984）。毫无疑问贝叶斯的方法在原理上行得通，但是它的难度非常大！它在实践中可以使用，但是你需要一些其他的原则作为辅助来估计你的结论有多大的偏差。所以你必须有所依靠，我认为这就是频率学的估计方法非常有用的地方，不是无条件地对所有的点质量（point mass **【译者注：待修正】**）先验进行Neyman-Pearson频率估计（这是关键的我们无法实现的数学证明），而是在这种情况下估计你所要处理的问题的分类。
+
+
+Fan: The 1984 Annals paper “Bayesianly Justifiable and Relevant Frequency Calculations for the Ap-plied Statistician” (Rubin, 1984) is one of my all-time favorite papers. This paper, as the earlier paper by George Box (Box, 1980), deals with the “calibrated Bayes” paradigm with generality, which can be viewed as a compromising or midground between the Bayesian and frequentist paradigms. It has a profound inﬂuence on many of us. In particular, Rod Little has strongly advocated “calibrated Bayes” as the 21st cen-tury roadmap of statistics in several of his prominent talks, including the 2005 ASA President’s Invited Address and the 2012 Fisher Lecture. What was the background and reasons for you to write that paper?
+
+Fan：1984年Annals上的“Bayesianly Justifiable and Relevant Frequency Calculations for the Applied Statistician” (Rubin, 1984)是我一直最喜爱的文章之一。这篇文章，和早期George Box所写的文章(Box, 1980)，都处理了具有一般性的“校准贝叶斯”（calibrated Bayes）范式，可以被认为是妥协或者折中的贝叶斯和频率论范式。它对我们许多人都产生了深刻的影响。尤其是，在包括2005 ASA会长邀请报告中和2012年的 Fisher讲座的几个重要会谈中，Rod Little都大力提倡“校准贝叶斯”作为第二十一世纪统计学的路线图。你当时为什么写那篇论文，背景是什么样的？
+
+Don: Interesting question. I was visiting Box at the Mathematics Research Center in 1981–1982 and wrote Rubin (1983) partly during that period—I think it’s a good paper with some good ideas, but without a satisfying big picture. That dissatisfaction led to that 1984 paper—what is the big picture? It took me a very long time to “get it right,” but it all seems very obvious to me now. The idea of posterior predictive checks has been further articulated and advanced in Meng (1994), Gelman, Meng and Stern (1996), and the multiauthored book “Bayesian Data Analysis” (Gelman et al., 1995, 2003, 2014).
+
+Don：非常有趣的问题。我1981至1982年去拜访了在数学研究中心任职的Box，并且在那个时期写了部分的文章（Rubin，1983）——我认为这是一篇有着好的想法的好论文，但整体上并不能让我满意。当时的不满意造就了1984年的那篇论文——我所期待的整体局面是什么？我花了很长时间来构建，但现在对我来说已经很明显了。后验预测检验的想法在Meng (1994), Gelman, Meng and Stern (1996)的帮助下，在合著的书籍 《Bayesian Data Analysis》 (Gelman等人, 1995, 2003, 2014)中有了进一步的阐释和推进。
+
+Fabri: Can you talk a little more about the “Bayesian Data Analysis” book, probably one of the most popular Bayesian textbooks?
+
+Fabri：你能不能多讲讲《贝叶斯数据分析》(Bayesian Data Analysis) ？这本书可能是最受欢迎的贝叶斯教材之一。
+
+Don: Yup, I think that the Gelman et al. book might be the most popular Bayesian text. It started out as notes by John Carlin for a Bayesian course that he taught when I was Chair sometime in the mid or late 1980s. Andy must have been a Ph.D. student at that time, with tremendous energy for scholarship. John was heading back to Australia, which is his homeland, and somehow the department had some extra teaching money, and we wanted to keep John around for a year—I do not remember the details. But I do remem-ber that the idea of turning the notes for the course into a full text was percolating. Also Hal Stern was an Associate Professor with us at that time, and so the four of us decided to make it happen. We basically divided up chapters and started writing. Even though John’s initial notes were the starting basis, things changed as soon as Andy “took charge.” Quickly, Andy and Hal were the most active. Andy, with Hal, were even more dominant in the second edition, where I added some parts, edited others, but clearly this was Andy’s show. The third edition, which just came out in early 2014, was even more extreme, with Andy adding two coauthors (David Dun-son and Aki Vehtari) because he liked their work, and they had been responsive to Andy’s requests. As the old man of the group, I just requested that I be the last author; Andy obviously was the first author, and the second and third were as in the first edition. In some ways, I feel like I’m an associate editor of a journal that has Andy as the editor! We get along fine, and clearly it’s a successful book.
+
+Don：好，我认为Gelman等人编的这本书可能的确是最受欢迎的贝叶斯教材。它起初是John Carlin在1980年代中期或后期为准备他教的一门贝叶斯课程而做的笔记，当时我还是系主任。Andy 当时应该还是一个获得全额奖学金的博士生。我记不太清了，好像是John要回到他的家乡澳大利亚，而且不知怎么系里有一些额外的教育资金，所以我们想让John再待一年。但我还记得我们慢慢想到为课程准备的笔记转换为一本教材。同样当时Hal Stern是我们那的副教授。所以我们四个决定让想法成为现实。我们大体分了章节，然后开始编写。尽管最初是基于John的笔记来写，但逐渐就变成了Andy在负责。很快，Andy和Hal成为了最活跃的。在第二版中，Andy和Hal更加活跃，我当时加了一些内容，尽管编辑的人增加了，但是主要的还是Andy的功劳。2014年初出的第三版甚至更极端，Andy又加了两名合著者（David Dunson和Aki Vehtari），因为Andy喜欢他们的著作，而且他们同意了Andy的请求。作为这个团体中的“老人”，我只是请求将自己作为最后的作者，而Andy显然是第一作者，然后第二第三作者和第一版的是相同的。在某些方面，我觉得我是一个杂志的副主编，而 Andy 则是编辑！我们相处得很好，而且显然这是一本很成功的书籍。
+
+Fan: A revolutionary development in statistics since the early 90s was the MCMC methodology. You left your mark in this with Gelman, proposing the Gelman–Rubin statistic for convergence check (Gelman and Rubin, 1992), which seems to be very much connected to some of your previous work.
+
+Fan：自90年代初，统计学界有一场革命性的发展就是MCMC方法。你和Gelman一起留下了自己的一笔，提出了Gelman-Rubin统计量检测收敛（Gelman and Rubin, 1992），这个成果似乎和你之前的某些成果有很多的联系。
+
+Don: Correct. We embedded the convergence check problem into the combination of the multiple imputation and multiple chains frameworks, using the idea of the combining rules for MI. The idea of using multiple chains—that comes from physics—and was Andy’s knowledge, not mine. My contribution was to suggest using modified MI combining rules to help do the assessment of convergence. The idea is powerful because it is so simple. If the starting value does not matter, which is the whole point, then it doesn’t matter, period. The real issue should be how you choose the functions of the estimands that you are assessing, and as always, you want convergence to asymptotic normality to be good for these functions, so that the simple justification for the Gelman–Rubin statistic is roughly accurate.
+
+Don：是的。我们利用MI的组合规则的想法，将收敛检查问题嵌入多重插补和多重链框架之中。但利用多重链（multiple chains）这个来自于物理学的想法是 Andy 提出的，不是我。我的贡献只是建议使用改进的MI组合规则来帮助做评估收敛。这个想法非常好，因为它是如此简单。如果起始值这个要点是无关紧要的，那么它在整个周期内也就更无关紧要了。真正的问题应该是就你所评估的量选择一个评估函数，和往常一样，你想要收敛到渐近正态来有利于使用这些作用，所以（我）对Gelman–Rubin 统计所进行的简单调整是大致准确的。
+
+# THE 1990S: COLLABORATING WITH ECONOMISTS
+
+# 1990年代：与经济学家合作
+
+![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image6.jpeg)
+
+FIG. 6. (Left to right) Guido Imbens, Don Rubin, Josh Angrist. March, 2014.
+
+Fabri: In the 1990s, you started to work with economists. With Joshua Angrist, and particularly with Guido Imbens, you wrote a series of very inﬂuential papers, connecting the potential outcomes framework to causal inference with instrumental variables. Can you tell us how this collaboration started?
+
+Fabri：在1990年代，你开始和经济学家合作。你和Joshua Angrist，尤其是和Guido Imbens，写了一系列很有影响力的论文，将潜在结果框架与工具变量因果推断联系了起来。你能告诉我们这次合作是怎么开始的吗？
+
+Don: Absolutely. I always liked economics; many economists are great characters! It was in the early 90s when Guido came to my office as a junior faculty member in the Harvard Economics Department and basi-cally said, “I think I have something that may interest you.” I had never met him before, and he was asking if the concept of instrumental variables already had a history in statistics. Guido and Josh Angrist had already defined the LATE (local average treatment effect) in an Econometrica paper (Imbens and Angrist, 1994)—although I think CACE (Complier Average Causal Ef-fect) is a much better name because it is more descrip-tive and more precise—local can be local for anything, local for Boston, local for females, etc. Then I asked in return, “Well tell me the setup, I have never heard of it in statistics before” and while he was explaining I started thinking, “Gosh, there is something important here! I have never seen it before,” and then I said, “Let’s meet tomorrow and talk about it more,” because these kinds of assumptions (monotonicity and the “exclusion restriction”) were fascinating to me, and it was clear that there was something there that I had never really thought hard about; it was great. That eventually led to the instrument variables paper (Angrist, Imbens and Rubin, 1996) and the later Bayesian paper (Imbens and Rubin, 1997).
+
+Don：当然可以。我一直都很喜欢经济；许多经济学家都是伟大的人物！在90年代早期，Guido作为哈佛经济学系助理教授，来到了我的办公室，说：“我认为我有些东西你会感兴趣。”我之前从未见过他，他还问我工具变量的概念是不是在统计学中已经有一段时间了。Guido和Josh Angrist当时已经在计量经济学论文中定义了“局部平均处理效应”(LATE，local average treatment effect)(Imbens and Angrist, 1994)。但我认为“依从者平均因果效应” (CACE，Complier Average Causal Effect)是一个更好的名字，因为它描述得更准确。而局部太泛了，局部可以是Boston，局部也可以是女性，等等。然后我反问他：“好，那么请告诉我是什么样的吧，我之前从未在统计中听说过”。当他解释的时候，我开始想：“天啊！这些东西一定很重要，我之前从未见过。”然后我说“我们明天见面详谈吧。”因为这些类型的假设（单调性和“排除限制”（exclulsion restriction））吸引着我，而且很明显是我之前没想过没听过的，这些都很棒。这最终导致了有关工具变量的论文(Angrist, Imbens and Rubin, 1996)和之后的贝叶斯论文 (Imbens and Rubin, 1997)。
+
+A closely related development was a project I was consulting on for AMGEN at about the same time, for a product for the treatment of ALS (amyotrophic lateral sclerosis), or Lou Gehrig’s disease, which is a progressive neuromuscular disease that eventually destroys motor neurons, and death follows. The new product was to be compared to the control treatment where the primary outcome was quality of life (QOL) two years post-randomization, as measured by “forced vital capacity” (FVC), essentially, how big a balloon you can blow up. In fact, many people do not reach the endpoint of two-year post-randomization survival, and so two-year QOL is “truncated” or “censored” by death. People were trying to fit this problem into a “missing data” framework, but I realized right away that it was something different.
+
+同一时间,还有一个我为AMGEN提供咨询的项目，这个项目和刚才所说的研究密切相关。我是为了研究用于治疗ALS（肌萎缩性侧索硬化症，或称葛雷克氏症）的产品。葛雷克氏症是一种渐进的神经肌肉疾病，会破坏运动神经元，最终死亡。新产品和对照组进行比较，主要的结果是检测随机化后两年的生活质量（QOL），测量指标为用力肺活量（FVC），即你能够一口气吹起多大的气球。事实上，很多人都到不了随机化后两年就死了，所以两年期的生活质量检测是被死亡“删失”了的。人们试图通过缺失数据的框架来解决这个问题，但我马上意识到这是和之前不同的东西。
+
+Fan: Essentially both ideas are special cases of the general idea of Principal Stratification, which we can discuss in a moment.
+
+Fan：这两个想法都是主分层（principal stratification）的特殊例子，我们接下来可以讨论一下。
+
+Don: Yes, indeed. These meetings with Guido and this way of thinking were so much more articulated and close to the thinking of European economists in the 30s and 40s, like Tinbergen and Haavelmo, than many subsequent economists who seemed sometimes to be too into their OLS algebra in some sense. There was some correspondence between one of the two—Haavelmo, I think—and Neyman on these hypothetical experiments on supply and demand. European brains were talking to each other, and not simply exchanging technical mathematics!
+
+Don：是的，的确是这样。我和Guido的会面以及这种思维方式都很接近在30年代和40年代欧洲经济学家（如Tinbergen和Haavelmo）的思维，而不像之后很多在某种意义上太投入于他们的普通最小二乘法的经济学家。他们两中的一个——应该是Haavelmo——和Neyman在这些有关供应和需求的假设实验上有很多的来往联系。欧洲的思想相互进行交谈，而不是简单地交流技术层面的数学！
+
+Fabri: I know that many years before you met Guido, with other statisticians, like Tukey, you had discussions about the way economists were treating selection problems, or missing data problems. But you had some adventurous, to say the least, previous experiences with economists dealing with problems that you had worked on, which they had almost neglected completely.
+
+Fabric：我知道在你遇见Guido之前很多年，你和其他的统计学家，比如Tukey，有一些有关经济学家如何处理选择问题以及缺失数据问题的讨论。但是你和经济学家也有一些冒险的经验，至少说是经验，和他们共同从事你曾经处理过的问题，而这些他们几乎完全忽视了。
+
+Don: Yes, James Heckman was tracking my work in the early 1980s when I came to Chicago after ETS. The public exchange came out in the ETS volume edited by Howard Wainer (which is where Glynn, Laird and Rubin, 1986, appears), with comments from Heckman, Tukey, Hartigan and others.
+
+Don：是的，在1980年代初期我离开ETS到芝加哥后，James Heckman就开始关注我的工作。公开的交流呈现在由Howard Wainer主编出版的ETS卷中（里面有Glynn, Laird and Rubin，1986的文章），此卷亦有来自Heckman，Tukey，Hartigan以及其他人的评论。
+
+Fabri: Economics is a field where the idea of causality is crucial; did you find interest in economics also for this very reason? The problems they have are usually very interesting.
+
+Fabri：经济学这个领域中，因果关系的想法非常关键，你也是因为这个原因对经济学感兴趣的吗？经济中出现的问题通常都很有意思。
+
+Don: There are often interesting questions from social science students that come up in class. One recent example is how do we answer questions like “What would the Americas be like if they were not settled by Europeans?” I asked the questioner, “Who would they be settled by instead? By the Chinese? By the Africans? What are you talking about? What are we comparing the current American world to?” Another example comes from an undergraduate thesis that I directed, by Alice Xiang, which won both the Hoopes Prize and the economics’ Harris Prize for an outstanding honors thesis. The thesis is on the causal effect of racial affirmative action in law school admissions on some outcomes versus the same proportion of affirmative action admissions but counter-factually based on socioeconomic status. This is not just for cocktail conversation—it was a case recently before the US Supreme Court, Fisher v. University of Texas, which was kicked back to the lower court to reconsider, and additionally the issue was recently affected by a state law in Michigan. There is an amicus brief sent to the US Supreme Court to which Guido (Imbens), former Ph.D. students, Dan Ho, Jim Greiner and I (with others) contributed.
+
+Don：我的课上，社会科学的学生经常会提出一些非常有意思的问题。最近有一个例子是我们应该如何回答类似“如果不是欧洲人定居，那么美洲会变成什么样”的问题。我问那个问问题的人：“谁会替代欧洲人定居在美洲？中国人？非洲人？你想要说什么？我们拿现在的美国和谁去比较？”另一个例子是来自Alice Xiang的一篇我所指导的本科毕业论文中，这篇论文赢得了 Hoopes 奖和经济学的 Harris 奖。那篇文章是关于法学院招生中种族平权运动对某些结果的因果影响，与同样比例的基于社会经济地位的平权运动进行对比。这不是简单的酒后杂谈，而是一个最近在美国最高法院中关于德克萨斯大学的真实案件。这一案件被驳回了下级法院重新考虑，另外这一案件最近也受到密歇根州法律的影响。Guido Imbens，以前的博士生，Dan Ho，Jim Greiner和我（以及其他人）写了一个法庭简短递送到了美国最高法院。
+
+Such careful formulation of questions is something critical, and to me is central to the field of statistics. It is crucial to formulate clearly your causal question. What is the alternative intervention you are considering, when you talk about the causal effect of affirmative action on graduation rates or barpassage rates? Immediately formulating the problem as an OLS regression is the wrong way to do this,at least to me.
+
+仔细地提出问题是非常关键的，对我来说是统计学的核心。清楚地阐述你的因果关系是非常重要的。对于某些针对毕业率和律考通过率的平权行为，当你讨论其因果影响时，你所考虑的替代干预措施是什么？至少对我来说，立刻将其公式化转为最小二乘法进行解决是错误的。
+
+Fan: You apparently have a long interest in law; besides the aforementioned “affirmative action” thesis, you have done some interesting work in applied statistics in law.
+
+Fan：你看来对于法律一直都很有兴趣；除了上述“通过率行动”的论文，你还做过一些将统计应用于法律中的有趣的工作。
+
+Don: Yes. Paul Rosenbaum was, I think, the first of my Harvard students who did something about statistics in law. Either his qualifying paper or a class paper in 1978 was on the effect of the death penalty. Jim Greiner, another great Ph.D. student of mine, who had a law degree before entering Harvard Statistics, wrote his Ph.D. thesis (and subsequently several important papers) on potential outcomes and causal effects of immutable characteristics. He is now a full professor at the Harvard Law School. There were also several previous undergraduate students of mine who were inter-ested in statistics and law, but (sadly) most went to law school. Since 1980, I have been involved in many legal topics.
+
+Don：是的，还有。我认为 Paul Rosenbaum 是我在哈佛中第一个把统计应用于法律中的学生。无论是他的资格论文还是他 1978 年的一篇课堂论文，都是有关死刑的影响。Jim Greiner, 我另一个很棒的博士生，在进入哈佛统计系前有一个法学学位。他的博士论文，以及随后几篇重要的论文，都是有关不可改变属性的潜在结果和因果效应。他现在是哈佛法学院的全职教授。之前我还有一些本科生对统计学和法学都很感兴趣，但（遗憾的是）大部分都去了法学院。从 1980 年起，我就参与了很多的法律话题。
+
+# THE NEW MILLENNIUM: PRINCIPAL STRATIFICATION
+
+# 新千年：主分层
+
+Fabri: The work you did with Guido, as well as the work on censoring due to death, led to your paper on Principal Stratification (Frangakis and Rubin, 2002), coauthored with this brilliant student of yours, Con-stantine Frangakis, who happens to be Fan’s advisor.
+
+
+Fabri：你和 Guido 所做的工作，以及死亡“删失”工作，促使你和你出色的学生，Constantine Frangakis 一起发表了有关主分层的论文（Frangakis and Rubin, 2002），他碰巧也是 Fan 的导师。
+
+Don: Yes, Constantine is fabulous, but the original title of that paper was very long, same with the title of his thesis. It went on and on, with probably a few Latin,a few Italian, a few French and a few Greek words!Of course I was exasperated, so I convinced him to simplify the paper’s title to “Principal Stratification in Causal Inference.” He is brilliant, so good that he has no trouble dealing with all the complexity in his own mind, but therefore he struggles at times pulling out the kernels of all these ideas, making them simple.
+
+Don：是的，Constantine 非常优秀，但是最起初的论文题目非常长，和他的论文题目一样。它不断变长，有一些拉丁字母，一些意大利文，一些法文和一些希腊字母！当然我很恼火，所以我说服了他来简化文章的标题，变成了“Principal Stratification in Causal Inference”。他很聪明，所以他处理脑中的复杂事情得心应手，但他也尝试着把所有这些想法的精华拿出来，让他们变得简单。
+
+Fan: What do you think is the most remarkable thing about the development of Principal Stratification?
+
+Fan：你认为在主分层的发展过程中哪件事情是最值得铭记的？
+
+Don: It is a whole new collection of ways of thinking about what the real information is in causal problems. Once you understand what the real information is, you can start thinking about how you can get the answers to questions that you want to extract from that information; you always have to make assumptions, and it forces you to explicate what these assumptions are, not in terms of OLS, which no social scientist or doctor would really understand—but in terms of scientific or medical entities. And because you have to make assumptions, be honest and state them clearly. For example, I like your papers (Mealli and Pacini, 2013; Mattei, Li and Mealli, 2013) about multiple post-randomization outcomes, where you discuss that for some outcomes, exclusion restriction or other struc-tural assumptions may be more plausible.
+
+Don：这是一系列思考在因果问题中，什么是真正有用的信息的方式。一旦你理解了什么是真正有用的信息，你可以开始考虑如何从那些信息中提取出问题的答案。你需要作假设，这会迫使你需要说明这些假设是什么，不是通过OLS那种没有社会科学家或者医生能够理解的角度，而是从科学或者医学的角度。而且由于你需要做出假设，所以要坦诚清楚地陈述出来。举个例子，我喜欢你有关随机化后多个结果的论文（Mealli and Pacini, 2013; Mattei, Li and Mealli, 2013），你在论文中提到了对于一些结果，排除限制或其他结构的假设可能是更合理的。
+
+Fabri: Principal Stratification is sometimes compared to other tools for doing so-called mediation analysis—what is your view about inferring on mediation effects?
+
+Fabri：主分层有时会和为了所谓的中介分析（mediation analysis）的其他工具相比较，你是怎么看待基于中介作用进行推断的？
+
+Don: I think we (Don and Fabri) discussed a paper recently in JRSS-A, and those discussions summarize my–our view on that. Essentially, some of the people writing about mediation seem to misunderstand what a function is. They write down something that has two arguments inside parenthesis, with a comma separating them, and they seem to think that therefore something is well defined!
+
+Don：我觉得我们（Don和Fabri）在讨论最近JRSS—A上的一篇文章，而且这些讨论结果总结了我们的观点。从本质上讲，一些有关中介作用文章的人似乎误解了它的作用是什么。他们写了一些东西，括号里面有两个参数，用逗号分隔，然后他们就觉得这个就已经定义很清楚了。
+
+Fan: Even though causal inference has gained increasing attention in statistics and beyond, there seems to be a lot of misunderstanding, misuse, misinterpretation and mystifying of causal inference. Why? And what needs to be done to change?
+
+Fan：尽管因果推断在统计界受到越来越多的关注，现在似乎仍然有很多的误解、误用，将其神秘化，为什么？我们需要如何改变？
+
+Don: I think it is partly because causal inference is a very different topic from many topics in statis-tics in that it does not demand a lot of technical advanced mathematical knowledge, but does demand a lot of conceptual and basic mathematical sophistication. Principal Stratification is one such example. Writing down notation does not take the place of understanding what the notation means and how to prove things mathematically. Also partly because causal inference has become a popular topic, it has been ﬂooded with publications that are often done casually. For some fields, it is important to bridge the “old” (everything-based-on-OLS) thinking with the newer ideas. That’s a battle Guido and I constantly had to deal with when writing our book (Imbens and Rubin, 2015).
+
+Don：我认为这是因为因果推理是在统计学中是一个与众不同的话题，它也不需要很多技巧性很高等的数学知识，但需要大量的概念和基本的数学知识。主分层就是这样的一个例子。记下符号并不能代替理解符号的意思以及知道如何用数学来证明事物。另外还有一部分原因是因果推断已经成为一个热门的话题，它在出版物中已经时不时被提到了。在某些领域，它是联系老方法（基于最小二乘法的一切）和新想法的桥梁。那是我和 Guido 在写书（Imbens and Rubin, 2015）时常常产生的争论。
+
+Fan: You mentioned the book; when will it finally come out? It has been forthcoming for the last ten years or so.
+
+Fan：你提到了那本书，那本书什么时候能最终发行？它在过去的十年左右就开始准备出版了。
+
+Don: (Laughing) Come on, Fan, that’s not fair! Has it only been ten years? We have promised the publisher (Cambridge University Press) that it will be ready by September 30, 2013. It will be about 500 pages, 25 chapters. It will be followed by another volume, dealing with topics that we could not get to in the volume due to length, such as principal stratification beyond IV settings, or because we believe the topics have not been sharply and cleanly formulated yet, such as regression discontinuity designs, or using propensity scores with multiple treatments. Also in this volume, we didn’t discuss so-called case–control studies, which are the meat of much of epidemiology; it is very important to embed these studies into a framework that makes sense, not just teach them as a bag of tricks.
+
+
+Don：（大笑）嘿，Fan，这话说得不对！岂止十年？我们许诺给出版商（剑桥大学出版社）在2013年9月30号前它就可以完成。它会有500页，25章。接下来是另一卷，包含一些由于长度原因我们无法在前一卷中讨论的主题。比如说超越工具变量的主分层，或者是一些我们认为还没有直截了当地表述出来的话题，比如间断点回归设计，或者将倾向得分和多重处理相结合。同样在这一本中，我们不会考虑所谓的病例-对照研究，那是许多流行病学的菜。将这些研究嵌入到一个有意义的框架中是非常重要的，而不仅仅是只把它们作为一个技巧包。
+
+
+# MENTORING, CONSULTING AND EDITORSHIP
+
+# 指导，咨询和编辑
+
+![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image7.jpeg)
+
+FIG. 7. D. B. Rubin (on left) with Tom Belin (on right) and Tom’s daughter Janet (middle), Cambridge, 2008.
+
+图7. D. B. Rubin（左），Tom Belin（右）和他女儿Janet（中）
+
+Fabri: You have advised over 50 Ph.D. students and many BA students as well. This sounds like a job inter-view, but what is your teaching philosophy?
+
+Fabri：你曾经指导过超过 50 名博士生以及许多本科生。这问题听上去像求职面试：你的教学理念是什么？
+
+Don: My view is that one should approach teaching very differently depending on the kind of students you have and their goals. Harvard has tremendous under-graduate and graduate students, but their strengths vary and their objectives vary. A long time ago I decided that I don’t have the desire or ability to be an entertainer in class, that is, to entertain to get their attention. If they find me entertaining, fine; but it is better if they find the topic I am presenting entertaining.
+
+Don：我的观点是，因材施教，这取决于你有什么样的学生和他们的目标。哈佛大学本科生和研究生数量庞大，但他们的优势各不相同，他们的目标也各不相同。很久以前我就发现我没有欲望或能力成为一个在课堂上活跃气氛，得到他们注意的人。如果他们觉得我很有意思，这很好；但我觉得如果他们觉得我正在讲述的话题很有意思，那就更好了。
+
+Fabri: Many of your students went on to become leaders and not only in academia. And you often say that the thing that you are the most proud of is your students. Though it is clearly impossible to talk about them here one by one, can you share some of your fond memories of the students?
+
+Fabri：你的很多学生成为各行各业的领袖。你经常说你最自豪的就是你的学生。虽然在这里一个接一个地谈论他们显然是不可能的，但你能否分享一些你和学生的美好回忆吗？
+
+Don: Fabri, that is a killer question unless we have another day for this. What I can say is that it has been a great pleasure to supervise so many very talented students. I could start listing my superb Ph.D. students at the University of Chicago and at Harvard. All of my Ph.D. students are talented in many, and sometimes different, dimensions: among them there are two COPSS award winners, one president of the ASA, one president of ENAR, two JSM program chairs, and other such honors, and many of them made substantial contributions to government, academia and industry.
+
+
+Don：Fabri，这可是个无底洞的话题啊，我们可以改天再聊。得天下英才而教育之，其乐无穷。我可以开始列出我在芝加哥大学和哈佛的优秀博士生。我所有的博士生都各有各的过人之处：在这其中有两位COPSS奖的获奖者，有一位ASA的主席，有一位ENAR的主席，两位JSM的项目主任以及其他很多。他们很多人都为政府、学术界、工业做出了不可替代的贡献。
+
+Fan: You also have advised a large number of undergraduate students on a wide range of topics. This is quite uncommon because some people find mentoring undergraduates more challenging and less rewarding than mentoring graduate students. What is your take on this?
+
+Fan：你还建议了许多本科生去研究广泛的主题。这相当罕见，因为一些人认为本科生导师比研究生导师更有挑战性而更少回报。你对此有什么看法？
+
+Don: I am not completely innocent on this charge. I have no interest in “babysitting” and trying to mo-tivate unmotivated students, either undergraduate or graduate. But Harvard does attract some extremely tal-ented and motivated undergraduates, some of whom I had the pleasure to advise. Five have won Hoopes and other prizes for outstanding undergraduate theses.
+
+Don：对于这种想法我也有一些责任，我对于“保姆”式的教学以及激励那些自身没有动力的人没有兴趣，无论是本科生还是研究生。但是哈佛确实吸引了一些非常有天赋而又努力的本科生，我很乐意指导他们。他们中有五个由于优秀本科毕业论文而获得了 Hoopes 奖。
+
+Fabri: Now let’s talk about writing, which both Fan and I, as many others, have some quite memorable first-hand experience. You are known as a perfectionist in writing. As you mentioned, you are willing to with-draw accepted papers if you are not a hundred percent satisfied with them.
+
+Fabri：现在我们来讨论一些写作，Fan和我，和其他很多人一样，有一些非常难忘的第一手经验。你是一位出色的作家，正如你所提到的那样，只要你对论文不是百分百愿意，就算别人接受了，你也希望撤回自己的论文。
+
+Don: Yes, as you guys know, I am generally a pain in the neck as a coauthor. I have withdrawn three accepted papers, and tried to improve them; all eventually got reaccepted. One of these is the paper with you guys and others on multiple imputation for the CDC Anthrax vaccine trial (Li et al., 2014). You were not too happy about it initially.
+
+Don：是的，正如你们所知道的那样，我通常是一个有点令人讨厌的合作者。我当时撤回了三篇已经被接受的文章，然后尝试再修改它们；最终所有的文章都再次被接受了。其中之一就是与你和其他人对CDC的炭疽疫苗实验的多重插补法（Li et al.，2014）的论文。你最初不是很高兴。
+
+Fabri: (Laughing) Yeah, we tried to revolt without success. A different question: How do you approach rejections? Do you have some advice for young statis-ticians on that?
+
+Fabri：（大笑）是的，我们试图反抗却没有成功。一个很特别的问题：你如何处理文章被拒绝的情况呢？你能不能给年轻的统计学者们提供一些建议？
+
+Don: Over the years I had many papers immediately rejected or rejected with the suggestion that it would not be wise to resubmit. However, in almost all of these cases, this treatment led to markedly improved publications, somewhere. In fact, I think that the drafts that have been repeatedly rejected possibly represent my best contributions. Certainly, the repeated rejections, combined with my trying to address various comments, led to better exposition and sometimes better problem formulation, too. The most important idea is: Do not think that people who are critics are hostile. In the vast majority of cases, editors and reviewers are giving up their time to try to help authors, and, I believe, are often especially generous and helpful to younger or inexperienced authors. Do not read into rejection letters personal attacks, which are extremely rare. So my advice is: Quality trumps quantity, and stick with good ideas even when you have to do polite battle with editors and reviewers—they are not perfect judges, but they are, almost uniformly, on your side. More details of these are given in Rubin (2014b).
+
+Don：多年来我有许多文章被立刻拒绝或者建议修改后重新投稿。但是，在很多情况下，这种方式极大地提高了发表文章的质量。事实上，我认为那些一再被拒绝的文章可能代表了我最佳的贡献。当然，一再地拒绝，加上我试图解决的各种评论，可能会产生更好的阐述以及更好的解决办法。最重要的一点是：不要认为批评你的人是有敌意的。在绝大多数情况下，我相信，编辑和审稿人都会放弃自己的时间来帮助作者，而且往往会在面对年轻的或经验不足的作者时更不吝啬自己的帮助。别把拒绝信理解为个人攻击，这是极为少见的。所以我的建议是：质量胜于数量，坚持自己好的想法，即使你需要不断地和编辑与审稿人进行礼貌的战斗，他们不是完美的评判人，但他们几乎都是站在你这边的。更多的细节可以在Rubin（2014b）中找到。
+
+Fan: In 1978, you became the Coordinating and Applications Editor of JASA. Is there anything particularly unique about your editorship?
+
+
+Fan：在1978年，你成为了JASA的协调和应用部分 **【译者注：协调很奇怪】**的编辑。在你作为编辑的日子里，有什么独特的事情吗？
+
+Don: As author, I am willing to withdraw accepted papers. As a new editor, at least then, I was also willing to suggest to authors that they withdraw papers ac-cepted by the previous editors! I took some heat for that at the beginning. I read through all the papers that the previous editorial board had accepted and were awaiting copyediting for publication; for the ones that I thought were bad (I remember there were about eight), I wrote, “Dear authors, I think you should consider withdrawing this paper,” with long explanations of why I thought it would be an embarrassment to them if the paper were published. Fabri knows that I can be brutally frank about such suggestions.
+
+Don：作为作者，我愿意撤回那些之前已经接受的文章。作为一名新编辑，至少在那会，我还是愿意建议那些作者撤回那些之前编辑接受了的文章的。我起初还是费了很大的心力的。我阅读了所有之前编辑答应登刊并且等待印刷出版的论文；对于那些我认为不好（我记得一共有八篇），我给他们写到：“亲爱的作者，我认为你应该考虑撤回这篇论文”后面附着我为什么觉得如果论文出版了对他们来说并不是很好的长长的解释。Fabri知道我对这种建议有多直白坦诚。
+
+Fan: Did they comply?
+
+Fan：他们同意了吗？
+
+Don: Yes, all but one. This one author fought, and I kept saying, “You have to fix this up.” Eventually, the changes made the paper OK. For the other ones, the authors agreed with my criticisms: Just because the previous editor didn’t get a good reviewer or they over-looked mistakes, does not mean the paper should appear. But I was not very popular, at least at first.
+
+Don:是的，只有一个没同意。这个作者不断抗争，但我坚持说：“你需要再改改。”渐渐地，他做的改变让论文可以通过了。还有另外一个作者，他对我的意见表示赞成：只是因为先前的编辑没有好好翻看文章或者发现问题，并不代表这篇论文就可以在刊物上出现。但（因为这么做）我并不是很受欢迎，至少起初是这样。
+
+Fabri: You have done a wide range of consulting. What is the role that consulting plays in your research?
+
+Fabri：你之前做过大量的咨询。那么，咨询在你的研究中扮演什么样的角色？
+
+Don: To me consulting is always a stimulating source of problems. As I mentioned before, for example, propensity score technology partly came from the consulting work we did for June Reinisch.
+
+Don：对于我来说，咨询就是那些令人兴奋的问题之来源。正如我之前所提到的那样，比如倾向得分的技术有部分来自于我们为June Reinisch所做的咨询工作。
+
+Fabri: One of the more controversial cases in which you are involved as a consultant is the US tobacco litigation case, in which you represented the tobacco companies as an expert witness. Would you mind sharing some of your thoughts on this case?
+
+Fabri：有一个很具争议性的案件是当时你作为顾问参与的美国烟草诉讼案，在这其中你代表烟草公司作为一位专家证人。你能给我们分享一下你当时的想法吗？
+
+Don: Happy to. This comes from my family background dealing with lawyers. We have a legal system where certain things are legal, certain things are not. You should generally obey laws even if you don’t like them, or you should try to change them. If a company is making a legal product, and they are advertising it legally under current laws, then accept it or work to change the laws. If they lie, punish them for lying, if that is legal to do. You never see a commercial for sporty cars that show the cars going around corners extremely slowly and safely. How do they advertise cars?They usually show them sweeping around corners, and say “Don’t do this on your own.” Things that are enjoyable typically have uncertainties or risks associated with them. Flying to Europe to visit Fabri has risks!
+
+Don：非常乐意。这是来自于和律师有关的家族背景，我们有一套法律系统告诉我们什么是合法的，什么不是。你应该遵守法律即使你不喜欢它们，或者你应该尝试改变它们。如果一个公司在生产合法的产品，而且他们在现有的法律条款下合法地广告，那么我们就应该接受它或者尝试改变法律。如果他们欺骗我们了，如果合法，就惩罚他们的谎言。你从来没有看到一个跑车的广告上面写着汽车拐弯时平稳安全。他们如何宣传汽车？他们通常会展示汽车开过拐角，并说“请勿模仿”。那些看上去令人愉快的事情通常有不确定性或与他们相关的风险。比如飞往欧洲去拜访Fabri是有风险的！
+
+Certainly I do not doubt that no matter how I would intervene to reduce cigarette smoking, lung cancer rates would drop. But what intervention that would reduce smoking would involve reducing illegal conduct of the cigarette industry—that is the essence of the legal question.
+
+当然，我毫不怀疑，无论我用什么样的干预来减少吸烟，肺癌率都将不断下降。但什么样的减少吸烟的干预能够减少卷烟行业的非法行为，是这个法律问题的实质。
+
+When I was first contacted by a tobacco lawyer, I was very reluctant to consult for them, and I feared strong pressure to be dishonest, which was absent throughout. The original topic was simply to comment on the ways the plaintiffs’ experts were handling missing data. On examination, their methods seemed to me to be not the best available and, at worst, silly (e.g., when missing “marital status,” call them “married”). As I continued to read these initial reports, I was appalled that hundreds of billions of dollars could be sought on the basis of such analyses. From a broader perspective, the logic underlying most of the analyses also seemed to me entirely confused. For example, alleged misconduct seemed to play no role in nearly all calculations, and phrases such as “caused by” or “attributable to,” were used nearly interchangeably and often apparently without thought. Should nearly a trillion dollars in damages be awarded on the basis of faulty logic and bad statistical analyses because we “know” the defendant is evil and guilty? If the issue were assessing the tobacco industry a trillion dollar fine for lying about its products, I would be amazed but mute. But these reports were using statistical arguments to set the numbers—is it acceptable to use bad statistics to set numbers because we “know” the defendant is guilty? What sort of precedent does that imply? The ethics of this consulting is discussed at some length in Rubin (2002).
+
+Don：当我第一次和烟草行业的律师接触，我对向他们提供咨询是很不情愿的，我害怕不诚实会成为我巨大的压力，但实际上是不存在的。最初的主题仅仅是评判原告专家处理缺失数据的方式。在检查中，他们的方法在我看来不是最好的，甚至说是愚蠢的（例如，当不清楚“婚姻状况”时，叫他们“已婚”）。当我继续审查这些一手资料时，我很震惊数千亿美元在这种基础的数据分析中都浪费了。从更广泛的角度来看，大多数分析的逻辑似乎也完全不清楚。例如，所谓的不当行为似乎在几乎所有的计算中都没有出现，而且如“引起”或“归因于”的短语也经常互换，相互混淆。只是因为我们“知道”被告是邪恶的、有罪的，我们就能将万亿美元的损失归因为错误的逻辑和糟糕的统计分析吗？如果烟草行业由于其产品的虚假广告被判处万亿美元的罚金，我会震惊但是沉默。但是，只是因为我们“知道”被告有罪，我们就可以接受这些报告使用错误的统计来设置数字吗？这意味着什么样的先例？这种伦理咨询在Rubin（2002）一文中有较为详细的讨论。
+
+Fabri: We have talked quite a lot about statistics. Let’s talk about some of your other passions in life, for example, music, audio systems and sports cars.
+
+Fabri：关于统计我们已经谈论了很多。让我们聊聊你人生中的其他爱好，例如音乐、音响和跑车。
+
+Don: There are other passions, too, and their order is very age dependent (I leave more to your perceptions). When a kid, for example, sports cars, both driving them and rebuilding them, was the top of those three hobbies. But age (poorer vision, slower reﬂexes, more aches and pains, etc.) shifted the balance more to music, both live and recorded—luckily my ears are still good enough to enjoy these, but as more age catches up, things may shift.
+
+Don：我当然有很多其他爱好，而且他们的顺序就是按照年龄来排列的（我留下更多让你自己想象的空间）。比如，当我是个孩子时，驾驶一辆跑车还有重新组装它，是这三个爱好中最重要的。但当年龄增长（更差的视力，更慢的反应，更多的伤痛等等），我将爱好平衡，更多地转换为音乐，无论是现场直播或者刻录的。很幸运我的耳朵足够好，能够享受这些。但随着年龄继续增加，爱好可能还会再变化。
+
+Fan and Fabri: Well, it has been nearly three hours since we started the conversation. Here is the final question before letting you go for dinner: What is your short advice to young researchers in statistics?
+
+Fan and Fabri：好的，我们已经聊了接近三个小时了。在你去吃晚饭前，我们有最后一个问题想问你，你对统计这个行业里年轻的研究人员有什么简短的建议吗？
+
+Don: Have fun! Don’t be grumpy. If lucky, you may live to have a wonderful 70th birthday celebration!
+
+Don：享受统计！不要暴躁。如果幸运的话，你可以有一个精彩的七十岁生日！
+
+![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Rubin-conversation/image8.jpeg)
+
+FIG. 8. Celebrating Don’s 70th birthday at the Yenching Restaurant, Harvard quare, March 29, 2014. Front (left to right): Alan Zaslavsky, Elizabeth Stuart, Xiao-Li Meng, TE Raghunathan; Back (left to right): Fan Li, Elizabeth Zell, Fabrizia Mealli, Don Rubin. The restaurant has a dish named in Don’s honor, the “Rubin.”
+
+图8. 庆祝Don70岁大寿，Harvard 广场，2014年3月29日。前排（左到右）：Alan Zaslavsky, Elizabeth Stuart, Xiao-Li Meng, TE Raghunathan; 后排（左到右）：Fan Li, Elizabeth Zell, Fabrizia Mealli, Don Rubin。这家餐厅有一道以Don的名字命名的菜，“Rubin”。
+
+# ACKNOWLEDGMENTS
+# 致谢
+
+We thank Elizabeth Zell, Guido Imbens, Tom Belin, Rod Little, Dale Rinkel and Alan Zaslavsky for helpful suggestions. This work is partially funded by NSF-SES Grant 1155697.
+
+我们特别感谢Elizabeth Zell, Guido Imbens, Tom Belin, Rod Little, Dale Rinkel以及 Alan Zaslavsky提出的宝贵意见。这项工作部分地受到了美国国家科学基金会的资助。
