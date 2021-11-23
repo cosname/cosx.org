@@ -1,5 +1,5 @@
 ---
-title: "COS 访谈第 39 期：统计大师Donald B. Rubin教授"
+title: "COS 访谈第 41 期：统计大师Donald B. Rubin教授"
 date: "2021-11-22"
 categories:
   - COS访谈
