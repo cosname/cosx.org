@@ -2,6 +2,22 @@
 <tbody>
 {{ range $.Site.Data.members.list }}
 <tr><td><h3>{{ .name }}</h3>{{ .intro | markdownify }}</td><td><img src="{{ .image }}" alt="{{ .name }}"/></td></tr>
+<tr><td>
+{{ $pages := (where $.Site.RegularPages ".Params.author" "intersect" (slice .name)) }}
+{{ $pages := $pages | union (where $.Site.RegularPages ".Params.author" ".name") }}
+{{ range (where $pages "Section" "!=" "").GroupByDate "2006" }}
+<h4 class="archive-title">{{ .Key }}</h4>
+<ul>
+  {{ range .Pages }}
+  <li>
+    <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <span>{{ .Params.author }}</span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+</td></tr>
 {{ end }}
 </tbody>
 </table>
