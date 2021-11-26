@@ -4,7 +4,7 @@
 <tr><td><h3>{{ .name }}</h3>{{ .intro | markdownify }}</td><td><img src="{{ .image }}" alt="{{ .name }}"/></td></tr>
 <tr><td>
 {{ $pages := (where $.Site.RegularPages ".Params.author" "intersect" (slice .name)) }}
-{{ $pages := $pages | union (where $.Site.RegularPages ".Params.author" ".name") }}
+{{ $pages := $pages | union (where $.Site.RegularPages ".Params.author" .name) }}
 {{ range (where $pages "Section" "!=" "").GroupByDate "2006" }}
 <h4 class="archive-title">{{ .Key }}</h4>
 <ul>
