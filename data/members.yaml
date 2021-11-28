@@ -78,6 +78,9 @@ list:
   - name: 黄帅
     image: https://user-images.githubusercontent.com/16065479/119380041-0ff76880-bc75-11eb-92be-a5c6f2f4f76d.jpg
     intro: 华盛顿大学工业工程系副教授，毕业于中国科学技术大学，并于亚利桑那州立大学取得博士学位。他的研究方向包括统计学习和数据挖掘，及其在医疗保健和制造领域的应用。
+  - name: 孔令仁
+    image: 
+    intro: 中国人民大学18级统计本科生，喜爱统计，也爱鼓捣各种工具，希望能给大家带来更多新的体验。
   - name: 寇强
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 寇强 <http://weibo.com/thirdwing?is_all=1>，Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。
