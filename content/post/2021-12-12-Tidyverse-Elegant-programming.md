@@ -20,7 +20,7 @@
 
 `Tidyverse` 的核心工作流如下图所示：
 
-![tidyverse](\images\tidyverse3.jpg)
+![tidyverse](https://raw.githubusercontent.com/EldenBob/uploads/master/2021/12/Tidyverse-Elegant-programming/tidyverse3.jpg)
 
 <center><b>图1</b> Tidyverse核心工作流</center>
 
@@ -58,7 +58,7 @@
 
 我理解的 `tidyverse` 优雅编程思维：
 
-<img src="\images\ThinkingInR.png" alt="tidyProgramming" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/EldenBob/uploads/master/2021/12/Tidyverse-Elegant-programming/ThinkingInR.png" alt="tidyProgramming" style="zoom:67%;" />
 
 <center><b>图2</b> Tidyverse 优雅编程思维</center>
 
@@ -81,6 +81,7 @@
 这里面的关键，就是要**用整体的思维来思考、来表示运算**。我觉得这也是《线性代数》这门课程里边最最有用的一个思想：就是用向量、矩阵来表达一些运算。
 
 我举的例子就是《线性代数》中的 $n$ 元一次方程组：
+
 $$
 \left\{
 \begin{array}{l}
@@ -91,13 +92,15 @@ a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n = b_m
 \end{array}
 \right.
 $$
+
 假如说用逐元素法去写的话，就是这样一个很大的数学式子。如果我们引入这向量和矩阵：
+
 $$
 A = \begin{bmatrix}
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} 
+a_{m1} & a_{m2} & \cdots & a_{mn}
 \end{bmatrix}, \quad
 x = \begin{bmatrix}
 x_1 \\
@@ -270,7 +273,7 @@ Rescale(x, "neg")
 
 <center><b>图5</b> pmap函数作用机制示意图</center>
 
-另外，还有 
+另外，还有
 
 - `walk_*` 系列，只循环迭代做事情但不返回结果，比如批量保存数据/图形到文件；
 - 元素与索引一起迭代有 `imap_*()`系列。具体用法可查看帮助文档。
@@ -342,7 +345,7 @@ pmap_dbl(df[1:10,], ~ mean(c(...)))       # 逐行平均
 再比如，分别按多组参数批量生成正态随机数
 
 ```R
-tribble(~n, ~mean, ~ sd,     # 按行创建数据框 
+tribble(~n, ~mean, ~ sd,     # 按行创建数据框
   2, 5, 1,                   # 生成2个N(5,1)随机数
   3, 10, 2) %>%              # 生成3个N(10,2)随机数
 pmap(~ rnorm(...))
@@ -403,7 +406,7 @@ df %>%
 #> # ... with 145 more rows
 ```
 
-`x1` 是数据框的 1 列，1 个向量，向量化计算乘以 10，赋给同列名，效果是替换旧列。 
+`x1` 是数据框的 1 列，1 个向量，向量化计算乘以 10，赋给同列名，效果是替换旧列。
 
 ```R
 df %>%
@@ -516,7 +519,7 @@ score %>%
 #> 5 07 郑竹93.5
 ```
 
-##### 2.8 数据思维III: 数据分解的思维 
+##### 2.8 数据思维III: 数据分解的思维
 
 **分组修改**：想对数据框进行分组，分别对每组数据做操作，整体来想这是不容易想透的复杂事情，实际上只需做 `group_by()` 分组，然后把你要对一组数据做的操作实现
 
@@ -614,7 +617,7 @@ df %>%
 
 #### 参考文献
 
-[1] [Hadley Wickham, R. (2021). tidyverse: R packages for data science](https://www.tidyverse.org/) 
+[1] [Hadley Wickham, R. (2021). tidyverse: R packages for data science](https://www.tidyverse.org/)
 
 [2] Matt Dancho, J. C.. [R is for Research, Python is for Production](https://zhuanlan.zhihu.com/p/357371742).
 [3] 张敬信. [R 语言编程：基于 tidyverse](https://zhuanlan.zhihu.com/p/198185888). 人民邮电出版社, 2022.
@@ -651,6 +654,3 @@ https://www.zhihu.com/people/huc_zhangjingxin/columns
 欢迎加入QQ 读者群: 875664831 (群名称：tidy-R语言)
 
 <img src="\images\tidy-R.png" style="zoom:85%;" />
-
-
-
