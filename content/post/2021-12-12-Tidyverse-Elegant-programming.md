@@ -6,11 +6,11 @@ author:
 categories:
   - 推荐文章
 tags:
-  - 工业大数据
-  - 质量
-  - 产业实践
-slug: quality-big-data-analysis
-forum_id: 422807
+  -
+  - 
+  -
+slug:
+forum_id:
 ---
 
 ### 作者介绍
