@@ -8,7 +8,9 @@ tags:
   - echarts4r
   - Apache Echarts
 meta_extra: "审稿：黄湘云；编辑：黄湘云"
-toc: true
+output:
+  blogdown::html_page:
+    toc: true
 link-citations: true
 bibliography: 
   - packages.bib
