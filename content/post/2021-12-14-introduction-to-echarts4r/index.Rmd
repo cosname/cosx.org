@@ -1664,8 +1664,77 @@ data |>
   e_aria(enabled = TRUE, decal = list(show = TRUE)) # 贴花
 ```
 
+# 5. 本文小结
 
-# 5. 环境信息
+这篇文章的题目叫做《**echarts4r**：从入门到应用》，意思是只要入门就能上手用了。入门也非常简单，去 **echarts4r** 包的官网复制几个例子，然后粘贴到自己电脑上跑起来就行了。如果嫌 **echarts4r** 包官网给出的例子太简单的话，就去 Apache Echarts 官网示例中找些相中的图形尝试着用 **echarts4r** 来复现。这里的“相中”并不是指从 Apache Echarts 官网找到想要复现的图形以后，就一定要死磕到底，在决定死磕之前最好先看看完整的 TS 或 JS 代码，要是`option = { }`前后有很多段看不懂的代码的话就别随便瞎碰乱试了，因为试不出来的原因很可能是用现在的 **echarts4r** 包确实画不出来。
+
+把 Apache Echarts 中的 JS 或 TS 代码转换成 **echarts4r** 中的 R 代码 通常也有规律可循。其一，JS 里面定义参数是用冒号，如`type:'category'`，而 R 里面则使用等号，如`type = "category"`。其二， JS 里面定义一个列表使用大括号，如`axisTick:{ show:false }`，而 R 里面则用`list()`，如`axisTick = list(show = TRUE)`。其三， JS 里面定义数组使用中括号，如`padding:[3, 4, 5, 6]`，而 R 里面则用`c()`，如`padding = c(1, 1, 5, 6)`。
+
+综合起来，当看到 Apache Echarts 官网的示例代码中写了下面这段：
+
+```
+xAxis:[{
+  type:'category',
+  axisTick:{
+    show:false
+  },
+  nameTextStyle:{
+    padding:[3, 4, 5, 6]
+  }
+}]
+```
+
+就可以在 R 里面 `library(echarts4r)` 后，写出下面这段。
+
+```r
+e_x_axis(
+  type = "category",
+  axisTick = list(show = TRUE),
+  nameTextStyle = list(padding = c(1, 1, 5, 6))
+)
+```
+
+R 里面还有一个有趣的函数`htmlwidgets::JS()`可以帮我们直接引用 JS 。比如，Apache Echarts 官网[有个例子](https://echarts.apache.org/examples/zh/editor.html?c=scatter-life-expectancy-timeline)中有这样一段：
+
+```
+visualMap:[{
+  show:false,
+  dimension:3,
+  categories:data.counties,
+  inRange:{
+    color:(function () {
+      var colors = ['#51689b', '#ce5c5c']
+      return colors.concat(colors)
+    })()
+  }
+}]  
+
+```
+
+在R里面就可以这样写：
+
+```r
+e_visual_map(
+  show = FALSE,
+  dimension = 3,
+  categories = c('Australia','Canada','China','Cuba','Finland','France',··· ,'United States'), #对应categories:data.counties
+  inRange = list(
+    color = htmlwidgets::JS(
+      "(function () {
+              // prettier-ignore
+              var colors = ['#51689b', '#ce5c5c'];
+              return colors.concat(colors);
+            })()"
+    )
+  )
+)
+```
+
+总而言之，上手试试，碰碰钉子，死磕几回，琢磨琢磨，自然就会了。
+
+
+
+# 6. 环境信息
 
 在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 **blogdown** 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：
 
@@ -1676,4 +1745,4 @@ xfun::session_info(packages = c(
 ), dependencies = FALSE)
 ```
 
-# 6. 参考文献
+# 7. 参考文献
