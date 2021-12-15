@@ -40,6 +40,23 @@ div.rmdnote::before {
   margin-bottom: 0.25em;
 }
 
+.rmdwarn {
+  border: 1px solid #EA4335;
+  border-left-width: 5px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+div.rmdwarn::before {
+  content: "警告";
+  color: #EA4335;
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
 figure {
   text-align: center;
 }
@@ -1246,6 +1263,10 @@ year |>
 
 ## 3.5. 地理坐标系（Geo）
 
+::: rmdwarn
+**echarts4r** 包中的地图块没有标注海岸线，因此绘制中国地图时缺少南海九段线等内容，使用时请谨慎考量。
+:::
+
 ### 3.5.1. 世界地图
 
 ```{r}
@@ -1651,7 +1672,7 @@ data |>
 ```{r, message=FALSE}
 xfun::session_info(packages = c(
   "knitr", "rmarkdown", "blogdown",
-  "echarts4r.maps", "echarts4r"
+  "echarts4r.maps", "echarts4r", "countrycode"
 ), dependencies = FALSE)
 ```
 
