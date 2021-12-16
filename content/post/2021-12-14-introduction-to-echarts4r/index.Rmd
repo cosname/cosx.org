@@ -67,6 +67,10 @@ div.img {
   margin-left: auto; 
   margin-right: auto;
 }
+
+.col-xs-6 {
+  display: inline-block; width: 49%; 
+}
 ```
 
 
@@ -89,7 +93,7 @@ div.img {
 ::: rmdnote
 1. 本文所使用 R 软件版本为 4.1.1，在 4.1.2 上也测试通过，**echarts4r** 包的版本为 0.4.2 ，对应 Echarts 版本为 5.0 以上，R 软件 4.1.0 之前的版本应将所有的管道符从 `|>` 换成 `%>%`。
 
-1. 一个标准数据框里的一列数据在不同领域里有不同的名字，如字段、数据项、变量、变量、特征、系列等等，本文统称为变量。
+1. 一个标准数据框里的一列数据在不同领域里有不同的名字，如字段、数据项、变量、指标、特征、系列等等，本文统称为变量。
 :::
 
 ```{r write-bib, include=FALSE}
@@ -573,7 +577,7 @@ data |>
 
 ## 2.4. 数据标签（Label）
 
-在 **echarts4r** 包里面图形的数据标签默认不显示，可通过管道符引入`e_labels()`函数来修改图例的属性。
+在 **echarts4r** 包里面图形的数据标签默认不显示，可通过管道符引入`e_labels()`函数来修改数据标签的属性。
 
 ```{r}
 data |>
@@ -1030,7 +1034,7 @@ e1 <- data |>
 
 e2 <- data |>
   e_charts(month,
-    height = 200, elementId = "图2"
+    height = 200, elementId = "图3"
   ) |>
   e_bar(Precipitation, name = "降水量") |>
   e_group("4charts") |>
