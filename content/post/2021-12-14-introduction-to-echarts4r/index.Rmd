@@ -14,13 +14,14 @@ output:
 link-citations: true
 bibliography: 
   - packages.bib
-description: ""
+thumbnail: https://user-images.githubusercontent.com/12031874/146304984-5a1ade06-9263-464c-a5d8-ce091d11752b.png
+description: "**echarts4r** 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 Apache Echarts。Apache ECharts 是一个基于 JavaAcript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。"
 forum_id: 
 slug: introduction-to-echarts4r
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE)
 ```
 ```{css, echo=FALSE}
 .rmdnote {
@@ -1632,11 +1633,15 @@ data |>
       textBorderDahOffset = 0 # 文字本身虚线描边时的偏移量
     )
   )
-# textShadowColor文字本身的阴影颜色/textShadowBlur文字本身的阴影长度
-# testShadowOffsetX文字本身的阴影X偏移/testShadowOffsetY文字本身的阴影Y偏移
-# 文字超出宽度是否截断或换行：overflow
-# https://echarts.apache.org/zh/option.html#xAxis.nameTextStyle.overflow
 ```
+
+关于文字本身还可以调整的有：
+
+1. textShadowColor 阴影颜色
+1. textShadowBlur 阴影长度
+1. testShadowOffsetX 阴影X偏移
+1. testShadowOffsetY 阴影Y偏移
+1. overflow 文字超出宽度是否截断或换行，详见[链接](https://echarts.apache.org/zh/option.html#xAxis.nameTextStyle.overflow)
 
 ## 4.5. 图形属性（itemStyle）
 
@@ -1721,7 +1726,8 @@ visualMap:[{
 e_visual_map(
   show = FALSE,
   dimension = 3,
-  categories = c('Australia','Canada','China','Cuba','Finland','France',··· ,'United States'), #对应categories:data.counties
+  # 对应 categories:data.counties
+  categories = c('Australia','Canada','China','Cuba','Finland','France',··· ,'United States'), 
   inRange = list(
     color = htmlwidgets::JS(
       "(function () {
