@@ -722,9 +722,9 @@ data |>
 data |>
   e_charts(month) |>
   e_bar(Precipitation) |>
+  # decimal 表示数值的类型为小数型，还可选 percent、currency
+  # digits 表示小数点后位数
   e_tooltip(formatter = e_tooltip_item_formatter(style = "decimal", digits = 1))
-# decimal表示数值的类型为小数型，还可选percent、currency
-# digits表示小数点后位数
 ```
 
 ```{r}
@@ -1637,11 +1637,11 @@ data |>
 
 关于文字本身还可以调整的有：
 
-1. textShadowColor 阴影颜色
-1. textShadowBlur 阴影长度
-1. testShadowOffsetX 阴影X偏移
-1. testShadowOffsetY 阴影Y偏移
-1. overflow 文字超出宽度是否截断或换行，详见[链接](https://echarts.apache.org/zh/option.html#xAxis.nameTextStyle.overflow)
+1. textShadowColor 阴影颜色；
+1. textShadowBlur 阴影长度；
+1. testShadowOffsetX 阴影X偏移；
+1. testShadowOffsetY 阴影Y偏移；
+1. overflow 文字超出宽度是否截断或换行，详见[链接](https://echarts.apache.org/zh/option.html#xAxis.nameTextStyle.overflow)。
 
 ## 4.5. 图形属性（itemStyle）
 
