@@ -97,27 +97,34 @@ figure {
 
 </div>
 
+# 本文概览
+
+本文将介绍如何创建 R Markdown 基础 beamer 文类的模版，介绍 R Markdown 制作 beamer 幻灯片的过程。然后介绍美化 beamer 幻灯片的过程，包括中英字体、数学公式、更换主题，特别是完整迁移到新的主题可能会遇到的问题。涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
+
+# 写作背景
+
 故事还要从头开始讲起，6-7 年前，出于学术答辩和课程汇报需要，陆续学习和使用 LaTeX 来排版作业和论文，曾有一段时间深陷此坑不能自拔，以至于遍览 [TeXLive](https://tug.org/texlive/) 内置的幻灯片制作宏包，收集了大量 beamer 幻灯片的模版，藏于 Github 仓库 [awesome-beamers](https://github.com/XiangyunHuang/awesome-beamers)。
 
 LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的数学或统计系会用它来排版毕业论文，相关的学习材料有很多，推荐 CTeX 开发小组翻译的[一份（不太）简短的LaTeX介绍](https://github.com/CTeX-org/lshort-zh-cn)。吴康隆的 [《简单粗暴LaTeX》](https://github.com/wklchris/Note-by-LaTeX)，盛文博翻译的[《LaTeX2e 插图指南, 第三版》](https://github.com/WenboSheng/epslatex-cn)，吕荐瑞的[科技文档排版课程材料](https://lvjr.bitbucket.io/tutorial/learn-latex.pdf)，曾祥东的[现代 LaTeX 入门讲座](https://github.com/stone-zeng/latex-talk)，都非常适合从零开始学习的。进阶的部分，根据需要去看宏包手册，LaTeX 宏包文档的长度一般都吓死个人，[PGF](https://github.com/pgf-tikz/pgf) 绘图 **1300** 多页，[pgfplots](https://ctan.org/pkg/pgfplots) 3D 绘图 **573** 页， [beamer](https://github.com/josephwright/beamer) 幻灯片制作 **247** 页，[geometry](https://github.com/davidcarlisle/geometry) 版面设置 **42** 页，[tcolorbox](https://github.com/T-F-S/tcolorbox) 箱子定制 **539**页，通常不需要从头到尾的看，除非遇到难处或需要自定义了。在对基础的 LaTeX 排版工具有一些了解后，日常使用过程中必备数学公式[速记小抄](https://gitlab.com/jim.hefferon/undergradmath) ，搭好梯子随时放狗去搜。
 
 去年 6 月份搬迁完[汉风主题](https://github.com/liantze/pgfornament-han)，在论坛开帖分享了[成果](https://d.cosx.org/d/421591-beamer)，又被撺掇着在主站[立了字句](https://github.com/cosname/cosx.org/issues/901)—-要写一篇文章介绍 R Markdown 制作幻灯片模版的过程，一直囿于工作繁忙，难以抽身，前段时间在 WX 上和[楚新元](https://gitlab.com/chuxinyuan)又聊到模版，看到有人又要准备趟我之前踩过的坑，心中不忍，咬咬牙还是把这文债给还了。算起来，从起心动念到最终交付拖延了整整一年零三个月！！！
 
-本文将介绍如何创建 R Markdown 基础 beamer 文类的模版，介绍 R Markdown 制作 beamer 幻灯片的过程。然后介绍美化 beamer 幻灯片的过程，包括中英字体、数学公式、更换主题，特别是完整迁移到新的主题可能会遇到的问题。涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
+# 软件准备
 
 ## 安装 R 包
 
-本文陆续会用到 R Markdown 生态的几个 R 包，复现需要安装下：
+默认大家已经安装了 R 软件和 RStudio IDE，这会让后面的操作变得更容易。
+因陆续会用到 R Markdown 生态的几个 R 包，所以先提前安装下：
 
 ``` r
 install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "rticles"))
 ```
 
-默认大家已经安装了 R 和 RStudio IDE，这会让操作的过程变得更简单明了。
+其中， R 包 **tinytex** ([Xie 2019](#ref-tinytex2019)) 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是在构建在 LaTeX 宏包管理器之上 tlmgr，默认去掉了 LaTeX 宏包源码和帮助文档，做到 300～500M 的大小。 **knitr** 包自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 **rmarkdown** 的功能覆盖，**bookdown** 仅补充交叉引用。
 
 ## 安装 TinyTeX
 
-平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex)([Xie 2019](#ref-tinytex2019)) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
+平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
 
 ``` r
 tinytex::install_tinytex()
@@ -151,6 +158,8 @@ tinytex::install_tinytex()
     # 拷贝到字体目录下
     file.copy(from = fontfile, to = distdir, overwrite = TRUE)
     ```
+
+# 技巧陷阱
 
 ## 数学符号
 
@@ -222,64 +231,7 @@ Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提�
 | [DejaVu Math TeX Gyre](https://ctan.org/pkg/tex-gyre-math-dejavu)   | 1640     |
 | [Fira Math](https://ctan.org/pkg/firamath)                          | 1052     |
 
-## 幻灯片主题
-
-下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。不记得初次见 metropolis 主题是什么时候，不过每次见都让我想到了 MCMC（**M**arkov **C**hain **M**onte **C**arlo，马尔科夫链蒙特卡洛，简称 MCMC）。学过 MCMC 算法的都知道 metropolis 是啥，我这半桶水的统计科班生就不在这献丑了，当年掉在 MCMC 的大坑里好多时间，以至于将 metropolis 和 MCMC 建立了极强的关联，可能这是我介绍 beamer 主题也拿它来举例的原因吧！
-
-回到正题，Pandoc 内建的 LaTeX 模版功能已经很丰富了，通常用不着自己配置了，R Markdown 自从接入 **tinytex** 自动装缺失的 LaTeX 宏包的功能后，在产出 PDF 文档方面已经方便多了。
-
-metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在之前的文章[可重复性数据分析](https://xiangyun.rbind.io/2021/01/reproducible-analysis/)介绍过[林莲枝](https://github.com/liantze/)开发的汉风主题幻灯片，它是 metropolis 主题的衍生品。算上空行，只有十几行代码哈哈！！[^2]
-
-``` tex
-\documentclass[169]{beamer}
-
-\usefonttheme{professionalfonts}
-\usetheme{metropolis}
-
-\usepackage{fontspec}
-
-\setsansfont[BoldFont={Fira Sans SemiBold}]{Fira Sans Book}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
-
-\usepackage[
-  mathrm=sym,
-  math-style=ISO,  % Greek letters also in italics
-  bold-style=ISO,  % bold letters also in italics
-]{unicode-math}
-
-\setmathfont{Fira Math} % https://github.com/firamath/firamath
-% top is still missing in Fira Math, get it from another font
-\setmathfont[range={\top}]{XITS Math}
-
-\begin{document}
-  \begin{frame}[t]{Example}
-    \begin{align}
-      \symbf{\theta} &= (1, 2, 3)^\top \\
-            \theta_0 &= 1
-    \end{align}
-  \end{frame}
-\end{document}
-```
-
-注意看加载 **unicode-math** 宏包时的选项设置，关于 **unicode-math** 数学符号的样式（比如选择 ISO 还是 TeX？） 说明见[文档](https://www.latex-project.org/publications/2010-wspr-TUG-unicode-mathematics-in-LaTeX-slides.pdf)，对绝大多数的使用者来说，做个拿来主义就好，别看我洋洋洒洒写了这么多，我也不例外，喜欢哪个用哪个！
-
-将上面的模版内容保存到文件 `slide-template.tex`，接下来，有两种编译 LaTeX 文件的方式，一种在 [RStudio IDE](https://github.com/rstudio/rstudio) 内打开，点击 **Compile PDF** 按钮，另一种是在 R 控制台里执行
-
-``` r
-tinytex::xelatex(file = "slide-template.tex")
-```
-
-编译出来的效果如下：
-
-![slide-template](https://user-images.githubusercontent.com/12031874/116777926-a1722100-aaa1-11eb-92c7-034ebfb90922.png)
-
-用 Adobe Acrobat Reader DC 打开 `文件->属性->字体` 可以看到 PDF 文档中确切使用的字体，如下图所示。
-
-![check-fonts](https://user-images.githubusercontent.com/12031874/135288310-4dad120c-a883-4732-9033-72be7b8ffe28.png)
-
-## 一个永远填不满的坑
+## 文档汉化
 
 最近统计之都论坛里又有人陆续[踩](https://d.cosx.org/d/422613)到我以前[踩](https://d.cosx.org/d/419931)过的[坑 1](https://d.cosx.org/d/421770)、[坑 2](https://d.cosx.org/d/421834)、[坑 3](https://d.cosx.org/d/422087)、[坑 4](https://d.cosx.org/d/422343)，都是中文 R Markdown 文档相关， 这里不妨简单说一下。
 
@@ -341,7 +293,66 @@ RStudio IDE 使用 [MathJaX](https://www.mathjax.org/) 来渲染 R Markdown 文�
 
 再次强行回到本文主题，上述巨坑在 article 普通文类下介绍，而不是在 beamer 幻灯片主题下介绍也是有重要原因的：其一，我见过的大部分坑的背景都是 article 文类。其二，这个坑并不会随文类切换到 beamer 而有所不同！其三，若大家再遇到类似坑不妨也切换到 article 文类，这个是最基础的，褪去尽可能多的外部依赖，方便去根因。
 
-## R Markdown 模版（基础篇）
+# 幻灯片制作
+
+## LaTeX 幻灯片
+
+下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。不记得初次见 metropolis 主题是什么时候，不过每次见都让我想到了 MCMC（**M**arkov **C**hain **M**onte **C**arlo，马尔科夫链蒙特卡洛，简称 MCMC）。学过 MCMC 算法的都知道 metropolis 是啥，我这半桶水的统计科班生就不在这献丑了，当年掉在 MCMC 的大坑里好多时间，以至于将 metropolis 和 MCMC 建立了极强的关联，可能这是我介绍 beamer 主题也拿它来举例的原因吧！
+
+回到正题，Pandoc 内建的 LaTeX 模版功能已经很丰富了，通常用不着自己配置了，R Markdown 自从接入 **tinytex** 自动装缺失的 LaTeX 宏包的功能后，在产出 PDF 文档方面已经方便多了。
+
+metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在之前的文章[可重复性数据分析](https://xiangyun.rbind.io/2021/01/reproducible-analysis/)介绍过[林莲枝](https://github.com/liantze/)开发的汉风主题幻灯片，它是 metropolis 主题的衍生品。算上空行，只有十几行代码哈哈！！[^2]
+
+``` tex
+\documentclass[169]{beamer}
+
+\usefonttheme{professionalfonts}
+\usetheme{metropolis}
+
+\usepackage{fontspec}
+
+\setsansfont[BoldFont={Fira Sans SemiBold}]{Fira Sans Book}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage[
+  mathrm=sym,
+  math-style=ISO,  % Greek letters also in italics
+  bold-style=ISO,  % bold letters also in italics
+]{unicode-math}
+
+\setmathfont{Fira Math} % https://github.com/firamath/firamath
+% top is still missing in Fira Math, get it from another font
+\setmathfont[range={\top}]{XITS Math}
+
+\begin{document}
+  \begin{frame}[t]{Example}
+    \begin{align}
+      \symbf{\theta} &= (1, 2, 3)^\top \\
+            \theta_0 &= 1
+    \end{align}
+  \end{frame}
+\end{document}
+```
+
+注意看加载 **unicode-math** 宏包时的选项设置，关于 **unicode-math** 数学符号的样式（比如选择 ISO 还是 TeX？） 说明见[文档](https://www.latex-project.org/publications/2010-wspr-TUG-unicode-mathematics-in-LaTeX-slides.pdf)，对绝大多数的使用者来说，做个拿来主义就好，别看我洋洋洒洒写了这么多，我也不例外，喜欢哪个用哪个！
+
+将上面的模版内容保存到文件 `slide-template.tex`，接下来，有两种编译 LaTeX 文件的方式，一种在 [RStudio IDE](https://github.com/rstudio/rstudio) 内打开，点击 **Compile PDF** 按钮，另一种是在 R 控制台里执行
+
+``` r
+tinytex::xelatex(file = "slide-template.tex")
+```
+
+编译出来的效果如下：
+
+![slide-template](https://user-images.githubusercontent.com/12031874/116777926-a1722100-aaa1-11eb-92c7-034ebfb90922.png)
+
+用 Adobe Acrobat Reader DC 打开 `文件->属性->字体` 可以看到 PDF 文档中确切使用的字体，如下图所示。
+
+![check-fonts](https://user-images.githubusercontent.com/12031874/135288310-4dad120c-a883-4732-9033-72be7b8ffe28.png)
+
+## R Markdown 幻灯片（基础篇）
 
 R Markdown 文档开头处为 YAML 元数据，它分两部分：其一是 Pandoc 变量值，其二是文档输出设置。下面是一份完整的 R Markdown 模版，有了前面关于中文 R Markdown 文档的介绍，想必已不再感到陌生。 ctexbeamer 和 ctexart 文类都来自 [ctex 宏包](https://ctan.org/pkg/ctex)，想汉化必须看看它的帮助文档。
 
@@ -380,7 +391,7 @@ R Markdown 文档开头处为 YAML 元数据，它分两部分：其一是 Pando
 至此，关于 「R Markdown 制作 beamer 幻灯片」([Xie, Allaire, and Grolemund 2018](#ref-Xie2018))的主题介绍可以告一段落了！眼力犀利的读者可能已经看出上面模版中还是使用 **unicode-math** 处理数学公式，导致符号样式怪怪的，`\boldsymbol` 也无法加粗希腊字母，这里留个疑问，希望读者看完本文后，自己能找到答案！
 对于想要玩出花样的读者，不妨接着往下看。
 
-## R Markdown 模版（高级篇）
+## R Markdown 幻灯片（高级篇）
 
 下面是另一份完整的 R Markdown 模版，内容十分丰富：添加多个作者，动态日期， [交叉引用](https://bookdown.org/yihui/bookdown/cross-references.html)([Xie 2016](#ref-Xie2016))，参考文献，文献样式，Verona 主题，自定义导言区 `header-includes`，右下角 Logo，R 绘图设备改为 `"cairo_pdf"`，设置幻灯片主题 Verona 的选项等[^4]。读者可以注释和编译交替进行，细节就不说了，可以看看后面的参考文献，边看边玩！
 
@@ -391,7 +402,7 @@ author:
   - 黄湘云
   - 李四
 institute: "xxx 大学学院"
-date: "2021-11-07"
+date: "2021-12-19"
 documentclass: ctexbeamer
 output: 
   bookdown::pdf_book: 
@@ -474,7 +485,7 @@ beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alert
       - 黄湘云
       - 李四
     institute: "xxx 大学学院"
-    date: "2021-11-07"
+    date: "2021-12-19"
     documentclass: ctexbeamer
     output: 
       bookdown::pdf_book: 
@@ -536,7 +547,7 @@ beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alert
 
 ![rmarkdown-verona](https://user-images.githubusercontent.com/12031874/135652566-08f27f9b-c7a0-4bcf-810a-88859e6db6a7.gif)
 
-## R Markdown 模版（忍者篇）
+## R Markdown 幻灯片（忍者篇）
 
 此外，R 社区有几个 R 包专门打包了一些 R Markdown 幻灯片模版，比如 [binb](https://github.com/eddelbuettel/binb) 和 [uiucthemes](https://github.com/illinois-r/uiucthemes) 包，如何使用便不再赘述，掌握以上介绍的规律，beamer 主题任你玩[^5]。
 
@@ -544,14 +555,14 @@ Christophe Dervieux
 
 bookdown 提供的特殊语法 `name="bababa"` 仅适用于那些在 beamer （不局限于 beamer 基础文类提供的主题，还包括其它衍生的 beamer 主题，下同）中有定义且被 bookdown 支持的。其它 bookdown 支持的环境只有在 beamer 的导言区先定义才能被使用，如命题 `proposition`，猜想 `conjecture`，练习 `exercise`，假设 `hypothesis`，注记 `remark`，通常这部分东西放在 `preamble.tex` 里，并在 R Markdown 的 YAML 区域引入。另外，还有一些环境只出现在 beamer 文类下，bookdown 对这些是不支持的，比如事实 `fact`，问题 `problem` `block`，示例 `exampleblock` 等。
 
-创建一个 GIF 图，提供 R Markdown 基础 beamer 文类的模版，包含各种环境。
+创建一个 GIF 图，提供 R Markdown 基础 beamer 文类的模版，包含两三种常用环境，其他环境情况列一个表格。
 
 忍者篇介绍萧山主题模版，列出 beamer 中有定义的和 bookdown 支持的。
 
 beamer 文档找到各类定理、block 块
 然后如何映射过来
 
-## 环境信息
+# 环境信息
 
 在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 **blogdown** ([Xie, Hill, and Thomas 2017](#ref-Xie2017))构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。
 
@@ -568,23 +579,26 @@ xfun::session_info(c(
     ## Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
     ## 
     ## Package version:
-    ##   base64enc_0.1.3  blogdown_1.5     bookdown_0.24   
-    ##   digest_0.6.28    evaluate_0.14    fastmap_1.1.0   
-    ##   glue_1.4.2       graphics_4.1.2   grDevices_4.1.2 
-    ##   highr_0.9        htmltools_0.5.2  httpuv_1.6.3    
-    ##   jquerylib_0.1.4  jsonlite_1.7.2   knitr_1.36      
+    ##   base64enc_0.1.3  blogdown_1.7     bookdown_0.24   
+    ##   digest_0.6.29    evaluate_0.14    fastmap_1.1.0   
+    ##   glue_1.6.0       graphics_4.1.2   grDevices_4.1.2 
+    ##   highr_0.9        htmltools_0.5.2  httpuv_1.6.4    
+    ##   jquerylib_0.1.4  jsonlite_1.7.2   knitr_1.37      
     ##   later_1.3.0      magrittr_2.0.1   methods_4.1.2   
     ##   mime_0.12        promises_1.2.0.1 R6_2.5.1        
     ##   Rcpp_1.0.7       rlang_0.4.12     rmarkdown_2.11  
-    ##   servr_0.23       stats_4.1.2      stringi_1.7.5   
-    ##   stringr_1.4.0    tinytex_0.35     tools_4.1.2     
-    ##   utils_4.1.2      xfun_0.28        yaml_2.2.1      
+    ##   servr_0.24       stats_4.1.2      stringi_1.7.6   
+    ##   stringr_1.4.0    tinytex_0.36     tools_4.1.2     
+    ##   utils_4.1.2      xfun_0.29        yaml_2.2.1      
     ## 
-    ## Pandoc version: 2.14.2
+    ## LaTeX version used: 
+    ##   TeX Live 2021 (TinyTeX) with tlmgr 2021-10-04
     ## 
-    ## Hugo version: 0.88.1
+    ## Pandoc version: 2.16.2
+    ## 
+    ## Hugo version: 0.90.1
 
-## 参考文献
+# 参考文献
 
 <div id="refs" class="references csl-bib-body hanging-indent">
 
