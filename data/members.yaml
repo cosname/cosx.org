@@ -3,8 +3,8 @@ list:
     image: https://yufree.cn/images/MYu.jpg
     intro: 现任编辑部主编，中科院生态环境研究中心博士，美国西奈山伊坎医学院博后，研究方向为环境化学与暴露组学数据分析，博客 <https://yufree.cn>
   - name: 黄湘云
-    image: https://user-images.githubusercontent.com/12031874/28239932-9c296f42-69a9-11e7-90fa-d1d20cbad4db.jpg
-    intro: 现任编辑部副主编，中国矿业大学（北京）本硕，16年一篇水文勾搭上谢大，而后得雪姨赏识出任副主编，目前在美团搬砖，博客 <https://xiangyun.rbind.io>。
+    image: https://user-images.githubusercontent.com/12031874/143729613-b936042b-9f84-4c51-abd1-fcce32f54c5c.jpg
+    intro: 现任编辑部副主编，毕业于中国矿业大学（北京），多年 R 语言爱好者，与赵鹏、谢益辉一起合著了《现代统计图形》，目前在美团从事数据分析工作，博客 <https://xiangyun.rbind.io>。
   - name: 林枫
     image: https://user-images.githubusercontent.com/18381242/62635778-e28bde80-b96a-11e9-9a98-15780bcd075f.JPG
     intro: 现任编辑部副主编，中国科学技术大学本硕，美国华盛顿大学2020级博士。研究兴趣是应用驱动的学习与决策问题。一番机缘得入COS，深受触动，在未来也将继续见证着它的热情与力量。
@@ -16,7 +16,7 @@ list:
     intro: 人大本科，宾州州立大学博士，现为卡内基梅隆大学博士后。
   - name: 常象宇
     image: https://cloud.githubusercontent.com/assets/7221728/25788532/6931eef0-33dc-11e7-8bac-95fb83a25afe.jpg
-    intro: 本科在西安交大应用数学系，08年与COS结缘，虽未参与，但关注。硕士阶段做与机器学习相关的研究发现用到了更多的统计知识，后博士阶段学了些统计。博士毕业后进入西安交通大学管理学院教书，完成了从数学、计算机、统计到管理的混沌。14年在北京乱晃的阶段，又与COS扛把子接头成功，被勾引后，感觉自己好像能干点什么了就又回到了COS。曾经在统计与机器学习的正经期刊上发表过文章，在机器学习的很多会议做过PC。在COS编辑部修改编辑过一些文章，负责采访过一些名师。希望以后还能在生活、科研与消耗大量时间的体制内工作中抽时间在COS做点有趣的事。
+    intro: 现西安交通管理学院教书。08年与统计之都结缘；组织多年R会议中机器学习专场；参与统计之都访谈多篇；喜欢在统计之都与大家瞎折腾；现在是统计之都的核心“打工人”。
   - name: 成慧敏
     image: https://cloud.githubusercontent.com/assets/7221728/25788558/9897e0f0-33dc-11e7-8d62-41883f058ce7.jpg
     intro: 佐治亚大学在读博士生,硕士毕业于中央财经大学统计与数学学院。平时没事就喜欢为统计之都做贡献(好吧,我说实话,平时喜欢到处吃吃吃喝喝喝)。稀里糊涂入了女博士的坑,对数据分析感兴趣,喜欢画漂亮的图写漂亮的code。
@@ -78,6 +78,9 @@ list:
   - name: 黄帅
     image: https://user-images.githubusercontent.com/16065479/119380041-0ff76880-bc75-11eb-92be-a5c6f2f4f76d.jpg
     intro: 华盛顿大学工业工程系副教授，毕业于中国科学技术大学，并于亚利桑那州立大学取得博士学位。他的研究方向包括统计学习和数据挖掘，及其在医疗保健和制造领域的应用。
+  - name: 孔令仁
+    image: 
+    intro: 中国人民大学18级统计本科生，喜爱统计，也爱鼓捣各种工具，希望能给大家带来更多变化与创新。
   - name: 寇强
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 寇强 <http://weibo.com/thirdwing?is_all=1>，Rcpp 核心团队成员。本科就读于中山大学，现为印第安纳大学博士在读。
