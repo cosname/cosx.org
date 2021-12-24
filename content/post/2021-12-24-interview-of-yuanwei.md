@@ -10,7 +10,7 @@ tags:
   - 教育
   - 发展
   - 八卦
-slug: interview-of-rubin
+slug: interview-of-yuanwei
 meta_extra: "采访者：王小宁、任焱、孔令仁、王祎帆；审校：赵昊蛟、王小宁、李舰、魏太云；编辑：林枫"
 forum_id: 422858
 ---
