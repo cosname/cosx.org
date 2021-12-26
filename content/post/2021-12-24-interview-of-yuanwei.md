@@ -63,8 +63,8 @@ forum_id: 422858
 
 ![](https://raw.githubusercontent.com/cosname/uploads/master/2021/12/Yuan-Wei/image4.jpeg)
 
-**图 4：1981 年 5 月美国统计学会会长 Breadley 率团访问中国，方毅副总理会见。
-前排左起 J.Press、戴世光、Beadley 夫人、李成瑞、R.A.Beadley、方毅、F.C.Leone、M.E.Muller、王一夫、V.Tsou、王寿仁**
+**图 4：1981 年 5 月美国统计学会会长 Bradley 率团访问中国，方毅副总理会见。
+前排左起 J.Press、戴世光、Bradley 夫人、李成瑞、R.A.Bradley、方毅、F.C.Leone、M.E.Muller、王一夫、V.Tsou、王寿仁**
 
 我的大学读了 4 年，接着读了 3 年硕士，3 年的博士。1984 年底我在人大硕士毕业后已经留校当老师了，博士生阶段是在职攻读。博士的三年我们一边教一点书，一边完成博士论文。我们这一届三个人，任若恩、蔡志洲和我。1988 年初，我们答辩通过，成为我国经济类首批统计学博士。
 
