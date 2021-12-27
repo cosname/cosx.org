@@ -4,13 +4,14 @@ date: '2021-12-26'
 author:
   - 何通
 categories:
-  -
+  - 推荐文章
 tags:
-  -
-  -
-  -
-slug:
-forum_id:
+  - 算法
+  - 统计建模
+  - 统计学
+  - 文化
+slug: new-culture-of-modeling
+forum_id: 422863
 ---
 
 > 统计之都编辑部按：本文是纪念Leo Breiman《统计建模：两种文化》20周年活动的系列文章之一，作者何通。
