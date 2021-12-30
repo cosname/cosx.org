@@ -1310,6 +1310,29 @@ df |>
   e_visual_map(value)
 ```
 
+不难发现，**echarts4r.maps** 内置的中国地图是不完整的，缺少南海诸岛及九段线等内容，因此，需要获取完整正确的地图，高德和百度都是具有甲级测绘资质的单位。下面采用[阿里 DataV 数据可视化平台](https://datav.aliyun.com/portal/school/atlas/area_selector)开放出来的地图，数据集保存到本地，实际上，原始地图数据来自[高德开放平台](https://lbs.amap.com/api/webservice/guide/api/district)。地图数据包含行政唯一编码、行政单位名称和行政级别（省、市和县三级），在将数据映射到背景地图的对应区域时，需要保证数据集中的行政单位名称和 背景地图中的行政单位名称是一一对应的。
+
+```{r}
+# 准备数据集
+df <- data.frame(
+  region = c("湖北省", "浙江省", "北京市", "广东省"),
+  value = c(1, 2, 3, 4)
+)
+# 从本地加载新的中国地图数据
+china_map <- jsonlite::read_json("data/中华人民共和国.json")
+# 开始绘图
+df |>
+  e_charts(region) |>
+  # 注册地图
+  e_map_register("China2", china_map) |>
+  # 调用注册的地图
+  em_map("China2") |>
+  # 将数据映射到地图上
+  e_map(value, map = "China2") |>
+  e_visual_map(value)
+```
+
+
 ### 3.5.2. 地图上连线（lines）
 
 ```{r}
@@ -1325,7 +1348,7 @@ lines <- data.frame(
 
 lines |>
   e_charts() |>
-  e_geo(map = "China") |>
+  e_geo(map = "China2") |>
   e_lines(
     source_lon, # 起点经度
     source_lat, # 起点纬度
