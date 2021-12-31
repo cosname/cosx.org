@@ -1334,8 +1334,70 @@ df |>
   e_visual_map(value)
 ```
 
+### 3.5.3. 区域地图
 
-### 3.5.2. 坐标连线（lines）
+用 echarts4r 包绘制省份和城市级别的地图时均需要导入一份可用的地图文件，本小节均是从[阿里 DataV 数据可视化平台](http://datav.aliyun.com/portal/school/atlas/area_selector)下载地图 json 文件。
+
+#### 3.5.3.1. 省级地图
+
+绘制一个省份的地图，以湖北省为例。
+
+```{r}
+json.province <- jsonlite::read_json('data/湖北省.json')
+
+df.province <- data.frame(
+  city = c(
+    '武汉市',
+    '黄石市',
+    '十堰市',
+    '宜昌市',
+    '襄阳市',
+    '鄂州市',
+    '荆门市',
+    '孝感市',
+    '荆州市',
+    '黄冈市',
+    '咸宁市',
+    '随州市',
+    '恩施土家族苗族自治州',
+    '仙桃市',
+    '潜江市',
+    '天门市',
+    '神农架林区'
+  ),
+  value = sample(1:10, 17, replace = TRUE)
+)
+
+df.province |>
+  e_charts(city) |>
+  # 注册地图
+  e_map_register("湖北省", json.province) |>
+  # 调用注册的地图
+  e_map(value, map = "湖北省") |>
+  e_visual_map(value)
+```
+
+#### 3.5.3.2 市级地图
+
+绘制一个城市的地图，以武汉市为例。
+
+```{r}
+json.city <- jsonlite::read_json("data/武汉市.json")
+
+df.city <- data.frame(
+  city = c("江岸区", "江汉区", "汉阳区", "武昌区", "洪山区"),
+  value = sample(1:10, 5)
+)
+
+df.city |>
+  e_charts(city) |>
+  e_map_register("武汉市", json.city) |>
+  e_map(value, map = "武汉市") |>
+  e_visual_map(value)
+```
+
+
+### 3.5.4. 坐标连线（lines）
 
 ```{r}
 lines <- data.frame(
@@ -1378,6 +1440,25 @@ lines |>
     )
   )
 ```
+
+### 3.5.5. 地图上增加散点图
+
+```{r}
+df <- data.frame(
+  lat = c(39.9109, 31.2359, 22.5484),
+  lon = c(116.4133, 121.4805, 114.0645),
+  city = c("北京",  "上海", "深圳"),
+  value = c(1, 1, 1)
+)
+
+df |>
+  e_charts(lon) |>
+  em_map("China2") |>
+  e_geo(map = "China2") |>
+  e_scatter(lat, value, coord_system = "geo") |>
+  e_legend(show = FALSE)
+```
+
 
 ## 3.6. 平行坐标系（parallel）
 
