@@ -5,8 +5,10 @@ date: "2021-12-12"
 categories:
   - 统计图形
 tags:
+  - R 语言
   - echarts4r
   - Apache Echarts
+  - 高德地图
 meta_extra: "审稿：黄湘云；编辑：黄湘云"
 output:
   blogdown::html_page:
@@ -1286,7 +1288,7 @@ cns |>
 ### 3.5.2. 中国地图
 
 ::: rmdwarn
-**echarts4r.maps** 包内置的地图数据没有标注海岸线，缺少南海九段线等内容，本节会给出正确的绘图姿势。
+**echarts4r.maps** 包内置的中国地图缺少南海及九段线等内容，本节会给出正确的绘图姿势。
 :::
 
 本节需要先额外安装一个存放在 Github 上的 R 包 **echarts4r.maps** [@echarts4r.maps]
