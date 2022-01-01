@@ -1449,14 +1449,14 @@ df <- data.frame(
   lat = c(39.9109, 31.2359, 22.5484),
   lon = c(116.4133, 121.4805, 114.0645),
   city = c("北京",  "上海", "深圳"),
-  value = c(1, 2, 3)
+  value = c(10, 20, 30)
 )
 
 df |>
   e_charts(lon) |>
   em_map("China2") |>
   e_geo(map = "China2") |>
-  e_scatter(lat, value, coord_system = "geo") |>
+  e_scatter(lat, value, coord_system = "geo", scale = NULL) |>
   e_legend(show = FALSE)
 ```
 
