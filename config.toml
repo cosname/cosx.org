@@ -76,3 +76,5 @@ footnotereturnlinkcontents = "↩"
       unsafe = true
     [markup.highlight]
       codeFences = false
+    [markup.tableOfContents]
+      startLevel = 1
