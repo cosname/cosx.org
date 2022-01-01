@@ -99,8 +99,9 @@ div.img {
 1. 一个标准数据框里的一列数据在不同领域里有不同的名字，如字段、数据项、变量、指标、特征、系列等等，本文统称为变量。
 :::
 
+
 ```{r write-bib, include=FALSE}
-pkgs <- c("echarts4r", "stringr", "echarts4r.maps")
+pkgs <- c("echarts4r", "stringr", "echarts4r.maps", "blogdown")
 bib <- knitr::write_bib(
   x = pkgs, file = NULL, prefix = ""
 )
@@ -1448,7 +1449,7 @@ df <- data.frame(
   lat = c(39.9109, 31.2359, 22.5484),
   lon = c(116.4133, 121.4805, 114.0645),
   city = c("北京",  "上海", "深圳"),
-  value = c(1, 1, 1)
+  value = c(1, 2, 3)
 )
 
 df |>
@@ -1852,7 +1853,7 @@ e_visual_map(
 
 # 6. 环境信息
 
-在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 **blogdown** 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：
+在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 **blogdown** [@blogdown2017] 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：
 
 ```{r, message=FALSE}
 xfun::session_info(packages = c(
