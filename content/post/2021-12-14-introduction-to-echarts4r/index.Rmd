@@ -1,0 +1,1865 @@
+---
+title: "echarts4r: 从入门到应用"
+author: "袁凡"
+date: "2021-12-12"
+categories:
+  - 统计图形
+tags:
+  - R 语言
+  - echarts4r
+  - Apache Echarts
+  - 高德地图
+meta_extra: "审稿：黄湘云；编辑：黄湘云"
+output:
+  blogdown::html_page:
+    toc: true
+link-citations: true
+bibliography: 
+  - packages.bib
+thumbnail: https://user-images.githubusercontent.com/12031874/146304984-5a1ade06-9263-464c-a5d8-ce091d11752b.png
+description: "**echarts4r** 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 Apache Echarts。Apache ECharts 是一个基于 JavaAcript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。"
+forum_id: 
+slug: introduction-to-echarts4r
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, collapse = TRUE)
+```
+```{css, echo=FALSE}
+.rmdnote {
+  border: 1px solid #FBBC05;
+  border-left-width: 5px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+div.rmdnote::before {
+  content: "注意";
+  color: #FBBC05;
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+.rmdwarn {
+  border: 1px solid #EA4335;
+  border-left-width: 5px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+div.rmdwarn::before {
+  content: "警告";
+  color: #EA4335;
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+figure {
+  text-align: center;
+}
+
+div.img {
+  text-align: center;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.col-xs-6 {
+  display: inline-block; width: 49%; 
+}
+```
+
+
+[**echarts4r**](https://echarts4r.john-coene.com/index.html) [@echarts4r] 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 [Apache Echarts](https://echarts.apache.org/zh/index.html)。Apache ECharts 是一个基于 JavaAcript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。
+
+**echarts4r** 包的语法非常简洁，很容易上手，很多时候我们只需要从官网复制[一个例子的代码](https://echarts4r.john-coene.com/articles/chart_types.html)就能画出图来。只不过，现实中画图用的数据往往不如案例中那么友好，笔者整理了一些犄角旮旯里的画图细节，希望能对用 **echarts4r** 包画图的小伙伴们有帮助。
+
+本文共分为四个部分：
+
+1. 基本语法：横轴、纵轴、多个变量、双Y轴、堆叠（阶梯瀑布图）、转置、反向、分组、时间轴（动态排序图）。
+
+2. 组件：通用设置（格式化文本）、标题、图例、数据标签（富文本）、提示框、数据标注、数据区域缩放、工具栏、视觉映射、自定义图形、排列组合、连接、嵌套。
+
+3. 坐标系：直角坐标系、极坐标系、单轴、日历、地理坐标系、平行坐标系。
+
+4. 主题：选择主题、背景颜色、线的属性（坐标轴轴线、坐标轴刻度线、坐标轴分割线、数据标签的视觉引导线）、文本属性（坐标轴标题、坐标轴标签、图表标题、图例、数据标签、提示框）、图形属性。
+
+# 1. 基本语法
+
+::: rmdnote
+1. 本文所使用 R 软件版本为 4.1.1，在 4.1.2 上也测试通过，**echarts4r** 包的版本为 0.4.2 ，对应 Echarts 版本为 5.0 以上，R 软件 4.1.0 之前的版本应将所有的管道符从 `|>` 换成 `%>%`。
+
+1. 一个标准数据框里的一列数据在不同领域里有不同的名字，如字段、数据项、变量、指标、特征、系列等等，本文统称为变量。
+:::
+
+
+```{r write-bib, include=FALSE}
+pkgs <- c("echarts4r", "stringr", "echarts4r.maps", "blogdown")
+bib <- knitr::write_bib(
+  x = pkgs, file = NULL, prefix = ""
+)
+bib <- unlist(bib)
+bib <- gsub("(\\\n)", " ", bib)
+xfun::write_utf8(bib, "packages.bib")
+```
+
+
+## 1.1. 准备工作
+
+在正式画图之前，先编一份数据方便复现。下面的`data`数据集中有4列，分别是month（月份），Evaporation（蒸发量），Precipitation（降水量），Temperature（温度）。
+
+```{r}
+library(echarts4r)
+
+data <- data.frame(
+  month = paste0(c(1:12), "月"),
+  Evaporation = sample(2:200, 12),
+  Precipitation = sample(2:200, 12),
+  Temperature = sample(2:25, 12, replace = TRUE)
+)
+```
+
+要画一个最普通的柱状图只需两行或三行代码即可，用`data |> e_charts(month)`或`e_charts(data, month)`指定数据集中作为横轴的变量，再用`e_bar(Evaporation)`指定作为纵轴的变量。
+
+```{r}
+# 形式一
+e_charts(data, month) |> # 横轴
+  e_bar(Evaporation) # 纵轴
+```
+```{r,eval=FALSE}
+# 形式二
+data |>
+  e_charts(month) |> # 横轴
+  e_bar(Evaporation) # 纵轴
+```
+
+## 1.2. 横轴（e_x_axis）
+
+图形的横轴属性可在`e_x_axis()`函数中修改。由于ehcarts4r 包画出来的图形是根据页面大小自适应的，若是遇上横轴的坐标轴标签显示不全的情况，可以在`e_x_axis()`里面加上`axisLabel = list(interval = 0)`来修改坐标轴标签的显示间隔，若是坐标轴标签全部显示出来很拥挤的话，还可以再加上`rotate = 30`来调整坐标轴标签的旋转角度（默认逆时针旋转）。
+
+```{r}
+data |>
+  e_charts(month) |> # 横轴
+  e_bar(Evaporation) |> # 纵轴
+  e_x_axis(
+    axisLabel = list(interval = 0, rotate = 30),
+    name = "X轴", # 坐标轴标题
+    nameLocation = "center", # 横坐标轴标题的位置
+    nameGap = 30
+  ) # 坐标轴标题与坐标轴之间的距离
+```
+
+## 1.3. 纵轴（e_y_axis）
+
+图形的纵轴属性可在`e_y_axis()`函数中修改。
+
+```{r}
+data |>
+  e_charts(month) |> # 横轴
+  e_bar(Evaporation) |> # 纵轴
+  e_y_axis(
+    min = 0, # 最小值
+    max = 200, # 最大值
+    interval = 50, # 显示间隔
+    name = "Y轴", # 坐标轴名称
+    formatter = "{value} ml"
+  ) # 坐标轴标签的格式化文本
+```
+
+## 1.4. 多个变量
+
+要在一个图形容器中显示多个变量时，将要展示的变量一个接一个用管道符引入即可。
+
+```{r}
+data |>
+  e_charts(month) |> # 横轴
+  e_bar(Evaporation) |> # 纵轴的第一个变量
+  e_bar(Precipitation) |> # 纵轴的第二个变量
+  e_line(Temperature) # 纵轴的第三个变量
+```
+
+## 1.5. 双Y轴（y_index）
+
+若是想要在图形中同时展示多个变量，但是各个变量不在一个数量级，那么可以使用双Y轴。一般的直角坐标系中默认左轴为主轴，在`e_y_axis()`函数中设定`y_index = 0`可修改主轴属性，设定`y_index = 1`可修改副轴属性。另，一般情况下主轴都是默认的，所以下面代码中`y_index = 0`全部注释掉也会是一样的效果。
+
+```{r}
+data |>
+  e_charts(month) |> # 横轴
+  e_bar(Evaporation, y_index = 0) |> # 指定主轴变量
+  e_bar(Precipitation, y_index = 0) |> # 指定主轴变量
+  e_line(Temperature, y_index = 1) |> # 指定副轴变量
+  e_y_axis(
+    y_index = 0, # 修改主Y轴属性
+    min = 0,
+    max = 200,
+    interval = 50,
+    name = "主Y轴",
+    formatter = "{value} ml"
+  ) |>
+  e_y_axis(
+    index = 1, # 修改副Y轴属性
+    min = 0,
+    max = 28,
+    interval = 7,
+    name = "副Y轴",
+    formatter = "{value}°C"
+  )
+```
+
+## 1.6. 堆叠（stack）
+
+### 1.6.1. 数值的堆叠
+
+若是想把两个并列的柱子堆到一起展示，只需在引入两个变量的`e_bar()`函数中加上一样的`stack = "group1"`即可，这里的`"group1"`可以是任意内容。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, stack = "group1") |> # 堆第一堆
+  e_bar(Precipitation, stack = "group1") |> # 堆第一堆
+  e_line(Temperature, stack = "group2") # 堆第二堆
+```
+
+### 1.6.2. 比例的堆叠
+
+按比例堆叠和按数值堆叠的方式是一样的，只是需要先计算占比。
+
+```{r}
+# 计算占比
+data.new <- transform(data,
+  Evaporation_rate = round(Evaporation / (Evaporation + Precipitation), 2)
+) |>
+  transform(
+    Precipitation_rate = round(Precipitation / (Evaporation + Precipitation), 2)
+  )
+
+data.new |>
+  e_charts(month) |> # 横轴
+  e_bar(Evaporation_rate, stack = "group1") |> # 堆一堆
+  e_bar(Precipitation_rate, stack = "group1") |> # 堆一堆
+  # 设定纵轴的轴标签为百分比
+  e_y_axis(
+    max = 1,
+    interval = 0.5,
+    formatter = e_axis_formatter("percent", digits = 1)
+  ) |>
+  # 设定悬浮提示框的内容为百分比
+  e_tooltip(formatter = e_tooltip_item_formatter("percent"))
+```
+
+### 1.6.3. 阶梯瀑布图
+
+将代表正数、负数及总和的三个变量堆叠在一起，并且把总和的柱子设为透明就可以巧妙地画出阶梯瀑布图。
+
+```{r}
+data.waterfall <- data.frame(
+  date = paste0("Nov", c(1:11)),
+  transparent = c(0, 900, 1245, 1530, 1376, 1376, 1511, 1689, 1856, 1495, 1292), # 总和
+  positive = c(900, 345, 393, "-", "-", 135, 178, 286, "-", "-", "-"), # 正数
+  negative = c("-", "-", "-", 108, 154, "-", "-", "-", 119, 361, 203)
+) # 负数
+
+data.waterfall |>
+  e_charts(date) |>
+  e_bar(
+    transparent,
+    stack = "total",
+    name = "总和",
+    itemStyle = list(borderColor = "transparent", color = "transparent"), # 将柱子和描边的颜色都设为透明
+    legend = list(show = FALSE), # 去掉总和的图例
+    tooltip = list(show = FALSE)
+  ) |>
+  e_bar(positive, stack = "total", name = "收入") |>
+  e_bar(negative, stack = "total", name = "支出") |>
+  e_x_axis(type = "category", axisLabel = list(interval = 0)) |>
+  e_tooltip(
+    trigger = "axis",
+    axisPointer = list(type = "shadow")
+  )
+```
+
+
+## 1.7. 转置（e_flip_coords）
+
+转置，即交换横轴和纵轴。转置之前一般可先按数值排序，也可按数据本身含义排序如人口金字塔图。
+
+```{r}
+data.flip <- data[order(data$Evaporation), ] # 按 Evaporation 排序
+
+data.flip |>
+  e_charts(month) |> # 横轴
+  e_bar(Evaporation) |> # 纵轴
+  e_bar(Precipitation) |>
+  e_flip_coords() # 转置
+```
+
+## 1.8. 反向（inverse）
+
+反向是一种专门针对“轴”起作用的功能，Echarts 里面所有的轴都可以设置反向，不管是直角坐标系中的横轴、纵轴，还是组件中的时间轴，或是单轴坐标系中的单轴、平行坐标系中的平行坐标轴。
+
+### 1.8.1. 纵轴反向
+
+在`e_y_axis()`中针对某个纵轴设置`inverse = TRUE`，这个轴上的所有变量就会反过来显示（垂直旋转180度）。
+
+```{r}
+data |>
+  e_charts(month) |> # 横轴
+  e_area(Evaporation) |> # 纵轴
+  e_area(Precipitation, x_index = 1, y_index = 1) |>
+  e_y_axis(index = 0, min = 0, max = 200) |>
+  e_y_axis(
+    index = 1,
+    inverse = TRUE, # 反向
+    min = 0,
+    max = 200
+  )
+```
+
+### 1.8.2. 横轴反向
+
+在`e_x_axis()`中针对某个轴设置`inverse = TRUE`，这个轴上的所有变量就会反过来显示（水平旋转180度）。
+
+```{r}
+data |>
+  e_charts(month) |> # 横轴
+  e_area(Evaporation) |> # 纵轴
+  e_area(Precipitation, x_index = 1, y_index = 1) |>
+  e_x_axis(
+    index = 1,
+    inverse = TRUE
+  ) # 反向
+```
+
+### 1.8.3. 负数反向
+
+对某个变量取负数，也可以得到反向的效果。举个例子。
+
+```{r}
+data.inverse <- transform(data, Evaporation_i = -Evaporation)
+data.inverse |>
+  e_charts(month) |>
+  e_bar(Precipitation, stack = "group1", name = "男") |>
+  e_bar(Evaporation_i, stack = "group1", name = "女") |>
+  e_y_axis(show = FALSE) |>
+  e_flip_coords()
+```
+
+## 1.9. 分组（group_by）
+
+若要同时展示多组数据，可引入`group_by()`函数来指定需要分组的变量。下面代码中新编的`data.ab`数据集中包含A区域、B区域两组数据。指定分组变量后，图例的名称就会变成各个组的名称，若引入多个变量的话，每一组数据的多个变量都会是一个颜色而难以区分。因此，仅仅只是分组的话，最好不要同时引入多个变量。
+
+```{r}
+data.ab <- data.frame(
+  type = c(
+    sample("A区域", 12, replace = TRUE),
+    sample("B区域", 12, replace = TRUE)
+  ),
+  month = paste0(c(1:12, 1:12), "月"),
+  Evaporation = sample(2:200, 24),
+  Precipitation = sample(2:200, 24),
+  Temperature = sample(2:25, 24, replace = TRUE)
+)
+
+data.ab |>
+  group_by(type) |> # 指定分组变量
+  e_charts(month) |> # 横轴
+  e_bar(Evaporation) # 纵轴
+```
+
+## 1.10. 时间轴（timeline）
+
+虽然名字叫“时间轴”，但其实可以看成“分组”的加强版，指定分组变量且同时启用时间轴，相当于整个图形容器中多了一个可以切换各组数据的组件。启用时间轴就可以同时分组和引入多个变量。时间轴的类型有三种：时间轴（`axis_type = "time"`），对应的分组变量须是时序型数据；数值轴（`axis_type = "value"`），对应的分组变量须是连续型数据；类目轴（`axis_type = "category"`），对应的分组变量须是离散型数据。
+
+时间轴通常默认在图形下方显示，且播放按钮通常默认在时间轴左边显示，可引入`e_timeline_opts()`函数来修改时间轴的各项属性：
+
+```{r}
+data.ab |>
+  group_by(type) |> # 指定分组变量
+  e_charts(month, timeline = TRUE) |> # 启用时间轴
+  e_bar(Evaporation) |>
+  e_bar(Precipitation) |>
+  e_timeline_opts(
+    axis_type = "category", # 类目轴
+    top = 5, # 指定时间轴距离图形容器上侧的距离
+    left = "center", # 指定时间轴中间对齐
+    controlPosition = "right"
+  ) |> # 指定播放按钮的位置
+  e_legend(bottom = "bottom") # 时间轴挪到图形上侧了，就把图例挪到图像下侧
+```
+
+### 1.10.1. 标题随时间轴变动
+
+**echarts4r** 包提供`e_timeline_serie()`函数来设定可以随时间轴变动的参数，比如随时间轴变动的标题。需要注意的是，作为时间轴的变量中的每一项数据对应的主、副标题，都需要在`e_timeline_serie(title = list())`里面用`list(text = '主标题', subtext = '副标题')`从头到尾写一遍。
+
+```{r}
+data.ab |>
+  group_by(type) |>
+  e_charts(month, timeline = TRUE) |>
+  e_line(Evaporation) |>
+  e_title(left = "center", top = 10) |>
+  e_legend(show = FALSE) |>
+  e_timeline_serie(title = list(
+    list(
+      text = "各区域每月降水量",
+      textStyle = list(
+        fontWeight = "normal",
+        fontSize = 20
+      ),
+      subtext = "A区域",
+      subtextStyle = list(
+        fontWeight = "bold",
+        fontSize = 40
+      )
+    ),
+    list(text = "各区域每月降水量", subtext = "B区域")
+  ))
+```
+
+### 1.10.2. 时间轴与动态排序
+
+绘制一个带有时间轴组件的图形，将时间轴设为自动播放且隐藏，再为柱状图开启实时排序效果，就能巧妙地得到动态排序柱状图。
+
+```{r}
+data.sort <- data.frame(
+  year = c(rep(2010, times = 5), rep(2015, times = 5), rep(2020, times = 5)),
+  country = rep(c("India", "China", "Japan", "Canada", "American"), 3),
+  value = sample(1:50, 15)
+)
+
+data.sort |>
+  group_by(year) |>
+  e_chart(country, timeline = TRUE) |>
+  e_bar(value,
+    realtimeSort = TRUE, # 开启实时排序效果
+    seriesLayoutBy = "column"
+  ) |>
+  e_flip_coords() |>
+  e_legend(show = FALSE) |>
+  e_title(left = "center", top = 10) |>
+  e_timeline_opts(autoPlay = TRUE, show = FALSE) |> # 自动播放且隐藏
+  e_timeline_serie(title = list(
+    list(
+      text = "2010",
+      textStyle = list(
+        fontWeight = "bold",
+        fontSize = 40
+      )
+    ),
+    list(text = "2015"),
+    list(text = "2020")
+  ))
+```
+
+# 2. 组件
+
+本章节暂不涉及修改组件中线、文本的属性等相关内容。
+
+## 2.1. 组件的通用设置
+
+### 2.1.1. 组件的位置
+
+Echarts 里面组件的位置通常用以下四个参数来组合设定，在 **echarts4r** 包里也是一致的：
+
++ `left`：组件距离图形容器左侧的距离，可以是0到100间的任意数值，可以是0%到100%间的任意比例，也可以是`left`、`center`、`right`等会自动对齐的参数。
+
++ `top`：组件距离图形容器上侧的距离，可以是0到100间的任意数值，可以是0%到100%间的任意比例，也可以是`top`、`middle`、`bottom`等会自动对齐的参数。
+
++ `right`：组件距离图形容器右侧的距离，可以是0到100间的任意数值，可以是0%到100%间的任意比例。
+
++ `bottom`：组件距离图形容器下侧的距离，可以是0到100间的任意数值，可以是0%到100%间的任意比例。
+
+### 2.1.2. 格式化文本（formatter）
+
+Echarts 里面图例、数据标签、提示框等组件，以及坐标轴的轴标签都支持设定格式化文本，且支持用字符串模板和回调函数两种形式来设定。
+
+字符串模板中支持用以下模板变量，且可以组合任意字符：
+
++ 支持`\n`换行。
++ {name} 、{value}：分别表示各个变量的名称和数据值
++ {a}、 {b}、{c}、{d}、{e}：分别表示系列名，数据名，数据值等。
++ `{@xxx}`：数据中名为 'xxx' 的变量的值，如 `{@Evaporation}` 表示名为 'Evaporation' 的变量的值，**echarts4r** 包里会把横轴的月份数也带出来。
++ `{@[n]}`：数据中维度 n 的值，如 {@[3]} 表示维度 3 的值，从 0 开始计数。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_labels(formatter = "{@[1]}：标签") |> # 给数据标签设定格式化文本
+  # e_labels(formatter = '{@Evaporation}：标签') |>
+  e_legend(formatter = "{name} 图例") |> # 给图例设定格式化文本
+  e_y_axis(formatter = "{value} Y轴") |> # 给Y轴轴标签设定格式化文本
+  e_x_axis(formatter = "{value} X轴") # 给X轴轴标签设定格式化文本
+```
+
+下面举个简单例子介绍回调函数的写法，主要写法是引用`htmlwidgets::JS()`函数来直接调用JavaScript。
+
+```{r}
+data |>
+  e_charts(Evaporation) |>
+  e_scatter(Precipitation, symbol_size = 10, symbol = "circle") |>
+  e_x_axis(name = "蒸发量") |>
+  e_y_axis(name = "降水量") |>
+  e_labels(
+    formatter = htmlwidgets::JS(
+      "function(params){
+        return('降水量: ' + params.value[0] +
+               '蒸发量: ' + params.value[1])}"
+    )
+  ) |>
+  e_tooltip(
+    trigger = "item",
+    formatter = htmlwidgets::JS(
+      "function(params){
+        return('变量:' +
+               '<br />降水量: ' + params.value[0] +
+               '<br />蒸发量: ' + params.value[1])}"
+    )
+  )
+```
+
+## 2.2. 标题（Title）
+
+在 **echarts4r** 包里面图形的标题默认不显示，可通过管道符引入`e_title()`函数来修改标题的属性。主标题的文字属性可以通过`textStyle = list()`来设定，副标题的文字属性可以通过`subtextStyle = list()`来设定。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation) |>
+  e_bar(Precipitation) |>
+  e_title(
+    text = "图表的主标题", # 主标题
+    link = "https://echarts.apache.org/zh/option.html#title.link", # 主标题的超链接
+    subtext = "图表的副标题\n换行", # 副标题
+    sublink = "https://echarts.apache.org/zh/option.html#title.sublink", # 副标题的超链接
+    left = "right",
+    top = 5,
+    itemGap = 10, # 主副标题之间的间距
+    textAlign = "center", # 主副标题整体上水平对齐方式，可选auto、left、right、center
+    textVerticalAlign = "middle"
+  ) # 主副标题整体上垂直对齐方式，可选auto、top、bottom、middle
+```
+
+## 2.3. 图例（Legend）
+
+在 **echarts4r** 包里面图形的图例默认水平、平铺显示，可通过管道符引入`e_legend()`函数来修改图例的属性，其中通过`itemStyle = list()`设定图例的图形属性，通过`lineStyle = list()`设定图例中的线的属性，通过`textStyle = list()`设定图例中文字的属性。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |> # 修改变量的名称，图例上的文字会随之改变
+  e_bar(Precipitation, name = "降水量") |>
+  e_legend(
+    # show = FALSE, # 不显示图例
+    type = "plain", # 默认平铺展示
+    left = "center",
+    orient = "vertical", # 图例的布局方式，vertical为垂直，horizontal为水平
+    itemGap = 5
+  ) # 各项图例之间的距离
+```
+
+图例很多的时候，可设置图例类型为滚动展示，还可加入图例选项的全选、反选按钮。
+
+```{r}
+data |>
+  e_chart(month) |>
+  e_pie(Evaporation) |>
+  e_legend(
+    type = "scroll", # 图例类型为滚动展示
+    selector = c("all", "inverse"), # 增加全选、反选的选择器按钮
+    selectorPosition = "start", # 选择器按钮的位置，start表示放在图例前面，end表示放在图例后面
+    orient = "horizontal", # 水平布局
+    left = 20
+  )
+```
+
+## 2.4. 数据标签（Label）
+
+在 **echarts4r** 包里面图形的数据标签默认不显示，可通过管道符引入`e_labels()`函数来修改数据标签的属性。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_labels(
+    fontSize = 12, # 标签的字体大小
+    fontWeight = "bold", # 字体粗细normal/bold/bolder/lighter
+    fontStyle = "normal", # 字体风格normal/italic/oblique
+    fontFamily = "serif", # 字体，可选'sans-serif','monospace','Arial','Microsoft YaHei' ...
+    position = "top", # 标签位置
+    rotate = 30, # 旋转角度
+    align = "middle", # 水平对齐：left/middle/right
+    verticalAlign = "bottom", # 垂直对齐：top/middle/bottom
+    color = "black"
+  ) # 数据标签的颜色
+```
+
+### 2.4.1. 多个变量的数据标签
+    
+图形中含有多个变量时，数据标签的属性可以在各个图形系列中单独设定。下图的例子中将柱形的数据标签设定为内部靠上，将折线的数据标签设定为线的上方。Echarts 里面一般的数据标签的位置选项很丰富，可选的有`'top'`、`'left'` 等，全部可选项见表\@ref(tab:label-position)。
+
+```{r label-position, echo=FALSE}
+knitr::kable(x = matrix(c(
+  "top", "left", "right", "bottom",
+  "inside", "insideLeft", "insideRight",
+  "insideTop", "insideBottom",
+  "insideTopLeft", "insideBottomLeft",
+  "insideTopRight", "insideBottomRight", "", ""
+), byrow = TRUE, ncol = 5), caption = "数据标签位置")
+```
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation,
+    name = "蒸发量",
+    label = list(
+      show = TRUE,
+      position = "insideTop"
+    )
+  ) |>
+  e_line(Precipitation,
+    name = "降水量",
+    label = list(
+      show = TRUE,
+      position = "top"
+    )
+  )
+```
+
+### 2.4.2. 富文本标签（rich）
+
+Echarts 中但凡涉及文本的地方如标题、图例、数据标签或轴标签都可以自定义富文本。**echarts4r** 包的官网没有给出富文本相关的例子，笔者复现了[一个Echarts 官网的例子](https://echarts.apache.org/examples/zh/editor.html?c=pie-nest)，更多定义方式还是得去翻[echarts官网对富文本的介绍](https://echarts.apache.org/zh/tutorial.html#%E5%AF%8C%E6%96%87%E6%9C%AC%E6%A0%87%E7%AD%BE)。
+
+```{r}
+df.outer <- data.frame(
+  name = c(
+    "Baidu", "Direct", "Email", "Google", "Union Ads", "Bing", "Video Ads", "Others"
+  ),
+  value = c(1048, 335, 310, 251, 234, 147, 135, 102)
+)
+
+df.outer |>
+  e_chart(name) |>
+  e_pie(value, radius = c("20%", "40%")) |>
+  e_labels(
+    position = "outside", # 显示数据标签的引导线
+    labelLine = list(length = 30),
+    formatter = "{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}",
+    backgroundColor = "#F6F8FC",
+    borderColor = "#8C8D8E",
+    borderWidth = 1,
+    borderRadius = 4,
+    rich = list(
+      a = list(
+        color = "#6E7079",
+        lineHeight = 22,
+        align = "center"
+      ),
+      hr = list(
+        borderColor = "#8C8D8E",
+        width = "100%",
+        borderWidth = 1,
+        height = 0
+      ),
+      b = list(
+        color = "#4C5058",
+        fontSize = 14,
+        fontWeight = "bold",
+        lineHeight = 33
+      ),
+      per = list(
+        color = "#fff",
+        backgroundColor = "#4C5058",
+        padding = c(3, 4),
+        borderRadius = 4
+      )
+    )
+  ) |>
+  e_legend(type = "scroll", bottom = "bottom")
+```
+
+
+## 2.5. 提示框（Tooltip）
+
+图形中的悬浮提示框默认不显示，可通过管道符引入`e_tootip()`函数来修改提示框的属性。
+
+### 2.5.1. 两种触发类型
+
++ 数据项触发
+
+鼠标悬停在图形中时仅触发单个变量的提示内容，多应用在饼图、散点图上。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_tooltip(trigger = "item")
+```
+
++ 坐标轴触发
+
+鼠标悬停在图形中时会触发同一根轴上多个变量的提示内容，多应用在柱状图、折线图上。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_tooltip(trigger = "axis")
+```
+
+### 2.5.2. **echarts4r** 的提示框
+
+**echarts4r** 包为提示框组件的格式化文本单独提供了三个参数，设置单个变量时可用`e_tooltip_item_formatter()`，为饼图设置时可用`e_tooltip_pie_formatter()`，为散点图设置时可用`e_tooltip_pointer_formatter()`。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Precipitation) |>
+  # decimal 表示数值的类型为小数型，还可选 percent、currency
+  # digits 表示小数点后位数
+  e_tooltip(formatter = e_tooltip_item_formatter(style = "decimal", digits = 1))
+```
+
+```{r}
+data |>
+  e_charts(Evaporation) |>
+  e_scatter(Precipitation, symbol_size = 10) |>
+  e_tooltip(
+    formatter = e_tooltip_pointer_formatter(style = "decimal"),
+    axisPointer = list(type = "cross")
+  ) # 增加十字准星的坐标轴指示器
+```
+
+## 2.6. 数据标注（Mark）
+
+### 2.6.1. 标注点（MarkPoint）
+
+点的标注可以针对单个变量单独标注，也可以对多个变量批量标注。
+
++ 标记形状的类型(symbol)：可选'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow', 'none'。
++ 标记形状的大小(symbolSize)：默认50。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_mark_point(c("蒸发量", "降水量"), data = list(type = "average")) |> # 批量标注平均值
+  e_mark_point("蒸发量", data = list(type = "min")) |> # 标记最小值
+  e_mark_point("蒸发量", data = list(type = "max")) |> # 标记最大值
+  e_mark_point("蒸发量", data = list(type = "median")) |> # 标记中位数
+  e_mark_point("降水量",
+    data = list(type = "min", symbol = "triangle")
+  ) |> # 修改标记形状的类型
+  e_mark_point("降水量",
+    data = list(type = "max", symbolSize = 80)
+  ) # 修改标记形状的大小
+```
+
+### 2.6.2. 标注线（MarkLine）
+
+线的标注与点的标注方式相似，但并不仅限于标注最大值、最小值、平均值等统计学专有名词，还可以指定具体数值，以及给标注的线命名。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_mark_line(c("蒸发量", "降水量"), data = list(type = "max"), title = "最大值") |> # 批量标注最大值
+  e_mark_line("蒸发量", data = list(yAxis = 30)) |> # 标注Y轴的具体值
+  e_mark_line("降水量", data = list(type = "average"), precision = 1) # 标注平均值
+```
+
+### 2.6.3. 标注区域（MarkArea）
+
+区域的标注与线的标注相似，区域的范围可以填X轴、Y轴的具体数据值，也可以填最大值、最小值等。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_mark_area(
+    serie = "蒸发量", # 指定变量单独标注
+    data = list(
+      list(xAxis = "8月", yAxis = 150),
+      list(xAxis = "12月", yAxis = 200)
+    ),
+    itemStyle = list(color = "lightblue")
+  ) |>
+  e_mark_area(
+    serie = c("蒸发量", "降水量"), # 多个变量批量标注
+    data = list(
+      list(xAxis = "min", yAxis = "min"),
+      list(xAxis = "average", yAxis = "average")
+    ),
+    itemStyle = list(color = "lightgrey")
+  )
+```
+
+### 2.6.4. 分组时的数据标注方式
+
+在分组展示的情况下，数据标注会对分组后的每组数据起作用，而不再对单个或多个变量起作用。若不具体指定，数据标注会对每组数据都起作用。
+
+```{r}
+data.ab |>
+  group_by(type) |> # 指定分组变量
+  e_charts(Evaporation, name = "n") |>
+  e_scatter(serie = Precipitation, symbol_size = 10) |>
+  e_mark_area(
+    silent = TRUE,
+    itemStyle = list(
+      color = "transparent",
+      borderWidth = 1, # 线宽
+      borderType = "dashed"
+    ), # 线的类型
+    data = list(
+      list(xAxis = "min", yAxis = "min"),
+      list(xAxis = "max", yAxis = "max")
+    )
+  ) |>
+  e_mark_point(data = list(type = "average")) |>
+  e_mark_line(
+    serie = "A区域", # 指定标注A区域
+    data = list(xAxis = 160)
+  ) |>
+  e_mark_line(
+    serie = "B区域", # 指定标注B区域
+    data = list(yAxis = 170)
+  )
+```
+
+## 2.7. 数据区域缩放（DataZoom）
+
+### 2.7.1. 两种缩放类型
+
+滑动条型：可以左右拖动或拉长拖拽条以改变数据展示范围。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_line(Evaporation, name = "蒸发量") |>
+  e_line(Precipitation, name = "降水量") |>
+  e_datazoom(type = "slider")
+```
+
+内置型：可以在图形上通过滑动鼠标滚轮的方式来改变数据展示范围。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_line(Evaporation, name = "蒸发量") |>
+  e_line(Precipitation, name = "降水量") |>
+  e_datazoom(type = "inside")
+```
+
+### 2.7.2. 指定缩放的坐标轴
+
+数据区域缩放组件默认对横轴起作用，也可以对不同的轴单独指定。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_line(Evaporation, name = "蒸发量") |>
+  e_line(Precipitation, name = "降水量") |>
+  e_datazoom(
+    x_index = 0, # 指定主X轴
+    start = 80, # 指定缩放组件的起点
+    end = 100
+  ) |> # 指定缩放组件的终点
+  e_datazoom(y_index = 0) # 指定主Y轴
+```
+
+## 2.8. 工具栏（Toolbox） 
+
+**echarts4r** 包延续了 Echarts 的工具栏组件，可通过管道符引入，一共有六种：`saveAsImage`（保存为图片）、`brush`（刷选）、`restore`（重置）、`dataView`（数据视图）、`dataZoom`（数据缩放）、`magicType`（动态类型切换）。引入单个工具栏的写法是`e_toolbox_feature(feature = "brush")`，引入多个工具栏的写法是`e_toolbox_feature(feature = c("dataView", "saveAsImage"))`。
+
+比如，下图中点一下图形右上角像一页书的图标就能看到图中的具体数据。
+
+```{r}
+data |>
+  e_charts(month, height = 450) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_toolbox_feature(feature = c("dataView", "saveAsImage"))
+```
+
+## 2.9. 视觉映射（VisualMap）
+
+视觉映射：把颜色深浅赋予到一个维度上。
+
++ 赋予X轴：X轴的数据需为数值型
+
+```{r}
+data |>
+  e_charts(Evaporation) |>
+  e_scatter(serie = Precipitation, size = Temperature) |>
+  e_visual_map(dimension = 0)
+```
+
++ 赋予Y轴：Y轴的数据需为数值型
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_line(Evaporation, name = "蒸发量") |>
+  e_visual_map(dimension = 1)
+```
+
++ 赋予Z轴：Z轴的数据需为数值型
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar_3d(Evaporation, Precipitation) |>
+  e_visual_map(dimension = 2)
+```
+
++ 赋予大小：大小（size）的数据需为数值型
+
+```{r}
+data |>
+  e_charts(Evaporation) |>
+  e_scatter(serie = Precipitation, size = Temperature, name = "降水量") |>
+  e_visual_map(Temperature,
+    dimension = 3
+  )
+```
+
+## 2.10. 自定义图形（Graphic）
+
++ 增加自定义的文字：
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_text_g(
+    left = "center",
+    top = 40,
+    z = -1000,
+    style = list(
+      text = "自定义的文字\n自定义的文字\n自定义的文字",
+      fontSize = 12
+    )
+  )
+```
+
++ 增加水印：
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_draft(text = "水印")
+```
+
+## 2.11. 排列组合（Arrange）
+
+排列组合是 **echarts4r** 包中特有的组件，可以将毫不相干的图拼接在一个图形容器中。
+
+```{r}
+e1 <- data |>
+  e_charts(month, height = 250) |>
+  e_bar(Evaporation, name = "蒸发量")
+
+e2 <- data |>
+  e_charts(month, height = 250) |>
+  e_line(Precipitation, name = "降水量")
+
+liquid <- data.frame(val = c(0.6, 0.5, 0.4))
+e3 <- liquid |>
+  e_charts(height = 250) |>
+  e_liquid(val)
+
+funnel <-
+  data.frame(
+    stage = c("View", "Click", "Purchase"),
+    value = c(80, 30, 20)
+  )
+e4 <- funnel |>
+  e_charts(height = 250) |>
+  e_funnel(value, stage) |>
+  e_legend(show = FALSE)
+
+e_arrange(e1, e2, e3, e4, cols = 2, rows = 2)
+```
+
+## 2.12. 连接（Connect）
+
+连接也是 **echarts4r** 包中特有的组件。 
+
++ 可使用`e_connect`函数来连接，但需要在连接的图中设定`elementId`参数。
+
+```{r}
+e1 <- data |>
+  e_charts(month,
+    height = 200, elementId = "图1"
+  ) |>
+  e_bar(Evaporation, name = "蒸发量")
+
+e2 <- data |>
+  e_charts(month,
+    height = 200, elementId = "图2"
+  ) |>
+  e_bar(Precipitation, name = "降水量")
+
+e3 <- data |>
+  e_charts(month,
+    height = 200
+  ) |>
+  e_line(Temperature, name = "平均温度") |>
+  e_connect(c("图1", "图2"))
+
+e_arrange(e1, e2, e3)
+```
+
++ 也可使用`e_group()`函数来连接。
+
+```{r}
+e1 <- data |>
+  e_charts(month,
+    height = 200
+  ) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_group("4charts")
+
+e2 <- data |>
+  e_charts(month,
+    height = 200, elementId = "图3"
+  ) |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_group("4charts") |>
+  e_connect_group("4charts")
+
+e_arrange(e1, e2)
+```
+
+## 2.13. 嵌套（add）
+
+**echarts4r** 包中可以采用嵌套的方式来丰富图形属性。
+
+```{r}
+funnel <- data.frame(
+  stage = c("View", "Click", "Purchase"),
+  value = c(80, 30, 20),
+  color = c("blue", "red", "green")
+)
+
+funnel |>
+  dplyr::mutate(show = TRUE, fontSize = c(15, 10, 5)) |>
+  e_charts() |>
+  e_funnel(value, stage) |>
+  e_add_nested("label", show, fontSize) |> # 显示数据标签，且指定大小
+  e_add_nested("itemStyle", color) |> # 指定数据标签的颜色
+  e_labels(
+    position = "outside",
+    formatter = "{b} : {c}"
+  )
+```
+
+# 3. 坐标系
+
+## 3.1. 直角坐标系（Grid）
+
+用 **echarts4r** 包绘制直角坐标系上的图形时，必须从`e_charts()`函数中引入唯一变量作为横轴，因此可以将一个图形容器分为上下两片、左右两片，但不能分为上下左右四片。
+
++ 将一个直角坐标系的图形容器分为上下两片：
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_line(Evaporation, name = "蒸发量") |>
+  e_line(Precipitation,
+    name = "降水量",
+    x_index = 1,
+    y_index = 1
+  ) |>
+  e_grid(height = "35%") |> # 网格高度
+  e_grid(height = "35%", top = "60%") |>
+  e_y_axis(
+    gridIndex = 1,
+    name = "主Y轴",
+    nameLocation = "center",
+    nameGap = 30
+  ) |>
+  e_x_axis(
+    gridIndex = 1,
+    name = "主X轴",
+    nameLocation = "end"
+  ) |>
+  e_y_axis(
+    index = 1,
+    name = "次Y轴",
+    nameLocation = "center",
+    nameGap = 30
+  ) |>
+  e_x_axis(
+    index = 1,
+    name = "次X轴",
+    nameLocation = "end"
+  )
+```
+
++ 将一个直角坐标系的图形容器分为左右两片：
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_line(Evaporation, name = "蒸发量") |>
+  e_line(Precipitation,
+    name = "降水量",
+    x_index = 1,
+    y_index = 1
+  ) |>
+  e_grid(width = "30%") |> # 网格宽度
+  e_grid(width = "30%", left = "50%") |>
+  e_y_axis(gridIndex = 1) |>
+  e_x_axis(gridIndex = 1)
+```
+
+## 3.2. 极坐标系（Polar） 
+
+在极坐标系上绘制图形时，在`e_angle_axis()`函数中设定角度轴，在`e_radius_axis()`设定径向(半径)轴。
+
+### 3.2.1. 设定角度轴
+
+将`echarts()`中的数据放入角度轴时，相当于把直角坐标系中的横轴卷起来。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_polar() |>
+  e_angle_axis(month) |>
+  e_radius_axis() |>
+  e_bar(Evaporation, name = "蒸发量", coord_system = "polar") |>
+  e_line(Precipitation, name = "降水量", coord_system = "polar")
+```
+
+### 3.2.2. 设定径向轴
+
+将`echarts()`中的数据放入径向轴时，相当于把直角坐标系中的纵轴卷起来。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_polar() |>
+  e_angle_axis() |>
+  e_radius_axis(month, axisLabel = list(interval = 0)) |>
+  e_bar(Evaporation,
+    name = "蒸发量",
+    coord_system = "polar",
+    stack = "堆一堆"
+  ) |>
+  e_bar(
+    Precipitation,
+    name = "降水量",
+    coord_system = "polar",
+    stack = "堆一堆"
+  )
+```
+
+## 3.3. 单轴（SingleAxis）
+
+单轴坐标系通常被应用到散点图中。
+
+```{r}
+data |>
+  e_charts(month, height = 120) |> # 设置图形容器的高度
+  e_single_axis(
+    bottom = 30,
+    left = 50,
+    axisLabel = list(interval = 0)
+  ) |> # 单轴横轴标签间隔为0
+  e_scatter(
+    serie = Evaporation,
+    name = "蒸发量",
+    size = Temperature, # 点的大笑
+    coord_system = "singleAxis"
+  )
+```
+
+多个单轴散点图可以结合`e_arrange()`组合在一起：
+
+```{r}
+data.single <- data.frame(
+  hours = c(
+    "12a", "1a", "2a", "3a", "4a", "5a", "6a", "7a", "8a", "9a", "10a", "11a",
+    "12p", "1p", "2p", "3p", "4p", "5p", "6p", "7p", "8p", "9p", "10p", "11p"
+  ),
+  Saturday_value = c(1:24),
+  Saturday_size = sample(0:14, 24, replace = TRUE),
+  Sunday_value = c(1:24),
+  Sunday_size = sample(0:14, 24, replace = TRUE)
+)
+
+e1 <- data.single |>
+  e_charts(hours, height = 100) |> # 横轴
+  e_single_axis(
+    bottom = 20,
+    left = 150,
+    axisLabel = list(interval = 2)
+  ) |>
+  e_scatter(Saturday_value, # 纵轴
+    Saturday_size, # 气泡大小
+    scale_js = "function (dataItem) {return dataItem[2] * 4;}", # 写入JavaScript语言的缩放函数
+    color = "#5470c6", # 气泡颜色
+    coord_system = "singleAxis"
+  ) |>
+  e_legend(show = FALSE) |>
+  e_title("Saturday", left = "left", top = "middle")
+
+e2 <- data.single |>
+  e_charts(hours, height = 100) |>
+  e_single_axis(
+    bottom = 20,
+    left = 150,
+    axisLabel = list(interval = 2)
+  ) |>
+  e_scatter(
+    Sunday_value,
+    Sunday_size,
+    color = "#fc8452",
+    scale_js = "function (dataItem) {return dataItem[2] * 4;}",
+    coord_system = "singleAxis"
+  ) |>
+  e_legend(show = FALSE) |>
+  e_title("Sunday", left = "left", top = "middle")
+
+e_arrange(e1, e2, cols = 1)
+```
+
+## 3.4. 日历（Calendar）
+
++ 展示一个月：
+
+```{r}
+dates <-
+  seq.Date(as.Date("2021-01-01"), as.Date("2021-12-31"), by = "day")
+values <- rnorm(length(dates), 20, 6)
+
+year <- data.frame(date = dates, values = values)
+
+year |>
+  e_charts(date, height = 200) |>
+  e_calendar(range = "2021-09", orient = "vertical") |> # 垂直布局
+  e_heatmap(values, coord_system = "calendar") |>
+  e_visual_map(max = 30)
+```
+
++ 展示多个月：
+
+```{r}
+year |>
+  e_charts(date, height = 200) |>
+  e_calendar(range = c("2021-01", "2021-07"), orient = "horizontal") |> # 水平布局
+  e_heatmap(values, coord_system = "calendar") |>
+  e_visual_map(max = 30)
+```
+
+## 3.5. 地理坐标系（Geo）
+
+### 3.5.1. 世界地图
+
+```{r}
+cns <- countrycode::codelist$country.name.en
+cns <- data.frame(
+  country = cns,
+  value = runif(length(cns), 1, 100)
+)
+
+cns |>
+  e_charts(country) |> # 国家
+  e_map(value) |>
+  e_visual_map(value)
+```
+
+### 3.5.2. 中国地图
+
+::: rmdwarn
+**echarts4r.maps** 包内置的中国地图缺少南海及九段线等内容，本节会给出正确的绘图姿势。
+:::
+
+本节需要先额外安装一个存放在 Github 上的 R 包 **echarts4r.maps** [@echarts4r.maps]
+
+```{r,eval=FALSE}
+# install.packages("remotes")
+remotes::install_github('JohnCoene/echarts4r.maps')
+```
+```{r}
+library(echarts4r.maps)
+
+df <- data.frame(
+  region = c("湖北", "浙江", "北京", "广东"),
+  value = c(1, 2, 3, 4)
+)
+
+df |>
+  e_charts(region) |> # 区域
+  em_map("China") |>
+  e_map(value, map = "China") |>
+  e_visual_map(value)
+```
+
+不难发现，**echarts4r.maps** 内置的中国地图是不完整的，缺少南海诸岛及九段线等内容。因此，需要获取完整正确的地图，高德和百度都是具有甲级测绘资质的单位。下面采用[阿里 DataV 数据可视化平台](https://datav.aliyun.com/portal/school/atlas/area_selector)开放出来的地图数据，它来自[高德开放平台](https://lbs.amap.com/api/webservice/guide/api/district)。地图数据包含行政唯一编码、行政单位名称和行政级别（省、市和县三级），先将数据集保存到本地，数据映射到地图时，需要保证数据集中的行政单位名称和背景地图中的行政单位名称是一一对应的。
+
+```{r}
+# 准备数据集
+df <- data.frame(
+  region = c("湖北省", "浙江省", "北京市", "广东省"),
+  value = c(1, 2, 3, 4)
+)
+# 从本地加载新的正确的中国地图数据
+china_map <- jsonlite::read_json("data/中华人民共和国.json")
+# 开始绘图
+df |>
+  e_charts(region) |>
+  # 注册地图
+  e_map_register("China2", china_map) |>
+  # 调用注册的地图
+  em_map("China2") |>
+  # 将数据映射到地图上
+  e_map(value, map = "China2") |>
+  e_visual_map(value)
+```
+
+### 3.5.3. 区域地图
+
+用 echarts4r 包绘制省份和城市级别的地图时均需要导入一份可用的地图文件，本小节均是从[阿里 DataV 数据可视化平台](http://datav.aliyun.com/portal/school/atlas/area_selector)下载地图 json 文件。
+
+#### 3.5.3.1. 省级地图
+
+绘制一个省份的地图，以湖北省为例。
+
+```{r}
+json.province <- jsonlite::read_json('data/湖北省.json')
+
+df.province <- data.frame(
+  city = c(
+    '武汉市',
+    '黄石市',
+    '十堰市',
+    '宜昌市',
+    '襄阳市',
+    '鄂州市',
+    '荆门市',
+    '孝感市',
+    '荆州市',
+    '黄冈市',
+    '咸宁市',
+    '随州市',
+    '恩施土家族苗族自治州',
+    '仙桃市',
+    '潜江市',
+    '天门市',
+    '神农架林区'
+  ),
+  value = sample(1:10, 17, replace = TRUE)
+)
+
+df.province |>
+  e_charts(city) |>
+  # 注册地图
+  e_map_register("湖北省", json.province) |>
+  # 调用注册的地图
+  e_map(value, map = "湖北省") |>
+  e_visual_map(value)
+```
+
+#### 3.5.3.2 市级地图
+
+绘制一个城市的地图，以武汉市为例。
+
+```{r}
+json.city <- jsonlite::read_json("data/武汉市.json")
+
+df.city <- data.frame(
+  city = c("江岸区", "江汉区", "汉阳区", "武昌区", "洪山区"),
+  value = sample(1:10, 5)
+)
+
+df.city |>
+  e_charts(city) |>
+  e_map_register("武汉市", json.city) |>
+  e_map(value, map = "武汉市") |>
+  e_visual_map(value)
+```
+
+
+### 3.5.4. 坐标连线（lines）
+
+```{r}
+lines <- data.frame(
+  source_lat = c(39.9109, 39.9109, 31.2359, 31.2359),
+  source_lon = c(116.4133, 116.4133, 121.4805, 121.4805),
+  source_name = c("北京", "北京", "上海", "上海"),
+  target_lat = c(31.2359, 22.5484, 39.9109, 22.5484),
+  target_lon = c(121.4805, 114.0645, 116.4133, 114.0645),
+  target_name = c("上海", "深圳", "北京", "深圳"),
+  cnt = sample(1:10, 2)
+)
+
+lines |>
+  e_charts() |>
+  e_geo(map = "China2") |>
+  e_lines(
+    source_lon, # 起点经度
+    source_lat, # 起点纬度
+    target_lon, # 终点经度
+    target_lat, # 终点纬度
+    source_name, # 起点城市
+    target_name, # 终点城市
+    cnt,
+    coord_system = "geo", # 地理坐标系
+    name = "线的名字",
+    lineStyle = list(normal = list(
+      curveness = 0.3, # 线的弯曲度
+      color = "red", # 线的颜色
+      width = 2
+    ))
+  ) |> # 线宽
+  e_tooltip(
+    trigger = "item",
+    formatter = htmlwidgets::JS(
+      "function(params){
+        return(
+          params.seriesName +'<br />' +
+          params.data.source_name + ' -> ' +
+          params.data.target_name + ':'+ params.value)}"
+    )
+  )
+```
+
+### 3.5.5. 地图上增加散点图
+
+```{r}
+df <- data.frame(
+  lat = c(39.9109, 31.2359, 22.5484),
+  lon = c(116.4133, 121.4805, 114.0645),
+  city = c("北京",  "上海", "深圳"),
+  value = c(10, 20, 30)
+)
+
+df |>
+  e_charts(lon) |>
+  em_map("China2") |>
+  e_geo(map = "China2") |>
+  e_scatter(lat, value, coord_system = "geo", scale = NULL) |>
+  e_legend(show = FALSE)
+```
+
+
+## 3.6. 平行坐标系（parallel）
+
+**echarts4r** 包在应用平行坐标系时，`group_by()`函数不起作用。
+
+```{r}
+parallel <- data.frame(
+  date = c(1:31),
+  AQIindex = sample(1:300, 31),
+  PM25 = sample(1:250, 31),
+  PM10 = sample(1:300, 31),
+  CO = sample(0:5, 31, replace = TRUE),
+  NO2 = sample(1:140, 31),
+  SO2 = sample(1:80, 31),
+  level = sample(c("优", "良", "轻度污染", "中度污染", "重度污染"), 31, replace = TRUE)
+)
+
+parallel |>
+  e_charts() |>
+  e_parallel(date,
+    AQIindex,
+    PM25,
+    PM10,
+    CO,
+    NO2,
+    SO2,
+    level,
+    opts = list(smooth = FALSE)
+  )
+```
+
+# 4. 主题
+
+改主题主要是修改图形容器中出现的线、图形、文本的属性，即改动`lineStyle()`、`itemStyle()`、`textStyle()`中的参数。
+
+## 4.1. 选择主题(theme)
+
+**echarts4r**包官网提供了[很丰富的主题样式](https://echarts4r.john-coene.com/articles/chart_types.html)，不喜欢默认主题的话，可以换其他的主题。
+
++ 主题：inspired
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "降水量") |>
+  e_line(Precipitation, name = "蒸发量") |>
+  e_theme("inspired")
+```
+
++ 主题：dark-fresh-cut
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "降水量") |>
+  e_line(Precipitation, name = "蒸发量") |>
+  e_theme("dark-fresh-cut")
+```
+
+## 4.2. 背景颜色（color）
+
++ 指定背景颜色，标签与网格线的属性会自动改变：
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_labels() |>
+  e_color(background = "black")
+```
+
++ 同时修改图形的颜色和背景颜色：
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_labels() |>
+  e_color("orange", "lightgrey") # 第一个引号里指定的是图形的颜色，第二个引号里指定的是背景的颜色
+```
+
+## 4.3. 线的属性（lineStyle） 
+
+### 4.3.1. 坐标轴轴线（axisLine）
+
++ `symbol = c("none", "arrow")`表示只在轴线末端显示箭头，默认symbol="none"即不显示箭头，symbol="arrow"即两端都显示箭头。
++ `symbolSize = c(20, 15)`箭头的大小，第一个数字表示宽度（垂直坐标轴方向），第二个数字表示高度（平行坐标轴方向）。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_y_axis(
+    name = "Y轴",
+    axisLine = list(
+      show = TRUE, # 显示坐标轴轴线
+      symbol = c("none", "arrow"),
+      symbolSize = c(20, 15), # 箭头的大小
+      lineStyle = list(
+        color = "red", # 轴线的颜色
+        width = 2, # 轴线的线宽
+        type = "dashed", # solid为实线,dashed为虚线,dotted为点线
+        opacity = 0.5 # 轴线的透明度
+      )
+    )
+  )
+```
+
+### 4.3.2. 坐标轴刻度线（axisTick）
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_y_axis(
+    name = "Y轴",
+    axisLine = list(show = TRUE),
+    axisTick = list(
+      show = TRUE, # 显示坐标轴刻度
+      inside = TRUE, # 刻度朝内，默认朝外
+      length = 10, # 刻度的长度
+      lineStyle = list(
+        color = "red", # 刻度线的颜色
+        width = 5, # 刻度线的线宽
+        type = "solid", # 刻度线的类型
+        opacity = 0.5 # 刻度线的透明度
+      )
+    )
+  ) |>
+  e_x_axis(
+    boundaryGap = TRUE,
+    axisTick = list(alignWithLabel = TRUE)
+  ) # 使刻度线和标签对齐
+```
+
+### 4.3.3. 坐标轴分割线（splitLine）
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_bar(Precipitation, name = "降水量") |>
+  e_y_axis(
+    name = "Y轴",
+    axisLine = list(show = TRUE),
+    splitLine = list(
+      show = TRUE, # 显示坐标轴分割线
+      lineStyle = list(
+        color = "red", # 分割线的颜色
+        width = 2, # 分割线的线宽
+        type = "dashed", # 分割线的类型
+        opacity = 0.5 # 分割线的透明度
+      )
+    )
+  ) |>
+  e_x_axis(
+    type = "category", # 类目轴
+    splitLine = list(
+      show = TRUE, # 显示坐标轴分割线
+      interval = 1, # 坐标轴分隔线的显示间隔
+      lineStyle = list(
+        color = "red", # 分割线的颜色
+        width = 2, # 分割线的线宽
+        type = "dashed", # 分割线的类型
+        opacity = 0.5 # 分割线的透明度
+      )
+    )
+  )
+```
+
+### 4.3.4. 数据标签的引导线（LabelLine）
+
++ `maxSurfaceAngle`设置为小于 90 度的值保证引导线不会和扇区交叉。
++ 也可以在`labelLine()`通过设置`lineStyle=list()`改变引导线的颜色、线宽、类型、透明度等等属性。
+
+```{r}
+data |>
+  e_charts(month) |>
+  e_pie(Evaporation,
+    name = "蒸发量",
+    radius = "40%"
+  ) |>
+  e_labels(
+    position = "outside", # 显示数据标签的引导线
+    fontSize = 9,
+    alignTo = "edge", # 对齐方式
+    formatter = "名称：{b} \n 值：{c} 单位",
+    minMargin = 5,
+    edgeDistance = 10,
+    lineHeight = 15,
+    distanceToLabelLine = 1,
+    labelLine = list(
+      length = 20,
+      length2 = 0,
+      maxSurfaceAngle = 80
+    )
+  ) |>
+  e_legend(type = "scroll")
+```
+
+## 4.4. 文本属性（TextStyle） 
+
++ 可以改文本属性的有：坐标轴标题、坐标轴标签、图表标题、图例、数据标签、提示框。
+
+```{r}
+data |>
+  e_charts(month, height = 400) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_line(Precipitation, name = "降水量", color = "red") |>
+  e_x_axis(
+    name = "X轴的名称",
+    nameLocation = "center",
+    nameTextStyle = list(color = "red"), # 修改坐标轴标题的文字属性
+    axisLabel = list(color = "orange")
+  ) |> # 修改坐标轴标签的文字属性
+  e_y_axis(
+    name = "Y轴的名称",
+    nameTextStyle = list(color = "red"), # 修改坐标轴标题的文字属性
+    axisLabel = list(color = "orange")
+  ) |> # 修改坐标轴标签的文字属性
+  e_title(
+    text = "主标题",
+    textStyle = list(color = "lightblue")
+  ) |> # 修改图表标题的文字属性
+  e_legend(
+    textStyle = list(color = "lightgreen"), # 修改图例的文字属性
+    itemStyle = list(color = "grey"), # 修改图例的图形属性
+    lineStyle = list(color = "red") # 修改图例的图形中线的属性
+  ) |>
+  e_labels(
+    show = TRUE,
+    position = "top",
+    color = "green"
+  ) |>
+  e_tooltip(
+    show = TRUE,
+    trigger = "axis",
+    textStyle = list(color = "pink")
+  )
+```
+
++ 以坐标轴标题为例。
+
+```{r}
+data |>
+  e_charts(month, height = 400) |>
+  e_bar(Evaporation, name = "蒸发量") |>
+  e_x_axis(
+    name = "X轴\n的名称",
+    nameLocation = "center",
+    nameGap = 45,
+    nameTextStyle = list(
+      color = "red", # 颜色
+      fontStyle = "normal", # 字体风格，还有italic/oblique
+      fontWeight = "bolder", # 字体粗细，还有normal/bold/lighter
+      fontFamily = "Microsoft YaHei", # 字体系列
+      fontSize = 12, # 字体大小
+      align = "center", # 字体水平对齐方式，还有left/right
+      verticalAlign = "middle", # 字体垂直对齐方式，还有top/bottom
+      lineHeight = 10, # 字体行高，默认56
+      backgroundColor = "grey", # 文字块背景颜色
+      borderColor = "blue", # 文字块边框颜色
+      borderWidth = 2, # 文字块边框宽度
+      borderType = "dashed", # 文字块边框描边类型
+      borderDashOffset = 0, # 虚线偏移量
+      backgroundColor = "lightgrey", # 字块背景颜色
+      borderRadius = 20, # 文字块的圆角
+      padding = c(1, 2, 3, 6), # 文字块的内边距,(上，右，下，左)
+      shadowColor = "red", # 文字块背景阴影颜色
+      shadowBlur = 2, # 文字块背景阴影长度
+      shadowOffsetX = 1, # 文字块背景阴影X偏移
+      shadowOffsetY = 1, # 文字块背景阴影Y偏移
+      width = 20, # 文字本身的显示宽度
+      height = 20, # 文字本身的显示高度
+      textBorderColor = "blue", # 文字本身的描边颜色
+      textBorderWidth = 0.2, # 文字本身的描边宽度
+      textBorderType = "solid", # 文字本身的描边类型
+      textBorderDahOffset = 0 # 文字本身虚线描边时的偏移量
+    )
+  )
+```
+
+关于文字本身还可以调整的有：
+
+1. textShadowColor 阴影颜色；
+1. textShadowBlur 阴影长度；
+1. testShadowOffsetX 阴影X偏移；
+1. testShadowOffsetY 阴影Y偏移；
+1. overflow 文字超出宽度是否截断或换行，详见[链接](https://echarts.apache.org/zh/option.html#xAxis.nameTextStyle.overflow)。
+
+## 4.5. 图形属性（itemStyle）
+
+每种图形的图形属性都是可以改的，以柱状图为例。
+
+```{r}
+data |>
+  e_charts(month, height = 400) |>
+  e_bar(
+    Evaporation,
+    name = "蒸发量",
+    itemStyle = list(
+      color = "lightblue", # 柱条的颜色
+      borderColor = "red", # 柱条的描边颜色
+      borderWidth = 1, # 柱条的描边宽度
+      borderType = "dashed", # 柱条的描边类型，还有solid、dotted
+      borderRadius = 5, # 柱条的四个圆角半径
+      shadowBlur = 10, # 图形阴影的模糊大小
+      shadowColor = "lightgrey", # 图形阴影的颜色
+      shadowOffsetX = 2, # 阴影水平方向上的偏移距离
+      shadowOffsetY = 2, # 阴影垂直方向上的偏移距离
+      opacity = 1 # 图形透明度，为0时不绘制该图形
+    )
+  ) |>
+  e_legend(itemStyle = list(
+    borderType = "dashed",
+    borderWidth = 0.8
+  )) |>
+  e_aria(enabled = TRUE, decal = list(show = TRUE)) # 贴花
+```
+
+# 5. 本文小结
+
+这篇文章的题目叫做《**echarts4r**：从入门到应用》，意思是只要入门就能上手用了。入门也非常简单，去 **echarts4r** 包的官网复制几个例子，然后粘贴到自己电脑上跑起来就行了。如果嫌 **echarts4r** 包官网给出的例子太简单的话，就去 Apache Echarts 官网示例中找些相中的图形尝试着用 **echarts4r** 来复现。这里的「相中」并不是指从 Apache Echarts 官网找到想要复现的图形以后，就一定要死磕到底，在决定死磕之前最好先看看完整的 TS （Typescript）或 JS （JavaScript）代码，要是遇到 `option = { }` 前后有很多看不懂的代码，就别随便瞎碰乱试了，因为试不出来的原因很可能是现在的 **echarts4r** 包确实画不出来。
+
+把 Apache Echarts 中的 JS 或 TS 代码转换成 **echarts4r** 中的 R 代码通常也有规律可循。其一，JS 里面定义参数是用冒号，如`type:'category'`，而 R 里面则使用等号，如`type = "category"`。其二， JS 里面定义一个列表使用大括号，如`axisTick:{ show:false }`，而 R 里面则用`list()`，如`axisTick = list(show = TRUE)`。其三， JS 里面定义数组使用中括号，如`padding:[3, 4, 5, 6]`，而 R 里面则用`c()`，如`padding = c(1, 1, 5, 6)`。
+
+综合起来，当看到 Apache Echarts 官网的示例代码中有这样的片段：
+
+```
+xAxis:[{
+  type:'category',
+  axisTick:{
+    show:false
+  },
+  nameTextStyle:{
+    padding:[3, 4, 5, 6]
+  }
+}]
+```
+
+就可以在 R 里面加载 `library(echarts4r)` 后，写出下面这段。
+
+```r
+e_x_axis(
+  type = "category",
+  axisTick = list(show = TRUE),
+  nameTextStyle = list(padding = c(1, 1, 5, 6))
+)
+```
+
+R 里面还有一个有趣的函数`htmlwidgets::JS()`可以帮我们直接引用 JS 代码。比如，Apache Echarts 官网[有个例子](https://echarts.apache.org/examples/zh/editor.html?c=scatter-life-expectancy-timeline)中有这样一段：
+
+```
+visualMap:[{
+  show:false,
+  dimension:3,
+  categories:data.counties,
+  inRange:{
+    color:(function () {
+      var colors = ['#51689b', '#ce5c5c']
+      return colors.concat(colors)
+    })()
+  }
+}]  
+
+```
+
+在 R 里面就可以这样写：
+
+```r
+e_visual_map(
+  show = FALSE,
+  dimension = 3,
+  # 对应 categories:data.counties
+  categories = c('Australia','Canada','China','Cuba','Finland','France',··· ,'United States'), 
+  inRange = list(
+    color = htmlwidgets::JS(
+      "(function () {
+              // prettier-ignore
+              var colors = ['#51689b', '#ce5c5c'];
+              return colors.concat(colors);
+            })()"
+    )
+  )
+)
+```
+
+总而言之，上手试试，碰碰钉子，死磕几回，琢磨琢磨，自然就会了。
+
+
+
+# 6. 环境信息
+
+在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 **blogdown** [@blogdown2017] 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：
+
+```{r, message=FALSE}
+xfun::session_info(packages = c(
+  "knitr", "rmarkdown", "blogdown",
+  "echarts4r.maps", "echarts4r", "countrycode"
+), dependencies = FALSE)
+```
+
+# 7. 参考文献
