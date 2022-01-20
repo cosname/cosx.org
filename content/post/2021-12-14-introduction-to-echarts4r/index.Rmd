@@ -9,7 +9,7 @@ tags:
   - echarts4r
   - Apache Echarts
   - 高德地图
-meta_extra: "审稿：黄湘云；编辑：黄湘云"
+meta_extra: "审稿：黄湘云；编辑：黄湘云、周瑾纯"
 output:
   blogdown::html_page:
     toc: true
@@ -77,7 +77,7 @@ div.img {
 ```
 
 
-[**echarts4r**](https://echarts4r.john-coene.com/index.html) [@echarts4r] 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 [Apache Echarts](https://echarts.apache.org/zh/index.html)。Apache ECharts 是一个基于 JavaAcript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。
+[**echarts4r**](https://echarts4r.john-coene.com/index.html) [@echarts4r] 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 [Apache Echarts](https://echarts.apache.org/zh/index.html)。Apache ECharts 是一个基于 JavaScript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。
 
 **echarts4r** 包的语法非常简洁，很容易上手，很多时候我们只需要从官网复制[一个例子的代码](https://echarts4r.john-coene.com/articles/chart_types.html)就能画出图来。只不过，现实中画图用的数据往往不如案例中那么友好，笔者整理了一些犄角旮旯里的画图细节，希望能对用 **echarts4r** 包画图的小伙伴们有帮助。
 
@@ -1186,7 +1186,7 @@ data |>
   e_scatter(
     serie = Evaporation,
     name = "蒸发量",
-    size = Temperature, # 点的大笑
+    size = Temperature, # 点的大小
     coord_system = "singleAxis"
   )
 ```

@@ -163,5 +163,6 @@
         }
     }
 };
-  echarts.registerLocale('CS', localeObj);
+    echarts.registerLocale('CS', localeObj);
+        
 });
