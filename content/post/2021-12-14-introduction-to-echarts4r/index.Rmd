@@ -17,8 +17,8 @@ link-citations: true
 bibliography: 
   - packages.bib
 thumbnail: https://user-images.githubusercontent.com/12031874/146304984-5a1ade06-9263-464c-a5d8-ce091d11752b.png
-description: "**echarts4r** 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 Apache Echarts。Apache ECharts 是一个基于 JavaAcript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。"
-forum_id: 
+description: "**echarts4r** 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 Apache Echarts。Apache ECharts 是一个基于 JavaScript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。"
+forum_id: 422902
 slug: introduction-to-echarts4r
 ---
 
