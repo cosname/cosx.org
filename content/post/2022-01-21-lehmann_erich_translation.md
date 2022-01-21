@@ -1,5 +1,5 @@
 ---
-title: Erich L. Lehmann: 一份传记备忘录 
+title: 'Erich L. Lehmann ：一份传记备忘录'
 author: 
   - P. J. Bickel
   - K. A. Doksum
