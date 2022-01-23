@@ -4,6 +4,7 @@ author:
   - P. J. Bickel
   - K. A. Doksum
 date: '2022-01-21'
+slug: lehmann-memoirs
 categories:
   - 推荐文章
 forum_id: 
@@ -57,6 +58,9 @@ Lehmann 于1917年11月20日出生在阿尔萨斯-洛林的斯特拉斯堡，而
 
 令人遗憾的是，我的合著者 K. A. Doksum 在写作这篇文章期间染疾去世了。我们无法继续这次合作，但在写作期间，我们曾互相欣赏，互相尊重。永远怀念 K. A. Doksum。
 
+## 原文链接
+
+http://www.nasonline.org/publications/biographical-memoirs/memoir-pdfs/lehmann-erich.pdf
 
 
 ## 参考文献
