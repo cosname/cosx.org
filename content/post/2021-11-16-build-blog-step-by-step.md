@@ -11,11 +11,11 @@ slug: build-blog-step-by-step
 
 你是不是特别想创建一个自己的私人博客？使用 `blogdown` 搭建博客难度大不大？与其他方式搭建博客相比又有什么优点？
 
-在使用过一段时间后，个人认为 `blogdown` 搭建博客的优势在于：它能将 `Rmarkdown` 与 `hugo` 相结合，再加上 github 和一个可以部署的网站，读者可以轻松的将一篇篇 `Rmarkdown/markdown` 的文章自动上传。而 `Rmarkdown` 的优势在于：代码结果可以轻松呈现，而不是“复制粘贴”结果！
+在使用过一段时间后，个人认为 `blogdown` 搭建博客的优势在于：它能将 `R Markdown` 与 `Hugo` 相结合，再加上 `GitHub` 和一个可以部署的网站，读者可以轻松的将一篇篇 `Rmarkdown/markdown` 的文章自动上传。而 `R Markdown` 的优势在于：代码结果可以轻松呈现，而不是“复制粘贴”结果！
 
-> 如果读者不熟悉 Rmarkdown，推荐阅读 [R Markdown 入门教程](https://cosx.org/2021/04/rmarkdown-introduction/)，并结合 [b 站视频](https://www.bilibili.com/video/BV1ib4y1X7r9?spm_id_from=333.999.0.0)，这样学习效果更佳。
+> 如果读者不熟悉 Rmarkdown，推荐阅读 [R Markdown 入门教程](https://cosx.org/2021/04/rmarkdown-introduction/)，并结合 [B 站视频](https://www.bilibili.com/video/BV1ib4y1X7r9?spm_id_from=333.999.0.0)，这样学习效果更佳。
 
-本文是作者在学习和使用中记录的一个详细笔记，主要参考：谢益辉的[《blogdown: Creating Websites with R Markdown》](https://bookdown.org/yihui/blogdown/ "《blogdown: Creating Websites with R Markdown》")，王诗翔的[ b 站直播视频](<https://www.bilibili.com/video/BV13v41147BH?from=search&seid=3349593737199514913> " b 站直播视频")以及一些[ YouTube 视频教程](<https://www.youtube.com/watch?v=ox_Ue9yzf-0> " YouTube 视频教程")。
+本文是作者在学习和使用中记录的一个详细笔记，主要参考：谢益辉的[《blogdown: Creating Websites with R Markdown》](https://bookdown.org/yihui/blogdown/ "《blogdown: Creating Websites with R Markdown》")，王诗翔的[B 站直播视频](<https://www.bilibili.com/video/BV13v41147BH?from=search&seid=3349593737199514913> " b 站直播视频")以及一些[ YouTube 视频教程](<https://www.youtube.com/watch?v=ox_Ue9yzf-0> " YouTube 视频教程")。
 
 ![本文框架](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20211116131444590.png)
 
@@ -27,11 +27,11 @@ slug: build-blog-step-by-step
 
     install.packages("blogdown")
 
-> **注意**：操作是在 Rstudio 下进行操作的，Rstudio 的界面介绍可见[视频](https://www.bilibili.com/video/BV1Jh411y76L?spm_id_from=333.999.0.0)。
+> **注意**：操作是在 RStudio 下进行操作的，RStudio 的界面介绍可见[视频](https://www.bilibili.com/video/BV1Jh411y76L?spm_id_from=333.999.0.0)。
 
 ### 1.2 创建
 
-安装完后，新建一个新的 `Project（File-New project）`，然后选择 `New Directory`。鼠标滑到底部，找到 `Website using blogdown` 并点击进入。
+安装完后，新建一个新的 `Project（File - New project）`，然后选择 `New Directory`。鼠标滑到底部，找到 `Website using blogdown` 并点击进入。
 
 ![创建新的项目](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719154631549.png)
 
@@ -47,7 +47,7 @@ slug: build-blog-step-by-step
 
 -   编译
 
-选择 `Tool - addins`（windows 更方便找到）然后选择以下按钮。
+选择 `Tool - addins`（Windows 更方便找到）然后选择以下按钮。
 
 ![addins 插件](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719144620808.png)
 
@@ -69,11 +69,11 @@ slug: build-blog-step-by-step
 
 ![本地网站](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719160440312.png)
 
-如果想修改头像，可以在该 `yaml` 文件的第 34 行找到代码 `avatar: /images/me/avatar.jpeg`。此时从桌面打开该文件夹，更换该 jpeg 文件即可，例如：
+如果想修改头像，可以在该 `yaml` 文件的第 34 行找到代码 `avatar: /images/me/avatar.jpeg`。此时从桌面打开该文件夹，更换该 JPEG 文件即可，例如：
 
 ![修改头像](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719160756100.png)
 
-如果界面没有更新（可能是 bug），可以运行代码，类似重启一下：
+如果界面没有更新（可能是 Bug），可以运行代码，类似重启一下：
 
     blogdown::stop_server()
     blogdown:::serve_site()
@@ -82,11 +82,11 @@ slug: build-blog-step-by-step
 
 ### 1.4 将项目与 github 相连
 
-本地博客基本构建完毕，接下来将其连接到自己的 github 上，再部署到线上。首先，先将该文件夹上传到自己的 github 上，你可以使用 Git（如果你熟悉的话），这里使用按钮式操作的桌面版本 github （入门新手使用更佳）。
+本地博客基本构建完毕，接下来将其连接到自己的 GitHub 上，再部署到线上。首先，先将该文件夹上传到自己的 github 上，你可以使用 Git（如果你熟悉的话），这里使用按钮式操作的桌面版本 github （入门新手使用更佳）。
 
-> **注意**：如果第一次使用 github，以及还没下载 GitHub 桌面版本的小白。可以通过各个平台资源，简单学习下，这里不做过多介绍了。
+> **注意**：如果第一次使用 GitHub，或者还没下载 GitHub 桌面版本的小白。可以通过各个平台资源，简单学习下，这里不做过多介绍了。
 
--   github 桌面版本操作
+-   GitHub 桌面版本操作
 
 连接本地的文件夹（`zss`），按照下面操作。
 
@@ -96,7 +96,7 @@ slug: build-blog-step-by-step
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150332449.png)
 
-跳转到以下界面，设置线上 github 对应仓库的相关信息。
+跳转到以下界面，设置线上 GitHub 对应仓库的相关信息。
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150402141.png)
 
@@ -110,7 +110,7 @@ slug: build-blog-step-by-step
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719152558356.png)
 
-这时，本地项目和 github 已经连接好啦！
+这时，本地项目和 GitHub 已经连接好啦！
 
 > 恭喜！你已经会了 2/3 啦。马上就可以拥有自己的私人网站！
 
@@ -119,7 +119,7 @@ slug: build-blog-step-by-step
 
 这里使用 Netlify：[https://app.netlify.com](https://app.netlify.com) 进行部署网站。当然读者也可以使用其他方式进行部署，具体可见 《Creating Websites with R Markdown》 的[第三章](https://bookdown.org/yihui/blogdown/deployment.html)。
 
-首先是注册新用户（创建不难，如果进不去可能需要科学上网）。之后将其与 github 相连接，进入以下界面：
+首先是注册新用户（创建不难，如果进不去可能需要科学上网）。之后将其与 GitHub 相连接，进入以下界面：
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150812523.png)
 
@@ -149,7 +149,7 @@ slug: build-blog-step-by-step
 
 ## 2. 工作流
 
-在前面几项任务都完成好后，接下来创建 rmd 文件，保存，github 提交，之后过几分钟网站就会自动同步你的最新博客！
+在前面几项任务都完成好后，接下来创建 RMD 文件，保存，GitHub 提交，之后过几分钟网站就会自动同步你的最新博客！
 
 > 这整个流程非常香，你唯一担心的是：**如何写好你的博客**。而完全不需要担心如何排版，如何部署 `rmd/md` 文件等问题。这就回到了最为纯粹的知识输出环节啦！
 
@@ -159,13 +159,13 @@ slug: build-blog-step-by-step
 
 打开项目所在的文件夹（zll-blog），点击 Rproject 文件。
 
-> **技巧**：直接打开桌面版本的 github，找到对应的 Repository，按快捷键（红色框框给出了，`Show in Finder`）如下所示：
+> **技巧**：直接打开桌面版本的 GitHub，找到对应的 Repository，按快捷键（红色框框给出了，`Show in Finder`）如下所示：
 
 ![github 桌面版本界面](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725171639643.png)
 
 > 当然，可以按快捷键直接进入网上的 Github 仓库。
 
-进入 Rstudio 界面后，打开插件 addin。 mac 是在菜单栏 `Tools -> addins`中，windows 直接在菜单栏就有一个小按钮 `addins`。选择下面红色框的内容，并点击执行（Execute）即可。
+进入 RStudio 界面后，打开插件 addin。 mac 是在菜单栏 `Tools -> addins`中，windows 直接在菜单栏就有一个小按钮 `addins`。选择下面红色框的内容，并点击执行（Execute）即可。
 
 ![选中红色框，执行](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725171808872.png)
 
@@ -185,7 +185,7 @@ slug: build-blog-step-by-step
 
 ![填写内容](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725194617200.png)
 
-> **注意**：写好的 md 文件可以直接将其导入。但是注意的是，图片等需要你手动添加到对应的目录下，或者使用图床进行线上存储，可以参考该篇[教程](https://mp.weixin.qq.com/s/djEicXPS-H-LTFNKDe26ig)。
+> **注意**：写好的 MD 文件可以直接将其导入。但是注意的是，图片等需要你手动添加到对应的目录下，或者使用图床进行线上存储，可以参考该篇[教程](https://mp.weixin.qq.com/s/djEicXPS-H-LTFNKDe26ig)。
 
 保存后，new post 就已经完成啦！
 
@@ -193,7 +193,7 @@ slug: build-blog-step-by-step
 
 ### 2.3 使用 github 上传内容
 
-最后一步，将刚才修改过的内容，通过 github 进行上传。操作流程如下，之后等几分钟，Netlify 网站知道你的该 github 仓库内容出现变化后，会自动更新网站。
+最后一步，将刚才修改过的内容，通过 GitHub 进行上传。操作流程如下，之后等几分钟，Netlify 网站知道你的该 GitHub 仓库内容出现变化后，会自动更新网站。
 
 ![上传到 github](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725192651824.png)
 
@@ -201,15 +201,15 @@ slug: build-blog-step-by-step
 
 ## 附件： hugo 主题选择
 
-[hugo主题网站](https://hugothemesfree.com/ "hugo主题网站")给出了很多免费试用的主题模板，读者可以选择个人偏好的主题（不需要和我上面一样），该网站的封面如下：
+[Hugo主题网站](https://hugothemesfree.com/ "Hugo主题网站")给出了很多免费试用的主题模板，读者可以选择个人偏好的主题（不需要和我上面一样），该网站的封面如下：
 
-![hugo主题网站](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719163448115.png)
+![Hugo主题网站](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719163448115.png)
 
-本文使用示例为：[A simple but not simpler blog theme for Hugo](https://hugothemesfree.com/a-simple-but-not-simpler-blog-theme-for-hugo/ "A simple but not simpler blog theme for Hugo")，进入之后，点击 View Github 进入对应仓库。
+本文使用示例为：[A simple but not simpler blog theme for Hugo](https://hugothemesfree.com/a-simple-but-not-simpler-blog-theme-for-hugo/ "A simple but not simpler blog theme for Hugo")，进入之后，点击 View GitHub 进入对应仓库。
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719144857943.png)
 
-打开对应 github 仓库后，复制名称到创建界面时的（Hugo theme）中。
+打开对应 GitHub 仓库后，复制名称到创建界面时的（Hugo theme）中。
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719145024762.png)
 
@@ -217,7 +217,7 @@ slug: build-blog-step-by-step
 
 ## 后记
 
--   如果读者为初学者，对 Rstudio，github，hugo，html 都不是很熟悉的话。建议按照上面流程照搬实现一次。然后再进行拓展，创建其他不同的 hugo 模板。
+-   如果读者为初学者，对 RStudio，GitHub ，Hugo，HTML 都不是很熟悉的话。建议按照上面流程照搬实现一次。然后再进行拓展，创建其他不同的 Hugo 模板。
 
 -   搭建自己的博客，比较简单，难在持续输出内通和花时间和精力去维护。
 
