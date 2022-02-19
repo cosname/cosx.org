@@ -45,8 +45,6 @@ slug: build-blog-step-by-step
 
 ![初始 blogdown](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719145533256.png)
 
--   编译
-
 选择 `Tool - addins`（Windows 更方便找到）然后选择以下按钮。
 
 ![addins 插件](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719144620808.png)
@@ -88,29 +86,29 @@ slug: build-blog-step-by-step
 
 -   GitHub 桌面版本操作
 
-连接本地的文件夹（`zss`），按照下面操作。
+    连接本地的文件夹（`zss`），按照下面操作。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150226752.png)
+    ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150226752.png)
 
-之后如果出现以下界面，点击蓝色字
+    之后如果出现以下界面，点击蓝色字
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150332449.png)
+    ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150332449.png)
 
-跳转到以下界面，设置线上 GitHub 对应仓库的相关信息。
+    跳转到以下界面，设置线上 GitHub 对应仓库的相关信息。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150402141.png)
+    ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150402141.png)
 
-之后将创建好的仓库 publish 上去。`Keep this code private` 勾不勾都可以，勾选后仓库只能自己查看，不勾选取就将其变成公开的仓库。
+    之后将创建好的仓库 publish 上去。`Keep this code private` 勾不勾都可以，勾选后仓库只能自己查看，不勾选取就将其变成公开的仓库。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719152432162.png)
+    ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719152432162.png)
 
 -   查看是否上传
 
-检查 GitHub 是否有这个仓库，如下：
+    检查 GitHub 是否有这个仓库，如下：
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719152558356.png)
+    ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719152558356.png)
 
-这时，本地项目和 GitHub 已经连接好啦！
+    这时，本地项目和 GitHub 已经连接好啦！
 
 > 恭喜！你已经会了 2/3 啦。马上就可以拥有自己的私人网站！
 
