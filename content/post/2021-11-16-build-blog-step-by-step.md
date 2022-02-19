@@ -117,7 +117,7 @@ slug: build-blog-step-by-step
 
 ### 1.5 使用 Netlify 部署网站
 
-这里使用 Netlify：[https://app.netlify.com](https://app.netlify.com) 进行部署网站。当然读者也可以使用其他方式进行部署，具体可见 《Creating Websites with R Markdown》 的[第三章](https://bookdown.org/yihui/blogdown/deployment.html)。
+这里使用 Netlify：[https://app.netlify.com](https://app.netlify.com) 进行部署网站。当然读者也可以使用和 Netlify 类似的 Vercel，或者其他方式，具体可见 《Creating Websites with R Markdown》 的[第三章](https://bookdown.org/yihui/blogdown/deployment.html)。
 
 首先是注册新用户（创建不难，如果进不去可能需要科学上网）。之后将其与 GitHub 相连接，进入以下界面：
 
