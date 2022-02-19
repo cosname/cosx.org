@@ -129,7 +129,7 @@ slug: build-blog-step-by-step
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719151017788.png)
 
-等待部署，得到以下界面。注意，读者可以通过 `Site settings` 修改自己的网站名。
+等待部署，得到以下界面。注意，读者可以通过 `Site settings` 修改自己的网站名。你可以到 Porkbun 或 Namecheap 等网站购买专属域名。
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719151045133.png)
 
