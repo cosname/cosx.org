@@ -165,7 +165,7 @@ slug: build-blog-step-by-step
 
 > 当然，可以按快捷键直接进入网上的 Github 仓库。
 
-进入 RStudio 界面后，打开插件 addin。 mac 是在菜单栏 `Tools -> addins`中，windows 直接在菜单栏就有一个小按钮 `addins`。选择下面红色框的内容，并点击执行（Execute）即可。
+进入 RStudio 界面后，打开插件 addin。 mac 是在菜单栏 `Tools -> addins`中，Windows 直接在菜单栏就有一个小按钮 `addins`。选择下面红色框的内容，并点击执行（Execute）即可。
 
 ![选中红色框，执行](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725171808872.png)
 
