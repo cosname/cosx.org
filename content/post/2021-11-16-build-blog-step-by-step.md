@@ -80,9 +80,9 @@ slug: build-blog-step-by-step
 
 ![修改后的 blog](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719161006304.png)
 
-### 1.4 将项目与 github 相连
+### 1.4 将项目与 GitHub 相连
 
-本地博客基本构建完毕，接下来将其连接到自己的 GitHub 上，再部署到线上。首先，先将该文件夹上传到自己的 github 上，你可以使用 Git（如果你熟悉的话），这里使用按钮式操作的桌面版本 github （入门新手使用更佳）。
+本地博客基本构建完毕，接下来将其连接到自己的 GitHub 上，再部署到线上。首先，先将该文件夹上传到自己的 GitHub 上，你可以使用 Git（如果你熟悉的话），这里使用按钮式操作的桌面版本 GitHub （入门新手使用更佳）。
 
 > **注意**：如果第一次使用 GitHub，或者还没下载 GitHub 桌面版本的小白。可以通过各个平台资源，简单学习下，这里不做过多介绍了。
 
@@ -161,7 +161,7 @@ slug: build-blog-step-by-step
 
 > **技巧**：直接打开桌面版本的 GitHub，找到对应的 Repository，按快捷键（红色框框给出了，`Show in Finder`）如下所示：
 
-![github 桌面版本界面](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725171639643.png)
+![GitHub 桌面版本界面](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725171639643.png)
 
 > 当然，可以按快捷键直接进入网上的 Github 仓库。
 
@@ -191,11 +191,11 @@ slug: build-blog-step-by-step
 
 ![new post 完成](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725194742883.png)
 
-### 2.3 使用 github 上传内容
+### 2.3 使用 GitHub 上传内容
 
 最后一步，将刚才修改过的内容，通过 GitHub 进行上传。操作流程如下，之后等几分钟，Netlify 网站知道你的该 GitHub 仓库内容出现变化后，会自动更新网站。
 
-![上传到 github](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725192651824.png)
+![上传到 GitHub](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210725192651824.png)
 
 这时一切完毕！恭喜你，已经掌握整个搭博客和写博客的流程啦！
 
