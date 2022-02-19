@@ -100,7 +100,7 @@ slug: build-blog-step-by-step
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719150402141.png)
 
-之后将创建好的仓库 publish 上去。记得将 `Keep this code private` 的勾取消（将其变成公开的仓库）。
+之后将创建好的仓库 publish 上去。`Keep this code private` 勾不勾都可以，勾选后仓库只能自己查看，不勾选取就将其变成公开的仓库。
 
 ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210719152432162.png)
 
