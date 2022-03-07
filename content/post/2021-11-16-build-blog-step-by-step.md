@@ -1,11 +1,12 @@
 ---
 title: 手把手带你搭建个人博客（基础版）
 author: 庄亮亮
-date: '2021-11-16'
+date: '2022-03-07'
 categories:
   - 统计软件
 meta_extra: "审稿：叶寻"
 slug: build-blog-step-by-step
+forum_id: 422996
 ---
 
 ## 简介
