@@ -9,6 +9,7 @@ tags:
   - 教育
   - 发展
   - 八卦
+slug: interview-of-zhihua-zhang
 meta_extra: "采访与审校：常象宇、孔令仁、聂宇舟、梁杰昊、向悦、王小宁、魏太云；微信编辑：孔令仁"
 ---
 
