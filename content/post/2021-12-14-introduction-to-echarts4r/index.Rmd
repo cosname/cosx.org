@@ -1326,10 +1326,8 @@ china_map <- jsonlite::read_json("data/中华人民共和国.json")
 # 开始绘图
 df |>
   e_charts(region) |>
-  # 注册地图
+  # 注册中国地图
   e_map_register("China2", china_map) |>
-  # 调用注册的地图
-  em_map("China2") |>
   # 将数据映射到地图上
   e_map(value, map = "China2") |>
   e_visual_map(value)
@@ -1454,7 +1452,6 @@ df <- data.frame(
 
 df |>
   e_charts(lon) |>
-  em_map("China2") |>
   e_geo(map = "China2") |>
   e_scatter(lat, value, coord_system = "geo", scale = NULL) |>
   e_legend(show = FALSE)
