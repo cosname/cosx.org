@@ -16,6 +16,7 @@ tags:
   - 机器学习
   - 开源
 slug: loongson-for-data-analysis
+forum_id: 423076
 ---
 
 # 见龙在田
