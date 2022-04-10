@@ -4,12 +4,12 @@ date: '2021-12-7'
 author:
   - 毛任飞
 categories:
-  - 
+  - 软件工具
 tags:
-  - 
-  - 
-  - 
-slug: 
+  - R 语言
+  - gm
+  - 音乐制作
+slug: make-music-with-gm
 forum_id: 
 ---
 
