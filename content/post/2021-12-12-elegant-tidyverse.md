@@ -1,5 +1,5 @@
 ---
-title: "`Tidyverse` 优雅编程：从向量化、泛函式到数据思维"
+title: "Tidyverse 优雅编程：从向量化、泛函式到数据思维"
 date: '2021-12-12'
 author:
   - 张敬信
@@ -632,12 +632,11 @@ df %>%
 
 #### 参考文献
 
-[1] [Hadley Wickham, R. (2021). tidyverse: R packages for data science](https://www.tidyverse.org/)
-
-[2] Matt Dancho, J. C.. [R is for Research, Python is for Production](https://zhuanlan.zhihu.com/p/357371742).
-[3] 张敬信. [R 语言编程：基于 tidyverse](https://zhuanlan.zhihu.com/p/198185888). 人民邮电出版社, 2022.
-[4] 黄湘云. Github: R-Markdown-Template. 2021.
-[5] 谢益辉. rmarkdown: Dynamic Documents for R. 2021.
+1. [Hadley Wickham, R. (2021). tidyverse: R packages for data science](https://www.tidyverse.org/)
+2. Matt Dancho, J. C.. [R is for Research, Python is for Production](https://zhuanlan.zhihu.com/p/357371742).
+3. 张敬信. [R 语言编程：基于 tidyverse](https://zhuanlan.zhihu.com/p/198185888). 人民邮电出版社, 2022.
+4. 黄湘云. Github: R-Markdown-Template. 2021. <https://github.com/XiangyunHuang/R-Markdown-Template>.
+5. 谢益辉. rmarkdown: Dynamic Documents for R. 2021. <https://github.com/rstudio/rmarkdown>.
 
 -----------------------------
 
