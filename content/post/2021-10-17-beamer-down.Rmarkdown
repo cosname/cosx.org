@@ -1,7 +1,7 @@
 ---
 title: R Markdown 制作 beamer 幻灯片
 author: 黄湘云
-date: '2021-10-17'
+date: '2022-04-05'
 slug: beamer-down
 categories:
   - 统计软件
@@ -117,12 +117,23 @@ figure {
 声明：本文引用的所有信息均为公开信息，仅代表作者本人观点，与就职单位无关。
 :::
 
-# 本文概览
+# 本文概览 {#overview}
 
-本文将介绍如何创建 R Markdown 基础 beamer 文类的模版，介绍 R Markdown 制作 beamer 幻灯片的过程。然后介绍美化 beamer 幻灯片的过程，包括中英字体、数学公式、更换主题，特别是完整迁移到新的主题可能会遇到的问题。涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
+报告演示是传递、交流想法的重要方式，R Markdown 生态现支持多种幻灯片，比如最常见的 Office PowerPoint、
+
+本文将介绍如何创建基于 R Markdown 和 beamer 文类的幻灯片模版，
 
 
-# 写作背景
+先基于 R Markdown 介绍制作普通 beamer 幻灯片的过程，然后介绍设置幻灯片主题、中英字体和数学公式，完整迁移到新的主题可能会遇到的问题。
+
+
+
+涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
+
+
+
+
+# 写作背景 {#motivation}
 
 故事还要从头开始讲起，6-7 年前，出于学术答辩和课程汇报需要，陆续学习和使用 LaTeX 来排版作业和论文，曾有一段时间深陷此坑不能自拔，以至于遍览 [TeXLive](https://tug.org/texlive/) 内置的幻灯片制作宏包，收集了大量 beamer 幻灯片的模版，藏于 Github 仓库 [awesome-beamers](https://github.com/XiangyunHuang/awesome-beamers)。
 

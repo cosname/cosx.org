@@ -1,7 +1,7 @@
 ---
 title: R Markdown 制作 beamer 幻灯片
 author: 黄湘云
-date: '2021-10-17'
+date: '2022-04-05'
 slug: beamer-down
 categories:
   - 统计软件
@@ -99,7 +99,13 @@ figure {
 
 # 本文概览
 
-本文将介绍如何创建 R Markdown 基础 beamer 文类的模版，介绍 R Markdown 制作 beamer 幻灯片的过程。然后介绍美化 beamer 幻灯片的过程，包括中英字体、数学公式、更换主题，特别是完整迁移到新的主题可能会遇到的问题。涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
+报告演示是传递、交流想法的重要方式，R Markdown 生态现支持多种幻灯片，比如最常见的 Office PowerPoint、
+
+本文将介绍如何创建基于 R Markdown 和 beamer 文类的幻灯片模版，
+
+先基于 R Markdown 介绍制作普通 beamer 幻灯片的过程，然后介绍设置幻灯片主题、中英字体和数学公式，完整迁移到新的主题可能会遇到的问题。
+
+涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
 
 # 写作背景
 
@@ -402,7 +408,7 @@ author:
   - 黄湘云
   - 李四
 institute: "xxx 大学学院"
-date: "2021-12-19"
+date: "2022-04-04"
 documentclass: ctexbeamer
 output: 
   bookdown::pdf_book: 
@@ -485,7 +491,7 @@ beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alert
       - 黄湘云
       - 李四
     institute: "xxx 大学学院"
-    date: "2021-12-19"
+    date: "2022-04-04"
     documentclass: ctexbeamer
     output: 
       bookdown::pdf_book: 
@@ -572,31 +578,31 @@ xfun::session_info(c(
 ))
 ```
 
-    ## R version 4.1.2 (2021-11-01)
+    ## R version 4.1.3 (2022-03-10)
     ## Platform: x86_64-apple-darwin17.0 (64-bit)
-    ## Running under: macOS Big Sur 10.16
+    ## Running under: macOS Big Sur/Monterey 10.16
     ## 
     ## Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
     ## 
     ## Package version:
-    ##   base64enc_0.1.3  blogdown_1.7     bookdown_0.24   
-    ##   digest_0.6.29    evaluate_0.14    fastmap_1.1.0   
-    ##   glue_1.6.0       graphics_4.1.2   grDevices_4.1.2 
-    ##   highr_0.9        htmltools_0.5.2  httpuv_1.6.4    
-    ##   jquerylib_0.1.4  jsonlite_1.7.2   knitr_1.37      
-    ##   later_1.3.0      magrittr_2.0.1   methods_4.1.2   
-    ##   mime_0.12        promises_1.2.0.1 R6_2.5.1        
-    ##   Rcpp_1.0.7       rlang_0.4.12     rmarkdown_2.11  
-    ##   servr_0.24       stats_4.1.2      stringi_1.7.6   
-    ##   stringr_1.4.0    tinytex_0.36     tools_4.1.2     
-    ##   utils_4.1.2      xfun_0.29        yaml_2.2.1      
+    ##   base64enc_0.1.3  blogdown_1.9     bookdown_0.25   
+    ##   bslib_0.3.1      digest_0.6.29    evaluate_0.15   
+    ##   fastmap_1.1.0    fs_1.5.2         glue_1.6.2      
+    ##   graphics_4.1.3   grDevices_4.1.3  highr_0.9       
+    ##   htmltools_0.5.2  httpuv_1.6.5     jquerylib_0.1.4 
+    ##   jsonlite_1.8.0   knitr_1.38       later_1.3.0     
+    ##   magrittr_2.0.3   methods_4.1.3    mime_0.12       
+    ##   promises_1.2.0.1 R6_2.5.1         rappdirs_0.3.3  
+    ##   Rcpp_1.0.8.3     rlang_1.0.2      rmarkdown_2.13  
+    ##   sass_0.4.1       servr_0.24       stats_4.1.3     
+    ##   stringi_1.7.6    stringr_1.4.0    tinytex_0.38    
+    ##   tools_4.1.3      utils_4.1.3      xfun_0.30       
+    ##   yaml_2.3.5      
     ## 
     ## LaTeX version used: 
-    ##   TeX Live 2021 (TinyTeX) with tlmgr 2021-10-04
+    ##   TeX Live 2021 (TinyTeX) with tlmgr 2021-12-24
     ## 
     ## Pandoc version: 2.16.2
-    ## 
-    ## Hugo version: 0.90.1
 
 # 参考文献
 
