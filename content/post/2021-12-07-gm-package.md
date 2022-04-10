@@ -10,7 +10,7 @@ tags:
   - gm
   - 音乐制作
 slug: make-music-with-gm
-forum_id: 
+forum_id: 423091
 ---
 
 # 一、初识gm
