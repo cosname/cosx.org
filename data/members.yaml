@@ -2,9 +2,9 @@ list:
   - name: 于淼
     image: https://yufree.cn/images/MYu.jpg
     intro: 现任编辑部主编，中科院生态环境研究中心博士，美国西奈山伊坎医学院博后，研究方向为环境化学与暴露组学数据分析，博客 <https://yufree.cn>
-  - name: 黄湘云
-    image: https://user-images.githubusercontent.com/12031874/143729613-b936042b-9f84-4c51-abd1-fcce32f54c5c.jpg
-    intro: 现任编辑部副主编，毕业于中国矿业大学（北京），多年 R 语言爱好者，与赵鹏、谢益辉一起合著了《现代统计图形》，目前在美团从事数据分析工作，博客 <https://xiangyun.rbind.io>。
+  - name: 任焱
+    image: https://avatars.githubusercontent.com/u/37477330?s=400&u=7453a8b8b16555af5253232344e43efe40b45037&v=4
+    intro: 现任编辑部副主编，中国人民大学统计学院在读硕士，蓄力状态。
   - name: 林枫
     image: https://user-images.githubusercontent.com/18381242/62635778-e28bde80-b96a-11e9-9a98-15780bcd075f.JPG
     intro: 现任编辑部副主编，中国科学技术大学本硕，美国华盛顿大学2020级博士。研究兴趣是应用驱动的学习与决策问题。一番机缘得入COS，深受触动，在未来也将继续见证着它的热情与力量。
@@ -78,8 +78,11 @@ list:
   - name: 黄帅
     image: https://user-images.githubusercontent.com/16065479/119380041-0ff76880-bc75-11eb-92be-a5c6f2f4f76d.jpg
     intro: 华盛顿大学工业工程系副教授，毕业于中国科学技术大学，并于亚利桑那州立大学取得博士学位。他的研究方向包括统计学习和数据挖掘，及其在医疗保健和制造领域的应用。
+  - name: 黄湘云
+    image: https://user-images.githubusercontent.com/12031874/143729613-b936042b-9f84-4c51-abd1-fcce32f54c5c.jpg
+    intro: 毕业于中国矿业大学（北京），多年 R 语言爱好者，与赵鹏、谢益辉一起合著了《现代统计图形》，目前在美团从事数据分析工作，博客 <https://xiangyun.rbind.io>。
   - name: 孔令仁
-    image: 
+    image:
     intro: 中国人民大学18级统计本科生，喜爱统计，也爱鼓捣各种工具，希望能给大家带来更多变化与创新。
   - name: 寇强
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
@@ -132,7 +135,7 @@ list:
     intro: 目前就读江西财大国际会计专业，三年临川求学路，四年江财蛟湖畔。和图片展示的一样，天然吃货一枚，在任何环境下一定不会让自己饿着，很开心并荣幸加入COS大家庭，作为众多统计大神中夹着的一位做账的小会计，时刻膜拜并谦虚的学习着。当然，最最最希望的统计之都能朝着理想的未来走的越来越好!
   - name: 邱怡轩
     image: https://cloud.githubusercontent.com/assets/7221728/25788496/216e3484-33dc-11e7-8e7d-ca50b6450cc7.jpg
-    intro: 普渡大学统计系博士，现为卡耐基梅隆大学博士后，感兴趣的方向包括计算统计学、机器学习、大型数据处理等，参与翻译了《应用预测建模》《R语言编程艺术》《ggplot2：数据分析与图形艺术》等经典书籍，是 showtext、RSpectra、recosystem、prettydoc 等流行R软件包的作者。
+    intro: 普渡大学统计系博士，卡内基梅隆大学博士后，现为上海财经大学青年教师。感兴趣的方向包括计算统计学、机器学习、大型数据处理等，参与翻译了《应用预测建模》《R语言编程艺术》《ggplot2：数据分析与图形艺术》等经典书籍，是 showtext、RSpectra、recosystem、prettydoc 等流行R软件包的作者。
   - name: 任怡萌
     image: https://user-images.githubusercontent.com/35906792/47757674-66c97b00-dce2-11e8-8b7f-b84bc71a7eef.png
     intro: 人大统计本科生,热爱运动和音乐,也喜欢认识新朋友,梦想成为懂点统计的美食博主。在学习的过程中,逐渐感受到统计学的魅力,所以也经常做数据科学的白日梦。相信每个人都会有幸运时刻,而加入COS就是我的幸运之一。

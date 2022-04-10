@@ -21,11 +21,11 @@
     {{ end }}
 
     <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}">
-    <link rel="stylesheet" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     {{ "<!-- Stylesheets -->" | safeHTML }}
     <link rel="stylesheet" href="{{ "css/screen.css" | relURL }}">
-    <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.10.0/styles/github.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/github.min.css">
     <script async src="https://use.fontawesome.com/32c3d13def.js"></script>
     {{ range .Site.Params.customCSS }}
     <link rel="stylesheet" href="{{ . | relURL }}">

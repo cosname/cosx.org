@@ -8,3 +8,5 @@
 .DS_Store
 Thumbs.db
 .hugo_build.lock
+/resources/
+/public/
