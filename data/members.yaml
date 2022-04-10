@@ -237,6 +237,9 @@ list:
   - name: 张翔
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 车轮互联数据副总裁，COS9年老水友
+  - name: 张敬信
+    image: https://avatars.githubusercontent.com/u/21698296?v=4
+    intro: 博士，副教授，现任职哈尔滨商业大学（数学与应用数学系），博士毕业于哈尔滨工业大学基础数学，喜欢编程，尤其是R语言编程。
   - name: 张沥今
     image: https://zhanglj37.github.io/images/lijin.JPG
     intro: 中山大学心理学系研究生，师从潘俊豪副教授，研究方向为贝叶斯结构方程建模。个人博客 https://www.lijinzhang.xyz/blog.html
