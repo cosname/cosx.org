@@ -4,12 +4,14 @@ date: '2021-12-12'
 author:
   - 张敬信
 categories:
-  - 推荐文章
+  - 软件工具
 tags:
-  -
-  - 
-  -
-slug:
+  - tidyverse
+  - R 语言
+  - 向量化
+  - 泛型
+  - 数据思维
+slug: elegant-tidyverse
 forum_id:
 ---
 
