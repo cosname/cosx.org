@@ -12,7 +12,7 @@ tags:
   - 泛型
   - 数据思维
 slug: elegant-tidyverse
-forum_id:
+forum_id: 423092
 ---
 
 ### 作者介绍
