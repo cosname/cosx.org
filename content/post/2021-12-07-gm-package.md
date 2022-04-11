@@ -1,6 +1,6 @@
 ---
 title: "用R包gm生成音乐"
-date: '2021-12-7'
+date: '2021-12-07'
 author:
   - 毛任飞
 categories:
