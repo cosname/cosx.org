@@ -6,7 +6,7 @@ categories: ["统计应用"]
 tags: ["核酸检测", "似然估计"]
 meta_extra: "审稿：于淼；编辑：黄湘云"
 slug: mle-tpr-covid19
-forum_id: 423095
+forum_id: 423102
 ---
 
 
