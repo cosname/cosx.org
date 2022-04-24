@@ -108,7 +108,7 @@ div.img {
 <h1>本文概览</h1>
 <p>空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的商业 BI 工具<a href="https://www.tableau.com/zh-cn/solutions/maps">Tableau</a>，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图，英文一般为<a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a>，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了<a href="https://zhfw.tianditu.gov.cn/">专题图层服务</a>，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，专题地图用于展示各类指标<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国家经营状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。</p>
 <p>接下来，本文分四个部分展开介绍专题地图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
-<p>单变量情形中以 <strong>latticeExtra</strong> 包<span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的数据集 USCancerRates 为例，以专题地图形式展示美国 1999-2003 年度各城镇的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有婴儿死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制专题地图的过程，涉及的基础数据操作以及六个绘图工具 <strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>、<strong>latticeExtra</strong> 包<span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>、<strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>、<strong>tmap</strong> 包<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>、<strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>和 <strong>mapsf</strong> 包<span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
+<p>单变量情形中以 <strong>latticeExtra</strong> 包<span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的数据集 USCancerRates 为例，以专题地图形式展示美国 1999-2003 年度各城镇的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制专题地图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>、<strong>latticeExtra</strong> 包<span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>、<strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>、<strong>tmap</strong> 包<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>、<strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>和 <strong>mapsf</strong> 包<span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
 <p>多变量情形中以美国人口统计局发布的调查数据为基础，分析北卡罗来纳州各区县普查粒度的家庭收入中位数与白人占比的空间相关性。先分别以单变量的专题地图描述各个普查区域里家庭收入中位数、白人占比的空间分布，接着和二元变量的专题地图形成对比，展示相关性的空间分布。</p>
 <p>本文小结部分主要谈一些技术实现、本文写作的心得体会，再概览一遍也没啥意思。</p>
 </div>
@@ -120,7 +120,7 @@ div.img {
 <li><strong>lattice</strong> 在 <strong>grid</strong> 图形系统的基础上构建了一套易于使用的高级数据可视化函数，同时支持复杂的非标准的自定义绘图需求。《lattice: Multivariate Data Visualization with R》<span class="citation">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span> 详细全面地阐述了一元到多元数据的可视化方法，各个函数的使用细节，可做帮助手册。</li>
 <li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立起数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
 </ul>
-<p>在掌握基础的一些工具后，培养审美能力最重要方式就是多看，就好比鉴赏书画古董，只要围绕身边的都是精品，再看次品一眼就能认出来。接着，从入门到进阶就需要打磨细节，推荐著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
+<p>在掌握基础的一些工具后，培养审美能力最重要方式就是多看，然后打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
 <div id="美国各城镇的年平均癌症死亡率分布" class="section level2">
 <h2>美国各城镇的年平均癌症死亡率分布</h2>
 <p>接下来，以 <a href="https://latticeextra.r-forge.r-project.org/"><strong>latticeExtra</strong> 包</a>内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自美国<a href="https://statecancerprofiles.cancer.gov/">美国国家癌症研究所</a>（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国<a href="https://seer.cancer.gov/stdpopulations/stdpop.19ages.html">标准人口年龄分组</a>调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的<strong>美国标准人口年龄分组</strong>换算。因<strong>latticeExtra</strong> 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。</p>
@@ -1083,21 +1083,22 @@ ggdraw() +
   &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;blogdown&quot;,
   &quot;ggplot2&quot;, &quot;cowplot&quot;, &quot;biscale&quot;, 
   &quot;grid&quot;, &quot;lattice&quot;, &quot;latticeExtra&quot;, 
-  &quot;maps&quot;, &quot;sf&quot;, &quot;tidycensus&quot;, &quot;mapsf&quot;,
-  &quot;usmapdata&quot;, &quot;tmap&quot;
+  &quot;maps&quot;, &quot;mapproj&quot;, &quot;sf&quot;, &quot;tidycensus&quot;, 
+  &quot;usmapdata&quot;, &quot;mapsf&quot;, &quot;tmap&quot;
 ), dependencies = FALSE)
-# R version 4.1.3 (2022-03-10)
+# R version 4.2.0 (2022-04-22)
 # Platform: x86_64-apple-darwin17.0 (64-bit)
 # Running under: macOS Big Sur/Monterey 10.16
 # 
-# Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / POSIX / en_US.UTF-8 / en_US.UTF-8
+# Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
 # 
 # Package version:
 #   biscale_0.2.0       blogdown_1.9        cowplot_1.1.1      
-#   ggplot2_3.3.5       grid_4.1.3          knitr_1.38         
-#   lattice_0.20-45     latticeExtra_0.6-29 maps_3.4.0         
-#   mapsf_0.4.0         rmarkdown_2.13      sf_1.0-7           
-#   tidycensus_1.2.1    tmap_3.3-3          usmapdata_0.1.0    
+#   ggplot2_3.3.5       grid_4.2.0          knitr_1.38         
+#   lattice_0.20-45     latticeExtra_0.6-29 mapproj_1.2.8      
+#   maps_3.4.0          mapsf_0.4.0         rmarkdown_2.13     
+#   sf_1.0-7            tidycensus_1.2.1    tmap_3.3-3         
+#   usmapdata_0.1.0    
 # 
 # Pandoc version: 2.17.1.1
 # 

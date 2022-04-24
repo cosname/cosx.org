@@ -144,12 +144,10 @@ knitr::opts_chunk$set(
 - **lattice** 在 **grid** 图形系统的基础上构建了一套易于使用的高级数据可视化函数，同时支持复杂的非标准的自定义绘图需求。《lattice: Multivariate Data Visualization with R》[@Sarkar2008] 详细全面地阐述了一元到多元数据的可视化方法，各个函数的使用细节，可做帮助手册。
 - **ggplot2** 在 **grid** 图形系统的基础上实现了一套图形语法[@Wilkinson2005]，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立起数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》[@Wickham2022] 已经出到第三版了，是从入门到进阶全面介绍 **ggplot2** 的著作。
 
-在掌握基础的一些工具后，培养审美能力最重要方式就是多看，就好比鉴赏书画古董，只要围绕身边的都是精品，再看次品一眼就能认出来。接着，从入门到进阶就需要打磨细节，推荐著作《Data Visualisation with R: 111 Examples》[@Rahlf2019]。
-
+在掌握基础的一些工具后，培养审美能力最重要方式就是多看，然后打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》[@Rahlf2019]。
 
 
 ## 美国各城镇的年平均癌症死亡率分布
-
 
 接下来，以 [**latticeExtra** 包](https://latticeextra.r-forge.r-project.org/)内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自美国[美国国家癌症研究所](https://statecancerprofiles.cancer.gov/)（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国[标准人口年龄分组](https://seer.cancer.gov/stdpopulations/stdpop.19ages.html)调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的**美国标准人口年龄分组**换算。因**latticeExtra** 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。
 
@@ -1089,9 +1087,6 @@ R 软件内置的函数 `reshape()` 有很丰富的解释。所谓的「宽格�
 ![(\#fig:uk-hex-cartograms) 左图：英国各个城镇年龄中位数的空间分布；右图：英国各个城镇新冠死亡率，单位十万分之一。](img/uk-hex-cartograms.png){.full}
 
 
-
-
-
 # 环境信息
 
 在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 **blogdown** 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：
@@ -1103,8 +1098,8 @@ xfun::session_info(packages = c(
   "knitr", "rmarkdown", "blogdown",
   "ggplot2", "cowplot", "biscale", 
   "grid", "lattice", "latticeExtra", 
-  "maps", "sf", "tidycensus", "mapsf",
-  "usmapdata", "tmap"
+  "maps", "mapproj", "sf", "tidycensus", 
+  "usmapdata", "mapsf", "tmap"
 ), dependencies = FALSE)
 ```
 
