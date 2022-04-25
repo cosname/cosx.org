@@ -802,17 +802,14 @@ legend("bottomright",
 ### ggplot2 + sf
 
 
-[^ggplot2-sf]: 顺便一说，如果空间分析在不同投影下的结果不同，那么应该采用何种投影呢？ Edzer J. Pebesma 在 [useR! 2021](https://youtu.be/cK08bxUJn5A) 会上建议考虑保角映射，原始的数据在投影下不至于膨胀或变形，尽管尺寸会缩小，共形变换保持了角度以及无穷小物体的形状。保角映射是复变函数中非常重要的概念，空间球面几何计算需要一些基础的复变函数、微分几何等高等数学知识，这在 **s2** 包[@Dunnington2021]中有很多应用，也构成了 **sf** 包的核心基础。
-
-
-**ggplot2** 在 2018 年发布 3.0.0 版本，开始借助 **sf** 包支持 Simple Features 数据对象的绘图，截止当前最新版本，[ggplot2](https://github.com/tidyverse/ggplot2) 在空间数据可视化都是**非常不专业**的，最糟糕的一个点是它会将地图弄变形了，而空间形状在空间分析领域是至关重要的一部分[^ggplot2-sf]。
+**ggplot2** 截止当前最新版本，[ggplot2](https://github.com/tidyverse/ggplot2) 在空间数据可视化都是**非常不专业**的，最糟糕的一个点是它会将地图弄变形了。
 尽管**ggspatial** [@Dewey2021] 在 **ggplot2** 的基础上补充了一些地图特有的元素，如比例尺、指北针，但并没有解决地图变形的核心问题。正如 Roger Bivand [所言](https://stat.ethz.ch/pipermail/r-sig-geo/2022-March/028921.html)，还有其它可能难以预料的问题：
 
 
 > For visualisation, please **avoid** using **ggplot2** unless you use this package often (daily). For thematic mapping, **tmap** and **mapsf** are to be preferred, because they are written for making maps. Do not simplify/generalise coastlines unless you really need to do so. You can use **tmap** and **mapview** to view thematic maps interactively - as you zoom in, you see artefacts created by line generalization.
 
 
-因此，尽管 **ggplot2** 包已经流行开来，并且在很多方面取得成绩，但严格来说，不推荐使用 **ggplot2** 包来绘制任何和地图相关的图形，除非很清楚研究区域的情况，即在合适的地理区域采用合适的投影、合适的工具绘制准确的地理图形。
+因此，尽管 **ggplot2** 包已经流行开来，并且在很多方面取得成绩，但严格来说，不推荐使用 **ggplot2** 包来绘制任何和地图相关的图形，除非很清楚研究区域的情况，即在合适的地理区域采用合适的投影、合适的工具绘制准确的地理图形。**ggplot2** 在 2018 年发布 3.0.0 版本，开始借助 **sf** 包支持 Simple Features 数据对象的绘图，这就一定程度上缓解了地图变形的问题。
 
 ```{r us-cancer-rates-ggplot2-sf}
 #| fig.cap="1999-2003 年美国各个城镇的年平均癌症死亡率分布",

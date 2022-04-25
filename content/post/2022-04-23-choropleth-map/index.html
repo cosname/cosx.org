@@ -865,12 +865,12 @@ legend(&quot;bottomright&quot;,
 </div>
 <div id="ggplot2-sf" class="section level3">
 <h3>ggplot2 + sf</h3>
-<p><strong>ggplot2</strong> 在 2018 年发布 3.0.0 版本，开始借助 <strong>sf</strong> 包支持 Simple Features 数据对象的绘图，截止当前最新版本，<a href="https://github.com/tidyverse/ggplot2">ggplot2</a> 在空间数据可视化都是<strong>非常不专业</strong>的，最糟糕的一个点是它会将地图弄变形了，而空间形状在空间分析领域是至关重要的一部分<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>。
+<p><strong>ggplot2</strong> 截止当前最新版本，<a href="https://github.com/tidyverse/ggplot2">ggplot2</a> 在空间数据可视化都是<strong>非常不专业</strong>的，最糟糕的一个点是它会将地图弄变形了。
 尽管<strong>ggspatial</strong> <span class="citation">(<a href="#ref-Dewey2021" role="doc-biblioref">Dunnington 2021</a>)</span> 在 <strong>ggplot2</strong> 的基础上补充了一些地图特有的元素，如比例尺、指北针，但并没有解决地图变形的核心问题。正如 Roger Bivand <a href="https://stat.ethz.ch/pipermail/r-sig-geo/2022-March/028921.html">所言</a>，还有其它可能难以预料的问题：</p>
 <blockquote>
 <p>For visualisation, please <strong>avoid</strong> using <strong>ggplot2</strong> unless you use this package often (daily). For thematic mapping, <strong>tmap</strong> and <strong>mapsf</strong> are to be preferred, because they are written for making maps. Do not simplify/generalise coastlines unless you really need to do so. You can use <strong>tmap</strong> and <strong>mapview</strong> to view thematic maps interactively - as you zoom in, you see artefacts created by line generalization.</p>
 </blockquote>
-<p>因此，尽管 <strong>ggplot2</strong> 包已经流行开来，并且在很多方面取得成绩，但严格来说，不推荐使用 <strong>ggplot2</strong> 包来绘制任何和地图相关的图形，除非很清楚研究区域的情况，即在合适的地理区域采用合适的投影、合适的工具绘制准确的地理图形。</p>
+<p>因此，尽管 <strong>ggplot2</strong> 包已经流行开来，并且在很多方面取得成绩，但严格来说，不推荐使用 <strong>ggplot2</strong> 包来绘制任何和地图相关的图形，除非很清楚研究区域的情况，即在合适的地理区域采用合适的投影、合适的工具绘制准确的地理图形。<strong>ggplot2</strong> 在 2018 年发布 3.0.0 版本，开始借助 <strong>sf</strong> 包支持 Simple Features 数据对象的绘图，这就一定程度上缓解了地图变形的问题。</p>
 <pre class="r"><code>us_county_cancer2$rate_d &lt;- cut(us_county_cancer2$rate, breaks = 50*0:13)
 ggplot() +
   geom_sf(
@@ -1174,9 +1174,6 @@ Dowle, Matt, and Arun Srinivasan. 2021. <em><span class="nocase">data.table</spa
 <div id="ref-Dewey2021" class="csl-entry">
 Dunnington, Dewey. 2021. <em><span class="nocase">ggspatial</span>: Spatial Data Framework for <span class="nocase">ggplot2</span></em>. <a href="https://CRAN.R-project.org/package=ggspatial">https://CRAN.R-project.org/package=ggspatial</a>.
 </div>
-<div id="ref-Dunnington2021" class="csl-entry">
-Dunnington, Dewey, Edzer Pebesma, and Ege Rubak. 2021. <em><span class="nocase">s2</span>: Spherical Geometry Operators Using the <span>S2</span> Geometry Library</em>. <a href="https://CRAN.R-project.org/package=s2">https://CRAN.R-project.org/package=s2</a>.
-</div>
 <div id="ref-Gesmann2015" class="csl-entry">
 Gesmann, Markus. 2015. <span>“How to Place Titles in <span class="nocase">lattice</span> Plots.”</span> <a href="https://magesblog.com/post/2015-06-16-how-to-place-titles-in-lattice-plots/">https://magesblog.com/post/2015-06-16-how-to-place-titles-in-lattice-plots/</a>.
 </div>
@@ -1277,6 +1274,5 @@ Yutani, Hiroaki. 2018. <span>“Plot <span class="nocase">geom_sf()</span> on <s
 <ol>
 <li id="fn1"><p>笔者英文水平有限，看的是中文版，推荐有条件的读者尝试看英文版，应该会舒服得多。《Neyman》书中多次提及另一本卡尔·皮尔逊（Karl Person）的著作《The Grammar of Science》<span class="citation">(<a href="#ref-Person1911" role="doc-biblioref">Person 1911</a>)</span>，也有中译本《科学的规范》<span class="citation">(<a href="#ref-Person1998" role="doc-biblioref">Person 1998</a>)</span>，值得一读。众所周知，耐曼在波兰和英国时期和爱根·皮尔逊（E. S. Person）在假设检验和置信区间理论方面有大量合作，一起奠定了统计学严格的数学基础。耐曼的早期工作从卡尔·皮尔逊时代开始，研究了大量实际问题，所以，了解一些生活中实在的具体问题，就不会被 N-P 引理折磨了。于我个人而言，毕业以后，第一阶段应用，从书中来到工作中去，第二阶段理论，从工作中来到书中去。我的第一阶段正在进行中，第二阶段不知道什么时候开始。<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p><span class="citation">Tanimura, Kuroiwa, and Mizota (<a href="#ref-Susumu2006" role="doc-biblioref">2006</a>)</span> 基于 2000 年日本长崎县长崎市的町村级行政边界地图数据，以及当年关于儿童人口普查数据，以比例气泡图展示人口的空间分布，是 R 语言社区最早一幅用 <strong>maps</strong> 包绘制的比例气泡地图。顺便一提，长崎市大约相当于咱们的地级市，粗略地讲，往上都道府县是一级，往下町村为一级，中间是市区一级。<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
-<li id="fn3"><p>顺便一说，如果空间分析在不同投影下的结果不同，那么应该采用何种投影呢？ Edzer J. Pebesma 在 <a href="https://youtu.be/cK08bxUJn5A">useR! 2021</a> 会上建议考虑保角映射，原始的数据在投影下不至于膨胀或变形，尽管尺寸会缩小，共形变换保持了角度以及无穷小物体的形状。保角映射是复变函数中非常重要的概念，空间球面几何计算需要一些基础的复变函数、微分几何等高等数学知识，这在 <strong>s2</strong> 包<span class="citation">(<a href="#ref-Dunnington2021" role="doc-biblioref">Dunnington, Pebesma, and Rubak 2021</a>)</span>中有很多应用，也构成了 <strong>sf</strong> 包的核心基础。<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
