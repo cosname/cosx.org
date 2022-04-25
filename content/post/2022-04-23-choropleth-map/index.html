@@ -19,13 +19,39 @@ tags:
 link-citations: true
 bibliography: 
   - refer.bib
-toc: true
+output:
+  blogdown::html_page:
+    toc: true
+forum_id: 423119
 description: "专题地图应用广泛，特别是展示统计年鉴数据，在美国和日本国家统计局官网，大量专题地图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国家经营状态的指标体系，涵盖人口、土地、生产、消费等专题，省、市、区县以及自治区等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
 
 <div id="TOC">
-
+<ul>
+<li><a href="#本文概览">本文概览</a></li>
+<li><a href="#单变量情形">单变量情形</a>
+<ul>
+<li><a href="#美国各城镇的年平均癌症死亡率分布">美国各城镇的年平均癌症死亡率分布</a>
+<ul>
+<li><a href="#maps">maps</a></li>
+<li><a href="#latticeextra">latticeExtra</a></li>
+<li><a href="#ggplot2">ggplot2</a></li>
+<li><a href="#tmap">tmap</a></li>
+<li><a href="#sf">sf</a></li>
+<li><a href="#ggplot2-sf">ggplot2 + sf</a></li>
+<li><a href="#mapsf">mapsf</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#多变量情形">多变量情形</a>
+<ul>
+<li><a href="#美国北卡州家庭收入中位数与白人占比的空间相关性">美国北卡州家庭收入中位数与白人占比的空间相关性</a></li>
+</ul></li>
+<li><a href="#本文小结">本文小结</a></li>
+<li><a href="#未来展望">未来展望</a></li>
+<li><a href="#环境信息">环境信息</a></li>
+<li><a href="#参考文献">参考文献</a></li>
+</ul>
 </div>
 
 <style type="text/css">
