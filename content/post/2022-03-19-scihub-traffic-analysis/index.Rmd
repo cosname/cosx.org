@@ -1130,7 +1130,12 @@ e_arrange(e2, e1, cols = 1)
 
 + 在“1天”、“2天”、“3天”等情况下，定西与 Sci-Hub 全站一样都是第三个波峰最高，而在“30天以上”的条件下，定西流量变成了第三个波峰最低。
 
+![](https://yuanfan.vercel.app/images/2022/2022-04-26-1.png)
+
+![](https://yuanfan.vercel.app/images/2022/2022-04-26-2.png)
+
 ```{r}
+#| eval=FALSE
 data10 <- fread(
   'data/city_divide_ip_freq_hour.csv',
   encoding = 'UTF-8')
@@ -1507,7 +1512,12 @@ e_arrange(
 
 由于 Sci-Hub 全站流量总量远高于定西流量，其中混杂的不确定因素也更多，接着观察流量数量级与定西更接近的北京和上海的数据表现。这两个城市和定西一样，不同层次下的24小时流量趋势都有很明显的波峰和波谷。如果说“三个波峰中第三个波峰最低”是符合国内 Sci-Hub 用户的作息规律的，那么越是长期用户越符合这条规律，越是短期用户越与这条规律相悖，北京、上海、定西皆如此。
 
+![](https://yuanfan.vercel.app/images/2022/2022-04-26-3.png)
+
+![](https://yuanfan.vercel.app/images/2022/2022-04-26-4.png)
+
 ```{r}
+#| eval=FALSE
 e1<-data10[type == '2015.9-2016.2' & city == 'Beijing' & divide == '1天',] |>
   e_charts(hour, height = 150, width = 200) |>
   e_area(
@@ -2401,9 +2411,9 @@ data7[type %in% c('北京', '上海', '定西', '台湾', '香港'), ] |>
 
 3. 引入2015.9-2016.2的数据与2017年的数据进行对比，Sci-Hub全站的月均流量上涨倍数是2.712，全中国（含中国台湾、中国香港、中国澳门）的月均流量上涨倍数是3.089，而定西为11.74，兰州为1.52。
 
-4.拆分出以 IP 为主的“1天”、“2天”、“3天”、“4-7天”、“8-30天”、“30天以上”等6个层次的数据，“1天”条件下各城市或地区均是第三个波峰最高，“30天”条件下各城市或地区均是第三个波峰最低。
+4. 拆分出以 IP 为主的“1天”、“2天”、“3天”、“4-7天”、“8-30天”、“30天以上”等6个层次的数据，“1天”条件下各城市或地区均是第三个波峰最高，“30天”条件下各城市或地区均是第三个波峰最低。
 
-5.（仅本文作者猜测）2017年数据中 IP 与 USER 的关系是路由与设备。将数据拆分成 IP 与 USER 一对一、IP 与 USER 一对多、IP 与 USER 多对一、IP 与 USER 多对多等四种情况，其中 IP 与 USER 一对多、IP 与 USER 多对多这两种情况所贡献的流量占比最多。而定西流量仅在 IP 与 USER 一对多条件下呈现出第3个波峰最低的特点。
+5. （仅本文作者猜测）2017年数据中 IP 与 USER 的关系是路由与设备。将数据拆分成 IP 与 USER 一对一、IP 与 USER 一对多、IP 与 USER 多对一、IP 与 USER 多对多等四种情况，其中 IP 与 USER 一对多、IP 与 USER 多对多这两种情况所贡献的流量占比最多。而定西流量仅在 IP 与 USER 一对多条件下呈现出第3个波峰最低的特点。
 
 虽然探索到最后，定西市的流量之谜并没有完全解开，但结合以上线索，本文得出的结论是：定西流量中混入了兰州流量以及大量中国境外的流量，其中仅有三到四成来自于定西以及“被误认为定西的兰州”，这些当地或邻近地区的流量特点是用户的使用周期在30天以上，且属于“IP 与 USER 一对多”的情形，也就是正常人类用户在局域网内使用设备登录 Sci-Hub，而混入定西的境外流量属于“IP 与 USER 多对多”的情形，这部分流量占比最多且第3个波峰最高，最终导致定西流量从整体上看总量高且第3个波峰最高。
 
@@ -2439,8 +2449,8 @@ xfun::write_utf8(bib, "packages.bib")
 
 # 7. 参考文献
 
-[^1]:Elbakyan, Alexandra. (2020). Sci-Hub download log 2011-2013 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.5918542
+[^1]: Elbakyan, Alexandra. (2020). Sci-Hub download log 2011-2013 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.5918542
 
-[^2]:Elbakyan, Alexandra; Bohannon, John (2021), Data from: Who's downloading pirated papers? Everyone, Dryad, Dataset, https://doi.org/10.5061/dryad.q447c
+[^2]: Elbakyan, Alexandra; Bohannon, John (2021), Data from: Who's downloading pirated papers? Everyone, Dryad, Dataset, https://doi.org/10.5061/dryad.q447c
 
-[^3]:Alexandra Elbakyan. (2018). Sci-Hub download log of 2017 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.1158301
+[^3]: Alexandra Elbakyan. (2018). Sci-Hub download log of 2017 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.1158301
