@@ -416,7 +416,7 @@ aarate_{x-y} = \sum_{i=x}^{y}\Big[ \big( \frac{count_i}{pop_i} \big)  \times \bi
 <p><span class="math display">\[
 aarate_{0-0} = \frac{29}{139879}*\frac{3794901}{274633642}*100000 = 0.2864
 \]</span></p>
-<p>读者可能有疑惑，一系列复杂的调整是为什么？指标稳定性。稳定不是代表不变，稳定是不受轻易干扰。从各社区、各城镇、各州乃至国家，从下往上聚合数据的时候，分年龄、种族、性别等下钻/上卷的时候，有的城镇总人口可能相对很少，死亡人数也很少。</p>
+<p>读者可能有疑惑，一系列复杂的调整是为什么？指标稳定性和可比性。稳定不是代表不变，稳定是不受轻易干扰。从各社区、各城镇、各州乃至国家，从下往上聚合数据的时候，分年龄、种族、性别等下钻/上卷的时候，有的城镇总人口可能相对很少，死亡人数也很少。可比性是指组与组间可比，且随时间变化依然可比，刻画因癌症死亡的相对风险。</p>
 <pre class="r"><code># 加载死亡率数据
 data(USCancerRates, package = &quot;latticeExtra&quot;)
 # 查看 Alabama 的 Pickens County 的数据
@@ -1106,7 +1106,7 @@ ggdraw() +
 </div>
 <div id="环境信息" class="section level1">
 <h1>环境信息</h1>
-<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> 构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：</p>
+<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> <span class="citation">(<a href="#ref-blogdown" role="doc-biblioref">Xie, Hill, and Thomas 2017</a>)</span> 构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：</p>
 <pre class="r"><code>xfun::session_info(packages = c(
   &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;blogdown&quot;,
   &quot;ggplot2&quot;, &quot;cowplot&quot;, &quot;biscale&quot;, 
@@ -1260,6 +1260,9 @@ Wilke, Claus O. 2020. <em><span class="nocase">cowplot</span>: Streamlined Plot 
 </div>
 <div id="ref-Wilkinson2005" class="csl-entry">
 Wilkinson, Leland. 2005. <em>The Grammar of Graphics</em>. 2nd ed. Springer, New York, NY. <a href="https://doi.org/10.1007/0-387-28695-0">https://doi.org/10.1007/0-387-28695-0</a>.
+</div>
+<div id="ref-blogdown" class="csl-entry">
+Xie, Yihui, Alison Presmanes Hill, and Amber Thomas. 2017. <em><span class="nocase">blogdown</span>: Creating Websites with <span>R</span> Markdown</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/blogdown/</a>.
 </div>
 <div id="ref-Yutani2018" class="csl-entry">
 Yutani, Hiroaki. 2018. <span>“Plot <span class="nocase">geom_sf()</span> on <span>OpenStreetMap</span> Tiles.”</span> <a href="https://yutani.rbind.io/post/2018-06-09-plot-osm-tiles/">https://yutani.rbind.io/post/2018-06-09-plot-osm-tiles/</a>.
