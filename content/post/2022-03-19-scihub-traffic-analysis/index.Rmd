@@ -24,6 +24,12 @@ slug: scihub-traffic-analysis
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 ```
+```{css}
+.col-xs-3 {
+  display: inline-block; 
+  width: 24%; 
+}
+```
 
 某年某月某日，地球上的一个人类忽然恰好想打开朋友圈看看大家都在做什么，于是恰好翻到一条视频，配文"我们的工作，将会写在人类的历史上"，该名人类恰好在这瞬间产生了一分好奇心，接着点开视频看到一只叼着钥匙的黑乌鸦，于是就恰好发现了[Sci-Hub](https://sci-hub.se/)这个神奇的网站。其实这位人类平时只是一条在死水里躺平的咸鱼，但是又恰好被一位统计之都的编辑[黄湘云](https://xiangyun.rbind.io/)捞起来做（干）事（活），于是顺理成章地诞生了[这篇讨论帖](https://d.cosx.org/d/422978-sci-hubdoi)和这篇文章。 
 
@@ -1130,15 +1136,8 @@ e_arrange(e2, e1, cols = 1)
 
 + 在“1天”、“2天”、“3天”等情况下，定西与 Sci-Hub 全站一样都是第三个波峰最高，而在“30天以上”的条件下，定西流量变成了第三个波峰最低。
 
-![](https://yuanfan.vercel.app/images/2022/2022-04-26-1.png)
-
-![](https://yuanfan.vercel.app/images/2022/2022-04-26-2.png)
-
 ```{r}
-#| eval=FALSE
-data10 <- fread(
-  'data/city_divide_ip_freq_hour.csv',
-  encoding = 'UTF-8')
+data10 <- fread('data/city_divide_ip_freq_hour.csv', encoding = 'UTF-8')
 
 data10<-data10[order(hour),]
 data10$hour<-as.character(data10$hour)
@@ -1512,12 +1511,7 @@ e_arrange(
 
 由于 Sci-Hub 全站流量总量远高于定西流量，其中混杂的不确定因素也更多，接着观察流量数量级与定西更接近的北京和上海的数据表现。这两个城市和定西一样，不同层次下的24小时流量趋势都有很明显的波峰和波谷。如果说“三个波峰中第三个波峰最低”是符合国内 Sci-Hub 用户的作息规律的，那么越是长期用户越符合这条规律，越是短期用户越与这条规律相悖，北京、上海、定西皆如此。
 
-![](https://yuanfan.vercel.app/images/2022/2022-04-26-3.png)
-
-![](https://yuanfan.vercel.app/images/2022/2022-04-26-4.png)
-
 ```{r}
-#| eval=FALSE
 e1<-data10[type == '2015.9-2016.2' & city == 'Beijing' & divide == '1天',] |>
   e_charts(hour, height = 150, width = 200) |>
   e_area(
