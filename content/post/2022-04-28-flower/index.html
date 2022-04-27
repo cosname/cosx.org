@@ -1,0 +1,503 @@
+---
+title: "echarts4r-flower"
+author: "袁凡"
+date: "2022-04-26"
+categories:
+  - R 语言
+tags:
+  - echarts4r
+  - Apache Echarts
+meta_extra: "审稿：xx；编辑：xx"
+output:
+  blogdown::html_page:
+    toc: true
+link-citations: true
+description: ""
+forum_id: 423132
+slug: echarts4r-flower
+---
+
+<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="{{< blogdown/postref >}}index_files/echarts4r/echarts-en.min.js"></script>
+<script src="{{< blogdown/postref >}}index_files/echarts4r/ecStat.min.js"></script>
+<script src="{{< blogdown/postref >}}index_files/echarts4r/dataTool.min.js"></script>
+<script src="{{< blogdown/postref >}}index_files/echarts4r-binding/echarts4r.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#基础要点1花瓣弧度">基础要点1：花瓣弧度</a></li>
+<li><a href="#基础要点2花瓣颜色">基础要点2：花瓣颜色</a>
+<ul>
+<li><a href="#渐变色">渐变色</a></li>
+<li><a href="#纹理填充">纹理填充</a></li>
+<li><a href="#纯色">纯色</a></li>
+<li><a href="#给花瓣分配颜色">给花瓣分配颜色</a></li>
+</ul></li>
+<li><a href="#基础要点3多重花瓣">基础要点3：多重花瓣</a>
+<ul>
+<li><a href="#改变花瓣边缘的形状">改变花瓣边缘的形状</a></li>
+<li><a href="#嵌套多层各层颜色不同">嵌套多层–各层颜色不同</a></li>
+<li><a href="#嵌套多层各层颜色相同">嵌套多层–各层颜色相同</a></li>
+<li><a href="#堆叠多层">堆叠多层</a></li>
+</ul></li>
+<li><a href="#画花">画花</a>
+<ul>
+<li><a href="#银杏叶">银杏叶</a></li>
+<li><a href="#向日葵">向日葵</a></li>
+<li><a href="#花纹">花纹</a></li>
+</ul></li>
+<li><a href="#结尾">结尾</a></li>
+</ul>
+</div>
+
+<style type="text/css">
+.col-xs-4 {
+  display: inline-block; 
+  width: 33%; 
+}
+
+.col-xs-6 {
+  display: inline-block; 
+  width: 49%; 
+}
+</style>
+<p>如同死生、枯荣是生物的一体两面，确定性与不确定性也是数据分析的一体两面。拿到一份数据后，真得能用各种分析手段探索得到百分百的确定性吗？如若分析的终点仍然是去面对一片未知，是不是只可以在路途中留下一份权衡取舍后的确定性结论呢？在大数据的时代，人们总是要用文字、用图形、用表格去描述隐藏在数据中的确定性。本（一）文（条）作（咸）者（鱼）在一次无穷无尽的数据探索过程中，日日盯着那些图形看，看着看着忽然开了一个脑洞，在人类创造出那么多概念和工具之前，自然界的花花草草早就已经存在，不妨试试把画图工具只是用来画一些花草。</p>
+<p>在那么多图形类型里，与花草形状最接近的是饼状图。饼图有三种，像披萨一样的扇形饼图，像可以套在脖子上吃的饼一样的环形饼图，以及南丁格尔女士发明的玫瑰图。本文使用 echarts4r 包作为绘图工具，首先介绍一些将饼图改造成花草图案的基础要点，随后绘制几种花与草的图案作为示例。</p>
+<blockquote>
+<p>注意1：本文部分代码较为冗长，为了方便对照观看，部分代码未做格式化处理。</p>
+<p>注意2：有些人看到多重花瓣的图可能会出现头晕、眼花等不适症状，请谨慎观看。</p>
+</blockquote>
+<div id="基础要点1花瓣弧度" class="section level1">
+<h1>基础要点1：花瓣弧度</h1>
+<p>在 echarts4r 包中用<code>e_pie()</code>函数画饼状图，改变扇区弧度就会形成花瓣。</p>
+<ul>
+<li><p><code>radius</code>，用于设置饼图中扇区的半径，可输入三种类型的数据：数值、百分比、含有两个百分比的数组。仅设定一个数值或百分比、或数组中第一个百分比为0%时，会画出来如下图中第一排的扇形饼图。形如<code>radius = c("10%", "30%")</code>，第一个百分比10%代表环形饼图的内圈半径，第二个百分比30%代表环形饼图的外圈半径。</p></li>
+<li><p><code>roseType = "radius"</code>，在<code>e_pie</code>中设置此参数后可以画出南丁格尔玫瑰图，如下图中第三排。当每个扇区数据项对应的数值完全一致时，等同于普通的扇形饼图。</p></li>
+<li><p><code>center = c('20%', '20%')</code>，用于设置饼图中心点在整个图形容器中的位置，数组中的两个百分比取值范围均为[0%,100%]。第一个值设定的是左右方位，最左边是0%，最右边是100%。第二个值设定的是上下方位，最上边是0%，最下边是100%。</p></li>
+<li><p><code>color = '#FF6A6A'</code>，用于设置饼图中扇区的颜色。整段代码中第一个<code>e_pie()</code>函数中设定的颜色为全局调色盘，若后续绘制的饼图中不对颜色做出新的设定，那么默认引入全局调色盘。</p></li>
+<li><p><code>itemStyle = list( )</code>中可设置饼状图扇区的弧度，即花瓣的弧度</p>
+<ul>
+<li><code>borderRadius</code>，当上面的<code>radius</code>仅设定一个数值或百分比，且此参数也仅设定一个数值或百分比时，改变的是扇形饼图的外圈弧度，参见下图中第一排左一至左二；当上面的<code>radius</code>设定的数组中有两个大于0%的值，且此参数仍然仅设定一个数值或百分比时，同时改变环形饼图内圈及外圈的弧度，参见下图中第二排左一至左二；设定<code>borderRadius = c('0%','30%')</code>时表示仅改变环形饼图外圈的弧度，参见下图中第二排的左一及左三。</li>
+<li><code>borderColor</code>，设定的是饼状图扇区的描边颜色，参见第二排左四。</li>
+<li><code>borderWidth</code>，设定的是饼状图扇区的描边距离，即花瓣之间的间距，参见第一排左二、左三、左四。</li>
+</ul></li>
+</ul>
+<pre class="r"><code>library(echarts4r)
+
+df &lt;-
+  data.frame(
+    name = rep(&#39;A&#39;, 8),
+    value = c(rep(8, 8)),
+    value2 = c(rep(c(4, 5), 4))
+  )
+
+df |&gt;
+  e_charts(name) |&gt;
+  # 第一排 左一
+  e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;20%&#39;, &#39;20%&#39;), color = &#39;#FF6A6A&#39;) |&gt;
+  # 第一排 左二
+  e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;40%&#39;, &#39;20%&#39;), 
+          itemStyle = list( borderRadius = 30)) |&gt;
+  # 第二排 左三
+  e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;60%&#39;, &#39;20%&#39;), 
+    itemStyle = list( borderRadius = 30, borderColor = &#39;#fff&#39;, borderWidth = 2 )) |&gt;
+  # 第二排 左四
+  e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;80%&#39;, &#39;20%&#39;),
+    itemStyle = list( borderRadius = 30, borderColor = &#39;#fff&#39;, borderWidth = 10 )) |&gt;       
+  # 第二排 左一
+  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;20%&#39;, &#39;50%&#39;) ) |&gt;
+  # 第二排 左二
+  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;40%&#39;, &#39;50%&#39;), 
+    itemStyle = list( borderRadius = 30 )) |&gt;
+  # 第二排 左三
+  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;60%&#39;, &#39;50%&#39;), 
+    itemStyle = list( borderRadius = c(&#39;0%&#39;,&#39;30%&#39;))) |&gt;
+  # 第二排 左四
+  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;80%&#39;, &#39;50%&#39;), 
+    itemStyle = list( borderRadius = c(&#39;0%&#39;,&#39;30%&#39;), borderColor = &#39;#FFC1C1&#39;, borderWidth = 10)) |&gt;
+  # 第三排 左一
+  e_pie( value2, roseType = &quot;radius&quot; ,radius=&#39;30%&#39;, center = c(&#39;20%&#39;, &#39;80%&#39;)) |&gt;
+  # 第三排 左二
+  e_pie( value2, roseType = &quot;radius&quot; ,radius=c(&#39;10%&#39;,&#39;30%&#39;), center = c(&#39;40%&#39;, &#39;80%&#39;)) |&gt;
+  # 第三排 左三
+  e_pie( value2, roseType = &quot;radius&quot; ,radius=&#39;30%&#39;, center = c(&#39;60%&#39;, &#39;80%&#39;),
+    itemStyle = list( borderRadius = 30)) |&gt;
+  # 第三排 左四
+  e_pie( value2, roseType = &quot;radius&quot; ,radius=c(&#39;10%&#39;,&#39;30%&#39;), center = c(&#39;80%&#39;, &#39;80%&#39;),
+    itemStyle = list( borderRadius = c(&#39;10%&#39;,&#39;30%&#39;), borderColor = &#39;#FFC1C1&#39;, borderWidth = 10 )) |&gt;
+  e_labels(show = FALSE) |&gt; # 不显示数据标签
+  e_legend(show = FALSE)  # 不显示图例</code></pre>
+<div id="htmlwidget-1" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A"],"show":false,"type":"plain"},"series":[{"name":"value","type":"pie","radius":["0%","30%"],"center":["20%","20%"],"color":"#FF6A6A","data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value","type":"pie","radius":["0%","30%"],"center":["40%","20%"],"itemStyle":{"borderRadius":30},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value","type":"pie","radius":["0%","30%"],"center":["60%","20%"],"itemStyle":{"borderRadius":30,"borderColor":"#fff","borderWidth":2},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value","type":"pie","radius":["0%","30%"],"center":["80%","20%"],"itemStyle":{"borderRadius":30,"borderColor":"#fff","borderWidth":10},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value","type":"pie","radius":["10%","30%"],"center":["20%","50%"],"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value","type":"pie","radius":["10%","30%"],"center":["40%","50%"],"itemStyle":{"borderRadius":30},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value","type":"pie","radius":["10%","30%"],"center":["60%","50%"],"itemStyle":{"borderRadius":["0%","30%"]},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value","type":"pie","radius":["10%","30%"],"center":["80%","50%"],"itemStyle":{"borderRadius":["0%","30%"],"borderColor":"#FFC1C1","borderWidth":10},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","roseType":"radius","radius":"30%","center":["20%","80%"],"data":[{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","roseType":"radius","radius":["10%","30%"],"center":["40%","80%"],"data":[{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","roseType":"radius","radius":"30%","center":["60%","80%"],"itemStyle":{"borderRadius":30},"data":[{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","roseType":"radius","radius":["10%","30%"],"center":["80%","80%"],"itemStyle":{"borderRadius":["10%","30%"],"borderColor":"#FFC1C1","borderWidth":10},"data":[{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"},{"value":4,"name":"A"},{"value":5,"name":"A"}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="基础要点2花瓣颜色" class="section level1">
+<h1>基础要点2：花瓣颜色</h1>
+<p>设置花瓣颜色的基础要点有四点：渐变色、纹理填充、纯色，以及为不同的花瓣分配不同颜色。</p>
+<div id="渐变色" class="section level3">
+<h3>渐变色</h3>
+<p>若要将花瓣的颜色设置为渐变色，可参考 Apache Echarts 官网提供的配置项手册：<a href="https://echarts.apache.org/zh/option.html#color" class="uri">https://echarts.apache.org/zh/option.html#color</a>，渐变色有两种渐变方式：</p>
+<ul>
+<li><p><code>type = 'linear'</code>，线性渐变，类似直角坐标系可以划分出四个象限，可通过设定x0、y0、x2、y2等左、下、右、上四个方位来改变渐变的方向，比如仅设定<code>x0 = 0</code>且其他三个参数都为0时，表示从右到左渐变，仅设定<code>y0 = 1</code>其他三个都为0时，表示从下到上渐变。</p></li>
+<li><p><code>type = 'radial'</code>，径向渐变，如同在水中投入一粒石子，水面形成的波纹一圈圈逐渐向外扩散，颜色也如此由内到外渐变。类似极坐标系需要设定半径和角度，可设定三个参数圆心 x、y 和半径 r 来改变渐变的起点位置、半径长度。</p></li>
+</ul>
+<p>下图中的颜色设置得有点辣眼睛，请先做好心理准备。</p>
+<pre class="r"><code>df |&gt;
+  e_charts(name) |&gt;
+  e_pie(
+    value, # 左侧花瓣
+    radius = c(&quot;20%&quot;, &quot;60%&quot;),
+    center = c(&#39;30%&#39;, &#39;50%&#39;),
+    itemStyle = list(
+      borderRadius = c(&quot;0%&quot;, &quot;40%&quot;),
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 2,
+      color = list(
+        type = &#39;linear&#39;,
+        x = 0,
+        y = 1,
+        x2 = 0,
+        y2 = 0,
+        colorStops = list(list(offset = 0, color = &#39;#1E90FF&#39;), # 0%处的颜色
+                          list(offset = 1, color = &#39;#B22222&#39;) # 100%处的颜色
+                          ) ) ) ) |&gt; 
+      e_pie(
+        value, # 右侧花瓣
+        radius = c(&quot;20%&quot;, &quot;60%&quot;),
+        center = c(&#39;70%&#39;, &#39;50%&#39;),
+        itemStyle = list(
+          borderRadius = c(&quot;0%&quot;, &quot;40%&quot;),
+          borderColor = &#39;#fff&#39;,
+          borderWidth = 2,
+          color = list(
+            type = &#39;radial&#39;,
+            x = 0.5,
+            y = 0.5,
+            r = 0.5,
+            colorStops = list(list(offset = 0, color = &#39;#1E90FF&#39;), # 0%处的颜色
+                              list(offset = 1, color = &#39;#B22222&#39;) # 100%处的颜色
+                              ) ) ) ) |&gt;
+          e_labels(show = FALSE) |&gt;
+          e_legend(show = FALSE)</code></pre>
+<div id="htmlwidget-2" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A"],"show":false,"type":"plain"},"series":[{"name":"value","type":"pie","radius":["20%","60%"],"center":["30%","50%"],"itemStyle":{"borderRadius":["0%","40%"],"borderColor":"#fff","borderWidth":2,"color":{"type":"linear","x":0,"y":1,"x2":0,"y2":0,"colorStops":[{"offset":0,"color":"#1E90FF"},{"offset":1,"color":"#B22222"}]}},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value","type":"pie","radius":["20%","60%"],"center":["70%","50%"],"itemStyle":{"borderRadius":["0%","40%"],"borderColor":"#fff","borderWidth":2,"color":{"type":"radial","x":0.5,"y":0.5,"r":0.5,"colorStops":[{"offset":0,"color":"#1E90FF"},{"offset":1,"color":"#B22222"}]}},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="纹理填充" class="section level2">
+<h2>纹理填充</h2>
+<p>若要给花瓣设置填充的纹理，可参考 Apache Echarts 官网提供的配置项手册：<a href="https://echarts.apache.org/zh/option.html#aria.decal.decals.symbol" class="uri">https://echarts.apache.org/zh/option.html#aria.decal.decals.symbol</a>。填充的纹理通常由一些常见形状如圆形、三角形等组成，在 echarts4r 包中的写法是<code>e_aria(enabled = TRUE, decal = list(show = TRUE, decals = list( )))</code>，其中可设定的参数有如下几点。</p>
+<ul>
+<li><code>symbol</code>，作为纹理填充的图形形状，共有’circle’、‘rect’、‘roundRect’、‘triangle’、‘diamond’、‘pin’、‘arrow’、’none’等图案。</li>
+<li><code>color</code>，作为纹理填充的图形颜色。</li>
+<li><code>symbolSize</code>，作为纹理填充的图形大小，设置为0时等同于没有填充纹理。</li>
+<li><code>rotation</code>，作为纹理填充的图形可以旋转的角度。</li>
+</ul>
+<pre class="r"><code>df |&gt;
+  e_charts(name) |&gt;
+  e_pie(
+    value,
+    radius = c(&quot;20%&quot;, &quot;80%&quot;), #花瓣内圈、外圈弧度
+    color = &#39;#FF6A6A&#39;, # 花瓣的颜色
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;,&#39;50%&#39;), #花瓣描边的弧度
+      borderColor = &#39;#fff&#39;, # 花瓣描边颜色
+      borderWidth = 2 # 花瓣之间的距离
+    )
+  ) |&gt;
+  e_aria(enabled = TRUE,
+         decal = list(
+           show = TRUE,
+           decals = list(
+             symbol = &#39;triangle&#39;,
+             color = &#39;#fff&#39;,
+             symbolSize = 1,
+             rotation = 30
+           )
+         )) |&gt;
+  e_labels(show = FALSE) |&gt;
+  e_legend(show = FALSE)</code></pre>
+<div id="htmlwidget-3" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A"],"show":false,"type":"plain"},"series":[{"name":"value","type":"pie","radius":["20%","80%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","50%"],"borderColor":"#fff","borderWidth":2},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}}],"aria":{"enabled":true,"decal":{"show":true,"decals":{"symbol":"triangle","color":"#fff","symbolSize":1,"rotation":30}}}},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="纯色" class="section level2">
+<h2>纯色</h2>
+<p>承袭 Apache Echarts 的设定，echarts4r 包中的饼状图默认给每个数据项分配不同的颜色，即<code>e_charts</code>中输入的数据项有几个不同的值，便默认为饼状图中的扇区分配几种颜色。</p>
+<pre class="r"><code>df1 &lt;- data.frame(name = letters[1:8], value = rep(8, 8))
+
+df1 |&gt;
+  e_charts(name) |&gt;
+  e_pie(value) |&gt;
+  e_labels(show = FALSE) |&gt;
+  e_legend(show = FALSE)</code></pre>
+<div id="htmlwidget-4" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["a","b","c","d","e","f","g","h"],"show":false,"type":"plain"},"series":[{"name":"value","type":"pie","data":[{"value":8,"name":"a"},{"value":8,"name":"b"},{"value":8,"name":"c"},{"value":8,"name":"d"},{"value":8,"name":"e"},{"value":8,"name":"f"},{"value":8,"name":"g"},{"value":8,"name":"h"}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="给花瓣分配颜色" class="section level2">
+<h2>给花瓣分配颜色</h2>
+<p>除了可以通过改变数据项来改变饼状图的扇区配色以外，也可以直接在<code>e_pie()</code>中设定<code>color = ''</code>来改变整个饼状图的颜色，还可以通过<code>e_add()</code>函数来分配扇区的颜色，条件是需要引入一个为每个扇区分配好颜色的数组。具体的颜色设置可参考：<a href="https://www.sojson.com/rgb.html" class="uri">https://www.sojson.com/rgb.html</a>。下图中从左至右三个图的代码基本一致，区别只是<code>e_add('itemStyle', color = color1)</code>这段中从左至右分别写入<code>color = color1</code>、<code>color = color2</code>、<code>color = color3</code>。</p>
+<pre class="r"><code>df2 &lt;- data.frame(
+  name = rep(&#39;A&#39;, 8),
+  value = c(rep(8, 8)),
+  color1 = c(rep(&#39;#FF6A6A&#39;, 4), rep(&#39;#FF3030&#39;, 4)), # 左一：8瓣-2色-颜色分开
+  color2 = c(rep(c(&#39;#FF6A6A&#39;, &#39;#FF3030&#39;), 4)), # 左二：8瓣-2色-颜色交替
+  color3 = c(&#39;#FF6A6A&#39;, rep(&#39;#FF3030&#39;, 7)) # 左三：8瓣-2色-一瓣单色
+)
+
+df2 |&gt;
+  e_charts(name) |&gt;
+  e_pie(
+    value,
+    radius = c(&quot;20%&quot;, &quot;80%&quot;),
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;, &#39;50%&#39;),
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 2
+    )
+  ) |&gt;
+  e_add(&#39;itemStyle&#39;, color = color1) |&gt; # 引入分配的颜色
+  e_labels(show = FALSE) |&gt;
+  e_legend(show = FALSE)</code></pre>
+<div class="row">
+<div class="col-xs-4">
+<div id="htmlwidget-5" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A"],"show":false,"type":"plain"},"series":[{"name":"value","type":"pie","radius":["20%","80%"],"itemStyle":{"borderRadius":["0%","50%"],"borderColor":"#fff","borderWidth":2},"data":[{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="col-xs-4">
+<div id="htmlwidget-6" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A"],"show":false,"type":"plain"},"series":[{"name":"value","type":"pie","radius":["20%","80%"],"itemStyle":{"borderRadius":["0%","50%"],"borderColor":"#fff","borderWidth":2},"data":[{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="col-xs-4">
+<div id="htmlwidget-7" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A"],"show":false,"type":"plain"},"series":[{"name":"value","type":"pie","radius":["20%","80%"],"itemStyle":{"borderRadius":["0%","50%"],"borderColor":"#fff","borderWidth":2},"data":[{"value":8,"name":"A","itemStyle":{"color":"#FF6A6A"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}},{"value":8,"name":"A","itemStyle":{"color":"#FF3030"}}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+<div id="基础要点3多重花瓣" class="section level1">
+<h1>基础要点3：多重花瓣</h1>
+<p>掌握了以上两个基础要点后就可以用 echarts4r 包来绘制简单的单瓣花，而绘制重瓣花需要掌握嵌套和堆叠这两种方法。</p>
+<div id="改变花瓣边缘的形状" class="section level2">
+<h2>改变花瓣边缘的形状</h2>
+<p>在 echarts4r 包中可使用<code>e_data()</code>引入新数据来嵌套绘制出多个饼状图。需要注意的是，倘若在第一层的<code>radius</code>中设置的外圈半径大于第二层的内圈半径，两层饼状图的图案会重叠。</p>
+<p>下图中一共嵌套了三层饼图，参照第一小节中的说明，当第二层饼图的内外圈半径设置为<code>radius = c("20%", "80%")</code>，第三层的内外圈半径设置为<code>radius = c("70%", "90%")</code>时，相当于第二层和第三层在图形容器中的70%至80%处会重叠，第三层会覆盖第二层的部分区域，若同时将第三层的扇区颜色设置为白色，便可达到改变第一层花瓣边缘形状的效果。</p>
+<pre class="r"><code>flower1 &lt;- data.frame(name = &#39;A&#39;, value1 = 1)
+flower2 &lt;- data.frame(name2 = rep(&#39;B&#39;, 8),  value2 = rep(3, 8))
+flower3 &lt;- data.frame(name3 = rep(&#39;B&#39;, 24), value3 = rep(3, 24))
+
+flower1 |&gt;
+  e_charts(name) |&gt;
+  e_pie(value1, # 第一层 花蕊
+        radius = c(&quot;0%&quot;, &quot;20%&quot;),
+        color = &#39;#FF3030&#39;) |&gt;
+  e_data(flower2, value2) |&gt; # 引入第二层数据
+  e_pie(
+    value2, # 第二层 花瓣
+    radius = c(&quot;20%&quot;, &quot;80%&quot;),
+    color = &#39;#FF6A6A&#39;,
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;, &#39;50%&#39;),
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 5
+    )
+  ) |&gt;
+  e_data(flower3, value3) |&gt; # 引入第三层数据
+  e_pie(
+    value3, # 第三层 花瓣
+    radius = c(&quot;70%&quot;, &quot;90%&quot;),
+    #color = &#39;white&#39;, # 花瓣颜色设置为白色时不起作用
+    itemStyle = list(
+      color = &#39;white&#39;, # 花瓣颜色设置为白色
+      borderRadius = 40,
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 5
+    )
+  ) |&gt;
+  e_labels(show = FALSE) |&gt;
+  e_legend(show = FALSE)</code></pre>
+<div id="htmlwidget-8" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3"],"show":false,"type":"plain"},"series":[{"name":"value1","type":"pie","radius":["0%","20%"],"color":"#FF3030","data":[{"value":1,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","radius":["20%","80%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","50%"],"borderColor":"#fff","borderWidth":5},"data":[{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3}],"label":{"show":false,"position":"top"}},{"name":"value3","type":"pie","radius":["70%","90%"],"itemStyle":{"color":"white","borderRadius":40,"borderColor":"#fff","borderWidth":5},"data":[{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="嵌套多层各层颜色不同" class="section level2">
+<h2>嵌套多层–各层颜色不同</h2>
+<p>根据嵌套饼状图多层覆盖的特性，将第一、二、三层按照下层花瓣、上层花瓣、花蕊的顺序进行设置，如此便可以得到有多重花瓣的花。为了不使各层花瓣的不同颜色重叠，可将上层花瓣的扇区进行旋转，即在<code>e_pie()</code>中添加<code>startAngle</code>参数来设定起始角度，可填入数值的范围为[0, 360]。</p>
+<pre class="r"><code>flower1 &lt;- data.frame(name = rep(&#39;A&#39;, 16), value = rep(1, 16))
+flower2 &lt;- data.frame(name = rep(&#39;B&#39;, 16), value2 = rep(2, 16))
+flower3 &lt;- data.frame(name = &#39;A&#39;, value3 = 1)
+
+flower1 |&gt;
+  e_charts(name) |&gt;
+  e_pie(
+    value,  # 第一层 下层花瓣
+    radius = c(&#39;10%&#39;, &#39;90%&#39;),
+    color = &#39;#FF6A6A&#39;,
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;, &#39;30%&#39;),
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 12
+    )
+  ) |&gt;
+  e_data(flower2, value2) |&gt; # 引入第二层数据
+  e_pie(
+    value2,  # 第二层 上层花瓣
+    startAngle = 15, # 设定起始角度，旋转这层饼图
+    radius = c(&#39;10%&#39;, &#39;80%&#39;),
+    color = &#39;#FF3030&#39;,
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;, &#39;30%&#39;)
+    )
+  ) |&gt;
+  e_data(flower3, value3) |&gt; # 引入第三层数据
+  e_pie(value3,  # 第三层 花蕊
+        radius = &#39;9%&#39;, 
+        color = &#39;#FFA500&#39;) |&gt;
+  e_labels(show = FALSE) |&gt;
+  e_legend(show = FALSE)</code></pre>
+<div id="htmlwidget-9" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","2","1"],"show":false,"type":"plain"},"series":[{"name":"value","type":"pie","radius":["10%","90%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"#fff","borderWidth":12},"data":[{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"},{"value":1,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","startAngle":15,"radius":["10%","80%"],"color":"#FF3030","itemStyle":{"borderRadius":["0%","30%"]},"data":[{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2},{"value":2,"name":2}],"label":{"show":false,"position":"top"}},{"name":"value3","type":"pie","radius":"9%","color":"#FFA500","data":[{"value":1,"name":1}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="嵌套多层各层颜色相同" class="section level2">
+<h2>嵌套多层–各层颜色相同</h2>
+<p>在嵌套多层时，若每一层花瓣的颜色要设置成同一种颜色，那么最好同时设置每一层花瓣间距大于0，并且每隔一层设置一次该层花瓣旋转的起始角度。</p>
+<pre class="r"><code>flower1 &lt;- data.frame(name = rep(&#39;A&#39;, 8), value1 = rep(8, 8))
+flower2 &lt;- data.frame(name = rep(&#39;A&#39;, 8), value2 = rep(8, 8))
+flower3 &lt;- data.frame(name = rep(&#39;A&#39;, 8), value3 = rep(8, 8))
+flower4 &lt;- data.frame(name = rep(&#39;A&#39;, 8), value4 = rep(8, 8))
+flower5 &lt;- data.frame(name = &#39;A&#39;, value5 = 8)
+
+flower1 |&gt;
+  e_charts(name) |&gt;
+  e_pie(
+    value1, # 第一层
+    radius = c(&#39;10%&#39;, &#39;90%&#39;),
+    color = &#39;#FF6A6A&#39;,
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;, &#39;30%&#39;),
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 20 # 花瓣间距
+    )
+  ) |&gt;
+  e_data(flower2, value2) |&gt;
+  e_pie(
+    value2, # 第二层
+    radius = c(&#39;10%&#39;, &#39;80%&#39;),
+    startAngle = 25, # 设定本层起始角度
+    color = &#39;#FF6A6A&#39;,
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;, &#39;30%&#39;),
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 5 # 花瓣间距
+    )
+  ) |&gt;
+  e_data(flower3, value3) |&gt;
+  e_pie(
+    value3, # 第三层
+    radius = c(&#39;10%&#39;, &#39;70%&#39;),
+    color = &#39;#FF6A6A&#39;,
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;, &#39;30%&#39;),
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 5 # 花瓣间距
+    )
+  ) |&gt;
+  e_data(flower4, value4) |&gt;
+  e_pie(
+    value4, #第四层
+    radius = c(&#39;10%&#39;, &#39;60%&#39;),
+    startAngle = 25, # 设定本层起始角度
+    color = &#39;#FF6A6A&#39;,
+    itemStyle = list(
+      borderRadius = c(&#39;0%&#39;, &#39;30%&#39;),
+      borderColor = &#39;#fff&#39;,
+      borderWidth = 5 # 花瓣间距
+    )
+  ) |&gt;
+  e_data(flower5, value5) |&gt;
+  e_pie(value5, # 第五层
+        #这里直接在e_pie里面写color不生效，但是挪到itemStyle()里面去就可以了
+        radius = &#39;10%&#39;,
+        itemStyle = list(color = &#39;#FFA500&#39;)) |&gt;
+  e_labels(show = FALSE) |&gt;
+  e_legend(show = FALSE)</code></pre>
+<div id="htmlwidget-10" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-10">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8","8"],"show":false,"type":"plain"},"series":[{"name":"value1","type":"pie","radius":["10%","90%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"#fff","borderWidth":20},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","radius":["10%","80%"],"startAngle":25,"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"#fff","borderWidth":5},"data":[{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8}],"label":{"show":false,"position":"top"}},{"name":"value3","type":"pie","radius":["10%","70%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"#fff","borderWidth":5},"data":[{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8}],"label":{"show":false,"position":"top"}},{"name":"value4","type":"pie","radius":["10%","60%"],"startAngle":25,"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"#fff","borderWidth":5},"data":[{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8}],"label":{"show":false,"position":"top"}},{"name":"value5","type":"pie","radius":"10%","itemStyle":{"color":"#FFA500"},"data":[{"value":8,"name":8}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="堆叠多层" class="section level2">
+<h2>堆叠多层</h2>
+<p>如下图，也可使用极坐标系下的堆叠柱状图来达到重瓣花的效果。</p>
+<pre class="r"><code>data4 &lt;- data.frame(
+  name = rep(letters[1:24], 1),
+  value1 = rep(4, 24),
+  value2 = rep(4, 24)
+)
+
+data4 |&gt;
+  e_charts(name) |&gt;
+  e_polar() |&gt;
+  e_angle_axis(name, show = FALSE) |&gt; # 相当于把卷起来的x轴不展示
+  e_radius_axis(show = FALSE) |&gt; # 相当于把卷起来的y轴不展示
+  e_bar(value1, # 第一层
+        color = &#39;#FF6A6A&#39;,
+        stack = &#39;grp&#39;,
+        coord_system = &quot;polar&quot;) |&gt;
+  e_bar(value2, # 第二层
+        color = &#39;#FF3030&#39;,
+        stack = &#39;grp&#39;,
+        coord_system = &quot;polar&quot;) |&gt;
+  e_legend(show = FALSE) |&gt;
+  e_labels(show = FALSE)</code></pre>
+<div id="htmlwidget-11" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-11">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"polar":{"show":true},"angleAxis":{"show":false,"data":["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x"]},"radiusAxis":{"show":false},"legend":{"data":["value1","value2"],"show":false,"type":"plain"},"series":[{"data":[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],"name":"value1","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"polar","color":"#FF6A6A","stack":"grp","label":{"show":false,"position":"top"}},{"data":[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],"name":"value2","type":"bar","yAxisIndex":0,"xAxisIndex":0,"coordinateSystem":"polar","color":"#FF3030","stack":"grp","label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="画花" class="section level1">
+<h1>画花</h1>
+<p>在梳理了以上三个关于花瓣弧度、花瓣颜色、多重花瓣的基础要点后，接下来本文会将这些要点融合起来绘制一些花草的图案。由于本文作者缺乏一些配色方面的审美，也缺乏将现实三维世界中的花草实物抽象成二维世界中花草图案的能力，以下内容请谨慎观看。</p>
+<div id="银杏叶" class="section level2">
+<h2>银杏叶</h2>
+<p>画的基本思路：嵌套多层、改变花瓣边缘的形状、给花瓣分配颜色</p>
+<ol style="list-style-type: decimal">
+<li>第一层，通过改变数据项的数值大小，设定四个扇区，一个黄色，两个白色，一个黑色。</li>
+<li>第二层，略微覆盖第一层，所有扇区为白色，改变第一层花瓣边缘的形状。</li>
+<li>将扇形旋转，在<code>e_pie()</code>中添加<code>startAngle</code>参数来设定起始角度。</li>
+</ol>
+<div id="htmlwidget-12" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-12">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3"],"show":false,"type":"plain"},"series":[{"name":"value1","type":"pie","radius":["0%","90%"],"startAngle":180,"data":[{"value":4,"name":"A","itemStyle":{"color":"yellow"}},{"value":3,"name":"A","itemStyle":{"color":"white"}},{"value":0.1,"name":"A","itemStyle":{"color":"black"}},{"value":3,"name":"A","itemStyle":{"color":"white"}}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","radius":["75%","95%"],"color":"white","itemStyle":{"borderRadius":40,"borderColor":"#fff","borderWidth":5,"opacity":1},"data":[{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="向日葵" class="section level2">
+<h2>向日葵</h2>
+<p>画的基本思路：增加花蕊、纹理填充</p>
+<ol style="list-style-type: decimal">
+<li>第一层，花蕊，通过<code>e_aria()</code>设置贴花的纹理。</li>
+<li>第二层，花瓣，在<code>e_pie()</code>中设置<code>itemStyle = list(decal = list(symbolSize = 0))</code>，即贴花图案尺寸为0，去掉第一层中<code>e_aria()</code>造成的全局贴花的效果。</li>
+</ol>
+<div id="htmlwidget-13" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-13">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3","3"],"show":false,"type":"plain"},"series":[{"name":"value1","type":"pie","radius":["0%","40%"],"color":"#DAA520","data":[{"value":1,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","radius":["40%","60%"],"color":"#FFFF00","itemStyle":{"borderRadius":["0%","10%"],"borderColor":"#fff","borderWidth":1,"decal":{"symbolSize":0}},"data":[{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3},{"value":3,"name":3}],"label":{"show":false,"position":"top"}}],"aria":{"enabled":true,"decal":{"show":true,"decals":{"symbol":"triangle","color":"#fff","symbolSize":1,"rotation":90}}}},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="花纹" class="section level2">
+<h2>花纹</h2>
+<p>除了绘制与现实中花草形态相接近的图案，还可以参照<a href="https://www.vcg.com/creative-vectorgraph/huawen/">一些花纹图案</a>来画花纹。</p>
+<div class="row">
+<div class="col-xs-6">
+<div id="htmlwidget-14" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-14">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","5","5","5","5","5","5","5","5","5","5","5","5","5","5","5"],"show":false,"type":"plain"},"series":[{"name":"value1","type":"pie","radius":["20%","80%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"]},"data":[{"value":5,"name":"A"},{"value":5,"name":"A"},{"value":5,"name":"A"},{"value":5,"name":"A"},{"value":5,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","radius":["20%","40%"],"color":"white","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"#FF6A6A","borderWidth":20},"data":[{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5},{"value":5,"name":5}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="col-xs-6">
+<div id="htmlwidget-15" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-15">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A","8","8","8","8","8","8","8","8"],"show":false,"type":"plain"},"series":[{"name":"value1","type":"pie","radius":["20%","80%"],"color":"white","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"#FF6A6A","borderWidth":20},"data":[{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"},{"value":8,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","radius":["20%","60%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"white","borderWidth":0},"data":[{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8},{"value":8,"name":8}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-6">
+<div id="htmlwidget-16" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-16">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A","A","A","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","1","4"],"show":false,"type":"plain"},"series":[{"name":"value1","type":"pie","radius":["10%","40%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"white","borderWidth":0},"data":[{"value":10,"name":"A"},{"value":10,"name":"A"},{"value":10,"name":"A"},{"value":10,"name":"A"},{"value":10,"name":"A"},{"value":10,"name":"A"},{"value":10,"name":"A"},{"value":10,"name":"A"},{"value":10,"name":"A"},{"value":10,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","radius":["45%","65%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"white","borderWidth":1},"data":[{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1}],"label":{"show":false,"position":"top"}},{"name":"value3","type":"pie","radius":["70%%","80%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["30%","30%"],"borderColor":"white","borderWidth":1},"data":[{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1}],"label":{"show":false,"position":"top"}},{"name":"value4","type":"pie","radius":["85%%","90%"],"color":"#FF6A6A","data":[{"value":4,"name":4}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="col-xs-6">
+<div id="htmlwidget-17" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
+<script type="application/json" data-for="htmlwidget-17">{"x":{"theme":"","tl":false,"draw":true,"renderer":"canvas","events":[],"buttons":[],"opts":{"legend":{"data":["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","1","1","1","1","1","1","1","1","1","1","1","1","1"],"show":false,"type":"plain"},"series":[{"name":"value1","type":"pie","roseType":"radius","radius":["10%","80%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","30%"],"borderColor":"white","borderWidth":1},"data":[{"value":2,"name":"A"},{"value":3,"name":"A"},{"value":4,"name":"A"},{"value":3,"name":"A"},{"value":2,"name":"A"},{"value":3,"name":"A"},{"value":4,"name":"A"},{"value":3,"name":"A"},{"value":2,"name":"A"},{"value":3,"name":"A"},{"value":4,"name":"A"},{"value":3,"name":"A"},{"value":2,"name":"A"},{"value":3,"name":"A"},{"value":4,"name":"A"},{"value":3,"name":"A"},{"value":2,"name":"A"},{"value":3,"name":"A"},{"value":4,"name":"A"},{"value":3,"name":"A"},{"value":2,"name":"A"},{"value":3,"name":"A"},{"value":4,"name":"A"},{"value":3,"name":"A"},{"value":2,"name":"A"},{"value":3,"name":"A"},{"value":4,"name":"A"},{"value":3,"name":"A"},{"value":2,"name":"A"},{"value":3,"name":"A"},{"value":4,"name":"A"},{"value":3,"name":"A"}],"label":{"show":false,"position":"top"}},{"name":"value2","type":"pie","radius":["20%","40%"],"color":"#FF6A6A","itemStyle":{"borderRadius":["0%","40%"],"borderColor":"white","borderWidth":1},"data":[{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1},{"value":1,"name":1}],"label":{"show":false,"position":"top"}},{"name":"value3","type":"pie","radius":"8%","data":[{"value":1,"name":1}],"label":{"show":false,"position":"top"}}]},"dispose":true},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+<div id="结尾" class="section level1">
+<h1>结尾</h1>
+<p>与自然界中的各种好看的花草形态相比，用 echarts4r 包画花会有许多限制。通过改变扇形饼图或环形饼图中各区块的圆角弧度来画花瓣，本质上相当于改变一条只有一个折角的折线的弯曲度使之变得更圆，但是无法增加一个新的折角，因此难以直接绘制出如莲花花瓣那样中间圆润而边缘尖锐的形状。</p>
+<p>在 R 语言中除了本文使用的 echarts4r 可以用来画花，还有许多其他包或绘图系统也可以实现。比如本文中“改变花瓣边缘的形状”所绘制的图案，坛友 tctcab <a href="https://d.cosx.org/d/423132-echarts4r/3">便用 ggplot2 绘制出来</a>。</p>
+</div>
