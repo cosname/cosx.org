@@ -1505,7 +1505,8 @@ e_arrange(
   e22,
   e23,
   e24,
-  cols = 4
+  cols = 4,
+  rows = 6
 )
 ```
 
@@ -1875,7 +1876,8 @@ e_arrange(
   e22,
   e23,
   e24,
-  cols = 4
+  cols = 4,
+  rows = 6
 )
 ```
 
