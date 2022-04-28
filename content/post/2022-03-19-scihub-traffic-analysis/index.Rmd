@@ -35,7 +35,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 
 Sci-Hub 这个网站的神奇之处在于，只要是网站数据库中收录了的文献，那么只需要输入文献相关的 DOI、PMID 或者直接链接就可以看到文献内容。Sci-Hub 网站的文献是完全免费的，它建立的目标是**to remove all barriers in the way of science（消除科学前进之路上的所有壁垒）**。网站上目前公开了三个时间段的下载日志数据。第一个是2011年9月22日开始到2013年10月14日结束[^1]的 Sci-Hub 日志，一共有4,728,537条记录，当时下载量第一的国家是俄罗斯，其下载量有1,491,679，而当时 Sci-Hub 在中国还鲜为人知，所以中国的总下载量仅82,634，当年为了保护 Sci-Hub，所有来自美国的访问都被阻止。第二个是2015年9月1日开始到2016年2月29日结束[^2]的 Sci-Hub 日志，一共有27,819,965条记录（约2.7千万条）。第三个是2017年[^3]的 Sci-Hub 日志，一共有150,875,862条记录（约1.5亿条）。
 
-```{r}
+```{r,eval=FALSE}
 library(data.table)
 library(echarts4r)
 
@@ -76,7 +76,7 @@ data$country_city <- paste(data$country, data$city, sep = "-")
 
 data[!is.na(lon_median), ] |>
   e_charts(lon_median) |>
-  e_geo(roam = TRUE,
+  e_geo(roam = FALSE,
         boundingCoords = list(c(-176, -54),
                               c(179, 72))) |>
   e_scatter(
@@ -152,6 +152,8 @@ data[!is.na(lon_median), ] |>
 -   都有明显的周期性波动。
 
 ```{r}
+library(data.table)
+library(echarts4r)
 data1 <- fread("data/cn_by_day.csv")
 data1$date <- as.Date(data1$date)
 
