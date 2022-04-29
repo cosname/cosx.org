@@ -89,6 +89,11 @@ div.rmdinfo::before {
   margin-bottom: 0.25em;
 }
 
+.full-width {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
 figure {
   text-align: center;
 }
@@ -117,8 +122,6 @@ knitr::opts_chunk$set(
      echo = TRUE,
  collapse = TRUE
 )
-# library(latticeExtra) 
-# latticeExtra 和 ggplot2 在函数 layer 上冲突
 ```
 
 
@@ -945,7 +948,9 @@ mtext(text = "数据源：美国人口调查局", side = 1, adj = 0)
 ```
 
 
+::: {.full-width}
 ![(\#fig:us-nc-income) 北卡罗来纳州普查水平下家庭收入中位数的空间分布](img/us-nc-income.png){.full}
+:::
 
 地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 **ggplot2** 有些吃不消，接下来以 **ggplot2** 配合 **sf** 包，利用 **sf** 包内置的地图数据集，将各个数据指标从社区上卷到各个城镇。
 

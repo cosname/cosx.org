@@ -29,28 +29,28 @@ description: "专题地图应用广泛，特别是展示统计年鉴数据，在
 
 <div id="TOC">
 <ul>
-<li><a href="#本文概览">本文概览</a></li>
-<li><a href="#单变量情形">单变量情形</a>
+<li><a href="#本文概览" id="toc-本文概览">本文概览</a></li>
+<li><a href="#单变量情形" id="toc-单变量情形">单变量情形</a>
 <ul>
-<li><a href="#美国各城镇的年平均癌症死亡率分布">美国各城镇的年平均癌症死亡率分布</a>
+<li><a href="#美国各城镇的年平均癌症死亡率分布" id="toc-美国各城镇的年平均癌症死亡率分布">美国各城镇的年平均癌症死亡率分布</a>
 <ul>
-<li><a href="#maps">maps</a></li>
-<li><a href="#latticeextra">latticeExtra</a></li>
-<li><a href="#ggplot2">ggplot2</a></li>
-<li><a href="#tmap">tmap</a></li>
-<li><a href="#sf">sf</a></li>
-<li><a href="#ggplot2-sf">ggplot2 + sf</a></li>
-<li><a href="#mapsf">mapsf</a></li>
+<li><a href="#maps" id="toc-maps">maps</a></li>
+<li><a href="#latticeextra" id="toc-latticeextra">latticeExtra</a></li>
+<li><a href="#ggplot2" id="toc-ggplot2">ggplot2</a></li>
+<li><a href="#tmap" id="toc-tmap">tmap</a></li>
+<li><a href="#sf" id="toc-sf">sf</a></li>
+<li><a href="#ggplot2-sf" id="toc-ggplot2-sf">ggplot2 + sf</a></li>
+<li><a href="#mapsf" id="toc-mapsf">mapsf</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#多变量情形">多变量情形</a>
+<li><a href="#多变量情形" id="toc-多变量情形">多变量情形</a>
 <ul>
-<li><a href="#美国北卡州家庭收入中位数与白人占比的空间相关性">美国北卡州家庭收入中位数与白人占比的空间相关性</a></li>
+<li><a href="#美国北卡州家庭收入中位数与白人占比的空间相关性" id="toc-美国北卡州家庭收入中位数与白人占比的空间相关性">美国北卡州家庭收入中位数与白人占比的空间相关性</a></li>
 </ul></li>
-<li><a href="#本文小结">本文小结</a></li>
-<li><a href="#未来展望">未来展望</a></li>
-<li><a href="#环境信息">环境信息</a></li>
-<li><a href="#参考文献">参考文献</a></li>
+<li><a href="#本文小结" id="toc-本文小结">本文小结</a></li>
+<li><a href="#未来展望" id="toc-未来展望">未来展望</a></li>
+<li><a href="#环境信息" id="toc-环境信息">环境信息</a></li>
+<li><a href="#参考文献" id="toc-参考文献">参考文献</a></li>
 </ul>
 </div>
 
@@ -114,6 +114,11 @@ div.rmdinfo::before {
   font-size: 1.1em;
   font-weight: bold;
   margin-bottom: 0.25em;
+}
+
+.full-width {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 figure {
@@ -987,9 +992,11 @@ plot(us_nc_tract_2019[&quot;medInc&quot;],
 # 区县边界
 plot(st_geometry(nc_county_map), border = &quot;white&quot;)
 mtext(text = &quot;数据源：美国人口调查局&quot;, side = 1, adj = 0)</code></pre>
+<div class="full-width">
 <div class="figure"><span style="display:block;" id="fig:us-nc-income"></span>
 <img src="img/us-nc-income.png" class="full" alt="" />
 <p class="caption">图 12:  北卡罗来纳州普查水平下家庭收入中位数的空间分布</p>
+</div>
 </div>
 <p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，利用 <strong>sf</strong> 包内置的地图数据集，将各个数据指标从社区上卷到各个城镇。</p>
 <pre class="r"><code># 加载白人占比、收入数据
@@ -1122,13 +1129,13 @@ ggdraw() +
 # 
 # Package version:
 #   biscale_0.2.0       blogdown_1.9        cowplot_1.1.1      
-#   ggplot2_3.3.5       grid_4.2.0          knitr_1.38         
+#   ggplot2_3.3.5       grid_4.2.0          knitr_1.39         
 #   lattice_0.20-45     latticeExtra_0.6-29 mapproj_1.2.8      
-#   maps_3.4.0          mapsf_0.4.0         rmarkdown_2.13     
+#   maps_3.4.0          mapsf_0.4.0         rmarkdown_2.14     
 #   sf_1.0-7            tidycensus_1.2.1    tmap_3.3-3         
 #   usmapdata_0.1.0    
 # 
-# Pandoc version: 2.17.1.1
+# Pandoc version: 2.18
 # 
 # Hugo version: 0.91.2</code></pre>
 </div>
