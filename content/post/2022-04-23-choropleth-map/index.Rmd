@@ -175,9 +175,6 @@ knitr::kable(us_std_pop, format = "markdown", caption = "1940-2000 年美国标�
 ```
 
 
-表\@ref(tab:us-std-pop) 美国 60 年来的人口结构变化。
-
-
 年龄调整的比率（Age-adjusted Rates）的定义详见[网站](https://seer.cancer.gov/seerstat/tutorials/aarates/definition.html)，它是一个根据年龄调整的加权平均数，权重根据年龄段人口在标准人口中的比例来定，一个包含年龄 $x$ 到年龄 $y$ 的分组，其年龄调整的比率计算公式如下：
 
 $$
@@ -266,7 +263,7 @@ ggplot(data = alabama_us_cancer_rates) +
 分析和展示地理信息数据是一项常规任务，约 30 年前，Richard A. Becker 等为 S 语言引入地理可视化，特别是本文介绍的专题地图，以及简单的区域面积和区域中心的计算能力[@Becker1993;@Becker1995]，而后到了 2003年，Ray Brownrigg、Thomas P Minka 和 Alex Deckmyn 等将其引入 R 语言社区并持续维护至今[@maps]。除了最基础的 **maps** 包，还有坐标投影 **mapproj** 包[@mapproj]，以及提供更多地图数据的 **mapdata** 包[@mapdata]。那个时候，因缺乏一些基础工具，在地图数据获取、空间数据操作和可视化方面都不太容易，仅用这些能做到下图\@ref(fig:us-cancer-rates-maps)已属不易。
 
 ```{r us-cancer-rates-maps}
-#| fig.cap="1999-2003 年美国各个城镇的年平均癌症死亡率",
+#| fig.cap="1999-2003 年美国各个城镇的年平均癌症死亡率分布",
 #| fig.width=8,
 #| fig.height=10,
 #| fig.align="center",
@@ -353,7 +350,7 @@ match(x = c("A", "B"), table = c("C", "A", "D"))
 **maps** 包是基于 Base R 绘图系统的，以线和多边形为基础，辅以颜色填充，还没有任何分层绘图的概念，Deepayan Sarkar 将其引入新的 Trellis（栅格）图形系统，这就有了 **latticeExtra** 包 [@latticeExtra]，它是以 **lattice** 包[@Sarkar2008]为基础的，特别适合多元数据可视化，不管数据是「宽格式」还是「长格式」都能轻松应对，既保留了 Base R 那种精细操作图形元素的能力，也引入图层面板的概念。如图\@ref(fig:us-cancer-rates-lattice)，在代码形式上将所有的操作都集于一身，没有严格的分层绘图，保留更大的灵活性的代价是提升了复杂性。
 
 ```{r us-cancer-rates-lattice}
-#| fig.cap="1999-2003 年美国各个城镇的年平均癌症死亡率",
+#| fig.cap="1999-2003 年美国各个城镇的年平均癌症死亡率分布",
 #| fig.width=8,
 #| fig.height=10,
 #| fig.align="center",
@@ -863,6 +860,8 @@ mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright",
 # 加载收入数据
 load(file = "data/nc_race_income.RData")
 # 地图数据
+# 读取数据，且读取后不要转化为 tibble 数据类型
+nc_county_map <- read_sf(system.file("gpkg/nc.gpkg", package = "sf"), as_tibble = FALSE)
 us_nc_tract <- readRDS(file = "data/us_nc_tract.rds")
 # 合并地图数据和收入数据
 us_nc_tract_2019 <- merge(x = us_nc_tract, y = nc_tract_race_income, by = "GEOID")
@@ -873,12 +872,12 @@ us_nc_tract_2019 <- within(us_nc_tract_2019, {
 })
 # 收入分布
 plot(us_nc_tract_2019["medInc"],
-  pal = viridisLite::plasma,
+  pal = viridisLite::plasma, reset = FALSE,
   breaks = c(0:10, 15, 20, 25) * 10000,
   border = "gray", main = "", lwd = 0.25
 )
 # 区县边界
-plot(st_geometry(nc_county_map), border = "white")
+plot(st_geometry(nc_county_map), border = "#CCCCCC40", add = TRUE)
 mtext(text = "数据源：美国人口调查局", side = 1, adj = 0)
 ```
 

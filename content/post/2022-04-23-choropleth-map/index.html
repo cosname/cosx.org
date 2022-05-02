@@ -414,7 +414,6 @@ div.img {
 </tr>
 </tbody>
 </table>
-<p>表<a href="#tab:us-std-pop">1</a> 美国 60 年来的人口结构变化。</p>
 <p>年龄调整的比率（Age-adjusted Rates）的定义详见<a href="https://seer.cancer.gov/seerstat/tutorials/aarates/definition.html">网站</a>，它是一个根据年龄调整的加权平均数，权重根据年龄段人口在标准人口中的比例来定，一个包含年龄 <span class="math inline">\(x\)</span> 到年龄 <span class="math inline">\(y\)</span> 的分组，其年龄调整的比率计算公式如下：</p>
 <p><span class="math display">\[
 aarate_{x-y} = \sum_{i=x}^{y}\Big[ \big( \frac{count_i}{pop_i} \big)  \times \big( \frac{stdmil_i}{\sum_{j=x}^{y} stdmil_j} \big) \times 100000 \Big]
@@ -518,9 +517,9 @@ legend(&quot;bottomright&quot;,
   horiz = FALSE, fill = c(colors, &quot;grey80&quot;), cex = 0.85, xjust = 0.5
 )</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-maps"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-maps-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-maps-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 2: 1999-2003 年美国各个城镇的年平均癌症死亡率
+图 2: 1999-2003 年美国各个城镇的年平均癌症死亡率分布
 </p>
 </div>
 <p>在数据操作方面，麻烦的是建立数据指标和各个地理区域的映射，上面反复用到函数 <code>match()</code>，Base R 有很多这样短小精悍的函数。下面简单介绍一下以助理解，函数 <code>match()</code> 返回一个向量，向量的长度与参数 x 一致，向量的元素是整型的，表示参数 x 中的元素出现在参数 table 中的位置，下面是三个小示例：</p>
@@ -600,9 +599,9 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
     lty = 1, lwd = 0.2, col = &quot;white&quot;
   ))</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-lattice"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-lattice-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-lattice-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 3: 1999-2003 年美国各个城镇的年平均癌症死亡率
+图 3: 1999-2003 年美国各个城镇的年平均癌症死亡率分布
 </p>
 </div>
 <p>用 <strong>lattice</strong> 包绘图往往可以一个函数搞定，参数非常多，都放在一起，这和 Base R 的绘图函数类似，也同时提供全局图形参数控制，但似乎更加复杂。下面谈几个细节：</p>
@@ -930,6 +929,8 @@ mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quo
 <pre class="r"><code># 加载收入数据
 load(file = &quot;data/nc_race_income.RData&quot;)
 # 地图数据
+# 读取数据，且读取后不要转化为 tibble 数据类型
+nc_county_map &lt;- read_sf(system.file(&quot;gpkg/nc.gpkg&quot;, package = &quot;sf&quot;), as_tibble = FALSE)
 us_nc_tract &lt;- readRDS(file = &quot;data/us_nc_tract.rds&quot;)
 # 合并地图数据和收入数据
 us_nc_tract_2019 &lt;- merge(x = us_nc_tract, y = nc_tract_race_income, by = &quot;GEOID&quot;)
@@ -940,12 +941,12 @@ us_nc_tract_2019 &lt;- within(us_nc_tract_2019, {
 })
 # 收入分布
 plot(us_nc_tract_2019[&quot;medInc&quot;],
-  pal = viridisLite::plasma,
+  pal = viridisLite::plasma, reset = FALSE,
   breaks = c(0:10, 15, 20, 25) * 10000,
   border = &quot;gray&quot;, main = &quot;&quot;, lwd = 0.25
 )
 # 区县边界
-plot(st_geometry(nc_county_map), border = &quot;white&quot;)
+plot(st_geometry(nc_county_map), border = &quot;#CCCCCC40&quot;, add = TRUE)
 mtext(text = &quot;数据源：美国人口调查局&quot;, side = 1, adj = 0)</code></pre>
 <div class="full-width">
 <div class="figure"><span style="display:block;" id="fig:us-nc-income"></span>
