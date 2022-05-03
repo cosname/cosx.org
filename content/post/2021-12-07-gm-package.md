@@ -4,7 +4,7 @@ date: '2021-12-07'
 author:
   - 毛任飞
 categories:
-  - 软件工具
+  - 统计软件
 tags:
   - R 语言
   - gm
