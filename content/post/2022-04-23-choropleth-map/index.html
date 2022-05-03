@@ -153,7 +153,7 @@ div.img {
 <h1>单变量情形</h1>
 <div id="美国各城镇的年平均癌症死亡率分布" class="section level2">
 <h2>美国各城镇的年平均癌症死亡率分布</h2>
-<p>下面以 <a href="https://latticeextra.r-forge.r-project.org/"><strong>latticeExtra</strong> 包</a><span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自美国<a href="https://statecancerprofiles.cancer.gov/">美国国家癌症研究所</a>（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国<a href="https://seer.cancer.gov/stdpopulations/stdpop.19ages.html">标准人口年龄分组</a>调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的<strong>美国标准人口年龄分组</strong>换算。因<strong>latticeExtra</strong> 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。</p>
+<p>下面以 <a href="https://latticeextra.r-forge.r-project.org/"><strong>latticeExtra</strong> 包</a><span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自<a href="https://statecancerprofiles.cancer.gov/">美国国家癌症研究所</a>（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国<a href="https://seer.cancer.gov/stdpopulations/stdpop.19ages.html">标准人口年龄分组</a>调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的<strong>美国标准人口年龄分组</strong>换算。因<strong>latticeExtra</strong> 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。</p>
 <p>人口数每年都会变的，为使各年数据指标可比，人口划分就保持一致，表<a href="#tab:us-std-pop">1</a> 展示 1940-2000 年各个年龄段（共19个年龄组）的标准人口数，各个年龄段的普查人口数换算成年龄调整的标准人口数，换算公式为：</p>
 <p><span class="math display">\[
 某年龄段标准人口数 = 某年龄段普查人口数 / 总普查人口数 * 1000000.
@@ -411,7 +411,7 @@ div.img {
 </tr>
 </tbody>
 </table>
-<p>年龄调整的比率（Age-adjusted Rates）的定义详见<a href="https://seer.cancer.gov/seerstat/tutorials/aarates/definition.html">网站</a>，它是一个根据年龄调整的加权平均数，权重根据年龄段人口在标准人口中的比例来定，一个包含年龄 <span class="math inline">\(x\)</span> 到年龄 <span class="math inline">\(y\)</span> 的分组，其年龄调整的比率计算公式如下：</p>
+<p>年龄调整的比率（Age-adjusted Rates）的定义详见<a href="https://seer.cancer.gov/seerstat/tutorials/aarates/definition.html">NCI 网站</a>，它是一个根据年龄调整的加权平均数，权重根据年龄段人口在标准人口中的比例来定，一个包含年龄 <span class="math inline">\(x\)</span> 到年龄 <span class="math inline">\(y\)</span> 的分组，其年龄调整的比率计算公式如下：</p>
 <p><span class="math display">\[
 aarate_{x-y} = \sum_{i=x}^{y}\Big[ \big( \frac{count_i}{pop_i} \big)  \times \big( \frac{stdmil_i}{\sum_{j=x}^{y} stdmil_j} \big) \times 100000 \Big]
 \]</span></p>
@@ -439,9 +439,9 @@ subset(x = USCancerRates, subset = state == &quot;Alabama&quot; &amp; county == 
 # [1] 401</code></pre>
 <p>而美国国家癌症研究所给的置信带更宽，更保守一些，显然这里面的算法没这么简单。以阿拉巴马州为例，将所有的城镇死亡率及其置信区间绘制出来，如图<a href="#fig:alabama-ci-rank">1</a>所示，整体来说，偏离置信区间中心都不太远。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:alabama-ci-rank"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/alabama-ci-rank-1.png" alt="1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率 CI Rank" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/alabama-ci-rank-1.png" alt="1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率" width="768" />
 <p class="caption">
-图 1: 1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率 CI Rank
+图 1: 1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率
 </p>
 </div>
 <p>不难看出，女性癌症死亡率整体上低于男性，且各个地区的死亡率有明显差异。NCI <a href="https://statecancerprofiles.cancer.gov/confidenceintervals.html">网站</a>仅对置信区间的统计意义给予解释，这跟统计学课本上没有太多差别，没有提供具体的计算过程。可以推断的是必然使用了泊松、伽马一类的偏态分布来刻画死亡人数的分布，疑问尚未解开，欢迎大家讨论。</p>
@@ -1079,7 +1079,7 @@ ggdraw() +
 # 
 # Package version:
 #   biscale_0.2.0       blogdown_1.9        cowplot_1.1.1      
-#   ggplot2_3.3.5       grid_4.2.0          knitr_1.39         
+#   ggplot2_3.3.6       grid_4.2.0          knitr_1.39         
 #   lattice_0.20-45     latticeExtra_0.6-29 mapproj_1.2.8      
 #   maps_3.4.0          mapsf_0.4.0         rmarkdown_2.14     
 #   sf_1.0-7            tidycensus_1.2.1    tmap_3.3-3         

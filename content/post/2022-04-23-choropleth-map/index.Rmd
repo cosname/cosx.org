@@ -156,7 +156,7 @@ knitr::opts_chunk$set(
 
 ## 美国各城镇的年平均癌症死亡率分布
 
-下面以 [**latticeExtra** 包](https://latticeextra.r-forge.r-project.org/)[@latticeExtra]内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自美国[美国国家癌症研究所](https://statecancerprofiles.cancer.gov/)（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国[标准人口年龄分组](https://seer.cancer.gov/stdpopulations/stdpop.19ages.html)调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的**美国标准人口年龄分组**换算。因**latticeExtra** 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。
+下面以 [**latticeExtra** 包](https://latticeextra.r-forge.r-project.org/)[@latticeExtra]内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自[美国国家癌症研究所](https://statecancerprofiles.cancer.gov/)（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国[标准人口年龄分组](https://seer.cancer.gov/stdpopulations/stdpop.19ages.html)调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的**美国标准人口年龄分组**换算。因**latticeExtra** 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。
 
 人口数每年都会变的，为使各年数据指标可比，人口划分就保持一致，表\@ref(tab:us-std-pop) 展示 1940-2000 年各个年龄段（共19个年龄组）的标准人口数，各个年龄段的普查人口数换算成年龄调整的标准人口数，换算公式为：
 
@@ -178,7 +178,7 @@ knitr::kable(us_std_pop, format = "markdown", caption = "1940-2000 年美国标�
 ```
 
 
-年龄调整的比率（Age-adjusted Rates）的定义详见[网站](https://seer.cancer.gov/seerstat/tutorials/aarates/definition.html)，它是一个根据年龄调整的加权平均数，权重根据年龄段人口在标准人口中的比例来定，一个包含年龄 $x$ 到年龄 $y$ 的分组，其年龄调整的比率计算公式如下：
+年龄调整的比率（Age-adjusted Rates）的定义详见[NCI 网站](https://seer.cancer.gov/seerstat/tutorials/aarates/definition.html)，它是一个根据年龄调整的加权平均数，权重根据年龄段人口在标准人口中的比例来定，一个包含年龄 $x$ 到年龄 $y$ 的分组，其年龄调整的比率计算公式如下：
 
 $$
 aarate_{x-y} = \sum_{i=x}^{y}\Big[ \big( \frac{count_i}{pop_i} \big)  \times \big( \frac{stdmil_i}{\sum_{j=x}^{y} stdmil_j} \big) \times 100000 \Big]
@@ -215,7 +215,7 @@ qnorm(p = 1 - 0.05 / 2)
 而美国国家癌症研究所给的置信带更宽，更保守一些，显然这里面的算法没这么简单。以阿拉巴马州为例，将所有的城镇死亡率及其置信区间绘制出来，如图\@ref(fig:alabama-ci-rank)所示，整体来说，偏离置信区间中心都不太远。
 
 ```{r alabama-ci-rank}
-#| fig.cap="1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率 CI Rank",
+#| fig.cap="1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率",
 #| fig.width=8,
 #| fig.height=10,
 #| fig.align="center",
@@ -237,15 +237,11 @@ us_cancer_rates <- reshape(
   direction = "long"
 )
 alabama_us_cancer_rates = subset(x = us_cancer_rates, subset = state == "Alabama")
-alabama_us_cancer_rates$id = rep(1:(nrow(alabama_us_cancer_rates) / 2), 2)
 library(ggplot2)
-ggplot(data = alabama_us_cancer_rates) +
-  geom_segment(
-    aes(x = LCL95, xend = UCL95, y = id, yend = id, color = sex)
-  ) +
-  geom_point(aes(x = rate, y = id, color = sex), size = 2) +
-  scale_y_continuous() +
-  labs(x = "癌症死亡率", color = "性别", y = "城镇") +
+ggplot(data = alabama_us_cancer_rates, aes(x = reorder(county, rate), y = rate, colour = sex)) +
+  geom_pointrange(aes(ymin = LCL95, ymax = UCL95)) +
+  coord_flip() +
+  labs(x = "城镇", y = "癌症死亡率", colour = "性别") +
   theme_minimal()
 ```
 
