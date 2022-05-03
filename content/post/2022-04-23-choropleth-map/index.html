@@ -144,19 +144,16 @@ div.img {
 <h1>本文概览</h1>
 <p>空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的商业 BI 工具<a href="https://www.tableau.com/zh-cn/solutions/maps">Tableau</a>，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图，英文一般为<a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a>，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了<a href="https://zhfw.tianditu.gov.cn/">专题图层服务</a>，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，专题地图用于展示各类指标<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。</p>
 <p>接下来，本文分四个部分展开介绍专题地图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
+<p>单变量情形中以 <strong>latticeExtra</strong> 包内置的数据集 USCancerRates 为例，以专题地图形式展示美国 1999-2003 年度各城镇的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制专题地图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包、<strong>tmap</strong> 包、<strong>sf</strong> 包和 <strong>mapsf</strong> 包，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
+<p>多变量情形中以美国人口统计局发布的调查数据为基础，分析北卡罗来纳州各区县普查粒度的家庭收入中位数与白人占比的空间相关性。先分别以单变量的专题地图描述各个普查区域里家庭收入中位数、白人占比的空间分布，接着和二元变量的专题地图形成对比，展示相关性的空间分布。</p>
+<p>本文小结部分总结了 7 种绘图方案的情况，提炼了其间的关联关系，一些绘图经验，希望帮助读者加深理解和学习。</p>
+<p>未来展望部分从应用场景和绘图技术方面继续提供一些示例，供读者继续探索。</p>
 </div>
 <div id="单变量情形" class="section level1">
 <h1>单变量情形</h1>
-<p>本文以地区分布图为例，详细介绍 R 语言在绘制地区分布图中的探索和实践，读者可取其共性迁移至其它绘图场景。下面围绕 R 语言社区比较成熟的三套绘图工具 Base R、<strong>lattice</strong> 和 <strong>ggplot2</strong> 展开，它们代表三种绘图时的思考方式：</p>
-<ul>
-<li>Base R 提供了泛型函数 <code>plot()</code> 支持各类数据对象，快速出图，若深度定制，需要解构，理解点、线、多边形、坐标轴、刻度线、图例、字体、颜色、文本、边空、布局等一系列基础要素。《现代统计图形》<span class="citation">(<a href="#ref-Zhao2021" role="doc-biblioref">赵鹏, 谢益辉, and 黄湘云 2021</a>)</span> 对此有详细的阐述，可做帮助手册。</li>
-<li><strong>lattice</strong> 在 <strong>grid</strong> 图形系统的基础上构建了一套易于使用的高级数据可视化函数，同时支持复杂的非标准的自定义绘图需求。《lattice: Multivariate Data Visualization with R》<span class="citation">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span> 详细全面地阐述了一元到多元数据的可视化方法，各个函数的使用细节，可做帮助手册。</li>
-<li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立起数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
-</ul>
-<p>在掌握基础的一些工具后，培养审美能力最重要方式就是多看，然后打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
 <div id="美国各城镇的年平均癌症死亡率分布" class="section level2">
 <h2>美国各城镇的年平均癌症死亡率分布</h2>
-<p>接下来，以 <a href="https://latticeextra.r-forge.r-project.org/"><strong>latticeExtra</strong> 包</a><span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自美国<a href="https://statecancerprofiles.cancer.gov/">美国国家癌症研究所</a>（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国<a href="https://seer.cancer.gov/stdpopulations/stdpop.19ages.html">标准人口年龄分组</a>调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的<strong>美国标准人口年龄分组</strong>换算。因<strong>latticeExtra</strong> 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。</p>
+<p>下面以 <a href="https://latticeextra.r-forge.r-project.org/"><strong>latticeExtra</strong> 包</a><span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自美国<a href="https://statecancerprofiles.cancer.gov/">美国国家癌症研究所</a>（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国<a href="https://seer.cancer.gov/stdpopulations/stdpop.19ages.html">标准人口年龄分组</a>调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的<strong>美国标准人口年龄分组</strong>换算。因<strong>latticeExtra</strong> 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。</p>
 <p>人口数每年都会变的，为使各年数据指标可比，人口划分就保持一致，表<a href="#tab:us-std-pop">1</a> 展示 1940-2000 年各个年龄段（共19个年龄组）的标准人口数，各个年龄段的普查人口数换算成年龄调整的标准人口数，换算公式为：</p>
 <p><span class="math display">\[
 某年龄段标准人口数 = 某年龄段普查人口数 / 总普查人口数 * 1000000.
@@ -1021,8 +1018,18 @@ ggdraw() +
 </div>
 <div id="本文小结" class="section level1">
 <h1>本文小结</h1>
-<p>单变量情形中以 <strong>latticeExtra</strong> 包内置的数据集 USCancerRates 为例，以专题地图形式展示美国 1999-2003 年度各城镇的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制专题地图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包、<strong>tmap</strong> 包、<strong>sf</strong> 包和 <strong>mapsf</strong> 包，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
-<p>多变量情形中以美国人口统计局发布的调查数据为基础，分析北卡罗来纳州各区县普查粒度的家庭收入中位数与白人占比的空间相关性。先分别以单变量的专题地图描述各个普查区域里家庭收入中位数、白人占比的空间分布，接着和二元变量的专题地图形成对比，展示相关性的空间分布。</p>
+<p>本文以地区分布图为例，详细介绍 R 语言在绘制地区分布图中的探索和实践，读者可取其共性迁移至其它绘图场景。本文围绕 R 语言社区比较成熟的三套绘图工具 Base R、<strong>lattice</strong> 和 <strong>ggplot2</strong> 展开，它们代表三种绘图时的思考方式：</p>
+<ul>
+<li>Base R 提供了泛型函数 <code>plot()</code> 支持各类数据对象，快速出图，若深度定制，需要解构，理解点、线、多边形、坐标轴、刻度线、图例、字体、颜色、文本、边空、布局等一系列基础要素。《现代统计图形》<span class="citation">(<a href="#ref-Zhao2021" role="doc-biblioref">赵鹏, 谢益辉, and 黄湘云 2021</a>)</span> 对此有详细的阐述，可做帮助手册。</li>
+<li><strong>lattice</strong> 在 <strong>grid</strong> 图形系统的基础上构建了一套易于使用的高级数据可视化函数，同时支持复杂的非标准的自定义绘图需求。《lattice: Multivariate Data Visualization with R》<span class="citation">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span> 详细全面地阐述了一元到多元数据的可视化方法，各个函数的使用细节，可做帮助手册。</li>
+<li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立起数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
+</ul>
+<p>在掌握基础的一些工具后，培养审美能力最重要方式就是多看，然后打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
+<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">14</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。</p>
+<div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
+<img src="img/choropleth-map.svg" class="full" alt="" />
+<p class="caption">图 14:  7 种绘图方案依赖的 R 包</p>
+</div>
 <p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。最庆幸的是<code>rownames(USCancerRates)</code> 表示的城镇名称和地图数据 <code>us_county</code> 里的城镇名称 names 是可以映射上的，否则专题地图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
 <p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到专题地图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力，复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
 <p><a href="https://github.com/r-tmap/tmap"><strong>tmap</strong></a> 类似 <a href="https://github.com/riatelab/mapsf"><strong>mapsf</strong></a>，相比而言，上游依赖很多，相应功能也多，但，据笔者在 MacOS 和 Ubuntu 系统上测试图<a href="#fig:us-cancer-rates-tmap">8</a>，发现绘图性能很差。<strong>sp</strong> 已是上一代产品，现有工具足以替代，因此，不再介绍， <span class="citation">E. Pebesma and Bivand (<a href="#ref-Pebesma2022" role="doc-biblioref">2022</a>)</span> 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 <strong>sf</strong>、<strong>stars</strong> <span class="citation">(<a href="#ref-stars" role="doc-biblioref">E. Pebesma 2021</a>)</span> 或 <strong>terra</strong> <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2022</a>)</span>，已成历史的三个 R 包 — 空间几何计算 <strong>rgeos</strong> <span class="citation">(<a href="#ref-rgeos" role="doc-biblioref">R. Bivand and Rundel 2021</a>)</span>、空间数据导入 <strong>rgdal</strong> <span class="citation">(<a href="#ref-rgdal" role="doc-biblioref">R. Bivand, Keitt, and Rowlingson 2022</a>)</span>和空间数据操作 <strong>maptools</strong> <span class="citation">(<a href="#ref-maptools" role="doc-biblioref">R. Bivand and Lewin-Koh 2022</a>)</span> 将于 <strong>2023</strong> 年底退休。</p>
@@ -1030,28 +1037,28 @@ ggdraw() +
 </div>
 <div id="未来展望" class="section level1">
 <h1>未来展望</h1>
-<p>在专题方向上，还有很多有意思的话题，比如：</p>
+<p>在应用方向上，还有很多有意思的场景，比如：</p>
 <ul>
-<li><strong>疾控预防方面</strong>，以 2022-03-05 至 2022-03-11 美国新冠日均感染率（单位十万分之一）为例，如图<a href="#fig:us-covid-cases">14</a> 所示，图片截自<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">纽约时报网站</a>。</li>
+<li><strong>疾控预防方面</strong>，以 2022-03-05 至 2022-03-11 美国新冠日均感染率（单位十万分之一）为例，如图<a href="#fig:us-covid-cases">15</a> 所示，图片截自<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">纽约时报网站</a>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:us-covid-cases"></span>
 <img src="img/us-covid-cases.png" class="full" alt="" />
-<p class="caption">图 14:  美国各个城镇新冠感染率，单位十万分之一</p>
+<p class="caption">图 15:  美国各个城镇新冠感染率，单位十万分之一</p>
 </div>
 <ul>
-<li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">15</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
+<li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">16</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:shrinking-china-cities"></span>
 <img src="img/shrinking-china-cities.jpeg" class="full" alt="" />
-<p class="caption">图 15:  关注城市化进程中正在收缩的城市：蓝色表示人口收缩，红色表示人口扩张</p>
+<p class="caption">图 16:  关注城市化进程中正在收缩的城市：蓝色表示人口收缩，红色表示人口扩张</p>
 </div>
-<p>在数据可视化上，还有很多展示方式，比如：</p>
+<p>在数据可视化上，还有很多技术方案，比如：</p>
 <ul>
-<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">16</a>，这在一定程度上克服了普通专题地图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
+<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">17</a>，这在一定程度上克服了普通专题地图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:uk-hex-cartograms"></span>
 <img src="img/uk-hex-cartograms.png" class="full" alt="" />
-<p class="caption">图 16:  左图：英国各个城镇年龄中位数的空间分布；右图：英国各个城镇新冠死亡率，单位十万分之一。</p>
+<p class="caption">图 17:  左图：英国各个城镇年龄中位数的空间分布；右图：英国各个城镇新冠死亡率，单位十万分之一。</p>
 </div>
 </div>
 <div id="环境信息" class="section level1">
