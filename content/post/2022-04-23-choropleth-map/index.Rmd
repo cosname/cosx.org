@@ -236,9 +236,9 @@ us_cancer_rates <- reshape(
   new.row.names = 1:(2 * 3041),
   direction = "long"
 )
-alabama_us_cancer_rates = subset(x = us_cancer_rates, subset = state == "Alabama")
+alabama_us_cancer_rates <- subset(x = us_cancer_rates, subset = state == "Alabama")
 library(ggplot2)
-ggplot(data = alabama_us_cancer_rates, aes(x = rate, xmin = LCL95, xmax = UCL95, y = reorder(county, rate), colour = sex)) +
+ggplot(data = alabama_us_cancer_rates, aes(x = rate, xmin = LCL95, xmax = UCL95, y = reorder(county, rate, max), colour = sex)) +
   geom_pointrange() +
   labs(x = "癌症死亡率", y = "城镇", colour = "性别") +
   theme_minimal()
