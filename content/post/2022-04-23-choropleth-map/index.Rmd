@@ -847,14 +847,13 @@ mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright",
 
 ## 美国北卡州家庭收入中位数与白人占比的空间相关性
 
-受上个示例的启发，除了城镇，还有人口普查单元粒度的地区分布图，以描述更加详细点的空间分布，同时，这次从美国人口调查局直接获取数据。下面的数据集来自 2015-2019 年度美国社区调查（American Community Survey，约**300**万家庭的抽样），社区普查粒度（大致相当于咱们按乡镇、街道统计）的北卡罗来纳州家庭收入中位数（家庭收入中位数指的是过去12个月家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的。）和白人居民的百分比，原始数据可借助 **tidycensus** 包[@tidycensus]从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 [**tidycensus**](https://github.com/walkerke/tidycensus) 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 `CENSUS_API_KEY`，可在 `.Renviron` 文件中存储环境变量 `CENSUS_API_KEY`，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 `nc_race_income.RData`，整理过程的代码与本文源文档放在一起。
+受上个示例的启发，除了城镇，还有人口普查单元粒度的地区分布图，以描述更加详细点的空间分布，同时，这次从[美国人口调查局](https://www.census.gov/)直接获取数据。下面的数据集来自 2015-2019 年度美国社区调查（American Community Survey，约**300**万家庭的抽样），社区普查粒度（大致相当于咱们按乡镇、街道统计）的北卡罗来纳州家庭收入中位数（家庭收入中位数指的是过去12个月家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的。）和白人居民的百分比，原始数据可借助 **tidycensus** 包[@tidycensus]从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 [**tidycensus**](https://github.com/walkerke/tidycensus) 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 `CENSUS_API_KEY`，可在 `.Renviron` 文件中存储环境变量 `CENSUS_API_KEY`，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 `nc_race_income.RData`，整理过程的代码与本文源文档放在一起。
 
 
 先看下2015-2019年度美国北卡罗来纳州普查级**家庭收入中位数**的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图\@ref(fig:us-nc-income)设置了自定义的收入分段，以体现各个收入阶层：10 万以下**低收入**，10-15 万**中等收入**，15-20万**中高收入**，20-25万**高收入**。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。
 
 
 ```{r}
-#| eval=FALSE
 # 加载收入数据
 load(file = "data/nc_race_income.RData")
 # 地图数据
@@ -868,15 +867,23 @@ us_nc_tract_2019 <- within(us_nc_tract_2019, {
   pctWhite <- B02001_002E / B02001_001E
   medInc <- B19013_001E
 })
+```
+```{r us-nc-income2}
+#| eval=FALSE,
+#| fig.cap="北卡罗来纳州普查水平下家庭收入中位数的空间分布",
+#| fig.width=12,
+#| fig.height=5,
+#| fig.align="center",
+#| fig.showtext=TRUE
 # 收入分布
-plot(us_nc_tract_2019["medInc"],
-  pal = viridisLite::plasma, reset = FALSE,
-  breaks = c(0:10, 15, 20, 25) * 10000,
-  border = "gray", main = "", lwd = 0.25
+plot(us_nc_tract_2019["medInc"], key.pos = 3,
+     pal = viridisLite::plasma, reset = FALSE,
+     breaks = c(0:10, 15, 20, 25) * 10000,
+     border = "gray", main = "", lwd = 0.25
 )
 # 区县边界
 plot(st_geometry(nc_county_map), border = "#CCCCCC40", add = TRUE)
-mtext(text = "数据源：美国人口调查局", side = 1, adj = 0)
+mtext(text = "数据源：美国人口调查局", side = 1, adj = 0.8, line = -1, padj = 1)
 ```
 
 
@@ -884,13 +891,51 @@ mtext(text = "数据源：美国人口调查局", side = 1, adj = 0)
 ![(\#fig:us-nc-income) 北卡罗来纳州普查水平下家庭收入中位数的空间分布](img/us-nc-income.png){.full}
 :::
 
+```{r}
+#| eval=FALSE,
+#| echo=FALSE
+# 将坐标参考系转化为 4326，准备以 leaflet 绘制地图
+us_nc_tract_2019 <- st_transform(us_nc_tract_2019, crs = 4326)
+# 获取 NC 的几何中心，用于设置观察中心 setView
+st_bbox(us_nc_tract_2019)
+# 加载 R 包
+library(leaflet)
+# 人口密度分段
+bins <- c(0:10, 15, 20, 25) * 10000
+# 构造调色板
+pal <- colorBin("plasma", domain = us_nc_tract_2019$medInc, bins = bins)
+# 绘图渲染需要一点时间
+leaflet(us_nc_tract_2019) |> 
+  setView(lng = -79.86, lat = 35.17, zoom = 8) |> 
+  # 添加默认的 OpenStreetMap 瓦片服务
+  addTiles() |> 
+  addPolygons(
+    color = "white", # 边界线颜色
+    opacity = 0.6,     # 颜色透明度
+    weight = 0.2,      # 边界线宽度
+    fillOpacity = 0.6,   # 填充色透明度
+    fillColor = ~ pal(medInc)  # 填充色
+  ) |> 
+  addLegend(
+    pal = pal, 
+    values = ~medInc,
+    opacity = 0.7, 
+    title = "家庭收入",
+    position = "bottomright"
+  )
+# 可以继续补充悬浮提示 label 和 popup
+# 还可以抽取各个地理单元的几何中心，以比例气泡图展示收入数据
+st_centroid(st_geometry(us_nc_tract_2019))
+```
+
+
 地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 **ggplot2** 有些吃不消，接下来以 **ggplot2** 配合 **sf** 包，利用 **sf** 包内置的地图数据集 `nc.gpkg`，将各个数据指标从社区上卷到各个城镇。
 
 
 ```{r bivar-us-states}
 #| fig.cap="2015-2019 年度北卡罗来纳州各个城镇收入水平和白人占比的空间相关性",
-#| fig.width=6*1.5,
-#| fig.height=2.5*1.5,
+#| fig.width=9,
+#| fig.height=3.75,
 #| fig.align="center",
 #| fig.showtext=TRUE,
 #| message=FALSE
@@ -952,8 +997,8 @@ ggdraw() +
 结合图\@ref(fig:us-nc-income)和图\@ref(fig:bivar-us-states)，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭收入中位数指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图\@ref(fig:us-nc-income)中非常明显。
 
 
-::: rmdnote
-**sf** 包内置的北卡城镇地图数据集 nc.gpkg 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
+::: rmdtip
+**sf** 包内置的北卡城镇地图数据集 nc.gpkg 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
 :::
 
 
