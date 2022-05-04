@@ -212,7 +212,7 @@ qnorm(p = 1 - 0.05 / 2)
 363.7 + 1.96 * sqrt(363.7 / 100000 * (1 - 363.7 / 100000) / 100000) * 100000
 ```
 
-而美国国家癌症研究所给的置信带更宽，更保守一些，显然这里面的算法没这么简单。以阿拉巴马州为例，将所有的城镇死亡率及其置信区间绘制出来，如图\@ref(fig:alabama-ci-rank)所示，整体来说，偏离置信区间中心都不太远。
+而美国国家癌症研究所给的置信带更宽，更保守一些，显然这里面的算法没这么简单。以阿拉巴马州为例，将所有的城镇死亡率及其置信区间绘制出来，如图\@ref(fig:alabama-ci-rank)所示，整体来说，偏离置信区间中心都很小。
 
 ```{r alabama-ci-rank}
 #| fig.cap="1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率",
@@ -884,7 +884,7 @@ mtext(text = "数据源：美国人口调查局", side = 1, adj = 0)
 ![(\#fig:us-nc-income) 北卡罗来纳州普查水平下家庭收入中位数的空间分布](img/us-nc-income.png){.full}
 :::
 
-地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 **ggplot2** 有些吃不消，接下来以 **ggplot2** 配合 **sf** 包，利用 **sf** 包内置的地图数据集，将各个数据指标从社区上卷到各个城镇。
+地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 **ggplot2** 有些吃不消，接下来以 **ggplot2** 配合 **sf** 包，利用 **sf** 包内置的地图数据集 `nc.gpkg`，将各个数据指标从社区上卷到各个城镇。
 
 
 ```{r bivar-us-states}
@@ -894,25 +894,26 @@ mtext(text = "数据源：美国人口调查局", side = 1, adj = 0)
 #| fig.align="center",
 #| fig.showtext=TRUE,
 #| message=FALSE
-# 加载白人占比、收入数据
+# 加载 NC 社区调查原始数据
 load(file = "data/nc_race_income.RData")
-library(sf) # 县级的地图数据
+# 获取县级的地图数据
+library(sf) 
 # 读取数据，且读取后不要转化为 tibble 数据类型
 nc_county_map <- read_sf(system.file("gpkg/nc.gpkg", package = "sf"), as_tibble = FALSE)
-# 县级地图数据和 ACS 调查数据合并
+# 县级地图数据和 ACS 调查数据根据区域编码合并
 nc_county_data <- merge(x = nc_county_map, y = nc_county_race_income, by.x = "FIPS", by.y = "GEOID")
-# 统计白人占比和收入
+# 统计白人占比和收入指标
 nc_county_data <- within(nc_county_data, {
   pctWhite <- B02001_002E / B02001_001E
   medInc <- B19013_001E
 })
-
+# 加载一些必要的绘图包
 library(ggplot2)
 library(biscale)
 library(cowplot)
-# 数据分类
+# 将数据根据分位点分箱
 nc_bi_data <- bi_class(nc_county_data, x = pctWhite, y = medInc, style = "quantile", dim = 3)
-# 创建地图
+# 创建主体地图
 nc_bi_map <- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
   geom_sf(
     color = "white", size = 0.1, show.legend = FALSE
@@ -928,7 +929,7 @@ nc_bi_map <- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
 nc_bi_leg_data <- data.frame(expand.grid(x = 3:1, y = 3:1),
   bi_fill = biscale:::pal_dkviolet(n = 3)
 )
-# 创建图例
+# 创建图例瓦片
 nc_bi_leg <- ggplot(data = nc_bi_leg_data, aes(x = x, y = y, fill = bi_fill)) +
   geom_tile() +
   scale_fill_identity() +
@@ -948,11 +949,11 @@ ggdraw() +
   draw_plot(nc_bi_leg, x = 0.1, y = .1, width = 0.2, height = 0.2)
 ```
 
-结合图\@ref(fig:us-nc-income)和图\@ref(fig:bivar-us-states)，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭收入中位数指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，在图\@ref(fig:us-nc-income)中非常明显。
+结合图\@ref(fig:us-nc-income)和图\@ref(fig:bivar-us-states)，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭收入中位数指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图\@ref(fig:us-nc-income)中非常明显。
 
 
 ::: rmdnote
-**sf** 包内置的北卡城镇地图数据集 nc.gpkg 坐标参考系为 `EPSG:4267`，而通常使用的 **leaflet** 包和 **mapdeck** 包需要地图数据集转化到 `EPSG:4326`，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。而使用国内的 Web 地图服务，要求地图数据转化到火星坐标系。
+**sf** 包内置的北卡城镇地图数据集 nc.gpkg 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
 :::
 
 
@@ -969,7 +970,7 @@ ggdraw() +
 
 本文介绍的 **7** 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图\@ref(fig:choropleth-map) 所示，红色框代表 6 种绘图方案，外加 **sf** 强化的 **ggplot2** 升级方案。
 
-![(\#fig:choropleth-map) 7 种绘图方案依赖的 R 包](img/choropleth-map.svg){.full}
+![(\#fig:choropleth-map) 7 种绘图方案依赖的 R 包及其层次关系](img/choropleth-map.svg){.full}
 
 
 **lattice** 包提供非常简便的绘图公式语法，**latticeExtra** 也很好地继承了这一特性，如`rownames(USCancerRates) ~ rate.female + rate.male`。最庆幸的是`rownames(USCancerRates)` 表示的城镇名称和地图数据 `us_county` 里的城镇名称 names 是可以映射上的，否则专题地图就没法画了。**lattice** 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。
