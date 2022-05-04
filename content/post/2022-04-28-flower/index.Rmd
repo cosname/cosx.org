@@ -1,5 +1,5 @@
 ---
-title: "echarts4r flower"
+title: "echarts4r 画花"
 author: "袁凡"
 date: "2022-04-28"
 categories:
@@ -7,13 +7,11 @@ categories:
 tags:
   - echarts4r
   - Apache Echarts
-meta_extra: "审稿：xx；编辑：xx"
 output:
   blogdown::html_page:
     toc: true
 link-citations: true
-description: ""
-forum_id: xxx
+forum_id: 423132
 slug: echarts4r-flower
 ---
 
