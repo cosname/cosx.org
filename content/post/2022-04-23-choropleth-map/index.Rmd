@@ -23,7 +23,7 @@ output:
   blogdown::html_page:
     toc: true
 forum_id: xxx
-description: "专题地图应用广泛，特别是展示统计年鉴数据，在美国和日本国家统计局官网，大量专题地图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国家经营状态的指标体系，涵盖人口、土地、生产、消费等专题，省、市、区县以及自治区等各级地方统计局每年也会发布一份地方统计年鉴。"
+description: "在美国和日本的国家统计局官网，专题地图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
 
@@ -854,10 +854,9 @@ mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright",
 
 
 ```{r}
-# 加载收入数据
+# 加载收入和种族数据
 load(file = "data/nc_race_income.RData")
-# 地图数据
-# 读取数据，且读取后不要转化为 tibble 数据类型
+# 读取城镇边界地图数据
 nc_county_map <- read_sf(system.file("gpkg/nc.gpkg", package = "sf"), as_tibble = FALSE)
 us_nc_tract <- readRDS(file = "data/us_nc_tract.rds")
 # 合并地图数据和收入数据
@@ -871,18 +870,19 @@ us_nc_tract_2019 <- within(us_nc_tract_2019, {
 ```{r us-nc-income2}
 #| eval=FALSE,
 #| fig.cap="北卡罗来纳州普查水平下家庭收入中位数的空间分布",
-#| fig.width=12,
+#| fig.width=10,
 #| fig.height=5,
 #| fig.align="center",
 #| fig.showtext=TRUE
-# 收入分布
-plot(us_nc_tract_2019["medInc"], key.pos = 3,
-     pal = viridisLite::plasma, reset = FALSE,
-     breaks = c(0:10, 15, 20, 25) * 10000,
-     border = "gray", main = "", lwd = 0.25
+par(mar = c(2, 0, 0, 0))
+# 家庭收入的空间分布
+plot(us_nc_tract_2019["medInc"], key.pos = 1,
+  pal = viridisLite::plasma, reset = FALSE,
+  breaks = c(0:10, 15, 20, 25) * 10000,
+  border = "gray80", main = "", lwd = 0.1
 )
-# 区县边界
-plot(st_geometry(nc_county_map), border = "#CCCCCC40", add = TRUE)
+# 添加城镇边界
+plot(st_geometry(nc_county_map), border = "white", lwd = 0.25, add = TRUE)
 mtext(text = "数据源：美国人口调查局", side = 1, adj = 0.8, line = -1, padj = 1)
 ```
 

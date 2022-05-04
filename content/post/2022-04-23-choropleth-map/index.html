@@ -23,7 +23,7 @@ output:
   blogdown::html_page:
     toc: true
 forum_id: xxx
-description: "专题地图应用广泛，特别是展示统计年鉴数据，在美国和日本国家统计局官网，大量专题地图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国家经营状态的指标体系，涵盖人口、土地、生产、消费等专题，省、市、区县以及自治区等各级地方统计局每年也会发布一份地方统计年鉴。"
+description: "在美国和日本的国家统计局官网，专题地图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
 
@@ -923,10 +923,9 @@ mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quo
 <h2>美国北卡州家庭收入中位数与白人占比的空间相关性</h2>
 <p>受上个示例的启发，除了城镇，还有人口普查单元粒度的地区分布图，以描述更加详细点的空间分布，同时，这次从<a href="https://www.census.gov/">美国人口调查局</a>直接获取数据。下面的数据集来自 2015-2019 年度美国社区调查（American Community Survey，约<strong>300</strong>万家庭的抽样），社区普查粒度（大致相当于咱们按乡镇、街道统计）的北卡罗来纳州家庭收入中位数（家庭收入中位数指的是过去12个月家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的。）和白人居民的百分比，原始数据可借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 <code>nc_race_income.RData</code>，整理过程的代码与本文源文档放在一起。</p>
 <p>先看下2015-2019年度美国北卡罗来纳州普查级<strong>家庭收入中位数</strong>的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图<a href="#fig:us-nc-income">12</a>设置了自定义的收入分段，以体现各个收入阶层：10 万以下<strong>低收入</strong>，10-15 万<strong>中等收入</strong>，15-20万<strong>中高收入</strong>，20-25万<strong>高收入</strong>。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。</p>
-<pre class="r"><code># 加载收入数据
+<pre class="r"><code># 加载收入和种族数据
 load(file = &quot;data/nc_race_income.RData&quot;)
-# 地图数据
-# 读取数据，且读取后不要转化为 tibble 数据类型
+# 读取城镇边界地图数据
 nc_county_map &lt;- read_sf(system.file(&quot;gpkg/nc.gpkg&quot;, package = &quot;sf&quot;), as_tibble = FALSE)
 us_nc_tract &lt;- readRDS(file = &quot;data/us_nc_tract.rds&quot;)
 # 合并地图数据和收入数据
@@ -936,14 +935,15 @@ us_nc_tract_2019 &lt;- within(us_nc_tract_2019, {
   pctWhite &lt;- B02001_002E / B02001_001E
   medInc &lt;- B19013_001E
 })</code></pre>
-<pre class="r"><code># 收入分布
-plot(us_nc_tract_2019[&quot;medInc&quot;], key.pos = 3,
-     pal = viridisLite::plasma, reset = FALSE,
-     breaks = c(0:10, 15, 20, 25) * 10000,
-     border = &quot;gray&quot;, main = &quot;&quot;, lwd = 0.25
+<pre class="r"><code>par(mar = c(2, 0, 0, 0))
+# 家庭收入的空间分布
+plot(us_nc_tract_2019[&quot;medInc&quot;], key.pos = 1,
+  pal = viridisLite::plasma, reset = FALSE,
+  breaks = c(0:10, 15, 20, 25) * 10000,
+  border = &quot;gray80&quot;, main = &quot;&quot;, lwd = 0.1
 )
-# 区县边界
-plot(st_geometry(nc_county_map), border = &quot;#CCCCCC40&quot;, add = TRUE)
+# 添加城镇边界
+plot(st_geometry(nc_county_map), border = &quot;white&quot;, lwd = 0.25, add = TRUE)
 mtext(text = &quot;数据源：美国人口调查局&quot;, side = 1, adj = 0.8, line = -1, padj = 1)</code></pre>
 <div class="full-width">
 <div class="figure"><span style="display:block;" id="fig:us-nc-income"></span>
