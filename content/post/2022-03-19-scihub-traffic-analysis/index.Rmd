@@ -8,10 +8,10 @@ tags:
   - R 语言
   - echarts4r
   - 流量分析
-meta_extra: "审稿：于淼、黄湘云；编辑：黄湘云"
+meta_extra: "审稿：黄湘云；编辑：黄湘云"
 output:
   blogdown::html_page:
-    toc: false
+    toc: true
 link-citations: true
 bibliography:
   - packages.bib
