@@ -33,8 +33,8 @@ rCharts函数就像lattice函数一样，通过formula、data指定数据源和�
 
 ```r
 library(rCharts)
-names(iris) = gsub("\\.", "", names(iris))
-p1 <- rPlot(SepalLength ~ SepalWidth | Species, data = iris, color = 'Species', type = 'point')
+names(iris) <- gsub("\\.", "", names(iris))
+p1 <- rPlot(SepalLength ~ SepalWidth | Species, data = iris, color = "Species", type = "point")
 p1
 ```
 
@@ -49,10 +49,12 @@ NVD3 是一个旨在建立可复用的图表和组件的 d3.js 项目——它�
 ```r
 library(rCharts)
 hair_eye_male <- subset(as.data.frame(HairEyeColor), Sex == "Male")
-hair_eye_male[,1] <- paste0("Hair",hair_eye_male[,1])
-hair_eye_male[,2] <- paste0("Eye",hair_eye_male[,2])
-n1 <- nPlot(Freq ~ Hair, group = "Eye", data = hair_eye_male,
-type = "multiBarChart")
+hair_eye_male[, 1] <- paste0("Hair", hair_eye_male[, 1])
+hair_eye_male[, 2] <- paste0("Eye", hair_eye_male[, 2])
+n1 <- nPlot(Freq ~ Hair,
+  group = "Eye", data = hair_eye_male,
+  type = "multiBarChart"
+)
 n1
 ```
 
@@ -70,11 +72,15 @@ Highcharts是一个制作图表的纯Javascript类库，支持大部分的图表
 
 ```r
 library(rCharts)
-a <- hPlot(Pulse ~ Height, data = MASS::survey, type = "bubble",
-title = "Zoom demo", subtitle = "bubble chart",
-size = "Age", group = "Exer")
-a$colors('rgba(223, 83, 83, .5)', 'rgba(119, 152, 191, .5)',
-'rgba(60, 179, 113, .5)')
+a <- hPlot(Pulse ~ Height,
+  data = MASS::survey, type = "bubble",
+  title = "Zoom demo", subtitle = "bubble chart",
+  size = "Age", group = "Exer"
+)
+a$colors(
+  "rgba(223, 83, 83, .5)", "rgba(119, 152, 191, .5)",
+  "rgba(60, 179, 113, .5)"
+)
 a$chart(zoomType = "xy")
 a$exporting(enabled = T)
 a
@@ -103,9 +109,11 @@ install_github('yihui/recharts')
 
 ```r
 source("~echartR.R")
-names(iris) = gsub("\\.", "", names(iris))
-echartR(data=iris,x=~SepalLength,y=~PetalWidth,series = ~Species,
-type = 'scatter')
+names(iris) <- gsub("\\.", "", names(iris))
+echartR(
+  data = iris, x = ~SepalLength, y = ~PetalWidth, series = ~Species,
+  type = "scatter"
+)
 ```
 
 ![rcharts-005](https://uploads.cosx.org/2016/06/rcharts-005.png)
@@ -114,11 +122,13 @@ type = 'scatter')
 
 ```r
 hair_eye_male <- subset(as.data.frame(HairEyeColor), Sex == "Male")
-hair_eye_male[,1] <- paste0("Hair",hair_eye_male[,1])
-hair_eye_male[,2] <- paste0("Eye",hair_eye_male[,2])
-echartR(data = hair_eye_male, x = Hair, y = ~Freq,  series = ~Eye,
-type = 'bar', palette='fivethirtyeight',
-xlab = 'Hair', ylab = 'Freq')
+hair_eye_male[, 1] <- paste0("Hair", hair_eye_male[, 1])
+hair_eye_male[, 2] <- paste0("Eye", hair_eye_male[, 2])
+echartR(
+  data = hair_eye_male, x = Hair, y = ~Freq, series = ~Eye,
+  type = "bar", palette = "fivethirtyeight",
+  xlab = "Hair", ylab = "Freq"
+)
 ```
 
 ![rcharts-006](https://uploads.cosx.org/2016/06/rcharts-006.png)
@@ -131,12 +141,14 @@ xlab = 'Hair', ylab = 'Freq')
 dtcars <- mtcars
 dtcars$car <- row.names(dtcars)
 dtcars$transmission <- as.factor(dtcars$am)
-levels(dtcars$transmission) <- c("Automatic","Manual")
+levels(dtcars$transmission) <- c("Automatic", "Manual")
 dtcars$cylinder <- as.factor(dtcars$cyl)
-dtcars$carburetor <-as.factor(dtcars$carb)
-echartR(dtcars, x = ~cylinder,  y = ~car, type='rose',
-palette='colorblind', title='Number of Cylinders',
-subtitle = '(source: mtcars)')
+dtcars$carburetor <- as.factor(dtcars$carb)
+echartR(dtcars,
+  x = ~cylinder, y = ~car, type = "rose",
+  palette = "colorblind", title = "Number of Cylinders",
+  subtitle = "(source: mtcars)"
+)
 ```
 
 ![rcharts-007](https://uploads.cosx.org/2016/06/rcharts-007.png)
@@ -144,15 +156,23 @@ subtitle = '(source: mtcars)')
 雷达图：
 
 ```r
-player <- data.frame(name=c(rep("Philipp Lahm",8),rep("Dani Alves",8)),
-para=rep(c("Passing%","Key passing","Comp crosses",
-"Crossing%","Successful dribbles",
-"Dispossessed","Dribbled past","Fouls"),2),
-value=c(89.67, 1.51, 0.97, 24.32, 0.83, 0.86, 1.15, 0.47,
-86.62, 2.11, 0.99, 20.78, 1.58, 1.64, 0.9, 1.71))
-echartR(player, x= ~para, y= ~value, series= ~name, type='radarfill',
-symbolList='none', palette=c('firebrick1','dodgerblue'),
-title='Lahm vs Alves', subtitle= '(by @mixedknuts)')
+player <- data.frame(
+  name = c(rep("Philipp Lahm", 8), rep("Dani Alves", 8)),
+  para = rep(c(
+    "Passing%", "Key passing", "Comp crosses",
+    "Crossing%", "Successful dribbles",
+    "Dispossessed", "Dribbled past", "Fouls"
+  ), 2),
+  value = c(
+    89.67, 1.51, 0.97, 24.32, 0.83, 0.86, 1.15, 0.47,
+    86.62, 2.11, 0.99, 20.78, 1.58, 1.64, 0.9, 1.71
+  )
+)
+echartR(player,
+  x = ~para, y = ~value, series = ~name, type = "radarfill",
+  symbolList = "none", palette = c("firebrick1", "dodgerblue"),
+  title = "Lahm vs Alves", subtitle = "(by @mixedknuts)"
+)
 ```
 
 ![rcharts-008](https://uploads.cosx.org/2016/06/rcharts-008.png)
@@ -179,8 +199,10 @@ plotly包利用函数plot_ly函数绘制交互图。
 
 ```r
 library(plotly)
-p <- plot_ly(iris, x = Petal.Length, y = Petal.Width,
-color = Species, colors = "Set1", mode = "markers")
+p <- plot_ly(iris,
+  x = Petal.Length, y = Petal.Width,
+  color = Species, colors = "Set1", mode = "markers"
+)
 p
 ```
 
@@ -199,9 +221,9 @@ plot_ly(midwest, x = percollege, color = state, type = "box")
 
 ```r
 library(plotly)
-p <- ggplot(data=lattice::singer,aes(x=height,fill=voice.part))+
-geom_density()+
-facet_grid(voice.part~.)
+p <- ggplot(data = lattice::singer, aes(x = height, fill = voice.part)) +
+  geom_density() +
+  facet_grid(voice.part ~ .)
 (gg <- ggplotly(p))
 ```
 
@@ -214,11 +236,11 @@ facet_grid(voice.part~.)
 ```r
 library(dygraphs)
 lungDeaths <- cbind(mdeaths, fdeaths)
-dygraph(lungDeaths) %&gt;%
-dySeries("mdeaths", label = "Male") %&gt;%
-dySeries("fdeaths", label = "Female") %&gt;%
-dyOptions(stackedGraph = TRUE) %&gt;%
-dyRangeSelector(height = 20)
+dygraph(lungDeaths) |> 
+  dySeries("mdeaths", label = "Male") |> 
+  dySeries("fdeaths", label = "Female") |> 
+  dyOptions(stackedGraph = TRUE) |> 
+  dyRangeSelector(height = 20)
 ```
 
 ![rcharts-012](https://uploads.cosx.org/2016/06/rcharts-012.png)
@@ -242,10 +264,12 @@ data(MisLinks)
 data(MisNodes)
 
 # 画图
-forceNetwork(Links = MisLinks, Nodes = MisNodes,
-Source = "source", Target = "target",
-Value = "value", NodeID = "name",
-Group = "group", opacity = 0.8)
+forceNetwork(
+  Links = MisLinks, Nodes = MisNodes,
+  Source = "source", Target = "target",
+  Value = "value", NodeID = "name",
+  Group = "group", opacity = 0.8
+)
 ```
 
 ![rcharts-014](https://uploads.cosx.org/2016/06/rcharts-014.png) 
@@ -262,14 +286,14 @@ devtools::install_github("timelyportfolio/d3treeR")
 library(treemap)
 library(d3treeR)
 data("GNI2014")
-tm <-  treemap(
-GNI2014,
-index=c("continent", "iso3"),
-vSize="population",
-vColor="GNI",
-type="value"
+tm <- treemap(
+  GNI2014,
+  index = c("continent", "iso3"),
+  vSize = "population",
+  vColor = "GNI",
+  type = "value"
 )
-d3tree( tm,rootname = "World" )
+d3tree(tm, rootname = "World")
 ```
 
 

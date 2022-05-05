@@ -2,7 +2,7 @@
 title: 第十三届中国R会议（北京）纪要
 date: '2020-12-25'
 categories:
-  - R会
+  - R会议
 tags:
   - R会
   - R语言
