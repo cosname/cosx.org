@@ -14,7 +14,7 @@ output:
   blogdown::html_page:
     toc: true
 link-citations: true
-bibliography: 
+bibliography:
   - packages.bib
 thumbnail: https://user-images.githubusercontent.com/12031874/146304984-5a1ade06-9263-464c-a5d8-ce091d11752b.png
 description: "**echarts4r** 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 Apache Echarts。Apache ECharts 是一个基于 JavaScript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。"
@@ -22,16 +22,16 @@ forum_id: 422902
 slug: introduction-to-echarts4r
 ---
 
-<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/echarts-en.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/ecStat.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/dataTool.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r-binding/echarts4r.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts-gl/echarts-gl.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts-liquidfill/echarts-liquidfill.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts-world/world.js"></script>
-<script src="{{< blogdown/postref >}}index_files/inspired/inspired.js"></script>
-<script src="{{< blogdown/postref >}}index_files/dark-fresh-cut/dark-fresh-cut.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/echarts4r/echarts-en.min.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/echarts4r/ecStat.min.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/echarts4r/dataTool.min.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/echarts4r-binding/echarts4r.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/echarts-gl/echarts-gl.min.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/echarts-liquidfill/echarts-liquidfill.min.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/echarts-world/world.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/inspired/inspired.js"></script>
+<script src="https://62734c58938a110008f98621--physicist-ralph-51373.netlify.app/2021/12/introduction-to-echarts4r/index_files/dark-fresh-cut/dark-fresh-cut.js"></script>
 
 <div id="TOC">
 <ul>
@@ -181,13 +181,13 @@ figure {
 
 div.img {
   text-align: center;
-  display: block; 
-  margin-left: auto; 
+  display: block;
+  margin-left: auto;
   margin-right: auto;
 }
 
 .col-xs-6 {
-  display: inline-block; width: 49%; 
+  display: inline-block; width: 49%;
 }
 </style>
 <p><a href="https://echarts4r.john-coene.com/index.html"><strong>echarts4r</strong></a> <span class="citation">(<a href="#ref-echarts4r" role="doc-biblioref">Coene 2022</a>)</span> 是 R 中的一个画图工具包，作者是 John Coene。这个包的名字读起来是 Echarts for R，顾名思义就是在 R 中应用 <a href="https://echarts.apache.org/zh/index.html">Apache Echarts</a>。Apache ECharts 是一个基于 JavaScript 的开源可视化图表库，官网有中英两种语言的文档，对英文阅读水平弱一些的小伙伴比较友好。</p>
@@ -1927,14 +1927,14 @@ parallel |&gt;
       return colors.concat(colors)
     })()
   }
-}]  
+}]
 </code></pre>
 <p>在 R 里面就可以这样写：</p>
 <pre class="r"><code>e_visual_map(
   show = FALSE,
   dimension = 3,
   # 对应 categories:data.counties
-  categories = c(&#39;Australia&#39;,&#39;Canada&#39;,&#39;China&#39;,&#39;Cuba&#39;,&#39;Finland&#39;,&#39;France&#39;,··· ,&#39;United States&#39;), 
+  categories = c(&#39;Australia&#39;,&#39;Canada&#39;,&#39;China&#39;,&#39;Cuba&#39;,&#39;Finland&#39;,&#39;France&#39;,··· ,&#39;United States&#39;),
   inRange = list(
     color = htmlwidgets::JS(
       &quot;(function () {
@@ -1957,15 +1957,15 @@ parallel |&gt;
 ## R version 4.2.0 (2022-04-22)
 ## Platform: x86_64-apple-darwin17.0 (64-bit)
 ## Running under: macOS Big Sur/Monterey 10.16
-## 
+##
 ## Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
-## 
+##
 ## Package version:
-##   blogdown_1.9         countrycode_1.3.1    echarts4r_0.4.3     
-##   echarts4r.maps_0.0.2 knitr_1.39           rmarkdown_2.14      
-## 
+##   blogdown_1.9         countrycode_1.3.1    echarts4r_0.4.3
+##   echarts4r.maps_0.0.2 knitr_1.39           rmarkdown_2.14
+##
 ## Pandoc version: 2.18
-## 
+##
 ## Hugo version: 0.91.2</code></pre>
 </div>
 <div id="参考文献" class="section level1 unnumbered">
