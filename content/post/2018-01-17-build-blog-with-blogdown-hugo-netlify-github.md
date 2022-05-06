@@ -16,13 +16,13 @@ forum_id: 419792
 meta_extra: "编辑：钟浩光；审稿：何通、赵鹏"
 ---
 
-
+由于 [Gitee 图床失效](https://github.com/cosname/cosx.org/issues/1020)，本文的图片改为链接，请见谅。
 
 ## 目标
 
 用R语言的blogdown + hugo + netlify + github搭建静态博客系统，用rstudio**专注于写作**。
 
-![1-4swordsman](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-01-swordsman-800.png)
+[1-4swordsman](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-01-swordsman-800.png)
 
 ### 优点
 
@@ -55,17 +55,17 @@ windows下安装很简单，就不描述了。
 - Tools -> Global Options -> Sweave -> Typeset LaTex into PDF using:**XeLaTeX**
 	- 这个是生成PDF文件用的，中文用户最好选择XeLaTeX
 	
-![2-sweave](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-02-sweave.png)	
+[2-sweave](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-02-sweave.png)	
 	
 - Tools -> Global Options -> Git/SVN -> Git executable:
 	- 安装好git后，打开这里应该就可以看到git的路径了
 
-![2-git](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-02-git.png)	
+[2-git](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-02-git.png)	
 
 - Tools -> Global Options -> Packages -> CRAN mirror: 
 	- 建议选择一个距离你比较近的镜像，速度会快点。例如，国内用户可以选择一个 China 的镜像。
 
-![2-cran](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-02-cran.png)	
+[2-cran](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-02-cran.png)	
 
 ### 安装blogdown和hugo
 
@@ -132,7 +132,7 @@ ok，我们来到这里，暂时离开一下rstudio，我们去弄弄github。
 
 ### 用github创建repository
 
-![3-new-repo](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-03-new-repo.png)
+[3-new-repo](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-03-new-repo.png)
 
 如图所示填写好repository name、Description，默认选择Public，可以选择复选框Initialize this repository with a README，`add .gitignore`选择`R`吧，点击**Create repository**就可以创建好用于保存网站的repository。
 
@@ -177,7 +177,7 @@ public
 
 打开：`File -> New Project -> New Directory -> Website using blogdown`
 
-![4-init-blogdown](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-04-init-blogdown.png)
+[4-init-blogdown](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-04-init-blogdown.png)
 
 因为我们已经安装了hugo，所以去掉hugo选项，Yihui是建议用**hugo-xmin**主题开始我们的blogdown之旅的，所以这里就选择了hugo-xmin。点击`Create Project`创建项目。
 
@@ -199,7 +199,7 @@ git push -u origin master
 
 到这里，博客已经可以在本地运行，我们试试看吧，点击菜单`Help`下面的`Addins`，如下图所示：
 
-![6-Addins-serve-site](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-06-serve-site.png)
+[6-Addins-serve-site](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-06-serve-site.png)
 
 点击`Serve Site`，可能会提示安装几个包例如shiny、miniUI等，点击yes安装就行了，其实点击这个跟在console里面输入`blogdown::serve_site()`是一样的，如果你还没有安装[**写轮眼xaringan**](https://github.com/yihui/xaringan)，会有下面的warning信息：
 
@@ -219,7 +219,7 @@ install.packages("xaringan")
 
 > Keep it simple, but not simpler
 
-![7-xmin](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-07-hugo-xmin.png)
+[7-xmin](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-07-hugo-xmin.png)
 
 我们也可以在浏览器输入`http://127.0.0.1:4321/`来浏览。
 
@@ -253,7 +253,7 @@ Yihui是这样说的：
 
 看看下面的pull request图：
 
-![8-1-pull-request](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-08-1-pull-request.png)
+[8-1-pull-request](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-08-1-pull-request.png)
 
 ## 设置netlify
 
@@ -266,11 +266,11 @@ Yihui是这样说的：
 
 登录进netlify后，点击导航栏`Sites`，再点击右上角`New site from Git`，再点击`Github`，如下图：
 
-![11-netlify-github](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-11-netlify-github.png)
+[11-netlify-github](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-11-netlify-github.png)
 
 然后按照下面的图填写就可以了：
 
-![12-deploy-site](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-12-deploy-site.png)
+[12-deploy-site](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-12-deploy-site.png)
 
 因为hugo生成的文件夹是`public`所以填public。
 
@@ -278,7 +278,7 @@ Yihui是这样说的：
 
 这个时候可以再去到一个叫`deploy settings`的地方（如下图所示），确保选项选中的是`none`，就是只deploy master分支。
 
-![13-deploy-settings](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-13-deploy-settings.png)
+[13-deploy-settings](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-13-deploy-settings.png)
 
 
 ### 设置个性二级域名
@@ -291,7 +291,7 @@ Yihui是这样说的：
 
 点击左边导航栏的`Domain management -> Domains`，
 
-![14-domains](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-14-domains.png)
+[14-domains](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-14-domains.png)
 
 然后点击`Add custom domain`，这个时候就可以输入你在域名提供商处注册的域名了。
 
@@ -299,11 +299,11 @@ Yihui是这样说的：
 
 添加域名后，点击如上图所示的小红点处，选择`Go to DNS panel`，然后就跳转到`DNS settings`页面，这里应该是不用做`Add new record`操作的（我忘记了，应该是自动添加了的），如果没有记录，就点它添加吧，如下图所示：
 
-![15-record-setting](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-15-record-setting.png)
+[15-record-setting](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-15-record-setting.png)
 
 上图的**Nameservers**部分有四条netlify的dns服务器域名，把他们添加到你注册域名的Nameservers就可以了，我在域名服务商里面的设置如下图所示：
 
-![16-nameservers-config](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-16-nameservers-config.png)
+[16-nameservers-config](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-16-nameservers-config.png)
 
 到此，所有的基本设置都已经完成。
 
@@ -311,7 +311,7 @@ Yihui是这样说的：
 
 前面提到我们可以专注于写作，现在所有东西都准备好，就可以把写好的文章update到线上，点击右上角`Git`标签，点击`commit`（如下图所示），填写好commit message点击`commit -> push`，这样就已经更新线上的博客，大概不用1分钟的时间，打开你的个人主页`www.domainname.com`就可以看到最新的文章出现了。
 
-![20180117-17-1-git-commit](https://gitee.com/heavenzone/picturebed/raw/master/zhonghaoguang.com/2018/20180117-17-1-git-commit.png)
+[20180117-17-1-git-commit](https://gitee.com/heavenzone/picturebed/blob/master/zhonghaoguang.com/2018/20180117-17-1-git-commit.png)
 
 至此，关于用R语言的blogdown + hugo + netlify + github搭建静态博客系统的介绍全部结束了，更多关于blogdown的魔法就等大家自己去挖掘了吧。
 
