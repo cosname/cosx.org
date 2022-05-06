@@ -1,5 +1,5 @@
 ---
-title: 专题地图及其应用
+title: 地区分布图及其应用
 author: 黄湘云
 date: '2022-04-20'
 slug: choropleth-map
@@ -7,6 +7,7 @@ categories:
   - 统计图形
 tags: 
   - 专题地图
+  - 地区分布图
   - 地理可视化
   - 区间估计
   - 数据指标
@@ -23,7 +24,7 @@ output:
   blogdown::html_page:
     toc: true
 forum_id: xxx
-description: "在美国和日本的国家统计局官网，专题地图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
+description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
 
@@ -32,7 +33,7 @@ description: "在美国和日本的国家统计局官网，专题地图用于展
 <li><a href="#本文概览" id="toc-本文概览">本文概览</a></li>
 <li><a href="#单变量情形" id="toc-单变量情形">单变量情形</a>
 <ul>
-<li><a href="#美国各城镇的年平均癌症死亡率分布" id="toc-美国各城镇的年平均癌症死亡率分布">美国各城镇的年平均癌症死亡率分布</a>
+<li><a href="#美国各郡的年平均癌症死亡率分布" id="toc-美国各郡的年平均癌症死亡率分布">美国各郡的年平均癌症死亡率分布</a>
 <ul>
 <li><a href="#maps" id="toc-maps">maps</a></li>
 <li><a href="#latticeextra" id="toc-latticeextra">latticeExtra</a></li>
@@ -142,17 +143,17 @@ div.img {
 </div>
 <div id="本文概览" class="section level1">
 <h1>本文概览</h1>
-<p>空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的收费 BI（Business Intelligence） 工具<a href="https://www.tableau.com/zh-cn/solutions/maps">Tableau</a>，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图、统计地图，英文一般为<a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a>，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了<a href="https://zhfw.tianditu.gov.cn/">专题图层服务</a>，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，专题地图用于展示各类指标<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。</p>
-<p>接下来，本文分四个部分展开介绍专题地图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
-<p>单变量情形中以 <strong>latticeExtra</strong> 包内置的数据集 USCancerRates 为例，以专题地图形式展示美国 1999-2003 年度各城镇的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制专题地图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包、<strong>tmap</strong> 包、<strong>sf</strong> 包和 <strong>mapsf</strong> 包，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
-<p>多变量情形中以美国人口统计局发布的调查数据为基础，分析北卡罗来纳州各区县普查粒度的家庭收入中位数与白人占比的空间相关性。先分别以单变量的专题地图描述各个普查区域里家庭收入中位数、白人占比的空间分布，接着和二元变量的专题地图形成对比，展示相关性的空间分布。</p>
+<p>空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的收费 BI（Business Intelligence） 工具<a href="https://www.tableau.com/zh-cn/solutions/maps">Tableau</a>，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图、统计地图，英文一般为<a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a>，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了<a href="https://zhfw.tianditu.gov.cn/">专题图层服务</a>，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，地区分布图用于展示各类指标<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。</p>
+<p>接下来，本文分四个部分展开介绍地区分布图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
+<p>单变量情形中以 <strong>latticeExtra</strong> 包内置的数据集 USCancerRates 为例，以地区分布图形式展示美国 1999-2003 年度各郡的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制地区分布图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包、<strong>tmap</strong> 包、<strong>sf</strong> 包和 <strong>mapsf</strong> 包，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
+<p>多变量情形中以美国人口统计局发布的调查数据为基础，分析北卡罗来纳州各区县普查级别的家庭收入中位数与白人占比的空间相关性。先分别以单变量的地区分布图描述各个普查区域里家庭收入中位数、白人占比的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。</p>
 <p>本文小结部分总结了 7 种绘图方案的情况，提炼了其间的关联关系，一些绘图经验，希望帮助读者加深理解和学习。</p>
 <p>未来展望部分从应用场景和绘图技术方面继续提供一些示例，供读者继续探索。</p>
 </div>
 <div id="单变量情形" class="section level1">
 <h1>单变量情形</h1>
-<div id="美国各城镇的年平均癌症死亡率分布" class="section level2">
-<h2>美国各城镇的年平均癌症死亡率分布</h2>
+<div id="美国各郡的年平均癌症死亡率分布" class="section level2">
+<h2>美国各郡的年平均癌症死亡率分布</h2>
 <p>下面以 <a href="https://latticeextra.r-forge.r-project.org/"><strong>latticeExtra</strong> 包</a><span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自<a href="https://statecancerprofiles.cancer.gov/">美国国家癌症研究所</a>（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国<a href="https://seer.cancer.gov/stdpopulations/stdpop.19ages.html">标准人口年龄分组</a>调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的<strong>美国标准人口年龄分组</strong>换算。因<strong>latticeExtra</strong> 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。</p>
 <p>人口数每年都会变的，为使各年数据指标可比，人口划分就保持一致，表<a href="#tab:us-std-pop">1</a> 展示 1940-2000 年各个年龄段（共19个年龄组）的标准人口数，各个年龄段的普查人口数换算成年龄调整的标准人口数，换算公式为：</p>
 <p><span class="math display">\[
@@ -419,7 +420,7 @@ aarate_{x-y} = \sum_{i=x}^{y}\Big[ \big( \frac{count_i}{pop_i} \big)  \times \bi
 <p><span class="math display">\[
 aarate_{0-0} = \frac{29}{139879}*\frac{3794901}{274633642}*100000 = 0.2864
 \]</span></p>
-<p>读者可能有疑惑，一系列复杂的调整是为什么？指标稳定性和可比性。稳定不是代表不变，稳定是不受轻易干扰。从各社区、各城镇、各州乃至国家，从下往上聚合数据的时候，分年龄、种族、性别等下钻/上卷的时候，有的城镇总人口可能相对很少，死亡人数也很少。可比性是指组与组间可比，且随时间变化依然可比，刻画因癌症死亡的相对风险。</p>
+<p>读者可能有疑惑，一系列复杂的调整是为什么？指标稳定性和可比性。稳定不是代表不变，稳定是不受轻易干扰。从各社区、各郡、各州乃至国家，从下往上聚合数据的时候，分年龄、种族、性别等下钻/上卷的时候，有的郡总人口可能相对很少，死亡人数也很少。可比性是指组与组间可比，且随时间变化依然可比，刻画因癌症死亡的相对风险。</p>
 <pre class="r"><code># 加载死亡率数据
 data(USCancerRates, package = &quot;latticeExtra&quot;)
 # 查看 Alabama 的 Pickens County 的数据
@@ -437,11 +438,11 @@ subset(x = USCancerRates, subset = state == &quot;Alabama&quot; &amp; county == 
 # 置信上限
 363.7 + 1.96 * sqrt(363.7 / 100000 * (1 - 363.7 / 100000) / 100000) * 100000
 # [1] 401</code></pre>
-<p>而美国国家癌症研究所给的置信带更宽，更保守一些，显然这里面的算法没这么简单。以阿拉巴马州为例，将所有的城镇死亡率及其置信区间绘制出来，如图<a href="#fig:alabama-ci-rank">1</a>所示，整体来说，偏离置信区间中心都很小。</p>
+<p>而美国国家癌症研究所给的置信带更宽，更保守一些，显然这里面的算法没这么简单。以阿拉巴马州为例，将所有的郡死亡率及其置信区间绘制出来，如图<a href="#fig:alabama-ci-rank">1</a>所示，整体来说，偏离置信区间中心都很小。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:alabama-ci-rank"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/alabama-ci-rank-1.png" alt="1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/alabama-ci-rank-1.png" alt="1999-2003 年美国阿拉巴马州各个郡的年平均癌症死亡率" width="768" />
 <p class="caption">
-图 1: 1999-2003 年美国阿拉巴马州各个城镇的年平均癌症死亡率
+图 1: 1999-2003 年美国阿拉巴马州各个郡的年平均癌症死亡率
 </p>
 </div>
 <p>不难看出，女性癌症死亡率整体上低于男性，且各个地区的死亡率有明显差异。NCI <a href="https://statecancerprofiles.cancer.gov/confidenceintervals.html">网站</a>仅对置信区间的统计意义给予解释，这跟统计学课本上没有太多差别，没有提供具体的计算过程。可以推断的是必然使用了泊松、伽马一类的偏态分布来刻画死亡人数的分布，疑问尚未解开，欢迎大家讨论。</p>
@@ -450,12 +451,12 @@ subset(x = USCancerRates, subset = state == &quot;Alabama&quot; &amp; county == 
 </div>
 <div id="maps" class="section level3">
 <h3>maps</h3>
-<p><strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>内置的美国城镇地图数据欠缺一部分，阿拉斯加、夏威夷和波多黎各都没有。数据集 USCancerRates 没有夏威夷、波多黎各各个城镇的数据，阿拉斯加的部分城镇有数据，如图<a href="#fig:us-cancer-rates-maps">2</a>所示，不少城镇没有收集到癌症死亡率数据，以灰色表示。值得一提的是，关于死亡率分级，不同的分法会带给人不同的印象甚至是错觉，此处是可以有操作空间的，特定的死亡率分割方式可以让男女死亡率的空间分布<strong>看起来</strong>差异不大或很大<span class="citation">(<a href="#ref-Kolak2020" role="doc-biblioref">Kolak et al. 2020</a>)</span>，详细介绍见 Marynia Kolak 和 Susan Paykin 在 2021 R/Medicine 大会上的<a href="https://youtu.be/-HvRISFkQZQ">视频</a>和<a href="https://makosak.github.io/Intro2RSpatialMed/02-choropleth.html">网页</a>材料。</p>
-<p>分析和展示地理信息数据是一项常规任务，约 30 年前，Richard A. Becker 等为 S 语言引入地理可视化，特别是本文介绍的专题地图，以及简单的区域面积和区域中心的计算能力<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>, <a href="#ref-Becker1995" role="doc-biblioref">1995</a>)</span>，而后到了 2003年，Ray Brownrigg、Thomas P Minka 和 Alex Deckmyn 等将其引入 R 语言社区并持续维护至今<span class="citation">(<a href="#ref-maps" role="doc-biblioref">Richard A. Becker, Ray Brownrigg. Enhancements by Thomas P Minka, and Deckmyn. 2021</a>)</span>。除了最基础的 <strong>maps</strong> 包，还有坐标投影 <strong>mapproj</strong> 包<span class="citation">(<a href="#ref-mapproj" role="doc-biblioref">R by Ray Brownrigg, Minka, and Plan 9 codebase by Roger Bivand. 2022</a>)</span>，以及提供更多地图数据的 <strong>mapdata</strong> 包<span class="citation">(<a href="#ref-mapdata" role="doc-biblioref">Richard A. Becker and Ray Brownrigg. 2018</a>)</span>。那个时候，因缺乏一些基础工具，在地图数据获取、空间数据操作和可视化方面都不太容易，仅用这些能做到下图<a href="#fig:us-cancer-rates-maps">2</a>已属不易。</p>
+<p><strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>内置的美国郡地图数据欠缺一部分，阿拉斯加、夏威夷和波多黎各都没有。数据集 USCancerRates 没有夏威夷、波多黎各各个郡的数据，阿拉斯加的部分郡有数据，如图<a href="#fig:us-cancer-rates-maps">2</a>所示，不少郡没有收集到癌症死亡率数据，以灰色表示。值得一提的是，关于死亡率分级，不同的分法会带给人不同的印象甚至是错觉，此处是可以有操作空间的，特定的死亡率分割方式可以让男女死亡率的空间分布<strong>看起来</strong>差异不大或很大<span class="citation">(<a href="#ref-Kolak2020" role="doc-biblioref">Kolak et al. 2020</a>)</span>，详细介绍见 Marynia Kolak 和 Susan Paykin 在 2021 R/Medicine 大会上的<a href="https://youtu.be/-HvRISFkQZQ">视频</a>和<a href="https://makosak.github.io/Intro2RSpatialMed/02-choropleth.html">网页</a>材料。</p>
+<p>分析和展示地理信息数据是一项常规任务，约 30 年前，Richard A. Becker 等为 S 语言引入地理可视化，特别是本文介绍的地区分布图，以及简单的区域面积和区域中心的计算能力<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>, <a href="#ref-Becker1995" role="doc-biblioref">1995</a>)</span>，而后到了 2003年，Ray Brownrigg、Thomas P Minka 和 Alex Deckmyn 等将其引入 R 语言社区并持续维护至今<span class="citation">(<a href="#ref-maps" role="doc-biblioref">Richard A. Becker, Ray Brownrigg. Enhancements by Thomas P Minka, and Deckmyn. 2021</a>)</span>。除了最基础的 <strong>maps</strong> 包，还有坐标投影 <strong>mapproj</strong> 包<span class="citation">(<a href="#ref-mapproj" role="doc-biblioref">R by Ray Brownrigg, Minka, and Plan 9 codebase by Roger Bivand. 2022</a>)</span>，以及提供更多地图数据的 <strong>mapdata</strong> 包<span class="citation">(<a href="#ref-mapdata" role="doc-biblioref">Richard A. Becker and Ray Brownrigg. 2018</a>)</span>。那个时候，因缺乏一些基础工具，在地图数据获取、空间数据操作和可视化方面都不太容易，仅用这些能做到下图<a href="#fig:us-cancer-rates-maps">2</a>已属不易。</p>
 <pre class="r"><code># 加载数据
 data(USCancerRates, package = &quot;latticeExtra&quot;)
 library(maps)
-# 城镇地图数据
+# 郡地图数据
 us_county &lt;- map(&quot;county&quot;, plot = FALSE, fill = TRUE, projection = &quot;polyconic&quot;)
 # 奈何 maps 内置的地图数据不全，仅保留部分观察数据
 USCancerRates2 &lt;- subset(x = USCancerRates, subset = rownames(USCancerRates) %in% us_county$names)
@@ -465,7 +466,7 @@ colors &lt;- viridisLite::plasma(13)
 leg.txt &lt;- mapply(paste, 50*0:12, 50*1:13, collapse = &quot; &quot;, sep = &quot;~&quot;)
 # 癌症死亡率划分区间
 USCancerRates2$colorBuckets_male &lt;- as.numeric(cut(USCancerRates2$rate.male, 50*0:13))
-# 根据城镇名称给地图上每个区域的癌症死亡率匹配颜色
+# 根据郡名称给地图上每个区域的癌症死亡率匹配颜色
 colorsmatched_male &lt;- USCancerRates2$colorBuckets_male[match(us_county$names, rownames(USCancerRates2))]
 # 对女性癌症死亡率类似操作
 USCancerRates2$colorBuckets_female &lt;- as.numeric(cut(USCancerRates2$rate.female, 50*0:13))
@@ -489,7 +490,7 @@ map(&quot;state&quot;,
 )
 map.scale()
 # 添加图标题
-title(&quot;1999-2003 年美国各个城镇的年平均癌症死亡率（单位：十万分之一）&quot;, line = 2)
+title(&quot;1999-2003 年美国各个郡的年平均癌症死亡率（单位：十万分之一）&quot;, line = 2)
 mtext(text = &quot;男性&quot;, side = 3, adj = 0.5)
 par(mar = c(1, 0, 2, 0))
 map(&quot;county&quot;,
@@ -514,9 +515,9 @@ legend(&quot;bottomright&quot;,
   horiz = FALSE, fill = c(colors, &quot;grey80&quot;), cex = 0.85, xjust = 0.5
 )</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-maps"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-maps-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-maps-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 2: 1999-2003 年美国各个城镇的年平均癌症死亡率分布
+图 2: 1999-2003 年美国各个郡的年平均癌症死亡率分布
 </p>
 </div>
 <p>在数据操作方面，麻烦的是建立数据指标和各个地理区域的映射，上面反复用到函数 <code>match()</code>，Base R 有很多这样短小精悍的函数。下面简单介绍一下以助理解，函数 <code>match()</code> 返回一个向量，向量的长度与参数 x 一致，向量的元素是整型的，表示参数 x 中的元素出现在参数 table 中的位置，下面是三个小示例：</p>
@@ -526,7 +527,7 @@ match(x = c(&quot;A&quot;, &quot;B&quot;), table = c(&quot;C&quot;, &quot;A&quot
 # [1]  2 NA
 match(x = c(&quot;A&quot;, &quot;B&quot;), table = c(&quot;C&quot;, &quot;A&quot;, &quot;D&quot;))
 # [1]  2 NA</code></pre>
-<p>另外，<strong>maps</strong> 包内置的地图数据制作起来比较复杂，也很长时间没有更新了，笔者不推荐读者再从零开始构建 map 数据对象。<strong>sp</strong> 包<span class="citation">(<a href="#ref-Pebesma2005" role="doc-biblioref">E. J. Pebesma and Bivand 2005</a>)</span>发布后，<strong>maps</strong> 包支持将 Spatial 数据对象转为 map 数据对象，这相当于引入了 <strong>sp</strong> 包及其生态在空间数据获取和数据操作方面的能力<span class="citation">(<a href="#ref-Bivand2013" role="doc-biblioref">R. S. Bivand, Pebesma, and Gomez-Rubio 2013</a>)</span>。目前，美国国家人口统计局已提供了历年的州、城镇、普查级多个比例尺的行政区划地图数据，配合 <strong>sf</strong> 包，可以很好地解决地理可视化的背景底图问题。一些以前看起来很难的问题，随着时间变迁，技术革新，已经解决了。</p>
+<p>另外，<strong>maps</strong> 包内置的地图数据制作起来比较复杂，也很长时间没有更新了，笔者不推荐读者再从零开始构建 map 数据对象。<strong>sp</strong> 包<span class="citation">(<a href="#ref-Pebesma2005" role="doc-biblioref">E. J. Pebesma and Bivand 2005</a>)</span>发布后，<strong>maps</strong> 包支持将 Spatial 数据对象转为 map 数据对象，这相当于引入了 <strong>sp</strong> 包及其生态在空间数据获取和数据操作方面的能力<span class="citation">(<a href="#ref-Bivand2013" role="doc-biblioref">R. S. Bivand, Pebesma, and Gomez-Rubio 2013</a>)</span>。目前，美国国家人口统计局已提供了历年的州、郡、普查级多个比例尺的行政区划地图数据，配合 <strong>sf</strong> 包，可以很好地解决地理可视化的背景底图问题。一些以前看起来很难的问题，随着时间变迁，技术革新，已经解决了。</p>
 </div>
 <div id="latticeextra" class="section level3">
 <h3>latticeExtra</h3>
@@ -542,15 +543,15 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
   data = USCancerRates,
   # 修改默认的面板函数
   panel = function(x, y, map, ...) {
-    # 对未收集到癌症死亡率数据的城镇，添加城镇边界线
+    # 对未收集到癌症死亡率数据的郡，添加郡边界线
     panel.lines(x = us_county$x, y = us_county$y, lty = 1, lwd = 0.2, col = &quot;black&quot;)
     latticeExtra::panel.mapplot(x, y, map, ...)
   },
-  # 城镇地图数据为背景
+  # 郡地图数据为背景
   map = us_county,
   # 填充地图用的调色板
   colramp = viridisLite::plasma,
-  # 覆盖城镇边界线
+  # 覆盖郡边界线
   border = NA,
   # 多图布局 2 行 1 列
   layout = c(1, 2),
@@ -558,7 +559,7 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
   # cuts = 14, # 指定 breaks 后就不需要 cuts
   # 死亡率数据分割点
   breaks = 50 * 0:13,
-  # 仅展示地图数据中包含的城镇死亡率数据
+  # 仅展示地图数据中包含的郡死亡率数据
   subset = rownames(USCancerRates) %in% us_county$names,
   # 取消坐标轴刻度
   scales = list(draw = F),
@@ -588,7 +589,7 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
   # 副标题
   sub = &quot;数据源：美国国家癌症研究所&quot;,
   # 主标题
-  main = &quot;1999-2003 年美国各个城镇的年平均癌症死亡率&quot;
+  main = &quot;1999-2003 年美国各个郡的年平均癌症死亡率&quot;
 ) +
   # 添加州边界
   latticeExtra::layer(panel.lines(
@@ -596,9 +597,9 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
     lty = 1, lwd = 0.2, col = &quot;white&quot;
   ))</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-lattice"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-lattice-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-lattice-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 3: 1999-2003 年美国各个城镇的年平均癌症死亡率分布
+图 3: 1999-2003 年美国各个郡的年平均癌症死亡率分布
 </p>
 </div>
 <p>用 <strong>lattice</strong> 包绘图往往可以一个函数搞定，参数非常多，都放在一起，这和 Base R 的绘图函数类似，也同时提供全局图形参数控制，但似乎更加复杂。下面谈几个细节：</p>
@@ -648,14 +649,14 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
 图 6: panel 叠加图层
 </p>
 </div>
-<p>此外，<strong>latticeExtra</strong> 扩展了图层功能，特别是 <code>layer()</code> 函数，可在主体绘图函数之后直接叠加新图层。如上图<a href="#fig:us-cancer-rates-lattice">3</a>，在 <code>latticeExtra::mapplot()</code> 完成主体绘图工作后，添加美国各州边界线，有助于识别城镇位置。大家应该都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但只要画上各个省的边界，你肯定能指出更多的省份位置，类似地，从省到市、乃至区县，边界给了我们很好的参照。</p>
+<p>此外，<strong>latticeExtra</strong> 扩展了图层功能，特别是 <code>layer()</code> 函数，可在主体绘图函数之后直接叠加新图层。如上图<a href="#fig:us-cancer-rates-lattice">3</a>，在 <code>latticeExtra::mapplot()</code> 完成主体绘图工作后，添加美国各州边界线，有助于识别郡位置。大家应该都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但只要画上各个省的边界，你肯定能指出更多的省份位置，类似地，从省到市、乃至区县，边界给了我们很好的参照。</p>
 </div>
 <div id="ggplot2" class="section level3">
 <h3>ggplot2</h3>
-<p>考虑到 <strong>maps</strong> 包内置的地图数据的缺陷，<strong>ggplot2</strong> 包的流行度，下面采用 <strong>ggplot2</strong> 包绘制分面专题地图，相比于 <strong>latticeExtra</strong> 包，<strong>ggplot2</strong> 包更适合「长格式」的数据，因此，需要先重塑 USCancerRates 数据集，将城镇死亡率数据和城镇地理边界数据配对，根据死亡率的分布设置合适分段，最后恢复地图数据的原始顺序。数据操作过程中有两点强调：</p>
+<p>考虑到 <strong>maps</strong> 包内置的地图数据的缺陷，<strong>ggplot2</strong> 包的流行度，下面采用 <strong>ggplot2</strong> 包绘制分面地区分布图，相比于 <strong>latticeExtra</strong> 包，<strong>ggplot2</strong> 包更适合「长格式」的数据，因此，需要先重塑 USCancerRates 数据集，将郡死亡率数据和郡地理边界数据配对，根据死亡率的分布设置合适分段，最后恢复地图数据的原始顺序。数据操作过程中有两点强调：</p>
 <ol style="list-style-type: decimal">
 <li><p>数据重塑：USCancerRates 数据集除了 state 和 county 列，剩余列是由三个原子指标按性别维度衍生出来的，分别是癌症死亡率及其置信区间的上、下限值。在「宽格式」转「长格式」过程中，要注意转化前后各个列名的对应关系。</p></li>
-<li><p>数据关联：先将地图数据放左边，观测数据放右边，以 LEFT JOIN （左关联） 的方式关联起来，接着将连续性的死亡率数据分段，最后调用绘图函数绘制专题地图。</p></li>
+<li><p>数据关联：先将地图数据放左边，观测数据放右边，以 LEFT JOIN （左关联） 的方式关联起来，接着将连续性的死亡率数据分段，最后调用绘图函数绘制地区分布图。</p></li>
 </ol>
 <pre class="r"><code># 宽格式转长格式
 us_cancer_rates &lt;- reshape(
@@ -668,14 +669,14 @@ us_cancer_rates &lt;- reshape(
   times = c(&quot;男性&quot;, &quot;女性&quot;), # 构成新列 sex 的列值
   v.names = c(&quot;LCL95&quot;, &quot;rate&quot;, &quot;UCL95&quot;), # 列转行 列值构成的新列，指定名称
   timevar = &quot;sex&quot;, # 列转行 列名构成的新列，指定名称
-  idvar = c(&quot;state&quot;, &quot;county&quot;), # 可识别城镇的编码
+  idvar = c(&quot;state&quot;, &quot;county&quot;), # 可识别郡的编码
   # 原数据有 3041 行，性别字段只有两个取值，转长格式后有 2*3041 行
   new.row.names = 1:(2 * 3041),
   direction = &quot;long&quot;
 )
 # 从 usmapdata 包获取地图数据
 county_df &lt;- usmapdata::us_map(&quot;counties&quot;)
-# 给每个城镇的癌症死亡率数据配上地图数据
+# 给每个郡的癌症死亡率数据配上地图数据
 dat &lt;- merge(county_df, us_cancer_rates, by.x = c(&quot;full&quot;, &quot;county&quot;), by.y = c(&quot;state&quot;, &quot;county&quot;), all.y = T)
 # 准备州边界线数据
 state_df &lt;- usmapdata::us_map(&quot;states&quot;)
@@ -685,10 +686,10 @@ dat$rate_d &lt;- cut(dat$rate, breaks = 50*0:13)
 dat &lt;- dat[order(dat$order), ]</code></pre>
 <p>数据准备工作完成后，除了在细节上不断试错外<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>，绘图过程主要有七个步骤：</p>
 <ol style="list-style-type: decimal">
-<li>底图：绘制美国城镇地图，填充灰色背景，以此为底图。</li>
-<li>映射：添加每个城镇的癌症死亡率数据，填充颜色根据死亡率而定，以浅白色绘制城镇的边界线，且将线调细一些，与后面州的边界线形成层次。</li>
-<li>边界：添加美国各个州的边界线，帮助熟悉美国地图的从州到城镇快速定位。</li>
-<li>配色：类似前文设置，采用 <code>plasma</code> 调色板，未采集到死亡率数据的城镇填充灰色，和地图背景融为一体。</li>
+<li>底图：绘制美国郡地图，填充灰色背景，以此为底图。</li>
+<li>映射：添加每个郡的癌症死亡率数据，填充颜色根据死亡率而定，以浅白色绘制郡的边界线，且将线调细一些，与后面州的边界线形成层次。</li>
+<li>边界：添加美国各个州的边界线，帮助熟悉美国地图的从州到郡快速定位。</li>
+<li>配色：类似前文设置，采用 <code>plasma</code> 调色板，未采集到死亡率数据的郡填充灰色，和地图背景融为一体。</li>
 <li>布局：以函数 <code>facet_wrap()</code> 实现分面，分面标题放在图形上方，布局为两行一列。</li>
 <li>标题：添加整个图形的主标题、副标题和图例标题。</li>
 <li>主题：设置整个图形主题样式 <code>theme_void()</code> 以符合地图特色，将图形主标题位置居中。</li>
@@ -701,15 +702,15 @@ ggplot() +
   scale_fill_viridis_d(option = &quot;plasma&quot;, na.value = &quot;grey80&quot;) +
   facet_wrap(~sex, ncol = 1, strip.position = &quot;top&quot;) +
   labs(
-    fill = &quot;死亡率&quot;, title = &quot;1999-2003 年美国各个城镇的年平均癌症死亡率&quot;,
+    fill = &quot;死亡率&quot;, title = &quot;1999-2003 年美国各个郡的年平均癌症死亡率&quot;,
     caption = &quot;数据源：美国国家癌症研究所&quot;
   ) +
   theme_void(base_size = 13) +
   theme(plot.title = element_text(hjust = 0.5))</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-ggplot2"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-ggplot2-1.png" alt="1999 年至 2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-ggplot2-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 7: 1999 年至 2003 年美国各个城镇的年平均癌症死亡率分布
+图 7: 1999-2003 年美国各个郡的年平均癌症死亡率分布
 </p>
 </div>
 <p>尽管已经调整了上图<a href="#fig:us-cancer-rates-ggplot2">7</a>的长宽比例，可一旦和非 <strong>ggplot2</strong> 绘制的图形对比，就可以看出明显变形了。</p>
@@ -717,7 +718,7 @@ ggplot() +
 <div id="tmap" class="section level3">
 <h3>tmap</h3>
 <p>同 <strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>的绘图函数 <code>plot()</code> 一样，<strong>tmap</strong> <span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span> 也是基于 Base R 图形系统，但使用语法更加贴合 <strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>，对空间数据可视化有更多专业支持，比如基于比例的符号/气泡图<span class="citation">(<a href="#ref-Susumu2006" role="doc-biblioref">Tanimura, Kuroiwa, and Mizota 2006</a>)</span> <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>和基于二维核密度估计的热力图<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>。</p>
-<p><strong>tmap</strong> 支持 <strong>sp</strong> 包提供的 Spatial 类数据对象，也支持 <strong>sf</strong> 包提供的 Simple Features 类数据对象，众所周知，后者是新一代更好的工具，因此接下来的示例都将基于 <strong>sf</strong> 包。首先从美国人口调查局下载州和城镇级别的<a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">多边形边界数据</a>，再类似 <strong>usmapdata</strong> 包对阿拉斯加、夏威夷和波多黎各做适当的调整，借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>让这个过程变得容易，调整地图数据的代码与源文档放在一起，读者可自取。</p>
+<p><strong>tmap</strong> 支持 <strong>sp</strong> 包提供的 Spatial 类数据对象，也支持 <strong>sf</strong> 包提供的 Simple Features 类数据对象，众所周知，后者是新一代更好的工具，因此接下来的示例都将基于 <strong>sf</strong> 包。首先从美国人口调查局下载州和郡级别的<a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">多边形边界数据</a>，再类似 <strong>usmapdata</strong> 包对阿拉斯加、夏威夷和波多黎各做适当的调整，借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>让这个过程变得容易，调整地图数据的代码与源文档放在一起，读者可自取。</p>
 <pre class="r"><code># 准备地图数据
 library(sf)
 us_states_shifted &lt;- readRDS(file = &quot;data/us_states_shifted.rds&quot;)
@@ -728,7 +729,7 @@ us_county_cancer2 &lt;- merge(
   by.x = c(&quot;STATE_NAME&quot;, &quot;NAMELSAD&quot;),
   by.y = c(&quot;state&quot;, &quot;county&quot;), all.x = TRUE
 )</code></pre>
-<p>准备好数据后，绘图过程比较类似之前使用 <strong>ggplot2</strong> 绘图，所不同的是，添加了指北针、比例尺等专题地图特有的内容。</p>
+<p>准备好数据后，绘图过程比较类似之前使用 <strong>ggplot2</strong> 绘图，所不同的是，添加了指北针、比例尺等地区分布图特有的内容。</p>
 <pre class="r"><code># 绘图
 tmap::tm_shape(us_county_cancer2) +
   tmap::tm_polygons(border.col = &quot;gray&quot;) +
@@ -756,15 +757,15 @@ tmap::tm_shape(us_county_cancer2) +
     asp = 0
   )</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-tmap"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-tmap-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-tmap-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 8: 1999-2003 年美国各个城镇的年平均癌症死亡率分布
+图 8: 1999-2003 年美国各个郡的年平均癌症死亡率分布
 </p>
 </div>
 </div>
 <div id="sf" class="section level3">
 <h3>sf</h3>
-<p>在上一节已经准备好了美国各个城镇的边界数据，接下来合并各个城镇的癌症死亡率数据 USCancerRates，调用 <strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>的绘图函数 <code>plot()</code>。除了调用函数 <code>plot()</code>的几行代码，绘制图<a href="#fig:us-cancer-rates-sf">9</a>的代码和前面调用 <strong>maps</strong> 包绘图大体是类似的，但灵活性高得多，因 <strong>sf</strong> 包的强大，支持大量的空间数据存储格式，不受限于 <strong>maps</strong> 包内置的不完整地图数据，也不因给城镇区域上色添加额外的数据匹配操作。</p>
+<p>在上一节已经准备好了美国各个郡的边界数据，接下来合并各个郡的癌症死亡率数据 USCancerRates，调用 <strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>的绘图函数 <code>plot()</code>。除了调用函数 <code>plot()</code>的几行代码，绘制图<a href="#fig:us-cancer-rates-sf">9</a>的代码和前面调用 <strong>maps</strong> 包绘图大体是类似的，但灵活性高得多，因 <strong>sf</strong> 包的强大，支持大量的空间数据存储格式，不受限于 <strong>maps</strong> 包内置的不完整地图数据，也不因给郡区域上色添加额外的数据匹配操作。</p>
 <pre class="r"><code># 准备地图数据
 us_county_shifted &lt;- readRDS(file = &quot;data/us_county_shifted.rds&quot;)
 # 空间数据合并观测数据
@@ -774,7 +775,7 @@ us_county_cancer &lt;- merge(
   by.y = c(&quot;state&quot;, &quot;county&quot;), all.x = TRUE
 )
 par(mar = c(0, 0, 4, 0), mfrow = c(2, 1))
-# 添加城镇地图
+# 添加郡地图
 plot(st_geometry(us_county_shifted),
   reset = FALSE, border = NA, col = &quot;grey80&quot;, main = &quot;&quot;
 )
@@ -787,7 +788,7 @@ plot(us_county_cancer[&quot;rate.male&quot;],
 # 美国各个州边界
 plot(st_geometry(us_states_shifted), border = &quot;gray80&quot;, lwd = 0.25, add = TRUE)
 # 添加主标题
-title(main = &quot;1999-2003 年美国各个城镇的年平均癌症死亡率&quot;, line = 2)
+title(main = &quot;1999-2003 年美国各个郡的年平均癌症死亡率&quot;, line = 2)
 # 添加分面标题
 mtext(text = &quot;男性&quot;, side = 3, adj = 0.5)
 # 调整边空
@@ -813,9 +814,9 @@ legend(&quot;bottomright&quot;,
   horiz = FALSE, fill = c(colors, &quot;grey80&quot;), cex = 0.85, xjust = 0.5
 )</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-sf"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-sf-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-sf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 9: 1999-2003 年美国各个城镇的年平均癌症死亡率分布
+图 9: 1999-2003 年美国各个郡的年平均癌症死亡率分布
 </p>
 </div>
 </div>
@@ -845,21 +846,21 @@ ggplot() +
   coord_sf(crs = st_crs(&quot;ESRI:102003&quot;)) +
   facet_wrap(~sex, ncol = 1) +
   labs(
-    fill = &quot;死亡率&quot;, title = &quot;1999-2003 年美国各个城镇的年平均癌症死亡率&quot;,
+    fill = &quot;死亡率&quot;, title = &quot;1999-2003 年美国各个郡的年平均癌症死亡率&quot;,
     caption = &quot;数据源：美国国家癌症研究所&quot;
   ) +
   theme_void(base_size = 13) +
   theme(plot.title = element_text(hjust = 0.5))</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-ggplot2-sf"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-ggplot2-sf-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-ggplot2-sf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 10: 1999-2003 年美国各个城镇的年平均癌症死亡率分布
+图 10: 1999-2003 年美国各个郡的年平均癌症死亡率分布
 </p>
 </div>
 </div>
 <div id="mapsf" class="section level3">
 <h3>mapsf</h3>
-<p>如 Roger Bivand 所推荐，下面介绍 <strong>mapsf</strong> 包 <span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，它在 <strong>sf</strong> 包的基础上添加更多地理可视化的功能，比如指北针、比例尺、三维特效等，同时也支持比例符号图、专题地图及其混合地图。<a href="https://rcarto.github.io/foss4g2021"><strong>mapsf</strong></a> 绘图思路和 <strong>sf</strong> 是一致的，只是封装了一些更加便捷的绘图函数，如图<a href="#fig:us-cancer-rates-mapsf">11</a>所示，大体分三步：其一准备主题样式，配色、布局等；其二表达地理数据，选择合适的图形，建立数据到地图的映射；其三补充一些说明，如注释、比例尺、标题等。</p>
+<p>如 Roger Bivand 所推荐，下面介绍 <strong>mapsf</strong> 包 <span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，它在 <strong>sf</strong> 包的基础上添加更多地理可视化的功能，比如指北针、比例尺、三维特效等，同时也支持比例符号图、地区分布图及其混合地图。<a href="https://rcarto.github.io/foss4g2021"><strong>mapsf</strong></a> 绘图思路和 <strong>sf</strong> 是一致的，只是封装了一些更加便捷的绘图函数，如图<a href="#fig:us-cancer-rates-mapsf">11</a>所示，大体分三步：其一准备主题样式，配色、布局等；其二表达地理数据，选择合适的图形，建立数据到地图的映射；其三补充一些说明，如注释、比例尺、标题等。</p>
 <pre class="r"><code>library(mapsf)
 par(mfrow = c(2, 1))
 # 设置主题
@@ -905,9 +906,9 @@ mf_scale(pos = &quot;bottomleft&quot;)
 mf_title(txt = &quot;女性&quot;, bg = &quot;#f7f7f7&quot;, fg = &quot;black&quot;, cex = 1)
 mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quot;bottomright&quot;, cex = 1)</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-mapsf"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-mapsf-1.png" alt="1999-2003 年美国各个城镇的年平均癌症死亡率分布" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-mapsf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
 <p class="caption">
-图 11: 1999-2003 年美国各个城镇的年平均癌症死亡率分布
+图 11: 1999-2003 年美国各个郡的年平均癌症死亡率分布
 </p>
 </div>
 <div class="rmdnote">
@@ -918,14 +919,14 @@ mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quo
 </div>
 <div id="多变量情形" class="section level1">
 <h1>多变量情形</h1>
-<p><a href="https://en.wikipedia.org/wiki/Multivariate_map">多元专题地图</a>用以同时展示两个具有空间相关性的变量，比如人均收入和平均寿命，房地产投资占比和城镇化率<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。下面以美国北卡州家庭收入中位数与白人占比的空间相关性为例，在专题地图上同时展示多个指标，除了用到 <strong>ggplot2</strong> 和 <strong>sf</strong> 包，还需 <a href="https://github.com/slu-openGIS/biscale"><strong>biscale</strong></a> <span class="citation">(<a href="#ref-Prener2020" role="doc-biblioref">Prener, Grossenbacher, and Zehr 2020</a>)</span>和 <a href="https://github.com/wilkelab/cowplot"><strong>cowplot</strong></a> <span class="citation">(<a href="#ref-Wilke2020" role="doc-biblioref">Wilke 2020</a>)</span>两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客<a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/">Bivariate maps with <strong>ggplot2</strong> and <strong>sf</strong></a>。</p>
+<p><a href="https://en.wikipedia.org/wiki/Multivariate_map">多元地区分布图</a>用以同时展示两个具有空间相关性的变量，比如人均收入和平均寿命，房地产投资占比和城镇化率<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。下面以美国北卡州家庭收入中位数与白人占比的空间相关性为例，在地区分布图上同时展示多个指标，除了用到 <strong>ggplot2</strong> 和 <strong>sf</strong> 包，还需 <a href="https://github.com/slu-openGIS/biscale"><strong>biscale</strong></a> <span class="citation">(<a href="#ref-Prener2020" role="doc-biblioref">Prener, Grossenbacher, and Zehr 2020</a>)</span>和 <a href="https://github.com/wilkelab/cowplot"><strong>cowplot</strong></a> <span class="citation">(<a href="#ref-Wilke2020" role="doc-biblioref">Wilke 2020</a>)</span>两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客<a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/">Bivariate maps with <strong>ggplot2</strong> and <strong>sf</strong></a>。</p>
 <div id="美国北卡州家庭收入中位数与白人占比的空间相关性" class="section level2">
 <h2>美国北卡州家庭收入中位数与白人占比的空间相关性</h2>
-<p>受上个示例的启发，除了城镇，还有人口普查单元粒度的地区分布图，以描述更加详细点的空间分布，同时，这次从<a href="https://www.census.gov/">美国人口调查局</a>直接获取数据。下面的数据集来自 2015-2019 年度美国社区调查（American Community Survey，约<strong>300</strong>万家庭的抽样），社区普查粒度（大致相当于咱们按乡镇、街道统计）的北卡罗来纳州家庭收入中位数（家庭收入中位数指的是过去12个月家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的。）和白人居民的百分比，原始数据可借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 <code>nc_race_income.RData</code>，整理过程的代码与本文源文档放在一起。</p>
+<p>受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从<a href="https://www.census.gov/">美国人口调查局</a>直接获取数据。下面的数据集来自 2015-2019 年度美国社区调查（American Community Survey，约<strong>300</strong>万家庭的抽样），社区普查级别（大致相当于咱们按乡镇、街道统计）的北卡罗来纳州家庭收入中位数（家庭收入中位数指的是过去12个月家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的。）和白人居民的百分比，原始数据可借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 <code>nc_race_income.RData</code>，整理过程的代码与本文源文档放在一起。</p>
 <p>先看下2015-2019年度美国北卡罗来纳州普查级<strong>家庭收入中位数</strong>的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图<a href="#fig:us-nc-income">12</a>设置了自定义的收入分段，以体现各个收入阶层：10 万以下<strong>低收入</strong>，10-15 万<strong>中等收入</strong>，15-20万<strong>中高收入</strong>，20-25万<strong>高收入</strong>。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。</p>
 <pre class="r"><code># 加载收入和种族数据
 load(file = &quot;data/nc_race_income.RData&quot;)
-# 读取城镇边界地图数据
+# 读取郡边界地图数据
 nc_county_map &lt;- read_sf(system.file(&quot;gpkg/nc.gpkg&quot;, package = &quot;sf&quot;), as_tibble = FALSE)
 us_nc_tract &lt;- readRDS(file = &quot;data/us_nc_tract.rds&quot;)
 # 合并地图数据和收入数据
@@ -942,7 +943,7 @@ plot(us_nc_tract_2019[&quot;medInc&quot;], key.pos = 1,
   breaks = c(0:10, 15, 20, 25) * 10000,
   border = &quot;gray80&quot;, main = &quot;&quot;, lwd = 0.1
 )
-# 添加城镇边界
+# 添加郡边界
 plot(st_geometry(nc_county_map), border = &quot;white&quot;, lwd = 0.25, add = TRUE)
 mtext(text = &quot;数据源：美国人口调查局&quot;, side = 1, adj = 0.8, line = -1, padj = 1)</code></pre>
 <div class="full-width">
@@ -951,7 +952,7 @@ mtext(text = &quot;数据源：美国人口调查局&quot;, side = 1, adj = 0.8,
 <p class="caption">图 12:  北卡罗来纳州普查水平下家庭收入中位数的空间分布</p>
 </div>
 </div>
-<p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，利用 <strong>sf</strong> 包内置的地图数据集 <code>nc.gpkg</code>，将各个数据指标从社区上卷到各个城镇。</p>
+<p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，利用 <strong>sf</strong> 包内置的地图数据集 <code>nc.gpkg</code>，将各个数据指标从社区上卷到各个郡。</p>
 <pre class="r"><code># 加载 NC 社区调查原始数据
 load(file = &quot;data/nc_race_income.RData&quot;)
 # 获取县级的地图数据
@@ -978,7 +979,7 @@ nc_bi_map &lt;- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
   ) +
   bi_scale_fill(pal = &quot;DkViolet&quot;, dim = 3) +
   labs(
-    title = &quot;2015-2019 年度北卡罗来纳州各个城镇收入水平和白人占比的空间相关性&quot;,
+    title = &quot;2015-2019 年度北卡罗来纳州各个郡收入水平和白人占比的空间相关性&quot;,
     caption = &quot;数据源：美国人口调查局&quot;
   ) +
   theme_void() +
@@ -1006,14 +1007,14 @@ ggdraw() +
   draw_plot(nc_bi_map, x = 0, y = 0, width = 1, height = 1) +
   draw_plot(nc_bi_leg, x = 0.1, y = .1, width = 0.2, height = 0.2)</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:bivar-us-states"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡罗来纳州各个城镇收入水平和白人占比的空间相关性" width="864" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡罗来纳州各个郡收入水平和白人占比的空间相关性" width="864" />
 <p class="caption">
-图 13: 2015-2019 年度北卡罗来纳州各个城镇收入水平和白人占比的空间相关性
+图 13: 2015-2019 年度北卡罗来纳州各个郡收入水平和白人占比的空间相关性
 </p>
 </div>
 <p>结合图<a href="#fig:us-nc-income">12</a>和图<a href="#fig:bivar-us-states">13</a>，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭收入中位数指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图<a href="#fig:us-nc-income">12</a>中非常明显。</p>
 <div class="rmdtip">
-<p><strong>sf</strong> 包内置的北卡城镇地图数据集 nc.gpkg 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">12</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
+<p><strong>sf</strong> 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">12</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
 </div>
 </div>
 </div>
@@ -1025,14 +1026,14 @@ ggdraw() +
 <li><strong>lattice</strong> 在 <strong>grid</strong> 图形系统的基础上构建了一套易于使用的高级数据可视化函数，同时支持复杂的非标准的自定义绘图需求。《lattice: Multivariate Data Visualization with R》<span class="citation">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span> 详细全面地阐述了一元到多元数据的可视化方法，各个函数的使用细节，可做帮助手册。</li>
 <li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
 </ul>
-<p>在掌握基础的一些工具后，就需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
+<p>在掌握基础的一些工具后，需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
 <p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">14</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。</p>
 <div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
 <img src="img/choropleth-map.svg" class="full" alt="" />
 <p class="caption">图 14:  7 种绘图方案依赖的 R 包及其层次关系</p>
 </div>
-<p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。庆幸的是各城镇癌症死亡率数据的城镇名称<code>rownames(USCancerRates)</code> 和地图数据 <code>us_county</code> 里的城镇名称 <code>names</code> 是可以映射上的，否则专题地图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
-<p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到专题地图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
+<p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。庆幸的是各郡癌症死亡率数据的郡名称<code>rownames(USCancerRates)</code> 和地图数据 <code>us_county</code> 里的郡名称 <code>names</code> 是可以映射上的，否则地区分布图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
+<p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到地区分布图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
 <p><a href="https://github.com/r-tmap/tmap"><strong>tmap</strong></a> 类似 <a href="https://github.com/riatelab/mapsf"><strong>mapsf</strong></a>，相比而言，上游依赖很多，相应功能也多，但，据笔者在 MacOS 和 Ubuntu 系统上测试图<a href="#fig:us-cancer-rates-tmap">8</a>，发现绘图性能很差。<strong>sp</strong> 已是上一代产品，现有工具足以替代，因此，不再介绍， <span class="citation">E. Pebesma and Bivand (<a href="#ref-Pebesma2022" role="doc-biblioref">2022</a>)</span> 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 <strong>sf</strong>、<strong>stars</strong> <span class="citation">(<a href="#ref-stars" role="doc-biblioref">E. Pebesma 2021</a>)</span> 或 <strong>terra</strong> <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2022</a>)</span>，已成历史的三个 R 包 — 空间几何计算 <strong>rgeos</strong> <span class="citation">(<a href="#ref-rgeos" role="doc-biblioref">R. Bivand and Rundel 2021</a>)</span>、空间数据导入 <strong>rgdal</strong> <span class="citation">(<a href="#ref-rgdal" role="doc-biblioref">R. Bivand, Keitt, and Rowlingson 2022</a>)</span>和空间数据操作 <strong>maptools</strong> <span class="citation">(<a href="#ref-maptools" role="doc-biblioref">R. Bivand and Lewin-Koh 2022</a>)</span> 将于 <strong>2023</strong> 年底退休。</p>
 <p>据了解，R 语言社区也有不少 R 包可以绘制交互版的地区分布图，比如 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>、<strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>、<strong>plotly</strong> 包<span class="citation">(<a href="#ref-plotly" role="doc-biblioref">Sievert et al. 2021</a>)</span>和 <strong>echarts4r</strong> 包<span class="citation">(<a href="#ref-echarts4r" role="doc-biblioref">Coene 2022</a>)</span>等。配色是正文没有细谈的方面，在全文保持风格一致即可，若和数据背景相关就更好了。</p>
 </div>
@@ -1044,7 +1045,7 @@ ggdraw() +
 </ul>
 <div class="figure"><span style="display:block;" id="fig:us-covid-cases"></span>
 <img src="img/us-covid-cases.png" class="full" alt="" />
-<p class="caption">图 15:  美国各个城镇新冠感染率，单位十万分之一</p>
+<p class="caption">图 15:  美国各个郡新冠感染率，单位十万分之一</p>
 </div>
 <ul>
 <li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">16</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
@@ -1055,11 +1056,11 @@ ggdraw() +
 </div>
 <p>在数据可视化上，还有很多技术方案，比如：</p>
 <ul>
-<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">17</a>，这在一定程度上克服了普通专题地图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
+<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">17</a>，这在一定程度上克服了普通地区分布图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:uk-hex-cartograms"></span>
 <img src="img/uk-hex-cartograms.png" class="full" alt="" />
-<p class="caption">图 17:  左图：英国各个城镇年龄中位数的空间分布；右图：英国各个城镇新冠死亡率，单位十万分之一。</p>
+<p class="caption">图 17:  左图：英国各个郡年龄中位数的空间分布；右图：英国各个郡新冠死亡率，单位十万分之一。</p>
 </div>
 <ul>
 <li>Ilya Kashnitsky 和 Jonas Schöley 将人口划分为儿童（0-14岁）、青壮（15-64岁）、老年（大于65岁）三个年龄段，以三元结构图构造图例，编码欧洲各个地区的年龄结构，三个不同的主要色块分别代表三种典型的人口结构，如图<a href="#fig:ternary-map">18</a>，一眼看上去好似一幅水彩画，非常有艺术感<span class="citation">(<a href="#ref-Kashnitsky2018" role="doc-biblioref">Kashnitsky and Schöley 2018</a>)</span>。</li>
