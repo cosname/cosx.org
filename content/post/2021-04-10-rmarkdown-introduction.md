@@ -24,7 +24,7 @@ R Markdown 是 R 语言环境中提供的 markdown 编辑工具，运用 R Markd
 
 视频已经非常清楚的介绍了 R Markdown 如何使用，内部构造、不同的输出类型，以及其他拓展（发布，与 github 相连）等。我们先对此进行简单了解即可，之后几期我会详细介绍。当然，官网也有一套 R Markdown 的入门教程，欢迎大家前去学习，官网截图如下：  
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172657080.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210424172657080.png)
 
 
 其他参考资料可见这一期推文：[R分享｜R Markdown参考资料分享和自制视频教程预告](http://mp.weixin.qq.com/s?__biz=MzI1NjUwMjQxMQ==&mid=2247490959&idx=1&sn=2374d35aa12a64bd00caea0bf424bbd0&chksm=ea24e26bdd536b7d2263b6e779a00f072f2e42f29346ab13a9ed4252144dc6d7e964c7ef7d52&scene=21#wechat_redirect)。关于 R Markdown 可参考专著([Xie, Allaire, and Grolemund 2019](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/rmarkdown.html#ref-Xie2019:rmarkdown "Xie, Allaire, and Grolemund"))和([Xie, Dervieux, and Riederer 2020](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/rmarkdown.html#ref-Xie2020:rmd-cook "Xie, Dervieux, and Riederer"))。 RStudio 网站提供了一个 R Markdown 使用小抄的下载链接：( rmarkdown-2.0.pdf )[rmarkdown-2.0.pdf]。 Pandoc 的文档见[Pandoc 网站](https://www.pandoc.org/ "pandoc 网站")，knitr 的详细文档参见网站[ knitr 文档](http://yihui.name/knitr/ "knitr 文档")。
@@ -65,15 +65,15 @@ TinyTeX 是一种轻便，可移植，跨平台，易于维护的 LaTeX 发行�
 
 1.  点击 RStudio 左上角的新建项目，选择 R Markdown 文件格式，即可建立一个 rmarkdown 编辑文件 。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172842613.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210424172842613.png)
 
 2.  在弹出的选项框里，可以申明 rmarkdown 的 Title、 Author 以及默认的输出文件格式，一般可以选择 HTML、PDF、Word 格式，具体见下图。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172859520.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210424172859520.png)
 
 3.  在新建的 markdown 文件里，主要包含三块内容：1. YAML、2. markdown 文本、3.代码块。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172919598.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210424172919598.png)
 
 **1）YAML**： R Markdown 的头部文件(上图1位置)， YAML 定义了 rmarkdwon 的性质，比如 title、author、date、 指定 output 文件类型等。
 
@@ -89,7 +89,7 @@ rmarkdown的导出方法有两种，一种是依靠 RStudio 手动导出，另�
 
 #### 手动导出
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424172937025.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210424172937025.png)
 
 手动导出方法很简单，在完成 markdown 编辑后，手动点击上图红圈内 knit 按钮，选择导出格式类型即可， RStudio 支持导出 PDF、html、word 三种类型。
 
@@ -104,13 +104,13 @@ rmarkdown的导出方法有两种，一种是依靠 RStudio 手动导出，另�
 rmarkdown::render("test.Rmd")
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424173011826.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210424173011826.png)
 
 ### 2.4. RStudio界面介绍
 
 若界面打开了rmd格式的文件时， RStudio 的界面发生了一些变化（多了一些按钮），如下图所示。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210414130134283.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210414130134283.png)
 
 
 这里我们对界面做一些介绍，视频介绍在[这](https://mp.weixin.qq.com/s/Dl1a36omEVI1QGP0HgbuyA)。
@@ -259,7 +259,7 @@ R 代码块一般通过 ```{R}``` 来插入，插入代码段的**快捷键**：
     
     当然你也可以通过 RStudio 界面进行部分参数的设置（更加便捷）：
     
-    ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/WeChatd2107f6cf1d1088d22c97e4b3e09f344.png)
+    [图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/WeChatd2107f6cf1d1088d22c97e4b3e09f344.png)
     
     具体演示可见[b站](https://www.bilibili.com/video/BV1ib4y1X7r9)视频。
 
@@ -321,14 +321,14 @@ plot(1:10)
   > 注意：图片文件放的位置（如果和 rmd 同一目录，则可以直接 xxx.png； 如果在其他位置记得加上相对路径）。
 
 
-  ![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211033682.png)
+  [图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211033682.png)
 
   - **方式二**
 
   在 source editor 情况下，直接外部拉入图形即可，会自动保存在相对文件夹的 images 中，或者点击图形按钮导入。
 
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211101185.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211101185.png)
 
 
   - **方式三**
@@ -347,11 +347,11 @@ plot(1:10)
 
 - markdown格式
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403210427161.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403210427161.png)
 
 - Typora格式
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211149020.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211149020.png)
 
 #### 2. 内部代码输出的表格
 
@@ -373,7 +373,7 @@ knitr包提供了一个 `kable()` 函数可以用来把数据框或矩阵转化�
 knitr::kable(co)
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211210045.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211210045.png)
 
 
 `kable()` 函数的 `digits=` 选项可以控制小数点后数字位数， `caption=` 选项可以指定表的标题内容。
@@ -386,7 +386,7 @@ knitr::kable(co)
 pander::pander(lmr)
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211229254.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211229254.png)
 
 但是，经过试验发现， 表中中有中文时 pander 包会出错，这里参考公众号[R 友舍](https://mp.weixin.qq.com/s/MKvRoyCyEHqHNzC9DRfVWQ)。
 
@@ -447,7 +447,7 @@ kableExtra::kable_styling(x_html,bootstrap_options = "striped",
 ```
 
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211332249.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211332249.png)
 
 > 注意：上面例子 `knitr:: kable` 制定了 `kable` 函数来自 knitr 包，目的是方式和其他包内同名函数冲突。
 
@@ -460,7 +460,7 @@ kable(head(rock), "html") %>%
                           full_width = F)
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211413207.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211413207.png)
 
 
 #### 3. 设置表格的对齐方式
@@ -473,7 +473,7 @@ kableExtra::kable_styling(x_html,bootstrap_options = "striped",
                           position = "left")
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210424173324184.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210424173324184.png)
 
 #### 4. 设置表格的字体大小
 
@@ -486,7 +486,7 @@ kableExtra::kable_styling(x_html,bootstrap_options = "striped",
                           font_size = 20
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211439668.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211439668.png)
 
 
 #### 5.设置表格的行与列
@@ -504,7 +504,7 @@ kableExtra::column_spec(x_html,1:2,
 ```
 
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211506891.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211506891.png)
 
 ```
 x_html <- knitr:: kable(head(rock), "html")
@@ -517,7 +517,7 @@ kableExtra::row_spec(x_html,1:2,
                         background = "#D7261E")
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211527153.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211527153.png)
 
 #### 6.其它表格渲染
 
@@ -547,7 +547,7 @@ kable_styling(x_html,"striped")
 ```
 
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210403211552162.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210403211552162.png)
 
 
 
@@ -588,11 +588,11 @@ rticles 软件包提供了各种期刊和出版商的模板：
 
 下载完对应的包之后，找到对应模板打开即可。输出 pdf 是需要配置 tex 环境的哦！建议安装 Tinytex， 具体安装教程见前面。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210315195440875.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210315195440875.png)
 
 编译后得到的结果，这是他模板原始的样子，如果想调整页面行间距，字体颜色等，请见下面一章。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210315195456780.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210315195456780.png)
 
 ### 4.2. rmdformats 包
 
@@ -617,13 +617,13 @@ output:
 ---
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210315195508990.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210315195508990.png)
 
 **方法二：**
 
 在你安装完该包之后你可以使用通过按钮新建该模版（其实他有很多类似的模板，我这里只展现了一种）：
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210315195516091.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210315195516091.png)
 
 > 以下模板也可以通过这种方式构建，前提是你安装了这个包，这样你就可以在 From Template 中找到该包对应的模板了。
 
@@ -641,7 +641,7 @@ output:
 ---
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210315195521796.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210315195521796.png)
 
 ### 4.4. tufte 包
 
@@ -655,7 +655,7 @@ output:
 ---
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210315195528253.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210315195528253.png)
 
 ### 4.5. cerulean 包
 
@@ -671,7 +671,7 @@ output:
 ---
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210315195535713.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210315195535713.png)
 
 
 
@@ -693,7 +693,7 @@ Markdown 语法没有用于更改文本颜色的内置方法。我们可以使�
 我是\textcolor{blue}{庄闪闪}呀！欢迎关注我的\textcolor{red}{公众号}：\textcolor{blue}{庄闪闪的R语言手册}。
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210318124743606.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210318124743606.png)
 
 在上面的示例中，第一组花括号包含所需的文本颜色，第二组花括号包含应将此颜色应用到的文本。
 
@@ -721,11 +721,11 @@ output:
 
 这时的页边距就变成下面这样了：
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210318132951265.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210318132951265.png)
 
 当然全文字体大小等操作也是这样操作的，在 geometry 操作即可：
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210318123645722.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210318123645722.png)
 
 ### 5.3. 缩进文本 
 
@@ -741,17 +741,17 @@ output:
 
 输出为：
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210318125239921.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210318125239921.png)
 
 ### 5.4.分页
 
 如果想要分页，可以使用 `\newpage`。 例如：如果想把目录和正文内容分开，可以在在正文前面加入这个代码
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210319193017798.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210319193017798.png)
 
 这时输出的结果，目录一个界面，正文另起一页。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210319193045376.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210319193045376.png)
 
 ### 5.5.控制文本输出的宽度
 
@@ -766,7 +766,7 @@ matrix(runif(100), ncol = 20)
 ​```
 ```
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210318125512209.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210318125512209.png)
 
 ```
 ​```{r}
@@ -776,7 +776,7 @@ matrix(runif(100), ncol = 20)
 ```
 
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210318125542194.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210318125542194.png)
 
 但是这种方式不一定对所有函数都适用，这是你可以使用其他方式，对于 Html （这里不做解释，主要将 pdf）， 可以参见[教程](https://bookdown.org/yihui/rmarkdown-cookbook/text-width.html "教程")。
 
@@ -802,7 +802,7 @@ output:
 
 这是输出的结果，但是其实不是很美观
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210318130218480.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210318130218480.png)
 
 
 
@@ -866,17 +866,17 @@ if (TRUE) {
 
 输出结果为：
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210318131400399.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210318131400399.png)
 
 ### 5.9.多列输出
 
 这个特别好用！虽然学起来有那么一点困难，具体我再出一期推文，把这个讲清楚。具体可以见这里的[教程](https://bookdown.org/yihui/rmarkdown-cookbook/multi-column.html "教程")。类似于排版成这种形式：
   
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/image-20210319195033178.png)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/image-20210319195033178.png)
 
 
 ## 小编有话说
 
 - 当然 R Markdown 还可以做各种拓展，比如 presentation（ioslides、 Beamer、 slidy、 PowerPoint），Documents（Html、 Notebook、 PDF、 word） 及其他拓展 （Dashboards、Tufte Handouts、 xaringan Presentations、 Websites） 等。有部分我已经整理好了，可以在下面窗口的拓展教程中找到。
 
-![](https://gitee.com/zhuang_liang_liang0825/other/raw/master/9601618034106_.pic_hd.jpg)
+[图片](https://gitee.com/zhuang_liang_liang0825/other/blob/master/9601618034106_.pic_hd.jpg)
