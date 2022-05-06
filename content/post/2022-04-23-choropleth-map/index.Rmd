@@ -3,6 +3,7 @@ title: 地区分布图及其应用
 author: 黄湘云
 date: '2022-04-20'
 slug: choropleth-map
+meta_extra: "审稿：张沥今；编辑：xxx"
 categories:
   - 统计图形
 tags: 
@@ -140,7 +141,7 @@ knitr::opts_chunk$set(
 接下来，本文分四个部分展开介绍地区分布图，分别是单变量情形、多变量情形、本文小结和未来展望。
 
 
-单变量情形中以 **latticeExtra** 包内置的数据集 USCancerRates 为例，以地区分布图形式展示美国 1999-2003 年度各郡的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制地区分布图的过程，包括基础数据操作以及六个绘图工具 **maps** 包、**latticeExtra** 包、**ggplot2** 包、**tmap** 包、**sf** 包和 **mapsf** 包，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。
+单变量情形中以 **latticeExtra** 包[@latticeExtra]内置的数据集 USCancerRates 为例，以地区分布图形式展示美国 1999-2003 年度各郡的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制地区分布图的过程，包括基础数据操作以及六个绘图工具 **maps** 包[@Becker1993]、**latticeExtra** 包、**ggplot2** 包[@Wickham2022]、**tmap** 包[@Tennekes2018]、**sf** 包[@Pebesma2018]和 **mapsf** 包[@mapsf2022]，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。
 
 
 多变量情形中以美国人口统计局发布的调查数据为基础，分析北卡罗来纳州各区县普查级别的家庭收入中位数与白人占比的空间相关性。先分别以单变量的地区分布图描述各个普查区域里家庭收入中位数、白人占比的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。
@@ -528,14 +529,18 @@ xyplot(window(sunspot.year, start = 1900),
 如前所述，**lattice** 和 **ggplot2** 同出一脉，既然 **ggplot2** 有图层的概念，**lattice** 自然也有，除了 提供丰富的内置图层（约**100**个，读者可在控制台运行 `apropos('panel')` 查看当前环境下可用的图层），也支持用户自定义图层，图\@ref(fig:lattice-panel-superpose) 展示叠加图层 `panel.superpose` 的效果，传递自定义的符号给 `pch` 参数，实际上修改了默认图形参数 `"superpose.symbol"`。
 
 ```{r lattice-panel-superpose}
-#| fig.cap="panel 叠加图层",
-#| fig.width=5,
+#| fig.cap="panel 叠加图层：左图默认散点图层，右图符号图层",
+#| fig.width=8,
 #| fig.height=4,
 #| fig.align="center",
 #| echo=TRUE
-xyplot(Sepal.Length ~ Sepal.Width, data = iris, groups = Species,
+p1 <- xyplot(Sepal.Length ~ Sepal.Width, data = iris, groups = Species)
+p2 <- xyplot(Sepal.Length ~ Sepal.Width,
+  data = iris, groups = Species,
   pch = c("L", "M", "N"), panel = panel.superpose
 )
+print(p1, split = c(1, 1, 2, 1), more = TRUE)
+print(p2, split = c(2, 1, 2, 1), more = FALSE)
 ```
 
 此外，**latticeExtra** 扩展了图层功能，特别是 `layer()` 函数，可在主体绘图函数之后直接叠加新图层。如上图\@ref(fig:us-cancer-rates-lattice)，在 `latticeExtra::mapplot()` 完成主体绘图工作后，添加美国各州边界线，有助于识别郡位置。大家应该都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但只要画上各个省的边界，你肯定能指出更多的省份位置，类似地，从省到市、乃至区县，边界给了我们很好的参照。
@@ -1027,7 +1032,7 @@ ggdraw() +
 **ggplot2** 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 --- Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到地区分布图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。
 
 
-[**tmap**](https://github.com/r-tmap/tmap) 类似 [**mapsf**](https://github.com/riatelab/mapsf)，相比而言，上游依赖很多，相应功能也多，但，据笔者在 MacOS 和 Ubuntu 系统上测试图\@ref(fig:us-cancer-rates-tmap)，发现绘图性能很差。**sp** 已是上一代产品，现有工具足以替代，因此，不再介绍， @Pebesma2022 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 **sf**、**stars** [@stars] 或 **terra** [@terra]，已成历史的三个 R 包 --- 空间几何计算 **rgeos** [@rgeos]、空间数据导入 **rgdal** [@rgdal]和空间数据操作 **maptools** [@maptools] 将于 **2023** 年底退休。
+[**tmap**](https://github.com/r-tmap/tmap) 类似 [**mapsf**](https://github.com/riatelab/mapsf)，相比而言，上游依赖很多，相应功能也多，但，据笔者在 MacOS 和 Ubuntu 系统上测试图\@ref(fig:us-cancer-rates-tmap)，发现绘图性能很差，这应该和它内部将 sf 等数据对象转化为 sp 数据对象有关。**sp** 已是上一代产品，现有工具足以替代，因此，不再介绍， @Pebesma2022 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 **sf**、**stars** [@stars] 或 **terra** [@terra]，已成历史的三个 R 包 --- 空间几何计算 **rgeos** [@rgeos]、空间数据导入 **rgdal** [@rgdal]和空间数据操作 **maptools** [@maptools] 将于 **2023** 年底退休。
 
 
 据了解，R 语言社区也有不少 R 包可以绘制交互版的地区分布图，比如 **leaflet** 包[@leaflet]、**mapdeck** 包[@mapdeck]、**plotly** 包[@plotly]和 **echarts4r** 包[@echarts4r]等。配色是正文没有细谈的方面，在全文保持风格一致即可，若和数据背景相关就更好了。
