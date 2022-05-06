@@ -142,7 +142,7 @@ div.img {
 </div>
 <div id="本文概览" class="section level1">
 <h1>本文概览</h1>
-<p>空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的商业 BI 工具<a href="https://www.tableau.com/zh-cn/solutions/maps">Tableau</a>，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图，英文一般为<a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a>，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了<a href="https://zhfw.tianditu.gov.cn/">专题图层服务</a>，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，专题地图用于展示各类指标<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。</p>
+<p>空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的收费 BI（Business Intelligence） 工具<a href="https://www.tableau.com/zh-cn/solutions/maps">Tableau</a>，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图、统计地图，英文一般为<a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a>，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了<a href="https://zhfw.tianditu.gov.cn/">专题图层服务</a>，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，专题地图用于展示各类指标<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。</p>
 <p>接下来，本文分四个部分展开介绍专题地图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
 <p>单变量情形中以 <strong>latticeExtra</strong> 包内置的数据集 USCancerRates 为例，以专题地图形式展示美国 1999-2003 年度各城镇的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制专题地图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包、<strong>tmap</strong> 包、<strong>sf</strong> 包和 <strong>mapsf</strong> 包，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
 <p>多变量情形中以美国人口统计局发布的调查数据为基础，分析北卡罗来纳州各区县普查粒度的家庭收入中位数与白人占比的空间相关性。先分别以单变量的专题地图描述各个普查区域里家庭收入中位数、白人占比的空间分布，接着和二元变量的专题地图形成对比，展示相关性的空间分布。</p>
@@ -450,7 +450,7 @@ subset(x = USCancerRates, subset = state == &quot;Alabama&quot; &amp; county == 
 </div>
 <div id="maps" class="section level3">
 <h3>maps</h3>
-<p><strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>内置的美国城镇地图数据欠缺一部分，阿拉斯加、夏威夷和波多黎各都没有。数据集 USCancerRates 没有夏威夷、波多黎各各个城镇的数据，阿拉斯加的部分城镇有数据，如图<a href="#fig:us-cancer-rates-lattice">3</a>所示，不少城镇没有收集到癌症死亡率数据，以灰色表示。值得一提的是，关于死亡率分级，不同的分法会带给人不同的印象甚至是错觉，此处是可以有操作空间的，特定的死亡率分割方式可以让男女死亡率的空间分布<strong>看起来</strong>差异不大或很大<span class="citation">(<a href="#ref-Kolak2020" role="doc-biblioref">Kolak et al. 2020</a>)</span>，详细介绍见 Marynia Kolak 和 Susan Paykin 在 2021 R/Medicine 大会上的<a href="https://youtu.be/-HvRISFkQZQ">视频</a>和<a href="https://makosak.github.io/Intro2RSpatialMed/02-choropleth.html">网页</a>材料。</p>
+<p><strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>内置的美国城镇地图数据欠缺一部分，阿拉斯加、夏威夷和波多黎各都没有。数据集 USCancerRates 没有夏威夷、波多黎各各个城镇的数据，阿拉斯加的部分城镇有数据，如图<a href="#fig:us-cancer-rates-maps">2</a>所示，不少城镇没有收集到癌症死亡率数据，以灰色表示。值得一提的是，关于死亡率分级，不同的分法会带给人不同的印象甚至是错觉，此处是可以有操作空间的，特定的死亡率分割方式可以让男女死亡率的空间分布<strong>看起来</strong>差异不大或很大<span class="citation">(<a href="#ref-Kolak2020" role="doc-biblioref">Kolak et al. 2020</a>)</span>，详细介绍见 Marynia Kolak 和 Susan Paykin 在 2021 R/Medicine 大会上的<a href="https://youtu.be/-HvRISFkQZQ">视频</a>和<a href="https://makosak.github.io/Intro2RSpatialMed/02-choropleth.html">网页</a>材料。</p>
 <p>分析和展示地理信息数据是一项常规任务，约 30 年前，Richard A. Becker 等为 S 语言引入地理可视化，特别是本文介绍的专题地图，以及简单的区域面积和区域中心的计算能力<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>, <a href="#ref-Becker1995" role="doc-biblioref">1995</a>)</span>，而后到了 2003年，Ray Brownrigg、Thomas P Minka 和 Alex Deckmyn 等将其引入 R 语言社区并持续维护至今<span class="citation">(<a href="#ref-maps" role="doc-biblioref">Richard A. Becker, Ray Brownrigg. Enhancements by Thomas P Minka, and Deckmyn. 2021</a>)</span>。除了最基础的 <strong>maps</strong> 包，还有坐标投影 <strong>mapproj</strong> 包<span class="citation">(<a href="#ref-mapproj" role="doc-biblioref">R by Ray Brownrigg, Minka, and Plan 9 codebase by Roger Bivand. 2022</a>)</span>，以及提供更多地图数据的 <strong>mapdata</strong> 包<span class="citation">(<a href="#ref-mapdata" role="doc-biblioref">Richard A. Becker and Ray Brownrigg. 2018</a>)</span>。那个时候，因缺乏一些基础工具，在地图数据获取、空间数据操作和可视化方面都不太容易，仅用这些能做到下图<a href="#fig:us-cancer-rates-maps">2</a>已属不易。</p>
 <pre class="r"><code># 加载数据
 data(USCancerRates, package = &quot;latticeExtra&quot;)
@@ -648,7 +648,7 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
 图 6: panel 叠加图层
 </p>
 </div>
-<p>此外，<strong>latticeExtra</strong> 扩展了图层功能，特别是 <code>layer()</code> 函数，可在主体绘图函数之后直接叠加新图层。如上图<a href="#fig:us-cancer-rates-lattice">3</a>，在 <code>latticeExtra::mapplot()</code> 完成主体绘图工作后，添加美国各州边界线，有助于识别城镇位置—大家都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但是只要画上各个省的边界，你肯定能增加准确度，类似地，从省到市、乃至区县，边界给了我们很好的参照。</p>
+<p>此外，<strong>latticeExtra</strong> 扩展了图层功能，特别是 <code>layer()</code> 函数，可在主体绘图函数之后直接叠加新图层。如上图<a href="#fig:us-cancer-rates-lattice">3</a>，在 <code>latticeExtra::mapplot()</code> 完成主体绘图工作后，添加美国各州边界线，有助于识别城镇位置。大家应该都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但只要画上各个省的边界，你肯定能指出更多的省份位置，类似地，从省到市、乃至区县，边界给了我们很好的参照。</p>
 </div>
 <div id="ggplot2" class="section level3">
 <h3>ggplot2</h3>
@@ -683,15 +683,15 @@ state_df &lt;- usmapdata::us_map(&quot;states&quot;)
 dat$rate_d &lt;- cut(dat$rate, breaks = 50*0:13)
 # 恢复地图数据顺序
 dat &lt;- dat[order(dat$order), ]</code></pre>
-<p>数据准备工作完成后，除了在细节上不断试错外，绘图过程主要有七个步骤：</p>
+<p>数据准备工作完成后，除了在细节上不断试错外<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>，绘图过程主要有七个步骤：</p>
 <ol style="list-style-type: decimal">
-<li>绘制美国城镇地图，填充灰色背景，以此为底图。</li>
-<li>添加每个城镇的癌症死亡率数据，填充颜色根据死亡率而定，以浅白色绘制城镇的边界线，且将线调细一些，与后面州的边界线形成层次。</li>
-<li>添加美国各个州的边界线，帮助熟悉美国地图的从州到城镇快速定位。</li>
-<li>类似前文设置，采用 <code>plasma</code> 调色板，未采集到死亡率数据的城镇填充灰色，和地图背景融为一体。</li>
-<li>以函数 <code>facet_wrap()</code> 实现分面，分面标题放在图形上方，布局为两行一列。</li>
-<li>添加整个图形的主标题、副标题和图例标题。</li>
-<li>设置整个图形主题样式 <code>theme_void()</code> 以符合专题地图特色，将图形主标题居中。</li>
+<li>底图：绘制美国城镇地图，填充灰色背景，以此为底图。</li>
+<li>映射：添加每个城镇的癌症死亡率数据，填充颜色根据死亡率而定，以浅白色绘制城镇的边界线，且将线调细一些，与后面州的边界线形成层次。</li>
+<li>边界：添加美国各个州的边界线，帮助熟悉美国地图的从州到城镇快速定位。</li>
+<li>配色：类似前文设置，采用 <code>plasma</code> 调色板，未采集到死亡率数据的城镇填充灰色，和地图背景融为一体。</li>
+<li>布局：以函数 <code>facet_wrap()</code> 实现分面，分面标题放在图形上方，布局为两行一列。</li>
+<li>标题：添加整个图形的主标题、副标题和图例标题。</li>
+<li>主题：设置整个图形主题样式 <code>theme_void()</code> 以符合地图特色，将图形主标题位置居中。</li>
 </ol>
 <pre class="r"><code>library(ggplot2)
 ggplot() +
@@ -716,7 +716,7 @@ ggplot() +
 </div>
 <div id="tmap" class="section level3">
 <h3>tmap</h3>
-<p>同 <strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>的绘图函数 <code>plot()</code> 一样，<strong>tmap</strong> <span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span> 也是基于 Base R 图形系统，但使用语法更加贴合 <strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>，对空间数据可视化有更多专业支持，比如基于比例的符号/气泡图<span class="citation">(<a href="#ref-Susumu2006" role="doc-biblioref">Tanimura, Kuroiwa, and Mizota 2006</a>)</span> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>和基于二维核密度估计的热力图<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>。</p>
+<p>同 <strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>的绘图函数 <code>plot()</code> 一样，<strong>tmap</strong> <span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span> 也是基于 Base R 图形系统，但使用语法更加贴合 <strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>，对空间数据可视化有更多专业支持，比如基于比例的符号/气泡图<span class="citation">(<a href="#ref-Susumu2006" role="doc-biblioref">Tanimura, Kuroiwa, and Mizota 2006</a>)</span> <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>和基于二维核密度估计的热力图<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>。</p>
 <p><strong>tmap</strong> 支持 <strong>sp</strong> 包提供的 Spatial 类数据对象，也支持 <strong>sf</strong> 包提供的 Simple Features 类数据对象，众所周知，后者是新一代更好的工具，因此接下来的示例都将基于 <strong>sf</strong> 包。首先从美国人口调查局下载州和城镇级别的<a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">多边形边界数据</a>，再类似 <strong>usmapdata</strong> 包对阿拉斯加、夏威夷和波多黎各做适当的调整，借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>让这个过程变得容易，调整地图数据的代码与源文档放在一起，读者可自取。</p>
 <pre class="r"><code># 准备地图数据
 library(sf)
@@ -1023,16 +1023,16 @@ ggdraw() +
 <ul>
 <li>Base R 提供了泛型函数 <code>plot()</code> 支持各类数据对象，快速出图，若深度定制，需要解构，理解点、线、多边形、坐标轴、刻度线、图例、字体、颜色、文本、边空、布局等一系列基础要素。《现代统计图形》<span class="citation">(<a href="#ref-Zhao2021" role="doc-biblioref">赵鹏, 谢益辉, and 黄湘云 2021</a>)</span> 对此有详细的阐述，可做帮助手册。</li>
 <li><strong>lattice</strong> 在 <strong>grid</strong> 图形系统的基础上构建了一套易于使用的高级数据可视化函数，同时支持复杂的非标准的自定义绘图需求。《lattice: Multivariate Data Visualization with R》<span class="citation">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span> 详细全面地阐述了一元到多元数据的可视化方法，各个函数的使用细节，可做帮助手册。</li>
-<li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立起数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
+<li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
 </ul>
-<p>在掌握基础的一些工具后，培养审美能力最重要方式就是多看，然后打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
+<p>在掌握基础的一些工具后，就需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
 <p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">14</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。</p>
 <div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
 <img src="img/choropleth-map.svg" class="full" alt="" />
 <p class="caption">图 14:  7 种绘图方案依赖的 R 包及其层次关系</p>
 </div>
-<p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。最庆幸的是<code>rownames(USCancerRates)</code> 表示的城镇名称和地图数据 <code>us_county</code> 里的城镇名称 names 是可以映射上的，否则专题地图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
-<p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到专题地图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力，复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
+<p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。庆幸的是各城镇癌症死亡率数据的城镇名称<code>rownames(USCancerRates)</code> 和地图数据 <code>us_county</code> 里的城镇名称 <code>names</code> 是可以映射上的，否则专题地图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
+<p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到专题地图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
 <p><a href="https://github.com/r-tmap/tmap"><strong>tmap</strong></a> 类似 <a href="https://github.com/riatelab/mapsf"><strong>mapsf</strong></a>，相比而言，上游依赖很多，相应功能也多，但，据笔者在 MacOS 和 Ubuntu 系统上测试图<a href="#fig:us-cancer-rates-tmap">8</a>，发现绘图性能很差。<strong>sp</strong> 已是上一代产品，现有工具足以替代，因此，不再介绍， <span class="citation">E. Pebesma and Bivand (<a href="#ref-Pebesma2022" role="doc-biblioref">2022</a>)</span> 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 <strong>sf</strong>、<strong>stars</strong> <span class="citation">(<a href="#ref-stars" role="doc-biblioref">E. Pebesma 2021</a>)</span> 或 <strong>terra</strong> <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2022</a>)</span>，已成历史的三个 R 包 — 空间几何计算 <strong>rgeos</strong> <span class="citation">(<a href="#ref-rgeos" role="doc-biblioref">R. Bivand and Rundel 2021</a>)</span>、空间数据导入 <strong>rgdal</strong> <span class="citation">(<a href="#ref-rgdal" role="doc-biblioref">R. Bivand, Keitt, and Rowlingson 2022</a>)</span>和空间数据操作 <strong>maptools</strong> <span class="citation">(<a href="#ref-maptools" role="doc-biblioref">R. Bivand and Lewin-Koh 2022</a>)</span> 将于 <strong>2023</strong> 年底退休。</p>
 <p>据了解，R 语言社区也有不少 R 包可以绘制交互版的地区分布图，比如 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>、<strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>、<strong>plotly</strong> 包<span class="citation">(<a href="#ref-plotly" role="doc-biblioref">Sievert et al. 2021</a>)</span>和 <strong>echarts4r</strong> 包<span class="citation">(<a href="#ref-echarts4r" role="doc-biblioref">Coene 2022</a>)</span>等。配色是正文没有细谈的方面，在全文保持风格一致即可，若和数据背景相关就更好了。</p>
 </div>
@@ -1071,7 +1071,7 @@ ggdraw() +
 </div>
 <div id="环境信息" class="section level1">
 <h1>环境信息</h1>
-<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> <span class="citation">(<a href="#ref-blogdown" role="doc-biblioref">Xie, Hill, and Thomas 2017</a>)</span> 构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：</p>
+<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> <span class="citation">(<a href="#ref-blogdown" role="doc-biblioref">Xie, Hill, and Thomas 2017</a>)</span> 构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。点击本页面右上角「编辑本页」即可跳转至源文件，文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：</p>
 <pre class="r"><code>xfun::session_info(packages = c(
   &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;blogdown&quot;,
   &quot;ggplot2&quot;, &quot;cowplot&quot;, &quot;biscale&quot;, 
@@ -1219,6 +1219,7 @@ Yutani, Hiroaki. 2018. <span>“Plot <span class="nocase">geom_sf()</span> on <s
 <div class="footnotes footnotes-end-of-document">
 <hr />
 <ol>
-<li id="fn1"><p><span class="citation">Tanimura, Kuroiwa, and Mizota (<a href="#ref-Susumu2006" role="doc-biblioref">2006</a>)</span> 基于 2000 年日本长崎县长崎市的町村级行政边界地图数据，以及当年关于儿童人口普查数据，以比例气泡图展示人口的空间分布，是 R 语言社区最早一幅用 <strong>maps</strong> 包绘制的比例气泡地图。顺便一提，长崎市大约相当于咱们的地级市，粗略地讲，往上都道府县是一级，往下町村为一级，中间是市区一级。<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>除了七个主要的绘图步骤，在图形配色、长宽尺寸、字体大小等方面都需要打磨，这是相当花费时间的。<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p><span class="citation">Tanimura, Kuroiwa, and Mizota (<a href="#ref-Susumu2006" role="doc-biblioref">2006</a>)</span> 基于 2000 年日本长崎县长崎市的町村级行政边界地图数据，以及当年关于儿童人口普查数据，以比例气泡图展示人口的空间分布，是 R 语言社区最早一幅用 <strong>maps</strong> 包绘制的比例气泡地图。顺便一提，长崎市大约相当于咱们的地级市，粗略地讲，往上都道府县是一级，往下町村为一级，中间是市区一级。<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
