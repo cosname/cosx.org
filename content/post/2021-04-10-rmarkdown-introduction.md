@@ -8,6 +8,8 @@ meta_extra: '审稿：黄湘云、任焱'
 slug: rmarkdown-introduction
 ---
 
+由于 [Gitee 图床失效](https://github.com/cosname/cosx.org/issues/1020)，本文的图片改为链接，请见谅。
+
 ## 第一章：R Markdown 简介  
 
 R Markdown 是 R 语言环境中提供的 markdown 编辑工具，运用 R Markdown 撰写文章，既可以像一般的 markdown 编辑器一样编辑文本，也可以在 R Markdown 中插入代码块，并将代码运行结果输出在 markdown 里。R Markdown 格式，简称为 Rmd 格式， 相应的源文件扩展名为 .Rmd。输出格式可以是 HTML、docx、pdf、beamer 等。

@@ -9,6 +9,8 @@ slug: build-blog-step-by-step
 forum_id: 422996
 ---
 
+由于 [Gitee 图床失效](https://github.com/cosname/cosx.org/issues/1020)，本文的图片改为链接，请见谅。
+
 ## 简介
 
 你是不是特别想创建一个自己的私人博客？使用 `blogdown` 搭建博客难度大不大？与其他方式搭建博客相比又有什么优点？
