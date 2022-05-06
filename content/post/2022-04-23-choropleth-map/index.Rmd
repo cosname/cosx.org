@@ -1050,6 +1050,10 @@ ggdraw() +
 
 ![(\#fig:uk-hex-cartograms) 左图：英国各个城镇年龄中位数的空间分布；右图：英国各个城镇新冠死亡率，单位十万分之一。](img/uk-hex-cartograms.png){.full}
 
+- Ilya Kashnitsky 和 Jonas Schöley 将人口划分为儿童（0-14岁）、青壮（15-64岁）、老年（大于65岁）三个年龄段，以三元结构图构造图例，编码欧洲各个地区的年龄结构，三个不同的主要色块分别代表三种典型的人口结构，如图\@ref(fig:ternary-map)，一眼看上去好似一幅水彩画，非常有艺术感[@Kashnitsky2018]。
+
+![(\#fig:ternary-map) 欧洲区域人口年龄结构](img/ternary-map.png){.full}
+
 
 # 环境信息
 
