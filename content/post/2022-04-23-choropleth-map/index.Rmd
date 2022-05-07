@@ -240,7 +240,13 @@ us_cancer_rates <- reshape(
 )
 alabama_us_cancer_rates <- subset(x = us_cancer_rates, subset = state == "Alabama")
 library(ggplot2)
-ggplot(data = alabama_us_cancer_rates, aes(x = rate, xmin = LCL95, xmax = UCL95, y = reorder(county, rate, max), colour = sex)) +
+ggplot(
+  data = alabama_us_cancer_rates,
+  aes(
+    x = rate, xmin = LCL95, xmax = UCL95,
+    y = reorder(county, rate, max), colour = sex
+  )
+) +
   geom_pointrange() +
   labs(x = "癌症死亡率", y = "郡", colour = "性别") +
   theme_minimal()
@@ -278,13 +284,13 @@ USCancerRates2 <- subset(x = USCancerRates, subset = rownames(USCancerRates) %in
 # 调色板
 colors <- viridisLite::plasma(13)
 # 图例文本
-leg.txt <- mapply(paste, 50*0:12, 50*1:13, collapse = " ", sep = "~")
+leg.txt <- mapply(paste, 50 * 0:12, 50 * 1:13, collapse = " ", sep = "~")
 # 癌症死亡率划分区间
-USCancerRates2$colorBuckets_male <- as.numeric(cut(USCancerRates2$rate.male, 50*0:13))
+USCancerRates2$colorBuckets_male <- as.numeric(cut(USCancerRates2$rate.male, 50 * 0:13))
 # 根据郡名称给地图上每个区域的癌症死亡率匹配颜色
 colorsmatched_male <- USCancerRates2$colorBuckets_male[match(us_county$names, rownames(USCancerRates2))]
 # 对女性癌症死亡率类似操作
-USCancerRates2$colorBuckets_female <- as.numeric(cut(USCancerRates2$rate.female, 50*0:13))
+USCancerRates2$colorBuckets_female <- as.numeric(cut(USCancerRates2$rate.female, 50 * 0:13))
 colorsmatched_female <- USCancerRates2$colorBuckets_female[match(us_county$names, rownames(USCancerRates2))]
 # 绘图
 par(mar = c(0, 0, 3, 0), mfrow = c(2, 1))
@@ -373,7 +379,10 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
   # 修改默认的面板函数
   panel = function(x, y, map, ...) {
     # 对未收集到癌症死亡率数据的郡，添加郡边界线
-    panel.lines(x = us_county$x, y = us_county$y, lty = 1, lwd = 0.2, col = "black")
+    panel.lines(
+      x = us_county$x, y = us_county$y,
+      lty = 1, lwd = 0.2, col = "black"
+    )
     latticeExtra::panel.mapplot(x, y, map, ...)
   },
   # 郡地图数据为背景
@@ -435,7 +444,7 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
 
     ```{r}
     #| echo=TRUE
-    trellis.par.get('par.sub.text')
+    trellis.par.get("par.sub.text")
     ```
 
     想必读者已看出其规律，以 R 语言的列表结构来传递各个层级的图形参数值。
@@ -519,8 +528,7 @@ trellis.device(
   device = postscript, color = TRUE, file = "lattice.ps",
   paper = "letter", horizontal = TRUE, onefile = TRUE
 )
-# 设置全局主题
-# trellis.par.set(ggplot2like())
+# 设置全局主题 trellis.par.set(ggplot2like())
 show.settings()
 dev.off()
 # latticeExtra 包内置经济学人杂志的主题
@@ -580,11 +588,16 @@ us_cancer_rates <- reshape(
 # 从 usmapdata 包获取地图数据
 county_df <- usmapdata::us_map("counties")
 # 给每个郡的癌症死亡率数据配上地图数据
-dat <- merge(county_df, us_cancer_rates, by.x = c("full", "county"), by.y = c("state", "county"), all.y = T)
+dat <- merge(
+  x = county_df, y = us_cancer_rates,
+  by.x = c("full", "county"),
+  by.y = c("state", "county"),
+  all.y = T
+)
 # 准备州边界线数据
 state_df <- usmapdata::us_map("states")
 # 癌症死亡率分级
-dat$rate_d <- cut(dat$rate, breaks = 50*0:13)
+dat$rate_d <- cut(dat$rate, breaks = 50 * 0:13)
 # 恢复地图数据顺序
 dat <- dat[order(dat$order), ]
 ```
@@ -609,9 +622,18 @@ dat <- dat[order(dat$order), ]
 #| fig.showtext=TRUE
 library(ggplot2)
 ggplot() +
-  geom_polygon(data = county_df, aes(x, y, group = group), fill = "grey80") +
-  geom_polygon(data = dat, aes(x, y, group = group, fill = rate_d), colour = alpha("white", 1 / 4), size = 0.1) +
-  geom_polygon(data = state_df, aes(x, y, group = group), colour = "gray80", fill = NA, size = 0.15) +
+  geom_polygon(
+    data = county_df, aes(x, y, group = group),
+    fill = "grey80"
+  ) +
+  geom_polygon(
+    data = dat, aes(x, y, group = group, fill = rate_d),
+    colour = alpha("white", 1 / 4), size = 0.1
+  ) +
+  geom_polygon(
+    data = state_df, aes(x, y, group = group),
+    colour = "gray80", fill = NA, size = 0.15
+  ) +
   scale_fill_viridis_d(option = "plasma", na.value = "grey80") +
   facet_wrap(~sex, ncol = 1, strip.position = "top") +
   labs(
@@ -655,7 +677,6 @@ us_county_cancer2 <- merge(
 #| fig.height=10,
 #| fig.align="center",
 #| fig.showtext=TRUE
-
 # 绘图
 tmap::tm_shape(us_county_cancer2) +
   tmap::tm_polygons(border.col = "gray") +
@@ -666,7 +687,7 @@ tmap::tm_shape(us_county_cancer2) +
     legend.reverse = TRUE, title = "死亡率",
     colorNA = "gray",
     textNA = "NA", border.col = "gray",
-    breaks = 50*0:13
+    breaks = 50 * 0:13
   ) +
   tmap::tm_facets(by = "sex", drop.NA.facets = T, ncol = 1) +
   tmap::tm_shape(us_states_shifted) +
@@ -679,7 +700,7 @@ tmap::tm_shape(us_county_cancer2) +
     legend.outside.position = "right",
     legend.outside.size = 0.15,
     legend.format = list(text.separator = "~"),
-    outer.margins = 0, 
+    outer.margins = 0,
     asp = 0
   )
 ```
@@ -765,7 +786,7 @@ legend("bottomright",
 #| fig.align="center",
 #| fig.showtext=TRUE
 
-us_county_cancer2$rate_d <- cut(us_county_cancer2$rate, breaks = 50*0:13)
+us_county_cancer2$rate_d <- cut(us_county_cancer2$rate, breaks = 50 * 0:13)
 ggplot() +
   geom_sf(
     data = us_county_shifted,
@@ -808,18 +829,18 @@ par(mfrow = c(2, 1))
 mf_theme("default", inner = TRUE, tab = TRUE, pos = "center")
 # 绘制地图
 mf_map(
-  x = us_county_cancer, 
+  x = us_county_cancer,
   var = "rate.male",
   type = "choro",
-  breaks = 50*0:13,
+  breaks = 50 * 0:13,
   pal = "Plasma",
-  border = "gray", 
+  border = "gray",
   lwd = 0.5,
   leg_val_rnd = 0,
-  leg_pos = "left", 
+  leg_pos = "left",
   leg_no_data = "NA",
   leg_title = "死亡率\n(每10万人)"
-) 
+)
 # 指北箭头
 mf_arrow(pos = "topleft")
 # 比例尺
@@ -830,18 +851,18 @@ mf_title(txt = "男性", bg = "#f7f7f7", fg = "black", cex = 1)
 mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright", cex = 1)
 
 mf_map(
-  x = us_county_cancer, 
+  x = us_county_cancer,
   var = "rate.female",
   type = "choro",
-  breaks = 50*0:13,
+  breaks = 50 * 0:13,
   pal = "Plasma",
-  border = "gray", 
+  border = "gray",
   lwd = 0.5,
   leg_val_rnd = 0,
-  leg_pos = "left", 
+  leg_pos = "left",
   leg_no_data = "NA",
   leg_title = "死亡率\n(每10万人)"
-) 
+)
 mf_arrow(pos = "topleft")
 mf_scale(pos = "bottomleft")
 mf_title(txt = "女性", bg = "#f7f7f7", fg = "black", cex = 1)
@@ -861,7 +882,20 @@ mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright",
 
 ## 美国北卡州家庭月收入与白人占比的空间相关性
 
-受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从[美国人口调查局](https://www.census.gov/)直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，约**300**万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入。）和白人居民的百分比，原始数据可借助 **tidycensus** 包[@tidycensus]从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 [**tidycensus**](https://github.com/walkerke/tidycensus) 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 `CENSUS_API_KEY`，可在 `.Renviron` 文件中存储环境变量 `CENSUS_API_KEY`，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 `nc_race_income.RData`，整理过程的代码与本文源文档放在一起。
+<!-- 分四部分：数据获取、数据整理、数据展示、数据解读 -->
+
+### 数据获取
+
+受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从[美国人口调查局](https://www.census.gov/)直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，约**300**万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入。）和白人居民的百分比，原始数据可借助 **tidycensus** 包[@tidycensus]从美国官方网站下载。
+
+
+### 数据整理
+
+
+美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 [**tidycensus**](https://github.com/walkerke/tidycensus) 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 `CENSUS_API_KEY`，可在 `.Renviron` 文件中存储环境变量 `CENSUS_API_KEY`，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 `nc_race_income.RData`，整理过程的代码与本文源文档放在一起。
+
+
+### 数据展示
 
 
 先看下2015-2019年度美国北卡罗来纳州普查级**家庭月收入**的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图\@ref(fig:us-nc-income)设置了自定义的收入分段，以体现各个收入阶层：10 万以下**低收入**，10-15 万**中等收入**，15-20万**中高收入**，20-25万**高收入**。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。
@@ -919,21 +953,21 @@ bins <- c(0:10, 15, 20, 25) * 10000
 # 构造调色板
 pal <- colorBin("plasma", domain = us_nc_tract_2019$medInc, bins = bins)
 # 绘图渲染需要一点时间
-leaflet(us_nc_tract_2019) |> 
-  setView(lng = -79.86, lat = 35.17, zoom = 8) |> 
+leaflet(us_nc_tract_2019) |>
+  setView(lng = -79.86, lat = 35.17, zoom = 8) |>
   # 添加默认的 OpenStreetMap 瓦片服务
-  addTiles() |> 
+  addTiles() |>
   addPolygons(
     color = "white", # 边界线颜色
     opacity = 0.6,     # 颜色透明度
     weight = 0.2,      # 边界线宽度
     fillOpacity = 0.6,   # 填充色透明度
     fillColor = ~ pal(medInc)  # 填充色
-  ) |> 
+  ) |>
   addLegend(
-    pal = pal, 
+    pal = pal,
     values = ~medInc,
-    opacity = 0.7, 
+    opacity = 0.7,
     title = "家庭收入",
     position = "bottomright"
   )
@@ -1007,6 +1041,8 @@ ggdraw() +
   draw_plot(nc_bi_leg, x = 0.1, y = .1, width = 0.2, height = 0.2)
 ```
 
+### 数据解读
+
 结合图\@ref(fig:us-nc-income)和图\@ref(fig:bivar-us-states)，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图\@ref(fig:us-nc-income)中非常明显。
 
 
@@ -1077,9 +1113,9 @@ ggdraw() +
 #| message=FALSE
 xfun::session_info(packages = c(
   "knitr", "rmarkdown", "blogdown",
-  "ggplot2", "cowplot", "biscale", 
-  "grid", "lattice", "latticeExtra", 
-  "maps", "mapproj", "sf", "tidycensus", 
+  "ggplot2", "cowplot", "biscale",
+  "grid", "lattice", "latticeExtra",
+  "maps", "mapproj", "sf", "tidycensus",
   "usmapdata", "mapsf", "tmap"
 ), dependencies = FALSE)
 ```
