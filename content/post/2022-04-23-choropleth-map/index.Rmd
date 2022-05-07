@@ -347,7 +347,13 @@ match(x = c("A", "B"), table = c("C", "A", "D"))
 
 ### latticeExtra
 
-**maps** 包是基于 Base R 绘图系统的，以线和多边形为基础，辅以颜色填充，还没有任何分层绘图的概念，Deepayan Sarkar 将其引入新的 Trellis（栅格）图形系统，这就有了 **latticeExtra** 包 [@latticeExtra]，它是以 **lattice** 包[@Sarkar2008]为基础的，特别适合多元数据可视化，不管数据是「宽格式」还是「长格式」都能轻松应对，既保留了 Base R 那种精细操作图形元素的能力，也引入图层面板的概念。如图\@ref(fig:us-cancer-rates-lattice)，在代码形式上将所有的操作都集于一身，没有严格的分层绘图，保留更大的灵活性的代价是提升了复杂性。
+**maps** 包是基于 Base R 绘图系统的，以线和多边形为基础，辅以颜色填充，还没有任何分层绘图的概念，Deepayan Sarkar 将其引入新的 Trellis（栅格）图形系统，这就有了 **latticeExtra** 包 [@latticeExtra]，它是以 **lattice** 包[@Sarkar2008]为基础的，特别适合多元数据可视化，不管数据是「宽格式」还是「长格式」都能轻松应对，既保留了 Base R 那种精细操作图形元素的能力，也引入图层面板的概念。如图\@ref(fig:us-cancer-rates-lattice)，在代码形式上将所有的操作都集于一身，没有严格的分层绘图，保留更大的灵活性的代价是提升了复杂性。绘图主要步骤如下：
+
+1. 准备数据：准备想要展示的数据指标 `x` ，指标所在的数据集 `data`，指标所描述的地理区域 `map`，同时传递给函数 `mapplot(x, data, map, ...)` 完成图形主体部分。
+1. 添加配色：了解死亡率的分布情况，设置合适的分段，选择合适的调色板。
+1. 添加边界：函数 `mapplot(x, data, map, panel, ...)` 中的参数 `panel` 需要一个函数作为参数值，修改默认的面板函数 `panel = panel.mapplot`，添加各郡的边界线，再调函数 `latticeExtra::layer` 叠加各州的边界线，设置颜色深浅和边界线的粗线形成层次。
+1. 添加标题：添加横轴、纵轴、图例、分面标题，图形副标题，适当调整位置。
+1. 最后调整布局、刻度等细节。除了步骤1必须先做，后续步骤没有严格的顺序，图形中各部分是相对独立的，若遇覆盖情况则需注意顺序。
 
 ```{r us-cancer-rates-lattice}
 #| fig.cap="1999-2003 年美国各个郡的年平均癌症死亡率分布",
@@ -853,7 +859,7 @@ mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright",
 [多元地区分布图](https://en.wikipedia.org/wiki/Multivariate_map)用以同时展示两个具有空间相关性的变量，比如人均收入和预期寿命，房地产投资占比和城镇化率[@Meyer1975]。下面以美国北卡州家庭月收入与白人占比的空间相关性为例，在地区分布图上同时展示多个指标，除了用到 **ggplot2** 和 **sf** 包，还需 [**biscale**](https://github.com/slu-openGIS/biscale) [@Prener2020]和 [**cowplot**](https://github.com/wilkelab/cowplot) [@Wilke2020]两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客[Bivariate maps with **ggplot2** and **sf**](https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/)。
 
 
-## 美国北卡州家庭收入中位数与白人占比的空间相关性
+## 美国北卡州家庭月收入与白人占比的空间相关性
 
 受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从[美国人口调查局](https://www.census.gov/)直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，约**300**万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入。）和白人居民的百分比，原始数据可借助 **tidycensus** 包[@tidycensus]从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 [**tidycensus**](https://github.com/walkerke/tidycensus) 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 `CENSUS_API_KEY`，可在 `.Renviron` 文件中存储环境变量 `CENSUS_API_KEY`，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 `nc_race_income.RData`，整理过程的代码与本文源文档放在一起。
 
