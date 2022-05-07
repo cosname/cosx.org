@@ -147,7 +147,7 @@ div.img {
 <p>空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的收费 BI（Business Intelligence） 工具<a href="https://www.tableau.com/zh-cn/solutions/maps">Tableau</a>，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图、统计地图，英文一般为<a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a>，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了<a href="https://zhfw.tianditu.gov.cn/">专题图层服务</a>，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，地区分布图用于展示各类指标<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。</p>
 <p>接下来，本文分四个部分展开介绍地区分布图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
 <p>单变量情形中以 <strong>latticeExtra</strong> 包<span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的数据集 USCancerRates 为例，以地区分布图形式展示美国 1999-2003 年度各郡的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制地区分布图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>、<strong>tmap</strong> 包<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>、<strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>和 <strong>mapsf</strong> 包<span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
-<p>多变量情形中以美国人口统计局发布的调查数据为基础，分析北卡罗来纳州各区县普查级别的家庭收入中位数与白人占比的空间相关性。先分别以单变量的地区分布图描述各个普查区域里家庭收入中位数、白人占比的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。</p>
+<p>多变量情形中以美国人口调查局发布的调查数据为基础，分析北卡罗来纳州各郡社区普查级的家庭月收入与白人占比的空间相关性。先以单变量的地区分布图描述各个普查区域里家庭月收入的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。</p>
 <p>本文小结部分总结了 7 种绘图方案的情况，提炼了其间的关联关系，一些绘图经验，希望帮助读者加深理解和学习。</p>
 <p>未来展望部分从应用场景和绘图技术方面继续提供一些示例，供读者继续探索。</p>
 </div>
@@ -924,11 +924,11 @@ mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quo
 </div>
 <div id="多变量情形" class="section level1">
 <h1>多变量情形</h1>
-<p><a href="https://en.wikipedia.org/wiki/Multivariate_map">多元地区分布图</a>用以同时展示两个具有空间相关性的变量，比如人均收入和平均寿命，房地产投资占比和城镇化率<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。下面以美国北卡州家庭收入中位数与白人占比的空间相关性为例，在地区分布图上同时展示多个指标，除了用到 <strong>ggplot2</strong> 和 <strong>sf</strong> 包，还需 <a href="https://github.com/slu-openGIS/biscale"><strong>biscale</strong></a> <span class="citation">(<a href="#ref-Prener2020" role="doc-biblioref">Prener, Grossenbacher, and Zehr 2020</a>)</span>和 <a href="https://github.com/wilkelab/cowplot"><strong>cowplot</strong></a> <span class="citation">(<a href="#ref-Wilke2020" role="doc-biblioref">Wilke 2020</a>)</span>两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客<a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/">Bivariate maps with <strong>ggplot2</strong> and <strong>sf</strong></a>。</p>
+<p><a href="https://en.wikipedia.org/wiki/Multivariate_map">多元地区分布图</a>用以同时展示两个具有空间相关性的变量，比如人均收入和预期寿命，房地产投资占比和城镇化率<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。下面以美国北卡州家庭月收入与白人占比的空间相关性为例，在地区分布图上同时展示多个指标，除了用到 <strong>ggplot2</strong> 和 <strong>sf</strong> 包，还需 <a href="https://github.com/slu-openGIS/biscale"><strong>biscale</strong></a> <span class="citation">(<a href="#ref-Prener2020" role="doc-biblioref">Prener, Grossenbacher, and Zehr 2020</a>)</span>和 <a href="https://github.com/wilkelab/cowplot"><strong>cowplot</strong></a> <span class="citation">(<a href="#ref-Wilke2020" role="doc-biblioref">Wilke 2020</a>)</span>两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客<a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/">Bivariate maps with <strong>ggplot2</strong> and <strong>sf</strong></a>。</p>
 <div id="美国北卡州家庭收入中位数与白人占比的空间相关性" class="section level2">
 <h2>美国北卡州家庭收入中位数与白人占比的空间相关性</h2>
-<p>受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从<a href="https://www.census.gov/">美国人口调查局</a>直接获取数据。下面的数据集来自 2015-2019 年度美国社区调查（American Community Survey，约<strong>300</strong>万家庭的抽样），社区普查级别（大致相当于咱们按乡镇、街道统计）的北卡罗来纳州家庭收入中位数（家庭收入中位数指的是过去12个月家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的。）和白人居民的百分比，原始数据可借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 <code>nc_race_income.RData</code>，整理过程的代码与本文源文档放在一起。</p>
-<p>先看下2015-2019年度美国北卡罗来纳州普查级<strong>家庭收入中位数</strong>的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图<a href="#fig:us-nc-income">12</a>设置了自定义的收入分段，以体现各个收入阶层：10 万以下<strong>低收入</strong>，10-15 万<strong>中等收入</strong>，15-20万<strong>中高收入</strong>，20-25万<strong>高收入</strong>。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。</p>
+<p>受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从<a href="https://www.census.gov/">美国人口调查局</a>直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，约<strong>300</strong>万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入。）和白人居民的百分比，原始数据可借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>从美国官方网站下载。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 <code>nc_race_income.RData</code>，整理过程的代码与本文源文档放在一起。</p>
+<p>先看下2015-2019年度美国北卡罗来纳州普查级<strong>家庭月收入</strong>的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图<a href="#fig:us-nc-income">12</a>设置了自定义的收入分段，以体现各个收入阶层：10 万以下<strong>低收入</strong>，10-15 万<strong>中等收入</strong>，15-20万<strong>中高收入</strong>，20-25万<strong>高收入</strong>。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。</p>
 <pre class="r"><code># 加载收入和种族数据
 load(file = &quot;data/nc_race_income.RData&quot;)
 # 读取郡边界地图数据
@@ -954,19 +954,18 @@ mtext(text = &quot;数据源：美国人口调查局&quot;, side = 1, adj = 0.8,
 <div class="full-width">
 <div class="figure"><span style="display:block;" id="fig:us-nc-income"></span>
 <img src="img/us-nc-income.png" class="full" alt="" />
-<p class="caption">图 12:  北卡罗来纳州普查水平下家庭收入中位数的空间分布</p>
+<p class="caption">图 12:  北卡罗来纳州普查水平下家庭月收入的空间分布</p>
 </div>
 </div>
 <p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，利用 <strong>sf</strong> 包内置的地图数据集 <code>nc.gpkg</code>，将各个数据指标从社区上卷到各个郡。</p>
 <pre class="r"><code># 加载 NC 社区调查原始数据
 load(file = &quot;data/nc_race_income.RData&quot;)
-# 获取县级的地图数据
 library(sf) 
-# 读取数据，且读取后不要转化为 tibble 数据类型
+# 读取郡级的地图数据，且不要转化为 tibble 数据类型
 nc_county_map &lt;- read_sf(system.file(&quot;gpkg/nc.gpkg&quot;, package = &quot;sf&quot;), as_tibble = FALSE)
-# 县级地图数据和 ACS 调查数据根据区域编码合并
+# 郡级地图数据和 ACS 调查数据根据区域编码合并
 nc_county_data &lt;- merge(x = nc_county_map, y = nc_county_race_income, by.x = &quot;FIPS&quot;, by.y = &quot;GEOID&quot;)
-# 统计白人占比和收入指标
+# 统计白人占比和家庭月收入指标
 nc_county_data &lt;- within(nc_county_data, {
   pctWhite &lt;- B02001_002E / B02001_001E
   medInc &lt;- B19013_001E
@@ -984,7 +983,7 @@ nc_bi_map &lt;- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
   ) +
   bi_scale_fill(pal = &quot;DkViolet&quot;, dim = 3) +
   labs(
-    title = &quot;2015-2019 年度北卡罗来纳州各个郡收入水平和白人占比的空间相关性&quot;,
+    title = &quot;2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性&quot;,
     caption = &quot;数据源：美国人口调查局&quot;
   ) +
   theme_void() +
@@ -1012,12 +1011,12 @@ ggdraw() +
   draw_plot(nc_bi_map, x = 0, y = 0, width = 1, height = 1) +
   draw_plot(nc_bi_leg, x = 0.1, y = .1, width = 0.2, height = 0.2)</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:bivar-us-states"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡罗来纳州各个郡收入水平和白人占比的空间相关性" width="864" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性" width="864" />
 <p class="caption">
-图 13: 2015-2019 年度北卡罗来纳州各个郡收入水平和白人占比的空间相关性
+图 13: 2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性
 </p>
 </div>
-<p>结合图<a href="#fig:us-nc-income">12</a>和图<a href="#fig:bivar-us-states">13</a>，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭收入中位数指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图<a href="#fig:us-nc-income">12</a>中非常明显。</p>
+<p>结合图<a href="#fig:us-nc-income">12</a>和图<a href="#fig:bivar-us-states">13</a>，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图<a href="#fig:us-nc-income">12</a>中非常明显。</p>
 <div class="rmdtip">
 <p><strong>sf</strong> 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">12</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
 </div>
