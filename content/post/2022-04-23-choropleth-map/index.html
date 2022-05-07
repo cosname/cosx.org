@@ -18,12 +18,12 @@ tags:
   - lattice
   - sf
   - ggplot2
-link-citations: true
-bibliography: 
-  - refer.bib
 output:
   blogdown::html_page:
     toc: true
+link-citations: true
+bibliography: 
+  - refer.bib
 forum_id: xxx
 description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
@@ -50,7 +50,6 @@ description: "在美国和日本的国家统计局官网，地区分布图用于
 <li><a href="#美国北卡州家庭月收入与白人占比的空间相关性" id="toc-美国北卡州家庭月收入与白人占比的空间相关性">美国北卡州家庭月收入与白人占比的空间相关性</a>
 <ul>
 <li><a href="#数据获取" id="toc-数据获取">数据获取</a></li>
-<li><a href="#数据整理" id="toc-数据整理">数据整理</a></li>
 <li><a href="#数据展示" id="toc-数据展示">数据展示</a></li>
 <li><a href="#数据解读" id="toc-数据解读">数据解读</a></li>
 </ul></li>
@@ -1007,7 +1006,7 @@ nc_income_race_tract &lt;- get_acs(
 nc_county_map &lt;- tigris::counties(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)
 # 北卡州社区级地图数据
 nc_tract_map &lt;- tigris::tracts(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)</code></pre>
-<p>数据下载后，保存为两个文件：</p>
+<p>数据下载后，保存为四个文件：</p>
 <ol style="list-style-type: decimal">
 <li><code>nc_income_race_county.rds</code> 北卡州<strong>郡级</strong>家庭月收入和白人数量。</li>
 <li><code>nc_income_race_tract.rds</code> 北卡州<strong>社区级</strong>家庭月收入和白人数量。</li>
@@ -1026,16 +1025,13 @@ View(acs_vars)</code></pre>
 <li><p>若网络不好，查看函数 <code>get_acs()</code> 源码获取数据下载地址，打开浏览器从网页获取，嫌麻烦的话，直接用本文随附的数据吧。</p></li>
 </ol>
 </div>
-<div id="数据整理" class="section level3">
-<h3>数据整理</h3>
-<p>此处略去数据下载整理的过程，整理好的数据集保存到本地文件 <code>nc_income_race_county.rds</code>，整理过程的代码与本文源文档放在一起。</p>
-</div>
 <div id="数据展示" class="section level3">
 <h3>数据展示</h3>
 <p>先看下2015-2019年度美国北卡罗来纳州普查级<strong>家庭月收入</strong>的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图<a href="#fig:us-nc-income">12</a>设置了自定义的收入分段，以体现各个收入阶层：10 万以下<strong>低收入</strong>，10-15 万<strong>中等收入</strong>，15-20万<strong>中高收入</strong>，20-25万<strong>高收入</strong>。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。</p>
-<pre class="r"><code>nc_income_race_county &lt;- readRDS(file = &quot;data/nc_income_race_county.rds&quot;)
+<pre class="r"><code># 读取数据
+nc_income_race_county &lt;- readRDS(file = &quot;data/nc_income_race_county.rds&quot;)
 nc_income_race_tract &lt;- readRDS(file = &quot;data/nc_income_race_tract.rds&quot;)
-# 家庭月收入和白人占比数据
+# 计算家庭月收入和白人占比数据
 nc_income_race_tract &lt;- within(nc_income_race_tract, {
   pctWhite &lt;- B02001_002E / B02001_001E
   medInc &lt;- B19013_001E
@@ -1056,11 +1052,11 @@ mtext(
   text = &quot;数据源：美国人口调查局&quot;,
   side = 1, adj = 0.05
 )</code></pre>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-income"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-1.png" alt="北卡罗来纳州普查水平下家庭月收入的空间分布" width="1152" />
-<p class="caption">
-图 12: 北卡罗来纳州普查水平下家庭月收入的空间分布
-</p>
+<div class="full-width">
+<div class="figure"><span style="display:block;" id="fig:us-nc-income"></span>
+<img src="img/us-nc-income.png" class="full" alt="" />
+<p class="caption">图 12:  北卡罗来纳州普查水平下家庭月收入的空间分布</p>
+</div>
 </div>
 <p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，将各个数据指标从社区上卷到各个郡。</p>
 <pre class="r"><code>library(sf) 

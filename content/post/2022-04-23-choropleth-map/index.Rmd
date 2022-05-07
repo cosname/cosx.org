@@ -18,12 +18,12 @@ tags:
   - lattice
   - sf
   - ggplot2
-link-citations: true
-bibliography: 
-  - refer.bib
 output:
   blogdown::html_page:
     toc: true
+link-citations: true
+bibliography: 
+  - refer.bib
 forum_id: xxx
 description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
@@ -119,13 +119,10 @@ div.img {
 
 ```{r setup}
 #| echo=FALSE
-
 knitr::opts_chunk$set(
   comment = "#",
   message = FALSE,
-    error = FALSE,
-     tidy = FALSE,
-    cache = FALSE,
+    cache = TRUE,
      echo = TRUE,
  collapse = TRUE
 )
@@ -939,7 +936,7 @@ nc_county_map <- tigris::counties(state = 37, cb = T, year = 2019, class = "sf")
 nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 ```
 
-数据下载后，保存为两个文件：
+数据下载后，保存为四个文件：
 
 1. `nc_income_race_county.rds` 北卡州**郡级**家庭月收入和白人数量。
 1. `nc_income_race_tract.rds` 北卡州**社区级**家庭月收入和白人数量。
@@ -967,12 +964,6 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 1. 若网络不好，查看函数 `get_acs()` 源码获取数据下载地址，打开浏览器从网页获取，嫌麻烦的话，直接用本文随附的数据吧。
 
 
-### 数据整理
-
-
-此处略去数据下载整理的过程，整理好的数据集保存到本地文件 `nc_income_race_county.rds`，整理过程的代码与本文源文档放在一起。
-
-
 ### 数据展示
 
 
@@ -980,18 +971,18 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 
 
 ```{r}
+# 读取数据
 nc_income_race_county <- readRDS(file = "data/nc_income_race_county.rds")
 nc_income_race_tract <- readRDS(file = "data/nc_income_race_tract.rds")
-# 家庭月收入和白人占比数据
+# 计算家庭月收入和白人占比数据
 nc_income_race_tract <- within(nc_income_race_tract, {
   pctWhite <- B02001_002E / B02001_001E
   medInc <- B19013_001E
 })
 ```
 
-
-
-```{r us-nc-income}
+```{r us-nc-income2}
+#| eval=FALSE,
 #| fig.cap="北卡罗来纳州普查水平下家庭月收入的空间分布",
 #| fig.width=12,
 #| fig.height=6,
@@ -1015,6 +1006,9 @@ mtext(
 )
 ```
 
+::: {.full-width}
+![(\#fig:us-nc-income) 北卡罗来纳州普查水平下家庭月收入的空间分布](img/us-nc-income.png){.full}
+:::
 
 
 ```{r}
