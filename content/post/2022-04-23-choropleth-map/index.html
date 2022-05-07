@@ -438,13 +438,13 @@ subset(x = USCancerRates, subset = state == &quot;Alabama&quot; &amp; county == 
 # alabama,pickens        183.6 Alabama Pickens County</code></pre>
 <p>以 Alabama 的 Pickens County 为例，1999-2003年平均年龄调整的男性癌症死亡率为 363.7（单位：十万分之一），在 95% 置信水平下，置信限为 <span class="math inline">\([311.1, 423.2]\)</span>。根据最新的五年数据显示 2014-2018 年男性癌症死亡率为 479.8，95% 置信水平下的置信区间为 <span class="math inline">\([425.7, 539.3]\)</span>。简单验证一下，就会发现有意思的现象，置信区间不是关于观测的癌症死亡率对称，且离置信区间中心尚有距离， <span class="math inline">\(\frac{311.1 + 423.2}{2} = 367.1 \neq 363.7\)</span>。一般来说，100000 人中有 363.7 人因癌症死亡，死亡人数较多（比如大于100）的情况下，二项分布可用正态分布逼近，置信区间上下限应该分别为：</p>
 <pre class="r"><code>qnorm(p = 1 - 0.05 / 2)
-# [1] 1.959964
+# [1] 1.96
 # 置信下限
 363.7 - 1.96 * sqrt(363.7 / 100000 * (1 - 363.7 / 100000) / 100000) * 100000
-# [1] 326.389
+# [1] 326.4
 # 置信上限
 363.7 + 1.96 * sqrt(363.7 / 100000 * (1 - 363.7 / 100000) / 100000) * 100000
-# [1] 401.011</code></pre>
+# [1] 401</code></pre>
 <p>而美国国家癌症研究所给的置信带更宽，更保守一些，显然这里面的算法没这么简单。以阿拉巴马州为例，将所有的郡死亡率及其置信区间绘制出来，如图<a href="#fig:alabama-ci-rank">1</a>所示，整体来说，偏离置信区间中心都很小。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:alabama-ci-rank"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/alabama-ci-rank-1.png" alt="1999-2003 年美国阿拉巴马州各个郡的年平均癌症死亡率" width="768" />
@@ -756,13 +756,24 @@ ggplot() +
 <p><strong>tmap</strong> 支持 <strong>sp</strong> 包提供的 Spatial 类数据对象，也支持 <strong>sf</strong> 包提供的 Simple Features 类数据对象，众所周知，后者是新一代更好的工具，因此接下来的示例都将基于 <strong>sf</strong> 包。首先从美国人口调查局下载州和郡级别的<a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">多边形边界数据</a>，再类似 <strong>usmapdata</strong> 包对阿拉斯加、夏威夷和波多黎各做适当的调整，借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>让这个过程变得容易，调整地图数据的代码与源文档放在一起，读者可自取。</p>
 <pre class="r"><code># 准备地图数据
 library(sf)
-us_states_shifted &lt;- readRDS(file = &quot;data/us_states_shifted.rds&quot;)
-us_county_shifted &lt;- readRDS(file = &quot;data/us_county_shifted.rds&quot;)
+us_state_map &lt;- readRDS(file = &quot;data/us_state_map.rds&quot;)
+us_county_map &lt;- readRDS(file = &quot;data/us_county_map.rds&quot;)
+# 重命名 fips_codes 的 state 列为 state_abbr
+fips_codes &lt;- within(tidycensus::fips_codes, {state_abbr = state})
+fips_codes &lt;- subset(x = fips_codes, select = setdiff(colnames(fips_codes), &quot;state&quot;))
+# 癌症死亡率数据关联州、郡代码 FIPS
+us_cancer_rates &lt;- merge(
+  x = us_cancer_rates,
+  y = fips_codes,
+  by.x = c(&quot;state&quot;, &quot;county&quot;),
+  by.y = c(&quot;state_name&quot;, &quot;county&quot;),
+  all.x = TRUE
+)
 # 合并地图数据和观测数据
 us_county_cancer2 &lt;- merge(
-  x = us_county_shifted, y = us_cancer_rates,
-  by.x = c(&quot;STATE_NAME&quot;, &quot;NAMELSAD&quot;),
-  by.y = c(&quot;state&quot;, &quot;county&quot;), all.x = TRUE
+  x = us_county_map, y = us_cancer_rates,
+  by.x = c(&quot;STATEFP&quot;, &quot;COUNTYFP&quot;),
+  by.y = c(&quot;state_code&quot;, &quot;county_code&quot;), all.x = TRUE
 )</code></pre>
 <p>准备好数据后，绘图过程比较类似之前使用 <strong>ggplot2</strong> 绘图，所不同的是，添加了指北针、比例尺等地区分布图特有的内容。</p>
 <pre class="r"><code># 绘图
@@ -778,7 +789,7 @@ tmap::tm_shape(us_county_cancer2) +
     breaks = 50 * 0:13
   ) +
   tmap::tm_facets(by = &quot;sex&quot;, drop.NA.facets = T, ncol = 1) +
-  tmap::tm_shape(us_states_shifted) +
+  tmap::tm_shape(us_state_map) +
   tmap::tm_polygons(col = NA, border.col = &quot;gray&quot;, alpha = 0) +
   tmap::tm_compass(position = c(&quot;right&quot;, &quot;bottom&quot;)) +
   tmap::tm_scale_bar(position = c(&quot;right&quot;, &quot;bottom&quot;)) +
@@ -801,17 +812,24 @@ tmap::tm_shape(us_county_cancer2) +
 <div id="sf" class="section level3">
 <h3>sf</h3>
 <p>在上一节已经准备好了美国各个郡的边界数据，接下来合并各个郡的癌症死亡率数据 USCancerRates，调用 <strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>的绘图函数 <code>plot()</code>。除了调用函数 <code>plot()</code>的几行代码，绘制图<a href="#fig:us-cancer-rates-sf">9</a>的代码和前面调用 <strong>maps</strong> 包绘图大体是类似的，但灵活性高得多，因 <strong>sf</strong> 包的强大，支持大量的空间数据存储格式，不受限于 <strong>maps</strong> 包内置的不完整地图数据，也不因给郡区域上色添加额外的数据匹配操作。</p>
-<pre class="r"><code># 准备地图数据
-us_county_shifted &lt;- readRDS(file = &quot;data/us_county_shifted.rds&quot;)
+<pre class="r"><code># 癌症死亡率数据关联州、郡代码
+USCancerRates2 &lt;- merge(
+  x = USCancerRates,
+  y = fips_codes,
+  by.x = c(&quot;state&quot;, &quot;county&quot;),
+  by.y = c(&quot;state_name&quot;, &quot;county&quot;),
+  all.x = TRUE
+)
 # 空间数据合并观测数据
 us_county_cancer &lt;- merge(
-  x = us_county_shifted, y = USCancerRates,
-  by.x = c(&quot;STATE_NAME&quot;, &quot;NAMELSAD&quot;),
-  by.y = c(&quot;state&quot;, &quot;county&quot;), all.x = TRUE
+  x = us_county_map, y = USCancerRates2,
+  by.x = c(&quot;STATEFP&quot;, &quot;COUNTYFP&quot;),
+  by.y = c(&quot;state_code&quot;, &quot;county_code&quot;), 
+  all.x = TRUE
 )
 par(mar = c(0, 0, 4, 0), mfrow = c(2, 1))
 # 添加郡地图
-plot(st_geometry(us_county_shifted),
+plot(st_geometry(us_county_map),
   reset = FALSE, border = NA, col = &quot;grey80&quot;, main = &quot;&quot;
 )
 # 添加癌症死亡率数据
@@ -821,14 +839,14 @@ plot(us_county_cancer[&quot;rate.male&quot;],
   border = NA, lwd = 0.25, add = TRUE
 )
 # 美国各个州边界
-plot(st_geometry(us_states_shifted), border = &quot;gray80&quot;, lwd = 0.25, add = TRUE)
+plot(st_geometry(us_state_map), border = &quot;gray80&quot;, lwd = 0.25, add = TRUE)
 # 添加主标题
 title(main = &quot;1999-2003 年美国各个郡的年平均癌症死亡率&quot;, line = 2)
 # 添加分面标题
 mtext(text = &quot;男性&quot;, side = 3, adj = 0.5)
 # 调整边空
 par(mar = c(1, 0, 2, 0))
-plot(st_geometry(us_county_shifted),
+plot(st_geometry(us_county_map),
   reset = FALSE, border = NA, col = &quot;grey80&quot;, main = &quot;&quot;
 )
 plot(us_county_cancer[&quot;rate.female&quot;],
@@ -836,7 +854,7 @@ plot(us_county_cancer[&quot;rate.female&quot;],
   breaks = 50 * 0:13,
   border = NA, lwd = 0.25, add = TRUE
 )
-plot(st_geometry(us_states_shifted), border = &quot;gray80&quot;, lwd = 0.25, add = TRUE)
+plot(st_geometry(us_state_map), border = &quot;gray80&quot;, lwd = 0.25, add = TRUE)
 mtext(text = &quot;女性&quot;, side = 3, adj = 0.5)
 mtext(text = &quot;数据源：美国国家癌症研究所&quot;, side = 1, adj = 0)
 # 调色板
@@ -866,7 +884,7 @@ legend(&quot;bottomright&quot;,
 <pre class="r"><code>us_county_cancer2$rate_d &lt;- cut(us_county_cancer2$rate, breaks = 50 * 0:13)
 ggplot() +
   geom_sf(
-    data = us_county_shifted,
+    data = us_county_map,
     fill = I(&quot;grey80&quot;), colour = NA
   ) +
   geom_sf(
@@ -874,7 +892,7 @@ ggplot() +
     aes(fill = rate_d), colour = alpha(&quot;white&quot;, 1 / 4), size = 0.1
   ) +
   geom_sf(
-    data = us_states_shifted,
+    data = us_state_map,
     colour = alpha(&quot;gray80&quot;, 1 / 4), fill = NA, size = 0.15
   ) +
   scale_fill_viridis_d(option = &quot;plasma&quot;, na.value = &quot;grey80&quot;) +
@@ -960,53 +978,93 @@ mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quo
 <!-- 分四部分：数据获取、数据整理、数据展示、数据解读 -->
 <div id="数据获取" class="section level3">
 <h3>数据获取</h3>
-<p>受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从<a href="https://www.census.gov/">美国人口调查局</a>直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，约<strong>300</strong>万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入。）和白人居民的百分比，原始数据可借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>从美国官方网站下载。</p>
+<p>受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从<a href="https://www.census.gov/">美国人口调查局</a>直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，简称 ACS，约<strong>300</strong>万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入。）和白人居民的百分比。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>，原始数据可借助 <strong>tidycensus</strong> 包从美国官方网站下载。</p>
+<p>下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。在网络一切都好的情况下，下载数据指标和北卡郡级地图数据非常简单，如下：</p>
+<pre class="r"><code>library(tidycensus)
+library(sf)
+# 郡级数据
+nc_income_race_county &lt;- get_acs(
+  state = &quot;NC&quot;, # 北卡州
+  geography = &quot;county&quot;, # 郡级
+  # 三个数据指标：家庭月收入，白人数量，总人数
+  variables = c(&quot;B19013_001&quot;, &quot;B02001_001E&quot;, &quot;B02001_002E&quot;),
+  geometry = TRUE, # 下载北卡郡级地图数据
+  output = &quot;wide&quot;, # 输出宽格式数据
+  year = 2019, # 2015-2019 年度
+  survey = &quot;acs5&quot;, # 5 年
+  moe_level = 90 # 置信水平 90%
+)
+# 社区级数据
+nc_income_race_tract &lt;- get_acs(
+  state = &quot;NC&quot;,
+  geography = &quot;tract&quot;, # 社区级
+  variables = c(&quot;B19013_001&quot;, &quot;B02001_001E&quot;, &quot;B02001_002E&quot;),
+  geometry = TRUE, output = &quot;wide&quot;,
+  year = 2019, survey = &quot;acs5&quot;,
+  moe_level = 90
+)
+# NC 社区普查级地图数据
+nc_tract_map &lt;- tigris::tracts(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)
+# NC 郡级地图数据
+nc_county_map &lt;- tigris::counties(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)</code></pre>
+<p>数据下载后，保存为两个文件：</p>
+<ol style="list-style-type: decimal">
+<li><code>nc_income_race_county.rds</code> 北卡州<strong>郡级</strong>家庭月收入和白人数量。</li>
+<li><code>nc_income_race_tract.rds</code> 北卡州<strong>社区级</strong>家庭月收入和白人数量。</li>
+</ol>
+<p>下面补充几个细节：</p>
+<ol style="list-style-type: decimal">
+<li><p>R 软件内置了数据集 <code>state.name</code> 和 <code>state.abb</code>，分别对应 美国各个州的名称及其简称，<strong>tidycensus</strong> 包内置的数据集 <code>fips_codes</code> 还提供各州、郡的 FIPS 代码。</p></li>
+<li><p>读者若对其它数据指标感兴趣，可通过如下命令查看：</p>
+<pre class="r"><code>acs_vars &lt;- load_variables(year = 2019, dataset = &quot;acs5&quot;)
+View(acs_vars)</code></pre>
+<p>一共 <strong>27040</strong> 个指标，其中很多是衍生指标，比如上面用到的白人数量 <code>B02001_001E</code>，人口数按种族分组统计，自然还可以有按性别、年龄分组的衍生指标。</p></li>
+<li><p>Kyle Walker 的著作《Analyzing US Census Data: Methods, Maps, and Models in R》<span class="citation">(<a href="#ref-Walker2022" role="doc-biblioref">Walker 2022</a>)</span> 提供了更多关于美国社区调查数据及其使用的介绍。</p></li>
+<li><p>若网络不好，查看函数 <code>get_acs()</code> 源码获取数据下载地址，打开浏览器从网页获取，嫌麻烦的话，直接用本文随附的数据吧。</p></li>
+</ol>
 </div>
 <div id="数据整理" class="section level3">
 <h3>数据整理</h3>
-<p>美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包 。下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。此处略去数据下载整理的过程，整理好的数据集保存到本地文件 <code>nc_race_income.RData</code>，整理过程的代码与本文源文档放在一起。</p>
+<p>此处略去数据下载整理的过程，整理好的数据集保存到本地文件 <code>nc_income_race_county.rds</code>，整理过程的代码与本文源文档放在一起。</p>
 </div>
 <div id="数据展示" class="section level3">
 <h3>数据展示</h3>
 <p>先看下2015-2019年度美国北卡罗来纳州普查级<strong>家庭月收入</strong>的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图<a href="#fig:us-nc-income">12</a>设置了自定义的收入分段，以体现各个收入阶层：10 万以下<strong>低收入</strong>，10-15 万<strong>中等收入</strong>，15-20万<strong>中高收入</strong>，20-25万<strong>高收入</strong>。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。</p>
-<pre class="r"><code># 加载收入和种族数据
-load(file = &quot;data/nc_race_income.RData&quot;)
-# 读取郡边界地图数据
-nc_county_map &lt;- read_sf(system.file(&quot;gpkg/nc.gpkg&quot;, package = &quot;sf&quot;), as_tibble = FALSE)
-us_nc_tract &lt;- readRDS(file = &quot;data/us_nc_tract.rds&quot;)
-# 合并地图数据和收入数据
-us_nc_tract_2019 &lt;- merge(x = us_nc_tract, y = nc_tract_race_income, by = &quot;GEOID&quot;)
-# 收入和白人占比数据
-us_nc_tract_2019 &lt;- within(us_nc_tract_2019, {
+<pre class="r"><code>nc_income_race_county &lt;- readRDS(file = &quot;data/nc_income_race_county.rds&quot;)
+nc_income_race_tract &lt;- readRDS(file = &quot;data/nc_income_race_tract.rds&quot;)
+# 家庭月收入和白人占比数据
+nc_income_race_tract &lt;- within(nc_income_race_tract, {
   pctWhite &lt;- B02001_002E / B02001_001E
   medInc &lt;- B19013_001E
 })</code></pre>
+<div class="full-width">
 <pre class="r"><code>par(mar = c(2, 0, 0, 0))
-# 家庭收入的空间分布
-plot(us_nc_tract_2019[&quot;medInc&quot;], key.pos = 1,
+# 家庭月收入的空间分布
+plot(nc_income_race_tract[&quot;medInc&quot;],
+  key.pos = 1,
   pal = viridisLite::plasma, reset = FALSE,
   breaks = c(0:10, 15, 20, 25) * 10000,
   border = &quot;gray80&quot;, main = &quot;&quot;, lwd = 0.1
 )
 # 添加郡边界
-plot(st_geometry(nc_county_map), border = &quot;white&quot;, lwd = 0.25, add = TRUE)
-mtext(text = &quot;数据源：美国人口调查局&quot;, side = 1, adj = 0.8, line = -1, padj = 1)</code></pre>
-<div class="full-width">
-<div class="figure"><span style="display:block;" id="fig:us-nc-income"></span>
-<img src="img/us-nc-income.png" class="full" alt="" />
-<p class="caption">图 12:  北卡罗来纳州普查水平下家庭月收入的空间分布</p>
+plot(st_geometry(nc_income_race_county),
+  border = &quot;gray&quot;, lwd = 0.25, add = TRUE
+)
+mtext(
+  text = &quot;数据源：美国人口调查局&quot;,
+  side = 1, adj = 0.05
+)</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-income"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-1.png" alt="北卡罗来纳州普查水平下家庭月收入的空间分布" width="960" />
+<p class="caption">
+图 12: 北卡罗来纳州普查水平下家庭月收入的空间分布
+</p>
 </div>
 </div>
-<p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，利用 <strong>sf</strong> 包内置的地图数据集 <code>nc.gpkg</code>，将各个数据指标从社区上卷到各个郡。</p>
-<pre class="r"><code># 加载 NC 社区调查原始数据
-load(file = &quot;data/nc_race_income.RData&quot;)
-library(sf) 
-# 读取郡级的地图数据，且不要转化为 tibble 数据类型
-nc_county_map &lt;- read_sf(system.file(&quot;gpkg/nc.gpkg&quot;, package = &quot;sf&quot;), as_tibble = FALSE)
-# 郡级地图数据和 ACS 调查数据根据区域编码合并
-nc_county_data &lt;- merge(x = nc_county_map, y = nc_county_race_income, by.x = &quot;FIPS&quot;, by.y = &quot;GEOID&quot;)
+<p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，将各个数据指标从社区上卷到各个郡。</p>
+<pre class="r"><code>library(sf) 
 # 统计白人占比和家庭月收入指标
-nc_county_data &lt;- within(nc_county_data, {
+nc_income_race_county &lt;- within(nc_income_race_county, {
   pctWhite &lt;- B02001_002E / B02001_001E
   medInc &lt;- B19013_001E
 })
@@ -1015,7 +1073,10 @@ library(ggplot2)
 library(biscale)
 library(cowplot)
 # 将数据根据分位点分箱
-nc_bi_data &lt;- bi_class(nc_county_data, x = pctWhite, y = medInc, style = &quot;quantile&quot;, dim = 3)
+nc_bi_data &lt;- bi_class(nc_income_race_county,
+  x = pctWhite, y = medInc,
+  style = &quot;quantile&quot;, dim = 3
+)
 # 创建主体地图
 nc_bi_map &lt;- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
   geom_sf(
@@ -1033,7 +1094,10 @@ nc_bi_leg_data &lt;- data.frame(expand.grid(x = 3:1, y = 3:1),
   bi_fill = biscale:::pal_dkviolet(n = 3)
 )
 # 创建图例瓦片
-nc_bi_leg &lt;- ggplot(data = nc_bi_leg_data, aes(x = x, y = y, fill = bi_fill)) +
+nc_bi_leg &lt;- ggplot(
+  data = nc_bi_leg_data,
+  aes(x = x, y = y, fill = bi_fill)
+) +
   geom_tile() +
   scale_fill_identity() +
   labs(
@@ -1075,14 +1139,14 @@ ggdraw() +
 <li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
 </ul>
 <p>在掌握基础的一些工具后，需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
-<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">14</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级函数不能一步到位的出图就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再深究了。</p>
+<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">14</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，而添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再折腾了。</p>
 <div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
 <img src="img/choropleth-map.svg" class="full" alt="" />
 <p class="caption">图 14:  7 种绘图方案依赖的 R 包及其层次关系</p>
 </div>
 <p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。庆幸的是各郡癌症死亡率数据的郡名称<code>rownames(USCancerRates)</code> 和地图数据 <code>us_county</code> 里的郡名称 <code>names</code> 是可以映射上的，否则地区分布图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
 <p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到地区分布图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
-<p><a href="https://github.com/r-tmap/tmap"><strong>tmap</strong></a> 类似 <a href="https://github.com/riatelab/mapsf"><strong>mapsf</strong></a>，相比而言，上游依赖很多，相应功能也多，但，据笔者在 MacOS 和 Ubuntu 系统上测试图<a href="#fig:us-cancer-rates-tmap">8</a>，发现绘图性能很差，这应该和它内部将 sf 等数据对象转化为 sp 数据对象有关。<strong>sp</strong> 已是上一代产品，现有工具足以替代，因此，不再介绍， <span class="citation">E. Pebesma and Bivand (<a href="#ref-Pebesma2022" role="doc-biblioref">2022</a>)</span> 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 <strong>sf</strong>、<strong>stars</strong> <span class="citation">(<a href="#ref-stars" role="doc-biblioref">E. Pebesma 2021</a>)</span> 或 <strong>terra</strong> <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2022</a>)</span>，已成历史的三个 R 包 — 空间几何计算 <strong>rgeos</strong> <span class="citation">(<a href="#ref-rgeos" role="doc-biblioref">R. Bivand and Rundel 2021</a>)</span>、空间数据导入 <strong>rgdal</strong> <span class="citation">(<a href="#ref-rgdal" role="doc-biblioref">R. Bivand, Keitt, and Rowlingson 2022</a>)</span>和空间数据操作 <strong>maptools</strong> <span class="citation">(<a href="#ref-maptools" role="doc-biblioref">R. Bivand and Lewin-Koh 2022</a>)</span> 将于 <strong>2023</strong> 年底退休。</p>
+<p><a href="https://github.com/r-tmap/tmap"><strong>tmap</strong></a> 类似 <a href="https://github.com/riatelab/mapsf"><strong>mapsf</strong></a>，相比而言，上游依赖很多，相应功能也多，其主站有丰富的介绍材料。另一方面，据笔者在 MacOS 和 Ubuntu 系统上测试图<a href="#fig:us-cancer-rates-tmap">8</a>，发现绘图性能很差，这应该和它内部将 sf 等数据对象转化为 sp 数据对象有关。<strong>sp</strong> 已是上一代产品，现有工具足以替代，因此，不再介绍， <span class="citation">E. Pebesma and Bivand (<a href="#ref-Pebesma2022" role="doc-biblioref">2022</a>)</span> 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 <strong>sf</strong>、<strong>stars</strong> <span class="citation">(<a href="#ref-stars" role="doc-biblioref">E. Pebesma 2021</a>)</span> 或 <strong>terra</strong> <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2022</a>)</span>，已成历史的三个 R 包 — 空间几何计算 <strong>rgeos</strong> <span class="citation">(<a href="#ref-rgeos" role="doc-biblioref">R. Bivand and Rundel 2021</a>)</span>、空间数据导入 <strong>rgdal</strong> <span class="citation">(<a href="#ref-rgdal" role="doc-biblioref">R. Bivand, Keitt, and Rowlingson 2022</a>)</span>和空间数据操作 <strong>maptools</strong> <span class="citation">(<a href="#ref-maptools" role="doc-biblioref">R. Bivand and Lewin-Koh 2022</a>)</span> 将于 <strong>2023</strong> 年底退休。</p>
 <p>据了解，R 语言社区也有不少 R 包可以绘制交互版的地区分布图，比如 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>、<strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>、<strong>plotly</strong> 包<span class="citation">(<a href="#ref-plotly" role="doc-biblioref">Sievert et al. 2021</a>)</span>和 <strong>echarts4r</strong> 包<span class="citation">(<a href="#ref-echarts4r" role="doc-biblioref">Coene 2022</a>)</span>等。配色是正文没有细谈的方面，在全文保持风格一致即可，若和数据背景相关就更好了。</p>
 </div>
 <div id="未来展望" class="section level1">
@@ -1132,7 +1196,7 @@ ggdraw() +
 # Platform: x86_64-apple-darwin17.0 (64-bit)
 # Running under: macOS Big Sur/Monterey 10.16
 # 
-# Locale: zh_CN.UTF-8 / zh_CN.UTF-8 / zh_CN.UTF-8 / C / zh_CN.UTF-8 / zh_CN.UTF-8
+# Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
 # 
 # Package version:
 #   biscale_0.2.0       blogdown_1.9        cowplot_1.1.1      
@@ -1241,6 +1305,9 @@ Tanimura, Susumu, Chusi Kuroiwa, and Tsutomu Mizota. 2006. <span>“Proportional
 </div>
 <div id="ref-Tennekes2018" class="csl-entry">
 Tennekes, Martijn. 2018. <span>“<span class="nocase">tmap</span>: Thematic Maps in <span>R</span>.”</span> <em>Journal of Statistical Software</em> 84 (6): 1–39. <a href="https://doi.org/10.18637/jss.v084.i06">https://doi.org/10.18637/jss.v084.i06</a>.
+</div>
+<div id="ref-Walker2022" class="csl-entry">
+Walker, Kyle. 2022. <em>Analyzing US Census Data: Methods, Maps, and Models in r</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://walker-data.com/census-r/">https://walker-data.com/census-r/</a>.
 </div>
 <div id="ref-tidycensus" class="csl-entry">
 Walker, Kyle, and Matt Herman. 2022. <em><span class="nocase">tidycensus</span>: Load US Census Boundary and Attribute Data as ’Tidyverse’ and ’Sf’-Ready Data Frames</em>. <a href="https://CRAN.R-project.org/package=tidycensus">https://CRAN.R-project.org/package=tidycensus</a>.
