@@ -1118,6 +1118,46 @@ ggdraw() +
 结合图\@ref(fig:us-nc-income)和图\@ref(fig:bivar-us-states)，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图\@ref(fig:us-nc-income)中非常明显。
 
 
+
+```{r us-income-county}
+#| fig.cap="2015-2019 年度美国各个郡家庭月收入",
+#| fig.width=9.6,
+#| fig.height=7.2,
+#| fig.align="center",
+#| fig.showtext=TRUE
+# 读取数据
+us_income_county <- readRDS(file = "data/us_income_county.rds")
+us_income_state <- readRDS(file = "data/us_income_state.rds")
+# 绘图
+ggplot() +
+  geom_sf(
+    data = us_income_county,
+    aes(fill = estimate / 10000), colour = NA
+  ) +
+  geom_sf(
+    data = us_income_state,
+    colour = alpha("gray80", 1 / 4), fill = NA, size = 0.15
+  ) +
+  scale_fill_viridis_c(option = "plasma", na.value = "grey80") +
+  coord_sf(crs = st_crs("ESRI:102003")) +
+  labs(
+    fill = "家庭月收入\n（万元）", 
+    title = "2015-2019 年度美国各个郡家庭月收入",
+    caption = "数据源：美国人口调查局"
+  ) +
+  theme_void(base_size = 13) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.direction = "horizontal",
+    legend.position = "bottom",
+    legend.justification = "right",
+    legend.title = element_text(size = 10),
+    plot.caption = element_text(hjust = 0, vjust = 10)
+  )
+```
+
+
+
 ::: rmdtip
 **sf** 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
 :::

@@ -1121,6 +1121,41 @@ ggdraw() +
 <div id="数据解读" class="section level3">
 <h3>数据解读</h3>
 <p>结合图<a href="#fig:us-nc-income">12</a>和图<a href="#fig:bivar-us-states">13</a>，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图<a href="#fig:us-nc-income">12</a>中非常明显。</p>
+<pre class="r"><code># 读取数据
+us_income_county &lt;- readRDS(file = &quot;data/us_income_county.rds&quot;)
+us_income_state &lt;- readRDS(file = &quot;data/us_income_state.rds&quot;)
+# 绘图
+ggplot() +
+  geom_sf(
+    data = us_income_county,
+    aes(fill = estimate / 10000), colour = NA
+  ) +
+  geom_sf(
+    data = us_income_state,
+    colour = alpha(&quot;gray80&quot;, 1 / 4), fill = NA, size = 0.15
+  ) +
+  scale_fill_viridis_c(option = &quot;plasma&quot;, na.value = &quot;grey80&quot;) +
+  coord_sf(crs = st_crs(&quot;ESRI:102003&quot;)) +
+  labs(
+    fill = &quot;家庭月收入\n（万元）&quot;, 
+    title = &quot;2015-2019 年度美国各个郡家庭月收入&quot;,
+    caption = &quot;数据源：美国人口调查局&quot;
+  ) +
+  theme_void(base_size = 13) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.direction = &quot;horizontal&quot;,
+    legend.position = &quot;bottom&quot;,
+    legend.justification = &quot;right&quot;,
+    legend.title = element_text(size = 10),
+    plot.caption = element_text(hjust = 0, vjust = 10)
+  )</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-income-county"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-income-county-1.png" alt="2015-2019 年度美国各个郡家庭月收入" width="921.6" />
+<p class="caption">
+图 14: 2015-2019 年度美国各个郡家庭月收入
+</p>
+</div>
 <div class="rmdtip">
 <p><strong>sf</strong> 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">12</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
 </div>
@@ -1136,10 +1171,10 @@ ggdraw() +
 <li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
 </ul>
 <p>在掌握基础的一些工具后，需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
-<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">14</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，而添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再折腾了。</p>
+<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">15</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，而添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再折腾了。</p>
 <div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
 <img src="img/choropleth-map.svg" class="full" alt="" />
-<p class="caption">图 14:  7 种绘图方案依赖的 R 包及其层次关系</p>
+<p class="caption">图 15:  7 种绘图方案依赖的 R 包及其层次关系</p>
 </div>
 <p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。庆幸的是各郡癌症死亡率数据的郡名称<code>rownames(USCancerRates)</code> 和地图数据 <code>us_county</code> 里的郡名称 <code>names</code> 是可以映射上的，否则地区分布图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
 <p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到地区分布图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
@@ -1150,33 +1185,33 @@ ggdraw() +
 <h1>未来展望</h1>
 <p>在应用方向上，还有很多有意思的场景，比如：</p>
 <ul>
-<li><strong>疾控预防方面</strong>，以 2022-03-05 至 2022-03-11 美国新冠日均感染率（单位十万分之一）为例，如图<a href="#fig:us-covid-cases">15</a> 所示，图片截自<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">纽约时报网站</a>。</li>
+<li><strong>疾控预防方面</strong>，以 2022-03-05 至 2022-03-11 美国新冠日均感染率（单位十万分之一）为例，如图<a href="#fig:us-covid-cases">16</a> 所示，图片截自<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">纽约时报网站</a>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:us-covid-cases"></span>
 <img src="img/us-covid-cases.png" class="full" alt="" />
-<p class="caption">图 15:  美国各个郡新冠感染率，单位十万分之一</p>
+<p class="caption">图 16:  美国各个郡新冠感染率，单位十万分之一</p>
 </div>
 <ul>
-<li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">16</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
+<li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">17</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:shrinking-china-cities"></span>
 <img src="img/shrinking-china-cities.jpeg" class="full" alt="" />
-<p class="caption">图 16:  关注城市化进程中正在收缩的城市：蓝色表示人口收缩，红色表示人口扩张</p>
+<p class="caption">图 17:  关注城市化进程中正在收缩的城市：蓝色表示人口收缩，红色表示人口扩张</p>
 </div>
 <p>在数据可视化上，还有很多技术方案，比如：</p>
 <ul>
-<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">17</a>，这在一定程度上克服了普通地区分布图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
+<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">18</a>，这在一定程度上克服了普通地区分布图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:uk-hex-cartograms"></span>
 <img src="img/uk-hex-cartograms.png" class="full" alt="" />
-<p class="caption">图 17:  左图：英国各个郡年龄中位数的空间分布；右图：英国各个郡新冠死亡率，单位十万分之一。</p>
+<p class="caption">图 18:  左图：英国各个郡年龄中位数的空间分布；右图：英国各个郡新冠死亡率，单位十万分之一。</p>
 </div>
 <ul>
-<li>Ilya Kashnitsky 和 Jonas Schöley 将人口划分为儿童（0-14岁）、青壮（15-64岁）、老年（大于65岁）三个年龄段，以三元结构图构造图例，编码欧洲各个地区的年龄结构，三个不同的主要色块分别代表三种典型的人口结构，如图<a href="#fig:ternary-map">18</a>，一眼看上去好似一幅水彩画，非常有艺术感<span class="citation">(<a href="#ref-Kashnitsky2018" role="doc-biblioref">Kashnitsky and Schöley 2018</a>)</span>。</li>
+<li>Ilya Kashnitsky 和 Jonas Schöley 将人口划分为儿童（0-14岁）、青壮（15-64岁）、老年（大于65岁）三个年龄段，以三元结构图构造图例，编码欧洲各个地区的年龄结构，三个不同的主要色块分别代表三种典型的人口结构，如图<a href="#fig:ternary-map">19</a>，一眼看上去好似一幅水彩画，非常有艺术感<span class="citation">(<a href="#ref-Kashnitsky2018" role="doc-biblioref">Kashnitsky and Schöley 2018</a>)</span>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:ternary-map"></span>
 <img src="img/ternary-map.png" class="full" alt="" />
-<p class="caption">图 18:  欧洲区域人口年龄结构</p>
+<p class="caption">图 19:  欧洲区域人口年龄结构</p>
 </div>
 </div>
 <div id="环境信息" class="section level1">
@@ -1198,9 +1233,9 @@ ggdraw() +
 # Package version:
 #   biscale_0.2.0       blogdown_1.9        cowplot_1.1.1      
 #   ggplot2_3.3.6.9000  grid_4.2.0          knitr_1.39         
-#   lattice_0.20-45     latticeExtra_0.6-29 mapproj_1.2.8      
+#   lattice_0.20-45     latticeExtra_0.6.29 mapproj_1.2.8      
 #   maps_3.4.0          mapsf_0.4.0         rmarkdown_2.14     
-#   sf_1.0-7            tidycensus_1.2.1    tmap_3.3-3         
+#   sf_1.0-7            tidycensus_1.2.1    tmap_3.3.3         
 #   usmapdata_0.1.0    
 # 
 # Pandoc version: 2.18
