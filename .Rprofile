@@ -13,4 +13,4 @@ local({
   ))
 })
 
-options(blogdown.hugo.version = "0.91.2")
+options(blogdown.hugo.version = "0.98.0")
