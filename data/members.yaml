@@ -1,13 +1,13 @@
 list:
   - name: 于淼
     image: https://yufree.cn/images/MYu.jpg
-    intro: 现任编辑部主编，中科院生态环境研究中心博士，美国西奈山伊坎医学院博后，研究方向为环境化学与暴露组学数据分析，博客 <https://yufree.cn>
+    intro: 现任编辑部主编，中科院生态环境研究中心博士，就职于美国杰克逊实验室，博客 <https://yufree.cn>
   - name: 任焱
     image: https://avatars.githubusercontent.com/u/37477330?s=400&u=7453a8b8b16555af5253232344e43efe40b45037&v=4
     intro: 现任编辑部副主编，中国人民大学统计学院在读硕士，蓄力状态。
   - name: 林枫
     image: https://user-images.githubusercontent.com/18381242/62635778-e28bde80-b96a-11e9-9a98-15780bcd075f.JPG
-    intro: 现任编辑部副主编，中国科学技术大学本硕，美国华盛顿大学2020级博士。研究兴趣是应用驱动的学习与决策问题。一番机缘得入COS，深受触动，在未来也将继续见证着它的热情与力量。
+    intro: 中国科学技术大学本硕，美国华盛顿大学2020级博士。研究兴趣是应用驱动的学习与决策问题。希望能见证COS普及数据科学、服务大众的一往无前的热情与力量。
   - name: 边蓓蕾
     image: https://cloud.githubusercontent.com/assets/18478302/25886695/64963cdc-3591-11e7-9f88-4dea4eb0f65f.jpg
     intro: 出生于天津市，吃着煎饼果子和狗不理包子长大成人，因此智商偏低。长跑耐力中等偏下，K歌水平中等偏上，爱喝清酒梅酒，性格异常温和。热爱统计计算和软件工程，水平差，但擅长死磕到底。和COS之间唯有相见恨晚，这之间要感谢的人太多太多。人生一半的信仰找到了，还得努力找另一半。最近从各个角度感受到了COS精神，异常感动，因此没有不为它努力的道理。
@@ -80,7 +80,7 @@ list:
     intro: 华盛顿大学工业工程系副教授，毕业于中国科学技术大学，并于亚利桑那州立大学取得博士学位。他的研究方向包括统计学习和数据挖掘，及其在医疗保健和制造领域的应用。
   - name: 黄湘云
     image: https://user-images.githubusercontent.com/12031874/143729613-b936042b-9f84-4c51-abd1-fcce32f54c5c.jpg
-    intro: 毕业于中国矿业大学（北京），多年 R 语言爱好者，与赵鹏、谢益辉一起合著了《现代统计图形》，目前在美团从事数据分析工作，博客 <https://xiangyun.rbind.io>。
+    intro: 毕业于中国矿业大学（北京），多年 R 语言爱好者，与赵鹏、谢益辉一起合著了《现代统计图形》，统计之都软件工具栏目编辑，博客 <https://xiangyun.rbind.io>。
   - name: 孔令仁
     image:
     intro: 中国人民大学18级统计本科生，喜爱统计，也爱鼓捣各种工具，希望能给大家带来更多变化与创新。
@@ -241,8 +241,8 @@ list:
     image: https://avatars.githubusercontent.com/u/21698296?v=4
     intro: 博士，副教授，现任职哈尔滨商业大学（数学与应用数学系），博士毕业于哈尔滨工业大学基础数学，喜欢编程，尤其是R语言编程。
   - name: 张沥今
-    image: https://zhanglj37.github.io/images/lijin.JPG
-    intro: 中山大学心理学系研究生，师从潘俊豪副教授，研究方向为贝叶斯结构方程建模。个人博客 https://www.lijinzhang.xyz/blog.html
+    image: https://zhanglj37.github.io/fig/lijin3.jpeg
+    intro: 斯坦福大学博士生，研究方向为心理统计与教育测评，个人主页 https://lijinzhang.com
   - name: 张心雨
     image: https://user-images.githubusercontent.com/26495735/28239054-21169780-6995-11e7-8b72-1f4de46cb721.jpg
     intro: 张心雨，人大统计学院2017届统计学毕业生，清华大学统计学研究中心直博在读。日常在COS编辑部打杂，经常在北京R会组委会酱油。

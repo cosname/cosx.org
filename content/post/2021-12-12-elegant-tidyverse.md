@@ -4,7 +4,7 @@ date: '2021-12-12'
 author:
   - 张敬信
 categories:
-  - 软件工具
+  - 统计软件
 tags:
   - tidyverse
   - R 语言
