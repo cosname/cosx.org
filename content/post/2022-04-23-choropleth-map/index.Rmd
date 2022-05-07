@@ -933,18 +933,22 @@ nc_income_race_tract <- get_acs(
   year = 2019, survey = "acs5",
   moe_level = 90
 )
-# NC 社区普查级地图数据
-nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
-# NC 郡级地图数据
+# 北卡州郡级地图数据
 nc_county_map <- tigris::counties(state = 37, cb = T, year = 2019, class = "sf")
+# 北卡州社区级地图数据
+nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 ```
 
 数据下载后，保存为两个文件：
 
 1. `nc_income_race_county.rds` 北卡州**郡级**家庭月收入和白人数量。
 1. `nc_income_race_tract.rds` 北卡州**社区级**家庭月收入和白人数量。
+1. `nc_county_map.rds` 北卡州**郡级**地图数据。
+1. `nc_tract_map.rds` 北卡州**社区级**地图数据。
 
 下面补充几个细节：
+
+1. 北卡郡、社区级地图数据的年份和 ACS 调查数据的年份要一致。
 
 1. R 软件内置了数据集 `state.name` 和 `state.abb`，分别对应 美国各个州的名称及其简称，**tidycensus** 包内置的数据集 `fips_codes` 还提供各州、郡的 FIPS 代码。
 
@@ -985,12 +989,12 @@ nc_income_race_tract <- within(nc_income_race_tract, {
 })
 ```
 
-::: {.full-width}
+
 
 ```{r us-nc-income}
 #| fig.cap="北卡罗来纳州普查水平下家庭月收入的空间分布",
-#| fig.width=10,
-#| fig.height=5,
+#| fig.width=12,
+#| fig.height=6,
 #| fig.align="center",
 #| fig.showtext=TRUE
 par(mar = c(2, 0, 0, 0))
@@ -1011,7 +1015,7 @@ mtext(
 )
 ```
 
-:::
+
 
 ```{r}
 #| eval=FALSE,

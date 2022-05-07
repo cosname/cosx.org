@@ -1003,17 +1003,20 @@ nc_income_race_tract &lt;- get_acs(
   year = 2019, survey = &quot;acs5&quot;,
   moe_level = 90
 )
-# NC 社区普查级地图数据
-nc_tract_map &lt;- tigris::tracts(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)
-# NC 郡级地图数据
-nc_county_map &lt;- tigris::counties(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)</code></pre>
+# 北卡州郡级地图数据
+nc_county_map &lt;- tigris::counties(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)
+# 北卡州社区级地图数据
+nc_tract_map &lt;- tigris::tracts(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)</code></pre>
 <p>数据下载后，保存为两个文件：</p>
 <ol style="list-style-type: decimal">
 <li><code>nc_income_race_county.rds</code> 北卡州<strong>郡级</strong>家庭月收入和白人数量。</li>
 <li><code>nc_income_race_tract.rds</code> 北卡州<strong>社区级</strong>家庭月收入和白人数量。</li>
+<li><code>nc_county_map.rds</code> 北卡州<strong>郡级</strong>地图数据。</li>
+<li><code>nc_tract_map.rds</code> 北卡州<strong>社区级</strong>地图数据。</li>
 </ol>
 <p>下面补充几个细节：</p>
 <ol style="list-style-type: decimal">
+<li><p>北卡郡、社区级地图数据的年份和 ACS 调查数据的年份要一致。</p></li>
 <li><p>R 软件内置了数据集 <code>state.name</code> 和 <code>state.abb</code>，分别对应 美国各个州的名称及其简称，<strong>tidycensus</strong> 包内置的数据集 <code>fips_codes</code> 还提供各州、郡的 FIPS 代码。</p></li>
 <li><p>读者若对其它数据指标感兴趣，可通过如下命令查看：</p>
 <pre class="r"><code>acs_vars &lt;- load_variables(year = 2019, dataset = &quot;acs5&quot;)
@@ -1037,7 +1040,6 @@ nc_income_race_tract &lt;- within(nc_income_race_tract, {
   pctWhite &lt;- B02001_002E / B02001_001E
   medInc &lt;- B19013_001E
 })</code></pre>
-<div class="full-width">
 <pre class="r"><code>par(mar = c(2, 0, 0, 0))
 # 家庭月收入的空间分布
 plot(nc_income_race_tract[&quot;medInc&quot;],
@@ -1055,11 +1057,10 @@ mtext(
   side = 1, adj = 0.05
 )</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-income"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-1.png" alt="北卡罗来纳州普查水平下家庭月收入的空间分布" width="960" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-1.png" alt="北卡罗来纳州普查水平下家庭月收入的空间分布" width="1152" />
 <p class="caption">
 图 12: 北卡罗来纳州普查水平下家庭月收入的空间分布
 </p>
-</div>
 </div>
 <p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，将各个数据指标从社区上卷到各个郡。</p>
 <pre class="r"><code>library(sf) 
