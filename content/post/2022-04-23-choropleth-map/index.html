@@ -421,7 +421,7 @@ aarate_{x-y} = \sum_{i=x}^{y}\Big[ \big( \frac{count_i}{pop_i} \big)  \times \bi
 <p><span class="math display">\[
 aarate_{0-0} = \frac{29}{139879}*\frac{3794901}{274633642}*100000 = 0.2864
 \]</span></p>
-<p>读者可能有疑惑，一系列复杂的调整是为什么？指标稳定性和可比性。稳定不是代表不变，稳定是不受轻易干扰。从各社区、各郡、各州乃至国家，从下往上聚合数据的时候，分年龄、种族、性别等下钻/上卷的时候，有的郡总人口可能相对很少，死亡人数也很少。可比性是指组与组间可比，且随时间变化依然可比，刻画因癌症死亡的相对风险。</p>
+<p>读者可能有疑惑，一系列复杂的调整是为什么？指标稳定性和可比性。稳定不是代表不变，稳定是不轻易受干扰。从各社区、各郡、各州乃至国家，从下往上聚合数据的时候，分年龄、种族、性别等下钻/上卷的时候，有的郡总人口可能相对很少，死亡人数也很少。可比性是指组与组间可比，且随时间变化依然可比，刻画因癌症死亡的相对风险。</p>
 <pre class="r"><code># 加载死亡率数据
 data(USCancerRates, package = &quot;latticeExtra&quot;)
 # 查看 Alabama 的 Pickens County 的数据
@@ -1038,7 +1038,7 @@ ggdraw() +
 <li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
 </ul>
 <p>在掌握基础的一些工具后，需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
-<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">14</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。</p>
+<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">14</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级函数不能一步到位的出图就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再深究了。</p>
 <div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
 <img src="img/choropleth-map.svg" class="full" alt="" />
 <p class="caption">图 14:  7 种绘图方案依赖的 R 包及其层次关系</p>
