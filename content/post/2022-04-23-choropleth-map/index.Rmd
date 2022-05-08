@@ -587,9 +587,8 @@ us_cancer_rates <- reshape(
 )
 ```
 
-::::::::: {.full-width}
 :::::: {.columns}
-::: {.column width="57.5%" data-latex="{0.475\textwidth}"}
+::: {.column width="47.5%" data-latex="{0.475\textwidth}"}
 ```{r}
 #| echo=TRUE
 # 数据重塑前
@@ -601,15 +600,14 @@ head(USCancerRates) # 宽格式
 <!-- an empty Div (with a white space), serving as
 a column separator -->
 :::
-::: {.column width="37.5%" data-latex="{0.475\textwidth}"}
+::: {.column width="47.5%" data-latex="{0.475\textwidth}"}
 ```{r}
 #| echo=TRUE
 # 数据重塑后
-head(us_cancer_rates) # 长格式
+head(us_cancer_rates, 12) # 长格式
 ```
 :::
 ::::::
-:::::::::
 
 ```{r}
 #| echo=TRUE
@@ -931,10 +929,10 @@ mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright",
 
 ### 数据获取
 
-受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从[美国人口调查局](https://www.census.gov/)直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，简称 ACS，约**300**万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国通货膨胀情况调整，这种调整使得各个年份的数据是有可比性的，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入。）和白人居民的百分比。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 [**tidycensus**](https://github.com/walkerke/tidycensus) 包[@tidycensus]，原始数据可借助 **tidycensus** 包从美国官方网站下载。
+受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从[美国人口调查局](https://www.census.gov/)直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，简称 ACS，约**300**万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国消费价格指数 CPI 调整，这样，各个年份的数据是有可比性的。此外，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入）和白人居民的百分比。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 [**tidycensus**](https://github.com/walkerke/tidycensus) 包[@tidycensus]，原始数据可借助 **tidycensus** 包从美国官方网站下载。
 
 
-下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 `CENSUS_API_KEY`，可在 `.Renviron` 文件中存储环境变量 `CENSUS_API_KEY`，以便后续调用。在网络一切都好的情况下，下载数据指标和北卡郡级地图数据非常简单，如下：
+下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 `CENSUS_API_KEY`，可在 `.Renviron` 文件中存储环境变量 `CENSUS_API_KEY`，以便后续调用。在网络一切都好的情况下，下载所需数据指标和北卡郡级、社区级地图数据非常简单，如下：
 
 ```{r}
 #| eval=FALSE
@@ -1002,247 +1000,7 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 
 ### 数据展示
 
-
-先看下2015-2019年度美国北卡罗来纳州普查级**家庭月收入**的空间分布，笔者已经以直方图探查过收入的分布情况，因此在图\@ref(fig:us-nc-income)设置了自定义的收入分段，以体现各个收入阶层：10 万以下**低收入**，10-15 万**中等收入**，15-20万**中高收入**，20-25万**高收入**。除去通货膨胀因素，严格来讲，还应该结合美国官方定义的高、中、低收入的标准，考虑地域差异，即发展程度不同的城市设置不同的高、中、低收入的标准，从而构造出更加合理的、可对比的收入阶层划分。图中空白处表示未收集到相关数据，熟悉北卡州的读者想必能对此图有更加细致的解释。
-
-
-```{r}
-# 读取数据
-nc_income_race_county <- readRDS(file = "data/nc_income_race_county.rds")
-nc_income_race_tract <- readRDS(file = "data/nc_income_race_tract.rds")
-# 计算家庭月收入和白人占比数据
-nc_income_race_tract <- within(nc_income_race_tract, {
-  pop <- B02001_001E
-  pctWhite <- B02001_002E / B02001_001E
-  medInc <- B19013_001E
-})
-```
-
-结合图\@ref(fig:us-nc-income)，从空间上看，高收入和低收入群体有明显的圈层，在图中高亮的地区（也可以叫城镇），低收入社区穿插在高收入社区中，且有清晰的穿插线。
-
-```{r us-nc-income2}
-#| eval=FALSE,
-#| fig.cap="北卡州社区级家庭月收入的空间分布",
-#| fig.width=12,
-#| fig.height=6,
-#| fig.align="center",
-#| fig.showtext=TRUE,
-#| echo=FALSE
-par(mar = c(2, 0, 0, 0))
-# 家庭月收入的空间分布
-plot(nc_income_race_tract["medInc"],
-  key.pos = 1,
-  pal = viridisLite::plasma, reset = FALSE,
-  breaks = c(0:10, 15, 20, 25) * 10000,
-  border = "gray80", main = "", lwd = 0.1
-)
-# 添加郡边界
-plot(st_geometry(nc_income_race_county),
-  border = "gray", lwd = 0.25, add = TRUE
-)
-mtext(
-  text = "数据源：美国人口调查局",
-  side = 1, adj = 0.05
-)
-```
-
-::: {.full-width}
-![(\#fig:us-nc-income) 北卡州社区级家庭月收入的空间分布](img/us-nc-income.png){.full}
-:::
-
-如图 \@ref(fig:us-nc-income-hist) 所示，2015-2019 年度 ACS 调查，北卡州一共划分 **2195** 个社区，除了 **36** 个没有收集到收入数据的社区外，北卡州超过一半的社区家庭月收入超过 **50000** 美元，中位数是 **51439** 美元，图中三条红线分别是 25%，50% 和 75% 分位点。
-
-```{r us-nc-income-hist}
-#| fig.cap="北卡州社区级家庭月收入的分布",
-#| fig.width=10,
-#| fig.height=6,
-#| fig.align="center",
-#| fig.showtext=TRUE,
-#| echo=FALSE
-ggplot(data = nc_income_race_tract) +
-  geom_histogram(aes(x = medInc), fill = "orange", colour = "white", na.rm = TRUE) +
-  geom_vline(xintercept = c(40774, 51439, 67215), lty = 2, lwd = 1, colour = "orangered") +
-  theme_minimal(base_size = 13) +
-  labs(x = "家庭月收入", y = "社区数量")
-```
-
-
-```{r us-nc-pop}
-#| fig.cap="北卡州社区级人口的空间分布",
-#| fig.width=12,
-#| fig.height=6,
-#| fig.align="center",
-#| fig.showtext=TRUE,
-#| echo=FALSE
-par(mar = c(2, 0, 0, 0))
-# 各社区人口的空间分布
-plot(nc_income_race_tract["pop"],
-  key.pos = 1,
-  pal = viridisLite::plasma, reset = FALSE,
-  breaks = c(0:15, 20) * 1000,
-  border = "gray80", main = "", lwd = 0.1
-)
-# 添加郡边界
-plot(st_geometry(nc_income_race_county),
-  border = "gray", lwd = 0.25, add = TRUE
-)
-mtext(
-  text = "数据源：美国人口调查局",
-  side = 1, adj = 0.05
-)
-```
-
-如图\@ref(fig:us-nc-pop-hist)所示，北卡州超过一半的社区人口数不足 5000，中位数是 4389，图中三条红线分别是 25\%，50\% 和 75\% 分位点。
-
-```{r us-nc-pop-hist}
-#| fig.cap="北卡州社区级人口的分布",
-#| fig.width=10,
-#| fig.height=6,
-#| fig.align="center",
-#| fig.showtext=TRUE,
-#| echo=FALSE
-ggplot(data = nc_income_race_tract) +
-  geom_histogram(aes(x = pop), fill = "orange", colour = "white") +
-  geom_vline(xintercept = c(3234, 4389, 5812), lty = 2, lwd = 1, colour = "orangered") +
-  theme_minimal(base_size = 13) +
-  labs(x = "人口数量", y = "社区数量")
-```
-
-如图\@ref(fig:us-nc-race2)所示，白人集中分布在东岸城市（北卡州的东部边缘，大西洋西岸）和北卡州的西部。
-
-```{r us-nc-race2}
-#| fig.cap="北卡州社区级白人占比的空间分布",
-#| fig.width=12,
-#| fig.height=6,
-#| fig.align="center",
-#| fig.showtext=TRUE,
-#| echo=FALSE
-par(mar = c(2, 0, 0, 0))
-# 白人占比的空间分布
-plot(nc_income_race_tract["pctWhite"],
-  key.pos = 1,
-  pal = viridisLite::plasma, reset = FALSE,
-  breaks = 0:10/10,
-  border = "gray80", main = "", lwd = 0.1
-)
-# 添加郡边界
-plot(st_geometry(nc_income_race_county),
-  border = "gray", lwd = 0.25, add = TRUE
-)
-mtext(
-  text = "数据源：美国人口调查局",
-  side = 1, adj = 0.05
-)
-```
-
-
-```{r}
-#| eval=FALSE,
-#| echo=FALSE
-# 将坐标参考系转化为 4326，准备以 leaflet 绘制地图
-nc_income_race_tract <- st_transform(nc_income_race_tract, crs = 4326)
-# 获取 NC 的几何中心，用于设置观察中心 setView
-st_bbox(nc_income_race_tract)
-# 加载 R 包
-library(leaflet)
-# 人口密度分段
-bins <- c(0:10, 15, 20, 25) * 10000
-# 构造调色板
-pal <- colorBin("plasma", domain = nc_income_race_tract$medInc, bins = bins)
-# 绘图渲染需要一点时间
-leaflet(nc_income_race_tract) |>
-  setView(lng = -79.86, lat = 35.17, zoom = 8) |>
-  # 添加默认的 OpenStreetMap 瓦片服务
-  addTiles() |>
-  addPolygons(
-    color = "white", # 边界线颜色
-    opacity = 0.6,     # 颜色透明度
-    weight = 0.2,      # 边界线宽度
-    fillOpacity = 0.6,   # 填充色透明度
-    fillColor = ~ pal(medInc)  # 填充色
-  ) |>
-  addLegend(
-    pal = pal,
-    values = ~medInc,
-    opacity = 0.7,
-    title = "家庭收入",
-    position = "bottomright"
-  )
-# 可以继续补充悬浮提示 label 和 popup
-# 还可以抽取各个地理单元的几何中心，以比例气泡图展示收入数据
-st_centroid(st_geometry(nc_income_race_tract))
-```
-
-
-地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 **ggplot2** 有些吃不消，接下来以 **ggplot2** 配合 **sf** 包，将各个数据指标从社区上卷到各个郡。
-
-
-```{r bivar-us-states}
-#| fig.cap="2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性",
-#| fig.width=9,
-#| fig.height=3.75,
-#| fig.align="center",
-#| fig.showtext=TRUE,
-#| echo=FALSE
-library(sf) 
-# 统计白人占比和家庭月收入指标
-nc_income_race_county <- within(nc_income_race_county, {
-  pctWhite <- B02001_002E / B02001_001E
-  medInc <- B19013_001E
-})
-# 加载一些必要的绘图包
-library(ggplot2)
-library(biscale)
-library(cowplot)
-# 将数据根据分位点分箱
-nc_bi_data <- bi_class(nc_income_race_county,
-  x = pctWhite, y = medInc,
-  style = "quantile", dim = 3
-)
-# 创建主体地图
-nc_bi_map <- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
-  geom_sf(
-    color = "white", size = 0.1, show.legend = FALSE
-  ) +
-  bi_scale_fill(pal = "DkViolet", dim = 3) +
-  labs(
-    title = "2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性",
-    caption = "数据源：美国人口调查局"
-  ) +
-  theme_void() +
-  theme(plot.title = element_text(hjust = 0.5))
-# 创建图例数据
-nc_bi_leg_data <- data.frame(expand.grid(x = 3:1, y = 3:1),
-  bi_fill = biscale:::pal_dkviolet(n = 3)
-)
-# 创建图例瓦片
-nc_bi_leg <- ggplot(
-  data = nc_bi_leg_data,
-  aes(x = x, y = y, fill = bi_fill)
-) +
-  geom_tile() +
-  scale_fill_identity() +
-  labs(
-    x = substitute(paste("白人占比", "" %->% "")),
-    y = substitute(paste("收入水平", "" %->% ""))
-  ) +
-  coord_fixed() +
-  theme_void() +
-  theme(
-    axis.title = element_text(size = 7),
-    axis.title.y = element_text(angle = 90)
-  )
-# 组合地图和图例
-ggdraw() +
-  draw_plot(nc_bi_map, x = 0, y = 0, width = 1, height = 1) +
-  draw_plot(nc_bi_leg, x = 0.1, y = .1, width = 0.2, height = 0.2)
-```
-
-### 数据解读
-
-结合图\@ref(fig:us-nc-income)和图\@ref(fig:bivar-us-states)，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高
-
-图\@ref(fig:us-income-state) 和图\@ref(fig:us-income-county) 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了极个别的西岸城市（加州），东岸城市（波士顿），收入的空间分布较为平衡。北卡州的收入水平属于中等偏下，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷。
+在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图\@ref(fig:us-income-state) 和图\@ref(fig:us-income-county) 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约到华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷，北卡罗来纳大学有**16**个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。
 
 ```{r us-income-county}
 #| fig.cap="2015-2019 年度美国各个郡家庭月收入",
@@ -1312,6 +1070,274 @@ ggplot() +
     plot.caption = element_text(hjust = 0, vjust = 10)
   )
 ```
+
+
+接下来，看下2015-2019年度美国北卡罗来纳州社区级**家庭月收入**的空间分布，如图\@ref(fig:us-nc-income)所示，图中空白处表示该区域的样本量太少或调查区域时间不连续，导致统计模型的估计不可用。结合图\@ref(fig:us-nc-income)，从空间上看，高收入和低收入群体有明显的圈层，在图中高亮的地区（也可以叫城镇），低收入社区穿插在高收入社区中，且有清晰的穿插线。
+
+
+```{r}
+# 读取数据
+nc_income_race_county <- readRDS(file = "data/nc_income_race_county.rds")
+nc_income_race_tract <- readRDS(file = "data/nc_income_race_tract.rds")
+# 计算家庭月收入和白人占比数据
+nc_income_race_tract <- within(nc_income_race_tract, {
+  pop <- B02001_001E
+  pctWhite <- B02001_002E / B02001_001E
+  medInc <- B19013_001E
+})
+```
+
+```{r us-nc-income2}
+#| eval=FALSE,
+#| fig.cap="北卡州社区级家庭月收入的空间分布",
+#| fig.width=12,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+par(mar = c(2, 0, 0, 0))
+# 家庭月收入的空间分布
+plot(nc_income_race_tract["medInc"],
+  key.pos = 1,
+  pal = viridisLite::plasma, reset = FALSE,
+  breaks = c(0:10, 15, 20, 25) * 10000,
+  border = "gray80", main = "", lwd = 0.1
+)
+# 添加郡边界
+plot(st_geometry(nc_income_race_county),
+  border = "gray", lwd = 0.25, add = TRUE
+)
+mtext(
+  text = "数据源：美国人口调查局",
+  side = 1, adj = 0.05
+)
+```
+
+::: {.full-width}
+![(\#fig:us-nc-income) 北卡州社区级家庭月收入的空间分布](img/us-nc-income.png){.full}
+:::
+
+如图 \@ref(fig:us-nc-income-hist) 所示，2015-2019 年度 ACS 调查，北卡州一共划分 **2195** 个社区，除了 **36** 个没有收集到收入数据的社区外，北卡州超过一半的社区家庭月收入超过 **50000** 美元，中位数是 **51439** 美元，图中三条红线分别是 25\%，50\% 和 75\% 分位点。
+
+```{r us-nc-income-hist}
+#| fig.cap="北卡州社区级家庭月收入的分布",
+#| fig.width=10,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+ggplot(data = nc_income_race_tract) +
+  geom_histogram(aes(x = medInc), fill = "orange", colour = "white", na.rm = TRUE) +
+  geom_vline(xintercept = c(40774, 51439, 67215), lty = 2, lwd = 1, colour = "orangered") +
+  theme_minimal(base_size = 13) +
+  labs(x = "家庭月收入", y = "社区数量")
+```
+
+
+```{r us-nc-pop}
+#| fig.cap="北卡州社区级人口的空间分布",
+#| fig.width=12,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+par(mar = c(2, 0, 0, 0))
+# 各社区人口的空间分布
+plot(nc_income_race_tract["pop"],
+  key.pos = 1,
+  pal = viridisLite::plasma, reset = FALSE,
+  breaks = c(0:15, 20) * 1000,
+  border = "gray80", main = "", lwd = 0.1
+)
+# 添加郡边界
+plot(st_geometry(nc_income_race_county),
+  border = "gray", lwd = 0.25, add = TRUE
+)
+mtext(
+  text = "数据源：美国人口调查局",
+  side = 1, adj = 0.05
+)
+```
+
+如图\@ref(fig:us-nc-pop-hist)所示，北卡州超过一半的社区人口数不足 5000，中位数是 4389，图中三条红线分别是 25\%，50\% 和 75\% 分位点。
+
+```{r us-nc-pop-hist}
+#| fig.cap="北卡州社区级人口的分布",
+#| fig.width=10,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+ggplot(data = nc_income_race_tract) +
+  geom_histogram(aes(x = pop), fill = "orange", colour = "white") +
+  geom_vline(xintercept = c(3234, 4389, 5812), lty = 2, lwd = 1, colour = "orangered") +
+  theme_minimal(base_size = 13) +
+  labs(x = "人口数量", y = "社区数量")
+```
+
+如图\@ref(fig:us-nc-race2)所示，白人集中分布在东岸城市（北卡州的东部边缘，也是大西洋西岸）和北卡州的西部，整体上，白人占全州比例非常高，再结合图\@ref(fig:us-nc-pop)，粗估也在 70\%-80\% 之间。
+
+```{r us-nc-race2}
+#| fig.cap="北卡州社区级白人占比的空间分布",
+#| fig.width=12,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+par(mar = c(2, 0, 0, 0))
+# 白人占比的空间分布
+plot(nc_income_race_tract["pctWhite"],
+  key.pos = 1,
+  pal = viridisLite::plasma, reset = FALSE,
+  breaks = 0:10/10,
+  border = "gray80", main = "", lwd = 0.1
+)
+# 添加郡边界
+plot(st_geometry(nc_income_race_county),
+  border = "gray", lwd = 0.25, add = TRUE
+)
+mtext(
+  text = "数据源：美国人口调查局",
+  side = 1, adj = 0.05
+)
+```
+
+
+```{r}
+#| eval=FALSE,
+#| echo=FALSE
+# 将坐标参考系转化为 4326，准备以 leaflet 绘制地图
+nc_income_race_tract <- st_transform(nc_income_race_tract, crs = 4326)
+# 获取 NC 的几何中心，用于设置观察中心 setView
+st_bbox(nc_income_race_tract)
+# 加载 R 包
+library(leaflet)
+# 人口密度分段
+bins <- c(0:10, 15, 20, 25) * 10000
+# 构造调色板
+pal <- colorBin("plasma", domain = nc_income_race_tract$medInc, bins = bins)
+# 绘图渲染需要一点时间
+leaflet(nc_income_race_tract) |>
+  setView(lng = -79.86, lat = 35.17, zoom = 8) |>
+  # 添加默认的 OpenStreetMap 瓦片服务
+  addTiles() |>
+  addPolygons(
+    color = "white", # 边界线颜色
+    opacity = 0.6,     # 颜色透明度
+    weight = 0.2,      # 边界线宽度
+    fillOpacity = 0.6,   # 填充色透明度
+    fillColor = ~ pal(medInc)  # 填充色
+  ) |>
+  addLegend(
+    pal = pal,
+    values = ~medInc,
+    opacity = 0.7,
+    title = "家庭收入",
+    position = "bottomright"
+  )
+# 可以继续补充悬浮提示 label 和 popup
+# 还可以抽取各个地理单元的几何中心，以比例气泡图展示收入数据
+st_centroid(st_geometry(nc_income_race_tract))
+```
+
+如图\@ref(fig:bivar-us-states)所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图\@ref(fig:us-nc-income)和图\@ref(fig:us-nc-race2)的数据信息。
+
+```{r bivar-us-states}
+#| fig.cap="2015-2019 年度北卡州社区级家庭月收入和白人占比的空间相关性",
+#| fig.width=9,
+#| fig.height=3.75,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| warning=FALSE,
+#| echo=FALSE
+library(sf) 
+# 统计白人占比和家庭月收入指标
+nc_income_race_county <- within(nc_income_race_county, {
+  pctWhite <- B02001_002E / B02001_001E
+  medInc <- B19013_001E
+})
+# 加载一些必要的绘图包
+library(ggplot2)
+library(biscale)
+library(cowplot)
+# 将数据根据分位点分箱
+nc_bi_data <- bi_class(nc_income_race_tract,
+  x = pctWhite, y = medInc,
+  style = "quantile", dim = 3
+)
+# 创建主体地图
+nc_bi_map <- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
+  geom_sf(
+    color = "gray80", size = 0.05, show.legend = FALSE
+  ) +
+  bi_scale_fill(pal = "DkViolet", dim = 3) +
+  labs(
+    title = "2015-2019 年度北卡罗来纳州各社区家庭月收入和白人占比的空间相关性",
+    caption = "数据源：美国人口调查局"
+  ) +
+  theme_void() +
+  theme(plot.title = element_text(hjust = 0.5))
+# 创建图例数据
+nc_bi_leg_data <- data.frame(expand.grid(x = 3:1, y = 3:1),
+  bi_fill = biscale:::pal_dkviolet(n = 3)
+)
+# 创建图例瓦片
+nc_bi_leg <- ggplot(
+  data = nc_bi_leg_data,
+  aes(x = x, y = y, fill = bi_fill)
+) +
+  geom_tile() +
+  scale_fill_identity() +
+  labs(
+    x = substitute(paste("白人占比", "" %->% "")),
+    y = substitute(paste("收入水平", "" %->% ""))
+  ) +
+  coord_fixed() +
+  theme_void() +
+  theme(
+    axis.title = element_text(size = 7),
+    axis.title.y = element_text(angle = 90)
+  )
+# 组合地图和图例
+ggdraw() +
+  draw_plot(nc_bi_map, x = 0, y = 0, width = 1, height = 1) +
+  draw_plot(nc_bi_leg, x = 0.1, y = .1, width = 0.2, height = 0.2)
+```
+
+
+### 数据解读
+
+继续社区级普查数据，先通过简单的线性模型粗估一下，家庭月收入和白人占比之间的关系：
+
+$$
+\mathrm{medInc} = \alpha + \mathrm{pctWhite} \cdot \beta
+$$
+
+
+```{r}
+fit = lm(data = nc_income_race_tract, medInc ~ pctWhite)
+summary(fit)
+```
+
+根据调整的 $R^2$， 初步看起来，各社区家庭月收入和白人占比相关性比较低，才 **0.147**！结合图\@ref(fig:lm-income-race)也不难看出**稳定正向**的关系，要是相关性到达统计课本里常见的 50\%，甚至更高，那社会问题就大发了。
+
+```{r lm-income-race}
+#| fig.width=8,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| fig.cap="家庭月收入和白人占比线性相关性"
+# 36 个不完整的观测数据已经从图中移除了
+ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
+  geom_point(na.rm = TRUE) +
+  geom_smooth(na.rm = TRUE, formula = y ~ x, se = TRUE) +
+  scale_x_continuous(labels = scales::label_percent()) +
+  theme_minimal() +
+  labs(x = "白人占比", y = "家庭月收入（万）")
+```
+
+最后，咱们回归到本节主旨，家庭月收入和白人占比的**空间相关性**有没有呢？又有多少呢？
+
 
 
 
