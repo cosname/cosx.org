@@ -100,7 +100,6 @@ div.rmdinfo::before {
   text-align: center;
 }
 
-
 figure {
   text-align: center;
 }
@@ -110,6 +109,10 @@ div.img {
   display: block; 
   margin-left: auto; 
   margin-right: auto;
+}
+
+.columns {
+  display: flex;
 }
 ```
 
@@ -582,6 +585,34 @@ us_cancer_rates <- reshape(
   new.row.names = 1:(2 * 3041),
   direction = "long"
 )
+```
+
+::::::::: {.full-width}
+:::::: {.columns}
+::: {.column width="57.5%" data-latex="{0.475\textwidth}"}
+```{r}
+#| echo=TRUE
+# 数据重塑前
+head(USCancerRates) # 宽格式
+```
+:::
+::: {.column width="5%" data-latex="{0.05\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+::: {.column width="37.5%" data-latex="{0.475\textwidth}"}
+```{r}
+#| echo=TRUE
+# 数据重塑后
+head(us_cancer_rates) # 长格式
+```
+:::
+::::::
+:::::::::
+
+```{r}
+#| echo=TRUE
 # 从 usmapdata 包获取地图数据
 county_df <- usmapdata::us_map("counties")
 # 给每个郡的癌症死亡率数据配上地图数据
@@ -604,8 +635,8 @@ dat <- dat[order(dat$order), ]
 数据准备工作完成后，除了在细节上不断试错外[^figure-details]，绘图过程主要有七个步骤：
 
 1. 底图：绘制美国郡地图，填充灰色背景，以此为底图。
-1. 映射：添加每个郡的癌症死亡率数据，填充颜色根据死亡率而定，以浅白色绘制郡的边界线，且将线调细一些，与后面州的边界线形成层次。
-1. 边界：添加美国各个州的边界线，帮助熟悉美国地图的从州到郡快速定位。
+1. 映射：添加每个郡的癌症死亡率数据，填充颜色根据死亡率而定。同时以浅白色绘制郡的边界线，将线调细一些，与后面州的边界线形成层次。
+1. 边界：添加美国各个州的边界线，帮助熟悉美国地图的读者从州到郡快速定位。
 1. 配色：类似前文设置，采用 `plasma` 调色板，未采集到死亡率数据的郡填充灰色，和地图背景融为一体。
 1. 布局：以函数 `facet_wrap()` 实现分面，分面标题放在图形上方，布局为两行一列。
 1. 标题：添加整个图形的主标题、副标题和图例标题。
@@ -945,9 +976,9 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 
 下面补充几个细节：
 
-1. 北卡郡、社区级地图数据的年份和 ACS 调查数据的年份要一致。
+1. 不同年份 ACS 调查的郡、社区有变化，美国也会定期更新地图数据，因此，北卡郡级、社区级地图数据的年份和 ACS 调查数据的发布年份要一致，。
 
-1. R 软件内置了数据集 `state.name` 和 `state.abb`，分别对应 美国各个州的名称及其简称，**tidycensus** 包内置的数据集 `fips_codes` 还提供各州、郡的 FIPS 代码。
+1. R 软件内置了数据集 `state.name` 和 `state.abb`，分别对应美国各个州的名称及其简称，**tidycensus** 包内置的数据集 `fips_codes` 还提供各州、郡的 FIPS 代码，用于下载所需州郡的数据。
 
 1. 读者若对其它数据指标感兴趣，可通过如下命令查看：
 
@@ -964,6 +995,11 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 1. 若网络不好，查看函数 `get_acs()` 源码获取数据下载地址，打开浏览器从网页获取，嫌麻烦的话，直接用本文随附的数据吧。
 
 
+::: rmdtip
+在数据库中以合理的形式存储数以万计的指标，或者说一个不断变化的指标体系，需要考虑易用性和可扩展性。一般是以「长格式」存储的，表头包含：国家、地区（州、郡、社区等）、日期（年、月、日等）、指标ID、数值、指标描述等。这样，新增指标可以直接在表后面追加，不会因新增指标而新增列，影响稳定性，必要时以国家、地区等作为分区键还可以加快查询速度。
+:::
+
+
 ### 数据展示
 
 
@@ -976,18 +1012,22 @@ nc_income_race_county <- readRDS(file = "data/nc_income_race_county.rds")
 nc_income_race_tract <- readRDS(file = "data/nc_income_race_tract.rds")
 # 计算家庭月收入和白人占比数据
 nc_income_race_tract <- within(nc_income_race_tract, {
+  pop <- B02001_001E
   pctWhite <- B02001_002E / B02001_001E
   medInc <- B19013_001E
 })
 ```
 
+结合图\@ref(fig:us-nc-income)，从空间上看，高收入和低收入群体有明显的圈层，在图中高亮的地区（也可以叫城镇），低收入社区穿插在高收入社区中，且有清晰的穿插线。
+
 ```{r us-nc-income2}
 #| eval=FALSE,
-#| fig.cap="北卡罗来纳州普查水平下家庭月收入的空间分布",
+#| fig.cap="北卡州社区级家庭月收入的空间分布",
 #| fig.width=12,
 #| fig.height=6,
 #| fig.align="center",
-#| fig.showtext=TRUE
+#| fig.showtext=TRUE,
+#| echo=FALSE
 par(mar = c(2, 0, 0, 0))
 # 家庭月收入的空间分布
 plot(nc_income_race_tract["medInc"],
@@ -1007,8 +1047,93 @@ mtext(
 ```
 
 ::: {.full-width}
-![(\#fig:us-nc-income) 北卡罗来纳州普查水平下家庭月收入的空间分布](img/us-nc-income.png){.full}
+![(\#fig:us-nc-income) 北卡州社区级家庭月收入的空间分布](img/us-nc-income.png){.full}
 :::
+
+如图 \@ref(fig:us-nc-income-hist) 所示，2015-2019 年度 ACS 调查，北卡州一共划分 **2195** 个社区，除了 **36** 个没有收集到收入数据的社区外，北卡州超过一半的社区家庭月收入超过 **50000** 美元，中位数是 **51439** 美元，图中三条红线分别是 25%，50% 和 75% 分位点。
+
+```{r us-nc-income-hist}
+#| fig.cap="北卡州社区级家庭月收入的分布",
+#| fig.width=10,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+ggplot(data = nc_income_race_tract) +
+  geom_histogram(aes(x = medInc), fill = "orange", colour = "white", na.rm = TRUE) +
+  geom_vline(xintercept = c(40774, 51439, 67215), lty = 2, lwd = 1, colour = "orangered") +
+  theme_minimal(base_size = 13) +
+  labs(x = "家庭月收入", y = "社区数量")
+```
+
+
+```{r us-nc-pop}
+#| fig.cap="北卡州社区级人口的空间分布",
+#| fig.width=12,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+par(mar = c(2, 0, 0, 0))
+# 各社区人口的空间分布
+plot(nc_income_race_tract["pop"],
+  key.pos = 1,
+  pal = viridisLite::plasma, reset = FALSE,
+  breaks = c(0:15, 20) * 1000,
+  border = "gray80", main = "", lwd = 0.1
+)
+# 添加郡边界
+plot(st_geometry(nc_income_race_county),
+  border = "gray", lwd = 0.25, add = TRUE
+)
+mtext(
+  text = "数据源：美国人口调查局",
+  side = 1, adj = 0.05
+)
+```
+
+如图\@ref(fig:us-nc-pop-hist)所示，北卡州超过一半的社区人口数不足 5000，中位数是 4389，图中三条红线分别是 25\%，50\% 和 75\% 分位点。
+
+```{r us-nc-pop-hist}
+#| fig.cap="北卡州社区级人口的分布",
+#| fig.width=10,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+ggplot(data = nc_income_race_tract) +
+  geom_histogram(aes(x = pop), fill = "orange", colour = "white") +
+  geom_vline(xintercept = c(3234, 4389, 5812), lty = 2, lwd = 1, colour = "orangered") +
+  theme_minimal(base_size = 13) +
+  labs(x = "人口数量", y = "社区数量")
+```
+
+如图\@ref(fig:us-nc-race2)所示，白人集中分布在东岸城市（北卡州的东部边缘，大西洋西岸）和北卡州的西部。
+
+```{r us-nc-race2}
+#| fig.cap="北卡州社区级白人占比的空间分布",
+#| fig.width=12,
+#| fig.height=6,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+par(mar = c(2, 0, 0, 0))
+# 白人占比的空间分布
+plot(nc_income_race_tract["pctWhite"],
+  key.pos = 1,
+  pal = viridisLite::plasma, reset = FALSE,
+  breaks = 0:10/10,
+  border = "gray80", main = "", lwd = 0.1
+)
+# 添加郡边界
+plot(st_geometry(nc_income_race_county),
+  border = "gray", lwd = 0.25, add = TRUE
+)
+mtext(
+  text = "数据源：美国人口调查局",
+  side = 1, adj = 0.05
+)
+```
 
 
 ```{r}
@@ -1058,7 +1183,7 @@ st_centroid(st_geometry(nc_income_race_tract))
 #| fig.height=3.75,
 #| fig.align="center",
 #| fig.showtext=TRUE,
-#| message=FALSE
+#| echo=FALSE
 library(sf) 
 # 统计白人占比和家庭月收入指标
 nc_income_race_county <- within(nc_income_race_county, {
@@ -1115,16 +1240,17 @@ ggdraw() +
 
 ### 数据解读
 
-结合图\@ref(fig:us-nc-income)和图\@ref(fig:bivar-us-states)，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图\@ref(fig:us-nc-income)中非常明显。
+结合图\@ref(fig:us-nc-income)和图\@ref(fig:bivar-us-states)，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高
 
-
+图\@ref(fig:us-income-state) 和图\@ref(fig:us-income-county) 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了极个别的西岸城市（加州），东岸城市（波士顿），收入的空间分布较为平衡。北卡州的收入水平属于中等偏下，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷。
 
 ```{r us-income-county}
 #| fig.cap="2015-2019 年度美国各个郡家庭月收入",
 #| fig.width=9.6,
 #| fig.height=7.2,
 #| fig.align="center",
-#| fig.showtext=TRUE
+#| fig.showtext=TRUE,
+#| echo=FALSE
 # 读取数据
 us_income_county <- readRDS(file = "data/us_income_county.rds")
 us_income_state <- readRDS(file = "data/us_income_state.rds")
@@ -1143,6 +1269,37 @@ ggplot() +
   labs(
     fill = "家庭月收入\n（万元）", 
     title = "2015-2019 年度美国各个郡家庭月收入",
+    caption = "数据源：美国人口调查局"
+  ) +
+  theme_void(base_size = 13) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.direction = "horizontal",
+    legend.position = "bottom",
+    legend.justification = "right",
+    legend.title = element_text(size = 10),
+    plot.caption = element_text(hjust = 0, vjust = 10)
+  )
+```
+
+```{r us-income-state}
+#| fig.cap="2015-2019 年度美国各个州家庭月收入",
+#| fig.width=9.6,
+#| fig.height=7.2,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
+# 绘图
+ggplot() +
+  geom_sf(
+    data = us_income_state,
+    aes(fill = estimate / 10000), colour = NA
+  ) +
+  scale_fill_viridis_c(option = "plasma", na.value = "grey80") +
+  coord_sf(crs = st_crs("ESRI:102003")) +
+  labs(
+    fill = "家庭月收入\n（万元）", 
+    title = "2015-2019 年度美国各州家庭月收入",
     caption = "数据源：美国人口调查局"
   ) +
   theme_void(base_size = 13) +
@@ -1185,7 +1342,7 @@ ggplot() +
 **ggplot2** 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 --- Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到地区分布图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。
 
 
-[**tmap**](https://github.com/r-tmap/tmap) 类似 [**mapsf**](https://github.com/riatelab/mapsf)，相比而言，上游依赖很多，相应功能也多，其主站有丰富的介绍材料。另一方面，据笔者在 MacOS 和 Ubuntu 系统上测试图\@ref(fig:us-cancer-rates-tmap)，发现绘图性能很差，这应该和它内部将 sf 等数据对象转化为 sp 数据对象有关。**sp** 已是上一代产品，现有工具足以替代，因此，不再介绍， @Pebesma2022 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 **sf**、**stars** [@stars] 或 **terra** [@terra]，已成历史的三个 R 包 --- 空间几何计算 **rgeos** [@rgeos]、空间数据导入 **rgdal** [@rgdal]和空间数据操作 **maptools** [@maptools] 将于 **2023** 年底退休。
+[**tmap**](https://github.com/r-tmap/tmap) 类似 [**mapsf**](https://github.com/riatelab/mapsf)，相比而言，上游依赖很多，相应功能也多，其Github站点有丰富的介绍材料。另一方面，据笔者在 MacOS 和 Ubuntu 系统上测试图\@ref(fig:us-cancer-rates-tmap)，发现绘图性能很差，这应该和它内部将 sf 等数据对象转化为 sp 数据对象有关。**sp** 已是上一代产品，现有工具足以替代，因此，不再介绍， @Pebesma2022 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 **sf**、**stars** [@stars] 或 **terra** [@terra]，已成历史的三个 R 包 --- 空间几何计算 **rgeos** [@rgeos]、空间数据导入 **rgdal** [@rgdal]和空间数据操作 **maptools** [@maptools] 将于 **2023** 年底退休。
 
 
 据了解，R 语言社区也有不少 R 包可以绘制交互版的地区分布图，比如 **leaflet** 包[@leaflet]、**mapdeck** 包[@mapdeck]、**plotly** 包[@plotly]和 **echarts4r** 包[@echarts4r]等。配色是正文没有细谈的方面，在全文保持风格一致即可，若和数据背景相关就更好了。

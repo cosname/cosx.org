@@ -132,7 +132,6 @@ div.rmdinfo::before {
   text-align: center;
 }
 
-
 figure {
   text-align: center;
 }
@@ -142,6 +141,10 @@ div.img {
   display: block; 
   margin-left: auto; 
   margin-right: auto;
+}
+
+.columns {
+  display: flex;
 }
 </style>
 <div class="rmdinfo">
@@ -693,8 +696,44 @@ us_cancer_rates &lt;- reshape(
   # 原数据有 3041 行，性别字段只有两个取值，转长格式后有 2*3041 行
   new.row.names = 1:(2 * 3041),
   direction = &quot;long&quot;
-)
-# 从 usmapdata 包获取地图数据
+)</code></pre>
+<div class="full-width">
+<div class="columns">
+<div class="column" style="width:57.5%;">
+<pre class="r"><code># 数据重塑前
+head(USCancerRates) # 宽格式
+#                 rate.male LCL95.male UCL95.male rate.female LCL95.female
+# alabama,pickens     363.7      311.1      423.2       151.0        123.6
+# alabama,bullock     345.7      274.2      431.4       140.5        102.8
+# alabama,russell     340.7      304.5      380.9       182.3        161.3
+# alabama,barbour     335.9      288.9      389.1       185.3        157.2
+# alabama,dallas      330.1      293.4      370.6       172.0        151.4
+# alabama,greene      328.1      255.9      416.6       124.1         88.5
+#                 UCL95.female   state         county
+# alabama,pickens        183.6 Alabama Pickens County
+# alabama,bullock        189.7 Alabama Bullock County
+# alabama,russell        205.5 Alabama Russell County
+# alabama,barbour        217.5 Alabama Barbour County
+# alabama,dallas         195.0 Alabama  Dallas County
+# alabama,greene         171.7 Alabama  Greene County</code></pre>
+</div><div class="column" style="width:5%;">
+<p> 
+<!-- an empty Div (with a white space), serving as
+a column separator --></p>
+</div><div class="column" style="width:37.5%;">
+<pre class="r"><code># 数据重塑后
+head(us_cancer_rates) # 长格式
+#     state         county  sex LCL95  rate UCL95
+# 1 Alabama Pickens County 男性 311.1 363.7 423.2
+# 2 Alabama Bullock County 男性 274.2 345.7 431.4
+# 3 Alabama Russell County 男性 304.5 340.7 380.9
+# 4 Alabama Barbour County 男性 288.9 335.9 389.1
+# 5 Alabama  Dallas County 男性 293.4 330.1 370.6
+# 6 Alabama  Greene County 男性 255.9 328.1 416.6</code></pre>
+</div>
+</div>
+</div>
+<pre class="r"><code># 从 usmapdata 包获取地图数据
 county_df &lt;- usmapdata::us_map(&quot;counties&quot;)
 # 给每个郡的癌症死亡率数据配上地图数据
 dat &lt;- merge(
@@ -712,8 +751,8 @@ dat &lt;- dat[order(dat$order), ]</code></pre>
 <p>数据准备工作完成后，除了在细节上不断试错外<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>，绘图过程主要有七个步骤：</p>
 <ol style="list-style-type: decimal">
 <li>底图：绘制美国郡地图，填充灰色背景，以此为底图。</li>
-<li>映射：添加每个郡的癌症死亡率数据，填充颜色根据死亡率而定，以浅白色绘制郡的边界线，且将线调细一些，与后面州的边界线形成层次。</li>
-<li>边界：添加美国各个州的边界线，帮助熟悉美国地图的从州到郡快速定位。</li>
+<li>映射：添加每个郡的癌症死亡率数据，填充颜色根据死亡率而定。同时以浅白色绘制郡的边界线，将线调细一些，与后面州的边界线形成层次。</li>
+<li>边界：添加美国各个州的边界线，帮助熟悉美国地图的读者从州到郡快速定位。</li>
 <li>配色：类似前文设置，采用 <code>plasma</code> 调色板，未采集到死亡率数据的郡填充灰色，和地图背景融为一体。</li>
 <li>布局：以函数 <code>facet_wrap()</code> 实现分面，分面标题放在图形上方，布局为两行一列。</li>
 <li>标题：添加整个图形的主标题、副标题和图例标题。</li>
@@ -1015,8 +1054,8 @@ nc_tract_map &lt;- tigris::tracts(state = 37, cb = T, year = 2019, class = &quot
 </ol>
 <p>下面补充几个细节：</p>
 <ol style="list-style-type: decimal">
-<li><p>北卡郡、社区级地图数据的年份和 ACS 调查数据的年份要一致。</p></li>
-<li><p>R 软件内置了数据集 <code>state.name</code> 和 <code>state.abb</code>，分别对应 美国各个州的名称及其简称，<strong>tidycensus</strong> 包内置的数据集 <code>fips_codes</code> 还提供各州、郡的 FIPS 代码。</p></li>
+<li><p>不同年份 ACS 调查的郡、社区有变化，美国也会定期更新地图数据，因此，北卡郡级、社区级地图数据的年份和 ACS 调查数据的发布年份要一致，。</p></li>
+<li><p>R 软件内置了数据集 <code>state.name</code> 和 <code>state.abb</code>，分别对应美国各个州的名称及其简称，<strong>tidycensus</strong> 包内置的数据集 <code>fips_codes</code> 还提供各州、郡的 FIPS 代码，用于下载所需州郡的数据。</p></li>
 <li><p>读者若对其它数据指标感兴趣，可通过如下命令查看：</p>
 <pre class="r"><code>acs_vars &lt;- load_variables(year = 2019, dataset = &quot;acs5&quot;)
 View(acs_vars)</code></pre>
@@ -1024,6 +1063,9 @@ View(acs_vars)</code></pre>
 <li><p>Kyle Walker 的著作《Analyzing US Census Data: Methods, Maps, and Models in R》<span class="citation">(<a href="#ref-Walker2022" role="doc-biblioref">Walker 2022</a>)</span> 提供了更多关于美国社区调查数据及其使用的介绍。</p></li>
 <li><p>若网络不好，查看函数 <code>get_acs()</code> 源码获取数据下载地址，打开浏览器从网页获取，嫌麻烦的话，直接用本文随附的数据吧。</p></li>
 </ol>
+<div class="rmdtip">
+<p>在数据库中以合理的形式存储数以万计的指标，或者说一个不断变化的指标体系，需要考虑易用性和可扩展性。一般是以「长格式」存储的，表头包含：国家、地区（州、郡、社区等）、日期（年、月、日等）、指标ID、数值、指标描述等。这样，新增指标可以直接在表后面追加，不会因新增指标而新增列，影响稳定性，必要时以国家、地区等作为分区键还可以加快查询速度。</p>
+</div>
 </div>
 <div id="数据展示" class="section level3">
 <h3>数据展示</h3>
@@ -1033,127 +1075,66 @@ nc_income_race_county &lt;- readRDS(file = &quot;data/nc_income_race_county.rds&
 nc_income_race_tract &lt;- readRDS(file = &quot;data/nc_income_race_tract.rds&quot;)
 # 计算家庭月收入和白人占比数据
 nc_income_race_tract &lt;- within(nc_income_race_tract, {
+  pop &lt;- B02001_001E
   pctWhite &lt;- B02001_002E / B02001_001E
   medInc &lt;- B19013_001E
 })</code></pre>
-<pre class="r"><code>par(mar = c(2, 0, 0, 0))
-# 家庭月收入的空间分布
-plot(nc_income_race_tract[&quot;medInc&quot;],
-  key.pos = 1,
-  pal = viridisLite::plasma, reset = FALSE,
-  breaks = c(0:10, 15, 20, 25) * 10000,
-  border = &quot;gray80&quot;, main = &quot;&quot;, lwd = 0.1
-)
-# 添加郡边界
-plot(st_geometry(nc_income_race_county),
-  border = &quot;gray&quot;, lwd = 0.25, add = TRUE
-)
-mtext(
-  text = &quot;数据源：美国人口调查局&quot;,
-  side = 1, adj = 0.05
-)</code></pre>
+<p>结合图<a href="#fig:us-nc-income">12</a>，从空间上看，高收入和低收入群体有明显的圈层，在图中高亮的地区（也可以叫城镇），低收入社区穿插在高收入社区中，且有清晰的穿插线。</p>
 <div class="full-width">
 <div class="figure"><span style="display:block;" id="fig:us-nc-income"></span>
 <img src="img/us-nc-income.png" class="full" alt="" />
-<p class="caption">图 12:  北卡罗来纳州普查水平下家庭月收入的空间分布</p>
+<p class="caption">图 12:  北卡州社区级家庭月收入的空间分布</p>
 </div>
+</div>
+<p>如图 <a href="#fig:us-nc-income-hist">13</a> 所示，2015-2019 年度 ACS 调查，北卡州一共划分 <strong>2195</strong> 个社区，除了 <strong>36</strong> 个没有收集到收入数据的社区外，北卡州超过一半的社区家庭月收入超过 <strong>50000</strong> 美元，中位数是 <strong>51439</strong> 美元，图中三条红线分别是 25%，50% 和 75% 分位点。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-income-hist"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-hist-1.png" alt="北卡州社区级家庭月收入的分布" width="960" />
+<p class="caption">
+图 13: 北卡州社区级家庭月收入的分布
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-pop"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-pop-1.png" alt="北卡州社区级人口的空间分布" width="1152" />
+<p class="caption">
+图 14: 北卡州社区级人口的空间分布
+</p>
+</div>
+<p>如图<a href="#fig:us-nc-pop-hist">15</a>所示，北卡州超过一半的社区人口数不足 5000，中位数是 4389，图中三条红线分别是 25%，50% 和 75% 分位点。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-pop-hist"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-pop-hist-1.png" alt="北卡州社区级人口的分布" width="960" />
+<p class="caption">
+图 15: 北卡州社区级人口的分布
+</p>
+</div>
+<p>如图<a href="#fig:us-nc-race2">16</a>所示，白人集中分布在东岸城市（北卡州的东部边缘，大西洋西岸）和北卡州的西部。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-race2"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-race2-1.png" alt="北卡州社区级白人占比的空间分布" width="1152" />
+<p class="caption">
+图 16: 北卡州社区级白人占比的空间分布
+</p>
 </div>
 <p>地图数据包含的多边形越多，绘图需要花费时间越多，对于这样大中型的数据集，考虑到 <strong>ggplot2</strong> 有些吃不消，接下来以 <strong>ggplot2</strong> 配合 <strong>sf</strong> 包，将各个数据指标从社区上卷到各个郡。</p>
-<pre class="r"><code>library(sf) 
-# 统计白人占比和家庭月收入指标
-nc_income_race_county &lt;- within(nc_income_race_county, {
-  pctWhite &lt;- B02001_002E / B02001_001E
-  medInc &lt;- B19013_001E
-})
-# 加载一些必要的绘图包
-library(ggplot2)
-library(biscale)
-library(cowplot)
-# 将数据根据分位点分箱
-nc_bi_data &lt;- bi_class(nc_income_race_county,
-  x = pctWhite, y = medInc,
-  style = &quot;quantile&quot;, dim = 3
-)
-# 创建主体地图
-nc_bi_map &lt;- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
-  geom_sf(
-    color = &quot;white&quot;, size = 0.1, show.legend = FALSE
-  ) +
-  bi_scale_fill(pal = &quot;DkViolet&quot;, dim = 3) +
-  labs(
-    title = &quot;2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性&quot;,
-    caption = &quot;数据源：美国人口调查局&quot;
-  ) +
-  theme_void() +
-  theme(plot.title = element_text(hjust = 0.5))
-# 创建图例数据
-nc_bi_leg_data &lt;- data.frame(expand.grid(x = 3:1, y = 3:1),
-  bi_fill = biscale:::pal_dkviolet(n = 3)
-)
-# 创建图例瓦片
-nc_bi_leg &lt;- ggplot(
-  data = nc_bi_leg_data,
-  aes(x = x, y = y, fill = bi_fill)
-) +
-  geom_tile() +
-  scale_fill_identity() +
-  labs(
-    x = substitute(paste(&quot;白人占比&quot;, &quot;&quot; %-&gt;% &quot;&quot;)),
-    y = substitute(paste(&quot;收入水平&quot;, &quot;&quot; %-&gt;% &quot;&quot;))
-  ) +
-  coord_fixed() +
-  theme_void() +
-  theme(
-    axis.title = element_text(size = 7),
-    axis.title.y = element_text(angle = 90)
-  )
-# 组合地图和图例
-ggdraw() +
-  draw_plot(nc_bi_map, x = 0, y = 0, width = 1, height = 1) +
-  draw_plot(nc_bi_leg, x = 0.1, y = .1, width = 0.2, height = 0.2)</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:bivar-us-states"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性" width="864" />
 <p class="caption">
-图 13: 2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性
+图 17: 2015-2019 年度北卡罗来纳州各个郡家庭月收入和白人占比的空间相关性
 </p>
 </div>
 </div>
 <div id="数据解读" class="section level3">
 <h3>数据解读</h3>
-<p>结合图<a href="#fig:us-nc-income">12</a>和图<a href="#fig:bivar-us-states">13</a>，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高，其三，存在低收入在高收入区域穿插的现象，这点在图<a href="#fig:us-nc-income">12</a>中非常明显。</p>
-<pre class="r"><code># 读取数据
-us_income_county &lt;- readRDS(file = &quot;data/us_income_county.rds&quot;)
-us_income_state &lt;- readRDS(file = &quot;data/us_income_state.rds&quot;)
-# 绘图
-ggplot() +
-  geom_sf(
-    data = us_income_county,
-    aes(fill = estimate / 10000), colour = NA
-  ) +
-  geom_sf(
-    data = us_income_state,
-    colour = alpha(&quot;gray80&quot;, 1 / 4), fill = NA, size = 0.15
-  ) +
-  scale_fill_viridis_c(option = &quot;plasma&quot;, na.value = &quot;grey80&quot;) +
-  coord_sf(crs = st_crs(&quot;ESRI:102003&quot;)) +
-  labs(
-    fill = &quot;家庭月收入\n（万元）&quot;, 
-    title = &quot;2015-2019 年度美国各个郡家庭月收入&quot;,
-    caption = &quot;数据源：美国人口调查局&quot;
-  ) +
-  theme_void(base_size = 13) +
-  theme(
-    plot.title = element_text(hjust = 0.5),
-    legend.direction = &quot;horizontal&quot;,
-    legend.position = &quot;bottom&quot;,
-    legend.justification = &quot;right&quot;,
-    legend.title = element_text(size = 10),
-    plot.caption = element_text(hjust = 0, vjust = 10)
-  )</code></pre>
+<p>结合图<a href="#fig:us-nc-income">12</a>和图<a href="#fig:bivar-us-states">17</a>，从空间上看，其一，存在明显的分层现象，其二，白人占比指标和家庭月收入指标空间相关性非常高</p>
+<p>图<a href="#fig:us-income-state">19</a> 和图<a href="#fig:us-income-county">18</a> 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了极个别的西岸城市（加州），东岸城市（波士顿），收入的空间分布较为平衡。北卡州的收入水平属于中等偏下，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-income-county"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/us-income-county-1.png" alt="2015-2019 年度美国各个郡家庭月收入" width="921.6" />
 <p class="caption">
-图 14: 2015-2019 年度美国各个郡家庭月收入
+图 18: 2015-2019 年度美国各个郡家庭月收入
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-income-state"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-income-state-1.png" alt="2015-2019 年度美国各个州家庭月收入" width="921.6" />
+<p class="caption">
+图 19: 2015-2019 年度美国各个州家庭月收入
 </p>
 </div>
 <div class="rmdtip">
@@ -1171,47 +1152,47 @@ ggplot() +
 <li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
 </ul>
 <p>在掌握基础的一些工具后，需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
-<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">15</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，而添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再折腾了。</p>
+<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">20</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，而添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再折腾了。</p>
 <div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
 <img src="img/choropleth-map.svg" class="full" alt="" />
-<p class="caption">图 15:  7 种绘图方案依赖的 R 包及其层次关系</p>
+<p class="caption">图 20:  7 种绘图方案依赖的 R 包及其层次关系</p>
 </div>
 <p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。庆幸的是各郡癌症死亡率数据的郡名称<code>rownames(USCancerRates)</code> 和地图数据 <code>us_county</code> 里的郡名称 <code>names</code> 是可以映射上的，否则地区分布图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
 <p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到地区分布图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
-<p><a href="https://github.com/r-tmap/tmap"><strong>tmap</strong></a> 类似 <a href="https://github.com/riatelab/mapsf"><strong>mapsf</strong></a>，相比而言，上游依赖很多，相应功能也多，其主站有丰富的介绍材料。另一方面，据笔者在 MacOS 和 Ubuntu 系统上测试图<a href="#fig:us-cancer-rates-tmap">8</a>，发现绘图性能很差，这应该和它内部将 sf 等数据对象转化为 sp 数据对象有关。<strong>sp</strong> 已是上一代产品，现有工具足以替代，因此，不再介绍， <span class="citation">E. Pebesma and Bivand (<a href="#ref-Pebesma2022" role="doc-biblioref">2022</a>)</span> 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 <strong>sf</strong>、<strong>stars</strong> <span class="citation">(<a href="#ref-stars" role="doc-biblioref">E. Pebesma 2021</a>)</span> 或 <strong>terra</strong> <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2022</a>)</span>，已成历史的三个 R 包 — 空间几何计算 <strong>rgeos</strong> <span class="citation">(<a href="#ref-rgeos" role="doc-biblioref">R. Bivand and Rundel 2021</a>)</span>、空间数据导入 <strong>rgdal</strong> <span class="citation">(<a href="#ref-rgdal" role="doc-biblioref">R. Bivand, Keitt, and Rowlingson 2022</a>)</span>和空间数据操作 <strong>maptools</strong> <span class="citation">(<a href="#ref-maptools" role="doc-biblioref">R. Bivand and Lewin-Koh 2022</a>)</span> 将于 <strong>2023</strong> 年底退休。</p>
+<p><a href="https://github.com/r-tmap/tmap"><strong>tmap</strong></a> 类似 <a href="https://github.com/riatelab/mapsf"><strong>mapsf</strong></a>，相比而言，上游依赖很多，相应功能也多，其Github站点有丰富的介绍材料。另一方面，据笔者在 MacOS 和 Ubuntu 系统上测试图<a href="#fig:us-cancer-rates-tmap">8</a>，发现绘图性能很差，这应该和它内部将 sf 等数据对象转化为 sp 数据对象有关。<strong>sp</strong> 已是上一代产品，现有工具足以替代，因此，不再介绍， <span class="citation">E. Pebesma and Bivand (<a href="#ref-Pebesma2022" role="doc-biblioref">2022</a>)</span> 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 <strong>sf</strong>、<strong>stars</strong> <span class="citation">(<a href="#ref-stars" role="doc-biblioref">E. Pebesma 2021</a>)</span> 或 <strong>terra</strong> <span class="citation">(<a href="#ref-terra" role="doc-biblioref">Hijmans 2022</a>)</span>，已成历史的三个 R 包 — 空间几何计算 <strong>rgeos</strong> <span class="citation">(<a href="#ref-rgeos" role="doc-biblioref">R. Bivand and Rundel 2021</a>)</span>、空间数据导入 <strong>rgdal</strong> <span class="citation">(<a href="#ref-rgdal" role="doc-biblioref">R. Bivand, Keitt, and Rowlingson 2022</a>)</span>和空间数据操作 <strong>maptools</strong> <span class="citation">(<a href="#ref-maptools" role="doc-biblioref">R. Bivand and Lewin-Koh 2022</a>)</span> 将于 <strong>2023</strong> 年底退休。</p>
 <p>据了解，R 语言社区也有不少 R 包可以绘制交互版的地区分布图，比如 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>、<strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>、<strong>plotly</strong> 包<span class="citation">(<a href="#ref-plotly" role="doc-biblioref">Sievert et al. 2021</a>)</span>和 <strong>echarts4r</strong> 包<span class="citation">(<a href="#ref-echarts4r" role="doc-biblioref">Coene 2022</a>)</span>等。配色是正文没有细谈的方面，在全文保持风格一致即可，若和数据背景相关就更好了。</p>
 </div>
 <div id="未来展望" class="section level1">
 <h1>未来展望</h1>
 <p>在应用方向上，还有很多有意思的场景，比如：</p>
 <ul>
-<li><strong>疾控预防方面</strong>，以 2022-03-05 至 2022-03-11 美国新冠日均感染率（单位十万分之一）为例，如图<a href="#fig:us-covid-cases">16</a> 所示，图片截自<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">纽约时报网站</a>。</li>
+<li><strong>疾控预防方面</strong>，以 2022-03-05 至 2022-03-11 美国新冠日均感染率（单位十万分之一）为例，如图<a href="#fig:us-covid-cases">21</a> 所示，图片截自<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">纽约时报网站</a>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:us-covid-cases"></span>
 <img src="img/us-covid-cases.png" class="full" alt="" />
-<p class="caption">图 16:  美国各个郡新冠感染率，单位十万分之一</p>
+<p class="caption">图 21:  美国各个郡新冠感染率，单位十万分之一</p>
 </div>
 <ul>
-<li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">17</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
+<li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">22</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:shrinking-china-cities"></span>
 <img src="img/shrinking-china-cities.jpeg" class="full" alt="" />
-<p class="caption">图 17:  关注城市化进程中正在收缩的城市：蓝色表示人口收缩，红色表示人口扩张</p>
+<p class="caption">图 22:  关注城市化进程中正在收缩的城市：蓝色表示人口收缩，红色表示人口扩张</p>
 </div>
 <p>在数据可视化上，还有很多技术方案，比如：</p>
 <ul>
-<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">18</a>，这在一定程度上克服了普通地区分布图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
+<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">23</a>，这在一定程度上克服了普通地区分布图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:uk-hex-cartograms"></span>
 <img src="img/uk-hex-cartograms.png" class="full" alt="" />
-<p class="caption">图 18:  左图：英国各个郡年龄中位数的空间分布；右图：英国各个郡新冠死亡率，单位十万分之一。</p>
+<p class="caption">图 23:  左图：英国各个郡年龄中位数的空间分布；右图：英国各个郡新冠死亡率，单位十万分之一。</p>
 </div>
 <ul>
-<li>Ilya Kashnitsky 和 Jonas Schöley 将人口划分为儿童（0-14岁）、青壮（15-64岁）、老年（大于65岁）三个年龄段，以三元结构图构造图例，编码欧洲各个地区的年龄结构，三个不同的主要色块分别代表三种典型的人口结构，如图<a href="#fig:ternary-map">19</a>，一眼看上去好似一幅水彩画，非常有艺术感<span class="citation">(<a href="#ref-Kashnitsky2018" role="doc-biblioref">Kashnitsky and Schöley 2018</a>)</span>。</li>
+<li>Ilya Kashnitsky 和 Jonas Schöley 将人口划分为儿童（0-14岁）、青壮（15-64岁）、老年（大于65岁）三个年龄段，以三元结构图构造图例，编码欧洲各个地区的年龄结构，三个不同的主要色块分别代表三种典型的人口结构，如图<a href="#fig:ternary-map">24</a>，一眼看上去好似一幅水彩画，非常有艺术感<span class="citation">(<a href="#ref-Kashnitsky2018" role="doc-biblioref">Kashnitsky and Schöley 2018</a>)</span>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:ternary-map"></span>
 <img src="img/ternary-map.png" class="full" alt="" />
-<p class="caption">图 19:  欧洲区域人口年龄结构</p>
+<p class="caption">图 24:  欧洲区域人口年龄结构</p>
 </div>
 </div>
 <div id="环境信息" class="section level1">
