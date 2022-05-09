@@ -1109,9 +1109,11 @@ nc_income_race_tract &lt;- within(nc_income_race_tract, {
   medInc &lt;- B19013_001E
 })</code></pre>
 <div class="full-width">
-<div class="figure"><span style="display:block;" id="fig:us-nc-income"></span>
-<img src="img/us-nc-income.png" class="full" alt="" />
-<p class="caption">图 14:  北卡州社区级家庭月收入的空间分布</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-income"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-1.png" alt="北卡州社区级家庭月收入的空间分布" width="1728" />
+<p class="caption">
+图 14: 北卡州社区级家庭月收入的空间分布
+</p>
 </div>
 </div>
 <p>如图 <a href="#fig:us-nc-income-hist">15</a> 所示，2015-2019 年度 ACS 调查，北卡州一共划分 <strong>2195</strong> 个社区，除了 <strong>36</strong> 个没有收集到收入数据的社区外，北卡州超过一半的社区家庭月收入超过 <strong>50000</strong> 美元，中位数是 <strong>51439</strong> 美元，图中三条红线分别是 25%，50% 和 75% 分位点。</p>
@@ -1142,11 +1144,13 @@ nc_income_race_tract &lt;- within(nc_income_race_tract, {
 </p>
 </div>
 <p>如图<a href="#fig:bivar-us-states">19</a>所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:us-nc-race2">18</a>的数据信息。图中以灰色块表示缺失数据。</p>
+<div class="full-width">
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:bivar-us-states"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡州社区级家庭月收入和白人占比的空间相关性" width="864" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡州社区级家庭月收入和白人占比的空间相关性" width="1512" />
 <p class="caption">
 图 19: 2015-2019 年度北卡州社区级家庭月收入和白人占比的空间相关性
 </p>
+</div>
 </div>
 </div>
 <div id="数据解读" class="section level3">
@@ -1205,6 +1209,7 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
 图 21: 北卡社区级家庭月收入的空间相关性
 </p>
 </div>
+<p>整体上，高收入的聚在一起，低收入也聚在一起</p>
 <div class="rmdtip">
 <p><strong>sf</strong> 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">14</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
 </div>
