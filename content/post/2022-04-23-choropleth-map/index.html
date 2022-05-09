@@ -1123,6 +1123,7 @@ nc_income_race_tract &lt;- within(nc_income_race_tract, {
 图 15: 北卡州社区级家庭月收入的分布
 </p>
 </div>
+<p>如图 <a href="#fig:us-nc-pop">16</a> 所示，全州大部分社区人口数 <strong>10000</strong> 以内，极少的社区人口在 <strong>15000</strong> 以上。图中紫黑色表示人口数为 0，因社区人口太少或区域在时间上不连续导致模型无法给出估计。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-pop"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-pop-1.png" alt="北卡州社区级人口的空间分布" width="1152" />
 <p class="caption">
@@ -1143,7 +1144,7 @@ nc_income_race_tract &lt;- within(nc_income_race_tract, {
 图 18: 北卡州社区级白人占比的空间分布
 </p>
 </div>
-<p>如图<a href="#fig:bivar-us-states">19</a>所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:us-nc-race2">18</a>的数据信息。图中以灰色块表示缺失数据。</p>
+<p>如图<a href="#fig:bivar-us-states">19</a>所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:us-nc-race2">18</a>的数据信息。图中以白色块表示缺失数据。</p>
 <div class="full-width">
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:bivar-us-states"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡州社区级家庭月收入和白人占比的空间相关性" width="1512" />
@@ -1199,9 +1200,10 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
 <p>Everything is related to everything else, but near things are more related than distant things.</p>
 <p>— Waldo Tobler <span class="citation">(<a href="#ref-Tobler1970" role="doc-biblioref">Tobler 1970</a>)</span></p>
 </blockquote>
-<p>最后，咱们回归到本节主旨，家庭月收入和白人占比的<strong>空间相关性</strong>有没有呢？又有多少呢？先来看下家庭月收入的<strong>空间相关性</strong>，这可以用局部莫兰 I 指数刻画，如图<a href="#fig:medinc-moran">21</a>所示，红色区域表示</p>
+<p>接下来，回归到本节主旨：空间相关性。先来看下社区级家庭月收入的<strong>空间相关性</strong>，这可以用局部莫兰 I 指数刻画，可调 <a href="https://github.com/geodacenter/rgeoda/"><strong>rgeoda</strong></a>包<span class="citation">(<a href="#ref-rgeoda" role="doc-biblioref">Li and Anselin 2022</a>)</span>计算，<strong>rgeoda</strong> 包站在<a href="https://github.com/GeoDaCenter/libgeoda">libgeoda</a> 和 <a href="https://github.com/GeoDaCenter/geoda">GeoDa</a>的肩膀上提供许多空间数据分析算法和模型。</p>
+<p>如图<a href="#fig:medinc-moran">21</a>所示，红色区域表示高收入显著的空间聚集现象，而大片的蓝色区域表示低收入显著的空间聚集现象。</p>
 <!-- 
-可用半变异函数刻画离散点的空间相关性。 
+家庭月收入和白人占比的**空间相关性**有没有呢？又有多少呢？
 -->
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:medinc-moran"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/medinc-moran-1.png" alt="北卡社区级家庭月收入的空间相关性" width="864" />
@@ -1209,7 +1211,7 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
 图 21: 北卡社区级家庭月收入的空间相关性
 </p>
 </div>
-<p>整体上，高收入的聚在一起，低收入也聚在一起</p>
+<p>相比于图<a href="#fig:us-nc-income">14</a>，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起，发达地区，低收入周边是高收入。从州、郡、社区层层下钻就可以看出收入不平衡的区域。</p>
 <div class="rmdtip">
 <p><strong>sf</strong> 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">14</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
 </div>
@@ -1346,6 +1348,9 @@ Kashnitsky, Ilya, and Jonas Schöley. 2018. <span>“Regional Population Structu
 </div>
 <div id="ref-Kolak2020" class="csl-entry">
 Kolak, Marynia, Moksha Menghaney, Qinyun Lin, and Angela Li. 2020. <span>“Opioid Environment Toolkit.”</span> <a href="https://geodacenter.github.io/opioid-environment-toolkit/">https://geodacenter.github.io/opioid-environment-toolkit/</a>.
+</div>
+<div id="ref-rgeoda" class="csl-entry">
+Li, Xun, and Luc Anselin. 2022. <em><span class="nocase">rgeoda</span>: R Library for Spatial Data Analysis</em>. <a href="https://CRAN.R-project.org/package=rgeoda">https://CRAN.R-project.org/package=rgeoda</a>.
 </div>
 <div id="ref-Meyer1975" class="csl-entry">
 Meyer, Morton A., Frederick R. Broome, and Richard H. Schweitzer Jr. 1975. <span>“Color Statistical Mapping by the <span>U</span>.<span>S</span>. <span>Bureau</span> of the <span>Census</span>.”</span> <em>The American Cartographer</em> 2 (2): 101–17. <a href="https://doi.org/10.1559/152304075784313250">https://doi.org/10.1559/152304075784313250</a>.

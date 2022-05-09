@@ -1144,6 +1144,7 @@ ggplot(data = nc_income_race_tract) +
   labs(x = "家庭月收入", y = "社区数量")
 ```
 
+如图 \@ref(fig:us-nc-pop) 所示，全州大部分社区人口数 **10000** 以内，极少的社区人口在 **15000** 以上。图中紫黑色表示人口数为 0，因社区人口太少或区域在时间上不连续导致模型无法给出估计。
 
 ```{r us-nc-pop}
 #| fig.cap="北卡州社区级人口的空间分布",
@@ -1170,7 +1171,9 @@ mtext(
 )
 ```
 
+
 如图\@ref(fig:us-nc-pop-hist)所示，北卡州超过一半的社区人口数不足 5000，中位数是 4389，图中三条红线分别是 25\%，50\% 和 75\% 分位点。
+
 
 ```{r us-nc-pop-hist}
 #| fig.cap="北卡州社区级人口的分布",
@@ -1251,7 +1254,7 @@ leaflet(nc_income_race_tract) |>
 st_centroid(st_geometry(nc_income_race_tract))
 ```
 
-如图\@ref(fig:bivar-us-states)所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图\@ref(fig:us-nc-income)和图\@ref(fig:us-nc-race2)的数据信息。图中以灰色块表示缺失数据。
+如图\@ref(fig:bivar-us-states)所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图\@ref(fig:us-nc-income)和图\@ref(fig:us-nc-race2)的数据信息。图中以白色块表示缺失数据。
 
 ::: {.full-width}
 ```{r bivar-us-states}
@@ -1274,14 +1277,17 @@ library(biscale)
 library(cowplot)
 # 去掉收入为 NA 的社区观测值
 nc_income_race_tract_sub <- subset(x = nc_income_race_tract, subset = !is.na(medInc))
+nc_income_race_tract_na <- subset(x = nc_income_race_tract, subset = is.na(medInc))
 # 将数据根据分位点分箱
 nc_bi_data <- bi_class(nc_income_race_tract_sub,
   x = pctWhite, y = medInc,
   style = "quantile", dim = 3
 )
 # 创建主体地图
-nc_bi_map <- ggplot(data = nc_bi_data, aes(fill = bi_class)) +
+nc_bi_map <- ggplot() +
+  geom_sf(data = nc_income_race_tract_na, color = "gray", fill = I("white")) +
   geom_sf(
+    data = nc_bi_data, aes(fill = bi_class),
     color = "gray80", size = 0.05, show.legend = FALSE
   ) +
   bi_scale_fill(pal = "DkViolet", dim = 3) +
@@ -1359,16 +1365,10 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
 
 接下来，回归到本节主旨：空间相关性。先来看下社区级家庭月收入的**空间相关性**，这可以用局部莫兰 I 指数刻画，可调 [**rgeoda**](https://github.com/geodacenter/rgeoda/)包[@rgeoda]计算，**rgeoda** 包站在[libgeoda](https://github.com/GeoDaCenter/libgeoda) 和 [GeoDa](https://github.com/GeoDaCenter/geoda)的肩膀上提供许多空间数据分析算法和模型。
 
+如图\@ref(fig:medinc-moran)所示，红色区域表示高收入显著的空间聚集现象，而大片的蓝色区域表示低收入显著的空间聚集现象。
 
 <!-- 
 家庭月收入和白人占比的**空间相关性**有没有呢？又有多少呢？
--->
-
-
-如图\@ref(fig:medinc-moran)所示，红色区域表示
-
-<!-- 
-可用半变异函数刻画离散点的空间相关性。 
 -->
 
 ```{r medinc-moran}
@@ -1413,7 +1413,7 @@ mtext(
 )
 ```
 
-整体上，高收入的聚在一起，低收入也聚在一起
+相比于图\@ref(fig:us-nc-income)，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起，发达地区，低收入周边是高收入。从州、郡、社区层层下钻就可以看出收入不平衡的区域。
 
 ::: rmdtip
 **sf** 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
