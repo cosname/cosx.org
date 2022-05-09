@@ -1345,6 +1345,7 @@ summary(fit)
 #| fig.height=6,
 #| fig.align="center",
 #| fig.showtext=TRUE,
+#| echo=FALSE,
 #| fig.cap="家庭月收入和白人占比线性相关性"
 # 36 个不完整的观测数据已经从图中移除了
 ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
@@ -1442,7 +1443,7 @@ mtext(
 [**tmap**](https://github.com/r-tmap/tmap) 类似 [**mapsf**](https://github.com/riatelab/mapsf)，相比而言，上游依赖很多，相应功能也多，其Github站点有丰富的介绍材料。另一方面，据笔者在 MacOS 和 Ubuntu 系统上测试图\@ref(fig:us-cancer-rates-tmap)，发现绘图性能很差，这应该和它内部将 sf 等数据对象转化为 sp 数据对象有关。**sp** 已是上一代产品，现有工具足以替代，因此，不再介绍， @Pebesma2022 推荐大家根据具体情况赶快迁移到新的空间数据工具箱 **sf**、**stars** [@stars] 或 **terra** [@terra]，已成历史的三个 R 包 --- 空间几何计算 **rgeos** [@rgeos]、空间数据导入 **rgdal** [@rgdal]和空间数据操作 **maptools** [@maptools] 将于 **2023** 年底退休。
 
 
-据了解，R 语言社区也有不少 R 包可以绘制交互版的地区分布图，比如 **leaflet** 包[@leaflet]、**mapdeck** 包[@mapdeck]、**plotly** 包[@plotly]和 **echarts4r** 包[@echarts4r]等。配色是正文没有细谈的方面，在全文保持风格一致即可，若和数据背景相关就更好了。
+据笔者了解[@Huang2022I;@Huang2022II]，R 语言社区也有不少 R 包可以绘制交互版的地区分布图，比如 **leaflet** 包[@leaflet]、**mapdeck** 包[@mapdeck]、**plotly** 包[@plotly]和 **echarts4r** 包[@echarts4r]等。配色是正文没有细谈的方面，在全文保持风格一致即可，若和数据背景相关就更好了。
 
 
 
