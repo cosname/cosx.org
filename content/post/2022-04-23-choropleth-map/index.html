@@ -47,7 +47,7 @@ description: "在美国和日本的国家统计局官网，地区分布图用于
 </ul></li>
 <li><a href="#多变量情形" id="toc-多变量情形">多变量情形</a>
 <ul>
-<li><a href="#美国北卡州家庭月收入与白人占比的空间相关性" id="toc-美国北卡州家庭月收入与白人占比的空间相关性">美国北卡州家庭月收入与白人占比的空间相关性</a>
+<li><a href="#美国北卡州家庭年收入与白人占比的空间相关性" id="toc-美国北卡州家庭年收入与白人占比的空间相关性">美国北卡州家庭年收入与白人占比的空间相关性</a>
 <ul>
 <li><a href="#数据获取" id="toc-数据获取">数据获取</a></li>
 <li><a href="#数据探索" id="toc-数据探索">数据探索</a></li>
@@ -162,7 +162,7 @@ blockquote > p:first-child {
 <p>空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的收费 BI（Business Intelligence） 工具<a href="https://www.tableau.com/zh-cn/solutions/maps">Tableau</a>，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图、统计地图，英文一般为<a href="https://en.wikipedia.org/wiki/Choropleth_map">Choropleth map</a>，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了<a href="https://zhfw.tianditu.gov.cn/">专题图层服务</a>，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，地区分布图用于展示各类指标<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。</p>
 <p>接下来，本文分四个部分展开介绍地区分布图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
 <p>单变量情形中以 <strong>latticeExtra</strong> 包<span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的数据集 USCancerRates 为例，以地区分布图形式展示美国 1999-2003 年度各郡的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制地区分布图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>、<strong>tmap</strong> 包<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>、<strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>和 <strong>mapsf</strong> 包<span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
-<p>多变量情形中以美国人口调查局发布的调查数据为基础，分析北卡罗来纳州各郡社区普查级的家庭月收入与白人占比的空间相关性。先以单变量的地区分布图描述各个普查区域里家庭月收入的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。</p>
+<p>多变量情形中以美国人口调查局发布的调查数据为基础，分析北卡罗来纳州各郡社区普查级的家庭年收入与白人占比的空间相关性。先以单变量的地区分布图描述各个普查区域里家庭年收入的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。</p>
 <p>本文小结部分总结了 7 种绘图方案的情况，提炼了其间的关联关系，一些绘图经验，希望帮助读者加深理解和学习。</p>
 <p>未来展望部分从应用场景和绘图技术方面继续提供一些示例，供读者继续探索。</p>
 </div>
@@ -1021,21 +1021,26 @@ mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quo
 </div>
 <div id="多变量情形" class="section level1">
 <h1>多变量情形</h1>
-<p><a href="https://en.wikipedia.org/wiki/Multivariate_map">多元地区分布图</a>用以同时展示两个具有空间相关性的变量，比如人均收入和预期寿命，房地产投资占比和城镇化率<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。下面以美国北卡州家庭月收入与白人占比的空间相关性为例，在地区分布图上同时展示多个指标，除了用到 <strong>ggplot2</strong> 和 <strong>sf</strong> 包，还需 <a href="https://github.com/slu-openGIS/biscale"><strong>biscale</strong></a> <span class="citation">(<a href="#ref-Prener2020" role="doc-biblioref">Prener, Grossenbacher, and Zehr 2020</a>)</span>和 <a href="https://github.com/wilkelab/cowplot"><strong>cowplot</strong></a> <span class="citation">(<a href="#ref-Wilke2020" role="doc-biblioref">Wilke 2020</a>)</span>两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客<a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/">Bivariate maps with <strong>ggplot2</strong> and <strong>sf</strong></a>。</p>
-<div id="美国北卡州家庭月收入与白人占比的空间相关性" class="section level2">
-<h2>美国北卡州家庭月收入与白人占比的空间相关性</h2>
+<p><a href="https://en.wikipedia.org/wiki/Multivariate_map">多元地区分布图</a>用以同时展示两个具有空间相关性的变量，比如人均收入和预期寿命，房地产投资占比和城镇化率<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。下面以美国北卡州家庭年收入与白人占比的空间相关性为例，在地区分布图上同时展示多个指标，除了用到 <strong>ggplot2</strong> 和 <strong>sf</strong> 包，还需 <a href="https://github.com/slu-openGIS/biscale"><strong>biscale</strong></a> <span class="citation">(<a href="#ref-Prener2020" role="doc-biblioref">Prener, Grossenbacher, and Zehr 2020</a>)</span>和 <a href="https://github.com/wilkelab/cowplot"><strong>cowplot</strong></a> <span class="citation">(<a href="#ref-Wilke2020" role="doc-biblioref">Wilke 2020</a>)</span>两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客<a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/">Bivariate maps with <strong>ggplot2</strong> and <strong>sf</strong></a>。</p>
+<div id="美国北卡州家庭年收入与白人占比的空间相关性" class="section level2">
+<h2>美国北卡州家庭年收入与白人占比的空间相关性</h2>
 <!-- 分四部分：数据获取、数据整理、数据展示、数据解读 -->
 <div id="数据获取" class="section level3">
 <h3>数据获取</h3>
-<p>受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间分布，同时，这次从<a href="https://www.census.gov/">美国人口调查局</a>直接获取数据。数据集来自 2015-2019 年度美国社区调查（American Community Survey，简称 ACS，约<strong>300</strong>万家庭的抽样），社区普查级别（大致相当于按乡镇、街道调查统计）的北卡罗来纳州家庭收入（指在过去12个月里家庭收入的中位数，已根据 2019 年的美国消费价格指数 CPI 调整，这样，各个年份的数据是有可比性的。此外，中位数相比于平均数更加稳定，可视为一个家庭的月收入，后文中简称家庭月收入）和白人居民的百分比。美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>，原始数据可借助 <strong>tidycensus</strong> 包从美国官方网站下载。</p>
-<p>下载数据之前，需要先注册一个访问令牌，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。在网络一切都好的情况下，下载所需数据指标和北卡郡级、社区级地图数据非常简单，如下：</p>
+<p>受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间区域数据分布，同时，这次直接从<a href="https://www.census.gov/">美国人口调查局</a>获取数据。数据来自 2015-2019 年度美国社区调查（American Community Survey，简称 ACS），每年约<strong>350</strong>万家庭的抽样，每年更新一次。本节使用的数据有：</p>
+<ol style="list-style-type: decimal">
+<li>北卡罗来纳州社区级家庭年收入，统计每个家庭过去12个月的收入，这相当于家庭年收入，再取社区内所有家庭年收入的中位数，众所周知，中位数比平均数更加稳定，更有代表性。家庭年收入已根据 2019 年的美国消费价格指数 CPI 调整，这样，各个年份的数据是有可比性的。</li>
+<li>北卡罗来纳州社区级白人居民的百分比，美国除了白人，还有其它有色人种，且占比不小，分布广泛。</li>
+<li>2019 年北卡罗来纳州郡级、社区级比例尺 1:500,000 多边形边界地图数据，2019 年美国州级、郡级比例尺 1:20,000,000 多边形边界地图数据。</li>
+</ol>
+<p>美国人口调查局（US Census Bureau）提供数据 API 作为公共服务，Kyle Walker 为此开发了 R 接口 <a href="https://github.com/walkerke/tidycensus"><strong>tidycensus</strong></a> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>，原始数据可借助 <strong>tidycensus</strong> 包从美国官方网站下载。下载数据之前，需要先注册一个<a href="https://api.census.gov/data/key_signup.html">访问令牌</a>，保存到 R 环境变量 <code>CENSUS_API_KEY</code>，可在 <code>.Renviron</code> 文件中存储环境变量 <code>CENSUS_API_KEY</code>，以便后续调用。在网络一切都好的情况下，下载所需数据指标和北卡郡级、社区级地图数据非常简单，如下：</p>
 <pre class="r"><code>library(tidycensus)
 library(sf)
 # 郡级数据
 nc_income_race_county &lt;- get_acs(
   state = &quot;NC&quot;, # 北卡州
   geography = &quot;county&quot;, # 郡级
-  # 三个数据指标：家庭月收入，白人数量，总人数
+  # 三个数据指标：家庭年收入，白人数量，总人数
   variables = c(&quot;B19013_001&quot;, &quot;B02001_001E&quot;, &quot;B02001_002E&quot;),
   geometry = TRUE, # 下载北卡郡级地图数据
   output = &quot;wide&quot;, # 输出宽格式数据
@@ -1058,8 +1063,8 @@ nc_county_map &lt;- tigris::counties(state = 37, cb = T, year = 2019, class = &q
 nc_tract_map &lt;- tigris::tracts(state = 37, cb = T, year = 2019, class = &quot;sf&quot;)</code></pre>
 <p>数据下载后，保存为四个文件：</p>
 <ol style="list-style-type: decimal">
-<li><code>nc_income_race_county.rds</code> 北卡州<strong>郡级</strong>家庭月收入和白人数量。</li>
-<li><code>nc_income_race_tract.rds</code> 北卡州<strong>社区级</strong>家庭月收入和白人数量。</li>
+<li><code>nc_income_race_county.rds</code> 北卡州<strong>郡级</strong>家庭年收入和白人数量。</li>
+<li><code>nc_income_race_tract.rds</code> 北卡州<strong>社区级</strong>家庭年收入和白人数量。</li>
 <li><code>nc_county_map.rds</code> 北卡州<strong>郡级</strong>地图数据。</li>
 <li><code>nc_tract_map.rds</code> 北卡州<strong>社区级</strong>地图数据。</li>
 </ol>
@@ -1086,22 +1091,22 @@ View(acs_vars)</code></pre>
 </blockquote>
 <p>在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图<a href="#fig:us-income-state">12</a> 和图<a href="#fig:us-income-county">13</a> 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约、华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷，北卡罗来纳大学有<strong>16</strong>个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-income-state"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-income-state-1.png" alt="2015-2019 年度美国各个州家庭月收入" width="921.6" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-income-state-1.png" alt="2015-2019 年度美国各个州家庭年收入" width="921.6" />
 <p class="caption">
-图 12: 2015-2019 年度美国各个州家庭月收入
+图 12: 2015-2019 年度美国各个州家庭年收入
 </p>
 </div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-income-county"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-income-county-1.png" alt="2015-2019 年度美国各个郡家庭月收入" width="921.6" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-income-county-1.png" alt="2015-2019 年度美国各个郡家庭年收入" width="921.6" />
 <p class="caption">
-图 13: 2015-2019 年度美国各个郡家庭月收入
+图 13: 2015-2019 年度美国各个郡家庭年收入
 </p>
 </div>
-<p>接下来，看下2015-2019年度美国北卡罗来纳州社区级<strong>家庭月收入</strong>的空间分布，如图<a href="#fig:us-nc-income">14</a>所示，图中空白处表示该区域的样本量太少或调查区域时间不连续，导致统计模型的估计不可用。结合图<a href="#fig:us-nc-income">14</a>，从空间上看，高收入和低收入群体有明显的圈层，在图中高亮的地区（也可以叫城镇），低收入社区穿插在高收入社区中，且有清晰的穿插线。</p>
+<p>接下来，看下2015-2019年度美国北卡罗来纳州社区级<strong>家庭年收入</strong>的空间分布，如图<a href="#fig:us-nc-income">14</a>所示，图中空白处表示该区域的样本量太少或调查区域时间不连续，导致统计模型的估计不可用。结合图<a href="#fig:us-nc-income">14</a>，从空间上看，高收入和低收入群体有明显的圈层，在图中高亮的地区（也可以叫城镇），低收入社区穿插在高收入社区中，且有清晰的穿插线。</p>
 <pre class="r"><code># 读取数据
 nc_income_race_county &lt;- readRDS(file = &quot;data/nc_income_race_county.rds&quot;)
 nc_income_race_tract &lt;- readRDS(file = &quot;data/nc_income_race_tract.rds&quot;)
-# 计算家庭月收入和白人占比数据
+# 计算家庭年收入和白人占比数据
 nc_income_race_tract &lt;- within(nc_income_race_tract, {
   pop &lt;- B02001_001E
   pctWhite &lt;- B02001_002E / B02001_001E
@@ -1109,17 +1114,17 @@ nc_income_race_tract &lt;- within(nc_income_race_tract, {
 })</code></pre>
 <div class="full-width">
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-income"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-1.png" alt="北卡州社区级家庭月收入的空间分布" width="1728" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-1.png" alt="北卡州社区级家庭年收入的空间分布" width="1728" />
 <p class="caption">
-图 14: 北卡州社区级家庭月收入的空间分布
+图 14: 北卡州社区级家庭年收入的空间分布
 </p>
 </div>
 </div>
-<p>如图 <a href="#fig:us-nc-income-hist">15</a> 所示，2015-2019 年度 ACS 调查，北卡州一共划分 <strong>2195</strong> 个社区，除了 <strong>36</strong> 个没有收集到收入数据的社区外，北卡州超过一半的社区家庭月收入超过 <strong>50000</strong> 美元，中位数是 <strong>51439</strong> 美元，图中三条红线分别是 25%，50% 和 75% 分位点。</p>
+<p>如图 <a href="#fig:us-nc-income-hist">15</a> 所示，2015-2019 年度 ACS 调查，北卡州一共划分 <strong>2195</strong> 个社区，除了 <strong>36</strong> 个没有收集到收入数据的社区外，北卡州超过一半的社区家庭年收入超过 <strong>50000</strong> 美元，中位数是 <strong>51439</strong> 美元，图中三条红线分别是 25%，50% 和 75% 分位点。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-nc-income-hist"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-hist-1.png" alt="北卡州社区级家庭月收入的分布" width="960" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-nc-income-hist-1.png" alt="北卡州社区级家庭年收入的分布" width="960" />
 <p class="caption">
-图 15: 北卡州社区级家庭月收入的分布
+图 15: 北卡州社区级家庭年收入的分布
 </p>
 </div>
 <p>如图 <a href="#fig:us-nc-pop">16</a> 所示，全州大部分社区人口数 <strong>10000</strong> 以内，极少的社区人口在 <strong>15000</strong> 以上。图中紫黑色表示人口数为 0，因社区人口太少或区域在时间上不连续导致模型无法给出估计。</p>
@@ -1143,19 +1148,19 @@ nc_income_race_tract &lt;- within(nc_income_race_tract, {
 图 18: 北卡州社区级白人占比的空间分布
 </p>
 </div>
-<p>如图<a href="#fig:bivar-us-states">19</a>所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:us-nc-race2">18</a>的数据信息。图中以白色块表示缺失数据。</p>
+<p>如图<a href="#fig:bivar-us-states">19</a>所示，将家庭年收入和白人占比两个数据的分布联合起来看，融合了上图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:us-nc-race2">18</a>的数据信息。图中以白色块表示缺失数据。</p>
 <div class="full-width">
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:bivar-us-states"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡州社区级家庭月收入和白人占比的空间相关性" width="1512" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/bivar-us-states-1.png" alt="2015-2019 年度北卡州社区级家庭年收入和白人占比的空间相关性" width="1512" />
 <p class="caption">
-图 19: 2015-2019 年度北卡州社区级家庭月收入和白人占比的空间相关性
+图 19: 2015-2019 年度北卡州社区级家庭年收入和白人占比的空间相关性
 </p>
 </div>
 </div>
 </div>
 <div id="数据解读" class="section level3">
 <h3>数据解读</h3>
-<p>继续社区级普查数据，先通过简单的线性模型粗估一下，家庭月收入和白人占比之间的关系：</p>
+<p>继续社区级普查数据，先通过简单的线性模型粗估一下，家庭年收入和白人占比之间的关系：</p>
 <p><span class="math display">\[
 \mathrm{medInc} = \alpha + \mathrm{pctWhite} \cdot \beta
 \]</span></p>
@@ -1180,25 +1185,25 @@ summary(fit)
 #   (36 observations deleted due to missingness)
 # Multiple R-squared:  0.147,   Adjusted R-squared:  0.147 
 # F-statistic:  372 on 1 and 2157 DF,  p-value: &lt;2e-16</code></pre>
-<p>根据调整的 <span class="math inline">\(R^2\)</span>， 初步看起来，各社区家庭月收入和白人占比相关性比较低，才 <strong>0.147</strong>！结合图<a href="#fig:lm-income-race">20</a>也不难看出<strong>稳定正向</strong>的关系，要是相关性到达统计课本里常见的 50%，甚至更高，那社会问题就大发了。</p>
+<p>根据调整的 <span class="math inline">\(R^2\)</span>， 初步看起来，各社区家庭年收入和白人占比相关性比较低，才 <strong>0.147</strong>！结合图<a href="#fig:lm-income-race">20</a>也不难看出<strong>稳定正向</strong>的关系，要是相关性到达统计课本里常见的 50%，甚至更高，那社会问题就大发了。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:lm-income-race"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/lm-income-race-1.png" alt="家庭月收入和白人占比线性相关性" width="768" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/lm-income-race-1.png" alt="家庭年收入和白人占比线性相关性" width="768" />
 <p class="caption">
-图 20: 家庭月收入和白人占比线性相关性
+图 20: 家庭年收入和白人占比线性相关性
 </p>
 </div>
 <blockquote>
 <p>Everything is related to everything else, but near things are more related than distant things.</p>
 <p>— Waldo Tobler <span class="citation">(<a href="#ref-Tobler1970" role="doc-biblioref">Tobler 1970</a>)</span></p>
 </blockquote>
-<p>接下来，回归到本节主旨：空间相关性。先来看下社区级家庭月收入的<strong>空间相关性</strong>，这可以用局部莫兰 I 指数刻画，可调 <a href="https://github.com/geodacenter/rgeoda/"><strong>rgeoda</strong></a>包<span class="citation">(<a href="#ref-rgeoda" role="doc-biblioref">Li and Anselin 2022</a>)</span>计算，<strong>rgeoda</strong> 包站在<a href="https://github.com/GeoDaCenter/libgeoda">libgeoda</a> 和 <a href="https://github.com/GeoDaCenter/geoda">GeoDa</a>的肩膀上提供许多空间数据分析算法和模型。如图<a href="#fig:medinc-moran">21</a>所示，灰白色区域表示统计上空间聚集现象不显著，红色区域表示高收入<strong>显著的</strong>空间聚集现象，而大片的蓝色区域表示低收入<strong>显著的</strong>空间聚集现象。</p>
+<p>接下来，回归到本节主旨：空间相关性。先来看下社区级家庭年收入的<strong>空间相关性</strong>，这可以用局部莫兰 I 指数刻画，可调 <a href="https://github.com/geodacenter/rgeoda/"><strong>rgeoda</strong></a>包<span class="citation">(<a href="#ref-rgeoda" role="doc-biblioref">Li and Anselin 2022</a>)</span>计算，<strong>rgeoda</strong> 包站在<a href="https://github.com/GeoDaCenter/libgeoda">libgeoda</a> 和 <a href="https://github.com/GeoDaCenter/geoda">GeoDa</a>的肩膀上提供许多空间数据分析算法和模型。如图<a href="#fig:medinc-moran">21</a>所示，灰白色区域表示统计上空间聚集现象不显著，红色区域表示高收入<strong>显著的</strong>空间聚集现象，而大片的蓝色区域表示低收入<strong>显著的</strong>空间聚集现象。</p>
 <!-- 
-家庭月收入和白人占比的**空间相关性**有没有呢？又有多少呢？
+家庭年收入和白人占比的**空间相关性**有没有呢？又有多少呢？
 -->
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:medinc-moran"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/medinc-moran-1.png" alt="北卡社区级家庭月收入的空间相关性" width="864" />
+<img src="{{< blogdown/postref >}}index_files/figure-html/medinc-moran-1.png" alt="北卡社区级家庭年收入的空间相关性" width="864" />
 <p class="caption">
-图 21: 北卡社区级家庭月收入的空间相关性
+图 21: 北卡社区级家庭年收入的空间相关性
 </p>
 </div>
 <p>相比于图<a href="#fig:us-nc-income">14</a>，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起。高收入地区，其内圈是低收入，外圈也是低收入，高收入低收入一圈包一圈。结合图<a href="#fig:us-income-state">12</a>，图<a href="#fig:us-income-county">13</a>和图<a href="#fig:us-nc-income">14</a>，从州、郡、社区层层下钻和分析就可以看出收入不平衡的区域，以及精细的空间聚类模式。</p>
