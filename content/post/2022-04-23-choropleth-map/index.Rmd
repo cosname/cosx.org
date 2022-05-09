@@ -1005,9 +1005,8 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 :::
 
 
-### 数据展示
+### 数据探索
 
-地理学第二定律是这样说的：
 
 > The phenomenon external to an area of interest affects what goes on inside.
 >
@@ -1015,8 +1014,8 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 
 在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图\@ref(fig:us-income-state) 和图\@ref(fig:us-income-county) 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约、华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷，北卡罗来纳大学有**16**个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。
 
-```{r us-income-county}
-#| fig.cap="2015-2019 年度美国各个郡家庭月收入",
+```{r us-income-state}
+#| fig.cap="2015-2019 年度美国各个州家庭月收入",
 #| fig.width=9.6,
 #| fig.height=7.2,
 #| fig.align="center",
@@ -1025,6 +1024,38 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 # 读取数据
 us_income_county <- readRDS(file = "data/us_income_county.rds")
 us_income_state <- readRDS(file = "data/us_income_state.rds")
+# 绘图
+ggplot() +
+  geom_sf(
+    data = us_income_state,
+    aes(fill = estimate / 10000), colour = NA
+  ) +
+  scale_fill_viridis_c(option = "plasma", na.value = "grey80") +
+  coord_sf(crs = st_crs("ESRI:102003")) +
+  labs(
+    fill = "家庭月收入\n（万元）", 
+    title = "2015-2019 年度美国各州家庭月收入",
+    caption = "数据源：美国人口调查局"
+  ) +
+  theme_void(base_size = 13) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.direction = "horizontal",
+    legend.position = "bottom",
+    legend.justification = "right",
+    legend.title = element_text(size = 10),
+    plot.caption = element_text(hjust = 0, vjust = 10)
+  )
+```
+
+
+```{r us-income-county}
+#| fig.cap="2015-2019 年度美国各个郡家庭月收入",
+#| fig.width=9.6,
+#| fig.height=7.2,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| echo=FALSE
 # 绘图
 ggplot() +
   geom_sf(
@@ -1052,38 +1083,6 @@ ggplot() +
     plot.caption = element_text(hjust = 0, vjust = 10)
   )
 ```
-
-```{r us-income-state}
-#| fig.cap="2015-2019 年度美国各个州家庭月收入",
-#| fig.width=9.6,
-#| fig.height=7.2,
-#| fig.align="center",
-#| fig.showtext=TRUE,
-#| echo=FALSE
-# 绘图
-ggplot() +
-  geom_sf(
-    data = us_income_state,
-    aes(fill = estimate / 10000), colour = NA
-  ) +
-  scale_fill_viridis_c(option = "plasma", na.value = "grey80") +
-  coord_sf(crs = st_crs("ESRI:102003")) +
-  labs(
-    fill = "家庭月收入\n（万元）", 
-    title = "2015-2019 年度美国各州家庭月收入",
-    caption = "数据源：美国人口调查局"
-  ) +
-  theme_void(base_size = 13) +
-  theme(
-    plot.title = element_text(hjust = 0.5),
-    legend.direction = "horizontal",
-    legend.position = "bottom",
-    legend.justification = "right",
-    legend.title = element_text(size = 10),
-    plot.caption = element_text(hjust = 0, vjust = 10)
-  )
-```
-
 
 接下来，看下2015-2019年度美国北卡罗来纳州社区级**家庭月收入**的空间分布，如图\@ref(fig:us-nc-income)所示，图中空白处表示该区域的样本量太少或调查区域时间不连续，导致统计模型的估计不可用。结合图\@ref(fig:us-nc-income)，从空间上看，高收入和低收入群体有明显的圈层，在图中高亮的地区（也可以叫城镇），低收入社区穿插在高收入社区中，且有清晰的穿插线。
 
@@ -1356,16 +1355,14 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
   labs(x = "白人占比", y = "家庭月收入（万）")
 ```
 
-如地理学第一定律所言：
+
 
 > Everything is related to everything else, but near things are more related than distant things.
 > 
 > --- Waldo Tobler [@Tobler1970]
 
 
-接下来，回归到本节主旨：空间相关性。先来看下社区级家庭月收入的**空间相关性**，这可以用局部莫兰 I 指数刻画，可调 [**rgeoda**](https://github.com/geodacenter/rgeoda/)包[@rgeoda]计算，**rgeoda** 包站在[libgeoda](https://github.com/GeoDaCenter/libgeoda) 和 [GeoDa](https://github.com/GeoDaCenter/geoda)的肩膀上提供许多空间数据分析算法和模型。
-
-如图\@ref(fig:medinc-moran)所示，红色区域表示高收入显著的空间聚集现象，而大片的蓝色区域表示低收入显著的空间聚集现象。
+接下来，回归到本节主旨：空间相关性。先来看下社区级家庭月收入的**空间相关性**，这可以用局部莫兰 I 指数刻画，可调 [**rgeoda**](https://github.com/geodacenter/rgeoda/)包[@rgeoda]计算，**rgeoda** 包站在[libgeoda](https://github.com/GeoDaCenter/libgeoda) 和 [GeoDa](https://github.com/GeoDaCenter/geoda)的肩膀上提供许多空间数据分析算法和模型。如图\@ref(fig:medinc-moran)所示，灰白色区域表示统计上空间聚集现象不显著，红色区域表示高收入**显著的**空间聚集现象，而大片的蓝色区域表示低收入**显著的**空间聚集现象。
 
 <!-- 
 家庭月收入和白人占比的**空间相关性**有没有呢？又有多少呢？
@@ -1413,7 +1410,7 @@ mtext(
 )
 ```
 
-相比于图\@ref(fig:us-nc-income)，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起，发达地区，低收入周边是高收入。从州、郡、社区层层下钻就可以看出收入不平衡的区域。
+相比于图\@ref(fig:us-nc-income)，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起。高收入地区，其内圈是低收入，外圈也是低收入，高收入低收入一圈包一圈。结合图\@ref(fig:us-income-state)，图\@ref(fig:us-income-county)和图\@ref(fig:us-nc-income)，从州、郡、社区层层下钻和分析就可以看出收入不平衡的区域，以及精细的空间聚类模式。
 
 ::: rmdtip
 **sf** 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。

@@ -50,7 +50,7 @@ description: "在美国和日本的国家统计局官网，地区分布图用于
 <li><a href="#美国北卡州家庭月收入与白人占比的空间相关性" id="toc-美国北卡州家庭月收入与白人占比的空间相关性">美国北卡州家庭月收入与白人占比的空间相关性</a>
 <ul>
 <li><a href="#数据获取" id="toc-数据获取">数据获取</a></li>
-<li><a href="#数据展示" id="toc-数据展示">数据展示</a></li>
+<li><a href="#数据探索" id="toc-数据探索">数据探索</a></li>
 <li><a href="#数据解读" id="toc-数据解读">数据解读</a></li>
 </ul></li>
 </ul></li>
@@ -1078,24 +1078,23 @@ View(acs_vars)</code></pre>
 <p>在数据库中以合理的形式存储数以万计的指标，或者说一个不断变化的指标体系，需要考虑易用性和可扩展性。一般是以「长格式」存储的，表头包含：国家、地区（州、郡、社区等）、日期（年、月、日等）、指标ID、数值、指标描述等。这样，新增指标可以直接在表后面追加，不会因新增指标而新增列，影响稳定性，必要时以国家、地区等作为分区键还可以加快查询速度。</p>
 </div>
 </div>
-<div id="数据展示" class="section level3">
-<h3>数据展示</h3>
-<p>地理学第二定律是这样说的：</p>
+<div id="数据探索" class="section level3">
+<h3>数据探索</h3>
 <blockquote>
 <p>The phenomenon external to an area of interest affects what goes on inside.</p>
 <p>— Waldo Tobler <span class="citation">(<a href="#ref-Tobler2004" role="doc-biblioref">Tobler 2004</a>)</span></p>
 </blockquote>
-<p>在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图<a href="#fig:us-income-state">13</a> 和图<a href="#fig:us-income-county">12</a> 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约、华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷，北卡罗来纳大学有<strong>16</strong>个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-income-county"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-income-county-1.png" alt="2015-2019 年度美国各个郡家庭月收入" width="921.6" />
-<p class="caption">
-图 12: 2015-2019 年度美国各个郡家庭月收入
-</p>
-</div>
+<p>在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图<a href="#fig:us-income-state">12</a> 和图<a href="#fig:us-income-county">13</a> 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约、华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷，北卡罗来纳大学有<strong>16</strong>个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-income-state"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/us-income-state-1.png" alt="2015-2019 年度美国各个州家庭月收入" width="921.6" />
 <p class="caption">
-图 13: 2015-2019 年度美国各个州家庭月收入
+图 12: 2015-2019 年度美国各个州家庭月收入
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-income-county"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-income-county-1.png" alt="2015-2019 年度美国各个郡家庭月收入" width="921.6" />
+<p class="caption">
+图 13: 2015-2019 年度美国各个郡家庭月收入
 </p>
 </div>
 <p>接下来，看下2015-2019年度美国北卡罗来纳州社区级<strong>家庭月收入</strong>的空间分布，如图<a href="#fig:us-nc-income">14</a>所示，图中空白处表示该区域的样本量太少或调查区域时间不连续，导致统计模型的估计不可用。结合图<a href="#fig:us-nc-income">14</a>，从空间上看，高收入和低收入群体有明显的圈层，在图中高亮的地区（也可以叫城镇），低收入社区穿插在高收入社区中，且有清晰的穿插线。</p>
@@ -1195,13 +1194,11 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
 图 20: 家庭月收入和白人占比线性相关性
 </p>
 </div>
-<p>如地理学第一定律所言：</p>
 <blockquote>
 <p>Everything is related to everything else, but near things are more related than distant things.</p>
 <p>— Waldo Tobler <span class="citation">(<a href="#ref-Tobler1970" role="doc-biblioref">Tobler 1970</a>)</span></p>
 </blockquote>
-<p>接下来，回归到本节主旨：空间相关性。先来看下社区级家庭月收入的<strong>空间相关性</strong>，这可以用局部莫兰 I 指数刻画，可调 <a href="https://github.com/geodacenter/rgeoda/"><strong>rgeoda</strong></a>包<span class="citation">(<a href="#ref-rgeoda" role="doc-biblioref">Li and Anselin 2022</a>)</span>计算，<strong>rgeoda</strong> 包站在<a href="https://github.com/GeoDaCenter/libgeoda">libgeoda</a> 和 <a href="https://github.com/GeoDaCenter/geoda">GeoDa</a>的肩膀上提供许多空间数据分析算法和模型。</p>
-<p>如图<a href="#fig:medinc-moran">21</a>所示，红色区域表示高收入显著的空间聚集现象，而大片的蓝色区域表示低收入显著的空间聚集现象。</p>
+<p>接下来，回归到本节主旨：空间相关性。先来看下社区级家庭月收入的<strong>空间相关性</strong>，这可以用局部莫兰 I 指数刻画，可调 <a href="https://github.com/geodacenter/rgeoda/"><strong>rgeoda</strong></a>包<span class="citation">(<a href="#ref-rgeoda" role="doc-biblioref">Li and Anselin 2022</a>)</span>计算，<strong>rgeoda</strong> 包站在<a href="https://github.com/GeoDaCenter/libgeoda">libgeoda</a> 和 <a href="https://github.com/GeoDaCenter/geoda">GeoDa</a>的肩膀上提供许多空间数据分析算法和模型。如图<a href="#fig:medinc-moran">21</a>所示，灰白色区域表示统计上空间聚集现象不显著，红色区域表示高收入<strong>显著的</strong>空间聚集现象，而大片的蓝色区域表示低收入<strong>显著的</strong>空间聚集现象。</p>
 <!-- 
 家庭月收入和白人占比的**空间相关性**有没有呢？又有多少呢？
 -->
@@ -1211,7 +1208,7 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
 图 21: 北卡社区级家庭月收入的空间相关性
 </p>
 </div>
-<p>相比于图<a href="#fig:us-nc-income">14</a>，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起，发达地区，低收入周边是高收入。从州、郡、社区层层下钻就可以看出收入不平衡的区域。</p>
+<p>相比于图<a href="#fig:us-nc-income">14</a>，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起。高收入地区，其内圈是低收入，外圈也是低收入，高收入低收入一圈包一圈。结合图<a href="#fig:us-income-state">12</a>，图<a href="#fig:us-income-county">13</a>和图<a href="#fig:us-nc-income">14</a>，从州、郡、社区层层下钻和分析就可以看出收入不平衡的区域，以及精细的空间聚类模式。</p>
 <div class="rmdtip">
 <p><strong>sf</strong> 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">14</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
 </div>
