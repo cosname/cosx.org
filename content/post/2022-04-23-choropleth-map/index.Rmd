@@ -111,6 +111,13 @@ div.img {
   margin-right: auto;
 }
 
+blockquote > p:last-child {
+  text-align: right;
+}
+blockquote > p:first-child {
+  text-align: inherit;
+}
+
 .columns {
   display: flex;
 }
@@ -572,7 +579,7 @@ print(p2, split = c(2, 1, 2, 1), more = FALSE)
 # 宽格式转长格式
 us_cancer_rates <- reshape(
   data = USCancerRates,
-  # 需要转行的列，也可以用列序号代替
+  # 需要转行的列
   varying = c(
     "LCL95.male", "rate.male", "UCL95.male",
     "LCL95.female", "rate.female", "UCL95.female"
@@ -580,7 +587,7 @@ us_cancer_rates <- reshape(
   times = c("男性", "女性"), # 构成新列 sex 的列值
   v.names = c("LCL95", "rate", "UCL95"), # 列转行 列值构成的新列，指定名称
   timevar = "sex", # 列转行 列名构成的新列，指定名称
-  idvar = c("state", "county"), # 可识别郡的编码
+  idvar = c("state", "county"), # 可识别郡的 ID
   # 原数据有 3041 行，性别字段只有两个取值，转长格式后有 2*3041 行
   new.row.names = 1:(2 * 3041),
   direction = "long"
@@ -1000,7 +1007,13 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 
 ### 数据展示
 
-在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图\@ref(fig:us-income-state) 和图\@ref(fig:us-income-county) 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约到华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷，北卡罗来纳大学有**16**个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。
+地理学第二定律是这样说的：
+
+> The phenomenon external to an area of interest affects what goes on inside.
+>
+> --- Waldo Tobler [@Tobler2004]
+
+在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图\@ref(fig:us-income-state) 和图\@ref(fig:us-income-county) 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约、华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷，北卡罗来纳大学有**16**个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。
 
 ```{r us-income-county}
 #| fig.cap="2015-2019 年度美国各个郡家庭月收入",
@@ -1240,7 +1253,7 @@ leaflet(nc_income_race_tract) |>
 st_centroid(st_geometry(nc_income_race_tract))
 ```
 
-如图\@ref(fig:bivar-us-states)所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图\@ref(fig:us-nc-income)和图\@ref(fig:us-nc-race2)的数据信息。
+如图\@ref(fig:bivar-us-states)所示，将家庭月收入和白人占比两个数据的分布联合起来看，融合了上图\@ref(fig:us-nc-income)和图\@ref(fig:us-nc-race2)的数据信息。图中以灰色块表示缺失数据。
 
 ```{r bivar-us-states}
 #| fig.cap="2015-2019 年度北卡州社区级家庭月收入和白人占比的空间相关性",
@@ -1252,10 +1265,10 @@ st_centroid(st_geometry(nc_income_race_tract))
 #| echo=FALSE
 library(sf) 
 # 统计白人占比和家庭月收入指标
-nc_income_race_county <- within(nc_income_race_county, {
-  pctWhite <- B02001_002E / B02001_001E
-  medInc <- B19013_001E
-})
+# nc_income_race_county <- within(nc_income_race_county, {
+#   pctWhite <- B02001_002E / B02001_001E
+#   medInc <- B19013_001E
+# })
 # 加载一些必要的绘图包
 library(ggplot2)
 library(biscale)
@@ -1336,10 +1349,61 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
   labs(x = "白人占比", y = "家庭月收入（万）")
 ```
 
-最后，咱们回归到本节主旨，家庭月收入和白人占比的**空间相关性**有没有呢？又有多少呢？
+如地理学第一定律所言：
 
+> Everything is related to everything else, but near things are more related than distant things.
+> 
+> --- Waldo Tobler [@Tobler1970]
 
+最后，咱们回归到本节主旨，家庭月收入和白人占比的**空间相关性**有没有呢？又有多少呢？先来看下家庭月收入的**空间相关性**，这可以用局部莫兰 I 指数刻画，如图\@ref(fig:medinc-moran)所示，红色区域表示
 
+<!-- 
+可用半变异函数刻画离散点的空间相关性。 
+-->
+
+```{r medinc-moran}
+#| fig.width=9,
+#| fig.height=4.5,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| fig.cap="北卡社区级家庭月收入的空间相关性",
+#| echo=FALSE
+# 去掉收入为 NA 的社区观测值
+nc_income_race_tract_sub = subset(x = nc_income_race_tract, subset = !is.na(medInc))
+# 加载包提供莫兰 I 指数计算函数
+library(digest)
+library(rgeoda)
+# 构建权重矩阵
+queen_w <- queen_weights(nc_income_race_tract_sub)
+# 计算局部莫兰 I 指数
+lisa <- local_moran(queen_w,  nc_income_race_tract_sub['medInc'])
+# 抽取数据
+lisa_colors <- lisa_colors(lisa)
+lisa_labels <- lisa_labels(lisa)
+lisa_clusters <- lisa_clusters(lisa)
+# 绘图
+par(mar = c(0, 0, 2, 0))
+plot(st_geometry(nc_income_race_tract_sub),
+  col = sapply(lisa_clusters, function(x) {
+    return(lisa_colors[[x + 1]])
+  }),
+  border = "gray80", lwd = 0.2,
+  main = ""
+)
+title(main = "北卡社区级家庭月收入的局部莫兰 I 指数地图", line = 1)
+legend("topleft",
+  legend = lisa_labels,
+  fill = lisa_colors,
+  border = NA,
+  box.col = NA,
+  cex = 0.85,
+  horiz = TRUE
+)
+mtext(
+  text = "数据源：美国人口调查局",
+  side = 1, adj = 0.03, line = -2
+)
+```
 
 ::: rmdtip
 **sf** 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
