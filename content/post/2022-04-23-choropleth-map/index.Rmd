@@ -25,7 +25,7 @@ link-citations: true
 bibliography: 
   - refer.bib
 forum_id: xxx
-description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
+description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
 
@@ -932,7 +932,6 @@ mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright",
 
 ## 美国北卡州家庭年收入与白人占比的空间相关性
 
-<!-- 分四部分：数据获取、数据整理、数据展示、数据解读 -->
 
 ### 数据获取
 
@@ -1271,11 +1270,6 @@ st_centroid(st_geometry(nc_income_race_tract))
 #| warning=FALSE,
 #| echo=FALSE
 library(sf)
-# 统计白人占比和家庭年收入指标
-# nc_income_race_county <- within(nc_income_race_county, {
-#   pctWhite <- B02001_002E / B02001_001E
-#   medInc <- B19013_001E
-# })
 # 加载一些必要的绘图包
 library(ggplot2)
 library(biscale)
@@ -1371,9 +1365,6 @@ ggplot(data = nc_income_race_tract, aes(x = pctWhite, y = medInc / 10000)) +
 
 接下来，回归到本节主旨：空间相关性。先来看下社区级家庭年收入的**空间相关性**，这可以用局部莫兰 I 指数刻画，可调 [**rgeoda**](https://github.com/geodacenter/rgeoda/)包[@rgeoda]计算，**rgeoda** 包站在[libgeoda](https://github.com/GeoDaCenter/libgeoda) 和 [GeoDa](https://github.com/GeoDaCenter/geoda)的肩膀上提供许多空间数据分析算法和模型。如图\@ref(fig:medinc-moran)所示，灰白色区域表示统计上空间聚集现象不显著，红色区域表示高收入**显著的**空间聚集现象，而大片的蓝色区域表示低收入**显著的**空间聚集现象。
 
-<!-- 
-家庭年收入和白人占比的**空间相关性**有没有呢？又有多少呢？
--->
 
 ```{r medinc-moran}
 #| fig.width=9,
@@ -1420,7 +1411,7 @@ mtext(
 相比于图\@ref(fig:us-nc-income)，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起。高收入地区，其内圈是低收入，外圈也是低收入，高收入低收入一圈包一圈。结合图\@ref(fig:us-income-state)，图\@ref(fig:us-income-county)和图\@ref(fig:us-nc-income)，从州、郡、社区层层下钻和分析就可以看出收入不平衡的区域，以及精细的空间聚类模式。
 
 ::: rmdtip
-**sf** 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
+**sf** 包内置的北卡州郡级地图数据集 `nc.gpkg` 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
 :::
 
 
@@ -1437,7 +1428,9 @@ mtext(
 
 本文介绍的 **7** 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图\@ref(fig:choropleth-map) 所示，红色框代表 6 种绘图方案，外加 **sf** 强化的 **ggplot2** 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 **latticeExtra** 绘图就非常典型，添加图例标题使用了 **grid** 包，而添加州、郡边界线，用了更底层的面板函数 `panel.lines()`。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 **mapsf** 包绘制的图\@ref(fig:us-cancer-rates-mapsf) 或 **sf** 包绘制的图\@ref(fig:us-cancer-rates-sf)，那就没必要再折腾了。
 
-![(\#fig:choropleth-map) 7 种绘图方案依赖的 R 包及其层次关系](img/choropleth-map.svg){.full}
+
+
+![(\#fig:choropleth-map) 7 种绘图方案依赖的 R 包及其层次关系](img/choropleth-map.svg)
 
 
 **lattice** 包提供非常简便的绘图公式语法，**latticeExtra** 也很好地继承了这一特性，如`rownames(USCancerRates) ~ rate.female + rate.male`。庆幸的是各郡癌症死亡率数据的郡名称`rownames(USCancerRates)` 和地图数据 `us_county` 里的郡名称 `names` 是可以映射上的，否则地区分布图就没法画了。**lattice** 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。

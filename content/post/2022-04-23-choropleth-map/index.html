@@ -25,7 +25,7 @@ link-citations: true
 bibliography: 
   - refer.bib
 forum_id: xxx
-description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就是衡量国民经济运行状态的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
+description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
 
@@ -1024,7 +1024,6 @@ mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quo
 <p><a href="https://en.wikipedia.org/wiki/Multivariate_map">多元地区分布图</a>用以同时展示两个具有空间相关性的变量，比如人均收入和预期寿命，房地产投资占比和城镇化率<span class="citation">(<a href="#ref-Meyer1975" role="doc-biblioref">Meyer, Broome, and Jr 1975</a>)</span>。下面以美国北卡州家庭年收入与白人占比的空间相关性为例，在地区分布图上同时展示多个指标，除了用到 <strong>ggplot2</strong> 和 <strong>sf</strong> 包，还需 <a href="https://github.com/slu-openGIS/biscale"><strong>biscale</strong></a> <span class="citation">(<a href="#ref-Prener2020" role="doc-biblioref">Prener, Grossenbacher, and Zehr 2020</a>)</span>和 <a href="https://github.com/wilkelab/cowplot"><strong>cowplot</strong></a> <span class="citation">(<a href="#ref-Wilke2020" role="doc-biblioref">Wilke 2020</a>)</span>两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客<a href="https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/">Bivariate maps with <strong>ggplot2</strong> and <strong>sf</strong></a>。</p>
 <div id="美国北卡州家庭年收入与白人占比的空间相关性" class="section level2">
 <h2>美国北卡州家庭年收入与白人占比的空间相关性</h2>
-<!-- 分四部分：数据获取、数据整理、数据展示、数据解读 -->
 <div id="数据获取" class="section level3">
 <h3>数据获取</h3>
 <p>受上个癌症死亡率地区分布图的启发，除了郡级别，还有社区普查级别的地区分布图，以描述更加精细的空间区域数据分布，同时，这次直接从<a href="https://www.census.gov/">美国人口调查局</a>获取数据。数据来自 2015-2019 年度美国社区调查（American Community Survey，简称 ACS），每年约<strong>350</strong>万家庭的抽样，每年更新一次。本节使用的数据有：</p>
@@ -1197,9 +1196,6 @@ summary(fit)
 <p>— Waldo Tobler <span class="citation">(<a href="#ref-Tobler1970" role="doc-biblioref">Tobler 1970</a>)</span></p>
 </blockquote>
 <p>接下来，回归到本节主旨：空间相关性。先来看下社区级家庭年收入的<strong>空间相关性</strong>，这可以用局部莫兰 I 指数刻画，可调 <a href="https://github.com/geodacenter/rgeoda/"><strong>rgeoda</strong></a>包<span class="citation">(<a href="#ref-rgeoda" role="doc-biblioref">Li and Anselin 2022</a>)</span>计算，<strong>rgeoda</strong> 包站在<a href="https://github.com/GeoDaCenter/libgeoda">libgeoda</a> 和 <a href="https://github.com/GeoDaCenter/geoda">GeoDa</a>的肩膀上提供许多空间数据分析算法和模型。如图<a href="#fig:medinc-moran">21</a>所示，灰白色区域表示统计上空间聚集现象不显著，红色区域表示高收入<strong>显著的</strong>空间聚集现象，而大片的蓝色区域表示低收入<strong>显著的</strong>空间聚集现象。</p>
-<!-- 
-家庭年收入和白人占比的**空间相关性**有没有呢？又有多少呢？
--->
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:medinc-moran"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/medinc-moran-1.png" alt="北卡社区级家庭年收入的空间相关性" width="864" />
 <p class="caption">
@@ -1208,7 +1204,7 @@ summary(fit)
 </div>
 <p>相比于图<a href="#fig:us-nc-income">14</a>，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起。高收入地区，其内圈是低收入，外圈也是低收入，高收入低收入一圈包一圈。结合图<a href="#fig:us-income-state">12</a>，图<a href="#fig:us-income-county">13</a>和图<a href="#fig:us-nc-income">14</a>，从州、郡、社区层层下钻和分析就可以看出收入不平衡的区域，以及精细的空间聚类模式。</p>
 <div class="rmdtip">
-<p><strong>sf</strong> 包内置的北卡郡地图数据集 nc.gpkg 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">14</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
+<p><strong>sf</strong> 包内置的北卡州郡级地图数据集 <code>nc.gpkg</code> 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">14</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
 </div>
 </div>
 </div>
@@ -1224,7 +1220,7 @@ summary(fit)
 <p>在掌握基础的一些工具后，需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
 <p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">22</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，而添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再折腾了。</p>
 <div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
-<img src="img/choropleth-map.svg" class="full" alt="" />
+<img src="img/choropleth-map.svg" alt="" />
 <p class="caption">图 22:  7 种绘图方案依赖的 R 包及其层次关系</p>
 </div>
 <p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。庆幸的是各郡癌症死亡率数据的郡名称<code>rownames(USCancerRates)</code> 和地图数据 <code>us_county</code> 里的郡名称 <code>names</code> 是可以映射上的，否则地区分布图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
