@@ -163,7 +163,7 @@ blockquote > p:first-child {
 <p>接下来，本文分四个部分展开介绍地区分布图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
 <p>单变量情形中以 <strong>latticeExtra</strong> 包<span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的数据集 USCancerRates 为例，以地区分布图形式展示美国 1999-2003 年度各郡的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制地区分布图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>、<strong>tmap</strong> 包<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>、<strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>和 <strong>mapsf</strong> 包<span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
 <p>多变量情形中以美国人口调查局发布的调查数据为基础，分析北卡罗来纳州各郡社区普查级的家庭年收入与白人占比的空间相关性。先以单变量的地区分布图描述各个普查区域里家庭年收入的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。</p>
-<p>本文小结部分总结了 7 种绘图方案的情况，总结了不同方案间的关系和一些绘图经验，希望帮助读者加深理解和学习。</p>
+<p>本文小结部分总结了 7 种绘图不同方案间的关系和一些绘图经验，希望帮助读者加深理解和学习。</p>
 <p>未来展望部分从应用场景和绘图技术方面继续提供一些示例，供读者继续探索。</p>
 </div>
 <div id="单变量情形" class="section level1">
@@ -1069,7 +1069,7 @@ nc_tract_map &lt;- tigris::tracts(state = 37, cb = T, year = 2019, class = &quot
 </ol>
 <p>下面补充几个细节：</p>
 <ol style="list-style-type: decimal">
-<li><p>不同年份 ACS 调查的郡、社区有变化，美国也会定期更新地图数据，因此，北卡郡级、社区级地图数据的年份和 ACS 调查数据的发布年份要一致，。</p></li>
+<li><p>不同年份 ACS 调查的郡、社区有变化，美国也会定期更新地图数据，因此，北卡郡级、社区级地图数据的年份和 ACS 调查数据的发布年份要一致。</p></li>
 <li><p>R 软件内置了数据集 <code>state.name</code> 和 <code>state.abb</code>，分别对应美国各个州的名称及其简称，<strong>tidycensus</strong> 包内置的数据集 <code>fips_codes</code> 还提供各州、郡的 FIPS 代码，用于下载所需州郡的数据。</p></li>
 <li><p>读者若对其它数据指标感兴趣，可通过如下命令查看：</p>
 <pre class="r"><code>acs_vars &lt;- load_variables(year = 2019, dataset = &quot;acs5&quot;)
