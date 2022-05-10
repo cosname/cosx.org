@@ -1,7 +1,7 @@
 library(tidycensus)
 library(sf)
 options(tigris_use_cache = TRUE)
-Sys.setenv(CENSUS_API_KEY="309076042f04a3e30ff824d1b547b40eb442c3a6")
+Sys.setenv(CENSUS_API_KEY="YOUR_KEY")
 
 # -------------------------------------------------
 # 北卡家庭月收入和白人数量
