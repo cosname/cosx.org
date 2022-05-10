@@ -24,7 +24,7 @@ output:
 link-citations: true
 bibliography: 
   - refer.bib
-forum_id: xxx
+forum_id: 423119
 description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
@@ -163,7 +163,7 @@ blockquote > p:first-child {
 <p>接下来，本文分四个部分展开介绍地区分布图，分别是单变量情形、多变量情形、本文小结和未来展望。</p>
 <p>单变量情形中以 <strong>latticeExtra</strong> 包<span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的数据集 USCancerRates 为例，以地区分布图形式展示美国 1999-2003 年度各郡的年平均癌症死亡率，此处专题的含义是「人口死亡率」，显而易见，癌症死亡率只是一方面，还有流感死亡率等，癌症可以分类型，如乳腺癌、子宫癌等，人又可以分属性，如性别、年龄、种族等等。在数据操作、指标计算和分面绘图等方面从零开始介绍绘制地区分布图的过程，包括基础数据操作以及六个绘图工具 <strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>、<strong>latticeExtra</strong> 包、<strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>、<strong>tmap</strong> 包<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>、<strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>和 <strong>mapsf</strong> 包<span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，阐述数据指标「年平均癌症死亡率」的实际含义、指标口径和计算过程，从易到难，层层深入，以期达到出版级的水准，探索出最佳实践。</p>
 <p>多变量情形中以美国人口调查局发布的调查数据为基础，分析北卡罗来纳州各郡社区普查级的家庭年收入与白人占比的空间相关性。先以单变量的地区分布图描述各个普查区域里家庭年收入的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。</p>
-<p>本文小结部分总结了 7 种绘图方案的情况，提炼了其间的关联关系，一些绘图经验，希望帮助读者加深理解和学习。</p>
+<p>本文小结部分总结了 7 种绘图方案的情况，总结了不同方案间的关系和一些绘图经验，希望帮助读者加深理解和学习。</p>
 <p>未来展望部分从应用场景和绘图技术方面继续提供一些示例，供读者继续探索。</p>
 </div>
 <div id="单变量情形" class="section level1">
@@ -802,7 +802,7 @@ ggplot() +
 <div id="tmap" class="section level3">
 <h3>tmap</h3>
 <p>同 <strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>的绘图函数 <code>plot()</code> 一样，<strong>tmap</strong> <span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span> 也是基于 Base R 图形系统，但使用语法更加贴合 <strong>ggplot2</strong> 包<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span>，对空间数据可视化有更多专业支持，比如基于比例的符号/气泡图<span class="citation">(<a href="#ref-Susumu2006" role="doc-biblioref">Tanimura, Kuroiwa, and Mizota 2006</a>)</span> <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>和基于二维核密度估计的热力图<span class="citation">(<a href="#ref-Tennekes2018" role="doc-biblioref">Tennekes 2018</a>)</span>。</p>
-<p><strong>tmap</strong> 支持 <strong>sp</strong> 包提供的 Spatial 类数据对象，也支持 <strong>sf</strong> 包提供的 Simple Features 类数据对象，众所周知，后者是新一代更好的工具，因此接下来的示例都将基于 <strong>sf</strong> 包。首先从美国人口调查局下载州和郡级别的<a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">多边形边界数据</a>，再类似 <strong>usmapdata</strong> 包对阿拉斯加、夏威夷和波多黎各做适当的调整，借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>让这个过程变得容易，调整地图数据的代码与源文档放在一起，读者可自取。</p>
+<p><strong>tmap</strong> 支持 <strong>sp</strong> 包提供的 Spatial 类数据对象，也支持 <strong>sf</strong> 包提供的 Simple Features 类数据对象，后者是新一代更好的工具，因此接下来的示例都将基于 <strong>sf</strong> 包。首先从美国人口调查局下载州和郡级别的<a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html">多边形边界数据</a>，再类似 <strong>usmapdata</strong> 包对阿拉斯加、夏威夷和波多黎各做适当的调整，借助 <strong>tidycensus</strong> 包<span class="citation">(<a href="#ref-tidycensus" role="doc-biblioref">Walker and Herman 2022</a>)</span>让这个过程变得容易，调整地图数据的代码与源文档放在一起，读者可自取。</p>
 <pre class="r"><code># 准备地图数据
 library(sf)
 us_state_map &lt;- readRDS(file = &quot;data/us_state_map.rds&quot;)
@@ -1184,7 +1184,7 @@ summary(fit)
 #   (36 observations deleted due to missingness)
 # Multiple R-squared:  0.147,   Adjusted R-squared:  0.147 
 # F-statistic:  372 on 1 and 2157 DF,  p-value: &lt;2e-16</code></pre>
-<p>根据调整的 <span class="math inline">\(R^2 = 0.147\)</span>，各社区家庭年收入和白人占比相关性比较低，要是相关性到达统计课本里常见的 50%，甚至更高，那社会问题就大发了！结合图<a href="#fig:lm-income-race">20</a>也不难看出<strong>稳定正向</strong>的关系，平均来说，社区的白人占比增加一个百分点，家庭年收入增加<strong>438</strong>美元。</p>
+<p>根据调整的 <span class="math inline">\(R^2 = 0.147\)</span>，各社区家庭年收入和白人占比相关性比较低，结合图<a href="#fig:lm-income-race">20</a>也不难看出<strong>稳定正向</strong>的关系，平均来说，社区的白人占比增加一个百分点，该地区家庭平均年收入增加<strong>438</strong>美元。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:lm-income-race"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/lm-income-race-1.png" alt="家庭年收入和白人占比线性相关性" width="768" />
 <p class="caption">
@@ -1209,7 +1209,7 @@ summary(fit)
 图 22: 北卡社区级白人占比的空间相关性
 </p>
 </div>
-<p>类似地，图<a href="#fig:pctwhite-moran">22</a>更清晰地描述白人在北卡的分布区域，结合收入分布图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:medinc-moran">21</a>来看，收入越高的地区白人占比越高，考虑空间因素，<span class="math inline">\(R^2\)</span> 肯定要比 0.147 大多了。</p>
+<p>类似地，图<a href="#fig:pctwhite-moran">22</a>更清晰地描述白人在北卡的分布区域，结合收入分布图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:medinc-moran">21</a>来看，收入越高的地区白人占比越高，由此可见，引入地区分布图帮助我们更直观地了解了白人占比和家庭收入的关系。</p>
 <!-- 
 TODO: 统计过去20年的 $R^2$ 变化，观察其变化趋势。
 -->
@@ -1275,13 +1275,14 @@ TODO: 统计过去20年的 $R^2$ 变化，观察其变化趋势。
 </div>
 <div id="环境信息" class="section level1">
 <h1>环境信息</h1>
-<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> <span class="citation">(<a href="#ref-blogdown" role="doc-biblioref">Xie, Hill, and Thomas 2017</a>)</span> 构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。点击本页面右上角「编辑本页」即可跳转至源文件，文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：</p>
+<p>本文是在 RStudio IDE 内用 R Markdown 编辑的，用 <strong>blogdown</strong> <span class="citation">(<a href="#ref-blogdown" role="doc-biblioref">Xie, Hill, and Thomas 2017</a>)</span> 构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。点击本页面右上角「编辑本页」即可跳转至源文件，文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：</p>
 <pre class="r"><code>xfun::session_info(packages = c(
   &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;blogdown&quot;,
   &quot;ggplot2&quot;, &quot;cowplot&quot;, &quot;biscale&quot;,
   &quot;grid&quot;, &quot;lattice&quot;, &quot;latticeExtra&quot;,
-  &quot;maps&quot;, &quot;mapproj&quot;, &quot;sf&quot;, &quot;tidycensus&quot;,
-  &quot;usmapdata&quot;, &quot;mapsf&quot;, &quot;tmap&quot;, &quot;rgeoda&quot;
+  &quot;maps&quot;, &quot;mapproj&quot;, &quot;sf&quot;, &quot;showtext&quot;,
+  &quot;tidycensus&quot;, &quot;tigris&quot;, &quot;rgeoda&quot;,
+  &quot;usmapdata&quot;, &quot;mapsf&quot;, &quot;tmap&quot;
 ), dependencies = FALSE)
 # R version 4.2.0 (2022-04-22)
 # Platform: x86_64-apple-darwin17.0 (64-bit)
@@ -1294,8 +1295,9 @@ TODO: 统计过去20年的 $R^2$ 变化，观察其变化趋势。
 #   ggplot2_3.3.6.9000  grid_4.2.0          knitr_1.39         
 #   lattice_0.20-45     latticeExtra_0.6.29 mapproj_1.2.8      
 #   maps_3.4.0          mapsf_0.4.0         rgeoda_0.0.9       
-#   rmarkdown_2.14      sf_1.0-7            tidycensus_1.2.1   
-#   tmap_3.3.3          usmapdata_0.1.0    
+#   rmarkdown_2.14      sf_1.0-7            showtext_0.9.5     
+#   tidycensus_1.2.1    tigris_1.6          tmap_3.3.3         
+#   usmapdata_0.1.0    
 # 
 # Pandoc version: 2.18
 # 

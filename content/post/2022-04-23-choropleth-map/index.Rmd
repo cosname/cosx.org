@@ -24,7 +24,7 @@ output:
 link-citations: true
 bibliography: 
   - refer.bib
-forum_id: xxx
+forum_id: 423119
 description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
@@ -154,7 +154,7 @@ knitr::opts_chunk$set(
 多变量情形中以美国人口调查局发布的调查数据为基础，分析北卡罗来纳州各郡社区普查级的家庭年收入与白人占比的空间相关性。先以单变量的地区分布图描述各个普查区域里家庭年收入的空间分布，接着和二元变量的地区分布图形成对比，展示相关性的空间分布。
 
 
-本文小结部分总结了 7 种绘图方案的情况，提炼了其间的关联关系，一些绘图经验，希望帮助读者加深理解和学习。
+本文小结部分总结了 7 种绘图方案的情况，总结了不同方案间的关系和一些绘图经验，希望帮助读者加深理解和学习。
 
 
 未来展望部分从应用场景和绘图技术方面继续提供一些示例，供读者继续探索。
@@ -687,7 +687,7 @@ ggplot() +
 [^symbol-map]: @Susumu2006 基于 2000 年日本长崎县长崎市的町村级行政边界地图数据，以及当年关于儿童人口普查数据，以比例气泡图展示人口的空间分布，是 R 语言社区最早一幅用 **maps** 包绘制的比例气泡地图。顺便一提，长崎市大约相当于咱们的地级市，粗略地讲，往上都道府县是一级，往下町村为一级，中间是市区一级。
 
 
-**tmap** 支持 **sp** 包提供的 Spatial 类数据对象，也支持 **sf** 包提供的 Simple Features 类数据对象，众所周知，后者是新一代更好的工具，因此接下来的示例都将基于 **sf** 包。首先从美国人口调查局下载州和郡级别的[多边形边界数据](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)，再类似 **usmapdata** 包对阿拉斯加、夏威夷和波多黎各做适当的调整，借助 **tidycensus** 包[@tidycensus]让这个过程变得容易，调整地图数据的代码与源文档放在一起，读者可自取。
+**tmap** 支持 **sp** 包提供的 Spatial 类数据对象，也支持 **sf** 包提供的 Simple Features 类数据对象，后者是新一代更好的工具，因此接下来的示例都将基于 **sf** 包。首先从美国人口调查局下载州和郡级别的[多边形边界数据](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html)，再类似 **usmapdata** 包对阿拉斯加、夏威夷和波多黎各做适当的调整，借助 **tidycensus** 包[@tidycensus]让这个过程变得容易，调整地图数据的代码与源文档放在一起，读者可自取。
 
 ```{r}
 # 准备地图数据
@@ -1338,7 +1338,7 @@ fit = lm(data = nc_income_race_tract, medInc ~ pctWhite)
 summary(fit)
 ```
 
-根据调整的 $R^2 = 0.147$，各社区家庭年收入和白人占比相关性比较低，要是相关性到达统计课本里常见的 50\%，甚至更高，那社会问题就大发了！结合图\@ref(fig:lm-income-race)也不难看出**稳定正向**的关系，平均来说，社区的白人占比增加一个百分点，家庭年收入增加**438**美元。
+根据调整的 $R^2 = 0.147$，各社区家庭年收入和白人占比相关性比较低，结合图\@ref(fig:lm-income-race)也不难看出**稳定正向**的关系，平均来说，社区的白人占比增加一个百分点，该地区家庭平均年收入增加**438**美元。
 
 
 ```{r lm-income-race}
@@ -1453,8 +1453,7 @@ mtext(
 )
 ```
 
-类似地，图\@ref(fig:pctwhite-moran)更清晰地描述白人在北卡的分布区域，结合收入分布图\@ref(fig:us-nc-income)和图\@ref(fig:medinc-moran)来看，收入越高的地区白人占比越高，考虑空间因素，$R^2$ 肯定要比 0.147 大多了。
-
+类似地，图\@ref(fig:pctwhite-moran)更清晰地描述白人在北卡的分布区域，结合收入分布图\@ref(fig:us-nc-income)和图\@ref(fig:medinc-moran)来看，收入越高的地区白人占比越高，由此可见，引入地区分布图帮助我们更直观地了解了白人占比和家庭收入的关系。
 
 <!-- 
 TODO: 统计过去20年的 $R^2$ 变化，观察其变化趋势。
@@ -1523,7 +1522,7 @@ TODO: 统计过去20年的 $R^2$ 变化，观察其变化趋势。
 
 # 环境信息
 
-在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 **blogdown** [@blogdown] 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。点击本页面右上角「编辑本页」即可跳转至源文件，文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：
+本文是在 RStudio IDE 内用 R Markdown 编辑的，用 **blogdown** [@blogdown] 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。点击本页面右上角「编辑本页」即可跳转至源文件，文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：
 
 ```{r}
 #| echo=TRUE,
@@ -1532,8 +1531,9 @@ xfun::session_info(packages = c(
   "knitr", "rmarkdown", "blogdown",
   "ggplot2", "cowplot", "biscale",
   "grid", "lattice", "latticeExtra",
-  "maps", "mapproj", "sf", "tidycensus",
-  "usmapdata", "mapsf", "tmap", "rgeoda"
+  "maps", "mapproj", "sf", "showtext",
+  "tidycensus", "tigris", "rgeoda",
+  "usmapdata", "mapsf", "tmap"
 ), dependencies = FALSE)
 ```
 
