@@ -4,7 +4,7 @@ options(tigris_use_cache = TRUE)
 Sys.setenv(CENSUS_API_KEY="YOUR_KEY")
 
 # -------------------------------------------------
-# 北卡家庭月收入和白人数量
+# 北卡家庭年收入和白人数量
 # -------------------------------------------------
 ## 郡级
 nc_income_race_county <- get_acs(
@@ -29,7 +29,7 @@ plot(nc_income_race_county["B19013_001E"])
 ## 查看社区级收入分布
 plot(nc_income_race_tract["B19013_001E"])
 
-### 社区级家庭月收入的空间分布
+### 社区级家庭年收入的空间分布
 showtext::showtext_auto()
 par(mar = c(2, 0, 0, 0))
 plot(nc_income_race_tract["B19013_001E"],
