@@ -1338,7 +1338,8 @@ fit = lm(data = nc_income_race_tract, medInc ~ pctWhite)
 summary(fit)
 ```
 
-根据调整的 $R^2$， 初步看起来，各社区家庭年收入和白人占比相关性比较低，才 **0.147**！结合图\@ref(fig:lm-income-race)也不难看出**稳定正向**的关系，要是相关性到达统计课本里常见的 50\%，甚至更高，那社会问题就大发了。
+根据调整的 $R^2 = 0.147$，各社区家庭年收入和白人占比相关性比较低，要是相关性到达统计课本里常见的 50\%，甚至更高，那社会问题就大发了！结合图\@ref(fig:lm-income-race)也不难看出**稳定正向**的关系，平均来说，社区的白人占比增加一个百分点，家庭年收入增加**438**美元。
+
 
 ```{r lm-income-race}
 #| fig.width=8,
@@ -1410,10 +1411,60 @@ mtext(
 
 相比于图\@ref(fig:us-nc-income)，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起。高收入地区，其内圈是低收入，外圈也是低收入，高收入低收入一圈包一圈。结合图\@ref(fig:us-income-state)，图\@ref(fig:us-income-county)和图\@ref(fig:us-nc-income)，从州、郡、社区层层下钻和分析就可以看出收入不平衡的区域，以及精细的空间聚类模式。
 
+
+
+```{r pctwhite-moran}
+#| fig.width=9,
+#| fig.height=4.5,
+#| fig.align="center",
+#| fig.showtext=TRUE,
+#| fig.cap="北卡社区级白人占比的空间相关性",
+#| echo=FALSE
+nc_income_race_tract_sub <- subset(x = nc_income_race_tract, subset = !is.na(pctWhite))
+# 构建权重矩阵
+queen_w <- queen_weights(nc_income_race_tract_sub)
+# 计算局部莫兰 I 指数
+white_lisa <- local_moran(queen_w,  nc_income_race_tract_sub['pctWhite'])
+# 抽取数据
+white_lisa_colors <- lisa_colors(white_lisa)
+white_lisa_labels <- lisa_labels(white_lisa)
+white_lisa_clusters <- lisa_clusters(white_lisa)
+# 绘图
+par(mar = c(0, 0, 2, 0))
+plot(st_geometry(nc_income_race_tract_sub),
+     col = sapply(white_lisa_clusters, function(x) {
+       return(white_lisa_colors[[x + 1]])
+     }),
+     border = "gray80", lwd = 0.2,
+     main = ""
+)
+title(main = "北卡社区级白人占比的局部莫兰 I 指数地图", line = 1)
+legend("topleft",
+       legend = white_lisa_labels,
+       fill = white_lisa_colors,
+       border = NA,
+       box.col = NA,
+       cex = 0.85,
+       horiz = TRUE
+)
+mtext(
+  text = "数据源：美国人口调查局",
+  side = 1, adj = 0.03, line = -2
+)
+```
+
+类似地，图\@ref(fig:pctwhite-moran)更清晰地描述白人在北卡的分布区域，结合收入分布图\@ref(fig:us-nc-income)和图\@ref(fig:medinc-moran)来看，收入越高的地区白人占比越高，考虑空间因素，$R^2$ 肯定要比 0.147 大多了。
+
+
+<!-- 
+TODO: 统计过去20年的 $R^2$ 变化，观察其变化趋势。
+-->
+
+<!--
 ::: rmdtip
 **sf** 包内置的北卡州郡级地图数据集 `nc.gpkg` 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
 :::
-
+-->
 
 
 # 本文小结
@@ -1482,7 +1533,7 @@ xfun::session_info(packages = c(
   "ggplot2", "cowplot", "biscale",
   "grid", "lattice", "latticeExtra",
   "maps", "mapproj", "sf", "tidycensus",
-  "usmapdata", "mapsf", "tmap"
+  "usmapdata", "mapsf", "tmap", "rgeoda"
 ), dependencies = FALSE)
 ```
 

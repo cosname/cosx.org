@@ -1184,7 +1184,7 @@ summary(fit)
 #   (36 observations deleted due to missingness)
 # Multiple R-squared:  0.147,   Adjusted R-squared:  0.147 
 # F-statistic:  372 on 1 and 2157 DF,  p-value: &lt;2e-16</code></pre>
-<p>根据调整的 <span class="math inline">\(R^2\)</span>， 初步看起来，各社区家庭年收入和白人占比相关性比较低，才 <strong>0.147</strong>！结合图<a href="#fig:lm-income-race">20</a>也不难看出<strong>稳定正向</strong>的关系，要是相关性到达统计课本里常见的 50%，甚至更高，那社会问题就大发了。</p>
+<p>根据调整的 <span class="math inline">\(R^2 = 0.147\)</span>，各社区家庭年收入和白人占比相关性比较低，要是相关性到达统计课本里常见的 50%，甚至更高，那社会问题就大发了！结合图<a href="#fig:lm-income-race">20</a>也不难看出<strong>稳定正向</strong>的关系，平均来说，社区的白人占比增加一个百分点，家庭年收入增加<strong>438</strong>美元。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:lm-income-race"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/lm-income-race-1.png" alt="家庭年收入和白人占比线性相关性" width="768" />
 <p class="caption">
@@ -1203,9 +1203,21 @@ summary(fit)
 </p>
 </div>
 <p>相比于图<a href="#fig:us-nc-income">14</a>，此图描述的空间结构清晰得多了，整体上，高收入的聚在一起，低收入的也聚在一起。高收入地区，其内圈是低收入，外圈也是低收入，高收入低收入一圈包一圈。结合图<a href="#fig:us-income-state">12</a>，图<a href="#fig:us-income-county">13</a>和图<a href="#fig:us-nc-income">14</a>，从州、郡、社区层层下钻和分析就可以看出收入不平衡的区域，以及精细的空间聚类模式。</p>
-<div class="rmdtip">
-<p><strong>sf</strong> 包内置的北卡州郡级地图数据集 <code>nc.gpkg</code> 坐标参考系为 <a href="https://epsg.io/4267"><code>EPSG:4267</code></a>，而通常使用的 <strong>leaflet</strong> 包<span class="citation">(<a href="#ref-leaflet" role="doc-biblioref">Cheng, Karambelkar, and Xie 2022</a>)</span>和 <strong>mapdeck</strong> 包<span class="citation">(<a href="#ref-mapdeck" role="doc-biblioref">Cooley 2020</a>)</span>需要地图数据集转化到 <a href="https://epsg.io/4326"><code>EPSG:4326</code></a>，其细微差别详见 Hiroaki Yutani 的博客 <span class="citation">(<a href="#ref-Yutani2018" role="doc-biblioref">Yutani 2018</a>)</span>。本文源文档提供图<a href="#fig:us-nc-income">14</a>的 <strong>leaflet</strong> 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到<a href="https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China">火星坐标系</a>，其间会存在一定的<a href="https://gis.stackexchange.com/questions/234202">漂移</a>。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:pctwhite-moran"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/pctwhite-moran-1.png" alt="北卡社区级白人占比的空间相关性" width="864" />
+<p class="caption">
+图 22: 北卡社区级白人占比的空间相关性
+</p>
 </div>
+<p>类似地，图<a href="#fig:pctwhite-moran">22</a>更清晰地描述白人在北卡的分布区域，结合收入分布图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:medinc-moran">21</a>来看，收入越高的地区白人占比越高，考虑空间因素，<span class="math inline">\(R^2\)</span> 肯定要比 0.147 大多了。</p>
+<!-- 
+TODO: 统计过去20年的 $R^2$ 变化，观察其变化趋势。
+-->
+<!--
+::: rmdtip
+**sf** 包内置的北卡州郡级地图数据集 `nc.gpkg` 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
+:::
+-->
 </div>
 </div>
 </div>
@@ -1218,10 +1230,10 @@ summary(fit)
 <li><strong>ggplot2</strong> 在 <strong>grid</strong> 图形系统的基础上实现了一套图形语法<span class="citation">(<a href="#ref-Wilkinson2005" role="doc-biblioref">Wilkinson 2005</a>)</span>，笔者认为最重要的概念是图层，涵盖几何、统计、颜色、刻度、图例等，要点是将绘图的过程拆分成一个个图层，建立数据到图层的映射。《ggplot2: Elegant Graphics for Data Analysis》<span class="citation">(<a href="#ref-Wickham2022" role="doc-biblioref">Wickham and Girlich 2022</a>)</span> 已经出到第三版了，是从入门到进阶全面介绍 <strong>ggplot2</strong> 的著作。</li>
 </ul>
 <p>在掌握基础的一些工具后，需要培养审美能力，打磨细节，推荐学习著作《Data Visualisation with R: 111 Examples》<span class="citation">(<a href="#ref-Rahlf2019" role="doc-biblioref">Rahlf 2019</a>)</span>。</p>
-<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">22</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，而添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再折腾了。</p>
+<p>本文介绍的 <strong>7</strong> 种绘图方案都可归为上述三类，相关 R 包存在一些关联关系，如图<a href="#fig:choropleth-map">23</a> 所示，红色框代表 6 种绘图方案，外加 <strong>sf</strong> 强化的 <strong>ggplot2</strong> 升级方案。上层高级绘图函数不能一步到位就往下层走。比如用 <strong>latticeExtra</strong> 绘图就非常典型，添加图例标题使用了 <strong>grid</strong> 包，而添加州、郡边界线，用了更底层的面板函数 <code>panel.lines()</code>。没有哪个是不能做的，只是做的容易否？但凡是要像本文那样深度定制，似乎也没有哪个更容易的，因为都需要知道点、线、多边形、图例、标题、布局等基础元素，就看想要达到什么效果，有些效果已经满意了，比如文中 <strong>mapsf</strong> 包绘制的图<a href="#fig:us-cancer-rates-mapsf">11</a> 或 <strong>sf</strong> 包绘制的图<a href="#fig:us-cancer-rates-sf">9</a>，那就没必要再折腾了。</p>
 <div class="figure"><span style="display:block;" id="fig:choropleth-map"></span>
 <img src="img/choropleth-map.svg" alt="" />
-<p class="caption">图 22:  7 种绘图方案依赖的 R 包及其层次关系</p>
+<p class="caption">图 23:  7 种绘图方案依赖的 R 包及其层次关系</p>
 </div>
 <p><strong>lattice</strong> 包提供非常简便的绘图公式语法，<strong>latticeExtra</strong> 也很好地继承了这一特性，如<code>rownames(USCancerRates) ~ rate.female + rate.male</code>。庆幸的是各郡癌症死亡率数据的郡名称<code>rownames(USCancerRates)</code> 和地图数据 <code>us_county</code> 里的郡名称 <code>names</code> 是可以映射上的，否则地区分布图就没法画了。<strong>lattice</strong> 包绘制图形，常常以层层嵌套的列表数据对象传递给参数来实现局部细节调整，这和一些基于 JavaScripts 的数据可视化库是不谋而合，前者是 R 中的 list 列表类型的数据对象，后者往往是一些 JSON 格式或键值对形式的数据对象。关键点是理解纵向的层次性和横向的互斥性，同层互斥不同层正交，稳扎稳打，不至于牵一发而动全身，掌握此规律，调整图的局部到调整代码的局部就建立好联系了。</p>
 <p><strong>ggplot2</strong> 绘图的理论基础是图形语法，将数据和几何元素建立映射关系，几何和统计图层层层叠加实现主体部分，辅以字体、颜色、坐标系、布局等实现精细调整，达到出版级的效果。图层的精妙之处在于符合 Unix 哲学 — Do one thing, and do it well! 整个复杂的图形拆解为一张张图层，每个图层干一件事，将复杂的过程简化下来。至于具体到地区分布图，因涉及到地图数据，情况稍微复杂一些，需要考虑地图数据和观测数据的坐标参考系，点、线、面（多边形或区域）数据类型，以及属于矢量还是栅格数据。总而言之，画个图，看似简单其实也透着综合能力：复杂过程的拆解能力，软件工具的熟练程度，领域知识的了解深度，难以言表的审美能力。</p>
@@ -1232,33 +1244,33 @@ summary(fit)
 <h1>未来展望</h1>
 <p>在应用方向上，还有很多有意思的场景，比如：</p>
 <ul>
-<li><strong>疾控预防方面</strong>，以 2022-03-05 至 2022-03-11 美国新冠日均感染率（单位十万分之一）为例，如图<a href="#fig:us-covid-cases">23</a> 所示，图片截自<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">纽约时报网站</a>。</li>
+<li><strong>疾控预防方面</strong>，以 2022-03-05 至 2022-03-11 美国新冠日均感染率（单位十万分之一）为例，如图<a href="#fig:us-covid-cases">24</a> 所示，图片截自<a href="https://www.nytimes.com/interactive/2021/us/covid-cases.html">纽约时报网站</a>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:us-covid-cases"></span>
 <img src="img/us-covid-cases.png" class="full" alt="" />
-<p class="caption">图 23:  美国各个郡新冠感染率，单位十万分之一</p>
+<p class="caption">图 24:  美国各个郡新冠感染率，单位十万分之一</p>
 </div>
 <ul>
-<li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">24</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
+<li><strong>城市规划方面</strong>，龙瀛等创立<a href="https://www.beijingcitylab.com/">北京城市实验室</a>关注<a href="https://www.beijingcitylab.com/projects-1/15-shrinking-cities/">中国城市人口的收缩</a>，如图<a href="#fig:shrinking-china-cities">25</a>所示，在城市化进程中，2010年相比于2000年人口，区县级城镇人口变化，城市化进程是非常快的，城乡人口结构发生了根本性的变化。人口往长三角、珠三角等经济发达的地区集聚。城市的发展完全要靠人口集聚么？</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:shrinking-china-cities"></span>
 <img src="img/shrinking-china-cities.jpeg" class="full" alt="" />
-<p class="caption">图 24:  关注城市化进程中正在收缩的城市：蓝色表示人口收缩，红色表示人口扩张</p>
+<p class="caption">图 25:  关注城市化进程中正在收缩的城市：蓝色表示人口收缩，红色表示人口扩张</p>
 </div>
 <p>在数据可视化上，还有很多技术方案，比如：</p>
 <ul>
-<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">25</a>，这在一定程度上克服了普通地区分布图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
+<li>Carl Baker 以非连续的空间六边形划分地理单元，让六边形大小与人口数量有关，考虑了空间上人口集聚的现状，如图<a href="#fig:uk-hex-cartograms">26</a>，这在一定程度上克服了普通地区分布图不够精细的问题<span class="citation">(<a href="#ref-Baker2021" role="doc-biblioref">Baker 2021</a>)</span>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:uk-hex-cartograms"></span>
 <img src="img/uk-hex-cartograms.png" class="full" alt="" />
-<p class="caption">图 25:  左图：英国各个郡年龄中位数的空间分布；右图：英国各个郡新冠死亡率，单位十万分之一。</p>
+<p class="caption">图 26:  左图：英国各个郡年龄中位数的空间分布；右图：英国各个郡新冠死亡率，单位十万分之一。</p>
 </div>
 <ul>
-<li>Ilya Kashnitsky 和 Jonas Schöley 将人口划分为儿童（0-14岁）、青壮（15-64岁）、老年（大于65岁）三个年龄段，以三元结构图构造图例，编码欧洲各个地区的年龄结构，三个不同的主要色块分别代表三种典型的人口结构，如图<a href="#fig:ternary-map">26</a>，一眼看上去好似一幅水彩画，非常有艺术感<span class="citation">(<a href="#ref-Kashnitsky2018" role="doc-biblioref">Kashnitsky and Schöley 2018</a>)</span>。</li>
+<li>Ilya Kashnitsky 和 Jonas Schöley 将人口划分为儿童（0-14岁）、青壮（15-64岁）、老年（大于65岁）三个年龄段，以三元结构图构造图例，编码欧洲各个地区的年龄结构，三个不同的主要色块分别代表三种典型的人口结构，如图<a href="#fig:ternary-map">27</a>，一眼看上去好似一幅水彩画，非常有艺术感<span class="citation">(<a href="#ref-Kashnitsky2018" role="doc-biblioref">Kashnitsky and Schöley 2018</a>)</span>。</li>
 </ul>
 <div class="figure"><span style="display:block;" id="fig:ternary-map"></span>
 <img src="img/ternary-map.png" class="full" alt="" />
-<p class="caption">图 26:  欧洲区域人口年龄结构</p>
+<p class="caption">图 27:  欧洲区域人口年龄结构</p>
 </div>
 </div>
 <div id="环境信息" class="section level1">
@@ -1269,7 +1281,7 @@ summary(fit)
   &quot;ggplot2&quot;, &quot;cowplot&quot;, &quot;biscale&quot;,
   &quot;grid&quot;, &quot;lattice&quot;, &quot;latticeExtra&quot;,
   &quot;maps&quot;, &quot;mapproj&quot;, &quot;sf&quot;, &quot;tidycensus&quot;,
-  &quot;usmapdata&quot;, &quot;mapsf&quot;, &quot;tmap&quot;
+  &quot;usmapdata&quot;, &quot;mapsf&quot;, &quot;tmap&quot;, &quot;rgeoda&quot;
 ), dependencies = FALSE)
 # R version 4.2.0 (2022-04-22)
 # Platform: x86_64-apple-darwin17.0 (64-bit)
@@ -1281,9 +1293,9 @@ summary(fit)
 #   biscale_0.2.0       blogdown_1.9        cowplot_1.1.1      
 #   ggplot2_3.3.6.9000  grid_4.2.0          knitr_1.39         
 #   lattice_0.20-45     latticeExtra_0.6.29 mapproj_1.2.8      
-#   maps_3.4.0          mapsf_0.4.0         rmarkdown_2.14     
-#   sf_1.0-7            tidycensus_1.2.1    tmap_3.3.3         
-#   usmapdata_0.1.0    
+#   maps_3.4.0          mapsf_0.4.0         rgeoda_0.0.9       
+#   rmarkdown_2.14      sf_1.0-7            tidycensus_1.2.1   
+#   tmap_3.3.3          usmapdata_0.1.0    
 # 
 # Pandoc version: 2.18
 # 
@@ -1411,9 +1423,6 @@ Wilkinson, Leland. 2005. <em>The Grammar of Graphics</em>. 2nd ed. Springer, New
 </div>
 <div id="ref-blogdown" class="csl-entry">
 Xie, Yihui, Alison Presmanes Hill, and Amber Thomas. 2017. <em><span class="nocase">blogdown</span>: Creating Websites with <span>R</span> Markdown</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/blogdown/</a>.
-</div>
-<div id="ref-Yutani2018" class="csl-entry">
-Yutani, Hiroaki. 2018. <span>“Plot <span class="nocase">geom_sf()</span> on <span>OpenStreetMap</span> Tiles.”</span> <a href="https://yutani.rbind.io/post/2018-06-09-plot-osm-tiles/">https://yutani.rbind.io/post/2018-06-09-plot-osm-tiles/</a>.
 </div>
 <div id="ref-Zhao2021" class="csl-entry">
 赵鹏, 谢益辉, and 黄湘云. 2021. <em>现代统计图形</em>. 北京: 人民邮电出版社. <a href="https://bookdown.org/xiangyun/msg">https://bookdown.org/xiangyun/msg</a>.
