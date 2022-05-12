@@ -1,0 +1,601 @@
+type,city,hour,freq
+Iran,Isfahan,0,8457
+Iran,Tabriz,0,6735
+Iran,Tehran,0,115258
+Iran,Tiran,0,25836
+United States,Buffalo,0,18476
+Brazil,São Paulo,0,86736
+Brazil,Porto Alegre,0,17177
+Brazil,Rio de Janeiro,0,29888
+China,Taiwan,0,11652
+Iran,Mashhad,0,1835
+Brazil,Brasília,0,11868
+China,Shanghai,0,10059
+United States,Chicago,0,28128
+India,Gugal Pimpari,0,6539
+India,Bengaluru,0,3427
+India,New Delhi,0,5035
+China,Beijing,0,25988
+China,Dingxi Shi,0,8161
+United States,Wilmington,0,17962
+China,Hong Kong,0,34414
+United States,Los Angeles,0,31440
+India,Hyderabad,0,2736
+United States,San Jose,0,18418
+India,Chennai,0,2722
+China,Shanghai,1,14583
+Iran,Tehran,1,66478
+Iran,Isfahan,1,4748
+United States,San Jose,1,18890
+Iran,Tiran,1,16648
+India,Chennai,1,2325
+Brazil,São Paulo,1,80722
+Iran,Tabriz,1,4016
+China,Dingxi Shi,1,13421
+Iran,Mashhad,1,1047
+China,Taiwan,1,13690
+India,Gugal Pimpari,1,5038
+Brazil,Porto Alegre,1,17818
+Brazil,Brasília,1,10742
+United States,Chicago,1,28454
+China,Beijing,1,31414
+Brazil,Rio de Janeiro,1,28772
+Brazil,Belo Horizonte,1,16293
+India,Bengaluru,1,2528
+United States,Buffalo,1,17530
+United States,Wilmington,1,18299
+India,New Delhi,1,2838
+United States,Los Angeles,1,32764
+Brazil,Rio de Janeiro,2,28801
+Iran,Tehran,2,35352
+Iran,Tiran,2,7571
+China,Taiwan,2,20240
+India,Gugal Pimpari,2,5383
+Brazil,Brasília,2,10876
+Brazil,São Paulo,2,82151
+Iran,Isfahan,2,2269
+China,Dingxi Shi,2,21342
+United States,Los Angeles,2,32763
+Iran,Tabriz,2,2188
+China,Beijing,2,36753
+China,Shanghai,2,23325
+Brazil,Porto Alegre,2,18538
+India,New Delhi,2,3086
+China,Hong Kong,2,36484
+United States,Chicago,2,28766
+United States,San Jose,2,19565
+China,Dingxi Shi,3,53868
+India,Gugal Pimpari,3,8274
+Iran,Tehran,3,20975
+China,Shanghai,3,84669
+Brazil,São Paulo,3,85464
+China,Beijing,3,112752
+China,Taiwan,3,45136
+Iran,Tabriz,3,1135
+Brazil,Porto Alegre,3,20332
+Iran,Tiran,3,4710
+United States,Wilmington,3,19568
+China,Hong Kong,3,45311
+Iran,Isfahan,3,1399
+Iran,Mashhad,3,347
+India,Hyderabad,3,4829
+Brazil,Rio de Janeiro,3,29077
+United States,Chicago,3,30387
+United States,San Jose,3,19939
+United States,Los Angeles,3,38010
+Brazil,Belo Horizonte,3,17659
+China,Dingxi Shi,4,110435
+China,Taiwan,4,90030
+China,Beijing,4,260779
+China,Shanghai,4,200867
+United States,San Jose,4,20370
+United States,Los Angeles,4,43275
+Brazil,Porto Alegre,4,19588
+Iran,Tiran,4,3473
+India,New Delhi,4,8805
+China,Hong Kong,4,77608
+Iran,Tehran,4,15894
+Brazil,São Paulo,4,78823
+United States,Chicago,4,31181
+India,Chennai,4,9398
+Iran,Mashhad,4,221
+Iran,Isfahan,4,1059
+India,Hyderabad,4,9215
+United States,Wilmington,4,22401
+India,Bengaluru,4,10683
+Iran,Tabriz,4,756
+Iran,Tehran,5,20655
+China,Hong Kong,5,100272
+India,Chennai,5,12747
+China,Beijing,5,332923
+China,Dingxi Shi,5,149682
+United States,Los Angeles,5,45661
+China,Taiwan,5,129942
+China,Shanghai,5,266534
+India,New Delhi,5,12504
+Iran,Tiran,5,4190
+Brazil,Porto Alegre,5,14786
+India,Bengaluru,5,14134
+Iran,Tabriz,5,774
+India,Gugal Pimpari,5,23074
+Brazil,São Paulo,5,61366
+United States,Wilmington,5,22990
+United States,San Jose,5,20838
+Iran,Isfahan,5,1476
+Brazil,Brasília,5,7977
+India,Hyderabad,5,11857
+India,Chennai,6,30542
+China,Beijing,6,273689
+United States,Los Angeles,6,42492
+China,Shanghai,6,204804
+China,Dingxi Shi,6,128969
+China,Hong Kong,6,101032
+China,Taiwan,6,144417
+India,Hyderabad,6,17423
+Iran,Tiran,6,7882
+Iran,Tehran,6,37733
+Brazil,São Paulo,6,40096
+India,New Delhi,6,22099
+United States,San Jose,6,21488
+India,Gugal Pimpari,6,44883
+India,Bengaluru,6,24135
+Iran,Tabriz,6,1664
+United States,Wilmington,6,23821
+United States,Chicago,6,32052
+Iran,Isfahan,6,3522
+Brazil,Rio de Janeiro,6,13619
+China,Dingxi Shi,7,84497
+China,Hong Kong,7,73068
+China,Shanghai,7,123064
+India,Gugal Pimpari,7,112930
+China,Beijing,7,137515
+China,Taiwan,7,85587
+Iran,Tabriz,7,4729
+Iran,Tiran,7,18015
+Iran,Tehran,7,85992
+Brazil,São Paulo,7,23610
+India,Hyderabad,7,45325
+India,New Delhi,7,58061
+United States,Los Angeles,7,39135
+India,Bengaluru,7,54693
+Iran,Isfahan,7,9367
+India,Chennai,7,69146
+United States,Wilmington,7,25566
+United States,San Jose,7,23360
+Brazil,Belo Horizonte,7,3602
+Brazil,Porto Alegre,7,5200
+United States,Buffalo,7,20053
+Iran,Mashhad,7,2994
+United States,Chicago,7,33548
+Iran,Tehran,8,155318
+India,Hyderabad,8,63255
+United States,Wilmington,8,28349
+India,Gugal Pimpari,8,165613
+China,Shanghai,8,178759
+China,Beijing,8,179153
+United States,Los Angeles,8,40925
+China,Taiwan,8,110972
+Iran,Tiran,8,34530
+United States,Chicago,8,32923
+China,Dingxi Shi,8,92246
+China,Hong Kong,8,77381
+Iran,Tabriz,8,10076
+India,New Delhi,8,87239
+India,Chennai,8,93950
+Iran,Isfahan,8,18194
+India,Bengaluru,8,79242
+Brazil,Brasília,8,1527
+Brazil,São Paulo,8,15521
+Brazil,Porto Alegre,8,2298
+Iran,Mashhad,8,6061
+Brazil,Rio de Janeiro,8,4602
+Iran,Tehran,9,226029
+China,Dingxi Shi,9,119227
+Iran,Isfahan,9,26288
+India,New Delhi,9,101160
+India,Chennai,9,100832
+China,Shanghai,9,230070
+Iran,Tabriz,9,16366
+India,Bengaluru,9,89740
+China,Taiwan,9,149372
+India,Gugal Pimpari,9,188626
+China,Beijing,9,267574
+China,Hong Kong,9,97091
+Iran,Mashhad,9,8230
+United States,Wilmington,9,29028
+Iran,Tiran,9,53310
+India,Hyderabad,9,72536
+United States,Los Angeles,9,44948
+United States,San Jose,9,26431
+United States,Chicago,9,31983
+Brazil,Rio de Janeiro,9,2622
+Brazil,São Paulo,9,10474
+Iran,Tehran,10,272337
+China,Beijing,10,329823
+China,Shanghai,10,255511
+Iran,Tiran,10,66499
+China,Dingxi Shi,10,147808
+China,Taiwan,10,163159
+Iran,Isfahan,10,30129
+India,Hyderabad,10,53684
+India,Bengaluru,10,68991
+India,Gugal Pimpari,10,141590
+India,Chennai,10,74957
+Iran,Mashhad,10,9463
+Iran,Tabriz,10,21468
+India,New Delhi,10,80231
+Brazil,Rio de Janeiro,10,2124
+China,Hong Kong,10,106871
+United States,Chicago,10,32216
+United States,Los Angeles,10,46249
+United States,San Jose,10,26833
+United States,Buffalo,10,22269
+Brazil,São Paulo,10,8058
+United States,Wilmington,10,29228
+Iran,Tehran,11,257985
+China,Dingxi Shi,11,158155
+Iran,Tiran,11,65691
+China,Beijing,11,337053
+China,Shanghai,11,248535
+India,Bengaluru,11,59304
+India,Hyderabad,11,47775
+China,Hong Kong,11,108339
+China,Taiwan,11,163118
+Iran,Tabriz,11,21988
+United States,Buffalo,11,22156
+India,Gugal Pimpari,11,119668
+Iran,Isfahan,11,26794
+India,New Delhi,11,64731
+United States,Los Angeles,11,44168
+India,Chennai,11,65504
+Iran,Mashhad,11,8542
+United States,Wilmington,11,28337
+United States,San Jose,11,26557
+Brazil,São Paulo,11,8020
+Iran,Tiran,12,56479
+Iran,Tabriz,12,18059
+China,Beijing,12,243329
+Iran,Tehran,12,220866
+China,Shanghai,12,157111
+China,Dingxi Shi,12,125839
+India,New Delhi,12,88390
+India,Gugal Pimpari,12,163825
+China,Taiwan,12,131787
+India,Bengaluru,12,77083
+China,Hong Kong,12,96645
+Brazil,São Paulo,12,12207
+United States,San Jose,12,26015
+India,Chennai,12,83307
+Iran,Isfahan,12,20777
+India,Hyderabad,12,62998
+Iran,Mashhad,12,7584
+United States,Los Angeles,12,42086
+United States,Wilmington,12,27649
+United States,Chicago,12,30818
+Brazil,Rio de Janeiro,12,3339
+India,Chennai,13,76938
+China,Shanghai,13,104182
+India,New Delhi,13,86668
+Iran,Tehran,13,216153
+India,Gugal Pimpari,13,159282
+Iran,Tiran,13,57357
+China,Dingxi Shi,13,93647
+China,Beijing,13,146037
+Iran,Tabriz,13,16943
+India,Bengaluru,13,71862
+United States,Los Angeles,13,39149
+India,Hyderabad,13,58625
+China,Taiwan,13,79298
+Iran,Isfahan,13,20708
+China,Hong Kong,13,71753
+Brazil,São Paulo,13,26656
+Brazil,Rio de Janeiro,13,6922
+Iran,Mashhad,13,6612
+United States,Wilmington,13,27928
+United States,San Jose,13,25547
+United States,Chicago,13,31640
+Brazil,Belo Horizonte,13,4350
+Brazil,Porto Alegre,13,3665
+China,Dingxi Shi,14,108508
+Iran,Tehran,14,214089
+China,Taiwan,14,68853
+India,Bengaluru,14,59891
+Iran,Isfahan,14,20831
+China,Shanghai,14,124991
+China,Beijing,14,163303
+Iran,Tiran,14,56826
+Iran,Tabriz,14,16476
+India,Gugal Pimpari,14,127606
+United States,Los Angeles,14,40503
+India,New Delhi,14,69446
+India,Hyderabad,14,53467
+China,Hong Kong,14,67094
+Brazil,Brasília,14,6350
+Iran,Mashhad,14,6133
+Brazil,São Paulo,14,55090
+Brazil,Rio de Janeiro,14,14094
+United States,San Jose,14,27386
+India,Chennai,14,60599
+United States,Wilmington,14,27744
+Brazil,Belo Horizonte,14,9637
+China,Hong Kong,15,70051
+Iran,Isfahan,15,20255
+China,Taiwan,15,86959
+Iran,Tehran,15,210609
+Iran,Tiran,15,55043
+China,Beijing,15,206469
+China,Shanghai,15,156391
+India,Bengaluru,15,50396
+China,Dingxi Shi,15,142942
+Brazil,Belo Horizonte,15,15615
+India,Chennai,15,48209
+Iran,Tabriz,15,15612
+India,New Delhi,15,52281
+India,Gugal Pimpari,15,89341
+India,Hyderabad,15,45453
+United States,San Jose,15,27439
+Brazil,São Paulo,15,89598
+United States,Wilmington,15,28310
+Brazil,Brasília,15,11260
+United States,Los Angeles,15,43114
+United States,Chicago,15,33945
+Iran,Mashhad,15,6466
+Brazil,Rio de Janeiro,15,24424
+Brazil,Porto Alegre,15,13707
+Iran,Tehran,16,207454
+Iran,Tiran,16,53265
+India,New Delhi,16,44801
+China,Beijing,16,222380
+China,Taiwan,16,102520
+China,Shanghai,16,168808
+Iran,Tabriz,16,15476
+China,Hong Kong,16,71096
+China,Dingxi Shi,16,168711
+Brazil,Porto Alegre,16,18205
+Iran,Isfahan,16,19901
+India,Bengaluru,16,48427
+United States,San Jose,16,28204
+India,Hyderabad,16,37851
+Iran,Mashhad,16,6246
+Brazil,São Paulo,16,113500
+Brazil,Rio de Janeiro,16,33779
+United States,Wilmington,16,27520
+India,Gugal Pimpari,16,79658
+United States,Los Angeles,16,42351
+India,Chennai,16,46815
+Brazil,Belo Horizonte,16,19079
+United States,Buffalo,16,24284
+China,Shanghai,17,145552
+Iran,Tiran,17,49881
+Iran,Tehran,17,202774
+China,Beijing,17,189896
+China,Dingxi Shi,17,156671
+China,Taiwan,17,108905
+Brazil,Porto Alegre,17,17601
+Iran,Tabriz,17,13721
+Iran,Mashhad,17,5554
+India,Chennai,17,43303
+Brazil,São Paulo,17,107947
+China,Hong Kong,17,70877
+India,Gugal Pimpari,17,74010
+United States,Los Angeles,17,42901
+Brazil,Rio de Janeiro,17,35502
+Iran,Isfahan,17,18683
+Brazil,Belo Horizonte,17,17889
+India,Hyderabad,17,35077
+India,Bengaluru,17,47804
+India,New Delhi,17,41664
+United States,San Jose,17,28256
+United States,Wilmington,17,26611
+Brazil,Brasília,17,14987
+Iran,Tehran,18,195831
+China,Dingxi Shi,18,114810
+China,Taiwan,18,102992
+India,Hyderabad,18,31395
+Brazil,São Paulo,18,82864
+China,Shanghai,18,99305
+China,Beijing,18,122779
+India,Chennai,18,38985
+United States,San Jose,18,28388
+China,Hong Kong,18,64318
+India,Gugal Pimpari,18,65103
+Iran,Tiran,18,46654
+Iran,Tabriz,18,12663
+Iran,Mashhad,18,4387
+India,New Delhi,18,37949
+United States,Los Angeles,18,43168
+India,Bengaluru,18,41675
+Iran,Isfahan,18,16696
+United States,Wilmington,18,27020
+United States,Chicago,18,35165
+Brazil,Brasília,18,11243
+Brazil,Rio de Janeiro,18,30820
+Brazil,Belo Horizonte,18,13596
+Brazil,Porto Alegre,18,14017
+Iran,Tiran,19,42434
+Iran,Tehran,19,182013
+China,Taiwan,19,77586
+India,Gugal Pimpari,19,66652
+China,Beijing,19,70301
+China,Shanghai,19,53579
+India,New Delhi,19,39785
+India,Bengaluru,19,43477
+China,Dingxi Shi,19,67348
+China,Hong Kong,19,52757
+India,Hyderabad,19,33543
+India,Chennai,19,40357
+Iran,Isfahan,19,15309
+Iran,Tabriz,19,10697
+Brazil,Rio de Janeiro,19,33204
+United States,Chicago,19,37098
+Brazil,Porto Alegre,19,15849
+Brazil,São Paulo,19,90234
+United States,Los Angeles,19,42545
+United States,San Jose,19,27082
+Iran,Mashhad,19,3747
+United States,Wilmington,19,27078
+Brazil,Belo Horizonte,19,15114
+Brazil,Brasília,19,11365
+Iran,Isfahan,20,15421
+Iran,Tehran,20,183719
+Iran,Tiran,20,44329
+India,Gugal Pimpari,20,64285
+India,Hyderabad,20,30838
+China,Taiwan,20,49722
+Brazil,Belo Horizonte,20,18860
+China,Shanghai,20,27808
+China,Beijing,20,42433
+Brazil,Rio de Janeiro,20,38655
+China,Dingxi Shi,20,38136
+India,New Delhi,20,41368
+United States,Chicago,20,37124
+United States,Wilmington,20,27500
+Brazil,São Paulo,20,114826
+India,Chennai,20,36384
+China,Hong Kong,20,44916
+India,Bengaluru,20,41115
+Iran,Tabriz,20,10155
+United States,San Jose,20,26242
+Brazil,Porto Alegre,20,20151
+United States,Los Angeles,20,42571
+Brazil,Brasília,20,15158
+Iran,Mashhad,20,3836
+India,Hyderabad,21,19884
+India,Chennai,21,22027
+Iran,Tehran,21,197822
+Iran,Isfahan,21,16246
+India,Gugal Pimpari,21,45758
+Iran,Tiran,21,45937
+Brazil,São Paulo,21,125981
+Iran,Tabriz,21,11056
+India,New Delhi,21,32160
+China,Beijing,21,29444
+Brazil,Belo Horizonte,21,20961
+Brazil,Porto Alegre,21,22439
+China,Dingxi Shi,21,21496
+China,Taiwan,21,30470
+United States,Wilmington,21,26275
+India,Bengaluru,21,28237
+China,Shanghai,21,15434
+United States,Chicago,21,37119
+China,Hong Kong,21,40659
+United States,San Jose,21,25705
+Iran,Mashhad,21,3757
+Brazil,Rio de Janeiro,21,41068
+Brazil,Brasília,21,17452
+United States,Los Angeles,21,41659
+Iran,Tehran,22,192247
+Iran,Tabriz,22,11021
+Brazil,Brasília,22,16846
+India,New Delhi,22,19896
+Iran,Tiran,22,44604
+India,Bengaluru,22,14645
+Brazil,Porto Alegre,22,21634
+India,Hyderabad,22,10493
+United States,San Jose,22,24762
+China,Shanghai,22,12132
+India,Chennai,22,11098
+Iran,Isfahan,22,15481
+Iran,Mashhad,22,3811
+Brazil,Belo Horizonte,22,19830
+China,Taiwan,22,19228
+India,Gugal Pimpari,22,26364
+Brazil,São Paulo,22,119427
+China,Beijing,22,23049
+Brazil,Rio de Janeiro,22,37863
+China,Dingxi Shi,22,12975
+China,Hong Kong,22,38250
+United States,Wilmington,22,25403
+United States,Los Angeles,22,40444
+Iran,Tehran,23,163064
+Brazil,São Paulo,23,101456
+India,Chennai,23,5245
+Iran,Isfahan,23,13232
+Iran,Tiran,23,36369
+United States,Buffalo,23,25782
+Brazil,Belo Horizonte,23,18456
+United States,San Jose,23,24726
+Iran,Tabriz,23,9593
+China,Beijing,23,22563
+United States,Wilmington,23,24755
+Brazil,Porto Alegre,23,18975
+China,Dingxi Shi,23,8774
+China,Shanghai,23,9792
+India,Gugal Pimpari,23,13114
+Brazil,Rio de Janeiro,23,33110
+China,Hong Kong,23,36363
+United States,Chicago,23,38100
+India,Bengaluru,23,6870
+Brazil,Brasília,23,14343
+China,Taiwan,23,13391
+India,New Delhi,23,10360
+United States,Los Angeles,23,40907
+India,Hyderabad,23,5279
+Iran,Mashhad,23,2761
+Brazil,Belo Horizonte,0,16059
+India,Hyderabad,1,1942
+China,Hong Kong,1,34350
+India,Chennai,2,3199
+India,Bengaluru,2,3346
+United States,Wilmington,2,18759
+India,Hyderabad,2,2662
+Brazil,Belo Horizonte,2,16830
+Brazil,Brasília,3,11242
+India,Bengaluru,3,5720
+India,Chennai,3,5602
+India,New Delhi,3,4855
+Brazil,Rio de Janeiro,4,27029
+Brazil,Belo Horizonte,4,15830
+India,Gugal Pimpari,4,15793
+Brazil,Brasília,4,10716
+Brazil,Rio de Janeiro,5,21271
+Brazil,Belo Horizonte,5,11537
+United States,Chicago,5,33815
+Iran,Mashhad,6,943
+Brazil,Porto Alegre,6,9448
+Brazil,Brasília,6,5226
+Brazil,Belo Horizonte,6,6675
+Brazil,Rio de Janeiro,7,8257
+United States,San Jose,8,24663
+Brazil,Belo Horizonte,8,2020
+Brazil,Belo Horizonte,10,951
+Brazil,Belo Horizonte,11,1212
+Brazil,Rio de Janeiro,11,2315
+Brazil,Brasília,11,710
+Brazil,Brasília,12,1230
+Brazil,Belo Horizonte,12,1872
+Brazil,Brasília,13,2948
+Brazil,Porto Alegre,14,7985
+Brazil,Brasília,16,15119
+United States,Chicago,16,33866
+United States,Chicago,17,34949
+United States,Buffalo,21,24895
+United States,Chicago,22,37544
+United States,Buffalo,2,18278
+United States,Buffalo,3,18339
+Iran,Mashhad,5,393
+United States,Buffalo,6,19853
+Brazil,Brasília,7,2863
+United States,Buffalo,8,19549
+Brazil,Belo Horizonte,9,1389
+United States,Chicago,11,32232
+Brazil,Porto Alegre,11,1019
+Brazil,Porto Alegre,12,1663
+United States,Buffalo,13,21988
+United States,Buffalo,17,23987
+United States,Buffalo,20,25496
+United States,Buffalo,22,26267
+United States,Buffalo,4,20023
+Brazil,Porto Alegre,9,1425
+United States,Buffalo,12,20118
+United States,Chicago,14,33188
+United States,Buffalo,14,23600
+United States,Buffalo,15,24199
+Iran,Mashhad,2,514
+United States,Buffalo,9,20494
+United States,Buffalo,18,27161
+United States,Buffalo,19,25835
+United States,Buffalo,5,20643
+Brazil,Brasília,9,855
+Brazil,Brasília,10,621
+Brazil,Porto Alegre,10,950
