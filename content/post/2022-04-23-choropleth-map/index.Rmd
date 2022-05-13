@@ -270,9 +270,6 @@ ggplot(
 ### maps
 
 
-**maps** 包[@Becker1993]内置的美国郡地图数据欠缺一部分，阿拉斯加、夏威夷和波多黎各都没有。数据集 USCancerRates 没有夏威夷、波多黎各各个郡的数据，阿拉斯加的部分郡有数据，如图\@ref(fig:us-cancer-rates-maps)所示，不少郡没有收集到癌症死亡率数据，以灰色表示。值得一提的是，关于死亡率分级，不同的分法会带给人不同的印象甚至是错觉，此处是可以有操作空间的，特定的死亡率分割方式可以让男女死亡率的空间分布**看起来**差异不大或很大[@Kolak2020]，详细介绍见 Marynia Kolak 和 Susan Paykin 在 2021 R/Medicine 大会上的[视频](https://youtu.be/-HvRISFkQZQ)和[网页](https://makosak.github.io/Intro2RSpatialMed/02-choropleth.html)材料。
-
-
 分析和展示地理信息数据是一项常规任务，约 30 年前，Richard A. Becker 等为 S 语言引入地理可视化，特别是本文介绍的地区分布图，以及简单的区域面积和区域中心的计算能力[@Becker1993;@Becker1995]，而后到了 2003年，Ray Brownrigg、Thomas P Minka 和 Alex Deckmyn 等将其引入 R 语言社区并持续维护至今[@maps]。除了最基础的 **maps** 包，还有坐标投影 **mapproj** 包[@mapproj]，以及提供更多地图数据的 **mapdata** 包[@mapdata]。那个时候，因缺乏一些基础工具，在地图数据获取、空间数据操作和可视化方面都不太容易，仅用这些能做到下图\@ref(fig:us-cancer-rates-maps)已属不易。
 
 ```{r us-cancer-rates-maps}
@@ -345,6 +342,9 @@ legend("bottomright",
 ```
 
 
+**maps** 包[@Becker1993]内置的美国郡级地图数据欠缺阿拉斯加、夏威夷和波多黎各。数据集 USCancerRates 没有夏威夷、波多黎各各个郡的数据，阿拉斯加的部分郡有数据，如图\@ref(fig:us-cancer-rates-maps)所示，不少郡没有收集到癌症死亡率数据，以灰色表示。值得一提的是，关于死亡率分级，不同的分法会带给人不同的印象甚至是错觉，此处是可以有操作空间的，特定的死亡率分割方式可以让男女死亡率的空间分布**看起来**差异不大或很大[@Kolak2020]，详细介绍见 Marynia Kolak 和 Susan Paykin 在 2021 R/Medicine 大会上的[视频](https://youtu.be/-HvRISFkQZQ)和[网页](https://makosak.github.io/Intro2RSpatialMed/02-choropleth.html)材料。
+
+
 在数据操作方面，麻烦的是建立数据指标和各个地理区域的映射，上面反复用到函数 `match()`，Base R 有很多这样短小精悍的函数。下面简单介绍一下以助理解，函数 `match()` 返回一个向量，向量的长度与参数 x 一致，向量的元素是整型的，表示参数 x 中的元素出现在参数 table 中的位置，下面是三个小示例：
 
 ```{r}
@@ -354,7 +354,7 @@ match(x = c("A", "B"), table = c("C", "A"))
 match(x = c("A", "B"), table = c("C", "A", "D"))
 ```
 
-另外，**maps** 包内置的地图数据制作起来比较复杂，也很长时间没有更新了，笔者不推荐读者再从零开始构建 map 数据对象。**sp** 包[@Pebesma2005]发布后，**maps** 包支持将 Spatial 数据对象转为 map 数据对象，这相当于引入了 **sp** 包及其生态在空间数据获取和数据操作方面的能力[@Bivand2013]。目前，美国国家人口统计局已提供了历年的州、郡、普查级多个比例尺的行政区划地图数据，配合 **sf** 包，可以很好地解决地理可视化的背景底图问题。一些以前看起来很难的问题，随着时间变迁，技术革新，已经解决了。
+另外，**maps** 包内置的地图数据制作起来比较复杂，也很长时间没有更新了，笔者不推荐读者再从零开始构建 map 数据对象。**sp** 包[@Pebesma2005]发布后，**maps** 包支持将 Spatial 数据对象转为 map 数据对象，这相当于引入了 **sp** 包及其生态在空间数据获取和数据操作方面的能力[@Bivand2013]。目前，美国国家人口统计局已提供了历年的州、郡、普查级多个比例尺的行政区划地图数据，配合 **sf** 包[@Pebesma2018]，可以很好地解决地理可视化的背景底图问题。一些以前看起来很难的问题，随着时间变迁，技术革新，已经解决了。
 
 
 
@@ -955,7 +955,7 @@ nc_income_race_county <- get_acs(
   state = "NC", # 北卡州
   geography = "county", # 郡级
   # 三个数据指标：家庭年收入，白人数量，总人数
-  variables = c("B19013_001", "B02001_001E", "B02001_002E"),
+  variables = c("B19013_001", "B02001_001", "B02001_002"),
   geometry = TRUE, # 下载北卡郡级地图数据
   output = "wide", # 输出宽格式数据
   year = 2019, # 2015-2019 年度
@@ -966,7 +966,7 @@ nc_income_race_county <- get_acs(
 nc_income_race_tract <- get_acs(
   state = "NC",
   geography = "tract", # 社区级
-  variables = c("B19013_001", "B02001_001E", "B02001_002E"),
+  variables = c("B19013_001", "B02001_001", "B02001_002"),
   geometry = TRUE, output = "wide",
   year = 2019, survey = "acs5",
   moe_level = 90
@@ -1017,7 +1017,7 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
 >
 > --- Waldo Tobler [@Tobler2004]
 
-在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图\@ref(fig:us-income-state) 和图\@ref(fig:us-income-county) 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约、华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利和达勒姆、教堂山三座城市被称为东岸硅谷，北卡罗来纳大学有**16**个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。
+在展示北卡州的数据之前，先看下美国各州、郡的收入分布概况，如图\@ref(fig:us-income-state) 和图\@ref(fig:us-income-county) 分别是美国州级、郡级的收入分布图，结合这两张图，不难看出除了少量的西岸加州一带城市和东岸波士顿、纽约、华盛顿一带城市，收入的空间分布较为平衡。北卡州的收入水平属于中等偏上，也算典型，境内分布的罗利、达勒姆、教堂山三座城市被称为东岸硅谷。北卡罗来纳大学有**16**个分校，俨然一个超大规模的大学城，教堂山分校的统计系是北美最早建立的统计系之一。
 
 ```{r us-income-state}
 #| fig.cap="2015-2019 年度美国各个州家庭年收入",
