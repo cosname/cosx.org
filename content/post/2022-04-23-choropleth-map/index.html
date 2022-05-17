@@ -475,18 +475,25 @@ library(maps)
 # 郡地图数据
 us_county &lt;- map(&quot;county&quot;, plot = FALSE, fill = TRUE, projection = &quot;polyconic&quot;)
 # 奈何 maps 内置的地图数据不全，仅保留部分观察数据
-USCancerRates2 &lt;- subset(x = USCancerRates, subset = rownames(USCancerRates) %in% us_county$names)
+USCancerRates2 &lt;- subset(
+  x = USCancerRates,
+  subset = rownames(USCancerRates) %in% us_county$names
+)
 # 调色板
 colors &lt;- viridisLite::plasma(13)
 # 图例文本
-leg.txt &lt;- mapply(paste, 50 * 0:12, 50 * 1:13, collapse = &quot; &quot;, sep = &quot;~&quot;)
+leg.txt &lt;- mapply(paste, 50*0:12, 50*1:13, collapse = &quot; &quot;, sep = &quot;~&quot;)
 # 癌症死亡率划分区间
-USCancerRates2$colorBuckets_male &lt;- as.numeric(cut(USCancerRates2$rate.male, 50 * 0:13))
-# 根据郡名称给地图上每个区域的癌症死亡率匹配颜色
-colorsmatched_male &lt;- USCancerRates2$colorBuckets_male[match(us_county$names, rownames(USCancerRates2))]
+USCancerRates2$colorBuckets_male &lt;- as.numeric(cut(USCancerRates2$rate.male, 50*0:13))
+# 根据城镇名称给地图上每个区域的癌症死亡率匹配颜色
+colorsmatched_male &lt;- USCancerRates2$colorBuckets_male[match(
+  us_county$names, rownames(USCancerRates2)
+)]
 # 对女性癌症死亡率类似操作
-USCancerRates2$colorBuckets_female &lt;- as.numeric(cut(USCancerRates2$rate.female, 50 * 0:13))
-colorsmatched_female &lt;- USCancerRates2$colorBuckets_female[match(us_county$names, rownames(USCancerRates2))]
+USCancerRates2$colorBuckets_female &lt;- as.numeric(cut(USCancerRates2$rate.female, 50*0:13))
+colorsmatched_female &lt;- USCancerRates2$colorBuckets_female[match(
+  us_county$names, rownames(USCancerRates2)
+)]
 # 绘图
 par(mar = c(0, 0, 3, 0), mfrow = c(2, 1))
 # 添加地图背景
@@ -1212,11 +1219,6 @@ summary(fit)
 </p>
 </div>
 <p>类似地，图<a href="#fig:pctwhite-moran">22</a>更清晰地描述白人在北卡的分布区域，结合收入分布图<a href="#fig:us-nc-income">14</a>和图<a href="#fig:medinc-moran">21</a>来看，收入越高的地区白人占比越高，由此可见，引入地区分布图帮助我们更直观地了解了白人占比和家庭收入的关系。</p>
-<!--
-::: rmdtip
-**sf** 包内置的北卡州郡级地图数据集 `nc.gpkg` 坐标参考系为 [`EPSG:4267`](https://epsg.io/4267)，而通常使用的 **leaflet** 包[@leaflet]和 **mapdeck** 包[@mapdeck]需要地图数据集转化到 [`EPSG:4326`](https://epsg.io/4326)，其细微差别详见 Hiroaki Yutani 的博客 [@Yutani2018]。本文源文档提供图\@ref(fig:us-nc-income)的 **leaflet** 绘图代码，此处不再介绍。若使用国内的 Web 地图服务，一般需要地图数据转化到[火星坐标系](https://en.wikipedia.org/wiki/Restrictions_on_geographic_data_in_China)，其间会存在一定的[漂移](https://gis.stackexchange.com/questions/234202)。
-:::
--->
 </div>
 </div>
 </div>
@@ -1297,7 +1299,7 @@ summary(fit)
 # Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
 # 
 # Package version:
-#   biscale_0.2.0       blogdown_1.9        cowplot_1.1.1      
+#   biscale_0.2.0       blogdown_1.10       cowplot_1.1.1      
 #   ggplot2_3.3.6.9000  grid_4.2.0          knitr_1.39         
 #   lattice_0.20-45     latticeExtra_0.6.29 mapproj_1.2.8      
 #   maps_3.4.0          mapsf_0.4.0         rgeoda_0.0.9       
