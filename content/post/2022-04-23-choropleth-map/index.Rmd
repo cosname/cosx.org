@@ -171,7 +171,7 @@ knitr::opts_chunk$set(
 人口数每年都会变的，为使各年数据指标可比，人口划分就保持一致，表\@ref(tab:us-std-pop) 展示 1940-2000 年各个年龄段（共19个年龄组）的标准人口数，各个年龄段的普查人口数换算成年龄调整的标准人口数，换算公式为：
 
 $$
-某年龄段标准人口数 = 某年龄段普查人口数 / 总普查人口数 * 1000000.
+\text{某年龄段标准人口数} = \text{某年龄段普查人口数} / \text{总普查人口数} * 1000000.
 $$
 
 以 2000 年的 10-14 岁年龄段标准人口数为例，即：
@@ -184,6 +184,10 @@ $$
 ```{r us-std-pop}
 #| echo: false
 us_std_pop <- readRDS(file = "data/us_std_pop.rds")
+# 清理表头
+colnames(us_std_pop) <- gsub(x = colnames(us_std_pop), pattern = "( U.S. Standard Million)|( U.S. Standard Population)|( P25-1130)", replacement = "", perl = T)
+# 清理 Age 列
+us_std_pop$Age <- gsub(x = us_std_pop$Age, pattern = "( years)", replacement = "", perl = T)
 knitr::kable(us_std_pop, format = "markdown", caption = "1940-2000 年美国标准人口分组")
 ```
 
@@ -194,7 +198,7 @@ $$
 aarate_{x-y} = \sum_{i=x}^{y}\Big[ \big( \frac{count_i}{pop_i} \big)  \times \big( \frac{stdmil_i}{\sum_{j=x}^{y} stdmil_j} \big) \times 100000 \Big]
 $$
 
-一个具体的例子可见[网站](https://seer.cancer.gov/seerstat/tutorials/aarates/step3.html)，篇幅所限，此处仅以2000年举例，一个年龄段 00 years 死亡人数 **29**（可看作婴儿死亡人数），总人数 **139879**，则年龄调整的死亡率：
+一个具体的例子可见[网站](https://seer.cancer.gov/seerstat/tutorials/aarates/step3.html)，篇幅所限，此处仅以2000年举例，一个年龄段 0-0 死亡人数 **29**（可看作婴儿死亡人数），总人数 **139879**，则年龄调整的死亡率：
 
 $$
 aarate_{0-0} = \frac{29}{139879}*\frac{3794901}{274633642}*100000 = 0.2864
@@ -382,8 +386,6 @@ match(x = c("A", "B"), table = c("C", "A", "D"))
 #| fig.height: 10
 #| fig.align: "center"
 #| fig.showtext: true
-# 加载数据
-data(USCancerRates, package = "latticeExtra")
 # 美国州边界数据
 us_state <- map("state", plot = FALSE, fill = TRUE, projection = "polyconic")
 library(lattice)
@@ -468,93 +470,91 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
 
 1.  读者下一个疑惑可能是如何知道所有的图形控制参数，以及控制的精细程度，Deepayan Sarkar 在书里以图\@ref(fig:trellis-par)归纳了，纵轴是图形参数，横轴是参数值名称列表[@Sarkar2008]，按图索骥一定有所帮助。
 
-(ref:lattice-par) **lattice** 包常用图形参数一览
-
-```{r trellis-par}
-#| fig.cap: "(ref:lattice-par)"
-#| fig.width: 6
-#| fig.height: 8
-#| fig.align: "center"
-#| echo: false
-#| fig.showtext: true
-
-# 修改自帮助文档 ?trellis.par.get()
-tp <- trellis.par.get()
-# 去掉不常用的参数设置选项
-unusual <- c(
-  "grid.pars", "fontsize", "clip", "axis.components",
-  "layout.heights", "layout.widths"
-)
-tp[names(tp) %in% unusual] <- NULL
-# 抽取 pars 中的参数名称
-extract_names <- function(name, pars) {
-  expand.grid(x = name, y = names(`[[`(pars, name)), z1 = 1)
-}
-# 抽取结果保存为 data.frame
-dat1 <- do.call("rbind", lapply(names(tp), FUN = extract_names, pars = tp))
-# 初始化数据框
-dat2 <- data.frame(
-  expand.grid(x = levels(dat1$x), y = levels(dat1$y)),
-  z2 = 0
-)
-# 填充数据框
-dat <- merge(x = dat2, y = dat1, by = c("x", "y"), all.x = T)
-dat <- within(dat, {
-  z <- z1 | z2
-})
-
-# 绘图
-levelplot(z ~ y * x,
-  data = dat, scales = list(
-    draw = T,
-    # 去掉图形上边、右边多余的刻度线
-    x = list(rot = 45, alternating = 1, tck = c(1, 0)),
-    y = list(alternating = 1, tck = c(1, 0))
-  ),
-  xlab = "参数值名称", ylab = "图形参数", colorkey = FALSE,
-  panel = function(x, y, z, ...) {
-    panel.abline(
-      v = unique(as.numeric(x)),
-      h = unique(as.numeric(y)),
-      col = "grey"
+    (ref:lattice-par) **lattice** 包常用图形参数一览
+    
+    ```{r trellis-par}
+    #| fig.cap: "(ref:lattice-par)"
+    #| fig.width: 6
+    #| fig.height: 8
+    #| fig.align: "center"
+    #| echo: false
+    #| fig.showtext: true
+    
+    # 修改自帮助文档 ?trellis.par.get()
+    tp <- trellis.par.get()
+    # 去掉不常用的参数设置选项
+    unusual <- c(
+    "grid.pars", "fontsize", "clip", "axis.components",
+    "layout.heights", "layout.widths"
     )
-    panel.xyplot(x, y, pch = 16 * z, ...)
-  }
-)
-```
+    tp[names(tp) %in% unusual] <- NULL
+    # 抽取 pars 中的参数名称
+    extract_names <- function(name, pars) {
+    expand.grid(x = name, y = names(`[[`(pars, name)), z1 = 1)
+    }
+    # 抽取结果保存为 data.frame
+    dat1 <- do.call("rbind", lapply(names(tp), FUN = extract_names, pars = tp))
+    # 初始化数据框
+    dat2 <- data.frame(
+    expand.grid(x = levels(dat1$x), y = levels(dat1$y)),
+    z2 = 0
+    )
+    # 填充数据框
+    dat <- merge(x = dat2, y = dat1, by = c("x", "y"), all.x = T)
+    dat <- within(dat, {
+    z <- z1 | z2
+    })
+    
+    # 绘图
+    levelplot(z ~ y * x,
+    data = dat, scales = list(
+      draw = T,
+      # 去掉图形上边、右边多余的刻度线
+      x = list(rot = 45, alternating = 1, tck = c(1, 0)),
+      y = list(alternating = 1, tck = c(1, 0))
+    ),
+    xlab = "参数值名称", ylab = "图形参数", colorkey = FALSE,
+    panel = function(x, y, z, ...) {
+      panel.abline(
+        v = unique(as.numeric(x)),
+        h = unique(as.numeric(y)),
+        col = "grey"
+      )
+      panel.xyplot(x, y, pch = 16 * z, ...)
+    }
+    )
+    ```
 
-参数控制的效果预览如图 \@ref(fig:show-settings) 所示，不难看出，**lattice** 包[@Sarkar2008]可以提供精细化的图形调整，是一个非常成熟的绘图工具。
+    参数控制的效果预览如图 \@ref(fig:show-settings) 所示，不难看出，**lattice** 包[@Sarkar2008]可以提供精细化的图形调整，是一个非常成熟的绘图工具。
 
-```{r show-settings}
-#| fig.cap: "图形控制参数"
-#| fig.width: 9
-#| fig.height: 6
-#| echo: false
-#| fig.align: "center"
+    ```{r show-settings}
+    #| fig.cap: "图形控制参数"
+    #| fig.width: 9
+    #| fig.height: 6
+    #| echo: false
+    #| fig.align: "center"
+    
+    library(lattice)
+    show.settings()
+    ```
 
-library(lattice)
-show.settings()
-```
+1.  如前所述，**lattice** 和 **ggplot2** 同出一脉，既然 **ggplot2** 有图层的概念，**lattice** 自然也有，除了 提供丰富的内置图层（约**100**个，读者可在控制台运行 `apropos('panel')` 查看当前环境下可用的图层），也支持用户自定义图层，图\@ref(fig:lattice-panel-superpose) 展示叠加图层 `panel.superpose` 的效果，传递自定义的符号给 `pch` 参数，实际上修改了默认图形参数 `"superpose.symbol"`。
+    
+    ```{r lattice-panel-superpose}
+    #| fig.cap: "panel 叠加图层：左图默认散点图层，右图符号图层"
+    #| fig.width: 8
+    #| fig.height: 4
+    #| fig.align: "center"
+    #| echo: true
+    p1 <- xyplot(Sepal.Length ~ Sepal.Width, data = iris, groups = Species)
+    p2 <- xyplot(Sepal.Length ~ Sepal.Width, data = iris, groups = Species,
+      pch = c("L", "M", "N"), panel = panel.superpose
+    )
+    print(p1, split = c(1, 1, 2, 1), more = TRUE)
+    print(p2, split = c(2, 1, 2, 1), more = FALSE)
+    ```
 
-
-如前所述，**lattice** 和 **ggplot2** 同出一脉，既然 **ggplot2** 有图层的概念，**lattice** 自然也有，除了 提供丰富的内置图层（约**100**个，读者可在控制台运行 `apropos('panel')` 查看当前环境下可用的图层），也支持用户自定义图层，图\@ref(fig:lattice-panel-superpose) 展示叠加图层 `panel.superpose` 的效果，传递自定义的符号给 `pch` 参数，实际上修改了默认图形参数 `"superpose.symbol"`。
-
-```{r lattice-panel-superpose}
-#| fig.cap: "panel 叠加图层：左图默认散点图层，右图符号图层"
-#| fig.width: 8
-#| fig.height: 4
-#| fig.align: "center"
-#| echo: true
-p1 <- xyplot(Sepal.Length ~ Sepal.Width, data = iris, groups = Species)
-p2 <- xyplot(Sepal.Length ~ Sepal.Width,
-  data = iris, groups = Species,
-  pch = c("L", "M", "N"), panel = panel.superpose
-)
-print(p1, split = c(1, 1, 2, 1), more = TRUE)
-print(p2, split = c(2, 1, 2, 1), more = FALSE)
-```
-
-此外，**latticeExtra** 扩展了图层功能，特别是 `layer()` 函数，可在主体绘图函数之后直接叠加新图层。如上图\@ref(fig:us-cancer-rates-lattice)，在 `latticeExtra::mapplot()` 完成主体绘图工作后，添加美国各州边界线，有助于识别郡位置。大家应该都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但只要画上各个省的边界，你肯定能指出更多的省份位置，类似地，从省到市、乃至区县，边界给了我们很好的参照。
+1.  此外，**latticeExtra** 扩展了图层功能，特别是 `layer()` 函数，可在主体绘图函数之后直接叠加新图层。如上图\@ref(fig:us-cancer-rates-lattice)，在 `latticeExtra::mapplot()` 完成主体绘图工作后，添加美国各州边界线，有助于识别郡位置。大家应该都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但只要画上各个省的边界，你肯定能指出更多的省份位置，类似地，从省到市、乃至区县，边界给了我们很好的参照。
 
 ### ggplot2
 

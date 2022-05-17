@@ -174,41 +174,41 @@ blockquote > p:first-child {
 <p>下面以 <a href="https://latticeextra.r-forge.r-project.org/"><strong>latticeExtra</strong> 包</a><span class="citation">(<a href="#ref-latticeExtra" role="doc-biblioref">Sarkar and Andrews 2019</a>)</span>内置的 USCancerRates 数据集为例介绍分面，同时展示多个观测指标的空间分布。USCancerRates 数据集来自<a href="https://statecancerprofiles.cancer.gov/">美国国家癌症研究所</a>（National Cancer Institute，简称 NCI）。根据1999-2003年的5年数据，分男女统计癌症年平均死亡率（单位十万分之一），这其中的癌症数是所有癌症种类之和。癌症死亡率根据2000年美国<a href="https://seer.cancer.gov/stdpopulations/stdpop.19ages.html">标准人口年龄分组</a>调整，分母人口数量由 NCI 根据普查的人口数调整，即将各年各个年龄段的普查人口数按照 2000 年的<strong>美国标准人口年龄分组</strong>换算。因<strong>latticeExtra</strong> 包没有提供数据集的加工过程，笔者结合 NCI 网站信息，对此数据指标的调整过程略加说明，这里面其实隐含很多的道理。</p>
 <p>人口数每年都会变的，为使各年数据指标可比，人口划分就保持一致，表<a href="#tab:us-std-pop">1</a> 展示 1940-2000 年各个年龄段（共19个年龄组）的标准人口数，各个年龄段的普查人口数换算成年龄调整的标准人口数，换算公式为：</p>
 <p><span class="math display">\[
-某年龄段标准人口数 = 某年龄段普查人口数 / 总普查人口数 * 1000000.
+\text{某年龄段标准人口数} = \text{某年龄段普查人口数} / \text{总普查人口数} * 1000000.
 \]</span></p>
 <p>以 2000 年的 10-14 岁年龄段标准人口数为例，即：</p>
 <p><span class="math display">\[
 73032 = 20056779 / 274633642 * 1000000.
 \]</span></p>
-<table>
+<table style="width:100%;">
 <caption><span id="tab:us-std-pop">表 1: </span>1940-2000 年美国标准人口分组</caption>
 <colgroup>
-<col width="4%" />
-<col width="10%" />
-<col width="19%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
-<col width="10%" />
+<col width="6%" />
+<col width="11%" />
+<col width="15%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
+<col width="11%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th align="left">Age</th>
-<th align="left">2000 U.S. Standard Million</th>
-<th align="left">2000 U.S. Standard Population (Census P25-1130)</th>
-<th align="left">1990 U.S. Standard Million</th>
-<th align="left">1980 U.S. Standard Million</th>
-<th align="left">1970 U.S. Standard Million</th>
-<th align="left">1960 U.S. Standard Million</th>
-<th align="left">1950 U.S. Standard Million</th>
-<th align="left">1940 U.S. Standard Million</th>
+<th align="left">2000</th>
+<th align="left">2000 (Census)</th>
+<th align="left">1990</th>
+<th align="left">1980</th>
+<th align="left">1970</th>
+<th align="left">1960</th>
+<th align="left">1950</th>
+<th align="left">1940</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">00 years</td>
+<td align="left">00</td>
 <td align="left">13,818</td>
 <td align="left">3,794,901</td>
 <td align="left">12,936</td>
@@ -219,7 +219,7 @@ blockquote > p:first-child {
 <td align="left">15,343</td>
 </tr>
 <tr class="even">
-<td align="left">01-04 years</td>
+<td align="left">01-04</td>
 <td align="left">55,317</td>
 <td align="left">15,191,619</td>
 <td align="left">60,863</td>
@@ -230,7 +230,7 @@ blockquote > p:first-child {
 <td align="left">64,718</td>
 </tr>
 <tr class="odd">
-<td align="left">05-09 years</td>
+<td align="left">05-09</td>
 <td align="left">72,533</td>
 <td align="left">19,919,840</td>
 <td align="left">72,772</td>
@@ -241,7 +241,7 @@ blockquote > p:first-child {
 <td align="left">81,147</td>
 </tr>
 <tr class="even">
-<td align="left">10-14 years</td>
+<td align="left">10-14</td>
 <td align="left">73,032</td>
 <td align="left">20,056,779</td>
 <td align="left">68,812</td>
@@ -252,7 +252,7 @@ blockquote > p:first-child {
 <td align="left">89,208</td>
 </tr>
 <tr class="odd">
-<td align="left">15-19 years</td>
+<td align="left">15-19</td>
 <td align="left">72,169</td>
 <td align="left">19,819,518</td>
 <td align="left">71,384</td>
@@ -263,7 +263,7 @@ blockquote > p:first-child {
 <td align="left">93,670</td>
 </tr>
 <tr class="even">
-<td align="left">20-24 years</td>
+<td align="left">20-24</td>
 <td align="left">66,478</td>
 <td align="left">18,257,225</td>
 <td align="left">76,476</td>
@@ -274,7 +274,7 @@ blockquote > p:first-child {
 <td align="left">88,007</td>
 </tr>
 <tr class="odd">
-<td align="left">25-29 years</td>
+<td align="left">25-29</td>
 <td align="left">64,529</td>
 <td align="left">17,722,067</td>
 <td align="left">85,694</td>
@@ -285,7 +285,7 @@ blockquote > p:first-child {
 <td align="left">84,277</td>
 </tr>
 <tr class="even">
-<td align="left">30-34 years</td>
+<td align="left">30-34</td>
 <td align="left">71,044</td>
 <td align="left">19,511,370</td>
 <td align="left">87,905</td>
@@ -296,7 +296,7 @@ blockquote > p:first-child {
 <td align="left">77,789</td>
 </tr>
 <tr class="odd">
-<td align="left">35-39 years</td>
+<td align="left">35-39</td>
 <td align="left">80,762</td>
 <td align="left">22,179,956</td>
 <td align="left">80,267</td>
@@ -307,7 +307,7 @@ blockquote > p:first-child {
 <td align="left">72,495</td>
 </tr>
 <tr class="even">
-<td align="left">40-44 years</td>
+<td align="left">40-44</td>
 <td align="left">81,851</td>
 <td align="left">22,479,229</td>
 <td align="left">70,829</td>
@@ -318,7 +318,7 @@ blockquote > p:first-child {
 <td align="left">66,742</td>
 </tr>
 <tr class="odd">
-<td align="left">45-49 years</td>
+<td align="left">45-49</td>
 <td align="left">72,118</td>
 <td align="left">19,805,793</td>
 <td align="left">55,778</td>
@@ -329,7 +329,7 @@ blockquote > p:first-child {
 <td align="left">62,697</td>
 </tr>
 <tr class="even">
-<td align="left">50-54 years</td>
+<td align="left">50-54</td>
 <td align="left">62,716</td>
 <td align="left">17,224,359</td>
 <td align="left">45,638</td>
@@ -340,7 +340,7 @@ blockquote > p:first-child {
 <td align="left">55,114</td>
 </tr>
 <tr class="odd">
-<td align="left">55-59 years</td>
+<td align="left">55-59</td>
 <td align="left">48,454</td>
 <td align="left">13,307,234</td>
 <td align="left">42,345</td>
@@ -351,7 +351,7 @@ blockquote > p:first-child {
 <td align="left">44,383</td>
 </tr>
 <tr class="even">
-<td align="left">60-64 years</td>
+<td align="left">60-64</td>
 <td align="left">38,793</td>
 <td align="left">10,654,272</td>
 <td align="left">42,685</td>
@@ -362,7 +362,7 @@ blockquote > p:first-child {
 <td align="left">35,911</td>
 </tr>
 <tr class="odd">
-<td align="left">65-69 years</td>
+<td align="left">65-69</td>
 <td align="left">34,264</td>
 <td align="left">9,409,940</td>
 <td align="left">40,657</td>
@@ -373,7 +373,7 @@ blockquote > p:first-child {
 <td align="left">28,911</td>
 </tr>
 <tr class="even">
-<td align="left">70-74 years</td>
+<td align="left">70-74</td>
 <td align="left">31,773</td>
 <td align="left">8,725,574</td>
 <td align="left">32,145</td>
@@ -384,7 +384,7 @@ blockquote > p:first-child {
 <td align="left">19,515</td>
 </tr>
 <tr class="odd">
-<td align="left">75-79 years</td>
+<td align="left">75-79</td>
 <td align="left">26,999</td>
 <td align="left">7,414,559</td>
 <td align="left">24,612</td>
@@ -395,7 +395,7 @@ blockquote > p:first-child {
 <td align="left">11,422</td>
 </tr>
 <tr class="even">
-<td align="left">80-84 years</td>
+<td align="left">80-84</td>
 <td align="left">17,842</td>
 <td align="left">4,900,234</td>
 <td align="left">15,817</td>
@@ -406,7 +406,7 @@ blockquote > p:first-child {
 <td align="left">5,881</td>
 </tr>
 <tr class="odd">
-<td align="left">85+ years</td>
+<td align="left">85+</td>
 <td align="left">15,508</td>
 <td align="left">4,259,173</td>
 <td align="left">12,385</td>
@@ -433,7 +433,7 @@ blockquote > p:first-child {
 <p><span class="math display">\[
 aarate_{x-y} = \sum_{i=x}^{y}\Big[ \big( \frac{count_i}{pop_i} \big)  \times \big( \frac{stdmil_i}{\sum_{j=x}^{y} stdmil_j} \big) \times 100000 \Big]
 \]</span></p>
-<p>一个具体的例子可见<a href="https://seer.cancer.gov/seerstat/tutorials/aarates/step3.html">网站</a>，篇幅所限，此处仅以2000年举例，一个年龄段 00 years 死亡人数 <strong>29</strong>（可看作婴儿死亡人数），总人数 <strong>139879</strong>，则年龄调整的死亡率：</p>
+<p>一个具体的例子可见<a href="https://seer.cancer.gov/seerstat/tutorials/aarates/step3.html">网站</a>，篇幅所限，此处仅以2000年举例，一个年龄段 0-0 死亡人数 <strong>29</strong>（可看作婴儿死亡人数），总人数 <strong>139879</strong>，则年龄调整的死亡率：</p>
 <p><span class="math display">\[
 aarate_{0-0} = \frac{29}{139879}*\frac{3794901}{274633642}*100000 = 0.2864
 \]</span></p>
@@ -563,9 +563,7 @@ match(x = c(&quot;A&quot;, &quot;B&quot;), table = c(&quot;C&quot;, &quot;A&quot
 <li>添加标题：添加横轴、纵轴、图例、分面标题，图形副标题，适当调整位置。</li>
 <li>最后调整布局、刻度等细节。除了步骤1必须先做，后续步骤没有严格的顺序，图形中各部分是相对独立的，若遇覆盖情况则需注意顺序。</li>
 </ol>
-<pre class="r"><code># 加载数据
-data(USCancerRates, package = &quot;latticeExtra&quot;)
-# 美国州边界数据
+<pre class="r"><code># 美国州边界数据
 us_state &lt;- map(&quot;state&quot;, plot = FALSE, fill = TRUE, projection = &quot;polyconic&quot;)
 library(lattice)
 # 绘图
@@ -657,8 +655,7 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
 # [1] 1</code></pre>
 <p>想必读者已看出其规律，以 R 语言的列表结构来传递各个层级的图形参数值。</p></li>
 <li><p>参考 SO 论坛<a href="https://stackoverflow.com/questions/7373487/">帖子</a>设置参数 <code>strip</code> 自定义了分面子图的标题文本，再在 <code>par.settings</code> 里对背景 <code>strip.background</code> 和边界 <code>strip.border</code> 微调，而类似的设置在 <strong>ggplot2</strong> 包的主题函数 <code>theme()</code> 里<a href="https://ggplot2.tidyverse.org/reference/theme.html">也有</a>，在 R 控制台执行 <code>formalArgs(ggplot2::theme)</code> 可获得主题函数的参数列表。</p></li>
-<li><p>读者下一个疑惑可能是如何知道所有的图形控制参数，以及控制的精细程度，Deepayan Sarkar 在书里以图<a href="#fig:trellis-par">4</a>归纳了，纵轴是图形参数，横轴是参数值名称列表<span class="citation">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span>，按图索骥一定有所帮助。</p></li>
-</ol>
+<li><p>读者下一个疑惑可能是如何知道所有的图形控制参数，以及控制的精细程度，Deepayan Sarkar 在书里以图<a href="#fig:trellis-par">4</a>归纳了，纵轴是图形参数，横轴是参数值名称列表<span class="citation">(<a href="#ref-Sarkar2008" role="doc-biblioref">Sarkar 2008</a>)</span>，按图索骥一定有所帮助。</p>
 
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:trellis-par"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/trellis-par-1.png" alt="lattice 包常用图形参数一览" width="576" />
@@ -672,11 +669,10 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
 <p class="caption">
 图 5: 图形控制参数
 </p>
-</div>
-<p>如前所述，<strong>lattice</strong> 和 <strong>ggplot2</strong> 同出一脉，既然 <strong>ggplot2</strong> 有图层的概念，<strong>lattice</strong> 自然也有，除了 提供丰富的内置图层（约<strong>100</strong>个，读者可在控制台运行 <code>apropos('panel')</code> 查看当前环境下可用的图层），也支持用户自定义图层，图<a href="#fig:lattice-panel-superpose">6</a> 展示叠加图层 <code>panel.superpose</code> 的效果，传递自定义的符号给 <code>pch</code> 参数，实际上修改了默认图形参数 <code>"superpose.symbol"</code>。</p>
+</div></li>
+<li><p>如前所述，<strong>lattice</strong> 和 <strong>ggplot2</strong> 同出一脉，既然 <strong>ggplot2</strong> 有图层的概念，<strong>lattice</strong> 自然也有，除了 提供丰富的内置图层（约<strong>100</strong>个，读者可在控制台运行 <code>apropos('panel')</code> 查看当前环境下可用的图层），也支持用户自定义图层，图<a href="#fig:lattice-panel-superpose">6</a> 展示叠加图层 <code>panel.superpose</code> 的效果，传递自定义的符号给 <code>pch</code> 参数，实际上修改了默认图形参数 <code>"superpose.symbol"</code>。</p>
 <pre class="r"><code>p1 &lt;- xyplot(Sepal.Length ~ Sepal.Width, data = iris, groups = Species)
-p2 &lt;- xyplot(Sepal.Length ~ Sepal.Width,
-  data = iris, groups = Species,
+p2 &lt;- xyplot(Sepal.Length ~ Sepal.Width, data = iris, groups = Species,
   pch = c(&quot;L&quot;, &quot;M&quot;, &quot;N&quot;), panel = panel.superpose
 )
 print(p1, split = c(1, 1, 2, 1), more = TRUE)
@@ -686,8 +682,9 @@ print(p2, split = c(2, 1, 2, 1), more = FALSE)</code></pre>
 <p class="caption">
 图 6: panel 叠加图层：左图默认散点图层，右图符号图层
 </p>
-</div>
-<p>此外，<strong>latticeExtra</strong> 扩展了图层功能，特别是 <code>layer()</code> 函数，可在主体绘图函数之后直接叠加新图层。如上图<a href="#fig:us-cancer-rates-lattice">3</a>，在 <code>latticeExtra::mapplot()</code> 完成主体绘图工作后，添加美国各州边界线，有助于识别郡位置。大家应该都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但只要画上各个省的边界，你肯定能指出更多的省份位置，类似地，从省到市、乃至区县，边界给了我们很好的参照。</p>
+</div></li>
+<li><p>此外，<strong>latticeExtra</strong> 扩展了图层功能，特别是 <code>layer()</code> 函数，可在主体绘图函数之后直接叠加新图层。如上图<a href="#fig:us-cancer-rates-lattice">3</a>，在 <code>latticeExtra::mapplot()</code> 完成主体绘图工作后，添加美国各州边界线，有助于识别郡位置。大家应该都有这样一种感觉，将一张只有中国国家边界的地图放在面前，你不一定能清晰地指出每一个省份的位置，但只要画上各个省的边界，你肯定能指出更多的省份位置，类似地，从省到市、乃至区县，边界给了我们很好的参照。</p></li>
+</ol>
 </div>
 <div id="ggplot2" class="section level3">
 <h3>ggplot2</h3>
