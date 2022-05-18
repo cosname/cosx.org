@@ -1,0 +1,20 @@
+---
+title: "mathspec: yes"
+mathspec: yes
+output: 
+  pdf_document: 
+    latex_engine: xelatex
+    template: null
+    extra_dependencies:
+      ctex:
+       - fontset=fandol
+      amsfonts: null
+      mathrsfs: null
+---
+
+拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 
+和 `\mathbb{A}`会被依次渲染成
+
+$$
+\mathcal{A},\mathscr{A},\mathbb{A}
+$$

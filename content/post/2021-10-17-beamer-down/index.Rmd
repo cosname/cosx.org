@@ -1,16 +1,19 @@
 ---
 title: R Markdown 制作 beamer 幻灯片
 author: 黄湘云
-date: '2022-04-05'
+date: '2022-05-20'
+meta_extra: "审稿：楚新元"
 slug: beamer-down
 categories:
-  - 统计软件
+  - R 语言
 tags:
   - TinyTeX
   - LaTeX
   - beamer
   - R Markdown
-toc: true
+output:
+  blogdown::html_page:
+    toc: true
 bibliography: 
   - refer.bib
 link-citations: true
@@ -19,26 +22,6 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 ---
 
 
-```{r setup, echo=FALSE}
-# 修改输出的显示行数
-knitr::knit_hooks$set(output = local({
-  # the default output hook
-  hook_output = knitr::knit_hooks$get('output')
-  function(x, options) {
-    if (!is.null(n <- options$out.lines)) { # out.lines
-      x = xfun::split_lines(x)
-      if (length(x) > n) {
-        # truncate the output
-        x = c(head(x, n), '....\n')
-      }
-      x = paste(x, collapse = '\n') # paste first n lines together
-    }
-    hook_output(x, options)
-  }
-}))
-# 控制输出的宽度
-options(width = 69)
-```
 
 ```{css, echo=FALSE}
 .rmdinfo {
@@ -113,6 +96,14 @@ figure {
 }
 ```
 
+```{r}
+#| label: setup
+#| echo: false
+# 控制输出的宽度
+options(width = 69)
+```
+
+
 ::: rmdinfo
 声明：本文引用的所有信息均为公开信息，仅代表作者本人观点，与就职单位无关。
 :::
@@ -135,7 +126,7 @@ figure {
 
 # 写作背景 {#motivation}
 
-故事还要从头开始讲起，6-7 年前，出于学术答辩和课程汇报需要，陆续学习和使用 LaTeX 来排版作业和论文，曾有一段时间深陷此坑不能自拔，以至于遍览 [TeXLive](https://tug.org/texlive/) 内置的幻灯片制作宏包，收集了大量 beamer 幻灯片的模版，藏于 Github 仓库 [awesome-beamers](https://github.com/XiangyunHuang/awesome-beamers)。
+故事还要从头开始讲起，7-8 年前，出于学术答辩和课程汇报需要，陆续学习和使用 LaTeX 来排版作业和论文，曾有一段时间深陷此坑不能自拔，以至于遍览 [TeXLive](https://tug.org/texlive/) 内置的幻灯片制作宏包，收集了大量 beamer 幻灯片的模版，藏于 Github 仓库 [awesome-beamers](https://github.com/XiangyunHuang/awesome-beamers)。
 
 LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的数学或统计系会用它来排版毕业论文，相关的学习材料有很多，推荐 CTeX 开发小组翻译的[一份（不太）简短的LaTeX介绍](https://github.com/CTeX-org/lshort-zh-cn)。吴康隆的 [《简单粗暴LaTeX》](https://github.com/wklchris/Note-by-LaTeX)，盛文博翻译的[《LaTeX2e 插图指南, 第三版》](https://github.com/WenboSheng/epslatex-cn)，吕荐瑞的[科技文档排版课程材料](https://lvjr.bitbucket.io/tutorial/learn-latex.pdf)，曾祥东的[现代 LaTeX 入门讲座](https://github.com/stone-zeng/latex-talk)，都非常适合从零开始学习的。进阶的部分，根据需要去看宏包手册，LaTeX 宏包文档的长度一般都吓死个人，[PGF](https://github.com/pgf-tikz/pgf) 绘图 **1300** 多页，[pgfplots](https://ctan.org/pkg/pgfplots) 3D 绘图 **573** 页， [beamer](https://github.com/josephwright/beamer) 幻灯片制作 **247** 页，[geometry](https://github.com/davidcarlisle/geometry) 版面设置 **42** 页，[tcolorbox](https://github.com/T-F-S/tcolorbox) 箱子定制 **539**页，通常不需要从头到尾的看，除非遇到难处或需要自定义了。在对基础的 LaTeX 排版工具有一些了解后，日常使用过程中必备数学公式[速记小抄](https://gitlab.com/jim.hefferon/undergradmath) ，搭好梯子随时放狗去搜。
 
@@ -194,7 +185,7 @@ tinytex::install_tinytex()
     file.copy(from = fontfile, to = distdir, overwrite = TRUE)
     ```
 
-# 技巧陷阱
+# 技巧陷阱 {#tricks-pitfalls}
 
 ## 数学符号
 
@@ -287,17 +278,25 @@ Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提�
 ---
 title: "测试"
 author:
-  - 无
+  - 黄湘云
 documentclass: ctexart
 keywords:
-  - 无
+  - rmarkdown
+  - rticles
+  - LaTeX
 output:
   rticles::ctex:
     fig_caption: yes
     number_sections: yes
     toc: yes
-geometry: tmargin=1.8cm,bmargin=1.8cm,lmargin=2.1cm,rmargin=2.1cm  
+geometry: 
+  - tmargin=1.8cm
+  - bmargin=1.8cm
+  - lmargin=2.1cm
+  - rmargin=2.1cm  
 ---
+
+# 数学公式 {#math}
 
 $\mathbf{\Sigma}$
 ````
@@ -666,15 +665,19 @@ beamer 文档找到各类定理、block 块
 然后如何映射过来
 
 
+# 本文小结 {#summary}
 
-# 环境信息
+
+
+
+# 环境信息 {#session}
 
 在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 **blogdown** [@Xie2017]构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。
 
 ```{r}
 xfun::session_info(c(
   "tinytex", "knitr", "rmarkdown", "bookdown", "blogdown"
-))
+), dependencies = FALSE)
 ```
 
 # 参考文献
