@@ -24,9 +24,9 @@ forum_id: 420368
 
 ### 什么是模型部署
 
-一句话概括， [模型部署](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle-deployment) 是将一个调试好的模型应用置于生产或者类生产环境中，其意义在于处理预测新数据，为公司提供数据决策或者对接其他需求部门提供模型支持。我们先来看下面这幅数据科学项目开发流程图。
+一句话概括，[模型部署](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle-deployment) 是将一个调试好的模型应用置于生产或者类生产环境中，其意义在于处理预测新数据，为公司提供数据决策或者对接其他需求部门提供模型支持。我们先来看下面这幅数据科学项目开发流程图。
 
-<img src="https://lalzzy.github.io/travis/images/model-deployment/datascience-lifecycle2.png",height = "1000px", width = "800px">
+![](https://lalzzy.github.io/travis/images/model-deployment/datascience-lifecycle2.png)
 
 位于图片左边区域中的紫色圆圈中的文字，相信对大部分读者都不陌生。我们在学校中习得了很多关于数据科学模型、特征选择技巧及模型评价方法的知识，回想一下，在你过去大多数课程作业或是打比赛的经历中，完成了模型评价也就意味着项目宣告结束。然而在商业应用中，模型部署才标志着一个项目开发的阶段性结束。它的价值体现在两点：
 
@@ -41,7 +41,7 @@ forum_id: 420368
 
 有很多软件包均提供了将模型部署至小型终端设备上的功能。他们大都是将训练好的模型封装成一个对象并储存成自定义格式的文件，然后在相对应的平台或系统中加载调用这个对象，诸编程平台也大都有相应调用接口。 PMML (Predictive Model Markup Language) 是其中最常用的一种，它适合应用在实时、大规模数据量的场景。而在深度学习方面，TensorFlow 社区开发的 [Tensorflow Lite](https://www.tensorflow.org/lite/overview) 工具能翻译转换 tensorflow 预训练模型至 TensorFlow Lite 文件格式，然后用其他的接口来调用模型文件实现部署。除此之外还有一些其他的工具，可以参考R官网的 [任务视图之模型部署部分](https://cran.r-project.org/web/views/ModelDeployment.html)，这里不再一一赘述。
 
-<img src="https://lalzzy.github.io/travis/images/model-deployment/tflite-architecture.jpg",height = "1000px", width = "700px">
+![](https://lalzzy.github.io/travis/images/model-deployment/tflite-architecture.jpg)
 
 *注*: 图片来源自 tensorflow 官网
 
