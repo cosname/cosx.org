@@ -23,7 +23,8 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 
 
 
-```{css, echo=FALSE}
+```{css}
+#| echo: false
 .rmdinfo {
   border: 1px solid #ccc;
 }
@@ -139,7 +140,8 @@ LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的�
 默认大家已经安装了 R 软件和 RStudio IDE，这会让后面的操作变得更容易。
 因陆续会用到 R Markdown 生态的几个 R 包，所以先提前安装下：
 
-```r
+```{r}
+#| eval: false
 install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "rticles"))
 ```
 
@@ -152,7 +154,8 @@ install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "rticles"))
 
 平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
 
-```r
+```{r}
+#| eval: false
 tinytex::install_tinytex()
 ```
 
@@ -164,14 +167,16 @@ tinytex::install_tinytex()
 
 1. 这里用 **tinytex** 安装 [**fira**](https://www.ctan.org/pkg/fira) 系列英文字体，[**firamath**](https://github.com/firamath/firamath) 和 [**xits**](https://www.ctan.org/pkg/xits) 数学字体，后续用作 beamer 幻灯片的主要字体，相信大家看惯了千篇一律的字体，也想换换口味吧！
 
-    ```r
+    ```{r}
+    #| eval: false
     # 顺道把 beamertheme-metropolis 宏包也安装下
     tinytex::tlmgr_install(c("beamertheme-metropolis", "fira", "firamath", "firamath-otf", "xits"))
     ```
 
 2. 通过「人工智能」我们知道上面安装的字体都放在了 TinyTeX 的安装目录下，而且不能直接被调用，故而将它们拷贝到用户指定的字体目录，刷新字体目录后，通过 **fontspec** 宏包调用。为了加快复现的速度，我已经将这个复制粘贴的过程化作几行代码，如下：
 
-    ```r
+    ```{r}
+    #| eval: false
     # TinyTeX 字体目录
     basedir <- paste(tinytex::tinytex_root(), "texmf-dist/fonts/opentype/public", sep = "/")
     # MacOS 系统字体放在 ~/Library/Fonts/ 而 Linux 系统字体放在 ~/.fonts
