@@ -1,7 +1,7 @@
 ---
 title: 地区分布图及其应用
 author: 黄湘云
-date: '2022-05-13'
+date: '2022-05-22'
 slug: choropleth-map
 meta_extra: "审稿：张沥今"
 categories:
@@ -31,10 +31,6 @@ description: "在美国和日本的国家统计局官网，地区分布图用于
 
 
 ```{css, echo=FALSE}
-.sidebar {
-  border: 1px solid #ccc;
-}
-
 .rmdwarn {
   border: 1px solid #EA4335;
 }
@@ -47,7 +43,7 @@ description: "在美国和日本的国家统计局官网，地区分布图用于
   border: 1px solid #34A853;
 }
 
-.sidebar, .rmdwarn, .rmdnote, .rmdtip {
+.rmdwarn, .rmdnote, .rmdtip {
   border-left-width: 5px;
   border-radius: 5px;
   padding: 1em;
@@ -987,7 +983,7 @@ nc_tract_map <- tigris::tracts(state = 37, cb = T, year = 2019, class = "sf")
     View(acs_vars)
     ```
 
-    一共 **27040** 个指标，其中很多是衍生指标，比如上面用到的白人数量 `B02001_001E`，人口数按种族分组统计，自然还可以有按性别、年龄分组的衍生指标。
+    一共 **27040** 个指标，其中很多是衍生指标，比如上面用到的白人数量 `B02001_001`，人口数按种族分组统计，自然还可以有按性别、年龄分组的衍生指标。
 
 1. Kyle Walker 的著作《Analyzing US Census Data: Methods, Maps, and Models in R》[@Walker2022] 提供了更多关于美国社区调查数据及其使用的介绍。
 
