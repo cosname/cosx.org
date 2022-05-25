@@ -33,9 +33,14 @@ footnotereturnlinkcontents = "↩"
   weight = 3
 
 [[menu.top]]
+  name = "中国R会议"
+  url = "https://china-r.org/"
+  weight = 4
+
+[[menu.top]]
   name = "投稿"
   url = "/contribute/"
-  weight = 4
+  weight = 5
 
 [params.banner]
   src = "/img/logo.png"
