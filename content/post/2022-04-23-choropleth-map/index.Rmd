@@ -279,6 +279,7 @@ ggplot(
 #| fig.height: 10
 #| fig.align: "center"
 #| fig.showtext: true
+#| echo: false
 # 加载数据
 data(USCancerRates, package = "latticeExtra")
 library(maps)
@@ -349,6 +350,14 @@ legend("bottomright",
 )
 ```
 
+<details>
+<summary> 点击显示或隐藏代码 </summary>
+```{r}
+#| ref.label: us-cancer-rates-maps
+#| eval: false
+#| echo: true
+```
+</details>
 
 **maps** 包[@Becker1993]内置的美国郡级地图数据欠缺阿拉斯加、夏威夷和波多黎各。数据集 USCancerRates 没有夏威夷、波多黎各各个郡的数据，阿拉斯加的部分郡有数据，如图\@ref(fig:us-cancer-rates-maps)所示，不少郡没有收集到癌症死亡率数据，以灰色表示。值得一提的是，关于死亡率分级，不同的分法会带给人不同的印象甚至是错觉，此处是可以有操作空间的，特定的死亡率分割方式可以让男女死亡率的空间分布**看起来**差异不大或很大[@Kolak2020]，详细介绍见 Marynia Kolak 和 Susan Paykin 在 2021 R/Medicine 大会上的[视频](https://youtu.be/-HvRISFkQZQ)和[网页](https://makosak.github.io/Intro2RSpatialMed/02-choropleth.html)材料。
 
@@ -382,6 +391,7 @@ match(x = c("A", "B"), table = c("C", "A", "D"))
 #| fig.height: 10
 #| fig.align: "center"
 #| fig.showtext: true
+#| echo: false
 # 美国州边界数据
 us_state <- map("state", plot = FALSE, fill = TRUE, projection = "polyconic")
 library(lattice)
@@ -448,6 +458,15 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
     lty = 1, lwd = 0.2, col = "white"
   ))
 ```
+
+<details>
+<summary> 点击显示或隐藏代码 </summary>
+```{r}
+#| ref.label: us-cancer-rates-lattice
+#| eval: false
+#| echo: true
+```
+</details>
 
 用 **lattice** 包绘图往往可以一个函数搞定，参数非常多，都放在一起，这和 Base R 的绘图函数类似，也同时提供全局图形参数控制，但似乎更加复杂。下面谈几个细节：
 
@@ -707,6 +726,7 @@ us_county_cancer2 <- merge(
 #| fig.height: 10
 #| fig.align: "center"
 #| fig.showtext: true
+#| echo: false
 # 绘图
 tmap::tm_shape(us_county_cancer2) +
   tmap::tm_polygons(border.col = "gray") +
@@ -735,6 +755,15 @@ tmap::tm_shape(us_county_cancer2) +
   )
 ```
 
+<details>
+<summary> 点击显示或隐藏代码 </summary>
+```{r}
+#| ref.label: us-cancer-rates-tmap
+#| eval: false
+#| echo: true
+```
+</details>
+
 
 ### sf
 
@@ -746,6 +775,7 @@ tmap::tm_shape(us_county_cancer2) +
 #| fig.height: 10
 #| fig.align: "center"
 #| fig.showtext: true
+#| echo: false
 # 癌症死亡率数据关联州、郡代码
 USCancerRates2 <- merge(
   x = USCancerRates,
@@ -802,6 +832,14 @@ legend("bottomright",
 )
 ```
 
+<details>
+<summary> 点击显示或隐藏代码 </summary>
+```{r}
+#| ref.label: us-cancer-rates-sf
+#| eval: false
+#| echo: true
+```
+</details>
 
 ### ggplot2 + sf
 
@@ -821,6 +859,7 @@ legend("bottomright",
 #| fig.height: 9
 #| fig.align: "center"
 #| fig.showtext: true
+#| echo: false
 us_county_cancer2$rate_d <- cut(us_county_cancer2$rate, breaks = 50 * 0:13)
 ggplot() +
   geom_sf(
@@ -846,6 +885,15 @@ ggplot() +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
+<details>
+<summary> 点击显示或隐藏代码 </summary>
+```{r}
+#| ref.label: us-cancer-rates-ggplot2-sf
+#| eval: false
+#| echo: true
+```
+</details>
+
 
 ### mapsf
 
@@ -857,6 +905,7 @@ ggplot() +
 #| fig.height: 10
 #| fig.align: "center"
 #| fig.showtext: true
+#| echo: false
 library(mapsf)
 par(mfrow = c(2, 1))
 # 设置主题
@@ -902,6 +951,15 @@ mf_scale(pos = "bottomleft")
 mf_title(txt = "女性", bg = "#f7f7f7", fg = "black", cex = 1)
 mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright", cex = 1)
 ```
+
+<details>
+<summary> 点击显示或隐藏代码 </summary>
+```{r}
+#| ref.label: us-cancer-rates-mapsf
+#| eval: false
+#| echo: true
+```
+</details>
 
 ::: rmdnote
 **mapsf** 包函数 `mf_map()` 的参数 `pal` 可取自 R 内置的调色板 `hcl.pals()`，共计 115 个。设置调色板的内部函数 `mapsf:::get_the_pal()` 将原调色板 `hcl.colors()` 反向了，导致图\@ref(fig:us-cancer-rates-mapsf)的整个配色和之前的图形有所不同，但这并不妨碍图形的准确性和美观性。

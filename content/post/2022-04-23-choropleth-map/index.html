@@ -465,6 +465,16 @@ subset(x = USCancerRates, subset = state == &quot;Alabama&quot; &amp; county == 
 <div id="maps" class="section level3">
 <h3>maps</h3>
 <p>分析和展示地理信息数据是一项常规任务，约 30 年前，Richard A. Becker 等为 S 语言引入地理可视化，特别是本文介绍的地区分布图，以及简单的区域面积和区域中心的计算能力<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>, <a href="#ref-Becker1995" role="doc-biblioref">1995</a>)</span>，而后到了 2003年，Ray Brownrigg、Thomas P Minka 和 Alex Deckmyn 等将其引入 R 语言社区并持续维护至今<span class="citation">(<a href="#ref-maps" role="doc-biblioref">Richard A. Becker, Ray Brownrigg. Enhancements by Thomas P Minka, and Deckmyn. 2021</a>)</span>。除了最基础的 <strong>maps</strong> 包，还有坐标投影 <strong>mapproj</strong> 包<span class="citation">(<a href="#ref-mapproj" role="doc-biblioref">R by Ray Brownrigg, Minka, and Plan 9 codebase by Roger Bivand. 2022</a>)</span>，以及提供更多地图数据的 <strong>mapdata</strong> 包<span class="citation">(<a href="#ref-mapdata" role="doc-biblioref">Richard A. Becker and Ray Brownrigg. 2018</a>)</span>。那个时候，因缺乏一些基础工具，在地图数据获取、空间数据操作和可视化方面都不太容易，仅用这些能做到下图<a href="#fig:us-cancer-rates-maps">2</a>已属不易。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-maps"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-maps-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
+<p class="caption">
+图 2: 1999-2003 年美国各个郡的年平均癌症死亡率分布
+</p>
+</div>
+<details>
+<summary>
+点击显示或隐藏代码
+</summary>
 <pre class="r"><code># 加载数据
 data(USCancerRates, package = &quot;latticeExtra&quot;)
 library(maps)
@@ -533,12 +543,7 @@ legend(&quot;bottomright&quot;,
   legend = c(leg.txt, &quot;NA&quot;), title = &quot;死亡率&quot;, box.col = NA, border = NA,
   horiz = FALSE, fill = c(colors, &quot;grey80&quot;), cex = 0.85, xjust = 0.5
 )</code></pre>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-maps"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-maps-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
-<p class="caption">
-图 2: 1999-2003 年美国各个郡的年平均癌症死亡率分布
-</p>
-</div>
+</details>
 <p><strong>maps</strong> 包<span class="citation">(<a href="#ref-Becker1993" role="doc-biblioref">Becker and Wilks 1993</a>)</span>内置的美国郡级地图数据欠缺阿拉斯加、夏威夷和波多黎各。数据集 USCancerRates 没有夏威夷、波多黎各各个郡的数据，阿拉斯加的部分郡有数据，如图<a href="#fig:us-cancer-rates-maps">2</a>所示，不少郡没有收集到癌症死亡率数据，以灰色表示。值得一提的是，关于死亡率分级，不同的分法会带给人不同的印象甚至是错觉，此处是可以有操作空间的，特定的死亡率分割方式可以让男女死亡率的空间分布<strong>看起来</strong>差异不大或很大<span class="citation">(<a href="#ref-Kolak2020" role="doc-biblioref">Kolak et al. 2020</a>)</span>，详细介绍见 Marynia Kolak 和 Susan Paykin 在 2021 R/Medicine 大会上的<a href="https://youtu.be/-HvRISFkQZQ">视频</a>和<a href="https://makosak.github.io/Intro2RSpatialMed/02-choropleth.html">网页</a>材料。</p>
 <p>在数据操作方面，麻烦的是建立数据指标和各个地理区域的映射，上面反复用到函数 <code>match()</code>，Base R 有很多这样短小精悍的函数。下面简单介绍一下以助理解，函数 <code>match()</code> 返回一个向量，向量的长度与参数 x 一致，向量的元素是整型的，表示参数 x 中的元素出现在参数 table 中的位置，下面是三个小示例：</p>
 <pre class="r"><code>match(x = c(&quot;A&quot;, &quot;B&quot;), table = c(&quot;A&quot;))
@@ -559,6 +564,16 @@ match(x = c(&quot;A&quot;, &quot;B&quot;), table = c(&quot;C&quot;, &quot;A&quot
 <li>添加标题：添加横轴、纵轴、图例、分面标题，图形副标题，适当调整位置。</li>
 <li>最后调整布局、刻度等细节。除了步骤1必须先做，后续步骤没有严格的顺序，图形中各部分是相对独立的，若遇覆盖情况则需注意顺序。</li>
 </ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-lattice"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-lattice-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
+<p class="caption">
+图 3: 1999-2003 年美国各个郡的年平均癌症死亡率分布
+</p>
+</div>
+<details>
+<summary>
+点击显示或隐藏代码
+</summary>
 <pre class="r"><code># 美国州边界数据
 us_state &lt;- map(&quot;state&quot;, plot = FALSE, fill = TRUE, projection = &quot;polyconic&quot;)
 library(lattice)
@@ -624,12 +639,7 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
     x = us_state$x, y = us_state$y,
     lty = 1, lwd = 0.2, col = &quot;white&quot;
   ))</code></pre>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-lattice"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-lattice-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
-<p class="caption">
-图 3: 1999-2003 年美国各个郡的年平均癌症死亡率分布
-</p>
-</div>
+</details>
 <p>用 <strong>lattice</strong> 包绘图往往可以一个函数搞定，参数非常多，都放在一起，这和 Base R 的绘图函数类似，也同时提供全局图形参数控制，但似乎更加复杂。下面谈几个细节：</p>
 <ol style="list-style-type: decimal">
 <li><p>只需传给参数 <code>colramp</code> 一个生成颜色值向量的函数即可更改调色板，比如 R 内置的 <code>hcl.colors()</code> 或 <code>terrain.colors()</code> 等，为保持全文配色风格一致，图中配色采用 <strong>viridisLite</strong> 包提供的 plasma 调色板。</p></li>
@@ -827,6 +837,16 @@ us_county_cancer2 &lt;- merge(
   by.y = c(&quot;state_code&quot;, &quot;county_code&quot;), all.x = TRUE
 )</code></pre>
 <p>准备好数据后，绘图过程比较类似之前使用 <strong>ggplot2</strong> 绘图，所不同的是，添加了指北针、比例尺等地区分布图特有的内容。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-tmap"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-tmap-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
+<p class="caption">
+图 8: 1999-2003 年美国各个郡的年平均癌症死亡率分布
+</p>
+</div>
+<details>
+<summary>
+点击显示或隐藏代码
+</summary>
 <pre class="r"><code># 绘图
 tmap::tm_shape(us_county_cancer2) +
   tmap::tm_polygons(border.col = &quot;gray&quot;) +
@@ -853,16 +873,21 @@ tmap::tm_shape(us_county_cancer2) +
     outer.margins = 0,
     asp = 0
   )</code></pre>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-tmap"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-tmap-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
-<p class="caption">
-图 8: 1999-2003 年美国各个郡的年平均癌症死亡率分布
-</p>
-</div>
+</details>
 </div>
 <div id="sf" class="section level3">
 <h3>sf</h3>
 <p>在上一节已经准备好了美国各个郡的边界数据，接下来合并各个郡的癌症死亡率数据 USCancerRates，调用 <strong>sf</strong> 包<span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">E. J. Pebesma 2018</a>)</span>的绘图函数 <code>plot()</code>。除了调用函数 <code>plot()</code>的几行代码，绘制图<a href="#fig:us-cancer-rates-sf">9</a>的代码和前面调用 <strong>maps</strong> 包绘图大体是类似的，但灵活性高得多，因 <strong>sf</strong> 包的强大，支持大量的空间数据存储格式，不受限于 <strong>maps</strong> 包内置的不完整地图数据，也不因给郡区域上色添加额外的数据匹配操作。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-sf"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-sf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
+<p class="caption">
+图 9: 1999-2003 年美国各个郡的年平均癌症死亡率分布
+</p>
+</div>
+<details>
+<summary>
+点击显示或隐藏代码
+</summary>
 <pre class="r"><code># 癌症死亡率数据关联州、郡代码
 USCancerRates2 &lt;- merge(
   x = USCancerRates,
@@ -917,12 +942,7 @@ legend(&quot;bottomright&quot;,
   legend = c(leg.txt, &quot;NA&quot;), title = &quot;死亡率&quot;, box.col = NA, border = NA,
   horiz = FALSE, fill = c(colors, &quot;grey80&quot;), cex = 0.85, xjust = 0.5
 )</code></pre>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-sf"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-sf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
-<p class="caption">
-图 9: 1999-2003 年美国各个郡的年平均癌症死亡率分布
-</p>
-</div>
+</details>
 </div>
 <div id="ggplot2-sf" class="section level3">
 <h3>ggplot2 + sf</h3>
@@ -932,6 +952,16 @@ legend(&quot;bottomright&quot;,
 <p>For visualisation, please <strong>avoid</strong> using <strong>ggplot2</strong> unless you use this package often (daily). For thematic mapping, <strong>tmap</strong> and <strong>mapsf</strong> are to be preferred, because they are written for making maps. Do not simplify/generalise coastlines unless you really need to do so. You can use <strong>tmap</strong> and <strong>mapview</strong> to view thematic maps interactively - as you zoom in, you see artefacts created by line generalization.</p>
 </blockquote>
 <p>因此，尽管 <strong>ggplot2</strong> 包已经流行开来，并且在很多方面取得成绩，但严格来说，不推荐使用 <strong>ggplot2</strong> 包来绘制任何和地图相关的图形，除非很清楚研究区域的情况，即在合适的地理区域采用合适的投影、合适的工具绘制准确的地理图形。<strong>ggplot2</strong> 在 2018 年发布 3.0.0 版本，开始借助 <strong>sf</strong> 包支持 Simple Features 数据对象的绘图，这就一定程度上缓解了地图变形的问题。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-ggplot2-sf"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-ggplot2-sf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
+<p class="caption">
+图 10: 1999-2003 年美国各个郡的年平均癌症死亡率分布
+</p>
+</div>
+<details>
+<summary>
+点击显示或隐藏代码
+</summary>
 <pre class="r"><code>us_county_cancer2$rate_d &lt;- cut(us_county_cancer2$rate, breaks = 50 * 0:13)
 ggplot() +
   geom_sf(
@@ -955,16 +985,21 @@ ggplot() +
   ) +
   theme_void(base_size = 13) +
   theme(plot.title = element_text(hjust = 0.5))</code></pre>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-ggplot2-sf"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-ggplot2-sf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
-<p class="caption">
-图 10: 1999-2003 年美国各个郡的年平均癌症死亡率分布
-</p>
-</div>
+</details>
 </div>
 <div id="mapsf" class="section level3">
 <h3>mapsf</h3>
 <p>如 Roger Bivand 所推荐，下面介绍 <strong>mapsf</strong> 包 <span class="citation">(<a href="#ref-mapsf2022" role="doc-biblioref">Giraud 2022</a>)</span>，它在 <strong>sf</strong> 包的基础上添加更多地理可视化的功能，比如指北针、比例尺、三维特效等，同时也支持比例符号图、地区分布图及其混合地图。<a href="https://rcarto.github.io/foss4g2021"><strong>mapsf</strong></a> 绘图思路和 <strong>sf</strong> 是一致的，只是封装了一些更加便捷的绘图函数，如图<a href="#fig:us-cancer-rates-mapsf">11</a>所示，大体分三步：其一准备主题样式，配色、布局等；其二表达地理数据，选择合适的图形，建立数据到地图的映射；其三补充一些说明，如注释、比例尺、标题等。</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-mapsf"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-mapsf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
+<p class="caption">
+图 11: 1999-2003 年美国各个郡的年平均癌症死亡率分布
+</p>
+</div>
+<details>
+<summary>
+点击显示或隐藏代码
+</summary>
 <pre class="r"><code>library(mapsf)
 par(mfrow = c(2, 1))
 # 设置主题
@@ -1009,12 +1044,7 @@ mf_arrow(pos = &quot;topleft&quot;)
 mf_scale(pos = &quot;bottomleft&quot;)
 mf_title(txt = &quot;女性&quot;, bg = &quot;#f7f7f7&quot;, fg = &quot;black&quot;, cex = 1)
 mf_credits(txt = &quot;数据源：美国国家癌症研究所&quot;, pos = &quot;bottomright&quot;, cex = 1)</code></pre>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:us-cancer-rates-mapsf"></span>
-<img src="{{< blogdown/postref >}}index_files/figure-html/us-cancer-rates-mapsf-1.png" alt="1999-2003 年美国各个郡的年平均癌症死亡率分布" width="768" />
-<p class="caption">
-图 11: 1999-2003 年美国各个郡的年平均癌症死亡率分布
-</p>
-</div>
+</details>
 <div class="rmdnote">
 <p><strong>mapsf</strong> 包函数 <code>mf_map()</code> 的参数 <code>pal</code> 可取自 R 内置的调色板 <code>hcl.pals()</code>，共计 115 个。设置调色板的内部函数 <code>mapsf:::get_the_pal()</code> 将原调色板 <code>hcl.colors()</code> 反向了，导致图<a href="#fig:us-cancer-rates-mapsf">11</a>的整个配色和之前的图形有所不同，但这并不妨碍图形的准确性和美观性。</p>
 </div>
@@ -1297,7 +1327,7 @@ summary(fit)
 #   lattice_0.20-45     latticeExtra_0.6.29 mapproj_1.2.8      
 #   maps_3.4.0          mapsf_0.4.0         rgeoda_0.0.9       
 #   rmarkdown_2.14      sf_1.0-7            showtext_0.9-5     
-#   tidycensus_1.2.1    tigris_1.6          tmap_3.3-3         
+#   tidycensus_1.2.1    tigris_1.6          tmap_3.3.3         
 #   usmapdata_0.1.0    
 # 
 # Pandoc version: 2.18
