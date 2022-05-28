@@ -6,7 +6,7 @@ slug: choropleth-map
 meta_extra: "审稿：张沥今"
 categories:
   - 统计图形
-tags: 
+tags:
   - 专题地图
   - 地区分布图
   - 地理可视化
@@ -23,9 +23,9 @@ output:
   blogdown::html_page:
     toc: true
 link-citations: true
-bibliography: 
+bibliography:
   - refer.bib
-forum_id: 423119
+forum_id: 423194
 description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
@@ -135,8 +135,8 @@ figure {
 
 div.img {
   text-align: center;
-  display: block; 
-  margin-left: auto; 
+  display: block;
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -647,16 +647,16 @@ latticeExtra::mapplot(rownames(USCancerRates) ~ rate.female + rate.male,
 <pre class="r"><code>trellis.par.get(&quot;par.sub.text&quot;)
 # $alpha
 # [1] 1
-# 
+#
 # $cex
 # [1] 1
-# 
+#
 # $col
 # [1] &quot;#000000&quot;
-# 
+#
 # $font
 # [1] 2
-# 
+#
 # $lineheight
 # [1] 1</code></pre>
 <p>想必读者已看出其规律，以 R 语言的列表结构来传递各个层级的图形参数值。</p></li>
@@ -900,7 +900,7 @@ USCancerRates2 &lt;- merge(
 us_county_cancer &lt;- merge(
   x = us_county_map, y = USCancerRates2,
   by.x = c(&quot;STATEFP&quot;, &quot;COUNTYFP&quot;),
-  by.y = c(&quot;state_code&quot;, &quot;county_code&quot;), 
+  by.y = c(&quot;state_code&quot;, &quot;county_code&quot;),
   all.x = TRUE
 )
 par(mar = c(0, 0, 4, 0), mfrow = c(2, 1))
@@ -1197,24 +1197,24 @@ nc_income_race_tract &lt;- within(nc_income_race_tract, {
 \]</span></p>
 <pre class="r"><code>fit = lm(data = nc_income_race_tract, medInc ~ pctWhite)
 summary(fit)
-# 
+#
 # Call:
 # lm(formula = medInc ~ pctWhite, data = nc_income_race_tract)
-# 
+#
 # Residuals:
-#    Min     1Q Median     3Q    Max 
-# -43312 -15651  -6136   8213 174442 
-# 
+#    Min     1Q Median     3Q    Max
+# -43312 -15651  -6136   8213 174442
+#
 # Coefficients:
-#             Estimate Std. Error t value Pr(&gt;|t|)    
+#             Estimate Std. Error t value Pr(&gt;|t|)
 # (Intercept)    27808       1652    16.8   &lt;2e-16 ***
 # pctWhite       43800       2271    19.3   &lt;2e-16 ***
 # ---
 # Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
-# 
+#
 # Residual standard error: 24900 on 2157 degrees of freedom
 #   (36 observations deleted due to missingness)
-# Multiple R-squared:  0.147,   Adjusted R-squared:  0.147 
+# Multiple R-squared:  0.147,   Adjusted R-squared:  0.147
 # F-statistic:  372 on 1 and 2157 DF,  p-value: &lt;2e-16</code></pre>
 <p>根据调整的 <span class="math inline">\(R^2 = 0.147\)</span>，各社区家庭年收入和白人占比相关性比较低，结合图<a href="#fig:lm-income-race">20</a>也不难看出<strong>稳定正向</strong>的关系，平均来说，社区的白人占比增加一个百分点，该地区家庭平均年收入增加<strong>438</strong>美元。</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:lm-income-race"></span>
@@ -1318,20 +1318,20 @@ summary(fit)
 # R version 4.2.0 (2022-04-22)
 # Platform: x86_64-apple-darwin17.0 (64-bit)
 # Running under: macOS Big Sur/Monterey 10.16
-# 
+#
 # Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
-# 
+#
 # Package version:
-#   biscale_0.2.0       blogdown_1.10       cowplot_1.1.1      
-#   ggplot2_3.3.6       grid_4.2.0          knitr_1.39         
-#   lattice_0.20-45     latticeExtra_0.6.29 mapproj_1.2.8      
-#   maps_3.4.0          mapsf_0.4.0         rgeoda_0.0.9       
-#   rmarkdown_2.14      sf_1.0-7            showtext_0.9-5     
-#   tidycensus_1.2.1    tigris_1.6          tmap_3.3.3         
-#   usmapdata_0.1.0    
-# 
+#   biscale_1.0.0       blogdown_1.10       cowplot_1.1.1
+#   ggplot2_3.3.6       grid_4.2.0          knitr_1.39
+#   lattice_0.20-45     latticeExtra_0.6.29 mapproj_1.2.8
+#   maps_3.4.0          mapsf_0.4.0         rgeoda_0.0.9
+#   rmarkdown_2.14      sf_1.0-7            showtext_0.9-5
+#   tidycensus_1.2.1    tigris_1.6          tmap_3.3.3
+#   usmapdata_0.1.0
+#
 # Pandoc version: 2.18
-# 
+#
 # Hugo version: 0.98.0</code></pre>
 </div>
 <div id="参考文献" class="section level1 unnumbered">

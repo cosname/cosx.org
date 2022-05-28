@@ -25,7 +25,7 @@ output:
 link-citations: true
 bibliography: 
   - refer.bib
-forum_id: 423119
+forum_id: 423194
 description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
@@ -1302,10 +1302,14 @@ nc_bi_map <- ggplot() +
   ) +
   theme_void() +
   theme(plot.title = element_text(hjust = 0.5))
+
+# 要求 biscale 版本 >= 1.0.0
 # 创建图例数据
 nc_bi_leg_data <- data.frame(expand.grid(x = 3:1, y = 3:1),
-  bi_fill = biscale:::pal_dkviolet(n = 3)
+  bi_fill = biscale::bi_pal(pal = "DkViolet2", dim = 3, preview = FALSE)
 )
+
+# 绘制二元图例的函数 bi_legend 不支持中文，因此改其源代码
 # 创建图例瓦片
 nc_bi_leg <- ggplot(
   data = nc_bi_leg_data,
