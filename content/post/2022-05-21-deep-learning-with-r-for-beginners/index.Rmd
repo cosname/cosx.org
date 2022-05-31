@@ -13,34 +13,48 @@ link-citations: true
 slug: deep-learning-with-r-for-beginners
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning = F,message = F)
 ```
 
-## 框架
+近年来深度学习在人工智能领域飞速发展，各行业的学者、研究人员纷纷涌入研究热潮。本文将从 R 语言角度来介绍深度学习并解决以下几个问题：
 
 -   什么是深度学习？
 -   为什么选择 R 语言做深度学习？
--   如何搭建工作环境？
--   如何使用神经网络模型？
--   相关资料分享
+-   如何配置工作环境？
+-   如何使用神经网络建立模型？
+
+并在文末给出一些学习资料供大家参考、学习。
 
 ## 简介
-
-### 什么是深度学习？
 
 深度学习是机器学习领域一个新的研究方向，通过模型模拟人类大脑的神经连接结构，进而给出数据的解释。图 1 给出了人工智能、机器学习和深度学习三者的关系。
 
 深度学习之所以被称为 "深度"，是相对于其他"浅层"学习的方法（支持向量机、提升方法 、最大熵方法等）而言的。浅层学习依靠人工经验抽取样本特征，网络模型学习后获得的单层或双层的特征；而深度学习通过对原始数据进行逐层特征变换，将样本在原空间的特征表示变换到新的特征空间，自动地学习得到层次化的特征表示，从而更有利于分类或特征的可视化。
 
-![图1：人工智能、机器学习和深度学习的关系，"来源于：L. Alzubaidi et al. Journal of Big Data (2021)"](images/paste-96170D25.png)
+![图1：人工智能、机器学习和深度学习的关系，"来源于：L. Alzubaidi et al. [Review of deep learning: Concepts, CNN architectures, challenges, applications, future directions](https://link.springer.com/article/10.1186/s40537-021-00444-8), Journal of Big Data (2021)"](images/paste-96170D25.png)
 
 目前，深度学习已经被应用于诸多领域中，例如：医疗保健、社会网络分析、音频和语音处理（识别和增强）、视觉数据处理方法（多媒体数据分析和计算机视觉）、自然语言处理（翻译和句子分类）等。
 
-### 为什么选择 R 语言做深度学习？
+## R 语言深度学习
 
 随着 R 的不断发展，利用 R 进行深度学习比以往更容易。并且 R 易学易用，不要求很扎实的编程基础，如今它被广泛地应用于机器学习实践和教学中。即使对 R 语言不是很了解的用户也可以通过一些包来搭建深度学习网络。
+
+CRAN 的[机器学习与统计学习](<https://cran.r-project.org/view=MachineLearning>)任务视图中与 R 语言深度学习相关的第三方包有：
+
+| R 包                                                                  | 描述                                                                                       |
+|-----------------|-----------------------------------------------|
+| [nnet](https://cran.r-project.org/web/packages/nnet/index.html)       | 构建单隐藏层的前馈神经网络，多项对数线性模型。                                             |
+| [h2o](https://cran.r-project.org/web/packages/h2o/index.html)         | H2O 的 R 脚本功能。                                                                        |
+| [RSNNS](https://cran.r-project.org/web/packages/RSNNS/index.html)     | Stuttgart 神经网络模拟器(SNNS)接口。                                                       |
+| [tensorflow](http://www.tensorflow.org/)                              | TensorFlow 接口。                                                                          |
+| [deepnet](https://cran.r-project.org/web/packages/deepnet/index.html) | R 中的深度学习工具包（前馈神经网络，受限的玻尔兹曼机，深度信念网络，堆叠的自编码器）。     |
+| [RcppDL](https://cran.r-project.org/web/packages/RcppDL/index.html)   | 实现多层的机器学习方法，包括去噪自编码器，堆叠去噪自编码器，限制玻尔兹曼机和深度信念网络。 |
+| [torch](https://cran.r-project.org/web/packages/torch/index.html)     | 实现 libtorch 库的接口。                                                                   |
+
+如果读者对这些包感兴趣，可以直接点击名称进入学习。或者阅读程显毅老师的中文书籍《[深度学习与 R 语言](<https://book.douban.com/subject/27085471/>)》，该书介绍了各种 R 语言深度学习包并结合实例分析。
+
+本文主要使用深度学习框架 [Keras](<https://keras.io/>)，并将 [TensorFlow](<https://www.tensorflow.org/?hl=zh-cn>) 作为后端引擎。与其他包相比，Keras 的优点在于它的易用性。它是最流行和发展最快的深度学习框架之一，被广泛推荐为入门深度学习的最佳工具。它能够在 TensorFlow，CNTK，Theano 或 MXNet 上运行。
 
 ## 配置工作环境
 
@@ -98,7 +112,7 @@ knitr::opts_chunk$set(echo = TRUE,warning = F,message = F)
 
 当工作环境搭建完毕后，就可以开始利用 R 语言做深度学习了。
 
-## 简单案例入门
+## 简单神经网络建模
 
 本节将从一个简单的[回归例子](https://github.com/fmmattioni/deep-learning-with-r-notebooks/blob/master/notebooks/3.6-predicting-house-prices.Rmd)来介绍如何在 R 中使用 keras 包进行深度学习。
 
@@ -117,8 +131,6 @@ library(keras)
 library(mlbench) #使用内部数据
 library(dplyr)
 library(magrittr)
-library(NeuralNetTools)#神经网络可视化
-library(nnet)
 ```
 
 ### 加载数据
@@ -132,17 +144,6 @@ data %<>% mutate_if(is.factor, as.numeric)
 knitr::kable(head(data[,1:12]))
 ```
 
-### 神经网络可视化
-
-在模型搭建前，可以使用 [NeuralNetTools](https://rdrr.io/cran/NeuralNetTools/man/plotnet.html) 包中的 `plotnet()` 函数绘制网络结构。当然也可以使用其他包，例如：[neuralnet](https://github.com/bips-hb/neuralnet)、[tensorboard](https://tensorflow.rstudio.com/tools/tensorboard/tensorboard/)。
-
-```{r results='hide'}
-n <- nnet(medv ~ .,data = data,size = 5)
-plotnet(n)  
-```
-
-![](images/paste-890A4E84.png)
-
 ### 数据处理
 
 首先，对 506 条数据进行划分。随机选择其中的 70% 数据作为训练样本，另外 30% 数据作为测试样本。
@@ -154,7 +155,7 @@ dimnames(data) <- NULL
 
 # 数据集划分
 set.seed(1234)
-ind <- sample(2, nrow(data), replace = T, prob = c(.7, .3))
+ind <- sample(2, nrow(data), replace = T, prob = c(.7, .3)) #从 1，2 中有放回抽取一个数，概率分别为（0.7，0.3）。
 training <- data[ind==1,1:13]
 test <- data[ind==2, 1:13]
 trainingtarget <- data[ind==1, 14]
@@ -191,13 +192,22 @@ summary(model)
 
 ### 编译模型
 
-使用 mse 损失函数 ------均方误差编译网络，即预测和目标之间差异的二次方。这是回归问题广泛使用的损失函数。使用 mae ------平均绝对误差来监控网络。优化器为 rmsprop。
+编译主要需要设定三个部分：
+
+1.  损失函数：训练期间需要最小化的目标函数；
+2.  优化器：对数据和损失函数进行自我更新；
+3.  监控度量：训练和测试期间的评价标准。
+
+该例子是一个典型的回归问题，我们使用的损失函数是均方误差（Mean Square Error，MSE），即预测和目标之间差异的平方。使用均方根传播方法（Root Mean Squared Propagation，RMSProp）作为该模型的优化器。使用平均绝对误差（Mean Absolute Error，MAE）来监控网络。
 
 ```{r}
-model %>% compile(loss = 'mse',
-                  optimizer = 'rmsprop',
-                  metrics = 'mae')
+model %>% compile(loss = 'mse', #损失函数
+                  optimizer = 'rmsprop', #优化器
+                  metrics = 'mae'#监控度量
+                  )
 ```
+
+> 优化器有很多种，详细介绍可参考：[理论](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf)、[实践](https://keras.io/api/optimizers/)；损失函数和评价度量的选择，可以参考这篇[博客](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)。
 
 ### 拟合模型
 
@@ -246,11 +256,17 @@ ggplot(ev_data) +
 
 ### 存储/加载模型
 
-为了保存 Keras 模型以供未来使用，使用 `save_model_tf()` 函数保存模型。加载模型使用 `load_model_tf()` 函数。
+为了保存 Keras 模型以供未来使用，使用 `save_model_tf()` 函数保存模型。
 
 ```{r}
-save_model_tf(object = model, filepath = "model") #保存模型
-reloaded_model <- load_model_tf("model") #加载模型
+save_model_tf(object = model, filepath = "BostonHousing_model") #保存模型
+```
+
+使用 `load_model_tf()` 函数加载模型，并对新数据集（下面使用测试集）进行预测。
+
+```{r results='hide'}
+reloaded_model <- load_model_tf("BostonHousing_model") #加载模型
+predict(reloaded_model, test) #对新数据集进行预测
 ```
 
 ## 相关拓展
@@ -263,7 +279,7 @@ reloaded_model <- load_model_tf("model") #加载模型
 
 ### 相关教程
 
-1.  RStudio 官网 tensorflow [资料](https://tensorflow.rstudio.com/) 和 AI 相关 [博客](https://blogs.rstudio.com/ai/);
+1.  RStudio 官网 TensorFlow [资料](https://tensorflow.rstudio.com/) 和 AI 相关 [博客](https://blogs.rstudio.com/ai/);
 
 2.  书籍：[《Deep Learning with R》](https://www.manning.com/books/deep-learning-with-r)，对应 [代码](https://github.com/fmmattioni/deep-learning-with-r-notebooks)，[中文翻译版本](https://item.jd.com/13183476.html)。
 
@@ -280,7 +296,7 @@ reloaded_model <- load_model_tf("model") #加载模型
 
 ![](images/paste-9841ED7B.png)
 
-6.  RStudio 官方给出的 Keras [速查表](https://raw.githubusercontent.com/rstudio/cheatsheets/main/keras.pdf)
+6.  RStudio 官方给出的 Keras [速查表](https://raw.githubusercontent.com/rstudio/cheatsheets/main/keras.pdf)。
 
 ![](images/paste-60B4C9C3.png)
 
@@ -288,7 +304,7 @@ reloaded_model <- load_model_tf("model") #加载模型
 
 ### 相关案例
 
-- [R 中使用 TensorFlow Probability](https://blogs.rstudio.com/ai/posts/2019-01-08-getting-started-with-tf-probability/)
-- [表示学习](https://blogs.rstudio.com/ai/posts/2018-10-22-mmd-vae/#our-objective-today)
-- [几何深度学习](https://blogs.rstudio.com/ai/posts/2021-08-26-geometric-deep-learning/)
-- [基于空间预测的卷积 LSTM 网络](https://blogs.rstudio.com/ai/posts/2020-12-17-torch-convlstm/)
+-   [R 中使用 TensorFlow Probability](https://blogs.rstudio.com/ai/posts/2019-01-08-getting-started-with-tf-probability/)
+-   [表示学习](https://blogs.rstudio.com/ai/posts/2018-10-22-mmd-vae/#our-objective-today)
+-   [几何深度学习](https://blogs.rstudio.com/ai/posts/2021-08-26-geometric-deep-learning/)
+-   [基于空间预测的卷积 LSTM 网络](https://blogs.rstudio.com/ai/posts/2020-12-17-torch-convlstm/)
