@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE,warning = F,message = F)
 近年来深度学习在人工智能领域飞速发展，各行业的学者、研究人员纷纷涌入研究热潮。本文将从 R 语言角度来介绍深度学习并解决以下几个问题：
 
 -   什么是深度学习？
--   为什么选择 R 语言做深度学习？
+-   相关深度学习包有哪些？
 -   如何配置工作环境？
 -   如何使用神经网络建立模型？
 
@@ -54,7 +54,7 @@ CRAN 的[机器学习与统计学习](<https://cran.r-project.org/view=MachineLe
 
 如果读者对这些包感兴趣，可以直接点击名称进入学习。或者阅读程显毅老师的中文书籍《[深度学习与 R 语言](<https://book.douban.com/subject/27085471/>)》，该书介绍了各种 R 语言深度学习包并结合实例分析。
 
-本文主要使用深度学习框架 [Keras](<https://keras.io/>)，并将 [TensorFlow](<https://www.tensorflow.org/?hl=zh-cn>) 作为后端引擎。与其他包相比，Keras 的优点在于它的易用性。它是最流行和发展最快的深度学习框架之一，被广泛推荐为入门深度学习的最佳工具。它能够在 TensorFlow，CNTK，Theano 或 MXNet 上运行。
+> 本文主要使用深度学习框架 [Keras](<https://keras.io/>)，并将 [TensorFlow](<https://www.tensorflow.org/?hl=zh-cn>) 作为后端引擎。与其他包相比，Keras 的优点在于它的易用性。它是最流行和发展最快的深度学习框架之一，被广泛推荐为入门深度学习的最佳工具。它能够在 TensorFlow，CNTK，Theano 或 MXNet 上运行。
 
 ## 配置工作环境
 
@@ -116,6 +116,8 @@ CRAN 的[机器学习与统计学习](<https://cran.r-project.org/view=MachineLe
 
 本节将从一个简单的[回归例子](https://github.com/fmmattioni/deep-learning-with-r-notebooks/blob/master/notebooks/3.6-predicting-house-prices.Rmd)来介绍如何在 R 中使用 keras 包进行深度学习。
 
+> 该案例是在 CPU 下进行的。如果你的设备有 GPU，并想用 GPU 训练模型。你不需要修改以下的代码，只需前期安装 GPU 版本的 TensorFlow，默认情况下，运算会优先使用 GPU。
+
 知识点包括：
 
 1.  数据导入与数据处理。
@@ -141,7 +143,7 @@ library(magrittr)
 data("BostonHousing")
 data <- BostonHousing
 data %<>% mutate_if(is.factor, as.numeric)
-knitr::kable(head(data[,1:12]))
+knitr::kable(head(data[,1:12])) #由于呈现不了所有列，这里只展示 12 列的前 6 行数据。
 ```
 
 ### 数据处理
@@ -308,3 +310,4 @@ predict(reloaded_model, test) #对新数据集进行预测
 -   [表示学习](https://blogs.rstudio.com/ai/posts/2018-10-22-mmd-vae/#our-objective-today)
 -   [几何深度学习](https://blogs.rstudio.com/ai/posts/2021-08-26-geometric-deep-learning/)
 -   [基于空间预测的卷积 LSTM 网络](https://blogs.rstudio.com/ai/posts/2020-12-17-torch-convlstm/)
+

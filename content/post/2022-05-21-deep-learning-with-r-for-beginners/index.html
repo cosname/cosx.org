@@ -41,7 +41,7 @@ slug: deep-learning-with-r-for-beginners
 <p>近年来深度学习在人工智能领域飞速发展，各行业的学者、研究人员纷纷涌入研究热潮。本文将从 R 语言角度来介绍深度学习并解决以下几个问题：</p>
 <ul>
 <li>什么是深度学习？</li>
-<li>为什么选择 R 语言做深度学习？</li>
+<li>相关深度学习包有哪些？</li>
 <li>如何配置工作环境？</li>
 <li>如何使用神经网络建立模型？</li>
 </ul>
@@ -103,7 +103,9 @@ slug: deep-learning-with-r-for-beginners
 </tbody>
 </table>
 <p>如果读者对这些包感兴趣，可以直接点击名称进入学习。或者阅读程显毅老师的中文书籍《<a href="https://book.douban.com/subject/27085471/">深度学习与 R 语言</a>》，该书介绍了各种 R 语言深度学习包并结合实例分析。</p>
+<blockquote>
 <p>本文主要使用深度学习框架 <a href="https://keras.io/">Keras</a>，并将 <a href="https://www.tensorflow.org/?hl=zh-cn">TensorFlow</a> 作为后端引擎。与其他包相比，Keras 的优点在于它的易用性。它是最流行和发展最快的深度学习框架之一，被广泛推荐为入门深度学习的最佳工具。它能够在 TensorFlow，CNTK，Theano 或 MXNet 上运行。</p>
+</blockquote>
 </div>
 <div id="配置工作环境" class="section level2">
 <h2>配置工作环境</h2>
@@ -156,6 +158,9 @@ packageVersion(&#39;tensorflow&#39;)</code></pre>
 <div id="简单神经网络建模" class="section level2">
 <h2>简单神经网络建模</h2>
 <p>本节将从一个简单的<a href="https://github.com/fmmattioni/deep-learning-with-r-notebooks/blob/master/notebooks/3.6-predicting-house-prices.Rmd">回归例子</a>来介绍如何在 R 中使用 keras 包进行深度学习。</p>
+<blockquote>
+<p>该案例是在 CPU 下进行的。如果你的设备有 GPU，并想用 GPU 训练模型。你不需要修改以下的代码，只需前期安装 GPU 版本的 TensorFlow，默认情况下，运算会优先使用 GPU。</p>
+</blockquote>
 <p>知识点包括：</p>
 <ol style="list-style-type: decimal">
 <li>数据导入与数据处理。</li>
@@ -177,7 +182,7 @@ library(magrittr)</code></pre>
 <pre class="r"><code>data(&quot;BostonHousing&quot;)
 data &lt;- BostonHousing
 data %&lt;&gt;% mutate_if(is.factor, as.numeric)
-knitr::kable(head(data[,1:12]))</code></pre>
+knitr::kable(head(data[,1:12])) #由于呈现不了所有列，这里只展示 12 列的前 6 行数据。</code></pre>
 <table>
 <colgroup>
 <col width="10%" />
@@ -377,10 +382,10 @@ test &lt;- scale(test, center = m, scale = s)</code></pre>
 <p>使用 <code>evaluate()</code> 评估模型，给出预测结果。计算真实值和预测值的均方误差。</p>
 <pre class="r"><code>model %&gt;% evaluate(test, testtarget)</code></pre>
 <pre><code>##   loss    mae 
-## 41.763  3.999</code></pre>
+## 42.571  4.185</code></pre>
 <pre class="r"><code>pred &lt;- predict(model,test) #预测结果
 mean((testtarget-pred)^2) #计算均方误差</code></pre>
-<pre><code>## [1] 41.76</code></pre>
+<pre><code>## [1] 42.57</code></pre>
 <p>通过 <a href="https://ggplot2.tidyverse.org/">ggplot2</a> 包将预测结果和真实结果可视化。</p>
 <pre class="r"><code>library(ggplot2)
 library(viridis)
