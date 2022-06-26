@@ -329,7 +329,7 @@ k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
 \end{align*}
 $$`
 
-显然上式具有明确的二项分布的物理含义。事实上，二项分布和贝塔分布之间也存在完全类似\eqref{poisson-gamma-dual} 的一个等式：
+显然上式具有明确的二项分布的物理含义。事实上，二项分布和贝塔分布之间也存在完全类似 \eqref{poisson-gamma-dual} 的一个等式：
   
 \begin{equation}
 \label{binomial-beta-dual}
