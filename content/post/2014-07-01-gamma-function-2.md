@@ -49,7 +49,8 @@ forum_id: 419024
 
 
 \begin{equation}
-B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} ,
+\label{beta-gamma-decompose}
+B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} , \tag{2.12}
 \end{equation}
 
   
@@ -87,7 +88,7 @@ $$`
   
 \begin{equation}
 \label{generalized-gamma} 
-\frac{\Gamma(x)}{c^x} = \int_0^{\infty} e^{-ct} t^x \frac{dt}{t}  
+\frac{\Gamma(x)}{c^x} = \int_0^{\infty} e^{-ct} t^x \frac{dt}{t}  \tag{2.13}
 \end{equation}
   
 由此 `$dt/t = d \log t$` 可以被看成是乘法群 `$(0, \infty)$` 上的一个不变测度，在尺度伸缩变换下满足不变性：
@@ -102,7 +103,7 @@ $$`
   
 `$$g(t \cdot s) = g(t) \cdot g(s) .$$`
   
-由于积分表示的是求和，所以 \eqref{generalized-gamma} 式 被看成是乘法群 `$(0, \infty)$` 上加法特征和乘法特征混合乘积的累积求和。有了这个分解，只要在抽象代数的有限域上定义了 `$f$` 和 `$g$` 这两个映射， 实数域上定义的 `$\frac{\Gamma(x)}{c^x}$` 函数就可以被推广到有限域上进行定义，只是无限求和的积分号变成了有限求和符号 `$\Sigma$` 。 进一步，借用贝塔函数和伽玛函数满足的关系式 \eqref{beta-gamma-decompose}, `$Beta(x,y)$` 也可以完全类似的在有限域中定义出来， 而这种推广也将变得具有简洁的对称美。当然，这个理由和欧拉、勒让德的选择无关，而是现代数学家们给出的一个额外的解释。
+由于积分表示的是求和，所以 \eqref{generalized-gamma} 式 被看成是乘法群 `$(0, \infty)$` 上加法特征和乘法特征混合乘积的累积求和。有了这个分解，只要在抽象代数的有限域上定义了 `$f$` 和 `$g$` 这两个映射， 实数域上定义的 `$\frac{\Gamma(x)}{c^x}$` 函数就可以被推广到有限域上进行定义，只是无限求和的积分号变成了有限求和符号 `$\Sigma$` 。 进一步，借用贝塔函数和伽玛函数满足的关系式 \eqref{beta-gamma-decompose} , `$Beta(x,y)$` 也可以完全类似的在有限域中定义出来， 而这种推广也将变得具有简洁的对称美。当然，这个理由和欧拉、勒让德的选择无关，而是现代数学家们给出的一个额外的解释。
 
 # 六、伽玛函数欣赏
 
@@ -282,16 +283,16 @@ $$`
 
 如果我们把伽玛函数和`$e^\lambda$`的泰勒展开式对照写成如下形式
   
-\begin{align} 
-e^\lambda = \sum_{k=0}^{\infty} {\lambda^k \over k!} \\
-k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
-\end{align}
+`\begin{align} 
+e^\lambda &= \sum_{k=0}^{\infty} {\lambda^k \over k!} \tag{2.14}\\
+k! &= \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.  \tag{2.15}
+\end{align}`
   
 我们发现这两个式子形式上具有对偶关系。由于`$\sum$` 和`$\int$` 都表示求和， 几乎可以认为从第一个式子只是把 `$e^\lambda$` 和 `$k!$` 交换一下就得到了第二个式子。 这两个式子之间有更多的内在联系吗？事实上有如下一个奇妙的等式成立 
 
 \begin{equation} 
 \label{gamma-e-taylor} 
-\frac{1}{k!} \int_0^\lambda \frac{\lambda^k}{e^\lambda} d\lambda + \frac{1}{e^\lambda} \sum_{n=0}^k \frac{\lambda^n}{n!} = 1 
+\frac{1}{k!} \int_0^\lambda \frac{\lambda^k}{e^\lambda} d\lambda + \frac{1}{e^\lambda} \sum_{n=0}^k \frac{\lambda^n}{n!} = 1 \tag{2.16}
 \end{equation}
   
 用上面描述的泊松过程的物理模型，可以很容易的证明这个等式。我们把数轴分成 `$(0, \lambda]$` 和 `$(\lambda, \infty)$` 这两个区间，考察第`$k+1$` 个电话接到时间 `$Y_{k+1}$` 分别落在这两个区间的概率，当然有 `$$ P(Y_{k+1} \le \lambda) + P(Y_{k+1} > \lambda) = 1 $$`
@@ -308,7 +309,7 @@ k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
   
 \begin{equation}  
 \label{poisson-gamma-dual}  
-\int_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!}d\lambda+\sum_{n=0}^k \frac{\lambda^n e^{-\lambda}}{n!} = 1  
+\int_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!}d\lambda+\sum_{n=0}^k \frac{\lambda^n e^{-\lambda}}{n!} = 1  \tag{2.17}
 \end{equation}
   
 这个式子俗称泊松-伽玛对偶，简单整理一下就是 \eqref{gamma-e-taylor} 式。
@@ -319,21 +320,19 @@ k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
   
 所以伽马分布的概率密度可以重写为
 
-`$$
-\begin{align*}  
+`\begin{align*}  
 \frac{\lambda^k e^{-\lambda}}{k!} 
 &= \lim_{n\rightarrow \infty} \frac{\lambda^k (1-\frac{\lambda}{n}) ^n}{k!} \\
 &= \lim_{n\rightarrow \infty} \frac{ n! n^k (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n}{k! \cdot n!} \\
 &= \lim_{n\rightarrow \infty} \frac{(n+k)!}{k!\cdot n!} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n \\
-&= \lim_{n\rightarrow \infty} \binom{n+k}{k} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n  
-\end{align*}
-$$`
+&= \lim_{n\rightarrow \infty} \binom{n+k}{k} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n   
+\end{align*}`
 
 显然上式具有明确的二项分布的物理含义。事实上，二项分布和贝塔分布之间也存在完全类似 \eqref{poisson-gamma-dual} 的一个等式：
   
 \begin{equation}
 \label{binomial-beta-dual}
-\frac{n!}{k!(n-k-1)!} \int_0^p t^k(1-t)^{n-k-1} dt + \sum_{v=0}^k \binom{n}{v} p^v(1-p)^{n-v} = 1  
+\frac{n!}{k!(n-k-1)!} \int_0^p t^k(1-t)^{n-k-1} dt + \sum_{v=0}^k \binom{n}{v} p^v(1-p)^{n-v} = 1  \tag{2.18}
 \end{equation}
   
 如果我们知道`$n\rightarrow\infty$`时上式中二项分布的极限是泊松分布，而贝塔分布的极限是伽玛分布，那么就很容易理解 \eqref{poisson-gamma-dual} 其实可以看做是 \eqref{binomial-beta-dual} 的极限形式。

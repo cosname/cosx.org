@@ -51,7 +51,7 @@ forum_id: 419023
 \label{wallis-formula}
 \frac{2}{1} \cdot \frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5} \cdot
 \frac{6}{5} \cdot \frac{6}{7} \cdot \frac{8}{7} \cdot \frac{8}{9} \cdot \cdots =
-\frac{\pi}{2} .
+\frac{\pi}{2} . \tag{2.1}
 \end{equation}`
   
 `\(\pi\)` 居然可以如此齐整地表示成奇数、偶数的比值，着实令人惊讶。 历史上数学家们为了寻求对`\(\pi\)` 这个迷人的常数更加深刻的理解，前赴后继倾注了无数的精力。数学家们发现，`\(\pi\)`可以表达成许许多多奇妙的形式，而沃利斯公式是欧洲历史上发现的第二个把`\(\pi\)` 表达成式了无穷序列的形式， 由于它简洁的对称美，也成为了许多数学人经常提及的数学公式之一。为何沃利斯公式会和伽玛函数发生联系呢？实际上对沃利斯公式做一下变形整理就可以得到如下等价形式
@@ -75,7 +75,7 @@ forum_id: 419023
 `\begin{equation}
 \label{euler-sinx}
 \sin x = x \prod_{n=1}^\infty\left(1-\frac{x^2}{n^2\pi^2}\right)  
-= x (1- \frac{x^2}{\pi^2}) (1- \frac{x^2}{4\pi^2}) (1- \frac{x^2}{9\pi^2}) \cdots .
+= x (1- \frac{x^2}{\pi^2}) (1- \frac{x^2}{4\pi^2}) (1- \frac{x^2}{9\pi^2}) \cdots . \tag{2.2}
 \end{equation}`
   
 理工科背景的学生大都学习过 `\(\sin x\)`的泰勒展开式， 通常只有数学背景的学生才会接触到这个 `\(\sin x\)` 的无穷乘积展开式。这个展开式在数学推导中有许多妙用。数学史上它发挥的第一个重要作用，就是帮助欧拉推导出了如下美丽的公式
@@ -119,14 +119,14 @@ forum_id: 419023
 
 \begin{equation}
 \label{wallis-Bpq}
-B_{p,q} = \frac{(p+q)!} {p! q!} = \frac{1}{p!} (q+1) (q+2) \ldots (q+p), q=0,1,2 \ldots
+B_{p,q} = \frac{(p+q)!} {p! q!} = \frac{1}{p!} (q+1) (q+2) \ldots (q+p), q=0,1,2 \ldots \tag{2.3}
 \end{equation}
 
 由上式进一步可以得到如下的递推公式
   
 \begin{equation}
 \label{wallis-Bpq-recursion}
-B_{p,q} = \frac{p+q}{q} B_{p,q-1}
+B_{p,q} = \frac{p+q}{q} B_{p,q-1} \tag{2.4}
 \end{equation}
   
 原始的问题就转化为计算 `\(B_{\frac{1}{2},\frac{1}{2}}\)`。 由此开始， 沃利斯开始了他天才的推广：
@@ -273,7 +273,7 @@ P\{{S_n} = n\} & = & \displaystyle P\{ n -1 < {S_n} \le n\} \\
   
 \begin{equation} 
 \label{half-factorial} 
-\left(\frac{1}{2}\right)! = \frac{\sqrt\pi}{2} . 
+\left(\frac{1}{2}\right)! = \frac{\sqrt\pi}{2} . \tag{2.5}
 \end{equation}
   
 这真是一个令人惊诧的结果！
@@ -333,19 +333,20 @@ P\{{S_n} = n\} & = & \displaystyle P\{ n -1 < {S_n} \le n\} \\
 \label{euler-series} 
 \Bigl[\Bigl(\frac{2}{1}\Bigr)^n\frac{1}{n+1}\Bigr]  
 \Bigl[\Bigl(\frac{3}{2}\Bigr)^n\frac{2}{n+2}\Bigr]  
-\Bigl[\Bigl(\frac{4}{3}\Bigr)^n\frac{3}{n+3}\Bigr] \cdots = n! .  
+\Bigl[\Bigl(\frac{4}{3}\Bigr)^n\frac{3}{n+3}\Bigr] \cdots = n! .  \tag{2.6}
 \end{equation}`
   
 用极限形式，这个式子以写为
   
 `\begin{equation}  
 \label{euler-series2}  
-\lim_{m \rightarrow \infty} \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} = n! 
+\lim_{m \rightarrow \infty} \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} = n! \tag{2.7}
 \end{equation}`
   
 欧拉实际上在他的论文中描述了发现上述式子的思路，我们不在此赘述，不过上式成立却很容易证明。上式左边可以整理为
   
-`\begin{align*}  
+`$$
+\begin{align*}  
 & \frac{1\cdot 2\cdot 3 \cdots m}{(1+n)(2+n)\cdots (m+n)}(m+1)^{n} \\  
 = & \frac{1\cdot 2\cdot 3 \cdots n \cdot (n+1)(n+2) \cdots m}{(1+n)(2+n)\cdots m (m+1)(m+2)\cdots (m+n)} 
 (m+1)^{n} \\  
@@ -354,7 +355,8 @@ P\{{S_n} = n\} & = & \displaystyle P\{ n -1 < {S_n} \le n\} \\
 = & n! \cdot \frac{(m+1)^{n}}{(m+1)(m+2)\cdots (m+n)} \\  
 = & n! \cdot \prod_{k=1}^{n} \frac{m+1}{m+k} \\  
 \rightarrow & n! \qquad (m\rightarrow \infty)  
-\end{align*}`
+\end{align*} \tag{1.1}
+$$`
   
 所以 \eqref{euler-series}、\eqref{euler-series2}式都成立。
 
@@ -377,57 +379,57 @@ P\{{S_n} = n\} & = & \displaystyle P\{ n -1 < {S_n} \le n\} \\
 
   欧拉是具有超凡的数学直觉的数学家，他看到 `\((\frac{1}{2})!\)` 中居然有 `\(\pi\)`, 对于擅长数学分析的数学家而言，有 `\(\pi\)` 的地方必然有和圆相关的积分。同时由于计算`\( (\frac{1}{2})!\)`过程中使用到的沃利斯公式，实际上也是计算积分的产物，由此欧拉猜测 `\(n!\)` 应该可以表达为积分形式，于是欧拉开始努力尝试把 `\(n!\)` 表达为某种积分。虽然沃利斯的时代微积分的系统理论还没有发明出来，沃利斯使用插值的方式做一些推导计算，但是沃利斯公式的推导过程本质上就是在处理积分。 如果说沃利斯当年只是无心插柳，那后继者欧拉是发现了一片绿洲。 受沃利斯工作的启发，欧拉开始考虑如下一般形式的积分
   
-  `$$ J(e,n) = \int_0^1 x^e(1-x)^ndx$$`
+`$$ J(e,n) = \int_0^1 x^e(1-x)^ndx$$`
+
+此处 `\(n\)` 为正整数，`\(e\)` 为正实数。利用分部积分法，很容易证明
+
+`$$ J(e,n) = \frac{n}{e+1}J(e+1,n-1) $$`
+
+重复使用上述迭代公式，最终可以得到
+
+`$$ J(e,n) = \frac{1\cdot2\cdots n}{(e+1)(e+2)\cdots(e+n+1)} $$`
+
+于是欧拉得到如下一个重要的式子
+
+`\begin{equation}
+n! = (e+1)(e+2)\cdots(e+n+1)\int_0^1 x^e(1-x)^ndx \tag{2.8}
+\end{equation}`
   
-  此处 `\(n\)` 为正整数，`\(e\)` 为正实数。利用分部积分法，很容易证明
-  
-  `$$ J(e,n) = \frac{n}{e+1}J(e+1,n-1) $$`
-  
-  重复使用上述迭代公式，最终可以得到
-  
-  `$$ J(e,n) = \frac{1\cdot2\cdots n}{(e+1)(e+2)\cdots(e+n+1)} $$`
-  
-  于是欧拉得到如下一个重要的式子
-  
-  `\begin{equation}
-  n! = (e+1)(e+2)\cdots(e+n+1)\int_0^1 x^e(1-x)^ndx
-  \end{equation}`
-  
-  在这个公式里欧拉实际上已经成功地把`\(n!\)`表示成了积分的形式。然而这里的问题是 `\((e+1)(e+2)\cdots(e+n+1)\)`这个表达式限制了 `\(n\)`只能为整数，无法推广到分数的情形，欧拉继续研究能否简化这个积分表达式。此处`\(e\)`是一个任意实数，有没有办法让`\(e\)`从上面的积分式子中消失呢？要让一个量从一个数学等式中消失，数学家们惯用的手法之一就是让这个量取一个极端的值，譬如无穷。欧拉的老师约翰·贝努利说过“无穷是上帝的属性”，在通往无穷的路途中，造物主的秘密往往被数学家们窥视。欧拉开始追问：如果让`\(e\)` 趋向于无穷取值，会发生什么样的情况呢？分析学的大师欧拉开始展现他的计算技巧，取`\(e=\frac{f}{g}\)`, 稍微整理一下可以得到
-  
-  `$$ \frac{n!}{(f+g)(f+2g)\cdots(f+ng)} = \frac{f+(n+1)g}{g^{n+1}} \int_0^1 x^\frac{f}{g}(1-x)^n dx $$`
-  
-  然后令 `\(f \rightarrow 1, g \rightarrow 0\)`，显然上式左边趋于`\(n!\)`, 右边会发生什么情况呢？为了简化计算，令 `\(x=t^h, h=\frac{g}{f+g}\)`， 整理之后上式可以变换为
-  
-  `\begin{align}
-  \frac{n!}{(f+g)(f+2g)\cdots(f+ng)}
-  & = \frac{f+(n+1)g}{g^{n+1}} \int_0^1 h(1-t^h)^n dt \notag \\
-  & = \frac{f+(n+1)g}{(f+g)^{n+1}} \int_0^1 \Bigl(\frac{1-t^h}{h}\Bigr)^n dt
-  \label{factorial-integral}
-  \end{align}`
-  
-  当`\(f \rightarrow 1, g \rightarrow 0\)`时显然有`\(h \rightarrow 0\)`，利用罗必塔法则，我们可以得到微积分中一个熟知的式子
-  
-  `$$ \lim_{h \rightarrow 0} \frac{1-t^h}{h} = -\log t .$$`
-  
-  于是对 \eqref{factorial-integral} 式两边取极限，奇迹出现了
-  
-  `\begin{equation}
-  \label{factorial-gamma-1}
-  n! = \int_0^1 (-\log t)^ndt,
-  \end{equation}`
-  
-  原来的积分式中的`\(e\)`消失了，欧拉成功地把`\(n!\)`表达为了一个非常简洁的积分形式！！！对上式再做一个变换 `\(t=e^{-\lambda}\)`,就可以得到我们常见的伽玛函数形式
- `\begin{equation}
-  \label{factorial-gamma-2}
-  n! = \int_0^{\infty} \lambda^ne^{-\lambda}d\lambda .
-  \end{equation}`
-  
-  把 \eqref{factorial-gamma-1}和 \eqref{factorial-gamma-2} 式从整数`\(n\)` 延拓到任意实数`\(x\)`(包括负数)，我们就得到伽玛函数的一般形式
-  
-  `$$ \Gamma(x+1) = \int_0^1 (-\log t)^{x}dt = \int_0^{\infty} t^{x}e^{-t}dt .$$`
-  
-  1730年 欧拉把他推广得到的`\(n!\)`的积分形式再次写信告知了哥德巴赫，由此完美地解决了困恼哥德巴赫多年的插值问题，同时正式宣告了伽马函数在数学史的诞生，当时欧拉只有23岁。
+在这个公式里欧拉实际上已经成功地把`\(n!\)`表示成了积分的形式。然而这里的问题是 `\((e+1)(e+2)\cdots(e+n+1)\)`这个表达式限制了 `\(n\)`只能为整数，无法推广到分数的情形，欧拉继续研究能否简化这个积分表达式。此处`\(e\)`是一个任意实数，有没有办法让`\(e\)`从上面的积分式子中消失呢？要让一个量从一个数学等式中消失，数学家们惯用的手法之一就是让这个量取一个极端的值，譬如无穷。欧拉的老师约翰·贝努利说过“无穷是上帝的属性”，在通往无穷的路途中，造物主的秘密往往被数学家们窥视。欧拉开始追问：如果让`\(e\)` 趋向于无穷取值，会发生什么样的情况呢？分析学的大师欧拉开始展现他的计算技巧，取`\(e=\frac{f}{g}\)`, 稍微整理一下可以得到
+
+`$$ \frac{n!}{(f+g)(f+2g)\cdots(f+ng)} = \frac{f+(n+1)g}{g^{n+1}} \int_0^1 x^\frac{f}{g}(1-x)^n dx $$`
+
+然后令 `\(f \rightarrow 1, g \rightarrow 0\)`，显然上式左边趋于`\(n!\)`, 右边会发生什么情况呢？为了简化计算，令 `\(x=t^h, h=\frac{g}{f+g}\)`， 整理之后上式可以变换为
+
+`\begin{align}
+\frac{n!}{(f+g)(f+2g)\cdots(f+ng)}
+& = \frac{f+(n+1)g}{g^{n+1}} \int_0^1 h(1-t^h)^n dt \notag \\
+& = \frac{f+(n+1)g}{(f+g)^{n+1}} \int_0^1 \Bigl(\frac{1-t^h}{h}\Bigr)^n dt
+\label{factorial-integral} \tag{2.9}
+\end{align}`
+
+当`\(f \rightarrow 1, g \rightarrow 0\)`时显然有`\(h \rightarrow 0\)`，利用罗必塔法则，我们可以得到微积分中一个熟知的式子
+
+`$$ \lim_{h \rightarrow 0} \frac{1-t^h}{h} = -\log t .$$`
+
+于是对 \eqref{factorial-integral} 式两边取极限，奇迹出现了
+
+`\begin{equation}
+\label{factorial-gamma-1}
+n! = \int_0^1 (-\log t)^ndt, \tag{2.10}
+\end{equation}`
+
+原来的积分式中的`\(e\)`消失了，欧拉成功地把`\(n!\)`表达为了一个非常简洁的积分形式！！！对上式再做一个变换 `\(t=e^{-\lambda}\)`,就可以得到我们常见的伽玛函数形式
+`\begin{equation}
+\label{factorial-gamma-2}
+n! = \int_0^{\infty} \lambda^ne^{-\lambda}d\lambda . \tag{2.11}
+\end{equation}`
+
+把 \eqref{factorial-gamma-1}和 \eqref{factorial-gamma-2} 式从整数`\(n\)` 延拓到任意实数`\(x\)`(包括负数)，我们就得到伽玛函数的一般形式
+
+`$$ \Gamma(x+1) = \int_0^1 (-\log t)^{x}dt = \int_0^{\infty} t^{x}e^{-t}dt .$$`
+
+1730年 欧拉把他推广得到的`\(n!\)`的积分形式再次写信告知了哥德巴赫，由此完美地解决了困恼哥德巴赫多年的插值问题，同时正式宣告了伽马函数在数学史的诞生，当时欧拉只有23岁。
 
 ![`\(\Gamma(x)\)` 在正半轴的图像](https://uploads.cosx.org/2014/07/gamma-func.png)
 
