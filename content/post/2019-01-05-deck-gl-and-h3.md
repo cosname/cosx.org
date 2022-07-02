@@ -57,7 +57,7 @@ forum_id: 420447
 
 > Geohash 简单来说是将二维的经纬度转换成字符串的四叉树线性索引，适用于点数据，查询时间复杂度为 O(log(N))
 
-![Geohash 示意图](http://ww1.sinaimg.cn/mw690/7178f37ejw1emyk4wbz4bj206i06lt9b.jpg)
+![Geohash 示意图](https://user-images.githubusercontent.com/12031874/176983303-a3349cdb-1280-49da-826c-ca8493e81cc9.jpeg)
 
 下面是动态单元与静态单元的对比：
 
@@ -189,7 +189,7 @@ df %>%
 
 H3 中还提供了类似 S2 的六边形压缩技术，使得数据的存储空间可以极大压缩，在处理大规模稀疏数据时将体现出优势：
 
-![H3 数据压缩技术](http://eng.uber.com/wp-content/uploads/2018/06/image11-1.png)
+![H3 数据压缩技术](https://user-images.githubusercontent.com/12031874/176983331-5873c9a5-a829-4763-80bd-f46f78e97463.png)
 
 ## 渲染引擎
 
