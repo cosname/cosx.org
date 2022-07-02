@@ -97,14 +97,10 @@ div.rmdinfo::before {
   text-align: center;
 }
 
-figure {
+div.img, div.figure {
   text-align: center;
-}
-
-div.img {
-  text-align: center;
-  display: block; 
-  margin-left: auto; 
+  display: block;
+  margin-left: auto;
   margin-right: auto;
 }
 
