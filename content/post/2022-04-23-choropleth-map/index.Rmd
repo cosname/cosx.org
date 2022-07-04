@@ -22,10 +22,12 @@ tags:
 output:
   blogdown::html_page:
     toc: true
+    number_sections: true
 link-citations: true
 bibliography: 
   - refer.bib
 forum_id: 423194
+csl: institute-of-mathematical-statistics.csl
 description: "在美国和日本的国家统计局官网，地区分布图用于展示各类指标。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。"
 ---
 
@@ -115,6 +117,31 @@ blockquote > p:first-child {
   display: flex;
 }
 ```
+```{css}
+#| echo: false
+
+/* https://github.com/rstudio/bookdown/blob/main/inst/templates/default.html#L89-L113 */
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left: 2em;
+  text-indent: -2em;
+}
+div.csl-left-margin {
+  min-width: 2em;
+  float: left;
+}
+div.csl-right-inline {
+  margin-left: 1em;
+  padding-left: 1em;
+}
+div.csl-indent {
+  margin-left: 1em;
+}
+```
 
 ::: rmdinfo
 本文引用的所有信息均为公开信息，仅代表作者本人观点，与就职单位无关。
@@ -132,7 +159,7 @@ knitr::opts_chunk$set(
 ```
 
 
-# 本文概览
+# 本文概览 {#motivation}
 
 
 空间地理可视化的内容非常丰富，涉及空间坐标投影、操作空间数据、选择图形种类、选择绘图工具等。就图形种类而言，对标鼎鼎大名的收费 BI（Business Intelligence） 工具[Tableau](https://www.tableau.com/zh-cn/solutions/maps)，至少包含最常见的面量图、比例符号地图、点分布图、流线图、蜘蛛图（飞线图）、热图。其中的「面量图」通常又叫专题地图、地区分布图、统计地图，英文一般为[Choropleth map](https://en.wikipedia.org/wiki/Choropleth_map)，典型样例是基于统计年鉴的各类专题数据的地理可视化，国家地理信息公共服务平台提供了[专题图层服务](https://zhfw.tianditu.gov.cn/)，可以快速地查看各个统计指标。在美国和日本的国家统计局官网，地区分布图用于展示各类指标[@Meyer1975]。衡量一个部门、一个业务、一个公司、一个行业，乃至一个国家都有一套金字塔式的指标体系，而国家每年发布的统计年鉴就包含一套衡量经济和社会发展情况的指标体系，涵盖人口、土地、生产、消费等等专题，省、市、区县以及自治区、州、县等各级地方统计局每年也会发布一份地方统计年鉴。
@@ -153,7 +180,7 @@ knitr::opts_chunk$set(
 未来展望部分从应用场景和绘图技术方面继续提供一些示例，供读者继续探索。
 
 
-# 单变量情形
+# 单变量情形 {#univariate-choropleth-maps}
 
 
 ## 美国各郡的年平均癌症死亡率分布
@@ -962,7 +989,7 @@ mf_credits(txt = "数据源：美国国家癌症研究所", pos = "bottomright",
 :::
 
 
-# 多变量情形
+# 多变量情形 {#bivariate-choropleth-maps}
 
 
 [多元地区分布图](https://en.wikipedia.org/wiki/Multivariate_map)用以同时展示两个具有空间相关性的变量，比如人均收入和预期寿命，房地产投资占比和城镇化率[@Meyer1975]。下面以美国北卡州家庭年收入与白人占比的空间相关性为例，在地区分布图上同时展示多个指标，除了用到 **ggplot2** 和 **sf** 包，还需 [**biscale**](https://github.com/slu-openGIS/biscale) [@Prener2020]和 [**cowplot**](https://github.com/wilkelab/cowplot) [@Wilke2020]两个包，前者构造多元变量分组，后者负责将图例和地图主体合并。R 社区最早的技术实现方案来自 Timo Grossenbacher 的博客[Bivariate maps with **ggplot2** and **sf**](https://timogrossenbacher.ch/2019/04/bivariate-maps-with-ggplot2-and-sf/)。
@@ -1465,7 +1492,7 @@ mtext(
 
 
 
-# 本文小结
+# 本文小结 {#conclusion}
 
 本文以地区分布图为例，详细介绍 R 语言在绘制地区分布图中的探索和实践，读者可取其共性迁移至其它绘图场景。本文围绕 R 语言社区比较成熟的三套绘图工具 Base R、**lattice** 和 **ggplot2** 展开，它们代表三种绘图时的思考方式：
 
@@ -1495,7 +1522,7 @@ R 语言提供的公式语法大量存在于统计绘图和建模分析中，**l
 
 
 
-# 未来展望
+# 未来展望 {#discussion}
 
 
 
@@ -1529,7 +1556,7 @@ R 语言提供的公式语法大量存在于统计绘图和建模分析中，**l
 ![(\#fig:ternary-map) 欧洲区域人口年龄结构](img/ternary-map.png){.full}
 
 
-# 环境信息
+# 环境信息 {#session}
 
 本文是在 RStudio IDE 内用 R Markdown 编辑的，用 **blogdown** [@blogdown] 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。点击本页面右上角「编辑本页」即可跳转至源文件，文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：
 
@@ -1547,6 +1574,6 @@ xfun::session_info(packages = c(
 ```
 
 
+# 参考文献 {#refer}
 
-
-# 参考文献
+<div id="refs"></div>
