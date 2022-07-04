@@ -1,7 +1,7 @@
 ---
 title: R Markdown 制作 beamer 幻灯片
 author: 黄湘云
-date: '2022-05-20'
+date: '2022-07-04'
 meta_extra: "审稿：楚新元"
 slug: beamer-down
 categories:
@@ -14,9 +14,11 @@ tags:
 output:
   blogdown::html_page:
     toc: true
+    number_sections: true
 bibliography: 
   - refer.bib
 link-citations: true
+csl: institute-of-mathematical-statistics.csl
 thumbnail: https://user-images.githubusercontent.com/12031874/116777926-a1722100-aaa1-11eb-92c7-034ebfb90922.png
 description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来看，好多主题是大学开发的，大家不约而同地使用蓝调，看多了想睡觉。目前，现代风格的 beamer 主题已经陆续涌现出来，本文旨在介绍一条 R Markdown 制作 beamer 幻灯片的入坑路径，让 beamer 看起来更加清爽些！"
 ---
@@ -25,6 +27,7 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 
 ```{css}
 #| echo: false
+
 .rmdinfo {
   border: 1px solid #ccc;
 }
@@ -92,8 +95,36 @@ blockquote > p:first-child {
   text-align: inherit;
 }
 
-figure {
+div.figure {
   text-align: center;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+```
+```{css}
+#| echo: false
+
+/* https://github.com/rstudio/bookdown/blob/main/inst/templates/default.html#L89-L113 */
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left: 2em;
+  text-indent: -2em;
+}
+div.csl-left-margin {
+  min-width: 2em;
+  float: left;
+}
+div.csl-right-inline {
+  margin-left: 1em;
+  padding-left: 1em;
+}
+div.csl-indent {
+  margin-left: 1em;
 }
 ```
 
@@ -109,33 +140,45 @@ options(width = 69)
 声明：本文引用的所有信息均为公开信息，仅代表作者本人观点，与就职单位无关。
 :::
 
+
 # 本文概览 {#overview}
 
-报告演示是传递、交流想法的重要方式，R Markdown 生态现支持多种幻灯片，比如最常见的 Office PowerPoint、
+R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持动态文档写作，文本、代码相互交织，插图、表格、文献、引用等动态生成。在网站简历、期刊书籍、报告演示等诸多方面有大量应用。其中，报告演示（Presentations）是传递、交流想法的重要方式，R Markdown 生态有很多扩展包，提供多种方式制作幻灯片，支持的幻灯片种类有 Office PowerPoint（俗称 PPT）、ioslides、 [**reveal.js**](https://github.com/rstudio/revealjs) 和[写轮眼](https://github.com/yihui/xaringan)等。
 
-本文将介绍如何创建基于 R Markdown 和 beamer 文类的幻灯片模版，
+本文将介绍如何用 R Markdown 制作 beamer 风格的幻灯片，包含以下内容：
+
+(@background) 作者与 beamer 结缘和本文写作的始末。
+(@setup) 准备本文涉及到的一些软件依赖和扩展包。
+(@latex-beamer) 简单回顾一下 LaTeX 是如何制作 beamer 幻灯片的。
+(@markdown-beamer) 作为后续铺垫，介绍 Pandoc's Markdown 制作 beamer 幻灯片的过程。
+(@rmarkdown-beamer) 在 (@markdown-beamer) 的基础上，介绍 R Markdown 制作 beamer 幻灯片的过程，谓之「基础篇」。
+(@rmarkdown-beamer-advanced) 在 (@rmarkdown-beamer) 的基础上，介绍 R Markdown 深度定制 beamer 幻灯片的过程，谓之「高级篇」。
+(@rmarkdown-beamer-ninja) 在(@rmarkdown-beamer-advanced)的基础上，结合 LaTeX 和 Lua 两大神器，深度定制 beamer 幻灯片，谓之「忍者篇」。
+(@beamer-tricks-pitfalls) 介绍 R Markdown 制作 beamer 幻灯片积累的技巧和陷阱。
+(@beamer-final) 总结一下本文内容，写一点个人使用经验，仅供参考。
+
+对于初学者，建议阅读(@background)、 (@setup) 、 (@latex-beamer) 和 (@rmarkdown-beamer)；对于入门者，建议继续阅读 (@markdown-beamer)、(@rmarkdown-beamer-advanced)、 (@beamer-tricks-pitfalls) 和 (@beamer-final)；对于进阶者，建议继续阅读 (@rmarkdown-beamer-ninja)。
 
 
-先基于 R Markdown 介绍制作普通 beamer 幻灯片的过程，然后介绍设置幻灯片主题、中英字体和数学公式，完整迁移到新的主题可能会遇到的问题。
+
+<!-- 先基于 R Markdown 介绍制作普通 beamer 幻灯片的过程，然后介绍设置幻灯片主题、中英字体和数学公式，完整迁移到新的主题可能会遇到的问题。 -->
 
 
-
-涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
-
-
-
-
-# 写作背景 {#motivation}
+# 写作背景 {#background}
 
 故事还要从头开始讲起，7-8 年前，出于学术答辩和课程汇报需要，陆续学习和使用 LaTeX 来排版作业和论文，曾有一段时间深陷此坑不能自拔，以至于遍览 [TeXLive](https://tug.org/texlive/) 内置的幻灯片制作宏包，收集了大量 beamer 幻灯片的模版，藏于 Github 仓库 [awesome-beamers](https://github.com/XiangyunHuang/awesome-beamers)。
 
 LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的数学或统计系会用它来排版毕业论文，相关的学习材料有很多，推荐 CTeX 开发小组翻译的[一份（不太）简短的LaTeX介绍](https://github.com/CTeX-org/lshort-zh-cn)。吴康隆的 [《简单粗暴LaTeX》](https://github.com/wklchris/Note-by-LaTeX)，盛文博翻译的[《LaTeX2e 插图指南, 第三版》](https://github.com/WenboSheng/epslatex-cn)，吕荐瑞的[科技文档排版课程材料](https://lvjr.bitbucket.io/tutorial/learn-latex.pdf)，曾祥东的[现代 LaTeX 入门讲座](https://github.com/stone-zeng/latex-talk)，都非常适合从零开始学习的。进阶的部分，根据需要去看宏包手册，LaTeX 宏包文档的长度一般都吓死个人，[PGF](https://github.com/pgf-tikz/pgf) 绘图 **1300** 多页，[pgfplots](https://ctan.org/pkg/pgfplots) 3D 绘图 **573** 页， [beamer](https://github.com/josephwright/beamer) 幻灯片制作 **247** 页，[geometry](https://github.com/davidcarlisle/geometry) 版面设置 **42** 页，[tcolorbox](https://github.com/T-F-S/tcolorbox) 箱子定制 **539**页，通常不需要从头到尾的看，除非遇到难处或需要自定义了。在对基础的 LaTeX 排版工具有一些了解后，日常使用过程中必备数学公式[速记小抄](https://gitlab.com/jim.hefferon/undergradmath) ，搭好梯子随时放狗去搜。
 
-去年 6 月份搬迁完[汉风主题](https://github.com/liantze/pgfornament-han)，在论坛开帖分享了[成果](https://d.cosx.org/d/421591-beamer)，又被撺掇着在主站[立了字句](https://github.com/cosname/cosx.org/issues/901)----要写一篇文章介绍 R Markdown 制作幻灯片模版的过程，一直囿于工作繁忙，难以抽身，前段时间在 WX 上和[楚新元](https://gitlab.com/chuxinyuan)又聊到模版，看到有人又要准备趟我之前踩过的坑，心中不忍，咬咬牙还是把这文债给还了。算起来，从起心动念到最终交付拖延了整整一年零三个月！！！
+2020 年 6 月份搬迁完[汉风主题](https://github.com/liantze/pgfornament-han)，在论坛开帖分享了[成果](https://d.cosx.org/d/421591)，又被撺掇着在主站[立了字句](https://github.com/cosname/cosx.org/issues/901)----要写一篇文章介绍 R Markdown 制作幻灯片模版的过程，一直囿于工作繁忙，难以抽身，去年在 WX 上和[楚新元](https://gitlab.com/chuxinyuan)又聊到模版，看到有人又要准备趟我之前踩过的坑，心中不忍，咬咬牙还是把这文债给还了。算起来，从起心动念到最终交付拖延了两年而已！
 
-# 软件准备
 
-## 安装 R 包
+# 软件配置 {#setup}
+
+涉及[谢益辉](https://yihui.org/)开发的轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有使用 Pandoc 内建 LaTeX 模版的经验。
+
+
+## 安装 R 包 {#setup-rpkgs}
 
 默认大家已经安装了 R 软件和 RStudio IDE，这会让后面的操作变得更容易。
 因陆续会用到 R Markdown 生态的几个 R 包，所以先提前安装下：
@@ -150,7 +193,7 @@ install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "rticles"))
 
 
 
-## 安装 TinyTeX
+## 安装 TinyTeX {#setup-tinytex}
 
 平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
 
@@ -161,7 +204,7 @@ tinytex::install_tinytex()
 
 遇到啥问题，先去益辉的网站瞅瞅 <https://yihui.org/tinytex/>，要还没找到解决方案，就来论坛 <https://d.cosx.org/> 发帖。
 
-## 安装字体
+## 安装字体 {#setup-fonts}
 
 为了后续介绍 metropolis 主题，先做些准备，安装和配置其所需字体，此过程分两步走：
 
@@ -190,170 +233,11 @@ tinytex::install_tinytex()
     file.copy(from = fontfile, to = distdir, overwrite = TRUE)
     ```
 
-# 技巧陷阱 {#tricks-pitfalls}
-
-## 数学符号
-
-在正式介绍后续的 beamer 主题之前，还要先介绍一点数学符号和数学字体的坑，毕竟，学术型幻灯片很难离开数学公式[@Pakin2021]。在遇到花体数学符号，如常用来表示域或空间的 `$\mathcal{A,S}, \mathscr{A}, \mathbb{A,R}$`，抑或是常见的损失函数符号 `$\mathcal{L}$`。
-**unicode-math** 定义的数学样式有点怪，和通常见到的不一样，以前排版毕业论文的时候[坑过我一回](https://d.cosx.org/d/419931)，主要原因是 **unicode-math** 使用 Latin Modern Math 的 OpenType 字体 [@Zeng2020]。
-
-````
----
-title: "Untitled"
-output: 
-  pdf_document: 
-    latex_engine: xelatex
-    template: null
-    extra_dependencies:
-      ctex:
-       - fontset=fandol
----
-
-拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 和 `\mathbb{A}`会被依次渲染成
-
-$$
-\mathcal{A},\mathscr{A},\mathbb{A}
-$$
-````
-
-![unicode-math](https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png)
-
-[^pandoc-template]: RStudio IDE 捆绑了 [Pandoc 软件](https://pandoc.org/)，安装完 RStudio IDE 就可以直接用它了。我平时喜欢用最新的稳定版，版本略高于它，如果你网络环境不佳，上 Github 有困难，可以执行如下命令获取 Pandoc 内置的 LaTeX 模版。
-
-    ```bash
-    pandoc -o custom-reference.tex --print-default-template latex
-    ```
-  
-    获取其它文档格式的模版，稍用所不同，比如 DOCX 文档。
-  
-    ```bash
-    pandoc -o custom-reference.docx --print-default-data-file reference.docx
-    ```
-
-Pandoc 内建的 LaTeX 模版[^pandoc-template]默认调用 **unicode-math** 宏包的，除非编译 R Markdown 的时候，启用[LaTeX 变量](https://pandoc.org/MANUAL.html#using-variables-in-templates)`mathspec: yes`，加载 **amsfonts** 和 **mathrsfs** 宏包[@Xie2020]。目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 `\mscrA` 和 `\BbbA` 分别等价于 `\mathscr{A}` 和 `\mathbb{A}`。
-
-````
----
-title: "Untitled"
-mathspec: yes
-output: 
-  pdf_document: 
-    latex_engine: xelatex
-    template: null
-    extra_dependencies:
-      ctex:
-       - fontset=fandol
-      amsfonts: null
-      mathrsfs: null
----
-
-拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 
-和 `\mathbb{A}`会被依次渲染成
-
-$$
-\mathcal{A},\mathscr{A},\mathbb{A}
-$$
-````
-
-![mathspec](https://user-images.githubusercontent.com/12031874/135605483-1cfe1c86-1567-495e-b3a0-27ff12a72b7f.png)
 
 
-::: rmdnote
-[fandol 字体](https://ctan.org/pkg/fandol)支持的汉字有限，比如[刘思喆](https://bjt.name/)的「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说[许宝騄先生](https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84)的「騄」字了。
-:::
+# 制作 beamer 幻灯片
 
-Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号），后者支持是最广的。在 **unicode-math** 的世界里，公式环境里，加粗希腊字母，得用 `\symbf` 而不是 `\boldsymbol`。XITS Math、Fira Math 等字体数学符号的支持情况详见[unicode-math 宏包的官方文档](http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf)。
-
-<center>表1：不同的数学字体支持的符号数量不同 </center>
-
-| 数学字体                                                     | 符号数量 |
-| :------------------------------------------------------------ | :-------- |
-| [Latin Modern Math](https://ctan.org/pkg/lm)                 | 1585     |
-| [XITS Math](https://ctan.org/pkg/xits)                       | 2427     |
-| [STIX Math Two](https://ctan.org/pkg/stix2-otf)              | 2422     |
-| [TeX Gyre Pagella Math](https://ctan.org/pkg/tex-gyre-math-pagella) | 1638     |
-| [DejaVu Math TeX Gyre](https://ctan.org/pkg/tex-gyre-math-dejavu) | 1640     |
-| [Fira Math](https://ctan.org/pkg/firamath)                   | 1052     |
-
-## 文档汉化
-
-最近统计之都论坛里又有人陆续[踩](https://d.cosx.org/d/422613)到我以前[踩](https://d.cosx.org/d/419931)过的[坑 1](https://d.cosx.org/d/421770)、[坑 2](https://d.cosx.org/d/421834)、[坑 3](https://d.cosx.org/d/422087)、[坑 4](https://d.cosx.org/d/422343)，都是中文 R Markdown 文档相关， 这里不妨简单说一下。
-
-````
----
-title: "测试"
-author:
-  - 黄湘云
-documentclass: ctexart
-keywords:
-  - rmarkdown
-  - rticles
-  - LaTeX
-output:
-  rticles::ctex:
-    fig_caption: yes
-    number_sections: yes
-    toc: yes
-geometry: 
-  - tmargin=1.8cm
-  - bmargin=1.8cm
-  - lmargin=2.1cm
-  - rmargin=2.1cm  
----
-
-# 数学公式 {#math}
-
-$\mathbf{\Sigma}$
-````
-
-这位坛友准备在公式环境里用 `\mathbf` 命令加粗希腊字母 `$\Sigma$`，这本身是不行的，它只能用来加粗普通的字母，如 `$A,B,C,a,b,c,X,Y,Z,x,y,z$`。加粗希腊字母，需要 `\boldsymbol` 命令，而 `rticles::ctex` 中文模版，在默认设置下，会使用 Pandoc 内建 LaTeX 模版，调用 XeLaTeX 编译，加载 **unicode-math** 宏包处理数学公式，此时，希腊字母对 `\boldsymbol` 命令免疫，要加粗特效，必须用 **unicode-math** 的专用命令 `\symbf`。
-
-如果准备在文中统一采用 **unicode-math** 处理数学公式，那么，把 `\mathbf` 换成 `\symbf`，问题即告结束。但是，目前排版数学公式比较通用的方式不是 **unicode-math**，还是原来的 amsmath 及其扩展宏包。如何转过去呢？其实，很简单，在 YAML 里添加一行 `mathspec: yes` 即可，Pandoc 的 LaTeX 模版支持原先的方案，此时编译还是会报错，报错的主要信息如下：
-
-```
-! LaTeX Error: Option clash for package fontspec.
-```
-
-这是因为 ctexart 文类自动加载了 fontspec 宏包，而它与 mathspec 宏包冲突，所以要替换为原始的 article 文类，同时加载 ctex 宏包处理中文字符，这里采用 fandol 中文字体作为演示，所以目前最佳的解决方案如下：
-
-````
----
-title: "测试"
-author:
-  - 无
-documentclass: article
-mathspec: yes
-keywords:
-  - 无
-output:
-  rticles::ctex:
-    fig_caption: yes
-    number_sections: yes
-    toc: yes
-    template: null
-    extra_dependencies:
-      ctex:
-       - fontset=fandol
-geometry: tmargin=1.8cm,bmargin=1.8cm,lmargin=2.1cm,rmargin=2.1cm  
----
-
-$\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
-$\mathcal{A}$ 是普通字母 $A$ 的花体形式。
-````
-
-::: rmdtip
-RStudio IDE 使用 [MathJaX](https://www.mathjax.org/) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 **unicode-math** 的 `\symbf` 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个[文档](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)，常见的 `\mathbb` 空心体 `$\mathbb{A}$` 和 `\mathfrak` 火星体 `$\mathfrak{A}$` 来自宏包 amsfonts，`\mathscr` 花体 `$\mathscr{A}$` 和 `\bm` 粗体 `$\bm{A}$` 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看[amsmath 文档](https://www.latex-project.org/help/documentation/amsldoc.pdf)，此处仅摘抄一例 `$\sqrt{x} +\sqrt{y} + \sqrt{z}$` 和 `$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$`，能看出来差别的一定有一双火眼金睛！
-
-![rstudio-mathjax](https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png)
-:::
-
-再次强行回到本文主题，上述巨坑在 article 普通文类下介绍，而不是在 beamer 幻灯片主题下介绍也是有重要原因的：其一，我见过的大部分坑的背景都是 article 文类。其二，这个坑并不会随文类切换到 beamer 而有所不同！其三，若大家再遇到类似坑不妨也切换到 article 文类，这个是最基础的，褪去尽可能多的外部依赖，方便去根因。
-
-
-
-# 幻灯片制作
-
-## LaTeX 幻灯片
+## LaTeX {#latex}
 
 下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。不记得初次见 metropolis 主题是什么时候，不过每次见都让我想到了 MCMC（**M**arkov **C**hain **M**onte **C**arlo，马尔科夫链蒙特卡洛，简称 MCMC）。学过 MCMC 算法的都知道 metropolis 是啥，我这半桶水的统计科班生就不在这献丑了，当年掉在 MCMC 的大坑里好多时间，以至于将 metropolis 和 MCMC 建立了极强的关联，可能这是我介绍 beamer 主题也拿它来举例的原因吧！
 
@@ -420,7 +304,13 @@ tinytex::xelatex(file = "slide-template.tex")
 ![check-fonts](https://user-images.githubusercontent.com/12031874/135288310-4dad120c-a883-4732-9033-72be7b8ffe28.png)
 
 
-## R Markdown 幻灯片（基础篇）
+## Pandoc's Markdown {#pandoc-markdown}
+
+
+
+
+
+## R Markdown（基础篇）{#rmarkdown-basic}
 
 R Markdown 文档开头处为 YAML 元数据，它分两部分：其一是 Pandoc 变量值，其二是文档输出设置。下面是一份完整的 R Markdown 模版，有了前面关于中文 R Markdown 文档的介绍，想必已不再感到陌生。 ctexbeamer 和 ctexart 文类都来自 [ctex 宏包](https://ctan.org/pkg/ctex)，想汉化必须看看它的帮助文档。
 
@@ -487,7 +377,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
       image_write("beamer.gif")
     ```
 
-## R Markdown 幻灯片（高级篇）
+## R Markdown（高级篇）{#rmarkdown-advanced}
 
 下面是另一份完整的 R Markdown 模版，内容十分丰富：添加多个作者，动态日期， [交叉引用](https://bookdown.org/yihui/bookdown/cross-references.html)[@Xie2016]，参考文献，文献样式，Verona 主题，自定义导言区 `header-includes`，右下角 Logo，R 绘图设备改为 `"cairo_pdf"`，设置幻灯片主题 Verona 的选项等[^theme-verona]。读者可以注释和编译交替进行，细节就不说了，可以看看后面的参考文献，边看边玩！
 
@@ -652,7 +542,7 @@ tinytex::tlmgr_install(c("psnfss", "iitem", "beamer-verona"))
 ![rmarkdown-verona](https://user-images.githubusercontent.com/12031874/135652566-08f27f9b-c7a0-4bcf-810a-88859e6db6a7.gif)
 
 
-## R Markdown 幻灯片（忍者篇）
+## R Markdown（忍者篇）{#rmarkdown-ninja}
 
 此外，R 社区有几个 R 包专门打包了一些 R Markdown 幻灯片模版，比如 [binb](https://github.com/eddelbuettel/binb) 和 [uiucthemes](https://github.com/illinois-r/uiucthemes) 包，如何使用便不再赘述，掌握以上介绍的规律，beamer 主题任你玩[^custom-block]。
 
@@ -670,9 +560,176 @@ beamer 文档找到各类定理、block 块
 然后如何映射过来
 
 
+# 技巧陷阱 {#tricks-pitfalls}
+
+## 数学符号 {#math-symbols}
+
+在正式介绍后续的 beamer 主题之前，还要先介绍一点数学符号和数学字体的坑，毕竟，学术型幻灯片很难离开数学公式[@Pakin2021]。在遇到花体数学符号，如常用来表示域或空间的 `$\mathcal{A,S}, \mathscr{A}, \mathbb{A,R}$`，抑或是常见的损失函数符号 `$\mathcal{L}$`。
+**unicode-math** 定义的数学样式有点怪，和通常见到的不一样，以前排版毕业论文的时候[坑过我一回](https://d.cosx.org/d/419931)，主要原因是 **unicode-math** 使用 Latin Modern Math 的 OpenType 字体 [@Zeng2020]。
+
+````
+---
+title: "Untitled"
+output: 
+  pdf_document: 
+    latex_engine: xelatex
+    template: null
+    extra_dependencies:
+      ctex:
+       - fontset=fandol
+---
+
+拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 和 `\mathbb{A}`会被依次渲染成
+
+$$
+\mathcal{A},\mathscr{A},\mathbb{A}
+$$
+````
+
+![unicode-math](https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png)
+
+[^pandoc-template]: RStudio IDE 捆绑了 [Pandoc 软件](https://pandoc.org/)，安装完 RStudio IDE 就可以直接用它了。我平时喜欢用最新的稳定版，版本略高于它，如果你网络环境不佳，上 Github 有困难，可以执行如下命令获取 Pandoc 内置的 LaTeX 模版。
+
+    ```bash
+    pandoc -o custom-reference.tex --print-default-template latex
+    ```
+  
+    获取其它文档格式的模版，稍用所不同，比如 DOCX 文档。
+  
+    ```bash
+    pandoc -o custom-reference.docx --print-default-data-file reference.docx
+    ```
+
+Pandoc 内建的 LaTeX 模版[^pandoc-template]默认调用 **unicode-math** 宏包的，除非编译 R Markdown 的时候，启用[LaTeX 变量](https://pandoc.org/MANUAL.html#using-variables-in-templates)`mathspec: yes`，加载 **amsfonts** 和 **mathrsfs** 宏包[@Xie2020]。目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 `\mscrA` 和 `\BbbA` 分别等价于 `\mathscr{A}` 和 `\mathbb{A}`。
+
+````
+---
+title: "Untitled"
+mathspec: yes
+output: 
+  pdf_document: 
+    latex_engine: xelatex
+    template: null
+    extra_dependencies:
+      ctex:
+       - fontset=fandol
+      amsfonts: null
+      mathrsfs: null
+---
+
+拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 
+和 `\mathbb{A}`会被依次渲染成
+
+$$
+\mathcal{A},\mathscr{A},\mathbb{A}
+$$
+````
+
+![mathspec](https://user-images.githubusercontent.com/12031874/135605483-1cfe1c86-1567-495e-b3a0-27ff12a72b7f.png)
+
+
+::: rmdnote
+[fandol 字体](https://ctan.org/pkg/fandol)支持的汉字有限，比如[刘思喆](https://bjt.name/)的「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说[许宝騄先生](https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84)的「騄」字了。
+:::
+
+Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号），后者支持是最广的。在 **unicode-math** 的世界里，公式环境里，加粗希腊字母，得用 `\symbf` 而不是 `\boldsymbol`。XITS Math、Fira Math 等字体数学符号的支持情况详见[unicode-math 宏包的官方文档](http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf)。
+
+<center>表1：不同的数学字体支持的符号数量不同 </center>
+
+| 数学字体                                                     | 符号数量 |
+| :------------------------------------------------------------ | :-------- |
+| [Latin Modern Math](https://ctan.org/pkg/lm)                 | 1585     |
+| [XITS Math](https://ctan.org/pkg/xits)                       | 2427     |
+| [STIX Math Two](https://ctan.org/pkg/stix2-otf)              | 2422     |
+| [TeX Gyre Pagella Math](https://ctan.org/pkg/tex-gyre-math-pagella) | 1638     |
+| [DejaVu Math TeX Gyre](https://ctan.org/pkg/tex-gyre-math-dejavu) | 1640     |
+| [Fira Math](https://ctan.org/pkg/firamath)                   | 1052     |
+
+
+
+## 文档汉化 {#chinese-document}
+
+最近统计之都论坛里又有人陆续[踩](https://d.cosx.org/d/422613)到我以前[踩](https://d.cosx.org/d/419931)过的[坑 1](https://d.cosx.org/d/421770)、[坑 2](https://d.cosx.org/d/421834)、[坑 3](https://d.cosx.org/d/422087)、[坑 4](https://d.cosx.org/d/422343)，都是中文 R Markdown 文档相关， 这里不妨简单说一下。
+
+````
+---
+title: "测试"
+author:
+  - 黄湘云
+documentclass: ctexart
+keywords:
+  - rmarkdown
+  - rticles
+  - LaTeX
+output:
+  rticles::ctex:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+geometry: 
+  - tmargin=1.8cm
+  - bmargin=1.8cm
+  - lmargin=2.1cm
+  - rmargin=2.1cm  
+---
+
+# 数学公式 {#math}
+
+$\mathbf{\Sigma}$
+````
+
+这位坛友准备在公式环境里用 `\mathbf` 命令加粗希腊字母 `$\Sigma$`，这本身是不行的，它只能用来加粗普通的字母，如 `$A,B,C,a,b,c,X,Y,Z,x,y,z$`。加粗希腊字母，需要 `\boldsymbol` 命令，而 `rticles::ctex` 中文模版，在默认设置下，会使用 Pandoc 内建 LaTeX 模版，调用 XeLaTeX 编译，加载 **unicode-math** 宏包处理数学公式，此时，希腊字母对 `\boldsymbol` 命令免疫，要加粗特效，必须用 **unicode-math** 的专用命令 `\symbf`。
+
+如果准备在文中统一采用 **unicode-math** 处理数学公式，那么，把 `\mathbf` 换成 `\symbf`，问题即告结束。但是，目前排版数学公式比较通用的方式不是 **unicode-math**，还是原来的 amsmath 及其扩展宏包。如何转过去呢？其实，很简单，在 YAML 里添加一行 `mathspec: yes` 即可，Pandoc 的 LaTeX 模版支持原先的方案，此时编译还是会报错，报错的主要信息如下：
+
+```
+! LaTeX Error: Option clash for package fontspec.
+```
+
+这是因为 ctexart 文类自动加载了 fontspec 宏包，而它与 mathspec 宏包冲突，所以要替换为原始的 article 文类，同时加载 ctex 宏包处理中文字符，这里采用 fandol 中文字体作为演示，所以目前最佳的解决方案如下：
+
+````
+---
+title: "测试"
+author:
+  - 无
+documentclass: article
+mathspec: yes
+keywords:
+  - 无
+output:
+  rticles::ctex:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+    template: null
+    extra_dependencies:
+      ctex:
+       - fontset=fandol
+geometry: tmargin=1.8cm,bmargin=1.8cm,lmargin=2.1cm,rmargin=2.1cm  
+---
+
+$\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
+$\mathcal{A}$ 是普通字母 $A$ 的花体形式。
+````
+
+::: rmdtip
+RStudio IDE 使用 [MathJaX](https://www.mathjax.org/) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 **unicode-math** 的 `\symbf` 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个[文档](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)，常见的 `\mathbb` 空心体 `$\mathbb{A}$` 和 `\mathfrak` 火星体 `$\mathfrak{A}$` 来自宏包 amsfonts，`\mathscr` 花体 `$\mathscr{A}$` 和 `\bm` 粗体 `$\bm{A}$` 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看[amsmath 文档](https://www.latex-project.org/help/documentation/amsldoc.pdf)，此处仅摘抄一例 `$\sqrt{x} +\sqrt{y} + \sqrt{z}$` 和 `$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$`，能看出来差别的一定有一双火眼金睛！
+
+![rstudio-mathjax](https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png)
+:::
+
+再次强行回到本文主题，上述巨坑在 article 普通文类下介绍，而不是在 beamer 幻灯片主题下介绍也是有重要原因的：其一，我见过的大部分坑的背景都是 article 文类。其二，这个坑并不会随文类切换到 beamer 而有所不同！其三，若大家再遇到类似坑不妨也切换到 article 文类，这个是最基础的，褪去尽可能多的外部依赖，方便去根因。
+
+
+
 # 本文小结 {#summary}
 
 
+
+# 参考文献 {#refer}
+
+<div id="refs"></div>
 
 
 # 环境信息 {#session}
@@ -685,4 +742,3 @@ xfun::session_info(c(
 ), dependencies = FALSE)
 ```
 
-# 参考文献
