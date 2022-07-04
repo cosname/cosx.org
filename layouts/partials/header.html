@@ -31,7 +31,7 @@
         {{ end }}
       {{ else }}
         <span>{{ $.Scratch.Get "Title" }}</span>
-        <span>最近更新于 {{ now.Format "2006-01-02" }}</span>
+        <span>{{ .Site.Params.text.last_update }} {{ now.Format "2006-01-02" }}</span>
         {{ $pages := .Pages }}
         {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
         {{ $paginator := .Paginate (where $pages "Section" "!=" "") }}
