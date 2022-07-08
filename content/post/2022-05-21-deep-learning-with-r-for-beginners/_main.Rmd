@@ -6,12 +6,10 @@ categories:
   - 机器学习
 tags:
   - 深度学习
-meta_extra: "审稿人 何通"
 output:
   blogdown::html_page:
     toc: true
 link-citations: true
-forum_id: 423316
 slug: deep-learning-with-r-for-beginners
 ---
 
@@ -313,4 +311,7 @@ predict(reloaded_model, test) #对新数据集进行预测
 -   [表示学习](https://blogs.rstudio.com/ai/posts/2018-10-22-mmd-vae/#our-objective-today)
 -   [几何深度学习](https://blogs.rstudio.com/ai/posts/2021-08-26-geometric-deep-learning/)
 -   [基于空间预测的卷积 LSTM 网络](https://blogs.rstudio.com/ai/posts/2020-12-17-torch-convlstm/)
+
+
+<!--chapter:end:index.Rmd-->
 
