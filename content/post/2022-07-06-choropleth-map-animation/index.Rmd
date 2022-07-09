@@ -929,7 +929,7 @@ us_votes_repub |>
 1.  动画制作部分：
 
     -  GIF 动画：在制作地区分布图方面，笔者推荐 **gganimate** 和 **tmap** 包，后者在地理可视化方面有很多积累，文档丰富。二者的使用上和大家熟悉的 **ggplot2** 一脉相承，学习成本也比较低。
-    -  Web 动画：**echarts4r** 包的[动画示例](https://echarts4r.john-coene.com/articles/timeline.html)比较简单，定制一些内容需要多参考[时间轴配置项手册](https://echarts.apache.org/zh/option.html#timeline)，**echarts4r** 暂不支持自定义坐标投影。
+    -  Web 动画：**echarts4r** 包的[动画示例](https://echarts4r.john-coene.com/articles/timeline.html)比较简单，定制一些内容需要多参考[时间轴配置项手册](https://echarts.apache.org/zh/option.html#timeline)。
 
 
 总的来说，比较复杂的还是在数据操作上，地图数据和观测数据的整洁、完整情况决定了制作地图动画的复杂度。就地图制作来说，要求了解的 R 语言技术是比较全面的，基本涵盖了常用的数据操作方法和 **ggplot2** 做数据可视化的全过程，制作 Web 动图还需要继续了解 **echart4r** 包。
