@@ -9,11 +9,12 @@ tags:
   - R 语言
   - 动画
   - 地区分布图
-  - 地理可视化
   - ggplot2
   - gganimate
   - tmap
   - echarts4r
+meta_extra: "审稿：袁凡；主站编辑：黄湘云；微信编辑：xxx"
+forum_id: xxx
 output:
   blogdown::html_page:
     toc: true
@@ -90,12 +91,12 @@ knitr::opts_chunk$set(
 # 本文概览 {#motivation}
 
 
-在[《地区分布图及其应用》](https://cosx.org/2022/05/choropleth-map/)一文中收到读者反馈，内容多，读得累。地区分布图的制作过程介绍不详细，对新手不友好，下面还是以地区分布图为例，在一个更加简单的数据集上，**详细**介绍用 **ggplot2** 包制作的过程。主要包含以下几个部分：
+在[《地区分布图及其应用》](https://cosx.org/2022/05/choropleth-map/)一文中收到读者反馈，内容多，读得累。地区分布图的制作过程介绍不详细，对新手不友好，下面还是以地区分布图为例，在一个更加简单的数据集上，**详细**介绍制作的过程。主要包含以下几个部分：
 
 1. 软件准备：简单介绍制作地区分布图及其动画所需的 R 包。
 1. 制作地图：详细介绍绘图涉及的数据处理和可视化过程。
 1. 制作动画：介绍 GIF 动画和 Web 动画两种展示形式。
-1. 本文小结：总结归纳数据处理和绘图的主要步骤。
+1. 本文小结：总结归纳数据处理和绘制地图的主要步骤。
 
 
 # 软件准备 {#setup}
@@ -112,11 +113,11 @@ knitr::opts_chunk$set(
 
 1. **sf** 包[@Pebesma2018]：读取和处理空间数据，并支撑 **ggplot2** 包制作地图。
 
-1. **gifski** 包[@gifski]：将一张张静态图片合成 GIF 动图，**gganimate** 包和 **tmap** 包都需要它来导出 GIF 动图。
-
 1. **showtext** 包[@Qiu2015]：用 **tmap** 包制作含中文的 GIF 动画，需要**showtext** 包的支持。
 
 1. **ragg** 包[@ragg]：用 **gganimate** 包制作含中文的 GIF 动画，需要 **ragg** 包的支持，**showtext** 包暂不支持此场景。
+
+1. **gifski** 包[@gifski]：将一张张静态图片合成 GIF 动图，**gganimate** 包和 **tmap** 包都需要它来导出 GIF 动图。
 
 1. **gganimate** 包[@gganimate]：提供一套动态图形语法，动画制作与 **ggplot2** 绘图衔接得如丝般顺滑。
 
@@ -129,6 +130,7 @@ knitr::opts_chunk$set(
 ```{r}
 #| eval: false
 #| echo: true
+
 install.packages(c(
   "maps", "mapproj", "ggplot2", "tigris",
   "sf", "gifski", "showtext", "ragg", 
@@ -206,7 +208,7 @@ us_votes_repub <- reshape(
 head(us_votes_repub)
 ```
 
-不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图\@ref(fig:votes-repub-na)所示。阿拉斯加州和夏威夷州是 1959 年正式加入美国的，之前只是美国的领地，没有资格参与美国的大选，其它各州的情况详见[网站](https://www.50states.com/statehood.htm?sort_by_date)。
+不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图\@ref(fig:votes-repub-na)所示。实际上，阿拉斯加州和夏威夷州是 1959 年正式加入美国的，之前只是美国的领地，没有资格参与美国的大选，其它各州的情况详见[网站](https://www.50states.com/statehood.htm?sort_by_date)。
 
 ```{r}
 us_votes_repub_na <- aggregate(

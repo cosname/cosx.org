@@ -9,11 +9,12 @@ tags:
   - R 语言
   - 动画
   - 地区分布图
-  - 地理可视化
   - ggplot2
   - gganimate
   - tmap
   - echarts4r
+meta_extra: "审稿：袁凡；主站编辑：黄湘云；微信编辑：xxx"
+forum_id: xxx
 output:
   blogdown::html_page:
     toc: true
@@ -105,12 +106,12 @@ div.csl-indent {
 </style>
 <div id="motivation" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> 本文概览</h1>
-<p>在<a href="https://cosx.org/2022/05/choropleth-map/">《地区分布图及其应用》</a>一文中收到读者反馈，内容多，读得累。地区分布图的制作过程介绍不详细，对新手不友好，下面还是以地区分布图为例，在一个更加简单的数据集上，<strong>详细</strong>介绍用 <strong>ggplot2</strong> 包制作的过程。主要包含以下几个部分：</p>
+<p>在<a href="https://cosx.org/2022/05/choropleth-map/">《地区分布图及其应用》</a>一文中收到读者反馈，内容多，读得累。地区分布图的制作过程介绍不详细，对新手不友好，下面还是以地区分布图为例，在一个更加简单的数据集上，<strong>详细</strong>介绍制作的过程。主要包含以下几个部分：</p>
 <ol style="list-style-type: decimal">
 <li>软件准备：简单介绍制作地区分布图及其动画所需的 R 包。</li>
 <li>制作地图：详细介绍绘图涉及的数据处理和可视化过程。</li>
 <li>制作动画：介绍 GIF 动画和 Web 动画两种展示形式。</li>
-<li>本文小结：总结归纳数据处理和绘图的主要步骤。</li>
+<li>本文小结：总结归纳数据处理和绘制地图的主要步骤。</li>
 </ol>
 </div>
 <div id="setup" class="section level1" number="2">
@@ -122,9 +123,9 @@ div.csl-indent {
 <li><p><strong>ggplot2</strong> 包<span class="citation">[<a href="#ref-Wickham2022" role="doc-biblioref">3</a>]</span>：将 <strong>maps</strong> 包内置的美国州级地图数据 state 从 map 类型转化为 data.frame 类型，然后绘制地图，同时设置坐标投影。</p></li>
 <li><p><strong>tigris</strong> 包<span class="citation">[<a href="#ref-tigris" role="doc-biblioref">4</a>]</span>：获取和处理美国人口调查局发布的州级多边形边界地图数据。</p></li>
 <li><p><strong>sf</strong> 包<span class="citation">[<a href="#ref-Pebesma2018" role="doc-biblioref">5</a>]</span>：读取和处理空间数据，并支撑 <strong>ggplot2</strong> 包制作地图。</p></li>
-<li><p><strong>gifski</strong> 包<span class="citation">[<a href="#ref-gifski" role="doc-biblioref">6</a>]</span>：将一张张静态图片合成 GIF 动图，<strong>gganimate</strong> 包和 <strong>tmap</strong> 包都需要它来导出 GIF 动图。</p></li>
-<li><p><strong>showtext</strong> 包<span class="citation">[<a href="#ref-Qiu2015" role="doc-biblioref">7</a>]</span>：用 <strong>tmap</strong> 包制作含中文的 GIF 动画，需要<strong>showtext</strong> 包的支持。</p></li>
-<li><p><strong>ragg</strong> 包<span class="citation">[<a href="#ref-ragg" role="doc-biblioref">8</a>]</span>：用 <strong>gganimate</strong> 包制作含中文的 GIF 动画，需要 <strong>ragg</strong> 包的支持，<strong>showtext</strong> 包暂不支持此场景。</p></li>
+<li><p><strong>showtext</strong> 包<span class="citation">[<a href="#ref-Qiu2015" role="doc-biblioref">6</a>]</span>：用 <strong>tmap</strong> 包制作含中文的 GIF 动画，需要<strong>showtext</strong> 包的支持。</p></li>
+<li><p><strong>ragg</strong> 包<span class="citation">[<a href="#ref-ragg" role="doc-biblioref">7</a>]</span>：用 <strong>gganimate</strong> 包制作含中文的 GIF 动画，需要 <strong>ragg</strong> 包的支持，<strong>showtext</strong> 包暂不支持此场景。</p></li>
+<li><p><strong>gifski</strong> 包<span class="citation">[<a href="#ref-gifski" role="doc-biblioref">8</a>]</span>：将一张张静态图片合成 GIF 动图，<strong>gganimate</strong> 包和 <strong>tmap</strong> 包都需要它来导出 GIF 动图。</p></li>
 <li><p><strong>gganimate</strong> 包<span class="citation">[<a href="#ref-gganimate" role="doc-biblioref">9</a>]</span>：提供一套动态图形语法，动画制作与 <strong>ggplot2</strong> 绘图衔接得如丝般顺滑。</p></li>
 <li><p><strong>tmap</strong> 包<span class="citation">[<a href="#ref-Tennekes2018" role="doc-biblioref">10</a>]</span>：用来制作地区分布图，导出 GIF 动画，尽管功能远不止于此。</p></li>
 <li><p><strong>echarts4r</strong> 包<span class="citation">[<a href="#ref-echarts4r" role="doc-biblioref">11</a>]</span>：用来制作地区分布图，生成 Web 动画。</p></li>
@@ -213,7 +214,7 @@ head(us_votes_repub)
 # 4   arkansas   Arkansas 1856         NA
 # 5 california California 1856      18.77
 # 6   colorado   Colorado 1856         NA</code></pre>
-<p>不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图<a href="#fig:votes-repub-na">3.1</a>所示。阿拉斯加州和夏威夷州是 1959 年正式加入美国的，之前只是美国的领地，没有资格参与美国的大选，其它各州的情况详见<a href="https://www.50states.com/statehood.htm?sort_by_date">网站</a>。</p>
+<p>不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图<a href="#fig:votes-repub-na">3.1</a>所示。实际上，阿拉斯加州和夏威夷州是 1959 年正式加入美国的，之前只是美国的领地，没有资格参与美国的大选，其它各州的情况详见<a href="https://www.50states.com/statehood.htm?sort_by_date">网站</a>。</p>
 <pre class="r"><code>us_votes_repub_na &lt;- aggregate(
   data = us_votes_repub,
   state ~ year,
@@ -852,14 +853,14 @@ us_votes_repub |&gt;
 <div id="ref-Pebesma2018" class="csl-entry">
 <div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span class="smallcaps">Pebesma</span>, E. (2018). <a href="https://doi.org/10.32614/RJ-2018-009"><span class="nocase">Simple Features for R: Standardized Support for Spatial Vector Data</span></a>. <em><span>The R Journal</span></em> <strong>10</strong> 439–46.</div>
 </div>
-<div id="ref-gifski" class="csl-entry">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline"><span class="smallcaps">Ooms</span>, J. (2022). <em><a href="https://CRAN.R-project.org/package=gifski"><span class="nocase">gifski</span>: Highest quality GIF encoder</a></em>.</div>
-</div>
 <div id="ref-Qiu2015" class="csl-entry">
-<div class="csl-left-margin">[7] </div><div class="csl-right-inline"><span class="smallcaps">Qiu</span>, Y. (2015). <a href="https://doi.org/10.32614/RJ-2015-008"><span class="nocase">showtext</span>: Using system fonts in <span>R</span> graphics</a>. <em><span>The R Journal</span></em> <strong>7</strong> 99–108.</div>
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline"><span class="smallcaps">Qiu</span>, Y. (2015). <a href="https://doi.org/10.32614/RJ-2015-008"><span class="nocase">showtext</span>: Using system fonts in <span>R</span> graphics</a>. <em><span>The R Journal</span></em> <strong>7</strong> 99–108.</div>
 </div>
 <div id="ref-ragg" class="csl-entry">
-<div class="csl-left-margin">[8] </div><div class="csl-right-inline"><span class="smallcaps">Pedersen</span>, T. L. and <span class="smallcaps">Shemanarev</span>, M. (2022). <em><a href="https://CRAN.R-project.org/package=ragg"><span class="nocase">ragg</span>: Graphic devices based on AGG</a></em>.</div>
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline"><span class="smallcaps">Pedersen</span>, T. L. and <span class="smallcaps">Shemanarev</span>, M. (2022). <em><a href="https://CRAN.R-project.org/package=ragg"><span class="nocase">ragg</span>: Graphic devices based on AGG</a></em>.</div>
+</div>
+<div id="ref-gifski" class="csl-entry">
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline"><span class="smallcaps">Ooms</span>, J. (2022). <em><a href="https://CRAN.R-project.org/package=gifski"><span class="nocase">gifski</span>: Highest quality GIF encoder</a></em>.</div>
 </div>
 <div id="ref-gganimate" class="csl-entry">
 <div class="csl-left-margin">[9] </div><div class="csl-right-inline"><span class="smallcaps">Pedersen</span>, T. L. and <span class="smallcaps">Robinson</span>, D. (2020). <em><a href="https://CRAN.R-project.org/package=gganimate"><span class="nocase">gganimate</span>: A grammar of animated graphics</a></em>.</div>
