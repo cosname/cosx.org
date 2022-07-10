@@ -213,7 +213,7 @@ head(us_votes_repub)
 # 4   arkansas   Arkansas 1856         NA
 # 5 california California 1856      18.77
 # 6   colorado   Colorado 1856         NA</code></pre>
-<p>不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图<a href="#fig:votes-repub-na">3.1</a>所示。阿拉斯加州和夏威夷州是 1959 年正式加入美国的，之前只是美国的领地，没有资格参与美国的大选。</p>
+<p>不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图<a href="#fig:votes-repub-na">3.1</a>所示。阿拉斯加州和夏威夷州是 1959 年正式加入美国的，之前只是美国的领地，没有资格参与美国的大选，其它各州的情况详见<a href="https://www.50states.com/statehood.htm?sort_by_date">网站</a>。</p>
 <pre class="r"><code>us_votes_repub_na &lt;- aggregate(
   data = us_votes_repub,
   state ~ year,

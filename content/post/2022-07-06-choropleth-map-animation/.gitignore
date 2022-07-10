@@ -1,4 +1,4 @@
 *_cache/
-index_files/echarts4r
-index_files/echarts4r-binding
-index_files/htmlwidgets
+*_files/echarts4r/
+*_files/echarts4r-binding/
+*_files/htmlwidgets/
