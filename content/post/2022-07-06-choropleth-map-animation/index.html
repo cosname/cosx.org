@@ -75,8 +75,8 @@ description: "本文面向初学者从零开始制作动态地区分布图，首
 
 div.img, div.figure {
   text-align: center;
-  display: block;
-  margin-left: auto;
+  display: block; 
+  margin-left: auto; 
   margin-right: auto;
 }
 </style>
@@ -132,7 +132,7 @@ div.csl-indent {
 <p>读者可以通过下面的代码一次性把上面的 R 包都安装上：</p>
 <pre class="r"><code>install.packages(c(
   &quot;maps&quot;, &quot;mapproj&quot;, &quot;ggplot2&quot;, &quot;tigris&quot;,
-  &quot;sf&quot;, &quot;gifski&quot;, &quot;showtext&quot;, &quot;ragg&quot;,
+  &quot;sf&quot;, &quot;gifski&quot;, &quot;showtext&quot;, &quot;ragg&quot;, 
   &quot;gganimate&quot;, &quot;tmap&quot;, &quot;echarts4r&quot;
 ))</code></pre>
 </div>
@@ -157,23 +157,23 @@ str(votes.repub)
 <pre class="r"><code>attributes(votes.repub)
 # $dim
 # [1] 50 31
-#
+# 
 # $dimnames
 # $dimnames[[1]]
-#  [1] &quot;Alabama&quot;        &quot;Alaska&quot;         &quot;Arizona&quot;        &quot;Arkansas&quot;
-#  [5] &quot;California&quot;     &quot;Colorado&quot;       &quot;Connecticut&quot;    &quot;Delaware&quot;
-#  [9] &quot;Florida&quot;        &quot;Georgia&quot;        &quot;Hawaii&quot;         &quot;Idaho&quot;
-# [13] &quot;Illinois&quot;       &quot;Indiana&quot;        &quot;Iowa&quot;           &quot;Kansas&quot;
-# [17] &quot;Kentucky&quot;       &quot;Louisiana&quot;      &quot;Maine&quot;          &quot;Maryland&quot;
-# [21] &quot;Massachusetts&quot;  &quot;Michigan&quot;       &quot;Minnesota&quot;      &quot;Mississippi&quot;
-# [25] &quot;Missouri&quot;       &quot;Montana&quot;        &quot;Nebraska&quot;       &quot;Nevada&quot;
-# [29] &quot;New Hampshire&quot;  &quot;New Jersey&quot;     &quot;New Mexico&quot;     &quot;New York&quot;
-# [33] &quot;North Carolina&quot; &quot;North Dakota&quot;   &quot;Ohio&quot;           &quot;Oklahoma&quot;
+#  [1] &quot;Alabama&quot;        &quot;Alaska&quot;         &quot;Arizona&quot;        &quot;Arkansas&quot;      
+#  [5] &quot;California&quot;     &quot;Colorado&quot;       &quot;Connecticut&quot;    &quot;Delaware&quot;      
+#  [9] &quot;Florida&quot;        &quot;Georgia&quot;        &quot;Hawaii&quot;         &quot;Idaho&quot;         
+# [13] &quot;Illinois&quot;       &quot;Indiana&quot;        &quot;Iowa&quot;           &quot;Kansas&quot;        
+# [17] &quot;Kentucky&quot;       &quot;Louisiana&quot;      &quot;Maine&quot;          &quot;Maryland&quot;      
+# [21] &quot;Massachusetts&quot;  &quot;Michigan&quot;       &quot;Minnesota&quot;      &quot;Mississippi&quot;   
+# [25] &quot;Missouri&quot;       &quot;Montana&quot;        &quot;Nebraska&quot;       &quot;Nevada&quot;        
+# [29] &quot;New Hampshire&quot;  &quot;New Jersey&quot;     &quot;New Mexico&quot;     &quot;New York&quot;      
+# [33] &quot;North Carolina&quot; &quot;North Dakota&quot;   &quot;Ohio&quot;           &quot;Oklahoma&quot;      
 # [37] &quot;Oregon&quot;         &quot;Pennsylvania&quot;   &quot;Rhode Island&quot;   &quot;South Carolina&quot;
-# [41] &quot;South Dakota&quot;   &quot;Tennessee&quot;      &quot;Texas&quot;          &quot;Utah&quot;
-# [45] &quot;Vermont&quot;        &quot;Virginia&quot;       &quot;Washington&quot;     &quot;West Virginia&quot;
-# [49] &quot;Wisconsin&quot;      &quot;Wyoming&quot;
-#
+# [41] &quot;South Dakota&quot;   &quot;Tennessee&quot;      &quot;Texas&quot;          &quot;Utah&quot;          
+# [45] &quot;Vermont&quot;        &quot;Virginia&quot;       &quot;Washington&quot;     &quot;West Virginia&quot; 
+# [49] &quot;Wisconsin&quot;      &quot;Wyoming&quot;       
+# 
 # $dimnames[[2]]
 #  [1] &quot;1856&quot; &quot;1860&quot; &quot;1864&quot; &quot;1868&quot; &quot;1872&quot; &quot;1876&quot; &quot;1880&quot; &quot;1884&quot; &quot;1888&quot; &quot;1892&quot;
 # [11] &quot;1896&quot; &quot;1900&quot; &quot;1904&quot; &quot;1908&quot; &quot;1912&quot; &quot;1916&quot; &quot;1920&quot; &quot;1924&quot; &quot;1928&quot; &quot;1932&quot;
@@ -204,7 +204,7 @@ us_votes_repub &lt;- reshape(
   new.row.names = 1:(31 * 50),
   direction = &quot;long&quot;
 )
-# 查看重塑后的数据集 us_votes_repub
+# 查看重塑后的数据集 us_votes_repub 
 head(us_votes_repub)
 #        state state_name year repub_prop
 # 1    alabama    Alabama 1856         NA
@@ -213,7 +213,7 @@ head(us_votes_repub)
 # 4   arkansas   Arkansas 1856         NA
 # 5 california California 1856      18.77
 # 6   colorado   Colorado 1856         NA</code></pre>
-<p>不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图<a href="#fig:votes-repub-na">3.1</a>所示，除了人烟稀少的阿拉斯加和夏威夷，大选在20世纪初基本覆盖美国。</p>
+<p>不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图<a href="#fig:votes-repub-na">3.1</a>所示。阿拉斯加州和夏威夷州是 1959 年正式加入美国的，之前只是美国的领地，没有资格参与美国的大选。</p>
 <pre class="r"><code>us_votes_repub_na &lt;- aggregate(
   data = us_votes_repub,
   state ~ year,
@@ -318,9 +318,8 @@ usa_voting_df &lt;- merge(
     legend.position = &quot;bottom&quot;
   )</code></pre>
 </details>
-<p>实际上，1976 年的大选，共和党在阿拉斯加和夏威夷是有得票数据的，因 <strong>maps</strong> 包内置的 state 地图数据集缺少这两个州，所以上图 <a href="#fig:votes-repub-map">3.4</a> 未能展示。另外，图中还缺少北纬/南纬、东经/西经的方向指示。因此，接下来采用 <strong>sf</strong> 包加强的 <strong>ggplot2</strong> 来制作更加完善的地图。</p>
-<p><strong>maps</strong> 包内置的美国州级地图数据不包含阿拉斯加和夏威夷，因此，要从美国人口调查局获取完整的新版地图数据。</p>
-<p><a href="https://walker-data.com/">Kyle Walker</a> 开发的 <strong>tigris</strong> 包封装了地图数据的下载接口，下面获取 2019 年发布的比例尺为 1:20,000,000 的州级地图数据，并将阿拉斯加州、夏威夷群岛和波多黎各适当移动至连续的 48 州下方。</p>
+<p>实际上，1976 年的大选，共和党在阿拉斯加和夏威夷是有得票数据的，因 <strong>maps</strong> 包内置的 state 地图数据集缺少这两个州，所以上图 <a href="#fig:votes-repub-map">3.4</a> 未能展示，因此，要从美国人口调查局获取完整的地图数据。另外，图中还缺少北纬/南纬、东经/西经的方向指示。因此，接下来采用 <strong>sf</strong> 包加强的 <strong>ggplot2</strong> 来制作更加完善的地图。</p>
+<p><a href="https://walker-data.com/">Kyle Walker</a> 开发的 <strong>tigris</strong> 包封装了地图数据的下载接口，下面获取 2019 年发布的比例尺为 1:20000000 的州级地图数据，并将阿拉斯加州、夏威夷州和波多黎各适当移动至连续的 48 州下方。</p>
 <pre class="r"><code>us_state_map &lt;- tigris::states(cb = T, year = 2019, resolution = &quot;20m&quot;, class = &quot;sf&quot;)
 # 移动离岸的地区
 us_state_map &lt;- tigris::shift_geometry(us_state_map, geoid_column = &quot;GEOID&quot;, position = &quot;below&quot;)</code></pre>
@@ -365,8 +364,8 @@ us_state_map &lt;- tigris::shift_geometry(us_state_map, geoid_column = &quot;GEO
 <pre class="r"><code>usa_voting_map_1976 &lt;- merge(
   x = us_state_map,
   y = us_votes_repub_1976,
-  by.x = &quot;NAME&quot;,
-  by.y = &quot;state_name&quot;,
+  by.x = &quot;NAME&quot;, 
+  by.y = &quot;state_name&quot;, 
   all.x = TRUE
 )</code></pre>
 <p>在 sf 包的加持下，地理几何图层 <code>geom_sf()</code> 可以替代 <code>geom_map()</code>，坐标投影图层 <code>coord_sf()</code> 可以替代 <code>coord_map()</code>。整个绘图的过程极大地简化下来了，核心部分只有两行，如下：</p>
@@ -417,8 +416,8 @@ us_state_map &lt;- tigris::shift_geometry(us_state_map, geoid_column = &quot;GEO
 usa_voting_map &lt;- merge(
   x = us_state_map,
   y = us_votes_repub,
-  by.x = &quot;NAME&quot;,
-  by.y = &quot;state_name&quot;,
+  by.x = &quot;NAME&quot;, 
+  by.y = &quot;state_name&quot;, 
   all.x = TRUE
 )
 # year 为 NA 表示没有波多黎各的观测数据，可以去掉
@@ -467,7 +466,7 @@ ggplot() +
 <p>GIF 动图制作过程中有几点需要注意：</p>
 <ol style="list-style-type: decimal">
 <li><p>调整总帧数和帧率，在图<a href="#fig:votes-repub-gganimate">4.1</a>基础上添加过渡效果，需要额外安装 <strong>transformr</strong> 包，它是通过插值的方式实现中间过渡状态的。</p></li>
-<li><p>GIF 动图<a href="#fig:votes-repub-gganimate">4.1</a> 是逐年逐帧显示得票率分布，不需要添加过渡效果，美国大选每四年一届，插值后会很奇怪，但可以调整帧率，即每秒播放的地图分布图的幅数。</p></li>
+<li><p>GIF 动图<a href="#fig:votes-repub-gganimate">4.1</a> 是逐年逐帧显示得票率分布，不需要添加过渡效果，美国大选每四年一届，插值后会很奇怪，但可以调整帧率，即每秒播放地区分布图的幅数。</p></li>
 <li><p><strong>showtext</strong> 包支持在 <strong>ggplot2</strong> 绘制的图形中添加中文字体，但是不支持 <strong>gganimate</strong> 包的动画制作场景。因此，安装 <strong>ragg</strong> 包，在生成 GIF 图<a href="#fig:votes-repub-gganimate">4.1</a>的代码块选项中，图形设备设置为 <code>dev = "ragg_png"</code>。为操作系统安装 <a href="https://github.com/googlefonts/noto-cjk">Noto Serif CJK SC 字体</a>，并设置为图中标题字体。</p></li>
 <li><p>在标题处添加了年份，这样就知道每一帧动画对应的大选之年。</p></li>
 </ol>
@@ -489,7 +488,7 @@ ggplot() +
 </summary>
 </p>
 <pre class="r"><code>library(tmap)
-tm_shape(usa_voting_map_1976) +
+tm_shape(usa_voting_map_1976) + 
   tm_polygons(
     col = &quot;repub_prop&quot;,    # 数据列
     palette = &quot;RdBu&quot;,      # 调色板
@@ -571,8 +570,8 @@ tmap_animation(usa_voting_anim,
 <h2><span class="header-section-number">4.2</span> Web 动画</h2>
 <div id="echarts4r-包" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> echarts4r 包</h3>
-<p><a href="https://github.com/JohnCoene/echarts4r"><strong>echarts4r</strong></a><span class="citation">[<a href="#ref-echarts4r" role="doc-biblioref">11</a>]</span> 是 JavaScript 库 <a href="https://echarts.apache.org/en/">Apache ECharts</a> 的 R 语言接口，截止写作时间，R 包内置的 Apache ECharts 更新到 <strong>5.2.2</strong> 版本。<strong>echarts4r</strong> 包目前已经支持了很多 Apache ECharts 的功能，一篇写给初学者的入门文章参见<a href="https://cosx.org/2021/12/introduction-to-echarts4r/">《echarts4r: 从入门到应用》</a>，本节的地图动画是原文暂未涉及的应用案例。</p>
-<p>在制作交互式的地图动画之前，从 Github 下载 <a href="https://github.com/JohnCoene/echarts4r.maps"><strong>echarts4r.maps</strong></a> 包，它内置一份 GeoJSON 格式的美国州级地图数据。</p>
+<p><a href="https://github.com/JohnCoene/echarts4r"><strong>echarts4r</strong></a><span class="citation">[<a href="#ref-echarts4r" role="doc-biblioref">11</a>]</span> 是 JavaScript 库 <a href="https://echarts.apache.org/en/">Apache ECharts</a> 的 R 语言接口。截止写作时间，<strong>echarts4r</strong> 包内置的 Apache ECharts 更新到 <strong>5.3.2</strong> 版本，已经支持很多 Apache ECharts 的功能，一篇写给初学者的入门文章参见<a href="https://cosx.org/2021/12/introduction-to-echarts4r/">《echarts4r: 从入门到应用》</a>，本节的地图动画是原文暂未涉及的应用案例。</p>
+<p>在制作交互式的地图动画之前，先从 Github 下载 <a href="https://github.com/JohnCoene/echarts4r.maps"><strong>echarts4r.maps</strong></a> 包，它内置一份 GeoJSON 格式的美国州级地图数据。</p>
 <pre class="r"><code>remotes::install_github(&#39;JohnCoene/echarts4r.maps&#39;)</code></pre>
 <p>图<a href="#fig:votes-repub-echarts4r-draft">4.4</a> 展示 1856-1976 年美国历届大选中，共和党在各州的得票率变化情况。</p>
 <pre class="r"><code>library(echarts4r)
@@ -581,8 +580,8 @@ us_votes_repub |&gt;
   group_by(year) |&gt;
   e_charts(x = state_name, timeline = TRUE) |&gt;
   em_map(map = &quot;USA&quot;) |&gt;
-  e_map(serie = repub_prop, map = &quot;USA&quot;, name = &quot;得票率（%）&quot;) |&gt;
-  e_visual_map(serie = repub_prop) |&gt;
+  e_map(serie = repub_prop, map = &quot;USA&quot;, name = &quot;得票率（%）&quot;) |&gt; 
+  e_visual_map(serie = repub_prop) |&gt; 
   e_tooltip()</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:votes-repub-echarts4r-draft"></span>
 <div id="htmlwidget-1" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
@@ -598,9 +597,9 @@ us_votes_repub |&gt;
   formatter = htmlwidgets::JS(&quot;
     function(params){
       if(params.value) {
-        return(&#39;&lt;strong&gt;&#39; + params.name + &#39;&lt;/strong&gt;&#39; +
+        return(&#39;&lt;strong&gt;&#39; + params.name + &#39;&lt;/strong&gt;&#39; + 
                &#39;&lt;br /&gt;&#39; + Math.round(params.value * 100) / 100 + &#39;%&#39;)
-      } else
+      } else 
         return(&#39;数据缺失&#39;)
     }
   &quot;)
@@ -608,7 +607,7 @@ us_votes_repub |&gt;
 <p>百分数处理参考 <a href="https://stackoverflow.com/questions/11832914/">SO 帖子</a>，自定义悬浮提示参考<a href="https://stackoverflow.com/questions/50554304/">SO 帖子</a>。JS 代码中 <code>params.name</code> 对应 <code>e_map()</code> 函数的 <code>name</code> 参数值，<code>params.value</code> 对应 <code>serie</code> 参数值。但是在气泡图中，有点不一样，以 R 内置的数据集 mtcars 为例，<code>params.name</code> 对应 <code>bind</code>，<code>params.value[0]</code> 对应 <code>x</code>， <code>params.value[1]</code> 对应 <code>serie</code> ，<code>params.value[2]</code> 对应 <code>size</code>。不同的图形有不同的对应情况，详见 Apache ECharts <a href="https://echarts.apache.org/en/option.html#tooltip.formatter">官方文档</a>。</p>
 <pre class="r"><code>mtcars |&gt;
   tibble::rownames_to_column(&quot;model&quot;) |&gt;
-  group_by(cyl) |&gt;
+  group_by(cyl) |&gt; 
   e_charts(x = wt) |&gt;
   e_scatter(serie = mpg, size = qsec, bind = model) |&gt;
   e_tooltip(formatter = htmlwidgets::JS(&quot;
@@ -627,7 +626,7 @@ us_votes_repub |&gt;
 <li><p>主副标题：在图形上方添加动画标题、左下方说明数据来源。在动画场景下，用 <code>e_timeline_serie()</code> 实现，非动画场景下，可用 <code>e_title()</code> 实现。</p></li>
 <li><p>地图底图：<strong>echarts4r.maps</strong> 包内置的 <a href="https://geojson.org/">GeoJSON</a> 格式<a href="https://raw.githubusercontent.com/JohnCoene/echarts4r.maps/master/inst/USA.json">美国州级地图</a>。</p></li>
 <li><p>坐标投影：相比于前面展示的动画，最终效果图<a href="#fig:votes-repub-echarts4r">4.5</a>采用的坐标投影不一样，它是反映实际区域面积大小的。</p></li>
-<li><p>数据映射：注意地图数据中州名 name 字段格式，阿拉斯加州是 <code>Alaska</code> 而不是 <code>alaska</code>，这个用于匹配观测数据中的 <code>state_name</code> 列。</p></li>
+<li><p>数据映射：注意地图数据中州名 name 字段格式，如阿拉斯加州是 <code>Alaska</code> 而不是 <code>alaska</code>，这个用于匹配观测数据 <code>us_votes_repub</code> 中的 <code>state_name</code> 列。</p></li>
 <li><p>动画播放：设置自动播放动画，播放间隔为 1s。</p></li>
 </ul>
 <p>仅从图<a href="#fig:votes-repub-echarts4r">4.5</a>不难看出，共和党在北方比较受欢迎。</p>
@@ -703,10 +702,10 @@ us_votes_repub |&gt;
     ), index = 3
   )</code></pre>
 </details>
-<p>Web 动画图<a href="#fig:votes-repub-echarts4r">4.5</a> 的坐标投影方式改为以美国为中心的阿尔伯斯等面积圆锥投影，和前面美国人口调查局发布的多边形地图数据采用一样的坐标参考系，效果如图<a href="#fig:votes-repub-echarts4r-geo">4.6</a>。具体实现如下：</p>
+<p>接下来，将上面的 Web 动画<a href="#fig:votes-repub-echarts4r">4.5</a> 的坐标投影方式改为以美国为中心的阿尔伯斯等面积圆锥投影，和前面美国人口调查局发布的多边形地图数据采用一样的坐标参考系，效果如图<a href="#fig:votes-repub-echarts4r-geo">4.6</a>。具体实现如下：</p>
 <ul>
-<li><p>Apache ECharts 在 5.3.0 版本后，支持设置不同的坐标投影，目前 John Coene 已将 <strong>echarts4r</strong> 包内置的 JavaScript 库更新至最新稳定版本 5.3.2，<strong>echarts4r</strong> 包也已更新至 0.4.4 版本，读者可从 CRAN 下载安装。</p></li>
-<li><p>借助 <code>htmlwidgets::prependContent()</code> 引入 D3 系列的数组操作库<a href="https://github.com/d3/d3-array">d3-array</a>和坐标投影库 <a href="https://github.com/d3/d3-geo">d3-geo</a>实现<a href="https://github.com/d3/d3-geo#geoAlbersUsa">阿尔伯斯等面积圆锥投影</a>，阿拉斯加州移至连续 48 州左下方，面积缩小为原来的 0.35 倍，看起来和美国中部一些州差不多大了，移动夏威夷的位置，面积不变。</p></li>
+<li><p>自定义坐标投影，要求 <strong>echarts4r</strong> 包更新至 0.4.4 及以上版本。</p></li>
+<li><p>借助 <code>htmlwidgets::prependContent()</code> 引入 D3 系列的数组操作库 <a href="https://github.com/d3/d3-array">d3-array</a> 和坐标投影库 <a href="https://github.com/d3/d3-geo">d3-geo</a> 实现<a href="https://github.com/d3/d3-geo#geoAlbersUsa">阿尔伯斯等面积圆锥投影</a>，阿拉斯加州移至连续 48 州左下方，面积缩小为原来的 0.35 倍，看起来和美国中部一些州差不多大了，移动夏威夷的位置，面积不变。</p></li>
 <li><p>制作过程中，参考了 Apache ECharts 官网给的<a href="https://echarts.apache.org/examples/zh/editor.html?c=map-usa-projection">示例</a>和<a href="https://echarts.apache.org/en/option.html#series-map.projection">帮助文档</a>，同时感谢 John Coene 提供的支持和帮助，详见<a href="https://github.com/JohnCoene/echarts4r/issues/428">帖子</a>。</p></li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:votes-repub-echarts4r-geo"></span>
@@ -753,8 +752,8 @@ us_votes_repub |&gt;
   ) |&gt;
   htmlwidgets::prependContent(
     htmltools::tags$script(&quot;const projection = d3.geoAlbersUsa();&quot;)
-  ) |&gt;
-  e_tooltip() |&gt;
+  ) |&gt; 
+  e_tooltip() |&gt; 
   e_timeline_opts(
     autoPlay = TRUE,    # 自动播放
     show = TRUE,        # 展示时间轴
@@ -795,11 +794,11 @@ us_votes_repub |&gt;
 </ul></li>
 <li><p>地图绘制部分：</p>
 <ul>
-<li>地图图层：从权威的渠道获取专业的地图数据，推荐使用 <code>geom_sf()</code> 而不是 <code>geom_map()</code>，前者更加流行和通用。</li>
+<li>地图图层：从权威的渠道获取专业的地图数据，推荐使用 <code>geom_sf()</code> 而不是 <code>geom_map()</code>，前者更加流行和高效。</li>
 <li>投影图层：推荐使用与 <code>geom_sf()</code> 配套的 <code>coord_sf()</code>，根据地理区域的情况选择合适的投影。</li>
 <li>颜色图层：<code>scale_fill_gradient2()</code> 对撞型的调色板衬托美国大选中的两党之争。</li>
 <li>主题层：<code>theme_minimal()</code> 简洁美观即可。</li>
-<li>标题层：<code>labs()</code> 适当添加一些图例标题等。</li>
+<li>标题层：<code>labs()</code> 适当添加一些图例标题、主副标题等。</li>
 </ul></li>
 <li><p>动画制作部分：</p>
 <ul>
@@ -807,7 +806,7 @@ us_votes_repub |&gt;
 <li>Web 动画：<strong>echarts4r</strong> 包的<a href="https://echarts4r.john-coene.com/articles/timeline.html">动画示例</a>比较简单，定制一些内容需要多参考<a href="https://echarts.apache.org/zh/option.html#timeline">时间轴配置项手册</a>。</li>
 </ul></li>
 </ol>
-<p>总的来说，比较复杂的还是在数据操作上，地图数据和观测数据的整洁、完整情况决定了制作地图动画的复杂度。就地图制作来说，要求了解的 R 语言技术是比较全面的，基本涵盖了常用的数据操作方法和 <strong>ggplot2</strong> 做数据可视化的全过程，制作 Web 动图还需要继续了解 <strong>echart4r</strong> 包。</p>
+<p>总的来说，比较复杂的还是在数据操作上，地图数据和观测数据的整洁、完整情况决定了制作地图动画的复杂度。就地图制作来说，要求了解的 R 语言技术是比较全面的，基本涵盖了常用的数据操作方法和 <strong>ggplot2</strong> 做数据可视化的全过程，制作 Web 动画还需要继续了解 <strong>echart4r</strong> 包和 <strong>tmap</strong> 包。</p>
 <p>更多好玩又有挑战的案例见笔者发布在统计之都主站的文章<a href="https://cosx.org/2022/05/choropleth-map/">《地区分布图及其应用》</a>，更多地理数据可视化作品见网站 <a href="https://www.dataviz-inspiration.com/">Dataviz Inspiration</a>。</p>
 </div>
 <div id="sessioninfo" class="section level1" number="6">
@@ -822,17 +821,17 @@ us_votes_repub |&gt;
 # R version 4.2.1 (2022-06-23)
 # Platform: x86_64-apple-darwin17.0 (64-bit)
 # Running under: macOS Big Sur ... 10.16
-#
+# 
 # Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
-#
+# 
 # Package version:
-#   blogdown_1.10   echarts4r_0.4.4 gganimate_1.0.7 ggplot2_3.3.6
-#   gifski_1.6.6-1  knitr_1.39      mapproj_1.2.8   maps_3.4.0
-#   ragg_1.2.2      rmarkdown_2.14  sf_1.0-7        showtext_0.9-5
-#   tigris_1.6.1    tmap_3.3-3
-#
+#   blogdown_1.10   echarts4r_0.4.4 gganimate_1.0.7 ggplot2_3.3.6  
+#   gifski_1.6.6-1  knitr_1.39      mapproj_1.2.8   maps_3.4.0     
+#   ragg_1.2.2      rmarkdown_2.14  sf_1.0-7        showtext_0.9-5 
+#   tigris_1.6.1    tmap_3.3-3     
+# 
 # Pandoc version: 2.18
-#
+# 
 # Hugo version: 0.101.0</code></pre>
 </div>
 <div id="refer" class="section level1" number="7">

@@ -206,7 +206,7 @@ us_votes_repub <- reshape(
 head(us_votes_repub)
 ```
 
-不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图\@ref(fig:votes-repub-na)所示，除了人烟稀少的阿拉斯加和夏威夷，大选在20世纪初基本覆盖美国。
+不难看出，数据集 us_votes_repub 不是很完整，一些历史的大选，有些州没有记录。下面统计一下历届大选中数据缺失的情况，如图\@ref(fig:votes-repub-na)所示。阿拉斯加州和夏威夷州是 1959 年正式加入美国的，之前只是美国的领地，没有资格参与美国的大选。
 
 ```{r}
 us_votes_repub_na <- aggregate(
@@ -223,11 +223,17 @@ us_votes_repub_na <- aggregate(
 #| echo: false
 #| fig.width: 6
 #| fig.height: 4
+#| dev: "ragg_png"
+
 us_votes_repub_na$year <- as.integer(us_votes_repub_na$year)
 library(ggplot2)
+
 ggplot(data = us_votes_repub_na, aes(x = year, y = state)) +
   geom_line() +
-  theme_minimal()
+  scale_x_continuous(n.breaks = 10) +
+  scale_y_continuous(n.breaks = 10) +
+  theme_minimal(base_family = "Noto Serif CJK SC") +
+  labs(x = "年份", y = "州数")
 ```
 
 接下来，先挑一个年份的大选数据，绘制一张静态的地区分布图，不妨以 1976 年的数据为例：
@@ -284,6 +290,7 @@ usa_voting_df <- usa_voting_df[order(usa_voting_df$order), ]
 #| cache: true
 #| fig.align: "center"
 #| fig.showtext: true
+
 ggplot(data = usa_voting_df, aes(long, lat, group = subregion)) +
   geom_map(
     map = usa_map, aes(map_id = region),
@@ -303,6 +310,7 @@ ggplot(data = usa_voting_df, aes(long, lat, group = subregion)) +
 #| cache: true
 #| fig.align: "center"
 #| fig.showtext: true
+
 ggplot(data = usa_voting_df, aes(long, lat, group = subregion)) +
   geom_map(
     map = usa_map, aes(map_id = region),
@@ -325,6 +333,7 @@ ggplot(data = usa_voting_df, aes(long, lat, group = subregion)) +
 #| fig.align: "center"
 #| fig.showtext: true
 #| echo: false
+
 ggplot(data = usa_voting_df, aes(long, lat, group = subregion)) +
   geom_map(
     map = usa_map, aes(map_id = region),
@@ -356,20 +365,20 @@ ggplot(data = usa_voting_df, aes(long, lat, group = subregion)) +
 ```
 </details>
 
-实际上，1976 年的大选，共和党在阿拉斯加和夏威夷是有得票数据的，因 **maps** 包内置的 state 地图数据集缺少这两个州，所以上图 \@ref(fig:votes-repub-map) 未能展示。另外，图中还缺少北纬/南纬、东经/西经的方向指示。因此，接下来采用 **sf** 包加强的 **ggplot2** 来制作更加完善的地图。
+实际上，1976 年的大选，共和党在阿拉斯加和夏威夷是有得票数据的，因 **maps** 包内置的 state 地图数据集缺少这两个州，所以上图 \@ref(fig:votes-repub-map) 未能展示，因此，要从美国人口调查局获取完整的地图数据。另外，图中还缺少北纬/南纬、东经/西经的方向指示。因此，接下来采用 **sf** 包加强的 **ggplot2** 来制作更加完善的地图。
 
-**maps** 包内置的美国州级地图数据不包含阿拉斯加和夏威夷，因此，要从美国人口调查局获取完整的新版地图数据。
-
-[Kyle Walker](https://walker-data.com/) 开发的 **tigris** 包封装了地图数据的下载接口，下面获取 2019 年发布的比例尺为 1:20,000,000 的州级地图数据，并将阿拉斯加州、夏威夷群岛和波多黎各适当移动至连续的 48 州下方。
+[Kyle Walker](https://walker-data.com/) 开发的 **tigris** 包封装了地图数据的下载接口，下面获取 2019 年发布的比例尺为 1:20000000 的州级地图数据，并将阿拉斯加州、夏威夷州和波多黎各适当移动至连续的 48 州下方。
 
 ```{r}
 #| eval: false
+
 us_state_map <- tigris::states(cb = T, year = 2019, resolution = "20m", class = "sf")
 # 移动离岸的地区
 us_state_map <- tigris::shift_geometry(us_state_map, geoid_column = "GEOID", position = "below")
 ```
 ```{r}
 #| echo: false
+
 library(sf)
 us_state_map <- readRDS(file = "data/us_state_map.rds")
 ```
@@ -387,6 +396,7 @@ us_state_map
 #| fig.cap: "美国州级地图"
 #| echo: false
 #| fig.align: "center"
+
 par(mar = c(0, 0, 0, 0))
 plot(st_geometry(us_state_map))
 ```
@@ -410,6 +420,7 @@ usa_voting_map_1976 <- merge(
 ```{r}
 #| echo: true
 #| eval: false
+
 ggplot() +
   geom_sf(data = usa_voting_map_1976, aes(fill = repub_prop / 100))
 ```
@@ -425,6 +436,7 @@ ggplot() +
 #| fig.showtext: true
 #| fig.align: "center"
 #| echo: false
+
 ggplot() +
   geom_sf(data = usa_voting_map_1976, aes(fill = repub_prop / 100)) +
   scale_fill_gradient2(
@@ -491,6 +503,7 @@ options(gganimate.nframes = 31, gganimate.fps = 1)
 
 ```{r}
 #| eval: false
+
 transition_time(year)
 ```
 
@@ -506,6 +519,7 @@ transition_time(year)
 #| fig.align: "center"
 #| cache: true
 #| echo: false
+
 library(gganimate)
 ggplot() +
   geom_sf(data = usa_voting_map, aes(fill = repub_prop / 100)) +
@@ -541,7 +555,7 @@ GIF 动图制作过程中有几点需要注意：
 
 1.  调整总帧数和帧率，在图\@ref(fig:votes-repub-gganimate)基础上添加过渡效果，需要额外安装 **transformr** 包，它是通过插值的方式实现中间过渡状态的。
 
-1.  GIF 动图\@ref(fig:votes-repub-gganimate) 是逐年逐帧显示得票率分布，不需要添加过渡效果，美国大选每四年一届，插值后会很奇怪，但可以调整帧率，即每秒播放的地图分布图的幅数。
+1.  GIF 动图\@ref(fig:votes-repub-gganimate) 是逐年逐帧显示得票率分布，不需要添加过渡效果，美国大选每四年一届，插值后会很奇怪，但可以调整帧率，即每秒播放地区分布图的幅数。
 
 1.  **showtext** 包支持在 **ggplot2** 绘制的图形中添加中文字体，但是不支持 **gganimate** 包的动画制作场景。因此，安装 **ragg** 包，在生成 GIF 图\@ref(fig:votes-repub-gganimate)的代码块选项中，图形设备设置为 `dev = "ragg_png"`。为操作系统安装 [Noto Serif CJK SC 字体](https://github.com/googlefonts/noto-cjk)，并设置为图中标题字体。
 
@@ -563,6 +577,7 @@ GIF 动图制作过程中有几点需要注意：
 #| cache: true
 #| fig.showtext: true
 #| echo: false
+
 library(tmap)
 tm_shape(usa_voting_map_1976) + 
   tm_polygons(
@@ -607,6 +622,7 @@ tm_shape(usa_voting_map_1976) +
 ```{r}
 #| eval: false
 #| echo: true
+
 # year 表示时间轴，固定坐标系
 tm_facets(along = "year", free.coords = FALSE)
 ```
@@ -616,6 +632,7 @@ tm_facets(along = "year", free.coords = FALSE)
 ```{r}
 #| eval: false
 #| echo: true
+
 tmap_animation(usa_voting_anim,
   filename = "usa_voting_anim.gif",
   width = 1100/1.5, height = 800/1.5, delay = 50
@@ -631,6 +648,7 @@ tmap_animation(usa_voting_anim,
 ```{r}
 #| eval: false
 #| fig.showtext: true
+
 library(tmap)
 usa_voting_anim <- tm_shape(usa_voting_map) +
   tm_polygons(
@@ -667,12 +685,13 @@ tmap_animation(usa_voting_anim,
 
 ### echarts4r 包
 
-[**echarts4r**](https://github.com/JohnCoene/echarts4r)[@echarts4r] 是 JavaScript 库 [Apache ECharts](https://echarts.apache.org/en/) 的 R 语言接口，截止写作时间，R 包内置的 Apache ECharts 更新到 **5.2.2** 版本。**echarts4r** 包目前已经支持了很多 Apache ECharts 的功能，一篇写给初学者的入门文章参见[《echarts4r: 从入门到应用》](https://cosx.org/2021/12/introduction-to-echarts4r/)，本节的地图动画是原文暂未涉及的应用案例。
+[**echarts4r**](https://github.com/JohnCoene/echarts4r)[@echarts4r] 是 JavaScript 库 [Apache ECharts](https://echarts.apache.org/en/) 的 R 语言接口。截止写作时间，**echarts4r** 包内置的 Apache ECharts 更新到 **5.3.2** 版本，已经支持很多 Apache ECharts 的功能，一篇写给初学者的入门文章参见[《echarts4r: 从入门到应用》](https://cosx.org/2021/12/introduction-to-echarts4r/)，本节的地图动画是原文暂未涉及的应用案例。
 
-在制作交互式的地图动画之前，从 Github 下载 [**echarts4r.maps**](https://github.com/JohnCoene/echarts4r.maps) 包，它内置一份 GeoJSON 格式的美国州级地图数据。
+在制作交互式的地图动画之前，先从 Github 下载 [**echarts4r.maps**](https://github.com/JohnCoene/echarts4r.maps) 包，它内置一份 GeoJSON 格式的美国州级地图数据。
 
 ```{r}
 #| eval: false
+
 remotes::install_github('JohnCoene/echarts4r.maps')
 ```
 
@@ -683,6 +702,7 @@ remotes::install_github('JohnCoene/echarts4r.maps')
 #| label: votes-repub-echarts4r-draft
 #| fig.cap: "1856-1976 年美国历届大选中共和党在各州的得票率"
 #| fig.align: "center"
+
 library(echarts4r)
 library(echarts4r.maps)
 us_votes_repub |>
@@ -742,7 +762,7 @@ us_votes_repub |>
 
 - 坐标投影：相比于前面展示的动画，最终效果图\@ref(fig:votes-repub-echarts4r)采用的坐标投影不一样，它是反映实际区域面积大小的。
 
-- 数据映射：注意地图数据中州名 name 字段格式，阿拉斯加州是 `Alaska` 而不是 `alaska`，这个用于匹配观测数据中的 `state_name` 列。
+- 数据映射：注意地图数据中州名 name 字段格式，如阿拉斯加州是 `Alaska` 而不是 `alaska`，这个用于匹配观测数据 `us_votes_repub` 中的 `state_name` 列。
 
 - 动画播放：设置自动播放动画，播放间隔为 1s。
 
@@ -825,11 +845,11 @@ us_votes_repub |>
 
 
 
-Web 动画图\@ref(fig:votes-repub-echarts4r) 的坐标投影方式改为以美国为中心的阿尔伯斯等面积圆锥投影，和前面美国人口调查局发布的多边形地图数据采用一样的坐标参考系，效果如图\@ref(fig:votes-repub-echarts4r-geo)。具体实现如下：
+接下来，将上面的 Web 动画\@ref(fig:votes-repub-echarts4r) 的坐标投影方式改为以美国为中心的阿尔伯斯等面积圆锥投影，和前面美国人口调查局发布的多边形地图数据采用一样的坐标参考系，效果如图\@ref(fig:votes-repub-echarts4r-geo)。具体实现如下：
 
-- Apache ECharts 在 5.3.0 版本后，支持设置不同的坐标投影，目前 John Coene 已将 **echarts4r** 包内置的 JavaScript 库更新至最新稳定版本 5.3.2，**echarts4r** 包也已更新至 0.4.4 版本，读者可从 CRAN 下载安装。
+- 自定义坐标投影，要求 **echarts4r** 包更新至 0.4.4 及以上版本。
 
-- 借助 `htmlwidgets::prependContent()` 引入 D3 系列的数组操作库[d3-array](https://github.com/d3/d3-array)和坐标投影库 [d3-geo](https://github.com/d3/d3-geo)实现[阿尔伯斯等面积圆锥投影](https://github.com/d3/d3-geo#geoAlbersUsa)，阿拉斯加州移至连续 48 州左下方，面积缩小为原来的 0.35 倍，看起来和美国中部一些州差不多大了，移动夏威夷的位置，面积不变。
+- 借助 `htmlwidgets::prependContent()` 引入 D3 系列的数组操作库 [d3-array](https://github.com/d3/d3-array) 和坐标投影库 [d3-geo](https://github.com/d3/d3-geo)  实现[阿尔伯斯等面积圆锥投影](https://github.com/d3/d3-geo#geoAlbersUsa)，阿拉斯加州移至连续 48 州左下方，面积缩小为原来的 0.35 倍，看起来和美国中部一些州差不多大了，移动夏威夷的位置，面积不变。
 
 - 制作过程中，参考了 Apache ECharts 官网给的[示例](https://echarts.apache.org/examples/zh/editor.html?c=map-usa-projection)和[帮助文档](https://echarts.apache.org/en/option.html#series-map.projection)，同时感谢 John Coene 提供的支持和帮助，详见[帖子](https://github.com/JohnCoene/echarts4r/issues/428)。
 
@@ -920,11 +940,11 @@ us_votes_repub |>
 
 1.  地图绘制部分：
 
-    -  地图图层：从权威的渠道获取专业的地图数据，推荐使用 `geom_sf()` 而不是 `geom_map()`，前者更加流行和通用。
+    -  地图图层：从权威的渠道获取专业的地图数据，推荐使用 `geom_sf()` 而不是 `geom_map()`，前者更加流行和高效。
     -  投影图层：推荐使用与 `geom_sf()` 配套的 `coord_sf()`，根据地理区域的情况选择合适的投影。
     -  颜色图层：`scale_fill_gradient2()` 对撞型的调色板衬托美国大选中的两党之争。
     -  主题层：`theme_minimal()` 简洁美观即可。
-    -  标题层：`labs()` 适当添加一些图例标题等。
+    -  标题层：`labs()` 适当添加一些图例标题、主副标题等。
 
 1.  动画制作部分：
 
@@ -932,7 +952,7 @@ us_votes_repub |>
     -  Web 动画：**echarts4r** 包的[动画示例](https://echarts4r.john-coene.com/articles/timeline.html)比较简单，定制一些内容需要多参考[时间轴配置项手册](https://echarts.apache.org/zh/option.html#timeline)。
 
 
-总的来说，比较复杂的还是在数据操作上，地图数据和观测数据的整洁、完整情况决定了制作地图动画的复杂度。就地图制作来说，要求了解的 R 语言技术是比较全面的，基本涵盖了常用的数据操作方法和 **ggplot2** 做数据可视化的全过程，制作 Web 动图还需要继续了解 **echart4r** 包。
+总的来说，比较复杂的还是在数据操作上，地图数据和观测数据的整洁、完整情况决定了制作地图动画的复杂度。就地图制作来说，要求了解的 R 语言技术是比较全面的，基本涵盖了常用的数据操作方法和 **ggplot2** 做数据可视化的全过程，制作 Web 动画还需要继续了解 **echart4r** 包和 **tmap** 包。
 
 
 更多好玩又有挑战的案例见笔者发布在统计之都主站的文章[《地区分布图及其应用》](https://cosx.org/2022/05/choropleth-map/)，更多地理数据可视化作品见网站 [Dataviz Inspiration](https://www.dataviz-inspiration.com/)。
