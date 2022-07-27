@@ -3,7 +3,7 @@ title: "因果推断的意义,困境及因果革命"
 description: "每一门蒸蒸日上的科学都是在其符号系统的基础上繁荣发展起来的。——奥古斯都·德·摩根"
 date: "2022-05-19"
 author: "任少龙"
-meta: "审稿人 陈丽云"
+meta_extra: "审稿人 陈丽云"
 categories: 
   - 统计应用
 tags: 
