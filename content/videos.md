@@ -10,13 +10,13 @@ forum_id: 418715
 
 ## 云讲堂
 
-{{<bili BV1Kq4y1R76T>}}
+{{< bili BV1Kq4y1R76T >}}
 
-{{<bili BV1qL4y1J7cC>}}
+{{< bili BV1qL4y1J7cC >}}
 
-{{<bili BV1p34y147cK>}}
+{{< bili BV1p34y147cK >}}
 
-{{<bili BV1TY411g7oo>}}
+{{< bili BV1TY411g7oo >}}
 
-{{<bili BV1nF411c7Ro>}}
+{{< bili BV1nF411c7Ro >}}
 
