@@ -10,12 +10,13 @@ forum_id: 418715
 
 ## 云讲堂
 
-<iframe src="//player.bilibili.com/player.html?bvid=BV1Kq4y1R76T&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{{<bili BV1Kq4y1R76T>}}
 
-<iframe src="//player.bilibili.com/player.html?bvid=BV1qL4y1J7cC&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{{<bili BV1qL4y1J7cC>}}
 
-<iframe src="//player.bilibili.com/player.html?bvid=BV1p34y147cK&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{{<bili BV1p34y147cK>}}
 
-<iframe src="//player.bilibili.com/player.html?bvid=BV1TY411g7oo&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{{<bili BV1TY411g7oo>}}
 
-<iframe src="//player.bilibili.com/player.html?bvid=BV1nF411c7Ro&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+{{<bili BV1nF411c7Ro>}}
+
