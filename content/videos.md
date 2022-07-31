@@ -1,22 +1,21 @@
 ---
 title: 视频
-date: '2013-08-09T14:20:50+00:00'
-author: 陈堰平
+date: '2022-07-31T14:20:50+00:00'
+author: 统计之都编辑部
 weight: 6
 forum_id: 418715
 ---
 
-这里收集一些免费的视频供大家学习，欢迎任何个人、公司分享高质量的免费视频。主题与统计学、数据分析相关即可，比如统计学、机器学习等专业课程的视频，以及相关软件、语言的学习视频，如R/Python/Julia/Matlab等。
+这里是我们的视频合集页面，目前暂时只上传了云讲堂部分，欢迎大家关注我们的B站账号。
 
-# R语言初级课程
+## 云讲堂
 
-- R语言初级课程（1）- R语言快速入门
-- R语言初级课程（2）- R语言中的可视化函数
-- R语言初级课程（3）- R读取数据
-- R语言初级课程（4）- 数据汇总plyr包
-- R语言初级课程（5）- 回归分析
+<iframe src="//player.bilibili.com/player.html?bvid=BV1Kq4y1R76T&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-# 第四届R语言会议（北京会场）视频集锦
+<iframe src="//player.bilibili.com/player.html?bvid=BV1qL4y1J7cC&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
-- 《第四届R语言会议》 R的商用情况简介 李舰
-- 《第四届中国R语言会议》：1.吴喜之教授致开幕词
+<iframe src="//player.bilibili.com/player.html?bvid=BV1p34y147cK&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1TY411g7oo&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<iframe src="//player.bilibili.com/player.html?bvid=BV1nF411c7Ro&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
