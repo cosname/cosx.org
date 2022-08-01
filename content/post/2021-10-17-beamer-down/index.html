@@ -52,7 +52,8 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 <li><a href="#插入表格" id="toc-插入表格"><span class="toc-section-number">4.2.11</span> 插入表格</a></li>
 <li><a href="#插入图片" id="toc-插入图片"><span class="toc-section-number">4.2.12</span> 插入图片</a></li>
 <li><a href="#独立页面" id="toc-独立页面"><span class="toc-section-number">4.2.13</span> 独立页面</a></li>
-<li><a href="#更多功能" id="toc-更多功能"><span class="toc-section-number">4.2.14</span> 更多功能</a></li>
+<li><a href="#文献引用" id="toc-文献引用"><span class="toc-section-number">4.2.14</span> 文献引用</a></li>
+<li><a href="#更多功能" id="toc-更多功能"><span class="toc-section-number">4.2.15</span> 更多功能</a></li>
 </ul></li>
 <li><a href="#rmarkdown-basic" id="toc-rmarkdown-basic"><span class="toc-section-number">4.3</span> R Markdown（基础篇）</a></li>
 <li><a href="#rmarkdown-advanced" id="toc-rmarkdown-advanced"><span class="toc-section-number">4.4</span> R Markdown（高级篇）</a></li>
@@ -185,7 +186,6 @@ div.csl-indent {
 <li>2022-08-04 论坛发布，并投稿</li>
 <li>2022-08-05 修改、交付</li>
 </ul>
-<p>尝试 8月1日 完稿</p>
 <div id="overview" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> 本文概览</h1>
 <p>R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持动态文档写作，文本、代码相互交织，插图、表格、文献、引用等动态生成。在网站简历、期刊书籍、报告演示等诸多方面有大量应用。其中，报告演示（Presentations）是传递、交流想法的重要方式，R Markdown 生态有很多扩展包，提供多种方式制作幻灯片，支持的幻灯片种类有 Office PowerPoint（俗称 PPT）、ioslides、 <a href="https://github.com/rstudio/revealjs"><strong>reveal.js</strong></a> 和<a href="https://github.com/yihui/xaringan">写轮眼</a>等。</p>
@@ -1192,9 +1192,61 @@ Q &amp; A</code></pre>
 <p class="caption">图 4.13: 设置单独一页用于 Q&amp;A 环节</p>
 </div>
 </div>
-<div id="更多功能" class="section level3" number="4.2.14">
-<h3><span class="header-section-number">4.2.14</span> 更多功能</h3>
-<p>Pandoc 还支持很多功能，比如添加脚注、格言警句引用、图表和文献交叉引用、抄录代码块等等，众多功能有待读者去探索发现。</p>
+<div id="文献引用" class="section level3" number="4.2.14">
+<h3><span class="header-section-number">4.2.14</span> 文献引用</h3>
+<p>在 beamer 幻灯片中引用参考文献是再正常没有了，此过程稍有点复杂。类似先前的操作，先把下面的内容，保存为文件 <code>slide-template.md</code>。</p>
+<pre class="md"><code>---
+title: &#39;This is the title&#39;
+subtitle: &quot;This is the subtitle&quot;
+author:
+  - Author One
+  - Author Two
+institute: 
+  - Capital of Statistics
+  - University of xxx
+link-citations: true
+colorlinks: true
+section-titles: false
+---
+
+# knitr
+
+## Example
+
+**knitr** [@Xie2015] is a general-purpose package for dynamic report generation in R.</code></pre>
+<p>接着，把如下文献保存在文件 <code>refer.bib</code> 里，与文档 <code>slide-template.md</code> 待在一起。</p>
+<pre><code>@Book{Xie2015,
+  title = {Dynamic Documents with {R} and knitr},
+  author = {Yihui Xie},
+  publisher = {Chapman and Hall/CRC},
+  address = {Boca Raton, Florida},
+  year = {2015},
+  edition = {2nd},
+  note = {ISBN 978-1498716963},
+  url = {https://yihui.org/knitr/},
+}</code></pre>
+<p>再执行如下命令，渲染效果如图<a href="#fig:md-meta-refer">4.14</a>所示。</p>
+<pre class="bash"><code>pandoc --citeproc --pdf-engine xelatex -t beamer \
+  --bibliography=refer.bib \
+  -M reference-section-title=References \
+  --slide-level=2 \
+  -f markdown slide-template.md \
+  -o slide-template.pdf</code></pre>
+<div class="figure"><span style="display:block;" id="fig:md-meta-refer"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182161509-98fc10ce-c8e2-4007-ab7e-00be2d1de4ab.gif" alt="" />
+<p class="caption">图 4.14: 文献引用</p>
+</div>
+<p>最后，对上述命令参数说明一下：</p>
+<ul>
+<li>文档层级：Pandoc 参数 <a href="https://pandoc.org/MANUAL.html#option--slide-level">–slide-level</a> 控制 beamer 文档的层级。<code>--slide-level=2</code> 意味着 Markdown 文档中 <code>#</code> 表示一级标题，<code>##</code> 二级标题。文档 YAML 元数据中设置 <code>section-titles: false</code> 意味着隐藏一级标题。</li>
+<li>文献引用：参数 <code>--citeproc</code> 用来处理参考文献，<code>--bibliography</code> 指定参考文献文件的位置，参数<code>-M reference-section-title=References</code> 设置文献条目所在页面的标题，此处为 References。</li>
+<li><code>link-citations: true</code> 幻灯片页面中引用的文献可以链接跳转到幻灯片末尾参考文献列表处，</li>
+<li><code>colorlinks: true</code> 幻灯片中有链接的地方都上色。</li>
+</ul>
+</div>
+<div id="更多功能" class="section level3" number="4.2.15">
+<h3><span class="header-section-number">4.2.15</span> 更多功能</h3>
+<p>Pandoc 还支持很多功能，比如添加脚注、诗词格言引用、图表交叉引用、抄录代码块等等，众多功能有待读者去探索发现。</p>
 <div class="rmdtip">
 <p>Pandoc 除了能将 Markdown 文档转化为 beamer 幻灯片，还可将其转化为 DOCX 格式的 Word 文档、PPTX 格式的 PowerPoint 文档等。除了前面介绍的 LaTeX 模版，Pandoc 还内建了 Word、PowerPoint 等诸多文档模版，获取其它文档格式的模版，稍有不同，比如 DOCX 文档。</p>
 <pre class="bash"><code>pandoc -o custom-reference.docx --print-default-data-file reference.docx</code></pre>
@@ -1255,12 +1307,12 @@ mathspec: true
 <p>渲染出来的文档效果如下图。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182024613-97dcff19-8e9b-4428-98ff-dc9fa444d20e.gif" alt="" />
-<p class="caption">图 4.14: R Markdown 示例</p>
+<p class="caption">图 4.15: R Markdown 示例</p>
 </div>
-<p>下面拆解一下 R Markdown 编译出 beamer 幻灯片的过程，当用户点击 Knit 按钮，Render 窗口就会活动起来，knitr 包会根据文档中的代码块，调各类解释器、编译器执行文档中的代码，并返回结果，生成中间产物 Markdown 文件，再调用 Pandoc 转化器，将 Markdown 文档转为 LaTeX 代码，再调用 LaTeX 编译器（如 XeLaTeX）编译出目标文件，PDF 格式的 beamer 幻灯片，图<a href="#fig:rmd-metropolis-compile">4.15</a>左侧是示例文件，右侧是 Render 窗口的编译过程。注意看图<a href="#fig:rmd-metropolis-compile">4.15</a>右侧红框内的内容，是不是很熟悉的感觉，其实就是一个 Pandoc 转化命令。</p>
+<p>下面拆解一下 R Markdown 编译出 beamer 幻灯片的过程。当用户点击 Knit 按钮，Render 窗口就会活动起来，knitr 包会根据文档中的代码块的情况，调各类解释器或编译器执行文档中的代码，并返回结果，生成中间产物 Markdown 文件。再调用 Pandoc 转化器，将 Markdown 文档转为 LaTeX 代码，再调用 LaTeX 编译器（如 XeLaTeX）编译出目标文件 — PDF 格式的 beamer 幻灯片。图<a href="#fig:rmd-metropolis-compile">4.16</a>左侧是示例文件，右侧是 Render 窗口的编译过程。注意看图<a href="#fig:rmd-metropolis-compile">4.16</a>右侧红框内的内容，是不是很熟悉的感觉，其实就是一个 Pandoc 转化命令。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-compile"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182069798-33d77872-8cca-4903-8de6-9e42f3ee11f5.png" alt="" />
-<p class="caption">图 4.15: R Markdown 编译过程</p>
+<p class="caption">图 4.16: R Markdown 编译过程</p>
 </div>
 <hr />
 <p>接下来，将上面的英文 R Markdown 文档汉化一下，</p>
@@ -1289,7 +1341,7 @@ classoption: &quot;fontset=fandol&quot;
 \end{align}</code></pre>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182027292-0b24fb9b-7804-4ad5-940c-591ff1fd695d.gif" alt="" />
-<p class="caption">图 4.16:  中文 R Markdown 示例</p>
+<p class="caption">图 4.17:  中文 R Markdown 示例</p>
 </div>
 <p>在日常使用中，beamer 幻灯片常用于学术性报告，各种各样的公式符号随处可见。</p>
 <pre><code>---
@@ -1314,7 +1366,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <p>编译后的效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182028411-e21c0d18-f1b8-4834-b41a-7ba618c9a9e4.gif" alt="" />
-<p class="caption">图 4.17:  中文 R Markdown 示例里添加数学公式</p>
+<p class="caption">图 4.18:  中文 R Markdown 示例里添加数学公式</p>
 </div>
 <p>beamer 学术幻灯片的另一大特色是定理、推论满天飞。在现有的基础上，继续添加定理、引理等文本块，内容如下：</p>
 <pre><code>---
@@ -1347,7 +1399,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 <p>渲染效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-block"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182034761-c7fee605-4729-487b-af20-e423ba7b2af0.gif" alt="" />
-<p class="caption">图 4.18:  中文 R Markdown 示例里添加定理、引理</p>
+<p class="caption">图 4.19:  中文 R Markdown 示例里添加定理、引理</p>
 </div>
 <p>至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！</p>
 <div class="rmdnote">

@@ -149,7 +149,6 @@ options(width = 69)
 - 2022-08-04 论坛发布，并投稿
 - 2022-08-05 修改、交付
 
-尝试 8月1日 完稿
 
 # 本文概览 {#overview}
 
@@ -713,9 +712,71 @@ pandoc --pdf-engine xelatex -t beamer \
 ![(\#fig:md-meta-standout)设置单独一页用于 Q&A 环节](https://user-images.githubusercontent.com/12031874/182086098-bdc5dfc6-e291-4397-a2a9-778af18720d2.gif)
 
 
+### 文献引用
+
+在 beamer 幻灯片中引用参考文献是再正常没有了，此过程稍有点复杂。类似先前的操作，先把下面的内容，保存为文件 `slide-template.md`。
+
+```md
+---
+title: 'This is the title'
+subtitle: "This is the subtitle"
+author:
+  - Author One
+  - Author Two
+institute: 
+  - Capital of Statistics
+  - University of xxx
+link-citations: true
+colorlinks: true
+section-titles: false
+---
+
+# knitr
+
+## Example
+
+**knitr** [@Xie2015] is a general-purpose package for dynamic report generation in R.
+```
+
+接着，把如下文献保存在文件 `refer.bib` 里，与文档 `slide-template.md` 待在一起。
+
+```
+@Book{Xie2015,
+  title = {Dynamic Documents with {R} and knitr},
+  author = {Yihui Xie},
+  publisher = {Chapman and Hall/CRC},
+  address = {Boca Raton, Florida},
+  year = {2015},
+  edition = {2nd},
+  note = {ISBN 978-1498716963},
+  url = {https://yihui.org/knitr/},
+}
+```
+
+再执行如下命令，渲染效果如图\@ref(fig:md-meta-refer)所示。
+
+```bash
+pandoc --citeproc --pdf-engine xelatex -t beamer \
+  --bibliography=refer.bib \
+  -M reference-section-title=References \
+  --slide-level=2 \
+  -f markdown slide-template.md \
+  -o slide-template.pdf
+```
+
+![(\#fig:md-meta-refer)文献引用](https://user-images.githubusercontent.com/12031874/182161509-98fc10ce-c8e2-4007-ab7e-00be2d1de4ab.gif)
+
+最后，对上述命令参数说明一下：
+
+- 文档层级：Pandoc 参数 [--slide-level](https://pandoc.org/MANUAL.html#option--slide-level) 控制 beamer 文档的层级。`--slide-level=2` 意味着 Markdown 文档中 `#` 表示一级标题，`##` 二级标题。文档 YAML 元数据中设置 `section-titles: false` 意味着隐藏一级标题。
+- 文献引用：参数 `--citeproc` 用来处理参考文献，`--bibliography` 指定参考文献文件的位置，参数`-M reference-section-title=References` 设置文献条目所在页面的标题，此处为 References。
+- `link-citations: true` 幻灯片页面中引用的文献可以链接跳转到幻灯片末尾参考文献列表处，
+- `colorlinks: true` 幻灯片中有链接的地方都上色。
+
+
 ### 更多功能
 
-Pandoc 还支持很多功能，比如添加脚注、格言警句引用、图表和文献交叉引用、抄录代码块等等，众多功能有待读者去探索发现。
+Pandoc 还支持很多功能，比如添加脚注、诗词格言引用、图表交叉引用、抄录代码块等等，众多功能有待读者去探索发现。
 
 ::: rmdtip
 Pandoc 除了能将 Markdown 文档转化为 beamer 幻灯片，还可将其转化为 DOCX 格式的 Word 文档、PPTX 格式的 PowerPoint 文档等。除了前面介绍的 LaTeX 模版，Pandoc 还内建了 Word、PowerPoint 等诸多文档模版，获取其它文档格式的模版，稍有不同，比如 DOCX 文档。
@@ -790,7 +851,7 @@ beamer_presentation(
 
 ![(\#fig:rmd-metropolis)R Markdown 示例](https://user-images.githubusercontent.com/12031874/182024613-97dcff19-8e9b-4428-98ff-dc9fa444d20e.gif)
 
-下面拆解一下 R Markdown 编译出 beamer 幻灯片的过程，当用户点击 Knit 按钮，Render 窗口就会活动起来，knitr 包会根据文档中的代码块，调各类解释器、编译器执行文档中的代码，并返回结果，生成中间产物 Markdown 文件，再调用 Pandoc 转化器，将 Markdown 文档转为 LaTeX 代码，再调用 LaTeX 编译器（如 XeLaTeX）编译出目标文件，PDF 格式的 beamer 幻灯片，图\@ref(fig:rmd-metropolis-compile)左侧是示例文件，右侧是 Render 窗口的编译过程。注意看图\@ref(fig:rmd-metropolis-compile)右侧红框内的内容，是不是很熟悉的感觉，其实就是一个 Pandoc 转化命令。
+下面拆解一下 R Markdown 编译出 beamer 幻灯片的过程。当用户点击 Knit 按钮，Render 窗口就会活动起来，knitr 包会根据文档中的代码块的情况，调各类解释器或编译器执行文档中的代码，并返回结果，生成中间产物 Markdown 文件。再调用 Pandoc 转化器，将 Markdown 文档转为 LaTeX 代码，再调用 LaTeX 编译器（如 XeLaTeX）编译出目标文件 --- PDF 格式的 beamer 幻灯片。图\@ref(fig:rmd-metropolis-compile)左侧是示例文件，右侧是 Render 窗口的编译过程。注意看图\@ref(fig:rmd-metropolis-compile)右侧红框内的内容，是不是很熟悉的感觉，其实就是一个 Pandoc 转化命令。
 
 
 ![(\#fig:rmd-metropolis-compile)R Markdown 编译过程](https://user-images.githubusercontent.com/12031874/182069798-33d77872-8cca-4903-8de6-9e42f3ee11f5.png)
