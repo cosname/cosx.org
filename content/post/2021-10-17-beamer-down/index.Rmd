@@ -297,7 +297,11 @@ tinytex::xelatex(file = "slide-template.tex")
 
 ## Pandoc's Markdown {#pandoc-markdown}
 
-R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 [Pandoc 软件](https://pandoc.org/)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。继续上面的例子，将幻灯片的内容用 Markdown 格式书写，非常简洁了，算上空行仅有 6 行代码，如下：
+R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 [Pandoc 软件](https://pandoc.org/)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。
+
+### 简单示例
+
+继续上面的例子，将幻灯片的内容用 Markdown 格式书写，非常简洁了，算上空行仅有 6 行代码，如下：
 
 
 ```md
@@ -329,6 +333,9 @@ pandoc --pdf-engine xelatex -t beamer \
 
 更多详情见文档[Pandoc 通用选项](https://pandoc.org/MANUAL.html#general-options)。
 :::
+
+
+### LaTeX 模版
 
 风格明显和之前的图\@ref(fig:latex-metropolis)不同，因为没有设置 beamer 幻灯片主题和字体，Pandoc 将调用内置的 LaTeX 模版。可以执行如下命令获取 Pandoc 内置的 LaTeX 模版 `custom-reference.tex`。
 
@@ -367,6 +374,8 @@ hyperref 帮助文档 5.5 节介绍 linktoc 选项，5.6 节介绍 bookmarksnumb
 
 </details>
 
+### 英文字体
+
 在现有的基础上，通过 Pandoc 命令行参数 `--variable` 继续传递 [模版变量](https://pandoc.org/MANUAL.html#general-writer-options)，如设置英文字体：
 
 ```bash
@@ -378,6 +387,8 @@ pandoc --pdf-engine xelatex -t beamer \
 ```
 
 ![(\#fig:md-sansfont) 设置英文字体](https://user-images.githubusercontent.com/12031874/182020087-77c051d9-ca5d-4264-8208-3e707944a63a.png)
+
+### 幻灯主题
 
 或设置幻灯片主题：
 
@@ -391,6 +402,8 @@ pandoc --pdf-engine xelatex -t beamer \
 
 ![(\#fig:md-theme)设置幻灯片主题](https://user-images.githubusercontent.com/12031874/182020012-da2f78d7-dfc7-4d47-9ed9-e326d4588a38.png)
 
+### 数学字体
+
 或设置数学字体：
 
 ```bash
@@ -402,6 +415,7 @@ pandoc --pdf-engine xelatex -t beamer \
 
 ![(\#fig:md-mathfont)设置数学字体](https://user-images.githubusercontent.com/12031874/182020058-b9b7c05a-379f-49ec-8eef-3a84bbb45e90.png)
 
+### 幻灯首页
 
 除了支持传递模版变量控制文档类型和元素，还可以在 Markdown 文档中添加[文档元数据](https://pandoc.org/MANUAL.html#metadata-variables)，比如幻灯片标题、副标题、作者等等，它们是一组 YAML 格式的键值对。效果和通过 Pandoc 命令行参数 `--metadata` 传值类似。
 
@@ -433,6 +447,8 @@ pandoc --pdf-engine xelatex -t beamer \
 渲染出来的效果如下：
 
 ![(\#fig:md-meta)设置文档元数据](https://user-images.githubusercontent.com/12031874/182020544-1c5ecce9-9e6c-4c93-beff-369349939e63.gif)
+
+### 双栏排版
 
 还可在文档中添加双栏排版，下面添加了两个双栏，第一个将页面等分，第二个将页面三七开，效果如图\@ref(fig:md-meta-columns)。
 
@@ -484,8 +500,9 @@ institute: "Capital of Statistics"
 
 ![(\#fig:md-meta-columns)设置文档双栏排版](https://user-images.githubusercontent.com/12031874/182062362-c1d0e6cd-b1de-4095-933d-2624266ba9a5.gif)
 
+### 暂停显示
 
-还可以滚动显示幻灯片内容，这好像将一页的内容，分成几页展示，中间加了暂停键。只要在两段内容之间插入带空格的三个点 `. . .`，渲染效果如图\@ref(fig:md-meta-pauses)。
+还可以暂停显示幻灯片内容，这好像将一页的内容，分成几页展示，中间加了暂停键。只要在两段内容之间插入带空格的三个点 `. . .`，渲染效果如图\@ref(fig:md-meta-pauses)。
 
 
 
@@ -535,12 +552,173 @@ institute: "Capital of Statistics"
 ```
 
 
-![(\#fig:md-meta-pauses)](https://user-images.githubusercontent.com/12031874/182080840-ca01d7b1-ba84-4b6a-95f2-68ff494f832e.gif)
+![(\#fig:md-meta-pauses)添加暂停键，分页展示内容](https://user-images.githubusercontent.com/12031874/182080840-ca01d7b1-ba84-4b6a-95f2-68ff494f832e.gif)
+
+### 滚动显示
+
+与上面分段显示内容类似，还可逐条展示列表内容，效果如图\@ref(fig:md-meta-incremental)。
+
+```md
+---
+title:  'This is the title'
+subtitle: "This is the subtitle"
+author:
+- Author One
+- Author Two
+institute: "Capital of Statistics"
+---
+
+## Example
+
+::: incremental
+
+- Eat spaghetti
+- Drink wine
+
+:::
+```
+
+![(\#fig:md-meta-incremental)逐条展示列表条目](https://user-images.githubusercontent.com/12031874/182083227-2bd9084f-07b2-4eb3-8ddb-e01843dbdcd9.gif)
 
 
+### 添加背景
+
+
+在 Markdown 文档的 YAML 里设置 `background-image` 指定背景图片，将背景图片和Markdown 文档放一起或指定背景图片的存放路径。
+
+
+```md
+---
+title:  'This is the title'
+subtitle: "This is the subtitle"
+author:
+- Author One
+- Author Two
+institute: "Capital of Statistics"
+background-image: Rlogo.pdf
+---
+
+## Example
+
+\begin{align}
+    \symbf{\theta} &= (1, 2, 3)^\top \\
+        \theta_0 &= 1
+\end{align}
+```
+
+渲染效果，如图\@ref(fig:md-meta-background)所示。
+
+```bash
+pandoc --pdf-engine xelatex -t beamer \
+  slide-template.md -o slide-template.pdf
+```
+
+![(\#fig:md-meta-background)添加幻灯片背景](https://user-images.githubusercontent.com/12031874/182089094-a5b5fa8b-8527-4b82-bc1e-8e70cee98e87.gif)
+
+
+### 插入表格
+
+Markdown 是支持显示表格的，其语法不再赘述，下面是一个插入表格的示例，渲染效果如图所示。
+
+
+```md
+---
+title:  'This is the title'
+subtitle: "This is the subtitle"
+author:
+- Author One
+- Author Two
+institute: "Capital of Statistics"
+---
+
+## Example
+
+  Right     Left     Center     Default
+-------     ------ ----------   -------
+     12     12        12            12
+    123     123       123          123
+      1     1          1             1
+
+Table:  Demonstration of simple table syntax.
+```
+
+![(\#fig:md-meta-table)插入表格](https://user-images.githubusercontent.com/12031874/182091134-8e29b6ed-318c-4115-a275-2e4ab4f6f0af.gif)
+
+更多样式的表格见 Pandoc 帮助文档中[表格部分](https://pandoc.org/MANUAL.html#tables)的介绍。
+
+
+### 插入图片
+
+继续使用之前的 R 语言 Logo 图片，Pandoc's Markdown 扩展了原始 Markdown 的功能，插入图片的同时支持设置图片宽度，效果如图\@ref(fig:md-meta-figure)所示。
+
+```md
+---
+title:  'This is the title'
+subtitle: "This is the subtitle"
+author:
+- Author One
+- Author Two
+institute: "Capital of Statistics"
+---
+
+## Example
+
+![This is the caption](Rlogo.pdf){ width=35% }
+```
+
+![(\#fig:md-meta-figure)插入图片](https://user-images.githubusercontent.com/12031874/182092322-f4d70149-0615-4261-be47-6fa711d8df0f.gif)
+
+
+更多功能见 Pandoc's Markdown 帮助文档中[插入图片](https://pandoc.org/MANUAL.html#images)一节。
+
+
+### 独立页面
+
+还可显示单独的一页，此页没有标题，常用于末尾 Q&A 和致谢环节，给该页幻灯片设置 standout 属性。
+
+
+```md
+---
+title:  'This is the title'
+subtitle: "This is the subtitle"
+author:
+- Author One
+- Author Two
+institute: "Capital of Statistics"
+---
+
+## Example
+
+\begin{align}
+    \symbf{\theta} &= (1, 2, 3)^\top \\
+        \theta_0 &= 1
+\end{align}
+
+## {.standout}
+
+Q & A
+```
+
+因默认的幻灯片主题不支持设置 standout，下面采用 metropolis 主题，效果如图\@ref(fig:md-meta-standout)。
+
+```bash
+pandoc --pdf-engine xelatex -t beamer \
+  --variable theme="metropolis" \
+  --variable fonttheme="professionalfonts" \
+  -f markdown slide-template.md \
+  -o slide-template.pdf
+```
+
+
+![(\#fig:md-meta-standout)设置单独一页用于 Q&A 环节](https://user-images.githubusercontent.com/12031874/182086098-bdc5dfc6-e291-4397-a2a9-778af18720d2.gif)
+
+
+### 更多功能
+
+Pandoc 还支持很多功能，比如添加脚注、格言警句引用、图表和文献交叉引用、抄录代码块等等，众多功能有待读者去探索发现。
 
 ::: rmdtip
-获取其它文档格式的模版，稍有不同，比如 DOCX 文档。
+Pandoc 除了能将 Markdown 文档转化为 beamer 幻灯片，还可将其转化为 DOCX 格式的 Word 文档、PPTX 格式的 PowerPoint 文档等。除了前面介绍的 LaTeX 模版，Pandoc 还内建了 Word、PowerPoint 等诸多文档模版，获取其它文档格式的模版，稍有不同，比如 DOCX 文档。
 
 ```bash
 pandoc -o custom-reference.docx --print-default-data-file reference.docx
@@ -552,7 +730,7 @@ pandoc -o custom-reference.docx --print-default-data-file reference.docx
 
 ## R Markdown（基础篇）{#rmarkdown-basic}
 
-相比于 Pandoc's Markdown，R Markdown 可以省去命令行操作，使用起来简便些，不过，需要在 Rmd 文档中设置输出格式。R Markdown 文档开头处为 YAML 元数据，它分三部分：其一是文档元数据设置，其二是文档输出设置，其三是 Pandoc 变量值设置。
+首先 Pandoc's Markdown 支持的功能， R Markdown 都支持，相比于 Pandoc's Markdown，R Markdown 可以省去命令行操作，使用起来简便些。不过，需要适当学习一下 **knitr**、**rmarkdown** 和 **bookdown** 三个包。在 Rmd 文档中设置输出格式。R Markdown 文档开头处为 YAML 元数据，它分三部分：其一是文档元数据设置，其二是文档输出设置，其三是 Pandoc 变量值设置。
 
 ```
 ---
@@ -965,7 +1143,7 @@ beamer 文档找到各类定理、block 块
 在正式介绍后续的 beamer 主题之前，还要先介绍一点数学符号和数学字体的坑，毕竟，学术型幻灯片很难离开数学公式[@Pakin2021]。在遇到花体数学符号，如常用来表示域或空间的 `$\mathcal{A,S}, \mathscr{A}, \mathbb{A,R}$`，抑或是常见的损失函数符号 `$\mathcal{L}$`。
 **unicode-math** 定义的数学样式有点怪，和通常见到的不一样，以前排版毕业论文的时候[坑过我一回](https://d.cosx.org/d/419931)，主要原因是 **unicode-math** 使用 Latin Modern Math 的 OpenType 字体 [@Zeng2020]。
 
-````{verbatim}
+```{verbatim}
 ---
 title: "Untitled"
 output: 
@@ -982,7 +1160,7 @@ output:
 $$
 \mathcal{A},\mathscr{A},\mathbb{A}
 $$
-````
+```
 
 
 ![unicode-math](https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png)

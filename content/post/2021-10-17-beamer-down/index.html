@@ -37,7 +37,23 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 <li><a href="#制作-beamer-幻灯片" id="toc-制作-beamer-幻灯片"><span class="toc-section-number">4</span> 制作 beamer 幻灯片</a>
 <ul>
 <li><a href="#latex" id="toc-latex"><span class="toc-section-number">4.1</span> LaTeX</a></li>
-<li><a href="#pandoc-markdown" id="toc-pandoc-markdown"><span class="toc-section-number">4.2</span> Pandoc’s Markdown</a></li>
+<li><a href="#pandoc-markdown" id="toc-pandoc-markdown"><span class="toc-section-number">4.2</span> Pandoc’s Markdown</a>
+<ul>
+<li><a href="#简单示例" id="toc-简单示例"><span class="toc-section-number">4.2.1</span> 简单示例</a></li>
+<li><a href="#latex-模版" id="toc-latex-模版"><span class="toc-section-number">4.2.2</span> LaTeX 模版</a></li>
+<li><a href="#英文字体" id="toc-英文字体"><span class="toc-section-number">4.2.3</span> 英文字体</a></li>
+<li><a href="#幻灯主题" id="toc-幻灯主题"><span class="toc-section-number">4.2.4</span> 幻灯主题</a></li>
+<li><a href="#数学字体" id="toc-数学字体"><span class="toc-section-number">4.2.5</span> 数学字体</a></li>
+<li><a href="#幻灯首页" id="toc-幻灯首页"><span class="toc-section-number">4.2.6</span> 幻灯首页</a></li>
+<li><a href="#双栏排版" id="toc-双栏排版"><span class="toc-section-number">4.2.7</span> 双栏排版</a></li>
+<li><a href="#暂停显示" id="toc-暂停显示"><span class="toc-section-number">4.2.8</span> 暂停显示</a></li>
+<li><a href="#滚动显示" id="toc-滚动显示"><span class="toc-section-number">4.2.9</span> 滚动显示</a></li>
+<li><a href="#添加背景" id="toc-添加背景"><span class="toc-section-number">4.2.10</span> 添加背景</a></li>
+<li><a href="#插入表格" id="toc-插入表格"><span class="toc-section-number">4.2.11</span> 插入表格</a></li>
+<li><a href="#插入图片" id="toc-插入图片"><span class="toc-section-number">4.2.12</span> 插入图片</a></li>
+<li><a href="#独立页面" id="toc-独立页面"><span class="toc-section-number">4.2.13</span> 独立页面</a></li>
+<li><a href="#更多功能" id="toc-更多功能"><span class="toc-section-number">4.2.14</span> 更多功能</a></li>
+</ul></li>
 <li><a href="#rmarkdown-basic" id="toc-rmarkdown-basic"><span class="toc-section-number">4.3</span> R Markdown（基础篇）</a></li>
 <li><a href="#rmarkdown-advanced" id="toc-rmarkdown-advanced"><span class="toc-section-number">4.4</span> R Markdown（高级篇）</a></li>
 <li><a href="#rmarkdown-ninja" id="toc-rmarkdown-ninja"><span class="toc-section-number">4.5</span> R Markdown（忍者篇）</a></li>
@@ -294,7 +310,10 @@ file.copy(from = fontfile, to = distdir, overwrite = TRUE)</code></pre></li>
 </div>
 <div id="pandoc-markdown" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Pandoc’s Markdown</h2>
-<p>R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 <a href="https://pandoc.org/">Pandoc 软件</a>，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。继续上面的例子，将幻灯片的内容用 Markdown 格式书写，非常简洁了，算上空行仅有 6 行代码，如下：</p>
+<p>R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 <a href="https://pandoc.org/">Pandoc 软件</a>，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。</p>
+<div id="简单示例" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> 简单示例</h3>
+<p>继续上面的例子，将幻灯片的内容用 Markdown 格式书写，非常简洁了，算上空行仅有 6 行代码，如下：</p>
 <pre class="md"><code>## Example
 
 \begin{align}
@@ -318,6 +337,9 @@ file.copy(from = fontfile, to = distdir, overwrite = TRUE)</code></pre></li>
 </ul>
 <p>更多详情见文档<a href="https://pandoc.org/MANUAL.html#general-options">Pandoc 通用选项</a>。</p>
 </div>
+</div>
+<div id="latex-模版" class="section level3" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> LaTeX 模版</h3>
 <p>风格明显和之前的图<a href="#fig:latex-metropolis">4.1</a>不同，因为没有设置 beamer 幻灯片主题和字体，Pandoc 将调用内置的 LaTeX 模版。可以执行如下命令获取 Pandoc 内置的 LaTeX 模版 <code>custom-reference.tex</code>。</p>
 <pre class="bash"><code>pandoc -o custom-reference.tex --print-default-template latex</code></pre>
 <p>Pandoc 内置的 LaTeX 模版内容非常多，因为它是大一统的，支持书籍、报告、演示等等使用场景。通过传递模版变量，可以控制文档类型及其选项，如布局、字体等。下面是模版开头的几行内容：</p>
@@ -872,6 +894,9 @@ $include-after$
 $endfor$
 \end{document}</code></pre>
 </details>
+</div>
+<div id="英文字体" class="section level3" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> 英文字体</h3>
 <p>在现有的基础上，通过 Pandoc 命令行参数 <code>--variable</code> 继续传递 <a href="https://pandoc.org/MANUAL.html#general-writer-options">模版变量</a>，如设置英文字体：</p>
 <pre class="bash"><code>pandoc --pdf-engine xelatex -t beamer \
   --variable sansfont=&quot;Fira Sans Book&quot; \
@@ -882,6 +907,9 @@ $endfor$
 <img src="https://user-images.githubusercontent.com/12031874/182020087-77c051d9-ca5d-4264-8208-3e707944a63a.png" alt="" />
 <p class="caption">图 4.3:  设置英文字体</p>
 </div>
+</div>
+<div id="幻灯主题" class="section level3" number="4.2.4">
+<h3><span class="header-section-number">4.2.4</span> 幻灯主题</h3>
 <p>或设置幻灯片主题：</p>
 <pre class="bash"><code>pandoc --pdf-engine xelatex -t beamer \
   --variable theme=&quot;metropolis&quot; \
@@ -892,6 +920,9 @@ $endfor$
 <img src="https://user-images.githubusercontent.com/12031874/182020012-da2f78d7-dfc7-4d47-9ed9-e326d4588a38.png" alt="" />
 <p class="caption">图 4.4: 设置幻灯片主题</p>
 </div>
+</div>
+<div id="数学字体" class="section level3" number="4.2.5">
+<h3><span class="header-section-number">4.2.5</span> 数学字体</h3>
 <p>或设置数学字体：</p>
 <pre class="bash"><code>pandoc --pdf-engine xelatex -t beamer \
   --variable mathfont=&quot;XITS Math&quot; \
@@ -901,6 +932,9 @@ $endfor$
 <img src="https://user-images.githubusercontent.com/12031874/182020058-b9b7c05a-379f-49ec-8eef-3a84bbb45e90.png" alt="" />
 <p class="caption">图 4.5: 设置数学字体</p>
 </div>
+</div>
+<div id="幻灯首页" class="section level3" number="4.2.6">
+<h3><span class="header-section-number">4.2.6</span> 幻灯首页</h3>
 <p>除了支持传递模版变量控制文档类型和元素，还可以在 Markdown 文档中添加<a href="https://pandoc.org/MANUAL.html#metadata-variables">文档元数据</a>，比如幻灯片标题、副标题、作者等等，它们是一组 YAML 格式的键值对。效果和通过 Pandoc 命令行参数 <code>--metadata</code> 传值类似。</p>
 <pre class="md"><code>---
 title:  &#39;This is the title&#39;
@@ -925,6 +959,9 @@ institute: &quot;Capital of Statistics&quot;
 <img src="https://user-images.githubusercontent.com/12031874/182020544-1c5ecce9-9e6c-4c93-beff-369349939e63.gif" alt="" />
 <p class="caption">图 4.6: 设置文档元数据</p>
 </div>
+</div>
+<div id="双栏排版" class="section level3" number="4.2.7">
+<h3><span class="header-section-number">4.2.7</span> 双栏排版</h3>
 <p>还可在文档中添加双栏排版，下面添加了两个双栏，第一个将页面等分，第二个将页面三七开，效果如图<a href="#fig:md-meta-columns">4.7</a>。</p>
 <pre class="md"><code>---
 title:  &#39;This is the title&#39;
@@ -971,7 +1008,10 @@ institute: &quot;Capital of Statistics&quot;
 <img src="https://user-images.githubusercontent.com/12031874/182062362-c1d0e6cd-b1de-4095-933d-2624266ba9a5.gif" alt="" />
 <p class="caption">图 4.7: 设置文档双栏排版</p>
 </div>
-<p>还可以滚动显示幻灯片内容，这好像将一页的内容，分成几页展示，中间加了暂停键。只要在两段内容之间插入带空格的三个点 <code>. . .</code>，渲染效果如图<a href="#fig:md-meta-pauses">4.8</a>。</p>
+</div>
+<div id="暂停显示" class="section level3" number="4.2.8">
+<h3><span class="header-section-number">4.2.8</span> 暂停显示</h3>
+<p>还可以暂停显示幻灯片内容，这好像将一页的内容，分成几页展示，中间加了暂停键。只要在两段内容之间插入带空格的三个点 <code>. . .</code>，渲染效果如图<a href="#fig:md-meta-pauses">4.8</a>。</p>
 <pre class="md"><code>---
 title:  &#39;This is the title&#39;
 subtitle: &quot;This is the subtitle&quot;
@@ -1016,17 +1056,155 @@ institute: &quot;Capital of Statistics&quot;
 ::::::::::::::</code></pre>
 <div class="figure"><span style="display:block;" id="fig:md-meta-pauses"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182080840-ca01d7b1-ba84-4b6a-95f2-68ff494f832e.gif" alt="" />
-<p class="caption">图 4.8: </p>
+<p class="caption">图 4.8: 添加暂停键，分页展示内容</p>
 </div>
+</div>
+<div id="滚动显示" class="section level3" number="4.2.9">
+<h3><span class="header-section-number">4.2.9</span> 滚动显示</h3>
+<p>与上面分段显示内容类似，还可逐条展示列表内容，效果如图<a href="#fig:md-meta-incremental">4.9</a>。</p>
+<pre class="md"><code>---
+title:  &#39;This is the title&#39;
+subtitle: &quot;This is the subtitle&quot;
+author:
+- Author One
+- Author Two
+institute: &quot;Capital of Statistics&quot;
+---
+
+## Example
+
+::: incremental
+
+- Eat spaghetti
+- Drink wine
+
+:::</code></pre>
+<div class="figure"><span style="display:block;" id="fig:md-meta-incremental"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182083227-2bd9084f-07b2-4eb3-8ddb-e01843dbdcd9.gif" alt="" />
+<p class="caption">图 4.9: 逐条展示列表条目</p>
+</div>
+</div>
+<div id="添加背景" class="section level3" number="4.2.10">
+<h3><span class="header-section-number">4.2.10</span> 添加背景</h3>
+<p>在 Markdown 文档的 YAML 里设置 <code>background-image</code> 指定背景图片，将背景图片和Markdown 文档放一起或指定背景图片的存放路径。</p>
+<pre class="md"><code>---
+title:  &#39;This is the title&#39;
+subtitle: &quot;This is the subtitle&quot;
+author:
+- Author One
+- Author Two
+institute: &quot;Capital of Statistics&quot;
+background-image: Rlogo.pdf
+---
+
+## Example
+
+\begin{align}
+    \symbf{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}</code></pre>
+<p>渲染效果，如图<a href="#fig:md-meta-background">4.10</a>所示。</p>
+<pre class="bash"><code>pandoc --pdf-engine xelatex -t beamer \
+  slide-template.md -o slide-template.pdf</code></pre>
+<div class="figure"><span style="display:block;" id="fig:md-meta-background"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182089094-a5b5fa8b-8527-4b82-bc1e-8e70cee98e87.gif" alt="" />
+<p class="caption">图 4.10: 添加幻灯片背景</p>
+</div>
+</div>
+<div id="插入表格" class="section level3" number="4.2.11">
+<h3><span class="header-section-number">4.2.11</span> 插入表格</h3>
+<p>Markdown 是支持显示表格的，其语法不再赘述，下面是一个插入表格的示例，渲染效果如图所示。</p>
+<pre class="md"><code>---
+title:  &#39;This is the title&#39;
+subtitle: &quot;This is the subtitle&quot;
+author:
+- Author One
+- Author Two
+institute: &quot;Capital of Statistics&quot;
+---
+
+## Example
+
+  Right     Left     Center     Default
+-------     ------ ----------   -------
+     12     12        12            12
+    123     123       123          123
+      1     1          1             1
+
+Table:  Demonstration of simple table syntax.</code></pre>
+<div class="figure"><span style="display:block;" id="fig:md-meta-table"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182091134-8e29b6ed-318c-4115-a275-2e4ab4f6f0af.gif" alt="" />
+<p class="caption">图 4.11: 插入表格</p>
+</div>
+<p>更多样式的表格见 Pandoc 帮助文档中<a href="https://pandoc.org/MANUAL.html#tables">表格部分</a>的介绍。</p>
+</div>
+<div id="插入图片" class="section level3" number="4.2.12">
+<h3><span class="header-section-number">4.2.12</span> 插入图片</h3>
+<p>继续使用之前的 R 语言 Logo 图片，Pandoc’s Markdown 扩展了原始 Markdown 的功能，插入图片的同时支持设置图片宽度，效果如图<a href="#fig:md-meta-figure">4.12</a>所示。</p>
+<pre class="md"><code>---
+title:  &#39;This is the title&#39;
+subtitle: &quot;This is the subtitle&quot;
+author:
+- Author One
+- Author Two
+institute: &quot;Capital of Statistics&quot;
+---
+
+## Example
+
+![This is the caption](Rlogo.pdf){ width=35% }</code></pre>
+<div class="figure"><span style="display:block;" id="fig:md-meta-figure"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182092322-f4d70149-0615-4261-be47-6fa711d8df0f.gif" alt="" />
+<p class="caption">图 4.12: 插入图片</p>
+</div>
+<p>更多功能见 Pandoc’s Markdown 帮助文档中<a href="https://pandoc.org/MANUAL.html#images">插入图片</a>一节。</p>
+</div>
+<div id="独立页面" class="section level3" number="4.2.13">
+<h3><span class="header-section-number">4.2.13</span> 独立页面</h3>
+<p>还可显示单独的一页，此页没有标题，常用于末尾 Q&amp;A 和致谢环节，给该页幻灯片设置 standout 属性。</p>
+<pre class="md"><code>---
+title:  &#39;This is the title&#39;
+subtitle: &quot;This is the subtitle&quot;
+author:
+- Author One
+- Author Two
+institute: &quot;Capital of Statistics&quot;
+---
+
+## Example
+
+\begin{align}
+    \symbf{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}
+
+## {.standout}
+
+Q &amp; A</code></pre>
+<p>因默认的幻灯片主题不支持设置 standout，下面采用 metropolis 主题，效果如图<a href="#fig:md-meta-standout">4.13</a>。</p>
+<pre class="bash"><code>pandoc --pdf-engine xelatex -t beamer \
+  --variable theme=&quot;metropolis&quot; \
+  --variable fonttheme=&quot;professionalfonts&quot; \
+  -f markdown slide-template.md \
+  -o slide-template.pdf</code></pre>
+<div class="figure"><span style="display:block;" id="fig:md-meta-standout"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182086098-bdc5dfc6-e291-4397-a2a9-778af18720d2.gif" alt="" />
+<p class="caption">图 4.13: 设置单独一页用于 Q&amp;A 环节</p>
+</div>
+</div>
+<div id="更多功能" class="section level3" number="4.2.14">
+<h3><span class="header-section-number">4.2.14</span> 更多功能</h3>
+<p>Pandoc 还支持很多功能，比如添加脚注、格言警句引用、图表和文献交叉引用、抄录代码块等等，众多功能有待读者去探索发现。</p>
 <div class="rmdtip">
-<p>获取其它文档格式的模版，稍有不同，比如 DOCX 文档。</p>
+<p>Pandoc 除了能将 Markdown 文档转化为 beamer 幻灯片，还可将其转化为 DOCX 格式的 Word 文档、PPTX 格式的 PowerPoint 文档等。除了前面介绍的 LaTeX 模版，Pandoc 还内建了 Word、PowerPoint 等诸多文档模版，获取其它文档格式的模版，稍有不同，比如 DOCX 文档。</p>
 <pre class="bash"><code>pandoc -o custom-reference.docx --print-default-data-file reference.docx</code></pre>
 <p>更多详情见<a href="https://pandoc.org/MANUAL.html#options-affecting-specific-writers">Pandoc 用户手册</a>。</p>
 </div>
 </div>
+</div>
 <div id="rmarkdown-basic" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> R Markdown（基础篇）</h2>
-<p>相比于 Pandoc’s Markdown，R Markdown 可以省去命令行操作，使用起来简便些，不过，需要在 Rmd 文档中设置输出格式。R Markdown 文档开头处为 YAML 元数据，它分三部分：其一是文档元数据设置，其二是文档输出设置，其三是 Pandoc 变量值设置。</p>
+<p>首先 Pandoc’s Markdown 支持的功能， R Markdown 都支持，相比于 Pandoc’s Markdown，R Markdown 可以省去命令行操作，使用起来简便些。不过，需要适当学习一下 <strong>knitr</strong>、<strong>rmarkdown</strong> 和 <strong>bookdown</strong> 三个包。在 Rmd 文档中设置输出格式。R Markdown 文档开头处为 YAML 元数据，它分三部分：其一是文档元数据设置，其二是文档输出设置，其三是 Pandoc 变量值设置。</p>
 <pre><code>---
 title:  &#39;This is the title&#39;
 subtitle: &quot;This is the subtitle&quot;
@@ -1077,12 +1255,12 @@ mathspec: true
 <p>渲染出来的文档效果如下图。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182024613-97dcff19-8e9b-4428-98ff-dc9fa444d20e.gif" alt="" />
-<p class="caption">图 4.9: R Markdown 示例</p>
+<p class="caption">图 4.14: R Markdown 示例</p>
 </div>
-<p>下面拆解一下 R Markdown 编译出 beamer 幻灯片的过程，当用户点击 Knit 按钮，Render 窗口就会活动起来，knitr 包会根据文档中的代码块，调各类解释器、编译器执行文档中的代码，并返回结果，生成中间产物 Markdown 文件，再调用 Pandoc 转化器，将 Markdown 文档转为 LaTeX 代码，再调用 LaTeX 编译器（如 XeLaTeX）编译出目标文件，PDF 格式的 beamer 幻灯片，图<a href="#fig:rmd-metropolis-compile">4.10</a>左侧是示例文件，右侧是 Render 窗口的编译过程。注意看图<a href="#fig:rmd-metropolis-compile">4.10</a>右侧红框内的内容，是不是很熟悉的感觉，其实就是一个 Pandoc 转化命令。</p>
+<p>下面拆解一下 R Markdown 编译出 beamer 幻灯片的过程，当用户点击 Knit 按钮，Render 窗口就会活动起来，knitr 包会根据文档中的代码块，调各类解释器、编译器执行文档中的代码，并返回结果，生成中间产物 Markdown 文件，再调用 Pandoc 转化器，将 Markdown 文档转为 LaTeX 代码，再调用 LaTeX 编译器（如 XeLaTeX）编译出目标文件，PDF 格式的 beamer 幻灯片，图<a href="#fig:rmd-metropolis-compile">4.15</a>左侧是示例文件，右侧是 Render 窗口的编译过程。注意看图<a href="#fig:rmd-metropolis-compile">4.15</a>右侧红框内的内容，是不是很熟悉的感觉，其实就是一个 Pandoc 转化命令。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-compile"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182069798-33d77872-8cca-4903-8de6-9e42f3ee11f5.png" alt="" />
-<p class="caption">图 4.10: R Markdown 编译过程</p>
+<p class="caption">图 4.15: R Markdown 编译过程</p>
 </div>
 <hr />
 <p>接下来，将上面的英文 R Markdown 文档汉化一下，</p>
@@ -1111,7 +1289,7 @@ classoption: &quot;fontset=fandol&quot;
 \end{align}</code></pre>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182027292-0b24fb9b-7804-4ad5-940c-591ff1fd695d.gif" alt="" />
-<p class="caption">图 4.11:  中文 R Markdown 示例</p>
+<p class="caption">图 4.16:  中文 R Markdown 示例</p>
 </div>
 <p>在日常使用中，beamer 幻灯片常用于学术性报告，各种各样的公式符号随处可见。</p>
 <pre><code>---
@@ -1136,7 +1314,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <p>编译后的效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182028411-e21c0d18-f1b8-4834-b41a-7ba618c9a9e4.gif" alt="" />
-<p class="caption">图 4.12:  中文 R Markdown 示例里添加数学公式</p>
+<p class="caption">图 4.17:  中文 R Markdown 示例里添加数学公式</p>
 </div>
 <p>beamer 学术幻灯片的另一大特色是定理、推论满天飞。在现有的基础上，继续添加定理、引理等文本块，内容如下：</p>
 <pre><code>---
@@ -1169,7 +1347,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 <p>渲染效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-block"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182034761-c7fee605-4729-487b-af20-e423ba7b2af0.gif" alt="" />
-<p class="caption">图 4.13:  中文 R Markdown 示例里添加定理、引理</p>
+<p class="caption">图 4.18:  中文 R Markdown 示例里添加定理、引理</p>
 </div>
 <p>至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！</p>
 <div class="rmdnote">
