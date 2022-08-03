@@ -1078,11 +1078,7 @@ R Markdown 专属功能是指那些离不开 R 语言和 knitr 包的功能，�
 
 ## R Markdown（高级篇）{#rmarkdown-advanced}
 
-本节介绍更多的内容：
 
-1. 切换幻灯片主题，
-1. 自定义导言区，
-1. Lua 自定义 block
 
 
 ### R Markdown 幻灯片模版
@@ -1225,7 +1221,7 @@ Presento 主题下幻灯片的样式如图\@ref(fig:rmd-slide-binb-presento) 所
 ![(\#fig:rmd-slide-verona) 深度使用 beamer 幻灯片主题](https://user-images.githubusercontent.com/12031874/182515142-9c5180b2-4b33-44d0-9153-597d5187e1a6.gif)
 
 
-beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alertblock、block 等。
+Verona 主题提供了一些 block 样式，比如 exampleblock、alertblock、block 等。
 
 ```
 ::: {.exampleblock data-latex="{提示}"}
@@ -1233,7 +1229,7 @@ beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alert
 :::
 ```
 
-当然，有些主题还有自定义的 block 样式，像引用名人名言
+Verona 主题还有自定义的 block 样式，像引用名人名言。
 
 ```
 ::: {.quotation data-latex="[John Gruber]"}
@@ -1247,7 +1243,16 @@ without looking like it’s been marked up with tags or formatting instructions.
 
 ## R Markdown（忍者篇）{#rmarkdown-ninja}
 
-beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc，因此接下来要介绍一些 LaTeX 常用技巧与陷阱，以及定制一些功能，使得 Pandoc 认识，并能转化为正确的 LaTeX 代码。
+
+beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc、在设计，选择合适的字体和色彩固然能让幻灯片眼前一亮，不过切忌宣兵夺主。设计，那么高大上的玩意，咱不懂，还是继续吭哧一下 Pandoc 的高级玩法，以及填补一下 LaTeX 中使用字体的巨坑。
+
+
+
+
+### Pandoc 之 Lua 外挂
+
+
+因此接下来要介绍一些 LaTeX 常用技巧与陷阱，以及定制一些功能，使得 Pandoc 认识，并能转化为正确的 LaTeX 代码。
 
 
 想来想去，好像只剩一种情况还没有介绍，就是使用 Pandoc 支持的 [Lua 外挂](https://pandoc.org/lua-filters.html)，借助 LaTeX 宏包 [tcolorbox](https://ctan.org/pkg/tcolorbox) [自定义 block](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html)，而这当属于忍者玩法了！
@@ -1263,14 +1268,48 @@ bookdown 提供的特殊语法 `name="bababa"` 仅适用于那些在 beamer （�
 beamer 文档找到各类定理、block 块
 然后如何映射过来
 
+
+### 细数 LaTeX 字体坑
+
 至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！
 
 
 
 ## Quarto 制作 beamer 幻灯片
 
-Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc's Markdown 的功能介绍统统适用于 Quarto。
+Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc's Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc's Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 [beamer](https://quarto.org/docs/presentations/beamer.html) 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图\@ref(fig:rmd-slide-verona)， Quarto 文档如下：
 
+
+```{embed, file="examples/quarto-beamer.qmd"}
+```
+
+编译渲染出来的效果如下图：
+
+![(\#fig:quarto-beamer) Quarto 制作 beamer 幻灯片](https://user-images.githubusercontent.com/12031874/182573047-53be6615-549f-4265-8b57-f9cffcddd91e.gif)
+
+目前，发现一些差异点，也可以说是迁移成本。
+
+1.  功能方面：
+
+    1.  Quarto 暂不支持在导言区 `header-includes:` 混入 R 代码。
+    
+    1. 不再需要 rmarkdown 和 bookdown，如果使用 R 语言，则需要 knitr。
+    
+    1. 添加变量 `lang:` 统一处理本地化语言。
+
+1.  使用方式：
+
+    1. 参数类型为布尔值的，一律为 `true/false` 不可以 `yes/no`。
+
+    1.  语法高亮参数 `highlight:` 改为 `highlight-style:`。
+
+    1.  控制文档输出的参数 `output:` 改为 `format:`。
+
+    1.  参考文献处理方法 `citation_package` 改为 `cite-method:`。
+
+    1.  交叉引用的方式 ，如引用图片`\@ref(fig:quarto-beamer)` 变为 `@fig-quarto-beamer`，引用表格、公式与之类似。
+
+更多细节差异，见 Quarto 官网对 [Beamer](https://quarto.org/docs/presentations/beamer.html)格式的介绍。
 
 # 技巧陷阱 {#tricks-pitfalls}
 
@@ -1441,8 +1480,7 @@ Pandoc's Markdown 制作 beamer 的过程，R Markdown 制作 beamer 的过程�
 如果需要用到 R 语言，需要再学习一些扩展包，
 如果 Quarto 来制作，一方面是学习 Pandoc 和 LaTeX 和 R 语言
 
-当了解 Pandoc's Markdown 制作 beamer 幻灯片的过程，
-如此，你便可知 Quarto 制作 [beamer](https://quarto.org/docs/presentations/beamer.html) 幻灯片的过程是如出一辙。
+
 
 # 参考文献 {#refer}
 

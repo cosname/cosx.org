@@ -70,7 +70,11 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 <li><a href="#r-markdown-幻灯片模版" id="toc-r-markdown-幻灯片模版"><span class="toc-section-number">4.4.1</span> R Markdown 幻灯片模版</a></li>
 <li><a href="#深度使用-beamer-幻灯片主题" id="toc-深度使用-beamer-幻灯片主题"><span class="toc-section-number">4.4.2</span> 深度使用 beamer 幻灯片主题</a></li>
 </ul></li>
-<li><a href="#rmarkdown-ninja" id="toc-rmarkdown-ninja"><span class="toc-section-number">4.5</span> R Markdown（忍者篇）</a></li>
+<li><a href="#rmarkdown-ninja" id="toc-rmarkdown-ninja"><span class="toc-section-number">4.5</span> R Markdown（忍者篇）</a>
+<ul>
+<li><a href="#pandoc-之-lua-外挂" id="toc-pandoc-之-lua-外挂"><span class="toc-section-number">4.5.1</span> Pandoc 之 Lua 外挂</a></li>
+<li><a href="#细数-latex-字体坑" id="toc-细数-latex-字体坑"><span class="toc-section-number">4.5.2</span> 细数 LaTeX 字体坑</a></li>
+</ul></li>
 <li><a href="#quarto-制作-beamer-幻灯片" id="toc-quarto-制作-beamer-幻灯片"><span class="toc-section-number">4.6</span> Quarto 制作 beamer 幻灯片</a></li>
 </ul></li>
 <li><a href="#tricks-pitfalls" id="toc-tricks-pitfalls"><span class="toc-section-number">5</span> 技巧陷阱</a>
@@ -1572,12 +1576,6 @@ knitr::kable(head(iris, 3), caption = &quot;鸢尾花&quot;)
 </div>
 <div id="rmarkdown-advanced" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> R Markdown（高级篇）</h2>
-<p>本节介绍更多的内容：</p>
-<ol style="list-style-type: decimal">
-<li>切换幻灯片主题，</li>
-<li>自定义导言区，</li>
-<li>Lua 自定义 block</li>
-</ol>
 <div id="r-markdown-幻灯片模版" class="section level3" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> R Markdown 幻灯片模版</h3>
 <p>前面介绍 R Markdown 功能涉及了两款主题，一款是 beamer 文类最基础的默认主题，另一款是 <a href="https://github.com/matze/mtheme">metropolis</a>主题。若读者觉得还行，往下的内容不看也罢，专注内容，专注质量其实更好。若读者觉得太过千篇一律，索然无味，下面几款聊胜于无。</p>
@@ -1772,11 +1770,11 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <img src="https://user-images.githubusercontent.com/12031874/182515142-9c5180b2-4b33-44d0-9153-597d5187e1a6.gif" alt="" />
 <p class="caption">图 4.27:  深度使用 beamer 幻灯片主题</p>
 </div>
-<p>beamer 默认的主题提供了一些 block 样式，比如 exampleblock、alertblock、block 等。</p>
+<p>Verona 主题提供了一些 block 样式，比如 exampleblock、alertblock、block 等。</p>
 <pre><code>::: {.exampleblock data-latex=&quot;{提示}&quot;}
 提示
 :::</code></pre>
-<p>当然，有些主题还有自定义的 block 样式，像引用名人名言</p>
+<p>Verona 主题还有自定义的 block 样式，像引用名人名言。</p>
 <pre><code>::: {.quotation data-latex=&quot;[John Gruber]&quot;}
 A Markdown-formatted document should be publishable as-is, as plain text, 
 without looking like it’s been marked up with tags or formatting instructions.  
@@ -1786,7 +1784,10 @@ without looking like it’s been marked up with tags or formatting instructions.
 </div>
 <div id="rmarkdown-ninja" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> R Markdown（忍者篇）</h2>
-<p>beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc，因此接下来要介绍一些 LaTeX 常用技巧与陷阱，以及定制一些功能，使得 Pandoc 认识，并能转化为正确的 LaTeX 代码。</p>
+<p>beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc、在设计，选择合适的字体和色彩固然能让幻灯片眼前一亮，不过切忌宣兵夺主。设计，那么高大上的玩意，咱不懂，还是继续吭哧一下 Pandoc 的高级玩法，以及填补一下 LaTeX 中使用字体的巨坑。</p>
+<div id="pandoc-之-lua-外挂" class="section level3" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Pandoc 之 Lua 外挂</h3>
+<p>因此接下来要介绍一些 LaTeX 常用技巧与陷阱，以及定制一些功能，使得 Pandoc 认识，并能转化为正确的 LaTeX 代码。</p>
 <p>想来想去，好像只剩一种情况还没有介绍，就是使用 Pandoc 支持的 <a href="https://pandoc.org/lua-filters.html">Lua 外挂</a>，借助 LaTeX 宏包 <a href="https://ctan.org/pkg/tcolorbox">tcolorbox</a> <a href="https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html">自定义 block</a>，而这当属于忍者玩法了！</p>
 <p>Christophe Dervieux</p>
 <p>bookdown 提供的特殊语法 <code>name="bababa"</code> 仅适用于那些在 beamer （不局限于 beamer 基础文类提供的主题，还包括其它衍生的 beamer 主题，下同）中有定义且被 bookdown 支持的。其它 bookdown 支持的环境只有在 beamer 的导言区先定义才能被使用，如命题 <code>proposition</code>，猜想 <code>conjecture</code>，练习 <code>exercise</code>，假设 <code>hypothesis</code>，注记 <code>remark</code>，通常这部分东西放在 <code>preamble.tex</code> 里，并在 R Markdown 的 YAML 区域引入。另外，还有一些环境只出现在 beamer 文类下，bookdown 对这些是不支持的，比如事实 <code>fact</code>，问题 <code>problem</code> <code>block</code>，示例 <code>exampleblock</code> 等。</p>
@@ -1794,11 +1795,126 @@ without looking like it’s been marked up with tags or formatting instructions.
 <p>忍者篇介绍萧山主题模版，列出 beamer 中有定义的和 bookdown 支持的。</p>
 <p>beamer 文档找到各类定理、block 块
 然后如何映射过来</p>
+</div>
+<div id="细数-latex-字体坑" class="section level3" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> 细数 LaTeX 字体坑</h3>
 <p>至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！</p>
+</div>
 </div>
 <div id="quarto-制作-beamer-幻灯片" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Quarto 制作 beamer 幻灯片</h2>
-<p>Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc’s Markdown 的功能介绍统统适用于 Quarto。</p>
+<p>Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc’s Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc’s Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 <a href="https://quarto.org/docs/presentations/beamer.html">beamer</a> 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图<a href="#fig:rmd-slide-verona">4.27</a>， Quarto 文档如下：</p>
+<pre class="qmd"><code>---
+title: &quot;Querto 制作 beamer 幻灯片&quot;
+subtitle: &quot;基于 beamer 主题 Verona&quot;
+lang: zh
+author:
+  - 张三
+  - 李四
+institute: &quot;xxx 大学学院&quot;
+date: &quot;`r Sys.Date()`&quot;
+format: 
+  beamer: 
+    theme: Verona
+header-includes:
+  # - \logo{\includegraphics[height=0.8cm]{`r file.path(R.home(&quot;doc&quot;), &quot;html&quot;, &quot;Rlogo&quot;)`}} # 插入 Logo
+  - \usepackage{pifont} # 提供 \ding 
+  - \usepackage{iitem} # 修改列表样式
+  - \setbeamertemplate{itemize item}{\ding{47}}
+  - \setbeamertemplate{itemize subitem}{\ding{46}}
+  - \usepackage[UTF8,fontset=fandol]{ctex} # 汉化文档
+themeoptions: 
+  - colorblocks # 彩色的 block
+  - showheader  # 展示页面顶部导航
+  - red   # Verona 主题为红色风格
+cite-method: natbib   # 参考文献处理方法
+highlight-style: github
+biblio-style: apalike # 参考文献样式
+natbiboptions: &quot;authoryear,round&quot; # 作者-年份样式，以圆括号包裹
+bibliography: 
+  - packages.bib # 文献
+link-citations: true # 添加文献超链接
+section-titles: false # 不显示一级标题
+biblio-title: 参考文献 # 文献页添加标题
+toc: true
+toc-title: 目录 # 目录页添加标题
+colorlinks: true # 给链接添加颜色
+mathspec: true # mathspec 处理数学公式符号
+---
+
+# 基础篇
+
+## 介绍
+
+::: {.quotation data-latex=&quot;[John Gruber]&quot;}
+A Markdown-formatted document should be publishable as-is, as plain text, 
+without looking like it’s been marked up with tags or formatting instructions.  
+:::
+
+数学公式还是用 LaTeX 排版的好， 
+$\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
+$\mathcal{A}$ 是普通字母 $A$ 的花体形式。
+
+```{r}
+#| echo: true
+
+rnorm(4)
+```
+
+![R 语言徽标](`r file.path(R.home(&quot;doc&quot;), &quot;html&quot;, &quot;Rlogo&quot;)`){#fig-logo width=10% }
+
+上 @fig-logo 来自 R 语言官网 &lt;https://cran.r-project.org/&gt;。
+
+# 高级篇
+
+## 自定义
+
+::: {.exampleblock data-latex=&quot;{提示}&quot;}
+记得安装一些 LaTeX 宏包，如果不记得也没关系，
+大多数情况下 tinytex [@Xie2019] 会找齐依赖安装好，只是初次运行会有点慢！
+
+```r
+tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-verona&quot;))
+```
+:::
+
+:::::::::::::: {.columns}
+::: {.column width=&quot;50%&quot;}
+无序列表
+
+- 条目 1
+- 条目 2
+:::
+::: {.column width=&quot;50%&quot;}
+有序列表
+
+1. 条目 1
+1. 条目 2
+:::
+::::::::::::::</code></pre>
+<p>编译渲染出来的效果如下图：</p>
+<div class="figure"><span style="display:block;" id="fig:quarto-beamer"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182573047-53be6615-549f-4265-8b57-f9cffcddd91e.gif" alt="" />
+<p class="caption">图 4.28:  Quarto 制作 beamer 幻灯片</p>
+</div>
+<p>目前，发现一些差异点，也可以说是迁移成本。</p>
+<ol style="list-style-type: decimal">
+<li><p>功能方面：</p>
+<ol style="list-style-type: decimal">
+<li><p>Quarto 暂不支持在导言区 <code>header-includes:</code> 混入 R 代码。</p></li>
+<li><p>不再需要 rmarkdown 和 bookdown，如果使用 R 语言，则需要 knitr。</p></li>
+<li><p>添加变量 <code>lang:</code> 统一处理本地化语言。</p></li>
+</ol></li>
+<li><p>使用方式：</p>
+<ol style="list-style-type: decimal">
+<li><p>参数类型为布尔值的，一律为 <code>true/false</code> 不可以 <code>yes/no</code>。</p></li>
+<li><p>语法高亮参数 <code>highlight:</code> 改为 <code>highlight-style:</code>。</p></li>
+<li><p>控制文档输出的参数 <code>output:</code> 改为 <code>format:</code>。</p></li>
+<li><p>参考文献处理方法 <code>citation_package</code> 改为 <code>cite-method:</code>。</p></li>
+<li><p>交叉引用的方式 ，如引用图片<code>\@ref(fig:quarto-beamer)</code> 变为 <code>@fig-quarto-beamer</code>，引用表格、公式与之类似。</p></li>
+</ol></li>
+</ol>
+<p>更多细节差异，见 Quarto 官网对 <a href="https://quarto.org/docs/presentations/beamer.html">Beamer</a>格式的介绍。</p>
 </div>
 </div>
 <div id="tricks-pitfalls" class="section level1" number="5">
@@ -1975,8 +2091,6 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 如果用 Markdown 来制作，一方面是学习 Pandoc 和 LaTeX，
 如果需要用到 R 语言，需要再学习一些扩展包，
 如果 Quarto 来制作，一方面是学习 Pandoc 和 LaTeX 和 R 语言</p>
-<p>当了解 Pandoc’s Markdown 制作 beamer 幻灯片的过程，
-如此，你便可知 Quarto 制作 <a href="https://quarto.org/docs/presentations/beamer.html">beamer</a> 幻灯片的过程是如出一辙。</p>
 </div>
 <div id="refer" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> 参考文献</h1>
