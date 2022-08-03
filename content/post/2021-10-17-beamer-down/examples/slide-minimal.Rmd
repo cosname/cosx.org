@@ -1,0 +1,31 @@
+---
+title: "R Markdown 制作 beamer 幻灯片"
+author: "黄湘云"
+date: "2021年10月01日"
+institute: "统计之都"
+documentclass: beamer
+output: 
+  beamer_presentation: 
+    latex_engine: xelatex
+    theme: metropolis
+    template: null
+header-includes:
+  - \usepackage[UTF8,fontset=fandol]{ctex}
+mathspec: true
+---
+
+## 图片
+
+
+```{r iris-figure, fig.cap="鸢尾花", fig.width=3, fig.height=2.5}
+library(lattice)
+xyplot(data = iris, Sepal.Length ~ Sepal.Width,
+  groups = Species, scales = "free")
+```
+
+## 表格
+
+```{r iris-table}
+knitr::kable(head(iris, 3), caption = "鸢尾花")
+```
+

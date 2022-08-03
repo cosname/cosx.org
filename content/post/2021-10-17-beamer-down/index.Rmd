@@ -1240,7 +1240,6 @@ without looking like it’s been marked up with tags or formatting instructions.
 
 此处，不一一介绍，详情见[@Alison2021]。
 
-
 ## R Markdown（忍者篇）{#rmarkdown-ninja}
 
 
@@ -1271,17 +1270,25 @@ beamer 文档找到各类定理、block 块
 
 ### 细数 LaTeX 字体坑
 
+
+
+
+
 至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！
-
-
 
 ## Quarto 制作 beamer 幻灯片
 
 Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc's Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc's Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 [beamer](https://quarto.org/docs/presentations/beamer.html) 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图\@ref(fig:rmd-slide-verona)， Quarto 文档如下：
 
 
+<details>
+<summary> 点击查看 Quarto 源文档及设置说明 </summary>
+
 ```{embed, file="examples/quarto-beamer.qmd"}
 ```
+
+</details>
+
 
 编译渲染出来的效果如下图：
 
@@ -1295,7 +1302,7 @@ Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验�
     
     1. 不再需要 rmarkdown 和 bookdown，如果使用 R 语言，则需要 knitr。
     
-    1. 添加变量 `lang:` 统一处理本地化语言。
+    1. 添加变量 `lang:` 统一处理本土化语言。
 
 1.  使用方式：
 
@@ -1311,37 +1318,170 @@ Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验�
 
 更多细节差异，见 Quarto 官网对 [Beamer](https://quarto.org/docs/presentations/beamer.html)格式的介绍。
 
+关于 Quarto 如何站在 Pandoc 这个巨人的肩膀上，下面就语法高亮为例说明。Pandoc 支持 **147** 种编程语言的语法高亮，通过命令 `pandoc --list-highlight-languages` 可以查看到。Pandoc 原生支持八种语法高亮主题，可用命令 `pandoc --list-highlight-styles` 查看，分别是：
+
+- `pygments` 
+- `tango`
+- `espresso`
+- `zenburn`
+- `kate`
+- `monochrome`
+- `breezedark`
+- `haddock`
+
+它们也是 R Markdown 内置的一些高亮主题，Quarto 进一步提供了更多的语法高亮主题，比如上图\@ref(fig:quarto-beamer)使用的 `github`，更多内容见 Quarto 帮助文档[高亮主题](https://quarto.org/docs/output-formats/html-code.html#highlighting)。
+
+
 # 技巧陷阱 {#tricks-pitfalls}
 
-## 数学符号 {#math-symbols}
+## 数学符号与数学字体 {#math-symbols}
 
-在正式介绍后续的 beamer 主题之前，还要先介绍一点数学符号和数学字体的坑，毕竟，学术型幻灯片很难离开数学公式[@Pakin2021]。在遇到花体数学符号，如常用来表示域或空间的 `$\mathcal{A,S}, \mathscr{A}, \mathbb{A,R}$`，抑或是常见的损失函数符号 `$\mathcal{L}$`。
-**unicode-math** 定义的数学样式有点怪，和通常见到的不一样，以前排版毕业论文的时候[坑过我一回](https://d.cosx.org/d/419931)，主要原因是 **unicode-math** 使用 Latin Modern Math 的 OpenType 字体 [@Zeng2020]。
+首先来说说数学符号和数学字体的坑，毕竟，beamer 这种学术型幻灯片很难离开数学公式。LaTeX 社区专门弄了一个 400 多页的大型文档《The Comprehensive LATEX Symbol List – Symbols accessible from LATEX》[@Pakin2021]，其中，数学符号的篇幅高达 90 多页，涉及数十个 LaTeX 宏包，可见坑不是一般的深。在 R Markdown 中，踩中此坑最常见的姿势是这样的。 
 
-```md
----
-title: "Untitled"
-output: 
-  pdf_document: 
-    latex_engine: xelatex
-    template: null
-    extra_dependencies:
-      ctex:
-       - fontset=fandol
----
+1.  根据 ctex 宏包的帮助文档指示，汉化文档直接用 `ctexbook`、 `ctexart` 或 `ctexbeamer` 等文类。
 
-拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 和 `\mathbb{A}`会被依次渲染成
+1.  因此，把 R  Markdown 文档默认的文类设置从 `documentclass: beamer` 改为`documentclass: ctexbeamer`，改完后 R Markdown 文档长这个样子：
 
-$$
-\mathcal{A},\mathscr{A},\mathbb{A}
-$$
+    ```
+    ---
+    documentclass: ctexbeamer
+    output: 
+      beamer_presentation: 
+        latex_engine: xelatex
+    ---
+    
+    ## 示例
+    
+    \begin{align}
+        \boldsymbol{\theta} &= (1, 2, 3)^\top \\
+            \theta_0 &= 1
+    \end{align}
+    ```
+
+1. 接着，观察编译渲染出来的效果
+
+    ![(\#fig:slide-math) 含公式的中文 beamer 幻灯片](https://user-images.githubusercontent.com/12031874/182594626-a9b33ba3-ac8f-4e92-8e1f-4e46d6a27e89.png)
+
+1. 发现 LaTeX 命令 `\boldsymbol` 并没有加粗希腊字母 $\theta$，回退至原英文 R  Markdown 文档
+
+    ```
+    ---
+    documentclass: beamer
+    output: 
+      beamer_presentation: 
+        latex_engine: xelatex
+    ---
+    
+    ## Example
+    
+    \begin{align}
+        \boldsymbol{\theta} &= (1, 2, 3)^\top \\
+            \theta_0 &= 1
+    \end{align}
+    ```
+
+1.  渲染后，发现希腊字母 $\theta$ 也没有正常加粗，继续回退至 Markdown 文档
+
+    ```
+    ## Example
+    
+    \begin{align}
+        \boldsymbol{\theta} &= (1, 2, 3)^\top \\
+            \theta_0 &= 1
+    \end{align}
+    ```
+
+    使用 Pandoc 命令直接转化为 PDF 格式幻灯片
+
+    ```
+    pandoc --pdf-engine xelatex -t beamer \
+      slide-math.md -o slide-math.pdf
+    ```
+
+    结果还是没有加粗，可见与 R Markdown 相关的包无关。获取从 Markdown 文档转化为 PDF 文档的中间产物 LaTeX 文档 `slide-math.tex`
+
+    ```
+    pandoc -t beamer --standalone \
+      slide-math.md -o slide-math.tex
+    ```
+
+
+<details><summary> 点击查看 `slide-math.tex` 文档 </summary>
+
+```{verbatim, file="examples/slide-math.tex", lang="tex"}
 ```
 
+</details>
 
-![unicode-math](https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png)
+通过观察`slide-math.tex` 文档，发现与数学符号相关的是如下一部分：
+
+```tex
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+```
+
+上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包，问题就出在 unicode-math 宏包身上，它会直接忽视命令 `\boldsymbol`，加粗希腊字母，它只认 `\symbf`。
+
+也许已经有人看出来了，上面是个 `IF-ELSE` 的逻辑，可以选用 pdflatex 编译呀！比如这样：
+
+```bash
+pandoc --pdf-engine pdflatex -t beamer \
+  slide-math.md -o slide-math.pdf
+```
+
+确实可以渲染出来加粗效果 $\boldsymbol{\theta}$，但是，pdflatex 处理中文是很弱的，在 MacOS 和 Ubuntu 等系统上比较麻烦，而且，未来主要方向是 XeLaTeX 引擎。
+
+本以为问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。
+
+可在遇到花体数学符号，如常用来表示代数空间的 $\mathscr{A}$，概率空间的 $\mathcal{A}$，$n$ 维实空间的 $\mathbb{R}^n$，抑或是常见的损失函数符号 $\mathcal{L}$。**unicode-math** 定义的数学样式有点怪，和通常见到的不一样，见下图\@ref(fig:slide-unicode-math)，以前排版毕业论文的时候[坑过我一回](https://d.cosx.org/d/419931)，主要原因是 **unicode-math** 使用 Latin Modern Math 的 OpenType 字体 [@Zeng2020]。
+
+![(\#fig:slide-unicode-math) unicode-math 宏包](https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png)
+
+那么，问题来了，是不是使用其他数学字体就好了呢？unicode-math 宏包的[官方文档](http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf) 对 XITS Math、Fira Math 等字体的数学符号的支持情况有说明，见下表。
+
+<center>表1：不同的数学字体支持的符号数量不同 </center>
+
+| 数学字体    | 符号数量 |
+| :---------------------- | :-------- |
+| [Latin Modern Math](https://ctan.org/pkg/lm)                 | 1585     |
+| [XITS Math](https://ctan.org/pkg/xits)                       | 2427     |
+| [STIX Math Two](https://ctan.org/pkg/stix2-otf)              | 2422     |
+| [TeX Gyre Pagella Math](https://ctan.org/pkg/tex-gyre-math-pagella) | 1638     |
+| [DejaVu Math TeX Gyre](https://ctan.org/pkg/tex-gyre-math-dejavu) | 1640     |
+| [Fira Math](https://ctan.org/pkg/firamath)                   | 1052     |
+
+可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。
+
+有没有一种办法，既不用 unicode-math 宏包，也不用 pdflatex 编译引擎，还支持中文和最全的数学符号？有。
+
+回到 4.2.2 节介绍的 Pandoc 内建的 LaTeX 模版，经过一番查找和研读，其中有这么一段逻辑，控制是否加载 unicode-math 宏包，发现 Pandoc 提供 mathspec 变量，它设置为 TRUE，意味着不会加载 unicode-math 宏包，而是加载 mathspec 宏包。
+
+```
+$if(mathspec)$
+  \ifXeTeX
+    \usepackage{mathspec}
+  \else
+    \usepackage{unicode-math}
+  \fi
+$else$
+  \usepackage{unicode-math}
+$endif$
+```
+
+Pandoc 内建的 LaTeX 模版**默认**调用 **unicode-math** 宏包的，因此，编译 R Markdown 的时候，启用[LaTeX 变量](https://pandoc.org/MANUAL.html#using-variables-in-templates) `mathspec: yes`，加载 **amsfonts** 和 **mathrsfs** 宏包[@Xie2020]。
 
 
-Pandoc 内建的 LaTeX 模版默认调用 **unicode-math** 宏包的，除非编译 R Markdown 的时候，启用[LaTeX 变量](https://pandoc.org/MANUAL.html#using-variables-in-templates)`mathspec: yes`，加载 **amsfonts** 和 **mathrsfs** 宏包[@Xie2020]。目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 `\mscrA` 和 `\BbbA` 分别等价于 `\mathscr{A}` 和 `\mathbb{A}`。
+目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 `\mscrA` 和 `\BbbA` 分别等价于 `\mathscr{A}` 和 `\mathbb{A}`。
 
 ```md
 ---
@@ -1373,18 +1513,7 @@ $$
 [fandol 字体](https://ctan.org/pkg/fandol)支持的汉字有限，比如[刘思喆](https://bjt.name/)的「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说[许宝騄先生](https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84)的「騄」字了。
 :::
 
-Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号），后者支持是最广的。在 **unicode-math** 的世界里，公式环境里，加粗希腊字母，得用 `\symbf` 而不是 `\boldsymbol`。XITS Math、Fira Math 等字体数学符号的支持情况详见[unicode-math 宏包的官方文档](http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf)。
 
-<center>表1：不同的数学字体支持的符号数量不同 </center>
-
-| 数学字体                                                     | 符号数量 |
-| :------------------------------------------------------------ | :-------- |
-| [Latin Modern Math](https://ctan.org/pkg/lm)                 | 1585     |
-| [XITS Math](https://ctan.org/pkg/xits)                       | 2427     |
-| [STIX Math Two](https://ctan.org/pkg/stix2-otf)              | 2422     |
-| [TeX Gyre Pagella Math](https://ctan.org/pkg/tex-gyre-math-pagella) | 1638     |
-| [DejaVu Math TeX Gyre](https://ctan.org/pkg/tex-gyre-math-dejavu) | 1640     |
-| [Fira Math](https://ctan.org/pkg/firamath)                   | 1052     |
 
 
 

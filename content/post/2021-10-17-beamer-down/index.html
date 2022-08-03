@@ -79,7 +79,7 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 </ul></li>
 <li><a href="#tricks-pitfalls" id="toc-tricks-pitfalls"><span class="toc-section-number">5</span> 技巧陷阱</a>
 <ul>
-<li><a href="#math-symbols" id="toc-math-symbols"><span class="toc-section-number">5.1</span> 数学符号</a></li>
+<li><a href="#math-symbols" id="toc-math-symbols"><span class="toc-section-number">5.1</span> 数学符号与数学字体</a></li>
 <li><a href="#chinese-document" id="toc-chinese-document"><span class="toc-section-number">5.2</span> 文档汉化</a></li>
 </ul></li>
 <li><a href="#summary" id="toc-summary"><span class="toc-section-number">6</span> 本文小结</a></li>
@@ -1804,10 +1804,14 @@ without looking like it’s been marked up with tags or formatting instructions.
 <div id="quarto-制作-beamer-幻灯片" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Quarto 制作 beamer 幻灯片</h2>
 <p>Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc’s Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc’s Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 <a href="https://quarto.org/docs/presentations/beamer.html">beamer</a> 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图<a href="#fig:rmd-slide-verona">4.27</a>， Quarto 文档如下：</p>
+<details>
+<summary>
+点击查看 Quarto 源文档及设置说明
+</summary>
 <pre class="qmd"><code>---
 title: &quot;Querto 制作 beamer 幻灯片&quot;
 subtitle: &quot;基于 beamer 主题 Verona&quot;
-lang: zh
+lang: zh # 本土化语言
 author:
   - 张三
   - 李四
@@ -1828,18 +1832,18 @@ themeoptions:
   - showheader  # 展示页面顶部导航
   - red   # Verona 主题为红色风格
 cite-method: natbib   # 参考文献处理方法
-highlight-style: github
+highlight-style: github # 代码语法高亮
 biblio-style: apalike # 参考文献样式
 natbiboptions: &quot;authoryear,round&quot; # 作者-年份样式，以圆括号包裹
 bibliography: 
   - packages.bib # 文献
-link-citations: true # 添加文献超链接
-section-titles: false # 不显示一级标题
+link-citations: true   # 添加文献超链接
+section-titles: false  # 不显示一级标题
 biblio-title: 参考文献 # 文献页添加标题
-toc: true
-toc-title: 目录 # 目录页添加标题
+toc: true        # 添加幻灯片目录
+toc-title: 目录  # 目录页添加标题
 colorlinks: true # 给链接添加颜色
-mathspec: true # mathspec 处理数学公式符号
+mathspec: true   # mathspec 处理数学公式符号
 ---
 
 # 基础篇
@@ -1892,6 +1896,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 1. 条目 2
 :::
 ::::::::::::::</code></pre>
+</details>
 <p>编译渲染出来的效果如下图：</p>
 <div class="figure"><span style="display:block;" id="fig:quarto-beamer"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182573047-53be6615-549f-4265-8b57-f9cffcddd91e.gif" alt="" />
@@ -1903,7 +1908,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <ol style="list-style-type: decimal">
 <li><p>Quarto 暂不支持在导言区 <code>header-includes:</code> 混入 R 代码。</p></li>
 <li><p>不再需要 rmarkdown 和 bookdown，如果使用 R 语言，则需要 knitr。</p></li>
-<li><p>添加变量 <code>lang:</code> 统一处理本地化语言。</p></li>
+<li><p>添加变量 <code>lang:</code> 统一处理本土化语言。</p></li>
 </ol></li>
 <li><p>使用方式：</p>
 <ol style="list-style-type: decimal">
@@ -1915,70 +1920,214 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 </ol></li>
 </ol>
 <p>更多细节差异，见 Quarto 官网对 <a href="https://quarto.org/docs/presentations/beamer.html">Beamer</a>格式的介绍。</p>
+<p>关于 Quarto 如何站在 Pandoc 这个巨人的肩膀上，下面就语法高亮为例说明。Pandoc 支持 <strong>147</strong> 种编程语言的语法高亮，通过命令 <code>pandoc --list-highlight-languages</code> 可以查看到。Pandoc 原生支持八种语法高亮主题，可用命令 <code>pandoc --list-highlight-styles</code> 查看，分别是：</p>
+<ul>
+<li><code>pygments</code></li>
+<li><code>tango</code></li>
+<li><code>espresso</code></li>
+<li><code>zenburn</code></li>
+<li><code>kate</code></li>
+<li><code>monochrome</code></li>
+<li><code>breezedark</code></li>
+<li><code>haddock</code></li>
+</ul>
+<p>它们也是 R Markdown 内置的一些高亮主题，Quarto 进一步提供了更多的语法高亮主题，比如上图<a href="#fig:quarto-beamer">4.28</a>使用的 <code>github</code>，更多内容见 Quarto 帮助文档<a href="https://quarto.org/docs/output-formats/html-code.html#highlighting">高亮主题</a>。</p>
 </div>
 </div>
 <div id="tricks-pitfalls" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> 技巧陷阱</h1>
 <div id="math-symbols" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> 数学符号</h2>
-<p>在正式介绍后续的 beamer 主题之前，还要先介绍一点数学符号和数学字体的坑，毕竟，学术型幻灯片很难离开数学公式<span class="citation">[<a href="#ref-Pakin2021" role="doc-biblioref">3</a>]</span>。在遇到花体数学符号，如常用来表示域或空间的 <code>$\mathcal{A,S}, \mathscr{A}, \mathbb{A,R}$</code>，抑或是常见的损失函数符号 <code>$\mathcal{L}$</code>。
-<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">4</a>]</span>。</p>
-<pre class="md"><code>---
-title: &quot;Untitled&quot;
+<h2><span class="header-section-number">5.1</span> 数学符号与数学字体</h2>
+<p>首先来说说数学符号和数学字体的坑，毕竟，beamer 这种学术型幻灯片很难离开数学公式。LaTeX 社区专门弄了一个 400 多页的大型文档《The Comprehensive LATEX Symbol List – Symbols accessible from LATEX》<span class="citation">[<a href="#ref-Pakin2021" role="doc-biblioref">3</a>]</span>，其中，数学符号的篇幅高达 90 多页，涉及数十个 LaTeX 宏包，可见坑不是一般的深。在 R Markdown 中，踩中此坑最常见的姿势是这样的。</p>
+<ol style="list-style-type: decimal">
+<li><p>根据 ctex 宏包的帮助文档指示，汉化文档直接用 <code>ctexbook</code>、 <code>ctexart</code> 或 <code>ctexbeamer</code> 等文类。</p></li>
+<li><p>因此，把 R Markdown 文档默认的文类设置从 <code>documentclass: beamer</code> 改为<code>documentclass: ctexbeamer</code>，改完后 R Markdown 文档长这个样子：</p>
+<pre><code>---
+documentclass: ctexbeamer
 output: 
-  pdf_document: 
+  beamer_presentation: 
     latex_engine: xelatex
-    template: null
-    extra_dependencies:
-      ctex:
-       - fontset=fandol
 ---
 
-拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 和 `\mathbb{A}`会被依次渲染成
+## 示例
 
-$$
-\mathcal{A},\mathscr{A},\mathbb{A}
-$$</code></pre>
-<div class="figure">
+\begin{align}
+    \boldsymbol{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}</code></pre></li>
+<li><p>接着，观察编译渲染出来的效果</p>
+<div class="figure"><span style="display:block;" id="fig:slide-math"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182594626-a9b33ba3-ac8f-4e92-8e1f-4e46d6a27e89.png" alt="" />
+<p class="caption">图 5.1:  含公式的中文 beamer 幻灯片</p>
+</div></li>
+<li><p>发现 LaTeX 命令 <code>\boldsymbol</code> 并没有加粗希腊字母 <span class="math inline">\(\theta\)</span>，回退至原英文 R Markdown 文档</p>
+<pre><code>---
+documentclass: beamer
+output: 
+  beamer_presentation: 
+    latex_engine: xelatex
+---
+
+## Example
+
+\begin{align}
+    \boldsymbol{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}</code></pre></li>
+<li><p>渲染后，发现希腊字母 <span class="math inline">\(\theta\)</span> 也没有正常加粗，继续回退至 Markdown 文档</p>
+<pre><code>## Example
+
+\begin{align}
+    \boldsymbol{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}</code></pre>
+<p>使用 Pandoc 命令直接转化为 PDF 格式幻灯片</p>
+<pre><code>pandoc --pdf-engine xelatex -t beamer \
+  slide-math.md -o slide-math.pdf</code></pre>
+<p>结果还是没有加粗，可见与 R Markdown 相关的包无关。获取从 Markdown 文档转化为 PDF 文档的中间产物 LaTeX 文档 <code>slide-math.tex</code></p>
+<pre><code>pandoc -t beamer --standalone \
+  slide-math.md -o slide-math.tex</code></pre></li>
+</ol>
+<details>
+<summary>
+点击查看 <code>slide-math.tex</code> 文档
+</summary>
+<pre class="tex"><code>% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\begin{frame}{Example}
+\protect\hypertarget{example}{}
+\begin{align}
+    \boldsymbol{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}
+\end{frame}
+
+\end{document}</code></pre>
+</details>
+<p>通过观察<code>slide-math.tex</code> 文档，发现与数学符号相关的是如下一部分：</p>
+<pre class="tex"><code>\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi</code></pre>
+<p>上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包，问题就出在 unicode-math 宏包身上，它会直接忽视命令 <code>\boldsymbol</code>，加粗希腊字母，它只认 <code>\symbf</code>。</p>
+<p>也许已经有人看出来了，上面是个 <code>IF-ELSE</code> 的逻辑，可以选用 pdflatex 编译呀！比如这样：</p>
+<pre class="bash"><code>pandoc --pdf-engine pdflatex -t beamer \
+  slide-math.md -o slide-math.pdf</code></pre>
+<p>确实可以渲染出来加粗效果 <span class="math inline">\(\boldsymbol{\theta}\)</span>，但是，pdflatex 处理中文是很弱的，在 MacOS 和 Ubuntu 等系统上比较麻烦，而且，未来主要方向是 XeLaTeX 引擎。</p>
+<p>本以为问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。</p>
+<p>可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">5.2</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">4</a>]</span>。</p>
+<div class="figure"><span style="display:block;" id="fig:slide-unicode-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png" alt="" />
-<p class="caption">unicode-math</p>
+<p class="caption">图 5.2:  unicode-math 宏包</p>
 </div>
-<p>Pandoc 内建的 LaTeX 模版默认调用 <strong>unicode-math</strong> 宏包的，除非编译 R Markdown 的时候，启用<a href="https://pandoc.org/MANUAL.html#using-variables-in-templates">LaTeX 变量</a><code>mathspec: yes</code>，加载 <strong>amsfonts</strong> 和 <strong>mathrsfs</strong> 宏包<span class="citation">[<a href="#ref-Xie2020" role="doc-biblioref">5</a>]</span>。目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 <code>\mscrA</code> 和 <code>\BbbA</code> 分别等价于 <code>\mathscr{A}</code> 和 <code>\mathbb{A}</code>。</p>
-<pre class="md"><code>---
-title: &quot;Untitled&quot;
-mathspec: yes
-output: 
-  pdf_document: 
-    latex_engine: xelatex
-    template: null
-    extra_dependencies:
-      ctex:
-       - fontset=fandol
-      amsfonts: null
-      mathrsfs: null
----
-
-拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 
-和 `\mathbb{A}`会被依次渲染成
-
-$$
-\mathcal{A},\mathscr{A},\mathbb{A}
-$$</code></pre>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/12031874/135605483-1cfe1c86-1567-495e-b3a0-27ff12a72b7f.png" alt="" />
-<p class="caption">mathspec</p>
-</div>
-<div class="rmdnote">
-<p><a href="https://ctan.org/pkg/fandol">fandol 字体</a>支持的汉字有限，比如<a href="https://bjt.name/">刘思喆</a>的「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说<a href="https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84">许宝騄先生</a>的「騄」字了。</p>
-</div>
-<p>Fira 系列字体配 metropolis 主题是比较常见的，只是 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号），后者支持是最广的。在 <strong>unicode-math</strong> 的世界里，公式环境里，加粗希腊字母，得用 <code>\symbf</code> 而不是 <code>\boldsymbol</code>。XITS Math、Fira Math 等字体数学符号的支持情况详见<a href="http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf">unicode-math 宏包的官方文档</a>。</p>
+<p>那么，问题来了，是不是使用其他数学字体就好了呢？unicode-math 宏包的<a href="http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf">官方文档</a> 对 XITS Math、Fira Math 等字体的数学符号的支持情况有说明，见下表。</p>
 <center>
 表1：不同的数学字体支持的符号数量不同
 </center>
 <table>
 <colgroup>
-<col width="87%" />
-<col width="12%" />
+<col width="71%" />
+<col width="28%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -2013,6 +2162,47 @@ $$</code></pre>
 </tr>
 </tbody>
 </table>
+<p>可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。</p>
+<p>有没有一种办法，既不用 unicode-math 宏包，也不用 pdflatex 编译引擎，还支持中文和最全的数学符号？有。</p>
+<p>回到 4.2.2 节介绍的 Pandoc 内建的 LaTeX 模版，经过一番查找和研读，其中有这么一段逻辑，控制是否加载 unicode-math 宏包，发现 Pandoc 提供 mathspec 变量，它设置为 TRUE，意味着不会加载 unicode-math 宏包，而是加载 mathspec 宏包。</p>
+<pre><code>$if(mathspec)$
+  \ifXeTeX
+    \usepackage{mathspec}
+  \else
+    \usepackage{unicode-math}
+  \fi
+$else$
+  \usepackage{unicode-math}
+$endif$</code></pre>
+<p>Pandoc 内建的 LaTeX 模版<strong>默认</strong>调用 <strong>unicode-math</strong> 宏包的，因此，编译 R Markdown 的时候，启用<a href="https://pandoc.org/MANUAL.html#using-variables-in-templates">LaTeX 变量</a> <code>mathspec: yes</code>，加载 <strong>amsfonts</strong> 和 <strong>mathrsfs</strong> 宏包<span class="citation">[<a href="#ref-Xie2020" role="doc-biblioref">5</a>]</span>。</p>
+<p>目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 <code>\mscrA</code> 和 <code>\BbbA</code> 分别等价于 <code>\mathscr{A}</code> 和 <code>\mathbb{A}</code>。</p>
+<pre class="md"><code>---
+title: &quot;Untitled&quot;
+mathspec: yes
+output: 
+  pdf_document: 
+    latex_engine: xelatex
+    template: null
+    extra_dependencies:
+      ctex:
+       - fontset=fandol
+      amsfonts: null
+      mathrsfs: null
+---
+
+拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 
+和 `\mathbb{A}`会被依次渲染成
+
+$$
+\mathcal{A},\mathscr{A},\mathbb{A}
+$$</code></pre>
+<div class="figure">
+<img src="https://user-images.githubusercontent.com/12031874/135605483-1cfe1c86-1567-495e-b3a0-27ff12a72b7f.png" alt="" />
+<p class="caption">mathspec</p>
+</div>
+<div class="rmdnote">
+<p><a href="https://ctan.org/pkg/fandol">fandol 字体</a>支持的汉字有限，比如<a href="https://bjt.name/">刘思喆</a>的「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说<a href="https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84">许宝騄先生</a>的「騄」字了。</p>
+</div>
 </div>
 <div id="chinese-document" class="section level2" number="5.2">
 <h2><span class="header-section-number">5.2</span> 文档汉化</h2>
