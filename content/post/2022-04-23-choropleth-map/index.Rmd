@@ -3,7 +3,7 @@ title: 地区分布图及其应用
 author: 黄湘云
 date: '2022-05-22'
 slug: choropleth-map
-meta_extra: "审稿：张沥今"
+meta_extra: "审稿：张沥今；编辑：李萧纹"
 categories:
   - 统计图形
 tags: 
