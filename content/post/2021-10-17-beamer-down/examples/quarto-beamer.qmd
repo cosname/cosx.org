@@ -1,5 +1,5 @@
 ---
-title: "Querto 制作 beamer 幻灯片"
+title: "Quarto 制作 beamer 幻灯片"
 subtitle: "基于 beamer 主题 Verona"
 lang: zh # 本土化语言
 author:

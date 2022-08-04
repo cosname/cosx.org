@@ -1066,7 +1066,7 @@ R Markdown 专属功能是指那些离不开 R 语言和 knitr 包的功能，�
 
 ### 图、表、公式交叉引用
 
-图、表、公式在幻灯片里交叉引用似乎并不常见，原因可能是现场环境下，观众和演讲者未必关注到或记得住编号。在基础的 rmarkdown 包里并不支持交叉引用，它是 bookdown 包里才有的高级功能，毕竟交叉引用在书里是必不可少的。使用起来也不复杂，只需在 R Markdown 文档的 YAML 元数据里将 `beamer_presentation2` 替换为 `bookdown::beamer_presentation2`。 下面是一个小示例，在前文基础上添加图、表、公式的交叉引用。
+图、表、公式在幻灯片里交叉引用似乎并不常见，原因可能是现场环境下，观众和演讲者未必关注到或记得住编号。在基础的 rmarkdown 包里并不支持交叉引用，它是 bookdown 包里才有的高级功能，毕竟交叉引用在书里是必不可少的。使用起来也不复杂，只需在 R Markdown 文档的 YAML 元数据里将 `beamer_presentation` 替换为 `bookdown::beamer_presentation2`。 下面是一个小示例，在前文基础上添加图、表、公式的交叉引用。
 
 ```{embed, file="examples/slide-cross-references.Rmd"}
 ```
@@ -1243,7 +1243,7 @@ without looking like it’s been marked up with tags or formatting instructions.
 ## R Markdown（忍者篇）{#rmarkdown-ninja}
 
 
-beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc、在设计，选择合适的字体和色彩固然能让幻灯片眼前一亮，不过切忌宣兵夺主。设计，那么高大上的玩意，咱不懂，还是继续吭哧一下 Pandoc 的高级玩法，以及填补一下 LaTeX 中使用字体的巨坑。
+beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc、在设计，选择合适的字体和色彩固然能让幻灯片眼前一亮，不过切忌喧宾夺主。设计，那么高大上的玩意，咱不懂，还是继续吭哧一下 Pandoc 的高级玩法，以及填补一下 LaTeX 中使用字体的巨坑。
 
 
 
@@ -1462,7 +1462,7 @@ pandoc --pdf-engine pdflatex -t beamer \
 
 可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。
 
-有没有一种办法，既不用 unicode-math 宏包，也不用 pdflatex 编译引擎，还支持中文和最全的数学符号？有。
+> **有没有一种办法，既不用 unicode-math 宏包，也不用 pdflatex 编译引擎，还支持中文和最全的数学符号？有。**
 
 回到 4.2.2 节介绍的 Pandoc 内建的 LaTeX 模版，经过一番查找和研读，其中有这么一段逻辑，控制是否加载 unicode-math 宏包，发现 Pandoc 提供 mathspec 变量，它设置为 TRUE，意味着不会加载 unicode-math 宏包，而是加载 mathspec 宏包。
 
