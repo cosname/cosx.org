@@ -1246,22 +1246,57 @@ beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc�
 
 ### Pandoc 之 Lua 外挂
 
+Lua 是一门脚本语言，类似 Python 和 R 语言，Pandoc 内置一个 Lua 解释器，通过 Lua 脚本，可以给 Pandoc 添加外挂，支持用户的个性化需求。
 
-因此接下来要介绍一些 LaTeX 常用技巧与陷阱，以及定制一些功能，使得 Pandoc 认识，并能转化为正确的 LaTeX 代码。
+比如，用户想自定义一些 block，这就可能用上 Lua 外挂，《R Markdown 食谱》中介绍了如何借助[tcolorbox](https://ctan.org/pkg/tcolorbox)宏包[自定义 block](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html)。更加底层一点，介绍如何给 Pandoc 写 Lua 脚本，请看 Pandoc 官网给出了一份详细的材料[Lua 外挂](https://pandoc.org/lua-filters.html)。下面是一个小示例，左侧是 R Markdown 文档内容，右侧是导言区内容，加载了 ctex 宏包，自定义了一个 block 环境。
 
+:::::: {.columns}
+::: {.column width="47.5%" data-latex="{0.475\textwidth}"}
 
-想来想去，好像只剩一种情况还没有介绍，就是使用 Pandoc 支持的 [Lua 外挂](https://pandoc.org/lua-filters.html)，借助 LaTeX 宏包 [tcolorbox](https://ctan.org/pkg/tcolorbox) [自定义 block](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html)，而这当属于忍者玩法了！
+```rmd
+---
+documentclass: beamer
+output: 
+  beamer_presentation: 
+    latex_engine: xelatex
+    theme: metropolis
+    includes:
+      in_header: preamble.tex
+mathspec: true
+---
 
-Christophe Dervieux 
+## 示例
 
-bookdown 提供的特殊语法 `name="bababa"` 仅适用于那些在 beamer （不局限于 beamer 基础文类提供的主题，还包括其它衍生的 beamer 主题，下同）中有定义且被 bookdown 支持的。其它 bookdown 支持的环境只有在 beamer 的导言区先定义才能被使用，如命题 `proposition`，猜想 `conjecture`，练习 `exercise`，假设 `hypothesis`，注记 `remark`，通常这部分东西放在 `preamble.tex` 里，并在 R Markdown 的 YAML 区域引入。另外，还有一些环境只出现在 beamer 文类下，bookdown 对这些是不支持的，比如事实 `fact`，问题 `problem` `block`，示例 `exampleblock` 等。
+::: {.rmdtip data-latex="{提示}"}
+**rmarkdown** 包已经内置了一个
+处理 block 的 Lua 脚本 `latex-div.lua`，
+所以会用就行了。
+:::
 
-创建一个 GIF 图，提供 R Markdown 基础 beamer 文类的模版，包含两三种常用环境，其他环境情况列一个表格。
+::: {.theorem #triangle data-latex="[勾股定理]"}
+$$
+a^2 + b^2 = c^2
+$$
+其中，$a,b,c$ 是直角三角形的三条边长，
+$c$ 是直角三角形的斜边。
+:::
+```
+:::
+::: {.column width="5%" data-latex="{0.05\textwidth}"}
+\ 
+<!-- an empty Div (with a white space), serving as
+a column separator -->
+:::
+::: {.column width="47.5%" data-latex="{0.475\textwidth}"}
+```{verbatim, file="examples/preamble.tex", lang="tex"}
+```
+:::
+::::::
 
-忍者篇介绍萧山主题模版，列出 beamer 中有定义的和 bookdown 支持的。
+幻灯片渲染出来的效果如图\@ref(fig:slide-lua)。
 
-beamer 文档找到各类定理、block 块
-然后如何映射过来
+![(\#fig:slide-lua) 使用 Lua 外挂制作 beamer 幻灯片](https://user-images.githubusercontent.com/12031874/182875614-d0c911f1-b6c0-48a4-8a83-874e0e5a8519.png)
+
 
 
 ### 数学符号与数学字体 {#math-symbols}

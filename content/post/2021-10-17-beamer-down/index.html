@@ -1779,14 +1779,74 @@ without looking like it’s been marked up with tags or formatting instructions.
 <p>beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc、在设计，选择合适的字体和色彩固然能让幻灯片眼前一亮，不过切忌喧宾夺主。设计，那么高大上的玩意，咱不懂，还是继续吭哧一下 Pandoc 的高级玩法，以及填补一下 LaTeX 中使用字体的巨坑。</p>
 <div id="pandoc-之-lua-外挂" class="section level3" number="4.5.1">
 <h3><span class="header-section-number">4.5.1</span> Pandoc 之 Lua 外挂</h3>
-<p>因此接下来要介绍一些 LaTeX 常用技巧与陷阱，以及定制一些功能，使得 Pandoc 认识，并能转化为正确的 LaTeX 代码。</p>
-<p>想来想去，好像只剩一种情况还没有介绍，就是使用 Pandoc 支持的 <a href="https://pandoc.org/lua-filters.html">Lua 外挂</a>，借助 LaTeX 宏包 <a href="https://ctan.org/pkg/tcolorbox">tcolorbox</a> <a href="https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html">自定义 block</a>，而这当属于忍者玩法了！</p>
-<p>Christophe Dervieux</p>
-<p>bookdown 提供的特殊语法 <code>name="bababa"</code> 仅适用于那些在 beamer （不局限于 beamer 基础文类提供的主题，还包括其它衍生的 beamer 主题，下同）中有定义且被 bookdown 支持的。其它 bookdown 支持的环境只有在 beamer 的导言区先定义才能被使用，如命题 <code>proposition</code>，猜想 <code>conjecture</code>，练习 <code>exercise</code>，假设 <code>hypothesis</code>，注记 <code>remark</code>，通常这部分东西放在 <code>preamble.tex</code> 里，并在 R Markdown 的 YAML 区域引入。另外，还有一些环境只出现在 beamer 文类下，bookdown 对这些是不支持的，比如事实 <code>fact</code>，问题 <code>problem</code> <code>block</code>，示例 <code>exampleblock</code> 等。</p>
-<p>创建一个 GIF 图，提供 R Markdown 基础 beamer 文类的模版，包含两三种常用环境，其他环境情况列一个表格。</p>
-<p>忍者篇介绍萧山主题模版，列出 beamer 中有定义的和 bookdown 支持的。</p>
-<p>beamer 文档找到各类定理、block 块
-然后如何映射过来</p>
+<p>Lua 是一门脚本语言，类似 Python 和 R 语言，Pandoc 内置一个 Lua 解释器，通过 Lua 脚本，可以给 Pandoc 添加外挂，支持用户的个性化需求。</p>
+<p>比如，用户想自定义一些 block，这就可能用上 Lua 外挂，《R Markdown 食谱》中介绍了如何借助<a href="https://ctan.org/pkg/tcolorbox">tcolorbox</a>宏包<a href="https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html">自定义 block</a>。更加底层一点，介绍如何给 Pandoc 写 Lua 脚本，请看 Pandoc 官网给出了一份详细的材料<a href="https://pandoc.org/lua-filters.html">Lua 外挂</a>。下面是一个小示例，左侧是 R Markdown 文档内容，右侧是导言区内容，加载了 ctex 宏包，自定义了一个 block 环境。</p>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<pre class="rmd"><code>---
+documentclass: beamer
+output: 
+  beamer_presentation: 
+    latex_engine: xelatex
+    theme: metropolis
+    includes:
+      in_header: preamble.tex
+mathspec: true
+---
+
+## 示例
+
+::: {.rmdtip data-latex=&quot;{提示}&quot;}
+**rmarkdown** 包已经内置了一个
+处理 block 的 Lua 脚本 `latex-div.lua`，
+所以会用就行了。
+:::
+
+::: {.theorem #triangle data-latex=&quot;[勾股定理]&quot;}
+$$
+a^2 + b^2 = c^2
+$$
+其中，$a,b,c$ 是直角三角形的三条边长，
+$c$ 是直角三角形的斜边。
+:::</code></pre>
+</div><div class="column" style="width:5%;">
+<p> 
+<!-- an empty Div (with a white space), serving as
+a column separator --></p>
+</div><div class="column" style="width:47.5%;">
+<pre class="tex"><code>% 处理中文
+\usepackage[UTF8,fontset=fandol]{ctex}
+% 自定义 block
+\usepackage[skins]{tcolorbox}
+% 定义一个颜色
+\definecolor{colortip}{RGB}{81,183,73}
+% block 的全局设置
+\tcbset{
+  colbacktitle=white,
+  enhanced,
+  attach boxed title to top center={yshift=-2mm},
+  colback=white, % 背景色
+  coltext=black, % 文本色
+  leftrule=1mm,
+  rightrule=.25mm,
+  bottomrule=.25mm,
+  toprule=.25mm,
+  boxsep=1pt, % 文字和边框的空隙
+  arc=1pt % 圆角
+}
+% 新建一个 block
+\newtcolorbox{rmdtip}[1]{
+  title=#1,
+  coltitle=colortip,
+  colframe=colortip, % 边框色
+}</code></pre>
+</div>
+</div>
+<p>幻灯片渲染出来的效果如图<a href="#fig:slide-lua">4.28</a>。</p>
+<div class="figure"><span style="display:block;" id="fig:slide-lua"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182875614-d0c911f1-b6c0-48a4-8a83-874e0e5a8519.png" alt="" />
+<p class="caption">图 4.28:  使用 Lua 外挂制作 beamer 幻灯片</p>
+</div>
 </div>
 <div id="math-symbols" class="section level3" number="4.5.2">
 <h3><span class="header-section-number">4.5.2</span> 数学符号与数学字体</h3>
@@ -1810,7 +1870,7 @@ output:
 <li><p>接着，观察编译渲染出来的效果</p>
 <div class="figure"><span style="display:block;" id="fig:slide-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182594626-a9b33ba3-ac8f-4e92-8e1f-4e46d6a27e89.png" alt="" />
-<p class="caption">图 4.28:  含公式的中文 beamer 幻灯片</p>
+<p class="caption">图 4.29:  含公式的中文 beamer 幻灯片</p>
 </div></li>
 <li><p>发现 LaTeX 命令 <code>\boldsymbol</code> 并没有加粗希腊字母 <span class="math inline">\(\theta\)</span>，回退至原英文 R Markdown 文档</p>
 <pre><code>---
@@ -1965,10 +2025,10 @@ output:
 <pre class="bash"><code>pandoc --pdf-engine pdflatex -t beamer \
   slide-math.md -o slide-math.pdf</code></pre>
 <p>确实可以渲染出来加粗效果 <span class="math inline">\(\boldsymbol{\theta}\)</span>，但是，pdflatex 处理中文是很弱的，在 MacOS 和 Ubuntu 等系统上比较麻烦，而且，未来主要方向是 XeLaTeX 引擎。</p>
-<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.29</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">8</a>]</span>。</p>
+<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.30</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">8</a>]</span>。</p>
 <div class="figure"><span style="display:block;" id="fig:slide-unicode-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png" alt="" />
-<p class="caption">图 4.29:  unicode-math 宏包</p>
+<p class="caption">图 4.30:  unicode-math 宏包</p>
 </div>
 <p>那么，问题来了，是不是使用其他数学字体就好了呢？unicode-math 宏包的<a href="http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf">官方文档</a> 对 XITS Math、Fira Math 等字体的数学符号的支持情况有说明，见下表。</p>
 <center>
@@ -2017,7 +2077,7 @@ output:
 <p>RStudio IDE 使用 <a href="https://www.mathjax.org/">MathJaX</a> 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 amsfonts，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？</p>
 <div class="figure"><span style="display:block;" id="fig:rstudio-mathjax"></span>
 <img src="https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png" alt="" />
-<p class="caption">图 4.30:  RStudio IDE 预览加粗的希腊字母<span class="math inline">\(\bm{\Sigma}\)</span></p>
+<p class="caption">图 4.31:  RStudio IDE 预览加粗的希腊字母<span class="math inline">\(\bm{\Sigma}\)</span></p>
 </div>
 </div>
 <blockquote>
@@ -2122,7 +2182,7 @@ mathspec: true
 <p>其中，目录 <code>noto-fonts/</code> 存放宋体 <code>NotoSerifCJKsc-Regular.otf</code> 和黑体 <code>NotoSansCJKsc-Regular.otf</code> 字体文件，与上述 R Markdown 文件放一起。渲染效果如下图</p>
 <div class="figure"><span style="display:block;" id="fig:slide-noto-cjk"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182798667-805a7ed1-2446-42b6-bfd1-1768f7b9d7e1.png" alt="" />
-<p class="caption">图 4.31:  beamer 幻灯片使用 Noto 中文字体</p>
+<p class="caption">图 4.32:  beamer 幻灯片使用 Noto 中文字体</p>
 </div>
 <p>至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！</p>
 </div>
@@ -2226,7 +2286,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <p>编译渲染出来的效果如下图：</p>
 <div class="figure"><span style="display:block;" id="fig:quarto-beamer"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182573047-53be6615-549f-4265-8b57-f9cffcddd91e.gif" alt="" />
-<p class="caption">图 4.32:  Quarto 制作 beamer 幻灯片</p>
+<p class="caption">图 4.33:  Quarto 制作 beamer 幻灯片</p>
 </div>
 <p>目前，发现一些差异点，也可以说是迁移成本。</p>
 <ol style="list-style-type: decimal">
@@ -2257,7 +2317,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <li><code>breezedark</code></li>
 <li><code>haddock</code></li>
 </ul>
-<p>它们也是 R Markdown 内置的一些高亮主题，Quarto 进一步提供了更多的语法高亮主题，比如上图<a href="#fig:quarto-beamer">4.32</a>使用的 <code>github</code>，更多内容见 Quarto 帮助文档<a href="https://quarto.org/docs/output-formats/html-code.html#highlighting">高亮主题</a>。</p>
+<p>它们也是 R Markdown 内置的一些高亮主题，Quarto 进一步提供了更多的语法高亮主题，比如上图<a href="#fig:quarto-beamer">4.33</a>使用的 <code>github</code>，更多内容见 Quarto 帮助文档<a href="https://quarto.org/docs/output-formats/html-code.html#highlighting">高亮主题</a>。</p>
 </div>
 </div>
 <div id="summary" class="section level1" number="5">
