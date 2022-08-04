@@ -13,8 +13,8 @@ tags:
   - gganimate
   - tmap
   - echarts4r
-meta_extra: "审稿：袁凡；主站编辑：黄湘云；微信编辑：xxx"
-forum_id: xxx
+meta_extra: "审稿：袁凡；编辑：赵霖琳"
+forum_id: 423393
 output:
   blogdown::html_page:
     toc: true
@@ -76,8 +76,8 @@ description: "本文面向初学者从零开始制作动态地区分布图，首
 
 div.img, div.figure {
   text-align: center;
-  display: block; 
-  margin-left: auto; 
+  display: block;
+  margin-left: auto;
   margin-right: auto;
 }
 </style>
@@ -133,7 +133,7 @@ div.csl-indent {
 <p>读者可以通过下面的代码一次性把上面的 R 包都安装上：</p>
 <pre class="r"><code>install.packages(c(
   &quot;maps&quot;, &quot;mapproj&quot;, &quot;ggplot2&quot;, &quot;tigris&quot;,
-  &quot;sf&quot;, &quot;gifski&quot;, &quot;showtext&quot;, &quot;ragg&quot;, 
+  &quot;sf&quot;, &quot;gifski&quot;, &quot;showtext&quot;, &quot;ragg&quot;,
   &quot;gganimate&quot;, &quot;tmap&quot;, &quot;echarts4r&quot;
 ))</code></pre>
 </div>
@@ -158,23 +158,23 @@ str(votes.repub)
 <pre class="r"><code>attributes(votes.repub)
 # $dim
 # [1] 50 31
-# 
+#
 # $dimnames
 # $dimnames[[1]]
-#  [1] &quot;Alabama&quot;        &quot;Alaska&quot;         &quot;Arizona&quot;        &quot;Arkansas&quot;      
-#  [5] &quot;California&quot;     &quot;Colorado&quot;       &quot;Connecticut&quot;    &quot;Delaware&quot;      
-#  [9] &quot;Florida&quot;        &quot;Georgia&quot;        &quot;Hawaii&quot;         &quot;Idaho&quot;         
-# [13] &quot;Illinois&quot;       &quot;Indiana&quot;        &quot;Iowa&quot;           &quot;Kansas&quot;        
-# [17] &quot;Kentucky&quot;       &quot;Louisiana&quot;      &quot;Maine&quot;          &quot;Maryland&quot;      
-# [21] &quot;Massachusetts&quot;  &quot;Michigan&quot;       &quot;Minnesota&quot;      &quot;Mississippi&quot;   
-# [25] &quot;Missouri&quot;       &quot;Montana&quot;        &quot;Nebraska&quot;       &quot;Nevada&quot;        
-# [29] &quot;New Hampshire&quot;  &quot;New Jersey&quot;     &quot;New Mexico&quot;     &quot;New York&quot;      
-# [33] &quot;North Carolina&quot; &quot;North Dakota&quot;   &quot;Ohio&quot;           &quot;Oklahoma&quot;      
+#  [1] &quot;Alabama&quot;        &quot;Alaska&quot;         &quot;Arizona&quot;        &quot;Arkansas&quot;
+#  [5] &quot;California&quot;     &quot;Colorado&quot;       &quot;Connecticut&quot;    &quot;Delaware&quot;
+#  [9] &quot;Florida&quot;        &quot;Georgia&quot;        &quot;Hawaii&quot;         &quot;Idaho&quot;
+# [13] &quot;Illinois&quot;       &quot;Indiana&quot;        &quot;Iowa&quot;           &quot;Kansas&quot;
+# [17] &quot;Kentucky&quot;       &quot;Louisiana&quot;      &quot;Maine&quot;          &quot;Maryland&quot;
+# [21] &quot;Massachusetts&quot;  &quot;Michigan&quot;       &quot;Minnesota&quot;      &quot;Mississippi&quot;
+# [25] &quot;Missouri&quot;       &quot;Montana&quot;        &quot;Nebraska&quot;       &quot;Nevada&quot;
+# [29] &quot;New Hampshire&quot;  &quot;New Jersey&quot;     &quot;New Mexico&quot;     &quot;New York&quot;
+# [33] &quot;North Carolina&quot; &quot;North Dakota&quot;   &quot;Ohio&quot;           &quot;Oklahoma&quot;
 # [37] &quot;Oregon&quot;         &quot;Pennsylvania&quot;   &quot;Rhode Island&quot;   &quot;South Carolina&quot;
-# [41] &quot;South Dakota&quot;   &quot;Tennessee&quot;      &quot;Texas&quot;          &quot;Utah&quot;          
-# [45] &quot;Vermont&quot;        &quot;Virginia&quot;       &quot;Washington&quot;     &quot;West Virginia&quot; 
-# [49] &quot;Wisconsin&quot;      &quot;Wyoming&quot;       
-# 
+# [41] &quot;South Dakota&quot;   &quot;Tennessee&quot;      &quot;Texas&quot;          &quot;Utah&quot;
+# [45] &quot;Vermont&quot;        &quot;Virginia&quot;       &quot;Washington&quot;     &quot;West Virginia&quot;
+# [49] &quot;Wisconsin&quot;      &quot;Wyoming&quot;
+#
 # $dimnames[[2]]
 #  [1] &quot;1856&quot; &quot;1860&quot; &quot;1864&quot; &quot;1868&quot; &quot;1872&quot; &quot;1876&quot; &quot;1880&quot; &quot;1884&quot; &quot;1888&quot; &quot;1892&quot;
 # [11] &quot;1896&quot; &quot;1900&quot; &quot;1904&quot; &quot;1908&quot; &quot;1912&quot; &quot;1916&quot; &quot;1920&quot; &quot;1924&quot; &quot;1928&quot; &quot;1932&quot;
@@ -205,7 +205,7 @@ us_votes_repub &lt;- reshape(
   new.row.names = 1:(31 * 50),
   direction = &quot;long&quot;
 )
-# 查看重塑后的数据集 us_votes_repub 
+# 查看重塑后的数据集 us_votes_repub
 head(us_votes_repub)
 #        state state_name year repub_prop
 # 1    alabama    Alabama 1856         NA
@@ -365,8 +365,8 @@ us_state_map &lt;- tigris::shift_geometry(us_state_map, geoid_column = &quot;GEO
 <pre class="r"><code>usa_voting_map_1976 &lt;- merge(
   x = us_state_map,
   y = us_votes_repub_1976,
-  by.x = &quot;NAME&quot;, 
-  by.y = &quot;state_name&quot;, 
+  by.x = &quot;NAME&quot;,
+  by.y = &quot;state_name&quot;,
   all.x = TRUE
 )</code></pre>
 <p>在 sf 包的加持下，地理几何图层 <code>geom_sf()</code> 可以替代 <code>geom_map()</code>，坐标投影图层 <code>coord_sf()</code> 可以替代 <code>coord_map()</code>。整个绘图的过程极大地简化下来了，核心部分只有两行，如下：</p>
@@ -417,8 +417,8 @@ us_state_map &lt;- tigris::shift_geometry(us_state_map, geoid_column = &quot;GEO
 usa_voting_map &lt;- merge(
   x = us_state_map,
   y = us_votes_repub,
-  by.x = &quot;NAME&quot;, 
-  by.y = &quot;state_name&quot;, 
+  by.x = &quot;NAME&quot;,
+  by.y = &quot;state_name&quot;,
   all.x = TRUE
 )
 # year 为 NA 表示没有波多黎各的观测数据，可以去掉
@@ -489,7 +489,7 @@ ggplot() +
 </summary>
 </p>
 <pre class="r"><code>library(tmap)
-tm_shape(usa_voting_map_1976) + 
+tm_shape(usa_voting_map_1976) +
   tm_polygons(
     col = &quot;repub_prop&quot;,    # 数据列
     palette = &quot;RdBu&quot;,      # 调色板
@@ -581,8 +581,8 @@ us_votes_repub |&gt;
   group_by(year) |&gt;
   e_charts(x = state_name, timeline = TRUE) |&gt;
   em_map(map = &quot;USA&quot;) |&gt;
-  e_map(serie = repub_prop, map = &quot;USA&quot;, name = &quot;得票率（%）&quot;) |&gt; 
-  e_visual_map(serie = repub_prop) |&gt; 
+  e_map(serie = repub_prop, map = &quot;USA&quot;, name = &quot;得票率（%）&quot;) |&gt;
+  e_visual_map(serie = repub_prop) |&gt;
   e_tooltip()</code></pre>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:votes-repub-echarts4r-draft"></span>
 <div id="htmlwidget-1" style="width:100%;height:500px;" class="echarts4r html-widget"></div>
@@ -598,9 +598,9 @@ us_votes_repub |&gt;
   formatter = htmlwidgets::JS(&quot;
     function(params){
       if(params.value) {
-        return(&#39;&lt;strong&gt;&#39; + params.name + &#39;&lt;/strong&gt;&#39; + 
+        return(&#39;&lt;strong&gt;&#39; + params.name + &#39;&lt;/strong&gt;&#39; +
                &#39;&lt;br /&gt;&#39; + Math.round(params.value * 100) / 100 + &#39;%&#39;)
-      } else 
+      } else
         return(&#39;数据缺失&#39;)
     }
   &quot;)
@@ -608,7 +608,7 @@ us_votes_repub |&gt;
 <p>百分数处理参考 <a href="https://stackoverflow.com/questions/11832914/">SO 帖子</a>，自定义悬浮提示参考<a href="https://stackoverflow.com/questions/50554304/">SO 帖子</a>。JS 代码中 <code>params.name</code> 对应 <code>e_map()</code> 函数的 <code>name</code> 参数值，<code>params.value</code> 对应 <code>serie</code> 参数值。但是在气泡图中，有点不一样，以 R 内置的数据集 mtcars 为例，<code>params.name</code> 对应 <code>bind</code>，<code>params.value[0]</code> 对应 <code>x</code>， <code>params.value[1]</code> 对应 <code>serie</code> ，<code>params.value[2]</code> 对应 <code>size</code>。不同的图形有不同的对应情况，详见 Apache ECharts <a href="https://echarts.apache.org/en/option.html#tooltip.formatter">官方文档</a>。</p>
 <pre class="r"><code>mtcars |&gt;
   tibble::rownames_to_column(&quot;model&quot;) |&gt;
-  group_by(cyl) |&gt; 
+  group_by(cyl) |&gt;
   e_charts(x = wt) |&gt;
   e_scatter(serie = mpg, size = qsec, bind = model) |&gt;
   e_tooltip(formatter = htmlwidgets::JS(&quot;
@@ -753,8 +753,8 @@ us_votes_repub |&gt;
   ) |&gt;
   htmlwidgets::prependContent(
     htmltools::tags$script(&quot;const projection = d3.geoAlbersUsa();&quot;)
-  ) |&gt; 
-  e_tooltip() |&gt; 
+  ) |&gt;
+  e_tooltip() |&gt;
   e_timeline_opts(
     autoPlay = TRUE,    # 自动播放
     show = TRUE,        # 展示时间轴
@@ -822,17 +822,17 @@ us_votes_repub |&gt;
 # R version 4.2.1 (2022-06-23)
 # Platform: x86_64-apple-darwin17.0 (64-bit)
 # Running under: macOS Big Sur ... 10.16
-# 
+#
 # Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
-# 
+#
 # Package version:
-#   blogdown_1.10   echarts4r_0.4.4 gganimate_1.0.7 ggplot2_3.3.6  
-#   gifski_1.6.6-1  knitr_1.39      mapproj_1.2.8   maps_3.4.0     
-#   ragg_1.2.2      rmarkdown_2.14  sf_1.0-7        showtext_0.9-5 
-#   tigris_1.6.1    tmap_3.3-3     
-# 
+#   blogdown_1.10   echarts4r_0.4.4 gganimate_1.0.7 ggplot2_3.3.6
+#   gifski_1.6.6-1  knitr_1.39      mapproj_1.2.8   maps_3.4.0
+#   ragg_1.2.2      rmarkdown_2.14  sf_1.0-7        showtext_0.9-5
+#   tigris_1.6.1    tmap_3.3-3
+#
 # Pandoc version: 2.18
-# 
+#
 # Hugo version: 0.101.0</code></pre>
 </div>
 <div id="refer" class="section level1" number="7">

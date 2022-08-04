@@ -13,8 +13,8 @@ tags:
   - gganimate
   - tmap
   - echarts4r
-meta_extra: "审稿：袁凡；主站编辑：黄湘云；微信编辑：xxx"
-forum_id: xxx
+meta_extra: "审稿：袁凡；编辑：赵霖琳"
+forum_id: 423393
 output:
   blogdown::html_page:
     toc: true
