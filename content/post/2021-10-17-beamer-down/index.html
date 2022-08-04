@@ -73,22 +73,18 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 <li><a href="#rmarkdown-ninja" id="toc-rmarkdown-ninja"><span class="toc-section-number">4.5</span> R Markdown（忍者篇）</a>
 <ul>
 <li><a href="#pandoc-之-lua-外挂" id="toc-pandoc-之-lua-外挂"><span class="toc-section-number">4.5.1</span> Pandoc 之 Lua 外挂</a></li>
-<li><a href="#细数-latex-字体坑" id="toc-细数-latex-字体坑"><span class="toc-section-number">4.5.2</span> 细数 LaTeX 字体坑</a></li>
+<li><a href="#math-symbols" id="toc-math-symbols"><span class="toc-section-number">4.5.2</span> 数学符号与数学字体</a></li>
+<li><a href="#chinese-document" id="toc-chinese-document"><span class="toc-section-number">4.5.3</span> 文档汉化与中文字体</a></li>
 </ul></li>
 <li><a href="#quarto-制作-beamer-幻灯片" id="toc-quarto-制作-beamer-幻灯片"><span class="toc-section-number">4.6</span> Quarto 制作 beamer 幻灯片</a></li>
 </ul></li>
-<li><a href="#tricks-pitfalls" id="toc-tricks-pitfalls"><span class="toc-section-number">5</span> 技巧陷阱</a>
+<li><a href="#summary" id="toc-summary"><span class="toc-section-number">5</span> 本文小结</a></li>
+<li><a href="#refer" id="toc-refer"><span class="toc-section-number">6</span> 参考文献</a></li>
+<li><a href="#session" id="toc-session"><span class="toc-section-number">7</span> 环境信息</a></li>
+<li><a href="#appendix" id="toc-appendix"><span class="toc-section-number">8</span> 附录</a>
 <ul>
-<li><a href="#math-symbols" id="toc-math-symbols"><span class="toc-section-number">5.1</span> 数学符号与数学字体</a></li>
-<li><a href="#chinese-document" id="toc-chinese-document"><span class="toc-section-number">5.2</span> 文档汉化</a></li>
-</ul></li>
-<li><a href="#summary" id="toc-summary"><span class="toc-section-number">6</span> 本文小结</a></li>
-<li><a href="#refer" id="toc-refer"><span class="toc-section-number">7</span> 参考文献</a></li>
-<li><a href="#session" id="toc-session"><span class="toc-section-number">8</span> 环境信息</a></li>
-<li><a href="#appendix" id="toc-appendix"><span class="toc-section-number">9</span> 附录</a>
-<ul>
-<li><a href="#pdf-文档转-gif-动图" id="toc-pdf-文档转-gif-动图"><span class="toc-section-number">9.1</span> PDF 文档转 GIF 动图</a></li>
-<li><a href="#pdf-文档转-png-图片" id="toc-pdf-文档转-png-图片"><span class="toc-section-number">9.2</span> PDF 文档转 PNG 图片</a></li>
+<li><a href="#pdf-文档转-gif-动图" id="toc-pdf-文档转-gif-动图"><span class="toc-section-number">8.1</span> PDF 文档转 GIF 动图</a></li>
+<li><a href="#pdf-文档转-png-图片" id="toc-pdf-文档转-png-图片"><span class="toc-section-number">8.2</span> PDF 文档转 PNG 图片</a></li>
 </ul></li>
 </ul>
 </div>
@@ -166,6 +162,10 @@ div.figure {
   display: block; 
   margin-left: auto; 
   margin-right: auto;
+}
+
+.columns {
+  display: flex;
 }
 </style>
 <style type="text/css">
@@ -1525,7 +1525,7 @@ knitr::kable(head(iris, 3), caption = &quot;鸢尾花&quot;)
 </div>
 <div id="图表公式交叉引用" class="section level3" number="4.3.5">
 <h3><span class="header-section-number">4.3.5</span> 图、表、公式交叉引用</h3>
-<p>图、表、公式在幻灯片里交叉引用似乎并不常见，原因可能是现场环境下，观众和演讲者未必关注到或记得住编号。在基础的 rmarkdown 包里并不支持交叉引用，它是 bookdown 包里才有的高级功能，毕竟交叉引用在书里是必不可少的。使用起来也不复杂，只需在 R Markdown 文档的 YAML 元数据里将 <code>beamer_presentation2</code> 替换为 <code>bookdown::beamer_presentation2</code>。 下面是一个小示例，在前文基础上添加图、表、公式的交叉引用。</p>
+<p>图、表、公式在幻灯片里交叉引用似乎并不常见，原因可能是现场环境下，观众和演讲者未必关注到或记得住编号。在基础的 rmarkdown 包里并不支持交叉引用，它是 bookdown 包里才有的高级功能，毕竟交叉引用在书里是必不可少的。使用起来也不复杂，只需在 R Markdown 文档的 YAML 元数据里将 <code>beamer_presentation</code> 替换为 <code>bookdown::beamer_presentation2</code>。 下面是一个小示例，在前文基础上添加图、表、公式的交叉引用。</p>
 <pre class="md"><code>---
 title: &quot;R Markdown 制作 beamer 幻灯片&quot;
 author: &quot;黄湘云&quot;
@@ -1784,7 +1784,7 @@ without looking like it’s been marked up with tags or formatting instructions.
 </div>
 <div id="rmarkdown-ninja" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> R Markdown（忍者篇）</h2>
-<p>beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc、在设计，选择合适的字体和色彩固然能让幻灯片眼前一亮，不过切忌宣兵夺主。设计，那么高大上的玩意，咱不懂，还是继续吭哧一下 Pandoc 的高级玩法，以及填补一下 LaTeX 中使用字体的巨坑。</p>
+<p>beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc、在设计，选择合适的字体和色彩固然能让幻灯片眼前一亮，不过切忌喧宾夺主。设计，那么高大上的玩意，咱不懂，还是继续吭哧一下 Pandoc 的高级玩法，以及填补一下 LaTeX 中使用字体的巨坑。</p>
 <div id="pandoc-之-lua-外挂" class="section level3" number="4.5.1">
 <h3><span class="header-section-number">4.5.1</span> Pandoc 之 Lua 外挂</h3>
 <p>因此接下来要介绍一些 LaTeX 常用技巧与陷阱，以及定制一些功能，使得 Pandoc 认识，并能转化为正确的 LaTeX 代码。</p>
@@ -1796,152 +1796,12 @@ without looking like it’s been marked up with tags or formatting instructions.
 <p>beamer 文档找到各类定理、block 块
 然后如何映射过来</p>
 </div>
-<div id="细数-latex-字体坑" class="section level3" number="4.5.2">
-<h3><span class="header-section-number">4.5.2</span> 细数 LaTeX 字体坑</h3>
-<p>至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！</p>
-</div>
-</div>
-<div id="quarto-制作-beamer-幻灯片" class="section level2" number="4.6">
-<h2><span class="header-section-number">4.6</span> Quarto 制作 beamer 幻灯片</h2>
-<p>Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc’s Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc’s Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 <a href="https://quarto.org/docs/presentations/beamer.html">beamer</a> 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图<a href="#fig:rmd-slide-verona">4.27</a>， Quarto 文档如下：</p>
-<details>
-<summary>
-点击查看 Quarto 源文档及设置说明
-</summary>
-<pre class="qmd"><code>---
-title: &quot;Querto 制作 beamer 幻灯片&quot;
-subtitle: &quot;基于 beamer 主题 Verona&quot;
-lang: zh # 本土化语言
-author:
-  - 张三
-  - 李四
-institute: &quot;xxx 大学学院&quot;
-date: &quot;`r Sys.Date()`&quot;
-format: 
-  beamer: 
-    theme: Verona
-header-includes:
-  # - \logo{\includegraphics[height=0.8cm]{`r file.path(R.home(&quot;doc&quot;), &quot;html&quot;, &quot;Rlogo&quot;)`}} # 插入 Logo
-  - \usepackage{pifont} # 提供 \ding 
-  - \usepackage{iitem} # 修改列表样式
-  - \setbeamertemplate{itemize item}{\ding{47}}
-  - \setbeamertemplate{itemize subitem}{\ding{46}}
-  - \usepackage[UTF8,fontset=fandol]{ctex} # 汉化文档
-themeoptions: 
-  - colorblocks # 彩色的 block
-  - showheader  # 展示页面顶部导航
-  - red   # Verona 主题为红色风格
-cite-method: natbib   # 参考文献处理方法
-highlight-style: github # 代码语法高亮
-biblio-style: apalike # 参考文献样式
-natbiboptions: &quot;authoryear,round&quot; # 作者-年份样式，以圆括号包裹
-bibliography: 
-  - packages.bib # 文献
-link-citations: true   # 添加文献超链接
-section-titles: false  # 不显示一级标题
-biblio-title: 参考文献 # 文献页添加标题
-toc: true        # 添加幻灯片目录
-toc-title: 目录  # 目录页添加标题
-colorlinks: true # 给链接添加颜色
-mathspec: true   # mathspec 处理数学公式符号
----
-
-# 基础篇
-
-## 介绍
-
-::: {.quotation data-latex=&quot;[John Gruber]&quot;}
-A Markdown-formatted document should be publishable as-is, as plain text, 
-without looking like it’s been marked up with tags or formatting instructions.  
-:::
-
-数学公式还是用 LaTeX 排版的好， 
-$\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
-$\mathcal{A}$ 是普通字母 $A$ 的花体形式。
-
-```{r}
-#| echo: true
-
-rnorm(4)
-```
-
-![R 语言徽标](`r file.path(R.home(&quot;doc&quot;), &quot;html&quot;, &quot;Rlogo&quot;)`){#fig-logo width=10% }
-
-上 @fig-logo 来自 R 语言官网 &lt;https://cran.r-project.org/&gt;。
-
-# 高级篇
-
-## 自定义
-
-::: {.exampleblock data-latex=&quot;{提示}&quot;}
-记得安装一些 LaTeX 宏包，如果不记得也没关系，
-大多数情况下 tinytex [@Xie2019] 会找齐依赖安装好，只是初次运行会有点慢！
-
-```r
-tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-verona&quot;))
-```
-:::
-
-:::::::::::::: {.columns}
-::: {.column width=&quot;50%&quot;}
-无序列表
-
-- 条目 1
-- 条目 2
-:::
-::: {.column width=&quot;50%&quot;}
-有序列表
-
-1. 条目 1
-1. 条目 2
-:::
-::::::::::::::</code></pre>
-</details>
-<p>编译渲染出来的效果如下图：</p>
-<div class="figure"><span style="display:block;" id="fig:quarto-beamer"></span>
-<img src="https://user-images.githubusercontent.com/12031874/182573047-53be6615-549f-4265-8b57-f9cffcddd91e.gif" alt="" />
-<p class="caption">图 4.28:  Quarto 制作 beamer 幻灯片</p>
-</div>
-<p>目前，发现一些差异点，也可以说是迁移成本。</p>
-<ol style="list-style-type: decimal">
-<li><p>功能方面：</p>
-<ol style="list-style-type: decimal">
-<li><p>Quarto 暂不支持在导言区 <code>header-includes:</code> 混入 R 代码。</p></li>
-<li><p>不再需要 rmarkdown 和 bookdown，如果使用 R 语言，则需要 knitr。</p></li>
-<li><p>添加变量 <code>lang:</code> 统一处理本土化语言。</p></li>
-</ol></li>
-<li><p>使用方式：</p>
-<ol style="list-style-type: decimal">
-<li><p>参数类型为布尔值的，一律为 <code>true/false</code> 不可以 <code>yes/no</code>。</p></li>
-<li><p>语法高亮参数 <code>highlight:</code> 改为 <code>highlight-style:</code>。</p></li>
-<li><p>控制文档输出的参数 <code>output:</code> 改为 <code>format:</code>。</p></li>
-<li><p>参考文献处理方法 <code>citation_package</code> 改为 <code>cite-method:</code>。</p></li>
-<li><p>交叉引用的方式 ，如引用图片<code>\@ref(fig:quarto-beamer)</code> 变为 <code>@fig-quarto-beamer</code>，引用表格、公式与之类似。</p></li>
-</ol></li>
-</ol>
-<p>更多细节差异，见 Quarto 官网对 <a href="https://quarto.org/docs/presentations/beamer.html">Beamer</a>格式的介绍。</p>
-<p>关于 Quarto 如何站在 Pandoc 这个巨人的肩膀上，下面就语法高亮为例说明。Pandoc 支持 <strong>147</strong> 种编程语言的语法高亮，通过命令 <code>pandoc --list-highlight-languages</code> 可以查看到。Pandoc 原生支持八种语法高亮主题，可用命令 <code>pandoc --list-highlight-styles</code> 查看，分别是：</p>
-<ul>
-<li><code>pygments</code></li>
-<li><code>tango</code></li>
-<li><code>espresso</code></li>
-<li><code>zenburn</code></li>
-<li><code>kate</code></li>
-<li><code>monochrome</code></li>
-<li><code>breezedark</code></li>
-<li><code>haddock</code></li>
-</ul>
-<p>它们也是 R Markdown 内置的一些高亮主题，Quarto 进一步提供了更多的语法高亮主题，比如上图<a href="#fig:quarto-beamer">4.28</a>使用的 <code>github</code>，更多内容见 Quarto 帮助文档<a href="https://quarto.org/docs/output-formats/html-code.html#highlighting">高亮主题</a>。</p>
-</div>
-</div>
-<div id="tricks-pitfalls" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> 技巧陷阱</h1>
-<div id="math-symbols" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> 数学符号与数学字体</h2>
+<div id="math-symbols" class="section level3" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> 数学符号与数学字体</h3>
 <p>首先来说说数学符号和数学字体的坑，毕竟，beamer 这种学术型幻灯片很难离开数学公式。LaTeX 社区专门弄了一个 400 多页的大型文档《The Comprehensive LATEX Symbol List – Symbols accessible from LATEX》<span class="citation">[<a href="#ref-Pakin2021" role="doc-biblioref">3</a>]</span>，其中，数学符号的篇幅高达 90 多页，涉及数十个 LaTeX 宏包，可见坑不是一般的深。在 R Markdown 中，踩中此坑最常见的姿势是这样的。</p>
 <ol style="list-style-type: decimal">
 <li><p>根据 ctex 宏包的帮助文档指示，汉化文档直接用 <code>ctexbook</code>、 <code>ctexart</code> 或 <code>ctexbeamer</code> 等文类。</p></li>
-<li><p>因此，把 R Markdown 文档默认的文类设置从 <code>documentclass: beamer</code> 改为<code>documentclass: ctexbeamer</code>，改完后 R Markdown 文档长这个样子：</p>
+<li><p>因此，把 R Markdown 文档默认的文类设置从 <code>documentclass: beamer</code> 改为 <code>documentclass: ctexbeamer</code>，改完后 R Markdown 文档长这个样子：</p>
 <pre><code>---
 documentclass: ctexbeamer
 output: 
@@ -1958,7 +1818,7 @@ output:
 <li><p>接着，观察编译渲染出来的效果</p>
 <div class="figure"><span style="display:block;" id="fig:slide-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182594626-a9b33ba3-ac8f-4e92-8e1f-4e46d6a27e89.png" alt="" />
-<p class="caption">图 5.1:  含公式的中文 beamer 幻灯片</p>
+<p class="caption">图 4.28:  含公式的中文 beamer 幻灯片</p>
 </div></li>
 <li><p>发现 LaTeX 命令 <code>\boldsymbol</code> 并没有加粗希腊字母 <span class="math inline">\(\theta\)</span>，回退至原英文 R Markdown 文档</p>
 <pre><code>---
@@ -2109,16 +1969,14 @@ output:
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi</code></pre>
-<p>上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包，问题就出在 unicode-math 宏包身上，它会直接忽视命令 <code>\boldsymbol</code>，加粗希腊字母，它只认 <code>\symbf</code>。</p>
-<p>也许已经有人看出来了，上面是个 <code>IF-ELSE</code> 的逻辑，可以选用 pdflatex 编译呀！比如这样：</p>
+<p>上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包。问题就出在 unicode-math 宏包身上，它会直接忽视命令 <code>\boldsymbol</code>，加粗希腊字母，它只认 <code>\symbf</code>。也许有人已经看出来了，上面的代码块是个 <code>IF-ELSE</code> 的逻辑，可以选用 pdflatex 引擎编译呀！比如这样：</p>
 <pre class="bash"><code>pandoc --pdf-engine pdflatex -t beamer \
   slide-math.md -o slide-math.pdf</code></pre>
 <p>确实可以渲染出来加粗效果 <span class="math inline">\(\boldsymbol{\theta}\)</span>，但是，pdflatex 处理中文是很弱的，在 MacOS 和 Ubuntu 等系统上比较麻烦，而且，未来主要方向是 XeLaTeX 引擎。</p>
-<p>本以为问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。</p>
-<p>可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">5.2</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">4</a>]</span>。</p>
+<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.29</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">4</a>]</span>。</p>
 <div class="figure"><span style="display:block;" id="fig:slide-unicode-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png" alt="" />
-<p class="caption">图 5.2:  unicode-math 宏包</p>
+<p class="caption">图 4.29:  unicode-math 宏包</p>
 </div>
 <p>那么，问题来了，是不是使用其他数学字体就好了呢？unicode-math 宏包的<a href="http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf">官方文档</a> 对 XITS Math、Fira Math 等字体的数学符号的支持情况有说明，见下表。</p>
 <center>
@@ -2162,9 +2020,18 @@ output:
 </tr>
 </tbody>
 </table>
-<p>可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。</p>
-<p>有没有一种办法，既不用 unicode-math 宏包，也不用 pdflatex 编译引擎，还支持中文和最全的数学符号？有。</p>
-<p>回到 4.2.2 节介绍的 Pandoc 内建的 LaTeX 模版，经过一番查找和研读，其中有这么一段逻辑，控制是否加载 unicode-math 宏包，发现 Pandoc 提供 mathspec 变量，它设置为 TRUE，意味着不会加载 unicode-math 宏包，而是加载 mathspec 宏包。</p>
+<p>可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。目前，仅有的数学字体支持的数学符号还不太全，但 unicode-math 未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 <code>\mscrA</code> 和 <code>\BbbA</code> 分别等价于 <code>\mathscr{A}</code> 和 <code>\mathbb{A}</code>，而不需要额外加载 <strong>amsfonts</strong> 和 <strong>mathrsfs</strong> 宏包。</p>
+<div class="rmdtip">
+<p>RStudio IDE 使用 <a href="https://www.mathjax.org/">MathJaX</a> 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 amsfonts，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！</p>
+<div class="figure"><span style="display:block;" id="fig:rstudio-mathjax"></span>
+<img src="https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png" alt="" />
+<p class="caption">图 4.30:  RStudio IDE 预览加粗的希腊字母<span class="math inline">\(\bm{\Sigma}\)</span></p>
+</div>
+</div>
+<blockquote>
+<p><strong>有没有一种办法，既不用 unicode-math 宏包，也不用 pdflatex 编译引擎，还支持中文和最全的数学符号？有。</strong></p>
+</blockquote>
+<p>回到 4.2.2 节介绍的 Pandoc 内建的 LaTeX 模版，经过一番查找和研读，其中有下面一段逻辑，控制是否加载 unicode-math 宏包，发现 Pandoc 提供 <code>mathspec</code> 变量，它设置为 <code>true</code>，意味着不会加载 unicode-math 宏包，而是加载 mathspec 宏包。</p>
 <pre><code>$if(mathspec)$
   \ifXeTeX
     \usepackage{mathspec}
@@ -2174,116 +2041,243 @@ output:
 $else$
   \usepackage{unicode-math}
 $endif$</code></pre>
-<p>Pandoc 内建的 LaTeX 模版<strong>默认</strong>调用 <strong>unicode-math</strong> 宏包的，因此，编译 R Markdown 的时候，启用<a href="https://pandoc.org/MANUAL.html#using-variables-in-templates">LaTeX 变量</a> <code>mathspec: yes</code>，加载 <strong>amsfonts</strong> 和 <strong>mathrsfs</strong> 宏包<span class="citation">[<a href="#ref-Xie2020" role="doc-biblioref">5</a>]</span>。</p>
-<p>目前，仅有的数学字体支持的数学符号还不太全，但未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 <code>\mscrA</code> 和 <code>\BbbA</code> 分别等价于 <code>\mathscr{A}</code> 和 <code>\mathbb{A}</code>。</p>
-<pre class="md"><code>---
-title: &quot;Untitled&quot;
-mathspec: yes
+<p>Pandoc 内建的 LaTeX 模版<strong>默认</strong>调用 <strong>unicode-math</strong> 宏包的，因此，编译 R Markdown 的时候，启用<a href="https://pandoc.org/MANUAL.html#using-variables-in-templates">LaTeX 变量</a> <code>mathspec: true</code>。</p>
+<div class="columns">
+<div class="column" style="width:47.5%;">
+<pre class="rmd"><code>---
+documentclass: beamer
 output: 
-  pdf_document: 
+  beamer_presentation: 
     latex_engine: xelatex
-    template: null
-    extra_dependencies:
-      ctex:
-       - fontset=fandol
-      amsfonts: null
-      mathrsfs: null
+mathspec: true # 设置 mathspec 变量
 ---
 
-拿一些数学符号举个例子，如 `\mathcal{A},\mathscr{A}` 
-和 `\mathbb{A}`会被依次渲染成
+## Example
 
-$$
-\mathcal{A},\mathscr{A},\mathbb{A}
-$$</code></pre>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/12031874/135605483-1cfe1c86-1567-495e-b3a0-27ff12a72b7f.png" alt="" />
-<p class="caption">mathspec</p>
+\begin{align}
+    \boldsymbol{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}</code></pre>
+</div><div class="column" style="width:5%;">
+<p> 
+<!-- an empty Div (with a white space), serving as
+a column separator --></p>
+</div><div class="column" style="width:47.5%;">
+<p>将下面的 Markdown 文本保存为 <code>slide-math.md</code></p>
+<pre class="md"><code>## Example
+
+\begin{align}
+    \boldsymbol{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}</code></pre>
+<p>调用如下命令可获得类似的效果</p>
+<pre class="bash"><code>pandoc -t beamer --standalone \
+  --variable mathspec=true \
+  slide-math.md -o slide-math.tex</code></pre>
 </div>
-<div class="rmdnote">
-<p><a href="https://ctan.org/pkg/fandol">fandol 字体</a>支持的汉字有限，比如<a href="https://bjt.name/">刘思喆</a>的「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说<a href="https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84">许宝騄先生</a>的「騄」字了。</p>
+</div>
+<p>最后一步汉化，只需在导言区加载 ctex 宏包，即在 R Markdown 文档的 YAML 区域添加如下两行。</p>
+<pre><code>header-includes:
+  - \usepackage[UTF8,fontset=fandol]{ctex}</code></pre>
+<div class="rmdwarn">
+<p>以上关于数学符号与数学字体的坑表象很多，仅统计之都论坛就看到不少：</p>
+<p>关于数学字体的：</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://d.cosx.org/d/422613">用 CTeX 模板生成中文 PDF 时，LaTeX 的加粗命令 <code>\mathbf</code> 或 <code>\bf</code> 不起作用</a></li>
+<li><a href="https://d.cosx.org/d/419931">Pandoc 的 LaTeX 模板关于数学公式的设置问题？</a></li>
+<li><a href="https://d.cosx.org/d/421770">TinyTex 生成中文 PDF 时出现字体缺失报错，如何安装相应字体？</a></li>
+<li>……</li>
+</ol>
+<p>当然，还有关于中文字体的：</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://d.cosx.org/d/421834">Rmd 用 Knit to PDF (Beamer) 生成包含中文的演示文稿时弹出关于 CJK 的警告</a></li>
+<li><a href="https://d.cosx.org/d/422087">Ubuntu 下 R Markdown 生成 PDF 文档里部分中文字符的乱码问题</a></li>
+<li><a href="https://d.cosx.org/d/422343">R Markdown 文档生成的 PDF 文档里中文不显示</a></li>
+<li>……</li>
+</ol>
+</div>
+<p>下面继续谈谈文档汉化与中文字体的坑。</p>
+</div>
+<div id="chinese-document" class="section level3" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> 文档汉化与中文字体</h3>
+<p>在前面汉化文档时，笔者推荐往导言区加载 ctex 宏包，同时设置字体为 <a href="https://ctan.org/pkg/fandol">fandol 字体</a>。</p>
+<pre class="tex"><code>% LaTeX 的导言区添加一行
+\usepackage[UTF8,fontset=fandol]{ctex}</code></pre>
+<p>有一点不足，<a href="https://ctan.org/pkg/fandol">fandol 字体</a>支持的汉字有限，比如「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说<a href="https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84">许宝騄先生</a>的「騄」字了。</p>
+<p>大部分情况下，你可能遇不到这些不常用的字，但也保不齐，此时，开源替代的中文字体有 Adobe 的<a href="https://github.com/adobe-fonts">思源字体</a>或 Google 的<a href="https://github.com/googlefonts/noto-cjk">Noto 字体</a>。R Markdown 中使用 Noto 宋体和 Noto 黑体的示例如下：</p>
+<pre class="rmd"><code>---
+documentclass: beamer
+CJKmainfont: NotoSerifCJKsc-Regular
+CJKoptions: 
+ - Path=noto-fonts/
+ - BoldFont=NotoSansCJKsc-Regular
+ - Extension = .otf
+output: 
+  beamer_presentation: 
+    latex_engine: xelatex
+mathspec: true
+---
+
+## 示例
+
+- 正常宋体 示例
+- 加粗黑体 **示例**
+
+\begin{align}
+    \boldsymbol{\theta} &amp;= (1, 2, 3)^\top \\
+        \theta_0 &amp;= 1
+\end{align}</code></pre>
+<p>其中，目录 <code>noto-fonts/</code> 存放宋体 <code>NotoSerifCJKsc-Regular.otf</code> 和黑体 <code>NotoSansCJKsc-Regular.otf</code> 字体文件，与上述 R Markdown 文件放一起。渲染效果如下图</p>
+<div class="figure"><span style="display:block;" id="fig:slide-noto-cjk"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182798667-805a7ed1-2446-42b6-bfd1-1768f7b9d7e1.png" alt="" />
+<p class="caption">图 4.31:  beamer 幻灯片使用 Noto 中文字体</p>
+</div>
+<p>至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！</p>
 </div>
 </div>
-<div id="chinese-document" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> 文档汉化</h2>
-<p>最近统计之都论坛里又有人陆续<a href="https://d.cosx.org/d/422613">踩</a>到我以前<a href="https://d.cosx.org/d/419931">踩</a>过的<a href="https://d.cosx.org/d/421770">坑 1</a>、<a href="https://d.cosx.org/d/421834">坑 2</a>、<a href="https://d.cosx.org/d/422087">坑 3</a>、<a href="https://d.cosx.org/d/422343">坑 4</a>，都是中文 R Markdown 文档相关， 这里不妨简单说一下。</p>
-<pre class="md"><code>---
-title: &quot;测试&quot;
+<div id="quarto-制作-beamer-幻灯片" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Quarto 制作 beamer 幻灯片</h2>
+<p>Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc’s Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc’s Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 <a href="https://quarto.org/docs/presentations/beamer.html">beamer</a> 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图<a href="#fig:rmd-slide-verona">4.27</a>， Quarto 文档如下：</p>
+<details>
+<summary>
+点击查看 Quarto 源文档及设置说明
+</summary>
+<pre class="qmd"><code>---
+title: &quot;Quarto 制作 beamer 幻灯片&quot;
+subtitle: &quot;基于 beamer 主题 Verona&quot;
+lang: zh # 本土化语言
 author:
-  - 黄湘云
-documentclass: ctexart
-keywords:
-  - rmarkdown
-  - rticles
-  - LaTeX
-output:
-  rticles::ctex:
-    fig_caption: yes
-    number_sections: yes
-    toc: yes
-geometry: 
-  - tmargin=1.8cm
-  - bmargin=1.8cm
-  - lmargin=2.1cm
-  - rmargin=2.1cm  
+  - 张三
+  - 李四
+institute: &quot;xxx 大学学院&quot;
+date: &quot;`r Sys.Date()`&quot;
+format: 
+  beamer: 
+    theme: Verona
+header-includes:
+  # - \logo{\includegraphics[height=0.8cm]{`r file.path(R.home(&quot;doc&quot;), &quot;html&quot;, &quot;Rlogo&quot;)`}} # 插入 Logo
+  - \usepackage{pifont} # 提供 \ding 
+  - \usepackage{iitem} # 修改列表样式
+  - \setbeamertemplate{itemize item}{\ding{47}}
+  - \setbeamertemplate{itemize subitem}{\ding{46}}
+  - \usepackage[UTF8,fontset=fandol]{ctex} # 汉化文档
+themeoptions: 
+  - colorblocks # 彩色的 block
+  - showheader  # 展示页面顶部导航
+  - red   # Verona 主题为红色风格
+cite-method: natbib   # 参考文献处理方法
+highlight-style: github # 代码语法高亮
+biblio-style: apalike # 参考文献样式
+natbiboptions: &quot;authoryear,round&quot; # 作者-年份样式，以圆括号包裹
+bibliography: 
+  - packages.bib # 文献
+link-citations: true   # 添加文献超链接
+section-titles: false  # 不显示一级标题
+biblio-title: 参考文献 # 文献页添加标题
+toc: true        # 添加幻灯片目录
+toc-title: 目录  # 目录页添加标题
+colorlinks: true # 给链接添加颜色
+mathspec: true   # mathspec 处理数学公式符号
 ---
 
-# 数学公式 {#math}
+# 基础篇
 
-$\mathbf{\Sigma}$</code></pre>
-<p>这位坛友准备在公式环境里用 <code>\mathbf</code> 命令加粗希腊字母 <code>$\Sigma$</code>，这本身是不行的，它只能用来加粗普通的字母，如 <code>$A,B,C,a,b,c,X,Y,Z,x,y,z$</code>。加粗希腊字母，需要 <code>\boldsymbol</code> 命令，而 <code>rticles::ctex</code> 中文模版，在默认设置下，会使用 Pandoc 内建 LaTeX 模版，调用 XeLaTeX 编译，加载 <strong>unicode-math</strong> 宏包处理数学公式，此时，希腊字母对 <code>\boldsymbol</code> 命令免疫，要加粗特效，必须用 <strong>unicode-math</strong> 的专用命令 <code>\symbf</code>。</p>
-<p>如果准备在文中统一采用 <strong>unicode-math</strong> 处理数学公式，那么，把 <code>\mathbf</code> 换成 <code>\symbf</code>，问题即告结束。但是，目前排版数学公式比较通用的方式不是 <strong>unicode-math</strong>，还是原来的 amsmath 及其扩展宏包。如何转过去呢？其实，很简单，在 YAML 里添加一行 <code>mathspec: yes</code> 即可，Pandoc 的 LaTeX 模版支持原先的方案，此时编译还是会报错，报错的主要信息如下：</p>
-<pre><code>! LaTeX Error: Option clash for package fontspec.</code></pre>
-<p>这是因为 ctexart 文类自动加载了 fontspec 宏包，而它与 mathspec 宏包冲突，所以要替换为原始的 article 文类，同时加载 ctex 宏包处理中文字符，这里采用 fandol 中文字体作为演示，所以目前最佳的解决方案如下：</p>
-<pre class="default"><code>---
-title: &quot;测试&quot;
-author:
-  - 无
-documentclass: article
-mathspec: yes
-keywords:
-  - 无
-output:
-  rticles::ctex:
-    fig_caption: yes
-    number_sections: yes
-    toc: yes
-    template: null
-    extra_dependencies:
-      ctex:
-       - fontset=fandol
-geometry: 
-  - tmargin=1.8cm
-  - bmargin=1.8cm
-  - lmargin=2.1cm
-  - rmargin=2.1cm  
----
+## 介绍
 
+::: {.quotation data-latex=&quot;[John Gruber]&quot;}
+A Markdown-formatted document should be publishable as-is, as plain text, 
+without looking like it’s been marked up with tags or formatting instructions.  
+:::
+
+数学公式还是用 LaTeX 排版的好， 
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
-$\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
-<div class="rmdtip">
-<p>RStudio IDE 使用 <a href="https://www.mathjax.org/">MathJaX</a> 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 amsfonts，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！</p>
-<div class="figure">
-<img src="https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png" alt="" />
-<p class="caption">rstudio-mathjax</p>
+$\mathcal{A}$ 是普通字母 $A$ 的花体形式。
+
+```{r}
+#| echo: true
+
+rnorm(4)
+```
+
+![R 语言徽标](`r file.path(R.home(&quot;doc&quot;), &quot;html&quot;, &quot;Rlogo&quot;)`){#fig-logo width=10% }
+
+上 @fig-logo 来自 R 语言官网 &lt;https://cran.r-project.org/&gt;。
+
+# 高级篇
+
+## 自定义
+
+::: {.exampleblock data-latex=&quot;{提示}&quot;}
+记得安装一些 LaTeX 宏包，如果不记得也没关系，
+大多数情况下 tinytex [@Xie2019] 会找齐依赖安装好，只是初次运行会有点慢！
+
+```r
+tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-verona&quot;))
+```
+:::
+
+:::::::::::::: {.columns}
+::: {.column width=&quot;50%&quot;}
+无序列表
+
+- 条目 1
+- 条目 2
+:::
+::: {.column width=&quot;50%&quot;}
+有序列表
+
+1. 条目 1
+1. 条目 2
+:::
+::::::::::::::</code></pre>
+</details>
+<p>编译渲染出来的效果如下图：</p>
+<div class="figure"><span style="display:block;" id="fig:quarto-beamer"></span>
+<img src="https://user-images.githubusercontent.com/12031874/182573047-53be6615-549f-4265-8b57-f9cffcddd91e.gif" alt="" />
+<p class="caption">图 4.32:  Quarto 制作 beamer 幻灯片</p>
+</div>
+<p>目前，发现一些差异点，也可以说是迁移成本。</p>
+<ol style="list-style-type: decimal">
+<li><p>功能方面：</p>
+<ol style="list-style-type: decimal">
+<li><p>Quarto 暂不支持在导言区 <code>header-includes:</code> 混入 R 代码。</p></li>
+<li><p>不再需要 rmarkdown 和 bookdown，如果使用 R 语言，则需要 knitr。</p></li>
+<li><p>添加变量 <code>lang:</code> 统一处理本土化语言。</p></li>
+</ol></li>
+<li><p>使用方式：</p>
+<ol style="list-style-type: decimal">
+<li><p>参数类型为布尔值的，一律为 <code>true/false</code> 不可以 <code>yes/no</code>。</p></li>
+<li><p>语法高亮参数 <code>highlight:</code> 改为 <code>highlight-style:</code>。</p></li>
+<li><p>控制文档输出的参数 <code>output:</code> 改为 <code>format:</code>。</p></li>
+<li><p>参考文献处理方法 <code>citation_package</code> 改为 <code>cite-method:</code>。</p></li>
+<li><p>交叉引用的方式 ，如引用图片<code>\@ref(fig:quarto-beamer)</code> 变为 <code>@fig-quarto-beamer</code>，引用表格、公式与之类似。</p></li>
+</ol></li>
+</ol>
+<p>更多细节差异，见 Quarto 官网对 <a href="https://quarto.org/docs/presentations/beamer.html">Beamer</a>格式的介绍。</p>
+<p>关于 Quarto 如何站在 Pandoc 这个巨人的肩膀上，下面就语法高亮为例说明。Pandoc 支持 <strong>147</strong> 种编程语言的语法高亮，通过命令 <code>pandoc --list-highlight-languages</code> 可以查看到。Pandoc 原生支持八种语法高亮主题，可用命令 <code>pandoc --list-highlight-styles</code> 查看，分别是：</p>
+<ul>
+<li><code>pygments</code></li>
+<li><code>tango</code></li>
+<li><code>espresso</code></li>
+<li><code>zenburn</code></li>
+<li><code>kate</code></li>
+<li><code>monochrome</code></li>
+<li><code>breezedark</code></li>
+<li><code>haddock</code></li>
+</ul>
+<p>它们也是 R Markdown 内置的一些高亮主题，Quarto 进一步提供了更多的语法高亮主题，比如上图<a href="#fig:quarto-beamer">4.32</a>使用的 <code>github</code>，更多内容见 Quarto 帮助文档<a href="https://quarto.org/docs/output-formats/html-code.html#highlighting">高亮主题</a>。</p>
 </div>
 </div>
-<p>再次强行回到本文主题，上述巨坑在 article 普通文类下介绍，而不是在 beamer 幻灯片主题下介绍也是有重要原因的：其一，我见过的大部分坑的背景都是 article 文类。其二，这个坑并不会随文类切换到 beamer 而有所不同！其三，若大家再遇到类似坑不妨也切换到 article 文类，这个是最基础的，褪去尽可能多的外部依赖，方便去根因。</p>
-<div class="rmdnote">
-<p>眼力犀利的读者可能已经看出上面模版中使用 <strong>unicode-math</strong> 处理数学公式，导致符号样式怪怪的，<code>\boldsymbol</code> 也无法加粗希腊字母，这里留个疑问，且看下回分解。</p>
-</div>
-</div>
-</div>
-<div id="summary" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> 本文小结</h1>
+<div id="summary" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> 本文小结</h1>
 <p>Pandoc’s Markdown 制作 beamer 的过程，R Markdown 制作 beamer 的过程，提取共同特点推广至其它文类，比如文章 article / book，学会了 beamer 文类，也就学会了其他文类，也学会了其它格式的幻灯片制作，比如 Quarto 制作 beamer 幻灯片</p>
 <p>制作 beamer 一方面是学习 LaTeX，
 如果用 Markdown 来制作，一方面是学习 Pandoc 和 LaTeX，
 如果需要用到 R 语言，需要再学习一些扩展包，
 如果 Quarto 来制作，一方面是学习 Pandoc 和 LaTeX 和 R 语言</p>
 </div>
-<div id="refer" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> 参考文献</h1>
+<div id="refer" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> 参考文献</h1>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-tinytex2019" class="csl-entry">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2019). <a href="https://tug.org/TUGboat/Contents/contents40-1.html">TinyTeX: A lightweight, cross-platform, and easy-to-maintain LaTeX distribution based on TeX live</a>. <em>TUGboat</em> 30–2.</div>
@@ -2297,17 +2291,14 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <div id="ref-Zeng2020" class="csl-entry">
 <div class="csl-left-margin">[4] </div><div class="csl-right-inline"><span class="smallcaps">曾祥东</span>. (2020). <a href="https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/">在 LATEX 中使用 OpenType 字体（三）</a>.</div>
 </div>
-<div id="ref-Xie2020" class="csl-entry">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Dervieux</span>, C. and <span class="smallcaps">Riederer</span>, E. (2020). <em><a href="https://bookdown.org/yihui/rmarkdown-cookbook">R markdown cookbook</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
-</div>
 <div id="ref-Xie2017" class="csl-entry">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Hill</span>, A. P. and <span class="smallcaps">Thomas</span>, A. (2017). <em><a href="https://bookdown.org/yihui/blogdown/">Blogdown: Creating websites with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Hill</span>, A. P. and <span class="smallcaps">Thomas</span>, A. (2017). <em><a href="https://bookdown.org/yihui/blogdown/">Blogdown: Creating websites with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
 </div>
 </div>
 </div>
-<div id="session" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> 环境信息</h1>
-<p>在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 <strong>blogdown</strong> <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">6</a>]</span>构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。</p>
+<div id="session" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> 环境信息</h1>
+<p>在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 <strong>blogdown</strong> <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">5</a>]</span>构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。</p>
 <pre class="r"><code>xfun::session_info(c(
   &quot;tinytex&quot;, &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;bookdown&quot;, &quot;blogdown&quot;, &quot;binb&quot;
 ), dependencies = FALSE)</code></pre>
@@ -2328,12 +2319,12 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 ## 
 ## Hugo version: 0.101.0</code></pre>
 </div>
-<div id="appendix" class="section level1" number="9">
-<h1><span class="header-section-number">9</span> 附录</h1>
+<div id="appendix" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> 附录</h1>
 <!-- Windows 环境下安装和使用字体 -->
 <p>本文写作过程中遇到一些有用的小工具，比如将 PDF 文档转为 PNG 图片或 GIF 动图。</p>
-<div id="pdf-文档转-gif-动图" class="section level2" number="9.1">
-<h2><span class="header-section-number">9.1</span> PDF 文档转 GIF 动图</h2>
+<div id="pdf-文档转-gif-动图" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> PDF 文档转 GIF 动图</h2>
 <p>将 PDF 格式的多页幻灯片转为 GIF 动图可以借助 <a href="https://imagemagick.org">ImageMagick</a> 一行命令搞定：</p>
 <pre class="bash"><code>convert -delay 250 -density 300x300 -geometry 960x720 beamer.pdf beamer.gif</code></pre>
 <p>值得注意的是在 Ubuntu 20.04 LTS 系统环境下，安装完 ImageMagick 还需执行如下命令：</p>
@@ -2348,8 +2339,8 @@ img %&gt;%
   image_animate(delay = 250) %&gt;% 
   image_write(&quot;beamer.gif&quot;)</code></pre>
 </div>
-<div id="pdf-文档转-png-图片" class="section level2" number="9.2">
-<h2><span class="header-section-number">9.2</span> PDF 文档转 PNG 图片</h2>
+<div id="pdf-文档转-png-图片" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> PDF 文档转 PNG 图片</h2>
 <p>与上面是类似的，一行命令如下：</p>
 <pre class="bash"><code>convert -density 300x300 -geometry 960x720 beamer.pdf beamer.png</code></pre>
 </div>
