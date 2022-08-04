@@ -102,6 +102,7 @@ div.figure {
   display: block; 
   margin-left: auto; 
   margin-right: auto;
+  width: 70%;
 }
 
 .columns {
@@ -150,25 +151,21 @@ options(width = 69)
 
 # 本文概览 {#overview}
 
-R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持动态文档写作，文本、代码相互交织，插图、表格、文献、引用等动态生成。在网站简历、期刊书籍、报告演示等诸多方面有大量应用。其中，报告演示（Presentations）是传递、交流想法的重要方式，R Markdown 生态有很多扩展包，提供多种方式制作幻灯片，支持的幻灯片种类有 Office PowerPoint（俗称 PPT）、ioslides、 [**reveal.js**](https://github.com/rstudio/revealjs) 和[写轮眼](https://github.com/yihui/xaringan)等。
+R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持动态文档写作，让文本、代码相互交织，插图、表格、文献、引用等动态生成。在网站简历、期刊书籍、报告演示等诸多方面有大量应用。其中，报告演示（Presentations）是传递、交流想法的重要方式，R Markdown 生态有很多扩展包，提供多种方式制作幻灯片，支持的幻灯片种类有 Office PowerPoint（俗称 PPT）、ioslides、 [**reveal.js**](https://github.com/rstudio/revealjs) 和[写轮眼](https://github.com/yihui/xaringan)等。
 
-本文将介绍如何用 R Markdown 制作 beamer 风格的幻灯片，包含以下内容：
+本文将介绍如何用 R Markdown 制作 beamer 风格的幻灯片，主要包含以下内容：
 
 (@background) 作者与 beamer 结缘和本文写作的始末。
 (@setup) 准备本文涉及到的一些软件依赖和扩展包。
 (@latex-beamer) 简单回顾一下 LaTeX 是如何制作 beamer 幻灯片的。
-(@markdown-beamer) 作为后续铺垫，介绍 Pandoc's Markdown 制作 beamer 幻灯片的过程。
-(@rmarkdown-beamer) 在 (@markdown-beamer) 的基础上，介绍 R Markdown 制作 beamer 幻灯片的过程，谓之「基础篇」。
-(@rmarkdown-beamer-advanced) 在 (@rmarkdown-beamer) 的基础上，介绍 R Markdown 深度定制 beamer 幻灯片的过程，谓之「高级篇」。
-(@rmarkdown-beamer-ninja) 在(@rmarkdown-beamer-advanced)的基础上，结合 LaTeX 和 Lua 两大神器，深度定制 beamer 幻灯片，谓之「忍者篇」。
-(@beamer-tricks-pitfalls) 介绍 R Markdown 制作 beamer 幻灯片积累的技巧和陷阱。
+(@markdown-beamer) 作为后续铺垫，介绍 Pandoc's Markdown 制作 beamer 幻灯片的过程，从此在 Markdown 与 LaTeX 之间相爱相杀。
+(@rmarkdown-beamer) 在 (@markdown-beamer) 的基础上，介绍 R Markdown 制作 beamer 幻灯片的过程，揭开 R Markdown 的神秘面纱，谓之「基础篇」。
+(@rmarkdown-beamer-advanced) 在 (@rmarkdown-beamer) 的基础上，介绍 R Markdown 深度制作 beamer 幻灯片的过程，从此玩转 beamer 主题，谓之「高级篇」。
+(@rmarkdown-beamer-ninja) 在(@rmarkdown-beamer-advanced)的基础上，结合 LaTeX 和 Lua 两大神器，深度定制 beamer 幻灯片，以及填一填用户在使用 beamer 幻灯片过程中遇到的字体坑，谓之「忍者篇」。
+(@beamer-tricks-pitfalls) 简要介绍 Quarto 制作 beamer 幻灯片过程。
 (@beamer-final) 总结一下本文内容，写一点个人使用经验，仅供参考。
 
 对于初学者，建议阅读(@background)、 (@setup) 、 (@latex-beamer) 和 (@rmarkdown-beamer)；对于入门者，建议继续阅读 (@markdown-beamer)、(@rmarkdown-beamer-advanced)、 (@beamer-tricks-pitfalls) 和 (@beamer-final)；对于进阶者，建议继续阅读 (@rmarkdown-beamer-ninja)。
-
-
-
-<!-- 先基于 R Markdown 介绍制作普通 beamer 幻灯片的过程，然后介绍设置幻灯片主题、中英字体和数学公式，完整迁移到新的主题可能会遇到的问题。 -->
 
 
 # 本文背景 {#background}
@@ -182,7 +179,7 @@ LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的�
 
 # 软件配置 {#setup}
 
-安装一些 R 包，一个轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)， LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，一些字体。
+安装一些 R 包，一个轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)[@tinytex2019]，LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，一些字体。
 
 
 ## 安装 R 包 {#setup-rpkgs}
@@ -192,12 +189,12 @@ LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的�
 
 ```{r}
 #| eval: false
-install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "rticles"))
+#| echo: true
+
+install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "binb"))
 ```
 
-其中， R 包 **tinytex** [@tinytex2019] 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是在构建在 LaTeX 宏包管理器 [tlmgr](https://tug.org/texlive/tlmgr.html) 之上，默认去掉了 LaTeX 宏包源码和帮助文档，做到 200M～300M 的大小。 **knitr** 包自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 **rmarkdown** 的功能覆盖，**bookdown** 仅提供交叉引用的作用，**rticles** 包提供很多期刊杂志的投稿模版。
-
-
+其中， R 包 **tinytex** 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是在构建在 LaTeX 宏包管理器 [tlmgr](https://tug.org/texlive/tlmgr.html) 之上，默认去掉了 LaTeX 宏包源码和帮助文档，做到 200M～300M 的大小。 **knitr** 包 [@Xie2015] 自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 **rmarkdown** 包 [@Xie2018] 的功能覆盖，仅使用 **bookdown** 包 [@Xie2016] 的交叉引用功能，使用 **binb** 包 [@Dirk2020] 内置的一份 beamer 幻灯片模版。
 
 
 ## 安装 TinyTeX {#setup-tinytex}
@@ -250,12 +247,7 @@ tinytex::install_tinytex()
 
 ## LaTeX {#latex}
 
-下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。不记得初次见 metropolis 主题是什么时候，不过每次见都让我想到了 MCMC（**M**arkov **C**hain **M**onte **C**arlo，马尔科夫链蒙特卡洛，简称 MCMC）。学过 MCMC 算法的都知道 metropolis 是啥，我这半桶水的统计科班生就不在这献丑了，当年掉在 MCMC 的大坑里好多时间，以至于将 metropolis 和 MCMC 建立了极强的关联，可能这是我介绍 beamer 主题也拿它来举例的原因吧！
-
-回到正题，Pandoc 内建的 LaTeX 模版功能已经很丰富了，通常用不着自己配置了，R Markdown 自从接入 **tinytex** 自动装缺失的 LaTeX 宏包的功能后，在产出 PDF 文档方面已经方便多了。
-
-metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在之前的文章[可重复性数据分析](https://xiangyun.rbind.io/2021/01/reproducible-analysis/)介绍过[林莲枝](https://github.com/liantze/)开发的汉风主题幻灯片，它是 metropolis 主题的衍生品。算上空行，只有十几行代码。
-
+下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。metropolis 主题的特点就是简洁优雅！算上空行注释，只有二十几行代码。
 
 ```{verbatim, file="examples/slide-template.tex", lang="tex"}
 ```
@@ -263,7 +255,7 @@ metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在
 注意看加载 **unicode-math** 宏包时的选项设置，关于 **unicode-math** 数学符号的样式（比如选择 ISO 还是 TeX？） 说明见[文档](https://www.latex-project.org/publications/2010-wspr-TUG-unicode-mathematics-in-LaTeX-slides.pdf)，对绝大多数的使用者来说，做个拿来主义就好，别看我洋洋洒洒写了这么多，我也不例外，喜欢哪个用哪个！
 
 
-将上面的模版内容保存到文件 `slide-template.tex`，接下来，有两种编译 LaTeX 文件的方式，一种在 [RStudio IDE](https://github.com/rstudio/rstudio) 内打开，点击 **Compile PDF** 按钮，另一种是在 R 控制台里执行
+将上面的模版内容保存到文件 `slide-template.tex`，接下来，有两种编译 LaTeX 文件的方式，一种在 RStudio IDE 内打开，点击 **Compile PDF** 按钮，另一种是在 R 控制台里执行
 
 ```r
 tinytex::xelatex(file = "slide-template.tex")
@@ -296,7 +288,7 @@ tinytex::xelatex(file = "slide-template.tex")
 
 ## Pandoc's Markdown {#pandoc-markdown}
 
-R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 [Pandoc 软件](https://pandoc.org/)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。
+R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 Pandoc 软件(<https://pandoc.org/>)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。
 
 ### 简单示例
 
@@ -1368,7 +1360,7 @@ beamer 文档找到各类定理、block 块
 \fi
 ```
 
-上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包。问题就出在 unicode-math 宏包身上，它会直接忽视命令 `\boldsymbol`，加粗希腊字母，它只认 `\symbf`。也许有人已经看出来了，上面的代码块是个 `IF-ELSE` 的逻辑，可以选用 pdflatex 引擎编译呀！比如这样：
+上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包。问题就出在 unicode-math 宏包身上，它会直接忽视命令 `\boldsymbol`，加粗希腊字母，它只认 `\symbf`。也许有读者已经看出来了，上面的代码块是个 `IF-ELSE` 的逻辑，可以选用 pdflatex 引擎编译呀！比如这样：
 
 ```bash
 pandoc --pdf-engine pdflatex -t beamer \
@@ -1398,7 +1390,7 @@ pandoc --pdf-engine pdflatex -t beamer \
 
 
 ::: rmdtip
-RStudio IDE 使用 [MathJaX](https://www.mathjax.org/) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 **unicode-math** 的 `\symbf` 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个[文档](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)，常见的 `\mathbb` 空心体 `$\mathbb{A}$` 和 `\mathfrak` 火星体 `$\mathfrak{A}$` 来自宏包 amsfonts，`\mathscr` 花体 `$\mathscr{A}$` 和 `\bm` 粗体 `$\bm{A}$` 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看[amsmath 文档](https://www.latex-project.org/help/documentation/amsldoc.pdf)，此处仅摘抄一例 `$\sqrt{x} +\sqrt{y} + \sqrt{z}$` 和 `$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$`，能看出来差别的一定有一双火眼金睛！
+RStudio IDE 使用 [MathJaX](https://www.mathjax.org/) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 **unicode-math** 的 `\symbf` 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个[文档](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)，常见的 `\mathbb` 空心体 `$\mathbb{A}$` 和 `\mathfrak` 火星体 `$\mathfrak{A}$` 来自宏包 amsfonts，`\mathscr` 花体 `$\mathscr{A}$` 和 `\bm` 粗体 `$\bm{A}$` 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看[amsmath 文档](https://www.latex-project.org/help/documentation/amsldoc.pdf)，此处仅摘抄一例 `$\sqrt{x} +\sqrt{y} + \sqrt{z}$` 和 `$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$`，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？
 
 ![(\#fig:rstudio-mathjax) RStudio IDE 预览加粗的希腊字母$\bm{\Sigma}$](https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png)
 :::
@@ -1460,7 +1452,7 @@ a column separator -->
 \end{align}
 ```
 
-调用如下命令可获得类似的效果
+调用如下命令可获得一样的结果。
 
 ```bash
 pandoc -t beamer --standalone \
@@ -1604,13 +1596,13 @@ Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验�
 
 # 本文小结 {#summary}
 
-Pandoc's Markdown 制作 beamer 的过程，R Markdown 制作 beamer 的过程，提取共同特点推广至其它文类，比如文章 article / book，学会了 beamer 文类，也就学会了其他文类，也学会了其它格式的幻灯片制作，比如 Quarto 制作 beamer 幻灯片
+本文重点介绍了 Pandoc's Markdown 制作 beamer 的过程，期间介绍了 Pandoc 众多的参数，在此基础上，相信读者可以很快接受 R Markdown 和 Quarto 制作 beamer 的过程。实际上，了解了 Markdown 到 beamer 的转化过程后，非常有助于了解其它 60 多种文档格式的转化过程。常见且常用的格式有 `pdf`、 `latex`、`pptx`、`docx` 和 `revealjs`，Pandoc 支持转化的全部输出格式见 `pandoc --list-output-formats`。
 
-制作 beamer 一方面是学习 LaTeX，
-如果用 Markdown 来制作，一方面是学习 Pandoc 和 LaTeX，
-如果需要用到 R 语言，需要再学习一些扩展包，
-如果 Quarto 来制作，一方面是学习 Pandoc 和 LaTeX 和 R 语言
+其次，在 R Markdown 里介绍了常用的制作 beamer 幻灯片的功能，文档汉化、数学符号、定理、交叉引用等，以及 R 语言用户才会用到的 R Markdown 专属功能。
 
+接着，介绍 R Markdown 使用 beamer 幻灯片模版的几个方式，如切换 beamer 文类内置主题、从 LaTeX 社区找 beamer 主题、从 R 语言社区找 R Markdown 模版，以及如何深度使用模版的过程。
+
+再者，还介绍了 R Markdown 普通用户进阶忍者可能会遇到的问题，解剖了问题的过程，希望读者有所启发，能掌握此规律。最后，即使面对层出不穷的新工具，如 Quarto，也能快速地上手，并深入使用。
 
 
 # 参考文献 {#refer}

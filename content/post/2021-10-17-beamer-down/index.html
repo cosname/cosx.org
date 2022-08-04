@@ -162,6 +162,7 @@ div.figure {
   display: block; 
   margin-left: auto; 
   margin-right: auto;
+  width: 70%;
 }
 
 .columns {
@@ -196,21 +197,20 @@ div.csl-indent {
 </div>
 <div id="overview" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> 本文概览</h1>
-<p>R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持动态文档写作，文本、代码相互交织，插图、表格、文献、引用等动态生成。在网站简历、期刊书籍、报告演示等诸多方面有大量应用。其中，报告演示（Presentations）是传递、交流想法的重要方式，R Markdown 生态有很多扩展包，提供多种方式制作幻灯片，支持的幻灯片种类有 Office PowerPoint（俗称 PPT）、ioslides、 <a href="https://github.com/rstudio/revealjs"><strong>reveal.js</strong></a> 和<a href="https://github.com/yihui/xaringan">写轮眼</a>等。</p>
-<p>本文将介绍如何用 R Markdown 制作 beamer 风格的幻灯片，包含以下内容：</p>
+<p>R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持动态文档写作，让文本、代码相互交织，插图、表格、文献、引用等动态生成。在网站简历、期刊书籍、报告演示等诸多方面有大量应用。其中，报告演示（Presentations）是传递、交流想法的重要方式，R Markdown 生态有很多扩展包，提供多种方式制作幻灯片，支持的幻灯片种类有 Office PowerPoint（俗称 PPT）、ioslides、 <a href="https://github.com/rstudio/revealjs"><strong>reveal.js</strong></a> 和<a href="https://github.com/yihui/xaringan">写轮眼</a>等。</p>
+<p>本文将介绍如何用 R Markdown 制作 beamer 风格的幻灯片，主要包含以下内容：</p>
 <ol class="example" style="list-style-type: decimal">
 <li>作者与 beamer 结缘和本文写作的始末。</li>
 <li>准备本文涉及到的一些软件依赖和扩展包。</li>
 <li>简单回顾一下 LaTeX 是如何制作 beamer 幻灯片的。</li>
-<li>作为后续铺垫，介绍 Pandoc’s Markdown 制作 beamer 幻灯片的过程。</li>
-<li>在 (4) 的基础上，介绍 R Markdown 制作 beamer 幻灯片的过程，谓之「基础篇」。</li>
-<li>在 (5) 的基础上，介绍 R Markdown 深度定制 beamer 幻灯片的过程，谓之「高级篇」。</li>
-<li>在(6)的基础上，结合 LaTeX 和 Lua 两大神器，深度定制 beamer 幻灯片，谓之「忍者篇」。</li>
-<li>介绍 R Markdown 制作 beamer 幻灯片积累的技巧和陷阱。</li>
+<li>作为后续铺垫，介绍 Pandoc’s Markdown 制作 beamer 幻灯片的过程，从此在 Markdown 与 LaTeX 之间相爱相杀。</li>
+<li>在 (4) 的基础上，介绍 R Markdown 制作 beamer 幻灯片的过程，揭开 R Markdown 的神秘面纱，谓之「基础篇」。</li>
+<li>在 (5) 的基础上，介绍 R Markdown 深度制作 beamer 幻灯片的过程，从此玩转 beamer 主题，谓之「高级篇」。</li>
+<li>在(6)的基础上，结合 LaTeX 和 Lua 两大神器，深度定制 beamer 幻灯片，以及填一填用户在使用 beamer 幻灯片过程中遇到的字体坑，谓之「忍者篇」。</li>
+<li>简要介绍 Quarto 制作 beamer 幻灯片过程。</li>
 <li>总结一下本文内容，写一点个人使用经验，仅供参考。</li>
 </ol>
 <p>对于初学者，建议阅读(1)、 (2) 、 (3) 和 (5)；对于入门者，建议继续阅读 (4)、(6)、 (8) 和 (9)；对于进阶者，建议继续阅读 (7)。</p>
-<!-- 先基于 R Markdown 介绍制作普通 beamer 幻灯片的过程，然后介绍设置幻灯片主题、中英字体和数学公式，完整迁移到新的主题可能会遇到的问题。 -->
 </div>
 <div id="background" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> 本文背景</h1>
@@ -220,13 +220,13 @@ div.csl-indent {
 </div>
 <div id="setup" class="section level1" number="3">
 <h1><span class="header-section-number">3</span> 软件配置</h1>
-<p>安装一些 R 包，一个轻量级 LaTeX 发行版 <a href="https://github.com/yihui/tinytex-releases">TinyTeX</a>， LaTeX 幻灯片主题 <a href="https://github.com/matze/mtheme">metropolis</a> 和 <a href="https://ctan.org/pkg/beamer-verona">beamer-verona</a>，一些字体。</p>
+<p>安装一些 R 包，一个轻量级 LaTeX 发行版 <a href="https://github.com/yihui/tinytex-releases">TinyTeX</a><span class="citation">[<a href="#ref-tinytex2019" role="doc-biblioref">1</a>]</span>，LaTeX 幻灯片主题 <a href="https://github.com/matze/mtheme">metropolis</a> 和 <a href="https://ctan.org/pkg/beamer-verona">beamer-verona</a>，一些字体。</p>
 <div id="setup-rpkgs" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> 安装 R 包</h2>
 <p>默认大家已经安装了 R 软件和 RStudio IDE，这会让后面的操作变得更容易。
 因陆续会用到 R Markdown 生态的几个 R 包，所以先提前安装下：</p>
-<pre class="r"><code>install.packages(c(&quot;tinytex&quot;, &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;bookdown&quot;, &quot;rticles&quot;))</code></pre>
-<p>其中， R 包 <strong>tinytex</strong> <span class="citation">[<a href="#ref-tinytex2019" role="doc-biblioref">1</a>]</span> 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是在构建在 LaTeX 宏包管理器 <a href="https://tug.org/texlive/tlmgr.html">tlmgr</a> 之上，默认去掉了 LaTeX 宏包源码和帮助文档，做到 200M～300M 的大小。 <strong>knitr</strong> 包自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 <strong>rmarkdown</strong> 的功能覆盖，<strong>bookdown</strong> 仅提供交叉引用的作用，<strong>rticles</strong> 包提供很多期刊杂志的投稿模版。</p>
+<pre class="r"><code>install.packages(c(&quot;tinytex&quot;, &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;bookdown&quot;, &quot;binb&quot;))</code></pre>
+<p>其中， R 包 <strong>tinytex</strong> 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是在构建在 LaTeX 宏包管理器 <a href="https://tug.org/texlive/tlmgr.html">tlmgr</a> 之上，默认去掉了 LaTeX 宏包源码和帮助文档，做到 200M～300M 的大小。 <strong>knitr</strong> 包 <span class="citation">[<a href="#ref-Xie2015" role="doc-biblioref">2</a>]</span> 自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 <strong>rmarkdown</strong> 包 <span class="citation">[<a href="#ref-Xie2018" role="doc-biblioref">3</a>]</span> 的功能覆盖，仅使用 <strong>bookdown</strong> 包 <span class="citation">[<a href="#ref-Xie2016" role="doc-biblioref">4</a>]</span> 的交叉引用功能，使用 <strong>binb</strong> 包 <span class="citation">[<a href="#ref-Dirk2020" role="doc-biblioref">5</a>]</span> 内置的一份 beamer 幻灯片模版。</p>
 </div>
 <div id="setup-tinytex" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> 安装 TinyTeX</h2>
@@ -263,20 +263,12 @@ file.copy(from = fontfile, to = distdir, overwrite = TRUE)</code></pre></li>
 <h1><span class="header-section-number">4</span> 制作 beamer 幻灯片</h1>
 <div id="latex" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> LaTeX</h2>
-<p>下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。不记得初次见 metropolis 主题是什么时候，不过每次见都让我想到了 MCMC（<strong>M</strong>arkov <strong>C</strong>hain <strong>M</strong>onte <strong>C</strong>arlo，马尔科夫链蒙特卡洛，简称 MCMC）。学过 MCMC 算法的都知道 metropolis 是啥，我这半桶水的统计科班生就不在这献丑了，当年掉在 MCMC 的大坑里好多时间，以至于将 metropolis 和 MCMC 建立了极强的关联，可能这是我介绍 beamer 主题也拿它来举例的原因吧！</p>
-<p>回到正题，Pandoc 内建的 LaTeX 模版功能已经很丰富了，通常用不着自己配置了，R Markdown 自从接入 <strong>tinytex</strong> 自动装缺失的 LaTeX 宏包的功能后，在产出 PDF 文档方面已经方便多了。</p>
-<p>metropolis 主题的特点就是干净利索，简洁优雅！顺便一提，在之前的文章<a href="https://xiangyun.rbind.io/2021/01/reproducible-analysis/">可重复性数据分析</a>介绍过<a href="https://github.com/liantze/">林莲枝</a>开发的汉风主题幻灯片，它是 metropolis 主题的衍生品。算上空行，只有十几行代码。</p>
+<p>下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。metropolis 主题的特点就是简洁优雅！算上空行注释，只有二十几行代码。</p>
 <pre class="tex"><code>\documentclass[169]{beamer}
 
-\usefonttheme{professionalfonts}
 \usetheme{metropolis}
 
-\usepackage{fontspec}
-
 \setsansfont[BoldFont={Fira Sans SemiBold}]{Fira Sans Book}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
 
 \usepackage[
   mathrm=sym,
@@ -297,7 +289,7 @@ file.copy(from = fontfile, to = distdir, overwrite = TRUE)</code></pre></li>
   \end{frame}
 \end{document}</code></pre>
 <p>注意看加载 <strong>unicode-math</strong> 宏包时的选项设置，关于 <strong>unicode-math</strong> 数学符号的样式（比如选择 ISO 还是 TeX？） 说明见<a href="https://www.latex-project.org/publications/2010-wspr-TUG-unicode-mathematics-in-LaTeX-slides.pdf">文档</a>，对绝大多数的使用者来说，做个拿来主义就好，别看我洋洋洒洒写了这么多，我也不例外，喜欢哪个用哪个！</p>
-<p>将上面的模版内容保存到文件 <code>slide-template.tex</code>，接下来，有两种编译 LaTeX 文件的方式，一种在 <a href="https://github.com/rstudio/rstudio">RStudio IDE</a> 内打开，点击 <strong>Compile PDF</strong> 按钮，另一种是在 R 控制台里执行</p>
+<p>将上面的模版内容保存到文件 <code>slide-template.tex</code>，接下来，有两种编译 LaTeX 文件的方式，一种在 RStudio IDE 内打开，点击 <strong>Compile PDF</strong> 按钮，另一种是在 R 控制台里执行</p>
 <pre class="r"><code>tinytex::xelatex(file = &quot;slide-template.tex&quot;)</code></pre>
 <p>编译出来的效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:latex-metropolis"></span>
@@ -320,7 +312,7 @@ file.copy(from = fontfile, to = distdir, overwrite = TRUE)</code></pre></li>
 </div>
 <div id="pandoc-markdown" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Pandoc’s Markdown</h2>
-<p>R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 <a href="https://pandoc.org/">Pandoc 软件</a>，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。</p>
+<p>R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 Pandoc 软件(<a href="https://pandoc.org/" class="uri">https://pandoc.org/</a>)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。</p>
 <div id="简单示例" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> 简单示例</h3>
 <p>继续上面的例子，将幻灯片的内容用 Markdown 格式书写，非常简洁了，算上空行仅有 6 行代码，如下：</p>
@@ -1779,7 +1771,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 A Markdown-formatted document should be publishable as-is, as plain text, 
 without looking like it’s been marked up with tags or formatting instructions.  
 :::</code></pre>
-<p>此处，不一一介绍，详情见<span class="citation">[<a href="#ref-Alison2021" role="doc-biblioref">2</a>]</span>。</p>
+<p>此处，不一一介绍，详情见<span class="citation">[<a href="#ref-Alison2021" role="doc-biblioref">6</a>]</span>。</p>
 </div>
 </div>
 <div id="rmarkdown-ninja" class="section level2" number="4.5">
@@ -1798,7 +1790,7 @@ without looking like it’s been marked up with tags or formatting instructions.
 </div>
 <div id="math-symbols" class="section level3" number="4.5.2">
 <h3><span class="header-section-number">4.5.2</span> 数学符号与数学字体</h3>
-<p>首先来说说数学符号和数学字体的坑，毕竟，beamer 这种学术型幻灯片很难离开数学公式。LaTeX 社区专门弄了一个 400 多页的大型文档《The Comprehensive LATEX Symbol List – Symbols accessible from LATEX》<span class="citation">[<a href="#ref-Pakin2021" role="doc-biblioref">3</a>]</span>，其中，数学符号的篇幅高达 90 多页，涉及数十个 LaTeX 宏包，可见坑不是一般的深。在 R Markdown 中，踩中此坑最常见的姿势是这样的。</p>
+<p>首先来说说数学符号和数学字体的坑，毕竟，beamer 这种学术型幻灯片很难离开数学公式。LaTeX 社区专门弄了一个 400 多页的大型文档《The Comprehensive LATEX Symbol List – Symbols accessible from LATEX》<span class="citation">[<a href="#ref-Pakin2021" role="doc-biblioref">7</a>]</span>，其中，数学符号的篇幅高达 90 多页，涉及数十个 LaTeX 宏包，可见坑不是一般的深。在 R Markdown 中，踩中此坑最常见的姿势是这样的。</p>
 <ol style="list-style-type: decimal">
 <li><p>根据 ctex 宏包的帮助文档指示，汉化文档直接用 <code>ctexbook</code>、 <code>ctexart</code> 或 <code>ctexbeamer</code> 等文类。</p></li>
 <li><p>因此，把 R Markdown 文档默认的文类设置从 <code>documentclass: beamer</code> 改为 <code>documentclass: ctexbeamer</code>，改完后 R Markdown 文档长这个样子：</p>
@@ -1969,11 +1961,11 @@ output:
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi</code></pre>
-<p>上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包。问题就出在 unicode-math 宏包身上，它会直接忽视命令 <code>\boldsymbol</code>，加粗希腊字母，它只认 <code>\symbf</code>。也许有人已经看出来了，上面的代码块是个 <code>IF-ELSE</code> 的逻辑，可以选用 pdflatex 引擎编译呀！比如这样：</p>
+<p>上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包。问题就出在 unicode-math 宏包身上，它会直接忽视命令 <code>\boldsymbol</code>，加粗希腊字母，它只认 <code>\symbf</code>。也许有读者已经看出来了，上面的代码块是个 <code>IF-ELSE</code> 的逻辑，可以选用 pdflatex 引擎编译呀！比如这样：</p>
 <pre class="bash"><code>pandoc --pdf-engine pdflatex -t beamer \
   slide-math.md -o slide-math.pdf</code></pre>
 <p>确实可以渲染出来加粗效果 <span class="math inline">\(\boldsymbol{\theta}\)</span>，但是，pdflatex 处理中文是很弱的，在 MacOS 和 Ubuntu 等系统上比较麻烦，而且，未来主要方向是 XeLaTeX 引擎。</p>
-<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.29</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">4</a>]</span>。</p>
+<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.29</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">8</a>]</span>。</p>
 <div class="figure"><span style="display:block;" id="fig:slide-unicode-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png" alt="" />
 <p class="caption">图 4.29:  unicode-math 宏包</p>
@@ -2022,7 +2014,7 @@ output:
 </table>
 <p>可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。目前，仅有的数学字体支持的数学符号还不太全，但 unicode-math 未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 <code>\mscrA</code> 和 <code>\BbbA</code> 分别等价于 <code>\mathscr{A}</code> 和 <code>\mathbb{A}</code>，而不需要额外加载 <strong>amsfonts</strong> 和 <strong>mathrsfs</strong> 宏包。</p>
 <div class="rmdtip">
-<p>RStudio IDE 使用 <a href="https://www.mathjax.org/">MathJaX</a> 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 amsfonts，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！</p>
+<p>RStudio IDE 使用 <a href="https://www.mathjax.org/">MathJaX</a> 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 amsfonts，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？</p>
 <div class="figure"><span style="display:block;" id="fig:rstudio-mathjax"></span>
 <img src="https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png" alt="" />
 <p class="caption">图 4.30:  RStudio IDE 预览加粗的希腊字母<span class="math inline">\(\bm{\Sigma}\)</span></p>
@@ -2070,7 +2062,7 @@ a column separator --></p>
     \boldsymbol{\theta} &amp;= (1, 2, 3)^\top \\
         \theta_0 &amp;= 1
 \end{align}</code></pre>
-<p>调用如下命令可获得类似的效果</p>
+<p>调用如下命令可获得一样的结果。</p>
 <pre class="bash"><code>pandoc -t beamer --standalone \
   --variable mathspec=true \
   slide-math.md -o slide-math.tex</code></pre>
@@ -2270,11 +2262,10 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 </div>
 <div id="summary" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> 本文小结</h1>
-<p>Pandoc’s Markdown 制作 beamer 的过程，R Markdown 制作 beamer 的过程，提取共同特点推广至其它文类，比如文章 article / book，学会了 beamer 文类，也就学会了其他文类，也学会了其它格式的幻灯片制作，比如 Quarto 制作 beamer 幻灯片</p>
-<p>制作 beamer 一方面是学习 LaTeX，
-如果用 Markdown 来制作，一方面是学习 Pandoc 和 LaTeX，
-如果需要用到 R 语言，需要再学习一些扩展包，
-如果 Quarto 来制作，一方面是学习 Pandoc 和 LaTeX 和 R 语言</p>
+<p>本文重点介绍了 Pandoc’s Markdown 制作 beamer 的过程，期间介绍了 Pandoc 众多的参数，在此基础上，相信读者可以很快接受 R Markdown 和 Quarto 制作 beamer 的过程。实际上，了解了 Markdown 到 beamer 的转化过程后，非常有助于了解其它 60 多种文档格式的转化过程。常见且常用的格式有 <code>pdf</code>、 <code>latex</code>、<code>pptx</code>、<code>docx</code> 和 <code>revealjs</code>，Pandoc 支持转化的全部输出格式见 <code>pandoc --list-output-formats</code>。</p>
+<p>其次，在 R Markdown 里介绍了常用的制作 beamer 幻灯片的功能，文档汉化、数学符号、定理、交叉引用等，以及 R 语言用户才会用到的 R Markdown 专属功能。</p>
+<p>接着，介绍 R Markdown 使用 beamer 幻灯片模版的几个方式，如切换 beamer 文类内置主题、从 LaTeX 社区找 beamer 主题、从 R 语言社区找 R Markdown 模版，以及如何深度使用模版的过程。</p>
+<p>再者，还介绍了 R Markdown 普通用户进阶忍者可能会遇到的问题，解剖了问题的过程，希望读者有所启发，能掌握此规律。最后，即使面对层出不穷的新工具，如 Quarto，也能快速地上手，并深入使用。</p>
 </div>
 <div id="refer" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> 参考文献</h1>
@@ -2282,23 +2273,35 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <div id="ref-tinytex2019" class="csl-entry">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2019). <a href="https://tug.org/TUGboat/Contents/contents40-1.html">TinyTeX: A lightweight, cross-platform, and easy-to-maintain LaTeX distribution based on TeX live</a>. <em>TUGboat</em> 30–2.</div>
 </div>
+<div id="ref-Xie2015" class="csl-entry">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2015). <em><a href="https://yihui.org/knitr/">Dynamic documents with <span>R</span> and knitr</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+</div>
+<div id="ref-Xie2018" class="csl-entry">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Allaire</span>, J. J. and <span class="smallcaps">Grolemund</span>, G. (2018). <em><a href="https://bookdown.org/yihui/rmarkdown">R markdown: The definitive guide</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+</div>
+<div id="ref-Xie2016" class="csl-entry">
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2016). <em><a href="https://bookdown.org/yihui/bookdown">Bookdown: Authoring books and technical documents with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+</div>
+<div id="ref-Dirk2020" class="csl-entry">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span class="smallcaps">Eddelbuettel</span>, D., <span class="smallcaps">Zahn</span>, I. and <span class="smallcaps">Hyndman</span>, R. (2020). <em><a href="https://CRAN.R-project.org/package=binb"><span class="nocase">binb</span>: ’Binb’ is not ’beamer’</a></em>.</div>
+</div>
 <div id="ref-Alison2021" class="csl-entry">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline"><span class="smallcaps">Hill</span>, A., <span class="smallcaps">Dervieux</span>, C. and <span class="smallcaps">Xie</span>, Y. (2021). <a href="https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/">Latest news from the <span>R Markdown</span> family</a>.</div>
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline"><span class="smallcaps">Hill</span>, A., <span class="smallcaps">Dervieux</span>, C. and <span class="smallcaps">Xie</span>, Y. (2021). <a href="https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/">Latest news from the <span>R Markdown</span> family</a>.</div>
 </div>
 <div id="ref-Pakin2021" class="csl-entry">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline"><span class="smallcaps">Pakin</span>, S. (2021). <a href="https://www.ctan.org/pkg/comprehensive/">The comprehensive <span>LaTeX</span> symbol list - symbols accessible from LaTeX</a>.</div>
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline"><span class="smallcaps">Pakin</span>, S. (2021). <a href="https://www.ctan.org/pkg/comprehensive/">The comprehensive <span>LaTeX</span> symbol list - symbols accessible from LaTeX</a>.</div>
 </div>
 <div id="ref-Zeng2020" class="csl-entry">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline"><span class="smallcaps">曾祥东</span>. (2020). <a href="https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/">在 LATEX 中使用 OpenType 字体（三）</a>.</div>
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline"><span class="smallcaps">曾祥东</span>. (2020). <a href="https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/">在 LATEX 中使用 OpenType 字体（三）</a>.</div>
 </div>
 <div id="ref-Xie2017" class="csl-entry">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Hill</span>, A. P. and <span class="smallcaps">Thomas</span>, A. (2017). <em><a href="https://bookdown.org/yihui/blogdown/">Blogdown: Creating websites with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Hill</span>, A. P. and <span class="smallcaps">Thomas</span>, A. (2017). <em><a href="https://bookdown.org/yihui/blogdown/">Blogdown: Creating websites with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
 </div>
 </div>
 </div>
 <div id="session" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> 环境信息</h1>
-<p>在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 <strong>blogdown</strong> <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">5</a>]</span>构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。</p>
+<p>在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 <strong>blogdown</strong> <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">9</a>]</span>构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。</p>
 <pre class="r"><code>xfun::session_info(c(
   &quot;tinytex&quot;, &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;bookdown&quot;, &quot;blogdown&quot;, &quot;binb&quot;
 ), dependencies = FALSE)</code></pre>
