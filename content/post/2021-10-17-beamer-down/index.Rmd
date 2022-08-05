@@ -243,7 +243,7 @@ tinytex::install_tinytex()
 
 
 
-# 制作 beamer 幻灯片
+# 制作 beamer 幻灯片 {#beamer}
 
 ## LaTeX {#latex}
 
@@ -1573,7 +1573,7 @@ mathspec: true
 
 至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！
 
-## Quarto 制作 beamer 幻灯片
+## Quarto 制作 beamer 幻灯片 {#beamer-quarto}
 
 Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc's Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc's Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 [beamer](https://quarto.org/docs/presentations/beamer.html) 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图\@ref(fig:rmd-slide-verona)， Quarto 文档如下：
 
@@ -1589,7 +1589,7 @@ Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验�
 
 编译渲染出来的效果如下图：
 
-![(\#fig:quarto-beamer) Quarto 制作 beamer 幻灯片](https://user-images.githubusercontent.com/12031874/182573047-53be6615-549f-4265-8b57-f9cffcddd91e.gif)
+![(\#fig:quarto-beamer) Quarto 制作 beamer 幻灯片](https://user-images.githubusercontent.com/12031874/182994531-97567685-29c2-402e-a9fa-98f3645351da.gif)
 
 目前，发现一些差异点，也可以说是迁移成本。
 
@@ -1647,11 +1647,12 @@ Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验�
 
 # 环境信息 {#session}
 
-在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 **blogdown** [@Xie2017]构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。
+在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 **blogdown** [@Xie2017]构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。
 
 ```{r}
 xfun::session_info(c(
-  "tinytex", "knitr", "rmarkdown", "bookdown", "blogdown", "binb"
+  "tinytex", "knitr", "rmarkdown", 
+  "bookdown", "blogdown", "binb"
 ), dependencies = FALSE)
 ```
 
@@ -1664,7 +1665,7 @@ xfun::session_info(c(
 本文写作过程中遇到一些有用的小工具，比如将 PDF 文档转为 PNG 图片或 GIF 动图。
 
 
-## PDF 文档转 GIF 动图
+## PDF 文档转 GIF 动图 {#pdf-to-gif}
 
 将 PDF 格式的多页幻灯片转为 GIF 动图可以借助 [ImageMagick](https://imagemagick.org) 一行命令搞定：
 
@@ -1691,7 +1692,7 @@ img %>%
   image_write("beamer.gif")
 ```
 
-## PDF 文档转 PNG 图片
+## PDF 文档转 PNG 图片 {#pdf-to-png}
 
 与上面是类似的，一行命令如下：
 

@@ -36,7 +36,7 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 <li><a href="#setup-tinytex" id="toc-setup-tinytex"><span class="toc-section-number">3.2</span> 安装 TinyTeX</a></li>
 <li><a href="#setup-fonts" id="toc-setup-fonts"><span class="toc-section-number">3.3</span> 安装字体</a></li>
 </ul></li>
-<li><a href="#制作-beamer-幻灯片" id="toc-制作-beamer-幻灯片"><span class="toc-section-number">4</span> 制作 beamer 幻灯片</a>
+<li><a href="#beamer" id="toc-beamer"><span class="toc-section-number">4</span> 制作 beamer 幻灯片</a>
 <ul>
 <li><a href="#latex" id="toc-latex"><span class="toc-section-number">4.1</span> LaTeX</a></li>
 <li><a href="#pandoc-markdown" id="toc-pandoc-markdown"><span class="toc-section-number">4.2</span> Pandoc’s Markdown</a>
@@ -76,15 +76,15 @@ description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来�
 <li><a href="#math-symbols" id="toc-math-symbols"><span class="toc-section-number">4.5.2</span> 数学符号与数学字体</a></li>
 <li><a href="#chinese-document" id="toc-chinese-document"><span class="toc-section-number">4.5.3</span> 文档汉化与中文字体</a></li>
 </ul></li>
-<li><a href="#quarto-制作-beamer-幻灯片" id="toc-quarto-制作-beamer-幻灯片"><span class="toc-section-number">4.6</span> Quarto 制作 beamer 幻灯片</a></li>
+<li><a href="#beamer-quarto" id="toc-beamer-quarto"><span class="toc-section-number">4.6</span> Quarto 制作 beamer 幻灯片</a></li>
 </ul></li>
 <li><a href="#summary" id="toc-summary"><span class="toc-section-number">5</span> 本文小结</a></li>
 <li><a href="#refer" id="toc-refer"><span class="toc-section-number">6</span> 参考文献</a></li>
 <li><a href="#session" id="toc-session"><span class="toc-section-number">7</span> 环境信息</a></li>
 <li><a href="#appendix" id="toc-appendix"><span class="toc-section-number">8</span> 附录</a>
 <ul>
-<li><a href="#pdf-文档转-gif-动图" id="toc-pdf-文档转-gif-动图"><span class="toc-section-number">8.1</span> PDF 文档转 GIF 动图</a></li>
-<li><a href="#pdf-文档转-png-图片" id="toc-pdf-文档转-png-图片"><span class="toc-section-number">8.2</span> PDF 文档转 PNG 图片</a></li>
+<li><a href="#pdf-to-gif" id="toc-pdf-to-gif"><span class="toc-section-number">8.1</span> PDF 文档转 GIF 动图</a></li>
+<li><a href="#pdf-to-png" id="toc-pdf-to-png"><span class="toc-section-number">8.2</span> PDF 文档转 PNG 图片</a></li>
 </ul></li>
 </ul>
 </div>
@@ -259,7 +259,7 @@ file.copy(from = fontfile, to = distdir, overwrite = TRUE)</code></pre></li>
 </ol>
 </div>
 </div>
-<div id="制作-beamer-幻灯片" class="section level1" number="4">
+<div id="beamer" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> 制作 beamer 幻灯片</h1>
 <div id="latex" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> LaTeX</h2>
@@ -2187,7 +2187,7 @@ mathspec: true
 <p>至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！</p>
 </div>
 </div>
-<div id="quarto-制作-beamer-幻灯片" class="section level2" number="4.6">
+<div id="beamer-quarto" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Quarto 制作 beamer 幻灯片</h2>
 <p>Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc’s Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc’s Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 <a href="https://quarto.org/docs/presentations/beamer.html">beamer</a> 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图<a href="#fig:rmd-slide-verona">4.27</a>， Quarto 文档如下：</p>
 <details>
@@ -2285,7 +2285,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 </details>
 <p>编译渲染出来的效果如下图：</p>
 <div class="figure"><span style="display:block;" id="fig:quarto-beamer"></span>
-<img src="https://user-images.githubusercontent.com/12031874/182573047-53be6615-549f-4265-8b57-f9cffcddd91e.gif" alt="" />
+<img src="https://user-images.githubusercontent.com/12031874/182994531-97567685-29c2-402e-a9fa-98f3645351da.gif" alt="" />
 <p class="caption">图 4.33:  Quarto 制作 beamer 幻灯片</p>
 </div>
 <p>目前，发现一些差异点，也可以说是迁移成本。</p>
@@ -2361,9 +2361,10 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 </div>
 <div id="session" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> 环境信息</h1>
-<p>在 RStudio IDE 内编辑本文的 Rmarkdown 源文件，用 <strong>blogdown</strong> <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">9</a>]</span>构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 Rmarkdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。</p>
+<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">9</a>]</span>构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。</p>
 <pre class="r"><code>xfun::session_info(c(
-  &quot;tinytex&quot;, &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;bookdown&quot;, &quot;blogdown&quot;, &quot;binb&quot;
+  &quot;tinytex&quot;, &quot;knitr&quot;, &quot;rmarkdown&quot;, 
+  &quot;bookdown&quot;, &quot;blogdown&quot;, &quot;binb&quot;
 ), dependencies = FALSE)</code></pre>
 <pre><code>## R version 4.2.1 (2022-06-23)
 ## Platform: x86_64-apple-darwin17.0 (64-bit)
@@ -2386,7 +2387,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <h1><span class="header-section-number">8</span> 附录</h1>
 <!-- Windows 环境下安装和使用字体 -->
 <p>本文写作过程中遇到一些有用的小工具，比如将 PDF 文档转为 PNG 图片或 GIF 动图。</p>
-<div id="pdf-文档转-gif-动图" class="section level2" number="8.1">
+<div id="pdf-to-gif" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> PDF 文档转 GIF 动图</h2>
 <p>将 PDF 格式的多页幻灯片转为 GIF 动图可以借助 <a href="https://imagemagick.org">ImageMagick</a> 一行命令搞定：</p>
 <pre class="bash"><code>convert -delay 250 -density 300x300 -geometry 960x720 beamer.pdf beamer.gif</code></pre>
@@ -2402,7 +2403,7 @@ img %&gt;%
   image_animate(delay = 250) %&gt;% 
   image_write(&quot;beamer.gif&quot;)</code></pre>
 </div>
-<div id="pdf-文档转-png-图片" class="section level2" number="8.2">
+<div id="pdf-to-png" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> PDF 文档转 PNG 图片</h2>
 <p>与上面是类似的，一行命令如下：</p>
 <pre class="bash"><code>convert -density 300x300 -geometry 960x720 beamer.pdf beamer.png</code></pre>
