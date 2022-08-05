@@ -289,8 +289,8 @@ file.copy(from = fontfile, to = distdir, overwrite = TRUE)</code></pre></li>
   \end{frame}
 \end{document}</code></pre>
 <p>注意看加载 <strong>unicode-math</strong> 宏包时的选项设置，关于 <strong>unicode-math</strong> 数学符号的样式（比如选择 ISO 还是 TeX？） 说明见<a href="https://www.latex-project.org/publications/2010-wspr-TUG-unicode-mathematics-in-LaTeX-slides.pdf">文档</a>，对绝大多数的使用者来说，做个拿来主义就好，别看我洋洋洒洒写了这么多，我也不例外，喜欢哪个用哪个！</p>
-<p>将上面的模版内容保存到文件 <code>slide-template.tex</code>，接下来，有两种编译 LaTeX 文件的方式，一种在 RStudio IDE 内打开，点击 <strong>Compile PDF</strong> 按钮，另一种是在 R 控制台里执行</p>
-<pre class="r"><code>tinytex::xelatex(file = &quot;slide-template.tex&quot;)</code></pre>
+<p>将上面的模版内容保存到文件 <code>slide-metropolis.tex</code>，接下来，有两种编译 LaTeX 文件的方式，一种在 RStudio IDE 内打开，点击 <strong>Compile PDF</strong> 按钮，另一种是在 R 控制台里执行</p>
+<pre class="r"><code>tinytex::xelatex(file = &quot;slide-metropolis.tex&quot;)</code></pre>
 <p>编译出来的效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:latex-metropolis"></span>
 <img src="https://user-images.githubusercontent.com/12031874/116777926-a1722100-aaa1-11eb-92c7-034ebfb90922.png" alt="" />

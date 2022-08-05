@@ -249,16 +249,16 @@ tinytex::install_tinytex()
 
 下面以 metropolis 主题为例介绍一个完整的 beamer 幻灯片。metropolis 主题的特点就是简洁优雅！算上空行注释，只有二十几行代码。
 
-```{verbatim, file="examples/slide-template.tex", lang="tex"}
+```{verbatim, file="examples/slide-metropolis.tex", lang="tex"}
 ```
 
 注意看加载 **unicode-math** 宏包时的选项设置，关于 **unicode-math** 数学符号的样式（比如选择 ISO 还是 TeX？） 说明见[文档](https://www.latex-project.org/publications/2010-wspr-TUG-unicode-mathematics-in-LaTeX-slides.pdf)，对绝大多数的使用者来说，做个拿来主义就好，别看我洋洋洒洒写了这么多，我也不例外，喜欢哪个用哪个！
 
 
-将上面的模版内容保存到文件 `slide-template.tex`，接下来，有两种编译 LaTeX 文件的方式，一种在 RStudio IDE 内打开，点击 **Compile PDF** 按钮，另一种是在 R 控制台里执行
+将上面的模版内容保存到文件 `slide-metropolis.tex`，接下来，有两种编译 LaTeX 文件的方式，一种在 RStudio IDE 内打开，点击 **Compile PDF** 按钮，另一种是在 R 控制台里执行
 
 ```r
-tinytex::xelatex(file = "slide-template.tex")
+tinytex::xelatex(file = "slide-metropolis.tex")
 ```
 
 编译出来的效果如下：
@@ -1052,7 +1052,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 
 R Markdown 专属功能是指那些离不开 R 语言和 knitr 包的功能，比如幻灯片里插入 R 语言生成的图和表。一个简单示例如下：
 
-```{embed, file="examples/slide-minimal.Rmd"}
+```{embed, file="examples/_slide-minimal.Rmd"}
 ```
 
 编译生成的 beamer 文档如图\@ref(fig:rmd-metropolis-zh-rlang)所示。
@@ -1064,7 +1064,7 @@ R Markdown 专属功能是指那些离不开 R 语言和 knitr 包的功能，�
 
 图、表、公式在幻灯片里交叉引用似乎并不常见，原因可能是现场环境下，观众和演讲者未必关注到或记得住编号。在基础的 rmarkdown 包里并不支持交叉引用，它是 bookdown 包里才有的高级功能，毕竟交叉引用在书里是必不可少的。使用起来也不复杂，只需在 R Markdown 文档的 YAML 元数据里将 `beamer_presentation` 替换为 `bookdown::beamer_presentation2`。 下面是一个小示例，在前文基础上添加图、表、公式的交叉引用。
 
-```{embed, file="examples/slide-cross-references.Rmd"}
+```{embed, file="examples/_slide-cross-references.Rmd"}
 ```
 
 渲染出来的效果，如图\@ref(fig:rmd-metropolis-zh-cross-references)所示。
@@ -1207,7 +1207,7 @@ Presento 主题下幻灯片的样式如图\@ref(fig:rmd-slide-binb-presento) 所
 <details>
 <summary> 点击查看 R Markdown 源文档及设置说明 </summary>
 
-```{embed, file="examples/slide-verona.Rmd"}
+```{embed, file="examples/_slide-verona.Rmd"}
 ```
 
 </details>
