@@ -1238,7 +1238,7 @@ texmf-dist/fonts/map/dvips/alegreya
 
 找到以上文件路径中含 opentype 的，再将目录 alegreya 下的字体复制到系统字体目录。之后，在 RStudio IDE 内，按路径 `File -> New File -> R Markdown` 新建 R Markdown 文件，期间看到如图\@ref(fig:rmd-slide-binb)所示窗口，选择 Presento 主题的 R Markdown 幻灯片模版。
 
-![(\#fig:rmd-slide-binb) binb 包模版列表](https://user-images.githubusercontent.com/12031874/182389055-f3ee3b7d-73eb-432f-acb2-429079b64b01.png){ width=50% }
+![(\#fig:rmd-slide-binb) binb 包模版列表](https://user-images.githubusercontent.com/12031874/182389055-f3ee3b7d-73eb-432f-acb2-429079b64b01.png){ width=80% }
 
 
 Presento 主题下幻灯片的样式如图\@ref(fig:rmd-slide-binb-presento) 所示。
@@ -1472,7 +1472,7 @@ pandoc --pdf-engine pdflatex -t beamer \
 
 
 ::: rmdtip
-RStudio IDE 使用 [MathJaX](https://www.mathjax.org/) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 **unicode-math** 的 `\symbf` 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个[文档](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)，常见的 `\mathbb` 空心体 `$\mathbb{A}$` 和 `\mathfrak` 火星体 `$\mathfrak{A}$` 来自宏包 amsfonts，`\mathscr` 花体 `$\mathscr{A}$` 和 `\bm` 粗体 `$\bm{A}$` 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看[amsmath 文档](https://www.latex-project.org/help/documentation/amsldoc.pdf)，此处仅摘抄一例 `$\sqrt{x} +\sqrt{y} + \sqrt{z}$` 和 `$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$`，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？
+RStudio IDE 使用 MathJaX (<https://www.mathjax.org/>) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 **unicode-math** 的 `\symbf` 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个[文档](https://docs.mathjax.org/en/latest/input/tex/macros/index.html)，常见的 `\mathbb` 空心体 `$\mathbb{A}$` 和 `\mathfrak` 火星体 `$\mathfrak{A}$` 来自宏包 amsfonts，`\mathscr` 花体 `$\mathscr{A}$` 和 `\bm` 粗体 `$\bm{A}$` 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看[amsmath 文档](https://www.latex-project.org/help/documentation/amsldoc.pdf)，此处仅摘抄一例 `$\sqrt{x} +\sqrt{y} + \sqrt{z}$` 和 `$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$`，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？
 
 ![(\#fig:rstudio-mathjax) RStudio IDE 预览加粗的希腊字母$\bm{\Sigma}$](https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png)
 :::

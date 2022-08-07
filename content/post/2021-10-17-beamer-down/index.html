@@ -1673,7 +1673,7 @@ texmf-dist/fonts/enc/dvips/alegreya
 texmf-dist/fonts/map/dvips/alegreya</code></pre>
 <p>找到以上文件路径中含 opentype 的，再将目录 alegreya 下的字体复制到系统字体目录。之后，在 RStudio IDE 内，按路径 <code>File -&gt; New File -&gt; R Markdown</code> 新建 R Markdown 文件，期间看到如图<a href="#fig:rmd-slide-binb">4.25</a>所示窗口，选择 Presento 主题的 R Markdown 幻灯片模版。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-slide-binb"></span>
-<img src="https://user-images.githubusercontent.com/12031874/182389055-f3ee3b7d-73eb-432f-acb2-429079b64b01.png" style="width:50.0%" alt="" />
+<img src="https://user-images.githubusercontent.com/12031874/182389055-f3ee3b7d-73eb-432f-acb2-429079b64b01.png" style="width:80.0%" alt="" />
 <p class="caption">图 4.25:  binb 包模版列表</p>
 </div>
 <p>Presento 主题下幻灯片的样式如图<a href="#fig:rmd-slide-binb-presento">4.26</a> 所示。</p>
@@ -2096,7 +2096,7 @@ output:
 </table>
 <p>可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。目前，仅有的数学字体支持的数学符号还不太全，但 unicode-math 未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 <code>\mscrA</code> 和 <code>\BbbA</code> 分别等价于 <code>\mathscr{A}</code> 和 <code>\mathbb{A}</code>，而不需要额外加载 <strong>amsfonts</strong> 和 <strong>mathrsfs</strong> 宏包。</p>
 <div class="rmdtip">
-<p>RStudio IDE 使用 <a href="https://www.mathjax.org/">MathJaX</a> 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 amsfonts，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？</p>
+<p>RStudio IDE 使用 MathJaX (<a href="https://www.mathjax.org/" class="uri">https://www.mathjax.org/</a>) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 amsfonts，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？</p>
 <div class="figure"><span style="display:block;" id="fig:rstudio-mathjax"></span>
 <img src="https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png" alt="" />
 <p class="caption">图 4.31:  RStudio IDE 预览加粗的希腊字母<span class="math inline">\(\bm{\Sigma}\)</span></p>
@@ -2353,7 +2353,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <h1><span class="header-section-number">6</span> 参考文献</h1>
 <div id="refs" class="references csl-bib-body">
 <div id="ref-tinytex2019" class="csl-entry">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2019). <a href="https://tug.org/TUGboat/Contents/contents40-1.html">TinyTeX: A lightweight, cross-platform, and easy-to-maintain LaTeX distribution based on TeX live</a>. <em>TUGboat</em> 30–2.</div>
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2019). <a href="https://tug.org/TUGboat/Contents/contents40-1.html"><span>TinyTeX</span>: A lightweight, cross-platform, and easy-to-maintain LaTeX distribution based on <span>TeX</span> live</a>. <em>TUGboat</em> 30–2.</div>
 </div>
 <div id="ref-Xie2015" class="csl-entry">
 <div class="csl-left-margin">[2] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2015). <em><a href="https://yihui.org/knitr/">Dynamic documents with <span>R</span> and knitr</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
@@ -2362,10 +2362,10 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <div class="csl-left-margin">[3] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Allaire</span>, J. J. and <span class="smallcaps">Grolemund</span>, G. (2018). <em><a href="https://bookdown.org/yihui/rmarkdown">R markdown: The definitive guide</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
 </div>
 <div id="ref-Xie2016" class="csl-entry">
-<div class="csl-left-margin">[4] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2016). <em><a href="https://bookdown.org/yihui/bookdown">Bookdown: Authoring books and technical documents with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+<div class="csl-left-margin">[4] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y. (2016). <em><a href="https://bookdown.org/yihui/bookdown"><span class="nocase">bookdown</span>: Authoring books and technical documents with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
 </div>
 <div id="ref-Dirk2020" class="csl-entry">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span class="smallcaps">Eddelbuettel</span>, D., <span class="smallcaps">Zahn</span>, I. and <span class="smallcaps">Hyndman</span>, R. (2020). <em><a href="https://CRAN.R-project.org/package=binb"><span class="nocase">binb</span>: ’Binb’ is not ’beamer’</a></em>.</div>
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span class="smallcaps">Eddelbuettel</span>, D., <span class="smallcaps">Zahn</span>, I. and <span class="smallcaps">Hyndman</span>, R. (2020). <em><a href="https://CRAN.R-project.org/package=binb"><span class="nocase">binb</span>: <span class="nocase">binb</span> is not <span class="nocase">beamer</span></a></em>.</div>
 </div>
 <div id="ref-uiucthemes2020" class="csl-entry">
 <div class="csl-left-margin">[6] </div><div class="csl-right-inline"><span class="smallcaps">Balamuta</span>, J. (2020). <em><a href="https://CRAN.R-project.org/package=uiucthemes"><span class="nocase">uiucthemes</span>: <span>R Markdown</span> themes for <span>UIUC</span> documents and presentations</a></em>.</div>
@@ -2377,10 +2377,10 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <div class="csl-left-margin">[8] </div><div class="csl-right-inline"><span class="smallcaps">Pakin</span>, S. (2021). <a href="https://www.ctan.org/pkg/comprehensive/">The comprehensive <span>LaTeX</span> symbol list - symbols accessible from LaTeX</a>.</div>
 </div>
 <div id="ref-Zeng2020" class="csl-entry">
-<div class="csl-left-margin">[9] </div><div class="csl-right-inline"><span class="smallcaps">曾祥东</span>. (2020). <a href="https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/">在 LATEX 中使用 OpenType 字体（三）</a>.</div>
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline"><span class="smallcaps">曾祥东</span>. (2020). <a href="https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/">在 <span>LaTeX</span> 中使用 OpenType 字体（三）</a>.</div>
 </div>
 <div id="ref-Xie2017" class="csl-entry">
-<div class="csl-left-margin">[10] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Hill</span>, A. P. and <span class="smallcaps">Thomas</span>, A. (2017). <em><a href="https://bookdown.org/yihui/blogdown/">Blogdown: Creating websites with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Hill</span>, A. P. and <span class="smallcaps">Thomas</span>, A. (2017). <em><a href="https://bookdown.org/yihui/blogdown/"><span class="nocase">blogdown</span>: Creating websites with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
 </div>
 </div>
 </div>
