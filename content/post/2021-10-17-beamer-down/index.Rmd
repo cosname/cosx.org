@@ -179,7 +179,7 @@ LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的�
 
 # 软件配置 {#setup}
 
-安装一些 R 包，一个轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)[@tinytex2019]，LaTeX 幻灯片主题 [metropolis](https://github.com/matze/mtheme) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，一些字体。
+安装一些 R 包，一个轻量级 LaTeX 发行版 [TinyTeX](https://github.com/yihui/tinytex-releases)[@tinytex2019]，LaTeX 幻灯片主题 metropolis (<https://github.com/matze/mtheme>) 和 [beamer-verona](https://ctan.org/pkg/beamer-verona)，还有一些字体和工具。
 
 
 ## 安装 R 包 {#setup-rpkgs}
@@ -199,7 +199,7 @@ install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "binb"))
 
 ## 安装 TinyTeX {#setup-tinytex}
 
-平时要是常用 R Markdown 相关扩展包，R 包 [**tinytex**](https://github.com/yihui/tinytex) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
+平时要是常用 R Markdown 相关扩展包，R 包 **tinytex** (<https://github.com/yihui/tinytex>) 已经被安装上了，下面用它安装 TinyTeX 这个发行版，在 R 环境里，这一切会比较顺畅，讲真，配置环境什么的最烦了，一次两次三四次，五次六次七八次，但是学什么的时候最好从配置环境开始，记录从第一次安装开始，后面会越来越快！
 
 ```{r}
 #| eval: false
@@ -210,16 +210,13 @@ tinytex::install_tinytex()
 
 ## 安装字体 {#setup-fonts}
 
-为了后续介绍 metropolis 主题，先安装和配置其所需字体，此过程分两步走：
+为了后续介绍 metropolis (<>) 主题，先安装和配置其所需字体，此过程分两步走：
 
 1.  这里用 **tinytex** 包安装 [**fira**](https://www.ctan.org/pkg/fira) 系列英文字体，[**firamath**](https://github.com/firamath/firamath) 和 [**xits**](https://www.ctan.org/pkg/xits) 数学字体，后续用作 beamer 幻灯片的主要字体，相信大家看惯了千篇一律的字体，也想换换口味吧！
 
     ```{r}
     #| eval: false
-    # 顺道把 beamertheme-metropolis 宏包也安装下
-    tinytex::tlmgr_install(c(
-      "beamertheme-metropolis", "beamer-verona",
-      "fira", "firamath", "firamath-otf", "xits", "montserrat"))
+    tinytex::tlmgr_install(c("fira", "firamath", "firamath-otf", "xits"))
     ```
 
 2.  通过「人工智能」查找，发现上面安装的字体都放在了 TinyTeX 的安装目录下，而且不能直接被调用，故而将它们拷贝到用户指定的字体目录，刷新字体目录后，通过 **fontspec** 宏包调用。为了加快复现的速度，我已经将这个复制粘贴的过程化作几行代码，如下：
@@ -241,6 +238,46 @@ tinytex::install_tinytex()
     file.copy(from = fontfile, to = distdir, overwrite = TRUE)
     ```
 
+## 安装主题 {#beamer-theme}
+
+除了 beamer 自带的主题，本文还使用了第三方主题 metropolis 和 Verona，因此，继续安装 LaTeX 宏包 beamertheme-metropolis 和 beamer-verona。
+
+```{r}
+#| eval: false
+
+tinytex::tlmgr_install(c(
+  "beamertheme-metropolis", "beamer-verona"
+))
+```
+
+## 其他配置 {#setup-others}
+
+将 RStudio IDE 内置的 Pandoc 软件的路径添加到系统环境变量 `PATH` 中，而后就可以在命令行中使用它。通过如下命令可以知道 Pandoc 的安装路径：
+
+```{r}
+#| echo: true
+#| eval: false
+
+rmarkdown::pandoc_exec()
+```
+
+如果幻灯片中包含 R 代码生成的图片，或插入 PDF 格式的图片， R Markdown 渲染时，默认会尝试调用 pdfcrop (<https://github.com/ho-tex/pdfcrop>) 和 ghostscript (<https://www.ghostscript.com/>) 两个工具来裁剪多余的边空，这是可选的。
+
+```{bash}
+#| eval: false
+
+# MacOS 下安装软件 ghostscript
+brew install ghostscript
+# Ubuntu 下安装软件 ghostscript
+sudo apt-get -y install ghostscript
+```
+
+```{r}
+#| eval: false
+
+# 安装宏包 pdfcrop
+tinytex::tlmgr_install("pdfcrop")
+```
 
 
 # 制作 beamer 幻灯片 {#beamer}
@@ -790,7 +827,7 @@ pandoc -o custom-reference.docx --print-default-data-file reference.docx
 :::
 
 
-### 从 Pandoc's Markdown 到 R Markdown
+### 从 Pandoc's Markdown 到 R Markdown {#pandoc-to-rmarkdown}
 
 R Markdown 文档开头处为文档 YAML 元数据，它主要分三部分：
 
@@ -910,7 +947,7 @@ pandoc --pdf-engine xelatex -t beamer \
 ```
 
 
-### 中文 R Markdown 文档
+### 中文 R Markdown 文档 {#chinese-rmarkdown}
 
 接下来，将上面的英文 R Markdown 文档汉化一下，下面是一份完整的**中文** R Markdown 模版，有了前面关于英文 R Markdown 文档的介绍，此时，想必已不再感到陌生。 ctexbeamer 和 ctexart 文类都来自 [ctex 宏包](https://ctan.org/pkg/ctex)，想汉化必须看看它的帮助文档。相比于上面的英文 R Markdown 文档，这里只添加两个 Pandoc 变量，一个设置中文 beamer 文类 `documentclass: ctexbeamer`，另一个在文类选项中设置中文字体 `classoption: "fontset=fandol"`，设置它们的效果类似在 LaTeX 文档中添加如下的一行代码。
 
@@ -946,7 +983,7 @@ classoption: "fontset=fandol"
 ![(\#fig:rmd-metropolis-zh) 中文 R Markdown 示例](https://user-images.githubusercontent.com/12031874/182027292-0b24fb9b-7804-4ad5-940c-591ff1fd695d.gif)
 
 
-### 数学公式与引理定理
+### 数学公式与引理定理 {#math-formula-theorem}
 
 在日常使用中，beamer 幻灯片常用于学术性报告，各种各样的数学公式和符号随处可见。默认情形下，还是使用宏包 unicode-math 处理数学公式。
 
@@ -1048,7 +1085,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 
 ![(\#fig:rmd-metropolis-zh-block) 中文 R Markdown 示例里添加定理、引理](https://user-images.githubusercontent.com/12031874/182034761-c7fee605-4729-487b-af20-e423ba7b2af0.gif)
 
-### R Markdown 专属功能
+### R Markdown 专属功能 {#rmarkdown-special}
 
 R Markdown 专属功能是指那些离不开 R 语言和 knitr 包的功能，比如幻灯片里插入 R 语言生成的图和表。一个简单示例如下：
 
@@ -1060,7 +1097,7 @@ R Markdown 专属功能是指那些离不开 R 语言和 knitr 包的功能，�
 ![(\#fig:rmd-metropolis-zh-rlang) 中文 R Markdown 示例里添加图片和表格](https://user-images.githubusercontent.com/12031874/182323860-3b206f90-55f5-4176-85ec-e65a90e2bb04.gif)
 
 
-### 图、表、公式交叉引用
+### 图、表、公式交叉引用 {#cross-references}
 
 图、表、公式在幻灯片里交叉引用似乎并不常见，原因可能是现场环境下，观众和演讲者未必关注到或记得住编号。在基础的 rmarkdown 包里并不支持交叉引用，它是 bookdown 包里才有的高级功能，毕竟交叉引用在书里是必不可少的。使用起来也不复杂，只需在 R Markdown 文档的 YAML 元数据里将 `beamer_presentation` 替换为 `bookdown::beamer_presentation2`。 下面是一个小示例，在前文基础上添加图、表、公式的交叉引用。
 
@@ -1077,13 +1114,13 @@ R Markdown 专属功能是指那些离不开 R 语言和 knitr 包的功能，�
 
 
 
-### R Markdown 幻灯片模版
+### R Markdown 幻灯片模版 {#rmarkdown-template}
 
 
 
 前面介绍 R Markdown 功能涉及了两款主题，一款是 beamer 文类最基础的默认主题，另一款是 [metropolis](https://github.com/matze/mtheme)主题。若读者觉得还行，往下的内容不看也罢，专注内容，专注质量其实更好。若读者觉得太过千篇一律，索然无味，下面几款聊胜于无。
 
-#### beamer 文类内置主题
+#### beamer 文类内置主题 {#beamer-builtin}
 
 beamer 文类自带了诸多主题，网站(<https://hartwork.org/beamer-theme-matrix/>)提供预览，读者可根据喜好选择。默认主题下将颜色主题更换为 seahorse，效果如图\@ref(fig:rmd-slide-seahorse)所示。
 
@@ -1115,7 +1152,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 
 ![(\#fig:rmd-slide-seahorse) 颜色主题 seahorse](https://user-images.githubusercontent.com/12031874/182384777-f66a292d-5846-40dd-bbe3-cc493d296b23.gif)
 
-#### beamer 幻灯片主题库（LaTeX）
+#### beamer 幻灯片主题库（LaTeX）{#beamer-community}
 
 除了 beamer 文类内置的主题，LaTeX 社区也开发了很多宏包，提供各种各样的主题模版，详见 <https://ctan.org/topic/presentation>，下面以   [beamer-verona](https://ctan.org/pkg/beamer-verona) 为例，且看如何用到 R Markdown 文档里。首先安装 LaTeX 宏包 beamer-verona：
 
@@ -1157,9 +1194,9 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 ![(\#fig:rmd-slide-Verona) Verona 主题](https://user-images.githubusercontent.com/12031874/182385716-21d5f3de-4292-40a3-bcfb-25686b91585d.gif)
 
 
-#### beamer 幻灯片主题库（R）
+#### beamer 幻灯片主题库（R）{#rmarkdown-community}
 
-R 语言社区也有少量的 R 包打包了一些 R Markdown 格式的 beamer 模版，比如 [**binb**](https://github.com/eddelbuettel/binb) 和 [**uiucthemes**](https://github.com/illinois-r/uiucthemes) 包。下面以 **binb** 包内置的 Presento 主题的 R Markdown 模版 为例，首先安装 **binb** 包和一些字体宏包。
+R 语言社区也有少量的 R 包打包了一些 R Markdown 格式的 beamer 模版，比如 [**binb**](https://github.com/eddelbuettel/binb) 和 [**uiucthemes**](https://github.com/illinois-r/uiucthemes) [@uiucthemes2020] 包。下面以 **binb** 包内置的 Presento 主题的 R Markdown 模版 为例，首先安装 **binb** 包和一些字体宏包。
 
 ```{r}
 #| eval: false
@@ -1168,6 +1205,15 @@ R 语言社区也有少量的 R 包打包了一些 R Markdown 格式的 beamer �
 install.packages("binb")
 tinytex::tlmgr_install(c("montserrat", "lato", "noto", "alegreya", "inconsolata"))
 ```
+
+::: rmdnote
+Ubuntu 环境下，安装 inconsolata 字体，可以用如下命令：
+
+```bash
+sudo apt-get -y install fonts-inconsolata
+```
+:::
+
 
 字体宏包安装后，需要将 TrueType 或 OpenType 字体复制到系统字体目录下，否则，beamer 主题 Presento 找不到字体。先找 TinyTeX 安装位置：
 
@@ -1194,13 +1240,14 @@ texmf-dist/fonts/map/dvips/alegreya
 
 ![(\#fig:rmd-slide-binb) binb 包模版列表](https://user-images.githubusercontent.com/12031874/182389055-f3ee3b7d-73eb-432f-acb2-429079b64b01.png){ width=50% }
 
+
 Presento 主题下幻灯片的样式如图\@ref(fig:rmd-slide-binb-presento) 所示。
 
 ![(\#fig:rmd-slide-binb-presento) binb 包 Presento 主题模版](https://user-images.githubusercontent.com/12031874/182398952-998e9473-7ead-41ab-b113-b3010eca5980.gif)
 
 掌握以上花样翻新的规律，beamer 主题任你玩，保证可以每次做演示不重样。
 
-### 深度使用 beamer 幻灯片主题
+### 深度使用 beamer 幻灯片主题 {#beamer-verona}
 
 下面是一份基于 beamer 主题 [Verona](https://ctan.org/pkg/beamer-verona) 的 R Markdown 幻灯片模版，内容十分丰富，将前面单个介绍的许多功能合在一个文档里了。
 
@@ -1244,11 +1291,11 @@ beamer 幻灯忍者秘笈不在 R、不在 R Markdown 而在 LaTeX、在 Pandoc�
 
 
 
-### Pandoc 之 Lua 外挂
+### Pandoc 之 Lua 外挂 {#pandoc-plugin}
 
-Lua 是一门脚本语言，类似 Python 和 R 语言，Pandoc 内置一个 Lua 解释器，通过 Lua 脚本，可以给 Pandoc 添加外挂，支持用户的个性化需求。
+Lua (<https://www.lua.org/>) 是一门脚本语言，类似 Python 和 R 语言，Pandoc 内置一个 Lua 解释器，通过 Lua 脚本，可以给 Pandoc 添加外挂，支持用户的个性化需求。
 
-比如，用户想自定义一些 block，这就可能用上 Lua 外挂，《R Markdown 食谱》中介绍了如何借助[tcolorbox](https://ctan.org/pkg/tcolorbox)宏包[自定义 block](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html)。更加底层一点，介绍如何给 Pandoc 写 Lua 脚本，请看 Pandoc 官网给出了一份详细的材料[Lua 外挂](https://pandoc.org/lua-filters.html)。下面是一个小示例，左侧是 R Markdown 文档内容，右侧是导言区内容，加载了 ctex 宏包，自定义了一个 block 环境。
+比如，用户想自定义一些 block，这就可能用上 Lua 外挂，《R Markdown 食谱》中介绍了如何借助 tcolorbox 宏包[自定义 block](https://bookdown.org/yihui/rmarkdown-cookbook/custom-blocks.html)。更加底层一点，介绍如何给 Pandoc 写 Lua 脚本，请看 Pandoc 官网给出了一份详细的材料 Lua 外挂(<https://pandoc.org/lua-filters.html>)。下面是一个小示例，左侧是 R Markdown 文档内容，右侧是导言区内容，加载了 ctex 宏包，自定义了一个 block 环境。
 
 :::::: {.columns}
 ::: {.column width="47.5%" data-latex="{0.475\textwidth}"}
