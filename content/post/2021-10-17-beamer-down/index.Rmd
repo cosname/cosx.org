@@ -253,7 +253,6 @@ tinytex::tlmgr_install(c(
 ## 其他配置 {#setup-others}
 
 
-
 1. 配置 Pandoc：将 RStudio IDE 内置的 Pandoc 软件的安装路径添加到系统环境变量 `PATH` 中，而后就可以在命令行中使用它。通过如下命令可以知道 Pandoc 可执行文件的完整路径，以下是笔者的 MacOS 系统下的文件路径。
 
     ```{r}
@@ -276,6 +275,7 @@ tinytex::tlmgr_install(c(
     ![编辑环境变量 Path](https://user-images.githubusercontent.com/12031874/183287307-b6f763ae-571f-4a29-ab8c-952a5b955323.png)
 
     然后点击确定，退出。重新打开 RStudio IDE，即可在 RStudio IDE 的卫星窗口 Terminal 内使用 Pandoc 工具。
+
 
 1. 安装 pdfcrop 和 ghostscript：如果幻灯片中包含 R 代码生成的图片，或插入 PDF 格式的图片， R Markdown 渲染时，默认会尝试调用 pdfcrop (<https://github.com/ho-tex/pdfcrop>) 和 ghostscript (<https://www.ghostscript.com/>) 两个工具来裁剪多余的边空，这是可选的。
     
@@ -1228,6 +1228,14 @@ Ubuntu 环境下，安装 inconsolata 字体，可以用如下命令：
 ```bash
 sudo apt-get -y install fonts-inconsolata
 ```
+
+MacOS 环境下，安装 inconsolata 字体，可以用如下命令：
+
+```bash
+brew install --cask font-inconsolata
+```
+
+Windows 环境下，可以从 Google 在 Github 的[字体仓库](https://github.com/google/fonts/tree/main/ofl/inconsolata) 获取。
 :::
 
 
@@ -1723,7 +1731,7 @@ xfun::session_info(c(
 <!-- Windows 环境下安装和使用字体 -->
 
 
-本文写作过程中遇到一些有用的小工具，比如将 PDF 文档转为 PNG 图片或 GIF 动图。
+感谢审稿人楚新元(<https://cxy.rbind.io/>)在 Windows 和 Ubuntu 下测试文中的示例，提供很多修改建议，极大地提高了文章的质量，还介绍了一些有用的小工具，如将 PDF 文档转为 PNG 图片或 GIF 动图。
 
 
 ## PDF 文档转 GIF 动图 {#pdf-to-gif}

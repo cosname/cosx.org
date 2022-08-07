@@ -1679,6 +1679,9 @@ tinytex::tlmgr_install(c(&quot;montserrat&quot;, &quot;lato&quot;, &quot;noto&qu
 <div class="rmdnote">
 <p>Ubuntu 环境下，安装 inconsolata 字体，可以用如下命令：</p>
 <pre class="bash"><code>sudo apt-get -y install fonts-inconsolata</code></pre>
+<p>MacOS 环境下，安装 inconsolata 字体，可以用如下命令：</p>
+<pre class="bash"><code>brew install --cask font-inconsolata</code></pre>
+<p>Windows 环境下，可以从 Google 在 Github 的<a href="https://github.com/google/fonts/tree/main/ofl/inconsolata">字体仓库</a> 获取。</p>
 </div>
 <p>字体宏包安装后，需要将 TrueType 或 OpenType 字体复制到系统字体目录下，否则，beamer 主题 Presento 找不到字体。先找 TinyTeX 安装位置：</p>
 <pre class="r"><code># 找到 TinyTeX 根目录
@@ -2431,7 +2434,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <div id="appendix" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> 附录</h1>
 <!-- Windows 环境下安装和使用字体 -->
-<p>本文写作过程中遇到一些有用的小工具，比如将 PDF 文档转为 PNG 图片或 GIF 动图。</p>
+<p>感谢审稿人楚新元(<a href="https://cxy.rbind.io/" class="uri">https://cxy.rbind.io/</a>)在 Windows 和 Ubuntu 下测试文中的示例，提供很多修改建议，极大地提高了文章的质量，还介绍了一些有用的小工具，如将 PDF 文档转为 PNG 图片或 GIF 动图。</p>
 <div id="pdf-to-gif" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> PDF 文档转 GIF 动图</h2>
 <p>将 PDF 格式的多页幻灯片转为 GIF 动图可以借助 <a href="https://imagemagick.org">ImageMagick</a> 一行命令搞定：</p>
