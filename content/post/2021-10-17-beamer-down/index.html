@@ -199,7 +199,7 @@ div.csl-indent {
 </div>
 <div id="overview" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> 本文概览</h1>
-<p>R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持动态文档写作，让文本、代码相互交织，插图、表格、文献、引用等动态生成。在网站简历、期刊书籍、报告演示等诸多方面有大量应用。其中，报告演示（Presentations）是传递、交流想法的重要方式，R Markdown 生态有很多扩展包，提供多种方式制作幻灯片，支持的幻灯片种类有 Office PowerPoint（俗称 PPT）、ioslides、 <a href="https://github.com/rstudio/revealjs"><strong>reveal.js</strong></a> 和<a href="https://github.com/yihui/xaringan">写轮眼</a>等。</p>
+<p>R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持动态文档写作，让文本、代码相互交织，插图、表格、文献、引用等动态生成。在网站简历、期刊书籍、报告演示等诸多方面有大量应用。其中，报告演示（Presentations）是传递、交流想法的重要方式，R Markdown 生态有很多扩展包，提供多种方式制作幻灯片，支持的幻灯片种类有 Office PowerPoint（俗称 PPT）、ioslides、 <a href="https://github.com/rstudio/revealjs"><strong>reveal.js</strong></a> 和写轮眼(<a href="https://github.com/yihui/xaringan" class="uri">https://github.com/yihui/xaringan</a>)等。</p>
 <p>本文将介绍如何用 R Markdown 制作 beamer 风格的幻灯片，主要包含以下内容：</p>
 <ol class="example" style="list-style-type: decimal">
 <li>作者与 beamer 结缘和本文写作的始末。</li>
@@ -228,7 +228,7 @@ div.csl-indent {
 <p>默认大家已经安装了 R 软件和 RStudio IDE，这会让后面的操作变得更容易。
 因陆续会用到 R Markdown 生态的几个 R 包，所以先提前安装下：</p>
 <pre class="r"><code>install.packages(c(&quot;tinytex&quot;, &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;bookdown&quot;, &quot;binb&quot;))</code></pre>
-<p>其中， R 包 <strong>tinytex</strong> 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是在构建在 LaTeX 宏包管理器 <a href="https://tug.org/texlive/tlmgr.html">tlmgr</a> 之上，默认去掉了 LaTeX 宏包源码和帮助文档，做到 200M～300M 的大小。 <strong>knitr</strong> 包 <span class="citation">[<a href="#ref-Xie2015" role="doc-biblioref">2</a>]</span> 自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 <strong>rmarkdown</strong> 包 <span class="citation">[<a href="#ref-Xie2018" role="doc-biblioref">3</a>]</span> 的功能覆盖，仅使用 <strong>bookdown</strong> 包 <span class="citation">[<a href="#ref-Xie2016" role="doc-biblioref">4</a>]</span> 的交叉引用功能，使用 <strong>binb</strong> 包 <span class="citation">[<a href="#ref-Dirk2020" role="doc-biblioref">5</a>]</span> 内置的一份 beamer 幻灯片模版。</p>
+<p>其中， R 包 <strong>tinytex</strong> 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是在构建在 LaTeX 宏包管理器 <a href="https://tug.org/texlive/tlmgr.html">tlmgr</a> 之上，默认去掉了 LaTeX 宏包源码和帮助文档，做到 200M～300M 的大小。 <strong>knitr</strong> 包 <span class="citation">[<a href="#ref-Xie2015" role="doc-biblioref">2</a>]</span> 自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 <strong>rmarkdown</strong> 包 <span class="citation">[<a href="#ref-Xie2018" role="doc-biblioref">3</a>]</span> 的功能覆盖，仅使用 <strong>bookdown</strong> 包 <span class="citation">[<a href="#ref-Xie2016" role="doc-biblioref">4</a>]</span> 的交叉引用功能，使用 <strong>binb</strong> 包 <span class="citation">[<a href="#ref-Dirk2020" role="doc-biblioref">5</a>]</span> 内置的一份 R Markdown 格式的 beamer 幻灯片模版 — Presento (<a href="https://github.com/RatulSaha/presento" class="uri">https://github.com/RatulSaha/presento</a>)。</p>
 </div>
 <div id="setup-tinytex" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> 安装 TinyTeX</h2>
@@ -238,7 +238,7 @@ div.csl-indent {
 </div>
 <div id="setup-fonts" class="section level2" number="3.3">
 <h2><span class="header-section-number">3.3</span> 安装字体</h2>
-<p>为了后续介绍 metropolis (&lt;&gt;) 主题，先安装和配置其所需字体，此过程分两步走：</p>
+<p>为了后续介绍 metropolis 主题，先安装和配置其所需字体，此过程分两步走：</p>
 <ol style="list-style-type: decimal">
 <li><p>这里用 <strong>tinytex</strong> 包安装 <a href="https://www.ctan.org/pkg/fira"><strong>fira</strong></a> 系列英文字体，<a href="https://github.com/firamath/firamath"><strong>firamath</strong></a> 和 <a href="https://www.ctan.org/pkg/xits"><strong>xits</strong></a> 数学字体，后续用作 beamer 幻灯片的主要字体，相信大家看惯了千篇一律的字体，也想换换口味吧！</p>
 <pre class="r"><code>tinytex::tlmgr_install(c(&quot;fira&quot;, &quot;firamath&quot;, &quot;firamath-otf&quot;, &quot;xits&quot;))</code></pre></li>
@@ -1106,7 +1106,7 @@ institute: &quot;Capital of Statistics&quot;
 </div>
 <div id="添加背景" class="section level3" number="4.2.10">
 <h3><span class="header-section-number">4.2.10</span> 添加背景</h3>
-<p>在 Markdown 文档的 YAML 里设置 <code>background-image</code> 指定背景图片，将背景图片和Markdown 文档放一起或指定背景图片的存放路径。</p>
+<p>在 Markdown 文档的 YAML 里设置 <code>background-image</code> 指定背景图片，将背景图片和 Markdown 文档放一起或指定背景图片的存放路径。</p>
 <pre class="md"><code>---
 title:  &#39;This is the title&#39;
 subtitle: &quot;This is the subtitle&quot;
@@ -2043,16 +2043,16 @@ output:
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi</code></pre>
-<p>上面，amsmath 和 amssymb 是两个定义了大量数学符号的宏包，lmodern 是字体包，因编译使用 XeLaTeX 引擎，还会调用 unicode-math 宏包。问题就出在 unicode-math 宏包身上，它会直接忽视命令 <code>\boldsymbol</code>，加粗希腊字母，它只认 <code>\symbf</code>。也许有读者已经看出来了，上面的代码块是个 <code>IF-ELSE</code> 的逻辑，可以选用 pdflatex 引擎编译呀！比如这样：</p>
+<p>上面，<strong>amsmath</strong> 和 <strong>amssymb</strong> 是两个定义了大量数学符号的宏包，<strong>lmodern</strong> 是字体包，因编译使用 XeLaTeX 引擎，还会调用 <strong>unicode-math</strong> 宏包。问题就出在 <strong>unicode-math</strong> 宏包身上，它会直接忽视命令 <code>\boldsymbol</code>，加粗希腊字母，它只认 <code>\symbf</code>。也许有读者已经看出来了，上面的代码块是个 <code>IF-ELSE</code> 的逻辑，可以选用 pdflatex 引擎编译呀！比如这样：</p>
 <pre class="bash"><code>pandoc --pdf-engine pdflatex -t beamer \
   slide-math.md -o slide-math.pdf</code></pre>
 <p>确实可以渲染出来加粗效果 <span class="math inline">\(\boldsymbol{\theta}\)</span>，但是，pdflatex 处理中文是很弱的，在 MacOS 和 Ubuntu 等系统上比较麻烦，而且，未来主要方向是 XeLaTeX 引擎。</p>
-<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 unicode-math 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.30</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">9</a>]</span>。</p>
+<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 <strong>unicode-math</strong> 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.30</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">9</a>]</span>。</p>
 <div class="figure"><span style="display:block;" id="fig:slide-unicode-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png" alt="" />
 <p class="caption">图 4.30:  unicode-math 宏包</p>
 </div>
-<p>那么，问题来了，是不是使用其他数学字体就好了呢？unicode-math 宏包的<a href="http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf">官方文档</a> 对 XITS Math、Fira Math 等字体的数学符号的支持情况有说明，见下表。</p>
+<p>那么，问题来了，是不是使用其他数学字体就好了呢？<strong>unicode-math</strong> 宏包的<a href="http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf">官方文档</a> 对 XITS Math、Fira Math 等字体的数学符号的支持情况有说明，见下表。</p>
 <center>
 表1：不同的数学字体支持的符号数量不同
 </center>
@@ -2094,9 +2094,9 @@ output:
 </tr>
 </tbody>
 </table>
-<p>可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。目前，仅有的数学字体支持的数学符号还不太全，但 unicode-math 未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 <code>\mscrA</code> 和 <code>\BbbA</code> 分别等价于 <code>\mathscr{A}</code> 和 <code>\mathbb{A}</code>，而不需要额外加载 <strong>amsfonts</strong> 和 <strong>mathrsfs</strong> 宏包。</p>
+<p>可见，数学符号范围支持最广的是 XITS Math。Fira 系列字体配 metropolis 主题是比较常见的，却也因 Fira Math 提供的字符集有限，不得不借助 XITS Math 补位（比如矩阵转置的符号）。目前，仅有的数学字体支持的数学符号还不太全，但 <strong>unicode-math</strong> 未来是趋势，为啥？统一性，不需要调其它数学符号包，比如 <code>\mscrA</code> 和 <code>\BbbA</code> 分别等价于 <code>\mathscr{A}</code> 和 <code>\mathbb{A}</code>，而不需要额外加载 <strong>amsfonts</strong> 和 <strong>mathrsfs</strong> 宏包。</p>
 <div class="rmdtip">
-<p>RStudio IDE 使用 MathJaX (<a href="https://www.mathjax.org/" class="uri">https://www.mathjax.org/</a>) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 amsfonts，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 mathrsfs 和 bm。amsmath 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？</p>
+<p>RStudio IDE 使用 MathJaX (<a href="https://www.mathjax.org/" class="uri">https://www.mathjax.org/</a>) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 <strong>amsfonts</strong>，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 <strong>mathrsfs</strong> 和 <strong>bm</strong>。<strong>amsmath</strong> 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？</p>
 <div class="figure"><span style="display:block;" id="fig:rstudio-mathjax"></span>
 <img src="https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png" alt="" />
 <p class="caption">图 4.31:  RStudio IDE 预览加粗的希腊字母<span class="math inline">\(\bm{\Sigma}\)</span></p>
@@ -2105,7 +2105,7 @@ output:
 <blockquote>
 <p><strong>有没有一种办法，既不用 unicode-math 宏包，也不用 pdflatex 编译引擎，还支持中文和最全的数学符号？有。</strong></p>
 </blockquote>
-<p>回到 4.2.2 节介绍的 Pandoc 内建的 LaTeX 模版，经过一番查找和研读，其中有下面一段逻辑，控制是否加载 unicode-math 宏包，发现 Pandoc 提供 <code>mathspec</code> 变量，它设置为 <code>true</code>，意味着不会加载 unicode-math 宏包，而是加载 mathspec 宏包。</p>
+<p>回到 4.2.2 节介绍的 Pandoc 内建的 LaTeX 模版，经过一番查找和研读，其中有下面一段逻辑，控制是否加载 <strong>unicode-math</strong> 宏包，发现 Pandoc 提供 <code>mathspec</code> 变量，它设置为 <code>true</code>，意味着不会加载 <strong>unicode-math</strong> 宏包，而是加载 <strong>mathspec</strong> 宏包。</p>
 <pre><code>$if(mathspec)$
   \ifXeTeX
     \usepackage{mathspec}
@@ -2174,11 +2174,11 @@ a column separator --></p>
 </div>
 <div id="chinese-document" class="section level3" number="4.5.3">
 <h3><span class="header-section-number">4.5.3</span> 文档汉化与中文字体</h3>
-<p>在前面汉化文档时，笔者推荐往导言区加载 ctex 宏包，同时设置字体为 <a href="https://ctan.org/pkg/fandol">fandol 字体</a>。</p>
+<p>在前面汉化文档时，笔者推荐往导言区加载 ctex 宏包，同时设置字体为 fandol 字体 (<a href="https://ctan.org/pkg/fandol" class="uri">https://ctan.org/pkg/fandol</a>)。</p>
 <pre class="tex"><code>% LaTeX 的导言区添加一行
 \usepackage[UTF8,fontset=fandol]{ctex}</code></pre>
-<p>有一点不足，<a href="https://ctan.org/pkg/fandol">fandol 字体</a>支持的汉字有限，比如「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说<a href="https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84">许宝騄先生</a>的「騄」字了。</p>
-<p>大部分情况下，你可能遇不到这些不常用的字，但也保不齐，此时，开源替代的中文字体有 Adobe 的<a href="https://github.com/adobe-fonts">思源字体</a>或 Google 的<a href="https://github.com/googlefonts/noto-cjk">Noto 字体</a>。R Markdown 中使用 Noto 宋体和 Noto 黑体的示例如下：</p>
+<p>有一点不足，fandol字体支持的汉字有限，比如「喆」字就渲染成了 <img height="20" alt="fandol-font" src="https://user-images.githubusercontent.com/12031874/135615813-cde3464d-21d3-43e1-b951-c247a6215e5b.png">，更别说<a href="https://zh.wikipedia.org/wiki/%E8%A8%B1%E5%AF%B6%E9%A8%84">许宝騄先生</a>的「騄」字了。</p>
+<p>大部分情况下，你可能遇不到这些不常用的字，但也保不齐，此时，开源替代的中文字体有 Adobe 的思源字体(<a href="https://github.com/adobe-fonts" class="uri">https://github.com/adobe-fonts</a>)或 Google 的 Noto 字体(<a href="https://github.com/googlefonts/noto-cjk" class="uri">https://github.com/googlefonts/noto-cjk</a>)。R Markdown 中使用 Noto 宋体和 Noto 黑体的示例如下：</p>
 <pre class="rmd"><code>---
 documentclass: beamer
 CJKmainfont: NotoSerifCJKsc-Regular
@@ -2328,7 +2328,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 </ol></li>
 </ol>
 <p>更多细节差异，见 Quarto 官网对 <a href="https://quarto.org/docs/presentations/beamer.html">Beamer</a>格式的介绍。</p>
-<p>关于 Quarto 如何站在 Pandoc 这个巨人的肩膀上，下面就语法高亮为例说明。Pandoc 支持 <strong>147</strong> 种编程语言的语法高亮，通过命令 <code>pandoc --list-highlight-languages</code> 可以查看到。Pandoc 原生支持八种语法高亮主题，可用命令 <code>pandoc --list-highlight-styles</code> 查看，分别是：</p>
+<p>关于 Quarto 如何站在 Pandoc 这个巨人的肩膀上，下面就语法高亮为例说明。Pandoc 支持 <strong>147</strong> 种编程语言的语法高亮，通过命令 <code>pandoc --list-highlight-languages</code> 可以查看到。Pandoc 原生支持 <strong>8</strong> 种语法高亮主题，可用命令 <code>pandoc --list-highlight-styles</code> 查看，分别是：</p>
 <ul>
 <li><code>pygments</code></li>
 <li><code>tango</code></li>
