@@ -212,11 +212,11 @@ tinytex::install_tinytex()
 
 为了后续介绍 metropolis 主题，先安装和配置其所需字体，此过程分两步走：
 
-1.  这里用 **tinytex** 包安装 [**fira**](https://www.ctan.org/pkg/fira) 系列英文字体，[**firamath**](https://github.com/firamath/firamath) 和 [**xits**](https://www.ctan.org/pkg/xits) 数学字体，后续用作 beamer 幻灯片的主要字体，相信大家看惯了千篇一律的字体，也想换换口味吧！
+1.  这里用 **tinytex** 包安装 [**fira**](https://www.ctan.org/pkg/fira) 系列英文字体，[**firamath**](https://github.com/firamath/firamath) 和 [**xits**](https://www.ctan.org/pkg/xits) 数学字体以及 [**fandol**](https://ctan.org/pkg/fandol) 开源中文字体，后续用作 beamer 幻灯片的主要字体，相信大家看惯了千篇一律的字体，也想换换口味吧！
 
     ```{r}
     #| eval: false
-    tinytex::tlmgr_install(c("fira", "firamath", "firamath-otf", "xits"))
+    tinytex::tlmgr_install(c("fira", "firamath", "firamath-otf", "xits", "fandol"))
     ```
 
 2.  通过「人工智能」查找，发现上面安装的字体都放在了 TinyTeX 的安装目录下，而且不能直接被调用，故而将它们拷贝到用户指定的字体目录，刷新字体目录后，通过 **fontspec** 宏包调用。为了加快复现的速度，我已经将这个复制粘贴的过程化作几行代码，如下：
@@ -968,10 +968,13 @@ pandoc --pdf-engine xelatex -t beamer \
 接下来，将上面的英文 R Markdown 文档汉化一下，下面是一份完整的**中文** R Markdown 模版，有了前面关于英文 R Markdown 文档的介绍，此时，想必已不再感到陌生。 ctexbeamer 和 ctexart 文类都来自 [ctex 宏包](https://ctan.org/pkg/ctex)，想汉化必须看看它的帮助文档。相比于上面的英文 R Markdown 文档，这里只添加两个 Pandoc 变量，一个设置中文 beamer 文类 `documentclass: ctexbeamer`，另一个在文类选项中设置中文字体 `classoption: "fontset=fandol"`，设置它们的效果类似在 LaTeX 文档中添加如下的一行代码。
 
 ```tex
+% 指定开源的中文字体 fandol
 \documentclass[fontset=fandol]{ctexbeamer}
+% 或者不显式指定
+\documentclass{ctexbeamer}
 ```
 
-读者若有兴趣，可以查阅 [ctex 宏包](https://ctan.org/pkg/ctex) 帮助文档，了解 ctexbeamer 文类的其它选项。
+读者若有兴趣，可以查阅 ctex 宏包帮助文档，了解 ctexbeamer 文类的其它选项。
 
 ```
 ---
@@ -1235,7 +1238,7 @@ MacOS 环境下，安装 inconsolata 字体，可以用如下命令：
 brew install --cask font-inconsolata
 ```
 
-Windows 环境下，可以从 Google 在 Github 的[字体仓库](https://github.com/google/fonts/tree/main/ofl/inconsolata) 获取。
+Windows 环境下，可以从 Presento 主题仓库 (<https://github.com/RatulSaha/presento>) 下载安装。
 :::
 
 

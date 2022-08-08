@@ -240,8 +240,8 @@ div.csl-indent {
 <h2><span class="header-section-number">3.3</span> 安装字体</h2>
 <p>为了后续介绍 metropolis 主题，先安装和配置其所需字体，此过程分两步走：</p>
 <ol style="list-style-type: decimal">
-<li><p>这里用 <strong>tinytex</strong> 包安装 <a href="https://www.ctan.org/pkg/fira"><strong>fira</strong></a> 系列英文字体，<a href="https://github.com/firamath/firamath"><strong>firamath</strong></a> 和 <a href="https://www.ctan.org/pkg/xits"><strong>xits</strong></a> 数学字体，后续用作 beamer 幻灯片的主要字体，相信大家看惯了千篇一律的字体，也想换换口味吧！</p>
-<pre class="r"><code>tinytex::tlmgr_install(c(&quot;fira&quot;, &quot;firamath&quot;, &quot;firamath-otf&quot;, &quot;xits&quot;))</code></pre></li>
+<li><p>这里用 <strong>tinytex</strong> 包安装 <a href="https://www.ctan.org/pkg/fira"><strong>fira</strong></a> 系列英文字体，<a href="https://github.com/firamath/firamath"><strong>firamath</strong></a> 和 <a href="https://www.ctan.org/pkg/xits"><strong>xits</strong></a> 数学字体以及 <a href="https://ctan.org/pkg/fandol"><strong>fandol</strong></a> 开源中文字体，后续用作 beamer 幻灯片的主要字体，相信大家看惯了千篇一律的字体，也想换换口味吧！</p>
+<pre class="r"><code>tinytex::tlmgr_install(c(&quot;fira&quot;, &quot;firamath&quot;, &quot;firamath-otf&quot;, &quot;xits&quot;, &quot;fandol&quot;))</code></pre></li>
 <li><p>通过「人工智能」查找，发现上面安装的字体都放在了 TinyTeX 的安装目录下，而且不能直接被调用，故而将它们拷贝到用户指定的字体目录，刷新字体目录后，通过 <strong>fontspec</strong> 宏包调用。为了加快复现的速度，我已经将这个复制粘贴的过程化作几行代码，如下：</p>
 <pre class="r"><code># TinyTeX 字体目录
 basedir &lt;- paste(tinytex::tinytex_root(), &quot;texmf-dist/fonts/opentype/public&quot;, sep = &quot;/&quot;)
@@ -1399,8 +1399,11 @@ institute: &quot;Capital of Statistics&quot;
 <div id="chinese-rmarkdown" class="section level3" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> 中文 R Markdown 文档</h3>
 <p>接下来，将上面的英文 R Markdown 文档汉化一下，下面是一份完整的<strong>中文</strong> R Markdown 模版，有了前面关于英文 R Markdown 文档的介绍，此时，想必已不再感到陌生。 ctexbeamer 和 ctexart 文类都来自 <a href="https://ctan.org/pkg/ctex">ctex 宏包</a>，想汉化必须看看它的帮助文档。相比于上面的英文 R Markdown 文档，这里只添加两个 Pandoc 变量，一个设置中文 beamer 文类 <code>documentclass: ctexbeamer</code>，另一个在文类选项中设置中文字体 <code>classoption: "fontset=fandol"</code>，设置它们的效果类似在 LaTeX 文档中添加如下的一行代码。</p>
-<pre class="tex"><code>\documentclass[fontset=fandol]{ctexbeamer}</code></pre>
-<p>读者若有兴趣，可以查阅 <a href="https://ctan.org/pkg/ctex">ctex 宏包</a> 帮助文档，了解 ctexbeamer 文类的其它选项。</p>
+<pre class="tex"><code>% 指定开源的中文字体 fandol
+\documentclass[fontset=fandol]{ctexbeamer}
+% 或者不显式指定
+\documentclass{ctexbeamer}</code></pre>
+<p>读者若有兴趣，可以查阅 ctex 宏包帮助文档，了解 ctexbeamer 文类的其它选项。</p>
 <pre><code>---
 title: &quot;R Markdown 制作 beamer 幻灯片&quot;
 author: &quot;黄湘云&quot;
@@ -1681,7 +1684,7 @@ tinytex::tlmgr_install(c(&quot;montserrat&quot;, &quot;lato&quot;, &quot;noto&qu
 <pre class="bash"><code>sudo apt-get -y install fonts-inconsolata</code></pre>
 <p>MacOS 环境下，安装 inconsolata 字体，可以用如下命令：</p>
 <pre class="bash"><code>brew install --cask font-inconsolata</code></pre>
-<p>Windows 环境下，可以从 Google 在 Github 的<a href="https://github.com/google/fonts/tree/main/ofl/inconsolata">字体仓库</a> 获取。</p>
+<p>Windows 环境下，可以从 Presento 主题仓库 (<a href="https://github.com/RatulSaha/presento" class="uri">https://github.com/RatulSaha/presento</a>) 下载安装。</p>
 </div>
 <p>字体宏包安装后，需要将 TrueType 或 OpenType 字体复制到系统字体目录下，否则，beamer 主题 Presento 找不到字体。先找 TinyTeX 安装位置：</p>
 <pre class="r"><code># 找到 TinyTeX 根目录
