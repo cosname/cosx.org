@@ -17,6 +17,7 @@ output:
   blogdown::html_page:
     toc: true
     number_sections: true
+    highlight: pygments
 bibliography: 
   - refer.bib
 link-citations: true
@@ -75,28 +76,6 @@ div.rmdtip::before {
   color: #34A853;
 }
 
-.todo {
-  display: block;
-  border: 1px solid #4285f4;
-  border-left-width: 5px;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-  margin: 1em 0;
-}
-
-.todo::before {
-  content: "TO DO: ";
-  font-weight: bold;
-  color: #4285f4;
-}
-
-blockquote > p:last-child {
-  text-align: right;
-}
-blockquote > p:first-child {
-  text-align: inherit;
-}
-
 div.figure {
   text-align: center;
   display: block; 
@@ -108,7 +87,12 @@ div.figure {
 .columns {
   display: flex;
 }
+
+pre > code.sourceCode > span {
+  display: initial;
+}
 ```
+
 ```{css}
 #| echo: false
 
@@ -1731,8 +1715,6 @@ xfun::session_info(c(
 
 # 附录 {#appendix}
 
-<!-- Windows 环境下安装和使用字体 -->
-
 
 感谢审稿人楚新元(<https://cxy.rbind.io/>)在 Windows 和 Ubuntu 下测试文中的示例，提供很多修改建议，极大地提高了文章的质量，还介绍了一些有用的小工具，如将 PDF 文档转为 PNG 图片或 GIF 动图。
 
@@ -1753,7 +1735,7 @@ sudo sed -i_bak \
 /etc/ImageMagick-6/policy.xml
 ```
 
-此外，还可以安装 [**magick**](https://github.com/ropensci/magick) 包，用 R 代码实现转化过程：
+或者，安装 [**magick**](https://github.com/ropensci/magick) 包，用 R 代码实现转化过程：
 
 ```r
 library(magick)
