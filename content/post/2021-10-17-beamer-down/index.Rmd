@@ -1,7 +1,7 @@
 ---
 title: R Markdown 制作 beamer 幻灯片
 author: 黄湘云
-date: '2022-08-09'
+date: '2022-08-14'
 meta_extra: "审稿：楚新元、谢益辉"
 slug: beamer-not-down
 categories:
@@ -21,6 +21,7 @@ output:
 bibliography: 
   - refer.bib
 link-citations: true
+forum_id: 423414
 csl: institute-of-mathematical-statistics.csl
 thumbnail: https://user-images.githubusercontent.com/12031874/182398952-998e9473-7ead-41ab-b113-b3010eca5980.gif
 description: "LaTeX 提供 beamer 文类主要用于学术报告，从面上来看，好多主题是大学开发的，大家不约而同地使用蓝调，看多了想睡觉。目前，现代风格的 beamer 主题已经陆续涌现出来，本文旨在介绍一条 R Markdown 制作 beamer 幻灯片的入坑路径，让 beamer 看起来更加清爽些！"
@@ -1275,11 +1276,11 @@ Presento 主题下幻灯片的样式如图\@ref(fig:rmd-slide-binb-presento) 所
 ![(\#fig:rmd-slide-verona) 深度使用 beamer 幻灯片主题](https://user-images.githubusercontent.com/12031874/182515142-9c5180b2-4b33-44d0-9153-597d5187e1a6.gif)
 
 
-Verona 主题提供了一些 block 样式，比如 exampleblock、alertblock、block 等。
+Verona 主题提供了一些 beamer 文类通用的 block 样式，比如 exampleblock、alertblock、block 等。结合 Pandoc 的 [Divs and Spans](https://pandoc.org/MANUAL.html#divs-and-spans) 扩展功能和 bookdown 内置的 Lua 外挂，写起来就简便多了。
 
 ```
 ::: {.exampleblock data-latex="{提示}"}
-提示
+这里是提示内容。
 :::
 ```
 
