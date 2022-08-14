@@ -12,8 +12,20 @@ output:
     toc: true
 link-citations: true
 forum_id: 423316
+thumbnail: images/paste-96170D25.png
 slug: deep-learning-with-r-for-beginners
 ---
+
+```{css}
+#| echo: false
+
+div.img, div.figure {
+  text-align: center;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning = F,message = F)
@@ -34,7 +46,9 @@ knitr::opts_chunk$set(echo = TRUE,warning = F,message = F)
 
 深度学习之所以被称为 "深度"，是相对于其他"浅层"学习的方法（支持向量机、提升方法 、最大熵方法等）而言的。浅层学习依靠人工经验抽取样本特征，网络模型学习后获得的单层或双层的特征；而深度学习通过对原始数据进行逐层特征变换，将样本在原空间的特征表示变换到新的特征空间，自动地学习得到层次化的特征表示，从而更有利于分类或特征的可视化。
 
-![图1：人工智能、机器学习和深度学习的关系，"来源于：L. Alzubaidi et al. [Review of deep learning: Concepts, CNN architectures, challenges, applications, future directions](https://link.springer.com/article/10.1186/s40537-021-00444-8), Journal of Big Data (2021)"](images/paste-96170D25.png)
+![图1：人工智能、机器学习和深度学习的关系[^deep-learning]](images/paste-96170D25.png){ width=50% }
+
+[^deep-learning]: 来源于：L. Alzubaidi et al. [Review of deep learning: Concepts, CNN architectures, challenges, applications, future directions](https://link.springer.com/article/10.1186/s40537-021-00444-8), Journal of Big Data (2021)
 
 目前，深度学习已经被应用于诸多领域中，例如：医疗保健、社会网络分析、音频和语音处理（识别和增强）、视觉数据处理方法（多媒体数据分析和计算机视觉）、自然语言处理（翻译和句子分类）等。
 

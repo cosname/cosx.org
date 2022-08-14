@@ -12,34 +12,43 @@ output:
     toc: true
 link-citations: true
 forum_id: 423316
+thumbnail: images/paste-96170D25.png
 slug: deep-learning-with-r-for-beginners
 ---
 
 
 <div id="TOC">
 <ul>
-<li><a href="#简介">简介</a></li>
-<li><a href="#r-语言深度学习">R 语言深度学习</a></li>
-<li><a href="#配置工作环境">配置工作环境</a></li>
-<li><a href="#简单神经网络建模">简单神经网络建模</a>
+<li><a href="#简介" id="toc-简介">简介</a></li>
+<li><a href="#r-语言深度学习" id="toc-r-语言深度学习">R 语言深度学习</a></li>
+<li><a href="#配置工作环境" id="toc-配置工作环境">配置工作环境</a></li>
+<li><a href="#简单神经网络建模" id="toc-简单神经网络建模">简单神经网络建模</a>
 <ul>
-<li><a href="#加载包">加载包</a></li>
-<li><a href="#加载数据">加载数据</a></li>
-<li><a href="#数据处理">数据处理</a></li>
-<li><a href="#构建模型">构建模型</a></li>
-<li><a href="#编译模型">编译模型</a></li>
-<li><a href="#拟合模型">拟合模型</a></li>
-<li><a href="#评估模型">评估模型</a></li>
-<li><a href="#存储加载模型">存储/加载模型</a></li>
+<li><a href="#加载包" id="toc-加载包">加载包</a></li>
+<li><a href="#加载数据" id="toc-加载数据">加载数据</a></li>
+<li><a href="#数据处理" id="toc-数据处理">数据处理</a></li>
+<li><a href="#构建模型" id="toc-构建模型">构建模型</a></li>
+<li><a href="#编译模型" id="toc-编译模型">编译模型</a></li>
+<li><a href="#拟合模型" id="toc-拟合模型">拟合模型</a></li>
+<li><a href="#评估模型" id="toc-评估模型">评估模型</a></li>
+<li><a href="#存储加载模型" id="toc-存储加载模型">存储/加载模型</a></li>
 </ul></li>
-<li><a href="#相关拓展">相关拓展</a>
+<li><a href="#相关拓展" id="toc-相关拓展">相关拓展</a>
 <ul>
-<li><a href="#相关教程">相关教程</a></li>
-<li><a href="#相关案例">相关案例</a></li>
+<li><a href="#相关教程" id="toc-相关教程">相关教程</a></li>
+<li><a href="#相关案例" id="toc-相关案例">相关案例</a></li>
 </ul></li>
 </ul>
 </div>
 
+<style type="text/css">
+div.img, div.figure {
+  text-align: center;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+</style>
 <p>近年来深度学习在人工智能领域飞速发展，各行业的学者、研究人员纷纷涌入研究热潮。本文将从 R 语言角度来介绍深度学习并解决以下几个问题：</p>
 <ul>
 <li>什么是深度学习？</li>
@@ -53,8 +62,8 @@ slug: deep-learning-with-r-for-beginners
 <p>深度学习是机器学习领域一个新的研究方向，通过模型模拟人类大脑的神经连接结构，进而给出数据的解释。图 1 给出了人工智能、机器学习和深度学习三者的关系。</p>
 <p>深度学习之所以被称为 “深度”，是相对于其他”浅层”学习的方法（支持向量机、提升方法 、最大熵方法等）而言的。浅层学习依靠人工经验抽取样本特征，网络模型学习后获得的单层或双层的特征；而深度学习通过对原始数据进行逐层特征变换，将样本在原空间的特征表示变换到新的特征空间，自动地学习得到层次化的特征表示，从而更有利于分类或特征的可视化。</p>
 <div class="figure">
-<img src="images/paste-96170D25.png" alt="" />
-<p class="caption">图1：人工智能、机器学习和深度学习的关系，“来源于：L. Alzubaidi et al. <a href="https://link.springer.com/article/10.1186/s40537-021-00444-8">Review of deep learning: Concepts, CNN architectures, challenges, applications, future directions</a>, Journal of Big Data (2021)”</p>
+<img src="images/paste-96170D25.png" style="width:50.0%" alt="" />
+<p class="caption">图1：人工智能、机器学习和深度学习的关系<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 </div>
 <p>目前，深度学习已经被应用于诸多领域中，例如：医疗保健、社会网络分析、音频和语音处理（识别和增强）、视觉数据处理方法（多媒体数据分析和计算机视觉）、自然语言处理（翻译和句子分类）等。</p>
 </div>
@@ -341,9 +350,7 @@ test &lt;- scale(test, center = m, scale = s)</code></pre>
 ##  Layer (type)                       Output Shape                    Param #     
 ## ================================================================================
 ##  dense_1 (Dense)                    (None, 10)                      140         
-##                                                                                 
 ##  dense (Dense)                      (None, 1)                       11          
-##                                                                                 
 ## ================================================================================
 ## Total params: 151
 ## Trainable params: 151
@@ -385,10 +392,10 @@ test &lt;- scale(test, center = m, scale = s)</code></pre>
 <p>使用 <code>evaluate()</code> 评估模型，给出预测结果。计算真实值和预测值的均方误差。</p>
 <pre class="r"><code>model %&gt;% evaluate(test, testtarget)</code></pre>
 <pre><code>##   loss    mae 
-## 43.226  3.989</code></pre>
+## 45.907  4.098</code></pre>
 <pre class="r"><code>pred &lt;- predict(model,test) #预测结果
 mean((testtarget-pred)^2) #计算均方误差</code></pre>
-<pre><code>## [1] 43.23</code></pre>
+<pre><code>## [1] 45.91</code></pre>
 <p>通过 <a href="https://ggplot2.tidyverse.org/">ggplot2</a> 包将预测结果和真实结果可视化。</p>
 <pre class="r"><code>library(ggplot2)
 library(viridis)
@@ -401,7 +408,7 @@ ggplot(ev_data) +
   scale_color_aaas() +
   theme_bw() + 
   theme(panel.grid = element_blank())</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>总体来看，预测结果还算不错，但是也有一些预测结果和真实值相差甚远。主要原因是，我们没有调整参数来使模型达到最优的效果。读者可以使用 K 折验证的方法来寻找最有的参数，例如：训练轮数，神经网络层数，各层神经元数等。具体案例可以见 《Deep Learning with R》的第 <a href="https://github.com/fmmattioni/deep-learning-with-r-notebooks/blob/master/notebooks/3.6-predicting-house-prices.Rmd">3.6.4 节</a>。</p>
 </div>
 <div id="存储加载模型" class="section level3">
@@ -452,4 +459,10 @@ predict(reloaded_model, test) #对新数据集进行预测</code></pre>
 <li><a href="https://blogs.rstudio.com/ai/posts/2020-12-17-torch-convlstm/">基于空间预测的卷积 LSTM 网络</a></li>
 </ul>
 </div>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>来源于：L. Alzubaidi et al. <a href="https://link.springer.com/article/10.1186/s40537-021-00444-8">Review of deep learning: Concepts, CNN architectures, challenges, applications, future directions</a>, Journal of Big Data (2021)<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
