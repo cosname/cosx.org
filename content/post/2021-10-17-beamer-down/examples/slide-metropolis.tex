@@ -1,0 +1,24 @@
+\documentclass[169]{beamer}
+
+\usetheme{metropolis}
+
+\setsansfont[BoldFont={Fira Sans SemiBold}]{Fira Sans Book}
+
+\usepackage[
+  mathrm=sym,
+  math-style=ISO,  % Greek letters also in italics
+  bold-style=ISO,  % bold letters also in italics
+]{unicode-math}
+
+\setmathfont{Fira Math} % https://github.com/firamath/firamath
+% top is still missing in Fira Math, get it from another font
+\setmathfont[range={\top}]{XITS Math}
+
+\begin{document}
+  \begin{frame}[t]{Example}
+    \begin{align}
+      \symbf{\theta} &= (1, 2, 3)^\top \\
+            \theta_0 &= 1
+    \end{align}
+  \end{frame}
+\end{document}
