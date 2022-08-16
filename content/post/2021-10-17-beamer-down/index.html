@@ -390,7 +390,11 @@ div.csl-indent {
 </div>
 <div id="pandoc-markdown" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Pandoc’s Markdown</h2>
-<p>R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 Pandoc 软件(<a href="https://pandoc.org/" class="uri">https://pandoc.org/</a>)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。</p>
+<p>相比于<a href="https://daringfireball.net/projects/markdown/">原始 Markdown</a> 支持的功能，Pandoc’s Markdown 支持的功能多很多，一份详细的对比介绍见 Pandoc 核心开发者 John MacFarlane 在 TUG 2020 大会的报告<a href="https://tug.org/tug2020/preprints/MacFarlane-Keynote-slides.pdf">Pandoc for TeXnicians</a>。R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 Pandoc 软件(<a href="https://pandoc.org/" class="uri">https://pandoc.org/</a>)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。R Markdown 生态的另一重器 blogdown <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">6</a>]</span> 是非常依赖 Hugo (<a href="https://gohugo.io/" class="uri">https://gohugo.io/</a>) 的，Hugo 也支持很多 Markdown 语法和功能，大致来说， Markdown、Hugo’s Markdown、Pandoc’s Markdown 和 R Markdown 的关系如下：</p>
+<div class="figure"><span style="display:block;" id="fig:md-family"></span>
+<img src="img/markdown.svg" style="width:60.0%" alt="" />
+<p class="caption">图 4.2:  Markdown 家族</p>
+</div>
 <div id="简单示例" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> 简单示例</h3>
 <p>继续上面的例子，将幻灯片的内容用 Markdown 格式书写，非常简洁了，算上空行仅有 6 行代码，如下：</p>
@@ -406,7 +410,7 @@ div.csl-indent {
 <p>即可编译出 PDF 格式的 beamer 幻灯片，效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:md-default"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182017315-378a0472-c99b-4499-8d13-a5f409961cb0.png" alt="" />
-<p class="caption">图 4.2: Pandoc 转 Markdown 文档为 PDF 格式的幻灯片文档</p>
+<p class="caption">图 4.3: Pandoc 转 Markdown 文档为 PDF 格式的幻灯片文档</p>
 </div>
 <div class="rmdtip">
 <p>上面用到的 Pandoc 的命令行参数：</p>
@@ -446,7 +450,7 @@ div.csl-indent {
 <span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">-o</span> slide-template.pdf</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-theme"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182020012-da2f78d7-dfc7-4d47-9ed9-e326d4588a38.png" alt="" />
-<p class="caption">图 4.3: 设置幻灯片主题</p>
+<p class="caption">图 4.4: 设置幻灯片主题</p>
 </div>
 </div>
 <div id="英文字体" class="section level3" number="4.2.4">
@@ -459,7 +463,7 @@ div.csl-indent {
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">-o</span> slide-template.pdf</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-sansfont"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182020087-77c051d9-ca5d-4264-8208-3e707944a63a.png" alt="" />
-<p class="caption">图 4.4:  设置英文字体</p>
+<p class="caption">图 4.5:  设置英文字体</p>
 </div>
 </div>
 <div id="数学字体" class="section level3" number="4.2.5">
@@ -471,7 +475,7 @@ div.csl-indent {
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">-o</span> slide-template.pdf</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-mathfont"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182020058-b9b7c05a-379f-49ec-8eef-3a84bbb45e90.png" alt="" />
-<p class="caption">图 4.5: 设置数学字体</p>
+<p class="caption">图 4.6: 设置数学字体</p>
 </div>
 </div>
 <div id="幻灯首页" class="section level3" number="4.2.6">
@@ -498,12 +502,12 @@ div.csl-indent {
 <p>渲染出来的效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:md-meta"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182020544-1c5ecce9-9e6c-4c93-beff-369349939e63.gif" alt="" />
-<p class="caption">图 4.6: 设置文档元数据</p>
+<p class="caption">图 4.7: 设置文档元数据</p>
 </div>
 </div>
 <div id="双栏排版" class="section level3" number="4.2.7">
 <h3><span class="header-section-number">4.2.7</span> 双栏排版</h3>
-<p>还可在文档中添加双栏排版，下面添加了两个双栏，第一个将页面等分，第二个将页面三七开，效果如图<a href="#fig:md-meta-columns">4.7</a>。</p>
+<p>还可在文档中添加双栏排版，下面添加了两个双栏，第一个将页面等分，第二个将页面三七开，效果如图<a href="#fig:md-meta-columns">4.8</a>。</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co">  &#39;This is the title&#39;</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> &quot;This is the subtitle&quot;</span></span>
@@ -547,12 +551,12 @@ div.csl-indent {
 <p>渲染出来的效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:md-meta-columns"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182062362-c1d0e6cd-b1de-4095-933d-2624266ba9a5.gif" alt="" />
-<p class="caption">图 4.7: 设置文档双栏排版</p>
+<p class="caption">图 4.8: 设置文档双栏排版</p>
 </div>
 </div>
 <div id="页面暂停" class="section level3" number="4.2.8">
 <h3><span class="header-section-number">4.2.8</span> 页面暂停</h3>
-<p>还可以暂停显示幻灯片内容，这好像将一页的内容，分成几页展示，中间加了暂停键。只要在两段内容之间插入带空格的三个点 <code>. . .</code>，渲染效果如图<a href="#fig:md-meta-pauses">4.8</a>。</p>
+<p>还可以暂停显示幻灯片内容，这好像将一页的内容，分成几页展示，中间加了暂停键。只要在两段内容之间插入带空格的三个点 <code>. . .</code>，渲染效果如图<a href="#fig:md-meta-pauses">4.9</a>。</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co">  &#39;This is the title&#39;</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> &quot;This is the subtitle&quot;</span></span>
@@ -597,12 +601,12 @@ div.csl-indent {
 <span id="cb24-42"><a href="#cb24-42" aria-hidden="true" tabindex="-1"></a>::::::::::::::</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-meta-pauses"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182080840-ca01d7b1-ba84-4b6a-95f2-68ff494f832e.gif" alt="" />
-<p class="caption">图 4.8: 添加暂停键，分页展示内容</p>
+<p class="caption">图 4.9: 添加暂停键，分页展示内容</p>
 </div>
 </div>
 <div id="滚动条目" class="section level3" number="4.2.9">
 <h3><span class="header-section-number">4.2.9</span> 滚动条目</h3>
-<p>与上面分段显示内容类似，还可逐条展示列表内容，效果如图<a href="#fig:md-meta-incremental">4.9</a>。</p>
+<p>与上面分段显示内容类似，还可逐条展示列表内容，效果如图<a href="#fig:md-meta-incremental">4.10</a>。</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co">  &#39;This is the title&#39;</span></span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> &quot;This is the subtitle&quot;</span></span>
@@ -622,7 +626,7 @@ div.csl-indent {
 <span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>:::</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-meta-incremental"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182083227-2bd9084f-07b2-4eb3-8ddb-e01843dbdcd9.gif" alt="" />
-<p class="caption">图 4.9: 逐条展示列表条目</p>
+<p class="caption">图 4.10: 逐条展示列表条目</p>
 </div>
 </div>
 <div id="添加背景" class="section level3" number="4.2.10">
@@ -644,12 +648,12 @@ div.csl-indent {
 <span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>    \symbf{\theta} &amp;= (1, 2, 3)^\top <span class="sc">\\</span></span>
 <span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>        \theta_0 &amp;= 1</span>
 <span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
-<p>渲染效果，如图<a href="#fig:md-meta-background">4.10</a>所示。</p>
+<p>渲染效果，如图<a href="#fig:md-meta-background">4.11</a>所示。</p>
 <div class="sourceCode" id="cb27"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--pdf-engine</span> xelatex <span class="at">-t</span> beamer <span class="dt">\</span></span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  slide-template.md <span class="at">-o</span> slide-template.pdf</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-meta-background"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182089094-a5b5fa8b-8527-4b82-bc1e-8e70cee98e87.gif" alt="" />
-<p class="caption">图 4.10: 添加幻灯片背景</p>
+<p class="caption">图 4.11: 添加幻灯片背景</p>
 </div>
 </div>
 <div id="插入表格" class="section level3" number="4.2.11">
@@ -675,13 +679,13 @@ div.csl-indent {
 <span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>Table:  Demonstration of simple table syntax.</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-meta-table"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182091134-8e29b6ed-318c-4115-a275-2e4ab4f6f0af.gif" alt="" />
-<p class="caption">图 4.11: 插入表格</p>
+<p class="caption">图 4.12: 插入表格</p>
 </div>
 <p>更多样式的表格见 Pandoc 帮助文档中<a href="https://pandoc.org/MANUAL.html#tables">表格部分</a>的介绍。</p>
 </div>
 <div id="插入图片" class="section level3" number="4.2.12">
 <h3><span class="header-section-number">4.2.12</span> 插入图片</h3>
-<p>继续使用之前的 R 语言 Logo 图片，Pandoc’s Markdown 扩展了原始 Markdown 的功能，插入图片的同时支持设置图片宽度，效果如图<a href="#fig:md-meta-figure">4.12</a>所示。</p>
+<p>继续使用之前的 R 语言 Logo 图片，Pandoc’s Markdown 扩展了原始 Markdown 的功能，插入图片的同时支持设置图片宽度，效果如图<a href="#fig:md-meta-figure">4.13</a>所示。</p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co">  &#39;This is the title&#39;</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> &quot;This is the subtitle&quot;</span></span>
@@ -696,7 +700,7 @@ div.csl-indent {
 <span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="al">![This is the caption](Rlogo.pdf)</span>{ width=35% }</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-meta-figure"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182092322-f4d70149-0615-4261-be47-6fa711d8df0f.gif" alt="" />
-<p class="caption">图 4.12: 插入图片</p>
+<p class="caption">图 4.13: 插入图片</p>
 </div>
 <p>更多功能见 Pandoc’s Markdown 帮助文档中<a href="https://pandoc.org/MANUAL.html#images">插入图片</a>一节。</p>
 </div>
@@ -722,7 +726,7 @@ div.csl-indent {
 <span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="fu">## {.standout}</span></span>
 <span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>Q &amp; A</span></code></pre></div>
-<p>因默认的幻灯片主题不支持设置 standout，下面采用 metropolis 主题，效果如图<a href="#fig:md-meta-standout">4.13</a>。</p>
+<p>因默认的幻灯片主题不支持设置 standout，下面采用 metropolis 主题，效果如图<a href="#fig:md-meta-standout">4.14</a>。</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--pdf-engine</span> xelatex <span class="at">-t</span> beamer <span class="dt">\</span></span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--variable</span> theme=<span class="st">&quot;metropolis&quot;</span> <span class="dt">\</span></span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--variable</span> fonttheme=<span class="st">&quot;professionalfonts&quot;</span> <span class="dt">\</span></span>
@@ -730,7 +734,7 @@ div.csl-indent {
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">-o</span> slide-template.pdf</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-meta-standout"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182086098-bdc5dfc6-e291-4397-a2a9-778af18720d2.gif" alt="" />
-<p class="caption">图 4.13: 设置单独一页用于 Q&amp;A 环节</p>
+<p class="caption">图 4.14: 设置单独一页用于 Q&amp;A 环节</p>
 </div>
 </div>
 <div id="文献引用" class="section level3" number="4.2.14">
@@ -766,7 +770,7 @@ div.csl-indent {
   note = {ISBN 978-1498716963},
   url = {https://yihui.org/knitr/},
 }</code></pre>
-<p>再执行如下命令，渲染效果如图<a href="#fig:md-meta-refer">4.14</a>所示。</p>
+<p>再执行如下命令，渲染效果如图<a href="#fig:md-meta-refer">4.15</a>所示。</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--citeproc</span> <span class="at">--pdf-engine</span> xelatex <span class="at">-t</span> beamer <span class="dt">\</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--bibliography</span><span class="op">=</span>refer.bib <span class="dt">\</span></span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">-M</span> reference-section-title=References <span class="dt">\</span></span>
@@ -775,7 +779,7 @@ div.csl-indent {
 <span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">-o</span> slide-template.pdf</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:md-meta-refer"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182161509-98fc10ce-c8e2-4007-ab7e-00be2d1de4ab.gif" alt="" />
-<p class="caption">图 4.14: 文献引用</p>
+<p class="caption">图 4.15: 文献引用</p>
 </div>
 <p>最后，对上述命令参数说明一下：</p>
 <ul>
@@ -787,7 +791,7 @@ div.csl-indent {
 </div>
 <div id="更多功能" class="section level3" number="4.2.15">
 <h3><span class="header-section-number">4.2.15</span> 更多功能</h3>
-<p>Pandoc 还支持很多功能，比如添加封面图片、脚注、诗词格言引用、图表交叉引用、抄录代码块、自定义导言区等等，众多功能有待读者去探索发现。</p>
+<p>除了上面介绍的那些，Pandoc 还支持很多功能，比如添加封面图片、脚注、诗词格言引用、图表交叉引用、抄录代码块、自定义导言区等等，众多功能有待读者去探索发现。</p>
 <div class="rmdtip">
 <p>Pandoc 除了能将 Markdown 文档转化为 beamer 幻灯片，还可将其转化为 DOCX 格式的 Word 文档、PPTX 格式的 PowerPoint 文档等。除了前面介绍的 LaTeX 模版，Pandoc 还内建了 Word、PowerPoint 等诸多文档模版，获取其它文档格式的模版，稍有不同，比如 DOCX 文档。</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">-o</span> custom-reference.docx <span class="at">--print-default-data-file</span> reference.docx</span></code></pre></div>
@@ -864,15 +868,15 @@ mathspec: true
 <li><p>属于 Pandoc 转化器的控制选项：PDF 格式文档和 beamer 幻灯片文档的通用控制选项也是 Pandoc 转化器的控制选项。除了前述内容外，LaTeX 编译引擎 <code>latex_engine</code> 对应于 <code>--pdf-engine</code>，参考文献处理 <code>citation_package</code> 对应于 <code>--citeproc</code>，是否自包含 <code>self_contained</code> 对应于 <code>--self-contained</code>，语法高亮 <code>highlight</code> 对应于 <code>--highlight-style</code>，LaTeX 模版 <code>template</code> 对应于 <code>--template</code>，导言区、前言、后记 <code>includes</code> 对应于三个参数 <code>--include-in-header</code> / <code>--include-before-body</code> / <code>--include-after-body</code>，参数 <code>md_extensions</code> 对应于 <a href="https://pandoc.org/MANUAL.html#headings-and-sections">Markdown 扩展</a>，参数 <code>pandoc_args</code> 对应于其他 Pandoc 参数。</p></li>
 </ol>
 <p>所以，若是除去属于 R Markdown 特有的部分，一定程度上，R Markdown 就是 Pandoc’s Markdown 的马甲。说 R Markdown 站在 Pandoc 的肩膀上是再合理没有了。</p>
-<p>上面示例渲染出来的 beamer 文档效果如下图<a href="#fig:rmd-metropolis">4.15</a>。</p>
+<p>上面示例渲染出来的 beamer 文档效果如下图<a href="#fig:rmd-metropolis">4.16</a>。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182024613-97dcff19-8e9b-4428-98ff-dc9fa444d20e.gif" alt="" />
-<p class="caption">图 4.15: R Markdown 示例</p>
+<p class="caption">图 4.16: R Markdown 示例</p>
 </div>
-<p>下面拆解一下 R Markdown 编译出 beamer 幻灯片的过程。当用户点击 Knit 按钮，Render 窗口就会活动起来，knitr 包会根据文档中的代码块的情况，调各类解释器或编译器执行文档中的代码，并返回结果，生成中间产物 Markdown 文件。再调用 Pandoc 转化器，将 Markdown 文档转为 LaTeX 代码，再调用 LaTeX 编译器（如 XeLaTeX）编译出目标文件 — PDF 格式的 beamer 幻灯片。图<a href="#fig:rmd-metropolis-compile">4.16</a>左侧是示例文件，右侧是 Render 窗口的编译过程。注意看图<a href="#fig:rmd-metropolis-compile">4.16</a>右侧红框内的内容，是不是很熟悉的感觉，其实就是一个 Pandoc 转化命令。除了 Pandoc 参数 <code>--lua-filter</code>，其它都在上面介绍了。</p>
+<p>下面拆解一下 R Markdown 编译出 beamer 幻灯片的过程。当用户点击 Knit 按钮，Render 窗口就会活动起来，knitr 包会根据文档中的代码块的情况，调各类解释器或编译器执行文档中的代码，并返回结果，生成中间产物 Markdown 文件。再调用 Pandoc 转化器，将 Markdown 文档转为 LaTeX 代码，再调用 LaTeX 编译器（如 XeLaTeX）编译出目标文件 — PDF 格式的 beamer 幻灯片。图<a href="#fig:rmd-metropolis-compile">4.17</a>左侧是示例文件，右侧是 Render 窗口的编译过程。注意看图<a href="#fig:rmd-metropolis-compile">4.17</a>右侧红框内的内容，是不是很熟悉的感觉，其实就是一个 Pandoc 转化命令。除了 Pandoc 参数 <code>--lua-filter</code>，其它都在上面介绍了。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-compile"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182069798-33d77872-8cca-4903-8de6-9e42f3ee11f5.png" alt="" />
-<p class="caption">图 4.16: R Markdown 编译过程</p>
+<p class="caption">图 4.17: R Markdown 编译过程</p>
 </div>
 <p>所以将上述 R Markdown 文档简化为如下 Markdown 文档。</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -890,7 +894,7 @@ mathspec: true
 <span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>    \boldsymbol{\theta} &amp;= (1, 2, 3)^\top <span class="sc">\\</span></span>
 <span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a>        \theta_0 &amp;= 1</span>
 <span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
-<p>再调用如下 Pandoc 命令，会得到完全一样的图<a href="#fig:rmd-metropolis">4.15</a>。</p>
+<p>再调用如下 Pandoc 命令，会得到完全一样的图<a href="#fig:rmd-metropolis">4.16</a>。</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--pdf-engine</span> xelatex <span class="at">-t</span> beamer <span class="dt">\</span></span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--variable</span> theme=<span class="st">&quot;metropolis&quot;</span> <span class="dt">\</span></span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--variable</span> mathspec=true <span class="dt">\</span></span>
@@ -927,7 +931,7 @@ classoption: &quot;fontset=fandol&quot;
 \end{align}</code></pre>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182027292-0b24fb9b-7804-4ad5-940c-591ff1fd695d.gif" alt="" />
-<p class="caption">图 4.17:  中文 R Markdown 示例</p>
+<p class="caption">图 4.18:  中文 R Markdown 示例</p>
 </div>
 </div>
 <div id="math-formula-theorem" class="section level3" number="4.3.3">
@@ -955,7 +959,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <p>编译后的效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182028411-e21c0d18-f1b8-4834-b41a-7ba618c9a9e4.gif" alt="" />
-<p class="caption">图 4.18:  中文 R Markdown 示例里添加数学公式</p>
+<p class="caption">图 4.19:  中文 R Markdown 示例里添加数学公式</p>
 </div>
 <p>当然，还可以切换为大众喜闻乐见的样式，即采用宏包 mathspec 来处理数学公式，只需对上述 R Markdown 文档稍作调整。</p>
 <pre><code>---
@@ -979,10 +983,10 @@ mathspec: true
 数学公式还是用 LaTeX 排版的好， 
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
-<p>使用基础的 beamer 文类，而不是 ctex 宏包提供的 ctexbeamer 文类，因为 ctexbeamer 文类与 mathspec 宏包有冲突，而汉化只需在导言区加载 ctex 宏包。最终编译出来的效果如图<a href="#fig:rmd-metropolis-zh-mathspec">4.19</a>所示。</p>
+<p>使用基础的 beamer 文类，而不是 ctex 宏包提供的 ctexbeamer 文类，因为 ctexbeamer 文类与 mathspec 宏包有冲突，而汉化只需在导言区加载 ctex 宏包。最终编译出来的效果如图<a href="#fig:rmd-metropolis-zh-mathspec">4.20</a>所示。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-mathspec"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182320031-30c55e39-d52f-421e-baac-c7d684415dcb.gif" alt="" />
-<p class="caption">图 4.19:  中文 R Markdown 示例里添加数学公式</p>
+<p class="caption">图 4.20:  中文 R Markdown 示例里添加数学公式</p>
 </div>
 <p>beamer 学术幻灯片的另一大特色是有很多定理、引理、推论等。在之前的基础上，继续添加定理、引理等文本块，内容如下：</p>
 <pre><code>---
@@ -1015,7 +1019,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 <p>渲染效果如下：</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-block"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182034761-c7fee605-4729-487b-af20-e423ba7b2af0.gif" alt="" />
-<p class="caption">图 4.20:  中文 R Markdown 示例里添加定理、引理</p>
+<p class="caption">图 4.21:  中文 R Markdown 示例里添加定理、引理</p>
 </div>
 </div>
 <div id="rmarkdown-special" class="section level3" number="4.3.4">
@@ -1050,10 +1054,10 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 <span id="cb45-27"><a href="#cb45-27" aria-hidden="true" tabindex="-1"></a><span class="in">```{r iris-table}</span></span>
 <span id="cb45-28"><a href="#cb45-28" aria-hidden="true" tabindex="-1"></a><span class="in">knitr::kable(head(iris, 3), caption = &quot;鸢尾花&quot;)</span></span>
 <span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
-<p>编译生成的 beamer 文档如图<a href="#fig:rmd-metropolis-zh-rlang">4.21</a>所示。</p>
+<p>编译生成的 beamer 文档如图<a href="#fig:rmd-metropolis-zh-rlang">4.22</a>所示。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-rlang"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182323860-3b206f90-55f5-4176-85ec-e65a90e2bb04.gif" alt="" />
-<p class="caption">图 4.21:  中文 R Markdown 示例里添加图片和表格</p>
+<p class="caption">图 4.22:  中文 R Markdown 示例里添加图片和表格</p>
 </div>
 </div>
 <div id="cross-references" class="section level3" number="4.3.5">
@@ -1100,10 +1104,10 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 <span id="cb46-39"><a href="#cb46-39" aria-hidden="true" tabindex="-1"></a>  \mathrm{e}^{ix} = \cos x + i \sin x</span>
 <span id="cb46-40"><a href="#cb46-40" aria-hidden="true" tabindex="-1"></a>  (<span class="sc">\#</span>eq:euler)</span>
 <span id="cb46-41"><a href="#cb46-41" aria-hidden="true" tabindex="-1"></a>\end{align}</span></code></pre></div>
-<p>渲染出来的效果，如图<a href="#fig:rmd-metropolis-zh-cross-references">4.22</a>所示。</p>
+<p>渲染出来的效果，如图<a href="#fig:rmd-metropolis-zh-cross-references">4.23</a>所示。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-metropolis-zh-cross-references"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182329702-1229b09b-b7ea-4ec5-958e-250c347c30bc.gif" alt="" />
-<p class="caption">图 4.22:  中文 R Markdown 示例里图、表、公式交叉引用</p>
+<p class="caption">图 4.23:  中文 R Markdown 示例里图、表、公式交叉引用</p>
 </div>
 </div>
 </div>
@@ -1114,7 +1118,7 @@ $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 <p>前面介绍 R Markdown 功能涉及了两款主题，一款是 beamer 文类最基础的默认主题，另一款是 <a href="https://github.com/matze/mtheme">metropolis</a>主题。若读者觉得还行，往下的内容不看也罢，专注内容，专注质量其实更好。若读者觉得太过千篇一律，索然无味，下面几款聊胜于无。</p>
 <div id="beamer-builtin" class="section level4" number="4.4.1.1">
 <h4><span class="header-section-number">4.4.1.1</span> beamer 文类内置主题</h4>
-<p>beamer 文类自带了诸多主题，网站(<a href="https://hartwork.org/beamer-theme-matrix/" class="uri">https://hartwork.org/beamer-theme-matrix/</a>)提供预览，读者可根据喜好选择。默认主题下将颜色主题更换为 seahorse，效果如图<a href="#fig:rmd-slide-seahorse">4.23</a>所示。</p>
+<p>beamer 文类自带了诸多主题，网站(<a href="https://hartwork.org/beamer-theme-matrix/" class="uri">https://hartwork.org/beamer-theme-matrix/</a>)提供预览，读者可根据喜好选择。默认主题下将颜色主题更换为 seahorse，效果如图<a href="#fig:rmd-slide-seahorse">4.24</a>所示。</p>
 <pre><code>---
 title: &quot;R Markdown 制作 beamer 幻灯片&quot;
 author: &quot;黄湘云&quot;
@@ -1139,7 +1143,7 @@ $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <div class="figure"><span style="display:block;" id="fig:rmd-slide-seahorse"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182384777-f66a292d-5846-40dd-bbe3-cc493d296b23.gif" alt="" />
-<p class="caption">图 4.23:  颜色主题 seahorse</p>
+<p class="caption">图 4.24:  颜色主题 seahorse</p>
 </div>
 </div>
 <div id="beamer-community" class="section level4" number="4.4.1.2">
@@ -1168,15 +1172,15 @@ mathspec: true
 数学公式还是用 LaTeX 排版的好， 
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
-<p>渲染效果如图<a href="#fig:rmd-slide-Verona">4.24</a>所示。</p>
+<p>渲染效果如图<a href="#fig:rmd-slide-Verona">4.25</a>所示。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-slide-Verona"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182385716-21d5f3de-4292-40a3-bcfb-25686b91585d.gif" alt="" />
-<p class="caption">图 4.24:  Verona 主题</p>
+<p class="caption">图 4.25:  Verona 主题</p>
 </div>
 </div>
 <div id="rmarkdown-community" class="section level4" number="4.4.1.3">
 <h4><span class="header-section-number">4.4.1.3</span> beamer 幻灯片主题库（R）</h4>
-<p>R 语言社区也有少量的 R 包打包了一些 R Markdown 格式的 beamer 模版，比如 <a href="https://github.com/eddelbuettel/binb"><strong>binb</strong></a> 和 <a href="https://github.com/illinois-r/uiucthemes"><strong>uiucthemes</strong></a> <span class="citation">[<a href="#ref-uiucthemes2020" role="doc-biblioref">6</a>]</span> 包。下面以 <strong>binb</strong> 包内置的 Presento 主题的 R Markdown 模版 为例，首先安装 <strong>binb</strong> 包和一些字体宏包。</p>
+<p>R 语言社区也有少量的 R 包打包了一些 R Markdown 格式的 beamer 模版，比如 <a href="https://github.com/eddelbuettel/binb"><strong>binb</strong></a> 和 <a href="https://github.com/illinois-r/uiucthemes"><strong>uiucthemes</strong></a> <span class="citation">[<a href="#ref-uiucthemes2020" role="doc-biblioref">7</a>]</span> 包。下面以 <strong>binb</strong> 包内置的 Presento 主题的 R Markdown 模版 为例，首先安装 <strong>binb</strong> 包和一些字体宏包。</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;binb&quot;</span>)</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">tlmgr_install</span>(<span class="fu">c</span>(<span class="st">&quot;montserrat&quot;</span>, <span class="st">&quot;lato&quot;</span>, <span class="st">&quot;noto&quot;</span>, <span class="st">&quot;alegreya&quot;</span>, <span class="st">&quot;inconsolata&quot;</span>))</span></code></pre></div>
 <div class="rmdnote">
@@ -1197,15 +1201,15 @@ texmf-dist/fonts/vf/huerta/alegreya
 texmf-dist/fonts/type1/huerta/alegreya
 texmf-dist/fonts/enc/dvips/alegreya
 texmf-dist/fonts/map/dvips/alegreya</code></pre>
-<p>找到以上文件路径中含 opentype 的，再将目录 alegreya 下的字体复制到系统字体目录。之后，在 RStudio IDE 内，按路径 <code>File -&gt; New File -&gt; R Markdown</code> 新建 R Markdown 文件，期间看到如图<a href="#fig:rmd-slide-binb">4.25</a>所示窗口，选择 Presento 主题的 R Markdown 幻灯片模版。</p>
+<p>找到以上文件路径中含 opentype 的，再将目录 alegreya 下的字体复制到系统字体目录。之后，在 RStudio IDE 内，按路径 <code>File -&gt; New File -&gt; R Markdown</code> 新建 R Markdown 文件，期间看到如图<a href="#fig:rmd-slide-binb">4.26</a>所示窗口，选择 Presento 主题的 R Markdown 幻灯片模版。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-slide-binb"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182389055-f3ee3b7d-73eb-432f-acb2-429079b64b01.png" style="width:80.0%" alt="" />
-<p class="caption">图 4.25:  binb 包模版列表</p>
+<p class="caption">图 4.26:  binb 包模版列表</p>
 </div>
-<p>Presento 主题下幻灯片的样式如图<a href="#fig:rmd-slide-binb-presento">4.26</a> 所示。</p>
+<p>Presento 主题下幻灯片的样式如图<a href="#fig:rmd-slide-binb-presento">4.27</a> 所示。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-slide-binb-presento"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182398952-998e9473-7ead-41ab-b113-b3010eca5980.gif" alt="" />
-<p class="caption">图 4.26:  binb 包 Presento 主题模版</p>
+<p class="caption">图 4.27:  binb 包 Presento 主题模版</p>
 </div>
 <p>掌握以上花样翻新的规律，beamer 主题任你玩，保证可以每次做演示不重样。</p>
 </div>
@@ -1305,10 +1309,10 @@ texmf-dist/fonts/map/dvips/alegreya</code></pre>
 <span id="cb56-86"><a href="#cb56-86" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb56-87"><a href="#cb56-87" aria-hidden="true" tabindex="-1"></a>::::::::::::::</span></code></pre></div>
 </details>
-<p>编译渲染出来的效果如图<a href="#fig:rmd-slide-verona">4.27</a>所示。</p>
+<p>编译渲染出来的效果如图<a href="#fig:rmd-slide-verona">4.28</a>所示。</p>
 <div class="figure"><span style="display:block;" id="fig:rmd-slide-verona"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182515142-9c5180b2-4b33-44d0-9153-597d5187e1a6.gif" alt="" />
-<p class="caption">图 4.27:  深度使用 beamer 幻灯片主题</p>
+<p class="caption">图 4.28:  深度使用 beamer 幻灯片主题</p>
 </div>
 <p>Verona 主题提供了一些 beamer 文类通用的 block 样式，比如 exampleblock、alertblock、block 等。结合 Pandoc 的 <a href="https://pandoc.org/MANUAL.html#divs-and-spans">Divs and Spans</a> 扩展功能和 bookdown 内置的 Lua 外挂，写起来就简便多了。</p>
 <pre><code>::: {.exampleblock data-latex=&quot;{提示}&quot;}
@@ -1319,7 +1323,7 @@ texmf-dist/fonts/map/dvips/alegreya</code></pre>
 A Markdown-formatted document should be publishable as-is, as plain text, 
 without looking like it’s been marked up with tags or formatting instructions.  
 :::</code></pre>
-<p>此处，不一一介绍，详情见<span class="citation">[<a href="#ref-Alison2021" role="doc-biblioref">7</a>]</span>。</p>
+<p>此处，不一一介绍，详情见<span class="citation">[<a href="#ref-Alison2021" role="doc-biblioref">8</a>]</span>。</p>
 </div>
 </div>
 <div id="rmarkdown-ninja" class="section level2" number="4.5">
@@ -1390,15 +1394,15 @@ a column separator --></p>
 <span id="cb60-26"><a href="#cb60-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 </div>
 </div>
-<p>幻灯片渲染出来的效果如图<a href="#fig:slide-lua">4.28</a>。</p>
+<p>幻灯片渲染出来的效果如图<a href="#fig:slide-lua">4.29</a>。</p>
 <div class="figure"><span style="display:block;" id="fig:slide-lua"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182875614-d0c911f1-b6c0-48a4-8a83-874e0e5a8519.png" alt="" />
-<p class="caption">图 4.28:  使用 Lua 外挂制作 beamer 幻灯片</p>
+<p class="caption">图 4.29:  使用 Lua 外挂制作 beamer 幻灯片</p>
 </div>
 </div>
 <div id="math-symbols" class="section level3" number="4.5.2">
 <h3><span class="header-section-number">4.5.2</span> 数学符号与数学字体</h3>
-<p>首先来说说数学符号和数学字体的坑，毕竟，beamer 这种学术型幻灯片很难离开数学公式。LaTeX 社区专门弄了一个 400 多页的大型文档《The Comprehensive LATEX Symbol List – Symbols accessible from LATEX》<span class="citation">[<a href="#ref-Pakin2021" role="doc-biblioref">8</a>]</span>，其中，数学符号的篇幅高达 90 多页，涉及数十个 LaTeX 宏包，可见坑不是一般的深。在 R Markdown 中，踩中此坑最常见的姿势是这样的。</p>
+<p>首先来说说数学符号和数学字体的坑，毕竟，beamer 这种学术型幻灯片很难离开数学公式。LaTeX 社区专门弄了一个 400 多页的大型文档《The Comprehensive LATEX Symbol List – Symbols accessible from LATEX》<span class="citation">[<a href="#ref-Pakin2021" role="doc-biblioref">9</a>]</span>，其中，数学符号的篇幅高达 90 多页，涉及数十个 LaTeX 宏包，可见坑不是一般的深。在 R Markdown 中，踩中此坑最常见的姿势是这样的。</p>
 <ol style="list-style-type: decimal">
 <li><p>根据 ctex 宏包的帮助文档指示，汉化文档直接用 <code>ctexbook</code>、 <code>ctexart</code> 或 <code>ctexbeamer</code> 等文类。</p></li>
 <li><p>因此，把 R Markdown 文档默认的文类设置从 <code>documentclass: beamer</code> 改为 <code>documentclass: ctexbeamer</code>，改完后 R Markdown 文档长这个样子：</p>
@@ -1418,7 +1422,7 @@ output:
 <li><p>接着，观察编译渲染出来的效果</p>
 <div class="figure"><span style="display:block;" id="fig:slide-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182594626-a9b33ba3-ac8f-4e92-8e1f-4e46d6a27e89.png" alt="" />
-<p class="caption">图 4.29:  含公式的中文 beamer 幻灯片</p>
+<p class="caption">图 4.30:  含公式的中文 beamer 幻灯片</p>
 </div></li>
 <li><p>发现 LaTeX 命令 <code>\boldsymbol</code> 并没有加粗希腊字母 <span class="math inline">\(\theta\)</span>，回退至原英文 R Markdown 文档</p>
 <pre><code>---
@@ -1573,10 +1577,10 @@ output:
 <div class="sourceCode" id="cb68"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--pdf-engine</span> pdflatex <span class="at">-t</span> beamer <span class="dt">\</span></span>
 <span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>  slide-math.md <span class="at">-o</span> slide-math.pdf</span></code></pre></div>
 <p>确实可以渲染出来加粗效果 <span class="math inline">\(\boldsymbol{\theta}\)</span>，但是，pdflatex 处理中文是很弱的，在 MacOS 和 Ubuntu 等系统上比较麻烦，而且，未来主要方向是 XeLaTeX 引擎。</p>
-<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 <strong>unicode-math</strong> 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.30</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">9</a>]</span>。</p>
+<p>本以为用 <code>\symbf</code> 替换 <code>\boldsymbol</code>，问题就此解决了，可以开开心心地继续使用 XeLaTeX 编译引擎，继续使用 <strong>unicode-math</strong> 宏包。可在遇到花体数学符号，如常用来表示代数空间的 <span class="math inline">\(\mathscr{A}\)</span>，概率空间的 <span class="math inline">\(\mathcal{A}\)</span>，<span class="math inline">\(n\)</span> 维实空间的 <span class="math inline">\(\mathbb{R}^n\)</span>，抑或是常见的损失函数符号 <span class="math inline">\(\mathcal{L}\)</span>。<strong>unicode-math</strong> 定义的数学样式有点怪，和通常见到的不一样，见下图<a href="#fig:slide-unicode-math">4.31</a>，以前排版毕业论文的时候<a href="https://d.cosx.org/d/419931">坑过我一回</a>，主要原因是 <strong>unicode-math</strong> 使用 Latin Modern Math 的 OpenType 字体 <span class="citation">[<a href="#ref-Zeng2020" role="doc-biblioref">10</a>]</span>。</p>
 <div class="figure"><span style="display:block;" id="fig:slide-unicode-math"></span>
 <img src="https://user-images.githubusercontent.com/12031874/135603599-00602d32-c007-4eb1-a8bc-c5a5a17f19f0.png" alt="" />
-<p class="caption">图 4.30:  unicode-math 宏包</p>
+<p class="caption">图 4.31:  unicode-math 宏包</p>
 </div>
 <p>那么，问题来了，是不是使用其他数学字体就好了呢？<strong>unicode-math</strong> 宏包的<a href="http://mirrors.ctan.org/macros/unicodetex/latex/unicode-math/unimath-symbols.pdf">官方文档</a> 对 XITS Math、Fira Math 等字体的数学符号的支持情况有说明，见下表。</p>
 <center>
@@ -1625,7 +1629,7 @@ output:
 <p>RStudio IDE 使用 MathJaX (<a href="https://www.mathjax.org/" class="uri">https://www.mathjax.org/</a>) 来渲染 R Markdown 文档里的数学公式，MathJaX 不支持的数学符号命令是不能预览的。来自 <strong>unicode-math</strong> 的 <code>\symbf</code> 命令是不受支持的，会高亮成红色。那支持的有哪些呢？完整的支持列表见这个<a href="https://docs.mathjax.org/en/latest/input/tex/macros/index.html">文档</a>，常见的 <code>\mathbb</code> 空心体 <code>$\mathbb{A}$</code> 和 <code>\mathfrak</code> 火星体 <code>$\mathfrak{A}$</code> 来自宏包 <strong>amsfonts</strong>，<code>\mathscr</code> 花体 <code>$\mathscr{A}$</code> 和 <code>\bm</code> 粗体 <code>$\bm{A}$</code> 命令分别来自 <strong>mathrsfs</strong> 和 <strong>bm</strong>。<strong>amsmath</strong> 相关的大都支持，较为精细地调整数学公式可以去看<a href="https://www.latex-project.org/help/documentation/amsldoc.pdf">amsmath 文档</a>，此处仅摘抄一例 <code>$\sqrt{x} +\sqrt{y} + \sqrt{z}$</code> 和 <code>$\sqrt{x} +\sqrt{\smash[b]{y}} + \sqrt{z}$</code>，能看出来差别的一定有一双火眼金睛！坑就是有这么深，你踩到底了吗？</p>
 <div class="figure"><span style="display:block;" id="fig:rstudio-mathjax"></span>
 <img src="https://user-images.githubusercontent.com/12031874/140643778-c3527a55-1455-48c2-ac72-a43474f74e55.png" alt="" />
-<p class="caption">图 4.31:  RStudio IDE 预览加粗的希腊字母<span class="math inline">\(\bm{\Sigma}\)</span></p>
+<p class="caption">图 4.32:  RStudio IDE 预览加粗的希腊字母<span class="math inline">\(\bm{\Sigma}\)</span></p>
 </div>
 </div>
 <blockquote>
@@ -1730,14 +1734,14 @@ mathspec: true
 <p>其中，目录 <code>noto-fonts/</code> 存放宋体 <code>NotoSerifCJKsc-Regular.otf</code> 和黑体 <code>NotoSansCJKsc-Regular.otf</code> 字体文件，与上述 R Markdown 文件放一起。渲染效果如下图</p>
 <div class="figure"><span style="display:block;" id="fig:slide-noto-cjk"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182798667-805a7ed1-2446-42b6-bfd1-1768f7b9d7e1.png" alt="" />
-<p class="caption">图 4.32:  beamer 幻灯片使用 Noto 中文字体</p>
+<p class="caption">图 4.33:  beamer 幻灯片使用 Noto 中文字体</p>
 </div>
 <p>至此，关于 R Markdown 制作 beamer 幻灯片的主题介绍可以告一段落了！</p>
 </div>
 </div>
 <div id="beamer-quarto" class="section level2" number="4.6">
 <h2><span class="header-section-number">4.6</span> Quarto 制作 beamer 幻灯片</h2>
-<p>Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc’s Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc’s Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 <a href="https://quarto.org/docs/presentations/beamer.html">beamer</a> 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图<a href="#fig:rmd-slide-verona">4.27</a>， Quarto 文档如下：</p>
+<p>Quarto 是 R Markdown 的继任者，吸收了 R Markdown 生态的许多经验和教训，目前，好评如潮。类似 R Markdown， Quarto 也是站在 Pandoc 这位巨人的肩膀上，所以，前面关于 Pandoc’s Markdown 的功能介绍统统适用于 Quarto。当你知道了 Pandoc’s Markdown 制作 beamer 幻灯片的过程，你会发现 Quarto 制作 <a href="https://quarto.org/docs/presentations/beamer.html">beamer</a> 幻灯片的过程是如出一辙。下面准备用 Quarto 复现图<a href="#fig:rmd-slide-verona">4.28</a>， Quarto 文档如下：</p>
 <details>
 <summary>
 点击查看 Quarto 源文档及设置说明
@@ -1834,7 +1838,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <p>编译渲染出来的效果如下图：</p>
 <div class="figure"><span style="display:block;" id="fig:quarto-beamer"></span>
 <img src="https://user-images.githubusercontent.com/12031874/182994531-97567685-29c2-402e-a9fa-98f3645351da.gif" alt="" />
-<p class="caption">图 4.33:  Quarto 制作 beamer 幻灯片</p>
+<p class="caption">图 4.34:  Quarto 制作 beamer 幻灯片</p>
 </div>
 <p>目前，发现一些差异点，也可以说是迁移成本。</p>
 <ol style="list-style-type: decimal">
@@ -1865,7 +1869,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <li><code>breezedark</code></li>
 <li><code>haddock</code></li>
 </ul>
-<p>它们也是 R Markdown 内置的一些高亮主题，Quarto 进一步提供了更多的语法高亮主题，比如上图<a href="#fig:quarto-beamer">4.33</a>使用的 <code>github</code>，更多内容见 Quarto 帮助文档<a href="https://quarto.org/docs/output-formats/html-code.html#highlighting">高亮主题</a>。</p>
+<p>它们也是 R Markdown 内置的一些高亮主题，Quarto 进一步提供了更多的语法高亮主题，比如上图<a href="#fig:quarto-beamer">4.34</a>使用的 <code>github</code>，更多内容见 Quarto 帮助文档<a href="https://quarto.org/docs/output-formats/html-code.html#highlighting">高亮主题</a>。</p>
 </div>
 </div>
 <div id="summary" class="section level1" number="5">
@@ -1893,26 +1897,26 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <div id="ref-Dirk2020" class="csl-entry">
 <div class="csl-left-margin">[5] </div><div class="csl-right-inline"><span class="smallcaps">Eddelbuettel</span>, D., <span class="smallcaps">Zahn</span>, I. and <span class="smallcaps">Hyndman</span>, R. (2020). <em><a href="https://CRAN.R-project.org/package=binb"><span class="nocase">binb</span>: <span class="nocase">binb</span> is not <span class="nocase">beamer</span></a></em>.</div>
 </div>
+<div id="ref-Xie2017" class="csl-entry">
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Hill</span>, A. P. and <span class="smallcaps">Thomas</span>, A. (2017). <em><a href="https://bookdown.org/yihui/blogdown/"><span class="nocase">blogdown</span>: Creating websites with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+</div>
 <div id="ref-uiucthemes2020" class="csl-entry">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline"><span class="smallcaps">Balamuta</span>, J. (2020). <em><a href="https://CRAN.R-project.org/package=uiucthemes"><span class="nocase">uiucthemes</span>: <span>R Markdown</span> themes for <span>UIUC</span> documents and presentations</a></em>.</div>
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline"><span class="smallcaps">Balamuta</span>, J. (2020). <em><a href="https://CRAN.R-project.org/package=uiucthemes"><span class="nocase">uiucthemes</span>: <span>R Markdown</span> themes for <span>UIUC</span> documents and presentations</a></em>.</div>
 </div>
 <div id="ref-Alison2021" class="csl-entry">
-<div class="csl-left-margin">[7] </div><div class="csl-right-inline"><span class="smallcaps">Hill</span>, A., <span class="smallcaps">Dervieux</span>, C. and <span class="smallcaps">Xie</span>, Y. (2021). <a href="https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/">Latest news from the <span>R Markdown</span> family</a>.</div>
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline"><span class="smallcaps">Hill</span>, A., <span class="smallcaps">Dervieux</span>, C. and <span class="smallcaps">Xie</span>, Y. (2021). <a href="https://blog.rstudio.com/2021/04/15/2021-spring-rmd-news/">Latest news from the <span>R Markdown</span> family</a>.</div>
 </div>
 <div id="ref-Pakin2021" class="csl-entry">
-<div class="csl-left-margin">[8] </div><div class="csl-right-inline"><span class="smallcaps">Pakin</span>, S. (2021). <a href="https://www.ctan.org/pkg/comprehensive/">The comprehensive <span>LaTeX</span> symbol list - symbols accessible from LaTeX</a>.</div>
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline"><span class="smallcaps">Pakin</span>, S. (2021). <a href="https://www.ctan.org/pkg/comprehensive/">The comprehensive <span>LaTeX</span> symbol list - symbols accessible from LaTeX</a>.</div>
 </div>
 <div id="ref-Zeng2020" class="csl-entry">
-<div class="csl-left-margin">[9] </div><div class="csl-right-inline"><span class="smallcaps">曾祥东</span>. (2020). <a href="https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/">在 <span>LaTeX</span> 中使用 OpenType 字体（三）</a>.</div>
-</div>
-<div id="ref-Xie2017" class="csl-entry">
-<div class="csl-left-margin">[10] </div><div class="csl-right-inline"><span class="smallcaps">Xie</span>, Y., <span class="smallcaps">Hill</span>, A. P. and <span class="smallcaps">Thomas</span>, A. (2017). <em><a href="https://bookdown.org/yihui/blogdown/"><span class="nocase">blogdown</span>: Creating websites with <span>R</span> markdown</a></em>. Chapman; Hall/CRC, Boca Raton, Florida.</div>
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline"><span class="smallcaps">曾祥东</span>. (2020). <a href="https://stone-zeng.github.io/2020-05-02-use-opentype-fonts-iii/">在 <span>LaTeX</span> 中使用 OpenType 字体（三）</a>.</div>
 </div>
 </div>
 </div>
 <div id="session" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> 环境信息</h1>
-<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">10</a>]</span>构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。</p>
+<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> <span class="citation">[<a href="#ref-Xie2017" role="doc-biblioref">6</a>]</span>构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息，供读者复现参考。</p>
 <div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>xfun<span class="sc">::</span><span class="fu">session_info</span>(<span class="fu">c</span>(</span>
 <span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;tinytex&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;rmarkdown&quot;</span>, </span>
 <span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;bookdown&quot;</span>, <span class="st">&quot;blogdown&quot;</span>, <span class="st">&quot;binb&quot;</span></span>

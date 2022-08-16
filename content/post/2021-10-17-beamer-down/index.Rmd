@@ -317,7 +317,10 @@ tinytex::xelatex(file = "slide-metropolis.tex")
 
 ## Pandoc's Markdown {#pandoc-markdown}
 
-R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 Pandoc 软件(<https://pandoc.org/>)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。
+相比于[原始 Markdown](https://daringfireball.net/projects/markdown/) 支持的功能，Pandoc's Markdown 支持的功能多很多，一份详细的对比介绍见 Pandoc 核心开发者 John MacFarlane 在 TUG 2020 大会的报告[Pandoc for TeXnicians](https://tug.org/tug2020/preprints/MacFarlane-Keynote-slides.pdf)。R Markdown 背后是非常依赖 Pandoc 的，RStudio IDE 已经捆绑了 Pandoc 软件(<https://pandoc.org/>)，一般不需要用户再去下载，安装完 RStudio IDE 就可以直接用它了。R Markdown 生态的另一重器 blogdown [@Xie2017] 是非常依赖 Hugo (<https://gohugo.io/>) 的，Hugo 也支持很多 Markdown 语法和功能，大致来说， Markdown、Hugo’s Markdown、Pandoc’s Markdown 和 R Markdown 的关系如下：
+
+
+![(\#fig:md-family) Markdown 家族](img/markdown.svg){ width=60% }
 
 ### 简单示例
 
@@ -790,7 +793,7 @@ pandoc --citeproc --pdf-engine xelatex -t beamer \
 
 ### 更多功能
 
-Pandoc 还支持很多功能，比如添加封面图片、脚注、诗词格言引用、图表交叉引用、抄录代码块、自定义导言区等等，众多功能有待读者去探索发现。
+除了上面介绍的那些，Pandoc 还支持很多功能，比如添加封面图片、脚注、诗词格言引用、图表交叉引用、抄录代码块、自定义导言区等等，众多功能有待读者去探索发现。
 
 ::: rmdtip
 Pandoc 除了能将 Markdown 文档转化为 beamer 幻灯片，还可将其转化为 DOCX 格式的 Word 文档、PPTX 格式的 PowerPoint 文档等。除了前面介绍的 LaTeX 模版，Pandoc 还内建了 Word、PowerPoint 等诸多文档模版，获取其它文档格式的模版，稍有不同，比如 DOCX 文档。
