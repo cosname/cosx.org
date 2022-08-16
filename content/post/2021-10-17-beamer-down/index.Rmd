@@ -159,7 +159,7 @@ R Markdown 站在 Markdown、Pandoc 和 R 等诸多巨人的肩膀上，支持�
 
 LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的数学或统计系会用它来排版毕业论文，相关的学习材料有很多，推荐 CTeX 开发小组翻译的[一份（不太）简短的LaTeX介绍](https://github.com/CTeX-org/lshort-zh-cn)。吴康隆的 [《简单粗暴LaTeX》](https://github.com/wklchris/Note-by-LaTeX)，盛文博翻译的[《LaTeX2e 插图指南, 第三版》](https://github.com/WenboSheng/epslatex-cn)，吕荐瑞的[科技文档排版课程材料](https://lvjr.bitbucket.io/tutorial/learn-latex.pdf)，曾祥东的[现代 LaTeX 入门讲座](https://github.com/stone-zeng/latex-talk)，都非常适合从零开始学习的。进阶的部分，根据需要去看宏包手册，LaTeX 宏包文档的长度一般都吓死个人，[PGF](https://github.com/pgf-tikz/pgf) 绘图 **1300** 多页，[pgfplots](https://ctan.org/pkg/pgfplots) 3D 绘图 **573** 页， [beamer](https://github.com/josephwright/beamer) 幻灯片制作 **247** 页，[geometry](https://github.com/davidcarlisle/geometry) 版面设置 **42** 页，[tcolorbox](https://github.com/T-F-S/tcolorbox) 箱子定制 **539**页，通常不需要从头到尾的看，除非遇到难处或需要自定义了。在对基础的 LaTeX 排版工具有一些了解后，日常使用过程中必备数学公式[速记小抄](https://gitlab.com/jim.hefferon/undergradmath) ，搭好梯子随时放狗去搜。
 
-2020 年 6 月份搬迁完[汉风主题](https://github.com/liantze/pgfornament-han)，在论坛开帖分享了[成果](https://d.cosx.org/d/421591)，又被撺掇着在主站[立了字句](https://github.com/cosname/cosx.org/issues/901)----要写一篇文章介绍 R Markdown 制作幻灯片模版的过程，一直囿于工作繁忙，难以抽身，去年在 WX 上和[楚新元](https://gitlab.com/chuxinyuan)又聊到模版，看到有人又要准备趟我之前踩过的坑，心中不忍，咬咬牙还是把这文债给还了。算起来，从起心动念到最终交付拖延了两年而已！
+2020 年 6 月份搬迁完[汉风主题](https://github.com/liantze/pgfornament-han)，在论坛开帖分享了[成果](https://d.cosx.org/d/421591)，又被撺掇着在主站[立了字据](https://github.com/cosname/cosx.org/issues/901)----要写一篇文章介绍 R Markdown 制作幻灯片模版的过程，一直囿于工作繁忙，难以抽身，去年在微信上和[楚新元](https://gitlab.com/chuxinyuan)又聊到模版，看到有人又要准备趟我之前踩过的坑，心中不忍，咬咬牙还是把这文债给还了。算起来，从起心动念到最终交付拖延了两年而已！
 
 
 # 软件配置 {#setup}
@@ -195,32 +195,23 @@ tinytex::install_tinytex()
 
 ## 安装字体 {#setup-fonts}
 
-为了后续介绍 metropolis 主题，先安装和配置其所需字体，此过程分两步走：
+为了后续介绍 metropolis 主题，先下载和配置其所需字体，此过程分两步走：
 
-1.  这里用 **tinytex** 包安装 [**fira**](https://www.ctan.org/pkg/fira) 系列英文字体，[**firamath**](https://github.com/firamath/firamath) 和 [**xits**](https://www.ctan.org/pkg/xits) 数学字体以及 [**fandol**](https://ctan.org/pkg/fandol) 开源中文字体，后续用作 beamer 幻灯片的主要字体，相信大家看惯了千篇一律的字体，也想换换口味吧！
+1.  这里用 **tinytex** 包下载 [**fira**](https://www.ctan.org/pkg/fira) 系列英文字体，[**firamath**](https://github.com/firamath/firamath) 和 [**xits**](https://www.ctan.org/pkg/xits) 数学字体以及 [**fandol**](https://ctan.org/pkg/fandol) 开源中文字体。
 
     ```{r}
     #| eval: false
     tinytex::tlmgr_install(c("fira", "firamath", "firamath-otf", "xits", "fandol"))
     ```
 
-2.  通过「人工智能」查找，发现上面安装的字体都放在了 TinyTeX 的安装目录下，而且不能直接被调用，故而将它们拷贝到用户指定的字体目录，刷新字体目录后，通过 **fontspec** 宏包调用。为了加快复现的速度，我已经将这个复制粘贴的过程化作几行代码，如下：
+2.  接下来，刷新字体缓存，如下：
 
     ```{r}
     #| eval: false
     
-    # TinyTeX 字体目录
-    basedir <- paste(tinytex::tinytex_root(), "texmf-dist/fonts/opentype/public", sep = "/")
-    # MacOS 系统字体放在 ~/Library/Fonts/ 而 Linux 系统字体放在 ~/.fonts
-    distdir <- if (xfun::is_macos()) "~/Library/Fonts/" else "~/.fonts"
-    # 如果目录不存在就创建一个
-    xfun::dir_create(distdir)
-    # 字体文件的目录
-    fontdir <- paste(basedir, c("fira", "xits", "firamath"), sep = "/")
-    # 字体文件的路径
-    fontfile <- list.files(path = fontdir, full.names = T)
-    # 拷贝到字体目录下
-    file.copy(from = fontfile, to = distdir, overwrite = TRUE)
+    # 可能需要安装开发版 tinytex
+    # remotes::install_github('rstudio/tinytex')
+    tinytex:::refresh_all()
     ```
 
 ## 安装主题 {#beamer-theme}
@@ -372,7 +363,7 @@ pandoc --pdf-engine xelatex -t beamer \
 pandoc -o custom-reference.tex --print-default-template latex
 ```
 
-Pandoc 内置的 LaTeX 模版内容非常多，因为它是大一统的，支持书籍、报告、演示等等使用场景。通过传递模版变量，可以控制文档类型及其选项，如布局、字体等。下面是模版开头的几行内容：
+[Pandoc 内置的 LaTeX 模版](https://github.com/jgm/pandoc/blob/master/data/templates/default.latex)内容非常多，因为它是大一统的，支持书籍、报告、演示等等使用场景。通过传递模版变量，可以控制文档类型及其选项，如布局、字体等。下面是模版开头的几行内容：
 
 ```latex
 % Options for packages loaded elsewhere
@@ -383,7 +374,7 @@ $if(colorlinks)$
 $endif$
 ```
 
-`hyperrefoptions` 和 `colorlinks` 就是两个变量，它们被一对美元符号前后包围。遇到 `if` 意味着可以传递布尔值 `true` / `false`，遇到 `for` 意味着可以传递一个数组，LaTeX 宏包 hyperref 参数选项非常多， 查看[其帮助文档](http://mirrors.ctan.org/macros/latex/contrib/hyperref/doc/hyperref-doc.pdf)，可以知道能够传递的值有哪些。下面是一个例子：
+`hyperrefoptions` 和 `colorlinks` 就是两个变量，它们被一对美元符号前后包围。遇到 `if` 意味着可以传递布尔值 `true` / `false`，遇到 `for` 意味着可以传递一个数组，LaTeX 宏包 hyperref 参数选项非常多，查看其[帮助文档](http://mirrors.ctan.org/macros/latex/contrib/hyperref/doc/hyperref-doc.pdf)，可以知道能够传递的值有哪些。下面是一个例子：
 
 ```
 hyperrefoptions:
@@ -393,15 +384,6 @@ hyperrefoptions:
 ```
 
 hyperref 帮助文档 5.5 节介绍 linktoc 选项，5.6 节介绍 bookmarksnumbered 选项，5.7 节介绍 pdfstartview 选项，通过帮助文档，就知道宏包有哪些控制选项及其取值。
-
-
-<details>
-<summary> 点击查看 Pandoc 内置的 LaTeX 模版内容 </summary>
-
-```{verbatim, file="examples/custom-reference.tex", lang="tex"}
-```
-
-</details>
 
 
 ### 幻灯主题
