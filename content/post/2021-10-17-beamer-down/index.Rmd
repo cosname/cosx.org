@@ -209,8 +209,6 @@ tinytex::install_tinytex()
     ```{r}
     #| eval: false
     
-    # 可能需要安装开发版 tinytex
-    # remotes::install_github('rstudio/tinytex')
     tinytex:::refresh_all()
     ```
 
@@ -229,7 +227,7 @@ tinytex::tlmgr_install(c(
 ## 其他配置 {#setup-others}
 
 
-1. 配置 Pandoc：将 RStudio IDE 内置的 Pandoc 软件的安装路径添加到系统环境变量 `PATH` 中，而后就可以在命令行中使用它。通过如下命令可以知道 Pandoc 可执行文件的完整路径，以下是笔者的 MacOS 系统下的文件路径。
+1. 配置 Pandoc：将 RStudio IDE 内置的 Pandoc 软件的安装路径添加到系统环境变量 `PATH` 中，想在命令行中使用它，这是必要的。通过如下命令可以知道 Pandoc 可执行文件的完整路径，以下是笔者的 MacOS 系统下的文件路径。
 
     ```{r}
     #| echo: true

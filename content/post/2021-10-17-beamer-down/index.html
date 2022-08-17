@@ -292,9 +292,7 @@ div.csl-indent {
 <li><p>这里用 <strong>tinytex</strong> 包下载 <a href="https://www.ctan.org/pkg/fira"><strong>fira</strong></a> 系列英文字体，<a href="https://github.com/firamath/firamath"><strong>firamath</strong></a> 和 <a href="https://www.ctan.org/pkg/xits"><strong>xits</strong></a> 数学字体以及 <a href="https://ctan.org/pkg/fandol"><strong>fandol</strong></a> 开源中文字体。</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">tlmgr_install</span>(<span class="fu">c</span>(<span class="st">&quot;fira&quot;</span>, <span class="st">&quot;firamath&quot;</span>, <span class="st">&quot;firamath-otf&quot;</span>, <span class="st">&quot;xits&quot;</span>, <span class="st">&quot;fandol&quot;</span>))</span></code></pre></div></li>
 <li><p>接下来，刷新字体缓存，如下：</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 可能需要安装开发版 tinytex</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># remotes::install_github(&#39;rstudio/tinytex&#39;)</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">:::</span><span class="fu">refresh_all</span>()</span></code></pre></div></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">:::</span><span class="fu">refresh_all</span>()</span></code></pre></div></li>
 </ol>
 </div>
 <div id="beamer-theme" class="section level2" number="3.4">
@@ -307,7 +305,7 @@ div.csl-indent {
 <div id="setup-others" class="section level2" number="3.5">
 <h2><span class="header-section-number">3.5</span> 其他配置</h2>
 <ol style="list-style-type: decimal">
-<li><p>配置 Pandoc：将 RStudio IDE 内置的 Pandoc 软件的安装路径添加到系统环境变量 <code>PATH</code> 中，而后就可以在命令行中使用它。通过如下命令可以知道 Pandoc 可执行文件的完整路径，以下是笔者的 MacOS 系统下的文件路径。</p>
+<li><p>配置 Pandoc：将 RStudio IDE 内置的 Pandoc 软件的安装路径添加到系统环境变量 <code>PATH</code> 中，想在命令行中使用它，这是必要的。通过如下命令可以知道 Pandoc 可执行文件的完整路径，以下是笔者的 MacOS 系统下的文件路径。</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandoc 可执行文件的路径地址</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">pandoc_exec</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools/pandoc&quot;</code></pre>
@@ -1929,7 +1927,7 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 ## 
 ## Package version:
 ##   binb_0.0.6     blogdown_1.11  bookdown_0.28  knitr_1.39    
-##   rmarkdown_2.14 tinytex_0.40  
+##   rmarkdown_2.15 tinytex_0.41  
 ## 
 ## LaTeX version used: 
 ##   TeX Live 2022 (TinyTeX) with tlmgr 2022-04-18
