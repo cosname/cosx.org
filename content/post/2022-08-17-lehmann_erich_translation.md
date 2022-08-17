@@ -3,7 +3,7 @@ title: 'Erich L. Lehmann ：一份传记备忘录'
 author: 
   - P. J. Bickel
   - K. A. Doksum
-date: '2022-01-21'
+date: '2022-08-17'
 slug: lehmann-memoirs
 categories:
   - 推荐文章
