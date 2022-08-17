@@ -7,7 +7,7 @@ date: '2022-08-17'
 slug: lehmann-memoirs
 categories:
   - 推荐文章
-forum_id: 
+forum_id: 423423
 ---
 
 统计学起源于物理学、生物学和社会科学的许多学科的汇合。粗略地说，它可以被认为是使用概率模型和随机变化的度量分析数据的理论和实践。统计学中出现的著名名字包括 Bernoulli, Laplace, Gauss, Boltzman, Mendel, Quetelet 和其他许多人。现代数理统计理论的基础主要是在二十世纪由 R. A. Fisher , J. Neyman 和 A. Wald 奠定的。这些创始人和其他奠基者的思想，如 H. Jeffreys 和 L. J. Savage 以各种方式复兴的贝叶斯方法，产生了一幅令人兴奋但有些混乱的画面。下一代人需要将这些想法纳入一个新的研究人员可以融入的系统。这种系统化是 Erich L. Lehmann 的伟大成就。他于1959年首次出版的两本书 *Testing Statistical Hypoth­eses* (TSH) 和1983年首次出版的 *Theory of Point Estimation* (TPE) 是世界上大部分地区几代学生学习该领域的基本研究生教材。随着统计学在稳健性和半参数统计等新思想和领域的发展，当然也包括莱曼自己的后续研究，这两本书得到了丰富。莱曼自己不仅直接为这些领域做出了贡献，也通过他的学生做到了这一点，关于这方面的内容我们将在后面讨论。他吸引了更年轻的合作者丰富他的著作的后期版本，如 G. Casella 对 TPE<sup>1</sup> 的贡献和 J. Romano 对 TSH<sup>2 </sup> 的贡献。这些书跟上了时代，而基本的结构和风格仍然是 Lehmann 独有的。
