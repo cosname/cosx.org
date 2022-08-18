@@ -305,7 +305,7 @@ div.csl-indent {
 <div id="setup-others" class="section level2" number="3.5">
 <h2><span class="header-section-number">3.5</span> 其他配置</h2>
 <ol style="list-style-type: decimal">
-<li><p>配置 Pandoc：将 RStudio IDE 内置的 Pandoc 软件的安装路径添加到系统环境变量 <code>PATH</code> 中，想在命令行中使用它，这是必要的。通过如下命令可以知道 Pandoc 可执行文件的完整路径，以下是笔者的 MacOS 系统下的文件路径。</p>
+<li><p>配置 Pandoc：将 RStudio IDE 内置的 Pandoc 软件的安装路径添加到系统环境变量 <code>PATH</code> 中，后文有些篇幅介绍如何在命令行中使用它，因此，需要这一步，而普通 R Markdown 用户无须这一步配置。通过如下命令可以知道 Pandoc 可执行文件的完整路径，以下是笔者的 MacOS 系统下的文件路径。</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandoc 可执行文件的路径地址</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">pandoc_exec</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;/Applications/RStudio.app/Contents/MacOS/quarto/bin/tools/pandoc&quot;</code></pre>
