@@ -49,17 +49,35 @@ forum_id: 423404
 
 **统计之都**: 能仔细介绍下你现在主要研究的几个方向吗？
 
-【认领 梁杰昊】
+**雷理骅**：我其实从 PHD 开始接触到主要几个方向是这样，首先multiple testing算是一个主要研究领域之一，我主要的focus在False Discover Rate control。第二个方向是causal inference。第三个方向是network clustering，
+就是当你有个network的时候，怎么去做比较好的cluster，我的focus主要在【听不清】problem。在 PHD 时候还有一个方向是optimization。这个主要是跟Michael Jordon一起做的。然后到postdoc期间，我开始进入到一个比较新的方向，我都不知道该怎么翻译，叫conformal inference。这个目前可能还没有一个很好的翻译。这是个非常新的 topic。在我进入到这个领域的时候，它还只能算一个topic，但现在过了三年以后，已经算是一个领域了。目前这个领域有非常多的人，大家非常有创造性的在思考conformal inference这个框架能用到什么问题上去。我从 PHD 到 postdoc 过程中，我也有幸认识到【人名听不清】，然后做了一些 Econometrics 的工作。这大概是我现在目前研究的主要的几个方向。
+
 
 
 **统计之都**: 现在很多学生本科时就有所谓的“本研”，在你回头看来，你觉得重要吗？你是如何看待的？
 
-【认领 梁杰昊】
+**雷理骅**：我觉得非常重要。就我刚才说的几个例子，一个是跟吴兰老师的例子，他就让我意识到要怎么从一个实际的问题出发。本身这个问题它是一个很概率的问题。但是我逐渐地把它分类成一个统计的问题，这个统计问题就变成了一个新的问题，我就会去想怎么去估计？怎么去找一个好的算法，怎么去做simulation？怎么去推理性质？所有的这些过程就相当于让我独立地能从一个问题里面看到另外一个问题，然后把它转化成我自己的一个研究方向或者一个研究的topic。
+
+**统计之都**:相当于有一个完整的training的process。
+
+**雷理骅**：对，这个过程我觉得非常重要，因为它能让你看到科研的每一步。当然作为本科生，我们可能每一步都做得不尽人意，但是对整个过程的全貌的理解，我觉得是非常重要的。像跟陈老师的科研让我理解到在应用中有多少tricky issues，以及怎么跟domain scientist去沟通、去合作。这个过程也是我在本科科研的时候学到的。因为到后来turns out是很重要的，后来做一些理论的工作的时候，如果说你继续用非常理论的方式去跟scientist沟通，就会发现他们没法get到你在说什么。因为你跟scientist合作，你是希望得到很有趣的问题，希望解决一些问题，希望能在这些science里面有一些impact，但是如果沟通不力，就会导致我们自己也没有得到我们想得到的。
+
 
 
 **统计之都**: 你在博士和博后阶段的工作有很多，你是如何寻找到这样有意思的题目的？解决这些问题你又遇到了哪些困难，或者说对你都很简单？例如与Will  Fithan的合作 on FDR control （代表作?）是否和选择Candes做博后有关？与丁鹏 (causal inference)，Michael Jordan (optimization)的合作又是如何开始的呢？
 
-【认领 梁杰昊】
+**雷理骅**：我觉得首先统计一个特别好的地方在于能做的问题真的很多，相信大家应该都有这样的感觉。统计里面一个常见的说法是the statistics skills can play everyone's backyard or even frontyard【谚语00:35:40】。所以我们面临的问题很多，我们可以去做的问题也很多。我觉得很多时候其实是看机缘巧合。除了我开始跟Peter和【人名】做的 High Dimensional M Estimator，是我当时觉得这个很感兴趣，Peter鼓励我去做这个topic；PHD 期间基本上其他大部分topic都是我无意中找到的。但这个“无意”也不是说就真的无意。
+
+**统计之都**：也是需要一些积累的。
+
+**雷理骅**：对。其实我当时一个trick就是我会去上大家的topic course。我觉得这是我们接触新的科研领域的一个很好的方法，因为一个AP来到这个学校以后，他会想招学生，很多系里其实都会支持新来的AP，开一个Topic Course，讲自己的research area。有了这个机会以后，其实你就能很快的接触到一些最前沿的东西，因为一个新的AP来了，很有可能他做的东西，还没有构成一个领域，他们可能还在初期，但是因为他们做的很出色，所以说他们就被招进来了。在他们讲的过程中，其实这个Topic Course更像是在跟学生在探讨，他们也在让自己的思维更加完善，通过交流的过程让自己有更完善的researching agenda。在这个过程中能学到很多，比如说我最先接触到multiple testing，是因为上Will Fithan的这个Topic Course，叫Selective Inference。其实一开始我对Selective Inference的理解非常狭隘，我一直以为Selective Inference就是说 Model Selection以后去做Inference。我也知道早期的一些工作需要用到很特殊的Parametrical的性质，比如说我们做LASSO的 Selective Inference就需要假设Everything is Gaussian。但上了这个课以后才发现，首先Selective Inference是一个很大的领域，比如False Discovery Control就是属于Selective Inference。其次Post Selection Inference甚至Adaptive Data Analysis用到很多Differential Privacy，其实也是隶属于Selective Inference。我在上课的过程中逐渐发现这是一个非常有趣的领域。当时Will Fithan讲这个课的时候也借用了一些Emmanuel 【人名】在当时上的300C，那时候也差不多是Emmanuel刚刚进入到这个领域不久，他在Stanford开了一门课叫300C，讲很多【部分外文没听清楚00:38:26】 For False Discovery Rate。所以当时我有机会接触到了这样一些Topic，当时我就觉得FDR是一个特别感兴趣的领域。于是我就利用到这个机会，在做最后Final Project的时候，我就花了很长的时间。当时我停掉我手里的Research。
+
+**统计之都**：和Peter的research？
+
+**雷理骅**：对，或者说当时可能我停掉了其他一些我正在想的一些问题。当时那个阶段应该是第二年初期，那时候跟Peter也陷入到一些瓶颈，当时就想既然如此，我就好好的把时间花在Final Project上，我就想我能不能做一点东西。其实当时我就选了一个很小的切入点，当时我就读了Knockoff这篇paper。我就在想Knockoff当时是generate一个Copy of Knockoff，然后把Data转换成一个binary p-value。它的好处就是,如果说你是考虑一个Linear Model，你需要N大于等于2P，aspect ratio的要求很低，但是它会让p-value的Resolution不是很高，就会导致一个问题，这个问题比较Tricky，但简单来说它会有个threshold phenomenon，就意味着如果你想把FDR control 在 0.1 这个level，你要么是Reject十个以上，要么Reject Nothing，但是In Practice，很多时候我们大概Rejects五六个左右。那么这种情况下可能就没有办法给出一个很好的结果。
+所以那时候我就想做一个所谓的Multiple Knockoff，当然现在已经被人做出来了。当时我也做出来一些结果，但做出这个结果以后，我就给Will看，然后Will就觉得很有意思，于是我们从我做的结果那里，首先写了一篇文章。我们把Knockoff背后的一个叫【selective six step filter】generalize了一下。就首先我和Will就先写了一篇ICML paper。我们就只是谈一下这样一个generalization，就是说我们不再用filter用在Knockoff上，我们就用在传统的p-value setting上，看我们能得到什么。很快我们做了这个project以后，就意识到其实我们做的事情可以解决一个很重要的问题，叫data adaptive FDR control。这个motivation就在于，比如说在很多genetic data上，我们做multiple testing试图要control FDR，但是我们有很多sign/side 【梁杰昊：存疑】 Information。这sign Information可能来自于别的实验，或者来自prime【梁杰昊：prior？】 knowledge，我们怎么把这些prime knowledge纳入到我们FDR里面，使得它的power更高。我们在不断的聊天中，我记得那段时间跟Will Fithan可能是每周都聊一次，甚至聊两次，一聊可能就聊一个小时。在不断的这种iteration过程中，我原来当时Final Project里面一个想法，可以把它变成一个非常有力的tool。最后就我们写了adaptive这篇文章，想法非常简单，就是说我们有p-value。传统的方法就是直接用p-value做testing，但现在我们不是直接用p-value做testing，而是我们先隐掉一些Information。就是我们只给researcher看minimal p和1-p，以及其他所有的sign Information。非常神奇的是，你只要用这些信息去估计任何的model，哪怕这个model是错的，是misspecified，最后在一些标准的假设上仍然可以保证FDR control，这就是我和Will写的那篇JRSSB 【可能是AdaPT: An interactive procedure for multiple testing with side information】。所以我后来一直在follow FDR上面的工作。我觉得非常有趣，因为当时它让我意识到，原来这么一个事后看起来非常简单的trick，它可以有效的把统计的testing和machine learning结合在一起，并且它的理论性质非常的强，就在于它所有的control都是finite sample，没有任何asymtotic，它允许model是个任意的misspecification。但是如果你model是correctly specified，它会让你的power比较高。而这个工作本身其实也奠定了我后面所有工作的一个philosophy，就是无论是哪个方向，我都比较喜欢model free，distribution free，以及finite sample guarantee。我并不是觉得一定要有finite sample guarantee，而是觉得finite sample guarantee的这些方法，一般来说，有个特点，就是它一定会简单。因为说实话，很难想象一个非常复杂的方法，最后能给你发现finite sample guarantee，而且很多时候，背后的数学也会很简单。这个“简单”并不是在于它很容易想，它有时候可能很难想，但是proof上都不会很长。所以这个工作本身奠定我后面很多工作的这样一个philosophy，就是会让我非常active地去想，什么样的问题可以做finite sample， 可以做这种model misspecification。
+【44:10】
+
 
 
 **统计之都**: 博士后的经历你觉得是必要的吗，你的收获又是哪些？因为我听说过一些说法讲，其实你PHD的时候已经很有名了，当年在job market已经非常popular。所以说在这个基础上，你觉得你的博后的收获又是哪些呢？
