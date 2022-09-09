@@ -21,45 +21,57 @@ forum_id: 423404
 
 **雷理骅**：大家好，我是雷理骅。非常感谢统计之都的采访，很高兴能跟大家分享我的经历。我是斯坦福大学统计学系的博士后研究员，导师是Emmanuel Candès教授[^1]。此前，我获得了北京大学数学与统计和经济学的学士学位，并在加州大学伯克利分校获得博士学位。
 
-[^1]: [Emmanuel Candès 教授的简历](https://profiles.stanford.edu/emmanuel-candes)
+> 后文 Berkeley 即为加州大学伯克利分校（University of California, Berkeley）
+
+[^1]: [Emmanuel Candès](https://profiles.stanford.edu/emmanuel-candes)
 
 
 说到个人经历，我从小就比较喜欢数学。我从小学就开始接触数学竞赛，到高中的时候进入了华师一附中的竞赛班，从高二开始全身心的投入准备竞赛。后来我获得了CMO（中国数学奥林匹克）的金牌并被保送到了北大。
 
-在保送结束到开始上大学之间,大概空出了半年的时间，在这段时间里我进行了一些有益的探索，也第一次接触到医学统计。我母亲当时是护士，她在临床很多年，发现很多卧床很久的老年病人会得一种病叫压疮，这种病会对老年人的生活质量产生很大影响。我母亲阅读文献后发现，营养支持是避免压疮的一个很好的方法。她和她的同事一起收集到了1000多例数据，而且数据的质量很高。我觉得从现在看来，这是一件非常了不起的事情。我母亲想对数据进行一些统计分析，她就给了我一本医学统计的教材。这本教材里有许多医学统计要用到的方法，比如卡方检验。后来我运用spss软件，跟着教材上一步一步的操作，最后生成了一个非常漂亮的报告，还是让我很震撼的。当时突然一下，我就觉得统计这个学科好像可以把我们学到的数学这些公式，变成一些在现实中非常有用的东西。于是还没有进大学的时候，我就基本决定我是很想做统计的。
+在保送结束到开始上大学之间,大概空出了半年的时间，在这段时间里我进行了一些有益的探索，也第一次接触到医学统计。我母亲当时是护士，她在临床很多年，发现很多卧床很久的老年病人会得一种病叫压疮，这种病会对老年人的生活质量产生很大影响。我母亲阅读文献后发现，营养支持是避免压疮的一个很好的方法。她和她的同事一起收集到了1000多例数据，而且数据的质量很高。我觉得从现在看来，这是一件非常了不起的事情。我母亲想对数据进行一些统计分析，她就给了我一本医学统计的教材。这本教材里有许多医学统计要用到的方法，比如卡方检验。后来我运用spss软件，跟着教材上一步一步的操作，最后生成了一个非常漂亮的报告，还是让我很震撼的。当时突然一下，我就觉得统计这个学科好像可以把我们学到的这些数学公式，变成一些在现实中非常有用的东西。于是，还没有进大学的时候，我就基本决定我是很想做统计的。
 
 
 **统计之都**： 进入北大之后，肯定学习任务也是相对繁重的，你能讲讲整个本科阶段你自己的个人的时间分配，是如何学习的吗？
 
-**雷理骅**：其实在前面两年半时间，我的时间安排总体来说是这样：首先一大部分时间可能是用来学习专业课，一方面是我觉得很有意思，另一方面也确实在术业还是有压力，所以说还是要好好搞。由于一开始我是没有打算出国，也没有打算做学术，而是非常想进入业界，所以另外的时间我主要是在北大咨询学会做了一年半的咨询。在这过程中有在一个公司实习做过期货的training、还做了小半年的marketing设计问卷，试图帮一个公司推销一个产品。由于对经济金融感兴趣，我还上了经济学双学位。但是在大三下的时候我突然意识到，其实这些跟商业、金融、经济这些工作可能跟我的性格不是那么的match，虽然我很喜欢，但是可能我还会有些犹豫是否要把它们作为职业。但另一方面我在做这些事情的过程中都接触到不同的统计，比如说我在做trading的时候接触到time series，做marketing的时候要分析问卷结果，真正分析的时候需要想的很细，而当时我发现以我在本科课本上学到那些东西是远远不够的。所以从那时候开始，我就觉得我应该更深入的学习统计这个学科，去走到前沿去看统计到底真正在学术圈的人在学什么，然后我再决定是否我要回到业界去使用这些统计知识。所以从那个时候开始，我才临时准备出国准备读PHD，这大概其实是我的时间分配。所以我觉得从某个角度来说，它是走了弯路。但是回过头去看，我会觉得这段经历非常的宝贵。
+**雷理骅**：其实在前面两年半时间，我的时间安排总体来说是这样：首先一大部分时间可能是用来学习专业课，一方面是我觉得很有意思，另一方面也确实在术业还是有压力，所以说还是要好好搞。由于一开始我是没有打算出国，也没有打算做学术，而是非常想进入业界，所以另外的时间我主要是在北大咨询学会做了一年半的咨询。在这过程中有在一个公司实习做过期货的 trading 、还做了小半年的 marketing 设计问卷，试图帮一个公司推销一个产品。由于对经济金融感兴趣，我还上了经济学双学位。但是在大三下的时候我突然意识到，其实这些跟商业、金融、经济这些工作可能跟我的性格不是那么的 match，虽然我很喜欢，但是可能我还会有些犹豫是否要把它们作为职业。但另一方面我在做这些事情的过程中接触到不同的统计，比如说我在做 trading 的时候接触到 time series，做 marketing 的时候要分析问卷结果，真正分析的时候需要想的很细，而当时我发现以我在本科课本上学到那些东西是远远不够的。所以从那时候开始，我就觉得我应该更深入的学习统计这个学科，去走到前沿去看统计到底真正在学术圈的人在学什么，然后我再决定是否我要回到业界去使用这些统计知识。所以从那个时候开始，我才临时准备出国准备读PHD，这大概其实是我的时间分配。所以我觉得从某个角度来说，它是走了弯路。但是回过头去看，我会觉得这段经历非常的宝贵。
 
 
-**统计之都**：最终为什么选择了统计的方向？选择了Berkeley并选择了Peter作为导师？
+**统计之都**：最终为什么选择了统计的方向？选择了 Berkeley 并选择了 Peter [^2]作为导师？
 
-**雷理骅**：这也是一个很有趣的故事，在我大四上学期的时候，申请季结束之前，Peter正好来北大和清华做了三天的讲座。那个时候我跟陈老师（陈松蹊老师）做的科研正好用到了Peter在六几年写的文章。当时看到Peter要来就很高兴，想找他聊一聊，于是那几天我就一直在跟着他。Peter人非常好，真的就是坐下来跟我、陈老师，还有涂云东老师，我们一起聊了差不多一个小时时间，他给了我们很多建议，非常感谢。后来我就给Peter写邮件说我很想申请可不可以，也把我跟吴岚老师一起做的科研的slides发给了他。没想到他在10月份左右的时候回复我了，他说我还记得你问我的问题，然后我看了你slides，觉得挺好的，欢迎申请伯克利。所以这也是一种非常奇妙的缘分吧。
+[^2]: [Peter J. Bickel](https://bickel.stat.berkeley.edu/)
 
+**雷理骅**：这也是一个很有趣的故事，在我大四上学期的时候，申请季结束之前，Peter 正好来北大和清华做了三天的讲座。那个时候我跟陈老师（陈松蹊老师）[^3]做的科研正好用到了 Peter 在六几年写的文章。当时看到 Peter 要来就很高兴，想找他聊一聊，于是那几天我就一直在跟着他。Peter 人非常好，真的就是坐下来跟我、陈老师，还有涂云东老师[^4]，我们一起聊了差不多一个小时时间，他给了我们很多建议，非常感谢。后来我就给 Peter 写邮件说我很想申请可不可以，也把我跟吴岚老师[^5]一起做的科研的 slides 发给了他。没想到他在 10 月份左右的时候回复我了，他说我还记得你问我的问题，然后我看了你 slides，觉得挺好的，欢迎申请 Berkeley。所以这也是一种非常奇妙的缘分吧。
 
+[^3]: [陈松蹊](https://www.math.pku.edu.cn/jsdw/js_20180628175159671361/c_20180628175159671361/118001.htm)
 
-**统计之都**： 能讲讲在北大，在Berkeley，在Stanford时有意思的经历吗？
+[^4]: [涂云东](https://www.gsm.pku.edu.cn/jsjjxq.jsp?urltype=tree.TreeTempUrl&wbtreeid=1141&user_id=yundong.tu)
 
-**雷理骅**：其实刚刚说的也一定程度上反映了有意思的事情。在北大期间，我觉得在research上面比较有意思的事情是我和吴岚老师做的本科科研。最初做的是和金融数学有关的方向，想做实物期权的研究，就是用期权定价的方式对公司定价。其实这个想法很简单，就是选择卖掉公司获得收益还是继续经营公司来获得未来的现金流并折现到现在，所以这个就跟期权本身很像，一个是未来价格一个行权价格，但现在对公司定价来说这两个变量都变成了可能取决于其他很多因素的变量。最初我们会读一些咨询方面的内容，但后来我想能不能用一些统计方法，可不可以用中国A股市场的数据来估计一下这个model，再看看能不能从中发现一些有趣的现象。于是我就想把它做成一个统计model，其中一块和公司经营有关，另一块和当前市场有关，然后我的outcome就相当于两个线性模型的最大值。这个方法和统计里的线性模型隔得不远，它们有本质差别，因为首先这个model就是非凸的，在计算上就有困难，此外也难以推广结论。不过也就是基于这个契机我也去接触了imporve process之类的东西，另外一方面我后来发现这个模型并不总是identifiable的，两个linear components之间有夹角的时候才能identify出来，这也让我意识到不是所有的model写下来就可以估计。在Berkeley的话我觉得和Will  Fithan的合作很有意思，我想我们之后聊到研究的时候会再聊到这段经历。
+[^5]: [吴岚](https://www.math.pku.edu.cn/jsdw/js_20180628175159671361/w_20180628175159671361/69977.htm)
+
+**统计之都**： 能讲讲在北大，在 Berkeley，在 Stanford 时有意思的经历吗？
+
+**雷理骅**：其实刚刚说的也一定程度上反映了有意思的事情。在北大期间，我觉得在research上面比较有意思的事情是我和吴岚老师做的本科科研。最初做的是和金融数学有关的方向，想做实物期权的研究，就是用期权定价的方式对公司定价。其实这个想法很简单，就是选择卖掉公司获得收益还是继续经营公司来获得未来的现金流并折现到现在，所以这个就跟期权本身很像，一个是未来价格一个行权价格，但现在对公司定价来说这两个变量都变成了可能取决于其他很多因素的变量。最初我们会读一些咨询方面的内容，但后来我想能不能用一些统计方法，可不可以用中国A股市场的数据来估计一下这个model，再看看能不能从中发现一些有趣的现象。于是我就想把它做成一个统计model，其中一块和公司经营有关，另一块和当前市场有关，然后我的outcome就相当于两个线性模型的最大值。这个方法和统计里的线性模型隔得不远，它们有本质差别，因为首先这个model就是非凸的，在计算上就有困难，此外也难以推广结论。不过也就是基于这个契机我也去接触了imporve process之类的东西，另外一方面我后来发现这个模型并不总是identifiable的，两个linear components之间有夹角的时候才能identify出来，这也让我意识到不是所有的model写下来就可以估计。【英文需要精听】
+
+在 Berkeley 的话我觉得和 Will Fithian [^6]的合作很有意思，我想我们之后聊到研究的时候会再聊到这段经历。
+
+[^6]: [Will Fithian](https://www.stat.berkeley.edu/~wfithian/)
 
 **统计之都**：除了学业外，生活也很重要，你的兴趣爱好是什么？
 
-**雷理骅**：其实我是一个比较宅的人，不过在加州也不会太宅，因为加州有很多很有活力的东西，比如说去徒步旅行或者去滑雪。再就是打桌游、看剧，因为加州中国留学生非常多，所以经常能叫到一大帮人开车去滑个雪，或者说夏天有一些活动，和大家一起去Barbecue、打桌游，这些都非常常见。我本人并没有特别多的爱好，所以基本上就和大家一起热闹。到后来尤其是疫情前，就主要靠看剧来消遣。
+**雷理骅**：其实我是一个比较宅的人，不过在加州也不会太宅，因为加州有很多很有活力的东西，比如说去徒步旅行或者去滑雪。再就是打桌游、看剧，因为加州中国留学生非常多，所以经常能叫到一大帮人开车去滑个雪，或者说夏天有一些活动，和大家一起去Barbecue、打桌游，这些都非常常见。我本人并没有特别多的爱好，所以基本上就和大家一起热闹。到后来，尤其是疫情前，就主要靠看剧来消遣。
 
 ## 2. Research
 
 **统计之都**： 能仔细介绍下你现在主要研究的几个方向吗？
 
 **雷理骅**：我其实从 PHD 开始接触到主要几个方向是这样，首先multiple testing算是一个主要研究领域之一，我主要的focus在False Discover Rate control。第二个方向是causal inference。第三个方向是network clustering，
-就是当你有个network的时候，怎么去做比较好的cluster，我的focus主要在【听不清】problem。在 PHD 时候还有一个方向是optimization。这个主要是跟Michael Jordon一起做的。然后到postdoc期间，我开始进入到一个比较新的方向，我都不知道该怎么翻译，叫conformal inference。这个目前可能还没有一个很好的翻译。这是个非常新的 topic。在我进入到这个领域的时候，它还只能算一个topic，但现在过了三年以后，已经算是一个领域了。目前这个领域有非常多的人，大家非常有创造性的在思考conformal inference这个框架能用到什么问题上去。我从 PHD 到 postdoc 过程中，我也有幸认识到【人名听不清】，然后做了一些 Econometrics 的工作。这大概是我现在目前研究的主要的几个方向。
+就是当你有个network的时候，怎么去做比较好的cluster，我的focus主要在【听不清】problem。在 PHD 时候还有一个方向是optimization。这个主要是跟 Michael Jordon[^7]一起做的。然后到postdoc期间，我开始进入到一个比较新的方向，我都不知道该怎么翻译，叫conformal inference。这个目前可能还没有一个很好的翻译。这是个非常新的 topic。在我进入到这个领域的时候，它还只能算一个topic，但现在过了三年以后，已经算是一个领域了。目前这个领域有非常多的人，大家非常有创造性的在思考conformal inference这个框架能用到什么问题上去。我从 PHD 到 postdoc 过程中，我也有幸认识到【人名听不清】，然后做了一些 Econometrics 的工作。这大概是我现在目前研究的主要的几个方向。
 
-
+[^7]: [Michael I. Jordan](https://people.eecs.berkeley.edu/~jordan/)
 
 **统计之都**： 现在很多学生本科时就有所谓的“本研”，在你回头看来，你觉得重要吗？你是如何看待的？
 
-**雷理骅**：我觉得非常重要。就我刚才说的几个例子，一个是跟吴兰老师的例子，他就让我意识到要怎么从一个实际的问题出发。本身这个问题它是一个很概率的问题。但是我逐渐地把它分类成一个统计的问题，这个统计问题就变成了一个新的问题，我就会去想怎么去估计？怎么去找一个好的算法，怎么去做simulation？怎么去推理性质？所有的这些过程就相当于让我独立地能从一个问题里面看到另外一个问题，然后把它转化成我自己的一个研究方向或者一个研究的topic。
+**雷理骅**：我觉得非常重要。就我刚才说的几个例子，一个是跟吴岚老师的例子，他就让我意识到要怎么从一个实际的问题出发。本身这个问题它是一个很概率的问题。但是我逐渐地把它分类成一个统计的问题，这个统计问题就变成了一个新的问题，我就会去想怎么去估计？怎么去找一个好的算法，怎么去做simulation？怎么去推理性质？所有的这些过程就相当于让我独立地能从一个问题里面看到另外一个问题，然后把它转化成我自己的一个研究方向或者一个研究的topic。
 
 **统计之都**：相当于有一个完整的training的process。
 
@@ -67,7 +79,7 @@ forum_id: 423404
 
 
 
-**统计之都**： 你在博士和博后阶段的工作有很多，你是如何寻找到这样有意思的题目的？解决这些问题你又遇到了哪些困难，或者说对你都很简单？例如与Will  Fithan的合作 on FDR control （代表作?）是否和选择Candes做博后有关？与丁鹏 (causal inference)，Michael Jordan (optimization)的合作又是如何开始的呢？
+**统计之都**： 你在博士和博后阶段的工作有很多，你是如何寻找到这样有意思的题目的？解决这些问题你又遇到了哪些困难，或者说对你都很简单？例如与Will Fithian的合作 on FDR control （代表作?）是否和选择Candes做博后有关？与丁鹏 (causal inference)，Michael Jordan (optimization)的合作又是如何开始的呢？
 
 **雷理骅**：我觉得首先统计一个特别好的地方在于能做的问题真的很多，相信大家应该都有这样的感觉。统计里面一个常见的说法是the statistics skills can play everyone's backyard or even frontyard【谚语00:35:40】。所以我们面临的问题很多，我们可以去做的问题也很多。我觉得很多时候其实是看机缘巧合。除了我开始跟Peter和【人名】做的 High Dimensional M Estimator，是我当时觉得这个很感兴趣，Peter鼓励我去做这个topic；PHD 期间基本上其他大部分topic都是我无意中找到的。但这个“无意”也不是说就真的无意。
 
@@ -75,32 +87,33 @@ forum_id: 423404
 
 **统计之都**：也是需要一些积累的。
 
-**雷理骅**：对。其实我当时一个trick就是我会去上大家的topic course。我觉得这是我们接触新的科研领域的一个很好的方法，因为一个AP来到这个学校以后，他会想招学生，很多系里其实都会支持新来的AP，开一个Topic Course，讲自己的research area。有了这个机会以后，其实你就能很快的接触到一些最前沿的东西，因为一个新的AP来了，很有可能他做的东西，还没有构成一个领域，他们可能还在初期，但是因为他们做的很出色，所以说他们就被招进来了。在他们讲的过程中，其实这个Topic Course更像是在跟学生在探讨，他们也在让自己的思维更加完善，通过交流的过程让自己有更完善的researching agenda。在这个过程中能学到很多，比如说我最先接触到multiple testing，是因为上Will Fithan的这个Topic Course，叫Selective Inference。其实一开始我对Selective Inference的理解非常狭隘，我一直以为Selective Inference就是说 Model Selection以后去做Inference。我也知道早期的一些工作需要用到很特殊的Parametrical的性质，比如说我们做LASSO的 Selective Inference就需要假设Everything is Gaussian。但上了这个课以后才发现，首先Selective Inference是一个很大的领域，比如False Discovery Control就是属于Selective Inference。其次Post Selection Inference甚至Adaptive Data Analysis用到很多Differential Privacy，其实也是隶属于Selective Inference。我在上课的过程中逐渐发现这是一个非常有趣的领域。当时Will Fithan讲这个课的时候也借用了一些Emmanuel 【人名】在当时上的300C，那时候也差不多是Emmanuel刚刚进入到这个领域不久，他在Stanford开了一门课叫300C，讲很多【部分外文没听清楚00:38:26】 For False Discovery Rate。所以当时我有机会接触到了这样一些Topic，当时我就觉得FDR是一个特别感兴趣的领域。于是我就利用到这个机会，在做最后Final Project的时候，我就花了很长的时间。当时我停掉我手里的Research。
+**雷理骅**：对。其实我当时一个trick就是我会去上大家的topic course。我觉得这是我们接触新的科研领域的一个很好的方法，因为一个AP来到这个学校以后，他会想招学生，很多系里其实都会支持新来的AP，开一个Topic Course，讲自己的research area。有了这个机会以后，其实你就能很快的接触到一些最前沿的东西，因为一个新的AP来了，很有可能他做的东西，还没有构成一个领域，他们可能还在初期，但是因为他们做的很出色，所以说他们就被招进来了。在他们讲的过程中，其实这个Topic Course更像是在跟学生在探讨，他们也在让自己的思维更加完善，通过交流的过程让自己有更完善的researching agenda。在这个过程中能学到很多，比如说我最先接触到multiple testing，是因为上Will Fithian的这个Topic Course，叫Selective Inference。其实一开始我对Selective Inference的理解非常狭隘，我一直以为Selective Inference就是说 Model Selection以后去做Inference。我也知道早期的一些工作需要用到很特殊的Parametrical的性质，比如说我们做LASSO的 Selective Inference就需要假设Everything is Gaussian。但上了这个课以后才发现，首先Selective Inference是一个很大的领域，比如False Discovery Control就是属于Selective Inference。其次Post Selection Inference甚至Adaptive Data Analysis用到很多Differential Privacy，其实也是隶属于Selective Inference。我在上课的过程中逐渐发现这是一个非常有趣的领域。当时Will Fithian讲这个课的时候也借用了一些Emmanuel在当时上的300C，那时候也差不多是Emmanuel刚刚进入到这个领域不久，他在Stanford开了一门课叫300C，讲很多【部分外文没听清楚00:38:26】 For False Discovery Rate。所以当时我有机会接触到了这样一些Topic，当时我就觉得FDR是一个特别感兴趣的领域。于是我就利用到这个机会，在做最后Final Project的时候，我就花了很长的时间。当时我停掉我手里的Research。
 
 **统计之都**：和Peter的research？
 
 **雷理骅**：对，或者说当时可能我停掉了其他一些我正在想的一些问题。当时那个阶段应该是第二年初期，那时候跟Peter也陷入到一些瓶颈，当时就想既然如此，我就好好的把时间花在Final Project上，我就想我能不能做一点东西。其实当时我就选了一个很小的切入点，当时我就读了Knockoff这篇paper。我就在想Knockoff当时是generate一个Copy of Knockoff，然后把Data转换成一个binary p-value。它的好处就是,如果说你是考虑一个Linear Model，你需要N大于等于2P，aspect ratio的要求很低，但是它会让p-value的Resolution不是很高，就会导致一个问题，这个问题比较Tricky，但简单来说它会有个threshold phenomenon，就意味着如果你想把FDR control 在 0.1 这个level，你要么是Reject十个以上，要么Reject Nothing，但是In Practice，很多时候我们大概Rejects五六个左右。那么这种情况下可能就没有办法给出一个很好的结果。
-所以那时候我就想做一个所谓的Multiple Knockoff，当然现在已经被人做出来了。当时我也做出来一些结果，但做出这个结果以后，我就给Will看，然后Will就觉得很有意思，于是我们从我做的结果那里，首先写了一篇文章。我们把Knockoff背后的一个叫【selective six step filter】generalize了一下。就首先我和Will就先写了一篇ICML paper。我们就只是谈一下这样一个generalization，就是说我们不再用filter用在Knockoff上，我们就用在传统的p-value setting上，看我们能得到什么。很快我们做了这个project以后，就意识到其实我们做的事情可以解决一个很重要的问题，叫data adaptive FDR control。这个motivation就在于，比如说在很多genetic data上，我们做multiple testing试图要control FDR，但是我们有很多sign/side 【梁杰昊：存疑】 Information。这sign Information可能来自于别的实验，或者来自prime【梁杰昊：prior？】 knowledge，我们怎么把这些prime knowledge纳入到我们FDR里面，使得它的power更高。我们在不断的聊天中，我记得那段时间跟Will Fithan可能是每周都聊一次，甚至聊两次，一聊可能就聊一个小时。在不断的这种iteration过程中，我原来当时Final Project里面一个想法，可以把它变成一个非常有力的tool。最后就我们写了adaptive这篇文章，想法非常简单，就是说我们有p-value。传统的方法就是直接用p-value做testing，但现在我们不是直接用p-value做testing，而是我们先隐掉一些Information。就是我们只给researcher看minimal p和1-p，以及其他所有的sign Information。非常神奇的是，你只要用这些信息去估计任何的model，哪怕这个model是错的，是misspecified，最后在一些标准的假设上仍然可以保证FDR control，这就是我和Will写的那篇JRSSB 【可能是AdaPT: An interactive procedure for multiple testing with side information】。所以我后来一直在follow FDR上面的工作。我觉得非常有趣，因为当时它让我意识到，原来这么一个事后看起来非常简单的trick，它可以有效的把统计的testing和machine learning结合在一起，并且它的理论性质非常的强，就在于它所有的control都是finite sample，没有任何asymtotic，它允许model是个任意的misspecification。但是如果你model是correctly specified，它会让你的power比较高。而这个工作本身其实也奠定了我后面所有工作的一个philosophy，就是无论是哪个方向，我都比较喜欢model free，distribution free，以及finite sample guarantee。我并不是觉得一定要有finite sample guarantee，而是觉得finite sample guarantee的这些方法，一般来说，有个特点，就是它一定会简单。因为说实话，很难想象一个非常复杂的方法，最后能给你发现finite sample guarantee，而且很多时候，背后的数学也会很简单。这个“简单”并不是在于它很容易想，它有时候可能很难想，但是proof上都不会很长。所以这个工作本身奠定我后面很多工作的这样一个philosophy，就是会让我非常active地去想，什么样的问题可以做finite sample， 可以做这种model misspecification。
+所以那时候我就想做一个所谓的Multiple Knockoff，当然现在已经被人做出来了。当时我也做出来一些结果，但做出这个结果以后，我就给Will看，然后Will就觉得很有意思，于是我们从我做的结果那里，首先写了一篇文章。我们把Knockoff背后的一个叫【selective six step filter】generalize了一下。就首先我和Will就先写了一篇ICML paper。我们就只是谈一下这样一个generalization，就是说我们不再用filter用在Knockoff上，我们就用在传统的p-value setting上，看我们能得到什么。很快我们做了这个project以后，就意识到其实我们做的事情可以解决一个很重要的问题，叫data adaptive FDR control。这个motivation就在于，比如说在很多genetic data上，我们做multiple testing试图要control FDR，但是我们有很多sign/side 【梁杰昊：存疑】 Information。这sign Information可能来自于别的实验，或者来自prime【梁杰昊：prior？】 knowledge，我们怎么把这些prime knowledge纳入到我们FDR里面，使得它的power更高。我们在不断的聊天中，我记得那段时间跟Will Fithan可能是每周都聊一次，甚至聊两次，一聊可能就聊一个小时。在不断的这种iteration过程中，我原来当时Final Project里面一个想法，可以把它变成一个非常有力的tool。最后就我们写了adaptive这篇文章，想法非常简单，就是说我们有p-value。传统的方法就是直接用p-value做testing，但现在我们不是直接用p-value做testing，而是我们先隐掉一些Information。就是我们只给researcher看minimal p和1-p，以及其他所有的sign Information。非常神奇的是，你只要用这些信息去估计任何的model，哪怕这个model是错的，是misspecified，最后在一些标准的假设上仍然可以保证FDR control，这就是我和Will写的那篇JRSSB[^8]。所以我后来一直在follow FDR上面的工作。我觉得非常有趣，因为当时它让我意识到，原来这么一个事后看起来非常简单的trick，它可以有效的把统计的testing和machine learning结合在一起，并且它的理论性质非常的强，就在于它所有的control都是finite sample，没有任何asymtotic，它允许model是个任意的misspecification。但是如果你model是correctly specified，它会让你的power比较高。而这个工作本身其实也奠定了我后面所有工作的一个philosophy，就是无论是哪个方向，我都比较喜欢model free，distribution free，以及finite sample guarantee。我并不是觉得一定要有finite sample guarantee，而是觉得finite sample guarantee的这些方法，一般来说，有个特点，就是它一定会简单。因为说实话，很难想象一个非常复杂的方法，最后能给你发现finite sample guarantee，而且很多时候，背后的数学也会很简单。这个“简单”并不是在于它很容易想，它有时候可能很难想，但是proof上都不会很长。所以这个工作本身奠定我后面很多工作的这样一个philosophy，就是会让我非常active地去想，什么样的问题可以做finite sample， 可以做这种model misspecification。
 
+> JRSSB: Journal of the Royal Statistical Society: Series B (Statistical Methodology)
 
-**统计之都**：对。所以这个是不是和后来去【人名】那去做postdoc有关系？
+[^8]: [AdaPT: an interactive procedure for multiple testing with side information](https://rss.onlinelibrary.wiley.com/doi/10.1111/rssb.12274)
+
+**统计之都**：对。所以这个是不是和后来去 Emmanuel 那去做postdoc有关系？
 
 **雷理骅**：对，没错，其实关系非常的大，就在于我进入到这个领域以后，我就会去开这个领域的会。其中有一个会叫WHOA-PSI，这个会一直在Saint Louis（圣路易斯）开。
 
-注：Workshop on Higher-Order Asymptotics and Post-Selection Inference
+> WHOA-PSI: Workshop on Higher-Order Asymptotics and Post-Selection Inference
 
 
 **统计之都**： 在Missouri（密苏里州）？
 
-角色2：对。这个会开了很多年，但是现在很可惜，因为疫情停了，不过我们有一些延续，这个可以之后再说。
+**雷理骅**：对。这个会开了很多年，但是现在很可惜，因为疫情停了，不过我们有一些延续，这个可以之后再说。
 
-**雷理骅**：好的。
-
-**雷理骅**：这个会，它聚集了很多做selective inference和high order inference的人，其实是两个community，稍等，我查一下这个会的组织者，我觉得一定要宣传一下这个。
+这个会，它聚集了很多做selective inference和high order inference的人，其实是两个community，稍等，我查一下这个会的组织者，我觉得一定要宣传一下这个。
 
 **统计之都**：好的。
 
-角色2：Todd Kuffner从第一届开始就一直在组织，接下来的每一年他都在，至少是一个主要的组织者。这是2016年开始的。这个会对我其实帮助非常大。首先这个会是一个小规模的，相当于把这个领域里面所有人都请过来了，以及一些可能跟这个领域相关的人请过来了，所以在里面你可以直接见到所有这个领域里的人，大家做的topic也相对来说比较接近。在这个过程中，我也认识到了很多人，其中包括【人名】。我当时跟他做postdoc，其实我一开始决定做postdoc的时候，我觉得想跟谁，我觉得Emmanuel是我最想跟的人。当然，那时候我也不确定Emmanuel会不会带postdoc，也不确定他会不会对我的research感兴趣。但有幸的是因为Emmanuel也会去参加这个会，而在这会上will present for the adapt，我也present过poster，我也present过，后来我做了一下FDR的工作，这样Emmanuel也非常感兴趣。Emmanuel就对我们的工作评价很高，所以当时我在提出我想跟他做postdoc的时候，他直接欣然的答应了。
+**雷理骅**：Todd Kuffner从第一届开始就一直在组织，接下来的每一年他都在，至少是一个主要的组织者。这是2016年开始的。这个会对我其实帮助非常大。首先这个会是一个小规模的，相当于把这个领域里面所有人都请过来了，以及一些可能跟这个领域相关的人请过来了，所以在里面你可以直接见到所有这个领域里的人，大家做的topic也相对来说比较接近。在这个过程中，我也认识到了很多人，其中包括【人名】。我当时跟他做postdoc，其实我一开始决定做postdoc的时候，我觉得想跟谁，我觉得Emmanuel是我最想跟的人。当然，那时候我也不确定Emmanuel会不会带postdoc，也不确定他会不会对我的research感兴趣。但有幸的是因为Emmanuel也会去参加这个会，而在这会上will present for the adapt，我也present过poster，我也present过，后来我做了一下FDR的工作，这样Emmanuel也非常感兴趣。Emmanuel就对我们的工作评价很高，所以当时我在提出我想跟他做postdoc的时候，他直接欣然的答应了。
 
 **统计之都**：Happy ending。
 
@@ -112,11 +125,15 @@ forum_id: 423404
 
 **统计之都**：两个独立的故事。
 
-角色2：跟Michael Jordan的合作其实也是来自于一个巧合，一开始我在选了Peter作为main adviser以后，一般来说，在Berkeley很流行，再有一个co-adviser。一开始我还没有一个很明确的想法，但那时候我上了 Michael Jordan的Theoretical statistics。这门课是我们的core course【存疑】，Michael讲得非常的好，在那个课最后期末我考得还比较好，所以Michael主动联系了我，问要不要聊一聊。后来我跟Michael聊了以后，他就要求我去他的组会。然后我发现Michael的组会非常的有意思，它跟传统的组会不太一样的，就在于他有很多的学生。之后你就会想，如果说大家都present自己的工作。
+**雷理骅**：跟Michael Jordan的合作其实也是来自于一个巧合，一开始我在选了Peter作为main adviser以后，一般来说，在Berkeley很流行，再有一个co-adviser。一开始我还没有一个很明确的想法，但那时候我上了 Michael Jordan的Theoretical statistics。这门课是我们的core course【存疑】，Michael讲得非常的好，在那个课最后期末我考得还比较好，所以Michael主动联系了我，问要不要聊一聊。后来我跟Michael聊了以后，他就要求我去他的组会。然后我发现Michael的组会非常的有意思，它跟传统的组会不太一样的，就在于他有很多的学生。之后你就会想，如果说大家都present自己的工作。
 
 **统计之都**：就乱了。
 
-**雷理骅**：但是Michael选择一种非常不常见的方式，就在于他会让大家一起来读书，而读的内容很有可能是组里没有任何人在做的内容。比如说我第一个学期去的时候，他竟然在读most harmless economics，是economics里面非常经典的教材，第二个学期就要读Bradley Efron的Large-Scale Inference，就是FDR。所以我说这是也有一些机缘巧合，我那时候感兴趣FDR，然后正好上了Will的课，他们招了Will过来，然后Michael组里又在读。那个时候我在跟Michael brainstorm我想做什么，一开始Michael给我的题目是做Bag of Little Bootstrap。
+**雷理骅**：但是Michael选择一种非常不常见的方式，就在于他会让大家一起来读书，而读的内容很有可能是组里没有任何人在做的内容。比如说我第一个学期去的时候，他竟然在读Mostly Harmless Econometrics[^9]，是economics里面非常经典的教材，第二个学期就要读Bradley Efron的Large-Scale Inference[^10]，就是FDR。所以我说这是也有一些机缘巧合，我那时候感兴趣FDR，然后正好上了Will的课，他们招了Will过来，然后Michael组里又在读。那个时候我在跟Michael brainstorm我想做什么，一开始Michael给我的题目是做Bag of Little Bootstrap。
+
+[^9]: [Mostly Harmless Econometrics: An Empiricist's Companion](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics)
+
+[^10]:[Large-Scale Inference](https://www.cambridge.org/core/books/largescale-inference/A0B183B0080A92966497F12CE5D12589)
 
 **统计之都**：Little Bootstrap？
 
@@ -232,19 +249,17 @@ forum_id: 423404
 
 
 
-**统计之都**： 如何选择研究课题，又如何开始进行这个课题？(How do you get into that topic and how you move from there？)选择更具挑战性的/开创性的研究问题？我想很多Phd或者即将开始Phd生涯的学生都想听听你的答案。
+**统计之都**： 如何选择研究课题，又如何开始进行这个课题？(How do you get into that topic and how you move from there？)选择更具挑战性的/开创性的研究问题？我想很多PHD或者即将开始PHD生涯的学生都想听听你的答案。
 
 **统计之都**：其实我们前面已经或多或少聊过一些了，如何选择研究课题，以及如何开始这个题目。其实也能看到有很多课题其实是开始于偶然的，或者是上topic course，或者是上这种reading group，或者是参加其他老师的group meeting。在选择这些topic的时候，你是会更喜欢选择一些有开创性的挑战性的题目呢，还是会选择一些可能看起来挑战性不高，但是也会有一定意义的，肯定能做出来的题目呢？
 
 **雷理骅**：这是个好问题。在大部分选题的时候，其实我会选择一个相对比较简单的切入点。至少让我进入到这个领域，了解这个领域的问题和它的难点。但接下来，整体上我会比较倾向于一些比较有挑战性的问题，但至于它能不能做出来，其实不好说。因为当你知道的时候，它就一定可以做出来。所以我觉得整体来说，我会去尝试那些有挑战的问题。但是我用来对冲风险的方式，就是我不在一棵树上吊死，我可能同时在想两个或者三个topic。这可能也跟我研究的风格有一些关系。就像我刚才说的，因为我比较喜欢这种finite sample(需要再听一下具体的词，00:07:40)或者distribution free。就在于它往往难在想到那个idea，但是idea到了以后，其实无论是证明，还是coding，还是application都没有那么地难。所以我就会给自己同时两到三个projects在想。如果说真的有一块就很长时间想不出来，我就把它舍了，我就不再继续(摸索/磨损？，听不清 00:08:10)。但是我会在一个地方记下来，记下来我现在所处的点，以及我接下来想解决，但未能解决的点，也许以后还能revisit。但是我会觉得，这时候你放弃它也没关系，因为你与此同时还有一到两个别的，所以就这个过程，我觉得如果把整个节奏调整好了以后，就会还比较开心。任何时候你肯定会有比较沮丧的时候，因为怎么都想不出来。但是你到另外一个层面，也许用有一些新的想法。
 
-统计之都：对，是的，I see。我也是非常personally，我非常喜欢你这种研究方式。因为其实这个也和我博后老板，雷靖(音译)老师的研究方式是非常相似的，就是Distributor free final example，model free。而且idea非常巧妙，但是其实证明并不那么难。
+**统计之都**：对，是的，I see。我也是非常personally，我非常喜欢你这种研究方式。因为其实这个也和我博后老板，雷径老师[^11]的研究方式是非常相似的，就是Distributor free final example，model free。而且idea非常巧妙，但是其实证明并不那么难。
 
+[^11]: [Jing Lei](https://www.stat.cmu.edu/~jinglei/index.shtml)
 
-
-**统计之都**： 任何一个研究领域都有其开始，发展，成熟，衰落的过程。你是如何应对你的研究领域的变化的？
-
-统计之都：下一个问题是关于研究领域的。其实任何一个研究领域都会有其开始发展成熟，又慢慢地，大家就开始写书了，都有这样一个process。你又是如何应对你的研究领域的的这些变化呢？
+**统计之都**：任何一个研究领域都有其开始，发展，成熟，衰落的过程。你是如何应对你的研究领域的变化的？
 
 **雷理骅**：这是很好的问题。我觉得现在是一个统计非常火的时期，所以任何一个领域都会发展得非常快。像causal inference，在几年前我们刚开学的时候，那时候人还很少。现在可以说是，大家都会在或多或少做一些causal inference。我应对这个的方式是，一开始在这个领域发展的时候，我会试图去多跟这个领域来沟通，去读最新的paper。因为那时候还能follow得上，因为paper不多，所以我就会尽量地去选一些比较有开创性的paper去读，看那边还有什么遗留的问题，以及大方向上我们还有什么急需解决的问题。所以当时我做FDR，一个大方向上是说，在应用里面，在很多genetics data里面，我们有大量的side information。但是已有的FDR方法并不能有效地用到这些side information。
 
