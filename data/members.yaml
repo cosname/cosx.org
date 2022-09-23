@@ -63,6 +63,9 @@ list:
   - name: 郭旭
     image: https://user-images.githubusercontent.com/26518047/129151825-20b4f095-19d3-431d-8491-7b4c3185f480.jpg
     intro: 郭旭博士，现为北京师范大学统计学院副教授，博士生导师。研究方向为大范围推断、高维数据分析、模型设定检验、半参数分析和因果推断等，并取得了一系列的研究成果。在包括统计学顶级期刊JRSSB，JASA和 Biometrika在内SCI和SSCI期刊发表论文30多篇。曾荣获北师大第十一届“最受本科生欢迎的十佳教师”。
+  - name: 郝鸿涛
+    image: https://avatars.githubusercontent.com/u/62803332
+    intro: 河北师范大学 (英语，本科) --> 人大 (国际新闻传播，硕士) --> 印第安纳大学 (媒体，硕士) --> 威斯康星麦迪逊 (计算机，博士在读)。喜欢读书、写教程、写博客。个人主页：<https://hongtaoh.com>。
   - name: 何通
     image: https://avatars2.githubusercontent.com/u/1289856
     intro: 何通，中山大学统计系本科，Simon Fraser University数据挖掘研究生，R包xgboost作者。现任AWS Applied Scientist，为深度学习框架MXNet添砖加瓦。
