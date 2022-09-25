@@ -16,6 +16,7 @@ tags:
   - tidytuesday
   - 数据可视化
   - 空间分析
+thumbnail: index_files/figure-html/cenc-beeswarm-1.png
 bibliography: refer.bib
 description: "本文基于美国地震局和中国地震台网发布的地震活动数据，借助丰富的统计图形从对比、趋势、分布、关系、时间和空间等方面探索分析地震活动的规律。"
 ---

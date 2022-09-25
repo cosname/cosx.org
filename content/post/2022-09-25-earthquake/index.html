@@ -16,6 +16,7 @@ tags:
   - tidytuesday
   - 数据可视化
   - 空间分析
+thumbnail: index_files/figure-html/cenc-beeswarm-1.png
 bibliography: refer.bib
 description: "本文基于美国地震局和中国地震台网发布的地震活动数据，借助丰富的统计图形从对比、趋势、分布、关系、时间和空间等方面探索分析地震活动的规律。"
 ---
@@ -305,33 +306,33 @@ ggplot() +
 <div id="earthquake-ceic" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> 数据准备</h2>
 <p>相比于美国，我更关心中国境内的地震情况，所以，从中国地震台网 <a href="http://www.ceic.ac.cn" class="uri">http://www.ceic.ac.cn</a> 下载 2012-01-01 至 2022-08-12 的地震数据。由于得到的是一个<strong>奇葩</strong>的 <a href="data/quakes_20220812.xls">XLS 数据文件</a>，竟不能用 <strong>readxl</strong> 包读取，甚至用 Excel 软件打开时，弹出文件格式和扩展名不匹配的警告，还说文件可能已损坏或不安全。因此，接下来准备不把它看作是 XLS 文件，而是一个 XML 格式的文件。实际上，XLS 或 XLSX 文件可以看作某种特殊的 XML 格式，下面就用 Base R 内置的函数 <code>read.delim()</code> 读取数据。</p>
-<!--
-再一次看见 Base R 的厉害，当 tidyverse 搞不定的时候，就用 Base R 吧，没有什么是 Base R 搞不定的，有的话，多半是使用姿势不对。
+<!-- 
+再一次看见 Base R 的厉害，当 tidyverse 搞不定的时候，就用 Base R 吧，没有什么是 Base R 搞不定的，有的话，多半是使用姿势不对。 
 -->
 <pre class="r"><code>x &lt;- read.delim(file = &quot;data/quakes_20220812.xls&quot;, header = FALSE)</code></pre>
 <p>读进来一个超长的字符串向量，先来看看将 xls 文件被当作文本文件读进来的内容，前几行声明文档是 XML 格式的，字符串超级长，没有数据信息，下面从第 4 个开始。</p>
 <pre class="r"><code>x[4:25, ]</code></pre>
-<pre><code>##  [1] &quot;&lt;Table&gt;&quot;
-##  [2] &quot;&lt;Column ss:Index=1 ss:AutoFitWidth=0 ss:Width=110/&gt;&quot;
-##  [3] &quot;&lt;Row&gt;&quot;
-##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;发震时刻&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [5] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;震级(M)&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;深度(千米)&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;参考位置&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [10] &quot;&lt;/Row&gt;&quot;
-## [11] &quot;&lt;Row&gt;&quot;
+<pre><code>##  [1] &quot;&lt;Table&gt;&quot;                                                     
+##  [2] &quot;&lt;Column ss:Index=1 ss:AutoFitWidth=0 ss:Width=110/&gt;&quot;         
+##  [3] &quot;&lt;Row&gt;&quot;                                                       
+##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;发震时刻&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+##  [5] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;震级(M)&lt;/Data&gt;&lt;/Cell&gt;&quot;            
+##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;深度(千米)&lt;/Data&gt;&lt;/Cell&gt;&quot;         
+##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;参考位置&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+## [10] &quot;&lt;/Row&gt;&quot;                                                      
+## [11] &quot;&lt;Row&gt;&quot;                                                       
 ## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 23:58:52&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.0&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;27.23&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;103.75&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;15&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;云南昭通市昭阳区&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [18] &quot;&lt;/Row&gt;&quot;
-## [19] &quot;&lt;Row&gt;&quot;
+## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.0&lt;/Data&gt;&lt;/Cell&gt;&quot;                
+## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;27.23&lt;/Data&gt;&lt;/Cell&gt;&quot;              
+## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;103.75&lt;/Data&gt;&lt;/Cell&gt;&quot;             
+## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;15&lt;/Data&gt;&lt;/Cell&gt;&quot;                 
+## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;云南昭通市昭阳区&lt;/Data&gt;&lt;/Cell&gt;&quot;   
+## [18] &quot;&lt;/Row&gt;&quot;                                                      
+## [19] &quot;&lt;Row&gt;&quot;                                                       
 ## [20] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 15:47:07&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [21] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;2.5&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [21] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;2.5&lt;/Data&gt;&lt;/Cell&gt;&quot;                
 ## [22] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;36.36&lt;/Data&gt;&lt;/Cell&gt;&quot;</code></pre>
 <p>数据都藏在 Excel 文件的格子 Cell 里，不同列的数据类型可能不一样，甚至同一列还出现不同类型的数据，比如将数值当作文本。为了把它们提取出来，将所有字段当作字符串。先准备一个字符串提取函数，从给定的一个字符串向量中，按照匹配模式提取一部分。</p>
 <pre class="r"><code>str_extract &lt;- function(text, pattern, ...) regmatches(text, gregexpr(pattern, text, ...))</code></pre>
@@ -339,35 +340,35 @@ ggplot() +
 <pre class="r"><code>x_str &lt;- str_extract(text = x$V1, pattern = &quot;&lt;Cell&gt;&lt;Data ss:Type=(String|Number)&gt;(.*?)&lt;/Data&gt;&lt;/Cell&gt;&quot;)
 x_str &lt;- unlist(x_str)
 head(x_str, 20)</code></pre>
-<pre><code>##  [1] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;发震时刻&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [2] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;震级(M)&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [3] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [5] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;深度(千米)&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;参考位置&lt;/Data&gt;&lt;/Cell&gt;&quot;
+<pre><code>##  [1] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;发震时刻&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+##  [2] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;震级(M)&lt;/Data&gt;&lt;/Cell&gt;&quot;            
+##  [3] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+##  [5] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;深度(千米)&lt;/Data&gt;&lt;/Cell&gt;&quot;         
+##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;参考位置&lt;/Data&gt;&lt;/Cell&gt;&quot;           
 ##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 23:58:52&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.0&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;27.23&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [10] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;103.75&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [11] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;15&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;云南昭通市昭阳区&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.0&lt;/Data&gt;&lt;/Cell&gt;&quot;                
+##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;27.23&lt;/Data&gt;&lt;/Cell&gt;&quot;              
+## [10] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;103.75&lt;/Data&gt;&lt;/Cell&gt;&quot;             
+## [11] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;15&lt;/Data&gt;&lt;/Cell&gt;&quot;                 
+## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;云南昭通市昭阳区&lt;/Data&gt;&lt;/Cell&gt;&quot;   
 ## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 15:47:07&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;2.5&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;36.36&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;114.37&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;11&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [18] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;河北邯郸市磁县&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;2.5&lt;/Data&gt;&lt;/Cell&gt;&quot;                
+## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;36.36&lt;/Data&gt;&lt;/Cell&gt;&quot;              
+## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;114.37&lt;/Data&gt;&lt;/Cell&gt;&quot;             
+## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;11&lt;/Data&gt;&lt;/Cell&gt;&quot;                 
+## [18] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;河北邯郸市磁县&lt;/Data&gt;&lt;/Cell&gt;&quot;     
 ## [19] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 11:59:45&lt;/Data&gt;&lt;/Cell&gt;&quot;
 ## [20] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.9&lt;/Data&gt;&lt;/Cell&gt;&quot;</code></pre>
 <p>去掉多余的字符，比如成对的 <code>&lt;Cell&gt;&lt;/Cell&gt;</code>，留下想要的数据字段。</p>
 <pre class="r"><code>x_str_tidy &lt;- gsub(x = x_str, pattern = &quot;&lt;Cell&gt;&lt;Data ss:Type=(String|Number)&gt;(.*?)&lt;/Data&gt;&lt;/Cell&gt;&quot;, replacement = &quot;\\2&quot;)
 head(x_str_tidy, 20)</code></pre>
-<pre><code>##  [1] &quot;发震时刻&quot;            &quot;震级(M)&quot;             &quot;纬度(°)&quot;
-##  [4] &quot;经度(°)&quot;            &quot;深度(千米)&quot;          &quot;参考位置&quot;
-##  [7] &quot;2022-08-11 23:58:52&quot; &quot;3.0&quot;                 &quot;27.23&quot;
-## [10] &quot;103.75&quot;              &quot;15&quot;                  &quot;云南昭通市昭阳区&quot;
-## [13] &quot;2022-08-11 15:47:07&quot; &quot;2.5&quot;                 &quot;36.36&quot;
-## [16] &quot;114.37&quot;              &quot;11&quot;                  &quot;河北邯郸市磁县&quot;
+<pre><code>##  [1] &quot;发震时刻&quot;            &quot;震级(M)&quot;             &quot;纬度(°)&quot;           
+##  [4] &quot;经度(°)&quot;            &quot;深度(千米)&quot;          &quot;参考位置&quot;           
+##  [7] &quot;2022-08-11 23:58:52&quot; &quot;3.0&quot;                 &quot;27.23&quot;              
+## [10] &quot;103.75&quot;              &quot;15&quot;                  &quot;云南昭通市昭阳区&quot;   
+## [13] &quot;2022-08-11 15:47:07&quot; &quot;2.5&quot;                 &quot;36.36&quot;              
+## [16] &quot;114.37&quot;              &quot;11&quot;                  &quot;河北邯郸市磁县&quot;     
 ## [19] &quot;2022-08-11 11:59:45&quot; &quot;3.9&quot;</code></pre>
 <p>可以说，这种办法简直是把 xls 文件给砸碎了，万幸地是数据文件还可以被当作 XML 文件读取，因此只要 xls 文件坏得还不彻底，这办法总是可以用的。</p>
 <p>那么接下来就要拼起来，拼成一个 matrix，每一行记录包含 6 个字段。字符串向量 x_str_tidy 开头 6 个元素是表头，余下的 <code>x_str_tidy[-c(1:6)]</code> 是观测值，长度为 62646，分成 6 列，一共 10441 行。</p>
@@ -377,18 +378,18 @@ head(x_str_tidy, 20)</code></pre>
 )
 head(dat)</code></pre>
 <pre><code>##   发震时刻              震级(M) 纬度(°) 经度(°) 深度(千米)
-## 1 &quot;2022-08-11 23:58:52&quot; &quot;3.0&quot;   &quot;27.23&quot;  &quot;103.75&quot; &quot;15&quot;
-## 2 &quot;2022-08-11 15:47:07&quot; &quot;2.5&quot;   &quot;36.36&quot;  &quot;114.37&quot; &quot;11&quot;
-## 3 &quot;2022-08-11 11:59:45&quot; &quot;3.9&quot;   &quot;40.15&quot;  &quot;77.74&quot;  &quot;14&quot;
-## 4 &quot;2022-08-11 09:14:13&quot; &quot;3.7&quot;   &quot;40.88&quot;  &quot;78.12&quot;  &quot;10&quot;
-## 5 &quot;2022-08-11 01:48:16&quot; &quot;3.1&quot;   &quot;32.85&quot;  &quot;83.44&quot;  &quot;10&quot;
-## 6 &quot;2022-08-10 22:41:55&quot; &quot;3.1&quot;   &quot;36.04&quot;  &quot;78.26&quot;  &quot;100&quot;
-##   参考位置
-## 1 &quot;云南昭通市昭阳区&quot;
-## 2 &quot;河北邯郸市磁县&quot;
+## 1 &quot;2022-08-11 23:58:52&quot; &quot;3.0&quot;   &quot;27.23&quot;  &quot;103.75&quot; &quot;15&quot;      
+## 2 &quot;2022-08-11 15:47:07&quot; &quot;2.5&quot;   &quot;36.36&quot;  &quot;114.37&quot; &quot;11&quot;      
+## 3 &quot;2022-08-11 11:59:45&quot; &quot;3.9&quot;   &quot;40.15&quot;  &quot;77.74&quot;  &quot;14&quot;      
+## 4 &quot;2022-08-11 09:14:13&quot; &quot;3.7&quot;   &quot;40.88&quot;  &quot;78.12&quot;  &quot;10&quot;      
+## 5 &quot;2022-08-11 01:48:16&quot; &quot;3.1&quot;   &quot;32.85&quot;  &quot;83.44&quot;  &quot;10&quot;      
+## 6 &quot;2022-08-10 22:41:55&quot; &quot;3.1&quot;   &quot;36.04&quot;  &quot;78.26&quot;  &quot;100&quot;     
+##   参考位置                
+## 1 &quot;云南昭通市昭阳区&quot;      
+## 2 &quot;河北邯郸市磁县&quot;        
 ## 3 &quot;新疆克孜勒苏州阿图什市&quot;
 ## 4 &quot;新疆克孜勒苏州阿合奇县&quot;
-## 5 &quot;西藏阿里地区改则县&quot;
+## 5 &quot;西藏阿里地区改则县&quot;    
 ## 6 &quot;新疆和田地区皮山县&quot;</code></pre>
 <p>毕竟，不同列的数据类型不一样，需要单独处理，而 matrix 要求各列类型一致，为方便后续数据操作，将数据集转为 data.frame 类型。</p>
 <pre class="r"><code>dat &lt;- as.data.frame(dat, check.names = FALSE, stringsAsFactors = FALSE)</code></pre>
@@ -867,16 +868,16 @@ sub_dat_sf</code></pre>
 <pre><code>## R version 4.2.1 (2022-06-23)
 ## Platform: x86_64-apple-darwin17.0 (64-bit)
 ## Running under: macOS Big Sur ... 10.16
-##
+## 
 ## Locale: zh_CN.UTF-8 / zh_CN.UTF-8 / zh_CN.UTF-8 / C / zh_CN.UTF-8 / zh_CN.UTF-8
-##
+## 
 ## Package version:
-##   blogdown_1.13      ggbeeswarm_0.6.0   ggplot2_3.3.6.9000 ggridges_0.5.3
-##   knitr_1.40         MSG_0.8            rmarkdown_2.16     sf_1.0-8
-##   showtext_0.9-5
-##
+##   blogdown_1.13      ggbeeswarm_0.6.0   ggplot2_3.3.6.9000 ggridges_0.5.3    
+##   knitr_1.40         MSG_0.8            rmarkdown_2.16     sf_1.0-8          
+##   showtext_0.9-5    
+## 
 ## Pandoc version: 2.19.2
-##
+## 
 ## Hugo version: 0.101.0</code></pre>
 </div>
 <div id="refer" class="section level1" number="6">
