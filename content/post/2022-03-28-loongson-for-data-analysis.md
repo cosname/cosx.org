@@ -3,7 +3,7 @@ title: "龙芯可以做数据分析吗？"
 author: "邱怡轩"
 date: "2022-03-28"
 categories:
-  - R 语言
+  - R语言
   - 统计计算
   - 统计软件
 tags:
