@@ -1,0 +1,904 @@
+---
+title: 地震越来越频繁了吗？
+author: 黄湘云
+date: '2022-09-25'
+slug: earthquake
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+link-citations: true
+forum_id: 423461
+categories:
+  - 统计图形
+tags:
+  - ggplot2
+  - tidytuesday
+  - 数据可视化
+  - 空间分析
+bibliography: refer.bib
+description: "本文基于美国地震局和中国地震台网发布的地震活动数据，借助丰富的统计图形从对比、趋势、分布、关系、时间和空间等方面探索分析地震活动的规律。"
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#background" id="toc-background"><span class="toc-section-number">1</span> 本文写作背景</a></li>
+<li><a href="#earthquakes-background" id="toc-earthquakes-background"><span class="toc-section-number">2</span> 地震背景信息</a></li>
+<li><a href="#earthquakes-world" id="toc-earthquakes-world"><span class="toc-section-number">3</span> 1973-2010 年全球地震变化</a>
+<ul>
+<li><a href="#quake6" id="toc-quake6"><span class="toc-section-number">3.1</span> 数据准备</a></li>
+<li><a href="#quake6-year" id="toc-quake6-year"><span class="toc-section-number">3.2</span> 震次趋势（年度）</a></li>
+<li><a href="#quake6-hist" id="toc-quake6-hist"><span class="toc-section-number">3.3</span> 震级分布（总体情况）</a></li>
+<li><a href="#quake6-explore" id="toc-quake6-explore"><span class="toc-section-number">3.4</span> 震级分布（按年分组）</a>
+<ul>
+<li><a href="#quake6-beeswarm" id="toc-quake6-beeswarm"><span class="toc-section-number">3.4.1</span> 抖动图</a></li>
+<li><a href="#quake6-ridges" id="toc-quake6-ridges"><span class="toc-section-number">3.4.2</span> 岭线图</a></li>
+<li><a href="#quake6-boxplot" id="toc-quake6-boxplot"><span class="toc-section-number">3.4.3</span> 葙线图</a></li>
+<li><a href="#提琴图" id="toc-提琴图"><span class="toc-section-number">3.4.4</span> 提琴图</a></li>
+</ul></li>
+<li><a href="#quake6-scatter" id="toc-quake6-scatter"><span class="toc-section-number">3.5</span> 震级分布（空间）</a></li>
+</ul></li>
+<li><a href="#earthquake-china" id="toc-earthquake-china"><span class="toc-section-number">4</span> 2012-2022 年中国地震变化</a>
+<ul>
+<li><a href="#earthquake-ceic" id="toc-earthquake-ceic"><span class="toc-section-number">4.1</span> 数据准备</a></li>
+<li><a href="#数据操作" id="toc-数据操作"><span class="toc-section-number">4.2</span> 数据操作</a></li>
+<li><a href="#数据探索" id="toc-数据探索"><span class="toc-section-number">4.3</span> 数据探索</a>
+<ul>
+<li><a href="#震次分布棋盘图" id="toc-震次分布棋盘图"><span class="toc-section-number">4.3.1</span> 震次分布（棋盘图）</a></li>
+<li><a href="#震级分布直方图" id="toc-震级分布直方图"><span class="toc-section-number">4.3.2</span> 震级分布（直方图）</a></li>
+<li><a href="#震级分布抖动图" id="toc-震级分布抖动图"><span class="toc-section-number">4.3.3</span> 震级分布（抖动图）</a></li>
+<li><a href="#震级分布岭线图" id="toc-震级分布岭线图"><span class="toc-section-number">4.3.4</span> 震级分布（岭线图）</a></li>
+</ul></li>
+<li><a href="#数据分析" id="toc-数据分析"><span class="toc-section-number">4.4</span> 数据分析</a>
+<ul>
+<li><a href="#震级的空间分布" id="toc-震级的空间分布"><span class="toc-section-number">4.4.1</span> 震级的空间分布</a></li>
+<li><a href="#震次的时段分布" id="toc-震次的时段分布"><span class="toc-section-number">4.4.2</span> 震次的时段分布</a></li>
+<li><a href="#震级与震深的关系" id="toc-震级与震深的关系"><span class="toc-section-number">4.4.3</span> 震级与震深的关系</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#session" id="toc-session"><span class="toc-section-number">5</span> 环境信息</a></li>
+<li><a href="#refer" id="toc-refer"><span class="toc-section-number">6</span> 参考文献</a></li>
+</ul>
+</div>
+
+<style type="text/css">
+.center {
+  text-align: center;
+}
+
+.sidebar {
+  border: 1px solid #ccc;
+}
+
+.rmdwarn {
+  border: 1px solid #EA4335;
+}
+
+.rmdnote {
+  border: 1px solid #FBBC05;
+}
+
+.rmdtip {
+  border: 1px solid #34A853;
+}
+
+.sidebar, .rmdwarn, .rmdnote, .rmdtip {
+  border-left-width: 5px;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+div.rmdwarn::before, div.rmdnote::before, div.rmdtip::before {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+
+div.rmdwarn::before {
+  content: "警告";
+  color: #EA4335;
+}
+
+div.rmdnote::before {
+  content: "注意";
+  color: #FBBC05;
+}
+
+div.rmdtip::before {
+  content: "提示";
+  color: #34A853;
+}
+</style>
+<div id="background" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> 本文写作背景</h1>
+{{% figure src="img/ggplot2.svg" width="25%" caption="ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics" link="https://github.com/tidyverse/ggplot2" alt="Create Elegant Data Visualisations Using the Grammar of Graphics" target="_blank" class="center" %}}
+<p>因在统计应用领域的卓越贡献，Hadley Wickham 获得 2019 年考普斯会长奖（COPSS Presidents’ Award），这其中 <strong>ggplot2</strong> 包 <span class="citation">(<a href="#ref-Hadley2016" role="doc-biblioref">Wickham 2016</a>)</span> 可以说是厥功至伟。</p>
+<p>2020 年左右，我得知<a href="https://github.com/rfordatascience/tidytuesday">tidytuesday</a>项目，这个项目很有意思。</p>
+<ol style="list-style-type: decimal">
+<li>找真实的数据，传播信息，开启话题。</li>
+<li>宣传 <strong>ggplot2</strong> 包和 dplyr 包，品牌营销。</li>
+<li>探索各种各样的可视化形式，给人启发。</li>
+<li>引人入坑 R 语言和数据可视化，壮大社区。</li>
+</ol>
+<p>一直没有时间参与，后来，我决定自己找数据，做一些类似的数据分析项目。翻翻旧博客，看到 2019 年曾尝试分析地震数据，不过是<a href="https://d.cosx.org/d/420854">草草收场</a>，现决定重写，不是简单的更新，是相当彻底地重写。从对比、趋势、分布、关系、时间和空间等方面探索和分析数据，还包含数据获取、清洗和处理的过程，不仅仅是可视化，而是完整地展现一次数据分析之旅。更加注重分析的逻辑，更加关注数据背景和数据解读。</p>
+</div>
+<div id="earthquakes-background" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> 地震背景信息</h1>
+<p>从自然资源部下的中国地质调查局网站 (<a href="https://www.cgs.gov.cn/" class="uri">https://www.cgs.gov.cn/</a>) 了解到一些背景信息。我国使用的震级标准是国际上的里氏分级表，一共 9 个等级。小于 3 级的地震不易察觉。4.5 级及以下的地震一般不会造成破坏。大于4.5级而小于6级的地震可以造成破坏，具体破坏情况还与震源深度、震中距等多种因素有关。震级每相差1.0级，能量相差大约30倍，震级相差0.1级，释放的能量平均相差1.4倍。一个6级地震释放的能量相当于美国投掷在日本广岛的原子弹所具有的能量。一个 7 级地震释放的能量相当于 30 颗这样的原子弹，而一个 8 级地震释放的能量相当于 900 颗这样的原子弹。</p>
+<ul>
+<li>1976 年河北唐山地震震级为 7.6 级</li>
+<li>2008 年四川汶川地震震级为 8.0 级</li>
+<li>2013 年四川雅安地震震级为 7.0 级</li>
+<li>2021 年青海玛多地震震级为 7.4 级</li>
+</ul>
+<p>更多背景信息，可以从中国地震局地震预测研究所网站(<a href="https://www.ief.ac.cn" class="uri">https://www.ief.ac.cn</a>)新闻或发布的报告，如<a href="https://www.ief.ac.cn/upload/a5fffe35-d881-45ac-98db-0dae5c0b3593/20220223/64991645600860360.pdf">2021年5月22日青海玛多 7.4 级地震科学考察报告.pdf</a>，或者中国地质调查局网站 (<a href="https://www.cgs.gov.cn/" class="uri">https://www.cgs.gov.cn/</a>) 了解。</p>
+</div>
+<div id="earthquakes-world" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> 1973-2010 年全球地震变化</h1>
+<div id="quake6" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> 数据准备</h2>
+<p>我最早接触到地震数据集来自<a href="https://yihui.org/">谢益辉</a>开发的 <strong>MSG</strong> 包，这个包是为书籍《现代统计图形》<span class="citation">(<a href="#ref-Zhao2021" role="doc-biblioref">赵鹏, 谢益辉, and 黄湘云 2021</a>)</span>准备的，里面有个数据集 quake6，记录了 1973-2010 年全球 6 级以上地震情况，下面是该数据集开头的几行：</p>
+<pre class="r"><code>data(quake6, package = &quot;MSG&quot;)
+head(quake6)</code></pre>
+<pre><code>##   Cat year month day   time    lat   long dep magnitude
+## 1 PDE 1973     1   1 114238 -35.51 -16.21  33       6.0
+## 2 PDE 1973     1   5 135429 -39.00 175.23 150       6.2
+## 3 PDE 1973     1   6 155242 -14.66 166.38  36       6.1
+## 4 PDE 1973     1  10 113227 -11.10 162.28  32       6.0
+## 5 PDE 1973     1  15  90258  27.08 140.10 477       6.0
+## 6 PDE 1973     1  18  92814  -6.87 149.99  43       6.8</code></pre>
+<p>这是一个 data.frame，一共 4999 条记录 9 个字段，分别是 Cat 、年份 year、月份 month、日 day、时间 time、纬度 lat、经度 long、震深 dep 和震级 magnitude。此数据集的源头是<a href="https://earthquake.usgs.gov/">美国地震局（USGS）</a>，2008 年四川汶川地震才过去两年，2010 年在统计之都论坛，曾引发大家的讨论<a href="https://d.cosx.org/d/101510">地震是不是越来越频繁了</a>。</p>
+<pre class="r"><code>str(quake6)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    4999 obs. of  9 variables:
+##  $ Cat      : Factor w/ 3 levels &quot;PDE&quot;,&quot;PDE-Q&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ year     : int  1973 1973 1973 1973 1973 1973 1973 1973 1973 1973 ...
+##  $ month    : int  1 1 1 1 1 1 1 1 1 1 ...
+##  $ day      : int  1 5 6 10 15 18 22 23 27 30 ...
+##  $ time     : num  114238 135429 155242 113227 90258 ...
+##  $ lat      : num  -35.5 -39 -14.7 -11.1 27.1 ...
+##  $ long     : num  -16.2 175.2 166.4 162.3 140.1 ...
+##  $ dep      : int  33 150 36 32 477 43 33 97 55 43 ...
+##  $ magnitude: num  6 6.2 6.1 6 6 6.8 6.2 6.3 6 7.5 ...</code></pre>
+</div>
+<div id="quake6-year" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> 震次趋势（年度）</h2>
+<p>下面先来看看每年地震次数变化趋势，如图<a href="#fig:quake6-year">3.1</a>所示。</p>
+<pre class="r"><code>library(ggplot2)
+# 按年分组计数
+aggregate(data = quake6, time ~ year, FUN = length) |&gt;
+  ggplot(aes(x = year, y = time)) +
+  geom_point() +
+  geom_line() +
+  theme_classic() +
+  theme(panel.grid.major.y = element_line(colour = &quot;gray90&quot;)) +
+  labs(x = &quot;年份&quot;, y = &quot;地震次数&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:quake6-year"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/quake6-year-1.png" alt="1973-2010 年世界 6级以上地震次数变化趋势" width="672" />
+<p class="caption">
+图 3.1: 1973-2010 年世界 6级以上地震次数变化趋势
+</p>
+</div>
+<p>从图上来看，地震确实变多了。有坛友根据美国地震局发布的信息，解释此现象是因为探测能力变强了，能发现更多的地震，而不是地震变多了。</p>
+<div class="rmdtip">
+<p>2010 年大家在论坛上讨论的时候，正是 4 月份，不是一年的累计量，因此图中看起来 2010 年的地震数量很少。</p>
+</div>
+</div>
+<div id="quake6-hist" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> 震级分布（总体情况）</h2>
+<p>数据集 quake6 中记录的最大地震为 9 级，最小地震为 6 级。</p>
+<pre class="r"><code>range(quake6$magnitude)</code></pre>
+<pre><code>## [1] 6 9</code></pre>
+<p>下面将震级区间 <span class="math inline">\([6,9]\)</span> 作 31 等分，统计每个小震级区间内的地震数量，下图展示地震震级的总体分布情况，看起来特别像指数分布。</p>
+<pre class="r"><code>ggplot(data = quake6, aes(x = magnitude)) +
+  geom_histogram(bins = 31, color = &quot;gray40&quot;, fill = &quot;gray90&quot;) +
+  geom_freqpoly(stat = &quot;count&quot;) +
+  theme_minimal() +
+  labs(x = &quot;震级&quot;, y = &quot;次数&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:quake6-hist"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/quake6-hist-1.png" alt="1973-2010 年世界6级以上地震情况" width="672" />
+<p class="caption">
+图 3.2: 1973-2010 年世界6级以上地震情况
+</p>
+</div>
+</div>
+<div id="quake6-explore" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> 震级分布（按年分组）</h2>
+<div id="quake6-beeswarm" class="section level3" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> 抖动图</h3>
+<p>数据集 quake6 不大，可以用 ggbeeswarm <span class="citation">(<a href="#ref-Clarke2017" role="doc-biblioref">Clarke and Sherrill-Mix 2017</a>)</span> 包将所有点绘制出来，添加抖动后，可以防止一定程度的覆盖重合。散点的疏密体现数据的分布，相比于直方图，附加好处是直观地展示原始信息，特别是位于分布尾部的数据。</p>
+<pre class="r"><code>library(ggbeeswarm)
+
+ggplot(quake6, aes(x = as.factor(year), y = magnitude, colour = as.factor(year))) +
+  geom_quasirandom(groupOnX = TRUE) +
+  coord_flip() +
+  geom_jitter() +
+  theme_minimal() +
+  theme(legend.position = &quot;none&quot;) +
+  labs(y = &quot;震级&quot;, x = &quot;年份&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:quake6-beeswarm"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/quake6-beeswarm-1.png" alt="1973-2010 年世界6级以上地震分布" width="576" />
+<p class="caption">
+图 3.3: 1973-2010 年世界6级以上地震分布
+</p>
+</div>
+<p>从图中来看，震级之间有明显的间隔缝隙，是不连续的，实际上，震级之间的最小间隔是 0.1 级。</p>
+</div>
+<div id="quake6-ridges" class="section level3" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> 岭线图</h3>
+<p>除了直方图、抖动图，还可以用岭线图来展示数据的分布变化，下图采用 ggridges 包<span class="citation">(<a href="#ref-Wilke2021" role="doc-biblioref">Wilke 2021</a>)</span>绘制，相邻年份的分布可以清晰对比，多个年份的分布可以看趋势。</p>
+<pre class="r"><code>library(ggridges)
+ggplot(quake6, aes(x = magnitude, y = as.factor(year), height = after_stat(density))) +
+  geom_ridgeline(stat = &quot;density&quot;) +
+  theme_ridges() +
+  labs(x = &quot;震级&quot;, y = &quot;年份&quot;)</code></pre>
+<pre><code>## Warning: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+## Please use the `linewidth` argument instead.</code></pre>
+<pre><code>## Warning: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+## Please use the `linewidth` argument instead.</code></pre>
+<div class="figure"><span style="display:block;" id="fig:quake6-ridges"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/quake6-ridges-1.png" alt="1973-2010 年世界6级以上地震分布" width="576" />
+<p class="caption">
+图 3.4: 1973-2010 年世界6级以上地震分布
+</p>
+</div>
+</div>
+<div id="quake6-boxplot" class="section level3" number="3.4.3">
+<h3><span class="header-section-number">3.4.3</span> 葙线图</h3>
+<p>葙线图将 5 个分位点和离群点画出来了，就地震来说，小地震往往破坏力不大，大地震才是关注的重点，也就是图中那些离群点。</p>
+<pre class="r"><code>ggplot(quake6, aes(x = magnitude, y = as.factor(year))) +
+  geom_boxplot() +
+  theme_minimal() +
+  labs(x = &quot;震级&quot;, y = &quot;年份&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:quake6-boxplot"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/quake6-boxplot-1.png" alt="1973-2010 年世界6级以上地震分布" width="576" />
+<p class="caption">
+图 3.5: 1973-2010 年世界6级以上地震分布
+</p>
+</div>
+<p>地震震源的位置、深度、震级与地震监测能力的关系究竟是怎样的呢？也许要先回答这个问题，才能搞清楚大地震是明显变多了呢，还是地震监测能力升级了呢？一般来说，设备就算是老旧点，大地震监测应该不受影响吧。</p>
+</div>
+<div id="提琴图" class="section level3" number="3.4.4">
+<h3><span class="header-section-number">3.4.4</span> 提琴图</h3>
+<p>相比于葙线图，提琴图在刻画数据分布上更加精细些。</p>
+<pre class="r"><code>ggplot(quake6, aes(x = magnitude, y = as.factor(year))) +
+  geom_violin() +
+  theme_minimal() +
+  labs(x = &quot;震级&quot;, y = &quot;年份&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:quake6-violin"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/quake6-violin-1.png" alt="1973-2010 年世界6级以上地震分布" width="576" />
+<p class="caption">
+图 3.6: 1973-2010 年世界6级以上地震分布
+</p>
+</div>
+</div>
+</div>
+<div id="quake6-scatter" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> 震级分布（空间）</h2>
+<p>从地震的位置来看，基本都在板块的边界或交界处。</p>
+<pre class="r"><code>library(sf)
+# 转为 sf 类型
+quake6_sf &lt;- st_as_sf(quake6, coords = c(&quot;long&quot;, &quot;lat&quot;), crs = 4326)
+# 绘图
+ggplot() +
+  geom_sf(data = quake6_sf, aes(color = magnitude), cex = .1) +
+  scale_color_viridis_c() +
+  theme_minimal() +
+  labs(
+    x = &quot;经度&quot;, y = &quot;纬度&quot;, color = &quot;震级&quot;,
+    title = &quot;1973-2010 年世界6级以上地震分布&quot;,
+    caption = &quot;数据源：美国地震局&quot;
+  )</code></pre>
+<div class="figure"><span style="display:block;" id="fig:quake6-scatter"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/quake6-scatter-1.png" alt="1973-2010 年世界6级以上地震分布" width="768" />
+<p class="caption">
+图 3.7: 1973-2010 年世界6级以上地震分布
+</p>
+</div>
+</div>
+</div>
+<div id="earthquake-china" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> 2012-2022 年中国地震变化</h1>
+<!-- 从中国看世界的地震活动，2022 年年末将使用 2022 年整年的地震数据，也顺便了解一下代码的稳定性 -->
+<div id="earthquake-ceic" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> 数据准备</h2>
+<p>相比于美国，我更关心中国境内的地震情况，所以，从中国地震台网 <a href="http://www.ceic.ac.cn" class="uri">http://www.ceic.ac.cn</a> 下载 2012-01-01 至 2022-08-12 的地震数据。由于得到的是一个<strong>奇葩</strong>的 <a href="data/quakes_20220812.xls">XLS 数据文件</a>，竟不能用 <strong>readxl</strong> 包读取，甚至用 Excel 软件打开时，弹出文件格式和扩展名不匹配的警告，还说文件可能已损坏或不安全。因此，接下来准备不把它看作是 XLS 文件，而是一个 XML 格式的文件。实际上，XLS 或 XLSX 文件可以看作某种特殊的 XML 格式，下面就用 Base R 内置的函数 <code>read.delim()</code> 读取数据。</p>
+<!--
+再一次看见 Base R 的厉害，当 tidyverse 搞不定的时候，就用 Base R 吧，没有什么是 Base R 搞不定的，有的话，多半是使用姿势不对。
+-->
+<pre class="r"><code>x &lt;- read.delim(file = &quot;data/quakes_20220812.xls&quot;, header = FALSE)</code></pre>
+<p>读进来一个超长的字符串向量，先来看看将 xls 文件被当作文本文件读进来的内容，前几行声明文档是 XML 格式的，字符串超级长，没有数据信息，下面从第 4 个开始。</p>
+<pre class="r"><code>x[4:25, ]</code></pre>
+<pre><code>##  [1] &quot;&lt;Table&gt;&quot;
+##  [2] &quot;&lt;Column ss:Index=1 ss:AutoFitWidth=0 ss:Width=110/&gt;&quot;
+##  [3] &quot;&lt;Row&gt;&quot;
+##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;发震时刻&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [5] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;震级(M)&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;深度(千米)&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;参考位置&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [10] &quot;&lt;/Row&gt;&quot;
+## [11] &quot;&lt;Row&gt;&quot;
+## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 23:58:52&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.0&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;27.23&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;103.75&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;15&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;云南昭通市昭阳区&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [18] &quot;&lt;/Row&gt;&quot;
+## [19] &quot;&lt;Row&gt;&quot;
+## [20] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 15:47:07&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [21] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;2.5&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [22] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;36.36&lt;/Data&gt;&lt;/Cell&gt;&quot;</code></pre>
+<p>数据都藏在 Excel 文件的格子 Cell 里，不同列的数据类型可能不一样，甚至同一列还出现不同类型的数据，比如将数值当作文本。为了把它们提取出来，将所有字段当作字符串。先准备一个字符串提取函数，从给定的一个字符串向量中，按照匹配模式提取一部分。</p>
+<pre class="r"><code>str_extract &lt;- function(text, pattern, ...) regmatches(text, gregexpr(pattern, text, ...))</code></pre>
+<p>从字符串向量中过滤出含表头、发震时刻、震级(M)、纬度(°)、经度(°)、深度(千米)和参考位置等字段信息的子字符串向量。</p>
+<pre class="r"><code>x_str &lt;- str_extract(text = x$V1, pattern = &quot;&lt;Cell&gt;&lt;Data ss:Type=(String|Number)&gt;(.*?)&lt;/Data&gt;&lt;/Cell&gt;&quot;)
+x_str &lt;- unlist(x_str)
+head(x_str, 20)</code></pre>
+<pre><code>##  [1] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;发震时刻&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [2] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;震级(M)&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [3] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [5] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;深度(千米)&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;参考位置&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 23:58:52&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.0&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;27.23&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [10] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;103.75&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [11] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;15&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;云南昭通市昭阳区&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 15:47:07&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;2.5&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;36.36&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;114.37&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;11&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [18] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;河北邯郸市磁县&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [19] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 11:59:45&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [20] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.9&lt;/Data&gt;&lt;/Cell&gt;&quot;</code></pre>
+<p>去掉多余的字符，比如成对的 <code>&lt;Cell&gt;&lt;/Cell&gt;</code>，留下想要的数据字段。</p>
+<pre class="r"><code>x_str_tidy &lt;- gsub(x = x_str, pattern = &quot;&lt;Cell&gt;&lt;Data ss:Type=(String|Number)&gt;(.*?)&lt;/Data&gt;&lt;/Cell&gt;&quot;, replacement = &quot;\\2&quot;)
+head(x_str_tidy, 20)</code></pre>
+<pre><code>##  [1] &quot;发震时刻&quot;            &quot;震级(M)&quot;             &quot;纬度(°)&quot;
+##  [4] &quot;经度(°)&quot;            &quot;深度(千米)&quot;          &quot;参考位置&quot;
+##  [7] &quot;2022-08-11 23:58:52&quot; &quot;3.0&quot;                 &quot;27.23&quot;
+## [10] &quot;103.75&quot;              &quot;15&quot;                  &quot;云南昭通市昭阳区&quot;
+## [13] &quot;2022-08-11 15:47:07&quot; &quot;2.5&quot;                 &quot;36.36&quot;
+## [16] &quot;114.37&quot;              &quot;11&quot;                  &quot;河北邯郸市磁县&quot;
+## [19] &quot;2022-08-11 11:59:45&quot; &quot;3.9&quot;</code></pre>
+<p>可以说，这种办法简直是把 xls 文件给砸碎了，万幸地是数据文件还可以被当作 XML 文件读取，因此只要 xls 文件坏得还不彻底，这办法总是可以用的。</p>
+<p>那么接下来就要拼起来，拼成一个 matrix，每一行记录包含 6 个字段。字符串向量 x_str_tidy 开头 6 个元素是表头，余下的 <code>x_str_tidy[-c(1:6)]</code> 是观测值，长度为 62646，分成 6 列，一共 10441 行。</p>
+<pre class="r"><code>dat &lt;- matrix(
+  data = x_str_tidy[-c(1:6)], ncol = 6, byrow = TRUE,
+  dimnames = list(c(1:10441), x_str_tidy[1:6])
+)
+head(dat)</code></pre>
+<pre><code>##   发震时刻              震级(M) 纬度(°) 经度(°) 深度(千米)
+## 1 &quot;2022-08-11 23:58:52&quot; &quot;3.0&quot;   &quot;27.23&quot;  &quot;103.75&quot; &quot;15&quot;
+## 2 &quot;2022-08-11 15:47:07&quot; &quot;2.5&quot;   &quot;36.36&quot;  &quot;114.37&quot; &quot;11&quot;
+## 3 &quot;2022-08-11 11:59:45&quot; &quot;3.9&quot;   &quot;40.15&quot;  &quot;77.74&quot;  &quot;14&quot;
+## 4 &quot;2022-08-11 09:14:13&quot; &quot;3.7&quot;   &quot;40.88&quot;  &quot;78.12&quot;  &quot;10&quot;
+## 5 &quot;2022-08-11 01:48:16&quot; &quot;3.1&quot;   &quot;32.85&quot;  &quot;83.44&quot;  &quot;10&quot;
+## 6 &quot;2022-08-10 22:41:55&quot; &quot;3.1&quot;   &quot;36.04&quot;  &quot;78.26&quot;  &quot;100&quot;
+##   参考位置
+## 1 &quot;云南昭通市昭阳区&quot;
+## 2 &quot;河北邯郸市磁县&quot;
+## 3 &quot;新疆克孜勒苏州阿图什市&quot;
+## 4 &quot;新疆克孜勒苏州阿合奇县&quot;
+## 5 &quot;西藏阿里地区改则县&quot;
+## 6 &quot;新疆和田地区皮山县&quot;</code></pre>
+<p>毕竟，不同列的数据类型不一样，需要单独处理，而 matrix 要求各列类型一致，为方便后续数据操作，将数据集转为 data.frame 类型。</p>
+<pre class="r"><code>dat &lt;- as.data.frame(dat, check.names = FALSE, stringsAsFactors = FALSE)</code></pre>
+<p>查看初步整理出来的数据。</p>
+<pre class="r"><code>head(dat)</code></pre>
+<pre><code>##              发震时刻 震级(M) 纬度(°) 经度(°) 深度(千米)
+## 1 2022-08-11 23:58:52     3.0    27.23   103.75         15
+## 2 2022-08-11 15:47:07     2.5    36.36   114.37         11
+## 3 2022-08-11 11:59:45     3.9    40.15    77.74         14
+## 4 2022-08-11 09:14:13     3.7    40.88    78.12         10
+## 5 2022-08-11 01:48:16     3.1    32.85    83.44         10
+## 6 2022-08-10 22:41:55     3.1    36.04    78.26        100
+##                 参考位置
+## 1       云南昭通市昭阳区
+## 2         河北邯郸市磁县
+## 3 新疆克孜勒苏州阿图什市
+## 4 新疆克孜勒苏州阿合奇县
+## 5     西藏阿里地区改则县
+## 6     新疆和田地区皮山县</code></pre>
+</div>
+<div id="数据操作" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> 数据操作</h2>
+<p>根据字段的实际类型，首先做一些基本的类型转换，如下：</p>
+<pre class="r"><code>dat &lt;- within(dat, {
+  `发震时刻` &lt;- as.POSIXlt(`发震时刻`, format = &quot;%Y-%m-%d %H:%M:%S&quot;, tz = &quot;UTC&quot;)
+  `震级(M)` &lt;- as.numeric(`震级(M)`)
+  `纬度(°)` &lt;- as.numeric(`纬度(°)`)
+  `经度(°)` &lt;- as.numeric(`经度(°)`)
+  `深度(千米)` &lt;- as.numeric(`深度(千米)`)
+})</code></pre>
+<p>从「发震时刻」字段提取日期、年份、月份、发震时段等信息。</p>
+<pre class="r"><code>dat &lt;- within(dat, {
+  `日期` &lt;- format(`发震时刻`, format = &quot;%Y-%m-%d&quot;, tz = &quot;UTC&quot;)
+  `年份` &lt;- format(`发震时刻`, format = &quot;%Y&quot;, tz = &quot;UTC&quot;)
+  `月份` &lt;- format(`发震时刻`, format = &quot;%m&quot;, tz = &quot;UTC&quot;)
+  `时段` &lt;- format(`发震时刻`, format = &quot;%H&quot;, tz = &quot;UTC&quot;)
+})</code></pre>
+<p>整理好的数据集 dat 如下：</p>
+<pre class="r"><code>str(dat)</code></pre>
+<pre><code>## &#39;data.frame&#39;:    10441 obs. of  10 variables:
+##  $ 发震时刻  : POSIXlt, format: &quot;2022-08-11 23:58:52&quot; &quot;2022-08-11 15:47:07&quot; ...
+##  $ 震级(M)   : num  3 2.5 3.9 3.7 3.1 3.1 3 5.7 5.6 3.7 ...
+##  $ 纬度(°)  : num  27.2 36.4 40.1 40.9 32.9 ...
+##  $ 经度(°)  : num  103.8 114.4 77.7 78.1 83.4 ...
+##  $ 深度(千米): num  15 11 14 10 10 100 18 160 60 10 ...
+##  $ 参考位置  : chr  &quot;云南昭通市昭阳区&quot; &quot;河北邯郸市磁县&quot; &quot;新疆克孜勒苏州阿图什市&quot; &quot;新疆克孜勒苏州阿合奇县&quot; ...
+##  $ 时段      : chr  &quot;23&quot; &quot;15&quot; &quot;11&quot; &quot;09&quot; ...
+##  $ 月份      : chr  &quot;08&quot; &quot;08&quot; &quot;08&quot; &quot;08&quot; ...
+##  $ 年份      : chr  &quot;2022&quot; &quot;2022&quot; &quot;2022&quot; &quot;2022&quot; ...
+##  $ 日期      : chr  &quot;2022-08-11&quot; &quot;2022-08-11&quot; &quot;2022-08-11&quot; &quot;2022-08-11&quot; ...</code></pre>
+</div>
+<div id="数据探索" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> 数据探索</h2>
+<p>接下来要做一些探索工作，首先呼应一下本文题目，是不是地震越来越频繁了呢？看一下各年各月的地震次数再说。</p>
+<div id="震次分布棋盘图" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> 震次分布（棋盘图）</h3>
+<p>以年份为横轴，月份为纵轴，用不同大小的黑点表示地震次数，落纵横线交叉点上。</p>
+<pre class="r"><code>aggregate(data = dat, `参考位置` ~ `年份` + `月份`, FUN = length) |&gt;
+  ggplot(aes(x = `年份`, y = `月份`, size = `参考位置`)) +
+  geom_point() +
+  theme_minimal() +
+  labs(size = &quot;次数&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-count-year-month"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-count-year-month-1.png" alt="地震次数随时间的分布" width="672" />
+<p class="caption">
+图 4.1: 地震次数随时间的分布
+</p>
+</div>
+<p>初步看起来，地震次数有明显增加的趋势，那是不是说地震发生越来越频繁了呢？未必，根据中国地震局发布的新闻公告，地震监测预报预警能力持续提升，还有可能是之前一些小震级、远距离的地震活动没有监测出来。那么，去掉 4.5 级及以下的小地震，相当于减少监测能力的影响，统计大一些的地震数量的变化，应该能说明一些问题。</p>
+<pre class="r"><code>aggregate(
+  data = subset(dat, subset = `震级(M)` &gt; 4.5),
+  `参考位置` ~ `年份` + `月份`, FUN = length
+) |&gt;
+  ggplot(aes(x = `年份`, y = `月份`, size = `参考位置`)) +
+  geom_point() +
+  theme_minimal() +
+  labs(size = &quot;次数&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-count-year-month-45"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-count-year-month-45-1.png" alt="地震次数随时间的分布" width="672" />
+<p class="caption">
+图 4.2: 地震次数随时间的分布
+</p>
+</div>
+<p>原想，去掉一些小地震，关注可能造成破坏的大地震，但没想到的是近些年来，大地震变这么多了？这是真的吗？</p>
+<p>实际情况是，中国地震台网发布的地震活动数据，除了中国境内，还有境外的，而且境外的多半是一些大地震。地震监测相当于空间上不均匀的震级采样，导致大地震貌似变多了。如果将震级大于等于 6 级的筛选出来，结果就不一样了，见下图。</p>
+<pre class="r"><code>aggregate(
+  data = subset(dat, subset = `震级(M)` &gt;= 6),
+  `参考位置` ~ `年份` + `月份`, FUN = length
+) |&gt;
+  ggplot(aes(x = `年份`, y = `月份`, size = `参考位置`)) +
+  geom_point() +
+  theme_minimal() +
+  labs(size = &quot;次数&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-count-year-month-6"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-count-year-month-6-1.png" alt="地震次数随时间的分布" width="672" />
+<p class="caption">
+图 4.3: 地震次数随时间的分布
+</p>
+</div>
+<p>所以，接下来，还要从震次随震级的分布和震级的空间分布继续分析。</p>
+</div>
+<div id="震级分布直方图" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> 震级分布（直方图）</h3>
+<p>下面按年分组，以0.2级为窗宽，统计震次随震级的分布。从数量上看，无感或有感的小地震是很多的，远远大于 4.5 级以上可能造成破坏的地震数量。</p>
+<pre class="r"><code>ggplot(data = dat, aes(x = `震级(M)`, y = after_stat(count), fill = `年份`)) +
+  geom_histogram(binwidth = 0.2) +
+  theme_minimal() +
+  labs(y = &quot;地震次数&quot;)</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-mag-count-year-45"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-mag-count-year-45-1.png" alt="地震次数随震级的分布" width="672" />
+<p class="caption">
+图 4.4: 地震次数随震级的分布
+</p>
+</div>
+<div class="rmdtip">
+<p>笔者不了解地质学，也不了解地球物理，下面仅从数据分析和统计的角度做个也许不恰当的猜想。小地震就像是随机扰动，而大地震才是揭示地球活动规律的。地震毕竟通常发生在地下数十至数百千米的地方，影响地震活动的主要因素恐怕是地球本身的构造，以及那些能够对地球产生影响的力量，比如月球、太阳系。因此，若想通过地震观察到地球真正的活动规律，恐怕不是小地震可以揭示的，也不是短短十来年或几十年的数据就可以观测出来的。</p>
+</div>
+</div>
+<div id="震级分布抖动图" class="section level3" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> 震级分布（抖动图）</h3>
+<p>相比于直方图，还可以用抖动图展示每次地震的震级数据，如图所示。抖动图在散点图的基础上添加随机扰动，其疏密变化能体现震级的分布。</p>
+<pre class="r"><code>ggplot(dat, aes(x = `年份`, y = `震级(M)`, color = `年份`)) +
+  geom_quasirandom(groupOnX = TRUE) +
+  coord_flip() +
+  geom_jitter() +
+  theme_minimal()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-beeswarm"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-beeswarm-1.png" alt="世界近 10 年的地震分布" width="768" />
+<p class="caption">
+图 4.5: 世界近 10 年的地震分布
+</p>
+</div>
+</div>
+<div id="震级分布岭线图" class="section level3" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> 震级分布（岭线图）</h3>
+<p>抖动图适合于数据点不太多的情况，比如本文这样的数据集，才 1 万多观测值。如果遇到数以10万计的数据点，点与点之间重叠覆盖的情况会变严重，疏密程度不好观察，使用直方图或下面的岭线图会更合适。</p>
+<pre class="r"><code>ggplot(dat, aes(x = `震级(M)`, y = `年份`, fill = `年份`)) +
+  geom_density_ridges(show.legend = FALSE) +
+  theme_ridges()</code></pre>
+<pre><code>## Picking joint bandwidth of 0.248</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-ridges"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-ridges-1.png" alt="世界近 10 年的地震分布" width="768" />
+<p class="caption">
+图 4.6: 世界近 10 年的地震分布
+</p>
+</div>
+<p>根据中国地震台网的背景信息，4.5级以上的地震才可能会对人和周围环境造成破环，下面考虑震级大于4.5级的地震分布。</p>
+<pre class="r"><code>subset(dat, subset = `震级(M)` &gt; 4.5) |&gt;
+  ggplot(aes(x = `震级(M)`, y = `年份`, fill = `年份`)) +
+  geom_density_ridges(show.legend = FALSE) +
+  theme_ridges()</code></pre>
+<pre><code>## Picking joint bandwidth of 0.196</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-ridges-45"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-ridges-45-1.png" alt="世界近 10 年4.5级及以上震级分布" width="768" />
+<p class="caption">
+图 4.7: 世界近 10 年4.5级及以上震级分布
+</p>
+</div>
+<p>一般大地震之后，有小的余震，按常理来说，双峰似乎是正常的现象。从数据上看，奇怪的是近年来双峰变成了单峰，这是为什么呢？难道大地震后的余震是逐级减小下去的？此处，留待读者继续探索。</p>
+</div>
+</div>
+<div id="数据分析" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> 数据分析</h2>
+<div id="震级的空间分布" class="section level3" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> 震级的空间分布</h3>
+<p>地震发生在人口密度越大，经济越发达的地区，造成的破坏也越大，反之，若发生在荒无人烟的地区，地震再大，也不会造成伤亡或损失。因此，接下来要看看地震震源的空间分布，为了方便后续操作，首先用 <strong>sf</strong> 包 <span class="citation">(<a href="#ref-Pebesma2018" role="doc-biblioref">Pebesma 2018</a>)</span> 将数据集 dat 做类型转换。这是一个空间点数据，10441 次地震观测，8 个字段，数据集 dat 前 10 次观测数据，如下：</p>
+<pre class="r"><code>library(sf)
+# data.frame 转为 sf
+dat_sf &lt;- st_as_sf(dat, coords = c(&quot;经度(°)&quot;, &quot;纬度(°)&quot;), crs = 4326)
+# 查看数据
+dat_sf</code></pre>
+<pre><code>## Simple feature collection with 10441 features and 8 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: -180 ymin: -69.9 xmax: 179.8 ymax: 86.94
+## Geodetic CRS:  WGS 84
+## First 10 features:
+##               发震时刻 震级(M) 深度(千米)               参考位置 时段 月份 年份
+## 1  2022-08-11 23:58:52     3.0         15       云南昭通市昭阳区   23   08 2022
+## 2  2022-08-11 15:47:07     2.5         11         河北邯郸市磁县   15   08 2022
+## 3  2022-08-11 11:59:45     3.9         14 新疆克孜勒苏州阿图什市   11   08 2022
+## 4  2022-08-11 09:14:13     3.7         10 新疆克孜勒苏州阿合奇县   09   08 2022
+## 5  2022-08-11 01:48:16     3.1         10     西藏阿里地区改则县   01   08 2022
+## 6  2022-08-10 22:41:55     3.1        100     新疆和田地区皮山县   22   08 2022
+## 7  2022-08-10 02:41:20     3.0         18   新疆阿克苏地区温宿县   02   08 2022
+## 8  2022-08-09 20:59:42     5.7        160             印尼班达海   20   08 2022
+## 9  2022-08-08 13:37:19     5.6         60         新不列颠岛地区   13   08 2022
+## 10 2022-08-08 11:00:35     3.7         10 新疆克孜勒苏州阿合奇县   11   08 2022
+##          日期            geometry
+## 1  2022-08-11 POINT (103.8 27.23)
+## 2  2022-08-11 POINT (114.4 36.36)
+## 3  2022-08-11 POINT (77.74 40.15)
+## 4  2022-08-11 POINT (78.12 40.88)
+## 5  2022-08-11 POINT (83.44 32.85)
+## 6  2022-08-10 POINT (78.26 36.04)
+## 7  2022-08-10 POINT (80.82 41.94)
+## 8  2022-08-09  POINT (130.1 -6.9)
+## 9  2022-08-08  POINT (151.8 -5.5)
+## 10 2022-08-08 POINT (78.11 40.92)</code></pre>
+<p>接下来，要将所有的点画在图上，单凭肉眼是无法从 10000 多个数据点看出什么空间分布的。</p>
+<pre class="r"><code>ggplot() +
+  geom_sf(data = dat_sf, aes(color = `震级(M)`), cex = .1) +
+  scale_color_viridis_c() +
+  theme_minimal() +
+  labs(
+    title = &quot;2012-04-26 至 2022-08-12 的地震分布&quot;,
+    caption = &quot;数据源：中国地震台网&quot;
+  )</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-scatter"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-scatter-1.png" alt="世界近 10 年的地震分布" width="768" />
+<p class="caption">
+图 4.8: 世界近 10 年的地震分布
+</p>
+</div>
+<p>中国地震台网发布的数据除了中国境内的地震，还包含不少境外的地震，可能是仪器位于中国境内，在距离中国比较远的地方，只有较大的地震活动才能被监测到。本节主要关心中国的情况，先根据大致的经纬度范围，粗略地将中国及周边地区圈出来，观察地震活动的空间分布。</p>
+<pre class="r"><code>ggplot() +
+  geom_sf(data = dat_sf, aes(color = `震级(M)`), cex = .1) +
+  scale_color_viridis_c() +
+  coord_sf(xlim = c(73.68, 135.2), ylim = c(3.984, 53.65)) +
+  theme_minimal() +
+  labs(
+    title = &quot;2012-04-26 至 2022-08-12 的地震分布&quot;,
+    caption = &quot;数据源：中国地震台网&quot;
+  )</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-scatter-china"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-scatter-china-1.png" alt="中国近 10 年的地震分布" width="672" />
+<p class="caption">
+图 4.9: 中国近 10 年的地震分布
+</p>
+</div>
+<p>不看不知道，一看要吓一跳，似乎哪里都有地震，只是西北、西南比较多，小地震比较多。下面再将比较关心的 4.5 级以上的地震圈出来，如图。</p>
+<pre class="r"><code>ggplot() +
+  geom_sf(
+    data = subset(dat_sf, subset = `震级(M)` &gt; 4.5),
+    aes(color = `震级(M)`), cex = .5
+  ) +
+  scale_color_viridis_c() +
+  coord_sf(xlim = c(73.68, 135.2), ylim = c(3.984, 53.65)) +
+  theme_minimal() +
+  labs(
+    title = &quot;2012-04-26 至 2022-08-12 的地震分布&quot;,
+    caption = &quot;数据源：中国地震台网&quot;
+  )</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-scatter-china-high"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-scatter-china-high-1.png" alt="中国及周边近 10 年的地震分布" width="672" />
+<p class="caption">
+图 4.10: 中国及周边近 10 年的地震分布
+</p>
+</div>
+<p>粗略来看，去掉没啥破坏力的小地震后，分布依然广泛，尤其是新疆、西藏、台湾的地震活动比较多。为了更加清晰地观察到地震在各个省或自治区的分布，从<a href="https://datav.aliyun.com/portal/school/atlas/area_selector">阿里云可视化平台</a>获取来自高德开放平台的中国地图数据，在上图添加中国地理边界和各省的边界。</p>
+<pre class="r"><code># 读取 GeoJSON 格式的多边形矢量地图数据
+china_map &lt;- read_sf(&quot;data/中华人民共和国.json&quot;, as_tibble = FALSE)
+china_map</code></pre>
+<pre><code>## Simple feature collection with 35 features and 10 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 73.5 ymin: 3.397 xmax: 135.1 ymax: 53.56
+## Geodetic CRS:  WGS 84
+## First 10 features:
+##    adcode         name adchar childrenNum    level               parent
+## 1  110000       北京市   &lt;NA&gt;          16 province { &quot;adcode&quot;: 100000 }
+## 2  120000       天津市   &lt;NA&gt;          16 province { &quot;adcode&quot;: 100000 }
+## 3  130000       河北省   &lt;NA&gt;          11 province { &quot;adcode&quot;: 100000 }
+## 4  140000       山西省   &lt;NA&gt;          11 province { &quot;adcode&quot;: 100000 }
+## 5  150000 内蒙古自治区   &lt;NA&gt;          12 province { &quot;adcode&quot;: 100000 }
+## 6  210000       辽宁省   &lt;NA&gt;          14 province { &quot;adcode&quot;: 100000 }
+## 7  220000       吉林省   &lt;NA&gt;           9 province { &quot;adcode&quot;: 100000 }
+## 8  230000     黑龙江省   &lt;NA&gt;          13 province { &quot;adcode&quot;: 100000 }
+## 9  310000       上海市   &lt;NA&gt;          16 province { &quot;adcode&quot;: 100000 }
+## 10 320000       江苏省   &lt;NA&gt;          13 province { &quot;adcode&quot;: 100000 }
+##    subFeatureIndex        center      centroid acroutes
+## 1                0   116.4, 39.9 116.42, 40.19   100000
+## 2                1 117.19, 39.13 117.35, 39.29   100000
+## 3                2 114.50, 38.05                 100000
+## 4                3 112.55, 37.86 112.30, 37.62   100000
+## 5                4 111.67, 40.82 114.08, 44.33   100000
+## 6                5   123.4, 41.8   122.6, 41.3   100000
+## 7                6 125.32, 43.89   126.2, 43.7   100000
+## 8                7 126.64, 45.76 127.69, 48.04   100000
+## 9                8 121.47, 31.23 121.44, 31.07   100000
+## 10               9 118.77, 32.04 119.49, 32.98   100000
+##                          geometry
+## 1  MULTIPOLYGON (((117.3 40.58...
+## 2  MULTIPOLYGON (((117.8 39.4,...
+## 3  MULTIPOLYGON (((117.5 40.65...
+## 4  MULTIPOLYGON (((110.4 34.6,...
+## 5  MULTIPOLYGON (((97.17 42.8,...
+## 6  MULTIPOLYGON (((123.5 39.79...
+## 7  MULTIPOLYGON (((129.6 42.42...
+## 8  MULTIPOLYGON (((123.6 46.22...
+## 9  MULTIPOLYGON (((120.9 31.02...
+## 10 MULTIPOLYGON (((117.3 34.56...</code></pre>
+<p>高德地图是具有甲级测绘资质的单位，一般来说，地图数据是比较权威可靠的。数据集 china_map 包含 35 个省或自治区，10 个字段，有行政编码、行政区名、市级行政区数量、区域中心、区域边界等信息。有的地理区域含有岛屿，由多个多边形组成，整个数据集是 MULTIPOLYGON 类型。</p>
+<pre class="r"><code>ggplot() +
+  geom_sf(data = china_map, color = &quot;gray&quot;, fill = NA) +
+  geom_sf(
+    data = subset(dat_sf, subset = `震级(M)` &gt;= 4.5),
+    aes(color = `震级(M)`), cex = .5
+  ) +
+  scale_color_viridis_c() +
+  coord_sf(xlim = c(73.68, 135.2), ylim = c(3.984, 53.65)) +
+  theme_minimal() +
+  labs(
+    title = &quot;2012-04-26 至 2022-08-12 的地震分布&quot;,
+    caption = &quot;数据源：中国地震台网&quot;
+  )</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-scatter-china-high-2"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-scatter-china-high-2-1.png" alt="中国及周边近 10 年 4.5 级以上的地震分布" width="672" />
+<p class="caption">
+图 4.11: 中国及周边近 10 年 4.5 级以上的地震分布
+</p>
+</div>
+<p>添加了国界、省级地理边界后，可以清楚地看出新疆、西藏、青海、甘肃、四川、云南、台湾地震活动比较多。下面想看看能够造成较大破坏的大地震的分布情况，即 6.5 级及以上的地震分布。</p>
+<pre class="r"><code>ggplot() +
+  geom_sf(data = china_map, color = &quot;gray&quot;, fill = NA) +
+  geom_sf(data = subset(dat_sf, subset = `震级(M)` &gt;= 6.5), aes(color = `震级(M)`)) +
+  scale_color_viridis_c() +
+  coord_sf(xlim = c(73.68, 135.2), ylim = c(3.984, 53.65)) +
+  theme_minimal() +
+  labs(
+    title = &quot;2012-04-26 至 2022-08-12 的地震分布&quot;,
+    caption = &quot;数据源：中国地震台网&quot;
+  )</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-scatter-china-high-3"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-scatter-china-high-3-1.png" alt="中国及周边近 10 年 6.5 级及以上的地震分布" width="672" />
+<p class="caption">
+图 4.12: 中国及周边近 10 年 6.5 级及以上的地震分布
+</p>
+</div>
+<p>过去这 10 多年里，分布在中国境内的大地震还是比较少，主要分布在西北地区。大地震的危害往往比较大，10 年发生 10 次可不能说算少了，更何况还不止 10 次呢，幸好都在人口相对较少的西部地区，但愿都是发生在人口稀少的地区，人们也能尽量避开有危险地区，比如板块交界的活跃地带。</p>
+<p>得益于 sf 包强大的空间数据操作能力，可以圈选出经纬度位于中国地理边界内，震级在 6.5 级及以上的地震。每个省级地理区域是 MULTIPOLYGON，首先获得 MULTIPOLYGON 的凸包，</p>
+<pre class="r"><code>china_map_ch &lt;- st_convex_hull(china_map)</code></pre>
+<p>再将每个省或自治区的凸包合并起来，组成一个更大的凸包。</p>
+<pre class="r"><code>china_map_union &lt;- st_union(china_map_ch)</code></pre>
+<p>接着，将地震点在中国境内的数据过滤出来。</p>
+<pre class="r"><code>sub_dat_sf &lt;- subset(dat_sf[china_map_union, op = st_within], subset = `震级(M)` &gt;= 6.5)
+sub_dat_sf</code></pre>
+<pre><code>## Simple feature collection with 23 features and 8 fields
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: 74.04 ymin: 14.1 xmax: 121.7 ymax: 44.27
+## Geodetic CRS:  WGS 84
+## First 10 features:
+##                 发震时刻 震级(M) 深度(千米)             参考位置 时段 月份 年份
+## 38   2022-07-27 08:43:27     7.0         10               菲律宾   08   07 2022
+## 457  2022-03-23 01:41:38     6.6         20       台湾台东县海域   01   03 2022
+## 500  2022-03-14 05:05:50     6.5         10           菲律宾群岛   05   03 2022
+## 722  2022-01-08 01:45:27     6.9         10     青海海北州门源县   01   01 2022
+## 1526 2021-05-22 02:04:11     7.4         17     青海果洛州玛多县   02   05 2021
+## 2370 2020-07-23 04:07:20     6.6         10     西藏那曲市尼玛县   04   07 2020
+## 3814 2019-04-18 13:01:05     6.7         24       台湾花莲县海域   13   04 2019
+## 4958 2018-02-06 23:50:42     6.5         11   台湾花莲县附近海域   23   02 2018
+## 5141 2017-11-18 06:34:19     6.9         10     西藏林芝市米林县   06   11 2017
+## 5415 2017-08-09 07:27:52     6.6         11 新疆博尔塔拉州精河县   07   08 2017
+##            日期            geometry
+## 38   2022-07-27  POINT (120.5 17.7)
+## 457  2022-03-23 POINT (121.5 23.45)
+## 500  2022-03-14  POINT (119.4 14.1)
+## 722  2022-01-08 POINT (101.3 37.77)
+## 1526 2021-05-22 POINT (98.34 34.59)
+## 2370 2020-07-23 POINT (86.81 33.19)
+## 3814 2019-04-18 POINT (121.7 24.02)
+## 4958 2018-02-06 POINT (121.7 24.13)
+## 5141 2017-11-18 POINT (95.02 29.75)
+## 5415 2017-08-09 POINT (82.89 44.27)</code></pre>
+<p>最后，将过滤出来的地震位置画在中国地图上，见下图。</p>
+<pre class="r"><code>ggplot() +
+  geom_sf(data = china_map, color = &quot;gray&quot;, fill = NA) +
+  geom_sf(data = sub_dat_sf, aes(color = `震级(M)`)) +
+  scale_color_viridis_c() +
+  theme_minimal() +
+  labs(
+    title = &quot;2012-04-26 至 2022-08-12 的地震分布&quot;,
+    caption = &quot;数据源：中国地震台网&quot;
+  )</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-scatter-china-high-4"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-scatter-china-high-4-1.png" alt="中国近 10 年来的地震分布" width="672" />
+<p class="caption">
+图 4.13: 中国近 10 年来的地震分布
+</p>
+</div>
+<p>这样就比较清晰了，不过，有的地震正好在中国与其他国家的边界周围，凸包操作有个别误伤。</p>
+</div>
+<div id="震次的时段分布" class="section level3" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> 震次的时段分布</h3>
+<p>地震带来的破坏程度还与发震时间有关，比如 1976 年河北唐山地震伤亡惨重的原因之一是地震发生在深夜3点42分，绝大多数人还在室内熟睡。因此，接下来还要分时段统计地震次数。把一天划分为 24 个时段，统计地震次数随时段的分布，如图。</p>
+<pre class="r"><code>ggplot(data = dat, aes(x = `时段`, y = after_stat(count), fill = `年份`)) +
+  geom_bar() +
+  theme_minimal()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-count-year"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-count-year-1.png" alt="地震次数随时间的分布" width="672" />
+<p class="caption">
+图 4.14: 地震次数随时间的分布
+</p>
+</div>
+<p>原想结合 10 来年的数据，看看地震是不是倾向于在什么时间段发生，可是从图中来看，地震好像对时段没有什么偏好，不管你白天还是黑夜，都可能发生，而且还比较均匀地分布在各个时段上。</p>
+<p>此外，由于收集到的数据太少，才 10 年，若是有几百年的数据，说不定可以了解到整个地震活动的周期性，类似太阳黑子的活动周期那样。</p>
+<p>再者，会不会是小地震太多，掩盖重要的地震信息？下面仅考虑 4.5 级以上的地震，如图。</p>
+<pre class="r"><code>ggplot(
+  data = subset(dat, subset = `震级(M)` &gt; 4.5),
+  aes(
+    x = `时段`, y = after_stat(count),
+    fill = `年份`
+  )
+) +
+  geom_bar() +
+  theme_minimal()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-count-year-45"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-count-year-45-1.png" alt="地震次数随时间的分布（4.5级以上）" width="672" />
+<p class="caption">
+图 4.15: 地震次数随时间的分布（4.5级以上）
+</p>
+</div>
+<p>看起来，还是四平八稳地分布在24个时段上，并没有显现出一些特别的时间规律，地震还真是想啥时候来就啥时候来。</p>
+<pre class="r"><code>ggplot(
+  data = subset(dat, subset = `震级(M)` &gt;= 6),
+  aes(
+    x = `时段`, y = after_stat(count),
+    fill = `年份`
+  )
+) +
+  geom_bar() +
+  theme_minimal()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-count-year-6"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-count-year-6-1.png" alt="地震次数随时间的分布（6级及以上）" width="672" />
+<p class="caption">
+图 4.16: 地震次数随时间的分布（6级及以上）
+</p>
+</div>
+</div>
+<div id="震级与震深的关系" class="section level3" number="4.4.3">
+<h3><span class="header-section-number">4.4.3</span> 震级与震深的关系</h3>
+<p>震级一样的情况下，震源深度越深，破坏越小，反之，震源深度特别浅，破坏性越大。此外，地下不同的深度，对应地球不同的圈层，在不同的圈层里，地球活动起来的能量是不一样的。</p>
+<div class="figure"><span style="display:block;" id="fig:earth"></span>
+<img src="img/W020181207600668631341.jpeg" style="width:50.0%" alt="" />
+<p class="caption">图 4.17: 大陆地壳剖面图</p>
+</div>
+<p>图<a href="#fig:earth">4.17</a>来自<a href="https://www.cgs.gov.cn/">中国地质调查局网站</a>，展示不同深度下的岩层概况。下图展示震级随震深的关系</p>
+<pre class="r"><code>ggplot(data = dat, aes(x = `深度(千米)`, y = `震级(M)`, color = `年份`)) +
+  geom_point() +
+  theme_minimal()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:cenc-mag-depth-year"></span>
+<img src="{{< blogdown/postref >}}index_files/figure-html/cenc-mag-depth-year-1.png" alt="震级和震深的关系" width="672" />
+<p class="caption">
+图 4.18: 震级和震深的关系
+</p>
+</div>
+<p>不难看出，在地下 300 公里以后，几乎都是 5-7 级的地震，小地震没有，更大的 7-8 级地震也很少。<strong>总的来说，地下很深的位置往往发生大地震，而大地震不一定发生在地下很深的位置</strong>。</p>
+<p>注意到一个有意思的数据情况，有的地震深度为 0，而且每年或多或少包含一些深度为 0 的「地震」，其实是矿震、塌陷、爆破、滑坡等，比如 2021 年地震仪监测到的一些塌陷事故。</p>
+<pre class="r"><code>subset(dat, subset = `深度(千米)` == 0 &amp; `年份` == 2021)</code></pre>
+<pre><code>##                 发震时刻 震级(M) 纬度(°) 经度(°) 深度(千米)
+## 1078 2021-09-21 14:45:29     3.0    34.53    113.5          0
+## 1149 2021-08-31 20:29:18     3.0    38.29    117.0          0
+## 1262 2021-07-24 09:55:52     1.5    39.94    115.9          0
+## 1281 2021-07-19 05:28:13     1.7    39.95    115.9          0
+## 1721 2021-03-18 10:10:57     3.1    39.04    110.6          0
+## 1734 2021-03-11 02:18:06     3.2    39.08    110.2          0
+##                          参考位置 时段 月份 年份       日期
+## 1078 河南郑州市新密市（疑似塌陷）   14   09 2021 2021-09-21
+## 1149     河北沧州市沧县(疑似塌陷)   20   08 2021 2021-08-31
+## 1262     北京门头沟区（疑似塌陷）   09   07 2021 2021-07-24
+## 1281       北京门头沟区(疑似塌陷)   05   07 2021 2021-07-19
+## 1721       陕西榆林市神木市(塌陷)   10   03 2021 2021-03-18
+## 1734     陕西榆林市神木市（塌陷）   02   03 2021 2021-03-11</code></pre>
+</div>
+</div>
+</div>
+<div id="session" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> 环境信息</h1>
+<p>在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 <strong>blogdown</strong> <span class="citation">(<a href="#ref-Xie2017" role="doc-biblioref">Xie, Hill, and Thomas 2017</a>)</span> 构建网站，<a href="https://github.com/gohugoio/hugo">Hugo</a> 渲染 knitr 之后的 Markdown 文件，得益于 <strong>blogdown</strong> 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，为方便复现本文内容，下面列出详细的环境信息：</p>
+<pre class="r"><code>xfun::session_info(packages = c(
+  &quot;knitr&quot;, &quot;rmarkdown&quot;, &quot;blogdown&quot;,
+  &quot;ggplot2&quot;, &quot;ggbeeswarm&quot;, &quot;ggridges&quot;,
+  &quot;sf&quot;, &quot;MSG&quot;, &quot;showtext&quot;
+), dependencies = FALSE)</code></pre>
+<pre><code>## R version 4.2.1 (2022-06-23)
+## Platform: x86_64-apple-darwin17.0 (64-bit)
+## Running under: macOS Big Sur ... 10.16
+##
+## Locale: zh_CN.UTF-8 / zh_CN.UTF-8 / zh_CN.UTF-8 / C / zh_CN.UTF-8 / zh_CN.UTF-8
+##
+## Package version:
+##   blogdown_1.13      ggbeeswarm_0.6.0   ggplot2_3.3.6.9000 ggridges_0.5.3
+##   knitr_1.40         MSG_0.8            rmarkdown_2.16     sf_1.0-8
+##   showtext_0.9-5
+##
+## Pandoc version: 2.19.2
+##
+## Hugo version: 0.101.0</code></pre>
+</div>
+<div id="refer" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> 参考文献</h1>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Clarke2017" class="csl-entry">
+Clarke, Erik, and Scott Sherrill-Mix. 2017. <em><span class="nocase">ggbeeswarm</span>: Categorical Scatter (Violin Point) Plots</em>. <a href="https://CRAN.R-project.org/package=ggbeeswarm">https://CRAN.R-project.org/package=ggbeeswarm</a>.
+</div>
+<div id="ref-Pebesma2018" class="csl-entry">
+Pebesma, Edzer. 2018. <span>“<span class="nocase">Simple Features for R: Standardized Support for Spatial Vector Data</span>.”</span> <em><span>The R Journal</span></em> 10 (1): 439–46. <a href="https://doi.org/10.32614/RJ-2018-009">https://doi.org/10.32614/RJ-2018-009</a>.
+</div>
+<div id="ref-Hadley2016" class="csl-entry">
+Wickham, Hadley. 2016. <em><span class="nocase">ggplot2</span>: Elegant Graphics for Data Analysis</em>. Springer-Verlag New York. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>.
+</div>
+<div id="ref-Wilke2021" class="csl-entry">
+Wilke, Claus O. 2021. <em><span class="nocase">ggridges</span>: Ridgeline Plots in <span class="nocase">ggplot2</span></em>. <a href="https://CRAN.R-project.org/package=ggridges">https://CRAN.R-project.org/package=ggridges</a>.
+</div>
+<div id="ref-Xie2017" class="csl-entry">
+Xie, Yihui, Alison Presmanes Hill, and Amber Thomas. 2017. <em><span class="nocase">blogdown</span>: Creating Websites with <span>R</span> Markdown</em>. Boca Raton, Florida: Chapman; Hall/CRC. <a href="https://bookdown.org/yihui/blogdown/">https://bookdown.org/yihui/blogdown/</a>.
+</div>
+<div id="ref-Zhao2021" class="csl-entry">
+赵鹏, 谢益辉, and 黄湘云. 2021. <em>现代统计图形</em>. 北京: 人民邮电出版社. <a href="https://bookdown.org/xiangyun/msg">https://bookdown.org/xiangyun/msg</a>.
+</div>
+</div>
+</div>
