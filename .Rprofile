@@ -1,7 +1,10 @@
 if (file.exists('~/.Rprofile')) sys.source('~/.Rprofile', globalenv())
 
 options(
-  digits = 4, servr.daemon = TRUE, formatR.indent = 2,
+  digits = 4, formatR.indent = 2,
+  blogdown.hugo.server = c(
+    '-D', '-F', '--navigateToChanged', '--noTimes'
+  ),
   blogdown.yaml.empty = FALSE, blogdown.publishDir = '../cosx-public'
 )
 
