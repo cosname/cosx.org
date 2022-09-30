@@ -1,0 +1,26 @@
+% 处理中文
+\usepackage[UTF8,fontset=fandol]{ctex}
+% 自定义 block
+\usepackage[skins]{tcolorbox}
+% 定义一个颜色
+\definecolor{colortip}{RGB}{81,183,73}
+% block 的全局设置
+\tcbset{
+  colbacktitle=white,
+  enhanced,
+  attach boxed title to top center={yshift=-2mm},
+  colback=white, % 背景色
+  coltext=black, % 文本色
+  leftrule=1mm,
+  rightrule=.25mm,
+  bottomrule=.25mm,
+  toprule=.25mm,
+  boxsep=1pt, % 文字和边框的空隙
+  arc=1pt % 圆角
+}
+% 新建一个 block
+\newtcolorbox{rmdtip}[1]{
+  title=#1,
+  coltitle=colortip,
+  colframe=colortip, % 边框色
+}

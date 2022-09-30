@@ -1,5 +1,5 @@
 ---
-title: '[火光摇曳]神奇的伽玛函数(下)'
+title: '神奇的伽玛函数(下)'
 date: '2014-07-01T19:52:23+00:00'
 author: 靳志辉
 categories:
@@ -11,9 +11,9 @@ slug: gamma-function-2
 forum_id: 419024
 ---
 
-原文链接： <http://www.flickering.cn/?p=203>
 
-# 五、`$ \Gamma(n) = (n-1)!$` 还是 `$ \Gamma(n) = n! $` ? 
+
+# 五、`$ \Gamma(n) = (n-1)!$` 还是 `$ \Gamma(n) = n! $` ?
 
 伽玛函数找到了，我们来看看第二个问题，为何伽玛函数被定义为满足 `$\Gamma(n)=(n-1)!$`? 这看起来挺别扭的，如果我们稍微修正一下，把伽玛函数定义中的 `$t^{x-1}$` 替换为 `$t^x$`
   
@@ -31,9 +31,9 @@ forum_id: 419024
 
 欧拉在伽玛函数的推导中实际上引入了两类积分形式
   
-`$$ \int_0^1 t^{x}(1-t)^{y}dt, \quad \quad \int_0^{\infty} t^{x}e^{-t}dt $$`
+`$$\int_0^1 t^{x}(1-t)^{y}dt, \quad \quad \int_0^{\infty} t^{x}e^{-t}dt$$`
   
-现在我们分别称为欧拉一类积分和欧拉二类积分。勒让德追随欧拉的脚步，发表了多篇论文对欧拉积分进行了深入的研究和推广，不过在勒让德的研究中，对积分中的参数做了 `$-1$`的移位修改，主要定义为
+现在我们分别称为欧拉一类积分和欧拉二类积分。勒让德追随欧拉的脚步，发表了多篇论文对欧拉积分进行了深入的研究和推广，不过在勒让德的研究中，对积分中的参数做了 `$-1$` 的移位修改，主要定义为
   
 `$$ B(x, y) = \int_0^1 t^{x-1}(1-t)^{y-1}dt $$`
   
@@ -45,12 +45,14 @@ forum_id: 419024
 
 <!--more-->
 
-什么原因驱使勒让德偏向选择`$\Gamma(n) = (n-1)!$` 的定义呢？ 这成为了一个谜，没有明确的解释。 不过有数学史研究者们对欧拉的研究表明，在`$1730\sim1768$`年之间欧拉自己在研究一类积分的时候，实际上就已经对积分中的参数做了$-1$的移位修改，从而明确的引入了贝塔积分，而这个修改显然被勒让德注意到了。 是什么原因使得欧拉和勒让德在研究他们的积分形式的时候都考虑引入$-1$ 移位修改呢？ 有数学家猜测一个可能的原因是这两位数学家注意到，如果按照现代伽玛函数的定义，那么有
-  
-`\begin{equation}  
+什么原因驱使勒让德偏向选择`$\Gamma(n) = (n-1)!$` 的定义呢？ 这成为了一个谜，没有明确的解释。 不过有数学史研究者们对欧拉的研究表明，在`$1730\sim1768$`年之间欧拉自己在研究一类积分的时候，实际上就已经对积分中的参数做了 `$-1$` 的移位修改，从而明确的引入了贝塔积分，而这个修改显然被勒让德注意到了。 是什么原因使得欧拉和勒让德在研究他们的积分形式的时候都考虑引入 `$-1$` 移位修改呢？ 有数学家猜测一个可能的原因是这两位数学家注意到，如果按照现代伽玛函数的定义，那么有
+
+
+\begin{equation}
 \label{beta-gamma-decompose}
-B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} ,
-\end{equation}`
+B(x,y) = \frac{\Gamma(x)\Gamma(y)}{\Gamma(x+y)} , \tag{2.12}
+\end{equation}
+
   
 `$B(x,y)$` 具有非常漂亮的对称形式。可是如果选取高斯给出的 `$\Pi(n)=n!$` 的定义，令
   
@@ -84,24 +86,24 @@ $$`
   
 做一个线性变换 `$h: t \rightarrow ct$`，可以得到如下函数
   
-`\begin{equation}
+\begin{equation}
 \label{generalized-gamma} 
-\frac{\Gamma(x)}{c^x} = \int_0^{\infty} e^{-ct} t^x \frac{dt}{t}  
-\end{equation}`
+\frac{\Gamma(x)}{c^x} = \int_0^{\infty} e^{-ct} t^x \frac{dt}{t}  \tag{2.13}
+\end{equation}
   
 由此 `$dt/t = d \log t$` 可以被看成是乘法群 `$(0, \infty)$` 上的一个不变测度，在尺度伸缩变换下满足不变性：
   
 `$$ \frac{d(ct)}{ct} = \frac{dt}{t} .$$`
   
-而 `$e^{-ct}$` 对应于群上的一个加法特征(additive character) $f$， 满足
+而 `$e^{-ct}$` 对应于群上的一个加法特征(additive character) `$f$`， 满足
   
 `$$f(t+s) =f(t) \cdot f(s) ,$$`
   
-`$t^x$`对应于群上的一个乘法特征(mulpicative character) $g$， 满足
+`$t^x$` 对应于群上的一个乘法特征(mulpicative character) `$g$`， 满足
   
 `$$g(t \cdot s) = g(t) \cdot g(s) .$$`
   
-由于积分表示的是求和， 所以\eqref{generalized-gamma} 式 被看成是乘法群 `$(0, \infty)$` 上加法特征和乘法特征混合乘积的累积求和。有了这个分解，只要在抽象代数的有限域上定义了$f$ 和$g$ 这两个映射， 实数域上定义的`$\frac{\Gamma(x)}{c^x}$` 函数就可以被推广到有限域上进行定义，只是无限求和的积分号变成了有限求和符号`$\Sigma$` 。 进一步，借用贝塔函数和伽玛函数满足的关系式\eqref{beta-gamma-decompose}, `$Beta(x,y)$`也可以完全类似的在有限域中定义出来， 而这种推广也将变得具有简洁的对称美。当然，这个理由和欧拉、勒让德的选择无关，而是现代数学家们给出的一个额外的解释。
+由于积分表示的是求和，所以 \eqref{generalized-gamma} 式 被看成是乘法群 `$(0, \infty)$` 上加法特征和乘法特征混合乘积的累积求和。有了这个分解，只要在抽象代数的有限域上定义了 `$f$` 和 `$g$` 这两个映射， 实数域上定义的 `$\frac{\Gamma(x)}{c^x}$` 函数就可以被推广到有限域上进行定义，只是无限求和的积分号变成了有限求和符号 `$\Sigma$` 。 进一步，借用贝塔函数和伽玛函数满足的关系式 \eqref{beta-gamma-decompose} , `$Beta(x,y)$` 也可以完全类似的在有限域中定义出来， 而这种推广也将变得具有简洁的对称美。当然，这个理由和欧拉、勒让德的选择无关，而是现代数学家们给出的一个额外的解释。
 
 # 六、伽玛函数欣赏
 
@@ -111,9 +113,9 @@ $$`
   
 另外， 伽玛函数不仅可以定义在实数集上，基于复变函数的理论还可以延拓到整个复平面上。所以我们不仅可以计算`$ (\frac{1}{2})!, (-7.5)!$`，我们甚至可以计算 `$(\frac{1}{2} + \frac{1}{3}i)!$`，阶乘的概念居然可以推广到虚数，这真是太神奇了！
 
-欧拉把$n!$ 推广之后得到了伽玛函数，很自然的一个问题是：伽玛函数是$n!$的唯一的插值推广函数吗？ 当然不是，丹尼尔·贝努利最早的无穷乘积推广就已经说明了存在多种推广延拓的方式。譬如`$f(x) = \Gamma(x) \cos (2n\pi)$` 这个函数显然也满足把 $n!$ 延拓到实数集。 那伽玛函数在延拓 $n!$ 的时候有什么特殊的地方呢？ 从伽玛函数的图像我们可以看到它是一个凸函数，所以我们很自然地会问伽玛函数是否是唯一的满足凸性的阶乘函数，可是答案还是否定的。 那伽马函数为什么鹤立鸡群呢？数学家们发现不仅 `$\Gamma(x)$` 是一个凸函数， `$\log\Gamma(x)$`也是一个凸函数，数学上可以证明如下定理:
+欧拉把`$n!$` 推广之后得到了伽玛函数，很自然的一个问题是：伽玛函数是 `$n!$` 的唯一的插值推广函数吗？ 当然不是，丹尼尔·贝努利最早的无穷乘积推广就已经说明了存在多种推广延拓的方式。譬如`$f(x) = \Gamma(x) \cos (2n\pi)$` 这个函数显然也满足把 `$n!$` 延拓到实数集。 那伽玛函数在延拓 `$n!$` 的时候有什么特殊的地方呢？ 从伽玛函数的图像我们可以看到它是一个凸函数，所以我们很自然地会问伽玛函数是否是唯一的满足凸性的阶乘函数，可是答案还是否定的。 那伽马函数为什么鹤立鸡群呢？数学家们发现不仅 `$\Gamma(x)$` 是一个凸函数， `$\log\Gamma(x)$`也是一个凸函数，数学上可以证明如下定理:
 
-**[Bohr-Mullerup 定理]** 如果 `$f:(0,\infty)\rightarrow (0,\infty)$`,且满足
+**[Bohr-Mullerup 定理]** 如果 `$f:(0,\infty)\rightarrow (0,\infty)$`,且满足
 
   1. `$f(1) = 1$`
   2. `$f(x+1) = xf(x)$`
@@ -146,7 +148,7 @@ $$`
   
 `$$ f(x)^{(k)} = \frac{\Gamma{(n+1)}}{\Gamma{(n-k+1)}} x^{n-k} $$`
   
-基于上式，可以把导数的阶从整数延拓到实数集。例如，取`$n=1, k=\frac{1}{2}$` 我们可以计算 $x$ 的 `$\frac{1}{2}$`阶导数为
+基于上式，可以把导数的阶从整数延拓到实数集。例如，取`$n=1, k=\frac{1}{2}$` 我们可以计算 `$x$` 的 `$\frac{1}{2}$`阶导数为
   
 `$$ f(x)^{(\frac{1}{2})} = \frac{\Gamma{(1+1)}}{\Gamma{(1-1/2+1)}} x^{1-1/2}
 = \frac{2\sqrt{x}}{\sqrt{\pi}} .$$`
@@ -155,7 +157,7 @@ $$`
 
   ![n 维球的体积](https://uploads.cosx.org/2014/07/n-dim-ball.jpg)
 
-伽马函数还有一个奇妙的运用是求高维空间中球的体积。我们知道 二维球是圆；其面积为 `$\pi r^2$`，三维球的体积为 `$\frac{4}{3} \pi r^3$`，那$n$维空间中半径为$r$的球的体积如何计算呢？ 数学上这个体积应该是如下多重积分
+伽马函数还有一个奇妙的运用是求高维空间中球的体积。我们知道 二维球是圆；其面积为 `$\pi r^2$`，三维球的体积为 `$\frac{4}{3} \pi r^3$`，那`$n$`维空间中半径为`$r$`的球的体积如何计算呢？ 数学上这个体积应该是如下多重积分
   
 `$$ \displaystyle V_n(r) = \idotsint\limits_{ \tiny \{(x_1, \cdots, x_n) | \sum x_i^2 < r^2 \} } 1 \quad dx_1dx_2 \cdots dx_n $$`
   
@@ -225,7 +227,7 @@ $$`
 
   ![gamma-distribution](https://uploads.cosx.org/2014/07/gamma-distribution.png)
 
-伽玛分布在概率统计领域也是一个万人迷，众多统计分布和它有密切关系。指数分布和 $\chi^2$ 分布都是特殊的伽玛分布。另外伽玛分布是一个很强大的先验分布，在贝叶斯统计分析中被广泛的用作其它分布的先验。如果把统计分布中的共轭关系类比为人类生活中的情侣关系的话，那指数分布、泊松分布、正态分布、对数正态分布都可以是伽玛分布的情人。
+伽玛分布在概率统计领域也是一个万人迷，众多统计分布和它有密切关系。指数分布和 `$\chi^2$` 分布都是特殊的伽玛分布。另外伽玛分布是一个很强大的先验分布，在贝叶斯统计分析中被广泛的用作其它分布的先验。如果把统计分布中的共轭关系类比为人类生活中的情侣关系的话，那指数分布、泊松分布、正态分布、对数正态分布都可以是伽玛分布的情人。
 
 接下来的内容中我们主要关注`$\beta = 1$`的简单形式的伽玛分布。伽玛分布首先和泊松分布发生密切的联系。我们容易发现伽玛分布的概率密度和泊松分布在数学形式上具有高度的一致性。参数为`$\lambda$`的泊松分布，概率写为
   
@@ -244,22 +246,22 @@ $$`
   2. 每一个充分小时间片上最多只能接到一个电话。
   3. 平均而言，假设每个长度为1的单位时间片上接到电话个数是1；
 
-如果我们考察 `$[0, \lambda]$` 这个时间区间，那么平均而言，这个长度为 `$\lambda$` 的时间片上应该接到 `$\lambda$` 个电话，把这个时间区间分成 $n$ 个独立的小片，那么每个时间片上接到一个电话的概率恰好是 `$p = \lambda/n$`。当$n$ 足够大的时候，每个时间片上只能是接到一个电话或者没有接到电话，恰好对应于成功概率为$p$ 的一个贝努利实验，于是$n$ 个时间片对应于$n$ 个独立的贝努利实验，所以 `$[0, \lambda]$`这个时间区间上接到的电话总数$X$ 应该符合二项分布
+如果我们考察 `$[0, \lambda]$` 这个时间区间，那么平均而言，这个长度为 `$\lambda$` 的时间片上应该接到 `$\lambda$` 个电话，把这个时间区间分成 `$n$` 个独立的小片，那么每个时间片上接到一个电话的概率恰好是 `$p = \lambda/n$`。当`$n$` 足够大的时候，每个时间片上只能是接到一个电话或者没有接到电话，恰好对应于成功概率为`$p$` 的一个贝努利实验，于是`$n$` 个时间片对应于`$n$` 个独立的贝努利实验，所以 `$[0, \lambda]$`这个时间区间上接到的电话总数`$X$` 应该符合二项分布
   
 `$$p(X=k) = \binom{n}{k} p^k(1-p)^{n-k} .$$`
   
-由于 `$np= \lambda$`, 于是 $n$ 趋向于无穷的时候，粒子个数$X$将满足参数为`$\lambda$` 的泊松分布
+由于 `$np= \lambda$`, 于是 `$n$` 趋向于无穷的时候，粒子个数`$X$`将满足参数为`$\lambda$` 的泊松分布
   
 `$$p(X=k) = \frac{\lambda^k e^{-\lambda}}{k!} .$$`
 
-熟悉随机过程理论的读者马上会发现以上模型实际上是参数为1 的泊松过程。 我们关心的问题是：什么时候会接到第`${k+1}$ `个电话？或者说接到第$k+1$ 个电话的时间点 `$Y_{k+1}$` 会是什么概率分布？ 形式化的描述就是如何计算如下的概率？
+熟悉随机过程理论的读者马上会发现以上模型实际上是参数为1 的泊松过程。 我们关心的问题是：什么时候会接到第`${k+1}$`个电话？或者说接到第`$k+1$` 个电话的时间点 `$Y_{k+1}$` 会是什么概率分布？ 形式化的描述就是如何计算如下的概率？
   
 `$$ P(\lambda < Y_{k+1} \le \lambda + d\lambda) = ? $$`
   
-上式表明第$k+1$ 个电话落在长度为 `$d\lambda$` 的区间 `$(\lambda, \lambda + d\lambda] $`内，这个概率事件可以分解为两个独立事件
+上式表明第`$k+1$` 个电话落在长度为 `$d\lambda$` 的区间 `$(\lambda, \lambda + d\lambda] $`内，这个概率事件可以分解为两个独立事件
 
   1. 区间 `$(\lambda, \lambda + d\lambda] $` 内接到一个电话，这个概率是 `$d \lambda$`
-  2. 区间 `$[0, \lambda]$` 内接到了前$k$ 个电话，这个概率是 
+  2. 区间 `$[0, \lambda]$` 内接到了前`$k$` 个电话，这个概率是
   
   `$$ p(X=k) = \frac{\lambda^k e^{-\lambda}}{k!} .$$`
 
@@ -267,11 +269,11 @@ $$`
   
 `$$ P(\lambda < Y_{k+1} \le \lambda + d\lambda) = p(X=k) \cdot d \lambda .$$`
   
-由于第$k+1$ 个电话必然出现在时间轴上某处，所以把时间轴所有无穷小区间上的概率累加起来，正好对应于必然事件的概率1，所以有
+由于第`$k+1$` 个电话必然出现在时间轴上某处，所以把时间轴所有无穷小区间上的概率累加起来，正好对应于必然事件的概率1，所以有
   
 `$$ \int_0^\infty p(X=k) \cdot d \lambda = 1 $$`
 
-把`$P(X=k)$ `带入上式即可得到
+把`$P(X=k)$`带入上式即可得到
   
 `$$ \int_0^\infty \frac{\lambda^k e^{-\lambda}}{k!} d \lambda = 1 $$`
   
@@ -282,32 +284,33 @@ $$`
 如果我们把伽玛函数和`$e^\lambda$`的泰勒展开式对照写成如下形式
   
 `\begin{align} 
-e^\lambda = \sum_{k=0}^{\infty} {\lambda^k \over k!} \\
-k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
+e^\lambda &= \sum_{k=0}^{\infty} {\lambda^k \over k!} \tag{2.14}\\
+k! &= \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.  \tag{2.15}
 \end{align}`
   
 我们发现这两个式子形式上具有对偶关系。由于`$\sum$` 和`$\int$` 都表示求和， 几乎可以认为从第一个式子只是把 `$e^\lambda$` 和 `$k!$` 交换一下就得到了第二个式子。 这两个式子之间有更多的内在联系吗？事实上有如下一个奇妙的等式成立 
 
-`\begin{equation} 
-\label{gamma-e-taylor} \frac{1}{k!} \int_0^\lambda \frac{\lambda^k}{e^\lambda} d\lambda + \frac{1}{e^\lambda} \sum_{n=0}^k \frac{\lambda^n}{n!} = 1 
-\end{equation}`
+\begin{equation} 
+\label{gamma-e-taylor} 
+\frac{1}{k!} \int_0^\lambda \frac{\lambda^k}{e^\lambda} d\lambda + \frac{1}{e^\lambda} \sum_{n=0}^k \frac{\lambda^n}{n!} = 1 \tag{2.16}
+\end{equation}
   
-用上面描述的泊松过程的物理模型，可以很容易的证明这个等式。我们把数轴分成 `$(0, \lambda]$` 和 `$(\lambda, \infty)$` 这两个区间，考察第$k+1$ 个电话接到时间 `$Y_{k+1}$` 分别落在这两个区间的概率，当然有 `$$ P(Y_{k+1} \le \lambda) + P(Y_{k+1} > \lambda) = 1 $$`
+用上面描述的泊松过程的物理模型，可以很容易的证明这个等式。我们把数轴分成 `$(0, \lambda]$` 和 `$(\lambda, \infty)$` 这两个区间，考察第`$k+1$` 个电话接到时间 `$Y_{k+1}$` 分别落在这两个区间的概率，当然有 `$$ P(Y_{k+1} \le \lambda) + P(Y_{k+1} > \lambda) = 1 $$`
   
-按照上述的物理模型，显然第$k+1$ 个电话的时间落入`$(0, \lambda]$` 的概率为
+按照上述的物理模型，显然第`$k+1$` 个电话的时间落入`$(0, \lambda]$` 的概率为
   
 `$$ P(Y_{k+1} \le \lambda) = \int_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!} d \lambda $$`
   
-如果第$k+1$ 个电话的时间点落入 `$(\lambda, \infty)$`，这个事件等价地可以理解为 `$(0, \lambda]$` 上的电话个数不能超过 $k$ 个，由于`$(0, \lambda]$` 这个有限时间区间上的电话次数符合参数为`$\lambda$` 的泊松分布， 所以这个概率为
+如果第`$k+1$` 个电话的时间点落入 `$(\lambda, \infty)$`，这个事件等价地可以理解为 `$(0, \lambda]$` 上的电话个数不能超过 `$k$` 个，由于`$(0, \lambda]$` 这个有限时间区间上的电话次数符合参数为`$\lambda$` 的泊松分布， 所以这个概率为
   
 `$$ P(Y_{k+1} > \lambda) = \sum_{n=0}^k \frac{\lambda^n e^{-\lambda} }{n!} $$`
   
 所以我们得到
   
-`\begin{equation}  
+\begin{equation}  
 \label{poisson-gamma-dual}  
-\int_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!}d\lambda+\sum_{n=0}^k \frac{\lambda^n e^{-\lambda}}{n!} = 1  
-\end{equation}`
+\int_0^\lambda \frac{\lambda^k e^{-\lambda}}{k!}d\lambda+\sum_{n=0}^k \frac{\lambda^n e^{-\lambda}}{n!} = 1  \tag{2.17}
+\end{equation}
   
 这个式子俗称泊松-伽玛对偶，简单整理一下就是 \eqref{gamma-e-taylor} 式。
 
@@ -316,21 +319,21 @@ k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
 `$$ e^{-\lambda} = \lim_{n\rightarrow \infty} (1- \frac{\lambda}{n}) ^n $$`
   
 所以伽马分布的概率密度可以重写为
-  
+
 `\begin{align*}  
-\frac{\lambda^k e^{-\lambda}}{k!}  
-& = \lim_{n\rightarrow \infty} \frac{\lambda^k (1-\frac{\lambda}{n}) ^n}{k!} \\  
-& = \lim_{n\rightarrow \infty} \frac{ n! n^k (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n}{k! \cdot n!} \\ 
-& = \lim_{n\rightarrow \infty} \frac{(n+k)!}{k!\cdot n!} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n \\  
-& = \lim_{n\rightarrow \infty} \binom{n+k}{k} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n  
+\frac{\lambda^k e^{-\lambda}}{k!} 
+&= \lim_{n\rightarrow \infty} \frac{\lambda^k (1-\frac{\lambda}{n}) ^n}{k!} \\
+&= \lim_{n\rightarrow \infty} \frac{ n! n^k (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n}{k! \cdot n!} \\
+&= \lim_{n\rightarrow \infty} \frac{(n+k)!}{k!\cdot n!} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n \\
+&= \lim_{n\rightarrow \infty} \binom{n+k}{k} (\frac{\lambda}{n})^k (1-\frac{\lambda}{n}) ^n   
 \end{align*}`
+
+显然上式具有明确的二项分布的物理含义。事实上，二项分布和贝塔分布之间也存在完全类似 \eqref{poisson-gamma-dual} 的一个等式：
   
-显然上式具有明确的二项分布的物理含义。事实上，二项分布和贝塔分布之间也存在完全类似\eqref{poisson-gamma-dual} 的一个等式：
-  
-`\begin{equation}
+\begin{equation}
 \label{binomial-beta-dual}
-\frac{n!}{k!(n-k-1)!} \int_0^p t^k(1-t)^{n-k-1} dt + \sum_{v=0}^k \binom{n}{v} p^v(1-p)^{n-v} = 1  
-\end{equation}`
+\frac{n!}{k!(n-k-1)!} \int_0^p t^k(1-t)^{n-k-1} dt + \sum_{v=0}^k \binom{n}{v} p^v(1-p)^{n-v} = 1  \tag{2.18}
+\end{equation}
   
 如果我们知道`$n\rightarrow\infty$`时上式中二项分布的极限是泊松分布，而贝塔分布的极限是伽玛分布，那么就很容易理解 \eqref{poisson-gamma-dual} 其实可以看做是 \eqref{binomial-beta-dual} 的极限形式。
 
@@ -343,7 +346,6 @@ k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
 伽玛函数这颗大树在现代数学中如此繁茂，笔者知识有限仅能描绘它很有限的一部分。这个函数在数学上魅力独特，不仅能够被一个理科本科生很好的理解，它本身又足够的深刻，具有很多漂亮的数学性质，历史上吸引了众多一流的数学家对它进行探索研究。美国数学家 Philip J.Davis 在1959年在《美国数学月刊》上发表了一篇很有名的介绍伽玛函数的文章，文中对伽玛函数一些特性发现的历史进行了详细的描述，这篇文章获得了 Chauvenet Prize (美国数学会颁发的数学科普奖)。 他在文中最后总结道：
 
 > Each generation has found something of interest to say about the gamma function. Perhaps the next generation will also. (每一代人都发现了一些伽马函数的有趣性质，也许下一代人也会有所发现。)    
-     
 
 # 九、推荐阅读
   
@@ -359,4 +361,6 @@ k! = \int_0^{\infty} {\lambda^k \over e^\lambda}\ d\lambda.
   * George E. Andrews et al., Special Functions, Cambridge University Press, 2001
   * Ian Tweddle, James Stirling’s Methodus Differentialis: An Annotated Translation of Stirling’s Text, Springer, 2003
 
-![flickering-logo](https://uploads.cosx.org/2014/07/flickering-logo.png)
+---
+
+下载 LaTeX 排版的 PDF 格式文档，请[点击这里](https://uploads.cosx.org/2014/07/gamma.pdf)。

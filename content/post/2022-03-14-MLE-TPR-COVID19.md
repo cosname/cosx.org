@@ -4,7 +4,7 @@ date: 2022-04-12
 author: "董书昊"
 categories: ["统计应用"]
 tags: ["核酸检测", "似然估计"]
-meta_extra: "审稿：黄湘云, 林枫；编辑：黄湘云"
+meta_extra: "审稿：黄湘云；编辑：黄湘云"
 slug: mle-tpr-covid19
 forum_id: 423102
 ---

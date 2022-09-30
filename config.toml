@@ -33,9 +33,14 @@ footnotereturnlinkcontents = "↩"
   weight = 3
 
 [[menu.top]]
+  name = "R会"
+  url = "https://china-r.org/"
+  weight = 4
+
+[[menu.top]]
   name = "投稿"
   url = "/contribute/"
-  weight = 4
+  weight = 5
 
 [params.banner]
   src = "/img/logo.png"
@@ -60,16 +65,17 @@ footnotereturnlinkcontents = "↩"
   uncategorized = "未分类"
   title_categories = "栏目分类"
   title_tags = "关键词列表"
+  last_update = "最近更新于"
 
 [params]
-	copyright = "统计之都 版权所有 2006 - 2021"
+	copyright = "统计之都 版权所有 2006 - 2022"
 	description = "中国统计学门户网站，免费统计学服务平台"
 
   summary_length = 200
   github_edit = "https://github.com/cosname/cosx.org/edit/master/content/"
   comment_url = "https://d.cosx.org/d/"
   comment_embed_url = "https://d.cosx.org/embed/"
-  footer = "&copy; [统计之都](https://cosx.org) 2006 - 2021 | [新浪微博](http://weibo.com/cosname) | [Github](https://github.com/cosname) | [Bilibili](https://space.bilibili.com/22035559) | [知乎](https://www.zhihu.com/people/CapStat) ｜ [RSS](https://cosx.org/index.xml)"
+  footer = "&copy; [统计之都](https://cosx.org) 2006 - 2022 | [新浪微博](http://weibo.com/cosname) | [Github](https://github.com/cosname) | [Bilibili](https://space.bilibili.com/22035559) | [知乎](https://www.zhihu.com/people/CapStat) ｜ [RSS](https://cosx.org/index.xml)"
 
 [markup]
     [markup.goldmark.renderer]

@@ -1,0 +1,727 @@
+---
+title: "Echarts4r 挥发化飞花"
+author: "袁凡"
+date: "2022-04-28"
+categories:
+  - R 语言
+tags:
+  - echarts4r
+  - Apache Echarts
+output:
+  blogdown::html_page:
+    toc: true
+link-citations: true
+forum_id: 423132
+slug: echarts4r-flower
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{css, echo=FALSE}
+.col-xs-4 {
+  display: inline-block; 
+  width: 33%; 
+}
+
+.col-xs-6 {
+  display: inline-block; 
+  width: 49%; 
+}
+```
+
+
+如同死生、枯荣是生物的一体两面，确定性与不确定性也是数据分析的一体两面。拿到一份数据后，真得能用各种分析手段探索得到百分百的确定性吗？如若分析的终点仍然是去面对一片未知，是不是只可以在路途中留下一份权衡取舍后的确定性结论呢？在大数据的时代，人们总是要用文字、用图形、用表格去描述隐藏在数据中的确定性。本（一）文（条）作（咸）者（鱼）在一次无穷无尽的数据探索过程中，日日盯着那些图形看，看着看着忽然开了一个脑洞，在人类创造出那么多概念和工具之前，自然界的花花草草早就已经存在，不妨试试把画图工具只是用来画一些花草。
+
+在那么多图形类型里，与花草形状最接近的是饼状图。饼图有三种，像披萨一样的扇形饼图，像可以套在脖子上吃的饼一样的环形饼图，以及南丁格尔女士发明的玫瑰图。本文使用 echarts4r 包作为绘图工具，首先介绍一些将饼图改造成花草图案的基础要点，随后绘制几种花与草的图案作为示例。
+
+>注意1：本文部分代码较为冗长，为了方便对照观看，部分代码未做格式化处理。
+>
+>注意2：有些人看到多重花瓣的图可能会出现头晕、眼花等不适症状，请谨慎观看。
+
+
+# 基础要点1：花瓣弧度
+
+在 echarts4r 包中用`e_pie()`函数画饼状图，改变扇区弧度就会形成花瓣。
+
++ `radius`，用于设置饼图中扇区的半径，可输入三种类型的数据：数值、百分比、含有两个百分比的数组。仅设定一个数值或百分比、或数组中第一个百分比为0%时，会画出来如下图中第一排的扇形饼图。形如`radius = c("10%", "30%")`，第一个百分比10%代表环形饼图的内圈半径，第二个百分比30%代表环形饼图的外圈半径。
+
++ `roseType = "radius"`，在`e_pie`中设置此参数后可以画出南丁格尔玫瑰图，如下图中第三排。当每个扇区数据项对应的数值完全一致时，等同于普通的扇形饼图。
+
++ `center = c('20%', '20%')`，用于设置饼图中心点在整个图形容器中的位置，数组中的两个百分比取值范围均为[0%,100%]。第一个值设定的是左右方位，最左边是0%，最右边是100%。第二个值设定的是上下方位，最上边是0%，最下边是100%。
+
++ `color = '#FF6A6A'`，用于设置饼图中扇区的颜色。整段代码中第一个`e_pie()`函数中设定的颜色为全局调色盘，若后续绘制的饼图中不对颜色做出新的设定，那么默认引入全局调色盘。
+
++ `itemStyle = list( )`中可设置饼状图扇区的弧度，即花瓣的弧度
+    - `borderRadius`，当上面的`radius`仅设定一个数值或百分比，且此参数也仅设定一个数值或百分比时，改变的是扇形饼图的外圈弧度，参见下图中第一排左一至左二；当上面的`radius`设定的数组中有两个大于0%的值，且此参数仍然仅设定一个数值或百分比时，同时改变环形饼图内圈及外圈的弧度，参见下图中第二排左一至左二；设定`borderRadius = c('0%','30%')`时表示仅改变环形饼图外圈的弧度，参见下图中第二排的左一及左三。
+    - `borderColor`，设定的是饼状图扇区的描边颜色，参见第二排左四。
+    - `borderWidth`，设定的是饼状图扇区的描边距离，即花瓣之间的间距，参见第一排左二、左三、左四。
+
+```{r}
+library(echarts4r)
+
+df <-
+  data.frame(
+    name = rep('A', 8),
+    value = c(rep(8, 8)),
+    value2 = c(rep(c(4, 5), 4))
+  )
+
+df |>
+  e_charts(name) |>
+  # 第一排 左一
+  e_pie( value, radius = c("0%", "30%"), center = c('20%', '20%'), color = '#FF6A6A') |>
+  # 第一排 左二
+  e_pie( value, radius = c("0%", "30%"), center = c('40%', '20%'), 
+          itemStyle = list( borderRadius = 30)) |>
+  # 第二排 左三
+  e_pie( value, radius = c("0%", "30%"), center = c('60%', '20%'), 
+    itemStyle = list( borderRadius = 30, borderColor = '#fff', borderWidth = 2 )) |>
+  # 第二排 左四
+  e_pie( value, radius = c("0%", "30%"), center = c('80%', '20%'),
+    itemStyle = list( borderRadius = 30, borderColor = '#fff', borderWidth = 10 )) |>       
+  # 第二排 左一
+  e_pie( value, radius = c("10%", "30%"), center = c('20%', '50%') ) |>
+  # 第二排 左二
+  e_pie( value, radius = c("10%", "30%"), center = c('40%', '50%'), 
+    itemStyle = list( borderRadius = 30 )) |>
+  # 第二排 左三
+  e_pie( value, radius = c("10%", "30%"), center = c('60%', '50%'), 
+    itemStyle = list( borderRadius = c('0%','30%'))) |>
+  # 第二排 左四
+  e_pie( value, radius = c("10%", "30%"), center = c('80%', '50%'), 
+    itemStyle = list( borderRadius = c('0%','30%'), borderColor = '#FFC1C1', borderWidth = 10)) |>
+  # 第三排 左一
+  e_pie( value2, roseType = "radius" ,radius='30%', center = c('20%', '80%')) |>
+  # 第三排 左二
+  e_pie( value2, roseType = "radius" ,radius=c('10%','30%'), center = c('40%', '80%')) |>
+  # 第三排 左三
+  e_pie( value2, roseType = "radius" ,radius='30%', center = c('60%', '80%'),
+    itemStyle = list( borderRadius = 30)) |>
+  # 第三排 左四
+  e_pie( value2, roseType = "radius" ,radius=c('10%','30%'), center = c('80%', '80%'),
+    itemStyle = list( borderRadius = c('10%','30%'), borderColor = '#FFC1C1', borderWidth = 10 )) |>
+  e_labels(show = FALSE) |> # 不显示数据标签
+  e_legend(show = FALSE)  # 不显示图例
+
+```
+
+
+# 基础要点2：花瓣颜色
+
+设置花瓣颜色的基础要点有四点：渐变色、纹理填充、纯色，以及为不同的花瓣分配不同颜色。
+
+## 渐变色
+
+若要将花瓣的颜色设置为渐变色，可参考 Apache Echarts 官网提供的配置项手册：<https://echarts.apache.org/zh/option.html#color>，渐变色有两种渐变方式：
+
++ `type = 'linear'`，线性渐变，类似直角坐标系可以划分出四个象限，可通过设定x0、y0、x2、y2等左、下、右、上四个方位来改变渐变的方向，比如仅设定`x0 = 0`且其他三个参数都为0时，表示从右到左渐变，仅设定`y0 = 1`其他三个都为0时，表示从下到上渐变。
+
++ `type = 'radial'`，径向渐变，如同在水中投入一粒石子，水面形成的波纹一圈圈逐渐向外扩散，颜色也如此由内到外渐变。类似极坐标系需要设定半径和角度，可设定三个参数圆心 x、y 和半径 r 来改变渐变的起点位置、半径长度。
+
+下图中的颜色设置得有点辣眼睛，请先做好心理准备。
+
+```{r}
+df |>
+  e_charts(name) |>
+  e_pie(
+    value, # 左侧花瓣
+    radius = c("20%", "60%"),
+    center = c('30%', '50%'),
+    itemStyle = list(
+      borderRadius = c("0%", "40%"),
+      borderColor = '#fff',
+      borderWidth = 2,
+      color = list(
+        type = 'linear',
+        x = 0,
+        y = 1,
+        x2 = 0,
+        y2 = 0,
+        colorStops = list(list(offset = 0, color = '#1E90FF'), # 0%处的颜色
+                          list(offset = 1, color = '#B22222') # 100%处的颜色
+                          ) ) ) ) |> 
+      e_pie(
+        value, # 右侧花瓣
+        radius = c("20%", "60%"),
+        center = c('70%', '50%'),
+        itemStyle = list(
+          borderRadius = c("0%", "40%"),
+          borderColor = '#fff',
+          borderWidth = 2,
+          color = list(
+            type = 'radial',
+            x = 0.5,
+            y = 0.5,
+            r = 0.5,
+            colorStops = list(list(offset = 0, color = '#1E90FF'), # 0%处的颜色
+                              list(offset = 1, color = '#B22222') # 100%处的颜色
+                              ) ) ) ) |>
+          e_labels(show = FALSE) |>
+          e_legend(show = FALSE)
+```
+
+## 纹理填充
+
+若要给花瓣设置填充的纹理，可参考 Apache Echarts 官网提供的配置项手册：<https://echarts.apache.org/zh/option.html#aria.decal.decals.symbol>。填充的纹理通常由一些常见形状如圆形、三角形等组成，在 echarts4r 包中的写法是`e_aria(enabled = TRUE, decal = list(show = TRUE, decals = list( )))`，其中可设定的参数有如下几点。
+
++ `symbol`，作为纹理填充的图形形状，共有'circle'、'rect'、'roundRect'、'triangle'、'diamond'、'pin'、'arrow'、'none'等图案。
++ `color`，作为纹理填充的图形颜色。
++ `symbolSize`，作为纹理填充的图形大小，设置为0时等同于没有填充纹理。
++ `rotation`，作为纹理填充的图形可以旋转的角度。
+
+```{r}
+df |>
+  e_charts(name) |>
+  e_pie(
+    value,
+    radius = c("20%", "80%"), #花瓣内圈、外圈弧度
+    color = '#FF6A6A', # 花瓣的颜色
+    itemStyle = list(
+      borderRadius = c('0%','50%'), #花瓣描边的弧度
+      borderColor = '#fff', # 花瓣描边颜色
+      borderWidth = 2 # 花瓣之间的距离
+    )
+  ) |>
+  e_aria(enabled = TRUE,
+         decal = list(
+           show = TRUE,
+           decals = list(
+             symbol = 'triangle',
+             color = '#fff',
+             symbolSize = 1,
+             rotation = 30
+           )
+         )) |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+## 纯色
+
+承袭 Apache Echarts 的设定，echarts4r 包中的饼状图默认给每个数据项分配不同的颜色，即`e_charts`中输入的数据项有几个不同的值，便默认为饼状图中的扇区分配几种颜色。
+
+```{r}
+df1 <- data.frame(name = letters[1:8], value = rep(8, 8))
+
+df1 |>
+  e_charts(name) |>
+  e_pie(value) |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+## 给花瓣分配颜色
+
+除了可以通过改变数据项来改变饼状图的扇区配色以外，也可以直接在`e_pie()`中设定`color = ''`来改变整个饼状图的颜色，还可以通过`e_add()`函数来分配扇区的颜色，条件是需要引入一个为每个扇区分配好颜色的数组。具体的颜色设置可参考：<https://www.sojson.com/rgb.html>。下图中从左至右三个图的代码基本一致，区别只是`e_add('itemStyle', color = color1)`这段中从左至右分别写入`color = color1`、`color = color2`、`color = color3`。
+
+```{r, eval= FALSE}
+df2 <- data.frame(
+  name = rep('A', 8),
+  value = c(rep(8, 8)),
+  color1 = c(rep('#FF6A6A', 4), rep('#FF3030', 4)), # 左一：8瓣-2色-颜色分开
+  color2 = c(rep(c('#FF6A6A', '#FF3030'), 4)), # 左二：8瓣-2色-颜色交替
+  color3 = c('#FF6A6A', rep('#FF3030', 7)) # 左三：8瓣-2色-一瓣单色
+)
+
+df2 |>
+  e_charts(name) |>
+  e_pie(
+    value,
+    radius = c("20%", "80%"),
+    itemStyle = list(
+      borderRadius = c('0%', '50%'),
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_add('itemStyle', color = color1) |> # 引入分配的颜色
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+```{r, echo = FALSE}
+df2 <- data.frame(
+  name = rep('A', 8),
+  value = c(rep(8, 8)),
+  color1 = c(rep('#FF6A6A', 4), rep('#FF3030', 4)),
+  color2 = c(rep(c('#FF6A6A', '#FF3030'), 4)),
+  color3 = c('#FF6A6A', rep('#FF3030', 7))
+)
+
+e1 <- df2 |>
+  e_charts(name) |>
+  e_pie(
+    value,
+    radius = c("20%", "80%"),
+    itemStyle = list(
+      borderRadius = c("0%", "50%"),
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_add('itemStyle',color=color1)|>
+  e_labels(show = FALSE)|>
+  e_legend(show = FALSE)
+
+e2 <- df2 |>
+  e_charts(name) |>
+  e_pie(
+    value,
+    radius = c("20%", "80%"),
+    itemStyle = list(
+      borderRadius = c("0%", "50%"),
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_add('itemStyle',color=color2)|>
+  e_labels(show = FALSE)|>
+  e_legend(show = FALSE)
+
+e3 <- df2 |>
+  e_charts(name) |>
+  e_pie(
+    value,
+    radius = c("20%", "80%"),
+    itemStyle = list(
+      borderRadius = c("0%", "50%"),
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_add('itemStyle',color=color3)|>
+  e_labels(show = FALSE)|>
+  e_legend(show = FALSE)
+
+e_arrange(e1, e2, e3, cols = 3, rows = 1)
+```
+
+# 基础要点3：多重花瓣
+
+掌握了以上两个基础要点后就可以用 echarts4r 包来绘制简单的单瓣花，而绘制重瓣花需要掌握嵌套和堆叠这两种方法。
+
+## 改变花瓣边缘的形状
+
+在 echarts4r 包中可使用`e_data()`引入新数据来嵌套绘制出多个饼状图。需要注意的是，倘若在第一层的`radius`中设置的外圈半径大于第二层的内圈半径，两层饼状图的图案会重叠。
+
+下图中一共嵌套了三层饼图，参照第一小节中的说明，当第二层饼图的内外圈半径设置为`radius = c("20%", "80%")`，第三层的内外圈半径设置为`radius = c("70%", "90%")`时，相当于第二层和第三层在图形容器中的70%至80%处会重叠，第三层会覆盖第二层的部分区域，若同时将第三层的扇区颜色设置为白色，便可达到改变第一层花瓣边缘形状的效果。
+
+```{r}
+flower1 <- data.frame(name = 'A', value1 = 1)
+flower2 <- data.frame(name2 = rep('B', 8),  value2 = rep(3, 8))
+flower3 <- data.frame(name3 = rep('B', 24), value3 = rep(3, 24))
+
+flower1 |>
+  e_charts(name) |>
+  e_pie(value1, # 第一层 花蕊
+        radius = c("0%", "20%"),
+        color = '#FF3030') |>
+  e_data(flower2, value2) |> # 引入第二层数据
+  e_pie(
+    value2, # 第二层 花瓣
+    radius = c("20%", "80%"),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '50%'),
+      borderColor = '#fff',
+      borderWidth = 5
+    )
+  ) |>
+  e_data(flower3, value3) |> # 引入第三层数据
+  e_pie(
+    value3, # 第三层 花瓣
+    radius = c("70%", "90%"),
+    #color = 'white', # 花瓣颜色设置为白色时不起作用
+    itemStyle = list(
+      color = 'white', # 花瓣颜色设置为白色
+      borderRadius = 40,
+      borderColor = '#fff',
+      borderWidth = 5
+    )
+  ) |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+## 嵌套多层--各层颜色不同
+
+根据嵌套饼状图多层覆盖的特性，将第一、二、三层按照下层花瓣、上层花瓣、花蕊的顺序进行设置，如此便可以得到有多重花瓣的花。为了不使各层花瓣的不同颜色重叠，可将上层花瓣的扇区进行旋转，即在`e_pie()`中添加`startAngle`参数来设定起始角度，可填入数值的范围为[0, 360]。
+
+```{r}
+flower1 <- data.frame(name = rep('A', 16), value = rep(1, 16))
+flower2 <- data.frame(name = rep('B', 16), value2 = rep(2, 16))
+flower3 <- data.frame(name = 'A', value3 = 1)
+
+flower1 |>
+  e_charts(name) |>
+  e_pie(
+    value,  # 第一层 下层花瓣
+    radius = c('10%', '90%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = '#fff',
+      borderWidth = 12
+    )
+  ) |>
+  e_data(flower2, value2) |> # 引入第二层数据
+  e_pie(
+    value2,  # 第二层 上层花瓣
+    startAngle = 15, # 设定起始角度，旋转这层饼图
+    radius = c('10%', '80%'),
+    color = '#FF3030',
+    itemStyle = list(
+      borderRadius = c('0%', '30%')
+    )
+  ) |>
+  e_data(flower3, value3) |> # 引入第三层数据
+  e_pie(value3,  # 第三层 花蕊
+        radius = '9%', 
+        color = '#FFA500') |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+
+```
+
+## 嵌套多层--各层颜色相同
+
+在嵌套多层时，若每一层花瓣的颜色要设置成同一种颜色，那么最好同时设置每一层花瓣间距大于0，并且每隔一层设置一次该层花瓣旋转的起始角度。
+
+```{r}
+flower1 <- data.frame(name = rep('A', 8), value1 = rep(8, 8))
+flower2 <- data.frame(name = rep('A', 8), value2 = rep(8, 8))
+flower3 <- data.frame(name = rep('A', 8), value3 = rep(8, 8))
+flower4 <- data.frame(name = rep('A', 8), value4 = rep(8, 8))
+flower5 <- data.frame(name = 'A', value5 = 8)
+
+flower1 |>
+  e_charts(name) |>
+  e_pie(
+    value1, # 第一层
+    radius = c('10%', '90%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = '#fff',
+      borderWidth = 20 # 花瓣间距
+    )
+  ) |>
+  e_data(flower2, value2) |>
+  e_pie(
+    value2, # 第二层
+    radius = c('10%', '80%'),
+    startAngle = 25, # 设定本层起始角度
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = '#fff',
+      borderWidth = 5 # 花瓣间距
+    )
+  ) |>
+  e_data(flower3, value3) |>
+  e_pie(
+    value3, # 第三层
+    radius = c('10%', '70%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = '#fff',
+      borderWidth = 5 # 花瓣间距
+    )
+  ) |>
+  e_data(flower4, value4) |>
+  e_pie(
+    value4, #第四层
+    radius = c('10%', '60%'),
+    startAngle = 25, # 设定本层起始角度
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = '#fff',
+      borderWidth = 5 # 花瓣间距
+    )
+  ) |>
+  e_data(flower5, value5) |>
+  e_pie(value5, # 第五层
+        #这里直接在e_pie里面写color不生效，但是挪到itemStyle()里面去就可以了
+        radius = '10%',
+        itemStyle = list(color = '#FFA500')) |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+## 堆叠多层
+
+如下图，也可使用极坐标系下的堆叠柱状图来达到重瓣花的效果。
+
+```{r}
+data4 <- data.frame(
+  name = rep(letters[1:24], 1),
+  value1 = rep(4, 24),
+  value2 = rep(4, 24)
+)
+
+data4 |>
+  e_charts(name) |>
+  e_polar() |>
+  e_angle_axis(name, show = FALSE) |> # 相当于把卷起来的x轴不展示
+  e_radius_axis(show = FALSE) |> # 相当于把卷起来的y轴不展示
+  e_bar(value1, # 第一层
+        color = '#FF6A6A',
+        stack = 'grp',
+        coord_system = "polar") |>
+  e_bar(value2, # 第二层
+        color = '#FF3030',
+        stack = 'grp',
+        coord_system = "polar") |>
+  e_legend(show = FALSE) |>
+  e_labels(show = FALSE)
+```
+
+# 画花
+
+在梳理了以上三个关于花瓣弧度、花瓣颜色、多重花瓣的基础要点后，接下来本文会将这些要点融合起来绘制一些花草的图案。由于本文作者缺乏一些配色方面的审美，也缺乏将现实三维世界中的花草实物抽象成二维世界中花草图案的能力，以下内容请谨慎观看。
+
+## 银杏叶
+
+画的基本思路：嵌套多层、改变花瓣边缘的形状、给花瓣分配颜色
+
+1. 第一层，通过改变数据项的数值大小，设定四个扇区，一个黄色，两个白色，一个黑色。
+2. 第二层，略微覆盖第一层，所有扇区为白色，改变第一层花瓣边缘的形状。
+3. 将扇形旋转，在`e_pie()`中添加`startAngle`参数来设定起始角度。
+
+```{r, echo = FALSE}
+leaf1 <- data.frame(
+  name1 = rep('A', 4),
+  value1 = c(4, 3, 0.1, 3),
+  color = c('yellow', 'white', 'black', 'white')
+)
+
+leaf2 <- data.frame(name2 = rep('A', 27),
+                    value2 = rep(3, 27))
+
+leaf1 |>
+  e_charts(name1) |>
+  e_pie(value1, radius = c("0%", "90%"), startAngle = 180) |>
+  e_add('itemStyle', color = color) |>
+  e_data(leaf2, value2) |>
+  e_pie(
+    value2,
+    radius = c("75%", "95%"),
+    color = 'white',
+    itemStyle = list(
+      borderRadius = 40,
+      borderColor = '#fff',
+      borderWidth = 5,
+      opacity = 1
+    )
+  ) |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+## 向日葵
+
+画的基本思路：增加花蕊、纹理填充
+
+1. 第一层，花蕊，通过`e_aria()`设置贴花的纹理。
+2. 第二层，花瓣，在`e_pie()`中设置`itemStyle = list(decal = list(symbolSize = 0))`，即贴花图案尺寸为0，去掉第一层中`e_aria()`造成的全局贴花的效果。
+
+```{r, echo = FALSE}
+flower1 <- data.frame(name = 'A',
+                      value1 = 1)
+
+flower2 <- data.frame(name2 = rep('B', 36),
+                      value2 = rep(3, 36))
+
+flower1 |>
+  e_charts(name) |>
+  e_pie(value1,
+        radius = c("0%", "40%"),
+        color = '#DAA520') |>
+  e_aria(enabled = TRUE,
+         decal = list(
+           show = TRUE,
+           decals = list(
+             symbol = 'triangle',
+             color = '#fff',
+             symbolSize = 1,
+             rotation = 90
+           )
+         )) |>
+  e_data(flower2, value2) |>
+  e_pie(
+    value2,
+    radius = c("40%", "60%"),
+    color = '#FFFF00',
+    itemStyle = list(
+      borderRadius = c('0%', '10%'),
+      borderColor = '#fff',
+      borderWidth = 1,
+      decal = list(symbolSize = 0) #贴花图案尺寸设置为0
+    )
+  ) |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+## 花纹
+
+除了绘制与现实中花草形态相接近的图案，还可以参照[一些花纹图案](https://www.vcg.com/creative-vectorgraph/huawen/)来画花纹。
+
+```{r, echo = FALSE}
+flower1 <- data.frame(name = rep('A', 5), value1 = rep(5, 5))
+flower2 <- data.frame(name = rep('A', 15), value2 = rep(5, 15))
+
+e1 <- flower1 |>
+  e_charts(name) |>
+  e_pie(
+    value1,
+    radius = c('20%', '80%'),
+    color = '#FF6A6A',
+    itemStyle = list(borderRadius = c('0%', '30%'))
+  ) |>
+  e_data(flower2, value2) |>
+  e_pie(
+    value2,
+    radius = c('20%', '40%'),
+    color = 'white',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = '#FF6A6A',
+      borderWidth = 20
+    )
+  ) |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+
+```{r, echo = FALSE}
+flower1 <- data.frame(name = rep('A', 8), value1 = rep(8, 8))
+flower2 <- data.frame(name = rep('A', 8), value2 = rep(8, 8))
+
+
+e2 <- flower1 |>
+  e_charts(name) |>
+  e_pie(
+    value1,
+    radius = c('20%', '80%'),
+    color = 'white',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = '#FF6A6A',
+      borderWidth = 20
+    )
+  ) |>
+  e_data(flower2, value2) |>
+  e_pie(
+    value2,
+    radius = c('20%', '60%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = 'white',
+      borderWidth = 0
+    )
+  ) |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+
+```{r, echo = FALSE}
+flower1 <- data.frame(name = rep('A', 10), value1 = rep(10, 10))
+flower2 <- data.frame(name = rep('A', 24), value2 = rep(1, 24))
+flower3 <- data.frame(name = rep('A', 48), value3 = rep(1, 48))
+flower4 <- data.frame(name = 'A', value4 = 4)
+
+e3 <- flower1 |>
+  e_charts(name) |>
+  e_pie(
+    value1,
+    radius = c('10%', '40%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = 'white',
+      borderWidth = 0
+    )
+  ) |>
+  e_data(flower2, value2) |>
+  e_pie(
+    value2,
+    radius = c('45%', '65%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = 'white',
+      borderWidth = 1
+    )
+  ) |>
+  e_data(flower3, value3) |>
+  e_pie(
+    value3,
+    radius = c('70%%', '80%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('30%', '30%'),
+      borderColor = 'white',
+      borderWidth = 1
+    )
+  ) |>
+  e_data(flower4, value4) |>
+  e_pie(value4,
+        radius = c('85%%', '90%'), color = '#FF6A6A') |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+
+```{r, echo = FALSE}
+flower1 <- data.frame(name = rep('A', 32), value1 = rep(c(2, 3, 4, 3), 8))
+flower2 <- data.frame(name = rep('A', 12), value2 = rep(1, 12))
+flower3 <- data.frame(name = 'A', value3 = 1)
+
+e4 <- flower1 |>
+  e_charts(name) |>
+  e_pie(
+    value1,
+    roseType = 'radius',
+    radius = c('10%', '80%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '30%'),
+      borderColor = 'white',
+      borderWidth = 1
+    )
+  ) |>
+  e_data(flower2, value2) |>
+  e_pie(
+    value2,
+    radius = c('20%', '40%'),
+    color = '#FF6A6A',
+    itemStyle = list(
+      borderRadius = c('0%', '40%'),
+      borderColor = 'white',
+      borderWidth = 1
+    )
+  ) |>
+  e_data(flower3, value3) |>
+  e_pie(value3, radius = '8%') |>
+  e_labels(show = FALSE) |>
+  e_legend(show = FALSE)
+```
+
+```{r, echo = FALSE}
+e_arrange(e1, e2, e3, e4, cols = 2, rows = 2)
+```
+
+# 结尾
+
+与自然界中的各种好看的花草形态相比，用 echarts4r 包画花会有许多限制。通过改变扇形饼图或环形饼图中各区块的圆角弧度来画花瓣，本质上相当于改变一条只有一个折角的折线的弯曲度使之变得更圆，但是无法增加一个新的折角，因此难以直接绘制出如莲花花瓣那样中间圆润而边缘尖锐的形状。
+
+在 R 语言中除了本文使用的 echarts4r 可以用来画花，还有许多其他包或绘图系统也可以实现。比如本文中“改变花瓣边缘的形状”所绘制的图案，坛友 tctcab [便用 ggplot2 绘制出来](https://d.cosx.org/d/423132-echarts4r/3)。
+

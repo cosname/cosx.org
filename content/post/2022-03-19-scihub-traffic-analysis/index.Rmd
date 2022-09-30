@@ -1,0 +1,2454 @@
+---
+title: "探索定西市的 Sci-Hub 流量之谜"
+author: "袁凡"
+date: "2022-05-05"
+categories:
+  - 统计应用
+tags:
+  - R 语言
+  - echarts4r
+  - 流量分析
+meta_extra: "审稿：黄湘云；编辑：黄湘云"
+output:
+  blogdown::html_page:
+    toc: true
+link-citations: true
+bibliography:
+  - packages.bib
+thumbnail: https://yuanfan.vercel.app/images/2022/2022-04-26-1.png
+description: ""
+forum_id: 422978
+slug: scihub-traffic-analysis
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+```{css}
+.col-xs-3 {
+  display: inline-block; 
+  width: 24%; 
+}
+```
+
+某年某月某日，地球上的一个人类忽然恰好想打开朋友圈看看大家都在做什么，于是恰好翻到一条视频，配文"我们的工作，将会写在人类的历史上"，该名人类恰好在这瞬间产生了一分好奇心，接着点开视频看到一只叼着钥匙的黑乌鸦，于是就恰好发现了[Sci-Hub](https://sci-hub.se/)这个神奇的网站。其实这位人类平时只是一条在死水里躺平的咸鱼，但是又恰好被一位统计之都的编辑[黄湘云](https://xiangyun.rbind.io/)捞起来做（干）事（活），于是顺理成章地诞生了[这篇讨论帖](https://d.cosx.org/d/422978-sci-hubdoi)和这篇文章。 
+
+Sci-Hub 这个网站的神奇之处在于，只要是网站数据库中收录了的文献，那么只需要输入文献相关的 DOI、PMID 或者直接链接就可以看到文献内容。Sci-Hub 网站的文献是完全免费的，它建立的目标是**to remove all barriers in the way of science（消除科学前进之路上的所有壁垒）**。网站上目前公开了三个时间段的下载日志数据。第一个是2011年9月22日开始到2013年10月14日结束[^1]的 Sci-Hub 日志，一共有4,728,537条记录，当时下载量第一的国家是俄罗斯，其下载量有1,491,679，而当时 Sci-Hub 在中国还鲜为人知，所以中国的总下载量仅82,634，当年为了保护 Sci-Hub，所有来自美国的访问都被阻止。第二个是2015年9月1日开始到2016年2月29日结束[^2]的 Sci-Hub 日志，一共有27,819,965条记录（约2.7千万条）。第三个是2017年[^3]的 Sci-Hub 日志，一共有150,875,862条记录（约1.5亿条）。
+
+```{r}
+library(data.table)
+library(echarts4r)
+
+data0<-fread('data/scihub_country_freq.csv')
+
+cns <- countrycode::codelist$country.name.en
+cns <- data.frame(
+  country = cns,
+  value = runif(length(cns), 1, 100)
+)
+
+cns<-as.data.table(cns)
+
+data0 <- cns[data0, on = "country"]
+
+data0<-data0[is.na(value)==FALSE,-c("value")]
+
+data0.add <- data.table(
+  country = c("Hong Kong SAR China", "Macao SAR China"),
+  freq = c(1617000, 52953)
+)
+
+data0<-rbind(data0,data0.add)
+
+data0 |>
+  e_charts(country) |> # 国家
+  e_map(freq) |>
+  e_visual_map(freq, show = FALSE) |>
+  e_tooltip(trigger = "item")|>
+  e_title("Sci-Hub 2017年下载量世界分布图",left="center")
+
+#国家城市级别的世界地图散点图
+# data <- fread('data/scihub_all_city.csv', encoding = 'UTF-8')
+# data <- data[freq > 1000, ]
+# 
+# data$freq <- as.numeric(data$freq)
+# data$country_city <- paste(data$country, data$city, sep = "-")
+# 
+# data[!is.na(lon_median), ] |>
+#   e_charts(lon_median) |>
+#   e_geo(roam = FALSE,
+#         boundingCoords = list(c(-176, -54),
+#                               c(179, 72))) |>
+#   e_scatter(
+#     serie = lat_median,
+#     size = freq,
+#     bind = country_city,
+#     coord_system = "geo",
+#     #scale_js = "function(data){ return 80*(Math.sqrt(data[2]/ 5e10) + 0.1);}"
+#   ) |>
+#   e_legend(show = FALSE) |>
+#   e_tooltip(
+#     padding = 5,
+#     borderWidth = 1,
+#     trigger = "item",
+#     formatter = htmlwidgets::JS(
+#       "function(params){
+#         return('国家-城市:' +  params.name +
+#                '<br />总流量: ' + params.value[2])}"
+#     )
+#   )
+```
+
+
+下载下来2017年的数据包，解压以后的大小约14G，共包含8个字段。
+
+-   time：Timestamp (yyyy-MM-dd HH:mm:ss)，时间戳，格式是"yyyy-MM-dd HH:mm:ss"。
+-   doi：一篇论文的唯一标识编码，可据此用 **rcrossref** 包 [@rcrossref]获取文章的元数据。
+-   ip：IP identifier，脱敏后用数字表示。
+-   user：User identifier，脱敏后用数字表示。
+-   country/city：Country/City according to GeoIP，根据 GeoIP 得到的用户所属国家和城市。
+-   latitude/longitude：经度和纬度。
+
+这份数据的庐山真面目大致如下。
+
+|time|doi|ip|user|country|city|latitude|longitude|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|2017-01-01 00:09:30|10.1007/s00134-016-4523-0|583|671|China|Beijing|39.904211|116.407395|
+|2017-01-01 00:03:27|10.1080/15567036.2015.1057657|271|298|China|Shanghai|31.230416|121.473701|
+|2017-01-01 00:09:52|10.1002/ejoc.201601322|604|692|China|Dingxi Shi|35.580663|104.626282|
+|2017-01-01 00:02:17|10.1159/000107370|193|210|Taiwan|N/A|25.0378259|121.5212991|
+|2017-01-01 00:21:47|10.1108/13555850510672386|1046|1243| Hong Kong|N/A|22.2500|114.1667|
+|2017-01-01 00:05:45|10.1007/BF02724185|402|453|India|Gugal Pimpari|19.9978027|77.0057059|
+|2017-01-01 00:23:02|10.1002/smll.201000908|1088|1296|United States|Los Angeles|34.0522342|-118.2436849|
+|2017-01-01 00:40:38|10.1021/nl104555t|1088|1296|United States|Los Angeles|34.0522342|-118.2436849|
+|2017-01-01 00:02:05|10.1109/tcsii.2016.2608866|175|188|Brazil|Rio de Janeiro|-22.9068467|-43.1728965|
+|2017-01-01 00:00:01|10.1049/iet-gtd.2014.1045|6|6|Iran|N/A |N/A |N/A|
+
+一般情况下，一份数据拿到手可以先从三个基本面入手分析：总量概览、区域对比、趋势分析。由于本文作者对中国的地理和国情更熟悉，于是先取出中国的数据来看，按城市或地区汇总下载量，再按总量从高到低排序，意外发现总下载量第三名是一个名不见经传的小城市：定西市。
+
+| 排名 | 城市或地区 | 2017年 Sci-Hub 总下载量 |
+|:----:|:----------:|:-----------------------:|
+|  1   |    北京    |         3807399         |
+|  2   |    上海    |         2915865         |
+|  3   |    定西    |         2147668         |
+|  4   |    台湾    |         1999026         |
+|  5   |    香港    |         1617000         |
+|  6   |    广州    |         1365568         |
+|  7   |    南京    |         1305058         |
+|  8   |    武汉    |         1050703         |
+|  9   |    杭州    |         962155          |
+|  10  |    成都    |         904620          |
+
+坛友[于淼](https://yufree.cn/)认为定西市没有知名研究机构，不太可能是自然流量，他猜测定西市的流量可能来源于其他地方，并且给出了验证思路。做探索性数据分析应秉承"大胆假设、小心验证"的信念，一边开脑洞，一边探索数据。于是乎，于淼脑洞成为了随后探索定西市 Sci-Hub 流量之谜的起点。
+
+# 1. 是否自然流量
+
+本（咸）文（鱼）作（人）者（类）认为由正常人类产生的网站流量属于自然流量，由除正常人类以外的非正常手段产生的网站流量属于非自然流量。倘若定西市全部流量都不是由正常人类产生的，那么时间上的趋势应当是相对平缓的。因为正常人类不会一年365天每天都下载文献来读，总要放假休息，也不会一天24小时都读文献，总要吃饭睡觉，所以在正常人类休息的时间就会形成流量的波谷。
+
+取出全中国（含中国台湾、中国香港、中国澳门，下同）总下载量排名前5的城市或地区的数据，先按天汇总下载量，观察其随时间变化的趋势。从下图中可以看到，这5个城市或地区的数据表现出了一些完全一致的现象，这些共同的表象至少说明定西市的流量不会全是非自然的。
+
+-   都在1月底2月初出现波谷，正好对应中国传统春节假期的时间。
+-   都缺失4.21日至4.29日以及10.7日至10.29日的数据，都在12.16日出现最小值（与 Sci-Hub 全站流量一致）。
+-   都有明显的周期性波动。
+
+```{r}
+library(data.table)
+library(echarts4r)
+data1 <- fread("data/cn_by_day.csv")
+data1$date <- as.Date(data1$date)
+
+#scihub->Sci-Hub
+#bj->北京
+#sh->上海
+#dx->定西
+#tw->台湾
+#hk->香港
+#gz->广州
+#nj->南京
+#wh->武汉
+#hz->杭州
+#cd->成都
+data1 |>
+  e_charts(date) |>
+  e_line(bj, name = "北京") |>
+  e_line(sh, name = "上海") |>
+  e_line(dx, name = "定西") |>
+  e_line(tw, name = "台湾") |>
+  e_line(hk, name = "香港") |>
+  # e_line(gz, name = "广州") |>
+  # e_line(nj, name = "南京") |>
+  # e_line(wh, name = "武汉") |>
+  # e_line(hz, name = "杭州") |>
+  # e_line(cd, name = "成都") |>
+  #e_line(scihub, name = "Sci-Hub") |>
+  e_tooltip(trigger = "axis") |>
+  e_y_axis(
+    name = "下载量", 
+    axisLine = list(
+    show = TRUE,
+    symbol = c("none", "arrow")
+  )) |>
+  e_legend(
+    type = "scroll",
+    selector = c("all", "inverse"),
+    selectorPosition = "end",
+    top = 25
+  ) |>
+  e_title("Sci-Hub 2017年每日下载量", left = "center") |>
+  e_datazoom()
+```
+
+接着按小时汇总下载量，再观察其随时间变化的趋势。从下图中可以看到，这5个城市或地区的数据仍然表现出了一些完全一致的现象：都出现了三个峰值。其他4个城市或地区的流量均是出现两个较高的波峰和一个较矮的波峰，且第3个波峰最低，而**定西第3个波峰最高**。
+
+-   北京：在5点、11点出现较高波峰，16点出现较矮波峰。
+-   上海：在5点、10点出现较高波峰，16点出现较矮波峰。
+-   台湾：在6点、10-11点出现较高波峰，17点出现较矮波峰。
+-   香港：在5-6点、10-11点出现较高波峰，16-17点出现较矮波峰。
+-   定西：在5点、11点、16点出现三个波峰，且16点的波峰最高。
+
+```{r}
+data2 <- fread("data/cn_by_hour.csv")
+
+data2$hour <- as.character(data2$hour)
+
+data2 |>
+  e_charts(hour) |>
+  e_line(bj, name = "北京",smooth = TRUE) |>
+  e_line(sh, name = "上海",smooth = TRUE) |>
+  e_line(dx, name = "定西",smooth = TRUE) |>
+  e_line(tw, name = "台湾",smooth = TRUE) |>
+  e_line(hk, name = "香港",smooth = TRUE) |>
+  # e_line(gz, name = "广州",smooth = TRUE) |>
+  # e_line(nj, name = "南京",smooth = TRUE) |>
+  # e_line(wh, name = "武汉",smooth = TRUE) |>
+  # e_line(hz, name = "杭州",smooth = TRUE) |>
+  # e_line(cd, name = "成都",smooth = TRUE) |>
+  #e_line(scihub, name = "Sci-Hub") |>
+  e_tooltip(trigger = "axis") |>
+  e_x_axis(axisLine = list(interval = 0)) |>
+  e_y_axis(
+    #name = "下载量", 
+    axisLine = list(
+    show = TRUE,
+    symbol = c("none", "arrow")
+  )) |>
+  e_legend(
+    type = "scroll",
+    selector = c("all", "inverse"),
+    selectorPosition = "end",
+    top = 25
+  ) |>
+  e_title("Sci-Hub 2017年24小时下载量", left = "center")|>
+  e_mark_point(c("北京","上海","定西","台湾","香港"), data = list(type = "max"),title="max",symbolSize = 30)
+```
+
+也许是打开的方式不对，根据日期拆分出工作日和周末，再按小时汇总下载量，然后观察其随时间变化的趋势。如果只看“工作日”的数据，那么整体趋势和之前基本一致，还是只有定西第三个波峰最高，其余4个城市或地区的第三个波峰最低。但如果只看“周末”的数据，一切又似乎有些不同，台湾和定西一样是第三个波峰最高，其余3个城市或地区则变成三个差不多高的波峰。
+
+```{r}
+data3 <- fread("data/cn_by_wday2_hour.csv", encoding = "UTF-8")
+
+data3 <- data3[order(hour), ]
+data3$hour <- as.character(data3$hour)
+
+data3[type%in%c("北京","上海","定西","台湾","香港"),] |>
+  group_by(type) |>
+  e_charts(hour, timeline = TRUE) |>
+  e_line(freq_1, name = "周末",smooth = TRUE) |>
+  e_line(freq_2, name = "工作日",smooth = TRUE) |>
+  e_tooltip(trigger = "axis") |>
+  e_x_axis(axisLine = list(interval = 0)) |>
+  e_y_axis(name = "下载量", axisLine = list(
+    show = TRUE,
+    symbol = c("none", "arrow")
+  )) |>
+  e_legend(
+    right = 30,
+    orient = "vertical",
+    itemGap = 15
+  ) |>
+  e_title(left = "center", top = 5) |>
+  e_timeline_serie(title = list(
+    list(
+      text = "Sci-Hub 2017年24小时下载量",
+      textStyle = list(
+        fontWeight = "normal",
+        fontSize = 20
+      ),
+      subtext = "北京",
+      subtextStyle = list(
+        fontWeight = "bold",
+        fontSize = 30
+      )
+    ),
+    list(text = "Sci-Hub 2017年24小时下载量", subtext = "定西"),
+    list(text = "Sci-Hub 2017年24小时下载量", subtext = "上海"),
+    list(text = "Sci-Hub 2017年24小时下载量", subtext = "台湾"),
+    list(text = "Sci-Hub 2017年24小时下载量", subtext = "香港")
+  ))
+```
+
+到这里，可以得到一个初步的结论：定西市的流量和其他几个城市或地区一样，每日流量趋势具有明显的周期性，24小时流量趋势具有明显的波峰和波谷，应该多数是由正常人类产生的自然流量，但是不能排除混入非自然流量的可能性。可是，为什么大家都要在5点读论文呢？
+
+# 2. 一天三个波峰是否正常
+
+话说回来，凌晨5点就爬起来读文献是正常人能干出来的事嘛？
+
+倒也不是完全不可能......一定有人听说过篮球明星科比的名言："你见过凌晨四点的洛杉矶嘛！"也一定有人读过 C.R RAO 的《统计与真理：怎样运用偶然性》，此书扉页写着："本书谨献给引导我探求知识的母亲 A. Laxmikanthamma。在我年少时，母亲每天早上四点起床，为我点上油灯，使我能在安静的早晨精力充沛地用功读书。"由此可见，极个别的人5点读文献是正常的。只不过，大多数人都在5点读文献就不正常了。
+
+既然出现了"5点是文献下载流量高峰"的表象，却又和常识不相符，不如放大数据范围，看看其他国家、其他城市或地区是否也存在类似情况。选出 Sci-Hub 2017年文献下载量最高的前五个国家，每个国家选出下载量最高的前五个城市或地区，按小时汇总下载量，观察流量随着时间变化的趋势。
+
+```{r}
+data4 <- fread("data/country_5_city_15_24hour.csv", encoding = "UTF-8")
+
+chart4 <- dcast(data4, hour ~ city, value.var = "freq")
+
+chart4$hour <- as.character(chart4$hour)
+
+# 中国 北京
+e1 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Beijing, color = "#5460c6",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "北京",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "中国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 中国 上海
+e2 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Shanghai, color = "#5460c6",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "上海",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "中国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 中国 定西
+e3 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Dingxi Shi`, color = "#5460c6",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "定西",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "中国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 中国 台湾
+e4 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Taiwan, color = "#5460c6",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "台湾",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "中国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 中国 香港
+e5 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Hong Kong`, color = "#5460c6",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "香港",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "中国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 印度 Gugal Pimpari
+e6 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Gugal Pimpari`, color = "#91cc75",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Gugal Pimpari",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "印度",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 印度 New Delhi
+e7 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`New Delhi`, color = "#91cc75",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "New Delhi",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "印度",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+
+# 印度 Chennai
+e8 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Chennai, color = "#91cc75",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Chennai",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "印度",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 印度 Bengaluru
+e9 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Bengaluru, color = "#91cc75",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Bengaluru",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "印度",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 印度 Hyderabad
+e10 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Hyderabad, color = "#91cc75",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Hyderabad",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "印度",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+
+# 美国 Los Angeles
+e11 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Los Angeles`, color = "#fac858",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Los Angeles",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "美国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 美国 Chicago
+e12 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Chicago, color = "#fac858",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Chicago",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "美国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 美国 Wilmington
+e13 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Wilmington, color = "#fac858",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Wilmington",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "美国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 美国 San Jose
+e14 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`San Jose`, color = "#fac858",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "San Jose",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "美国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 美国 Buffalo
+e15 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Buffalo, color = "#fac858",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Buffalo",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "美国",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 巴西 São Paulo
+colnames(chart4)[21] <- "Sao Paulo"
+e16 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Sao Paulo`, color = "#ee6666",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Sao Paulo",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "巴西",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 巴西 Rio de Janeiro
+e17 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Rio de Janeiro`, color = "#ee6666",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Rio de Janeiro",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "巴西",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 巴西 Porto Alegre
+e18 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Porto Alegre`, color = "#ee6666",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Porto Alegre",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "巴西",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 巴西 Belo Horizonte
+e19 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Belo Horizonte`, color = "#ee6666",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Belo Horizonte",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "巴西",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 巴西 Brasília
+e20 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(`Brasília`, color = "#ee6666",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Brasília",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "巴西",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+
+# 伊朗 Tehran
+e21 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Tehran, color = "#73c0de",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Tehran",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "伊朗",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 伊朗 Tiran
+e22 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Tiran, color = "#73c0de",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Tiran",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "伊朗",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 伊朗 Isfahan
+e23 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Isfahan, color = "#73c0de",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Isfahan",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "伊朗",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 伊朗 Tabriz
+e24 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Tabriz, color = "#73c0de",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Tabriz",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "伊朗",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+# 伊朗 Mashhad
+e25 <- chart4 |>
+  e_charts(hour, height = 60) |>
+  e_line(Mashhad, color = "#73c0de",smooth = TRUE) |>
+  e_y_axis(show = FALSE) |>
+  e_legend(show = FALSE) |>
+  e_title(
+    text = "Mashhad",
+    textStyle = list(
+      fontWeight = "bold",
+      fontSize = 20
+    ),
+    subtext = "伊朗",
+    subtextStyle = list(
+      fontWeight = "normal",
+      fontSize = 20
+    ),
+    left = "left",
+    top = 5,
+    itemGap = 5
+  ) |>
+  e_tooltip(
+    trigger = "axis"
+  ) |>
+  e_grid(bottom = 20, top = 0)
+
+e_arrange(
+  e1, e2, e3, e4, e5, e6, e7,
+  e8, e9, e10, e11,
+  e12, e13, e14, e15, e16, e17,
+  e18, e19, e20, e21,
+  e22, e23, e24, e25,
+  cols = 1
+)
+```
+
+为了方便比对不同国家的城市或地区的情况，将25个折线图拼贴到一起。除了美国以外，其余四个国家的流量都有明显的波峰和波谷，并且各国出现波峰波谷的时间点是错位的，这说明"时间"这个字段并不是记录的属于各个国家时区的时间，而是一个统一的时区的时间。在 Sci-Hub 提供的下载日志数据中，时间字段是没有标示出时区的。不管对此字段`head`、`str`、`summary`都看不到时区，但是`min`、`max`时能看到时间中多了**UTC**，形如`2017-01-01 00:01:01 UTC`，此“UTC”并不是指“UTC+00”，只是一种精确到时分秒的数据格式。由此可知，数据中的时间字段应是"浏览并下载文献"这一行为在该网站的后台服务器留下记录的时间，即数据中所有时间的时区统一都是服务器所在地区的时区。既然如此，不妨根据现实中这几个国家的时区差异，尝试将时间轴进行推移，看看是不是能得到更加符合常识的现象。
+
+-   中国几个城市或地区的三个峰值时间点是"05:00 - 11:00 - 16:00"，若将时间轴推后5个小时变成"10:00 - 16:00 - 21:00"，正好符合国人"上午 - 下午 - 晚上"读书或工作的习惯。
+
+-   印度几个城市或地区的两个峰值时间点是"09:00 - 12:00" ，考虑到印度比中国慢2.5小时，将时间轴推后2.5小时变成"11:30 - 14:30"，也算是在白天读书或工作。
+
+-   巴西几个城市或地区的两个峰值时间点是"16:00 - 21:00 - 03:00"，考虑到巴西比中国慢11个小时，将时间轴提前6小时变成"10:00 - 15:00 - 21:00"，也正好符合"上午 - 下午 - 晚上"读书或工作的一般规律。
+
+-   伊朗只有一个较为明显的高峰时间点"10:00"，考虑到伊朗比中国慢3.5小时，将时间轴推后1.5小时变成"11:30"，也算是有白天读书或工作的高峰，之后的时间不再出现波峰，也许伊朗人贡献了"11:30"的高峰流量后也继续发愤图强努力读论文。
+
+综合看起来，除了美国几个城市的流量平稳中透露着诡异以外，其他几个国家的城市或地区的流量都算是较为自然的。可是，定西市的流量究竟来源何处呢？
+
+# 3. 定西流量来源
+
+细心的坛友[张桐川](https://github.com/tcgriffith) 发现，全中国总下载量排名靠前的城市或地区里面没有深圳，因而怀疑深圳的流量被误认为"定西"。这项怀疑是合理的，只是难以通过现有数据来验证。
+
+| 排名 | 城市或地区 | 2017年 Sci-Hub 总下载量 | 排名 | 城市或地区 | 2017年 Sci-Hub 总下载量 | 排名 | 城市或地区 | 2017年 Sci-Hub 总下载量 |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  1   |    北京    |         3807399         |  11  |    长沙    |         757669          |  21  |   哈尔滨   |         373054          |
+|  2   |    上海    |         2915865         |  12  |    天津    |         670712          |  22  |    南昌    |         351555          |
+|  3   |  **定西**  |         2147668         |  13  |    西安    |         669085          |  23  |    青岛    |         334013          |
+|  4   |    台湾    |         1999026         |  14  |    郑州    |         538862          |  24  |    福州    |         299192          |
+|  5   |    香港    |         1617000         |  15  |    合肥    |         512964          |  25  |    苏州    |         271165          |
+|  6   |    广州    |         1365568         |  16  |    济南    |         502566          |  26  |    大连    |         247273          |
+|  7   |    南京    |         1305058         |  17  |    重庆    |         490612          |  27  |   张家口   |         228046          |
+|  8   |    武汉    |         1050703         |  18  |    长春    |         457532          |  28  |    昆明    |         217803          |
+|  9   |    杭州    |         962155          |  19  |    兰州    |         408890          |  29  |    南宁    |         175768          |
+|  10  |    成都    |         904620          |  20  |    沈阳    |         376430          |  30  |    温州    |         144396          |
+
+耐心的编辑[湘云](https://xiangyun.rbind.io/) 建议对数据质量做更细致的校验，或可根据经纬度来反推流量所属城市，遗憾的是 Sci-Hub 的经度、纬度数据很粗犷，整个定西市的经纬度才两个。
+
+到这里，定西流量之谜仍未解开，此时不妨拓宽思路，去探索 Sci-Hub 网站提供的更早时间段的数据。
+
+| 排名 | 城市或地区 | 2015.9-2016.2 Sci-Hub 总下载量 | 排名 | 城市或地区 | 2015.9-2016.2 Sci-Hub 总下载量 | 排名 | 城市或地区 | 2015.9-2016.2 Sci-Hub 总下载量 |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  1   |  上海  |  764397  |  11  |  西安   |  109692 |  21  |  青岛  |  57635  |
+|  2   |  北京  |  746797  |  12  |  济南   |  98137  |  22  |  南昌  |  55132  |
+|  3   |  广州  |  230957  |  13  |  郑州   |  95114  |  23  |  福州  |  52028  |
+|  4   |  武汉  |  227827  |  14  |**定西** |  91478  |  24  |  昆明  |  49704  |
+|  5   |  南京  |  192035  |  15  |  沈阳   |  73951  |  25  |  合肥  |  47627  |
+|  6   |  成都  |  162158  |  16  |  哈尔滨 |  72754  |  26  |  温州  |  45232  |
+|  7   |**兰州**|  134120  |  17  |  长春   |  72306  |  27  |  苏州  |  43259  |
+|  8   |  长沙  |  131589  |  18  |  重庆   |  66651  |  28  |  无锡  |  37389  |
+|  9   |  天津  |  123871  |  19  |  杭州   |  65674  |  29  |  大连  |  37050  |
+|  10  |  香港  |  111129  |  20  |  台湾   |  59091  |  30  |  东莞  |  35297  |
+
+将2015年9月至2016年2月一共6个月的数据与2017年一整年共12个月的数据进行对比，为了方便描述，用 A 时间段代表2015年9月至2016年2月，用 B 时间段代表2017年。A 时间段的全站总流量为27,819,965，除以6得到月均流量为463,661，B 时间段的全站总流量为150,875,862，除以12得到月均流量为12,572,989，后者除以前者，得到从 A 时间段至 B 时间段的月均流量上涨倍数是2.712。月均流量上涨，自然是因为Sci-Hub 越来越为人所知，越来越多人来使用它。
+
+全中国的 Sci-Hub 流量在 A 时间段是28,607,633，在 B 时间段是4,631,156，月均流量的上涨倍数是3.089。按照2017年排名顺序列出各城市或地区，按照同样的方法计算它们在两个时间段的流量上涨倍数。
+
+| 2017年排名 | 城市或地区 | 流量上涨倍数 | 2017年排名 | 城市或地区 | 流量上涨倍数 | 2017年排名 | 城市或地区 | 流量上涨倍数 |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  1  |   北京   |   2.55    |  11  |   长沙   |   2.88   |  21  |  哈尔滨  |  2.56  |
+|  2  |   上海   |   1.91    |  12  |   天津   |   2.71   |  22  |  南昌    |  3.19  |
+|  3  | **定西** | **11.74** |  13  |   西安   |   3.05   |  23  |  青岛    |  2.9   |
+|  4  | **台湾** | **16.91** |  14  |   郑州   |   2.83   |  24  |  福州    |  2.88  |
+|  5  | **香港** | **7.28**  |  15  |   合肥   |   5.39   |  25  |  苏州    |  3.13  |
+|  6  |   广州   |   2.96    |  16  |   济南   |   2.56   |  26  |  大连    |  3.34  |
+|  7  |   南京   |   3.4     |  17  |   重庆   |   3.68   |  27  |  张家口  |  4.04  |
+|  8  |   武汉   |   2.31    |  18  |   长春   |   3.16   |  28  |  昆明    |  2.19  |
+|  9  | **杭州** | **7.33**  |  19  | **兰州** | **1.52** |  29  |  南宁    |  3.06  |
+|  10 |   成都   |   2.79    |  20  |   沈阳   |   2.55   |  30  |  温州    |  1.6   |
+
+如上表所示，在2017年排名前30的城市或地区中，定西、台湾、香港、杭州的流量上涨倍数远高于其他城市或地区，而兰州的流量上涨倍数最低。杭州和台湾的上涨倍数高，有可能是因为原来基数低，这两个城市或地区在 A 时间段分别排第19和第20名。兰州的流量上涨倍数低，有可能是因为兰州的部分流量被误认为定西。即便当真如此，那定西的流量上涨倍数如此之高，会仅仅只是因为混入了兰州流量么？Sci-Hub 全站流量上涨倍数是2.712，全中国的流量上涨倍数是3.089，即使在定西 A 时间段月均流量15,246的基础上涨3倍，再加上兰州 A 时间段月均流量22,353的1倍，也只有68,091，仍然远不及定西 B 时间段月均流量178,972。
+
+那么有没有可能定西流量中不仅混入了兰州流量，甚至是混入了全国其他城市或地区的流量呢？由于排名前30的其他城市或地区的流量上涨倍数都与全中国流量上涨倍数3.089差别不大，暂时排除它们各有1倍 A 时间段流量也混入定西 B 时间段流量中的可能性。剩下的城市或地区在 A 时间段的总流量是556,807，月均流量是92,801，在 B 时间段的总流量是2,504,995，月均流量是208,750，那么流量上涨倍数是2.249。假如强行认定排名30名以外的城市或地区全都有1倍的 A 时间段流量在 B 时间段被误认为定西流量，即在定西 A 时间段月均流量68,091的基础上加上92,801得到160,892，也仍然低于 B 时间段定西月均流量178,972。由此推断，B时间段的定西流量中一定混入了大量除中国（含中国台湾、中国香港、中国澳门）以外的流量。
+
+为了强化推理结果，接着计算从 A 时间段到 B 时间段的独立 IP 数量的上涨倍数。Sci-Hub 全站在 A 时间段的总 IP 数量是 3,003,706，在 B 时间段是14,937,788。A 时间段只有6个月，B 时间段有12个月，虽然一般来说每个 IP 可以在每个月都上 Sci-Hub 网站下载文献，但为了与流量上涨倍数相对比，这里依然计算月均独立 IP 数，得到 Sci-Hub 的 IP 上涨倍数是2.486。全中国在 A 时间段的独立 IP 总数是264,135，在 B 时间段是1,784,246，IP 上涨倍数是3.377。
+
+| 2017年排名 | 城市或地区 | IP 上涨倍数 | 2017年排名 | 城市或地区 | IP上涨倍数 | 2017年排名 | 城市或地区 | IP 上涨倍数 |
+|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
+|  1   |   北京   |   2.16    |  11  |   长沙   |  2.91  |  21  |  哈尔滨 |  1.72  |
+|  2   |   上海   |   3.4     |  12  |   天津   |  2.05  |  22  |  南昌   |  2.96  |
+|  3   | **定西** | **9.64**  |  13  |   西安   |  2.93  |  23  |  青岛   |  2.84  |
+|  4   | **台湾** | **17.07** |  14  |   郑州   |  4.29  |  24  |  福州   |  2.57  |
+|  5   |   香港   |   3.17    |  15  |   合肥   |  4.13  |  25  |  苏州   |  3.02  |
+|  6   |   广州   |   3.18    |  16  |   济南   |  2.94  |  26  |  大连   |  2.44  |
+|  7   |   南京   |   3.54    |  17  |   重庆   |  2.55  |  27  |  张家口 |  3.46  |
+|  8   |   武汉   |   2.18    |  18  |   长春   |  2.16  |  28  |  昆明   |  3.33  |
+|  9   |   杭州   |   4.24    |  19  | **兰州** |  1.52  |  29  |  南宁   |  3     |
+|  10  |   成都   |   2.61    |  20  |   沈阳   |  3.09  |  30  |  温州   |  2.39  |
+
+如上，在2017年流量排名基础上，计算这些排名前30的城市或地区的 IP 上涨倍数，整体上看 IP 上涨倍数和流量上涨倍数是接近的。定西在 A 时间段 IP 数是7,682，在 B 时间段 IP 数是148,096，兰州在 A 时间段 IP 数是 5,906，在 B 时间段 IP 数是17,951，定西 A 时间段月均 IP 数乘以3倍再加上2倍兰州 A 时间段月均IP数等于5,809，依然低于定西 B 时间段月均IP数12,341。
+
+倘若 B 时间段大量定西流量来源于“中国其他城市或地区”，那么有两种原因，一是大量其他城市 IP 被错误解析为定西，但这种“失误”似乎太离谱，若果真如此，定西的24小时流量趋势应与国内其他城市一样，第三个波峰不会反常地最高；二是其他城市用户运用网络代理服务来使用定西 IP，但何必呢。综合来看，B 时间段的定西流量里除了可能混入兰州流量，最大可能是混入了大量除中国以外的境外流量。
+
+# 4. 定西流量的组成部分
+
+如果2017 年的定西流量由“身在定西”的用户、“身在兰州”的用户以及“身在境外”的用户所贡献，那么又为何会造成定西24小时流量趋势中第三个波峰最高的表象呢？若要弄清楚这个问题，需进一步探索定西流量的组成部分。
+
+## 4.1. 长期用户与短期用户
+
+以 IP 为主体，分别计算在两个时间段内每个 IP 登录 Sci-Hub 网站的天数，观察 Sci-Hub 全站以及全中国的 IP 登录天数分布情况，将天数分成“1天”、“2天”、“3天”、“4-7天”、“8-30天”、“30天以上”等6个层次，接着汇总各个层次的 IP 总数以及贡献的流量总量。显然，这里“1天”代表的是极短期用户，“30天以上”代表的是长期用户。
+
+先观察定西的情况，依然用 A 代表“2015.9-2016.2”，用 B 代表“2017”。如下图，“1天”的 IP 占比在 A 时间段到 B 时间段从76.36%降到了65.67%，其贡献的流量占比也从33.34%降到了14.84%，“30天以上”的 IP 占比从0.9%变到0.99%，其贡献的流量占比从18.39%升至46.78%。由于 A 时间段提供的 Sci-Hub 日志数据中 IP 是用字符串表示，而 B 时间段换成了数字表示，无从知晓那些在 A 时间段存在的 IP 在 B 时间段流量翻了几倍，只能知晓定西流量上涨是由“30天以上”的长期用户所带来的。
+
+```{r}
+data9 <- fread('data/city_divide_ip_freq.csv', encoding = 'UTF-8')
+
+e1 <- data9[city == 'Dingxi Shi' & type == '2017', ] |>
+  e_charts(divide, height = 300) |>
+  e_pie(
+    count_ip,
+    name = 'IP数',
+    radius = c("30%", "50%"),
+    itemStyle = list(
+      borderRadius = 20,
+      borderColor = '#fff',
+      borderWidth = 2
+    ),
+    center = c("30%", "50%")
+  ) |>
+  e_pie(
+    freq,
+    name = '流量数',
+    radius = c("30%", "50%"),
+    itemStyle = list(
+      borderRadius = 20,
+      borderColor = '#fff',
+      borderWidth = 2
+    ),
+    center = c("70%", "50%")
+  ) |>
+  e_labels(
+    position = "outside",
+    distanceToLabelLine = 1,
+    formatter = "{a}：{c} \n 占比：{d}%"
+  ) |>
+  e_title(text = " 定西-B \n\n 2017", left = 20)
+
+e2 <- data9[city == 'Dingxi Shi' & type == '2015.9-2016.2', ] |>
+  e_charts(divide, height = 300) |>
+  e_pie(
+    count_ip,
+    name = 'IP数',
+    radius = c("30%", "50%"),
+    itemStyle = list(
+      borderRadius = 20,
+      borderColor = '#fff',
+      borderWidth = 2
+    ),
+    center = c("30%", "50%")
+  ) |>
+  e_pie(
+    freq,
+    name = '流量数',
+    radius = c("30%", "50%"),
+    itemStyle = list(
+      borderRadius = 20,
+      borderColor = '#fff',
+      borderWidth = 2
+    ),
+    center = c("70%", "50%")
+  ) |>
+  e_labels(
+    position = "outside",
+    distanceToLabelLine = 1,
+    formatter = "{a}：{c} \n 占比：{d}%"
+  ) |>
+  e_title(text = " 定西-A \n\n 2015.9-2016.2", left = 20)
+
+e_arrange(e2, e1, cols = 1)
+```
+
+接着观察对比“1天”、“2天”、“3天”、“4-7天”、“8-30天”、“30天以上”等6个层次的24小时流量趋势。由于上一节中怀疑定西流量中大部分来自境外，此处将 Sci-Hub 全站的数据表现与定西的一起进行对比。
+
++ 对比 B 段 Sci-Hub全站 与定西的数据表现，虽然三个波峰的高矮不同，但是波峰的位置是一样的，都是5-11-16/17。
+
++ 在“1天”、“2天”、“3天”等情况下，定西与 Sci-Hub 全站一样都是第三个波峰最高，而在“30天以上”的条件下，定西流量变成了第三个波峰最低。
+
+```{r}
+data10 <- fread('data/city_divide_ip_freq_hour.csv', encoding = 'UTF-8')
+
+data10<-data10[order(hour),]
+data10$hour<-as.character(data10$hour)
+
+e1<-data10[type == '2015.9-2016.2' & city == 'Sci-Hub' & divide == '1天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#5470c6',
+    symbolSize = 1,
+    name = 'A：1天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e2<-data10[type == '2017' & city == 'Sci-Hub' & divide == '1天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#5470c6',
+    symbolSize = 1,
+    name = 'B：1天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e3<-data10[type == '2015.9-2016.2' & city == 'Dingxi Shi' & divide == '1天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#5470c6',
+    symbolSize = 1,
+    name = 'A：1天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e4<-data10[type == '2017' & city == 'Dingxi Shi' & divide == '1天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#5470c6',
+    symbolSize = 1,
+    name = 'B：1天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e5<-data10[type == '2015.9-2016.2' & city == 'Sci-Hub' & divide == '2天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#91cc75',
+    symbolSize = 1,
+    name = 'A：2天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e6<-data10[type == '2017' & city == 'Sci-Hub' & divide == '2天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#91cc75',
+    symbolSize = 1,
+    name = 'B：2天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e7<-data10[type == '2015.9-2016.2' & city == 'Dingxi Shi' & divide == '2天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#91cc75',
+    symbolSize = 1,
+    name = 'A：2天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e8<-data10[type == '2017' & city == 'Dingxi Shi' & divide == '2天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#91cc75',
+    symbolSize = 1,
+    name = 'B：2天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e9<-data10[type == '2015.9-2016.2' & city == 'Sci-Hub' & divide == '3天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#fac858',
+    symbolSize = 1,
+    name = 'A：3天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e10<-data10[type == '2017' & city == 'Sci-Hub' & divide == '3天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#fac858',
+    symbolSize = 1,
+    name = 'B：3天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e11<-data10[type == '2015.9-2016.2' & city == 'Dingxi Shi' & divide == '3天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#fac858',
+    symbolSize = 1,
+    name = 'A：3天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e12<-data10[type == '2017' & city == 'Dingxi Shi' & divide == '3天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#fac858',
+    symbolSize = 1,
+    name = 'B：3天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e13<-data10[type == '2015.9-2016.2' & city == 'Sci-Hub' & divide == '4-7天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#ee6666',
+    symbolSize = 1,
+    name = 'A：4-7天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e14<-data10[type == '2017' & city == 'Sci-Hub' & divide == '4-7天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#ee6666',
+    symbolSize = 1,
+    name = 'B：4-7天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e15<-data10[type == '2015.9-2016.2' & city == 'Dingxi Shi' & divide == '4-7天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#ee6666',
+    symbolSize = 1,
+    name = 'A：4-7天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e16<-data10[type == '2017' & city == 'Dingxi Shi' & divide == '4-7天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#ee6666',
+    symbolSize = 1,
+    name = 'B：4-7天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e17<-data10[type == '2015.9-2016.2' & city == 'Sci-Hub' & divide == '8-30天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#73c0de',
+    symbolSize = 1,
+    name = 'A：8-30天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e18<-data10[type == '2017' & city == 'Sci-Hub' & divide == '8-30天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#73c0de',
+    symbolSize = 1,
+    name = 'B：8-30天\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e19<-data10[type == '2015.9-2016.2' & city == 'Dingxi Shi' & divide == '8-30天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#73c0de',
+    symbolSize = 1,
+    name = 'A：8-30天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e20<-data10[type == '2017' & city == 'Dingxi Shi' & divide == '8-30天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#73c0de',
+    symbolSize = 1,
+    name = 'B：8-30天\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+
+
+e21<-data10[type == '2015.9-2016.2' & city == 'Sci-Hub' & divide == '30天以上',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#3ba272',
+    symbolSize = 1,
+    name = 'A：30天以上\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e22<-data10[type == '2017' & city == 'Sci-Hub' & divide == '30天以上',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#3ba272',
+    symbolSize = 1,
+    name = 'B：30天以上\nSci-Hub'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e23<-data10[type == '2015.9-2016.2' & city == 'Dingxi Shi' & divide == '30天以上',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#3ba272',
+    symbolSize = 1,
+    name = 'A：30天以上\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e24<-data10[type == '2017' & city == 'Dingxi Shi' & divide == '30天以上',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#3ba272',
+    symbolSize = 1,
+    name = 'B：30天以上\n定西'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e_arrange(
+  e1,
+  e2,
+  e3,
+  e4,
+  e5,
+  e6,
+  e7,
+  e8,
+  e9,
+  e10,
+  e11,
+  e12,
+  e13,
+  e14,
+  e15,
+  e16,
+  e17,
+  e18,
+  e19,
+  e20,
+  e21,
+  e22,
+  e23,
+  e24,
+  cols = 4,
+  rows = 6
+)
+```
+
+由于 Sci-Hub 全站流量总量远高于定西流量，其中混杂的不确定因素也更多，接着观察流量数量级与定西更接近的北京和上海的数据表现。这两个城市和定西一样，不同层次下的24小时流量趋势都有很明显的波峰和波谷。如果说“三个波峰中第三个波峰最低”是符合国内 Sci-Hub 用户的作息规律的，那么越是长期用户越符合这条规律，越是短期用户越与这条规律相悖，北京、上海、定西皆如此。
+
+```{r}
+e1<-data10[type == '2015.9-2016.2' & city == 'Beijing' & divide == '1天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#5470c6',
+    symbolSize = 1,
+    name = 'A：1天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e2<-data10[type == '2017' & city == 'Beijing' & divide == '1天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#5470c6',
+    symbolSize = 1,
+    name = 'B：1天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e3<-data10[type == '2015.9-2016.2' & city == 'Shanghai' & divide == '1天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#5470c6',
+    symbolSize = 1,
+    name = 'A：1天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e4<-data10[type == '2017' & city == 'Shanghai' & divide == '1天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#5470c6',
+    symbolSize = 1,
+    name = 'B：1天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e5<-data10[type == '2015.9-2016.2' & city == 'Beijing' & divide == '2天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#91cc75',
+    symbolSize = 1,
+    name = 'A：2天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e6<-data10[type == '2017' & city == 'Beijing' & divide == '2天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#91cc75',
+    symbolSize = 1,
+    name = 'B：2天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e7<-data10[type == '2015.9-2016.2' & city == 'Shanghai' & divide == '2天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#91cc75',
+    symbolSize = 1,
+    name = 'A：2天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e8<-data10[type == '2017' & city == 'Shanghai' & divide == '2天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#91cc75',
+    symbolSize = 1,
+    name = 'B：2天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e9<-data10[type == '2015.9-2016.2' & city == 'Beijing' & divide == '3天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#fac858',
+    symbolSize = 1,
+    name = 'A：3天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e10<-data10[type == '2017' & city == 'Beijing' & divide == '3天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#fac858',
+    symbolSize = 1,
+    name = 'B：3天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e11<-data10[type == '2015.9-2016.2' & city == 'Shanghai' & divide == '3天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#fac858',
+    symbolSize = 1,
+    name = 'A：3天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e12<-data10[type == '2017' & city == 'Shanghai' & divide == '3天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#fac858',
+    symbolSize = 1,
+    name = 'B：3天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e13<-data10[type == '2015.9-2016.2' & city == 'Beijing' & divide == '4-7天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#ee6666',
+    symbolSize = 1,
+    name = 'A：4-7天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e14<-data10[type == '2017' & city == 'Beijing' & divide == '4-7天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#ee6666',
+    symbolSize = 1,
+    name = 'B：4-7天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e15<-data10[type == '2015.9-2016.2' & city == 'Shanghai' & divide == '4-7天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#ee6666',
+    symbolSize = 1,
+    name = 'A：4-7天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e16<-data10[type == '2017' & city == 'Shanghai' & divide == '4-7天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#ee6666',
+    symbolSize = 1,
+    name = 'B：4-7天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e17<-data10[type == '2015.9-2016.2' & city == 'Beijing' & divide == '8-30天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#73c0de',
+    symbolSize = 1,
+    name = 'A：8-30天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e18<-data10[type == '2017' & city == 'Beijing' & divide == '8-30天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#73c0de',
+    symbolSize = 1,
+    name = 'B：8-30天\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e19<-data10[type == '2015.9-2016.2' & city == 'Shanghai' & divide == '8-30天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#73c0de',
+    symbolSize = 1,
+    name = 'A：8-30天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e20<-data10[type == '2017' & city == 'Shanghai' & divide == '8-30天',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#73c0de',
+    symbolSize = 1,
+    name = 'B：8-30天\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+
+
+e21<-data10[type == '2015.9-2016.2' & city == 'Beijing' & divide == '30天以上',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#3ba272',
+    symbolSize = 1,
+    name = 'A：30天以上\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e22<-data10[type == '2017' & city == 'Beijing' & divide == '30天以上',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#3ba272',
+    symbolSize = 1,
+    name = 'B：30天以上\n北京'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e23<-data10[type == '2015.9-2016.2' & city == 'Shanghai' & divide == '30天以上',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#3ba272',
+    symbolSize = 1,
+    name = 'A：30天以上\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e24<-data10[type == '2017' & city == 'Shanghai' & divide == '30天以上',] |>
+  e_charts(hour, height = 150, width = 200) |>
+  e_area(
+    freq,
+    smooth = TRUE,
+    color = '#3ba272',
+    symbolSize = 1,
+    name = 'B：30天以上\n上海'
+  )|>
+  e_y_axis(show=FALSE)|>
+  e_legend(left='left')|>
+  e_grid(top=0,bottom=20)|>
+  e_tooltip(trigger = "axis")
+
+e_arrange(
+  e1,
+  e2,
+  e3,
+  e4,
+  e5,
+  e6,
+  e7,
+  e8,
+  e9,
+  e10,
+  e11,
+  e12,
+  e13,
+  e14,
+  e15,
+  e16,
+  e17,
+  e18,
+  e19,
+  e20,
+  e21,
+  e22,
+  e23,
+  e24,
+  cols = 4,
+  rows = 6
+)
+```
+
+```{r}
+# # 流量占比
+# data9.table1<-dcast(data9,type+city~divide,value.var = "freq")
+# 
+# data9.table1<-data9.table1[,':='(
+#   rate1=round(`1天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate2=round(`2天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate3=round(`3天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate4=round(`4-7天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate5=round(`8-30天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate6=round(`30天以上`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4)
+# )]
+# 
+# #怎么批量修改指定某一行某一列的内容？
+# data9.table1[type=='2015.9-2016.2','type']<-"A"
+# data9.table1[type=='2017','type']<-"B"
+# 
+# data9.table1[city == 'Beijing', 'city'] <- "北京"
+# data9.table1[city == 'Shanghai', 'city'] <- "上海"
+# data9.table1[city == 'Dingxi Shi', 'city'] <- "定西"
+# data9.table1[city == 'Taiwan', 'city'] <- "台湾"
+# data9.table1[city == 'Hong Kong', 'city'] <- "香港"
+# data9.table1[city == 'Guangzhou Shi', 'city'] <- "广州"
+# data9.table1[city == 'Nanjing Shi', 'city'] <- "南京"
+# data9.table1[city == 'Hangzhou Shi', 'city'] <- "杭州"
+# data9.table1[city == 'Wuhan Shi', 'city'] <- "武汉"
+# data9.table1[city == 'Chengdu Shi', 'city'] <- "成都"
+# data9.table1[city == 'Lanzhou Shi', 'city'] <- "兰州"
+# 
+# data9.table1$new_type<-paste(data9.table1$city,data9.table1$type,sep="-")
+# 
+# #IP占比
+# data9.table2<-dcast(data9,type+city~divide,value.var = "count_ip")
+# 
+# data9.table2<-data9.table2[,':='(
+#   rate1=round(`1天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate2=round(`2天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate3=round(`3天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate4=round(`4-7天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate5=round(`8-30天`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4),
+#   rate6=round(`30天以上`/(`1天`+`2天`+`3天`+`4-7天`+`8-30天`+`30天以上`),4)
+# )]
+# 
+# #怎么批量修改指定某一行某一列的内容？
+# data9.table2[type=='2015.9-2016.2','type']<-"A"
+# data9.table2[type=='2017','type']<-"B"
+# 
+# data9.table2[city == 'Beijing', 'city'] <- "北京"
+# data9.table2[city == 'Shanghai', 'city'] <- "上海"
+# data9.table2[city == 'Dingxi Shi', 'city'] <- "定西"
+# data9.table2[city == 'Taiwan', 'city'] <- "台湾"
+# data9.table2[city == 'Hong Kong', 'city'] <- "香港"
+# data9.table2[city == 'Guangzhou Shi', 'city'] <- "广州"
+# data9.table2[city == 'Nanjing Shi', 'city'] <- "南京"
+# data9.table2[city == 'Hangzhou Shi', 'city'] <- "杭州"
+# data9.table2[city == 'Wuhan Shi', 'city'] <- "武汉"
+# data9.table2[city == 'Chengdu Shi', 'city'] <- "成都"
+# data9.table2[city == 'Lanzhou Shi', 'city'] <- "兰州"
+# 
+# data9.table2$new_type<-paste(data9.table2$city,data9.table2$type,sep="-")
+# 
+# 
+# #对比各个城市IP与流量比例变化
+# 
+# #流量比例
+# e1<-data9.table1[new_type %in% c(
+#   'Sci-Hub-A',
+#   'Sci-Hub-B',
+#   '北京-A',
+#   '北京-B',
+#   '上海-A',
+#   '上海-B',
+#   '定西-A',
+#   '定西-B',
+#   '台湾-A',
+#   '台湾-B',
+#   '香港-A',
+#   '香港-B'
+# ),] |>
+#   e_charts(new_type) |>
+#   e_bar(rate1, name = '1天', stack = 'grp') |>
+#   e_bar(rate2, name = '2天', stack = 'grp') |>
+#   e_bar(rate3, name = '3天', stack = 'grp') |>
+#   e_bar(rate4, name = '4-7天', stack = 'grp') |>
+#   e_bar(rate5, name = '8-30天', stack = 'grp') |>
+#   e_bar(rate6, name = '30天以上', stack = 'grp') |>
+#   e_x_axis(
+#     axisLabel = list(interval = 0),
+#     data = c(
+#       'Sci-Hub-A',
+#       'Sci-Hub-B',
+#       '北京-A',
+#       '北京-B',
+#       '上海-A',
+#       '上海-B',
+#       '定西-A',
+#       '定西-B',
+#       '台湾-A',
+#       '台湾-B',
+#       '香港-A',
+#       '香港-B'
+#     )
+#   ) |>
+#   e_y_axis(show = FALSE) |>
+#   e_tooltip(formatter = e_tooltip_item_formatter("percent")) |>
+#   e_title(text="流\n量")|>
+#   e_flip_coords()|>
+#   e_grid(left=60)
+# 
+# 
+# #IP比例
+# e2<-data9.table2[new_type %in% c(
+#   'Sci-Hub-A',
+#   'Sci-Hub-B',
+#   '北京-A',
+#   '北京-B',
+#   '上海-A',
+#   '上海-B',
+#   '定西-A',
+#   '定西-B',
+#   '台湾-A',
+#   '台湾-B',
+#   '香港-A',
+#   '香港-B'
+# ),] |>
+#   e_charts(new_type) |>
+#   e_bar(rate1, name = '1天', stack = 'grp') |>
+#   e_bar(rate2, name = '2天', stack = 'grp') |>
+#   e_bar(rate3, name = '3天', stack = 'grp') |>
+#   e_bar(rate4, name = '4-7天', stack = 'grp') |>
+#   e_bar(rate5, name = '8-30天', stack = 'grp') |>
+#   e_bar(rate6, name = '30天以上', stack = 'grp') |>
+#   e_x_axis(
+#     axisLabel = list(interval = 0),
+#     data = c(
+#       'Sci-Hub-A',
+#       'Sci-Hub-B',
+#       '北京-A',
+#       '北京-B',
+#       '上海-A',
+#       '上海-B',
+#       '定西-A',
+#       '定西-B',
+#       '台湾-A',
+#       '台湾-B',
+#       '香港-A',
+#       '香港-B'
+#     )
+#   ) |>
+#   e_y_axis(show = FALSE) |>
+#   e_tooltip(formatter = e_tooltip_item_formatter("percent")) |>
+#   e_title(text="IP")|>
+#   e_flip_coords()|>
+#   e_grid(left=60)
+# 
+# 
+# e3<-data9.table1[new_type %in% c(
+#   '广州-A',
+#   '广州-B',
+#   '南京-A',
+#   '南京-B',
+#   '武汉-A',
+#   '武汉-B',
+#   '杭州-A',
+#   '杭州-B',
+#   '成都-A',
+#   '成都-B',
+#   '兰州-A',
+#   '兰州-B'
+# ),] |>
+#   e_charts(new_type) |>
+#   e_bar(rate1, name = '1天', stack = 'grp') |>
+#   e_bar(rate2, name = '2天', stack = 'grp') |>
+#   e_bar(rate3, name = '3天', stack = 'grp') |>
+#   e_bar(rate4, name = '4-7天', stack = 'grp') |>
+#   e_bar(rate5, name = '8-30天', stack = 'grp') |>
+#   e_bar(rate6, name = '30天以上', stack = 'grp') |>
+#   e_x_axis(
+#     axisLabel = list(interval = 0),
+#     data = c(
+#       '广州-A',
+#       '广州-B',
+#       '南京-A',
+#       '南京-B',
+#       '武汉-A',
+#       '武汉-B',
+#       '杭州-A',
+#       '杭州-B',
+#       '成都-A',
+#       '成都-B',
+#       '兰州-A',
+#       '兰州-B'
+#     )
+#   ) |>
+#   e_y_axis(show = FALSE) |>
+#   e_tooltip(formatter = e_tooltip_item_formatter("percent")) |>
+#   e_title(text="流\n量")|>
+#   e_flip_coords()|>
+#   e_grid(left=60)
+# 
+# 
+# e4<-data9.table2[new_type %in% c(
+#   '广州-A',
+#   '广州-B',
+#   '南京-A',
+#   '南京-B',
+#   '武汉-A',
+#   '武汉-B',
+#   '杭州-A',
+#   '杭州-B',
+#   '成都-A',
+#   '成都-B',
+#   '兰州-A',
+#   '兰州-B'
+# ),] |>
+#   e_charts(new_type) |>
+#   e_bar(rate1, name = '1天', stack = 'grp') |>
+#   e_bar(rate2, name = '2天', stack = 'grp') |>
+#   e_bar(rate3, name = '3天', stack = 'grp') |>
+#   e_bar(rate4, name = '4-7天', stack = 'grp') |>
+#   e_bar(rate5, name = '8-30天', stack = 'grp') |>
+#   e_bar(rate6, name = '30天以上', stack = 'grp') |>
+#   e_x_axis(
+#     axisLabel = list(interval = 0),
+#     data = c(
+#       '广州-A',
+#       '广州-B',
+#       '南京-A',
+#       '南京-B',
+#       '武汉-A',
+#       '武汉-B',
+#       '杭州-A',
+#       '杭州-B',
+#       '成都-A',
+#       '成都-B',
+#       '兰州-A',
+#       '兰州-B'
+#     )
+#   ) |>
+#   e_y_axis(show = FALSE) |>
+#   e_tooltip(formatter = e_tooltip_item_formatter("percent")) |>
+#   e_title(text="IP")|>
+#   e_flip_coords()|>
+#   e_grid(left=60)
+# 
+# 
+# e_arrange(e1,e2,e3,e4,cols = 2)
+```
+
+## 4.2. 自然流量与非自然流量
+
+Sci-Hub 网站提供的2017下载日志数据中有 IP 和 USER 这两个字段，但2015.9-2016.2的数据中仅有 IP 这个字段。在网站链接的文章《[WHO’S DOWNLOADING PIRATED PAPERS?EVERYONE](https://sci-hub.se/10.1126/science.352.6285.508)》中作者提及了下面的这样一段话。
+
+>To protect the privacy of Sci-Hub users, we agreed that she would first aggregate users’
+geographic locations to the nearest city using data from Google Maps; no identifying internet protocol (IP) addresses were given to me. (The data set and details on how it was analyzed are freely accessible at http://dx.doi.
+org/10.5061/dryad.q447c.)
+
+可见在2015.9-2016.2的数据中，IP 字段是模糊的，无法定位到用户设备的。在上一小节仅以 IP 为主体的分析中，虽然两个时间段的数据表现差异不小，但至少可以从可比性上认为 Sci-Hub 在2017年提供的用数字表示的 IP 和2015.9-2016.2提供的用字符串表示的 IP 是用同样的方式得到的。但是2017年新增的 USER 字段所代表的含义又是什么呢？为此，需要先探寻 IP 和 USER 之间的关系。
+
+将全量数据按照 IP（ip）进行分组，分别计算每个 IP 对应的总下载量（freq），以及其他字段去重后的数量，即用户数（user_cnt）、城市数（city_cnt）、国家或地区数（country_cnt）、日期数（date_cnt）、文献数（doi_cnt）、纬度数（lat_cnt）、 经度数（lon_cnt）。如下可知，每一个 IP 只会对应一个城市、国家或地区、经纬度，这说明所有地理位置相关信息确实都是根据 IP 得来的。假如从 IP 解析得到地理位置的这一步存在失误，那么地理层面的数据分析都会建立在这个“失误”上。
+
+```
+       ip                freq              user_cnt         city_cnt  country_cnt     date_cnt           doi_cnt          lat_cnt     lon_cnt 
+ Min.   :       1   Min.   :     1.0   Min.   :     1.00   Min.   :1   Min.   :1   Min.   :  1.000   Min.   :     1.0   Min.   :1   Min.   :1  
+ 1st Qu.: 4199748   1st Qu.:     1.0   1st Qu.:     1.00   1st Qu.:1   1st Qu.:1   1st Qu.:  1.000   1st Qu.:     1.0   1st Qu.:1   1st Qu.:1  
+ Median : 8462909   Median :     2.0   Median :     1.00   Median :1   Median :1   Median :  1.000   Median :     2.0   Median :1   Median :1  
+ Mean   : 8503853   Mean   :    10.1   Mean   :     3.73   Mean   :1   Mean   :1   Mean   :  2.605   Mean   :     9.1   Mean   :1   Mean   :1  
+ 3rd Qu.:12786557   3rd Qu.:     5.0   3rd Qu.:     2.00   3rd Qu.:1   3rd Qu.:1   3rd Qu.:  2.000   3rd Qu.:     4.0   3rd Qu.:1   3rd Qu.:1  
+ Max.   :17208864   Max.   :404071.0   Max.   :170723.00   Max.   :1   Max.   :1   Max.   :329.000   Max.   :390389.0   Max.   :1   Max.   :1  
+
+```
+
+如上，有一个 IP（12247800）对应的去重用户数有170723位之多，此 IP 从2017.9.1开始出现，扣除10.7至10.29的22天数据缺失，截止2017.12.31日共出现了100天，平均每天对应1707个用户，若一个用户只对应一次文献下载记录，那么此 IP 平均每天每分钟要连续下载1.186篇文献。从数量级上看，非一人之力可为。
+
+继续观察此 IP 的24小时流量趋势，如下图所示，有一个明显的波谷。如果此 IP 对应的用户全是正常人类，那么确实可以同时贡献这个数量级的流量和形成一个波谷。如果此 IP 对应的用户是一个人类和一种批量抓取文献的手段，那么也有可能达到这种效果。如果此 IP 对应的用户不是人类，只是抓文献的机器，但是抓取文献的时间由正常人类控制，那么也是可能的。经过一番思考，本文作者倾向认为数据中的 IP 和 USER 这两个字段的关系是这样的：
+
++ IP 字段确实来源于 IP 地址，但并不是直接由 IP 地址转化，而是只提取了原来的 IP 地址所代表的地理位置信息。
+
++ USER 字段才是由每一个登录 Sci-Hub 网站的设备留下的 IP 地址所转化而来。
+
++ IP 和 USER 的关系相当于网络路由和设备。在一个局域网内，会出现一个 IP（路由）对应多个 USER（设备）的情况。
+
+```{r}
+data11 <- fread('data/ip12247800_hour_freq.csv')
+data11 <- data11[order(hour), ]
+data11$hour <- as.character(data11$hour)
+
+data11$color <- c(rep('RoyalBlue', 3), rep('red', 3), rep('RoyalBlue', 18))
+
+data11 |>
+  e_charts(hour) |>
+  e_bar(freq, name = "流量") |>
+  e_add_nested("itemStyle", color) |>
+  e_tooltip(trigger = "item") |>
+  e_y_axis(#name = "下载量",
+    axisLine = list(show = TRUE,
+                    symbol = c("none", "arrow"))) |>
+  e_legend(show = FALSE) |>
+  e_title(text = "IP（12247800）24小时流量趋势")
+```
+
+在以上假设的基础上，再来观察将数据拆分成以下两组时，各城市或地区的每日流量随时间变化的趋势。
+
++ 以 IP 为主
+    - 仅对应一个 USER（设备）的 IP（路由）
+    - 对应多个 USER（设备）的 IP（路由）
++ 以 USER 为主 
+    - 仅对应一个 IP（路由）的 USER（设备）
+    - 对应多个 IP（路由）的 USER（设备）
+
+下图中的上半部分显示，若以 IP 为主体，那么对应多个 USER 的 IP 所贡献的流量总是远多于仅对应一个 USER 的，这与假设相符，如若一个路由（IP）可以被许多设备（USER）连接，那么真正使用的用户更多，自然所贡献的流量也更多。下图中的下半部分显示，若以 USER 为主体，在北京、上海是对应多个 IP 的 USER 所贡献的流量与仅对应一个 IP 的差不多，在定西、台湾是对应多个 IP 的 USER 所贡献的流量比仅对应一个 IP 的多得多，在香港是没有哪种条件下的流量一直更多。看来，除了定西流量中存在谜团，香港和台湾的流量中也存在谜团。
+
+```{r}
+# freq1:user_label==1，仅对应一个IP的user
+# freq2:user_label==2，对应多个IP的user
+# freq3:ip_label==1，仅对应一个user的IP
+# freq4:ip_label==2，对应多个user的IP
+
+#按天
+data5 <- fread("data/cn_by_day_ip_user.csv", encoding = "UTF-8")
+
+data5$date <- as.Date(data5$date)
+
+e1<-data5 |>
+  group_by(type) |>
+  e_charts(date, height=300,timeline = TRUE) |>
+  e_line(freq3, name = "仅对应一个 USER 的 IP ") |>
+  e_line(freq4, name = "对应多个 USER 的 IP") |>
+  e_tooltip(trigger = "axis") |>
+  e_y_axis(name = "每日下载量", axisLine = list(
+    show = TRUE,
+    symbol = c("none", "arrow")
+  )) |>
+  e_legend(top = 40) |>
+  e_title(left = "center", top = 10) |>
+  e_timeline_serie(title = list(
+    list(
+      text = "北京 Sci-Hub 2017年下载量"
+    ),
+    list(text = "定西 Sci-Hub 2017年下载量"),
+    list(text = "上海 Sci-Hub 2017年下载量"),
+    list(text = "台湾 Sci-Hub 2017年下载量"),
+    list(text = "香港 Sci-Hub 2017年下载量")
+  ))
+
+e2<-data5 |>
+  group_by(type) |>
+  e_charts(date, height=300,timeline = TRUE) |>
+  e_line(freq1, name = "仅对应一个 IP 的 USER") |>
+  e_line(freq2, name = "对应多个 IP 的 USER") |>
+  e_tooltip(trigger = "axis") |>
+  e_y_axis(name = "每日下载量", axisLine = list(
+    show = TRUE,
+    symbol = c("none", "arrow")
+  )) |>
+  e_legend(top = 40) |>
+  e_title(left = "center", top = 10) |>
+  e_timeline_serie(title = list(
+    list(
+      text = "北京 Sci-Hub 2017年下载量"
+    ),
+    list(text = "定西 Sci-Hub 2017年下载量"),
+    list(text = "上海 Sci-Hub 2017年下载量"),
+    list(text = "台湾 Sci-Hub 2017年下载量"),
+    list(text = "香港 Sci-Hub 2017年下载量")
+  ))
+
+e_arrange(e1,e2,cols = 1)
+```
+
+若既不以 IP 为主体，也不以 USER 为主体，而是将流量拆分成四种独立情况：IP 与 USER 一对一、IP 与 USER 一对多、IP 与 USER 多对一、IP 与 USER 多对多。观察 Sci-Hub 全站流量以及北京、上海、定西、台湾、香港等5个城市或地区在这四种情况下的流量占比，显然比例最大的两部分都是“IP 与 USER 一对多”和“ IP 与 USER 多对多”。
+
+可还记得上一节中的68,091么？就是在2015.9-2016.2时间段内的定西月均流量基础上涨3倍，再加上此时间段1倍的兰州月均下载量。若是乘以12，得到817,092，与“IP 与 USER 一对多”条件下的2017年定西流量752,466很接近。如果 IP 与 USER 的关系是路由与设备，那么“IP 与 USER 一对多”条件极有可能是在局域网中才能达成的，是最不可能由其他时区通过代理服务所形成的流量，也是最可能来自定西或兰州当地的流量。那么有没有可能在2017年的定西流量中，只有“IP 与 USER 一对多”条件下的流量绝大部分是本来的“定西流量”和被误认为定西的兰州流量，剩下三种条件下的流量绝大部分都是其他时区的流量？
+
+```{r}
+data7 <- fread('data/hour_abcd.csv',encoding = 'UTF-8')
+
+data8 <- data7[, by = .(type), .(
+  A = sum(A),
+  B = sum(B),
+  C = sum(C),
+  D = sum(D)
+)]
+
+colnames(data8)[2:5] <- c("IP与USER一对一", "IP与USER一对多", "IP与USER多对一", "IP与USER多对多")
+
+data8 <- melt(data8, id = 1)
+data8 <- dcast(data8, variable ~ type, value.var = "value")
+
+#radius：调整半径大小
+#center：第一个值调左右，第二个值调上下
+data8 |>
+  e_charts(variable) |>
+  e_pie(
+    scihub,
+    radius = c("0%", "20%"),
+    center = c("30%", "20%"),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_pie(
+    `定西`,
+    radius = c("0%", "20%"),
+    center = c("70%", "20%"),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_pie(
+    `北京`,
+    radius = c("0%", "20%"),
+    center = c("30%", "50%"),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_pie(
+    `上海`,
+    radius = c("0%", "20%"),
+    center = c("70%", "50%"),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_pie(
+    `台湾`,
+    radius = c("0%", "20%"),
+    center = c("30%", "80%"),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_pie(
+    `香港`,
+    radius = c("0%", "20%"),
+    center = c("70%", "80%"),
+    itemStyle = list(
+      borderRadius = 10,
+      borderColor = '#fff',
+      borderWidth = 2
+    )
+  ) |>
+  e_labels(
+    show = TRUE,
+    alignTo = 'labelLine',
+    position = "outside",
+    distanceToLabelLine = 1,
+    formatter = "{a}：{c} \n 占比：{d}%"
+  )
+```
+
+观察北京、上海等城市或地区在四种条件下的24小时流量趋势。
+
++ 定西仅在“IP 与 USER 一对多”条件下第三个波峰最低，其他条件下都是第三个波峰最高。
+
++ 在“IP 与 USER 一对多”条件下这5个城市或地区都是第三个波峰最低，几乎可以肯定这个条件下的流量就是住在这些城市或地区的正常人类所产生的流量。
+
++ 在“IP 与 USER 多对多”条件下，其余4个城市或地区都是第三个波峰最低，只有定西流量是第三个波峰最高。
+
+倘若北京、上海、台湾、香港在“IP 与 USER 一对多”和“IP 与 USER 多对多”条件下的流量绝大部分都是自然流量，那么定西在“IP 与 USER 多对多”条件下的流量绝大部分就是来自其他时区的。
+
+```{r}
+#A:unique_ip==1&unique_user==1
+#B:unique_ip==1&unique_user>1
+#C:unique_ip>1&unique_user==1
+#D:unique_ip>1&unique_user>1
+data7 <- fread('data/hour_abcd.csv',encoding = 'UTF-8')
+
+data7 <- data7[order(hour),]
+data7$hour <- as.character(data7$hour)
+
+#type%in%c('scihub','北京', '上海', '定西', '台湾', '香港','广州','南京','杭州','武汉','成都','兰州')
+data7[type %in% c('北京', '上海', '定西', '台湾', '香港'), ] |>
+  group_by(type) |>
+  e_charts(hour, timeline = TRUE) |>
+  e_line(A, smooth = TRUE, name = "IP与USER一对一") |>
+  e_line(B, smooth = TRUE, name = "IP与USER一对多") |>
+  e_line(C, smooth = TRUE, name = "IP与USER多对一") |>
+  e_line(D, smooth = TRUE, name = "IP与USER多对多") |>
+  e_tooltip(trigger = "axis") |>
+  e_legend(
+    type = "scroll",
+    selector = c("all", "inverse"),
+    selectorPosition = "end",
+    top = 25
+  ) |>
+  e_y_axis(name = "下载量", axisLine = list(show = TRUE,
+                                         symbol = c("none", "arrow")))  |>
+  e_title(left = "center") |>
+  e_timeline_serie(title = list(
+    list(text = "2017年 北京 24小时下载量"),
+    list(text = "2017年 定西 24小时下载量"),
+    list(text = "2017年 上海 24小时下载量"),
+    list(text = "2017年 台湾 24小时下载量"),
+    list(text = "2017年 香港 24小时下载量")
+  ))
+  
+```
+
+# 5. 结尾
+
+从最初的数据表象来看，定西之谜的谜题有两点：
+
+1. 定西市本身没有知名科研机构，为何在 Sci-Hub 网站的下载流量那么高，仅次于北京、上海？
+
+2. 北京、上海等城市或地区的24小时流量变化趋势都是出现3个波峰，且第3个波峰最低，为何定西市第3个波峰反而是最高的？
+
+为了尝试解开定西之谜，本文进行了一些探索性数据分析，并且得到了以下几条线索：
+
+1. 由于正常人类的身体需要休息，各城市的24小时流量趋势整体上呈现出三个波峰和两个波谷，且第三个波峰最低更符合现实。但若是拆分成工作日和周末来看，仅有工作日第三个波峰最低。
+
+2. Sci-Hub提供的2017年下载日志数据中，时间字段并没有标识时区，在24小时流量趋势图的基础上，时间轴往后推移5个小时与常识更相符。
+
+3. 引入2015.9-2016.2的数据与2017年的数据进行对比，Sci-Hub全站的月均流量上涨倍数是2.712，全中国（含中国台湾、中国香港、中国澳门）的月均流量上涨倍数是3.089，而定西为11.74，兰州为1.52。
+
+4. 拆分出以 IP 为主的“1天”、“2天”、“3天”、“4-7天”、“8-30天”、“30天以上”等6个层次的数据，“1天”条件下各城市或地区均是第三个波峰最高，“30天”条件下各城市或地区均是第三个波峰最低。
+
+5. （仅本文作者猜测）2017年数据中 IP 与 USER 的关系是路由与设备。将数据拆分成 IP 与 USER 一对一、IP 与 USER 一对多、IP 与 USER 多对一、IP 与 USER 多对多等四种情况，其中 IP 与 USER 一对多、IP 与 USER 多对多这两种情况所贡献的流量占比最多。而定西流量仅在 IP 与 USER 一对多条件下呈现出第3个波峰最低的特点。
+
+虽然探索到最后，定西市的流量之谜并没有完全解开，但结合以上线索，本文得出的结论是：定西流量中混入了兰州流量以及大量中国境外的流量，其中仅有三到四成来自于定西以及“被误认为定西的兰州”，这些当地或邻近地区的流量特点是用户的使用周期在30天以上，且属于“IP 与 USER 一对多”的情形，也就是正常人类用户在局域网内使用设备登录 Sci-Hub，而混入定西的境外流量属于“IP 与 USER 多对多”的情形，这部分流量占比最多且第3个波峰最高，最终导致定西流量从整体上看总量高且第3个波峰最高。
+
+本（咸）文（鱼）作（人）者（类）认为，Sci-Hub 网站提供的下载日志数据虽然字段不多，但是可以拆分出极丰富的维度进行分析，对它的探索可以是无穷无尽的。也仍然还有很多方（脑）向（洞）值得继续探（填）索（坑），比如：
+
+1. 根据 DOI 引入文献元数据，从更加细微的粒度进行探索，区分出真正的非自然流量。Sci-Hub网站的其中一个[镜像](https://sci-hub.se/database)还提供了两份数据供下载分析，一是“a full list of Sci-Hub dois”，二是“an SQL table with metadata for every article”。
+
+2. 引入各城市或地区的教育科研投入经费、大学生人数、科研从业人数等，从更多维度上进行交叉验证。
+
+# 6. 运行环境
+
+在 RStudio IDE 内编辑本文的 R Markdown 源文件，用 **blogdown** [@blogdown2017] 构建网站，[Hugo](https://github.com/gohugoio/hugo) 渲染 knitr 之后的 Markdown 文件，得益于 **blogdown** 对 R Markdown 格式的支持，图、表和参考文献的交叉引用非常方便，省了不少文字编辑功夫。文中使用了多个 R 包，**echarts4r** [@echarts4r]绘图交互图形，**data.table**[@data.table] 包处理数据，**rcrossref** [@rcrossref]获取文章元数据。
+
+为方便复现本文内容，下面列出详细的环境信息：
+
+```{r, message=FALSE, echo=TRUE}
+xfun::session_info(packages = c(
+  "knitr", "rmarkdown", "blogdown",
+  "echarts4r.maps", "echarts4r", "countrycode",
+  "rcrossref", "data.table"
+), dependencies = FALSE)
+```
+
+```{r write-bib, include=FALSE}
+pkgs <- c("echarts4r", "data.table", "echarts4r.maps", "blogdown", "rcrossref")
+bib <- knitr::write_bib(
+  x = pkgs, file = NULL, prefix = ""
+)
+bib <- unlist(bib)
+bib <- gsub("(\\\n)", " ", bib)
+xfun::write_utf8(bib, "packages.bib")
+```
+
+# 7. 参考文献
+
+[^1]: Elbakyan, Alexandra. (2020). Sci-Hub download log 2011-2013 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.5918542
+
+[^2]: Elbakyan, Alexandra; Bohannon, John (2021), Data from: Who's downloading pirated papers? Everyone, Dryad, Dataset, https://doi.org/10.5061/dryad.q447c
+
+[^3]: Alexandra Elbakyan. (2018). Sci-Hub download log of 2017 [Data set]. Zenodo. https://doi.org/10.5281/zenodo.1158301
