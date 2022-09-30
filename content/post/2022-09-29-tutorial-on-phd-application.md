@@ -1,13 +1,12 @@
 
 
-```
 ---
 title: '北美博士项目申请经验'
 author: '张沥今'
 date: '2022-09-29'
 slug: tutorial-on-phd-application
 ---
-```
+
 
 
 
