@@ -22,19 +22,19 @@ forum_id: 423495
 
 ## 1 引言
 
-探求事物之间的因果关系是哲学、自然科学和社会科学等众多研究所追求的终极目标。古希腊哲学家德谟克利特（约公元前400年）认为：发现一个因果关系胜过做国王。培根（1561--1626年）提出"知识就是力量"，并认为"真正的知识是根据因果关系得到的知识"。探索并发现因果关系及其方法论的研究，伴随人类社会的发展而不断精深，成为经久不衰的挑战。如何根据观测和试验探究事物之间的因果关系，这个问题自东西方古代哲学到现代科学，已经困惑了人类数千年。因果关系与相关关系是两个不同的概念。即使两个变量有相关关系也可能没有因果关系；相反地，它们没有相关关系也可能有因果关系。十九世纪末，统计学家提出了各种相关关系的形式化度量，最具有代表性的是Pearson相关系数。一个多世纪以来，统计学中关于相关关系的研究取得了令人瞩目的成就，而关于因果关系的研究则进展缓慢。正如Holland(1986)指出的那样：涉及因果推断的问题自始就缠住了统计学前进的步伐。2011年图灵奖获得者Pearl(2009)认为：在过去的一个世纪中，许多科学发现被推迟是由于缺少描述因果的数学语言。近年来，探索因果关系的研究越来越激励着统计学者和计算机学者，在统计领域中对因果推断的兴趣正在复兴(Lauritzen,2004)。2008年以来，在国际机器学习会议和期刊中组织了多次因果挑战的Workshops(Guyon et al.,2008)和专题论文(Spirtes,2010)。在大数据时代，不仅要紧盯事物之间的相关关系，更应该挖掘蕴藏在大数据中的因果关系（摘自defense advanced research projects agency，简称DARPA；以及[Big Mechanism Program](https://www.darpa.mil/program/big-mechanism)）。例如，某超市发现顾客买尿布与买啤酒有很大的相关性，实际上二者没有因果关系，而出现这个相关性的原因是在家照顾婴儿的主妇常让丈夫去超市买尿布，这些丈夫买尿布的同时会顺便买啤酒。如果这些主妇改为自己在网上买尿布的话，将不能期望她们的丈夫同时会买啤酒。
+探求事物之间的因果关系是哲学、自然科学和社会科学等众多研究所追求的终极目标。古希腊哲学家德谟克利特（约公元前400年）认为：发现一个因果关系胜过做国王。培根（1561--1626年）提出"知识就是力量"，并认为"真正的知识是根据因果关系得到的知识"。探索并发现因果关系及其方法论的研究，伴随人类社会的发展而不断精深，成为经久不衰的挑战。如何根据观测和试验探究事物之间的因果关系，这个问题自东西方古代哲学到现代科学，已经困惑了人类数千年。因果关系与相关关系是两个不同的概念。即使两个变量有相关关系也可能没有因果关系；相反地，它们没有相关关系也可能有因果关系。十九世纪末，统计学家提出了各种相关关系的形式化度量，最具有代表性的是 Pearson 相关系数。一个多世纪以来，统计学中关于相关关系的研究取得了令人瞩目的成就，而关于因果关系的研究则进展缓慢。正如 Holland(1986) 指出的那样：涉及因果推断的问题自始就缠住了统计学前进的步伐。2011年图灵奖获得者Pearl(2009)认为：在过去的一个世纪中，许多科学发现被推迟是由于缺少描述因果的数学语言。近年来，探索因果关系的研究越来越激励着统计学者和计算机学者，在统计领域中对因果推断的兴趣正在复兴 (Lauritzen,2004) 。2008年以来，在国际机器学习会议和期刊中组织了多次因果挑战的 Workshops(Guyon et al.,2008) 和专题论文 (Spirtes,2010) 。在大数据时代，不仅要紧盯事物之间的相关关系，更应该挖掘蕴藏在大数据中的因果关系（引自defense advanced research projects agency，简称DARPA；以及[Big Mechanism Program](https://www.darpa.mil/program/big-mechanism)）。例如，某超市发现顾客买尿布与买啤酒有很大的相关性，实际上二者没有因果关系，而出现这个相关性的原因是在家照顾婴儿的主妇常让丈夫去超市买尿布，这些丈夫买尿布的同时会顺便买啤酒。如果这些主妇改为自己在网上买尿布的话，将不能期望她们的丈夫同时会买啤酒。
 
-在科学研究的各个领域都存在因果推断的挑战问题。在经济学中，诺贝尔经济学奖获得者Heckman(2008)提出了政策评价中的三个因果推断的挑战问题：
+在科学研究的各个领域都存在因果推断的挑战问题。在经济学中，诺贝尔经济学奖获得者 Heckman(2008) 提出了政策评价中的三个因果推断的挑战问题：
 
 -   评价历史上出现的干预对结果的影响；
 -   预测在一个环境中曾执行过的干预在其他环境中的影响；
 -   预测历史上从没有经历过的干预在各种环境中的影响。
 
-从时间序列预测的角度，Granger(1969)中提出了因果关系的定义：如果利用$X$能更好地预测$Y$，那么$X$是$Y$的原因。这个定义不能描述真正的因果关系，实际上是相关关系。例如，看到闪电可以预测雷声，而闪电却不是雷声的真正原因。相关关系是"预测"的基础，而因果关系是"决策"的基础。
+从时间序列预测的角度，Granger(1969) 中提出了因果关系的定义：如果利用$X$能更好地预测$Y$，那么$X$是$Y$的原因。这个定义不能描述真正的因果关系，实际上是相关关系。例如，看到闪电可以预测雷声，而闪电却不是雷声的真正原因。相关关系是"预测"的基础，而因果关系是"决策"的基础。
 
-目前，因果推断采用的两个主要模型是潜在结果模型(Neyman1923;Rubin,1974)和因果网络模型(Pearl,1988;2009b)。潜在结果模型给出了因果作用的数学定义。该模型主要用在原因和结果变量已知的前提下，定量评价原因变量对结果变量的因果作用。因果网络模型是描述数据产生机制和外部干预的形式化语言。因果网络是将贝叶斯网络加上外部干预，用来定义外部干预的因果作用和描述多个变量之间的因果关系。利用因果网络不仅能定量评价因果作用，还能定性确定混杂因素，用于从数据挖掘因果关系。
+目前，因果推断采用的两个主要模型是潜在结果模型 (Neyman1923;Rubin,1974) 和因果网络模型 (Pearl,1988;2009b) 。潜在结果模型给出了因果作用的数学定义。该模型主要用在原因和结果变量已知的前提下，定量评价原因变量对结果变量的因果作用。因果网络模型是描述数据产生机制和外部干预的形式化语言。因果网络是将贝叶斯网络加上外部干预，用来定义外部干预的因果作用和描述多个变量之间的因果关系。利用因果网络不仅能定量评价因果作用，还能定性确定混杂因素，用于从数据挖掘因果关系。
 
-本文第2节介绍因果推断的潜在结果模型，因果作用的可识别性，和随机化试验；第3节介绍观察性研究和混杂因素，以及混杂因素完全观测时的因果推断方法；第4节介绍存在未观测的混杂因素时因果作用的估计方法；第5节介绍替代指标悖论和确定替代指标的准则；第6节介绍因果网络模型和结构学习的算法。最后，在第7节我们展望因果推断在现代大数据研究中的前景。
+本文第 2 节介绍因果推断的潜在结果模型，因果作用的可识别性，和随机化试验；第 3 节介绍观察性研究和混杂因素，以及混杂因素完全观测时的因果推断方法；第 4 节介绍存在未观测的混杂因素时因果作用的估计方法；第 5 节介绍替代指标悖论和确定替代指标的准则；第 6 节介绍因果网络模型和结构学习的算法。最后，在第 7 节我们展望因果推断在现代大数据研究中的前景。
 
 ## 2 潜在结果模型
 
@@ -42,9 +42,9 @@ forum_id: 423495
 
 两个变量$X$和$Y$的相关系数可以用$X$和$Y$的联合分布的函数表示。例如，Pearson相关系数表示为$\rho(X,Y)=\sigma_{xy}/(\sigma_x\sigma_y)$,其中，$\sigma_{xy}$是$X,Y$的协方差，$\sigma_x,\sigma_y$分别是$X,Y$的标准差。但是，如何形式化表示两个变量$X$和$Y$的因果作用的度量呢？用观测变量$X$和$Y$的联合分布的函数怎么也不能清楚地定义因果作用。
 
-统计学家利用潜在结果给出了因果作用的的形式化定义。利用潜在结果模型，Neyman(1923)针对试验性研究(experimental studies)给出了因果作用的数学定义,Rubin(1974)将这一定义推广到观察性研究(observational studies)。潜在结果模型通常需要假定个体处理值稳定(stable unit treatment value assumption，SUTVA)：个体$i$的潜在结果不受其他个体的处理的影响，并且对每个个体和每一种处理只有一个潜在结果，详细讨论见Rubin(1980)。考虑一个二值处理或暴露变量(treatment/exposure)，$X=1$代表处理组，$0$代表对照组.在接受处理分配$X=x$后的结果变量为$Y_x$,表示假如接受处理$X=x$后的结果，称为潜在结果(potential outcome)。对每个个体，实际观察的结果变量$Y$可以用潜在结果$(Y_1,Y_0)$表示为$Y=XY_1+(1-X)Y_0$。SUTVA假定意味着张三的病是否被治好不受李四是否吃药的影响。这个假定在很多实际问题中不成立，例如，李四获奖，也许会影响其同事张三的工作积极性；周围的朋友打不打流感预防针也许会影响自己得不得流感。这个假定也许是潜在结果模型的重要缺陷之一。目前有一些学者试图利用社会网络方法弥补这个缺陷(Athey et al.,2018;Eckles et al.,2017;Hudgens and Halloran,2008;Liu and Hudgens,2014;Sobel,2006;Tchetgen and VanderWeele,2012)。
+统计学家利用潜在结果给出了因果作用的的形式化定义。利用潜在结果模型，Neyman(1923) 针对试验性研究(experimental studies)给出了因果作用的数学定义，Rubin(1974) 将这一定义推广到观察性研究(observational studies)。潜在结果模型通常需要假定个体处理值稳定(stable unit treatment value assumption，SUTVA)：个体$i$的潜在结果不受其他个体的处理的影响，并且对每个个体和每一种处理只有一个潜在结果，详细讨论见 Rubin(1980)。考虑一个二值处理或暴露变量(treatment/exposure)，$X=1$代表处理组，$0$代表对照组.在接受处理分配$X=x$后的结果变量为$Y_x$,表示假如接受处理$X=x$后的结果，称为潜在结果(potential outcome)。对每个个体，实际观察的结果变量$Y$可以用潜在结果$(Y_1,Y_0)$表示为$Y=XY_1+(1-X)Y_0$。SUTVA假定意味着张三的病是否被治好不受李四是否吃药的影响。这个假定在很多实际问题中不成立，例如，李四获奖，也许会影响其同事张三的工作积极性；周围的朋友打不打流感预防针也许会影响自己得不得流感。这个假定也许是潜在结果模型的重要缺陷之一。目前有一些学者试图利用社会网络方法弥补这个缺陷 (Athey et al.,2018;Eckles et al.,2017;Hudgens and Halloran,2008;Liu and Hudgens,2014;Sobel,2006;Tchetgen and VanderWeele,2012)。
 
-因果作用定义为相同个体的潜在结果的比较(Neyman1923;Rubin1974,1978)。个体$i$的因果作用(individual Causal Effect, ICE)定义为：
+因果作用定义为相同个体的潜在结果的比较 (Neyman1923;Rubin1974,1978)。个体$i$的因果作用(individual causal effect, ICE)定义为：
 $${\rm ICE}(i) = Y_1(i) - Y_0(i).$$
 尽管潜在结果模型清楚地定义了个体因果作用，但是，正如赫拉克里塔斯(Heraclitus，古希腊哲学家)所指出的那样：你不可能两次踏入相同的河。对于每个个体$i$,通常不可能既观测到$Y_1(i)$，又观测到$Y_{0}(i)$。因此，个体因果作用通常是不能从观测数据推断的。尽管如此，有一些学者试图探讨个体因果作用的统计推断方法，这一般需要较强的模型假定。目前，个体化治疗和精准治疗也是试图推断个体因果作用或同质个体人群的因果作用(Murphy,2003;Su et al.,2012;Kleinberg and Hripcsak,2011;Chakraborty and Moodie,2013)。由于对每一个体$i$，$Y_1(i)$和$Y_0(i)$不能同时观测到，因此，因果推断还可以看为是一个缺失数据的问题。
 
@@ -97,13 +97,14 @@ Rosenbaum and Rubin(1983)提出的处理分配机制的可忽略性假定是观�
 
 假设3.1（处理分配机制的可忽略性，ignorability of treatment assignment mechanism,简称可忽略性）令$V$表示观测的协变量，如果满足$(i)$ $(Y_1,Y_0) \perp  X\mid V$ 和$(ii)$ $0< pr(X=1\mid V)<1$，那么称处理分配机制是可忽略的。
 
-可忽略性假定中的条件$(i)$相当于在$V$的每一层做了随机化分配，那么，在$V$的每一层，平均因果作用是可识别的，进而对$V$求期望可以得到总体的平均因果作用，条件$(ii)$要求在。$V$的每一层里接受处理或对照的概率大于零，这是为了保证在每一层都能得到该层平均因果作用的相合估计.在可忽略性假定下，平均因果作用可通过以下公式识别，
-$$E(Y_1-Y_0)= E[E(Y_1-Y_0\mid V)] = E[E(Y\mid X=1,V)-E(Y\mid X = 0,V)].$$
+可忽略性假定中的条件$(i)$相当于在$V$的每一层做了随机化分配，那么，在$V$的每一层，平均因果作用是可识别的，进而对$V$求期望可以得到总体的平均因果作用，条件$(ii)$要求在$V$的每一层里接受处理或对照的概率大于零，这是为了保证在每一层都能得到该层平均因果作用的相合估计.在可忽略性假定下，平均因果作用可通过以下公式识别：
+$$E(Y_1-Y_0)= E[E(Y_1-Y_0\mid V)] = E[E(Y\mid X=1,V)-E(Y\mid X = 0,V)]$$
 
 可忽略性假定解释了随机化试验和观察性研究的差别. 如果处理$X$没有随机分配，而仅仅是可忽略性假定成立，那么不对混杂因素进行调整，就会导致混杂偏倚， 
 $$\begin{aligned}\label{bias}
-&&\{E(Y\mid X=1)-E(Y\mid X=0)\} - {\rm ACE}
-&=& \int_V E(Y\mid X=1,V)\{ pr(V\mid X=1)- pr(V)\}dV - \int_V E(Y\mid X=0, V)\{ pr(V\mid X=0)- pr(V)\}dV.\end{aligned}$$
+\{E(Y\mid X=1)-E(Y\mid X=0)\} - {\rm ACE}
+&= \int_V E(Y\mid X=1,V)\{ pr(V\mid X=1)- pr(V)\}dV \\
+&- \int_V E(Y\mid X=0, V)\{ pr(V\mid X=0)- pr(V)\}dV.\end{aligned}$$
 当协变量$V$的分布在处理组和对照组不均衡时，即$pr(V\mid X=1)\neq pr(V\mid X=0)$时，该混杂偏倚一般不为零，因此在进行平均因果作用的统计推断时，需要对协变量$V$做调整。
 
 在可忽略性假定下，多种统计推断方法可以用来估计因果作用。例如，当$V$是一个有$K$个水平的离散变量时，可以先在$V$的每一层估计${\rm ACE}_k=E(Y_1-Y_0\mid V=k)$,然后估计${\rm ACE}=\sum_{k=1}^{K}{\rm ACE}_kpr(V=k)$。但是当$V$是高维变量或连续型变量时，按$V$的值将总体分层会导致每一层的样本太少，增大估计的方差。在这种情况下，通常建立一些参数模型来估计因果作用。
@@ -121,18 +122,18 @@ $$\begin{aligned}\label{bias}
 因此，可以利用倾向得分分层或匹配进行因果推断，从而避免了用高维协变量$V$进行分层或匹配的困难。给定样本中个体$i=1,\cdots,n$,采用Abadie and Imbens(2016)的做法，个体$i$根据倾向得分得到的匹配集合定义为
 $$\begin{aligned}\label{match}J(i)=\{j=1,\ldots n: X_j=1-X_i; 
 \sum_{k:X_k=1-X_i} \delta\{|\pi(V_i)-\pi(V_k)|\leq |\pi(V_i)-\pi(V_j)| \} \leq M\}.\end{aligned}$$
-其中，$\delta\{\cdot\}$是示性函数，当括号中的条件满足时取值$1$,否则取值 $0$;$M$为整数，代表每一个体的匹配数据的个数，比如，$M=1$时得到$1:1$匹配。这个定义允许在构造匹配集合过程中放回已被使用的个体，并用在其他个体的匹配集合中。平均因果作用的匹配估计为
+其中，$\delta\{\cdot\}$是示性函数，当括号中的条件满足时取值$1$，否则取值 $0$；$M$为整数，代表每一个体的匹配数据的个数，比如，$M=1$时得到$1:1$匹配。这个定义允许在构造匹配集合过程中放回已被使用的个体，并用在其他个体的匹配集合中。平均因果作用的匹配估计为
 $$\begin{aligned}\widehat \phi_{\rm psm} = \frac{1}{n} \sum_{i=1}^{n } (2X_i-1) (Y_i  - \frac{1}{M} \sum_{j\in J(i)} Y_j).\end{aligned}$$
 如果在实际中不知道真实的倾向得分，可以根据数据预先估计，然后用估计得到的倾向得分做匹配。常用的估计倾向得分方法包括logistic回归，或决策树等机器学习方法(Lee et al.2010)。
 
 匹配方法还可以用来估计处理组的平均因果作用 $$\begin{aligned}
 \widehat \phi_{\rm psm1} = \frac{1}{\sum_{i=1}^{n}X_i} \sum_{i=1}^{n } X_i (Y_i  - \frac{1}{M} \sum_{j\in J(i)} Y_j).\end{aligned}$$
-在一定正则条件下，可以证明匹配估计的相合性和渐近正态性(Abadie and Imbens,2006,2016)。此外，还有一些有趣性质。例如，在一定条件下，使用倾向得分估计值进行匹配得到的平均因果作用估计的方差比使用倾向得分的真实值还小(Abadie and Inbens 2006,2016).Austin(2008,2011);Stuart
-(2010)详细回顾了匹配方法在应用中的其他话题，例如，方差估计的方法，有放回 (replacement)匹配和无放回匹配的比较，精确匹配，最近邻法匹配 (nearest neighbor matching)，检验匹配数据平衡性的方法，统计软件实现等等。
+在一定正则条件下，可以证明匹配估计的相合性和渐近正态性(Abadie and Imbens,2006,2016)。此外，还有一些有趣性质。例如，在一定条件下，使用倾向得分估计值进行匹配得到的平均因果作用估计的方差比使用倾向得分的真实值还小(Abadie and Inbens 2006,2016)。Austin(2008,2011);Stuart
+(2010)详细回顾了匹配方法在应用中的其他话题，例如，方差估计的方法，有放回(replacement)匹配和无放回匹配的比较，精确匹配，最近邻法匹配(nearest neighbor matching)，检验匹配数据平衡性的方法，统计软件实现等等。
 
 ### 3.4 逆概加权估计和回归估计
 
-除了匹配，倾向得分还经常用在逆概加权估计 (inverse probability weighted estimation)中。给定可忽略性假定，容易证明，
+除了匹配，倾向得分还经常用在逆概加权估计(inverse probability weighted estimation)中。给定可忽略性假定，容易证明，
 $$E(Y_x)=E\{\frac{\delta(X=x)Y}{pr(X=x\mid V)}\},$$
 
 这里的$\delta(\cdot)$是示性函数。据此，可以通过拟合一个倾向得分模型 $\pi(V;\alpha)= \ pr(X=1\mid V;\alpha)$
@@ -470,7 +471,7 @@ Kaufmann, 1988
 96. Miao W, Tchetgen Tchetgen E. A confounding bridge approach for double negative control inference on causal effects. ArXiv:1808.04945, 2018
 97. D’Haultfoeuille X. On the completeness condition in nonparametric instrumental problems. Econometric Theory, 2011, 27: 460–471
 98. Darolles S, Fan Y, Florens J P, et al. Nonparametric instrumental regression. Econometrica, 2011, 79: 1541–1565
-99. Chen X H, Chernozhukov V, Lee S, et al. Local identification of nonparametric and semiparametric models. Econometrica, 2014, 82: 785–809
+99. Chen X H, Chernozhukov V, Lee S, et al. Local identification of nonparametric and semiparametric models. Econometrica, 2014, 82: 785–809
 100. Andrews D W K. Examples of L2-complete and boundedly-complete distributions. J Econometrics, 2017, 199: 213-220
 101. Fleming T R, Demets D L. Surrogate end points in clinical trials: Are we being misled? Ann Internat Med, 1996, 125: 605–613
 102. Baker S. Surrogate endpoints: Wishful thinking or reality? J Natl Cancer I, 2006, 98: 502–503
@@ -526,13 +527,13 @@ Kaufmann, 1988
 152. Hyvarinen A, Smith S M. Pairwise likelihood ratios for estimation of non-gaussian structural equation models. J Mach Learn Res, 2013, 14: 111–152
 153. Zhang K, Hyvarinen A. On the identifiability of the post-nonlinear causal model. In: Proceedings of the 25th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2009, 647–655
 154. Zhang K, Scholkopf B, Janzing D, et al. Invariate Gaussian process latent variable models and appliation in caual discovery. In: Proceedings of the 26th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2010, 717–724
-155. Buhlmann P, Peters J, Ernest J. Cam: Causal additive models, high-dimensional order search and penalized regression. Ann Statist, 2013, 42: 2526–2556
+155. Buhlmann P, Peters J, Ernest J. Cam: Causal additive models, high-dimensional order search and penalized regression. Ann Statist, 2013, 42: 2526–2556
 156. Mooij J M, Janzing D, Heskes T, et al. On causal discovery with cyclic additive noise models. In: Advances in Neural Information Processing Systems. Cambridge: MIT Press, 2011, 639–647
 157. Cai R C, Qiao J, Zhang Z J, et al. Self: Structural equational embedded likelihood framework for causality discovery. In: AAAI Conference on Artificial Intelligence. New Orleans: AAAI Press, 2018, 1787–1794
 158. Fei N, Yang Y. Estimating linear causality in the presence of latent variables. Cluster Comput, 2017, 20: 1025–1033
 159. Claassen T, Heskes T. A logical characterization of constraint-based causal discovery. In: Proceedings of the 27th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2011, 135–144
-160. Hyttinen A, Hoyer P O, Eberhardt F, et al. Discovering cyclic causal models with latent variables: A general satbased procedure. In: Proceedings of the 29th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2013, 301–310
-161. Borboudakis G, Tsamardinos I. Towards robust and versatile causal discovery for business applications. In: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. New York: Amer Math Soc, 2016, 1435–1444
+160. Hyttinen A, Hoyer P O, Eberhardt F, et al. Discovering cyclic causal models with latent variables: A general satbased procedure. In: Proceedings of the 29th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2013, 301–310
+161. Borboudakis G, Tsamardinos I. Towards robust and versatile causal discovery for business applications. In: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. New York: Amer Math Soc, 2016, 1435–1444
 162. He Y, Jia J, Yu B. Reversible MCMC on Markov equivalence classes of sparse directed acyclic graphs. Ann Statist, 2013, 41: 1742–1779
 163. He Y, Jia J, Yu B. Counting and exploring sizes of Markov equivalence classes of directed acyclic graphs. J Mach Learn Res, 2015, 16: 2589–2609
 164. Yue K, Fang Q, Wang X, et al. A parallel and incremental approach for data-intensive learning of bayesian networks. IEEE Trans Cybern, 2015, 45: 2890–2904
