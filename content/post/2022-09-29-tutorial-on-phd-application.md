@@ -6,8 +6,6 @@ slug: tutorial-on-phd-application
 ---
 
 
-
-
  *  [1. 前言](#前言)
  *  [2. 材料准备](#材料准备)
     *  [2.1. 简历](#简历)
