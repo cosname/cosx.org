@@ -472,5 +472,81 @@ Kaufmann, 1988
 98. Darolles S, Fan Y, Florens J P, et al. Nonparametric instrumental regression. Econometrica, 2011, 79: 1541–1565
 99. Chen X H, Chernozhukov V, Lee S, et al. Local identification of nonparametric and semiparametric models. Econometrica, 2014, 82: 785–809
 100. Andrews D W K. Examples of L2-complete and boundedly-complete distributions. J Econometrics, 2017, 199: 213-220
+101. Fleming T R, Demets D L. Surrogate end points in clinical trials: Are we being misled? Ann Internat Med, 1996, 125: 605–613
+102. Baker S. Surrogate endpoints: Wishful thinking or reality? J Natl Cancer I, 2006, 98: 502–503
+103. Manns B, Owen W F, Winkelmayer W C, et al. Surrogate markers in clinical studies: Problems solved or created? Amer J Kidney Diseases, 2006, 48: 159–166
+104. Alonso A, Molenberghs G. Surrogate end points: Hopes and perils. Expert Rev Pharmacoeconomics Outcomes Res, 2008, 8: 255–259
+105. Prentice R L. Surrogate endpoints in clinical trials: Definition and operational criteria. Statist Med, 1989, 8: 431–440
+106. Frangakis C E, Rubin D B. Principal stratification in causal inference. Biometrics, 2002, 58: 21–29
+107. Chen H, Geng Z, Jia J. Criteria for surrogate end points. J R Stat Soc Ser B Stat Methodol, 2007, 69: 919–932
+108. Moore T. Deadly Medicine: Why Tens of Thousands of Patients Died in America’s Worst Drug Disaster. New York: Simon & Schuster, 1995
+109. VanderWeele T J. Surrogate measures and consistent surrogates. Biometrics, 2013, 69: 561–565
+110. Pearl J. Is scientific knowledge useful for policy analysis? J Causal Inference, 2014, 2: 109–112
+111. Ju C, Geng Z. Criteria for surrogate end points based on causal distributions. J R Stat Soc Ser B Stat Methodol, 2010, 72: 129–142
+112. Wu Z, He P, Geng Z. Sufficient conditions for concluding surrogacy based on observed data. Statist Med, 2011, 30: 2422–2434
+113. Luo P, Cai Z, Geng Z. Criteria for multiple surrogates. Statist Sinica, 2018, in press
+114. Lauritzen S L, Spiegelhalter D J. Local computations with probabilities on graphical structures and their application to expert systems. J R Stat Soc Ser B Stat Methodol, 1988, 50: 157–224
+115. Spiegelhalter D J, Dawid A P, Lauritzen S L, et al. Bayesian analysis in expert systems. Statist Sci, 2011, 9: 219–83
+116. Spirtes P, Glymour C, Sces R. Causation, Prediction, and Search, 2nd ed. Cambridge: MIT Press, 2000
+117. Greenland S, Pearl J. Adjustments and their consequences-collapsibility analysis using graphical models. Int Statist Rev, 2011, 79: 401–426
+118. Greenland S, Pearl J, Robins J M. Causal diagrams for epidemiologic research. Epidemiology, 1999, 10: 37–48
+119. Pearl J. Causal diagrams for empirical research. Biometrika, 1995, 82: 669–688
+120. Geng Z, Li G. Conditions for non-confounding and collapsibility without knowledge of completely constructed causal diagrams. Scand J Statist, 2002, 29: 169–181
+121. Verma T, Pearl J. Equivalence and synthesis of causal models. In: Proceedings of the 6th Conference on Uncertainy in Artificial Intelligence. Amsterdam: Elsevier, 1990, 255–270
+122. Spirtes P, Glymour C. An algorithm for fast recovery of sparse causal graphs. Soc Sci Comput Rev, 1991, 9: 62–72
+123. Colombo D, Maathuis M H. Order-independent constraint-based causal structure learning. J Mach Learn Res, 2014, 15: 3921–3962
+124. Spirtes P, Meek C, Richardson T S. An algorithm for causal inference in the presence of latent variables and selection bias. In: Computation, Causation, and Discovery. New Orleans: AAAI Press, 1999, 211–252
+125. Zhang K, Peters J, Janzing D, et al. Kernel-based conditional independence test and application in causal discoveyr. Comput Sci, 2012, 8: 895–907
+126. Cui R, Groot P, Heskes T. Copula PC algorithm for causal discovery from mixed data. In: Joint European Conference on Machine Learning and Knowledge Discovery in Databases. Lecture Notes in Computer Science, vol. 9852. Cham: Springer, 2016, 377–392
+127. Xie X, Geng Z, Zhao Q. Decomposition of structural learning about directed acyclic graphs. Artificial Intelligence, 2006, 170: 422–439
+128. Xie X, Geng Z. A recursive method for structural learning of directed acyclic graphs. J Mach Learn Res, 2008, 9: 459–483
+129. Liu B, Guo J, Jing B Y. A note on minimal d-separation trees for structural learning. Artificial Intelligence, 2010, 174: 442–448
+130. Xu P F, Guo J, Tang M L. Structural learning for bayesian networks by testing complete separators in prime blocks. Comput Statist Data Anal, 2011, 55: 3135–3147
+131. Cai R, Zhang Z, Hao Z. Sada: A general framework to support robust causation discovery. In: Proceedings of the 30th International Conference on Machine Learning. Atlanta: International Machine Learning Society, 2013, 208–216
+132. Cai R C, Zhang Z J, Hao Z F, et al. Sophisticated merging over random partitions: A scalable and robust causal discovery approach. IEEE Trans Neural Netw Learn Syst, 2018, 29: 3623–3635
+133. He Y B, Geng Z. Active learning of causal networks with intervention experiments and optimal designs. J Mach Learn Res, 2008, 9: 2523–2547
+134. Hauser A, B¨uhlmann P. Characterization and greedy learning of interventional Markov equivalence classes of directed acyclic graphs. J Mach Learn Res, 2012, 13: 2409–2464
+135. Tsamardinos I, Brown L E, Aliferis C F. The max-min hill-climbing Bayesian network structure learning algorithm. Mach Learn, 2006, 65: 31–78
+136. Wang C Z, Zhou Y, Zhao Q, et al. Discovering and orienting the edges connected to a target variable in a DAG via a sequential local learning approach. Comput Statist Data Anal, 2014, 77: 252–266
+137. Heckerman D. A tutorial on learning with Bayesian networks. In: Innovations in Bayesian Networks. Studies in Computational Intelligence, vol 156. Berlin-Heidelberg: Springer, 2008
+138. Heckerman D, Geiger D, Chickering D M. Learning Bayesian networks: The combination of knowledge and statistical data. Mach Learn, 1995, 20: 197–243
+139. Chickering D M. Optimal structure identification with greedy search. Mach Learn, 2002, 3: 507–554
+140. Ji J, Hu R, Zhang H, et al. A hybrid method for learning Bayesian networks based on ant colony optimization. Appl Soft Comput, 2011, 11: 3373–3384
+141. Ji J, Wei H, Liu C. An artificial bee colony algorithm for learning Bayesian networks. Soft Comput, 2013, 17: 983–994
+142. Yang C, Ji J, Liu J, et al. Structural learning of Bayesian networks by bacterial foraging optimization. Internat J Approx Reason, 2016, 69: 147–167
+143. Ji J, Yang C, Liu J, et al. A comparative study on swarm intelligence for structure learning of Bayesian networks. Soft Comput, 2017, 21: 6713–6738
+144. Ji J, Liu J, Liang P, et al. Learning Effective connectivity network structure from fMRI data based on artificial immune algorithm. PLoS ONE, 2016, 11: e0152600
+145. Gasse M, Aussem A, Elghazel H. A hybrid algorithm for Bayesian network structure learning with application to multi-label learning. Expert Syst Appl, 2014, 41: 6755–6772
+146. Shimizu S, Hoyer P O, Hyvarinen A, et al. A linear non-gaussian acyclic model for causal discovery. J Mach Learn Res, 2006, 7: 2003–2030
+147. Hoyer P O, Janzing D, Mooij J M, et al. Nonlinear causal discovery with additive noise models. In: Proceedings of the 21th Advances in Neural Information Processing Systems. Cambridge: MIT Press, 2009, 689–696
+148. Shimizu S, Inazumi T, Sogawa Y, et al. Directlingam: A direct method for learning a linear non-gaussian structural equation model. J Mach Learn Res, 2011, 12: 1225–1248
+149. Hoyer P O, Shimizu S, Kerminen A J, et al. Estimation of causal effects using linear non-Gaussian causal models with hidden variables. Internat J Approx Reason, 2008, 49: 362–378
+150. Henao R, Winther O. Sparse linear identifiable multivariate modeling. J Mach Learn Res, 2011, 12: 863–905
+151. Lacerda G, Spirtes P, Ramsey J, et al. Discovering cyclic causal models by independent components analysis. In: Proceedings of the 24th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2008, 366–374
+152. Hyvarinen A, Smith S M. Pairwise likelihood ratios for estimation of non-gaussian structural equation models. J Mach Learn Res, 2013, 14: 111–152
+153. Zhang K, Hyvarinen A. On the identifiability of the post-nonlinear causal model. In: Proceedings of the 25th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2009, 647–655
+154. Zhang K, Scholkopf B, Janzing D, et al. Invariate Gaussian process latent variable models and appliation in caual discovery. In: Proceedings of the 26th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2010, 717–724
+155. Buhlmann P, Peters J, Ernest J. Cam: Causal additive models, high-dimensional order search and penalized regression. Ann Statist, 2013, 42: 2526–2556
+156. Mooij J M, Janzing D, Heskes T, et al. On causal discovery with cyclic additive noise models. In: Advances in Neural Information Processing Systems. Cambridge: MIT Press, 2011, 639–647
+157. Cai R C, Qiao J, Zhang Z J, et al. Self: Structural equational embedded likelihood framework for causality discovery. In: AAAI Conference on Artificial Intelligence. New Orleans: AAAI Press, 2018, 1787–1794
+158. Fei N, Yang Y. Estimating linear causality in the presence of latent variables. Cluster Comput, 2017, 20: 1025–1033
+159. Claassen T, Heskes T. A logical characterization of constraint-based causal discovery. In: Proceedings of the 27th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2011, 135–144
+160. Hyttinen A, Hoyer P O, Eberhardt F, et al. Discovering cyclic causal models with latent variables: A general satbased procedure. In: Proceedings of the 29th Conference on Uncertainty in Artificial Intelligence. Corvallis: AUAI Press, 2013, 301–310
+161. Borboudakis G, Tsamardinos I. Towards robust and versatile causal discovery for business applications. In: Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. New York: Amer Math Soc, 2016, 1435–1444
+162. He Y, Jia J, Yu B. Reversible MCMC on Markov equivalence classes of sparse directed acyclic graphs. Ann Statist, 2013, 41: 1742–1779
+163. He Y, Jia J, Yu B. Counting and exploring sizes of Markov equivalence classes of directed acyclic graphs. J Mach Learn Res, 2015, 16: 2589–2609
+164. Yue K, Fang Q, Wang X, et al. A parallel and incremental approach for data-intensive learning of bayesian networks. IEEE Trans Cybern, 2015, 45: 2890–2904
+165. Yue K, Wu H, Fu X, et al. A data-intensive approach for discovering user similarities in social behavioral interactions based on the bayesian network. Neurocomputing, 2017, 219: 364–375
+166. Cai R, Liu M, Hu Y, et al. Identification of adverse drug-drug interactions through causal association rule discovery from spontaneous adverse event reports. Artificial Intelligence Med, 2017, 76: 7–15
+167. Cai R, Zhang Z, Hao Z, et al. Understanding social causalities behind human action sequences. IEEE Trans Neural Netw Learn Syst, 2017, 28: 1801–1813
+168. Maathuis M H, Kalisch M, B¨uhlmann P. Estimating high-dimensional intervention effects from observational data. Ann Statist, 2009, 37: 3133–3164
+169. Nandy P, Maathuis M H, Richardson T S. Estimating the effect of joint interventions from observational data in sparse high-dimensional settings. Ann Statist, 2017, 45: 647–674
+170. Malinsky D, Spirtes P. Estimating bounds on causal effects in high-dimensional and possibly confounded systems. Internat J Approx Reason, 2017, 88: 371–384
+171. Haggstr¨om J. Data-driven confounder selection via Markov and Bayesian networks. Biometrics, 2018, 74: 389–398
+172. Beebee H, Hitchcock C, Menzies P. The Oxford Handbook of Causation. Oxford: Oxford University Press, 2009
+173. Van der Weele T. Explanation in Causal Inference: Methods for Mediation and Interaction. New York: Oxford University Press, 2015
+174. Shan N, Guo J. Bounds on average controlled direct effects with an unobserved response variable. J Syst Sci Complex, 2011, 24: 1154–1164
+175. Shan N, Dong X, Xu P, et al. Sharp bounds on survivor average causal effects when the outcome is binary and truncated by death. ACM Trans Intell Syst Tech, 2015, 7: 1–11
+176. Chen H, Geng Z, Zhou X H. Identifiability and estimation of causal effects in randomized trials with noncompliance and completely nonignorable missing data. Biometrics, 2009, 65: 675–682
+177. Jiang Z C, Ding P, Geng Z. Qualitative evaluation of associations and validation of surrogacy by association transitivity. Statist Sinica, 2015, 25: 1065–1079
 
-还没贴完
