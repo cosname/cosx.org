@@ -153,17 +153,27 @@ forum_id: 423495
 <h3>3.5 双稳健估计</h3>
 <p>Robins et al.(1994);Rotnitzky et al.(1998)和Scharfstein et al.(1999)在研究缺失数据时提出了双稳健估计方法(doubly robust estimation)。这种方法把回归估计和逆概加权估计结合起来,并具有双稳健性质：只要回归模型和倾向得分模型中的一个模型正确，那么双稳健估计就有相合性。</p>
 <p>双稳健估计同时需要一个回归模型<span class="math inline">\(m(X,V;\gamma)=E(Y\mid X,V;\gamma)\)</span>和一个倾向得分模型<span class="math inline">\(\pi(V;\alpha)=\ pr(X=1\mid V;\alpha)\)</span>。估计未知参数<span class="math inline">\((\alpha,\gamma)\)</span>的方法如3.4节所述。得到参数估计<span class="math inline">\((\widehat \alpha,\widehat \gamma)\)</span>后，平均因果作用的双稳健估计为
-<span class="math display">\[\begin{aligned}\label{dr}\widehat \phi_{\rm dr} = \frac{1}{n}\sum_{i=1}^{n} \frac{X_i}{\pi(V_i;\widehat\alpha)} Y_i - \frac{1}{n} \sum_{i=1}^{n} \frac{1-X_i}{1-\pi(V_i;\widehat\alpha)} Y_i \nonumber +\frac{1}{n} \sum_{i=1}^{n}\{ 1- \frac{X_i}{\pi(V_i;\widehat\alpha)}\} m(1,V_i;\widehat \gamma) -  \frac{1}{n} \sum_{i=1}^{n}\{1- \frac{1-X_i}{1-\pi(V_i;\widehat\alpha)}\} m(0,V_i;\widehat \gamma).\end{aligned}\]</span>
+<span class="math display">\[
+\begin{aligned}
+\label{dr}\widehat \phi_{\rm dr} &amp;= \frac{1}{n}\sum_{i=1}^{n} \frac{X_i}{\pi(V_i;\widehat\alpha)} Y_i - \frac{1}{n} \sum_{i=1}^{n} \frac{1-X_i}{1-\pi(V_i;\widehat\alpha)} Y_i \nonumber \\
+&amp;+\frac{1}{n} \sum_{i=1}^{n}\{ 1- \frac{X_i}{\pi(V_i;\widehat\alpha)}\} m(1,V_i;\widehat \gamma) -  \frac{1}{n} \sum_{i=1}^{n}\{1- \frac{1-X_i}{1-\pi(V_i;\widehat\alpha)}\} m(0,V_i;\widehat \gamma).
+\end{aligned}\tag{3.1}
+\]</span>
 上式的第一行等于逆概加权估计，第二行是对逆概加权估计的一个纠偏项，由逆概的残差和回归估计构成。如果倾向得分模型正确，那么逆概加权估计有相合性，并且当样本量增加时第二行中的纠偏项趋于零。这是因为，根据大数定律，上式中的第三项收敛到
 <span class="math display">\[\begin{aligned}
-E[\{ 1- \frac{X}{\pi(V;\alpha)}\}m(1,V;\gamma^*)\mid V]=E[ m(1,V;\gamma^*)E\{\frac{\pi(V;\alpha)-X}{\pi(V;\alpha)}\mid V\}]=0,\end{aligned}\]</span>
+E\left[\left\{ 1- \frac{X}{\pi(V;\alpha)}\right\}m(1,V;\gamma^*)\Big| V\right]=E\left[ m(1,V;\gamma^*)E\left\{\frac{\pi(V;\alpha)-X}{\pi(V;\alpha)}\Big| V\right\}\right]=0,\end{aligned}\]</span>
 其中的 <span class="math inline">\(\gamma^*= \text{plim } \widehat\gamma\)</span>,
 表示当样本量趋于无穷时<span class="math inline">\(\widehat\gamma\)</span>依概率收敛的极限值。同理第四项也收敛到<span class="math inline">\(0\)</span>。因此，<span class="math inline">\(\widehat \phi_{\rm dr}\)</span>在倾向得分模型<span class="math inline">\(\pi(V;\alpha)\)</span>正确时有相合性。注意，当回归模型<span class="math inline">\(m(X,V;\gamma)\)</span>错误时，上面的推导仍然成立。</p>
 <p>式(3.1)中的双稳健估计还可以等价地表示为
-<span class="math display">\[\begin{aligned}\label{dr2}\widehat \phi_{\rm dr} = \frac{1}{n}\sum_{i=1}^{n} m(1,V_i;\widehat \gamma) - \frac{1}{n} \sum_{i=1}^{n}m(0,V_i;\widehat \gamma) \nonumber+ \frac{1}{n} \sum_{i=1}^{n} \frac{X_i}{\pi(V_i;\widehat\alpha)} \{Y_i - m(1,V_i;\widehat \gamma)\} -  \frac{1}{n} \sum_{i=1}^{n}\frac{1-X_i}{1-\pi(V_i;\widehat\alpha)} \{Y_i- m(0,V_i;\widehat \gamma)\}.\end{aligned}\]</span>
+<span class="math display">\[
+\begin{aligned}
+\label{dr2}\widehat \phi_{\rm dr} &amp;= \frac{1}{n}\sum_{i=1}^{n} m(1,V_i;\widehat \gamma) - \frac{1}{n} \sum_{i=1}^{n}m(0,V_i;\widehat \gamma) \nonumber\\
+&amp;+ \frac{1}{n} \sum_{i=1}^{n} \frac{X_i}{\pi(V_i;\widehat\alpha)} \{Y_i - m(1,V_i;\widehat \gamma)\} -  \frac{1}{n} \sum_{i=1}^{n}\frac{1-X_i}{1-\pi(V_i;\widehat\alpha)} \{Y_i- m(0,V_i;\widehat \gamma)\}.
+\end{aligned}\tag{3.2}
+\]</span>
 式(3.2)中的第一行是回归估计，第二行是对回归估计的一个纠偏项。如果回归模型正确，那么回归估计有相合性，而且可以证明，无论倾向得分模型正确与否，当样本量增加时(3.2)式中第二行中的纠偏项趋于零，因此，<span class="math inline">\(\widehat \phi_{\rm dr}\)</span>在回归模型正确时有相合性，而不需要倾向得分模型正确。</p>
 <p>综上，<span class="math inline">\(\widehat\phi_{\rm dr}\)</span>具有双稳健性质。相比于回归估计和倾向得分估计，双稳健估计提供了更多减少估计偏差的机会。由于双稳健估计能有效地减小模型错误导致的偏差，这种方法越来越广泛应用在缺失数据分析和因果推断中。关于双稳健估计理论性质的进一步研究和总结见Robins and Rotnitzky(2001);Van der Laan and Robins(2003)和Tsiatis(2006)。在假定可忽略性的条件下，双稳健估计的构造方法被迅速扩展(Bang and Robins,2005;Lipsitz et al.,1999;Lunceford and Davidian,2004;Robins et al.,2000)。但是，在可忽略性假定不满足时，倾向得分模型依赖未完全观测的潜在结果，联合分布的识别性得不到保证。此时，双稳健估计的构造比较困难，通常需要很强的倾向得分模型假定(Vansteelandt et al.,2007)。最近，Liu et al.(2018);Miao and Tchetgen(2016);Sun et al.(2018)提出使用辅助变量构造双稳健估计的方法。这些方法使用辅助变量提高联合分布的识别性和估计倾向得分模型，从而避免了过强的模型假定。</p>
-<p>但是要注意到，当两个模型都不正确时，(3.1)或(3.2)的双稳健估计可能会比回归估计和逆概加权估计的偏差更大。当出现特别大或者特别小的倾向得分时，偏差会被放大，甚至出现不合理的估计结果。例如，对一个取<span class="math inline">\(0,1\)</span>值的结果变量，当两个模型都错误时，双稳健估计可能会得到大于<span class="math inline">\(1\)</span>的结果。详细的讨论和例子见Kang and Schafer(2007)。针对这些缺陷的改进方法，见Robins et al.(2007);Tan(2010);Vermeulen and Vansteelandt(2015)等人的讨论。</p>
+<p>但是要注意到，当两个模型都不正确时，(3.1)或(3.2)的双稳健估计可能会比回归估计和逆概加权估计的偏差更大。当出现特别大或者特别小的倾向得分时，偏差会被放大，甚至出现不合理的估计结果。例如，对一个取 0,1 值的结果变量，当两个模型都错误时，双稳健估计可能会得到大于 1 的结果。详细的讨论和例子见Kang and Schafer(2007)。针对这些缺陷的改进方法，见Robins et al.(2007);Tan(2010);Vermeulen and Vansteelandt(2015)等人的讨论。</p>
 </div>
 </div>
 <div id="未观测的混杂因素和潜在可忽略性" class="section level2">
