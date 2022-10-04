@@ -50,18 +50,18 @@ $${\rm ICE}(i) = Y_1(i) - Y_0(i).$$
 
 统计学是关心总体的特征，利用潜在结果，还可以定义总体的平均因果作用。
 
-定义2.1  总体的平均因果作用定义为个体因果作用的期望：
+**定义2.1**  总体的平均因果作用定义为个体因果作用的期望：
 $${\rm ACE} = E({\rm ICE}) = E(Y_1 - Y_0) = E(Y_1) - E(Y_0).$$
 
 平均因果作用定义为假若所有个体都接受处理$X=1$的平均结果$E(Y_1)$与假若所有个体都接受对照$X=0$的平均结果$E(Y_0)$之差。在实际中不可能让所有的个体都接受处理$X=1$，再接受对照$X=0$；即使这样做，对同一个体$i$，先接受处理$X=x$的潜在结果$Y_x(i)$与后接受处理$X=x$的潜在结果$Y'_ x(i)$可能也不一致。
 
 进一步，人们可能关心某个子总体的平均因果作用。例如，某药物对不同人群，如对男性或女性分别的疗效。
 
-定义2.2  令$V$为协变量。定义$V=v$子总体的平均因果作用为 $E(Y_1-Y_0 \mid V=v)$.
+**定义2.2**  令$V$为协变量。定义$V=v$子总体的平均因果作用为 $E(Y_1-Y_0 \mid V=v)$.
 
 另外，人们常常关心处理组的因果作用。例如，流行病学家并不关心吸烟对整个人群的因果作用，而只关心吸烟对吸烟人群的因果作用。
 
-定义2.3  处理组的平均因果作用定义为$E(Y_1 - Y_0 \mid X=1)$.
+**定义2.3**  处理组的平均因果作用定义为$E(Y_1 - Y_0 \mid X=1)$.
 
 我们称平均因果作用${\rm  ACE}=E(Y_1 - Y_0)$ 为可识别的，如果${\rm ACE}$可以由观测变量的分布$pr(X,Y,V)$唯一确定。如果ACE不可识别，则意味着至少存在两个不相等的 ${\rm ACE} \neq {\rm ACE'}$满足观测到的数据。可识别性往往是因果推断中最棘手的问题。为了得到因果作用的可识别性，通常需要有额外的假定。随机化试验是识别因果作用最有效的方法。
 
@@ -95,7 +95,7 @@ $$|E(Y_{1-x}|X=x) - \theta_{1-x}| < |E(Y_{1-x}|X=x) - E(Y|X=1-x)|,$$
 
 Rosenbaum and Rubin(1983)提出的处理分配机制的可忽略性假定是观察性研究中判断混杂因素和推断因果作用最重要的假定。本文的3.2---3.5节都假定如下的可忽略性成立。
 
-假设3.1（处理分配机制的可忽略性，ignorability of treatment assignment mechanism,简称可忽略性）令$V$表示观测的协变量，如果满足$(i)$ $(Y_1,Y_0) \perp  X\mid V$ 和$(ii)$ $0< pr(X=1\mid V)<1$，那么称处理分配机制是可忽略的。
+**假设3.1**（处理分配机制的可忽略性，ignorability of treatment assignment mechanism,简称可忽略性）令$V$表示观测的协变量，如果满足$(i)$ $(Y_1,Y_0) \perp  X\mid V$ 和$(ii)$ $0< pr(X=1\mid V)<1$，那么称处理分配机制是可忽略的。
 
 可忽略性假定中的条件$(i)$相当于在$V$的每一层做了随机化分配，那么，在$V$的每一层，平均因果作用是可识别的，进而对$V$求期望可以得到总体的平均因果作用，条件$(ii)$要求在$V$的每一层里接受处理或对照的概率大于零，这是为了保证在每一层都能得到该层平均因果作用的相合估计.在可忽略性假定下，平均因果作用可通过以下公式识别：
 $$E(Y_1-Y_0)= E[E(Y_1-Y_0\mid V)] = E[E(Y\mid X=1,V)-E(Y\mid X = 0,V)]$$
@@ -113,9 +113,9 @@ $$\begin{aligned}\label{bias}
 
 为了消除协变量的分布在处理组和对照组之间的差异，匹配(matching)方法经常用在观察性研究中。匹配方法的目的是对每一个体匹配一个具有相同或相近协变量取值的个体集合，使得匹配得到的数据在处理组和对照组有相同的协变量分布，然后根据匹配数据推断因果作用。早期的匹配方法根据一个或几个协变量直接构造匹配集合(Cochran and Rubin,1973;Rubin,1973)。但是在很多应用中，协变量维数较高，难以决定根据哪些协变量构造匹配集合。Rosenbaum and Rubin(1983)提出了倾向得分匹配(propensity score matching)方法，根据一个一维的倾向得分构造匹配集合，目前已经是观察性研究中常使用的匹配方法。
 
-定义3.1 倾向得分定义为条件概率$$\pi(V)=pr(X=1\mid V).$$
+**定义3.1** 倾向得分定义为条件概率$$\pi(V)=pr(X=1\mid V).$$
 
-定理3.1 (Rosenbaum and Rubin,1983)如果给定协变量$V$时可忽略性成立，即，$Y_x \perp  X\mid V$ 且 $0< pr(X=1\mid V)<1$,
+**定理3.1** (Rosenbaum and Rubin,1983)如果给定协变量$V$时可忽略性成立，即，$Y_x \perp  X\mid V$ 且 $0< pr(X=1\mid V)<1$,
 那么，给定倾向得分$\pi(V)$时可忽略性也成立，即，$Y_x \perp  X\mid \pi(V)$
 且 $0< pr\{X=1\mid \pi(V)\}<1$。
 
@@ -207,10 +207,16 @@ $Y_{z,x} \perp  Z$; $(iii)$ $Z \not \perp   X$.
 $$
 Y=\beta_0+\beta_1 X+ U,\tag{4.1}
 $$
-其中，$U$是未观测的混杂因素，$\beta_1$表示在其他因素$(U)$不变的情况下，$X$每增加一个单位对$Y$的作用(ceteris paribus effect)。这个方程实际上假定$X$对$Y$的作用在所有人当中是一个常数.这个方程也可以等价地用潜在结果表示为$$Y_x= \beta_0+\beta_1 x+ U.$$此模型隐含了潜在可忽略性假定4.1.
-在此模型下，$\beta_1$代表平均因果作用$E(Y_1-Y_0)$。由于存在未观测的混杂因素，那么仅从结构方程不能识别$\beta_1$。例如，当$E(U\mid X)\neq 0$时，$\beta_1$的最小二乘估计有偏.但是利用工具变量，可以识别$\beta_1$。利用一个满足假定4.2的工具变量$Z$，可以验证 $\beta_1= \sigma_{yz}/\sigma_{xz}$。给定观测数据，把样本协方差 $\widehat \sigma_{yz},\widehat \sigma_{xz}$带入，即得到 $\beta_1$ 的工具变量估计 (instrumental variable estimator), $$\begin{aligned}\label{iv2}\beta_1^{\rm iv}= \frac{\widehat\sigma_{yz}}{\widehat \sigma_{xz}}.\end{aligned}$$即使 $E(U\mid X)\neq 0$，在假定 $(i)$--$(iii)$和一定的正则条件下，可以证明$\beta_1^{\rm iv}$的相合性和渐近正态性(Wooldridge,2010,section 5)。工具变量方法有效地缓解了未观测的混杂因素导致的偏差。
+其中，$U$是未观测的混杂因素，$\beta_1$表示在其他因素$(U)$不变的情况下，$X$每增加一个单位对$Y$的作用(ceteris paribus effect)。这个方程实际上假定$X$对$Y$的作用在所有人当中是一个常数.这个方程也可以等价地用潜在结果表示为$$Y_x= \beta_0+\beta_1 x+ U.$$此模型隐含了潜在可忽略性假定4.1。
+在此模型下，$\beta_1$代表平均因果作用$E(Y_1-Y_0)$。由于存在未观测的混杂因素，那么仅从结构方程不能识别$\beta_1$。例如，当$E(U\mid X)\neq 0$时，$\beta_1$的最小二乘估计有偏，但是利用工具变量，可以识别$\beta_1$。利用一个满足假定4.2的工具变量$Z$，可以验证 $\beta_1= \sigma_{yz}/\sigma_{xz}$。给定观测数据，把样本协方差 $\widehat \sigma_{yz},\widehat \sigma_{xz}$带入，即得到 $\beta_1$ 的工具变量估计 (instrumental variable estimator), 
+$$
+\begin{aligned}
+\label{iv2}\beta_1^{\rm iv}= \frac{\widehat\sigma_{yz}}{\widehat \sigma_{xz}}.
+\end{aligned}\tag{4.2}
+$$
+即使 $E(U\mid X)\neq 0$，在假定 $(i)$--$(iii)$和一定的正则条件下，可以证明$\beta_1^{\rm iv}$的相合性和渐近正态性(Wooldridge,2010,section 5)。工具变量方法有效地缓解了未观测的混杂因素导致的偏差。
 
-比常数作用假定稍弱的是Hernan and Robins(2006)提出的无修正作用假定：$E(Y_1-Y_0\mid Z,X)=E(Y_1-Y_0\mid X)$。在此假定下，可以识别处理组的平均因果作用$E(Y_1-Y_0\mid X=1)$。质性假定在实际中难以论证是否成立，此外，结构方程模型需要参数模型，对模型的错误设定敏感。Hernan and Robins(2006)讨论了这些模型和假定在实际应用中，特别是在流行病学研究中的局限性。
+比常数作用假定稍弱的是Hernan and Robins(2006)提出的无修正作用假定：$E(Y_1-Y_0\mid Z,X)=E(Y_1-Y_0\mid X)$。在此假定下，可以识别处理组的平均因果作用$E(Y_1-Y_0\mid X=1)$。同质性假定在实际中难以论证是否成立，此外，结构方程模型需要参数模型，对模型的错误设定敏感。Hernan and Robins(2006)讨论了这些模型和假定在实际应用中，特别是在流行病学研究中的局限性。
 
 不同于同质性假定，单调性假定要求$Z$对$X$的作用单调。单调性假定在很多情况下更合理。例如，在研究药效的临床试验中，由于病人存在不依从性，病人实际接受的处理(treatment,$X$)和医生分配的处理(assignment,$Z$)不完全相同，但可以合理地假定单调性：所有个体潜在接受的处理都满足$X_{z=1}\geq X_{z=0}$。在此假定下，Angrist et al.(1996);Imbens and Angrist(1994)证明了可以使用 $Z$作为工具变量识别依从组(即满足 $X_{z=1}=1,X_{z=0}=0$的个体)的平均因果作用 (compliers average causal effect)：
 $E(Y_{x=1}-Y_{x=0}\mid X_{z=1}=1,X_{z=0}=0)$。
@@ -219,13 +225,19 @@ $E(Y_{x=1}-Y_{x=0}\mid X_{z=1}=1,X_{z=0}=0)$。
 
 ### 4.2 阴性对照变量方法
 
-工具变量估计对假定4.2的条件$(i)$--$(iii)$很敏感。假定4.2的条件$(i)$需要有专业知识保证工具变量对结果变量没有直接作用，条件$(iii)$可以用观测数据检验，但是条件$(ii)$难以验证，因为混杂因素$U$没有观测到。用plim $\beta_1^{\rm iv}$表示当样本量趋于无穷时$\beta_1^{\rm iv}$依概率收敛的极限。当条件$(ii)$不满足时，工具变量估计的渐近偏差是$$\begin{aligned}{\rm plim }\, \beta_1^{\rm iv} -\beta_1 =\frac{\sigma_{uz}}{\sigma_{xz}}.\end{aligned}$$由此可见，当$\sigma_{uz}\neq0$时，工具变量估计不相合，而且偏差会由于$\sigma_{xz}$过小而被放大很多倍。我们介绍使用阴性对照变量(negative control variable)方法解决这些问题。
+工具变量估计对假定4.2的条件$(i)$--$(iii)$很敏感。假定4.2的条件$(i)$需要有专业知识保证工具变量对结果变量没有直接作用，条件$(iii)$可以用观测数据检验，但是条件$(ii)$难以验证，因为混杂因素$U$没有观测到。用plim $\beta_1^{\rm iv}$表示当样本量趋于无穷时$\beta_1^{\rm iv}$依概率收敛的极限。当条件$(ii)$不满足时，工具变量估计的渐近偏差是
+$$
+\begin{aligned}
+{\rm plim }\, \beta_1^{\rm iv} -\beta_1 =\frac{\sigma_{uz}}{\sigma_{xz}}.
+\end{aligned}\tag{4.3}
+$$
+由此可见，当$\sigma_{uz}\neq0$时，工具变量估计不相合，而且偏差会由于$\sigma_{xz}$过小而被放大很多倍。我们介绍使用阴性对照变量(negative control variable)方法解决这些问题。
 
 阴性对照变量是与混杂因素$U$相关，但与处理$X$或结果变量$Y$无因果关系的辅助变量。阴性对照变量分为两种：阴性对照暴露和阴性对照结果。前者是一个辅助的暴露变量，但是对关心的结果没有直接的因果作用；后者是一个辅助的结果变量，但是不受暴露变量的影响。这些特点可以严格的表述如下。
 
-假定4.4（阴性对照结果，negative control outcome)  一个结果变量$W$称为一个阴性对照结果，如果它满足$W \perp  X \mid U$和$W \not \perp   U$。
+**假定4.4**（阴性对照结果，negative control outcome)  一个结果变量$W$称为一个阴性对照结果，如果它满足$W \perp  X \mid U$和$W \not \perp   U$。
 
-假定4.5（阴性对照暴露，negative control exposure)  一个暴露变量$Z$称为一个阴性对照暴露，如果它满足$Z \perp  Y \mid (U,X)$ 和 $Z \perp  W \mid (U,X)$。
+**假定4.5**（阴性对照暴露，negative control exposure)  一个暴露变量$Z$称为一个阴性对照暴露，如果它满足$Z \perp  Y \mid (U,X)$ 和 $Z \perp  W \mid (U,X)$。
 
 除了要求阴性对照变量$Z$和$W$与处理或结果变量无直接的因果关系，上面的定义还要求$Z$与$(W,Y)$之间的混杂因素和$X$与$(W,Y)$之间的混杂因素相同。当存在完全观测的协变量$V$时，上述定义中的条件独立性需要给定$V$。阴性对照暴露的定义类似工具变量中的无直接作用条件，但是对$(Z,U)$的相关性不做要求，因此工具变量可看做阴性对照暴露的特例。
 
@@ -233,26 +245,26 @@ $E(Y_{x=1}-Y_{x=0}\mid X_{z=1}=1,X_{z=0}=0)$。
 
 最近，Miao et al.(2018);Miao and Tchetgen Tchetgen(2017,2018)系统地研究了用阴性对照变量识别因果作用的方法和所需要的条件。Miao and Tchetgen Tchetgen(2018)引入的混杂桥函数 (confounding bridge function)为使用阴性对照变量识别因果作用奠定了基础。
 
-假定4.6  存在一个函数$h$，对所有$x$都有
+**假定4.6**  存在一个函数$h$，对所有$x$都有
 $$E (Y\mid U,X=x)  =E\{ h(W,X=x)\mid U\}.$$
 
 当存在协变量$V$时，该假定为：$E (Y\mid U,V,X=x)  =E\{ h(W,V,X=x)\mid U,V\}$。混杂桥函数描述的是混杂因素对关心的结果变量和对阴性对照结果的作用之间的关系。例如，当$E(Y\mid U,X)=\beta_1  X+U$ 且 $E(W\mid U)$是$U$的线性模型时，混杂桥函数是一个线性可加函数$h(W,X;\gamma)=\gamma_0+\gamma_1 X +\gamma_2W$,其中的参数由数据产生机制$E(Y\mid U,X)$ 和 $E(W\mid U)$决定。
 
 在假定4.1,4.4-4.6下，容易得到
-$$\begin{aligned}\label{eq:idn}E(Y_x) =  E\{h(W,X=x)\}.\end{aligned}$$可见，使用混杂桥函数，潜在结果的均值可以由阴性对照结果的分布表示出来。如果已知$h$函数，那么$E(Y_x)$可以根据(4.4)识别，进而平均因果作用可以识别。例如，$h$满足线性模型时$h(W,X;\gamma)=\gamma_0+\gamma_1 X +\gamma_2W$,那么 $\gamma_1$就等于平均因果作用。在实际研究中，如果$h$是未知函数，可以利用一个阴性对照暴露识别$h$。
+$$\begin{aligned}\label{eq:idn}E(Y_x) =  E\{h(W,X=x)\}.\end{aligned}\tag{4.4}$$可见，使用混杂桥函数，潜在结果的均值可以由阴性对照结果的分布表示出来。如果已知$h$函数，那么$E(Y_x)$可以根据(4.4)识别，进而平均因果作用可以识别。例如，$h$满足线性模型时$h(W,X;\gamma)=\gamma_0+\gamma_1 X +\gamma_2W$,那么 $\gamma_1$就等于平均因果作用。在实际研究中，如果$h$是未知函数，可以利用一个阴性对照暴露识别$h$。
 
-由假定4.5和4.6可得$$\begin{aligned}\label{eq:intg}E(Y\mid Z,X)=E\{h(W,X)\mid Z,X\}.\end{aligned}$$
+由假定4.5和4.6可得$$\begin{aligned}\label{eq:intg}E(Y\mid Z,X)=E\{h(W,X)\mid Z,X\}.\end{aligned}\tag{4.5}$$
 式(4.5)中只涉及观测数据的分布和未知的混杂桥函数$h$,因此提供了识别$h$的基础。此外，还需要如下的完备性条件。
 
-假定4.7（完备性)  对任意$x$,条件分布$\ pr(W\mid Z,X=x)$满足：对所有的平方可积函数$g$,如果$E\{g(W)\mid Z,X=x\}=0$几乎处处成立,那么$g(W)$几乎处处为零。
+**假定4.7**（完备性)  对任意$x$,条件分布$\ pr(W\mid Z,X=x)$满足：对所有的平方可积函数$g$,如果$E\{g(W)\mid Z,X=x\}=0$几乎处处成立,那么$g(W)$几乎处处为零。
 
 完备性条件是研究识别性问题中普遍需要的条件。作为特例，对一个二值的混杂因素，只要$U \not \perp   Z\mid X=x$对任意$x$成立，那么假定4.7一定成立。此外，完备性条件在很多模型下成立，例如，指数族分布(Newey and Powell,2003)。关于完备性条件的讨论见Andrews(2017);Chen et al.(2014);Darolles et al.(2011);Newey and Powell(2003)。
 
-定理4.1(Miao and Tchetgen Tchetgen,2018)在假定4.1,4.4-4.7下，方程(4.5))有唯一解$h$;把此解带入(4.4),则$E(Y_x)$可识别。
+**定理4.1**(Miao and Tchetgen Tchetgen,2018)在假定4.1,4.4-4.7下，方程(4.5))有唯一解$h$;把此解带入(4.4),则$E(Y_x)$可识别。
 
 至此，通过引入混杂桥函数，使用阴性对照变量已经可以识别$E(Y_x)$和平均因果作用。
 
-在使用实际数据估计因果作用时，可以对混杂桥函数建立参数化模型$h(W,X;\gamma)$，然后用广义矩方法或者两步最小二乘估计$\gamma$和平均因果作用。以线性模型为例，假设$E(Y\mid X,U)=\beta_1X+U$,那么我们采用线性可加的混杂桥函数$h(W,X;\gamma)=\gamma_0+\gamma_1 X +\gamma_2W$,并用两步最小二乘方法估计 $\beta_1$:第一步用$W$对$(Z,X)$做回归得到$\widehat W$,第二步用$Y$对$(\widehat W,X)$做回归。那么第二步回归中得到的$X$的系数估计即为$\beta_1$的相合估计，也是平均因果作用的相合估计。还可以证明，$\beta_1$的两步最小二乘方法估计等价于$$\beta_1^{\rm nc} =  \frac{\widehat \sigma_{xw}\widehat \sigma_{zy}-\widehat \sigma_{xy}\widehat \sigma_{zw}}{\widehat \sigma_{xw}\widehat \sigma_{xz}-\widehat \sigma_{xx}\widehat \sigma_{zw}}.$$此式可以看做式 (4.2)的推广。当$Z \perp  U$,即$Z$是一个工具变量时，plim$\widehat \sigma_{zw}=0$,因此，plim $\beta_1^{\rm nc}=$ plim$\beta_1^{\rm iv}=\beta_1$;当$Z \not \perp   U$时，plim$\beta_1^{\rm iv}\neq \beta_1$,但是，如果$E(W\mid U)$是$U$的线性模型，那么仍然有plim $\beta_1^{\rm nc}=\beta_1$。结果，使用阴性对照$W$有效地缓解了工具变量估计在假定$Z \perp  U$不成立时的偏差。除了参数化模型，在复杂问题中还可以对$h(W,X)$建立半参数化或者非参数化的模型进行估计，这些都属于一大类条件矩模型 (conditional moment restriction model)的估计方法，已有很多标准的做法，见Ai and Chen(2003);Newey and Powell(2003)。
+在使用实际数据估计因果作用时，可以对混杂桥函数建立参数化模型$h(W,X;\gamma)$，然后用广义矩方法或者两步最小二乘估计$\gamma$和平均因果作用。以线性模型为例，假设$E(Y\mid X,U)=\beta_1X+U$,那么我们采用线性可加的混杂桥函数$h(W,X;\gamma)=\gamma_0+\gamma_1 X +\gamma_2W$,并用两步最小二乘方法估计 $\beta_1$:第一步用$W$对$(Z,X)$做回归得到$\widehat W$,第二步用$Y$对$(\widehat W,X)$做回归。那么第二步回归中得到的$X$的系数估计即为$\beta_1$的相合估计，也是平均因果作用的相合估计。还可以证明，$\beta_1$的两步最小二乘方法估计等价于$$\beta_1^{\rm nc} =  \frac{\widehat \sigma_{xw}\widehat \sigma_{zy}-\widehat \sigma_{xy}\widehat \sigma_{zw}}{\widehat \sigma_{xw}\widehat \sigma_{xz}-\widehat \sigma_{xx}\widehat \sigma_{zw}}.$$此式可以看做式 (4.2)的推广。当$Z \perp  U$,即$Z$是一个工具变量时，plim$\widehat \sigma_{zw}=0$,因此，$\text{plim}\beta_1^{\rm nc}=\text{plim}\beta_1^{\rm iv}=\beta_1$;当$Z \not \perp   U$时，plim$\beta_1^{\rm iv}\neq \beta_1$,但是，如果$E(W\mid U)$是$U$的线性模型，那么仍然有plim $\beta_1^{\rm nc}=\beta_1$。结果，使用阴性对照$W$有效地缓解了工具变量估计在假定$Z \perp  U$不成立时的偏差。除了参数化模型，在复杂问题中还可以对$h(W,X)$建立半参数化或者非参数化的模型进行估计，这些都属于一大类条件矩模型 (conditional moment restriction model)的估计方法，已有很多标准的做法，见Ai and Chen(2003);Newey and Powell(2003)。
 
 
 ## 5 替代指标与中介分析
