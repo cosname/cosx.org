@@ -24,6 +24,17 @@ $$
 | `\ind`  |  `\def\ind{{\perp\!\!\!\perp}}` |  $\ind$ |
 | `\nind`  |  `\def\nind{{\not\!\perp\!\!\!\perp}}` | $\nind$  |
 
+```{css}
+#| echo: false
+
+div.img, div.figure {
+  text-align: center;
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+```
+
 
 ## 1 引言
 
