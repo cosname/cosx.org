@@ -14,7 +14,7 @@ meta_extra: "采访：蔡占锐；录音审校：朱书慧，闫涵超，梁杰�
 forum_id: 423404
 ---
   
-  
+  2022年8月初，正是北美一年一届的 Joint Statistical Meetings。统计之都在会议间隔对雷理骅进行了采访。在本文发布之际，雷理骅正迎来作为斯坦福大学商学院助理教授的第一个学期。本文采访者是蔡占锐，是爱荷华州立大学助理教授。文中涉及到一些专业学术讨论，望诸位客官见谅。
   
   
   ## 1. 个人与过往经历
@@ -146,11 +146,11 @@ forum_id: 423404
 
 **统计之都**：非常有趣。和丁鹏的因果推断方向的研究又是如何开始的？
 
-**雷理骅**：这个我非常感谢丁鹏，还有和他同期进来的几个professor，包括Avi Feller，Will Fithian，和当时来这边的一个博士后，叫Alexander D'Amour。他们在Berkeley的那几年，他们是Berkeley 因果推断的第一批人。他们就在Berkeley搞了一个因果推断的读书小组。起初也是大家一起来读书。我们当时读了很多课题，比如说第一个学期在读High Dimension Causal Inference，接下来读了interference，读了optimal design，后来读的philosophy，application，有一个学期专门是读causal的各种有趣的application，经典的application。还有一个学期读semi parametrics。在我毕业的学期又读了半参数分析和面板数据。这个其实让我学到很多，其实让我因果推断入门一个最好的方式。因为因果推断我感觉其实是一个很大领域，但其实入门会不是那么的简单。因为在我读博士的时候，因果推断其实并没有那么火。尤其是当你刚开始学potential outcome的时候，会觉得很难理解。但我们当时，丁鹏、Avi Feller，Will FIthian，还有Alexander D'Amour，以及后来Sam Pimentel也加入了这个因果推断的读书小组。其实他们构建了一个非常好的环境。我们其实每周都会有一个人讲一个论文，但我们会有两个小时的时间。其实演讲者并没有很大的压力，他其实只有准备30~40分钟，而另外一个半小时间我们可能都在聊天，一直在讨论。我们会抓住一些点拼命地去讨论，去看为什么要这么做，怎么去论证。比如说为什么我们要考虑finite population analysis，super population 和finite population之间到底有什么区别？我们怎么去理解IPW estimator，怎么去理解ATT、ATE，怎么去理解optical design和randomize design，它们的核心区别，以及怎么去理解各种不同推断框架下面去定义估计量，它们会有什么tricky的地方。所以当时他们构建了一个很好的环境，可以让我们沟通，可以让我们去深入的理解一个问题。在这个过程中，其实我们有连续三个学期，就要讨论一个问题，叫overlap，或者叫positivity。简单来说，在任何一个observational study，或者你想做因果推断，一个必要的条件是说，任何一个人、任何一个加入到你的study里面的人必须得有不小的概率，expose到treatment group和control group。因为如果说有一批人他永远都只会被control，或有些人永远都会opt into the treatment。这时候你就只能通过假设，通过去做一些extrapolation assumption去推断这些人的信息。不然他们的counter factual其实是不存在。
+**雷理骅**：这个我非常感谢丁鹏，还有和他同期进来的几个教授，包括Avi Feller，Will Fithian，和当时来这边的一个博士后，叫Alexander D'Amour。他们在Berkeley的那几年，他们是Berkeley 因果推断的第一批人。他们就在Berkeley搞了一个因果推断的读书小组。起初也是大家一起来读书。我们当时读了很多课题，比如说第一个学期在读高维因果推断，接下来读了统计推断，读了optimal design，后来读的哲学，实际应用，有一个学期专门是读因果推断的各种有趣的应用，经典的应用。还有一个学期读semi parametrics。在我毕业的学期又读了半参数分析和面板数据。这个其实让我学到很多，其实让我因果推断入门一个最好的方式。因为因果推断我感觉其实是一个很大领域，但其实入门会不是那么的简单。因为在我读博士的时候，因果推断其实并没有那么火。尤其是当你刚开始学potential outcome的时候，会觉得很难理解。但我们当时，丁鹏、Avi Feller，Will FIthian，还有Alexander D'Amour，以及后来Sam Pimentel也加入了这个因果推断的读书小组。其实他们构建了一个非常好的环境。我们其实每周都会有一个人讲一个论文，但我们会有两个小时的时间。其实演讲者并没有很大的压力，他其实只有准备30~40分钟，而另外一个半小时间我们可能都在聊天，一直在讨论。我们会抓住一些点拼命地去讨论，去看为什么要这么做，怎么去论证。比如说为什么我们要考虑finite population analysis，super population 和finite population之间到底有什么区别？我们怎么去理解IPW estimator，怎么去理解ATT、ATE，怎么去理解optical design和randomize design，它们的核心区别，以及怎么去理解各种不同推断框架下面去定义估计量，它们会有什么tricky的地方。所以当时他们构建了一个很好的环境，可以让我们沟通，可以让我们去深入的理解一个问题。在这个过程中，其实我们有连续三个学期，就要讨论一个问题，叫overlap，或者叫positivity。简单来说，在任何一个observational study，或者你想做因果推断，一个必要的条件是说，任何一个人、任何一个加入到你的study里面的人必须得有不小的概率，expose到treatment group和control group。因为如果说有一批人他永远都只会被control，或有些人永远都会opt into the treatment。这时候你就只能通过假设，通过去做一些extrapolation assumption去推断这些人的信息。不然他们的counter factual其实是不存在。
 
 **统计之都**：是的，对。
 
-**雷理骅**：所以我们当时连续三个学期算就在聊这个问题。你看，所有的paper假设positively或者overlap，那到底我们能不能test？到底它有什么implication？就是我们假设overlap，它是不是一个很强的假设？有很多时候observational study，第一个假设就是strong ignorability，第二个假设就是positivity。大家都会花很长时间去justify strong ignorability，但很多时候大家都会忽略positivity。最多给一个就是propensity score的图，去看一下有没有extreme value。那么想，我们能不能很系统地去研究这个问题？于是当时我的合作者Alexander D'Amour他一开始就要想，我们能不能看overlap的一个implication，就假设overlap它能imply什么。如果他有一些passport implication的话，我们就可以通过他的passport implication，可以反推到底overlap assumption有多大可能性。于是我们一起合写了一篇文章，后来发在JOE上。其实后来我们2017年就写出了第二篇文章，到现在都还没有发出来，只放在我的网站上了。其实我们第一篇文章只是在解释它有什么implication，但我们第二篇文章就在说，到底我们能不能test overlap？我们发现它不仅能test，并且我们还能做distribution free test。
+**雷理骅**：所以我们当时连续三个学期算就在聊这个问题。你看，所有的paper假设positively或者overlap，那到底我们能不能test？到底它有什么implication？就是我们假设overlap，它是不是一个很强的假设？有很多时候observational study，第一个假设就是strong ignorability，第二个假设就是positivity。大家都会花很长时间去justify strong ignorability，但很多时候大家都会忽略positivity。最多给一个就是propensity score的图，去看一下有没有extreme value。那么想，我们能不能很系统地去研究这个问题？于是当时我的合作者Alexander D'Amour他一开始就要想，我们能不能看overlap的一个implication，就假设overlap它能imply什么。如果他有一些passport implication的话，我们就可以通过他的passport implication，可以反推到底overlap assumption有多大可能性。于是我们一起合写了一篇文章，后来发在JOE上。其实后来我们2017年就写出了第二篇文章，到现在都还没有发出来，只放在我的网站上了。其实我们第一篇文章只是在解释它有什么implication，但我们第二篇文章就在说，到底我们能不能检验overlap？我们发现它不仅能检验，并且我们还能做distribution free test。
 
 **统计之都**：Interesting。
 
