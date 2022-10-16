@@ -79,7 +79,7 @@ $${\rm ACE} = E({\rm ICE}) = E(Y_1 - Y_0) = E(Y_1) - E(Y_0).$$
 
 **定义2.3**  处理组的平均因果作用定义为$E(Y_1 - Y_0 \mid X=1)$.
 
-我们称平均因果作用${\rm  ACE}=E(Y_1 - Y_0)$ 为可识别的，如果${\rm ACE}$可以由观测变量的分布$pr(X,Y,V)$唯一确定。如果ACE不可识别，则意味着至少存在两个不相等的 ${\rm ACE} \neq {\rm ACE'}$满足观测到的数据。可识别性往往是因果推断中最棘手的问题。为了得到因果作用的可识别性，通常需要有额外的假定。随机化试验是识别因果作用最有效的方法。
+我们称平均因果作用${\rm  ACE}=E(Y_1 - Y_0)$ 为可识别的，如果${\rm ACE}$可以由观测变量的分布$pr(X,Y,V)$唯一确定。如果${\rm ACE}$不可识别，则意味着至少存在两个不相等的 ${\rm ACE} \neq {\rm ACE'}$满足观测到的数据。可识别性往往是因果推断中最棘手的问题。为了得到因果作用的可识别性，通常需要有额外的假定。随机化试验是识别因果作用最有效的方法。
 
 ### 2.2 随机化试验
 
@@ -153,15 +153,15 @@ $$\begin{aligned}\widehat \phi_{\rm psm} = \frac{1}{n} \sum_{i=1}^{n } (2X_i-1) 
 $$E(Y_x)=E\{\frac{\delta(X=x)Y}{pr(X=x\mid V)}\},$$
 
 这里的$\delta(\cdot)$是示性函数。据此，可以通过拟合一个倾向得分模型 $\pi(V;\alpha)= \ pr(X=1\mid V;\alpha)$
-来估计平均因果作用。倾向得分模型满足相应的矩方程 $E\{X-\pi(X;\alpha)\mid V\}=0$,因此可以用经典的方法，如广义矩估计 (generalized method of moments, GMM,Hall(2005);Hansen(1982))来估计未知参数$\alpha$。得到参数估计 $\widehat\alpha$ 后，平均因果作用的逆概加权估计为
+来估计平均因果作用。倾向得分模型满足相应的矩方程 $E\{X-\pi(V;\alpha)\mid V\}=0$,因此可以用经典的方法，如广义矩估计 (generalized method of moments, GMM,Hall(2005);Hansen(1982))来估计未知参数$\alpha$。得到参数估计 $\widehat\alpha$ 后，平均因果作用的逆概加权估计为
 $$\begin{aligned}
 \label{ipw}
-\widehat \phi_{\rm ipw} = \sum_{i=1}^{n} \frac{X_iY_i}{\pi(V_i;\widehat\alpha)} - \sum_{i=1}^{n} \frac{(1-X_i)Y_i}{1-\pi(V_i;\widehat\alpha)}.\end{aligned}$$
+\widehat \phi_{\rm ipw} = \frac{1}{n}\sum_{i=1}^{n} \frac{X_iY_i}{\pi(V_i;\widehat\alpha)} - \frac{1}{n}\sum_{i=1}^{n} \frac{(1-X_i)Y_i}{1-\pi(V_i;\widehat\alpha)}.\end{aligned}$$
 
 回归估计 (regression-based estimator)需要建立一个对结果变量的回归模型，$E(Y\mid X,V)=m(X,V;\gamma)$。为了估计平均因果作用，需要先估计该模型的参数。注意到该回归模型满足矩方程 $E\{Y-m(X,V;\gamma)\mid X,V\}=0$，可以用经典的估计矩方程的方法来估计未知参数$\gamma$。在得到参数估计$\widehat\gamma$后，平均因果作用的回归估计为
 $$\begin{aligned}
 \label{reg}
-\widehat \phi_{\rm reg} =\frac{1}{n} \sum_{i=1}^{n}  X_i m(1,V_i;\widehat \gamma) -  \frac{1}{n}\sum_{i=1}^{n} (1-X_i)m(0,V_i;\widehat \gamma).\end{aligned}$$
+\widehat \phi_{\rm reg} =\frac{1}{n} \sum_{i=1}^{n}  m(1,V_i;\widehat \gamma) -  \frac{1}{n}\sum_{i=1}^{n} m(0,V_i;\widehat \gamma).\end{aligned}$$
 
 给定可忽略性假定和一定的正则条件，容易证明，如果回归模型和倾向得分模型分别正确，并且$\widehat \gamma$和$\widehat \alpha$分别是$\gamma$和$\alpha$的相合估计，那么$\widehat \phi_{\rm reg}$ 和 $\widehat \phi_{\rm ipw}$是平均因果作用的相合估计(Horvitz and Thompson,1952;Robins et al.,1994)。回归估计和逆概加权估计方法被广泛应用在流行病学、生物医学、社会学经济学的因果推断中。这两种方法简捷明了，但是对模型特别敏感。当所需要的回归模型或者倾向得分模型不正确时，往往导致较大偏差。下面介绍的双稳健估计则利用回归估计和逆概加权估计互补，有效地缓解这两种方法各自的缺点。
 
@@ -325,10 +325,10 @@ Yule-Simpson悖论揭示了从数据得到因果结论的困难，甚至不可�
 
 Chen et al.(2007);Ju and Geng(2010)证明了：如果
 
-- (1)任意给定$U=u$下$S$对$Y$有非负的条件ACE，并且
-- (2)任意给定$U=u$下$X$对$S$的条件DCE的符号(非负，或非正)不随$u$改变，
+- (1)任意给定$U=u$下$S$对$Y$有非负的条件${\rm ACE}$，并且
+- (2)任意给定$U=u$下$X$对$S$的条件${\rm DCE}$的符号(非负，或非正)不随$u$改变，
 
-那么，根据$X$对$S$的非负(非正）DCE能预测$X$对$Y$的非负(非正）ACE，并且根据$X$对$S$的零DCE能预测$X$对$Y$的零ACE。条件(1)的意思是给定任意$U=u$的条件下替代指标$S$都是终点指标$Y$的一个危险因素（或保护因素）。例如，在每个$U=u$的子总体中心律失常都是猝死的危险因素。条件(2)的意思是给定任意$u$的条件下处理$X$对替代指标$S$有相同符号的DCE。例如，在任何子总体$U=u$中新药对纠正心律失常都没有反作用或都没有正作用。Chen et al.(2007);Ju and Geng(2010)探讨了很多常用的模型，包括广义线性模型和比例风险模型，它们都满足这些条件。
+那么，根据$X$对$S$的非负(非正）${\rm DCE}$能预测$X$对$Y$的非负(非正）${\rm ACE}$，并且根据$X$对$S$的零${\rm DCE}$能预测$X$对$Y$的零${\rm ACE}$。条件(1)的意思是给定任意$U=u$的条件下替代指标$S$都是终点指标$Y$的一个危险因素（或保护因素）。例如，在每个$U=u$的子总体中心律失常都是猝死的危险因素。条件(2)的意思是给定任意$u$的条件下处理$X$对替代指标$S$有相同符号的${\rm DCE}$。例如，在任何子总体$U=u$中新药对纠正心律失常都没有反作用或都没有正作用。Chen et al.(2007);Ju and Geng(2010)探讨了很多常用的模型，包括广义线性模型和比例风险模型，它们都满足这些条件。
 
 因为不能观测到混杂因素$U$,即使观测到终点指标$Y$,这两个条件也不能用数据进行检验。另外，强替代指标要求从处理$X$到终点指标$Y$的所有路径都被中间变量$S$阻断，这意味着没有从处理$X$到终点指标$Y$的直接作用。为了消除上述两个缺点，Wu et al.(2011)提出了基于关联性条件的一致替代指标准则。这个准则要求未观测终点指标和其它变量之间关联性的先验知识。如果在以前的研究中观测到终点指标$Y$的话，这些关联性的先验知识条件是可以检验的，并且它们不要求没有对终点指标的直接处理作用。
 
