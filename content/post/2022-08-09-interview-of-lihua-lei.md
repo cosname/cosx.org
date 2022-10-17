@@ -81,7 +81,7 @@ forum_id: 423404
 
 **雷理骅**：对，这个过程我觉得非常重要，因为它能让你看到科研的每一步。当然作为本科生，我们可能每一步都做得不尽人意，但是对整个过程的全貌的理解，我觉得是非常重要的。像跟陈老师的科研让我理解到在应用中有多少tricky的问题，以及怎么跟不同领域的专家去沟通、去合作。这个过程也是我在本科科研的时候学到的。因为到后来发现，这些东西其实是很重要的。比如做一些理论的工作的时候，如果你继续用非常理论的方式去跟科学家沟通，就会发现他们没法理解你到底在说什么。因为你跟不同领域的科学家合作，是希望得到很有趣的问题，并实际解决一些问题，更希望能在这些不同的领域里面有一些实际的影响。但是如果沟通不力，合作起来会比较困难。
 
-**统计之都**： 你在博士和博后阶段的工作有很多，你是如何寻找到这样有意思的题目的？解决这些问题你又遇到了哪些困难，或者说对你都很简单？例如与Will Fithian的合作 on FDR control （代表作?）是否和选择Candes做博后有关？与丁鹏 (causal inference)，Michael Jordan (optimization)的合作又是如何开始的呢？
+**统计之都**： 你在博士和博后阶段的工作有很多，你是如何寻找到这样有意思的题目的？解决这些问题你又遇到了哪些困难，或者说对你都很简单？例如与Will Fithian关于FDR control的合作？是否和选择Candes做博后有关？与丁鹏 (causal inference)，Michael Jordan (optimization)的合作又是如何开始的呢？
 
 **雷理骅**：统计一个特别好的地方在于，能研究的问题真的很多，相信大家应该都有这样的感觉。统计里面一个常见的说法是the statisticians can play in everyone's backyard or even frontyard。所以我们面临的问题很多，我们可以去做的问题也很多。我觉得很多时候其实是看机缘巧合。除了我开始跟Peter J. Bickel和Noureddine El Karoui做的 High Dimensional M Estimator，是我当时觉得这个很感兴趣，Peter鼓励我去做这个课题；博士期间基本上其他大部分课题都是我无意中找到的。但这个“无意”也不是说就真的无意。
 
@@ -89,72 +89,63 @@ forum_id: 423404
 
 **统计之都**：也是需要一些积累的。
 
-**雷理骅**：对。其实我当时一个技巧就是我会去上大家的专题课程。我觉得这是我们接触新的科研领域的一个很好的方法，因为一个新的助理教授（AP）来到这个学校以后，他会想招学生，很多系里其实都会支持新来的助理教授开一个专题课程，讲自己的研究领域。有了这个机会以后，你就能很快的接触到一些最前沿的东西，因为一个新的AP来了，很有可能他做的东西，还没有构成一个领域，他们可能还在初期，但是因为他们做的很出色，所以说他们就被招进来了。在他们讲的过程中，其实这个专题课程更像是在跟学生在探讨，他们也在让自己的思维更加完善，通过交流的过程让自己有更完善的研究计划。在这个过程中能学到很多，比如说我最先接触到multiple testing，是因为上Will Fithian的这个专题课程，叫Selective Inference。其实一开始我对Selective Inference的理解非常狭隘，我一直以为Selective Inference就是说 Model Selection之后去做Inference。我也知道早期的一些工作需要用到很特殊的参数模型的性质，比如说我们做LASSO的 Selective Inference就需要假设Everything is Gaussian。但上了这个课以后才发现，首先Selective Inference是一个很大的领域，比如False Discovery Control就是属于Selective Inference。其次Post Selection Inference，包括Adaptive Data Analysis和Differential Privacy，其实也是隶属于Selective Inference。我在上课的过程中逐渐发现这是一个非常有趣的领域。当时Will Fithian讲这个课的时候也借用了一些Emmanuel在当时上的300C，那时候也差不多是Emmanuel刚刚进入到这个领域不久，他在Stanford开了一门课叫300C，讲很多family-wise error rate， false discovery rate control的东西。所以当时我有机会接触到了这样一些课题，当时我就觉得FDR是一个让我特别感兴趣的领域。于是我就利用到这个机会，在做最后Final Project的时候，我就花了很长的时间。当时我停掉我手里的研究。
+**雷理骅**：对。其实我很喜欢去上老师们开的专题课程。我觉得这是我们接触新的科研领域的一个很好的方法，因为一个新的助理教授（AP）来到这个学校以后，他会想招学生。其实很多系里都会支持新来的助理教授开一个专题课程，讲自己的研究领域。在这个专题课程上，你可以很快的接触到一些最前沿的东西。对于新的AP来说，很有可能他做的东西还没有构成一个研究领域。相关的研究可能还在初期，但是因为他们做的很出色，所以他们就被招进来了。其实这个专题课程更像是在跟学生在探讨研究，在这个过程中他们也让自己的思维更加完善。在这个过程中能学到很多。比如说我最先接触到multiple testing，是因为上Will Fithian的这个专题课程，叫Selective Inference。其实一开始我对Selective Inference的理解非常狭隘，我一直以为Selective Inference就是说模型选择之后去做统计推断。我也知道早期的一些工作需要用到很特殊的参数模型的性质，比如说我们做LASSO的 Selective Inference就需要假设Everything is Gaussian。但上了这个课以后才发现，首先Selective Inference是一个很大的领域，比如false discovery control就是属于Selective Inference。其次Post Selection Inference，包括Adaptive Data Analysis和Differential Privacy，也是隶属于Selective Inference的。我在上课的过程中逐渐发现这是一个非常有趣的领域。当时Will Fithian讲这个课的时候也借用了一些Emmanuel在当时上的300C，那时候也差不多是Emmanuel刚刚进入到这个领域不久，他在Stanford开了一门课叫300C，讲很多控制family-wise error rate， false discovery rate的东西。所以当时我有机会接触到了这样一些课题，当时我就觉得FDR是一个让我特别感兴趣的领域。于是我就利用到这个机会，在做最后Final Project的时候，我花了很长的时间。当时我停掉了我手里的研究。
 
 **统计之都**：和Peter的研究？
 
-**雷理骅**：对，或者说当时可能我停掉了其他一些我正在想的一些问题。当时那个阶段应该是第二年初期，那时候跟Peter也陷入到一些瓶颈，当时就想既然如此，我就好好的把时间花在Final Project上，我就想我能不能做一点东西。其实当时我就选了一个很小的切入点，当时我就读了Knockoff这篇paper。我就在想Knockoff当时是generate一个Copy of Knockoff，然后把Data转换成一个binary p-value。它的好处就是,如果说你是考虑一个线性模型，你需要N大于等于2P，aspect ratio的要求很低，但是它会让p-value的Resolution不是很高，就会导致一个问题，这个问题比较Tricky，但简单来说它会有个threshold phenomenon，就意味着如果你想把FDR control 在 0.1 这个level，你要么是Reject十个以上，要么Reject Nothing，但是实际情况下，很多时候我们大概Rejects五六个左右。那么这种情况下可能就没有办法给出一个很好的结果。所以那时候我就想做一个所谓的Multiple Knockoff，当然现在已经被人做出来了。当时我也做出来一些结果，但做出这个结果以后，我就给Will看，他觉得很有意思，于是我们从我做的结果那里，首先写了一篇文章。我们把Knockoff背后的一个叫selective six step filter推广了一下。就首先我和Will就先写了一篇ICML paper。我们就只是谈一下这样一个generalization，就是说我们不再用filter用在Knockoff上，我们就用在传统的p-value setting上，看我们能得到什么。很快我们做了这个项目以后，就意识到其实我们做的事情可以解决一个很重要的问题，叫data adaptive FDR control。这个motivation就在于，比如说在很多genetic data上，我们做multiple testing试图要control FDR，但是我们有很多side Information。这sign Information可能来自于别的实验，或者来自prior knowledge，我们怎么把这些prime knowledge纳入到我们FDR里面，使得它的power更高。我们在不断的聊天中，我记得那段时间跟Will Fithan可能是每周都聊一次，甚至聊两次，一聊可能就聊一个小时。在不断的这种iteration过程中，我原来当时Final Project里面一个想法，可以把它变成一个非常有力的工具。最后就我们写了adaptive这篇文章，想法非常简单，就是说我们有p-value。传统的方法就是直接用p-value做testing，但现在我们不是直接用p-value做testing，而是我们先隐掉一些Information。就是我们只给researcher看minimal p和1-p，以及其他所有的side Information。非常神奇的是，你只要用这些信息去估计任何的模型，哪怕这个模型是错的，是misspecified，最后在一些标准的假设上仍然可以保证FDR control，这就是我和Will写的那篇JRSSB[^8]。所以我后来一直在follow FDR上面的工作。我觉得非常有趣，因为当时它让我意识到，原来这么一个事后看起来非常简单的trick，它可以有效的把统计的testing和机器学习结合在一起，并且它的理论性质非常的强，就在于它所有的control都是finite sample，没有任何asymtotic，它允许模型是个任意的misspecification。但是如果你model是correctly specified，它会让你的power比较高。而这个工作本身其实也奠定了我后面所有工作的一个理念，就是无论是哪个方向，我都比较喜欢model free，distribution free，以及finite sample guarantee。我并不是觉得一定要有finite sample guarantee，而是觉得finite sample guarantee的这些方法，一般来说，有个特点，就是它一定会简单。因为说实话，很难想象一个非常复杂的方法，最后能给你发现finite sample guarantee，而且很多时候，背后的数学也会很简单。这个“简单”并不是在于它很容易想，它有时候可能很难想，但是数学证明都不会很复杂。
-**雷理骅**：对，或者说当时可能我停掉了其他一些我正在想的一些问题。当时那个阶段应该是第二年初期，那时候跟Peter也陷入到一些瓶颈，当时就想既然如此，我就好好的把时间花在Final Project上，我就想我能不能做一点东西。其实当时我就选了一个很小的切入点，当时我就读了Knockoff这篇paper。我就在想Knockoff当时是generate一个Copy of Knockoff，然后把Data转换成一个binary p-value。它的好处就是,如果说你是考虑一个线性模型，你需要N大于等于2P，aspect ratio的要求很低，但是它会让p-value的Resolution不是很高，就会导致一个问题，这个问题比较Tricky，但简单来说它会有个threshold phenomenon，就意味着如果你想把FDR control 在 0.1 这个level，你要么是Reject十个以上，要么Reject Nothing，但是实际情况下，很多时候我们大概Rejects五六个左右。那么这种情况下可能就没有办法给出一个很好的结果。
+**雷理骅**：对，或者说当时可能我停掉了其他一些我正在想的一些问题。当时那个阶段应该是第二年初期，那时候跟Peter也陷入到一些瓶颈，当时就想既然如此，我就好好的把时间花在Final Project上，我就想能不能做一点东西。其实当时我就选了一个很小的切入点，当时我就读了Knockoff这篇paper。我就在想Knockoff当时是生成一个Copy of Knockoff，然后把数据成一个binary p-value。它的好处就是,如果说你是考虑一个线性模型，你需要N大于等于2P，aspect ratio的要求很低，但是它会让p-value的精确度不是很高，就会导致一个问题，这个问题比较Tricky，但简单来说它会有个threshold phenomenon，就意味着如果你想把FDR control 在 0.1 这个level，你要么是拒绝十个以上，要么什么都不拒绝，但是实际情况下，很多时候我们大概拒绝五六个左右。那么这种情况下可能就没有办法给出一个很好的结果。所以那时候我就想做一个所谓的Multiple Knockoff，当然现在已经被人做出来了。当时我也做出来一些结果，但做出这个结果以后，我就给Will看，他觉得很有意思，于是我们从我做的结果那里，首先写了一篇文章。我们把Knockoff背后的一个叫selective six step filter推广了一下。就首先我和Will就先写了一篇ICML paper。我们就只是谈一下这样一个推广，就是说我们不再把filter用在Knockoff上，我们就用在传统的p-value上，看我们能得到什么。很快我们做了这个项目以后，就意识到其实我们做的事情可以解决一个很重要的问题，叫adaptive FDR control。这个项目灵感就在于，比如说在很多基因数据上，我们做多重检验试图要控制FDR，但是我们有很多side Information。这些side Information可能来自于别的实验，或者来自prior knowledge，我们怎么把这些prior knowledge纳入到我们FDR里面，使得它的power更高。我记得那段时间跟Will Fithan可能是每周都聊一次，甚至聊两次，一聊可能就聊一个小时。在不断的这种探讨过程中，我发现当年Final Project里面一个想法可以变成一个非常有力的工具。最后就我们写了adaptive这篇文章，想法非常简单，就是说我们有p-value。传统的方法就是直接用p-value做检验，但现在我们不是直接用p-value做检验，而是我们先隐掉一些信息。就是我们只给研究者看minimal p和1-p，以及其他所有的side Information。非常神奇的是，你只要用这些信息去估计任何的模型，哪怕这个模型是错的，是misspecified，最后在一些标准的假设上仍然可以保证FDR control，这就是我和Will写的那篇JRSSB[^8]。所以我后来一直在follow FDR上面的工作。我觉得非常有趣，因为当时它让我意识到，原来这么一个事后看起来非常简单的trick，它可以有效的把统计的testing和机器学习结合在一起，并且它的理论性质非常的强，就在于它所有的control都是finite sample，没有任何asymtotics，它允许模型是个任意的misspecification。但是如果你模型是correctly specified，它会让你的功效比较高。而这个工作本身其实也奠定了我后面所有工作的一个理念，就是无论是哪个方向，我都比较喜欢model free，distribution free，以及finite sample guarantee。我并不是觉得一定要有finite sample guarantee，而是觉得finite sample guarantee的这些方法，一般来说，有个特点，就是它一定会简单。因为说实话，很难想象一个非常复杂的方法，最后能给你发现finite sample guarantee，而且很多时候，背后的数学也会很简单。这个“简单”并不是在于它很容易想，它有时候可能很难想，但是数学证明都不会很复杂。
 
 > JRSSB: Journal of the Royal Statistical Society: Series B (Statistical Methodology)
 
 [^8]: [AdaPT: an interactive procedure for multiple testing with side information](https://rss.onlinelibrary.wiley.com/doi/10.1111/rssb.12274)
 
-**统计之都**：对。所以这个是不是和后来去 Emmanuel 那去做博士后有关系？
+**统计之都**：所以这个是不是和后来去 Emmanuel 那做博士后有关系？
 
-**雷理骅**：对，没错，其实关系非常的大，就在于我进入到这个领域以后，我就会去开这个领域的会。其中有一个会叫 WHOA-PSI ，这个会一直在 Saint Louis（圣路易斯）开。这个会开了很多年，但是现在很可惜，因为疫情停了，不过我们有一些延续，这个可以之后再说。
+**雷理骅**：对，没错，其实关系非常的大，就在于我进入到这个领域以后，我就会去开这个领域的会。其中有一个会叫 WHOA-PSI ，这个会一直在 Saint Louis（圣路易斯）开。这个会开了很多年，但是现在很可惜，因为疫情停了，不过我们有一些延续。
 
 > WHOA-PSI: Workshop on Higher-Order Asymptotics and Post-Selection Inference
 
-这个会，它聚集了很多做selective inference和high order inference的人，其实是两个community。Todd Kuffner从第一届开始就一直在组织，接下来的每一年他都在，至少是一个主要的组织者。这是2016年开始的。这个会对我其实帮助非常大。首先这个会是一个小规模的，相当于把这个领域里面所有人都请过来了，以及一些可能跟这个领域相关的人请过来了，所以在里面你可以直接见到所有这个领域里的人，大家做的课题也相对来说比较接近。在这个过程中，我也认识到了很多人，其中包括【人名】。我当时跟他做博士后，其实我一开始决定做博士后的时候，我觉得想跟谁，我觉得Emmanuel是我最想跟的人。当然，那时候我也不确定Emmanuel会不会带博士后，也不确定他会不会对我的研究感兴趣。但有幸的是因为Emmanuel也会去参加这个会，而在我会介绍adapt的工作，我也present过poster，后来我做了一下FDR的工作，这样Emmanuel也非常感兴趣。Emmanuel就对我们的工作评价很高，所以当时我在提出我想跟他做博士后的时候，他直接欣然的答应了。
+这个会，它聚集了很多做selective inference和high order inference的人，其实是两个领域。Todd Kuffner从第一届开始就一直在组织，接下来的每一年他都在，至少是一个主要的组织者。这是2016年开始的。这个会对我其实帮助非常大。首先这个会是一个小规模的，相当于把这个领域里面所有人都请过来了，以及一些可能跟这个领域相关的人请过来了，所以在里面你可以直接见到所有这个领域里的人，大家做的课题也相对来说比较接近。在这个过程中，我也认识到了很多人，其中包括Emmanuel。其实我一开始决定做博士后的时候，我觉得Emmanuel是我最想跟的人。当然，那时候我也不确定Emmanuel会不会带博士后，也不确定他会不会对我的研究感兴趣。但有幸的是因为Emmanuel也会去参加这个会，而在我会介绍adapt的工作，我也讲过poster，包括FDR的工作。Emmanuel对我们的工作评价很高，所以当时我在提出我想跟他做博士后的时候，他直接爽快的答应了。
 
 **统计之都**：那么其他的一些工作，比如与Michael Jordan的优化领域的合作又是怎么开始的呢？
 
-**雷理骅**：跟Michael Jordan的合作其实也是来自于一个巧合，一开始我在选了Peter作为主要的导师以后，一般来说，在Berkeley很流行的是再找一个co-adviser。一开始我还没有一个很明确的想法，但那时候我上了 Michael Jordan的Theoretical statistics。这门课是我们的核心课程。Michael讲得非常的好，在那个课最后期末我考得还比较好，所以Michael主动联系了我，问要不要聊一聊。后来我跟Michael聊了以后，他就邀请我去他的组会。然后我发现Michael的组会非常的有意思，它跟传统的组会不太一样的，就在于他有很多的学生。如果说大家都介绍自己的工作，会显得很杂乱无章。Michael选择一种非常不常见的方式。他会让大家一起来读书，而读的内容很有可能是组里没有任何人在研究的东西。比如说我第一个学期去的时候，他竟然在读Mostly Harmless Econometrics[^9]，是economics里面非常经典的教材，第二个学期就要读Bradley Efron的Large-Scale Inference[^10]，就是FDR。所以我说这是也有一些机缘巧合，我那时候感兴趣FDR，然后正好上了Will的课，系里招了Will过来，然后Michael组里又在读。
+**雷理骅**：跟Michael Jordan的合作其实也是来自于一个巧合，一开始我在选了Peter作为主要的导师以后，一般来说，在Berkeley很流行的是再找一个co-adviser。一开始我还没有一个很明确的想法，但那时候我上了 Michael Jordan的Theoretical statistics。这门课是我们的核心课程。Michael讲得非常的好，在那个课最后期末我考得还比较好，所以Michael主动联系了我，问要不要聊一聊。后来我跟Michael聊了以后，他就邀请我去他的组会。然后我发现Michael的组会非常的有意思，它跟传统的组会不太一样的，就在于他有很多的学生。如果说大家都介绍自己的工作，会显得很杂乱无章。Michael选择一种非常不常见的方式。他会让大家一起来读书，而读的内容很有可能是组里没有任何人在研究的东西。比如说我第一个学期去的时候，他竟然在读Mostly Harmless Econometrics[^9]，是经济学里面非常经典的教材，第二个学期就要读Bradley Efron的Large-Scale Inference[^10]，就是FDR。所以我说这是也有一些机缘巧合，我那时候感兴趣FDR，然后正好上了Will的课，系里招了Will过来，然后Michael组里又在读相关的文献。
 
 [^9]: [Mostly Harmless Econometrics: An Empiricist's Companion](https://press.princeton.edu/books/paperback/9780691120355/mostly-harmless-econometrics)
 
 [^10]:[Large-Scale Inference](https://www.cambridge.org/core/books/largescale-inference/A0B183B0080A92966497F12CE5D12589)
 
 
-那个时候我在跟Michael头脑风暴想研究课题，一开始Michael给我的题目是做Bag of Little Bootstrap。是他之前做distribution inference的一个想法。当数据分布在很多机器上的时候，这时候你想做bootstrap其实不容易，因为他们的communication cost很高。那我们有没有办法在局部做bootstrap，然后最后再aggregate，做confidence interval。因为当时做distributed inference的时候，大部分还是在考虑estimation，很少人会考虑inference的问题。所以当时它就有一个方法叫Bag of Little Bootstrap，BLB，他们想让我研究一下这个方法的性质。起初我跟他做第一个框架，其实我在推High-Dimensional Edgeworth expansions，跟我现在的研究方向差别很大。
+那个时候我在跟Michael头脑风暴想研究课题，一开始Michael给我的题目是做Bag of Little Bootstrap。是他之前做distribution inference的一个想法。当数据分布在很多机器上的时候，这时候你想做bootstrap其实不容易，因为他们的communication cost很高。那我们有没有办法在局部做bootstrap，然后最后再统一起来，做置信区间。因为当时做distributed inference的时候，大部分还是在考虑估计，很少人会考虑统计推断的问题。所以当时它就有一个方法叫Bag of Little Bootstrap，BLB，他们想让我研究一下这个方法的性质。起初我跟他做第一个框架，其实我在推High-Dimensional Edgeworth expansions，跟我现在的研究方向差别很大。
 
 
-**雷理骅**：我第一个暑假大概花了一两个月的时间读一本非常经典的Edgeworth expansion教材，然后试图去学习那些证明，他们的证明都是假设维度是个常数，但是实际上那个常数其实是指数上升的，所以没有办法直接使用。anyway就是我花了很多时间试图把证明给推广到高维情况。后来推出一些很奇怪结论，比如说它这个dimension是 n的2/27次方的时候，确实能得到一些结果，非常奇怪。当时我也写下来一个大概三四十页的笔记，但是我觉得，好像我也并没有直接想把这篇文章写成一篇paper的。但与此同时，我正好第一年的下半学期我上了(我也不认识这人-锐)的convex optimization ，而同样也是因为final project， 当时我也是想好好地研究一个问题，我接受了一个variance reduction。这个非常漂亮，相当于把统计里面用的variance reduction，其实是control variance，是一个蒙特卡洛里面被研究很多很多的方法，用在了优化里面，然后它就达到了一些很好的性质。于是当时我就在想能不能沿着这个方面做一下，后来我就发现，当时我切入点非常小，我就想证明某一个算法叫做SVRG它能够work for none-strongly convex optimization algorithm。
+**雷理骅**：我第一个暑假大概花了一两个月的时间读一本非常经典的Edgeworth expansion教材，然后试图去学习那些证明，他们的证明都是假设维度是个常数，但是实际上那个常数其实是指数上升的，所以没有办法直接使用。我花了很多时间试图把证明给推广到高维情况。后来推出一些很奇怪结论，比如说它这个dimension是 n的2/27次方的时候，确实能得到一些结果，非常奇怪。当时我也写下来一个大概三四十页的笔记，但是我觉得，好像我也并没有直接想把这篇文章写成一篇paper的。但与此同时，我正好第一年的下半学期我上了(我也不认识这人-锐)的convex optimization ，而同样也是因为final project。 当时我也是想好好地研究一个和variance reduction相关的问题。这个问题相当于把蒙特卡洛里面被研究很多的方法用在了优化里面，达到了一些很好的性质。于是当时我就在想能不能沿着这个方面做一下，后来我就发现，当时我切入点非常小，我就想证明SVRG这个算法它能够work for none-strongly convex optimization algorithm。
 
 (SVGR paper: Accelerating Stochastic Gradient Descent using Predictive Variance Reduction. This paper has been highly cited since its publication)
 
 
-**雷理骅**：原来的paper就是他们理论上只有对strongly convex 目标函数的结果，但是你实际发现效果非常好，即便是non-strongly convex效果也很好。我就在想说有没有办法能证明它对non-strongly convex的结果好？结果发现始终做不出来。但结果很有趣的是最后我发现了一个问题，大家在讨论optimization algorithm的时候，一般来说从一个initial point开始，run 一万步，我去看这一万步之后的convergence rate。但我发现如果把10,000这个数变成一个有某均值的几何随机变量， 就会有一些很奇妙的性质。后来我就通过这个性质设计了一个新的算法，其实就是把SVRG改变了一点点。于是我发现它不仅能对non-strongly convex目标函数可行，并且还能得到一种adaptivity，就是说如果你的目标函数是strongly convex，你能直接达到那个收敛速率，但你不需要知道它是不是需要strongly convex。后来我管这个叫geom-transition。然后我就跟Mike说了这个想法，Mike觉得这个想法非常的有趣。说实话，直到现在我也不能完全解释为什么这个就work。说实话，直到现在我也不能完全解释为什么这个就work。
+**雷理骅**：原来paper的理论只有对strongly convex 目标函数的结果，但是你实际发现效果非常好，即便是non-strongly convex效果也很好。我就在想说有没有办法能证明它对non-strongly convex的结果好？结果发现始终做不出来。但结果很有趣的是最后我发现了一个问题，大家在讨论优化算法的时候，一般来说从一个初始点开始，运行一万步，我去看这一万步之后的收敛速度。但我发现如果把一万这个数变成一个有某均值的几何随机变量， 就会有一些很奇妙的性质。后来我就通过这个性质设计了一个新的算法，其实就是把SVRG改变了一点点。于是我发现它不仅能对non-strongly convex目标函数可行，并且还能得到一种adaptivity，就是说如果你的目标函数是strongly convex，你能直接达到那个收敛速率，但你不需要知道它是不是需要strongly convex。后来我管这个叫geom-transition。然后我就跟Mike说了这个想法，Mike觉得这个想法非常的有趣。说实话，直到现在我也不能完全解释为什么这个就可以实现。
 
 **统计之都**：是怎么发现的呢？
 
-**雷理骅**：这就类似打竞赛，竞赛的时候会要解决一些很难的题目，所以会去想一些非常奇怪的解法。当时也是，我就想说为了证明这个，我能不能反推，我需要怎么设计这个算法，使得我能得到结果？最后真的是有一天突然就发现了几何随机变量的性质，它用到的性质并不是我们统计熟知的性质，是一个很独特的性质，却很难解释。后来发现了这个性质以后。
-
-**统计之都**：是什么性质还记得吗？
-
-**雷理骅**：是一个非常technical的性质，我感觉很难解释，大概就是说如果你给我一个sequence，我去看它的first order difference，如果说我看的Index是一个geometric random variable，它的first order difference的期望会等于它的最早的点减去它当前点。 这个跟在优化里面，一个叫telescoping的technic，非常相近的一个technic，其实就是当你有类似于对$A_k - A_{k+1}$的表达式，把它们都加起来，就会变成$A_0 - A_{k+1}$。但是在优化里面，$A_{k+1}$导致了很多麻烦，因为$A_{k+1}$其实不存在。
-但geometrization可以一定程度上把它变成$A_k$。所以这个很看上去是个很小的工具，但是后来我们发现了它很多的应用，我跟Mike说了以后，于是我们写了第一篇文章，后来很快我们就在想，能不能对non convex优化问题也有用，在当时的时候，当时的state of the art是说对于finite sample 优化问题，非凸问题最好的做法，如果你要最好的准确性的话，还是SGD，或者一些加速SGD算法。理论上的次方数是一直都没有变过，但我们通过这个工具才可以发现可以做得更好。原本一直是，比如说如果你想达到梯度的期望小于等于epsilon，之前的理论速度一直是1/epsilon的四次方， 其他的加速SGD算法只能在一些比较特殊的情况上面提升四次方，但一般情况下它不能提升四次方。而我们当时就通过SVRG和我们这个工具发现了一个10/3次方，这个结果。
-
-**统计之都**：Interesting。
-
-**雷理骅**：很快大家发现，这不是最优的，大家发现三是最优的，这也就发生在我们的论文发出来半年到一年之内，因为大家在这个领域其实真的非常强势。一旦发现这个不是最优的，一旦有了这样一个证据以后，它就会很快意识到，OK，怎么样去move forward。
+**雷理骅**：这就类似打数学竞赛的时候会要解决一些很难的题目，所以会去想一些非常奇怪的解法。当时也是，我在想能不能反推，我需要怎么设计这个算法，使得我能得到结果？最后有一天突然就发现了几何随机变量的性质，它用到的性质并不是我们统计熟知的性质，是一个很独特的性质，大概就是说如果有一个序列，首先去看它的first order difference。如果说我看的Index是一个几何随机变量，它的first order difference的期望会等于它的最早的点减去它当前点。 这个跟在优化里面，一个叫telescoping的技巧，其实就是当你有类似于对$A_k - A_{k+1}$的表达式，把它们都加起来，就会变成$A_0 - A_{k+1}$。但是在优化里面，$A_{k+1}$导致了很多麻烦，因为$A_{k+1}$其实不存在。
+但geometrization可以一定程度上把它变成$A_k$。所以这个很看上去是个很小的工具，但是后来我们发现了它很多的应用，我跟Mike说了以后，于是我们写了第一篇文章，后来很快我们就在想，能不能对non convex优化问题也有用，在当时的时候，当时的state of the art是说对于finite sample 优化问题，非凸问题最好的做法，如果你要最好的准确性的话，还是SGD，或者一些加速SGD算法。理论上的次方数是一直都没有变过，但我们通过这个工具才可以发现可以做得更好。原本一直是，比如说如果你想达到梯度的期望小于等于$\epsilon$，之前的理论速度一直是$1/\epsilon$的四次方， 其他的加速SGD算法只能在一些比较特殊的情况上面提升四次方，但一般情况下它不能提升四次方。而我们当时就通过SVRG和我们这个工具发现了一个10/3次方，这个结果。很快大家发现，这不是最优的，大家发现三是最优的，这也就发生在我们的论文发出来半年到一年之内，因为大家在这个领域其实真的非常强势。一旦发现这个不是最优的，一旦有了这样一个证据以后，它就会很快意识到，OK，怎么样去继续推进研究。
 
 **统计之都**：对，是的。
 
-**雷理骅**：所以这时候跟Mike，所以当时Mike有大概很长的一段时间，他一直对优化问题很感兴趣，但是他在近几年转向了经济学，那段时间，优化就是他一个主要的方向，就正好跟他契合了，我想既然这个东西这么有趣，我们就一起工作一下。后来做了这样一个非凸问题工作，后来继续在做adaptivity，这个adaptivity就是说限制我们有很多很多算法，他们都work for different rigime，比如说对strongly convex，对non-strongly convex；对high accuracy，对low accuracy；对finite sum，对infinite sum，它们都有不同的algorithm，但实际情况下你永远不知道你在哪个rigime。所以我们在想，能不能设计一个算法，这个算法尽可能少的depends on hyper parameter，使得它能work for all。所以我们就发现最后geometric optimization technic非常的有用，大概我就以这样的方式跟Mike合作了几篇优化领域的文章。
+**雷理骅**：当时的Mike对优化问题比较感兴趣，但是他在近几年转向了经济学。那段时间，优化就是他一个主要的方向，我的研究正好跟他契合了。我想既然这个东西这么有趣，我们就一起工作一下。后来做了这样一个非凸问题工作，后来继续在做adaptivity，这个adaptivity就是说限制我们有很多很多算法，他们都work for different rigime，比如说对strongly convex，对non-strongly convex；对high accuracy，对low accuracy；对finite sum，对infinite sum，它们都有不同的algorithm，但实际情况下你永远不知道你在哪个rigime。所以我们在想，能不能设计一个算法，这个算法尽可能少的depends on hyper parameter，使得它能work for all。所以我们就发现最后geometric optimization technic非常的有用，大概我就以这样的方式跟Mike合作了几篇优化领域的文章。
 
 **统计之都**：非常有趣。和丁鹏的因果推断方向的研究又是如何开始的？
 
-**雷理骅**：这个我非常感谢丁鹏，还有和他同期进来的几个教授，包括Avi Feller，Will Fithian，和当时来这边的一个博士后，叫Alexander D'Amour。他们在Berkeley的那几年，他们是Berkeley 因果推断的第一批人。他们就在Berkeley搞了一个因果推断的读书小组。起初也是大家一起来读书。我们当时读了很多课题，比如说第一个学期在读高维因果推断，接下来读了统计推断，读了optimal design，后来读的哲学，实际应用，有一个学期专门是读因果推断的各种有趣的应用，经典的应用。还有一个学期读semi parametrics。在我毕业的学期又读了半参数分析和面板数据。这个其实让我学到很多，其实让我因果推断入门一个最好的方式。因为因果推断我感觉其实是一个很大领域，但其实入门会不是那么的简单。因为在我读博士的时候，因果推断其实并没有那么火。尤其是当你刚开始学potential outcome的时候，会觉得很难理解。但我们当时，丁鹏、Avi Feller，Will FIthian，还有Alexander D'Amour，以及后来Sam Pimentel也加入了这个因果推断的读书小组。其实他们构建了一个非常好的环境。我们其实每周都会有一个人讲一个论文，但我们会有两个小时的时间。其实演讲者并没有很大的压力，他其实只有准备30~40分钟，而另外一个半小时间我们可能都在聊天，一直在讨论。我们会抓住一些点拼命地去讨论，去看为什么要这么做，怎么去论证。比如说为什么我们要考虑finite population analysis，super population 和finite population之间到底有什么区别？我们怎么去理解IPW estimator，怎么去理解ATT、ATE，怎么去理解optical design和randomize design，它们的核心区别，以及怎么去理解各种不同推断框架下面去定义估计量，它们会有什么tricky的地方。所以当时他们构建了一个很好的环境，可以让我们沟通，可以让我们去深入的理解一个问题。在这个过程中，其实我们有连续三个学期，就要讨论一个问题，叫overlap，或者叫positivity。简单来说，在任何一个observational study，或者你想做因果推断，一个必要的条件是说，任何一个人、任何一个加入到你的study里面的人必须得有不小的概率，expose到treatment group和control group。因为如果说有一批人他永远都只会被control，或有些人永远都会opt into the treatment。这时候你就只能通过假设，通过去做一些extrapolation assumption去推断这些人的信息。不然他们的counter factual其实是不存在。
+**雷理骅**：这个我非常感谢丁鹏，还有和他同期进来的几个教授，包括Avi Feller，Will Fithian，和当时来这边的一个博士后，叫Alexander D'Amour。他们是Berkeley 因果推断的第一批人，当时还在Berkeley搞了一个因果推断的读书小组。起初也是大家一起来读书。我们当时读了很多课题，比如说第一个学期在读高维因果推断，接下来读了统计推断，读了optimal design，后来读的哲学，实际应用，有一个学期专门是读因果推断的各种有趣的应用，经典的应用。还有一个学期读半参数统计。在我毕业的学期又读了面板数据。这个其实让我学到很多，也是让我因果推断入门一个最好的方式。因为因果推断其实是一个很大领域，入门会不是那么的简单。在我读博士的时候，因果推断其实并没有那么火。尤其是当你刚开始学potential outcome的时候，会觉得很难理解。但我们当时，丁鹏、Avi Feller，Will FIthian，还有Alexander D'Amour，以及后来Sam Pimentel也加入了这个因果推断的读书小组。他们构建了一个非常好的环境。我们每周都会有一个人讲一个论文，但我们会有两个小时的时间。演讲者并没有很大的压力，他其实只有准备30~40分钟，而另外一个半小时间我们可能都在聊天，一直在讨论。我们会抓住一些点拼命地去讨论，去看为什么要这么做，怎么去论证。比如说为什么我们要考虑finite population analysis，super population 和finite population之间到底有什么区别？我们怎么去理解IPW estimator，怎么去理解ATT、ATE，怎么去理解optical design和randomize design，它们的核心区别，以及怎么去理解各种不同推断框架下面去定义估计量，它们会有什么tricky的地方。所以当时他们构建了一个很好的环境，可以让我们沟通，可以让我们去深入的理解一个问题。在这个过程中，其实我们有连续三个学期，就要讨论一个问题，叫overlap，或者叫positivity。简单来说，在任何一个observational study，或者你想做因果推断，一个必要的条件是说，任何一个人、任何一个加入到你的study里面的人必须得有不小的概率，expose到treatment group和control group。因为如果说有一批人他永远都只会被control，或有些人永远都会opt into the treatment。这时候你就只能通过假设，通过去做一些extrapolation assumption去推断这些人的信息。不然他们的counter factual其实是不存在。
 
 **统计之都**：是的，对。
 
-**雷理骅**：所以我们当时连续三个学期算就在聊这个问题。你看，所有的paper假设positively或者overlap，那到底我们能不能test？到底它有什么implication？就是我们假设overlap，它是不是一个很强的假设？有很多时候observational study，第一个假设就是strong ignorability，第二个假设就是positivity。大家都会花很长时间去justify strong ignorability，但很多时候大家都会忽略positivity。最多给一个就是propensity score的图，去看一下有没有extreme value。那么想，我们能不能很系统地去研究这个问题？于是当时我的合作者Alexander D'Amour他一开始就要想，我们能不能看overlap的一个implication，就假设overlap它能imply什么。如果他有一些passport implication的话，我们就可以通过他的passport implication，可以反推到底overlap assumption有多大可能性。于是我们一起合写了一篇文章，后来发在JOE上。其实后来我们2017年就写出了第二篇文章，到现在都还没有发出来，只放在我的网站上了。其实我们第一篇文章只是在解释它有什么implication，但我们第二篇文章就在说，到底我们能不能检验overlap？我们发现它不仅能检验，并且我们还能做distribution free test。
+**雷理骅**：所以我们当时连续三个学期算就在聊这个问题。你看，所有的论文假设positively或者overlap，那到底我们能不能检验？到底它有什么含义？就是我们假设overlap，它是不是一个很强的假设？有很多时候observational study，第一个假设就是strong ignorability，第二个假设就是positivity。大家都会花很长时间去justify strong ignorability，但很多时候大家都会忽略positivity。最多给一个就是propensity score的图，去看一下有没有extreme value。那么想，我们能不能很系统地去研究这个问题？于是当时我的合作者Alexander D'Amour他一开始就要想，我们能不能看overlap的一个implication，就假设overlap它意味着什么。如果他有一些passport implication的话，我们就可以通过他的passport implication，可以反推到底overlap的假设有多大可能性。于是我们一起合写了一篇文章，后来发在JOE上。其实后来我们2017年就写出了第二篇文章，到现在都还没有发出来，只放在我的网站上了。其实我们第一篇文章只是在解释它有什么含义，但我们第二篇文章就在说，到底我们能不能检验overlap？我们发现它不仅能检验，并且我们还能做distribution free test。
 
-**统计之都**：Interesting。
+**统计之都**：具体是什么呢？
 
-**雷理骅**：是一个很奇怪很奇怪的想法，就类似于我们还是可以用任何机器学习算法。但是我们不需要依赖于估计量是对的。它可以inconsistent，它可以特别差。但是我们可以把overlap assumption看成一个原假设。比如说这个propensity score是在0.1~0.9之间，但这是一个非常奇怪的composite原假设，因为它的原假设空间非常大。但我们发现，如果说你能知道这个东西的意义，这个本身它太能被检验，但如果你知道它的implication，也许是可以被检验的。于是我就用了一个很奇怪的想法，就是把这个问题跟很多其他的问题，比如说sequential analysis，rank tests，还有classification联系起来了，用那边的工具得到了这边的一些检验，而且它们是distribution free，而且valid in finite sample。我唯一需要假设就是data IID。
+**雷理骅**：是一个很奇怪很奇怪的想法，就类似于我们还是可以用任何机器学习算法。但是我们不需要依赖于估计量是对的。它可以inconsistent，它可以特别差。但是我们可以把overlap assumption看成一个原假设。比如说这个propensity score是在0.1~0.9之间，但这是一个非常奇怪的composite原假设，因为它的原假设空间非常大。但我们发现，如果说你能知道这个东西的意义，这个本身它太能被检验，但如果你知道它的含义，也许是可以被检验的。于是我就用了一个很奇怪的想法，就是把这个问题跟很多其他的问题，比如说sequential analysis，rank tests，还有classification联系起来了，用那边的工具得到了这边的一些检验，而且它们是distribution free，而且valid in finite sample。我唯一需要假设就是data IID。
 
 **统计之都**：你需要做sample spliting吗？
 
@@ -164,13 +155,13 @@ forum_id: 423404
 
 **雷理骅**：也提醒了我们要赶快把它抛出来。目前只有一个在我个人主页上的版本，是因为之前找工作的时候，想提前把它抛出来。
 
-**统计之都**： 博士后的经历你觉得是必要的吗，你的收获又是哪些？因为我听说过一些说法讲，其实你在读博士的时候已经很有名了，当年在job market已经非常受欢迎。所以说在这个基础上，你觉得你的博后的收获又是哪些呢？
+**统计之都**： 博士后的经历你觉得是必要的吗，你的收获又是哪些？其实你在读博士的时候已经很有名了，当年在job market已经非常受欢迎了。
 
-**雷理骅**：这是一个很好的问题。其实我在博士快毕业的阶段，我问过很多人这个问题。以及后来在我读博后的时候，很多人问我这个问题。当时我也是在犹豫，是上market（job market），还是去读博后。一开始最直接的契机是，我去找Michael Jordan聊，他非常推荐我去读博后。他说这不是针对你一个人，我会建议我所有的学生如果可能的话都去做一个博后。他的理由是首先你可以拓宽你的network，可以接触更多研究方向，会让你的整个研究变得更成熟，以及你可以在这个过程中，也许有一些新的想法，让你在上market的时候，可能更加能够outstanding。这是最开始的契机，但这个契机可能还不能完全说服我，说实话，于是我就找了很多AP聊。但后来我发现一个很有趣的现象。我会问他你们如果有后悔的事情，后悔的是什么？我从至少五个人那里听到了这样一点，我最后悔的是没有读博士后。
+**雷理骅**：这是一个很好的问题。其实我在博士快毕业的阶段，我问过很多人这个问题。以及后来在我读博后的时候，很多人问我这个问题。当时我也是在犹豫，是上job market，还是去读博后。一开始最直接的契机是，我去找Michael Jordan聊，他非常推荐我去读博后。他说这不是针对你一个人，我会建议我所有的学生如果可能的话都去做一个博后。他的理由是首先你可以拓宽你的圈子，可以接触更多研究方向，会让你的整个研究变得更成熟，以及你可以在这个过程中，也许有一些新的想法，让你在上market的时候，可能更加能够突出。这是最开始的契机，但这个契机可能还不能完全说服我，说实话，于是我就找了很多助理教授聊。但后来我发现一个很有趣的现象。我会问他你们如果有后悔的事情，后悔的是什么？我从至少五个人那里听到了这样一点，我最后悔的是没有读博士后。
 
-**统计之都**：Interesting。
+**统计之都**：这个很有趣。
 
-**雷理骅**：其实更多是其他的，真的是完全没有读博士后。我后来就问他们为什么。他们的点有很多，其中一个点是说，当你从博士到AP的这个时候，你有一个很长的transitioning。这个transitioning可能会耗费你很大的精力，会让你的研究有个断层。博士后期间，因为你相当于多了三年时间或者两年至少。这段时间你可以积累很多其他的想法，这些想法你未必会在，或者提前做。但是等你真正transition到AP的时候，你可以直接把这些拿回来。就真的如果忙得不行了，你至少还是有题目可以做的。尤其是带学生的时候，也许这些问题可以成为你和学生的一个starting project，之后继续再往前推进。但如果没有博士后，如果说你积累的课题不够多的时候，也许一开始会很艰难。
+**雷理骅**：其实更多是其他的，真的是完全没有读博士后。我后来就问他们为什么。他们的点有很多，其中一个点是说，当你从博士到AP的这个时候，你有一个很长的过渡。这个过渡期可能会耗费你很大的精力，会让你的研究有个断层。博士后期间，因为你相当于多了三年时间或者两年至少。这段时间你可以积累很多其他的想法，这些想法你未必会在，或者提前做。但是等你真正transition到AP的时候，你可以直接把这些拿回来。就真的如果忙得不行了，你至少还是有题目可以做的。尤其是带学生的时候，也许这些问题可以成为你和学生的一个开始的项目，之后继续再往前推进。但如果没有博士后，如果说你积累的课题不够多的时候，也许一开始会很艰难。
 
 **统计之都**：是的，所以博士后让你的研究变得更加丰富了。
 
