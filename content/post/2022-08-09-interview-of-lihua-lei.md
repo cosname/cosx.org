@@ -1,14 +1,14 @@
 ---
-title: "统计之都访谈第44期：life is an exploratation-exploitation tradeoff--雷理骅访谈"
+  title: "统计之都访谈第44期：life is an exploratation-exploitation tradeoff--雷理骅访谈"
 date: "2022-08-09"
 categories:
   - COS访谈
 tags:
   - cos访谈
-  - 统计学
-  - 教育
-  - 发展
-  - 八卦
+- 统计学
+- 教育
+- 发展
+- 八卦
 slug: interview-of-lihua-lei
 meta_extra: "采访：蔡占锐；录音审校：朱书慧，闫涵超，梁杰昊，赵昊蛟，孔令仁"
 forum_id: 423404
