@@ -1,6 +1,3 @@
-
-
-```
 ---
 title: '北美博士项目申请经验'
 author: '张沥今'
@@ -9,7 +6,7 @@ slug: tutorial-on-phd-application
 categories:
   - 推荐文章
 ---
-```
+
 
 
 
