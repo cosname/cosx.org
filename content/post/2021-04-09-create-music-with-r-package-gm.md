@@ -2,7 +2,8 @@
 title: "用 R 包 gm 生成音乐"
 date: 2021-04-09
 author: "flujoo"
-categories: ["R 语言 ", "R 包"]
+categories: 
+  - R语言
 tags: ["音乐"]
 slug: create-music-with-r-package-gm
 ---

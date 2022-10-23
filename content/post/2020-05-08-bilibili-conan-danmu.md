@@ -3,7 +3,7 @@ title: "B站1000多集的柯南，该怎么追？"
 author: "邱怡轩"
 date: "2020-05-09"
 categories:
-  - R 语言
+  - R语言
   - 统计应用
 tags:
   - B 站

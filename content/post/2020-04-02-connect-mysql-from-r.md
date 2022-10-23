@@ -5,7 +5,7 @@ title: 从 R 连接 MySQL
 author: 黄湘云
 meta_extra: "审稿：邱怡轩；编辑：向悦"
 categories:
-  - R 语言
+  - R语言
 tags:
   - MySQL
   - MariaDB

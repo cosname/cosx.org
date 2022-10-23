@@ -2,7 +2,8 @@
 title: "R Markdown 入门教程"
 date: 2021-04-10
 author: "庄亮亮"
-categories: ["R 语言"]
+categories: 
+  - R语言
 tags: ["R Markdown"]
 meta_extra: '审稿：黄湘云、任焱'
 slug: rmarkdown-introduction
