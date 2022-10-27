@@ -12,17 +12,12 @@ meta_extra: "上传校对：陈鑫斌，孔令仁"
 forum_id: 423495
 ---
 
-本文的独立性符号采用 mathjax 宏定义实现，操作如下，可能相比于 tex 的符号有略微不同：
+> 本文出自《中国科学:数学》2018年12期上同名文章，获得作者授权后转载。
 
 $$
 \def\ind{{\perp\!\!\!\perp}}
 \def\nind{{\not\!\perp\!\!\!\perp}}
 $$
-
-| 符号  | 定义  |  表现效果 |
-|---|---|---|---|
-| `\ind`  |  `\def\ind{{\perp\!\!\!\perp}}` |  $\ind$ |
-| `\nind`  |  `\def\nind{{\not\!\perp\!\!\!\perp}}` | $\nind$  |
 
 ```{css}
 #| echo: false
