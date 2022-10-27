@@ -12,6 +12,7 @@ tags:
   - 统计遗传
 slug: interview-of-jianyang
 meta_extra: "采访和文字整理：王健桥、边蓓蕾、邱怡轩、魏太云"
+forum_id: 423626
 ---
 
 <div style="text-align: center">
