@@ -1,6 +1,9 @@
 ---
 title: 因果推断的统计方法
-author: 苗旺，刘春辰，耿直
+author: 
+  - 苗旺
+  - 刘春辰
+  - 耿直
 date: '2022-07-16'
 slug: causality-statistical-method
 categories:
