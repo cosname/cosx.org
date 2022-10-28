@@ -81,31 +81,7 @@ install.packages('blogdown')
 blogdown::install_hugo()
 ```
 
-如果安装hugo的时候出现下面的错误(貌似有同志也有[这个问题](https://github.com/rstudio/blogdown/issues/244))：
-
-```
-> blogdown::install_hugo()
-The latest hugo version is 0.32.4
-trying URL 'https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Windows-64bit.zip'
-trying URL 'https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Windows-64bit.zip'
-Error in download.file(url, ..., method = method, extra = extra) : 
-  cannot open URL 'https://github.com/gohugoio/hugo/releases/download/v0.32.4/hugo_0.32.4_Windows-64bit.zip'
-In addition: Warning messages:
-1: In download.file(url, ..., method = method, extra = extra) :
-  InternetOpenUrl failed: ''
-2: In download.file(url, ..., method = method, extra = extra) :
-  InternetOpenUrl failed: ''
-```
-
-这个时候就直接安装开发版，就可以解决：
-
-```
-install.packages("devtools")
-devtools::install_github("rstudio/blogdown")
-```
-
-如果安装了开发版的blogdown，还没有搞定，那么就把错误信息中的链接复制到浏览器直接下载，把文件解压发现里面就只有一个文件，Yihui选择hugo就是因为hugo只有一个文件，够简单，至于为什么我会知道Yihui选择hugo的原因？因为我读了[**blogdown故事**](https://yihui.name/en/2017/12/blogdown-book/)。
-
+如果安装失败，那么就把错误信息中的链接复制到浏览器直接下载，把文件解压发现里面就只有一个文件，Yihui选择hugo就是因为hugo只有一个文件，够简单，至于为什么我会知道Yihui选择hugo的原因？因为我读了[**blogdown故事**](https://yihui.name/en/2017/12/blogdown-book/)。
 
 把解压好的hugo.exe文件放在`d:/`根目录下，然后输入下面代码安装hugo：
 
@@ -154,9 +130,8 @@ ok，我们来到这里，暂时离开一下rstudio，我们去弄弄github。
 .Rhistory
 .RData
 .Ruserdata
-public
-static/figures
-blogdown
+/public
+/blogdown
 ```
 
 上面的文件或者目录就不会提交到github上。
@@ -201,19 +176,7 @@ git push -u origin master
 
 ![6-Addins-serve-site](https://uploads.cosx.org/2018/01/20180117-06-serve-site.png)
 
-点击`Serve Site`，可能会提示安装几个包例如shiny、miniUI等，点击yes安装就行了，其实点击这个跟在console里面输入`blogdown::serve_site()`是一样的，如果你还没有安装[**写轮眼xaringan**](https://github.com/yihui/xaringan)，会有下面的warning信息：
-
-```
-Warning message:
-In eval(quote({ :
-  The xaringan package is not installed. LaTeX math may not work well.
-```
-
-我们乖乖的按照提示把**写轮眼**安装了吧（网页上的数学公式用的是**MathJax.js**实现）：
-
-```
-install.packages("xaringan")
-```
+点击`Serve Site`，可能会提示安装几个包例如shiny、miniUI等，点击yes安装就行了，其实点击这个跟在console里面输入`blogdown::serve_site()`是一样的。
 
 这个时候，已经可以在右下角`Viewer`标签看到网站的美貌了：
 
@@ -228,7 +191,7 @@ install.packages("xaringan")
 
 又来点击菜单`Help`下面的`Addins`，这次我们点击`New Post`，就会弹出下面这个画面：
 
-![8-yihui-new-post](https://uploads.cosx.org/2018/01/new-post.png)
+![8-yihui-new-post](https://bookdown.org/yihui/blogdown/images/new-post.png)
 
 `Filename`处会自动帮你填写为`Title`处的内容，`Filename`和`Slug`还是建议使用字母，尤其是`Filename`，如果博文里面不需要用到R语言的代码计算结果生成图表的话，`Format`处就选择`Markdown`格式，这可以省去一些系统生成的步骤，ok，点击`Done`，就会在`/content/post`文件夹下面生成一个文件名为`2000-01-01-my-first-blog.Rmd`这样的文件了，content文件夹下面的文件就是博客的文章了。
 

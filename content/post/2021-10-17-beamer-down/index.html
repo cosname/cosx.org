@@ -5,7 +5,7 @@ date: '2022-08-14'
 meta_extra: "审稿：楚新元、谢益辉"
 slug: beamer-not-down
 categories:
-  - R 语言
+  - R语言
 tags:
   - TinyTeX
   - LaTeX
@@ -18,7 +18,7 @@ output:
     toc: true
     number_sections: true
     highlight: pygments
-bibliography: 
+bibliography:
   - refer.bib
 link-citations: true
 forum_id: 423414
@@ -206,8 +206,8 @@ div.rmdtip::before {
 
 div.figure {
   text-align: center;
-  display: block; 
-  margin-left: auto; 
+  display: block;
+  margin-left: auto;
   margin-right: auto;
   width: 70%;
 }
@@ -817,8 +817,8 @@ author:
 - Author One
 - Author Two
 institute: &quot;Capital of Statistics&quot;
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
     theme: metropolis
     template: null
@@ -913,8 +913,8 @@ author: &quot;黄湘云&quot;
 date: &quot;2021年10月01日&quot;
 institute: &quot;统计之都&quot;
 documentclass: ctexbeamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
     theme: metropolis
     template: null
@@ -941,8 +941,8 @@ author: &quot;黄湘云&quot;
 date: &quot;2021年10月01日&quot;
 institute: &quot;统计之都&quot;
 documentclass: ctexbeamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
     theme: metropolis
     template: null
@@ -951,7 +951,7 @@ classoption: &quot;fontset=fandol&quot;
 
 ## 介绍
 
-数学公式还是用 LaTeX 排版的好， 
+数学公式还是用 LaTeX 排版的好，
 $\symbf{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <p>编译后的效果如下：</p>
@@ -966,8 +966,8 @@ author: &quot;黄湘云&quot;
 date: &quot;2021年10月01日&quot;
 institute: &quot;统计之都&quot;
 documentclass: beamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
     theme: metropolis
     template: null
@@ -978,7 +978,7 @@ mathspec: true
 
 ## 介绍
 
-数学公式还是用 LaTeX 排版的好， 
+数学公式还是用 LaTeX 排版的好，
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <p>使用基础的 beamer 文类，而不是 ctex 宏包提供的 ctexbeamer 文类，因为 ctexbeamer 文类与 mathspec 宏包有冲突，而汉化只需在导言区加载 ctex 宏包。最终编译出来的效果如图<a href="#fig:rmd-metropolis-zh-mathspec">4.20</a>所示。</p>
@@ -993,8 +993,8 @@ author: &quot;黄湘云&quot;
 date: &quot;2021年10月01日&quot;
 institute: &quot;统计之都&quot;
 documentclass: ctexbeamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
     theme: metropolis
     template: null
@@ -1003,7 +1003,7 @@ classoption: &quot;fontset=fandol&quot;
 
 ## 介绍
 
-数学公式还是用 LaTeX 排版的好， 
+数学公式还是用 LaTeX 排版的好，
 $\symbf{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 
@@ -1123,8 +1123,8 @@ author: &quot;黄湘云&quot;
 date: &quot;2021年10月01日&quot;
 institute: &quot;统计之都&quot;
 documentclass: beamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
     theme: default
     colortheme: seahorse
@@ -1136,7 +1136,7 @@ mathspec: true
 
 ## 介绍
 
-数学公式还是用 LaTeX 排版的好， 
+数学公式还是用 LaTeX 排版的好，
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <div class="figure"><span style="display:block;" id="fig:rmd-slide-seahorse"></span>
@@ -1155,8 +1155,8 @@ author: &quot;黄湘云&quot;
 date: &quot;2021年10月01日&quot;
 institute: &quot;统计之都&quot;
 documentclass: beamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
     theme: Verona
     template: null
@@ -1167,7 +1167,7 @@ mathspec: true
 
 ## 介绍
 
-数学公式还是用 LaTeX 排版的好， 
+数学公式还是用 LaTeX 排版的好，
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。</code></pre>
 <p>渲染效果如图<a href="#fig:rmd-slide-Verona">4.25</a>所示。</p>
@@ -1318,8 +1318,8 @@ texmf-dist/fonts/map/dvips/alegreya</code></pre>
 :::</code></pre>
 <p>Verona 主题还有自定义的 block 样式，像引用名人名言。</p>
 <pre><code>::: {.quotation data-latex=&quot;[John Gruber]&quot;}
-A Markdown-formatted document should be publishable as-is, as plain text, 
-without looking like it’s been marked up with tags or formatting instructions.  
+A Markdown-formatted document should be publishable as-is, as plain text,
+without looking like it’s been marked up with tags or formatting instructions.
 :::</code></pre>
 <p>此处，不一一介绍，详情见<span class="citation">[<a href="#ref-Alison2021" role="doc-biblioref">8</a>]</span>。</p>
 </div>
@@ -1335,8 +1335,8 @@ without looking like it’s been marked up with tags or formatting instructions.
 <div class="column" style="width:47.5%;">
 <pre class="rmd"><code>---
 documentclass: beamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
     theme: metropolis
     includes:
@@ -1406,8 +1406,8 @@ a column separator --></p>
 <li><p>因此，把 R Markdown 文档默认的文类设置从 <code>documentclass: beamer</code> 改为 <code>documentclass: ctexbeamer</code>，改完后 R Markdown 文档长这个样子：</p>
 <pre><code>---
 documentclass: ctexbeamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
 ---
 
@@ -1425,8 +1425,8 @@ output:
 <li><p>发现 LaTeX 命令 <code>\boldsymbol</code> 并没有加粗希腊字母 <span class="math inline">\(\theta\)</span>，回退至原英文 R Markdown 文档</p>
 <pre><code>---
 documentclass: beamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
 ---
 
@@ -1648,8 +1648,8 @@ $endif$</code></pre>
 <div class="column" style="width:47.5%;">
 <pre class="rmd"><code>---
 documentclass: beamer
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
 mathspec: true # 设置 mathspec 变量
 ---
@@ -1710,12 +1710,12 @@ a column separator --></p>
 <pre class="rmd"><code>---
 documentclass: beamer
 CJKmainfont: NotoSerifCJKsc-Regular
-CJKoptions: 
+CJKoptions:
  - Path=noto-fonts/
  - BoldFont=NotoSansCJKsc-Regular
  - Extension = .otf
-output: 
-  beamer_presentation: 
+output:
+  beamer_presentation:
     latex_engine: xelatex
 mathspec: true
 ---
@@ -1753,17 +1753,17 @@ author:
   - 李四
 institute: &quot;xxx 大学学院&quot;
 date: &quot;`r Sys.Date()`&quot;
-format: 
-  beamer: 
+format:
+  beamer:
     theme: Verona
 header-includes:
   # - \logo{\includegraphics[height=0.8cm]{`r file.path(R.home(&quot;doc&quot;), &quot;html&quot;, &quot;Rlogo&quot;)`}} # 插入 Logo
-  - \usepackage{pifont} # 提供 \ding 
+  - \usepackage{pifont} # 提供 \ding
   - \usepackage{iitem} # 修改列表样式
   - \setbeamertemplate{itemize item}{\ding{47}}
   - \setbeamertemplate{itemize subitem}{\ding{46}}
   - \usepackage[UTF8,fontset=fandol]{ctex} # 汉化文档
-themeoptions: 
+themeoptions:
   - colorblocks # 彩色的 block
   - showheader  # 展示页面顶部导航
   - red   # Verona 主题为红色风格
@@ -1771,7 +1771,7 @@ cite-method: natbib   # 参考文献处理方法
 highlight-style: github # 代码语法高亮
 biblio-style: apalike # 参考文献样式
 natbiboptions: &quot;authoryear,round&quot; # 作者-年份样式，以圆括号包裹
-bibliography: 
+bibliography:
   - packages.bib # 文献
 link-citations: true   # 添加文献超链接
 section-titles: false  # 不显示一级标题
@@ -1787,11 +1787,11 @@ mathspec: true   # mathspec 处理数学公式符号
 ## 介绍
 
 ::: {.quotation data-latex=&quot;[John Gruber]&quot;}
-A Markdown-formatted document should be publishable as-is, as plain text, 
-without looking like it’s been marked up with tags or formatting instructions.  
+A Markdown-formatted document should be publishable as-is, as plain text,
+without looking like it’s been marked up with tags or formatting instructions.
 :::
 
-数学公式还是用 LaTeX 排版的好， 
+数学公式还是用 LaTeX 排版的好，
 $\boldsymbol{\Sigma}$ 是希腊字母 $\Sigma$ 的加粗形式，
 $\mathcal{A}$ 是普通字母 $A$ 的花体形式。
 
@@ -1922,18 +1922,18 @@ tinytex::tlmgr_install(c(&quot;psnfss&quot;, &quot;iitem&quot;, &quot;beamer-ver
 <pre><code>## R version 4.2.1 (2022-06-23)
 ## Platform: x86_64-apple-darwin17.0 (64-bit)
 ## Running under: macOS Big Sur ... 10.16
-## 
+##
 ## Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
-## 
+##
 ## Package version:
-##   binb_0.0.6     blogdown_1.11  bookdown_0.28  knitr_1.39    
-##   rmarkdown_2.15 tinytex_0.41  
-## 
-## LaTeX version used: 
+##   binb_0.0.6     blogdown_1.11  bookdown_0.28  knitr_1.39
+##   rmarkdown_2.15 tinytex_0.41
+##
+## LaTeX version used:
 ##   TeX Live 2022 (TinyTeX) with tlmgr 2022-04-18
-## 
+##
 ## Pandoc version: 2.18
-## 
+##
 ## Hugo version: 0.101.0</code></pre>
 </div>
 <div id="appendix" class="section level1" number="8">
