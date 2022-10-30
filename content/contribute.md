@@ -47,10 +47,17 @@ tags:
 
 ## RStudio 用户
 
-如果您是 RStudio 用户，请先克隆或者下载我们的 [Github 库](https://github.com/cosname/cosx.org)。克隆库的时候需要 `--recursive` 参数来加入子模块。
+如果您是 RStudio 用户，请先克隆或者下载我们的 [Github 库](https://github.com/cosname/cosx.org)。克隆库的时候需要 `--recursive` 参数来下载网站主题子模块。
 
 ```
 git clone --recursive git@github.com:cosname/cosx.org.git
+```
+
+如果您克隆库时没有加 `--recursive` 参数，可以继续执行以下命令来下载子模块。
+
+```
+cd cosx.org
+git submodule update --init
 ```
 
 打开里面的 `cosx.Rproj` 文件，然后安装 **blogdown** 包^[本站便是基于 **blogdown** 包编译生成。]：
