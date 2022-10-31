@@ -1,5 +1,5 @@
 ---
-  title: "统计之都访谈第44期：Life is an exploration-exploitation tradeoff--雷理骅访谈"
+title: "统计之都访谈第44期：Life is an exploration-exploitation tradeoff--雷理骅访谈"
 date: "2022-08-09"
 categories:
   - COS访谈
@@ -14,7 +14,7 @@ meta_extra: "采访：蔡锐；录音审校：朱书慧，闫涵超，梁杰昊�
 forum_id: 423404
 ---
   
-  2022年8月初，正是北美一年一届的 Joint Statistical Meetings。统计之都在会议间隔对雷理骅进行了采访。在本文发布之际，雷理骅已加入斯坦福大学商学院，任助理教授。本文采访者蔡锐是爱荷华州立大学助理教授。文中涉及到一些专业学术讨论。
+2022年8月初，正是北美一年一届的 Joint Statistical Meetings。统计之都在会议间隔对雷理骅进行了采访。在本文发布之际，雷理骅已加入斯坦福大学商学院，任助理教授。本文采访者蔡锐是爱荷华州立大学助理教授。文中涉及到一些专业学术讨论。
 
 
 ## 1. 个人与过往经历
