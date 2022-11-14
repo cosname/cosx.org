@@ -45,9 +45,6 @@ data <- data.frame(
   prob2 = sample(-50:50, 40) / 100
 )
 
-#后文中用于数据处理
-dt <- as.data.table(data) 
-
 #设置全局选项，本文档中所有表格每页仅显示5行
 options(DT.options = list(pageLength = 5, dom = 'ftip'))
 ```
@@ -941,16 +938,17 @@ datatable(imgdata,
           )))
 ```
 
-### 1.6.6.插入小图标（fontawesome）
+### 1.6.6.插入字体图标（fontawesome）
 
-shiny 包中有个函数`icon()`可以方便地从字体图标库[Font Awesome](https://fontawesome.com/icons)或[Bootstrap Glyphicons](https://getbootstrap.com/docs/3.3/components/)引入小图标。而 Font Awesome 库在 R 中也有对应的 R 包 [fontawesome](https://cran.r-project.org/web//packages/fontawesome/fontawesome.pdf)，本小节根据该库举两个简单的例子。
+shiny 包中有个函数`icon()`可以方便地从字体图标库[Font Awesome](https://fontawesome.com/icons)或[Bootstrap Glyphicons](https://getbootstrap.com/docs/3.3/components/)引入字体图标。而 Font Awesome 库在 R 中也有对应的 R 包 [fontawesome](https://cran.r-project.org/web//packages/fontawesome/fontawesome.pdf)，本小节根据该库举两个简单的例子。
 
-+ 插入一个小图标。
++ 插入一个字体图标。
 
 ```{r}
 library(fontawesome)
 
-icon1 <- dt[, ':='(level = ifelse(
+icon1 <- as.data.table(data)
+icon1 <- icon1[, ':='(level = ifelse(
   type2 == "YES",
   fontawesome::fa(name = "thumbs-up"),
   fontawesome::fa(name = "thumbs-down")
@@ -959,10 +957,12 @@ icon1 <- dt[, ':='(level = ifelse(
 datatable(icon1, escape = FALSE)
 ```
 
-+ 插入多个小图标。
++ 插入多个字体图标。
 
 ```{r}
-icon2 <- dt[, ':='(score = sample(1:5, 40, replace = TRUE))]
+icon2 <- as.data.table(data)
+
+icon2 <- icon2[, ':='(score = sample(1:5, 40, replace = TRUE))]
 
 icon2$score <- sapply(icon2$score , function(score) {
   paste(rep(fontawesome::fa(name = "heart"), score), collapse = "")
@@ -1023,6 +1023,8 @@ R 中的 sparkline 包是 [jQuery Sparklines](https://omnipotent.net/jquery.spar
 ```{r}
 library(sparkline)
 
+dt <- as.data.table(data)
+
 dt.DT1 <- dt[, .(
   sparkline1 = as.character(htmltools::as.tags(
     sparkline(
@@ -1059,7 +1061,7 @@ dt.DT1 <- dt[, .(
   '箱图' = as.character(htmltools::as.tags(
     sparkline(
       prob2,
-      type = "box", # 柱状图
+      type = "box", # 箱图
       width = 100, height = 100
     )
   ))
