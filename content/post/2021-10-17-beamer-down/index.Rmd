@@ -179,7 +179,7 @@ LaTeX 在国外是比较流行的学术写作工具，在国内部分学校的�
 install.packages(c("tinytex", "knitr", "rmarkdown", "bookdown", "binb"))
 ```
 
-其中， R 包 **tinytex** 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是在构建在 LaTeX 宏包管理器 [tlmgr](https://tug.org/texlive/tlmgr.html) 之上，默认去掉了 LaTeX 宏包源码和帮助文档，做到 200M～300M 的大小。 **knitr** 包 [@Xie2015] 自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 **rmarkdown** 包 [@Xie2018] 的功能覆盖，仅使用 **bookdown** 包 [@Xie2016] 的交叉引用功能，使用 **binb** 包 [@Dirk2020] 内置的一份 R Markdown 格式的 beamer 幻灯片模版 --- Presento (<https://github.com/RatulSaha/presento>)。
+其中， R 包 **tinytex** 用来安装轻量级的 LaTeX 发行版 TinyTeX，它是构建在 LaTeX 宏包管理器 [tlmgr](https://tug.org/texlive/tlmgr.html) 之上，默认去掉了 LaTeX 宏包源码和帮助文档，做到 200M～300M 的大小。 **knitr** 包 [@Xie2015] 自不必多说，只要使用 R Markdown 文档就离不开它，本文大部分内容可以被 **rmarkdown** 包 [@Xie2018] 的功能覆盖，仅使用 **bookdown** 包 [@Xie2016] 的交叉引用功能，使用 **binb** 包 [@Dirk2020] 内置的一份 R Markdown 格式的 beamer 幻灯片模版 --- Presento (<https://github.com/RatulSaha/presento>)。
 
 
 ## 安装 TinyTeX {#setup-tinytex}
