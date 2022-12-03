@@ -838,7 +838,7 @@ datatable(data,
     - interval：填入一个数字，当数字每间隔多少位后添加一个标记，默认为3。
     - mark：指定间隔符号，默认“,”。
     - zero.print：填入一个字符串，替换数字列中的0，默认为 NULL。
-    - currency：填入适用于 JS 的 [UNICODE 编码](https://www.cnblogs.com/lsgxeva/p/10120275.html)，或者一个普通的字符串。如填入'\U20AC'，显示为€；填入'\u21AC'，显示为↬；填入'\u2714'，显示为✔。
+    - currency：填入适用于 JS 的 [UNICODE 编码](https://www.cnblogs.com/lsgxeva/p/10120275.html)，或者一个普通的字符串。如填入`\U20AC`，显示为€；填入`\u21AC`，显示为↬；填入`\u2714`，显示为✔。
     - before：指定填入的符号是否放在数字前面，默认参数值为 TRUE。
     - digits：当目标列为数值时，指定小数点后位数，默认保留2位。
     - rows：指定目标列中的目标行。
@@ -1058,9 +1058,7 @@ icon2 <- as.data.table(data)
 
 icon2 <- icon2[, ':='(score = sample(1:5, 40, replace = TRUE))]
 
-icon2$score <- sapply(icon2$score , function(score) {
-  paste(rep(fontawesome::fa(name = "heart"), score), collapse = "")
-})
+icon2$score <- strrep(fontawesome::fa(name = "heart"), icon2$score)
 
 datatable(icon2, escape = FALSE)
 ```
@@ -1111,54 +1109,28 @@ datatable(textdata,
 
 ### 1.7.1.折柱图
 
-R 中的 sparkline 包是 [jQuery Sparklines](https://omnipotent.net/jquery.sparkline/#s-about) 的 R 版本，所引入的各类图形有许多参数可以自定义。由于笔者对 data.table 相对更熟一些，本小节与数据处理相关的部分均应用 data.table 的语法来完成。这里有[一篇笔记](https://yuanfan.rbind.io/project/r-sparkline/)记录了在 DT、reactable、formattable 等表格包中引入 sparkline 的 data.table 版本和 tidyverse 版本的代码。
+R 中的 sparkline 包是 [jQuery Sparklines](https://omnipotent.net/jquery.sparkline/#s-about) 的 R 版本，所引入的各类图形有许多参数可以自定义。由于笔者对 data.table 相对更熟一些，本小节与数据处理相关的部分均应用 data.table 来完成。这里有[一篇笔记](https://yuanfan.rbind.io/project/r-sparkline/)记录了在 DT、reactable、formattable 等表格包中引入 sparkline 的 data.table 版本和 tidyverse 版本的代码。
 
 ```{r}
 library(sparkline)
 
 dt <- as.data.table(data)
 
+spark_html <- function(...) {
+  as.character(htmltools::as.tags(sparkline(..., height = 100, width=100)))}
+
 dt.DT1 <- dt[, .(
-  sparkline1 = as.character(htmltools::as.tags(
-    sparkline(
-      value,
-      type = "line", # 面积图
-      width = 100, # 指定迷你图的宽度
-      height = 100 # 指定迷你图的高度
-    )
-  )),
-  '柱状图' = as.character(htmltools::as.tags(
-    sparkline(
-      value1,
-      type = "bar", # 柱状图
-      width = 100, height = 100
-    )
-  )),
-  '折线图' = as.character(htmltools::as.tags(
-    sparkline(
-      value,
-      type = "line",
-      lineColor = "red",
-      fillColor = FALSE, # 不展示折线下的面积
-      width = 100, height = 100
-    )
-  )),
-  '柱状图2' = as.character(htmltools::as.tags(
-    sparkline(
-      prob2,
-      type = "bar", # 柱状图
-      barColor = "green", # 指定数值为正数的柱子的颜色
-      width = 100, height = 100
-    )
-  )),
-  '箱图' = as.character(htmltools::as.tags(
-    sparkline(
-      prob2,
-      type = "box", # 箱图
-      width = 100, height = 100
-    )
-  ))
-), keyby = .(type2)]
+  '面积图' = spark_html(value1, type = "line"),
+  '柱状图' = spark_html(value1, type = "bar"),
+  '折线图' = spark_html(
+    value1,
+    type = "line",
+    lineColor = "red", # 折线的颜色
+    fillColor = FALSE # 不展示折线下的面积
+  ),
+  '柱状图2' = spark_html(value1, type = "bar", barColor = "green"),
+  '箱图' = spark_html(value1, type = "box")
+),  keyby = .(type2)]
 
 datatable(dt.DT1,  escape = FALSE) |> spk_add_deps()
 ```
@@ -1175,8 +1147,8 @@ dt.DT2 <-
       type = "pie", # 饼图
       sliceColors = c("red", "green"), # 指定饼图中各个扇形的颜色。
       offset = 90, # 指定饼图的旋转角度
-      width = 50,
-      height = 50
+      width = 50, # 指定迷你图的宽度
+      height = 50 # 指定迷你图的高度
     )
   ))), keyby = .(type1)]
 
@@ -1218,7 +1190,7 @@ dt.DT <- dt[, .("两条折线"=as.character(htmltools::as.tags(spk_composite(
 datatable(dt.DT, escape = FALSE) |> spk_add_deps()
 ```
 
-+ 折柱混合。
++ 折柱混合。需要注意的是，参数 width（宽度）对柱形图不起作用，需要通过修改参数 barWidth（单个柱子的宽度）和参数 barSpacing（柱子之间的空隙）来达到改变整个迷你图宽度的效果。
 
 ```{r}
 dt.DT <- dt[, .("折柱混合" = as.character(htmltools::as.tags(spk_composite(
