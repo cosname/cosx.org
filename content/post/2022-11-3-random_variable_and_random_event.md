@@ -1,9 +1,14 @@
 ---
-title: 浅谈随机事件与变量
+title: "浅谈随机事件与变量"
 date: '2022-12-03'
-author: "作者"
-categories: [投稿]
-tags: ["随机变量", "随机事件", "概率定义"]
+author: "权恒恒"
+categories: 
+	- 统计学
+	- 统计应用
+tags: 
+	- 概率定义
+	- 随机变量
+	- 随机事件
 slug: random variable
 ---
 
