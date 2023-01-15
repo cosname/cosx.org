@@ -442,7 +442,7 @@ pre code {
 <p>这个前门路径看似很难理解，证明似乎很不直观，恰似变魔术。但是它其实是很显然的，在前门路径的 DAG 中，我们有：（1）<code>$X$</code>对<code>$Z$</code>的因果作用可识别，因为 <code>$Y$</code>阻断了它们之间的后门路径；（2）<code>$Z$</code>对<code>$Y$</code>的因果作用可识别，因为<code>$X$</code>阻断了他们的后门路径；（3）<code>$X$</code>对<code>$Y$</code>的作用，仅仅通过<code>$Z$</code>而产生。这三点蕴含着<code>$X$</code>对<code>$Y$</code>的因果作用可识别—这样看来，这个结论就不奇怪了！</p>
 <p>Pearl 在书中讲了一个非常有趣的例子，来说明前门准则的用处。</p>
 <p><strong>例子：</strong> 我们关心吸烟 <code>$X$</code> 和肺癌 <code>$Y$</code> 之间的因果关系。由于一个潜在的不可观测的基因 <code>$U$</code> 的存在，吸烟和肺癌之间有一条“活”的后门路径，因此不借助其他的条件，我们无法识别吸烟与肺癌的因果关系。如果我们有这样的知识“吸烟 <code>$X$</code> 仅仅通过肺部烟焦油的含量 <code>$Z$</code> 来影响肺癌 <code>$Y$</code> ”，那么吸烟对肺癌的因果作用就可以估计出来了。不过，这里需要两个条件，也就是在证明中使用的两个条件独立性，他们表明：（1）吸烟 <code>$X$</code>  和肺部烟焦油的含量 <code>$Z$</code>  之间没有“活”的后门路径（或者没有混杂因素）；（2）吸烟 <code>$X$</code> 对肺癌 <code>$Y$</code> 的作用仅仅来源于吸烟 <code>$X$</code> 对肺部烟焦油 <code>$Z$</code> 的作用，或者说，吸烟 <code>$X$</code> 对肺癌 <code>$Y$</code> 没有“直接作用”。</p>
-<p><strong>例子：</strong>在 Figure 1 的 DAG 中，<code>$(X_i,X_j)$</code> 之间的后门路径被 <code>$\{X_3,X_4\}$</code> 或者 <code>$\{X_4,X_5\}$</code> 阻断，而前门路径被 <code>$X_6$</code> 阻断。上面的两个准则表明，<strong>要识别从 <code>$X_i$</code> 到 <code>$X_j$</code> 的因果作用，我们不需要观测到所有的变量，只需要观测到切断后门路径或者前门路径的变量即可。</strong></p>
+<p><strong>例子：</strong> 在 Figure 1 的 DAG 中，<code>$(X_i,X_j)$</code> 之间的后门路径被 <code>$\{X_3,X_4\}$</code> 或者 <code>$\{X_4,X_5\}$</code> 阻断，而前门路径被 <code>$X_6$</code> 阻断。上面的两个准则表明，<strong>要识别从 <code>$X_i$</code> 到 <code>$X_j$</code> 的因果作用，我们不需要观测到所有的变量，只需要观测到切断后门路径或者前门路径的变量即可。</strong></p>
 </div>
 <div id="三-回到-yule-simpsons-paradox" class="section level1">
 <h1>三 回到 Yule-Simpson’s Paradox</h1>
