@@ -12,7 +12,7 @@ tags:
   - 大气数据
   - 环境
   - 选举
-slug: interview-of-john-turkey
+slug: interview-of-john-tukey
 meta_extra: "作者：Luisa T. Fernholz、Stephan Morgenthaler；译者：陈星宇、徐泓、蔡再利；审校定稿：陈星宇、魏太云、黄俊文、陈鑫斌"
 forum_id: 423783
 ---
