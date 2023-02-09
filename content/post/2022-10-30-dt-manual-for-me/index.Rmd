@@ -89,7 +89,7 @@ datatable(
 
 ### 回调函数
 
-回调函数的作用是在 R 中引入 JS，引入 JS 就可以引入 HTML 和 CSS，从而丰富表格元素以及为表格设定样式。DataTables 中的 回调函数有好几种，所起到的作用也各不相同。
+回调函数的作用是在 R 中引入 JS，引入 JS 就可以操纵 HTML 和 CSS，从而丰富表格元素以及为表格设定样式。DataTables 中的回调函数有好几种，所起到的作用也各不相同。
 
 第一种，回调函数 `callback = JS("")`，基本写法如下。
 
@@ -121,7 +121,7 @@ datatable(data, options = list(
 )))
 ```
 
-还有针对表头的回调函数 headerCallback，针对每次分页绘图渲染的回调函数 drawCallback 等等。值得一提的是，既然都可以写入  JS，那么事实上调用不同的回调函数有时也可以达到相同的效果。比如在后文 [1.6.1 小节](#调用-datatables-api-设置样式)中，可以通过调用初始化回调函数来修改表头的 CSS 样式，其实也可以直接调用针对表头的回调函数来实现。
+还有针对表头的回调函数 `headerCallback`，针对每次分页绘图渲染的回调函数 `drawCallback` 等等。值得一提的是，既然都可以写入  JS，那么事实上调用不同的回调函数有时也可以达到相同的效果。比如在后文 [1.6.1 小节](#调用-datatables-api-设置样式)中，可以通过调用初始化回调函数来修改表头的 CSS 样式，其实也可以直接调用针对表头的回调函数来实现。
 
 ```{r, eval = FALSE}
 datatable(data,
@@ -149,13 +149,13 @@ datatable(data, height = 250, width = 600)
 datatable(data,
           options = list(autoWidth = TRUE,
                          columnDefs = list(list(
-                           width = '300px', targets = c(1, 2)
+                           width = '300px', targets = c(1, 2)  # 第 1、2 列
                          ))))
 ```
 
 ### 行名（rownames）
 
-对应修改行名称的参数是 rownames，可填入的具体参数值可以是 TRUE/FALSE，或者字符向量。
+对应修改行名称的参数是 `rownames`，可填入的具体参数值可以是 TRUE/FALSE，或者字符向量。
 
 DT 包中列的序号由0开始，当行名称显示出来时，行名称那一列就是序号第0列，表格中第1列数据是序号第1列；当行名称隐藏时，表格中的第1列数据是序号上的第0列。
 
@@ -169,7 +169,7 @@ datatable(data, rownames = c(paste('第', 1:nrow(data), '行')))
 
 ### 列名（colnames）
 
-对应修改列名称的参数是 rownames，可以指定部分列进行修改，也可以一次修改全部列的列名称。
+对应修改列名称的参数是 `colnames`，可以指定部分列进行修改，也可以一次修改全部列的列名称。
 
 +  若需将列名称全部替换，须设置一个与表格列数等长的字符向量。
 
