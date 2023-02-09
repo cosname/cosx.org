@@ -1,7 +1,7 @@
 if (file.exists('~/.Rprofile')) sys.source('~/.Rprofile', globalenv())
 
 options(
-  digits = 4, formatR.indent = 2,
+  digits = 4, formatR.indent = 2, htmltools.dir.version = FALSE,
   blogdown.hugo.version = '0.101.0',
   blogdown.hugo.server = c(
     '-D', '-F', '--navigateToChanged', '--noTimes'
