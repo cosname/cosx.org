@@ -208,7 +208,7 @@ datatable(data, colnames = c('第1列' = 'type1', '第2列' = 'type2'))
 datatable(data, caption = '表1：一个表格的标题')
 ```
 
-若是引入 htmltools 包中的函数，那么可以单独设置表格标题的 CSS 样式。如下，`caption-side: top` 表示表格标题的位置居于表格上方，`text-align: left` 表示文本对齐方式为居左，`font-size: 20px` 表示文本中字体大小为20px，`font-weight: bold` 表示文本中字体粗细为加粗。
+若是引入 htmltools 包中的函数，那么可以单独设置表格标题的 CSS 样式。如下，`caption-side: top` 表示表格标题居于表格上方，`text-align: left` 表示文本左对齐，`font-size: 20px` 表示字体大小为 20px，`font-weight: bold` 表示文本样式为粗体。
 
 ```{r}
 datatable(
