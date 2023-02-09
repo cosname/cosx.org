@@ -225,8 +225,8 @@ datatable(
   data,
   caption = htmltools::tags$caption(
     style = 'caption-side: top; text-align: left;',
-    htmltools::h5(class = 'font-size:20px;', '标题1：这是表格的主标题'),
-    htmltools::h6(class = 'font-size:16px;', '标题2：这是表格的副标题')
+    htmltools::h5(style = 'font-size:20px;', '标题1：这是表格的主标题'),
+    htmltools::h6(style = 'font-size:16px;', '标题2：这是表格的副标题')
   )
 )
 ```
@@ -251,8 +251,8 @@ datatable(
   data,
   caption = htmltools::tags$caption(
     style = 'caption-side: bottom; text-align: left; line-height: 60%; color: red;',
-    htmltools::p(class = 'font-size:14px;', '注1：数据来源'),
-    htmltools::p(class = 'font-size:14px;', '注2：其他说明')
+    htmltools::p(style = 'font-size:14px;', '注1：数据来源'),
+    htmltools::p(style = 'font-size:14px;', '注2：其他说明')
   )
 )
 ```
