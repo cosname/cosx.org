@@ -7,6 +7,10 @@ categories:
   - 统计软件
 tags:
   - DT
+  - 表格
+  - HTML
+  - CSS
+  - JavaScript
 output:
   blogdown::html_page:
     toc: true
@@ -963,11 +967,11 @@ datatable(
 
 ### 插入超链接
 
-在 HTML 中的 `<a>` 元素的 [href 属性](https://www.w3school.com.cn/tags/att_a_href.asp)可写入所需指向的超链接地址，对应的 HTML 代码为`<a class="自定义 CSS 样式" href="超链接地址" title="超链接title">超链接显示名</a>`。在 DT 包中的实现方法是，针对目标列通过`render = JS()`的方式引入 JS，在此基础上引入 HTML 和 CSS。
+在 HTML 中的 `<a>` 元素的 [href 属性](https://www.w3school.com.cn/tags/att_a_href.asp)可写入所需指向的超链接地址，对应的 HTML 代码为`<a class="自定义 CSS 类名" href="超链接地址" title="悬停提示语">超链接显示名</a>`。在 DT 包中的实现方法是，针对目标列通过`render = JS()`的方式引入 JS，在此基础上引入 HTML 和 CSS。
 
 ```{r}
 # 准备一些超链接所指向的地址
-hrefvalue = c(rep("https://yufree.cn/cn/", 2),
+hrefvalue <- c(rep("https://yufree.cn/cn/", 2),
               rep("https://xiangyun.rbind.io/post/", 2)) 
 hrefdata <- cbind(data, hrefvalue) # hrefvalue 作为第8列
 
@@ -987,7 +991,7 @@ datatable(hrefdata,
 
 ### 插入图片
 
-在 HTML 中的[`<img>`元素](https://www.w3school.com.cn/tags/tag_img.asp)可写入所需展示的图像地址，对应的 HTML 代码为`<img class="自定义 CSS 样式" src="图片链接" alt="图片alt">`，图片的 alt 属性是指当图像无法正常显示时，页面上展示的替代文本。这里的图片链接可以是指向图片的网页链接，也可以是本地文件中的图片地址。下面的例子中，笔者在项目文件中准备了两张图片，相对地址分别是 `images/USA.png` 和 `images/China.png`。
+在 HTML 中的[`<img>`元素](https://www.w3school.com.cn/tags/tag_img.asp)可写入所需展示的图像地址，对应的 HTML 代码为`<img class="自定义 CSS 类名" src="图片链接" alt="替代文本">`，图片的 alt 属性是指当图像无法正常显示时，页面上展示的替代文本。这里的图片链接可以是指向图片的网页链接，也可以是本地文件中的图片地址。下面的例子中，笔者在项目文件中准备了两张图片，相对地址分别是 `images/USA.png` 和 `images/China.png`。
 
 ```{r}
 imgvalue <- c(rep('China', 2), rep('USA', 2)) # 图片名字
@@ -999,7 +1003,7 @@ datatable(imgdata,
             list(
               targets = 1,
               render = JS("function(data, type, row, meta) {
-                  return  '<img src=\"images/' + row[8] + '.png\" />' + data
+                  return  '<img src=\"images/' + row[8] + '.png\" /> ' + data
                   }")
             ), list(targets = 8, visible = FALSE) # 隐藏 imgvalue 列
           )))
@@ -1044,7 +1048,7 @@ shiny 包中有个 icon 函数，可以方便地从字体图标库 [Font Awesome
 
 ```{r}
 library(fontawesome)
-library(data.table)
+library(data.table)  # 使用 data.table 包并非必要，只是笔者熟悉这个工具而已
 
 icon1 <- as.data.table(data)
 icon1 <- icon1[, ':='(level = ifelse(
@@ -1122,7 +1126,7 @@ library(sparkline)
 dt <- as.data.table(data)
 
 spark_html <- function(...) {
-  as.character(htmltools::as.tags(sparkline(..., height = 100, width=100)))}
+  as.character(htmltools::as.tags(sparkline(..., height = 100, width = 100)))}
 
 dt.DT1 <- dt[, .(
   '面积图' = spark_html(value1, type = "line"),
@@ -1225,18 +1229,18 @@ DT 包中可设置静态样式的方法较多，最好的情况是一次只用�
 
 |序号|方法|所属章节|描述|范围|限制|
 |:--:|:---------:|:-----:|:-----------------------:|:------:|:------:|
-|1|htmltools|第1.2节|在构建表格元素时设置样式|可为标题、脚注、表头等表格元素设定统一样式|无法为表格主体中单独几列或几行设定样式|
-|2|class/className|第1.3节|先定义好 CSS 样式和类名，在`columnDefs = list(list(targets = null, class = '类名'))`中引入自定义样式|可为全表表头或表格主体设定样式，也可为单独几列的表头或单元格设定样式|无法为标题、脚注或单独几行设定样式|
-|3|`formatStyle()`|第1.4节|在 formatStyle 函数中直接一项一项地写入需要设定的 CSS 样式属性|可对表格主体中的目标列或目标行设定样式|无法为标题、脚注或表头设定样式|
-|4|`JS()`|第1.5节|通过各种回调函数引入 JS 函数，在此基础上任意调用 HTML 或 CSS|可对全表的表头、表格主体设置样式，也可对单列的表头、单元格设定样式，也可通过列渲染或行渲染对表格的行或列设置样式|无法为标题、脚注设定样式|
+|1|htmltools|第1.3节|在构建表格元素时设置样式|可为标题、脚注、表头等表格元素设定统一样式|无法为表格主体中单独几列或几行设定样式|
+|2|class/className|第1.4节|先定义好 CSS 样式和类名，在`columnDefs = list(list(targets = null, class = '类名'))`中引入自定义样式|可为全表表头或表格主体设定样式，也可为单独几列的表头或单元格设定样式|无法为标题、脚注或单独几行设定样式|
+|3|`formatStyle()`|第1.5节|在 formatStyle 函数中直接一项一项地写入需要设定的 CSS 样式属性|可对表格主体中的目标列或目标行设定样式|无法为标题、脚注或表头设定样式|
+|4|`JS()`|第1.6节|通过各种回调函数引入 JS 函数，在此基础上任意调用 HTML 或 CSS|可对全表的表头、表格主体设置样式，也可对单列的表头、单元格设定样式，也可通过列渲染或行渲染对表格的行或列设置样式|无法为标题、脚注设定样式|
 
 ### 多种方法混合使用时
 
 如下，先设置一个样式名称为 class1，表示字体颜色为红色。
 
 ```{css}
-.class1{
- color: red;
+.class1 {
+  color: red;
 }
 ```
 
@@ -1306,7 +1310,7 @@ datatable(data, options = list(columnDefs = list(
 
 ### 与 DT 默认样式的冲突
 
-已知，DT 包默认将数值类型的列的文本对齐方式设定为右对齐。参照第1.3.3小节和第1.4.5小节可知，序号2/3的方法可以改变表格的文本对齐方式。
+已知，DT 包默认将数值类型的列的文本对齐方式设定为右对齐。参照第 1.4.3 小节和第 1.5.5 小节可知，序号2/3的方法可以改变表格的文本对齐方式。
 
 按照序号4的方法，设置初始化回调函数 `initComplete = JS()`，无法改变表格的文本对齐方式。
 
@@ -1325,8 +1329,8 @@ datatable(data,
 如下，设定一个样式类 class2，表示文本对齐方式为居中。
 
 ```{css}
-.class2{
-text-align: center;
+.class2 {
+  text-align: center;
 }
 ```
 
