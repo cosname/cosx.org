@@ -1,0 +1,1814 @@
+---
+title: "DT 包速查手册"
+date: "2023-02-10"
+author: "袁凡"
+slug: dt-manual
+categories:
+  - 统计软件
+tags:
+  - DT
+  - 表格
+  - HTML
+  - CSS
+  - JavaScript
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+---    
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+set.seed(20230210)
+```
+
+这是一份针对 R 中的表格包 DT 的速查手册。DT 包源自于 JavaScript（以下简称 JS） 中的 DataTables，但并非所有 DataTables 提供的功能都能在 DT 中实现，而 DT 中也有独立于 DataTables 之外的一些更贴合 R 语法的函数。
+
+> 本文使用的 DT 包版本为 `r packageVersion('DT')`。
+
+全文共两个章节：
+
+1. 静态样式：表格基础（高度、宽度、行名、列名），表格元素（多行表头、标题、脚注），表格样式（表头或表格主体的外框线、字体、背景填充等），数据格式（插入 Unicode 字符、超链接、图片、字体图标、迷你图），样式冲突问题。
+
+2. 动态效果：表格控件，语言文字，筛选，排序，扩展动能等。
+
+# 静态样式
+
+在正式绘制表格之前，先编造一份数据便于后续复现。
+
+```{r}
+library(DT)
+
+set.seed(2022)
+data <- data.frame(
+  type1 = sort(rep(LETTERS[1:20], 2)), 
+  type2 = rep(c('NO', 'YES'), 20),
+  value = sample(2000:5000, 40),
+  value1 = sample(200:2000, 40),
+  value2 = sample(200:2000, 40),
+  prob1 = sample(1:100, 40) / 100,
+  prob2 = sample(-50:50, 40) / 100
+)
+
+# 设置全局选项，本文档中所有表格每页仅显示5行
+options(DT.options = list(pageLength = 5, dom = 'ftip'))
+```
+
+## 基本说明
+
+DT 包并不是一个完全独立且封闭的 R 表格系统。作为一个以动态交互功能为主的表格包，在设置静态样式方面往往需要引入 HTML、CSS。因此本小节对后文中需要明晰的一些术语概念，及引入其他语言的一些基本方法做一些说明。
+
+### 术语约定
+
+为了不使描述几种语言的特性时，因为各种术语互相混淆导致影响阅读，笔者特别对以下术语的含义做出如下约定。
+
+元素：源于 HTML 元素，表格元素是构成表格的基本组成部分，如表格的表头、表格主体、标题、脚注、行、列、单元格等。
+
+样式：源于 CSS 样式，设置样式可对各表格元素进行修饰，如表格的边框样式、表格所展示数据的字体样式等。
+
+属性：元素有具体的元素属性，样式有具体的样式属性。
+
+参数/参数值：R 函数中能够输入可选内容的变量称为参数，每个参数能够输入的具体值称为参数值。比如对表格某一列设置宽度为 300px 时，对应的参数和参数值就是 `width = '300px'`。
+
+### 参数位置
+
+DT 中可设置的参数非常多，可以同时为多个表设置共用的全局参数，也可以为单个表单独设置参数，或进一步为单个表中的一列或多列单独设置参数。
+
+```{r, eval=FALSE}
+# 多个表时设置全局参数
+options(DT.options = list(...))
+
+# 为单个表设置参数
+datatable(
+  data,
+  extensions = NULL, # 扩展功能
+  plugins = NULL, # 插件
+  ...,
+  options = list(...,
+                 # 为目标列设置参数
+                 columnDefs = list( 
+                   list(targets = NULL, ...),
+                   list(targets = NULL, ...)
+                 )))
+```
+
+### 回调函数
+
+回调函数的作用是在 R 中引入 JS，引入 JS 就可以操纵 HTML 和 CSS，从而丰富表格元素以及为表格设定样式。DataTables 中的回调函数有好几种，所起到的作用也各不相同。
+
+第一种，回调函数 `callback = JS("")`，基本写法如下。
+
+```{r, eval = FALSE}
+datatable(data,
+          callback = JS(""))
+```
+
+第二种，初始化回调函数 `initComplete = JS("")`，基本写法如下。
+
+```{r, eval = FALSE}
+datatable(data,
+          options = list(initComplete = JS("function(settings, json) {}")))
+```
+
+第三种，针对行的回调函数 `rowCallback = JS("")`，基本写法如下。
+
+```{r, eval = FALSE}
+datatable(data,
+          options = list(rowCallback = JS("function(row, data) {}")))
+```
+
+第四种，针对列的渲染 `render = JS("")`，基本写法如下。
+
+```{r, eval = FALSE}
+datatable(data, options = list(
+  columnDefs = list(
+    list(targets = NULL, render = JS("function(data, type, row, meta) {}"))
+)))
+```
+
+还有针对表头的回调函数 `headerCallback`，针对每次分页绘图渲染的回调函数 `drawCallback` 等等。值得一提的是，既然都可以写入  JS，那么事实上调用不同的回调函数有时也可以达到相同的效果。比如在后文 [1.6.1 小节](#调用-datatables-api-设置样式)中，可以通过调用初始化回调函数来修改表头的 CSS 样式，其实也可以直接调用针对表头的回调函数来实现。
+
+```{r, eval = FALSE}
+datatable(data,
+          options = list(
+            headerCallback = JS(
+              "function(thead, data, start, end, display){
+   $('th', thead).css('color', 'green');}")))
+```
+
+## 表格基础
+
+### 高度（height）、宽度（width）
+
+一般情况下，表格的高度和宽度是与显示页面的大小自适应的，也可以单独设置整个表格的高度和宽度。
+
++ 设置整个表格的高度和宽度。
+
+```{r, eval=FALSE}
+datatable(data, height = 250, width = 600)
+```
+
++ 单独设置某一列或多列的宽度。
+
+```{r}
+datatable(data,
+          options = list(autoWidth = TRUE,
+                         columnDefs = list(list(
+                           width = '300px', targets = c(1, 2)  # 第 1、2 列
+                         ))))
+```
+
+### 行名（rownames）
+
+对应修改行名称的参数是 `rownames`，可填入的具体参数值可以是 TRUE/FALSE，或者字符向量。
+
+DT 包中列的序号由0开始，当行名称显示出来时，行名称那一列就是序号第0列，表格中第1列数据是序号第1列；当行名称隐藏时，表格中的第1列数据是序号上的第0列。
+
++ 当 `rownames = TRUE` 时，若原数据自带行名称，则显示其行名称；若原数据不带有行名称，则显示以1开始的连续数字序号。
++ 当 `rownames = FALSE` 时，隐藏行名称。
++ 自定义行名称时，需要填入一个字符向量，这个向量的长度应该跟表格的行数保持一致。
+
+```{r}
+datatable(data, rownames = c(paste('第', 1:nrow(data), '行')))
+```
+
+### 列名（colnames）
+
+对应修改列名称的参数是 `colnames`，可以指定部分列进行修改，也可以一次修改全部列的列名称。
+
++  若需将列名称全部替换，须设置一个与表格列数等长的字符向量。
+
+```{r}
+# 为第0列（序号列）也修改列名称
+# datatable(data, colnames = c(paste('第', 0:ncol(data), '列')))
+
+datatable(data, colnames = c(paste('第', 1:ncol(data), '列')))
+```
+
++ 若仅替换部分列名称，可如此指定需要替换列名称的列，以及新的名称。当用列的序号指代列时，最好隐藏行名称，免得弄混。
+
+```{r}
+# 方式一，用列的序号指代列
+# datatable(data, rownames = FALSE, colnames = c('第1列' = 1, '第2列' = 2))
+
+# 方式二，用列的名称指代列
+datatable(data, colnames = c('第1列' = 'type1', '第2列' = 'type2'))
+```
+
+## 引入 htmltools 丰富表格元素
+
+在 DT 包中若要给表格添加更多元素，如多行表头、表格标题、表格脚注等，需要引入 htmltools 包，这相当于在 R 中引入 HTML。DT 包中引入 htmltools 的方式有两种：其一，从 DT 包已有参数中引入，比如 caption 和 container；其二，把整个表格引入一个纯 HTML 的 div 框中。
+
+在引入 htmltools 的同时也可引入 CSS 来修改样式。
+
+### 从标题（caption）中引入
+
+#### 表格标题
+
+表格标题，也可称为题注，位置通常在表格的上方。DT 包中对应修改表格标题的参数是 caption，具体参数值可填入一个字符串，或者引入 htmltools。
+
+若只是填入字符串，那么表格标题的样式无法单独设置，只能使用默认样式。
+
+```{r}
+datatable(data, caption = '表1：一个表格的标题')
+```
+
+若是引入 htmltools 包中的函数，那么可以单独设置表格标题的 CSS 样式。如下，`caption-side: top` 表示表格标题居于表格上方，`text-align: left` 表示文本左对齐，`font-size: 20px` 表示字体大小为 20px，`font-weight: bold` 表示文本样式为粗体。
+
+```{r}
+datatable(
+  data,
+  caption = htmltools::tags$caption(
+    style = 'caption-side: top; text-align: left; font-size: 20px; font-weight: bold;',
+    '表1：一个表格的标题'))
+```
+
+当然，也可以一次引入多个 htmltools 包中的函数。如下，在`caption`参数中可以引入多级标题，并且分别设定单独的 CSS 样式。
+
+```{r}
+datatable(
+  data,
+  caption = htmltools::tags$caption(
+    style = 'caption-side: top; text-align: left;',
+    htmltools::h5(style = 'font-size:20px;', '标题1：这是表格的主标题'),
+    htmltools::h6(style = 'font-size:16px;', '标题2：这是表格的副标题')
+  )
+)
+```
+
+#### 表格脚注
+
+表格脚注，也可称为尾注，位置通常在表格的下方。设定脚注也可以使用 caption 参数来实现，区别就是设置 `caption-side: bottom`，即标题的位置挪到表格下方。
+
+```{r}
+datatable(
+  data,
+  caption = htmltools::tags$caption(
+    style = 'caption-side: bottom; text-align: left; color: red;',
+    '注1：一个表格的脚注')
+)
+```
+
+基于 htmltools 可以嵌套多层的特点，也可以填入多行脚注。
+
+```{r}
+datatable(
+  data,
+  caption = htmltools::tags$caption(
+    style = 'caption-side: bottom; text-align: left; line-height: 60%; color: red;',
+    htmltools::p(style = 'font-size:14px;', '注1：数据来源'),
+    htmltools::p(style = 'font-size:14px;', '注2：其他说明')
+  )
+)
+```
+
+#### 其他
+
+也可以尝试通过 htmltools 引入其他 HTML 表格元素，前提是需要对想要引入的元素有点了解，一个简单的例子如下。
+
+```{r}
+datatable(data,
+          caption = htmltools::withTags(table(thead('页眉：这里写页眉'))))
+```
+
+### 从表格容器（container）中引入
+
+从表格容器（container）中引入 htmltools，相当于在 R 里面写[纯纯的 HTML](https://www.w3school.com.cn/html/html_tables.asp)。若是对 HTML 中的表格元素比较熟悉，直接写好整个表格的框架和样式也可以。
+
+|HTML 元素|英文全称|描述|对应 htmltools 包函数
+|:---------:|:-------------:|:---------------:|:------:|
+|`<table>`|table|定义表格|`table()`|
+|`<th>`|table header cell|定义表格表头的单元格|`th()`|
+|`<tr>`|table row|定义表格的行|`tr()`|
+|`<td>`|table data cell|定义表格主体的单元格|`td()`|
+|`<caption>`|caption|定义表格的标题|`caption()`|
+|`<colgroup>`|column group|定义表格列的组|-|
+|`<col>`|column|定义表格列的属性|-|
+|`<thead>`|table head|定义表格的表头|`thead()`|
+|`<tbody>`|table body|定义表格的主体|`tbody()`|
+|`<tfoot>`|table foot|定义表格的脚注|`tfoot()`|
+
+#### 多行表头
+
+如下，`thead()` 定义表格的表头；`tr()` 定义表格的行，那么 `thead(tr())` 定义表格表头中的行；`th()` 定义表格表头中的单元格，那么 `thead(tr(th()))` 定义表格表头中一行的一个单元格。需要定义多少行表头，则需要写多少个 `tr()`，一行表头中有多少单元格则需要写多少个 `th()`。其中， 参数 rowspan 用于设置单元格可横跨的行数，参数 colspan 用于设置单元格可横跨的列数。
+
+```{r}
+table.header = htmltools::withTags(table(thead(
+  tr(
+    th(rowspan = 2, colspan = 1, '客户范围'),
+    th(rowspan = 2, colspan = 1, '有无'),
+    th(rowspan = 2, colspan = 1, '总客户数'),
+    th(rowspan = 1, colspan = 2, '复购'),
+    th(rowspan = 1, colspan = 2, '留存')
+  ),
+  tr(
+    th(rowspan = 1, colspan = 1, '复购人数'),
+    th(rowspan = 1, colspan = 1, '复购比例'),
+    th(rowspan = 1, colspan = 1, '留存人数'),
+    th(rowspan = 1, colspan = 1, '留存比例')
+  )
+)))
+
+datatable(
+  data[, c(1:4, 6, 5, 7)],
+  container = table.header,
+  options = list(dom = 'tip'),
+  rownames = FALSE)
+```
+
+#### 标题、脚注
+
+表格容器里也可以直接添加表格标题、脚注，并且可以分别为标题、脚注引入预先定义好的 CSS 样式。
+
+```{css}
+.top{
+caption-side: top;
+text-align:left;
+}
+
+.bottom{
+caption-side: bottom;
+text-align:left;
+line-height:60%;
+}
+```
+
+```{r}
+sketch = htmltools::withTags(table(
+  caption(class = 'top', h5('主标题：这里写主标题'), h6('副标题：这里写副标题')),
+  caption(class = 'bottom', h6('注1：数据来源'), h6('注2：其他说明')),
+  thead(tr(
+    th('第1列'),
+    th('第2列'),
+    th('第3列'),
+    th('第4列'),
+    th('第5列'),
+    th('第6列'),
+    th('第7列')
+  )),
+  tfoot(tr(
+    th('第1列 结尾'),
+    th('第2列 结尾'),
+    th('第3列 结尾'),
+    th('第4列 结尾'),
+    th('第5列 结尾'),
+    th('第6列 结尾'),
+    th('第7列 结尾')
+  ))
+))
+
+datatable(
+  data,
+  container = sketch,
+  options = list(dom = 'tip'),
+  rownames = FALSE
+)
+```
+
+### 把表格放在 div 块中
+
+前面两个小节是在表格中引入 htmltools，从而丰富表格元素。也可以换个思路，把表格引入到 htmltools 中，同样也可以引入预先设定好的 CSS 样式。使用此方法须对 HTML 元素有少量理解，比如多个 div 框嵌套时，须注意父 div 框和子 div 框之间的元素属性继承问题。
+
+```{css}
+.table {
+  font-size: 12px;
+  line-height: 90%;
+}
+
+.table .title {
+  font-size: 14px;
+  font-weight: bold;
+}
+```
+
+```{r}
+tbl <- datatable(data,
+                 options = list(dom = 'tip'))
+
+htmltools::div(
+  class = "table",
+  htmltools::div(class = "title",
+                 "主标题：这是表格的主标题",
+                 htmltools::h6("副标题：这是表格的副标题")),
+  tbl,
+  htmltools::div(class = "title", "脚注：这是表格的脚注",
+                 htmltools::h6("脚注：这也可是表格的脚注"))
+)
+```
+
+## 通过 class/className 参数设置样式
+
+### 表格主体的默认样式
+
+DT 包继承了 DataTables 的[默认样式](https://datatables.net/manual/styling/classes#Table-classes)，可以使用以下类名的任意组合来构建所需的表格样式。虽然本章节的章节名是“静态样式”，但由于 DataTables 本身是用于展现动态表格的，因此默认样式实际上是各种动态样式。
+
+|类别名|描述|
+|:------:|:-------------------------------------------:|
+|display|stripe、hover、row-border、order-column的简写|
+|cell-border|每个单元格的所有四个边都有边框|
+|compact|减少 DataTable 使用的默认样式的空白数量，增加屏幕上的信息密度|
+|hover|鼠标悬停时突出显示行|
+|nowrap|禁用表格中内容的换行，因此单元格中的所有文本都在一行上|
+|order-column|突出显示当前排序表数据的列|
+|row-border|仅围绕每个顶部和底部的边框（即用于行）。注意cell-border和row-border是互斥的，不能一起使用。|
+|stripe|行条带化|
+
+### 表格单元格的默认样式
+
+DT 中的单元格默认样式仅有文本对齐和排序。其中，文本对齐方式可以分别对表格的表头（head）和表格主体（body）单独设置。若类名中不写 head 或 body，如`className = 'dt-center' `表示将目标列的表头和单元格的文本对齐方式均设置为居中。`className= ''`中可以写入多个类名。
+
+|类名|描述|
+|:-----------------:|:-----------------:|
+|`dt[-head|-body]-left`|左对齐文本|
+|`dt[-head|-body]-center`|居中对齐的文本|
+|`dt[-head|-body]-right`|右对齐文本|
+|`dt[-head|-body]-justify`|两端对齐的文本|
+|`dt[-head|-body]-nowrap`|强制不换行|
+
+```{r}
+datatable(data,
+          options = list(columnDefs = list(
+            # 设置目标列表头文本居右，单元格文本居左
+            list(targets = 5, className = 'dt-head-right dt-body-left'),
+            # 设置目标列的表头、单元格文本均居中
+            list(targets = c(6, 7), className = 'dt-center')
+          )))
+```
+
+### 自定义 CSS 样式（class/className）
+
+除了可以使用默认样式以外，还可以设置自定义样式，方法是先定义好 CSS 样式的类名和具体样式属性，然后用`calss = '类名'`的方式引入。有几点需要特别注意：
+
++ 其一，一般情况下，这种方法引入的 CSS 样式会同时改变目标列的表头和单元格的样式。
+
++ 其二，DT 包本身有默认的文本对齐样式，可能会与自定义的 CSS 样式产生冲突。
+
+如下，定义了两个 CSS 样式，类名 'border-left' 表示为目标列的左边框增加一条黑色实线，且文本对齐方式为居中；类名 'color' 表示设定目标列字体颜色为红色，且文本对齐方式为居中。显然，对目标列左边框线和列宽度的设定起了作用，但文本对齐方式没有改变，这是由于 DataTables 自带的文本对齐方式设定地[更加详细](https://github.com/DataTables/DataTablesSrc/blob/fe28d4/css/typography.scss)，而自定义的样式设定地[更加简略](https://d.cosx.org/d/423692/2)，于是后者设定的文本对齐方式被前者覆盖，从而不起作用。
+
+```{css}
+.border-left {
+  border-left: 1px solid #555;
+  text-align: center;
+}
+
+.red-center {
+  color: red;
+  text-align: center;
+}
+```
+
+```{r}
+datatable(data, options = list(columnDefs = list(
+  list(targets = 3, class = 'border-left'),
+  list(targets = 4, class = 'red-center')
+)))
+```
+
+此时，若要使目标列的文本对齐方式变成居中，自定义的样式需要参照 DataTables 设定得更加详细。
+
+```{css}
+table.dataTable th.border-left-new, table.dataTable td.border-left-new {
+  border-left: 1px solid #555;
+  text-align: center;
+}
+table.dataTable th.red-center, table.dataTable td.red-center {
+  color: red;
+  text-align: center;
+}
+```
+
+```{r}
+datatable(data, options = list(columnDefs = list(
+  list(targets = 3, class = 'border-left-new'),
+  list(targets = 4, class = 'red-center')
+)))
+```
+
+类似地，如果想要自定义样式仅对表头或者表格主体起作用，也需要参照 DataTables 设定得更加详细。比如仅对 th 元素设定样式，引入后就会仅对表头中的单元格起作用，仅对 td 元素设定样式，引入后就会仅对表格主体中的单元格起作用。
+
+## 通过 formatStyle 函数设置样式
+
+DT 包中封装好的 formatStyle 函数可直接为目标列引入 CSS 样式。基本语法如下。
+
+```{r, eval=FALSE}
+datatable(data) |>
+  formatStyle(
+    columns, # 指定应用 CSS 样式的列，具体可填列的序号或列的名称，可填一列或多列
+    valueColumns, # 指定获取数据值的列，数据值用于设定不同行的不同 CSS 属性值
+    targets = c("cell", "row"), # 指定应用 CSS 样式的目标，可以是当前单元格（cell），也可以是行（row）
+    color = NULL, # CSS 样式属性，字体颜色
+    backgroud = NULL, # CSS 样式属性，背景填充
+    backgroundColor = NULL, # CSS 样式属性，背景颜色
+    fontWeight = NULL, # CSS 样式属性，字体粗细
+    … # 更多 CSS 样式属性
+  )
+```
+
+在 formatStyle 函数中，所有的 CSS 样式属性的参数值，可以参照 CSS 语言填写具体属性值，比如定义 `color= 'red'`，那么目标列的字体颜色就会变成红色，也可以引入以下函数，为目标列中不同行设定不同的参数值。
+
++ `styleInterval(cuts, values)`：参数 cuts 和 values 须填入两个向量，前者表示可将指定列的数值划分成 N 个分段，后者表示为 N 个分段填入 N+1 个不同的 CSS 样式属性的参数值。
++ `styleEqual(levels, values, default = NULL)`：参数 levels 和 values 须填入两个向量，前者表示可将指定列的数值划分成 N 个等级，后者表示为 N 个等级填入 N 个不同的 CSS 样式属性的参数值。
++ `styleValue()`：使用指定列中单元格的具体数值作为 CSS 样式属性的参数值。
++ `styleColorBar(data, color, angle = 90)`：为单元格填充带有颜色的条形图，条形的宽度与单元格中数值大小成正比，其中 angle 参数用于设定旋转角度。
++ `styleRow(rows, values, default = NULL)`：为目标行设定 CSS 样式属性。
+
+### 单元格背景颜色（backgroundColor）
+
+以下是将多种方法集于一体的复杂例子，为指定的某一列或某几列设置背景颜色，也为不同行设定不同的背景颜色，包括[填充渐变颜色](https://yuanfan.rbind.io/project/dt-fill-color/)。
+
+```{r}
+#为目标列'value1'准备填充渐变颜色所需的分段向量、颜色向量，当数值由小到大，颜色由白变绿
+brks <-
+  quantile(data$value1, probs = seq(.05, .95, .05), na.rm = TRUE)
+clrs <-
+  colorRampPalette(c("#ffffff", "#f2fbd2", "#c9ecb4", "#93d3ab", "#35b0ab"), bias = 2)(length(brks) + 1)
+
+datatable(data) |>
+  # 为第1列，即'type1'列设定背景颜色
+  formatStyle(columns = 1, backgroundColor = 'green') |>
+  # 同时为'prob1'和'prob2'列设定背景颜色
+  formatStyle(columns = c('prob1', 'prob2'),
+              backgroundColor = 'white') |>
+  # 为第2列，即'type2'列中不同的数据设定不同的背景颜色
+  formatStyle(columns = 2,
+              backgroundColor = styleEqual(
+                levels = c('YES', 'NO'),
+                values = c('IndianRed', 'Firebrick')
+              )) |>
+  # 为第3列，即'value'列，按照第2列（'type2'）的数据来设定不同的背景颜色
+  formatStyle(
+    columns = 3,
+    valueColumns = 2,
+    backgroundColor = styleEqual(
+      levels = c('YES', 'NO'),
+      values = c('IndianRed', 'Firebrick')
+    )
+  ) |>
+  # 为第4列，即'value1'列，按照该列的数值设定渐变颜色
+  formatStyle(columns = 4,
+              backgroundColor = styleInterval(cuts = brks, values = clrs)) |>
+  # 目标为每行，按照'prob1'列的数值分段，不同分段的取值范围内设定不同的背景颜色
+  # 'prob1'列大于0.5的行为粉色；小于等于0.5且大于0.3为白色；小于等于0.3为灰色
+  formatStyle(
+    columns = 'prob1',
+    target = 'row',
+    backgroundColor = styleInterval(
+      cuts = c(0.3, 0.5),
+      values = c('grey', 'white', 'pink')
+    )
+  )
+```
+
+### 单元格背景填充（background）
+
+在使用 `formatStyle()` 函数时，有两种方法为单元格填充背景。第一种方法，使用 `styleColorBar()` 函数为单元格填充带有颜色的条形，这是 DT 包中专门为单元格背景样式开发的函数，不能挪用到其他样式上去。
+
+```{r}
+datatable(data) |>
+  # 为'value'列填充有颜色的条形图
+  formatStyle(
+    columns = 'value1',
+    background = styleColorBar(data$value1, 'steelblue'),
+    # 填充条形
+    # 填充背景的尺寸，第一个值为宽度，第二个值为高度
+    backgroundSize = '100% 90%',
+    backgroundRepeat = 'no-repeat',
+    backgroundPosition = 'center',
+    textAlign = 'left'
+  ) |>
+  # 为'value1'列填充有颜色的条形图
+  formatStyle(
+    columns = 'value2',
+    background = styleColorBar(data$value2, color = '#00bfff'),
+    backgroundSize = '90% 50%',
+    backgroundRepeat = 'no-repeat',
+    backgroundPosition = 'center',
+    color = 'white'
+  )
+```
+
+第二种方法是直接写入具体的 CSS 样式属性来填充背景形状。需要说明的是，在 `formatStyle()` 函数中填入的 CSS 样式属性有两种写法：一是照搬 CSS，但需要为填入的各 CSS 样式属性加上引号，比如`'font-weight'`、`'font-size'`、`background-color`；二是如前述小节一样，各 CSS 样式属性中`-`后面的首字母改成大写。
+
+```{r}
+# 准备渐变色
+brks <-
+  quantile(data$value, probs = seq(.05, .95, .05), na.rm = TRUE)
+# 渐变色由红变绿，bias>1，则绿色更多；bias<1，则红色更多
+clrs <-
+  colorRampPalette(c("#ff2700", "#f8fcf8", "#44ab43"), bias = 1.3)(length(brks) + 1)
+
+datatable(data)|>
+  formatStyle(
+    columns = 'value',
+    'background-color' = styleInterval(cuts = brks, values = clrs),
+    'display' = 'flex',
+    'margin' = 'auto',
+    'align-items' = 'center',
+    'justify-content' = 'center',
+    'width' = '1.875rem',
+    'height' = '1.875rem',
+    'border' = '0.5px solid rgb(0,0,0,0.1)',
+    'border-radius' = '50%',
+    'color' = '#000',
+    'font-size' = '0.8125rem',
+    'letter-spacing' = '-1px'
+  ) 
+```
+
+### 字体（font）
+
+可以给目标列设置各种不同的 CSS 字体样式，如字体粗细、字体颜色、字体大小等。
+
++ 字体粗细（fontWeight）
+
+```{r}
+datatable(data) |>
+  # 为第1列，即'type1'列设定字体粗细为加粗
+  formatStyle(columns = 1, fontWeight = 'bold') |>
+  # 目标为行，按照第2列（'type2'列）的数据值，设定每隔一行字体加粗
+  formatStyle(
+    columns = 2,
+    target = 'row',
+    fontWeight = styleRow(rows = seq(
+      from = 1,
+      to = nrow(data),
+      by = 2
+    ), values = 'bold')
+  )
+```
+
++ 字体颜色（color）
+
+```{r}
+datatable(data) |>
+  # 为第1列，即'type1'列设定字体粗细为加粗
+  formatStyle(columns = 1, color = 'red') |>
+  # 目标为行，按照第2列（'type2'列）的数据值，设定不同行应用不同的字体颜色
+  formatStyle(
+    columns = 2,
+    target = 'row',
+    color = styleEqual(
+      levels = c('YES', 'NO'),
+      values = c('green', 'red')
+    )
+  )
+```
+
++ 字体大小（fontSize）
+
+```{r}
+datatable(data) |>
+  # 为第1列，即'type1'列设定字体大小
+  formatStyle(columns = 1, fontSize = '18px') |>
+  # 目标为行，按照'prob1'列的数据值，设定不同行应用不同的字体大小
+  formatStyle(
+    columns = 'prob1',
+    target = 'row',
+    fontSize = styleInterval(
+      cuts = c(0.3, 0.5),
+      values = c('18px', '14px', '10px')
+    )
+  )
+```
+
+### 边框（border）
+
+CSS 的[边框](https://www.w3school.com.cn/cssref/pr_border.asp)包含三种具体样式，即边框的宽度、边框的线型、边框的颜色，且单元格的上下左右四条边框均可单独设置。
+
++ 'border'：此参数中可依次填入三种参数值
+ 
+    - border-width，边框的宽度
+    - border-style，边框的线型，如实线solid，虚线dashed，点线dotted
+    - border-color，边框的颜色
+
++ 'border-bottom'：下边框
++ 'border-top'：上边框
++ 'border-left'：左边框
++ 'border-right'：右边框
+
+```{r}
+datatable(data) |>
+  # 为第1列，即'type1'列，设定单元格的边框样式为宽度1px、虚线、黑色
+  formatStyle(columns = 1, 'border' = '1px dashed black') |>
+  # 为第3列，即'value'列，设定单元格的下边框样式为宽度1px、实线、黑色
+  formatStyle(columns = 3, 'border-bottom' = '1px solid black') |>
+  # 为第4列，即'value1'列，设定单元格的上边框样式为宽度1px、点线、黑色
+  formatStyle(columns = 4, 'border-top' = '1px dotted black') |>
+  # 为第5列，即'value2'列，设定单元格的左边框样式为宽度2px、实线、红色
+  formatStyle(columns = 5, 'border-left' = '2px solid red') |>
+  # 为第6/7列，即'prob1'和'prob2'列，设定单元格的右边框为宽度1px、实线、黑色
+  formatStyle(columns = c(6, 7), 'border-right' = '1px solid black')
+```
+
+### 文本对齐（textAlign）
+
+为单元格设置文本对齐方式时，有两点需要注意。
+
++ 其一，一般情况下，由于 `formatStyle()` 函数中设定的各类 CSS 样式属性仅仅会对表格主体起作用，不会对表头起作用，因此若想要同时修改表头的样式，可参考1.3.3小节中的方法来设定仅对表头起作用的样式，或直接引用默认样式。
+
++ 其二，在 `formatStyle()` 函数中设定 `target = 'row'` 时，会改变表格中整行的样式，若不希望其他列受影响，还需要单独设定。
+
+```{r}
+datatable(data, options = list(columnDefs = list(
+  list(targets = '_all', className = 'dt-head-center')
+))) |>
+  # 为第1、3-7列设定文本对齐方式为居中
+  formatStyle(columns = c(1, 3:7), textAlign = 'center') |>
+  # 目标为行，按照第2列（'type2'列）的数据值，设定不同行应用不同的文本对齐方式
+  formatStyle(
+    columns = 2,
+    target = 'row',
+    textAlign = styleEqual(
+      levels = c('YES', 'NO'),
+      values = c('left', 'right')
+    )
+  )
+```
+
+## 引入 JS 设置样式
+
+本小节仅介绍通过引入 JS 来引入 HTML 元素，在此基础上设定 CSS 样式，从而达到设置表格样式的目的。
+
+### 调用 DataTables API 设置样式
+
+DataTables 中的 [API](https://datatables.net/reference/api/) 功能非常丰富，本小节只简单介绍用于设置表格样式的方法，不多深究。具体方法是使用 DT 包中的初始化回调函数 `initComplete = JS()` 来调用 DataTables API，再引入 CSS 来设置各个表格元素的样式，以下是几个简单例子。
+
++ 表格表头，`table().header()`。
+
+```{r}
+datatable(data,
+          options = list(
+            initComplete = JS(
+              "function(settings, json) {
+    $(this.api().table().header()).css({'background-color': 'black', 'color': 'green','font-size':'18px'});
+    }")))
+```
+
++ 表格主体，`tables().body()`。
+
+```{r}
+datatable(data, options = list(
+  initComplete = JS(
+    "function(settings, json) {
+    $(this.api().tables().body()).css({'color': 'red', 'font-size':'14px'});
+    }")
+))
+```
+
++ 表头与表格主体。
+
+```{r}
+datatable(data, options = list(
+  initComplete = JS(
+    "function(settings, json) {
+    $(this.api().table().header()).css({'background-color': 'black', 'color': 'green','font-size':'18px'});
+    $(this.api().tables().body()).css({'color': 'red','font-size':'14px'});
+    }")
+))
+```
+
++ 仅保留表格主体。
+
+```{r}
+datatable(data,
+          options = list(
+            initComplete = JS(
+              "function(settings, json) {
+    $(this.api().table().header()).css({'display': 'none'});
+    $('table.dataTable.no-footer').css('border-bottom', 'none');
+    }")))
+```
+
++ 单列的表头，`column(3).header()` 表示第三列的表头。
+
+```{r}
+datatable(data,
+          options = list(
+            initComplete = JS(
+              "function(settings, json) {
+    $(this.api().column(3).header()).css({'background-color': 'black', 'color': 'green','font-size':'18px'});
+    }")))
+```
+
++ 单列的单元格，`column(3).nodes()` 表示第三列的单元格。
+
+```{r}
+datatable(data,
+          options = list(
+            initComplete = JS(
+              "function(settings, json) {
+    $(this.api().column(3).nodes()).css({'color': 'red','font-size':'14px'});
+    }")))
+```
+
+### 列渲染（columnDefs.render）
+
+通过列渲染的方式引入 JS 也可以设置目标列的 CSS 样式。需要注意的是，此方法的本质是通过 JS 函数引入 HTML 元素，再引入 CSS 来设定样式，具体呈现效果与元素本身的特性息息相关。如下面例子中使用 div 元素设定边框样式，本质是在表格的单元格中把原来的数据用一个框框起来，一般情况下边框不会把表格沾满，设置的左边框线也不会是连续的。而 span 元素本身是用来组合文本的，在这种情况下设定边框样式，边框线会紧紧贴着文本。
+
+本小节引入的类名 'border-left' 和 'red-center' 源于[第 1.4.3 小节](#自定义-css-样式classclassname)。
+
+```{r}
+datatable(data,
+          options = list(columnDefs = list(
+            list(
+              targets = 3,
+              render = JS(
+                "function(data, type, row, meta){
+              return '<div class=\"border-left\">' + data + '</div>'
+              }"
+              )
+            ),
+            list(
+              targets = 4,
+              render = JS(
+                "function(data, type, row, meta){
+              return '<div class=\"red-center\">' + data + '</div>'
+              }"
+              )
+            ),
+            list(
+              targets = 5,
+              render = JS(
+                "function(data, type, row, meta){
+              return '<span class=\"border-left\">' + data + '</span>'
+              }"
+              )
+            )
+          )))
+```
+
+## 数据格式
+
+### 添加特殊符号
+
++ `formatCurrency()`：为表格中的数值列添加货币符号（UNICODE 编码对应的符号），或者字符串。
+
+    - columns：指定格式化的一列或者多列，可以填入代表列序号的数字或者列名称。填入列名称时，须填入数据中的原始列名，填入重命名后的列名无效。
+    - interval：填入一个数字，当数字每间隔多少位后添加一个标记，默认为3。
+    - mark：指定间隔符号，默认“,”。
+    - zero.print：填入一个字符串，替换数字列中的0，默认为 NULL。
+    - currency：填入适用于 JS 的 [UNICODE 编码](https://www.cnblogs.com/lsgxeva/p/10120275.html)，或者一个普通的字符串。如填入`\U20AC`，显示为€；填入`\u21AC`，显示为↬；填入`\u2714`，显示为✔。
+    - before：指定填入的符号是否放在数字前面，默认参数值为 TRUE。
+    - digits：当目标列为数值时，指定小数点后位数，默认保留2位。
+    - rows：指定目标列中的目标行。
+    
+```{r}
+datatable(data) |>
+  formatCurrency(
+    columns = c('value', 'value1'),
+    currency = '\u2714',
+    before = FALSE, 
+    digits = 0, 
+    rows = c(1:2) 
+  ) |>
+  formatCurrency(
+    columns = 6,
+    currency = '%',
+    before = FALSE,
+    digits = 2,
+    rows = c(3:5)
+  )
+```
+
++ `formatString(table, columns, prefix = "", suffix = "", rows = NULL)`。
+
+    - prefix/suffix：填入放在一列数据之前、之后的字符串，同 `formatCurrency()`函数中的 currency 参数一样，除了可以填入普通的字符串，还可以填入 UNICODE 编码来展示特殊字符。
+    
+```{r}
+datatable(data) |>
+  formatString(
+    columns = 3,
+    prefix = '￥',
+    suffix = '\u2716',
+    rows = seq(
+      from = 1,
+      to = nrow(data),
+      by = 2
+    )
+  )
+```
+
+### 转换数据格式
+
++ `formatPercentage()`：将表格中目标列的数值格式化为百分比。
+
+    - columns/interval/mark/zero.print/digits/rows：与 `formatCurrency()`一致。
+
+```{r}
+datatable(data) |>
+  formatPercentage(columns = c(6,7),
+                   digits = 1,
+                   rows = c(1, 2))
+```
+
++ `formatRound()`：将表格中的目标列的数值四舍五入到指定的小数位数。
+
+    - columns/interval/mark/zero.print/digits/rows：与 `formatCurrency()`一致。
+
+```{r}
+data1 <- data
+set.seed(2022)
+data1$value3 <- runif(nrow(data), 0.0, 1.0)
+
+datatable(data1) |>
+  formatRound(columns = 'value3',
+              digits = 2,
+              row = c(1:2))
+```
+
++ `formatSignif()`：指定小数点后有效数字的位数。
+
+    - columns/interval/mark/zero.print/digits/rows：与 `formatCurrency()`一致。
+    
+```{r}
+datatable(data1) |>
+  formatSignif('value3', 3)
+```
+
+### 日期格式
+
++ `formatDate()`：用于转换各类日期格式的函数，可选参数如下。
+
+    - columns：用于指定转换日期格式的目标列，可以为一列或多列。
+    - method：可选的转换日期格式的方法，见`DT:::DateMethods`，共有"toDateString"、"toISOString"、"toLocaleDateString"、"toLocaleString"、"toLocaleTimeString"、"toString"、"toTimeString"、"toUTCString"等8种方法，设定具体参数时可填入一种或多种。
+    - params：用于指定各类转换后的日期格式中的具体字符。
+    - rows：指定目标列中的目标行。
+
+```{r}
+date <-
+  matrix(rep(c(Sys.time(), Sys.Date()), 8),
+         nrow = 2,
+         ncol = 8,
+         byrow = T)
+date <- as.data.frame(date)
+methods <- c(
+  'toDateString',
+  'toISOString',
+  'toLocaleDateString',
+  'toLocaleString',
+  'toLocaleTimeString',
+  'toString',
+  'toTimeString',
+  'toUTCString'
+)
+colnames(date) <- methods
+
+datatable(
+  date * 1000,
+  extensions = 'FixedColumns', # 冻结窗格
+  options = list(
+    dom = 't',
+    scrollX = TRUE,
+    fixedColumns = list(leftColumns = 2, rightColumns = 1)
+  )
+) |>
+  formatDate(columns = 1:8,
+             method = methods)
+```
+
+### 插入超链接
+
+在 HTML 中的 `<a>` 元素的 [href 属性](https://www.w3school.com.cn/tags/att_a_href.asp)可写入所需指向的超链接地址，对应的 HTML 代码为`<a class="自定义 CSS 类名" href="超链接地址" title="悬停提示语">超链接显示名</a>`。在 DT 包中的实现方法是，针对目标列通过`render = JS()`的方式引入 JS，在此基础上引入 HTML 和 CSS。
+
+```{r}
+# 准备一些超链接所指向的地址
+hrefvalue <- c(rep("https://yufree.cn/cn/", 2),
+              rep("https://xiangyun.rbind.io/post/", 2)) 
+hrefdata <- cbind(data, hrefvalue) # hrefvalue 作为第8列
+
+# 由于超链接地址在表中第8列，所以列渲染时写row[8]
+datatable(hrefdata,
+          options = list(columnDefs = list(
+            list(
+              targets = 2,
+              render = JS(
+                "function(data, type, row, meta) {
+                  return  '<a href=' + row[8] + '>' + data + '</a>'
+                  }"
+              )
+            ), list(targets = 8, visible = FALSE) # 隐藏 hrefvalue 列
+          )))
+```
+
+### 插入图片
+
+在 HTML 中的[`<img>`元素](https://www.w3school.com.cn/tags/tag_img.asp)可写入所需展示的图像地址，对应的 HTML 代码为`<img class="自定义 CSS 类名" src="图片链接" alt="替代文本">`，图片的 alt 属性是指当图像无法正常显示时，页面上展示的替代文本。这里的图片链接可以是指向图片的网页链接，也可以是本地文件中的图片地址。下面的例子中，笔者在项目文件中准备了两张图片，相对地址分别是 `images/USA.png` 和 `images/China.png`。
+
+```{r}
+imgvalue <- c(rep('China', 2), rep('USA', 2)) # 图片名字
+imgdata <- cbind(data, imgvalue)
+
+# 由于图片名字在表中第8列，所以列渲染时写row[8]
+datatable(imgdata,
+          options = list(columnDefs = list(
+            list(
+              targets = 1,
+              render = JS("function(data, type, row, meta) {
+                  return  '<img src=\"images/' + row[8] + '.png\" /> ' + data
+                  }")
+            ), list(targets = 8, visible = FALSE) # 隐藏 imgvalue 列
+          )))
+```
+
+若不作任何样式设定的话，图片大小和表格中数字、字符的大小相比显得比例失衡，因此也可以在插入图片时引入 CSS 样式，进行一番调整。
+
+```{css}
+.team-flag {
+  height: 1.3rem;
+  border: 1px solid #f0f0f0;
+}
+
+.team-name {
+  margin-left: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+```
+
+```{r}
+datatable(imgdata,
+          options = list(columnDefs = list(
+            list(
+              targets = 1,
+              render = JS(
+                "function(data, type, row, meta) {
+return '<img class=\"team-flag\" src=\"images/'+ row[8] + '.png\" />'
+         +'<span class=\"team-name\">'+ data +'<span/>' }"
+              )
+            ),
+list(targets = 8, visible = FALSE)
+          )))
+```
+
+
+### 插入字体图标（fontawesome）
+
+shiny 包中有个 icon 函数，可以方便地从字体图标库 [Font Awesome](https://fontawesome.com/icons) 或 [Bootstrap Glyphicons](https://getbootstrap.com/docs/3.3/components/) 中引入字体图标。而 Font Awesome 库在 R 中也有对应的 R 包 [fontawesome](https://cran.r-project.org/web//packages/fontawesome/fontawesome.pdf)，本小节根据该库举两个简单的例子。
+
++ 插入一个字体图标。
+
+```{r}
+library(fontawesome)
+library(data.table)  # 使用 data.table 包并非必要，只是笔者熟悉这个工具而已
+
+icon1 <- as.data.table(data)
+icon1 <- icon1[, ':='(level = ifelse(
+  type2 == "YES",
+  fontawesome::fa(name = "thumbs-up"),
+  fontawesome::fa(name = "thumbs-down")
+))]
+
+datatable(icon1, escape = FALSE)
+```
+
++ 插入多个字体图标，即把单个字体图标拼贴到一起。
+
+```{r}
+icon2 <- as.data.table(data)
+
+icon2 <- icon2[, ':='(score = sample(1:5, 40, replace = TRUE))]
+
+icon2$score <- strrep(fontawesome::fa(name = "heart"), icon2$score)
+
+datatable(icon2, escape = FALSE)
+```
+
+### 文本换行问题
+
+DT 默认在展示文本时自动换行，可以通过单独设置列的宽度或文本对齐属性来改变换行效果。下面编造了一个由长文本组成的数据框，涵盖了三种情况：长文本，列的单元格内容比列名更长，列的列名比单元格内容更长。
+
+```{r}
+textdata <- data.frame(
+  "姓名" = c("蒙奇·D·路飞", "乌索普", "娜美", "托尼托尼·乔巴", "尼可·罗宾"),
+  "简介" = c(
+    "草帽海贼团船长，橡胶人，不导电，头脑简单，喜欢吃肉，喜欢冒险，每个伙伴都是拿命拼回来的，有点路痴",
+    "狙击手，战场奇兵",
+    "航海士",
+    "蓝鼻子医生",
+    "历史学家"
+  ),
+  "悬赏金额" = rep("内容比字段名长", 5),
+  "角色设定&人物经历" = rep("略", 5) 
+)
+
+datatable(textdata)
+```
+
++ 设置列的宽度。
+
+```{r}
+datatable(textdata,
+          options = list(autoWidth = TRUE,
+                         columnDefs = list(
+                           list(width = '100px', targets = c(1,3,4)),
+                           list(width = '300px', targets =  2)
+                         )))
+```
+
++ 设置列的文本对齐样式。需要注意的是，若分别对同一列设置表头和表格主体的文本对齐方式，要将对表格主体的设定写在前面，否则此设定会无法生效。
+
+```{r}
+datatable(textdata,
+          options = list(columnDefs = list(
+            list(className = 'dt-nowrap', targets = c(1, 3)),
+            list(className = 'dt-body-center dt-head-nowrap', targets = 4)
+          )))
+```
+
+## 引入迷你图（sparkline）
+
+### 折柱图
+
+R 中的 sparkline 包是 [jQuery Sparklines](https://omnipotent.net/jquery.sparkline/#s-about) 的 R 版本，所引入的各类图形有许多参数可以自定义。由于笔者对 data.table 相对更熟一些，本小节与数据处理相关的部分均应用 data.table 来完成。这里有[一篇笔记](https://yuanfan.rbind.io/project/r-sparkline/)记录了在 DT、reactable、formattable 等表格包中引入 sparkline 的 data.table 版本和 tidyverse 版本的代码。
+
+```{r}
+library(sparkline)
+
+dt <- as.data.table(data)
+
+spark_html <- function(...) {
+  as.character(htmltools::as.tags(sparkline(..., height = 100, width = 100)))}
+
+dt.DT1 <- dt[, .(
+  '面积图' = spark_html(value1, type = "line"),
+  '柱状图' = spark_html(value1, type = "bar"),
+  '折线图' = spark_html(
+    value1,
+    type = "line",
+    lineColor = "red", # 折线的颜色
+    fillColor = FALSE # 不展示折线下的面积
+  ),
+  '柱状图2' = spark_html(value1, type = "bar", barColor = "green"),
+  '箱图' = spark_html(value1, type = "box")
+),  keyby = .(type2)]
+
+datatable(dt.DT1,  escape = FALSE) |> spk_add_deps()
+```
+
+### 饼图
+
+由于 DT 包的渲染方式是一次只渲染一页数据，在有多页需要渲染迷你图时，需要在 options 中设定 `drawCallback = JS('function(s) { HTMLWidgets.staticRender(); }') `，指定每次分页时重新渲染一次。
+
+```{r}
+dt.DT2 <-
+  dt[, .(sparkline1 = as.character(htmltools::as.tags(
+    sparkline(
+      value,
+      type = "pie", # 饼图
+      sliceColors = c("red", "green"), # 指定饼图中各个扇形的颜色。
+      offset = 90, # 指定饼图的旋转角度
+      width = 50, # 指定迷你图的宽度
+      height = 50 # 指定迷你图的高度
+    )
+  ))), keyby = .(type1)]
+
+datatable(dt.DT2,
+          escape = FALSE,
+          options = list(
+            dom = 'tip',
+            # 每次分页重新渲染，不加这个的话只有第一页有图
+            drawCallback = JS('function(s) { HTMLWidgets.staticRender(); }') 
+          )) |> spk_add_deps()
+```
+
+### 组合图
+
+为目标列引入一个迷你图时，用一个`sparkline()`函数，引入多组迷你图时，需要在`spk_composite()`函数中写入多个`sparkline()`来实现。
+
++ 两条折线。
+
+```{r}
+dt.DT <- dt[, .("两条折线"=as.character(htmltools::as.tags(spk_composite(
+  sparkline(
+    prob1,
+    type = "line",
+    fillColor = FALSE,
+    lineColor = 'red', # 指定折线的颜色
+    width = 200,
+    height = 100
+  ),
+  sparkline(
+    prob2,
+    type = "line",
+    fillColor = FALSE,
+    lineColor = 'green',
+    width = 200,
+    height = 100
+  )
+)))), keyby = .(type2)]
+
+datatable(dt.DT, escape = FALSE) |> spk_add_deps()
+```
+
++ 折柱混合。需要注意的是，参数 width（宽度）对柱形图不起作用，需要通过修改参数 barWidth（单个柱子的宽度）和参数 barSpacing（柱子之间的空隙）来达到改变整个迷你图宽度的效果。
+
+```{r}
+dt.DT <- dt[, .("折柱混合" = as.character(htmltools::as.tags(spk_composite(
+  sparkline(
+    value1,
+    type = "bar",
+    width = 100,
+    height = 100
+  ),
+  sparkline(
+    prob2,
+    type = "line",
+    fillColor = FALSE,
+    lineColor = 'green',
+    lineWidth = 1.5, # 指定折线的宽度
+    width = 100,
+    height = 100
+  )
+)))), keyby = .(type2)]
+
+datatable(dt.DT, escape = FALSE) |> spk_add_deps()
+```
+
+## 样式冲突问题
+
+DT 包中可设置静态样式的方法较多，最好的情况是一次只用一种方法设置好所需全部样式，否则用不同方法设置的同类样式之间会互相冲突。
+
+|序号|方法|所属章节|描述|范围|限制|
+|:--:|:---------:|:-----:|:-----------------------:|:------:|:------:|
+|1|htmltools|第1.3节|在构建表格元素时设置样式|可为标题、脚注、表头等表格元素设定统一样式|无法为表格主体中单独几列或几行设定样式|
+|2|class/className|第1.4节|先定义好 CSS 样式和类名，在`columnDefs = list(list(targets = null, class = '类名'))`中引入自定义样式|可为全表表头或表格主体设定样式，也可为单独几列的表头或单元格设定样式|无法为标题、脚注或单独几行设定样式|
+|3|`formatStyle()`|第1.5节|在 formatStyle 函数中直接一项一项地写入需要设定的 CSS 样式属性|可对表格主体中的目标列或目标行设定样式|无法为标题、脚注或表头设定样式|
+|4|`JS()`|第1.6节|通过各种回调函数引入 JS 函数，在此基础上任意调用 HTML 或 CSS|可对全表的表头、表格主体设置样式，也可对单列的表头、单元格设定样式，也可通过列渲染或行渲染对表格的行或列设置样式|无法为标题、脚注设定样式|
+
+### 多种方法混合使用时
+
+如下，先设置一个样式名称为 class1，表示字体颜色为红色。
+
+```{css}
+.class1 {
+  color: red;
+}
+```
+
+其一，对比序号2和序号4对应的方法所产生的样式冲突表现。
+
++ 在表格选项中设置初始化回调函数 `initComplete = JS()`，其中表头字体颜色均为粉色、表格主体字体颜色均为绿色。
+
++ 在表格选项对列的定义 `columnDefs = list()` 里面，目标为第2列时，调用样式 class1。
+
++ 在表格选项对列的定义 `columnDefs = list()` 里面，目标为第3列时，通过列渲染的方式，调用样式 class1。
+
+显然，`initComplete = JS()` 设定的样式会被 `columnDefs = list()` 所覆盖。在后者之中，`list(targets = 2, class = 'class1')`会将该列的表头和单元格的字体颜色一并修改，而`list(targets = 3, render = JS())`仅修改了该列单元格的字体颜色，没有改变该列表头的字体颜色。
+
+```{r}
+datatable(data, 
+          options = list(
+            initComplete = JS(
+              "function(settings, json) {
+    $(this.api().tables().body()).css({'color': 'green'});
+    $(this.api().tables().header()).css({'color': 'pink'});
+    }"
+            ),
+    columnDefs = list(list(targets = 2, class = 'class1'),
+                      list(
+                        targets = 3,
+                        render = JS(
+                          "function(data, type, row, meta){
+              return '<div class=\"class1\">' + data + '</div>'
+              }"
+                        ))
+              )
+          ))
+```
+
+其二，在以上对比结果的基础上，加入序号3所对应的方法，进一步观察样式冲突表现。由于初始化回调函数 `initComplete = JS()`所设定的样式会被覆盖，因此以下内容中可以省略。
+
++ 在 formatStyle 函数中，定义目标列为第2、3列时，字体颜色为蓝色。
++ 在 formatStyle 函数中，定义目标列第4列时，在不同条件下有不同字体颜色。
+
+显然，`formatStyle(columns = 2, color = 'blue'` 与 `list(targets = 2, class = 'class1')` 产生了冲突，前者仅能修改该列表格主体中单元格的字体颜色，而未能修改表格表头的颜色。而 formatStyle 函数中对第3、4列的字体颜色设定均未能覆盖 `list(targets = c(3, 4), render = JS())`。但这并不表明 formatStyle 函数中一切样式的优先级均低于 `render = JS()`。
+
+```{r}
+datatable(data, options = list(columnDefs = list(
+  list(targets = 2, class = 'class1'),
+  list(
+    targets = c(3, 4), 
+    render = JS(
+      "function(data, type, row, meta){
+              return '<div class=\"class1\">' + data + '</div>'
+              }"
+    )
+  )
+))) |>
+  formatStyle(columns = 2, color = 'blue') |>
+  formatStyle(columns = 3, color = 'blue') |>
+  formatStyle(
+    columns = 4,
+    target = 'cell',
+    color = styleEqual(
+      levels = c('YES', 'NO'),
+      values = c('green', 'red')
+    )
+  )
+```
+
+以上只是略作试验和说明，实际应用中碰到的样式冲突问题更为复杂。如无必要，不要把几种方法混着使用。
+
+### 与 DT 默认样式的冲突
+
+已知，DT 包默认将数值类型的列的文本对齐方式设定为右对齐。参照第 1.4.3 小节和第 1.5.5 小节可知，序号2/3的方法可以改变表格的文本对齐方式。
+
+按照序号4的方法，设置初始化回调函数 `initComplete = JS()`，无法改变表格的文本对齐方式。
+
+```{r}
+datatable(data,
+          options = list(
+            initComplete = JS(
+              "function(settings, json) {
+    $(this.api().tables().body()).css({'text-align': 'center'});
+    $(this.api().tables().header()).css({'text-align': 'center'});
+    }"
+            )
+          ))
+```
+
+如下，设定一个样式类 class2，表示文本对齐方式为居中。
+
+```{css}
+.class2 {
+  text-align: center;
+}
+```
+
+在初始化回调函数 `initComplete = JS()` 中，针对第3列的表头和单元格设置的文本居中方式均起作用，而 `render = JS()` 中引入的样式无法对目标列的表头起作用。
+
+```{r}
+datatable(data,
+          options = list(
+            initComplete = JS(
+              "function(settings, json) {
+    $(this.api().column(3).header()).css({'text-align': 'center'});
+     $(this.api().column(3).nodes()).css({'text-align': 'center'});
+    }"),
+    columnDefs = list(list(
+      targets = 4,
+      render = JS(
+        "function(data, type, row, meta){
+              return '<div class=\"class2\">' + data + '</div>'
+              }")))))
+```
+
+# 动态效果
+
+## 表格控件（dom）
+
+DataTables 中有一些[表格控件](https://datatables.net/reference/option/dom)，可用于控制表格的动态元素。这些表格控件是否需要显示，其对应的位置和基础 CSS 样式都可以单独设置。
+
+- 'l'：length，控制表格一页展示多少条记录
+- 'f'：filtering，表格的筛选框，用于输入过滤条件
+- 't'：table，表格主体
+- 'i'：information，展示表格基础信息汇总的内容，比如表中总记录数等
+- 'p'：pagination，控制表格翻页
+- 'r'：processing，加载时显示的内容
+
+默认情况下，以上字母代表的表格控件全都应用，相当于`dom = 'lftipr'`，在设置`dom`参数时去掉某个字母便去掉了对应的表格控件，改变字母的顺序便改变了对应的表格控件出现的位置和顺序。
+
+```{r}
+datatable(data, options = list(dom = 'ptfl'))
+```
+
+## 语言文字（language）
+
+DataTables 中展示的语言文字选项都是可以修改的，详细参数见<https://datatables.net/reference/option/language>，下面列举了较为常见的几种。
+
++ info：此参数中有一些可随表格变动而动态更新的标记。
+  - `_START_`：当前页第一条记录。
+  - `_END`：当前页最后一条记录。
+  - `_TOTAL_`：筛选后表中总记录数。
+  - `_MAX_`：表中总记录数。
+  - `_PAGE_`：当前页。
+  - `_PAGES_`：表中总页数。
+
+```{r}
+datatable(data, options = list(
+  language = list(
+    lengthMenu = '展示 _MENU_ 每页记录数',
+    search = '检索：',
+    zeroRecords = '什么都没有找到',
+    infoEmpty = '找不到记录',
+    infoFiltered = '(从 _MAX_ 条数据中筛选)',
+    info = '共 _TOTAL_ 条记录，从 _START_ 到 _END_',
+    paginate = list(previous = '上一页', `next` = '下一页')
+  ),
+  lengthMenu = c(5, 12, 24)
+))
+```
+
+除了可以对逐项细节作单独修改以外，也可以使用官方提供的插件直接替换。
+
+```{r}
+datatable(data, options = list(
+  language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Chinese.json')
+))
+```
+
+## 滚动条（scrollX/scrollY）
+
+当一页表格的行数或列数太多无法全部展示时，可以设置滚动条。
+
++ 设置横轴的滚动条。
+
+```{r}
+datatable(data, width = '500px', options = list(scrollX = TRUE))
+```
+
++ 设置纵轴的滚动条，即将表格的高度强制展示为指定高度。
+
+```{r}
+datatable(data,
+          options = list(
+            pageLength = 7, #设定分页时每页展示7行数据
+            scrollY = '200px',
+            scrollCollapse = TRUE #页面行数有限时，允许降低表格高度
+          ))
+```
+
+## 筛选（search）
+
+### 筛选框（filter）
+
+在筛选框输入过滤条件进行筛选时，其筛选范围是整张表的所有内容。在数据量较大时，全表筛选的效率可能不高，于是也可以专门设置仅针对单列数据进行筛选的筛选框。
+
+```{r}
+datatable(
+  data,
+  options = list(dom = 'tp',  # 不展示表格控件中的筛选框
+                 columnDefs = list(list(
+                   targets = c(1, 3), searchable = FALSE
+                 ))),# 设置目标列禁止使用筛选
+  filter = list(
+    position = 'top', # 可选参数值有"none", "bottom", "top"
+    clear = TRUE, # 是否展示在筛选框中输入过滤条件后的清除按钮
+    plain = FALSE
+  )
+)
+```
+
+### 过滤条件（search）
+
+DataTables 内置的筛选过滤功能会按照输入条件与表格中任何位置的内容进行匹配，但并不仅仅只是简单的字符串对比或匹配，而是允许输入多个字符串来匹配，也可以输入一些正则表达式。
+
++ 初始化过滤条件。如下`search = '5 s'`所匹配的结果是过滤出来的每一行都同时包括“5”和“s”。
+
+```{r}
+datatable(data,
+          options = list(search = list(search = '5 s' #初始化过滤条件
+          )))
+```
+
++ 区分大小写。一般情况下，默认不区分字母大小写，但也可以设置为区分大小写。
+
+```{r}
+datatable(data,
+          options = list(search = list(search = '5 s', #初始化过滤条件
+                                       caseInsensitive = FALSE # 是否区分大小写
+          )))
+```
+
++ 使用正则表达式。regex 参数可用来设定是否允许在筛选时使用正则表达时，DataTables 中默认此参数值为 TRUE，而 DT 包中则默认此参数值为 FALSE，即筛选框默认无法使用正则表达式。
+
+```{r}
+datatable(data,
+          options = list(search = list(regex = TRUE, # 是否允许使用正则表达式
+                                       search = '5[4|6] s' #初始化过滤条件
+          )))
+```
+
++ 启用过滤条件。return 参数默认值为 FALSE，即当筛选框中输入内容后，对整个表格的过滤功能便实时启用。当设置为`return = TRUE`时，那么必须在筛选框中按下 Enter 键后，过滤功能才会启用，此项参数可能在应用大型数据集时非常有用。
+
+```{r}
+datatable(data,
+          options = list(search = list(regex = TRUE, # 是否允许使用正则表达式
+                                       search = '5[4|6] s', #初始化过滤条件
+                                       return = TRUE
+          )))
+```
+
++ 筛选结果高亮。全局筛选时，所有匹配内容均突出显示。
+
+```{r}
+datatable(data, options = list(searchHighlight = TRUE, search = list(search = '5 s')))
+```
+
+仅对单列筛选时，只有字符列能突出显示。
+
+```{r}
+datatable(data,
+          options = list(
+            searchHighlight = TRUE,
+            search = list(targets = 2, search = 's')
+          ),
+          filter = 'top')
+```
+
+## 排序（order）
+
+<!--<https://datatables.net/reference/option/order>-->
+
+### 列的排序方式（order）
+
+order 参数可用来设置初始化的排序方式。在使用表格的过程中，各列表头处都有正三角和倒三角符号，分别表示正序和倒许，鼠标单击那些三角符号，便可以更改目标列的数据排序方式。
+
+```{r}
+datatable(data, options = list(
+  order = list(list(1, 'asc'), # 设置目标列升序
+               list(2, 'desc') # 设置目标列降序
+               ), 
+  columnDefs = list(list(targets = 3,
+                         orderable = FALSE # 禁止对目标列排序
+                         ))))
+```
+
+### 固定列的排序方式（orderFixed）
+
+<!--<https://datatables.net/reference/option/orderFixed><https://datatables.net/reference/api/order.fixed()>-->
+
+可以固定一列或多列的排序方式，即使某一列隐藏，该列排序效果仍然存在。
+
+```{r}
+datatable(data, options = list(orderFixed = list(list(1, 'asc'), list(2, 'desc'))))
+```
+
+当指定排序方式的列较多时，也可以指定各列的排序优先级。通常在 `orderFixed = list()` 中写在前面的列排序优先级更高，但也可以用 pre/post 参数来设置。如下，pre 表示排序优先级更高， post 表示排序优先级更低。
+
+```{r}
+datatable(data, options = list(orderFixed = list(
+  pre = list(2, 'desc'),
+  post = list(1, 'asc')
+)))
+```
+
+## 合并列·隐藏列（visible）
+
+本小节介绍将表格中多列的单元格内容合并，并隐藏被合并的一列。如下对目标列引入 JS， `row[1]` 表示取此表格中第1列数据的值，`row[2]` 表示取此表格中第2列数据的值，将两列数据一起返回，合并后的数据便会展示在目标列的单元格中。
+
+```{r}
+datatable(data, 
+          options = list(
+            columnDefs = list(
+              list(
+                targets = 1,
+                render = JS("function(data, type, row, meta) {
+                  return   row[1] + '-' + row[2]
+                  }")
+              ),
+            list(targets = 2, visible = FALSE) # 隐藏第2列
+)))
+```
+
+## 编辑表格内容（editable）
+
+编辑表格内容的参数是 editable ，可填入的参数值有 TRUE/FALSE、row、column、cell、all ，也可一个特别设定的列表。需要注意的是，不能编辑表头。
+
++ 当 `editable = TRUE` 时，等同于 `editable = 'cell'`，即在展示的表格中双击选中某个单元格时，可以直接编辑该单元格中的内容。同理，若设定 `editable = 'row'`，表示可编辑一行数据，包含行名称。若设定 `editable = 'column'`，表示可编辑表格中的一列数据。若设定 `editable = 'all'`，可编辑整个表格主体。
+
++ 当 `editable = FALSE` 时，不能编辑表格主体的内容。
+
++ 需要对编辑功能做出更多详细设定时，须在 `editable= list()` 中写入更多参数。 
+
+    - target：可填入 row、column、cell、all 中任一种。
+    - numeric：表示目标列仅能输入数字。
+    - area：表示目标列仅能输入文本，包含数字。
+    - disable：表示目标列不可编辑。
+
+```{r}
+datatable(data, 
+          editable = list(
+            target = 'cell',
+            numeric = c(1, 3), # 第1/3列仅能输入数字
+            area = c(2, 4), # 第2/4列可输入任意文本，包含数字
+            disable = list(columns = c(5, 6)) # 第5/6列不能编辑修改
+          ))
+```
+
+##  扩展功能（extensions）
+
+DataTables 提供很多[扩展功能](https://datatables.net/extensions/index)，DT 官网中已对[这些扩展功能](https://rstudio.github.io/DT/extensions.html)作了简要介绍，它们的名称分别是 AutoFill、Buttons、ColReorder、FixedColumns、FixedHeader、KeyTable、Responsive、RowGroup、RowReorder、Scroller、SearchPanes、Select。本小节仅稍作补充。
+
+### 冻结窗格（FixedColumns）
+
+这里的冻结窗格功能和 EXCEL 的不大一样，只能冻结表格中最左边、最右边的列。
+
+```{r}
+dt <- as.data.table(data)
+dt.dcast <- data.table::dcast(dt, type2 ~ type1, value.var = "value")
+
+datatable(
+  dt.dcast,
+  extensions = 'FixedColumns',
+  options = list(
+    dom = 't',
+    scrollX = TRUE,
+    fixedColumns = list(leftColumns = 2, rightColumns = 1)
+  )
+)
+```
+
+### 拖动列的位置（ColReorder）
+
++ 定义列的默认位置。
+
+```{r}
+datatable(data,
+          extensions = 'ColReorder',
+          options = list(colReorder = list(order = c(7, 6, 5, 4, 3, 2, 1, 0))))
+```
+
++ 手动[拖动列的位置](https://datatables.net/reference/option/colReorder)，对各列的位置进行重新排序。
+
+```{r}
+datatable(data, extensions = 'ColReorder', options = list(colReorder = TRUE))
+```
+
++ 在固定窗格的条件下，拖动列的位置。
+
+```{r}
+datatable(data,
+          extensions = 'ColReorder',
+          options = list(colReorder = list(
+            fixedColumnsLeft = 2, # 固定最左边2列
+            fixedColumnsRight = 1 # 固定最右边1列
+          ))) 
+```
+
+### 拖动行的位置（RowReorder）
+
++ 手动拖动行的位置，对各行的位置进行重新排序。默认情况下，单击一行中第一列的位置才能拖动行。
+
+```{r}
+datatable(data,
+          extensions = 'RowReorder',
+          options = list(rowReorder = TRUE, order = list(c(0 , 'asc'))))
+```
+
++ 只有当鼠标单击一行的最后一列时，才能拖动行进行重新排序。若改成 `selector = 'td:first-child'`，改回默认参数值。若改成 `selector = 'tr'`，那么整行都可以拖动。
+
+```{r}
+datatable(data,
+          extensions = 'RowReorder',
+          options = list(
+            rowReorder = list(selector = 'td:last-child'),
+            order = list(c(0 , 'asc'))
+          ))
+```
+
+### 行分组（rowGroup）
+
++ 启用行分组。
+
+```{r}
+datatable(
+  data,
+  rownames = FALSE,
+  extensions = 'RowGroup',
+  options = list(rowGroup = list(dataSrc = 0 # 指定用于行分组的列
+                                 )))
+```
+
++ 起始行汇总。
+
+此选项 [`rowGroup.startRender`](https://datatables.net/reference/option/rowGroup.startRender) 可以指定一个函数，该函数可以为分组的起始行返回一些复杂数据，如聚合、计数或其他摘要信息。每一次更改页面如分页、筛选或排序时，都会重新重新调用该函数，使得分组信息保持最新。
+
+```{r}
+datatable(
+  data,
+  rownames = FALSE,
+  extensions = 'RowGroup',
+  options = list(
+    rowGroup = list(
+      dataSrc = 0,
+      startClassName = 'table-start-group', # 默认值'table-group'
+      startRender = JS(
+        "function ( rows, group ) {
+            return group +' (共'+rows.count()+'行)';
+        }"
+      ))))
+```
+
+### 按键（buttons）
+
+<!--editor:<https://editor.datatables.net/>-->
+
++ 基本用法 
+
+```{r}
+datatable(data,
+          extensions = 'Buttons',
+          options = list(
+            dom = 'Btip',
+            buttons = list(
+              'pageLength',
+              list(
+                extend = 'spacer',
+                style = 'bar',
+                text = '组别1'
+              ),
+              'copy',
+              'copyHtml5',
+              'print',
+              list(
+                extend = 'spacer',
+                style = 'empty',
+                text = '组别2'
+              ),
+              'csv',
+              'csvHtml5',
+              'excel',
+              'excelHtml5',
+              'pdf',
+              'pdfHtml5'
+            )
+          ))
+```
+
++ 扩展自定义（extend）
+
+```{r}
+datatable(data,
+          extensions = 'Buttons',
+          options = list(dom = 'Btip',
+                         buttons =
+                           list(
+                             list(
+                               extend = 'copy',
+                               text = '复制'
+                             ),
+                             list(
+                               extend = 'print',
+                               text = '打印'
+                             ),
+                             list(
+                               extend = 'collection', # 集合按键
+                               buttons = c('csv', 'excel', 'pdf'),
+                               text = '下载'
+                             )
+                           )))
+```
+
+## 与其他包的交互
+
+### formattable 转换成 DT
+
+静态表格包 [formattable](https://renkun-ken.github.io/formattable/) 中有一个函数`as.datatable()`可以将绘制出来的表格转换成 DT 表格。
+
+```{r}
+library(formattable)
+
+fmt <- formattable(
+  data,
+  list(
+    type1 = formatter("span", style = x ~ ifelse(x == "A",
+                                                 style(
+                                                   color = "green", font.weight = "bold"
+                                                 ), NA)), 
+    type2 = formatter(
+      "span",
+      style = x ~ style(color = ifelse(x == 'YES', "green", "red")),
+      x ~ icontext(ifelse(x == 'YES', "ok", "remove"), ifelse(x == 'YES', "Yes", "No"))
+    ),
+    value = color_tile("white", "orange"),
+    area(col = c(value1, value2)) ~ normalize_bar("pink", 0.2),
+    prob1 = formatter(
+      "span",
+      style = x ~ style(color = ifelse(rank(-x) <= 3, "green", "gray")),
+      x ~ sprintf("%.2f (rank: %02d)", x, rank(-x))
+    )
+  )
+)
+
+as.datatable(fmt)
+```
+
+### 使用 crosstalk 实现图表数据共享
+
+当支持 crosstalk 的交互式绘图包和交互式表格包一起使用时，可以通过 crosstalk 实现图表数据共享，比如 plotly 和 DT。
+
+```{r}
+library(crosstalk)
+
+shared_data <- SharedData$new(data)
+
+bscols(list(
+  plotly::plot_ly(
+    data = shared_data,
+    type = 'scatter',
+    mode = 'markers+text',
+    x =  ~ value1,
+    y =  ~ value2,
+    color =  ~ type2
+  ),
+  DT::datatable(
+    shared_data,
+    width = '100%',
+    rownames = FALSE,
+    filter = 'bottom',
+    # 允许使用正则，[A|B]表示多选A或B
+    options = list(search = list(regex = TRUE))
+  )
+))
+```
