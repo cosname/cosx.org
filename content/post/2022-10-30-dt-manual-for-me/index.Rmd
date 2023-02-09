@@ -370,7 +370,7 @@ datatable(
   line-height: 90%;
 }
 
-.title {
+.table .title {
   font-size: 14px;
   font-weight: bold;
 }
