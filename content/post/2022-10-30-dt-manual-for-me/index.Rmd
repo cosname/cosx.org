@@ -386,7 +386,8 @@ htmltools::div(
                  "主标题：这是表格的主标题",
                  htmltools::h6("副标题：这是表格的副标题")),
   tbl,
-  htmltools::div(class = "title", "脚注：这是表格的脚注", htmltools::h6("脚注：这也可是表格的脚注"))
+  htmltools::div(class = "title", "脚注：这是表格的脚注",
+                 htmltools::h6("脚注：这也可是表格的脚注"))
 )
 ```
 
