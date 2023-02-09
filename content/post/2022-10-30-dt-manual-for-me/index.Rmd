@@ -438,7 +438,7 @@ datatable(data,
 
 + 其二，DT 包本身有默认的文本对齐样式，可能会与自定义的 CSS 样式产生冲突。
 
-如下，定义了两个 CSS 样式，类名 'border-left' 表示为目标列的左边框增加一条黑色实线，且文本对齐方式为居中；类名 'color' 表示设定目标列字体颜色为红色，且文本对齐方式为居中。显然，对目标列左边框线和列宽度的设定起了作用，但文本对齐方式没有改变，这是由于 DataTables 自带的文本对齐方式设定地[更加详细](https://github.com/DataTables/DataTablesSrc/blob/fe28d4/css/typography.scss)，而自定义的样式设定地[更加简略](https://d.cosx.org/d/423692-dt-bao-she-zhi-zi-ding-yi-css-yang-shi-shi-wen-ben-ju-zhong-bu-qi-zuo-yong/2)，于是后者设定的文本对齐方式被前者覆盖，从而不起作用。
+如下，定义了两个 CSS 样式，类名 'border-left' 表示为目标列的左边框增加一条黑色实线，且文本对齐方式为居中；类名 'color' 表示设定目标列字体颜色为红色，且文本对齐方式为居中。显然，对目标列左边框线和列宽度的设定起了作用，但文本对齐方式没有改变，这是由于 DataTables 自带的文本对齐方式设定地[更加详细](https://github.com/DataTables/DataTablesSrc/blob/fe28d4/css/typography.scss)，而自定义的样式设定地[更加简略](https://d.cosx.org/d/423692/2)，于是后者设定的文本对齐方式被前者覆盖，从而不起作用。
 
 ```{css}
 .border-left {
@@ -446,7 +446,7 @@ datatable(data,
   text-align: center;
 }
 
-.color {
+.red-center {
   color: red;
   text-align: center;
 }
@@ -455,7 +455,7 @@ datatable(data,
 ```{r}
 datatable(data, options = list(columnDefs = list(
   list(targets = 3, class = 'border-left'),
-  list(targets = 4, class = 'color')
+  list(targets = 4, class = 'red-center')
 )))
 ```
 
