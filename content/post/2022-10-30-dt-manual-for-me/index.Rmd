@@ -238,9 +238,10 @@ datatable(
 ```{r}
 datatable(
   data,
-  caption = htmltools::tags$caption(style =
-                                    'caption-side: bottom; text-align: left; color: red;',
-                                    '注1：一个表格的脚注'))
+  caption = htmltools::tags$caption(
+    style = 'caption-side: bottom; text-align: left; color: red;',
+    '注1：一个表格的脚注')
+)
 ```
 
 基于 htmltools 可以嵌套多层的特点，也可以填入多行脚注。
