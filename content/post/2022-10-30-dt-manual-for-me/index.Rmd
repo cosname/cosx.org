@@ -459,25 +459,27 @@ datatable(data, options = list(columnDefs = list(
 )))
 ```
 
-此时，若要使目标列的文本对齐方式变成居中，有两种方法可以实现，一是自定义的样式参照 DataTables 设定地更加详细，二是在`class= ''`中也添加默认样式。
+此时，若要使目标列的文本对齐方式变成居中，自定义的样式需要参照 DataTables 设定得更加详细。
 
 ```{css}
 table.dataTable th.border-left-new, table.dataTable td.border-left-new {
   border-left: 1px solid #555;
   text-align: center;
 }
+table.dataTable th.red-center, table.dataTable td.red-center {
+  color: red;
+  text-align: center;
+}
 ```
 
 ```{r}
 datatable(data, options = list(columnDefs = list(
-  # 方法一
   list(targets = 3, class = 'border-left-new'),
-  # 方法二
-  list(targets = 4, class = 'dt-center color')
+  list(targets = 4, class = 'red-center')
 )))
 ```
 
-类似地，如果想要自定义样式仅对表头或者表格主体起作用，也需要参照 DataTables 设定地更加详细。比如仅对 th 元素设定样式，引入后就会仅对表头中的单元格起作用，仅对 td 元素设定样式，引入后就会仅对表格主体中的单元格起作用。
+类似地，如果想要自定义样式仅对表头或者表格主体起作用，也需要参照 DataTables 设定得更加详细。比如仅对 th 元素设定样式，引入后就会仅对表头中的单元格起作用，仅对 td 元素设定样式，引入后就会仅对表格主体中的单元格起作用。
 
 ## 通过 formatStyle 函数设置样式
 
