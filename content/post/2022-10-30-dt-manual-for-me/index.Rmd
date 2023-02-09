@@ -556,7 +556,7 @@ datatable(data) |>
 
 ### 单元格背景填充（background）
 
-在使用 formatStyle 函数时，有两种方法为单元格填充背景。第一种方法，使用 styleColorBar 函数为单元格填充带有颜色的条形，这是 DT 包中专门为单元格背景样式开发的函数，不能挪用到其他样式上去。
+在使用 `formatStyle()` 函数时，有两种方法为单元格填充背景。第一种方法，使用 `styleColorBar()` 函数为单元格填充带有颜色的条形，这是 DT 包中专门为单元格背景样式开发的函数，不能挪用到其他样式上去。
 
 ```{r}
 datatable(data) |>
@@ -582,7 +582,7 @@ datatable(data) |>
   )
 ```
 
-第二种方法是直接写入具体的 CSS 样式属性来填充背景形状。需要说明的是，在 formatStyle 函数中填入的 CSS 样式属性有两种写法：一是照搬 CSS，但需要为填入的各 CSS 样式属性加上引号，比如`'font-weight'`、`'font-size'`、`background-color`；二是如前述小节一样，各 CSS 样式属性中`-`后面的首字母改成大写。
+第二种方法是直接写入具体的 CSS 样式属性来填充背景形状。需要说明的是，在 `formatStyle()` 函数中填入的 CSS 样式属性有两种写法：一是照搬 CSS，但需要为填入的各 CSS 样式属性加上引号，比如`'font-weight'`、`'font-size'`、`background-color`；二是如前述小节一样，各 CSS 样式属性中`-`后面的首字母改成大写。
 
 ```{r}
 # 准备渐变色
@@ -699,9 +699,9 @@ datatable(data) |>
 
 为单元格设置文本对齐方式时，有两点需要注意。
 
-+ 其一，一般情况下，由于 formatStyle  函数中设定的各类 CSS 样式属性仅仅会对表格主体起作用，不会对表头起作用，因此若想要同时修改表头的样式，可参考1.3.3小节中的方法来设定仅对表头起作用的样式，或直接引用默认样式。
++ 其一，一般情况下，由于 `formatStyle()` 函数中设定的各类 CSS 样式属性仅仅会对表格主体起作用，不会对表头起作用，因此若想要同时修改表头的样式，可参考1.3.3小节中的方法来设定仅对表头起作用的样式，或直接引用默认样式。
 
-+ 其二，在 formatStyle 函数中设定 `target = 'row'` 时，会改变表格中整行的样式，若不希望其他列受影响，还需要单独设定。
++ 其二，在 `formatStyle()` 函数中设定 `target = 'row'` 时，会改变表格中整行的样式，若不希望其他列受影响，还需要单独设定。
 
 ```{r}
 datatable(data, options = list(columnDefs = list(
@@ -800,7 +800,7 @@ datatable(data,
 
 通过列渲染的方式引入 JS 也可以设置目标列的 CSS 样式。需要注意的是，此方法的本质是通过 JS 函数引入 HTML 元素，再引入 CSS 来设定样式，具体呈现效果与元素本身的特性息息相关。如下面例子中使用 div 元素设定边框样式，本质是在表格的单元格中把原来的数据用一个框框起来，一般情况下边框不会把表格沾满，设置的左边框线也不会是连续的。而 span 元素本身是用来组合文本的，在这种情况下设定边框样式，边框线会紧紧贴着文本。
 
-本小节引入的类名 'border-left' 和 'color' 源于第1.3.3小节。
+本小节引入的类名 'border-left' 和 'red-center' 源于[第 1.4.3 小节](#自定义-css-样式classclassname)。
 
 ```{r}
 datatable(data,
@@ -817,7 +817,7 @@ datatable(data,
               targets = 4,
               render = JS(
                 "function(data, type, row, meta){
-              return '<div class=\"color\">' + data + '</div>'
+              return '<div class=\"red-center\">' + data + '</div>'
               }"
               )
             ),
