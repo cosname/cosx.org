@@ -1,8 +1,8 @@
 ---
 title: "DT 包速查手册"
-date: "2022-11-24"
+date: "2023-02-10"
 author: "袁凡"
-slug: dt-manual-for-me
+slug: dt-manual
 categories:
   - 统计软件
 tags:
@@ -18,7 +18,8 @@ output:
 ---    
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+set.seed(20230210)
 ```
 
 这是一份针对 R 中的表格包 DT 的速查手册。DT 包源自于 JavaScript（以下简称 JS） 中的 DataTables，但并非所有 DataTables 提供的功能都能在 DT 中实现，而 DT 中也有独立于 DataTables 之外的一些更贴合 R 语法的函数。
