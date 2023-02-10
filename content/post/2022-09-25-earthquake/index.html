@@ -68,6 +68,13 @@ description: "本文基于美国地震局和中国地震台网发布的地震活
   text-align: center;
 }
 
+div.img, div.figure {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .sidebar {
   border: 1px solid #ccc;
 }
@@ -116,7 +123,7 @@ div.rmdtip::before {
 <div id="background" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> 本文写作背景</h1>
 {{% figure src="img/ggplot2.svg" width="25%" caption="ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics" link="https://github.com/tidyverse/ggplot2" alt="Create Elegant Data Visualisations Using the Grammar of Graphics" target="_blank" class="center" %}}
-<p>因在统计应用领域的卓越贡献，Hadley Wickham 获得 2019 年考普斯会长奖（COPSS Presidents’ Award），这其中 <strong>ggplot2</strong> 包 <span class="citation">(<a href="#ref-Hadley2016" role="doc-biblioref">Wickham 2016</a>)</span> 可以说是厥功至伟。</p>
+<p>因在统计应用领域的卓越贡献，Hadley Wickham 获得 2019 年考普斯会长奖（COPSS Presidents’ Award），<strong>ggplot2</strong> 包 <span class="citation">(<a href="#ref-Hadley2016" role="doc-biblioref">Wickham 2016</a>)</span> 厥功至伟。</p>
 <p>2020 年左右，我得知<a href="https://github.com/rfordatascience/tidytuesday">tidytuesday</a>项目，这个项目很有意思。</p>
 <ol style="list-style-type: decimal">
 <li>找真实的数据，传播信息，开启话题。</li>
@@ -124,16 +131,16 @@ div.rmdtip::before {
 <li>探索各种各样的可视化形式，给人启发。</li>
 <li>引人入坑 R 语言和数据可视化，壮大社区。</li>
 </ol>
-<p>一直没有时间参与，后来，我决定自己找数据，做一些类似的数据分析项目。翻翻旧博客，看到 2019 年曾尝试分析地震数据，不过是<a href="https://d.cosx.org/d/420854">草草收场</a>，现决定重写，不是简单的更新，是相当彻底地重写。从对比、趋势、分布、关系、时间和空间等方面探索和分析数据，还包含数据获取、清洗和处理的过程，不仅仅是可视化，而是完整地展现一次数据分析之旅。更加注重分析的逻辑，更加关注数据背景和数据解读。</p>
+<p>一直没有时间参与，后来，我决定自己找数据，做一些类似的数据分析项目。翻翻旧博客，看到 2019 年曾尝试分析地震数据，不过是<a href="https://d.cosx.org/d/420854">草草收场</a>。现决定重写，从对比、趋势、分布、关系、时间和空间等方面探索和分析数据，还包含数据获取、清洗和处理的过程，不仅仅是可视化，更加注重分析的过程，数据背景和解读。</p>
 </div>
 <div id="earthquakes-background" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> 地震背景信息</h1>
 <p>从自然资源部下的中国地质调查局网站 (<a href="https://www.cgs.gov.cn/" class="uri">https://www.cgs.gov.cn/</a>) 了解到一些背景信息。我国使用的震级标准是国际上的里氏分级表，一共 9 个等级。小于 3 级的地震不易察觉。4.5 级及以下的地震一般不会造成破坏。大于4.5级而小于6级的地震可以造成破坏，具体破坏情况还与震源深度、震中距等多种因素有关。震级每相差1.0级，能量相差大约30倍，震级相差0.1级，释放的能量平均相差1.4倍。一个6级地震释放的能量相当于美国投掷在日本广岛的原子弹所具有的能量。一个 7 级地震释放的能量相当于 30 颗这样的原子弹，而一个 8 级地震释放的能量相当于 900 颗这样的原子弹。</p>
 <ul>
-<li>1976 年河北唐山地震震级为 7.6 级</li>
-<li>2008 年四川汶川地震震级为 8.0 级</li>
-<li>2013 年四川雅安地震震级为 7.0 级</li>
-<li>2021 年青海玛多地震震级为 7.4 级</li>
+<li>1976 年河北唐山地震震级为 7.6 级。</li>
+<li>2008 年四川汶川地震震级为 8.0 级。</li>
+<li>2013 年四川雅安地震震级为 7.0 级。</li>
+<li>2021 年青海玛多地震震级为 7.4 级。</li>
 </ul>
 <p>更多背景信息，可以从中国地震局地震预测研究所网站(<a href="https://www.ief.ac.cn" class="uri">https://www.ief.ac.cn</a>)新闻或发布的报告，如<a href="https://www.ief.ac.cn/upload/a5fffe35-d881-45ac-98db-0dae5c0b3593/20220223/64991645600860360.pdf">2021年5月22日青海玛多 7.4 级地震科学考察报告.pdf</a>，或者中国地质调查局网站 (<a href="https://www.cgs.gov.cn/" class="uri">https://www.cgs.gov.cn/</a>) 了解。</p>
 </div>
@@ -153,7 +160,7 @@ head(quake6)</code></pre>
 ## 6 PDE 1973     1  18  92814  -6.87 149.99  43       6.8</code></pre>
 <p>这是一个 data.frame，一共 4999 条记录 9 个字段，分别是 Cat 、年份 year、月份 month、日 day、时间 time、纬度 lat、经度 long、震深 dep 和震级 magnitude。此数据集的源头是<a href="https://earthquake.usgs.gov/">美国地震局（USGS）</a>，2008 年四川汶川地震才过去两年，2010 年在统计之都论坛，曾引发大家的讨论<a href="https://d.cosx.org/d/101510">地震是不是越来越频繁了</a>。</p>
 <pre class="r"><code>str(quake6)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    4999 obs. of  9 variables:
+<pre><code>## &#39;data.frame&#39;:	4999 obs. of  9 variables:
 ##  $ Cat      : Factor w/ 3 levels &quot;PDE&quot;,&quot;PDE-Q&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
 ##  $ year     : int  1973 1973 1973 1973 1973 1973 1973 1973 1973 1973 ...
 ##  $ month    : int  1 1 1 1 1 1 1 1 1 1 ...
@@ -212,9 +219,8 @@ aggregate(data = quake6, time ~ year, FUN = length) |&gt;
 <p>数据集 quake6 不大，可以用 ggbeeswarm <span class="citation">(<a href="#ref-Clarke2017" role="doc-biblioref">Clarke and Sherrill-Mix 2017</a>)</span> 包将所有点绘制出来，添加抖动后，可以防止一定程度的覆盖重合。散点的疏密体现数据的分布，相比于直方图，附加好处是直观地展示原始信息，特别是位于分布尾部的数据。</p>
 <pre class="r"><code>library(ggbeeswarm)
 
-ggplot(quake6, aes(x = as.factor(year), y = magnitude, colour = as.factor(year))) +
-  geom_quasirandom(groupOnX = TRUE) +
-  coord_flip() +
+ggplot(quake6, aes(x = magnitude, y = as.factor(year), colour = as.factor(year))) +
+  geom_quasirandom() +
   geom_jitter() +
   theme_minimal() +
   theme(legend.position = &quot;none&quot;) +
@@ -235,10 +241,6 @@ ggplot(quake6, aes(x = magnitude, y = as.factor(year), height = after_stat(densi
   geom_ridgeline(stat = &quot;density&quot;) +
   theme_ridges() +
   labs(x = &quot;震级&quot;, y = &quot;年份&quot;)</code></pre>
-<pre><code>## Warning: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
-## Please use the `linewidth` argument instead.</code></pre>
-<pre><code>## Warning: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
-## Please use the `linewidth` argument instead.</code></pre>
 <div class="figure"><span style="display:block;" id="fig:quake6-ridges"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/quake6-ridges-1.png" alt="1973-2010 年世界6级以上地震分布" width="576" />
 <p class="caption">
@@ -305,11 +307,11 @@ ggplot() +
 <!-- 从中国看世界的地震活动，2022 年年末将使用 2022 年整年的地震数据，也顺便了解一下代码的稳定性 -->
 <div id="earthquake-ceic" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> 数据准备</h2>
-<p>相比于美国，我更关心中国境内的地震情况，所以，从中国地震台网 <a href="http://www.ceic.ac.cn" class="uri">http://www.ceic.ac.cn</a> 下载 2012-01-01 至 2022-08-12 的地震数据。由于得到的是一个<strong>奇葩</strong>的 <a href="data/quakes_20220812.xls">XLS 数据文件</a>，竟不能用 <strong>readxl</strong> 包读取，甚至用 Excel 软件打开时，弹出文件格式和扩展名不匹配的警告，还说文件可能已损坏或不安全。因此，接下来准备不把它看作是 XLS 文件，而是一个 XML 格式的文件。实际上，XLS 或 XLSX 文件可以看作某种特殊的 XML 格式，下面就用 Base R 内置的函数 <code>read.delim()</code> 读取数据。</p>
+<p>相比于美国，我更关心中国境内的地震情况，所以，从中国地震台网 <a href="http://www.ceic.ac.cn" class="uri">http://www.ceic.ac.cn</a> 下载 2012-01-01 至 2022-12-31 的地震数据。由于得到的是一个<strong>奇葩</strong>的 <a href="data/quakes_20221231.xls">XLS 数据文件</a>，竟不能用 <strong>readxl</strong> 包读取，甚至用 Excel 软件打开时，弹出文件格式和扩展名不匹配的警告，还说文件可能已损坏或不安全。因此，接下来准备不把它看作是 XLS 文件，而是一个 XML 格式的文件。实际上，XLS 或 XLSX 文件可以看作某种特殊的 XML 格式，下面就用 Base R 内置的函数 <code>read.delim()</code> 读取数据。</p>
 <!-- 
 再一次看见 Base R 的厉害，当 tidyverse 搞不定的时候，就用 Base R 吧，没有什么是 Base R 搞不定的，有的话，多半是使用姿势不对。 
 -->
-<pre class="r"><code>x &lt;- read.delim(file = &quot;data/quakes_20220812.xls&quot;, header = FALSE)</code></pre>
+<pre class="r"><code>x &lt;- read.delim(file = &quot;data/quakes_20221231.xls&quot;, header = FALSE)</code></pre>
 <p>读进来一个超长的字符串向量，先来看看将 xls 文件被当作文本文件读进来的内容，前几行声明文档是 XML 格式的，字符串超级长，没有数据信息，下面从第 4 个开始。</p>
 <pre class="r"><code>x[4:25, ]</code></pre>
 <pre><code>##  [1] &quot;&lt;Table&gt;&quot;                                                     
@@ -317,23 +319,23 @@ ggplot() +
 ##  [3] &quot;&lt;Row&gt;&quot;                                                       
 ##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;发震时刻&lt;/Data&gt;&lt;/Cell&gt;&quot;           
 ##  [5] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;震级(M)&lt;/Data&gt;&lt;/Cell&gt;&quot;            
-##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;           
-##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;            
+##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;            
 ##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;深度(千米)&lt;/Data&gt;&lt;/Cell&gt;&quot;         
 ##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;参考位置&lt;/Data&gt;&lt;/Cell&gt;&quot;           
 ## [10] &quot;&lt;/Row&gt;&quot;                                                      
 ## [11] &quot;&lt;Row&gt;&quot;                                                       
-## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 23:58:52&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.0&lt;/Data&gt;&lt;/Cell&gt;&quot;                
-## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;27.23&lt;/Data&gt;&lt;/Cell&gt;&quot;              
-## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;103.75&lt;/Data&gt;&lt;/Cell&gt;&quot;             
-## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;15&lt;/Data&gt;&lt;/Cell&gt;&quot;                 
-## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;云南昭通市昭阳区&lt;/Data&gt;&lt;/Cell&gt;&quot;   
+## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-12-30 07:26:47&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;5.2&lt;/Data&gt;&lt;/Cell&gt;&quot;                
+## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;-0.15&lt;/Data&gt;&lt;/Cell&gt;&quot;              
+## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;97.45&lt;/Data&gt;&lt;/Cell&gt;&quot;              
+## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;10&lt;/Data&gt;&lt;/Cell&gt;&quot;                 
+## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;印尼苏门答腊岛北部&lt;/Data&gt;&lt;/Cell&gt;&quot; 
 ## [18] &quot;&lt;/Row&gt;&quot;                                                      
 ## [19] &quot;&lt;Row&gt;&quot;                                                       
-## [20] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 15:47:07&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [21] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;2.5&lt;/Data&gt;&lt;/Cell&gt;&quot;                
-## [22] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;36.36&lt;/Data&gt;&lt;/Cell&gt;&quot;</code></pre>
+## [20] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-12-29 21:13:36&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [21] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;5.2&lt;/Data&gt;&lt;/Cell&gt;&quot;                
+## [22] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;6.10&lt;/Data&gt;&lt;/Cell&gt;&quot;</code></pre>
 <p>数据都藏在 Excel 文件的格子 Cell 里，不同列的数据类型可能不一样，甚至同一列还出现不同类型的数据，比如将数值当作文本。为了把它们提取出来，将所有字段当作字符串。先准备一个字符串提取函数，从给定的一个字符串向量中，按照匹配模式提取一部分。</p>
 <pre class="r"><code>str_extract &lt;- function(text, pattern, ...) regmatches(text, gregexpr(pattern, text, ...))</code></pre>
 <p>从字符串向量中过滤出含表头、发震时刻、震级(M)、纬度(°)、经度(°)、深度(千米)和参考位置等字段信息的子字符串向量。</p>
@@ -342,73 +344,66 @@ x_str &lt;- unlist(x_str)
 head(x_str, 20)</code></pre>
 <pre><code>##  [1] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;发震时刻&lt;/Data&gt;&lt;/Cell&gt;&quot;           
 ##  [2] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;震级(M)&lt;/Data&gt;&lt;/Cell&gt;&quot;            
-##  [3] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;           
-##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;           
+##  [3] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;纬度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;            
+##  [4] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;经度(°)&lt;/Data&gt;&lt;/Cell&gt;&quot;            
 ##  [5] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;深度(千米)&lt;/Data&gt;&lt;/Cell&gt;&quot;         
 ##  [6] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;参考位置&lt;/Data&gt;&lt;/Cell&gt;&quot;           
-##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 23:58:52&lt;/Data&gt;&lt;/Cell&gt;&quot;
-##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.0&lt;/Data&gt;&lt;/Cell&gt;&quot;                
-##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;27.23&lt;/Data&gt;&lt;/Cell&gt;&quot;              
-## [10] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;103.75&lt;/Data&gt;&lt;/Cell&gt;&quot;             
-## [11] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;15&lt;/Data&gt;&lt;/Cell&gt;&quot;                 
-## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;云南昭通市昭阳区&lt;/Data&gt;&lt;/Cell&gt;&quot;   
-## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 15:47:07&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;2.5&lt;/Data&gt;&lt;/Cell&gt;&quot;                
-## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;36.36&lt;/Data&gt;&lt;/Cell&gt;&quot;              
-## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;114.37&lt;/Data&gt;&lt;/Cell&gt;&quot;             
-## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;11&lt;/Data&gt;&lt;/Cell&gt;&quot;                 
-## [18] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;河北邯郸市磁县&lt;/Data&gt;&lt;/Cell&gt;&quot;     
-## [19] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-08-11 11:59:45&lt;/Data&gt;&lt;/Cell&gt;&quot;
-## [20] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;3.9&lt;/Data&gt;&lt;/Cell&gt;&quot;</code></pre>
+##  [7] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-12-30 07:26:47&lt;/Data&gt;&lt;/Cell&gt;&quot;
+##  [8] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;5.2&lt;/Data&gt;&lt;/Cell&gt;&quot;                
+##  [9] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;-0.15&lt;/Data&gt;&lt;/Cell&gt;&quot;              
+## [10] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;97.45&lt;/Data&gt;&lt;/Cell&gt;&quot;              
+## [11] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;10&lt;/Data&gt;&lt;/Cell&gt;&quot;                 
+## [12] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;印尼苏门答腊岛北部&lt;/Data&gt;&lt;/Cell&gt;&quot; 
+## [13] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-12-29 21:13:36&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [14] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;5.2&lt;/Data&gt;&lt;/Cell&gt;&quot;                
+## [15] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;6.10&lt;/Data&gt;&lt;/Cell&gt;&quot;               
+## [16] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;126.25&lt;/Data&gt;&lt;/Cell&gt;&quot;             
+## [17] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;120&lt;/Data&gt;&lt;/Cell&gt;&quot;                
+## [18] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;菲律宾棉兰老岛&lt;/Data&gt;&lt;/Cell&gt;&quot;     
+## [19] &quot;&lt;Cell&gt;&lt;Data ss:Type=String&gt;2022-12-29 01:16:36&lt;/Data&gt;&lt;/Cell&gt;&quot;
+## [20] &quot;&lt;Cell&gt;&lt;Data ss:Type=Number&gt;5.4&lt;/Data&gt;&lt;/Cell&gt;&quot;</code></pre>
 <p>去掉多余的字符，比如成对的 <code>&lt;Cell&gt;&lt;/Cell&gt;</code>，留下想要的数据字段。</p>
 <pre class="r"><code>x_str_tidy &lt;- gsub(x = x_str, pattern = &quot;&lt;Cell&gt;&lt;Data ss:Type=(String|Number)&gt;(.*?)&lt;/Data&gt;&lt;/Cell&gt;&quot;, replacement = &quot;\\2&quot;)
 head(x_str_tidy, 20)</code></pre>
-<pre><code>##  [1] &quot;发震时刻&quot;            &quot;震级(M)&quot;             &quot;纬度(°)&quot;           
-##  [4] &quot;经度(°)&quot;            &quot;深度(千米)&quot;          &quot;参考位置&quot;           
-##  [7] &quot;2022-08-11 23:58:52&quot; &quot;3.0&quot;                 &quot;27.23&quot;              
-## [10] &quot;103.75&quot;              &quot;15&quot;                  &quot;云南昭通市昭阳区&quot;   
-## [13] &quot;2022-08-11 15:47:07&quot; &quot;2.5&quot;                 &quot;36.36&quot;              
-## [16] &quot;114.37&quot;              &quot;11&quot;                  &quot;河北邯郸市磁县&quot;     
-## [19] &quot;2022-08-11 11:59:45&quot; &quot;3.9&quot;</code></pre>
+<pre><code>##  [1] &quot;发震时刻&quot;            &quot;震级(M)&quot;             &quot;纬度(°)&quot;            
+##  [4] &quot;经度(°)&quot;             &quot;深度(千米)&quot;          &quot;参考位置&quot;           
+##  [7] &quot;2022-12-30 07:26:47&quot; &quot;5.2&quot;                 &quot;-0.15&quot;              
+## [10] &quot;97.45&quot;               &quot;10&quot;                  &quot;印尼苏门答腊岛北部&quot; 
+## [13] &quot;2022-12-29 21:13:36&quot; &quot;5.2&quot;                 &quot;6.10&quot;               
+## [16] &quot;126.25&quot;              &quot;120&quot;                 &quot;菲律宾棉兰老岛&quot;     
+## [19] &quot;2022-12-29 01:16:36&quot; &quot;5.4&quot;</code></pre>
 <p>可以说，这种办法简直是把 xls 文件给砸碎了，万幸地是数据文件还可以被当作 XML 文件读取，因此只要 xls 文件坏得还不彻底，这办法总是可以用的。</p>
-<p>那么接下来就要拼起来，拼成一个 matrix，每一行记录包含 6 个字段。字符串向量 x_str_tidy 开头 6 个元素是表头，余下的 <code>x_str_tidy[-c(1:6)]</code> 是观测值，长度为 62646，分成 6 列，一共 10441 行。</p>
+<p>那么接下来就要拼起来，拼成一个 matrix，每一行记录包含 6 个字段。字符串向量 x_str_tidy 开头 6 个元素是表头，余下的 <code>x_str_tidy[-c(1:6)]</code> 是观测值，长度为 65304，分成 6 列，一共 10884 行。</p>
 <pre class="r"><code>dat &lt;- matrix(
   data = x_str_tidy[-c(1:6)], ncol = 6, byrow = TRUE,
-  dimnames = list(c(1:10441), x_str_tidy[1:6])
+  dimnames = list(c(1:(length(x_str_tidy) / 6 - 1)), x_str_tidy[1:6])
 )
 head(dat)</code></pre>
-<pre><code>##   发震时刻              震级(M) 纬度(°) 经度(°) 深度(千米)
-## 1 &quot;2022-08-11 23:58:52&quot; &quot;3.0&quot;   &quot;27.23&quot;  &quot;103.75&quot; &quot;15&quot;      
-## 2 &quot;2022-08-11 15:47:07&quot; &quot;2.5&quot;   &quot;36.36&quot;  &quot;114.37&quot; &quot;11&quot;      
-## 3 &quot;2022-08-11 11:59:45&quot; &quot;3.9&quot;   &quot;40.15&quot;  &quot;77.74&quot;  &quot;14&quot;      
-## 4 &quot;2022-08-11 09:14:13&quot; &quot;3.7&quot;   &quot;40.88&quot;  &quot;78.12&quot;  &quot;10&quot;      
-## 5 &quot;2022-08-11 01:48:16&quot; &quot;3.1&quot;   &quot;32.85&quot;  &quot;83.44&quot;  &quot;10&quot;      
-## 6 &quot;2022-08-10 22:41:55&quot; &quot;3.1&quot;   &quot;36.04&quot;  &quot;78.26&quot;  &quot;100&quot;     
+<pre><code>##   发震时刻              震级(M) 纬度(°)  经度(°)  深度(千米)
+## 1 &quot;2022-12-30 07:26:47&quot; &quot;5.2&quot;   &quot;-0.15&quot;  &quot;97.45&quot;  &quot;10&quot;      
+## 2 &quot;2022-12-29 21:13:36&quot; &quot;5.2&quot;   &quot;6.10&quot;   &quot;126.25&quot; &quot;120&quot;     
+## 3 &quot;2022-12-29 01:16:36&quot; &quot;5.4&quot;   &quot;41.88&quot;  &quot;79.56&quot;  &quot;10&quot;      
+## 4 &quot;2022-12-29 00:34:20&quot; &quot;6.0&quot;   &quot;-21.30&quot; &quot;171.45&quot; &quot;10&quot;      
+## 5 &quot;2022-12-28 21:19:22&quot; &quot;3.6&quot;   &quot;40.16&quot;  &quot;83.12&quot;  &quot;100&quot;     
+## 6 &quot;2022-12-28 16:45:12&quot; &quot;3.0&quot;   &quot;38.88&quot;  &quot;75.89&quot;  &quot;35&quot;      
 ##   参考位置                
-## 1 &quot;云南昭通市昭阳区&quot;      
-## 2 &quot;河北邯郸市磁县&quot;        
-## 3 &quot;新疆克孜勒苏州阿图什市&quot;
-## 4 &quot;新疆克孜勒苏州阿合奇县&quot;
-## 5 &quot;西藏阿里地区改则县&quot;    
-## 6 &quot;新疆和田地区皮山县&quot;</code></pre>
+## 1 &quot;印尼苏门答腊岛北部&quot;    
+## 2 &quot;菲律宾棉兰老岛&quot;        
+## 3 &quot;吉尔吉斯斯坦&quot;          
+## 4 &quot;洛亚蒂群岛东南&quot;        
+## 5 &quot;新疆阿克苏地区沙雅县&quot;  
+## 6 &quot;新疆克孜勒苏州阿克陶县&quot;</code></pre>
 <p>毕竟，不同列的数据类型不一样，需要单独处理，而 matrix 要求各列类型一致，为方便后续数据操作，将数据集转为 data.frame 类型。</p>
 <pre class="r"><code>dat &lt;- as.data.frame(dat, check.names = FALSE, stringsAsFactors = FALSE)</code></pre>
 <p>查看初步整理出来的数据。</p>
 <pre class="r"><code>head(dat)</code></pre>
-<pre><code>##              发震时刻 震级(M) 纬度(°) 经度(°) 深度(千米)
-## 1 2022-08-11 23:58:52     3.0    27.23   103.75         15
-## 2 2022-08-11 15:47:07     2.5    36.36   114.37         11
-## 3 2022-08-11 11:59:45     3.9    40.15    77.74         14
-## 4 2022-08-11 09:14:13     3.7    40.88    78.12         10
-## 5 2022-08-11 01:48:16     3.1    32.85    83.44         10
-## 6 2022-08-10 22:41:55     3.1    36.04    78.26        100
-##                 参考位置
-## 1       云南昭通市昭阳区
-## 2         河北邯郸市磁县
-## 3 新疆克孜勒苏州阿图什市
-## 4 新疆克孜勒苏州阿合奇县
-## 5     西藏阿里地区改则县
-## 6     新疆和田地区皮山县</code></pre>
+<pre><code>##              发震时刻 震级(M) 纬度(°) 经度(°) 深度(千米)               参考位置
+## 1 2022-12-30 07:26:47     5.2   -0.15   97.45         10     印尼苏门答腊岛北部
+## 2 2022-12-29 21:13:36     5.2    6.10  126.25        120         菲律宾棉兰老岛
+## 3 2022-12-29 01:16:36     5.4   41.88   79.56         10           吉尔吉斯斯坦
+## 4 2022-12-29 00:34:20     6.0  -21.30  171.45         10         洛亚蒂群岛东南
+## 5 2022-12-28 21:19:22     3.6   40.16   83.12        100   新疆阿克苏地区沙雅县
+## 6 2022-12-28 16:45:12     3.0   38.88   75.89         35 新疆克孜勒苏州阿克陶县</code></pre>
 </div>
 <div id="数据操作" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> 数据操作</h2>
@@ -429,17 +424,17 @@ head(dat)</code></pre>
 })</code></pre>
 <p>整理好的数据集 dat 如下：</p>
 <pre class="r"><code>str(dat)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    10441 obs. of  10 variables:
-##  $ 发震时刻  : POSIXlt, format: &quot;2022-08-11 23:58:52&quot; &quot;2022-08-11 15:47:07&quot; ...
-##  $ 震级(M)   : num  3 2.5 3.9 3.7 3.1 3.1 3 5.7 5.6 3.7 ...
-##  $ 纬度(°)  : num  27.2 36.4 40.1 40.9 32.9 ...
-##  $ 经度(°)  : num  103.8 114.4 77.7 78.1 83.4 ...
-##  $ 深度(千米): num  15 11 14 10 10 100 18 160 60 10 ...
-##  $ 参考位置  : chr  &quot;云南昭通市昭阳区&quot; &quot;河北邯郸市磁县&quot; &quot;新疆克孜勒苏州阿图什市&quot; &quot;新疆克孜勒苏州阿合奇县&quot; ...
-##  $ 时段      : chr  &quot;23&quot; &quot;15&quot; &quot;11&quot; &quot;09&quot; ...
-##  $ 月份      : chr  &quot;08&quot; &quot;08&quot; &quot;08&quot; &quot;08&quot; ...
+<pre><code>## &#39;data.frame&#39;:	10884 obs. of  10 variables:
+##  $ 发震时刻  : POSIXlt, format: &quot;2022-12-30 07:26:47&quot; &quot;2022-12-29 21:13:36&quot; ...
+##  $ 震级(M)   : num  5.2 5.2 5.4 6 3.6 3 3 4.1 4 5.2 ...
+##  $ 纬度(°)   : num  -0.15 6.1 41.88 -21.3 40.16 ...
+##  $ 经度(°)   : num  97.5 126.2 79.6 171.4 83.1 ...
+##  $ 深度(千米): num  10 120 10 10 100 35 111 10 10 10 ...
+##  $ 参考位置  : chr  &quot;印尼苏门答腊岛北部&quot; &quot;菲律宾棉兰老岛&quot; &quot;吉尔吉斯斯坦&quot; &quot;洛亚蒂群岛东南&quot; ...
+##  $ 时段      : chr  &quot;07&quot; &quot;21&quot; &quot;01&quot; &quot;00&quot; ...
+##  $ 月份      : chr  &quot;12&quot; &quot;12&quot; &quot;12&quot; &quot;12&quot; ...
 ##  $ 年份      : chr  &quot;2022&quot; &quot;2022&quot; &quot;2022&quot; &quot;2022&quot; ...
-##  $ 日期      : chr  &quot;2022-08-11&quot; &quot;2022-08-11&quot; &quot;2022-08-11&quot; &quot;2022-08-11&quot; ...</code></pre>
+##  $ 日期      : chr  &quot;2022-12-30&quot; &quot;2022-12-29&quot; &quot;2022-12-29&quot; &quot;2022-12-29&quot; ...</code></pre>
 </div>
 <div id="数据探索" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> 数据探索</h2>
@@ -511,9 +506,8 @@ head(dat)</code></pre>
 <div id="震级分布抖动图" class="section level3" number="4.3.3">
 <h3><span class="header-section-number">4.3.3</span> 震级分布（抖动图）</h3>
 <p>相比于直方图，还可以用抖动图展示每次地震的震级数据，如图所示。抖动图在散点图的基础上添加随机扰动，其疏密变化能体现震级的分布。</p>
-<pre class="r"><code>ggplot(dat, aes(x = `年份`, y = `震级(M)`, color = `年份`)) +
-  geom_quasirandom(groupOnX = TRUE) +
-  coord_flip() +
+<pre class="r"><code>ggplot(dat, aes(x = `震级(M)`, y = `年份`, color = `年份`)) +
+  geom_quasirandom() +
   geom_jitter() +
   theme_minimal()</code></pre>
 <div class="figure"><span style="display:block;" id="fig:cenc-beeswarm"></span>
@@ -529,7 +523,7 @@ head(dat)</code></pre>
 <pre class="r"><code>ggplot(dat, aes(x = `震级(M)`, y = `年份`, fill = `年份`)) +
   geom_density_ridges(show.legend = FALSE) +
   theme_ridges()</code></pre>
-<pre><code>## Picking joint bandwidth of 0.248</code></pre>
+<pre><code>## Picking joint bandwidth of 0.246</code></pre>
 <div class="figure"><span style="display:block;" id="fig:cenc-ridges"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/cenc-ridges-1.png" alt="世界近 10 年的地震分布" width="768" />
 <p class="caption">
@@ -541,7 +535,7 @@ head(dat)</code></pre>
   ggplot(aes(x = `震级(M)`, y = `年份`, fill = `年份`)) +
   geom_density_ridges(show.legend = FALSE) +
   theme_ridges()</code></pre>
-<pre><code>## Picking joint bandwidth of 0.196</code></pre>
+<pre><code>## Picking joint bandwidth of 0.194</code></pre>
 <div class="figure"><span style="display:block;" id="fig:cenc-ridges-45"></span>
 <img src="{{< blogdown/postref >}}index_files/figure-html/cenc-ridges-45-1.png" alt="世界近 10 年4.5级及以上震级分布" width="768" />
 <p class="caption">
@@ -561,34 +555,34 @@ head(dat)</code></pre>
 dat_sf &lt;- st_as_sf(dat, coords = c(&quot;经度(°)&quot;, &quot;纬度(°)&quot;), crs = 4326)
 # 查看数据
 dat_sf</code></pre>
-<pre><code>## Simple feature collection with 10441 features and 8 fields
+<pre><code>## Simple feature collection with 10884 features and 8 fields
 ## Geometry type: POINT
 ## Dimension:     XY
 ## Bounding box:  xmin: -180 ymin: -69.9 xmax: 179.8 ymax: 86.94
 ## Geodetic CRS:  WGS 84
 ## First 10 features:
 ##               发震时刻 震级(M) 深度(千米)               参考位置 时段 月份 年份
-## 1  2022-08-11 23:58:52     3.0         15       云南昭通市昭阳区   23   08 2022
-## 2  2022-08-11 15:47:07     2.5         11         河北邯郸市磁县   15   08 2022
-## 3  2022-08-11 11:59:45     3.9         14 新疆克孜勒苏州阿图什市   11   08 2022
-## 4  2022-08-11 09:14:13     3.7         10 新疆克孜勒苏州阿合奇县   09   08 2022
-## 5  2022-08-11 01:48:16     3.1         10     西藏阿里地区改则县   01   08 2022
-## 6  2022-08-10 22:41:55     3.1        100     新疆和田地区皮山县   22   08 2022
-## 7  2022-08-10 02:41:20     3.0         18   新疆阿克苏地区温宿县   02   08 2022
-## 8  2022-08-09 20:59:42     5.7        160             印尼班达海   20   08 2022
-## 9  2022-08-08 13:37:19     5.6         60         新不列颠岛地区   13   08 2022
-## 10 2022-08-08 11:00:35     3.7         10 新疆克孜勒苏州阿合奇县   11   08 2022
+## 1  2022-12-30 07:26:47     5.2         10     印尼苏门答腊岛北部   07   12 2022
+## 2  2022-12-29 21:13:36     5.2        120         菲律宾棉兰老岛   21   12 2022
+## 3  2022-12-29 01:16:36     5.4         10           吉尔吉斯斯坦   01   12 2022
+## 4  2022-12-29 00:34:20     6.0         10         洛亚蒂群岛东南   00   12 2022
+## 5  2022-12-28 21:19:22     3.6        100   新疆阿克苏地区沙雅县   21   12 2022
+## 6  2022-12-28 16:45:12     3.0         35 新疆克孜勒苏州阿克陶县   16   12 2022
+## 7  2022-12-27 20:28:22     3.0        111     新疆喀什地区叶城县   20   12 2022
+## 8  2022-12-27 11:30:10     4.1         10       青海海北州门源县   11   12 2022
+## 9  2022-12-27 06:56:20     4.0         10         台湾花莲县海域   06   12 2022
+## 10 2022-12-26 20:21:09     5.2         10             埃塞俄比亚   20   12 2022
 ##          日期            geometry
-## 1  2022-08-11 POINT (103.8 27.23)
-## 2  2022-08-11 POINT (114.4 36.36)
-## 3  2022-08-11 POINT (77.74 40.15)
-## 4  2022-08-11 POINT (78.12 40.88)
-## 5  2022-08-11 POINT (83.44 32.85)
-## 6  2022-08-10 POINT (78.26 36.04)
-## 7  2022-08-10 POINT (80.82 41.94)
-## 8  2022-08-09  POINT (130.1 -6.9)
-## 9  2022-08-08  POINT (151.8 -5.5)
-## 10 2022-08-08 POINT (78.11 40.92)</code></pre>
+## 1  2022-12-30 POINT (97.45 -0.15)
+## 2  2022-12-29   POINT (126.2 6.1)
+## 3  2022-12-29 POINT (79.56 41.88)
+## 4  2022-12-29 POINT (171.4 -21.3)
+## 5  2022-12-28 POINT (83.12 40.16)
+## 6  2022-12-28 POINT (75.89 38.88)
+## 7  2022-12-27 POINT (76.27 37.32)
+## 8  2022-12-27 POINT (101.3 37.74)
+## 9  2022-12-27 POINT (122.5 23.84)
+## 10 2022-12-26   POINT (40.1 14.5)</code></pre>
 <p>接下来，要将所有的点画在图上，单凭肉眼是无法从 10000 多个数据点看出什么空间分布的。</p>
 <pre class="r"><code>ggplot() +
   geom_sf(data = dat_sf, aes(color = `震级(M)`), cex = .1) +
@@ -727,34 +721,34 @@ china_map</code></pre>
 <p>接着，将地震点在中国境内的数据过滤出来。</p>
 <pre class="r"><code>sub_dat_sf &lt;- subset(dat_sf[china_map_union, op = st_within], subset = `震级(M)` &gt;= 6.5)
 sub_dat_sf</code></pre>
-<pre><code>## Simple feature collection with 23 features and 8 fields
+<pre><code>## Simple feature collection with 26 features and 8 fields
 ## Geometry type: POINT
 ## Dimension:     XY
 ## Bounding box:  xmin: 74.04 ymin: 14.1 xmax: 121.7 ymax: 44.27
 ## Geodetic CRS:  WGS 84
 ## First 10 features:
-##                 发震时刻 震级(M) 深度(千米)             参考位置 时段 月份 年份
-## 38   2022-07-27 08:43:27     7.0         10               菲律宾   08   07 2022
-## 457  2022-03-23 01:41:38     6.6         20       台湾台东县海域   01   03 2022
-## 500  2022-03-14 05:05:50     6.5         10           菲律宾群岛   05   03 2022
-## 722  2022-01-08 01:45:27     6.9         10     青海海北州门源县   01   01 2022
-## 1526 2021-05-22 02:04:11     7.4         17     青海果洛州玛多县   02   05 2021
-## 2370 2020-07-23 04:07:20     6.6         10     西藏那曲市尼玛县   04   07 2020
-## 3814 2019-04-18 13:01:05     6.7         24       台湾花莲县海域   13   04 2019
-## 4958 2018-02-06 23:50:42     6.5         11   台湾花莲县附近海域   23   02 2018
-## 5141 2017-11-18 06:34:19     6.9         10     西藏林芝市米林县   06   11 2017
-## 5415 2017-08-09 07:27:52     6.6         11 新疆博尔塔拉州精河县   07   08 2017
+##                 发震时刻 震级(M) 深度(千米)         参考位置 时段 月份 年份
+## 313  2022-09-18 14:44:14     6.9         10       台湾花莲县   14   09 2022
+## 324  2022-09-17 21:41:18     6.5         10       台湾台东县   21   09 2022
+## 385  2022-09-05 12:52:18     6.8         16 四川甘孜州泸定县   12   09 2022
+## 481  2022-07-27 08:43:27     7.0         10           菲律宾   08   07 2022
+## 900  2022-03-23 01:41:38     6.6         20   台湾台东县海域   01   03 2022
+## 943  2022-03-14 05:05:50     6.5         10       菲律宾群岛   05   03 2022
+## 1165 2022-01-08 01:45:27     6.9         10 青海海北州门源县   01   01 2022
+## 1969 2021-05-22 02:04:11     7.4         17 青海果洛州玛多县   02   05 2021
+## 2813 2020-07-23 04:07:20     6.6         10 西藏那曲市尼玛县   04   07 2020
+## 4257 2019-04-18 13:01:05     6.7         24   台湾花莲县海域   13   04 2019
 ##            日期            geometry
-## 38   2022-07-27  POINT (120.5 17.7)
-## 457  2022-03-23 POINT (121.5 23.45)
-## 500  2022-03-14  POINT (119.4 14.1)
-## 722  2022-01-08 POINT (101.3 37.77)
-## 1526 2021-05-22 POINT (98.34 34.59)
-## 2370 2020-07-23 POINT (86.81 33.19)
-## 3814 2019-04-18 POINT (121.7 24.02)
-## 4958 2018-02-06 POINT (121.7 24.13)
-## 5141 2017-11-18 POINT (95.02 29.75)
-## 5415 2017-08-09 POINT (82.89 44.27)</code></pre>
+## 313  2022-09-18 POINT (121.3 23.15)
+## 324  2022-09-17 POINT (121.2 23.05)
+## 385  2022-09-05 POINT (102.1 29.59)
+## 481  2022-07-27  POINT (120.5 17.7)
+## 900  2022-03-23 POINT (121.5 23.45)
+## 943  2022-03-14  POINT (119.4 14.1)
+## 1165 2022-01-08 POINT (101.3 37.77)
+## 1969 2021-05-22 POINT (98.34 34.59)
+## 2813 2020-07-23 POINT (86.81 33.19)
+## 4257 2019-04-18 POINT (121.7 24.02)</code></pre>
 <p>最后，将过滤出来的地震位置画在中国地图上，见下图。</p>
 <pre class="r"><code>ggplot() +
   geom_sf(data = china_map, color = &quot;gray&quot;, fill = NA) +
@@ -841,19 +835,19 @@ sub_dat_sf</code></pre>
 <p>注意到一个有意思的数据情况，有的地震深度为 0，而且每年或多或少包含一些深度为 0 的「地震」，其实是矿震、塌陷、爆破、滑坡等，比如 2021 年地震仪监测到的一些塌陷事故。</p>
 <pre class="r"><code>subset(dat, subset = `深度(千米)` == 0 &amp; `年份` == 2021)</code></pre>
 <pre><code>##                 发震时刻 震级(M) 纬度(°) 经度(°) 深度(千米)
-## 1078 2021-09-21 14:45:29     3.0    34.53    113.5          0
-## 1149 2021-08-31 20:29:18     3.0    38.29    117.0          0
-## 1262 2021-07-24 09:55:52     1.5    39.94    115.9          0
-## 1281 2021-07-19 05:28:13     1.7    39.95    115.9          0
-## 1721 2021-03-18 10:10:57     3.1    39.04    110.6          0
-## 1734 2021-03-11 02:18:06     3.2    39.08    110.2          0
+## 1521 2021-09-21 14:45:29     3.0   34.53   113.5          0
+## 1592 2021-08-31 20:29:18     3.0   38.29   117.0          0
+## 1705 2021-07-24 09:55:52     1.5   39.94   115.9          0
+## 1724 2021-07-19 05:28:13     1.7   39.95   115.9          0
+## 2164 2021-03-18 10:10:57     3.1   39.04   110.6          0
+## 2177 2021-03-11 02:18:06     3.2   39.08   110.2          0
 ##                          参考位置 时段 月份 年份       日期
-## 1078 河南郑州市新密市（疑似塌陷）   14   09 2021 2021-09-21
-## 1149     河北沧州市沧县(疑似塌陷)   20   08 2021 2021-08-31
-## 1262     北京门头沟区（疑似塌陷）   09   07 2021 2021-07-24
-## 1281       北京门头沟区(疑似塌陷)   05   07 2021 2021-07-19
-## 1721       陕西榆林市神木市(塌陷)   10   03 2021 2021-03-18
-## 1734     陕西榆林市神木市（塌陷）   02   03 2021 2021-03-11</code></pre>
+## 1521 河南郑州市新密市（疑似塌陷）   14   09 2021 2021-09-21
+## 1592     河北沧州市沧县(疑似塌陷)   20   08 2021 2021-08-31
+## 1705     北京门头沟区（疑似塌陷）   09   07 2021 2021-07-24
+## 1724       北京门头沟区(疑似塌陷)   05   07 2021 2021-07-19
+## 2164       陕西榆林市神木市(塌陷)   10   03 2021 2021-03-18
+## 2177     陕西榆林市神木市（塌陷）   02   03 2021 2021-03-11</code></pre>
 </div>
 </div>
 </div>
@@ -865,20 +859,20 @@ sub_dat_sf</code></pre>
   &quot;ggplot2&quot;, &quot;ggbeeswarm&quot;, &quot;ggridges&quot;,
   &quot;sf&quot;, &quot;MSG&quot;, &quot;showtext&quot;
 ), dependencies = FALSE)</code></pre>
-<pre><code>## R version 4.2.1 (2022-06-23)
-## Platform: x86_64-apple-darwin17.0 (64-bit)
-## Running under: macOS Big Sur ... 10.16
+<pre><code>## R version 4.2.2 (2022-10-31)
+## Platform: x86_64-apple-darwin22.1.0 (64-bit)
+## Running under: macOS Ventura 13.2
 ## 
-## Locale: zh_CN.UTF-8 / zh_CN.UTF-8 / zh_CN.UTF-8 / C / zh_CN.UTF-8 / zh_CN.UTF-8
+## Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
 ## 
 ## Package version:
-##   blogdown_1.13      ggbeeswarm_0.6.0   ggplot2_3.3.6.9000 ggridges_0.5.3    
-##   knitr_1.40         MSG_0.8            rmarkdown_2.16     sf_1.0-8          
-##   showtext_0.9-5    
+##   blogdown_1.16    ggbeeswarm_0.7.1 ggplot2_3.4.0    ggridges_0.5.4  
+##   knitr_1.42       MSG_0.8          rmarkdown_2.20   sf_1.0-9        
+##   showtext_0.9-5  
 ## 
 ## Pandoc version: 2.19.2
 ## 
-## Hugo version: 0.101.0</code></pre>
+## Hugo version: 0.109.0</code></pre>
 </div>
 <div id="refer" class="section level1" number="6">
 <h1><span class="header-section-number">6</span> 参考文献</h1>

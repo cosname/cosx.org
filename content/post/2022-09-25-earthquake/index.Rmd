@@ -30,6 +30,13 @@ description: "本文基于美国地震局和中国地震台网发布的地震活
   text-align: center;
 }
 
+div.img, div.figure {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .sidebar {
   border: 1px solid #ccc;
 }
@@ -92,7 +99,7 @@ blogdown::shortcode("figure",
 )
 ```
 
-因在统计应用领域的卓越贡献，Hadley Wickham 获得 2019 年考普斯会长奖（COPSS Presidents’ Award），这其中 **ggplot2** 包 [@Hadley2016] 可以说是厥功至伟。
+因在统计应用领域的卓越贡献，Hadley Wickham 获得 2019 年考普斯会长奖（COPSS Presidents’ Award），**ggplot2** 包 [@Hadley2016] 厥功至伟。
 
 2020 年左右，我得知[tidytuesday](https://github.com/rfordatascience/tidytuesday)项目，这个项目很有意思。
 
@@ -101,17 +108,17 @@ blogdown::shortcode("figure",
 1. 探索各种各样的可视化形式，给人启发。
 1. 引人入坑 R 语言和数据可视化，壮大社区。
 
-一直没有时间参与，后来，我决定自己找数据，做一些类似的数据分析项目。翻翻旧博客，看到 2019 年曾尝试分析地震数据，不过是[草草收场](https://d.cosx.org/d/420854)，现决定重写，不是简单的更新，是相当彻底地重写。从对比、趋势、分布、关系、时间和空间等方面探索和分析数据，还包含数据获取、清洗和处理的过程，不仅仅是可视化，而是完整地展现一次数据分析之旅。更加注重分析的逻辑，更加关注数据背景和数据解读。
+一直没有时间参与，后来，我决定自己找数据，做一些类似的数据分析项目。翻翻旧博客，看到 2019 年曾尝试分析地震数据，不过是[草草收场](https://d.cosx.org/d/420854)。现决定重写，从对比、趋势、分布、关系、时间和空间等方面探索和分析数据，还包含数据获取、清洗和处理的过程，不仅仅是可视化，更加注重分析的过程，数据背景和解读。
 
 
 # 地震背景信息 {#earthquakes-background}
 
 从自然资源部下的中国地质调查局网站 (<https://www.cgs.gov.cn/>) 了解到一些背景信息。我国使用的震级标准是国际上的里氏分级表，一共 9 个等级。小于 3 级的地震不易察觉。4.5 级及以下的地震一般不会造成破坏。大于4.5级而小于6级的地震可以造成破坏，具体破坏情况还与震源深度、震中距等多种因素有关。震级每相差1.0级，能量相差大约30倍，震级相差0.1级，释放的能量平均相差1.4倍。一个6级地震释放的能量相当于美国投掷在日本广岛的原子弹所具有的能量。一个 7 级地震释放的能量相当于 30 颗这样的原子弹，而一个 8 级地震释放的能量相当于 900 颗这样的原子弹。
 
-- 1976 年河北唐山地震震级为 7.6 级
-- 2008 年四川汶川地震震级为 8.0 级
-- 2013 年四川雅安地震震级为 7.0 级
-- 2021 年青海玛多地震震级为 7.4 级
+- 1976 年河北唐山地震震级为 7.6 级。
+- 2008 年四川汶川地震震级为 8.0 级。
+- 2013 年四川雅安地震震级为 7.0 级。
+- 2021 年青海玛多地震震级为 7.4 级。
 
 更多背景信息，可以从中国地震局地震预测研究所网站(<https://www.ief.ac.cn>)新闻或发布的报告，如[2021年5月22日青海玛多 7.4 级地震科学考察报告.pdf](https://www.ief.ac.cn/upload/a5fffe35-d881-45ac-98db-0dae5c0b3593/20220223/64991645600860360.pdf)，或者中国地质调查局网站 (<https://www.cgs.gov.cn/>) 了解。
 
@@ -199,9 +206,8 @@ ggplot(data = quake6, aes(x = magnitude)) +
 
 library(ggbeeswarm)
 
-ggplot(quake6, aes(x = as.factor(year), y = magnitude, colour = as.factor(year))) +
-  geom_quasirandom(groupOnX = TRUE) +
-  coord_flip() +
+ggplot(quake6, aes(x = magnitude, y = as.factor(year), colour = as.factor(year))) +
+  geom_quasirandom() +
   geom_jitter() +
   theme_minimal() +
   theme(legend.position = "none") +
@@ -304,14 +310,14 @@ ggplot() +
 
 ## 数据准备 {#earthquake-ceic}
 
-相比于美国，我更关心中国境内的地震情况，所以，从中国地震台网 <http://www.ceic.ac.cn> 下载 2012-01-01 至 2022-08-12 的地震数据。由于得到的是一个**奇葩**的 [XLS 数据文件](data/quakes_20220812.xls)，竟不能用 **readxl** 包读取，甚至用 Excel 软件打开时，弹出文件格式和扩展名不匹配的警告，还说文件可能已损坏或不安全。因此，接下来准备不把它看作是 XLS 文件，而是一个 XML 格式的文件。实际上，XLS 或 XLSX 文件可以看作某种特殊的 XML 格式，下面就用 Base R 内置的函数 `read.delim()` 读取数据。
+相比于美国，我更关心中国境内的地震情况，所以，从中国地震台网 <http://www.ceic.ac.cn> 下载 2012-01-01 至 2022-12-31 的地震数据。由于得到的是一个**奇葩**的 [XLS 数据文件](data/quakes_20221231.xls)，竟不能用 **readxl** 包读取，甚至用 Excel 软件打开时，弹出文件格式和扩展名不匹配的警告，还说文件可能已损坏或不安全。因此，接下来准备不把它看作是 XLS 文件，而是一个 XML 格式的文件。实际上，XLS 或 XLSX 文件可以看作某种特殊的 XML 格式，下面就用 Base R 内置的函数 `read.delim()` 读取数据。
 
 <!-- 
 再一次看见 Base R 的厉害，当 tidyverse 搞不定的时候，就用 Base R 吧，没有什么是 Base R 搞不定的，有的话，多半是使用姿势不对。 
 -->
 
 ```{r}
-x <- read.delim(file = "data/quakes_20220812.xls", header = FALSE)
+x <- read.delim(file = "data/quakes_20221231.xls", header = FALSE)
 ```
 
 读进来一个超长的字符串向量，先来看看将 xls 文件被当作文本文件读进来的内容，前几行声明文档是 XML 格式的，字符串超级长，没有数据信息，下面从第 4 个开始。
@@ -343,13 +349,13 @@ head(x_str_tidy, 20)
 
 可以说，这种办法简直是把 xls 文件给砸碎了，万幸地是数据文件还可以被当作 XML 文件读取，因此只要 xls 文件坏得还不彻底，这办法总是可以用的。
 
-那么接下来就要拼起来，拼成一个 matrix，每一行记录包含 6 个字段。字符串向量 x_str_tidy 开头 6 个元素是表头，余下的 `x_str_tidy[-c(1:6)]` 是观测值，长度为 62646，分成 6 列，一共 10441 行。
+那么接下来就要拼起来，拼成一个 matrix，每一行记录包含 6 个字段。字符串向量 x_str_tidy 开头 6 个元素是表头，余下的 `x_str_tidy[-c(1:6)]` 是观测值，长度为 65304，分成 6 列，一共 10884 行。
 
 
 ```{r}
 dat <- matrix(
   data = x_str_tidy[-c(1:6)], ncol = 6, byrow = TRUE,
-  dimnames = list(c(1:10441), x_str_tidy[1:6])
+  dimnames = list(c(1:(length(x_str_tidy) / 6 - 1)), x_str_tidy[1:6])
 )
 head(dat)
 ```
@@ -493,9 +499,8 @@ ggplot(data = dat, aes(x = `震级(M)`, y = after_stat(count), fill = `年份`))
 #| fig.width: 8
 #| fig.height: 8
 
-ggplot(dat, aes(x = `年份`, y = `震级(M)`, color = `年份`)) +
-  geom_quasirandom(groupOnX = TRUE) +
-  coord_flip() +
+ggplot(dat, aes(x = `震级(M)`, y = `年份`, color = `年份`)) +
+  geom_quasirandom() +
   geom_jitter() +
   theme_minimal()
 ```
