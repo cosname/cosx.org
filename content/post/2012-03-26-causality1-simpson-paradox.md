@@ -24,9 +24,9 @@ forum_id: 418864
 
 目前市面上能够买到的相关教科书仅有 2011 年图灵奖得主 Judea Pearl 的 [Causality: Models, Reasoning, and Inference](http://bayes.cs.ucla.edu/BOOK-2K/)。Harvard 的统计学家 Donald Rubin 和 计量经济学家 Guido Imbens 合著的教科书历时多年仍尚未完成；Harvard 的流行病学家 James Robins 和他的同事也在写一本因果推断的教科书，本书目前只完成了第一部分，还未出版（[见此处](http://www.hsph.harvard.edu/faculty/miguel-hernan/causal-inference-book/)）。我本人学习因果推断是从 Judea Pearl 的教科书入手的，不过这本书晦涩难懂，实在不适合作为入门的教科书。Donald Rubin 对 Judea Pearl 提出的因果图模型（causal diagram）非常反对，他的教科书中杜绝使用因果图模型。我本人虽然脑中习惯用图模型进行思考，但是还是更偏好 Donald Rubin 的风格，因为这对于入门者，可能更容易。不过这一节，先从一个例子出发，不引进新的统计符号和概念。
 
-天才的高斯在研究天文学时，首次引进了最大似然和最小二乘的思想，并且导出了正态分布（或称高斯分布）。其中最大似然有些争议，比如 Arthur Dempster 教授说，其实高斯那里的似然，有贝叶斯或者信仰推断（fiducial inference）的成分。高斯那里的“统计”是关于**“误差”的理论**，因为他研究的对象是“物理模型”加“随机误差”。大约在 100 多年前，Francis Galton 研究了父母身高和子女身高的“关系”，提出了“（向均值）回归”的概念。众所周知，他用的是线性回归模型。此时的模型不再是严格意义的“物理模型”，而是“统计模型” — 用于刻画变量之间的关系，而不一定是物理机制。之后，Karl Pearson 提出了“相关系数”（correlation coefficient）。后世研究的统计，大多是关于**“相关关系”的理论。**但是关于**“因果关系”**的统计理论，非常稀少。据 Judea Pearl 说，Karl Pearson 明确的反对用统计研究因果关系；有意思的是，后来因果推断为数不多的重要文章（如 Rosenbaum and Rubin 1983; Pearl 1995）都发表在由 Karl Pearson 创刊的 Biometrika 上。下面讲到的悖论，可以说是困扰统计的根本问题，我学习因果推断便是由此入门的。
+天才的高斯在研究天文学时，首次引进了最大似然和最小二乘的思想，并且导出了正态分布（或称高斯分布）。其中最大似然有些争议，比如 Arthur Dempster 教授说，其实高斯那里的似然，有贝叶斯或者信仰推断（fiducial inference）的成分。高斯那里的“统计”是关于 **“误差”的理论** ，因为他研究的对象是“物理模型”加“随机误差”。大约在 100 多年前，Francis Galton 研究了父母身高和子女身高的“关系”，提出了“（向均值）回归”的概念。众所周知，他用的是线性回归模型。此时的模型不再是严格意义的“物理模型”，而是“统计模型” — 用于刻画变量之间的关系，而不一定是物理机制。之后，Karl Pearson 提出了“相关系数”（correlation coefficient）。后世研究的统计，大多是关于 **“相关关系”的理论。** 但是关于 **“因果关系”** 的统计理论，非常稀少。据 Judea Pearl 说，Karl Pearson 明确地反对用统计研究因果关系；有意思的是，后来因果推断为数不多的重要文章（如 Rosenbaum and Rubin 1983; Pearl 1995）都发表在由 Karl Pearson 创刊的 Biometrika 上。下面讲到的悖论，可以说是困扰统计的根本问题，我学习因果推断便是由此入门的。
 
-在高维列联表分析中， 有一个很有名的例子，叫做 Yule-Simpson’s Paradox。有文献称，Karl Pearson 很早就发现了这个悖论 — 也许这正是他反对统计因果推断的原因。此悖论表明，存在如下的可能性：$X$ 和 $Y$ 在边缘上正相关；但是给定另外一个变量 `$Z$` 后，在 `$Z$` 的每一个水平上，`$X$` 和 `$Y$` 都负相关。Table 1 是一个数值的例子，取自 Pearl (2000)。
+在高维列联表分析中， 有一个很有名的例子，叫做 Yule-Simpson’s Paradox。有文献称，Karl Pearson 很早就发现了这个悖论 — 也许这正是他反对统计因果推断的原因。此悖论表明，存在如下的可能性：`$X$` 和 `$Y$` 在边缘上正相关；但是给定另外一个变量 `$Z$` 后，在 `$Z$` 的每一个水平上，`$X$` 和 `$Y$` 都负相关。Table 1 是一个数值的例子，取自 Pearl (2000)。
 
   ![simpson](https://uploads.cosx.org/2012/03/simpson.png)
 

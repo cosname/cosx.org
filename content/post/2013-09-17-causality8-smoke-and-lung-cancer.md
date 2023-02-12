@@ -17,6 +17,11 @@ slug: causality8-smoke-and-lung-cancer
 forum_id: 418970
 ---
 
+`$$
+\def\ind{{\perp\!\!\!\perp}}
+\def\nind{{\not\!\perp\!\!\!\perp}}
+$$` 
+
 这一节介绍一个有趣的历史性例子：吸烟是否导致肺癌？主要涉及的人物是 R A Fisher 和 J Cornfield。前者估计上这个网站的人都听过，后者就显得比较陌生了。事实上，Cornfield 在统计、生物统计和流行病学都有着非常重要的贡献。来自 Wikipedia 的一句介绍：“He was the R. A. Fisher Lecturer in 1973 and President of the American Statistical Association in 1974.” 虽然 Cornfield 和 Fisher 学术观点不同（本节介绍），但是 Cornfield 还是在 1973 年给了 Fisher Lecture。
 
 下面我们先介绍 Fisher 和 Cornfield 关于观察性研究中因果推断的两种观点，再给出技术性的细节。
@@ -76,7 +81,7 @@ RR_{UD} = \frac{ P(D=1\mid U=1) }{ P(D=1\mid U=0) }.
 \end{eqnarray}
 $$`
   
-不妨假设 `\(RR_{ED}\geq 1\)` 并且 `\(RR_{EU} \geq 1\)`；若不成立，我们总可以重新对这些二值变量的 `\(0\)` 和 `\(1\)` 类进行重新定义。首先，我们在条件独立性 `\(E\perp D|U\)` 下得到 `\(RR_{ED}\)` 的等价表示：
+不妨假设 `\(RR_{ED}\geq 1\)` 并且 `\(RR_{EU} \geq 1\)`；若不成立，我们总可以重新对这些二值变量的 `\(0\)` 和 `\(1\)` 类进行重新定义。首先，我们在条件独立性 `\(E\ind D|U\)` 下得到 `\(RR_{ED}\)` 的等价表示：
   
 `$$
 \begin{eqnarray}
