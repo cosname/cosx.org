@@ -2427,7 +2427,7 @@ data7[type %in% c('北京', '上海', '定西', '台湾', '香港'), ] |>
 
 为方便复现本文内容，下面列出详细的环境信息：
 
-```{r, message=FALSE, echo=TRUE}
+```{r echo=TRUE}
 xfun::session_info(packages = c(
   "knitr", "rmarkdown", "blogdown",
   "echarts4r.maps", "echarts4r", "countrycode",
