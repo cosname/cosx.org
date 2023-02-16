@@ -135,9 +135,10 @@ forum_id: 423404
 
 那个时候我在跟Michael头脑风暴想研究课题，一开始Michael给我的题目是做BLB（Bag of Little Bootstrap）。是他之前做分布式统计推断(distributed inference)的一个想法。当数据分布在很多机器上的时候，这时候你想做自助法其实不容易，因为他们的通信成本（communication cost）很高。那我们有没有办法在局部做自助法，然后最后再统一起来做置信区间呢？因为当时做分布式统计推断的时候，大部分还是在考虑估计，很少人会考虑统计推断的问题。所以当时就有一个方法叫Bag of Little Bootstrap，BLB。Michael想让我研究一下这个方法的性质。起初我跟他做第一个框架，推High-Dimensional Edgeworth expansion，跟我现在的研究方向差别很大。
 
-我第一个暑假大概花了一两个月的时间读一本非常经典的Edgeworth expansion教材，然后试图去学习那些证明，他们的证明都是假设维度是个常数，但是实际上那个常数是关于维数指数上升的，所以没有办法直接使用。我花了很多时间试图把证明给推广到高维情况。后来推出一些很奇怪结论，比如说它这个维数（dimension）是 n的2/27次方的时候，确实能得到一些结果，非常奇怪。当时我也写下来一个大概三四十页的笔记，但是我觉得，好像我也并没有直接想把这篇文章写成一篇论文的。但与此同时，我正好第一年的下半学期我上了[Ben Recht] (http://people.eecs.berkeley.edu/~brecht/)的凸优化。同样也是因为结课项目，当时我也是想好好地研究一个和variance reduction相关的问题。这个问题相当于把蒙特卡洛里面被研究很多的方法用在了优化里面，达到了一些很好的性质。于是当时我就在想能不能沿着这个方面做一下。当时找的切入点非常小，我就想证明SVRG[^14]这个算法也能应用于非强凸优化问题。
+我第一个暑假大概花了一两个月的时间读一本非常经典的Edgeworth expansion教材，然后试图去学习那些证明，他们的证明都是假设维度是个常数，但是实际上那个常数是关于维数指数上升的，所以没有办法直接使用。我花了很多时间试图把证明给推广到高维情况。后来推出一些很奇怪结论，比如说它这个维数（dimension）是 n的2/27次方的时候，确实能得到一些结果，非常奇怪。当时我也写下来一个大概三四十页的笔记，但是我觉得，好像我也并没有直接想把这篇文章写成一篇论文的。但与此同时，我正好第一年的下半学期我上了Ben Recht[^14]的凸优化。同样也是因为结课项目，当时我也是想好好地研究一个和variance reduction相关的问题。这个问题相当于把蒙特卡洛里面被研究很多的方法用在了优化里面，达到了一些很好的性质。于是当时我就在想能不能沿着这个方面做一下。当时找的切入点非常小，我就想证明SVRG[^15]这个算法也能应用于非强凸优化问题。
 
-[^14]: [Accelerating Stochastic Gradient Descent using Predictive Variance Reduction](https://papers.nips.cc/paper/2013/hash/ac1dd209cbcc5e5d1c6e28598e8cbbe8-Abstract.html)
+[^14]: [Ben Recht](http://people.eecs.berkeley.edu/~brecht/)
+[^15]: [Accelerating Stochastic Gradient Descent using Predictive Variance Reduction](https://papers.nips.cc/paper/2013/hash/ac1dd209cbcc5e5d1c6e28598e8cbbe8-Abstract.html)
 
 **雷**：原来论文的理论只有对强凸（strongly convex）目标函数的结果，但是发现即便非强凸效果也很好。我就在想说有没有办法能证明它对非强凸的结果好？结果发现始终做不出来。但结果很有趣的是，最后我发现了一个问题，大家在讨论优化算法的时候，一般来说从一个初始点开始，运行一万步，我去看这一万步之后的收敛速度。但我发现如果把一万这个数变成一个有某均值的几何随机变量， 就会有一些很奇妙的性质。后来我就通过这个性质设计了一个新的算法，其实就是把SVRG改变了一点点。于是我发现它不仅能对非强凸目标函数可行，并且还能得到一种adaptivity，就是说如果你的目标函数是强凸的，你能直接达到那个收敛速率，但你不需要知道它是不是需要强凸性。后来我管这个方法叫geometrization。然后我就跟Michael说了这个想法，Michael觉得这个想法非常的有趣。说实话，直到现在我也不能完全解释为什么这个就可以实现。
 
@@ -153,10 +154,10 @@ forum_id: 423404
 
 **雷**：这个我非常感谢丁鹏，还有和他同期进来的几个教授，包括Avi Feller，Will Fithian，和当时来这边的一个博士后，叫Alexander D'Amour。他们是Berkeley 因果推断的第一批人，当时在Berkeley搞了一个因果推断的读书小组。起初也是大家一起来读书。我们当时读了很多课题，⽐如说第⼀个学期在读⾼维因果推断，接下来读了⼲涉作⽤下(interference)的统计推断，最优试验设计（optimal design），因果推断哲学，因果推断经典应⽤，半参数模型，⾯板数据。这个其实让我学到很多，也是让我因果推断入门一个最好的方式。因为因果推断其实是⼀个很⼤的领域，⼊⻔不是那么的简单。在我刚开始读博⼠的时候，因果推断其实并没有那么⽕。尤其是当你刚开始学potential outcome的时候，会觉得很难理解。但当时丁鹏、Avi Feller， Will Fithian，还有Alexander D'Amour，以及后来加⼊的Sam Pimentel构建了⼀个⾮常好的学习环境。我们每周都会有一个人讲一篇论文，一共会有两个小时的时间。演讲者并没有很大的压力，他其实只准备30~40分钟，而另外一个半小时间我们可能都在聊天，一直在讨论。我们会抓住一些点拼命地去讨论，去看为什么要这么做，怎么去论证。比如说为什么我们要考虑finite population analysis，super population 和finite population之间到底有什么区别？我们怎么去理解IPW estimator，怎么去理解ATT（Average Treatment effect on the Treated）、ATE（Average Treatment Effect），怎么去理解最优试验设计和randomized design，它们的核心区别，以及怎么去理解各种不同推断框架下面去定义估计量，它们会有什么tricky的地方。所以当时他们构建了一个很好的环境，可以让我们沟通，可以让我们去深入的理解一个问题。
 
-在这个过程中，我们有连续三个学期都在讨论一个问题，叫overlap，或者叫positivity。简单来说，在任何一个观察性研究（observational study），如果你想做因果推断，一个必要的条件是说，任何一个加入到你的研究里面的人必须得有不小的概率，分配到到实验组和控制组。因为如果说有一批人永远都只会被分配到对照组（或者实验组），这时候你就只能通过一些extrapolation去推断这些人的counterfactual。你看，大部分论文都会假设positivity或者overlap，那到底我们能不能检验？到底它有什么implication？它是不是一个很强的假设？有很多时候观察性研究，第一个假设就是strong ignorability，第二个假设就是positivity。大家都会花很长时间去辩护 strong ignorability，但很多时候大家都会忽略positivity。最多给一个就是propensity score的图，去看一下有没有极端值（extreme value）。于是我们就在想能不能系统地研究这个问题。我们合写的第一篇文章发表在JOE上[^15]，主要研究了overlap假设的implication，发现这个假设在很多情况下很强，并不容易满足。在2017年我们发现这些implications可以用来检验overlap。不仅能检验，而且不需要任何对数据分布的假设（distribution-free test）。于是我们又合写了第二篇文章，到现在都还没有发出来，只放在我的网站上了[^16]。
+在这个过程中，我们有连续三个学期都在讨论一个问题，叫overlap，或者叫positivity。简单来说，在任何一个观察性研究（observational study），如果你想做因果推断，一个必要的条件是说，任何一个加入到你的研究里面的人必须得有不小的概率，分配到到实验组和控制组。因为如果说有一批人永远都只会被分配到对照组（或者实验组），这时候你就只能通过一些extrapolation去推断这些人的counterfactual。你看，大部分论文都会假设positivity或者overlap，那到底我们能不能检验？到底它有什么implication？它是不是一个很强的假设？有很多时候观察性研究，第一个假设就是strong ignorability，第二个假设就是positivity。大家都会花很长时间去辩护 strong ignorability，但很多时候大家都会忽略positivity。最多给一个就是propensity score的图，去看一下有没有极端值（extreme value）。于是我们就在想能不能系统地研究这个问题。我们合写的第一篇文章发表在JOE上[^16]，主要研究了overlap假设的implication，发现这个假设在很多情况下很强，并不容易满足。在2017年我们发现这些implications可以用来检验overlap。不仅能检验，而且不需要任何对数据分布的假设（distribution-free test）。于是我们又合写了第二篇文章，到现在都还没有发出来，只放在我的网站上了[^17]。
 
-[^15]: [Overlap in observational studies with high-dimensional covariates](https://www.sciencedirect.com/science/article/pii/S0304407620302694)
-[^16]: [Distribution-Free Assessment of Population Overlap in Observational Studies](https://lihualei71.github.io/ovalue.pdf)
+[^16]: [Overlap in observational studies with high-dimensional covariates](https://www.sciencedirect.com/science/article/pii/S0304407620302694)
+[^17]: [Distribution-Free Assessment of Population Overlap in Observational Studies](https://lihualei71.github.io/ovalue.pdf)
 
 > JOE: Journal of Econometrics
 
