@@ -21,12 +21,12 @@ forum_id: 422978
 slug: scihub-traffic-analysis
 ---
 
-<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/echarts-en.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/ecStat.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/dataTool.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r-binding/echarts4r.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts-world/world.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ramnathv/htmlwidgets@master/inst/www/htmlwidgets.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/lib/echarts-4.8.0/echarts-en.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/lib/echarts-4.8.0/ecStat.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/lib/echarts-4.8.0/dataTool.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/echarts4r.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/lib/echarts-4.8.0/world.js"></script>
 
 <div id="TOC">
 <ul>
@@ -46,8 +46,8 @@ slug: scihub-traffic-analysis
 
 <style type="text/css">
 .col-xs-3 {
-  display: inline-block; 
-  width: 24%; 
+  display: inline-block;
+  width: 24%;
 }
 </style>
 <p>某年某月某日，地球上的一个人类忽然恰好想打开朋友圈看看大家都在做什么，于是恰好翻到一条视频，配文”我们的工作，将会写在人类的历史上”，该名人类恰好在这瞬间产生了一分好奇心，接着点开视频看到一只叼着钥匙的黑乌鸦，于是就恰好发现了<a href="https://sci-hub.se/">Sci-Hub</a>这个神奇的网站。其实这位人类平时只是一条在死水里躺平的咸鱼，但是又恰好被一位统计之都的编辑<a href="https://xiangyun.rbind.io/">黄湘云</a>捞起来做（干）事（活），于是顺理成章地诞生了<a href="https://d.cosx.org/d/422978-sci-hubdoi">这篇讨论帖</a>和这篇文章。</p>
@@ -1260,13 +1260,13 @@ org/10.5061/dryad.q447c.)</p>
 </blockquote>
 <p>可见在2015.9-2016.2的数据中，IP 字段是模糊的，无法定位到用户设备的。在上一小节仅以 IP 为主体的分析中，虽然两个时间段的数据表现差异不小，但至少可以从可比性上认为 Sci-Hub 在2017年提供的用数字表示的 IP 和2015.9-2016.2提供的用字符串表示的 IP 是用同样的方式得到的。但是2017年新增的 USER 字段所代表的含义又是什么呢？为此，需要先探寻 IP 和 USER 之间的关系。</p>
 <p>将全量数据按照 IP（ip）进行分组，分别计算每个 IP 对应的总下载量（freq），以及其他字段去重后的数量，即用户数（user_cnt）、城市数（city_cnt）、国家或地区数（country_cnt）、日期数（date_cnt）、文献数（doi_cnt）、纬度数（lat_cnt）、 经度数（lon_cnt）。如下可知，每一个 IP 只会对应一个城市、国家或地区、经纬度，这说明所有地理位置相关信息确实都是根据 IP 得来的。假如从 IP 解析得到地理位置的这一步存在失误，那么地理层面的数据分析都会建立在这个“失误”上。</p>
-<pre><code>       ip                freq              user_cnt         city_cnt  country_cnt     date_cnt           doi_cnt          lat_cnt     lon_cnt 
- Min.   :       1   Min.   :     1.0   Min.   :     1.00   Min.   :1   Min.   :1   Min.   :  1.000   Min.   :     1.0   Min.   :1   Min.   :1  
- 1st Qu.: 4199748   1st Qu.:     1.0   1st Qu.:     1.00   1st Qu.:1   1st Qu.:1   1st Qu.:  1.000   1st Qu.:     1.0   1st Qu.:1   1st Qu.:1  
- Median : 8462909   Median :     2.0   Median :     1.00   Median :1   Median :1   Median :  1.000   Median :     2.0   Median :1   Median :1  
- Mean   : 8503853   Mean   :    10.1   Mean   :     3.73   Mean   :1   Mean   :1   Mean   :  2.605   Mean   :     9.1   Mean   :1   Mean   :1  
- 3rd Qu.:12786557   3rd Qu.:     5.0   3rd Qu.:     2.00   3rd Qu.:1   3rd Qu.:1   3rd Qu.:  2.000   3rd Qu.:     4.0   3rd Qu.:1   3rd Qu.:1  
- Max.   :17208864   Max.   :404071.0   Max.   :170723.00   Max.   :1   Max.   :1   Max.   :329.000   Max.   :390389.0   Max.   :1   Max.   :1  
+<pre><code>       ip                freq              user_cnt         city_cnt  country_cnt     date_cnt           doi_cnt          lat_cnt     lon_cnt
+ Min.   :       1   Min.   :     1.0   Min.   :     1.00   Min.   :1   Min.   :1   Min.   :  1.000   Min.   :     1.0   Min.   :1   Min.   :1
+ 1st Qu.: 4199748   1st Qu.:     1.0   1st Qu.:     1.00   1st Qu.:1   1st Qu.:1   1st Qu.:  1.000   1st Qu.:     1.0   1st Qu.:1   1st Qu.:1
+ Median : 8462909   Median :     2.0   Median :     1.00   Median :1   Median :1   Median :  1.000   Median :     2.0   Median :1   Median :1
+ Mean   : 8503853   Mean   :    10.1   Mean   :     3.73   Mean   :1   Mean   :1   Mean   :  2.605   Mean   :     9.1   Mean   :1   Mean   :1
+ 3rd Qu.:12786557   3rd Qu.:     5.0   3rd Qu.:     2.00   3rd Qu.:1   3rd Qu.:1   3rd Qu.:  2.000   3rd Qu.:     4.0   3rd Qu.:1   3rd Qu.:1
+ Max.   :17208864   Max.   :404071.0   Max.   :170723.00   Max.   :1   Max.   :1   Max.   :329.000   Max.   :390389.0   Max.   :1   Max.   :1
 </code></pre>
 <p>如上，有一个 IP（12247800）对应的去重用户数有170723位之多，此 IP 从2017.9.1开始出现，扣除10.7至10.29的22天数据缺失，截止2017.12.31日共出现了100天，平均每天对应1707个用户，若一个用户只对应一次文献下载记录，那么此 IP 平均每天每分钟要连续下载1.186篇文献。从数量级上看，非一人之力可为。</p>
 <p>继续观察此 IP 的24小时流量趋势，如下图所示，有一个明显的波谷。如果此 IP 对应的用户全是正常人类，那么确实可以同时贡献这个数量级的流量和形成一个波谷。如果此 IP 对应的用户是一个人类和一种批量抓取文献的手段，那么也有可能达到这种效果。如果此 IP 对应的用户不是人类，只是抓文献的机器，但是抓取文献的时间由正常人类控制，那么也是可能的。经过一番思考，本文作者倾向认为数据中的 IP 和 USER 这两个字段的关系是这样的：</p>
@@ -1352,16 +1352,16 @@ org/10.5061/dryad.q447c.)</p>
 <pre><code>## R version 4.2.2 (2022-10-31)
 ## Platform: x86_64-apple-darwin22.1.0 (64-bit)
 ## Running under: macOS Ventura 13.2
-## 
+##
 ## Locale: en_US.UTF-8 / en_US.UTF-8 / en_US.UTF-8 / C / en_US.UTF-8 / en_US.UTF-8
-## 
+##
 ## Package version:
-##   blogdown_1.16        countrycode_1.4.0    data.table_1.14.6   
-##   echarts4r_0.4.4      echarts4r.maps_0.0.2 knitr_1.42          
-##   rcrossref_1.2.0      rmarkdown_2.20      
-## 
+##   blogdown_1.16        countrycode_1.4.0    data.table_1.14.6
+##   echarts4r_0.4.4      echarts4r.maps_0.0.2 knitr_1.42
+##   rcrossref_1.2.0      rmarkdown_2.20
+##
 ## Pandoc version: 2.19.2
-## 
+##
 ## Hugo version: 0.109.0</code></pre>
 </div>
 <div id="参考文献" class="section level1 unnumbered">

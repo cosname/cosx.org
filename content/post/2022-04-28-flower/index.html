@@ -15,11 +15,11 @@ forum_id: 423132
 slug: echarts4r-flower
 ---
 
-<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/echarts-en.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/ecStat.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r/dataTool.min.js"></script>
-<script src="{{< blogdown/postref >}}index_files/echarts4r-binding/echarts4r.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ramnathv/htmlwidgets@master/inst/www/htmlwidgets.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/lib/echarts-4.8.0/echarts-en.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/lib/echarts-4.8.0/ecStat.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/lib/echarts-4.8.0/dataTool.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/JohnCoene/echarts4r@master/inst/htmlwidgets/echarts4r.js"></script>
 
 <div id="TOC">
 <ul>
@@ -50,13 +50,13 @@ slug: echarts4r-flower
 
 <style type="text/css">
 .col-xs-4 {
-  display: inline-block; 
-  width: 33%; 
+  display: inline-block;
+  width: 33%;
 }
 
 .col-xs-6 {
-  display: inline-block; 
-  width: 49%; 
+  display: inline-block;
+  width: 49%;
 }
 </style>
 <p>如同死生、枯荣是生物的一体两面，确定性与不确定性也是数据分析的一体两面。拿到一份数据后，真得能用各种分析手段探索得到百分百的确定性吗？如若分析的终点仍然是去面对一片未知，是不是只可以在路途中留下一份权衡取舍后的确定性结论呢？在大数据的时代，人们总是要用文字、用图形、用表格去描述隐藏在数据中的确定性。本（一）文（条）作（咸）者（鱼）在一次无穷无尽的数据探索过程中，日日盯着那些图形看，看着看着忽然开了一个脑洞，在人类创造出那么多概念和工具之前，自然界的花花草草早就已经存在，不妨试试把画图工具只是用来画一些花草。</p>
@@ -94,24 +94,24 @@ df |&gt;
   # 第一排 左一
   e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;20%&#39;, &#39;20%&#39;), color = &#39;#FF6A6A&#39;) |&gt;
   # 第一排 左二
-  e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;40%&#39;, &#39;20%&#39;), 
+  e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;40%&#39;, &#39;20%&#39;),
           itemStyle = list( borderRadius = 30)) |&gt;
   # 第二排 左三
-  e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;60%&#39;, &#39;20%&#39;), 
+  e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;60%&#39;, &#39;20%&#39;),
     itemStyle = list( borderRadius = 30, borderColor = &#39;#fff&#39;, borderWidth = 2 )) |&gt;
   # 第二排 左四
   e_pie( value, radius = c(&quot;0%&quot;, &quot;30%&quot;), center = c(&#39;80%&#39;, &#39;20%&#39;),
-    itemStyle = list( borderRadius = 30, borderColor = &#39;#fff&#39;, borderWidth = 10 )) |&gt;       
+    itemStyle = list( borderRadius = 30, borderColor = &#39;#fff&#39;, borderWidth = 10 )) |&gt;
   # 第二排 左一
   e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;20%&#39;, &#39;50%&#39;) ) |&gt;
   # 第二排 左二
-  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;40%&#39;, &#39;50%&#39;), 
+  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;40%&#39;, &#39;50%&#39;),
     itemStyle = list( borderRadius = 30 )) |&gt;
   # 第二排 左三
-  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;60%&#39;, &#39;50%&#39;), 
+  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;60%&#39;, &#39;50%&#39;),
     itemStyle = list( borderRadius = c(&#39;0%&#39;,&#39;30%&#39;))) |&gt;
   # 第二排 左四
-  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;80%&#39;, &#39;50%&#39;), 
+  e_pie( value, radius = c(&quot;10%&quot;, &quot;30%&quot;), center = c(&#39;80%&#39;, &#39;50%&#39;),
     itemStyle = list( borderRadius = c(&#39;0%&#39;,&#39;30%&#39;), borderColor = &#39;#FFC1C1&#39;, borderWidth = 10)) |&gt;
   # 第三排 左一
   e_pie( value2, roseType = &quot;radius&quot; ,radius=&#39;30%&#39;, center = c(&#39;20%&#39;, &#39;80%&#39;)) |&gt;
@@ -157,7 +157,7 @@ df |&gt;
         y2 = 0,
         colorStops = list(list(offset = 0, color = &#39;#1E90FF&#39;), # 0%处的颜色
                           list(offset = 1, color = &#39;#B22222&#39;) # 100%处的颜色
-                          ) ) ) ) |&gt; 
+                          ) ) ) ) |&gt;
       e_pie(
         value, # 右侧花瓣
         radius = c(&quot;20%&quot;, &quot;60%&quot;),
@@ -344,7 +344,7 @@ flower1 |&gt;
   ) |&gt;
   e_data(flower3, value3) |&gt; # 引入第三层数据
   e_pie(value3,  # 第三层 花蕊
-        radius = &#39;9%&#39;, 
+        radius = &#39;9%&#39;,
         color = &#39;#FFA500&#39;) |&gt;
   e_labels(show = FALSE) |&gt;
   e_legend(show = FALSE)</code></pre>
