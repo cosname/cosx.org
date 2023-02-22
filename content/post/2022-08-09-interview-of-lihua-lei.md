@@ -19,7 +19,7 @@ forum_id: 423404
 
 <div align="center">
 
-![Image text](https://github.com/cosname/uploads/blob/79812e9001018917f17ae2a2bc5a7c99a6f2f66f/2023/02/lihua.jpg)
+![Image text](https://uploads.cosx.org/2023/02/lihua.jpg)
 
 
 
