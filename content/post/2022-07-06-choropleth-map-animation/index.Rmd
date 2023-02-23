@@ -98,7 +98,6 @@ knitr::opts_chunk$set(
 1. 制作动画：介绍 GIF 动画和 Web 动画两种展示形式。
 1. 本文小结：总结归纳数据处理和绘制地图的主要步骤。
 
-
 # 软件准备 {#setup}
 
 本文介绍如何使用 R 语言制作动态地区分布图，主要使用的扩展包有：
@@ -970,8 +969,8 @@ us_votes_repub |>
 #| cache: true
 
 xfun::session_info(packages = c(
-  "knitr", "rmarkdown", "blogdown",
-  "ggplot2", "gganimate", "echarts4r",
+  "knitr", "echarts4r", "blogdown",
+  "ggplot2", "gganimate", "transformr", 
   "maps", "mapproj", "showtext", "ragg",
   "sf", "tigris", "tmap", "gifski"
 ), dependencies = FALSE)
