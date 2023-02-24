@@ -84,7 +84,7 @@ div.rmdtip::before {
 ```
 
 
-# 本文写作背景 {#background}
+# 写作背景 {#background}
 
 ```{r}
 #| label: ggplot2-logo
@@ -110,6 +110,20 @@ blogdown::shortcode("figure",
 
 一直没有时间参与，后来，我决定自己找数据，做一些类似的数据分析项目。翻翻旧博客，看到 2019 年曾尝试分析地震数据，不过是[草草收场](https://d.cosx.org/d/420854)。现决定重写，从对比、趋势、分布、关系、时间和空间等方面探索和分析数据，还包含数据获取、清洗和处理的过程，不仅仅是可视化，更加注重分析的过程，数据背景和解读。
 
+我不了解地震方面的东西，近年来，不知道是相关新闻报道变多了，还是地震本身变多了，还是个性化推荐算法越来越厉害。不禁让我产生一个疑问：地震是不是越来越频繁了？另一个很重要的原因是检查已学数据分析方法的迁移能力，大家都有自己所学的专业，所从事的行业，时间久了，在数据和业务上沉浸，对技术、方法反而陌生了。那么，找一个自己完全不了解的领域，换换思维，练练手，应该很有趣。
+
+# 本文结构 {#structure}
+
+除了网上搜集的地震背景信息外，下面分两个部分展开，其一是美国地震局发布的数据，包含 1973-2022 年全球 6 级以上地震（以美国为主）。其二是中国地震台网发布的数据，包含 2012-2022 年中国检测到的地震（以中国为主）。无论是美国还是中国，发布的地震数据都是以本国的地震为主，包含部分国外的地震。
+
+经过初步了解，我先对问题「地震越来越频繁了吗？」做一下说明。地震是非常复杂的地质活动，因时因地而变，莫说预测地震，就连收集地震数据也不容易。据官方报道，过去几十年，美国、中国都在不断地提升地震的监测能力，以发现震级更小、震源更深的地震，收集更多更精确的数据。有了质量更高的数据，可以总结更精确的地震规律，从而有望将规律应用于未来的预测。本文仅有中、美两份数据，针对「地震越来越频繁了吗？」，限于数据和能力，仅做如下简略分析：
+
+无论震级大小，统计地震次数的年度变化趋势。发现 1990 后，地震次数明显增加，但是基于现有数据，难以区分地震活动和地震监测能力影响。既然无法直接回答文章题目，就从其它维度拆解分析，总结一些地震活动的规律也好。统计地震次数随震级的分布中，发现震级越小次数越多，地震越大次数越少，大致呈现**指数级衰减**变化。地震监测能力在震源深度和地震震级上有体现，因此可以继续拆解，接着，按年统计各级地震数目变化趋势，然而，并没有发现明显规律。而后，统计地震活动的空间分布，发现美国地震局发布的数据不仅限于美国本土，它是将本国地震监测网络探测到的地震选择性的发布了，分为两个部分，其一是美国本土，其二是公海或地震带，比如它并不发布中国西南、西北地区的地震活动。在中国发布的地震数据上，也发现类似的选择性发布。
+
+我对中国的地震数据更有兴趣，在粗浅地分析美国发布的地震数据后，也类似展开分析，但是补充更加详细的空间分析，具体到各省的统计。唐山、四川地震给人留下的深刻印象，因此，顺便统计了地震频次随时段的分布规律，然而，地震在时段上并没有表现出规律。**最后，通过震级与震深的关系，发现了中国当前的地震探测能力。**
+
+因中国发布的地震数据十分有限，之后，读者可以基于更加全面的美国发布的地震数据，类似地找到美国当前的地震探测能力，以及探测能力的时间变化。再将问题「地震越来越频繁了吗？」的范围收缩到美国及周边地区，分析区域内的地震是否越来越频繁。
+
 
 # 地震背景信息 {#earthquakes-background}
 
@@ -122,22 +136,27 @@ blogdown::shortcode("figure",
 
 更多背景信息，可以从中国地震局地震预测研究所网站(<https://www.ief.ac.cn>)新闻或发布的报告，如[2021年5月22日青海玛多 7.4 级地震科学考察报告.pdf](https://www.ief.ac.cn/upload/a5fffe35-d881-45ac-98db-0dae5c0b3593/20220223/64991645600860360.pdf)，或者中国地质调查局网站 (<https://www.cgs.gov.cn/>) 了解。
 
-# 1973-2010 年全球地震变化 {#earthquakes-world}
+# 1973-2022 年全球地震变化 {#earthquakes-world}
 
 ## 数据准备 {#quake6}
 
-我最早接触到地震数据集来自[谢益辉](https://yihui.org/)开发的 **MSG** 包，这个包是为书籍《现代统计图形》[@Zhao2021]准备的，里面有个数据集 quake6，记录了 1973-2010 年全球 6 级以上地震情况，下面是该数据集开头的几行：
+我最早接触到地震数据集来自[谢益辉](https://yihui.org/)开发的 **MSG** 包，这个包是为书籍《现代统计图形》[@Zhao2021]准备的，里面有个数据集 quake6，记录了 1973-2010 年全球 6 级以上地震情况。这是一个 data.frame，一共 4999 条记录 9 个字段，分别是 Cat 、年份 year、月份 month、日 day、时间 time、纬度 lat、经度 long、震深 dep 和震级 magnitude。此数据集的源头是[美国地震局（USGS）](https://earthquake.usgs.gov/)，2008 年四川汶川地震才过去两年，2010 年在统计之都论坛，曾引发大家的讨论[地震是不是越来越频繁了](https://d.cosx.org/d/101510)。经过一段时间的探索之后，我又去找了美国地震局官网，下载了 1973-2022 年全球 6 级及以上的数据。对比一看，原始数据还有不少字段，如下。
 
 ```{r}
-data(quake6, package = "MSG")
-head(quake6)
+quakes6 <- read.csv(file = "data/quake-global-1973-2022-6.csv")
+str(quakes6)
 ```
 
-这是一个 data.frame，一共 4999 条记录 9 个字段，分别是 Cat 、年份 year、月份 month、日 day、时间 time、纬度 lat、经度 long、震深 dep 和震级 magnitude。此数据集的源头是[美国地震局（USGS）](https://earthquake.usgs.gov/)，2008 年四川汶川地震才过去两年，2010 年在统计之都论坛，曾引发大家的讨论[地震是不是越来越频繁了](https://d.cosx.org/d/101510)。
+从 time 字段，提取年份、月份字段。
 
 ```{r}
-str(quake6)
+quakes6 <- within(quakes6, {
+  timestamp = as.POSIXct(time, format = "%Y-%m-%dT%H:%M:%OSZ", tz = "UTC")
+  year = as.integer(format(timestamp, "%Y"))  
+  month = as.integer(format(timestamp, "%m")) 
+})
 ```
+
 
 ## 震次趋势（年度）{#quake6-year}
 
@@ -145,12 +164,12 @@ str(quake6)
 
 ```{r}
 #| label: quake6-year
-#| fig.cap: "1973-2010 年世界 6级以上地震次数变化趋势"
+#| fig.cap: "1973-2022 年世界 6级以上地震次数变化趋势"
 #| fig.showtext: true
 
 library(ggplot2)
 # 按年分组计数
-aggregate(data = quake6, time ~ year, FUN = length) |>
+aggregate(data = quakes6, time ~ year, FUN = length) |>
   ggplot(aes(x = year, y = time)) +
   geom_point() +
   geom_line() +
@@ -161,33 +180,28 @@ aggregate(data = quake6, time ~ year, FUN = length) |>
 
 从图上来看，地震确实变多了。有坛友根据美国地震局发布的信息，解释此现象是因为探测能力变强了，能发现更多的地震，而不是地震变多了。
 
-::: rmdtip
-2010 年大家在论坛上讨论的时候，正是 4 月份，不是一年的累计量，因此图中看起来 2010 年的地震数量很少。
-:::
 
 ## 震级分布（总体情况）{#quake6-hist}
 
-数据集 quake6 中记录的最大地震为 9 级，最小地震为 6 级。
+数据集 quakes6 中记录的最大地震为 9.1 级，最小地震为 6.0 级。
 
 ```{r}
-range(quake6$magnitude)
+range(quakes6$mag)
 ```
 
-下面将震级区间 $[6,9]$ 作 31 等分，统计每个小震级区间内的地震数量，下图展示地震震级的总体分布情况，看起来特别像指数分布。
+下面将震级区间 $[6,9.1]$ 作 32 等分，统计每个小震级区间内的地震数量，下图展示地震震级的总体分布情况，看起来特别像指数分布。
 
 ```{r}
 #| label: quake6-hist
-#| fig.cap: "1973-2010 年世界6级以上地震情况"
+#| fig.cap: "1973-2022 年世界6级以上地震情况"
 #| fig.showtext: true
 
-ggplot(data = quake6, aes(x = magnitude)) +
-  geom_histogram(bins = 31, color = "gray40", fill = "gray90") +
-  geom_freqpoly(stat = "count") +
+ggplot(data = quakes6, aes(x = mag)) +
+  geom_histogram(bins = 32, color = "gray40", fill = "gray90") +
+  geom_freqpoly(binwidth = 0.1) +
   theme_minimal() +
   labs(x = "震级", y = "次数")
 ```
-
-
 
 
 ## 震级分布（按年分组）{#quake6-explore}
@@ -195,23 +209,23 @@ ggplot(data = quake6, aes(x = magnitude)) +
 
 ### 抖动图 {#quake6-beeswarm}
 
-数据集 quake6 不大，可以用 ggbeeswarm [@Clarke2017] 包将所有点绘制出来，添加抖动后，可以防止一定程度的覆盖重合。散点的疏密体现数据的分布，相比于直方图，附加好处是直观地展示原始信息，特别是位于分布尾部的数据。
+数据集 quakes6 不大，可以用 **ggbeeswarm** [@Clarke2017] 包将所有点绘制出来，添加抖动后，可以防止一定程度的覆盖重合。散点的疏密体现数据的分布，相比于直方图，附加好处是直观地展示原始信息，特别是位于分布尾部的数据。
 
 ```{r}
 #| label: quake6-beeswarm
-#| fig.cap: "1973-2010 年世界6级以上地震分布"
+#| fig.cap: "1973-2022 年世界6级以上地震分布"
 #| fig.showtext: true
 #| fig.width: 6
 #| fig.height: 10
 
 library(ggbeeswarm)
 
-ggplot(quake6, aes(x = magnitude, y = as.factor(year), colour = as.factor(year))) +
+ggplot(quakes6, aes(x = mag, y = as.factor(year), colour = as.factor(year))) +
   geom_quasirandom() +
-  geom_jitter() +
+  geom_jitter(width = 0.025) +
   theme_minimal() +
   theme(legend.position = "none") +
-  labs(y = "震级", x = "年份")
+  labs(y = "年份", x = "震级")
 ```
 
 从图中来看，震级之间有明显的间隔缝隙，是不连续的，实际上，震级之间的最小间隔是 0.1 级。
@@ -222,13 +236,13 @@ ggplot(quake6, aes(x = magnitude, y = as.factor(year), colour = as.factor(year))
 
 ```{r}
 #| label: quake6-ridges
-#| fig.cap: "1973-2010 年世界6级以上地震分布"
+#| fig.cap: "1973-2022 年世界6级以上地震分布"
 #| fig.showtext: true
 #| fig.width: 6
 #| fig.height: 8
 
 library(ggridges)
-ggplot(quake6, aes(x = magnitude, y = as.factor(year), height = after_stat(density))) +
+ggplot(quakes6, aes(x = mag, y = as.factor(year), height = after_stat(density))) +
   geom_ridgeline(stat = "density") +
   theme_ridges() +
   labs(x = "震级", y = "年份")
@@ -242,12 +256,12 @@ ggplot(quake6, aes(x = magnitude, y = as.factor(year), height = after_stat(densi
 
 ```{r}
 #| label: quake6-boxplot
-#| fig.cap: "1973-2010 年世界6级以上地震分布"
+#| fig.cap: "1973-2022 年世界6级以上地震分布"
 #| fig.showtext: true
 #| fig.width: 6
 #| fig.height: 8
 
-ggplot(quake6, aes(x = magnitude, y = as.factor(year))) +
+ggplot(quakes6, aes(x = mag, y = as.factor(year))) +
   geom_boxplot() +
   theme_minimal() +
   labs(x = "震级", y = "年份")
@@ -262,12 +276,12 @@ ggplot(quake6, aes(x = magnitude, y = as.factor(year))) +
 
 ```{r}
 #| label: quake6-violin
-#| fig.cap: "1973-2010 年世界6级以上地震分布"
+#| fig.cap: "1973-2022 年世界6级以上地震分布"
 #| fig.showtext: true
 #| fig.width: 6
 #| fig.height: 8
 
-ggplot(quake6, aes(x = magnitude, y = as.factor(year))) +
+ggplot(quakes6, aes(x = mag, y = as.factor(year))) +
   geom_violin() +
   theme_minimal() +
   labs(x = "震级", y = "年份")
@@ -288,15 +302,15 @@ ggplot(quake6, aes(x = magnitude, y = as.factor(year))) +
 
 library(sf)
 # 转为 sf 类型
-quake6_sf <- st_as_sf(quake6, coords = c("long", "lat"), crs = 4326)
+quakes6_sf <- st_as_sf(quakes6, coords = c("longitude", "latitude"), crs = 4326)
 # 绘图
 ggplot() +
-  geom_sf(data = quake6_sf, aes(color = magnitude), cex = .1) +
+  geom_sf(data = quakes6_sf, aes(color = mag), cex = .1) +
   scale_color_viridis_c() +
   theme_minimal() +
   labs(
     x = "经度", y = "纬度", color = "震级",
-    title = "1973-2010 年世界6级以上地震分布",
+    title = "1973-2022 年世界6级以上地震分布",
     caption = "数据源：美国地震局"
   )
 ```
@@ -578,7 +592,7 @@ ggplot() +
 
 ```{r}
 #| label: cenc-scatter-china
-#| fig.cap: "中国近 10 年的地震分布"
+#| fig.cap: "中国及周边近 10 年的地震分布"
 #| fig.showtext: true
 
 ggplot() +
@@ -597,7 +611,7 @@ ggplot() +
 
 ```{r}
 #| label: cenc-scatter-china-high
-#| fig.cap: "中国及周边近 10 年的地震分布"
+#| fig.cap: "中国及周边近 10 年 4.5 级及以上的地震分布"
 #| fig.showtext: true
 
 ggplot() +
@@ -785,6 +799,7 @@ ggplot(data = dat, aes(x = `深度(千米)`, y = `震级(M)`, color = `年份`))
 
 不难看出，在地下 300 公里以后，几乎都是 5-7 级的地震，小地震没有，更大的 7-8 级地震也很少。**总的来说，地下很深的位置往往发生大地震，而大地震不一定发生在地下很深的位置**。
 
+通过此图可以看出我国地震监测或感知的能力，就是说地震发生在地下50公里以上，震级3级以下是测不出来的，相当于盲区。地震发生在地下 300 公里以下，地震震级 4.8 级以下，也测不出来，也是盲区。
 
 注意到一个有意思的数据情况，有的地震深度为 0，而且每年或多或少包含一些深度为 0 的「地震」，其实是矿震、塌陷、爆破、滑坡等，比如 2021 年地震仪监测到的一些塌陷事故。
 
