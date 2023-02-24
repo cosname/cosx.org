@@ -1,7 +1,7 @@
 ---
 title: 地震越来越频繁了吗？
 author: 黄湘云
-date: '2023-02-10'
+date: '2023-02-24'
 slug: earthquake
 output:
   blogdown::html_page:
