@@ -1,0 +1,6 @@
+language:
+  label:
+    fig: "图 "
+    tab: "表 "
+  ui:
+    edit: "编辑"
