@@ -250,9 +250,9 @@ ggplot(quakes6, aes(x = mag, y = as.factor(year), height = after_stat(density)))
 
 
 
-### 葙线图 {#quake6-boxplot}
+### 箱线图 {#quake6-boxplot}
 
-葙线图将 5 个分位点和离群点画出来了，就地震来说，小地震往往破坏力不大，大地震才是关注的重点，也就是图中那些离群点。
+箱线图将 5 个分位点和离群点画出来了，就地震来说，小地震往往破坏力不大，大地震才是关注的重点，也就是图中那些离群点。
 
 ```{r}
 #| label: quake6-boxplot
@@ -272,7 +272,7 @@ ggplot(quakes6, aes(x = mag, y = as.factor(year))) +
 
 ### 提琴图
 
-相比于葙线图，提琴图在刻画数据分布上更加精细些。
+相比于箱线图，提琴图在刻画数据分布上更加精细些。
 
 ```{r}
 #| label: quake6-violin

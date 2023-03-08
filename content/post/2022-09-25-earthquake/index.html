@@ -36,7 +36,7 @@ description: "本文基于美国地震局和中国地震台网发布的地震活
 <ul>
 <li><a href="#quake6-beeswarm" id="toc-quake6-beeswarm"><span class="toc-section-number">4.4.1</span> 抖动图</a></li>
 <li><a href="#quake6-ridges" id="toc-quake6-ridges"><span class="toc-section-number">4.4.2</span> 岭线图</a></li>
-<li><a href="#quake6-boxplot" id="toc-quake6-boxplot"><span class="toc-section-number">4.4.3</span> 葙线图</a></li>
+<li><a href="#quake6-boxplot" id="toc-quake6-boxplot"><span class="toc-section-number">4.4.3</span> 箱线图</a></li>
 <li><a href="#提琴图" id="toc-提琴图"><span class="toc-section-number">4.4.4</span> 提琴图</a></li>
 </ul></li>
 <li><a href="#quake6-scatter" id="toc-quake6-scatter"><span class="toc-section-number">4.5</span> 震级分布（空间）</a></li>
@@ -266,8 +266,8 @@ ggplot(quakes6, aes(x = mag, y = as.factor(year), height = after_stat(density)))
 </div>
 </div>
 <div id="quake6-boxplot" class="section level3" number="4.4.3">
-<h3><span class="header-section-number">4.4.3</span> 葙线图</h3>
-<p>葙线图将 5 个分位点和离群点画出来了，就地震来说，小地震往往破坏力不大，大地震才是关注的重点，也就是图中那些离群点。</p>
+<h3><span class="header-section-number">4.4.3</span> 箱线图</h3>
+<p>箱线图将 5 个分位点和离群点画出来了，就地震来说，小地震往往破坏力不大，大地震才是关注的重点，也就是图中那些离群点。</p>
 <pre class="r"><code>ggplot(quakes6, aes(x = mag, y = as.factor(year))) +
   geom_boxplot() +
   theme_minimal() +
@@ -282,7 +282,7 @@ ggplot(quakes6, aes(x = mag, y = as.factor(year), height = after_stat(density)))
 </div>
 <div id="提琴图" class="section level3" number="4.4.4">
 <h3><span class="header-section-number">4.4.4</span> 提琴图</h3>
-<p>相比于葙线图，提琴图在刻画数据分布上更加精细些。</p>
+<p>相比于箱线图，提琴图在刻画数据分布上更加精细些。</p>
 <pre class="r"><code>ggplot(quakes6, aes(x = mag, y = as.factor(year))) +
   geom_violin() +
   theme_minimal() +
