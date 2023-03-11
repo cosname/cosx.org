@@ -34,7 +34,7 @@ footnotereturnlinkcontents = "↩"
 
 [[menu.top]]
   name = "R会"
-  url = "https://china-r.org/"
+  url = "/chinar/"
   weight = 4
 
 [[menu.top]]
