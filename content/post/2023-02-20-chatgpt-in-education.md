@@ -2,6 +2,7 @@
 title: "畅谈 GhatGPT 在学界的应用"
 date: 2023-03-22
 author: "赵鹏"
+author_id: pzhaonet
 categories: ["r 语言"]
 tags: ["ChatGPT"]
 slug: chatgpt-in-education
