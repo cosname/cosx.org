@@ -12,7 +12,7 @@ forum_id: 424182
 > Donoho 是斯坦福大学统计系教授及人文与科学学院 Anne T. and Robert M. Bass 讲席教授。他在关于稀疏数据、小波分析、图像的稀疏表达、凸优化、压缩感知等领域的工作，
 > 在统计、 数学、 电子工程等学科和产业界有着深远的影响。Donoho 是美国国家科学院院士、法国科学院外籍院士。他曾经获得过麦克阿瑟奖、约翰·冯·诺依曼讲座奖、邵逸夫奖等。
 >
-> 本文译者：于嘉傲，审校：魏太云、邱怡轩，为了便于网页阅读，对表格、脚注进行了调整，并更新了失效的网页链接。原文链接：https://doi.org/10.1080/10618600.2017.1384734
+> 本文译者：于嘉傲，审校：魏太云、邱怡轩，为了便于网页阅读，对表格、脚注进行了调整，并更新了失效的网页链接。原文链接：<https://doi.org/10.1080/10618600.2017.1384734>
 
 
 # 摘要
@@ -126,17 +126,17 @@ DSI的网站给出了数据科学的定义：
 
 > [5] 密歇根大学的几位教授写信向我详细介绍了他们的密西根数据科学（MIDAS）计划，并指出统计学对MIDAS来说比看起来更重要。他们指出，包括 Vijay Nair 在内的统计系教师大量参与了 MIDAS 的规划，尽管目前尚未公开，而且首届研讨会上的非统计系学者大量使用统计学。这实际上与我所说的相同。
 
-> [6] http://www.datascienceassn.org/code-of-conduct.html/
+> [6] <https://www.datascienceassn.org/code-of-conduct.html/>
 
-> [7] http://magazine.amstat.org/blog/2013/07/01/datascience/
+> [7] <https://magazine.amstat.org/blog/2013/07/01/datascience/>
 
-> [8] https://imstat.org/2014/10/01/ims-presidential-address-let-us-own-data-science/
+> [8] <https://imstat.org/2014/10/01/ims-presidential-address-let-us-own-data-science/>
 
-> [9] https://kbroman.wordpress.com/2013/04/05/data-science-is-statistics/
+> [9] <https://kbroman.wordpress.com/2013/04/05/data-science-is-statistics/>
 
-> [10] https://vincentgranvillesposts.quora.com/Data-science-without-statistics-is-possible-even-desirable
+> [10] <https://vincentgranvillesposts.quora.com/Data-science-without-statistics-is-possible-even-desirable>
 
-> [11] http://andrewgelman.com/2013/11/14/statistics-least-important-part-data-science/
+> [11] <https://andrewgelman.com/2013/11/14/statistics-least-important-part-data-science/>
 
 
 ## 2.1 “大数据”模因
@@ -205,7 +205,7 @@ Barlow 认为，在这种环境下，任何高级数理方向的学位都已足�
 > 尽管人们对“数据科学”、“大数据”和“分析”感到兴奋，但这些术语的模糊性导致了数据科学家和寻求帮助的人之间的沟通不畅。
 
 
-Yanir Serousi 在博客中提出，“没有工作经验的人很难获得真正的数据科学职位。”(https://yanirseroussi.com/2014/10/23/what-is-data-science/)
+Yanir Serousi 在博客中提出，“没有工作经验的人很难获得真正的数据科学职位。”(<https://yanirseroussi.com/2014/10/23/what-is-data-science/>)
 
 > 一个成功的数据科学家需要能够通过探索数据并应用严格的统计分析来与数据融为一体……但是，优秀的数据科学家也得了解部署生产系统需要什么，并准备好“筚路蓝缕”编写代码来清洗数据或执行核心系统功能……但掌握这些技能需要时间。
 
@@ -328,7 +328,7 @@ John Chambers 是贝尔实验室统计和数据分析S语言的联合开发者�
 一位统计学家呼吁采取行动，他觉得“火车要离开车站了”。就像 Tukey 的文章一样，他提出，我们可以在比我们今天所做的统计研究更大的领域进行研究；这类研究将侧重于新型数据和新型展示方法所提供的机会。Chambers 明确表示，扩大的领域甚至比数据分析还要大。具体来说，它比 Tukey 1962年的愿景更大。
 
 
-吴建福就任密歇根大学 Carver 统计学教授后，发表了题为《统计=数据科学？》的就职演讲，他在演讲中主张将统计学更名为数据科学，统计学家更名为数据科学家。展望现代数据科学硕士课程，他甚至提到了新硕士学位的想法，其中大约一半的课程在统计学系之外。他将统计工作描述为数据采集、数据建模分析以及决策三部曲。尽管我们能找到他展示的幻灯片，但他并未出版正式的书面文章。(http://www2.isye.gatech.edu/~jeffwu/presentations/datascience.pdf)
+吴建福就任密歇根大学 Carver 统计学教授后，发表了题为《统计=数据科学？》的就职演讲，他在演讲中主张将统计学更名为数据科学，统计学家更名为数据科学家。展望现代数据科学硕士课程，他甚至提到了新硕士学位的想法，其中大约一半的课程在统计学系之外。他将统计工作描述为数据采集、数据建模分析以及决策三部曲。尽管我们能找到他展示的幻灯片，但他并未出版正式的书面文章。(<https://www2.isye.gatech.edu/~jeffwu/presentations/datascience.pdf>)
 
 
 William S.Cleveland 在贝尔实验室期间开发了许多有价值的统计方法和数据展示工具，并担任了 Tukey 作品集的联合编辑。他2001年发表了题为《数据科学：扩大统计技术领域的行动计划》的文章（Cleveland，2001, Data Science: An Action Plan for Expanding the Technical Areas of the field of Statistics ），为学术统计提出了调整研究领域的计划。该文摘要如下：
@@ -372,7 +372,7 @@ Cleveland 提出了六个活动重点，甚至建议了精力分配。
 在过去的50年中，许多统计学家和数据分析师参与了数据分析计算环境的开发。这些环境包括早期的统计软件包 BMDP、SPSS、SAS和Minitab，它们都起源于20世纪60年代末的大型机计算。而一些更新的软件，如 S、ISP、STATA 和 R，起源于小型计算机/个人计算机时代。这是许多才华横溢的前辈所做的巨大努力，虽然其中部分可能并未得到应有的赞誉 `$^{26}$`。
 
 
-要量化这些软件包的重要性，请尝试使用 Google 的 N-grams 查看器 (https://books.google.com/ngrams/) 绘制1970年至2000年英语书籍中 SPSS、SAS、Minitab 的单词频率；为了进行比较，还要绘制双字组“数据分析”和“统计分析”的频率。事实证明，在这一时期，SAS 和 SPSS 在英语中都比“数据分析”或“统计分析”更为常见；事实上，是其两倍。
+要量化这些软件包的重要性，请尝试使用 Google 的 N-grams 查看器 (<https://books.google.com/ngrams/>) 绘制1970年至2000年英语书籍中 SPSS、SAS、Minitab 的单词频率；为了进行比较，还要绘制双字组“数据分析”和“统计分析”的频率。事实证明，在这一时期，SAS 和 SPSS 在英语中都比“数据分析”或“统计分析”更为常见；事实上，是其两倍。
 
 John Chambers 和贝尔实验室的同事 Rick Becker 从20世纪70年代中期开始开发了定量计算环境“S”；它提供了一种描述计算的语言，以及许多基本的统计和可视化工具。在20世纪90年代，Gentleman 和 Ihaka 创建了一个类似工作的R系统，作为一个开源项目，被迅速传播开来。如今，R 是学术统计中使用的主要量化编程环境，用户数量惊人。
 
@@ -478,7 +478,7 @@ Breiman 劝统计学家加深对预测型建模文化的理解是正确的，但
 共同任务框架（CTF）范式的起源与我们的故事有着有趣的联系。在 Mark Liberman 的讲述中，这要从贝尔实验室 Tukey 的同事 J.R.Pierce 说起。Pierce 发明了“晶体管”一词，指导了第一颗通信卫星的开发，并在20世纪60年代初/中期与 Tukey 一起担任总统科学咨询委员会的成员。在Tukey评估杀虫剂过度使用导致的新问题的同时，Pierce 被要求评估已经在机器翻译研究方面的大量投资。正如 Tukey 不喜欢他在20世纪60年代所看到的统计学研究一样，Pierce 也不喜欢他所看到的60年代机器翻译研究。
 
 
-现在让我们跟随 Mark Liberman 的脚步。Pierce 认为这个领域充满了“魅力和欺骗”，他对整个美国机器翻译研究工作的质疑，使得后者几十年间几乎毫无进展。(https://www.simonsfoundation.org/event/reproducible-research-and-the-common-task-method/)
+现在让我们跟随 Mark Liberman 的脚步。Pierce 认为这个领域充满了“魅力和欺骗”，他对整个美国机器翻译研究工作的质疑，使得后者几十年间几乎毫无进展。(<https://www.simonsfoundation.org/event/reproducible-research-and-the-common-task-method/>)
 
 
 作为魅力和欺骗的例子，Pierce 提到了翻译的理论方法，例如，乔姆斯基所谓的语言理论；尽管当时许多语言研究人员显然对这些理论所带来的魅力感到敬畏，但 Pierce 认为这些研究人员被（潜在的）理论的魅力所愚弄，而并未关注翻译模型的实际表现。
@@ -509,7 +509,7 @@ Liberman 总结了共同任务框架（CTF）的一般经验如下：
 
 最小化预测误差与 CTF 的协同作用值得注意。这一组合直接导致了对经验绩效的全面优化，正如 Mark Liberman 所指出的那样，这使得大量研究人员能够在任何给定的共同任务挑战中进行竞争，并允许对挑战获胜者进行高效、不带情感的评判。它还可以立即引导到现实应用程序中。在赢得比赛的过程中，预测规则必须经过测试，因此基本上可以立即部署。
 
-（然而，在 Netflix 挑战赛中，获胜算法从未被实施。 https://www.techdirt.com/2012/04/13/why-netflix-never-implemented-algorithm-that-won-netflix-1-million-challenge/)
+（然而，在 Netflix 挑战赛中，获胜算法从未被实施。 <https://www.techdirt.com/2012/04/13/why-netflix-never-implemented-algorithm-that-won-netflix-1-million-challenge/>)
 
 
 
@@ -542,10 +542,10 @@ Liberman 总结了共同任务框架（CTF）的一般经验如下：
 # 7 当下达成共识的数据科学的教学
 
 
-看看最近建立数据科学项目的一些大学在今天的数据科学项目中教授的内容，可能会有所启发。让我们看看一下加州大学伯克利分校数据科学硕士学位的网站，它提供了大量颇有吸引力的信息：[datascience.berkeley.edu](datascience.berkeley.edu).
+看看最近建立数据科学项目的一些大学在今天的数据科学项目中教授的内容，可能会有所启发。让我们看看一下加州大学伯克利分校数据科学硕士学位的网站，它提供了大量颇有吸引力的信息：[datascience.berkeley.edu](https://datascience.berkeley.edu).
 
 
-查看网页 https://datascience.berkeley.edu/academics/curriculum/ 我们找到了五门基础课程
+查看网页 <https://datascience.berkeley.edu/academics/curriculum/> 我们找到了五门基础课程
 
 
 > 数据与分析的研究设计与应用
@@ -700,7 +700,7 @@ John Chambers 和 Bill Cleveland 各自设想了一个比我们一直在讨论�
 
 > [37] https://arxiv.org/abs/1704.05579
 
-> [38] http://jamanetwork.com/journals/jama/fullarticle/2503172
+> [38] https://jamanetwork.com/journals/jama/fullarticle/2503172
 
 > [39] Peter Huber (2010) 回忆了 Coale 和 Stephan 关于青少年寡妇的经典文章（Coale 和 Stephen, 1962）。在本例中，人口普查数据库中频繁的编码错误导致青少年丧偶人数过多，直到错误被消除。以现代标准来看，这个例子很奇怪。我们在处理博客和推文等自然语言时，异常现象就是常态。
 
@@ -1268,7 +1268,7 @@ Wiggins 在谈话和电子邮件中提出了许多观点，我想转述其中最
 ### Sean Owen 的《〈数据科学50年〉忽略了什么》
 
 
-Cloudera 数据科学总监 Sean Owen 发表了一篇文章，对我的手稿做出了回应。(https://medium.com/@srowen/what-50-years-of-data-science-leaves-out-2366c9b61d3d)
+Cloudera 数据科学总监 Sean Owen 发表了一篇文章，对我的手稿做出了回应。(<https://medium.com/@srowen/what-50-years-of-data-science-leaves-out-2366c9b61d3d>)
 
 Owen 提出了许多有趣的观点，读者可以直接看原文。
 
@@ -1297,7 +1297,7 @@ Sean Owen 提出，本文还应囊括数据科学出现的完整故事，以及�
 
 Owen 的文章支持了这一观点。Owen 讲述了我在第2.2节中给出的涉及 Hadoop 的示例是如何过时的；数据工程界已经从 Hadoop 转向 Apache Spark，在那里我给出的例子更容易实现。数据工程栈中特定工具的迅速过时表明，今天，学术界最好专注于教授广泛的原则——“科学”而不是“工程”。
 
-> [65] Insight Data 致力于培养通过传统培训的博士成为数据科学家和数据工程师。从他们的网站上看：我们定义的数据工程在一些别的公司可能被称作数据基础设施或数据架构。数据工程师收集数据，存储数据，对其进行批处理或实时处理，并通过 API 将其提供给数据科学家。https://blog.insightdatascience.com/about-insight-b535888ecb3a
+> [65] Insight Data 致力于培养通过传统培训的博士成为数据科学家和数据工程师。从他们的网站上看：我们定义的数据工程在一些别的公司可能被称作数据基础设施或数据架构。数据工程师收集数据，存储数据，对其进行批处理或实时处理，并通过 API 将其提供给数据科学家。<https://blog.insightdatascience.com/about-insight-b535888ecb3a>
 
 
 ## 致谢
