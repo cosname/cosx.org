@@ -1,7 +1,41 @@
 <table class="profile">
-<tbody>
-{{ range $.Site.Data.members.list }}
-<tr><td><h3>{{ .name }}</h3>{{ .intro | markdownify }}</td><td><img src="{{ .image }}" alt="{{ .name }}"/></td></tr>
-{{ end }}
-</tbody>
+    <tbody>
+        {{ range $.Site.Data.members.list }}
+        <tr>
+            <td>
+                <h3>{{ .name }}</h3>{{ .intro | markdownify }}
+            </td>
+            <td><img src="{{ .image }}" alt="{{ .name }}" /></td>
+        </tr>
+        <tr>
+            <td>
+                {{ if .id }}
+                    {{ $pages := (where $.Site.RegularPages ".Params.author_id" "intersect" (slice .id)) }}
+                    {{ $pages := $pages | union (where $.Site.RegularPages ".Params.author_id" .id) }}
+                    {{ $pages := $pages | union (where (where $.Site.RegularPages ".Params.author_id" "==" nil ) ".Params.author" "intersect" (slice .name )) }}
+                    {{ $pages := $pages | union (where (where $.Site.RegularPages ".Params.author_id" "==" nil ) ".Params.author" .name ) }}
+                    {{ range (where $pages "Section" "!=" "") }}
+                    <li>
+                        <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <span>{{ .Params.author }}</span>
+                    </li>                 
+                    {{ end }}
+                {{ else }}
+                    {{ $pages := (where $.Site.RegularPages ".Params.author" "intersect" (slice .name )) }}
+                    {{ $pages := $pages | union ( where $.Site.RegularPages ".Params.author" .name ) }}
+                    {{ range (where $pages "Section" "!=" "") }}
+                    <li>
+                        <span class="date">{{ .Date.Format "2006/01/02" }}</span>
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        <span>{{ .Params.author }}</span>
+                    </li>                 
+                    {{ end }}                
+                {{ end }} 
+                <ul>
+                </ul>
+            </td>
+        </tr>
+        {{ end }}
+    </tbody>
 </table>
