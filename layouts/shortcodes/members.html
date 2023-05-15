@@ -3,11 +3,7 @@
         {{ range $.Site.Data.members.list }}
         <tr>
             <td>
-                {{ if .id }}
-                  <h3 id="{{ anchorize .id }}">{{ .name }}</h3>{{ .intro | markdownify }}
-                {{ else }}
-                  <h3 id="{{ anchorize .name }}">{{ .name }}</h3>{{ .intro | markdownify }}
-                {{ end }}
+                  <h3 id="{{ default .name .id | anchorize }}">{{ .name }}</h3>{{ .intro | markdownify }}
             </td>
             <td><img src="{{ .image }}" alt="{{ .name }}" /></td>
         </tr>
