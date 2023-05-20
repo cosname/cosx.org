@@ -6,6 +6,7 @@ menu:
   main:
     name: 成员
     weight: 6
+toc: true
 ---
 
 统计之都由如下成员构成：文章作者、论坛管理人员、编辑部、理事会、COS 八卦群（微信）。
