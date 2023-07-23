@@ -76,7 +76,7 @@ forum_id:
 
 要想跟人合作，学会合作者的语言也十分重要，不然他们不清楚你在表达什么。这就需要我们去学习他们领域的东西。合作中交流很重要，协商也很重要，最好在合作之前，就把我们能做什么，谁要主导这个项目说清楚，主导项目的人就需要承担更多的责任。还需要和合作者相互促进，慢慢建起互惠互利的关系。这对新的助理教授比较有难度，一般年长的教授会帮助他们建立这种联系。
 
-![771b32b817fbe0cf6a3fb7fc4d89bef](file:///C:/Users/86152/AppData/Local/Temp/msohtmlclip1/01/clip_image004.jpg)
+![771b32b817fbe0cf6a3fb7fc4d89bef](https://github.com/cosname/uploads/blob/d80aa76c1506903a67a871ff050443aa4593ad34/2023/07/xiaozhuo.jpg)
 
 李洪哲老师和学生们小酌
 
@@ -152,7 +152,7 @@ forum_id:
 
 **李洪哲：**我觉得至少有一定的数学基础，有比较扎实的概率论、统计推断等课程的训练。在这个基础上，最重要的是读一些科学方面的文章，比如Science和Nature杂志上的，我也很鼓励我的学生去读。他们有很多新的数据新的问题，之所以能发到Science和Nature肯定是有一些启发意义的，然后去想想他们的问题是什么，我们能怎么改进他们的做法，或者在他们的数据基础上能不能问出新的问题。这种思维方式很重要，好的生物统计学家除了扎实的统计训练之外，对生物、公共卫生及新型生物技术这些学科也要有兴趣。
 
-![2a0bf2367cda30c16307c97d5af6e40](file:///C:/Users/86152/AppData/Local/Temp/msohtmlclip1/01/clip_image006.jpg)
+![2a0bf2367cda30c16307c97d5af6e40](https://github.com/cosname/uploads/blob/d80aa76c1506903a67a871ff050443aa4593ad34/2023/07/heying.jpg)
 
 李洪哲老师和王健桥博士毕业合影
 
@@ -172,7 +172,7 @@ forum_id:
 
 当然，选择好的学生，也是很重要的。我基本能看出学生的能力是什么样，能做出什么样的科研。有些学生更喜欢做应用方面的，让他们做理论证明肯定不太好，就不要给他们这种任务。总之我也是很享受和学生一起合作这样一个过程的，同时我也尽量帮助我的学生找到他们合适的职业。
 
-![e9a823bf493e502fd4f2247311d043c](file:///C:/Users/86152/AppData/Local/Temp/msohtmlclip1/01/clip_image008.jpg)
+![e9a823bf493e502fd4f2247311d043c](https://github.com/cosname/uploads/blob/d80aa76c1506903a67a871ff050443aa4593ad34/2023/07/duorenheying.jpg)
 
 李洪哲老师和博士后、访问学者
 
