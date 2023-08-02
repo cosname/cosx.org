@@ -16,13 +16,13 @@ forum_id:
 
 访谈于 2012 年 8 月 3-4 日在他位于加利福尼亚州帕洛阿尔托的家中录制。
 
-**关键词和短语**：ACE, boosting, CART, 机器学习, MARS, MART, 投影追寻, RuleFit, 统计计算, sta-统计图形、统计学习
+**关键词和短语**：ACE, boosting, CART, 机器学习, MARS, MART, 投影追寻, RuleFit, 统计计算, sta-统计图形，统计学习
 
  
 
 <div align="center">
 
-![image text](1)
+![image text](https://uploads.cosx.org/2023/08/Picture1-Early-days.JPG)
 
 图1：Yreka小时候。
 
@@ -192,7 +192,7 @@ forum_id:
 
 <div align="center">
 
-![image text](2)
+![image text](https://uploads.cosx.org/2023/08/Picture2-JHF-research.png)
 
 图2： 杰瑞的一些主要研究领域和研究合作的大致时间表。
 
@@ -252,10 +252,14 @@ forum_id:
 
 <div align="center">
 
-![image text](3)
+![image text](https://uploads.cosx.org/2023/08/Picture3a-JHF-PRIM-9.JPG)
+
 （a）
-![image text](3333)
+
+![image text](https://uploads.cosx.org/2023/08/Picture3-JWT-PRIM-9.JPG)
+
 （b）
+
 图3： PRIM-9视频的画面。(a)杰瑞-弗里德曼。(b)约翰-图基坐在PRIM-9硬件前，用黑板对粒子物理数据中的变量进行解释。
 
 </div>                             
@@ -583,7 +587,9 @@ Saharon Rosset 和其他一些人在这方面做了很好的工作。《统计�
 但当你从线性回归的角度来处理它时，似乎就不那么令人惊讶了。我们遇到过很多问题，在这些问题中，单靠一个变量并不能解决很多问题，但将多个变量组合在一起进行回归却能取得很好的效果。从我的统计学角度来看，这就是正在发生的事情。我认为你可以用很多不同的东西来做这件事。如果你有一类函数，你可以从这一类函数中挑选函数，然后进行线性拟合。那么问题来了：如何从这一类函数中挑选函数？如果你只是随机挑选，那么几乎所有的函数都没有执行力，它们的合集也是如此。如果你挑选的函数都很强，那么它们的输出都高度相关，你从集合中得不到任何好处。集合函数的预测结果与其中任何一个函数的预测结果都是一样的。
 
 <div align="center">
-![image text](4)
+  
+![image text](https://uploads.cosx.org/2023/08/Picture4-Wald-Lecturer.jpg)
+  
 图4： Steve Marron向杰瑞颁发奖项，表彰他在2009年联合统计会议上发表Wald讲座。
 摄影:塔蒂·豪厄尔
 
@@ -652,7 +658,9 @@ Leo曾经说过一句话，也许是在他去世前不久的2000年代中期，�
 **JF**：是的，这是从我读研究生时开始的。 (见 Fisher (2015) 中的轶事《统计、计算机和赌博》）。
 
  <div align="center">
-![image text](5)
+   
+![image text](https://uploads.cosx.org/2023/08/Picture5-Fine-wine.JPG)
+
 图5：1997年，家里的一顿美餐。
 
 </div> 
@@ -711,7 +719,7 @@ Leo曾经说过一句话，也许是在他去世前不久的2000年代中期，�
 
 <div align="center">
 
-![image text](6)
+![image text](https://uploads.cosx.org/2023/08/Picture6-A-fine-cigar.gif)
 
 图6：一支上等雪茄。
 摄影:Ildiko Frank。
@@ -824,17 +832,17 @@ Friedman, J .  H . 和 Stuetzle, W . (2002)。  John W. Tukey 的交互式图形
 
 Hastie, T ., Tibshirani, R . and Friedman, J . (2001). The Elements of Statistical Learning.数据挖掘、推理和预测》。Springer, New York.MR1851606
 
-吉卜林，R . (1886)."未婚妻 "倒数第二联的一部分。首次发表于《部门小调》。可从 http：//en.wikipedia.org/wiki/The_Betrothed_ %28Kipling_poem%29 获取。
+吉卜林，R . (1886)."未婚妻 "倒数第二联的一部分。首次发表于《部门小调》。可从 http://en.wikipedia.org/wiki/The_Betrothed_%28Kipling_poem%29 获取。
 
 摩根，J .N . 和 Sonquist, J .A . (1963).调查数据分析中的问题及建议。 J. Amer.Statist.58 415-435.
 
-Orear, J . (1982).  物理学家统计笔记，修订版。  见 http：//ned.ipac.caltech.edu/ level5/Sept01/Orear/frames.html。
+Orear, J . (1982).  物理学家统计笔记，修订版。  见 http://ned.ipac.caltech.edu/level5/Sept01/Orear/frames.html。
 
 昆兰，J . R . (1986). 决策树的诱导。 机器学习 1 81- 106》。 重印于《机器学习读本》（J . W . Shavlik 和 T . G . Dietterich 编辑）。 摩根-考夫曼，旧金山，1990 年，以及 ，《知识获取与学习读本》（B. G. Buchanan 和 D. Wilkins 编辑）。摩根考夫曼，旧金山 ，1993 年。
 
 Tukey, J .W . (1962).数据分析的未来。Ann.Math.Statist.33 1-67.MR0133937
 
-Varian, H . (2009).  哈尔-瓦里安谈网络如何挑战管理人员。     见 http：// www.mckinsey.com/insights/innovation/ hal_varian_on_how_the_web_challenges_managers。
+Varian, H . (2009).  哈尔-瓦里安谈网络如何挑战管理人员。     见 http://www.mckinsey.com/insights/innovation/ hal_varian_on_how_the_web_challenges_managers。
 
 Wold, S .and Sjostrom, M .(1977).SIMCA：用相似性和类比性分析化学数据的方法。见《化学计量学理论与应用》（B . R . Kowal- ski 编辑）。American Chemical Society Symposium Series 52 243-282.美国化学学会，华盛顿特区。
 
