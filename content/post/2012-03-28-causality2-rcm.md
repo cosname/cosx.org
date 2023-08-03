@@ -16,6 +16,11 @@ slug: causality2-rcm
 forum_id: 418865
 ---
 
+`$$
+\def\ind{{\perp\!\!\!\perp}}
+\def\nind{{\not\!\perp\!\!\!\perp}}
+$$`
+
 ![Donald Rubin](https://uploads.cosx.org/2012/03/Donald-Rubin.jpg)
 
 因果推断用的最多的模型是 Rubin Causal Model (RCM; Rubin 1978) 和 Causal Diagram (Pearl 1995)。Pearl (2000) 中介绍了这两个模型的等价性，但是就应用来看，RCM 更加精确，而 Causal Diagram 更加直观，后者深受计算机专家们的推崇。这部分主要讲 RCM。
@@ -32,7 +37,7 @@ ACE(Z \rightarrow Y) & = & E\{Y_i(1)\} -E\{Y_i(0)\} \\
 & = & E\{Y_i \mid Z_i =1\} – E\{Y_i \mid Z_i=0\}
 \end{eqnarray*}$$`
   
-最后一个等式表明 `$ACE$` 可以由观测的数据估计出来。其中第一个等式用到了期望算子的线性性(非线性的算子导出的因果度量很难被识别！)；第二个式子用到了随机化，即 `$$Z\bot\{Y(1),Y(0)\} $$` 其中， `$\bot$` 表示独立性。由此可见，随机化试验对于平均因果作用的识别起着至关重要的作用。
+最后一个等式表明 `$ACE$` 可以由观测的数据估计出来。其中第一个等式用到了期望算子的线性性(非线性的算子导出的因果度量很难被识别！)；第二个式子用到了随机化，即 `$$Z\ind\{Y(1),Y(0)\} $$` 其中， `$\bot$` 表示独立性。由此可见，随机化试验对于平均因果作用的识别起着至关重要的作用。
 
 当 `$ Y $` 是二值的时候，平均因果作用是流行病学中常用的“风险差”（risk difference; RD）：
   

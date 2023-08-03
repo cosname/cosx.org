@@ -15,6 +15,12 @@ slug: causality7-lord-paradox
 forum_id: 418967
 ---
 
+
+`$$
+\def\ind{{\perp\!\!\!\perp}}
+\def\nind{{\not\!\perp\!\!\!\perp}}
+$$` 
+
 在充满随机性的统计世界中，悖论无处不在。这一节介绍一个很有名，但是在中文统计教科书中几乎从未介绍过的悖论。这个悖论是 Educational Testing Service (ETS) 的统计学家 Frederic Lord 于 1967 年提出来的；最终由同在 ETS 工作的另外两位统计学家 Paul Holland 和 Donald Rubin 于 1982 年圆满地找出了这个悖论的根源。这部分先介绍这个悖论，再介绍 Holland 和 Rubin 的解释，最后是一些结论。
 
 # 一 Lord’s Paradox
@@ -115,7 +121,7 @@ $$`
 
 （3）统计学家一和二，都可以是对的。他们结论的正确性，依赖于不同的假定；而这些假定本身是不可能被检验的。
 
-（4）假定`$Y(0)=X$`可以减弱到`$Y(0)=X+u, E(u)=0, u\perp G$`；假定`$Y(0)= \alpha + b X$`可以减弱到`$Y(0) = \alpha + bX + v, E(v) = 0, v\perp G$`。当然，这都是细枝末节的问题。
+（4）假定`$Y(0)=X$`可以减弱到`$Y(0)=X+u, E(u)=0, u\ind G$`；假定`$Y(0)= \alpha + b X$`可以减弱到`$Y(0) = \alpha + bX + v, E(v) = 0, v\ind G$`。当然，这都是细枝末节的问题。
 
 （5）统计学家一和二，都是错的。他们有结论，但是却从未清楚地陈述结论回答的是什么问题。
 

@@ -1,5 +1,5 @@
 ---
-title: "Echarts4r 挥发化飞花"
+title: "echarts4r 挥发化飞花"
 author: "袁凡"
 date: "2022-04-28"
 categories:
@@ -104,7 +104,6 @@ df |>
     itemStyle = list( borderRadius = c('10%','30%'), borderColor = '#FFC1C1', borderWidth = 10 )) |>
   e_labels(show = FALSE) |> # 不显示数据标签
   e_legend(show = FALSE)  # 不显示图例
-
 ```
 
 

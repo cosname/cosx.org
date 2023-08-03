@@ -115,7 +115,7 @@ solve.quad.eq <- function(a, b, c) {
     # Not validate eqution: a and b are almost ZERO
     if(abs(a) < 1e-8 && abs(b) < 1e-8) return(c(NA, NA) )
     # Not quad equation
-    if(abs(a) < 1e-8 && abs(b) &gt; 1e-8) return(c(-c/b, NA))
+    if(abs(a) < 1e-8 && abs(b) > 1e-8) return(c(-c/b, NA))
     # No Solution
     if(b*b - 4*a*c < 0) return(c(NA,NA))
     # Return solutions

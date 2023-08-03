@@ -232,8 +232,8 @@ list:
     image: https://user-images.githubusercontent.com/18381242/130374095-a7eb8b25-57d5-4354-9c12-75147686cc9b.jpg
     intro: 中国人民大学一级教授，中国人民大学应用统计科学研究中心研究员。研究方向为中国统计学科史。
   - name: 袁凡
-    image: https://raw.githubusercontent.com/earfanfan/yf/main/static/images/amu.jpg
-    intro: 一个人类，R语言新手，个人博客地址：https://yuanfan.vercel.app/
+    image: https://user-images.githubusercontent.com/163582/232368502-72d18dde-bdb1-4f44-a8b7-b4791b7c0e26.jpg
+    intro: 一个人类，R 语言新手，个人博客地址：<https://yuanfan.rbind.io/>
   - name: 张驰原
     image: https://user-images.githubusercontent.com/19310150/28874258-a5070976-77c3-11e7-934c-226e46387f96.jpeg
     intro: 张驰原，网络 id pluskid，MIT 计算机博士在读，假装的 Julia 语言爱好者。
