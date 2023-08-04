@@ -2,13 +2,17 @@
 title: '对话杰里-弗里德曼'
 author: 'N.I.Fisher'
 date: '2023-08-04'
-slug: A-Conversation-with-Jerry-Friedman-CN
 categories:
   - 推荐文章
+tags:
+  - 机器学习
+  - 统计计算
+  - 统计学习
+  - CART
+  - 投影追寻
+slug: A-Conversation-with-Jerry-Friedman-CN
 forum_id: 
 ---
-
- 
 
 # 摘要 
 
@@ -32,7 +36,7 @@ forum_id:
 
 # 1  早期（1939-1959 年）
 
-**NF**：欢迎杰瑞。让我们从头开始吧，加州的这块地方并不在这里。
+**NF**：欢迎杰瑞（Jerry Friedman）。让我们从头开始吧，加州的这块地方并不在这里。
 
 **JF**：没错。我是在俄勒冈州边境附近一个叫 Yreka 的小镇长大的："bakery "是倒过来拼的，没有 "b"，"Yreka Bakery "是个谐音。......在 Yreka 有一家 Yreka 面包店。
 
@@ -754,101 +758,92 @@ Leo曾经说过一句话，也许是在他去世前不久的2000年代中期，�
 
 # 补充材料
 
-与杰里-弗里德曼的对话》（DOI：10.1214/14-STS509SUPP；.pdf）的补充。 与这篇文章相关的补充材料包括一些趣闻轶事，以及约翰-图基在与杰里-弗里德曼（Jerry Fried-man）的交谈过程中向杰里-弗里德曼（Jerry Fried-man）传达其研究观点的一种方式的考 ple。这些资料可查阅 Fisher (2015)。
+《与杰里-弗里德曼的对话》（DOI: 10.1214/14-STS509SUPP; .pdf）的补充。 与这篇文章相关的补充材料包括一些趣闻轶事，以及约翰-图基在与杰里-弗里德曼（Jerry Fried-man）的交谈过程中向杰里-弗里德曼（Jerry Fried-man）传达其研究观点的一种方式的考 ple。这些资料可查阅 Fisher (2015)。
 
  
 
 # 参考文献
 
-Breiman, L . (1996).电弧分类器。技术报告 460， 加利福尼亚大学伯克利分校。
+BREIMAN, L. (1996). Arcing classifiers. Technical Report 460, Univ. California, Berkeley.
 
-Breiman, L .and Friedman, J . H . (1985). Estimating op- timal transformations for multiple regression and correla- tion.J. Amer.J. Amer. Statist.80 580-619.MR0803258
+BREIMAN, L. and FRIEDMAN, J. H. (1985). Estimating optimal transformations for multiple regression and correlation. J. Amer. Statist. Assoc. 80 580–619. MR0803258
 
-Breiman, L .and Friedman, J .H . (1997).预测多元线性回归中的多变量响应。 J. R .Soc. Ser.B Stat. Methodol.Methodol.59 3-54.MR1436554
+BREIMAN, L. and FRIEDMAN, J. H. (1997). Predicting multi-variate responses in multiple linear regression. J. R. Stat. Soc. Ser. B Stat. Methodol. 59 3–54. MR1436554
 
-布雷曼，L . ，弗里德曼，J .  H .  A . 和 Stone, C .J . (1984). 分类与回归树》。Wadsworth, Belmont, CA.MR0726392
+BREIMAN, L., FRIEDMAN, J. H., OLSHEN, R. A. and STONE, C. J. (1984). Classification and Regression Trees. Wadsworth, Belmont, CA. MR0726392
 
-布里林格，D . R . (2002). John W. Tukey：His life and professional contributions.Ann.Statist.30 1535- 1575.  纪念约翰-W-塔基。MR1969439
+BRILLINGER, D. R. (2002). John W. Tukey: His life and professional contributions. Ann. Statist. 30 1535–1575. In memory of John W. Tukey. MR1969439 COVER, T. M. and HART, P. E. (1967). Nearest neighbor pattern classification. IEEE Trans. Inform. Theory IT-13 2–27.
 
-封面，T . M . 和 Hart, P . E . (1967)。 近邻模式分类。 IEEE Trans.I**nf**orm. Theory IT-13 2-27.
+DE BOOR, C. (2001). A Practical Guide to Splines, Revised ed. Applied Mathematical Sciences 27. Springer, New York. MR1900298
 
-de Boor, C . (2001)。 A Practical Guide to Splines, Revised ed.. Applied Mathematical Sciences 27.应用数学科学》第 27 卷。纽约 Springer 出版社。
+EFRON, B., HASTIE, T., JOHNSTONE, I. and TIBSHIRANI, R. (2004). Least angle regression. Ann. Statist. 32 407–499. MR2060166
 
-MR1900298
+FISHER, N. I. (2015). Supplement to “A conversation with Jerry Friedman.” DOI:10.1214/14-STS509SUPP.
 
-Efron, B ., Hastie, T ., Johnstone, I . 和 Tibshirani, R .
+FITHIAN, W. and HASTIE, T. (2013). Finite-sample equiv- alence in statistical models for presence-only data. Ann. Appl. Stat. 7 1917–1939. MR3161707
 
-(2004). 最小角回归。 Ann. Statist.32 407-499.
+FRANK, I. E. and FRIEDMAN, J. H. (1993). A statistical view of some chemometrics regression tools. Technometrics 35 109–148.
 
-MR2060166
+FREUND, Y. and SHAPIRE, R. E. (1996). Experiments with a new boosting algorithm. In Machine Learning: Proceed- ings of the Thirteenth International Conference 148–156. Morgan Kaufmann, San Francisco, CA.
+ 
+FRIEDMAN, J. H. (1984). A variable span smoother. Technical Report 5, Laboratory for Computational Statistics, Stanford Univ., Stanford, CA.
 
-Fisher, N . I . (2015). 与杰里-弗里德曼的对话 "补编。DOI：10.1214/14-STS509SUPP.
+FRIEDMAN, J. H. (1987). Exploratory projection pursuit. J. Amer. Statist. Assoc. 82 249–266. MR0883353
 
-Fithian, W . 和 Hastie, T . (2013)。 仅存在数据统计模型中的有限样本等价性。 Ann.7 1917- 1939.MR3161707
+FRIEDMAN, J. H. (1989a). Regularized discriminant analysis. J. Amer. Statist. Assoc. 84 165–175. MR0999675
 
-弗兰克，I .E . 和弗里德曼，J .H . (1993).一些化学计量学回归工具的统计观点。 Technometrics 35 109- 148。
+FRIEDMAN, J. H. (1989b). Modern statistics and the computer revolution. In Symposium on Statistics in Science, Industry, and Public Policy, Part 3 14–29. National Academies Press, Washington, DC.
 
-Freund, Y .and Shapire, R . E . (1996). 一种新的提升算法的实验。In Machine Learning：Proceed-ings of the Thirteenth International Co**nf**erence 148- 156.Morgan Kaufmann, San Francisco, CA.
+FRIEDMAN, J. H. (1991). Multivariate adaptive regression splines. Ann. Statist. 19 1–141. MR1091842
 
-Friedman, J . H . (1984). A variable span smoother. 技术报告 5，计算统计实验室，斯坦福大学，斯坦福，加利福尼亚州。
+FRIEDMAN, J. H. (1997). On bias, variance, 0/1-loss, and the curse-of-dimensionality. Data Min. Knowl. Discov. 1 55–77.
 
-Friedman, J . H . (1987).探索性投影追踪。 J.
+FRIEDMAN, J. H. (2001a). Greedy function approximation: A gradient boosting machine. Ann. Statist. 29 1189–1232. MR1873328
 
-Amer.Amer.Assoc. 82 249-266.MR0883353 Friedman, J .H . (1989a).正则化判别分析。
+FRIEDMAN, J. H. (2001b). The role of statistics in the data revolution? Int. Stat. Rev. 69 5–10.
 
-J.J. Amer.J. Amer.Assoc. 84 165- 175.MR0999675 Friedman, J . H . (1989b). 现代统计学与社区
+FRIEDMAN, J. H., BENTLEY, J. L. and FINKEL, R. A. (1977). An algorithm for finding best matches in logarithmic time. ACM Trans. Math. Software 3 209–226.
 
-计算机革命。  In Symposium on Statistics in Sci- ence, Industry, and Public Policy, Part 3 14-29.美国国家 院出版社，华盛顿特区。
+FRIEDMAN, J. H. and FISHER, N. I. (1999). Bump hunting in high-dimensional data. Stat. Comput. 9 123–162.
 
-Friedman, J . H . (1991). 多元自适应回归 splines.Ann.Statist.19 1- 141.MR1091842
+FRIEDMAN, J. H., GROSSE, E. and STUETZLE, W. (1983). Multidimensional additive spline approximation. SIAM J. Sci. Statist. Comput. 4 291–301. MR0697182
 
-Friedman, J .H . (1997).论偏差、方差、0/1 损失和维度诅咒。 Data Min.Knowl.Discov.1 55- 77.
 
-Friedman, J . H . (2001a). 贪婪函数逼近：梯度提升机器。Ann.Statist.29 1189- 1232.
+FRIEDMAN, J., HASTIE, T. and TIBSHIRANI, R. (2000). Additive logistic regression: A statistical view of boosting. Ann. Statist. 28 337–407. MR1790002
 
-MR1873328
+FRIEDMAN, J. H. and RAFSKY, L. C. (1979). Multivariate generalizations of the Wald–Wolfowitz and Smirnov two-sample tests. Ann. Statist. 7 697–717. MR0532236
 
-Friedman, J . H . (2001b)。统计学在数据革命中的作用？Int.Stat.Rev. 69 5- 10.
+FRIEDMAN, J. H. and RAFSKY, L. C. (1983). Graph-theoretic measures of multivariate association and prediction. Ann. Statist. 11 377–391. MR0696054
 
-弗里德曼，J .H .L . 和芬克尔，R .A . (1977).在对数时间内找出最佳匹配的算法。ACM Trans.Math.Software 3 209-226.
+FRIEDMAN, J. H. and STUETZLE, W. (1981). Projection pursuit regression. J. Amer. Statist. Assoc. 76 817–823. MR0650892
 
-弗里德曼，J . H . 和 Fisher, N . I . (1999). 高维数据中的凹凸狩猎。Stat.Comput.9 123- 162.
+FRIEDMAN, J. H. and STUETZLE, W. (2002). John W.
 
-弗里德曼，J . H ., Grosse, E . and Stuetzle, W . (1983).多维加性样条近似。SIAM J. Sci.计算。4 291-301.MR0697182
+Tukey’s work on interactive graphics. Ann. Statist. 30 1629–1639. In memory of John W. Tukey. MR1969443
 
-Friedman, J ., Hastie, T . and Tibshirani, R .(2000).附加逻辑回归：A statistical view of boosting.Ann.Statist.28 337-407.MR1790002
+FRIEDMAN, J. H., STUETZLE, W. and SCHROEDER, A. (1984). Projection pursuit density estimation. J. Amer. Statist. Assoc. 79 599–608. MR0763579
 
-弗里德曼，J . H . 和拉夫斯基，L . C . (1979). Wald-Wolfowitz 和 Smirnov 双样本检验的多变量概括。Ann.Statist.7 697-717.MR0532236
+FRIEDMAN, J. H. and TUKEY, J. W. (1974). A projection pursuit algorithm for exploratory data analysis. IEEE Trans. Comput. C-23 881–889.
 
-弗里德曼，J .H . 和拉夫斯基，L .C . (1983).多变量关联和预测的图论测量。Ann.Statist.11 377-391.MR0696054
+HASTIE, T., TIBSHIRANI, R. and FRIEDMAN, J. (2001). The Elements of Statistical Learning. Data Mining, Inference, and Prediction. Springer, New York. MR1851606
 
-Friedman, J .  H . 和 Stuetzle, W . (1981)。 投影追求回归。 J. Amer. Statist. 76 817-823.
+KIPLING, R. (1886). Part of the second last couplet of “The Betrothed.” First published in Departmental Ditties. Avail- able at http://en.wikipedia.org/wiki/The_Betrothed_%28Kipling_poem%29.
 
-MR0650892
+MORGAN, J. N. and SONQUIST, J. A. (1963). Problems in the analysis of survey data, and a proposal. J. Amer. Statist. Assoc. 58 415–435.
+ 
+OREAR, J. (1982). Notes on statistics for physicists, revised. Available at http://ned.ipac.caltech.edu/level5/Sept01/Orear/frames.html.
 
-Friedman, J .  H . 和 Stuetzle, W . (2002)。  John W. Tukey 的交互式图形学研究。 Ann. Statist. 30 1629- 1639.纪念约翰 W. 图基。MR1969443
+QUINLAN, J. R. (1986). Induction of decision trees. Machine Learning 1 81–106. Reprinted in Readings in Ma- chine Learning (J. W. SHAvLIK and T. G. DIETTERICH, eds.). 
 
-弗里德曼，J .H ., Stuetzle, W . and Schroeder, A . (1984).投影追求密度估计。 J. Amer. J. Amer. Statist.Assoc. 79 599-608.MR0763579
+Morgan Kaufmann, San Francisco, 1990, and also, in Readings in Knowledge Acquisition and Learning (B. G. Buchanan and D. Wilkins, eds.). Morgan Kaufmann, San Francisco, 1993.
 
-弗里德曼，J .  H . 和 Tukey, J . W . (1974). 用于探索性数据分析的项目追寻算法。IEEE Trans.C-23 881-889.C-23 881-889.
+TUKEY, J. W. (1962). The future of data analysis. Ann. Math. Statist. 33 1–67. MR0133937
 
-Hastie, T ., Tibshirani, R . and Friedman, J . (2001). The Elements of Statistical Learning.数据挖掘、推理和预测》。Springer, New York.MR1851606
+VARIAN,  H.  (2009).  Hal  Varian  on  how  the  Web challenges	managers.	Available	at http://www.mckinsey.com/insights/innovation/hal_varian_on_how_the_web_challenges_managers.
 
-吉卜林，R . (1886)."未婚妻 "倒数第二联的一部分。首次发表于《部门小调》。可从 http://en.wikipedia.org/wiki/The_Betrothed%28Kipling_poem%29 获取。
+WOLD, S. and SJOSTROM, M. (1977). SIMCA: A method for analyzing chemical data in terms of similarity and analogy. In Chemometrics Theory and Application (B. R. KOWAL-SKI, ed.). American Chemical Society Symposium Series 52 243–282. American Chemical Society, Washington, D.C.
 
-摩根，J .N . 和 Sonquist, J .A . (1963).调查数据分析中的问题及建议。 J. Amer.Statist.58 415-435.
-
-Orear, J . (1982).  物理学家统计笔记，修订版。  见 http://ned.ipac.caltech.edu/level5/Sept01/Orear/frames.html。
-
-昆兰，J . R . (1986). 决策树的诱导。 机器学习 1 81- 106》。 重印于《机器学习读本》（J . W . Shavlik 和 T . G . Dietterich 编辑）。 摩根-考夫曼，旧金山，1990 年，以及 ，《知识获取与学习读本》（B. G. Buchanan 和 D. Wilkins 编辑）。摩根考夫曼，旧金山 ，1993 年。
-
-Tukey, J .W . (1962).数据分析的未来。Ann.Math.Statist.33 1-67.MR0133937
-
-Varian, H . (2009).  哈尔-瓦里安谈网络如何挑战管理人员。见http://www.mckinsey.com/insights/innovation/hal_varian_on_how_the_web_challenges_managers。
-
-Wold, S .and Sjostrom, M .(1977).SIMCA：用相似性和类比性分析化学数据的方法。见《化学计量学理论与应用》（B . R . Kowal- ski 编辑）。American Chemical Society Symposium Series 52 243-282.美国化学学会，华盛顿特区。
-
-Zou, H .and Hastie, T .(2005).通过弹性网进行正则化和变量选择。 J. R .Soc. Ser.Soc. Ser. B Stat.Methodol.67 301-320.MR2137327
+ZOU, H. and HASTIE, T. (2005). Regularization and variable selection via the elastic net. J. R. Stat. Soc. Ser. B Stat. Methodol. 67 301–320. MR2137327
 
  
 
