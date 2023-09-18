@@ -4,26 +4,28 @@ weight: 8
 menu: [main, top]
 ---
 
+<style type="text/css">
+#search-input {
+  width: 100%;
+  font-size: 1.2em;
+  padding: .5em;
+}
+.search-results {
+  font-size: .9em;
+}
+.search-results b {
+  background-color: yellow;
+}
+</style>
 
-<body>
-  <!-- place holders -->
-  <header>
-      <div class="searchbox-container" id="searchbox" placeholder="Search for keywords">
-  </header>
- 
- <div id="results">
-  <div id="hits"></div>
-  <div class="pagination" id="pagination"></div>
- </div>
+<input type="search" id="search-input" data-info-init="搜索引擎初始化中，请稍候……" data-info-ok="输入搜索关键词：" data-info-fail="搜索引擎初始化失败，是在下输了！">
 
+<div class="search-results">
+<section>
+<h2><a target="_blank"></a></h2>
+<div class="search-preview"></div>
+</section>
+</div>
 
-  <!-- load algolia js and style, use instantsearch 3.4.0-->
-
-  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js" integrity="sha256-pM0n88cBFRHpSn0N26ETsQdwpA7WAXJDvkHeCLh3ujI=" crossorigin="anonymous"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js" integrity="sha256-3Laj91VXexjTlFLgL8+vvIq27laXdRmFIcO2miulgEs=" crossorigin="anonymous"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous"> 
-
-  <script src="/js/search_app.js"></script>
-</body>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/fuse-search.min.js" defer></script>
