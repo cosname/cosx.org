@@ -4,26 +4,32 @@ weight: 8
 menu: [main, top]
 ---
 
+<style type="text/css">
+#search-input {
+  width: 100%;
+  font-size: 1.2em;
+  padding: .5em;
+}
+.search-results {
+  font-size: .9em;
+}
+.search-results b {
+  background-color: yellow;
+}
+</style>
 
-<body>
-  <!-- place holders -->
-  <header>
-      <div class="searchbox-container" id="searchbox" placeholder="Search for keywords">
-  </header>
- 
- <div id="results">
-  <div id="hits"></div>
-  <div class="pagination" id="pagination"></div>
- </div>
+空格表示 AND（如 `R Markdown` 表示搜索既包含 `R` 又包含 `Markdown` 的文章）；竖线 `|` 表示 OR（如 `R | Markdown` 表示搜索包含 `R` 或者 `Markdown` 的文章）；若要搜索完整的词组，可用半角双引号将关键词引起来（如 `"R Markdown"` 表示搜索包含 `R Markdown` 这个完整词组的文章）。
 
+点击下面的搜索框后可能需要等待几秒，看到提示信息后则可以输入搜索关键词。
 
-  <!-- load algolia js and style, use instantsearch 3.4.0-->
+<input type="search" id="search-input" data-info-init="搜索引擎初始化中，请稍候……" data-info-ok="输入搜索关键词：" data-info-fail="搜索引擎初始化失败，是在下输了！">
 
-  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js" integrity="sha256-pM0n88cBFRHpSn0N26ETsQdwpA7WAXJDvkHeCLh3ujI=" crossorigin="anonymous"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js" integrity="sha256-3Laj91VXexjTlFLgL8+vvIq27laXdRmFIcO2miulgEs=" crossorigin="anonymous"></script>
+<div class="search-results">
+<section>
+<h2><a target="_blank"></a></h2>
+<div class="search-preview"></div>
+</section>
+</div>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous"> 
-
-  <script src="/js/search_app.js"></script>
-</body>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/fuse-search.min.js" defer></script>
