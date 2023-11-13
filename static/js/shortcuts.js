@@ -2,13 +2,17 @@
 (() => {
   // homepage
   document.addEventListener("keydown", (event) => {
-    const currentPage = document.querySelector(".page-item.active");
-    const previousPage =
-      currentPage.previousElementSibling.querySelector(".page-link");
-    const nextPage = currentPage.nextElementSibling.querySelector(".page-link");
-    console.log(currentPage, previousPage, nextPage);
+    let currentPage, previousPage, nextPage;
+    try {
+      currentPage = document.querySelector(".page-item.active");
+      previousPage =
+        currentPage.previousElementSibling.querySelector(".page-link");
+      nextPage = currentPage.nextElementSibling.querySelector(".page-link");
+    } catch (error) {
+      previousPage = document.querySelector(".nav-prev > a");
+      nextPage = document.querySelector(".nav-next > a");
+    }
     const { key } = event;
-    console.log(key);
     if (key === "ArrowLeft") {
       previousPage.click();
     } else if (key === "ArrowRight") {
@@ -17,6 +21,5 @@
   });
   // todo:
   //   shortcuts for first page and last page
-  //   shortcuts for post
   //   add tooltip
 })();
