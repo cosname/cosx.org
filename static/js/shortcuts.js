@@ -1,25 +1,31 @@
 // Press arrow keys to turn a page
 (() => {
   document.addEventListener("keydown", (event) => {
-    let currentPage, previousPage, nextPage;
+    let currentPage, previousPageLink, nextPageLink;
     // Check if current page is homepage or post
     // Code will fail on Chrome if this statement is not included inside AddEventListener and the user quickly press keys
     if (document.querySelector(".article-list")) {
       currentPage = document.querySelector(".page-item.active");
-      previousPage =
-        currentPage.previousElementSibling.querySelector(".page-link");
-      nextPage = currentPage.nextElementSibling.querySelector(".page-link");
+      previousPageLink = currentPage.previousElementSibling
+        .querySelector(".page-link")
+        .getAttribute("href");
+      nextPageLink = currentPage.nextElementSibling
+        .querySelector(".page-link")
+        .getAttribute("href");
     } else if (document.querySelector("article")) {
-      previousPage = document.querySelector(".nav-prev > a");
-      nextPage = document.querySelector(".nav-next > a");
+      previousPageLink = document
+        .querySelector(".nav-prev > a")
+        .getAttribute("href");
+      nextPageLink = document
+        .querySelector(".nav-next > a")
+        .getAttribute("href");
     } else {
       return;
     }
-    const { key } = event;
-    if (key === "ArrowLeft") {
-      previousPage.click();
-    } else if (key === "ArrowRight") {
-      nextPage.click();
+    if (event.key === "ArrowLeft") {
+      window.location.assign(previousPageLink);
+    } else if (event.key === "ArrowRight") {
+      window.location.assign(nextPageLink);
     }
   });
 
@@ -32,3 +38,7 @@
     document.querySelector(".nav-next > a").setAttribute("title", hint);
   }
 })();
+
+// bug
+// 首页向左，末页向右会出错，应该阻止
+// 首次访问时按 Alt + 右方向仍然翻页，应该阻止
