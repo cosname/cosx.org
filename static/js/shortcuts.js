@@ -22,11 +22,17 @@
     } else {
       return;
     }
+    let targetLink;
     if (event.key === "ArrowLeft") {
-      window.location.assign(previousPageLink);
+      event.altKey
+        ? history.back()
+        : previousPageLink && (targetLink = previousPageLink);
     } else if (event.key === "ArrowRight") {
-      window.location.assign(nextPageLink);
+      event.altKey
+        ? history.forward()
+        : nextPageLink && (targetLink = nextPageLink);
     }
+    targetLink && window.location.assign(targetLink);
   });
 
   // Add tooltips
@@ -38,7 +44,3 @@
     document.querySelector(".nav-next > a").setAttribute("title", hint);
   }
 })();
-
-// bug
-// 首页向左，末页向右会出错，应该阻止
-// 首次访问时按 Alt + 右方向仍然翻页，应该阻止
