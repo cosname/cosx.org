@@ -29,14 +29,14 @@
       return;
     }
     let targetLink;
+    // Ignore if modifier keys are active
+    if (event.ctrlKey || event.altKey || event.shiftKey || event.metaKey) {
+      return;
+    }
     if (event.key === "ArrowLeft") {
-      event.altKey
-        ? history.back()
-        : previousPageLink && (targetLink = previousPageLink);
+      previousPageLink && (targetLink = previousPageLink);
     } else if (event.key === "ArrowRight") {
-      event.altKey
-        ? history.forward()
-        : nextPageLink && (targetLink = nextPageLink);
+      nextPageLink && (targetLink = nextPageLink);
     }
     targetLink && window.location.assign(targetLink);
   });
