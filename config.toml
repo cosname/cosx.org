@@ -10,6 +10,8 @@ hasCJKLanguage = true
 enableEmoji = true
 preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
+[outputs]
+  home = ["html", "rss", "json"]
 
 [blackfriday]
   extensionsmask = ["noIntraEmphasis"]
