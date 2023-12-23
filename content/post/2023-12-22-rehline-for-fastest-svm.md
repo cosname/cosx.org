@@ -13,6 +13,7 @@ tags:
   - 最优化
   - 坐标下降法
 slug: rehline-for-fastest-svm
+forum_id: 424953
 ---
 
 > 本文由邱怡轩主笔，内容素材源自邱怡轩和戴奔共同讨论的结果。
