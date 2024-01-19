@@ -47,23 +47,22 @@ Linus Torvalds 有一句名言：“Talk is cheap. Show me the code.” 既然�
 optimization finished, #iter = 64
 Objective value = -58.018530
 nSV = 3122272
-Computation time: 11.583774 seconds.
+Computation time: 9.574224 seconds.
 ```
 
-由此可以看出，Liblinear 仅仅使用了11.58秒就完成了计算（不包含数据读取的时间）。
+由此可以看出，Liblinear 仅仅使用了9.57秒就完成了计算（不包含数据读取的时间）。
 
 而接下来要登场的挑战者，是我们编写的一个名为 [ReHLine-SVM](https://github.com/softmin/ReHLine-SVM) 的软件。ReHLine-SVM 本身只包含一个 C++ 头文件 `rehline.h`，也就是说它可以直接嵌入到其他的 C++ 项目中，无需单独进行编译。ReHLine-SVM 的底层代数运算是由著名的科学计算库 Eigen 实现的。
 
 我们用 ReHLine-SVM 来对同一个数据计算 SVM，并将各类超参数设成与 Liblinear 相同的取值。其最终的输出结果如下：
 
 ```
-Iter 0, dual_objfn = -45.7806, primal_objfn = 66.6884, xi_diff = 0, beta_diff = 21.8619
-*** Iter 20, free variables converge; next test on all variables
-*** Iter 23, free variables converge; next test on all variables
-Computation time: 4.71375 seconds
+Iter 0, dual_objfn = -45.7268, primal_objfn = 66.7088, xi_diff = 0, beta_diff = 21.9285
+*** Iter 21, free variables converge; next test on all variables
+Computation time: 3.35343 seconds
 ```
 
-这个结果表明，ReHLine-SVM 只用了4.7秒就完成了计算！但这还不是故事的全部：由于不同的算法其收敛条件和精度不尽相同，因此为了结果的公平，我们还要看一个更客观的指标——SVM 的目标函数值，也就是本文开篇写下的公式 (1)，其取值越小代表越接近最优解。经过计算，Liblinear 的解其目标函数值为58.1859，而 ReHLine-SVM 得到的目标函数值为58.072。由此我们终于可以说，**ReHLine-SVM 仅仅使用了不到一半的时间，就取得了比 Liblinear 更优的解**——我们似乎找到了 Liblinear 的一名合格的挑战者。
+这个结果表明，ReHLine-SVM 只用了3.35秒就完成了计算！但这还不是故事的全部：由于不同的算法其收敛条件和精度不尽相同，因此为了结果的公平，我们还要看一个更客观的指标——SVM 的目标函数值，也就是本文开篇写下的公式 (1)，其取值越小代表越接近最优解。经过计算，Liblinear 和 ReHLine-SVM 得到的目标函数值均为58.0185。由此我们终于可以说，**ReHLine-SVM 仅仅使用了不到一半的时间，就取得了和 Liblinear 相同水平的解**——我们似乎找到了 Liblinear 的一名合格的挑战者。
 
 ### 他山之石
 
