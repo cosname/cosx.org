@@ -1,7 +1,7 @@
 list:
-  - name: 于淼
-    image: https://yufree.cn/images/MYu.jpg
-    intro: 现任编辑部主编，中科院生态环境研究中心博士，就职于美国杰克逊实验室，博客 <https://yufree.cn>
+  - name: 王小宁
+    image: https://cloud.githubusercontent.com/assets/7221728/25788528/65b1af86-33dc-11e7-9f1b-207eae93ff58.jpg
+    intro: 现任编辑部主编，中国传媒大学数据科学与智能媒体学院副教授，毕业于中国人民大学统计学院，喜欢跑步，研究兴趣为数据整合、抽样技术和统计机器学习。
   - name: 任焱
     image: https://avatars.githubusercontent.com/u/37477330?s=400&u=7453a8b8b16555af5253232344e43efe40b45037&v=4
     intro: 现任编辑部副主编，中国人民大学统计学院在读硕士，蓄力状态。
@@ -169,9 +169,6 @@ list:
   - name: 王文静
     image: https://user-images.githubusercontent.com/18381242/62843942-5c67f300-bcf0-11e9-9309-d3bda6e8fa8b.jpg
     intro: 中央财经大学统计与数学学院讲师。中国人民大学统计学院博士。当前研究领域为经济统计、稳健统计。
-  - name: 王小宁
-    image: https://cloud.githubusercontent.com/assets/7221728/25788528/65b1af86-33dc-11e7-9f1b-207eae93ff58.jpg
-    intro: 中国传媒大学数据科学与智能媒体学院助理教授，毕业于中国人民大学统计学院，喜欢跑步，研究兴趣为数据整合、抽样技术和统计机器学习。
   - name: 王祎帆
     image: https://user-images.githubusercontent.com/32222392/47916739-26d0e680-dee2-11e8-9926-065f0c608a62.jpg
     intro: 人大统计学院本科生,喜欢运动,更喜欢统计,希望能用统计做一些好玩的神奇的事情
@@ -228,6 +225,9 @@ list:
   - name: 余光创
     image: https://user-images.githubusercontent.com/7221728/28346855-21adbf2e-6c66-11e7-95d8-171b0fb51c6b.png
     intro: 余光创，香港大学公共卫生学院，生物信息学博士生。博客：<https://guangchuangyu.github.io>， 公众号：biobabble
+  - name: 于淼
+    image: https://yufree.cn/images/MYu.jpg
+    intro: 中科院生态环境研究中心博士，就职于美国杰克逊实验室，博客 <https://yufree.cn>
   - name: 袁卫
     image: https://user-images.githubusercontent.com/18381242/130374095-a7eb8b25-57d5-4354-9c12-75147686cc9b.jpg
     intro: 中国人民大学一级教授，中国人民大学应用统计科学研究中心研究员。研究方向为中国统计学科史。
