@@ -7,7 +7,7 @@
 </footer>
 
 {{ if and (not .Params.disable_mathjax) (or (in (string .Content) "\\") (in (string .Content) "$")) }}
-<script src="/js/math-code.js"></script>
+<script src="/js/math-code.js" defer></script>
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {
@@ -17,7 +17,5 @@ MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: "AMS" } }
 });
 </script>
-<script async type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
 {{ end }}
