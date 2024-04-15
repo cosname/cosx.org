@@ -1,5 +1,10 @@
 // Press arrow keys to turn a page
 (() => {
+  // Make code blocks focusable, so we can use activeElement to check if user is scrolling inside a code block
+  document.querySelectorAll("pre").forEach((element) => {
+    element.tabIndex = 0;
+  });
+  // Set shortcuts
   document.addEventListener("keydown", (event) => {
     // Don't turn a page inside a code block
     if (document.activeElement !== document.body) {
@@ -49,10 +54,4 @@
     document.querySelector(".nav-prev > a").setAttribute("title", hint);
     document.querySelector(".nav-next > a").setAttribute("title", hint);
   }
-
-  // make <pre> focusable
-  const preElements = document.querySelectorAll("pre");
-  preElements.forEach((element) => {
-    element.setAttribute("tabindex", "0");
-  });
 })();
