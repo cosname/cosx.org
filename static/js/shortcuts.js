@@ -2,7 +2,7 @@
 (() => {
   // Make code blocks focusable, so we can use activeElement to check if user is scrolling inside a code block
   document.querySelectorAll("pre").forEach((element) => {
-    element.setAttribute("tabindex", "0");
+    element.tabIndex = 0;
   });
   // Set shortcuts
   document.addEventListener("keydown", (event) => {
